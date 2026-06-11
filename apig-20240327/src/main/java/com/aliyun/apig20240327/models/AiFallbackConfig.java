@@ -4,9 +4,15 @@ package com.aliyun.apig20240327.models;
 import com.aliyun.tea.*;
 
 public class AiFallbackConfig extends TeaModel {
+    /**
+     * <p>Determines whether fallback is triggered solely by the upstream service\&quot;s status code. If <code>true</code>, fallback occurs only if the upstream service returns an error code. If <code>false</code>, other conditions, such as timeouts, can also trigger the fallback.</p>
+     */
     @NameInMap("onlyRedirectUpstreamCode")
     public Boolean onlyRedirectUpstreamCode;
 
+    /**
+     * <p>A list of fallback service configurations.</p>
+     */
     @NameInMap("serviceConfigs")
     public java.util.List<AiFallbackConfigServiceConfigs> serviceConfigs;
 
@@ -32,15 +38,27 @@ public class AiFallbackConfig extends TeaModel {
     }
 
     public static class AiFallbackConfigServiceConfigs extends TeaModel {
+        /**
+         * <p>The name of the fallback service.</p>
+         */
         @NameInMap("name")
         public String name;
 
+        /**
+         * <p>Determines whether to pass the original model name to the fallback service. If <code>true</code>, the model name from the original request is used. If <code>false</code>, the value of <code>targetModelName</code> is used instead.</p>
+         */
         @NameInMap("passThroughModelName")
         public Boolean passThroughModelName;
 
+        /**
+         * <p>The unique ID of the fallback service.</p>
+         */
         @NameInMap("serviceId")
         public String serviceId;
 
+        /**
+         * <p>The name of the model to use for the fallback request.</p>
+         */
         @NameInMap("targetModelName")
         public String targetModelName;
 

@@ -29,7 +29,7 @@ public class UpdateMcpServerRequest extends TeaModel {
      * <p>The description.</p>
      * 
      * <strong>example:</strong>
-     * <p>Updated MCP server description</p>
+     * <p>商品中心服务路由</p>
      */
     @NameInMap("description")
     public String description;

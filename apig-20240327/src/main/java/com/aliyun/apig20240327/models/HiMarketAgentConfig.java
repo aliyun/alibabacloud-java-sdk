@@ -4,6 +4,9 @@ package com.aliyun.apig20240327.models;
 import com.aliyun.tea.*;
 
 public class HiMarketAgentConfig extends TeaModel {
+    /**
+     * <p>Contains the API configuration for the agent.</p>
+     */
     @NameInMap("agentAPIConfig")
     public HiMarketAgentConfigAgentAPIConfig agentAPIConfig;
 
@@ -21,9 +24,15 @@ public class HiMarketAgentConfig extends TeaModel {
     }
 
     public static class HiMarketAgentConfigAgentAPIConfig extends TeaModel {
+        /**
+         * <p>The communication protocols supported by the agent.</p>
+         */
         @NameInMap("agentProtocols")
         public java.util.List<String> agentProtocols;
 
+        /**
+         * <p>The routing rules for incoming requests.</p>
+         */
         @NameInMap("routes")
         public java.util.List<HiMarketHttpRoute> routes;
 

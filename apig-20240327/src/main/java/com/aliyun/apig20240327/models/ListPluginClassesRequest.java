@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class ListPluginClassesRequest extends TeaModel {
     /**
      * <p>The alias keyword for a fuzzy search.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>OAuth2 认证</p>
      */
     @NameInMap("aliasLike")
     public String aliasLike;

@@ -4,15 +4,27 @@ package com.aliyun.apig20240327.models;
 import com.aliyun.tea.*;
 
 public class HiMarketMcpConfig extends TeaModel {
+    /**
+     * <p>Configuration for the MCP server.</p>
+     */
     @NameInMap("mcpServerConfig")
     public HiMarketMcpConfigMcpServerConfig mcpServerConfig;
 
+    /**
+     * <p>A unique name for the MCP server.</p>
+     */
     @NameInMap("mcpServerName")
     public String mcpServerName;
 
+    /**
+     * <p>Metadata for the configuration.</p>
+     */
     @NameInMap("meta")
     public HiMarketMcpConfigMeta meta;
 
+    /**
+     * <p>The tools associated with this configuration, typically provided as a JSON-formatted string.</p>
+     */
     @NameInMap("tools")
     public String tools;
 
@@ -54,9 +66,15 @@ public class HiMarketMcpConfig extends TeaModel {
     }
 
     public static class HiMarketMcpConfigMcpServerConfig extends TeaModel {
+        /**
+         * <p>The domains managed by the server.</p>
+         */
         @NameInMap("domains")
         public java.util.List<HiMarketDomain> domains;
 
+        /**
+         * <p>The base path for the service endpoint.</p>
+         */
         @NameInMap("path")
         public String path;
 
@@ -84,6 +102,9 @@ public class HiMarketMcpConfig extends TeaModel {
     }
 
     public static class HiMarketMcpConfigMeta extends TeaModel {
+        /**
+         * <p>The communication protocol. Can be <code>http</code> or <code>https</code>.</p>
+         */
         @NameInMap("protocol")
         public String protocol;
 

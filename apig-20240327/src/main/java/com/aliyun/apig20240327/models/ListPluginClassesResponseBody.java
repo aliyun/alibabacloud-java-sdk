@@ -77,12 +77,18 @@ public class ListPluginClassesResponseBody extends TeaModel {
     public static class ListPluginClassesResponseBodyDataItems extends TeaModel {
         /**
          * <p>The alias of the plugin.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OAuth2 认证</p>
          */
         @NameInMap("alias")
         public String alias;
 
         /**
          * <p>The description of the plugin.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>基于 OAuth2 实现身份认证和鉴权。</p>
          */
         @NameInMap("description")
         public String description;

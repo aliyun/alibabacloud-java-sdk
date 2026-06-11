@@ -4,34 +4,60 @@ package com.aliyun.apig20240327.models;
 import com.aliyun.tea.*;
 
 public class AiNetworkSearchConfig extends TeaModel {
+    /**
+     * <p>Whether the network search feature is enabled by default.</p>
+     */
     @NameInMap("defaultEnable")
     public Boolean defaultEnable;
 
+    /**
+     * <p>The default language for the search query.</p>
+     */
     @NameInMap("defaultLang")
     public String defaultLang;
 
+    /**
+     * <p>Whether to include references in the search results.</p>
+     */
     @NameInMap("needReference")
     public Boolean needReference;
 
     /**
+     * <p>The status of the AI plugin.</p>
+     * 
      * <strong>if can be null:</strong>
      * <p>true</p>
      */
     @NameInMap("pluginStatus")
     public AiPluginStatus pluginStatus;
 
+    /**
+     * <p>The format of the references.</p>
+     */
     @NameInMap("referenceFormat")
     public String referenceFormat;
 
+    /**
+     * <p>The location of the references in the response.</p>
+     */
     @NameInMap("referenceLocation")
     public String referenceLocation;
 
+    /**
+     * <p>The search engine configuration.</p>
+     */
     @NameInMap("searchEngineConfig")
     public AiNetworkConfigSearchEngine searchEngineConfig;
 
+    /**
+     * <p>A list of search engine configurations for the network search.</p>
+     */
     @NameInMap("searchFrom")
     public java.util.List<AiNetworkConfigSearchEngine> searchFrom;
 
+    /**
+     * <p>Configuration for search query rewriting.</p>
+     */
     @NameInMap("searchRewrite")
     public AiNetworkSearchConfigSearchRewrite searchRewrite;
 
@@ -113,18 +139,33 @@ public class AiNetworkSearchConfig extends TeaModel {
     }
 
     public static class AiNetworkSearchConfigSearchRewrite extends TeaModel {
+        /**
+         * <p>Whether to enable the search query rewrite feature.</p>
+         */
         @NameInMap("enable")
         public Boolean enable;
 
+        /**
+         * <p>The maximum number of rewritten queries to generate.</p>
+         */
         @NameInMap("maxCount")
         public Integer maxCount;
 
+        /**
+         * <p>The name of the model to use for query rewriting.</p>
+         */
         @NameInMap("modelName")
         public String modelName;
 
+        /**
+         * <p>The ID of the query rewriting service.</p>
+         */
         @NameInMap("serviceId")
         public String serviceId;
 
+        /**
+         * <p>Timeout for the query rewriting operation, in milliseconds.</p>
+         */
         @NameInMap("timeoutMillisecond")
         public Integer timeoutMillisecond;
 

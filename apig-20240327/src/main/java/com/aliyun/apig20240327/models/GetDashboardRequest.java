@@ -17,7 +17,7 @@ public class GetDashboardRequest extends TeaModel {
      * <p>API ID</p>
      * 
      * <strong>example:</strong>
-     * <p>api-c9uuekzmia8q2****</p>
+     * <p>api-ctl7no6m1h****</p>
      */
     @NameInMap("apiId")
     public String apiId;

@@ -4,9 +4,15 @@ package com.aliyun.apig20240327.models;
 import com.aliyun.tea.*;
 
 public class HiMarketProductRefConfig extends TeaModel {
+    /**
+     * <p>Reference settings for the API gateway.</p>
+     */
     @NameInMap("apigRefConfig")
     public HiMarketProductRefConfigApigRefConfig apigRefConfig;
 
+    /**
+     * <p>Unique identifier for the gateway.</p>
+     */
     @NameInMap("gatewayId")
     public String gatewayId;
 
@@ -32,24 +38,45 @@ public class HiMarketProductRefConfig extends TeaModel {
     }
 
     public static class HiMarketProductRefConfigApigRefConfig extends TeaModel {
+        /**
+         * <p>Unique identifier for the agent API.</p>
+         */
         @NameInMap("agentApiId")
         public String agentApiId;
 
+        /**
+         * <p>The name of the agent API.</p>
+         */
         @NameInMap("agentApiName")
         public String agentApiName;
 
+        /**
+         * <p>Unique identifier for the MCP route.</p>
+         */
         @NameInMap("mcpRouteId")
         public String mcpRouteId;
 
+        /**
+         * <p>Unique identifier for the MCP server.</p>
+         */
         @NameInMap("mcpServerId")
         public String mcpServerId;
 
+        /**
+         * <p>The name of the MCP server.</p>
+         */
         @NameInMap("mcpServerName")
         public String mcpServerName;
 
+        /**
+         * <p>Unique identifier for the model API.</p>
+         */
         @NameInMap("modelApiId")
         public String modelApiId;
 
+        /**
+         * <p>The name of the model API.</p>
+         */
         @NameInMap("modelApiName")
         public String modelApiName;
 

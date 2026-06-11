@@ -144,7 +144,7 @@ public class ListMcpServersResponseBody extends TeaModel {
          * <p>The synchronized MCP server ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>nacos-mcp-001</p>
+         * <p>同步的MCP Server ID</p>
          */
         @NameInMap("importMcpServerId")
         public String importMcpServerId;
@@ -238,7 +238,7 @@ public class ListMcpServersResponseBody extends TeaModel {
          * <p>The description.</p>
          * 
          * <strong>example:</strong>
-         * <p>My MCP Server</p>
+         * <p>这是xxx的xx项目测试环境</p>
          */
         @NameInMap("description")
         public String description;
@@ -292,7 +292,7 @@ public class ListMcpServersResponseBody extends TeaModel {
          * <p>The HTTP-to-MCP configurations.</p>
          * 
          * <strong>example:</strong>
-         * <p>mcp spec content</p>
+         * <p>HTTP转MCP Config base64值</p>
          */
         @NameInMap("mcpServerConfig")
         public String mcpServerConfig;
@@ -361,7 +361,7 @@ public class ListMcpServersResponseBody extends TeaModel {
          * <p>The type of the MCP server. Valid values: RealMCP and AssemblyMCP.</p>
          * 
          * <strong>example:</strong>
-         * <p>RealMCP</p>
+         * <p>可选值：RealMCP、AssemblyMCP</p>
          */
         @NameInMap("type")
         public String type;

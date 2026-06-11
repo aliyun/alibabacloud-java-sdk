@@ -55,7 +55,7 @@ public class HttpApiResponseContract extends TeaModel {
          * <p>The response description.</p>
          * 
          * <strong>example:</strong>
-         * <p>This is a description.</p>
+         * <p>正常接口响应</p>
          */
         @NameInMap("description")
         public String description;
@@ -81,7 +81,7 @@ public class HttpApiResponseContract extends TeaModel {
          *     &quot;properties&quot;: {
          *         &quot;result&quot;: {
          *             &quot;type&quot;: &quot;string&quot;,
-         *             &quot;description&quot;: &quot;This is a description.&quot;
+         *             &quot;description&quot;: &quot;操作结果，\&quot;ok\&quot; 表示成功&quot;
          *         }
          *     }
          * }</p>

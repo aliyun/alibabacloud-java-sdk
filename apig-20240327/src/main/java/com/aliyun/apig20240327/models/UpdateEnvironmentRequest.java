@@ -9,7 +9,7 @@ public class UpdateEnvironmentRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>The request ID, which is used to trace the API call link.</p>
+     * <p>测试环境</p>
      */
     @NameInMap("alias")
     public String alias;
@@ -18,7 +18,7 @@ public class UpdateEnvironmentRequest extends TeaModel {
      * <p>The status code returned.</p>
      * 
      * <strong>example:</strong>
-     * <p>The response message returned.</p>
+     * <p>这是xx的xx项目测试环境</p>
      */
     @NameInMap("description")
     public String description;

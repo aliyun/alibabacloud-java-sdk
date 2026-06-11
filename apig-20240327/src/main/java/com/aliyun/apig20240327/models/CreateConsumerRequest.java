@@ -5,19 +5,19 @@ import com.aliyun.tea.*;
 
 public class CreateConsumerRequest extends TeaModel {
     /**
-     * <p>The list of AK/SK identity configurations.</p>
+     * <p>A list of AK/SK identity configurations.</p>
      */
     @NameInMap("akSkIdentityConfigs")
     public java.util.List<AkSkIdentityConfig> akSkIdentityConfigs;
 
     /**
-     * <p>The configuration for the API key authentication method.</p>
+     * <p>The identity configuration for API key authentication.</p>
      */
     @NameInMap("apikeyIdentityConfig")
     public ApiKeyIdentityConfig apikeyIdentityConfig;
 
     /**
-     * <p>The description of the consumer.</p>
+     * <p>The consumer description.</p>
      * 
      * <strong>example:</strong>
      * <p>consumer for test</p>
@@ -26,7 +26,7 @@ public class CreateConsumerRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>Indicates if enabled.</p>
+     * <p>Specifies whether to enable the consumer.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -35,7 +35,13 @@ public class CreateConsumerRequest extends TeaModel {
     public Boolean enable;
 
     /**
-     * <p>The type of the gateway.</p>
+     * <p>The gateway type. Valid values:</p>
+     * <ul>
+     * <li><p>API: For a cloud-native API gateway.</p>
+     * </li>
+     * <li><p>AI: For an AI gateway.</p>
+     * </li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>API</p>
@@ -44,13 +50,13 @@ public class CreateConsumerRequest extends TeaModel {
     public String gatewayType;
 
     /**
-     * <p>The configuration of the JWT identity.</p>
+     * <p>The JWT identity configuration.</p>
      */
     @NameInMap("jwtIdentityConfig")
     public JwtIdentityConfig jwtIdentityConfig;
 
     /**
-     * <p>The name of the consumer.</p>
+     * <p>The consumer name.</p>
      * 
      * <strong>example:</strong>
      * <p>test</p>

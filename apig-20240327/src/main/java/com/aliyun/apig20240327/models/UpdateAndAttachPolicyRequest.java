@@ -44,7 +44,7 @@ public class UpdateAndAttachPolicyRequest extends TeaModel {
      * <p>The policy description.</p>
      * 
      * <strong>example:</strong>
-     * <p>This is the description.</p>
+     * <p>这是策略描述。</p>
      */
     @NameInMap("description")
     public String description;

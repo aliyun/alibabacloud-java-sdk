@@ -118,7 +118,7 @@ public class GetEnvironmentResponseBody extends TeaModel {
          * <p>Test environment</p>
          * 
          * <strong>example:</strong>
-         * <p>The environment description.</p>
+         * <p>测试环境</p>
          */
         @NameInMap("alias")
         public String alias;
@@ -145,7 +145,7 @@ public class GetEnvironmentResponseBody extends TeaModel {
          * <p>Testing environment for xx project of xxx</p>
          * 
          * <strong>example:</strong>
-         * <p>The instance information.</p>
+         * <p>这是xxx的xx项目测试环境</p>
          */
         @NameInMap("description")
         public String description;

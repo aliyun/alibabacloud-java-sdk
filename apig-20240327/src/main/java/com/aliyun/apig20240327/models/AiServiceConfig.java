@@ -8,9 +8,7 @@ public class AiServiceConfig extends TeaModel {
      * <p>API key generation mode.</p>
      * 
      * <strong>example:</strong>
-     * <ul>
-     * <li></li>
-     * </ul>
+     * <p>Custom</p>
      */
     @NameInMap("ApiKeyGenerateMode")
     public String apiKeyGenerateMode;
@@ -46,7 +44,7 @@ public class AiServiceConfig extends TeaModel {
      * <p>Default model name.</p>
      * 
      * <strong>example:</strong>
-     * <p>qwen-turbo</p>
+     * <p>gpt-4</p>
      */
     @NameInMap("defaultModelName")
     public String defaultModelName;
@@ -64,7 +62,7 @@ public class AiServiceConfig extends TeaModel {
      * <p>Enable outlier detection.</p>
      * 
      * <strong>example:</strong>
-     * <p>false</p>
+     * <p>true</p>
      */
     @NameInMap("enableOutlierDetection")
     public Boolean enableOutlierDetection;
@@ -85,7 +83,27 @@ public class AiServiceConfig extends TeaModel {
      * <p>The Large Language Model (LLM) provider.</p>
      * 
      * <strong>example:</strong>
-     * <p>qwen</p>
+     * <p>qwen
+     * moonshot
+     * baichuan
+     * yi
+     * zhipuai
+     * 360ai
+     * hunyuan
+     * stepfun
+     * spark
+     * openai
+     * claude
+     * anthropic
+     * doubao
+     * minimax
+     * gemini
+     * azure
+     * deepseek
+     * custom
+     * pai-eas
+     * bedrock
+     * vertex</p>
      */
     @NameInMap("provider")
     public String provider;
@@ -211,7 +229,7 @@ public class AiServiceConfig extends TeaModel {
          * <p>AWS-Region</p>
          * 
          * <strong>example:</strong>
-         * <p>us-west-2</p>
+         * <p>us-east-1</p>
          */
         @NameInMap("awsRegion")
         public String awsRegion;
@@ -270,7 +288,7 @@ public class AiServiceConfig extends TeaModel {
          * <p>Service identifier.</p>
          * 
          * <strong>example:</strong>
-         * <p>svc-d33onfmm1hkn5duhuqjg</p>
+         * <p>svc-cvaeb0um1hkqp79k72v0</p>
          */
         @NameInMap("serviceId")
         public String serviceId;
@@ -279,7 +297,7 @@ public class AiServiceConfig extends TeaModel {
          * <p>Name of the service.</p>
          * 
          * <strong>example:</strong>
-         * <p>service-hello</p>
+         * <p>auto-ai-service</p>
          */
         @NameInMap("serviceName")
         public String serviceName;
@@ -288,7 +306,7 @@ public class AiServiceConfig extends TeaModel {
          * <p>Workspace identifier.</p>
          * 
          * <strong>example:</strong>
-         * <p>plw-d5g7qsem1hkmih54g210</p>
+         * <p>cb89d4de30042df4459442589664e00d</p>
          */
         @NameInMap("workspaceId")
         public String workspaceId;
@@ -343,7 +361,7 @@ public class AiServiceConfig extends TeaModel {
          * <p>Vertex AI authentication key.</p>
          * 
          * <strong>example:</strong>
-         * <p>{\&quot;type\&quot;:\&quot;service_account\&quot;,\&quot;project_id\&quot;:\&quot;xxx\&quot;,\&quot;private_key\&quot;:\&quot;-----BEGIN PRIVATE KEY-----\&quot;,\&quot;client_email\&quot;:\&quot;<a href="mailto:xxx@xxx.iam.gserviceaccount.com">xxx@xxx.iam.gserviceaccount.com</a>\&quot;,\&quot;token_uri\&quot;:\&quot;<a href="https://oauth2.googleapis.com/token%5C%5C%22%7D">https://oauth2.googleapis.com/token\\&quot;}</a></p>
+         * <p>{\&quot;type\&quot;:\&quot;service_account\&quot;,\&quot;project_id\&quot;:\&quot;my-project\&quot;,\&quot;private_key\&quot;:\&quot;-----BEGIN PRIVATE KEY-----...\&quot;,\&quot;client_email\&quot;:\&quot;<a href="mailto:xxx@xxx.iam.gserviceaccount.com">xxx@xxx.iam.gserviceaccount.com</a>\&quot;,\&quot;token_uri\&quot;:\&quot;<a href="https://oauth2.googleapis.com/token%5C%5C%22%7D">https://oauth2.googleapis.com/token\\&quot;}</a></p>
          */
         @NameInMap("vertexAuthKey")
         public String vertexAuthKey;
@@ -352,7 +370,7 @@ public class AiServiceConfig extends TeaModel {
          * <p>Vertex AI auth service name.</p>
          * 
          * <strong>example:</strong>
-         * <p>custom-vertex-auth</p>
+         * <p>google-oauth2</p>
          */
         @NameInMap("vertexAuthServiceName")
         public String vertexAuthServiceName;
@@ -361,7 +379,7 @@ public class AiServiceConfig extends TeaModel {
          * <p>Vertex AI project ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>my-gcp-project-123</p>
+         * <p>my-project</p>
          */
         @NameInMap("vertexProjectId")
         public String vertexProjectId;

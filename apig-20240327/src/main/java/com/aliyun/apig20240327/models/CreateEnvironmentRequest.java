@@ -9,7 +9,7 @@ public class CreateEnvironmentRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>The environment name.</p>
+     * <p>测试环境</p>
      */
     @NameInMap("alias")
     public String alias;
@@ -18,7 +18,7 @@ public class CreateEnvironmentRequest extends TeaModel {
      * <p>The environment alias.</p>
      * 
      * <strong>example:</strong>
-     * <p>Test environment</p>
+     * <p>这是xxx的xx项目测试环境</p>
      */
     @NameInMap("description")
     public String description;

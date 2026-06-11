@@ -20,7 +20,7 @@ public class CreateHttpApiRouteRequest extends TeaModel {
      * <p>The route description.</p>
      * 
      * <strong>example:</strong>
-     * <p>User logon route</p>
+     * <p>用户登录路由。</p>
      */
     @NameInMap("description")
     public String description;

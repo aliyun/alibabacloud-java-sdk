@@ -5,25 +5,25 @@ import com.aliyun.tea.*;
 
 public class Service extends TeaModel {
     /**
-     * <p>The address details, which can be IP addresses or domain names.</p>
+     * <p>A list of service addresses, such as IP addresses or domain names.</p>
      */
     @NameInMap("addresses")
     public java.util.List<String> addresses;
 
     /**
-     * <p>The agent service configuration</p>
+     * <p>The agent service configuration.</p>
      */
     @NameInMap("agentServiceConfig")
     public AgentServiceConfig agentServiceConfig;
 
     /**
-     * <p>The AI service configurations.</p>
+     * <p>The AI service configuration.</p>
      */
     @NameInMap("aiServiceConfig")
     public AiServiceConfig aiServiceConfig;
 
     /**
-     * <p>The creation time (unix timestamp).</p>
+     * <p>The creation timestamp.</p>
      * 
      * <strong>example:</strong>
      * <p>1725617840096</p>
@@ -32,7 +32,7 @@ public class Service extends TeaModel {
     public Long createTimestamp;
 
     /**
-     * <p>The express type</p>
+     * <p>The execution type for the cloud workflow.</p>
      * 
      * <strong>example:</strong>
      * <p>StartExecution</p>
@@ -50,7 +50,7 @@ public class Service extends TeaModel {
     public String gatewayId;
 
     /**
-     * <p>The service group name.</p>
+     * <p>The name of the service group.</p>
      * 
      * <strong>example:</strong>
      * <p>publich</p>
@@ -59,18 +59,13 @@ public class Service extends TeaModel {
     public String groupName;
 
     /**
-     * <p>The health check configurations.</p>
+     * <p>The health check configuration.</p>
      */
     @NameInMap("healthCheck")
     public ServiceHealthCheck healthCheck;
 
     /**
-     * <p>The health check status.</p>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li>Unhealthy</li>
-     * <li>Healthy</li>
-     * </ul>
+     * <p>The health status. Valid values: <code>Healthy</code> or <code>Unhealthy</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>Healthy</p>
@@ -79,7 +74,7 @@ public class Service extends TeaModel {
     public String healthStatus;
 
     /**
-     * <p>The label details for service version configuration</p>
+     * <p>A list of labels for the service.</p>
      */
     @NameInMap("labelDetails")
     public java.util.List<LabelDetail> labelDetails;
@@ -94,7 +89,7 @@ public class Service extends TeaModel {
     public String name;
 
     /**
-     * <p>The namespace of the service.</p>
+     * <p>The namespace.</p>
      * 
      * <strong>example:</strong>
      * <p>PUBLIC</p>
@@ -103,19 +98,19 @@ public class Service extends TeaModel {
     public String namespace;
 
     /**
-     * <p>The outlier endpoints list</p>
+     * <p>A list of outlier endpoints.</p>
      */
     @NameInMap("outlierEndpoints")
     public java.util.List<String> outlierEndpoints;
 
     /**
-     * <p>The list of objects containing port details.</p>
+     * <p>A list of port configurations.</p>
      */
     @NameInMap("ports")
     public java.util.List<ServicePorts> ports;
 
     /**
-     * <p>The service protocol type.</p>
+     * <p>The service protocol.</p>
      * 
      * <strong>example:</strong>
      * <p>HTTP</p>
@@ -124,7 +119,7 @@ public class Service extends TeaModel {
     public String protocol;
 
     /**
-     * <p>The function qualifier name.</p>
+     * <p>The function qualifier.</p>
      * 
      * <strong>example:</strong>
      * <p>LATEST</p>
@@ -142,7 +137,7 @@ public class Service extends TeaModel {
     public String resourceGroupId;
 
     /**
-     * <p>The service unique ID.</p>
+     * <p>The unique service ID.</p>
      * 
      * <strong>example:</strong>
      * <p>svc-cr6pk4tlhtgm***</p>
@@ -151,7 +146,7 @@ public class Service extends TeaModel {
     public String serviceId;
 
     /**
-     * <p>The source type.</p>
+     * <p>The source type of the service.</p>
      * 
      * <strong>example:</strong>
      * <p>MSE_NACOS</p>
@@ -160,13 +155,13 @@ public class Service extends TeaModel {
     public String sourceType;
 
     /**
-     * <p>The list of unhealthy endpoints.</p>
+     * <p>A list of unhealthy endpoints.</p>
      */
     @NameInMap("unhealthyEndpoints")
     public java.util.List<String> unhealthyEndpoints;
 
     /**
-     * <p>The last modified time (unix timestamp).</p>
+     * <p>The update timestamp.</p>
      * 
      * <strong>example:</strong>
      * <p>1725868548440</p>
@@ -174,6 +169,9 @@ public class Service extends TeaModel {
     @NameInMap("updateTimestamp")
     public Long updateTimestamp;
 
+    /**
+     * <p>A list of service versions.</p>
+     */
     @NameInMap("versions")
     public java.util.List<ServiceVersions> versions;
 
@@ -378,7 +376,7 @@ public class Service extends TeaModel {
         public Integer port;
 
         /**
-         * <p>The protocol. Valid values: TCP and UDP.</p>
+         * <p>The protocol. Valid values: <code>TCP</code> or <code>UDP</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>TCP</p>
@@ -418,9 +416,15 @@ public class Service extends TeaModel {
     }
 
     public static class ServiceVersionsLabels extends TeaModel {
+        /**
+         * <p>The key of the label.</p>
+         */
         @NameInMap("key")
         public String key;
 
+        /**
+         * <p>The value of the label.</p>
+         */
         @NameInMap("value")
         public String value;
 
@@ -448,9 +452,15 @@ public class Service extends TeaModel {
     }
 
     public static class ServiceVersions extends TeaModel {
+        /**
+         * <p>The labels of the version.</p>
+         */
         @NameInMap("labels")
         public java.util.List<ServiceVersionsLabels> labels;
 
+        /**
+         * <p>The version name.</p>
+         */
         @NameInMap("name")
         public String name;
 

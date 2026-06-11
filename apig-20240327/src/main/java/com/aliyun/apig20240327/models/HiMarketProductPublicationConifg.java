@@ -4,6 +4,9 @@ package com.aliyun.apig20240327.models;
 import com.aliyun.tea.*;
 
 public class HiMarketProductPublicationConifg extends TeaModel {
+    /**
+     * <p>The unique identifier for the publication.</p>
+     */
     @NameInMap("publicationId")
     public String publicationId;
 

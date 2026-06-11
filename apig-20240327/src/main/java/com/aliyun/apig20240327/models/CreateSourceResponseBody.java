@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class CreateSourceResponseBody extends TeaModel {
     /**
+     * <p>The response status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>Ok</p>
      */
     @NameInMap("code")
     public String code;
 
+    /**
+     * <p>The response data.</p>
+     */
     @NameInMap("data")
     public CreateSourceResponseBodyData data;
 
     /**
+     * <p>Response message.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -22,6 +29,8 @@ public class CreateSourceResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>393E2630-DBE7-5221-AB35-9E740675491A</p>
      */
@@ -67,6 +76,8 @@ public class CreateSourceResponseBody extends TeaModel {
 
     public static class CreateSourceResponseBodyData extends TeaModel {
         /**
+         * <p>Source ID</p>
+         * 
          * <strong>example:</strong>
          * <p>src-crdddallhtgt***</p>
          */

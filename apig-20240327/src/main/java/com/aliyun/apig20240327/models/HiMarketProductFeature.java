@@ -4,6 +4,9 @@ package com.aliyun.apig20240327.models;
 import com.aliyun.tea.*;
 
 public class HiMarketProductFeature extends TeaModel {
+    /**
+     * <p>Specifies the product\&quot;s model feature. For more information, see HiMarketModelFeature.</p>
+     */
     @NameInMap("modelFeature")
     public HiMarketModelFeature modelFeature;
 

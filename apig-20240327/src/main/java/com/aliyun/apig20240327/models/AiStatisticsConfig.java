@@ -4,12 +4,21 @@ package com.aliyun.apig20240327.models;
 import com.aliyun.tea.*;
 
 public class AiStatisticsConfig extends TeaModel {
+    /**
+     * <p>Specifies whether to record the body of incoming requests.</p>
+     */
     @NameInMap("logRequestContent")
     public Boolean logRequestContent;
 
+    /**
+     * <p>Specifies whether to record the body of outgoing responses.</p>
+     */
     @NameInMap("logResponseContent")
     public Boolean logResponseContent;
 
+    /**
+     * <p>An array of configurations for extracting data from specific paths.</p>
+     */
     @NameInMap("pathFieldConfigs")
     public java.util.List<AiStatisticsConfigPathFieldConfigs> pathFieldConfigs;
 
@@ -43,9 +52,15 @@ public class AiStatisticsConfig extends TeaModel {
     }
 
     public static class AiStatisticsConfigPathFieldConfigs extends TeaModel {
+        /**
+         * <p>A key-value map for extracting fields. Keys are custom names, and values are paths to the data within the request or response body.</p>
+         */
         @NameInMap("fieldPaths")
         public java.util.Map<String, AiStatisticsPathField> fieldPaths;
 
+        /**
+         * <p>The API endpoint path to which this configuration applies, such as /user/id.</p>
+         */
         @NameInMap("path")
         public String path;
 

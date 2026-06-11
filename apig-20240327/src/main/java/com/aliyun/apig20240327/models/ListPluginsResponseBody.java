@@ -163,7 +163,7 @@ public class ListPluginsResponseBody extends TeaModel {
          * <p>The alias.</p>
          * 
          * <strong>example:</strong>
-         * <p>key-based rate limit</p>
+         * <p>基于 Key 限流</p>
          */
         @NameInMap("alias")
         public String alias;
@@ -226,7 +226,7 @@ public class ListPluginsResponseBody extends TeaModel {
          * <p>The description of the version.</p>
          * 
          * <strong>example:</strong>
-         * <p>version description</p>
+         * <p>版本描述</p>
          */
         @NameInMap("versionDescription")
         public String versionDescription;

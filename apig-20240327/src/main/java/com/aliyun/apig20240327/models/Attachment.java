@@ -4,28 +4,41 @@ package com.aliyun.apig20240327.models;
 import com.aliyun.tea.*;
 
 public class Attachment extends TeaModel {
+    /**
+     * <p>The attachment point ID.</p>
+     */
     @NameInMap("attachResourceId")
     public String attachResourceId;
 
     /**
-     * <p>The resource IDs.</p>
+     * <p>A list of attached resource IDs.</p>
      */
     @NameInMap("attachResourceIds")
     public java.util.List<String> attachResourceIds;
 
+    /**
+     * <p>A list of parent resource IDs.</p>
+     */
     @NameInMap("attachResourceParentIds")
     public java.util.List<String> attachResourceParentIds;
 
     /**
-     * <p>The supported mount point type. Valid values:</p>
+     * <p>The supported attachment point types for the policy.</p>
      * <ul>
-     * <li>HttpApi: an HTTP API</li>
-     * <li>Operation: an operation in an HTTP API</li>
-     * <li>GatewayRoute: a gateway route</li>
-     * <li>GatewayService: a gateway service</li>
-     * <li>GatewayServicePort: a gateway service port</li>
-     * <li>Domain: a gateway domain name</li>
-     * <li>Gateway: a gateway instance</li>
+     * <li><p><code>HttpApi</code>: An HTTP API.</p>
+     * </li>
+     * <li><p><code>Operation</code>: An operation of an HTTP API.</p>
+     * </li>
+     * <li><p><code>GatewayRoute</code>: A gateway route.</p>
+     * </li>
+     * <li><p><code>GatewayService</code>: A gateway service.</p>
+     * </li>
+     * <li><p><code>GatewayServicePort</code>: A gateway service port.</p>
+     * </li>
+     * <li><p><code>Domain</code>: A gateway domain.</p>
+     * </li>
+     * <li><p><code>Gateway</code>: A gateway.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -35,7 +48,7 @@ public class Attachment extends TeaModel {
     public String attachResourceType;
 
     /**
-     * <p>The environment to which the mounted resource belongs. If an asterisk (\*) is returned as the environment ID, the mounted resource is not related to the environment.</p>
+     * <p>The ID of the environment for the attached resource. An asterisk (<code>*</code>) indicates that the policy attachment is not environment-specific.</p>
      * 
      * <strong>example:</strong>
      * <p>env-cq7l5s5lhtgi6qasrdc0</p>
@@ -44,7 +57,7 @@ public class Attachment extends TeaModel {
     public String environmentId;
 
     /**
-     * <p>The instance to which the mounted resource belongs.</p>
+     * <p>The ID of the gateway for the attached resource.</p>
      * 
      * <strong>example:</strong>
      * <p>gw-cpr4f9dlhtgq5ksfgmb0</p>
@@ -53,7 +66,7 @@ public class Attachment extends TeaModel {
     public String gatewayId;
 
     /**
-     * <p>The mount ID.</p>
+     * <p>The policy attachment ID.</p>
      * 
      * <strong>example:</strong>
      * <p>pr-cq7l5s5lhtgi6qasrdc0</p>

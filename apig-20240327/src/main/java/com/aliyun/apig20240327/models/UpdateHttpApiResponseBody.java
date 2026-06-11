@@ -8,7 +8,7 @@ public class UpdateHttpApiResponseBody extends TeaModel {
      * <p>Response status code.</p>
      * 
      * <strong>example:</strong>
-     * <p>200</p>
+     * <p>Ok</p>
      */
     @NameInMap("code")
     public String code;

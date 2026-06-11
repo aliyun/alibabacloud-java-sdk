@@ -4,15 +4,27 @@ package com.aliyun.apig20240327.models;
 import com.aliyun.tea.*;
 
 public class HiMarketProductCategory extends TeaModel {
+    /**
+     * <p>The unique category ID.</p>
+     */
     @NameInMap("categoryId")
     public String categoryId;
 
+    /**
+     * <p>The category description.</p>
+     */
     @NameInMap("description")
     public String description;
 
+    /**
+     * <p>The category icon.</p>
+     */
     @NameInMap("icon")
     public HiMarketIcon icon;
 
+    /**
+     * <p>The category name.</p>
+     */
     @NameInMap("name")
     public String name;
 

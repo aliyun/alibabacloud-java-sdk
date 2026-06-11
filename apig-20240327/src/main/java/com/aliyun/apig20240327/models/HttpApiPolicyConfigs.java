@@ -71,7 +71,7 @@ public class HttpApiPolicyConfigs extends TeaModel {
      * <p>Policy Enable</p>
      * 
      * <strong>example:</strong>
-     * <p>true</p>
+     * <p>false</p>
      */
     @NameInMap("enable")
     public Boolean enable;
@@ -89,7 +89,7 @@ public class HttpApiPolicyConfigs extends TeaModel {
      * <p>Policy Type</p>
      * 
      * <strong>example:</strong>
-     * <p>AiCache</p>
+     * <p>K8S</p>
      */
     @NameInMap("type")
     public String type;

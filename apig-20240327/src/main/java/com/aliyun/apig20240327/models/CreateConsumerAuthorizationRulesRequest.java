@@ -28,7 +28,7 @@ public class CreateConsumerAuthorizationRulesRequest extends TeaModel {
          * <p>The environment ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>env-cti17hem1hktoruj98ug</p>
+         * <p>env-******</p>
          */
         @NameInMap("environmentId")
         public String environmentId;
@@ -101,7 +101,7 @@ public class CreateConsumerAuthorizationRulesRequest extends TeaModel {
          * <p>The consumer ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>cs-cu08olem1hkokaut34i0</p>
+         * <p>cs-******</p>
          */
         @NameInMap("consumerId")
         public String consumerId;

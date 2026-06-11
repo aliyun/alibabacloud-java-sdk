@@ -4,12 +4,21 @@ package com.aliyun.apig20240327.models;
 import com.aliyun.tea.*;
 
 public class HiMarketIdentityMapping extends TeaModel {
+    /**
+     * <p>The identity provider attribute that maps to the user\&quot;s email address.</p>
+     */
     @NameInMap("emailField")
     public String emailField;
 
+    /**
+     * <p>The identity provider attribute that maps to the user\&quot;s unique ID.</p>
+     */
     @NameInMap("userIdField")
     public String userIdField;
 
+    /**
+     * <p>The identity provider attribute that maps to the username.</p>
+     */
     @NameInMap("userNameField")
     public String userNameField;
 

@@ -78,11 +78,16 @@ public class ListPluginAttachmentsResponseBody extends TeaModel {
         /**
          * <p>The types of resource attachments.</p>
          * <ul>
-         * <li>HttpApi</li>
-         * <li>Operation</li>
-         * <li>GatewayRoute</li>
-         * <li>GatewayDomain</li>
-         * <li>Gateway</li>
+         * <li><p>HttpApi</p>
+         * </li>
+         * <li><p>Operation</p>
+         * </li>
+         * <li><p>GatewayRoute</p>
+         * </li>
+         * <li><p>GatewayDomain</p>
+         * </li>
+         * <li><p>Gateway</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

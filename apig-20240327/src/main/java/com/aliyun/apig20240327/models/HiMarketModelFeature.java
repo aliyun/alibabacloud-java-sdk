@@ -4,24 +4,45 @@ package com.aliyun.apig20240327.models;
 import com.aliyun.tea.*;
 
 public class HiMarketModelFeature extends TeaModel {
+    /**
+     * <p>Indicates whether to enable multi-modal capabilities. If set to <code>true</code>, the model can process requests that include multiple data types, such as text and images.</p>
+     */
     @NameInMap("enableMultiModal")
     public Boolean enableMultiModal;
 
+    /**
+     * <p>Indicates whether to include the model\&quot;s reasoning process in the response. If set to <code>true</code>, the output may contain intermediate steps that show how the model arrived at a conclusion.</p>
+     */
     @NameInMap("enableThinking")
     public Boolean enableThinking;
 
+    /**
+     * <p>The maximum number of tokens to generate in the response. A token is a unit of text processed by the model.</p>
+     */
     @NameInMap("maxTokens")
     public Integer maxTokens;
 
+    /**
+     * <p>The identifier of the model to use for inference.</p>
+     */
     @NameInMap("model")
     public String model;
 
+    /**
+     * <p>Indicates whether to deliver the response as a continuous stream. If set to <code>true</code>, results are sent incrementally.</p>
+     */
     @NameInMap("streaming")
     public Boolean streaming;
 
+    /**
+     * <p>Controls the randomness of the output. Valid values range from 0 to 1. Higher values, such as 0.8, make the output more random. Lower values, such as 0.2, make the output more deterministic.</p>
+     */
     @NameInMap("temperature")
     public Float temperature;
 
+    /**
+     * <p>Indicates whether the model can search the web to provide more up-to-date responses.</p>
+     */
     @NameInMap("webSearch")
     public Boolean webSearch;
 

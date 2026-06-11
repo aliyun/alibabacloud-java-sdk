@@ -86,6 +86,9 @@ public class ListGatewayFeaturesResponseBody extends TeaModel {
 
         /**
          * <p>The display value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>保持不变</p>
          */
         @NameInMap("label")
         public String label;
@@ -125,6 +128,9 @@ public class ListGatewayFeaturesResponseBody extends TeaModel {
 
         /**
          * <p>The parameter description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>作用于请求与响应环节，启用gzip会对请求响应进行压缩，会减少网关流量，增加网关cpu消耗</p>
          */
         @NameInMap("description")
         public String description;

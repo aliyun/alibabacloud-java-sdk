@@ -682,7 +682,7 @@ public class HttpApiPublishRevisionInfo extends TeaModel {
          * <p>The instance name.</p>
          * 
          * <strong>example:</strong>
-         * <p>Instance 1</p>
+         * <p>实例1</p>
          */
         @NameInMap("name")
         public String name;
@@ -715,7 +715,7 @@ public class HttpApiPublishRevisionInfo extends TeaModel {
          * <p>The environment alias.</p>
          * 
          * <strong>example:</strong>
-         * <p>Test</p>
+         * <p>测试</p>
          */
         @NameInMap("alias")
         public String alias;

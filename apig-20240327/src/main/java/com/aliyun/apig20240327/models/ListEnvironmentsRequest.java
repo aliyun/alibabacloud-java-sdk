@@ -8,7 +8,7 @@ public class ListEnvironmentsRequest extends TeaModel {
      * <p>Environment alias, fuzzy search.</p>
      * 
      * <strong>example:</strong>
-     * <p>production</p>
+     * <p>测试</p>
      */
     @NameInMap("aliasLike")
     public String aliasLike;
@@ -71,7 +71,7 @@ public class ListEnvironmentsRequest extends TeaModel {
      * <p>Resource group ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>rg-aek2sy66mftleiq</p>
+     * <p>rg-aek2nqpppkzplmq</p>
      */
     @NameInMap("resourceGroupId")
     public String resourceGroupId;

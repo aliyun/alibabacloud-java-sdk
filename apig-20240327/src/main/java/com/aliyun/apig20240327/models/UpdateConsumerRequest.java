@@ -20,7 +20,7 @@ public class UpdateConsumerRequest extends TeaModel {
      * <p>The description.</p>
      * 
      * <strong>example:</strong>
-     * <p>This is the description.</p>
+     * <p>测试消费者</p>
      */
     @NameInMap("description")
     public String description;

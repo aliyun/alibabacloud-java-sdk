@@ -79,7 +79,7 @@ public class UpdateDomainResponseBody extends TeaModel {
          * <p>The released version ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>apr-xxx</p>
+         * <p>apr-xxxxx</p>
          */
         @NameInMap("deployRevisionId")
         public String deployRevisionId;

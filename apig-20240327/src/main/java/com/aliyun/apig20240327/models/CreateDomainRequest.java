@@ -107,7 +107,7 @@ public class CreateDomainRequest extends TeaModel {
      * <p>The <a href="https://help.aliyun.com/document_detail/151181.html">resource group ID</a>.</p>
      * 
      * <strong>example:</strong>
-     * <p>rg-aekzoiafjtr7zyq</p>
+     * <p>rg-aekzhiv7derfweq</p>
      */
     @NameInMap("resourceGroupId")
     public String resourceGroupId;

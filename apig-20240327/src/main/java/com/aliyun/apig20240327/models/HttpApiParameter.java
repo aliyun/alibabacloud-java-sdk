@@ -17,7 +17,7 @@ public class HttpApiParameter extends TeaModel {
      * <p>The parameter description.</p>
      * 
      * <strong>example:</strong>
-     * <p>The example description.</p>
+     * <p>用户ID</p>
      */
     @NameInMap("description")
     public String description;

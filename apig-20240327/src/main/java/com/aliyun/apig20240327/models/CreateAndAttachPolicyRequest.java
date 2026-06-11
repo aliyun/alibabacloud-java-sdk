@@ -76,7 +76,7 @@ public class CreateAndAttachPolicyRequest extends TeaModel {
      * <p>The policy description.</p>
      * 
      * <strong>example:</strong>
-     * <p>This is the policy description.</p>
+     * <p>这是策略描述</p>
      */
     @NameInMap("description")
     public String description;

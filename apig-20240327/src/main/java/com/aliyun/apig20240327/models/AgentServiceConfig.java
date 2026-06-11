@@ -61,7 +61,7 @@ public class AgentServiceConfig extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>aliyun</p>
+     * <p>qwen</p>
      */
     @NameInMap("provider")
     public String provider;
@@ -140,7 +140,7 @@ public class AgentServiceConfig extends TeaModel {
          * <p>apiKey</p>
          * 
          * <strong>example:</strong>
-         * <p>sk-xxx</p>
+         * <p>app-xxx</p>
          */
         @NameInMap("apiKey")
         public String apiKey;
@@ -246,7 +246,7 @@ public class AgentServiceConfig extends TeaModel {
          * <p>API Key</p>
          * 
          * <strong>example:</strong>
-         * <p>sk-xxx</p>
+         * <p>app-xxx</p>
          */
         @NameInMap("apiKey")
         public String apiKey;

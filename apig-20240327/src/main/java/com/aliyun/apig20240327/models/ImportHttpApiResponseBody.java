@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ImportHttpApiResponseBody extends TeaModel {
     /**
-     * <p>The status code.</p>
+     * <p>The response status code.</p>
      * 
      * <strong>example:</strong>
      * <p>Ok</p>
@@ -14,13 +14,13 @@ public class ImportHttpApiResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The API information.</p>
+     * <p>Details of the imported API.</p>
      */
     @NameInMap("data")
     public ImportHttpApiResponseBodyData data;
 
     /**
-     * <p>The returned message.</p>
+     * <p>The response message.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -76,16 +76,16 @@ public class ImportHttpApiResponseBody extends TeaModel {
 
     public static class ImportHttpApiResponseBodyDataDryRunInfoFailureComponents extends TeaModel {
         /**
-         * <p>The error message.</p>
+         * <p>The reason for the dry run failure.</p>
          * 
          * <strong>example:</strong>
-         * <p>The data struct is incorrectly defined.</p>
+         * <p>数据结构定义有误。</p>
          */
         @NameInMap("errorMessage")
         public String errorMessage;
 
         /**
-         * <p>The data struct name.</p>
+         * <p>The data structure name.</p>
          * 
          * <strong>example:</strong>
          * <p>orderDTO</p>
@@ -118,16 +118,16 @@ public class ImportHttpApiResponseBody extends TeaModel {
 
     public static class ImportHttpApiResponseBodyDataDryRunInfoFailureOperations extends TeaModel {
         /**
-         * <p>The error message.</p>
+         * <p>The reason for the dry run failure.</p>
          * 
          * <strong>example:</strong>
-         * <p>Missing response definition.</p>
+         * <p>缺少响应定义。</p>
          */
         @NameInMap("errorMessage")
         public String errorMessage;
 
         /**
-         * <p>The HTTP method of the operation.</p>
+         * <p>The operation method.</p>
          * 
          * <strong>example:</strong>
          * <p>GET</p>
@@ -177,10 +177,12 @@ public class ImportHttpApiResponseBody extends TeaModel {
 
     public static class ImportHttpApiResponseBodyDataDryRunInfoSuccessComponents extends TeaModel {
         /**
-         * <p>The action that will be performed for the data struct after the dry run.</p>
+         * <p>Indicates whether the data structure will be created or updated.</p>
          * <ul>
-         * <li>Create: The data struct is created.</li>
-         * <li>Update: The data struct is updated.</li>
+         * <li><p><code>Create</code>: Creates a new data structure.</p>
+         * </li>
+         * <li><p><code>Update</code>: Updates an existing data structure.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -190,7 +192,7 @@ public class ImportHttpApiResponseBody extends TeaModel {
         public String action;
 
         /**
-         * <p>The data struct name.</p>
+         * <p>The data structure name.</p>
          * 
          * <strong>example:</strong>
          * <p>userDTO</p>
@@ -223,10 +225,12 @@ public class ImportHttpApiResponseBody extends TeaModel {
 
     public static class ImportHttpApiResponseBodyDataDryRunInfoSuccessOperations extends TeaModel {
         /**
-         * <p>The action that will be performed for the operation after the dry run.</p>
+         * <p>Indicates whether the operation creates or updates a resource.</p>
          * <ul>
-         * <li>Create: The operation is created.</li>
-         * <li>Update: The operation is updated.</li>
+         * <li><p><code>Create</code>: Creates a new resource.</p>
+         * </li>
+         * <li><p><code>Update</code>: Updates an existing resource.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -236,7 +240,7 @@ public class ImportHttpApiResponseBody extends TeaModel {
         public String action;
 
         /**
-         * <p>The HTTP method of the operation.</p>
+         * <p>The operation method.</p>
          * 
          * <strong>example:</strong>
          * <p>POST</p>
@@ -303,25 +307,25 @@ public class ImportHttpApiResponseBody extends TeaModel {
 
     public static class ImportHttpApiResponseBodyDataDryRunInfo extends TeaModel {
         /**
-         * <p>The error messages. If an error message is returned, the API fails to be imported.</p>
+         * <p>Global error messages. If this list is not empty, the API import fails.</p>
          */
         @NameInMap("errorMessages")
         public java.util.List<String> errorMessages;
 
         /**
-         * <p>The existing APIs. If an existing API is returned, the import updates the existing API.</p>
+         * <p>Details of the existing API. If this field is populated, the import operation updates this API.</p>
          */
         @NameInMap("existHttpApiInfo")
         public HttpApiApiInfo existHttpApiInfo;
 
         /**
-         * <p>The data structs that fail the dry run.</p>
+         * <p>Data structures that failed the dry run.</p>
          */
         @NameInMap("failureComponents")
         public java.util.List<ImportHttpApiResponseBodyDataDryRunInfoFailureComponents> failureComponents;
 
         /**
-         * <p>The operations that fail the dry run.</p>
+         * <p>Operations that failed the dry run.</p>
          */
         @NameInMap("failureOperations")
         public java.util.List<ImportHttpApiResponseBodyDataDryRunInfoFailureOperations> failureOperations;
@@ -330,19 +334,19 @@ public class ImportHttpApiResponseBody extends TeaModel {
         public String mcpToolsDefinition;
 
         /**
-         * <p>The data structs that pass the dry run.</p>
+         * <p>Data structures that passed the dry run.</p>
          */
         @NameInMap("successComponents")
         public java.util.List<ImportHttpApiResponseBodyDataDryRunInfoSuccessComponents> successComponents;
 
         /**
-         * <p>The operations that pass the dry run.</p>
+         * <p>Operations that passed the dry run.</p>
          */
         @NameInMap("successOperations")
         public java.util.List<ImportHttpApiResponseBodyDataDryRunInfoSuccessOperations> successOperations;
 
         /**
-         * <p>The alerts. If an alert is returned, specific operations or structs may fail to be imported.</p>
+         * <p>Global warning messages. If this list is not empty, some operations or data structures might not be imported.</p>
          */
         @NameInMap("warningMessages")
         public java.util.List<String> warningMessages;
@@ -420,13 +424,13 @@ public class ImportHttpApiResponseBody extends TeaModel {
 
     public static class ImportHttpApiResponseBodyData extends TeaModel {
         /**
-         * <p>The dry run result.</p>
+         * <p>The results of the dry run.</p>
          */
         @NameInMap("dryRunInfo")
         public ImportHttpApiResponseBodyDataDryRunInfo dryRunInfo;
 
         /**
-         * <p>The API ID.</p>
+         * <p>The unique ID of the HTTP API.</p>
          * 
          * <strong>example:</strong>
          * <p>api-xxx</p>

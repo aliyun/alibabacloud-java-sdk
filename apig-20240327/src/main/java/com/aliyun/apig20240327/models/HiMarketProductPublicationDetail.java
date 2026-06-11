@@ -4,21 +4,39 @@ package com.aliyun.apig20240327.models;
 import com.aliyun.tea.*;
 
 public class HiMarketProductPublicationDetail extends TeaModel {
+    /**
+     * <p>The unique ID of the portal.</p>
+     */
     @NameInMap("portalId")
     public String portalId;
 
+    /**
+     * <p>The name of the portal.</p>
+     */
     @NameInMap("portalName")
     public String portalName;
 
+    /**
+     * <p>The unique ID of the product.</p>
+     */
     @NameInMap("productId")
     public String productId;
 
+    /**
+     * <p>The name of the product.</p>
+     */
     @NameInMap("productName")
     public String productName;
 
+    /**
+     * <p>The type of the product.</p>
+     */
     @NameInMap("productType")
     public String productType;
 
+    /**
+     * <p>The unique ID of the product publication.</p>
+     */
     @NameInMap("publicationId")
     public String publicationId;
 

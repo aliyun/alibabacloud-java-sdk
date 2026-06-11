@@ -31,6 +31,12 @@ public class CreateHttpApiRequest extends TeaModel {
     @NameInMap("basePath")
     public String basePath;
 
+    /**
+     * <p>ID of the gateway to which the API belongs.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>gw-abc123xyz789</p>
+     */
     @NameInMap("belongGatewayId")
     public String belongGatewayId;
 
@@ -44,11 +50,17 @@ public class CreateHttpApiRequest extends TeaModel {
      * <p>$.parameters[0].schema.properties.aiProtocols.items.description</p>
      * 
      * <strong>example:</strong>
-     * <p>$.parameters[0].schema.properties.aiProtocols.items.example</p>
+     * <p>测试专用API。</p>
      */
     @NameInMap("description")
     public String description;
 
+    /**
+     * <p>Whether to preview without execution.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("dryRun")
     @Deprecated
     public Boolean dryRun;
@@ -120,6 +132,12 @@ public class CreateHttpApiRequest extends TeaModel {
     @NameInMap("resourceGroupId")
     public String resourceGroupId;
 
+    /**
+     * <p>The conflict merge strategy for import.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ExistFirst</p>
+     */
     @NameInMap("strategy")
     public String strategy;
 

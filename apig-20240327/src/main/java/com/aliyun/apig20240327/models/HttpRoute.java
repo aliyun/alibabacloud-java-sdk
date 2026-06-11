@@ -41,7 +41,7 @@ public class HttpRoute extends TeaModel {
      * <p>The description of the route</p>
      * 
      * <strong>example:</strong>
-     * <p>Route for user management API</p>
+     * <p>商品中心预发路由</p>
      */
     @NameInMap("description")
     public String description;
@@ -394,7 +394,7 @@ public class HttpRoute extends TeaModel {
          * <p>The environment alias</p>
          * 
          * <strong>example:</strong>
-         * <p>prod</p>
+         * <p>商品中心预发环境</p>
          */
         @NameInMap("alias")
         public String alias;

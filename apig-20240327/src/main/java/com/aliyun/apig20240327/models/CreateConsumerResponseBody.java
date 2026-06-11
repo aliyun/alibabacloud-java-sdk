@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateConsumerResponseBody extends TeaModel {
     /**
-     * <p>The status code.</p>
+     * <p>The response status code.</p>
      * 
      * <strong>example:</strong>
      * <p>Ok</p>
@@ -14,13 +14,13 @@ public class CreateConsumerResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The response payload.</p>
+     * <p>The response data.</p>
      */
     @NameInMap("data")
     public CreateConsumerResponseBodyData data;
 
     /**
-     * <p>The status message.</p>
+     * <p>The response message.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>

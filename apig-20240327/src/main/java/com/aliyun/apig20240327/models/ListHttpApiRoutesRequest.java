@@ -12,7 +12,7 @@ public class ListHttpApiRoutesRequest extends TeaModel {
     public String backendServiceName;
 
     /**
-     * <p>The string that is used to filter routes based on consumer authentication rules. Only authorized APIs are returned.</p>
+     * <p>Filters the results, returning only routes authorized by the specified consumer authorization rule.</p>
      * 
      * <strong>example:</strong>
      * <p>cas-xxx</p>
@@ -21,17 +21,7 @@ public class ListHttpApiRoutesRequest extends TeaModel {
     public String consumerAuthorizationRuleId;
 
     /**
-     * <p>The deployment state of the route.</p>
-     * <p>Enumerated values:</p>
-     * <ul>
-     * <li>Deploying: The route is being deployed.</li>
-     * <li>DeployedWithChanges: The route is deployed and modified.</li>
-     * <li>Undeploying: The route is being undeployed.</li>
-     * <li>NotDeployed: The route is not deployed.</li>
-     * <li>Deployed: The route is deployed.</li>
-     * <li>UndeployFailed: The route failed to be undeployed.</li>
-     * <li>DeployFailed: The route failed to be deployed.</li>
-     * </ul>
+     * <p>The deployment status of the route.</p>
      * 
      * <strong>example:</strong>
      * <p>NotDeployed</p>
@@ -40,7 +30,7 @@ public class ListHttpApiRoutesRequest extends TeaModel {
     public String deployStatuses;
 
     /**
-     * <p>Specifies to filter routes by domain ID.</p>
+     * <p>Filters routes by the specified domain ID.</p>
      * 
      * <strong>example:</strong>
      * <p>d-xxx</p>
@@ -58,7 +48,7 @@ public class ListHttpApiRoutesRequest extends TeaModel {
     public String environmentId;
 
     /**
-     * <p>Whether to filter for deployment scenario</p>
+     * <p>Set to <code>true</code> if the query is for a deployment scenario.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -67,7 +57,7 @@ public class ListHttpApiRoutesRequest extends TeaModel {
     public Boolean forDeploy;
 
     /**
-     * <p>The ID of the Cloud-native API Gateway instance.</p>
+     * <p>The cloud-native API gateway ID.</p>
      * 
      * <strong>example:</strong>
      * <p>gw-cpv4sqdl****</p>
@@ -76,7 +66,7 @@ public class ListHttpApiRoutesRequest extends TeaModel {
     public String gatewayId;
 
     /**
-     * <p>The route name.</p>
+     * <p>The route name. This parameter requires an exact match.</p>
      * 
      * <strong>example:</strong>
      * <p>itemcenter-gateway</p>
@@ -85,7 +75,7 @@ public class ListHttpApiRoutesRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The route name keyword for a fuzzy search.</p>
+     * <p>Filters the results by route name using a fuzzy search.</p>
      * 
      * <strong>example:</strong>
      * <p>item</p>
@@ -94,7 +84,7 @@ public class ListHttpApiRoutesRequest extends TeaModel {
     public String nameLike;
 
     /**
-     * <p>The page number of the page to return. Pages start from page 1. Default value: 1.</p>
+     * <p>The page number, starting from 1. Defaults to 1 if unspecified.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -103,7 +93,7 @@ public class ListHttpApiRoutesRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page. Valid values: 1 to 100. Default value: 10.</p>
+     * <p>The page size. Valid values are 1 to 100. Defaults to 10 if unspecified.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -112,7 +102,7 @@ public class ListHttpApiRoutesRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The route path keyword for a fuzzy search.</p>
+     * <p>Filters the results by route path using a fuzzy search.</p>
      * 
      * <strong>example:</strong>
      * <p>/v1</p>
@@ -121,7 +111,7 @@ public class ListHttpApiRoutesRequest extends TeaModel {
     public String pathLike;
 
     /**
-     * <p>The consumer authorization information in the response.</p>
+     * <p>Set to <code>true</code> to include the consumer authorization policy in the response.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -130,7 +120,7 @@ public class ListHttpApiRoutesRequest extends TeaModel {
     public Boolean withAuthPolicyInfo;
 
     /**
-     * <p>The authentication rules of the specified consumer in each route returned.</p>
+     * <p>The consumer ID. If specified, the response includes the consumer\&quot;s associated authorization rules for each route.</p>
      * 
      * <strong>example:</strong>
      * <p>cs-xxx</p>
@@ -139,7 +129,7 @@ public class ListHttpApiRoutesRequest extends TeaModel {
     public String withConsumerInfoById;
 
     /**
-     * <p>The mounting information of the specified plug-in in each route returned.</p>
+     * <p>The plugin ID. If specified, the response includes the attachment information for this plugin for each route.</p>
      * 
      * <strong>example:</strong>
      * <p>pl-xxx</p>

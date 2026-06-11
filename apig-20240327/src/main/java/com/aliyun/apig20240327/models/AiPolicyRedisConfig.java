@@ -4,21 +4,39 @@ package com.aliyun.apig20240327.models;
 import com.aliyun.tea.*;
 
 public class AiPolicyRedisConfig extends TeaModel {
+    /**
+     * <p>The zero-based index of the Redis database to use. The default value is 0.</p>
+     */
     @NameInMap("databaseNumber")
     public Integer databaseNumber;
 
+    /**
+     * <p>The hostname of the Redis instance.</p>
+     */
     @NameInMap("host")
     public String host;
 
+    /**
+     * <p>The password for Redis authentication.</p>
+     */
     @NameInMap("password")
     public String password;
 
+    /**
+     * <p>The port number of the Redis instance.</p>
+     */
     @NameInMap("port")
     public Integer port;
 
+    /**
+     * <p>The connection timeout in milliseconds.</p>
+     */
     @NameInMap("timeout")
     public Integer timeout;
 
+    /**
+     * <p>The username for Redis authentication.</p>
+     */
     @NameInMap("username")
     public String username;
 

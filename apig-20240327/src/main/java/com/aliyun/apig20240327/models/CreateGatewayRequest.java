@@ -14,6 +14,14 @@ public class CreateGatewayRequest extends TeaModel {
     public String chargeType;
 
     /**
+     * <p>Gateway instance edition:</p>
+     * <ul>
+     * <li><p>Standard instance: Professional</p>
+     * </li>
+     * <li><p>Serverless: Serverless (currently supports only AI gateway)</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>Professional</p>
      */
@@ -29,6 +37,9 @@ public class CreateGatewayRequest extends TeaModel {
     @NameInMap("gatewayType")
     public String gatewayType;
 
+    /**
+     * <p>Gateway log configuration.</p>
+     */
     @NameInMap("logConfig")
     public CreateGatewayRequestLogConfig logConfig;
 
@@ -48,6 +59,8 @@ public class CreateGatewayRequest extends TeaModel {
     public CreateGatewayRequestNetworkAccessConfig networkAccessConfig;
 
     /**
+     * <p>The ID of the resource group.</p>
+     * 
      * <strong>example:</strong>
      * <p>rg-ahr5uil8raz0rq3b</p>
      */
@@ -63,6 +76,9 @@ public class CreateGatewayRequest extends TeaModel {
     @NameInMap("spec")
     public String spec;
 
+    /**
+     * <p>The list of labels.</p>
+     */
     @NameInMap("tag")
     public java.util.List<CreateGatewayRequestTag> tag;
 
@@ -176,6 +192,8 @@ public class CreateGatewayRequest extends TeaModel {
 
     public static class CreateGatewayRequestLogConfigSls extends TeaModel {
         /**
+         * <p>Whether to enable.</p>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
@@ -198,6 +216,9 @@ public class CreateGatewayRequest extends TeaModel {
     }
 
     public static class CreateGatewayRequestLogConfig extends TeaModel {
+        /**
+         * <p>SLS log configuration.</p>
+         */
         @NameInMap("sls")
         public CreateGatewayRequestLogConfigSls sls;
 
@@ -245,6 +266,8 @@ public class CreateGatewayRequest extends TeaModel {
 
     public static class CreateGatewayRequestTag extends TeaModel {
         /**
+         * <p>The tag key.</p>
+         * 
          * <strong>example:</strong>
          * <p>key</p>
          */
@@ -252,6 +275,8 @@ public class CreateGatewayRequest extends TeaModel {
         public String key;
 
         /**
+         * <p>The value of the label.</p>
+         * 
          * <strong>example:</strong>
          * <p>value</p>
          */
@@ -283,6 +308,8 @@ public class CreateGatewayRequest extends TeaModel {
 
     public static class CreateGatewayRequestZoneConfigZones extends TeaModel {
         /**
+         * <p>The ID of the virtual switch.</p>
+         * 
          * <strong>example:</strong>
          * <p>vsw-xx</p>
          */
@@ -290,6 +317,8 @@ public class CreateGatewayRequest extends TeaModel {
         public String vSwitchId;
 
         /**
+         * <p>The ID of the zone.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-wulanchabu-a</p>
          */
@@ -330,12 +359,17 @@ public class CreateGatewayRequest extends TeaModel {
         public String selectOption;
 
         /**
+         * <p>Virtual switch ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>vsw-xxx</p>
          */
         @NameInMap("vSwitchId")
         public String vSwitchId;
 
+        /**
+         * <p>List of supported zones.</p>
+         */
         @NameInMap("zones")
         public java.util.List<CreateGatewayRequestZoneConfigZones> zones;
 

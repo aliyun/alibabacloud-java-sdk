@@ -8,7 +8,7 @@ public class ListHttpApisResponseBody extends TeaModel {
      * <p>The status code.</p>
      * 
      * <strong>example:</strong>
-     * <p>200</p>
+     * <p>Ok</p>
      */
     @NameInMap("code")
     public String code;

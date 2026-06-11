@@ -4,17 +4,28 @@ package com.aliyun.apig20240327.models;
 import com.aliyun.tea.*;
 
 public class ListExternalServicesResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>Ok</p>
+     */
     @NameInMap("code")
     public String code;
 
     @NameInMap("data")
     public ListExternalServicesResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Failed to upload data. Please try again</p>
+     */
     @NameInMap("message")
     public String message;
 
     /**
      * <p>Id of the request</p>
+     * 
+     * <strong>example:</strong>
+     * <p>D9B03B59-B2D6-51B0-A7E9-AF8466E320CA</p>
      */
     @NameInMap("requestId")
     public String requestId;
@@ -57,9 +68,17 @@ public class ListExternalServicesResponseBody extends TeaModel {
     }
 
     public static class ListExternalServicesResponseBodyDataItemsServices extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>enable-slash-merge</p>
+         */
         @NameInMap("name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>public</p>
+         */
         @NameInMap("namespace")
         public String namespace;
 
@@ -87,9 +106,17 @@ public class ListExternalServicesResponseBody extends TeaModel {
     }
 
     public static class ListExternalServicesResponseBodyDataItems extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>PUBLIC</p>
+         */
         @NameInMap("namespace")
         public String namespace;
 
+        /**
+         * <strong>example:</strong>
+         * <p>PUBLIC</p>
+         */
         @NameInMap("namespaceShowName")
         public String namespaceShowName;
 

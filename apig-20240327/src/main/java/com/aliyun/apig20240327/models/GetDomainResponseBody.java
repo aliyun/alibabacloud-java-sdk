@@ -85,7 +85,7 @@ public class GetDomainResponseBody extends TeaModel {
          * <p>The total number of resources.</p>
          * 
          * <strong>example:</strong>
-         * <p>1</p>
+         * <p>30</p>
          */
         @NameInMap("totalCount")
         public String totalCount;
@@ -127,7 +127,7 @@ public class GetDomainResponseBody extends TeaModel {
          * <p>The CA certificate ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>876****-cn-hangzhou</p>
+         * <p>8237***-cn-hangzhou</p>
          */
         @NameInMap("caCertIdentifier")
         public String caCertIdentifier;
@@ -136,7 +136,7 @@ public class GetDomainResponseBody extends TeaModel {
          * <p>The certificate ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>645****-cn-hangzhou</p>
+         * <p>2382***-cn-hangzhou</p>
          */
         @NameInMap("certIdentifier")
         public String certIdentifier;
@@ -298,7 +298,7 @@ public class GetDomainResponseBody extends TeaModel {
          * <p>The resource group ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>rg-aekzvlxzgo5b4si</p>
+         * <p>rg-aekztduhoagat4y</p>
          */
         @NameInMap("resourceGroupId")
         public String resourceGroupId;

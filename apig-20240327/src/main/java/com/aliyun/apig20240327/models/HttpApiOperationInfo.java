@@ -29,7 +29,7 @@ public class HttpApiOperationInfo extends TeaModel {
      * <p>The operation description.</p>
      * 
      * <strong>example:</strong>
-     * <p>A example operation.</p>
+     * <p>获取用户信息</p>
      */
     @NameInMap("description")
     public String description;

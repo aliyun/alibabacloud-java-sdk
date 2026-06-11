@@ -4,18 +4,38 @@ package com.aliyun.apig20240327.models;
 import com.aliyun.tea.*;
 
 public class ListExternalServicesRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("importableOnly")
     public Boolean importableOnly;
 
+    /**
+     * <strong>example:</strong>
+     * <p>100</p>
+     */
     @NameInMap("limit")
     public Integer limit;
 
+    /**
+     * <strong>example:</strong>
+     * <p>imah</p>
+     */
     @NameInMap("nameLike")
     public String nameLike;
 
+    /**
+     * <strong>example:</strong>
+     * <p>667435</p>
+     */
     @NameInMap("paiWorkspaceId")
     public String paiWorkspaceId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>FC3</p>
+     */
     @NameInMap("sourceType")
     public String sourceType;
 

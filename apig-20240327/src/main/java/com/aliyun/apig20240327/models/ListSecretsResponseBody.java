@@ -8,7 +8,7 @@ public class ListSecretsResponseBody extends TeaModel {
      * <p>Code of the request</p>
      * 
      * <strong>example:</strong>
-     * <p>200</p>
+     * <p>Ok</p>
      */
     @NameInMap("code")
     public String code;
@@ -32,7 +32,7 @@ public class ListSecretsResponseBody extends TeaModel {
      * <p>Id of the request</p>
      * 
      * <strong>example:</strong>
-     * <p>2F270C0B-7D6A-5DA7-93E2-******</p>
+     * <p>3A3D1392-0F71-5A10-9AE8-89C434696966</p>
      */
     @NameInMap("requestId")
     public String requestId;
@@ -79,7 +79,7 @@ public class ListSecretsResponseBody extends TeaModel {
          * <p>Unix timestamp when the secret was created</p>
          * 
          * <strong>example:</strong>
-         * <p>1234567890</p>
+         * <p>1725617840096</p>
          */
         @NameInMap("createTimestamp")
         public Long createTimestamp;
@@ -103,7 +103,7 @@ public class ListSecretsResponseBody extends TeaModel {
          * <p>Name of the secret</p>
          * 
          * <strong>example:</strong>
-         * <p>test-secret</p>
+         * <p>my_secret</p>
          */
         @NameInMap("name")
         public String name;
@@ -112,7 +112,7 @@ public class ListSecretsResponseBody extends TeaModel {
          * <p>Number of resources referencing this secret</p>
          * 
          * <strong>example:</strong>
-         * <p>5</p>
+         * <p>3</p>
          */
         @NameInMap("referenceCount")
         public Integer referenceCount;
@@ -121,7 +121,7 @@ public class ListSecretsResponseBody extends TeaModel {
          * <p>Source of the ID</p>
          * 
          * <strong>example:</strong>
-         * <p>xxxxxx</p>
+         * <p>sec-d5e6shmm1hkoxxxxxxxx</p>
          */
         @NameInMap("secretId")
         public String secretId;
@@ -148,7 +148,7 @@ public class ListSecretsResponseBody extends TeaModel {
          * <p>Unix timestamp when the secret was last updated</p>
          * 
          * <strong>example:</strong>
-         * <p>1234567890</p>
+         * <p>1721116090326</p>
          */
         @NameInMap("updateTimestamp")
         public Long updateTimestamp;
@@ -261,7 +261,7 @@ public class ListSecretsResponseBody extends TeaModel {
          * <p>Total number of records matching the query</p>
          * 
          * <strong>example:</strong>
-         * <p>104</p>
+         * <p>10</p>
          */
         @NameInMap("totalSize")
         public Integer totalSize;

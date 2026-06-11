@@ -8,7 +8,7 @@ public class ListSecretsRequest extends TeaModel {
      * <p>Gateway type for filtering secrets of specific gateway type</p>
      * 
      * <strong>example:</strong>
-     * <p>API</p>
+     * <p>AI</p>
      */
     @NameInMap("gatewayType")
     public String gatewayType;
@@ -17,7 +17,7 @@ public class ListSecretsRequest extends TeaModel {
      * <p>Secret name for fuzzy matching, supports filtering secrets by name</p>
      * 
      * <strong>example:</strong>
-     * <p>test-secret</p>
+     * <p>my_secret</p>
      */
     @NameInMap("nameLike")
     public String nameLike;

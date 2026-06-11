@@ -252,7 +252,7 @@ public class RiskCheckResults extends TeaModel {
          * <p>The risk description</p>
          * 
          * <strong>example:</strong>
-         * <p>The version is outdated</p>
+         * <p>{&quot;desc&quot;:&quot;单节点实例存在架构风险，单点故障会导致服务不可用。建议扩容到2节点及以上。&quot;}</p>
          */
         @NameInMap("description")
         public String description;
@@ -288,7 +288,7 @@ public class RiskCheckResults extends TeaModel {
          * <p>The risk title</p>
          * 
          * <strong>example:</strong>
-         * <p>Version Risk</p>
+         * <p>单节点架构风险</p>
          */
         @NameInMap("riskName")
         public String riskName;
@@ -306,7 +306,7 @@ public class RiskCheckResults extends TeaModel {
          * <p>The risk situation</p>
          * 
          * <strong>example:</strong>
-         * <p>Current version is 2 releases behind</p>
+         * <p>{&quot;desc&quot;:&quot;集群节点数为1，不具备高可用能力&quot;}</p>
          */
         @NameInMap("situation")
         public String situation;
@@ -315,7 +315,7 @@ public class RiskCheckResults extends TeaModel {
          * <p>The fix suggestion</p>
          * 
          * <strong>example:</strong>
-         * <p>Upgrade to the latest version</p>
+         * <p>{&quot;desc&quot;:&quot;扩容到2节点及以上&quot;,&quot;links&quot;:[{&quot;descEn&quot;:&quot;click to upgrade specification&quot;,&quot;type&quot;:&quot;upgrade&quot;,&quot;desc&quot;:&quot;点击扩容&quot;}]}</p>
          */
         @NameInMap("suggestion")
         public String suggestion;

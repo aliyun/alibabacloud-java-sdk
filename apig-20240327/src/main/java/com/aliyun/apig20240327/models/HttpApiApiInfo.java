@@ -47,13 +47,16 @@ public class HttpApiApiInfo extends TeaModel {
      * <p>The API description.</p>
      * 
      * <strong>example:</strong>
-     * <p>for test only</p>
+     * <p>测试专用API</p>
      */
     @NameInMap("description")
     public String description;
 
     /**
      * <p>Specifies whether to enable authentication.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("enabelAuth")
     public Boolean enabelAuth;

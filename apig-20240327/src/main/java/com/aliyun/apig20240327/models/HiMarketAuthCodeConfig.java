@@ -4,30 +4,57 @@ package com.aliyun.apig20240327.models;
 import com.aliyun.tea.*;
 
 public class HiMarketAuthCodeConfig extends TeaModel {
+    /**
+     * <p>The URL of the identity provider\&quot;s authorization endpoint. Your application redirects users to this URL to sign in and grant consent.</p>
+     */
     @NameInMap("authorizationEndpoint")
     public String authorizationEndpoint;
 
+    /**
+     * <p>The unique identifier for your application. The identity provider assigns this ID when you register your application.</p>
+     */
     @NameInMap("clientId")
     public String clientId;
 
+    /**
+     * <p>The secret key for your application. This secret authenticates your application with the identity provider.</p>
+     */
     @NameInMap("clientSecret")
     public String clientSecret;
 
+    /**
+     * <p>The URL of the identity provider that issues the tokens. This URL uniquely identifies the provider.</p>
+     */
     @NameInMap("issuer")
     public String issuer;
 
+    /**
+     * <p>The URL of the identity provider\&quot;s JSON Web Key Set (JWKS) document. This document contains the public signing keys for token validation.</p>
+     */
     @NameInMap("jwkSetUri")
     public String jwkSetUri;
 
+    /**
+     * <p>The URL where the identity provider redirects the user after authorizing your application. This URL must be registered in your application settings with the identity provider.</p>
+     */
     @NameInMap("redirectUri")
     public String redirectUri;
 
+    /**
+     * <p>A space-separated list of requested permissions. For example: <code>openid profile</code>.</p>
+     */
     @NameInMap("scopes")
     public String scopes;
 
+    /**
+     * <p>The URL of the identity provider\&quot;s token endpoint. Your application uses this endpoint to exchange an authorization code for an access token.</p>
+     */
     @NameInMap("tokenEndpoint")
     public String tokenEndpoint;
 
+    /**
+     * <p>The URL of the identity provider\&quot;s user info endpoint. Your application can use this endpoint to retrieve the authenticated user\&quot;s profile information.</p>
+     */
     @NameInMap("userInfoEndpoint")
     public String userInfoEndpoint;
 

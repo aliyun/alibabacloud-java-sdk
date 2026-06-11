@@ -8,7 +8,7 @@ public class AddGatewaySecurityGroupRuleRequest extends TeaModel {
      * <p>The description of security group rule N.</p>
      * 
      * <strong>example:</strong>
-     * <p>ProductCenterSG</p>
+     * <p>商品中心访问安全组</p>
      */
     @NameInMap("description")
     public String description;

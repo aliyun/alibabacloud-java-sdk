@@ -79,11 +79,7 @@ public class GetGatewayResponseBody extends TeaModel {
          * <p>The port information.</p>
          * 
          * <strong>example:</strong>
-         * <p>The protocol. Valid values:</p>
-         * <ul>
-         * <li>TCP</li>
-         * <li>UDP</li>
-         * </ul>
+         * <p>默认环境</p>
          */
         @NameInMap("alias")
         public String alias;
@@ -504,7 +500,7 @@ public class GetGatewayResponseBody extends TeaModel {
          * <p>The resource tags.</p>
          * 
          * <strong>example:</strong>
-         * <p>The resource tag.</p>
+         * <p>杭州VPC虚拟交换机</p>
          */
         @NameInMap("name")
         public String name;
@@ -546,7 +542,7 @@ public class GetGatewayResponseBody extends TeaModel {
          * <p>=</p>
          * 
          * <strong>example:</strong>
-         * <p>$.errorCode</p>
+         * <p>杭州VPC</p>
          */
         @NameInMap("name")
         public String name;
@@ -588,7 +584,7 @@ public class GetGatewayResponseBody extends TeaModel {
          * <p>The VSwitch name</p>
          * 
          * <strong>example:</strong>
-         * <p>vswitch-name</p>
+         * <p>杭州VPC虚拟交换机</p>
          */
         @NameInMap("name")
         public String name;
@@ -630,7 +626,7 @@ public class GetGatewayResponseBody extends TeaModel {
          * <p>The zone name</p>
          * 
          * <strong>example:</strong>
-         * <p>Hangzhou Zone I</p>
+         * <p>杭州可用区E</p>
          */
         @NameInMap("name")
         public String name;

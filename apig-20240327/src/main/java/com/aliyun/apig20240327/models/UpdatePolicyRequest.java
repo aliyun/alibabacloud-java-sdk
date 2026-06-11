@@ -18,7 +18,7 @@ public class UpdatePolicyRequest extends TeaModel {
      * <p>Description</p>
      * 
      * <strong>example:</strong>
-     * <p>this is a timeout policy description</p>
+     * <p>这是一条网关超时策略</p>
      */
     @NameInMap("description")
     public String description;

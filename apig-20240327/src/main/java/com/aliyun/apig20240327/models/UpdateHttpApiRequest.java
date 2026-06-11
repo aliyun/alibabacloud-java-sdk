@@ -42,7 +42,7 @@ public class UpdateHttpApiRequest extends TeaModel {
      * <p>The environment ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>The source ID.</p>
+     * <p>更新API描述</p>
      */
     @NameInMap("description")
     public String description;

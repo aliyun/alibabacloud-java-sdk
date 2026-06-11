@@ -95,6 +95,9 @@ public class CreateSourceRequest extends TeaModel {
     public static class CreateSourceRequestK8sSourceConfigAuthorizeSecurityGroupRules extends TeaModel {
         /**
          * <p>The rule description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>预发网关访问安全组</p>
          */
         @NameInMap("description")
         public String description;

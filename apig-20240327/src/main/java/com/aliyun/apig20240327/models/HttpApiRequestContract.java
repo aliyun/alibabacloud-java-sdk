@@ -79,7 +79,7 @@ public class HttpApiRequestContract extends TeaModel {
          * <p>The parameter description.</p>
          * 
          * <strong>example:</strong>
-         * <p>This is a description.</p>
+         * <p>body参数描述</p>
          */
         @NameInMap("description")
         public String description;
@@ -98,17 +98,17 @@ public class HttpApiRequestContract extends TeaModel {
          * 
          * <strong>example:</strong>
          * <p>{
-         *       &quot;type&quot;: &quot;object&quot;,
-         *       &quot;required&quot;: [
-         *           &quot;result&quot;
-         *       ],
-         *       &quot;properties&quot;: {
-         *           &quot;result&quot;: {
-         *               &quot;type&quot;: &quot;string&quot;,
-         *               &quot;description&quot;: &quot;Operation result. \&quot;ok\&quot; indicates success.&quot;
-         *           }
-         *       }
-         *   }</p>
+         *     &quot;type&quot;: &quot;object&quot;,
+         *     &quot;required&quot;: [
+         *         &quot;result&quot;
+         *     ],
+         *     &quot;properties&quot;: {
+         *         &quot;result&quot;: {
+         *             &quot;type&quot;: &quot;string&quot;,
+         *             &quot;description&quot;: &quot;操作结果，\&quot;ok\&quot; 表示成功&quot;
+         *         }
+         *     }
+         * }</p>
          */
         @NameInMap("jsonSchema")
         public String jsonSchema;

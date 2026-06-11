@@ -12,6 +12,9 @@ public class PolicyInfo extends TeaModel {
 
     /**
      * <p>The policy class alias.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>流量控制</p>
      */
     @NameInMap("classAlias")
     public String classAlias;
@@ -40,6 +43,9 @@ public class PolicyInfo extends TeaModel {
      * <li>OIDCAuth: implements global OIDC authentication. Supported: Gateway.</li>
      * <li>ExternalZAuth: implements custom authentication. Supported: Gateway.</li>
      * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>RateLimit</p>
      */
     @NameInMap("className")
     public String className;
@@ -114,6 +120,9 @@ public class PolicyInfo extends TeaModel {
 
     /**
      * <p>The policy type.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>策略类型</p>
      */
     @NameInMap("type")
     public String type;

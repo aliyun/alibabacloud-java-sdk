@@ -27,6 +27,145 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>该接口用于对AI网关增加基于消费者的配额规则。注意，只针对于版本大于2.1.19的AI网关生效。</p>
+     * <blockquote>
+     * <p> 推荐调用逻辑：</p>
+     * <ul>
+     * <li>一、先 dryRun 预检检验是否存在规则冲突</li>
+     * <li><ul>
+     * <li>传dryRun=true</li>
+     * </ul>
+     * </li>
+     * <li><ul>
+     * <li>返回含conflictHash的冲突预览</li>
+     * </ul>
+     * </li>
+     * <li>二、确认后正式提交</li>
+     * <li><ul>
+     * <li>无冲突：dryRun=false,overwrite=false</li>
+     * </ul>
+     * </li>
+     * <li><ul>
+     * <li>有冲突且确认覆盖：dryRun=false,overwrite=true, conflictHash=&lt;上一步返回的值＞</li>
+     * </ul>
+     * </li>
+     * </ul>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>新增网关配额限流规则</p>
+     * 
+     * @param request AddGatewayQuotaRuleRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return AddGatewayQuotaRuleResponse
+     */
+    public AddGatewayQuotaRuleResponse addGatewayQuotaRuleWithOptions(String gatewayId, AddGatewayQuotaRuleRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.conflictHash)) {
+            body.put("conflictHash", request.conflictHash);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.consumerGroupIds)) {
+            body.put("consumerGroupIds", request.consumerGroupIds);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.consumerIds)) {
+            body.put("consumerIds", request.consumerIds);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dryRun)) {
+            body.put("dryRun", request.dryRun);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.overwrite)) {
+            body.put("overwrite", request.overwrite);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.periodType)) {
+            body.put("periodType", request.periodType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.quotaDimension)) {
+            body.put("quotaDimension", request.quotaDimension);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.quotaLimit)) {
+            body.put("quotaLimit", request.quotaLimit);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ruleName)) {
+            body.put("ruleName", request.ruleName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.timezone)) {
+            body.put("timezone", request.timezone);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.windowAlignment)) {
+            body.put("windowAlignment", request.windowAlignment);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "AddGatewayQuotaRule"),
+            new TeaPair("version", "2024-03-27"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/v1/gateways/" + com.aliyun.openapiutil.Client.getEncodeParam(gatewayId) + "/quota-rules"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new AddGatewayQuotaRuleResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>该接口用于对AI网关增加基于消费者的配额规则。注意，只针对于版本大于2.1.19的AI网关生效。</p>
+     * <blockquote>
+     * <p> 推荐调用逻辑：</p>
+     * <ul>
+     * <li>一、先 dryRun 预检检验是否存在规则冲突</li>
+     * <li><ul>
+     * <li>传dryRun=true</li>
+     * </ul>
+     * </li>
+     * <li><ul>
+     * <li>返回含conflictHash的冲突预览</li>
+     * </ul>
+     * </li>
+     * <li>二、确认后正式提交</li>
+     * <li><ul>
+     * <li>无冲突：dryRun=false,overwrite=false</li>
+     * </ul>
+     * </li>
+     * <li><ul>
+     * <li>有冲突且确认覆盖：dryRun=false,overwrite=true, conflictHash=&lt;上一步返回的值＞</li>
+     * </ul>
+     * </li>
+     * </ul>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>新增网关配额限流规则</p>
+     * 
+     * @param request AddGatewayQuotaRuleRequest
+     * @return AddGatewayQuotaRuleResponse
+     */
+    public AddGatewayQuotaRuleResponse addGatewayQuotaRule(String gatewayId, AddGatewayQuotaRuleRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.addGatewayQuotaRuleWithOptions(gatewayId, request, headers, runtime);
+    }
+
+    /**
      * <b>summary</b> : 
      * <p>Adds a security group that authorizes an instance to access services.</p>
      * 
@@ -617,7 +756,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a cloud-native gateway.</p>
+     * <p>The zone information.</p>
      * 
      * @param request CreateGatewayRequest
      * @param headers map
@@ -691,7 +830,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a cloud-native gateway.</p>
+     * <p>The zone information.</p>
      * 
      * @param request CreateGatewayRequest
      * @return CreateGatewayResponse
@@ -704,7 +843,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates an HTTP API.</p>
+     * <p>$.parameters[0].schema.properties.ingressConfig.example</p>
      * 
      * @param request CreateHttpApiRequest
      * @param headers map
@@ -810,7 +949,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates an HTTP API.</p>
+     * <p>$.parameters[0].schema.properties.ingressConfig.example</p>
      * 
      * @param request CreateHttpApiRequest
      * @return CreateHttpApiResponse
@@ -1430,7 +1569,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a service source.</p>
+     * <p>Create a source.</p>
      * 
      * @param request CreateSourceRequest
      * @param headers map
@@ -1480,7 +1619,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a service source.</p>
+     * <p>Create a source.</p>
      * 
      * @param request CreateSourceRequest
      * @return CreateSourceResponse
@@ -1682,6 +1821,53 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.deleteGatewayWithOptions(gatewayId, headers, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>该接口用于对 AI 网关删除某条基于消费者的配额规则。注意，只针对于版本大于 2.1.19 的 AI 网关生效。</p>
+     * 
+     * <b>summary</b> : 
+     * <p>删除网关配额限流规则</p>
+     * 
+     * @param request DeleteGatewayQuotaRuleRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteGatewayQuotaRuleResponse
+     */
+    public DeleteGatewayQuotaRuleResponse deleteGatewayQuotaRuleWithOptions(String gatewayId, String ruleId, DeleteGatewayQuotaRuleRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteGatewayQuotaRule"),
+            new TeaPair("version", "2024-03-27"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/v1/gateways/" + com.aliyun.openapiutil.Client.getEncodeParam(gatewayId) + "/quota-rules/" + com.aliyun.openapiutil.Client.getEncodeParam(ruleId) + ""),
+            new TeaPair("method", "DELETE"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteGatewayQuotaRuleResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>该接口用于对 AI 网关删除某条基于消费者的配额规则。注意，只针对于版本大于 2.1.19 的 AI 网关生效。</p>
+     * 
+     * <b>summary</b> : 
+     * <p>删除网关配额限流规则</p>
+     * 
+     * @param request DeleteGatewayQuotaRuleRequest
+     * @return DeleteGatewayQuotaRuleResponse
+     */
+    public DeleteGatewayQuotaRuleResponse deleteGatewayQuotaRule(String gatewayId, String ruleId, DeleteGatewayQuotaRuleRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.deleteGatewayQuotaRuleWithOptions(gatewayId, ruleId, request, headers, runtime);
     }
 
     /**
@@ -1991,6 +2177,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>接口支持创建多个服务。</p>
+     * 
      * <b>summary</b> : 
      * <p>Deletes a key value.</p>
      * 
@@ -2017,6 +2206,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>接口支持创建多个服务。</p>
+     * 
      * <b>summary</b> : 
      * <p>Deletes a key value.</p>
      * @return DeleteSecretResponse
@@ -2103,7 +2295,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes a service source.</p>
+     * <p>Delete a service source.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -2129,7 +2321,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes a service source.</p>
+     * <p>Delete a service source.</p>
      * @return DeleteSourceResponse
      */
     public DeleteSourceResponse deleteSource(String sourceId) throws Exception {
@@ -2140,7 +2332,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deploy HttpApi</p>
+     * <p>Deploy an HTTP API, including REST and HTTP API routes.</p>
      * 
      * @param request DeployHttpApiRequest
      * @param headers map
@@ -2182,7 +2374,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deploy HttpApi</p>
+     * <p>Deploy an HTTP API, including REST and HTTP API routes.</p>
      * 
      * @param request DeployHttpApiRequest
      * @return DeployHttpApiResponse
@@ -2232,7 +2424,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Exports an HTTP API.</p>
+     * <p>Exports the specified HTTP API.</p>
      * 
      * @param request ExportHttpApiRequest
      * @param headers map
@@ -2274,7 +2466,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Exports an HTTP API.</p>
+     * <p>Exports the specified HTTP API.</p>
      * 
      * @param request ExportHttpApiRequest
      * @return ExportHttpApiResponse
@@ -2588,6 +2780,124 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>该接口用于查询 AI 网关上某条消费者配额规则。</p>
+     * 
+     * <b>summary</b> : 
+     * <p>查询网关配额限流规则详情</p>
+     * 
+     * @param request GetGatewayQuotaRuleRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetGatewayQuotaRuleResponse
+     */
+    public GetGatewayQuotaRuleResponse getGatewayQuotaRuleWithOptions(String gatewayId, String ruleId, GetGatewayQuotaRuleRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.consumerPageNumber)) {
+            query.put("consumerPageNumber", request.consumerPageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.consumerPageSize)) {
+            query.put("consumerPageSize", request.consumerPageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.withConsumers)) {
+            query.put("withConsumers", request.withConsumers);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetGatewayQuotaRule"),
+            new TeaPair("version", "2024-03-27"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/v1/gateways/" + com.aliyun.openapiutil.Client.getEncodeParam(gatewayId) + "/quota-rules/" + com.aliyun.openapiutil.Client.getEncodeParam(ruleId) + ""),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetGatewayQuotaRuleResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>该接口用于查询 AI 网关上某条消费者配额规则。</p>
+     * 
+     * <b>summary</b> : 
+     * <p>查询网关配额限流规则详情</p>
+     * 
+     * @param request GetGatewayQuotaRuleRequest
+     * @return GetGatewayQuotaRuleResponse
+     */
+    public GetGatewayQuotaRuleResponse getGatewayQuotaRule(String gatewayId, String ruleId, GetGatewayQuotaRuleRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.getGatewayQuotaRuleWithOptions(gatewayId, ruleId, request, headers, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>该接口用于获取配额规则下的某个消费者用量详情。注意，只针对于版本大于 2.1.19 的 AI 网关生效。</p>
+     * 
+     * <b>summary</b> : 
+     * <p>查询网关配额限流规则主体用量详情</p>
+     * 
+     * @param request GetGatewayQuotaRuleSubjectUsageRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetGatewayQuotaRuleSubjectUsageResponse
+     */
+    public GetGatewayQuotaRuleSubjectUsageResponse getGatewayQuotaRuleSubjectUsageWithOptions(String gatewayId, String ruleId, String subjectId, GetGatewayQuotaRuleSubjectUsageRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            query.put("pageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("pageSize", request.pageSize);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetGatewayQuotaRuleSubjectUsage"),
+            new TeaPair("version", "2024-03-27"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/v1/gateways/" + com.aliyun.openapiutil.Client.getEncodeParam(gatewayId) + "/quota-rules/" + com.aliyun.openapiutil.Client.getEncodeParam(ruleId) + "/subjects/" + com.aliyun.openapiutil.Client.getEncodeParam(subjectId) + "/usage"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetGatewayQuotaRuleSubjectUsageResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>该接口用于获取配额规则下的某个消费者用量详情。注意，只针对于版本大于 2.1.19 的 AI 网关生效。</p>
+     * 
+     * <b>summary</b> : 
+     * <p>查询网关配额限流规则主体用量详情</p>
+     * 
+     * @param request GetGatewayQuotaRuleSubjectUsageRequest
+     * @return GetGatewayQuotaRuleSubjectUsageResponse
+     */
+    public GetGatewayQuotaRuleSubjectUsageResponse getGatewayQuotaRuleSubjectUsage(String gatewayId, String ruleId, String subjectId, GetGatewayQuotaRuleSubjectUsageRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.getGatewayQuotaRuleSubjectUsageWithOptions(gatewayId, ruleId, subjectId, request, headers, runtime);
+    }
+
+    /**
      * <b>summary</b> : 
      * <p>Read HttpApi</p>
      * 
@@ -2700,10 +3010,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can call this operation to create multiple services at a time.</p>
+     * <p>This API supports creating multiple services.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the detailed information of an MCP server.</p>
+     * <p>Get the MCP server.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -2729,10 +3039,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can call this operation to create multiple services at a time.</p>
+     * <p>This API supports creating multiple services.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the detailed information of an MCP server.</p>
+     * <p>Get the MCP server.</p>
      * @return GetMcpServerResponse
      */
     public GetMcpServerResponse getMcpServer(String mcpServerId) throws Exception {
@@ -2943,6 +3253,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>接口支持创建多个服务。</p>
+     * 
      * <b>summary</b> : 
      * <p>Gets the key value.</p>
      * 
@@ -2969,6 +3282,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>接口支持创建多个服务。</p>
+     * 
      * <b>summary</b> : 
      * <p>Gets the key value.</p>
      * @return GetSecretValueResponse
@@ -3102,7 +3418,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Imports HTTP APIs. You can call this operation to import OpenAPI 2.0 and OpenAPI 3.0.x definition files to create REST APIs.</p>
+     * <p>Import an OpenAPI 2.0 or 3.0.x definition file to create a REST API.</p>
      * 
      * @param request ImportHttpApiRequest
      * @param headers map
@@ -3184,7 +3500,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Imports HTTP APIs. You can call this operation to import OpenAPI 2.0 and OpenAPI 3.0.x definition files to create REST APIs.</p>
+     * <p>Import an OpenAPI 2.0 or 3.0.x definition file to create a REST API.</p>
      * 
      * @param request ImportHttpApiRequest
      * @return ImportHttpApiResponse
@@ -3511,6 +3827,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>接口支持创建多个服务。</p>
+     * 
      * <b>summary</b> : 
      * <p>获取网关外的服务信息</p>
      * 
@@ -3561,6 +3880,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>接口支持创建多个服务。</p>
+     * 
      * <b>summary</b> : 
      * <p>获取网关外的服务信息</p>
      * 
@@ -3608,6 +3930,75 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.listGatewayFeaturesWithOptions(gatewayId, headers, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>该接口用于查询网关上绑定的消费者配额规则列表</p>
+     * 
+     * <b>summary</b> : 
+     * <p>查询网关周期配额规则列表</p>
+     * 
+     * @param request ListGatewayQuotaRulesRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListGatewayQuotaRulesResponse
+     */
+    public ListGatewayQuotaRulesResponse listGatewayQuotaRulesWithOptions(String gatewayId, ListGatewayQuotaRulesRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.keyword)) {
+            query.put("keyword", request.keyword);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            query.put("maxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("nextToken", request.nextToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            query.put("pageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("pageSize", request.pageSize);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListGatewayQuotaRules"),
+            new TeaPair("version", "2024-03-27"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/v1/gateways/" + com.aliyun.openapiutil.Client.getEncodeParam(gatewayId) + "/quota-rules"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListGatewayQuotaRulesResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>该接口用于查询网关上绑定的消费者配额规则列表</p>
+     * 
+     * <b>summary</b> : 
+     * <p>查询网关周期配额规则列表</p>
+     * 
+     * @param request ListGatewayQuotaRulesRequest
+     * @return ListGatewayQuotaRulesResponse
+     */
+    public ListGatewayQuotaRulesResponse listGatewayQuotaRules(String gatewayId, ListGatewayQuotaRulesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.listGatewayQuotaRulesWithOptions(gatewayId, request, headers, runtime);
     }
 
     /**
@@ -3788,7 +4179,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the routes of an HTTP API.</p>
+     * <p>Gets the route list for an HTTP API.</p>
      * 
      * @param request ListHttpApiRoutesRequest
      * @param headers map
@@ -3878,7 +4269,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the routes of an HTTP API.</p>
+     * <p>Gets the route list for an HTTP API.</p>
      * 
      * @param request ListHttpApiRoutesRequest
      * @return ListHttpApiRoutesResponse
@@ -4528,8 +4919,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>The API supports creating multiple services.</p>
+     * 
      * <b>summary</b> : 
-     * <p>查询密钥列表</p>
+     * <p>List keys.</p>
      * 
      * @param request ListSecretsRequest
      * @param headers map
@@ -4574,8 +4968,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>The API supports creating multiple services.</p>
+     * 
      * <b>summary</b> : 
-     * <p>查询密钥列表</p>
+     * <p>List keys.</p>
      * 
      * @param request ListSecretsRequest
      * @return ListSecretsResponse
@@ -4875,6 +5272,125 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.removeConsumerAuthorizationRuleWithOptions(consumerAuthorizationRuleId, headers, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>该接口用于重置网关上某条配额限流规则。注意，只针对于版本大于 2.1.19 的 AI 网关生效；重置将清零规则上消费者历史用量。</p>
+     * <blockquote>
+     * <p> 推荐调用逻辑：</p>
+     * <ul>
+     * <li>一、先 dryRun 预检检验是否存在规则冲突</li>
+     * <li><ul>
+     * <li>传dryRun=true</li>
+     * </ul>
+     * </li>
+     * <li><ul>
+     * <li>返回含conflictHash的冲突预览</li>
+     * </ul>
+     * </li>
+     * <li>二、确认后正式提交</li>
+     * <li><ul>
+     * <li>无冲突：dryRun=false,overwrite=false</li>
+     * </ul>
+     * </li>
+     * <li><ul>
+     * <li>有冲突且确认覆盖：dryRun=false,overwrite=true, conflictHash=&lt;上一步返回的值＞</li>
+     * </ul>
+     * </li>
+     * </ul>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>重置网关配额限流规则</p>
+     * 
+     * @param request ResetGatewayQuotaRuleRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ResetGatewayQuotaRuleResponse
+     */
+    public ResetGatewayQuotaRuleResponse resetGatewayQuotaRuleWithOptions(String gatewayId, String ruleId, ResetGatewayQuotaRuleRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.conflictHash)) {
+            body.put("conflictHash", request.conflictHash);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dryRun)) {
+            body.put("dryRun", request.dryRun);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.overwrite)) {
+            body.put("overwrite", request.overwrite);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.periodType)) {
+            body.put("periodType", request.periodType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.quotaLimit)) {
+            body.put("quotaLimit", request.quotaLimit);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.timezone)) {
+            body.put("timezone", request.timezone);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ResetGatewayQuotaRule"),
+            new TeaPair("version", "2024-03-27"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/v1/gateways/" + com.aliyun.openapiutil.Client.getEncodeParam(gatewayId) + "/quota-rules/" + com.aliyun.openapiutil.Client.getEncodeParam(ruleId) + "/reset"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ResetGatewayQuotaRuleResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>该接口用于重置网关上某条配额限流规则。注意，只针对于版本大于 2.1.19 的 AI 网关生效；重置将清零规则上消费者历史用量。</p>
+     * <blockquote>
+     * <p> 推荐调用逻辑：</p>
+     * <ul>
+     * <li>一、先 dryRun 预检检验是否存在规则冲突</li>
+     * <li><ul>
+     * <li>传dryRun=true</li>
+     * </ul>
+     * </li>
+     * <li><ul>
+     * <li>返回含conflictHash的冲突预览</li>
+     * </ul>
+     * </li>
+     * <li>二、确认后正式提交</li>
+     * <li><ul>
+     * <li>无冲突：dryRun=false,overwrite=false</li>
+     * </ul>
+     * </li>
+     * <li><ul>
+     * <li>有冲突且确认覆盖：dryRun=false,overwrite=true, conflictHash=&lt;上一步返回的值＞</li>
+     * </ul>
+     * </li>
+     * </ul>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>重置网关配额限流规则</p>
+     * 
+     * @param request ResetGatewayQuotaRuleRequest
+     * @return ResetGatewayQuotaRuleResponse
+     */
+    public ResetGatewayQuotaRuleResponse resetGatewayQuotaRule(String gatewayId, String ruleId, ResetGatewayQuotaRuleRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.resetGatewayQuotaRuleWithOptions(gatewayId, ruleId, request, headers, runtime);
     }
 
     /**
@@ -5390,7 +5906,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies an environment.</p>
+     * <p>UpdateEnvironment</p>
      * 
      * @deprecated OpenAPI UpdateEnvironment is deprecated
      * 
@@ -5432,7 +5948,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies an environment.</p>
+     * <p>UpdateEnvironment</p>
      * 
      * @deprecated OpenAPI UpdateEnvironment is deprecated
      * 
@@ -5496,7 +6012,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Changes the name of a Cloud-native API Gateway instance.</p>
+     * <p>The response message returned.</p>
      * 
      * @param request UpdateGatewayNameRequest
      * @param headers map
@@ -5530,7 +6046,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Changes the name of a Cloud-native API Gateway instance.</p>
+     * <p>The response message returned.</p>
      * 
      * @param request UpdateGatewayNameRequest
      * @return UpdateGatewayNameResponse
@@ -5539,6 +6055,190 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.updateGatewayNameWithOptions(gatewayId, request, headers, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>该接口用于编辑网关上某条配额规则。注意，只针对于版本大于2.1.19的AI网关生效；编辑将保留规则上消费者历史用量。</p>
+     * <blockquote>
+     * <p> 推荐调用逻辑：</p>
+     * <ul>
+     * <li>一、先 dryRun 预检检验是否存在规则冲突</li>
+     * <li><ul>
+     * <li>传dryRun=true</li>
+     * </ul>
+     * </li>
+     * <li><ul>
+     * <li>返回含conflictHash的冲突预览</li>
+     * </ul>
+     * </li>
+     * <li>二、确认后正式提交</li>
+     * <li><ul>
+     * <li>无冲突：dryRun=false,overwrite=false</li>
+     * </ul>
+     * </li>
+     * <li><ul>
+     * <li>有冲突且确认覆盖：dryRun=false,overwrite=true, conflictHash=&lt;上一步返回的值＞</li>
+     * </ul>
+     * </li>
+     * </ul>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>更新网关配额限流规则</p>
+     * 
+     * @param request UpdateGatewayQuotaRuleRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateGatewayQuotaRuleResponse
+     */
+    public UpdateGatewayQuotaRuleResponse updateGatewayQuotaRuleWithOptions(String gatewayId, String ruleId, UpdateGatewayQuotaRuleRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.addIds)) {
+            body.put("addIds", request.addIds);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.conflictHash)) {
+            body.put("conflictHash", request.conflictHash);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.consumerGroupIds)) {
+            body.put("consumerGroupIds", request.consumerGroupIds);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dryRun)) {
+            body.put("dryRun", request.dryRun);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.overwrite)) {
+            body.put("overwrite", request.overwrite);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.quotaLimit)) {
+            body.put("quotaLimit", request.quotaLimit);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.removeIds)) {
+            body.put("removeIds", request.removeIds);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ruleName)) {
+            body.put("ruleName", request.ruleName);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateGatewayQuotaRule"),
+            new TeaPair("version", "2024-03-27"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/v1/gateways/" + com.aliyun.openapiutil.Client.getEncodeParam(gatewayId) + "/quota-rules/" + com.aliyun.openapiutil.Client.getEncodeParam(ruleId) + ""),
+            new TeaPair("method", "PUT"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateGatewayQuotaRuleResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>该接口用于编辑网关上某条配额规则。注意，只针对于版本大于2.1.19的AI网关生效；编辑将保留规则上消费者历史用量。</p>
+     * <blockquote>
+     * <p> 推荐调用逻辑：</p>
+     * <ul>
+     * <li>一、先 dryRun 预检检验是否存在规则冲突</li>
+     * <li><ul>
+     * <li>传dryRun=true</li>
+     * </ul>
+     * </li>
+     * <li><ul>
+     * <li>返回含conflictHash的冲突预览</li>
+     * </ul>
+     * </li>
+     * <li>二、确认后正式提交</li>
+     * <li><ul>
+     * <li>无冲突：dryRun=false,overwrite=false</li>
+     * </ul>
+     * </li>
+     * <li><ul>
+     * <li>有冲突且确认覆盖：dryRun=false,overwrite=true, conflictHash=&lt;上一步返回的值＞</li>
+     * </ul>
+     * </li>
+     * </ul>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>更新网关配额限流规则</p>
+     * 
+     * @param request UpdateGatewayQuotaRuleRequest
+     * @return UpdateGatewayQuotaRuleResponse
+     */
+    public UpdateGatewayQuotaRuleResponse updateGatewayQuotaRule(String gatewayId, String ruleId, UpdateGatewayQuotaRuleRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.updateGatewayQuotaRuleWithOptions(gatewayId, ruleId, request, headers, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>该接口用于启用或者停用网关上某个配额规则。注意，只针对于版本大于2.1.19的AI网关生效。</p>
+     * 
+     * <b>summary</b> : 
+     * <p>启/停用网关配额限流规则</p>
+     * 
+     * @param request UpdateGatewayQuotaRuleStatusRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateGatewayQuotaRuleStatusResponse
+     */
+    public UpdateGatewayQuotaRuleStatusResponse updateGatewayQuotaRuleStatusWithOptions(String gatewayId, String ruleId, UpdateGatewayQuotaRuleStatusRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clearHistory)) {
+            body.put("clearHistory", request.clearHistory);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.enable)) {
+            body.put("enable", request.enable);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateGatewayQuotaRuleStatus"),
+            new TeaPair("version", "2024-03-27"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/v1/gateways/" + com.aliyun.openapiutil.Client.getEncodeParam(gatewayId) + "/quota-rules/" + com.aliyun.openapiutil.Client.getEncodeParam(ruleId) + "/status"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateGatewayQuotaRuleStatusResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>该接口用于启用或者停用网关上某个配额规则。注意，只针对于版本大于2.1.19的AI网关生效。</p>
+     * 
+     * <b>summary</b> : 
+     * <p>启/停用网关配额限流规则</p>
+     * 
+     * @param request UpdateGatewayQuotaRuleStatusRequest
+     * @return UpdateGatewayQuotaRuleStatusResponse
+     */
+    public UpdateGatewayQuotaRuleStatusResponse updateGatewayQuotaRuleStatus(String gatewayId, String ruleId, UpdateGatewayQuotaRuleStatusRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.updateGatewayQuotaRuleStatusWithOptions(gatewayId, ruleId, request, headers, runtime);
     }
 
     /**
@@ -5685,7 +6385,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates the route of an HTTP API.</p>
+     * <p>Updates a route of an HTTP API.</p>
      * 
      * @param request UpdateHttpApiRouteRequest
      * @param headers map
@@ -5743,7 +6443,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates the route of an HTTP API.</p>
+     * <p>Updates a route of an HTTP API.</p>
      * 
      * @param request UpdateHttpApiRouteRequest
      * @return UpdateHttpApiRouteResponse
@@ -6016,7 +6716,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates a service. You can call this operation to update the health check, DNS domain name, and fixed address configurations of a service.</p>
+     * <p>Update a service. You can update the health check configuration of the service, and the configuration information of DNS domain names and static addresses.</p>
      * 
      * @param request UpdateServiceRequest
      * @param headers map
@@ -6082,7 +6782,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates a service. You can call this operation to update the health check, DNS domain name, and fixed address configurations of a service.</p>
+     * <p>Update a service. You can update the health check configuration of the service, and the configuration information of DNS domain names and static addresses.</p>
      * 
      * @param request UpdateServiceRequest
      * @return UpdateServiceResponse

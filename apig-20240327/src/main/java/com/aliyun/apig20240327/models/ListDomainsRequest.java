@@ -8,7 +8,7 @@ public class ListDomainsRequest extends TeaModel {
      * <p>The instance ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>gw-xxx</p>
+     * <p>gw-xxxxxx</p>
      */
     @NameInMap("gatewayId")
     public String gatewayId;
@@ -53,7 +53,7 @@ public class ListDomainsRequest extends TeaModel {
      * <p>The ID of the resource group.</p>
      * 
      * <strong>example:</strong>
-     * <p>rg-ahr5uil8raz0rq3b</p>
+     * <p>rg-aek27lpqyiie6qy</p>
      */
     @NameInMap("resourceGroupId")
     public String resourceGroupId;

@@ -4,12 +4,21 @@ package com.aliyun.apig20240327.models;
 import com.aliyun.tea.*;
 
 public class HiMarketPortalDomainConfig extends TeaModel {
+    /**
+     * <p>The domain name.</p>
+     */
     @NameInMap("domain")
     public String domain;
 
+    /**
+     * <p>The domain protocol.</p>
+     */
     @NameInMap("protocol")
     public String protocol;
 
+    /**
+     * <p>The domain type.</p>
+     */
     @NameInMap("type")
     public String type;
 

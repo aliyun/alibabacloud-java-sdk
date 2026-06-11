@@ -4,12 +4,30 @@ package com.aliyun.apig20240327.models;
 import com.aliyun.tea.*;
 
 public class HiMarketPortalSettingConfig extends TeaModel {
+    /**
+     * <p>Specifies whether to automatically approve new developer registrations. If set to <code>false</code>, you must manually approve each new developer.\
+     * \
+     * <strong>Default</strong>: <code>false</code>.\
+     * \</p>
+     */
     @NameInMap("autoApproveDevelopers")
     public Boolean autoApproveDevelopers;
 
+    /**
+     * <p>Specifies whether to automatically approve new API subscriptions. If set to <code>false</code>, you must manually approve each new subscription.\
+     * \
+     * <strong>Default</strong>: <code>false</code>.\
+     * \</p>
+     */
     @NameInMap("autoApproveSubscriptions")
     public Boolean autoApproveSubscriptions;
 
+    /**
+     * <p>Specifies whether to enable built-in authentication. If set to <code>true</code>, users must sign in to access the portal.\
+     * \
+     * <strong>Default</strong>: <code>false</code>.\
+     * \</p>
+     */
     @NameInMap("builtinAuthEnabled")
     public Boolean builtinAuthEnabled;
 
