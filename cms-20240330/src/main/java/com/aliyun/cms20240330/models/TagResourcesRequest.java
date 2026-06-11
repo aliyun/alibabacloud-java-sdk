@@ -5,12 +5,14 @@ import com.aliyun.tea.*;
 
 public class TagResourcesRequest extends TeaModel {
     /**
+     * <p>A list of resource IDs.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("resourceId")
     public java.util.List<String> resourceId;
 
     /**
+     * <p>The resource type.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -19,6 +21,10 @@ public class TagResourcesRequest extends TeaModel {
     @NameInMap("resourceType")
     public String resourceType;
 
+    /**
+     * <p>The tags.</p>
+     * <p>You can attach a maximum of 20 tags.</p>
+     */
     @NameInMap("tag")
     public java.util.List<Tag> tag;
 

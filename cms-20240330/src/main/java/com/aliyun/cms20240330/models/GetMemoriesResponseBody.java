@@ -4,16 +4,24 @@ package com.aliyun.cms20240330.models;
 import com.aliyun.tea.*;
 
 public class GetMemoriesResponseBody extends TeaModel {
+    /**
+     * <p>A list of relations.</p>
+     */
     @NameInMap("relations")
     public java.util.List<GetMemoriesResponseBodyRelations> relations;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>8FDE2569-626B-5176-9844-28877A*****</p>
      */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <p>A list of results.</p>
+     */
     @NameInMap("results")
     public java.util.List<GetMemoriesResponseBodyResults> results;
 
@@ -48,6 +56,8 @@ public class GetMemoriesResponseBody extends TeaModel {
 
     public static class GetMemoriesResponseBodyRelations extends TeaModel {
         /**
+         * <p>The destination of the relation.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -55,6 +65,8 @@ public class GetMemoriesResponseBody extends TeaModel {
         public String destination;
 
         /**
+         * <p>The type of the relation.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -62,6 +74,8 @@ public class GetMemoriesResponseBody extends TeaModel {
         public String relationship;
 
         /**
+         * <p>The source of the relation.</p>
+         * 
          * <strong>example:</strong>
          * <p>test_namespace/RegistryModule-test2153b9f3-0be6-455e-9efd-05fd31f62885/alicloud</p>
          */
@@ -101,6 +115,8 @@ public class GetMemoriesResponseBody extends TeaModel {
 
     public static class GetMemoriesResponseBodyResults extends TeaModel {
         /**
+         * <p>The actor ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>test_session_001</p>
          */
@@ -108,6 +124,8 @@ public class GetMemoriesResponseBody extends TeaModel {
         public String actorId;
 
         /**
+         * <p>The agent ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>980565235819266048</p>
          */
@@ -115,6 +133,8 @@ public class GetMemoriesResponseBody extends TeaModel {
         public String agentId;
 
         /**
+         * <p>The application ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>test_user_001</p>
          */
@@ -122,6 +142,8 @@ public class GetMemoriesResponseBody extends TeaModel {
         public String appId;
 
         /**
+         * <p>The creation time.</p>
+         * 
          * <strong>example:</strong>
          * <p>1747623093939</p>
          */
@@ -129,6 +151,8 @@ public class GetMemoriesResponseBody extends TeaModel {
         public String createdAt;
 
         /**
+         * <p>The memory hash.</p>
+         * 
          * <strong>example:</strong>
          * <p>73ad89f2d56c2f8615e5dd0cef7b4c41c074277c91fa0e31fc5b41802c0481f2</p>
          */
@@ -136,6 +160,8 @@ public class GetMemoriesResponseBody extends TeaModel {
         public String hash;
 
         /**
+         * <p>The memory ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>019ca1e5-7307-7d50-b943-5e628326a8ed</p>
          */
@@ -143,6 +169,8 @@ public class GetMemoriesResponseBody extends TeaModel {
         public String id;
 
         /**
+         * <p>The memory content.</p>
+         * 
          * <strong>example:</strong>
          * <p>My name is Zhang San and I live in Hangzhou.</p>
          */
@@ -150,13 +178,17 @@ public class GetMemoriesResponseBody extends TeaModel {
         public String memory;
 
         /**
+         * <p>The metadata.</p>
+         * 
          * <strong>example:</strong>
-         * <p>{&quot;sessionId&quot;:&quot;test_session_001&quot;}</p>
+         * <p>{&quot;<strong>strategy_type</strong>&quot;:&quot;Fact&quot;}</p>
          */
         @NameInMap("metadata")
         public java.util.Map<String, ?> metadata;
 
         /**
+         * <p>The role that sent the message.</p>
+         * 
          * <strong>example:</strong>
          * <p>user</p>
          */
@@ -164,6 +196,8 @@ public class GetMemoriesResponseBody extends TeaModel {
         public String role;
 
         /**
+         * <p>The run ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>jr-965a0b00cb42a43b</p>
          */
@@ -171,6 +205,8 @@ public class GetMemoriesResponseBody extends TeaModel {
         public String runId;
 
         /**
+         * <p>The similarity score.</p>
+         * 
          * <strong>example:</strong>
          * <p>30.12</p>
          */
@@ -178,6 +214,8 @@ public class GetMemoriesResponseBody extends TeaModel {
         public Double score;
 
         /**
+         * <p>The update time.</p>
+         * 
          * <strong>example:</strong>
          * <p>1752825865045</p>
          */
@@ -185,6 +223,8 @@ public class GetMemoriesResponseBody extends TeaModel {
         public String updatedAt;
 
         /**
+         * <p>The user ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>test_session_001</p>
          */

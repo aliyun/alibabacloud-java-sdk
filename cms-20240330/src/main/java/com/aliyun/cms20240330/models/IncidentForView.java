@@ -4,55 +4,96 @@ package com.aliyun.cms20240330.models;
 import com.aliyun.tea.*;
 
 public class IncidentForView extends TeaModel {
+    /**
+     * <p>The details of the incident.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>&quot;{&quot;description&quot;:&quot;ECS实例CPU过高&quot;,&quot;impact&quot;:&quot;支付服务延迟&quot;}&quot;</p>
+     */
     @NameInMap("content")
     public String content;
 
+    /**
+     * <p>The list of escalation policies.</p>
+     */
     @NameInMap("escalations")
     public java.util.List<IncidentEscalationPolicyForView> escalations;
 
     /**
+     * <p>The group identifier.</p>
+     * 
      * <strong>example:</strong>
      * <p>&quot;group-123456&quot;</p>
      */
     @NameInMap("groupUuid")
     public String groupUuid;
 
+    /**
+     * <p>The key-value pairs for grouping.</p>
+     */
     @NameInMap("groupingKeys")
     public java.util.Map<String, String> groupingKeys;
 
     /**
+     * <p>The unique identifier of the incident.</p>
+     * 
      * <strong>example:</strong>
      * <p>&quot;incident-abc123&quot;</p>
      */
     @NameInMap("incidentId")
     public String incidentId;
 
+    /**
+     * <p>The name of the notification policy.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{ &quot;contactId&quot;: &quot;contact-123&quot;, &quot;name&quot;: &quot;张三&quot; }</p>
+     */
     @NameInMap("notifyStrategyName")
     public String notifyStrategyName;
 
     /**
+     * <p>The UUID of the associated notification policy, which is used to trigger notifications.</p>
+     * 
      * <strong>example:</strong>
      * <p>&quot;notify-strategy-789&quot;</p>
      */
     @NameInMap("notifyStrategyUuid")
     public String notifyStrategyUuid;
 
+    /**
+     * <p>The information about the operator.</p>
+     */
     @NameInMap("operator")
     public ContactForIncidentView operator;
 
+    /**
+     * <p>The list of owners.</p>
+     */
     @NameInMap("owners")
     public java.util.List<ContactForIncidentView> owners;
 
+    /**
+     * <p>The list of participants.</p>
+     */
     @NameInMap("participants")
     public java.util.List<ContactForIncidentView> participants;
 
+    /**
+     * <p>The response plan.</p>
+     */
     @NameInMap("plan")
     public IncidentResponsePlanForView plan;
 
+    /**
+     * <p>The list of associated resources.</p>
+     */
     @NameInMap("relatedResources")
     public java.util.List<EventResourceForIncidentView> relatedResources;
 
     /**
+     * <p>The root cause category.</p>
+     * 
      * <strong>example:</strong>
      * <p>&quot;Network&quot;</p>
      */
@@ -60,16 +101,26 @@ public class IncidentForView extends TeaModel {
     public String rootCauseCategory;
 
     /**
+     * <p>The severity level of the incident.</p>
+     * 
      * <strong>example:</strong>
      * <p>&quot;Critical&quot;</p>
      */
     @NameInMap("severity")
     public String severity;
 
+    /**
+     * <p>The description of the solution.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>&quot;重启ECS实例后恢复正常&quot;</p>
+     */
     @NameInMap("solution")
     public String solution;
 
     /**
+     * <p>The current state of the incident.</p>
+     * 
      * <strong>example:</strong>
      * <p>&quot;Open&quot;</p>
      */
@@ -77,6 +128,8 @@ public class IncidentForView extends TeaModel {
     public String state;
 
     /**
+     * <p>The name of the subscription policy.</p>
+     * 
      * <strong>example:</strong>
      * <p>&quot;P1-Alert-Notification&quot;</p>
      */
@@ -84,6 +137,8 @@ public class IncidentForView extends TeaModel {
     public String subscriptionName;
 
     /**
+     * <p>The UUID of the subscription policy.</p>
+     * 
      * <strong>example:</strong>
      * <p>&quot;subscription-abc&quot;</p>
      */
@@ -91,16 +146,26 @@ public class IncidentForView extends TeaModel {
     public String subscriptionUuid;
 
     /**
+     * <p>The timestamp when the incident was created.</p>
+     * 
      * <strong>example:</strong>
      * <p>1743876000000</p>
      */
     @NameInMap("time")
     public Long time;
 
+    /**
+     * <p>The title of the incident.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>&quot;支付服务不可用&quot;</p>
+     */
     @NameInMap("title")
     public String title;
 
     /**
+     * <p>The ID of the user who created the incident.</p>
+     * 
      * <strong>example:</strong>
      * <p>&quot;user-abc123&quot;</p>
      */
@@ -108,6 +173,8 @@ public class IncidentForView extends TeaModel {
     public String userId;
 
     /**
+     * <p>The name of the workspace.</p>
+     * 
      * <strong>example:</strong>
      * <p>&quot;ws-xyz789&quot;</p>
      */

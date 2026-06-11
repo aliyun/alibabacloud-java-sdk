@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetWorkspaceResponseBody extends TeaModel {
     /**
-     * <p>Creation Time</p>
+     * <p>The time when the workspace was created.</p>
      * <p>Use the UTC time format: yyyy-MM-ddTHH:mm:ss.SSSZ</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class GetWorkspaceResponseBody extends TeaModel {
     public String createTime;
 
     /**
-     * <p>Workspace Description</p>
+     * <p>The description of the workspace.</p>
      * 
      * <strong>example:</strong>
      * <p>workspace test</p>
@@ -24,7 +24,7 @@ public class GetWorkspaceResponseBody extends TeaModel {
     public String description;
 
     /**
-     * <p>Workspace Display Name</p>
+     * <p>The display name of the workspace.</p>
      * 
      * <strong>example:</strong>
      * <p>workspace-test</p>
@@ -33,7 +33,7 @@ public class GetWorkspaceResponseBody extends TeaModel {
     public String displayName;
 
     /**
-     * <p>Last Modified Time</p>
+     * <p>The time when the workspace was last modified.</p>
      * <p>Use the UTC time format: yyyy-MM-ddTHH:mm:ssZ</p>
      * 
      * <strong>example:</strong>
@@ -43,7 +43,7 @@ public class GetWorkspaceResponseBody extends TeaModel {
     public String lastModifyTime;
 
     /**
-     * <p>Region ID</p>
+     * <p>The region ID.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-heyuan</p>
@@ -52,7 +52,7 @@ public class GetWorkspaceResponseBody extends TeaModel {
     public String regionId;
 
     /**
-     * <p>Request ID</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>264C3E89-XXXX-XXXX-XXXX-CE9C2196C7DC</p>
@@ -61,7 +61,7 @@ public class GetWorkspaceResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Log Service Project Name</p>
+     * <p>The name of the Simple Log Service project.</p>
      * 
      * <strong>example:</strong>
      * <p>sls-project-test-001</p>
@@ -70,7 +70,7 @@ public class GetWorkspaceResponseBody extends TeaModel {
     public String slsProject;
 
     /**
-     * <p>Workspace Name</p>
+     * <p>The name of the workspace.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

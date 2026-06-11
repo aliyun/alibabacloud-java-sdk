@@ -5,52 +5,55 @@ import com.aliyun.tea.*;
 
 public class ServerResponseManageAlertRulesResult extends TeaModel {
     /**
-     * <p>响应码</p>
+     * <p>The operation status code.</p>
      */
     @NameInMap("code")
     public String code;
 
+    /**
+     * <p>The result of the operation.</p>
+     */
     @NameInMap("data")
     public ManageAlertRulesResult data;
 
     /**
-     * <p>错误消息</p>
+     * <p>A message detailing the outcome of the request, such as a success message or an error description.</p>
      */
     @NameInMap("message")
     public String message;
 
     /**
-     * <p>分页 Token</p>
+     * <p>The token used to retrieve the next page of results. If the token is not returned, there are no more results.</p>
      */
     @NameInMap("nextToken")
     public String nextToken;
 
     /**
-     * <p>页码</p>
+     * <p>The current page number.</p>
      */
     @NameInMap("pageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>每页大小</p>
+     * <p>The number of entries per page.</p>
      */
     @NameInMap("pageSize")
     public Integer pageSize;
 
     /**
-     * <p>请求 ID</p>
+     * <p>The unique ID for the request. Provide this ID when contacting support for assistance.</p>
      */
     @NameInMap("requestId")
     public String requestId;
 
     /**
-     * <p>是否成功</p>
+     * <p>Indicates whether the request succeeded (<code>true</code>) or failed (<code>false</code>).</p>
      */
     @NameInMap("success")
     public Boolean success;
 
     /**
-     * <p>总数</p>
+     * <p>The total number of entries that match the query.</p>
      */
     @NameInMap("total")
     public Integer total;

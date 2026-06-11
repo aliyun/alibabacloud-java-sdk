@@ -4,34 +4,60 @@ package com.aliyun.cms20240330.models;
 import com.aliyun.tea.*;
 
 public class EntityDiscoverRule extends TeaModel {
+    /**
+     * <p>A collection of annotation matching rules.</p>
+     */
     @NameInMap("annotations")
     public java.util.List<EntityDiscoverRuleAnnotations> annotations;
 
+    /**
+     * <p>A collection of entity types.</p>
+     */
     @NameInMap("entityTypes")
     public java.util.List<String> entityTypes;
 
+    /**
+     * <p>The property matching rules.</p>
+     */
     @NameInMap("fieldRules")
     public java.util.List<EntityDiscoverRuleFieldRules> fieldRules;
 
+    /**
+     * <p>A collection of instance IDs.</p>
+     */
     @NameInMap("instanceIds")
     public java.util.List<String> instanceIds;
 
+    /**
+     * <p>A collection of IP address matching rules.</p>
+     */
     @NameInMap("ipMatchRule")
     public EntityDiscoverRuleIpMatchRule ipMatchRule;
 
+    /**
+     * <p>A collection of label matching rules.</p>
+     */
     @NameInMap("labels")
     public java.util.List<EntityDiscoverRuleLabels> labels;
 
+    /**
+     * <p>A collection of region IDs.</p>
+     */
     @NameInMap("regionIds")
     public java.util.List<String> regionIds;
 
     /**
+     * <p>The resource group ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>rg-acfm2m7atreujs1</p>
      */
     @NameInMap("resourceGroupId")
     public String resourceGroupId;
 
+    /**
+     * <p>The tag-based service discovery rules.</p>
+     */
     @NameInMap("tags")
     public java.util.List<EntityDiscoverRuleTags> tags;
 
@@ -114,6 +140,8 @@ public class EntityDiscoverRule extends TeaModel {
 
     public static class EntityDiscoverRuleAnnotations extends TeaModel {
         /**
+         * <p>The operation.</p>
+         * 
          * <strong>example:</strong>
          * <p>in</p>
          */
@@ -121,12 +149,17 @@ public class EntityDiscoverRule extends TeaModel {
         public String op;
 
         /**
+         * <p>The key of the annotation.</p>
+         * 
          * <strong>example:</strong>
          * <p>instanceId</p>
          */
         @NameInMap("tagKey")
         public String tagKey;
 
+        /**
+         * <p>A collection of annotation values.</p>
+         */
         @NameInMap("tagValues")
         public java.util.List<String> tagValues;
 
@@ -163,16 +196,23 @@ public class EntityDiscoverRule extends TeaModel {
 
     public static class EntityDiscoverRuleFieldRules extends TeaModel {
         /**
+         * <p>The key of the property.</p>
+         * 
          * <strong>example:</strong>
          * <p>instanceId</p>
          */
         @NameInMap("fieldKey")
         public String fieldKey;
 
+        /**
+         * <p>A collection of property values.</p>
+         */
         @NameInMap("fieldValues")
         public java.util.List<String> fieldValues;
 
         /**
+         * <p>The operation.</p>
+         * 
          * <strong>example:</strong>
          * <p>in</p>
          */
@@ -242,6 +282,8 @@ public class EntityDiscoverRule extends TeaModel {
 
     public static class EntityDiscoverRuleLabels extends TeaModel {
         /**
+         * <p>The operation.</p>
+         * 
          * <strong>example:</strong>
          * <p>in</p>
          */
@@ -249,12 +291,17 @@ public class EntityDiscoverRule extends TeaModel {
         public String op;
 
         /**
+         * <p>The key of the label.</p>
+         * 
          * <strong>example:</strong>
          * <p>project</p>
          */
         @NameInMap("tagKey")
         public String tagKey;
 
+        /**
+         * <p>A collection of label values.</p>
+         */
         @NameInMap("tagValues")
         public java.util.List<String> tagValues;
 
@@ -291,6 +338,8 @@ public class EntityDiscoverRule extends TeaModel {
 
     public static class EntityDiscoverRuleTags extends TeaModel {
         /**
+         * <p>The operation.</p>
+         * 
          * <strong>example:</strong>
          * <p>in</p>
          */
@@ -298,12 +347,17 @@ public class EntityDiscoverRule extends TeaModel {
         public String op;
 
         /**
+         * <p>The key of the tag.</p>
+         * 
          * <strong>example:</strong>
          * <p>project</p>
          */
         @NameInMap("tagKey")
         public String tagKey;
 
+        /**
+         * <p>A collection of tag values.</p>
+         */
         @NameInMap("tagValues")
         public java.util.List<String> tagValues;
 

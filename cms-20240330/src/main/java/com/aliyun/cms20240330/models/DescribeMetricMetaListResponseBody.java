@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeMetricMetaListResponseBody extends TeaModel {
     /**
+     * <p>The page number. The default value is <code>1</code>.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -12,6 +14,8 @@ public class DescribeMetricMetaListResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>2000</p>
      */
@@ -19,7 +23,7 @@ public class DescribeMetricMetaListResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>264C3E89-XXXX-XXXX-XXXX-CE9C2196C7DC</p>
@@ -27,10 +31,15 @@ public class DescribeMetricMetaListResponseBody extends TeaModel {
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <p>The configurations of the metrics in the resource.</p>
+     */
     @NameInMap("resources")
     public java.util.List<DescribeMetricMetaListResponseBodyResources> resources;
 
     /**
+     * <p>The total number of entries.</p>
+     * 
      * <strong>example:</strong>
      * <p>6370</p>
      */
@@ -83,6 +92,12 @@ public class DescribeMetricMetaListResponseBody extends TeaModel {
     }
 
     public static class DescribeMetricMetaListResponseBodyResourcesDimensionDescription extends TeaModel {
+        /**
+         * <p>The name of the dimension.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>user_id</p>
+         */
         @NameInMap("name")
         public String name;
 
@@ -102,36 +117,98 @@ public class DescribeMetricMetaListResponseBody extends TeaModel {
     }
 
     public static class DescribeMetricMetaListResponseBodyResources extends TeaModel {
+        /**
+         * <p>The description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ECS CPU Utilization</p>
+         */
         @NameInMap("description")
         public String description;
 
+        /**
+         * <p>The descriptions of the dimensions.</p>
+         */
         @NameInMap("dimensionDescription")
         public java.util.List<DescribeMetricMetaListResponseBodyResourcesDimensionDescription> dimensionDescription;
 
+        /**
+         * <p>The dimensions for filtering resources in CloudMonitor.</p>
+         */
         @NameInMap("dimensions")
         public java.util.List<String> dimensions;
 
+        /**
+         * <p>The CloudMonitor labels. This parameter is returned only when <code>metaFormat</code> is set to <code>CMS</code>.</p>
+         */
         @NameInMap("labels")
         public java.util.Map<String, String> labels;
 
+        /**
+         * <p>The metadata format.</p>
+         */
         @NameInMap("metaFormat")
         public String metaFormat;
 
+        /**
+         * <p>The metric name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CPUUtilization</p>
+         */
         @NameInMap("metricName")
         public String metricName;
 
+        /**
+         * <p>The namespace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acs_ecs_dashboard</p>
+         */
         @NameInMap("namespace")
         public String namespace;
 
+        /**
+         * <p>The aggregation period.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>60</p>
+         */
         @NameInMap("periods")
         public String periods;
 
+        /**
+         * <p>The statistic of the metric. Examples:</p>
+         * <ul>
+         * <li><p><code>Maximum</code>: the maximum value.</p>
+         * </li>
+         * <li><p><code>Minimum</code>: the minimum value.</p>
+         * </li>
+         * <li><p><code>Average</code>: the average value.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Maximum</p>
+         */
         @NameInMap("statistics")
         public String statistics;
 
+        /**
+         * <p>The metric type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Gauge</p>
+         */
         @NameInMap("type")
         public String type;
 
+        /**
+         * <p>The unit.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>%</p>
+         */
         @NameInMap("unit")
         public String unit;
 

@@ -4,10 +4,15 @@ package com.aliyun.cms20240330.models;
 import com.aliyun.tea.*;
 
 public class GetContextStoreResponseBody extends TeaModel {
+    /**
+     * <p>The configuration of the context store.</p>
+     */
     @NameInMap("config")
     public GetContextStoreResponseBodyConfig config;
 
     /**
+     * <p>The context store name.</p>
+     * 
      * <strong>example:</strong>
      * <p>test-context-store</p>
      */
@@ -15,6 +20,8 @@ public class GetContextStoreResponseBody extends TeaModel {
     public String contextStoreName;
 
     /**
+     * <p>The type of the context store.</p>
+     * 
      * <strong>example:</strong>
      * <p>memory</p>
      */
@@ -22,6 +29,7 @@ public class GetContextStoreResponseBody extends TeaModel {
     public String contextType;
 
     /**
+     * <p>The creation time of the context store. This value is a Unix timestamp in seconds.</p>
      * <p>Use the UTC time format: yyyy-MM-ddTHH:mm:ssZ</p>
      * 
      * <strong>example:</strong>
@@ -30,10 +38,15 @@ public class GetContextStoreResponseBody extends TeaModel {
     @NameInMap("createTime")
     public String createTime;
 
+    /**
+     * <p>Information about the associated dataset.</p>
+     */
     @NameInMap("dataset")
     public GetContextStoreResponseBodyDataset dataset;
 
     /**
+     * <p>The description of the context store.</p>
+     * 
      * <strong>example:</strong>
      * <p>test</p>
      */
@@ -41,6 +54,8 @@ public class GetContextStoreResponseBody extends TeaModel {
     public String description;
 
     /**
+     * <p>The region ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-beijing</p>
      */
@@ -48,6 +63,8 @@ public class GetContextStoreResponseBody extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>8FDE2569-626B-5176-9844-28877A*****</p>
      */
@@ -55,6 +72,8 @@ public class GetContextStoreResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The status of the context store.</p>
+     * 
      * <strong>example:</strong>
      * <p>active</p>
      */
@@ -62,6 +81,7 @@ public class GetContextStoreResponseBody extends TeaModel {
     public String status;
 
     /**
+     * <p>The last update time of the context store. This value is a Unix timestamp in seconds.</p>
      * <p>Use the UTC time format: yyyy-MM-ddTHH:mm:ssZ</p>
      * 
      * <strong>example:</strong>
@@ -71,6 +91,8 @@ public class GetContextStoreResponseBody extends TeaModel {
     public String updateTime;
 
     /**
+     * <p>The workspace ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>workspace-test</p>
      */
@@ -172,6 +194,8 @@ public class GetContextStoreResponseBody extends TeaModel {
 
     public static class GetContextStoreResponseBodyConfigInnerSource extends TeaModel {
         /**
+         * <p>The name of the Log Service logstore.</p>
+         * 
          * <strong>example:</strong>
          * <p>sls-test-logstore</p>
          */
@@ -179,6 +203,8 @@ public class GetContextStoreResponseBody extends TeaModel {
         public String logstore;
 
         /**
+         * <p>The name of the Log Service project.</p>
+         * 
          * <strong>example:</strong>
          * <p>sls-test-project</p>
          */
@@ -210,6 +236,8 @@ public class GetContextStoreResponseBody extends TeaModel {
 
     public static class GetContextStoreResponseBodyConfigSource extends TeaModel {
         /**
+         * <p>The name of the Log Service logstore.</p>
+         * 
          * <strong>example:</strong>
          * <p>sls-test-logstore</p>
          */
@@ -217,6 +245,8 @@ public class GetContextStoreResponseBody extends TeaModel {
         public String logstore;
 
         /**
+         * <p>The name of the Log Service project.</p>
+         * 
          * <strong>example:</strong>
          * <p>sls-test-project</p>
          */
@@ -224,6 +254,7 @@ public class GetContextStoreResponseBody extends TeaModel {
         public String project;
 
         /**
+         * <p>The time when the configuration takes effect. This value is a Unix timestamp in milliseconds.</p>
          * <p>Use the UTC time format: yyyy-MM-ddTHH:mm:ssZ</p>
          * 
          * <strong>example:</strong>
@@ -264,12 +295,21 @@ public class GetContextStoreResponseBody extends TeaModel {
     }
 
     public static class GetContextStoreResponseBodyConfig extends TeaModel {
+        /**
+         * <p>The internal source.</p>
+         */
         @NameInMap("innerSource")
         public GetContextStoreResponseBodyConfigInnerSource innerSource;
 
+        /**
+         * <p>The metadata fields.</p>
+         */
         @NameInMap("metadataField")
         public java.util.Map<String, String> metadataField;
 
+        /**
+         * <p>The configuration source.</p>
+         */
         @NameInMap("source")
         public GetContextStoreResponseBodyConfigSource source;
 
@@ -306,6 +346,8 @@ public class GetContextStoreResponseBody extends TeaModel {
 
     public static class GetContextStoreResponseBodyDataset extends TeaModel {
         /**
+         * <p>The name of the dataset.</p>
+         * 
          * <strong>example:</strong>
          * <p>test_dataset</p>
          */

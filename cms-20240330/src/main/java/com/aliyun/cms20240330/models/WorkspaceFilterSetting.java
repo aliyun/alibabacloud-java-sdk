@@ -4,9 +4,15 @@ package com.aliyun.cms20240330.models;
 import com.aliyun.tea.*;
 
 public class WorkspaceFilterSetting extends TeaModel {
+    /**
+     * <p>The tag filter.</p>
+     */
     @NameInMap("tagSelector")
     public FilterSetting tagSelector;
 
+    /**
+     * <p>A list of workspace UUIDs.</p>
+     */
     @NameInMap("workspaceUuids")
     public java.util.List<String> workspaceUuids;
 

@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class AlertRuleAlertMetricInput extends TeaModel {
     /**
-     * <p>List of user-provided filter conditions. The supported parameters and filter conditions for the metric can be queried via ListAlertMetrics.</p>
+     * <p>A list of filter conditions. Call the ListAlertMetrics operation to query the lists of parameters and filter conditions that the metric supports.</p>
      */
     @NameInMap("filterValues")
     public java.util.List<AlertRuleAlertMetricInputFilterValue> filterValues;
 
     /**
-     * <p>Key of the metric group selected by the user.</p>
+     * <p>The key of the metric group.</p>
      * 
      * <strong>example:</strong>
      * <p>apm.jvm</p>
@@ -20,7 +20,7 @@ public class AlertRuleAlertMetricInput extends TeaModel {
     public String groupId;
 
     /**
-     * <p>Key of the predefined metric selected by the user.</p>
+     * <p>The key of the predefined metric.</p>
      * 
      * <strong>example:</strong>
      * <p>appstat.jvm.GcPsMarkSweepCount</p>
@@ -29,7 +29,7 @@ public class AlertRuleAlertMetricInput extends TeaModel {
     public String metricId;
 
     /**
-     * <p>List of input parameters. The metric\&quot;s supported parameters and filter conditions can be queried via ListAlertMetrics.</p>
+     * <p>A list of parameters. Call the ListAlertMetrics operation to query the lists of parameters and filter conditions that the metric supports.</p>
      */
     @NameInMap("paramValues")
     public java.util.List<AlertRuleAlertMetricInputParamValue> paramValues;

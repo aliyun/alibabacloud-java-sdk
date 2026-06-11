@@ -4,10 +4,15 @@ package com.aliyun.cms20240330.models;
 import com.aliyun.tea.*;
 
 public class UpdateSubscriptionRequest extends TeaModel {
+    /**
+     * <p>The request body.</p>
+     */
     @NameInMap("body")
     public SubscriptionForModify body;
 
     /**
+     * <p>The name of the workspace.</p>
+     * 
      * <strong>example:</strong>
      * <p>workspace-test</p>
      */

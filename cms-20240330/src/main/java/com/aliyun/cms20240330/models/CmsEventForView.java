@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CmsEventForView extends TeaModel {
     /**
+     * <p>Additional annotations for the event. This is an unstructured description field.</p>
+     * 
      * <strong>example:</strong>
      * <p>{ &quot;description&quot;: &quot;High load detected on server&quot;, &quot;operator&quot;: &quot;auto&quot; }</p>
      */
@@ -12,6 +14,8 @@ public class CmsEventForView extends TeaModel {
     public java.util.Map<String, ?> annotations;
 
     /**
+     * <p>The raw data of the event. The format depends on the event type and dataschema.</p>
+     * 
      * <strong>example:</strong>
      * <p>{ &quot;metricName&quot;: &quot;cpu_usage&quot;, &quot;value&quot;: 95.2, &quot;threshold&quot;: 80 }</p>
      */
@@ -19,6 +23,8 @@ public class CmsEventForView extends TeaModel {
     public Object data;
 
     /**
+     * <p>The content type of the data field.</p>
+     * 
      * <strong>example:</strong>
      * <p>&quot;application/json&quot;</p>
      */
@@ -26,6 +32,8 @@ public class CmsEventForView extends TeaModel {
     public String datacontenttype;
 
     /**
+     * <p>The data schema definition, which describes the structure of the data field.</p>
+     * 
      * <strong>example:</strong>
      * <p>&quot;<a href="https://schema.alibabacloud.com/cms/alert/v1">https://schema.alibabacloud.com/cms/alert/v1</a>&quot;</p>
      */
@@ -33,6 +41,8 @@ public class CmsEventForView extends TeaModel {
     public String dataschema;
 
     /**
+     * <p>The deduplication ID. It identifies different instances of the same event, such as a repeatedly reported event.</p>
+     * 
      * <strong>example:</strong>
      * <p>&quot;dedup-abc123&quot;</p>
      */
@@ -40,6 +50,8 @@ public class CmsEventForView extends TeaModel {
     public String dedupId;
 
     /**
+     * <p>The unique identifier for the event. The system generates this globally unique ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>&quot;event-1234567890&quot;</p>
      */
@@ -47,6 +59,8 @@ public class CmsEventForView extends TeaModel {
     public String id;
 
     /**
+     * <p>The unique integration identifier. It is used for identity recognition in cross-system integrations.</p>
+     * 
      * <strong>example:</strong>
      * <p>&quot;integration-xyz&quot;</p>
      */
@@ -54,6 +68,8 @@ public class CmsEventForView extends TeaModel {
     public String integrationUuid;
 
     /**
+     * <p>The key-value pairs of the event labels.</p>
+     * 
      * <strong>example:</strong>
      * <p>{\&quot;source\&quot;: \&quot;system\&quot;}</p>
      */
@@ -61,16 +77,23 @@ public class CmsEventForView extends TeaModel {
     public java.util.Map<String, ?> labels;
 
     /**
+     * <p>The timestamp when the event was received and processed.</p>
+     * 
      * <strong>example:</strong>
      * <p>1743846610000</p>
      */
     @NameInMap("receiveTime")
     public Long receiveTime;
 
+    /**
+     * <p>Information about the resource associated with the event, such as the instance ID, IP address, and region.</p>
+     */
     @NameInMap("resource")
     public EventResourceForEventView resource;
 
     /**
+     * <p>The severity level of the event.</p>
+     * 
      * <strong>example:</strong>
      * <p>&quot;CRITICAL&quot;</p>
      */
@@ -78,6 +101,8 @@ public class CmsEventForView extends TeaModel {
     public String severity;
 
     /**
+     * <p>The name of the source system or service, such as ECS, RDS, or VPC.</p>
+     * 
      * <strong>example:</strong>
      * <p>&quot;ECS&quot;</p>
      */
@@ -85,6 +110,8 @@ public class CmsEventForView extends TeaModel {
     public String source;
 
     /**
+     * <p>The type of event source. It distinguishes between sources such as monitoring systems, Simple Log Service, and application observability.</p>
+     * 
      * <strong>example:</strong>
      * <p>&quot;CloudMonitor&quot;</p>
      */
@@ -92,6 +119,8 @@ public class CmsEventForView extends TeaModel {
     public String sourcetype;
 
     /**
+     * <p>The current status of the event.</p>
+     * 
      * <strong>example:</strong>
      * <p>Running</p>
      */
@@ -99,6 +128,8 @@ public class CmsEventForView extends TeaModel {
     public String status;
 
     /**
+     * <p>The subject or title of the event. It briefly describes the event.</p>
+     * 
      * <strong>example:</strong>
      * <p>&quot;Instance cpu usage exceeds threshold&quot;</p>
      */
@@ -106,6 +137,8 @@ public class CmsEventForView extends TeaModel {
     public String subject;
 
     /**
+     * <p>The event subtype.</p>
+     * 
      * <strong>example:</strong>
      * <p>&quot;HighCPUUsage&quot;</p>
      */
@@ -113,6 +146,8 @@ public class CmsEventForView extends TeaModel {
     public String subtype;
 
     /**
+     * <p>The internal system event ID. It is used for internal tracking and log association.</p>
+     * 
      * <strong>example:</strong>
      * <p>&quot;sys-event-987654321&quot;</p>
      */
@@ -120,6 +155,8 @@ public class CmsEventForView extends TeaModel {
     public String sysId;
 
     /**
+     * <p>The time when the event occurred.</p>
+     * 
      * <strong>example:</strong>
      * <p>&quot;2025-04-05T10:30:00Z&quot;</p>
      */
@@ -127,6 +164,8 @@ public class CmsEventForView extends TeaModel {
     public String time;
 
     /**
+     * <p>The timestamp of the event occurrence.</p>
+     * 
      * <strong>example:</strong>
      * <p>1743846600000</p>
      */
@@ -134,6 +173,8 @@ public class CmsEventForView extends TeaModel {
     public Long timestamp;
 
     /**
+     * <p>The event type.</p>
+     * 
      * <strong>example:</strong>
      * <p>&quot;Alert&quot;</p>
      */
@@ -141,6 +182,8 @@ public class CmsEventForView extends TeaModel {
     public String type;
 
     /**
+     * <p>The ID or name of the workspace. It is used for multi-tenant or organization fencing.</p>
+     * 
      * <strong>example:</strong>
      * <p>&quot;ws-abc123&quot;</p>
      */
@@ -148,6 +191,8 @@ public class CmsEventForView extends TeaModel {
     public String workspace;
 
     /**
+     * <p>The workspace tags. They help you manage events by tag.</p>
+     * 
      * <strong>example:</strong>
      * <p>{ &quot;department&quot;: &quot;finance&quot;, &quot;project&quot;: &quot;payment-gateway&quot; }</p>
      */

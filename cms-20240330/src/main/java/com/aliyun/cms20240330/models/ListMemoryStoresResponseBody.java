@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class ListMemoryStoresResponseBody extends TeaModel {
     /**
+     * <p>The maximum number of returned entries.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
     @NameInMap("maxResults")
     public Integer maxResults;
 
+    /**
+     * <p>The list of memory stores.</p>
+     */
     @NameInMap("memoryStores")
     public java.util.List<ListMemoryStoresResponseBodyMemoryStores> memoryStores;
 
     /**
+     * <p>The token for the next page of results.</p>
+     * 
      * <strong>example:</strong>
      * <p>xxxxxxxxxx</p>
      */
@@ -22,6 +29,8 @@ public class ListMemoryStoresResponseBody extends TeaModel {
     public String nextToken;
 
     /**
+     * <p>The ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>16C0A6D6-C3E7-511D-A60B-A87FD85F5BA7</p>
      */
@@ -78,6 +87,7 @@ public class ListMemoryStoresResponseBody extends TeaModel {
 
     public static class ListMemoryStoresResponseBodyMemoryStores extends TeaModel {
         /**
+         * <p>The time when the memory store was created.</p>
          * <p>Use the UTC time format: yyyy-MM-ddTHH:mm:ssZ</p>
          * 
          * <strong>example:</strong>
@@ -87,6 +97,8 @@ public class ListMemoryStoresResponseBody extends TeaModel {
         public String createTime;
 
         /**
+         * <p>The description of the memory store.</p>
+         * 
          * <strong>example:</strong>
          * <p>Created by taishan-module-recovery</p>
          */
@@ -94,6 +106,8 @@ public class ListMemoryStoresResponseBody extends TeaModel {
         public String description;
 
         /**
+         * <p>The name of the memory store.</p>
+         * 
          * <strong>example:</strong>
          * <p>qianyi_test_1</p>
          */
@@ -101,6 +115,8 @@ public class ListMemoryStoresResponseBody extends TeaModel {
         public String memoryStoreName;
 
         /**
+         * <p>The ID of the region.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
          */
@@ -108,6 +124,7 @@ public class ListMemoryStoresResponseBody extends TeaModel {
         public String regionId;
 
         /**
+         * <p>The time when the memory store was last updated.</p>
          * <p>Use the UTC time format: yyyy-MM-ddTHH:mm:ssZ</p>
          * 
          * <strong>example:</strong>
@@ -117,6 +134,8 @@ public class ListMemoryStoresResponseBody extends TeaModel {
         public String updateTime;
 
         /**
+         * <p>Workspace</p>
+         * 
          * <strong>example:</strong>
          * <p>default-cms-1646467597142798-cn-shenzhen</p>
          */

@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class UmodelEntityField extends TeaModel {
     /**
-     * <p>实体字段名</p>
+     * <p>The name of the entity field.</p>
      */
     @NameInMap("field")
     public String field;
 
     /**
-     * <p>字段别名或展示值</p>
+     * <p>The field alias or display value.</p>
      */
     @NameInMap("value")
     public String value;

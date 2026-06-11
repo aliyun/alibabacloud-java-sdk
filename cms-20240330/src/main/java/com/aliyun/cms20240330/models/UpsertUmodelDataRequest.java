@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class UpsertUmodelDataRequest extends TeaModel {
     /**
-     * <p>Element content</p>
+     * <p>The content of the element.</p>
      */
     @NameInMap("elements")
     public java.util.List<?> elements;
 
     /**
-     * <p>Method</p>
+     * <p>The method.</p>
      * 
      * <strong>example:</strong>
      * <p>Upsert</p>

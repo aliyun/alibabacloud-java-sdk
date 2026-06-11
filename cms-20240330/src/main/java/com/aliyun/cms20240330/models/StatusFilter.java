@@ -4,6 +4,9 @@ package com.aliyun.cms20240330.models;
 import com.aliyun.tea.*;
 
 public class StatusFilter extends TeaModel {
+    /**
+     * <p>Filters the results to include only resources with the specified status.</p>
+     */
     @NameInMap("eq")
     public String eq;
 

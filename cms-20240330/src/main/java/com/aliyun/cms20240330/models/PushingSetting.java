@@ -4,13 +4,21 @@ package com.aliyun.cms20240330.models;
 import com.aliyun.tea.*;
 
 public class PushingSetting extends TeaModel {
+    /**
+     * <p>The list of alert action IDs.</p>
+     */
     @NameInMap("alertActionIds")
     public java.util.List<String> alertActionIds;
 
+    /**
+     * <p>The list of restore action IDs.</p>
+     */
     @NameInMap("restoreActionIds")
     public java.util.List<String> restoreActionIds;
 
     /**
+     * <p>The UUID of the message template.</p>
+     * 
      * <strong>example:</strong>
      * <p>&quot;template-abc123&quot;</p>
      */

@@ -4,36 +4,66 @@ package com.aliyun.cms20240330.models;
 import com.aliyun.tea.*;
 
 public class AddonMeta extends TeaModel {
+    /**
+     * <p>The alias of the component. This is the display name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ECS 监控</p>
+     */
     @NameInMap("alias")
     public String alias;
 
+    /**
+     * <p>The categorization information of the component.</p>
+     */
     @NameInMap("categories")
     public java.util.List<String> categories;
 
+    /**
+     * <p>A list of component diagrams.</p>
+     */
     @NameInMap("dashboards")
     public java.util.List<AddonMetaDashboards> dashboards;
 
     /**
+     * <p>The description.</p>
+     * 
      * <strong>example:</strong>
      * <p>The out-of-the-box and comprehensive ECS observe dashboards and alarm rules. Based on AliYun CloudMonitor agentless metrics, exporter agent metrics, host audit logs, host events and other data.</p>
      */
     @NameInMap("description")
     public String description;
 
+    /**
+     * <p>The list of supported environment types.</p>
+     */
     @NameInMap("environments")
     public java.util.List<AddonMetaEnvironments> environments;
 
     /**
+     * <p>The icon of the component.</p>
+     * 
      * <strong>example:</strong>
      * <p>assets/logos/ecs.svg</p>
      */
     @NameInMap("icon")
     public String icon;
 
+    /**
+     * <p>The list of keywords.</p>
+     */
     @NameInMap("keywords")
     public java.util.List<String> keywords;
 
     /**
+     * <p>The language. Valid values:</p>
+     * <ul>
+     * <li><p>zh: Chinese (default)</p>
+     * </li>
+     * <li><p>en: English</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>zh</p>
      */
@@ -41,6 +71,8 @@ public class AddonMeta extends TeaModel {
     public String language;
 
     /**
+     * <p>The last time the component was integrated.</p>
+     * 
      * <strong>example:</strong>
      * <p>2025-10-25 09:12:12</p>
      */
@@ -48,6 +80,8 @@ public class AddonMeta extends TeaModel {
     public String latestReleaseCreateTime;
 
     /**
+     * <p>The name of the component.</p>
+     * 
      * <strong>example:</strong>
      * <p>cloud-acs-ecs</p>
      */
@@ -55,6 +89,8 @@ public class AddonMeta extends TeaModel {
     public String name;
 
     /**
+     * <p>Indicates whether the component can be installed only once under a policy.</p>
+     * 
      * <strong>example:</strong>
      * <p>true/false</p>
      */
@@ -62,6 +98,8 @@ public class AddonMeta extends TeaModel {
     public Boolean once;
 
     /**
+     * <p>The scenario.</p>
+     * 
      * <strong>example:</strong>
      * <p>feature</p>
      */
@@ -69,6 +107,8 @@ public class AddonMeta extends TeaModel {
     public String scene;
 
     /**
+     * <p>The version number.</p>
+     * 
      * <strong>example:</strong>
      * <p>0.0.1</p>
      */
@@ -76,6 +116,8 @@ public class AddonMeta extends TeaModel {
     public String version;
 
     /**
+     * <p>The sorting weight of the component.</p>
+     * 
      * <strong>example:</strong>
      * <p>1000</p>
      */
@@ -200,13 +242,27 @@ public class AddonMeta extends TeaModel {
     }
 
     public static class AddonMetaDashboards extends TeaModel {
+        /**
+         * <p>The description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>描述信息</p>
+         */
         @NameInMap("description")
         public String description;
 
+        /**
+         * <p>The name of the diagram.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ECS 监控概览大盘</p>
+         */
         @NameInMap("name")
         public String name;
 
         /**
+         * <p>The URL of the diagram.</p>
+         * 
          * <strong>example:</strong>
          * <p>assets/dashboards/ecs.png</p>
          */
@@ -246,6 +302,8 @@ public class AddonMeta extends TeaModel {
 
     public static class AddonMetaEnvironmentsCommonSchemaRefs extends TeaModel {
         /**
+         * <p>The group name of the CommonSchema.</p>
+         * 
          * <strong>example:</strong>
          * <p>acs-ecs</p>
          */
@@ -253,6 +311,8 @@ public class AddonMeta extends TeaModel {
         public String group;
 
         /**
+         * <p>The group version of the CommonSchema.</p>
+         * 
          * <strong>example:</strong>
          * <p>0.1.0</p>
          */
@@ -283,12 +343,21 @@ public class AddonMeta extends TeaModel {
     }
 
     public static class AddonMetaEnvironmentsDependencies extends TeaModel {
+        /**
+         * <p>The supported cluster types.</p>
+         */
         @NameInMap("clusterTypes")
         public java.util.List<String> clusterTypes;
 
+        /**
+         * <p>The probe dependency description. This is the component name. In later versions, this field is replaced by the collectors field.</p>
+         */
         @NameInMap("features")
         public java.util.Map<String, Boolean> features;
 
+        /**
+         * <p>The list of dependent services.</p>
+         */
         @NameInMap("services")
         public java.util.List<String> services;
 
@@ -325,6 +394,8 @@ public class AddonMeta extends TeaModel {
 
     public static class AddonMetaEnvironmentsPoliciesBindEntity extends TeaModel {
         /**
+         * <p>Indicates whether group mode is used.</p>
+         * 
          * <strong>example:</strong>
          * <p>true/false</p>
          */
@@ -332,6 +403,8 @@ public class AddonMeta extends TeaModel {
         public Boolean entityGroupMode;
 
         /**
+         * <p>The entity type.</p>
+         * 
          * <strong>example:</strong>
          * <p>acs.ecs.instance</p>
          */
@@ -339,6 +412,8 @@ public class AddonMeta extends TeaModel {
         public String entityType;
 
         /**
+         * <p>Indicates whether single-entity mode is used.</p>
+         * 
          * <strong>example:</strong>
          * <p>true/false</p>
          */
@@ -346,6 +421,8 @@ public class AddonMeta extends TeaModel {
         public Boolean singleEntityMode;
 
         /**
+         * <p>The field in the entity from which to fetch the VPC ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>vpcId</p>
          */
@@ -392,6 +469,9 @@ public class AddonMeta extends TeaModel {
     }
 
     public static class AddonMetaEnvironmentsPoliciesMetricCheckRule extends TeaModel {
+        /**
+         * <p>The Prometheus Query Language (PromQL) for the check rule.</p>
+         */
         @NameInMap("promQL")
         public java.util.List<String> promQL;
 
@@ -411,20 +491,36 @@ public class AddonMeta extends TeaModel {
     }
 
     public static class AddonMetaEnvironmentsPoliciesProtocols extends TeaModel {
+        /**
+         * <p>The description of the protocol.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>使用 Prometheus 协议写入指标数据</p>
+         */
         @NameInMap("description")
         public String description;
 
         /**
+         * <p>The display icon for the protocol.</p>
+         * 
          * <strong>example:</strong>
          * <p>assets/logos/ecs.svg</p>
          */
         @NameInMap("icon")
         public String icon;
 
+        /**
+         * <p>The display name of the protocol.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Prometheus 协议</p>
+         */
         @NameInMap("label")
         public String label;
 
         /**
+         * <p>The name of the protocol.</p>
+         * 
          * <strong>example:</strong>
          * <p>Prometheus</p>
          */
@@ -472,6 +568,8 @@ public class AddonMeta extends TeaModel {
 
     public static class AddonMetaEnvironmentsPolicies extends TeaModel {
         /**
+         * <p>Indicates whether the alert rule is enabled by default after installation.</p>
+         * 
          * <strong>example:</strong>
          * <p>RUNNING</p>
          */
@@ -479,16 +577,23 @@ public class AddonMeta extends TeaModel {
         public String alertDefaultStatus;
 
         /**
+         * <p>The default mode. This integration mode does not require attaching an entity.</p>
+         * 
          * <strong>example:</strong>
          * <p>true/false</p>
          */
         @NameInMap("bindDefaultPolicy")
         public Boolean bindDefaultPolicy;
 
+        /**
+         * <p>Information about the attached target entity.</p>
+         */
         @NameInMap("bindEntity")
         public AddonMetaEnvironmentsPoliciesBindEntity bindEntity;
 
         /**
+         * <p>Indicates whether the component is installed by default.</p>
+         * 
          * <strong>example:</strong>
          * <p>true/false</p>
          */
@@ -496,26 +601,38 @@ public class AddonMeta extends TeaModel {
         public Boolean defaultInstall;
 
         /**
+         * <p>Indicates whether to enable internal authorization token allocation.</p>
+         * 
          * <strong>example:</strong>
          * <p>true/false</p>
          */
         @NameInMap("enableServiceAccount")
         public Boolean enableServiceAccount;
 
+        /**
+         * <p>The data check rule after the component is integrated.</p>
+         */
         @NameInMap("metricCheckRule")
         public AddonMetaEnvironmentsPoliciesMetricCheckRule metricCheckRule;
 
         /**
+         * <p>Indicates whether to prompt for a workload restart after integration.</p>
+         * 
          * <strong>example:</strong>
          * <p>true/false</p>
          */
         @NameInMap("needRestartAfterIntegration")
         public Boolean needRestartAfterIntegration;
 
+        /**
+         * <p>The list of supported client protocols.</p>
+         */
         @NameInMap("protocols")
         public java.util.List<AddonMetaEnvironmentsPoliciesProtocols> protocols;
 
         /**
+         * <p>The name of the target component for redirection.</p>
+         * 
          * <strong>example:</strong>
          * <p>cloud-acs-ecs</p>
          */
@@ -602,36 +719,63 @@ public class AddonMeta extends TeaModel {
     }
 
     public static class AddonMetaEnvironments extends TeaModel {
+        /**
+         * <p>The list of attached CommonSchemas.</p>
+         */
         @NameInMap("commonSchemaRefs")
         public java.util.List<AddonMetaEnvironmentsCommonSchemaRefs> commonSchemaRefs;
 
+        /**
+         * <p>The dependency description.</p>
+         */
         @NameInMap("dependencies")
         public AddonMetaEnvironmentsDependencies dependencies;
 
+        /**
+         * <p>The description of the environment type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>支持容器集群的工作覆盖监控</p>
+         */
         @NameInMap("description")
         public String description;
 
         /**
+         * <p>Indicates whether the environment type is enabled.</p>
+         * 
          * <strong>example:</strong>
          * <p>true/false</p>
          */
         @NameInMap("enable")
         public Boolean enable;
 
+        /**
+         * <p>The display name of the environment type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>容器环境</p>
+         */
         @NameInMap("label")
         public String label;
 
         /**
+         * <p>The name of the environment type.</p>
+         * 
          * <strong>example:</strong>
          * <p>CS/ECS/Cloud/Client</p>
          */
         @NameInMap("name")
         public String name;
 
+        /**
+         * <p>Information about the control policy group for the component.</p>
+         */
         @NameInMap("policies")
         public AddonMetaEnvironmentsPolicies policies;
 
         /**
+         * <p>The policy type.</p>
+         * 
          * <strong>example:</strong>
          * <p>ECS</p>
          */

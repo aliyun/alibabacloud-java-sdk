@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class IncidentEscalationStageStruct extends TeaModel {
     /**
-     * <p>Contact list.</p>
+     * <p>The list of contacts.</p>
      */
     @NameInMap("contact")
     public java.util.List<IncidentContactStruct> contact;
 
     /**
-     * <p>Number of recurring notification attempts.</p>
+     * <p>The number of notifications sent per cycle.</p>
      * 
      * <strong>example:</strong>
      * <p>3</p>
@@ -20,7 +20,7 @@ public class IncidentEscalationStageStruct extends TeaModel {
     public Integer cycleNotifyCount;
 
     /**
-     * <p>Recurring notification interval.</p>
+     * <p>The notification interval.</p>
      * 
      * <strong>example:</strong>
      * <p>300</p>
@@ -29,16 +29,16 @@ public class IncidentEscalationStageStruct extends TeaModel {
     public Integer cycleNotifyTime;
 
     /**
-     * <p>Description.</p>
+     * <p>The description.</p>
      * 
      * <strong>example:</strong>
-     * <p>Primary owner responsible for handling production environment alerts.</p>
+     * <p>负责处理生产环境告警的主负责人</p>
      */
     @NameInMap("description")
     public String description;
 
     /**
-     * <p>Effective time period.</p>
+     * <p>The effective time.</p>
      * 
      * <strong>example:</strong>
      * <p>2025-04-05T00:00:00Z</p>
@@ -47,16 +47,16 @@ public class IncidentEscalationStageStruct extends TeaModel {
     public String effectTime;
 
     /**
-     * <p>Name.</p>
+     * <p>The name.</p>
      * 
      * <strong>example:</strong>
-     * <p>Operations team.</p>
+     * <p>运维团队</p>
      */
     @NameInMap("name")
     public String name;
 
     /**
-     * <p>Phase index.</p>
+     * <p>The stage index.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -65,7 +65,7 @@ public class IncidentEscalationStageStruct extends TeaModel {
     public Integer stageIndex;
 
     /**
-     * <p>Time zone.</p>
+     * <p>The time zone.</p>
      * 
      * <strong>example:</strong>
      * <p>Asia/Shanghai</p>
@@ -74,7 +74,7 @@ public class IncidentEscalationStageStruct extends TeaModel {
     public String timeZone;
 
     /**
-     * <p>Time to wait before proceeding to the next phase.</p>
+     * <p>The waiting time before the next stage begins.</p>
      * 
      * <strong>example:</strong>
      * <p>600</p>

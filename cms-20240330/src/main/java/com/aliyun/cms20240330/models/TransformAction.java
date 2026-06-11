@@ -4,20 +4,30 @@ package com.aliyun.cms20240330.models;
 import com.aliyun.tea.*;
 
 public class TransformAction extends TeaModel {
+    /**
+     * <p>The filter configuration.</p>
+     */
     @NameInMap("filterSetting")
     public FilterSetting filterSetting;
 
     /**
+     * <p>The label name.</p>
+     * 
      * <strong>example:</strong>
      * <p>labelkey1</p>
      */
     @NameInMap("labelKey")
     public String labelKey;
 
+    /**
+     * <p>The mapping configuration.</p>
+     */
     @NameInMap("mapping")
     public java.util.Map<String, String> mapping;
 
     /**
+     * <p>The regular expression.</p>
+     * 
      * <strong>example:</strong>
      * <p>(.<em>):(.</em>)</p>
      */
@@ -25,6 +35,8 @@ public class TransformAction extends TeaModel {
     public String regExp;
 
     /**
+     * <p>The reference path.</p>
+     * 
      * <strong>example:</strong>
      * <p>data.subject</p>
      */
@@ -32,6 +44,8 @@ public class TransformAction extends TeaModel {
     public String source;
 
     /**
+     * <p>The target location.</p>
+     * 
      * <strong>example:</strong>
      * <p>SUBJECT</p>
      */
@@ -39,6 +53,8 @@ public class TransformAction extends TeaModel {
     public String target;
 
     /**
+     * <p>The transform type.</p>
+     * 
      * <strong>example:</strong>
      * <p>SET_FIELD</p>
      */
@@ -46,6 +62,8 @@ public class TransformAction extends TeaModel {
     public String type;
 
     /**
+     * <p>The value to set.</p>
+     * 
      * <strong>example:</strong>
      * <p>value1</p>
      */
@@ -53,6 +71,8 @@ public class TransformAction extends TeaModel {
     public String value;
 
     /**
+     * <p>The variable name.</p>
+     * 
      * <strong>example:</strong>
      * <p>var1</p>
      */

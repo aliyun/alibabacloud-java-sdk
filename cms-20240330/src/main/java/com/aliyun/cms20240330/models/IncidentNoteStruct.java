@@ -5,16 +5,16 @@ import com.aliyun.tea.*;
 
 public class IncidentNoteStruct extends TeaModel {
     /**
-     * <p>Content.</p>
+     * <p>The content.</p>
      * 
      * <strong>example:</strong>
-     * <p>The operations team has been contacted and is currently investigating the issue.</p>
+     * <p>已联系运维团队，正在排查问题。</p>
      */
     @NameInMap("content")
     public String content;
 
     /**
-     * <p>Content format.</p>
+     * <p>The content format.</p>
      * 
      * <strong>example:</strong>
      * <p>markdown</p>
@@ -23,7 +23,7 @@ public class IncidentNoteStruct extends TeaModel {
     public String format;
 
     /**
-     * <p>Incident ID.</p>
+     * <p>The event ID.</p>
      * 
      * <strong>example:</strong>
      * <p>incident-001</p>
@@ -32,7 +32,7 @@ public class IncidentNoteStruct extends TeaModel {
     public String incidentId;
 
     /**
-     * <p>Note ID.</p>
+     * <p>The record ID.</p>
      * 
      * <strong>example:</strong>
      * <p>note-001</p>
@@ -41,13 +41,13 @@ public class IncidentNoteStruct extends TeaModel {
     public String noteId;
 
     /**
-     * <p>Operator.</p>
+     * <p>The operator.</p>
      */
     @NameInMap("operator")
     public IncidentNoteStructOperator operator;
 
     /**
-     * <p>Time.</p>
+     * <p>The time.</p>
      * 
      * <strong>example:</strong>
      * <p>1741234567890</p>
@@ -56,7 +56,7 @@ public class IncidentNoteStruct extends TeaModel {
     public Long time;
 
     /**
-     * <p>Type.</p>
+     * <p>The type.</p>
      * 
      * <strong>example:</strong>
      * <p>apm</p>
@@ -127,7 +127,7 @@ public class IncidentNoteStruct extends TeaModel {
 
     public static class IncidentNoteStructOperator extends TeaModel {
         /**
-         * <p>Contact.</p>
+         * <p>The contact.</p>
          * 
          * <strong>example:</strong>
          * <p>{\&quot;mobile_phone_num\&quot;:\&quot;153xxxx8040\&quot;,\&quot;mobile_country_code\&quot;:\&quot;86\&quot;,\&quot;email\&quot;:\&quot;<a href="mailto:flightxxg@dida.com">flightxxg@dida.com</a>\&quot;}</p>
@@ -136,7 +136,7 @@ public class IncidentNoteStruct extends TeaModel {
         public String contact;
 
         /**
-         * <p>Contact ID.</p>
+         * <p>The contact ID.</p>
          * 
          * <strong>example:</strong>
          * <p>user-12345</p>
@@ -145,16 +145,16 @@ public class IncidentNoteStruct extends TeaModel {
         public String contactId;
 
         /**
-         * <p>Name.</p>
+         * <p>The name.</p>
          * 
          * <strong>example:</strong>
-         * <p>Zhang San.</p>
+         * <p>张三</p>
          */
         @NameInMap("name")
         public String name;
 
         /**
-         * <p>User ID.</p>
+         * <p>The user ID.</p>
          * 
          * <strong>example:</strong>
          * <p>4123456</p>

@@ -5,55 +5,55 @@ import com.aliyun.tea.*;
 
 public class ConditionConfigUnified extends TeaModel {
     /**
-     * <p>聚合函数（APM_SIMPLE_CONDITION）</p>
+     * <p>The aggregation method for metric data points over the evaluation period. Valid values include <code>AVG</code>, <code>SUM</code>, and <code>MAX</code>.</p>
      */
     @NameInMap("aggregate")
     public String aggregate;
 
     /**
-     * <p>多条比较（APM_COMPOSITE_CONDITION）</p>
+     * <p>A list of composite comparison configurations for APM alerts. Each item is an <code>ApmCompositeCompareConfig</code> object.</p>
      */
     @NameInMap("compareList")
     public java.util.List<ApmCompositeCompareConfig> compareList;
 
     /**
-     * <p>持续时间（秒），PROMETHEUS_SIMPLE / UMODEL_METRICSET 使用</p>
+     * <p>The number of seconds a condition must be true before triggering an alert.</p>
      */
     @NameInMap("durationSecs")
     public Integer durationSecs;
 
     /**
-     * <p>比较操作符（UMODEL_METRICSET_CONDITION 或 APM_SIMPLE_CONDITION）</p>
+     * <p>The comparison operator used to evaluate the metric against the threshold.</p>
      */
     @NameInMap("operator")
     public String operator;
 
     /**
-     * <p>条件间逻辑关系（APM_COMPOSITE_CONDITION）</p>
+     * <p>The logical relationship between multiple conditions. Valid values are <code>AND</code> and <code>OR</code>.</p>
      */
     @NameInMap("relation")
     public String relation;
 
     /**
-     * <p>严重等级（UMODEL / PROMETHEUS_SIMPLE / APM_COMPOSITE）</p>
+     * <p>The alert severity. Valid values are <code>CRITICAL</code>, <code>WARNING</code>, and <code>INFO</code>.</p>
      */
     @NameInMap("severity")
     public String severity;
 
     /**
-     * <p>阈值（UMODEL_METRICSET_CONDITION）</p>
+     * <p>The value against which the metric is evaluated to trigger an alert.</p>
      */
     @NameInMap("threshold")
     public Double threshold;
 
     /**
-     * <p>多阈值列表（APM_SIMPLE_CONDITION）</p>
+     * <p>A list of threshold configurations for Application Performance Monitoring (APM) alerts. Each item is an <code>ApmThresholdConfig</code> object.</p>
      */
     @NameInMap("thresholdList")
     public java.util.List<ApmThresholdConfig> thresholdList;
 
     /**
-     * <p>检测条件类型</p>
+     * <p>The type of the alert condition.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("type")

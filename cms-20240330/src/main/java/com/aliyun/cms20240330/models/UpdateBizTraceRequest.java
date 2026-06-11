@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpdateBizTraceRequest extends TeaModel {
     /**
+     * <p>The advanced configuration.</p>
+     * 
      * <strong>example:</strong>
      * <p>{&quot;sample&quot;:{&quot;strategy&quot;:&quot;BY_APP&quot;}}</p>
      */
@@ -12,6 +14,8 @@ public class UpdateBizTraceRequest extends TeaModel {
     public String advancedConfig;
 
     /**
+     * <p>The name of the business trace.</p>
+     * 
      * <strong>example:</strong>
      * <p>just test</p>
      */
@@ -19,6 +23,8 @@ public class UpdateBizTraceRequest extends TeaModel {
     public String bizTraceName;
 
     /**
+     * <p>The list of configuration rules.</p>
+     * 
      * <strong>example:</strong>
      * <p>[{&quot;entrancePid&quot;:&quot;xxx@d9w3jd9j3&quot;,&quot;rpcMatcher&quot;:{&quot;matchType&quot;:&quot;EQUALS&quot;,&quot;pattern&quot;:&quot;/&quot;},&quot;characteristics&quot;:{&quot;operation&quot;:&quot;OR&quot;,&quot;rules&quot;:[{&quot;target&quot;:&quot;CUSTOM_EXTRACT&quot;,&quot;id&quot;:&quot;oi0b3bb7&quot;,&quot;key&quot;:&quot;biz.test&quot;,&quot;matcher&quot;:{&quot;matchType&quot;:&quot;CONTAINS&quot;,&quot;pattern&quot;:[&quot;1&quot;]}}]}}]</p>
      */
@@ -26,6 +32,8 @@ public class UpdateBizTraceRequest extends TeaModel {
     public String ruleConfig;
 
     /**
+     * <p>The workspace.</p>
+     * 
      * <strong>example:</strong>
      * <p>default-cms-xxxxxxx-cn-hangzhou</p>
      */

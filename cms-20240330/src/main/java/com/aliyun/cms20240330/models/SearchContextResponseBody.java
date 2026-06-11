@@ -5,12 +5,17 @@ import com.aliyun.tea.*;
 
 public class SearchContextResponseBody extends TeaModel {
     /**
+     * <p>Request ID</p>
+     * 
      * <strong>example:</strong>
      * <p>123-0F43-23423-AC43-34234</p>
      */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <p>Return value</p>
+     */
     @NameInMap("results")
     public java.util.List<java.util.Map<String, ?>> results;
 

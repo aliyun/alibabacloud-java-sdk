@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListPrometheusViewsShrinkRequest extends TeaModel {
     /**
-     * <p>Filter by RegionID.</p>
+     * <p>The region IDs by which to filter the results.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-zhangjiakou,cn-beijing</p>
@@ -14,7 +14,7 @@ public class ListPrometheusViewsShrinkRequest extends TeaModel {
     public String filterRegionIds;
 
     /**
-     * <p>Maximum number of records to return.</p>
+     * <p>The maximum number of records to return.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>
@@ -26,7 +26,7 @@ public class ListPrometheusViewsShrinkRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>Query token.</p>
+     * <p>The query token.</p>
      * 
      * <strong>example:</strong>
      * <p>44ANBjKZmQeKnaB1fXRq06w7sFYK3MUcCALMD9qQbmEiE</p>
@@ -38,7 +38,7 @@ public class ListPrometheusViewsShrinkRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>List of Prometheus view instance IDs.</p>
+     * <p>The IDs of the Prometheus view instances.</p>
      * 
      * <strong>example:</strong>
      * <p>view-xxx</p>
@@ -47,7 +47,7 @@ public class ListPrometheusViewsShrinkRequest extends TeaModel {
     public String prometheusViewIds;
 
     /**
-     * <p>Prometheus view name.</p>
+     * <p>The name of the Prometheus view.</p>
      * 
      * <strong>example:</strong>
      * <p>view1</p>
@@ -56,7 +56,7 @@ public class ListPrometheusViewsShrinkRequest extends TeaModel {
     public String prometheusViewName;
 
     /**
-     * <p>Resource group ID.</p>
+     * <p>The resource group ID.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-acfm3gn5i6bigbi</p>
@@ -65,7 +65,7 @@ public class ListPrometheusViewsShrinkRequest extends TeaModel {
     public String resourceGroupId;
 
     /**
-     * <p>Resource type.</p>
+     * <p>The resource type.</p>
      * 
      * <strong>example:</strong>
      * <p>PROMETHEUSVIEW</p>
@@ -74,13 +74,13 @@ public class ListPrometheusViewsShrinkRequest extends TeaModel {
     public String resourceType;
 
     /**
-     * <p>List of tags.</p>
+     * <p>The list of tags.</p>
      */
     @NameInMap("tag")
     public String tagShrink;
 
     /**
-     * <p>Instance version: V1 or V2</p>
+     * <p>The instance version. Valid values: V1 and V2.</p>
      * 
      * <strong>example:</strong>
      * <p>V2</p>
@@ -89,7 +89,7 @@ public class ListPrometheusViewsShrinkRequest extends TeaModel {
     public String version;
 
     /**
-     * <p>Workspace name</p>
+     * <p>The name of the workspace.</p>
      * 
      * <strong>example:</strong>
      * <p>workspace-test</p>

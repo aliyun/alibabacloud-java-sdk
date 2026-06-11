@@ -5,19 +5,25 @@ import com.aliyun.tea.*;
 
 public class ListPrometheusVirtualInstancesResponseBody extends TeaModel {
     /**
-     * <p>Instance information.</p>
+     * <p>A list of instances.</p>
      */
     @NameInMap("instances")
     public java.util.List<ListPrometheusVirtualInstancesResponseBodyInstances> instances;
 
+    /**
+     * <p>The maximum number of entries returned on each page.</p>
+     */
     @NameInMap("maxResults")
     public String maxResults;
 
+    /**
+     * <p>The pagination token that is used in the next request to retrieve a new page of results. If all results are returned, this parameter is left empty.</p>
+     */
     @NameInMap("nextToken")
     public String nextToken;
 
     /**
-     * <p>ID of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>264C3E89-XXXX-XXXX-XXXX-CE9C2196C7DC</p>
@@ -25,6 +31,9 @@ public class ListPrometheusVirtualInstancesResponseBody extends TeaModel {
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <p>The total number of entries returned.</p>
+     */
     @NameInMap("totalCount")
     public String totalCount;
 
@@ -75,7 +84,7 @@ public class ListPrometheusVirtualInstancesResponseBody extends TeaModel {
 
     public static class ListPrometheusVirtualInstancesResponseBodyInstances extends TeaModel {
         /**
-         * <p>Creation time</p>
+         * <p>The creation time.</p>
          * 
          * <strong>example:</strong>
          * <p>1750315319946</p>
@@ -84,7 +93,7 @@ public class ListPrometheusVirtualInstancesResponseBody extends TeaModel {
         public String createdAt;
 
         /**
-         * <p>HTTP API URL.</p>
+         * <p>The HTTP API URL.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="http://xxxxxxxx">http://xxxxxxxx</a></p>
@@ -93,8 +102,8 @@ public class ListPrometheusVirtualInstancesResponseBody extends TeaModel {
         public String httpApiUrl;
 
         /**
-         * <p>Applicable data source type: PROMETHEUS_DS</p>
-         * <p>Prometheus instance ID</p>
+         * <p>Returned for the <code>PROMETHEUS_DS</code> data source type.</p>
+         * <p>The Prometheus instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>rw-b8cfbbe94194ac37fe83f3d2d16a</p>
@@ -103,8 +112,8 @@ public class ListPrometheusVirtualInstancesResponseBody extends TeaModel {
         public String instanceId;
 
         /**
-         * <p>Applicable query type: CMS_BASIC_QUERY.</p>
-         * <p>Namespace of the metric</p>
+         * <p>Returned for the <code>CMS_BASIC_QUERY</code> query type.</p>
+         * <p>The namespace of the metric.</p>
          * 
          * <strong>example:</strong>
          * <p>arms-prom</p>
@@ -113,7 +122,7 @@ public class ListPrometheusVirtualInstancesResponseBody extends TeaModel {
         public String namespace;
 
         /**
-         * <p>Region ID.</p>
+         * <p>The region ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-shanghai-cloudspe</p>
@@ -122,7 +131,7 @@ public class ListPrometheusVirtualInstancesResponseBody extends TeaModel {
         public String regionId;
 
         /**
-         * <p>User ID.</p>
+         * <p>The user ID.</p>
          * 
          * <strong>example:</strong>
          * <p>17073812345</p>

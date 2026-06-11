@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateContextStoreAPIKeyRequest extends TeaModel {
     /**
+     * <p>The display name of the API key. Use this name to identify its purpose.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListDeliveryTasksRequest extends TeaModel {
     /**
+     * <p>The keywords for a fuzzy search by task name or task ID. The search uses <code>LIKE</code> semantics.</p>
+     * 
      * <strong>example:</strong>
      * <p>test-task</p>
      */
@@ -12,6 +14,8 @@ public class ListDeliveryTasksRequest extends TeaModel {
     public String keyWords;
 
     /**
+     * <p>The number of entries to return on each page. Default value: 20. Maximum value: 100.</p>
+     * 
      * <strong>example:</strong>
      * <p>100</p>
      */
@@ -19,6 +23,8 @@ public class ListDeliveryTasksRequest extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>The pagination token that is used to retrieve the next page of results. You do not need to specify this parameter for the first request. For subsequent requests, set this parameter to the <code>nextToken</code> value that is returned in the previous response.</p>
+     * 
      * <strong>example:</strong>
      * <p>sjC5rekx93Ew7K7VcmI3wkBZBYQ-GphB2ilQu3zJCGxoZuicwyJznfo2riTjr-lq</p>
      */
@@ -26,12 +32,17 @@ public class ListDeliveryTasksRequest extends TeaModel {
     public String nextToken;
 
     /**
+     * <p>The resource group ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>rg-aek2bhocin5e2na</p>
      */
     @NameInMap("resourceGroupId")
     public String resourceGroupId;
 
+    /**
+     * <p>A list of tags.</p>
+     */
     @NameInMap("tag")
     public java.util.List<ListDeliveryTasksRequestTag> tag;
 
@@ -82,6 +93,8 @@ public class ListDeliveryTasksRequest extends TeaModel {
 
     public static class ListDeliveryTasksRequestTag extends TeaModel {
         /**
+         * <p>The tag key.</p>
+         * 
          * <strong>example:</strong>
          * <p>testKey</p>
          */
@@ -89,6 +102,8 @@ public class ListDeliveryTasksRequest extends TeaModel {
         public String key;
 
         /**
+         * <p>The tag value.</p>
+         * 
          * <strong>example:</strong>
          * <p>value1</p>
          */

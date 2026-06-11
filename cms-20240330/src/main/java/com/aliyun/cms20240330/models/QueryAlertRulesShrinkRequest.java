@@ -4,10 +4,15 @@ package com.aliyun.cms20240330.models;
 import com.aliyun.tea.*;
 
 public class QueryAlertRulesShrinkRequest extends TeaModel {
+    /**
+     * <p>The request parameters for querying alert rules.</p>
+     */
     @NameInMap("body")
     public String bodyShrink;
 
     /**
+     * <p>The client token used to ensure the idempotency of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>xxxxx-xxxx-xxxx</p>
      */
@@ -15,6 +20,8 @@ public class QueryAlertRulesShrinkRequest extends TeaModel {
     public String clientToken;
 
     /**
+     * <p>The maximum number of results to return per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -22,6 +29,8 @@ public class QueryAlertRulesShrinkRequest extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>The token used to retrieve the next page of results. If you do not specify this parameter, the query starts from the beginning.</p>
+     * 
      * <strong>example:</strong>
      * <p>123456</p>
      */

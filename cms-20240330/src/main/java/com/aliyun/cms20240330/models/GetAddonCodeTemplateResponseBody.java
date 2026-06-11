@@ -4,11 +4,14 @@ package com.aliyun.cms20240330.models;
 import com.aliyun.tea.*;
 
 public class GetAddonCodeTemplateResponseBody extends TeaModel {
+    /**
+     * <p>The list of code templates.</p>
+     */
     @NameInMap("codes")
     public java.util.List<GetAddonCodeTemplateResponseBodyCodes> codes;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>0CEC5375-C554-562B-A65F-***</p>
@@ -39,6 +42,8 @@ public class GetAddonCodeTemplateResponseBody extends TeaModel {
 
     public static class GetAddonCodeTemplateResponseBodyCodes extends TeaModel {
         /**
+         * <p>The code template.</p>
+         * 
          * <strong>example:</strong>
          * <p>javascript\nnpm install @arms/rum-miniapp --save</p>
          */
@@ -46,6 +51,8 @@ public class GetAddonCodeTemplateResponseBody extends TeaModel {
         public String codeTemplate;
 
         /**
+         * <p>The name of the code template.</p>
+         * 
          * <strong>example:</strong>
          * <p>cs-default-CS-cs-default-1753236205394-cs-default-CS-kubeApiserver</p>
          */

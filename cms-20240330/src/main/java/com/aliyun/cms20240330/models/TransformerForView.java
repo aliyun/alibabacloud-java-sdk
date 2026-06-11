@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class TransformerForView extends TeaModel {
     /**
-     * <p>Transformation operation.</p>
+     * <p>The transform operations.</p>
      */
     @NameInMap("actions")
     public java.util.List<TransformAction> actions;
 
     /**
-     * <p>Create Time.</p>
+     * <p>The time when the converter was created.</p>
      * 
      * <strong>example:</strong>
      * <p>2025-03-11T08:21:58Z</p>
@@ -20,7 +20,7 @@ public class TransformerForView extends TeaModel {
     public String createTime;
 
     /**
-     * <p>Description.</p>
+     * <p>The description.</p>
      * 
      * <strong>example:</strong>
      * <p>workspace test</p>
@@ -29,7 +29,7 @@ public class TransformerForView extends TeaModel {
     public String description;
 
     /**
-     * <p>Whether enabled.</p>
+     * <p>Indicates whether the converter is enabled.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -38,13 +38,13 @@ public class TransformerForView extends TeaModel {
     public Boolean enable;
 
     /**
-     * <p>Filter Setting.</p>
+     * <p>The filter settings.</p>
      */
     @NameInMap("filterSetting")
     public FilterSetting filterSetting;
 
     /**
-     * <p>Exit after matching processing.</p>
+     * <p>Indicates whether to exit after a match is processed.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -53,7 +53,7 @@ public class TransformerForView extends TeaModel {
     public Boolean quitAfterMatch;
 
     /**
-     * <p>Sort order.</p>
+     * <p>The sort ID.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -62,7 +62,7 @@ public class TransformerForView extends TeaModel {
     public Integer sortId;
 
     /**
-     * <p>transformer Id</p>
+     * <p>The transformer ID.</p>
      * 
      * <strong>example:</strong>
      * <p>1123123123123</p>
@@ -71,17 +71,17 @@ public class TransformerForView extends TeaModel {
     public String transformerId;
 
     /**
-     * <p>Name.</p>
+     * <p>The name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>Test processing flow.</p>
+     * <p>测试处理流</p>
      */
     @NameInMap("transformerName")
     public String transformerName;
 
     /**
-     * <p>Update Time.</p>
+     * <p>The time when the converter was last updated.</p>
      * 
      * <strong>example:</strong>
      * <p>2025-01-16T02:27:01Z</p>
@@ -90,7 +90,7 @@ public class TransformerForView extends TeaModel {
     public String updateTime;
 
     /**
-     * <p>User ID.</p>
+     * <p>The user ID.</p>
      * 
      * <strong>example:</strong>
      * <p>123123123**</p>
@@ -99,7 +99,7 @@ public class TransformerForView extends TeaModel {
     public String userId;
 
     /**
-     * <p>workspace</p>
+     * <p>The workspace.</p>
      * 
      * <strong>example:</strong>
      * <p>workspace-test</p>

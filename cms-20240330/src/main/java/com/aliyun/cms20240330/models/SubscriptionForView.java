@@ -8,7 +8,7 @@ public class SubscriptionForView extends TeaModel {
     public SubscriptionForViewAgentConfig agentConfig;
 
     /**
-     * <p>Create Time.</p>
+     * <p>The creation time.</p>
      * 
      * <strong>example:</strong>
      * <p>2025-03-11T08:21:58Z</p>
@@ -17,7 +17,7 @@ public class SubscriptionForView extends TeaModel {
     public String createTime;
 
     /**
-     * <p>Description.</p>
+     * <p>The description.</p>
      * 
      * <strong>example:</strong>
      * <p>workspace test</p>
@@ -26,7 +26,7 @@ public class SubscriptionForView extends TeaModel {
     public String description;
 
     /**
-     * <p>Whether enabled.</p>
+     * <p>Indicates whether the subscription is enabled.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -35,13 +35,13 @@ public class SubscriptionForView extends TeaModel {
     public Boolean enable;
 
     /**
-     * <p>Filtering settings.</p>
+     * <p>The filter settings.</p>
      */
     @NameInMap("filterSetting")
     public FilterSetting filterSetting;
 
     /**
-     * <p>Notification policy UUID.</p>
+     * <p>The UUID of the notification policy.</p>
      * 
      * <strong>example:</strong>
      * <p>23123123</p>
@@ -50,13 +50,13 @@ public class SubscriptionForView extends TeaModel {
     public String notifyStrategyId;
 
     /**
-     * <p>Push settings.</p>
+     * <p>The push settings.</p>
      */
     @NameInMap("pushingSetting")
     public SubscriptionForViewPushingSetting pushingSetting;
 
     /**
-     * <p>UUID</p>
+     * <p>The UUID.</p>
      * 
      * <strong>example:</strong>
      * <p>123123123123</p>
@@ -65,11 +65,11 @@ public class SubscriptionForView extends TeaModel {
     public String subscriptionId;
 
     /**
-     * <p>Name.</p>
+     * <p>The name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>Subscription test.</p>
+     * <p>订阅测试</p>
      */
     @NameInMap("subscriptionName")
     public String subscriptionName;
@@ -81,11 +81,17 @@ public class SubscriptionForView extends TeaModel {
     @NameInMap("subscriptionType")
     public String subscriptionType;
 
+    /**
+     * <p>The source type of the synchronization policy.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>&quot;ARMS&quot;</p>
+     */
     @NameInMap("syncFromType")
     public String syncFromType;
 
     /**
-     * <p>Update Time.</p>
+     * <p>The update time.</p>
      * 
      * <strong>example:</strong>
      * <p>2025-05-23T02:29:02Z</p>
@@ -94,7 +100,7 @@ public class SubscriptionForView extends TeaModel {
     public String updateTime;
 
     /**
-     * <p>User ID.</p>
+     * <p>The user ID.</p>
      * 
      * <strong>example:</strong>
      * <p>123123123</p>
@@ -103,7 +109,7 @@ public class SubscriptionForView extends TeaModel {
     public String userId;
 
     /**
-     * <p>workspace</p>
+     * <p>Specifies the workspace.</p>
      * 
      * <strong>example:</strong>
      * <p>workspace-test</p>
@@ -271,13 +277,13 @@ public class SubscriptionForView extends TeaModel {
 
     public static class SubscriptionForViewPushingSetting extends TeaModel {
         /**
-         * <p>Alert push action integration ID list.</p>
+         * <p>A list of action integration IDs for alert pushes.</p>
          */
         @NameInMap("alertActionIds")
         public java.util.List<String> alertActionIds;
 
         /**
-         * <p>Action plan ID.</p>
+         * <p>The action plan ID.</p>
          * 
          * <strong>example:</strong>
          * <p>123123123</p>
@@ -286,13 +292,13 @@ public class SubscriptionForView extends TeaModel {
         public String responsePlanId;
 
         /**
-         * <p>Recovery push action integration ID list.</p>
+         * <p>A list of action integration IDs for recovery pushes.</p>
          */
         @NameInMap("restoreActionIds")
         public java.util.List<String> restoreActionIds;
 
         /**
-         * <p>Template UUID.</p>
+         * <p>The template UUID.</p>
          * 
          * <strong>example:</strong>
          * <p>123123123</p>

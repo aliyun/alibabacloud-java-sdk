@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class IncidentResponsePlanForView extends TeaModel {
     /**
+     * <p>The automatic recovery time.</p>
+     * 
      * <strong>example:</strong>
      * <p>300</p>
      */
@@ -12,26 +14,41 @@ public class IncidentResponsePlanForView extends TeaModel {
     public Long autoRecoverSeconds;
 
     /**
+     * <p>The time when the plan was created.</p>
+     * 
      * <strong>example:</strong>
      * <p>&quot;2025-04-05T10:30:00Z&quot;</p>
      */
     @NameInMap("createTime")
     public String createTime;
 
+    /**
+     * <p>The description of the response plan.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>&quot;针对支付服务不可用的紧急响应流程&quot;</p>
+     */
     @NameInMap("description")
     public String description;
 
     /**
+     * <p>Indicates whether the response plan is enabled.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
     @NameInMap("enabled")
     public Boolean enabled;
 
+    /**
+     * <p>A list of the IDs of associated escalation policies.</p>
+     */
     @NameInMap("escalationId")
     public java.util.List<String> escalationId;
 
     /**
+     * <p>The response pattern.</p>
+     * 
      * <strong>example:</strong>
      * <p>&quot;Manual&quot;</p>
      */
@@ -39,19 +56,29 @@ public class IncidentResponsePlanForView extends TeaModel {
     public String mode;
 
     /**
+     * <p>The name of the response plan.</p>
+     * 
      * <strong>example:</strong>
      * <p>&quot;P1-Critical-Response-Plan&quot;</p>
      */
     @NameInMap("name")
     public String name;
 
+    /**
+     * <p>The push notification settings.</p>
+     */
     @NameInMap("pushingSetting")
     public PushingSetting pushingSetting;
 
+    /**
+     * <p>The settings for repeated notifications.</p>
+     */
     @NameInMap("repeatNotifySetting")
     public RepeatNotifySetting repeatNotifySetting;
 
     /**
+     * <p>The source.</p>
+     * 
      * <strong>example:</strong>
      * <p>&quot;MANUAL&quot;</p>
      */
@@ -59,6 +86,8 @@ public class IncidentResponsePlanForView extends TeaModel {
     public String source;
 
     /**
+     * <p>The source type of the synchronization policy.</p>
+     * 
      * <strong>example:</strong>
      * <p>&quot;ARMS&quot;</p>
      */
@@ -66,6 +95,8 @@ public class IncidentResponsePlanForView extends TeaModel {
     public String syncFromType;
 
     /**
+     * <p>The type of the response plan.</p>
+     * 
      * <strong>example:</strong>
      * <p>&quot;Standard&quot;</p>
      */
@@ -73,6 +104,8 @@ public class IncidentResponsePlanForView extends TeaModel {
     public String type;
 
     /**
+     * <p>The time when the plan was last updated.</p>
+     * 
      * <strong>example:</strong>
      * <p>&quot;2025-04-06T09:15:00Z&quot;</p>
      */
@@ -80,6 +113,8 @@ public class IncidentResponsePlanForView extends TeaModel {
     public String updateTime;
 
     /**
+     * <p>The globally unique identifier.</p>
+     * 
      * <strong>example:</strong>
      * <p>&quot;a1b2c3d4-e5f6-7890-1234-567890abcdef&quot;</p>
      */
@@ -87,6 +122,8 @@ public class IncidentResponsePlanForView extends TeaModel {
     public String uuid;
 
     /**
+     * <p>The workspace.</p>
+     * 
      * <strong>example:</strong>
      * <p>&quot;ws-xyz789&quot;</p>
      */

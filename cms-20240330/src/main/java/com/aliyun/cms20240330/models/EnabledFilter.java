@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class EnabledFilter extends TeaModel {
     /**
-     * <p>精确匹配</p>
+     * <p>The value to filter by. Set to <code>true</code> to return only enabled resources. Set to <code>false</code> to return only disabled resources.</p>
      */
     @NameInMap("eq")
     public Boolean eq;

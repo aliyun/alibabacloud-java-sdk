@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpdateContextRequest extends TeaModel {
     /**
+     * <p>The updated text for the long-term memory.</p>
+     * 
      * <strong>example:</strong>
      * <p>Users prefer to first view the SLS error logs, index configuration, and the most recent Agent execution trace.</p>
      */
@@ -12,6 +14,8 @@ public class UpdateContextRequest extends TeaModel {
     public String content;
 
     /**
+     * <p>The experience object.</p>
+     * 
      * <strong>example:</strong>
      * <p>{
      *     &quot;taskType&quot;: &quot;troubleshooting&quot;,
@@ -23,6 +27,8 @@ public class UpdateContextRequest extends TeaModel {
     public java.util.Map<String, ?> experience;
 
     /**
+     * <p>A set of key-value pairs to attach to an object for storing custom information.</p>
+     * 
      * <strong>example:</strong>
      * <p>{&quot;sessionId&quot;:&quot;test_session_001&quot;}</p>
      */
@@ -30,6 +36,8 @@ public class UpdateContextRequest extends TeaModel {
     public java.util.Map<String, ?> metadata;
 
     /**
+     * <p>The payload to update.</p>
+     * 
      * <strong>example:</strong>
      * <p>{
      *     &quot;userId&quot;: &quot;u-10001&quot;,
@@ -49,6 +57,8 @@ public class UpdateContextRequest extends TeaModel {
     public java.util.Map<String, ?> payload;
 
     /**
+     * <p>The trigger condition.</p>
+     * 
      * <strong>example:</strong>
      * <p>Identify and troubleshoot SLs issues</p>
      */

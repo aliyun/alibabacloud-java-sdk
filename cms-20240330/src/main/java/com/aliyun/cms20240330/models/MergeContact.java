@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class MergeContact extends TeaModel {
     /**
+     * <p>The email address.</p>
+     * 
      * <strong>example:</strong>
      * <p><a href="mailto:zhangsan@company.com">zhangsan@company.com</a></p>
      */
@@ -12,16 +14,26 @@ public class MergeContact extends TeaModel {
     public String email;
 
     /**
+     * <p>Specifies whether the email address is authenticated.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
     @NameInMap("emailVerify")
     public Boolean emailVerify;
 
+    /**
+     * <p>An extension field used to store additional information.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{ &quot;department&quot;: &quot;运维部&quot;, &quot;role&quot;: &quot;工程师&quot; }</p>
+     */
     @NameInMap("extend")
     public java.util.Map<String, ?> extend;
 
     /**
+     * <p>The time when the contact was created.</p>
+     * 
      * <strong>example:</strong>
      * <p>2025-03-11T08:21:58.789Z</p>
      */
@@ -29,6 +41,8 @@ public class MergeContact extends TeaModel {
     public String gmtCreate;
 
     /**
+     * <p>The time when the contact was last modified.</p>
+     * 
      * <strong>example:</strong>
      * <p>2025-03-11T08:21:58.789Z</p>
      */
@@ -36,6 +50,8 @@ public class MergeContact extends TeaModel {
     public String gmtModified;
 
     /**
+     * <p>The unique identifier of the contact.</p>
+     * 
      * <strong>example:</strong>
      * <p>user-12345</p>
      */
@@ -43,16 +59,26 @@ public class MergeContact extends TeaModel {
     public String identifier;
 
     /**
+     * <p>The language preference.</p>
+     * 
      * <strong>example:</strong>
      * <p>zh-CN</p>
      */
     @NameInMap("lang")
     public String lang;
 
+    /**
+     * <p>The name of the contact.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>张三</p>
+     */
     @NameInMap("name")
     public String name;
 
     /**
+     * <p>The mobile phone number.</p>
+     * 
      * <strong>example:</strong>
      * <p>13800138000</p>
      */
@@ -60,6 +86,8 @@ public class MergeContact extends TeaModel {
     public String phone;
 
     /**
+     * <p>The country code for the mobile phone number.</p>
+     * 
      * <strong>example:</strong>
      * <p>86</p>
      */
@@ -67,6 +95,8 @@ public class MergeContact extends TeaModel {
     public String phoneCode;
 
     /**
+     * <p>Specifies whether the mobile phone number is authenticated.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -74,6 +104,8 @@ public class MergeContact extends TeaModel {
     public Boolean phoneVerify;
 
     /**
+     * <p>The source system of the contact.</p>
+     * 
      * <strong>example:</strong>
      * <p>dingtalk</p>
      */

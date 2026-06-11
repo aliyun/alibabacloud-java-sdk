@@ -5,40 +5,43 @@ import com.aliyun.tea.*;
 
 public class AlertRuleNotification extends TeaModel {
     /**
-     * <p>List of contact IDs.</p>
+     * <p>A list of contact IDs.</p>
      */
     @NameInMap("contacts")
     public java.util.List<String> contacts;
 
     /**
-     * <p>List of custom webhook notification object IDs.</p>
+     * <p>A list of custom webhook notification object IDs.</p>
      */
     @NameInMap("customWebhooks")
     public java.util.List<String> customWebhooks;
 
+    /**
+     * <p>A list of DingTalk Cool App webhook notification object IDs.</p>
+     */
     @NameInMap("dingCoolAppWebhooks")
     public java.util.List<String> dingCoolAppWebhooks;
 
     /**
-     * <p>List of DingTalk webhook notification object IDs.</p>
+     * <p>A list of DingTalk webhook notification object IDs.</p>
      */
     @NameInMap("dingWebhooks")
     public java.util.List<String> dingWebhooks;
 
     /**
-     * <p>List of Feishu webhook notification object IDs.</p>
+     * <p>A list of Lark webhook notification object IDs.</p>
      */
     @NameInMap("fsWebhooks")
     public java.util.List<String> fsWebhooks;
 
     /**
-     * <p>List of contact group IDs.</p>
+     * <p>A list of contact group IDs.</p>
      */
     @NameInMap("groups")
     public java.util.List<String> groups;
 
     /**
-     * <p>Notification time window; notifications are sent only during this period.</p>
+     * <p>The notification period. Notifications are sent only within this period.</p>
      */
     @NameInMap("notifyTime")
     public AlertRuleTimeSpan notifyTime;
@@ -47,7 +50,7 @@ public class AlertRuleNotification extends TeaModel {
     public java.util.Map<String, java.util.Map<String, ?>> qwencloudContacts;
 
     /**
-     * <p>Notification silence duration, in seconds.</p>
+     * <p>The notification silence period. Unit: seconds.</p>
      * 
      * <strong>example:</strong>
      * <p>86400</p>
@@ -56,13 +59,13 @@ public class AlertRuleNotification extends TeaModel {
     public Long silenceTime;
 
     /**
-     * <p>List of Slack webhook notification object IDs.</p>
+     * <p>A list of Slack webhook notification object IDs.</p>
      */
     @NameInMap("slackWebhooks")
     public java.util.List<String> slackWebhooks;
 
     /**
-     * <p>List of WeChat webhook notification object IDs.</p>
+     * <p>A list of WeChat webhook notification object IDs.</p>
      */
     @NameInMap("wxWebhooks")
     public java.util.List<String> wxWebhooks;

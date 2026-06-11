@@ -5,21 +5,35 @@ import com.aliyun.tea.*;
 
 public class UpdatePipelineRequest extends TeaModel {
     /**
+     * <p>The pipeline description.</p>
+     * 
      * <strong>example:</strong>
      * <p>test pipeline</p>
      */
     @NameInMap("description")
     public String description;
 
+    /**
+     * <p>The execution policy.</p>
+     */
     @NameInMap("executePolicy")
     public UpdatePipelineRequestExecutePolicy executePolicy;
 
+    /**
+     * <p>The pipeline configuration.</p>
+     */
     @NameInMap("pipeline")
     public UpdatePipelineRequestPipeline pipeline;
 
+    /**
+     * <p>The data sink configuration.</p>
+     */
     @NameInMap("sink")
     public UpdatePipelineRequestSink sink;
 
+    /**
+     * <p>The data source configuration.</p>
+     */
     @NameInMap("source")
     public UpdatePipelineRequestSource source;
 
@@ -70,6 +84,8 @@ public class UpdatePipelineRequest extends TeaModel {
 
     public static class UpdatePipelineRequestExecutePolicyRunOnce extends TeaModel {
         /**
+         * <p>The start timestamp.</p>
+         * 
          * <strong>example:</strong>
          * <p>1772519013</p>
          */
@@ -77,6 +93,8 @@ public class UpdatePipelineRequest extends TeaModel {
         public Long fromTime;
 
         /**
+         * <p>The end timestamp.</p>
+         * 
          * <strong>example:</strong>
          * <p>1772605413</p>
          */
@@ -108,6 +126,8 @@ public class UpdatePipelineRequest extends TeaModel {
 
     public static class UpdatePipelineRequestExecutePolicyScheduled extends TeaModel {
         /**
+         * <p>The start timestamp.</p>
+         * 
          * <strong>example:</strong>
          * <p>1772519013</p>
          */
@@ -115,6 +135,8 @@ public class UpdatePipelineRequest extends TeaModel {
         public Long fromTime;
 
         /**
+         * <p>The execution interval.</p>
+         * 
          * <strong>example:</strong>
          * <p>86400</p>
          */
@@ -146,15 +168,23 @@ public class UpdatePipelineRequest extends TeaModel {
 
     public static class UpdatePipelineRequestExecutePolicy extends TeaModel {
         /**
+         * <p>The execution mode.</p>
+         * 
          * <strong>example:</strong>
          * <p>runOnce</p>
          */
         @NameInMap("mode")
         public String mode;
 
+        /**
+         * <p>The one-time execution configuration.</p>
+         */
         @NameInMap("runOnce")
         public UpdatePipelineRequestExecutePolicyRunOnce runOnce;
 
+        /**
+         * <p>The scheduled execution configuration.</p>
+         */
         @NameInMap("scheduled")
         public UpdatePipelineRequestExecutePolicyScheduled scheduled;
 
@@ -191,16 +221,23 @@ public class UpdatePipelineRequest extends TeaModel {
 
     public static class UpdatePipelineRequestPipelineNodes extends TeaModel {
         /**
+         * <p>The node ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>node_1</p>
          */
         @NameInMap("id")
         public String id;
 
+        /**
+         * <p>The node parameters.</p>
+         */
         @NameInMap("parameters")
         public java.util.Map<String, ?> parameters;
 
         /**
+         * <p>The node type.</p>
+         * 
          * <strong>example:</strong>
          * <p>dedup-fuzzy</p>
          */
@@ -239,6 +276,9 @@ public class UpdatePipelineRequest extends TeaModel {
     }
 
     public static class UpdatePipelineRequestPipeline extends TeaModel {
+        /**
+         * <p>The pipeline nodes.</p>
+         */
         @NameInMap("nodes")
         public java.util.List<UpdatePipelineRequestPipelineNodes> nodes;
 
@@ -259,6 +299,8 @@ public class UpdatePipelineRequest extends TeaModel {
 
     public static class UpdatePipelineRequestSinkDataset extends TeaModel {
         /**
+         * <p>The dataset name.</p>
+         * 
          * <strong>example:</strong>
          * <p>dataset_1</p>
          */
@@ -266,6 +308,8 @@ public class UpdatePipelineRequest extends TeaModel {
         public String dataset;
 
         /**
+         * <p>The workspace ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>workspace-test</p>
          */
@@ -296,10 +340,15 @@ public class UpdatePipelineRequest extends TeaModel {
     }
 
     public static class UpdatePipelineRequestSink extends TeaModel {
+        /**
+         * <p>The destination dataset configuration.</p>
+         */
         @NameInMap("dataset")
         public UpdatePipelineRequestSinkDataset dataset;
 
         /**
+         * <p>The sink type.</p>
+         * 
          * <strong>example:</strong>
          * <p>dataset</p>
          */
@@ -331,6 +380,8 @@ public class UpdatePipelineRequest extends TeaModel {
 
     public static class UpdatePipelineRequestSourceLogstore extends TeaModel {
         /**
+         * <p>The Logstore name.</p>
+         * 
          * <strong>example:</strong>
          * <p>test-logstore</p>
          */
@@ -338,6 +389,8 @@ public class UpdatePipelineRequest extends TeaModel {
         public String logstore;
 
         /**
+         * <p>The filter query.</p>
+         * 
          * <strong>example:</strong>
          * <p>status:500 and method:GET</p>
          */
@@ -368,10 +421,15 @@ public class UpdatePipelineRequest extends TeaModel {
     }
 
     public static class UpdatePipelineRequestSource extends TeaModel {
+        /**
+         * <p>The Log Service Logstore configuration.</p>
+         */
         @NameInMap("logstore")
         public UpdatePipelineRequestSourceLogstore logstore;
 
         /**
+         * <p>The source type.</p>
+         * 
          * <strong>example:</strong>
          * <p>logstore</p>
          */

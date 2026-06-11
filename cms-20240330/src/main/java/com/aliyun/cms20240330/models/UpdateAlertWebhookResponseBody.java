@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpdateAlertWebhookResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>8A33DBEA-<em><strong><strong>-</strong></strong></em>-<em><strong><strong>-</strong></strong></em></p>
      */

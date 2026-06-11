@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class MaintainWindowForModify extends TeaModel {
     /**
-     * <p>Description.</p>
+     * <p>The description.</p>
      * 
      * <strong>example:</strong>
      * <p>workspace test</p>
@@ -14,13 +14,13 @@ public class MaintainWindowForModify extends TeaModel {
     public String description;
 
     /**
-     * <p>Effective time range.</p>
+     * <p>The effective time range.</p>
      */
     @NameInMap("effectTimeRange")
     public MaintainWindowForModifyEffectTimeRange effectTimeRange;
 
     /**
-     * <p>Crontab expression.</p>
+     * <p>The Crontab expression.</p>
      * 
      * <strong>example:</strong>
      * <ul>
@@ -34,7 +34,7 @@ public class MaintainWindowForModify extends TeaModel {
     public String effective;
 
     /**
-     * <p>Effective end time.</p>
+     * <p>The time when the policy stops taking effect.</p>
      * 
      * <strong>example:</strong>
      * <p>2024-09-05 09:30:40</p>
@@ -43,13 +43,13 @@ public class MaintainWindowForModify extends TeaModel {
     public String endTime;
 
     /**
-     * <p>Filtering conditions.</p>
+     * <p>The filter conditions.</p>
      */
     @NameInMap("filterSetting")
     public FilterSetting filterSetting;
 
     /**
-     * <p>Name.</p>
+     * <p>The name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -59,7 +59,7 @@ public class MaintainWindowForModify extends TeaModel {
     public String maintainWindowName;
 
     /**
-     * <p>Effective start time.</p>
+     * <p>The time when the policy starts to take effect.</p>
      * 
      * <strong>example:</strong>
      * <p>2025-04-11 07:55:00</p>
@@ -130,13 +130,13 @@ public class MaintainWindowForModify extends TeaModel {
 
     public static class MaintainWindowForModifyEffectTimeRange extends TeaModel {
         /**
-         * <p>Effective days (Monday to Sunday).</p>
+         * <p>The days of the week when the policy is effective (Monday to Sunday).</p>
          */
         @NameInMap("dayInWeek")
         public java.util.List<Integer> dayInWeek;
 
         /**
-         * <p>End time (in minutes).</p>
+         * <p>The end time in minutes.</p>
          * 
          * <strong>example:</strong>
          * <p>60</p>
@@ -145,7 +145,7 @@ public class MaintainWindowForModify extends TeaModel {
         public Integer endTimeInMinute;
 
         /**
-         * <p>Start time (in minutes).</p>
+         * <p>The start time in minutes.</p>
          * 
          * <strong>example:</strong>
          * <p>60</p>
@@ -154,7 +154,7 @@ public class MaintainWindowForModify extends TeaModel {
         public Integer startTimeInMinute;
 
         /**
-         * <p>Time zone.</p>
+         * <p>The time zone.</p>
          * 
          * <strong>example:</strong>
          * <p>+08:00</p>

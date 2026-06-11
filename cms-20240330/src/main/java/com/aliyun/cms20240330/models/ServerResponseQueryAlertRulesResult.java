@@ -4,30 +4,57 @@ package com.aliyun.cms20240330.models;
 import com.aliyun.tea.*;
 
 public class ServerResponseQueryAlertRulesResult extends TeaModel {
+    /**
+     * <p>The status code of the response. A status code of <code>200</code> indicates a successful request.</p>
+     */
     @NameInMap("code")
     public String code;
 
+    /**
+     * <p>The response payload.</p>
+     */
     @NameInMap("data")
     public QueryAlertRulesResult data;
 
+    /**
+     * <p>The response message. If the request fails, this field contains details about the error.</p>
+     */
     @NameInMap("message")
     public String message;
 
+    /**
+     * <p>The token to retrieve the next page of results. A null value indicates that no more results are available.</p>
+     */
     @NameInMap("nextToken")
     public String nextToken;
 
+    /**
+     * <p>The current page number.</p>
+     */
     @NameInMap("pageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries per page.</p>
+     */
     @NameInMap("pageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The unique request ID, used for troubleshooting.</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful. Valid values: <code>true</code> and <code>false</code>.</p>
+     */
     @NameInMap("success")
     public Boolean success;
 
+    /**
+     * <p>The total number of alert rules that match the query.</p>
+     */
     @NameInMap("total")
     public Integer total;
 

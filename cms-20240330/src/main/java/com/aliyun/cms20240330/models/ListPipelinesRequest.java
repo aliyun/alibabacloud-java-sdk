@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListPipelinesRequest extends TeaModel {
     /**
+     * <p>The maximum number of results to return. The service may return fewer results than the specified value.</p>
+     * 
      * <strong>example:</strong>
      * <p>100</p>
      */
@@ -12,6 +14,8 @@ public class ListPipelinesRequest extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>The pagination token. If this parameter is not empty, use it in a subsequent request to get the next page of results.</p>
+     * 
      * <strong>example:</strong>
      * <p>fff3442dac1de7950f44d5afc0c735ebd12e27f603b21d17ec30cb1d5c735b1ba7c4fb3a1c124bce</p>
      */
@@ -19,6 +23,8 @@ public class ListPipelinesRequest extends TeaModel {
     public String nextToken;
 
     /**
+     * <p>The pipeline name.</p>
+     * 
      * <strong>example:</strong>
      * <p>pipeline-name-1</p>
      */

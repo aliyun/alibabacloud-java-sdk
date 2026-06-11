@@ -4,10 +4,15 @@ package com.aliyun.cms20240330.models;
 import com.aliyun.tea.*;
 
 public class AlertRuleLabelFilter extends TeaModel {
+    /**
+     * <p>The label filter.</p>
+     */
     @NameInMap("labels")
     public java.util.Map<String, String> labels;
 
     /**
+     * <p>The relationship operator between multiple labels.</p>
+     * 
      * <strong>example:</strong>
      * <p>AND</p>
      */

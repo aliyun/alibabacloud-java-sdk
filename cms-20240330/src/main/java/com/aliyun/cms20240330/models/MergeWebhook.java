@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class MergeWebhook extends TeaModel {
     /**
+     * <p>The content type.</p>
+     * 
      * <strong>example:</strong>
      * <p>application/json</p>
      */
@@ -12,6 +14,8 @@ public class MergeWebhook extends TeaModel {
     public String contentType;
 
     /**
+     * <p>An extension field used to store additional configurations.</p>
+     * 
      * <strong>example:</strong>
      * <p>{&quot;timeout&quot;: 3000}</p>
      */
@@ -19,6 +23,8 @@ public class MergeWebhook extends TeaModel {
     public String extend;
 
     /**
+     * <p>The creation time.</p>
+     * 
      * <strong>example:</strong>
      * <p>2025-03-11T08:21:58.789Z</p>
      */
@@ -26,6 +32,8 @@ public class MergeWebhook extends TeaModel {
     public String gmtCreate;
 
     /**
+     * <p>The last modification time.</p>
+     * 
      * <strong>example:</strong>
      * <p>2025-03-11T08:21:58.789Z</p>
      */
@@ -33,6 +41,8 @@ public class MergeWebhook extends TeaModel {
     public java.util.Map<String, ?> gmtModified;
 
     /**
+     * <p>The request header.</p>
+     * 
      * <strong>example:</strong>
      * <p>{&quot;Authorization&quot;: &quot;Bearer abc123&quot;}</p>
      */
@@ -40,6 +50,8 @@ public class MergeWebhook extends TeaModel {
     public String headers;
 
     /**
+     * <p>The unique identifier of the webhook.</p>
+     * 
      * <strong>example:</strong>
      * <p>webhook-12345</p>
      */
@@ -47,6 +59,8 @@ public class MergeWebhook extends TeaModel {
     public String identifier;
 
     /**
+     * <p>The language preference.</p>
+     * 
      * <strong>example:</strong>
      * <p>zh-CN</p>
      */
@@ -54,16 +68,26 @@ public class MergeWebhook extends TeaModel {
     public String lang;
 
     /**
+     * <p>The HTTP request method.</p>
+     * 
      * <strong>example:</strong>
      * <p>POST</p>
      */
     @NameInMap("method")
     public String method;
 
+    /**
+     * <p>The name of the webhook.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>运维告警通知</p>
+     */
     @NameInMap("name")
     public String name;
 
     /**
+     * <p>The source system of the webhook.</p>
+     * 
      * <strong>example:</strong>
      * <p>dingtalk</p>
      */
@@ -71,6 +95,8 @@ public class MergeWebhook extends TeaModel {
     public String source;
 
     /**
+     * <p>The type of the webhook. It indicates the destination platform.</p>
+     * 
      * <strong>example:</strong>
      * <p>dingtalk</p>
      */
@@ -78,6 +104,8 @@ public class MergeWebhook extends TeaModel {
     public String type;
 
     /**
+     * <p>The webhook URL used to send requests.</p>
+     * 
      * <strong>example:</strong>
      * <p><a href="https://oapi.dingtalk.com/robot/send?access_token=abc123">https://oapi.dingtalk.com/robot/send?access_token=abc123</a></p>
      */

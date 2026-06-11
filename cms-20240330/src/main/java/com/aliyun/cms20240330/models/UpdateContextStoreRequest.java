@@ -4,20 +4,30 @@ package com.aliyun.cms20240330.models;
 import com.aliyun.tea.*;
 
 public class UpdateContextStoreRequest extends TeaModel {
+    /**
+     * <p>The configuration.</p>
+     */
     @NameInMap("config")
     public UpdateContextStoreRequestConfig config;
 
     /**
+     * <p>The context type.</p>
+     * 
      * <strong>example:</strong>
      * <p>memory</p>
      */
     @NameInMap("contextType")
     public String contextType;
 
+    /**
+     * <p>The dataset.</p>
+     */
     @NameInMap("dataset")
     public UpdateContextStoreRequestDataset dataset;
 
     /**
+     * <p>The description.</p>
+     * 
      * <strong>example:</strong>
      * <p>test</p>
      */
@@ -63,6 +73,8 @@ public class UpdateContextStoreRequest extends TeaModel {
 
     public static class UpdateContextStoreRequestConfigSource extends TeaModel {
         /**
+         * <p>The Log Service Logstore name.</p>
+         * 
          * <strong>example:</strong>
          * <p>sls-test-logstore</p>
          */
@@ -70,6 +82,8 @@ public class UpdateContextStoreRequest extends TeaModel {
         public String logstore;
 
         /**
+         * <p>The Log Service Project name.</p>
+         * 
          * <strong>example:</strong>
          * <p>sls-test-project</p>
          */
@@ -77,6 +91,8 @@ public class UpdateContextStoreRequest extends TeaModel {
         public String project;
 
         /**
+         * <p>The start time.</p>
+         * 
          * <strong>example:</strong>
          * <p>1776824891000</p>
          */
@@ -115,9 +131,15 @@ public class UpdateContextStoreRequest extends TeaModel {
     }
 
     public static class UpdateContextStoreRequestConfig extends TeaModel {
+        /**
+         * <p>The metadata field.</p>
+         */
         @NameInMap("metadataField")
         public java.util.Map<String, String> metadataField;
 
+        /**
+         * <p>The data source.</p>
+         */
         @NameInMap("source")
         public UpdateContextStoreRequestConfigSource source;
 
@@ -146,6 +168,8 @@ public class UpdateContextStoreRequest extends TeaModel {
 
     public static class UpdateContextStoreRequestDataset extends TeaModel {
         /**
+         * <p>The dataset name.</p>
+         * 
          * <strong>example:</strong>
          * <p>test_dataset</p>
          */

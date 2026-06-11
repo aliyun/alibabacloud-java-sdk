@@ -8,7 +8,7 @@ public class ListPrometheusVirtualInstancesRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>Optional cloud product</p>
+     * <p>The namespace of the cloud product. This parameter is optional.</p>
      * 
      * <strong>example:</strong>
      * <p>ack-csi-fuse</p>
@@ -19,6 +19,9 @@ public class ListPrometheusVirtualInstancesRequest extends TeaModel {
     @NameInMap("nextToken")
     public String nextToken;
 
+    /**
+     * <p>The tenant ID.</p>
+     */
     @NameInMap("tenantId")
     public String tenantId;
 

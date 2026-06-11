@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class AlertRuleAlertMetricFilterDef extends TeaModel {
     /**
-     * <p>Dimension in APM metrics.</p>
+     * <p>The dimension in APM metrics.</p>
      * 
      * <strong>example:</strong>
      * <p>status</p>
@@ -14,7 +14,7 @@ public class AlertRuleAlertMetricFilterDef extends TeaModel {
     public String dim;
 
     /**
-     * <p>When true, the filter item will not appear in the GROUP BY clause of the PromQL.</p>
+     * <p>If set to \<code>true\\</code>, the filter item does not appear in the \<code>group by\\</code> clause of a PromQL query.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -23,16 +23,16 @@ public class AlertRuleAlertMetricFilterDef extends TeaModel {
     public Boolean dimDisabled;
 
     /**
-     * <p>Display Name (Chinese).</p>
+     * <p>The display name in Chinese.</p>
      * 
      * <strong>example:</strong>
-     * <p>Application Status</p>
+     * <p>应用状态</p>
      */
     @NameInMap("displayNameCn")
     public String displayNameCn;
 
     /**
-     * <p>Display Name (English).</p>
+     * <p>The display name in English.</p>
      * 
      * <strong>example:</strong>
      * <p>Application Status</p>
@@ -41,7 +41,7 @@ public class AlertRuleAlertMetricFilterDef extends TeaModel {
     public String displayNameEn;
 
     /**
-     * <p>Whether to hide. If hidden, it will not be displayed in the frontend UI, but its value can still be included when rendering the PromQL. A typical example is the &quot;pid&quot; filter condition in APM scenarios, which is generally not exposed through configurable UI elements but instead presented as a separate application search list in the frontend.</p>
+     * <p>Specifies whether to hide the filter. If hidden, the filter does not appear in the frontend UI. However, its value can be uploaded when rendering a PromQL query. For example, in an Application Performance Management (APM) scenario, the pid filter is typically hidden from the configuration UI. The frontend displays it as a separate application search list.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -50,7 +50,7 @@ public class AlertRuleAlertMetricFilterDef extends TeaModel {
     public Boolean hidden;
 
     /**
-     * <p>When true, the filter item will not appear in the label filter of the PromQL.</p>
+     * <p>If set to \<code>true\\</code>, the filter item does not appear in the label filter of a PromQL query.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -59,7 +59,7 @@ public class AlertRuleAlertMetricFilterDef extends TeaModel {
     public Boolean labelDisabled;
 
     /**
-     * <p>Filter Condition Operator.</p>
+     * <p>The operator for the filter condition.</p>
      * 
      * <strong>example:</strong>
      * <p>=</p>
@@ -68,7 +68,7 @@ public class AlertRuleAlertMetricFilterDef extends TeaModel {
     public String opt;
 
     /**
-     * <p>List of supported options.</p>
+     * <p>A list of supported options.</p>
      */
     @NameInMap("supportedOpts")
     public java.util.List<AlertRuleAlertMetricFilterDefSupportedOpts> supportedOpts;
@@ -144,16 +144,16 @@ public class AlertRuleAlertMetricFilterDef extends TeaModel {
 
     public static class AlertRuleAlertMetricFilterDefSupportedOpts extends TeaModel {
         /**
-         * <p>Display Name (Chinese).</p>
+         * <p>The display name in Chinese.</p>
          * 
          * <strong>example:</strong>
-         * <p>Online</p>
+         * <p>在线</p>
          */
         @NameInMap("displayNameCn")
         public String displayNameCn;
 
         /**
-         * <p>Display Name (English).</p>
+         * <p>The display name in English.</p>
          * 
          * <strong>example:</strong>
          * <p>Online</p>
@@ -162,7 +162,7 @@ public class AlertRuleAlertMetricFilterDef extends TeaModel {
         public String displayNameEn;
 
         /**
-         * <p>Matching value.</p>
+         * <p>The matching value.</p>
          * 
          * <strong>example:</strong>
          * <p>online</p>

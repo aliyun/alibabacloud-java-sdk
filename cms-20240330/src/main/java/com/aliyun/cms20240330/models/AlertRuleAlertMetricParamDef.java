@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class AlertRuleAlertMetricParamDef extends TeaModel {
     /**
+     * <p>The maximum width of the input control. This parameter is valid only for SELECT_PARAM and INPUT_PARAM.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -12,6 +14,8 @@ public class AlertRuleAlertMetricParamDef extends TeaModel {
     public Integer maxWidth;
 
     /**
+     * <p>The minimum width of the input control. This parameter is valid only for SELECT_PARAM and INPUT_PARAM.</p>
+     * 
      * <strong>example:</strong>
      * <p>100</p>
      */
@@ -19,16 +23,26 @@ public class AlertRuleAlertMetricParamDef extends TeaModel {
     public Integer minWidth;
 
     /**
+     * <p>The name.</p>
+     * 
      * <strong>example:</strong>
      * <p>env</p>
      */
     @NameInMap("name")
     public String name;
 
+    /**
+     * <p>The Chinese placeholder text displayed on the frontend. This parameter is valid only for INPUT_PARAM.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>请输入值</p>
+     */
     @NameInMap("placeholderCn")
     public String placeholderCn;
 
     /**
+     * <p>The English placeholder text displayed on the frontend. This parameter is valid only for INPUT_PARAM.</p>
+     * 
      * <strong>example:</strong>
      * <p>Enter value</p>
      */
@@ -36,6 +50,8 @@ public class AlertRuleAlertMetricParamDef extends TeaModel {
     public String placeholderEn;
 
     /**
+     * <p>● TEXT_PARAM: A read-only text parameter defined by the backend. No user input control is displayed on the frontend.● INPUT_PARAM: An input box parameter.● SELECT_PARAM: A selection box parameter.</p>
+     * 
      * <strong>example:</strong>
      * <p>TEXT_PARAM</p>
      */
@@ -43,12 +59,17 @@ public class AlertRuleAlertMetricParamDef extends TeaModel {
     public String type;
 
     /**
+     * <p>The value.</p>
+     * 
      * <strong>example:</strong>
      * <p>staging</p>
      */
     @NameInMap("value")
     public String value;
 
+    /**
+     * <p>The list of available options in the drop-down list. This parameter is valid only for SELECT_PARAM.</p>
+     */
     @NameInMap("values")
     public java.util.List<AlertRuleAlertMetricParamDefValues> values;
 
@@ -122,10 +143,18 @@ public class AlertRuleAlertMetricParamDef extends TeaModel {
     }
 
     public static class AlertRuleAlertMetricParamDefValues extends TeaModel {
+        /**
+         * <p>The Chinese display name of the option.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>测试环境</p>
+         */
         @NameInMap("labelCn")
         public String labelCn;
 
         /**
+         * <p>The English display name of the option.</p>
+         * 
          * <strong>example:</strong>
          * <p>Staging</p>
          */
@@ -133,6 +162,8 @@ public class AlertRuleAlertMetricParamDef extends TeaModel {
         public String labelEn;
 
         /**
+         * <p>The value.</p>
+         * 
          * <strong>example:</strong>
          * <p>staging</p>
          */

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class IncidentPlanStruct extends TeaModel {
     /**
-     * <p>Automatic recovery wait time.</p>
+     * <p>The wait time for automatic recovery.</p>
      * 
      * <strong>example:</strong>
      * <p>3600</p>
@@ -14,7 +14,7 @@ public class IncidentPlanStruct extends TeaModel {
     public Integer autoRecoverSeconds;
 
     /**
-     * <p>Event closure timeout.</p>
+     * <p>The timeout period for closing an event.</p>
      * 
      * <strong>example:</strong>
      * <p>86400000</p>
@@ -23,28 +23,28 @@ public class IncidentPlanStruct extends TeaModel {
     public Long closeExpire;
 
     /**
-     * <p>List of teams or roles involved in collaboration.</p>
+     * <p>A list of collaborating teams or roles.</p>
      */
     @NameInMap("corporation")
     public java.util.List<IncidentPlanCorporationStruct> corporation;
 
     /**
-     * <p>Contingency plan description.</p>
+     * <p>The description of the plan.</p>
      * 
      * <strong>example:</strong>
-     * <p>Emergency response plan for excessively high database connection count.</p>
+     * <p>针对数据库连接数过高的应急处理方案</p>
      */
     @NameInMap("description")
     public String description;
 
     /**
-     * <p>List of escalation policy IDs.</p>
+     * <p>A list of escalation policy IDs.</p>
      */
     @NameInMap("escalationId")
     public java.util.List<String> escalationId;
 
     /**
-     * <p>Creation time.</p>
+     * <p>The time when the plan was created.</p>
      * 
      * <strong>example:</strong>
      * <p>1741234567890</p>
@@ -53,7 +53,7 @@ public class IncidentPlanStruct extends TeaModel {
     public Long gmtCreate;
 
     /**
-     * <p>Last modification time.</p>
+     * <p>The time when the plan was last modified.</p>
      * 
      * <strong>example:</strong>
      * <p>1741234567890</p>
@@ -62,13 +62,13 @@ public class IncidentPlanStruct extends TeaModel {
     public Long gmtModified;
 
     /**
-     * <p>Grouping field path.</p>
+     * <p>The grouping field path.</p>
      */
     @NameInMap("groupBy")
     public java.util.List<IncidentPlanFieldPath> groupBy;
 
     /**
-     * <p>Event contingency plan ID.</p>
+     * <p>The incident plan ID.</p>
      * 
      * <strong>example:</strong>
      * <p>plan-001</p>
@@ -77,22 +77,22 @@ public class IncidentPlanStruct extends TeaModel {
     public String incidentPlanId;
 
     /**
-     * <p>Contingency plan name.</p>
+     * <p>The name of the plan.</p>
      * 
      * <strong>example:</strong>
-     * <p>Database connection count alert contingency plan.</p>
+     * <p>数据库连接数告警预案</p>
      */
     @NameInMap("name")
     public String name;
 
     /**
-     * <p>List of resource field mapping paths.</p>
+     * <p>A list of resource field mapping paths.</p>
      */
     @NameInMap("resourceFiled")
     public java.util.List<IncidentPlanFieldPath> resourceFiled;
 
     /**
-     * <p>Status.</p>
+     * <p>The status.</p>
      * 
      * <strong>example:</strong>
      * <p>Running</p>
@@ -101,7 +101,7 @@ public class IncidentPlanStruct extends TeaModel {
     public String status;
 
     /**
-     * <p>User ID.</p>
+     * <p>The user ID.</p>
      * 
      * <strong>example:</strong>
      * <p>uesr-12345</p>
@@ -110,7 +110,7 @@ public class IncidentPlanStruct extends TeaModel {
     public Long userId;
 
     /**
-     * <p>Workspace name.</p>
+     * <p>The name of the workspace.</p>
      * 
      * <strong>example:</strong>
      * <p>workspace-test</p>

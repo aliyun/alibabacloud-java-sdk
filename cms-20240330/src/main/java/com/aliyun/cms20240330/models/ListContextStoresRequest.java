@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListContextStoresRequest extends TeaModel {
     /**
+     * <p>The name of the context store.</p>
+     * 
      * <strong>example:</strong>
      * <p>test-context-store</p>
      */
@@ -12,6 +14,8 @@ public class ListContextStoresRequest extends TeaModel {
     public String contextStoreName;
 
     /**
+     * <p>The context type.</p>
+     * 
      * <strong>example:</strong>
      * <p>memory</p>
      */
@@ -19,6 +23,8 @@ public class ListContextStoresRequest extends TeaModel {
     public String contextType;
 
     /**
+     * <p>The maximum number of results to return.</p>
+     * 
      * <strong>example:</strong>
      * <p>100</p>
      */
@@ -26,6 +32,8 @@ public class ListContextStoresRequest extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>The token for the next page of results.</p>
+     * 
      * <strong>example:</strong>
      * <p>OCAQV0pBqldexv7EidbIZw==</p>
      */

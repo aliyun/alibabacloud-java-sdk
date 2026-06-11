@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DeleteMemoriesRequest extends TeaModel {
     /**
+     * <p>The agent ID of the application.</p>
+     * 
      * <strong>example:</strong>
      * <p>952730733889060865</p>
      */
@@ -12,6 +14,8 @@ public class DeleteMemoriesRequest extends TeaModel {
     public String agentId;
 
     /**
+     * <p>The application ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>98ea19fe-128b-4841-b318-0359bec3c65d</p>
      */
@@ -19,6 +23,8 @@ public class DeleteMemoriesRequest extends TeaModel {
     public String appId;
 
     /**
+     * <p>The run ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>jr-dd7c645fd6fe50d4</p>
      */
@@ -26,6 +32,8 @@ public class DeleteMemoriesRequest extends TeaModel {
     public String runId;
 
     /**
+     * <p>The user ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>test_user_001</p>
      */

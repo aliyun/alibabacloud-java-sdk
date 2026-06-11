@@ -5,19 +5,19 @@ import com.aliyun.tea.*;
 
 public class UmodelLabelFilter extends TeaModel {
     /**
-     * <p>标签名</p>
+     * <p>The key of the label used for filtering.</p>
      */
     @NameInMap("name")
     public String name;
 
     /**
-     * <p>标签过滤操作符，仅支持 = 或 !=</p>
+     * <p>The logical operator used to compare the label\&quot;s value.</p>
      */
     @NameInMap("operator")
     public String operator;
 
     /**
-     * <p>标签值</p>
+     * <p>The value of the label to match.</p>
      */
     @NameInMap("value")
     public String value;

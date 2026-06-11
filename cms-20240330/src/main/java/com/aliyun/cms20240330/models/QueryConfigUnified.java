@@ -5,82 +5,85 @@ import com.aliyun.tea.*;
 
 public class QueryConfigUnified extends TeaModel {
     /**
-     * <p>是否启用数据完整性检查</p>
+     * <p>Specifies whether to check for data completeness. A value of <code>true</code> enables the check.</p>
      */
     @NameInMap("enableDataCompleteCheck")
     public Boolean enableDataCompleteCheck;
 
     /**
-     * <p>实体所属域</p>
+     * <p>Specifies the domain of the entity, such as <code>acs</code> for Alibaba Cloud services.</p>
      */
     @NameInMap("entityDomain")
     public String entityDomain;
 
     /**
-     * <p>需要附带返回的实体字段</p>
+     * <p>A list of entity fields to include in the response.</p>
      */
     @NameInMap("entityFields")
     public java.util.List<UmodelEntityField> entityFields;
 
     /**
-     * <p>实体过滤列表</p>
+     * <p>A list of filters for selecting specific entities.</p>
      */
     @NameInMap("entityFilters")
     public java.util.List<UmodelEntityFilter> entityFilters;
 
     /**
-     * <p>实体类型</p>
+     * <p>Specifies the type of the entity, such as <code>EcsInstance</code>.</p>
      */
     @NameInMap("entityType")
     public String entityType;
 
+    /**
+     * <p>Specifies the expression to post-process query results.</p>
+     */
     @NameInMap("expr")
     public String expr;
 
     /**
-     * <p>APM 过滤条件列表</p>
+     * <p>A list of Application Performance Monitoring (APM) filter configurations.</p>
      */
     @NameInMap("filterList")
     public java.util.List<ApmFilterConfig> filterList;
 
     /**
-     * <p>标签过滤条件</p>
+     * <p>A list of filters that match labels.</p>
      */
     @NameInMap("labelFilters")
     public java.util.List<UmodelLabelFilter> labelFilters;
 
     /**
-     * <p>APM 度量配置列表</p>
+     * <p>A list of APM measure configurations.</p>
      */
     @NameInMap("measureList")
     public java.util.List<ApmMeasureConfig> measureList;
 
     /**
-     * <p>指标名称（type=UMODEL_METRICSET_QUERY）</p>
+     * <p>Specifies the name of the metric to query.</p>
      */
     @NameInMap("metric")
     public String metric;
 
     /**
-     * <p>指标集名称（type=UMODEL_METRICSET_QUERY）</p>
+     * <p>Specifies the metric set that contains the metric.</p>
      */
     @NameInMap("metricSet")
     public String metricSet;
 
     /**
-     * <p>Prometheus 查询语句（type=PROMETHEUS_SINGLE_QUERY）</p>
+     * <p>Specifies the query string in Prometheus Query Language (PromQL).</p>
      */
     @NameInMap("promQl")
     public String promQl;
 
     /**
-     * <p>服务 ID 列表（type=APM_MULTI_QUERY）</p>
+     * <p>A list of service IDs to query.</p>
      */
     @NameInMap("serviceIdList")
     public java.util.List<String> serviceIdList;
 
     /**
-     * <p>查询类型</p>
+     * <p>The query type.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("type")

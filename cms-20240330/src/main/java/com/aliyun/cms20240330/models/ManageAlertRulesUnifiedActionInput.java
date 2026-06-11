@@ -5,77 +5,98 @@ import com.aliyun.tea.*;
 
 public class ManageAlertRulesUnifiedActionInput extends TeaModel {
     /**
-     * <p>操作类型</p>
+     * <p>The action to perform on the alert rule. For example, <code>create</code> or <code>update</code>.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("action")
     public String action;
 
+    /**
+     * <p>The action integration configuration for triggering automated workflows or actions in external systems.</p>
+     */
     @NameInMap("actionIntegrationConfig")
     public ActionIntegrationConfig actionIntegrationConfig;
 
     /**
-     * <p>注解</p>
+     * <p>A collection of key-value pairs attached to the alert as annotations. Use annotations to provide additional, non-identifying information, such as descriptions or runbook links.</p>
      */
     @NameInMap("annotations")
     public java.util.Map<String, String> annotations;
 
+    /**
+     * <p>Configuration for integrating with Application Real-Time Monitoring Service (ARMS).</p>
+     */
     @NameInMap("armsIntegrationConfig")
     public ArmsIntegrationConfig armsIntegrationConfig;
 
+    /**
+     * <p>The condition configuration that specifies the trigger criteria for the alert.</p>
+     */
     @NameInMap("conditionConfig")
     public ConditionConfigUnified conditionConfig;
 
     /**
-     * <p>内容模板</p>
+     * <p>The content template for the alert notification. You can use variables to customize the message.</p>
      */
     @NameInMap("contentTemplate")
     public String contentTemplate;
 
+    /**
+     * <p>The data source configuration for the alert rule.</p>
+     */
     @NameInMap("datasourceConfig")
     public DatasourceConfigUnified datasourceConfig;
 
     /**
-     * <p>显示名称</p>
+     * <p>The display name of the alert rule, as shown in the console.</p>
      */
     @NameInMap("displayName")
     public String displayName;
 
     /**
-     * <p>是否启用</p>
+     * <p>Specifies whether the alert rule is enabled. A value of <code>true</code> indicates the rule is active, and <code>false</code> indicates it is inactive. Default: <code>true</code>.</p>
      */
     @NameInMap("enabled")
     public Boolean enabled;
 
     /**
-     * <p>标签</p>
+     * <p>A collection of key-value pairs attached to the alert rule as labels. Use labels for categorization and filtering.</p>
      */
     @NameInMap("labels")
     public java.util.Map<String, String> labels;
 
+    /**
+     * <p>The notification configuration that specifies how and where to send alert notifications.</p>
+     */
     @NameInMap("notifyConfig")
     public NotifyConfigUnified notifyConfig;
 
+    /**
+     * <p>The query configuration that defines the data for rule evaluation.</p>
+     */
     @NameInMap("queryConfig")
     public QueryConfigUnified queryConfig;
 
+    /**
+     * <p>The schedule configuration that determines how often the system evaluates the rule.</p>
+     */
     @NameInMap("scheduleConfig")
     public ScheduleConfigUnified scheduleConfig;
 
     /**
-     * <p>规则 UUID（UPDATE/PATCH 必填）</p>
+     * <p>The unique identifier (UUID) of the alert rule. This parameter is required when you update or delete an existing rule.</p>
      */
     @NameInMap("uuid")
     public String uuid;
 
     /**
-     * <p>待删除规则 UUID 列表（BATCH_DELETE）</p>
+     * <p>A list of UUIDs. Use this parameter to perform bulk actions on multiple rules, such as batch deletion.</p>
      */
     @NameInMap("uuidList")
     public java.util.List<String> uuidList;
 
     /**
-     * <p>工作空间（CREATE/UPDATE 等）</p>
+     * <p>The ID of the workspace that contains the alert rule.</p>
      */
     @NameInMap("workspace")
     public String workspace;

@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class Pagination extends TeaModel {
     /**
-     * <p>页码（从 1 开始）</p>
+     * <p>The current page number.</p>
      */
     @NameInMap("pageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>每页数量</p>
+     * <p>The number of entries returned per page.</p>
      */
     @NameInMap("pageSize")
     public Integer pageSize;

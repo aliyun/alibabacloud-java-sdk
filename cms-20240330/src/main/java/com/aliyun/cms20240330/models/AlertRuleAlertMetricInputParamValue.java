@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class AlertRuleAlertMetricInputParamValue extends TeaModel {
     /**
+     * <p>The name of the predefined metric parameter.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class AlertRuleAlertMetricInputParamValue extends TeaModel {
     public String name;
 
     /**
+     * <p>The value of the predefined metric parameter.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

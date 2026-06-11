@@ -5,8 +5,8 @@ import com.aliyun.tea.*;
 
 public class AlertRuleQuery extends TeaModel {
     /**
-     * <p>Applicable query type: PROMQL_QUERY.
-     * Whether to perform alert evaluation only after data completeness is ensured.</p>
+     * <p>Applicable query type: PROMQL_QUERY.</p>
+     * <p>Specifies whether to run the alert check only after the data is complete.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -15,14 +15,14 @@ public class AlertRuleQuery extends TeaModel {
     public Boolean checkAfterDataComplete;
 
     /**
-     * <p>Applicable query type: CMS_BASIC_QUERY.
-     * List of filtering dimensions for the resource.</p>
+     * <p>Applicable query type: CMS_BASIC_QUERY.</p>
+     * <p>A list of filter dimensions for the resource.</p>
      */
     @NameInMap("dimensions")
     public java.util.List<java.util.Map<String, String>> dimensions;
 
     /**
-     * <p>资源所属的领域。</p>
+     * <p>The realm to which the resource belongs.</p>
      * 
      * <strong>example:</strong>
      * <p>rum</p>
@@ -31,8 +31,8 @@ public class AlertRuleQuery extends TeaModel {
     public String domain;
 
     /**
-     * <p>Applicable query type: PROMQL_QUERY.
-     * Duration of alert data, in seconds.</p>
+     * <p>Applicable query type: PROMQL_QUERY.</p>
+     * <p>The duration for which the alert data persists, in seconds.</p>
      * 
      * <strong>example:</strong>
      * <p>60</p>
@@ -40,18 +40,21 @@ public class AlertRuleQuery extends TeaModel {
     @NameInMap("duration")
     public Long duration;
 
+    /**
+     * <p>An array of entity field filters.</p>
+     */
     @NameInMap("entityFields")
     public java.util.List<AlertRuleQueryEntityFields> entityFields;
 
     /**
-     * <p>资源过滤器，用于筛选目标资源。</p>
+     * <p>A resource filter used to screen target resources.</p>
      */
     @NameInMap("entityFilter")
     public AlertRuleQueryEntityFilter entityFilter;
 
     /**
-     * <p>Applicable query type: PROMQL_QUERY.
-     * Query expression (PromQL).</p>
+     * <p>Applicable query type: PROMQL_QUERY.</p>
+     * <p>The query expression (PromQL).</p>
      * 
      * <strong>example:</strong>
      * <p>sum(sum(max_over_time(kube_pod_status_phase{phase=~\&quot;Pending\&quot;,job=\&quot;_kube-state-metrics\&quot;}[5m])) by (pod)) &gt; 1000</p>
@@ -60,22 +63,22 @@ public class AlertRuleQuery extends TeaModel {
     public String expr;
 
     /**
-     * <p>Applicable query type: SLS_MULTI_QUERY.
-     * Configuration for the set join operation between the results of subquery 1 (queries[0]) and subquery 2 (queries[1]).</p>
+     * <p>Applicable query type: SLS_MULTI_QUERY.</p>
+     * <p>The configuration for the join operation on the result sets of subquery 1 (queries[0]) and subquery 2 (queries[1]).</p>
      */
     @NameInMap("firstJoin")
     public AlertRuleSlsQueryJoin firstJoin;
 
     /**
-     * <p>Applicable query type: SLS_MULTI_QUERY.
-     * List of grouping field names.</p>
+     * <p>Applicable query type: SLS_MULTI_QUERY.</p>
+     * <p>A list of grouping field names.</p>
      */
     @NameInMap("groupFieldList")
     public java.util.List<String> groupFieldList;
 
     /**
-     * <p>Applicable query type: CMS_BASIC_QUERY.
-     * Associated application group ID, valid only when relationType = GROUP.</p>
+     * <p>Applicable query type: CMS_BASIC_QUERY.</p>
+     * <p>The ID of the associated application group. This parameter is valid only when relationType is set to GROUP.</p>
      * 
      * <strong>example:</strong>
      * <p>23423</p>
@@ -84,12 +87,15 @@ public class AlertRuleQuery extends TeaModel {
     public String groupId;
 
     /**
-     * <p>Applicable query type: SLS_MULTI_QUERY.
-     * Grouping type, with the following possible values:</p>
+     * <p>Applicable query type: SLS_MULTI_QUERY.</p>
+     * <p>The grouping type. Valid values:</p>
      * <ul>
-     * <li>none: No grouping.</li>
-     * <li>label: Automatic label grouping.</li>
-     * <li>custom: Custom label grouping.</li>
+     * <li><p>none: No grouping.</p>
+     * </li>
+     * <li><p>label: Automatic grouping by tag.</p>
+     * </li>
+     * <li><p>custom: Custom grouping by tag.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -98,6 +104,9 @@ public class AlertRuleQuery extends TeaModel {
     @NameInMap("groupType")
     public String groupType;
 
+    /**
+     * <p>An array of label filters.</p>
+     */
     @NameInMap("labelFilters")
     public java.util.List<AlertRuleQueryLabelFilters> labelFilters;
 
@@ -105,7 +114,7 @@ public class AlertRuleQuery extends TeaModel {
     public java.util.List<AlertRuleQueryMarkTags> markTags;
 
     /**
-     * <p>指标名。</p>
+     * <p>The name of the metric.</p>
      * 
      * <strong>example:</strong>
      * <p>memory</p>
@@ -114,7 +123,7 @@ public class AlertRuleQuery extends TeaModel {
     public String metric;
 
     /**
-     * <p>监控指标集合。</p>
+     * <p>The collection of metrics.</p>
      * 
      * <strong>example:</strong>
      * <p>cpu_usage</p>
@@ -123,8 +132,8 @@ public class AlertRuleQuery extends TeaModel {
     public String metricSet;
 
     /**
-     * <p>Applicable query type: CMS_BASIC_QUERY.
-     * Namespace of the metric.</p>
+     * <p>Applicable query type: CMS_BASIC_QUERY.</p>
+     * <p>The namespace of the metric.</p>
      * 
      * <strong>example:</strong>
      * <p>acs_ecs_dashboard</p>
@@ -133,20 +142,23 @@ public class AlertRuleQuery extends TeaModel {
     public String namespace;
 
     /**
-     * <p>Applicable query types: SLS_MULTI_QUERY, APM_MULTI_QUERY.
-     * List of subqueries.</p>
-     * <p>For the SLS_MULTI_QUERY type, the list can contain up to three subqueries, and the number and order of subqueries must match the sub-datasource configurations in datasource.dsList.</p>
+     * <p>Applicable query types: SLS_MULTI_QUERY and APM_MULTI_QUERY.</p>
+     * <p>A list of subqueries.</p>
+     * <p>For the SLS_MULTI_QUERY type, you can include up to three subqueries. The number and order of subqueries must match the sub-datasource configurations in datasource.dsList.</p>
      */
     @NameInMap("queries")
     public java.util.List<AlertRuleQueryQueries> queries;
 
     /**
-     * <p>Applicable query type: CMS_BASIC_QUERY.
-     * Resource scope for the rule query, with the following allowed values:</p>
+     * <p>Applicable query type: CMS_BASIC_QUERY.</p>
+     * <p>The resource scope for the rule query. Valid values:</p>
      * <ul>
-     * <li>USER: All resources under the user\&quot;s UID.</li>
-     * <li>GROUP: Application group.</li>
-     * <li>INSTANCE: Specified list of instances.</li>
+     * <li><p>USER: All resources under the user ID.</p>
+     * </li>
+     * <li><p>GROUP: An application group.</p>
+     * </li>
+     * <li><p>INSTANCE: A list of specified instances.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -156,34 +168,42 @@ public class AlertRuleQuery extends TeaModel {
     public String relationType;
 
     /**
-     * <p>Applicable query type: SLS_MULTI_QUERY.
-     * Configuration for the set join operation between the results of subquery 2 (queries[2]) and subquery 3 (queries[3]).</p>
+     * <p>Applicable query type: SLS_MULTI_QUERY.</p>
+     * <p>The configuration for the join operation on the result sets of subquery 2 (queries[2]) and subquery 3 (queries[3]).</p>
      */
     @NameInMap("secondJoin")
     public AlertRuleSlsQueryJoin secondJoin;
 
     /**
-     * <p>Service ID list.</p>
+     * <p>A list of service IDs.</p>
      */
     @NameInMap("serviceIds")
     public java.util.List<String> serviceIds;
 
     /**
-     * <p>Query type.</p>
+     * <p>The query type.</p>
      * <p>Valid values:</p>
      * <ul>
-     * <li>PROMQL_QUERY: PromQL query</li>
-     * <li>SLS_MULTI_QUERY: SLS query</li>
-     * <li>APM_MULTI_QUERY: APM query</li>
-     * <li>CMS_BASIC_QUERY: Basic CloudMonitor query</li>
+     * <li><p>PROMQL_QUERY: A PromQL query.</p>
+     * </li>
+     * <li><p>SLS_MULTI_QUERY: A Simple Log Service (SLS) query.</p>
+     * </li>
+     * <li><p>APM_MULTI_QUERY: An APM query.</p>
+     * </li>
+     * <li><p>CMS_BASIC_QUERY: A basic CloudMonitor query.</p>
+     * </li>
      * </ul>
-     * <p>The valid fields within the query object vary depending on the query type. Refer to the &quot;Applicable query type&quot; description in each field\&quot;s documentation for details.</p>
-     * <p>The query type must match the data source type, with the following correspondences:</p>
+     * <p>Different query types have different valid parameters in the query object. For more information, see the &quot;Applicable query type&quot; description for each parameter.</p>
+     * <p>The query type must match the data source type. The mappings are as follows:</p>
      * <ul>
-     * <li>Prometheus data source (PROMETHEUS_DS): PROMQL_QUERY</li>
-     * <li>APM data source (APM_DS): APM_MULTI_QUERY</li>
-     * <li>SLS data source (SLS_MULTI_DS): SLS_MULTI_QUERY</li>
-     * <li>Basic CloudMonitor data source (CMS_BASIC_DS): CMS_BASIC_QUERY.</li>
+     * <li><p>Prometheus data source (PROMETHEUS_DS): PROMQL_QUERY</p>
+     * </li>
+     * <li><p>APM data source (APM_DS): APM_MULTI_QUERY</p>
+     * </li>
+     * <li><p>SLS data source (SLS_MULTI_DS): SLS_MULTI_QUERY</p>
+     * </li>
+     * <li><p>Basic CloudMonitor data source (CMS_BASIC_DS): CMS_BASIC_QUERY</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -367,9 +387,21 @@ public class AlertRuleQuery extends TeaModel {
     }
 
     public static class AlertRuleQueryEntityFields extends TeaModel {
+        /**
+         * <p>The name of the entity field.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>instanceId</p>
+         */
         @NameInMap("field")
         public String field;
 
+        /**
+         * <p>The value of the field.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-abc123</p>
+         */
         @NameInMap("value")
         public String value;
 
@@ -398,7 +430,7 @@ public class AlertRuleQuery extends TeaModel {
 
     public static class AlertRuleQueryEntityFilterFilters extends TeaModel {
         /**
-         * <p>字段</p>
+         * <p>The field.</p>
          * 
          * <strong>example:</strong>
          * <p>instanceId</p>
@@ -407,7 +439,7 @@ public class AlertRuleQuery extends TeaModel {
         public String field;
 
         /**
-         * <p>比较运算符。</p>
+         * <p>The comparison operator.</p>
          * 
          * <strong>example:</strong>
          * <p>=</p>
@@ -416,7 +448,7 @@ public class AlertRuleQuery extends TeaModel {
         public String operator;
 
         /**
-         * <p>匹配的值。</p>
+         * <p>The value to match.</p>
          * 
          * <strong>example:</strong>
          * <p>wait_throw</p>
@@ -457,7 +489,7 @@ public class AlertRuleQuery extends TeaModel {
 
     public static class AlertRuleQueryEntityFilter extends TeaModel {
         /**
-         * <p>资源类型域。</p>
+         * <p>The domain of the resource type.</p>
          * 
          * <strong>example:</strong>
          * <p>rum</p>
@@ -466,13 +498,13 @@ public class AlertRuleQuery extends TeaModel {
         public String domain;
 
         /**
-         * <p>过滤条件列表，用于进一步筛选资源。</p>
+         * <p>A list of filter conditions to further screen resources.</p>
          */
         @NameInMap("filters")
         public java.util.List<AlertRuleQueryEntityFilterFilters> filters;
 
         /**
-         * <p>资源类型。</p>
+         * <p>The resource type.</p>
          * 
          * <strong>example:</strong>
          * <p>apm</p>
@@ -512,12 +544,30 @@ public class AlertRuleQuery extends TeaModel {
     }
 
     public static class AlertRuleQueryLabelFilters extends TeaModel {
+        /**
+         * <p>The name of the label.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>app</p>
+         */
         @NameInMap("name")
         public String name;
 
+        /**
+         * <p>The comparison operator that determines how to match the label value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>=</p>
+         */
         @NameInMap("operator")
         public String operator;
 
+        /**
+         * <p>The value of the label.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>web</p>
+         */
         @NameInMap("value")
         public String value;
 
@@ -584,7 +634,7 @@ public class AlertRuleQuery extends TeaModel {
 
     public static class AlertRuleQueryQueriesApmFilters extends TeaModel {
         /**
-         * <p>Dimension in APM metrics.</p>
+         * <p>The dimension in the APM metric.</p>
          * 
          * <strong>example:</strong>
          * <p>rpcType</p>
@@ -593,12 +643,16 @@ public class AlertRuleQuery extends TeaModel {
         public String dim;
 
         /**
-         * <p>Filter operation types:</p>
+         * <p>The filter operation type:</p>
          * <ul>
-         * <li>eq: equals.</li>
-         * <li>neq: not equals.</li>
-         * <li>match: regular expression match.</li>
-         * <li>nmatch: regular expression not match.</li>
+         * <li><p>eq: Equal to</p>
+         * </li>
+         * <li><p>neq: Not equal to</p>
+         * </li>
+         * <li><p>match: Regular expression match</p>
+         * </li>
+         * <li><p>nmatch: Regular expression non-match</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -608,7 +662,7 @@ public class AlertRuleQuery extends TeaModel {
         public String type;
 
         /**
-         * <p>The corresponding value for the filter operation.</p>
+         * <p>The value that corresponds to the filter operation.</p>
          * 
          * <strong>example:</strong>
          * <p>h3ji7a0y9i@2ac80e27fdfd0a2</p>
@@ -649,8 +703,8 @@ public class AlertRuleQuery extends TeaModel {
 
     public static class AlertRuleQueryQueries extends TeaModel {
         /**
-         * <p>Applicable query type: APM_MULTI_QUERY.
-         * ID of the APM predefined metric.</p>
+         * <p>Applicable query type: APM_MULTI_QUERY.</p>
+         * <p>The ID of the predefined Application Performance Management (APM) metric.</p>
          * 
          * <strong>example:</strong>
          * <p>appstat.jvm.ThreadNewCount</p>
@@ -659,22 +713,22 @@ public class AlertRuleQuery extends TeaModel {
         public String apmAlertMetricId;
 
         /**
-         * <p>Applicable query type: ARMS_MULTI_QUERY.
-         * Dimension filter configuration for APM metrics. Must be used in conjunction with apmAlertMetricId.</p>
+         * <p>Applicable query type: ARMS_MULTI_QUERY.</p>
+         * <p>The dimension filter configuration for the APM metric. This parameter must be used with apmAlertMetricId.</p>
          */
         @NameInMap("apmFilters")
         public java.util.List<AlertRuleQueryQueriesApmFilters> apmFilters;
 
         /**
-         * <p>Applicable query type: ARMS_MULTI_QUERY.
-         * List of aggregation dimensions for the query, i.e., the dimensions by which the metric is aggregated.</p>
+         * <p>Applicable query type: ARMS_MULTI_QUERY.</p>
+         * <p>A list of aggregation dimensions for the query. This specifies the metric dimensions to use for aggregation.</p>
          */
         @NameInMap("apmGroupBy")
         public java.util.List<String> apmGroupBy;
 
         /**
-         * <p>Applicable query type: ARMS_MULTI_QUERY.
-         * Alert (data) duration.</p>
+         * <p>Applicable query type: ARMS_MULTI_QUERY.</p>
+         * <p>The duration of the alert data.</p>
          * 
          * <strong>example:</strong>
          * <p>120</p>
@@ -683,9 +737,9 @@ public class AlertRuleQuery extends TeaModel {
         public Long duration;
 
         /**
-         * <p>Applicable query type: SLS_MULTI_QUERY.
-         * Time offset end time (relative).
-         * If start and end are specified, do not specify window.</p>
+         * <p>Applicable query type: SLS_MULTI_QUERY.</p>
+         * <p>The relative end time of the time offset.</p>
+         * <p>If you specify start and end, do not specify window.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -694,11 +748,13 @@ public class AlertRuleQuery extends TeaModel {
         public Long end;
 
         /**
-         * <p>Applicable query types: APM_MULTI_QUERY, SLS_MULTI_QUERY.
-         * Query expression.</p>
+         * <p>Applicable query types: APM_MULTI_QUERY and SLS_MULTI_QUERY.</p>
+         * <p>The query expression.</p>
          * <ul>
-         * <li>For APM_MULTI_QUERY, this field is optional and contains the PromQL generated for predefined metrics (used for data preview).</li>
-         * <li>For SLS_MULTI_QUERY, this field contains the SQL query statement.</li>
+         * <li><p>For APM_MULTI_QUERY, this parameter is optional. It is the PromQL expression generated for a predefined metric, used for data preview.</p>
+         * </li>
+         * <li><p>For SLS_MULTI_QUERY, this parameter is the SQL search statement.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -714,9 +770,9 @@ public class AlertRuleQuery extends TeaModel {
         public String promQl;
 
         /**
-         * <p>Applicable query type: SLS_MULTI_QUERY.
-         * SLS query time offset start time (relative).
-         * If start and end are specified, do not specify window. For example: start=15, timeUnit=minute, which means 15 minutes ago.</p>
+         * <p>Applicable query type: SLS_MULTI_QUERY.</p>
+         * <p>The relative start time of the time offset for an SLS query.</p>
+         * <p>If you specify start and end, do not specify window. For example, if start is 15 and timeUnit is minute, the time offset starts 15 minutes ago.</p>
          * 
          * <strong>example:</strong>
          * <p>15</p>
@@ -725,8 +781,8 @@ public class AlertRuleQuery extends TeaModel {
         public Long start;
 
         /**
-         * <p>Applicable query type: SLS_MULTI_QUERY.
-         * Time units for the start, end, and window parameters: day/hour/minute/second.</p>
+         * <p>Applicable query type: SLS_MULTI_QUERY.</p>
+         * <p>The time unit for the start, end, and window parameters. Valid values: day, hour, minute, and second.</p>
          * 
          * <strong>example:</strong>
          * <p>hour</p>
@@ -735,8 +791,8 @@ public class AlertRuleQuery extends TeaModel {
         public String timeUnit;
 
         /**
-         * <p>Applicable query type: SLS_MULTI_QUERY.
-         * Exact-hour time query interval. If window is specified, start and end should not be specified.</p>
+         * <p>Applicable query type: SLS_MULTI_QUERY.</p>
+         * <p>The query interval for a time frame. If you specify window, do not specify start and end.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>

@@ -5,16 +5,26 @@ import com.aliyun.tea.*;
 
 public class GetAddonSchemaRequest extends TeaModel {
     /**
+     * <p>The language of the response. Valid values: \<code>zh\\</code> and \<code>en\\</code>. The default value is \<code>zh\\</code>.</p>
+     * 
      * <strong>example:</strong>
      * <p>zh</p>
      */
     @NameInMap("aliyunLang")
     public String aliyunLang;
 
+    /**
+     * <p>The environment type. Valid values: \<code>CS\\</code> (container) and \<code>ECS\\</code>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>CS</p>
+     */
     @NameInMap("environmentType")
     public String environmentType;
 
     /**
+     * <p>The version of the component.</p>
+     * 
      * <strong>example:</strong>
      * <p>0.1.1</p>
      */

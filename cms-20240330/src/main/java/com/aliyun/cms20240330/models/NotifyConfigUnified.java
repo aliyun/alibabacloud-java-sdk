@@ -5,45 +5,45 @@ import com.aliyun.tea.*;
 
 public class NotifyConfigUnified extends TeaModel {
     /**
-     * <p>一周中发送通知的星期，1-7</p>
+     * <p>The active days of the week.</p>
      */
     @NameInMap("activeDays")
     public java.util.List<Integer> activeDays;
 
     /**
-     * <p>每天通知生效结束时间</p>
+     * <p>The end of the daily active time window. On active days, the system sends notifications only before this time. Format: <code>HH:mm</code>.</p>
      */
     @NameInMap("activeEndTime")
     public String activeEndTime;
 
     /**
-     * <p>每天通知生效开始时间</p>
+     * <p>The start of the daily active time window. On active days, the system sends notifications only after this time. Format: <code>HH:mm</code>.</p>
      */
     @NameInMap("activeStartTime")
     public String activeStartTime;
 
     /**
-     * <p>通知渠道列表</p>
+     * <p>The notification channels that receive alerts.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("channels")
     public java.util.List<DirectNotifyChannel> channels;
 
     /**
-     * <p>通道沉默周期（秒）</p>
+     * <p>The silence time in seconds. After sending a notification, the system suppresses new notifications for the same alert for this duration.</p>
      */
     @NameInMap("silenceTimeSecs")
     public Integer silenceTimeSecs;
 
     /**
-     * <p>通知配置类型</p>
+     * <p>The type of the notification configuration.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("type")
     public String type;
 
     /**
-     * <p>UTC 时区偏移量</p>
+     * <p>The UTC offset for <code>activeStartTime</code> and <code>activeEndTime</code>. The format is <code>[+/-]HH:mm</code>. For example, <code>+08:00</code> represents the UTC+8 time zone.</p>
      */
     @NameInMap("utcOffset")
     public String utcOffset;

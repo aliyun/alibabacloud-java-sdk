@@ -5,28 +5,44 @@ import com.aliyun.tea.*;
 
 public class CreatePipelineRequest extends TeaModel {
     /**
+     * <p>The pipeline description.</p>
+     * 
      * <strong>example:</strong>
      * <p>test</p>
      */
     @NameInMap("description")
     public String description;
 
+    /**
+     * <p>The execution policy.</p>
+     */
     @NameInMap("executePolicy")
     public CreatePipelineRequestExecutePolicy executePolicy;
 
+    /**
+     * <p>The pipeline configuration.</p>
+     */
     @NameInMap("pipeline")
     public CreatePipelineRequestPipeline pipeline;
 
     /**
+     * <p>The pipeline name.</p>
+     * 
      * <strong>example:</strong>
      * <p>pipeline-name-1</p>
      */
     @NameInMap("pipelineName")
     public String pipelineName;
 
+    /**
+     * <p>The data sink for the processed output.</p>
+     */
     @NameInMap("sink")
     public CreatePipelineRequestSink sink;
 
+    /**
+     * <p>The data source.</p>
+     */
     @NameInMap("source")
     public CreatePipelineRequestSource source;
 
@@ -85,6 +101,8 @@ public class CreatePipelineRequest extends TeaModel {
 
     public static class CreatePipelineRequestExecutePolicyRunOnce extends TeaModel {
         /**
+         * <p>The start timestamp.</p>
+         * 
          * <strong>example:</strong>
          * <p>1772519013</p>
          */
@@ -92,6 +110,8 @@ public class CreatePipelineRequest extends TeaModel {
         public Long fromTime;
 
         /**
+         * <p>The end timestamp.</p>
+         * 
          * <strong>example:</strong>
          * <p>1772519013</p>
          */
@@ -123,6 +143,8 @@ public class CreatePipelineRequest extends TeaModel {
 
     public static class CreatePipelineRequestExecutePolicyScheduled extends TeaModel {
         /**
+         * <p>The start timestamp.</p>
+         * 
          * <strong>example:</strong>
          * <p>1772519013</p>
          */
@@ -130,6 +152,8 @@ public class CreatePipelineRequest extends TeaModel {
         public Long fromTime;
 
         /**
+         * <p>The execution interval in seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>86400</p>
          */
@@ -161,15 +185,23 @@ public class CreatePipelineRequest extends TeaModel {
 
     public static class CreatePipelineRequestExecutePolicy extends TeaModel {
         /**
+         * <p>The execution mode. Set to <code>runOnce</code> for a single execution, or <code>scheduled</code> for a recurring execution.</p>
+         * 
          * <strong>example:</strong>
          * <p>runOnce</p>
          */
         @NameInMap("mode")
         public String mode;
 
+        /**
+         * <p>The configuration for a one-time execution. This parameter is required when <code>executePolicy.mode</code> is set to <code>runOnce</code>.</p>
+         */
         @NameInMap("runOnce")
         public CreatePipelineRequestExecutePolicyRunOnce runOnce;
 
+        /**
+         * <p>The configuration for a scheduled execution. This parameter is required when <code>executePolicy.mode</code> is set to <code>scheduled</code>.</p>
+         */
         @NameInMap("scheduled")
         public CreatePipelineRequestExecutePolicyScheduled scheduled;
 
@@ -206,16 +238,23 @@ public class CreatePipelineRequest extends TeaModel {
 
     public static class CreatePipelineRequestPipelineNodes extends TeaModel {
         /**
+         * <p>The node ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>node_1</p>
          */
         @NameInMap("id")
         public String id;
 
+        /**
+         * <p>The node parameters.</p>
+         */
         @NameInMap("parameters")
         public java.util.Map<String, ?> parameters;
 
         /**
+         * <p>The node type.</p>
+         * 
          * <strong>example:</strong>
          * <p>dedup-fuzzy</p>
          */
@@ -254,6 +293,9 @@ public class CreatePipelineRequest extends TeaModel {
     }
 
     public static class CreatePipelineRequestPipeline extends TeaModel {
+        /**
+         * <p>The pipeline nodes.</p>
+         */
         @NameInMap("nodes")
         public java.util.List<CreatePipelineRequestPipelineNodes> nodes;
 
@@ -274,6 +316,8 @@ public class CreatePipelineRequest extends TeaModel {
 
     public static class CreatePipelineRequestSinkDataset extends TeaModel {
         /**
+         * <p>The dataset name.</p>
+         * 
          * <strong>example:</strong>
          * <p>dataset_1</p>
          */
@@ -281,6 +325,8 @@ public class CreatePipelineRequest extends TeaModel {
         public String dataset;
 
         /**
+         * <p>The workspace ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>workspace-test</p>
          */
@@ -311,10 +357,15 @@ public class CreatePipelineRequest extends TeaModel {
     }
 
     public static class CreatePipelineRequestSink extends TeaModel {
+        /**
+         * <p>The destination dataset configuration. This parameter is required when <code>sink.type</code> is set to <code>dataset</code>.</p>
+         */
         @NameInMap("dataset")
         public CreatePipelineRequestSinkDataset dataset;
 
         /**
+         * <p>The sink type.</p>
+         * 
          * <strong>example:</strong>
          * <p>dataset</p>
          */
@@ -346,6 +397,8 @@ public class CreatePipelineRequest extends TeaModel {
 
     public static class CreatePipelineRequestSourceLogstore extends TeaModel {
         /**
+         * <p>The Logstore name.</p>
+         * 
          * <strong>example:</strong>
          * <p>test-logstore</p>
          */
@@ -353,6 +406,8 @@ public class CreatePipelineRequest extends TeaModel {
         public String logstore;
 
         /**
+         * <p>The Log Service Project name.</p>
+         * 
          * <strong>example:</strong>
          * <p>test-project</p>
          */
@@ -360,6 +415,8 @@ public class CreatePipelineRequest extends TeaModel {
         public String project;
 
         /**
+         * <p>The query statement to filter logs.</p>
+         * 
          * <strong>example:</strong>
          * <p>status:500 and method:GET</p>
          */
@@ -398,10 +455,15 @@ public class CreatePipelineRequest extends TeaModel {
     }
 
     public static class CreatePipelineRequestSource extends TeaModel {
+        /**
+         * <p>The Log Service Logstore configuration. This parameter is required when <code>source.type</code> is set to <code>logstore</code>.</p>
+         */
         @NameInMap("logstore")
         public CreatePipelineRequestSourceLogstore logstore;
 
         /**
+         * <p>The data source type.</p>
+         * 
          * <strong>example:</strong>
          * <p>logstore</p>
          */

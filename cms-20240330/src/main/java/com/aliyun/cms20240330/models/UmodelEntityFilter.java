@@ -5,19 +5,19 @@ import com.aliyun.tea.*;
 
 public class UmodelEntityFilter extends TeaModel {
     /**
-     * <p>过滤字段名</p>
+     * <p>The field name to filter on.</p>
      */
     @NameInMap("field")
     public String field;
 
     /**
-     * <p>过滤操作符，仅支持 = 或 !=</p>
+     * <p>The comparison operator to use. Supported operators include <code>=</code>, <code>&gt;</code>, <code>&lt;</code>, <code>!=</code>, <code>IN</code>, and <code>NOT IN</code>.</p>
      */
     @NameInMap("operator")
     public String operator;
 
     /**
-     * <p>过滤值</p>
+     * <p>The value to compare the field against.</p>
      */
     @NameInMap("value")
     public String value;

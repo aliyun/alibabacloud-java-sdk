@@ -4,15 +4,42 @@ package com.aliyun.cms20240330.models;
 import com.aliyun.tea.*;
 
 public class IndexKey extends TeaModel {
+    /**
+     * <p>Indicates whether the value contains Chinese characters.</p>
+     * <ul>
+     * <li><p><code>true</code>: Contains Chinese characters.</p>
+     * </li>
+     * <li><p><code>false</code>: Does not contain Chinese characters.</p>
+     * </li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("chn")
     public Boolean chn;
 
+    /**
+     * <p>Specifies the model name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>text-embedding-v4</p>
+     */
     @NameInMap("embedding")
     public String embedding;
 
+    /**
+     * <p>Describes the json keys.</p>
+     */
     @NameInMap("jsonKeys")
     public java.util.Map<String, IndexJsonKey> jsonKeys;
 
+    /**
+     * <p>Specifies the field type.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>text</p>
+     */
     @NameInMap("type")
     public String type;
 

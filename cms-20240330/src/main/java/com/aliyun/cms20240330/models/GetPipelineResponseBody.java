@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetPipelineResponseBody extends TeaModel {
     /**
+     * <p>The creation time.</p>
      * <p>Use the UTC time format: yyyy-MM-ddTHH:mm:ssZ</p>
      * 
      * <strong>example:</strong>
@@ -14,19 +15,29 @@ public class GetPipelineResponseBody extends TeaModel {
     public String createTime;
 
     /**
+     * <p>The description of the pipeline.</p>
+     * 
      * <strong>example:</strong>
      * <p>workspace test</p>
      */
     @NameInMap("description")
     public String description;
 
+    /**
+     * <p>The execution policy.</p>
+     */
     @NameInMap("executePolicy")
     public GetPipelineResponseBodyExecutePolicy executePolicy;
 
+    /**
+     * <p>The pipeline configuration.</p>
+     */
     @NameInMap("pipeline")
     public GetPipelineResponseBodyPipeline pipeline;
 
     /**
+     * <p>The pipeline name.</p>
+     * 
      * <strong>example:</strong>
      * <p>pipeline-name-1</p>
      */
@@ -34,6 +45,8 @@ public class GetPipelineResponseBody extends TeaModel {
     public String pipelineName;
 
     /**
+     * <p>The region ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
      */
@@ -41,19 +54,28 @@ public class GetPipelineResponseBody extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>3430AE20-AFFF-597C-B553-2DF04B2933AA</p>
      */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <p>The pipeline\&quot;s data sink.</p>
+     */
     @NameInMap("sink")
     public GetPipelineResponseBodySink sink;
 
+    /**
+     * <p>The pipeline\&quot;s data source.</p>
+     */
     @NameInMap("source")
     public GetPipelineResponseBodySource source;
 
     /**
+     * <p>The update time.</p>
      * <p>Use the UTC time format: yyyy-MM-ddTHH:mm:ssZ</p>
      * 
      * <strong>example:</strong>
@@ -63,6 +85,8 @@ public class GetPipelineResponseBody extends TeaModel {
     public String updateTime;
 
     /**
+     * <p>The workspace ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>workspace-test</p>
      */
@@ -164,6 +188,8 @@ public class GetPipelineResponseBody extends TeaModel {
 
     public static class GetPipelineResponseBodyExecutePolicyRunOnce extends TeaModel {
         /**
+         * <p>The start time of the execution, as a Unix timestamp.</p>
+         * 
          * <strong>example:</strong>
          * <p>1772519013</p>
          */
@@ -171,6 +197,8 @@ public class GetPipelineResponseBody extends TeaModel {
         public Long fromTime;
 
         /**
+         * <p>The end time of the execution, as a Unix timestamp.</p>
+         * 
          * <strong>example:</strong>
          * <p>1772519013</p>
          */
@@ -202,6 +230,8 @@ public class GetPipelineResponseBody extends TeaModel {
 
     public static class GetPipelineResponseBodyExecutePolicyScheduled extends TeaModel {
         /**
+         * <p>The start time of the execution, as a Unix timestamp.</p>
+         * 
          * <strong>example:</strong>
          * <p>1772519013</p>
          */
@@ -209,6 +239,8 @@ public class GetPipelineResponseBody extends TeaModel {
         public Long fromTime;
 
         /**
+         * <p>The execution interval in seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>86400</p>
          */
@@ -240,15 +272,23 @@ public class GetPipelineResponseBody extends TeaModel {
 
     public static class GetPipelineResponseBodyExecutePolicy extends TeaModel {
         /**
+         * <p>The execution mode.</p>
+         * 
          * <strong>example:</strong>
          * <p>runOnce</p>
          */
         @NameInMap("mode")
         public String mode;
 
+        /**
+         * <p>The configuration for a one-time execution.</p>
+         */
         @NameInMap("runOnce")
         public GetPipelineResponseBodyExecutePolicyRunOnce runOnce;
 
+        /**
+         * <p>The configuration for a scheduled execution.</p>
+         */
         @NameInMap("scheduled")
         public GetPipelineResponseBodyExecutePolicyScheduled scheduled;
 
@@ -285,16 +325,23 @@ public class GetPipelineResponseBody extends TeaModel {
 
     public static class GetPipelineResponseBodyPipelineNodes extends TeaModel {
         /**
+         * <p>The node ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>node_1</p>
          */
         @NameInMap("id")
         public String id;
 
+        /**
+         * <p>The parameters for the node.</p>
+         */
         @NameInMap("parameters")
         public java.util.Map<String, ?> parameters;
 
         /**
+         * <p>The node type.</p>
+         * 
          * <strong>example:</strong>
          * <p>dedup-fuzzy</p>
          */
@@ -333,6 +380,9 @@ public class GetPipelineResponseBody extends TeaModel {
     }
 
     public static class GetPipelineResponseBodyPipeline extends TeaModel {
+        /**
+         * <p>The nodes in the pipeline.</p>
+         */
         @NameInMap("nodes")
         public java.util.List<GetPipelineResponseBodyPipelineNodes> nodes;
 
@@ -353,6 +403,8 @@ public class GetPipelineResponseBody extends TeaModel {
 
     public static class GetPipelineResponseBodySinkDataset extends TeaModel {
         /**
+         * <p>The dataset name.</p>
+         * 
          * <strong>example:</strong>
          * <p>dataset_1</p>
          */
@@ -360,6 +412,8 @@ public class GetPipelineResponseBody extends TeaModel {
         public String dataset;
 
         /**
+         * <p>The workspace ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>workspace-test</p>
          */
@@ -390,10 +444,15 @@ public class GetPipelineResponseBody extends TeaModel {
     }
 
     public static class GetPipelineResponseBodySink extends TeaModel {
+        /**
+         * <p>The dataset configuration.</p>
+         */
         @NameInMap("dataset")
         public GetPipelineResponseBodySinkDataset dataset;
 
         /**
+         * <p>The sink type.</p>
+         * 
          * <strong>example:</strong>
          * <p>dataset</p>
          */
@@ -425,6 +484,8 @@ public class GetPipelineResponseBody extends TeaModel {
 
     public static class GetPipelineResponseBodySourceLogstore extends TeaModel {
         /**
+         * <p>The name of the Log Service Logstore.</p>
+         * 
          * <strong>example:</strong>
          * <p>test-logstore</p>
          */
@@ -432,6 +493,8 @@ public class GetPipelineResponseBody extends TeaModel {
         public String logstore;
 
         /**
+         * <p>The name of the Log Service project.</p>
+         * 
          * <strong>example:</strong>
          * <p>test-project</p>
          */
@@ -473,10 +536,15 @@ public class GetPipelineResponseBody extends TeaModel {
     }
 
     public static class GetPipelineResponseBodySource extends TeaModel {
+        /**
+         * <p>The configuration of the Log Service Logstore.</p>
+         */
         @NameInMap("logstore")
         public GetPipelineResponseBodySourceLogstore logstore;
 
         /**
+         * <p>The type of the data source.</p>
+         * 
          * <strong>example:</strong>
          * <p>logstore</p>
          */

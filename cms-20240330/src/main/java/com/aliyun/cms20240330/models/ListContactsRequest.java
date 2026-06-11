@@ -4,20 +4,33 @@ package com.aliyun.cms20240330.models;
 import com.aliyun.tea.*;
 
 public class ListContactsRequest extends TeaModel {
+    /**
+     * <p>The contact IDs.</p>
+     */
     @NameInMap("contactIds")
     public java.util.List<String> contactIds;
 
     /**
+     * <p>The email address of the contact.</p>
+     * 
      * <strong>example:</strong>
      * <p><a href="mailto:test@aliyun.com">test@aliyun.com</a></p>
      */
     @NameInMap("email")
     public String email;
 
+    /**
+     * <p>The ID of the contact group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>group-id-123</p>
+     */
     @NameInMap("groupId")
     public String groupId;
 
     /**
+     * <p>The contact name.</p>
+     * 
      * <strong>example:</strong>
      * <p>test</p>
      */
@@ -25,6 +38,8 @@ public class ListContactsRequest extends TeaModel {
     public String name;
 
     /**
+     * <p>The page number. Default value: 1.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -32,6 +47,8 @@ public class ListContactsRequest extends TeaModel {
     public Long pageNumber;
 
     /**
+     * <p>The number of entries to return on each page. Default value: 100.</p>
+     * 
      * <strong>example:</strong>
      * <p>100</p>
      */
@@ -39,6 +56,8 @@ public class ListContactsRequest extends TeaModel {
     public Long pageSize;
 
     /**
+     * <p>The mobile number of the contact.</p>
+     * 
      * <strong>example:</strong>
      * <p>15012345678</p>
      */
@@ -46,12 +65,17 @@ public class ListContactsRequest extends TeaModel {
     public String phone;
 
     /**
+     * <p>Specifies whether to query only ungrouped contacts.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
     @NameInMap("queryUngroupedContacts")
     public Boolean queryUngroupedContacts;
 
+    /**
+     * <p>The workspace ID.</p>
+     */
     @NameInMap("workspace")
     public String workspace;
 

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListAlertRobotsResponseBody extends TeaModel {
     /**
+     * <p>The page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -12,6 +14,8 @@ public class ListAlertRobotsResponseBody extends TeaModel {
     public Long pageNumber;
 
     /**
+     * <p>The number of entries per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -19,7 +23,7 @@ public class ListAlertRobotsResponseBody extends TeaModel {
     public Long pageSize;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>8FDE2569-626B-5176-9844-28877A*****</p>
@@ -27,10 +31,15 @@ public class ListAlertRobotsResponseBody extends TeaModel {
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <p>The ID of the robot.</p>
+     */
     @NameInMap("robots")
     public java.util.List<ListAlertRobotsResponseBodyRobots> robots;
 
     /**
+     * <p>The total number of entries.</p>
+     * 
      * <strong>example:</strong>
      * <p>3</p>
      */
@@ -87,6 +96,8 @@ public class ListAlertRobotsResponseBody extends TeaModel {
         public String digitalEmployeeName;
 
         /**
+         * <p>The language.</p>
+         * 
          * <strong>example:</strong>
          * <p>zh_CN</p>
          */
@@ -94,6 +105,8 @@ public class ListAlertRobotsResponseBody extends TeaModel {
         public String lang;
 
         /**
+         * <p>The name of the robot.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -101,6 +114,8 @@ public class ListAlertRobotsResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>The unique robot ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -108,6 +123,8 @@ public class ListAlertRobotsResponseBody extends TeaModel {
         public String robotId;
 
         /**
+         * <p>The robot type.</p>
+         * 
          * <strong>example:</strong>
          * <p>DING</p>
          */
@@ -115,6 +132,8 @@ public class ListAlertRobotsResponseBody extends TeaModel {
         public String type;
 
         /**
+         * <p>The webhook URL.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="https://oapi.dingtalk.com/robot/send?access_token=">https://oapi.dingtalk.com/robot/send?access_token=</a>*******</p>
          */

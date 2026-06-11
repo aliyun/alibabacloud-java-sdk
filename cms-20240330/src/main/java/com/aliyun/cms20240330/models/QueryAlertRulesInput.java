@@ -4,12 +4,21 @@ package com.aliyun.cms20240330.models;
 import com.aliyun.tea.*;
 
 public class QueryAlertRulesInput extends TeaModel {
+    /**
+     * <p>The filter criteria. Only alert rules that match these criteria are returned.</p>
+     */
     @NameInMap("filter")
     public QueryAlertRulesFilter filter;
 
+    /**
+     * <p>The pagination settings for the query. If omitted, the system returns the first page of results with the default page size.</p>
+     */
     @NameInMap("pagination")
     public Pagination pagination;
 
+    /**
+     * <p>The ID of the workspace that contains the alert rules.</p>
+     */
     @NameInMap("workspace")
     public String workspace;
 

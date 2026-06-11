@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateAlertWebhookResponseBody extends TeaModel {
     /**
+     * <p>The unique ID of the webhook.</p>
+     * 
      * <strong>example:</strong>
      * <p>test</p>
      */
@@ -12,6 +14,8 @@ public class CreateAlertWebhookResponseBody extends TeaModel {
     public String alertWebhookId;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>264C3E89-XXXX-XXXX-XXXX-CE9C2196C7DC</p>
      */

@@ -4,24 +4,45 @@ package com.aliyun.cms20240330.models;
 import com.aliyun.tea.*;
 
 public class MergeOncallSchedule extends TeaModel {
+    /**
+     * <p>Details of the on-call schedule.</p>
+     */
     @NameInMap("detail")
     public java.util.Map<String, ?> detail;
 
+    /**
+     * <p>The UTC time when the on-call schedule was created.</p>
+     */
     @NameInMap("gmtCreate")
     public String gmtCreate;
 
+    /**
+     * <p>The UTC time when the on-call schedule was last modified.</p>
+     */
     @NameInMap("gmtModified")
     public String gmtModified;
 
+    /**
+     * <p>The unique identifier of the on-call schedule.</p>
+     */
     @NameInMap("identifier")
     public String identifier;
 
+    /**
+     * <p>The name of the on-call schedule.</p>
+     */
     @NameInMap("name")
     public String name;
 
+    /**
+     * <p>The creation source of the on-call schedule.</p>
+     */
     @NameInMap("source")
     public String source;
 
+    /**
+     * <p>The workspace that the on-call schedule belongs to.</p>
+     */
     @NameInMap("workspace")
     public String workspace;
 

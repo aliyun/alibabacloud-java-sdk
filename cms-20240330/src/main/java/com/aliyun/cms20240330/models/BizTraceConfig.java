@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class BizTraceConfig extends TeaModel {
     /**
+     * <p>The advanced configuration.</p>
+     * 
      * <strong>example:</strong>
      * <p>{&quot;sample&quot;:{&quot;strategy&quot;:&quot;BY_APP&quot;}}</p>
      */
@@ -12,6 +14,8 @@ public class BizTraceConfig extends TeaModel {
     public String advancedConfig;
 
     /**
+     * <p>The business trace identifier.</p>
+     * 
      * <strong>example:</strong>
      * <p>label_env</p>
      */
@@ -19,6 +23,8 @@ public class BizTraceConfig extends TeaModel {
     public String bizTraceCode;
 
     /**
+     * <p>The business trace ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>e339260ed64c95d</p>
      */
@@ -26,6 +32,8 @@ public class BizTraceConfig extends TeaModel {
     public String bizTraceId;
 
     /**
+     * <p>The business trace name.</p>
+     * 
      * <strong>example:</strong>
      * <p>just test</p>
      */
@@ -33,6 +41,8 @@ public class BizTraceConfig extends TeaModel {
     public String bizTraceName;
 
     /**
+     * <p>The creation time.</p>
+     * 
      * <strong>example:</strong>
      * <p>2025-12-12 00:00:00</p>
      */
@@ -40,6 +50,8 @@ public class BizTraceConfig extends TeaModel {
     public String createTime;
 
     /**
+     * <p>The region ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-beijing</p>
      */
@@ -47,6 +59,8 @@ public class BizTraceConfig extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The list of configuration rules.</p>
+     * 
      * <strong>example:</strong>
      * <p>[{&quot;entrancePid&quot;:&quot;xxxxx@b57c44xx6e86&quot;,&quot;rpcMatcher&quot;:{&quot;matchType&quot;:&quot;EQUALS&quot;,&quot;pattern&quot;:&quot;/createApp&quot;},&quot;characteristics&quot;:{&quot;operation&quot;:&quot;AND&quot;,&quot;rules&quot;:[{&quot;target&quot;:&quot;CUSTOM_EXTRACT&quot;,&quot;matcher&quot;:{&quot;matchType&quot;:&quot;CONTAINS&quot;,&quot;pattern&quot;:[]}}]}}]</p>
      */
@@ -54,6 +68,8 @@ public class BizTraceConfig extends TeaModel {
     public String ruleConfig;
 
     /**
+     * <p>The workspace.</p>
+     * 
      * <strong>example:</strong>
      * <p>default-cms-xxxxxxx-cn-hangzhou</p>
      */

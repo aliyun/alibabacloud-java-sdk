@@ -5,15 +5,23 @@ import com.aliyun.tea.*;
 
 public class NotifyChannel extends TeaModel {
     /**
+     * <p>The type of the notification channel.</p>
+     * 
      * <strong>example:</strong>
      * <p>&quot;DingTalk&quot;</p>
      */
     @NameInMap("channelType")
     public String channelType;
 
+    /**
+     * <p>The list of enabled sub-channels.</p>
+     */
     @NameInMap("enabledSubChannels")
     public java.util.List<String> enabledSubChannels;
 
+    /**
+     * <p>The list of receivers.</p>
+     */
     @NameInMap("receivers")
     public java.util.List<String> receivers;
 

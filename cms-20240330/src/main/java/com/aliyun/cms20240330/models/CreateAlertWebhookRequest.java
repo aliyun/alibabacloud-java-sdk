@@ -5,6 +5,14 @@ import com.aliyun.tea.*;
 
 public class CreateAlertWebhookRequest extends TeaModel {
     /**
+     * <p>The content type. Valid values:</p>
+     * <ul>
+     * <li><p>JSON (default)</p>
+     * </li>
+     * <li><p>FORM</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>JSON</p>
      */
@@ -12,12 +20,20 @@ public class CreateAlertWebhookRequest extends TeaModel {
     public String contentType;
 
     /**
-     * <p>headers</p>
+     * <p>The headers.</p>
      */
     @NameInMap("headers")
     public java.util.Map<String, String> headers;
 
     /**
+     * <p>The language. Valid values:</p>
+     * <ul>
+     * <li><p>zh_CN</p>
+     * </li>
+     * <li><p>en_US</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>zh_CN</p>
      */
@@ -25,6 +41,14 @@ public class CreateAlertWebhookRequest extends TeaModel {
     public String lang;
 
     /**
+     * <p>The request method. Valid values:</p>
+     * <ul>
+     * <li><p>GET</p>
+     * </li>
+     * <li><p>POST</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>GET</p>
      */
@@ -32,6 +56,7 @@ public class CreateAlertWebhookRequest extends TeaModel {
     public String method;
 
     /**
+     * <p>The name of the webhook.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -41,6 +66,7 @@ public class CreateAlertWebhookRequest extends TeaModel {
     public String name;
 
     /**
+     * <p>The URL for the alert callback.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -50,6 +76,8 @@ public class CreateAlertWebhookRequest extends TeaModel {
     public String url;
 
     /**
+     * <p>The unique ID of the webhook.</p>
+     * 
      * <strong>example:</strong>
      * <p>test</p>
      */

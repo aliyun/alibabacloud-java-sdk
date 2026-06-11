@@ -4,10 +4,15 @@ package com.aliyun.cms20240330.models;
 import com.aliyun.tea.*;
 
 public class EventResourceForEventView extends TeaModel {
+    /**
+     * <p>The resource entity.</p>
+     */
     @NameInMap("entity")
     public EventResourceForEventViewEntity entity;
 
     /**
+     * <p>The tags.</p>
+     * 
      * <strong>example:</strong>
      * <p>{ &quot;env&quot;: &quot;prod&quot;, &quot;project&quot;: &quot;payment-gateway&quot; }</p>
      */
@@ -37,6 +42,8 @@ public class EventResourceForEventView extends TeaModel {
 
     public static class EventResourceForEventViewEntity extends TeaModel {
         /**
+         * <p>The product domain to which the resource belongs.</p>
+         * 
          * <strong>example:</strong>
          * <p>&quot;ECS&quot;</p>
          */
@@ -44,6 +51,8 @@ public class EventResourceForEventView extends TeaModel {
         public String domain;
 
         /**
+         * <p>The instance ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>&quot;i-bp123456&quot;</p>
          */
@@ -51,6 +60,8 @@ public class EventResourceForEventView extends TeaModel {
         public String entityId;
 
         /**
+         * <p>The specific type of the resource.</p>
+         * 
          * <strong>example:</strong>
          * <p>&quot;Instance&quot;</p>
          */
@@ -58,6 +69,8 @@ public class EventResourceForEventView extends TeaModel {
         public String entityType;
 
         /**
+         * <p>Extra properties of the resource.</p>
+         * 
          * <strong>example:</strong>
          * <p>{ &quot;name&quot;: &quot;web-server-01&quot;, &quot;ip&quot;: &quot;10.0.0.1&quot; }</p>
          */

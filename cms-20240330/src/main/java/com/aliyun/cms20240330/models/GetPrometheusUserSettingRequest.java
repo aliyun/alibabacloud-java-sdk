@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetPrometheusUserSettingRequest extends TeaModel {
     /**
+     * <p>The language of the response. Valid values: zh and en. Default value: zh.</p>
+     * 
      * <strong>example:</strong>
      * <p>zh</p>
      */

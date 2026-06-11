@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListAlertRobotsShrinkRequest extends TeaModel {
     /**
+     * <p>The name of the robot. Fuzzy search by prefix is supported.</p>
+     * 
      * <strong>example:</strong>
      * <p>test</p>
      */
@@ -12,6 +14,8 @@ public class ListAlertRobotsShrinkRequest extends TeaModel {
     public String name;
 
     /**
+     * <p>The number of the page to return. Default value: 1.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -19,15 +23,23 @@ public class ListAlertRobotsShrinkRequest extends TeaModel {
     public Long pageNumber;
 
     /**
+     * <p>The number of entries to return on each page. Default value: 100.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
     @NameInMap("pageSize")
     public Long pageSize;
 
+    /**
+     * <p>The robot IDs.</p>
+     */
     @NameInMap("robotIds")
     public String robotIdsShrink;
 
+    /**
+     * <p>The robot types.</p>
+     */
     @NameInMap("types")
     public String typesShrink;
 

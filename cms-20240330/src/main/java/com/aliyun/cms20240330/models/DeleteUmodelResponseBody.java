@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteUmodelResponseBody extends TeaModel {
     /**
-     * <p>request ID</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>123123-3213-345-9941-345345345</p>

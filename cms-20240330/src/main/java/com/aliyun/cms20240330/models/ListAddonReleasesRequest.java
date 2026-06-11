@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListAddonReleasesRequest extends TeaModel {
     /**
-     * <p>Addon component name.</p>
+     * <p>The name of the add-on.</p>
      * 
      * <strong>example:</strong>
      * <p>cs-gpu</p>
@@ -13,8 +13,14 @@ public class ListAddonReleasesRequest extends TeaModel {
     @NameInMap("addonName")
     public String addonName;
 
+    @NameInMap("maxResults")
+    public String maxResults;
+
+    @NameInMap("nextToken")
+    public String nextToken;
+
     /**
-     * <p>Parent AddonReleaseId.</p>
+     * <p>The parent AddonRelease ID.</p>
      * 
      * <strong>example:</strong>
      * <p>policy-xxxxxxxxxxxxx</p>
@@ -33,6 +39,22 @@ public class ListAddonReleasesRequest extends TeaModel {
     }
     public String getAddonName() {
         return this.addonName;
+    }
+
+    public ListAddonReleasesRequest setMaxResults(String maxResults) {
+        this.maxResults = maxResults;
+        return this;
+    }
+    public String getMaxResults() {
+        return this.maxResults;
+    }
+
+    public ListAddonReleasesRequest setNextToken(String nextToken) {
+        this.nextToken = nextToken;
+        return this;
+    }
+    public String getNextToken() {
+        return this.nextToken;
     }
 
     public ListAddonReleasesRequest setParentAddonReleaseId(String parentAddonReleaseId) {

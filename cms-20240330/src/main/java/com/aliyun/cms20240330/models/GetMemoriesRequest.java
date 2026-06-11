@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetMemoriesRequest extends TeaModel {
     /**
+     * <p>The application\&quot;s agent ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>952730652285943809</p>
      */
@@ -12,16 +14,26 @@ public class GetMemoriesRequest extends TeaModel {
     public String agentId;
 
     /**
+     * <p>The Application ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>150130323</p>
      */
     @NameInMap("appId")
     public String appId;
 
+    /**
+     * <p>The filter criteria.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;<strong>strategy_type</strong>&quot;:&quot;Fact&quot;}</p>
+     */
     @NameInMap("filters")
     public java.util.Map<String, ?> filters;
 
     /**
+     * <p>The page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -29,6 +41,8 @@ public class GetMemoriesRequest extends TeaModel {
     public Integer page;
 
     /**
+     * <p>The page size.</p>
+     * 
      * <strong>example:</strong>
      * <p>1000</p>
      */
@@ -36,6 +50,8 @@ public class GetMemoriesRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The Run ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>jr-80ded1d6953c64ea</p>
      */
@@ -43,6 +59,8 @@ public class GetMemoriesRequest extends TeaModel {
     public String runId;
 
     /**
+     * <p>The User ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>test_user_001</p>
      */

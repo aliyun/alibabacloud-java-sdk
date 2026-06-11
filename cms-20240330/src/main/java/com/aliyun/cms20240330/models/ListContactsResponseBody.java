@@ -4,10 +4,15 @@ package com.aliyun.cms20240330.models;
 import com.aliyun.tea.*;
 
 public class ListContactsResponseBody extends TeaModel {
+    /**
+     * <p>The list of contacts.</p>
+     */
     @NameInMap("contacts")
     public java.util.List<ListContactsResponseBodyContacts> contacts;
 
     /**
+     * <p>The page number. Default value: 1.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -15,6 +20,8 @@ public class ListContactsResponseBody extends TeaModel {
     public Long pageNumber;
 
     /**
+     * <p>The number of entries per page. Default value: 100.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -22,7 +29,7 @@ public class ListContactsResponseBody extends TeaModel {
     public Long pageSize;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>8FDE2569-626B-5176-9844-28877A*****</p>
@@ -31,6 +38,8 @@ public class ListContactsResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total number of entries.</p>
+     * 
      * <strong>example:</strong>
      * <p>56</p>
      */
@@ -84,6 +93,8 @@ public class ListContactsResponseBody extends TeaModel {
 
     public static class ListContactsResponseBodyContacts extends TeaModel {
         /**
+         * <p>The ID of the contact.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -91,6 +102,8 @@ public class ListContactsResponseBody extends TeaModel {
         public String contactId;
 
         /**
+         * <p>The email address of the contact.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="mailto:test@aliyun.com">test@aliyun.com</a></p>
          */
@@ -98,19 +111,29 @@ public class ListContactsResponseBody extends TeaModel {
         public String email;
 
         /**
+         * <p>Indicates whether the email address is verified.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
         @NameInMap("emailVerify")
         public Boolean emailVerify;
 
+        /**
+         * <p>A list of contact group IDs to which the contact belongs.</p>
+         */
         @NameInMap("groupList")
         public java.util.List<String> groupList;
 
+        /**
+         * <p>A map of user IDs for various instant messaging (IM) tools.</p>
+         */
         @NameInMap("imUserIds")
         public java.util.Map<String, String> imUserIds;
 
         /**
+         * <p>The language preference for notifications. Valid values: zh-CN and en-US.</p>
+         * 
          * <strong>example:</strong>
          * <p>zh_CN</p>
          */
@@ -118,6 +141,8 @@ public class ListContactsResponseBody extends TeaModel {
         public String lang;
 
         /**
+         * <p>The name of the contact.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -125,6 +150,8 @@ public class ListContactsResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>The phone number of the contact.</p>
+         * 
          * <strong>example:</strong>
          * <p>130123456789</p>
          */
@@ -132,6 +159,8 @@ public class ListContactsResponseBody extends TeaModel {
         public String phone;
 
         /**
+         * <p>Indicates whether the phone number is verified.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -139,6 +168,8 @@ public class ListContactsResponseBody extends TeaModel {
         public Boolean phoneVerify;
 
         /**
+         * <p>The last time the contact was updated.</p>
+         * 
          * <strong>example:</strong>
          * <p>2024-10-22 02:21:51</p>
          */

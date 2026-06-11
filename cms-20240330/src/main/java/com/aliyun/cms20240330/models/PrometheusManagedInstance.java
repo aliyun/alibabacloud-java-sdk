@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class PrometheusManagedInstance extends TeaModel {
     /**
+     * <p>The time when the instance was created.</p>
+     * 
      * <strong>example:</strong>
      * <p>2025-03-11T08:21:58Z</p>
      */
@@ -12,6 +14,8 @@ public class PrometheusManagedInstance extends TeaModel {
     public String createTime;
 
     /**
+     * <p>The type of the instance.</p>
+     * 
      * <strong>example:</strong>
      * <p>test</p>
      */
@@ -19,6 +23,8 @@ public class PrometheusManagedInstance extends TeaModel {
     public String instanceType;
 
     /**
+     * <p>The ID of the Prometheus instance that is associated with Real User Monitoring (RUM).</p>
+     * 
      * <strong>example:</strong>
      * <p>rum-xxx</p>
      */
@@ -26,6 +32,8 @@ public class PrometheusManagedInstance extends TeaModel {
     public String prometheusInstanceId;
 
     /**
+     * <p>The name of the Prometheus instance that is associated with RUM.</p>
+     * 
      * <strong>example:</strong>
      * <p>rum-xxx</p>
      */
@@ -33,6 +41,8 @@ public class PrometheusManagedInstance extends TeaModel {
     public String prometheusInstanceName;
 
     /**
+     * <p>The ID of the Alibaba Cloud region.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
      */
@@ -40,6 +50,8 @@ public class PrometheusManagedInstance extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The status of the instance.</p>
+     * 
      * <strong>example:</strong>
      * <p>Running</p>
      */
@@ -47,6 +59,8 @@ public class PrometheusManagedInstance extends TeaModel {
     public String status;
 
     /**
+     * <p>The Cloud Monitor 2.0 workspace.</p>
+     * 
      * <strong>example:</strong>
      * <p>workspace-test</p>
      */

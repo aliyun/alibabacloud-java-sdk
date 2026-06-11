@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpdateDatasetRequest extends TeaModel {
     /**
+     * <p>The new description for the dataset.</p>
+     * 
      * <strong>example:</strong>
      * <p>test dataset</p>
      */

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class IncidentEscalationPolicyForView extends TeaModel {
     /**
+     * <p>The creation time.</p>
+     * 
      * <strong>example:</strong>
      * <p>2025-03-11T08:21:58Z</p>
      */
@@ -12,6 +14,8 @@ public class IncidentEscalationPolicyForView extends TeaModel {
     public String createTime;
 
     /**
+     * <p>The description.</p>
+     * 
      * <strong>example:</strong>
      * <p>workspace api monitor update test</p>
      */
@@ -19,16 +23,22 @@ public class IncidentEscalationPolicyForView extends TeaModel {
     public String description;
 
     /**
+     * <p>Indicates whether the policy is enabled.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
     @NameInMap("enable")
     public Boolean enable;
 
+    /**
+     * <p>The list of escalation stages.</p>
+     */
     @NameInMap("escalationStageList")
     public java.util.List<IncidentEscalationStageForView> escalationStageList;
 
     /**
+     * <p>The name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -38,6 +48,14 @@ public class IncidentEscalationPolicyForView extends TeaModel {
     public String name;
 
     /**
+     * <p>The owner type.</p>
+     * <ul>
+     * <li><p><strong>USER</strong>: User. This is the default value.</p>
+     * </li>
+     * <li><p><strong>APP</strong>: Application.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>&quot;USER&quot;</p>
      */
@@ -45,6 +63,8 @@ public class IncidentEscalationPolicyForView extends TeaModel {
     public String ownerType;
 
     /**
+     * <p>The region ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>&quot;cn-hangzhou&quot;</p>
      */
@@ -52,6 +72,8 @@ public class IncidentEscalationPolicyForView extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The source.</p>
+     * 
      * <strong>example:</strong>
      * <p>&quot;MANUAL&quot;</p>
      */
@@ -59,6 +81,8 @@ public class IncidentEscalationPolicyForView extends TeaModel {
     public String source;
 
     /**
+     * <p>The source type of the synchronization policy.</p>
+     * 
      * <strong>example:</strong>
      * <p>&quot;ARMS&quot;</p>
      */
@@ -66,6 +90,8 @@ public class IncidentEscalationPolicyForView extends TeaModel {
     public String syncFromType;
 
     /**
+     * <p>The update time.</p>
+     * 
      * <strong>example:</strong>
      * <p>2025-04-15T02:02:50Z</p>
      */
@@ -73,6 +99,8 @@ public class IncidentEscalationPolicyForView extends TeaModel {
     public String updateTime;
 
     /**
+     * <p>The user ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>&quot;user-abc123&quot;</p>
      */
@@ -80,6 +108,8 @@ public class IncidentEscalationPolicyForView extends TeaModel {
     public String userId;
 
     /**
+     * <p>The globally unique identifier.</p>
+     * 
      * <strong>example:</strong>
      * <p>&quot;a1b2c3d4-e5f6-7890-1234-567890abcdef&quot;</p>
      */
@@ -87,6 +117,8 @@ public class IncidentEscalationPolicyForView extends TeaModel {
     public String uuid;
 
     /**
+     * <p>The workspace.</p>
+     * 
      * <strong>example:</strong>
      * <p>&quot;ws-xyz789&quot;</p>
      */

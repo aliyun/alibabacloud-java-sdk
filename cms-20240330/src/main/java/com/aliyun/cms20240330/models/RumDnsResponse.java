@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class RumDnsResponse extends TeaModel {
     /**
+     * <p>The domain name for RUM reporting.</p>
+     * 
      * <strong>example:</strong>
      * <p>rum</p>
      */
@@ -12,6 +14,8 @@ public class RumDnsResponse extends TeaModel {
     public String domain;
 
     /**
+     * <p>The message returned if initialization fails.</p>
+     * 
      * <strong>example:</strong>
      * <p>&quot;&quot;</p>
      */
@@ -19,6 +23,8 @@ public class RumDnsResponse extends TeaModel {
     public String message;
 
     /**
+     * <p>The DNS initialization status of the domain name.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

@@ -4,10 +4,15 @@ package com.aliyun.cms20240330.models;
 import com.aliyun.tea.*;
 
 public class ListContactGroupsShrinkRequest extends TeaModel {
+    /**
+     * <p>The contact group IDs.</p>
+     */
     @NameInMap("contactGroupIds")
     public String contactGroupIdsShrink;
 
     /**
+     * <p>The name of the contact group.</p>
+     * 
      * <strong>example:</strong>
      * <p>test</p>
      */
@@ -15,6 +20,8 @@ public class ListContactGroupsShrinkRequest extends TeaModel {
     public String name;
 
     /**
+     * <p>The page number. The default is 1.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -22,6 +29,8 @@ public class ListContactGroupsShrinkRequest extends TeaModel {
     public Long pageNumber;
 
     /**
+     * <p>The number of entries to return per page. The default is 100.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */

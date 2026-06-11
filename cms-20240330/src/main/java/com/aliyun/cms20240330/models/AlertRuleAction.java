@@ -4,6 +4,9 @@ package com.aliyun.cms20240330.models;
 import com.aliyun.tea.*;
 
 public class AlertRuleAction extends TeaModel {
+    /**
+     * <p>A list of action integration IDs.</p>
+     */
     @NameInMap("actions")
     public java.util.List<String> actions;
 

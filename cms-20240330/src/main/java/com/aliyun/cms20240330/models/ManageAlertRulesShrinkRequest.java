@@ -4,6 +4,9 @@ package com.aliyun.cms20240330.models;
 import com.aliyun.tea.*;
 
 public class ManageAlertRulesShrinkRequest extends TeaModel {
+    /**
+     * <p>A unified request body for managing alert rules with the CREATE, UPDATE, PATCH, and BATCH_DELETE actions. The required fields depend on the specified action.</p>
+     */
     @NameInMap("body")
     public String bodyShrink;
 

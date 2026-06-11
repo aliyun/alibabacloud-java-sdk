@@ -5,19 +5,19 @@ import com.aliyun.tea.*;
 
 public class DatasourceConfigUnified extends TeaModel {
     /**
-     * <p>Prometheus 实例 ID（type=PROMETHEUS 时使用）</p>
+     * <p>The unique instance ID.</p>
      */
     @NameInMap("instanceId")
     public String instanceId;
 
     /**
-     * <p>地域 ID（各类型可选，缺省与规则/网关一致）</p>
+     * <p>The region ID.</p>
      */
     @NameInMap("regionId")
     public String regionId;
 
     /**
-     * <p>数据源类型</p>
+     * <p>The type of the data source.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("type")

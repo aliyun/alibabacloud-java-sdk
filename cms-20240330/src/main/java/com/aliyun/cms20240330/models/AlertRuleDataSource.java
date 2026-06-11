@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class AlertRuleDataSource extends TeaModel {
     /**
-     * <p>Applicable data source type: APM_DS.
-     * Application type: </p>
+     * <p>Applies to the APM_DS data source type.</p>
+     * <p>The type of the application. Valid value:</p>
      * <ul>
-     * <li>apm.</li>
+     * <li>apm</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,15 +18,15 @@ public class AlertRuleDataSource extends TeaModel {
     public String appType;
 
     /**
-     * <p>Applicable data source type: SLS_MULTI_DS.
-     * List of sub-data sources.</p>
+     * <p>Applies to the SLS_MULTI_DS data source type.</p>
+     * <p>A list of sub-data sources.</p>
      */
     @NameInMap("dsList")
     public java.util.List<AlertRuleDataSourceDsList> dsList;
 
     /**
-     * <p>Applicable data source type: PROMETHEUS_DS.
-     * Prometheus instance ID.</p>
+     * <p>Applies to the PROMETHEUS_DS data source type.</p>
+     * <p>The ID of the Prometheus instance.</p>
      * 
      * <strong>example:</strong>
      * <p>rw-bbe8961b4a59be0</p>
@@ -35,8 +35,8 @@ public class AlertRuleDataSource extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>Applicable data source type: ENTERPRISE_DS.
-     * Name of the enterprise cloud monitoring metric repository.</p>
+     * <p>Applies to the ENTERPRISE_DS data source type.</p>
+     * <p>The name of the Hybrid Cloud Monitoring metric repository.</p>
      * 
      * <strong>example:</strong>
      * <p>aliyun-default</p>
@@ -45,8 +45,8 @@ public class AlertRuleDataSource extends TeaModel {
     public String namespace;
 
     /**
-     * <p>Applicable data source types: APM_DS, PROMETHEUS_DS.
-     * The regionId to which the data source belongs.</p>
+     * <p>Applies to the APM_DS and PROMETHEUS_DS data source types.</p>
+     * <p>The ID of the region where the data source is located.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -58,14 +58,19 @@ public class AlertRuleDataSource extends TeaModel {
     public String tenantId;
 
     /**
-     * <p>Data source type.
-     * Valid values:</p>
+     * <p>The data source type.</p>
+     * <p>Valid values:</p>
      * <ul>
-     * <li>PROMETHEUS_DS: Prometheus data source.</li>
-     * <li>SLS_MULTI_DS: SLS data source.</li>
-     * <li>APM_DS: Application monitoring data source.</li>
-     * <li>CMS_BASIC_DS: Basic cloud monitoring data source.</li>
-     * <li>ENTERPRISE_DS: Enterprise cloud monitoring data source.</li>
+     * <li><p>PROMETHEUS_DS: A Prometheus data source.</p>
+     * </li>
+     * <li><p>SLS_MULTI_DS: An SLS data source.</p>
+     * </li>
+     * <li><p>APM_DS: An Application Monitoring data source.</p>
+     * </li>
+     * <li><p>CMS_BASIC_DS: A basic Cloud Monitor data source.</p>
+     * </li>
+     * <li><p>ENTERPRISE_DS: A Hybrid Cloud Monitoring data source.</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -138,7 +143,7 @@ public class AlertRuleDataSource extends TeaModel {
 
     public static class AlertRuleDataSourceDsList extends TeaModel {
         /**
-         * <p>SLS project</p>
+         * <p>The SLS project.</p>
          * 
          * <strong>example:</strong>
          * <p>mySlsProject</p>
@@ -156,7 +161,7 @@ public class AlertRuleDataSource extends TeaModel {
         public String regionId;
 
         /**
-         * <p>LogStore/MetricStore name.</p>
+         * <p>The name of the LogStore or MetricStore.</p>
          * 
          * <strong>example:</strong>
          * <p>mySlsLogStore</p>
@@ -165,10 +170,12 @@ public class AlertRuleDataSource extends TeaModel {
         public String store;
 
         /**
-         * <p>Type of SLS data sub-source:</p>
+         * <p>The type of the SLS sub-data source. Valid values:</p>
          * <ul>
-         * <li>SLS_LOG_DS: LogStore data source.</li>
-         * <li>SLS_METRIC_DS: MetricStore data source.</li>
+         * <li><p>SLS_LOG_DS: A LogStore data source.</p>
+         * </li>
+         * <li><p>SLS_METRIC_DS: A MetricStore data source.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

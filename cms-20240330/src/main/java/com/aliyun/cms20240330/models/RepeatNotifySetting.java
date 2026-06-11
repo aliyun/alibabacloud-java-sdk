@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class RepeatNotifySetting extends TeaModel {
     /**
+     * <p>The state that ends the management event.</p>
+     * 
      * <strong>example:</strong>
      * <p>&quot;Resolved&quot;</p>
      */
@@ -12,6 +14,8 @@ public class RepeatNotifySetting extends TeaModel {
     public String endIncidentState;
 
     /**
+     * <p>The interval between repeated notifications.</p>
+     * 
      * <strong>example:</strong>
      * <p>5</p>
      */

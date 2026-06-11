@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetIntegrationVersionForCSRequest extends TeaModel {
     /**
+     * <p>The ID of the cluster.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class GetIntegrationVersionForCSRequest extends TeaModel {
     public String clusterId;
 
     /**
+     * <p>The type of the cluster. Valid values: acs.ack.cluster and acs.asi.cluster.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

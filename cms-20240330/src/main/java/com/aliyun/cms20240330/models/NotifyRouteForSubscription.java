@@ -4,9 +4,15 @@ package com.aliyun.cms20240330.models;
 import com.aliyun.tea.*;
 
 public class NotifyRouteForSubscription extends TeaModel {
+    /**
+     * <p>An array of objects, each defining a notification channel.</p>
+     */
     @NameInMap("channels")
     public java.util.List<NotifyRouteForSubscriptionChannels> channels;
 
+    /**
+     * <p>The active period for the notification rule.</p>
+     */
     @NameInMap("effectTimeRange")
     public NotifyRouteForSubscriptionEffectTimeRange effectTimeRange;
 
@@ -32,12 +38,21 @@ public class NotifyRouteForSubscription extends TeaModel {
     }
 
     public static class NotifyRouteForSubscriptionChannels extends TeaModel {
+        /**
+         * <p>The channel type. For example, <code>Email</code>, <code>SMS</code>, or <code>Webhook</code>.</p>
+         */
         @NameInMap("channelType")
         public String channelType;
 
+        /**
+         * <p>A list of enabled sub-channels. Applicable to channels that support finer-grained topics or categories.</p>
+         */
         @NameInMap("enabledSubChannels")
         public java.util.List<String> enabledSubChannels;
 
+        /**
+         * <p>A list of notification receivers. The receiver format depends on the <code>channelType</code>.</p>
+         */
         @NameInMap("receivers")
         public java.util.List<String> receivers;
 
@@ -73,15 +88,27 @@ public class NotifyRouteForSubscription extends TeaModel {
     }
 
     public static class NotifyRouteForSubscriptionEffectTimeRange extends TeaModel {
+        /**
+         * <p>The active days of the week, specified as an array of integers.</p>
+         */
         @NameInMap("dayInWeek")
         public java.util.List<Integer> dayInWeek;
 
+        /**
+         * <p>The end of the active period, in minutes from 00:00. The value ranges from 0 to 1439.</p>
+         */
         @NameInMap("endTimeInMinute")
         public Integer endTimeInMinute;
 
+        /**
+         * <p>The start of the active period, in minutes from 00:00. The value ranges from 0 to 1439.</p>
+         */
         @NameInMap("startTimeInMinute")
         public Integer startTimeInMinute;
 
+        /**
+         * <p>The time zone for the effect time range, specified in the IANA Time Zone Database format. For example, <code>UTC</code> or <code>Asia/Shanghai</code>.</p>
+         */
         @NameInMap("timeZone")
         public String timeZone;
 

@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateDatasetRequest extends TeaModel {
     /**
+     * <p>The name of the dataset.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,8 @@ public class CreateDatasetRequest extends TeaModel {
     public String datasetName;
 
     /**
+     * <p>The description of the dataset.</p>
+     * 
      * <strong>example:</strong>
      * <p>test</p>
      */
@@ -21,6 +24,7 @@ public class CreateDatasetRequest extends TeaModel {
     public String description;
 
     /**
+     * <p>The schema of the dataset.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("schema")

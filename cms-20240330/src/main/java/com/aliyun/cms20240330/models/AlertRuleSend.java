@@ -5,17 +5,20 @@ import com.aliyun.tea.*;
 
 public class AlertRuleSend extends TeaModel {
     /**
-     * <p>Alert Action Integration Configuration.</p>
+     * <p>The integrated alert action configuration.</p>
      */
     @NameInMap("action")
     public AlertRuleAction action;
 
     /**
-     * <p>Alert Notification Configuration.</p>
+     * <p>The alert notification configuration.</p>
      */
     @NameInMap("notification")
     public AlertRuleNotification notification;
 
+    /**
+     * <p>The list of notification policies. Each policy defines the notification method or policy name to use for a specific alert state, such as trigger or recovery.</p>
+     */
     @NameInMap("notifyStrategies")
     public java.util.List<String> notifyStrategies;
 
@@ -23,7 +26,7 @@ public class AlertRuleSend extends TeaModel {
     public AlertRuleRcaConfig rcaConfig;
 
     /**
-     * <p>Whether to deliver alert events to ARMS Alert Management.</p>
+     * <p>Specifies whether to deliver alert events to Alert Management of Application Real-Time Monitoring Service (ARMS).</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListContextStoresResponseBody extends TeaModel {
     /**
+     * <p>The maximum number of results returned per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>100</p>
      */
@@ -12,6 +14,8 @@ public class ListContextStoresResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>The token to retrieve the next page of results. If this field is empty, all results have been returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>2-ba4d-4b9f-aa24-dcb067a30f1c</p>
      */
@@ -19,16 +23,23 @@ public class ListContextStoresResponseBody extends TeaModel {
     public String nextToken;
 
     /**
+     * <p>The unique ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>8FDE2569-626B-5176-9844-28877A*****</p>
      */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <p>A list of context stores.</p>
+     */
     @NameInMap("results")
     public java.util.List<ListContextStoresResponseBodyResults> results;
 
     /**
+     * <p>The total number of context stores.</p>
+     * 
      * <strong>example:</strong>
      * <p>56</p>
      */
@@ -82,6 +93,8 @@ public class ListContextStoresResponseBody extends TeaModel {
 
     public static class ListContextStoresResponseBodyResults extends TeaModel {
         /**
+         * <p>The name of the context store.</p>
+         * 
          * <strong>example:</strong>
          * <p>test-context-store</p>
          */
@@ -89,6 +102,8 @@ public class ListContextStoresResponseBody extends TeaModel {
         public String contextStoreName;
 
         /**
+         * <p>The context type.</p>
+         * 
          * <strong>example:</strong>
          * <p>memory</p>
          */
@@ -96,6 +111,7 @@ public class ListContextStoresResponseBody extends TeaModel {
         public String contextType;
 
         /**
+         * <p>The creation time of the context store. The value is a Unix timestamp in milliseconds.</p>
          * <p>Use the UTC time format: yyyy-MM-ddTHH:mm:ssZ</p>
          * 
          * <strong>example:</strong>
@@ -105,6 +121,8 @@ public class ListContextStoresResponseBody extends TeaModel {
         public String createTime;
 
         /**
+         * <p>The description of the context store.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -112,6 +130,8 @@ public class ListContextStoresResponseBody extends TeaModel {
         public String description;
 
         /**
+         * <p>The region ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-heyuan</p>
          */
@@ -119,6 +139,8 @@ public class ListContextStoresResponseBody extends TeaModel {
         public String regionId;
 
         /**
+         * <p>The status of the context store.</p>
+         * 
          * <strong>example:</strong>
          * <p>active</p>
          */
@@ -126,6 +148,7 @@ public class ListContextStoresResponseBody extends TeaModel {
         public String status;
 
         /**
+         * <p>The last update time of the context store. The value is a Unix timestamp in milliseconds.</p>
          * <p>Use the UTC time format: yyyy-MM-ddTHH:mm:ssZ</p>
          * 
          * <strong>example:</strong>
@@ -135,6 +158,8 @@ public class ListContextStoresResponseBody extends TeaModel {
         public String updateTime;
 
         /**
+         * <p>The ID of the workspace.</p>
+         * 
          * <strong>example:</strong>
          * <p>workspace-test</p>
          */

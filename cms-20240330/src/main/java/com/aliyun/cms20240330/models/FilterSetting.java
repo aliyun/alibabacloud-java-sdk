@@ -4,10 +4,15 @@ package com.aliyun.cms20240330.models;
 import com.aliyun.tea.*;
 
 public class FilterSetting extends TeaModel {
+    /**
+     * <p>The subscription conditions.</p>
+     */
     @NameInMap("conditions")
     public java.util.List<FilterSettingConditions> conditions;
 
     /**
+     * <p>The expression.</p>
+     * 
      * <strong>example:</strong>
      * <p>1 and 2 or 3</p>
      */
@@ -15,6 +20,8 @@ public class FilterSetting extends TeaModel {
     public String expression;
 
     /**
+     * <p>The relationship between conditions.</p>
+     * 
      * <strong>example:</strong>
      * <p>AND</p>
      */
@@ -52,6 +59,8 @@ public class FilterSetting extends TeaModel {
 
     public static class FilterSettingConditions extends TeaModel {
         /**
+         * <p>The field.</p>
+         * 
          * <strong>example:</strong>
          * <p>severity</p>
          */
@@ -59,6 +68,8 @@ public class FilterSetting extends TeaModel {
         public String field;
 
         /**
+         * <p>The comparison operator.</p>
+         * 
          * <strong>example:</strong>
          * <p>EQ</p>
          */
@@ -66,6 +77,8 @@ public class FilterSetting extends TeaModel {
         public String op;
 
         /**
+         * <p>The value.</p>
+         * 
          * <strong>example:</strong>
          * <p>CRITICAL</p>
          */

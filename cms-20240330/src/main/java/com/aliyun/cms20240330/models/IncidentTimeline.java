@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class IncidentTimeline extends TeaModel {
     /**
-     * <p>Subtype.</p>
+     * <p>The child type.</p>
      * 
      * <strong>example:</strong>
      * <p>comment</p>
@@ -14,16 +14,16 @@ public class IncidentTimeline extends TeaModel {
     public String childType;
 
     /**
-     * <p>Content.</p>
+     * <p>The content.</p>
      * 
      * <strong>example:</strong>
-     * <p>The operations team has been notified to investigate.</p>
+     * <p>已通知运维团队进行排查</p>
      */
     @NameInMap("content")
     public String content;
 
     /**
-     * <p>Incident ID.</p>
+     * <p>The ID of the event.</p>
      * 
      * <strong>example:</strong>
      * <p>incident-001</p>
@@ -32,7 +32,7 @@ public class IncidentTimeline extends TeaModel {
     public String incidentId;
 
     /**
-     * <p>Timeline node unique ID.</p>
+     * <p>The unique ID of the timeline node.</p>
      * 
      * <strong>example:</strong>
      * <p>timeline-001</p>
@@ -41,7 +41,7 @@ public class IncidentTimeline extends TeaModel {
     public String incidentTimelineId;
 
     /**
-     * <p>Time.</p>
+     * <p>The timestamp.</p>
      * 
      * <strong>example:</strong>
      * <p>1741234567890</p>
@@ -50,7 +50,7 @@ public class IncidentTimeline extends TeaModel {
     public Long time;
 
     /**
-     * <p>Parent timeline ID.</p>
+     * <p>The ID of the timeline.</p>
      * 
      * <strong>example:</strong>
      * <p>timeline-main-001</p>
@@ -59,16 +59,16 @@ public class IncidentTimeline extends TeaModel {
     public String timelineId;
 
     /**
-     * <p>Title.</p>
+     * <p>The timeline title.</p>
      * 
      * <strong>example:</strong>
-     * <p>The operations team has been contacted.</p>
+     * <p>已联系运维团队</p>
      */
     @NameInMap("title")
     public String title;
 
     /**
-     * <p>Type.</p>
+     * <p>The type.</p>
      * 
      * <strong>example:</strong>
      * <p>ACTION</p>
@@ -77,7 +77,7 @@ public class IncidentTimeline extends TeaModel {
     public String type;
 
     /**
-     * <p>User ID.</p>
+     * <p>The user ID.</p>
      * 
      * <strong>example:</strong>
      * <p>user-12345</p>

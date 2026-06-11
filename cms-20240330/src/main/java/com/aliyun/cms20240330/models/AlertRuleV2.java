@@ -4,83 +4,131 @@ package com.aliyun.cms20240330.models;
 import com.aliyun.tea.*;
 
 public class AlertRuleV2 extends TeaModel {
+    /**
+     * <p>Configuration for action integrations, such as webhooks, that execute when an alert is triggered.</p>
+     */
     @NameInMap("actionIntegrationConfig")
     public ActionIntegrationConfig actionIntegrationConfig;
 
     /**
-     * <p>注解</p>
+     * <p>A set of key-value pairs that serve as annotations, providing additional, non-identifying information, such as a description or a runbook link.</p>
      */
     @NameInMap("annotations")
     public java.util.Map<String, String> annotations;
 
+    /**
+     * <p>The configuration for integrating the alert rule with Application Real-Time Monitoring Service (ARMS).</p>
+     */
     @NameInMap("armsIntegrationConfig")
     public ArmsIntegrationConfig armsIntegrationConfig;
 
+    /**
+     * <p>The configuration for the conditions that trigger an alert.</p>
+     */
     @NameInMap("conditionConfig")
     public ConditionConfigUnified conditionConfig;
 
     /**
-     * <p>内容模板</p>
+     * <p>The template for the alert notification content.</p>
      */
     @NameInMap("contentTemplate")
     public String contentTemplate;
 
+    @NameInMap("coveredSeverityLevels")
+    public String coveredSeverityLevels;
+
     /**
-     * <p>创建时间（只读），ISO 8601</p>
+     * <p>The time the alert rule was created.</p>
      */
     @NameInMap("createdAt")
     public String createdAt;
 
+    /**
+     * <p>The configuration for the data source to be evaluated.</p>
+     */
     @NameInMap("datasourceConfig")
     public DatasourceConfigUnified datasourceConfig;
 
     /**
-     * <p>显示名称</p>
+     * <p>The data source type. Examples: <code>sls</code>, <code>prometheus</code>.</p>
+     */
+    @NameInMap("datasourceType")
+    public String datasourceType;
+
+    /**
+     * <p>The user-defined display name for the alert rule.</p>
      */
     @NameInMap("displayName")
     public String displayName;
 
     /**
-     * <p>是否启用</p>
+     * <p>Indicates whether the alert rule is active. Set to <code>true</code> to enable the rule, or <code>false</code> to disable it.</p>
      */
     @NameInMap("enabled")
     public Boolean enabled;
 
     /**
-     * <p>标签</p>
+     * <p>A set of key-value pairs that serve as labels to filter and group alert rules.</p>
      */
     @NameInMap("labels")
     public java.util.Map<String, String> labels;
 
+    /**
+     * <p>The configuration for sending notifications when an alert is triggered.</p>
+     */
     @NameInMap("notifyConfig")
     public NotifyConfigUnified notifyConfig;
 
+    /**
+     * <p>Indicates whether the alert rule monitors all resources of the specified type. If <code>true</code>, the rule applies globally within the workspace.</p>
+     */
+    @NameInMap("observeResourceGlobalScope")
+    public Boolean observeResourceGlobalScope;
+
+    /**
+     * <p>A list of specific resource IDs to monitor, used only when <code>observeResourceGlobalScope</code> is <code>false</code>.</p>
+     */
+    @NameInMap("observeResourceList")
+    public String observeResourceList;
+
+    /**
+     * <p>The type of resource that the alert rule monitors.</p>
+     */
+    @NameInMap("observeResourceType")
+    public String observeResourceType;
+
+    /**
+     * <p>The configuration for querying and processing data from the data source.</p>
+     */
     @NameInMap("queryConfig")
     public QueryConfigUnified queryConfig;
 
+    /**
+     * <p>The configuration for how often the alert rule is evaluated.</p>
+     */
     @NameInMap("scheduleConfig")
     public ScheduleConfigUnified scheduleConfig;
 
     /**
-     * <p>告警状态（只读）</p>
+     * <p>The current status of the alert rule. Examples: <code>RUNNING</code>, <code>STOPPED</code>.</p>
      */
     @NameInMap("status")
     public String status;
 
     /**
-     * <p>更新时间（只读），ISO 8601</p>
+     * <p>The time the alert rule was last updated.</p>
      */
     @NameInMap("updatedAt")
     public String updatedAt;
 
     /**
-     * <p>规则 UUID（系统生成，只读）</p>
+     * <p>The unique identifier for the alert rule.</p>
      */
     @NameInMap("uuid")
     public String uuid;
 
     /**
-     * <p>工作空间</p>
+     * <p>The ID of the workspace that contains the alert rule.</p>
      */
     @NameInMap("workspace")
     public String workspace;
@@ -130,6 +178,14 @@ public class AlertRuleV2 extends TeaModel {
         return this.contentTemplate;
     }
 
+    public AlertRuleV2 setCoveredSeverityLevels(String coveredSeverityLevels) {
+        this.coveredSeverityLevels = coveredSeverityLevels;
+        return this;
+    }
+    public String getCoveredSeverityLevels() {
+        return this.coveredSeverityLevels;
+    }
+
     public AlertRuleV2 setCreatedAt(String createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -144,6 +200,14 @@ public class AlertRuleV2 extends TeaModel {
     }
     public DatasourceConfigUnified getDatasourceConfig() {
         return this.datasourceConfig;
+    }
+
+    public AlertRuleV2 setDatasourceType(String datasourceType) {
+        this.datasourceType = datasourceType;
+        return this;
+    }
+    public String getDatasourceType() {
+        return this.datasourceType;
     }
 
     public AlertRuleV2 setDisplayName(String displayName) {
@@ -176,6 +240,30 @@ public class AlertRuleV2 extends TeaModel {
     }
     public NotifyConfigUnified getNotifyConfig() {
         return this.notifyConfig;
+    }
+
+    public AlertRuleV2 setObserveResourceGlobalScope(Boolean observeResourceGlobalScope) {
+        this.observeResourceGlobalScope = observeResourceGlobalScope;
+        return this;
+    }
+    public Boolean getObserveResourceGlobalScope() {
+        return this.observeResourceGlobalScope;
+    }
+
+    public AlertRuleV2 setObserveResourceList(String observeResourceList) {
+        this.observeResourceList = observeResourceList;
+        return this;
+    }
+    public String getObserveResourceList() {
+        return this.observeResourceList;
+    }
+
+    public AlertRuleV2 setObserveResourceType(String observeResourceType) {
+        this.observeResourceType = observeResourceType;
+        return this;
+    }
+    public String getObserveResourceType() {
+        return this.observeResourceType;
     }
 
     public AlertRuleV2 setQueryConfig(QueryConfigUnified queryConfig) {

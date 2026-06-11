@@ -7,10 +7,29 @@ public class DescribeMetricMetaListRequest extends TeaModel {
     @NameInMap("keywords")
     public String keywords;
 
+    /**
+     * <p>The labels used to filter resources. The following labels are supported:</p>
+     * <ul>
+     * <li><p><code>metricCategory</code>: The metric category.</p>
+     * </li>
+     * <li><p><code>alertEnable</code>: Indicates whether to enable alerts.</p>
+     * </li>
+     * <li><p><code>alertUnit</code>: The recommended unit for alerts.</p>
+     * </li>
+     * <li><p><code>unitFactor</code>: The unit conversion factor.</p>
+     * </li>
+     * <li><p><code>minAlertPeriod</code>: The minimum alert period.</p>
+     * </li>
+     * <li><p><code>productCategory</code>: The product category.</p>
+     * </li>
+     * </ul>
+     */
     @NameInMap("labels")
     public java.util.List<DescribeMetricMetaListRequestLabels> labels;
 
     /**
+     * <p>The source of the metadata. Valid values: <code>CMS</code> for CloudMonitor metrics and <code>PROM_BASIC</code> for basic Prometheus metrics.</p>
+     * 
      * <strong>example:</strong>
      * <p>CMS</p>
      */
@@ -18,6 +37,8 @@ public class DescribeMetricMetaListRequest extends TeaModel {
     public String metaFormat;
 
     /**
+     * <p>The name of the metric.</p>
+     * 
      * <strong>example:</strong>
      * <p>CPUUtilization</p>
      */
@@ -25,6 +46,8 @@ public class DescribeMetricMetaListRequest extends TeaModel {
     public String metricName;
 
     /**
+     * <p>The namespace of the product.</p>
+     * 
      * <strong>example:</strong>
      * <p>acs_ecs_dashboard</p>
      */
@@ -32,6 +55,8 @@ public class DescribeMetricMetaListRequest extends TeaModel {
     public String namespace;
 
     /**
+     * <p>The number of the page to return. Default value: <code>1</code>.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -39,6 +64,8 @@ public class DescribeMetricMetaListRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries to return on each page. Default value: <code>2000</code>.</p>
+     * 
      * <strong>example:</strong>
      * <p>2000</p>
      */
@@ -108,6 +135,8 @@ public class DescribeMetricMetaListRequest extends TeaModel {
 
     public static class DescribeMetricMetaListRequestLabels extends TeaModel {
         /**
+         * <p>The key of the label.</p>
+         * 
          * <strong>example:</strong>
          * <p>productCategory</p>
          */
@@ -115,6 +144,8 @@ public class DescribeMetricMetaListRequest extends TeaModel {
         public String name;
 
         /**
+         * <p>The value of the label.</p>
+         * 
          * <strong>example:</strong>
          * <p>ecs</p>
          */

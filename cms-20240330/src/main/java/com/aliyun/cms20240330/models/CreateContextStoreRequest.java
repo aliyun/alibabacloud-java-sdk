@@ -4,10 +4,14 @@ package com.aliyun.cms20240330.models;
 import com.aliyun.tea.*;
 
 public class CreateContextStoreRequest extends TeaModel {
+    /**
+     * <p>The configuration.</p>
+     */
     @NameInMap("config")
     public CreateContextStoreRequestConfig config;
 
     /**
+     * <p>The name of the context store.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -17,6 +21,7 @@ public class CreateContextStoreRequest extends TeaModel {
     public String contextStoreName;
 
     /**
+     * <p>The type of the context store.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,10 +30,15 @@ public class CreateContextStoreRequest extends TeaModel {
     @NameInMap("contextType")
     public String contextType;
 
+    /**
+     * <p>The properties of the dataset.</p>
+     */
     @NameInMap("dataset")
     public CreateContextStoreRequestDataset dataset;
 
     /**
+     * <p>The description of the context store.</p>
+     * 
      * <strong>example:</strong>
      * <p>desc</p>
      */
@@ -82,6 +92,8 @@ public class CreateContextStoreRequest extends TeaModel {
 
     public static class CreateContextStoreRequestConfigSource extends TeaModel {
         /**
+         * <p>The name of the Log Service Logstore.</p>
+         * 
          * <strong>example:</strong>
          * <p>sls-test-logstore</p>
          */
@@ -89,6 +101,8 @@ public class CreateContextStoreRequest extends TeaModel {
         public String logstore;
 
         /**
+         * <p>The name of the Log Service project.</p>
+         * 
          * <strong>example:</strong>
          * <p>sls-test-project</p>
          */
@@ -96,6 +110,7 @@ public class CreateContextStoreRequest extends TeaModel {
         public String project;
 
         /**
+         * <p>The effective start time.</p>
          * <p>Use the UTC time format: yyyy-MM-ddTHH:mm:ssZ</p>
          * 
          * <strong>example:</strong>
@@ -136,9 +151,15 @@ public class CreateContextStoreRequest extends TeaModel {
     }
 
     public static class CreateContextStoreRequestConfig extends TeaModel {
+        /**
+         * <p>The metadata fields.</p>
+         */
         @NameInMap("metadataField")
         public java.util.Map<String, String> metadataField;
 
+        /**
+         * <p>The configuration source.</p>
+         */
         @NameInMap("source")
         public CreateContextStoreRequestConfigSource source;
 
@@ -167,6 +188,8 @@ public class CreateContextStoreRequest extends TeaModel {
 
     public static class CreateContextStoreRequestDataset extends TeaModel {
         /**
+         * <p>The name of the dataset.</p>
+         * 
          * <strong>example:</strong>
          * <p>test_dataset</p>
          */

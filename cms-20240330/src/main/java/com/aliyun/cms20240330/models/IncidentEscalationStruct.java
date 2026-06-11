@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class IncidentEscalationStruct extends TeaModel {
     /**
-     * <p>Creation time.</p>
+     * <p>The time when the event escalation was created.</p>
      * 
      * <strong>example:</strong>
      * <p>2025-03-11T08:21:58Z</p>
@@ -14,16 +14,16 @@ public class IncidentEscalationStruct extends TeaModel {
     public Long createTime;
 
     /**
-     * <p>Description.</p>
+     * <p>The description.</p>
      * 
      * <strong>example:</strong>
-     * <p>When an alert is not acknowledged, notify the operations team, on-duty manager, and CTO sequentially.</p>
+     * <p>当告警未响应时，依次通知运维团队、值班经理、CTO</p>
      */
     @NameInMap("description")
     public String description;
 
     /**
-     * <p>Event Escalation ID.</p>
+     * <p>The ID of the event escalation.</p>
      * 
      * <strong>example:</strong>
      * <p>52631388567</p>
@@ -32,7 +32,7 @@ public class IncidentEscalationStruct extends TeaModel {
     public String incidentEscalationId;
 
     /**
-     * <p>Modification time.</p>
+     * <p>The time when the event escalation was last modified.</p>
      * 
      * <strong>example:</strong>
      * <p>2025-03-11T08:21:58Z</p>
@@ -41,16 +41,16 @@ public class IncidentEscalationStruct extends TeaModel {
     public Long modifyTime;
 
     /**
-     * <p>Name.</p>
+     * <p>The name.</p>
      * 
      * <strong>example:</strong>
-     * <p>Production Environment Alert Escalation Policy.</p>
+     * <p>生产环境告警升级策略</p>
      */
     @NameInMap("name")
     public String name;
 
     /**
-     * <p>Region ID.</p>
+     * <p>The region ID.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -59,13 +59,13 @@ public class IncidentEscalationStruct extends TeaModel {
     public String regionId;
 
     /**
-     * <p>Phase.</p>
+     * <p>The stages.</p>
      */
     @NameInMap("stage")
     public java.util.List<IncidentEscalationStageStruct> stage;
 
     /**
-     * <p>Workspace.</p>
+     * <p>The workspace.</p>
      * 
      * <strong>example:</strong>
      * <p>workspace-test</p>

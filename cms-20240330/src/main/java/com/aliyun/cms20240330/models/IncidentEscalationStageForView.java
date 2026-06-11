@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class IncidentEscalationStageForView extends TeaModel {
     /**
+     * <p>The number of loop notifications.</p>
+     * 
      * <strong>example:</strong>
      * <p>3</p>
      */
@@ -12,16 +14,22 @@ public class IncidentEscalationStageForView extends TeaModel {
     public Integer cycleNotifyCount;
 
     /**
+     * <p>The loop notification interval.</p>
+     * 
      * <strong>example:</strong>
      * <p>5</p>
      */
     @NameInMap("cycleNotifyInterval")
     public Integer cycleNotifyInterval;
 
+    /**
+     * <p>The effective time range.</p>
+     */
     @NameInMap("effectTimeRange")
     public EffectTimeRange effectTimeRange;
 
     /**
+     * <p>The stage index.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -30,10 +38,15 @@ public class IncidentEscalationStageForView extends TeaModel {
     @NameInMap("index")
     public Integer index;
 
+    /**
+     * <p>The list of notification channels.</p>
+     */
     @NameInMap("notifyChannels")
     public java.util.List<NotifyChannel> notifyChannels;
 
     /**
+     * <p>The target event state.</p>
+     * 
      * <strong>example:</strong>
      * <p>&quot;Open&quot;</p>
      */
@@ -41,6 +54,8 @@ public class IncidentEscalationStageForView extends TeaModel {
     public String targetIncidentState;
 
     /**
+     * <p>The trigger delay time.</p>
+     * 
      * <strong>example:</strong>
      * <p>30</p>
      */

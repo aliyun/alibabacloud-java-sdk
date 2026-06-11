@@ -5,23 +5,34 @@ import com.aliyun.tea.*;
 
 public class AlertRuleSlsQueryJoin extends TeaModel {
     /**
-     * <p>List of connection conditions.</p>
+     * <p>The list of join conditions.</p>
      */
     @NameInMap("conditions")
     public java.util.List<AlertRuleSlsQueryJoinConditions> conditions;
 
     /**
-     * <p>Set operation type.
-     * CrossJoin: Cartesian product
-     * FullJoin: Full outer join
-     * InnerJoin: Inner join
-     * LeftExclude: Left anti join
-     * RightExclude: Right anti join
-     * LeftJoin: Left outer join
-     * RightJoin: Right outer join
-     * NoJoin: No merge
-     * Concat: Concatenation</p>
-     * <p>See also: <a href="https://help.aliyun.com/zh/sls/user-guide/set-query-statistics-statement">https://help.aliyun.com/zh/sls/user-guide/set-query-statistics-statement</a></p>
+     * <p>The type of the collection operation.</p>
+     * <ul>
+     * <li><p>CrossJoin: The Cartesian product.</p>
+     * </li>
+     * <li><p>FullJoin: The full join.</p>
+     * </li>
+     * <li><p>InnerJoin: The inner join.</p>
+     * </li>
+     * <li><p>LeftExclude: The left exclusion.</p>
+     * </li>
+     * <li><p>RightExclude: The right exclusion.</p>
+     * </li>
+     * <li><p>LeftJoin: The left join.</p>
+     * </li>
+     * <li><p>RightJoin: The right join.</p>
+     * </li>
+     * <li><p>NoJoin: No merge operation is performed.</p>
+     * </li>
+     * <li><p>Concat: Concatenation.</p>
+     * </li>
+     * </ul>
+     * <p>For more information, see https\://www\.alibabacloud.com/help/en/sls/user-guide/set-operations.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -53,7 +64,7 @@ public class AlertRuleSlsQueryJoin extends TeaModel {
 
     public static class AlertRuleSlsQueryJoinConditions extends TeaModel {
         /**
-         * <p>Left-hand operand of the condition, formatted as $<query_idx>.<result_set_field_name>.</p>
+         * <p>The left operand of the condition. The format is $\<query_idx>.\<field_name_in_result_set>.</p>
          * 
          * <strong>example:</strong>
          * <p>$0.<strong>topic</strong></p>
@@ -62,7 +73,7 @@ public class AlertRuleSlsQueryJoin extends TeaModel {
         public String firstField;
 
         /**
-         * <p>Comparison operator; valid values: &lt;, &gt;, ==, !=, &lt;=, &gt;=.</p>
+         * <p>The comparison operator. Valid values are &lt;, &gt;, ==, !=, &lt;=, and &gt;=.</p>
          * 
          * <strong>example:</strong>
          * <p>==</p>
@@ -71,7 +82,7 @@ public class AlertRuleSlsQueryJoin extends TeaModel {
         public String oper;
 
         /**
-         * <p>Right-hand operand of the condition, formatted as $<query_idx>.<result_set_field_name>.</p>
+         * <p>The right operand of the condition. The format is $\<query_idx>.\<field_name_in_result_set>.</p>
          * 
          * <strong>example:</strong>
          * <p>$0.<strong>topic</strong></p>

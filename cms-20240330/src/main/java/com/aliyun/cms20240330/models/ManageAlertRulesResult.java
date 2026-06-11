@@ -4,17 +4,20 @@ package com.aliyun.cms20240330.models;
 import com.aliyun.tea.*;
 
 public class ManageAlertRulesResult extends TeaModel {
+    /**
+     * <p>The details of the created or updated alert rule.</p>
+     */
     @NameInMap("alertRule")
     public AlertRuleV2 alertRule;
 
     /**
-     * <p>成功删除的规则数量</p>
+     * <p>The number of deleted alert rules.</p>
      */
     @NameInMap("deletedCount")
     public Integer deletedCount;
 
     /**
-     * <p>成功删除的规则 UUID 列表</p>
+     * <p>A list of UUIDs of deleted alert rules.</p>
      */
     @NameInMap("deletedUuidList")
     public java.util.List<String> deletedUuidList;

@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class AlertRuleTimeSpan extends TeaModel {
     /**
-     * <p>Day of the week.</p>
+     * <p>The days of the week.</p>
      */
     @NameInMap("dayOfWeek")
     public java.util.List<Integer> dayOfWeek;
 
     /**
-     * <p>End time, in HH:mm format.</p>
+     * <p>The end time. The format is HH:mm.</p>
      * 
      * <strong>example:</strong>
      * <p>23:00</p>
@@ -20,7 +20,7 @@ public class AlertRuleTimeSpan extends TeaModel {
     public String endTime;
 
     /**
-     * <p>Default time zone is Beijing Time: +0800.</p>
+     * <p>The default value is +0800 (UTC+8).</p>
      * 
      * <strong>example:</strong>
      * <p>+0800</p>
@@ -29,7 +29,7 @@ public class AlertRuleTimeSpan extends TeaModel {
     public String gmtOffset;
 
     /**
-     * <p>Start time, in HH:mm format.</p>
+     * <p>The start time. The format is HH:mm.</p>
      * 
      * <strong>example:</strong>
      * <p>09:00</p>

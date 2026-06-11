@@ -5,16 +5,16 @@ import com.aliyun.tea.*;
 
 public class IncidentResourceStruct extends TeaModel {
     /**
-     * <p>Description information.</p>
+     * <p>The description.</p>
      * 
      * <strong>example:</strong>
-     * <p>Production environment web server.</p>
+     * <p>生产环境 Web 服务器</p>
      */
     @NameInMap("description")
     public String description;
 
     /**
-     * <p>Incident ID.</p>
+     * <p>The event ID.</p>
      * 
      * <strong>example:</strong>
      * <p>incident-001</p>
@@ -23,7 +23,7 @@ public class IncidentResourceStruct extends TeaModel {
     public String incidentId;
 
     /**
-     * <p>The unique ID of this resource in the event.</p>
+     * <p>The unique ID of the resource in the event.</p>
      * 
      * <strong>example:</strong>
      * <p>res-001</p>
@@ -32,13 +32,13 @@ public class IncidentResourceStruct extends TeaModel {
     public String incidentResourceId;
 
     /**
-     * <p>Event resource details object.</p>
+     * <p>The details object for the event resource.</p>
      */
     @NameInMap("resource")
     public IncidentResourceDetail resource;
 
     /**
-     * <p>Source.</p>
+     * <p>The source.</p>
      * 
      * <strong>example:</strong>
      * <p>cloudmonitor</p>
@@ -47,7 +47,7 @@ public class IncidentResourceStruct extends TeaModel {
     public String source;
 
     /**
-     * <p>Time.</p>
+     * <p>The timestamp.</p>
      * 
      * <strong>example:</strong>
      * <p>1741234567890</p>
@@ -56,7 +56,7 @@ public class IncidentResourceStruct extends TeaModel {
     public Long time;
 
     /**
-     * <p>User ID.</p>
+     * <p>The user ID.</p>
      * 
      * <strong>example:</strong>
      * <p>user-12345</p>

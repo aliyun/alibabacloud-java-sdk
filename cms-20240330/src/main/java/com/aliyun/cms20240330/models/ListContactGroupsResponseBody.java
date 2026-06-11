@@ -4,10 +4,15 @@ package com.aliyun.cms20240330.models;
 import com.aliyun.tea.*;
 
 public class ListContactGroupsResponseBody extends TeaModel {
+    /**
+     * <p>A list of contact groups.</p>
+     */
     @NameInMap("contactGroups")
     public java.util.List<ListContactGroupsResponseBodyContactGroups> contactGroups;
 
     /**
+     * <p>The returned page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -15,6 +20,8 @@ public class ListContactGroupsResponseBody extends TeaModel {
     public Long pageNumber;
 
     /**
+     * <p>The number of entries returned per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -22,7 +29,7 @@ public class ListContactGroupsResponseBody extends TeaModel {
     public Long pageSize;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>8FDE2569-626B-5176-9844-28877A*****</p>
@@ -31,6 +38,8 @@ public class ListContactGroupsResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total number of entries.</p>
+     * 
      * <strong>example:</strong>
      * <p>15</p>
      */
@@ -84,16 +93,26 @@ public class ListContactGroupsResponseBody extends TeaModel {
 
     public static class ListContactGroupsResponseBodyContactGroups extends TeaModel {
         /**
+         * <p>The contact group ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
         @NameInMap("contactGroupId")
         public String contactGroupId;
 
+        /**
+         * <p>The contact IDs in the group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;Demo meeting&quot;]</p>
+         */
         @NameInMap("contactIds")
         public java.util.List<String> contactIds;
 
         /**
+         * <p>The name of the contact group.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */

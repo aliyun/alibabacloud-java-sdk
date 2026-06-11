@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class IncidentTimelineForView extends TeaModel {
     /**
+     * <p>The type of status change.</p>
+     * 
      * <strong>example:</strong>
      * <p>&quot;Open -&gt; In Progress&quot;</p>
      */
@@ -12,6 +14,8 @@ public class IncidentTimelineForView extends TeaModel {
     public String changeType;
 
     /**
+     * <p>The content of the timeline event.</p>
+     * 
      * <strong>example:</strong>
      * <p>&quot;{&quot;action&quot;:&quot;restart&quot;,&quot;resourceId&quot;:&quot;i-bp123456&quot;}&quot;</p>
      */
@@ -19,16 +23,23 @@ public class IncidentTimelineForView extends TeaModel {
     public Object content;
 
     /**
+     * <p>The unique identifier of the incident.</p>
+     * 
      * <strong>example:</strong>
      * <p>&quot;a1b2c3d4-e5f6-7890-1234-567890abcdef&quot;</p>
      */
     @NameInMap("incidentUuid")
     public String incidentUuid;
 
+    /**
+     * <p>Information about the operator.</p>
+     */
     @NameInMap("operator")
     public ContactForIncidentView operator;
 
     /**
+     * <p>The UNIX timestamp when the timeline event occurred.</p>
+     * 
      * <strong>example:</strong>
      * <p>1743876000000</p>
      */
@@ -36,16 +47,26 @@ public class IncidentTimelineForView extends TeaModel {
     public Long time;
 
     /**
+     * <p>The unique identifier of the timeline record.</p>
+     * 
      * <strong>example:</strong>
      * <p>&quot;x1y2z3a4-b5c6-d7e8-f9g0-h1i2j3k4l5m6&quot;</p>
      */
     @NameInMap("timelineUuid")
     public String timelineUuid;
 
+    /**
+     * <p>The title of the timeline event.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>&quot;故障已升级至值班主管&quot;</p>
+     */
     @NameInMap("title")
     public String title;
 
     /**
+     * <p>The type of the timeline event.</p>
+     * 
      * <strong>example:</strong>
      * <p>&quot;Comment&quot;</p>
      */
@@ -53,6 +74,8 @@ public class IncidentTimelineForView extends TeaModel {
     public String type;
 
     /**
+     * <p>The user ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>&quot;user-abc123&quot;</p>
      */
@@ -60,6 +83,8 @@ public class IncidentTimelineForView extends TeaModel {
     public String userId;
 
     /**
+     * <p>The workspace.</p>
+     * 
      * <strong>example:</strong>
      * <p>&quot;ws-xyz789&quot;</p>
      */

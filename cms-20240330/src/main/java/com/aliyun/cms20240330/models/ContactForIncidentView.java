@@ -5,12 +5,20 @@ import com.aliyun.tea.*;
 
 public class ContactForIncidentView extends TeaModel {
     /**
+     * <p>The contact ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>&quot;contact-123456&quot;</p>
      */
     @NameInMap("contactId")
     public String contactId;
 
+    /**
+     * <p>The contact name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>&quot;张三&quot;</p>
+     */
     @NameInMap("name")
     public String name;
 

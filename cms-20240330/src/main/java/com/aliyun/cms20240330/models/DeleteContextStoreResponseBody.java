@@ -4,6 +4,12 @@ package com.aliyun.cms20240330.models;
 import com.aliyun.tea.*;
 
 public class DeleteContextStoreResponseBody extends TeaModel {
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>8FDE2569-626B-5176-9844-28877A*****</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 

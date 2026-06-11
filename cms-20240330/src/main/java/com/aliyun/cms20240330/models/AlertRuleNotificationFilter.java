@@ -4,24 +4,45 @@ package com.aliyun.cms20240330.models;
 import com.aliyun.tea.*;
 
 public class AlertRuleNotificationFilter extends TeaModel {
+    /**
+     * <p>A list of contact IDs for filtering.</p>
+     */
     @NameInMap("contacts")
     public java.util.List<String> contacts;
 
+    /**
+     * <p>A list of custom webhook IDs for filtering.</p>
+     */
     @NameInMap("customWebhooks")
     public java.util.List<String> customWebhooks;
 
+    /**
+     * <p>A list of DingTalk webhook IDs for filtering.</p>
+     */
     @NameInMap("dingWebhooks")
     public java.util.List<String> dingWebhooks;
 
+    /**
+     * <p>A list of Lark webhook IDs for filtering.</p>
+     */
     @NameInMap("fsWebhooks")
     public java.util.List<String> fsWebhooks;
 
+    /**
+     * <p>A list of contact group IDs for filtering.</p>
+     */
     @NameInMap("groups")
     public java.util.List<String> groups;
 
+    /**
+     * <p>A list of Slack webhook IDs for filtering.</p>
+     */
     @NameInMap("slackWebhooks")
     public java.util.List<String> slackWebhooks;
 
+    /**
+     * <p>A list of WeChat webhook IDs for filtering.</p>
+     */
     @NameInMap("wxWebhooks")
     public java.util.List<String> wxWebhooks;
 

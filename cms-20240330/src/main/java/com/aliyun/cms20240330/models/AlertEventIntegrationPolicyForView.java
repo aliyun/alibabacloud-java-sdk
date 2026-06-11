@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class AlertEventIntegrationPolicyForView extends TeaModel {
     /**
-     * <p>UUID</p>
+     * <p>The universally unique identifier (UUID).</p>
      * 
      * <strong>example:</strong>
      * <p>123123123</p>
@@ -14,12 +14,18 @@ public class AlertEventIntegrationPolicyForView extends TeaModel {
     public String alertEventIntegrationPolicyId;
 
     /**
+     * <p>The name.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>集成名</p>
      */
     @NameInMap("alertEventIntegrationPolicyName")
     public String alertEventIntegrationPolicyName;
 
     /**
+     * <p>The time when the policy was created.</p>
+     * 
      * <strong>example:</strong>
      * <p>2025-03-11T08:21:58Z</p>
      */
@@ -27,6 +33,8 @@ public class AlertEventIntegrationPolicyForView extends TeaModel {
     public String createTime;
 
     /**
+     * <p>The description.</p>
+     * 
      * <strong>example:</strong>
      * <p>workspace test</p>
      */
@@ -34,16 +42,23 @@ public class AlertEventIntegrationPolicyForView extends TeaModel {
     public String description;
 
     /**
+     * <p>Indicates whether the policy is enabled.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
     @NameInMap("enable")
     public Boolean enable;
 
+    /**
+     * <p>The filter configuration.</p>
+     */
     @NameInMap("filterSetting")
     public FilterSetting filterSetting;
 
     /**
+     * <p>The subscription settings.</p>
+     * 
      * <strong>example:</strong>
      * <p>{&quot;region&quot;:&quot;cn-hangzhou&quot;}</p>
      */
@@ -51,16 +66,23 @@ public class AlertEventIntegrationPolicyForView extends TeaModel {
     public String integrationSetting;
 
     /**
+     * <p>The key for the integration\&quot;s reporting endpoint.</p>
+     * 
      * <strong>example:</strong>
      * <p>10-16818f1445e10a1d012922b285bfb334</p>
      */
     @NameInMap("token")
     public String token;
 
+    /**
+     * <p>The transformation settings.</p>
+     */
     @NameInMap("transformerSetting")
     public java.util.List<TransformAction> transformerSetting;
 
     /**
+     * <p>The type.</p>
+     * 
      * <strong>example:</strong>
      * <p>ALERT_CUSTOM</p>
      */
@@ -68,6 +90,8 @@ public class AlertEventIntegrationPolicyForView extends TeaModel {
     public String type;
 
     /**
+     * <p>The time when the policy was last updated.</p>
+     * 
      * <strong>example:</strong>
      * <p>2024-12-16T02:00:23Z</p>
      */
@@ -75,6 +99,8 @@ public class AlertEventIntegrationPolicyForView extends TeaModel {
     public String updateTime;
 
     /**
+     * <p>The user ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>123123</p>
      */
@@ -82,7 +108,7 @@ public class AlertEventIntegrationPolicyForView extends TeaModel {
     public String userId;
 
     /**
-     * <p>workspace</p>
+     * <p>The workspace.</p>
      * 
      * <strong>example:</strong>
      * <p>workspace-test</p>

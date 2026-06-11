@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ScheduleConfigUnified extends TeaModel {
     /**
-     * <p>调度间隔（秒），type=FIXED 时使用</p>
+     * <p>The interval between scheduled runs, in seconds.</p>
      */
     @NameInMap("intervalSecs")
     public Integer intervalSecs;
 
     /**
-     * <p>调度类型</p>
+     * <p>The type of the schedule.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("type")

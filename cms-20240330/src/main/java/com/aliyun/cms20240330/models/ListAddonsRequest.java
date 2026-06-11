@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListAddonsRequest extends TeaModel {
     /**
+     * <p>The language. Valid values: zh and en. The default value is zh.</p>
+     * 
      * <strong>example:</strong>
      * <p>zh</p>
      */
@@ -12,16 +14,23 @@ public class ListAddonsRequest extends TeaModel {
     public String aliyunLang;
 
     /**
+     * <p>Tag filtering.</p>
+     * 
      * <strong>example:</strong>
      * <p>database</p>
      */
     @NameInMap("category")
     public String category;
 
+    /**
+     * <p>Specifies whether to use regular expressions for the search. The default value is false.</p>
+     */
     @NameInMap("regexp")
     public Boolean regexp;
 
     /**
+     * <p>The search keyword. You can search for add-ons by name, description, or keyword.</p>
+     * 
      * <strong>example:</strong>
      * <p>105095</p>
      */

@@ -4,9 +4,15 @@ package com.aliyun.cms20240330.models;
 import com.aliyun.tea.*;
 
 public class LabelMatcher extends TeaModel {
+    /**
+     * <p>The label key to match.</p>
+     */
     @NameInMap("key")
     public String key;
 
+    /**
+     * <p>The label value to match.</p>
+     */
     @NameInMap("value")
     public String value;
 

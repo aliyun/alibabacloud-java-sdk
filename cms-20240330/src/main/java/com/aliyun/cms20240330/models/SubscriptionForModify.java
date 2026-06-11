@@ -17,7 +17,7 @@ public class SubscriptionForModify extends TeaModel {
     public String description;
 
     /**
-     * <p>Filtering settings.</p>
+     * <p>Filter settings.</p>
      */
     @NameInMap("filterSetting")
     public FilterSetting filterSetting;
@@ -42,7 +42,7 @@ public class SubscriptionForModify extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>Test subscription.</p>
+     * <p>测试订阅</p>
      */
     @NameInMap("subscriptionName")
     public String subscriptionName;
@@ -143,7 +143,7 @@ public class SubscriptionForModify extends TeaModel {
 
     public static class SubscriptionForModifyPushingSetting extends TeaModel {
         /**
-         * <p>Alert push action plan ID list.</p>
+         * <p>A list of alert push action plan IDs.</p>
          */
         @NameInMap("alertActionIds")
         public java.util.List<String> alertActionIds;
@@ -158,7 +158,7 @@ public class SubscriptionForModify extends TeaModel {
         public String responsePlanId;
 
         /**
-         * <p>Action integration plan ID list.</p>
+         * <p>A list of action integration plan IDs.</p>
          */
         @NameInMap("restoreActionIds")
         public java.util.List<String> restoreActionIds;

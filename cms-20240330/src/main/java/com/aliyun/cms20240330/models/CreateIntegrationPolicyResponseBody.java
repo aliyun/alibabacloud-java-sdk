@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateIntegrationPolicyResponseBody extends TeaModel {
     /**
-     * <p>Whether it is created.</p>
+     * <p>Indicates whether the policy was created.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -14,13 +14,13 @@ public class CreateIntegrationPolicyResponseBody extends TeaModel {
     public Boolean created;
 
     /**
-     * <p>Uploaded policy.</p>
+     * <p>The upload policy.</p>
      */
     @NameInMap("policy")
     public CreateIntegrationPolicyResponseBodyPolicy policy;
 
     /**
-     * <p>Request ID.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>CD8BA7D6-995D-578D-9941-78B0FECD14B5</p>
@@ -59,7 +59,7 @@ public class CreateIntegrationPolicyResponseBody extends TeaModel {
 
     public static class CreateIntegrationPolicyResponseBodyPolicy extends TeaModel {
         /**
-         * <p>Entity group ID.</p>
+         * <p>The entity group ID.</p>
          * 
          * <strong>example:</strong>
          * <p>eg-b79f65d11fb94e779867cf937c3a3002</p>
@@ -68,7 +68,7 @@ public class CreateIntegrationPolicyResponseBody extends TeaModel {
         public String entityGroupId;
 
         /**
-         * <p>Policy ID.</p>
+         * <p>The policy ID.</p>
          * 
          * <strong>example:</strong>
          * <p>policy-14c8e9a29b0a46da843f8781471062ff</p>
@@ -77,7 +77,7 @@ public class CreateIntegrationPolicyResponseBody extends TeaModel {
         public String policyId;
 
         /**
-         * <p>Policy name.</p>
+         * <p>The policy name.</p>
          * 
          * <strong>example:</strong>
          * <p>metrics-inner-manage</p>
@@ -86,7 +86,7 @@ public class CreateIntegrationPolicyResponseBody extends TeaModel {
         public String policyName;
 
         /**
-         * <p>Policy type.</p>
+         * <p>The policy type.</p>
          * 
          * <strong>example:</strong>
          * <p>CS</p>
@@ -95,7 +95,7 @@ public class CreateIntegrationPolicyResponseBody extends TeaModel {
         public String policyType;
 
         /**
-         * <p>Region ID.</p>
+         * <p>The region.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-heyuan</p>
@@ -104,7 +104,7 @@ public class CreateIntegrationPolicyResponseBody extends TeaModel {
         public String regionId;
 
         /**
-         * <p>User ID.</p>
+         * <p>The user ID.</p>
          * 
          * <strong>example:</strong>
          * <p>u1234567</p>
@@ -113,7 +113,7 @@ public class CreateIntegrationPolicyResponseBody extends TeaModel {
         public String userId;
 
         /**
-         * <p>The workspace where the Policy resides.</p>
+         * <p>The workspace where the policy resides.</p>
          * 
          * <strong>example:</strong>
          * <p>prometheus</p>

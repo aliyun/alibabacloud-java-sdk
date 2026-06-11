@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class QueryAlertRulesResult extends TeaModel {
     /**
-     * <p>告警规则列表</p>
+     * <p>The list of alert rules for the current page.</p>
      */
     @NameInMap("alertRules")
     public java.util.List<AlertRuleV2> alertRules;
 
     /**
-     * <p>符合查询条件的总告警规则数</p>
+     * <p>The total number of alert rules that match the query.</p>
      */
     @NameInMap("totalCount")
     public Long totalCount;

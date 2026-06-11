@@ -5,14 +5,14 @@ import com.aliyun.tea.*;
 
 public class ApmThresholdConfig extends TeaModel {
     /**
-     * <p>告警等级</p>
+     * <p>The severity of the alert.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("severity")
     public String severity;
 
     /**
-     * <p>阈值</p>
+     * <p>The metric value that triggers the alert.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("threshold")

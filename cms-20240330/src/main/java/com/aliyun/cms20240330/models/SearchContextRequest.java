@@ -4,10 +4,15 @@ package com.aliyun.cms20240330.models;
 import com.aliyun.tea.*;
 
 public class SearchContextRequest extends TeaModel {
+    /**
+     * <p>Filter conditions</p>
+     */
     @NameInMap("filter")
     public java.util.Map<String, ?> filter;
 
     /**
+     * <p>Whether to format</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -15,6 +20,8 @@ public class SearchContextRequest extends TeaModel {
     public Boolean formatted;
 
     /**
+     * <p>Limit the number of items returned</p>
+     * 
      * <strong>example:</strong>
      * <p>100</p>
      */
@@ -22,6 +29,7 @@ public class SearchContextRequest extends TeaModel {
     public Integer limit;
 
     /**
+     * <p>Query content</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -31,6 +39,8 @@ public class SearchContextRequest extends TeaModel {
     public String query;
 
     /**
+     * <p>Retrieval option</p>
+     * 
      * <strong>example:</strong>
      * <p>reranker,llm_rank</p>
      */
@@ -38,6 +48,8 @@ public class SearchContextRequest extends TeaModel {
     public String retrievalOption;
 
     /**
+     * <p>Similarity threshold</p>
+     * 
      * <strong>example:</strong>
      * <p>0.3</p>
      */

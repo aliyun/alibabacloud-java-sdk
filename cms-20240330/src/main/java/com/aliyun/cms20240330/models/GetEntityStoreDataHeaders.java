@@ -8,7 +8,7 @@ public class GetEntityStoreDataHeaders extends TeaModel {
     public java.util.Map<String, String> commonHeaders;
 
     /**
-     * <p>Content encoding type for the compression algorithm</p>
+     * <p>The content encoding type of the compression algorithm.</p>
      * 
      * <strong>example:</strong>
      * <p>gzip</p>

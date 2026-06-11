@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class IncidentEscalationPolicyForModify extends TeaModel {
     /**
+     * <p>The description.</p>
+     * 
      * <strong>example:</strong>
      * <p>workspace api monitor create test</p>
      */
@@ -12,16 +14,22 @@ public class IncidentEscalationPolicyForModify extends TeaModel {
     public String description;
 
     /**
+     * <p>Indicates whether the policy is enabled.</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
     @NameInMap("enable")
     public Boolean enable;
 
+    /**
+     * <p>The list of escalation stages. This list defines multiple progressive escalation steps. Each stage contains trigger conditions and notification targets.</p>
+     */
     @NameInMap("escalationStageList")
     public java.util.List<IncidentEscalationStageForView> escalationStageList;
 
     /**
+     * <p>The name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

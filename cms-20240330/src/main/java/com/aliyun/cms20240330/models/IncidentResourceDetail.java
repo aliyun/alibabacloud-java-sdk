@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class IncidentResourceDetail extends TeaModel {
     /**
-     * <p>Additional resource identifier.</p>
+     * <p>An additional resource identifier.</p>
      * 
      * <strong>example:</strong>
      * <p>app-prod-web-01</p>
@@ -14,7 +14,7 @@ public class IncidentResourceDetail extends TeaModel {
     public String extraId;
 
     /**
-     * <p>Resource ID object.</p>
+     * <p>The resource ID object.</p>
      * 
      * <strong>example:</strong>
      * <p>{ &quot;type&quot;: &quot;ecs&quot;, &quot;id&quot;: &quot;i-bp1234567890abcdef&quot; }</p>
@@ -23,7 +23,7 @@ public class IncidentResourceDetail extends TeaModel {
     public java.util.Map<String, ?> resourceId;
 
     /**
-     * <p>Resource type, indicating which cloud product the resource belongs to.</p>
+     * <p>The resource type. This indicates the cloud product to which the resource belongs.</p>
      * 
      * <strong>example:</strong>
      * <p>ecs</p>

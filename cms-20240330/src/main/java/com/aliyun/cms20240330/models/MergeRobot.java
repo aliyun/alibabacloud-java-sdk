@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class MergeRobot extends TeaModel {
     /**
+     * <p>The time when the bot was created.</p>
+     * 
      * <strong>example:</strong>
      * <p>2025-03-11T08:21:58.789Z</p>
      */
     @NameInMap("createTime")
     public String createTime;
 
+    /**
+     * <p>The extension fields.</p>
+     */
     @NameInMap("extend")
     public MergeRobotExtend extend;
 
     /**
+     * <p>The time when the bot was last modified.</p>
+     * 
      * <strong>example:</strong>
      * <p>2025-03-11T08:21:58.789Z</p>
      */
@@ -22,6 +29,8 @@ public class MergeRobot extends TeaModel {
     public String gmtModified;
 
     /**
+     * <p>The unique identifier of the bot.</p>
+     * 
      * <strong>example:</strong>
      * <p>robot-12345</p>
      */
@@ -29,16 +38,26 @@ public class MergeRobot extends TeaModel {
     public String identifier;
 
     /**
+     * <p>The language preference.</p>
+     * 
      * <strong>example:</strong>
      * <p>zh-CN</p>
      */
     @NameInMap("lang")
     public String lang;
 
+    /**
+     * <p>The name of the bot.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>运维告警机器人</p>
+     */
     @NameInMap("name")
     public String name;
 
     /**
+     * <p>The source system of the bot.</p>
+     * 
      * <strong>example:</strong>
      * <p>dingtalk</p>
      */
@@ -46,6 +65,8 @@ public class MergeRobot extends TeaModel {
     public String source;
 
     /**
+     * <p>The type of the bot.</p>
+     * 
      * <strong>example:</strong>
      * <p>dingtalk</p>
      */
@@ -53,6 +74,8 @@ public class MergeRobot extends TeaModel {
     public String type;
 
     /**
+     * <p>The webhook address.</p>
+     * 
      * <strong>example:</strong>
      * <p><a href="https://oapi.dingtalk.com/robot/send?access_token=abc123">https://oapi.dingtalk.com/robot/send?access_token=abc123</a></p>
      */
@@ -138,6 +161,8 @@ public class MergeRobot extends TeaModel {
 
     public static class MergeRobotExtend extends TeaModel {
         /**
+         * <p>The card template.</p>
+         * 
          * <strong>example:</strong>
          * <p>incident-card-template</p>
          */
@@ -145,6 +170,8 @@ public class MergeRobot extends TeaModel {
         public String cardTemplate;
 
         /**
+         * <p>Specifies whether to enable the daily on-duty report.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -152,6 +179,8 @@ public class MergeRobot extends TeaModel {
         public Boolean dailyNoc;
 
         /**
+         * <p>The time for the daily on-duty report.</p>
+         * 
          * <strong>example:</strong>
          * <p>09:00</p>
          */
@@ -159,6 +188,8 @@ public class MergeRobot extends TeaModel {
         public String dailyNocTime;
 
         /**
+         * <p>The signature key for DingTalk.</p>
+         * 
          * <strong>example:</strong>
          * <p>abc123</p>
          */
@@ -166,6 +197,8 @@ public class MergeRobot extends TeaModel {
         public String dingSignKey;
 
         /**
+         * <p>Specifies whether to enable outbound requests.</p>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
@@ -173,6 +206,8 @@ public class MergeRobot extends TeaModel {
         public Boolean enableOutgoing;
 
         /**
+         * <p>The authentication token.</p>
+         * 
          * <strong>example:</strong>
          * <p>token-abc123</p>
          */

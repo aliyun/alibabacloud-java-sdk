@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class SearchMemoriesRequest extends TeaModel {
     /**
+     * <p>The agent ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>972772996913709056</p>
      */
@@ -12,16 +14,23 @@ public class SearchMemoriesRequest extends TeaModel {
     public String agentId;
 
     /**
+     * <p>The app ID assigned by the merchant.</p>
+     * 
      * <strong>example:</strong>
      * <p>mm_480d961a1b5e4efe84603f4cbc0f</p>
      */
     @NameInMap("appId")
     public String appId;
 
+    /**
+     * <p>The filter conditions.</p>
+     */
     @NameInMap("filters")
     public java.util.Map<String, ?> filters;
 
     /**
+     * <p>The query text.</p>
+     * 
      * <strong>example:</strong>
      * <p>What I like</p>
      */
@@ -29,6 +38,8 @@ public class SearchMemoriesRequest extends TeaModel {
     public String query;
 
     /**
+     * <p>Specifies whether to rerank the search results.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -43,6 +54,8 @@ public class SearchMemoriesRequest extends TeaModel {
     public String retrievalOption;
 
     /**
+     * <p>The run ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>test_session_001</p>
      */
@@ -50,6 +63,8 @@ public class SearchMemoriesRequest extends TeaModel {
     public String runId;
 
     /**
+     * <p>The search type.</p>
+     * 
      * <strong>example:</strong>
      * <p>experience</p>
      */
@@ -57,6 +72,8 @@ public class SearchMemoriesRequest extends TeaModel {
     public String searchType;
 
     /**
+     * <p>The similarity threshold.</p>
+     * 
      * <strong>example:</strong>
      * <p>0.3</p>
      */
@@ -64,6 +81,8 @@ public class SearchMemoriesRequest extends TeaModel {
     public Double threshold;
 
     /**
+     * <p>The number of top-K results to return.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -71,6 +90,8 @@ public class SearchMemoriesRequest extends TeaModel {
     public Integer topK;
 
     /**
+     * <p>The user ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>test_session_001</p>
      */

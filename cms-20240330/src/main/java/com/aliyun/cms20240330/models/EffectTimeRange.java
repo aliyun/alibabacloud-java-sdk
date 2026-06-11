@@ -4,10 +4,15 @@ package com.aliyun.cms20240330.models;
 import com.aliyun.tea.*;
 
 public class EffectTimeRange extends TeaModel {
+    /**
+     * <p>The values 0 to 6 indicate Sunday to Saturday.</p>
+     */
     @NameInMap("dayInWeek")
     public java.util.List<Integer> dayInWeek;
 
     /**
+     * <p>The end time in minutes.</p>
+     * 
      * <strong>example:</strong>
      * <p>1080</p>
      */
@@ -15,6 +20,8 @@ public class EffectTimeRange extends TeaModel {
     public Integer endTimeInMinute;
 
     /**
+     * <p>The start time in minutes.</p>
+     * 
      * <strong>example:</strong>
      * <p>360</p>
      */
@@ -22,6 +29,8 @@ public class EffectTimeRange extends TeaModel {
     public Integer startTimeInMinute;
 
     /**
+     * <p>The time zone.</p>
+     * 
      * <strong>example:</strong>
      * <p>&quot;Asia/Shanghai&quot;</p>
      */

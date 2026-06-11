@@ -5,12 +5,17 @@ import com.aliyun.tea.*;
 
 public class AddContextsResponseBody extends TeaModel {
     /**
+     * <p>The unique ID for the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>0B9377D9-C56B-5C2E-A8A4-A01D6CC3F4B8</p>
      */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <p>An array of objects containing the results of the write operation.</p>
+     */
     @NameInMap("results")
     public java.util.List<AddContextsResponseBodyResults> results;
 
@@ -37,6 +42,8 @@ public class AddContextsResponseBody extends TeaModel {
 
     public static class AddContextsResponseBodyResults extends TeaModel {
         /**
+         * <p>The ID of the written record or event.</p>
+         * 
          * <strong>example:</strong>
          * <p>897294a7-67a4-4f60-976c-e136edc5f97e</p>
          */
@@ -44,6 +51,8 @@ public class AddContextsResponseBody extends TeaModel {
         public String contextId;
 
         /**
+         * <p>The write status. Can be &quot;accepted&quot;, &quot;queued&quot;, or &quot;created&quot;.</p>
+         * 
          * <strong>example:</strong>
          * <p>accepted</p>
          */
