@@ -4,11 +4,14 @@ package com.aliyun.emr_serverless_spark20230808.models;
 import com.aliyun.tea.*;
 
 public class ListCatalogsResponseBody extends TeaModel {
+    /**
+     * <p>The data catalogs.</p>
+     */
     @NameInMap("catalogs")
     public java.util.List<ListCatalogsResponseBodyCatalogs> catalogs;
 
     /**
-     * <p>一次获取的最大记录数。</p>
+     * <p>The maximum number of entries to return on each page.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -17,7 +20,7 @@ public class ListCatalogsResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>下一页TOKEN。</p>
+     * <p>The token to retrieve the next page of results.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -26,7 +29,7 @@ public class ListCatalogsResponseBody extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>请求ID。</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>DD6B1B2A-5837-5237-ABE4-FF0C8944****</p>
@@ -35,7 +38,7 @@ public class ListCatalogsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>记录总数。</p>
+     * <p>The total number of entries.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -97,7 +100,7 @@ public class ListCatalogsResponseBody extends TeaModel {
         public String alias;
 
         /**
-         * <p>regionId。</p>
+         * <p>The ID of the data catalog.</p>
          * 
          * <strong>example:</strong>
          * <p>15097**********</p>
@@ -106,6 +109,8 @@ public class ListCatalogsResponseBody extends TeaModel {
         public String catalogId;
 
         /**
+         * <p>The provider of the data catalog.</p>
+         * 
          * <strong>example:</strong>
          * <p>HMS</p>
          */
@@ -113,19 +118,29 @@ public class ListCatalogsResponseBody extends TeaModel {
         public String catalogProvider;
 
         /**
+         * <p>Indicates whether this is the default data catalog.</p>
+         * 
          * <strong>example:</strong>
          * <p>default_catalog</p>
          */
         @NameInMap("catalogType")
         public String catalogType;
 
+        /**
+         * <p>The environment types.</p>
+         */
         @NameInMap("environments")
         public java.util.List<String> environments;
 
+        /**
+         * <p>Extra information.</p>
+         */
         @NameInMap("extras")
         public java.util.Map<String, String> extras;
 
         /**
+         * <p>The time when the resource was created.</p>
+         * 
          * <strong>example:</strong>
          * <p>1760604889</p>
          */
@@ -133,6 +148,8 @@ public class ListCatalogsResponseBody extends TeaModel {
         public Long gmtCreate;
 
         /**
+         * <p>The time when the resource was last updated.</p>
+         * 
          * <strong>example:</strong>
          * <p>1760604889</p>
          */
@@ -140,6 +157,8 @@ public class ListCatalogsResponseBody extends TeaModel {
         public Long gmtModified;
 
         /**
+         * <p>The ID of the resource owner.</p>
+         * 
          * <strong>example:</strong>
          * <p>15097**********</p>
          */
@@ -147,7 +166,7 @@ public class ListCatalogsResponseBody extends TeaModel {
         public String resourceOwnerId;
 
         /**
-         * <p>工作空间id。</p>
+         * <p>The workspace ID.</p>
          * 
          * <strong>example:</strong>
          * <p>w-d2d82aa09155****</p>

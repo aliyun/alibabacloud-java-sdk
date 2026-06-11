@@ -12,8 +12,10 @@ public class GetTemplateResponseBody extends TeaModel {
 
     /**
      * <ul>
-     * <li>If the value of success was false, an error code was returned.</li>
-     * <li>If the value of success was true, a null value was returned.</li>
+     * <li><p>If success is false, a business error code is returned.</p>
+     * </li>
+     * <li><p>If success is true, an empty value is returned.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -24,8 +26,10 @@ public class GetTemplateResponseBody extends TeaModel {
 
     /**
      * <ul>
-     * <li>If the value of success was false, an error message was returned.</li>
-     * <li>If the value of success was true, a null value was returned.</li>
+     * <li><p>Returns an error message if success is false.</p>
+     * </li>
+     * <li><p>Returns an empty value if success is true.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

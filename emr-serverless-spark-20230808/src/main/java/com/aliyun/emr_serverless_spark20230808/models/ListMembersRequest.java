@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListMembersRequest extends TeaModel {
     /**
-     * <p>一次获取的最大记录数。</p>
+     * <p>The maximum number of entries to return on each page.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -14,7 +14,7 @@ public class ListMembersRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>标记当前开始读取的位置，置空表示从头开始。</p>
+     * <p>The token that marks the start of the next page of results.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -23,6 +23,8 @@ public class ListMembersRequest extends TeaModel {
     public String nextToken;
 
     /**
+     * <p>The region ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
      */

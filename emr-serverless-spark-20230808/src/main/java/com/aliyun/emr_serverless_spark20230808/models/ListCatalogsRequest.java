@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListCatalogsRequest extends TeaModel {
     /**
+     * <p>The environment type.</p>
+     * 
      * <strong>example:</strong>
      * <p>dev</p>
      */
@@ -12,6 +14,8 @@ public class ListCatalogsRequest extends TeaModel {
     public String environment;
 
     /**
+     * <p>The region ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
      */

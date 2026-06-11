@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateRayClusterRequest extends TeaModel {
     /**
+     * <p>The description of the cluster.</p>
+     * 
      * <strong>example:</strong>
      * <p>Ray Cluster for dev.</p>
      */
@@ -12,6 +14,8 @@ public class CreateRayClusterRequest extends TeaModel {
     public String description;
 
     /**
+     * <p>The version of the Ray engine.</p>
+     * 
      * <strong>example:</strong>
      * <p>ray-1.0.0 (Ray 2.47.1, Python 3.12)</p>
      */
@@ -19,16 +23,23 @@ public class CreateRayClusterRequest extends TeaModel {
     public String displayReleaseVersion;
 
     /**
+     * <p>Additional parameters. The value must be in JSON format.</p>
+     * 
      * <strong>example:</strong>
      * <p>{}</p>
      */
     @NameInMap("extraParam")
     public String extraParam;
 
+    /**
+     * <p>The parameters for the head node of the Ray cluster.</p>
+     */
     @NameInMap("headSpec")
     public CreateRayClusterRequestHeadSpec headSpec;
 
     /**
+     * <p>The name of the Ray cluster. The name must be 1 to 64 characters in length.</p>
+     * 
      * <strong>example:</strong>
      * <p>testRayCluster</p>
      */
@@ -36,6 +47,8 @@ public class CreateRayClusterRequest extends TeaModel {
     public String name;
 
     /**
+     * <p>The name of the network connection.</p>
+     * 
      * <strong>example:</strong>
      * <p>vpc</p>
      */
@@ -45,6 +58,9 @@ public class CreateRayClusterRequest extends TeaModel {
     @NameInMap("volumeIds")
     public java.util.List<String> volumeIds;
 
+    /**
+     * <p>The parameters for the worker nodes of the Ray cluster. You can specify up to 50 worker groups.</p>
+     */
     @NameInMap("workerSpec")
     public java.util.List<CreateRayClusterRequestWorkerSpec> workerSpec;
 
@@ -119,6 +135,8 @@ public class CreateRayClusterRequest extends TeaModel {
 
     public static class CreateRayClusterRequestHeadSpec extends TeaModel {
         /**
+         * <p>The number of CPU cores.</p>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */
@@ -126,6 +144,8 @@ public class CreateRayClusterRequest extends TeaModel {
         public String cpu;
 
         /**
+         * <p>Specifies whether to enable automatic scaling for worker nodes.</p>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
@@ -140,6 +160,8 @@ public class CreateRayClusterRequest extends TeaModel {
         public String gpuSpec;
 
         /**
+         * <p>The idle timeout period in seconds for worker nodes when automatic scaling is enabled.</p>
+         * 
          * <strong>example:</strong>
          * <p>60</p>
          */
@@ -147,6 +169,8 @@ public class CreateRayClusterRequest extends TeaModel {
         public Integer idleTimeoutSeconds;
 
         /**
+         * <p>The memory size, in GiB.</p>
+         * 
          * <strong>example:</strong>
          * <p>8Gi</p>
          */
@@ -154,6 +178,8 @@ public class CreateRayClusterRequest extends TeaModel {
         public String memory;
 
         /**
+         * <p>The queue name.</p>
+         * 
          * <strong>example:</strong>
          * <p>root_queue</p>
          */
@@ -217,6 +243,8 @@ public class CreateRayClusterRequest extends TeaModel {
 
     public static class CreateRayClusterRequestWorkerSpec extends TeaModel {
         /**
+         * <p>The number of CPU cores.</p>
+         * 
          * <strong>example:</strong>
          * <p>4</p>
          */
@@ -231,6 +259,8 @@ public class CreateRayClusterRequest extends TeaModel {
         public String gpuSpec;
 
         /**
+         * <p>The name of the worker group.</p>
+         * 
          * <strong>example:</strong>
          * <p>WorkerGroup1</p>
          */
@@ -238,6 +268,8 @@ public class CreateRayClusterRequest extends TeaModel {
         public String groupName;
 
         /**
+         * <p>The maximum number of worker nodes for automatic scaling. The minimum value is 1.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -245,6 +277,8 @@ public class CreateRayClusterRequest extends TeaModel {
         public Integer maxReplica;
 
         /**
+         * <p>The memory size, in GiB.</p>
+         * 
          * <strong>example:</strong>
          * <p>16Gi</p>
          */
@@ -252,6 +286,8 @@ public class CreateRayClusterRequest extends TeaModel {
         public String memory;
 
         /**
+         * <p>The minimum number of worker nodes for automatic scaling. The minimum value is 1. This value must be less than or equal to maxReplica.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -259,6 +295,8 @@ public class CreateRayClusterRequest extends TeaModel {
         public Integer minReplica;
 
         /**
+         * <p>The queue name.</p>
+         * 
          * <strong>example:</strong>
          * <p>root_queue</p>
          */
@@ -266,6 +304,8 @@ public class CreateRayClusterRequest extends TeaModel {
         public String queueName;
 
         /**
+         * <p>The number of worker nodes. The minimum value is 1.</p>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */
@@ -273,6 +313,8 @@ public class CreateRayClusterRequest extends TeaModel {
         public Integer replica;
 
         /**
+         * <p>The worker type.</p>
+         * 
          * <strong>example:</strong>
          * <p>CPU</p>
          */

@@ -6,6 +6,10 @@ import com.aliyun.tea.*;
 public class AddMembersRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Ram User Example value: acs:ram::113545727984****:user/20468369839086****</p>
+     * <p>Ram Role Example value: acs:ram::113545727984****:role/aliyunemrsparkjobrundefaultrole</p>
      */
     @NameInMap("memberArns")
     public java.util.List<String> memberArns;

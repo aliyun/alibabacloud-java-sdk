@@ -4,10 +4,15 @@ package com.aliyun.emr_serverless_spark20230808.models;
 import com.aliyun.tea.*;
 
 public class ListKyuubiTokenResponseBody extends TeaModel {
+    /**
+     * <p>The data returned.</p>
+     */
     @NameInMap("data")
     public ListKyuubiTokenResponseBodyData data;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>DD6B1B2A-5837-5237-ABE4-FF0C8944****</p>
      */
@@ -36,43 +41,59 @@ public class ListKyuubiTokenResponseBody extends TeaModel {
     }
 
     public static class ListKyuubiTokenResponseBodyDataTokens extends TeaModel {
+        /**
+         * <p>The names of authorized RAM users.</p>
+         */
         @NameInMap("accountNames")
         public java.util.List<String> accountNames;
 
         /**
+         * <p>The creation time.</p>
+         * 
          * <strong>example:</strong>
-         * <p>2025-02-11T02:23:02Z</p>
+         * <p>1755496031000</p>
          */
         @NameInMap("createTime")
         public Long createTime;
 
         /**
+         * <p>The creator\&quot;s name.</p>
+         * 
          * <strong>example:</strong>
-         * <p>test_user</p>
+         * <p>admin</p>
          */
         @NameInMap("createdBy")
         public String createdBy;
 
         /**
+         * <p>The expiration time.</p>
+         * 
          * <strong>example:</strong>
-         * <p>1740366769165</p>
+         * <p>1787033891000</p>
          */
         @NameInMap("expireTime")
         public Long expireTime;
 
         /**
+         * <p>The last used time.</p>
+         * 
          * <strong>example:</strong>
-         * <p>1740366232121</p>
+         * <p>1760366232121</p>
          */
         @NameInMap("lastUsedTime")
         public Long lastUsedTime;
 
+        /**
+         * <p>The ARNs of authorized users.</p>
+         */
         @NameInMap("memberArns")
         public java.util.List<String> memberArns;
 
         /**
+         * <p>The token name.</p>
+         * 
          * <strong>example:</strong>
-         * <p>dev_serveless_spark</p>
+         * <p>dev_serverless_spark</p>
          */
         @NameInMap("name")
         public String name;
@@ -81,17 +102,19 @@ public class ListKyuubiTokenResponseBody extends TeaModel {
         public java.util.List<String> sparkRole;
 
         /**
+         * <p>The masked token.</p>
+         * 
          * <strong>example:</strong>
-         * <p>f14c1347-dcfd-4082-b101-77aa96b5de36</p>
+         * <p>dxj**********wfg</p>
          */
         @NameInMap("token")
         public String token;
 
         /**
-         * <p>Token ID。</p>
+         * <p>The token ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>f14c1347-dcfd-4082-b101-77aa96b5de36</p>
+         * <p>tk-zpi0*****hdv4y</p>
          */
         @NameInMap("tokenId")
         public String tokenId;
@@ -184,6 +207,9 @@ public class ListKyuubiTokenResponseBody extends TeaModel {
     }
 
     public static class ListKyuubiTokenResponseBodyData extends TeaModel {
+        /**
+         * <p>A list of tokens.</p>
+         */
         @NameInMap("tokens")
         public java.util.List<ListKyuubiTokenResponseBodyDataTokens> tokens;
 

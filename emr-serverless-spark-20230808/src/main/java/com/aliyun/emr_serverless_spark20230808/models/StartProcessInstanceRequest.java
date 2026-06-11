@@ -17,7 +17,7 @@ public class StartProcessInstanceRequest extends TeaModel {
     public String interval;
 
     /**
-     * <p>Specifies whether to run the workflow in the production environment.</p>
+     * <p>Specifies whether the workflow runs in a production environment.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -26,7 +26,7 @@ public class StartProcessInstanceRequest extends TeaModel {
     public Boolean isProd;
 
     /**
-     * <p>The workflow ID.</p>
+     * <p>The workflow definition ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -36,7 +36,7 @@ public class StartProcessInstanceRequest extends TeaModel {
     public Long processDefinitionCode;
 
     /**
-     * <p>The code of the service.</p>
+     * <p>The product code.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -55,7 +55,7 @@ public class StartProcessInstanceRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The queue on which the workflow runs.</p>
+     * <p>The runtime queue.</p>
      * 
      * <strong>example:</strong>
      * <p>root_queue</p>
@@ -73,7 +73,7 @@ public class StartProcessInstanceRequest extends TeaModel {
     public String versionHashCode;
 
     /**
-     * <p>The version number of the workflow.</p>
+     * <p>The version number of the workflow definition.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>

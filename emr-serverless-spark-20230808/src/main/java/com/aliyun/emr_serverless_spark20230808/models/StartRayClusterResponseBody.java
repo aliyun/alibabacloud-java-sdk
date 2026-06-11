@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class StartRayClusterResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>8CE06D75-E6A2-505D-9B4B-31DEE3D98A04</p>
      */

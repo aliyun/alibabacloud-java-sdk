@@ -4,10 +4,15 @@ package com.aliyun.emr_serverless_spark20230808.models;
 import com.aliyun.tea.*;
 
 public class CancelKyuubiSparkApplicationResponseBody extends TeaModel {
+    /**
+     * <p>The returned data.</p>
+     */
     @NameInMap("body")
     public CancelKyuubiSparkApplicationResponseBodyBody body;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>DD6B1B2A-5837-5237-ABE4-FF0C8944****</p>
      */
@@ -37,12 +42,23 @@ public class CancelKyuubiSparkApplicationResponseBody extends TeaModel {
 
     public static class CancelKyuubiSparkApplicationResponseBodyBody extends TeaModel {
         /**
+         * <p>The ID of the Spark application submitted by Kyuubi.</p>
+         * 
          * <strong>example:</strong>
          * <p>spark-339f844005b6404c95f9f7c7a13b****</p>
          */
         @NameInMap("applicationId")
         public String applicationId;
 
+        /**
+         * <p>Indicates whether the request was successful.</p>
+         * <ul>
+         * <li><p>true: The request was successful.</p>
+         * </li>
+         * <li><p>false: The request failed.</p>
+         * </li>
+         * </ul>
+         */
         @NameInMap("success")
         public Boolean success;
 

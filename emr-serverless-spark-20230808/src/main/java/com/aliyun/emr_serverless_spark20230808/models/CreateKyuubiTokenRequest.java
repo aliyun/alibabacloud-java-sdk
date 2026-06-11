@@ -4,13 +4,21 @@ package com.aliyun.emr_serverless_spark20230808.models;
 import com.aliyun.tea.*;
 
 public class CreateKyuubiTokenRequest extends TeaModel {
+    /**
+     * <p>The automatic expiration settings.</p>
+     */
     @NameInMap("autoExpireConfiguration")
     public CreateKyuubiTokenRequestAutoExpireConfiguration autoExpireConfiguration;
 
+    /**
+     * <p>The list of ARNs of authorized users.</p>
+     */
     @NameInMap("memberArns")
     public java.util.List<String> memberArns;
 
     /**
+     * <p>The token name.</p>
+     * 
      * <strong>example:</strong>
      * <p>dev_serverless_spark</p>
      */
@@ -21,6 +29,8 @@ public class CreateKyuubiTokenRequest extends TeaModel {
     public java.util.List<String> sparkRole;
 
     /**
+     * <p>The token content. The token must be 32 characters long and contain only lowercase letters and digits.</p>
+     * 
      * <strong>example:</strong>
      * <p>rjy7ejhej9gkzjjuun49jnx2xk8if2cu</p>
      */
@@ -28,6 +38,8 @@ public class CreateKyuubiTokenRequest extends TeaModel {
     public String token;
 
     /**
+     * <p>The region ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
      */
@@ -89,6 +101,8 @@ public class CreateKyuubiTokenRequest extends TeaModel {
 
     public static class CreateKyuubiTokenRequestAutoExpireConfiguration extends TeaModel {
         /**
+         * <p>Specifies whether the token automatically expires.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -96,6 +110,8 @@ public class CreateKyuubiTokenRequest extends TeaModel {
         public Boolean enable;
 
         /**
+         * <p>The expiration period in days.</p>
+         * 
          * <strong>example:</strong>
          * <p>365</p>
          */

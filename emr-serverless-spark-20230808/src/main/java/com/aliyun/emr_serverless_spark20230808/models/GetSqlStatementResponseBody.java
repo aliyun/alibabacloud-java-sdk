@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetSqlStatementResponseBody extends TeaModel {
     /**
-     * <p>The response parameters.</p>
+     * <p>The returned data.</p>
      */
     @NameInMap("data")
     public GetSqlStatementResponseBodyData data;
@@ -42,7 +42,7 @@ public class GetSqlStatementResponseBody extends TeaModel {
 
     public static class GetSqlStatementResponseBodyDataSqlOutputs extends TeaModel {
         /**
-         * <p>The queried data, which is a string in the JSON format.</p>
+         * <p>The query data. The data is a JSON-serialized string.</p>
          * 
          * <strong>example:</strong>
          * <p>[{\&quot;values\&quot;:[\&quot;test_db\&quot;,\&quot;test_table\&quot;,false]}</p>
@@ -54,7 +54,7 @@ public class GetSqlStatementResponseBody extends TeaModel {
         public String rowsFilePath;
 
         /**
-         * <p>The information about the schema, which is a string in the JSON format.</p>
+         * <p>The details of the schema. The details are a JSON-serialized string.</p>
          * 
          * <strong>example:</strong>
          * <p>{\&quot;type\&quot;:\&quot;struct\&quot;,\&quot;fields\&quot;:[{\&quot;name\&quot;:\&quot;namespace\&quot;,\&quot;type\&quot;:\&quot;string\&quot;,\&quot;nullable\&quot;:false,\&quot;metadata\&quot;:{}},{\&quot;name\&quot;:\&quot;tableName\&quot;,\&quot;type\&quot;:\&quot;string\&quot;,\&quot;nullable\&quot;:false,\&quot;metadata\&quot;:{}},{\&quot;name\&quot;:\&quot;isTemporary\&quot;,\&quot;type\&quot;:\&quot;boolean\&quot;,\&quot;nullable\&quot;:false,\&quot;metadata\&quot;:{}}]}</p>
@@ -95,13 +95,13 @@ public class GetSqlStatementResponseBody extends TeaModel {
 
     public static class GetSqlStatementResponseBodyData extends TeaModel {
         /**
-         * <p>The list of time that is consumed by SQL queries.</p>
+         * <p>A list of execution times for the SQL query.</p>
          */
         @NameInMap("executionTime")
         public java.util.List<Long> executionTime;
 
         /**
-         * <p>The error code.</p>
+         * <p>The error code for the SQL query.</p>
          * 
          * <strong>example:</strong>
          * <p>ERROR-102</p>
@@ -110,7 +110,7 @@ public class GetSqlStatementResponseBody extends TeaModel {
         public String sqlErrorCode;
 
         /**
-         * <p>The error message.</p>
+         * <p>The error message for the SQL query.</p>
          * 
          * <strong>example:</strong>
          * <p>error message</p>
@@ -119,21 +119,13 @@ public class GetSqlStatementResponseBody extends TeaModel {
         public String sqlErrorMessage;
 
         /**
-         * <p>The query results.</p>
+         * <p>A list of SQL query results.</p>
          */
         @NameInMap("sqlOutputs")
         public java.util.List<GetSqlStatementResponseBodyDataSqlOutputs> sqlOutputs;
 
         /**
-         * <p>The query status.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>running</li>
-         * <li>available</li>
-         * <li>cancelled</li>
-         * <li>error</li>
-         * <li>cancelling</li>
-         * </ul>
+         * <p>The state of the query.</p>
          * 
          * <strong>example:</strong>
          * <p>running</p>
@@ -142,7 +134,7 @@ public class GetSqlStatementResponseBody extends TeaModel {
         public String state;
 
         /**
-         * <p>The query ID.</p>
+         * <p>The statement ID.</p>
          * 
          * <strong>example:</strong>
          * <p>st-1231311abadfaa</p>

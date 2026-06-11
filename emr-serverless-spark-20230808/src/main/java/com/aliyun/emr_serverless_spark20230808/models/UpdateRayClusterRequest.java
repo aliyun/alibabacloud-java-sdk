@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpdateRayClusterRequest extends TeaModel {
     /**
+     * <p>Description of the cluster.</p>
+     * 
      * <strong>example:</strong>
      * <p>Ray Cluster for dev.</p>
      */
@@ -12,6 +14,8 @@ public class UpdateRayClusterRequest extends TeaModel {
     public String description;
 
     /**
+     * <p>Ray engine version.</p>
+     * 
      * <strong>example:</strong>
      * <p>ray-1.0.0 (Ray 2.47.1, Python 3.12)</p>
      */
@@ -19,16 +23,23 @@ public class UpdateRayClusterRequest extends TeaModel {
     public String displayReleaseVersion;
 
     /**
+     * <p>The extra parameters. This must be in JSON format.</p>
+     * 
      * <strong>example:</strong>
      * <p>{}</p>
      */
     @NameInMap("extraParam")
     public String extraParam;
 
+    /**
+     * <p>The information about the head node of the Ray cluster.</p>
+     */
     @NameInMap("headSpec")
     public UpdateRayClusterRequestHeadSpec headSpec;
 
     /**
+     * <p>The name of the Ray cluster. The name must be 1 to 64 characters in length.</p>
+     * 
      * <strong>example:</strong>
      * <p>myRayCluster</p>
      */
@@ -36,6 +47,8 @@ public class UpdateRayClusterRequest extends TeaModel {
     public String name;
 
     /**
+     * <p>The name of the network service.</p>
+     * 
      * <strong>example:</strong>
      * <p>vpc</p>
      */
@@ -45,6 +58,9 @@ public class UpdateRayClusterRequest extends TeaModel {
     @NameInMap("volumeIds")
     public java.util.List<String> volumeIds;
 
+    /**
+     * <p>The information about the worker nodes of the Ray cluster. You can specify up to 50 groups.</p>
+     */
     @NameInMap("workerSpec")
     public java.util.List<UpdateRayClusterRequestWorkerSpec> workerSpec;
 
@@ -119,6 +135,8 @@ public class UpdateRayClusterRequest extends TeaModel {
 
     public static class UpdateRayClusterRequestHeadSpec extends TeaModel {
         /**
+         * <p>The number of CPU cores.</p>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */
@@ -126,6 +144,8 @@ public class UpdateRayClusterRequest extends TeaModel {
         public String cpu;
 
         /**
+         * <p>Specifies whether to enable automatic scaling.</p>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
@@ -140,6 +160,8 @@ public class UpdateRayClusterRequest extends TeaModel {
         public String gpuSpec;
 
         /**
+         * <p>The idle timeout in seconds for workers. This parameter is effective only when automatic scaling is enabled.</p>
+         * 
          * <strong>example:</strong>
          * <p>60</p>
          */
@@ -147,6 +169,8 @@ public class UpdateRayClusterRequest extends TeaModel {
         public Integer idleTimeoutSeconds;
 
         /**
+         * <p>The memory size. Unit: Gi.</p>
+         * 
          * <strong>example:</strong>
          * <p>8Gi</p>
          */
@@ -154,6 +178,8 @@ public class UpdateRayClusterRequest extends TeaModel {
         public String memory;
 
         /**
+         * <p>The name of the queue.</p>
+         * 
          * <strong>example:</strong>
          * <p>root_queue</p>
          */
@@ -217,6 +243,8 @@ public class UpdateRayClusterRequest extends TeaModel {
 
     public static class UpdateRayClusterRequestWorkerSpec extends TeaModel {
         /**
+         * <p>The number of CPU cores.</p>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */
@@ -231,6 +259,8 @@ public class UpdateRayClusterRequest extends TeaModel {
         public String gpuSpec;
 
         /**
+         * <p>The name of the worker group.</p>
+         * 
          * <strong>example:</strong>
          * <p>WorkerGroup1</p>
          */
@@ -238,6 +268,8 @@ public class UpdateRayClusterRequest extends TeaModel {
         public String groupName;
 
         /**
+         * <p>The maximum number of workers. The minimum value is 1.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -245,6 +277,8 @@ public class UpdateRayClusterRequest extends TeaModel {
         public Integer maxReplica;
 
         /**
+         * <p>The memory size. Unit: Gi.</p>
+         * 
          * <strong>example:</strong>
          * <p>8Gi</p>
          */
@@ -252,6 +286,8 @@ public class UpdateRayClusterRequest extends TeaModel {
         public String memory;
 
         /**
+         * <p>The minimum number of workers. The minimum value is 1. This value must be less than or equal to maxReplica.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -259,6 +295,8 @@ public class UpdateRayClusterRequest extends TeaModel {
         public Integer minReplica;
 
         /**
+         * <p>The name of the queue.</p>
+         * 
          * <strong>example:</strong>
          * <p>root_queue</p>
          */
@@ -266,6 +304,8 @@ public class UpdateRayClusterRequest extends TeaModel {
         public String queueName;
 
         /**
+         * <p>The number of workers. The minimum value is 1.</p>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */
@@ -273,6 +313,8 @@ public class UpdateRayClusterRequest extends TeaModel {
         public Integer replica;
 
         /**
+         * <p>The type of worker.</p>
+         * 
          * <strong>example:</strong>
          * <p>CPU</p>
          */

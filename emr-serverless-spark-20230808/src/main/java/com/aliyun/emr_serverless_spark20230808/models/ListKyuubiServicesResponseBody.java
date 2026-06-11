@@ -4,10 +4,15 @@ package com.aliyun.emr_serverless_spark20230808.models;
 import com.aliyun.tea.*;
 
 public class ListKyuubiServicesResponseBody extends TeaModel {
+    /**
+     * <p>The returned data.</p>
+     */
     @NameInMap("data")
     public ListKyuubiServicesResponseBodyData data;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>DD6B1B2A-5837-5237-ABE4-FF0C8944****</p>
      */
@@ -37,6 +42,8 @@ public class ListKyuubiServicesResponseBody extends TeaModel {
 
     public static class ListKyuubiServicesResponseBodyDataKyuubiServices extends TeaModel {
         /**
+         * <p>The instance type of the Kyuubi server.</p>
+         * 
          * <strong>example:</strong>
          * <p>4C16G</p>
          */
@@ -44,6 +51,8 @@ public class ListKyuubiServicesResponseBody extends TeaModel {
         public String computeInstance;
 
         /**
+         * <p>The time when the server was created.</p>
+         * 
          * <strong>example:</strong>
          * <p>2025-03-11T08:21:58Z</p>
          */
@@ -51,6 +60,8 @@ public class ListKyuubiServicesResponseBody extends TeaModel {
         public String createTime;
 
         /**
+         * <p>The UID of the user who created the server.</p>
+         * 
          * <strong>example:</strong>
          * <p>103*******</p>
          */
@@ -58,6 +69,8 @@ public class ListKyuubiServicesResponseBody extends TeaModel {
         public String creator;
 
         /**
+         * <p>The internal endpoint.</p>
+         * 
          * <strong>example:</strong>
          * <p>kyuubi-cn-hangzhou-internal.spark.emr.aliyuncs.com</p>
          */
@@ -65,6 +78,8 @@ public class ListKyuubiServicesResponseBody extends TeaModel {
         public String innerEndpoint;
 
         /**
+         * <p>The Kyuubi server configurations.</p>
+         * 
          * <strong>example:</strong>
          * <p>kyuubi.conf.key=value1
          * kyuubi.conf.key1=value2</p>
@@ -72,11 +87,17 @@ public class ListKyuubiServicesResponseBody extends TeaModel {
         @NameInMap("kyuubiConfigs")
         public String kyuubiConfigs;
 
+        /**
+         * <p>The version of the Kyuubi server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.9.2-0.0.1</p>
+         */
         @NameInMap("kyuubiReleaseVersion")
         public String kyuubiReleaseVersion;
 
         /**
-         * <p>KyuubiServer ID。</p>
+         * <p>The Kyuubi server ID.</p>
          * 
          * <strong>example:</strong>
          * <p>kb-070104e7631242448d12a1377c309f30</p>
@@ -85,6 +106,8 @@ public class ListKyuubiServicesResponseBody extends TeaModel {
         public String kyuubiServiceId;
 
         /**
+         * <p>The name of the Kyuubi server.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -92,6 +115,8 @@ public class ListKyuubiServicesResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>The public endpoint.</p>
+         * 
          * <strong>example:</strong>
          * <p>emr-spark-kyuubi-gateway-cn-hangzhou.aliyuncs.com</p>
          */
@@ -99,6 +124,8 @@ public class ListKyuubiServicesResponseBody extends TeaModel {
         public String publicEndpoint;
 
         /**
+         * <p>The queue name.</p>
+         * 
          * <strong>example:</strong>
          * <p>dev_queue</p>
          */
@@ -106,6 +133,8 @@ public class ListKyuubiServicesResponseBody extends TeaModel {
         public String queue;
 
         /**
+         * <p>The version number of the Spark engine.</p>
+         * 
          * <strong>example:</strong>
          * <p>esr-4.2.0 (Spark 3.5.2, Scala 2.12)</p>
          */
@@ -113,6 +142,8 @@ public class ListKyuubiServicesResponseBody extends TeaModel {
         public String releaseVersion;
 
         /**
+         * <p>The number of replicas for the Kyuubi server.</p>
+         * 
          * <strong>example:</strong>
          * <p>3</p>
          */
@@ -120,6 +151,8 @@ public class ListKyuubiServicesResponseBody extends TeaModel {
         public Integer replica;
 
         /**
+         * <p>The default configurations for Spark applications launched by the Kyuubi server.</p>
+         * 
          * <strong>example:</strong>
          * <p>spark.conf.key=value1
          * spark.conf.key1=value2</p>
@@ -128,6 +161,8 @@ public class ListKyuubiServicesResponseBody extends TeaModel {
         public String sparkConfigs;
 
         /**
+         * <p>The time when the Kyuubi server was last started.</p>
+         * 
          * <strong>example:</strong>
          * <p>2024-11-23 09:22:00</p>
          */
@@ -135,6 +170,8 @@ public class ListKyuubiServicesResponseBody extends TeaModel {
         public String startTime;
 
         /**
+         * <p>The status of the Kyuubi server.</p>
+         * 
          * <strong>example:</strong>
          * <p>Running</p>
          */
@@ -269,6 +306,9 @@ public class ListKyuubiServicesResponseBody extends TeaModel {
     }
 
     public static class ListKyuubiServicesResponseBodyData extends TeaModel {
+        /**
+         * <p>A list of Kyuubi servers.</p>
+         */
         @NameInMap("kyuubiServices")
         public java.util.List<ListKyuubiServicesResponseBodyDataKyuubiServices> kyuubiServices;
 

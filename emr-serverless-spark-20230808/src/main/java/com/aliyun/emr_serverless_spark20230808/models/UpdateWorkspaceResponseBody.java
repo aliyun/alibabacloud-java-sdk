@@ -4,10 +4,15 @@ package com.aliyun.emr_serverless_spark20230808.models;
 import com.aliyun.tea.*;
 
 public class UpdateWorkspaceResponseBody extends TeaModel {
+    /**
+     * <p>The returned data.</p>
+     */
     @NameInMap("data")
     public UpdateWorkspaceResponseBodyData data;
 
     /**
+     * <p>The ID of the order.</p>
+     * 
      * <strong>example:</strong>
      * <p>979071171373334529</p>
      */
@@ -15,7 +20,7 @@ public class UpdateWorkspaceResponseBody extends TeaModel {
     public String orderId;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The unique ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>DD6B1B2A-5837-5237-ABE4-FF0C8944****</p>
@@ -54,6 +59,8 @@ public class UpdateWorkspaceResponseBody extends TeaModel {
 
     public static class UpdateWorkspaceResponseBodyData extends TeaModel {
         /**
+         * <p>The ID of the order.</p>
+         * 
          * <strong>example:</strong>
          * <p>1005565802416783361</p>
          */

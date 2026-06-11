@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpdateWorkspaceRequest extends TeaModel {
     /**
+     * <p>The resource cap for the workspace.</p>
+     * 
      * <strong>example:</strong>
      * <p>5000</p>
      */
@@ -12,26 +14,44 @@ public class UpdateWorkspaceRequest extends TeaModel {
     public Integer cu;
 
     /**
+     * <p>The number of GPUs.</p>
+     * 
      * <strong>example:</strong>
      * <p>100</p>
      */
     @NameInMap("gpu")
     public Integer gpu;
 
+    /**
+     * <p>The GPU specifications.</p>
+     */
     @NameInMap("gpuSpec")
     public java.util.List<String> gpuSpec;
 
     /**
+     * <p>The IP whitelist.</p>
+     */
+    @NameInMap("ipWhiteList")
+    public java.util.List<String> ipWhiteList;
+
+    /**
+     * <p>The resource group ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>rg-acfmwpi66knkxny</p>
      */
     @NameInMap("resourceGroupId")
     public String resourceGroupId;
 
+    /**
+     * <p>Details for converting a pay-as-you-go workspace to a subscription plan.</p>
+     */
     @NameInMap("subscription")
     public UpdateWorkspaceRequestSubscription subscription;
 
     /**
+     * <p>The workspace ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>w-975bcfda9625****</p>
      */
@@ -39,6 +59,8 @@ public class UpdateWorkspaceRequest extends TeaModel {
     public String workspaceId;
 
     /**
+     * <p>The workspace name.</p>
+     * 
      * <strong>example:</strong>
      * <p>default</p>
      */
@@ -46,6 +68,8 @@ public class UpdateWorkspaceRequest extends TeaModel {
     public String workspaceName;
 
     /**
+     * <p>The region ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
      */
@@ -79,6 +103,14 @@ public class UpdateWorkspaceRequest extends TeaModel {
     }
     public java.util.List<String> getGpuSpec() {
         return this.gpuSpec;
+    }
+
+    public UpdateWorkspaceRequest setIpWhiteList(java.util.List<String> ipWhiteList) {
+        this.ipWhiteList = ipWhiteList;
+        return this;
+    }
+    public java.util.List<String> getIpWhiteList() {
+        return this.ipWhiteList;
     }
 
     public UpdateWorkspaceRequest setResourceGroupId(String resourceGroupId) {
@@ -123,6 +155,8 @@ public class UpdateWorkspaceRequest extends TeaModel {
 
     public static class UpdateWorkspaceRequestSubscription extends TeaModel {
         /**
+         * <p>Indicates whether to enable auto-renewal. Required for subscription plans.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -130,6 +164,8 @@ public class UpdateWorkspaceRequest extends TeaModel {
         public String autoRenew;
 
         /**
+         * <p>The auto-renewal duration. Required for subscription plans.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -137,6 +173,8 @@ public class UpdateWorkspaceRequest extends TeaModel {
         public String autoRenewPeriod;
 
         /**
+         * <p>The unit for the auto-renewal duration. Required for subscription plans.</p>
+         * 
          * <strong>example:</strong>
          * <p>MONTH</p>
          */
@@ -144,6 +182,8 @@ public class UpdateWorkspaceRequest extends TeaModel {
         public String autoRenewPeriodUnit;
 
         /**
+         * <p>A unique, case-sensitive token to ensure request idempotence.</p>
+         * 
          * <strong>example:</strong>
          * <p>my-token-asxkxxxxxxx</p>
          */
@@ -151,6 +191,8 @@ public class UpdateWorkspaceRequest extends TeaModel {
         public String clientToken;
 
         /**
+         * <p>The subscription duration. This parameter is required for subscription plans.</p>
+         * 
          * <strong>example:</strong>
          * <p>1799</p>
          */
@@ -158,12 +200,17 @@ public class UpdateWorkspaceRequest extends TeaModel {
         public String duration;
 
         /**
+         * <p>The unit of the subscription period.</p>
+         * 
          * <strong>example:</strong>
          * <p>MONTH</p>
          */
         @NameInMap("paymentDurationUnit")
         public String paymentDurationUnit;
 
+        /**
+         * <p>The queues to convert to the subscription plan.</p>
+         */
         @NameInMap("queue")
         public java.util.List<String> queue;
 

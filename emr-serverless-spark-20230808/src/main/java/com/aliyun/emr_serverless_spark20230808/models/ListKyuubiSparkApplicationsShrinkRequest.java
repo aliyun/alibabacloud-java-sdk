@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListKyuubiSparkApplicationsShrinkRequest extends TeaModel {
     /**
-     * <p>The ID of the application that is submitted by using a Kyuubi gateway.</p>
+     * <p>The ID of the Spark application submitted by Kyuubi, used for searching.</p>
      * 
      * <strong>example:</strong>
      * <p>spark-339f844005b6404c95f9f7c7a13b****</p>
@@ -14,7 +14,7 @@ public class ListKyuubiSparkApplicationsShrinkRequest extends TeaModel {
     public String applicationId;
 
     /**
-     * <p>The name of the Spark application that is submitted by using a Kyuubi gateway.</p>
+     * <p>The name of the Spark application submitted by Kyuubi, used for searching.</p>
      * 
      * <strong>example:</strong>
      * <p>kyuubi-connection-spark-sql-anonymous-fa9a5e73-b4b1-474a-b****</p>
@@ -33,7 +33,7 @@ public class ListKyuubiSparkApplicationsShrinkRequest extends TeaModel {
     public String latestSqlStatementStatuses;
 
     /**
-     * <p>The maximum number of entries to return.</p>
+     * <p>The maximum number of records to return.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -49,7 +49,7 @@ public class ListKyuubiSparkApplicationsShrinkRequest extends TeaModel {
     public Long minDuration;
 
     /**
-     * <p>The pagination token that is used in the next request to retrieve a new page of results.</p>
+     * <p>The token to retrieve the next page of results.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -75,7 +75,7 @@ public class ListKyuubiSparkApplicationsShrinkRequest extends TeaModel {
     public String sort;
 
     /**
-     * <p>The range of start time.</p>
+     * <p>The time range when the task started.</p>
      */
     @NameInMap("startTime")
     public String startTimeShrink;

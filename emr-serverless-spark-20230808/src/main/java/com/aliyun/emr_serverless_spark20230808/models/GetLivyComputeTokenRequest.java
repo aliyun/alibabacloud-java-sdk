@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetLivyComputeTokenRequest extends TeaModel {
     /**
+     * <p>The ID of the region.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
      */

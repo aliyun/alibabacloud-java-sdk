@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListWorkspaceQueuesResponseBody extends TeaModel {
     /**
-     * <p>The maximum number of entries returned.</p>
+     * <p>The maximum number of records to return in a single request.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -14,7 +14,7 @@ public class ListWorkspaceQueuesResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>A pagination token. It can be used in the next request to retrieve a new page of results.</p>
+     * <p>The token for the next page of results.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -38,7 +38,7 @@ public class ListWorkspaceQueuesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of entries returned.</p>
+     * <p>The total number of records.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -93,7 +93,7 @@ public class ListWorkspaceQueuesResponseBody extends TeaModel {
 
     public static class ListWorkspaceQueuesResponseBodyQueuesAllowActions extends TeaModel {
         /**
-         * <p>The Alibaba Cloud Resource Name (ARN) of a behavior.</p>
+         * <p>The Alibaba Cloud Resource Name (ARN) of the behavior.</p>
          * 
          * <strong>example:</strong>
          * <p>acs:emr::workspaceId:action/create_queue</p>
@@ -102,7 +102,7 @@ public class ListWorkspaceQueuesResponseBody extends TeaModel {
         public String actionArn;
 
         /**
-         * <p>The name of the permission.</p>
+         * <p>The permission name.</p>
          * 
          * <strong>example:</strong>
          * <p>view</p>
@@ -111,7 +111,7 @@ public class ListWorkspaceQueuesResponseBody extends TeaModel {
         public String actionName;
 
         /**
-         * <p>The dependencies of the operation.</p>
+         * <p>The list of action dependencies.</p>
          * 
          * <strong>example:</strong>
          * <p>[&quot;view&quot;]</p>
@@ -120,10 +120,10 @@ public class ListWorkspaceQueuesResponseBody extends TeaModel {
         public java.util.List<String> dependencies;
 
         /**
-         * <p>The description of the operation.</p>
+         * <p>The action description.</p>
          * 
          * <strong>example:</strong>
-         * <p>文件目录遍历、文件浏览</p>
+         * <p>Directory traversal and file browsing</p>
          */
         @NameInMap("description")
         public String description;
@@ -186,13 +186,13 @@ public class ListWorkspaceQueuesResponseBody extends TeaModel {
 
     public static class ListWorkspaceQueuesResponseBodyQueues extends TeaModel {
         /**
-         * <p>The operations allowed for the queue.</p>
+         * <p>The list of allowed operations for the queue.</p>
          */
         @NameInMap("allowActions")
         public java.util.List<ListWorkspaceQueuesResponseBodyQueuesAllowActions> allowActions;
 
         /**
-         * <p>The time when the workspace was created.</p>
+         * <p>The creation time of the workspace.</p>
          * 
          * <strong>example:</strong>
          * <p>1684115879955</p>
@@ -201,7 +201,7 @@ public class ListWorkspaceQueuesResponseBody extends TeaModel {
         public Long createTime;
 
         /**
-         * <p>The ID of the user who created the queue.</p>
+         * <p>The UID of the user who created the queue.</p>
          * 
          * <strong>example:</strong>
          * <p>237109</p>
@@ -210,7 +210,7 @@ public class ListWorkspaceQueuesResponseBody extends TeaModel {
         public String creator;
 
         /**
-         * <p>The environment types of the queue.</p>
+         * <p>The list of environment types for the queue.</p>
          */
         @NameInMap("environments")
         public java.util.List<String> environments;
@@ -219,7 +219,7 @@ public class ListWorkspaceQueuesResponseBody extends TeaModel {
         public java.util.List<String> gpuSpec;
 
         /**
-         * <p>The maximum capacity of resources that can be used in the queue.</p>
+         * <p>The maximum resource capacity of the queue.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;cpu&quot;: &quot;2&quot;,&quot;memory&quot;: &quot;2Gi&quot;}</p>
@@ -228,7 +228,7 @@ public class ListWorkspaceQueuesResponseBody extends TeaModel {
         public String maxResource;
 
         /**
-         * <p>The minimum capacity of resources that can be used in the queue.</p>
+         * <p>The minimum resource capacity of the queue.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;cpu&quot;: &quot;2&quot;,&quot;memory&quot;: &quot;2Gi&quot;}</p>
@@ -239,8 +239,10 @@ public class ListWorkspaceQueuesResponseBody extends TeaModel {
         /**
          * <p>The billing method. Valid values:</p>
          * <ul>
-         * <li>PayAsYouGo</li>
-         * <li>Pre</li>
+         * <li><p>PayAsYouGo: pay-as-you-go</p>
+         * </li>
+         * <li><p>Pre: subscription</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -269,7 +271,7 @@ public class ListWorkspaceQueuesResponseBody extends TeaModel {
         public String queueCategory;
 
         /**
-         * <p>The name of the queue.</p>
+         * <p>The queue name.</p>
          * 
          * <strong>example:</strong>
          * <p>dev_queue</p>
@@ -287,7 +289,7 @@ public class ListWorkspaceQueuesResponseBody extends TeaModel {
         public String queueScope;
 
         /**
-         * <p>The status of the queue.</p>
+         * <p>The queue status.</p>
          * 
          * <strong>example:</strong>
          * <p>RUNNING</p>
@@ -296,14 +298,16 @@ public class ListWorkspaceQueuesResponseBody extends TeaModel {
         public String queueStatus;
 
         /**
-         * <p>The type of the queue. Valid values:</p>
+         * <p>The queue type. Valid values:</p>
          * <ul>
-         * <li>instance</li>
-         * <li>instanceChildren</li>
+         * <li><p>instance: A queue for a single task.</p>
+         * </li>
+         * <li><p>instanceChildren: A queue for a parent task.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
-         * <p>instance, instanceChildren</p>
+         * <p>instance</p>
          */
         @NameInMap("queueType")
         public String queueType;
@@ -318,7 +322,7 @@ public class ListWorkspaceQueuesResponseBody extends TeaModel {
         public String regionId;
 
         /**
-         * <p>The capacity of resources that are used in the queue.</p>
+         * <p>The used resource capacity of the queue.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;cpu&quot;: &quot;2&quot;,&quot;memory&quot;: &quot;2Gi&quot;}</p>

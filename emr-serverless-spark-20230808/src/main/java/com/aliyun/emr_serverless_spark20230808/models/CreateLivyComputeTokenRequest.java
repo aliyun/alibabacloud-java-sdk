@@ -4,10 +4,15 @@ package com.aliyun.emr_serverless_spark20230808.models;
 import com.aliyun.tea.*;
 
 public class CreateLivyComputeTokenRequest extends TeaModel {
+    /**
+     * <p>The token expiration information struct.</p>
+     */
     @NameInMap("autoExpireConfiguration")
     public CreateLivyComputeTokenRequestAutoExpireConfiguration autoExpireConfiguration;
 
     /**
+     * <p>The token name.</p>
+     * 
      * <strong>example:</strong>
      * <p>mytoken</p>
      */
@@ -15,6 +20,8 @@ public class CreateLivyComputeTokenRequest extends TeaModel {
     public String name;
 
     /**
+     * <p>The token content. The length must be 16 or more characters.</p>
+     * 
      * <strong>example:</strong>
      * <p>gs3fy75w4o7hqe5s</p>
      */
@@ -22,6 +29,8 @@ public class CreateLivyComputeTokenRequest extends TeaModel {
     public String token;
 
     /**
+     * <p>The region ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
      */
@@ -67,6 +76,14 @@ public class CreateLivyComputeTokenRequest extends TeaModel {
 
     public static class CreateLivyComputeTokenRequestAutoExpireConfiguration extends TeaModel {
         /**
+         * <p>Specifies whether the token automatically expires.</p>
+         * <ul>
+         * <li><p>true: Yes.</p>
+         * </li>
+         * <li><p>false: No.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
@@ -74,6 +91,8 @@ public class CreateLivyComputeTokenRequest extends TeaModel {
         public Boolean enable;
 
         /**
+         * <p>The expiration period in days.</p>
+         * 
          * <strong>example:</strong>
          * <p>7</p>
          */

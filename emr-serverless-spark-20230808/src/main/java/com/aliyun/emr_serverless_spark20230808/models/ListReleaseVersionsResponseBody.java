@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListReleaseVersionsResponseBody extends TeaModel {
     /**
-     * <p>The maximum number of entries returned.</p>
+     * <p>The maximum number of records to return on a single page.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -14,7 +14,7 @@ public class ListReleaseVersionsResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>A pagination token. It can be used in the next request to retrieve a new page of results.</p>
+     * <p>The token for the next page of results.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -23,7 +23,7 @@ public class ListReleaseVersionsResponseBody extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The versions.</p>
+     * <p>The list of versions.</p>
      */
     @NameInMap("releaseVersions")
     public java.util.List<ListReleaseVersionsResponseBodyReleaseVersions> releaseVersions;
@@ -38,7 +38,7 @@ public class ListReleaseVersionsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of entries returned.</p>
+     * <p>The total number of records.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -93,7 +93,7 @@ public class ListReleaseVersionsResponseBody extends TeaModel {
 
     public static class ListReleaseVersionsResponseBodyReleaseVersions extends TeaModel {
         /**
-         * <p>The version number of open source Spark.</p>
+         * <p>The community version number of Spark.</p>
          * 
          * <strong>example:</strong>
          * <p>Spark 3.3.1</p>
@@ -102,7 +102,7 @@ public class ListReleaseVersionsResponseBody extends TeaModel {
         public String communityVersion;
 
         /**
-         * <p>The CPU architectures.</p>
+         * <p>The list of CPU architectures.</p>
          */
         @NameInMap("cpuArchitectures")
         public java.util.List<String> cpuArchitectures;
@@ -117,7 +117,7 @@ public class ListReleaseVersionsResponseBody extends TeaModel {
         public String displayReleaseVersion;
 
         /**
-         * <p>Indicates whether the Fusion engine is used for acceleration.</p>
+         * <p>Indicates whether the Fusion engine is enabled for acceleration.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -126,7 +126,7 @@ public class ListReleaseVersionsResponseBody extends TeaModel {
         public Boolean fusion;
 
         /**
-         * <p>The creation time.</p>
+         * <p>The time when the version was created.</p>
          * 
          * <strong>example:</strong>
          * <p>1716215854101</p>
@@ -135,7 +135,7 @@ public class ListReleaseVersionsResponseBody extends TeaModel {
         public Long gmtCreate;
 
         /**
-         * <p>The type of the Infrastructure as a Service (IaaS) layer.</p>
+         * <p>The type of the IaaS layer.</p>
          * 
          * <strong>example:</strong>
          * <p>ASI</p>
@@ -153,7 +153,7 @@ public class ListReleaseVersionsResponseBody extends TeaModel {
         public String releaseVersion;
 
         /**
-         * <p>The version of Scala.</p>
+         * <p>The Scala version.</p>
          * 
          * <strong>example:</strong>
          * <p>2.12</p>

@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class GetLivyComputeResponseBody extends TeaModel {
     /**
+     * <p>The response code. A value of 1000000 indicates a successful request. Other values indicate a failed request. Check the message parameter for the error details.</p>
+     * 
      * <strong>example:</strong>
      * <p>1000000</p>
      */
     @NameInMap("code")
     public String code;
 
+    /**
+     * <p>The returned data.</p>
+     */
     @NameInMap("data")
     public GetLivyComputeResponseBodyData data;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>ok</p>
      */
@@ -22,6 +29,8 @@ public class GetLivyComputeResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>DD6B1B2A-5837-5237-ABE4-FF0C8944****</p>
      */
@@ -67,6 +76,14 @@ public class GetLivyComputeResponseBody extends TeaModel {
 
     public static class GetLivyComputeResponseBodyDataAutoStopConfiguration extends TeaModel {
         /**
+         * <p>Indicates whether to automatically start the gateway after it is created.</p>
+         * <ul>
+         * <li><p>true: Yes.</p>
+         * </li>
+         * <li><p>false: No.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
@@ -74,6 +91,8 @@ public class GetLivyComputeResponseBody extends TeaModel {
         public Boolean enable;
 
         /**
+         * <p>The number of minutes after which the Livy Gateway is automatically stopped if it is idle.</p>
+         * 
          * <strong>example:</strong>
          * <p>300</p>
          */
@@ -105,16 +124,23 @@ public class GetLivyComputeResponseBody extends TeaModel {
 
     public static class GetLivyComputeResponseBodyData extends TeaModel {
         /**
+         * <p>The authentication method.</p>
+         * 
          * <strong>example:</strong>
          * <p>Token</p>
          */
         @NameInMap("authType")
         public String authType;
 
+        /**
+         * <p>The auto-stop configuration.</p>
+         */
         @NameInMap("autoStopConfiguration")
         public GetLivyComputeResponseBodyDataAutoStopConfiguration autoStopConfiguration;
 
         /**
+         * <p>The ID of the Livy Gateway.</p>
+         * 
          * <strong>example:</strong>
          * <p>lc-xxxxxxxxxxxxx</p>
          */
@@ -122,6 +148,8 @@ public class GetLivyComputeResponseBody extends TeaModel {
         public String computeId;
 
         /**
+         * <p>The number of CPU cores for the Livy server.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -129,6 +157,8 @@ public class GetLivyComputeResponseBody extends TeaModel {
         public String cpuLimit;
 
         /**
+         * <p>The name of the creator.</p>
+         * 
          * <strong>example:</strong>
          * <p>alice</p>
          */
@@ -136,6 +166,8 @@ public class GetLivyComputeResponseBody extends TeaModel {
         public String createdBy;
 
         /**
+         * <p>The version number of the Spark engine.</p>
+         * 
          * <strong>example:</strong>
          * <p>esr-4.3.0 (Spark 3.5.2, Scala 2.12)</p>
          */
@@ -143,6 +175,8 @@ public class GetLivyComputeResponseBody extends TeaModel {
         public String displayReleaseVersion;
 
         /**
+         * <p>The status of the public endpoint switch.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -150,6 +184,8 @@ public class GetLivyComputeResponseBody extends TeaModel {
         public Boolean enablePublic;
 
         /**
+         * <p>The public endpoint.</p>
+         * 
          * <strong>example:</strong>
          * <p>emr-spark-livy-gateway-cn-hangzhou.data.aliyun.com/api/v1/workspace/w-xxxxxxxxx/livycompute/lc-xxxxxxxxxxx</p>
          */
@@ -157,6 +193,8 @@ public class GetLivyComputeResponseBody extends TeaModel {
         public String endpoint;
 
         /**
+         * <p>The internal endpoint.</p>
+         * 
          * <strong>example:</strong>
          * <p>emr-spark-livy-gateway-cn-hangzhou-internal.aliyun.com/api/v1/workspace/w-xxxxxxxxx/livycompute/lc-xxxxxxxxxxx</p>
          */
@@ -164,6 +202,8 @@ public class GetLivyComputeResponseBody extends TeaModel {
         public String endpointInner;
 
         /**
+         * <p>The ID of the runtime environment.</p>
+         * 
          * <strong>example:</strong>
          * <p>ev-cq31c7tlhtgm9nrrlj4g</p>
          */
@@ -171,6 +211,8 @@ public class GetLivyComputeResponseBody extends TeaModel {
         public String environmentId;
 
         /**
+         * <p>Indicates whether the fusion switch is enabled.</p>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
@@ -178,6 +220,8 @@ public class GetLivyComputeResponseBody extends TeaModel {
         public Boolean fusion;
 
         /**
+         * <p>The creation time.</p>
+         * 
          * <strong>example:</strong>
          * <p>1749456094000</p>
          */
@@ -185,6 +229,18 @@ public class GetLivyComputeResponseBody extends TeaModel {
         public Long gmtCreate;
 
         /**
+         * <p>The Livy Gateway configuration in JSON format. The following files are supported:</p>
+         * <ul>
+         * <li><p>sparkDefaultsConf</p>
+         * </li>
+         * <li><p>sparkBlackListConf</p>
+         * </li>
+         * <li><p>livyConf</p>
+         * </li>
+         * <li><p>livyClientConf</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>{
          *   &quot;sparkDefaultsConf&quot;: &quot;spark.driver.cores     1\nspark.driver.memory    4g\nspark.executor.cores   1\nspark.executor.memory  4g\n&quot;,
@@ -197,6 +253,8 @@ public class GetLivyComputeResponseBody extends TeaModel {
         public String livyServerConf;
 
         /**
+         * <p>The Livy version.</p>
+         * 
          * <strong>example:</strong>
          * <p>0.8.0</p>
          */
@@ -204,6 +262,8 @@ public class GetLivyComputeResponseBody extends TeaModel {
         public String livyVersion;
 
         /**
+         * <p>The memory size of the Livy server.</p>
+         * 
          * <strong>example:</strong>
          * <p>4Gi</p>
          */
@@ -211,6 +271,8 @@ public class GetLivyComputeResponseBody extends TeaModel {
         public String memoryLimit;
 
         /**
+         * <p>The name.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -218,6 +280,8 @@ public class GetLivyComputeResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>The name of the network connection.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -225,6 +289,8 @@ public class GetLivyComputeResponseBody extends TeaModel {
         public String networkName;
 
         /**
+         * <p>The queue name.</p>
+         * 
          * <strong>example:</strong>
          * <p>root_queue</p>
          */
@@ -232,6 +298,8 @@ public class GetLivyComputeResponseBody extends TeaModel {
         public String queueName;
 
         /**
+         * <p>The ID of the creator.</p>
+         * 
          * <strong>example:</strong>
          * <p>10000001</p>
          */
@@ -239,6 +307,8 @@ public class GetLivyComputeResponseBody extends TeaModel {
         public String ramUserId;
 
         /**
+         * <p>The version number of the Spark engine. This parameter is deprecated. Use displayReleaseVersion instead.</p>
+         * 
          * <strong>example:</strong>
          * <p>esr-4.3.0 (Spark 3.5.2, Scala 2.12, Java Runtime)</p>
          */
@@ -246,6 +316,8 @@ public class GetLivyComputeResponseBody extends TeaModel {
         public String releaseVersion;
 
         /**
+         * <p>The start time.</p>
+         * 
          * <strong>example:</strong>
          * <p>1749456094000</p>
          */
@@ -253,6 +325,8 @@ public class GetLivyComputeResponseBody extends TeaModel {
         public Long startTime;
 
         /**
+         * <p>The running status.</p>
+         * 
          * <strong>example:</strong>
          * <p>RUNNING</p>
          */

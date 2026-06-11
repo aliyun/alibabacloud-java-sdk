@@ -28,7 +28,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>激活AI中心</p>
+     * <p>Activates the AI center.</p>
      * 
      * @param request ActivateAICenterRequest
      * @param headers map
@@ -56,7 +56,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>激活AI中心</p>
+     * <p>Activates the AI center.</p>
      * 
      * @param request ActivateAICenterRequest
      * @return ActivateAICenterResponse
@@ -69,7 +69,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Adds a RAM user or RAM role to a workspace as a member.</p>
+     * <p>Adds a Resource Access Management (RAM) user or a RAM role to a workspace as a member.</p>
      * 
      * @param request AddMembersRequest
      * @param headers map
@@ -113,7 +113,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Adds a RAM user or RAM role to a workspace as a member.</p>
+     * <p>Adds a Resource Access Management (RAM) user or a RAM role to a workspace as a member.</p>
      * 
      * @param request AddMembersRequest
      * @return AddMembersResponse
@@ -173,7 +173,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>CancelKyuubiSparkApplication</p>
+     * <p>Cancels a Kyuubi Spark application.</p>
      * 
      * @param request CancelKyuubiSparkApplicationRequest
      * @param headers map
@@ -207,7 +207,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>CancelKyuubiSparkApplication</p>
+     * <p>Cancels a Kyuubi Spark application.</p>
      * 
      * @param request CancelKyuubiSparkApplicationRequest
      * @return CancelKyuubiSparkApplicationResponse
@@ -220,7 +220,48 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>资源转组</p>
+     * <p>停止RayJob</p>
+     * 
+     * @param request CancelRayJobRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CancelRayJobResponse
+     */
+    public CancelRayJobResponse cancelRayJobWithOptions(String workspaceId, String submissionId, CancelRayJobRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CancelRayJob"),
+            new TeaPair("version", "2023-08-08"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/workspaces/" + com.aliyun.openapiutil.Client.getEncodeParam(workspaceId) + "/rayJob/" + com.aliyun.openapiutil.Client.getEncodeParam(submissionId) + "/cancel"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CancelRayJobResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>停止RayJob</p>
+     * 
+     * @param request CancelRayJobRequest
+     * @return CancelRayJobResponse
+     */
+    public CancelRayJobResponse cancelRayJob(String workspaceId, String submissionId, CancelRayJobRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.cancelRayJobWithOptions(workspaceId, submissionId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Moves an instance to a different resource group.</p>
      * 
      * @param request ChangeResourceGroupRequest
      * @param headers map
@@ -266,7 +307,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>资源转组</p>
+     * <p>Moves an instance to a different resource group.</p>
      * 
      * @param request ChangeResourceGroupRequest
      * @return ChangeResourceGroupResponse
@@ -279,7 +320,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>CreateKyuubiService</p>
+     * <p>Creates a Kyuubi gateway.</p>
      * 
      * @param request CreateKyuubiServiceRequest
      * @param headers map
@@ -345,7 +386,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>CreateKyuubiService</p>
+     * <p>Creates a Kyuubi gateway.</p>
      * 
      * @param request CreateKyuubiServiceRequest
      * @return CreateKyuubiServiceResponse
@@ -358,7 +399,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建kyuubi的token</p>
+     * <p>Creates a Kyuubi Gateway authentication token.</p>
      * 
      * @param request CreateKyuubiTokenRequest
      * @param headers map
@@ -414,7 +455,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建kyuubi的token</p>
+     * <p>Creates a Kyuubi Gateway authentication token.</p>
      * 
      * @param request CreateKyuubiTokenRequest
      * @return CreateKyuubiTokenResponse
@@ -427,7 +468,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建Livy compute</p>
+     * <p>Creates a Livy compute.</p>
      * 
      * @param request CreateLivyComputeRequest
      * @param headers map
@@ -523,7 +564,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建Livy compute</p>
+     * <p>Creates a Livy compute.</p>
      * 
      * @param request CreateLivyComputeRequest
      * @return CreateLivyComputeResponse
@@ -536,7 +577,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建Livy Compute的token</p>
+     * <p>Creates a token for a Livy Gateway.</p>
      * 
      * @param request CreateLivyComputeTokenRequest
      * @param headers map
@@ -584,7 +625,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建Livy Compute的token</p>
+     * <p>Creates a token for a Livy Gateway.</p>
      * 
      * @param request CreateLivyComputeTokenRequest
      * @return CreateLivyComputeTokenResponse
@@ -597,7 +638,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建网络服务</p>
+     * <p>Creates a network service.</p>
      * 
      * @param request CreateNetworkServiceRequest
      * @param headers map
@@ -657,7 +698,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建网络服务</p>
+     * <p>Creates a network service.</p>
      * 
      * @param request CreateNetworkServiceRequest
      * @return CreateNetworkServiceResponse
@@ -670,7 +711,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a workflow.</p>
+     * <p>Creates a workflow definition.</p>
      * 
      * @param tmpReq CreateProcessDefinitionWithScheduleRequest
      * @param headers map
@@ -790,7 +831,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a workflow.</p>
+     * <p>Creates a workflow definition.</p>
      * 
      * @param request CreateProcessDefinitionWithScheduleRequest
      * @return CreateProcessDefinitionWithScheduleResponse
@@ -803,7 +844,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建Ray集群</p>
+     * <p>Creates a Ray cluster.</p>
      * 
      * @param request CreateRayClusterRequest
      * @param headers map
@@ -865,7 +906,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建Ray集群</p>
+     * <p>Creates a Ray cluster.</p>
      * 
      * @param request CreateRayClusterRequest
      * @return CreateRayClusterResponse
@@ -878,7 +919,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a session.</p>
+     * <p>Creates a session cluster.</p>
      * 
      * @param request CreateSessionClusterRequest
      * @param headers map
@@ -962,7 +1003,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a session.</p>
+     * <p>Creates a session cluster.</p>
      * 
      * @param request CreateSessionClusterRequest
      * @return CreateSessionClusterResponse
@@ -975,7 +1016,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates an SQL query task.</p>
+     * <p>Creates an SQL statement.</p>
      * 
      * @param request CreateSqlStatementRequest
      * @param headers map
@@ -1035,7 +1076,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates an SQL query task.</p>
+     * <p>Creates an SQL statement.</p>
      * 
      * @param request CreateSqlStatementRequest
      * @return CreateSqlStatementResponse
@@ -1169,7 +1210,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>DeleteKyuubiService</p>
+     * <p>Deletes a Kyuubi gateway.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -1195,7 +1236,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>DeleteKyuubiService</p>
+     * <p>Deletes a Kyuubi gateway.</p>
      * @return DeleteKyuubiServiceResponse
      */
     public DeleteKyuubiServiceResponse deleteKyuubiService(String workspaceId, String kyuubiServiceId) throws Exception {
@@ -1206,7 +1247,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除compute的token</p>
+     * <p>Deletes a Kyuubi Gateway authentication token.</p>
      * 
      * @param request DeleteKyuubiTokenRequest
      * @param headers map
@@ -1240,7 +1281,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除compute的token</p>
+     * <p>Deletes a Kyuubi Gateway authentication token.</p>
      * 
      * @param request DeleteKyuubiTokenRequest
      * @return DeleteKyuubiTokenResponse
@@ -1253,7 +1294,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除livy compute</p>
+     * <p>Deletes a Livy gateway.</p>
      * 
      * @param request DeleteLivyComputeRequest
      * @param headers map
@@ -1287,7 +1328,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除livy compute</p>
+     * <p>Deletes a Livy gateway.</p>
      * 
      * @param request DeleteLivyComputeRequest
      * @return DeleteLivyComputeResponse
@@ -1300,7 +1341,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除Livy Compute的token</p>
+     * <p>Deletes a token for a Livy Gateway.</p>
      * 
      * @param request DeleteLivyComputeTokenRequest
      * @param headers map
@@ -1334,7 +1375,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除Livy Compute的token</p>
+     * <p>Deletes a token for a Livy Gateway.</p>
      * 
      * @param request DeleteLivyComputeTokenRequest
      * @return DeleteLivyComputeTokenResponse
@@ -1347,7 +1388,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除Ray集群</p>
+     * <p>Deletes a Ray cluster.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -1373,7 +1414,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除Ray集群</p>
+     * <p>Deletes a Ray cluster.</p>
      * @return DeleteRayClusterResponse
      */
     public DeleteRayClusterResponse deleteRayCluster(String workspaceId, String clusterId) throws Exception {
@@ -1384,7 +1425,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the queue of a workspace.</p>
+     * <p>Updates a Workspace Queue.</p>
      * 
      * @param request EditWorkspaceQueueRequest
      * @param headers map
@@ -1440,7 +1481,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the queue of a workspace.</p>
+     * <p>Updates a Workspace Queue.</p>
      * 
      * @param request EditWorkspaceQueueRequest
      * @return EditWorkspaceQueueResponse
@@ -1453,7 +1494,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>上线工作流及其调度</p>
+     * <p>Publishes a workflow and its scheduling configuration.</p>
      * 
      * @param request GenerateTaskCodesRequest
      * @param headers map
@@ -1495,7 +1536,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>上线工作流及其调度</p>
+     * <p>Publishes a workflow and its scheduling configuration.</p>
      * 
      * @param request GenerateTaskCodesRequest
      * @return GenerateTaskCodesResponse
@@ -1508,7 +1549,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取AI中心状态</p>
+     * <p>Gets the state of an AI center.</p>
      * 
      * @param request GetAICenterStateRequest
      * @param headers map
@@ -1536,7 +1577,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取AI中心状态</p>
+     * <p>Gets the state of an AI center.</p>
      * 
      * @param request GetAICenterStateRequest
      * @return GetAICenterStateResponse
@@ -1655,7 +1696,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Obtain the job details.</p>
+     * <p>Get the details of a job.</p>
      * 
      * @param request GetJobRunRequest
      * @param headers map
@@ -1689,7 +1730,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Obtain the job details.</p>
+     * <p>Get the details of a job.</p>
      * 
      * @param request GetJobRunRequest
      * @return GetJobRunResponse
@@ -1702,7 +1743,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>GetKyuubiService</p>
+     * <p>Retrieves the details of a Kyuubi Gateway.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -1728,7 +1769,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>GetKyuubiService</p>
+     * <p>Retrieves the details of a Kyuubi Gateway.</p>
      * @return GetKyuubiServiceResponse
      */
     public GetKyuubiServiceResponse getKyuubiService(String workspaceId, String kyuubiServiceId) throws Exception {
@@ -1739,7 +1780,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取compute的token</p>
+     * <p>Obtains an authentication token for Kyuubi Gateway.</p>
      * 
      * @param request GetKyuubiTokenRequest
      * @param headers map
@@ -1773,7 +1814,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取compute的token</p>
+     * <p>Obtains an authentication token for Kyuubi Gateway.</p>
      * 
      * @param request GetKyuubiTokenRequest
      * @return GetKyuubiTokenResponse
@@ -1786,7 +1827,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取livy compute</p>
+     * <p>Retrieves information about a Livy Gateway.</p>
      * 
      * @param request GetLivyComputeRequest
      * @param headers map
@@ -1820,7 +1861,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取livy compute</p>
+     * <p>Retrieves information about a Livy Gateway.</p>
      * 
      * @param request GetLivyComputeRequest
      * @return GetLivyComputeResponse
@@ -1833,7 +1874,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取livy compute token</p>
+     * <p>Retrieves a token for a Livy Gateway.</p>
      * 
      * @param request GetLivyComputeTokenRequest
      * @param headers map
@@ -1867,7 +1908,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取livy compute token</p>
+     * <p>Retrieves a token for a Livy Gateway.</p>
      * 
      * @param request GetLivyComputeTokenRequest
      * @return GetLivyComputeTokenResponse
@@ -1880,7 +1921,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取Ray集群</p>
+     * <p>Retrieves the details of a Ray cluster, including its configuration, runtime state, node information, and connection endpoints.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -1906,7 +1947,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取Ray集群</p>
+     * <p>Retrieves the details of a Ray cluster, including its configuration, runtime state, node information, and connection endpoints.</p>
      * @return GetRayClusterResponse
      */
     public GetRayClusterResponse getRayCluster(String workspaceId, String clusterId) throws Exception {
@@ -1917,7 +1958,48 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取任务配置</p>
+     * <p>获取Ray集群</p>
+     * 
+     * @param request GetRayJobRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetRayJobResponse
+     */
+    public GetRayJobResponse getRayJobWithOptions(String workspaceId, String submissionId, GetRayJobRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetRayJob"),
+            new TeaPair("version", "2023-08-08"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/workspaces/" + com.aliyun.openapiutil.Client.getEncodeParam(workspaceId) + "/rayJob/" + com.aliyun.openapiutil.Client.getEncodeParam(submissionId) + ""),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetRayJobResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取Ray集群</p>
+     * 
+     * @param request GetRayJobRequest
+     * @return GetRayJobResponse
+     */
+    public GetRayJobResponse getRayJob(String workspaceId, String submissionId, GetRayJobRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.getRayJobWithOptions(workspaceId, submissionId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Retrieves the configuration of a Spark job.</p>
      * 
      * @param request GetRunConfigurationRequest
      * @param headers map
@@ -1951,7 +2033,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取任务配置</p>
+     * <p>Retrieves the configuration of a Spark job.</p>
      * 
      * @param request GetRunConfigurationRequest
      * @return GetRunConfigurationResponse
@@ -1964,7 +2046,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the information about a session.</p>
+     * <p>Retrieves session details.</p>
      * 
      * @param request GetSessionClusterRequest
      * @param headers map
@@ -1998,7 +2080,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the information about a session.</p>
+     * <p>Retrieves session details.</p>
      * 
      * @param request GetSessionClusterRequest
      * @return GetSessionClusterResponse
@@ -2011,7 +2093,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the status of an SQL query task.</p>
+     * <p>Retrieves the details of an SQL query.</p>
      * 
      * @param request GetSqlStatementRequest
      * @param headers map
@@ -2045,7 +2127,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the status of an SQL query task.</p>
+     * <p>Retrieves the details of an SQL query.</p>
      * 
      * @param request GetSqlStatementRequest
      * @return GetSqlStatementResponse
@@ -2058,7 +2140,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries task templates.</p>
+     * <p>Retrieves a task template.</p>
      * 
      * @param request GetTemplateRequest
      * @param headers map
@@ -2100,7 +2182,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries task templates.</p>
+     * <p>Retrieves a task template.</p>
      * 
      * @param request GetTemplateRequest
      * @return GetTemplateResponse
@@ -2170,7 +2252,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查看数据目录列表</p>
+     * <p>View the list of data catalogs</p>
      * 
      * @param request ListCatalogsRequest
      * @param headers map
@@ -2208,7 +2290,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查看数据目录列表</p>
+     * <p>View the list of data catalogs</p>
      * 
      * @param request ListCatalogsRequest
      * @return ListCatalogsResponse
@@ -2221,7 +2303,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>列出作业executor的日志文件列表</p>
+     * <p>Lists the log files for a job executor.</p>
      * 
      * @param request ListExecutorLogsRequest
      * @param headers map
@@ -2267,7 +2349,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>列出作业executor的日志文件列表</p>
+     * <p>Lists the log files for a job executor.</p>
      * 
      * @param request ListExecutorLogsRequest
      * @return ListExecutorLogsResponse
@@ -2280,7 +2362,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>列出作业的executors</p>
+     * <p>Lists the executors of a job.</p>
      * 
      * @param request ListJobExecutorsRequest
      * @param headers map
@@ -2330,7 +2412,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>列出作业的executors</p>
+     * <p>Lists the executors of a job.</p>
      * 
      * @param request ListJobExecutorsRequest
      * @return ListJobExecutorsResponse
@@ -2343,7 +2425,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of Spark jobs.</p>
+     * <p>Call the ListJobRuns operation to retrieve a list of Spark jobs.</p>
      * 
      * @param tmpReq ListJobRunsRequest
      * @param headers map
@@ -2455,7 +2537,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of Spark jobs.</p>
+     * <p>Call the ListJobRuns operation to retrieve a list of Spark jobs.</p>
      * 
      * @param request ListJobRunsRequest
      * @return ListJobRunsResponse
@@ -2468,7 +2550,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Gets the list of KyuubiServers</p>
+     * <p>Lists Kyuubi Gateways.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -2494,7 +2576,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Gets the list of KyuubiServers</p>
+     * <p>Lists Kyuubi Gateways.</p>
      * @return ListKyuubiServicesResponse
      */
     public ListKyuubiServicesResponse listKyuubiServices(String workspaceId) throws Exception {
@@ -2505,7 +2587,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the applications that are submitted by using a Kyuubi gateway.</p>
+     * <p>Lists Kyuubi Spark applications.</p>
      * 
      * @param tmpReq ListKyuubiSparkApplicationsRequest
      * @param headers map
@@ -2597,7 +2679,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the applications that are submitted by using a Kyuubi gateway.</p>
+     * <p>Lists Kyuubi Spark applications.</p>
      * 
      * @param request ListKyuubiSparkApplicationsRequest
      * @return ListKyuubiSparkApplicationsResponse
@@ -2610,7 +2692,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>列出compute的token</p>
+     * <p>Lists KyuubiServer authentication tokens.</p>
      * 
      * @param request ListKyuubiTokenRequest
      * @param headers map
@@ -2644,7 +2726,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>列出compute的token</p>
+     * <p>Lists KyuubiServer authentication tokens.</p>
      * 
      * @param request ListKyuubiTokenRequest
      * @return ListKyuubiTokenResponse
@@ -2657,7 +2739,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>List the Livy Gateway.</p>
+     * <p>Lists Livy Gateways.</p>
      * 
      * @param request ListLivyComputeRequest
      * @param headers map
@@ -2695,7 +2777,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>List the Livy Gateway.</p>
+     * <p>Lists Livy Gateways.</p>
      * 
      * @param request ListLivyComputeRequest
      * @return ListLivyComputeResponse
@@ -2708,7 +2790,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取livy gateway历史session</p>
+     * <p>Lists the historical sessions for a Livy Gateway.</p>
      * 
      * @param request ListLivyComputeSessionsRequest
      * @param headers map
@@ -2750,7 +2832,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取livy gateway历史session</p>
+     * <p>Lists the historical sessions for a Livy Gateway.</p>
      * 
      * @param request ListLivyComputeSessionsRequest
      * @return ListLivyComputeSessionsResponse
@@ -2763,7 +2845,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>列出livy compute token</p>
+     * <p>Lists Livy Gateway tokens.</p>
      * 
      * @param request ListLivyComputeTokenRequest
      * @param headers map
@@ -2797,7 +2879,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>列出livy compute token</p>
+     * <p>Lists Livy Gateway tokens.</p>
      * 
      * @param request ListLivyComputeTokenRequest
      * @return ListLivyComputeTokenResponse
@@ -2869,7 +2951,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询用户列表</p>
+     * <p>Retrieves the list of members in the workspace.</p>
      * 
      * @param request ListMembersRequest
      * @param headers map
@@ -2911,7 +2993,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询用户列表</p>
+     * <p>Retrieves the list of members in the workspace.</p>
      * 
      * @param request ListMembersRequest
      * @return ListMembersResponse
@@ -2924,7 +3006,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查看网络服务列表</p>
+     * <p>Lists network connections.</p>
      * 
      * @param request ListNetworkServicesRequest
      * @param headers map
@@ -2958,7 +3040,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查看网络服务列表</p>
+     * <p>Lists network connections.</p>
      * 
      * @param request ListNetworkServicesRequest
      * @return ListNetworkServicesResponse
@@ -2971,7 +3053,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>列出Ray集群</p>
+     * <p>Lists Ray clusters.</p>
      * 
      * @param request ListRayClusterRequest
      * @param headers map
@@ -3009,7 +3091,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>列出Ray集群</p>
+     * <p>Lists Ray clusters.</p>
      * 
      * @param request ListRayClusterRequest
      * @return ListRayClusterResponse
@@ -3022,7 +3104,80 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the list of published versions of E-MapReduce (EMR) Serverless Spark.</p>
+     * <p>列出RayJob</p>
+     * 
+     * @param tmpReq ListRayJobRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListRayJobResponse
+     */
+    public ListRayJobResponse listRayJobWithOptions(String workspaceId, ListRayJobRequest tmpReq, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        ListRayJobShrinkRequest request = new ListRayJobShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.submitTime)) {
+            request.submitTimeShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.submitTime, "submitTime", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            query.put("name", request.name);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNum)) {
+            query.put("pageNum", request.pageNum);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("pageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.submissionId)) {
+            query.put("submissionId", request.submissionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.submitTimeShrink)) {
+            query.put("submitTime", request.submitTimeShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.taskBizId)) {
+            query.put("taskBizId", request.taskBizId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListRayJob"),
+            new TeaPair("version", "2023-08-08"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/workspaces/" + com.aliyun.openapiutil.Client.getEncodeParam(workspaceId) + "/rayJob"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListRayJobResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>列出RayJob</p>
+     * 
+     * @param request ListRayJobRequest
+     * @return ListRayJobResponse
+     */
+    public ListRayJobResponse listRayJob(String workspaceId, ListRayJobRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.listRayJobWithOptions(workspaceId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Retrieves a list of release versions.</p>
      * 
      * @param request ListReleaseVersionsRequest
      * @param headers map
@@ -3076,7 +3231,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the list of published versions of E-MapReduce (EMR) Serverless Spark.</p>
+     * <p>Retrieves a list of release versions.</p>
      * 
      * @param request ListReleaseVersionsRequest
      * @return ListReleaseVersionsResponse
@@ -3089,7 +3244,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the list of sessions.</p>
+     * <p>Retrieves a list of session clusters.</p>
      * 
      * @param request ListSessionClustersRequest
      * @param headers map
@@ -3143,7 +3298,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the list of sessions.</p>
+     * <p>Retrieves a list of session clusters.</p>
      * 
      * @param request ListSessionClustersRequest
      * @return ListSessionClustersResponse
@@ -3156,7 +3311,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取sql statement内容</p>
+     * <p>Retrieves the execution results of an SQL statement.</p>
      * 
      * @param request ListSqlStatementContentsRequest
      * @param headers map
@@ -3198,7 +3353,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取sql statement内容</p>
+     * <p>Retrieves the execution results of an SQL statement.</p>
      * 
      * @param request ListSqlStatementContentsRequest
      * @return ListSqlStatementContentsResponse
@@ -3211,7 +3366,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取任务模板列表</p>
+     * <p>Lists job templates.</p>
      * 
      * @param request ListTemplateRequest
      * @param headers map
@@ -3245,7 +3400,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取任务模板列表</p>
+     * <p>Lists job templates.</p>
      * 
      * @param request ListTemplateRequest
      * @return ListTemplateResponse
@@ -3258,7 +3413,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the list of queues in a Spark workspace.</p>
+     * <p>Lists the queues in a workspace.</p>
      * 
      * @param request ListWorkspaceQueuesRequest
      * @param headers map
@@ -3296,7 +3451,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the list of queues in a Spark workspace.</p>
+     * <p>Lists the queues in a workspace.</p>
      * 
      * @param request ListWorkspaceQueuesRequest
      * @return ListWorkspaceQueuesResponse
@@ -3309,7 +3464,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of workspaces.</p>
+     * <p>Call <code>ListWorkspaces</code> to get a list of workspaces.</p>
      * 
      * @param tmpReq ListWorkspacesRequest
      * @param headers map
@@ -3373,7 +3528,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of workspaces.</p>
+     * <p>Call <code>ListWorkspaces</code> to get a list of workspaces.</p>
      * 
      * @param request ListWorkspacesRequest
      * @return ListWorkspacesResponse
@@ -3386,7 +3541,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新Livy Compute的token</p>
+     * <p>Refreshes the token for a Livy Gateway.</p>
      * 
      * @param request RefreshLivyComputeTokenRequest
      * @param headers map
@@ -3434,7 +3589,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新Livy Compute的token</p>
+     * <p>Refreshes the token for a Livy Gateway.</p>
      * 
      * @param request RefreshLivyComputeTokenRequest
      * @return RefreshLivyComputeTokenResponse
@@ -3447,7 +3602,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Starts a Spark job.</p>
+     * <p>Starts a Spark Job.</p>
      * 
      * @param request StartJobRunRequest
      * @param headers map
@@ -3531,7 +3686,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Starts a Spark job.</p>
+     * <p>Starts a Spark Job.</p>
      * 
      * @param request StartJobRunRequest
      * @return StartJobRunResponse
@@ -3544,7 +3699,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>StartKyuubiService</p>
+     * <p>Starts the Kyuubi Gateway.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -3570,7 +3725,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>StartKyuubiService</p>
+     * <p>Starts the Kyuubi Gateway.</p>
      * @return StartKyuubiServiceResponse
      */
     public StartKyuubiServiceResponse startKyuubiService(String workspaceId, String kyuubiServiceId) throws Exception {
@@ -3581,7 +3736,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>启动livy compute</p>
+     * <p>Starts a Livy gateway.</p>
      * 
      * @param request StartLivyComputeRequest
      * @param headers map
@@ -3615,7 +3770,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>启动livy compute</p>
+     * <p>Starts a Livy gateway.</p>
      * 
      * @param request StartLivyComputeRequest
      * @return StartLivyComputeResponse
@@ -3628,7 +3783,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Manually runs a workflow.</p>
+     * <p>Starts a workflow manually.</p>
      * 
      * @param request StartProcessInstanceRequest
      * @param headers map
@@ -3702,7 +3857,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Manually runs a workflow.</p>
+     * <p>Starts a workflow manually.</p>
      * 
      * @param request StartProcessInstanceRequest
      * @return StartProcessInstanceResponse
@@ -3715,7 +3870,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>启动Ray集群</p>
+     * <p>Starts a Ray cluster.</p>
      * 
      * @param request StartRayClusterRequest
      * @param headers map
@@ -3749,7 +3904,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>启动Ray集群</p>
+     * <p>Starts a Ray cluster.</p>
      * 
      * @param request StartRayClusterRequest
      * @return StartRayClusterResponse
@@ -3762,7 +3917,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Starts a session.</p>
+     * <p>Starts a session cluster.</p>
      * 
      * @param request StartSessionClusterRequest
      * @param headers map
@@ -3806,7 +3961,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Starts a session.</p>
+     * <p>Starts a session cluster.</p>
      * 
      * @param request StartSessionClusterRequest
      * @return StartSessionClusterResponse
@@ -3819,7 +3974,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>StopKyuubiService</p>
+     * <p>Stops a Kyuubi Gateway.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -3845,7 +4000,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>StopKyuubiService</p>
+     * <p>Stops a Kyuubi Gateway.</p>
      * @return StopKyuubiServiceResponse
      */
     public StopKyuubiServiceResponse stopKyuubiService(String workspaceId, String kyuubiServiceId) throws Exception {
@@ -3856,7 +4011,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>停止livy compute</p>
+     * <p>Stops a Livy Gateway.</p>
      * 
      * @param request StopLivyComputeRequest
      * @param headers map
@@ -3890,7 +4045,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>停止livy compute</p>
+     * <p>Stops a Livy Gateway.</p>
      * 
      * @param request StopLivyComputeRequest
      * @return StopLivyComputeResponse
@@ -3903,7 +4058,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>停止Ray集群</p>
+     * <p>Stops a Ray cluster.</p>
      * 
      * @param request StopRayClusterRequest
      * @param headers map
@@ -3937,7 +4092,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>停止Ray集群</p>
+     * <p>Stops a Ray cluster.</p>
      * 
      * @param request StopRayClusterRequest
      * @return StopRayClusterResponse
@@ -4007,6 +4162,129 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>提交Ray Job</p>
+     * 
+     * @param request SubmitRayJobRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return SubmitRayJobResponse
+     */
+    public SubmitRayJobResponse submitRayJobWithOptions(String workspaceId, SubmitRayJobRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.activeDeadlineSeconds)) {
+            body.put("activeDeadlineSeconds", request.activeDeadlineSeconds);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.displayReleaseVersion)) {
+            body.put("displayReleaseVersion", request.displayReleaseVersion);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.entrypoint)) {
+            body.put("entrypoint", request.entrypoint);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.entrypointMemory)) {
+            body.put("entrypointMemory", request.entrypointMemory);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.entrypointNumCpus)) {
+            body.put("entrypointNumCpus", request.entrypointNumCpus);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.entrypointNumGpus)) {
+            body.put("entrypointNumGpus", request.entrypointNumGpus);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.entrypointResources)) {
+            body.put("entrypointResources", request.entrypointResources);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.extraParam)) {
+            body.put("extraParam", request.extraParam);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.headSpec)) {
+            body.put("headSpec", request.headSpec);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.metadataJson)) {
+            body.put("metadataJson", request.metadataJson);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            body.put("name", request.name);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.networkServiceName)) {
+            body.put("networkServiceName", request.networkServiceName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.runtimeEnvJson)) {
+            body.put("runtimeEnvJson", request.runtimeEnvJson);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.shutdownAfterJobFinishes)) {
+            body.put("shutdownAfterJobFinishes", request.shutdownAfterJobFinishes);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.submissionMode)) {
+            body.put("submissionMode", request.submissionMode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tags)) {
+            body.put("tags", request.tags);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ttlSecondsAfterFinished)) {
+            body.put("ttlSecondsAfterFinished", request.ttlSecondsAfterFinished);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.volumeIds)) {
+            body.put("volumeIds", request.volumeIds);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workerSpec)) {
+            body.put("workerSpec", request.workerSpec);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workingDir)) {
+            body.put("workingDir", request.workingDir);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "SubmitRayJob"),
+            new TeaPair("version", "2023-08-08"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/workspaces/" + com.aliyun.openapiutil.Client.getEncodeParam(workspaceId) + "/rayJob"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new SubmitRayJobResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>提交Ray Job</p>
+     * 
+     * @param request SubmitRayJobRequest
+     * @return SubmitRayJobResponse
+     */
+    public SubmitRayJobResponse submitRayJob(String workspaceId, SubmitRayJobRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.submitRayJobWithOptions(workspaceId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Terminates an SQL query task.</p>
      * 
      * @param request TerminateSqlStatementRequest
@@ -4054,7 +4332,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>UpdateKyuubiService</p>
+     * <p>Updates a Kyuubi Gateway.</p>
      * 
      * @param request UpdateKyuubiServiceRequest
      * @param headers map
@@ -4124,7 +4402,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>UpdateKyuubiService</p>
+     * <p>Updates a Kyuubi Gateway.</p>
      * 
      * @param request UpdateKyuubiServiceRequest
      * @return UpdateKyuubiServiceResponse
@@ -4137,7 +4415,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新kyuubi的token</p>
+     * <p>Updates a Kyuubi Gateway authentication token.</p>
      * 
      * @param request UpdateKyuubiTokenRequest
      * @param headers map
@@ -4193,7 +4471,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新kyuubi的token</p>
+     * <p>Updates a Kyuubi Gateway authentication token.</p>
      * 
      * @param request UpdateKyuubiTokenRequest
      * @return UpdateKyuubiTokenResponse
@@ -4206,7 +4484,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新livy compute</p>
+     * <p>Updates a Livy Gateway.</p>
      * 
      * @param request UpdateLivyComputeRequest
      * @param headers map
@@ -4302,7 +4580,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新livy compute</p>
+     * <p>Updates a Livy Gateway.</p>
      * 
      * @param request UpdateLivyComputeRequest
      * @return UpdateLivyComputeResponse
@@ -4315,7 +4593,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates the workflow and time-based scheduling configurations.</p>
+     * <p>Updates a workflow definition and its timed scheduling.</p>
      * 
      * @param tmpReq UpdateProcessDefinitionWithScheduleRequest
      * @param headers map
@@ -4439,7 +4717,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates the workflow and time-based scheduling configurations.</p>
+     * <p>Updates a workflow definition and its timed scheduling.</p>
      * 
      * @param request UpdateProcessDefinitionWithScheduleRequest
      * @return UpdateProcessDefinitionWithScheduleResponse
@@ -4452,7 +4730,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新Ray集群</p>
+     * <p>Updates a Ray cluster.</p>
      * 
      * @param request UpdateRayClusterRequest
      * @param headers map
@@ -4514,7 +4792,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新Ray集群</p>
+     * <p>Updates a Ray cluster.</p>
      * 
      * @param request UpdateRayClusterRequest
      * @return UpdateRayClusterResponse
@@ -4527,7 +4805,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新workspace属性</p>
+     * <p>Update workspace properties</p>
      * 
      * @param request UpdateWorkspaceRequest
      * @param headers map
@@ -4552,6 +4830,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.gpuSpec)) {
             body.put("gpuSpec", request.gpuSpec);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ipWhiteList)) {
+            body.put("ipWhiteList", request.ipWhiteList);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.resourceGroupId)) {
@@ -4591,7 +4873,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新workspace属性</p>
+     * <p>Update workspace properties</p>
      * 
      * @param request UpdateWorkspaceRequest
      * @return UpdateWorkspaceResponse

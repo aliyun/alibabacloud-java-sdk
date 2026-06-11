@@ -4,10 +4,15 @@ package com.aliyun.emr_serverless_spark20230808.models;
 import com.aliyun.tea.*;
 
 public class ListExecutorLogsResponseBody extends TeaModel {
+    /**
+     * <p>The retrieved logs, sorted in contextual order. If no contextual logs are found based on the specified starting log, this parameter is empty.</p>
+     */
     @NameInMap("logs")
     public java.util.List<ListExecutorLogsResponseBodyLogs> logs;
 
     /**
+     * <p>The maximum number of results returned per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -15,6 +20,8 @@ public class ListExecutorLogsResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>The token to retrieve the next page of results. This value is null when there are no more results to return.</p>
+     * 
      * <strong>example:</strong>
      * <p>2</p>
      */
@@ -22,7 +29,7 @@ public class ListExecutorLogsResponseBody extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>DD6B1B2A-5837-5237-ABE4-FF0C8944</p>
@@ -31,6 +38,8 @@ public class ListExecutorLogsResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total count of log files.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -83,10 +92,15 @@ public class ListExecutorLogsResponseBody extends TeaModel {
     }
 
     public static class ListExecutorLogsResponseBodyLogs extends TeaModel {
+        /**
+         * <p>The full path of the log file.</p>
+         */
         @NameInMap("fileName")
         public String fileName;
 
         /**
+         * <p>The size of the file, in bytes.</p>
+         * 
          * <strong>example:</strong>
          * <p>6383327</p>
          */
@@ -94,6 +108,8 @@ public class ListExecutorLogsResponseBody extends TeaModel {
         public Long fileSize;
 
         /**
+         * <p>The log name.</p>
+         * 
          * <strong>example:</strong>
          * <p>log4j.log</p>
          */
@@ -101,6 +117,8 @@ public class ListExecutorLogsResponseBody extends TeaModel {
         public String logName;
 
         /**
+         * <p>The log type.</p>
+         * 
          * <strong>example:</strong>
          * <p>log4j</p>
          */
@@ -108,6 +126,8 @@ public class ListExecutorLogsResponseBody extends TeaModel {
         public String logType;
 
         /**
+         * <p>The time the log file was last updated, as a Unix timestamp.</p>
+         * 
          * <strong>example:</strong>
          * <p>1745390462</p>
          */

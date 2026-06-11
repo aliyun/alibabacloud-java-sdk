@@ -8,7 +8,7 @@ public class Template extends TeaModel {
     public String bizId;
 
     /**
-     * <p>The user ID of the job creator.</p>
+     * <p>Creator UID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -18,7 +18,7 @@ public class Template extends TeaModel {
     public Long creator;
 
     /**
-     * <p>The displayed version of the Spark engine.</p>
+     * <p>Spark engine display version.</p>
      * 
      * <strong>example:</strong>
      * <p>esr-4.1.1</p>
@@ -27,7 +27,7 @@ public class Template extends TeaModel {
     public String displaySparkVersion;
 
     /**
-     * <p>Indicates whether Fusion engine is enabled for acceleration.</p>
+     * <p>Whether to enable the fusion switch.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -36,7 +36,7 @@ public class Template extends TeaModel {
     public Boolean fusion;
 
     /**
-     * <p>The creation time.</p>
+     * <p>Creation time.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -46,7 +46,7 @@ public class Template extends TeaModel {
     public String gmtCreated;
 
     /**
-     * <p>The time when the job was last modified.</p>
+     * <p>Last modified time.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -59,7 +59,7 @@ public class Template extends TeaModel {
     public Boolean isDefault;
 
     /**
-     * <p>The ID of the user who last modified the job.</p>
+     * <p>Last modifier UID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -72,13 +72,13 @@ public class Template extends TeaModel {
     public String name;
 
     /**
-     * <p>The SparkConf objects.</p>
+     * <p>Spark Conf</p>
      */
     @NameInMap("sparkConf")
     public java.util.List<SparkConf> sparkConf;
 
     /**
-     * <p>The number of driver cores of the Spark job.</p>
+     * <p>Spark Driver cores.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -88,7 +88,7 @@ public class Template extends TeaModel {
     public Integer sparkDriverCores;
 
     /**
-     * <p>The size of driver memory of the Spark job.</p>
+     * <p>Spark Driver memory.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -98,7 +98,7 @@ public class Template extends TeaModel {
     public Long sparkDriverMemory;
 
     /**
-     * <p>The number of executor cores of the Spark job.</p>
+     * <p>Spark Executor cores.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -108,7 +108,7 @@ public class Template extends TeaModel {
     public Integer sparkExecutorCores;
 
     /**
-     * <p>The size of executor memory of the Spark job.</p>
+     * <p>Spark Executor memory.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -118,7 +118,7 @@ public class Template extends TeaModel {
     public Long sparkExecutorMemory;
 
     /**
-     * <p>The level of the Spark log.</p>
+     * <p>Spark log level.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -128,7 +128,7 @@ public class Template extends TeaModel {
     public String sparkLogLevel;
 
     /**
-     * <p>The path where the operational logs of the Spark job are stored.</p>
+     * <p>Spark log path.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -138,7 +138,7 @@ public class Template extends TeaModel {
     public String sparkLogPath;
 
     /**
-     * <p>The engine version of Spark.</p>
+     * <p>Spark internal release version.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -148,7 +148,7 @@ public class Template extends TeaModel {
     public String sparkVersion;
 
     /**
-     * <p>The template type.</p>
+     * <p>Template type.</p>
      * 
      * <strong>example:</strong>
      * <p>TASK</p>

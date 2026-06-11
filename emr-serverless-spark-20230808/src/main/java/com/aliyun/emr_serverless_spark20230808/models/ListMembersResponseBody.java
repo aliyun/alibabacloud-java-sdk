@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListMembersResponseBody extends TeaModel {
     /**
-     * <p>一次获取的最大记录数。</p>
+     * <p>The maximum number of entries returned per page.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -13,11 +13,14 @@ public class ListMembersResponseBody extends TeaModel {
     @NameInMap("maxResults")
     public Integer maxResults;
 
+    /**
+     * <p>The list of members.</p>
+     */
     @NameInMap("members")
     public java.util.List<ListMembersResponseBodyMembers> members;
 
     /**
-     * <p>下一页TOKEN。</p>
+     * <p>The token for the next page of results.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -26,7 +29,7 @@ public class ListMembersResponseBody extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>请求ID。</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>DD6B1B2A-5837-5237-ABE4-FF0C8944****</p>
@@ -35,7 +38,7 @@ public class ListMembersResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>记录总数。</p>
+     * <p>The total number of entries.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -90,7 +93,7 @@ public class ListMembersResponseBody extends TeaModel {
 
     public static class ListMembersResponseBodyMembersActions extends TeaModel {
         /**
-         * <p>行为 arn。</p>
+         * <p>The ARN of the action.</p>
          * 
          * <strong>example:</strong>
          * <p>acs:emr::w-1234****abcd:action/add_MEMBER</p>
@@ -99,7 +102,7 @@ public class ListMembersResponseBody extends TeaModel {
         public String actionArn;
 
         /**
-         * <p>权限名称。</p>
+         * <p>The name of the permission.</p>
          * 
          * <strong>example:</strong>
          * <p>add</p>
@@ -108,7 +111,7 @@ public class ListMembersResponseBody extends TeaModel {
         public String actionName;
 
         /**
-         * <p>action 依赖列表。</p>
+         * <p>The list of action dependencies.</p>
          * 
          * <strong>example:</strong>
          * <p>[&quot;view&quot;]</p>
@@ -117,7 +120,7 @@ public class ListMembersResponseBody extends TeaModel {
         public java.util.List<String> dependencies;
 
         /**
-         * <p>action 描述。</p>
+         * <p>The description of the action.</p>
          * 
          * <strong>example:</strong>
          * <p>add members</p>
@@ -126,7 +129,7 @@ public class ListMembersResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>权限展示名称。</p>
+         * <p>The display name of the permission.</p>
          * 
          * <strong>example:</strong>
          * <p>add members</p>
@@ -183,7 +186,7 @@ public class ListMembersResponseBody extends TeaModel {
 
     public static class ListMembersResponseBodyMembersRolesActions extends TeaModel {
         /**
-         * <p>行为 arn。</p>
+         * <p>The ARN of the action.</p>
          * 
          * <strong>example:</strong>
          * <p>acs:emr::w-1234****abcd:action/add_MEMBER</p>
@@ -192,7 +195,7 @@ public class ListMembersResponseBody extends TeaModel {
         public String actionArn;
 
         /**
-         * <p>权限名称。</p>
+         * <p>The name of the permission.</p>
          * 
          * <strong>example:</strong>
          * <p>add</p>
@@ -201,7 +204,7 @@ public class ListMembersResponseBody extends TeaModel {
         public String actionName;
 
         /**
-         * <p>action 依赖列表。</p>
+         * <p>The list of action dependencies.</p>
          * 
          * <strong>example:</strong>
          * <p>[&quot;view&quot;]</p>
@@ -210,7 +213,7 @@ public class ListMembersResponseBody extends TeaModel {
         public java.util.List<String> dependencies;
 
         /**
-         * <p>action 描述。</p>
+         * <p>The description of the action.</p>
          * 
          * <strong>example:</strong>
          * <p>add members</p>
@@ -219,7 +222,7 @@ public class ListMembersResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>权限展示名称。</p>
+         * <p>The display name of the permission.</p>
          * 
          * <strong>example:</strong>
          * <p>add members</p>
@@ -276,13 +279,13 @@ public class ListMembersResponseBody extends TeaModel {
 
     public static class ListMembersResponseBodyMembersRoles extends TeaModel {
         /**
-         * <p>权限列表。</p>
+         * <p>The list of permissions.</p>
          */
         @NameInMap("actions")
         public java.util.List<ListMembersResponseBodyMembersRolesActions> actions;
 
         /**
-         * <p>创建时间。</p>
+         * <p>The time when the role was created.</p>
          * 
          * <strong>example:</strong>
          * <p>1753412502000</p>
@@ -291,7 +294,7 @@ public class ListMembersResponseBody extends TeaModel {
         public Long createTime;
 
         /**
-         * <p>描述。</p>
+         * <p>The description.</p>
          * 
          * <strong>example:</strong>
          * <p>DataScience</p>
@@ -300,7 +303,7 @@ public class ListMembersResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>角色 arn。</p>
+         * <p>The ARN of the role.</p>
          * 
          * <strong>example:</strong>
          * <p>acs:emr::w-1234****abcd:role/DataScience</p>
@@ -309,7 +312,7 @@ public class ListMembersResponseBody extends TeaModel {
         public String roleArn;
 
         /**
-         * <p>角色名称。</p>
+         * <p>The name of the role.</p>
          * 
          * <strong>example:</strong>
          * <p>DataScience</p>
@@ -366,12 +369,14 @@ public class ListMembersResponseBody extends TeaModel {
 
     public static class ListMembersResponseBodyMembers extends TeaModel {
         /**
-         * <p>针对此用户允许的操作列表。</p>
+         * <p>The list of operations allowed for this user.</p>
          */
         @NameInMap("actions")
         public java.util.List<ListMembersResponseBodyMembersActions> actions;
 
         /**
+         * <p>The time when the member was created.</p>
+         * 
          * <strong>example:</strong>
          * <p>1753412502000</p>
          */
@@ -379,7 +384,7 @@ public class ListMembersResponseBody extends TeaModel {
         public String createTime;
 
         /**
-         * <p>用户展示名称。</p>
+         * <p>The display name of the user.</p>
          * 
          * <strong>example:</strong>
          * <p>jia***test</p>
@@ -388,7 +393,7 @@ public class ListMembersResponseBody extends TeaModel {
         public String displayName;
 
         /**
-         * <p>用户 arn。</p>
+         * <p>The Alibaba Cloud Resource Name (ARN) of the user.</p>
          * 
          * <strong>example:</strong>
          * <p>acs:emr::w-1234*<em><strong>abcd:member/202265</strong></em>**276</p>
@@ -397,13 +402,13 @@ public class ListMembersResponseBody extends TeaModel {
         public String memberArn;
 
         /**
-         * <p>用户角色列表。</p>
+         * <p>The list of roles in the workspace.</p>
          */
         @NameInMap("roles")
         public java.util.List<ListMembersResponseBodyMembersRoles> roles;
 
         /**
-         * <p>用户名称。</p>
+         * <p>The username.</p>
          * 
          * <strong>example:</strong>
          * <p>jia<em><strong>test@195</strong></em>**7311.onaliyun.com</p>
@@ -412,7 +417,7 @@ public class ListMembersResponseBody extends TeaModel {
         public String userName;
 
         /**
-         * <p>用户类型。</p>
+         * <p>The type of the user.</p>
          * 
          * <strong>example:</strong>
          * <p>MEMBER</p>
@@ -421,6 +426,8 @@ public class ListMembersResponseBody extends TeaModel {
         public String userType;
 
         /**
+         * <p>Indicates whether the member is visible.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */

@@ -6,12 +6,6 @@ import com.aliyun.tea.*;
 public class ListSessionClustersRequest extends TeaModel {
     /**
      * <p>The session type.</p>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li>NOTEBOOK</li>
-     * <li>THRIFT</li>
-     * <li>SQL</li>
-     * </ul>
      * 
      * <strong>example:</strong>
      * <p>SQL</p>
@@ -20,7 +14,7 @@ public class ListSessionClustersRequest extends TeaModel {
     public String kind;
 
     /**
-     * <p>The maximum number of entries to return.</p>
+     * <p>The maximum number of records to return.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -29,16 +23,16 @@ public class ListSessionClustersRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The pagination token that is used in the request to retrieve a new page of results.</p>
+     * <p>The token that marks the start of the next page of results.</p>
      * 
      * <strong>example:</strong>
-     * <p>DD6B1B2A-5837-5237-ABE4-FF0C89568980</p>
+     * <p>1</p>
      */
     @NameInMap("nextToken")
     public String nextToken;
 
     /**
-     * <p>The name of the queue.</p>
+     * <p>The queue name.</p>
      * 
      * <strong>example:</strong>
      * <p>root</p>

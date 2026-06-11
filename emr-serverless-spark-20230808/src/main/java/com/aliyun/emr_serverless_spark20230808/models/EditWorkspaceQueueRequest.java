@@ -4,16 +4,24 @@ package com.aliyun.emr_serverless_spark20230808.models;
 import com.aliyun.tea.*;
 
 public class EditWorkspaceQueueRequest extends TeaModel {
+    /**
+     * <p>The environment types.</p>
+     */
     @NameInMap("environments")
     public java.util.List<String> environments;
 
     @NameInMap("gpuSpec")
     public java.util.List<String> gpuSpec;
 
+    /**
+     * <p>The resource specifications.</p>
+     */
     @NameInMap("resourceSpec")
     public EditWorkspaceQueueRequestResourceSpec resourceSpec;
 
     /**
+     * <p>The Workspace ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>w-975bcfda9625****</p>
      */
@@ -21,6 +29,8 @@ public class EditWorkspaceQueueRequest extends TeaModel {
     public String workspaceId;
 
     /**
+     * <p>The name of the Workspace Queue.</p>
+     * 
      * <strong>example:</strong>
      * <p>dev_queue</p>
      */
@@ -28,6 +38,8 @@ public class EditWorkspaceQueueRequest extends TeaModel {
     public String workspaceQueueName;
 
     /**
+     * <p>The region ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
      */
@@ -89,6 +101,8 @@ public class EditWorkspaceQueueRequest extends TeaModel {
 
     public static class EditWorkspaceQueueRequestResourceSpec extends TeaModel {
         /**
+         * <p>The maximum resource capacity of the Workspace Queue.</p>
+         * 
          * <strong>example:</strong>
          * <p>1000</p>
          */

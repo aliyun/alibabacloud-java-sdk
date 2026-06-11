@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetRayClusterResponseBody extends TeaModel {
     /**
+     * <p>The ID of the Ray cluster.</p>
+     * 
      * <strong>example:</strong>
      * <p>ray-k7nm8ahl5te4tg91</p>
      */
@@ -12,6 +14,8 @@ public class GetRayClusterResponseBody extends TeaModel {
     public String clusterId;
 
     /**
+     * <p>The time when the cluster was created. This is a UNIX timestamp in milliseconds.</p>
+     * 
      * <strong>example:</strong>
      * <p>1750327083303</p>
      */
@@ -19,6 +23,8 @@ public class GetRayClusterResponseBody extends TeaModel {
     public Long createTime;
 
     /**
+     * <p>The UID of the user who created the cluster.</p>
+     * 
      * <strong>example:</strong>
      * <p>202077646755523991</p>
      */
@@ -26,6 +32,8 @@ public class GetRayClusterResponseBody extends TeaModel {
     public String creator;
 
     /**
+     * <p>The nickname of the creator.</p>
+     * 
      * <strong>example:</strong>
      * <p>Alice</p>
      */
@@ -33,6 +41,8 @@ public class GetRayClusterResponseBody extends TeaModel {
     public String creatorName;
 
     /**
+     * <p>The URL of the Ray Dashboard for this cluster.</p>
+     * 
      * <strong>example:</strong>
      * <p><a href="https://emr-ray-gateway-cn-hangzhou.aliyuncs.com/workspace/w-xxxxxxxx/raycluster/ray-xxxxxx/dashboard?token=xxxxxx">https://emr-ray-gateway-cn-hangzhou.aliyuncs.com/workspace/w-xxxxxxxx/raycluster/ray-xxxxxx/dashboard?token=xxxxxx</a></p>
      */
@@ -40,6 +50,8 @@ public class GetRayClusterResponseBody extends TeaModel {
     public String dashboardUrl;
 
     /**
+     * <p>The description of the Ray cluster.</p>
+     * 
      * <strong>example:</strong>
      * <p>Ray Cluster for dev.</p>
      */
@@ -47,6 +59,8 @@ public class GetRayClusterResponseBody extends TeaModel {
     public String description;
 
     /**
+     * <p>The version of the Ray engine.</p>
+     * 
      * <strong>example:</strong>
      * <p>ray-1.0.0 (Ray 2.47.1, Python 3.12)</p>
      */
@@ -54,6 +68,8 @@ public class GetRayClusterResponseBody extends TeaModel {
     public String displayReleaseVersion;
 
     /**
+     * <p>Additional parameters in JSON format.</p>
+     * 
      * <strong>example:</strong>
      * <p>{}</p>
      */
@@ -61,26 +77,38 @@ public class GetRayClusterResponseBody extends TeaModel {
     public String extraParam;
 
     /**
+     * <p>The gRPC endpoint for the internal network. You can also use the domain name in this endpoint to submit Ray jobs.</p>
+     * 
      * <strong>example:</strong>
      * <p>ray://emr-spark-ray-gateway-cn-hangzhou-internal.emr.aliyuncs.com:80</p>
      */
     @NameInMap("grpcEndpoint")
     public String grpcEndpoint;
 
+    /**
+     * <p>The configuration of the head node.</p>
+     */
     @NameInMap("headSpec")
     public GetRayClusterResponseBodyHeadSpec headSpec;
 
     /**
+     * <p>The ID of the Ray cluster node.</p>
+     * 
      * <strong>example:</strong>
      * <p>ray-k7nm8ahl5te4tg93-xxxxxxx</p>
      */
     @NameInMap("instanceId")
     public String instanceId;
 
+    /**
+     * <p>The list of nodes in the Ray cluster.</p>
+     */
     @NameInMap("instances")
     public java.util.List<GetRayClusterResponseBodyInstances> instances;
 
     /**
+     * <p>The public endpoint for submitting Ray jobs.</p>
+     * 
      * <strong>example:</strong>
      * <p><a href="https://emr-spark-ray-gateway-cn-hangzhou.aliyuncs.com">https://emr-spark-ray-gateway-cn-hangzhou.aliyuncs.com</a></p>
      */
@@ -95,6 +123,8 @@ public class GetRayClusterResponseBody extends TeaModel {
     public String jobUrlInner;
 
     /**
+     * <p>The error message. Returned when <code>state</code> is <code>Error</code>.</p>
+     * 
      * <strong>example:</strong>
      * <p>ok</p>
      */
@@ -102,6 +132,8 @@ public class GetRayClusterResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>Indicates whether the configuration was modified.</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -109,6 +141,8 @@ public class GetRayClusterResponseBody extends TeaModel {
     public Boolean modified;
 
     /**
+     * <p>The time when the cluster was last updated. This is a UNIX timestamp in milliseconds.</p>
+     * 
      * <strong>example:</strong>
      * <p>1754274541693</p>
      */
@@ -116,6 +150,8 @@ public class GetRayClusterResponseBody extends TeaModel {
     public Long modifiedTime;
 
     /**
+     * <p>The UID of the user who last updated the cluster.</p>
+     * 
      * <strong>example:</strong>
      * <p>202077646755523991</p>
      */
@@ -123,6 +159,8 @@ public class GetRayClusterResponseBody extends TeaModel {
     public String modifier;
 
     /**
+     * <p>The nickname of the modifier.</p>
+     * 
      * <strong>example:</strong>
      * <p>Alice</p>
      */
@@ -130,6 +168,8 @@ public class GetRayClusterResponseBody extends TeaModel {
     public String modifierName;
 
     /**
+     * <p>The name of the Ray cluster.</p>
+     * 
      * <strong>example:</strong>
      * <p>myRayCluster</p>
      */
@@ -137,6 +177,8 @@ public class GetRayClusterResponseBody extends TeaModel {
     public String name;
 
     /**
+     * <p>The name of the network connection.</p>
+     * 
      * <strong>example:</strong>
      * <p>vpc</p>
      */
@@ -144,6 +186,8 @@ public class GetRayClusterResponseBody extends TeaModel {
     public String networkServiceName;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>DD6B1B2A-5837-5237-ABE4-FF0C8944</p>
      */
@@ -151,6 +195,8 @@ public class GetRayClusterResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The time when the cluster started. This is a UNIX timestamp in milliseconds.</p>
+     * 
      * <strong>example:</strong>
      * <p>1750327083303</p>
      */
@@ -158,6 +204,20 @@ public class GetRayClusterResponseBody extends TeaModel {
     public Long startTime;
 
     /**
+     * <p>The session state. Valid values:</p>
+     * <ul>
+     * <li><p>Starting: The session is starting.</p>
+     * </li>
+     * <li><p>Running: The session is running.</p>
+     * </li>
+     * <li><p>Stopping: The session is being stopped.</p>
+     * </li>
+     * <li><p>Stopped: The session is stopped.</p>
+     * </li>
+     * <li><p>Error: The session has failed.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>Running</p>
      */
@@ -165,6 +225,8 @@ public class GetRayClusterResponseBody extends TeaModel {
     public String state;
 
     /**
+     * <p>The authentication token for submitting Ray jobs. Add this token to the request header in the format <code>&quot;ray-token&quot;: &quot;token&quot;</code>.</p>
+     * 
      * <strong>example:</strong>
      * <p>1d06484d3b424f7fa4ab7082a4076da2</p>
      */
@@ -172,6 +234,8 @@ public class GetRayClusterResponseBody extends TeaModel {
     public String submitToken;
 
     /**
+     * <p>The ID of the Alibaba Cloud account that created the cluster.</p>
+     * 
      * <strong>example:</strong>
      * <p>123456789012</p>
      */
@@ -181,6 +245,9 @@ public class GetRayClusterResponseBody extends TeaModel {
     @NameInMap("volumeIds")
     public java.util.List<String> volumeIds;
 
+    /**
+     * <p>The list of worker node group configurations.</p>
+     */
     @NameInMap("workerSpec")
     public java.util.List<GetRayClusterResponseBodyWorkerSpec> workerSpec;
 
@@ -415,6 +482,8 @@ public class GetRayClusterResponseBody extends TeaModel {
 
     public static class GetRayClusterResponseBodyHeadSpec extends TeaModel {
         /**
+         * <p>The number of CPU cores.</p>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */
@@ -422,6 +491,8 @@ public class GetRayClusterResponseBody extends TeaModel {
         public String cpu;
 
         /**
+         * <p>Specifies whether auto scaling is enabled for worker nodes.</p>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
@@ -436,6 +507,8 @@ public class GetRayClusterResponseBody extends TeaModel {
         public String gpuSpec;
 
         /**
+         * <p>The idle timeout period for worker nodes, in seconds. Applies only when auto scaling is enabled.</p>
+         * 
          * <strong>example:</strong>
          * <p>60</p>
          */
@@ -443,6 +516,8 @@ public class GetRayClusterResponseBody extends TeaModel {
         public Integer idleTimeoutSeconds;
 
         /**
+         * <p>The memory size. Unit: Gi.</p>
+         * 
          * <strong>example:</strong>
          * <p>8Gi</p>
          */
@@ -450,6 +525,8 @@ public class GetRayClusterResponseBody extends TeaModel {
         public String memory;
 
         /**
+         * <p>The name of the queue.</p>
+         * 
          * <strong>example:</strong>
          * <p>root_queue</p>
          */
@@ -457,6 +534,8 @@ public class GetRayClusterResponseBody extends TeaModel {
         public String queueName;
 
         /**
+         * <p>The number of nodes.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -528,6 +607,8 @@ public class GetRayClusterResponseBody extends TeaModel {
 
     public static class GetRayClusterResponseBodyInstances extends TeaModel {
         /**
+         * <p>The exit code of the main container.</p>
+         * 
          * <strong>example:</strong>
          * <p>137</p>
          */
@@ -535,6 +616,8 @@ public class GetRayClusterResponseBody extends TeaModel {
         public Integer containerExitCode;
 
         /**
+         * <p>The state of the main container.</p>
+         * 
          * <strong>example:</strong>
          * <p>Running</p>
          */
@@ -542,6 +625,8 @@ public class GetRayClusterResponseBody extends TeaModel {
         public String containerState;
 
         /**
+         * <p>The status message of the main container.</p>
+         * 
          * <strong>example:</strong>
          * <p>ContainerExit</p>
          */
@@ -549,6 +634,8 @@ public class GetRayClusterResponseBody extends TeaModel {
         public String containerStateMessage;
 
         /**
+         * <p>Additional information about the main container state.</p>
+         * 
          * <strong>example:</strong>
          * <p>ok</p>
          */
@@ -556,6 +643,8 @@ public class GetRayClusterResponseBody extends TeaModel {
         public String containerStateReason;
 
         /**
+         * <p>The time when the node was created. This is a UNIX timestamp in milliseconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>1735870116167</p>
          */
@@ -563,6 +652,8 @@ public class GetRayClusterResponseBody extends TeaModel {
         public Long createTime;
 
         /**
+         * <p>The node ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>ray-uiulpgow9xljim10-head-7cgta</p>
          */
@@ -570,6 +661,8 @@ public class GetRayClusterResponseBody extends TeaModel {
         public String instanceId;
 
         /**
+         * <p>The status message of the node pod.</p>
+         * 
          * <strong>example:</strong>
          * <p>ok</p>
          */
@@ -577,6 +670,8 @@ public class GetRayClusterResponseBody extends TeaModel {
         public String message;
 
         /**
+         * <p>The phase of the node pod.</p>
+         * 
          * <strong>example:</strong>
          * <p>Running</p>
          */
@@ -584,6 +679,8 @@ public class GetRayClusterResponseBody extends TeaModel {
         public String phase;
 
         /**
+         * <p>Additional information about the node.</p>
+         * 
          * <strong>example:</strong>
          * <p>OOMKilled</p>
          */
@@ -591,6 +688,8 @@ public class GetRayClusterResponseBody extends TeaModel {
         public String reason;
 
         /**
+         * <p>The time when the node started. This is a UNIX timestamp in milliseconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>1762946698000</p>
          */
@@ -598,6 +697,8 @@ public class GetRayClusterResponseBody extends TeaModel {
         public Long startTime;
 
         /**
+         * <p>The node type.</p>
+         * 
          * <strong>example:</strong>
          * <p>Head</p>
          */
@@ -701,6 +802,8 @@ public class GetRayClusterResponseBody extends TeaModel {
 
     public static class GetRayClusterResponseBodyWorkerSpec extends TeaModel {
         /**
+         * <p>The number of CPU cores per worker node.</p>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */
@@ -715,6 +818,8 @@ public class GetRayClusterResponseBody extends TeaModel {
         public String gpuSpec;
 
         /**
+         * <p>The name of the worker node group.</p>
+         * 
          * <strong>example:</strong>
          * <p>WorkerGroup1</p>
          */
@@ -722,6 +827,8 @@ public class GetRayClusterResponseBody extends TeaModel {
         public String groupName;
 
         /**
+         * <p>The maximum number of worker nodes in the group.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -729,6 +836,8 @@ public class GetRayClusterResponseBody extends TeaModel {
         public Integer maxReplica;
 
         /**
+         * <p>The memory size per worker node. Unit: Gi.</p>
+         * 
          * <strong>example:</strong>
          * <p>8Gi</p>
          */
@@ -736,6 +845,8 @@ public class GetRayClusterResponseBody extends TeaModel {
         public String memory;
 
         /**
+         * <p>The minimum number of worker nodes in the group.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -743,6 +854,8 @@ public class GetRayClusterResponseBody extends TeaModel {
         public Integer minReplica;
 
         /**
+         * <p>The name of the queue.</p>
+         * 
          * <strong>example:</strong>
          * <p>root_queue</p>
          */
@@ -750,6 +863,8 @@ public class GetRayClusterResponseBody extends TeaModel {
         public String queueName;
 
         /**
+         * <p>The number of worker nodes.</p>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */
@@ -757,6 +872,8 @@ public class GetRayClusterResponseBody extends TeaModel {
         public Integer replica;
 
         /**
+         * <p>The type of the worker node group.</p>
+         * 
          * <strong>example:</strong>
          * <p>CPU</p>
          */

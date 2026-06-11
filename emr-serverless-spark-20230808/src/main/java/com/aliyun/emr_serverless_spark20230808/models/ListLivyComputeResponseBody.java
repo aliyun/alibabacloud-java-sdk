@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class ListLivyComputeResponseBody extends TeaModel {
     /**
+     * <p>The response code. A value of 1000000 indicates that the request is successful. For other values, see the message parameter for error details.</p>
+     * 
      * <strong>example:</strong>
      * <p>1000000</p>
      */
     @NameInMap("code")
     public String code;
 
+    /**
+     * <p>The returned data.</p>
+     */
     @NameInMap("data")
     public ListLivyComputeResponseBodyData data;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>ok</p>
      */
@@ -22,6 +29,8 @@ public class ListLivyComputeResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>DD6B1B2A-5837-5237-ABE4-FF0C8944****</p>
      */
@@ -67,6 +76,8 @@ public class ListLivyComputeResponseBody extends TeaModel {
 
     public static class ListLivyComputeResponseBodyDataLivyComputes extends TeaModel {
         /**
+         * <p>The ID of the Livy Gateway.</p>
+         * 
          * <strong>example:</strong>
          * <p>lc-xxxxxxxxxxxx</p>
          */
@@ -74,6 +85,8 @@ public class ListLivyComputeResponseBody extends TeaModel {
         public String computeId;
 
         /**
+         * <p>The name of the creator.</p>
+         * 
          * <strong>example:</strong>
          * <p>alice</p>
          */
@@ -81,6 +94,8 @@ public class ListLivyComputeResponseBody extends TeaModel {
         public String createdBy;
 
         /**
+         * <p>The public endpoint.</p>
+         * 
          * <strong>example:</strong>
          * <p>emr-spark-livy-gateway-cn-hangzhou.data.aliyun.com/api/v1/workspace/w-xxxxxxxxx/livycompute/lc-xxxxxxxxxxx</p>
          */
@@ -88,6 +103,8 @@ public class ListLivyComputeResponseBody extends TeaModel {
         public String endpoint;
 
         /**
+         * <p>The internal endpoint.</p>
+         * 
          * <strong>example:</strong>
          * <p>emr-spark-livy-gateway-cn-hangzhou-internal.aliyun.com/api/v1/workspace/w-xxxxxxxxx/livycompute/lc-xxxxxxxxxxx</p>
          */
@@ -95,6 +112,8 @@ public class ListLivyComputeResponseBody extends TeaModel {
         public String endpointInner;
 
         /**
+         * <p>The time when the resource was created.</p>
+         * 
          * <strong>example:</strong>
          * <p>1749456094000</p>
          */
@@ -102,6 +121,8 @@ public class ListLivyComputeResponseBody extends TeaModel {
         public Long gmtCreate;
 
         /**
+         * <p>The name.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -109,6 +130,8 @@ public class ListLivyComputeResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>The queue name.</p>
+         * 
          * <strong>example:</strong>
          * <p>root_queue</p>
          */
@@ -116,6 +139,8 @@ public class ListLivyComputeResponseBody extends TeaModel {
         public String queueName;
 
         /**
+         * <p>The time when the resource was started.</p>
+         * 
          * <strong>example:</strong>
          * <p>1749456094000</p>
          */
@@ -123,6 +148,8 @@ public class ListLivyComputeResponseBody extends TeaModel {
         public Long startTime;
 
         /**
+         * <p>The running status.</p>
+         * 
          * <strong>example:</strong>
          * <p>RUNNING</p>
          */
@@ -209,6 +236,9 @@ public class ListLivyComputeResponseBody extends TeaModel {
     }
 
     public static class ListLivyComputeResponseBodyData extends TeaModel {
+        /**
+         * <p>A list of Livy Gateways.</p>
+         */
         @NameInMap("livyComputes")
         public java.util.List<ListLivyComputeResponseBodyDataLivyComputes> livyComputes;
 

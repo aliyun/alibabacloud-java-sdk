@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateSqlStatementResponseBody extends TeaModel {
     /**
-     * <p>The data returned.</p>
+     * <p>The returned result.</p>
      */
     @NameInMap("data")
     public CreateSqlStatementResponseBodyData data;
@@ -42,7 +42,7 @@ public class CreateSqlStatementResponseBody extends TeaModel {
 
     public static class CreateSqlStatementResponseBodyData extends TeaModel {
         /**
-         * <p>The interactive query ID.</p>
+         * <p>The ID of the interactive query.</p>
          * 
          * <strong>example:</strong>
          * <p>st-1231dfafadfa***</p>

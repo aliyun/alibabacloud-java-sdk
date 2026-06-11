@@ -26,6 +26,9 @@ public class GetDoctorApplicationResponseBody extends TeaModel {
     public static class GetDoctorApplicationResponseBodyData extends TeaModel {
         /**
          * <p>The diagnostics list.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Normal.</p>
          */
         @NameInMap("suggestions")
         public java.util.List<String> suggestions;

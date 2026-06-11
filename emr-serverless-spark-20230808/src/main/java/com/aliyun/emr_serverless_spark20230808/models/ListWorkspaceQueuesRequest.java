@@ -6,11 +6,6 @@ import com.aliyun.tea.*;
 public class ListWorkspaceQueuesRequest extends TeaModel {
     /**
      * <p>The environment type.</p>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li>dev</li>
-     * <li>production</li>
-     * </ul>
      * 
      * <strong>example:</strong>
      * <p>production</p>

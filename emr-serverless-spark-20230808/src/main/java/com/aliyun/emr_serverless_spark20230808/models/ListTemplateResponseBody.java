@@ -4,10 +4,20 @@ package com.aliyun.emr_serverless_spark20230808.models;
 import com.aliyun.tea.*;
 
 public class ListTemplateResponseBody extends TeaModel {
+    /**
+     * <p>The data list.</p>
+     */
     @NameInMap("data")
     public java.util.List<Template> data;
 
     /**
+     * <ul>
+     * <li><p>If the value of success is false, an error code is returned.</p>
+     * </li>
+     * <li><p>If the value of success is true, this parameter is empty.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>ERR-00000000</p>
      */
@@ -15,6 +25,13 @@ public class ListTemplateResponseBody extends TeaModel {
     public String errorCode;
 
     /**
+     * <ul>
+     * <li><p>If the value of success is false, an error message is returned.</p>
+     * </li>
+     * <li><p>If the value of success is true, this parameter is empty.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>ok</p>
      */
@@ -22,6 +39,8 @@ public class ListTemplateResponseBody extends TeaModel {
     public String errorMessage;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -29,6 +48,8 @@ public class ListTemplateResponseBody extends TeaModel {
     public String httpStatusCode;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>DD6B1B2A-5837-5237-ABE4-FF0C8944****</p>
      */
@@ -36,6 +57,14 @@ public class ListTemplateResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * <ul>
+     * <li><p>true: The request was successful.</p>
+     * </li>
+     * <li><p>false: The request failed.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

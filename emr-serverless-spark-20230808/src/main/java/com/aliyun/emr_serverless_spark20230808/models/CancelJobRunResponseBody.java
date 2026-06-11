@@ -8,7 +8,7 @@ public class CancelJobRunResponseBody extends TeaModel {
      * <p>The job ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>jr-1a2bc3</p>
+     * <p>jr-f09a8fda2396****</p>
      */
     @NameInMap("jobRunId")
     public String jobRunId;

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListJobExecutorsRequest extends TeaModel {
     /**
+     * <p>The executor type.</p>
+     * 
      * <strong>example:</strong>
      * <p>driver</p>
      */
@@ -12,6 +14,8 @@ public class ListJobExecutorsRequest extends TeaModel {
     public String executorType;
 
     /**
+     * <p>The maximum number of records to return in a single request.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -19,6 +23,8 @@ public class ListJobExecutorsRequest extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>The token for the next page of results.</p>
+     * 
      * <strong>example:</strong>
      * <p>2</p>
      */
@@ -26,6 +32,8 @@ public class ListJobExecutorsRequest extends TeaModel {
     public String nextToken;
 
     /**
+     * <p>The region ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
      */
@@ -33,6 +41,8 @@ public class ListJobExecutorsRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The executor status.</p>
+     * 
      * <strong>example:</strong>
      * <p>Dead</p>
      */

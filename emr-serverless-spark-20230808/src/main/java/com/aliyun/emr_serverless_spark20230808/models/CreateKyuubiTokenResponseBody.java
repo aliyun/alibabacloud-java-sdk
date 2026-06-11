@@ -4,10 +4,15 @@ package com.aliyun.emr_serverless_spark20230808.models;
 import com.aliyun.tea.*;
 
 public class CreateKyuubiTokenResponseBody extends TeaModel {
+    /**
+     * <p>The returned data.</p>
+     */
     @NameInMap("data")
     public CreateKyuubiTokenResponseBodyData data;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>DD6B1B2A-5837-5237-ABE4-FF0C8944****</p>
      */
@@ -37,7 +42,7 @@ public class CreateKyuubiTokenResponseBody extends TeaModel {
 
     public static class CreateKyuubiTokenResponseBodyData extends TeaModel {
         /**
-         * <p>Token ID。</p>
+         * <p>The token ID.</p>
          * 
          * <strong>example:</strong>
          * <p>tk-zpi0*****hdv4y</p>

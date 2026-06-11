@@ -5,20 +5,23 @@ import com.aliyun.tea.*;
 
 public class StartJobRunRequest extends TeaModel {
     /**
-     * <p>The client token that is used to ensure the idempotence of the request.</p>
+     * <p>The idempotence token.</p>
      * 
      * <strong>example:</strong>
-     * <p>8e6aae2810c8f67229ca70bb31cd6028</p>
+     * <p>8e6aae2810c8f67229ca70bb31cd****</p>
      */
     @NameInMap("clientToken")
     public String clientToken;
 
     /**
-     * <p>The code type of the job. Valid values:</p>
+     * <p>The job type. Valid values:</p>
      * <ul>
-     * <li>SQL</li>
-     * <li>JAR</li>
-     * <li>PYTHON</li>
+     * <li><p>SQL</p>
+     * </li>
+     * <li><p>JAR</p>
+     * </li>
+     * <li><p>PYTHON</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -28,13 +31,13 @@ public class StartJobRunRequest extends TeaModel {
     public String codeType;
 
     /**
-     * <p>The advanced configurations of Spark.</p>
+     * <p>The advanced Spark configurations.</p>
      */
     @NameInMap("configurationOverrides")
     public StartJobRunRequestConfigurationOverrides configurationOverrides;
 
     /**
-     * <p>The version of the Spark engine.</p>
+     * <p>The version that is displayed in the console.</p>
      * 
      * <strong>example:</strong>
      * <p>esr-3.3.1</p>
@@ -43,7 +46,7 @@ public class StartJobRunRequest extends TeaModel {
     public String displayReleaseVersion;
 
     /**
-     * <p>The timeout period of the job.</p>
+     * <p>The timeout period for the job.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>
@@ -52,7 +55,7 @@ public class StartJobRunRequest extends TeaModel {
     public Integer executionTimeoutSeconds;
 
     /**
-     * <p>Specifies whether to enable Fusion engine for acceleration.</p>
+     * <p>Specifies whether to enable the Fusion engine for acceleration.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -61,7 +64,7 @@ public class StartJobRunRequest extends TeaModel {
     public Boolean fusion;
 
     /**
-     * <p>The information about Spark Driver.</p>
+     * <p>The information about the Spark driver.</p>
      */
     @NameInMap("jobDriver")
     public JobDriver jobDriver;
@@ -76,7 +79,7 @@ public class StartJobRunRequest extends TeaModel {
     public String jobId;
 
     /**
-     * <p>The name of the job.</p>
+     * <p>The job name.</p>
      * 
      * <strong>example:</strong>
      * <p>spark_job_name</p>
@@ -85,7 +88,7 @@ public class StartJobRunRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The version number of Spark.</p>
+     * <p>The version of the Spark engine.</p>
      * 
      * <strong>example:</strong>
      * <p>esr-3.3.1</p>
@@ -94,7 +97,7 @@ public class StartJobRunRequest extends TeaModel {
     public String releaseVersion;
 
     /**
-     * <p>The name of the resource queue on which the Spark job runs.</p>
+     * <p>The resource queue on which the Spark job runs.</p>
      * 
      * <strong>example:</strong>
      * <p>dev_queue</p>
@@ -103,7 +106,7 @@ public class StartJobRunRequest extends TeaModel {
     public String resourceQueueId;
 
     /**
-     * <p>The tags of the job.</p>
+     * <p>The list of job tags.</p>
      */
     @NameInMap("tags")
     public java.util.List<Tag> tags;
@@ -228,16 +231,16 @@ public class StartJobRunRequest extends TeaModel {
 
     public static class StartJobRunRequestConfigurationOverridesConfigurations extends TeaModel {
         /**
-         * <p>The configuration file of SparkConf.</p>
+         * <p>The configuration file to which the Spark configuration belongs.</p>
          * 
          * <strong>example:</strong>
-         * <p>spark-default.conf</p>
+         * <p>spark-defaults.conf</p>
          */
         @NameInMap("configFileName")
         public String configFileName;
 
         /**
-         * <p>The key of SparkConf.</p>
+         * <p>The key of the Spark configuration.</p>
          * 
          * <strong>example:</strong>
          * <p>spark.app.name</p>
@@ -246,7 +249,7 @@ public class StartJobRunRequest extends TeaModel {
         public String configItemKey;
 
         /**
-         * <p>The value of SparkConf.</p>
+         * <p>The value of the Spark configuration.</p>
          * 
          * <strong>example:</strong>
          * <p>test_app</p>
@@ -287,7 +290,7 @@ public class StartJobRunRequest extends TeaModel {
 
     public static class StartJobRunRequestConfigurationOverrides extends TeaModel {
         /**
-         * <p>The SparkConf objects.</p>
+         * <p>The list of Spark configurations.</p>
          */
         @NameInMap("configurations")
         public java.util.List<StartJobRunRequestConfigurationOverridesConfigurations> configurations;

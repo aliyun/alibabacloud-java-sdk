@@ -4,10 +4,15 @@ package com.aliyun.emr_serverless_spark20230808.models;
 import com.aliyun.tea.*;
 
 public class ListJobExecutorsResponseBody extends TeaModel {
+    /**
+     * <p>The list of executors.</p>
+     */
     @NameInMap("exexutors")
     public java.util.List<ListJobExecutorsResponseBodyExexutors> exexutors;
 
     /**
+     * <p>The maximum number of records returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -15,6 +20,8 @@ public class ListJobExecutorsResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>The token for the next page of results.</p>
+     * 
      * <strong>example:</strong>
      * <p>2</p>
      */
@@ -22,7 +29,7 @@ public class ListJobExecutorsResponseBody extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>DD6B1B2A-5837-5237-ABE4-FF0C8944****</p>
@@ -31,6 +38,8 @@ public class ListJobExecutorsResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total number of records.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -84,6 +93,8 @@ public class ListJobExecutorsResponseBody extends TeaModel {
 
     public static class ListJobExecutorsResponseBodyExexutors extends TeaModel {
         /**
+         * <p>The total number of active tasks that the executor is running.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -91,6 +102,8 @@ public class ListJobExecutorsResponseBody extends TeaModel {
         public Long activeTasks;
 
         /**
+         * <p>The time when the executor was created.</p>
+         * 
          * <strong>example:</strong>
          * <p>1760601***</p>
          */
@@ -98,6 +111,8 @@ public class ListJobExecutorsResponseBody extends TeaModel {
         public Long addTime;
 
         /**
+         * <p>The total number of completed tasks that the executor has run.</p>
+         * 
          * <strong>example:</strong>
          * <p>8</p>
          */
@@ -105,6 +120,8 @@ public class ListJobExecutorsResponseBody extends TeaModel {
         public Long completedTasks;
 
         /**
+         * <p>The disk usage of the executor.</p>
+         * 
          * <strong>example:</strong>
          * <p>20</p>
          */
@@ -112,6 +129,8 @@ public class ListJobExecutorsResponseBody extends TeaModel {
         public Long diskUsed;
 
         /**
+         * <p>The job executor ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -119,6 +138,8 @@ public class ListJobExecutorsResponseBody extends TeaModel {
         public String executorId;
 
         /**
+         * <p>The executor type.</p>
+         * 
          * <strong>example:</strong>
          * <p>driver</p>
          */
@@ -126,6 +147,8 @@ public class ListJobExecutorsResponseBody extends TeaModel {
         public String executorType;
 
         /**
+         * <p>The total number of failed tasks that the executor has run.</p>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */
@@ -133,6 +156,8 @@ public class ListJobExecutorsResponseBody extends TeaModel {
         public Long failedTasks;
 
         /**
+         * <p>The address of the executor.</p>
+         * 
          * <strong>example:</strong>
          * <p>21.10.x.x:1201x</p>
          */
@@ -140,6 +165,8 @@ public class ListJobExecutorsResponseBody extends TeaModel {
         public String hostPort;
 
         /**
+         * <p>The job run ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>jr-1fe145df8ade366a</p>
          */
@@ -147,6 +174,8 @@ public class ListJobExecutorsResponseBody extends TeaModel {
         public String jobRunId;
 
         /**
+         * <p>The maximum memory of the executor.</p>
+         * 
          * <strong>example:</strong>
          * <p>4294967296</p>
          */
@@ -154,6 +183,8 @@ public class ListJobExecutorsResponseBody extends TeaModel {
         public Long maxMemory;
 
         /**
+         * <p>The memory usage of the executor.</p>
+         * 
          * <strong>example:</strong>
          * <p>30</p>
          */
@@ -161,6 +192,8 @@ public class ListJobExecutorsResponseBody extends TeaModel {
         public Long memoryUsed;
 
         /**
+         * <p>The number of Resilient Distributed Dataset (RDD) blocks managed by the executor.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -168,6 +201,8 @@ public class ListJobExecutorsResponseBody extends TeaModel {
         public Long rddBlocks;
 
         /**
+         * <p>The running status of the executor.</p>
+         * 
          * <strong>example:</strong>
          * <p>Running</p>
          */
@@ -175,6 +210,8 @@ public class ListJobExecutorsResponseBody extends TeaModel {
         public String status;
 
         /**
+         * <p>The total number of cores for the executor.</p>
+         * 
          * <strong>example:</strong>
          * <p>4</p>
          */
@@ -182,6 +219,8 @@ public class ListJobExecutorsResponseBody extends TeaModel {
         public Long totalCores;
 
         /**
+         * <p>The total runtime of the executor.</p>
+         * 
          * <strong>example:</strong>
          * <p>123</p>
          */
@@ -189,6 +228,8 @@ public class ListJobExecutorsResponseBody extends TeaModel {
         public Long totalDuration;
 
         /**
+         * <p>The total garbage collection (GC) time of the executor.</p>
+         * 
          * <strong>example:</strong>
          * <p>3</p>
          */
@@ -196,6 +237,8 @@ public class ListJobExecutorsResponseBody extends TeaModel {
         public Long totalGCTime;
 
         /**
+         * <p>The number of bytes of input data for the executor.</p>
+         * 
          * <strong>example:</strong>
          * <p>1024</p>
          */
@@ -203,6 +246,8 @@ public class ListJobExecutorsResponseBody extends TeaModel {
         public Long totalInputBytes;
 
         /**
+         * <p>The number of bytes read during the shuffle phase by the executor.</p>
+         * 
          * <strong>example:</strong>
          * <p>2048</p>
          */
@@ -210,6 +255,8 @@ public class ListJobExecutorsResponseBody extends TeaModel {
         public Long totalShuffleRead;
 
         /**
+         * <p>The number of bytes written during the shuffle phase by the executor.</p>
+         * 
          * <strong>example:</strong>
          * <p>2048</p>
          */
@@ -217,6 +264,8 @@ public class ListJobExecutorsResponseBody extends TeaModel {
         public Long totalShuffleWrite;
 
         /**
+         * <p>The total number of tasks that the executor has run.</p>
+         * 
          * <strong>example:</strong>
          * <p>50</p>
          */
@@ -224,6 +273,8 @@ public class ListJobExecutorsResponseBody extends TeaModel {
         public Long totalTasks;
 
         /**
+         * <p>The workspace ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>w-78faee4da118f02e</p>
          */

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListExecutorLogsRequest extends TeaModel {
     /**
+     * <p>The type of log. Only logs of this type are returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>log4j</p>
      */
@@ -12,6 +14,8 @@ public class ListExecutorLogsRequest extends TeaModel {
     public String logType;
 
     /**
+     * <p>The maximum number of results to return per page. Valid values: 1 to 100. Default value: 20.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -19,6 +23,8 @@ public class ListExecutorLogsRequest extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>The pagination token. This is the <code>nextToken</code> from a previously truncated response.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -26,6 +32,8 @@ public class ListExecutorLogsRequest extends TeaModel {
     public String nextToken;
 
     /**
+     * <p>The ID of the region.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
      */

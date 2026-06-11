@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class StartRayClusterRequest extends TeaModel {
     /**
+     * <p>The token used to ensure idempotence.</p>
+     * 
      * <strong>example:</strong>
      * <p>c533e141-bf99-4236-8b6b-30e133db113c</p>
      */

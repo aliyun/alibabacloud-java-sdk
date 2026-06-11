@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpdateKyuubiServiceRequest extends TeaModel {
     /**
+     * <p>The specifications of the Kyuubi service.</p>
+     * 
      * <strong>example:</strong>
      * <p>2c8g</p>
      */
@@ -12,6 +14,8 @@ public class UpdateKyuubiServiceRequest extends TeaModel {
     public String computeInstance;
 
     /**
+     * <p>The Kyuubi service configuration.</p>
+     * 
      * <strong>example:</strong>
      * <p>[]</p>
      */
@@ -19,6 +23,8 @@ public class UpdateKyuubiServiceRequest extends TeaModel {
     public String kyuubiConfigs;
 
     /**
+     * <p>The Kyuubi service engine version.</p>
+     * 
      * <strong>example:</strong>
      * <p>1.9.2-0.0.2</p>
      */
@@ -26,6 +32,8 @@ public class UpdateKyuubiServiceRequest extends TeaModel {
     public String kyuubiReleaseVersion;
 
     /**
+     * <p>The name.</p>
+     * 
      * <strong>example:</strong>
      * <p>dev_serverless_spark</p>
      */
@@ -33,6 +41,8 @@ public class UpdateKyuubiServiceRequest extends TeaModel {
     public String name;
 
     /**
+     * <p>Specifies whether to enable public network access.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -40,6 +50,8 @@ public class UpdateKyuubiServiceRequest extends TeaModel {
     public Boolean publicEndpointEnabled;
 
     /**
+     * <p>The queue in which the Kyuubi service runs.</p>
+     * 
      * <strong>example:</strong>
      * <p>dev_queue</p>
      */
@@ -47,6 +59,8 @@ public class UpdateKyuubiServiceRequest extends TeaModel {
     public String queue;
 
     /**
+     * <p>The version of the Spark engine.</p>
+     * 
      * <strong>example:</strong>
      * <p>esr-4.6.0 (Spark 3.5.2, Scala 2.12)</p>
      */
@@ -54,6 +68,8 @@ public class UpdateKyuubiServiceRequest extends TeaModel {
     public String releaseVersion;
 
     /**
+     * <p>The number of replicas for high availability (HA).</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
@@ -61,6 +77,8 @@ public class UpdateKyuubiServiceRequest extends TeaModel {
     public Integer replica;
 
     /**
+     * <p>Specifies whether to restart the service.</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -68,6 +86,8 @@ public class UpdateKyuubiServiceRequest extends TeaModel {
     public Boolean restart;
 
     /**
+     * <p>The Spark configuration.</p>
+     * 
      * <strong>example:</strong>
      * <p>[]</p>
      */

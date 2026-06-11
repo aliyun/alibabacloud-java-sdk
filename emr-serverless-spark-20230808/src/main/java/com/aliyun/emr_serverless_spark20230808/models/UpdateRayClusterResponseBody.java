@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpdateRayClusterResponseBody extends TeaModel {
     /**
+     * <p>The cluster ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>ray-xxxxxxxxxxx</p>
      */
@@ -12,6 +14,8 @@ public class UpdateRayClusterResponseBody extends TeaModel {
     public String clusterId;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>DD6B1B2A-5837-5237-ABE4-FF0C8944</p>
      */

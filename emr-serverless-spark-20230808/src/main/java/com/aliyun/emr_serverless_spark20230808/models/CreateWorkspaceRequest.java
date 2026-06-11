@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateWorkspaceRequest extends TeaModel {
     /**
-     * <p>Specifies whether to enable auto-renewal. This parameter is required only if the paymentType parameter is set to Pre.</p>
+     * <p>Specifies whether to enable auto-renewal. This parameter is required if you set <code>paymentType</code> to <code>Pre</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -14,7 +14,7 @@ public class CreateWorkspaceRequest extends TeaModel {
     public String autoRenew;
 
     /**
-     * <p>The auto-renewal duration. This parameter is required only if the paymentType parameter is set to Pre.</p>
+     * <p>The auto-renewal duration. This parameter is required if <code>autoRenew</code> is set to <code>true</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>
@@ -23,7 +23,7 @@ public class CreateWorkspaceRequest extends TeaModel {
     public String autoRenewPeriod;
 
     /**
-     * <p>The unit of the auto-renewal duration. This parameter is required only if the paymentType parameter is set to Pre.</p>
+     * <p>The unit of the auto-renewal duration. This parameter is required if <code>autoRenew</code> is set to <code>true</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>month</p>
@@ -32,7 +32,7 @@ public class CreateWorkspaceRequest extends TeaModel {
     public String autoRenewPeriodUnit;
 
     /**
-     * <p>Specifies whether to automatically start a session.</p>
+     * <p>Specifies whether to automatically start a session cluster when the workspace is created.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -41,7 +41,7 @@ public class CreateWorkspaceRequest extends TeaModel {
     public Boolean autoStartSessionCluster;
 
     /**
-     * <p>The client token that is used to ensure the idempotence of the request.</p>
+     * <p>A token that ensures the idempotency of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>8e6aae2810c8f67229ca70bb31cd****</p>
@@ -50,7 +50,7 @@ public class CreateWorkspaceRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The information of the Data Lake Formation (DLF) catalog.</p>
+     * <p>The DLF Catalog ID.</p>
      * 
      * <strong>example:</strong>
      * <p>123xxxxx</p>
@@ -59,7 +59,7 @@ public class CreateWorkspaceRequest extends TeaModel {
     public String dlfCatalogId;
 
     /**
-     * <p>The version of DLF.</p>
+     * <p>The DLF type.</p>
      * 
      * <strong>example:</strong>
      * <p>dlf1.0</p>
@@ -68,7 +68,7 @@ public class CreateWorkspaceRequest extends TeaModel {
     public String dlfType;
 
     /**
-     * <p>The subscription period. This parameter is required only if the paymentType parameter is set to Pre.</p>
+     * <p>The subscription duration. This parameter is required if you set <code>paymentType</code> to <code>Pre</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>12452</p>
@@ -76,11 +76,14 @@ public class CreateWorkspaceRequest extends TeaModel {
     @NameInMap("duration")
     public String duration;
 
+    /**
+     * <p>The specifications for the GPU resources.</p>
+     */
     @NameInMap("gpuSpec")
     public java.util.List<String> gpuSpec;
 
     /**
-     * <p>The name of the Object Storage Service (OSS) bucket.</p>
+     * <p>The OSS bucket for the workspace. The path must be in the <code>oss://&lt;bucket-name&gt;/</code> format.</p>
      * 
      * <strong>example:</strong>
      * <p>oss://test-bucket/</p>
@@ -89,7 +92,7 @@ public class CreateWorkspaceRequest extends TeaModel {
     public String ossBucket;
 
     /**
-     * <p>The unit of the subscription duration.</p>
+     * <p>The unit of the subscription duration. This parameter is required if you set <code>paymentType</code> to <code>Pre</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>1000</p>
@@ -100,8 +103,10 @@ public class CreateWorkspaceRequest extends TeaModel {
     /**
      * <p>The billing method. Valid values:</p>
      * <ul>
-     * <li>PayAsYouGo</li>
-     * <li>Pre</li>
+     * <li><p><code>PayAsYouGo</code>: pay-as-you-go</p>
+     * </li>
+     * <li><p><code>Pre</code>: subscription</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -111,7 +116,7 @@ public class CreateWorkspaceRequest extends TeaModel {
     public String paymentType;
 
     /**
-     * <p>The name of the role used to run Spark jobs.</p>
+     * <p>The name of the RAM role used to run Spark jobs.</p>
      * 
      * <strong>example:</strong>
      * <p>AliyunEMRSparkJobRunDefaultRole</p>
@@ -120,7 +125,7 @@ public class CreateWorkspaceRequest extends TeaModel {
     public String ramRoleName;
 
     /**
-     * <p>The type of the version.</p>
+     * <p>The release type.</p>
      * 
      * <strong>example:</strong>
      * <p>pro</p>
@@ -129,8 +134,10 @@ public class CreateWorkspaceRequest extends TeaModel {
     public String releaseType;
 
     /**
+     * <p>The resource group ID.</p>
+     * 
      * <strong>example:</strong>
-     * <p>rg-xxxxxxx</p>
+     * <p>rg-acfmwpi66knkxny</p>
      */
     @NameInMap("resourceGroupId")
     public String resourceGroupId;
@@ -142,6 +149,8 @@ public class CreateWorkspaceRequest extends TeaModel {
     public CreateWorkspaceRequestResourceSpec resourceSpec;
 
     /**
+     * <p>The tags to add to the workspace.</p>
+     * 
      * <strong>if can be null:</strong>
      * <p>false</p>
      */
@@ -149,7 +158,7 @@ public class CreateWorkspaceRequest extends TeaModel {
     public java.util.List<CreateWorkspaceRequestTag> tag;
 
     /**
-     * <p>The name of the workspace.</p>
+     * <p>The workspace name.</p>
      * 
      * <strong>example:</strong>
      * <p>default</p>
@@ -325,7 +334,7 @@ public class CreateWorkspaceRequest extends TeaModel {
 
     public static class CreateWorkspaceRequestResourceSpec extends TeaModel {
         /**
-         * <p>The maximum resource quota for a workspace.</p>
+         * <p>The resource quota for the workspace.</p>
          * 
          * <strong>example:</strong>
          * <p>1000</p>
@@ -334,6 +343,8 @@ public class CreateWorkspaceRequest extends TeaModel {
         public String cu;
 
         /**
+         * <p>The GPU resource quota for the workspace.</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */
@@ -364,9 +375,21 @@ public class CreateWorkspaceRequest extends TeaModel {
     }
 
     public static class CreateWorkspaceRequestTag extends TeaModel {
+        /**
+         * <p>The tag key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>key</p>
+         */
         @NameInMap("key")
         public String key;
 
+        /**
+         * <p>The tag value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>value</p>
+         */
         @NameInMap("value")
         public String value;
 

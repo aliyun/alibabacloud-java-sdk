@@ -14,7 +14,7 @@ public class StartSessionClusterRequest extends TeaModel {
     public String queueName;
 
     /**
-     * <p>The session ID.</p>
+     * <p>The session cluster ID.</p>
      * 
      * <strong>example:</strong>
      * <p>sc-xxxxxxxxxxx</p>

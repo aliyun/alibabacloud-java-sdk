@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListWorkspacesRequest extends TeaModel {
     /**
-     * <p>The maximum number of entries returned.</p>
+     * <p>The maximum number of results per page.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -14,7 +14,7 @@ public class ListWorkspacesRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The name of the workspace. Fuzzy match is supported.</p>
+     * <p>The name of the workspace. Fuzzy search is supported.</p>
      * 
      * <strong>example:</strong>
      * <p>test_workspace</p>
@@ -23,7 +23,7 @@ public class ListWorkspacesRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>A pagination token. It can be used in the next request to retrieve a new page of results.</p>
+     * <p>The token for the next page of results.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -32,7 +32,7 @@ public class ListWorkspacesRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The region ID.</p>
+     * <p>The ID of the region.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -41,6 +41,8 @@ public class ListWorkspacesRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The ID of the resource group.</p>
+     * 
      * <strong>example:</strong>
      * <p>rg-aek2thxggoqhmhq</p>
      */
@@ -56,6 +58,9 @@ public class ListWorkspacesRequest extends TeaModel {
     @NameInMap("state")
     public String state;
 
+    /**
+     * <p>Filters the results by one or more tags.</p>
+     */
     @NameInMap("tag")
     public java.util.List<ListWorkspacesRequestTag> tag;
 
@@ -122,6 +127,8 @@ public class ListWorkspacesRequest extends TeaModel {
 
     public static class ListWorkspacesRequestTag extends TeaModel {
         /**
+         * <p>The tag key.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-shenzhen-finance.edas.config.server</p>
          */
@@ -129,8 +136,10 @@ public class ListWorkspacesRequest extends TeaModel {
         public String key;
 
         /**
+         * <p>The tag value.</p>
+         * 
          * <strong>example:</strong>
-         * <p>iphone磁盘空间剩余率</p>
+         * <p>iPhone disk space remaining rate</p>
          */
         @NameInMap("value")
         public String value;

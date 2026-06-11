@@ -4,10 +4,15 @@ package com.aliyun.emr_serverless_spark20230808.models;
 import com.aliyun.tea.*;
 
 public class GetKyuubiTokenResponseBody extends TeaModel {
+    /**
+     * <p>The response data.</p>
+     */
     @NameInMap("data")
     public GetKyuubiTokenResponseBodyData data;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>DD6B1B2A-5837-5237-ABE4-FF0C8944****</p>
      */
@@ -37,6 +42,8 @@ public class GetKyuubiTokenResponseBody extends TeaModel {
 
     public static class GetKyuubiTokenResponseBodyDataAutoExpireConfiguration extends TeaModel {
         /**
+         * <p>Indicates whether the token automatically expires.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -44,6 +51,8 @@ public class GetKyuubiTokenResponseBody extends TeaModel {
         public Boolean enable;
 
         /**
+         * <p>The expiration period, in days.</p>
+         * 
          * <strong>example:</strong>
          * <p>365</p>
          */
@@ -74,10 +83,15 @@ public class GetKyuubiTokenResponseBody extends TeaModel {
     }
 
     public static class GetKyuubiTokenResponseBodyData extends TeaModel {
+        /**
+         * <p>The automatic expiration configuration.</p>
+         */
         @NameInMap("autoExpireConfiguration")
         public GetKyuubiTokenResponseBodyDataAutoExpireConfiguration autoExpireConfiguration;
 
         /**
+         * <p>The creation time.</p>
+         * 
          * <strong>example:</strong>
          * <p>1749456094000</p>
          */
@@ -85,6 +99,8 @@ public class GetKyuubiTokenResponseBody extends TeaModel {
         public Long createTime;
 
         /**
+         * <p>The creator name.</p>
+         * 
          * <strong>example:</strong>
          * <p>admin</p>
          */
@@ -92,6 +108,8 @@ public class GetKyuubiTokenResponseBody extends TeaModel {
         public String createdBy;
 
         /**
+         * <p>The expiration time.</p>
+         * 
          * <strong>example:</strong>
          * <p>1753932319390</p>
          */
@@ -99,16 +117,23 @@ public class GetKyuubiTokenResponseBody extends TeaModel {
         public Long expireTime;
 
         /**
+         * <p>The last used time.</p>
+         * 
          * <strong>example:</strong>
          * <p>1749456098000</p>
          */
         @NameInMap("lastUsedTime")
         public Long lastUsedTime;
 
+        /**
+         * <p>The Alibaba Cloud Resource Names (ARNs) of the authorized users.</p>
+         */
         @NameInMap("memberArns")
         public java.util.List<String> memberArns;
 
         /**
+         * <p>The token name.</p>
+         * 
          * <strong>example:</strong>
          * <p>dev_serverless_spark</p>
          */
@@ -119,6 +144,8 @@ public class GetKyuubiTokenResponseBody extends TeaModel {
         public java.util.List<String> sparkRole;
 
         /**
+         * <p>The masked token.</p>
+         * 
          * <strong>example:</strong>
          * <p>dxj**********wfg</p>
          */
@@ -126,7 +153,7 @@ public class GetKyuubiTokenResponseBody extends TeaModel {
         public String token;
 
         /**
-         * <p>Token ID。</p>
+         * <p>The token ID.</p>
          * 
          * <strong>example:</strong>
          * <p>tk-zpi0*****hdv4y</p>

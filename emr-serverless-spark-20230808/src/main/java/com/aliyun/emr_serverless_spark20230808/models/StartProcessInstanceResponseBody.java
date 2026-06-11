@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class StartProcessInstanceResponseBody extends TeaModel {
     /**
-     * <p>The code that is returned by the backend server.</p>
+     * <p>The return code from the backend.</p>
      * 
      * <strong>example:</strong>
      * <p>1400009</p>
@@ -14,16 +14,16 @@ public class StartProcessInstanceResponseBody extends TeaModel {
     public Integer code;
 
     /**
-     * <p>The data returned.</p>
+     * <p>The returned data.</p>
      * 
      * <strong>example:</strong>
-     * <p>{\&quot;sessionBizId\&quot;: \&quot;sc-dc85644dba1c8c63\&quot;, \&quot;bizId\&quot;: \&quot;st-aeed3b0d4f87418a9a9dcbd757477658\&quot;, \&quot;gmtCreated\&quot;: \&quot;Thu Sep 12 02:28:45 UTC 2024\&quot;}</p>
+     * <p>null</p>
      */
     @NameInMap("data")
     public Object data;
 
     /**
-     * <p>Indicates whether the workflow fails to be run manually.</p>
+     * <p>Indicates whether the manual workflow run failed.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -41,7 +41,7 @@ public class StartProcessInstanceResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The description of the returned code.</p>
+     * <p>The detailed description of the return code.</p>
      * 
      * <strong>example:</strong>
      * <p>No permission for resource action</p>
@@ -50,7 +50,7 @@ public class StartProcessInstanceResponseBody extends TeaModel {
     public String msg;
 
     /**
-     * <p>The request ID.</p>
+     * <p>Id of the request</p>
      * 
      * <strong>example:</strong>
      * <p>DD6B1B2A-5837-5237-ABE4-FF0C8944****</p>

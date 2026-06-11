@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DeleteKyuubiServiceResponseBody extends TeaModel {
     /**
+     * <p>The returned data.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -12,6 +14,8 @@ public class DeleteKyuubiServiceResponseBody extends TeaModel {
     public Object data;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>DD6B1B2A-5837-5237-ABE4-FF0C8944****</p>
      */

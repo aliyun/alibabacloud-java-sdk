@@ -4,29 +4,41 @@ package com.aliyun.emr_serverless_spark20230808.models;
 import com.aliyun.tea.*;
 
 public class ListJobRunsRequest extends TeaModel {
+    /**
+     * <p>The Spark configurations.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[{\&quot;key\&quot;:\&quot;spark.app.name\&quot;,\&quot;value\&quot;:\&quot;test\&quot;}]</p>
+     */
     @NameInMap("applicationConfigs")
     public String applicationConfigs;
 
     /**
-     * <p>The ID of the user who created the job.</p>
+     * <p>The UID of the user who created the job.</p>
      * 
      * <strong>example:</strong>
-     * <p>1509789347011222</p>
+     * <p>150976534701****</p>
      */
     @NameInMap("creator")
     public String creator;
 
     /**
-     * <p>The range of end time.</p>
+     * <p>The time range when the job run ended.</p>
      */
     @NameInMap("endTime")
     public ListJobRunsRequestEndTime endTime;
 
+    /**
+     * <p>Specifies whether the job is a workflow task.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("isWorkflow")
     public String isWorkflow;
 
     /**
-     * <p>The job run ID.</p>
+     * <p>The deployment ID of the streaming job.</p>
      * 
      * <strong>example:</strong>
      * <p>jd-b6d003f1930f****</p>
@@ -35,7 +47,7 @@ public class ListJobRunsRequest extends TeaModel {
     public String jobRunDeploymentId;
 
     /**
-     * <p>The job ID.</p>
+     * <p>The job run ID.</p>
      * 
      * <strong>example:</strong>
      * <p>j-xxx</p>
@@ -44,7 +56,7 @@ public class ListJobRunsRequest extends TeaModel {
     public String jobRunId;
 
     /**
-     * <p>The maximum number of entries to return.</p>
+     * <p>The maximum number of entries to return. The maximum value is 100.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -53,7 +65,7 @@ public class ListJobRunsRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The minimum running duration of the job. Unit: ms.</p>
+     * <p>The minimum runtime of the job run, in milliseconds.</p>
      * 
      * <strong>example:</strong>
      * <p>60000</p>
@@ -71,7 +83,7 @@ public class ListJobRunsRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The pagination token that is used in the request to retrieve a new page of results.</p>
+     * <p>The token that specifies the position from which to start the next read.</p>
      * 
      * <strong>example:</strong>
      * <p>DD6B1B2A-5837-5237-ABE4-FF0C89568980</p>
@@ -89,7 +101,7 @@ public class ListJobRunsRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The name of the resource queue on which the Spark jobs run.</p>
+     * <p>The ID of the resource queue on which the Spark job runs.</p>
      * 
      * <strong>example:</strong>
      * <p>dev_queue</p>
@@ -97,17 +109,23 @@ public class ListJobRunsRequest extends TeaModel {
     @NameInMap("resourceQueueId")
     public String resourceQueueId;
 
+    /**
+     * <p>The runtime configurations.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[{\&quot;key\&quot;:\&quot;mainClass\&quot;,\&quot;value\&quot;:\&quot;yourClass\&quot;}]</p>
+     */
     @NameInMap("runtimeConfigs")
     public String runtimeConfigs;
 
     /**
-     * <p>The range of start time.</p>
+     * <p>The time range when the job run started.</p>
      */
     @NameInMap("startTime")
     public ListJobRunsRequestStartTime startTime;
 
     /**
-     * <p>The job states.</p>
+     * <p>The job run states.</p>
      * 
      * <strong>example:</strong>
      * <p>[&quot;Running&quot;,&quot;Submitted&quot;]</p>
@@ -116,7 +134,7 @@ public class ListJobRunsRequest extends TeaModel {
     public java.util.List<String> states;
 
     /**
-     * <p>The tags of the job.</p>
+     * <p>The list of tags.</p>
      */
     @NameInMap("tags")
     public java.util.List<ListJobRunsRequestTags> tags;
@@ -256,7 +274,7 @@ public class ListJobRunsRequest extends TeaModel {
 
     public static class ListJobRunsRequestEndTime extends TeaModel {
         /**
-         * <p>The end of the end time range.</p>
+         * <p>The end of the time range.</p>
          * 
          * <strong>example:</strong>
          * <p>1710432000000</p>
@@ -265,7 +283,7 @@ public class ListJobRunsRequest extends TeaModel {
         public Long endTime;
 
         /**
-         * <p>The beginning of the end time range.</p>
+         * <p>The start of the time range.</p>
          * 
          * <strong>example:</strong>
          * <p>1709740800000</p>
@@ -298,7 +316,7 @@ public class ListJobRunsRequest extends TeaModel {
 
     public static class ListJobRunsRequestStartTime extends TeaModel {
         /**
-         * <p>The end of the start time range.</p>
+         * <p>The end of the time range.</p>
          * 
          * <strong>example:</strong>
          * <p>1710432000000</p>
@@ -307,7 +325,7 @@ public class ListJobRunsRequest extends TeaModel {
         public Long endTime;
 
         /**
-         * <p>The beginning of the start time range.</p>
+         * <p>The start of the time range.</p>
          * 
          * <strong>example:</strong>
          * <p>1709740800000</p>
@@ -340,7 +358,7 @@ public class ListJobRunsRequest extends TeaModel {
 
     public static class ListJobRunsRequestTags extends TeaModel {
         /**
-         * <p>The key of tag N.</p>
+         * <p>The tag key.</p>
          * 
          * <strong>example:</strong>
          * <p>tag_key</p>
@@ -349,7 +367,7 @@ public class ListJobRunsRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The value of tag N.</p>
+         * <p>The tag value.</p>
          * 
          * <strong>example:</strong>
          * <p>value</p>

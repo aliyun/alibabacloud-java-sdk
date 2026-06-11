@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListLivyComputeRequest extends TeaModel {
     /**
+     * <p>The environment ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>ev-cq31c7tlhtgm9nrrlj4g</p>
      */
@@ -12,6 +14,8 @@ public class ListLivyComputeRequest extends TeaModel {
     public String environmentId;
 
     /**
+     * <p>The region ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
      */

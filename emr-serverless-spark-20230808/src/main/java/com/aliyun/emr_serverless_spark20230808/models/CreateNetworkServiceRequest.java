@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateNetworkServiceRequest extends TeaModel {
     /**
+     * <p>A token to ensure the idempotency of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>acaf8f54-d40e-4c33-a900-f6c1b345cb47</p>
      */
@@ -12,6 +14,8 @@ public class CreateNetworkServiceRequest extends TeaModel {
     public String clientToken;
 
     /**
+     * <p>The name of the network service.</p>
+     * 
      * <strong>example:</strong>
      * <p>test</p>
      */
@@ -19,6 +23,8 @@ public class CreateNetworkServiceRequest extends TeaModel {
     public String name;
 
     /**
+     * <p>The ID of the security group.</p>
+     * 
      * <strong>example:</strong>
      * <p>securityGroupId</p>
      */
@@ -26,6 +32,8 @@ public class CreateNetworkServiceRequest extends TeaModel {
     public String securityGroupId;
 
     /**
+     * <p>The type of the network service.</p>
+     * 
      * <strong>example:</strong>
      * <p>type</p>
      */
@@ -33,7 +41,7 @@ public class CreateNetworkServiceRequest extends TeaModel {
     public String type;
 
     /**
-     * <p>VPC id。</p>
+     * <p>The ID of the VPC.</p>
      * 
      * <strong>example:</strong>
      * <p>vpc-bp1g14f566kbk8jex****</p>
@@ -41,10 +49,15 @@ public class CreateNetworkServiceRequest extends TeaModel {
     @NameInMap("vpcId")
     public String vpcId;
 
+    /**
+     * <p>A list of vSwitch IDs.</p>
+     */
     @NameInMap("vswitchIds")
     public java.util.List<String> vswitchIds;
 
     /**
+     * <p>The region ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
      */

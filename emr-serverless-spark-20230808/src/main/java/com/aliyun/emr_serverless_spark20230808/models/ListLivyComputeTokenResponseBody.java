@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class ListLivyComputeTokenResponseBody extends TeaModel {
     /**
+     * <p>The response code. A value of 1000000 indicates that the request was successful. Other values indicate that the request failed. See the message parameter for failure details.</p>
+     * 
      * <strong>example:</strong>
      * <p>1000000</p>
      */
     @NameInMap("code")
     public String code;
 
+    /**
+     * <p>The returned data.</p>
+     */
     @NameInMap("data")
     public ListLivyComputeTokenResponseBodyData data;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>ok</p>
      */
@@ -22,6 +29,8 @@ public class ListLivyComputeTokenResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>DD6B1B2A-5837-5237-ABE4-FF0C8944****</p>
      */
@@ -67,6 +76,8 @@ public class ListLivyComputeTokenResponseBody extends TeaModel {
 
     public static class ListLivyComputeTokenResponseBodyDataTokens extends TeaModel {
         /**
+         * <p>The time when the token was created.</p>
+         * 
          * <strong>example:</strong>
          * <p>1749456094000</p>
          */
@@ -74,6 +85,8 @@ public class ListLivyComputeTokenResponseBody extends TeaModel {
         public Long createTime;
 
         /**
+         * <p>The user who created the token.</p>
+         * 
          * <strong>example:</strong>
          * <p>alice</p>
          */
@@ -81,6 +94,8 @@ public class ListLivyComputeTokenResponseBody extends TeaModel {
         public String createdby;
 
         /**
+         * <p>The time when the token expires.</p>
+         * 
          * <strong>example:</strong>
          * <p>1749456994000</p>
          */
@@ -88,6 +103,8 @@ public class ListLivyComputeTokenResponseBody extends TeaModel {
         public Long expireTime;
 
         /**
+         * <p>The time when the token was last used.</p>
+         * 
          * <strong>example:</strong>
          * <p>1749456098000</p>
          */
@@ -95,6 +112,8 @@ public class ListLivyComputeTokenResponseBody extends TeaModel {
         public Long lastUsedTime;
 
         /**
+         * <p>The token name.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -102,6 +121,8 @@ public class ListLivyComputeTokenResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>The token content.</p>
+         * 
          * <strong>example:</strong>
          * <p>5d37843fb6f1e8</p>
          */
@@ -109,7 +130,7 @@ public class ListLivyComputeTokenResponseBody extends TeaModel {
         public String token;
 
         /**
-         * <p>Token ID。</p>
+         * <p>The token ID.</p>
          * 
          * <strong>example:</strong>
          * <p>lctk-xxxxxxxxxxx</p>
@@ -181,6 +202,9 @@ public class ListLivyComputeTokenResponseBody extends TeaModel {
     }
 
     public static class ListLivyComputeTokenResponseBodyData extends TeaModel {
+        /**
+         * <p>The list of tokens.</p>
+         */
         @NameInMap("tokens")
         public java.util.List<ListLivyComputeTokenResponseBodyDataTokens> tokens;
 
