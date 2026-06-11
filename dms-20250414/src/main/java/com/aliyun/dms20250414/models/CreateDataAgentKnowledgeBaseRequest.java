@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateDataAgentKnowledgeBaseRequest extends TeaModel {
     /**
+     * <p>The current DMS unit.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
      */
@@ -12,6 +14,8 @@ public class CreateDataAgentKnowledgeBaseRequest extends TeaModel {
     public String DMSUnit;
 
     /**
+     * <p>The description of the knowledge base.</p>
+     * 
      * <strong>example:</strong>
      * <p>KnowledgeBaseTest</p>
      */
@@ -19,6 +23,8 @@ public class CreateDataAgentKnowledgeBaseRequest extends TeaModel {
     public String description;
 
     /**
+     * <p>The ID of the source industry knowledge base.</p>
+     * 
      * <strong>example:</strong>
      * <p>kb-HZ-ra99********ss0xp1bku</p>
      */
@@ -26,6 +32,7 @@ public class CreateDataAgentKnowledgeBaseRequest extends TeaModel {
     public String fromKbUuid;
 
     /**
+     * <p>The name of the knowledge base.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -35,6 +42,7 @@ public class CreateDataAgentKnowledgeBaseRequest extends TeaModel {
     public String name;
 
     /**
+     * <p>The workspace ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

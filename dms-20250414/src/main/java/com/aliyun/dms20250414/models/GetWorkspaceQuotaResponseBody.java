@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class GetWorkspaceQuotaResponseBody extends TeaModel {
     /**
+     * <p>Details of the access denial.</p>
+     * 
      * <strong>example:</strong>
      * <p>NOT_FOUND</p>
      */
     @NameInMap("AccessDeniedDetail")
     public String accessDeniedDetail;
 
+    /**
+     * <p>The returned data.</p>
+     */
     @NameInMap("Data")
     public GetWorkspaceQuotaResponseBodyData data;
 
     /**
+     * <p>The error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>InvalidTid</p>
      */
@@ -22,6 +29,8 @@ public class GetWorkspaceQuotaResponseBody extends TeaModel {
     public String errorCode;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -29,6 +38,8 @@ public class GetWorkspaceQuotaResponseBody extends TeaModel {
     public Long httpStatusCode;
 
     /**
+     * <p>The response message.</p>
+     * 
      * <strong>example:</strong>
      * <p>Successful</p>
      */
@@ -36,6 +47,8 @@ public class GetWorkspaceQuotaResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>67E910F2-4B62-5B0C-ACA3-7547695C****</p>
      */
@@ -43,6 +56,8 @@ public class GetWorkspaceQuotaResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -112,6 +127,8 @@ public class GetWorkspaceQuotaResponseBody extends TeaModel {
 
     public static class GetWorkspaceQuotaResponseBodyData extends TeaModel {
         /**
+         * <p>The CU quota.</p>
+         * 
          * <strong>example:</strong>
          * <p>200</p>
          */
@@ -119,6 +136,8 @@ public class GetWorkspaceQuotaResponseBody extends TeaModel {
         public Long cuQuota;
 
         /**
+         * <p>The amount of CU quota used.</p>
+         * 
          * <strong>example:</strong>
          * <p>20</p>
          */
@@ -126,6 +145,8 @@ public class GetWorkspaceQuotaResponseBody extends TeaModel {
         public Long cuQuotaUsage;
 
         /**
+         * <p>The ID of the billing instance.</p>
+         * 
          * <strong>example:</strong>
          * <p>i-bp16pha0zu99yybi59qr</p>
          */
@@ -133,6 +154,8 @@ public class GetWorkspaceQuotaResponseBody extends TeaModel {
         public String instanceId;
 
         /**
+         * <p>The available free notebook quota (in CU-H).</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -140,6 +163,8 @@ public class GetWorkspaceQuotaResponseBody extends TeaModel {
         public Long notebookFreeQuotaAvailable;
 
         /**
+         * <p>The total free notebook quota (in CU-H).</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -147,6 +172,8 @@ public class GetWorkspaceQuotaResponseBody extends TeaModel {
         public Long notebookFreeQuotaTotal;
 
         /**
+         * <p>The instance status.</p>
+         * 
          * <strong>example:</strong>
          * <p>RELEASED</p>
          */
@@ -154,6 +181,8 @@ public class GetWorkspaceQuotaResponseBody extends TeaModel {
         public String status;
 
         /**
+         * <p>The workspace ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>20923*****7291</p>
          */

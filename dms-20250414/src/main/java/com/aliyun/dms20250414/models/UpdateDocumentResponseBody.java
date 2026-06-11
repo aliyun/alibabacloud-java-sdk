@@ -4,10 +4,15 @@ package com.aliyun.dms20250414.models;
 import com.aliyun.tea.*;
 
 public class UpdateDocumentResponseBody extends TeaModel {
+    /**
+     * <p>The response object.</p>
+     */
     @NameInMap("Data")
     public OneMetaKnowledgeBaseDocument data;
 
     /**
+     * <p>The error code for a failed request.</p>
+     * 
      * <strong>example:</strong>
      * <p>KnowledgeBaseNotFound</p>
      */
@@ -15,6 +20,8 @@ public class UpdateDocumentResponseBody extends TeaModel {
     public String errorCode;
 
     /**
+     * <p>The error message for a failed request.</p>
+     * 
      * <strong>example:</strong>
      * <p>Resource not found kb-***</p>
      */
@@ -22,6 +29,8 @@ public class UpdateDocumentResponseBody extends TeaModel {
     public String errorMessage;
 
     /**
+     * <p>The unique ID of the request. Use this ID for troubleshooting.</p>
+     * 
      * <strong>example:</strong>
      * <p>67E910F2-4B62-5B0C-ACA3-7547695C****</p>
      */
@@ -29,6 +38,14 @@ public class UpdateDocumentResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <ul>
+     * <li><p><strong>true</strong>: The request succeeded.</p>
+     * </li>
+     * <li><p><strong>false</strong>: The request failed.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

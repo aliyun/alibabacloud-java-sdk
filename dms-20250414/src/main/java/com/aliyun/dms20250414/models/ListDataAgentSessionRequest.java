@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListDataAgentSessionRequest extends TeaModel {
     /**
+     * <p>Session creation end time</p>
+     * 
      * <strong>example:</strong>
      * <p>1770912000000</p>
      */
@@ -12,6 +14,8 @@ public class ListDataAgentSessionRequest extends TeaModel {
     public Long createEndTime;
 
     /**
+     * <p>Session creation start time</p>
+     * 
      * <strong>example:</strong>
      * <p>1770825600000</p>
      */
@@ -19,6 +23,8 @@ public class ListDataAgentSessionRequest extends TeaModel {
     public Long createStartTime;
 
     /**
+     * <p>Custom Agent ID</p>
+     * 
      * <strong>example:</strong>
      * <p>ca-4y3ca4khkcu**********ysf</p>
      */
@@ -26,6 +32,8 @@ public class ListDataAgentSessionRequest extends TeaModel {
     public String customAgentId;
 
     /**
+     * <p>Current DMS unit</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
      */
@@ -33,6 +41,8 @@ public class ListDataAgentSessionRequest extends TeaModel {
     public String DMSUnit;
 
     /**
+     * <p>Whether to return only saved sessions</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -40,6 +50,8 @@ public class ListDataAgentSessionRequest extends TeaModel {
     public Boolean isSaved;
 
     /**
+     * <p>Page number for pagination</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -47,6 +59,8 @@ public class ListDataAgentSessionRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>Number of records per page</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -54,16 +68,26 @@ public class ListDataAgentSessionRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>Session type. Required when you specify a collaboration workspace.</p>
+     * 
      * <strong>example:</strong>
      * <p>myFavorite</p>
      */
     @NameInMap("QueryType")
     public String queryType;
 
+    /**
+     * <p>Data Agent title (supports fuzzy search)</p>
+     * 
+     * <strong>example:</strong>
+     * <p>帮我分析一下这份数据</p>
+     */
     @NameInMap("Title")
     public String title;
 
     /**
+     * <p>Collaboration workspace ID</p>
+     * 
      * <strong>example:</strong>
      * <p>20923*****7291</p>
      */

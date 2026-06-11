@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListDataLakeFunctionRequest extends TeaModel {
     /**
+     * <p>The name of the data catalog.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,8 @@ public class ListDataLakeFunctionRequest extends TeaModel {
     public String catalogName;
 
     /**
+     * <p>The name of the database.</p>
+     * 
      * <strong>example:</strong>
      * <p>default</p>
      */
@@ -21,6 +24,8 @@ public class ListDataLakeFunctionRequest extends TeaModel {
     public String dbName;
 
     /**
+     * <p>A regular expression used to filter the returned function names.</p>
+     * 
      * <strong>example:</strong>
      * <p>.*</p>
      */
@@ -28,6 +33,8 @@ public class ListDataLakeFunctionRequest extends TeaModel {
     public String functionNamePattern;
 
     /**
+     * <p>The number of entries to return on each page. The maximum value is 100.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -35,6 +42,14 @@ public class ListDataLakeFunctionRequest extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>The token that is used to retrieve the next page of results.</p>
+     * <ul>
+     * <li><p>If <strong>NextToken</strong> is empty, there is no subsequent query.</p>
+     * </li>
+     * <li><p>If <strong>NextToken</strong> has a value, it is the token for the next query.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>f056501ada12****</p>
      */
@@ -42,6 +57,11 @@ public class ListDataLakeFunctionRequest extends TeaModel {
     public String nextToken;
 
     /**
+     * <p>The tenant ID.</p>
+     * <blockquote>
+     * <p>Hover over your profile picture in the upper-right corner of the DMS console to obtain the tenant ID. For details, see <a href="https://help.aliyun.com/document_detail/181330.html">View tenant information</a>.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>3****</p>
      */
@@ -49,6 +69,8 @@ public class ListDataLakeFunctionRequest extends TeaModel {
     public Long tid;
 
     /**
+     * <p>The workspace ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>12****</p>
      */

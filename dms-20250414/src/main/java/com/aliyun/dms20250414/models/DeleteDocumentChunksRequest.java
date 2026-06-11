@@ -5,12 +5,14 @@ import com.aliyun.tea.*;
 
 public class DeleteDocumentChunksRequest extends TeaModel {
     /**
+     * <p>A list of chunk IDs.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("ChunkIds")
     public java.util.List<String> chunkIds;
 
     /**
+     * <p>The name of the document.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -20,6 +22,7 @@ public class DeleteDocumentChunksRequest extends TeaModel {
     public String documentName;
 
     /**
+     * <p>The ID of the knowledge base.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

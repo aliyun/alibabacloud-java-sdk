@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DataMountInfo extends TeaModel {
     /**
+     * <p>The name of the mount directory. The actual mount path is prefixed with /Workspace/data/.</p>
+     * 
      * <strong>example:</strong>
      * <p>image</p>
      */
@@ -12,6 +14,8 @@ public class DataMountInfo extends TeaModel {
     public String mountFolderName;
 
     /**
+     * <p>The name of the OSS bucket.</p>
+     * 
      * <strong>example:</strong>
      * <p>test-bucket</p>
      */
@@ -19,6 +23,8 @@ public class DataMountInfo extends TeaModel {
     public String ossBucket;
 
     /**
+     * <p>The prefix. If this parameter is not specified, the root directory is used.</p>
+     * 
      * <strong>example:</strong>
      * <p>/prod</p>
      */
@@ -26,6 +32,9 @@ public class DataMountInfo extends TeaModel {
     public String prefix;
 
     /**
+     * <p>Whether to mount the data volume as read-only.</p>
+     * <p>Default value: false.</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */

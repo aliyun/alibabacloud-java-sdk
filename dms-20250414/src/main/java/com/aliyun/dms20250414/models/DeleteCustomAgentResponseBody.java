@@ -4,10 +4,15 @@ package com.aliyun.dms20250414.models;
 import com.aliyun.tea.*;
 
 public class DeleteCustomAgentResponseBody extends TeaModel {
+    /**
+     * <p>Return struct</p>
+     */
     @NameInMap("Data")
     public DeleteCustomAgentResponseBodyData data;
 
     /**
+     * <p>Error code</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -15,6 +20,8 @@ public class DeleteCustomAgentResponseBody extends TeaModel {
     public String errorCode;
 
     /**
+     * <p>Returns an error message if the call fails.</p>
+     * 
      * <strong>example:</strong>
      * <p>Specified parameter Tid is not valid.</p>
      */
@@ -31,6 +38,14 @@ public class DeleteCustomAgentResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Return value description.</p>
+     * <ul>
+     * <li><p><strong>true</strong>: Deletion successful.</p>
+     * </li>
+     * <li><p><strong>false</strong>: Deletion failed.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -84,6 +99,8 @@ public class DeleteCustomAgentResponseBody extends TeaModel {
 
     public static class DeleteCustomAgentResponseBodyData extends TeaModel {
         /**
+         * <p>Custom Agent ID</p>
+         * 
          * <strong>example:</strong>
          * <p>ca-4y3ca4khkcu**********ysf</p>
          */
@@ -91,6 +108,8 @@ public class DeleteCustomAgentResponseBody extends TeaModel {
         public String customAgentId;
 
         /**
+         * <p>Deletion operation message</p>
+         * 
          * <strong>example:</strong>
          * <p>Custom agent successfully deleted</p>
          */
@@ -98,6 +117,8 @@ public class DeleteCustomAgentResponseBody extends TeaModel {
         public String message;
 
         /**
+         * <p>Is deletion successful?</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */

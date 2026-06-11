@@ -5,16 +5,26 @@ import com.aliyun.tea.*;
 
 public class UpdateDataAgentSpaceInfoRequest extends TeaModel {
     /**
+     * <p>The current DMS unit.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
      */
     @NameInMap("DMSUnit")
     public String DMSUnit;
 
+    /**
+     * <p>Specifies whether to enable session sharing for the workspace. Valid values: true and false.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("IsSessionShareEnabled")
     public Boolean isSessionShareEnabled;
 
     /**
+     * <p>The new description for the workspace.</p>
+     * 
      * <strong>example:</strong>
      * <p>space for test new</p>
      */
@@ -22,6 +32,8 @@ public class UpdateDataAgentSpaceInfoRequest extends TeaModel {
     public String workspaceDesc;
 
     /**
+     * <p>The ID of the workspace.</p>
+     * 
      * <strong>example:</strong>
      * <p>20923*****7291</p>
      */
@@ -29,6 +41,8 @@ public class UpdateDataAgentSpaceInfoRequest extends TeaModel {
     public String workspaceId;
 
     /**
+     * <p>The new name for the workspace.</p>
+     * 
      * <strong>example:</strong>
      * <p>yunqitest_v2</p>
      */

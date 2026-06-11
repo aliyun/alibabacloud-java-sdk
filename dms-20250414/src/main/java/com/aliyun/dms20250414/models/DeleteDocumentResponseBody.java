@@ -5,6 +5,14 @@ import com.aliyun.tea.*;
 
 public class DeleteDocumentResponseBody extends TeaModel {
     /**
+     * <p>Indicates whether the document was deleted. Valid values:</p>
+     * <ul>
+     * <li><p><strong>true</strong>: The deletion was successful.</p>
+     * </li>
+     * <li><p><strong>false</strong>: The deletion failed.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -12,6 +20,8 @@ public class DeleteDocumentResponseBody extends TeaModel {
     public Boolean data;
 
     /**
+     * <p>The error code that is returned if the request fails.</p>
+     * 
      * <strong>example:</strong>
      * <p>KnowledgeBaseNotFound</p>
      */
@@ -19,6 +29,8 @@ public class DeleteDocumentResponseBody extends TeaModel {
     public String errorCode;
 
     /**
+     * <p>The error message that is returned if the request fails.</p>
+     * 
      * <strong>example:</strong>
      * <p>Resource not found kb-***</p>
      */
@@ -26,6 +38,8 @@ public class DeleteDocumentResponseBody extends TeaModel {
     public String errorMessage;
 
     /**
+     * <p>The unique request ID. Use this ID to troubleshoot errors.</p>
+     * 
      * <strong>example:</strong>
      * <p>67E910F2-4B62-5B0C-ACA3-7547695C****</p>
      */
@@ -33,6 +47,14 @@ public class DeleteDocumentResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <ul>
+     * <li><p><strong>true</strong>: The request was successful.</p>
+     * </li>
+     * <li><p><strong>false</strong>: The request failed.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

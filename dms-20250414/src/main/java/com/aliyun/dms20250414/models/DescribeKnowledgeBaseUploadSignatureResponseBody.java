@@ -4,10 +4,15 @@ package com.aliyun.dms20250414.models;
 import com.aliyun.tea.*;
 
 public class DescribeKnowledgeBaseUploadSignatureResponseBody extends TeaModel {
+    /**
+     * <p>The upload signature details.</p>
+     */
     @NameInMap("Data")
     public DescribeKnowledgeBaseUploadSignatureResponseBodyData data;
 
     /**
+     * <p>The error code if the request fails.</p>
+     * 
      * <strong>example:</strong>
      * <p>KnowledgeBaseNotFound</p>
      */
@@ -15,6 +20,8 @@ public class DescribeKnowledgeBaseUploadSignatureResponseBody extends TeaModel {
     public String errorCode;
 
     /**
+     * <p>The error message if the request fails.</p>
+     * 
      * <strong>example:</strong>
      * <p>Resource not found xxx</p>
      */
@@ -22,6 +29,8 @@ public class DescribeKnowledgeBaseUploadSignatureResponseBody extends TeaModel {
     public String errorMessage;
 
     /**
+     * <p>The unique ID of the request. If an error occurs, use this ID to troubleshoot the issue.</p>
+     * 
      * <strong>example:</strong>
      * <p>67E910F2-4B62-5B0C-ACA3-7547695C****</p>
      */
@@ -29,6 +38,14 @@ public class DescribeKnowledgeBaseUploadSignatureResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <ul>
+     * <li><p><strong>true</strong>: The request was successful.</p>
+     * </li>
+     * <li><p><strong>false</strong>: The request failed.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -81,10 +98,15 @@ public class DescribeKnowledgeBaseUploadSignatureResponseBody extends TeaModel {
     }
 
     public static class DescribeKnowledgeBaseUploadSignatureResponseBodyData extends TeaModel {
+        /**
+         * <p>The credential scope string for the signature.</p>
+         */
         @NameInMap("OssCredential")
         public String ossCredential;
 
         /**
+         * <p>The request time in ISO 8601 format.</p>
+         * 
          * <strong>example:</strong>
          * <p>20260101T135341Z</p>
          */
@@ -92,6 +114,8 @@ public class DescribeKnowledgeBaseUploadSignatureResponseBody extends TeaModel {
         public String ossDate;
 
         /**
+         * <p>The STS token used for uploading to OSS. It is valid for one hour.</p>
+         * 
          * <strong>example:</strong>
          * <p>CAIS4gJ1q6Ft5B2yfSjIr5vPHMj4p+lHx/utUUjg13ptZ+5u3oDzkzz2IHhMdXlrCOgYt/8xnG1V6f8flrJ/ToQAX0HfatZq5ZkS9AqnaoXM/te496IFg5D9y7dIs8GgjqHoeOzcYI73WJXEMiLp9EJaxb/9ak/RPTiMOoGIjphKd8keWhLCAxNNGNZRIHkJyqZYTwyzU8ygKRn3mGHdIVN1sw5n8wNF5L+439eX52i17jS46JdM/9ysesH5NpQxbMwkDYnk5oEsKPqdihw3wgNR6aJ7gJZD/Tr6pdyHCzFTmU7ea7uEqYw3clYiOPBnRvEd8eKPnPl5q/HVm4Hs0wxKNuxOSCXZS4yp3MLeH+ekJgOGwWFHz9qnOLmtQXqV22tMCRpzXIj6Zlmz+/reI6iNW+Ory74mxSFbrz3ZP4yv+o+Yv3QbMVumcySkKVbBbVvnv0R8GNsIC2lMUbp+rfShhfFuG2QagAECCyigwAlSAryrFmteD+EVuvxvi0NE7zDJLbUkhek6dcY+/u5V5jcmvL67CQ7bTNk+9lV8WDCvtoCD9ucqTaHweJEd8fS2DaFedAMDf8BfZa2C1CTLhVXdSgE2WORYbMqidelRm7dH3fTbZVvryWKDaveDRLt5J/Qfs**********</p>
          */
@@ -99,6 +123,8 @@ public class DescribeKnowledgeBaseUploadSignatureResponseBody extends TeaModel {
         public String ossSecurityToken;
 
         /**
+         * <p>The authentication signature.</p>
+         * 
          * <strong>example:</strong>
          * <p>9bebe0900716bdefaab899781c7bdfd614ec6ed711e0de5ddf6f5a**********</p>
          */
@@ -106,6 +132,8 @@ public class DescribeKnowledgeBaseUploadSignatureResponseBody extends TeaModel {
         public String ossSignature;
 
         /**
+         * <p>The signature version and algorithm.</p>
+         * 
          * <strong>example:</strong>
          * <p>OSS4-HMAC-SHA256</p>
          */
@@ -113,16 +141,23 @@ public class DescribeKnowledgeBaseUploadSignatureResponseBody extends TeaModel {
         public String ossSignatureVersion;
 
         /**
+         * <p>The Base64-encoded POST policy that specifies the conditions for the file upload.</p>
+         * 
          * <strong>example:</strong>
          * <p>eyJjb25kaXRpb25zIjpbeyJ4LW9zcy1jcmVkZW50aWFsIjoiU1RTLk5aRmR2RDJRWlFSeWlwZmpkS295NEYxb2ovMjAyNjA1MTQvY24taGFuZ3pob3Uvb3NzL2FsaXl1bl92NF9yZXF1ZXN0In0seyJ4LW9zcy1kYXRlIjoiMjAyNjA1MTRUMDMzMjI3WiJ9LHsieC1vc3Mtc2VjdXJpdHktdG9rZW4iOiJDQUlTMmdKMXE2RnQ1QjJ5ZlNqSXI1bnpMOHp3MzQ1NzVwQ1NhMWJYam1RZVkvWVlxZlRFaUR6MklIaE1**</p>
          */
         @NameInMap("Policy")
         public String policy;
 
+        /**
+         * <p>The path prefix for the file upload.</p>
+         */
         @NameInMap("UploadDir")
         public String uploadDir;
 
         /**
+         * <p>The destination URL for the file upload.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="https://onemeta-kb-staging.oss-cn-hangzhou.aliyuncs.com">https://onemeta-kb-staging.oss-cn-hangzhou.aliyuncs.com</a></p>
          */

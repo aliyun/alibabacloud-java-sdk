@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class SetWorkspaceCodePublishSettingRequest extends TeaModel {
     /**
+     * <p>The deployment configuration, provided as a JSON string. The repos array specifies the Git repositories in the workspace, primarily for setting the branch for publishing. The exclude parameter specifies which directories to skip.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class SetWorkspaceCodePublishSettingRequest extends TeaModel {
     public String config;
 
     /**
+     * <p>The numeric ID of the workspace.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

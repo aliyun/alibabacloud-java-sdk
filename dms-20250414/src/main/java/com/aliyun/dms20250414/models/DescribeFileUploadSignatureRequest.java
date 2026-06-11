@@ -4,10 +4,18 @@ package com.aliyun.dms20250414.models;
 import com.aliyun.tea.*;
 
 public class DescribeFileUploadSignatureRequest extends TeaModel {
+    /**
+     * <p>Used by the frontend only</p>
+     * 
+     * <strong>example:</strong>
+     * <p>仅前端使用</p>
+     */
     @NameInMap("CallFrom")
     public String callFrom;
 
     /**
+     * <p>Current DMS unit</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
      */

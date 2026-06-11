@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteAirflowRequest extends TeaModel {
     /**
+     * <p>The ID of the Airflow instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,8 @@ public class DeleteAirflowRequest extends TeaModel {
     public String airflowId;
 
     /**
+     * <p>The client token that is used to ensure the idempotence of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>token-****</p>
      */
@@ -21,6 +24,7 @@ public class DeleteAirflowRequest extends TeaModel {
     public String clientToken;
 
     /**
+     * <p>The ID of the workspace.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

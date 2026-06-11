@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateDataLakeFunctionShrinkRequest extends TeaModel {
     /**
+     * <p>The name of the data catalog.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class CreateDataLakeFunctionShrinkRequest extends TeaModel {
     public String catalogName;
 
     /**
+     * <p>The name of the database.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,12 +25,18 @@ public class CreateDataLakeFunctionShrinkRequest extends TeaModel {
     public String dbName;
 
     /**
+     * <p>The details of the function.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("FunctionInput")
     public String functionInputShrink;
 
     /**
+     * <p>The ID of the tenant.</p>
+     * <blockquote>
+     * <p>Hover over your profile picture in the upper-right corner of the DMS console to obtain the tenant ID. For details, see <a href="https://help.aliyun.com/document_detail/181330.html">View tenant information</a>.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>3****</p>
      */
@@ -36,6 +44,8 @@ public class CreateDataLakeFunctionShrinkRequest extends TeaModel {
     public Long tid;
 
     /**
+     * <p>The ID of the workspace.</p>
+     * 
      * <strong>example:</strong>
      * <p>12****</p>
      */

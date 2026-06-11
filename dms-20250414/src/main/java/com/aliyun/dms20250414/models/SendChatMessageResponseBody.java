@@ -4,10 +4,15 @@ package com.aliyun.dms20250414.models;
 import com.aliyun.tea.*;
 
 public class SendChatMessageResponseBody extends TeaModel {
+    /**
+     * <p>The response data.</p>
+     */
     @NameInMap("Data")
     public SendChatMessageResponseBodyData data;
 
     /**
+     * <p>The error code. A value of <code>Success</code> indicates that the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>Success</p>
      */
@@ -15,6 +20,8 @@ public class SendChatMessageResponseBody extends TeaModel {
     public String errorCode;
 
     /**
+     * <p>The error message. This field is empty if the request is successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>&quot;&quot;</p>
      */
@@ -22,14 +29,16 @@ public class SendChatMessageResponseBody extends TeaModel {
     public String errorMessage;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
-     * <p>FE65CE1F-155B-1A38-9A3A-0208982C773B</p>
+     * <p>FE65CE1F-<strong><strong>-</strong></strong>-<strong><strong>-</strong></strong>**</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>Success</p>
+     * <p>Indicates whether the request was successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -84,16 +93,16 @@ public class SendChatMessageResponseBody extends TeaModel {
 
     public static class SendChatMessageResponseBodyData extends TeaModel {
         /**
-         * <p>AgentId</p>
+         * <p>The agent ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>3jqqdiuxunfe2f7feren21eeq</p>
+         * <p>3jqqdiuxun******</p>
          */
         @NameInMap("AgentId")
         public String agentId;
 
         /**
-         * <p>Message</p>
+         * <p>Describes the result of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -102,10 +111,10 @@ public class SendChatMessageResponseBody extends TeaModel {
         public String message;
 
         /**
-         * <p>SessionId</p>
+         * <p>The session ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>6zbqbhoamv7gk20p8pgygt4hh</p>
+         * <p>6zbqbho********</p>
          */
         @NameInMap("SessionId")
         public String sessionId;

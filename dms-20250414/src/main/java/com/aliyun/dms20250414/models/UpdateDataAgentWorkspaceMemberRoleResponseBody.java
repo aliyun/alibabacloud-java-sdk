@@ -4,10 +4,15 @@ package com.aliyun.dms20250414.models;
 import com.aliyun.tea.*;
 
 public class UpdateDataAgentWorkspaceMemberRoleResponseBody extends TeaModel {
+    /**
+     * <p>The returned data.</p>
+     */
     @NameInMap("Data")
     public UpdateDataAgentWorkspaceMemberRoleResponseBodyData data;
 
     /**
+     * <p>The error code returned if the request fails.</p>
+     * 
      * <strong>example:</strong>
      * <p>DMS-DA-40114</p>
      */
@@ -15,6 +20,8 @@ public class UpdateDataAgentWorkspaceMemberRoleResponseBody extends TeaModel {
     public String errorCode;
 
     /**
+     * <p>The error message returned if the request fails.</p>
+     * 
      * <strong>example:</strong>
      * <p>Specified parameter is not valid.</p>
      */
@@ -22,6 +29,8 @@ public class UpdateDataAgentWorkspaceMemberRoleResponseBody extends TeaModel {
     public String errorMessage;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>E0D2-*****-A63B6</p>
      */
@@ -29,6 +38,8 @@ public class UpdateDataAgentWorkspaceMemberRoleResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -82,6 +93,8 @@ public class UpdateDataAgentWorkspaceMemberRoleResponseBody extends TeaModel {
 
     public static class UpdateDataAgentWorkspaceMemberRoleResponseBodyData extends TeaModel {
         /**
+         * <p>The time when the user joined the workspace. This is a UNIX timestamp in seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>1765961516</p>
          */
@@ -89,6 +102,8 @@ public class UpdateDataAgentWorkspaceMemberRoleResponseBody extends TeaModel {
         public Long joinTime;
 
         /**
+         * <p>The UID of the member whose role was changed.</p>
+         * 
          * <strong>example:</strong>
          * <p>20282*****7591</p>
          */
@@ -96,6 +111,8 @@ public class UpdateDataAgentWorkspaceMemberRoleResponseBody extends TeaModel {
         public String memberId;
 
         /**
+         * <p>The new role of the user.</p>
+         * 
          * <strong>example:</strong>
          * <p>admin</p>
          */
@@ -103,6 +120,8 @@ public class UpdateDataAgentWorkspaceMemberRoleResponseBody extends TeaModel {
         public String roleName;
 
         /**
+         * <p>The number of running tasks for the user in the workspace.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -110,6 +129,8 @@ public class UpdateDataAgentWorkspaceMemberRoleResponseBody extends TeaModel {
         public Long runningTaskNumber;
 
         /**
+         * <p>The total number of tasks for the user in the workspace.</p>
+         * 
          * <strong>example:</strong>
          * <p>20</p>
          */
@@ -117,6 +138,8 @@ public class UpdateDataAgentWorkspaceMemberRoleResponseBody extends TeaModel {
         public Long totalTaskNumber;
 
         /**
+         * <p>The RAM username.</p>
+         * 
          * <strong>example:</strong>
          * <p>yunqitest</p>
          */

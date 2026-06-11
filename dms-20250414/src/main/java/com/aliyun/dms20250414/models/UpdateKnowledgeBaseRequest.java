@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpdateKnowledgeBaseRequest extends TeaModel {
     /**
+     * <p>The new knowledge base description.</p>
+     * 
      * <strong>example:</strong>
      * <p>updated kb desc</p>
      */
@@ -12,6 +14,7 @@ public class UpdateKnowledgeBaseRequest extends TeaModel {
     public String description;
 
     /**
+     * <p>The knowledge base ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,6 +24,8 @@ public class UpdateKnowledgeBaseRequest extends TeaModel {
     public String kbUuid;
 
     /**
+     * <p>The new knowledge base name.</p>
+     * 
      * <strong>example:</strong>
      * <p>updated kb name</p>
      */

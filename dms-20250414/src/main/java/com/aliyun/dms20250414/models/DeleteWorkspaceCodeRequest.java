@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteWorkspaceCodeRequest extends TeaModel {
     /**
+     * <p>The full path of the code file or directory. The path must be prefixed with <code>/Workspace/code/</code>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,8 @@ public class DeleteWorkspaceCodeRequest extends TeaModel {
     public String path;
 
     /**
+     * <p>The repository information.</p>
+     * 
      * <strong>example:</strong>
      * <p>database/adb</p>
      */
@@ -21,6 +24,8 @@ public class DeleteWorkspaceCodeRequest extends TeaModel {
     public String repo;
 
     /**
+     * <p>Specifies whether the item to delete is a symbolic link.</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -28,6 +33,7 @@ public class DeleteWorkspaceCodeRequest extends TeaModel {
     public Boolean symlink;
 
     /**
+     * <p>The ID of the workspace.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

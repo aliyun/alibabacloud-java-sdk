@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetNotebookAndSubmitTaskResponseBody extends TeaModel {
     /**
+     * <p>The status code. <code>Success</code> indicates that the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>Success</p>
      */
@@ -12,6 +14,8 @@ public class GetNotebookAndSubmitTaskResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>The returned message.</p>
+     * 
      * <strong>example:</strong>
      * <p>Request Invalid</p>
      */
@@ -19,6 +23,8 @@ public class GetNotebookAndSubmitTaskResponseBody extends TeaModel {
     public String errMsg;
 
     /**
+     * <p>HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -26,6 +32,8 @@ public class GetNotebookAndSubmitTaskResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>67E910F2-4B62-5B0C-ACA3-7547695C****</p>
      */
@@ -33,6 +41,8 @@ public class GetNotebookAndSubmitTaskResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The session ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>5zrs5szpiezlb9m3qxi6zp32h</p>
      */
@@ -40,6 +50,14 @@ public class GetNotebookAndSubmitTaskResponseBody extends TeaModel {
     public String sessionId;
 
     /**
+     * <p>Indicates whether the request succedded. Valid values:</p>
+     * <ul>
+     * <li><p><strong>true</strong>: The request succedded.</p>
+     * </li>
+     * <li><p><strong>false</strong>: The request failed.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -47,6 +65,8 @@ public class GetNotebookAndSubmitTaskResponseBody extends TeaModel {
     public Boolean success;
 
     /**
+     * <p>The ID of the scheduled task.</p>
+     * 
      * <strong>example:</strong>
      * <p>IcICC2nbMpYp9KygS43n010100</p>
      */

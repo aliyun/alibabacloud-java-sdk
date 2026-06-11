@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DLOrder extends TeaModel {
     /**
+     * <p>The name of the column.</p>
+     * 
      * <strong>example:</strong>
      * <p>col1</p>
      */
@@ -12,6 +14,8 @@ public class DLOrder extends TeaModel {
     public String col;
 
     /**
+     * <p>The position of the column in the sort order.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */

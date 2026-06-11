@@ -4,20 +4,48 @@ package com.aliyun.dms20250414.models;
 import com.aliyun.tea.*;
 
 public class ListFileUploadRequest extends TeaModel {
+    /**
+     * <p>For front-end use only.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>仅前端使用</p>
+     */
     @NameInMap("CallFrom")
     public String callFrom;
 
     /**
+     * <p>The current DMS unit.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
      */
     @NameInMap("DmsUnit")
     public String dmsUnit;
 
+    /**
+     * <p>The validity period of the download link, in seconds. This parameter applies only to files in user-owned Object Storage Service (OSS) buckets. The default is 3600.</p>
+     * <ul>
+     * <li><p>Minimum value: 3600 (1 hour)</p>
+     * </li>
+     * <li><p>Maximum value: 129600 (36 hours)</p>
+     * </li>
+     * </ul>
+     * <p>Notes:</p>
+     * <ul>
+     * <li><p>Download links for files in the built-in OSS are valid for 1 hour.</p>
+     * </li>
+     * <li></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>3600</p>
+     */
     @NameInMap("DownloadLinkExpire")
     public Integer downloadLinkExpire;
 
     /**
+     * <p>The file category.</p>
+     * 
      * <strong>example:</strong>
      * <p>TextReport</p>
      */
@@ -25,6 +53,8 @@ public class ListFileUploadRequest extends TeaModel {
     public String fileCategory;
 
     /**
+     * <p>The file source.</p>
+     * 
      * <strong>example:</strong>
      * <p>Agent</p>
      */
@@ -32,6 +62,8 @@ public class ListFileUploadRequest extends TeaModel {
     public String fileFrom;
 
     /**
+     * <p>The file ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>f-8*******01m</p>
      */
@@ -39,6 +71,8 @@ public class ListFileUploadRequest extends TeaModel {
     public String fileId;
 
     /**
+     * <p>The session ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>h8r********4fch</p>
      */
@@ -46,6 +80,8 @@ public class ListFileUploadRequest extends TeaModel {
     public String sessionId;
 
     /**
+     * <p>The sort column.</p>
+     * 
      * <strong>example:</strong>
      * <p>gmtCreated</p>
      */
@@ -53,6 +89,8 @@ public class ListFileUploadRequest extends TeaModel {
     public String sortColumn;
 
     /**
+     * <p>The sort direction.</p>
+     * 
      * <strong>example:</strong>
      * <p>asc</p>
      */

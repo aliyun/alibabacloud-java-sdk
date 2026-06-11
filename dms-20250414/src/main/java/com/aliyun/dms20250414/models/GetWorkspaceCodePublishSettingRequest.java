@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetWorkspaceCodePublishSettingRequest extends TeaModel {
     /**
+     * <p>The ID of the workspace.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListDataLakeTableNameRequest extends TeaModel {
     /**
+     * <p>The name of the data catalog.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class ListDataLakeTableNameRequest extends TeaModel {
     public String catalogName;
 
     /**
+     * <p>The name of the database.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,8 @@ public class ListDataLakeTableNameRequest extends TeaModel {
     public String dbName;
 
     /**
+     * <p>The number of entries to return on each page. The maximum value is 100.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -30,6 +34,14 @@ public class ListDataLakeTableNameRequest extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>The token that is used to retrieve the next page of results. Set this parameter to the value of NextToken that is returned from the last call. You do not need to specify this parameter for the first call.</p>
+     * <ul>
+     * <li><p>If <strong>NextToken</strong> is empty, no subsequent query is required.</p>
+     * </li>
+     * <li><p>If <strong>NextToken</strong> has a return value, the value is the token for the next query.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>f056501ada12****</p>
      */
@@ -37,6 +49,8 @@ public class ListDataLakeTableNameRequest extends TeaModel {
     public String nextToken;
 
     /**
+     * <p>The regular expression used to match table names.</p>
+     * 
      * <strong>example:</strong>
      * <p>.*</p>
      */
@@ -44,6 +58,20 @@ public class ListDataLakeTableNameRequest extends TeaModel {
     public String tableNamePattern;
 
     /**
+     * <p>The type of the table. Valid values:</p>
+     * <ul>
+     * <li><p>MANAGED_TABLE: Internal table.</p>
+     * </li>
+     * <li><p>EXTERNAL_TABLE: Foreign table.</p>
+     * </li>
+     * <li><p>VIRTUAL_VIEW: Virtual view.</p>
+     * </li>
+     * <li><p>INDEX_TABLE: Index table.</p>
+     * </li>
+     * <li><p>MATERIALIZED_VIEW: Materialized view.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>MANAGED_TABLE</p>
      */
@@ -51,6 +79,11 @@ public class ListDataLakeTableNameRequest extends TeaModel {
     public String tableType;
 
     /**
+     * <p>The tenant ID.</p>
+     * <blockquote>
+     * <p>Hover over your profile picture in the upper-right corner of the DMS console to obtain the tenant ID. For details, see <a href="https://help.aliyun.com/document_detail/181330.html">View tenant information</a>.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>3****</p>
      */
@@ -58,6 +91,8 @@ public class ListDataLakeTableNameRequest extends TeaModel {
     public Long tid;
 
     /**
+     * <p>The ID of the workspace.</p>
+     * 
      * <strong>example:</strong>
      * <p>12****</p>
      */

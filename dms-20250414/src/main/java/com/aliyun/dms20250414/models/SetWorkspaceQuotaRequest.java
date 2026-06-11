@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class SetWorkspaceQuotaRequest extends TeaModel {
     /**
+     * <p>Specifies whether to enable auto-payment for the order.</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -12,6 +14,8 @@ public class SetWorkspaceQuotaRequest extends TeaModel {
     public Boolean autoPay;
 
     /**
+     * <p>A unique, client-generated token to ensure request idempotence. The token can contain only ASCII characters and must be no longer than 64 characters. For more information, see How to ensure idempotence.</p>
+     * 
      * <strong>example:</strong>
      * <p>acdxxx</p>
      */
@@ -19,6 +23,7 @@ public class SetWorkspaceQuotaRequest extends TeaModel {
     public String clientToken;
 
     /**
+     * <p>The compute unit (CU) quota for the workspace.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -28,6 +33,7 @@ public class SetWorkspaceQuotaRequest extends TeaModel {
     public Integer cuQuota;
 
     /**
+     * <p>The ID of the region.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -37,6 +43,7 @@ public class SetWorkspaceQuotaRequest extends TeaModel {
     public String region;
 
     /**
+     * <p>The ID of the Data Management Service (DMS) workspace.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

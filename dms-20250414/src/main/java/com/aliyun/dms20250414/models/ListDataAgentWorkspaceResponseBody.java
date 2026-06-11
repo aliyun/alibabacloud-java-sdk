@@ -4,10 +4,15 @@ package com.aliyun.dms20250414.models;
 import com.aliyun.tea.*;
 
 public class ListDataAgentWorkspaceResponseBody extends TeaModel {
+    /**
+     * <p>The returned data.</p>
+     */
     @NameInMap("Data")
     public ListDataAgentWorkspaceResponseBodyData data;
 
     /**
+     * <p>The error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>DMS-DA-40114</p>
      */
@@ -15,6 +20,8 @@ public class ListDataAgentWorkspaceResponseBody extends TeaModel {
     public String errorCode;
 
     /**
+     * <p>The error message returned if the request fails.</p>
+     * 
      * <strong>example:</strong>
      * <p>Specified parameter is not valid.</p>
      */
@@ -22,6 +29,8 @@ public class ListDataAgentWorkspaceResponseBody extends TeaModel {
     public String errorMessage;
 
     /**
+     * <p>This parameter is not used.</p>
+     * 
      * <strong>example:</strong>
      * <p>nu use</p>
      */
@@ -29,6 +38,8 @@ public class ListDataAgentWorkspaceResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>This parameter is not used.</p>
+     * 
      * <strong>example:</strong>
      * <p>no use</p>
      */
@@ -36,6 +47,8 @@ public class ListDataAgentWorkspaceResponseBody extends TeaModel {
     public String nextToken;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>E0D2-*****-A63B6</p>
      */
@@ -43,6 +56,8 @@ public class ListDataAgentWorkspaceResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -112,6 +127,8 @@ public class ListDataAgentWorkspaceResponseBody extends TeaModel {
 
     public static class ListDataAgentWorkspaceResponseBodyDataContent extends TeaModel {
         /**
+         * <p>The creation time of the workspace, provided as a UNIX timestamp in seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>1765960516</p>
          */
@@ -119,6 +136,8 @@ public class ListDataAgentWorkspaceResponseBody extends TeaModel {
         public Long createTime;
 
         /**
+         * <p>The creator\&quot;s user ID (UID).</p>
+         * 
          * <strong>example:</strong>
          * <p>20282*****7591</p>
          */
@@ -126,6 +145,8 @@ public class ListDataAgentWorkspaceResponseBody extends TeaModel {
         public String creator;
 
         /**
+         * <p>The description of the workspace.</p>
+         * 
          * <strong>example:</strong>
          * <p>space for test</p>
          */
@@ -136,6 +157,8 @@ public class ListDataAgentWorkspaceResponseBody extends TeaModel {
         public Boolean isSessionShareEnabled;
 
         /**
+         * <p>The last modification time of the workspace, provided as a UNIX timestamp in seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>1765961516</p>
          */
@@ -143,6 +166,8 @@ public class ListDataAgentWorkspaceResponseBody extends TeaModel {
         public Long modifyTime;
 
         /**
+         * <p>The name of the user\&quot;s role in the workspace.</p>
+         * 
          * <strong>example:</strong>
          * <p>admin</p>
          */
@@ -150,6 +175,8 @@ public class ListDataAgentWorkspaceResponseBody extends TeaModel {
         public String roleName;
 
         /**
+         * <p>The number of members in the workspace.</p>
+         * 
          * <strong>example:</strong>
          * <p>11</p>
          */
@@ -157,6 +184,8 @@ public class ListDataAgentWorkspaceResponseBody extends TeaModel {
         public Long totalMember;
 
         /**
+         * <p>The ID of the workspace.</p>
+         * 
          * <strong>example:</strong>
          * <p>20923*****7291</p>
          */
@@ -164,6 +193,8 @@ public class ListDataAgentWorkspaceResponseBody extends TeaModel {
         public String workspaceId;
 
         /**
+         * <p>The name of the workspace.</p>
+         * 
          * <strong>example:</strong>
          * <p>workspaceTest</p>
          */
@@ -171,6 +202,8 @@ public class ListDataAgentWorkspaceResponseBody extends TeaModel {
         public String workspaceName;
 
         /**
+         * <p>The status of the workspace.</p>
+         * 
          * <strong>example:</strong>
          * <p>active</p>
          */
@@ -265,10 +298,15 @@ public class ListDataAgentWorkspaceResponseBody extends TeaModel {
     }
 
     public static class ListDataAgentWorkspaceResponseBodyData extends TeaModel {
+        /**
+         * <p>The details of the workspaces.</p>
+         */
         @NameInMap("Content")
         public java.util.List<ListDataAgentWorkspaceResponseBodyDataContent> content;
 
         /**
+         * <p>The page number.</p>
+         * 
          * <strong>example:</strong>
          * <p>12</p>
          */
@@ -276,6 +314,8 @@ public class ListDataAgentWorkspaceResponseBody extends TeaModel {
         public Long pageNumber;
 
         /**
+         * <p>The number of workspaces on each page.</p>
+         * 
          * <strong>example:</strong>
          * <p>50</p>
          */
@@ -283,6 +323,8 @@ public class ListDataAgentWorkspaceResponseBody extends TeaModel {
         public Long pageSize;
 
         /**
+         * <p>The total number of workspaces.</p>
+         * 
          * <strong>example:</strong>
          * <p>122</p>
          */
@@ -290,6 +332,8 @@ public class ListDataAgentWorkspaceResponseBody extends TeaModel {
         public Long totalElements;
 
         /**
+         * <p>The total number of pages.</p>
+         * 
          * <strong>example:</strong>
          * <p>12</p>
          */

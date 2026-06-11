@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetDataLakePartitionResponseBody extends TeaModel {
     /**
+     * <p>The error code returned if the request fails.</p>
+     * 
      * <strong>example:</strong>
      * <p>UnknownError</p>
      */
@@ -12,16 +14,23 @@ public class GetDataLakePartitionResponseBody extends TeaModel {
     public String errorCode;
 
     /**
+     * <p>The error message returned if the call fails.</p>
+     * 
      * <strong>example:</strong>
      * <p>UnknownError</p>
      */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
+    /**
+     * <p>The information about the data lakehouse table partition.</p>
+     */
     @NameInMap("Partition")
     public DLPartition partition;
 
     /**
+     * <p>The request ID, used for log tracing and troubleshooting.</p>
+     * 
      * <strong>example:</strong>
      * <p>FE8EE2F1-4880-46BC-A704-5CF63EAF****</p>
      */
@@ -29,6 +38,14 @@ public class GetDataLakePartitionResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <ul>
+     * <li><p><strong>true</strong>: The call was successful.</p>
+     * </li>
+     * <li><p><strong>false</strong>: The call failed.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

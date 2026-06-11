@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DLDatabase extends TeaModel {
     /**
+     * <p>The name of the data catalog.</p>
+     * 
      * <strong>example:</strong>
      * <p>hive</p>
      */
@@ -12,6 +14,8 @@ public class DLDatabase extends TeaModel {
     public String catalogName;
 
     /**
+     * <p>The ID of the database.</p>
+     * 
      * <strong>example:</strong>
      * <p>19</p>
      */
@@ -19,6 +23,8 @@ public class DLDatabase extends TeaModel {
     public Long dbId;
 
     /**
+     * <p>The description of the database.</p>
+     * 
      * <strong>example:</strong>
      * <p>Default database for catalog hive</p>
      */
@@ -26,6 +32,8 @@ public class DLDatabase extends TeaModel {
     public String description;
 
     /**
+     * <p>The storage path of the database.</p>
+     * 
      * <strong>example:</strong>
      * <p>oss://xxx</p>
      */
@@ -33,6 +41,8 @@ public class DLDatabase extends TeaModel {
     public String location;
 
     /**
+     * <p>The name of the database.</p>
+     * 
      * <strong>example:</strong>
      * <p>default</p>
      */
@@ -40,6 +50,8 @@ public class DLDatabase extends TeaModel {
     public String name;
 
     /**
+     * <p>The parameters of the database.</p>
+     * 
      * <strong>example:</strong>
      * <p>key/value</p>
      */

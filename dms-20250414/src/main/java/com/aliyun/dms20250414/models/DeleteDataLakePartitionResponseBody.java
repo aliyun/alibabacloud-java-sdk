@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DeleteDataLakePartitionResponseBody extends TeaModel {
     /**
+     * <p>The error code returned when the request fails.</p>
+     * 
      * <strong>example:</strong>
      * <p>UnknownError</p>
      */
@@ -12,6 +14,8 @@ public class DeleteDataLakePartitionResponseBody extends TeaModel {
     public String errorCode;
 
     /**
+     * <p>The error message returned when the request fails.</p>
+     * 
      * <strong>example:</strong>
      * <p>UnknownError</p>
      */
@@ -19,6 +23,8 @@ public class DeleteDataLakePartitionResponseBody extends TeaModel {
     public String errorMessage;
 
     /**
+     * <p>The request ID, used for log tracing and troubleshooting.</p>
+     * 
      * <strong>example:</strong>
      * <p>0C1CB646-1DE4-4AD0-B4A4-7D47DD52****</p>
      */
@@ -26,6 +32,14 @@ public class DeleteDataLakePartitionResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the deletion succeeded.</p>
+     * <ul>
+     * <li><p><strong>true</strong>: The deletion succeeded.</p>
+     * </li>
+     * <li><p><strong>false</strong>: The deletion failed.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

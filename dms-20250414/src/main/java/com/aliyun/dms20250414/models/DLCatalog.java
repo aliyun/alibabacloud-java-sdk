@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DLCatalog extends TeaModel {
     /**
+     * <p>The description of the data catalog.</p>
+     * 
      * <strong>example:</strong>
      * <p>init default catalog</p>
      */
@@ -12,6 +14,8 @@ public class DLCatalog extends TeaModel {
     public String description;
 
     /**
+     * <p>The storage path of the data catalog.</p>
+     * 
      * <strong>example:</strong>
      * <p>oss://xxxx</p>
      */
@@ -19,6 +23,8 @@ public class DLCatalog extends TeaModel {
     public String location;
 
     /**
+     * <p>The name of the data catalog.</p>
+     * 
      * <strong>example:</strong>
      * <p>hive</p>
      */

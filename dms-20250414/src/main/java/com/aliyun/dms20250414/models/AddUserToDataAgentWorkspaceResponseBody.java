@@ -4,10 +4,15 @@ package com.aliyun.dms20250414.models;
 import com.aliyun.tea.*;
 
 public class AddUserToDataAgentWorkspaceResponseBody extends TeaModel {
+    /**
+     * <p>The returned struct.</p>
+     */
     @NameInMap("Data")
     public AddUserToDataAgentWorkspaceResponseBodyData data;
 
     /**
+     * <p>The error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>DMS-DA-40114</p>
      */
@@ -15,6 +20,8 @@ public class AddUserToDataAgentWorkspaceResponseBody extends TeaModel {
     public String errorCode;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>Specified parameter is not valid.</p>
      */
@@ -22,6 +29,8 @@ public class AddUserToDataAgentWorkspaceResponseBody extends TeaModel {
     public String errorMessage;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>67E910F2-***-695C</p>
      */
@@ -29,6 +38,8 @@ public class AddUserToDataAgentWorkspaceResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -82,6 +93,8 @@ public class AddUserToDataAgentWorkspaceResponseBody extends TeaModel {
 
     public static class AddUserToDataAgentWorkspaceResponseBodyData extends TeaModel {
         /**
+         * <p>The time when the user joined the workspace. This is a UNIX timestamp in seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>1765960516</p>
          */
@@ -89,6 +102,8 @@ public class AddUserToDataAgentWorkspaceResponseBody extends TeaModel {
         public Long joinTime;
 
         /**
+         * <p>The Alibaba Cloud UID of the user.</p>
+         * 
          * <strong>example:</strong>
          * <p>20282*****7591</p>
          */
@@ -96,6 +111,8 @@ public class AddUserToDataAgentWorkspaceResponseBody extends TeaModel {
         public String memberId;
 
         /**
+         * <p>The name of the user\&quot;s role in the workspace.</p>
+         * 
          * <strong>example:</strong>
          * <p>admin</p>
          */
@@ -103,6 +120,8 @@ public class AddUserToDataAgentWorkspaceResponseBody extends TeaModel {
         public String roleName;
 
         /**
+         * <p>The number of tasks that the user is running in the workspace.</p>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */
@@ -110,6 +129,8 @@ public class AddUserToDataAgentWorkspaceResponseBody extends TeaModel {
         public Long runningTaskNumber;
 
         /**
+         * <p>The total number of tasks that the user initiated in the workspace.</p>
+         * 
          * <strong>example:</strong>
          * <p>5</p>
          */
@@ -117,6 +138,8 @@ public class AddUserToDataAgentWorkspaceResponseBody extends TeaModel {
         public Long totalTaskNumber;
 
         /**
+         * <p>The RAM username.</p>
+         * 
          * <strong>example:</strong>
          * <p>agentTest</p>
          */

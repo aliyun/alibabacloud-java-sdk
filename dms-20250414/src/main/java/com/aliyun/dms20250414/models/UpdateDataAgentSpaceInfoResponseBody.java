@@ -4,10 +4,15 @@ package com.aliyun.dms20250414.models;
 import com.aliyun.tea.*;
 
 public class UpdateDataAgentSpaceInfoResponseBody extends TeaModel {
+    /**
+     * <p>The returned data.</p>
+     */
     @NameInMap("Data")
     public UpdateDataAgentSpaceInfoResponseBodyData data;
 
     /**
+     * <p>The error code returned if the request fails.</p>
+     * 
      * <strong>example:</strong>
      * <p>DMS-DA-40114</p>
      */
@@ -15,6 +20,8 @@ public class UpdateDataAgentSpaceInfoResponseBody extends TeaModel {
     public String errorCode;
 
     /**
+     * <p>The error message returned if the request fails.</p>
+     * 
      * <strong>example:</strong>
      * <p>Specified parameter is not valid.</p>
      */
@@ -22,6 +29,8 @@ public class UpdateDataAgentSpaceInfoResponseBody extends TeaModel {
     public String errorMessage;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>67E910F2-***-695C</p>
      */
@@ -29,6 +38,8 @@ public class UpdateDataAgentSpaceInfoResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -82,6 +93,8 @@ public class UpdateDataAgentSpaceInfoResponseBody extends TeaModel {
 
     public static class UpdateDataAgentSpaceInfoResponseBodyData extends TeaModel {
         /**
+         * <p>The time when the workspace was created, specified as a UNIX timestamp in seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>1765960516</p>
          */
@@ -89,6 +102,8 @@ public class UpdateDataAgentSpaceInfoResponseBody extends TeaModel {
         public String createTime;
 
         /**
+         * <p>The user ID (UID) of the workspace creator.</p>
+         * 
          * <strong>example:</strong>
          * <p>20282*****7591</p>
          */
@@ -96,16 +111,26 @@ public class UpdateDataAgentSpaceInfoResponseBody extends TeaModel {
         public String creator;
 
         /**
+         * <p>The description of the workspace.</p>
+         * 
          * <strong>example:</strong>
          * <p>space for test new</p>
          */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>Indicates whether session sharing is enabled in the workspace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("IsSessionShareEnabled")
         public Boolean isSessionShareEnabled;
 
         /**
+         * <p>The time when the workspace was last modified, specified as a UNIX timestamp in seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>1765962516</p>
          */
@@ -113,6 +138,8 @@ public class UpdateDataAgentSpaceInfoResponseBody extends TeaModel {
         public String modifyTime;
 
         /**
+         * <p>The user role in the workspace.</p>
+         * 
          * <strong>example:</strong>
          * <p>active</p>
          */
@@ -120,6 +147,8 @@ public class UpdateDataAgentSpaceInfoResponseBody extends TeaModel {
         public String roleName;
 
         /**
+         * <p>The total number of members in the workspace.</p>
+         * 
          * <strong>example:</strong>
          * <p>20</p>
          */
@@ -127,6 +156,8 @@ public class UpdateDataAgentSpaceInfoResponseBody extends TeaModel {
         public String totalMember;
 
         /**
+         * <p>The ID of the workspace.</p>
+         * 
          * <strong>example:</strong>
          * <p>20923*****7291</p>
          */
@@ -134,6 +165,8 @@ public class UpdateDataAgentSpaceInfoResponseBody extends TeaModel {
         public String workspaceId;
 
         /**
+         * <p>The updated name of the workspace.</p>
+         * 
          * <strong>example:</strong>
          * <p>yunqitest_v2</p>
          */
@@ -141,6 +174,8 @@ public class UpdateDataAgentSpaceInfoResponseBody extends TeaModel {
         public String workspaceName;
 
         /**
+         * <p>The updated status of the workspace.</p>
+         * 
          * <strong>example:</strong>
          * <p>space for test new</p>
          */

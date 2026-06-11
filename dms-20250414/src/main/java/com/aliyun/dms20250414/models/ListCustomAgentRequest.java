@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListCustomAgentRequest extends TeaModel {
     /**
+     * <p>The page number. Pages start from 1.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -12,6 +14,8 @@ public class ListCustomAgentRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The page size. The default value is 20.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -19,16 +23,26 @@ public class ListCustomAgentRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>Specifies whether to query all published custom agents. The default value is false.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
     @NameInMap("QueryAllReleased")
     public Boolean queryAllReleased;
 
+    /**
+     * <p>A keyword for a fuzzy search on the names and descriptions of custom agents.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>测试Agent</p>
+     */
     @NameInMap("SearchKey")
     public String searchKey;
 
     /**
+     * <p>The status of the custom agent.</p>
+     * 
      * <strong>example:</strong>
      * <p>RELEASED</p>
      */
@@ -36,6 +50,8 @@ public class ListCustomAgentRequest extends TeaModel {
     public String status;
 
     /**
+     * <p>The ID of the workspace.</p>
+     * 
      * <strong>example:</strong>
      * <p>56kv1pvl9uvt9**********bb</p>
      */

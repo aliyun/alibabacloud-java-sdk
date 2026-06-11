@@ -4,10 +4,15 @@ package com.aliyun.dms20250414.models;
 import com.aliyun.tea.*;
 
 public class ListDataCenterTableResponseBody extends TeaModel {
+    /**
+     * <p>The data returned in the response.</p>
+     */
     @NameInMap("Data")
     public ListDataCenterTableResponseBodyData data;
 
     /**
+     * <p>The code that indicates the result of the request. If the request fails, an error code is returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -15,6 +20,8 @@ public class ListDataCenterTableResponseBody extends TeaModel {
     public String errorCode;
 
     /**
+     * <p>The error message returned if the request fails.</p>
+     * 
      * <strong>example:</strong>
      * <p>Specified parameter Tid is not valid.</p>
      */
@@ -22,7 +29,7 @@ public class ListDataCenterTableResponseBody extends TeaModel {
     public String errorMessage;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>67E910F2-4B62-5B0C-ACA3-7547695C****</p>
@@ -31,6 +38,14 @@ public class ListDataCenterTableResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <ul>
+     * <li><p><strong>true</strong>: The request succeeded.</p>
+     * </li>
+     * <li><p><strong>false</strong>: The request failed.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -84,6 +99,11 @@ public class ListDataCenterTableResponseBody extends TeaModel {
 
     public static class ListDataCenterTableResponseBodyDataContent extends TeaModel {
         /**
+         * <p>The database name.</p>
+         * <ul>
+         * <li>If <code>ImportType</code> is <code>FILE</code>, this parameter returns the file name.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>diamonds.csv</p>
          */
@@ -91,6 +111,8 @@ public class ListDataCenterTableResponseBody extends TeaModel {
         public String databaseName;
 
         /**
+         * <p>The time when the data table description was last updated.</p>
+         * 
          * <strong>example:</strong>
          * <p>2025-12-11T14:04:32.000+00:00</p>
          */
@@ -98,6 +120,11 @@ public class ListDataCenterTableResponseBody extends TeaModel {
         public String descUpdateTime;
 
         /**
+         * <p>The ID of the DMS database.</p>
+         * <ul>
+         * <li>This parameter is not returned if <code>ImportType</code> is <code>FILE</code>.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>69950353</p>
          */
@@ -105,6 +132,11 @@ public class ListDataCenterTableResponseBody extends TeaModel {
         public Long dmsDbId;
 
         /**
+         * <p>The ID of the DMS instance that hosts the database.</p>
+         * <ul>
+         * <li>This parameter is not returned if <code>ImportType</code> is <code>FILE</code>.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>2310246</p>
          */
@@ -112,6 +144,8 @@ public class ListDataCenterTableResponseBody extends TeaModel {
         public Long dmsInstanceId;
 
         /**
+         * <p>The time when the data table was created.</p>
+         * 
          * <strong>example:</strong>
          * <p>2025-12-11T14:04:32.000+00:00</p>
          */
@@ -119,6 +153,11 @@ public class ListDataCenterTableResponseBody extends TeaModel {
         public String gmtCreated;
 
         /**
+         * <p>The import type. Valid value:</p>
+         * <ul>
+         * <li><strong>FILE</strong>: The data is imported from a file.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>FILE</p>
          */
@@ -126,16 +165,29 @@ public class ListDataCenterTableResponseBody extends TeaModel {
         public String importType;
 
         /**
+         * <p>The instance name.</p>
+         * <ul>
+         * <li>If <code>ImportType</code> is <code>FILE</code>, this parameter returns the file ID.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>f-ean8u5881qk4*********xh5y</p>
          */
         @NameInMap("InstanceName")
         public String instanceName;
 
+        /**
+         * <p>The description of the data table.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>这是一份钻石数据。</p>
+         */
         @NameInMap("TableDesc")
         public String tableDesc;
 
         /**
+         * <p>The ID of the data table.</p>
+         * 
          * <strong>example:</strong>
          * <p>xa8wib4ga3a2*********fjbx</p>
          */
@@ -143,6 +195,8 @@ public class ListDataCenterTableResponseBody extends TeaModel {
         public String tableId;
 
         /**
+         * <p>The table name.</p>
+         * 
          * <strong>example:</strong>
          * <p>diamonds</p>
          */
@@ -237,10 +291,15 @@ public class ListDataCenterTableResponseBody extends TeaModel {
     }
 
     public static class ListDataCenterTableResponseBodyData extends TeaModel {
+        /**
+         * <p>A list of the data tables.</p>
+         */
         @NameInMap("Content")
         public java.util.List<ListDataCenterTableResponseBodyDataContent> content;
 
         /**
+         * <p>The page number.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -248,6 +307,8 @@ public class ListDataCenterTableResponseBody extends TeaModel {
         public Long pageNumber;
 
         /**
+         * <p>The page size.</p>
+         * 
          * <strong>example:</strong>
          * <p>20</p>
          */
@@ -255,6 +316,8 @@ public class ListDataCenterTableResponseBody extends TeaModel {
         public Long pageSize;
 
         /**
+         * <p>The total number of entries.</p>
+         * 
          * <strong>example:</strong>
          * <p>20</p>
          */
@@ -262,6 +325,8 @@ public class ListDataCenterTableResponseBody extends TeaModel {
         public Long totalElements;
 
         /**
+         * <p>The total number of pages.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */

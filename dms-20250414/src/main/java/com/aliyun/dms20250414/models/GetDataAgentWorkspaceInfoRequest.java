@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetDataAgentWorkspaceInfoRequest extends TeaModel {
     /**
+     * <p>The DMS unit.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
      */
@@ -12,6 +14,8 @@ public class GetDataAgentWorkspaceInfoRequest extends TeaModel {
     public String DMSUnit;
 
     /**
+     * <p>The workspace ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>20923*****7291</p>
      */

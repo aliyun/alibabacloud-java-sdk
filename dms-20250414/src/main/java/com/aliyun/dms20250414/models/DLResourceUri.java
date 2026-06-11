@@ -5,6 +5,16 @@ import com.aliyun.tea.*;
 
 public class DLResourceUri extends TeaModel {
     /**
+     * <p>The resource type. Valid values:</p>
+     * <ul>
+     * <li><p>ARCHIVE</p>
+     * </li>
+     * <li><p>JAR</p>
+     * </li>
+     * <li><p>FILE</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>JAR</p>
      */
@@ -12,6 +22,8 @@ public class DLResourceUri extends TeaModel {
     public String resourceType;
 
     /**
+     * <p>The URL used to access the resource.</p>
+     * 
      * <strong>example:</strong>
      * <p>hdfs://name****.example.com:8020/user/hive/udfs/my_***.jar</p>
      */

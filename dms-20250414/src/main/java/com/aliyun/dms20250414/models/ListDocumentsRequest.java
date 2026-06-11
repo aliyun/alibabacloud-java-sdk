@@ -5,6 +5,14 @@ import com.aliyun.tea.*;
 
 public class ListDocumentsRequest extends TeaModel {
     /**
+     * <p>The document property filter. The following properties are supported:</p>
+     * <ul>
+     * <li><p><code>fileExt</code>: The document extension.</p>
+     * </li>
+     * <li><p><code>state</code>: The document status.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>{&quot;fileExt&quot;:&quot;pdf&quot;,&quot;state&quot;:0}</p>
      */
@@ -12,6 +20,7 @@ public class ListDocumentsRequest extends TeaModel {
     public String filters;
 
     /**
+     * <p>The ID of the knowledge base.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,6 +30,10 @@ public class ListDocumentsRequest extends TeaModel {
     public String kbUuid;
 
     /**
+     * <p>The maximum number of documents to return per page.</p>
+     * <p>Valid values: 1 to 100.</p>
+     * <p>Default value: 20.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -28,6 +41,8 @@ public class ListDocumentsRequest extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>The document name filter. Returns only documents whose names contain this value.</p>
+     * 
      * <strong>example:</strong>
      * <p>test</p>
      */
@@ -35,6 +50,8 @@ public class ListDocumentsRequest extends TeaModel {
     public String namePattern;
 
     /**
+     * <p>The pagination token to retrieve the next page of results. Omit this parameter to retrieve the first page. A <code>NextToken</code> value in the response indicates that more results are available. To fetch the next page, pass this value in a subsequent request. A <code>null</code> value indicates that all results have been retrieved.</p>
+     * 
      * <strong>example:</strong>
      * <p>zCXSmY0CJbybp6FZV7vo0Wjw64X-*****</p>
      */
@@ -42,6 +59,16 @@ public class ListDocumentsRequest extends TeaModel {
     public String nextToken;
 
     /**
+     * <p>The sort field. Valid values:</p>
+     * <ul>
+     * <li><p><code>id</code> (default): The document ID.</p>
+     * </li>
+     * <li><p><code>hits</code>: The number of hits.</p>
+     * </li>
+     * <li><p><code>modifyTime</code>: The modification time.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>hits</p>
      */
@@ -49,6 +76,14 @@ public class ListDocumentsRequest extends TeaModel {
     public String sortFieldName;
 
     /**
+     * <p>The sort order. Valid values:</p>
+     * <ul>
+     * <li><p><strong>ASC</strong> (default): Sorts in ascending order.</p>
+     * </li>
+     * <li><p><strong>DESC</strong>: Sorts in descending order.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>DESC</p>
      */

@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateDataLakeTableRequest extends TeaModel {
     /**
+     * <p>The name of the data catalog.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class UpdateDataLakeTableRequest extends TeaModel {
     public String catalogName;
 
     /**
+     * <p>The name of the database.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,12 +25,15 @@ public class UpdateDataLakeTableRequest extends TeaModel {
     public String dbName;
 
     /**
+     * <p>The information about the table.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("TableInput")
     public DLTableInput tableInput;
 
     /**
+     * <p>The name of the table to update. If you do not want to change the table name, set this parameter to the same value as the Name parameter in TableInput.</p>
+     * 
      * <strong>example:</strong>
      * <p>100g_customer</p>
      */
@@ -36,6 +41,11 @@ public class UpdateDataLakeTableRequest extends TeaModel {
     public String tableName;
 
     /**
+     * <p>The tenant ID.</p>
+     * <blockquote>
+     * <p>Hover over your profile picture in the upper-right corner of the DMS console to obtain the tenant ID. For details, see <a href="https://help.aliyun.com/document_detail/181330.html">View tenant information</a>.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>3****</p>
      */
@@ -43,6 +53,8 @@ public class UpdateDataLakeTableRequest extends TeaModel {
     public Long tid;
 
     /**
+     * <p>The workspace ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>12****</p>
      */

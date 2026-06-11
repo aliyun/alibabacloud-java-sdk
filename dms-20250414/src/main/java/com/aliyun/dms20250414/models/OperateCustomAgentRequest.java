@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class OperateCustomAgentRequest extends TeaModel {
     /**
+     * <p>Custom Agent ID</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class OperateCustomAgentRequest extends TeaModel {
     public String customAgentId;
 
     /**
+     * <p>Operation type</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,8 @@ public class OperateCustomAgentRequest extends TeaModel {
     public String operateType;
 
     /**
+     * <p>Workspace ID</p>
+     * 
      * <strong>example:</strong>
      * <p>56kv1pvl9uvt9**********bb</p>
      */

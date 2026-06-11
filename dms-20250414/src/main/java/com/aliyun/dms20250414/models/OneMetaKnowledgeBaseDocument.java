@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class OneMetaKnowledgeBaseDocument extends TeaModel {
     /**
+     * <p>The document description.</p>
+     * 
      * <strong>example:</strong>
      * <p>abc</p>
      */
@@ -12,6 +14,8 @@ public class OneMetaKnowledgeBaseDocument extends TeaModel {
     public String description;
 
     /**
+     * <p>The number of chunks.</p>
+     * 
      * <strong>example:</strong>
      * <p>123</p>
      */
@@ -19,6 +23,8 @@ public class OneMetaKnowledgeBaseDocument extends TeaModel {
     public Integer docsCount;
 
     /**
+     * <p>The name of the document loader.</p>
+     * 
      * <strong>example:</strong>
      * <p>ADBPGLoader</p>
      */
@@ -26,6 +32,8 @@ public class OneMetaKnowledgeBaseDocument extends TeaModel {
     public String documentLoaderName;
 
     /**
+     * <p>The file extension.</p>
+     * 
      * <strong>example:</strong>
      * <p>md</p>
      */
@@ -33,6 +41,8 @@ public class OneMetaKnowledgeBaseDocument extends TeaModel {
     public String fileExt;
 
     /**
+     * <p>The file size, in bytes.</p>
+     * 
      * <strong>example:</strong>
      * <p>20307</p>
      */
@@ -40,6 +50,8 @@ public class OneMetaKnowledgeBaseDocument extends TeaModel {
     public Long fileSize;
 
     /**
+     * <p>When the document was created.</p>
+     * 
      * <strong>example:</strong>
      * <p>2026-04-22 22:59:35</p>
      */
@@ -47,6 +59,8 @@ public class OneMetaKnowledgeBaseDocument extends TeaModel {
     public String gmtCreate;
 
     /**
+     * <p>When the document was last modified.</p>
+     * 
      * <strong>example:</strong>
      * <p>2026-04-24 21:22:53</p>
      */
@@ -54,6 +68,8 @@ public class OneMetaKnowledgeBaseDocument extends TeaModel {
     public String gmtModified;
 
     /**
+     * <p>The knowledge base ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>kb-***</p>
      */
@@ -61,6 +77,8 @@ public class OneMetaKnowledgeBaseDocument extends TeaModel {
     public String kbUuid;
 
     /**
+     * <p>Keywords extracted from the document.</p>
+     * 
      * <strong>example:</strong>
      * <p>[&quot;test&quot;,&quot;abc&quot;]</p>
      */
@@ -68,6 +86,8 @@ public class OneMetaKnowledgeBaseDocument extends TeaModel {
     public String keywords;
 
     /**
+     * <p>The document name.</p>
+     * 
      * <strong>example:</strong>
      * <p>test.md</p>
      */
@@ -75,6 +95,20 @@ public class OneMetaKnowledgeBaseDocument extends TeaModel {
     public String name;
 
     /**
+     * <p>The document status. Valid values are:</p>
+     * <ul>
+     * <li><p><strong>0</strong>: Complete.</p>
+     * </li>
+     * <li><p><strong>-1</strong>: Unprocessed.</p>
+     * </li>
+     * <li><p><strong>-2</strong>: Parsing.</p>
+     * </li>
+     * <li><p><strong>-3</strong>: Failed.</p>
+     * </li>
+     * <li><p><strong>-4</strong>: Canceled.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
@@ -82,6 +116,8 @@ public class OneMetaKnowledgeBaseDocument extends TeaModel {
     public Integer state;
 
     /**
+     * <p>The summary of the document.</p>
+     * 
      * <strong>example:</strong>
      * <p>This is a test document.</p>
      */
@@ -89,6 +125,8 @@ public class OneMetaKnowledgeBaseDocument extends TeaModel {
     public String summary;
 
     /**
+     * <p>The name of the text splitter.</p>
+     * 
      * <strong>example:</strong>
      * <p>ChineseRecursiveTextSplitter</p>
      */

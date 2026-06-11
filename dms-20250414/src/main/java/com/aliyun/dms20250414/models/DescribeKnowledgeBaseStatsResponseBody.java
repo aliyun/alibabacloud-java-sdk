@@ -4,10 +4,15 @@ package com.aliyun.dms20250414.models;
 import com.aliyun.tea.*;
 
 public class DescribeKnowledgeBaseStatsResponseBody extends TeaModel {
+    /**
+     * <p>The object that contains the knowledge base statistics.</p>
+     */
     @NameInMap("Data")
     public DescribeKnowledgeBaseStatsResponseBodyData data;
 
     /**
+     * <p>The error code returned if the request fails.</p>
+     * 
      * <strong>example:</strong>
      * <p>Permission denied.</p>
      */
@@ -15,6 +20,8 @@ public class DescribeKnowledgeBaseStatsResponseBody extends TeaModel {
     public String errorCode;
 
     /**
+     * <p>The error message returned if the request fails.</p>
+     * 
      * <strong>example:</strong>
      * <p>Knowledge base limit exceeded. Current: xxx</p>
      */
@@ -22,6 +29,8 @@ public class DescribeKnowledgeBaseStatsResponseBody extends TeaModel {
     public String errorMessage;
 
     /**
+     * <p>The unique ID of the request. Use this ID to troubleshoot errors.</p>
+     * 
      * <strong>example:</strong>
      * <p>67E910F2-4B62-5B0C-ACA3-7547695C****</p>
      */
@@ -29,6 +38,8 @@ public class DescribeKnowledgeBaseStatsResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request succeeded. A value of <code>true</code> indicates success, and a value of <code>false</code> indicates failure.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -82,6 +93,8 @@ public class DescribeKnowledgeBaseStatsResponseBody extends TeaModel {
 
     public static class DescribeKnowledgeBaseStatsResponseBodyData extends TeaModel {
         /**
+         * <p>The number of documents in the knowledge base.</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */
@@ -89,6 +102,8 @@ public class DescribeKnowledgeBaseStatsResponseBody extends TeaModel {
         public Integer documentCount;
 
         /**
+         * <p>The number of hits for the knowledge base.</p>
+         * 
          * <strong>example:</strong>
          * <p>18</p>
          */
@@ -96,6 +111,8 @@ public class DescribeKnowledgeBaseStatsResponseBody extends TeaModel {
         public Long kbHits;
 
         /**
+         * <p>The ID of the knowledge base.</p>
+         * 
          * <strong>example:</strong>
          * <p>kb-***</p>
          */
@@ -103,6 +120,8 @@ public class DescribeKnowledgeBaseStatsResponseBody extends TeaModel {
         public String kbUuid;
 
         /**
+         * <p>The total number of knowledge chunks in the knowledge base.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -110,6 +129,8 @@ public class DescribeKnowledgeBaseStatsResponseBody extends TeaModel {
         public Integer totalChunkCount;
 
         /**
+         * <p>The total size of all files in the knowledge base, in bytes.</p>
+         * 
          * <strong>example:</strong>
          * <p>4194588751</p>
          */

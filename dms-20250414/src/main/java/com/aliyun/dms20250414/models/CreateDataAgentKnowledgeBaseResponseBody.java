@@ -4,10 +4,15 @@ package com.aliyun.dms20250414.models;
 import com.aliyun.tea.*;
 
 public class CreateDataAgentKnowledgeBaseResponseBody extends TeaModel {
+    /**
+     * <p>The data returned by the request.</p>
+     */
     @NameInMap("Data")
     public CreateDataAgentKnowledgeBaseResponseBodyData data;
 
     /**
+     * <p>The error code returned when the request fails.</p>
+     * 
      * <strong>example:</strong>
      * <p>InvalidTid</p>
      */
@@ -15,6 +20,8 @@ public class CreateDataAgentKnowledgeBaseResponseBody extends TeaModel {
     public String errorCode;
 
     /**
+     * <p>The error message returned when the request fails.</p>
+     * 
      * <strong>example:</strong>
      * <p>Specified parameter Tid is not valid.</p>
      */
@@ -22,7 +29,7 @@ public class CreateDataAgentKnowledgeBaseResponseBody extends TeaModel {
     public String errorMessage;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>67E910F2-4B62-5B0C-ACA3-7547695C****</p>
@@ -31,6 +38,14 @@ public class CreateDataAgentKnowledgeBaseResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request succeeded. Valid values:</p>
+     * <ul>
+     * <li><p><strong>true</strong>: The request succeeded.</p>
+     * </li>
+     * <li><p><strong>false</strong>: The request failed.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -84,6 +99,8 @@ public class CreateDataAgentKnowledgeBaseResponseBody extends TeaModel {
 
     public static class CreateDataAgentKnowledgeBaseResponseBodyData extends TeaModel {
         /**
+         * <p>The knowledge base ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>kb-HZ-ra99akg0t*********1bku</p>
          */

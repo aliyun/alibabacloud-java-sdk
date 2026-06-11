@@ -4,10 +4,15 @@ package com.aliyun.dms20250414.models;
 import com.aliyun.tea.*;
 
 public class WorkspaceActionStatusResponseBody extends TeaModel {
+    /**
+     * <p>The returned data.</p>
+     */
     @NameInMap("Data")
     public WorkspaceActionStatusResponseBodyData data;
 
     /**
+     * <p>The error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>InvalidTid</p>
      */
@@ -15,6 +20,8 @@ public class WorkspaceActionStatusResponseBody extends TeaModel {
     public String errorCode;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -22,6 +29,8 @@ public class WorkspaceActionStatusResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The error message that is returned if the request fails.</p>
+     * 
      * <strong>example:</strong>
      * <p>This record is being collected, please wait for a moment.</p>
      */
@@ -29,6 +38,8 @@ public class WorkspaceActionStatusResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>67E910F2-4B62-5B0C-ACA3-7547695C****</p>
      */
@@ -36,6 +47,14 @@ public class WorkspaceActionStatusResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <ul>
+     * <li><p><strong>true</strong>: The request was successful.</p>
+     * </li>
+     * <li><p><strong>false</strong>: The request failed.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -97,6 +116,8 @@ public class WorkspaceActionStatusResponseBody extends TeaModel {
 
     public static class WorkspaceActionStatusResponseBodyData extends TeaModel {
         /**
+         * <p>The error message if the task fails.</p>
+         * 
          * <strong>example:</strong>
          * <p>action failed</p>
          */
@@ -104,6 +125,8 @@ public class WorkspaceActionStatusResponseBody extends TeaModel {
         public String data;
 
         /**
+         * <p>The time when the task ended.</p>
+         * 
          * <strong>example:</strong>
          * <p>2026-01-13T14:30:20.582182728+08:00</p>
          */
@@ -111,6 +134,8 @@ public class WorkspaceActionStatusResponseBody extends TeaModel {
         public String endTime;
 
         /**
+         * <p>The time when the task started.</p>
+         * 
          * <strong>example:</strong>
          * <p>2026-01-13T14:30:20.582182728+08:00</p>
          */
@@ -118,6 +143,7 @@ public class WorkspaceActionStatusResponseBody extends TeaModel {
         public String startTime;
 
         /**
+         * <p>The status of the asynchronous task. Valid values: SUCCESS, ERROR, TIMEOUT, and CANCEL.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

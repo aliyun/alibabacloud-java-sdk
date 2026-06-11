@@ -4,10 +4,15 @@ package com.aliyun.dms20250414.models;
 import com.aliyun.tea.*;
 
 public class ListDocumentsResponseBody extends TeaModel {
+    /**
+     * <p>A list of documents.</p>
+     */
     @NameInMap("Data")
     public java.util.List<OneMetaKnowledgeBaseDocument> data;
 
     /**
+     * <p>The error code, returned only when the request fails.</p>
+     * 
      * <strong>example:</strong>
      * <p>KnowledgeBaseNotFound</p>
      */
@@ -15,6 +20,8 @@ public class ListDocumentsResponseBody extends TeaModel {
     public String errorCode;
 
     /**
+     * <p>The error message, returned only when the request fails.</p>
+     * 
      * <strong>example:</strong>
      * <p>Resource not found kb-***</p>
      */
@@ -22,6 +29,8 @@ public class ListDocumentsResponseBody extends TeaModel {
     public String errorMessage;
 
     /**
+     * <p>The page size.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -29,6 +38,8 @@ public class ListDocumentsResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>The pagination token.</p>
+     * 
      * <strong>example:</strong>
      * <p>zCXSmY0CJbybp6FZV7vo0Wjw64X-*****</p>
      */
@@ -36,6 +47,8 @@ public class ListDocumentsResponseBody extends TeaModel {
     public String nextToken;
 
     /**
+     * <p>The unique request ID. Use this ID to troubleshoot issues.</p>
+     * 
      * <strong>example:</strong>
      * <p>67E910F2-4B62-5B0C-ACA3-7547695C****</p>
      */
@@ -43,6 +56,14 @@ public class ListDocumentsResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <ul>
+     * <li><p><strong>true</strong>: The request was successful.</p>
+     * </li>
+     * <li><p><strong>false</strong>: The request failed.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -50,6 +71,8 @@ public class ListDocumentsResponseBody extends TeaModel {
     public Boolean success;
 
     /**
+     * <p>The total number of documents that meet the specified criteria. This parameter is not currently supported and always returns 0.</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */

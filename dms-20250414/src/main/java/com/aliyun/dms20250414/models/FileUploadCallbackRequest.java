@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class FileUploadCallbackRequest extends TeaModel {
     /**
+     * <p>For frontend use only.</p>
+     * 
      * <strong>example:</strong>
      * <p>TrailCenter</p>
      */
@@ -12,6 +14,8 @@ public class FileUploadCallbackRequest extends TeaModel {
     public String callFrom;
 
     /**
+     * <p>The current DMS unit.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
      */
@@ -19,6 +23,8 @@ public class FileUploadCallbackRequest extends TeaModel {
     public String dmsUnit;
 
     /**
+     * <p>The file size in bytes.</p>
+     * 
      * <strong>example:</strong>
      * <p>8110</p>
      */
@@ -26,6 +32,7 @@ public class FileUploadCallbackRequest extends TeaModel {
     public Long fileSize;
 
     /**
+     * <p>The file name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -38,6 +45,13 @@ public class FileUploadCallbackRequest extends TeaModel {
     public String ossBucket;
 
     /**
+     * <p>The full path for the file upload.</p>
+     * <ul>
+     * <li><p>Format: This path is formed by appending the file name to the UploadDir value returned by the DescribeFileUploadSignature operation.</p>
+     * </li>
+     * <li><p>Example: ${UploadDir}/${Filename}</p>
+     * </li>
+     * </ul>
      * <p>This parameter is required.</p>
      */
     @NameInMap("UploadLocation")

@@ -4,39 +4,75 @@ package com.aliyun.dms20250414.models;
 import com.aliyun.tea.*;
 
 public class OpenClawInstanceQuotaVO extends TeaModel {
+    /**
+     * <p>The Alibaba Cloud account UID.</p>
+     */
     @NameInMap("AliyunAccountUid")
     public String aliyunAccountUid;
 
+    /**
+     * <p>The total quota for deep research calls.</p>
+     */
     @NameInMap("DeepResearchCallQuota")
     public String deepResearchCallQuota;
 
+    /**
+     * <p>The number of deep research calls used.</p>
+     */
     @NameInMap("DeepResearchCallUsed")
     public String deepResearchCallUsed;
 
+    /**
+     * <p>The instance creation time.</p>
+     */
     @NameInMap("InstanceGmtCreate")
     public String instanceGmtCreate;
 
+    /**
+     * <p>The instance ID.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>The instance name.</p>
+     */
     @NameInMap("InstanceName")
     public String instanceName;
 
+    /**
+     * <p>The timestamp of the last metering event.</p>
+     */
     @NameInMap("LastMeteringTime")
     public String lastMeteringTime;
 
+    /**
+     * <p>The total quota for model calls.</p>
+     */
     @NameInMap("ModelCallQuota")
     public String modelCallQuota;
 
+    /**
+     * <p>The number of model calls used.</p>
+     */
     @NameInMap("ModelCallUsed")
     public String modelCallUsed;
 
+    /**
+     * <p>The day of the month on which the quota refreshes.</p>
+     */
     @NameInMap("RefreshDay")
     public String refreshDay;
 
+    /**
+     * <p>The total quota for skill plan calls.</p>
+     */
     @NameInMap("SkillPlanCallQuota")
     public String skillPlanCallQuota;
 
+    /**
+     * <p>The number of skill plan calls used.</p>
+     */
     @NameInMap("SkillPlanCallUsed")
     public String skillPlanCallUsed;
 

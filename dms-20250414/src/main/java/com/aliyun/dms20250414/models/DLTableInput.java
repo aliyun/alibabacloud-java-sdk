@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DLTableInput extends TeaModel {
     /**
+     * <p>The time when the table was created.</p>
+     * 
      * <strong>example:</strong>
      * <p>1731586286</p>
      */
@@ -12,6 +14,8 @@ public class DLTableInput extends TeaModel {
     public Integer createTime;
 
     /**
+     * <p>The ID of the user who created the table.</p>
+     * 
      * <strong>example:</strong>
      * <p>8****</p>
      */
@@ -19,6 +23,8 @@ public class DLTableInput extends TeaModel {
     public Long creatorId;
 
     /**
+     * <p>The description of the table.</p>
+     * 
      * <strong>example:</strong>
      * <p>test</p>
      */
@@ -26,6 +32,8 @@ public class DLTableInput extends TeaModel {
     public String description;
 
     /**
+     * <p>The time when the table was last accessed.</p>
+     * 
      * <strong>example:</strong>
      * <p>1608707407</p>
      */
@@ -33,6 +41,8 @@ public class DLTableInput extends TeaModel {
     public Integer lastAccessTime;
 
     /**
+     * <p>The storage path of the table.</p>
+     * 
      * <strong>example:</strong>
      * <p>oss://xxx</p>
      */
@@ -40,6 +50,8 @@ public class DLTableInput extends TeaModel {
     public String location;
 
     /**
+     * <p>The user who last modified the table.</p>
+     * 
      * <strong>example:</strong>
      * <p>1410769</p>
      */
@@ -47,6 +59,8 @@ public class DLTableInput extends TeaModel {
     public Long modifierId;
 
     /**
+     * <p>The name of the table.</p>
+     * 
      * <strong>example:</strong>
      * <p>100g_customer</p>
      */
@@ -54,6 +68,8 @@ public class DLTableInput extends TeaModel {
     public String name;
 
     /**
+     * <p>The owner of the table.</p>
+     * 
      * <strong>example:</strong>
      * <p>zhangsan</p>
      */
@@ -61,29 +77,44 @@ public class DLTableInput extends TeaModel {
     public String owner;
 
     /**
+     * <p>The type of the owner. Valid values: USER, ROLE, and GROUP.</p>
+     * 
      * <strong>example:</strong>
      * <p>USER</p>
      */
     @NameInMap("OwnerType")
     public String ownerType;
 
+    /**
+     * <p>The key-value pair parameters.</p>
+     */
     @NameInMap("Parameters")
     public java.util.Map<String, String> parameters;
 
+    /**
+     * <p>The list of attribute columns for the table.</p>
+     */
     @NameInMap("PartitionKeys")
     public java.util.List<DLColumn> partitionKeys;
 
     /**
+     * <p>The retention period of the table.</p>
+     * 
      * <strong>example:</strong>
      * <p>300</p>
      */
     @NameInMap("Retention")
     public Integer retention;
 
+    /**
+     * <p>The storage description. This includes the storage features and format details of the table.</p>
+     */
     @NameInMap("StorageDescriptor")
     public DLStorageDescriptor storageDescriptor;
 
     /**
+     * <p>The type of the metadata table. Examples: MANAGED_TABLE, EXTERNAL_TABLE, VIRTUAL_VIEW, INDEX_TABLE, and MATERIALIZED_VIEW.</p>
+     * 
      * <strong>example:</strong>
      * <p>EXTERNAL_TABLE</p>
      */
@@ -91,6 +122,8 @@ public class DLTableInput extends TeaModel {
     public String tableType;
 
     /**
+     * <p>If the table is a view, this parameter indicates the expanded text of the view.</p>
+     * 
      * <strong>example:</strong>
      * <p>&quot;&quot;</p>
      */
@@ -98,6 +131,8 @@ public class DLTableInput extends TeaModel {
     public String viewExpandedText;
 
     /**
+     * <p>If the table is a view, this parameter indicates the original text of the view.</p>
+     * 
      * <strong>example:</strong>
      * <p>&quot;&quot;</p>
      */

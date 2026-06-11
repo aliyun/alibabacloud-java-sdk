@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DLTablebaseInfo extends TeaModel {
     /**
+     * <p>The data catalog to which the table belongs.</p>
+     * 
      * <strong>example:</strong>
      * <p>hive</p>
      */
@@ -12,6 +14,8 @@ public class DLTablebaseInfo extends TeaModel {
     public String catalogName;
 
     /**
+     * <p>The time when the table was created.</p>
+     * 
      * <strong>example:</strong>
      * <p>1608707407</p>
      */
@@ -19,6 +23,8 @@ public class DLTablebaseInfo extends TeaModel {
     public Integer createTime;
 
     /**
+     * <p>The ID of the user who created the table.</p>
+     * 
      * <strong>example:</strong>
      * <p>141****</p>
      */
@@ -26,6 +32,8 @@ public class DLTablebaseInfo extends TeaModel {
     public Long creatorId;
 
     /**
+     * <p>The ID of the database to which the table belongs.</p>
+     * 
      * <strong>example:</strong>
      * <p>19</p>
      */
@@ -33,6 +41,8 @@ public class DLTablebaseInfo extends TeaModel {
     public Long dbId;
 
     /**
+     * <p>The name of the database to which the table belongs.</p>
+     * 
      * <strong>example:</strong>
      * <p>default</p>
      */
@@ -40,6 +50,8 @@ public class DLTablebaseInfo extends TeaModel {
     public String dbName;
 
     /**
+     * <p>The description of the table.</p>
+     * 
      * <strong>example:</strong>
      * <p>&quot;table&quot;</p>
      */
@@ -47,6 +59,8 @@ public class DLTablebaseInfo extends TeaModel {
     public String description;
 
     /**
+     * <p>The time when the table was last accessed.</p>
+     * 
      * <strong>example:</strong>
      * <p>1731586286</p>
      */
@@ -54,6 +68,8 @@ public class DLTablebaseInfo extends TeaModel {
     public Integer lastAccessTime;
 
     /**
+     * <p>The storage path of the table.</p>
+     * 
      * <strong>example:</strong>
      * <p>oss://xxx</p>
      */
@@ -61,6 +77,8 @@ public class DLTablebaseInfo extends TeaModel {
     public String location;
 
     /**
+     * <p>The time when the table was modified.</p>
+     * 
      * <strong>example:</strong>
      * <p>1731585286</p>
      */
@@ -68,6 +86,8 @@ public class DLTablebaseInfo extends TeaModel {
     public Long modifierId;
 
     /**
+     * <p>The name of the table.</p>
+     * 
      * <strong>example:</strong>
      * <p>100g_customer</p>
      */
@@ -75,26 +95,41 @@ public class DLTablebaseInfo extends TeaModel {
     public String name;
 
     /**
+     * <p>The owner of the table.</p>
+     * 
      * <strong>example:</strong>
      * <p>test</p>
      */
     @NameInMap("Owner")
     public String owner;
 
+    /**
+     * <p>The type of the owner. Valid values: USER, ROLE, or GROUP.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>USER</p>
+     */
     @NameInMap("OwnerType")
     public String ownerType;
 
     /**
+     * <p>The additional parameters of the table.</p>
+     * 
      * <strong>example:</strong>
      * <p>&quot;EXTERNAL&quot;: &quot;TRUE&quot;</p>
      */
     @NameInMap("Parameters")
     public java.util.Map<String, ?> parameters;
 
+    /**
+     * <p>The list of column attributes.</p>
+     */
     @NameInMap("PartitionKeys")
     public java.util.List<DLColumn> partitionKeys;
 
     /**
+     * <p>The retention period of the table, in days.</p>
+     * 
      * <strong>example:</strong>
      * <p>30000</p>
      */
@@ -102,6 +137,8 @@ public class DLTablebaseInfo extends TeaModel {
     public Integer retention;
 
     /**
+     * <p>The type of the table. Examples include MANAGED_TABLE, EXTERNAL_TABLE, VIRTUAL_VIEW, INDEX_TABLE, and MATERIALIZED_VIEW.</p>
+     * 
      * <strong>example:</strong>
      * <p>EXTERNAL_TABLE</p>
      */
@@ -109,6 +146,8 @@ public class DLTablebaseInfo extends TeaModel {
     public String tableType;
 
     /**
+     * <p>The expanded text of the view if the table is a view.</p>
+     * 
      * <strong>example:</strong>
      * <p>&quot;&quot;</p>
      */
@@ -116,6 +155,8 @@ public class DLTablebaseInfo extends TeaModel {
     public String viewExpandedText;
 
     /**
+     * <p>The original text of the view if the table is a view.</p>
+     * 
      * <strong>example:</strong>
      * <p>&quot;&quot;</p>
      */

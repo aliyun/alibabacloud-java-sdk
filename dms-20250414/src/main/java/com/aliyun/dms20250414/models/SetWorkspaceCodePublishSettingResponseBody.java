@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class SetWorkspaceCodePublishSettingResponseBody extends TeaModel {
     /**
+     * <p>The error code if the call fails.</p>
+     * 
      * <strong>example:</strong>
      * <p>UnknownError</p>
      */
@@ -12,6 +14,8 @@ public class SetWorkspaceCodePublishSettingResponseBody extends TeaModel {
     public String errorCode;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -19,6 +23,8 @@ public class SetWorkspaceCodePublishSettingResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The error message returned if the call fails. This parameter is empty if the call succeeds.</p>
+     * 
      * <strong>example:</strong>
      * <p>Failed to publish，repo branch empty</p>
      */
@@ -26,6 +32,8 @@ public class SetWorkspaceCodePublishSettingResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>67E910F2-4B62-5B0C-ACA3-7547695C****</p>
      */
@@ -33,6 +41,14 @@ public class SetWorkspaceCodePublishSettingResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the call was successful.</p>
+     * <ul>
+     * <li><p><strong>true</strong>: The call was successful.</p>
+     * </li>
+     * <li><p><strong>false</strong>: The call failed.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

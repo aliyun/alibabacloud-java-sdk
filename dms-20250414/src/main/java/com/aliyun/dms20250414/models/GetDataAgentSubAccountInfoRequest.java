@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetDataAgentSubAccountInfoRequest extends TeaModel {
     /**
+     * <p>The current DMS unit.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
      */
@@ -12,6 +14,8 @@ public class GetDataAgentSubAccountInfoRequest extends TeaModel {
     public String dmsUnit;
 
     /**
+     * <p>The UID of the RAM user.</p>
+     * 
      * <strong>example:</strong>
      * <p>20282*****7591</p>
      */

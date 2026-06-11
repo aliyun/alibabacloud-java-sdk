@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeDataAgentSessionRequest extends TeaModel {
     /**
+     * <p>The ID of the DMS unit.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
      */
@@ -12,13 +14,17 @@ public class DescribeDataAgentSessionRequest extends TeaModel {
     public String DMSUnit;
 
     /**
+     * <p>The ID of the agent session.</p>
+     * 
      * <strong>example:</strong>
-     * <p>c61n7gmopfvuascr70xmavzrj</p>
+     * <p>c61n7gm******rj</p>
      */
     @NameInMap("SessionId")
     public String sessionId;
 
     /**
+     * <p>The ID of the workspace.</p>
+     * 
      * <strong>example:</strong>
      * <p>12****</p>
      */

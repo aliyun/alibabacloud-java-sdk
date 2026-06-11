@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetAirflowResponseBody extends TeaModel {
     /**
+     * <p>The details about the access denial.</p>
+     * 
      * <strong>example:</strong>
      * <p>NOT_FOUND</p>
      */
@@ -12,6 +14,8 @@ public class GetAirflowResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
+     * <p>The error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>UnknownError</p>
      */
@@ -19,6 +23,8 @@ public class GetAirflowResponseBody extends TeaModel {
     public String errorCode;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -26,6 +32,8 @@ public class GetAirflowResponseBody extends TeaModel {
     public Long httpStatusCode;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>Unknown error</p>
      */
@@ -33,7 +41,7 @@ public class GetAirflowResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Reuqest ID。</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>E0D21075-CD3E-4D98-8264-****</p>
@@ -41,10 +49,21 @@ public class GetAirflowResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The returned data.</p>
+     */
     @NameInMap("Root")
     public GetAirflowResponseBodyRoot root;
 
     /**
+     * <p>Indicates whether the request was successful. The following values are returned:</p>
+     * <ul>
+     * <li><p><strong>true</strong>: The request was successful.</p>
+     * </li>
+     * <li><p><strong>false</strong>: The request failed.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -114,6 +133,8 @@ public class GetAirflowResponseBody extends TeaModel {
 
     public static class GetAirflowResponseBodyRoot extends TeaModel {
         /**
+         * <p>The ID of the Airflow instance.</p>
+         * 
          * <strong>example:</strong>
          * <p>af-7a6ygsh80dx1jn****</p>
          */
@@ -121,6 +142,8 @@ public class GetAirflowResponseBody extends TeaModel {
         public String airflowId;
 
         /**
+         * <p>The name of the Airflow instance.</p>
+         * 
          * <strong>example:</strong>
          * <p>testairflow</p>
          */
@@ -128,6 +151,8 @@ public class GetAirflowResponseBody extends TeaModel {
         public String airflowName;
 
         /**
+         * <p>The specifications of the Airflow instance.</p>
+         * 
          * <strong>example:</strong>
          * <p>SMALL</p>
          */
@@ -135,16 +160,23 @@ public class GetAirflowResponseBody extends TeaModel {
         public String appSpec;
 
         /**
+         * <p>The application type.</p>
+         * 
          * <strong>example:</strong>
          * <p>AIRFLOW</p>
          */
         @NameInMap("AppType")
         public String appType;
 
+        /**
+         * <p>The custom configurations.</p>
+         */
         @NameInMap("CustomAirflowCfg")
         public java.util.List<String> customAirflowCfg;
 
         /**
+         * <p>The DAG directory that Airflow scans.</p>
+         * 
          * <strong>example:</strong>
          * <p>default/dags</p>
          */
@@ -152,6 +184,8 @@ public class GetAirflowResponseBody extends TeaModel {
         public String dagsDir;
 
         /**
+         * <p>The deployment error message.</p>
+         * 
          * <strong>example:</strong>
          * <p>Deployed</p>
          */
@@ -159,6 +193,8 @@ public class GetAirflowResponseBody extends TeaModel {
         public String deployErrorMsg;
 
         /**
+         * <p>The description of the Airflow instance.</p>
+         * 
          * <strong>example:</strong>
          * <p>test airflow</p>
          */
@@ -166,6 +202,8 @@ public class GetAirflowResponseBody extends TeaModel {
         public String description;
 
         /**
+         * <p>The time when the instance was created.</p>
+         * 
          * <strong>example:</strong>
          * <p>2025-08-12T05:46:01.000+0000</p>
          */
@@ -173,6 +211,8 @@ public class GetAirflowResponseBody extends TeaModel {
         public String gmtCreated;
 
         /**
+         * <p>The name of the OSS bucket.</p>
+         * 
          * <strong>example:</strong>
          * <p>osstest</p>
          */
@@ -180,6 +220,8 @@ public class GetAirflowResponseBody extends TeaModel {
         public String ossBucketName;
 
         /**
+         * <p>The OSS path.</p>
+         * 
          * <strong>example:</strong>
          * <p>/airflow</p>
          */
@@ -187,6 +229,8 @@ public class GetAirflowResponseBody extends TeaModel {
         public String ossPath;
 
         /**
+         * <p>The plugin directory that Airflow scans.</p>
+         * 
          * <strong>example:</strong>
          * <p>default/plugins</p>
          */
@@ -194,6 +238,8 @@ public class GetAirflowResponseBody extends TeaModel {
         public String pluginsDir;
 
         /**
+         * <p>The region ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
          */
@@ -201,6 +247,8 @@ public class GetAirflowResponseBody extends TeaModel {
         public String regionId;
 
         /**
+         * <p>The path to the Python dependencies file (requirements.txt).</p>
+         * 
          * <strong>example:</strong>
          * <p>default/requirements.txt</p>
          */
@@ -208,6 +256,8 @@ public class GetAirflowResponseBody extends TeaModel {
         public String requirementFile;
 
         /**
+         * <p>The ID of the security group.</p>
+         * 
          * <strong>example:</strong>
          * <p>sg-2ze9gj646bkv****</p>
          */
@@ -215,6 +265,8 @@ public class GetAirflowResponseBody extends TeaModel {
         public String securityGroupId;
 
         /**
+         * <p>The startup script that runs before Airflow starts.</p>
+         * 
          * <strong>example:</strong>
          * <p>default/startup.sh</p>
          */
@@ -222,6 +274,8 @@ public class GetAirflowResponseBody extends TeaModel {
         public String startupFile;
 
         /**
+         * <p>The status of the Airflow instance.</p>
+         * 
          * <strong>example:</strong>
          * <p>DEPLOYED</p>
          */
@@ -229,6 +283,8 @@ public class GetAirflowResponseBody extends TeaModel {
         public String status;
 
         /**
+         * <p>The ID of the vSwitch.</p>
+         * 
          * <strong>example:</strong>
          * <p>vsw-bp1931trfxkvf74v****</p>
          */
@@ -236,7 +292,7 @@ public class GetAirflowResponseBody extends TeaModel {
         public String vSwitchId;
 
         /**
-         * <p>VPC ID。</p>
+         * <p>The ID of the VPC.</p>
          * 
          * <strong>example:</strong>
          * <p>vpc-2zevqv4obraqd5p****</p>
@@ -245,6 +301,8 @@ public class GetAirflowResponseBody extends TeaModel {
         public String vpcId;
 
         /**
+         * <p>The number of worker nodes.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -252,6 +310,8 @@ public class GetAirflowResponseBody extends TeaModel {
         public Integer workerServerlessReplicas;
 
         /**
+         * <p>The ID of the DMS workspace.</p>
+         * 
          * <strong>example:</strong>
          * <p>8630242382****</p>
          */
@@ -259,6 +319,8 @@ public class GetAirflowResponseBody extends TeaModel {
         public String workspaceId;
 
         /**
+         * <p>The zone ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-hangzhou-h</p>
          */

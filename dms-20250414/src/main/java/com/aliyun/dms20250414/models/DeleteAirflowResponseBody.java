@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DeleteAirflowResponseBody extends TeaModel {
     /**
+     * <p>The details of the access denied error.</p>
+     * 
      * <strong>example:</strong>
      * <p>NOT_FOUND</p>
      */
@@ -12,6 +14,8 @@ public class DeleteAirflowResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
+     * <p>The error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>UnknownError</p>
      */
@@ -19,6 +23,8 @@ public class DeleteAirflowResponseBody extends TeaModel {
     public String errorCode;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -26,6 +32,8 @@ public class DeleteAirflowResponseBody extends TeaModel {
     public Long httpStatusCode;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>Instance not found.</p>
      */
@@ -33,16 +41,29 @@ public class DeleteAirflowResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>E0D21075-CD3E-4D98-8264-****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The details of the deleted instance.</p>
+     */
     @NameInMap("Root")
     public DeleteAirflowResponseBodyRoot root;
 
     /**
+     * <p>Indicates whether the request was successful. The following values are returned:</p>
+     * <ul>
+     * <li><p><strong>true</strong>: The request was successful.</p>
+     * </li>
+     * <li><p><strong>false</strong>: The request failed.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -112,6 +133,14 @@ public class DeleteAirflowResponseBody extends TeaModel {
 
     public static class DeleteAirflowResponseBodyRootResponses extends TeaModel {
         /**
+         * <p>Indicates whether the request was successful. The following values are returned:</p>
+         * <ul>
+         * <li><p><strong>true</strong>: The request was successful.</p>
+         * </li>
+         * <li><p><strong>false</strong>: The request failed.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -119,6 +148,11 @@ public class DeleteAirflowResponseBody extends TeaModel {
         public Boolean success;
 
         /**
+         * <p>The UUID of the asset instance.</p>
+         * <blockquote>
+         * <p>This result is not returned if no process exists under the asset.</p>
+         * </blockquote>
+         * 
          * <strong>example:</strong>
          * <p>af-test****</p>
          */
@@ -149,6 +183,9 @@ public class DeleteAirflowResponseBody extends TeaModel {
     }
 
     public static class DeleteAirflowResponseBodyRoot extends TeaModel {
+        /**
+         * <p>The details of the return value.</p>
+         */
         @NameInMap("Responses")
         public java.util.List<DeleteAirflowResponseBodyRootResponses> responses;
 

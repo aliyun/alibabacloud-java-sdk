@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteDataLakePartitionShrinkRequest extends TeaModel {
     /**
+     * <p>The name of the data catalog.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class DeleteDataLakePartitionShrinkRequest extends TeaModel {
     public String catalogName;
 
     /**
+     * <p>The name of the database.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,8 @@ public class DeleteDataLakePartitionShrinkRequest extends TeaModel {
     public String dbName;
 
     /**
+     * <p>Specifies whether to ignore the error if the partition to delete does not exist.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -30,12 +34,14 @@ public class DeleteDataLakePartitionShrinkRequest extends TeaModel {
     public Boolean ifExists;
 
     /**
+     * <p>The list of partition values.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("PartitionValues")
     public String partitionValuesShrink;
 
     /**
+     * <p>The name of the table.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -45,6 +51,11 @@ public class DeleteDataLakePartitionShrinkRequest extends TeaModel {
     public String tableName;
 
     /**
+     * <p>The tenant ID.</p>
+     * <blockquote>
+     * <p>Hover over your profile picture in the upper-right corner of the DMS console to obtain the tenant ID. For details, see <a href="https://help.aliyun.com/document_detail/181330.html">View tenant information</a>.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>3****</p>
      */
@@ -52,6 +63,8 @@ public class DeleteDataLakePartitionShrinkRequest extends TeaModel {
     public Long tid;
 
     /**
+     * <p>The workspace ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>12****</p>
      */

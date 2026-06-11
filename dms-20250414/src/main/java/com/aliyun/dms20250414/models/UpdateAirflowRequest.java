@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateAirflowRequest extends TeaModel {
     /**
+     * <p>The unique ID of the Airflow instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,8 @@ public class UpdateAirflowRequest extends TeaModel {
     public String airflowId;
 
     /**
+     * <p>The name of the Airflow instance.</p>
+     * 
      * <strong>example:</strong>
      * <p>testairflow</p>
      */
@@ -21,6 +24,8 @@ public class UpdateAirflowRequest extends TeaModel {
     public String airflowName;
 
     /**
+     * <p>The specifications of the Airflow instance.</p>
+     * 
      * <strong>example:</strong>
      * <p>SMALL</p>
      */
@@ -28,6 +33,8 @@ public class UpdateAirflowRequest extends TeaModel {
     public String appSpec;
 
     /**
+     * <p>A client token to ensure request idempotence.</p>
+     * 
      * <strong>example:</strong>
      * <p>token-****</p>
      */
@@ -35,6 +42,8 @@ public class UpdateAirflowRequest extends TeaModel {
     public String clientToken;
 
     /**
+     * <p>The directory path where Airflow scans for DAGs.</p>
+     * 
      * <strong>example:</strong>
      * <p>default/dags</p>
      */
@@ -45,6 +54,8 @@ public class UpdateAirflowRequest extends TeaModel {
     public java.util.List<DataMountInfo> dataMountInfoList;
 
     /**
+     * <p>The description of the Airflow instance.</p>
+     * 
      * <strong>example:</strong>
      * <p>test airflow</p>
      */
@@ -62,6 +73,8 @@ public class UpdateAirflowRequest extends TeaModel {
     public Integer gracefulShutdownTimeout;
 
     /**
+     * <p>The directory path where Airflow scans for plugins.</p>
+     * 
      * <strong>example:</strong>
      * <p>default/plugins</p>
      */
@@ -69,6 +82,8 @@ public class UpdateAirflowRequest extends TeaModel {
     public String pluginsDir;
 
     /**
+     * <p>The path to the requirements file for package dependencies.</p>
+     * 
      * <strong>example:</strong>
      * <p>default/requirements.txt</p>
      */
@@ -76,6 +91,8 @@ public class UpdateAirflowRequest extends TeaModel {
     public String requirementFile;
 
     /**
+     * <p>The path to the startup script for the Airflow instance.</p>
+     * 
      * <strong>example:</strong>
      * <p>default/startup.sh</p>
      */
@@ -83,6 +100,8 @@ public class UpdateAirflowRequest extends TeaModel {
     public String startupFile;
 
     /**
+     * <p>The number of worker nodes.</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
@@ -90,6 +109,7 @@ public class UpdateAirflowRequest extends TeaModel {
     public Integer workerServerlessReplicas;
 
     /**
+     * <p>The Data Management Service (DMS) workspace ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

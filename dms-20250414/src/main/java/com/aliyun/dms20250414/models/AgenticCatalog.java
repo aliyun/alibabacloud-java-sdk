@@ -4,36 +4,69 @@ package com.aliyun.dms20250414.models;
 import com.aliyun.tea.*;
 
 public class AgenticCatalog extends TeaModel {
+    /**
+     * <p>A collection of key-value pairs that represents business attributes for the catalog, such as the data owner or department.</p>
+     */
     @NameInMap("CatalogBizAttrs")
     public java.util.Map<String, ?> catalogBizAttrs;
 
+    /**
+     * <p>The type of the catalog. For example, <code>INTERNAL_METADATA</code> or <code>THIRD_PARTY</code>.</p>
+     */
     @NameInMap("CatalogType")
     public String catalogType;
 
+    /**
+     * <p>The unique identifier (UUID) of the catalog. This parameter is system-generated and output-only.</p>
+     */
     @NameInMap("CatalogUuid")
     public String catalogUuid;
 
+    /**
+     * <p>The type of the data source associated with the catalog. For example, <code>MySQL</code>, <code>PostgreSQL</code>, or <code>OSS</code>.</p>
+     */
     @NameInMap("DataSourceType")
     public String dataSourceType;
 
+    /**
+     * <p>The unique identifier (UUID) of the associated data source.</p>
+     */
     @NameInMap("DataSourceUuid")
     public String dataSourceUuid;
 
+    /**
+     * <p>The description of the catalog. It can be up to 2,048 characters long.</p>
+     */
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <p>The display name of the catalog. The name can be up to 256 characters long.</p>
+     */
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <p>A collection of key-value pairs that represents additional technical properties for the catalog.</p>
+     */
     @NameInMap("Properties")
     public java.util.Map<String, ?> properties;
 
+    /**
+     * <p>The ID of the region where the catalog is located. For example, <code>cn-hangzhou</code>.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The current state of the catalog. Valid values are: <code>0</code> (Creating), <code>1</code> (Active), <code>2</code> (Deleting), and <code>3</code> (Error).</p>
+     */
     @NameInMap("State")
     public Integer state;
 
+    /**
+     * <p>The storage location for the catalog\&quot;s metadata, such as a database name or a file path.</p>
+     */
     @NameInMap("StorageLocation")
     public String storageLocation;
 

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DeleteFileUploadRequest extends TeaModel {
     /**
+     * <p>Used by frontend only</p>
+     * 
      * <strong>example:</strong>
      * <p>TrailCenter</p>
      */
@@ -12,6 +14,8 @@ public class DeleteFileUploadRequest extends TeaModel {
     public String callFrom;
 
     /**
+     * <p>Current DMS unit</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
      */
@@ -19,6 +23,7 @@ public class DeleteFileUploadRequest extends TeaModel {
     public String dmsUnit;
 
     /**
+     * <p>File ID</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

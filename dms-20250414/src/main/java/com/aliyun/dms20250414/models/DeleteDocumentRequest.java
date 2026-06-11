@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteDocumentRequest extends TeaModel {
     /**
+     * <p>The document name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class DeleteDocumentRequest extends TeaModel {
     public String documentName;
 
     /**
+     * <p>The knowledge base ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

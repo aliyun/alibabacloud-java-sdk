@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class AddUserToDataAgentWorkspaceRequest extends TeaModel {
     /**
+     * <p>The current DMS unit.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
      */
@@ -12,6 +14,8 @@ public class AddUserToDataAgentWorkspaceRequest extends TeaModel {
     public String DMSUnit;
 
     /**
+     * <p>The Alibaba Cloud UID of the user.</p>
+     * 
      * <strong>example:</strong>
      * <p>20282*****7591</p>
      */
@@ -19,6 +23,8 @@ public class AddUserToDataAgentWorkspaceRequest extends TeaModel {
     public String memberId;
 
     /**
+     * <p>The name of the user\&quot;s role in the workspace.</p>
+     * 
      * <strong>example:</strong>
      * <p>admin</p>
      */
@@ -26,6 +32,8 @@ public class AddUserToDataAgentWorkspaceRequest extends TeaModel {
     public String roleName;
 
     /**
+     * <p>The workspace ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>20923*****7291</p>
      */

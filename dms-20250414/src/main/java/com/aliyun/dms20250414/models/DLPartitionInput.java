@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DLPartitionInput extends TeaModel {
     /**
+     * <p>The time when the partition was created. This is a UNIX timestamp in seconds.</p>
+     * 
      * <strong>example:</strong>
      * <p>1735109884</p>
      */
@@ -12,18 +14,29 @@ public class DLPartitionInput extends TeaModel {
     public Integer createTime;
 
     /**
+     * <p>The time when the partition was last accessed. This is a UNIX timestamp in seconds.</p>
+     * 
      * <strong>example:</strong>
      * <p>1735109884</p>
      */
     @NameInMap("LastAccessTime")
     public Integer lastAccessTime;
 
+    /**
+     * <p>The key-value pair parameters for the partition.</p>
+     */
     @NameInMap("Parameters")
     public java.util.Map<String, String> parameters;
 
+    /**
+     * <p>The data storage information of the data lakehouse table.</p>
+     */
     @NameInMap("StorageDescriptor")
     public DLStorageDescriptor storageDescriptor;
 
+    /**
+     * <p>The partition values.</p>
+     */
     @NameInMap("Values")
     public java.util.List<String> values;
 

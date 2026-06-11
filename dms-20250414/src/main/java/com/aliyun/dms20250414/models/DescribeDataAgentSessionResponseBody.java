@@ -4,10 +4,15 @@ package com.aliyun.dms20250414.models;
 import com.aliyun.tea.*;
 
 public class DescribeDataAgentSessionResponseBody extends TeaModel {
+    /**
+     * <p>The response data.</p>
+     */
     @NameInMap("Data")
     public DescribeDataAgentSessionResponseBodyData data;
 
     /**
+     * <p>The error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -15,6 +20,8 @@ public class DescribeDataAgentSessionResponseBody extends TeaModel {
     public String errorCode;
 
     /**
+     * <p>The error message returned when the request fails.</p>
+     * 
      * <strong>example:</strong>
      * <p>UnknownError</p>
      */
@@ -22,7 +29,7 @@ public class DescribeDataAgentSessionResponseBody extends TeaModel {
     public String errorMessage;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>18****-*****-*******7A3122F</p>
@@ -31,6 +38,14 @@ public class DescribeDataAgentSessionResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * <ul>
+     * <li><p><strong>true</strong>: The request was successful.</p>
+     * </li>
+     * <li><p><strong>false</strong>: The request failed.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -83,9 +98,21 @@ public class DescribeDataAgentSessionResponseBody extends TeaModel {
     }
 
     public static class DescribeDataAgentSessionResponseBodyDataChatHistoryLocations extends TeaModel {
+        /**
+         * <p>The key of the session replay history item.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testKey1</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The OSS download URL for the session replay history item.</p>
+         * 
+         * <strong>example:</strong>
+         * <hr>
+         */
         @NameInMap("Url")
         public String url;
 
@@ -114,6 +141,8 @@ public class DescribeDataAgentSessionResponseBody extends TeaModel {
 
     public static class DescribeDataAgentSessionResponseBodyDataSessionConfig extends TeaModel {
         /**
+         * <p>The ID of the custom agent.</p>
+         * 
          * <strong>example:</strong>
          * <p>ca-e*******ckd</p>
          */
@@ -121,6 +150,14 @@ public class DescribeDataAgentSessionResponseBody extends TeaModel {
         public String customAgentId;
 
         /**
+         * <p>The stage of the custom agent. Valid values:</p>
+         * <ul>
+         * <li><p><strong>debug</strong>: The test stage.</p>
+         * </li>
+         * <li><p><strong>prod</strong>: The production stage.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>debug</p>
          */
@@ -128,6 +165,8 @@ public class DescribeDataAgentSessionResponseBody extends TeaModel {
         public String customAgentStage;
 
         /**
+         * <p>Indicates whether web search is enabled.</p>
+         * 
          * <strong>example:</strong>
          * <p>True</p>
          */
@@ -144,16 +183,37 @@ public class DescribeDataAgentSessionResponseBody extends TeaModel {
         public java.util.List<String> kbUuidList;
 
         /**
+         * <p>The language. Valid values:</p>
+         * <ul>
+         * <li><p><strong>CHINESE</strong>: Chinese</p>
+         * </li>
+         * <li><p><strong>ENGLISH</strong>: English</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>CHINESE</p>
          */
         @NameInMap("Language")
         public String language;
 
+        /**
+         * <p>A list of MCP server IDs.</p>
+         */
         @NameInMap("McpServerIds")
         public java.util.List<String> mcpServerIds;
 
         /**
+         * <p>The mode. Valid values:</p>
+         * <ul>
+         * <li><p><strong>ASK_DATA</strong>: quick inquiry mode</p>
+         * </li>
+         * <li><p><strong>ANALYSIS</strong>: analysis mode</p>
+         * </li>
+         * <li><p><strong>INSIGHT</strong>: insight mode</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>ANALYSIS</p>
          */
@@ -166,6 +226,15 @@ public class DescribeDataAgentSessionResponseBody extends TeaModel {
         @NameInMap("ReportWaterMark")
         public String reportWaterMark;
 
+        /**
+         * <p>The name of the user\&quot;s OSS bucket.</p>
+         * <ul>
+         * <li>The service can upload analysis files and reports to this bucket.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>user-oss-bucket</p>
+         */
         @NameInMap("UserOssBucket")
         public String userOssBucket;
 
@@ -274,19 +343,32 @@ public class DescribeDataAgentSessionResponseBody extends TeaModel {
 
     public static class DescribeDataAgentSessionResponseBodyData extends TeaModel {
         /**
+         * <p>The ID of the agent.</p>
+         * 
          * <strong>example:</strong>
          * <p>cu0cs*******mf</p>
          */
         @NameInMap("AgentId")
         public String agentId;
 
+        /**
+         * <p>The status of the agent.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>RUNNING</p>
+         */
         @NameInMap("AgentStatus")
         public String agentStatus;
 
+        /**
+         * <p>The session replay history.</p>
+         */
         @NameInMap("ChatHistoryLocations")
         public java.util.List<DescribeDataAgentSessionResponseBodyDataChatHistoryLocations> chatHistoryLocations;
 
         /**
+         * <p>The timestamp indicating when the session was created.</p>
+         * 
          * <strong>example:</strong>
          * <p>1731645908000</p>
          */
@@ -294,6 +376,8 @@ public class DescribeDataAgentSessionResponseBody extends TeaModel {
         public Long createTime;
 
         /**
+         * <p>Indicates whether the current user has favorited the session in the workspace.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -301,6 +385,8 @@ public class DescribeDataAgentSessionResponseBody extends TeaModel {
         public String favoriteInWorkspace;
 
         /**
+         * <p>The ID of the file.</p>
+         * 
          * <strong>example:</strong>
          * <p>f-8*******01m</p>
          */
@@ -308,28 +394,53 @@ public class DescribeDataAgentSessionResponseBody extends TeaModel {
         public String file;
 
         /**
+         * <p>Indicates whether the current user has favorited the session.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
         @NameInMap("Saved")
         public Boolean saved;
 
+        /**
+         * <p>The configuration of the session.</p>
+         */
         @NameInMap("SessionConfig")
         public DescribeDataAgentSessionResponseBodyDataSessionConfig sessionConfig;
 
         /**
+         * <p>The ID of the agent session.</p>
+         * 
          * <strong>example:</strong>
          * <p>976*********p</p>
          */
         @NameInMap("SessionId")
         public String sessionId;
 
+        /**
+         * <p>The status of the session.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>RUNNING</p>
+         */
         @NameInMap("SessionStatus")
         public String sessionStatus;
 
+        /**
+         * <p>The title of the session.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>分析一下这份文件，给出报告。</p>
+         */
         @NameInMap("Title")
         public String title;
 
+        /**
+         * <p>The ID of the session owner.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2096******</p>
+         */
         @NameInMap("UserId")
         public String userId;
 

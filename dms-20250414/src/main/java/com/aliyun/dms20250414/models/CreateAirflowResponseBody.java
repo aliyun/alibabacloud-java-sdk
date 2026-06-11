@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateAirflowResponseBody extends TeaModel {
     /**
+     * <p>Details of the access denial.</p>
+     * 
      * <strong>example:</strong>
      * <p>NOT_FOUND</p>
      */
@@ -12,6 +14,8 @@ public class CreateAirflowResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
+     * <p>The error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>UnknownError</p>
      */
@@ -19,6 +23,8 @@ public class CreateAirflowResponseBody extends TeaModel {
     public String errorCode;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -26,6 +32,8 @@ public class CreateAirflowResponseBody extends TeaModel {
     public Long httpStatusCode;
 
     /**
+     * <p>The response message.</p>
+     * 
      * <strong>example:</strong>
      * <p>Successful</p>
      */
@@ -33,16 +41,29 @@ public class CreateAirflowResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>67E910F2-4B62-5B0C-ACA3-7547695C****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The Airflow data dictionary.</p>
+     */
     @NameInMap("Root")
     public CreateAirflowResponseBodyRoot root;
 
     /**
+     * <p>Indicates whether the request succeeded. Valid values:</p>
+     * <ul>
+     * <li><p><strong>true</strong>: The request succeeded.</p>
+     * </li>
+     * <li><p><strong>false</strong>: The request failed.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -112,6 +133,8 @@ public class CreateAirflowResponseBody extends TeaModel {
 
     public static class CreateAirflowResponseBodyRoot extends TeaModel {
         /**
+         * <p>The ID of the Airflow instance.</p>
+         * 
          * <strong>example:</strong>
          * <p>af-****</p>
          */
@@ -119,6 +142,8 @@ public class CreateAirflowResponseBody extends TeaModel {
         public String airflowId;
 
         /**
+         * <p>The name of the Airflow instance.</p>
+         * 
          * <strong>example:</strong>
          * <p>testairflow</p>
          */
@@ -126,6 +151,8 @@ public class CreateAirflowResponseBody extends TeaModel {
         public String airflowName;
 
         /**
+         * <p>The Airflow version.</p>
+         * 
          * <strong>example:</strong>
          * <p>3.1</p>
          */
@@ -133,6 +160,8 @@ public class CreateAirflowResponseBody extends TeaModel {
         public String airflowVersion;
 
         /**
+         * <p>The specifications of the Airflow instance.</p>
+         * 
          * <strong>example:</strong>
          * <p>SMALL</p>
          */
@@ -140,26 +169,38 @@ public class CreateAirflowResponseBody extends TeaModel {
         public String appSpec;
 
         /**
+         * <p>The application type. This value is always airflow.</p>
+         * 
          * <strong>example:</strong>
          * <p>airflow</p>
          */
         @NameInMap("AppType")
         public String appType;
 
+        /**
+         * <p>Custom Airflow configurations.</p>
+         */
         @NameInMap("CustomAirflowCfg")
         public java.util.List<String> customAirflowCfg;
 
         /**
+         * <p>The directory that Airflow scans for DAGs.</p>
+         * 
          * <strong>example:</strong>
          * <p>default/dags</p>
          */
         @NameInMap("DagsDir")
         public String dagsDir;
 
+        /**
+         * <p>A list of data mount configurations.</p>
+         */
         @NameInMap("DataMountInfoList")
         public java.util.List<DataMountInfo> dataMountInfoList;
 
         /**
+         * <p>The deployment error message.</p>
+         * 
          * <strong>example:</strong>
          * <p>vpc not found</p>
          */
@@ -167,16 +208,23 @@ public class CreateAirflowResponseBody extends TeaModel {
         public String deployErrorMsg;
 
         /**
+         * <p>The description of the Airflow instance.</p>
+         * 
          * <strong>example:</strong>
          * <p>order scheduler</p>
          */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>Indicates whether to enable serverless workers.</p>
+         */
         @NameInMap("EnableServerless")
         public Boolean enableServerless;
 
         /**
+         * <p>The time the instance was created.</p>
+         * 
          * <strong>example:</strong>
          * <p>2025-08-12T05:46:01.000+0000</p>
          */
@@ -184,6 +232,8 @@ public class CreateAirflowResponseBody extends TeaModel {
         public String gmtCreated;
 
         /**
+         * <p>The timeout period for a graceful shutdown, in seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>60</p>
          */
@@ -191,6 +241,8 @@ public class CreateAirflowResponseBody extends TeaModel {
         public Integer gracefulShutdownTimeout;
 
         /**
+         * <p>The name of the OSS bucket.</p>
+         * 
          * <strong>example:</strong>
          * <p>oss-test</p>
          */
@@ -198,6 +250,8 @@ public class CreateAirflowResponseBody extends TeaModel {
         public String ossBucketName;
 
         /**
+         * <p>The OSS path.</p>
+         * 
          * <strong>example:</strong>
          * <p>/airflow</p>
          */
@@ -205,6 +259,8 @@ public class CreateAirflowResponseBody extends TeaModel {
         public String ossPath;
 
         /**
+         * <p>The plugin directory that Airflow scans.</p>
+         * 
          * <strong>example:</strong>
          * <p>default/plugins</p>
          */
@@ -212,6 +268,8 @@ public class CreateAirflowResponseBody extends TeaModel {
         public String pluginsDir;
 
         /**
+         * <p>The path to the requirements file.</p>
+         * 
          * <strong>example:</strong>
          * <p>default/requirements.txt</p>
          */
@@ -219,6 +277,8 @@ public class CreateAirflowResponseBody extends TeaModel {
         public String requirementFile;
 
         /**
+         * <p>The security group ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>sg-2ze1nak7h0alg1xxx</p>
          */
@@ -226,6 +286,8 @@ public class CreateAirflowResponseBody extends TeaModel {
         public String securityGroupId;
 
         /**
+         * <p>The file that is loaded when the Airflow instance starts. You can use this file to set environment variables.</p>
+         * 
          * <strong>example:</strong>
          * <p>default/startup.sh</p>
          */
@@ -233,6 +295,8 @@ public class CreateAirflowResponseBody extends TeaModel {
         public String startupFile;
 
         /**
+         * <p>The status of the Airflow instance.</p>
+         * 
          * <strong>example:</strong>
          * <p>DEPLOYING</p>
          */
@@ -240,6 +304,8 @@ public class CreateAirflowResponseBody extends TeaModel {
         public String status;
 
         /**
+         * <p>The VSwitch ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>vsw-8vbaf073jawozfpbg****</p>
          */
@@ -247,7 +313,7 @@ public class CreateAirflowResponseBody extends TeaModel {
         public String vSwitchId;
 
         /**
-         * <p>VPC ID。</p>
+         * <p>The VPC ID.</p>
          * 
          * <strong>example:</strong>
          * <p>vpc-uf63r6coyiw9o5gf****</p>
@@ -256,6 +322,8 @@ public class CreateAirflowResponseBody extends TeaModel {
         public String vpcId;
 
         /**
+         * <p>The number of scaled-out worker nodes.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -263,6 +331,8 @@ public class CreateAirflowResponseBody extends TeaModel {
         public Integer workerServerlessReplicas;
 
         /**
+         * <p>The workspace ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>86302423828****</p>
          */
@@ -270,6 +340,8 @@ public class CreateAirflowResponseBody extends TeaModel {
         public String workspaceId;
 
         /**
+         * <p>The zone ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-hangzhou-h</p>
          */

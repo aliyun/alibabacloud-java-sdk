@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class OneMetaKnowledgeBase extends TeaModel {
     /**
+     * <p>The creator of the knowledge base.</p>
+     * 
      * <strong>example:</strong>
      * <p>20464374909***</p>
      */
@@ -12,6 +14,8 @@ public class OneMetaKnowledgeBase extends TeaModel {
     public String creator;
 
     /**
+     * <p>The description of the knowledge base.</p>
+     * 
      * <strong>example:</strong>
      * <p>order knowledgebase</p>
      */
@@ -19,6 +23,8 @@ public class OneMetaKnowledgeBase extends TeaModel {
     public String description;
 
     /**
+     * <p>The domain of the knowledge base.</p>
+     * 
      * <strong>example:</strong>
      * <p>vehicle</p>
      */
@@ -26,6 +32,8 @@ public class OneMetaKnowledgeBase extends TeaModel {
     public String domain;
 
     /**
+     * <p>Additional information about the knowledge base.</p>
+     * 
      * <strong>example:</strong>
      * <p>{&quot;keywords&quot;:&quot;sales,vehicle brand&quot;}</p>
      */
@@ -33,6 +41,8 @@ public class OneMetaKnowledgeBase extends TeaModel {
     public String extraInfo;
 
     /**
+     * <p>The time when the knowledge base was created.</p>
+     * 
      * <strong>example:</strong>
      * <p>2026-05-14 11:30:00</p>
      */
@@ -40,6 +50,8 @@ public class OneMetaKnowledgeBase extends TeaModel {
     public String gmtCreate;
 
     /**
+     * <p>The time when the knowledge base was last modified.</p>
+     * 
      * <strong>example:</strong>
      * <p>2026-05-14 11:30:39</p>
      */
@@ -47,6 +59,8 @@ public class OneMetaKnowledgeBase extends TeaModel {
     public String gmtModified;
 
     /**
+     * <p>The UUID of the knowledge base.</p>
+     * 
      * <strong>example:</strong>
      * <p>kb-***</p>
      */
@@ -54,6 +68,8 @@ public class OneMetaKnowledgeBase extends TeaModel {
     public String kbUuid;
 
     /**
+     * <p>The name of the knowledge base.</p>
+     * 
      * <strong>example:</strong>
      * <p>order_kb</p>
      */
@@ -61,6 +77,8 @@ public class OneMetaKnowledgeBase extends TeaModel {
     public String name;
 
     /**
+     * <p>The state of the knowledge base. Valid values include 0 (No data) and 1 (Available).</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -68,6 +86,8 @@ public class OneMetaKnowledgeBase extends TeaModel {
     public Integer state;
 
     /**
+     * <p>The tag of the knowledge base.</p>
+     * 
      * <strong>example:</strong>
      * <p>4phsj52f81ymlm***</p>
      */

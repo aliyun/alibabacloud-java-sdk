@@ -4,24 +4,45 @@ package com.aliyun.dms20250414.models;
 import com.aliyun.tea.*;
 
 public class DmsKnowledgeSearchOrderInfoDO extends TeaModel {
+    /**
+     * <p>The UID of the Alibaba Cloud account.</p>
+     */
     @NameInMap("AliyunAccountUid")
     public String aliyunAccountUid;
 
+    /**
+     * <p>The API key used for authentication.</p>
+     */
     @NameInMap("ApiKey")
     public String apiKey;
 
+    /**
+     * <p>The time when the entry was created.</p>
+     */
     @NameInMap("GmtCreate")
     public String gmtCreate;
 
+    /**
+     * <p>The time when the entry was last modified.</p>
+     */
     @NameInMap("GmtModified")
     public String gmtModified;
 
+    /**
+     * <p>The unique ID of the entry.</p>
+     */
     @NameInMap("Id")
     public Long id;
 
+    /**
+     * <p>The unique ID of the order.</p>
+     */
     @NameInMap("OrderId")
     public String orderId;
 
+    /**
+     * <p>The endpoint URL for the web search API.</p>
+     */
     @NameInMap("WebSearchApiUrl")
     public String webSearchApiUrl;
 

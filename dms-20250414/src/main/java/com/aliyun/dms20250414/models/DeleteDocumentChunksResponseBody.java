@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteDocumentChunksResponseBody extends TeaModel {
     /**
-     * <p>实际删除的行数</p>
+     * <p>The number of deleted chunks.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -14,6 +14,8 @@ public class DeleteDocumentChunksResponseBody extends TeaModel {
     public Integer data;
 
     /**
+     * <p>The error code returned if the call fails.</p>
+     * 
      * <strong>example:</strong>
      * <p>KnowledgeBaseNotFound</p>
      */
@@ -21,6 +23,8 @@ public class DeleteDocumentChunksResponseBody extends TeaModel {
     public String errorCode;
 
     /**
+     * <p>The error message returned if the call fails.</p>
+     * 
      * <strong>example:</strong>
      * <p>Resource not found kb-***</p>
      */
@@ -28,6 +32,8 @@ public class DeleteDocumentChunksResponseBody extends TeaModel {
     public String errorMessage;
 
     /**
+     * <p>The unique request ID for the call. If an error occurs, provide this request ID to support.</p>
+     * 
      * <strong>example:</strong>
      * <p>67E910F2-4B62-5B0C-ACA3-7547695C****</p>
      */
@@ -35,6 +41,14 @@ public class DeleteDocumentChunksResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <ul>
+     * <li><p><strong>true</strong>: The request was successful.</p>
+     * </li>
+     * <li><p><strong>false</strong>: The request failed.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

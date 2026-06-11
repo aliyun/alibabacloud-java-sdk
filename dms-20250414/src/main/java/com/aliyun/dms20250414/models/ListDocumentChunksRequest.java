@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListDocumentChunksRequest extends TeaModel {
     /**
+     * <p>A filter pattern. The operation returns only the chunks whose titles contain this pattern.</p>
+     * 
      * <strong>example:</strong>
      * <p>test</p>
      */
@@ -12,6 +14,8 @@ public class ListDocumentChunksRequest extends TeaModel {
     public String chunkTitlePattern;
 
     /**
+     * <p>The name of the document.</p>
+     * 
      * <strong>example:</strong>
      * <p>test.md</p>
      */
@@ -19,6 +23,7 @@ public class ListDocumentChunksRequest extends TeaModel {
     public String documentName;
 
     /**
+     * <p>The ID of the knowledge base.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -28,6 +33,10 @@ public class ListDocumentChunksRequest extends TeaModel {
     public String kbUuid;
 
     /**
+     * <p>The maximum number of entries to return on each page.</p>
+     * <p>Valid values: 1 to 100.</p>
+     * <p>Default value: 20.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -35,6 +44,8 @@ public class ListDocumentChunksRequest extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>The token used to retrieve the next page of results. Omit this parameter to get the first page. If the response returns a <code>NextToken</code>, it indicates that more results are available. To get the next page, pass this <code>NextToken</code> value in the <code>NextToken</code> parameter of your next request. A null value for NextToken indicates that all results have been retrieved.</p>
+     * 
      * <strong>example:</strong>
      * <p>zCXSmY0CJbybp6FZV7vo0Wjw64X-*****</p>
      */
@@ -42,6 +53,16 @@ public class ListDocumentChunksRequest extends TeaModel {
     public String nextToken;
 
     /**
+     * <p>The sort field. Valid values:</p>
+     * <ul>
+     * <li><p><strong>id</strong> (default): The chunk ID.</p>
+     * </li>
+     * <li><p><strong>hits</strong>: The number of hits.</p>
+     * </li>
+     * <li><p><strong>modifyTime</strong>: The modification time.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>hits</p>
      */
@@ -49,6 +70,14 @@ public class ListDocumentChunksRequest extends TeaModel {
     public String sortFieldName;
 
     /**
+     * <p>The sort order. Valid values:</p>
+     * <ul>
+     * <li><p><strong>ASC</strong> (default): ascending order.</p>
+     * </li>
+     * <li><p><strong>DESC</strong>: descending order.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>DESC</p>
      */

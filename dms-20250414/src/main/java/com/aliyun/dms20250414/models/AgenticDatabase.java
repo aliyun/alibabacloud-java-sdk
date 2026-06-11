@@ -4,48 +4,93 @@ package com.aliyun.dms20250414.models;
 import com.aliyun.tea.*;
 
 public class AgenticDatabase extends TeaModel {
+    /**
+     * <p>The name of the catalog.</p>
+     */
     @NameInMap("CatalogName")
     public String catalogName;
 
+    /**
+     * <p>The type of the catalog.</p>
+     */
     @NameInMap("CatalogType")
     public String catalogType;
 
+    /**
+     * <p>The unique identifier of the catalog.</p>
+     */
     @NameInMap("CatalogUuid")
     public String catalogUuid;
 
+    /**
+     * <p>The data source type, such as <code>MySQL</code> or <code>PostgreSQL</code>.</p>
+     */
     @NameInMap("DataSourceType")
     public String dataSourceType;
 
+    /**
+     * <p>The database\&quot;s business attributes.</p>
+     */
     @NameInMap("DatabaseBizAttrs")
     public java.util.Map<String, ?> databaseBizAttrs;
 
+    /**
+     * <p>The unique identifier of the database.</p>
+     */
     @NameInMap("DatabaseUuid")
     public String databaseUuid;
 
+    /**
+     * <p>The database description.</p>
+     */
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <p>The metadata for the database engine.</p>
+     */
     @NameInMap("EngineMeta")
     public AgenticDatabaseEngineMeta engineMeta;
 
+    /**
+     * <p>The name of the database.</p>
+     */
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <p>The database\&quot;s extended properties.</p>
+     */
     @NameInMap("Properties")
     public java.util.Map<String, ?> properties;
 
+    /**
+     * <p>The fully qualified name of the database.</p>
+     */
     @NameInMap("QualifiedName")
     public String qualifiedName;
 
+    /**
+     * <p>The region ID of the database.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The name used to search the database.</p>
+     */
     @NameInMap("SearchName")
     public String searchName;
 
+    /**
+     * <p>The database state.</p>
+     */
     @NameInMap("State")
     public Integer state;
 
+    /**
+     * <p>The database storage location.</p>
+     */
     @NameInMap("StorageLocation")
     public String storageLocation;
 

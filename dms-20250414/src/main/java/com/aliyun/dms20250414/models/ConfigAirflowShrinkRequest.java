@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ConfigAirflowShrinkRequest extends TeaModel {
     /**
+     * <p>The unique ID of the Airflow instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,12 +15,14 @@ public class ConfigAirflowShrinkRequest extends TeaModel {
     public String airflowId;
 
     /**
+     * <p>The list of custom Airflow configurations.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("CustomAirflowCfg")
     public String customAirflowCfgShrink;
 
     /**
+     * <p>The DMS workspace ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

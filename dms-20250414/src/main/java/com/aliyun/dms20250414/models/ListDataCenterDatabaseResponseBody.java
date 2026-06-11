@@ -4,10 +4,15 @@ package com.aliyun.dms20250414.models;
 import com.aliyun.tea.*;
 
 public class ListDataCenterDatabaseResponseBody extends TeaModel {
+    /**
+     * <p>The list of databases.</p>
+     */
     @NameInMap("Data")
     public java.util.List<ListDataCenterDatabaseResponseBodyData> data;
 
     /**
+     * <p>The error code returned if the request fails.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -15,6 +20,8 @@ public class ListDataCenterDatabaseResponseBody extends TeaModel {
     public String errorCode;
 
     /**
+     * <p>The error message returned if the request fails.</p>
+     * 
      * <strong>example:</strong>
      * <p>Specified parameter Tid is not valid.</p>
      */
@@ -22,7 +29,7 @@ public class ListDataCenterDatabaseResponseBody extends TeaModel {
     public String errorMessage;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>67E910F2-4B62-5B0C-ACA3-7547695C****</p>
@@ -31,6 +38,14 @@ public class ListDataCenterDatabaseResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <ul>
+     * <li><p><strong>true</strong>: The request was successful.</p>
+     * </li>
+     * <li><p><strong>false</strong>: The request failed.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -83,10 +98,21 @@ public class ListDataCenterDatabaseResponseBody extends TeaModel {
     }
 
     public static class ListDataCenterDatabaseResponseBodyData extends TeaModel {
+        /**
+         * <p>The description of the database.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This is a sample database.</p>
+         */
         @NameInMap("DatabaseDesc")
         public String databaseDesc;
 
         /**
+         * <p>The name of the database.</p>
+         * <ul>
+         * <li>If <code>ImportType</code> is <code>FILE</code>, this is the file name.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>diamonds.csv</p>
          */
@@ -94,6 +120,8 @@ public class ListDataCenterDatabaseResponseBody extends TeaModel {
         public String databaseName;
 
         /**
+         * <p>The ID of the database.</p>
+         * 
          * <strong>example:</strong>
          * <p>6kv159u9vtpvl**********b8</p>
          */
@@ -101,6 +129,14 @@ public class ListDataCenterDatabaseResponseBody extends TeaModel {
         public String dbId;
 
         /**
+         * <ul>
+         * <li><p>If <code>ImportType</code> is <code>FILE</code>:</p>
+         * <ul>
+         * <li>The file format, such as <code>csv</code>, <code>xlsx</code>, or <code>xls</code>.</li>
+         * </ul>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>csv</p>
          */
@@ -108,6 +144,8 @@ public class ListDataCenterDatabaseResponseBody extends TeaModel {
         public String dbType;
 
         /**
+         * <p>The time the database description was last updated.</p>
+         * 
          * <strong>example:</strong>
          * <p>2025-12-11T14:04:32.000+00:00</p>
          */
@@ -115,6 +153,11 @@ public class ListDataCenterDatabaseResponseBody extends TeaModel {
         public String descUpdateTime;
 
         /**
+         * <p>The ID of the database in DMS.</p>
+         * <ul>
+         * <li>This parameter is not returned if <code>ImportType</code> is <code>FILE</code>.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>73088962</p>
          */
@@ -122,6 +165,11 @@ public class ListDataCenterDatabaseResponseBody extends TeaModel {
         public Long dmsDbId;
 
         /**
+         * <p>The ID of the DMS instance that manages the database.</p>
+         * <ul>
+         * <li>This parameter is not returned if <code>ImportType</code> is <code>FILE</code>.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>2740966</p>
          */
@@ -132,6 +180,8 @@ public class ListDataCenterDatabaseResponseBody extends TeaModel {
         public String downloadLink;
 
         /**
+         * <p>The time the entry was created.</p>
+         * 
          * <strong>example:</strong>
          * <p>2025-12-11T14:04:32.000+00:00</p>
          */
@@ -139,6 +189,22 @@ public class ListDataCenterDatabaseResponseBody extends TeaModel {
         public String gmtCreated;
 
         /**
+         * <p>The import type. Valid values:</p>
+         * <ul>
+         * <li><p>FILE</p>
+         * </li>
+         * <li><p>RDS</p>
+         * </li>
+         * <li><p>ADB</p>
+         * </li>
+         * <li><p>PolarDB</p>
+         * </li>
+         * <li><p>Hologres</p>
+         * </li>
+         * <li><p>DMS</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>FILE</p>
          */
@@ -146,6 +212,11 @@ public class ListDataCenterDatabaseResponseBody extends TeaModel {
         public String importType;
 
         /**
+         * <p>The name of the instance.</p>
+         * <ul>
+         * <li>If <code>ImportType</code> is <code>FILE</code>, this parameter specifies the file ID in the data center.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>f-ean8u5881qk4*********xh5y</p>
          */
@@ -156,6 +227,14 @@ public class ListDataCenterDatabaseResponseBody extends TeaModel {
         public String intranetDownloadLink;
 
         /**
+         * <p>Indicates whether the dataset is built-in. Valid values:</p>
+         * <ul>
+         * <li><p>Y: The dataset is built-in.</p>
+         * </li>
+         * <li><p>N: The dataset is not built-in.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>N</p>
          */
@@ -166,6 +245,8 @@ public class ListDataCenterDatabaseResponseBody extends TeaModel {
         public String ossBucket;
 
         /**
+         * <p>The size of the file, in bytes.</p>
+         * 
          * <strong>example:</strong>
          * <p>999</p>
          */

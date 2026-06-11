@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class RedeployAirflowRequest extends TeaModel {
     /**
+     * <p>The unique ID of the Airflow instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class RedeployAirflowRequest extends TeaModel {
     public String airflowId;
 
     /**
+     * <p>The ID of the DMS workspace.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

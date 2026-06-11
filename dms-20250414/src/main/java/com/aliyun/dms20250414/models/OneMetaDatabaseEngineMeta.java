@@ -4,15 +4,27 @@ package com.aliyun.dms20250414.models;
 import com.aliyun.tea.*;
 
 public class OneMetaDatabaseEngineMeta extends TeaModel {
+    /**
+     * <p>The catalog name.</p>
+     */
     @NameInMap("CatalogName")
     public String catalogName;
 
+    /**
+     * <p>The character encoding for the database.</p>
+     */
     @NameInMap("Encoding")
     public String encoding;
 
+    /**
+     * <p>The schema name.</p>
+     */
     @NameInMap("SchemaName")
     public String schemaName;
 
+    /**
+     * <p>The database storage capacity, in GB.</p>
+     */
     @NameInMap("StorageCapacity")
     public Long storageCapacity;
 

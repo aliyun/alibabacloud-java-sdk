@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetChatContentRequest extends TeaModel {
     /**
+     * <p>The agent ID. This parameter is required.</p>
+     * 
      * <strong>example:</strong>
      * <p>xxxx-xxxx-xxxx</p>
      */
@@ -12,6 +14,8 @@ public class GetChatContentRequest extends TeaModel {
     public String agentId;
 
     /**
+     * <p>The service returns output starting from this checkpoint.</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
@@ -19,6 +23,8 @@ public class GetChatContentRequest extends TeaModel {
     public String checkpoint;
 
     /**
+     * <p>The DMS unit. For users on the Alibaba Cloud China site, the default value is cn-hangzhou.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
      */
@@ -26,6 +32,8 @@ public class GetChatContentRequest extends TeaModel {
     public String DMSUnit;
 
     /**
+     * <p>The session ID. This parameter is required.</p>
+     * 
      * <strong>example:</strong>
      * <p>sess_12345</p>
      */

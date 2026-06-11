@@ -4,10 +4,15 @@ package com.aliyun.dms20250414.models;
 import com.aliyun.tea.*;
 
 public class UpdateDataLakeDatabaseResponseBody extends TeaModel {
+    /**
+     * <p>The details of the database.</p>
+     */
     @NameInMap("Database")
     public DLDatabase database;
 
     /**
+     * <p>The error code that is returned if the request fails.</p>
+     * 
      * <strong>example:</strong>
      * <p>UnknownError</p>
      */
@@ -15,6 +20,8 @@ public class UpdateDataLakeDatabaseResponseBody extends TeaModel {
     public String errorCode;
 
     /**
+     * <p>The error message that is returned if the request fails.</p>
+     * 
      * <strong>example:</strong>
      * <p>UnknownError</p>
      */
@@ -22,6 +29,8 @@ public class UpdateDataLakeDatabaseResponseBody extends TeaModel {
     public String errorMessage;
 
     /**
+     * <p>The ID of the request, used for log tracing and troubleshooting.</p>
+     * 
      * <strong>example:</strong>
      * <p>4E1D2B4D-3E53-4ABC-999D-1D2520B3****</p>
      */
@@ -29,6 +38,14 @@ public class UpdateDataLakeDatabaseResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <ul>
+     * <li><p><strong>true</strong>: The request was successful.</p>
+     * </li>
+     * <li><p><strong>false</strong>: The request failed.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

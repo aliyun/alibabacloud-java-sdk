@@ -4,10 +4,15 @@ package com.aliyun.dms20250414.models;
 import com.aliyun.tea.*;
 
 public class ListFileUploadResponseBody extends TeaModel {
+    /**
+     * <p>The list of file objects.</p>
+     */
     @NameInMap("Data")
     public java.util.List<ListFileUploadResponseBodyData> data;
 
     /**
+     * <p>The error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -15,6 +20,8 @@ public class ListFileUploadResponseBody extends TeaModel {
     public String errorCode;
 
     /**
+     * <p>The error message returned if the request fails.</p>
+     * 
      * <strong>example:</strong>
      * <p>Specified parameter Tid is not valid.</p>
      */
@@ -22,7 +29,7 @@ public class ListFileUploadResponseBody extends TeaModel {
     public String errorMessage;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>67E910F2-4B62-5B0C-ACA3-7547695C****</p>
@@ -31,6 +38,14 @@ public class ListFileUploadResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * <ul>
+     * <li><p><strong>true</strong>: The request was successful.</p>
+     * </li>
+     * <li><p><strong>false</strong>: The request failed.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -84,6 +99,8 @@ public class ListFileUploadResponseBody extends TeaModel {
 
     public static class ListFileUploadResponseBodyData extends TeaModel {
         /**
+         * <p>The ID of the Alibaba Cloud master account.</p>
+         * 
          * <strong>example:</strong>
          * <p>16738266********</p>
          */
@@ -91,16 +108,23 @@ public class ListFileUploadResponseBody extends TeaModel {
         public String aliyunParentUid;
 
         /**
+         * <p>The Alibaba Cloud account ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>20372822********</p>
          */
         @NameInMap("AliyunUid")
         public String aliyunUid;
 
+        /**
+         * <p>The public download link.</p>
+         */
         @NameInMap("DownloadLink")
         public String downloadLink;
 
         /**
+         * <p>The file category.</p>
+         * 
          * <strong>example:</strong>
          * <p>TextReport</p>
          */
@@ -108,6 +132,8 @@ public class ListFileUploadResponseBody extends TeaModel {
         public String fileCategory;
 
         /**
+         * <p>The file source.</p>
+         * 
          * <strong>example:</strong>
          * <p>Agent</p>
          */
@@ -115,6 +141,8 @@ public class ListFileUploadResponseBody extends TeaModel {
         public String fileFrom;
 
         /**
+         * <p>The file ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>f-8*******01m</p>
          */
@@ -122,6 +150,8 @@ public class ListFileUploadResponseBody extends TeaModel {
         public String fileId;
 
         /**
+         * <p>The file name.</p>
+         * 
          * <strong>example:</strong>
          * <p>samele_report.md</p>
          */
@@ -129,6 +159,8 @@ public class ListFileUploadResponseBody extends TeaModel {
         public String fileName;
 
         /**
+         * <p>The file size, in bytes.</p>
+         * 
          * <strong>example:</strong>
          * <p>7453</p>
          */
@@ -136,6 +168,8 @@ public class ListFileUploadResponseBody extends TeaModel {
         public Long fileSize;
 
         /**
+         * <p>The file extension.</p>
+         * 
          * <strong>example:</strong>
          * <p>md</p>
          */
@@ -143,16 +177,23 @@ public class ListFileUploadResponseBody extends TeaModel {
         public String fileType;
 
         /**
+         * <p>The time when the file was created.</p>
+         * 
          * <strong>example:</strong>
          * <p>2025-12-11T14:04:32.000+00:00</p>
          */
         @NameInMap("GmtCreated")
         public String gmtCreated;
 
+        /**
+         * <p>The internal download link.</p>
+         */
         @NameInMap("IntranetDownloadLink")
         public String intranetDownloadLink;
 
         /**
+         * <p>The region.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
          */
@@ -160,12 +201,17 @@ public class ListFileUploadResponseBody extends TeaModel {
         public String region;
 
         /**
+         * <p>The session ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>h8r********4fch</p>
          */
         @NameInMap("SessionId")
         public String sessionId;
 
+        /**
+         * <p>The upload path.</p>
+         */
         @NameInMap("UploadLocation")
         public String uploadLocation;
 

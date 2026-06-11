@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListAirflowVersionsResponseBody extends TeaModel {
     /**
+     * <p>The reason for the access denial.</p>
+     * 
      * <strong>example:</strong>
      * <p>NOT_FOUND</p>
      */
@@ -12,6 +14,8 @@ public class ListAirflowVersionsResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
+     * <p>The error code for a failed request.</p>
+     * 
      * <strong>example:</strong>
      * <p>UnknownError</p>
      */
@@ -19,6 +23,8 @@ public class ListAirflowVersionsResponseBody extends TeaModel {
     public String errorCode;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -26,6 +32,8 @@ public class ListAirflowVersionsResponseBody extends TeaModel {
     public Long httpStatusCode;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>This record is being collected, please wait for a moment.</p>
      */
@@ -33,16 +41,29 @@ public class ListAirflowVersionsResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>67E910F2-4B62-5B0C-ACA3-7547695C****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The version list.</p>
+     */
     @NameInMap("Root")
     public java.util.List<String> root;
 
     /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <ul>
+     * <li><p><strong>true</strong>: The request succeeded.</p>
+     * </li>
+     * <li><p><strong>false</strong>: The request failed.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

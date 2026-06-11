@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetDataLakeCatalogRequest extends TeaModel {
     /**
+     * <p>The name of the data catalog.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -17,6 +18,8 @@ public class GetDataLakeCatalogRequest extends TeaModel {
     public String catalogName;
 
     /**
+     * <p>The tenant ID. You can call the GetUserActiveTenant or ListUserTenants operation to obtain this value.</p>
+     * 
      * <strong>example:</strong>
      * <p>3****</p>
      */
@@ -24,6 +27,8 @@ public class GetDataLakeCatalogRequest extends TeaModel {
     public Long tid;
 
     /**
+     * <p>The ID of the workspace.</p>
+     * 
      * <strong>example:</strong>
      * <p>12****</p>
      */

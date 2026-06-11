@@ -4,10 +4,18 @@ package com.aliyun.dms20250414.models;
 import com.aliyun.tea.*;
 
 public class ListDataCenterDatabaseRequest extends TeaModel {
+    /**
+     * <p>This parameter is for internal use.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Frontend only</p>
+     */
     @NameInMap("CallFrom")
     public String callFrom;
 
     /**
+     * <p>The DMS unit.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
      */
@@ -15,16 +23,29 @@ public class ListDataCenterDatabaseRequest extends TeaModel {
     public String dmsUnit;
 
     /**
+     * <p>The import type.</p>
+     * <ul>
+     * <li>FILE</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>FILE</p>
      */
     @NameInMap("ImportType")
     public String importType;
 
+    /**
+     * <p>This parameter is for internal use.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Frontend only</p>
+     */
     @NameInMap("Language")
     public String language;
 
     /**
+     * <p>The keyword for a fuzzy search for databases.</p>
+     * 
      * <strong>example:</strong>
      * <p>testdb</p>
      */

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateDataAgentSessionRequest extends TeaModel {
     /**
+     * <p>The current DMS unit.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
      */
@@ -12,19 +14,32 @@ public class CreateDataAgentSessionRequest extends TeaModel {
     public String DMSUnit;
 
     /**
+     * <p>The file ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>f-8*******01m</p>
      */
     @NameInMap("File")
     public String file;
 
+    /**
+     * <p>The session configuration.</p>
+     */
     @NameInMap("SessionConfig")
     public CreateDataAgentSessionRequestSessionConfig sessionConfig;
 
+    /**
+     * <p>The session title. Supports Chinese and English. Maximum length: 128 characters.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>帮我分析一下这份数据，给出报告。</p>
+     */
     @NameInMap("Title")
     public String title;
 
     /**
+     * <p>The workspace ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>12****</p>
      */
@@ -78,6 +93,8 @@ public class CreateDataAgentSessionRequest extends TeaModel {
 
     public static class CreateDataAgentSessionRequestSessionConfig extends TeaModel {
         /**
+         * <p>The custom agent ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>ca-e*******ckd</p>
          */
@@ -85,6 +102,14 @@ public class CreateDataAgentSessionRequest extends TeaModel {
         public String customAgentId;
 
         /**
+         * <p>The custom agent stage. Valid values:</p>
+         * <ul>
+         * <li><p><strong>debug</strong>: Test stage.</p>
+         * </li>
+         * <li><p><strong>prod</strong>: Production stage.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>debug</p>
          */
@@ -92,6 +117,8 @@ public class CreateDataAgentSessionRequest extends TeaModel {
         public String customAgentStage;
 
         /**
+         * <p>Specifies whether to enable web search.</p>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
@@ -108,16 +135,37 @@ public class CreateDataAgentSessionRequest extends TeaModel {
         public java.util.List<String> kbUuidList;
 
         /**
+         * <p>The language. Valid values:</p>
+         * <ul>
+         * <li><p><strong>CHINESE</strong>: Chinese</p>
+         * </li>
+         * <li><p><strong>ENGLISH</strong>: English</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>CHINESE</p>
          */
         @NameInMap("Language")
         public String language;
 
+        /**
+         * <p>A list of MCP server IDs.</p>
+         */
         @NameInMap("McpServerIds")
         public java.util.List<String> mcpServerIds;
 
         /**
+         * <p>The mode. Valid values:</p>
+         * <ul>
+         * <li><p><strong>ASK_DATA</strong>: Quick inquiry mode.</p>
+         * </li>
+         * <li><p><strong>ANALYSIS</strong>: Analysis mode.</p>
+         * </li>
+         * <li><p><strong>INSIGHT</strong>: Insight mode.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>ANALYSIS</p>
          */
@@ -130,6 +178,15 @@ public class CreateDataAgentSessionRequest extends TeaModel {
         @NameInMap("ReportWaterMark")
         public String reportWaterMark;
 
+        /**
+         * <p>The OSS bucket name.</p>
+         * <ul>
+         * <li>This bucket stores intermediate files and report artifacts from the analysis.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>user-oss-bucket</p>
+         */
         @NameInMap("UserOssBucket")
         public String userOssBucket;
 

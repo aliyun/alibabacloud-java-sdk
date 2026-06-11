@@ -4,10 +4,15 @@ package com.aliyun.dms20250414.models;
 import com.aliyun.tea.*;
 
 public class GetDataAgentSubAccountInfoResponseBody extends TeaModel {
+    /**
+     * <p>The returned data structure.</p>
+     */
     @NameInMap("Data")
     public GetDataAgentSubAccountInfoResponseBodyData data;
 
     /**
+     * <p>The error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>DMS-DA-40114</p>
      */
@@ -15,6 +20,8 @@ public class GetDataAgentSubAccountInfoResponseBody extends TeaModel {
     public String errorCode;
 
     /**
+     * <p>The error message returned if the call fails.</p>
+     * 
      * <strong>example:</strong>
      * <p>Specified parameter is not valid.</p>
      */
@@ -22,6 +29,8 @@ public class GetDataAgentSubAccountInfoResponseBody extends TeaModel {
     public String errorMessage;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>67E910F2-***-695C</p>
      */
@@ -29,6 +38,8 @@ public class GetDataAgentSubAccountInfoResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -82,6 +93,8 @@ public class GetDataAgentSubAccountInfoResponseBody extends TeaModel {
 
     public static class GetDataAgentSubAccountInfoResponseBodyData extends TeaModel {
         /**
+         * <p>The time when the user was created in RAM. This is a UNIX timestamp in seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>1765960516</p>
          */
@@ -89,6 +102,8 @@ public class GetDataAgentSubAccountInfoResponseBody extends TeaModel {
         public Long createDate;
 
         /**
+         * <p>The ID of the Alibaba Cloud account to which the user belongs.</p>
+         * 
          * <strong>example:</strong>
          * <p>167*****166</p>
          */
@@ -96,6 +111,8 @@ public class GetDataAgentSubAccountInfoResponseBody extends TeaModel {
         public String mainAccountId;
 
         /**
+         * <p>The time when the user information was last updated. This is a UNIX timestamp in seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>1765962516</p>
          */
@@ -103,6 +120,8 @@ public class GetDataAgentSubAccountInfoResponseBody extends TeaModel {
         public Long updateDate;
 
         /**
+         * <p>The UID of the queried RAM user.</p>
+         * 
          * <strong>example:</strong>
          * <p>20282*****7591</p>
          */
@@ -110,6 +129,8 @@ public class GetDataAgentSubAccountInfoResponseBody extends TeaModel {
         public String userId;
 
         /**
+         * <p>The name of the queried RAM user.</p>
+         * 
          * <strong>example:</strong>
          * <p>yunqitest</p>
          */

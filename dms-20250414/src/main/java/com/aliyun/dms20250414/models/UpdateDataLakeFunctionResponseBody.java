@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpdateDataLakeFunctionResponseBody extends TeaModel {
     /**
+     * <p>The error code returned if the request fails.</p>
+     * 
      * <strong>example:</strong>
      * <p>UnknownError</p>
      */
@@ -12,16 +14,23 @@ public class UpdateDataLakeFunctionResponseBody extends TeaModel {
     public String errorCode;
 
     /**
+     * <p>The error message returned if the request fails.</p>
+     * 
      * <strong>example:</strong>
      * <p>UnknownError</p>
      */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
+    /**
+     * <p>The details of the function.</p>
+     */
     @NameInMap("Function")
     public DLFunction function;
 
     /**
+     * <p>The ID of the request, used for log tracing and troubleshooting.</p>
+     * 
      * <strong>example:</strong>
      * <p>C1D39814-9808-47F8-AFE0-AF167239****</p>
      */
@@ -29,6 +38,14 @@ public class UpdateDataLakeFunctionResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <ul>
+     * <li><p><strong>true</strong>: The request was successful.</p>
+     * </li>
+     * <li><p><strong>false</strong>: The request failed.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

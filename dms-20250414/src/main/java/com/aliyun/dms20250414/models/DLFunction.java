@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DLFunction extends TeaModel {
     /**
+     * <p>The name of the data catalog.</p>
+     * 
      * <strong>example:</strong>
      * <p>hive</p>
      */
@@ -12,6 +14,8 @@ public class DLFunction extends TeaModel {
     public String catalogName;
 
     /**
+     * <p>The Java class that contains the function code.</p>
+     * 
      * <strong>example:</strong>
      * <p>com.example.hive.MyCustomUDF</p>
      */
@@ -19,6 +23,8 @@ public class DLFunction extends TeaModel {
     public String className;
 
     /**
+     * <p>The time when the function was created.</p>
+     * 
      * <strong>example:</strong>
      * <p>1731586286</p>
      */
@@ -26,6 +32,8 @@ public class DLFunction extends TeaModel {
     public Integer createTime;
 
     /**
+     * <p>The ID of the user who created the function.</p>
+     * 
      * <strong>example:</strong>
      * <p>12****</p>
      */
@@ -33,6 +41,8 @@ public class DLFunction extends TeaModel {
     public Long creatorId;
 
     /**
+     * <p>The name of the database.</p>
+     * 
      * <strong>example:</strong>
      * <p>default</p>
      */
@@ -40,6 +50,8 @@ public class DLFunction extends TeaModel {
     public String dbName;
 
     /**
+     * <p>The name of the function.</p>
+     * 
      * <strong>example:</strong>
      * <p>my_funciton</p>
      */
@@ -47,6 +59,8 @@ public class DLFunction extends TeaModel {
     public String functionName;
 
     /**
+     * <p>The type of the function.</p>
+     * 
      * <strong>example:</strong>
      * <p>JAVA</p>
      */
@@ -54,6 +68,8 @@ public class DLFunction extends TeaModel {
     public String functionType;
 
     /**
+     * <p>The ID of the user who modified the function.</p>
+     * 
      * <strong>example:</strong>
      * <p>26****</p>
      */
@@ -61,6 +77,8 @@ public class DLFunction extends TeaModel {
     public Long modifierId;
 
     /**
+     * <p>The owner of the function.</p>
+     * 
      * <strong>example:</strong>
      * <p>zhangsan</p>
      */
@@ -68,12 +86,25 @@ public class DLFunction extends TeaModel {
     public String ownerName;
 
     /**
+     * <p>The type of the owner. Valid values:</p>
+     * <ul>
+     * <li><p>ROLE</p>
+     * </li>
+     * <li><p>GROUP</p>
+     * </li>
+     * <li><p>USER</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>USER</p>
      */
     @NameInMap("OwnerType")
     public String ownerType;
 
+    /**
+     * <p>The resource URIs of the function. This parameter cannot be modified after the function is created.</p>
+     */
     @NameInMap("ResourceUris")
     public java.util.List<DLResourceUri> resourceUris;
 

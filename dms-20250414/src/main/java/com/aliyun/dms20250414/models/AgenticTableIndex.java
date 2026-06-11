@@ -4,24 +4,45 @@ package com.aliyun.dms20250414.models;
 import com.aliyun.tea.*;
 
 public class AgenticTableIndex extends TeaModel {
+    /**
+     * <p>An array of column names included in the index.</p>
+     */
     @NameInMap("ColumnNames")
     public java.util.List<String> columnNames;
 
+    /**
+     * <p>An optional, user-defined description for the index.</p>
+     */
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <p>The unique name of the index within the table.</p>
+     */
     @NameInMap("IndexName")
     public String indexName;
 
+    /**
+     * <p>The type of the index, such as PRIMARY, UNIQUE, or NORMAL.</p>
+     */
     @NameInMap("IndexType")
     public String indexType;
 
+    /**
+     * <p>Specifies if the index is the primary key. A table can have only one primary key.</p>
+     */
     @NameInMap("Primary")
     public Boolean primary;
 
+    /**
+     * <p>An array of physical column names from the database. Use this parameter when the names in ColumnNames are aliases or logical names.</p>
+     */
     @NameInMap("RealColumnNames")
     public java.util.List<String> realColumnNames;
 
+    /**
+     * <p>Specifies if the index enforces a unique constraint, requiring all its values to be unique across rows.</p>
+     */
     @NameInMap("Unique")
     public Boolean unique;
 

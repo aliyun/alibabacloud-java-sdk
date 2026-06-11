@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class RemoveUserToDataAgentWorkspaceResponseBody extends TeaModel {
     /**
+     * <p>The error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>DMS-DA-40114</p>
      */
@@ -12,6 +14,8 @@ public class RemoveUserToDataAgentWorkspaceResponseBody extends TeaModel {
     public String errorCode;
 
     /**
+     * <p>The error message returned when the call fails.</p>
+     * 
      * <strong>example:</strong>
      * <p>Specified parameter is not valid.</p>
      */
@@ -19,6 +23,8 @@ public class RemoveUserToDataAgentWorkspaceResponseBody extends TeaModel {
     public String errorMessage;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>E0D2-*****-A63B6</p>
      */
@@ -26,6 +32,8 @@ public class RemoveUserToDataAgentWorkspaceResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

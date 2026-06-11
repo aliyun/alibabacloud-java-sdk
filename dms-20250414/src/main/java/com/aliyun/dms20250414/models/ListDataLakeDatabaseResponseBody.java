@@ -4,10 +4,15 @@ package com.aliyun.dms20250414.models;
 import com.aliyun.tea.*;
 
 public class ListDataLakeDatabaseResponseBody extends TeaModel {
+    /**
+     * <p>The list of databases.</p>
+     */
     @NameInMap("DatabaseList")
     public java.util.List<DLDatabase> databaseList;
 
     /**
+     * <p>The error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>400</p>
      */
@@ -15,6 +20,8 @@ public class ListDataLakeDatabaseResponseBody extends TeaModel {
     public String errorCode;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>UnknownError</p>
      */
@@ -22,6 +29,8 @@ public class ListDataLakeDatabaseResponseBody extends TeaModel {
     public String errorMessage;
 
     /**
+     * <p>The maximum number of entries returned per page. This parameter is used with \<code>NextToken\\</code> for paging.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -29,6 +38,8 @@ public class ListDataLakeDatabaseResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>The token that is used to retrieve the next page of results. If this parameter is empty, no more results are available.</p>
+     * 
      * <strong>example:</strong>
      * <p>NesLoKLEdIZrKhDT7I2g****</p>
      */
@@ -36,6 +47,8 @@ public class ListDataLakeDatabaseResponseBody extends TeaModel {
     public String nextToken;
 
     /**
+     * <p>The request ID, used for log tracing and troubleshooting.</p>
+     * 
      * <strong>example:</strong>
      * <p>4E1D2B4D-3E53-4ABC-999D-1D2520B3****</p>
      */
@@ -43,6 +56,14 @@ public class ListDataLakeDatabaseResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <ul>
+     * <li><p><strong>true</strong>: The request was successful.</p>
+     * </li>
+     * <li><p><strong>false</strong>: The request failed.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

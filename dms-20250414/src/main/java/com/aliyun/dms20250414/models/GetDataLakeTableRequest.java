@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetDataLakeTableRequest extends TeaModel {
     /**
+     * <p>The name of the data catalog.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -17,6 +18,7 @@ public class GetDataLakeTableRequest extends TeaModel {
     public String catalogName;
 
     /**
+     * <p>The name of the database to which the table belongs.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -29,6 +31,7 @@ public class GetDataLakeTableRequest extends TeaModel {
     public String dbName;
 
     /**
+     * <p>The name of the table.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -41,6 +44,8 @@ public class GetDataLakeTableRequest extends TeaModel {
     public String name;
 
     /**
+     * <p>The tenant ID. Call the GetUserActiveTenant or ListUserTenants operation to get this ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>3****</p>
      */
@@ -48,6 +53,8 @@ public class GetDataLakeTableRequest extends TeaModel {
     public Long tid;
 
     /**
+     * <p>The ID of the workspace.</p>
+     * 
      * <strong>example:</strong>
      * <p>12****</p>
      */

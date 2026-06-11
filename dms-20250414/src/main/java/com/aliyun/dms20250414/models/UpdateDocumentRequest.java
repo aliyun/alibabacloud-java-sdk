@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateDocumentRequest extends TeaModel {
     /**
+     * <p>The document name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class UpdateDocumentRequest extends TeaModel {
     public String documentName;
 
     /**
+     * <p>The ID of the knowledge base.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,7 @@ public class UpdateDocumentRequest extends TeaModel {
     public String kbUuid;
 
     /**
+     * <p>The new document description.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

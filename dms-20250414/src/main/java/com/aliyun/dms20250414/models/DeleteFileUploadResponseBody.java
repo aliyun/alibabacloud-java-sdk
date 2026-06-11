@@ -4,10 +4,15 @@ package com.aliyun.dms20250414.models;
 import com.aliyun.tea.*;
 
 public class DeleteFileUploadResponseBody extends TeaModel {
+    /**
+     * <p>Return struct</p>
+     */
     @NameInMap("Data")
     public DeleteFileUploadResponseBodyData data;
 
     /**
+     * <p>Error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -15,6 +20,8 @@ public class DeleteFileUploadResponseBody extends TeaModel {
     public String errorCode;
 
     /**
+     * <p>Error message returned when the invocation fails.</p>
+     * 
      * <strong>example:</strong>
      * <p>Specified parameter Tid is not valid.</p>
      */
@@ -31,6 +38,12 @@ public class DeleteFileUploadResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request succeeded. Valid values:</p>
+     * <ul>
+     * <li><strong>true</strong>: The request succeeded.                                 </li>
+     * <li><strong>false</strong>: The request failed.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -84,6 +97,8 @@ public class DeleteFileUploadResponseBody extends TeaModel {
 
     public static class DeleteFileUploadResponseBodyData extends TeaModel {
         /**
+         * <p>File ID</p>
+         * 
          * <strong>example:</strong>
          * <p>f-8*******01m</p>
          */

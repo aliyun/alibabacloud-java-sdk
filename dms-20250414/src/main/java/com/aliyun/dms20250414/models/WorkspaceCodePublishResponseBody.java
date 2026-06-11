@@ -5,12 +5,14 @@ import com.aliyun.tea.*;
 
 public class WorkspaceCodePublishResponseBody extends TeaModel {
     /**
-     * <p>job</p>
+     * <p>An object that contains the key for the asynchronous code deployment.</p>
      */
     @NameInMap("Data")
     public WorkspaceCodePublishResponseBodyData data;
 
     /**
+     * <p>The error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>UnknownError</p>
      */
@@ -18,6 +20,8 @@ public class WorkspaceCodePublishResponseBody extends TeaModel {
     public String errorCode;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -25,6 +29,8 @@ public class WorkspaceCodePublishResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The error message returned if the request fails. This parameter is empty on success.</p>
+     * 
      * <strong>example:</strong>
      * <p>Failed to deploy，repo branch empty</p>
      */
@@ -32,6 +38,8 @@ public class WorkspaceCodePublishResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>67E910F2-4B62-5B0C-ACA3-7547695C****</p>
      */
@@ -39,6 +47,8 @@ public class WorkspaceCodePublishResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates if the request succeeded.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -100,6 +110,8 @@ public class WorkspaceCodePublishResponseBody extends TeaModel {
 
     public static class WorkspaceCodePublishResponseBodyData extends TeaModel {
         /**
+         * <p>The key for the asynchronous code deployment. Use this key to query its status.</p>
+         * 
          * <strong>example:</strong>
          * <p>ws-xxxx-xxxxxx</p>
          */

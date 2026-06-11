@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListDataLakeTablebaseInfoRequest extends TeaModel {
     /**
+     * <p>The name of the data catalog.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class ListDataLakeTablebaseInfoRequest extends TeaModel {
     public String catalogName;
 
     /**
+     * <p>The name of the database where the table is located.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,8 @@ public class ListDataLakeTablebaseInfoRequest extends TeaModel {
     public String dbName;
 
     /**
+     * <p>The page number of the list for a paged query.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -30,6 +34,8 @@ public class ListDataLakeTablebaseInfoRequest extends TeaModel {
     public Integer page;
 
     /**
+     * <p>The number of rows on each page for a paged query.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -37,6 +43,8 @@ public class ListDataLakeTablebaseInfoRequest extends TeaModel {
     public Integer rows;
 
     /**
+     * <p>The keyword used to search for table names.</p>
+     * 
      * <strong>example:</strong>
      * <p>test</p>
      */
@@ -44,6 +52,8 @@ public class ListDataLakeTablebaseInfoRequest extends TeaModel {
     public String searchKey;
 
     /**
+     * <p>The tenant ID. Call the GetUserActiveTenant operation to get the value of this parameter.</p>
+     * 
      * <strong>example:</strong>
      * <p>3****</p>
      */
@@ -51,6 +61,8 @@ public class ListDataLakeTablebaseInfoRequest extends TeaModel {
     public Long tid;
 
     /**
+     * <p>The workspace ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>12****</p>
      */

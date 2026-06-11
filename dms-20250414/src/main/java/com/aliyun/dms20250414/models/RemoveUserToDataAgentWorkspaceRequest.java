@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class RemoveUserToDataAgentWorkspaceRequest extends TeaModel {
     /**
+     * <p>The current DMS unit.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
      */
@@ -12,6 +14,8 @@ public class RemoveUserToDataAgentWorkspaceRequest extends TeaModel {
     public String DMSUnit;
 
     /**
+     * <p>The UID of the member account to remove.</p>
+     * 
      * <strong>example:</strong>
      * <p>21482*****7584</p>
      */
@@ -19,6 +23,8 @@ public class RemoveUserToDataAgentWorkspaceRequest extends TeaModel {
     public String memberId;
 
     /**
+     * <p>The workspace ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>20923*****7291</p>
      */

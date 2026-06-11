@@ -4,10 +4,15 @@ package com.aliyun.dms20250414.models;
 import com.aliyun.tea.*;
 
 public class CreateDataAgentSessionResponseBody extends TeaModel {
+    /**
+     * <p>The response structure.</p>
+     */
     @NameInMap("Data")
     public CreateDataAgentSessionResponseBodyData data;
 
     /**
+     * <p>The error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -15,6 +20,8 @@ public class CreateDataAgentSessionResponseBody extends TeaModel {
     public String errorCode;
 
     /**
+     * <p>The error message returned if the request fails.</p>
+     * 
      * <strong>example:</strong>
      * <p>UnknownError</p>
      */
@@ -22,7 +29,7 @@ public class CreateDataAgentSessionResponseBody extends TeaModel {
     public String errorMessage;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>1CB***********3F1A</p>
@@ -31,6 +38,14 @@ public class CreateDataAgentSessionResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <ul>
+     * <li><p><strong>true</strong>: The request was successful.</p>
+     * </li>
+     * <li><p><strong>false</strong>: The request failed.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -84,6 +99,8 @@ public class CreateDataAgentSessionResponseBody extends TeaModel {
 
     public static class CreateDataAgentSessionResponseBodyDataSessionConfig extends TeaModel {
         /**
+         * <p>The custom agent ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>ca-e*******ckd</p>
          */
@@ -91,6 +108,14 @@ public class CreateDataAgentSessionResponseBody extends TeaModel {
         public String customAgentId;
 
         /**
+         * <p>The stage of the custom agent. Valid values:</p>
+         * <ul>
+         * <li><p><strong>debug</strong>: Debug stage</p>
+         * </li>
+         * <li><p><strong>prod</strong>: Production stage</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>debug</p>
          */
@@ -98,6 +123,8 @@ public class CreateDataAgentSessionResponseBody extends TeaModel {
         public String customAgentStage;
 
         /**
+         * <p>Indicates whether web search is enabled.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -114,16 +141,37 @@ public class CreateDataAgentSessionResponseBody extends TeaModel {
         public java.util.List<String> kbUuidList;
 
         /**
+         * <p>The language. Valid values:</p>
+         * <ul>
+         * <li><p><strong>CHINESE</strong>: Chinese</p>
+         * </li>
+         * <li><p><strong>ENGLISH</strong>: English</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>CHINESE</p>
          */
         @NameInMap("Language")
         public String language;
 
+        /**
+         * <p>A list of MCP server IDs.</p>
+         */
         @NameInMap("McpServerIds")
         public java.util.List<String> mcpServerIds;
 
         /**
+         * <p>The mode. Valid values:</p>
+         * <ul>
+         * <li><p><strong>ASK_DATA</strong>: Quick Inquiry Mode</p>
+         * </li>
+         * <li><p><strong>ANALYSIS</strong>: Analysis Mode</p>
+         * </li>
+         * <li><p><strong>INSIGHT</strong>: Insight Mode</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>ANALYSIS</p>
          */
@@ -136,6 +184,15 @@ public class CreateDataAgentSessionResponseBody extends TeaModel {
         @NameInMap("ReportWaterMark")
         public String reportWaterMark;
 
+        /**
+         * <p>The name of the user\&quot;s OSS bucket.</p>
+         * <ul>
+         * <li>Analysis files and report artifacts can be uploaded to this OSS bucket.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>user-oss-bucket</p>
+         */
         @NameInMap("UserOssBucket")
         public String userOssBucket;
 
@@ -244,7 +301,7 @@ public class CreateDataAgentSessionResponseBody extends TeaModel {
 
     public static class CreateDataAgentSessionResponseBodyData extends TeaModel {
         /**
-         * <p>Agent Id</p>
+         * <p>The agent ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cu0cs*******mf</p>
@@ -252,10 +309,18 @@ public class CreateDataAgentSessionResponseBody extends TeaModel {
         @NameInMap("AgentId")
         public String agentId;
 
+        /**
+         * <p>The agent status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>RUNNING</p>
+         */
         @NameInMap("AgentStatus")
         public String agentStatus;
 
         /**
+         * <p>The time when the session was created, in Unix milliseconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>1765262307992</p>
          */
@@ -263,6 +328,8 @@ public class CreateDataAgentSessionResponseBody extends TeaModel {
         public Long createTime;
 
         /**
+         * <p>The ID of the associated file.</p>
+         * 
          * <strong>example:</strong>
          * <p>f-8*******01m</p>
          */
@@ -270,25 +337,44 @@ public class CreateDataAgentSessionResponseBody extends TeaModel {
         public String file;
 
         /**
+         * <p>Indicates whether the current user has favorited the session.</p>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
         @NameInMap("Saved")
         public Boolean saved;
 
+        /**
+         * <p>The session configuration.</p>
+         */
         @NameInMap("SessionConfig")
         public CreateDataAgentSessionResponseBodyDataSessionConfig sessionConfig;
 
         /**
+         * <p>The agent session ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>976*********p</p>
          */
         @NameInMap("SessionId")
         public String sessionId;
 
+        /**
+         * <p>The session status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>RUNNING</p>
+         */
         @NameInMap("SessionStatus")
         public String sessionStatus;
 
+        /**
+         * <p>The session title.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>帮我分析一下这份数据，给出报告。</p>
+         */
         @NameInMap("Title")
         public String title;
 

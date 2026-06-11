@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateDataLakeDatabaseResponseBody extends TeaModel {
     /**
+     * <p>The error code returned when an error occurs with the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>UnknownError</p>
      */
@@ -12,6 +14,8 @@ public class CreateDataLakeDatabaseResponseBody extends TeaModel {
     public String errorCode;
 
     /**
+     * <p>The error message returned when the request fails.</p>
+     * 
      * <strong>example:</strong>
      * <p>UnknownError</p>
      */
@@ -19,6 +23,8 @@ public class CreateDataLakeDatabaseResponseBody extends TeaModel {
     public String errorMessage;
 
     /**
+     * <p>The ID of the request, used for log tracing and troubleshooting.</p>
+     * 
      * <strong>example:</strong>
      * <p>D911009F-3E95-5AFD-8CF1-73F7B4F1****</p>
      */
@@ -26,6 +32,14 @@ public class CreateDataLakeDatabaseResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <ul>
+     * <li><p><strong>true</strong>: The request was successful.</p>
+     * </li>
+     * <li><p><strong>false</strong>: The request failed.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

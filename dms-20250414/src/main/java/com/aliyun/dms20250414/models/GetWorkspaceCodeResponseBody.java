@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetWorkspaceCodeResponseBody extends TeaModel {
     /**
+     * <p>The file content.</p>
+     * 
      * <strong>example:</strong>
      * <p>log info</p>
      */
@@ -12,6 +14,8 @@ public class GetWorkspaceCodeResponseBody extends TeaModel {
     public String data;
 
     /**
+     * <p>The error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>UnknownError</p>
      */
@@ -19,6 +23,8 @@ public class GetWorkspaceCodeResponseBody extends TeaModel {
     public String errorCode;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -26,6 +32,8 @@ public class GetWorkspaceCodeResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The error message returned if the request fails.</p>
+     * 
      * <strong>example:</strong>
      * <p>This record is being collected, please wait for a moment.</p>
      */
@@ -33,6 +41,8 @@ public class GetWorkspaceCodeResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>E0D21075-CD3E-4D98-8264-FD8AD04A63B6</p>
      */
@@ -40,6 +50,8 @@ public class GetWorkspaceCodeResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates if the request succeeded.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

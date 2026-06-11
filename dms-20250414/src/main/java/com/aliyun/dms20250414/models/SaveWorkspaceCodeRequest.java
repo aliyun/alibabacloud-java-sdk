@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class SaveWorkspaceCodeRequest extends TeaModel {
     /**
+     * <p>The content of the file.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,8 @@ public class SaveWorkspaceCodeRequest extends TeaModel {
     public String content;
 
     /**
+     * <p>Specifies whether to overwrite the file if it already exists. The default value is <code>true</code>.</p>
+     * 
      * <strong>example:</strong>
      * <p>True</p>
      */
@@ -21,6 +24,8 @@ public class SaveWorkspaceCodeRequest extends TeaModel {
     public Boolean force;
 
     /**
+     * <p>Specifies whether the file is an IaC template.</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -28,6 +33,9 @@ public class SaveWorkspaceCodeRequest extends TeaModel {
     public Boolean iac;
 
     /**
+     * <p>The modification time of the file.</p>
+     * <p>The time must be in the ISO 8601 format: <code>yyyy-MM-ddTHH:mm:ssZ</code>.</p>
+     * 
      * <strong>example:</strong>
      * <p>2026-01-01T10:11:12Z</p>
      */
@@ -35,6 +43,7 @@ public class SaveWorkspaceCodeRequest extends TeaModel {
     public String mtime;
 
     /**
+     * <p>The publishing configuration, specified as a JSON string. The <code>repos</code> array specifies the target repository and branch. The <code>exclude</code> array specifies the directories to ignore.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -44,6 +53,8 @@ public class SaveWorkspaceCodeRequest extends TeaModel {
     public String path;
 
     /**
+     * <p>Information about the repository.</p>
+     * 
      * <strong>example:</strong>
      * <p>computing/ecs</p>
      */
@@ -51,6 +62,7 @@ public class SaveWorkspaceCodeRequest extends TeaModel {
     public String repo;
 
     /**
+     * <p>The ID of the workspace.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

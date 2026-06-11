@@ -4,10 +4,15 @@ package com.aliyun.dms20250414.models;
 import com.aliyun.tea.*;
 
 public class DescribeDocumentResponseBody extends TeaModel {
+    /**
+     * <p>The details of the document.</p>
+     */
     @NameInMap("Data")
     public DescribeDocumentResponseBodyData data;
 
     /**
+     * <p>The error code returned when the request fails.</p>
+     * 
      * <strong>example:</strong>
      * <p>KnowledgeBaseNotFound</p>
      */
@@ -15,6 +20,8 @@ public class DescribeDocumentResponseBody extends TeaModel {
     public String errorCode;
 
     /**
+     * <p>The error message returned when the request fails.</p>
+     * 
      * <strong>example:</strong>
      * <p>Resource not found kb-***</p>
      */
@@ -22,6 +29,8 @@ public class DescribeDocumentResponseBody extends TeaModel {
     public String errorMessage;
 
     /**
+     * <p>The unique request ID. Provide this ID for troubleshooting if an error occurs.</p>
+     * 
      * <strong>example:</strong>
      * <p>67E910F2-4B62-5B0C-ACA3-7547695C****</p>
      */
@@ -29,6 +38,14 @@ public class DescribeDocumentResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request succeeded. Valid values:</p>
+     * <ul>
+     * <li><p><strong>true</strong>: The request succeeded.</p>
+     * </li>
+     * <li><p><strong>false</strong>: The request failed.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -82,6 +99,8 @@ public class DescribeDocumentResponseBody extends TeaModel {
 
     public static class DescribeDocumentResponseBodyData extends TeaModel {
         /**
+         * <p>The description of the document.</p>
+         * 
          * <strong>example:</strong>
          * <p>abc</p>
          */
@@ -89,6 +108,8 @@ public class DescribeDocumentResponseBody extends TeaModel {
         public String description;
 
         /**
+         * <p>The number of chunks.</p>
+         * 
          * <strong>example:</strong>
          * <p>123</p>
          */
@@ -96,6 +117,8 @@ public class DescribeDocumentResponseBody extends TeaModel {
         public Long docsCount;
 
         /**
+         * <p>The name of the document loader.</p>
+         * 
          * <strong>example:</strong>
          * <p>ADBPGLoader</p>
          */
@@ -103,6 +126,8 @@ public class DescribeDocumentResponseBody extends TeaModel {
         public String documentLoaderName;
 
         /**
+         * <p>The file extension of the document.</p>
+         * 
          * <strong>example:</strong>
          * <p>md</p>
          */
@@ -110,6 +135,8 @@ public class DescribeDocumentResponseBody extends TeaModel {
         public String fileExt;
 
         /**
+         * <p>The size of the document in bytes.</p>
+         * 
          * <strong>example:</strong>
          * <p>20307</p>
          */
@@ -117,6 +144,8 @@ public class DescribeDocumentResponseBody extends TeaModel {
         public Long fileSize;
 
         /**
+         * <p>The creation time of the document, in UTC.</p>
+         * 
          * <strong>example:</strong>
          * <p>2026-04-22 22:59:35</p>
          */
@@ -124,6 +153,8 @@ public class DescribeDocumentResponseBody extends TeaModel {
         public String gmtCreate;
 
         /**
+         * <p>The last modification time of the document, in UTC.</p>
+         * 
          * <strong>example:</strong>
          * <p>2026-04-24 21:22:53</p>
          */
@@ -131,6 +162,8 @@ public class DescribeDocumentResponseBody extends TeaModel {
         public String gmtModified;
 
         /**
+         * <p>The ID of the knowledge base.</p>
+         * 
          * <strong>example:</strong>
          * <p>kb-***</p>
          */
@@ -138,6 +171,8 @@ public class DescribeDocumentResponseBody extends TeaModel {
         public String kbUuid;
 
         /**
+         * <p>The keywords of the document.</p>
+         * 
          * <strong>example:</strong>
          * <p>[&quot;test&quot;,&quot;abc&quot;]</p>
          */
@@ -145,6 +180,8 @@ public class DescribeDocumentResponseBody extends TeaModel {
         public String keywords;
 
         /**
+         * <p>The name of the document.</p>
+         * 
          * <strong>example:</strong>
          * <p>test.md</p>
          */
@@ -152,6 +189,20 @@ public class DescribeDocumentResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>The document state. Possible values are:</p>
+         * <ul>
+         * <li><p><strong>0</strong>: Parsing complete.</p>
+         * </li>
+         * <li><p><strong>-1</strong>: Not parsed.</p>
+         * </li>
+         * <li><p><strong>-2</strong>: Parsing in progress.</p>
+         * </li>
+         * <li><p><strong>-3</strong>: Parsing failed.</p>
+         * </li>
+         * <li><p><strong>-4</strong>: Parsing canceled.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -159,6 +210,8 @@ public class DescribeDocumentResponseBody extends TeaModel {
         public Long state;
 
         /**
+         * <p>The summary of the document.</p>
+         * 
          * <strong>example:</strong>
          * <p>This is a test document.</p>
          */
@@ -166,6 +219,8 @@ public class DescribeDocumentResponseBody extends TeaModel {
         public String summary;
 
         /**
+         * <p>The name of the text splitter.</p>
+         * 
          * <strong>example:</strong>
          * <p>ChineseRecursiveTextSplitter</p>
          */

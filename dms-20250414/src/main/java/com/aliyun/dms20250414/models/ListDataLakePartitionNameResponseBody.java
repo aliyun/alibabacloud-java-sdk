@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListDataLakePartitionNameResponseBody extends TeaModel {
     /**
+     * <p>The error code that is returned if the request fails.</p>
+     * 
      * <strong>example:</strong>
      * <p>UnknownError</p>
      */
@@ -12,6 +14,8 @@ public class ListDataLakePartitionNameResponseBody extends TeaModel {
     public String errorCode;
 
     /**
+     * <p>The error message that is returned if the request fails.</p>
+     * 
      * <strong>example:</strong>
      * <p>UnknownError</p>
      */
@@ -19,6 +23,8 @@ public class ListDataLakePartitionNameResponseBody extends TeaModel {
     public String errorMessage;
 
     /**
+     * <p>The number of entries returned on each page.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -26,16 +32,23 @@ public class ListDataLakePartitionNameResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>The token to retrieve the next page of results.</p>
+     * 
      * <strong>example:</strong>
      * <p>NesLoKLEdIZrKhDT7I2gS****</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <p>A list of partition names.</p>
+     */
     @NameInMap("PartitionNameList")
     public java.util.List<String> partitionNameList;
 
     /**
+     * <p>The ID of the request, used for log tracing and troubleshooting.</p>
+     * 
      * <strong>example:</strong>
      * <p>0C1CB646-1DE4-4AD0-B4A4-7D47DD52****</p>
      */
@@ -43,6 +56,14 @@ public class ListDataLakePartitionNameResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <ul>
+     * <li><p><strong>true</strong>: The request was successful.</p>
+     * </li>
+     * <li><p><strong>false</strong>: The request failed.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

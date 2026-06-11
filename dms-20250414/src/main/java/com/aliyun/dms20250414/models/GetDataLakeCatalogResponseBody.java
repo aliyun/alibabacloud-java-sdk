@@ -4,10 +4,15 @@ package com.aliyun.dms20250414.models;
 import com.aliyun.tea.*;
 
 public class GetDataLakeCatalogResponseBody extends TeaModel {
+    /**
+     * <p>The details of the data catalog.</p>
+     */
     @NameInMap("Catalog")
     public DLCatalog catalog;
 
     /**
+     * <p>The error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>400</p>
      */
@@ -15,6 +20,8 @@ public class GetDataLakeCatalogResponseBody extends TeaModel {
     public String errorCode;
 
     /**
+     * <p>Error message returned when the request fails.</p>
+     * 
      * <strong>example:</strong>
      * <p>code: 404, can not find catalog, name : hiv request id: 6090E571-E5B1-1E6D-BF44-F9E10E8B****</p>
      */
@@ -22,6 +29,8 @@ public class GetDataLakeCatalogResponseBody extends TeaModel {
     public String errorMessage;
 
     /**
+     * <p>The ID of the request, used for log tracing and troubleshooting.</p>
+     * 
      * <strong>example:</strong>
      * <p>FE8EE2F1-4880-46BC-A704-5CF63EAF****</p>
      */
@@ -29,6 +38,14 @@ public class GetDataLakeCatalogResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <ul>
+     * <li><p><strong>true</strong>: The request was successful.</p>
+     * </li>
+     * <li><p><strong>false</strong>: The request failed.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

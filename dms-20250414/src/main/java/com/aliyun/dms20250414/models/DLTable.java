@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DLTable extends TeaModel {
     /**
+     * <p>The name of the data catalog.</p>
+     * 
      * <strong>example:</strong>
      * <p>hive</p>
      */
@@ -12,6 +14,8 @@ public class DLTable extends TeaModel {
     public String catalogName;
 
     /**
+     * <p>The time when the table was created.</p>
+     * 
      * <strong>example:</strong>
      * <p>1731586286</p>
      */
@@ -19,6 +23,8 @@ public class DLTable extends TeaModel {
     public Integer createTime;
 
     /**
+     * <p>The ID of the table creator.</p>
+     * 
      * <strong>example:</strong>
      * <p>8****</p>
      */
@@ -26,6 +32,8 @@ public class DLTable extends TeaModel {
     public Long creatorId;
 
     /**
+     * <p>The ID of the database to which the table belongs.</p>
+     * 
      * <strong>example:</strong>
      * <p>19</p>
      */
@@ -33,6 +41,8 @@ public class DLTable extends TeaModel {
     public Long dbId;
 
     /**
+     * <p>The name of the database to which the table belongs.</p>
+     * 
      * <strong>example:</strong>
      * <p>default</p>
      */
@@ -40,6 +50,8 @@ public class DLTable extends TeaModel {
     public String dbName;
 
     /**
+     * <p>The description of the table.</p>
+     * 
      * <strong>example:</strong>
      * <p>test</p>
      */
@@ -47,6 +59,8 @@ public class DLTable extends TeaModel {
     public String description;
 
     /**
+     * <p>The time when the table was last accessed.</p>
+     * 
      * <strong>example:</strong>
      * <p>1608707407</p>
      */
@@ -54,6 +68,8 @@ public class DLTable extends TeaModel {
     public Integer lastAccessTime;
 
     /**
+     * <p>The storage path of the table.</p>
+     * 
      * <strong>example:</strong>
      * <p>oss://xxx</p>
      */
@@ -61,6 +77,8 @@ public class DLTable extends TeaModel {
     public String location;
 
     /**
+     * <p>The user who last modified the table.</p>
+     * 
      * <strong>example:</strong>
      * <p>1410769</p>
      */
@@ -68,6 +86,8 @@ public class DLTable extends TeaModel {
     public Long modifierId;
 
     /**
+     * <p>The name of the table.</p>
+     * 
      * <strong>example:</strong>
      * <p>100g_customer</p>
      */
@@ -75,6 +95,8 @@ public class DLTable extends TeaModel {
     public String name;
 
     /**
+     * <p>The name of the table owner.</p>
+     * 
      * <strong>example:</strong>
      * <p>zhangsan</p>
      */
@@ -82,6 +104,8 @@ public class DLTable extends TeaModel {
     public String owner;
 
     /**
+     * <p>The type of the owner. Valid values: USER, ROLE, and GROUP.</p>
+     * 
      * <strong>example:</strong>
      * <p>USER</p>
      */
@@ -89,6 +113,8 @@ public class DLTable extends TeaModel {
     public String ownerType;
 
     /**
+     * <p>The key-value pairs of the parameters.</p>
+     * 
      * <strong>example:</strong>
      * <p>{
      *       &quot;EXTERNAL&quot;: &quot;TRUE&quot;,
@@ -97,20 +123,30 @@ public class DLTable extends TeaModel {
     @NameInMap("Parameters")
     public java.util.Map<String, ?> parameters;
 
+    /**
+     * <p>The list of partition keys.</p>
+     */
     @NameInMap("PartitionKeys")
     public java.util.List<DLColumn> partitionKeys;
 
     /**
+     * <p>The retention period of the table.</p>
+     * 
      * <strong>example:</strong>
      * <p>300</p>
      */
     @NameInMap("Retention")
     public Integer retention;
 
+    /**
+     * <p>The storage description, including the storage features and format details of the table.</p>
+     */
     @NameInMap("StorageDescriptor")
     public DLStorageDescriptor storageDescriptor;
 
     /**
+     * <p>The type of the metadata table, such as MANAGED_TABLE, EXTERNAL_TABLE, VIRTUAL_VIEW, INDEX_TABLE, or MATERIALIZED_VIEW.</p>
+     * 
      * <strong>example:</strong>
      * <p>EXTERNAL_TABLE</p>
      */
@@ -118,6 +154,8 @@ public class DLTable extends TeaModel {
     public String tableType;
 
     /**
+     * <p>The expanded text of the view if the table is a view.</p>
+     * 
      * <strong>example:</strong>
      * <p>&quot;&quot;</p>
      */
@@ -125,6 +163,8 @@ public class DLTable extends TeaModel {
     public String viewExpandedText;
 
     /**
+     * <p>The original text of the view if the table is a view.</p>
+     * 
      * <strong>example:</strong>
      * <p>&quot;&quot;</p>
      */

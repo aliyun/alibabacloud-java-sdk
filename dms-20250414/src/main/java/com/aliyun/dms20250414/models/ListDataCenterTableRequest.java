@@ -4,10 +4,21 @@ package com.aliyun.dms20250414.models;
 import com.aliyun.tea.*;
 
 public class ListDataCenterTableRequest extends TeaModel {
+    /**
+     * <p>For frontend use only.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>仅前端使用</p>
+     */
     @NameInMap("CallFrom")
     public String callFrom;
 
     /**
+     * <p>The name of the database.</p>
+     * <ul>
+     * <li>If <code>ImportType</code> is <code>FILE</code>, this parameter represents the file name.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>diamonds.csv</p>
      */
@@ -15,6 +26,8 @@ public class ListDataCenterTableRequest extends TeaModel {
     public String databaseName;
 
     /**
+     * <p>The current DMS unit.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
      */
@@ -22,6 +35,11 @@ public class ListDataCenterTableRequest extends TeaModel {
     public String dmsUnit;
 
     /**
+     * <p>The import type.</p>
+     * <ul>
+     * <li>FILE</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>FILE</p>
      */
@@ -29,6 +47,11 @@ public class ListDataCenterTableRequest extends TeaModel {
     public String importType;
 
     /**
+     * <p>The name of the instance.</p>
+     * <ul>
+     * <li>If <code>ImportType</code> is <code>FILE</code>, this parameter represents the file ID of the data center.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>f-ean8u5881qk4*********xh5y</p>
      */
@@ -36,6 +59,8 @@ public class ListDataCenterTableRequest extends TeaModel {
     public String instanceName;
 
     /**
+     * <p>The page number, starting from 1.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -43,6 +68,8 @@ public class ListDataCenterTableRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of records to return per page. Default: 20.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -50,6 +77,8 @@ public class ListDataCenterTableRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The keyword for a fuzzy search of database tables.</p>
+     * 
      * <strong>example:</strong>
      * <p>testdb</p>
      */
@@ -57,6 +86,8 @@ public class ListDataCenterTableRequest extends TeaModel {
     public String searchKey;
 
     /**
+     * <p>The name of the table.</p>
+     * 
      * <strong>example:</strong>
      * <p>diamonds</p>
      */

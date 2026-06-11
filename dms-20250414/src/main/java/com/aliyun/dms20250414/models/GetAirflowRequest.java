@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetAirflowRequest extends TeaModel {
     /**
+     * <p>The ID of the Airflow instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class GetAirflowRequest extends TeaModel {
     public String airflowId;
 
     /**
+     * <p>The ID of the workspace.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

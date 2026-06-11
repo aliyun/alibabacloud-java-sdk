@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListDataLakePartitionShrinkRequest extends TeaModel {
     /**
+     * <p>The name of the data catalog.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class ListDataLakePartitionShrinkRequest extends TeaModel {
     public String catalogName;
 
     /**
+     * <p>The name of the database.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,8 @@ public class ListDataLakePartitionShrinkRequest extends TeaModel {
     public String dbName;
 
     /**
+     * <p>The number of entries per page. Valid values: 0 to 100.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -30,16 +34,28 @@ public class ListDataLakePartitionShrinkRequest extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>The token that is used to retrieve the next page of results. Set this parameter to the value of NextToken that is returned in the last response.</p>
+     * <ul>
+     * <li><p>If <strong>NextToken</strong> is empty, no subsequent query is needed.</p>
+     * </li>
+     * <li><p>If <strong>NextToken</strong> has a value, that value is the token to start the next query.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>f056501ada12****</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <p>The list of partition names.</p>
+     */
     @NameInMap("PartNames")
     public String partNamesShrink;
 
     /**
+     * <p>The name of the table.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -49,6 +65,11 @@ public class ListDataLakePartitionShrinkRequest extends TeaModel {
     public String tableName;
 
     /**
+     * <p>The ID of the tenant.</p>
+     * <blockquote>
+     * <p>Hover over your profile picture in the upper-right corner of the DMS console to obtain the tenant ID. For details, see <a href="https://help.aliyun.com/document_detail/181330.html">View tenant information</a>.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>3****</p>
      */
@@ -56,6 +77,8 @@ public class ListDataLakePartitionShrinkRequest extends TeaModel {
     public Long tid;
 
     /**
+     * <p>The ID of the workspace.</p>
+     * 
      * <strong>example:</strong>
      * <p>12****</p>
      */

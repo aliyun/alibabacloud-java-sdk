@@ -4,42 +4,81 @@ package com.aliyun.dms20250414.models;
 import com.aliyun.tea.*;
 
 public class AgentServiceOrderVO extends TeaModel {
+    /**
+     * <p>The agent service.</p>
+     */
     @NameInMap("AgentService")
     public String agentService;
 
+    /**
+     * <p>The deep research quota.</p>
+     */
     @NameInMap("DeepResearchQuota")
     public Integer deepResearchQuota;
 
+    /**
+     * <p>The quantity of deep research used.</p>
+     */
     @NameInMap("DeepResearchUsed")
     public Integer deepResearchUsed;
 
+    /**
+     * <p>The service expiration time, specified in UTC.</p>
+     */
     @NameInMap("ExpireTime")
     public String expireTime;
 
+    /**
+     * <p>The order creation time, specified in UTC.</p>
+     */
     @NameInMap("GmtCreate")
     public String gmtCreate;
 
+    /**
+     * <p>The order modification time, specified in UTC.</p>
+     */
     @NameInMap("GmtModified")
     public String gmtModified;
 
+    /**
+     * <p>The model call quota.</p>
+     */
     @NameInMap("ModelCallQuota")
     public Integer modelCallQuota;
 
+    /**
+     * <p>The number of model calls used.</p>
+     */
     @NameInMap("ModelCallUsed")
     public Integer modelCallUsed;
 
+    /**
+     * <p>The order instance ID.</p>
+     */
     @NameInMap("OrderInstanceId")
     public String orderInstanceId;
 
+    /**
+     * <p>The number of services.</p>
+     */
     @NameInMap("ServiceNum")
     public Integer serviceNum;
 
+    /**
+     * <p>The skill plan call quota.</p>
+     */
     @NameInMap("SkillPlanCallQuota")
     public Integer skillPlanCallQuota;
 
+    /**
+     * <p>The number of skill plan calls used.</p>
+     */
     @NameInMap("SkillPlanCallUsed")
     public Integer skillPlanCallUsed;
 
+    /**
+     * <p>The order status.</p>
+     */
     @NameInMap("Status")
     public String status;
 

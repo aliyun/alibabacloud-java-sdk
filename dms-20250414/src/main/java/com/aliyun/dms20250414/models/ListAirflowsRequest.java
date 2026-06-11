@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListAirflowsRequest extends TeaModel {
     /**
+     * <p>The number of entries per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      * 
@@ -15,6 +17,8 @@ public class ListAirflowsRequest extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>The token that is used to retrieve the next page of results.</p>
+     * 
      * <strong>example:</strong>
      * <p>f056501ada12****</p>
      */
@@ -22,6 +26,8 @@ public class ListAirflowsRequest extends TeaModel {
     public String nextToken;
 
     /**
+     * <p>The page number. The value starts from 1.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -29,6 +35,8 @@ public class ListAirflowsRequest extends TeaModel {
     public Integer pageIndex;
 
     /**
+     * <p>The number of records to skip. This is used for paging.</p>
+     * 
      * <strong>example:</strong>
      * <p>5</p>
      */
@@ -36,6 +44,7 @@ public class ListAirflowsRequest extends TeaModel {
     public Integer skip;
 
     /**
+     * <p>The ID of the DMS workspace.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

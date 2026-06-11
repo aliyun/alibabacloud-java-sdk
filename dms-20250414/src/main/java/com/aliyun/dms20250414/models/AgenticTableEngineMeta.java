@@ -4,39 +4,75 @@ package com.aliyun.dms20250414.models;
 import com.aliyun.tea.*;
 
 public class AgenticTableEngineMeta extends TeaModel {
+    /**
+     * <p>A checksum to verify the table\&quot;s data integrity.</p>
+     */
     @NameInMap("Checksum")
     public String checksum;
 
+    /**
+     * <p>The time the table was created, in UTC format (<code>YYYY-MM-DDThh:mm:ssZ</code>).</p>
+     */
     @NameInMap("CreateTime")
     public String createTime;
 
+    /**
+     * <p>The total size of the table\&quot;s data, in bytes.</p>
+     */
     @NameInMap("DataBytes")
     public Long dataBytes;
 
+    /**
+     * <p>The character encoding of the table.</p>
+     */
     @NameInMap("Encoding")
     public String encoding;
 
+    /**
+     * <p>The table\&quot;s storage engine, such as <code>InnoDB</code>.</p>
+     */
     @NameInMap("Engine")
     public String engine;
 
+    /**
+     * <p>A checksum of the table\&quot;s data and indexes.</p>
+     */
     @NameInMap("FullChecksum")
     public String fullChecksum;
 
+    /**
+     * <p>The total size of the table\&quot;s indexes, in bytes.</p>
+     */
     @NameInMap("IndexBytes")
     public Long indexBytes;
 
+    /**
+     * <p>The timestamp of the last DDL (Data Definition Language) operation, in UTC format (<code>YYYY-MM-DDThh:mm:ssZ</code>).</p>
+     */
     @NameInMap("LastDdlTime")
     public String lastDdlTime;
 
+    /**
+     * <p>The number of rows in the table.</p>
+     */
     @NameInMap("NumRows")
     public Long numRows;
 
+    /**
+     * <p>The table\&quot;s reference information.</p>
+     */
     @NameInMap("RefInfo")
     public String refInfo;
 
+    /**
+     * <p>The table\&quot;s total storage capacity, in bytes.</p>
+     */
     @NameInMap("StorageCapacity")
     public Long storageCapacity;
 
+    /**
+     * <p>The name of the table schema.</p>
+     */
     @NameInMap("TableSchemaName")
     public String tableSchemaName;
 

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DLColumn extends TeaModel {
     /**
+     * <p>The comment of the column.</p>
+     * 
      * <strong>example:</strong>
      * <p>from deserializer</p>
      */
@@ -12,6 +14,8 @@ public class DLColumn extends TeaModel {
     public String comment;
 
     /**
+     * <p>The name of the column.</p>
+     * 
      * <strong>example:</strong>
      * <p>col</p>
      */
@@ -19,6 +23,8 @@ public class DLColumn extends TeaModel {
     public String name;
 
     /**
+     * <p>The data type of the column. Valid values include array, bigint, binary, boolean, char, date, decimal, double, float, int, interval, map, set, smallint, string, struct, timestamp, tinyint, union, and varchar.</p>
+     * 
      * <strong>example:</strong>
      * <p>string</p>
      */

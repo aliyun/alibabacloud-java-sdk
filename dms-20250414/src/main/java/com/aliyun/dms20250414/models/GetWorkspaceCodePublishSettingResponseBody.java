@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class GetWorkspaceCodePublishSettingResponseBody extends TeaModel {
     /**
+     * <p>The status code that indicates the result of the request. A value of <code>200</code> indicates that the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The returned data.</p>
+     */
     @NameInMap("Data")
     public GetWorkspaceCodePublishSettingResponseBodyData data;
 
     /**
+     * <p>The error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>UnknownError</p>
      */
@@ -22,6 +29,8 @@ public class GetWorkspaceCodePublishSettingResponseBody extends TeaModel {
     public String errorCode;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -29,6 +38,8 @@ public class GetWorkspaceCodePublishSettingResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The error message returned if the request fails.</p>
+     * 
      * <strong>example:</strong>
      * <p>This record is being collected, please wait for a moment.</p>
      */
@@ -36,6 +47,8 @@ public class GetWorkspaceCodePublishSettingResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>E0D21075-CD3E-4D98-8264-FD8AD04A63B6</p>
      */
@@ -97,6 +110,8 @@ public class GetWorkspaceCodePublishSettingResponseBody extends TeaModel {
 
     public static class GetWorkspaceCodePublishSettingResponseBodyDataRepos extends TeaModel {
         /**
+         * <p>The name of the branch.</p>
+         * 
          * <strong>example:</strong>
          * <p>main</p>
          */
@@ -104,6 +119,8 @@ public class GetWorkspaceCodePublishSettingResponseBody extends TeaModel {
         public String branch;
 
         /**
+         * <p>The path to the notebook file.</p>
+         * 
          * <strong>example:</strong>
          * <p>/luna-public/</p>
          */
@@ -111,6 +128,8 @@ public class GetWorkspaceCodePublishSettingResponseBody extends TeaModel {
         public String path;
 
         /**
+         * <p>The name of the repository.</p>
+         * 
          * <strong>example:</strong>
          * <p>analyticscomputing/dide</p>
          */
@@ -149,16 +168,24 @@ public class GetWorkspaceCodePublishSettingResponseBody extends TeaModel {
     }
 
     public static class GetWorkspaceCodePublishSettingResponseBodyData extends TeaModel {
+        /**
+         * <p>The files and directories to exclude from the deployment.</p>
+         */
         @NameInMap("Exclude")
         public java.util.List<String> exclude;
 
         /**
+         * <p>Indicates whether the deployment branch is locked. If <code>true</code>, configurations submitted via the <code>workspaceCodePublish</code> API are ignored. If <code>false</code>, configurations submitted via the <code>workspaceCodePublish</code> API update the settings.</p>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
         @NameInMap("LockRepoBranch")
         public Boolean lockRepoBranch;
 
+        /**
+         * <p>The Git repositories in the workspace.</p>
+         */
         @NameInMap("Repos")
         public java.util.List<GetWorkspaceCodePublishSettingResponseBodyDataRepos> repos;
 

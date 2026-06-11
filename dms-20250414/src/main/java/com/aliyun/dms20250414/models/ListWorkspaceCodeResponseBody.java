@@ -4,10 +4,15 @@ package com.aliyun.dms20250414.models;
 import com.aliyun.tea.*;
 
 public class ListWorkspaceCodeResponseBody extends TeaModel {
+    /**
+     * <p>The data returned in the response.</p>
+     */
     @NameInMap("Data")
     public ListWorkspaceCodeResponseBodyData data;
 
     /**
+     * <p>The error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>InvalidTid</p>
      */
@@ -15,6 +20,8 @@ public class ListWorkspaceCodeResponseBody extends TeaModel {
     public String errorCode;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -22,6 +29,8 @@ public class ListWorkspaceCodeResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The error message returned if the request fails.</p>
+     * 
      * <strong>example:</strong>
      * <p>This record is being collected, please wait for a moment.</p>
      */
@@ -29,6 +38,8 @@ public class ListWorkspaceCodeResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>67E910F2-4B62-5B0C-ACA3-7547695C****</p>
      */
@@ -36,6 +47,8 @@ public class ListWorkspaceCodeResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -97,6 +110,8 @@ public class ListWorkspaceCodeResponseBody extends TeaModel {
 
     public static class ListWorkspaceCodeResponseBodyDataList extends TeaModel {
         /**
+         * <p>Indicates whether the object is a directory.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -104,6 +119,10 @@ public class ListWorkspaceCodeResponseBody extends TeaModel {
         public Boolean isDir;
 
         /**
+         * <p>The modification time of the file.</p>
+         * <p>The time is in the ISO 8601 format: <code>yyyy-MM-ddTHH:mm:ssZ</code>.</p>
+         * <p>This parameter is returned only for files.</p>
+         * 
          * <strong>example:</strong>
          * <p>2026-01-01T10:11:12Z</p>
          */
@@ -111,6 +130,8 @@ public class ListWorkspaceCodeResponseBody extends TeaModel {
         public String mtime;
 
         /**
+         * <p>The name of the file or directory.</p>
+         * 
          * <strong>example:</strong>
          * <p>default</p>
          */
@@ -118,6 +139,8 @@ public class ListWorkspaceCodeResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>The file size in bytes.</p>
+         * 
          * <strong>example:</strong>
          * <p>59</p>
          */
@@ -125,6 +148,8 @@ public class ListWorkspaceCodeResponseBody extends TeaModel {
         public Long size;
 
         /**
+         * <p>The target of the symlink.</p>
+         * 
          * <strong>example:</strong>
          * <p>../abc.py</p>
          */
@@ -179,6 +204,9 @@ public class ListWorkspaceCodeResponseBody extends TeaModel {
     }
 
     public static class ListWorkspaceCodeResponseBodyData extends TeaModel {
+        /**
+         * <p>An array of objects representing the files and directories.</p>
+         */
         @NameInMap("List")
         public java.util.List<ListWorkspaceCodeResponseBodyDataList> list;
 

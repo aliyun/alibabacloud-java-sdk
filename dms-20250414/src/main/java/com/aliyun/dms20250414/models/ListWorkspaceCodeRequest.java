@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListWorkspaceCodeRequest extends TeaModel {
     /**
+     * <p>The path of the file or directory.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class ListWorkspaceCodeRequest extends TeaModel {
     public String path;
 
     /**
+     * <p>The ID of the workspace.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

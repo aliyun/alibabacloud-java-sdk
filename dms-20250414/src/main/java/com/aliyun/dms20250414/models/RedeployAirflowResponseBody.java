@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class RedeployAirflowResponseBody extends TeaModel {
     /**
+     * <p>Details about the access denial.</p>
+     * 
      * <strong>example:</strong>
      * <p>NOT_FOUND</p>
      */
@@ -12,6 +14,8 @@ public class RedeployAirflowResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
+     * <p>The error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>UnknownError</p>
      */
@@ -19,6 +23,8 @@ public class RedeployAirflowResponseBody extends TeaModel {
     public String errorCode;
 
     /**
+     * <p>The status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -26,6 +32,8 @@ public class RedeployAirflowResponseBody extends TeaModel {
     public Long httpStatusCode;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>Successful</p>
      */
@@ -33,6 +41,8 @@ public class RedeployAirflowResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>67E910F2-4B62-5B0C-ACA3-7547695C****</p>
      */
@@ -40,6 +50,8 @@ public class RedeployAirflowResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The redeployment result.</p>
+     * 
      * <strong>example:</strong>
      * <p>{\&quot;Responses\&quot;: {\&quot;responses\&quot;: [{\&quot;Uuid\&quot;: \&quot;af-63ly5o1yuf076ifrpbxpka396\&quot;, \&quot;Success\&quot;: True}]}}</p>
      */
@@ -47,6 +59,14 @@ public class RedeployAirflowResponseBody extends TeaModel {
     public Boolean root;
 
     /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <ul>
+     * <li><p><strong>true</strong>: The request was successful.</p>
+     * </li>
+     * <li><p><strong>false</strong>: The request failed.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

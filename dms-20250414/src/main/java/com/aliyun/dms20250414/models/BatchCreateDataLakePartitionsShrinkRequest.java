@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class BatchCreateDataLakePartitionsShrinkRequest extends TeaModel {
     /**
+     * <p>The name of the data catalog.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class BatchCreateDataLakePartitionsShrinkRequest extends TeaModel {
     public String catalogName;
 
     /**
+     * <p>The name of the database.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,14 @@ public class BatchCreateDataLakePartitionsShrinkRequest extends TeaModel {
     public String dbName;
 
     /**
+     * <p>Specifies whether to ignore an error if a partition with the same name already exists. Valid values:</p>
+     * <ul>
+     * <li><p><strong>true</strong>: Ignore the error.</p>
+     * </li>
+     * <li><p><strong>false</strong>: Do not ignore the error.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -30,6 +40,8 @@ public class BatchCreateDataLakePartitionsShrinkRequest extends TeaModel {
     public Boolean ifNotExists;
 
     /**
+     * <p>Specifies whether to return partition information. If you set this parameter to <strong>true</strong>, the response includes the Partitions parameter.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -37,12 +49,14 @@ public class BatchCreateDataLakePartitionsShrinkRequest extends TeaModel {
     public Boolean needResult;
 
     /**
+     * <p>The information about the new partitions.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("PartitionInputs")
     public String partitionInputsShrink;
 
     /**
+     * <p>The name of the table.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -52,6 +66,11 @@ public class BatchCreateDataLakePartitionsShrinkRequest extends TeaModel {
     public String tableName;
 
     /**
+     * <p>The tenant ID.</p>
+     * <blockquote>
+     * <p>Hover over your profile picture in the upper-right corner of the DMS console to obtain the tenant ID. For details, see <a href="https://help.aliyun.com/document_detail/181330.html">View tenant information</a>.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>3****</p>
      */
@@ -59,6 +78,8 @@ public class BatchCreateDataLakePartitionsShrinkRequest extends TeaModel {
     public Long tid;
 
     /**
+     * <p>The workspace ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>12****</p>
      */

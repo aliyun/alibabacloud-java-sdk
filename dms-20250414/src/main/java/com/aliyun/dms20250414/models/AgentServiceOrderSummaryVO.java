@@ -4,21 +4,39 @@ package com.aliyun.dms20250414.models;
 import com.aliyun.tea.*;
 
 public class AgentServiceOrderSummaryVO extends TeaModel {
+    /**
+     * <p>The name of the agent service.</p>
+     */
     @NameInMap("AgentService")
     public String agentService;
 
+    /**
+     * <p>The deep research quota for the service.</p>
+     */
     @NameInMap("DeepResearchQuota")
     public Long deepResearchQuota;
 
+    /**
+     * <p>The model call quota for the service.</p>
+     */
     @NameInMap("ModelCallQuota")
     public Long modelCallQuota;
 
+    /**
+     * <p>The order count for the agent service.</p>
+     */
     @NameInMap("OrderCount")
     public Integer orderCount;
 
+    /**
+     * <p>The total number of services.</p>
+     */
     @NameInMap("ServiceNumTotal")
     public Integer serviceNumTotal;
 
+    /**
+     * <p>The skill plan call quota for the service.</p>
+     */
     @NameInMap("SkillPlanCallQuota")
     public Long skillPlanCallQuota;
 

@@ -4,10 +4,15 @@ package com.aliyun.dms20250414.models;
 import com.aliyun.tea.*;
 
 public class ListDataAgentWorkspaceMemberResponseBody extends TeaModel {
+    /**
+     * <p>The returned data.</p>
+     */
     @NameInMap("Data")
     public ListDataAgentWorkspaceMemberResponseBodyData data;
 
     /**
+     * <p>The error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>DMS-DA-40114</p>
      */
@@ -15,6 +20,8 @@ public class ListDataAgentWorkspaceMemberResponseBody extends TeaModel {
     public String errorCode;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>Specified parameter is not valid.</p>
      */
@@ -22,6 +29,8 @@ public class ListDataAgentWorkspaceMemberResponseBody extends TeaModel {
     public String errorMessage;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>E0D2-*****-A63B6</p>
      */
@@ -29,6 +38,8 @@ public class ListDataAgentWorkspaceMemberResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -82,6 +93,8 @@ public class ListDataAgentWorkspaceMemberResponseBody extends TeaModel {
 
     public static class ListDataAgentWorkspaceMemberResponseBodyDataContent extends TeaModel {
         /**
+         * <p>The time when the user joined the workspace. This is a UNIX timestamp in seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>1765961516</p>
          */
@@ -89,6 +102,8 @@ public class ListDataAgentWorkspaceMemberResponseBody extends TeaModel {
         public String joinTime;
 
         /**
+         * <p>The Alibaba Cloud UID of the user.</p>
+         * 
          * <strong>example:</strong>
          * <p>20282*****7591</p>
          */
@@ -96,6 +111,8 @@ public class ListDataAgentWorkspaceMemberResponseBody extends TeaModel {
         public String memberId;
 
         /**
+         * <p>The name of the user\&quot;s role in the workspace.</p>
+         * 
          * <strong>example:</strong>
          * <p>member</p>
          */
@@ -103,6 +120,8 @@ public class ListDataAgentWorkspaceMemberResponseBody extends TeaModel {
         public String roleName;
 
         /**
+         * <p>The number of tasks that are running for the user in the workspace.</p>
+         * 
          * <strong>example:</strong>
          * <p>15</p>
          */
@@ -110,6 +129,8 @@ public class ListDataAgentWorkspaceMemberResponseBody extends TeaModel {
         public Long runningTaskNumber;
 
         /**
+         * <p>The total number of tasks initiated by the user in the workspace.</p>
+         * 
          * <strong>example:</strong>
          * <p>30</p>
          */
@@ -117,6 +138,8 @@ public class ListDataAgentWorkspaceMemberResponseBody extends TeaModel {
         public Long totalTaskNumber;
 
         /**
+         * <p>The RAM username of the user.</p>
+         * 
          * <strong>example:</strong>
          * <p>yunqitest</p>
          */
@@ -179,10 +202,15 @@ public class ListDataAgentWorkspaceMemberResponseBody extends TeaModel {
     }
 
     public static class ListDataAgentWorkspaceMemberResponseBodyData extends TeaModel {
+        /**
+         * <p>The data content.</p>
+         */
         @NameInMap("Content")
         public java.util.List<ListDataAgentWorkspaceMemberResponseBodyDataContent> content;
 
         /**
+         * <p>The number of entries per page.</p>
+         * 
          * <strong>example:</strong>
          * <p>20</p>
          */
@@ -190,6 +218,8 @@ public class ListDataAgentWorkspaceMemberResponseBody extends TeaModel {
         public Integer maxResults;
 
         /**
+         * <p>The token for the next query.</p>
+         * 
          * <strong>example:</strong>
          * <p>no use</p>
          */
@@ -197,6 +227,8 @@ public class ListDataAgentWorkspaceMemberResponseBody extends TeaModel {
         public String nextToken;
 
         /**
+         * <p>The total number of pages.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -204,6 +236,8 @@ public class ListDataAgentWorkspaceMemberResponseBody extends TeaModel {
         public Long pageNumber;
 
         /**
+         * <p>The number of entries returned per page.</p>
+         * 
          * <strong>example:</strong>
          * <p>50</p>
          */
@@ -211,6 +245,8 @@ public class ListDataAgentWorkspaceMemberResponseBody extends TeaModel {
         public Long pageSize;
 
         /**
+         * <p>The total number of entries.</p>
+         * 
          * <strong>example:</strong>
          * <p>no use</p>
          */
@@ -218,6 +254,8 @@ public class ListDataAgentWorkspaceMemberResponseBody extends TeaModel {
         public Long totalElements;
 
         /**
+         * <p>The total number of pages.</p>
+         * 
          * <strong>example:</strong>
          * <p>no use</p>
          */

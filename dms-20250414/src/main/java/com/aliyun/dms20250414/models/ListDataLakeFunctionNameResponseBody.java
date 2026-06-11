@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListDataLakeFunctionNameResponseBody extends TeaModel {
     /**
+     * <p>The error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>UnknownError</p>
      */
@@ -12,16 +14,23 @@ public class ListDataLakeFunctionNameResponseBody extends TeaModel {
     public String errorCode;
 
     /**
+     * <p>The error message returned if the request fails.</p>
+     * 
      * <strong>example:</strong>
      * <p>UnknownError</p>
      */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
+    /**
+     * <p>The list of function names.</p>
+     */
     @NameInMap("FunctionNameList")
     public java.util.List<String> functionNameList;
 
     /**
+     * <p>The page size.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -29,6 +38,8 @@ public class ListDataLakeFunctionNameResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>The token that is used to start the next query.</p>
+     * 
      * <strong>example:</strong>
      * <p>f056501ada12****</p>
      */
@@ -36,6 +47,8 @@ public class ListDataLakeFunctionNameResponseBody extends TeaModel {
     public String nextToken;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>F1C78D32-1AFD-58AD-9DD2-C8A08969****</p>
      */
@@ -43,6 +56,14 @@ public class ListDataLakeFunctionNameResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <ul>
+     * <li><p><strong>true</strong>: The request was successful.</p>
+     * </li>
+     * <li><p><strong>false</strong>: The request failed.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

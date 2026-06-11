@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListDataAgentWorkspaceMemberRequest extends TeaModel {
     /**
+     * <p>The current DMS unit.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
      */
@@ -12,6 +14,8 @@ public class ListDataAgentWorkspaceMemberRequest extends TeaModel {
     public String DMSUnit;
 
     /**
+     * <p>The number of entries per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -19,6 +23,8 @@ public class ListDataAgentWorkspaceMemberRequest extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>The token.</p>
+     * 
      * <strong>example:</strong>
      * <p>NesLoK****</p>
      */
@@ -26,6 +32,8 @@ public class ListDataAgentWorkspaceMemberRequest extends TeaModel {
     public String nextToken;
 
     /**
+     * <p>The sort order.</p>
+     * 
      * <strong>example:</strong>
      * <p>Desc</p>
      */
@@ -33,6 +41,8 @@ public class ListDataAgentWorkspaceMemberRequest extends TeaModel {
     public String order;
 
     /**
+     * <p>The sort field.</p>
+     * 
      * <strong>example:</strong>
      * <p>gmt_create</p>
      */
@@ -40,6 +50,8 @@ public class ListDataAgentWorkspaceMemberRequest extends TeaModel {
     public String orderBy;
 
     /**
+     * <p>The page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -47,6 +59,8 @@ public class ListDataAgentWorkspaceMemberRequest extends TeaModel {
     public Long pageNumber;
 
     /**
+     * <p>The number of entries to return on each page.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -54,6 +68,8 @@ public class ListDataAgentWorkspaceMemberRequest extends TeaModel {
     public Long pageSize;
 
     /**
+     * <p>The prefix of the member ID to query.</p>
+     * 
      * <strong>example:</strong>
      * <p>20273</p>
      */
@@ -61,6 +77,8 @@ public class ListDataAgentWorkspaceMemberRequest extends TeaModel {
     public String searchMemberId;
 
     /**
+     * <p>The prefix of the member name to query.</p>
+     * 
      * <strong>example:</strong>
      * <p>yunqi</p>
      */
@@ -68,6 +86,8 @@ public class ListDataAgentWorkspaceMemberRequest extends TeaModel {
     public String searchRoleName;
 
     /**
+     * <p>The workspace ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>20923*****7291</p>
      */

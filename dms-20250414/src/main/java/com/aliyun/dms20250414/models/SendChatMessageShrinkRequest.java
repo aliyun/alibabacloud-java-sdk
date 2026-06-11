@@ -5,28 +5,38 @@ import com.aliyun.tea.*;
 
 public class SendChatMessageShrinkRequest extends TeaModel {
     /**
+     * <p>The agent ID. This parameter is required. You can obtain this ID from the response of the <code>CreateAgentSession</code> operation. An agent has a lifecycle, so its ID may change with each request.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>agent_12345</p>
+     * <p>agent_***</p>
      */
     @NameInMap("AgentId")
     public String agentId;
 
     /**
+     * <p>The DMS unit where your DMS instance is located. This information is used to connect to your DMS instance for database analysis. You can find this value in the DMS console. For users on the Alibaba Cloud China site, you can enter <code>cn-hangzhou</code>.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
      */
     @NameInMap("DMSUnit")
     public String DMSUnit;
 
+    /**
+     * <p>The data source information. Optional.</p>
+     */
     @NameInMap("DataSource")
     public String dataSourceShrink;
 
+    /**
+     * <p>A list of data sources. Optional.</p>
+     */
     @NameInMap("DataSources")
     public String dataSourcesShrink;
 
     /**
+     * <p>The content of the message to send to the agent.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -36,19 +46,35 @@ public class SendChatMessageShrinkRequest extends TeaModel {
     public String message;
 
     /**
+     * <p>The message type. The default value is <code>primary</code>. Set this parameter to <code>additional</code> when responding to a human-in-the-loop question from the agent. Set it to <code>cancel</code> to cancel the current session.</p>
+     * 
      * <strong>example:</strong>
      * <p>primary</p>
      */
     @NameInMap("MessageType")
     public String messageType;
 
+    /**
+     * <p>The parent session ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20qrliuoo7p2vlsfg*****</p>
+     */
     @NameInMap("ParentSessionId")
     public String parentSessionId;
 
+    /**
+     * <p>This parameter is required if the <code>MessageType</code> is <code>additional</code>. It contains the specific question asked by the agent during the human-in-the-loop process.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>请提供计算GMV的口径。</p>
+     */
     @NameInMap("Question")
     public String question;
 
     /**
+     * <p>The quoted content. This parameter is typically used when interacting with the agent.</p>
+     * 
      * <strong>example:</strong>
      * <p>{&quot;version&quot;:&quot;v0&quot;}</p>
      */
@@ -56,6 +82,8 @@ public class SendChatMessageShrinkRequest extends TeaModel {
     public String quotedMessage;
 
     /**
+     * <p>This parameter specifies the agent message to which this message is a response, enabling message deduplication. Set this to the highest checkpoint sequence number you have received. For the first message, use 0.</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
@@ -63,6 +91,8 @@ public class SendChatMessageShrinkRequest extends TeaModel {
     public String replyTo;
 
     /**
+     * <p>Session-specific configurations. These apply only if provided in the first <code>SendMessage</code> request of the session.</p>
+     * 
      * <strong>if can be null:</strong>
      * <p>true</p>
      */
@@ -70,10 +100,11 @@ public class SendChatMessageShrinkRequest extends TeaModel {
     public String sessionConfigShrink;
 
     /**
+     * <p>The session ID. This parameter is required. You can obtain the session ID by calling the <code>CreateAgentSession</code> operation.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>sess_12345</p>
+     * <p>sess_***</p>
      */
     @NameInMap("SessionId")
     public String sessionId;

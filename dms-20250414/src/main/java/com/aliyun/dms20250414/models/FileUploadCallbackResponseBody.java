@@ -4,10 +4,15 @@ package com.aliyun.dms20250414.models;
 import com.aliyun.tea.*;
 
 public class FileUploadCallbackResponseBody extends TeaModel {
+    /**
+     * <p>The returned struct.</p>
+     */
     @NameInMap("Data")
     public FileUploadCallbackResponseBodyData data;
 
     /**
+     * <p>The error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -15,6 +20,8 @@ public class FileUploadCallbackResponseBody extends TeaModel {
     public String errorCode;
 
     /**
+     * <p>The error message returned when the call fails.</p>
+     * 
      * <strong>example:</strong>
      * <p>Specified parameter Tid is not valid.</p>
      */
@@ -22,7 +29,7 @@ public class FileUploadCallbackResponseBody extends TeaModel {
     public String errorMessage;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>841BC14F-8E21-56B0-A7D6-593C5841AC84</p>
@@ -31,6 +38,14 @@ public class FileUploadCallbackResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful. The following values are returned:</p>
+     * <ul>
+     * <li><p><strong>true</strong>: The request was successful.</p>
+     * </li>
+     * <li><p><strong>false</strong>: The request failed.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -84,6 +99,8 @@ public class FileUploadCallbackResponseBody extends TeaModel {
 
     public static class FileUploadCallbackResponseBodyData extends TeaModel {
         /**
+         * <p>The file ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>f-8*******01m</p>
          */

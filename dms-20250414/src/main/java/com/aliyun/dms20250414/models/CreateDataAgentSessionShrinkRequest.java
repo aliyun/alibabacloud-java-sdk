@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateDataAgentSessionShrinkRequest extends TeaModel {
     /**
+     * <p>The current DMS unit.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
      */
@@ -12,19 +14,32 @@ public class CreateDataAgentSessionShrinkRequest extends TeaModel {
     public String DMSUnit;
 
     /**
+     * <p>The file ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>f-8*******01m</p>
      */
     @NameInMap("File")
     public String file;
 
+    /**
+     * <p>The session configuration.</p>
+     */
     @NameInMap("SessionConfig")
     public String sessionConfigShrink;
 
+    /**
+     * <p>The session title. Supports Chinese and English. Maximum length: 128 characters.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>帮我分析一下这份数据，给出报告。</p>
+     */
     @NameInMap("Title")
     public String title;
 
     /**
+     * <p>The workspace ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>12****</p>
      */

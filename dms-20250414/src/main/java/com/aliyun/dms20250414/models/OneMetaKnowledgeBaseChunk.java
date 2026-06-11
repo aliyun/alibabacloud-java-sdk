@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class OneMetaKnowledgeBaseChunk extends TeaModel {
     /**
+     * <p>The time when the chunk was last modified.</p>
+     * 
      * <strong>example:</strong>
      * <p>2026-04-20 15:51:27</p>
      */
@@ -12,6 +14,8 @@ public class OneMetaKnowledgeBaseChunk extends TeaModel {
     public String chunkMtime;
 
     /**
+     * <p>The title of the chunk.</p>
+     * 
      * <strong>example:</strong>
      * <p>titile1</p>
      */
@@ -19,6 +23,8 @@ public class OneMetaKnowledgeBaseChunk extends TeaModel {
     public String chunkTitle;
 
     /**
+     * <p>The content of the chunk.</p>
+     * 
      * <strong>example:</strong>
      * <p>abc</p>
      */
@@ -26,6 +32,8 @@ public class OneMetaKnowledgeBaseChunk extends TeaModel {
     public String content;
 
     /**
+     * <p>The name of the document.</p>
+     * 
      * <strong>example:</strong>
      * <p>test.md</p>
      */
@@ -33,6 +41,8 @@ public class OneMetaKnowledgeBaseChunk extends TeaModel {
     public String docName;
 
     /**
+     * <p>The unique identifier for the chunk.</p>
+     * 
      * <strong>example:</strong>
      * <p>2e12aeb5-52cd-4834-bcd8-****</p>
      */

@@ -4,9 +4,15 @@ package com.aliyun.dms20250414.models;
 import com.aliyun.tea.*;
 
 public class TrialOrderEligibilityVO extends TeaModel {
+    /**
+     * <p>Contains details about the eligibility status, such as the reason for ineligibility.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>Indicates whether the user is eligible for the trial.</p>
+     */
     @NameInMap("Valid")
     public Boolean valid;
 

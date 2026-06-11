@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListDataAgentWorkspaceRequest extends TeaModel {
     /**
+     * <p>The current DMS unit.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
      */
@@ -12,6 +14,8 @@ public class ListDataAgentWorkspaceRequest extends TeaModel {
     public String DMSUnit;
 
     /**
+     * <p>This parameter is reserved for future use.</p>
+     * 
      * <strong>example:</strong>
      * <p>no use</p>
      */
@@ -19,6 +23,8 @@ public class ListDataAgentWorkspaceRequest extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>This parameter is reserved for future use.</p>
+     * 
      * <strong>example:</strong>
      * <p>no use</p>
      */
@@ -26,6 +32,8 @@ public class ListDataAgentWorkspaceRequest extends TeaModel {
     public String nextToken;
 
     /**
+     * <p>The sort order.</p>
+     * 
      * <strong>example:</strong>
      * <p>DESC</p>
      */
@@ -33,6 +41,8 @@ public class ListDataAgentWorkspaceRequest extends TeaModel {
     public String order;
 
     /**
+     * <p>The field to sort by.</p>
+     * 
      * <strong>example:</strong>
      * <p>CreateTime</p>
      */
@@ -40,6 +50,7 @@ public class ListDataAgentWorkspaceRequest extends TeaModel {
     public String orderBy;
 
     /**
+     * <p>The page number.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -49,6 +60,7 @@ public class ListDataAgentWorkspaceRequest extends TeaModel {
     public String pageNumber;
 
     /**
+     * <p>The number of entries to return on each page.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -58,6 +70,8 @@ public class ListDataAgentWorkspaceRequest extends TeaModel {
     public String pageSize;
 
     /**
+     * <p>The workspace name.</p>
+     * 
      * <strong>example:</strong>
      * <p>workspaceTest</p>
      */
@@ -65,6 +79,7 @@ public class ListDataAgentWorkspaceRequest extends TeaModel {
     public String workspaceName;
 
     /**
+     * <p>The workspace type.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

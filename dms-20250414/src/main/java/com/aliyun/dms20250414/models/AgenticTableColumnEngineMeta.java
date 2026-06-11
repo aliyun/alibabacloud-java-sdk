@@ -4,33 +4,63 @@ package com.aliyun.dms20250414.models;
 import com.aliyun.tea.*;
 
 public class AgenticTableColumnEngineMeta extends TeaModel {
+    /**
+     * <p>Indicates whether the column uses auto-increment.</p>
+     */
     @NameInMap("AutoIncrement")
     public Boolean autoIncrement;
 
+    /**
+     * <p>The data length of the column. This parameter typically applies to string and binary data types.</p>
+     */
     @NameInMap("DataLength")
     public Long dataLength;
 
+    /**
+     * <p>The data precision of the column, which is the total number of digits in a numeric type.</p>
+     */
     @NameInMap("DataPrecision")
     public Integer dataPrecision;
 
+    /**
+     * <p>The data scale of the column, which is the number of digits to the right of the decimal point in a numeric type.</p>
+     */
     @NameInMap("DataScale")
     public Integer dataScale;
 
+    /**
+     * <p>The default value of the column.</p>
+     */
     @NameInMap("DefaultValue")
     public String defaultValue;
 
+    /**
+     * <p>The character encoding of the column.</p>
+     */
     @NameInMap("Encoding")
     public String encoding;
 
+    /**
+     * <p>Engine-specific attributes or flags for the column.</p>
+     */
     @NameInMap("Extra")
     public String extra;
 
+    /**
+     * <p>Indicates whether the column is a generated column.</p>
+     */
     @NameInMap("GenerationColumn")
     public Boolean generationColumn;
 
+    /**
+     * <p>The expression used to generate the column\&quot;s value. Applies only if <code>GenerationColumn</code> is <code>true</code>.</p>
+     */
     @NameInMap("GenerationExpression")
     public String generationExpression;
 
+    /**
+     * <p>Indicates whether the column is nullable.</p>
+     */
     @NameInMap("Nullable")
     public Boolean nullable;
 

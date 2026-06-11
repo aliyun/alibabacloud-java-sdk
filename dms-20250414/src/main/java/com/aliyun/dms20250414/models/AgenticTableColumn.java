@@ -4,18 +4,33 @@ package com.aliyun.dms20250414.models;
 import com.aliyun.tea.*;
 
 public class AgenticTableColumn extends TeaModel {
+    /**
+     * <p>The name of the column.</p>
+     */
     @NameInMap("ColumnName")
     public String columnName;
 
+    /**
+     * <p>The data type of the column.</p>
+     */
     @NameInMap("ColumnType")
     public String columnType;
 
+    /**
+     * <p>The description of the column.</p>
+     */
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <p>Engine-specific metadata for the column.</p>
+     */
     @NameInMap("EngineMeta")
     public AgenticTableColumnEngineMeta engineMeta;
 
+    /**
+     * <p>The 1-based ordinal position of the column within the table.</p>
+     */
     @NameInMap("Position")
     public Integer position;
 

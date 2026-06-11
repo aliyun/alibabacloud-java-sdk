@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DLPartition extends TeaModel {
     /**
+     * <p>The name of the data catalog.</p>
+     * 
      * <strong>example:</strong>
      * <p>hive</p>
      */
@@ -12,6 +14,8 @@ public class DLPartition extends TeaModel {
     public String catalogName;
 
     /**
+     * <p>The time when the partition was created. The time is a UNIX timestamp in seconds.</p>
+     * 
      * <strong>example:</strong>
      * <p>1735109884</p>
      */
@@ -19,6 +23,8 @@ public class DLPartition extends TeaModel {
     public Integer createTime;
 
     /**
+     * <p>The name of the database.</p>
+     * 
      * <strong>example:</strong>
      * <p>default</p>
      */
@@ -26,25 +32,38 @@ public class DLPartition extends TeaModel {
     public String dbName;
 
     /**
+     * <p>The time when the partition was last accessed.</p>
+     * 
      * <strong>example:</strong>
      * <p>1608707407</p>
      */
     @NameInMap("LastAccessTime")
     public Integer lastAccessTime;
 
+    /**
+     * <p>The key-value pairs for the partition.</p>
+     */
     @NameInMap("Parameters")
     public java.util.Map<String, String> parameters;
 
+    /**
+     * <p>The data storage description.</p>
+     */
     @NameInMap("Sd")
     public DLStorageDescriptor sd;
 
     /**
+     * <p>The table name.</p>
+     * 
      * <strong>example:</strong>
      * <p>table_name</p>
      */
     @NameInMap("TableName")
     public String tableName;
 
+    /**
+     * <p>The partition values.</p>
+     */
     @NameInMap("Values")
     public java.util.List<String> values;
 

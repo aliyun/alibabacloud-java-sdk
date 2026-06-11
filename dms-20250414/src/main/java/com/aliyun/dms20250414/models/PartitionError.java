@@ -5,12 +5,17 @@ import com.aliyun.tea.*;
 
 public class PartitionError extends TeaModel {
     /**
+     * <p>The details of the error.</p>
+     * 
      * <strong>example:</strong>
      * <p>auth failed</p>
      */
     @NameInMap("ErrorDetail")
     public String errorDetail;
 
+    /**
+     * <p>The partition values.</p>
+     */
     @NameInMap("Values")
     public java.util.List<String> values;
 

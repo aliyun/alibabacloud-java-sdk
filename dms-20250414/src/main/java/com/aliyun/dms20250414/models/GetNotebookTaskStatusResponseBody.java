@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class GetNotebookTaskStatusResponseBody extends TeaModel {
     /**
+     * <p>The status code. A value of Success indicates that the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>Success</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The scheduling result.</p>
+     */
     @NameInMap("Data")
     public GetNotebookTaskStatusResponseBodyData data;
 
     /**
+     * <p>The error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>UnknownError</p>
      */
@@ -22,6 +29,8 @@ public class GetNotebookTaskStatusResponseBody extends TeaModel {
     public String errorCode;
 
     /**
+     * <p>The status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -29,6 +38,8 @@ public class GetNotebookTaskStatusResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>Instance not found.</p>
      */
@@ -36,6 +47,8 @@ public class GetNotebookTaskStatusResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>E0D21075-CD3E-4D98-8264-FD8AD04A63B6</p>
      */
@@ -43,6 +56,14 @@ public class GetNotebookTaskStatusResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <ul>
+     * <li><p><strong>true</strong>: The request was successful.</p>
+     * </li>
+     * <li><p><strong>false</strong>: The request failed.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -111,15 +132,39 @@ public class GetNotebookTaskStatusResponseBody extends TeaModel {
     }
 
     public static class GetNotebookTaskStatusResponseBodyData extends TeaModel {
+        /**
+         * <p>The URL to preview the scheduling result.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://dms.aliyun.com/web-ide">https://dms.aliyun.com/web-ide</a>?***</p>
+         */
         @NameInMap("NotebookSchedulePreviewUrl")
         public String notebookSchedulePreviewUrl;
 
+        /**
+         * <p>The progress of the scheduling task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5/6</p>
+         */
         @NameInMap("Progress")
         public String progress;
 
+        /**
+         * <p>The output of the scheduling task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
+         */
         @NameInMap("Result")
         public String result;
 
+        /**
+         * <p>The status of the scheduling result.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
+         */
         @NameInMap("Status")
         public String status;
 

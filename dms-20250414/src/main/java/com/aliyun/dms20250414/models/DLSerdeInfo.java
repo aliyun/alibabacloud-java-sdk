@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DLSerdeInfo extends TeaModel {
     /**
+     * <p>The description of the serialization.</p>
+     * 
      * <strong>example:</strong>
      * <p>&quot;serialize&quot;</p>
      */
@@ -12,6 +14,8 @@ public class DLSerdeInfo extends TeaModel {
     public String description;
 
     /**
+     * <p>The name of the class used for deserialization.</p>
+     * 
      * <strong>example:</strong>
      * <p>org.apache.hadoop.hive.serde2.OpenCSVSerde</p>
      */
@@ -19,6 +23,8 @@ public class DLSerdeInfo extends TeaModel {
     public String deserializerClass;
 
     /**
+     * <p>The name of the serialization.</p>
+     * 
      * <strong>example:</strong>
      * <p>name</p>
      */
@@ -26,6 +32,8 @@ public class DLSerdeInfo extends TeaModel {
     public String name;
 
     /**
+     * <p>The key-value pairs of parameters related to serialization.</p>
+     * 
      * <strong>example:</strong>
      * <p>{
      *   &quot;serialization.format&quot;: &quot;1&quot;
@@ -35,6 +43,8 @@ public class DLSerdeInfo extends TeaModel {
     public java.util.Map<String, ?> parameters;
 
     /**
+     * <p>The type of serialization.</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
@@ -42,6 +52,8 @@ public class DLSerdeInfo extends TeaModel {
     public Integer serdeType;
 
     /**
+     * <p>The class name of the serialization library.</p>
+     * 
      * <strong>example:</strong>
      * <p>org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe</p>
      */
@@ -49,6 +61,8 @@ public class DLSerdeInfo extends TeaModel {
     public String serializationLib;
 
     /**
+     * <p>The name of the class used for serialization.</p>
+     * 
      * <strong>example:</strong>
      * <p>org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe</p>
      */

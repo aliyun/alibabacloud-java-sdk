@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class RetrieveKnowledgeBaseRequest extends TeaModel {
     /**
+     * <p>A filter for the data, specified as a SQL <code>WHERE</code> clause.</p>
+     * 
      * <strong>example:</strong>
      * <p>title = \&quot;test\&quot; AND name like \&quot;test%\&quot;</p>
      */
@@ -12,6 +14,17 @@ public class RetrieveKnowledgeBaseRequest extends TeaModel {
     public String filter;
 
     /**
+     * <p>The hybrid search algorithm. If this parameter is not set, the system directly compares and ranks the scores from the dense vector and full-text searches.</p>
+     * <p>Valid values:</p>
+     * <ul>
+     * <li><p><code>RRF</code>: Reciprocal Rank Fusion. This method uses a parameter <code>k</code> to control the fusion effect. For more information, see the <code>HybridSearchArgs</code> configuration.</p>
+     * </li>
+     * <li><p><code>Weight</code>: Weighted ranking. This method applies weights to the vector and full-text search scores before ranking. For more information, see the <code>HybridSearchArgs</code> configuration.</p>
+     * </li>
+     * <li><p><code>Cascaded</code>: Performs a full-text search first, followed by a vector search on the results of the full-text search.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>RRF</p>
      */
@@ -19,6 +32,55 @@ public class RetrieveKnowledgeBaseRequest extends TeaModel {
     public String hybridSearch;
 
     /**
+     * <p>Parameters for the specified <code>HybridSearch</code> algorithm. Both <code>RRF</code> and <code>Weight</code> are supported. You can use the <code>HybridPathsSetting</code> object to specify the retrieval paths: dense vector (<code>dense</code>), sparse vector (<code>sparse</code>), and full-text search (<code>fulltext</code>). If this object is not provided, the default retrieval paths are <code>dense</code> and <code>fulltext</code>.</p>
+     * <ul>
+     * <li><code>RRF</code>: Specifies the constant <code>k</code> in the scoring formula <code>1/(k+rank_i)</code>. The value of <code>k</code> must be an integer greater than 1. The format is as follows:</li>
+     * </ul>
+     * <pre><code>{
+     *   &quot;HybridPathsSetting&quot;: {
+     *     &quot;paths&quot;: &quot;dense,fulltext&quot;
+     *   },
+     *   &quot;RRF&quot;: {
+     *     &quot;k&quot;: 60
+     *   }
+     * }
+     * </code></pre>
+     * <ul>
+     * <li><p><code>Weight</code>:</p>
+     * <ul>
+     * <li><p>Two-path recall (do not specify <code>HybridPathsSetting</code>; specify only <code>alpha</code>):</p>
+     * <ul>
+     * <li>The score is calculated using the formula: <code>alpha * dense_score + (1-alpha) * fulltext_score</code>. The <code>alpha</code> parameter balances the scores from the dense vector and full-text searches. Its value must be in the range [0, 1], where 0 relies solely on full-text search, and 1 relies solely on dense vector search.</li>
+     * </ul>
+     * </li>
+     * </ul>
+     * </li>
+     * </ul>
+     * <pre><code>{ 
+     *    &quot;Weight&quot;: {
+     *     &quot;alpha&quot;: 0.5
+     *    }
+     * }
+     * </code></pre>
+     * <ul>
+     * <li><p>Three-path recall:</p>
+     * <ul>
+     * <li>The score is calculated using the formula: <code>normalized_dense * dense_score + normalized_sparse * sparse_score + normalized_fulltext * fulltext_score</code>. The <code>dense</code>, <code>sparse</code>, and <code>fulltext</code> parameters are the weights for the dense vector, sparse vector, and full-text searches, respectively. Their values must be 0 or greater. The system automatically normalizes the weights to sum to 1 (for example, <code>normalized_x = x / (dense + sparse + fulltext)</code>).</li>
+     * </ul>
+     * </li>
+     * </ul>
+     * <pre><code>{
+     *   &quot;HybridPathsSetting&quot;: {
+     *      &quot;paths&quot;: &quot;dense,sparse,fulltext&quot;
+     *    },
+     *   &quot;Weight&quot;: {
+     *     &quot;dense&quot;: 0.5,
+     *     &quot;sparse&quot;: 0.3,
+     *     &quot;fulltext&quot;: 0.2
+     *   }
+     * }
+     * </code></pre>
+     * 
      * <strong>example:</strong>
      * <p>{ \&quot;Weight\&quot;: { \&quot;alpha\&quot;: 0.5 } }</p>
      */
@@ -26,6 +88,8 @@ public class RetrieveKnowledgeBaseRequest extends TeaModel {
     public String hybridSearchArgs;
 
     /**
+     * <p>The metadata fields to return, separated by commas. By default, no metadata fields are returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>title,page</p>
      */
@@ -33,6 +97,16 @@ public class RetrieveKnowledgeBaseRequest extends TeaModel {
     public String includeMetadataFields;
 
     /**
+     * <p>Specifies whether to include the vector in the results. The default value is <code>false</code>.</p>
+     * <blockquote>
+     * <ul>
+     * <li><p><strong>false</strong>: The vector is not returned.</p>
+     * </li>
+     * <li><p><strong>true</strong>: The vector is returned.</p>
+     * </li>
+     * </ul>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -40,6 +114,7 @@ public class RetrieveKnowledgeBaseRequest extends TeaModel {
     public Boolean includeVector;
 
     /**
+     * <p>The ID of the knowledge base.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -49,6 +124,17 @@ public class RetrieveKnowledgeBaseRequest extends TeaModel {
     public String kbUuid;
 
     /**
+     * <p>The distance metric for retrieval. If unspecified, this defaults to the metric configured for the knowledge base. Only set this parameter if you have specific requirements.</p>
+     * <p>Valid values:</p>
+     * <ul>
+     * <li><p><code>l2</code>: Euclidean distance.</p>
+     * </li>
+     * <li><p><code>ip</code>: Inner product.</p>
+     * </li>
+     * <li><p><code>cosine</code>: Cosine similarity.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>cosine</p>
      */
@@ -56,6 +142,8 @@ public class RetrieveKnowledgeBaseRequest extends TeaModel {
     public String metrics;
 
     /**
+     * <p>The offset for pagination.</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
@@ -63,6 +151,10 @@ public class RetrieveKnowledgeBaseRequest extends TeaModel {
     public Integer offset;
 
     /**
+     * <p>The field to use for sorting the results. By default, this parameter is empty.</p>
+     * <p>The field must be a metadata field or a default table field, such as <code>id</code>. Supported formats include:</p>
+     * <p>You can specify a single field (for example, <code>chunk_id</code>), multiple comma-separated fields (for example, <code>block_id, chunk_id</code>), or fields with descending order (for example, <code>block_id DESC, chunk_id DESC</code>).</p>
+     * 
      * <strong>example:</strong>
      * <p>created_at</p>
      */
@@ -70,6 +162,7 @@ public class RetrieveKnowledgeBaseRequest extends TeaModel {
     public String orderBy;
 
     /**
+     * <p>The query text.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -79,6 +172,16 @@ public class RetrieveKnowledgeBaseRequest extends TeaModel {
     public String query;
 
     /**
+     * <p>The recall window. If specified, this parameter expands the context of the retrieved results. The format is a two-element array <code>[A, B]</code>, where <code>-10 &lt;= A &lt;= 0</code> and <code>0 &lt;= B &lt;= 10</code>.</p>
+     * <blockquote>
+     * <ul>
+     * <li><p>Recommended when document chunks are highly fragmented, which might cause context loss during retrieval.</p>
+     * </li>
+     * <li><p>Reranking occurs before windowing is applied.</p>
+     * </li>
+     * </ul>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>[-5,5]</p>
      */
@@ -86,6 +189,16 @@ public class RetrieveKnowledgeBaseRequest extends TeaModel {
     public String recallWindow;
 
     /**
+     * <p>The factor used to rerank vector search results. The value must be in the range (1, 5].</p>
+     * <blockquote>
+     * <ul>
+     * <li><p>Reranking may be slow if document chunks are sparse.</p>
+     * </li>
+     * <li><p>The number of items to rerank, calculated as <code>ceil(TopK * RerankFactor)</code>, should not exceed 50.</p>
+     * </li>
+     * </ul>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>2</p>
      */
@@ -93,6 +206,8 @@ public class RetrieveKnowledgeBaseRequest extends TeaModel {
     public Double rerankFactor;
 
     /**
+     * <p>The number of top-ranked results to return.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */

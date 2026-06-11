@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeKnowledgeBaseStatsRequest extends TeaModel {
     /**
+     * <p>The ID of the knowledge base.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

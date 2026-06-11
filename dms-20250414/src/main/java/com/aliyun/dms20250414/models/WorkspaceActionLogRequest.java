@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class WorkspaceActionLogRequest extends TeaModel {
     /**
+     * <p>The key for the session playback history.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class WorkspaceActionLogRequest extends TeaModel {
     public String key;
 
     /**
+     * <p>The workspace ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

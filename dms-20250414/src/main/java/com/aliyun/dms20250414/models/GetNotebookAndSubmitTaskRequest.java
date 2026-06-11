@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetNotebookAndSubmitTaskRequest extends TeaModel {
     /**
+     * <p>The input parameters for the Notebook file. Pass the parameters in a dictionary format.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class GetNotebookAndSubmitTaskRequest extends TeaModel {
     public String params;
 
     /**
+     * <p>The path of the Notebook file.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,8 @@ public class GetNotebookAndSubmitTaskRequest extends TeaModel {
     public String path;
 
     /**
+     * <p>The number of retries if scheduling fails.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -30,6 +34,7 @@ public class GetNotebookAndSubmitTaskRequest extends TeaModel {
     public Long retry;
 
     /**
+     * <p>The session ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -39,6 +44,8 @@ public class GetNotebookAndSubmitTaskRequest extends TeaModel {
     public String sessionId;
 
     /**
+     * <p>The workspace ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>8630242382****</p>
      */

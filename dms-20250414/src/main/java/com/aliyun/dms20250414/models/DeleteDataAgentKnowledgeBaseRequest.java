@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DeleteDataAgentKnowledgeBaseRequest extends TeaModel {
     /**
+     * <p>The current DMS unit.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
      */
@@ -12,6 +14,7 @@ public class DeleteDataAgentKnowledgeBaseRequest extends TeaModel {
     public String DMSUnit;
 
     /**
+     * <p>The ID of the knowledge base.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,6 +24,7 @@ public class DeleteDataAgentKnowledgeBaseRequest extends TeaModel {
     public String kbUuid;
 
     /**
+     * <p>The ID of the workspace.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

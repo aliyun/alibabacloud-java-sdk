@@ -4,10 +4,15 @@ package com.aliyun.dms20250414.models;
 import com.aliyun.tea.*;
 
 public class OperateCustomAgentResponseBody extends TeaModel {
+    /**
+     * <p>Return struct</p>
+     */
     @NameInMap("Data")
     public OperateCustomAgentResponseBodyData data;
 
     /**
+     * <p>Error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -15,6 +20,8 @@ public class OperateCustomAgentResponseBody extends TeaModel {
     public String errorCode;
 
     /**
+     * <p>Error message returned when the call fails.</p>
+     * 
      * <strong>example:</strong>
      * <p>Specified parameter Tid is not valid.</p>
      */
@@ -31,6 +38,14 @@ public class OperateCustomAgentResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Is the request successful? Return values are as follows:</p>
+     * <ul>
+     * <li><p>True: The request is successful.</p>
+     * </li>
+     * <li><p>False: The request failed.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -84,6 +99,8 @@ public class OperateCustomAgentResponseBody extends TeaModel {
 
     public static class OperateCustomAgentResponseBodyData extends TeaModel {
         /**
+         * <p>Custom Agent ID</p>
+         * 
          * <strong>example:</strong>
          * <p>ca-4y3ca4khkcu**********ysf</p>
          */
@@ -91,6 +108,8 @@ public class OperateCustomAgentResponseBody extends TeaModel {
         public String customAgentId;
 
         /**
+         * <p>Operation message</p>
+         * 
          * <strong>example:</strong>
          * <p>Custom agent successfully released</p>
          */
@@ -98,6 +117,8 @@ public class OperateCustomAgentResponseBody extends TeaModel {
         public String message;
 
         /**
+         * <p>Is the operation successful?</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
