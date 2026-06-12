@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteTopicRequest extends TeaModel {
     /**
+     * <p>The project name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class DeleteTopicRequest extends TeaModel {
     public String projectName;
 
     /**
+     * <p>The name of the topic to delete.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

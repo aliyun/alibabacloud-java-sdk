@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetGroupRequest extends TeaModel {
     /**
+     * <p>The consumer group name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class GetGroupRequest extends TeaModel {
     public String groupName;
 
     /**
+     * <p>The project name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

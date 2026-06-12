@@ -4,10 +4,15 @@ package com.aliyun.datahub20240620.models;
 import com.aliyun.tea.*;
 
 public class ListGroupsResponseBody extends TeaModel {
+    /**
+     * <p>The list of consumer groups.</p>
+     */
     @NameInMap("List")
     public java.util.List<ListGroupsResponseBodyList> list;
 
     /**
+     * <p>The maximum number of records returned in this query.</p>
+     * 
      * <strong>example:</strong>
      * <p>5</p>
      */
@@ -15,6 +20,8 @@ public class ListGroupsResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>The pagination token for the next query. If NextToken is empty, no more results are available. If NextToken has a value, it indicates the token from which the next query starts.</p>
+     * 
      * <strong>example:</strong>
      * <p>9892074a2a89600ae4b0d5a34fb99a3f</p>
      */
@@ -22,6 +29,8 @@ public class ListGroupsResponseBody extends TeaModel {
     public String nextToken;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>A20A7093-8FE0-058C-BE0C-3C8057D5F1A1</p>
      */
@@ -29,6 +38,8 @@ public class ListGroupsResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>True</p>
      */
@@ -36,6 +47,8 @@ public class ListGroupsResponseBody extends TeaModel {
     public Boolean success;
 
     /**
+     * <p>The total number of records in the query result.</p>
+     * 
      * <strong>example:</strong>
      * <p>50</p>
      */
@@ -97,6 +110,8 @@ public class ListGroupsResponseBody extends TeaModel {
 
     public static class ListGroupsResponseBodyList extends TeaModel {
         /**
+         * <p>The description of the consumer group.</p>
+         * 
          * <strong>example:</strong>
          * <p>test_comment</p>
          */
@@ -104,6 +119,8 @@ public class ListGroupsResponseBody extends TeaModel {
         public String comment;
 
         /**
+         * <p>The creation time.</p>
+         * 
          * <strong>example:</strong>
          * <p>1708171905000</p>
          */
@@ -111,6 +128,8 @@ public class ListGroupsResponseBody extends TeaModel {
         public Long createTime;
 
         /**
+         * <p>The creator of the consumer group.</p>
+         * 
          * <strong>example:</strong>
          * <p>276887103073464052</p>
          */
@@ -118,6 +137,8 @@ public class ListGroupsResponseBody extends TeaModel {
         public String creator;
 
         /**
+         * <p>The consumer group name.</p>
+         * 
          * <strong>example:</strong>
          * <p>test_group</p>
          */
@@ -125,16 +146,23 @@ public class ListGroupsResponseBody extends TeaModel {
         public String groupName;
 
         /**
+         * <p>The project name.</p>
+         * 
          * <strong>example:</strong>
          * <p>test_project</p>
          */
         @NameInMap("ProjectName")
         public String projectName;
 
+        /**
+         * <p>The list of topics bound to the consumer group.</p>
+         */
         @NameInMap("TopicList")
         public java.util.List<String> topicList;
 
         /**
+         * <p>The last update time.</p>
+         * 
          * <strong>example:</strong>
          * <p>1708171905000</p>
          */

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetSchemaResponseBody extends TeaModel {
     /**
+     * <p>The creation time.</p>
+     * 
      * <strong>example:</strong>
      * <p>1724041098000</p>
      */
@@ -12,6 +14,8 @@ public class GetSchemaResponseBody extends TeaModel {
     public Long createTime;
 
     /**
+     * <p>The creator of the schema.</p>
+     * 
      * <strong>example:</strong>
      * <p>1559031978056215</p>
      */
@@ -19,6 +23,8 @@ public class GetSchemaResponseBody extends TeaModel {
     public String creator;
 
     /**
+     * <p>The project name.</p>
+     * 
      * <strong>example:</strong>
      * <p>test_project</p>
      */
@@ -26,6 +32,8 @@ public class GetSchemaResponseBody extends TeaModel {
     public String projectName;
 
     /**
+     * <p>The schema data corresponding to the specified VersionId.</p>
+     * 
      * <strong>example:</strong>
      * <p>[{\&quot;Type\&quot;:\&quot;STRING\&quot;,\&quot;AllowNull\&quot;:true,\&quot;Name\&quot;:\&quot;context\&quot;}]</p>
      */
@@ -33,6 +41,8 @@ public class GetSchemaResponseBody extends TeaModel {
     public String recordSchema;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>A20A7093-8FE0-058C-BE0C-3C8057D5F1A1</p>
      */
@@ -40,6 +50,8 @@ public class GetSchemaResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>True</p>
      */
@@ -47,6 +59,8 @@ public class GetSchemaResponseBody extends TeaModel {
     public Boolean success;
 
     /**
+     * <p>The topic name.</p>
+     * 
      * <strong>example:</strong>
      * <p>test_topic</p>
      */
@@ -54,6 +68,8 @@ public class GetSchemaResponseBody extends TeaModel {
     public String topicName;
 
     /**
+     * <p>The schema version number.</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */

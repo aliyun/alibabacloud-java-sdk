@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListGroupsRequest extends TeaModel {
     /**
+     * <p>The filter keyword for a paged query.</p>
+     * 
      * <strong>example:</strong>
      * <p>dh</p>
      */
@@ -12,6 +14,8 @@ public class ListGroupsRequest extends TeaModel {
     public String keyword;
 
     /**
+     * <p>The maximum number of records to return in a paged query.</p>
+     * 
      * <strong>example:</strong>
      * <p>5</p>
      */
@@ -19,6 +23,8 @@ public class ListGroupsRequest extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>The pagination token. If NextToken is empty, paged query starts from the beginning. Otherwise, paged query starts from the end of the previous query indicated by the token.</p>
+     * 
      * <strong>example:</strong>
      * <p>9892074a2a89600ae4b0d5a34fb99a3f</p>
      */
@@ -26,6 +32,7 @@ public class ListGroupsRequest extends TeaModel {
     public String nextToken;
 
     /**
+     * <p>The project name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -35,6 +42,8 @@ public class ListGroupsRequest extends TeaModel {
     public String projectName;
 
     /**
+     * <p>Specifies whether to return only primary key information.</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -42,6 +51,8 @@ public class ListGroupsRequest extends TeaModel {
     public Boolean pure;
 
     /**
+     * <p>The number of records to skip in a paged query.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */

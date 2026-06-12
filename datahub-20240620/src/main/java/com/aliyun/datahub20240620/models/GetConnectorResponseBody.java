@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetConnectorResponseBody extends TeaModel {
     /**
+     * <p>The list of fields for the synchronization task.</p>
+     * 
      * <strong>example:</strong>
      * <p>[\&quot;field1\&quot;,\&quot;field2\&quot;]</p>
      */
@@ -12,6 +14,8 @@ public class GetConnectorResponseBody extends TeaModel {
     public String columnFields;
 
     /**
+     * <p>The configuration information of the synchronization task.</p>
+     * 
      * <strong>example:</strong>
      * <p>{\&quot;TimestampUnit\&quot;:\&quot;MICROSECOND\&quot;,\&quot;PartitionConfig\&quot;:{\&quot;hh\&quot;:\&quot;%H\&quot;,\&quot;mm\&quot;:\&quot;%M\&quot;,\&quot;ds\&quot;:\&quot;%Y%m%d\&quot;},\&quot;Project\&quot;:\&quot;xxx\&quot;,\&quot;TimeRange\&quot;:15,\&quot;TimeZone\&quot;:\&quot;Asia/Shanghai\&quot;,\&quot;Table\&quot;:\&quot;xxx\&quot;,\&quot;OdpsEndpoint\&quot;:\&quot;xxx\&quot;,\&quot;AccessId\&quot;:\&quot;xxx\&quot;,\&quot;PartitionMode\&quot;:\&quot;SYSTEM_TIME\&quot;,\&quot;AuthMode\&quot;:\&quot;ak\&quot;}</p>
      */
@@ -19,6 +23,8 @@ public class GetConnectorResponseBody extends TeaModel {
     public String config;
 
     /**
+     * <p>The synchronization task ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>c5e07a96-5069-4486-87c3-0d281951f772</p>
      */
@@ -26,6 +32,8 @@ public class GetConnectorResponseBody extends TeaModel {
     public String connectorId;
 
     /**
+     * <p>The creation time.</p>
+     * 
      * <strong>example:</strong>
      * <p>1724041098000</p>
      */
@@ -33,6 +41,8 @@ public class GetConnectorResponseBody extends TeaModel {
     public String createTime;
 
     /**
+     * <p>The creator of the synchronization task.</p>
+     * 
      * <strong>example:</strong>
      * <p>270523390948438349</p>
      */
@@ -40,6 +50,8 @@ public class GetConnectorResponseBody extends TeaModel {
     public String creator;
 
     /**
+     * <p>The time when the synchronization task is marked as done. This parameter takes effect only for ODPS synchronization (SINK_ODPS) tasks.</p>
+     * 
      * <strong>example:</strong>
      * <p>2025-06-06 15:45:00</p>
      */
@@ -47,6 +59,8 @@ public class GetConnectorResponseBody extends TeaModel {
     public String doneTime;
 
     /**
+     * <p>The project name.</p>
+     * 
      * <strong>example:</strong>
      * <p>test_project</p>
      */
@@ -54,6 +68,8 @@ public class GetConnectorResponseBody extends TeaModel {
     public String projectName;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>A20A7093-8FE0-058C-BE0C-3C8057D5F1A1</p>
      */
@@ -61,6 +77,8 @@ public class GetConnectorResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The status of the synchronization task.</p>
+     * 
      * <strong>example:</strong>
      * <p>RUNNING</p>
      */
@@ -68,6 +86,8 @@ public class GetConnectorResponseBody extends TeaModel {
     public String state;
 
     /**
+     * <p>The subscription ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>1764123132492KO88A</p>
      */
@@ -75,6 +95,8 @@ public class GetConnectorResponseBody extends TeaModel {
     public String subscriptionId;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>True</p>
      */
@@ -82,6 +104,8 @@ public class GetConnectorResponseBody extends TeaModel {
     public Boolean success;
 
     /**
+     * <p>The topic name.</p>
+     * 
      * <strong>example:</strong>
      * <p>test_topic</p>
      */
@@ -89,6 +113,8 @@ public class GetConnectorResponseBody extends TeaModel {
     public String topicName;
 
     /**
+     * <p>The type of the synchronization task.</p>
+     * 
      * <strong>example:</strong>
      * <p>SINK_ODPS</p>
      */
@@ -96,6 +122,8 @@ public class GetConnectorResponseBody extends TeaModel {
     public String type;
 
     /**
+     * <p>The last update time.</p>
+     * 
      * <strong>example:</strong>
      * <p>1724041098000</p>
      */

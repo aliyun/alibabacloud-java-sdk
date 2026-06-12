@@ -8,6 +8,8 @@ public class ListConnectorsResponseBody extends TeaModel {
     public ListConnectorsResponseBodyList list;
 
     /**
+     * <p>The maximum number of records returned in this query.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -15,6 +17,8 @@ public class ListConnectorsResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>The pagination token for the next query. If NextToken is empty, no more results are available. If NextToken has a value, it indicates the token from which the next query starts.</p>
+     * 
      * <strong>example:</strong>
      * <p>9892074a2a89600ae4b0d5a34fb99a3f</p>
      */
@@ -22,6 +26,8 @@ public class ListConnectorsResponseBody extends TeaModel {
     public String nextToken;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>A20A7093-8FE0-058C-BE0C-3C8057D5F1A1</p>
      */
@@ -29,6 +35,8 @@ public class ListConnectorsResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>True</p>
      */
@@ -36,6 +44,8 @@ public class ListConnectorsResponseBody extends TeaModel {
     public Boolean success;
 
     /**
+     * <p>The total number of query results.</p>
+     * 
      * <strong>example:</strong>
      * <p>50</p>
      */

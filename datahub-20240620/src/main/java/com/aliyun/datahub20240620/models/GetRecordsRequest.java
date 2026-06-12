@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetRecordsRequest extends TeaModel {
     /**
+     * <p>The project name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,8 @@ public class GetRecordsRequest extends TeaModel {
     public String projectName;
 
     /**
+     * <p>The shard ID from which to read data.</p>
+     * 
      * <strong>example:</strong>
      * <p>7</p>
      */
@@ -21,6 +24,8 @@ public class GetRecordsRequest extends TeaModel {
     public String shardId;
 
     /**
+     * <p>The start time for reading data. By default, data is read starting from 5 minutes before the current time.</p>
+     * 
      * <strong>example:</strong>
      * <p>1769065251123</p>
      */
@@ -28,6 +33,7 @@ public class GetRecordsRequest extends TeaModel {
     public Long startTime;
 
     /**
+     * <p>The topic name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

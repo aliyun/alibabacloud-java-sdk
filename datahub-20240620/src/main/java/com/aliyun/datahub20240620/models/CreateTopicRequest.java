@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateTopicRequest extends TeaModel {
     /**
+     * <p>The description of the topic.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,16 @@ public class CreateTopicRequest extends TeaModel {
     public String comment;
 
     /**
+     * <p>Specifies whether to enable multi-version schema. After this feature is enabled, a topic can have multiple schemas. You can select one of the schemas for writing. The consumer automatically parses each record based on the version tag. If the schema for the corresponding version has been deleted, parsing fails.</p>
+     * <blockquote>
+     * <p>Enabling multi-version schema has the following impacts:</p>
+     * </blockquote>
+     * <ol>
+     * <li>You can no longer use the appendFields operation.</li>
+     * <li>You can create, delete, modify, and query schemas.</li>
+     * <li>Connectors are created by using the schema of the latest version.</li>
+     * </ol>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      * 
@@ -24,6 +35,8 @@ public class CreateTopicRequest extends TeaModel {
     public Boolean enableSchemaRegistry;
 
     /**
+     * <p>The expansion mode of the topic. After the expansion mode is enabled, shards support horizontal scaling and no longer support merge or split operations. The number of shards can only increase and cannot decrease. After this mode is enabled, you can consume the current topic by using Kafka.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -31,6 +44,7 @@ public class CreateTopicRequest extends TeaModel {
     public Boolean expandMode;
 
     /**
+     * <p>The lifecycle of the topic. Unit: days.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -40,6 +54,7 @@ public class CreateTopicRequest extends TeaModel {
     public Integer lifecycle;
 
     /**
+     * <p>The project name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -49,6 +64,8 @@ public class CreateTopicRequest extends TeaModel {
     public String projectName;
 
     /**
+     * <p>The schema table structure.</p>
+     * 
      * <strong>example:</strong>
      * <p>&quot;{\&quot;fields\&quot;:[{\&quot;name\&quot;:\&quot;field_init\&quot;,\&quot;type\&quot;:\&quot;STRING\&quot;,\&quot;notnull\&quot;:\&quot;false\&quot;}]}&quot;</p>
      */
@@ -56,6 +73,13 @@ public class CreateTopicRequest extends TeaModel {
     public String recordSchema;
 
     /**
+     * <p>The topic type. Valid values:</p>
+     * <ol>
+     * <li><p>Blob: supports writing a block of binary data as a single record.</p>
+     * </li>
+     * <li><p>Tuple: supports database-like records where each record contains multiple columns. You must specify RecordSchema because data is transmitted over the network as strings and requires a schema to convert the data into the corresponding types.</p>
+     * </li>
+     * </ol>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -65,6 +89,7 @@ public class CreateTopicRequest extends TeaModel {
     public String recordType;
 
     /**
+     * <p>The number of shards.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -74,6 +99,7 @@ public class CreateTopicRequest extends TeaModel {
     public Integer shardCount;
 
     /**
+     * <p>The topic name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

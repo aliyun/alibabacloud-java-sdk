@@ -3,31 +3,27 @@ package com.aliyun.datahub20240620.models;
 
 import com.aliyun.tea.*;
 
-public class UpdateTopicResponseBody extends TeaModel {
+public class DeleteSubscriptionResponseBody extends TeaModel {
     /**
-     * <p>The request ID.</p>
-     * 
      * <strong>example:</strong>
-     * <p>20260319152525d2a3770b00c232d4</p>
+     * <p>2026031915480122c53d0b00c2d347</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
-     * 
      * <strong>example:</strong>
      * <p>True</p>
      */
     @NameInMap("Success")
     public Boolean success;
 
-    public static UpdateTopicResponseBody build(java.util.Map<String, ?> map) throws Exception {
-        UpdateTopicResponseBody self = new UpdateTopicResponseBody();
+    public static DeleteSubscriptionResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        DeleteSubscriptionResponseBody self = new DeleteSubscriptionResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public UpdateTopicResponseBody setRequestId(String requestId) {
+    public DeleteSubscriptionResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
@@ -35,7 +31,7 @@ public class UpdateTopicResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public UpdateTopicResponseBody setSuccess(Boolean success) {
+    public DeleteSubscriptionResponseBody setSuccess(Boolean success) {
         this.success = success;
         return this;
     }

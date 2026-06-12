@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class PutRecordsShrinkRequest extends TeaModel {
     /**
+     * <p>The project name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,12 +15,15 @@ public class PutRecordsShrinkRequest extends TeaModel {
     public String projectName;
 
     /**
+     * <p>The data to be written.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Records")
     public String recordsShrink;
 
     /**
+     * <p>The ID of the shard to which data is written. If this parameter is not specified, data is randomly written to a shard.</p>
+     * 
      * <strong>example:</strong>
      * <p>7</p>
      */
@@ -27,6 +31,7 @@ public class PutRecordsShrinkRequest extends TeaModel {
     public String shardId;
 
     /**
+     * <p>The topic name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

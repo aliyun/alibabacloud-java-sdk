@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateTopicResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>2026020210000022c53d0b06900170</p>
      */
@@ -12,6 +14,8 @@ public class CreateTopicResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>True</p>
      */
@@ -19,6 +23,8 @@ public class CreateTopicResponseBody extends TeaModel {
     public Boolean success;
 
     /**
+     * <p>The topic name.</p>
+     * 
      * <strong>example:</strong>
      * <p>test01</p>
      */

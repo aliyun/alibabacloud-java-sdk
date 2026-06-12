@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetGroupResponseBody extends TeaModel {
     /**
+     * <p>The description of the consumer group.</p>
+     * 
      * <strong>example:</strong>
      * <p>test_comment</p>
      */
@@ -12,6 +14,8 @@ public class GetGroupResponseBody extends TeaModel {
     public String comment;
 
     /**
+     * <p>The time when the consumer group was created.</p>
+     * 
      * <strong>example:</strong>
      * <p>1724041098000</p>
      */
@@ -19,6 +23,8 @@ public class GetGroupResponseBody extends TeaModel {
     public Long createTime;
 
     /**
+     * <p>The creator of the consumer group.</p>
+     * 
      * <strong>example:</strong>
      * <p>270523390948438349</p>
      */
@@ -26,6 +32,8 @@ public class GetGroupResponseBody extends TeaModel {
     public String creator;
 
     /**
+     * <p>The consumer group name.</p>
+     * 
      * <strong>example:</strong>
      * <p>consumer_group1</p>
      */
@@ -33,6 +41,8 @@ public class GetGroupResponseBody extends TeaModel {
     public String groupName;
 
     /**
+     * <p>The project name.</p>
+     * 
      * <strong>example:</strong>
      * <p>test_project</p>
      */
@@ -40,6 +50,8 @@ public class GetGroupResponseBody extends TeaModel {
     public String projectName;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>A20A7093-8FE0-058C-BE0C-3C8057D5F1A1</p>
      */
@@ -47,16 +59,23 @@ public class GetGroupResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>True</p>
      */
     @NameInMap("Success")
     public Boolean success;
 
+    /**
+     * <p>The list of topics associated with the consumer group.</p>
+     */
     @NameInMap("TopicList")
     public java.util.List<String> topicList;
 
     /**
+     * <p>The time when the consumer group was last updated.</p>
+     * 
      * <strong>example:</strong>
      * <p>1724041098000</p>
      */

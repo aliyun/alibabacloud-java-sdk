@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListSchemasRequest extends TeaModel {
     /**
+     * <p>The maximum number of records to return in a paginated query.</p>
+     * 
      * <strong>example:</strong>
      * <p>5</p>
      */
@@ -12,6 +14,8 @@ public class ListSchemasRequest extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>The pagination token. If NextToken is empty, the query starts from the beginning. Otherwise, the query starts from where the previous query left off based on the token.</p>
+     * 
      * <strong>example:</strong>
      * <p>9892074a2a89600ae4b0d5a34fb99a3f</p>
      */
@@ -19,6 +23,7 @@ public class ListSchemasRequest extends TeaModel {
     public String nextToken;
 
     /**
+     * <p>The project name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -28,6 +33,8 @@ public class ListSchemasRequest extends TeaModel {
     public String projectName;
 
     /**
+     * <p>The number of records to skip in a paginated query.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -35,6 +42,7 @@ public class ListSchemasRequest extends TeaModel {
     public Integer skip;
 
     /**
+     * <p>The topic name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

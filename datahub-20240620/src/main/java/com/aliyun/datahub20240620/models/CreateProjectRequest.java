@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateProjectRequest extends TeaModel {
     /**
+     * <p>The description of the workspace.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class CreateProjectRequest extends TeaModel {
     public String comment;
 
     /**
+     * <p>The project name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

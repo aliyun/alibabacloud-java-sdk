@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class PutRecordsRequest extends TeaModel {
     /**
+     * <p>The project name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,12 +15,15 @@ public class PutRecordsRequest extends TeaModel {
     public String projectName;
 
     /**
+     * <p>The data to be written.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Records")
     public java.util.List<PutRecordsRequestRecords> records;
 
     /**
+     * <p>The ID of the shard to which data is written. If this parameter is not specified, data is randomly written to a shard.</p>
+     * 
      * <strong>example:</strong>
      * <p>7</p>
      */
@@ -27,6 +31,7 @@ public class PutRecordsRequest extends TeaModel {
     public String shardId;
 
     /**
+     * <p>The topic name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -74,6 +79,8 @@ public class PutRecordsRequest extends TeaModel {
 
     public static class PutRecordsRequestRecords extends TeaModel {
         /**
+         * <p>The additional information of the record. You can leave this parameter empty if no additional information is available.</p>
+         * 
          * <strong>example:</strong>
          * <p>{&quot;key1&quot;:&quot;val1&quot;,&quot;key2&quot;:&quot;val2&quot;}</p>
          */
@@ -81,6 +88,7 @@ public class PutRecordsRequest extends TeaModel {
         public java.util.Map<String, String> attributes;
 
         /**
+         * <p>The data content of the record.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

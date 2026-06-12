@@ -3,9 +3,8 @@ package com.aliyun.datahub20240620.models;
 
 import com.aliyun.tea.*;
 
-public class GetSubscriptionRequest extends TeaModel {
+public class DeleteSubscriptionRequest extends TeaModel {
     /**
-     * <p>The project name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,17 +14,15 @@ public class GetSubscriptionRequest extends TeaModel {
     public String projectName;
 
     /**
-     * <p>The subscription ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>1764122860063VIIZ2</p>
+     * <p>1713853462590KA0YP</p>
      */
     @NameInMap("SubscriptionId")
     public String subscriptionId;
 
     /**
-     * <p>The topic name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -34,12 +31,12 @@ public class GetSubscriptionRequest extends TeaModel {
     @NameInMap("TopicName")
     public String topicName;
 
-    public static GetSubscriptionRequest build(java.util.Map<String, ?> map) throws Exception {
-        GetSubscriptionRequest self = new GetSubscriptionRequest();
+    public static DeleteSubscriptionRequest build(java.util.Map<String, ?> map) throws Exception {
+        DeleteSubscriptionRequest self = new DeleteSubscriptionRequest();
         return TeaModel.build(map, self);
     }
 
-    public GetSubscriptionRequest setProjectName(String projectName) {
+    public DeleteSubscriptionRequest setProjectName(String projectName) {
         this.projectName = projectName;
         return this;
     }
@@ -47,7 +44,7 @@ public class GetSubscriptionRequest extends TeaModel {
         return this.projectName;
     }
 
-    public GetSubscriptionRequest setSubscriptionId(String subscriptionId) {
+    public DeleteSubscriptionRequest setSubscriptionId(String subscriptionId) {
         this.subscriptionId = subscriptionId;
         return this;
     }
@@ -55,7 +52,7 @@ public class GetSubscriptionRequest extends TeaModel {
         return this.subscriptionId;
     }
 
-    public GetSubscriptionRequest setTopicName(String topicName) {
+    public DeleteSubscriptionRequest setTopicName(String topicName) {
         this.topicName = topicName;
         return this;
     }

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class PutRecordsResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>A20A7093-8FE0-058C-BE0C-3C8057D5F1A1</p>
      */
@@ -12,6 +14,8 @@ public class PutRecordsResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The ID of the shard to which the data was written.</p>
+     * 
      * <strong>example:</strong>
      * <p>7</p>
      */
@@ -19,6 +23,8 @@ public class PutRecordsResponseBody extends TeaModel {
     public String shardId;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>True</p>
      */

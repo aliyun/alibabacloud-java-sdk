@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetConnectorRequest extends TeaModel {
     /**
+     * <p>The synchronization task ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class GetConnectorRequest extends TeaModel {
     public String connectorId;
 
     /**
+     * <p>The project name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,7 @@ public class GetConnectorRequest extends TeaModel {
     public String projectName;
 
     /**
+     * <p>The topic name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetTopicResponseBody extends TeaModel {
     /**
+     * <p>The topic description.</p>
+     * 
      * <strong>example:</strong>
      * <p>test_comment</p>
      */
@@ -12,6 +14,8 @@ public class GetTopicResponseBody extends TeaModel {
     public String comment;
 
     /**
+     * <p>The creation time.</p>
+     * 
      * <strong>example:</strong>
      * <p>1724041098000</p>
      */
@@ -19,6 +23,8 @@ public class GetTopicResponseBody extends TeaModel {
     public String createTime;
 
     /**
+     * <p>The topic creator.</p>
+     * 
      * <strong>example:</strong>
      * <p>1397493986831962</p>
      */
@@ -26,6 +32,8 @@ public class GetTopicResponseBody extends TeaModel {
     public String creator;
 
     /**
+     * <p>Indicates whether multiple versions are supported.</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -33,6 +41,8 @@ public class GetTopicResponseBody extends TeaModel {
     public Boolean enableSchemaRegistry;
 
     /**
+     * <p>Indicates whether the extended mode is enabled.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -40,6 +50,8 @@ public class GetTopicResponseBody extends TeaModel {
     public Boolean expandMode;
 
     /**
+     * <p>The lifecycle.</p>
+     * 
      * <strong>example:</strong>
      * <p>3</p>
      */
@@ -47,6 +59,8 @@ public class GetTopicResponseBody extends TeaModel {
     public Integer lifecycle;
 
     /**
+     * <p>The project name.</p>
+     * 
      * <strong>example:</strong>
      * <p>test_project</p>
      */
@@ -54,6 +68,8 @@ public class GetTopicResponseBody extends TeaModel {
     public String projectName;
 
     /**
+     * <p>The data schema for the TUPLE type.</p>
+     * 
      * <strong>example:</strong>
      * <p>[{\&quot;Type\&quot;:\&quot;STRING\&quot;,\&quot;AllowNull\&quot;:true,\&quot;Name\&quot;:\&quot;str\&quot;},{\&quot;Type\&quot;:\&quot;STRING\&quot;,\&quot;AllowNull\&quot;:true,\&quot;Name\&quot;:\&quot;dt\&quot;}]</p>
      */
@@ -61,6 +77,8 @@ public class GetTopicResponseBody extends TeaModel {
     public String recordSchema;
 
     /**
+     * <p>The topic type.</p>
+     * 
      * <strong>example:</strong>
      * <p>TUPLE</p>
      */
@@ -68,6 +86,8 @@ public class GetTopicResponseBody extends TeaModel {
     public String recordType;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>A20A7093-8FE0-058C-BE0C-3C8057D5F1A1</p>
      */
@@ -75,6 +95,8 @@ public class GetTopicResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The number of shards.</p>
+     * 
      * <strong>example:</strong>
      * <p>3</p>
      */
@@ -82,6 +104,8 @@ public class GetTopicResponseBody extends TeaModel {
     public Integer shardCount;
 
     /**
+     * <p>The total storage of the topic.</p>
+     * 
      * <strong>example:</strong>
      * <p>12252454</p>
      */
@@ -89,6 +113,8 @@ public class GetTopicResponseBody extends TeaModel {
     public Long storage;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>True</p>
      */
@@ -96,6 +122,8 @@ public class GetTopicResponseBody extends TeaModel {
     public Boolean success;
 
     /**
+     * <p>The topic name.</p>
+     * 
      * <strong>example:</strong>
      * <p>test_topic</p>
      */
@@ -103,6 +131,8 @@ public class GetTopicResponseBody extends TeaModel {
     public String topicName;
 
     /**
+     * <p>The last update time.</p>
+     * 
      * <strong>example:</strong>
      * <p>1724041098000</p>
      */

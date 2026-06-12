@@ -4,10 +4,15 @@ package com.aliyun.datahub20240620.models;
 import com.aliyun.tea.*;
 
 public class ListSchemasResponseBody extends TeaModel {
+    /**
+     * <p>The list of schemas.</p>
+     */
     @NameInMap("List")
     public java.util.List<ListSchemasResponseBodyList> list;
 
     /**
+     * <p>The maximum number of records returned in this query.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -15,6 +20,8 @@ public class ListSchemasResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>The pagination token for the next query. If NextToken is empty, no more results are available. If NextToken has a value, the value indicates the token for the next query.</p>
+     * 
      * <strong>example:</strong>
      * <p>9892074a2a89600ae4b0d5a34fb99a3f</p>
      */
@@ -22,6 +29,8 @@ public class ListSchemasResponseBody extends TeaModel {
     public String nextToken;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>20250401102332e68e3d0b04ab4904</p>
      */
@@ -29,6 +38,8 @@ public class ListSchemasResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>True</p>
      */
@@ -36,6 +47,8 @@ public class ListSchemasResponseBody extends TeaModel {
     public Boolean success;
 
     /**
+     * <p>The total number of records.</p>
+     * 
      * <strong>example:</strong>
      * <p>50</p>
      */
@@ -97,6 +110,8 @@ public class ListSchemasResponseBody extends TeaModel {
 
     public static class ListSchemasResponseBodyList extends TeaModel {
         /**
+         * <p>The creation time.</p>
+         * 
          * <strong>example:</strong>
          * <p>1708171905000</p>
          */
@@ -104,6 +119,8 @@ public class ListSchemasResponseBody extends TeaModel {
         public Long createTime;
 
         /**
+         * <p>The creator of the schema.</p>
+         * 
          * <strong>example:</strong>
          * <p>1048133943212399</p>
          */
@@ -111,6 +128,8 @@ public class ListSchemasResponseBody extends TeaModel {
         public String creator;
 
         /**
+         * <p>The project name.</p>
+         * 
          * <strong>example:</strong>
          * <p>test_project</p>
          */
@@ -118,6 +137,8 @@ public class ListSchemasResponseBody extends TeaModel {
         public String projectName;
 
         /**
+         * <p>The schema data corresponding to the version ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>[{\&quot;Type\&quot;:\&quot;STRING\&quot;,\&quot;AllowNull\&quot;:true,\&quot;Name\&quot;:\&quot;context\&quot;}]</p>
          */
@@ -125,6 +146,8 @@ public class ListSchemasResponseBody extends TeaModel {
         public String recordSchema;
 
         /**
+         * <p>The topic name.</p>
+         * 
          * <strong>example:</strong>
          * <p>test_topic</p>
          */
@@ -132,6 +155,8 @@ public class ListSchemasResponseBody extends TeaModel {
         public String topicName;
 
         /**
+         * <p>The schema version ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */

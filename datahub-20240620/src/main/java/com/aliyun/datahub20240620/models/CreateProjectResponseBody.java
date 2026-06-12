@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateProjectResponseBody extends TeaModel {
     /**
+     * <p>The project name.</p>
+     * 
      * <strong>example:</strong>
      * <p>test_project</p>
      */
@@ -12,6 +14,8 @@ public class CreateProjectResponseBody extends TeaModel {
     public String projectName;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>2025112610124322c53d0b028e7fa9</p>
      */
@@ -19,6 +23,8 @@ public class CreateProjectResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>True</p>
      */

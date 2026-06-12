@@ -27,8 +27,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Creates a project.</p>
+     * 
      * <b>summary</b> : 
-     * <p>创建Project资源</p>
+     * <p>Creates a project.</p>
      * 
      * @param request CreateProjectRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -63,8 +66,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Creates a project.</p>
+     * 
      * <b>summary</b> : 
-     * <p>创建Project资源</p>
+     * <p>Creates a project.</p>
      * 
      * @param request CreateProjectRequest
      * @return CreateProjectResponse
@@ -75,8 +81,77 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>创建订阅信息</p>
+     * 
      * <b>summary</b> : 
-     * <p>创建Topic资源</p>
+     * <p>创建Subscription资源</p>
+     * 
+     * @param request CreateSubscriptionRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateSubscriptionResponse
+     */
+    public CreateSubscriptionResponse createSubscriptionWithOptions(CreateSubscriptionRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.application)) {
+            query.put("Application", request.application);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.comment)) {
+            query.put("Comment", request.comment);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.projectName)) {
+            query.put("ProjectName", request.projectName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.subscriptionId)) {
+            query.put("SubscriptionId", request.subscriptionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.topicName)) {
+            query.put("TopicName", request.topicName);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateSubscription"),
+            new TeaPair("version", "2024-06-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateSubscriptionResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>创建订阅信息</p>
+     * 
+     * <b>summary</b> : 
+     * <p>创建Subscription资源</p>
+     * 
+     * @param request CreateSubscriptionRequest
+     * @return CreateSubscriptionResponse
+     */
+    public CreateSubscriptionResponse createSubscription(CreateSubscriptionRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createSubscriptionWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Creates a topic resource.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>A topic is the smallest unit for DataHub subscription and publishing. You can use a topic to represent a type or category of streaming data.</p>
      * 
      * @param request CreateTopicRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -139,8 +214,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Creates a topic resource.</p>
+     * 
      * <b>summary</b> : 
-     * <p>创建Topic资源</p>
+     * <p>A topic is the smallest unit for DataHub subscription and publishing. You can use a topic to represent a type or category of streaming data.</p>
      * 
      * @param request CreateTopicRequest
      * @return CreateTopicResponse
@@ -151,8 +229,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Deletes a project.</p>
+     * 
      * <b>summary</b> : 
-     * <p>删除Project资源</p>
+     * <p>Deletes a project. Before deleting a project, delete all resources under the project, including topics, synchronization tasks, and subscription tasks.</p>
      * 
      * @param request DeleteProjectRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -183,8 +264,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Deletes a project.</p>
+     * 
      * <b>summary</b> : 
-     * <p>删除Project资源</p>
+     * <p>Deletes a project. Before deleting a project, delete all resources under the project, including topics, synchronization tasks, and subscription tasks.</p>
      * 
      * @param request DeleteProjectRequest
      * @return DeleteProjectResponse
@@ -195,8 +279,69 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>删除订阅任务</p>
+     * 
      * <b>summary</b> : 
-     * <p>删除Topic资源</p>
+     * <p>删除Subscription资源</p>
+     * 
+     * @param request DeleteSubscriptionRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteSubscriptionResponse
+     */
+    public DeleteSubscriptionResponse deleteSubscriptionWithOptions(DeleteSubscriptionRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.projectName)) {
+            query.put("ProjectName", request.projectName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.subscriptionId)) {
+            query.put("SubscriptionId", request.subscriptionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.topicName)) {
+            query.put("TopicName", request.topicName);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteSubscription"),
+            new TeaPair("version", "2024-06-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteSubscriptionResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>删除订阅任务</p>
+     * 
+     * <b>summary</b> : 
+     * <p>删除Subscription资源</p>
+     * 
+     * @param request DeleteSubscriptionRequest
+     * @return DeleteSubscriptionResponse
+     */
+    public DeleteSubscriptionResponse deleteSubscription(DeleteSubscriptionRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteSubscriptionWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Deletes a topic resource.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes a topic resource. Before deleting a topic resource, delete all subscriptions and sync tasks under the topic.</p>
      * 
      * @param request DeleteTopicRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -231,8 +376,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Deletes a topic resource.</p>
+     * 
      * <b>summary</b> : 
-     * <p>删除Topic资源</p>
+     * <p>Deletes a topic resource. Before deleting a topic resource, delete all subscriptions and sync tasks under the topic.</p>
      * 
      * @param request DeleteTopicRequest
      * @return DeleteTopicResponse
@@ -243,8 +391,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Queries the information about a synchronization task.</p>
+     * 
      * <b>summary</b> : 
-     * <p>查询Connector信息</p>
+     * <p>Queries the information about a synchronization task.</p>
      * 
      * @param request GetConnectorRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -283,8 +434,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Queries the information about a synchronization task.</p>
+     * 
      * <b>summary</b> : 
-     * <p>查询Connector信息</p>
+     * <p>Queries the information about a synchronization task.</p>
      * 
      * @param request GetConnectorRequest
      * @return GetConnectorResponse
@@ -295,8 +449,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Queries the information about a consumer group.</p>
+     * 
      * <b>summary</b> : 
-     * <p>查询Group信息</p>
+     * <p>Queries the information about a consumer group.</p>
      * 
      * @param request GetGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -331,8 +488,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Queries the information about a consumer group.</p>
+     * 
      * <b>summary</b> : 
-     * <p>查询Group信息</p>
+     * <p>Queries the information about a consumer group.</p>
      * 
      * @param request GetGroupRequest
      * @return GetGroupResponse
@@ -343,8 +503,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Queries project information.</p>
+     * 
      * <b>summary</b> : 
-     * <p>查询Project资源详细信息</p>
+     * <p>Queries project information.</p>
      * 
      * @param request GetProjectRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -375,8 +538,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Queries project information.</p>
+     * 
      * <b>summary</b> : 
-     * <p>查询Project资源详细信息</p>
+     * <p>Queries project information.</p>
      * 
      * @param request GetProjectRequest
      * @return GetProjectResponse
@@ -387,8 +553,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This operation is intended for debugging purposes. Do not use this operation to read large amounts of data.</p>
+     * 
      * <b>summary</b> : 
-     * <p>读取Topic数据</p>
+     * <p>Reads data from a specified topic. This operation is primarily used for debugging. For high-volume data reading, refer to the SDK documentation.</p>
      * 
      * @param request GetRecordsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -431,8 +600,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This operation is intended for debugging purposes. Do not use this operation to read large amounts of data.</p>
+     * 
      * <b>summary</b> : 
-     * <p>读取Topic数据</p>
+     * <p>Reads data from a specified topic. This operation is primarily used for debugging. For high-volume data reading, refer to the SDK documentation.</p>
      * 
      * @param request GetRecordsRequest
      * @return GetRecordsResponse
@@ -443,8 +615,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Queries schema information.</p>
+     * 
      * <b>summary</b> : 
-     * <p>查询Schema信息</p>
+     * <p>Queries schema information.</p>
      * 
      * @param request GetSchemaRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -483,8 +658,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Queries schema information.</p>
+     * 
      * <b>summary</b> : 
-     * <p>查询Schema信息</p>
+     * <p>Queries schema information.</p>
      * 
      * @param request GetSchemaRequest
      * @return GetSchemaResponse
@@ -495,8 +673,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Queries subscription information.</p>
+     * 
      * <b>summary</b> : 
-     * <p>查询Subscription信息</p>
+     * <p>Queries subscription information.</p>
      * 
      * @param request GetSubscriptionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -535,8 +716,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Queries subscription information.</p>
+     * 
      * <b>summary</b> : 
-     * <p>查询Subscription信息</p>
+     * <p>Queries subscription information.</p>
      * 
      * @param request GetSubscriptionRequest
      * @return GetSubscriptionResponse
@@ -547,8 +731,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Queries topic information.</p>
+     * 
      * <b>summary</b> : 
-     * <p>查询Topic信息</p>
+     * <p>Queries topic information.</p>
      * 
      * @param request GetTopicRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -583,8 +770,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Queries topic information.</p>
+     * 
      * <b>summary</b> : 
-     * <p>查询Topic信息</p>
+     * <p>Queries topic information.</p>
      * 
      * @param request GetTopicRequest
      * @return GetTopicResponse
@@ -595,8 +785,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Queries the list of synchronization tasks.</p>
+     * 
      * <b>summary</b> : 
-     * <p>查询Connector列表信息</p>
+     * <p>Retrieves a list of synchronization tasks.</p>
      * 
      * @param request ListConnectorsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -651,8 +844,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Queries the list of synchronization tasks.</p>
+     * 
      * <b>summary</b> : 
-     * <p>查询Connector列表信息</p>
+     * <p>Retrieves a list of synchronization tasks.</p>
      * 
      * @param request ListConnectorsRequest
      * @return ListConnectorsResponse
@@ -663,8 +859,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Queries the list of consumer groups.</p>
+     * 
      * <b>summary</b> : 
-     * <p>查询Group列表信息</p>
+     * <p>Retrieves a list of consumer groups.</p>
      * 
      * @param request ListGroupsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -715,8 +914,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Queries the list of consumer groups.</p>
+     * 
      * <b>summary</b> : 
-     * <p>查询Group列表信息</p>
+     * <p>Retrieves a list of consumer groups.</p>
      * 
      * @param request ListGroupsRequest
      * @return ListGroupsResponse
@@ -727,8 +929,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Queries the list of projects.</p>
+     * 
      * <b>summary</b> : 
-     * <p>查询Project列表信息</p>
+     * <p>Retrieves a list of projects.</p>
      * 
      * @param request ListProjectsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -775,8 +980,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Queries the list of projects.</p>
+     * 
      * <b>summary</b> : 
-     * <p>查询Project列表信息</p>
+     * <p>Retrieves a list of projects.</p>
      * 
      * @param request ListProjectsRequest
      * @return ListProjectsResponse
@@ -787,8 +995,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Queries schema list information.</p>
+     * 
      * <b>summary</b> : 
-     * <p>查询Schema列表信息</p>
+     * <p>Lists schemas.</p>
      * 
      * @param request ListSchemasRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -835,8 +1046,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Queries schema list information.</p>
+     * 
      * <b>summary</b> : 
-     * <p>查询Schema列表信息</p>
+     * <p>Lists schemas.</p>
      * 
      * @param request ListSchemasRequest
      * @return ListSchemasResponse
@@ -847,8 +1061,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Queries subscription list information.</p>
+     * 
      * <b>summary</b> : 
-     * <p>查询Subscription列表信息</p>
+     * <p>Retrieves a list of subscriptions.</p>
      * 
      * @param request ListSubscriptionsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -899,8 +1116,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Queries subscription list information.</p>
+     * 
      * <b>summary</b> : 
-     * <p>查询Subscription列表信息</p>
+     * <p>Retrieves a list of subscriptions.</p>
      * 
      * @param request ListSubscriptionsRequest
      * @return ListSubscriptionsResponse
@@ -911,8 +1131,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Queries the list of topics.</p>
+     * 
      * <b>summary</b> : 
-     * <p>查询Topic列表信息</p>
+     * <p>Retrieves a list of topics.</p>
      * 
      * @param request ListTopicsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -963,8 +1186,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Queries the list of topics.</p>
+     * 
      * <b>summary</b> : 
-     * <p>查询Topic列表信息</p>
+     * <p>Retrieves a list of topics.</p>
      * 
      * @param request ListTopicsRequest
      * @return ListTopicsResponse
@@ -975,8 +1201,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This operation is primarily intended for debugging. Do not use this operation to write large amounts of data.</p>
+     * 
      * <b>summary</b> : 
-     * <p>写入数据</p>
+     * <p>Writes data to a specified topic. This operation is primarily intended for debugging. For high-volume data writes, refer to the SDK documentation.</p>
      * 
      * @param tmpReq PutRecordsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1025,8 +1254,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This operation is primarily intended for debugging. Do not use this operation to write large amounts of data.</p>
+     * 
      * <b>summary</b> : 
-     * <p>写入数据</p>
+     * <p>Writes data to a specified topic. This operation is primarily intended for debugging. For high-volume data writes, refer to the SDK documentation.</p>
      * 
      * @param request PutRecordsRequest
      * @return PutRecordsResponse
@@ -1037,8 +1269,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Updates the description of a project.</p>
+     * 
      * <b>summary</b> : 
-     * <p>更新Project资源属性</p>
+     * <p>Updates the description of a project.</p>
      * 
      * @param request UpdateProjectRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1073,8 +1308,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Updates the description of a project.</p>
+     * 
      * <b>summary</b> : 
-     * <p>更新Project资源属性</p>
+     * <p>Updates the description of a project.</p>
      * 
      * @param request UpdateProjectRequest
      * @return UpdateProjectResponse
@@ -1085,8 +1323,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Updates the description of a topic.</p>
+     * 
      * <b>summary</b> : 
-     * <p>更新Topic资源属性</p>
+     * <p>Updates the description of a topic.</p>
      * 
      * @param request UpdateTopicRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1125,8 +1366,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Updates the description of a topic.</p>
+     * 
      * <b>summary</b> : 
-     * <p>更新Topic资源属性</p>
+     * <p>Updates the description of a topic.</p>
      * 
      * @param request UpdateTopicRequest
      * @return UpdateTopicResponse

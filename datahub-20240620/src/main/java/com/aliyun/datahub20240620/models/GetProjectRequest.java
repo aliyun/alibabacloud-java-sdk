@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetProjectRequest extends TeaModel {
     /**
+     * <p>The project name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

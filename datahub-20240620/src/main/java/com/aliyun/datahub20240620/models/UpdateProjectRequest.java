@@ -4,10 +4,17 @@ package com.aliyun.datahub20240620.models;
 import com.aliyun.tea.*;
 
 public class UpdateProjectRequest extends TeaModel {
+    /**
+     * <p>The description of the project.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ec800m-y数据总线，康复中心</p>
+     */
     @NameInMap("Comment")
     public String comment;
 
     /**
+     * <p>The name of the project.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

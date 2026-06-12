@@ -5,13 +5,17 @@ import com.aliyun.tea.*;
 
 public class GetProjectResponseBody extends TeaModel {
     /**
+     * <p>The project description.</p>
+     * 
      * <strong>example:</strong>
-     * <p>test</p>
+     * <p>test_comment</p>
      */
     @NameInMap("Comment")
     public String comment;
 
     /**
+     * <p>The time when the project was created.</p>
+     * 
      * <strong>example:</strong>
      * <p>1724041098000</p>
      */
@@ -19,6 +23,8 @@ public class GetProjectResponseBody extends TeaModel {
     public String createTime;
 
     /**
+     * <p>The creator of the project.</p>
+     * 
      * <strong>example:</strong>
      * <p>1559031978056215</p>
      */
@@ -26,6 +32,8 @@ public class GetProjectResponseBody extends TeaModel {
     public String creator;
 
     /**
+     * <p>The project name.</p>
+     * 
      * <strong>example:</strong>
      * <p>test_project</p>
      */
@@ -33,6 +41,8 @@ public class GetProjectResponseBody extends TeaModel {
     public String projectName;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>A20A7093-8FE0-058C-BE0C-3C8057D5F1A1</p>
      */
@@ -40,6 +50,8 @@ public class GetProjectResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total storage capacity of the project.</p>
+     * 
      * <strong>example:</strong>
      * <p>12252454</p>
      */
@@ -47,6 +59,8 @@ public class GetProjectResponseBody extends TeaModel {
     public Long storage;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>True</p>
      */
@@ -54,6 +68,8 @@ public class GetProjectResponseBody extends TeaModel {
     public Boolean success;
 
     /**
+     * <p>The time when the project was last updated.</p>
+     * 
      * <strong>example:</strong>
      * <p>1724041098000</p>
      */
@@ -61,8 +77,10 @@ public class GetProjectResponseBody extends TeaModel {
     public String updateTime;
 
     /**
+     * <p>The VPC whitelist of the project.</p>
+     * 
      * <strong>example:</strong>
-     * <p>[11.22.33.44]</p>
+     * <p>[\&quot;11.22.33.44\&quot;]</p>
      */
     @NameInMap("VpcWhitelist")
     public String vpcWhitelist;

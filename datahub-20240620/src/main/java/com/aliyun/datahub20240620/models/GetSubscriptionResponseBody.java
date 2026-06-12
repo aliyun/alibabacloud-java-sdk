@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetSubscriptionResponseBody extends TeaModel {
     /**
+     * <p>The name of the application to which the subscription belongs.</p>
+     * 
      * <strong>example:</strong>
      * <p>test_application_name</p>
      */
@@ -12,6 +14,8 @@ public class GetSubscriptionResponseBody extends TeaModel {
     public String application;
 
     /**
+     * <p>The description of the subscription.</p>
+     * 
      * <strong>example:</strong>
      * <p>test_comment</p>
      */
@@ -19,6 +23,8 @@ public class GetSubscriptionResponseBody extends TeaModel {
     public String comment;
 
     /**
+     * <p>The creation time.</p>
+     * 
      * <strong>example:</strong>
      * <p>1724041098000</p>
      */
@@ -26,6 +32,8 @@ public class GetSubscriptionResponseBody extends TeaModel {
     public Long createTime;
 
     /**
+     * <p>The creator of the subscription.</p>
+     * 
      * <strong>example:</strong>
      * <p>1559031978056215</p>
      */
@@ -33,6 +41,8 @@ public class GetSubscriptionResponseBody extends TeaModel {
     public String creator;
 
     /**
+     * <p>The project name.</p>
+     * 
      * <strong>example:</strong>
      * <p>test_project</p>
      */
@@ -40,6 +50,8 @@ public class GetSubscriptionResponseBody extends TeaModel {
     public String projectName;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>A20A7093-8FE0-058C-BE0C-3C8057D5F1A1</p>
      */
@@ -47,6 +59,12 @@ public class GetSubscriptionResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The status of the subscription. Valid values:</p>
+     * <ul>
+     * <li>0: offline.</li>
+     * <li>1: online.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -54,6 +72,8 @@ public class GetSubscriptionResponseBody extends TeaModel {
     public Integer state;
 
     /**
+     * <p>The subscription ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>1741072334529RFEF7</p>
      */
@@ -61,6 +81,8 @@ public class GetSubscriptionResponseBody extends TeaModel {
     public String subscriptionId;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>True</p>
      */
@@ -68,6 +90,8 @@ public class GetSubscriptionResponseBody extends TeaModel {
     public Boolean success;
 
     /**
+     * <p>The topic name.</p>
+     * 
      * <strong>example:</strong>
      * <p>test_topic</p>
      */
@@ -75,6 +99,12 @@ public class GetSubscriptionResponseBody extends TeaModel {
     public String topicName;
 
     /**
+     * <p>The type of the subscription. Valid values:</p>
+     * <ul>
+     * <li>USER: created by a user.</li>
+     * <li>SYSTEM: created by the system.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>USER</p>
      */
@@ -82,6 +112,8 @@ public class GetSubscriptionResponseBody extends TeaModel {
     public String type;
 
     /**
+     * <p>The last update time.</p>
+     * 
      * <strong>example:</strong>
      * <p>1724041098000</p>
      */

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpdateTopicRequest extends TeaModel {
     /**
+     * <p>The comment.</p>
+     * 
      * <strong>example:</strong>
      * <p>test</p>
      */
@@ -12,6 +14,7 @@ public class UpdateTopicRequest extends TeaModel {
     public String comment;
 
     /**
+     * <p>The project name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,6 +24,7 @@ public class UpdateTopicRequest extends TeaModel {
     public String projectName;
 
     /**
+     * <p>The topic name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
