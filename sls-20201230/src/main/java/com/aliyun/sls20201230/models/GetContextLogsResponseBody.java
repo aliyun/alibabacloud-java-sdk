@@ -31,8 +31,10 @@ public class GetContextLogsResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the query and analysis results are complete. Valid values:</p>
      * <ul>
-     * <li>Complete: The query is successful, and the complete query and analysis results are returned.</li>
-     * <li>Incomplete: The query is successful, but the query and analysis results are incomplete. To obtain the complete results, you must repeat the request.</li>
+     * <li><p>Complete: The query is successful, and the complete query and analysis results are returned.</p>
+     * </li>
+     * <li><p>Incomplete: The query is successful, but the query and analysis results are incomplete. To obtain the complete results, you must repeat the request.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

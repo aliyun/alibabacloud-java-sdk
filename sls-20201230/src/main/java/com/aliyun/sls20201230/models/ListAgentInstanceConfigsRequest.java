@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListAgentInstanceConfigsRequest extends TeaModel {
     /**
+     * <p>The type of the process-level configuration.</p>
+     * 
      * <strong>example:</strong>
      * <p>apm_trace</p>
      */
@@ -12,6 +14,8 @@ public class ListAgentInstanceConfigsRequest extends TeaModel {
     public String configType;
 
     /**
+     * <p>The number of entries to skip. The default value is 0.</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
@@ -19,6 +23,8 @@ public class ListAgentInstanceConfigsRequest extends TeaModel {
     public Long offset;
 
     /**
+     * <p>The number of entries to return. The default value is 500.</p>
+     * 
      * <strong>example:</strong>
      * <p>100</p>
      */

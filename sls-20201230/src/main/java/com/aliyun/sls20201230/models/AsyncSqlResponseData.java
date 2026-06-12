@@ -4,10 +4,15 @@ package com.aliyun.sls20201230.models;
 import com.aliyun.tea.*;
 
 public class AsyncSqlResponseData extends TeaModel {
+    /**
+     * <p>The metadata of the SQL query.</p>
+     */
     @NameInMap("AsyncSqlMetaPB")
     public AsyncSqlResponseDataAsyncSqlMetaPB asyncSqlMetaPB;
 
     /**
+     * <p>If the SQL query fails to execute, this parameter contains the specific error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>InvalidQuery</p>
      */
@@ -15,6 +20,8 @@ public class AsyncSqlResponseData extends TeaModel {
     public String errorCode;
 
     /**
+     * <p>If the SQL query fails to execute, this parameter contains the specific error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>line 37:14: Column \&quot;xyz\&quot; cannot be resolved</p>
      */
@@ -22,6 +29,7 @@ public class AsyncSqlResponseData extends TeaModel {
     public String errorMessage;
 
     /**
+     * <p>The ID of the asynchronous SQL query.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -30,10 +38,25 @@ public class AsyncSqlResponseData extends TeaModel {
     @NameInMap("id")
     public String id;
 
+    /**
+     * <p>The SQL result. Each element in the array is also an array that corresponds to a specific row of the result.</p>
+     */
     @NameInMap("rows")
     public java.util.List<java.util.List<String>> rows;
 
     /**
+     * <p>The current execution state of the asynchronous SQL query. Valid values are:</p>
+     * <ul>
+     * <li><p>RUNNING</p>
+     * </li>
+     * <li><p>FINISHED</p>
+     * </li>
+     * <li><p>FAILED</p>
+     * </li>
+     * <li><p>CANCELLED</p>
+     * </li>
+     * </ul>
+     * <p>RUNNING is a temporary state that indicates the SQL query is still running. You can read the results only when the state is FINISHED. The error_code and error_message parameters are valid only when the state is FAILED.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -97,6 +120,8 @@ public class AsyncSqlResponseData extends TeaModel {
 
     public static class AsyncSqlResponseDataAsyncSqlMetaPB extends TeaModel {
         /**
+         * <p>The number of CPU cores used.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -104,6 +129,8 @@ public class AsyncSqlResponseData extends TeaModel {
         public Integer cpuCores;
 
         /**
+         * <p>The total CPU time consumed in seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>0.2</p>
          */
@@ -111,16 +138,23 @@ public class AsyncSqlResponseData extends TeaModel {
         public Double cpuSec;
 
         /**
+         * <p>The SQL query running time in milliseconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>30000</p>
          */
         @NameInMap("elapsed_milli")
         public Long elapsedMilli;
 
+        /**
+         * <p>The names of the columns in the SQL result. The keys correspond one-to-one with the fields in the SELECT statement.</p>
+         */
         @NameInMap("keys")
         public java.util.List<String> keys;
 
         /**
+         * <p>The number of raw data rows processed.</p>
+         * 
          * <strong>example:</strong>
          * <p>10000000</p>
          */
@@ -128,6 +162,14 @@ public class AsyncSqlResponseData extends TeaModel {
         public Long processedRows;
 
         /**
+         * <p>Indicates whether the SQL result is accurate. Valid values are:</p>
+         * <ul>
+         * <li><p>Complete: The result is accurate.</p>
+         * </li>
+         * <li><p>Incomplete: The result is not accurate.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Complete</p>
          */
@@ -135,6 +177,8 @@ public class AsyncSqlResponseData extends TeaModel {
         public String progress;
 
         /**
+         * <p>The total number of rows in the result. When you read the results, the offset value must not exceed this value.</p>
+         * 
          * <strong>example:</strong>
          * <p>12000</p>
          */

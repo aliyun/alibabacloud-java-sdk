@@ -19,9 +19,12 @@ public class CreateConsumerGroupRequest extends TeaModel {
      * <ul>
      * <li><p>true</p>
      * <ul>
-     * <li>In a shard, data is consumed in ascending order based on the value of the \<em>\</em><strong>tag</strong>:<strong>receive_time</strong>\<em>\</em> field.</li>
-     * <li>If a shard is split, data in the original shard is consumed first. Then, data in the new shards is consumed at the same time.</li>
-     * <li>If shards are merged, data in the original shards is consumed first. Then, data in the new shard is consumed.</li>
+     * <li><p>In a shard, data is consumed in ascending order based on the value of the \<em>\</em><strong>tag</strong>:<strong>receive_time</strong>\<em>\</em> field.</p>
+     * </li>
+     * <li><p>If a shard is split, data in the original shard is consumed first. Then, data in the new shards is consumed at the same time.</p>
+     * </li>
+     * <li><p>If shards are merged, data in the original shards is consumed first. Then, data in the new shard is consumed.</p>
+     * </li>
      * </ul>
      * </li>
      * <li><p>false Data in all shards is consumed at the same time. If a new shard is generated after a shard is split or after shards are merged, data in the new shard is immediately consumed.</p>

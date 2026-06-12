@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class PutProjectTransferAccelerationRequest extends TeaModel {
     /**
-     * <p>Whether to enable transfer acceleration.</p>
+     * <p>Specifies whether to enable transfer acceleration.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

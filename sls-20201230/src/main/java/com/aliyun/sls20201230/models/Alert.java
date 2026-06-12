@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class Alert extends TeaModel {
     /**
-     * <p>The configurations of the alert rule.</p>
+     * <p>The configuration of the alert rule.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("configuration")
@@ -13,6 +13,9 @@ public class Alert extends TeaModel {
 
     /**
      * <p>The time when the alert rule was created.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1695090077</p>
      */
     @NameInMap("createTime")
     public Long createTime;
@@ -27,7 +30,7 @@ public class Alert extends TeaModel {
     public String description;
 
     /**
-     * <p>The alert rule name.</p>
+     * <p>The name of the alert rule.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -38,6 +41,9 @@ public class Alert extends TeaModel {
 
     /**
      * <p>The time when the alert rule was last modified.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1714274900</p>
      */
     @NameInMap("lastModifiedTime")
     public Long lastModifiedTime;
@@ -53,14 +59,14 @@ public class Alert extends TeaModel {
     public String name;
 
     /**
-     * <p>The scheduling settings.</p>
+     * <p>The scheduling configuration.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("schedule")
     public Schedule schedule;
 
     /**
-     * <p>The alert status.</p>
+     * <p>The status of the alert rule.</p>
      * 
      * <strong>example:</strong>
      * <p>ENABLED/DISABLED</p>

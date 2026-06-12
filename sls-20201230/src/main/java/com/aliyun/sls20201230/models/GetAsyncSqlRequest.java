@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetAsyncSqlRequest extends TeaModel {
     /**
+     * <p>The number of results to return per page. The maximum value is 1000.</p>
+     * 
      * <strong>example:</strong>
      * <p>100</p>
      */
@@ -12,6 +14,8 @@ public class GetAsyncSqlRequest extends TeaModel {
     public Integer line;
 
     /**
+     * <p>The offset for paginated results.</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */

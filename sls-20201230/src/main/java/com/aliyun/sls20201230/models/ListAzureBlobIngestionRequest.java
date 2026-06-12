@@ -4,12 +4,21 @@ package com.aliyun.sls20201230.models;
 import com.aliyun.tea.*;
 
 public class ListAzureBlobIngestionRequest extends TeaModel {
+    /**
+     * <p>The name of the logstore. If specified, the operation returns only tasks from this logstore.</p>
+     */
     @NameInMap("logstore")
     public String logstore;
 
+    /**
+     * <p>The number of tasks to skip before returning results. Default: 0.</p>
+     */
     @NameInMap("offset")
     public Integer offset;
 
+    /**
+     * <p>The number of tasks to return per page. Range: 0 to 500. Default: 100.</p>
+     */
     @NameInMap("size")
     public Integer size;
 

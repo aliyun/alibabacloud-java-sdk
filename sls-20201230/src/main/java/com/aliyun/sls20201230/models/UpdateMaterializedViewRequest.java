@@ -4,15 +4,27 @@ package com.aliyun.sls20201230.models;
 import com.aliyun.tea.*;
 
 public class UpdateMaterializedViewRequest extends TeaModel {
+    /**
+     * <p>The refresh interval of the materialized view, in minutes.</p>
+     */
     @NameInMap("aggIntervalMins")
     public Integer aggIntervalMins;
 
+    /**
+     * <p>Specifies whether to automatically refresh the materialized view.</p>
+     */
     @NameInMap("enable")
     public Boolean enable;
 
+    /**
+     * <p>The new SQL query for the materialized view. Updating the query rebuilds the view.</p>
+     */
     @NameInMap("originalSql")
     public String originalSql;
 
+    /**
+     * <p>The data retention period (TTL) of the materialized view, in days.</p>
+     */
     @NameInMap("ttl")
     public Integer ttl;
 

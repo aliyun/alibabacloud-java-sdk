@@ -7,8 +7,10 @@ public class CreateProjectRequest extends TeaModel {
     /**
      * <p>The disaster recovery type. Valid values:</p>
      * <ul>
-     * <li>LRS: locally redundant storage</li>
-     * <li>ZRS: zone-redundant storage</li>
+     * <li><p>LRS: locally redundant storage</p>
+     * </li>
+     * <li><p>ZRS: zone-redundant storage</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -30,10 +32,14 @@ public class CreateProjectRequest extends TeaModel {
     /**
      * <p>The project name must be unique in a region. You cannot change the name after you create the project. The name must meet the following requirements:</p>
      * <ul>
-     * <li>The name must be globally unique.</li>
-     * <li>The name can contain only lowercase letters, digits, and hyphens (-).</li>
-     * <li>The name must start and end with a lowercase letter or a digit.</li>
-     * <li>The name must be 3 to 63 characters in length.</li>
+     * <li><p>The name must be globally unique.</p>
+     * </li>
+     * <li><p>The name can contain only lowercase letters, digits, and hyphens (-).</p>
+     * </li>
+     * <li><p>The name must start and end with a lowercase letter or a digit.</p>
+     * </li>
+     * <li><p>The name must be 3 to 63 characters in length.</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -47,8 +53,10 @@ public class CreateProjectRequest extends TeaModel {
      * <p>Specifies whether to enable the recycle bin feature.</p>
      * <p>Valid values:</p>
      * <ul>
-     * <li>true</li>
-     * <li>false</li>
+     * <li><p>true</p>
+     * </li>
+     * <li><p>false</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

@@ -7,7 +7,7 @@ public class PutWebtrackingRequest extends TeaModel {
     /**
      * <p>The logs. Each element is a JSON object that indicates a log.</p>
      * <blockquote>
-     * <p> <strong>Note</strong>: The time in a log that is collected by using the web tracking feature is the time at which Simple Log Service receives the log. You do not need to configure the <strong>time</strong> field for each log. If this field exists, it is overwritten by the time at which Simple Log Service receives the log.</p>
+     * <p><strong>Note</strong>: The time in a log that is collected by using the web tracking feature is the time at which Simple Log Service receives the log. You do not need to configure the <strong>time</strong> field for each log. If this field exists, it is overwritten by the time at which Simple Log Service receives the log.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      */

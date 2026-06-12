@@ -8,7 +8,7 @@ public class OSSIngestionConfigurationSource extends TeaModel {
     public java.util.Map<String, ?> advancedParameters;
 
     /**
-     * <p>The OSS bucket.</p>
+     * <p>The name of the OSS bucket.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -18,17 +18,17 @@ public class OSSIngestionConfigurationSource extends TeaModel {
     public String bucket;
 
     /**
-     * <p>The compression type.</p>
+     * <p>The compression type of the source files.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>none,snappy,gzip</p>
+     * <p>none</p>
      */
     @NameInMap("compressionCodec")
     public String compressionCodec;
 
     /**
-     * <p>The encoding type.</p>
+     * <p>The encoding of the source files.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -38,7 +38,7 @@ public class OSSIngestionConfigurationSource extends TeaModel {
     public String encoding;
 
     /**
-     * <p>The point in time before which modified OSS objects are imported.</p>
+     * <p>Imports only files modified before this time. The value is a Unix timestamp in seconds.</p>
      * 
      * <strong>example:</strong>
      * <p>1714360481</p>
@@ -57,14 +57,14 @@ public class OSSIngestionConfigurationSource extends TeaModel {
     public String endpoint;
 
     /**
-     * <p>The format.</p>
+     * <p>Defines the format of the source data.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("format")
     public java.util.Map<String, ?> format;
 
     /**
-     * <p>The interval at which the system checks for new files.</p>
+     * <p>The check interval for new files.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -74,7 +74,7 @@ public class OSSIngestionConfigurationSource extends TeaModel {
     public String interval;
 
     /**
-     * <p>The regular expression that is used to filter OSS objects by directory.</p>
+     * <p>A regular expression to filter files by path.</p>
      * 
      * <strong>example:</strong>
      * <p>.*</p>
@@ -83,7 +83,7 @@ public class OSSIngestionConfigurationSource extends TeaModel {
     public String pattern;
 
     /**
-     * <p>The directory of the OSS objects.</p>
+     * <p>The path prefix for filtering files.</p>
      * 
      * <strong>example:</strong>
      * <p>prefix</p>
@@ -92,6 +92,8 @@ public class OSSIngestionConfigurationSource extends TeaModel {
     public String prefix;
 
     /**
+     * <p>The ID of the writer processor.</p>
+     * 
      * <strong>example:</strong>
      * <p>ingest-processor-1756802123-953901</p>
      */
@@ -99,7 +101,7 @@ public class OSSIngestionConfigurationSource extends TeaModel {
     public String processorId;
 
     /**
-     * <p>Specifies whether to import OSS objects of the Archive class.</p>
+     * <p>Specifies whether to import archived files.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -108,7 +110,7 @@ public class OSSIngestionConfigurationSource extends TeaModel {
     public Boolean restoreObjectEnabled;
 
     /**
-     * <p>The Alibaba Cloud Resource Name (ARN) of the role.</p>
+     * <p>The Role ARN to use for accessing the OSS bucket.</p>
      * 
      * <strong>example:</strong>
      * <p>acs:ram::12345:role/aliyunlogdefaultrole</p>
@@ -117,7 +119,7 @@ public class OSSIngestionConfigurationSource extends TeaModel {
     public String roleARN;
 
     /**
-     * <p>The point in time after which modified OSS objects are imported.</p>
+     * <p>Imports only files modified after this time. The value is a Unix timestamp in seconds.</p>
      * 
      * <strong>example:</strong>
      * <p>1714274081</p>
@@ -126,6 +128,8 @@ public class OSSIngestionConfigurationSource extends TeaModel {
     public Long startTime;
 
     /**
+     * <p>Specifies whether to enable context retrieval.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -133,7 +137,7 @@ public class OSSIngestionConfigurationSource extends TeaModel {
     public Boolean tagPackId;
 
     /**
-     * <p>The time field to extract.</p>
+     * <p>The field containing the log time.</p>
      * 
      * <strong>example:</strong>
      * <p><strong>time</strong></p>
@@ -151,7 +155,7 @@ public class OSSIngestionConfigurationSource extends TeaModel {
     public String timeFormat;
 
     /**
-     * <p>The regular expression that is used to extract time.</p>
+     * <p>The regular expression to extract the time value from a log.</p>
      * 
      * <strong>example:</strong>
      * <p>[0-9]{0,2}\/[0-9a-zA-Z]+\/[0-9:,]+</p>
@@ -160,7 +164,7 @@ public class OSSIngestionConfigurationSource extends TeaModel {
     public String timePattern;
 
     /**
-     * <p>The time zone of the time field.</p>
+     * <p>The time zone of the timestamp in the source data.</p>
      * 
      * <strong>example:</strong>
      * <p>GMT+08:00</p>
@@ -169,7 +173,7 @@ public class OSSIngestionConfigurationSource extends TeaModel {
     public String timeZone;
 
     /**
-     * <p>Specifies whether to enable OSS metadata indexing.</p>
+     * <p>Specifies whether to use the OSS metadata index to accelerate file discovery.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

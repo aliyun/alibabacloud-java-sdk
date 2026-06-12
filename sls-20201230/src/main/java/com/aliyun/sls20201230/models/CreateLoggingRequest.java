@@ -56,14 +56,22 @@ public class CreateLoggingRequest extends TeaModel {
         /**
          * <p>The type of service logs. Valid values:</p>
          * <ul>
-         * <li>consumergroup_log: the consumption delay logs of consumer groups.</li>
-         * <li>logtail_alarm: the alert logs of Logtail.</li>
-         * <li>operation_log: the operation logs.</li>
-         * <li>logtail_profile: the collection logs of Logtail.</li>
-         * <li>metering: the metering logs.</li>
-         * <li>logtail_status: the status logs of Logtail.</li>
-         * <li>scheduledsqlalert: the run logs of Scheduled SQL jobs.</li>
-         * <li>etl_alert: the run logs of data transformation jobs.</li>
+         * <li><p>consumergroup_log: the consumption delay logs of consumer groups.</p>
+         * </li>
+         * <li><p>logtail_alarm: the alert logs of Logtail.</p>
+         * </li>
+         * <li><p>operation_log: the operation logs.</p>
+         * </li>
+         * <li><p>logtail_profile: the collection logs of Logtail.</p>
+         * </li>
+         * <li><p>metering: the metering logs.</p>
+         * </li>
+         * <li><p>logtail_status: the status logs of Logtail.</p>
+         * </li>
+         * <li><p>scheduledsqlalert: the run logs of Scheduled SQL jobs.</p>
+         * </li>
+         * <li><p>etl_alert: the run logs of data transformation jobs.</p>
+         * </li>
          * </ul>
          * <p>This parameter is required.</p>
          * 

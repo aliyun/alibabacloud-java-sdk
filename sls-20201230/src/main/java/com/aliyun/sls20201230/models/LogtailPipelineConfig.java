@@ -77,6 +77,8 @@ public class LogtailPipelineConfig extends TeaModel {
     public java.util.List<java.util.Map<String, ?>> processors;
 
     /**
+     * <p>任务配置</p>
+     * 
      * <strong>example:</strong>
      * <p>{&quot;Type&quot;: &quot;task_example&quot;}</p>
      */

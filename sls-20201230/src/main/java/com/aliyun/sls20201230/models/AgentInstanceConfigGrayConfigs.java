@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class AgentInstanceConfigGrayConfigs extends TeaModel {
     /**
+     * <p>The matching rule.</p>
+     * 
      * <strong>example:</strong>
      * <p>appVersion=&quot;1.0.0&quot;</p>
      */
@@ -12,6 +14,8 @@ public class AgentInstanceConfigGrayConfigs extends TeaModel {
     public String condition;
 
     /**
+     * <p>The content of the canary release configuration.</p>
+     * 
      * <strong>example:</strong>
      * <p>{&quot;enable&quot;:true}</p>
      */

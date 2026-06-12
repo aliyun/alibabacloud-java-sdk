@@ -5,20 +5,20 @@ import com.aliyun.tea.*;
 
 public class LogGroup extends TeaModel {
     /**
-     * <p>The log list.</p>
+     * <p>A list of logs.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("LogItems")
     public java.util.List<LogItem> logItems;
 
     /**
-     * <p>The log tags.</p>
+     * <p>The list of tags for the log.</p>
      */
     @NameInMap("LogTags")
     public java.util.List<LogTag> logTags;
 
     /**
-     * <p>The log source. For example, the source of a log can be the IP address of the server where the log is generated.</p>
+     * <p>The source of the log. For example, the IP address of the machine that generated the log.</p>
      * 
      * <strong>example:</strong>
      * <p>192.1.1.1</p>
@@ -27,7 +27,7 @@ public class LogGroup extends TeaModel {
     public String source;
 
     /**
-     * <p>The log topic. This field is user-defined and is used to distinguish between logs.</p>
+     * <p>The topic of the log. This is a user-defined field that distinguishes log data with different features.</p>
      * 
      * <strong>example:</strong>
      * <p>topic-test</p>

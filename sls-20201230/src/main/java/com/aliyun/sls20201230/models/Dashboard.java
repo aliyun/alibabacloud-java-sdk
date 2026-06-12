@@ -4,16 +4,21 @@ package com.aliyun.sls20201230.models;
 import com.aliyun.tea.*;
 
 public class Dashboard extends TeaModel {
+    /**
+     * <p>The properties of the dashboard.</p>
+     */
     @NameInMap("attribute")
     public java.util.Map<String, String> attribute;
 
     /**
+     * <p>The charts in the dashboard.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("charts")
     public java.util.List<Chart> charts;
 
     /**
+     * <p>The internal display name of the dashboard.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -22,10 +27,17 @@ public class Dashboard extends TeaModel {
     @NameInMap("dashboardName")
     public String dashboardName;
 
+    /**
+     * <p>The description of the dashboard.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>this is a dashboard</p>
+     */
     @NameInMap("description")
     public String description;
 
     /**
+     * <p>The display name of the dashboard.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

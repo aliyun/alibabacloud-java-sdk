@@ -5,12 +5,15 @@ import com.aliyun.tea.*;
 
 public class GCSIngestion extends TeaModel {
     /**
+     * <p>The GCS ingestion configuration.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("configuration")
     public GCSIngestionConfiguration configuration;
 
     /**
+     * <p>Output only. The creation time of the job, as a Unix timestamp.</p>
+     * 
      * <strong>example:</strong>
      * <p>1714360481</p>
      */
@@ -18,7 +21,7 @@ public class GCSIngestion extends TeaModel {
     public Long createTime;
 
     /**
-     * <p>job description</p>
+     * <p>A user-friendly description for the job.</p>
      * 
      * <strong>example:</strong>
      * <p>gcs ingestion</p>
@@ -27,7 +30,7 @@ public class GCSIngestion extends TeaModel {
     public String description;
 
     /**
-     * <p>job displayName</p>
+     * <p>The display name for the job.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -37,6 +40,8 @@ public class GCSIngestion extends TeaModel {
     public String displayName;
 
     /**
+     * <p>Output only. The last modified time of the job, as a Unix timestamp.</p>
+     * 
      * <strong>example:</strong>
      * <p>1714360581</p>
      */
@@ -44,6 +49,7 @@ public class GCSIngestion extends TeaModel {
     public Long lastModifiedTime;
 
     /**
+     * <p>The job name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -53,6 +59,8 @@ public class GCSIngestion extends TeaModel {
     public String name;
 
     /**
+     * <p>The job ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>c7f01719d9feb105fc9d8df92af62010</p>
      */
@@ -60,6 +68,8 @@ public class GCSIngestion extends TeaModel {
     public String scheduleId;
 
     /**
+     * <p>Output only. The ingestion status.</p>
+     * 
      * <strong>example:</strong>
      * <p>RUNNING</p>
      */

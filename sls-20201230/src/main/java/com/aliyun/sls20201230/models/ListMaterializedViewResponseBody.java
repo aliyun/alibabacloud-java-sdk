@@ -4,12 +4,21 @@ package com.aliyun.sls20201230.models;
 import com.aliyun.tea.*;
 
 public class ListMaterializedViewResponseBody extends TeaModel {
+    /**
+     * <p>The number of materialized views returned on the current page.</p>
+     */
     @NameInMap("count")
     public Integer count;
 
+    /**
+     * <p>A list of materialized views.</p>
+     */
     @NameInMap("materializedViews")
     public java.util.List<String> materializedViews;
 
+    /**
+     * <p>The total number of materialized views that match the query.</p>
+     */
     @NameInMap("total")
     public Integer total;
 

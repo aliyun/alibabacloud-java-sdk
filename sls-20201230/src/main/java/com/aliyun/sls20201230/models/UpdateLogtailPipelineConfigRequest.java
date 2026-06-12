@@ -5,10 +5,11 @@ import com.aliyun.tea.*;
 
 public class UpdateLogtailPipelineConfigRequest extends TeaModel {
     /**
-     * <p>The aggregation plug-ins.</p>
+     * <p>The list of aggregator plug-ins.</p>
      * <blockquote>
-     * <p> This parameter takes effect only when extended plug-ins are used. You can use only one aggregation plug-in.</p>
+     * <p>Notice: </p>
      * </blockquote>
+     * <p>This parameter is valid only when you use an extension processing plug-in. You can use a maximum of one aggregator plug-in.</p>
      */
     @NameInMap("aggregators")
     public java.util.List<java.util.Map<String, ?>> aggregators;
@@ -16,8 +17,9 @@ public class UpdateLogtailPipelineConfigRequest extends TeaModel {
     /**
      * <p>The name of the configuration.</p>
      * <blockquote>
-     * <p> The value of this parameter must be the same as the value of configName in the outer layer.</p>
+     * <p>Notice: </p>
      * </blockquote>
+     * <p>The name must be the same as the value of the configName parameter in the request path.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -27,33 +29,35 @@ public class UpdateLogtailPipelineConfigRequest extends TeaModel {
     public String configName;
 
     /**
-     * <p>The output plug-ins.</p>
+     * <p>The list of output plug-ins.</p>
      * <blockquote>
-     * <p> You can configure only one output plug-in.</p>
+     * <p>Notice: </p>
      * </blockquote>
+     * <p>Currently, you can add only one SLS output plug-in.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("flushers")
     public java.util.List<java.util.Map<String, ?>> flushers;
 
     /**
-     * <p>The global settings.</p>
+     * <p>The global configuration.</p>
      */
     @NameInMap("global")
     public java.util.Map<String, ?> global;
 
     /**
-     * <p>The input plug-ins.</p>
+     * <p>The list of input plug-ins.</p>
      * <blockquote>
-     * <p> You can configure only one input plug-in.</p>
+     * <p>Notice: </p>
      * </blockquote>
+     * <p>Currently, you can configure only one input plug-in.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("inputs")
     public java.util.List<java.util.Map<String, ?>> inputs;
 
     /**
-     * <p>The sample log. You can specify multiple sample logs.</p>
+     * <p>A sample log. Multiple logs are supported.</p>
      * 
      * <strong>example:</strong>
      * <p>2022-06-14 11:13:29.796 | DEBUG    | <strong>main</strong>:<module>:1 - hello world</p>
@@ -62,24 +66,29 @@ public class UpdateLogtailPipelineConfigRequest extends TeaModel {
     public String logSample;
 
     /**
-     * <p>The processing plug-ins.</p>
+     * <p>The list of processing plug-ins.</p>
      * <blockquote>
-     * <p> Logtail plug-ins for data processing are classified into native plug-ins and extended plug-ins. For more information, see <a href="https://help.aliyun.com/document_detail/64957.html">Overview of Logtail plug-ins for data processing</a>.</p>
+     * <p>Processing plug-ins are classified into native processing plug-ins and extension processing plug-ins. For more information, see <a href="https://help.aliyun.com/document_detail/64957.html">Processing plug-ins</a>.</p>
      * </blockquote>
      * <blockquote>
+     * <p>Notice: </p>
      * </blockquote>
+     * <blockquote>
      * <ul>
-     * <li><p>You can use native plug-ins only to collect text logs.</p>
+     * <li><p>Native plug-ins can be used only to collect text logs.</p>
      * </li>
-     * <li><p>You cannot add native plug-ins and extended plug-ins at a time.</p>
+     * <li><p>You cannot add native plug-ins and extension plug-ins at the same time.</p>
      * </li>
-     * <li><p>When you add native plug-ins, take note of the following items:</p>
+     * <li><p>When you use native plug-ins, the following requirements must be met:</p>
      * <ul>
-     * <li>You must add one of the following Logtail plug-ins for data processing as the first plug-in: Data Parsing (Regex Mode), Data Parsing (Delimiter Mode), Data Parsing (JSON Mode), Data Parsing (NGINX Mode), Data Parsing (Apache Mode), and Data Parsing (IIS Mode).</li>
-     * <li>After you add the first plug-in, you can add one Time Parsing plug-in, one Data Filtering plug-in, and multiple Data Masking plug-ins.</li>
+     * <li><p>The first processing plug-in must be a regular expression-based parsing plug-in, a separator-based parsing plug-in, a JSON-based parsing plug-in, an NGINX-based parsing plug-in, an Apache-based parsing plug-in, or an IIS-based parsing plug-in.</p>
+     * </li>
+     * <li><p>After the first processing plug-in, you can add only one time parsing plug-in, one filter plug-in, and multiple data masking plug-ins.</p>
+     * </li>
      * </ul>
      * </li>
      * </ul>
+     * </blockquote>
      */
     @NameInMap("processors")
     public java.util.List<java.util.Map<String, ?>> processors;

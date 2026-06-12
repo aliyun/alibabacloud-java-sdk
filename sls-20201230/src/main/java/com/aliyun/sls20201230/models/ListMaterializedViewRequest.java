@@ -4,12 +4,21 @@ package com.aliyun.sls20201230.models;
 import com.aliyun.tea.*;
 
 public class ListMaterializedViewRequest extends TeaModel {
+    /**
+     * <p>The name of the materialized view. Use this to query for a specific materialized view.</p>
+     */
     @NameInMap("name")
     public String name;
 
+    /**
+     * <p>The number of entries to skip before returning results. This parameter is used for pagination. Default value: 0.</p>
+     */
     @NameInMap("offset")
     public Integer offset;
 
+    /**
+     * <p>The maximum number of materialized views to return per page. Default value: 100. Maximum value: 500.</p>
+     */
     @NameInMap("size")
     public Integer size;
 

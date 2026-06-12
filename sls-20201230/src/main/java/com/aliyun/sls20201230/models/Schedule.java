@@ -14,7 +14,7 @@ public class Schedule extends TeaModel {
     public String cronExpression;
 
     /**
-     * <p>The number of seconds for which the scheduled job is delayed.</p>
+     * <p>The delay before a scheduled task is executed, in seconds (s).</p>
      * 
      * <strong>example:</strong>
      * <p>4</p>
@@ -26,13 +26,13 @@ public class Schedule extends TeaModel {
      * <p>The fixed interval.</p>
      * 
      * <strong>example:</strong>
-     * <p>1m/1h</p>
+     * <p>60s</p>
      */
     @NameInMap("interval")
     public String interval;
 
     /**
-     * <p>Specifies whether to run the scheduled job immediately.</p>
+     * <p>Specifies whether to execute the scheduled task immediately.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -41,20 +41,20 @@ public class Schedule extends TeaModel {
     public Boolean runImmediately;
 
     /**
-     * <p>The time zone for the cron expression. This parameter is empty by default, which indicates that the time zone is UTC+8.</p>
+     * <p>The time zone of the cron expression. If this parameter is left empty, the default time zone UTC+8 is used.</p>
      * 
      * <strong>example:</strong>
-     * <p>&quot;+0800&quot;</p>
+     * <p>+0800</p>
      */
     @NameInMap("timeZone")
     public String timeZone;
 
     /**
-     * <p>The scheduling type.</p>
+     * <p>schedule type</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>Cron</p>
+     * <p>FixedRate</p>
      */
     @NameInMap("type")
     public String type;

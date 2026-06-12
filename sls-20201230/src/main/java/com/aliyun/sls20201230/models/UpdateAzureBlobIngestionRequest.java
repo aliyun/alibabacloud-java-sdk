@@ -5,20 +5,28 @@ import com.aliyun.tea.*;
 
 public class UpdateAzureBlobIngestionRequest extends TeaModel {
     /**
+     * <p>The updated configuration for the Azure Blob ingestion task.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("configuration")
     public AzureBlobIngestionConfiguration configuration;
 
+    /**
+     * <p>The updated description for the Azure Blob ingestion task.</p>
+     */
     @NameInMap("description")
     public String description;
 
     /**
+     * <p>The updated display name for the Azure Blob ingestion task.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("displayName")
     public String displayName;
 
+    /**
+     * <p>The updated ingestion schedule.</p>
+     */
     @NameInMap("schedule")
     public Schedule schedule;
 

@@ -5,21 +5,21 @@ import com.aliyun.tea.*;
 
 public class ETLConfiguration extends TeaModel {
     /**
-     * <p>The AccessKey ID used to grant the permissions to read data from the source logstore. This parameter is required. If you use a role to grant the required permissions, specify an empty string.</p>
+     * <p>The AccessKey ID that is required to read data from the source Logstore. This parameter is required. If you use a RAM role for authorization, set this parameter to an empty string.</p>
      */
     @NameInMap("accessKeyId")
     @Deprecated
     public String accessKeyId;
 
     /**
-     * <p>The AccessKey secret used to grant the permissions to read data from the source logstore. This parameter is required. If you use a role to grant the required permissions, specify an empty string.</p>
+     * <p>The AccessKey secret that is required to read data from the source Logstore. This parameter is required. If you use a RAM role for authorization, set this parameter to an empty string.</p>
      */
     @NameInMap("accessKeySecret")
     @Deprecated
     public String accessKeySecret;
 
     /**
-     * <p>The beginning of the time range for transformation. Specify a Unix timestamp that is accurate to the second. This parameter is required. If you want to transform data from the first log in the source logstore, enter 0.</p>
+     * <p>The start time of the data transformation. The value is a UNIX timestamp. Unit: seconds. This parameter is required. To start the data transformation from the earliest log in the source Logstore, set this parameter to 0.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -29,7 +29,7 @@ public class ETLConfiguration extends TeaModel {
     public Long fromTime;
 
     /**
-     * <p>The type of the data transformation syntax.</p>
+     * <p>The language of the data transformation script.</p>
      * 
      * <strong>example:</strong>
      * <p>SPL</p>
@@ -38,7 +38,7 @@ public class ETLConfiguration extends TeaModel {
     public String lang;
 
     /**
-     * <p>The name of the source logstore.</p>
+     * <p>The name of the source Logstore.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -48,16 +48,16 @@ public class ETLConfiguration extends TeaModel {
     public String logstore;
 
     /**
-     * <p>The advanced parameter settings.</p>
+     * <p>Advanced parameters.</p>
      * 
      * <strong>example:</strong>
-     * <p>config.vpc.vpc_id.test1:vpc-uf6mskb0b****n9yj</p>
+     * <p>config.vpc.vpc_id.test1：vpc-uf6mskb0b****n9yj</p>
      */
     @NameInMap("parameters")
     public java.util.Map<String, ?> parameters;
 
     /**
-     * <p>The Alibaba Cloud Resource Name (ARN) of the role that is used to grant the permissions to read data from the source logstore.</p>
+     * <p>The ARN of the RAM role that is authorized to read data from the source Logstore.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -67,24 +67,26 @@ public class ETLConfiguration extends TeaModel {
     public String roleArn;
 
     /**
-     * <p>The transformation script.</p>
+     * <p>The data transformation script.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>e_set(&quot;key&quot;,&quot;value&quot;)</p>
+     * <ul>
+     * <li>| extend key=\&quot;value\&quot;</li>
+     * </ul>
      */
     @NameInMap("script")
     public String script;
 
     /**
-     * <p>The storage destinations.</p>
+     * <p>The output destinations of the data transformation.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("sinks")
     public java.util.List<ETLConfigurationSink> sinks;
 
     /**
-     * <p>The end of the time range for transformation. Specify a Unix timestamp that is accurate to the second. This parameter is required. If you want to transform data until the data transformation job is manually stopped, enter 0.</p>
+     * <p>The end time of the data transformation. The value is a UNIX timestamp. Unit: seconds. This parameter is required. To continuously perform the data transformation until you manually stop it, set this parameter to 0.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -13,6 +13,9 @@ public class UpdateOSSHDFSExportRequest extends TeaModel {
 
     /**
      * <p>The description of the job.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Update OSS-HDFS delivery task</p>
      */
     @NameInMap("description")
     public String description;
@@ -22,7 +25,7 @@ public class UpdateOSSHDFSExportRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>ali-test-oss-hdfs-job</p>
+     * <p>my-oss-hdfs-job</p>
      */
     @NameInMap("displayName")
     public String displayName;

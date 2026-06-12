@@ -5,14 +5,14 @@ import com.aliyun.tea.*;
 
 public class LogItem extends TeaModel {
     /**
-     * <p>The log fields.</p>
+     * <p>A list of log fields.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Contents")
     public java.util.List<LogContent> contents;
 
     /**
-     * <p>The log time. The value is a UNIX timestamp representing the number of seconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+     * <p>The time of the log, formatted as a Unix timestamp. It represents the number of seconds that have elapsed since 00:00:00 UTC on January 1, 1970.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

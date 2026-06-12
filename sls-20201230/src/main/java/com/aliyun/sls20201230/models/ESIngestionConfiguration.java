@@ -5,13 +5,17 @@ import com.aliyun.tea.*;
 
 public class ESIngestionConfiguration extends TeaModel {
     /**
-     * <p>logstore</p>
+     * <p>The Logstore.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test-logstore</p>
      */
     @NameInMap("logstore")
     public String logstore;
 
     /**
+     * <p>The source.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("source")

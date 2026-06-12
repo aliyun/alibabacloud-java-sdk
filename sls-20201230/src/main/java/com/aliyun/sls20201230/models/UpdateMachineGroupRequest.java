@@ -32,8 +32,10 @@ public class UpdateMachineGroupRequest extends TeaModel {
     /**
      * <p>The identifier type of the machine group. Valid values:</p>
      * <ul>
-     * <li>ip: The machine group uses IP addresses as identifiers.</li>
-     * <li>userdefined: The machine group uses custom identifiers.</li>
+     * <li><p>ip: The machine group uses IP addresses as identifiers.</p>
+     * </li>
+     * <li><p>userdefined: The machine group uses custom identifiers.</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -46,8 +48,10 @@ public class UpdateMachineGroupRequest extends TeaModel {
     /**
      * <p>The identifiers of the machines in the machine group.</p>
      * <ul>
-     * <li>If you set machineIdentifyType to ip, enter the IP addresses of the machines.</li>
-     * <li>If you set machineIdentifyType to userdefined, enter a custom identifier.</li>
+     * <li><p>If you set machineIdentifyType to ip, enter the IP addresses of the machines.</p>
+     * </li>
+     * <li><p>If you set machineIdentifyType to userdefined, enter a custom identifier.</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

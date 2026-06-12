@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GCSIngestionConfiguration extends TeaModel {
     /**
-     * <p>logstore</p>
+     * <p>The name of the destination logstore.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,6 +15,7 @@ public class GCSIngestionConfiguration extends TeaModel {
     public String logstore;
 
     /**
+     * <p>The data source configuration.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("source")

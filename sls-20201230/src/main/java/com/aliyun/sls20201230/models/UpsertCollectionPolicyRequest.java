@@ -55,9 +55,12 @@ public class UpsertCollectionPolicyRequest extends TeaModel {
     /**
      * <p>The name must meet the following requirements:</p>
      * <ul>
-     * <li>The name can contain only lowercase letters, digits, hyphens (-), and underscores (_).</li>
-     * <li>The name must start with a letter.</li>
-     * <li>The name must be 3 to 63 characters in length.</li>
+     * <li><p>The name can contain only lowercase letters, digits, hyphens (-), and underscores (_).</p>
+     * </li>
+     * <li><p>The name must start with a letter.</p>
+     * </li>
+     * <li><p>The name must be 3 to 63 characters in length.</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

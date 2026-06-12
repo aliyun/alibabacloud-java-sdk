@@ -5,62 +5,92 @@ import com.aliyun.tea.*;
 
 public class ESIngestionConfigurationSource extends TeaModel {
     /**
+     * <p>The URL of the service instance.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("BootstrapServers")
     public String bootstrapServers;
 
     /**
+     * <p>The import mode.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("ConnectorMode")
     public String connectorMode;
 
+    /**
+     * <p>The end time.</p>
+     */
     @NameInMap("EndTime")
     public Long endTime;
 
     /**
+     * <p>The list of ES indexes.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Index")
     public String index;
 
     /**
+     * <p>The maximum data delay in seconds.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("MaxDataDelaySec")
     public Long maxDataDelaySec;
 
     /**
+     * <p>The interval in seconds for checking new data.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("MinFragRangeSec")
     public Long minFragRangeSec;
 
+    /**
+     * <p>The password for the ES user.</p>
+     */
     @NameInMap("Password")
     public String password;
 
     /**
+     * <p>The ES query.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Query")
     public String query;
 
+    /**
+     * <p>The start time.</p>
+     */
     @NameInMap("StartTime")
     public Long startTime;
 
+    /**
+     * <p>The time field.</p>
+     */
     @NameInMap("TimeFieldName")
     public String timeFieldName;
 
+    /**
+     * <p>The format of the time field.</p>
+     */
     @NameInMap("TimeFormat")
     public String timeFormat;
 
+    /**
+     * <p>The time zone of the time field.</p>
+     */
     @NameInMap("TimeZone")
     public String timeZone;
 
+    /**
+     * <p>The username for ES.</p>
+     */
     @NameInMap("Username")
     public String username;
 
+    /**
+     * <p>The ID of the VPC instance.</p>
+     */
     @NameInMap("VpcId")
     public String vpcId;
 

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListOSSIngestionsResponseBody extends TeaModel {
     /**
-     * <p>The number of OSS data import jobs that are returned.</p>
+     * <p>The number of OSS import tasks returned in this response.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -14,13 +14,13 @@ public class ListOSSIngestionsResponseBody extends TeaModel {
     public Integer count;
 
     /**
-     * <p>The OSS data import jobs.</p>
+     * <p>A list of OSS import tasks.</p>
      */
     @NameInMap("results")
     public java.util.List<OSSIngestion> results;
 
     /**
-     * <p>The total number of OSS data import jobs in the project.</p>
+     * <p>The total number of OSS import tasks in the Project.</p>
      * 
      * <strong>example:</strong>
      * <p>80</p>

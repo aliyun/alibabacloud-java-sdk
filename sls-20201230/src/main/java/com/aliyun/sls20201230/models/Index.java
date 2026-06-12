@@ -5,22 +5,24 @@ import com.aliyun.tea.*;
 
 public class Index extends TeaModel {
     /**
-     * <p>The configurations of field indexes. A field index is a key-value pair in which the key specifies the name of the field and the value specifies the index configuration of the field. You must specify at least one of the following parameters: line and keys.</p>
+     * <p>The field index configuration. The key is the field name and the value is the index configuration for the field. You must specify either this parameter or the \<code>line\\</code> parameter.</p>
      */
     @NameInMap("keys")
     public java.util.Map<String, IndexKey> keys;
 
     /**
-     * <p>The configurations of full-text indexes. You must specify at least one of the following parameters: line and keys.</p>
+     * <p>The full-text index configuration. You must specify either this parameter or the \<code>keys\\</code> parameter.</p>
      */
     @NameInMap("line")
     public IndexLine line;
 
     /**
-     * <p>Specifies whether to enable the LogReduce feature. After you enable the LogReduce feature, either the whitelist or blacklist takes effect. Valid values:</p>
+     * <p>Specifies whether to enable log clustering. If enabled, either the whitelist or the blacklist can be active, but not both.</p>
      * <ul>
-     * <li>true</li>
-     * <li>false (default)</li>
+     * <li><p>true: Enable log clustering.</p>
+     * </li>
+     * <li><p>false (default): Do not enable log clustering.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -30,19 +32,19 @@ public class Index extends TeaModel {
     public Boolean logReduce;
 
     /**
-     * <p>The blacklist of fields that are used to cluster logs. This parameter takes effect only when the LogReduce feature is enabled.</p>
+     * <p>The blacklist of fields for log clustering. This parameter is valid only when log clustering is enabled.</p>
      */
     @NameInMap("log_reduce_black_list")
     public java.util.List<String> logReduceBlackList;
 
     /**
-     * <p>The whitelist of fields that are used to cluster logs. This parameter takes effect only when the LogReduce feature is enabled.</p>
+     * <p>The whitelist of fields for log clustering. This parameter is valid only when log clustering is enabled.</p>
      */
     @NameInMap("log_reduce_white_list")
     public java.util.List<String> logReduceWhiteList;
 
     /**
-     * <p>The maximum length of a field value that can be retained. Default value: 2048. Unit: bytes. The default value is equal to 2 KB. You can change the value of this parameter. Valid values: 64 to 16384.</p>
+     * <p>The default maximum length of a field value in Simple Log Service is 2,048 bytes (2 KB). To change this limit, set the maximum length for a text field. The value must be between 64 and 16,384 bytes.</p>
      * 
      * <strong>example:</strong>
      * <p>2048</p>
@@ -51,6 +53,8 @@ public class Index extends TeaModel {
     public Integer maxTextLen;
 
     /**
+     * <p>Specifies whether to enable the scan index.</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -120,10 +124,12 @@ public class Index extends TeaModel {
 
     public static class IndexLine extends TeaModel {
         /**
-         * <p>Specifies whether to enable case sensitivity. Valid values:</p>
+         * <p>Specifies whether the index is case-sensitive.</p>
          * <ul>
-         * <li>true</li>
-         * <li>false (default)</li>
+         * <li><p>true: The index is case-sensitive.</p>
+         * </li>
+         * <li><p>false (default): The index is not case-sensitive.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -133,10 +139,12 @@ public class Index extends TeaModel {
         public Boolean caseSensitive;
 
         /**
-         * <p>Specifies whether the field contains Chinese characters. Valid values:</p>
+         * <p>Specifies whether the logs contain Chinese characters.</p>
          * <ul>
-         * <li>true</li>
-         * <li>false (default)</li>
+         * <li><p>true: The logs contain Chinese characters.</p>
+         * </li>
+         * <li><p>false (default): The logs do not contain Chinese characters.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -146,19 +154,19 @@ public class Index extends TeaModel {
         public Boolean chn;
 
         /**
-         * <p>The excluded fields. You cannot specify both include_keys and exclude_keys.</p>
+         * <p>The list of fields to exclude from the full-text index. This parameter cannot be specified at the same time as \<code>include_keys\\</code>.</p>
          */
         @NameInMap("exclude_keys")
         public java.util.List<String> excludeKeys;
 
         /**
-         * <p>The included fields. You cannot specify both include_keys and exclude_keys.</p>
+         * <p>The list of fields to include in the full-text index. This parameter cannot be specified at the same time as \<code>exclude_keys\\</code>.</p>
          */
         @NameInMap("include_keys")
         public java.util.List<String> includeKeys;
 
         /**
-         * <p>The delimiters. You can specify a delimiter to delimit the content of a field value.</p>
+         * <p>The list of delimiters for tokenization. This parameter specifies how the field is tokenized.</p>
          * <p>This parameter is required.</p>
          */
         @NameInMap("token")

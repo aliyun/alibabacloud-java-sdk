@@ -8,6 +8,8 @@ public class SubmitAsyncSqlHeaders extends TeaModel {
     public java.util.Map<String, String> commonHeaders;
 
     /**
+     * <p>The data format of the response. The value must be application/x-protobuf.</p>
+     * 
      * <strong>example:</strong>
      * <p>application/x-protobuf</p>
      */
@@ -15,6 +17,8 @@ public class SubmitAsyncSqlHeaders extends TeaModel {
     public String accept;
 
     /**
+     * <p>The compression format of the response. The value can be lz4.</p>
+     * 
      * <strong>example:</strong>
      * <p>lz4</p>
      */

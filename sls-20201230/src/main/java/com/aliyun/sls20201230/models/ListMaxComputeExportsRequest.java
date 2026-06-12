@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListMaxComputeExportsRequest extends TeaModel {
     /**
+     * <p>The name of the Logstore.</p>
+     * 
      * <strong>example:</strong>
      * <p>my-logstore</p>
      */
@@ -12,6 +14,8 @@ public class ListMaxComputeExportsRequest extends TeaModel {
     public String logstore;
 
     /**
+     * <p>The position from which to start the query. The default value is 0.</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
@@ -19,10 +23,10 @@ public class ListMaxComputeExportsRequest extends TeaModel {
     public Integer offset;
 
     /**
-     * <p>The number of entries to return. Default value: 10.</p>
+     * <p>The number of entries to return. The default value is 10.</p>
      * 
      * <strong>example:</strong>
-     * <p>100</p>
+     * <p>10</p>
      */
     @NameInMap("size")
     public Integer size;

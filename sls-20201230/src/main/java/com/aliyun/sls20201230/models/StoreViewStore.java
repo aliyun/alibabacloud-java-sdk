@@ -15,13 +15,16 @@ public class StoreViewStore extends TeaModel {
     public String project;
 
     /**
-     * <p>The query statement that contains filter conditions.</p>
+     * <p>The query filter statement.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>job: IT | select name, age, gender from log</p>
      */
     @NameInMap("query")
     public String query;
 
     /**
-     * <p>The name of the Logstore or Metricstore.</p>
+     * <p>The name of the LogStore or MetricStore.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

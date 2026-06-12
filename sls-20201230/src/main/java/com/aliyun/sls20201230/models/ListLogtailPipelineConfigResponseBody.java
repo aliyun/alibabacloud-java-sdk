@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListLogtailPipelineConfigResponseBody extends TeaModel {
     /**
-     * <p>The Logtail pipeline configurations that are returned on the current page.</p>
+     * <p>The list of Logtail pipeline configurations returned on the current page.</p>
      */
     @NameInMap("configs")
     public java.util.List<String> configs;
 
     /**
-     * <p>The number of Logtail pipeline configurations that are returned on the current page.</p>
+     * <p>The number of Logtail pipeline configurations returned on the current page.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -20,7 +20,7 @@ public class ListLogtailPipelineConfigResponseBody extends TeaModel {
     public Integer count;
 
     /**
-     * <p>The total number of Logtail pipeline configurations in the current project.</p>
+     * <p>The total number of Logtail pipeline configurations in the project.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>

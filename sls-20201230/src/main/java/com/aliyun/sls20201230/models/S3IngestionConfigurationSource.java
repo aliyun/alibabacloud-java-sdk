@@ -8,7 +8,7 @@ public class S3IngestionConfigurationSource extends TeaModel {
     public java.util.Map<String, ?> advancedParameters;
 
     /**
-     * <p>aws access key</p>
+     * <p>Amazon Web Services (AWS) access key ID</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -18,7 +18,7 @@ public class S3IngestionConfigurationSource extends TeaModel {
     public String awsAccessKey;
 
     /**
-     * <p>aws access key secret</p>
+     * <p>Amazon Web Services (AWS) secret access key</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -28,7 +28,7 @@ public class S3IngestionConfigurationSource extends TeaModel {
     public String awsAccessKeySecret;
 
     /**
-     * <p>s3 region</p>
+     * <p>Amazon S3 region</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -38,7 +38,7 @@ public class S3IngestionConfigurationSource extends TeaModel {
     public String awsRegion;
 
     /**
-     * <p>sqs queue url</p>
+     * <p>Amazon SQS queue URL</p>
      * 
      * <strong>example:</strong>
      * <p><a href="https://sqs.ap-northeast-1.amazonaws.com/123456788/chifan">https://sqs.ap-northeast-1.amazonaws.com/123456788/chifan</a></p>
@@ -47,6 +47,8 @@ public class S3IngestionConfigurationSource extends TeaModel {
     public String awsSQSQueueUrl;
 
     /**
+     * <p>Specifies whether to use SQS.</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -54,7 +56,7 @@ public class S3IngestionConfigurationSource extends TeaModel {
     public Boolean awsUseSQS;
 
     /**
-     * <p>s3 bucket</p>
+     * <p>Amazon S3 bucket name</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -63,13 +65,26 @@ public class S3IngestionConfigurationSource extends TeaModel {
     @NameInMap("bucket")
     public String bucket;
 
+    /**
+     * <p>The endpoint for the CloudFront distribution.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>dtfsb7voqy76q.cloudfront.net</p>
+     */
     @NameInMap("cloudFrontEndpoint")
     public String cloudFrontEndpoint;
 
+    /**
+     * <p>The authentication token for accessing the CloudFront endpoint.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>@test-s3-access/ABS</p>
+     */
     @NameInMap("cloudFrontToken")
     public String cloudFrontToken;
 
     /**
+     * <p>Compression codec. Valid values: none, snappy, gzip</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -79,6 +94,7 @@ public class S3IngestionConfigurationSource extends TeaModel {
     public String compressionCodec;
 
     /**
+     * <p>Character encoding</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -88,6 +104,8 @@ public class S3IngestionConfigurationSource extends TeaModel {
     public String encoding;
 
     /**
+     * <p>Include only files modified before this Unix timestamp</p>
+     * 
      * <strong>example:</strong>
      * <p>1714360481</p>
      */
@@ -95,7 +113,7 @@ public class S3IngestionConfigurationSource extends TeaModel {
     public Long endTime;
 
     /**
-     * <p>s3 endpoint</p>
+     * <p>Amazon S3 endpoint</p>
      * 
      * <strong>example:</strong>
      * <p>s3.us-east-1.amazonaws.com</p>
@@ -104,12 +122,14 @@ public class S3IngestionConfigurationSource extends TeaModel {
     public String endpoint;
 
     /**
+     * <p>Format</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("format")
     public java.util.Map<String, ?> format;
 
     /**
+     * <p>Polling interval for new files</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -119,6 +139,8 @@ public class S3IngestionConfigurationSource extends TeaModel {
     public String interval;
 
     /**
+     * <p>Regular expression to filter file paths</p>
+     * 
      * <strong>example:</strong>
      * <p>.*</p>
      */
@@ -126,6 +148,8 @@ public class S3IngestionConfigurationSource extends TeaModel {
     public String pattern;
 
     /**
+     * <p>Prefix to filter file paths</p>
+     * 
      * <strong>example:</strong>
      * <p>prefix</p>
      */
@@ -133,6 +157,8 @@ public class S3IngestionConfigurationSource extends TeaModel {
     public String prefix;
 
     /**
+     * <p>Ingest processor ID</p>
+     * 
      * <strong>example:</strong>
      * <p>ingest-processor-1756802123-953901</p>
      */
@@ -140,6 +166,8 @@ public class S3IngestionConfigurationSource extends TeaModel {
     public String processorId;
 
     /**
+     * <p>Include only files modified after this Unix timestamp</p>
+     * 
      * <strong>example:</strong>
      * <p>1714274081</p>
      */
@@ -147,6 +175,8 @@ public class S3IngestionConfigurationSource extends TeaModel {
     public Long startTime;
 
     /**
+     * <p>Enable context browsing</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -154,6 +184,8 @@ public class S3IngestionConfigurationSource extends TeaModel {
     public Boolean tagPackId;
 
     /**
+     * <p>Name of the field that contains event timestamps</p>
+     * 
      * <strong>example:</strong>
      * <p><strong>time</strong></p>
      */
@@ -161,6 +193,8 @@ public class S3IngestionConfigurationSource extends TeaModel {
     public String timeField;
 
     /**
+     * <p>Timestamp format in the time field</p>
+     * 
      * <strong>example:</strong>
      * <p>yyyy-MM-dd HH:mm:ss</p>
      */
@@ -168,6 +202,8 @@ public class S3IngestionConfigurationSource extends TeaModel {
     public String timeFormat;
 
     /**
+     * <p>Regular expression to extract timestamps from file names or content</p>
+     * 
      * <strong>example:</strong>
      * <p>[0-9]{0,2}\/[0-9a-zA-Z]+\/[0-9:,]+</p>
      */
@@ -175,6 +211,8 @@ public class S3IngestionConfigurationSource extends TeaModel {
     public String timePattern;
 
     /**
+     * <p>Time zone for the time field</p>
+     * 
      * <strong>example:</strong>
      * <p>GMT+08:00</p>
      */
@@ -182,12 +220,17 @@ public class S3IngestionConfigurationSource extends TeaModel {
     public String timeZone;
 
     /**
+     * <p>Use only Amazon SQS to detect new files</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
     @NameInMap("useAwsSQSOnly")
     public Boolean useAwsSQSOnly;
 
+    /**
+     * <p>Specifies whether to access S3 through a CloudFront distribution.</p>
+     */
     @NameInMap("useCloudFront")
     public Boolean useCloudFront;
 

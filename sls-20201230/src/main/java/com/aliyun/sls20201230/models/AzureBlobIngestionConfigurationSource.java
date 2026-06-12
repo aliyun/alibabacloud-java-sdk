@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class AzureBlobIngestionConfigurationSource extends TeaModel {
     /**
+     * <p>The access key for the Azure Blob Storage account.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class AzureBlobIngestionConfigurationSource extends TeaModel {
     public String accountKey;
 
     /**
+     * <p>The name of the Azure Blob Storage account.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -22,10 +24,14 @@ public class AzureBlobIngestionConfigurationSource extends TeaModel {
     @NameInMap("accountName")
     public String accountName;
 
+    /**
+     * <p>Advanced configuration options.</p>
+     */
     @NameInMap("advancedParameters")
     public java.util.Map<String, ?> advancedParameters;
 
     /**
+     * <p>The compression codec for the source data. Valid values are <code>none</code>, <code>snappy</code>, and <code>gzip</code>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -35,6 +41,7 @@ public class AzureBlobIngestionConfigurationSource extends TeaModel {
     public String compressionCodec;
 
     /**
+     * <p>The name of the container in Azure Blob Storage.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -44,6 +51,7 @@ public class AzureBlobIngestionConfigurationSource extends TeaModel {
     public String containerName;
 
     /**
+     * <p>The character encoding of the source files.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -53,6 +61,8 @@ public class AzureBlobIngestionConfigurationSource extends TeaModel {
     public String encoding;
 
     /**
+     * <p>Ingests only files modified before this time, specified as a Unix timestamp.</p>
+     * 
      * <strong>example:</strong>
      * <p>1714360481</p>
      */
@@ -60,6 +70,8 @@ public class AzureBlobIngestionConfigurationSource extends TeaModel {
     public Long endTime;
 
     /**
+     * <p>The service endpoint for Azure Blob Storage.</p>
+     * 
      * <strong>example:</strong>
      * <p><a href="https://your-storage.blob.core.windows.net">https://your-storage.blob.core.windows.net</a></p>
      */
@@ -67,12 +79,14 @@ public class AzureBlobIngestionConfigurationSource extends TeaModel {
     public String endpoint;
 
     /**
+     * <p>The format of the source data.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("format")
     public java.util.Map<String, ?> format;
 
     /**
+     * <p>The interval at which to check for new files to ingest.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -82,6 +96,8 @@ public class AzureBlobIngestionConfigurationSource extends TeaModel {
     public String interval;
 
     /**
+     * <p>A pattern used to filter files by path.</p>
+     * 
      * <strong>example:</strong>
      * <p>.*</p>
      */
@@ -89,6 +105,8 @@ public class AzureBlobIngestionConfigurationSource extends TeaModel {
     public String pattern;
 
     /**
+     * <p>The file path prefix used to filter files.</p>
+     * 
      * <strong>example:</strong>
      * <p>prefix</p>
      */
@@ -96,6 +114,8 @@ public class AzureBlobIngestionConfigurationSource extends TeaModel {
     public String prefix;
 
     /**
+     * <p>The ID of the processor that receives the data.</p>
+     * 
      * <strong>example:</strong>
      * <p>ingest-processor-1756802123-953901</p>
      */
@@ -103,6 +123,8 @@ public class AzureBlobIngestionConfigurationSource extends TeaModel {
     public String processorId;
 
     /**
+     * <p>Ingests only files modified after this time, specified as a Unix timestamp.</p>
+     * 
      * <strong>example:</strong>
      * <p>1714274081</p>
      */
@@ -110,6 +132,8 @@ public class AzureBlobIngestionConfigurationSource extends TeaModel {
     public Long startTime;
 
     /**
+     * <p>Specifies whether to enable context query.</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -117,6 +141,8 @@ public class AzureBlobIngestionConfigurationSource extends TeaModel {
     public Boolean tagPackId;
 
     /**
+     * <p>The source field for the time value.</p>
+     * 
      * <strong>example:</strong>
      * <p><strong>time</strong></p>
      */
@@ -124,6 +150,8 @@ public class AzureBlobIngestionConfigurationSource extends TeaModel {
     public String timeField;
 
     /**
+     * <p>The format of the time field.</p>
+     * 
      * <strong>example:</strong>
      * <p>yyyy-MM-dd HH:mm:ss</p>
      */
@@ -131,6 +159,8 @@ public class AzureBlobIngestionConfigurationSource extends TeaModel {
     public String timeFormat;
 
     /**
+     * <p>The pattern used to extract the time value.</p>
+     * 
      * <strong>example:</strong>
      * <p>[0-9]{0,2}\/[0-9a-zA-Z]+\/[0-9:,]+</p>
      */
@@ -138,6 +168,8 @@ public class AzureBlobIngestionConfigurationSource extends TeaModel {
     public String timePattern;
 
     /**
+     * <p>The time zone of the time field.</p>
+     * 
      * <strong>example:</strong>
      * <p>GMT+08:00</p>
      */

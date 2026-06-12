@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class Project extends TeaModel {
     /**
-     * <p>The time at which the project was created.</p>
+     * <p>The time when the project was created.</p>
      * 
      * <strong>example:</strong>
      * <p>2021-07-07 14:08:09</p>
@@ -33,7 +33,7 @@ public class Project extends TeaModel {
     public String description;
 
     /**
-     * <p>The time at which the project was last modified.</p>
+     * <p>The time when the project was last modified.</p>
      * 
      * <strong>example:</strong>
      * <p>2022-04-18 13:30:19</p>
@@ -42,7 +42,7 @@ public class Project extends TeaModel {
     public String lastModifyTime;
 
     /**
-     * <p>The ID of the Alibaba Cloud account that is used to create the project.</p>
+     * <p>The Alibaba Cloud account that owns the project.</p>
      * 
      * <strong>example:</strong>
      * <p>&quot;&quot;</p>
@@ -51,7 +51,7 @@ public class Project extends TeaModel {
     public String owner;
 
     /**
-     * <p>The name of the project. The name is included in the value of the Host header. The name must be unique in a region. You cannot change the name after the project is created.</p>
+     * <p>The name of the project. The name is a part of the endpoint. The project name must be unique in a region of Alibaba Cloud. After a project is created, its name cannot be changed.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -61,12 +61,14 @@ public class Project extends TeaModel {
     public String projectName;
 
     /**
-     * <p>project quota</p>
+     * <p>The quota of the project.</p>
      */
     @NameInMap("quota")
     public java.util.Map<String, ?> quota;
 
     /**
+     * <p>Indicates whether the recycle bin is enabled.</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -74,7 +76,7 @@ public class Project extends TeaModel {
     public Boolean recycleBinEnabled;
 
     /**
-     * <p>The region to which the project belongs.</p>
+     * <p>The region where the project resides.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -92,10 +94,12 @@ public class Project extends TeaModel {
     public String resourceGroupId;
 
     /**
-     * <p>The status of the project. Valid values:</p>
+     * <p>The status of the project.</p>
      * <ul>
-     * <li>Normal</li>
-     * <li>Disable</li>
+     * <li><p>Normal: The project is in the normal state.</p>
+     * </li>
+     * <li><p>Disable: The project is disabled.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

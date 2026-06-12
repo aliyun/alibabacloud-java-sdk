@@ -4,6 +4,9 @@ package com.aliyun.sls20201230.models;
 import com.aliyun.tea.*;
 
 public class DeleteAgentInstanceConfigShrinkRequest extends TeaModel {
+    /**
+     * <p>The process to which the configuration applies.</p>
+     */
     @NameInMap("attributes")
     public String attributesShrink;
 

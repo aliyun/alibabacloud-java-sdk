@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class AlertConfiguration extends TeaModel {
     /**
-     * <p>The annotations of the alert rule.</p>
+     * <p>The alert annotations.</p>
      */
     @NameInMap("annotations")
     public java.util.List<AlertTag> annotations;
 
     /**
-     * <p>Specifies whether to allow the system to automatically add annotations to the alert rule.</p>
+     * <p>Specifies whether to enable automatic annotation.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,41 +21,41 @@ public class AlertConfiguration extends TeaModel {
     public Boolean autoAnnotation;
 
     /**
-     * <p>The alert trigger conditions.</p>
+     * <p>The alert trigger condition.</p>
      */
     @NameInMap("conditionConfiguration")
     public ConditionConfiguration conditionConfiguration;
 
     /**
-     * <p>The ID of the dashboard associated with the alert rule.</p>
+     * <p>The ID of the dashboard to which the alert is attached.</p>
      * 
      * <strong>example:</strong>
-     * <p>dasnboardExample</p>
+     * <p>DasnboardExample</p>
      */
     @NameInMap("dashboard")
     public String dashboard;
 
     /**
-     * <p>The configurations of group evaluation.</p>
+     * <p>The group evaluation configuration.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("groupConfiguration")
     public GroupConfiguration groupConfiguration;
 
     /**
-     * <p>The set operation configurations for the query statements of the alert rule.</p>
+     * <p>The configurations for joining the results of query statements.</p>
      */
     @NameInMap("joinConfigurations")
     public java.util.List<JoinConfiguration> joinConfigurations;
 
     /**
-     * <p>The labels of the alert rule.</p>
+     * <p>The alert labels.</p>
      */
     @NameInMap("labels")
     public java.util.List<AlertTag> labels;
 
     /**
-     * <p>The time when a paused alert rule is resumed.</p>
+     * <p>The time until which the alert is muted.</p>
      * 
      * <strong>example:</strong>
      * <p>1698907508</p>
@@ -64,7 +64,7 @@ public class AlertConfiguration extends TeaModel {
     public Long muteUntil;
 
     /**
-     * <p>Specifies whether to enable the no-data alert feature.</p>
+     * <p>Specifies whether to enable no-data alerts.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -74,7 +74,7 @@ public class AlertConfiguration extends TeaModel {
     public Boolean noDataFire;
 
     /**
-     * <p>The severity of the no-data alert.</p>
+     * <p>The severity of no-data alerts.</p>
      * 
      * <strong>example:</strong>
      * <p>6</p>
@@ -83,20 +83,20 @@ public class AlertConfiguration extends TeaModel {
     public Integer noDataSeverity;
 
     /**
-     * <p>The notification configurations of Simple Log Service.</p>
+     * <p>The configuration for the SLS alert notification service.</p>
      */
     @NameInMap("policyConfiguration")
     public PolicyConfiguration policyConfiguration;
 
     /**
-     * <p>The query statements.</p>
+     * <p>The list of query statements.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("queryList")
     public java.util.List<AlertQuery> queryList;
 
     /**
-     * <p>Specifies whether to send a recovery notification after an alert is cleared.</p>
+     * <p>Specifies whether to send recovery alerts.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -113,37 +113,37 @@ public class AlertConfiguration extends TeaModel {
     public java.util.List<SeverityConfiguration> severityConfigurations;
 
     /**
-     * <p>The configurations that allow alerts to be sent to the notification system of Simple Log Service.</p>
+     * <p>The configuration for sending alerts to the SLS alert management service.</p>
      */
     @NameInMap("sinkAlerthub")
     public SinkAlerthubConfiguration sinkAlerthub;
 
     /**
-     * <p>The configurations that allow alerts to be sent to CloudMonitor Event Center.</p>
+     * <p>The configuration for sending alerts to Cloud Monitor.</p>
      */
     @NameInMap("sinkCms")
     public SinkCmsConfiguration sinkCms;
 
     /**
-     * <p>The configurations that allow alerts to be sent to an Eventstore.</p>
+     * <p>The configuration for sending alerts to the eventstore.</p>
      */
     @NameInMap("sinkEventStore")
     public SinkEventStoreConfiguration sinkEventStore;
 
     /**
-     * <p>The custom tags of the alert rule.</p>
+     * <p>The custom alert tags.</p>
      */
     @NameInMap("tags")
     public java.util.List<String> tags;
 
     /**
-     * <p>The alert template configurations.</p>
+     * <p>The alert template configuration.</p>
      */
     @NameInMap("templateConfiguration")
     public TemplateConfiguration templateConfiguration;
 
     /**
-     * <p>The maximum number of consecutive times that the trigger condition is met.</p>
+     * <p>The consecutive trigger threshold.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

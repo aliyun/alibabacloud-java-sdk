@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class ListOSSHDFSExportsResponseBody extends TeaModel {
     /**
+     * <p>The number of OSS-HDFS export tasks returned in the current response.</p>
+     * 
      * <strong>example:</strong>
      * <p>2</p>
      */
     @NameInMap("count")
     public Integer count;
 
+    /**
+     * <p>The list of OSS-HDFS export tasks.</p>
+     */
     @NameInMap("results")
     public java.util.List<OSSExport> results;
 
     /**
+     * <p>The total number of OSS-HDFS export tasks in the project.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */

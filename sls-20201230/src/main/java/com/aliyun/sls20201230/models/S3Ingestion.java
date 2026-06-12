@@ -4,10 +4,15 @@ package com.aliyun.sls20201230.models;
 import com.aliyun.tea.*;
 
 public class S3Ingestion extends TeaModel {
+    /**
+     * <p>S3 import configuration</p>
+     */
     @NameInMap("configuration")
     public S3IngestionConfiguration configuration;
 
     /**
+     * <p>Creation Time</p>
+     * 
      * <strong>example:</strong>
      * <p>1714360481</p>
      */
@@ -15,7 +20,7 @@ public class S3Ingestion extends TeaModel {
     public Long createTime;
 
     /**
-     * <p>job description</p>
+     * <p>Job description</p>
      * 
      * <strong>example:</strong>
      * <p>s3 ingestion</p>
@@ -24,7 +29,7 @@ public class S3Ingestion extends TeaModel {
     public String description;
 
     /**
-     * <p>job displayName</p>
+     * <p>Job display name</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -34,6 +39,8 @@ public class S3Ingestion extends TeaModel {
     public String displayName;
 
     /**
+     * <p>Updated At</p>
+     * 
      * <strong>example:</strong>
      * <p>1714360481</p>
      */
@@ -41,6 +48,7 @@ public class S3Ingestion extends TeaModel {
     public Long lastModifiedTime;
 
     /**
+     * <p>Task Name</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -50,12 +58,15 @@ public class S3Ingestion extends TeaModel {
     public String name;
 
     /**
+     * <p>Scan Configuration</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("schedule")
     public Schedule schedule;
 
     /**
+     * <p>Job ID</p>
+     * 
      * <strong>example:</strong>
      * <p>c7f01719d9feb105fc9d8df92af62010</p>
      */
@@ -63,6 +74,8 @@ public class S3Ingestion extends TeaModel {
     public String scheduleId;
 
     /**
+     * <p>Import Status</p>
+     * 
      * <strong>example:</strong>
      * <p>RUNNING</p>
      */

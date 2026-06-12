@@ -5,16 +5,27 @@ import com.aliyun.tea.*;
 
 public class UpdateGCSIngestionRequest extends TeaModel {
     /**
+     * <p>The configuration of the ingestion task.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("configuration")
     public GCSIngestionConfiguration configuration;
 
+    /**
+     * <p>The description of the ingestion task.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Gcs import</p>
+     */
     @NameInMap("description")
     public String description;
 
     /**
+     * <p>The display name of the ingestion task.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Gcs import</p>
      */
     @NameInMap("displayName")
     public String displayName;

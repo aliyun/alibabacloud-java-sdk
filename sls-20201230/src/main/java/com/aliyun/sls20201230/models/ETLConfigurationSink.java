@@ -5,33 +5,33 @@ import com.aliyun.tea.*;
 
 public class ETLConfigurationSink extends TeaModel {
     /**
-     * <p>The AccessKey ID that is used to grant the permissions to write data to the destination Logstore.</p>
+     * <p>The AccessKey ID used to write to the destination Logstore.</p>
      */
     @NameInMap("accessKeyId")
     @Deprecated
     public String accessKeyId;
 
     /**
-     * <p>The AccessKey secret that is used to grant the permissions to write data to the destination Logstore.</p>
+     * <p>The AccessKey Secret used to write to the destination Logstore.</p>
      */
     @NameInMap("accessKeySecret")
     @Deprecated
     public String accessKeySecret;
 
     /**
-     * <p>The result data to write.</p>
+     * <p>The datasets to write to the sink.</p>
      */
     @NameInMap("datasets")
     public java.util.List<String> datasets;
 
     /**
-     * <p>The Simple Log Service endpoint for the region where the destination project resides.</p>
+     * <p>The endpoint of the destination Project\&quot;s region.</p>
      */
     @NameInMap("endpoint")
     public String endpoint;
 
     /**
-     * <p>The name of the destination Logstore.</p>
+     * <p>The destination Logstore name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -41,7 +41,7 @@ public class ETLConfigurationSink extends TeaModel {
     public String logstore;
 
     /**
-     * <p>The name of the storage destination.</p>
+     * <p>The sink name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -51,7 +51,7 @@ public class ETLConfigurationSink extends TeaModel {
     public String name;
 
     /**
-     * <p>The name of the destination project.</p>
+     * <p>The destination Project name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -61,7 +61,7 @@ public class ETLConfigurationSink extends TeaModel {
     public String project;
 
     /**
-     * <p>The Alibaba Cloud Resource Name (ARN) of the role that is used to grant the permissions to write data to the destination Logstore.</p>
+     * <p>The role ARN used to write to the destination Logstore.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListAnnotationLabelsResponseBody extends TeaModel {
     /**
-     * <p>The data returned.</p>
+     * <p>The list of annotation label table structs.</p>
      */
     @NameInMap("data")
     public java.util.List<MLLabelParam> data;
 
     /**
-     * <p>The total number of tags that meet the query conditions.</p>
+     * <p>The total number of entries that meet the query conditions.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>

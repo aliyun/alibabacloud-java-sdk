@@ -5,14 +5,14 @@ import com.aliyun.tea.*;
 
 public class CreateETLRequest extends TeaModel {
     /**
-     * <p>The detailed configuration of the job.</p>
+     * <p>The detailed configuration of the data transformation job.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("configuration")
     public ETLConfiguration configuration;
 
     /**
-     * <p>The description of the job.</p>
+     * <p>The description of the data transformation job.</p>
      * 
      * <strong>example:</strong>
      * <p>this is ETL</p>
@@ -21,7 +21,7 @@ public class CreateETLRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>The display name of the job.</p>
+     * <p>The display name of the data transformation job.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -31,7 +31,16 @@ public class CreateETLRequest extends TeaModel {
     public String displayName;
 
     /**
-     * <p>The name of the job (unique within a project).</p>
+     * <p>The job name. The naming convention is as follows:</p>
+     * <p>The job name must be unique within the project.</p>
+     * <ul>
+     * <li><p>The name can contain only lowercase letters, digits, hyphens (-), and underscores (_).</p>
+     * </li>
+     * <li><p>The name must start and end with a lowercase letter or a digit.</p>
+     * </li>
+     * <li><p>The length must be 2 to 64 characters.</p>
+     * </li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

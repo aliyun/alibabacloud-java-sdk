@@ -7,8 +7,10 @@ public class UntagResourcesRequest extends TeaModel {
     /**
      * <p>Specifies whether to unbind all tags. Default value: false. Valid values:</p>
      * <ul>
-     * <li>false: unbinds only the tags that match the value of tags.</li>
-     * <li>true: unbinds all tags that are bound to the resource.</li>
+     * <li><p>false: unbinds only the tags that match the value of tags.</p>
+     * </li>
+     * <li><p>true: unbinds all tags that are bound to the resource.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -30,11 +32,16 @@ public class UntagResourcesRequest extends TeaModel {
     /**
      * <p>The type of the resource. Valid values:</p>
      * <ul>
-     * <li>project</li>
-     * <li>logstore</li>
-     * <li>dashboard</li>
-     * <li>machinegroup</li>
-     * <li>logtailconfig</li>
+     * <li><p>project</p>
+     * </li>
+     * <li><p>logstore</p>
+     * </li>
+     * <li><p>dashboard</p>
+     * </li>
+     * <li><p>machinegroup</p>
+     * </li>
+     * <li><p>logtailconfig</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

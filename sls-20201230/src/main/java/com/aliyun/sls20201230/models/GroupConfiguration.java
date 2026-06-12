@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class GroupConfiguration extends TeaModel {
     /**
-     * <p>The fields of group evaluation.</p>
+     * <p>The group evaluation fields.</p>
      */
     @NameInMap("fields")
     public java.util.List<String> fields;
 
     /**
-     * <p>The type of group evaluation.</p>
+     * <p>The group evaluation type.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

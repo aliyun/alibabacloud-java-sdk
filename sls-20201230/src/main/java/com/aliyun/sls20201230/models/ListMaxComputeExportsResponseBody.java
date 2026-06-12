@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class ListMaxComputeExportsResponseBody extends TeaModel {
     /**
+     * <p>The number of MaxCompute delivery tasks that are returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>2</p>
      */
     @NameInMap("count")
     public Integer count;
 
+    /**
+     * <p>The list of MaxCompute delivery tasks.</p>
+     */
     @NameInMap("results")
     public java.util.List<MaxComputeExport> results;
 
     /**
+     * <p>The total number of MaxCompute delivery tasks in the project.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */

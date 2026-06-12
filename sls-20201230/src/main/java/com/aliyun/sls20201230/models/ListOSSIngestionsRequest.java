@@ -8,6 +8,8 @@ public class ListOSSIngestionsRequest extends TeaModel {
     public String logstore;
 
     /**
+     * <p>The number of entries to skip for pagination. The default value is 0.</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
@@ -15,6 +17,8 @@ public class ListOSSIngestionsRequest extends TeaModel {
     public Integer offset;
 
     /**
+     * <p>The maximum number of OSS import tasks to return in a single request.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */

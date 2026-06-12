@@ -13,10 +13,14 @@ public class CreateMachineGroupRequest extends TeaModel {
     /**
      * <p>The name of the machine group. The name must meet the following requirements:</p>
      * <ul>
-     * <li>The name of each machine group in a project must be unique.</li>
-     * <li>It can contain only lowercase letters, digits, hyphens (-), and underscores (_).</li>
-     * <li>It must start and end with a lowercase letter or a digit.</li>
-     * <li>It must be 3 to 128 characters in length.</li>
+     * <li><p>The name of each machine group in a project must be unique.</p>
+     * </li>
+     * <li><p>It can contain only lowercase letters, digits, hyphens (-), and underscores (_).</p>
+     * </li>
+     * <li><p>It must start and end with a lowercase letter or a digit.</p>
+     * </li>
+     * <li><p>It must be 3 to 128 characters in length.</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -38,8 +42,10 @@ public class CreateMachineGroupRequest extends TeaModel {
     /**
      * <p>The type of the machine group identifier. Valid values:</p>
      * <ul>
-     * <li>ip: The machine group uses IP addresses as identifiers.</li>
-     * <li>userdefined: The machine group uses custom identifiers.</li>
+     * <li><p>ip: The machine group uses IP addresses as identifiers.</p>
+     * </li>
+     * <li><p>userdefined: The machine group uses custom identifiers.</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -52,8 +58,10 @@ public class CreateMachineGroupRequest extends TeaModel {
     /**
      * <p>The identifiers of machine group.</p>
      * <ul>
-     * <li>If you set machineIdentifyType to ip, enter the IP address of the machine.</li>
-     * <li>If you set machineIdentifyType to userdefined, enter a custom identifier.</li>
+     * <li><p>If you set machineIdentifyType to ip, enter the IP address of the machine.</p>
+     * </li>
+     * <li><p>If you set machineIdentifyType to userdefined, enter a custom identifier.</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      */

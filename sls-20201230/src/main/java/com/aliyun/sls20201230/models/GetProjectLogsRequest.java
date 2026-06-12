@@ -7,8 +7,10 @@ public class GetProjectLogsRequest extends TeaModel {
     /**
      * <p>Specifies whether to enable the Dedicated SQL feature. For more information, see <a href="https://help.aliyun.com/document_detail/223777.html">Enable Dedicated SQL</a>. Valid values:</p>
      * <ul>
-     * <li>true</li>
-     * <li>false (default): enables the Standard SQL feature.</li>
+     * <li><p>true</p>
+     * </li>
+     * <li><p>false (default): enables the Standard SQL feature.</p>
+     * </li>
      * </ul>
      * <p>You can use the powerSql or <strong>query</strong> parameter to configure Dedicated SQL.</p>
      * 

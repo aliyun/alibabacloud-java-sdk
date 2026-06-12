@@ -4,21 +4,39 @@ package com.aliyun.sls20201230.models;
 import com.aliyun.tea.*;
 
 public class CreateMaterializedViewRequest extends TeaModel {
+    /**
+     * <p>The aggregation interval in minutes. The system creates aggregation tasks based on this interval.</p>
+     */
     @NameInMap("aggIntervalMins")
     public Integer aggIntervalMins;
 
+    /**
+     * <p>The destination Logstore for the aggregated data from the materialized view.</p>
+     */
     @NameInMap("logstore")
     public String logstore;
 
+    /**
+     * <p>The name of the materialized view. The name must be unique within the project, 2 to 63 characters long, and contain only lowercase letters, digits, hyphens (-), and underscores (_). It must also start and end with a lowercase letter or a digit.</p>
+     */
     @NameInMap("name")
     public String name;
 
+    /**
+     * <p>The query statement that defines the materialized view.</p>
+     */
     @NameInMap("originalSql")
     public String originalSql;
 
+    /**
+     * <p>The time when the materialized view starts to aggregate data. Specify the time as a UNIX timestamp in seconds.</p>
+     */
     @NameInMap("startTime")
     public Integer startTime;
 
+    /**
+     * <p>The time-to-live (TTL) of the data in the materialized view, in days. After this period, the data expires and is automatically deleted.</p>
+     */
     @NameInMap("ttl")
     public Integer ttl;
 

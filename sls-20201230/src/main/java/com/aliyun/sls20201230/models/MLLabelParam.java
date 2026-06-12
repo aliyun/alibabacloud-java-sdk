@@ -15,6 +15,9 @@ public class MLLabelParam extends TeaModel {
 
     /**
      * <p>The description of the tag table.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>默认表</p>
      */
     @NameInMap("description")
     public String description;
@@ -39,6 +42,9 @@ public class MLLabelParam extends TeaModel {
 
     /**
      * <p>The name of the tag table.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>标签表</p>
      */
     @NameInMap("name")
     public String name;

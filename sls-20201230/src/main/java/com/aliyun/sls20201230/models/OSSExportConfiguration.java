@@ -5,34 +5,34 @@ import com.aliyun.tea.*;
 
 public class OSSExportConfiguration extends TeaModel {
     /**
-     * <p>The beginning of the time range to ship data. The value 1 specifies that the data shipping job ships data from the first log in the Logstore.</p>
+     * <p>The start time for the export, specified as a Unix timestamp. Set to 1 to export from the earliest available data in the Logstore.</p>
      * 
      * <strong>example:</strong>
-     * <p>123456789</p>
+     * <p>1718380800</p>
      */
     @NameInMap("fromTime")
     public Long fromTime;
 
     /**
-     * <p>The name of the Logstore.</p>
+     * <p>The name of the source Logstore.</p>
      * 
      * <strong>example:</strong>
-     * <p>logstore-demo</p>
+     * <p>my-logstore</p>
      */
     @NameInMap("logstore")
     public String logstore;
 
     /**
-     * <p>The Alibaba Cloud Resource Name (ARN) of the Resource Access Management (RAM) role that is used to read data from Simple Log Service.</p>
+     * <p>The ARN of the Resource Access Management (RAM) role that Log Service assumes to read data from the Logstore. You must specify the ARN of your role.</p>
      * 
      * <strong>example:</strong>
-     * <p>acs:ram::123456789:role/aliyunlogdefaultrole</p>
+     * <p>acs:ram::1234567890:role/aliyunlogdefaultrole</p>
      */
     @NameInMap("roleArn")
     public String roleArn;
 
     /**
-     * <p>The configurations of the OSS data shipping job.</p>
+     * <p>The configuration of the destination OSS sink.</p>
      */
     @NameInMap("sink")
     public OSSExportConfigurationSink sink;
@@ -41,10 +41,10 @@ public class OSSExportConfiguration extends TeaModel {
     public Boolean sourceSecureTransport;
 
     /**
-     * <p>The end of the time range to ship data. The value 0 specifies that the data shipping job continuously ships data until the job is manually stopped.</p>
+     * <p>The end time for the export, specified as a Unix timestamp. Set to 0 to run the task continuously until it is stopped.</p>
      * 
      * <strong>example:</strong>
-     * <p>123456789</p>
+     * <p>1718380800</p>
      */
     @NameInMap("toTime")
     public Long toTime;
@@ -104,17 +104,17 @@ public class OSSExportConfiguration extends TeaModel {
 
     public static class OSSExportConfigurationSink extends TeaModel {
         /**
-         * <p>The OSS bucket.</p>
+         * <p>The name of the destination OSS bucket.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>test-bucket</p>
+         * <p>my-bucket</p>
          */
         @NameInMap("bucket")
         public String bucket;
 
         /**
-         * <p>The interval between two data shipping operations. Valid values: 300 to 900. Unit: seconds.</p>
+         * <p>The time in seconds to buffer data before exporting. The value must be an integer from 300 to 900.</p>
          * 
          * <strong>example:</strong>
          * <p>300</p>
@@ -123,7 +123,7 @@ public class OSSExportConfiguration extends TeaModel {
         public Long bufferInterval;
 
         /**
-         * <p>The size of the OSS object to which data is shipped. Valid values: 5 to 256. Unit: MB.</p>
+         * <p>The amount of data in MB to buffer before exporting. The value must be an integer from 5 to 256.</p>
          * 
          * <strong>example:</strong>
          * <p>256</p>
@@ -132,36 +132,36 @@ public class OSSExportConfiguration extends TeaModel {
         public Long bufferSize;
 
         /**
-         * <p>The compression type. Valid values: snappy, gizp, zstd, and none.</p>
+         * <p>The compression type for the exported files. Valid values: <code>snappy</code>, <code>gzip</code>, <code>zstd</code>, and <code>none</code> (no compression).</p>
          * 
          * <strong>example:</strong>
-         * <p>snappy/gizp/zstd/none</p>
+         * <p>snappy</p>
          */
         @NameInMap("compressionType")
         public String compressionType;
 
         /**
-         * <p>The details of the OSS object. Note: The value of this parameter is in the JSON format and varies based on the value of contentType.</p>
+         * <p>Format-specific settings. The structure of this JSON object depends on the <code>contentType</code> value.</p>
          */
         @NameInMap("contentDetail")
         public java.util.Map<String, ?> contentDetail;
 
         /**
-         * <p>The storage format of the OSS object. Valid values: json, parquet, csv, and orc.</p>
+         * <p>The format of the files stored in OSS. Valid values: <code>json</code>, <code>parquet</code>, <code>csv</code>, and <code>orc</code>.</p>
          * 
          * <strong>example:</strong>
-         * <p>json/parquet/csv/orc</p>
+         * <p>csv</p>
          */
         @NameInMap("contentType")
         public String contentType;
 
         /**
-         * <p>The latency of data shipping.</p>
+         * <p>The delivery delay.</p>
          * <blockquote>
-         * </blockquote>
          * <ul>
          * <li>This parameter is deprecated.</li>
          * </ul>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>123</p>
@@ -171,7 +171,7 @@ public class OSSExportConfiguration extends TeaModel {
         public Long delaySec;
 
         /**
-         * <p>The latency of data shipping. The value of this parameter cannot exceed the data retention period of the source Logstore.</p>
+         * <p>The delivery delay, in seconds. This value cannot exceed the data retention period of the source Logstore.</p>
          * 
          * <strong>example:</strong>
          * <p>900</p>
@@ -181,58 +181,60 @@ public class OSSExportConfiguration extends TeaModel {
 
         /**
          * <ul>
-         * <li>The endpoint that is used to access OSS. You can specify only an internal OSS endpoint for the region where the Simple Log Service project resides. The value is in the <code>http://+OSS endpoint</code> format. For more information, see <a href="https://help.aliyun.com/document_detail/31837.html">OSS regions and endpoints</a>.</li>
-         * <li>The endpoint that is used to access OSS-HDFS. You can specify only an internal OSS-HDFS endpoint for the region where the Simple Log Service project resides.</li>
+         * <li><p>For Object Storage Service (OSS): The OSS internal endpoint. You must use an endpoint in the same region as the Logstore. For more information, see <a href="https://help.aliyun.com/document_detail/31837.html">OSS access domains and data centers</a>. The endpoint must use the HTTPS protocol.</p>
+         * </li>
+         * <li><p>For OSS-HDFS: The OSS-HDFS internal endpoint. You must use an endpoint in the same region as the Logstore.</p>
+         * </li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p><a href="http://xxxxxxxx">http://xxxxxxxx</a></p>
+         * <p><a href="https://oss-cn-hangzhou-internal.aliyuncs.com">https://oss-cn-hangzhou-internal.aliyuncs.com</a></p>
          */
         @NameInMap("endpoint")
         public String endpoint;
 
         /**
-         * <p>The partition format. For more information, see <a href="https://help.aliyun.com/document_detail/371934.html">Partition formats</a>.</p>
+         * <p>The path format for exported files. For more information, see <a href="https://help.aliyun.com/document_detail/371934.html">Path format</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>%Y_%m_%d/good/bad</p>
+         * <p>%Y/%m/%d/%H/%M</p>
          */
         @NameInMap("pathFormat")
         public String pathFormat;
 
         /**
-         * <p>The partition format type.</p>
+         * <p>The type of the path format.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>only support time</p>
+         * <p>time</p>
          */
         @NameInMap("pathFormatType")
         public String pathFormatType;
 
         /**
-         * <p>The prefix of the OSS object.</p>
+         * <p>The prefix for files exported to the OSS bucket.</p>
          * 
          * <strong>example:</strong>
-         * <p>prefixxxx/</p>
+         * <p>prefix-demo/</p>
          */
         @NameInMap("prefix")
         public String prefix;
 
         /**
-         * <p>The ARN of the RAM role that is used to write data to OSS.</p>
+         * <p>The ARN of the RAM role that Log Service assumes to write data to the OSS bucket. You must specify the ARN of your role.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>acs:ram::xxxxxxx</p>
+         * <p>acs:ram::1234567890:role/aliyunlogdefaultrole</p>
          */
         @NameInMap("roleArn")
         public String roleArn;
 
         /**
-         * <p>The suffix of the OSS object.</p>
+         * <p>The suffix for the exported files.</p>
          * 
          * <strong>example:</strong>
          * <p>.json</p>
@@ -241,7 +243,7 @@ public class OSSExportConfiguration extends TeaModel {
         public String suffix;
 
         /**
-         * <p>The time zone. For more information, see <a href="https://help.aliyun.com/document_detail/375323.html">Time zones</a>.</p>
+         * <p>The time zone used for the path format. For more information, see <a href="https://help.aliyun.com/document_detail/375323.html">Time zones</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>+0800</p>

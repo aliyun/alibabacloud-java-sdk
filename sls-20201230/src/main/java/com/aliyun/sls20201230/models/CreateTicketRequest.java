@@ -6,9 +6,12 @@ import com.aliyun.tea.*;
 public class CreateTicketRequest extends TeaModel {
     /**
      * <ul>
-     * <li>The validity period of the access token. Unit: seconds. Default value: 86400, which specifies one day. Valid values: 0 to 86400.</li>
-     * <li>The validity period of the access token is the smaller value between accessTokenExpirationTime and expirationTime.</li>
-     * <li>If you use a Security Token Service (STS) token to call this operation, the validity period of the access token is the smallest value among accessTokenExpirationTime, expirationTime, and the validity period of the STS token.</li>
+     * <li><p>The validity period of the access token. Unit: seconds. Default value: 86400, which specifies one day. Valid values: 0 to 86400.</p>
+     * </li>
+     * <li><p>The validity period of the access token is the smaller value between accessTokenExpirationTime and expirationTime.</p>
+     * </li>
+     * <li><p>If you use a Security Token Service (STS) token to call this operation, the validity period of the access token is the smallest value among accessTokenExpirationTime, expirationTime, and the validity period of the STS token.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -19,8 +22,10 @@ public class CreateTicketRequest extends TeaModel {
 
     /**
      * <ul>
-     * <li>You must use the Simple Log Service endpoint for the China (Shanghai) or Singapore region to call the CreateTicket operation. After you obtain the ticket, you can use the ticket regardless of the region.</li>
-     * <li>The validity period for the URL of the console page that you want to embed. Unit: seconds. Default value: 86400 (one day). Valid values: 0 to 2592000 (30 days).</li>
+     * <li><p>You must use the Simple Log Service endpoint for the China (Shanghai) or Singapore region to call the CreateTicket operation. After you obtain the ticket, you can use the ticket regardless of the region.</p>
+     * </li>
+     * <li><p>The validity period for the URL of the console page that you want to embed. Unit: seconds. Default value: 86400 (one day). Valid values: 0 to 2592000 (30 days).</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

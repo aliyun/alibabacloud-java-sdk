@@ -37,12 +37,14 @@ public class ConsumerGroupUpdateCheckPointRequest extends TeaModel {
     /**
      * <p>Specifies whether to enable forceful updates. Valid values:</p>
      * <ul>
-     * <li>true</li>
-     * <li>false</li>
+     * <li><p>true</p>
+     * </li>
+     * <li><p>false</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
-     * <p>False</p>
+     * <p>true</p>
      */
     @NameInMap("forceSuccess")
     public Boolean forceSuccess;

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class AlertQuery extends TeaModel {
     /**
-     * <p>The name of the chart.</p>
+     * <p>Chart name</p>
      * 
      * <strong>example:</strong>
      * <p>chartExmaple</p>
@@ -14,7 +14,7 @@ public class AlertQuery extends TeaModel {
     public String chartTitle;
 
     /**
-     * <p>The ID of the dashboard.</p>
+     * <p>Dashboard ID</p>
      * 
      * <strong>example:</strong>
      * <p>dashboardExample</p>
@@ -23,7 +23,7 @@ public class AlertQuery extends TeaModel {
     public String dashboardId;
 
     /**
-     * <p>The end of the time range to query.</p>
+     * <p>End time</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -33,7 +33,7 @@ public class AlertQuery extends TeaModel {
     public String end;
 
     /**
-     * <p>Specifies whether to enable Dedicated SQL.</p>
+     * <p>Whether to enable Dedicated SQL</p>
      * 
      * <strong>example:</strong>
      * <p>auto</p>
@@ -42,7 +42,7 @@ public class AlertQuery extends TeaModel {
     public String powerSqlMode;
 
     /**
-     * <p>The name of the project.</p>
+     * <p>Project name</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -52,7 +52,7 @@ public class AlertQuery extends TeaModel {
     public String project;
 
     /**
-     * <p>The query statement.</p>
+     * <p>Query and analysis statement</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -64,7 +64,7 @@ public class AlertQuery extends TeaModel {
     public String query;
 
     /**
-     * <p>The region.</p>
+     * <p>Region</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -74,13 +74,13 @@ public class AlertQuery extends TeaModel {
     public String region;
 
     /**
-     * <p>The Alibaba Cloud Resource Name (ARN) of the role.</p>
+     * <p>Role ARN</p>
      */
     @NameInMap("roleArn")
     public String roleArn;
 
     /**
-     * <p>The beginning of the time range to query.</p>
+     * <p>Start time</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -90,7 +90,7 @@ public class AlertQuery extends TeaModel {
     public String start;
 
     /**
-     * <p>The name of the storage.</p>
+     * <p>Store name</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -100,7 +100,7 @@ public class AlertQuery extends TeaModel {
     public String store;
 
     /**
-     * <p>The storage type.</p>
+     * <p>Store type</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -110,7 +110,7 @@ public class AlertQuery extends TeaModel {
     public String storeType;
 
     /**
-     * <p>The type of the time span.</p>
+     * <p>Time span type</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -120,7 +120,7 @@ public class AlertQuery extends TeaModel {
     public String timeSpanType;
 
     /**
-     * <p>The page on which you can record frontend configurations in specified scenarios.</p>
+     * <p>Used by the frontend for specific-scenario alerts</p>
      */
     @NameInMap("ui")
     public String ui;

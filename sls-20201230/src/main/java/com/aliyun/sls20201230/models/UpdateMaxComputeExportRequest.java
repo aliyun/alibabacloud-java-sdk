@@ -13,6 +13,9 @@ public class UpdateMaxComputeExportRequest extends TeaModel {
 
     /**
      * <p>The description of the MaxCompute data shipping job.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Update MaxCompute delivery task</p>
      */
     @NameInMap("description")
     public String description;

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListDownloadJobsRequest extends TeaModel {
     /**
+     * <p>The name of the Logstore.</p>
+     * 
      * <strong>example:</strong>
      * <p>ali-test-logstore</p>
      */
@@ -12,6 +14,8 @@ public class ListDownloadJobsRequest extends TeaModel {
     public String logstore;
 
     /**
+     * <p>The line from which to start the query. The default value is 0.</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
@@ -19,6 +23,8 @@ public class ListDownloadJobsRequest extends TeaModel {
     public Long offset;
 
     /**
+     * <p>The number of log download jobs to return in a single request.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */

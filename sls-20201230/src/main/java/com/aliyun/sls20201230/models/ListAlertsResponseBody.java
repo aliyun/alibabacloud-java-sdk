@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListAlertsResponseBody extends TeaModel {
     /**
-     * <p>The number of alert rules that are returned.</p>
+     * <p>The number of alerts returned in the current response.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -14,13 +14,13 @@ public class ListAlertsResponseBody extends TeaModel {
     public Integer count;
 
     /**
-     * <p>The alert rules.</p>
+     * <p>The list of alert configurations.</p>
      */
     @NameInMap("results")
     public java.util.List<Alert> results;
 
     /**
-     * <p>The total number of alert rules in the project.</p>
+     * <p>The total number of alerts in the project.</p>
      * 
      * <strong>example:</strong>
      * <p>80</p>

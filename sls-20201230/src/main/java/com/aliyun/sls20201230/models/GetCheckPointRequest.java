@@ -7,8 +7,10 @@ public class GetCheckPointRequest extends TeaModel {
     /**
      * <p>The shard ID.</p>
      * <ul>
-     * <li>If the specified shard does not exist, an empty list is returned.</li>
-     * <li>If no shard ID is specified, the checkpoints of all shards are returned.</li>
+     * <li><p>If the specified shard does not exist, an empty list is returned.</p>
+     * </li>
+     * <li><p>If no shard ID is specified, the checkpoints of all shards are returned.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

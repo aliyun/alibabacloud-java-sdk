@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListAnnotationDataResponseBody extends TeaModel {
     /**
-     * <p>The data returned.</p>
+     * <p>The list of data records.</p>
      */
     @NameInMap("data")
     public java.util.List<MLDataParam> data;
 
     /**
-     * <p>The total number of entries returned.</p>
+     * <p>The total number of records.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>

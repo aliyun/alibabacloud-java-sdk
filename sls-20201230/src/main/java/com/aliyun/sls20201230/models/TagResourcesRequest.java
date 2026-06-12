@@ -14,11 +14,16 @@ public class TagResourcesRequest extends TeaModel {
     /**
      * <p>The type of the resource. Valid values:</p>
      * <ul>
-     * <li>project</li>
-     * <li>logstore</li>
-     * <li>dashboard</li>
-     * <li>machinegroup</li>
-     * <li>logtailconfig</li>
+     * <li><p>project</p>
+     * </li>
+     * <li><p>logstore</p>
+     * </li>
+     * <li><p>dashboard</p>
+     * </li>
+     * <li><p>machinegroup</p>
+     * </li>
+     * <li><p>logtailconfig</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -68,9 +73,12 @@ public class TagResourcesRequest extends TeaModel {
         /**
          * <p>The key of the tag. The key must meet the following requirements:</p>
          * <ul>
-         * <li>The key must be <code>1 to 128</code> characters in length.</li>
-         * <li>The key cannot contain <code>http://</code> or <code>https://</code>.</li>
-         * <li>The key cannot start with <code>acs:</code> or <code>aliyun</code>.</li>
+         * <li><p>The key must be <code>1 to 128</code> characters in length.</p>
+         * </li>
+         * <li><p>The key cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * </li>
+         * <li><p>The key cannot start with <code>acs:</code> or <code>aliyun</code>.</p>
+         * </li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -83,8 +91,10 @@ public class TagResourcesRequest extends TeaModel {
         /**
          * <p>The value of the tag. The value must meet the following requirements:</p>
          * <ul>
-         * <li>The value must be <code>1 to 128</code> characters in length.</li>
-         * <li>The value cannot contain <code>http://</code> or <code>https://</code>.</li>
+         * <li><p>The value must be <code>1 to 128</code> characters in length.</p>
+         * </li>
+         * <li><p>The value cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * </li>
          * </ul>
          * <p>This parameter is required.</p>
          * 

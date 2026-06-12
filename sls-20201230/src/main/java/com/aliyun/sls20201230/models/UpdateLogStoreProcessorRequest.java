@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateLogStoreProcessorRequest extends TeaModel {
     /**
-     * <p>The identifier of the ingest processor.</p>
+     * <p>The name of the ingest processor.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

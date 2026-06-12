@@ -4,6 +4,9 @@ package com.aliyun.sls20201230.models;
 import com.aliyun.tea.*;
 
 public class DescribeRegionsResponseBody extends TeaModel {
+    /**
+     * <p>A list of available regions and their details.</p>
+     */
     @NameInMap("regions")
     public java.util.List<DescribeRegionsResponseBodyRegions> regions;
 
@@ -21,32 +24,38 @@ public class DescribeRegionsResponseBody extends TeaModel {
     }
 
     public static class DescribeRegionsResponseBodyRegions extends TeaModel {
+        /**
+         * <p>The supported data redundancy types.</p>
+         */
         @NameInMap("dataRedundancyType")
         public java.util.List<String> dataRedundancyType;
 
+        /**
+         * <p>The accelerated endpoint of the region.</p>
+         */
         @NameInMap("internalEndpoint")
         public String internalEndpoint;
 
         /**
-         * <p>The public endpoint of Simple Log Service.</p>
+         * <p>The public endpoint of the region.</p>
          */
         @NameInMap("internetEndpoint")
         public String internetEndpoint;
 
         /**
-         * <p>The internal endpoint of Simple Log Service.</p>
+         * <p>The intranet endpoint of the region.</p>
          */
         @NameInMap("intranetEndpoint")
         public String intranetEndpoint;
 
         /**
-         * <p>The name of the Simple Log Service region.</p>
+         * <p>The display name of the region.</p>
          */
         @NameInMap("localName")
         public String localName;
 
         /**
-         * <p>SLS region</p>
+         * <p>The ID of the region.</p>
          */
         @NameInMap("region")
         public String region;

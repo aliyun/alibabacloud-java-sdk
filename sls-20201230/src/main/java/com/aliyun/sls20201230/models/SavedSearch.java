@@ -7,12 +7,15 @@ public class SavedSearch extends TeaModel {
     /**
      * <p>The display name of the saved search.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Method</p>
      */
     @NameInMap("displayName")
     public String displayName;
 
     /**
-     * <p>The name of the Logstore.</p>
+     * <p>The name of the logstore.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -32,7 +35,7 @@ public class SavedSearch extends TeaModel {
     public String savedsearchName;
 
     /**
-     * <p>The search statement or the analytic statement.</p>
+     * <p>The search statement or analytic statement.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -42,10 +45,10 @@ public class SavedSearch extends TeaModel {
     public String searchQuery;
 
     /**
-     * <p>The topic of the log. Default value: empty string (&quot;&quot;).</p>
+     * <p>The topic of the log. The default value is an empty string (&quot;&quot;).</p>
      * 
      * <strong>example:</strong>
-     * <p>topic</p>
+     * <p>topic-test</p>
      */
     @NameInMap("topic")
     public String topic;

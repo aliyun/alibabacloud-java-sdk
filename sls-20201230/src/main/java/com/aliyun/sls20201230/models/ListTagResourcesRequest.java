@@ -13,11 +13,16 @@ public class ListTagResourcesRequest extends TeaModel {
     /**
      * <p>The type of the resource. Valid values:</p>
      * <ul>
-     * <li>project</li>
-     * <li>logstore</li>
-     * <li>dashboard</li>
-     * <li>machinegroup</li>
-     * <li>logtailconfig</li>
+     * <li><p>project</p>
+     * </li>
+     * <li><p>logstore</p>
+     * </li>
+     * <li><p>dashboard</p>
+     * </li>
+     * <li><p>machinegroup</p>
+     * </li>
+     * <li><p>logtailconfig</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -65,7 +70,7 @@ public class ListTagResourcesRequest extends TeaModel {
 
     public static class ListTagResourcesRequestTags extends TeaModel {
         /**
-         * <p>The key of the tag that you want to use to filter resources. For example, if you set the key to <code>&quot;test-key&quot;</code>, only resources to which the key is added are returned.``</p>
+         * <p>The key of the tag that you want to use to filter resources. For example, if you set the key to <code>&quot;test-key&quot;</code>, only resources to which the key is added are returned.\<code>\\</code></p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

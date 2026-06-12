@@ -13,11 +13,16 @@ public class ListTagResourcesShrinkRequest extends TeaModel {
     /**
      * <p>The type of the resource. Valid values:</p>
      * <ul>
-     * <li>project</li>
-     * <li>logstore</li>
-     * <li>dashboard</li>
-     * <li>machinegroup</li>
-     * <li>logtailconfig</li>
+     * <li><p>project</p>
+     * </li>
+     * <li><p>logstore</p>
+     * </li>
+     * <li><p>dashboard</p>
+     * </li>
+     * <li><p>machinegroup</p>
+     * </li>
+     * <li><p>logtailconfig</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

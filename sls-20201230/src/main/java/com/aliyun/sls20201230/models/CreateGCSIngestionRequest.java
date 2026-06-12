@@ -5,12 +5,15 @@ import com.aliyun.tea.*;
 
 public class CreateGCSIngestionRequest extends TeaModel {
     /**
+     * <p>The ingestion configuration.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("configuration")
     public GCSIngestionConfiguration configuration;
 
     /**
+     * <p>The task description.</p>
+     * 
      * <strong>example:</strong>
      * <p>test</p>
      */
@@ -18,6 +21,7 @@ public class CreateGCSIngestionRequest extends TeaModel {
     public String description;
 
     /**
+     * <p>The display name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -27,6 +31,15 @@ public class CreateGCSIngestionRequest extends TeaModel {
     public String displayName;
 
     /**
+     * <p>The job name. Must be unique within the same project. Naming rules:</p>
+     * <ul>
+     * <li><p>Can contain only lowercase letters, digits, hyphens (-), and underscores (_).</p>
+     * </li>
+     * <li><p>Must start and end with a lowercase letter or digit.</p>
+     * </li>
+     * <li><p>Must be 2 to 64 characters in length.</p>
+     * </li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

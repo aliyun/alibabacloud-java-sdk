@@ -42,6 +42,9 @@ public class MLDataSetParam extends TeaModel {
 
     /**
      * <p>The description of the dataset.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>数据集A</p>
      */
     @NameInMap("description")
     public String description;

@@ -4,12 +4,21 @@ package com.aliyun.sls20201230.models;
 import com.aliyun.tea.*;
 
 public class ListAzureBlobIngestionResponseBody extends TeaModel {
+    /**
+     * <p>The number of tasks returned on the current page.</p>
+     */
     @NameInMap("count")
     public Integer count;
 
+    /**
+     * <p>A list of Azure Blob ingestion tasks.</p>
+     */
     @NameInMap("results")
     public java.util.List<AzureBlobIngestion> results;
 
+    /**
+     * <p>The total number of tasks that match the query.</p>
+     */
     @NameInMap("total")
     public Integer total;
 

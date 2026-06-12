@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class S3IngestionConfiguration extends TeaModel {
     /**
-     * <p>logstore</p>
+     * <p>The name of the Logstore.</p>
      * 
      * <strong>example:</strong>
      * <p>myLogstore</p>
@@ -13,6 +13,9 @@ public class S3IngestionConfiguration extends TeaModel {
     @NameInMap("logstore")
     public String logstore;
 
+    /**
+     * <p>The source.</p>
+     */
     @NameInMap("source")
     public S3IngestionConfigurationSource source;
 

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class IndexJsonKey extends TeaModel {
     /**
-     * <p>Alias.</p>
+     * <p>The alias of the field.</p>
      * 
      * <strong>example:</strong>
      * <p>myAlias</p>
@@ -14,7 +14,7 @@ public class IndexJsonKey extends TeaModel {
     public String alias;
 
     /**
-     * <p>Case sensitivity.</p>
+     * <p>Specifies whether queries on this field are case-sensitive.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -23,7 +23,7 @@ public class IndexJsonKey extends TeaModel {
     public Boolean caseSensitive;
 
     /**
-     * <p>Whether the field contains Chinese characters.</p>
+     * <p>Specifies whether to enable Chinese tokenization for the field.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -32,7 +32,7 @@ public class IndexJsonKey extends TeaModel {
     public Boolean chn;
 
     /**
-     * <p>Whether to enable statistics.</p>
+     * <p>Specifies whether to enable doc_value for the field. This enables sorting, aggregation, and statistical analysis on the field.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -41,13 +41,13 @@ public class IndexJsonKey extends TeaModel {
     public Boolean docValue;
 
     /**
-     * <p>Delimiter.</p>
+     * <p>The delimiters used for tokenization.</p>
      */
     @NameInMap("token")
     public java.util.List<String> token;
 
     /**
-     * <p>The data type of the field.</p>
+     * <p>Specifies the field type.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

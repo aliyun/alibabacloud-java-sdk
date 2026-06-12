@@ -4,10 +4,15 @@ package com.aliyun.sls20201230.models;
 import com.aliyun.tea.*;
 
 public class GetAgentInstanceConfigResponseBody extends TeaModel {
+    /**
+     * <p>The owner of the configuration for the process.</p>
+     */
     @NameInMap("attributes")
     public java.util.Map<String, String> attributes;
 
     /**
+     * <p>The default configuration.</p>
+     * 
      * <strong>example:</strong>
      * <p>{}</p>
      */
@@ -15,6 +20,8 @@ public class GetAgentInstanceConfigResponseBody extends TeaModel {
     public String config;
 
     /**
+     * <p>The type of the process-level configuration.</p>
+     * 
      * <strong>example:</strong>
      * <p>apm_biz_trace</p>
      */
@@ -22,16 +29,23 @@ public class GetAgentInstanceConfigResponseBody extends TeaModel {
     public String configType;
 
     /**
+     * <p>The time when the configuration was created.</p>
+     * 
      * <strong>example:</strong>
      * <p>1749543828</p>
      */
     @NameInMap("createTime")
     public Long createTime;
 
+    /**
+     * <p>The canary release configurations.</p>
+     */
     @NameInMap("grayConfigs")
     public java.util.List<AgentInstanceConfigGrayConfigs> grayConfigs;
 
     /**
+     * <p>The time when the configuration was last modified.</p>
+     * 
      * <strong>example:</strong>
      * <p>1749543828</p>
      */

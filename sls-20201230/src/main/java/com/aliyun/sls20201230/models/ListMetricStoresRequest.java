@@ -35,7 +35,7 @@ public class ListMetricStoresRequest extends TeaModel {
      * <p>The number of entries per page.</p>
      * 
      * <strong>example:</strong>
-     * <p>500</p>
+     * <p>100</p>
      */
     @NameInMap("size")
     public Integer size;

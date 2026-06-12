@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class KafkaIngestionConfigurationSource extends TeaModel {
     /**
+     * <p>A list of bootstrap servers for the Kafka cluster, formatted as <code>host1:port1,host2:port2</code>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,8 @@ public class KafkaIngestionConfigurationSource extends TeaModel {
     public String bootstrapServers;
 
     /**
+     * <p>The authentication and communication protocol settings in JSON format. For example, you can use this parameter to configure SASL authentication.</p>
+     * 
      * <strong>example:</strong>
      * <p>{     &quot;protocol&quot;:&quot;SASL_PLAINTEXT&quot;,      &quot;sasl&quot;:{         &quot;mechanism&quot;:&quot;PLAIN&quot;,         &quot;username&quot;:&quot;用户名&quot;,         &quot;password&quot;:&quot;密码&quot;     } }</p>
      */
@@ -21,6 +24,8 @@ public class KafkaIngestionConfigurationSource extends TeaModel {
     public String communication;
 
     /**
+     * <p>The ID of the Kafka consumer group.</p>
+     * 
      * <strong>example:</strong>
      * <p>consumer</p>
      */
@@ -28,6 +33,8 @@ public class KafkaIngestionConfigurationSource extends TeaModel {
     public String consumerGroup;
 
     /**
+     * <p>The default time source to use if timestamp extraction from the log data fails. Valid values are <code>system</code> (the time of the ingestion server) and <code>kafka</code> (the timestamp from the Kafka message).</p>
+     * 
      * <strong>example:</strong>
      * <p>system,kafka</p>
      */
@@ -35,16 +42,22 @@ public class KafkaIngestionConfigurationSource extends TeaModel {
     public String defaultTimeSource;
 
     /**
+     * <p>Specifies whether to add Simple Log Service (SLS) context fields, such as <code>__topic__</code> and <code>__partition__</code>, to each log entry.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
     @NameInMap("enableSlsContext")
     public Boolean enableSlsContext;
 
+    /**
+     * <p>Specifies whether to enable NAT for VPC connections. Set this to <code>true</code> if your Kafka cluster is in a VPC and requires NAT for access.</p>
+     */
     @NameInMap("enableVpcNat")
     public Boolean enableVpcNat;
 
     /**
+     * <p>The character encoding of the message. This parameter applies only when <code>valueType</code> is <code>text</code>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -53,10 +66,14 @@ public class KafkaIngestionConfigurationSource extends TeaModel {
     @NameInMap("encoding")
     public String encoding;
 
+    /**
+     * <p>The data format configuration.</p>
+     */
     @NameInMap("format")
     public java.util.Map<String, ?> format;
 
     /**
+     * <p>The starting position for data consumption. Valid values: <code>earliest</code> and <code>latest</code>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -66,6 +83,8 @@ public class KafkaIngestionConfigurationSource extends TeaModel {
     public String fromPosition;
 
     /**
+     * <p>Custom DNS resolutions in JSON format. Use this parameter to map hostnames to IP addresses.</p>
+     * 
      * <strong>example:</strong>
      * <p>{&quot;hostname&quot;: &quot;192.168.1.28&quot;}</p>
      */
@@ -73,6 +92,7 @@ public class KafkaIngestionConfigurationSource extends TeaModel {
     public String nameResolutions;
 
     /**
+     * <p>Specifies whether to parse a message as a JSON array. If <code>true</code>, each element in the array becomes a separate log entry. This parameter applies only when <code>valueType</code> is <code>json</code>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -82,16 +102,23 @@ public class KafkaIngestionConfigurationSource extends TeaModel {
     public Boolean parseArray;
 
     /**
+     * <p>The ID of the ingestion processor.</p>
+     * 
      * <strong>example:</strong>
      * <p>ingest-processor-1756802123-953901</p>
      */
     @NameInMap("processorId")
     public String processorId;
 
+    /**
+     * <p>The ID of the security group to associate with the ingestion source. This parameter is required when connecting to a Kafka cluster in a VPC. Separate multiple IDs with a comma (<code>,</code>).</p>
+     */
     @NameInMap("securityGroups")
     public String securityGroups;
 
     /**
+     * <p>The field that contains the log timestamp. This parameter applies only when <code>valueType</code> is <code>json</code>.</p>
+     * 
      * <strong>example:</strong>
      * <p><strong>time</strong></p>
      */
@@ -99,6 +126,8 @@ public class KafkaIngestionConfigurationSource extends TeaModel {
     public String timeField;
 
     /**
+     * <p>The format of the timestamp. For example, you can set this to <code>epoch</code> for a Unix timestamp.</p>
+     * 
      * <strong>example:</strong>
      * <p>epoch</p>
      */
@@ -106,6 +135,8 @@ public class KafkaIngestionConfigurationSource extends TeaModel {
     public String timeFormat;
 
     /**
+     * <p>The regular expression for extracting the timestamp from the field specified by <code>timeField</code>.</p>
+     * 
      * <strong>example:</strong>
      * <p>\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2}</p>
      */
@@ -113,6 +144,8 @@ public class KafkaIngestionConfigurationSource extends TeaModel {
     public String timePattern;
 
     /**
+     * <p>The time zone of the timestamp, such as <code>+0800</code>.</p>
+     * 
      * <strong>example:</strong>
      * <p>+0800</p>
      */
@@ -120,6 +153,7 @@ public class KafkaIngestionConfigurationSource extends TeaModel {
     public String timeZone;
 
     /**
+     * <p>The Kafka topics to subscribe to. Separate multiple topics with a comma (<code>,</code>).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -129,6 +163,7 @@ public class KafkaIngestionConfigurationSource extends TeaModel {
     public String topics;
 
     /**
+     * <p>The format of the message value. Valid values: <code>text</code> and <code>json</code>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -137,9 +172,15 @@ public class KafkaIngestionConfigurationSource extends TeaModel {
     @NameInMap("valueType")
     public String valueType;
 
+    /**
+     * <p>The ID of the VPC that contains the Kafka cluster.</p>
+     */
     @NameInMap("vpcId")
     public String vpcId;
 
+    /**
+     * <p>The ID of the VSwitch in the specified VPC. This parameter is required when connecting to a Kafka cluster in a VPC.</p>
+     */
     @NameInMap("vswitchId")
     public String vswitchId;
 

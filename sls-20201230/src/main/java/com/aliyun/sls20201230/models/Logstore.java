@@ -5,10 +5,12 @@ import com.aliyun.tea.*;
 
 public class Logstore extends TeaModel {
     /**
-     * <p>Specifies whether to record public IP addresses. Default value: false. Valid values:</p>
+     * <p>Specifies whether to include the client\&quot;s public IP address in the log data. The default is false.</p>
      * <ul>
-     * <li>true</li>
-     * <li>false</li>
+     * <li><p>true: Records the public IP address.</p>
+     * </li>
+     * <li><p>false: Does not record the public IP address.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,10 +20,12 @@ public class Logstore extends TeaModel {
     public Boolean appendMeta;
 
     /**
-     * <p>Specifies whether to enable automatic sharding. Valid values:</p>
+     * <p>Specifies whether to enable auto split.</p>
      * <ul>
-     * <li>true</li>
-     * <li>false</li>
+     * <li><p>true: Enables auto split.</p>
+     * </li>
+     * <li><p>false: Disables auto split.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -31,7 +35,7 @@ public class Logstore extends TeaModel {
     public Boolean autoSplit;
 
     /**
-     * <p>The time at which the Logstore was created. The value is a UNIX timestamp representing the number of seconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+     * <p>The creation time of the Logstore, specified as a UNIX timestamp (the number of seconds since January 1, 1970, 00:00:00 UTC).</p>
      * 
      * <strong>example:</strong>
      * <p>1453949705</p>
@@ -39,11 +43,16 @@ public class Logstore extends TeaModel {
     @NameInMap("createTime")
     public Integer createTime;
 
+    @NameInMap("enableModify")
+    public Boolean enableModify;
+
     /**
-     * <p>Specifies whether to enable the web tracking feature. Default value: false. Valid values:</p>
+     * <p>Specifies whether to enable WebTracking. The default value is false.</p>
      * <ul>
-     * <li>true</li>
-     * <li>false</li>
+     * <li><p>true: Enables WebTracking.</p>
+     * </li>
+     * <li><p>false: Disables WebTracking.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -53,13 +62,13 @@ public class Logstore extends TeaModel {
     public Boolean enableTracking;
 
     /**
-     * <p>The configuration of data encryption.</p>
+     * <p>The data encryption configuration.</p>
      */
     @NameInMap("encrypt_conf")
     public EncryptConf encryptConf;
 
     /**
-     * <p>The retention period of data in the hot storage tier of the Logstore. Minimum value: 30. Unit: days.</p>
+     * <p>The number of days to retain data in the hot storage tier. The minimum value is 30.</p>
      * 
      * <strong>example:</strong>
      * <p>60</p>
@@ -68,7 +77,7 @@ public class Logstore extends TeaModel {
     public Integer hotTtl;
 
     /**
-     * <p>The retention period of data in the Infrequent Access (IA) storage tier of the Logstore.</p>
+     * <p>The number of days to retain data in the infrequent access storage tier.</p>
      * 
      * <strong>example:</strong>
      * <p>30</p>
@@ -77,7 +86,7 @@ public class Logstore extends TeaModel {
     public Integer infrequentAccessTTL;
 
     /**
-     * <p>The time at which the Logstore was last modified. The value is a UNIX timestamp representing the number of seconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+     * <p>The time the Logstore was last modified, specified as a UNIX timestamp (the number of seconds since January 1, 1970, 00:00:00 UTC).</p>
      * 
      * <strong>example:</strong>
      * <p>1524155379</p>
@@ -96,7 +105,7 @@ public class Logstore extends TeaModel {
     public String logstoreName;
 
     /**
-     * <p>The maximum number of shards into which existing shards can be automatically split. Valid values: 1 to 64.</p>
+     * <p>The maximum number of shards that an auto split can create. Valid values: 1 to 64.</p>
      * 
      * <strong>example:</strong>
      * <p>6</p>
@@ -105,10 +114,12 @@ public class Logstore extends TeaModel {
     public Integer maxSplitShard;
 
     /**
-     * <p>The type of the Logstore. Simple Log Service provides two types of Logstores: Standard Logstores and Query Logstores. Valid values:</p>
+     * <p>Log Service provides two types of Logstores: Standard and Query.</p>
      * <ul>
-     * <li><strong>standard</strong>: Standard Logstore. This type of Logstore supports the log analysis feature and is suitable for scenarios such as real-time monitoring and interactive analysis. You can also use this type of Logstore to build a comprehensive observability system.</li>
-     * <li><strong>query</strong>: Query Logstore. This type of Logstore supports high-performance queries. The index traffic fee of a Query Logstore is approximately half that of a Standard Logstore. Query Logstores do not support SQL analysis. Query Logstores are suitable for scenarios in which the amount of data is large, the log retention period is long, or log analysis is not required. If logs are stored for weeks or months, the log retention period is considered long.</li>
+     * <li><p><strong>Standard</strong>: Supports the full suite of Log Service data analysis features. This mode is ideal for real-time monitoring, interactive analysis, and building complete observability solutions.</p>
+     * </li>
+     * <li><p><strong>Query</strong>: Optimized for high-performance queries with indexing traffic costs that are approximately half those of the Standard mode. This mode does not support SQL analysis and is best for use cases involving large data volumes and long retention periods, where complex log analysis is not a requirement.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -118,13 +129,13 @@ public class Logstore extends TeaModel {
     public String mode;
 
     /**
-     * <p>The ingest processor ID.</p>
+     * <p>The IngestProcessor ID.</p>
      */
     @NameInMap("processorId")
     public String processorId;
 
     /**
-     * <p>The type of the service to which the logs belong.</p>
+     * <p>The product type of the logs.</p>
      * 
      * <strong>example:</strong>
      * <p>aliyun</p>
@@ -132,8 +143,11 @@ public class Logstore extends TeaModel {
     @NameInMap("productType")
     public String productType;
 
+    @NameInMap("resourceGroupId")
+    public String resourceGroupId;
+
     /**
-     * <p>The number of shards.</p>
+     * <p>The number of shards in the Logstore.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -146,10 +160,12 @@ public class Logstore extends TeaModel {
     public ShardingPolicy shardingPolicy;
 
     /**
-     * <p>The type of the data that you want to query. Valid values:</p>
+     * <p>The type of log data. Valid values:</p>
      * <ul>
-     * <li>Metrics: metric data.</li>
-     * <li>None: non-metric data.</li>
+     * <li><p>Metrics: The Logstore is optimized for time-series storage.</p>
+     * </li>
+     * <li><p>None: The Logstore uses standard storage for logs.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -159,7 +175,7 @@ public class Logstore extends TeaModel {
     public String telemetryType;
 
     /**
-     * <p>The log retention period. Unit: days. Valid values: 1 to 3650. If you set this parameter to 3650, logs are permanently stored.</p>
+     * <p>The data retention period in days. Valid values: 1 to 3,650. A value of 3,650 indicates permanent storage.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -195,6 +211,14 @@ public class Logstore extends TeaModel {
     }
     public Integer getCreateTime() {
         return this.createTime;
+    }
+
+    public Logstore setEnableModify(Boolean enableModify) {
+        this.enableModify = enableModify;
+        return this;
+    }
+    public Boolean getEnableModify() {
+        return this.enableModify;
     }
 
     public Logstore setEnableTracking(Boolean enableTracking) {
@@ -275,6 +299,14 @@ public class Logstore extends TeaModel {
     }
     public String getProductType() {
         return this.productType;
+    }
+
+    public Logstore setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
     }
 
     public Logstore setShardCount(Integer shardCount) {

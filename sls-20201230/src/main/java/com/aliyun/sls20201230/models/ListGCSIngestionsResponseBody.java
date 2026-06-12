@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class ListGCSIngestionsResponseBody extends TeaModel {
     /**
+     * <p>The number of jobs returned on the current page.</p>
+     * 
      * <strong>example:</strong>
      * <p>100</p>
      */
     @NameInMap("count")
     public Integer count;
 
+    /**
+     * <p>The details of the job configurations.</p>
+     */
     @NameInMap("results")
     public java.util.List<GCSIngestion> results;
 
     /**
+     * <p>The total number of entries that match the query.</p>
+     * 
      * <strong>example:</strong>
      * <p>100</p>
      */

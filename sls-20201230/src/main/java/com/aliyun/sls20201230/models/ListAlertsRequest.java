@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListAlertsRequest extends TeaModel {
     /**
+     * <p>The Logstore from which to obtain alert rules. The default value is empty.</p>
+     * 
      * <strong>example:</strong>
      * <p>ali-test-logstore</p>
      */
@@ -12,6 +14,8 @@ public class ListAlertsRequest extends TeaModel {
     public String logstore;
 
     /**
+     * <p>The line from which to start the query. The default value is 0.</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
@@ -19,7 +23,7 @@ public class ListAlertsRequest extends TeaModel {
     public Integer offset;
 
     /**
-     * <p>The number of entries per page. Maximum value: 200. Default value: 10.</p>
+     * <p>The number of rows to return on each page for a paged query. The maximum value is 200. The default value is 10.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
