@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateConsumerAuthorizationRulesResponseBody extends TeaModel {
     /**
-     * <p>The status code.</p>
+     * <p>Response status code.</p>
      * 
      * <strong>example:</strong>
      * <p>Ok</p>
@@ -14,13 +14,13 @@ public class CreateConsumerAuthorizationRulesResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The response parameters.</p>
+     * <p>Response data.</p>
      */
     @NameInMap("data")
     public CreateConsumerAuthorizationRulesResponseBodyData data;
 
     /**
-     * <p>The returned message.</p>
+     * <p>Response message.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -76,7 +76,7 @@ public class CreateConsumerAuthorizationRulesResponseBody extends TeaModel {
 
     public static class CreateConsumerAuthorizationRulesResponseBodyData extends TeaModel {
         /**
-         * <p>The authentication rule IDs.</p>
+         * <p>List of consumer authorization rule IDs.</p>
          */
         @NameInMap("consumerAuthorizationRuleIds")
         public java.util.List<String> consumerAuthorizationRuleIds;

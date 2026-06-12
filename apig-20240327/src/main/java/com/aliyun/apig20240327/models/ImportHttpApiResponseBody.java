@@ -175,6 +175,36 @@ public class ImportHttpApiResponseBody extends TeaModel {
 
     }
 
+    public static class ImportHttpApiResponseBodyDataDryRunInfoFailureRoutes extends TeaModel {
+        @NameInMap("errorMessage")
+        public String errorMessage;
+
+        @NameInMap("name")
+        public String name;
+
+        public static ImportHttpApiResponseBodyDataDryRunInfoFailureRoutes build(java.util.Map<String, ?> map) throws Exception {
+            ImportHttpApiResponseBodyDataDryRunInfoFailureRoutes self = new ImportHttpApiResponseBodyDataDryRunInfoFailureRoutes();
+            return TeaModel.build(map, self);
+        }
+
+        public ImportHttpApiResponseBodyDataDryRunInfoFailureRoutes setErrorMessage(String errorMessage) {
+            this.errorMessage = errorMessage;
+            return this;
+        }
+        public String getErrorMessage() {
+            return this.errorMessage;
+        }
+
+        public ImportHttpApiResponseBodyDataDryRunInfoFailureRoutes setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
+    }
+
     public static class ImportHttpApiResponseBodyDataDryRunInfoSuccessComponents extends TeaModel {
         /**
          * <p>Indicates whether the data structure will be created or updated.</p>
@@ -305,6 +335,36 @@ public class ImportHttpApiResponseBody extends TeaModel {
 
     }
 
+    public static class ImportHttpApiResponseBodyDataDryRunInfoSuccessRoutes extends TeaModel {
+        @NameInMap("action")
+        public String action;
+
+        @NameInMap("name")
+        public String name;
+
+        public static ImportHttpApiResponseBodyDataDryRunInfoSuccessRoutes build(java.util.Map<String, ?> map) throws Exception {
+            ImportHttpApiResponseBodyDataDryRunInfoSuccessRoutes self = new ImportHttpApiResponseBodyDataDryRunInfoSuccessRoutes();
+            return TeaModel.build(map, self);
+        }
+
+        public ImportHttpApiResponseBodyDataDryRunInfoSuccessRoutes setAction(String action) {
+            this.action = action;
+            return this;
+        }
+        public String getAction() {
+            return this.action;
+        }
+
+        public ImportHttpApiResponseBodyDataDryRunInfoSuccessRoutes setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
+    }
+
     public static class ImportHttpApiResponseBodyDataDryRunInfo extends TeaModel {
         /**
          * <p>Global error messages. If this list is not empty, the API import fails.</p>
@@ -330,6 +390,9 @@ public class ImportHttpApiResponseBody extends TeaModel {
         @NameInMap("failureOperations")
         public java.util.List<ImportHttpApiResponseBodyDataDryRunInfoFailureOperations> failureOperations;
 
+        @NameInMap("failureRoutes")
+        public java.util.List<ImportHttpApiResponseBodyDataDryRunInfoFailureRoutes> failureRoutes;
+
         @NameInMap("mcpToolsDefinition")
         public String mcpToolsDefinition;
 
@@ -344,6 +407,9 @@ public class ImportHttpApiResponseBody extends TeaModel {
          */
         @NameInMap("successOperations")
         public java.util.List<ImportHttpApiResponseBodyDataDryRunInfoSuccessOperations> successOperations;
+
+        @NameInMap("successRoutes")
+        public java.util.List<ImportHttpApiResponseBodyDataDryRunInfoSuccessRoutes> successRoutes;
 
         /**
          * <p>Global warning messages. If this list is not empty, some operations or data structures might not be imported.</p>
@@ -388,6 +454,14 @@ public class ImportHttpApiResponseBody extends TeaModel {
             return this.failureOperations;
         }
 
+        public ImportHttpApiResponseBodyDataDryRunInfo setFailureRoutes(java.util.List<ImportHttpApiResponseBodyDataDryRunInfoFailureRoutes> failureRoutes) {
+            this.failureRoutes = failureRoutes;
+            return this;
+        }
+        public java.util.List<ImportHttpApiResponseBodyDataDryRunInfoFailureRoutes> getFailureRoutes() {
+            return this.failureRoutes;
+        }
+
         public ImportHttpApiResponseBodyDataDryRunInfo setMcpToolsDefinition(String mcpToolsDefinition) {
             this.mcpToolsDefinition = mcpToolsDefinition;
             return this;
@@ -410,6 +484,14 @@ public class ImportHttpApiResponseBody extends TeaModel {
         }
         public java.util.List<ImportHttpApiResponseBodyDataDryRunInfoSuccessOperations> getSuccessOperations() {
             return this.successOperations;
+        }
+
+        public ImportHttpApiResponseBodyDataDryRunInfo setSuccessRoutes(java.util.List<ImportHttpApiResponseBodyDataDryRunInfoSuccessRoutes> successRoutes) {
+            this.successRoutes = successRoutes;
+            return this;
+        }
+        public java.util.List<ImportHttpApiResponseBodyDataDryRunInfoSuccessRoutes> getSuccessRoutes() {
+            return this.successRoutes;
         }
 
         public ImportHttpApiResponseBodyDataDryRunInfo setWarningMessages(java.util.List<String> warningMessages) {

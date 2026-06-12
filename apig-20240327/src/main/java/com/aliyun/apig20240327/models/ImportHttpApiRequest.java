@@ -117,6 +117,9 @@ public class ImportHttpApiRequest extends TeaModel {
     @NameInMap("versionConfig")
     public HttpApiVersionConfig versionConfig;
 
+    @NameInMap("withGatewayExtension")
+    public Boolean withGatewayExtension;
+
     public static ImportHttpApiRequest build(java.util.Map<String, ?> map) throws Exception {
         ImportHttpApiRequest self = new ImportHttpApiRequest();
         return TeaModel.build(map, self);
@@ -224,6 +227,14 @@ public class ImportHttpApiRequest extends TeaModel {
     }
     public HttpApiVersionConfig getVersionConfig() {
         return this.versionConfig;
+    }
+
+    public ImportHttpApiRequest setWithGatewayExtension(Boolean withGatewayExtension) {
+        this.withGatewayExtension = withGatewayExtension;
+        return this;
+    }
+    public Boolean getWithGatewayExtension() {
+        return this.withGatewayExtension;
     }
 
     public static class ImportHttpApiRequestSpecOssConfig extends TeaModel {
