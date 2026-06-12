@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateSkillSpaceRequest extends TeaModel {
     /**
+     * <p>A client-generated token to ensure the idempotence of the request. The token must be unique across requests. The <strong>ClientToken</strong> value can contain only ASCII characters and must be no more than 64 characters in length.</p>
+     * 
      * <strong>example:</strong>
      * <p>123e4567-e89b-12d3-a456-426655440000</p>
      */
@@ -12,6 +14,7 @@ public class CreateSkillSpaceRequest extends TeaModel {
     public String clientToken;
 
     /**
+     * <p>The description of the skill space.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,6 +24,7 @@ public class CreateSkillSpaceRequest extends TeaModel {
     public String skillSpaceDescription;
 
     /**
+     * <p>The name of the skill space.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

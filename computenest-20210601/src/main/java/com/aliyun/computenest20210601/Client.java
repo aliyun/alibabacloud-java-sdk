@@ -28,7 +28,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Cancels the application for using a service.</p>
+     * <p>Cancels a service usage request.</p>
      * 
      * @param request CancelServiceUsageRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -72,7 +72,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Cancels the application for using a service.</p>
+     * <p>Cancels a service usage request.</p>
      * 
      * @param request CancelServiceUsageRequest
      * @return CancelServiceUsageResponse
@@ -84,7 +84,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Changes the resource group of a cloud resource based on the resource ID.</p>
+     * <p>Changes the resource group for a cloud resource.</p>
      * 
      * @param request ChangeResourceGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -128,7 +128,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Changes the resource group of a cloud resource based on the resource ID.</p>
+     * <p>Changes the resource group for a cloud resource.</p>
      * 
      * @param request ChangeResourceGroupRequest
      * @return ChangeResourceGroupResponse
@@ -140,7 +140,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Performs a precheck before deploying a service instance.</p>
+     * <p>Performs a precheck to verify that a service instance can be deployed.</p>
      * 
      * @param request CheckServiceDeployableRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -196,7 +196,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Performs a precheck before deploying a service instance.</p>
+     * <p>Performs a precheck to verify that a service instance can be deployed.</p>
      * 
      * @param request CheckServiceDeployableRequest
      * @return CheckServiceDeployableResponse
@@ -208,10 +208,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation is available only for service instances that belong to private services deployed by using Resource Orchestration Service (ROS).</p>
+     * <p>If a private service instance that uses the ROS deployment type fails to deploy, you can call the ContinueDeployServiceInstance operation to resume the deployment.</p>
      * 
      * <b>summary</b> : 
-     * <p>Continues to deploy a service instance after the service instance failed to be deployed.</p>
+     * <p>If a service instance fails to deploy, you can call the ContinueDeployServiceInstance operation to resume the deployment.</p>
      * 
      * @param request ContinueDeployServiceInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -263,10 +263,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation is available only for service instances that belong to private services deployed by using Resource Orchestration Service (ROS).</p>
+     * <p>If a private service instance that uses the ROS deployment type fails to deploy, you can call the ContinueDeployServiceInstance operation to resume the deployment.</p>
      * 
      * <b>summary</b> : 
-     * <p>Continues to deploy a service instance after the service instance failed to be deployed.</p>
+     * <p>If a service instance fails to deploy, you can call the ContinueDeployServiceInstance operation to resume the deployment.</p>
      * 
      * @param request ContinueDeployServiceInstanceRequest
      * @return ContinueDeployServiceInstanceResponse
@@ -278,11 +278,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3><a href="#"></a>Prerequisites</h3>
-     * <p>Please ensure that the service provider has enabled the configuration change feature and completed the change parameter settings.</p>
+     * <h3>Prerequisites</h3>
+     * <p>Ensure that the service provider enabled the upgrade/downgrade feature and configured the corresponding parameters when the service was created.</p>
      * 
      * <b>summary</b> : 
-     * <p>Create backup for Compute Nest instance</p>
+     * <p>Creates a backup for a Compute Nest service instance.</p>
      * 
      * @param request CreateBackupRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -318,11 +318,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3><a href="#"></a>Prerequisites</h3>
-     * <p>Please ensure that the service provider has enabled the configuration change feature and completed the change parameter settings.</p>
+     * <h3>Prerequisites</h3>
+     * <p>Ensure that the service provider enabled the upgrade/downgrade feature and configured the corresponding parameters when the service was created.</p>
      * 
      * <b>summary</b> : 
-     * <p>Create backup for Compute Nest instance</p>
+     * <p>Creates a backup for a Compute Nest service instance.</p>
      * 
      * @param request CreateBackupRequest
      * @return CreateBackupResponse
@@ -334,11 +334,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3><a href="#"></a>Prerequisites</h3>
-     * <p>Please ensure that the service provider has enabled the configuration change feature and completed the change parameter settings.</p>
+     * <h3>Prerequisites</h3>
+     * <p>Before you call this operation, ensure that the service provider enabled the upgrade and downgrade feature and configured its parameters when the service was created.</p>
      * 
      * <b>summary</b> : 
-     * <p>Create restore task</p>
+     * <p>Creates a restore job.</p>
      * 
      * @param request CreateRestoreTaskRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -374,11 +374,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3><a href="#"></a>Prerequisites</h3>
-     * <p>Please ensure that the service provider has enabled the configuration change feature and completed the change parameter settings.</p>
+     * <h3>Prerequisites</h3>
+     * <p>Before you call this operation, ensure that the service provider enabled the upgrade and downgrade feature and configured its parameters when the service was created.</p>
      * 
      * <b>summary</b> : 
-     * <p>Create restore task</p>
+     * <p>Creates a restore job.</p>
      * 
      * @param request CreateRestoreTaskRequest
      * @return CreateRestoreTaskResponse
@@ -390,7 +390,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates and deploys a service instance.</p>
+     * <p>Creates and deploys a service instance in Compute Nest by specifying parameters such as a region ID, a service instance name, and a service ID.</p>
      * 
      * @param tmpReq CreateServiceInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -504,7 +504,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates and deploys a service instance.</p>
+     * <p>Creates and deploys a service instance in Compute Nest by specifying parameters such as a region ID, a service instance name, and a service ID.</p>
      * 
      * @param request CreateServiceInstanceRequest
      * @return CreateServiceInstanceResponse
@@ -516,7 +516,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates an application for using a service.</p>
+     * <p>Creates a service usage request.</p>
      * 
      * @param tmpReq CreateServiceUsageRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -566,7 +566,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates an application for using a service.</p>
+     * <p>Creates a service usage request.</p>
      * 
      * @param request CreateServiceUsageRequest
      * @return CreateServiceUsageResponse
@@ -577,8 +577,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>Prerequisites</h3>
+     * <p>Before you begin, ensure that the service provider has enabled the modification feature and configured its parameters during service creation.</p>
+     * 
      * <b>summary</b> : 
-     * <p>创建Skill</p>
+     * <p>Creates a Skill.</p>
      * 
      * @param request CreateSkillRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -639,8 +643,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>Prerequisites</h3>
+     * <p>Before you begin, ensure that the service provider has enabled the modification feature and configured its parameters during service creation.</p>
+     * 
      * <b>summary</b> : 
-     * <p>创建Skill</p>
+     * <p>Creates a Skill.</p>
      * 
      * @param request CreateSkillRequest
      * @return CreateSkillResponse
@@ -651,8 +659,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>Prerequisites</h3>
+     * <p>Ensure that the service provider has enabled the modification feature and configured its parameters during service creation.</p>
+     * 
      * <b>summary</b> : 
-     * <p>创建Skill文件检测任务</p>
+     * <p>Creates a Skill file detection task.</p>
      * 
      * @param request CreateSkillFileDetectRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -693,8 +705,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>Prerequisites</h3>
+     * <p>Ensure that the service provider has enabled the modification feature and configured its parameters during service creation.</p>
+     * 
      * <b>summary</b> : 
-     * <p>创建Skill文件检测任务</p>
+     * <p>Creates a Skill file detection task.</p>
      * 
      * @param request CreateSkillFileDetectRequest
      * @return CreateSkillFileDetectResponse
@@ -705,8 +721,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>Prerequisites</h3>
+     * <p>Ensure that the service provider has enabled the modify configuration feature and set the required parameters.</p>
+     * 
      * <b>summary</b> : 
-     * <p>创建SkillHub配置</p>
+     * <p>Creates a SkillHub config.</p>
      * 
      * @param request CreateSkillHubConfigRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -747,8 +767,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>Prerequisites</h3>
+     * <p>Ensure that the service provider has enabled the modify configuration feature and set the required parameters.</p>
+     * 
      * <b>summary</b> : 
-     * <p>创建SkillHub配置</p>
+     * <p>Creates a SkillHub config.</p>
      * 
      * @param request CreateSkillHubConfigRequest
      * @return CreateSkillHubConfigResponse
@@ -759,8 +783,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>Prerequisites</h3>
+     * <p>Ensure the service provider has enabled the modify configuration feature and set the required parameters during service creation.</p>
+     * 
      * <b>summary</b> : 
-     * <p>创建SkillSpace</p>
+     * <p>Creates a skill space.</p>
      * 
      * @param request CreateSkillSpaceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -801,8 +829,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>Prerequisites</h3>
+     * <p>Ensure the service provider has enabled the modify configuration feature and set the required parameters during service creation.</p>
+     * 
      * <b>summary</b> : 
-     * <p>创建SkillSpace</p>
+     * <p>Creates a skill space.</p>
      * 
      * @param request CreateSkillSpaceRequest
      * @return CreateSkillSpaceResponse
@@ -814,11 +846,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3><a href="#"></a>Prerequisites</h3>
-     * <p>Please ensure that the service provider has enabled the configuration change feature and completed the change parameter settings.</p>
+     * <h3>Prerequisites</h3>
+     * <p>Ensure that the service provider enabled the upgrade/downgrade feature and configured the upgrade/downgrade parameters when the service was created.</p>
      * 
      * <b>summary</b> : 
-     * <p>Delete Compute Nest instance backups.</p>
+     * <p>Deletes a Compute Nest instance backup.</p>
      * 
      * @param request DeleteBackupRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -850,11 +882,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3><a href="#"></a>Prerequisites</h3>
-     * <p>Please ensure that the service provider has enabled the configuration change feature and completed the change parameter settings.</p>
+     * <h3>Prerequisites</h3>
+     * <p>Ensure that the service provider enabled the upgrade/downgrade feature and configured the upgrade/downgrade parameters when the service was created.</p>
      * 
      * <b>summary</b> : 
-     * <p>Delete Compute Nest instance backups.</p>
+     * <p>Deletes a Compute Nest instance backup.</p>
      * 
      * @param request DeleteBackupRequest
      * @return DeleteBackupResponse
@@ -866,7 +898,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes service instances based on the region ID and service instance IDs.</p>
+     * <p>Deletes the specified service instances in a region.</p>
      * 
      * @param request DeleteServiceInstancesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -906,7 +938,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes service instances based on the region ID and service instance IDs.</p>
+     * <p>Deletes the specified service instances in a region.</p>
      * 
      * @param request DeleteServiceInstancesRequest
      * @return DeleteServiceInstancesResponse
@@ -917,8 +949,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>Prerequisites</h3>
+     * <p>Ensure the service provider has enabled the modification feature and configured the modification parameters when creating the service.</p>
+     * 
      * <b>summary</b> : 
-     * <p>删除Skill</p>
+     * <p>Deletes a skill.</p>
      * 
      * @param request DeleteSkillRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -955,8 +991,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>Prerequisites</h3>
+     * <p>Ensure the service provider has enabled the modification feature and configured the modification parameters when creating the service.</p>
+     * 
      * <b>summary</b> : 
-     * <p>删除Skill</p>
+     * <p>Deletes a skill.</p>
      * 
      * @param request DeleteSkillRequest
      * @return DeleteSkillResponse
@@ -967,8 +1007,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>Prerequisites</h3>
+     * <p>Ensure that the service provider enabled the modify configuration feature and set the required parameters during service creation.</p>
+     * 
      * <b>summary</b> : 
-     * <p>删除SkillSpace</p>
+     * <p>Deletes a SkillSpace.</p>
      * 
      * @param request DeleteSkillSpaceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1005,8 +1049,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>Prerequisites</h3>
+     * <p>Ensure that the service provider enabled the modify configuration feature and set the required parameters during service creation.</p>
+     * 
      * <b>summary</b> : 
-     * <p>删除SkillSpace</p>
+     * <p>Deletes a SkillSpace.</p>
      * 
      * @param request DeleteSkillSpaceRequest
      * @return DeleteSkillSpaceResponse
@@ -1018,7 +1066,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deploys the created service instance.</p>
+     * <p>Deploys a service instance.</p>
      * 
      * @param request DeployServiceInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1058,7 +1106,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deploys the created service instance.</p>
+     * <p>Deploys a service instance.</p>
      * 
      * @param request DeployServiceInstanceRequest
      * @return DeployServiceInstanceResponse
@@ -1070,7 +1118,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>List available regions.</p>
+     * <p>Queries the available regions.</p>
      * 
      * @param request DescribeRegionsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1102,7 +1150,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>List available regions.</p>
+     * <p>Queries the available regions.</p>
      * 
      * @param request DescribeRegionsRequest
      * @return DescribeRegionsResponse
@@ -1114,17 +1162,27 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the missing policies before creating a service instance.</p>
+     * <p>Check for missing access policies before you create a service instance.</p>
      * 
-     * @param request GenerateServicePolicyRequest
+     * @param tmpReq GenerateServicePolicyRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GenerateServicePolicyResponse
      */
-    public GenerateServicePolicyResponse generateServicePolicyWithOptions(GenerateServicePolicyRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
+    public GenerateServicePolicyResponse generateServicePolicyWithOptions(GenerateServicePolicyRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        GenerateServicePolicyShrinkRequest request = new GenerateServicePolicyShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.parameters)) {
+            request.parametersShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.parameters, "Parameters", "json");
+        }
+
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.operationTypes)) {
             query.put("OperationTypes", request.operationTypes);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.parametersShrink)) {
+            query.put("Parameters", request.parametersShrink);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
@@ -1166,7 +1224,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the missing policies before creating a service instance.</p>
+     * <p>Check for missing access policies before you create a service instance.</p>
      * 
      * @param request GenerateServicePolicyRequest
      * @return GenerateServicePolicyResponse
@@ -1178,11 +1236,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3><a href="#"></a>Prerequisites</h3>
-     * <p>Please ensure that the service provider has enabled the configuration change feature and completed the change parameter settings.</p>
+     * <h3>Prerequisites</h3>
+     * <p>Ensure that the service provider enabled the upgrade and downgrade feature and configured its parameters when the service was created.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the information about backup task.</p>
+     * <p>Retrieves the details of a backup.</p>
      * 
      * @param request GetBackupRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1214,11 +1272,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3><a href="#"></a>Prerequisites</h3>
-     * <p>Please ensure that the service provider has enabled the configuration change feature and completed the change parameter settings.</p>
+     * <h3>Prerequisites</h3>
+     * <p>Ensure that the service provider enabled the upgrade and downgrade feature and configured its parameters when the service was created.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the information about backup task.</p>
+     * <p>Retrieves the details of a backup.</p>
      * 
      * @param request GetBackupRequest
      * @return GetBackupResponse
@@ -1229,8 +1287,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>Prerequisites</h3>
+     * <p>Ensure that the service provider enabled the upgrade/downgrade feature and set the related parameters when the service was created.</p>
+     * 
      * <b>summary</b> : 
-     * <p>根据指定地域获取可用区列表</p>
+     * <p>Returns a list of available zones for a specified region.</p>
      * 
      * @param request GetNetworkAvailableZonesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1289,8 +1351,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>Prerequisites</h3>
+     * <p>Ensure that the service provider enabled the upgrade/downgrade feature and set the related parameters when the service was created.</p>
+     * 
      * <b>summary</b> : 
-     * <p>根据指定地域获取可用区列表</p>
+     * <p>Returns a list of available zones for a specified region.</p>
      * 
      * @param request GetNetworkAvailableZonesRequest
      * @return GetNetworkAvailableZonesResponse
@@ -1302,7 +1368,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the information about a service.</p>
+     * <p>Retrieves the details of a specified service.</p>
      * 
      * @param request GetServiceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1354,7 +1420,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the information about a service.</p>
+     * <p>Retrieves the details of a specified service.</p>
      * 
      * @param request GetServiceRequest
      * @return GetServiceResponse
@@ -1366,7 +1432,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the estimated price for creating a service instance.</p>
+     * <p>Queries the estimated cost of creating a service instance.</p>
      * 
      * @param tmpReq GetServiceEstimateCostRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1448,7 +1514,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the estimated price for creating a service instance.</p>
+     * <p>Queries the estimated cost of creating a service instance.</p>
      * 
      * @param request GetServiceEstimateCostRequest
      * @return GetServiceEstimateCostResponse
@@ -1460,7 +1526,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the information about a service instance based on the region ID and the ID of the service instance or the Alibaba Cloud Marketplace instance. Information including the service status, template name, and involved resources are returned.</p>
+     * <p>Queries the details of a service instance by its region ID, service instance ID, or Alibaba Cloud Marketplace instance ID. The returned information includes the service status, template name, and a list of resources.</p>
      * 
      * @param request GetServiceInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1500,7 +1566,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the information about a service instance based on the region ID and the ID of the service instance or the Alibaba Cloud Marketplace instance. Information including the service status, template name, and involved resources are returned.</p>
+     * <p>Queries the details of a service instance by its region ID, service instance ID, or Alibaba Cloud Marketplace instance ID. The returned information includes the service status, template name, and a list of resources.</p>
      * 
      * @param request GetServiceInstanceRequest
      * @return GetServiceInstanceResponse
@@ -1512,7 +1578,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Inquiries the prices of subscription resources for private service instances. Renewal price inquiry is supported. You can make a unified renewal price inquiry for all subscription resources based on a specific service instance ID or make a renewal price inquiry for a specific resource. You can specify a service instance ID or a resource in a request, but cannot specify both of them.</p>
+     * <p>Queries the estimated renewal cost of subscription resources in a privately deployed service instance. You can query the cost for all resources associated with a service instance ID, or for a specific set of resources.</p>
      * 
      * @param request GetServiceInstanceSubscriptionEstimateCostRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1568,7 +1634,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Inquiries the prices of subscription resources for private service instances. Renewal price inquiry is supported. You can make a unified renewal price inquiry for all subscription resources based on a specific service instance ID or make a renewal price inquiry for a specific resource. You can specify a service instance ID or a resource in a request, but cannot specify both of them.</p>
+     * <p>Queries the estimated renewal cost of subscription resources in a privately deployed service instance. You can query the cost for all resources associated with a service instance ID, or for a specific set of resources.</p>
      * 
      * @param request GetServiceInstanceSubscriptionEstimateCostRequest
      * @return GetServiceInstanceSubscriptionEstimateCostResponse
@@ -1580,7 +1646,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the information about the activation status and Resource Access Management (RAM) roles of the cloud services required by a service.</p>
+     * <p>Retrieves the provisions of a service, such as its activation status and service roles.</p>
      * 
      * @param tmpReq GetServiceProvisionsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1638,7 +1704,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the information about the activation status and Resource Access Management (RAM) roles of the cloud services required by a service.</p>
+     * <p>Retrieves the provisions of a service, such as its activation status and service roles.</p>
      * 
      * @param request GetServiceProvisionsRequest
      * @return GetServiceProvisionsResponse
@@ -1650,7 +1716,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the constraints on the parameters in a Resource Orchestration Service (ROS) template in a region based on the template name and service ID.</p>
+     * <p>Queries the parameter constraints for a Resource Orchestration Service (ROS) template in a specified region using the template name and service ID.</p>
      * 
      * @param request GetServiceTemplateParameterConstraintsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1722,7 +1788,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the constraints on the parameters in a Resource Orchestration Service (ROS) template in a region based on the template name and service ID.</p>
+     * <p>Queries the parameter constraints for a Resource Orchestration Service (ROS) template in a specified region using the template name and service ID.</p>
      * 
      * @param request GetServiceTemplateParameterConstraintsRequest
      * @return GetServiceTemplateParameterConstraintsResponse
@@ -1733,8 +1799,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>Prerequisites</h3>
+     * <p>Before calling this operation, ensure that the service provider enabled the modification feature and configured the required parameters during service creation.</p>
+     * 
      * <b>summary</b> : 
-     * <p>查询Skill详情</p>
+     * <p>Queries the details of a Skill.</p>
      * 
      * @param request GetSkillRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1765,8 +1835,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>Prerequisites</h3>
+     * <p>Before calling this operation, ensure that the service provider enabled the modification feature and configured the required parameters during service creation.</p>
+     * 
      * <b>summary</b> : 
-     * <p>查询Skill详情</p>
+     * <p>Queries the details of a Skill.</p>
      * 
      * @param request GetSkillRequest
      * @return GetSkillResponse
@@ -1777,8 +1851,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>Prerequisites</h3>
+     * <p>This operation is available only if the service provider enabled the modification feature and configured the relevant parameters during service creation.</p>
+     * 
      * <b>summary</b> : 
-     * <p>查询Skill文件检测结果</p>
+     * <p>Retrieves the result of a Skill file detection task.</p>
      * 
      * @param request GetSkillFileDetectResultRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1813,8 +1891,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>Prerequisites</h3>
+     * <p>This operation is available only if the service provider enabled the modification feature and configured the relevant parameters during service creation.</p>
+     * 
      * <b>summary</b> : 
-     * <p>查询Skill文件检测结果</p>
+     * <p>Retrieves the result of a Skill file detection task.</p>
      * 
      * @param request GetSkillFileDetectResultRequest
      * @return GetSkillFileDetectResultResponse
@@ -1825,8 +1907,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>Prerequisites</h3>
+     * <p>Ensure the service provider enabled the modification feature and configured its parameters when creating the service.</p>
+     * 
      * <b>summary</b> : 
-     * <p>查询SkillHub配置</p>
+     * <p>Retrieves the SkillHub configuration.</p>
      * 
      * @param request GetSkillHubConfigRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1850,8 +1936,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>Prerequisites</h3>
+     * <p>Ensure the service provider enabled the modification feature and configured its parameters when creating the service.</p>
+     * 
      * <b>summary</b> : 
-     * <p>查询SkillHub配置</p>
+     * <p>Retrieves the SkillHub configuration.</p>
      * 
      * @param request GetSkillHubConfigRequest
      * @return GetSkillHubConfigResponse
@@ -1862,8 +1952,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>Prerequisites</h3>
+     * <p>Ensure that the service provider has enabled the modification feature and configured the modification parameters for the service.</p>
+     * 
      * <b>summary</b> : 
-     * <p>查询SkillSpace详情</p>
+     * <p>Retrieves the details of a SkillSpace.</p>
      * 
      * @param request GetSkillSpaceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1894,8 +1988,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>Prerequisites</h3>
+     * <p>Ensure that the service provider has enabled the modification feature and configured the modification parameters for the service.</p>
+     * 
      * <b>summary</b> : 
-     * <p>查询SkillSpace详情</p>
+     * <p>Retrieves the details of a SkillSpace.</p>
      * 
      * @param request GetSkillSpaceRequest
      * @return GetSkillSpaceResponse
@@ -1907,7 +2005,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the information about a customer.</p>
+     * <p>Queries user information.</p>
      * 
      * @param request GetUserInformationRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1939,7 +2037,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the information about a customer.</p>
+     * <p>Queries user information.</p>
      * 
      * @param request GetUserInformationRequest
      * @return GetUserInformationResponse
@@ -1951,11 +2049,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3><a href="#"></a>Prerequisites</h3>
-     * <p>Please ensure that the service provider has enabled the configuration change feature and completed the change parameter settings.</p>
+     * <h3>Prerequisites</h3>
+     * <p>Ensure that the service provider enabled the upgrade and downgrade feature and configured the related parameters when the service was created.</p>
      * 
      * <b>summary</b> : 
-     * <p>Query and list Compute Nest instance backups</p>
+     * <p>Queries a list of backups for Compute Nest service instances.</p>
      * 
      * @param request ListBackupsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1995,11 +2093,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3><a href="#"></a>Prerequisites</h3>
-     * <p>Please ensure that the service provider has enabled the configuration change feature and completed the change parameter settings.</p>
+     * <h3>Prerequisites</h3>
+     * <p>Ensure that the service provider enabled the upgrade and downgrade feature and configured the related parameters when the service was created.</p>
      * 
      * <b>summary</b> : 
-     * <p>Query and list Compute Nest instance backups</p>
+     * <p>Queries a list of backups for Compute Nest service instances.</p>
      * 
      * @param request ListBackupsRequest
      * @return ListBackupsResponse
@@ -2011,7 +2109,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queires the permissions.</p>
+     * <p>Retrieves a list of access policies.</p>
      * 
      * @param request ListPoliciesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2051,7 +2149,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queires the permissions.</p>
+     * <p>Retrieves a list of access policies.</p>
      * 
      * @param request ListPoliciesRequest
      * @return ListPoliciesResponse
@@ -2062,8 +2160,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>Prerequisites</h3>
+     * <p>Ensure the service provider enabled the change specification feature and configured the relevant parameters during service creation.</p>
+     * 
      * <b>summary</b> : 
-     * <p>查询公开 Skill 列表</p>
+     * <p>Lists public skills.</p>
      * 
      * @param request ListPublicSkillsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2106,8 +2208,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>Prerequisites</h3>
+     * <p>Ensure the service provider enabled the change specification feature and configured the relevant parameters during service creation.</p>
+     * 
      * <b>summary</b> : 
-     * <p>查询公开 Skill 列表</p>
+     * <p>Lists public skills.</p>
      * 
      * @param request ListPublicSkillsRequest
      * @return ListPublicSkillsResponse
@@ -2119,11 +2225,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3><a href="#"></a>Prerequisites</h3>
-     * <p>Please ensure that the service provider has enabled the configuration change feature and completed the change parameter settings.</p>
+     * <h3>Prerequisites</h3>
+     * <p>Ensure that the service provider enabled the upgrade and downgrade feature and configured its parameters when creating the service.</p>
      * 
      * <b>summary</b> : 
-     * <p>Query and list restore tasks</p>
+     * <p>Queries a list of restore jobs.</p>
      * 
      * @param request ListRestoreTasksRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2163,11 +2269,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3><a href="#"></a>Prerequisites</h3>
-     * <p>Please ensure that the service provider has enabled the configuration change feature and completed the change parameter settings.</p>
+     * <h3>Prerequisites</h3>
+     * <p>Ensure that the service provider enabled the upgrade and downgrade feature and configured its parameters when creating the service.</p>
      * 
      * <b>summary</b> : 
-     * <p>Query and list restore tasks</p>
+     * <p>Queries a list of restore jobs.</p>
      * 
      * @param request ListRestoreTasksRequest
      * @return ListRestoreTasksResponse
@@ -2179,7 +2285,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries service categories.</p>
+     * <p>Lists the available service categories.</p>
      * 
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListServiceCategoriesResponse
@@ -2202,7 +2308,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries service categories.</p>
+     * <p>Lists the available service categories.</p>
      * @return ListServiceCategoriesResponse
      */
     public ListServiceCategoriesResponse listServiceCategories() throws Exception {
@@ -2212,7 +2318,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries instance bills.</p>
+     * <p>Call the ListServiceInstanceBill operation to query bills for service instances.</p>
      * 
      * @param request ListServiceInstanceBillRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2264,7 +2370,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries instance bills.</p>
+     * <p>Call the ListServiceInstanceBill operation to query bills for service instances.</p>
      * 
      * @param request ListServiceInstanceBillRequest
      * @return ListServiceInstanceBillResponse
@@ -2276,7 +2382,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the deployment and upgrade logs of a service instance.</p>
+     * <p>Retrieves the deployment and upgrade logs of a service instance.</p>
      * 
      * @param request ListServiceInstanceLogsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2336,7 +2442,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the deployment and upgrade logs of a service instance.</p>
+     * <p>Retrieves the deployment and upgrade logs of a service instance.</p>
      * 
      * @param request ListServiceInstanceLogsRequest
      * @return ListServiceInstanceLogsResponse
@@ -2348,7 +2454,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the resources contained in a service instance.</p>
+     * <p>Queries the resources of a service instance based on parameters such as the service instance ID, Alibaba Cloud Resource Name (ARN), and region ID.</p>
      * 
      * @param request ListServiceInstanceResourcesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2404,7 +2510,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the resources contained in a service instance.</p>
+     * <p>Queries the resources of a service instance based on parameters such as the service instance ID, Alibaba Cloud Resource Name (ARN), and region ID.</p>
      * 
      * @param request ListServiceInstanceResourcesRequest
      * @return ListServiceInstanceResourcesResponse
@@ -2416,7 +2522,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the upgrade history of a service instance.</p>
+     * <p>You can call ListServiceInstanceUpgradeHistory to query the upgrade history of a service instance.</p>
      * 
      * @param request ListServiceInstanceUpgradeHistoryRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2460,7 +2566,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the upgrade history of a service instance.</p>
+     * <p>You can call ListServiceInstanceUpgradeHistory to query the upgrade history of a service instance.</p>
      * 
      * @param request ListServiceInstanceUpgradeHistoryRequest
      * @return ListServiceInstanceUpgradeHistoryResponse
@@ -2472,7 +2578,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>{}</p>
+     * <p>Queries service instances for your account in a specified region.</p>
      * 
      * @param request ListServiceInstancesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2524,7 +2630,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>{}</p>
+     * <p>Queries service instances for your account in a specified region.</p>
      * 
      * @param request ListServiceInstancesRequest
      * @return ListServiceInstancesResponse
@@ -2536,7 +2642,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the applications for using a service.</p>
+     * <p>Queries your service usages.</p>
      * 
      * @param request ListServiceUsagesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2580,7 +2686,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the applications for using a service.</p>
+     * <p>Queries your service usages.</p>
      * 
      * @param request ListServiceUsagesRequest
      * @return ListServiceUsagesResponse
@@ -2592,7 +2698,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of services.</p>
+     * <p>Queries information about your services.</p>
      * 
      * @param request ListServicesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2656,7 +2762,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of services.</p>
+     * <p>Queries information about your services.</p>
      * 
      * @param request ListServicesRequest
      * @return ListServicesResponse
@@ -2667,8 +2773,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>Prerequisites</h3>
+     * <p>Before you call this operation, ensure that the service provider has enabled the modification feature and configured the modification parameters when creating the service.</p>
+     * 
      * <b>summary</b> : 
-     * <p>获取Skill文件列表</p>
+     * <p>Lists the files of a specified Skill.</p>
      * 
      * @param request ListSkillFilesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2711,8 +2821,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>Prerequisites</h3>
+     * <p>Before you call this operation, ensure that the service provider has enabled the modification feature and configured the modification parameters when creating the service.</p>
+     * 
      * <b>summary</b> : 
-     * <p>获取Skill文件列表</p>
+     * <p>Lists the files of a specified Skill.</p>
      * 
      * @param request ListSkillFilesRequest
      * @return ListSkillFilesResponse
@@ -2723,8 +2837,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>Prerequisites</h3>
+     * <p>Ensure the service provider enabled the upgrade feature and configured its parameters when creating the service.</p>
+     * 
      * <b>summary</b> : 
-     * <p>查询SkillSpace列表</p>
+     * <p>Queries a list of SkillSpaces.</p>
      * 
      * @param request ListSkillSpacesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2763,8 +2881,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>Prerequisites</h3>
+     * <p>Ensure the service provider enabled the upgrade feature and configured its parameters when creating the service.</p>
+     * 
      * <b>summary</b> : 
-     * <p>查询SkillSpace列表</p>
+     * <p>Queries a list of SkillSpaces.</p>
      * 
      * @param request ListSkillSpacesRequest
      * @return ListSkillSpacesResponse
@@ -2775,8 +2897,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>Prerequisites</h3>
+     * <p>Ensure that the service provider has enabled modification and configured the modification parameters when creating the service.</p>
+     * 
      * <b>summary</b> : 
-     * <p>查询Skill列表</p>
+     * <p>Retrieves a list of Skills.</p>
      * 
      * @param request ListSkillsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2819,8 +2945,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>Prerequisites</h3>
+     * <p>Ensure that the service provider has enabled modification and configured the modification parameters when creating the service.</p>
+     * 
      * <b>summary</b> : 
-     * <p>查询Skill列表</p>
+     * <p>Retrieves a list of Skills.</p>
      * 
      * @param request ListSkillsRequest
      * @return ListSkillsResponse
@@ -2832,7 +2962,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the existing tag keys.</p>
+     * <p>This operation lists existing tag keys.</p>
      * 
      * @param request ListTagKeysRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2872,7 +3002,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the existing tag keys.</p>
+     * <p>This operation lists existing tag keys.</p>
      * 
      * @param request ListTagKeysRequest
      * @return ListTagKeysResponse
@@ -2884,7 +3014,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query tag resource list</p>
+     * <p>Queries a list of tagged resources.</p>
      * 
      * @param request ListTagResourcesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2932,7 +3062,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query tag resource list</p>
+     * <p>Queries a list of tagged resources.</p>
      * 
      * @param request ListTagResourcesRequest
      * @return ListTagResourcesResponse
@@ -2944,7 +3074,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the tag values of a tag key.</p>
+     * <p>Lists the tag values for a specified tag key.</p>
      * 
      * @param request ListTagValuesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2988,7 +3118,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the tag values of a tag key.</p>
+     * <p>Lists the tag values for a specified tag key.</p>
      * 
      * @param request ListTagValuesRequest
      * @return ListTagValuesResponse
@@ -3000,7 +3130,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>续费服务实例</p>
+     * <p>Renews a service instance.</p>
      * 
      * @param request RenewServiceInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3036,7 +3166,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>续费服务实例</p>
+     * <p>Renews a service instance.</p>
      * 
      * @param request RenewServiceInstanceRequest
      * @return RenewServiceInstanceResponse
@@ -3048,7 +3178,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Renews the subscription resources that are included in a private service instance. You can renew all subscription resources included in a private service instance based on the ID of the private service instance. You can also renew specific resources included in a private service instance. You can use only one of the preceding renewal methods.</p>
+     * <p>Renews the subscription resources for a private deployment service instance. This operation supports two renewal methods: renewing all subscription resources for a service instance or renewing only specific resources. You can use only one method per request.</p>
      * 
      * @param request RenewServiceInstanceResourcesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3100,7 +3230,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Renews the subscription resources that are included in a private service instance. You can renew all subscription resources included in a private service instance based on the ID of the private service instance. You can also renew specific resources included in a private service instance. You can use only one of the preceding renewal methods.</p>
+     * <p>Renews the subscription resources for a private deployment service instance. This operation supports two renewal methods: renewing all subscription resources for a service instance or renewing only specific resources. You can use only one method per request.</p>
      * 
      * @param request RenewServiceInstanceResourcesRequest
      * @return RenewServiceInstanceResourcesResponse
@@ -3111,8 +3241,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>Prerequisites</h3>
+     * <p>Ensure that the service provider enabled the restart O\&amp;M operation when the service was created.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Restarts a service instance that is in the Deployed state.</p>
+     * <p>Restarts a service instance in the Deployed state.</p>
      * 
      * @param request RestartServiceInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3151,8 +3285,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>Prerequisites</h3>
+     * <p>Ensure that the service provider enabled the restart O\&amp;M operation when the service was created.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Restarts a service instance that is in the Deployed state.</p>
+     * <p>Restarts a service instance in the Deployed state.</p>
      * 
      * @param request RestartServiceInstanceRequest
      * @return RestartServiceInstanceResponse
@@ -3164,7 +3302,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Rolls back an upgraded service instance to the previous version.</p>
+     * <p>Rolls back an upgraded service instance.</p>
      * 
      * @param request RollbackServiceInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3204,7 +3342,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Rolls back an upgraded service instance to the previous version.</p>
+     * <p>Rolls back an upgraded service instance.</p>
      * 
      * @param request RollbackServiceInstanceRequest
      * @return RollbackServiceInstanceResponse
@@ -3215,8 +3353,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>Prerequisites</h3>
+     * <p>Ensure that the service provider configured the start and stop O\&amp;M actions when creating the service.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Starts a service instance that is in the Stopped or StartFailed state.</p>
+     * <p>Call the StartServiceInstance operation to start a service instance that is in the Stopped or StartFailed state.</p>
      * 
      * @param request StartServiceInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3255,8 +3397,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>Prerequisites</h3>
+     * <p>Ensure that the service provider configured the start and stop O\&amp;M actions when creating the service.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Starts a service instance that is in the Stopped or StartFailed state.</p>
+     * <p>Call the StartServiceInstance operation to start a service instance that is in the Stopped or StartFailed state.</p>
      * 
      * @param request StartServiceInstanceRequest
      * @return StartServiceInstanceResponse
@@ -3267,8 +3413,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>Prerequisites</h3>
+     * <p>Ensure that the service provider configured the Operations and Maintenance (O\&amp;M) operations for startup and shutdown when the service was created.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Stops a service instance that is in the Deployed or StopFailed state.</p>
+     * <p>Call the StopServiceInstance operation to shut down a service instance that is in the Deployed or StopFailed state.</p>
      * 
      * @param request StopServiceInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3307,8 +3457,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>Prerequisites</h3>
+     * <p>Ensure that the service provider configured the Operations and Maintenance (O\&amp;M) operations for startup and shutdown when the service was created.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Stops a service instance that is in the Deployed or StopFailed state.</p>
+     * <p>Call the StopServiceInstance operation to shut down a service instance that is in the Deployed or StopFailed state.</p>
      * 
      * @param request StopServiceInstanceRequest
      * @return StopServiceInstanceResponse
@@ -3320,7 +3474,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates and adds tags to a specified resource list.</p>
+     * <p>You can call TagResources to create and attach tags to multiple resources.</p>
      * 
      * @param request TagResourcesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3364,7 +3518,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates and adds tags to a specified resource list.</p>
+     * <p>You can call TagResources to create and attach tags to multiple resources.</p>
      * 
      * @param request TagResourcesRequest
      * @return TagResourcesResponse
@@ -3376,7 +3530,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Removes tags from resources.</p>
+     * <p>Detaches tags from specified resources.</p>
      * 
      * @param request UnTagResourcesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3424,7 +3578,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Removes tags from resources.</p>
+     * <p>Detaches tags from specified resources.</p>
      * 
      * @param request UnTagResourcesRequest
      * @return UnTagResourcesResponse
@@ -3492,11 +3646,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3><a href="#"></a>Prerequisites</h3>
-     * <p>Configuration change is enabled and the related parameters are configured for the service by the service provider.</p>
+     * <h3>Prerequisites</h3>
+     * <p>Ensure that the service provider has enabled the upgrade/downgrade feature and configured the related parameters when the service was created.</p>
      * 
      * <b>summary</b> : 
-     * <p>Changes the configurations of a service instance.</p>
+     * <p>You can call the UpdateServiceInstanceSpec operation to upgrade or downgrade a service instance if its parameters or package settings do not meet your requirements.</p>
      * 
      * @param tmpReq UpdateServiceInstanceSpecRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3562,11 +3716,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3><a href="#"></a>Prerequisites</h3>
-     * <p>Configuration change is enabled and the related parameters are configured for the service by the service provider.</p>
+     * <h3>Prerequisites</h3>
+     * <p>Ensure that the service provider has enabled the upgrade/downgrade feature and configured the related parameters when the service was created.</p>
      * 
      * <b>summary</b> : 
-     * <p>Changes the configurations of a service instance.</p>
+     * <p>You can call the UpdateServiceInstanceSpec operation to upgrade or downgrade a service instance if its parameters or package settings do not meet your requirements.</p>
      * 
      * @param request UpdateServiceInstanceSpecRequest
      * @return UpdateServiceInstanceSpecResponse
@@ -3578,7 +3732,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates the application for using a service.</p>
+     * <p>Updates the information about a service usage request.</p>
      * 
      * @param tmpReq UpdateServiceUsageRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3628,7 +3782,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates the application for using a service.</p>
+     * <p>Updates the information about a service usage request.</p>
      * 
      * @param request UpdateServiceUsageRequest
      * @return UpdateServiceUsageResponse
@@ -3639,8 +3793,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>Prerequisites</h3>
+     * <p>Ensure the service provider has enabled the option to modify configurations and configured the relevant parameters during service creation.</p>
+     * 
      * <b>summary</b> : 
-     * <p>更新Skill</p>
+     * <p>Updates a skill.</p>
      * 
      * @param request UpdateSkillRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3701,8 +3859,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>Prerequisites</h3>
+     * <p>Ensure the service provider has enabled the option to modify configurations and configured the relevant parameters during service creation.</p>
+     * 
      * <b>summary</b> : 
-     * <p>更新Skill</p>
+     * <p>Updates a skill.</p>
      * 
      * @param request UpdateSkillRequest
      * @return UpdateSkillResponse
@@ -3714,7 +3876,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates the information about a customer.</p>
+     * <p>The UpdateUserInformation operation updates user information.</p>
      * 
      * @param request UpdateUserInformationRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3750,7 +3912,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates the information about a customer.</p>
+     * <p>The UpdateUserInformation operation updates user information.</p>
      * 
      * @param request UpdateUserInformationRequest
      * @return UpdateUserInformationResponse
@@ -3762,7 +3924,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Upgrades the version of a service instance.</p>
+     * <p>Upgrades a service instance to a new version.</p>
      * 
      * @param tmpReq UpgradeServiceInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3820,7 +3982,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Upgrades the version of a service instance.</p>
+     * <p>Upgrades a service instance to a new version.</p>
      * 
      * @param request UpgradeServiceInstanceRequest
      * @return UpgradeServiceInstanceResponse
@@ -3832,7 +3994,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>校验服务实例名称</p>
+     * <p>Validates the name of a service instance.</p>
      * 
      * @param request ValidateServiceInstanceNameRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3884,7 +4046,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>校验服务实例名称</p>
+     * <p>Validates the name of a service instance.</p>
      * 
      * @param request ValidateServiceInstanceNameRequest
      * @return ValidateServiceInstanceNameResponse

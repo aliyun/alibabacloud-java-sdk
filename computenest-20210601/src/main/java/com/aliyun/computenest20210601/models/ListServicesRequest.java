@@ -11,7 +11,7 @@ public class ListServicesRequest extends TeaModel {
     public java.util.List<ListServicesRequestFilter> filter;
 
     /**
-     * <p>Keyword fuzzy query.</p>
+     * <p>The keyword for a fuzzy query.</p>
      * 
      * <strong>example:</strong>
      * <p>name</p>
@@ -20,11 +20,11 @@ public class ListServicesRequest extends TeaModel {
     public String fuzzyKeyword;
 
     /**
-     * <p>Whether it is used. Optional values:</p>
+     * <p>Specifies whether the service is in use. Valid values:</p>
      * <ul>
-     * <li><p>false: not being used.</p>
+     * <li><p>false: The service is not in use.</p>
      * </li>
-     * <li><p>true: already in use.</p>
+     * <li><p>true: The service is in use.</p>
      * </li>
      * </ul>
      * 
@@ -35,7 +35,7 @@ public class ListServicesRequest extends TeaModel {
     public Boolean inUsed;
 
     /**
-     * <p>The number of entries page. Valid values: 1 to 100. Default value: 20.</p>
+     * <p>The number of entries to return on each page. Maximum value: 100. Default value: 20.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -44,7 +44,7 @@ public class ListServicesRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>A pagination token. It can be used in the next request to retrieve a new page of results. If NextToken is empty, no next page exists.</p>
+     * <p>The token that is used to retrieve the next page of results. Set this to the NextToken value returned from the previous API call.</p>
      * 
      * <strong>example:</strong>
      * <p>BBBAAfu+XtuBE55iRLHEYYuojI4=</p>
@@ -53,7 +53,7 @@ public class ListServicesRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>Service ordering type.</p>
+     * <p>The sorting type for services.</p>
      * 
      * <strong>example:</strong>
      * <p>UpdateTime</p>
@@ -72,7 +72,7 @@ public class ListServicesRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>Service access type.</p>
+     * <p>The service access type.</p>
      * 
      * <strong>example:</strong>
      * <p>All</p>
@@ -81,7 +81,7 @@ public class ListServicesRequest extends TeaModel {
     public String serviceAccessType;
 
     /**
-     * <p>The tags.</p>
+     * <p>The custom tags.</p>
      */
     @NameInMap("Tag")
     public java.util.List<ListServicesRequestTag> tag;
@@ -165,12 +165,16 @@ public class ListServicesRequest extends TeaModel {
 
     public static class ListServicesRequestFilter extends TeaModel {
         /**
-         * <p>The parameter name of the filter. You can specify one or more parameter names to query services. Valid values:</p>
+         * <p>The filter name. You can specify one or more filter names to query services. Valid values:</p>
          * <ul>
-         * <li>ServiceId: the ID of the service.</li>
-         * <li>Name: the name of the service.</li>
-         * <li>Status: the state of the service.</li>
-         * <li>SupplierName: the name of the service provider.</li>
+         * <li><p>ServiceId: The service ID.</p>
+         * </li>
+         * <li><p>Name: The service name.</p>
+         * </li>
+         * <li><p>Status: The service status.</p>
+         * </li>
+         * <li><p>SupplierName: The service provider name.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -180,7 +184,7 @@ public class ListServicesRequest extends TeaModel {
         public String name;
 
         /**
-         * <p>A value of the filter condition.</p>
+         * <p>The filter values.</p>
          */
         @NameInMap("Value")
         public java.util.List<String> value;

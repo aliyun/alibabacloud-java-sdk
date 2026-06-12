@@ -5,19 +5,13 @@ import com.aliyun.tea.*;
 
 public class GenerateServicePolicyRequest extends TeaModel {
     /**
-     * <p>The type of operation N for which you want to generate the policy information.</p>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li>CreateServiceInstance: creates a serviceInstance by calling the CreateServiceInstance operation.</li>
-     * <li>UpdateServiceInstance: updates a serviceInstance by calling the UpdateServiceInstance operation.</li>
-     * <li>DeleteServiceInstance: deletes a serviceInstance by calling the DeleteServiceInstance operation.</li>
-     * </ul>
-     * <blockquote>
-     * <p> The default value is the combination of all valid values.</p>
-     * </blockquote>
+     * <p>The types of operations for which to generate policy information.</p>
      */
     @NameInMap("OperationTypes")
     public java.util.List<String> operationTypes;
+
+    @NameInMap("Parameters")
+    public java.util.Map<String, ?> parameters;
 
     /**
      * <p>The region ID.</p>
@@ -49,19 +43,21 @@ public class GenerateServicePolicyRequest extends TeaModel {
     public String serviceVersion;
 
     /**
-     * <p>The name of the template.</p>
+     * <p>The template name.</p>
      * 
      * <strong>example:</strong>
-     * <p>GPU-单机版</p>
+     * <p>Template 1</p>
      */
     @NameInMap("TemplateName")
     public String templateName;
 
     /**
-     * <p>The trial policy. Valid values:</p>
+     * <p>The trial type. The default value is NotTrial. Valid values:</p>
      * <ul>
-     * <li>Trial: Trials are supported.</li>
-     * <li>NotTrial: Trials are not supported.</li>
+     * <li><p>Trial: The service supports trial use.</p>
+     * </li>
+     * <li><p>NotTrial: The service does not support trial use.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -81,6 +77,14 @@ public class GenerateServicePolicyRequest extends TeaModel {
     }
     public java.util.List<String> getOperationTypes() {
         return this.operationTypes;
+    }
+
+    public GenerateServicePolicyRequest setParameters(java.util.Map<String, ?> parameters) {
+        this.parameters = parameters;
+        return this;
+    }
+    public java.util.Map<String, ?> getParameters() {
+        return this.parameters;
     }
 
     public GenerateServicePolicyRequest setRegionId(String regionId) {

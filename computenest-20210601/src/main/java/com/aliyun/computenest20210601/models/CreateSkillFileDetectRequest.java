@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateSkillFileDetectRequest extends TeaModel {
     /**
+     * <p>A unique, client-generated token to ensure request idempotence. <strong>ClientToken</strong> must contain only ASCII characters and be no longer than 64 characters.</p>
+     * 
      * <strong>example:</strong>
      * <p>123e4567-e89b-12d3-a456-426655440000</p>
      */
@@ -12,6 +14,7 @@ public class CreateSkillFileDetectRequest extends TeaModel {
     public String clientToken;
 
     /**
+     * <p>The OSS URL of the compressed Skill package.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,6 +24,8 @@ public class CreateSkillFileDetectRequest extends TeaModel {
     public String ossUrl;
 
     /**
+     * <p>The region ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
      */

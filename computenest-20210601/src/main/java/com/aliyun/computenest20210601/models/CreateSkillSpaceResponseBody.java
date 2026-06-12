@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateSkillSpaceResponseBody extends TeaModel {
     /**
-     * <p>Id of the request</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>13FE89A5-C036-56BF-A0FF-A31C59819FD7</p>
@@ -14,7 +14,7 @@ public class CreateSkillSpaceResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>SkillSpace ID</p>
+     * <p>The ID of the skill space.</p>
      * 
      * <strong>example:</strong>
      * <p>ss-11111</p>

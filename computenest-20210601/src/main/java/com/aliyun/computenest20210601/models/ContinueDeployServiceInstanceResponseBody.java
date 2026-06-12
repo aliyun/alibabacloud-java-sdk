@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ContinueDeployServiceInstanceResponseBody extends TeaModel {
     /**
-     * <p>The dry run result.</p>
+     * <p>The check result.</p>
      */
     @NameInMap("DryRunResult")
     public ContinueDeployServiceInstanceResponseBodyDryRunResult dryRunResult;
@@ -59,7 +59,7 @@ public class ContinueDeployServiceInstanceResponseBody extends TeaModel {
 
     public static class ContinueDeployServiceInstanceResponseBodyDryRunResult extends TeaModel {
         /**
-         * <p>The parameters that can be modified. The operation that is performed to modify the parameters does not cause a validation error.</p>
+         * <p>The parameters that can be modified. Modifying these parameters does not cause a check error.</p>
          * <blockquote>
          * <p>This parameter is returned only if DryRun is set to true.</p>
          * </blockquote>
@@ -68,7 +68,8 @@ public class ContinueDeployServiceInstanceResponseBody extends TeaModel {
         public java.util.List<String> parametersAllowedToBeModified;
 
         /**
-         * <p>The parameters that can be modified under specific conditions. The new values of the parameters determine whether the operation that is performed to modify the parameters causes a validation error.</p>
+         * <p>The parameters that can be conditionally modified.
+         * Whether modifying these parameters causes a check error depends on their values.</p>
          * <blockquote>
          * <p>This parameter is returned only if DryRun is set to true.</p>
          * </blockquote>
@@ -77,7 +78,7 @@ public class ContinueDeployServiceInstanceResponseBody extends TeaModel {
         public java.util.List<String> parametersConditionallyAllowedToBeModified;
 
         /**
-         * <p>The parameters that cannot be modified. The operation that is performed to modify the parameters causes a validation error.</p>
+         * <p>The parameters that cannot be modified. Modifying these parameters always causes a check error.</p>
          * <blockquote>
          * <p>This parameter is returned only if DryRun is set to true.</p>
          * </blockquote>

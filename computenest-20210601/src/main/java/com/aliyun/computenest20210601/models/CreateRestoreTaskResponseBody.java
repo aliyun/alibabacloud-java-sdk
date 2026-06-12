@@ -14,7 +14,7 @@ public class CreateRestoreTaskResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The ID of the restore task.</p>
+     * <p>The ID of the restore job.</p>
      * 
      * <strong>example:</strong>
      * <p>restore-fdsafda</p>
@@ -25,9 +25,12 @@ public class CreateRestoreTaskResponseBody extends TeaModel {
     /**
      * <p>The status of the service instance. Valid values:</p>
      * <ul>
-     * <li>Restoring</li>
-     * <li>Restored</li>
-     * <li>RestoreFailed</li>
+     * <li><p>Restoring: The service instance is being restored.</p>
+     * </li>
+     * <li><p>Restored: The service instance is restored.</p>
+     * </li>
+     * <li><p>RestoreFailed: The service instance failed to be restored.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class CheckServiceDeployableResponseBody extends TeaModel {
     /**
-     * <p>Inspection result.</p>
+     * <p>The check results.</p>
      */
     @NameInMap("CheckResults")
     public java.util.List<CheckServiceDeployableResponseBodyCheckResults> checkResults;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>06BF8F22-02DC-4750-83DF-3FFC11C065EA</p>
@@ -42,7 +42,7 @@ public class CheckServiceDeployableResponseBody extends TeaModel {
 
     public static class CheckServiceDeployableResponseBodyCheckResults extends TeaModel {
         /**
-         * <p>Returns a hint message for the result.</p>
+         * <p>The message returned for the result.</p>
          * 
          * <strong>example:</strong>
          * <p>&quot;&quot;</p>
@@ -54,11 +54,11 @@ public class CheckServiceDeployableResponseBody extends TeaModel {
         public Boolean skippable;
 
         /**
-         * <p>Check type, invalid values:</p>
+         * <p>The type of precheck. Valid values:</p>
          * <ul>
-         * <li><p>Balance ：Account balance.</p>
+         * <li><p>Balance: The account balance.</p>
          * </li>
-         * <li><p>Quota:  Account quota.</p>
+         * <li><p>Quota: The resource quota.</p>
          * </li>
          * </ul>
          * 
@@ -69,7 +69,7 @@ public class CheckServiceDeployableResponseBody extends TeaModel {
         public String type;
 
         /**
-         * <p>Inspection result.</p>
+         * <p>The check result.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ValidateServiceInstanceNameRequest extends TeaModel {
     /**
+     * <p>A client token to ensure the idempotence of the request. Generate a unique token for each request. The <strong>ClientToken</strong> supports only ASCII characters and cannot exceed 64 characters in length.</p>
+     * 
      * <strong>example:</strong>
      * <p>123e4567-e89b-12d3-a456-426655440000</p>
      */
@@ -12,6 +14,8 @@ public class ValidateServiceInstanceNameRequest extends TeaModel {
     public String clientToken;
 
     /**
+     * <p>Specifies whether the service instance is a trial instance.</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -19,6 +23,7 @@ public class ValidateServiceInstanceNameRequest extends TeaModel {
     public Boolean isTrial;
 
     /**
+     * <p>The service ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -28,6 +33,7 @@ public class ValidateServiceInstanceNameRequest extends TeaModel {
     public String serviceId;
 
     /**
+     * <p>The name of the service instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -37,6 +43,8 @@ public class ValidateServiceInstanceNameRequest extends TeaModel {
     public String serviceInstanceName;
 
     /**
+     * <p>The service version.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -44,8 +52,10 @@ public class ValidateServiceInstanceNameRequest extends TeaModel {
     public String serviceVersion;
 
     /**
+     * <p>The name of the template. Specify this parameter if the service supports multiple templates.</p>
+     * 
      * <strong>example:</strong>
-     * <p>模板一</p>
+     * <p>Template 1</p>
      */
     @NameInMap("TemplateName")
     public String templateName;

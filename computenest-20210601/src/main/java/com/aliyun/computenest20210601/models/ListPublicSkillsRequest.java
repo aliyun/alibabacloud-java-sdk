@@ -4,10 +4,15 @@ package com.aliyun.computenest20210601.models;
 import com.aliyun.tea.*;
 
 public class ListPublicSkillsRequest extends TeaModel {
+    /**
+     * <p>A list of filters.</p>
+     */
     @NameInMap("Filter")
     public java.util.List<ListPublicSkillsRequestFilter> filter;
 
     /**
+     * <p>The maximum number of entries to return on each page.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -15,6 +20,8 @@ public class ListPublicSkillsRequest extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>Specifies whether to return the download link for the skill package.</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -22,6 +29,8 @@ public class ListPublicSkillsRequest extends TeaModel {
     public Boolean needDownloadUrl;
 
     /**
+     * <p>The token to retrieve the next page of results.</p>
+     * 
      * <strong>example:</strong>
      * <p>AAAAAfu+XtuBE55iRLHEYYuojI4=</p>
      */
@@ -67,12 +76,29 @@ public class ListPublicSkillsRequest extends TeaModel {
 
     public static class ListPublicSkillsRequestFilter extends TeaModel {
         /**
+         * <p>The filter criterion. Valid values:</p>
+         * <ul>
+         * <li><p><code>SkillId</code>: The ID of the skill. An exact match is performed.</p>
+         * </li>
+         * <li><p><code>SkillName</code>: The name of the skill.</p>
+         * </li>
+         * <li><p><code>MatchType</code>: The match type for the <code>SkillName</code> filter. Valid values: <code>exact</code> (exact match), <code>prefix</code> (prefix match), and <code>fuzzy</code> (fuzzy match).</p>
+         * </li>
+         * <li><p><code>Keyword</code>: The keyword used for a fuzzy match on the skill name or skill description.</p>
+         * </li>
+         * <li><p><code>SkillLabels</code>: The skill labels. A fuzzy match is performed.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>SkillId</p>
          */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The filter values. You can specify 1 to 10 values.</p>
+         */
         @NameInMap("Value")
         public java.util.List<String> value;
 

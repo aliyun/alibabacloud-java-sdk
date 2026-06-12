@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListSkillSpacesResponseBody extends TeaModel {
     /**
+     * <p>The number of entries returned per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -12,6 +14,8 @@ public class ListSkillSpacesResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>The token for the next page of results. If this parameter is not returned, no more results are available.</p>
+     * 
      * <strong>example:</strong>
      * <p>AAAAAWns8w4MmhzeptXVRG0PUEU=</p>
      */
@@ -19,7 +23,7 @@ public class ListSkillSpacesResponseBody extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>4DB0F536-B3BE-4F0D-BD29-E83FB56D550C</p>
@@ -27,10 +31,15 @@ public class ListSkillSpacesResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The list of SkillSpaces.</p>
+     */
     @NameInMap("SkillSpaces")
     public java.util.List<ListSkillSpacesResponseBodySkillSpaces> skillSpaces;
 
     /**
+     * <p>The total number of entries.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -84,6 +93,8 @@ public class ListSkillSpacesResponseBody extends TeaModel {
 
     public static class ListSkillSpacesResponseBodySkillSpaces extends TeaModel {
         /**
+         * <p>The time when the SkillSpace was created. The time is in UTC.</p>
+         * 
          * <strong>example:</strong>
          * <p>2025-11-03T22:58:52Z</p>
          */
@@ -91,6 +102,8 @@ public class ListSkillSpacesResponseBody extends TeaModel {
         public String createTime;
 
         /**
+         * <p>The SkillSpace description.</p>
+         * 
          * <strong>example:</strong>
          * <p>1111</p>
          */
@@ -98,7 +111,7 @@ public class ListSkillSpacesResponseBody extends TeaModel {
         public String skillSpaceDescription;
 
         /**
-         * <p>SkillSpace ID</p>
+         * <p>The SkillSpace ID.</p>
          * 
          * <strong>example:</strong>
          * <p>ss-111111</p>
@@ -107,6 +120,8 @@ public class ListSkillSpacesResponseBody extends TeaModel {
         public String skillSpaceId;
 
         /**
+         * <p>The SkillSpace name.</p>
+         * 
          * <strong>example:</strong>
          * <p>1111</p>
          */
@@ -114,6 +129,8 @@ public class ListSkillSpacesResponseBody extends TeaModel {
         public String skillSpaceName;
 
         /**
+         * <p>The time when the SkillSpace was last updated. The time is in UTC.</p>
+         * 
          * <strong>example:</strong>
          * <p>2025-11-03T22:57:29Z</p>
          */

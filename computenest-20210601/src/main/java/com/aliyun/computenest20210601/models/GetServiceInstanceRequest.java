@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetServiceInstanceRequest extends TeaModel {
     /**
-     * <p>The MarketInstance ID.</p>
+     * <p>The Alibaba Cloud Marketplace instance ID.</p>
      * 
      * <strong>example:</strong>
      * <p>704***59</p>
@@ -26,7 +26,7 @@ public class GetServiceInstanceRequest extends TeaModel {
     /**
      * <p>The service instance ID.</p>
      * <blockquote>
-     * <p> You must specify either <code>ServiceInstanceId</code> or <code>MarketInstanceId</code>. Otherwise, the operation fails.</p>
+     * <p>You must specify either <code>ServiceInstanceId</code> or <code>MarketInstanceId</code> to query the detailed information about the service instance.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

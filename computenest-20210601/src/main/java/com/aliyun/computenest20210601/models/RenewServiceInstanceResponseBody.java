@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class RenewServiceInstanceResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>BB58FE53-ED8F-5D12-9746-CD3A5F463D95</p>
      */

@@ -15,7 +15,7 @@ public class TagResourcesRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The resource IDs. You can specify up to 50 resource IDs.</p>
+     * <p>The resource IDs.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("ResourceId")
@@ -24,10 +24,14 @@ public class TagResourcesRequest extends TeaModel {
     /**
      * <p>The resource type. Valid values:</p>
      * <ul>
-     * <li>service: service</li>
-     * <li>serviceinstance: service instance</li>
-     * <li>artifact: artifact</li>
-     * <li>dataset: dataset</li>
+     * <li><p>service: a service.</p>
+     * </li>
+     * <li><p>serviceinstance: a service instance.</p>
+     * </li>
+     * <li><p>artifact: a deployment.</p>
+     * </li>
+     * <li><p>dataset: a dataset.</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -38,7 +42,7 @@ public class TagResourcesRequest extends TeaModel {
     public String resourceType;
 
     /**
-     * <p>The tag key and value.</p>
+     * <p>The resource tags.</p>
      */
     @NameInMap("Tag")
     public java.util.List<TagResourcesRequestTag> tag;

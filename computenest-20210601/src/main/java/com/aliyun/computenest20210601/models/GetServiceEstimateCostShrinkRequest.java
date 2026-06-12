@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetServiceEstimateCostShrinkRequest extends TeaModel {
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+     * <p>A client token to ensure the idempotence of the request. Generate a unique value for each request. The <strong>ClientToken</strong> supports only ASCII characters and cannot be longer than 64 characters.</p>
      * 
      * <strong>example:</strong>
      * <p>qwertyuiop</p>
@@ -14,22 +14,22 @@ public class GetServiceEstimateCostShrinkRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The information about the subscription duration.</p>
+     * <p>The subscription period for the purchase order.</p>
      */
     @NameInMap("Commodity")
     public String commodityShrink;
 
     /**
-     * <p>The name of the configuration change operation.</p>
+     * <p>The name of the upgrade or downgrade operation.</p>
      * 
      * <strong>example:</strong>
-     * <p>Parameter change</p>
+     * <p>Parameter configuration change</p>
      */
     @NameInMap("OperationName")
     public String operationName;
 
     /**
-     * <p>The parameters that are specified to deploy the service instance.</p>
+     * <p>The parameters to deploy the service instance.</p>
      * 
      * <strong>example:</strong>
      * <p>{ \&quot;RegionId\&quot;: \&quot;cn-hangzhou\&quot;, \&quot;InstanceType\&quot;: \&quot;ecs.g5.large\&quot;}</p>
@@ -75,7 +75,7 @@ public class GetServiceEstimateCostShrinkRequest extends TeaModel {
     public String serviceVersion;
 
     /**
-     * <p>The name of the package specification.</p>
+     * <p>The specification name.</p>
      * 
      * <strong>example:</strong>
      * <p>Package 1</p>
@@ -93,10 +93,12 @@ public class GetServiceEstimateCostShrinkRequest extends TeaModel {
     public String templateName;
 
     /**
-     * <p>The trial policy. Valid values:</p>
+     * <p>The usage type. Valid values:</p>
      * <ul>
-     * <li>Trial: Trials are supported.</li>
-     * <li>NotTrial: Trials are not supported.</li>
+     * <li><p>Trial: The service supports a free trial.</p>
+     * </li>
+     * <li><p>NotTrial: The service does not support a free trial.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

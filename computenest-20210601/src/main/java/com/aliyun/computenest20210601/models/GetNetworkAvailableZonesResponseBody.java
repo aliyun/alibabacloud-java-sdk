@@ -4,10 +4,15 @@ package com.aliyun.computenest20210601.models;
 import com.aliyun.tea.*;
 
 public class GetNetworkAvailableZonesResponseBody extends TeaModel {
+    /**
+     * <p>The data returned.</p>
+     */
     @NameInMap("Data")
     public GetNetworkAvailableZonesResponseBodyData data;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>A17F9930-E2DC-5E87-B6D6-B0BCD2B00834</p>
      */
@@ -36,9 +41,15 @@ public class GetNetworkAvailableZonesResponseBody extends TeaModel {
     }
 
     public static class GetNetworkAvailableZonesResponseBodyData extends TeaModel {
+        /**
+         * <p>The list of region IDs.</p>
+         */
         @NameInMap("RegionIdList")
         public java.util.List<String> regionIdList;
 
+        /**
+         * <p>The list of zone IDs.</p>
+         */
         @NameInMap("ZoneIdList")
         public java.util.List<String> zoneIdList;
 

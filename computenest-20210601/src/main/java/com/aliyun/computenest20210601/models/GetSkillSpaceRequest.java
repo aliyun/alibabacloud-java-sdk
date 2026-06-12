@@ -5,7 +5,11 @@ import com.aliyun.tea.*;
 
 public class GetSkillSpaceRequest extends TeaModel {
     /**
+     * <p>The ID of the SkillSpace.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ss-11111</p>
      */
     @NameInMap("SkillSpaceId")
     public String skillSpaceId;

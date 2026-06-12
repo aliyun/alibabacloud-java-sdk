@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetServiceTemplateParameterConstraintsRequest extends TeaModel {
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+     * <p>The client token that is used to ensure the idempotence of the request. Generate a unique value from your client for each request. The token can contain only ASCII characters and cannot be more than 64 characters long.</p>
      * 
      * <strong>example:</strong>
      * <p>123e4567-e89b-12d3-a456-426655440000</p>
@@ -14,7 +14,7 @@ public class GetServiceTemplateParameterConstraintsRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The region ID of the service instance.</p>
+     * <p>The deployment region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -24,10 +24,12 @@ public class GetServiceTemplateParameterConstraintsRequest extends TeaModel {
     public String deployRegionId;
 
     /**
-     * <p>Specifies whether to enable the private connection. Valid values:</p>
+     * <p>Indicates whether PrivateLink is enabled. Valid values:</p>
      * <ul>
-     * <li>true</li>
-     * <li>false</li>
+     * <li><p>true: enabled</p>
+     * </li>
+     * <li><p>false: disabled</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -81,10 +83,10 @@ public class GetServiceTemplateParameterConstraintsRequest extends TeaModel {
     public String serviceVersion;
 
     /**
-     * <p>The name of the specification package.</p>
+     * <p>The specification name.</p>
      * 
      * <strong>example:</strong>
-     * <p>套餐一</p>
+     * <p>Package 1</p>
      */
     @NameInMap("SpecificationName")
     public String specificationName;
@@ -94,16 +96,18 @@ public class GetServiceTemplateParameterConstraintsRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>模板1</p>
+     * <p>Template 1</p>
      */
     @NameInMap("TemplateName")
     public String templateName;
 
     /**
-     * <p>The trial policy. Valid values:</p>
+     * <p>The usage type. Valid values:</p>
      * <ul>
-     * <li>Trial: Trials are supported.</li>
-     * <li>NotTrial: Trials are not supported.</li>
+     * <li><p>Trial: The service supports a trial.</p>
+     * </li>
+     * <li><p>NotTrial: The service does not support a trial.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -207,9 +211,9 @@ public class GetServiceTemplateParameterConstraintsRequest extends TeaModel {
 
     public static class GetServiceTemplateParameterConstraintsRequestParameters extends TeaModel {
         /**
-         * <p>The name of the parameter. If you do not specify Parameters, the parameters and values in the template are used.</p>
+         * <p>The name of the parameter. If you do not specify the name and value of the parameter, Resource Orchestration Service (ROS) uses the default value that is specified in the template.</p>
          * <blockquote>
-         * <p> Parameters is an optional parameter. ParameterKey is required if you specify Parameters.</p>
+         * <p>The Parameters parameter is optional. If you specify Parameters, ParameterKey is required.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -219,9 +223,9 @@ public class GetServiceTemplateParameterConstraintsRequest extends TeaModel {
         public String parameterKey;
 
         /**
-         * <p>The parameter value that is defined in the template.</p>
+         * <p>The value of the parameter that is defined in the template.</p>
          * <blockquote>
-         * <p> Parameters is an optional parameter. ParameterValue is required if you specify Parameters.</p>
+         * <p>The Parameters parameter is optional. If you specify Parameters, ParameterValue is required.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

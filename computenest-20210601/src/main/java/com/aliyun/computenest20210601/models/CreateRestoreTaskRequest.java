@@ -16,7 +16,7 @@ public class CreateRestoreTaskRequest extends TeaModel {
 
     /**
      * <p>The ID of the service instance.</p>
-     * <p>You can call <a href="https://help.aliyun.com/document_detail/396200.html">ListServiceInstances</a> to obtain the ID of the service instance.</p>
+     * <p>Call the <a href="https://help.aliyun.com/document_detail/396200.html">ListServiceInstances</a> operation to obtain the service instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

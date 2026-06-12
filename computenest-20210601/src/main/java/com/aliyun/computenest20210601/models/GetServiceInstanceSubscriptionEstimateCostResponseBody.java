@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetServiceInstanceSubscriptionEstimateCostResponseBody extends TeaModel {
     /**
-     * <p>Request ID.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>464C8CB6-A548-5206-B83C-D32A8E43EC21</p>
@@ -14,7 +14,7 @@ public class GetServiceInstanceSubscriptionEstimateCostResponseBody extends TeaM
     public String requestId;
 
     /**
-     * <p>List of resource price information.</p>
+     * <p>The list of resource price information.</p>
      */
     @NameInMap("ResourcePrices")
     public java.util.List<GetServiceInstanceSubscriptionEstimateCostResponseBodyResourcePrices> resourcePrices;
@@ -42,7 +42,7 @@ public class GetServiceInstanceSubscriptionEstimateCostResponseBody extends TeaM
 
     public static class GetServiceInstanceSubscriptionEstimateCostResponseBodyResourcePricesDetailInfos extends TeaModel {
         /**
-         * <p>Discount amount.</p>
+         * <p>The discount.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -51,7 +51,7 @@ public class GetServiceInstanceSubscriptionEstimateCostResponseBody extends TeaM
         public Float discountAmount;
 
         /**
-         * <p>Original price.</p>
+         * <p>The original price.</p>
          * 
          * <strong>example:</strong>
          * <p>900</p>
@@ -60,7 +60,7 @@ public class GetServiceInstanceSubscriptionEstimateCostResponseBody extends TeaM
         public Float originalAmount;
 
         /**
-         * <p>Pricing module identifier.</p>
+         * <p>The identifier of the pricing module.</p>
          * 
          * <strong>example:</strong>
          * <p>instance</p>
@@ -69,7 +69,7 @@ public class GetServiceInstanceSubscriptionEstimateCostResponseBody extends TeaM
         public String resource;
 
         /**
-         * <p>Discounted price.</p>
+         * <p>The discounted price.</p>
          * 
          * <strong>example:</strong>
          * <p>500</p>
@@ -118,7 +118,7 @@ public class GetServiceInstanceSubscriptionEstimateCostResponseBody extends TeaM
 
     public static class GetServiceInstanceSubscriptionEstimateCostResponseBodyResourcePricesRules extends TeaModel {
         /**
-         * <p>Promotion description.</p>
+         * <p>The description of the discount.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -127,7 +127,7 @@ public class GetServiceInstanceSubscriptionEstimateCostResponseBody extends TeaM
         public String description;
 
         /**
-         * <p>Promotion name.</p>
+         * <p>The name of the discount.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -136,7 +136,7 @@ public class GetServiceInstanceSubscriptionEstimateCostResponseBody extends TeaM
         public String name;
 
         /**
-         * <p>Promotion ID.</p>
+         * <p>The discount ID.</p>
          * 
          * <strong>example:</strong>
          * <p>1021199213</p>
@@ -177,11 +177,14 @@ public class GetServiceInstanceSubscriptionEstimateCostResponseBody extends TeaM
 
     public static class GetServiceInstanceSubscriptionEstimateCostResponseBodyResourcePrices extends TeaModel {
         /**
-         * <p>Currency. Valid values:</p>
+         * <p>The currency. Valid values:</p>
          * <ul>
-         * <li>CNY: Chinese Yuan.</li>
-         * <li>USD: US Dollar.</li>
-         * <li>JPY: Japanese Yen.</li>
+         * <li><p>CNY: Chinese Yuan.</p>
+         * </li>
+         * <li><p>USD: US Dollar.</p>
+         * </li>
+         * <li><p>JPY: Japanese Yen.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -197,7 +200,7 @@ public class GetServiceInstanceSubscriptionEstimateCostResponseBody extends TeaM
         public java.util.List<GetServiceInstanceSubscriptionEstimateCostResponseBodyResourcePricesDetailInfos> detailInfos;
 
         /**
-         * <p>Discount.</p>
+         * <p>The discount.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -206,7 +209,7 @@ public class GetServiceInstanceSubscriptionEstimateCostResponseBody extends TeaM
         public Float discountAmount;
 
         /**
-         * <p>Original price.</p>
+         * <p>The original price.</p>
          * 
          * <strong>example:</strong>
          * <p>900</p>
@@ -215,7 +218,7 @@ public class GetServiceInstanceSubscriptionEstimateCostResponseBody extends TeaM
         public Float originalAmount;
 
         /**
-         * <p>Renewal duration. The unit is specified by PeriodUnit.</p>
+         * <p>The renewal duration. The unit is specified by PeriodUnit.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -224,7 +227,7 @@ public class GetServiceInstanceSubscriptionEstimateCostResponseBody extends TeaM
         public Integer period;
 
         /**
-         * <p>The time unit for the renewal duration, which is the unit of the Period parameter. Valid values: Month, Year. Default value: Month.</p>
+         * <p>The unit of the renewal duration. This is the unit for the Period parameter. Valid values: Month and Year. Default value: Month.</p>
          * 
          * <strong>example:</strong>
          * <p>Month</p>
@@ -233,7 +236,7 @@ public class GetServiceInstanceSubscriptionEstimateCostResponseBody extends TeaM
         public String periodUnit;
 
         /**
-         * <p>Resource ARN (Aliyun Resource Name).</p>
+         * <p>The ARN of the resource.</p>
          * 
          * <strong>example:</strong>
          * <p>acs:ecs:cn-hongkong:1488317743351199:instance/i-j6c6f3lbky38o8rpeqw2</p>
@@ -242,13 +245,13 @@ public class GetServiceInstanceSubscriptionEstimateCostResponseBody extends TeaM
         public String resourceArn;
 
         /**
-         * <p>Promotion details.</p>
+         * <p>The discount details.</p>
          */
         @NameInMap("Rules")
         public java.util.List<GetServiceInstanceSubscriptionEstimateCostResponseBodyResourcePricesRules> rules;
 
         /**
-         * <p>Discounted price.</p>
+         * <p>The discounted price.</p>
          * 
          * <strong>example:</strong>
          * <p>500</p>

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetSkillResponseBody extends TeaModel {
     /**
+     * <p>The time the Skill was created.</p>
+     * 
      * <strong>example:</strong>
      * <p>2021-05-20T00:00:00Z</p>
      */
@@ -12,7 +14,7 @@ public class GetSkillResponseBody extends TeaModel {
     public String createTime;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>13FE89A5-C036-56BF-A0FF-A31C59819FD7</p>
@@ -21,6 +23,8 @@ public class GetSkillResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The description of the Skill.</p>
+     * 
      * <strong>example:</strong>
      * <p>11111111</p>
      */
@@ -28,7 +32,7 @@ public class GetSkillResponseBody extends TeaModel {
     public String skillDescription;
 
     /**
-     * <p>Skill ID</p>
+     * <p>The ID of the Skill.</p>
      * 
      * <strong>example:</strong>
      * <p>s-04zzrgosj6xd11yah</p>
@@ -36,10 +40,15 @@ public class GetSkillResponseBody extends TeaModel {
     @NameInMap("SkillId")
     public String skillId;
 
+    /**
+     * <p>The labels of the Skill.</p>
+     */
     @NameInMap("SkillLabels")
     public java.util.List<String> skillLabels;
 
     /**
+     * <p>The name of the Skill.</p>
+     * 
      * <strong>example:</strong>
      * <p>skill-hello</p>
      */
@@ -47,6 +56,8 @@ public class GetSkillResponseBody extends TeaModel {
     public String skillName;
 
     /**
+     * <p>The ID of the SkillSpace to which the Skill belongs.</p>
+     * 
      * <strong>example:</strong>
      * <p>ss-111111111</p>
      */
@@ -54,6 +65,8 @@ public class GetSkillResponseBody extends TeaModel {
     public String skillSpaceId;
 
     /**
+     * <p>The time the Skill was last updated.</p>
+     * 
      * <strong>example:</strong>
      * <p>2021-05-20T00:00:00Z</p>
      */

@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListServiceUsagesRequest extends TeaModel {
     /**
-     * <p>The filters.</p>
+     * <p>The filter.</p>
      */
     @NameInMap("Filter")
     public java.util.List<ListServiceUsagesRequestFilter> filter;
 
     /**
-     * <p>The number of entries per page. Valid values: 1 to 100. Default value: 20.</p>
+     * <p>The number of entries to return on each page. Maximum value: 100. Default value: 20.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -20,7 +20,7 @@ public class ListServiceUsagesRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of NextToken.</p>
+     * <p>The token that is used to retrieve the next page of results. This value is the NextToken value returned from the previous API call.</p>
      * 
      * <strong>example:</strong>
      * <p>AAAAAWns8w4MmhzeptXVRG0PUEU=</p>
@@ -28,6 +28,12 @@ public class ListServiceUsagesRequest extends TeaModel {
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <p>The region ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
@@ -70,12 +76,16 @@ public class ListServiceUsagesRequest extends TeaModel {
 
     public static class ListServiceUsagesRequestFilter extends TeaModel {
         /**
-         * <p>The parameter name of the filter. You can specify one or more filters. Valid values:</p>
+         * <p>The name of the filter. You can query by one or more names. Valid values:</p>
          * <ul>
-         * <li>ServiceId: the ID of the service.</li>
-         * <li>ServiceName: the service name.</li>
-         * <li>Status: the state of the service.</li>
-         * <li>SupplierName: the name of the service provider.</li>
+         * <li><p>ServiceId: The service ID.</p>
+         * </li>
+         * <li><p>ServiceName: The service name.</p>
+         * </li>
+         * <li><p>Status: The service status.</p>
+         * </li>
+         * <li><p>SupplierName: The name of the supplier.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -85,7 +95,7 @@ public class ListServiceUsagesRequest extends TeaModel {
         public String name;
 
         /**
-         * <p>The parameter values of the filter.</p>
+         * <p>A list of filter values.</p>
          */
         @NameInMap("Value")
         public java.util.List<String> value;

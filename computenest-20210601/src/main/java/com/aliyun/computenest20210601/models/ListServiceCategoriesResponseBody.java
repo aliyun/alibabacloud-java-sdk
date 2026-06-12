@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListServiceCategoriesResponseBody extends TeaModel {
     /**
-     * <p>The category list of the service.</p>
+     * <p>A list of service category names.</p>
      */
     @NameInMap("Categories")
     public java.util.List<String> categories;

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateUserInformationRequest extends TeaModel {
     /**
-     * <p>The modified delivery settings.</p>
+     * <p>The configurations to modify.</p>
      */
     @NameInMap("DeliverySettings")
     public UpdateUserInformationRequestDeliverySettings deliverySettings;
@@ -43,10 +43,12 @@ public class UpdateUserInformationRequest extends TeaModel {
 
     public static class UpdateUserInformationRequestDeliverySettings extends TeaModel {
         /**
-         * <p>Specifies whether to enable screencast delivery to OSS. Valid values:</p>
+         * <p>Specifies whether to deliver ActionTrail events to OSS. Valid values:</p>
          * <ul>
-         * <li>true</li>
-         * <li>false</li>
+         * <li><p>true: Delivery is enabled.</p>
+         * </li>
+         * <li><p>false: Delivery is disabled.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -65,10 +67,12 @@ public class UpdateUserInformationRequest extends TeaModel {
         public String ossBucketName;
 
         /**
-         * <p>Specifies whether to enable screencast delivery to Object Storage Service (OSS). Valid values:</p>
+         * <p>Specifies whether to deliver data to Object Storage Service (OSS). Valid values:</p>
          * <ul>
-         * <li>true</li>
-         * <li>false</li>
+         * <li><p>true: Delivery is enabled.</p>
+         * </li>
+         * <li><p>false: Delivery is disabled.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -78,7 +82,7 @@ public class UpdateUserInformationRequest extends TeaModel {
         public Boolean ossEnabled;
 
         /**
-         * <p>The number of days for which the screencasts are saved.</p>
+         * <p>The number of days to retain screen recordings.</p>
          * 
          * <strong>example:</strong>
          * <p>7</p>

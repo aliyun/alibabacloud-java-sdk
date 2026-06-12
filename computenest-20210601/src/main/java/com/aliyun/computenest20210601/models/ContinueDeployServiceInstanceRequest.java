@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ContinueDeployServiceInstanceRequest extends TeaModel {
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+     * <p>A client token that is used to ensure the idempotence of the request. Generate a unique value for this parameter from your client. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
      * 
      * <strong>example:</strong>
      * <p>123e4567-e89b-12d3-a456-426655440000</p>
@@ -14,10 +14,12 @@ public class ContinueDeployServiceInstanceRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>Specifies whether to perform only a dry run for the request to check information such as the permissions and instance status. Valid values:</p>
+     * <p>Specifies whether to perform a dry run. A dry run checks items such as permissions and the instance status. Valid values:</p>
      * <ul>
-     * <li>true: performs a dry run for the request, but does not create a service instance.</li>
-     * <li>false: performs a dry run for the request, and creates a service instance if the request passes the dry run.</li>
+     * <li><p>true: performs a dry run to check the request. The service instance is not deployed.</p>
+     * </li>
+     * <li><p>false: sends a regular request. If the request passes the check, the service instance is deployed.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -27,13 +29,13 @@ public class ContinueDeployServiceInstanceRequest extends TeaModel {
     public Boolean dryRun;
 
     /**
-     * <p>The options that the system adopts when the system continues to create the service instance.</p>
+     * <p>The recreation options.</p>
      */
     @NameInMap("Option")
     public java.util.List<String> option;
 
     /**
-     * <p>The parameters configured for the service instance.</p>
+     * <p>The configuration parameters of the service instance.</p>
      * 
      * <strong>example:</strong>
      * <p>{&quot;NodeCount&quot;: 3, &quot;SystemDiskSize&quot;: 40, &quot;InstancePassword&quot;: &quot;******&quot;}</p>

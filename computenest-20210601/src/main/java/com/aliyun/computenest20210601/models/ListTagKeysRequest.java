@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListTagKeysRequest extends TeaModel {
     /**
-     * <p>A pagination token. It can be used in the next request to retrieve a new page of results. If NextToken is empty, no next page exists.</p>
+     * <p>The token to start the next query.</p>
      * 
      * <strong>example:</strong>
      * <p>AAAAAfu+XtuBE55iRLHEYYuojI4=</p>
@@ -26,10 +26,14 @@ public class ListTagKeysRequest extends TeaModel {
     /**
      * <p>The resource type. Valid values:</p>
      * <ul>
-     * <li>service: service</li>
-     * <li>serviceinstance: service instance</li>
-     * <li>artifact: artifact</li>
-     * <li>dataset: dataset</li>
+     * <li><p>service: service.</p>
+     * </li>
+     * <li><p>serviceinstance: service instance.</p>
+     * </li>
+     * <li><p>artifact: artifact.</p>
+     * </li>
+     * <li><p>dataset: dataset.</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

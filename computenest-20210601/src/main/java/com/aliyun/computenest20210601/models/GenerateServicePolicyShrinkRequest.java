@@ -3,18 +3,19 @@ package com.aliyun.computenest20210601.models;
 
 import com.aliyun.tea.*;
 
-public class GetServiceProvisionsRequest extends TeaModel {
+public class GenerateServicePolicyShrinkRequest extends TeaModel {
     /**
-     * <p>The parameters for deploying the user instance.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>{\&quot;RegionId\&quot;:\&quot;cn-hangzhou\&quot;,\&quot;ZoneId\&quot;:\&quot;cn-hangzhou-g\&quot;,\&quot;EcsInstanceType\&quot;:\&quot;ecs.g5.large\&quot;,\&quot;InstancePassword\&quot;:\&quot;xxxxxxxx\&quot;,\&quot;PayType\&quot;:\&quot;PostPaid\&quot;,\&quot;PayPeriodUnit\&quot;:\&quot;Month\&quot;,\&quot;PayPeriod\&quot;:1}</p>
+     * <p>The types of operations for which to generate policy information.</p>
      */
+    @NameInMap("OperationTypes")
+    public java.util.List<String> operationTypes;
+
     @NameInMap("Parameters")
-    public java.util.Map<String, ?> parameters;
+    public String parametersShrink;
 
     /**
      * <p>The region ID.</p>
+     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -27,7 +28,7 @@ public class GetServiceProvisionsRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>service-0efc0db451794bxxxxxx</p>
+     * <p>service-b3e9ed878b0c4xxxxxx</p>
      */
     @NameInMap("ServiceId")
     public String serviceId;
@@ -36,7 +37,7 @@ public class GetServiceProvisionsRequest extends TeaModel {
      * <p>The service version.</p>
      * 
      * <strong>example:</strong>
-     * <p>1</p>
+     * <p>draft</p>
      */
     @NameInMap("ServiceVersion")
     public String serviceVersion;
@@ -51,7 +52,7 @@ public class GetServiceProvisionsRequest extends TeaModel {
     public String templateName;
 
     /**
-     * <p>The usage type. Valid values:</p>
+     * <p>The trial type. The default value is NotTrial. Valid values:</p>
      * <ul>
      * <li><p>Trial: The service supports trial use.</p>
      * </li>
@@ -60,25 +61,33 @@ public class GetServiceProvisionsRequest extends TeaModel {
      * </ul>
      * 
      * <strong>example:</strong>
-     * <p>Trial</p>
+     * <p>NotTrial</p>
      */
     @NameInMap("TrialType")
     public String trialType;
 
-    public static GetServiceProvisionsRequest build(java.util.Map<String, ?> map) throws Exception {
-        GetServiceProvisionsRequest self = new GetServiceProvisionsRequest();
+    public static GenerateServicePolicyShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
+        GenerateServicePolicyShrinkRequest self = new GenerateServicePolicyShrinkRequest();
         return TeaModel.build(map, self);
     }
 
-    public GetServiceProvisionsRequest setParameters(java.util.Map<String, ?> parameters) {
-        this.parameters = parameters;
+    public GenerateServicePolicyShrinkRequest setOperationTypes(java.util.List<String> operationTypes) {
+        this.operationTypes = operationTypes;
         return this;
     }
-    public java.util.Map<String, ?> getParameters() {
-        return this.parameters;
+    public java.util.List<String> getOperationTypes() {
+        return this.operationTypes;
     }
 
-    public GetServiceProvisionsRequest setRegionId(String regionId) {
+    public GenerateServicePolicyShrinkRequest setParametersShrink(String parametersShrink) {
+        this.parametersShrink = parametersShrink;
+        return this;
+    }
+    public String getParametersShrink() {
+        return this.parametersShrink;
+    }
+
+    public GenerateServicePolicyShrinkRequest setRegionId(String regionId) {
         this.regionId = regionId;
         return this;
     }
@@ -86,7 +95,7 @@ public class GetServiceProvisionsRequest extends TeaModel {
         return this.regionId;
     }
 
-    public GetServiceProvisionsRequest setServiceId(String serviceId) {
+    public GenerateServicePolicyShrinkRequest setServiceId(String serviceId) {
         this.serviceId = serviceId;
         return this;
     }
@@ -94,7 +103,7 @@ public class GetServiceProvisionsRequest extends TeaModel {
         return this.serviceId;
     }
 
-    public GetServiceProvisionsRequest setServiceVersion(String serviceVersion) {
+    public GenerateServicePolicyShrinkRequest setServiceVersion(String serviceVersion) {
         this.serviceVersion = serviceVersion;
         return this;
     }
@@ -102,7 +111,7 @@ public class GetServiceProvisionsRequest extends TeaModel {
         return this.serviceVersion;
     }
 
-    public GetServiceProvisionsRequest setTemplateName(String templateName) {
+    public GenerateServicePolicyShrinkRequest setTemplateName(String templateName) {
         this.templateName = templateName;
         return this;
     }
@@ -110,7 +119,7 @@ public class GetServiceProvisionsRequest extends TeaModel {
         return this.templateName;
     }
 
-    public GetServiceProvisionsRequest setTrialType(String trialType) {
+    public GenerateServicePolicyShrinkRequest setTrialType(String trialType) {
         this.trialType = trialType;
         return this;
     }

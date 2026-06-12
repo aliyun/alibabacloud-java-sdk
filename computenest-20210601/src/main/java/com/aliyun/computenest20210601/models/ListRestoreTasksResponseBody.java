@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListRestoreTasksResponseBody extends TeaModel {
     /**
-     * <p>The maximum number of records returned in this request.</p>
+     * <p>The maximum number of entries returned for the request.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -14,7 +14,7 @@ public class ListRestoreTasksResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>Indicates the read position returned by the current call. An empty value means all data has been read.</p>
+     * <p>The token that is used to retrieve the next page of results. If this parameter is empty, all results have been returned.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -24,7 +24,7 @@ public class ListRestoreTasksResponseBody extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>464C8CB6-A548-5206-B83C-D32A8E43EC21</p>
@@ -33,13 +33,13 @@ public class ListRestoreTasksResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The list of restore tasks.</p>
+     * <p>The list of restore jobs.</p>
      */
     @NameInMap("RestoreTasks")
     public java.util.List<ListRestoreTasksResponseBodyRestoreTasks> restoreTasks;
 
     /**
-     * <p>Total data count under the current request conditions (optional; not returned by default).</p>
+     * <p>The total number of entries that meet the filter criteria.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -103,7 +103,7 @@ public class ListRestoreTasksResponseBody extends TeaModel {
         public String backupId;
 
         /**
-         * <p>The creation time.</p>
+         * <p>The time when the job was created.</p>
          * 
          * <strong>example:</strong>
          * <p>2023-09-07T11:37:37Z</p>
@@ -112,7 +112,7 @@ public class ListRestoreTasksResponseBody extends TeaModel {
         public String createTime;
 
         /**
-         * <p>The expiration time of the service instance.</p>
+         * <p>The time when the restore job ended.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-01-27T18:00:00Z</p>
@@ -121,7 +121,7 @@ public class ListRestoreTasksResponseBody extends TeaModel {
         public String endTime;
 
         /**
-         * <p>The update time.</p>
+         * <p>The time when the job was last updated.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-05-07T12:16:16Z</p>
@@ -130,7 +130,7 @@ public class ListRestoreTasksResponseBody extends TeaModel {
         public String modifiedTime;
 
         /**
-         * <p>The ID of the restore task.</p>
+         * <p>The ID of the restore job.</p>
          * 
          * <strong>example:</strong>
          * <p>restore-xxxxxx</p>
@@ -148,7 +148,7 @@ public class ListRestoreTasksResponseBody extends TeaModel {
         public String serviceInstanceId;
 
         /**
-         * <p>The time when the update started.</p>
+         * <p>The time when the restore job started.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-01-27T16:00:00Z</p>
@@ -159,9 +159,12 @@ public class ListRestoreTasksResponseBody extends TeaModel {
         /**
          * <p>The status of the service instance. Valid values:</p>
          * <ul>
-         * <li>Restoring</li>
-         * <li>Restored</li>
-         * <li>RestoreFailed</li>
+         * <li><p>Restoring: The service instance is being restored.</p>
+         * </li>
+         * <li><p>Restored: The service instance was restored.</p>
+         * </li>
+         * <li><p>RestoreFailed: The service instance failed to be restored.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -171,7 +174,7 @@ public class ListRestoreTasksResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The description of the service instance deployment information.</p>
+         * <p>The details of the instance status.</p>
          * 
          * <strong>example:</strong>
          * <p>i-xxxx  failed, error message: error</p>

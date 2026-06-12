@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListServiceInstanceBillRequest extends TeaModel {
     /**
-     * <p>The billing cycle. Format: YYYY-MM.</p>
+     * <p>The billing cycle in YYYY-MM format. Only billing cycles in the last 18 months are supported.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class ListServiceInstanceBillRequest extends TeaModel {
     public String billingCycle;
 
     /**
-     * <p>The billing date. This parameter is required only if the <strong>Granularity</strong> parameter is set to DAILY. Format: YYYY-MM-DD.</p>
+     * <p>The billing date. This parameter is required only when <strong>Granularity</strong> is set to DAILY. The format is YYYY-MM-DD.</p>
      * 
      * <strong>example:</strong>
      * <p>2025-04-01</p>
@@ -24,12 +24,14 @@ public class ListServiceInstanceBillRequest extends TeaModel {
     public String billingDate;
 
     /**
-     * <p>The granularity at which bills are queried. Valid values:</p>
+     * <p>The granularity of the bills to query. Valid values:</p>
      * <ul>
-     * <li>MONTHLY: queries bills by month. The data queried is consistent with the data that is displayed for the specified billing cycle on the Billing Details tab of the Bill Details page in User Center.</li>
-     * <li>DAILY: queries bills by day. The data queried is consistent with the data that is displayed for the specified day on the Billing Details tab of the Bill Details page in User Center.</li>
+     * <li><p>MONTHLY: monthly. The data is consistent with the bills aggregated by billing cycle in the User Center.</p>
+     * </li>
+     * <li><p>DAILY: daily. The data is consistent with the bills aggregated by day in the User Center.</p>
+     * </li>
      * </ul>
-     * <p>You must set the <strong>BillingDate</strong> parameter before you can set the Granularity parameter to DAILY.</p>
+     * <p>If you set this parameter to DAILY, you must also specify <strong>BillingDate</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>DAILY</p>
@@ -38,7 +40,7 @@ public class ListServiceInstanceBillRequest extends TeaModel {
     public String granularity;
 
     /**
-     * <p>The number of entries page. Valid values: 1 to 100. Default value: 20.</p>
+     * <p>The number of entries to return on each page. Maximum value: 100. Default value: 20.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -47,7 +49,7 @@ public class ListServiceInstanceBillRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>A pagination token.</p>
+     * <p>The token that is used to retrieve the next page of results.</p>
      * 
      * <strong>example:</strong>
      * <p>AAAAAVz7BQqj2xtiNSC3d3RAD38=</p>
@@ -56,7 +58,7 @@ public class ListServiceInstanceBillRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The service instance ID.</p>
+     * <p>The ID of the service instance.</p>
      * 
      * <strong>example:</strong>
      * <p>si-49793f3bfa034ec6a990</p>

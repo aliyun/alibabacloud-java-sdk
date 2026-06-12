@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetNetworkAvailableZonesRequest extends TeaModel {
     /**
+     * <p>Specifies whether the service is a trial.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -12,6 +14,8 @@ public class GetNetworkAvailableZonesRequest extends TeaModel {
     public Boolean isPoc;
 
     /**
+     * <p>The region of the virtual network.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
      */
@@ -19,6 +23,8 @@ public class GetNetworkAvailableZonesRequest extends TeaModel {
     public String networkRegionId;
 
     /**
+     * <p>The connection mode. Valid values: \<code>PrivateLink\\</code> and \<code>OverlayLink\\</code>. \<code>OverlayLink\\</code> is an overlay link based on Application-aware Network Service Mesh (ANSM).</p>
+     * 
      * <strong>example:</strong>
      * <p>PrivateLink</p>
      */
@@ -26,6 +32,8 @@ public class GetNetworkAvailableZonesRequest extends TeaModel {
     public String privateVpcConnectionMode;
 
     /**
+     * <p>The service ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>service-55fc2eabbce647fa976b</p>
      */
@@ -33,6 +41,8 @@ public class GetNetworkAvailableZonesRequest extends TeaModel {
     public String serviceId;
 
     /**
+     * <p>The direction of the internal-facing access. Valid values: \<code>Forward\\</code> and \<code>Reverse\\</code>.</p>
+     * 
      * <strong>example:</strong>
      * <p>Forward</p>
      */
@@ -40,6 +50,8 @@ public class GetNetworkAvailableZonesRequest extends TeaModel {
     public String serviceInstanceEndpointServiceType;
 
     /**
+     * <p>The ID of the region where the service is located.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
      */
@@ -47,6 +59,8 @@ public class GetNetworkAvailableZonesRequest extends TeaModel {
     public String serviceRegionId;
 
     /**
+     * <p>The service version.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -54,6 +68,8 @@ public class GetNetworkAvailableZonesRequest extends TeaModel {
     public String serviceVersion;
 
     /**
+     * <p>The zone for the service deployment.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou-i</p>
      */

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpgradeServiceInstanceRequest extends TeaModel {
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+     * <p>A client-generated token that ensures the idempotence of the request. The token must be unique for each request. It can contain only ASCII characters and must be no more than 64 characters long.</p>
      * 
      * <strong>example:</strong>
      * <p>123e4567-e89b-12d3-a456-426655440000</p>
@@ -14,10 +14,12 @@ public class UpgradeServiceInstanceRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>Specifies whether to perform only a dry run for the request to check information such as the permissions and instance status. Valid values:</p>
+     * <p>Specifies whether to perform a dry run. A dry run checks for issues such as permissions and the instance status. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: performs a dry run for the request, but does not upgrade service instance.</li>
-     * <li><strong>false</strong>: performs a dry run for the request, and upgrade service instance if the request passes the dry run.</li>
+     * <li><p>true: Sends the request without upgrading the service instance.</p>
+     * </li>
+     * <li><p>false: Sends the request and upgrades the service instance after the check is passed.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -27,7 +29,7 @@ public class UpgradeServiceInstanceRequest extends TeaModel {
     public String dryRun;
 
     /**
-     * <p>The parameters required for the upgrade. This parameter is required if the destination version of the service has new parameters.</p>
+     * <p>The parameters required for the upgrade. This is used when new parameters are added to the new service version.</p>
      * 
      * <strong>example:</strong>
      * <p>{ \&quot;RegionId\&quot;: \&quot;cn-hangzhou\&quot;, \&quot;InstanceType\&quot;: \&quot;ecs.g5.large\&quot;}</p>
@@ -45,7 +47,7 @@ public class UpgradeServiceInstanceRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of the service instance.</p>
+     * <p>The service instance ID.</p>
      * 
      * <strong>example:</strong>
      * <p>si-d6ab3a63ccbb4bxxxxxx</p>
@@ -54,7 +56,7 @@ public class UpgradeServiceInstanceRequest extends TeaModel {
     public String serviceInstanceId;
 
     /**
-     * <p>The destination version.</p>
+     * <p>The service version to upgrade to.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>

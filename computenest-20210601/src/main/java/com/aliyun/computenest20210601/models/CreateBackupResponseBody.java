@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateBackupResponseBody extends TeaModel {
     /**
-     * <p>Backup ID</p>
+     * <p>The backup ID.</p>
      * 
      * <strong>example:</strong>
      * <p>backup-cad4a85ff5e340388b93</p>
@@ -14,7 +14,7 @@ public class CreateBackupResponseBody extends TeaModel {
     public String backupId;
 
     /**
-     * <p>Description</p>
+     * <p>The description.</p>
      * 
      * <strong>example:</strong>
      * <p>No description</p>
@@ -23,7 +23,7 @@ public class CreateBackupResponseBody extends TeaModel {
     public String description;
 
     /**
-     * <p>Request ID</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>8DC02957-A0FC-5AB2-8C54-496B636EAF12</p>
@@ -32,14 +32,20 @@ public class CreateBackupResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Backup status </p>
+     * <p>The status of the backup.</p>
      * <ul>
-     * <li>Creating: In progress </li>
-     * <li>Created: Success </li>
-     * <li>CreateFailed: Failed </li>
-     * <li>Deleting: In progress </li>
-     * <li>Deleted: Success </li>
-     * <li>DeleteFailed: Failed</li>
+     * <li><p>Creating: The backup is being created.</p>
+     * </li>
+     * <li><p>Created: The backup is created.</p>
+     * </li>
+     * <li><p>CreateFailed: The backup failed to be created.</p>
+     * </li>
+     * <li><p>Deleting: The backup is being deleted.</p>
+     * </li>
+     * <li><p>Deleted: The backup is deleted.</p>
+     * </li>
+     * <li><p>DeleteFailed: The backup failed to be deleted.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

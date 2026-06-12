@@ -6,9 +6,6 @@ import com.aliyun.tea.*;
 public class ListTagValuesRequest extends TeaModel {
     /**
      * <p>The tag key.</p>
-     * <blockquote>
-     * <p> This parameter is required.</p>
-     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -18,7 +15,7 @@ public class ListTagValuesRequest extends TeaModel {
     public String key;
 
     /**
-     * <p>A pagination token. It can be used in the next request to retrieve a new page of results. If NextToken is empty, no next page exists.</p>
+     * <p>The token that is used to start the next query.</p>
      * 
      * <strong>example:</strong>
      * <p>AAAAAfmTH5rcd4YFfob4P0uDAAc=</p>
@@ -39,10 +36,14 @@ public class ListTagValuesRequest extends TeaModel {
     /**
      * <p>The resource type. Valid values:</p>
      * <ul>
-     * <li>service: service</li>
-     * <li>serviceinstance: service instance</li>
-     * <li>artifact: artifact</li>
-     * <li>dataset: dataset</li>
+     * <li><p>service: service.</p>
+     * </li>
+     * <li><p>serviceinstance: service instance.</p>
+     * </li>
+     * <li><p>artifact: deployment.</p>
+     * </li>
+     * <li><p>dataset: dataset.</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

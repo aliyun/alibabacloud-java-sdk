@@ -14,7 +14,7 @@ public class GetBackupResponseBody extends TeaModel {
     public String backupId;
 
     /**
-     * <p>The creation time of the backup task.</p>
+     * <p>The time when the backup was created.</p>
      * 
      * <strong>example:</strong>
      * <p>2021-05-20T00:00:00Z</p>
@@ -23,7 +23,7 @@ public class GetBackupResponseBody extends TeaModel {
     public String createTime;
 
     /**
-     * <p>The description of the backup task.</p>
+     * <p>The backup description.</p>
      * 
      * <strong>example:</strong>
      * <p>No description</p>
@@ -32,7 +32,7 @@ public class GetBackupResponseBody extends TeaModel {
     public String description;
 
     /**
-     * <p>The end time of the backup task.</p>
+     * <p>The time when the backup ended.</p>
      * 
      * <strong>example:</strong>
      * <p>2022-01-01T12:00:00</p>
@@ -41,7 +41,7 @@ public class GetBackupResponseBody extends TeaModel {
     public String endTime;
 
     /**
-     * <p>The update time of the backup task.</p>
+     * <p>The time when the backup was last modified.</p>
      * 
      * <strong>example:</strong>
      * <p>2025-03-10T19:26:20Z</p>
@@ -59,7 +59,7 @@ public class GetBackupResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The service instance ID.</p>
      * 
      * <strong>example:</strong>
      * <p>si-b58c874912fc4294****</p>
@@ -68,7 +68,7 @@ public class GetBackupResponseBody extends TeaModel {
     public String serviceInstanceId;
 
     /**
-     * <p>The start time of the backup task.</p>
+     * <p>The time when the backup started.</p>
      * 
      * <strong>example:</strong>
      * <p>2022-01-01T11:00:00</p>
@@ -77,14 +77,20 @@ public class GetBackupResponseBody extends TeaModel {
     public String startTime;
 
     /**
-     * <p>The status of the backup task.</p>
+     * <p>The status.</p>
      * <ul>
-     * <li>Creating</li>
-     * <li>Created</li>
-     * <li>CreateFailed</li>
-     * <li>Deleting</li>
-     * <li>Deleted</li>
-     * <li>DeleteFailed</li>
+     * <li><p>Creating: The backup is being created.</p>
+     * </li>
+     * <li><p>Created: The backup is created.</p>
+     * </li>
+     * <li><p>CreateFailed: The backup failed to be created.</p>
+     * </li>
+     * <li><p>Deleting: The backup is being deleted.</p>
+     * </li>
+     * <li><p>Deleted: The backup is deleted.</p>
+     * </li>
+     * <li><p>DeleteFailed: The backup failed to be deleted.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -94,7 +100,7 @@ public class GetBackupResponseBody extends TeaModel {
     public String status;
 
     /**
-     * <p>The description of the deployment instance status.</p>
+     * <p>The detailed status of the deployment instance.</p>
      * 
      * <strong>example:</strong>
      * <p>Disk i-xxxx backup failed, error message: error</p>

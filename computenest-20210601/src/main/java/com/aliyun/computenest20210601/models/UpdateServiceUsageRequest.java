@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateServiceUsageRequest extends TeaModel {
     /**
-     * <p>The client token that is used to ensure the idempotency of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The <strong>token</strong> can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+     * <p>A client token to ensure the idempotence of the request. Generate a unique value from your client for this parameter. <strong>ClientToken</strong> supports only ASCII characters and cannot exceed 64 characters in length.</p>
      * 
      * <strong>example:</strong>
      * <p>AAAAAYChudnQUoBH+mGWFpb6oP0=</p>
@@ -13,6 +13,12 @@ public class UpdateServiceUsageRequest extends TeaModel {
     @NameInMap("ClientToken")
     public String clientToken;
 
+    /**
+     * <p>The region ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
@@ -27,7 +33,7 @@ public class UpdateServiceUsageRequest extends TeaModel {
     public String serviceId;
 
     /**
-     * <p>The information about the applicant.</p>
+     * <p>The user information.</p>
      */
     @NameInMap("UserInformation")
     public java.util.Map<String, String> userInformation;

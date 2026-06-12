@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetSkillHubConfigResponseBody extends TeaModel {
     /**
+     * <p>The time when the configuration was created.</p>
+     * 
      * <strong>example:</strong>
      * <p>2021-05-20T00:00:00Z</p>
      */
@@ -12,6 +14,8 @@ public class GetSkillHubConfigResponseBody extends TeaModel {
     public String createTime;
 
     /**
+     * <p>The name of the OSS bucket.</p>
+     * 
      * <strong>example:</strong>
      * <p>mybucket</p>
      */
@@ -19,6 +23,8 @@ public class GetSkillHubConfigResponseBody extends TeaModel {
     public String ossBucketName;
 
     /**
+     * <p>The region where the OSS bucket is located.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-zhangjiakou</p>
      */
@@ -26,7 +32,7 @@ public class GetSkillHubConfigResponseBody extends TeaModel {
     public String ossRegionId;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>2849EE73-AFFA-5AFD-9575-12FA886451DA</p>
@@ -35,6 +41,8 @@ public class GetSkillHubConfigResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The time when the configuration was last updated.</p>
+     * 
      * <strong>example:</strong>
      * <p>2021-05-20T00:00:00Z</p>
      */

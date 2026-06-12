@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateSkillHubConfigRequest extends TeaModel {
     /**
+     * <p>A client-generated token to ensure request idempotence. This value must be unique for each request. <strong>ClientToken</strong> must contain only ASCII characters and be no longer than 64 characters.</p>
+     * 
      * <strong>example:</strong>
      * <p>123e4567-e89b-12d3-a456-426655440000</p>
      */
@@ -12,6 +14,7 @@ public class CreateSkillHubConfigRequest extends TeaModel {
     public String clientToken;
 
     /**
+     * <p>The name of the Object Storage Service (OSS) bucket.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,6 +24,7 @@ public class CreateSkillHubConfigRequest extends TeaModel {
     public String ossBucketName;
 
     /**
+     * <p>The region ID of the OSS bucket. For more information, see <a href="https://help.aliyun.com/document_detail/31837.html">OSS regions and endpoints</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

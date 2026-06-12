@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateSkillRequest extends TeaModel {
     /**
+     * <p>A client-generated token that ensures request idempotence. It must be unique for each request. The <strong>ClientToken</strong> can contain only ASCII characters and must be no more than 64 characters long.</p>
+     * 
      * <strong>example:</strong>
      * <p>123e4567-e89b-12d3-a456-426655440000</p>
      */
@@ -12,6 +14,8 @@ public class CreateSkillRequest extends TeaModel {
     public String clientToken;
 
     /**
+     * <p>Required when SourceType is set to UPLOAD. The OSS URL of the Skill package to upload.</p>
+     * 
      * <strong>example:</strong>
      * <p><a href="https://embedding-pic.oss-cn-beijing-internal.aliyuncs.com/30516570">https://embedding-pic.oss-cn-beijing-internal.aliyuncs.com/30516570</a></p>
      */
@@ -19,6 +23,8 @@ public class CreateSkillRequest extends TeaModel {
     public String ossUrl;
 
     /**
+     * <p>The description of the Skill.</p>
+     * 
      * <strong>example:</strong>
      * <p>11111</p>
      */
@@ -26,6 +32,8 @@ public class CreateSkillRequest extends TeaModel {
     public String skillDescription;
 
     /**
+     * <p>The Skill labels.</p>
+     * 
      * <strong>example:</strong>
      * <p>[&quot;category:frontend-development&quot;]</p>
      */
@@ -33,6 +41,8 @@ public class CreateSkillRequest extends TeaModel {
     public java.util.List<String> skillLabels;
 
     /**
+     * <p>The name of the Skill.</p>
+     * 
      * <strong>example:</strong>
      * <p>11111</p>
      */
@@ -40,6 +50,7 @@ public class CreateSkillRequest extends TeaModel {
     public String skillName;
 
     /**
+     * <p>The ID of the SkillSpace containing the Skill.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -49,6 +60,8 @@ public class CreateSkillRequest extends TeaModel {
     public String skillSpaceId;
 
     /**
+     * <p>Required when SourceType is set to COPY. The ID of the public Skill.</p>
+     * 
      * <strong>example:</strong>
      * <p>s-11111</p>
      */
@@ -56,6 +69,7 @@ public class CreateSkillRequest extends TeaModel {
     public String sourceSkillId;
 
     /**
+     * <p>The creation method for the Skill.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

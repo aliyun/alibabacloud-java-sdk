@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeployServiceInstanceRequest extends TeaModel {
     /**
-     * <p>Ensures idempotency of the request. Generate a unique value for this parameter from your client to ensure it is unique across different requests. ClientToken supports only ASCII characters and cannot exceed 64 characters.</p>
+     * <p>A client token to ensure the idempotence of a request. Generate a unique value from the client for this parameter. The token can contain only ASCII characters and must be no more than 64 characters in length.</p>
      * 
      * <strong>example:</strong>
      * <p>123e4567-e89b-12d3-a456-426655440000</p>
@@ -14,9 +14,9 @@ public class DeployServiceInstanceRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>Region ID. Allowed values:</p>
+     * <p>The region ID. Possible values:</p>
      * <ul>
-     * <li><p>cn-hangzhou: East China 1 (Hangzhou).</p>
+     * <li><p>cn-hangzhou: China (Hangzhou).</p>
      * </li>
      * <li><p>ap-southeast-1: Singapore.</p>
      * </li>
@@ -30,7 +30,7 @@ public class DeployServiceInstanceRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>Service instance ID.</p>
+     * <p>The ID of the service instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

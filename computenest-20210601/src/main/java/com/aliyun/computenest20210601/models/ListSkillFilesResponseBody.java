@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListSkillFilesResponseBody extends TeaModel {
     /**
+     * <p>The maximum number of entries returned per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>100</p>
      */
@@ -12,6 +14,8 @@ public class ListSkillFilesResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>The token to retrieve the next page of results. This token is returned only when more results are available.</p>
+     * 
      * <strong>example:</strong>
      * <p>AAAAAWns8w4MmhzeptXVRG0PUEU=</p>
      */
@@ -19,7 +23,7 @@ public class ListSkillFilesResponseBody extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>2849EE73-AFFA-5AFD-9575-12FA886451DA</p>
@@ -27,10 +31,15 @@ public class ListSkillFilesResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The Skill files.</p>
+     */
     @NameInMap("SkillFiles")
     public java.util.List<ListSkillFilesResponseBodySkillFiles> skillFiles;
 
     /**
+     * <p>The total number of entries that match the query.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -84,6 +93,8 @@ public class ListSkillFilesResponseBody extends TeaModel {
 
     public static class ListSkillFilesResponseBodySkillFiles extends TeaModel {
         /**
+         * <p>The relative path of the file within the Skill.</p>
+         * 
          * <strong>example:</strong>
          * <p>SKILL.md</p>
          */
@@ -91,6 +102,8 @@ public class ListSkillFilesResponseBody extends TeaModel {
         public String filePath;
 
         /**
+         * <p>The pre-signed URL for accessing the file in OSS.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="https://embedding-pic.oss-cn-beijing-internal.aliyuncs.com/SKILL.md">https://embedding-pic.oss-cn-beijing-internal.aliyuncs.com/SKILL.md</a></p>
          */

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListPublicSkillsResponseBody extends TeaModel {
     /**
+     * <p>The maximum number of entries returned per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -12,6 +14,8 @@ public class ListPublicSkillsResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>The token to retrieve the next page of results.</p>
+     * 
      * <strong>example:</strong>
      * <p>AAAAAZ9FmxgN6wKfeK/GOKRnnjU=</p>
      */
@@ -19,7 +23,7 @@ public class ListPublicSkillsResponseBody extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>3F976EF8-C10A-57DC-917C-BB7BEB508FFB</p>
@@ -27,10 +31,15 @@ public class ListPublicSkillsResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The list of public skills.</p>
+     */
     @NameInMap("Skills")
     public java.util.List<ListPublicSkillsResponseBodySkills> skills;
 
     /**
+     * <p>The total number of entries.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -84,6 +93,8 @@ public class ListPublicSkillsResponseBody extends TeaModel {
 
     public static class ListPublicSkillsResponseBodySkills extends TeaModel {
         /**
+         * <p>The creation time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2025-09-11T02:18:42Z</p>
          */
@@ -91,6 +102,8 @@ public class ListPublicSkillsResponseBody extends TeaModel {
         public String createTime;
 
         /**
+         * <p>The download link for the skill package.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="https://testts-1.oss-cn-beijing.aliyuncs.com/app/yyb_9.1.1.zip">https://testts-1.oss-cn-beijing.aliyuncs.com/app/yyb_9.1.1.zip</a></p>
          */
@@ -98,6 +111,8 @@ public class ListPublicSkillsResponseBody extends TeaModel {
         public String downloadUrl;
 
         /**
+         * <p>The description of the skill.</p>
+         * 
          * <strong>example:</strong>
          * <p>11111</p>
          */
@@ -105,7 +120,7 @@ public class ListPublicSkillsResponseBody extends TeaModel {
         public String skillDescription;
 
         /**
-         * <p>Skill ID</p>
+         * <p>The ID of the skill.</p>
          * 
          * <strong>example:</strong>
          * <p>af7e49d9-277f-454a-afc5-1513d41cac31</p>
@@ -113,10 +128,15 @@ public class ListPublicSkillsResponseBody extends TeaModel {
         @NameInMap("SkillId")
         public String skillId;
 
+        /**
+         * <p>The labels attached to the skill.</p>
+         */
         @NameInMap("SkillLabels")
         public java.util.List<String> skillLabels;
 
         /**
+         * <p>The name of the skill.</p>
+         * 
          * <strong>example:</strong>
          * <p>ziptest</p>
          */
@@ -124,6 +144,8 @@ public class ListPublicSkillsResponseBody extends TeaModel {
         public String skillName;
 
         /**
+         * <p>The ID of the skill space.</p>
+         * 
          * <strong>example:</strong>
          * <p>ss-1111111</p>
          */
@@ -131,6 +153,8 @@ public class ListPublicSkillsResponseBody extends TeaModel {
         public String skillSpaceId;
 
         /**
+         * <p>The update time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2025-11-03T22:58:52Z</p>
          */

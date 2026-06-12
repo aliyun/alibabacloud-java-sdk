@@ -20,7 +20,7 @@ public class ListBackupsRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>A pagination token. It can be used in the next request to retrieve a new page of results.</p>
+     * <p>The token that is used to start the next query.</p>
      * 
      * <strong>example:</strong>
      * <p>AAAAAc3HCuYhJi/wvpk4xOr0VLYoaeZA6xVdkCrmG9EmGshtmECUGpq9Qm7x5vQkpz9NXH0XzUc9t4Kxaf3UtuPY4a0=</p>
@@ -59,13 +59,18 @@ public class ListBackupsRequest extends TeaModel {
 
     public static class ListBackupsRequestFilter extends TeaModel {
         /**
-         * <p>The parameter name of the filter. You can specify one or more parameter names to query services. Valid values:</p>
+         * <p>The name of the filter. You can query by one or more filter names. Valid values:</p>
          * <ul>
-         * <li>BackupId: the ID of the backup.</li>
-         * <li>ServiceInstanceId: The ID of the service instance.</li>
-         * <li>Status: the state of the service.</li>
-         * <li>StartTime</li>
-         * <li>EndTime</li>
+         * <li><p>BackupId: The backup ID.</p>
+         * </li>
+         * <li><p>ServiceInstanceId: The service instance ID.</p>
+         * </li>
+         * <li><p>Status: The status.</p>
+         * </li>
+         * <li><p>StartTime: The start time.</p>
+         * </li>
+         * <li><p>EndTime: The end time.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -75,7 +80,7 @@ public class ListBackupsRequest extends TeaModel {
         public String name;
 
         /**
-         * <p>The list of filters.</p>
+         * <p>The filter values.</p>
          */
         @NameInMap("Value")
         public java.util.List<String> value;

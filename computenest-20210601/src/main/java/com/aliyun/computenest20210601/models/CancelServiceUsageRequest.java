@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CancelServiceUsageRequest extends TeaModel {
     /**
-     * <p>The client token that is used to ensure the idempotency of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The <strong>token</strong> can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+     * <p>A client-generated token that ensures the idempotence of the request. The token must be unique for each request. It can contain only ASCII characters and must be no more than 64 characters long.</p>
      * 
      * <strong>example:</strong>
      * <p>123e4567-e89b-12d3-a456-426655440000</p>
@@ -14,9 +14,9 @@ public class CancelServiceUsageRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>Specifies whether to delete the application.</p>
+     * <p>Specifies whether to delete the request.</p>
      * <blockquote>
-     * <p> After you delete the application, you must re-enter the application information the next time you submit an application.</p>
+     * <p>If you delete the request, you must submit a new one.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -25,6 +25,12 @@ public class CancelServiceUsageRequest extends TeaModel {
     @NameInMap("NeedDelete")
     public Boolean needDelete;
 
+    /**
+     * <p>The region ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

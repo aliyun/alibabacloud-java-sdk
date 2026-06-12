@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DeleteSkillSpaceRequest extends TeaModel {
     /**
+     * <p>A client-generated token to ensure the idempotence of the request. The value must be unique for each request. The <strong>ClientToken</strong> supports only ASCII characters and can be up to 64 characters long.</p>
+     * 
      * <strong>example:</strong>
      * <p>123e4567-e89b-12d3-a456-426655440000</p>
      */
@@ -12,7 +14,7 @@ public class DeleteSkillSpaceRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>SkillSpace  ID</p>
+     * <p>The ID of the SkillSpace.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

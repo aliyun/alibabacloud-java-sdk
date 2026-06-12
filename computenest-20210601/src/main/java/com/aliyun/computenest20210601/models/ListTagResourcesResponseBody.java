@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListTagResourcesResponseBody extends TeaModel {
     /**
-     * <p>A pagination token. It can be used in the next request to retrieve a new page of results. If NextToken is empty, no next page exists.</p>
+     * <p>The token to retrieve the next page of results.</p>
      * 
      * <strong>example:</strong>
      * <p>AAAAAVz7BQqj2xtiNSC3d3RAD38=</p>
@@ -23,7 +23,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The collection of details about resources and tags, such as resource IDs, resource types, and tag key-value pairs.</p>
+     * <p>A collection of resources and their tags. This collection includes information such as resource IDs, resource types, and tag key-value pairs.</p>
      */
     @NameInMap("TagResources")
     public java.util.List<ListTagResourcesResponseBodyTagResources> tagResources;
@@ -70,10 +70,14 @@ public class ListTagResourcesResponseBody extends TeaModel {
         /**
          * <p>The resource type. Valid values:</p>
          * <ul>
-         * <li>service: service</li>
-         * <li>serviceinstance: service instance</li>
-         * <li>artifact: deployment package</li>
-         * <li>dataset: dataset</li>
+         * <li><p>service: a service.</p>
+         * </li>
+         * <li><p>serviceinstance: a service instance.</p>
+         * </li>
+         * <li><p>artifact: an artifact.</p>
+         * </li>
+         * <li><p>dataset: a dataset.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

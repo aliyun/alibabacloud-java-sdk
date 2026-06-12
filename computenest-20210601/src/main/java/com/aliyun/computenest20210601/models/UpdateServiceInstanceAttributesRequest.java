@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateServiceInstanceAttributesRequest extends TeaModel {
     /**
-     * <p>Specifies whether to authorize the service provider to perform O\&amp;M operations on the service instance.</p>
+     * <p>Specifies whether to enable managed O\&amp;M.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -28,7 +28,7 @@ public class UpdateServiceInstanceAttributesRequest extends TeaModel {
 
     /**
      * <p>The ID of the service instance.</p>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/396200.html">ListServiceInstances</a> operation to obtain the ID of the service instance.</p>
+     * <p>Call the <a href="https://help.aliyun.com/document_detail/396200.html">ListServiceInstances</a> operation to obtain the service instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

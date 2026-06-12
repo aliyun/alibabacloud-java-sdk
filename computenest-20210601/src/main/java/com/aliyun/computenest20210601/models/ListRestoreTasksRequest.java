@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListRestoreTasksRequest extends TeaModel {
     /**
-     * <p>The list of the filters.</p>
+     * <p>The filter.</p>
      */
     @NameInMap("Filter")
     public java.util.List<ListRestoreTasksRequestFilter> filter;
 
     /**
-     * <p>The number of rows displayed per page in paginated queries. Maximum: 100 rows per page. Default: 20 rows.</p>
+     * <p>The number of entries to return on each page. Maximum value: 100. Default value: 20.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -20,7 +20,7 @@ public class ListRestoreTasksRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>NextToken</p>
+     * <p>The token that is used to retrieve the next page of results.</p>
      * 
      * <strong>example:</strong>
      * <p>AAAAAWns8w4MmhzeptXVRG0PUEU=</p>
@@ -59,13 +59,18 @@ public class ListRestoreTasksRequest extends TeaModel {
 
     public static class ListRestoreTasksRequestFilter extends TeaModel {
         /**
-         * <p>The parameter name of the filter. You can specify one or more parameter names to query services. Valid values:</p>
+         * <p>The name of the filter. You can query by one or more filter names. Valid values:</p>
          * <ul>
-         * <li>RestoreTaskId: the ID of the restore task.</li>
-         * <li>ServiceInstanceId: The ID of the service instance.</li>
-         * <li>Status</li>
-         * <li>StartTime</li>
-         * <li>EndTime</li>
+         * <li><p>RestoreTaskId: The restore job ID.</p>
+         * </li>
+         * <li><p>ServiceInstanceId: The service instance ID.</p>
+         * </li>
+         * <li><p>Status: The status.</p>
+         * </li>
+         * <li><p>StartTime: The start time.</p>
+         * </li>
+         * <li><p>EndTime: The end time.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -75,7 +80,7 @@ public class ListRestoreTasksRequest extends TeaModel {
         public String name;
 
         /**
-         * <p>The parameter values of the filter.</p>
+         * <p>A list of filter values.</p>
          */
         @NameInMap("Value")
         public java.util.List<String> value;

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateServiceInstanceResponseBody extends TeaModel {
     /**
-     * <p>The MartketInstance ID.</p>
+     * <p>The ID of the Alibaba Cloud Marketplace instance.</p>
      * 
      * <strong>example:</strong>
      * <p>786***45</p>
@@ -23,7 +23,7 @@ public class CreateServiceInstanceResponseBody extends TeaModel {
     public String orderId;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>4DB0F536-B3BE-4F0D-BD29-E83FB56D****</p>
@@ -43,14 +43,22 @@ public class CreateServiceInstanceResponseBody extends TeaModel {
     /**
      * <p>The status of the service instance. Valid values:</p>
      * <ul>
-     * <li><strong>Created</strong></li>
-     * <li><strong>Deploying</strong></li>
-     * <li><strong>DeployedFailed</strong></li>
-     * <li><strong>Deployed</strong></li>
-     * <li><strong>Upgrading</strong></li>
-     * <li><strong>Deleting</strong></li>
-     * <li><strong>Deleted</strong></li>
-     * <li><strong>DeletedFailed</strong></li>
+     * <li><p><strong>Created</strong>: The service instance is created.</p>
+     * </li>
+     * <li><p><strong>Deploying</strong>: The service instance is being deployed.</p>
+     * </li>
+     * <li><p><strong>DeployedFailed</strong>: The service instance failed to be deployed.</p>
+     * </li>
+     * <li><p><strong>Deployed</strong>: The service instance is deployed.</p>
+     * </li>
+     * <li><p><strong>Upgrading</strong>: The service instance is being upgraded.</p>
+     * </li>
+     * <li><p><strong>Deleting</strong>: The service instance is being deleted.</p>
+     * </li>
+     * <li><p><strong>Deleted</strong>: The service instance is deleted.</p>
+     * </li>
+     * <li><p><strong>DeletedFailed</strong>: The service instance failed to be deleted.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

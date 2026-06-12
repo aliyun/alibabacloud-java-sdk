@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateSkillFileDetectResponseBody extends TeaModel {
     /**
+     * <p>The unique identifier for the detection task.</p>
+     * 
      * <strong>example:</strong>
      * <p>2aceb074-fa72-44d2-99d9-45b17cffe0e7</p>
      */
@@ -12,7 +14,7 @@ public class CreateSkillFileDetectResponseBody extends TeaModel {
     public String hashKey;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>3F976EF8-C10A-57DC-917C-BB7BEB508FFB</p>

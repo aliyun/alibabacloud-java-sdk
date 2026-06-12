@@ -5,8 +5,8 @@ import com.aliyun.tea.*;
 
 public class ChangeResourceGroupRequest extends TeaModel {
     /**
-     * <p>The ID of the new resource group.</p>
-     * <p>You can view resource group IDs in the <a href="https://resourcemanager.console.aliyun.com/resource-groups">Resource Management console</a> .</p>
+     * <p>The ID of the destination resource group.</p>
+     * <p>You can obtain the resource group ID from the <a href="https://resourcemanager.console.aliyun.com/resource-groups">Resource Management console</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-acfmzmhzo******</p>
@@ -24,7 +24,7 @@ public class ChangeResourceGroupRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of the cloud resource that you want to move to a new resource group.</p>
+     * <p>The ID of the cloud resource whose resource group you want to change.</p>
      * 
      * <strong>example:</strong>
      * <p>si-5dc794a7fd254e******</p>
@@ -35,8 +35,10 @@ public class ChangeResourceGroupRequest extends TeaModel {
     /**
      * <p>The resource type. Valid values:</p>
      * <ul>
-     * <li>service: service</li>
-     * <li>serviceinstance: service instance</li>
+     * <li><p>service: The resource is a service.</p>
+     * </li>
+     * <li><p>serviceinstance: The resource is a service instance.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

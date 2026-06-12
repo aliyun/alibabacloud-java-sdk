@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetSkillFileDetectResultResponseBody extends TeaModel {
     /**
+     * <p>The result code. A value of &quot;200&quot; indicates success. Other values indicate an error.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -12,6 +14,8 @@ public class GetSkillFileDetectResultResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>The unique identifier for the detection task.</p>
+     * 
      * <strong>example:</strong>
      * <p>8cfb1102cc5f56fe752f6e9b8c6f7f3d</p>
      */
@@ -19,6 +23,8 @@ public class GetSkillFileDetectResultResponseBody extends TeaModel {
     public String hashKey;
 
     /**
+     * <p>The response message.</p>
+     * 
      * <strong>example:</strong>
      * <p>Successful</p>
      */
@@ -26,7 +32,7 @@ public class GetSkillFileDetectResultResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>3F976EF8-C10A-57DC-917C-BB7BEB508FFB</p>
@@ -35,6 +41,11 @@ public class GetSkillFileDetectResultResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The file detection result. Valid values:</p>
+     * <p>0: safe file</p>
+     * <p>1: suspicious file</p>
+     * <p>3: The detection is in progress.</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
@@ -42,6 +53,12 @@ public class GetSkillFileDetectResultResponseBody extends TeaModel {
     public Integer result;
 
     /**
+     * <p>The file detection score. The score ranges correspond to the following threat levels:</p>
+     * <p>0–60: safe</p>
+     * <p>61–70: risk</p>
+     * <p>71–80: suspicious</p>
+     * <p>81–100: malicious</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */

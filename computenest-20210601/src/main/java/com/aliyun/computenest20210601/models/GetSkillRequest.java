@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetSkillRequest extends TeaModel {
     /**
+     * <p>The ID of the Skill.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

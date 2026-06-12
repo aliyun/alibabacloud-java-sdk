@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateServiceInstanceShrinkRequest extends TeaModel {
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+     * <p>A client-generated, unique token that ensures the idempotence of the request. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
      * 
      * <strong>example:</strong>
      * <p>123e4567-e89b-12d3-a456-426655440000</p>
@@ -14,25 +14,27 @@ public class CreateServiceInstanceShrinkRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The information about the order placed in Alibaba Cloud Marketplace. You do not need to specify this parameter if the service is not published in Alibaba Cloud Marketplace or uses the pay-as-you-go billing method.</p>
+     * <p>The information about the Alibaba Cloud Marketplace purchase order. You do not need to specify this parameter if the service is not listed in Alibaba Cloud Marketplace or if you use the pay-as-you-go billing method.</p>
      */
     @NameInMap("Commodity")
     public CreateServiceInstanceShrinkRequestCommodity commodity;
 
     /**
-     * <p>The alert contact group.</p>
+     * <p>The CloudMonitor alert contact group that receives alerts.</p>
      * 
      * <strong>example:</strong>
-     * <p>Default Group</p>
+     * <p>Cloud account alert contact</p>
      */
     @NameInMap("ContactGroup")
     public String contactGroup;
 
     /**
-     * <p>Specifies whether to perform only a dry run for the request to check information such as the permissions and instance status. Valid values:</p>
+     * <p>Indicates whether to perform a dry run for the request. The dry run checks for permissions and instance status. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: performs a dry run for the request, but does not create a service instance.</li>
-     * <li><strong>false</strong>: performs a dry run for the request, and creates a service instance if the request passes the dry run.</li>
+     * <li><p><strong>true</strong>: Sends the request without creating the service instance.</p>
+     * </li>
+     * <li><p><strong>false</strong>: Sends the request and creates the service instance after the check is passed.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -42,10 +44,12 @@ public class CreateServiceInstanceShrinkRequest extends TeaModel {
     public Boolean dryRun;
 
     /**
-     * <p>Specifies whether the service instance supports the hosted O\&amp;M feature. Valid values:</p>
+     * <p>Indicates whether the service instance has the O\&amp;M feature. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong></li>
-     * <li><strong>false</strong></li>
+     * <li><p><strong>true</strong>: The service instance has the O\&amp;M feature.</p>
+     * </li>
+     * <li><p><strong>false</strong>: The service instance does not have the O\&amp;M feature.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -55,10 +59,12 @@ public class CreateServiceInstanceShrinkRequest extends TeaModel {
     public Boolean enableInstanceOps;
 
     /**
-     * <p>Specifies whether to enable the Prometheus monitoring feature. Valid values:</p>
+     * <p>Indicates whether to enable Prometheus monitoring. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong></li>
-     * <li><strong>false</strong></li>
+     * <li><p><strong>true</strong>: Enable.</p>
+     * </li>
+     * <li><p><strong>false</strong>: Disable.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -68,7 +74,13 @@ public class CreateServiceInstanceShrinkRequest extends TeaModel {
     public Boolean enableUserPrometheus;
 
     /**
-     * <p>The serviceInstance name.</p>
+     * <p>The name of the service instance. The name must meet the following requirements:</p>
+     * <ul>
+     * <li><p>The name can be up to 64 characters in length.</p>
+     * </li>
+     * <li><p>It must start with a letter or a digit and can contain letters, digits, hyphens (-), and underscores (_).</p>
+     * </li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>TestName</p>
@@ -77,19 +89,24 @@ public class CreateServiceInstanceShrinkRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The operation metadata.</p>
+     * <p>The O\&amp;M configuration.</p>
      */
     @NameInMap("OperationMetadata")
     public CreateServiceInstanceShrinkRequestOperationMetadata operationMetadata;
 
     /**
-     * <p>The parameters that the customer specifies to deploy the service instance.</p>
+     * <p>The parameters for deploying the user instance.</p>
      * <blockquote>
-     * <p> If region information is required to create a service instance, you must specify the region ID in the value of Parameters.</p>
+     * <p>If the service instance contains deployment region information, you must specify the region in the deployment parameters.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
-     * <p>{&quot;NodeCount&quot;: 3, &quot;SystemDiskSize&quot;: 40, &quot;InstancePassword&quot;: &quot;******&quot;}</p>
+     * <p>{
+     *       &quot;RegionId&quot;: &quot;cn-hangzhou&quot;
+     *       &quot;NodeCount&quot;: 3,
+     *       &quot;SystemDiskSize&quot;: 40,
+     *       &quot;InstancePassword&quot;: &quot;******&quot;
+     * }</p>
      */
     @NameInMap("Parameters")
     public String parametersShrink;
@@ -97,8 +114,10 @@ public class CreateServiceInstanceShrinkRequest extends TeaModel {
     /**
      * <p>The region ID. Valid values:</p>
      * <ul>
-     * <li>cn-hangzhou: China (Hangzhou).</li>
-     * <li>ap-southeast-1: Singapore.</li>
+     * <li><p>cn-hangzhou: China (Hangzhou).</p>
+     * </li>
+     * <li><p>ap-southeast-1: Singapore.</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -109,10 +128,12 @@ public class CreateServiceInstanceShrinkRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>Specifies whether to automatically deduct the resource fees from the account balance. Valid values:</p>
+     * <p>Indicates whether to automatically deduct the payment from your account balance. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong></li>
-     * <li><strong>false</strong></li>
+     * <li><p><strong>true</strong>: Enable automatic payment.</p>
+     * </li>
+     * <li><p><strong>false</strong>: Disable automatic payment.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -141,7 +162,7 @@ public class CreateServiceInstanceShrinkRequest extends TeaModel {
     public String serviceId;
 
     /**
-     * <p>The trial service instance id witch you want to convert to formal</p>
+     * <p>The ID of the service instance to convert to a paid instance.</p>
      * 
      * <strong>example:</strong>
      * <p>si-d32fbcef30664721b785</p>
@@ -159,7 +180,7 @@ public class CreateServiceInstanceShrinkRequest extends TeaModel {
     public String serviceVersion;
 
     /**
-     * <p>Specification code.</p>
+     * <p>The commodity specification code.</p>
      * 
      * <strong>example:</strong>
      * <p>yuncode5425200001</p>
@@ -168,34 +189,36 @@ public class CreateServiceInstanceShrinkRequest extends TeaModel {
     public String specificationCode;
 
     /**
-     * <p>The package name.</p>
+     * <p>The name of the specification package.</p>
      * 
      * <strong>example:</strong>
-     * <p>Default Ppackage</p>
+     * <p>Package 1</p>
      */
     @NameInMap("SpecificationName")
     public String specificationName;
 
     /**
-     * <p>The tags.</p>
+     * <p>The custom tags.</p>
      */
     @NameInMap("Tag")
     public java.util.List<CreateServiceInstanceShrinkRequestTag> tag;
 
     /**
-     * <p>The name of the template.</p>
+     * <p>The template name. You must specify this parameter if the service supports multiple templates.</p>
      * 
      * <strong>example:</strong>
-     * <p>ECS Template</p>
+     * <p>Template 1</p>
      */
     @NameInMap("TemplateName")
     public String templateName;
 
     /**
-     * <p>The trial type of the service instance. Valid values:</p>
+     * <p>The type of the service instance. Valid values:</p>
      * <ul>
-     * <li><strong>Trial</strong>: Trials are supported.</li>
-     * <li><strong>NotTrial</strong>: Trials are not supported.</li>
+     * <li><p><strong>Trial</strong>: The service instance supports trial.</p>
+     * </li>
+     * <li><p><strong>NotTrial</strong>: The service instance does not support trial.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -371,10 +394,12 @@ public class CreateServiceInstanceShrinkRequest extends TeaModel {
 
     public static class CreateServiceInstanceShrinkRequestCommodity extends TeaModel {
         /**
-         * <p>Specifies whether to automatically complete the payment. Valid values:</p>
+         * <p>Indicates whether to enable automatic payment for the order. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong></li>
-         * <li><strong>false</strong></li>
+         * <li><p><strong>true</strong>: Enable automatic payment.</p>
+         * </li>
+         * <li><p><strong>false</strong>: Disable automatic payment.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -384,10 +409,12 @@ public class CreateServiceInstanceShrinkRequest extends TeaModel {
         public Boolean autoPay;
 
         /**
-         * <p>Specifies whether to enable auto-renewal for the service instance. Valid values:</p>
+         * <p>Indicates whether to enable auto-renewal. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong></li>
-         * <li><strong>false</strong></li>
+         * <li><p><strong>true</strong>: Enable.</p>
+         * </li>
+         * <li><p><strong>false</strong>: Disable.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -417,9 +444,12 @@ public class CreateServiceInstanceShrinkRequest extends TeaModel {
         /**
          * <p>The unit of the subscription duration. Valid values:</p>
          * <ul>
-         * <li><strong>Year</strong></li>
-         * <li><strong>Month</strong></li>
-         * <li><strong>Day</strong></li>
+         * <li><p><strong>Year</strong>: Year.</p>
+         * </li>
+         * <li><p><strong>Month</strong>: Month.</p>
+         * </li>
+         * <li><p><strong>Day</strong>: Day.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -429,7 +459,7 @@ public class CreateServiceInstanceShrinkRequest extends TeaModel {
         public String payPeriodUnit;
 
         /**
-         * <p>privet offer Id</p>
+         * <p>The ID of the private offer in Alibaba Cloud Marketplace.</p>
          * 
          * <strong>example:</strong>
          * <p>xxxx-xxxx-xxxx-xxxx</p>
@@ -494,7 +524,7 @@ public class CreateServiceInstanceShrinkRequest extends TeaModel {
 
     public static class CreateServiceInstanceShrinkRequestOperationMetadata extends TeaModel {
         /**
-         * <p>The operation end time.</p>
+         * <p>The end time of the O\&amp;M window. This parameter is valid only in managed O\&amp;M mode.</p>
          * 
          * <strong>example:</strong>
          * <p>2022-01-28T06:48:56Z</p>
@@ -503,7 +533,7 @@ public class CreateServiceInstanceShrinkRequest extends TeaModel {
         public String endTime;
 
         /**
-         * <p>The additional information.</p>
+         * <p>Additional information about the managed O\&amp;M service.</p>
          * 
          * <strong>example:</strong>
          * <pre><code class="language-json">  {
@@ -522,7 +552,7 @@ public class CreateServiceInstanceShrinkRequest extends TeaModel {
         public String extraInfo;
 
         /**
-         * <p>Imported resource.</p>
+         * <p>The list of imported resources.</p>
          * 
          * <strong>example:</strong>
          * <p>{   &quot;RegionId&quot;: &quot;cn-hangzhou&quot;,   &quot;Type&quot;: &quot;ResourceIds&quot;,   &quot;ResourceIds&quot;: {     &quot;ALIYUN::ECS::INSTANCE&quot;: [&quot;i-xxx&quot;, &quot;i-yyy&quot;],     &quot;ALIYUN::RDS::INSTANCE&quot;: [&quot;rm-xxx&quot;, &quot;rm-yyy&quot;],     &quot;ALIYUN::VPC::VPC&quot;: [&quot;vpc-xxx&quot;, &quot;vpc-yyy&quot;],     &quot;ALIYUN::SLB::INSTANCE&quot;: [&quot;lb-xxx&quot;, &quot;lb-yyy&quot;]   } }</p>
@@ -531,7 +561,7 @@ public class CreateServiceInstanceShrinkRequest extends TeaModel {
         public String resources;
 
         /**
-         * <p>The ID of the service instance.</p>
+         * <p>The ID of the imported service instance.</p>
          * 
          * <strong>example:</strong>
          * <p>si-d6ab3a63ccbb4b17****</p>
@@ -540,7 +570,7 @@ public class CreateServiceInstanceShrinkRequest extends TeaModel {
         public String serviceInstanceId;
 
         /**
-         * <p>The operation start time.</p>
+         * <p>The start time of the O\&amp;M window. This parameter is valid only in managed O\&amp;M mode.</p>
          * 
          * <strong>example:</strong>
          * <p>2021-12-29T06:48:56Z</p>

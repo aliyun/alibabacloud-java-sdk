@@ -11,7 +11,7 @@ public class ListServiceInstancesRequest extends TeaModel {
     public java.util.List<ListServiceInstancesRequestFilter> filter;
 
     /**
-     * <p>The number of entries page. Valid values: 1 to 100. Default value: 20.</p>
+     * <p>The number of entries to return on each page. Maximum value: 100. Default value: 20.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -20,7 +20,7 @@ public class ListServiceInstancesRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of NextToken.</p>
+     * <p>The query token. Set it to the <strong>NextToken</strong> value returned from the previous API call.</p>
      * 
      * <strong>example:</strong>
      * <p>BBBAAfu+XtuBE55iRLHEYYuojI4=</p>
@@ -48,7 +48,7 @@ public class ListServiceInstancesRequest extends TeaModel {
     public String resourceGroupId;
 
     /**
-     * <p>The tag key and value.</p>
+     * <p>The custom tags.</p>
      */
     @NameInMap("Tag")
     public java.util.List<ListServiceInstancesRequestTag> tag;
@@ -108,16 +108,38 @@ public class ListServiceInstancesRequest extends TeaModel {
 
     public static class ListServiceInstancesRequestFilter extends TeaModel {
         /**
-         * <p>The parameter name of the filter. You can specify one or more parameter names to query services. Valid values:</p>
+         * <p>The name of the filter. You can specify one or more filter names to query resources. Valid values:</p>
          * <ul>
-         * <li>Name：Query by service name.</li>
-         * <li>ServiceInstanceName：Query by service  instance name.</li>
-         * <li>ServiceInstanceId：Query by service  instance ID.</li>
-         * <li>ServiceId：Query by service ID.</li>
-         * <li>Version：Query by service version.</li>
-         * <li>Status：Query by service status.</li>
-         * <li>DeployType: Query by service deployType.</li>
-         * <li>ServiceType：Query by service deployType.</li>
+         * <li><p>Name: The name of the service. To perform a fuzzy search, enter the value in the \<em>xxx\</em> format. For example, if the service name is My Service, you can enter \<em>My\</em> or \<em>Service\</em> for a fuzzy search.</p>
+         * </li>
+         * <li><p>ServiceInstanceName: The name of the service instance. A fuzzy query is performed if you enter one service instance name. A term query is performed if you enter multiple service instance names.</p>
+         * </li>
+         * <li><p>ServiceInstanceId: The service instance ID.</p>
+         * </li>
+         * <li><p>ServiceId: The service ID.</p>
+         * </li>
+         * <li><p>Version: The service version.</p>
+         * </li>
+         * <li><p>Status: The instance status.</p>
+         * </li>
+         * <li><p>DeployType: The deployment type.</p>
+         * </li>
+         * <li><p>ServiceType: The service type.</p>
+         * </li>
+         * <li><p>OperationStartTimeBefore: The time before the start of the Alibaba Cloud Managed Services.</p>
+         * </li>
+         * <li><p>OperationStartTimeAfter: The time after the start of the Alibaba Cloud Managed Services.</p>
+         * </li>
+         * <li><p>OperationEndTimeBefore: The time before the end of the Alibaba Cloud Managed Services.</p>
+         * </li>
+         * <li><p>OperationEndTimeAfter: The time after the end of the Alibaba Cloud Managed Services.</p>
+         * </li>
+         * <li><p>OperatedServiceInstanceId: The ID of the managed service instance under a private service.</p>
+         * </li>
+         * <li><p>OperationServiceInstanceId: The ID of the service instance under a pure managed service.</p>
+         * </li>
+         * <li><p>EnableInstanceOps: Indicates whether the Alibaba Cloud Managed Services feature is enabled for the service instance.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -127,7 +149,7 @@ public class ListServiceInstancesRequest extends TeaModel {
         public String name;
 
         /**
-         * <p>The parameter values of the filter.</p>
+         * <p>The list of filter values.</p>
          */
         @NameInMap("Value")
         public java.util.List<String> value;

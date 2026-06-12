@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetServiceInstanceSubscriptionEstimateCostRequest extends TeaModel {
     /**
-     * <p>Ensures idempotence of the request. Generate a parameter value from your client to ensure its uniqueness across different requests. <strong>ClientToken</strong> supports only ASCII characters and cannot exceed 64 characters.</p>
+     * <p>A client-generated token that ensures the idempotence of the request. The token must be unique for each request. It can contain only ASCII characters and cannot be longer than 64 characters.</p>
      * 
      * <strong>example:</strong>
      * <p>123e4567-e89b-12d3-a456-426655440000</p>
@@ -14,7 +14,7 @@ public class GetServiceInstanceSubscriptionEstimateCostRequest extends TeaModel 
     public String clientToken;
 
     /**
-     * <p>Order type. Possible value: Renewal.</p>
+     * <p>The order type. Valid value: Renewal.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -24,7 +24,7 @@ public class GetServiceInstanceSubscriptionEstimateCostRequest extends TeaModel 
     public String orderType;
 
     /**
-     * <p>The renewal duration for all prepaid resources of the service instance. The unit is specified by PeriodUnit.</p>
+     * <p>The renewal duration for all subscription resources of the service instance. The unit is specified by PeriodUnit.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -33,7 +33,7 @@ public class GetServiceInstanceSubscriptionEstimateCostRequest extends TeaModel 
     public Integer period;
 
     /**
-     * <p>The time unit for the renewal duration of all prepaid resources of the service instance, which is the unit of the Period parameter. Valid values: Month, Year. Default value: Month.</p>
+     * <p>The unit of the renewal duration for all subscription resources of the service instance. This is the unit for the Period parameter. Valid values: Month and Year. Default value: Month.</p>
      * 
      * <strong>example:</strong>
      * <p>Month</p>
@@ -42,7 +42,7 @@ public class GetServiceInstanceSubscriptionEstimateCostRequest extends TeaModel 
     public String periodUnit;
 
     /**
-     * <p>Region ID.</p>
+     * <p>The region ID.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -51,13 +51,13 @@ public class GetServiceInstanceSubscriptionEstimateCostRequest extends TeaModel 
     public String regionId;
 
     /**
-     * <p>Resource renewal configuration.</p>
+     * <p>The renewal configuration for the resources.</p>
      */
     @NameInMap("ResourcePeriod")
     public java.util.List<GetServiceInstanceSubscriptionEstimateCostRequestResourcePeriod> resourcePeriod;
 
     /**
-     * <p>Service instance ID.</p>
+     * <p>The service instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -129,7 +129,7 @@ public class GetServiceInstanceSubscriptionEstimateCostRequest extends TeaModel 
 
     public static class GetServiceInstanceSubscriptionEstimateCostRequestResourcePeriod extends TeaModel {
         /**
-         * <p>Renewal duration. The unit is specified by PeriodUnit.</p>
+         * <p>The renewal duration. The unit is specified by PeriodUnit.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -138,7 +138,7 @@ public class GetServiceInstanceSubscriptionEstimateCostRequest extends TeaModel 
         public Integer period;
 
         /**
-         * <p>The time unit for the resource renewal duration, which is the unit of the Period parameter. Valid values: Month, Year. Default value: Month.</p>
+         * <p>The unit of the renewal duration for the resource. This is the unit for the Period parameter. Valid values: Month and Year. Default value: Month.</p>
          * 
          * <strong>example:</strong>
          * <p>Month</p>
@@ -147,7 +147,7 @@ public class GetServiceInstanceSubscriptionEstimateCostRequest extends TeaModel 
         public String periodUnit;
 
         /**
-         * <p>Resource ARN (Aliyun Resource Name).</p>
+         * <p>The Alibaba Cloud Resource Name (ARN) of the resource.</p>
          * 
          * <strong>example:</strong>
          * <p>acs:ecs:cn-guangzhou:1361753504587228:instance/i-7xv9pgeqvhxg10jji3vd</p>

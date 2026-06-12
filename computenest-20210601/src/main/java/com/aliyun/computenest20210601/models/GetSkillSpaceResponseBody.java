@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetSkillSpaceResponseBody extends TeaModel {
     /**
+     * <p>The time when the SkillSpace was created.</p>
+     * 
      * <strong>example:</strong>
      * <p>2021-05-20T00:00:00Z</p>
      */
@@ -12,7 +14,7 @@ public class GetSkillSpaceResponseBody extends TeaModel {
     public String createTime;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>13FE89A5-C036-56BF-A0FF-A31C59819FD7</p>
@@ -21,6 +23,8 @@ public class GetSkillSpaceResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The description of the SkillSpace.</p>
+     * 
      * <strong>example:</strong>
      * <p>1111111</p>
      */
@@ -28,6 +32,8 @@ public class GetSkillSpaceResponseBody extends TeaModel {
     public String skillSpaceDescription;
 
     /**
+     * <p>The ID of the SkillSpace.</p>
+     * 
      * <strong>example:</strong>
      * <p>ss-11111</p>
      */
@@ -35,6 +41,8 @@ public class GetSkillSpaceResponseBody extends TeaModel {
     public String skillSpaceId;
 
     /**
+     * <p>The name of the SkillSpace.</p>
+     * 
      * <strong>example:</strong>
      * <p>1111111</p>
      */
@@ -42,6 +50,8 @@ public class GetSkillSpaceResponseBody extends TeaModel {
     public String skillSpaceName;
 
     /**
+     * <p>The time when the SkillSpace was last updated.</p>
+     * 
      * <strong>example:</strong>
      * <p>2021-05-20T00:00:00Z</p>
      */

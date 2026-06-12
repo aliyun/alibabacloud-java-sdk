@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListPoliciesResponseBody extends TeaModel {
     /**
-     * <p>分页大小。</p>
+     * <p>The number of entries returned per page.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -14,7 +14,7 @@ public class ListPoliciesResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>Next Token</p>
+     * <p>The token that is used to retrieve the next page of results.</p>
      * 
      * <strong>example:</strong>
      * <p>AAAAAZ9FmxgN6wKfeK/GOKRnnjU=</p>
@@ -23,13 +23,13 @@ public class ListPoliciesResponseBody extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>Permission policy list</p>
+     * <p>The list of access policies.</p>
      */
     @NameInMap("Policies")
     public java.util.List<ListPoliciesResponseBodyPolicies> policies;
 
     /**
-     * <p>Request ID</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>51945B04-6AA6-410D-93BA-236E0248B104</p>
@@ -76,16 +76,16 @@ public class ListPoliciesResponseBody extends TeaModel {
 
     public static class ListPoliciesResponseBodyPolicies extends TeaModel {
         /**
-         * <p>Permission policy description.</p>
+         * <p>The description of the access policy.</p>
          * 
          * <strong>example:</strong>
-         * <p>Only read permission policy</p>
+         * <p>Read-only permission</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
-         * <p>Policy content.</p>
+         * <p>The content of the policy.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;Action&quot;:[&quot;<em>:Describe</em>&quot;,&quot;<em>:List</em>&quot;,&quot;<em>:Get</em>&quot;,&quot;<em>:BatchGet</em>&quot;,&quot;<em>:Query</em>&quot;,&quot;<em>:BatchQuery</em>&quot;,&quot;actiontrail:LookupEvents&quot;],&quot;Resource&quot;:[&quot;*&quot;],&quot;Effect&quot;:&quot;Allow&quot;}</p>
@@ -94,7 +94,7 @@ public class ListPoliciesResponseBody extends TeaModel {
         public String policyDocument;
 
         /**
-         * <p>Permission policy name.</p>
+         * <p>The name of the access policy.</p>
          * 
          * <strong>example:</strong>
          * <p>AliyunComputeNestPolicyForReadOnly</p>
@@ -103,10 +103,12 @@ public class ListPoliciesResponseBody extends TeaModel {
         public String policyName;
 
         /**
-         * <p>Permission policy type.</p>
+         * <p>The type of the access policy.</p>
          * <ul>
-         * <li>Custom: Custom policy.</li>
-         * <li>System: System policy.</li>
+         * <li><p>Custom: A custom policy.</p>
+         * </li>
+         * <li><p>System: A system policy.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

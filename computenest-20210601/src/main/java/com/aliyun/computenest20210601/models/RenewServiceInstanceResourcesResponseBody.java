@@ -5,19 +5,19 @@ import com.aliyun.tea.*;
 
 public class RenewServiceInstanceResourcesResponseBody extends TeaModel {
     /**
-     * <p>Details of failed renewals.</p>
+     * <p>The details of renewal failures.</p>
      */
     @NameInMap("FailureDetails")
     public java.util.List<RenewServiceInstanceResourcesResponseBodyFailureDetails> failureDetails;
 
     /**
-     * <p>Renewal result.</p>
+     * <p>The renewal result.</p>
      */
     @NameInMap("RenewalResult")
     public RenewServiceInstanceResourcesResponseBodyRenewalResult renewalResult;
 
     /**
-     * <p>Request ID.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>13FE89A5-C036-56BF-A0FF-A31C59819FD7</p>
@@ -56,7 +56,7 @@ public class RenewServiceInstanceResourcesResponseBody extends TeaModel {
 
     public static class RenewServiceInstanceResourcesResponseBodyFailureDetails extends TeaModel {
         /**
-         * <p>Error code.</p>
+         * <p>The error code.</p>
          * 
          * <strong>example:</strong>
          * <p>InvalidPeriod</p>
@@ -65,16 +65,16 @@ public class RenewServiceInstanceResourcesResponseBody extends TeaModel {
         public String errorCode;
 
         /**
-         * <p>Error message.</p>
+         * <p>The error message.</p>
          * 
          * <strong>example:</strong>
-         * <p>Error message</p>
+         * <p>Renewal failure reason.</p>
          */
         @NameInMap("ErrorMessage")
         public String errorMessage;
 
         /**
-         * <p>Resource ARN (Aliyun Resource Name).</p>
+         * <p>The ARN of the resource.</p>
          * 
          * <strong>example:</strong>
          * <p>acs:ecs:cn-hongkong:1488317743351199:instance/i-j6c6f3lbky38o8rpeqw2</p>
@@ -115,7 +115,7 @@ public class RenewServiceInstanceResourcesResponseBody extends TeaModel {
 
     public static class RenewServiceInstanceResourcesResponseBodyRenewalResult extends TeaModel {
         /**
-         * <p>Number of failed renewals.</p>
+         * <p>The number of resources that failed to be renewed.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -124,7 +124,7 @@ public class RenewServiceInstanceResourcesResponseBody extends TeaModel {
         public Integer failed;
 
         /**
-         * <p>Number of successfully renewed resources.</p>
+         * <p>The number of successfully renewed resources.</p>
          * 
          * <strong>example:</strong>
          * <p>9</p>
@@ -133,7 +133,7 @@ public class RenewServiceInstanceResourcesResponseBody extends TeaModel {
         public Integer succeeded;
 
         /**
-         * <p>Number of renewed resources.</p>
+         * <p>The number of resources to be renewed.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
