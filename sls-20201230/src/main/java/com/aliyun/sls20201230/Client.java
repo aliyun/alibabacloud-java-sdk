@@ -3520,6 +3520,74 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
+     * <p>The Host is composed of the project name and the Log Service endpoint. You need to specify the project in the Host.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes log data from a Logstore under a specified project</p>
+     * 
+     * @param request DeleteLogsRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteLogsResponse
+     */
+    public DeleteLogsResponse deleteLogsWithOptions(String project, String logstore, DeleteLogsRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, String> hostMap = new java.util.HashMap<>();
+        hostMap.put("project", project);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.from)) {
+            body.put("from", request.from);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.query)) {
+            body.put("query", request.query);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.rowId)) {
+            body.put("rowId", request.rowId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.to)) {
+            body.put("to", request.to);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("hostMap", hostMap),
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteLogs"),
+            new TeaPair("version", "2020-12-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/logstores/" + logstore + "/deletelogs"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.execute(params, req, runtime), new DeleteLogsResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>The Host is composed of the project name and the Log Service endpoint. You need to specify the project in the Host.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes log data from a Logstore under a specified project</p>
+     * 
+     * @param request DeleteLogsRequest
+     * @return DeleteLogsResponse
+     */
+    public DeleteLogsResponse deleteLogs(String project, String logstore, DeleteLogsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.deleteLogsWithOptions(project, logstore, request, headers, runtime);
+    }
+
+    /**
+     * <b>description</b> :
      * <p>The UK (London) region is supported. Supported regions are constantly updated.</p>
      * 
      * <b>summary</b> : 

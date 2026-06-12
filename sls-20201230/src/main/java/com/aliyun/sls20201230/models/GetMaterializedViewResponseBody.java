@@ -40,6 +40,9 @@ public class GetMaterializedViewResponseBody extends TeaModel {
     @NameInMap("startTime")
     public Integer startTime;
 
+    @NameInMap("status")
+    public GetMaterializedViewResponseBodyStatus status;
+
     /**
      * <p>The time to live (ttl) of the data in the destination logstore, in days.</p>
      */
@@ -99,12 +102,61 @@ public class GetMaterializedViewResponseBody extends TeaModel {
         return this.startTime;
     }
 
+    public GetMaterializedViewResponseBody setStatus(GetMaterializedViewResponseBodyStatus status) {
+        this.status = status;
+        return this;
+    }
+    public GetMaterializedViewResponseBodyStatus getStatus() {
+        return this.status;
+    }
+
     public GetMaterializedViewResponseBody setTtl(Integer ttl) {
         this.ttl = ttl;
         return this;
     }
     public Integer getTtl() {
         return this.ttl;
+    }
+
+    public static class GetMaterializedViewResponseBodyStatus extends TeaModel {
+        @NameInMap("lastRunError")
+        public String lastRunError;
+
+        @NameInMap("lastRunTime")
+        public Long lastRunTime;
+
+        @NameInMap("maxCursorTime")
+        public Long maxCursorTime;
+
+        public static GetMaterializedViewResponseBodyStatus build(java.util.Map<String, ?> map) throws Exception {
+            GetMaterializedViewResponseBodyStatus self = new GetMaterializedViewResponseBodyStatus();
+            return TeaModel.build(map, self);
+        }
+
+        public GetMaterializedViewResponseBodyStatus setLastRunError(String lastRunError) {
+            this.lastRunError = lastRunError;
+            return this;
+        }
+        public String getLastRunError() {
+            return this.lastRunError;
+        }
+
+        public GetMaterializedViewResponseBodyStatus setLastRunTime(Long lastRunTime) {
+            this.lastRunTime = lastRunTime;
+            return this;
+        }
+        public Long getLastRunTime() {
+            return this.lastRunTime;
+        }
+
+        public GetMaterializedViewResponseBodyStatus setMaxCursorTime(Long maxCursorTime) {
+            this.maxCursorTime = maxCursorTime;
+            return this;
+        }
+        public Long getMaxCursorTime() {
+            return this.maxCursorTime;
+        }
+
     }
 
 }
