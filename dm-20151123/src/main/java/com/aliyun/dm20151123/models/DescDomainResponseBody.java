@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescDomainResponseBody extends TeaModel {
     /**
-     * <p>CNAME verification flag, 0 for success, 1 for failure.</p>
+     * <p>The CNAME verification status. Valid values: <code>0</code> (Success), <code>1</code> (Failure).</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -14,7 +14,7 @@ public class DescDomainResponseBody extends TeaModel {
     public String cnameAuthStatus;
 
     /**
-     * <p>Indicates whether the CNAME host record has been modified, 1 for modified (reverting to the original value also counts as modification), 0 for not modified.</p>
+     * <p>Indicates if the CNAME host record has been modified. A value of <code>1</code> indicates a change, including reverting to the original value. A value of <code>0</code> indicates no change.</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>
@@ -23,7 +23,7 @@ public class DescDomainResponseBody extends TeaModel {
     public String cnameConfirmStatus;
 
     /**
-     * <p>Custom part of the CNAME host record</p>
+     * <p>The CNAME host record.</p>
      * 
      * <strong>example:</strong>
      * <p>dmtrace</p>
@@ -32,7 +32,7 @@ public class DescDomainResponseBody extends TeaModel {
     public String cnameRecord;
 
     /**
-     * <p>Creation time</p>
+     * <p>The time the domain name was created.</p>
      * 
      * <strong>example:</strong>
      * <p>2025-03-19T12:49Z</p>
@@ -41,8 +41,8 @@ public class DescDomainResponseBody extends TeaModel {
     public String createTime;
 
     /**
-     * <p>Whether it is the default domain,</p>
-     * <p>Value: 0 No (this field is deprecated)</p>
+     * <p>Indicates if this is the default domain name.</p>
+     * <p>This parameter is deprecated and always returns <code>0</code> (No).</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>
@@ -51,7 +51,7 @@ public class DescDomainResponseBody extends TeaModel {
     public String defaultDomain;
 
     /**
-     * <p>DKIM verification flag, indicating whether the DKIM record set by the user in DNS has passed validation, 0: Passed, 1: Not passed</p>
+     * <p>The DKIM verification status. Valid values: <code>0</code> (Verified), <code>1</code> (Not verified).</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>
@@ -60,7 +60,7 @@ public class DescDomainResponseBody extends TeaModel {
     public String dkimAuthStatus;
 
     /**
-     * <p>DKIM public key value, the value that users need to set for the DKIM record in DNS</p>
+     * <p>The public key for the DKIM record.</p>
      * 
      * <strong>example:</strong>
      * <p>v=DKIM1; k=rsa; p=MIGfMA0GCSqGSI...</p>
@@ -69,7 +69,7 @@ public class DescDomainResponseBody extends TeaModel {
     public String dkimPublicKey;
 
     /**
-     * <p>DKIM host record, the key that the user needs to set in the DNS for the DKIM record</p>
+     * <p>The DKIM host record.</p>
      * 
      * <strong>example:</strong>
      * <p>aliyun-cn-hangzhou._domainkey.hangzhou26</p>
@@ -77,11 +77,17 @@ public class DescDomainResponseBody extends TeaModel {
     @NameInMap("DkimRR")
     public String dkimRR;
 
+    /**
+     * <p>The length of the DKIM RSA key, such as <code>1024</code> or <code>2048</code>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1024</p>
+     */
     @NameInMap("DkimRsaLength")
     public Integer dkimRsaLength;
 
     /**
-     * <p>DMARC verification flag, indicating whether the DMARC record set by the user in DNS has passed validation, 0: Passed, 1: Not passed</p>
+     * <p>The DMARC verification status. Valid values: <code>0</code> (Verified), <code>1</code> (Not verified).</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -90,7 +96,7 @@ public class DescDomainResponseBody extends TeaModel {
     public Integer dmarcAuthStatus;
 
     /**
-     * <p>DMARC host record value</p>
+     * <p>The DMARC host record.</p>
      * 
      * <strong>example:</strong>
      * <p>_dmarc.xxx</p>
@@ -99,7 +105,7 @@ public class DescDomainResponseBody extends TeaModel {
     public String dmarcHostRecord;
 
     /**
-     * <p>DMARC record value</p>
+     * <p>The DMARC record value.</p>
      * 
      * <strong>example:</strong>
      * <p>v=DMARC1;p=none;rua=mailto:<a href="mailto:dmarc_report@service.aliyun.com">dmarc_report@service.aliyun.com</a></p>
@@ -108,7 +114,7 @@ public class DescDomainResponseBody extends TeaModel {
     public String dmarcRecord;
 
     /**
-     * <p>DMARC record value resolved through the public domain name</p>
+     * <p>The DMARC record value resolved from public DNS.</p>
      * 
      * <strong>example:</strong>
      * <p>v=DMARC1;p=none;rua=mailto:<a href="mailto:dmarc_report@service.aliyun.com">dmarc_report@service.aliyun.com</a></p>
@@ -117,7 +123,7 @@ public class DescDomainResponseBody extends TeaModel {
     public String dnsDmarc;
 
     /**
-     * <p>MX record value resolved from the public network domain</p>
+     * <p>The MX record value resolved from public DNS.</p>
      * 
      * <strong>example:</strong>
      * <p>mx01.dm.aliyun.com</p>
@@ -126,7 +132,7 @@ public class DescDomainResponseBody extends TeaModel {
     public String dnsMx;
 
     /**
-     * <p>SPF record value resolved from the public network domain</p>
+     * <p>The SPF record value resolved from public DNS.</p>
      * 
      * <strong>example:</strong>
      * <p>v=xxxx</p>
@@ -135,7 +141,7 @@ public class DescDomainResponseBody extends TeaModel {
     public String dnsSpf;
 
     /**
-     * <p>Ownership record value resolved from the public network domain</p>
+     * <p>The ownership record value resolved from public DNS.</p>
      * 
      * <strong>example:</strong>
      * <p>0c40d5f125af4e42892a</p>
@@ -144,7 +150,7 @@ public class DescDomainResponseBody extends TeaModel {
     public String dnsTxt;
 
     /**
-     * <p>Domain ID</p>
+     * <p>The domain ID.</p>
      * 
      * <strong>example:</strong>
      * <p>158910</p>
@@ -153,7 +159,7 @@ public class DescDomainResponseBody extends TeaModel {
     public String domainId;
 
     /**
-     * <p>Domain name</p>
+     * <p>The domain name.</p>
      * 
      * <strong>example:</strong>
      * <p>test.example.net</p>
@@ -162,10 +168,12 @@ public class DescDomainResponseBody extends TeaModel {
     public String domainName;
 
     /**
-     * <p>Domain status. Indicates whether the verification was successful, with values:</p>
+     * <p>The verification status of the domain name. Valid values:</p>
      * <ul>
-     * <li><strong>0</strong>: Available, verified successfully</li>
-     * <li><strong>1</strong>: Unavailable, verification failed</li>
+     * <li><p><strong>0</strong>: Available. The domain name is verified.</p>
+     * </li>
+     * <li><p><strong>1</strong>: Unavailable. The domain name failed verification.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -175,7 +183,7 @@ public class DescDomainResponseBody extends TeaModel {
     public String domainStatus;
 
     /**
-     * <p>Ownership record provided by the email push console</p>
+     * <p>The required value for the domain ownership verification record, from the Direct Mail console.</p>
      * 
      * <strong>example:</strong>
      * <p>0c40d5f125af4e42892a</p>
@@ -187,7 +195,7 @@ public class DescDomainResponseBody extends TeaModel {
     public Integer domainVersion;
 
     /**
-     * <p>Host record</p>
+     * <p>The host record for domain ownership verification.</p>
      * 
      * <strong>example:</strong>
      * <p>xxx</p>
@@ -196,7 +204,7 @@ public class DescDomainResponseBody extends TeaModel {
     public String hostRecord;
 
     /**
-     * <p>Filing status. <strong>1</strong> indicates filed, <strong>0</strong> indicates not filed.</p>
+     * <p>The ICP filing status. <strong>1</strong> indicates the filing is complete. <strong>0</strong> indicates no filing is found.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -205,7 +213,7 @@ public class DescDomainResponseBody extends TeaModel {
     public String icpStatus;
 
     /**
-     * <p>MX verification flag, 0 for success, 1 for failure.</p>
+     * <p>The MX verification status. Valid values: <code>0</code> (Success), <code>1</code> (Failure).</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -214,7 +222,7 @@ public class DescDomainResponseBody extends TeaModel {
     public String mxAuthStatus;
 
     /**
-     * <p>MX record value provided by the email push console</p>
+     * <p>The MX record value from the Direct Mail console.</p>
      * 
      * <strong>example:</strong>
      * <p>mx01.dm.aliyun.com</p>
@@ -223,7 +231,7 @@ public class DescDomainResponseBody extends TeaModel {
     public String mxRecord;
 
     /**
-     * <p>Request ID</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>51B74264-46B4-43C8-A9A0-6B8E8BC04F34</p>
@@ -232,7 +240,7 @@ public class DescDomainResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>SPF verification flag, 0 for success, 1 for failure.</p>
+     * <p>The SPF verification status. Valid values: <code>0</code> (Success), <code>1</code> (Failure).</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -241,7 +249,7 @@ public class DescDomainResponseBody extends TeaModel {
     public String spfAuthStatus;
 
     /**
-     * <p>SPF record value provided by the email push console</p>
+     * <p>The SPF record value from the Direct Mail console.</p>
      * 
      * <strong>example:</strong>
      * <p>include:spf1.dm.aliyun.com</p>
@@ -250,7 +258,7 @@ public class DescDomainResponseBody extends TeaModel {
     public String spfRecord;
 
     /**
-     * <p>SPF record. Previously, the SPF display content needed to be calculated by the calling end based on the spfRecord in the response. The new field spfRecordV2 replaces spfRecord, and the calling end can directly display this field after obtaining it;</p>
+     * <p>The complete SPF record. This parameter replaces <code>SpfRecord</code>. You can directly use the value of <code>SpfRecordV2</code> without constructing it from the value of <code>SpfRecord</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>v=spf1 include:spf1.dm.aliyun.com -all</p>
@@ -259,7 +267,7 @@ public class DescDomainResponseBody extends TeaModel {
     public String spfRecordV2;
 
     /**
-     * <p>Primary domain</p>
+     * <p>The root domain.</p>
      * 
      * <strong>example:</strong>
      * <p>example.com</p>
@@ -268,7 +276,7 @@ public class DescDomainResponseBody extends TeaModel {
     public String tlDomainName;
 
     /**
-     * <p>CNAME record value provided by the email push console</p>
+     * <p>The CNAME record value from the Direct Mail console.</p>
      * 
      * <strong>example:</strong>
      * <p>tracedm.aliyuncs.com</p>

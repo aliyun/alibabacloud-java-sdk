@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DeleteValidateFileRequest extends TeaModel {
     /**
+     * <p>The ID of the file that is returned after the task is submitted.</p>
+     * 
      * <strong>example:</strong>
      * <p>xxxx-xxxx-xxxx-xxxx</p>
      */

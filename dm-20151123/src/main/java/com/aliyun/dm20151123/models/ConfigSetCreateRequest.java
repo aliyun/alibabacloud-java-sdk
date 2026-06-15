@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ConfigSetCreateRequest extends TeaModel {
     /**
+     * <p>A description of the configuration set (up to 50 characters).</p>
+     * 
      * <strong>example:</strong>
      * <p>XXX</p>
      */
@@ -12,6 +14,8 @@ public class ConfigSetCreateRequest extends TeaModel {
     public String description;
 
     /**
+     * <p>The ID of an IP pool to associate with the configuration set. This parameter is optional.</p>
+     * 
      * <strong>example:</strong>
      * <p>XXX</p>
      */
@@ -22,6 +26,8 @@ public class ConfigSetCreateRequest extends TeaModel {
     public Boolean isPublicChannelBackoff;
 
     /**
+     * <p>The name of the configuration set. The name must be unique and can contain up to 50 characters. This parameter is required.</p>
+     * 
      * <strong>example:</strong>
      * <p>XXX</p>
      */

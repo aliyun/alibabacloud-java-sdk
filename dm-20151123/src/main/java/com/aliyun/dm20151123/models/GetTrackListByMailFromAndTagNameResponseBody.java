@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class GetTrackListByMailFromAndTagNameResponseBody extends TeaModel {
     /**
-     * <p>Used for pagination. Not set for the first query; for subsequent queries, set to the value of OffsetCreateTime from the previous response. (This field is deprecated)</p>
+     * <p>Used for paging. Do not set this parameter for the first query. For subsequent queries, set this parameter to the OffsetCreateTime value from the previous response. (This field is deprecated)</p>
      * 
      * <strong>example:</strong>
-     * <p>（本字段已废弃）</p>
+     * <p>(This field is deprecated.)</p>
      */
     @NameInMap("OffsetCreateTime")
     public String offsetCreateTime;
@@ -17,13 +17,13 @@ public class GetTrackListByMailFromAndTagNameResponseBody extends TeaModel {
      * <p>(This field is deprecated)</p>
      * 
      * <strong>example:</strong>
-     * <p>（本字段已废弃）</p>
+     * <p>(This field is deprecated.)</p>
      */
     @NameInMap("OffsetCreateTimeDesc")
     public String offsetCreateTimeDesc;
 
     /**
-     * <p>Current page number</p>
+     * <p>The current page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -32,7 +32,7 @@ public class GetTrackListByMailFromAndTagNameResponseBody extends TeaModel {
     public Integer pageNo;
 
     /**
-     * <p>Page size</p>
+     * <p>The number of entries per page.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -41,7 +41,7 @@ public class GetTrackListByMailFromAndTagNameResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>Request ID</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>10A1AD70-E48E-476D-98D9-39BD92193837</p>
@@ -58,6 +58,12 @@ public class GetTrackListByMailFromAndTagNameResponseBody extends TeaModel {
     @NameInMap("Total")
     public Integer total;
 
+    /**
+     * <p>The total number of pages.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
+     */
     @NameInMap("TotalPages")
     public String totalPages;
 

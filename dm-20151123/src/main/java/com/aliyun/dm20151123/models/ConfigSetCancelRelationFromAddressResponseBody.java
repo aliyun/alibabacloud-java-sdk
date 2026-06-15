@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ConfigSetCancelRelationFromAddressResponseBody extends TeaModel {
     /**
+     * <p>The ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>xxx</p>
      */
@@ -12,6 +14,8 @@ public class ConfigSetCancelRelationFromAddressResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The result of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

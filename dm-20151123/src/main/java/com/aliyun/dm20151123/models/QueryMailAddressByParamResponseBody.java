@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class QueryMailAddressByParamResponseBody extends TeaModel {
     /**
-     * <p>Current page number</p>
+     * <p>The current page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -14,7 +14,7 @@ public class QueryMailAddressByParamResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>Page size</p>
+     * <p>The number of entries per page.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -23,7 +23,7 @@ public class QueryMailAddressByParamResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>Request ID</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>95A7D497-F8DD-4834-B81E-C1783236E55F</p>
@@ -32,7 +32,7 @@ public class QueryMailAddressByParamResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Total count</p>
+     * <p>The total number of entries.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>

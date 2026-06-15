@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class QueryTaskByParamResponseBody extends TeaModel {
     /**
-     * <p>Current page number</p>
+     * <p>The page number.</p>
      * 
      * <strong>example:</strong>
      * <p>3</p>
@@ -14,7 +14,7 @@ public class QueryTaskByParamResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>Page size</p>
+     * <p>The number of entries per page.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -23,7 +23,7 @@ public class QueryTaskByParamResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>Request ID</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>10A1AD70-E48E-476D-98D9-39BD92193837</p>
@@ -32,7 +32,7 @@ public class QueryTaskByParamResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Total count</p>
+     * <p>The total number of entries.</p>
      * 
      * <strong>example:</strong>
      * <p>15</p>

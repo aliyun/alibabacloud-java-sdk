@@ -8,7 +8,7 @@ public class DeleteIpfilterByEdmIdRequest extends TeaModel {
      * <p>Deprecated, kept for historical compatibility.</p>
      * 
      * <strong>example:</strong>
-     * <p>1</p>
+     * <p>Deprecated. Kept for backward compatibility.</p>
      */
     @NameInMap("FromType")
     public Integer fromType;

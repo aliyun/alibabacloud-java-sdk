@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetValidationQuotaResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>xxxx-xxxx-xxxx-xxxx</p>
      */
@@ -12,6 +14,8 @@ public class GetValidationQuotaResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total available quota.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -19,6 +23,8 @@ public class GetValidationQuotaResponseBody extends TeaModel {
     public Integer totalQuota;
 
     /**
+     * <p>The used quota.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */

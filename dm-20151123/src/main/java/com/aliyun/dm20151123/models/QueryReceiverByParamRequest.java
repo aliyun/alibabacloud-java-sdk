@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class QueryReceiverByParamRequest extends TeaModel {
     /**
-     * <p>Keyword, defaults to all information if not specified</p>
+     * <p>The keyword to search for recipient lists. If omitted, all recipient lists are returned.</p>
      * 
      * <strong>example:</strong>
      * <p>mesh-notification</p>
@@ -17,7 +17,8 @@ public class QueryReceiverByParamRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>Current page number</p>
+     * <p>This deprecated field is kept for backward compatibility. You can omit this parameter.</p>
+     * <p>The page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -26,7 +27,8 @@ public class QueryReceiverByParamRequest extends TeaModel {
     public Integer pageNo;
 
     /**
-     * <p>Number of items per page, default: 10</p>
+     * <p>The page size. Default value: 100.</p>
+     * <p>Omitting this parameter returns all results. However, because the PageNo parameter is deprecated, the effect of PageSize on pagination is limited.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -41,12 +43,13 @@ public class QueryReceiverByParamRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>Delivery result. If not filled, it represents all statuses. Values:</p>
+     * <p>This deprecated field is kept for backward compatibility. You can omit this parameter.</p>
+     * <p>The list status. Valid values:</p>
      * <ul>
-     * <li>0: Success</li>
-     * <li>2: Invalid address</li>
-     * <li>3: Spam</li>
-     * <li>4: Failure</li>
+     * <li><p>0: uploading</p>
+     * </li>
+     * <li><p>1: upload complete</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

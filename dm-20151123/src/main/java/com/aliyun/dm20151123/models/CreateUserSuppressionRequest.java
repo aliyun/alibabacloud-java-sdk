@@ -8,7 +8,7 @@ public class CreateUserSuppressionRequest extends TeaModel {
      * <p>Email address or domain name</p>
      * 
      * <strong>example:</strong>
-     * <p><a href="mailto:test@example.net">test@example.net</a></p>
+     * <p><a href="mailto:Test@example.net">Test@example.net</a> orexample.net</p>
      */
     @NameInMap("Address")
     public String address;

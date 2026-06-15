@@ -9,9 +9,9 @@ public class AddIpfilterRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>xxx.xxx.xxx.xxx
-     * xxx.xxx.xxx.xxx-xxx.xxx.xxx.xxx
-     * xxx.xxx.xxx.xxx/xxx</p>
+     * <p>Single IP: xxx.xxx.xxx.xxx
+     * IP range: xxx.xxx.xxx.xxx-xxx.xxx.xxx.xxx
+     * CIDR: xxx.xxx.xxx.xxx/xxx</p>
      */
     @NameInMap("IpAddress")
     public String ipAddress;

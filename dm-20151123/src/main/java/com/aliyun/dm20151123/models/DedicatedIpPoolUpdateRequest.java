@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DedicatedIpPoolUpdateRequest extends TeaModel {
     /**
-     * <p>Purchased IP instance IDs, separated by commas; sourced from the DedicatedIpNonePoolList API\&quot;s returned IP purchase instance IDs</p>
+     * <p>The IDs of the purchased IP instances. Separate multiple IDs with commas. Obtain these IDs from the response of the DedicatedIpNonePoolList operation.</p>
      * 
      * <strong>example:</strong>
      * <p>xxx,xxx</p>
@@ -14,7 +14,7 @@ public class DedicatedIpPoolUpdateRequest extends TeaModel {
     public String buyResourceIds;
 
     /**
-     * <p>IP pool ID</p>
+     * <p>The ID of the IP pool.</p>
      * 
      * <strong>example:</strong>
      * <p>xxx</p>
@@ -23,7 +23,7 @@ public class DedicatedIpPoolUpdateRequest extends TeaModel {
     public String id;
 
     /**
-     * <p>Whether to change the associated IP, enter true</p>
+     * <p>Specifies whether to change the associated IP addresses. Set this parameter to true.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>

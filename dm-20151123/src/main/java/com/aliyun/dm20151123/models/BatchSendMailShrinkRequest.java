@@ -3,7 +3,7 @@ package com.aliyun.dm20151123.models;
 
 import com.aliyun.tea.*;
 
-public class BatchSendMailRequest extends TeaModel {
+public class BatchSendMailShrinkRequest extends TeaModel {
     /**
      * <p>The sender address configured in the management console.</p>
      * <p>This parameter is required.</p>
@@ -112,7 +112,7 @@ public class BatchSendMailRequest extends TeaModel {
      * <p>Example: [{&quot;To&quot;:[&quot;<a href="mailto:Jackie@example.com">Jackie@example.com</a>&quot;],&quot;TemplateData&quot;:{&quot;UserName&quot;:&quot;Jackie&quot;}},{&quot;To&quot;:[&quot;<a href="mailto:Tom@example.com">Tom@example.com</a>&quot;],&quot;TemplateData&quot;:{&quot;UserName&quot;:&quot;Tom&quot;}}].</p>
      */
     @NameInMap("Receivers")
-    public java.util.List<BatchSendMailRequestReceivers> receivers;
+    public String receiversShrink;
 
     /**
      * <p>The name of a pre-created recipient list that has recipients uploaded.</p>
@@ -169,7 +169,7 @@ public class BatchSendMailRequest extends TeaModel {
      * <p>The custom email content. Directly specify the content without creating a template in advance. Use this parameter or TemplateName. If both TemplateContent and TemplateName are specified, TemplateName takes precedence.</p>
      */
     @NameInMap("TemplateContent")
-    public BatchSendMailRequestTemplateContent templateContent;
+    public String templateContentShrink;
 
     /**
      * <p>The name of a pre-created and approved template.</p>
@@ -210,12 +210,12 @@ public class BatchSendMailRequest extends TeaModel {
     @NameInMap("UnSubscribeLinkType")
     public String unSubscribeLinkType;
 
-    public static BatchSendMailRequest build(java.util.Map<String, ?> map) throws Exception {
-        BatchSendMailRequest self = new BatchSendMailRequest();
+    public static BatchSendMailShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
+        BatchSendMailShrinkRequest self = new BatchSendMailShrinkRequest();
         return TeaModel.build(map, self);
     }
 
-    public BatchSendMailRequest setAccountName(String accountName) {
+    public BatchSendMailShrinkRequest setAccountName(String accountName) {
         this.accountName = accountName;
         return this;
     }
@@ -223,7 +223,7 @@ public class BatchSendMailRequest extends TeaModel {
         return this.accountName;
     }
 
-    public BatchSendMailRequest setAddressType(Integer addressType) {
+    public BatchSendMailShrinkRequest setAddressType(Integer addressType) {
         this.addressType = addressType;
         return this;
     }
@@ -231,7 +231,7 @@ public class BatchSendMailRequest extends TeaModel {
         return this.addressType;
     }
 
-    public BatchSendMailRequest setClickTrace(String clickTrace) {
+    public BatchSendMailShrinkRequest setClickTrace(String clickTrace) {
         this.clickTrace = clickTrace;
         return this;
     }
@@ -239,7 +239,7 @@ public class BatchSendMailRequest extends TeaModel {
         return this.clickTrace;
     }
 
-    public BatchSendMailRequest setDomainAuth(Boolean domainAuth) {
+    public BatchSendMailShrinkRequest setDomainAuth(Boolean domainAuth) {
         this.domainAuth = domainAuth;
         return this;
     }
@@ -247,7 +247,7 @@ public class BatchSendMailRequest extends TeaModel {
         return this.domainAuth;
     }
 
-    public BatchSendMailRequest setHeaders(String headers) {
+    public BatchSendMailShrinkRequest setHeaders(String headers) {
         this.headers = headers;
         return this;
     }
@@ -255,7 +255,7 @@ public class BatchSendMailRequest extends TeaModel {
         return this.headers;
     }
 
-    public BatchSendMailRequest setIpPoolId(String ipPoolId) {
+    public BatchSendMailShrinkRequest setIpPoolId(String ipPoolId) {
         this.ipPoolId = ipPoolId;
         return this;
     }
@@ -263,7 +263,7 @@ public class BatchSendMailRequest extends TeaModel {
         return this.ipPoolId;
     }
 
-    public BatchSendMailRequest setOwnerId(Long ownerId) {
+    public BatchSendMailShrinkRequest setOwnerId(Long ownerId) {
         this.ownerId = ownerId;
         return this;
     }
@@ -271,15 +271,15 @@ public class BatchSendMailRequest extends TeaModel {
         return this.ownerId;
     }
 
-    public BatchSendMailRequest setReceivers(java.util.List<BatchSendMailRequestReceivers> receivers) {
-        this.receivers = receivers;
+    public BatchSendMailShrinkRequest setReceiversShrink(String receiversShrink) {
+        this.receiversShrink = receiversShrink;
         return this;
     }
-    public java.util.List<BatchSendMailRequestReceivers> getReceivers() {
-        return this.receivers;
+    public String getReceiversShrink() {
+        return this.receiversShrink;
     }
 
-    public BatchSendMailRequest setReceiversName(String receiversName) {
+    public BatchSendMailShrinkRequest setReceiversName(String receiversName) {
         this.receiversName = receiversName;
         return this;
     }
@@ -287,7 +287,7 @@ public class BatchSendMailRequest extends TeaModel {
         return this.receiversName;
     }
 
-    public BatchSendMailRequest setReplyAddress(String replyAddress) {
+    public BatchSendMailShrinkRequest setReplyAddress(String replyAddress) {
         this.replyAddress = replyAddress;
         return this;
     }
@@ -295,7 +295,7 @@ public class BatchSendMailRequest extends TeaModel {
         return this.replyAddress;
     }
 
-    public BatchSendMailRequest setReplyAddressAlias(String replyAddressAlias) {
+    public BatchSendMailShrinkRequest setReplyAddressAlias(String replyAddressAlias) {
         this.replyAddressAlias = replyAddressAlias;
         return this;
     }
@@ -303,7 +303,7 @@ public class BatchSendMailRequest extends TeaModel {
         return this.replyAddressAlias;
     }
 
-    public BatchSendMailRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+    public BatchSendMailShrinkRequest setResourceOwnerAccount(String resourceOwnerAccount) {
         this.resourceOwnerAccount = resourceOwnerAccount;
         return this;
     }
@@ -311,7 +311,7 @@ public class BatchSendMailRequest extends TeaModel {
         return this.resourceOwnerAccount;
     }
 
-    public BatchSendMailRequest setResourceOwnerId(Long resourceOwnerId) {
+    public BatchSendMailShrinkRequest setResourceOwnerId(Long resourceOwnerId) {
         this.resourceOwnerId = resourceOwnerId;
         return this;
     }
@@ -319,7 +319,7 @@ public class BatchSendMailRequest extends TeaModel {
         return this.resourceOwnerId;
     }
 
-    public BatchSendMailRequest setTagName(String tagName) {
+    public BatchSendMailShrinkRequest setTagName(String tagName) {
         this.tagName = tagName;
         return this;
     }
@@ -327,15 +327,15 @@ public class BatchSendMailRequest extends TeaModel {
         return this.tagName;
     }
 
-    public BatchSendMailRequest setTemplateContent(BatchSendMailRequestTemplateContent templateContent) {
-        this.templateContent = templateContent;
+    public BatchSendMailShrinkRequest setTemplateContentShrink(String templateContentShrink) {
+        this.templateContentShrink = templateContentShrink;
         return this;
     }
-    public BatchSendMailRequestTemplateContent getTemplateContent() {
-        return this.templateContent;
+    public String getTemplateContentShrink() {
+        return this.templateContentShrink;
     }
 
-    public BatchSendMailRequest setTemplateName(String templateName) {
+    public BatchSendMailShrinkRequest setTemplateName(String templateName) {
         this.templateName = templateName;
         return this;
     }
@@ -343,7 +343,7 @@ public class BatchSendMailRequest extends TeaModel {
         return this.templateName;
     }
 
-    public BatchSendMailRequest setUnSubscribeFilterLevel(String unSubscribeFilterLevel) {
+    public BatchSendMailShrinkRequest setUnSubscribeFilterLevel(String unSubscribeFilterLevel) {
         this.unSubscribeFilterLevel = unSubscribeFilterLevel;
         return this;
     }
@@ -351,132 +351,12 @@ public class BatchSendMailRequest extends TeaModel {
         return this.unSubscribeFilterLevel;
     }
 
-    public BatchSendMailRequest setUnSubscribeLinkType(String unSubscribeLinkType) {
+    public BatchSendMailShrinkRequest setUnSubscribeLinkType(String unSubscribeLinkType) {
         this.unSubscribeLinkType = unSubscribeLinkType;
         return this;
     }
     public String getUnSubscribeLinkType() {
         return this.unSubscribeLinkType;
-    }
-
-    public static class BatchSendMailRequestReceivers extends TeaModel {
-        /**
-         * <p>The email template parameters. This is a JSON map data type.</p>
-         */
-        @NameInMap("TemplateData")
-        public java.util.Map<String, String> templateData;
-
-        /**
-         * <p>The recipient list. This is an array type.</p>
-         */
-        @NameInMap("To")
-        public java.util.List<String> to;
-
-        public static BatchSendMailRequestReceivers build(java.util.Map<String, ?> map) throws Exception {
-            BatchSendMailRequestReceivers self = new BatchSendMailRequestReceivers();
-            return TeaModel.build(map, self);
-        }
-
-        public BatchSendMailRequestReceivers setTemplateData(java.util.Map<String, String> templateData) {
-            this.templateData = templateData;
-            return this;
-        }
-        public java.util.Map<String, String> getTemplateData() {
-            return this.templateData;
-        }
-
-        public BatchSendMailRequestReceivers setTo(java.util.List<String> to) {
-            this.to = to;
-            return this;
-        }
-        public java.util.List<String> getTo() {
-            return this.to;
-        }
-
-    }
-
-    public static class BatchSendMailRequestTemplateContent extends TeaModel {
-        /**
-         * <p>The display name of the sender.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>Jackie</p>
-         */
-        @NameInMap("Alias")
-        public String alias;
-
-        /**
-         * <p>The HTML body of the email.</p>
-         * <blockquote>
-         * <p><strong>Note:</strong> HtmlBody and TextBody are for different types of email content. You must specify at least one of them.</p>
-         * </blockquote>
-         * <p>The new SDK uses Body for parameter passing with a limit of approximately 8 MB (Java 1.4.0 and later, Python3 1.4.0 and later, PHP 1.4.0 and later).</p>
-         * 
-         * <strong>example:</strong>
-         * <h1>全场九折，仅限今日</h1>
-         */
-        @NameInMap("HtmlBody")
-        public String htmlBody;
-
-        /**
-         * <p>The email subject.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>黑色星期五，专属折扣来袭</p>
-         */
-        @NameInMap("Subject")
-        public String subject;
-
-        /**
-         * <p>The plain text body of the email.</p>
-         * <blockquote>
-         * <p><strong>Note:</strong> HtmlBody and TextBody are for different types of email content. You must specify at least one of them.</p>
-         * </blockquote>
-         * <p>The new SDK uses Body for parameter passing with a limit of approximately 8 MB (Java 1.4.0 and later, Python3 1.4.0 and later, PHP 1.4.0 and later).</p>
-         * 
-         * <strong>example:</strong>
-         * <p>全场九折，仅限今日</p>
-         */
-        @NameInMap("TextBody")
-        public String textBody;
-
-        public static BatchSendMailRequestTemplateContent build(java.util.Map<String, ?> map) throws Exception {
-            BatchSendMailRequestTemplateContent self = new BatchSendMailRequestTemplateContent();
-            return TeaModel.build(map, self);
-        }
-
-        public BatchSendMailRequestTemplateContent setAlias(String alias) {
-            this.alias = alias;
-            return this;
-        }
-        public String getAlias() {
-            return this.alias;
-        }
-
-        public BatchSendMailRequestTemplateContent setHtmlBody(String htmlBody) {
-            this.htmlBody = htmlBody;
-            return this;
-        }
-        public String getHtmlBody() {
-            return this.htmlBody;
-        }
-
-        public BatchSendMailRequestTemplateContent setSubject(String subject) {
-            this.subject = subject;
-            return this;
-        }
-        public String getSubject() {
-            return this.subject;
-        }
-
-        public BatchSendMailRequestTemplateContent setTextBody(String textBody) {
-            this.textBody = textBody;
-            return this;
-        }
-        public String getTextBody() {
-            return this.textBody;
-        }
-
     }
 
 }

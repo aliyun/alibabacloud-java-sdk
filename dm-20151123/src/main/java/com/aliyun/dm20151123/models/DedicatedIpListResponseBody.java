@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DedicatedIpListResponseBody extends TeaModel {
     /**
-     * <p>Current page</p>
+     * <p>The current page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -14,7 +14,7 @@ public class DedicatedIpListResponseBody extends TeaModel {
     public Integer currentPage;
 
     /**
-     * <p>Whether there is a next page</p>
+     * <p>Indicates whether another page of results is available.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -23,13 +23,13 @@ public class DedicatedIpListResponseBody extends TeaModel {
     public Boolean hasMore;
 
     /**
-     * <p>IP list</p>
+     * <p>The list of IPs.</p>
      */
     @NameInMap("Ips")
     public java.util.List<DedicatedIpListResponseBodyIps> ips;
 
     /**
-     * <p>Page size</p>
+     * <p>The page size.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -38,7 +38,7 @@ public class DedicatedIpListResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>Request ID</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>xxx</p>
@@ -47,7 +47,7 @@ public class DedicatedIpListResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Total amount of purchased IP data</p>
+     * <p>The total number of purchased IPs.</p>
      * 
      * <strong>example:</strong>
      * <p>5</p>
@@ -110,7 +110,7 @@ public class DedicatedIpListResponseBody extends TeaModel {
 
     public static class DedicatedIpListResponseBodyIpsIpExt extends TeaModel {
         /**
-         * <p>Whether auto-renewal is enabled</p>
+         * <p>Indicates whether auto-renewal is enabled.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -119,7 +119,7 @@ public class DedicatedIpListResponseBody extends TeaModel {
         public Boolean autoRenewal;
 
         /**
-         * <p>Whether an email has been sent</p>
+         * <p>Indicates whether an email has been sent.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -127,6 +127,12 @@ public class DedicatedIpListResponseBody extends TeaModel {
         @NameInMap("HasSendMail")
         public Boolean hasSendMail;
 
+        /**
+         * <p>The last time the warm-up status changed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2025-08-07T07:23:49.329Z</p>
+         */
         @NameInMap("LastWarmUpTypeChangedTime")
         public String lastWarmUpTypeChangedTime;
 
@@ -163,7 +169,7 @@ public class DedicatedIpListResponseBody extends TeaModel {
 
     public static class DedicatedIpListResponseBodyIps extends TeaModel {
         /**
-         * <p>Expiration time</p>
+         * <p>The expiration time.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-06-12T09:19:20Z</p>
@@ -172,7 +178,7 @@ public class DedicatedIpListResponseBody extends TeaModel {
         public String expiredTime;
 
         /**
-         * <p>IP ID, consistent with the purchased instance ID</p>
+         * <p>The ID of the IP address, which is the same as the ID of the purchased instance.</p>
          * 
          * <strong>example:</strong>
          * <p>xxx</p>
@@ -181,7 +187,7 @@ public class DedicatedIpListResponseBody extends TeaModel {
         public String id;
 
         /**
-         * <p>Purchased instance ID</p>
+         * <p>The ID of the purchased instance.</p>
          * 
          * <strong>example:</strong>
          * <p>xxx</p>
@@ -190,7 +196,7 @@ public class DedicatedIpListResponseBody extends TeaModel {
         public String instanceId;
 
         /**
-         * <p>IP address</p>
+         * <p>The IP address.</p>
          * 
          * <strong>example:</strong>
          * <p>xxx</p>
@@ -199,13 +205,13 @@ public class DedicatedIpListResponseBody extends TeaModel {
         public String ip;
 
         /**
-         * <p>Extended information</p>
+         * <p>Extended properties.</p>
          */
         @NameInMap("IpExt")
         public DedicatedIpListResponseBodyIpsIpExt ipExt;
 
         /**
-         * <p>Name of the IP pool</p>
+         * <p>The name of the IP pool to which the IP belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>xxx</p>
@@ -214,7 +220,7 @@ public class DedicatedIpListResponseBody extends TeaModel {
         public String ipPoolName;
 
         /**
-         * <p>Purchase time</p>
+         * <p>The time when the IP was purchased.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-05-12T09:19:20Z</p>
@@ -223,7 +229,7 @@ public class DedicatedIpListResponseBody extends TeaModel {
         public String startTime;
 
         /**
-         * <p>IP status</p>
+         * <p>The status of the IP.</p>
          * 
          * <strong>example:</strong>
          * <p>sold</p>
@@ -232,7 +238,7 @@ public class DedicatedIpListResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>Warm-up status</p>
+         * <p>The warm-up status.</p>
          * 
          * <strong>example:</strong>
          * <p>finish</p>
@@ -241,7 +247,7 @@ public class DedicatedIpListResponseBody extends TeaModel {
         public String warmupStatus;
 
         /**
-         * <p>Warm-up method</p>
+         * <p>The warm-up method.</p>
          * 
          * <strong>example:</strong>
          * <p>cusSelfManager</p>
@@ -249,6 +255,30 @@ public class DedicatedIpListResponseBody extends TeaModel {
         @NameInMap("WarmupType")
         public String warmupType;
 
+        /**
+         * <p>The ID of the zone where the IP address is located.</p>
+         * <ul>
+         * <li><p>ap-southeast-1a</p>
+         * </li>
+         * <li><p>ap-southeast-1b</p>
+         * </li>
+         * <li><p>cn-hangzhou-k</p>
+         * </li>
+         * <li><p>cn-shanghai-l</p>
+         * </li>
+         * <li><p>eu-central-1a</p>
+         * </li>
+         * <li><p>eu-central-1b</p>
+         * </li>
+         * <li><p>us-east-1a</p>
+         * </li>
+         * <li><p>us-east-1b</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>ap-southeast-1a</p>
+         */
         @NameInMap("ZoneId")
         public String zoneId;
 

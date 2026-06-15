@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateTemplateResponseBody extends TeaModel {
     /**
-     * <p>idoftherequest</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>D1C7F6E1-6A4D-50B5-B864-640E9FCA8D0A</p>
@@ -14,6 +14,8 @@ public class CreateTemplateResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The template ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>415366</p>
      */

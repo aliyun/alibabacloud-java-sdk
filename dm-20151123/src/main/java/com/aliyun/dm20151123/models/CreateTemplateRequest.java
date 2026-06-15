@@ -4,12 +4,24 @@ package com.aliyun.dm20151123.models;
 import com.aliyun.tea.*;
 
 public class CreateTemplateRequest extends TeaModel {
+    /**
+     * <p>Deprecated. This parameter is retained for backward compatibility.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Abandoned, historical reasons for compatibility</p>
+     */
     @NameInMap("FromType")
     public Integer fromType;
 
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>Deprecated. This parameter is retained for backward compatibility.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Abandoned, historical reasons for compatibility</p>
+     */
     @NameInMap("Remark")
     public String remark;
 
@@ -19,31 +31,64 @@ public class CreateTemplateRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>Deprecated. This parameter is retained for backward compatibility.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Abandoned, historical reasons for compatibility</p>
+     */
     @NameInMap("SmsContent")
     public String smsContent;
 
+    /**
+     * <p>Deprecated. This parameter is retained for backward compatibility.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Abandoned, historical reasons for compatibility</p>
+     */
     @NameInMap("SmsType")
     public Integer smsType;
 
     /**
+     * <p>The template name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>001 Condom Manufacturer J48</p>
+     * <p>template name</p>
      */
     @NameInMap("TemplateName")
     public String templateName;
 
+    /**
+     * <p>The sender name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Tom</p>
+     */
     @NameInMap("TemplateNickName")
     public String templateNickName;
 
+    /**
+     * <p>The email subject.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>subject test</p>
+     */
     @NameInMap("TemplateSubject")
     public String templateSubject;
 
+    /**
+     * <p>The email HTML body.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
+     */
     @NameInMap("TemplateText")
     public String templateText;
 
     /**
+     * <p>The template type.</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */

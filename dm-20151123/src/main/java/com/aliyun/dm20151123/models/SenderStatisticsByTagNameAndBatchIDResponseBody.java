@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class SenderStatisticsByTagNameAndBatchIDResponseBody extends TeaModel {
     /**
-     * <p>Request ID</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>10A1AD70-E48E-476D-98D9-39BD92193837</p>
@@ -14,7 +14,7 @@ public class SenderStatisticsByTagNameAndBatchIDResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Total count</p>
+     * <p>The total count of data records.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -22,6 +22,9 @@ public class SenderStatisticsByTagNameAndBatchIDResponseBody extends TeaModel {
     @NameInMap("TotalCount")
     public Integer totalCount;
 
+    /**
+     * <p>Contains the statistical data.</p>
+     */
     @NameInMap("data")
     public SenderStatisticsByTagNameAndBatchIDResponseBodyData data;
 

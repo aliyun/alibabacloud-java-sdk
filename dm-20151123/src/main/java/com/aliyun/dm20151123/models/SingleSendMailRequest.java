@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class SingleSendMailRequest extends TeaModel {
     /**
-     * <p>The sending address configured in the management console.</p>
+     * <p>The sender address configured in the Direct Mail console.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,9 +15,9 @@ public class SingleSendMailRequest extends TeaModel {
     public String accountName;
 
     /**
-     * <p>Address type. Values:</p>
-     * <p>0: Random account</p>
-     * <p>1: Sending address</p>
+     * <p>The address type. Valid values:</p>
+     * <p><code>0</code>: A random account.</p>
+     * <p><code>1</code>: A sender address.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -27,12 +27,24 @@ public class SingleSendMailRequest extends TeaModel {
     public Integer addressType;
 
     /**
-     * <p>Only supported for use with the new version of the SDK; not currently supported by openapi and signature mechanisms.</p>
+     * <p>This feature is available only through the latest SDKs. It is not supported for OpenAPI calls or signature-based authentication. For more information, see <a href="https://help.aliyun.com/document_detail/2937843.html">How do I send an email with an attachment by using an SDK?</a>.</p>
      */
     @NameInMap("Attachments")
     public java.util.List<SingleSendMailRequestAttachments> attachments;
 
     /**
+     * <ul>
+     * <li><p>A comma-separated list of BCC recipients.</p>
+     * </li>
+     * <li><p>The system sends a copy of the email to each BCC recipient. The BCC information is hidden from all recipients, including those specified in <code>ToAddress</code> and <code>BccAddress</code>.</p>
+     * </li>
+     * <li><p>To protect privacy, email tracking features (such as open and click tracking) are disabled for emails sent to BCC recipients. However, billing and sending status are still tracked.</p>
+     * </li>
+     * <li><p>A maximum of two BCC recipients are allowed per request.</p>
+     * </li>
+     * </ul>
+     * <p>Note: The <code>SingleSendMail</code> API operation does not support a CC field. To send carbon copies, use SMTP.</p>
+     * 
      * <strong>example:</strong>
      * <p><a href="mailto:1@example.com">1@example.com</a>,<a href="mailto:2@example.com">2@example.com</a></p>
      * 
@@ -43,8 +55,7 @@ public class SingleSendMailRequest extends TeaModel {
     public String bccAddress;
 
     /**
-     * <p>1: Enable data tracking function</p>
-     * <p>0 (default): Disable data tracking function.</p>
+     * <p>Specifies whether to enable click tracking. Valid values: <code>&quot;1&quot;</code> enables click tracking, and <code>&quot;0&quot;</code> disables it (default).</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>
@@ -52,35 +63,72 @@ public class SingleSendMailRequest extends TeaModel {
     @NameInMap("ClickTrace")
     public String clickTrace;
 
+    /**
+     * <p>Specifies whether to enable domain-level authentication.</p>
+     * <ul>
+     * <li><p><code>true</code></p>
+     * </li>
+     * <li><p><code>false</code></p>
+     * </li>
+     * </ul>
+     * <p>This parameter is used only for domain-level authentication. Ignore it for sender address-level authentication.</p>
+     * <p>1\. Create the address <code>domain-auth-created-by-system@example.com</code> in the console. The prefix must be fixed, and the suffix must be your domain.</p>
+     * <p>2\.</p>
+     * <p><strong>API scenario</strong></p>
+     * <p>Set <code>AccountName</code> to your domain. Recipients will see the sender as <code>domain-auth-created-by-system@example.com</code>.</p>
+     * <p><strong>SMTP scenario</strong></p>
+     * <p>a. Call the <code>ModifyPWByDomain</code> API operation to set a password for the domain.</p>
+     * <p>b. Authenticate with the domain and the configured password. Pass a custom address, such as <code>user@example.com</code>, as the actual sender in the <code>MAIL FROM</code> command. Recipients will see <code>user@example.com</code> as the sender.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("DomainAuth")
     public Boolean domainAuth;
 
     /**
-     * <p>Sender alias, with a maximum length of 15 characters.</p>
-     * <p>For example, if the sender alias is set to &quot;Xiaohong&quot; and the sending address is test***@example.net, the recipient will see the sending address as &quot;Xiaohong&quot; <a href="mailto:test***@example.net">test***@example.net</a>.</p>
+     * <p>The sender name. It must be 15 characters or shorter.</p>
+     * <p>For example, if you set the sender name to &quot;Xiaohong&quot; and the sender address is <code>test***@example.net</code>, the recipient sees the sender as &quot;Xiaohong&quot; \&lt;test\*\*\*@example.net&gt;.</p>
      * 
      * <strong>example:</strong>
-     * <p>Xiaohong</p>
+     * <p>Jane</p>
      */
     @NameInMap("FromAlias")
     public String fromAlias;
 
     /**
-     * <p>Currently, the standard fields that can be added to the email header are Message-ID, List-Unsubscribe, and List-Unsubscribe-Post. Standard fields will overwrite the existing values in the email header, while non-standard fields need to start with X-User- and will be appended to the email header.
-     * Currently, up to 10 headers can be passed in JSON format, and both standard and non-standard fields must comply with the syntax requirements for headers.</p>
+     * <p>Custom email header settings.</p>
+     * <p>Both standard and non-standard fields must comply with standard header syntax. You can specify up to 10 headers for an API call. Excess headers are ignored. This limit does not apply to SMTP.</p>
+     * <p>1\. Standard fields</p>
+     * <p><code>Message-ID</code>, <code>List-Unsubscribe</code>, <code>List-Unsubscribe-Post</code></p>
+     * <p>Standard fields overwrite existing values in the email header.</p>
+     * <p>2\. Non-standard fields</p>
+     * <p>Case-insensitive.</p>
+     * <p>a. Fields starting with <code>X-User-</code>: These are not pushed to EventBridge or Message Service (MNS). This prefix is required only for API calls, not for SMTP.</p>
+     * <p>b. Fields starting with <code>X-User-Notify-</code>: These are pushed to EventBridge and MNS. This is supported for both API and SMTP calls.</p>
+     * <p>When pushed to EventBridge or MNS, the header object will contain these fields.</p>
      * 
      * <strong>example:</strong>
      * <p>{
-     *   &quot;Message-ID&quot;: &quot;<a href="mailto:msg0001@example.com">msg0001@example.com</a>&quot;,
-     *   &quot;X-User-UID1&quot;: &quot;UID-1-000001&quot;,
-     *   &quot;X-User-UID2&quot;: &quot;UID-2-000001&quot;
-     * }</p>
+     *       &quot;Message-ID&quot;: &quot;<a href="mailto:d52ce63e-a0d5-4f95-b6a9-e1256a44f5fb@example.net">d52ce63e-a0d5-4f95-b6a9-e1256a44f5fb@example.net</a>&quot;,
+     *       &quot;X-User-UID1&quot;: &quot;UID-1-000001&quot;,
+     *       &quot;X-User-UID2&quot;: &quot;UID-2-000001&quot;,
+     *       &quot;X-User-Notify-UID1&quot;: &quot;UID-3-000001&quot;,
+     *       &quot;X-User-Notify-UID2&quot;: &quot;UID-4-000001&quot;</p>
+     * <p>}</p>
      */
     @NameInMap("Headers")
     public String headers;
 
     /**
-     * <p>Email HTML body, limited to 80K by the SDK. Note: HtmlBody and TextBody are for different types of email content, and one of them must be provided.</p>
+     * <p>The HTML body of the email.</p>
+     * <p>Note: You must specify either <code>HtmlBody</code> or <code>TextBody</code>.</p>
+     * <ul>
+     * <li><p>The size of the body is limited to approximately 80 KB when passed as a URL parameter.</p>
+     * </li>
+     * <li><p>For recent SDKs (Java 1.4.0+, Python 3 1.4.0+, and PHP 1.4.0+), the request body is limited to approximately 8 MB.</p>
+     * </li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>body</p>
@@ -89,10 +137,10 @@ public class SingleSendMailRequest extends TeaModel {
     public String htmlBody;
 
     /**
-     * <p>dedicated IP pool ID. Users who have purchased an dedicated IP can use this parameter to specify the outgoing IP for this email.</p>
+     * <p>The ID of the dedicated IP pool. If you have purchased dedicated IPs, you can use this parameter to select which dedicated IP pool to use for sending the email. For more information, see <a href="https://help.aliyun.com/document_detail/2932088.html">Dedicated IP</a>.</p>
      * 
      * <strong>example:</strong>
-     * <p>xxx</p>
+     * <p>e4xxxxxe-4xx0-4xx3-8xxa-74cxxxxx1cef</p>
      */
     @NameInMap("IpPoolId")
     public String ipPoolId;
@@ -101,7 +149,7 @@ public class SingleSendMailRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>Reply-to address</p>
+     * <p>The reply-to address.</p>
      * 
      * <strong>example:</strong>
      * <p>test2***@example.net</p>
@@ -110,16 +158,16 @@ public class SingleSendMailRequest extends TeaModel {
     public String replyAddress;
 
     /**
-     * <p>Reply-to address alias</p>
+     * <p>The name displayed for the reply-to address.</p>
      * 
      * <strong>example:</strong>
-     * <p>Xiaohong</p>
+     * <p>Jane</p>
      */
     @NameInMap("ReplyAddressAlias")
     public String replyAddressAlias;
 
     /**
-     * <p>Whether to enable the reply-to address configured in the management console (the status must be verified). The value range is the string <code>true</code> or <code>false</code> (not a boolean value).</p>
+     * <p>Specifies whether to use the default reply-to address configured in the console. This address must be verified. Valid values: true, false.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -135,7 +183,7 @@ public class SingleSendMailRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>Email subject, with a maximum length of 100 characters.</p>
+     * <p>The subject of the email, with a maximum length of 256 characters.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -145,7 +193,7 @@ public class SingleSendMailRequest extends TeaModel {
     public String subject;
 
     /**
-     * <p>A tag created in the email push console, used to categorize batches of sent emails. You can use tags to query the sending status of each batch. Additionally, if the email tracking feature is enabled, you must use an email tag when sending emails.</p>
+     * <p>A tag for categorizing email batches, which you can create in the Direct Mail console. Tags allow you to query the sending status of each batch and are required if you enable email tracking. The tag must be 1 to 128 characters long and can contain letters, digits, underscores (_), and hyphens (-).</p>
      * 
      * <strong>example:</strong>
      * <p>test</p>
@@ -153,11 +201,21 @@ public class SingleSendMailRequest extends TeaModel {
     @NameInMap("TagName")
     public String tagName;
 
+    /**
+     * <p>The template information for sending a templated email.</p>
+     */
     @NameInMap("Template")
     public SingleSendMailRequestTemplate template;
 
     /**
-     * <p>Email text body, limited to 80K by the SDK. Note: HtmlBody and TextBody are for different types of email content, and one of them must be provided.</p>
+     * <p>The text body of the email.</p>
+     * <p>Note: You must specify either <code>HtmlBody</code> or <code>TextBody</code>.</p>
+     * <ul>
+     * <li><p>The size of the body is limited to approximately 80 KB when passed as a URL parameter.</p>
+     * </li>
+     * <li><p>For recent SDKs (Java 1.4.0+, Python 3 1.4.0+, and PHP 1.4.0+), the request body is limited to approximately 8 MB.</p>
+     * </li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>body</p>
@@ -166,7 +224,7 @@ public class SingleSendMailRequest extends TeaModel {
     public String textBody;
 
     /**
-     * <p>Recipient addresses. Multiple email addresses can be separated by commas, with a maximum of 100 addresses (supports mailing lists).</p>
+     * <p>The destination email address(es). To specify multiple addresses, separate them with commas (up to 100).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -176,12 +234,12 @@ public class SingleSendMailRequest extends TeaModel {
     public String toAddress;
 
     /**
-     * <p>Filtering level. Refer to the <a href="https://help.aliyun.com/document_detail/2689048.html">Unsubscribe Function Link Generation and Filtering Mechanism</a> document.</p>
-     * <p>disabled: Do not filter</p>
-     * <p>default: Use the default strategy, bulk addresses use the sending address level filtering</p>
-     * <p>mailfrom: Sending address level filtering</p>
-     * <p>mailfrom_domain: Sending domain level filtering</p>
-     * <p>edm_id: Account level filtering</p>
+     * <p>The filtering level. For more information, see <a href="https://help.aliyun.com/document_detail/2689048.html">Unsubscribe link generation and filtering mechanism</a>.</p>
+     * <p><code>disabled</code>: No filtering.</p>
+     * <p><code>default</code>: Uses the default policy. For batch addresses, filtering is applied at the sender address level.</p>
+     * <p><code>mailfrom</code>: Filters at the sender address level.</p>
+     * <p><code>mailfrom_domain</code>: Filters at the sender domain level.</p>
+     * <p><code>edm_id</code>: Filters at the account level.</p>
      * 
      * <strong>example:</strong>
      * <p>mailfrom_domain</p>
@@ -190,13 +248,11 @@ public class SingleSendMailRequest extends TeaModel {
     public String unSubscribeFilterLevel;
 
     /**
-     * <p>Type of generated unsubscribe link. Refer to the <a href="https://help.aliyun.com/document_detail/2689048.html">Unsubscribe Function Link Generation and Filtering Mechanism</a> document.</p>
-     * <p>disabled: Do not generate</p>
-     * <p>default: Use the default strategy: Generate unsubscribe links for bulk-type sending addresses to specific domains, such as those containing the keywords &quot;gmail&quot;, &quot;yahoo&quot;,</p>
+     * <p><code>disabled</code>: Does not generate an unsubscribe link.</p>
+     * <p><code>default</code>: Uses the default policy. For batch sender addresses, an unsubscribe link is generated when sending to specific domains containing keywords such as &quot;gmail&quot;, &quot;yahoo&quot;,</p>
      * <p>&quot;google&quot;, &quot;aol.com&quot;, &quot;hotmail&quot;,</p>
-     * <p>&quot;outlook&quot;, &quot;ymail.com&quot;, etc.</p>
-     * <p>zh-cn: Generate, for future content preparation</p>
-     * <p>en-us: Generate, for future content preparation</p>
+     * <p>&quot;outlook&quot;, and &quot;ymail.com&quot;. For more information, see <a href="https://help.aliyun.com/document_detail/2689048.html">Unsubscribe link generation and filtering mechanism</a>.</p>
+     * <p>The display language is automatically determined based on the recipient\&quot;s browser settings.</p>
      * 
      * <strong>example:</strong>
      * <p>default</p>
@@ -395,7 +451,7 @@ public class SingleSendMailRequest extends TeaModel {
 
     public static class SingleSendMailRequestAttachments extends TeaModel {
         /**
-         * <p>Only supported for use with the new version of the SDK; not currently supported by openapi and signature mechanisms.</p>
+         * <p>The filename of the attachment.</p>
          * 
          * <strong>example:</strong>
          * <p>test.txt</p>
@@ -404,7 +460,7 @@ public class SingleSendMailRequest extends TeaModel {
         public String attachmentName;
 
         /**
-         * <p>Only supported for use with the new version of the SDK; not currently supported by openapi and signature mechanisms.</p>
+         * <p>The local file path of the attachment that the SDK will use.</p>
          * 
          * <strong>example:</strong>
          * <p>C:\Users\Downloads\test.txt</p>
@@ -436,10 +492,15 @@ public class SingleSendMailRequest extends TeaModel {
     }
 
     public static class SingleSendMailRequestTemplate extends TeaModel {
+        /**
+         * <p>The variables and their values for the template.</p>
+         */
         @NameInMap("TemplateData")
         public java.util.Map<String, String> templateData;
 
         /**
+         * <p>The template ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>xxx</p>
          */

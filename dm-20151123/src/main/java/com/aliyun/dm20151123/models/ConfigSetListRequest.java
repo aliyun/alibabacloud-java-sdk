@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ConfigSetListRequest extends TeaModel {
     /**
+     * <p>Specifies whether to retrieve all ConfigSets. Optional.</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -12,6 +14,8 @@ public class ConfigSetListRequest extends TeaModel {
     public Boolean all;
 
     /**
+     * <p>The keyword for filtering ConfigSets by name.</p>
+     * 
      * <strong>example:</strong>
      * <p>xxx</p>
      */
@@ -19,6 +23,8 @@ public class ConfigSetListRequest extends TeaModel {
     public String keyword;
 
     /**
+     * <p>The page number, starting from 1. Required.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -26,6 +32,8 @@ public class ConfigSetListRequest extends TeaModel {
     public String pageIndex;
 
     /**
+     * <p>The number of entries per page. Required.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */

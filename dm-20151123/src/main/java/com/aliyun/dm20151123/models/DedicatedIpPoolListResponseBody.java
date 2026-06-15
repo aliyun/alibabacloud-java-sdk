@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DedicatedIpPoolListResponseBody extends TeaModel {
     /**
-     * <p>Current page</p>
+     * <p>The current page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -14,7 +14,7 @@ public class DedicatedIpPoolListResponseBody extends TeaModel {
     public String currentPage;
 
     /**
-     * <p>Whether there is a next page</p>
+     * <p>Indicates whether more results are available.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -23,13 +23,13 @@ public class DedicatedIpPoolListResponseBody extends TeaModel {
     public Boolean hasMore;
 
     /**
-     * <p>List of IP pools</p>
+     * <p>A list of IP pools.</p>
      */
     @NameInMap("IpPools")
     public java.util.List<DedicatedIpPoolListResponseBodyIpPools> ipPools;
 
     /**
-     * <p>Page size</p>
+     * <p>The number of entries on the current page.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -38,7 +38,7 @@ public class DedicatedIpPoolListResponseBody extends TeaModel {
     public String pageSize;
 
     /**
-     * <p>Request ID</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>xxx</p>
@@ -47,7 +47,7 @@ public class DedicatedIpPoolListResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Total number of data under the current request conditions</p>
+     * <p>The total number of entries that match the query.</p>
      * 
      * <strong>example:</strong>
      * <p>5</p>
@@ -110,7 +110,7 @@ public class DedicatedIpPoolListResponseBody extends TeaModel {
 
     public static class DedicatedIpPoolListResponseBodyIpPoolsIps extends TeaModel {
         /**
-         * <p>Instance purchase ID</p>
+         * <p>The ID of the IP address instance.</p>
          * 
          * <strong>example:</strong>
          * <p>xxx</p>
@@ -119,7 +119,7 @@ public class DedicatedIpPoolListResponseBody extends TeaModel {
         public String id;
 
         /**
-         * <p>IP address</p>
+         * <p>The IP address.</p>
          * 
          * <strong>example:</strong>
          * <p>xxx</p>
@@ -127,6 +127,12 @@ public class DedicatedIpPoolListResponseBody extends TeaModel {
         @NameInMap("Ip")
         public String ip;
 
+        /**
+         * <p>The ID of the Availability Zone.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxx</p>
+         */
         @NameInMap("ZoneId")
         public String zoneId;
 
@@ -163,7 +169,7 @@ public class DedicatedIpPoolListResponseBody extends TeaModel {
 
     public static class DedicatedIpPoolListResponseBodyIpPools extends TeaModel {
         /**
-         * <p>Creation time</p>
+         * <p>The time when the IP pool was created.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-05-23T07:41:43Z</p>
@@ -172,7 +178,7 @@ public class DedicatedIpPoolListResponseBody extends TeaModel {
         public String createTime;
 
         /**
-         * <p>IP pool ID</p>
+         * <p>The ID of the IP pool.</p>
          * 
          * <strong>example:</strong>
          * <p>xxx</p>
@@ -181,7 +187,7 @@ public class DedicatedIpPoolListResponseBody extends TeaModel {
         public String id;
 
         /**
-         * <p>Number of source IP addresses</p>
+         * <p>The number of source IP addresses in the IP pool.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -190,13 +196,13 @@ public class DedicatedIpPoolListResponseBody extends TeaModel {
         public Integer ipCount;
 
         /**
-         * <p>List of IPs</p>
+         * <p>A list of IP addresses.</p>
          */
         @NameInMap("Ips")
         public java.util.List<DedicatedIpPoolListResponseBodyIpPoolsIps> ips;
 
         /**
-         * <p>IP pool name</p>
+         * <p>The name of the IP pool.</p>
          * 
          * <strong>example:</strong>
          * <p>xxx</p>

@@ -4,10 +4,15 @@ package com.aliyun.dm20151123.models;
 import com.aliyun.tea.*;
 
 public class ConfigSetListResponseBody extends TeaModel {
+    /**
+     * <p>The list of ConfigSets.</p>
+     */
     @NameInMap("ConfigSets")
     public java.util.List<ConfigSetListResponseBodyConfigSets> configSets;
 
     /**
+     * <p>The current page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -15,6 +20,8 @@ public class ConfigSetListResponseBody extends TeaModel {
     public Integer currentPage;
 
     /**
+     * <p>Indicates whether more results are available.</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -22,6 +29,8 @@ public class ConfigSetListResponseBody extends TeaModel {
     public Boolean hasMore;
 
     /**
+     * <p>The page size.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -29,6 +38,8 @@ public class ConfigSetListResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>xxx</p>
      */
@@ -36,6 +47,8 @@ public class ConfigSetListResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total number of matching entries.</p>
+     * 
      * <strong>example:</strong>
      * <p>5</p>
      */
@@ -97,6 +110,8 @@ public class ConfigSetListResponseBody extends TeaModel {
 
     public static class ConfigSetListResponseBodyConfigSetsIpPool extends TeaModel {
         /**
+         * <p>The associated IP pool ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>xxx</p>
          */
@@ -104,6 +119,8 @@ public class ConfigSetListResponseBody extends TeaModel {
         public String ipPoolId;
 
         /**
+         * <p>The associated IP pool name.</p>
+         * 
          * <strong>example:</strong>
          * <p>xxx</p>
          */
@@ -135,22 +152,32 @@ public class ConfigSetListResponseBody extends TeaModel {
 
     public static class ConfigSetListResponseBodyConfigSets extends TeaModel {
         /**
+         * <p>The description.</p>
+         * 
          * <strong>example:</strong>
          * <p>xxx</p>
          */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The list of from addresses associated with the ConfigSet.</p>
+         */
         @NameInMap("FromAddresses")
         public java.util.List<String> fromAddresses;
 
         /**
+         * <p>The ConfigSet ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>xxx</p>
          */
         @NameInMap("Id")
         public String id;
 
+        /**
+         * <p>The IP pool associated with the ConfigSet.</p>
+         */
         @NameInMap("IpPool")
         public ConfigSetListResponseBodyConfigSetsIpPool ipPool;
 
@@ -158,6 +185,8 @@ public class ConfigSetListResponseBody extends TeaModel {
         public Boolean isPublicChannelBackoff;
 
         /**
+         * <p>The ConfigSet name.</p>
+         * 
          * <strong>example:</strong>
          * <p>xxx</p>
          */
