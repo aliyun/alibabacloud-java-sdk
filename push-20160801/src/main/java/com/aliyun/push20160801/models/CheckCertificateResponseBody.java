@@ -5,26 +5,50 @@ import com.aliyun.tea.*;
 
 public class CheckCertificateResponseBody extends TeaModel {
     /**
+     * <p>Indicates whether the AppKey belongs to an Android app:</p>
+     * <ul>
+     * <li><p>true</p>
+     * </li>
+     * <li><p>false</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
     @NameInMap("Android")
     public Boolean android;
 
+    /**
+     * <p>The information about the certificate for the development or sandbox environment.</p>
+     */
     @NameInMap("DevelopmentCertInfo")
     public CheckCertificateResponseBodyDevelopmentCertInfo developmentCertInfo;
 
     /**
+     * <p>Indicates whether the AppKey belongs to an iOS app:</p>
+     * <ul>
+     * <li><p>true</p>
+     * </li>
+     * <li><p>false</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
     @NameInMap("IOS")
     public Boolean IOS;
 
+    /**
+     * <p>The information about the certificate for the production environment.</p>
+     */
     @NameInMap("ProductionCertInfo")
     public CheckCertificateResponseBodyProductionCertInfo productionCertInfo;
 
     /**
+     * <p>The ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>9998B3CC-ED9E-4CB3-A8FB-DCC61296BFBC</p>
      */
@@ -78,6 +102,8 @@ public class CheckCertificateResponseBody extends TeaModel {
 
     public static class CheckCertificateResponseBodyDevelopmentCertInfo extends TeaModel {
         /**
+         * <p>The expiration time of the certificate.</p>
+         * 
          * <strong>example:</strong>
          * <p>1470024000000</p>
          */
@@ -85,6 +111,20 @@ public class CheckCertificateResponseBody extends TeaModel {
         public Long exipreTime;
 
         /**
+         * <p>The status of the certificate. Valid values:</p>
+         * <ul>
+         * <li><p><strong>EXPIRED</strong>: The certificate is expired.</p>
+         * </li>
+         * <li><p><strong>NOT_CONFIGURED</strong>: The certificate is not configured.</p>
+         * </li>
+         * <li><p><strong>NO_PASSWORD</strong>: The password for the certificate is not configured.</p>
+         * </li>
+         * <li><p><strong>OK</strong>: The certificate is normal.</p>
+         * </li>
+         * <li><p><strong>REVOKED</strong>: The certificate is revoked.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>EXPIRED</p>
          */
@@ -116,6 +156,8 @@ public class CheckCertificateResponseBody extends TeaModel {
 
     public static class CheckCertificateResponseBodyProductionCertInfo extends TeaModel {
         /**
+         * <p>The expiration time of the certificate.</p>
+         * 
          * <strong>example:</strong>
          * <p>1764561600000</p>
          */
@@ -123,6 +165,20 @@ public class CheckCertificateResponseBody extends TeaModel {
         public Long exipreTime;
 
         /**
+         * <p>The status of the certificate. Valid values:</p>
+         * <ul>
+         * <li><p><strong>EXPIRED</strong>: The certificate is expired.</p>
+         * </li>
+         * <li><p><strong>NOT_CONFIGURED</strong>: The certificate is not configured.</p>
+         * </li>
+         * <li><p><strong>NO_PASSWORD</strong>: The password for the certificate is not configured.</p>
+         * </li>
+         * <li><p><strong>OK</strong>: The certificate is normal.</p>
+         * </li>
+         * <li><p><strong>REVOKED</strong>: The certificate is revoked.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>OK</p>
          */

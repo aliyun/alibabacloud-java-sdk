@@ -83,8 +83,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You can attach up to 10 aliases in a single request. The attachment takes effect immediately.</p>
+     * 
      * <b>summary</b> : 
-     * <p>绑定别名</p>
+     * <p>Attach an alias to a device.</p>
      * 
      * @param request BindAliasRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -123,8 +126,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You can attach up to 10 aliases in a single request. The attachment takes effect immediately.</p>
+     * 
      * <b>summary</b> : 
-     * <p>绑定别名</p>
+     * <p>Attach an alias to a device.</p>
      * 
      * @param request BindAliasRequest
      * @return BindAliasResponse
@@ -136,7 +142,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>绑定手机号码</p>
+     * <p>Attaches a device to a phone number.</p>
      * 
      * @param request BindPhoneRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -176,7 +182,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>绑定手机号码</p>
+     * <p>Attaches a device to a phone number.</p>
      * 
      * @param request BindPhoneRequest
      * @return BindPhoneResponse
@@ -188,7 +194,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>绑定标签</p>
+     * <p>Binds tags to specified device targets. Tag bindings take effect within 10 minutes.</p>
      * 
      * @param request BindTagRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -232,7 +238,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>绑定标签</p>
+     * <p>Binds tags to specified device targets. Tag bindings take effect within 10 minutes.</p>
      * 
      * @param request BindTagRequest
      * @return BindTagResponse
@@ -244,7 +250,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>取消定时推送任务</p>
+     * <p>Cancels a scheduled push task that has not yet been executed.</p>
      * 
      * @param request CancelPushRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -280,7 +286,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>取消定时推送任务</p>
+     * <p>Cancels a scheduled push task that has not yet been executed.</p>
      * 
      * @param request CancelPushRequest
      * @return CancelPushResponse
@@ -291,6 +297,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li>If the returned ExpireTime value is later than the current timestamp, the certificate is not necessarily valid. Also verify that the Status is OK.</li>
+     * <li>The REVOKED status originates from the Apple Push Notification service (APNs) server. If a certificate has a REVOKED status, at least one push notification to APNs has failed in the corresponding environment.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Checks the expiration time and current status of the iOS certificate for a specified app.</p>
+     * 
      * @param request CheckCertificateRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CheckCertificateResponse
@@ -320,6 +335,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li>If the returned ExpireTime value is later than the current timestamp, the certificate is not necessarily valid. Also verify that the Status is OK.</li>
+     * <li>The REVOKED status originates from the Apple Push Notification service (APNs) server. If a certificate has a REVOKED status, at least one push notification to APNs has failed in the corresponding environment.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Checks the expiration time and current status of the iOS certificate for a specified app.</p>
+     * 
      * @param request CheckCertificateRequest
      * @return CheckCertificateResponse
      */
@@ -330,7 +354,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>【废弃】验证设备有效性</p>
+     * <p>Validates the specified (device).</p>
      * 
      * @deprecated OpenAPI CheckDevice is deprecated, please use Push::2016-08-01::CheckDevices instead.
      * 
@@ -370,7 +394,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>【废弃】验证设备有效性</p>
+     * <p>Validates the specified (device).</p>
      * 
      * @deprecated OpenAPI CheckDevice is deprecated, please use Push::2016-08-01::CheckDevices instead.
      * 
@@ -386,7 +410,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>批量检查设备有效性</p>
+     * <p>Validate a specified group of devices.</p>
      * 
      * @param request CheckDevicesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -422,7 +446,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>批量检查设备有效性</p>
+     * <p>Validate a specified group of devices.</p>
      * 
      * @param request CheckDevicesRequest
      * @return CheckDevicesResponse
@@ -433,8 +457,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>If you do not call this operation, the continuous push task automatically ends when it reaches its time-to-live (TTL).</p>
+     * 
      * <b>summary</b> : 
-     * <p>完成持续推送任务</p>
+     * <p>Manually ends a continuous push task.</p>
      * 
      * @param request CompleteContinuouslyPushRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -469,8 +496,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>If you do not call this operation, the continuous push task automatically ends when it reaches its time-to-live (TTL).</p>
+     * 
      * <b>summary</b> : 
-     * <p>完成持续推送任务</p>
+     * <p>Manually ends a continuous push task.</p>
      * 
      * @param request CompleteContinuouslyPushRequest
      * @return CompleteContinuouslyPushResponse
@@ -481,8 +511,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This API addresses the limitations of the <a href="https://help.aliyun.com/document_detail/2249916.html">Push Advanced Push API</a>, where push-by-device, push-by-account, and push-by-alias operations each have a maximum target count per single call.</p>
+     * <ul>
+     * <li>You can use continuous push when your scenario requires sending the same message to many devices. In this case, you can call the continuous push API repeatedly, each time specifying a group of targets for aggregation (the current limit is 1,000 targets per call for device, account, or alias pushes). The total number of pushes for the same MessageId is restricted to 10,000. If you need a higher limit, contact technical support to evaluate your specific scenario.</li>
+     * <li>Before using this API, you must first call the Push API with Target set to TBD (To Be Determined) and include your message content. This returns a MessageId from the push system. You can then use this MessageId to repeatedly call the continuous push API, specifying different target groups to deliver the same message.</li>
+     * <li>After calling the Push API with Target set to TBD and obtaining a MessageId, the message is stored in the push system for 24 hours by default. You can use this API to push to specified targets at any time before expiration. Pushes are not allowed after expiration or after reaching the total push limit.</li>
+     * <li>Each call to this API sends the message immediately. Scheduled pushes are not supported.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>持续推送</p>
+     * <p>Executes a predefined continuous push task.</p>
      * 
      * @param request ContinuouslyPushRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -525,8 +564,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This API addresses the limitations of the <a href="https://help.aliyun.com/document_detail/2249916.html">Push Advanced Push API</a>, where push-by-device, push-by-account, and push-by-alias operations each have a maximum target count per single call.</p>
+     * <ul>
+     * <li>You can use continuous push when your scenario requires sending the same message to many devices. In this case, you can call the continuous push API repeatedly, each time specifying a group of targets for aggregation (the current limit is 1,000 targets per call for device, account, or alias pushes). The total number of pushes for the same MessageId is restricted to 10,000. If you need a higher limit, contact technical support to evaluate your specific scenario.</li>
+     * <li>Before using this API, you must first call the Push API with Target set to TBD (To Be Determined) and include your message content. This returns a MessageId from the push system. You can then use this MessageId to repeatedly call the continuous push API, specifying different target groups to deliver the same message.</li>
+     * <li>After calling the Push API with Target set to TBD and obtaining a MessageId, the message is stored in the push system for 24 hours by default. You can use this API to push to specified targets at any time before expiration. Pushes are not allowed after expiration or after reaching the total push limit.</li>
+     * <li>Each call to this API sends the message immediately. Scheduled pushes are not supported.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>持续推送</p>
+     * <p>Executes a predefined continuous push task.</p>
      * 
      * @param request ContinuouslyPushRequest
      * @return ContinuouslyPushResponse
@@ -538,7 +586,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>【废弃】查询用户已创建的app列表</p>
+     * <p>Retrieve the list of all applications associated with your Alibaba Cloud account.</p>
      * 
      * @deprecated OpenAPI ListSummaryApps is deprecated, please use Mhub::2017-08-25::ListApps instead.
      * 
@@ -565,7 +613,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>【废弃】查询用户已创建的app列表</p>
+     * <p>Retrieve the list of all applications associated with your Alibaba Cloud account.</p>
      * 
      * @deprecated OpenAPI ListSummaryApps is deprecated, please use Mhub::2017-08-25::ListApps instead.
      * @return ListSummaryAppsResponse
@@ -579,7 +627,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取标签列表</p>
+     * <p>Queries the tags of an app. A maximum of 100 records are returned.</p>
      * 
      * @param request ListTagsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -611,7 +659,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取标签列表</p>
+     * <p>Queries the tags of an app. A maximum of 100 records are returned.</p>
      * 
      * @param request ListTagsRequest
      * @return ListTagsResponse
@@ -622,8 +670,34 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p><em>Before you use this API, make sure that you understand the <a href="https://help.aliyun.com/document_detail/434638.html">billing methods and pricing</a> of EMAS Mobile Push.</em>*
+     * Some business scenarios require you to send many different messages to many devices in a short period. This can generate a high number of Queries Per Second (QPS) and cause requests to exceed the QPS limit for a single source IP address, resulting in push failures.
+     * This API is designed to solve this issue. You can include up to 100 independent push tasks in a single call. This request aggregation reduces the QPS and improves the stability and success rate of individual pushes. A single account is limited to 500 batch push calls per second.
+     * Each independent push task supports pushes to devices, accounts, or aliases. SMS integration is not supported.</p>
+     * <blockquote>
+     * <p>You must upgrade the SDK to version 3.11.0 or later.</p>
+     * </blockquote>
+     * <h2>PushTask properties</h2>
+     * <ul>
+     * <li>The format for PushTask properties is PushTask.N.Property. These properties include the following:<ul>
+     * <li>Push target (destination)</li>
+     * <li>Push configuration (config)</li>
+     * <li>iOS notification task configuration</li>
+     * <li>Android notification task configuration</li>
+     * <li>Android auxiliary pop-up configuration</li>
+     * <li>HarmonyOS notification task configuration</li>
+     * <li>Push control</li>
+     * </ul>
+     * </li>
+     * <li>Each PushTask represents an independent push task. A maximum of 100 tasks are supported per call. The push configurations are the same as those for the Push API.</li>
+     * <li>The PushTask.N.Target parameter supports only the DEVICE, ACCOUNT, and ALIAS types.</li>
+     * <li>PushTask does not support SMS filter interaction.</li>
+     * <li>The product of the parent node and child nodes cannot exceed 10,000. If this limit is exceeded, the parameters are considered invalid.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>批量推送</p>
+     * <p>Sends different messages or notifications to multiple devices in batches.</p>
      * 
      * @param request MassPushRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -664,8 +738,34 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p><em>Before you use this API, make sure that you understand the <a href="https://help.aliyun.com/document_detail/434638.html">billing methods and pricing</a> of EMAS Mobile Push.</em>*
+     * Some business scenarios require you to send many different messages to many devices in a short period. This can generate a high number of Queries Per Second (QPS) and cause requests to exceed the QPS limit for a single source IP address, resulting in push failures.
+     * This API is designed to solve this issue. You can include up to 100 independent push tasks in a single call. This request aggregation reduces the QPS and improves the stability and success rate of individual pushes. A single account is limited to 500 batch push calls per second.
+     * Each independent push task supports pushes to devices, accounts, or aliases. SMS integration is not supported.</p>
+     * <blockquote>
+     * <p>You must upgrade the SDK to version 3.11.0 or later.</p>
+     * </blockquote>
+     * <h2>PushTask properties</h2>
+     * <ul>
+     * <li>The format for PushTask properties is PushTask.N.Property. These properties include the following:<ul>
+     * <li>Push target (destination)</li>
+     * <li>Push configuration (config)</li>
+     * <li>iOS notification task configuration</li>
+     * <li>Android notification task configuration</li>
+     * <li>Android auxiliary pop-up configuration</li>
+     * <li>HarmonyOS notification task configuration</li>
+     * <li>Push control</li>
+     * </ul>
+     * </li>
+     * <li>Each PushTask represents an independent push task. A maximum of 100 tasks are supported per call. The push configurations are the same as those for the Push API.</li>
+     * <li>The PushTask.N.Target parameter supports only the DEVICE, ACCOUNT, and ALIAS types.</li>
+     * <li>PushTask does not support SMS filter interaction.</li>
+     * <li>The product of the parent node and child nodes cannot exceed 10,000. If this limit is exceeded, the parameters are considered invalid.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>批量推送</p>
+     * <p>Sends different messages or notifications to multiple devices in batches.</p>
      * 
      * @param request MassPushRequest
      * @return MassPushResponse
@@ -676,8 +776,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Before using this API, review the <a href="https://help.aliyun.com/document_detail/434638.html">pricing and billing details</a> for EMAS Mobile Push.</p>
+     * 
      * <b>summary</b> : 
-     * <p>新版高级推送接口</p>
+     * <p>Advanced push API v2.</p>
      * 
      * @param tmpReq MassPushV2Request
      * @param runtime runtime options for this request RuntimeOptions
@@ -722,8 +825,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Before using this API, review the <a href="https://help.aliyun.com/document_detail/434638.html">pricing and billing details</a> for EMAS Mobile Push.</p>
+     * 
      * <b>summary</b> : 
-     * <p>新版高级推送接口</p>
+     * <p>Advanced push API v2.</p>
      * 
      * @param request MassPushV2Request
      * @return MassPushV2Response
@@ -734,8 +840,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p><em>Before you use this API, make sure you understand the <a href="https://help.aliyun.com/document_detail/434638.html">billing methods and pricing</a> of EMAS Mobile Push.</em>*
+     * This API supports pushes to Android, iOS, and HarmonyOS devices. For each platform, you must provide the corresponding AppKey.</p>
+     * 
      * <b>summary</b> : 
-     * <p>高级推送接口</p>
+     * <p>This advanced push API sends notifications or messages to various devices. It provides a rich set of custom parameters to implement push behaviors for various scenarios.</p>
      * 
      * @param tmpReq PushRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -980,6 +1090,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.androidXiaomiImageUrl)) {
             query.put("AndroidXiaomiImageUrl", request.androidXiaomiImageUrl);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.androidXiaomiTemplateId)) {
+            query.put("AndroidXiaomiTemplateId", request.androidXiaomiTemplateId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.androidXiaomiTemplateParams)) {
+            query.put("AndroidXiaomiTemplateParams", request.androidXiaomiTemplateParams);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.appKey)) {
@@ -1248,8 +1366,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p><em>Before you use this API, make sure you understand the <a href="https://help.aliyun.com/document_detail/434638.html">billing methods and pricing</a> of EMAS Mobile Push.</em>*
+     * This API supports pushes to Android, iOS, and HarmonyOS devices. For each platform, you must provide the corresponding AppKey.</p>
+     * 
      * <b>summary</b> : 
-     * <p>高级推送接口</p>
+     * <p>This advanced push API sends notifications or messages to various devices. It provides a rich set of custom parameters to implement push behaviors for various scenarios.</p>
      * 
      * @param request PushRequest
      * @return PushResponse
@@ -1260,8 +1382,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p><em>This operation will be deprecated soon. Use the <a href="https://help.aliyun.com/document_detail/2249916.html">advanced push API</a>, which provides enhanced push capabilities. To achieve the same result, set the <code>DeviceType</code> parameter to <code>ANDROID</code> and the <code>PushType</code> parameter to <code>MESSAGE</code> in the advanced push API.</em>*
+     * <strong>Before using this operation, review the <a href="https://help.aliyun.com/document_detail/434638.html">billing methods and pricing</a> for EMAS Mobile Push.</strong>
+     * By default, this operation sends messages only to online devices. If a device is offline, set the <code>StoreOffline</code> parameter. The push system then stores the message and delivers it automatically when the device comes online.</p>
+     * 
      * <b>summary</b> : 
-     * <p>推送消息给Android设备</p>
+     * <p>Sends a message to an Android device through the Alibaba Cloud Mobile Push proprietary channel. After the app on the device receives the message, it must handle subsequent actions, such as implementing business logic or displaying a local notification.</p>
      * 
      * @param request PushMessageToAndroidRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1316,8 +1443,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p><em>This operation will be deprecated soon. Use the <a href="https://help.aliyun.com/document_detail/2249916.html">advanced push API</a>, which provides enhanced push capabilities. To achieve the same result, set the <code>DeviceType</code> parameter to <code>ANDROID</code> and the <code>PushType</code> parameter to <code>MESSAGE</code> in the advanced push API.</em>*
+     * <strong>Before using this operation, review the <a href="https://help.aliyun.com/document_detail/434638.html">billing methods and pricing</a> for EMAS Mobile Push.</strong>
+     * By default, this operation sends messages only to online devices. If a device is offline, set the <code>StoreOffline</code> parameter. The push system then stores the message and delivers it automatically when the device comes online.</p>
+     * 
      * <b>summary</b> : 
-     * <p>推送消息给Android设备</p>
+     * <p>Sends a message to an Android device through the Alibaba Cloud Mobile Push proprietary channel. After the app on the device receives the message, it must handle subsequent actions, such as implementing business logic or displaying a local notification.</p>
      * 
      * @param request PushMessageToAndroidRequest
      * @return PushMessageToAndroidResponse
@@ -1328,8 +1460,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p><em>This API is deprecated. Use the <a href="https://help.aliyun.com/document_detail/2249916.html">advanced push API</a> for more push capabilities. In that API, set the push platform <code>DeviceType</code> to <code>iOS</code> and the push type <code>PushType</code> to <code>MESSAGE</code> to achieve the same effect.</em>*
+     * <strong>Before you use this API, review the <a href="https://help.aliyun.com/document_detail/434638.html">billing methods and pricing</a> for EMAS Mobile Push.</strong>
+     * By default, this API sends messages only to online devices. If a device is offline, you can set the <code>StoreOffline</code> parameter. The push system then saves the message and automatically delivers it when the device comes back online.</p>
+     * 
      * <b>summary</b> : 
-     * <p>推送消息给iOS设备</p>
+     * <p>Pushes messages to iOS devices. These messages are delivered through the proprietary channel of Alibaba Cloud Mobile Push. After the app on a device receives a message, it must handle subsequent actions, such as implementing business behaviors or creating local notifications.</p>
      * 
      * @param request PushMessageToiOSRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1384,8 +1521,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p><em>This API is deprecated. Use the <a href="https://help.aliyun.com/document_detail/2249916.html">advanced push API</a> for more push capabilities. In that API, set the push platform <code>DeviceType</code> to <code>iOS</code> and the push type <code>PushType</code> to <code>MESSAGE</code> to achieve the same effect.</em>*
+     * <strong>Before you use this API, review the <a href="https://help.aliyun.com/document_detail/434638.html">billing methods and pricing</a> for EMAS Mobile Push.</strong>
+     * By default, this API sends messages only to online devices. If a device is offline, you can set the <code>StoreOffline</code> parameter. The push system then saves the message and automatically delivers it when the device comes back online.</p>
+     * 
      * <b>summary</b> : 
-     * <p>推送消息给iOS设备</p>
+     * <p>Pushes messages to iOS devices. These messages are delivered through the proprietary channel of Alibaba Cloud Mobile Push. After the app on a device receives a message, it must handle subsequent actions, such as implementing business behaviors or creating local notifications.</p>
      * 
      * @param request PushMessageToiOSRequest
      * @return PushMessageToiOSResponse
@@ -1396,8 +1538,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p><em>This operation is deprecated. Use the <a href="https://help.aliyun.com/document_detail/2249916.html">Advanced Push API</a> instead. In that API, set the <code>DeviceType</code> parameter to <code>ANDROID</code> and the <code>PushType</code> parameter to <code>NOTICE</code>.</em>*
+     * <strong>Before using this operation, review the <a href="https://help.aliyun.com/document_detail/434638.html">pricing and billing model</a> for EMAS Mobile Push.</strong></p>
+     * 
      * <b>summary</b> : 
-     * <p>推送通知给Android设备</p>
+     * <p>Sends a notification to Android devices. The notification appears directly in the device’s notification tray and may be delivered through Alibaba Cloud’s proprietary channel or the device manufacturer’s channel, depending on the scenario.</p>
      * 
      * @param request PushNoticeToAndroidRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1456,8 +1602,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p><em>This operation is deprecated. Use the <a href="https://help.aliyun.com/document_detail/2249916.html">Advanced Push API</a> instead. In that API, set the <code>DeviceType</code> parameter to <code>ANDROID</code> and the <code>PushType</code> parameter to <code>NOTICE</code>.</em>*
+     * <strong>Before using this operation, review the <a href="https://help.aliyun.com/document_detail/434638.html">pricing and billing model</a> for EMAS Mobile Push.</strong></p>
+     * 
      * <b>summary</b> : 
-     * <p>推送通知给Android设备</p>
+     * <p>Sends a notification to Android devices. The notification appears directly in the device’s notification tray and may be delivered through Alibaba Cloud’s proprietary channel or the device manufacturer’s channel, depending on the scenario.</p>
      * 
      * @param request PushNoticeToAndroidRequest
      * @return PushNoticeToAndroidResponse
@@ -1468,8 +1618,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p><em>This operation is deprecated. Use the <a href="https://help.aliyun.com/document_detail/2249916.html">Advanced Push API</a> instead. Set the <code>DeviceType</code> parameter to <code>iOS</code> and the <code>PushType</code> parameter to <code>NOTICE</code>.</em>*
+     * <strong>Before you use this operation, review the <a href="https://help.aliyun.com/document_detail/434638.html">pricing and billing model</a> for EMAS Mobile Push.</strong></p>
+     * 
      * <b>summary</b> : 
-     * <p>推送通知给iOS设备</p>
+     * <p>Send a notification to iOS devices. The notification uses Apple’s APNs channel and appears directly in the device notification center.</p>
      * 
      * @param request PushNoticeToiOSRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1528,8 +1682,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p><em>This operation is deprecated. Use the <a href="https://help.aliyun.com/document_detail/2249916.html">Advanced Push API</a> instead. Set the <code>DeviceType</code> parameter to <code>iOS</code> and the <code>PushType</code> parameter to <code>NOTICE</code>.</em>*
+     * <strong>Before you use this operation, review the <a href="https://help.aliyun.com/document_detail/434638.html">pricing and billing model</a> for EMAS Mobile Push.</strong></p>
+     * 
      * <b>summary</b> : 
-     * <p>推送通知给iOS设备</p>
+     * <p>Send a notification to iOS devices. The notification uses Apple’s APNs channel and appears directly in the device notification center.</p>
      * 
      * @param request PushNoticeToiOSRequest
      * @return PushNoticeToiOSResponse
@@ -1540,8 +1698,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p><em>Before using this API, review the <a href="https://help.aliyun.com/document_detail/434638.html">pricing and billing methods</a> for EMAS Mobile Push.</em>*
+     * This API supports Android, iOS, and HarmonyOS. For each platform, pass its assigned AppKey.</p>
+     * 
      * <b>summary</b> : 
-     * <p>新版高级推送接口</p>
+     * <p>This is the advanced push API v2.</p>
      * 
      * @param tmpReq PushV2Request
      * @param runtime runtime options for this request RuntimeOptions
@@ -1586,8 +1748,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p><em>Before using this API, review the <a href="https://help.aliyun.com/document_detail/434638.html">pricing and billing methods</a> for EMAS Mobile Push.</em>*
+     * This API supports Android, iOS, and HarmonyOS. For each platform, pass its assigned AppKey.</p>
+     * 
      * <b>summary</b> : 
-     * <p>新版高级推送接口</p>
+     * <p>This is the advanced push API v2.</p>
      * 
      * @param request PushV2Request
      * @return PushV2Response
@@ -1599,7 +1765,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询别名</p>
+     * <p>Query the list of aliases attached to a specified device.</p>
      * 
      * @param request QueryAliasesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1635,7 +1801,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询别名</p>
+     * <p>Query the list of aliases attached to a specified device.</p>
      * 
      * @param request QueryAliasesRequest
      * @return QueryAliasesResponse
@@ -1647,7 +1813,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询设备详情</p>
+     * <p>Query details of a specified device.</p>
      * 
      * @param request QueryDeviceInfoRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1683,7 +1849,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询设备详情</p>
+     * <p>Query details of a specified device.</p>
      * 
      * @param request QueryDeviceInfoRequest
      * @return QueryDeviceInfoResponse
@@ -1694,8 +1860,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <blockquote>
+     * <p>Currently, this API supports only daily data. The daily dimension lets you query data for up to 31 days. Days are calculated based on UTC+8.</p>
+     * </blockquote>
+     * 
      * <b>summary</b> : 
-     * <p>设备新增与留存</p>
+     * <p>Queries device statistics by application dimension.</p>
      * 
      * @param request QueryDeviceStatRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1742,8 +1913,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <blockquote>
+     * <p>Currently, this API supports only daily data. The daily dimension lets you query data for up to 31 days. Days are calculated based on UTC+8.</p>
+     * </blockquote>
+     * 
      * <b>summary</b> : 
-     * <p>设备新增与留存</p>
+     * <p>Queries device statistics by application dimension.</p>
      * 
      * @param request QueryDeviceStatRequest
      * @return QueryDeviceStatResponse
@@ -1755,7 +1931,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>通过账户查询设备列表</p>
+     * <p>Retrieve the list of devices associated with an account using the account name.</p>
      * 
      * @param request QueryDevicesByAccountRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1791,7 +1967,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>通过账户查询设备列表</p>
+     * <p>Retrieve the list of devices associated with an account using the account name.</p>
      * 
      * @param request QueryDevicesByAccountRequest
      * @return QueryDevicesByAccountResponse
@@ -1803,7 +1979,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>通过别名查询设备列表</p>
+     * <p>Query the list of devices by alias.</p>
      * 
      * @param request QueryDevicesByAliasRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1839,7 +2015,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>通过别名查询设备列表</p>
+     * <p>Query the list of devices by alias.</p>
      * 
      * @param request QueryDevicesByAliasRequest
      * @return QueryDevicesByAliasResponse
@@ -1851,7 +2027,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取推送历史记录</p>
+     * <p>You can query push records with pagination and basic filtering.</p>
      * 
      * @param request QueryPushRecordsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1919,7 +2095,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取推送历史记录</p>
+     * <p>You can query push records with pagination and basic filtering.</p>
      * 
      * @param request QueryPushRecordsRequest
      * @return QueryPushRecordsResponse
@@ -1931,7 +2107,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>App维度推送统计</p>
+     * <p>Query push statistics for an app.</p>
      * 
      * @param request QueryPushStatByAppRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1975,7 +2151,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>App维度推送统计</p>
+     * <p>Query push statistics for an app.</p>
      * 
      * @param request QueryPushStatByAppRequest
      * @return QueryPushStatByAppResponse
@@ -1987,7 +2163,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>任务维度推送统计</p>
+     * <p>Queries push statistics for a message.</p>
      * 
      * @param request QueryPushStatByMsgRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2023,7 +2199,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>任务维度推送统计</p>
+     * <p>Queries push statistics for a message.</p>
      * 
      * @param request QueryPushStatByMsgRequest
      * @return QueryPushStatByMsgResponse
@@ -2035,7 +2211,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询标签列表</p>
+     * <p>Queries tags for a specified object, such as a device, account, or alias.</p>
      * 
      * @param request QueryTagsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2075,7 +2251,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询标签列表</p>
+     * <p>Queries tags for a specified object, such as a device, account, or alias.</p>
      * 
      * @param request QueryTagsRequest
      * @return QueryTagsResponse
@@ -2086,8 +2262,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <blockquote>
+     * <p>This operation returns data only at the daily granularity. You can query up to 31 days of data. Deduplicated device counts reset on the first day of each month.</p>
+     * </blockquote>
+     * 
      * <b>summary</b> : 
-     * <p>去重设备统计</p>
+     * <p>Obtain deduplicated device statistics for an app.</p>
      * 
      * @param request QueryUniqueDeviceStatRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2130,8 +2311,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <blockquote>
+     * <p>This operation returns data only at the daily granularity. You can query up to 31 days of data. Deduplicated device counts reset on the first day of each month.</p>
+     * </blockquote>
+     * 
      * <b>summary</b> : 
-     * <p>去重设备统计</p>
+     * <p>Obtain deduplicated device statistics for an app.</p>
      * 
      * @param request QueryUniqueDeviceStatRequest
      * @return QueryUniqueDeviceStatResponse
@@ -2142,8 +2328,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Deleting a tag takes time. The time required depends on the number of tagged resources. Do not immediately recreate a tag with the same name after you delete it. Wait at least 5 minutes before you recreate a tag in the same app. If you delete multiple tags, wait at least 5 minutes for each deleted tag before you recreate them.</p>
+     * 
      * <b>summary</b> : 
-     * <p>删除标签</p>
+     * <p>Removes a tag from an app.</p>
      * 
      * @param request RemoveTagRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2178,8 +2367,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Deleting a tag takes time. The time required depends on the number of tagged resources. Do not immediately recreate a tag with the same name after you delete it. Wait at least 5 minutes before you recreate a tag in the same app. If you delete multiple tags, wait at least 5 minutes for each deleted tag before you recreate them.</p>
+     * 
      * <b>summary</b> : 
-     * <p>删除标签</p>
+     * <p>Removes a tag from an app.</p>
      * 
      * @param request RemoveTagRequest
      * @return RemoveTagResponse
@@ -2191,7 +2383,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>解绑别名</p>
+     * <p>Unbinds an alias. The change takes effect immediately.</p>
      * 
      * @param request UnbindAliasRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2235,7 +2427,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>解绑别名</p>
+     * <p>Unbinds an alias. The change takes effect immediately.</p>
      * 
      * @param request UnbindAliasRequest
      * @return UnbindAliasResponse
@@ -2247,7 +2439,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>解绑手机号码</p>
+     * <p>Unbind the mobile phone number from a specified device.</p>
      * 
      * @param request UnbindPhoneRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2283,7 +2475,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>解绑手机号码</p>
+     * <p>Unbind the mobile phone number from a specified device.</p>
      * 
      * @param request UnbindPhoneRequest
      * @return UnbindPhoneResponse
@@ -2295,7 +2487,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>绑定标签</p>
+     * <p>Unbinds one or more tags from a specified target.</p>
      * 
      * @param request UnbindTagRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2339,7 +2531,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>绑定标签</p>
+     * <p>Unbinds one or more tags from a specified target.</p>
      * 
      * @param request UnbindTagRequest
      * @return UnbindTagResponse

@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class QueryPushStatByMsgRequest extends TeaModel {
     /**
+     * <p>The AppKey.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,10 @@ public class QueryPushStatByMsgRequest extends TeaModel {
     public Long appKey;
 
     /**
+     * <p>The ID of the pushed message. This ID is returned after a message is pushed.</p>
+     * <blockquote>
+     * <p>Push data is available the next day. You cannot query data for the current day.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class QueryTagsRequest extends TeaModel {
     /**
+     * <p>The AppKey value.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class QueryTagsRequest extends TeaModel {
     public Long appKey;
 
     /**
+     * <p>The device, account, or alias. Query one ClientKey at a time.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,7 @@ public class QueryTagsRequest extends TeaModel {
     public String clientKey;
 
     /**
+     * <p>The type of the ClientKey.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -5,15 +5,17 @@ import com.aliyun.tea.*;
 
 public class QueryDevicesByAccountRequest extends TeaModel {
     /**
+     * <p>Account name. You can query only one account at a time.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>accountName</p>
+     * <p>test_account</p>
      */
     @NameInMap("Account")
     public String account;
 
     /**
+     * <p>AppKey information.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

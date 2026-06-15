@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class BindAliasRequest extends TeaModel {
     /**
+     * <p>The alias to attach.</p>
+     * <p>You can attach up to 10 aliases in one request. Separate multiple aliases with commas. Each alias can be up to 128 bytes long. Chinese characters count as three bytes each. A device can have up to 128 aliases attached. An alias can be attached to up to 128 devices.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +16,7 @@ public class BindAliasRequest extends TeaModel {
     public String aliasName;
 
     /**
+     * <p>Your AppKey.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +26,7 @@ public class BindAliasRequest extends TeaModel {
     public Long appKey;
 
     /**
+     * <p>The unique identifier of the device in Mobile Push. It is 32 characters long and contains only numbers and lowercase letters.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

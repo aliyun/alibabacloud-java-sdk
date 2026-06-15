@@ -8,6 +8,8 @@ public class QueryPushStatByMsgResponseBody extends TeaModel {
     public QueryPushStatByMsgResponseBodyPushStats pushStats;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>CF195C34-98FB-491A-98D7-19CBC1FA880B</p>
      */

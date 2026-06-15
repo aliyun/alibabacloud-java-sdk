@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class CancelPushRequest extends TeaModel {
     /**
+     * <p>Your AppKey.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class CancelPushRequest extends TeaModel {
     public Long appKey;
 
     /**
+     * <p>The message ID of the push task to cancel.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

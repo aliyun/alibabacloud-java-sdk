@@ -5,15 +5,19 @@ import com.aliyun.tea.*;
 
 public class CompleteContinuouslyPushResponseBody extends TeaModel {
     /**
+     * <p>The message ID for the push request.</p>
+     * 
      * <strong>example:</strong>
-     * <p>4010290149170430</p>
+     * <p>9998B3CC-ED9E-4CB3-A8FB-DCC61296BFBC</p>
      */
     @NameInMap("MessageId")
     public String messageId;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
-     * <p>9998B3CC-ED9E-4CB3-A8FB-DCC61296BFBC</p>
+     * <p>500131</p>
      */
     @NameInMap("RequestId")
     public String requestId;

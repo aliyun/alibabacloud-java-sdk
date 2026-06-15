@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class BindPhoneRequest extends TeaModel {
     /**
+     * <p>AppKey information.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class BindPhoneRequest extends TeaModel {
     public Long appKey;
 
     /**
+     * <p>The unique identity of the device, 32-bit, a combination of numbers and lowercase letters.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,7 @@ public class BindPhoneRequest extends TeaModel {
     public String deviceId;
 
     /**
+     * <p>Phone number.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

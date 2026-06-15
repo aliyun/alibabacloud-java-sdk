@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class QueryPushRecordsRequest extends TeaModel {
     /**
+     * <p>The AppKey of the application.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class QueryPushRecordsRequest extends TeaModel {
     public Long appKey;
 
     /**
+     * <p>The end time for the query. Specify the time in UTC, using the ISO-8601 format <code>YYYY-MM-DDThh:mm:ssZ</code>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -22,10 +24,18 @@ public class QueryPushRecordsRequest extends TeaModel {
     @NameInMap("EndTime")
     public String endTime;
 
+    /**
+     * <p>The keyword used for the query. The search covers the <code>MessageId</code>, <code>Title</code>, and <code>Body</code> fields. For <code>Title</code> and <code>Body</code>, the system applies Chinese word segmentation and matches whole tokens instead of substrings.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>统计数据测试通知805</p>
+     */
     @NameInMap("Keyword")
     public String keyword;
 
     /**
+     * <p>This parameter is deprecated.</p>
+     * 
      * <strong>example:</strong>
      * <p>FFPpkmhCPm*****************xjk=</p>
      */
@@ -33,6 +43,8 @@ public class QueryPushRecordsRequest extends TeaModel {
     public String nextToken;
 
     /**
+     * <p>The page number to query. Default: 1. Maximum: 10,000.</p>
+     * 
      * <strong>example:</strong>
      * <p>8</p>
      */
@@ -40,6 +52,8 @@ public class QueryPushRecordsRequest extends TeaModel {
     public Integer page;
 
     /**
+     * <p>The number of entries to return on each page. Default: 20. Maximum: 100.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -47,6 +61,16 @@ public class QueryPushRecordsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The push type. Valid values:</p>
+     * <ul>
+     * <li><p><strong>MESSAGE</strong>: A message.</p>
+     * </li>
+     * <li><p><strong>NOTICE</strong>: A notification.</p>
+     * </li>
+     * <li><p><strong>LIVE_ACTIVITY</strong>: A Live Activity.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>NOTICE</p>
      */
@@ -54,6 +78,16 @@ public class QueryPushRecordsRequest extends TeaModel {
     public String pushType;
 
     /**
+     * <p>The push source. Valid values:</p>
+     * <ul>
+     * <li><p><strong>API</strong>: Pushes initiated via an OpenAPI call.</p>
+     * </li>
+     * <li><p><strong>CONSOLE</strong>: Pushes initiated from the Mobile Push console.</p>
+     * </li>
+     * <li><p><strong>OpenAPIExplorer</strong>: Pushes initiated from Alibaba Cloud OpenAPI Explorer.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>API</p>
      */
@@ -61,6 +95,7 @@ public class QueryPushRecordsRequest extends TeaModel {
     public String source;
 
     /**
+     * <p>The start time for the query. Specify the time in UTC, using the ISO-8601 format <code>YYYY-MM-DDThh:mm:ssZ</code>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -70,6 +105,22 @@ public class QueryPushRecordsRequest extends TeaModel {
     public String startTime;
 
     /**
+     * <p>The push target. Valid values:</p>
+     * <ul>
+     * <li><p><strong>DEVICE</strong>: Push to devices.</p>
+     * </li>
+     * <li><p><strong>ACCOUNT</strong>: Push to accounts.</p>
+     * </li>
+     * <li><p><strong>ALIAS</strong>: Push to aliases.</p>
+     * </li>
+     * <li><p><strong>TAG</strong>: Push to tags.</p>
+     * </li>
+     * <li><p><strong>ALL</strong>: Push to all devices.</p>
+     * </li>
+     * <li><p><strong>TBD</strong>: Initializes a continuous push. The push target is specified in a subsequent call to the <code>ContinuouslyPush</code> API operation.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>DEVICE</p>
      */

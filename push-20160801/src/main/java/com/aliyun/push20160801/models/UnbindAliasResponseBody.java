@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UnbindAliasResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>159E4422-6624-4750-8943-DFD98D34858C</p>
      */

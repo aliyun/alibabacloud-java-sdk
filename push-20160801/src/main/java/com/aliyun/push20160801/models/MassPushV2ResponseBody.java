@@ -4,9 +4,18 @@ package com.aliyun.push20160801.models;
 import com.aliyun.tea.*;
 
 public class MassPushV2ResponseBody extends TeaModel {
+    /**
+     * <p>List of message IDs.</p>
+     */
     @NameInMap("MessageIds")
     public java.util.List<String> messageIds;
 
+    /**
+     * <p>Request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>159E4422-6624-****-8943-DFD98D34858C</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

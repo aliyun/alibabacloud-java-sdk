@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class PushNoticeToAndroidRequest extends TeaModel {
     /**
+     * <p>Your AppKey.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class PushNoticeToAndroidRequest extends TeaModel {
     public Long appKey;
 
     /**
+     * <p>The body of the notification.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,8 @@ public class PushNoticeToAndroidRequest extends TeaModel {
     public String body;
 
     /**
+     * <p>Custom key-value pairs for Android-specific extensions. Pass this as a JSON object.</p>
+     * 
      * <strong>example:</strong>
      * <p>{&quot;key1&quot;:&quot;value1&quot;,&quot;api_name&quot;:&quot;PushNoticeToAndroidRequest&quot;}</p>
      */
@@ -30,16 +34,38 @@ public class PushNoticeToAndroidRequest extends TeaModel {
     public String extParameters;
 
     /**
+     * <p>A custom ID for the push task. If you specify a non-empty JobKey, it appears in the delivery receipt log. For more information, see <a href="https://help.aliyun.com/document_detail/434651.html">Delivery receipt logs</a>.</p>
+     * 
      * <strong>example:</strong>
      * <p>123</p>
      */
     @NameInMap("JobKey")
     public String jobKey;
 
+    /**
+     * <p>Whether to store the notification for offline delivery. Default: false.</p>
+     * <p>If enabled, the notification is redelivered when the user comes online within the time-to-live (TTL) period. Default TTL: 72 hours.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("StoreOffline")
     public Boolean storeOffline;
 
     /**
+     * <p>The target of the push. Valid values:</p>
+     * <ul>
+     * <li><p><strong>DEVICE</strong>: Push to specific devices.</p>
+     * </li>
+     * <li><p><strong>ACCOUNT</strong>: Push to specific accounts.</p>
+     * </li>
+     * <li><p><strong>ALIAS</strong>: Push to users with specific aliases.</p>
+     * </li>
+     * <li><p><strong>TAG</strong>: Push to users with specific tags.</p>
+     * </li>
+     * <li><p><strong>ALL</strong>: Push to all devices.</p>
+     * </li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -49,6 +75,19 @@ public class PushNoticeToAndroidRequest extends TeaModel {
     public String target;
 
     /**
+     * <p>Set this based on the Target value. Separate multiple values with commas. If you exceed the limit, send multiple requests.</p>
+     * <ul>
+     * <li><p>If Target=DEVICE, use values such as <code>deviceid111,deviceid1111</code>. Maximum: 1000 devices.</p>
+     * </li>
+     * <li><p>If Target=ACCOUNT, use values such as <code>account111,account222</code>. Maximum: 1000 accounts.</p>
+     * </li>
+     * <li><p>If Target=ALIAS, use values such as <code>alias111,alias222</code>. Maximum: 1000 aliases.</p>
+     * </li>
+     * <li><p>If Target=TAG, support single or multiple tags. For format details, see <a href="https://help.aliyun.com/document_detail/434847.html">Tag format</a>.</p>
+     * </li>
+     * <li><p>If Target=ALL, set this to <strong>ALL</strong>.</p>
+     * </li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -58,6 +97,7 @@ public class PushNoticeToAndroidRequest extends TeaModel {
     public String targetValue;
 
     /**
+     * <p>The title of the notification.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

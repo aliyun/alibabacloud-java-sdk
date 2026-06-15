@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListTagsRequest extends TeaModel {
     /**
+     * <p>AppKey information.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

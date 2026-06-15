@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class CheckDevicesRequest extends TeaModel {
     /**
+     * <p>The AppKey value.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class CheckDevicesRequest extends TeaModel {
     public Long appKey;
 
     /**
+     * <p>The unique identifier for each device in the push service. Each ID is 32 characters long and contains only digits and lowercase letters. Separate multiple IDs with commas. You can check up to 100 devices per request.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

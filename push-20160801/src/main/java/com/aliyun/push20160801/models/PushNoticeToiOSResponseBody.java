@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class PushNoticeToiOSResponseBody extends TeaModel {
     /**
+     * <p>The message ID for this push request.</p>
+     * 
      * <strong>example:</strong>
      * <p>9998B3CC-ED9E-4CB3-A8FB-DCC61296BFBC</p>
      */
@@ -12,6 +14,8 @@ public class PushNoticeToiOSResponseBody extends TeaModel {
     public String messageId;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>501029</p>
      */

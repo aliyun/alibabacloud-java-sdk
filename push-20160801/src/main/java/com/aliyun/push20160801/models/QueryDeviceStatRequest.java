@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class QueryDeviceStatRequest extends TeaModel {
     /**
+     * <p>AppKey information.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,20 @@ public class QueryDeviceStatRequest extends TeaModel {
     public Long appKey;
 
     /**
+     * <blockquote>
+     * <p>Notice: </p>
+     * </blockquote>
+     * <p>This parameter is only valid for early Android and iOS dual-platform application types. If your application is a dual-platform application, specify this parameter as iOS or ANDROID to query the number of devices for each type. By default, it queries ALL types.</p>
+     * <p>The device type. Valid values:</p>
+     * <ul>
+     * <li><p><strong>iOS</strong>: iOS devices</p>
+     * </li>
+     * <li><p><strong>ANDROID</strong>: Android devices</p>
+     * </li>
+     * <li><p><strong>ALL</strong>: All device types</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>iOS</p>
      */
@@ -21,6 +36,10 @@ public class QueryDeviceStatRequest extends TeaModel {
     public String deviceType;
 
     /**
+     * <p>The end time of the query. The time format follows the ISO8601 standard and uses UTC time, in the format YYYY-MM-DDThh:mm:ssZ.</p>
+     * <blockquote>
+     * <p>The statistics end date is the end time\&quot;s day.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -30,6 +49,13 @@ public class QueryDeviceStatRequest extends TeaModel {
     public String endTime;
 
     /**
+     * <p>Query new devices or historical cumulative devices. Valid values:</p>
+     * <ul>
+     * <li><p><strong>NEW</strong>: New devices</p>
+     * </li>
+     * <li><p><strong>TOTAL</strong>: Cumulative devices</p>
+     * </li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -39,6 +65,10 @@ public class QueryDeviceStatRequest extends TeaModel {
     public String queryType;
 
     /**
+     * <p>The start time of the query. The time format follows the ISO8601 standard and uses UTC time, in the format YYYY-MM-DDThh:mm:ssZ.</p>
+     * <blockquote>
+     * <p>The statistics start date is 00:00 UTC+8 on the start time\&quot;s day.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

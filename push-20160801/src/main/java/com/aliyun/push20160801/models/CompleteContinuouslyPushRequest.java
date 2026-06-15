@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class CompleteContinuouslyPushRequest extends TeaModel {
     /**
+     * <p>The AppKey value.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,10 +15,12 @@ public class CompleteContinuouslyPushRequest extends TeaModel {
     public Long appKey;
 
     /**
+     * <p>The message ID.</p>
+     * <p>This ID is returned after you call the Push operation and set Target to TBD. It identifies a message saved in the push system.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>4010290149170430</p>
+     * <p>500131</p>
      */
     @NameInMap("MessageId")
     public String messageId;

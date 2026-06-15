@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class QueryPushRecordsResponseBody extends TeaModel {
     /**
+     * <p>Deprecated. This parameter is no longer used.</p>
+     * 
      * <strong>example:</strong>
      * <p>i91D***********kXIh/dVBEQ==</p>
      */
@@ -12,6 +14,8 @@ public class QueryPushRecordsResponseBody extends TeaModel {
     public String nextToken;
 
     /**
+     * <p>The current page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>11</p>
      */
@@ -19,6 +23,8 @@ public class QueryPushRecordsResponseBody extends TeaModel {
     public Integer page;
 
     /**
+     * <p>The number of entries per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -29,6 +35,8 @@ public class QueryPushRecordsResponseBody extends TeaModel {
     public QueryPushRecordsResponseBodyPushInfos pushInfos;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>9B24B396-249D-55E4-8CA1-66C9B50BB734</p>
      */
@@ -36,6 +44,8 @@ public class QueryPushRecordsResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total number of records.</p>
+     * 
      * <strong>example:</strong>
      * <p>193</p>
      */

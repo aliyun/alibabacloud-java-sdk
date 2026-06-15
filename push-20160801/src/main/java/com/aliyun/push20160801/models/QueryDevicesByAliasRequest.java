@@ -5,15 +5,17 @@ import com.aliyun.tea.*;
 
 public class QueryDevicesByAliasRequest extends TeaModel {
     /**
+     * <p>The alias. You can query only one alias at a time.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>aliasName</p>
+     * <p>test_alias</p>
      */
     @NameInMap("Alias")
     public String alias;
 
     /**
+     * <p>AppKey information.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class QueryDeviceInfoRequest extends TeaModel {
     /**
+     * <p>AppKey information.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class QueryDeviceInfoRequest extends TeaModel {
     public Long appKey;
 
     /**
+     * <p>The unique identity of the device in the push system. Query only one at a time.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

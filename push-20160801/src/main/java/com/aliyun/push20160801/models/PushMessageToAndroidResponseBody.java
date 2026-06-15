@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class PushMessageToAndroidResponseBody extends TeaModel {
     /**
+     * <p>The ID of the message pushed.</p>
+     * 
      * <strong>example:</strong>
      * <p>501029</p>
      */
@@ -12,6 +14,8 @@ public class PushMessageToAndroidResponseBody extends TeaModel {
     public String messageId;
 
     /**
+     * <p>The ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>9998B3CC-ED9E-4CB3-A8FB-DCC61296BFBC</p>
      */

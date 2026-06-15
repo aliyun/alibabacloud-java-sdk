@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class QueryUniqueDeviceStatRequest extends TeaModel {
     /**
+     * <p>Your app key.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class QueryUniqueDeviceStatRequest extends TeaModel {
     public Long appKey;
 
     /**
+     * <p>The end time of the query, in ISO 8601 format. Format: YYYY-MM-DDThh:mm:ssZ.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,13 @@ public class QueryUniqueDeviceStatRequest extends TeaModel {
     public String endTime;
 
     /**
+     * <p>The time granularity for the query. Valid values:</p>
+     * <ul>
+     * <li><p>DAY</p>
+     * </li>
+     * <li><p>MONTH</p>
+     * </li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -32,6 +41,7 @@ public class QueryUniqueDeviceStatRequest extends TeaModel {
     public String granularity;
 
     /**
+     * <p>The start time of the query, in ISO 8601 format. Format: YYYY-MM-DDThh:mm:ssZ.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

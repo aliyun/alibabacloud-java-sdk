@@ -8,6 +8,8 @@ public class QueryDeviceStatResponseBody extends TeaModel {
     public QueryDeviceStatResponseBodyAppDeviceStats appDeviceStats;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>9998B3CC-ED9E-4CB3-A8FB-DCC61296BFBC</p>
      */

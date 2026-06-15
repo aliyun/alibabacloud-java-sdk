@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class RemoveTagRequest extends TeaModel {
     /**
+     * <p>The AppKey value.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class RemoveTagRequest extends TeaModel {
     public Long appKey;
 
     /**
+     * <p>The name of the tag to remove. You can remove only one tag at a time. Maximum length: 128 characters.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

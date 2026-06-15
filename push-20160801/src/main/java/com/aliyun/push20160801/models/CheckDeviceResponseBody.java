@@ -5,13 +5,17 @@ import com.aliyun.tea.*;
 
 public class CheckDeviceResponseBody extends TeaModel {
     /**
+     * <p>Indicates whether the device is active.</p>
+     * 
      * <strong>example:</strong>
-     * <p>ture</p>
+     * <p>true</p>
      */
     @NameInMap("Available")
     public Boolean available;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>9998B3CC-ED9E-4CB3-A8FB-DCC61296BFBC</p>
      */

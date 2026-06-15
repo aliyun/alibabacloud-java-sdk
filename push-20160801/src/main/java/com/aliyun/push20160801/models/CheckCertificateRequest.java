@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class CheckCertificateRequest extends TeaModel {
     /**
+     * <p>The AppKey of the application.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

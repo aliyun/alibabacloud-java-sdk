@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class UnbindTagRequest extends TeaModel {
     /**
+     * <p>The AppKey of your application.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class UnbindTagRequest extends TeaModel {
     public Long appKey;
 
     /**
+     * <p>The ID of the device.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,10 @@ public class UnbindTagRequest extends TeaModel {
     public String clientKey;
 
     /**
+     * <p>The type of the ClientKey. Valid value:</p>
+     * <ul>
+     * <li><strong>DEVICE</strong>: The key is a device ID.</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -32,6 +38,7 @@ public class UnbindTagRequest extends TeaModel {
     public String keyType;
 
     /**
+     * <p>Specifies the tag to unbind. To unbind multiple tags, separate them with commas. A maximum of 10 tags, each up to 128 characters long, can be unbound per request. The system supports a total of 10,000 tags.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
