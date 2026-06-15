@@ -16,6 +16,12 @@ public class CreateComputeInstanceRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
+
+    @NameInMap("ResourceType")
+    public String resourceType;
+
     public static CreateComputeInstanceRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateComputeInstanceRequest self = new CreateComputeInstanceRequest();
         return TeaModel.build(map, self);
@@ -35,6 +41,22 @@ public class CreateComputeInstanceRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public CreateComputeInstanceRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
+    public CreateComputeInstanceRequest setResourceType(String resourceType) {
+        this.resourceType = resourceType;
+        return this;
+    }
+    public String getResourceType() {
+        return this.resourceType;
     }
 
 }
