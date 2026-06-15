@@ -190,7 +190,7 @@ public class DescribeLifecyclePoliciesResponseBody extends TeaModel {
          * <p>Description</p>
          * 
          * <strong>example:</strong>
-         * <p>Description</p>
+         * <p>描述</p>
          */
         @NameInMap("Description")
         public String description;

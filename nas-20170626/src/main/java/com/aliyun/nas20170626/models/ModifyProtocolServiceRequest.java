@@ -27,7 +27,7 @@ public class ModifyProtocolServiceRequest extends TeaModel {
      * </ul>
      * 
      * <strong>example:</strong>
-     * <p>test</p>
+     * <p>此协议服务的描述信息</p>
      * 
      * <strong>if can be null:</strong>
      * <p>false</p>
@@ -54,7 +54,7 @@ public class ModifyProtocolServiceRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>cpfs-123****</p>
+     * <p>cpfs-099394bd928c****</p>
      */
     @NameInMap("FileSystemId")
     public String fileSystemId;
@@ -64,7 +64,7 @@ public class ModifyProtocolServiceRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>ptc-123****</p>
+     * <p>ptc-197ed6a00f2b****</p>
      */
     @NameInMap("ProtocolServiceId")
     public String protocolServiceId;

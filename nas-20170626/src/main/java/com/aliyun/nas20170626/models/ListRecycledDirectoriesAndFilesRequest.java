@@ -41,7 +41,7 @@ public class ListRecycledDirectoriesAndFilesRequest extends TeaModel {
      * <p>If all the files and directories are incompletely returned in a query, the return value of the NextToken parameter is not empty. In this case, you can specify a valid value for the NextToken parameter to continue the query.</p>
      * 
      * <strong>example:</strong>
-     * <p>CJyNARIsMTY5OTI2NjQ3NTEzMjY2OTMwOF8xODA5NF8ufnl0YkROTl9uZXcuaXB5bmI=</p>
+     * <p>1256****25</p>
      */
     @NameInMap("NextToken")
     public String nextToken;

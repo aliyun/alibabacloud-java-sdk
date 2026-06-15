@@ -27,7 +27,7 @@ public class ModifyProtocolMountTargetRequest extends TeaModel {
      * </ul>
      * 
      * <strong>example:</strong>
-     * <p>test</p>
+     * <p>此导出目录的描述信息</p>
      */
     @NameInMap("Description")
     public String description;

@@ -67,7 +67,7 @@ public class CreateAutoSnapshotPolicyRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>0,1,…23</p>
+     * <p>0,1,…,23</p>
      */
     @NameInMap("TimePoints")
     public String timePoints;

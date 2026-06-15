@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class StartLifecyclePolicyExecutionResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>70EACC9C-D07A-4A34-ADA4-77506C42****</p>
      */
@@ -12,6 +14,15 @@ public class StartLifecyclePolicyExecutionResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * <p>Valid values:</p>
+     * <ul>
+     * <li><p>true: The request was successful.</p>
+     * </li>
+     * <li><p>false: The request failed.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

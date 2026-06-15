@@ -37,7 +37,7 @@ public class ModifyDataFlowRequest extends TeaModel {
      * </ul>
      * 
      * <strong>example:</strong>
-     * <p>test</p>
+     * <p>Bucket01数据流动</p>
      */
     @NameInMap("Description")
     public String description;

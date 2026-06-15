@@ -7,7 +7,7 @@ public class DescribeMountTargetsRequest extends TeaModel {
     /**
      * <p>The dual-stack (IPv4 and IPv6) domain name of the mount target.</p>
      * <blockquote>
-     * <p>Only Extreme NAS file systems that reside in the Chinese mainland support IPv6.</p>
+     * <p>Currently, only Extreme NAS file systems in Chinese mainland regions support IPv6.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -19,9 +19,12 @@ public class DescribeMountTargetsRequest extends TeaModel {
     /**
      * <p>The ID of the file system.</p>
      * <ul>
-     * <li>Sample ID of a General-purpose NAS file system: 31a8e4\<em>\</em>\<em>\</em>.</li>
-     * <li>The IDs of Extreme NAS file systems must start with <code>extreme-</code>, for example, extreme-0015\<em>\</em>\<em>\</em>.</li>
-     * <li>The IDs of CPFS file systems must start with <code>cpfs-</code>. Example: cpfs-125487\<em>\</em>\<em>\</em>.</li>
+     * <li><p>general-purpose NAS: 31a8e4\<em>\</em>\<em>\</em>.</p>
+     * </li>
+     * <li><p>Extreme NAS: The ID must start with <code>extreme-</code>. Example: extreme-0015\<em>\</em>\<em>\</em>.</p>
+     * </li>
+     * <li><p>CPFS: The ID must start with <code>cpfs-</code>. Example: cpfs-125487\<em>\</em>\<em>\</em>.</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -32,7 +35,7 @@ public class DescribeMountTargetsRequest extends TeaModel {
     public String fileSystemId;
 
     /**
-     * <p>The address of the mount target.</p>
+     * <p>The domain name of the mount target.</p>
      * 
      * <strong>example:</strong>
      * <p>1ca404****-x****.cn-hangzhou.nas.aliyuncs.com</p>
@@ -41,8 +44,8 @@ public class DescribeMountTargetsRequest extends TeaModel {
     public String mountTargetDomain;
 
     /**
-     * <p>The page number.</p>
-     * <p>Pages start from page 1. Default value: 1.</p>
+     * <p>The page number to return.</p>
+     * <p>The value must be 1 or greater. Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -51,7 +54,7 @@ public class DescribeMountTargetsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page.</p>
+     * <p>The number of mount targets to return per page.</p>
      * <p>Valid values: 1 to 100.</p>
      * <p>Default value: 10.</p>
      * 

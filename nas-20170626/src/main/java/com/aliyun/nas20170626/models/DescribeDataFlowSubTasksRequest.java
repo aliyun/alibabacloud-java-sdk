@@ -85,7 +85,7 @@ public class DescribeDataFlowSubTasksRequest extends TeaModel {
     public static class DescribeDataFlowSubTasksRequestFilters extends TeaModel {
         /**
          * <p>The filter name.</p>
-         * <p>Valid values:</p>
+         * <p>Valid value:</p>
          * <ul>
          * <li>DataFlowIds: filters data flow subtasks by data flow ID.</li>
          * <li>DataFlowTaskIds: filters data flow subtasks by data flow task ID.</li>
@@ -104,9 +104,9 @@ public class DescribeDataFlowSubTasksRequest extends TeaModel {
         /**
          * <p>The filter value. This parameter does not support wildcards.</p>
          * <ul>
-         * <li>If Key is set to DataFlowIds, set Value to a data flow ID or a part of the data flow ID. You can specify a data flow ID or a group of data flow IDs. You can specify a maximum of 10 data flow IDs. Example: <code>df-194433a5be31****</code> or <code>df-194433a5be31****,df-244433a5be31****</code>.</li>
-         * <li>If Key is set to DataFlowTaskIds, set Value to a data flow task ID or a part of the data flow task ID. You can specify a data flow task ID or a group of data flow task IDs. You can specify a maximum of 10 data flow task IDs. Example:  <code>task-38aa8e890f45****</code> or <code>task-38aa8e890f45****,task-27aa8e890f45****</code>.</li>
-         * <li>If Key is set to DataFlowSubTaskIds, set Value to a data streaming task ID or a part of the data streaming task ID. You can specify a data streaming task ID or a group of data streaming task IDs. You can specify a maximum of 10 data streaming task IDs. Example: <code>subTaskId-370kyfmyknxcyzw**** </code>or <code>subTaskId-370kyfmyknxcyzw****,subTaskId-280kyfmyknxcyzw****</code>.</li>
+         * <li>If Key is set to DataFlowIds, set Value to a data flow ID or a part of the data flow ID. You can specify a data flow ID or a group of data flow IDs. You can specify a maximum of 10 data flow IDs. Example: <code>df-194433a5be31****</code> or <code>df-194433a512a2****,df-234533a5be31****</code>.</li>
+         * <li>If Key is set to DataFlowTaskIds, set Value to a data flow task ID or a part of the data flow task ID. You can specify a data flow task ID or a group of data flow task IDs. You can specify a maximum of 10 data flow task IDs. For example, <code>task-29ee8e890f45****</code> or <code>task-29ee8e890f45****,task-38ae8e890f45****</code>.</li>
+         * <li>If Key is set to DataFlowSubTaskIds, set Value to a data streaming task ID or a part of the data streaming task ID. You can specify a data streaming task ID or a group of data streaming task IDs. You can specify a maximum of 10 data streaming task IDs. For example, <code>subTaskId-370kyfmyknxcyzw****</code> or <code>subTaskId-247kyfmyknxcyzw****,subTaskId-256kyfmyknxcyzw****</code>.</li>
          * <li>If Key is set to Status, set Value to the status of the data flow task. The status can be EXPIRED, CREATED, RUNNING, COMPLETE, CANCELING, FAILED, or CANCELED. Combined query is supported.</li>
          * <li>If Key is set to SrcFilePath, set Value to the path of the source file. The path can be up to 1,023 characters in length.</li>
          * <li>If Key is set to DstFilePath, set Value to the path of the destination file. The path can be up to 1,023 characters in length.</li>

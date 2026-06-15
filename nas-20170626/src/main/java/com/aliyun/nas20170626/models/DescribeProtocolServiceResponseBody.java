@@ -77,7 +77,7 @@ public class DescribeProtocolServiceResponseBody extends TeaModel {
          * </ul>
          * 
          * <strong>example:</strong>
-         * <p>test</p>
+         * <p>此协议服务的描述</p>
          */
         @NameInMap("Description")
         public String description;

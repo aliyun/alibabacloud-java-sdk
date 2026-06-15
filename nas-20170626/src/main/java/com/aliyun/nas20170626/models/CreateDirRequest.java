@@ -74,7 +74,7 @@ public class CreateDirRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>test</p>
+     * <p>/test</p>
      */
     @NameInMap("RootDirectory")
     public String rootDirectory;

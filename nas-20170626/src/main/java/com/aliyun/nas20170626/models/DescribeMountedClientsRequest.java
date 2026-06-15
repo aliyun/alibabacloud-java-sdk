@@ -22,7 +22,7 @@ public class DescribeMountedClientsRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>109c****66</p>
+     * <p>31a8e4****</p>
      */
     @NameInMap("FileSystemId")
     public String fileSystemId;

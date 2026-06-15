@@ -24,7 +24,7 @@ public class CreateDataFlowSubTaskRequest extends TeaModel {
     public CreateDataFlowSubTaskRequestCondition condition;
 
     /**
-     * <p>The ID of the data flow.</p>
+     * <p>The ID of the dataflow.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -34,9 +34,9 @@ public class CreateDataFlowSubTaskRequest extends TeaModel {
     public String dataFlowId;
 
     /**
-     * <p>The ID of the data flow task.</p>
+     * <p>The ID of the dataflow task.</p>
      * <blockquote>
-     * <p> Only the IDs of data streaming tasks are supported.</p>
+     * <p>Only the IDs of data streaming tasks are supported.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 

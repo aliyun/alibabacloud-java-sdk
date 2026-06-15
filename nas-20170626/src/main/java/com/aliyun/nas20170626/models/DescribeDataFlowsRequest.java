@@ -13,7 +13,7 @@ public class DescribeDataFlowsRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>bmcpfs-290w65p03ok64ya****</p>
+     * <p>cpfs-099394bd928c****</p>
      */
     @NameInMap("FileSystemId")
     public String fileSystemId;

@@ -36,7 +36,7 @@ public class DeleteProtocolMountTargetRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>exp-123****</p>
+     * <p>exp-19abf5beab8d****</p>
      */
     @NameInMap("ExportId")
     public String exportId;
@@ -46,7 +46,7 @@ public class DeleteProtocolMountTargetRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>cpfs-123****</p>
+     * <p>cpfs-099394bd928c****</p>
      */
     @NameInMap("FileSystemId")
     public String fileSystemId;
@@ -56,7 +56,7 @@ public class DeleteProtocolMountTargetRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>ptc-123****</p>
+     * <p>ptc-197ed6a00f2b****</p>
      */
     @NameInMap("ProtocolServiceId")
     public String protocolServiceId;

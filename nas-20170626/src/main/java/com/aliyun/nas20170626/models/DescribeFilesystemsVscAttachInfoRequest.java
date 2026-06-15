@@ -30,6 +30,9 @@ public class DescribeFilesystemsVscAttachInfoRequest extends TeaModel {
     @NameInMap("ResourceIds")
     public java.util.List<DescribeFilesystemsVscAttachInfoRequestResourceIds> resourceIds;
 
+    @NameInMap("RoleChain")
+    public java.util.List<DescribeFilesystemsVscAttachInfoRequestRoleChain> roleChain;
+
     public static DescribeFilesystemsVscAttachInfoRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeFilesystemsVscAttachInfoRequest self = new DescribeFilesystemsVscAttachInfoRequest();
         return TeaModel.build(map, self);
@@ -57,6 +60,14 @@ public class DescribeFilesystemsVscAttachInfoRequest extends TeaModel {
     }
     public java.util.List<DescribeFilesystemsVscAttachInfoRequestResourceIds> getResourceIds() {
         return this.resourceIds;
+    }
+
+    public DescribeFilesystemsVscAttachInfoRequest setRoleChain(java.util.List<DescribeFilesystemsVscAttachInfoRequestRoleChain> roleChain) {
+        this.roleChain = roleChain;
+        return this;
+    }
+    public java.util.List<DescribeFilesystemsVscAttachInfoRequestRoleChain> getRoleChain() {
+        return this.roleChain;
     }
 
     public static class DescribeFilesystemsVscAttachInfoRequestResourceIds extends TeaModel {
@@ -97,6 +108,47 @@ public class DescribeFilesystemsVscAttachInfoRequest extends TeaModel {
         }
         public String getVscId() {
             return this.vscId;
+        }
+
+    }
+
+    public static class DescribeFilesystemsVscAttachInfoRequestRoleChain extends TeaModel {
+        @NameInMap("AssumeRoleFor")
+        public String assumeRoleFor;
+
+        @NameInMap("RoleArn")
+        public String roleArn;
+
+        @NameInMap("RoleType")
+        public String roleType;
+
+        public static DescribeFilesystemsVscAttachInfoRequestRoleChain build(java.util.Map<String, ?> map) throws Exception {
+            DescribeFilesystemsVscAttachInfoRequestRoleChain self = new DescribeFilesystemsVscAttachInfoRequestRoleChain();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeFilesystemsVscAttachInfoRequestRoleChain setAssumeRoleFor(String assumeRoleFor) {
+            this.assumeRoleFor = assumeRoleFor;
+            return this;
+        }
+        public String getAssumeRoleFor() {
+            return this.assumeRoleFor;
+        }
+
+        public DescribeFilesystemsVscAttachInfoRequestRoleChain setRoleArn(String roleArn) {
+            this.roleArn = roleArn;
+            return this;
+        }
+        public String getRoleArn() {
+            return this.roleArn;
+        }
+
+        public DescribeFilesystemsVscAttachInfoRequestRoleChain setRoleType(String roleType) {
+            this.roleType = roleType;
+            return this;
+        }
+        public String getRoleType() {
+            return this.roleType;
         }
 
     }

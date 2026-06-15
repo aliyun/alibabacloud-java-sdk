@@ -7,10 +7,14 @@ public class DescribeFileSystemsRequest extends TeaModel {
     /**
      * <p>The ID of the file system.</p>
      * <ul>
-     * <li>Sample ID of a General-purpose NAS file system: 31a8e4\<em>\</em>\<em>\</em>.</li>
-     * <li>The IDs of Extreme NAS file systems must start with extreme-, for example, extreme-0015\<em>\</em>\<em>\</em>.</li>
-     * <li>The IDs of CPFS file systems must start with cpfs-. Example: cpfs-125487\<em>\</em>\<em>\</em>.</li>
-     * <li>The IDs of CPFS SE file systems must start with cpfsse-. Example: cpfsse-022c71b134\<em>\</em>\<em>\</em>.</li>
+     * <li><p>For General-purpose NAS file systems, the ID is a string of characters, such as <code>31a8e4****</code>.</p>
+     * </li>
+     * <li><p>For Extreme NAS file systems, the ID must start with <code>extreme-</code>, such as <code>extreme-0015****</code>.</p>
+     * </li>
+     * <li><p>For Cloud Parallel File System (CPFS) file systems, the ID must start with <code>cpfs-</code>, such as <code>cpfs-125487****</code>.</p>
+     * </li>
+     * <li><p>For Cloud Parallel File System SE (CPFS SE) file systems, the ID must start with <code>cpfsse-</code>, such as <code>cpfsse-022c71b134****</code>.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -20,17 +24,22 @@ public class DescribeFileSystemsRequest extends TeaModel {
     public String fileSystemId;
 
     /**
-     * <p>The type of the file system.</p>
+     * <p>The file system type.</p>
      * <p>Valid values:</p>
      * <ul>
-     * <li>all (default): All types.</li>
-     * <li>standard: General-purpose NAS</li>
-     * <li>extreme: Extreme NAS</li>
-     * <li>cpfs: CPFS (locally redundant storage)</li>
-     * <li>cpfsse: CPFS SE (zone-redundant storage)</li>
+     * <li><p><code>all</code> (default): all file system types.</p>
+     * </li>
+     * <li><p><code>standard</code>: General-purpose NAS.</p>
+     * </li>
+     * <li><p><code>extreme</code>: Extreme NAS.</p>
+     * </li>
+     * <li><p><code>cpfs</code>: Cloud Parallel File System (CPFS).</p>
+     * </li>
+     * <li><p><code>cpfsse</code>: Cloud Parallel File System SE (CPFS SE).</p>
+     * </li>
      * </ul>
      * <blockquote>
-     * <p> Separate multiple data types with commas (,).</p>
+     * <p>Separate multiple types with commas.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -40,8 +49,8 @@ public class DescribeFileSystemsRequest extends TeaModel {
     public String fileSystemType;
 
     /**
-     * <p>The page number.</p>
-     * <p>Pages start from page 1. Default value: 1.</p>
+     * <p>The page number of the file system list.</p>
+     * <p>The page number starts at 1. The default value is 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -50,35 +59,35 @@ public class DescribeFileSystemsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page.</p>
-     * <p>Valid values: 1 to 100.</p>
+     * <p>The number of file systems to return on each page.</p>
+     * <p>Value range: 1 to 100.</p>
      * <p>Default value: 10.</p>
      * 
      * <strong>example:</strong>
-     * <p>10</p>
+     * <p>1</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
-     * <p>The resource group ID.</p>
-     * <p>You can log on to the <a href="https://resourcemanager.console.aliyun.com/resource-groups?">Resource Management console</a> to view resource group IDs.</p>
+     * <p>The ID of the resource group.</p>
+     * <p>You can view this ID in the <a href="https://resourcemanager.console.aliyun.com/resource-groups?">Resource Management console</a>.</p>
      * 
      * <strong>example:</strong>
-     * <p>rg-acfmwavnfdf****</p>
+     * <p>rg-acfmwavnfef****</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
     /**
-     * <p>The details about the tags.</p>
+     * <p>The tags used to filter file systems. You can specify 1 to 20 tags.</p>
      */
     @NameInMap("Tag")
     public java.util.List<DescribeFileSystemsRequestTag> tag;
 
     /**
-     * <p>The ID of the virtual private cloud (VPC).</p>
-     * <p>If you want to mount the file system on an Elastic Compute Service (ECS) instance, the file system and the ECS instance must reside in the same VPC.</p>
+     * <p>The ID of the VPC.</p>
+     * <p>The file system and the ECS instance used for mounting must be in the same VPC.</p>
      * 
      * <strong>example:</strong>
      * <p>vpc-bp1sevsgtqvk5gxbl****</p>
@@ -152,14 +161,17 @@ public class DescribeFileSystemsRequest extends TeaModel {
          * <p>The tag key.</p>
          * <p>Limits:</p>
          * <ul>
-         * <li>Valid values of N: 1 to 20.</li>
-         * <li>The tag key can be up to 128 characters in length.</li>
-         * <li>The tag key cannot start with <code>aliyun</code> or <code>acs:</code>.</li>
-         * <li>The tag key cannot contain <code>http://</code> or <code>https://</code>.</li>
+         * <li></li>
+         * <li><p>The tag key can be up to 128 characters long.</p>
+         * </li>
+         * <li><p>It cannot start with <code>aliyun</code> or <code>acs:</code>.</p>
+         * </li>
+         * <li><p>It cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
-         * <p>test</p>
+         * <p>testKey</p>
          */
         @NameInMap("Key")
         public String key;
@@ -168,14 +180,17 @@ public class DescribeFileSystemsRequest extends TeaModel {
          * <p>The tag value.</p>
          * <p>Limits:</p>
          * <ul>
-         * <li>Valid values of N: 1 to 20.</li>
-         * <li>The tag value can be up to 128 characters in length.</li>
-         * <li>The tag value cannot start with <code>aliyun</code> or <code>acs:</code>.</li>
-         * <li>The tag value cannot contain <code>http://</code> or <code>https://</code>.</li>
+         * <li></li>
+         * <li><p>The tag value can be up to 128 characters long.</p>
+         * </li>
+         * <li><p>It cannot start with <code>aliyun</code> or <code>acs:</code>.</p>
+         * </li>
+         * <li><p>It cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
-         * <p>test-value</p>
+         * <p>testValue</p>
          */
         @NameInMap("Value")
         public String value;

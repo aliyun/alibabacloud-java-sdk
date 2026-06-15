@@ -37,7 +37,7 @@ public class CreateProtocolMountTargetRequest extends TeaModel {
      * </ul>
      * 
      * <strong>example:</strong>
-     * <p>test</p>
+     * <p>此导出目录的描述</p>
      */
     @NameInMap("Description")
     public String description;
@@ -61,7 +61,7 @@ public class CreateProtocolMountTargetRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>cpfs-123****</p>
+     * <p>cpfs-099394bd928c****</p>
      */
     @NameInMap("FileSystemId")
     public String fileSystemId;
@@ -76,7 +76,7 @@ public class CreateProtocolMountTargetRequest extends TeaModel {
      * </ul>
      * 
      * <strong>example:</strong>
-     * <p>fset-123****</p>
+     * <p>fset-1902718ea0ae****</p>
      */
     @NameInMap("FsetId")
     public String fsetId;
@@ -107,7 +107,7 @@ public class CreateProtocolMountTargetRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>ptc-123****</p>
+     * <p>ptc-197ed6a00f2b****</p>
      */
     @NameInMap("ProtocolServiceId")
     public String protocolServiceId;
@@ -117,7 +117,7 @@ public class CreateProtocolMountTargetRequest extends TeaModel {
      * <p>If the storage redundancy type of the file system is not zone-redundant (ZRS) and the VpcId is set, this field is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>vsw-123****</p>
+     * <p>vsw-2vc3c2lybvdllxyq4****</p>
      * 
      * <strong>if can be null:</strong>
      * <p>true</p>
@@ -138,7 +138,7 @@ public class CreateProtocolMountTargetRequest extends TeaModel {
      * <p>The VPC ID of the export directory.</p>
      * 
      * <strong>example:</strong>
-     * <p>vpc-123****</p>
+     * <p>vpc-2vct297b8157bth9z****</p>
      * 
      * <strong>if can be null:</strong>
      * <p>true</p>

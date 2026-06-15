@@ -76,7 +76,7 @@ public class CreateAccessPointRequest extends TeaModel {
      * <p>This field takes effect only if you specify the OwnerUserId and OwnerGroupId parameters.</p>
      * 
      * <strong>example:</strong>
-     * <p>0777</p>
+     * <p>0755</p>
      */
     @NameInMap("Permission")
     public String permission;

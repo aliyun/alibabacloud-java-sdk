@@ -66,7 +66,7 @@ public class CreateFileSystemRequest extends TeaModel {
      * </ul>
      * 
      * <strong>example:</strong>
-     * <p>test</p>
+     * <p>此文件系统的描述。</p>
      */
     @NameInMap("Description")
     public String description;
@@ -142,7 +142,7 @@ public class CreateFileSystemRequest extends TeaModel {
      * <p>This parameter is required if EncryptType is set to 2.</p>
      * 
      * <strong>example:</strong>
-     * <p>3c0b3885-2adf-483d-8a65-5e280689****</p>
+     * <p>fcbd****-62**-4a**-b605-c58cc1d5****</p>
      */
     @NameInMap("KmsKeyId")
     public String kmsKeyId;
@@ -206,7 +206,7 @@ public class CreateFileSystemRequest extends TeaModel {
      * </blockquote>
      * 
      * <strong>example:</strong>
-     * <p>s-xxx</p>
+     * <p>s-extreme-snapsho****</p>
      */
     @NameInMap("SnapshotId")
     public String snapshotId;
@@ -242,7 +242,7 @@ public class CreateFileSystemRequest extends TeaModel {
      * </ul>
      * 
      * <strong>example:</strong>
-     * <p>vsw-2ze37k6jh8ums2fw2****</p>
+     * <p>vsw-bp131dkqilvw5pnlt****</p>
      */
     @NameInMap("VSwitchId")
     public String vSwitchId;
@@ -255,7 +255,7 @@ public class CreateFileSystemRequest extends TeaModel {
      * </ul>
      * 
      * <strong>example:</strong>
-     * <p>vpc-bp1cbv1ljve4j5hlw****</p>
+     * <p>vpc-bp18cx9a7zoh0h9b4****</p>
      */
     @NameInMap("VpcId")
     public String vpcId;

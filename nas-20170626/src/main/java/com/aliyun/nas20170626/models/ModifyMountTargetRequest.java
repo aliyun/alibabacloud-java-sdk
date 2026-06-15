@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyMountTargetRequest extends TeaModel {
     /**
-     * <p>The name of the permission group that is attached to the mount target.</p>
+     * <p>The name of the access group that is associated with the mount target.</p>
      * 
      * <strong>example:</strong>
      * <p>classic-test</p>
@@ -17,9 +17,9 @@ public class ModifyMountTargetRequest extends TeaModel {
     public Boolean accessPointAccessOnly;
 
     /**
-     * <p>The dual-stack (IPv4 and IPv6) domain name of the mount target.</p>
+     * <p>The domain name of the dual-stack mount target.</p>
      * <blockquote>
-     * <p> Only Extreme NAS file systems that reside in the Chinese mainland support IPv6.</p>
+     * <p>The IPv6 feature is available only for Extreme NAS file systems in the Chinese mainland.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -31,8 +31,10 @@ public class ModifyMountTargetRequest extends TeaModel {
     /**
      * <p>The ID of the file system.</p>
      * <ul>
-     * <li>Sample ID of a General-purpose NAS file system: <code>31a8e4****</code>.</li>
-     * <li>The IDs of Extreme NAS file systems must start with <code>extreme-</code>, for example, <code>extreme-0015****</code>.</li>
+     * <li><p>For a General-purpose NAS file system, the ID is similar to <code>31a8e4****</code>.</p>
+     * </li>
+     * <li><p>For an Extreme NAS file system, the ID must start with <code>extreme-</code>, for example, <code>extreme-0015****</code>.</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -43,7 +45,7 @@ public class ModifyMountTargetRequest extends TeaModel {
     public String fileSystemId;
 
     /**
-     * <p>The IPv4 domain name of the mount target.</p>
+     * <p>The domain name of the IPv4 mount target.</p>
      * 
      * <strong>example:</strong>
      * <p>1ca404a666-w****.cn-hangzhou.nas.aliyuncs.com</p>
@@ -55,11 +57,13 @@ public class ModifyMountTargetRequest extends TeaModel {
      * <p>The status of the mount target.</p>
      * <p>Valid values:</p>
      * <ul>
-     * <li>Active: The mount target is available.</li>
-     * <li>Inactive: The mount target is unavailable.</li>
+     * <li><p>Active: The mount target is available.</p>
+     * </li>
+     * <li><p>Inactive: The mount target is unavailable.</p>
+     * </li>
      * </ul>
      * <blockquote>
-     * <p> Only General-purpose File Storage NAS (NAS) file systems support changing the mount target status.</p>
+     * <p>You can change the status of a mount target only if the mount target is attached to a General-purpose NAS file system.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

@@ -18,7 +18,7 @@ public class CancelDataFlowSubTaskRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The ID of the data flow.</p>
+     * <p>The ID of the dataflow.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -38,7 +38,7 @@ public class CancelDataFlowSubTaskRequest extends TeaModel {
     public String dataFlowSubTaskId;
 
     /**
-     * <p>The ID of the data flow task.</p>
+     * <p>The ID of the dataflow task.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

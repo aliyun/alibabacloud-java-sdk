@@ -60,7 +60,7 @@ public class GetProtocolMountTargetResponseBody extends TeaModel {
     public static class GetProtocolMountTargetResponseBodyProtocolMountTarget extends TeaModel {
         /**
          * <p>The name of the permission group.</p>
-         * <p>Default permission group: DEFAULT\_VPC\_GROUP\_NAME</p>
+         * <p>Default permission group: DEFAULT_VPC_GROUP_NAME</p>
          * 
          * <strong>example:</strong>
          * <p>DEFAULT_VPC_GROUP_NAME</p>
@@ -81,7 +81,7 @@ public class GetProtocolMountTargetResponseBody extends TeaModel {
          * <p>The description of the export directory.</p>
          * 
          * <strong>example:</strong>
-         * <p>The description of the export directory.</p>
+         * <p>此协议服务导出的描述。</p>
          */
         @NameInMap("Description")
         public String description;

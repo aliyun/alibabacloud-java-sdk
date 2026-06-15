@@ -27,7 +27,7 @@ public class CreateProtocolServiceRequest extends TeaModel {
      * </ul>
      * 
      * <strong>example:</strong>
-     * <p>test</p>
+     * <p>此协议服务的描述。</p>
      */
     @NameInMap("Description")
     public String description;
@@ -52,7 +52,7 @@ public class CreateProtocolServiceRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>cpfs-123****</p>
+     * <p>cpfs-099394bd928c****</p>
      */
     @NameInMap("FileSystemId")
     public String fileSystemId;
@@ -99,7 +99,7 @@ public class CreateProtocolServiceRequest extends TeaModel {
      * <p>The vSwitch ID of the protocol service.</p>
      * 
      * <strong>example:</strong>
-     * <p>vsw-123****</p>
+     * <p>vsw-2vc3c2lybvdllxyq4****</p>
      * 
      * <strong>if can be null:</strong>
      * <p>true</p>
@@ -111,7 +111,7 @@ public class CreateProtocolServiceRequest extends TeaModel {
      * <p>The virtual private cloud (VPC) ID of the protocol service. The VPC ID of the protocol service must be the same as the VPC ID of the file system.</p>
      * 
      * <strong>example:</strong>
-     * <p>vpc-123****</p>
+     * <p>vpc-2vct297b8157bth9z****</p>
      * 
      * <strong>if can be null:</strong>
      * <p>true</p>

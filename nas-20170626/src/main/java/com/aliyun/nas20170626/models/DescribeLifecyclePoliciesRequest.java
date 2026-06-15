@@ -11,7 +11,7 @@ public class DescribeLifecyclePoliciesRequest extends TeaModel {
      * </blockquote>
      * 
      * <strong>example:</strong>
-     * <p>Description</p>
+     * <p>描述</p>
      */
     @NameInMap("Description")
     public String description;

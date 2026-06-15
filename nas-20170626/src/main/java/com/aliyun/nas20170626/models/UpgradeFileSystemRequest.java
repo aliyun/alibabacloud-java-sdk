@@ -52,7 +52,7 @@ public class UpgradeFileSystemRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>1ca404****</p>
+     * <p>extreme-0015****</p>
      */
     @NameInMap("FileSystemId")
     public String fileSystemId;

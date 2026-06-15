@@ -4,6 +4,9 @@ package com.aliyun.nas20170626.models;
 import com.aliyun.tea.*;
 
 public class DescribeMountTargetsResponseBody extends TeaModel {
+    /**
+     * <p>A collection of mount targets.</p>
+     */
     @NameInMap("MountTargets")
     public DescribeMountTargetsResponseBodyMountTargets mountTargets;
 
@@ -17,7 +20,7 @@ public class DescribeMountTargetsResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page.</p>
+     * <p>The number of mount targets per page.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>

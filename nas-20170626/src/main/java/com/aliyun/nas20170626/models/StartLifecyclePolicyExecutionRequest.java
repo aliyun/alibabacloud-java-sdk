@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class StartLifecyclePolicyExecutionRequest extends TeaModel {
     /**
+     * <p>The file system ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class StartLifecyclePolicyExecutionRequest extends TeaModel {
     public String fileSystemId;
 
     /**
+     * <p>The lifecycle policy ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

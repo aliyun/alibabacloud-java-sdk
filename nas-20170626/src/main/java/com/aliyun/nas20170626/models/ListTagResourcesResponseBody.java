@@ -8,7 +8,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
      * <p>A pagination token. It can be used in the next request to retrieve a new page of results. If the value of this parameter is null, no queries are performed after the current query.</p>
      * 
      * <strong>example:</strong>
-     * <p>MTcyNDU1MTYyNjIxNTMyNzM4NiMzNjExMzQxNw==</p>
+     * <p>无</p>
      */
     @NameInMap("NextToken")
     public String nextToken;

@@ -173,7 +173,7 @@ public class CreateDataFlowRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>oss://bucket1</p>
+     * <p>oss://178321033379****:bucket-01</p>
      */
     @NameInMap("SourceStorage")
     public String sourceStorage;

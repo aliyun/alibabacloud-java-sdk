@@ -12,7 +12,7 @@ public class CreateFilesetRequest extends TeaModel {
      * </blockquote>
      * 
      * <strong>example:</strong>
-     * <p>123e4567-e89b-12d3-a456-42665544****</p>
+     * <p>123e4567-e89b-12d3-a456-4266554*****</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
@@ -42,7 +42,7 @@ public class CreateFilesetRequest extends TeaModel {
      * </ul>
      * 
      * <strong>example:</strong>
-     * <p>test</p>
+     * <p>内部事务目录</p>
      */
     @NameInMap("Description")
     public String description;
@@ -71,7 +71,7 @@ public class CreateFilesetRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>bmcpfs-290w65p03ok64ya****</p>
+     * <p>bmcpfs-290w65p03ok64y*****</p>
      */
     @NameInMap("FileSystemId")
     public String fileSystemId;

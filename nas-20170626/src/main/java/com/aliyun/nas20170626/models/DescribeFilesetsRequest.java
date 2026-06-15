@@ -156,7 +156,7 @@ public class DescribeFilesetsRequest extends TeaModel {
          * </ul>
          * 
          * <strong>example:</strong>
-         * <p>fset-1902718ea0ae****,fset-3212718ea0ae****</p>
+         * <p>fset-1902718ea0ae****</p>
          */
         @NameInMap("Value")
         public String value;

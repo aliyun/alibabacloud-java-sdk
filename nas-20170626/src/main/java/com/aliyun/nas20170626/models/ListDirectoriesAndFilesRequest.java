@@ -5,14 +5,16 @@ import com.aliyun.tea.*;
 
 public class ListDirectoriesAndFilesRequest extends TeaModel {
     /**
-     * <p>Specifies whether to query only directories.</p>
+     * <p>Whether to list only directories.</p>
      * <p>Valid values:</p>
      * <ul>
-     * <li>false (default): queries both directories and files.</li>
-     * <li>true: queries only directories.</li>
+     * <li><p><code>false</code> (default): Lists both directories and files.</p>
+     * </li>
+     * <li><p><code>true</code>: Lists only directories.</p>
+     * </li>
      * </ul>
      * <blockquote>
-     * <p> If you set the StorageType parameter to All, you must set the DirectoryOnly parameter to true.</p>
+     * <p>If you set <code>StorageType</code> to <code>All</code>, you must set <code>DirectoryOnly</code> to <code>true</code>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -32,9 +34,9 @@ public class ListDirectoriesAndFilesRequest extends TeaModel {
     public String fileSystemId;
 
     /**
-     * <p>The maximum number of directories or files to include in the results of each query.</p>
-     * <p>Valid values: 10 to 128.</p>
-     * <p>Default value: 100.</p>
+     * <p>The maximum number of directories or files to return per page.</p>
+     * <p>Value range: 10–128</p>
+     * <p>Default value: 100</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>
@@ -43,7 +45,7 @@ public class ListDirectoriesAndFilesRequest extends TeaModel {
     public Long maxResults;
 
     /**
-     * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of NextToken.</p>
+     * <p>A continuation token used to retrieve the next page of results when the response is truncated.</p>
      * 
      * <strong>example:</strong>
      * <p>TGlzdFJlc291cmNlU****mVzJjE1MTI2NjY4NzY5MTAzOTEmMiZORnI4NDhVeEtrUT0=</p>
@@ -53,7 +55,7 @@ public class ListDirectoriesAndFilesRequest extends TeaModel {
 
     /**
      * <p>The absolute path of the directory.</p>
-     * <p>The path must start with a forward slash (/) and must be a path that exists in the mount target.</p>
+     * <p>The path must start with a forward slash (/) and exist on the mount target.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -63,14 +65,17 @@ public class ListDirectoriesAndFilesRequest extends TeaModel {
     public String path;
 
     /**
-     * <p>The storage class.</p>
+     * <p>The storage type.</p>
      * <ul>
-     * <li>InfrequentAccess: the Infrequent Access (IA) storage class.</li>
-     * <li>Archive: the Archive storage class.</li>
-     * <li>All: all stored data.</li>
+     * <li><p><code>InfrequentAccess</code>: infrequent access.</p>
+     * </li>
+     * <li><p><code>Archive</code>: archive storage.</p>
+     * </li>
+     * <li><p><code>All</code>: all storage types.</p>
+     * </li>
      * </ul>
      * <blockquote>
-     * <p> If you set the StorageType parameter to All, you must set the DirectoryOnly parameter to true.</p>
+     * <p>If you set <code>StorageType</code> to <code>All</code>, you must set <code>DirectoryOnly</code> to <code>true</code>.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 

@@ -9,7 +9,7 @@ public class DescribeAccessRulesRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>vpc-test</p>
+     * <p>classic-test</p>
      */
     @NameInMap("AccessGroupName")
     public String accessGroupName;
@@ -27,7 +27,7 @@ public class DescribeAccessRulesRequest extends TeaModel {
      * <p>The type of the file system.</p>
      * <p>Valid values:</p>
      * <ul>
-     * <li>standard (default): General-purpose NAS file system.</li>
+     * <li>standard: General-purpose Apsara File Storage NAS (NAS) file system</li>
      * <li>extreme: Extreme NAS file system.</li>
      * </ul>
      * 
@@ -38,7 +38,7 @@ public class DescribeAccessRulesRequest extends TeaModel {
     public String fileSystemType;
 
     /**
-     * <p>The page number.</p>
+     * <p>The number of the page to return.</p>
      * <p>Pages start from page 1. Default value: 1.</p>
      * 
      * <strong>example:</strong>

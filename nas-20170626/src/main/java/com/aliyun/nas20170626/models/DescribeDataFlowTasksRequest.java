@@ -5,21 +5,23 @@ import com.aliyun.tea.*;
 
 public class DescribeDataFlowTasksRequest extends TeaModel {
     /**
-     * <p>The ID of the file system.</p>
+     * <p>The file system ID.</p>
      * <ul>
-     * <li>The IDs of CPFS file systems must start with <code>cpfs-</code>. Example: cpfs-099394bd928c\<em>\</em>\<em>\</em>.</li>
-     * <li>The IDs of CPFS for Lingjun file systems must start with <code>bmcpfs-</code>. Example: bmcpfs-290w65p03ok64ya\<em>\</em>\<em>\</em>. .</li>
+     * <li><p>CPFS General-purpose: The ID must start with <code>cpfs-</code>, such as cpfs-099394bd928c\<em>\</em>\<em>\</em>.</p>
+     * </li>
+     * <li><p>CPFS for AI Computing: The ID must start with <code>bmcpfs-</code>, such as bmcpfs-290w65p03ok64ya\<em>\</em>\<em>\</em>.</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>cpfs-099394bd928c****</p>
+     * <p>bmcpfs-290w65p03ok64ya****</p>
      */
     @NameInMap("FileSystemId")
     public String fileSystemId;
 
     /**
-     * <p>The details about filters.</p>
+     * <p>A collection of filters.</p>
      * 
      * <strong>if can be null:</strong>
      * <p>false</p>
@@ -28,7 +30,7 @@ public class DescribeDataFlowTasksRequest extends TeaModel {
     public java.util.List<DescribeDataFlowTasksRequestFilters> filters;
 
     /**
-     * <p>The number of results for each query.</p>
+     * <p>The maximum number of results to return per page.</p>
      * <p>Valid values: 10 to 100.</p>
      * <p>Default value: 20.</p>
      * 
@@ -39,7 +41,7 @@ public class DescribeDataFlowTasksRequest extends TeaModel {
     public Long maxResults;
 
     /**
-     * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of NextToken.</p>
+     * <p>The pagination token for the next page of results. If the response is truncated, use this token in your next request to retrieve the subsequent page.</p>
      * 
      * <strong>example:</strong>
      * <p>TGlzdFJlc291cmNlU****mVzJjE1MTI2NjY4NzY5MTAzOTEmMiZORnI4NDhVeEtrUT0=</p>
@@ -48,19 +50,21 @@ public class DescribeDataFlowTasksRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>Whether to query report information.</p>
+     * <p>Specifies whether to return report information.</p>
      * <ul>
-     * <li>True (default)</li>
-     * <li>False</li>
+     * <li><p>True (default): Includes reports in the response.</p>
+     * </li>
+     * <li><p>False: Excludes reports from the response.</p>
+     * </li>
      * </ul>
      * <blockquote>
-     * </blockquote>
      * <ul>
-     * <li><p>Set it to False to speed up the query.</p>
+     * <li><p>Set this parameter to False to speed up the query.</p>
      * </li>
-     * <li><p>Only CPFS for Lingjun supports this parameter.</p>
+     * <li><p>This parameter is supported only in CPFS for AI Computing.</p>
      * </li>
      * </ul>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>True</p>
@@ -115,21 +119,33 @@ public class DescribeDataFlowTasksRequest extends TeaModel {
 
     public static class DescribeDataFlowTasksRequestFilters extends TeaModel {
         /**
-         * <p>The filter name.</p>
-         * <p>Valid value:</p>
+         * <p>The filter key.</p>
+         * <p>Valid values:</p>
          * <ul>
-         * <li>DataFlowIds: filters dataflow tasks by dataflow ID.</li>
-         * <li>TaskIds: filters dataflow tasks by task ID.</li>
-         * <li>Originator: filters dataflow tasks by task initiator.</li>
-         * <li>TaskActions: filters dataflow tasks by task type.</li>
-         * <li>DataTypes: filters dataflow tasks by data type.</li>
-         * <li>Status: filters dataflow tasks by dataflow status.</li>
-         * <li>CreateTimeBegin: filters dataflow tasks that are created after a specified time.</li>
-         * <li>CreateTimeEnd: filters dataflow tasks that are created before a specified time.</li>
-         * <li>StartTimeBegin: filters dataflow tasks that are started after a specified time.</li>
-         * <li>StartTimeEnd: filters dataflow tasks that are started before a specified time.</li>
-         * <li>EndTimeBegin: filters dataflow tasks that are stopped after a specified time.</li>
-         * <li>EndTimeEnd: filters dataflow tasks that are stopped before a specified time.</li>
+         * <li><p>DataFlowIds: Filters by data flow ID.</p>
+         * </li>
+         * <li><p>TaskIds: Filters by data flow task ID.</p>
+         * </li>
+         * <li><p>Originator: Filters by originator.</p>
+         * </li>
+         * <li><p>TaskActions: Filters by data flow task type.</p>
+         * </li>
+         * <li><p>DataTypes: Filters by data type.</p>
+         * </li>
+         * <li><p>Status: Filters by status.</p>
+         * </li>
+         * <li><p>CreateTimeBegin: Filters data flow tasks created after the specified time.</p>
+         * </li>
+         * <li><p>CreateTimeEnd: Filters data flow tasks created before the specified time.</p>
+         * </li>
+         * <li><p>StartTimeBegin: Filters data flow tasks that started after the specified time.</p>
+         * </li>
+         * <li><p>StartTimeEnd: Filters data flow tasks that started before the specified time.</p>
+         * </li>
+         * <li><p>EndTimeBegin: Filters data flow tasks that ended after the specified time.</p>
+         * </li>
+         * <li><p>EndTimeEnd: Filters data flow tasks that ended before the specified time.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -139,24 +155,36 @@ public class DescribeDataFlowTasksRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The value of the filter. This parameter does not support wildcards.</p>
+         * <p>The filter value. This parameter does not support wildcards.</p>
          * <ul>
-         * <li>If Key is set to DataFlowIds, set Value to a dataflow ID or a part of the dataflow ID. You can specify a dataflow ID or a group of dataflow IDs. You can specify a maximum of 10 dataflow IDs. Example: <code>df-194433a5be31****</code> or <code>df-194433a512a2****,df-234533a5be31****</code>.</li>
-         * <li>If Key is set to TaskId, set Value to a dataflow task ID or a part of the dataflow task ID. You can specify a dataflow task ID or a group of dataflow task IDs. You can specify a maximum of 10 dataflow task IDs. Example: <code>task-38aa8e890f45****</code> or <code>task-38aa8e890f45****,task-29ae8e890f45****</code>.</li>
-         * <li>If Key is set to TaskActions, set Value to the type of dataflow task. The task type can be <strong>Import</strong>, <strong>Export</strong>, <strong>Evict</strong>, <strong>Inventory</strong>, <strong>StreamImport</strong>, or <strong>StreamExport</strong>. Combined query is supported. CPFS for Lingjun supports only the Import, Export, StreamImport, and StreamExport tasks. Only CPFS for Lingjun V2.6.0 and later support the StreamImport and StreamExport tasks.</li>
-         * <li>If Key is set to DataTypes, set Value to the data type of the dataflow task. The data type can be MetaAndData, Metadata, or Data. Combined query is supported.</li>
-         * <li>If Key is set to Originator, set Value to the initiator of the dataflow task. The initiator can be User or System.</li>
-         * <li>If Key is set to Status, set Value to the status of the dataflow task. The status can be Pending, Executing, Failed, Completed, Canceling, or Canceled. Combined query is supported.</li>
-         * <li>If Key is set to CreateTimeBegin, set Value to the beginning of the time range to create the dataflow task. Time format: <code>yyyy-MM-ddThh:mmZ</code>.</li>
-         * <li>If Key is set to CreateTimeEnd, set Value to the end of the time range to create the dataflow task. Time format: <code>yyyy-MM-ddThh:mmZ</code>.</li>
-         * <li>If Key is set to StartTimeBegin, set Value to the beginning of the time range to start the dataflow task. Time format: <code>yyyy-MM-ddThh:mmZ</code>.</li>
-         * <li>If Key is set to StartTimeEnd, set Value to the end of the time range to start the dataflow task. Time format: <code>yyyy-MM-ddThh:mmZ</code>.</li>
-         * <li>If Key is set to EndTimeBegin, set Value to the beginning of the time range to stop the dataflow task. Time format: <code>yyyy-MM-ddThh:mmZ</code>.</li>
-         * <li>If Key is set to EndTimeEnd, set Value to the end of the time range to stop the dataflow task. Time format: <code>yyyy-MM-ddThh:mmZ</code>.</li>
+         * <li><p>When <code>Key</code> is <code>DataFlowIds</code>, specify one or more data flow IDs. You can specify up to 10 data flow IDs, separated by commas. For example, <code>df-194433a5be31****</code> or <code>df-194433a512a2****,df-234533a5be31****</code>.</p>
+         * </li>
+         * <li><p>When <code>Key</code> is <code>TaskId</code>, specify one or more data flow task IDs. You can specify up to 10 data flow task IDs, separated by commas. For example, <code>task-38aa8e890f45****</code> or <code>task-38aa8e890f45****,task-29ae8e890f45****</code>.</p>
+         * </li>
+         * <li><p>When <code>Key</code> is <code>TaskActions</code>, specify the data flow task type. Valid values are <strong>Import</strong>, <strong>Export</strong>, <strong>Evict</strong>, <strong>Inventory</strong>, <strong>StreamImport</strong>, and <strong>StreamExport</strong>. You can specify multiple values. CPFS for AI Computing supports only Import, Export, StreamImport, and StreamExport. StreamImport and StreamExport are available only in CPFS for AI Computing 2.6.0 and later.</p>
+         * </li>
+         * <li><p>When <code>Key</code> is <code>DataTypes</code>, specify the data type of the data flow task. Valid values are MetaAndData, Metadata, and Data. You can specify multiple values.</p>
+         * </li>
+         * <li><p>When <code>Key</code> is <code>Originator</code>, specify the originator of the data flow task. Valid values are User and System.</p>
+         * </li>
+         * <li><p>When <code>Key</code> is <code>Status</code>, specify the status of the data flow task. Valid values are Pending, Executing, Failed, Completed, Canceling, and Canceled. You can specify multiple values.</p>
+         * </li>
+         * <li><p>When <code>Key</code> is <code>CreateTimeBegin</code>, specify the earliest creation time. Use the <code>yyyy-MM-ddTHH:mmZ</code> format.</p>
+         * </li>
+         * <li><p>When <code>Key</code> is <code>CreateTimeEnd</code>, specify the latest creation time. Use the <code>yyyy-MM-ddTHH:mmZ</code> format.</p>
+         * </li>
+         * <li><p>When <code>Key</code> is <code>StartTimeBegin</code>, specify the earliest start time. Use the <code>yyyy-MM-ddTHH:mmZ</code> format.</p>
+         * </li>
+         * <li><p>When <code>Key</code> is <code>StartTimeEnd</code>, specify the latest start time. Use the <code>yyyy-MM-ddTHH:mmZ</code> format.</p>
+         * </li>
+         * <li><p>When <code>Key</code> is <code>EndTimeBegin</code>, specify the earliest end time. Use the <code>yyyy-MM-ddTHH:mmZ</code> format.</p>
+         * </li>
+         * <li><p>When <code>Key</code> is <code>EndTimeEnd</code>, specify the latest end time. Use the <code>yyyy-MM-ddTHH:mmZ</code> format.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
-         * <p>dfid-12345678</p>
+         * <p>df-194433a5be31****</p>
          */
         @NameInMap("Value")
         public String value;

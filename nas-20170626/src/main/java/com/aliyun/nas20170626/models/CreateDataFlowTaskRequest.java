@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class CreateDataFlowTaskRequest extends TeaModel {
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests.</p>
-     * <p>The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</p>
+     * <p>A client-generated token that ensures the idempotence of the request. The token must be unique across different requests.</p>
+     * <p><code>ClientToken</code> can contain only ASCII characters and must not exceed 64 characters. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</p>
      * <blockquote>
-     * <p> If you do not specify this parameter, the system automatically uses the request ID as the client token. The request ID may be different for each request.</p>
+     * <p>If you do not specify this parameter, the system automatically uses the <code>RequestId</code> of the API request as the <code>ClientToken</code>. The <code>RequestId</code> may be different for each API request.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -18,14 +18,18 @@ public class CreateDataFlowTaskRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The conflict policy for files with the same name. Valid value:</p>
+     * <p>The conflict policy for files with the same name.
+     * Valid values:</p>
      * <ul>
-     * <li>SKIP_THE_FILE: skips files with the same name.</li>
-     * <li>KEEP_LATEST: compares the update time and keeps the latest version.</li>
-     * <li>OVERWRITE_EXISTING: forcibly overwrites the existing file.</li>
+     * <li><p>SKIP_THE_FILE: Skips files with the same name.</p>
+     * </li>
+     * <li><p>KEEP_LATEST: Compares update times and keeps the latest version.</p>
+     * </li>
+     * <li><p>OVERWRITE_EXISTING: Forcibly overwrites files with the same name.</p>
+     * </li>
      * </ul>
      * <blockquote>
-     * <p> This parameter is required for CPFS for Lingjun file systems.</p>
+     * <p>This parameter is required if the file system is a CPFS AI-Computing Edition instance.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -35,19 +39,22 @@ public class CreateDataFlowTaskRequest extends TeaModel {
     public String conflictPolicy;
 
     /**
-     * <p>Specifies whether to automatically create a directory if no directory exists. Valid value:</p>
+     * <p>Specifies whether to automatically create the directory if it does not exist.
+     * Valid values:</p>
      * <ul>
-     * <li>true: automatically creates a directory.</li>
-     * <li>false (default): does not automatically create a directory.</li>
+     * <li><p>true: Automatically creates the directory.</p>
+     * </li>
+     * <li><p>false (default): Does not automatically create the directory.</p>
+     * </li>
      * </ul>
      * <blockquote>
-     * </blockquote>
      * <ul>
-     * <li><p>This parameter is required if the TaskAction parameter is set to Import.</p>
+     * <li><p>This parameter takes effect only when <code>TaskAction</code> is set to <code>Import</code>.</p>
      * </li>
-     * <li><p>Only CPFS for Lingjun V2.6.0 and later support this parameter.</p>
+     * <li><p>This parameter is supported only by CPFS AI-Computing Edition V2.6.0 and later.</p>
      * </li>
      * </ul>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -56,7 +63,7 @@ public class CreateDataFlowTaskRequest extends TeaModel {
     public Boolean createDirIfNotExist;
 
     /**
-     * <p>The ID of the dataflow.</p>
+     * <p>The ID of the data flow.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -66,12 +73,15 @@ public class CreateDataFlowTaskRequest extends TeaModel {
     public String dataFlowId;
 
     /**
-     * <p>The type of data on which operations are performed by the dataflow task.</p>
-     * <p>Valid value:</p>
+     * <p>The data type that the data flow task operates on.</p>
+     * <p>Valid values:</p>
      * <ul>
-     * <li>Metadata: the metadata of a file, including the timestamp, ownership, and permission information of the file. If you select Metadata, only the metadata of the file is imported. You can only query the file. When you access the file data, the file is loaded from the source storage as required.</li>
-     * <li>Data: the data blocks of a file.</li>
-     * <li>MetaAndData: the metadata and data blocks of the file.</li>
+     * <li><p>Metadata: The metadata of the file, including attributes such as timestamp, ownership, and permissions. If you select <code>Metadata</code>, only the file metadata is imported. You can see the file, but when you access the file data, it is loaded from the source storage on demand.</p>
+     * </li>
+     * <li><p>Data: The data blocks of the file.</p>
+     * </li>
+     * <li><p>MetaAndData: The metadata and data blocks of the file.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -84,17 +94,25 @@ public class CreateDataFlowTaskRequest extends TeaModel {
      * <p>The source directory of the data.</p>
      * <p>Limits:</p>
      * <ul>
-     * <li>The directory must be 1 to 1,023 characters in length.</li>
-     * <li>Must be encoded in UTF-8.</li>
-     * <li>The directory must start and end with a forward slash (/).</li>
-     * <li>Only one directory can be listed at a time.</li>
-     * <li>If the TaskAction parameter is set to Export, the directory must be a relative path within the FileSystemPath.</li>
-     * <li>If the TaskAction parameter is set to Import, the directory must be a relative path within the SourceStoragePath.</li>
-     * <li>If the TaskAction parameter is set to StreamExport, the directory must be a relative path within the FileSystemPath.</li>
-     * <li>If the TaskAction parameter is set to StreamImport, the directory must be a relative path within the SourceStoragePath.</li>
+     * <li><p>The length must be 1 to 1,023 characters.</p>
+     * </li>
+     * <li><p>The directory must be UTF-8 encoded.</p>
+     * </li>
+     * <li><p>The directory must start and end with a forward slash (<code>/</code>).</p>
+     * </li>
+     * <li><p>Only one directory can be specified at a time.</p>
+     * </li>
+     * <li><p>If <code>TaskAction</code> is <code>Export</code>, this directory must be a relative path within <code>FileSystemPath</code>.</p>
+     * </li>
+     * <li><p>If <code>TaskAction</code> is <code>Import</code>, this directory must be a relative path within <code>SourceStoragePath</code>.</p>
+     * </li>
+     * <li><p>If <code>TaskAction</code> is <code>StreamExport</code>, this directory must be a relative path within <code>FileSystemPath</code>.</p>
+     * </li>
+     * <li><p>If <code>TaskAction</code> is <code>StreamImport</code>, this directory must be a relative path within <code>SourceStoragePath</code>.</p>
+     * </li>
      * </ul>
      * <blockquote>
-     * <p> Only CPFS for Lingjun V2.6.0 and later support StreamImport and StreamExport.</p>
+     * <p><code>StreamImport</code> and <code>StreamExport</code> are supported only by CPFS AI-Computing Edition V2.6.0 and later.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -104,12 +122,14 @@ public class CreateDataFlowTaskRequest extends TeaModel {
     public String directory;
 
     /**
-     * <p>Specifies whether to perform a dry run.</p>
-     * <p>During the dry run, the system checks whether the request parameters are valid and whether the requested resources are available. During the dry run, no dataflow task is created and no fee is incurred.</p>
-     * <p>Valid value:</p>
+     * <p>Specifies whether to perform a dry run for this creation request.</p>
+     * <p>A dry run checks parameter validity and inventory without creating an instance or incurring charges.</p>
+     * <p>Valid values:</p>
      * <ul>
-     * <li>true: performs a dry run. The system checks the required parameters, request syntax, service limits, and available Apsara File Storage NAS (NAS) resources. Otherwise, an error message is returned. If the request passes the dry run, the HTTP status code 200 is returned. No value is returned for the TaskId parameter.</li>
-     * <li>false (default): performs a dry run and sends the request. If the request passes the dry run, a dataflow task is created.</li>
+     * <li><p>true: Sends a check request without creating the instance. The system checks for required parameters, request format, business limits, and NAS inventory. If the check fails, an error is returned. If the check passes, an HTTP 200 status code is returned, but <code>TaskId</code> is empty.</p>
+     * </li>
+     * <li><p>false (default): Sends a normal request and creates the instance after the check passes.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -119,19 +139,28 @@ public class CreateDataFlowTaskRequest extends TeaModel {
     public Boolean dryRun;
 
     /**
-     * <p>The directory mapped to the dataflow task. Limits:</p>
+     * <p>The destination directory for the data flow task mapping.
+     * Limits:</p>
      * <ul>
-     * <li>The directory must start and end with a forward slash (/). The directory cannot be /../.</li>
-     * <li>The directory must be 1 to 1,023 characters in length.</li>
-     * <li>Must be encoded in UTF-8.</li>
-     * <li>Only one directory can be listed at a time.</li>
-     * <li>If the TaskAction parameter is set to Export, the directory must be a relative path within the SourceStoragePath.</li>
-     * <li>If the TaskAction parameter is set to Import, the directory must be a relative path within the FileSystemPath.</li>
-     * <li>If the TaskAction parameter is set to StreamExport, the directory must be a relative path within the SourceStoragePath.</li>
-     * <li>If the TaskAction parameter is set to StreamImport, the directory must be a relative path within the FileSystemPath.</li>
+     * <li><p>The directory must start and end with a forward slash (<code>/</code>). The <code>/../</code> sequence is not supported.</p>
+     * </li>
+     * <li><p>The length must be 1 to 1,023 characters.</p>
+     * </li>
+     * <li><p>The directory must be UTF-8 encoded.</p>
+     * </li>
+     * <li><p>Only one directory can be specified at a time.</p>
+     * </li>
+     * <li><p>If <code>TaskAction</code> is <code>Export</code>, this directory must be a relative path within <code>SourceStoragePath</code>.</p>
+     * </li>
+     * <li><p>If <code>TaskAction</code> is <code>Import</code>, this directory must be a relative path within <code>FileSystemPath</code>.</p>
+     * </li>
+     * <li><p>If <code>TaskAction</code> is <code>StreamExport</code>, this directory must be a relative path within <code>SourceStoragePath</code>.</p>
+     * </li>
+     * <li><p>If <code>TaskAction</code> is <code>StreamImport</code>, this directory must be a relative path within <code>FileSystemPath</code>.</p>
+     * </li>
      * </ul>
      * <blockquote>
-     * <p> Only CPFS for Lingjun V2.6.0 and later support StreamImport and StreamExport.</p>
+     * <p><code>StreamImport</code> and <code>StreamExport</code> are supported only by CPFS AI-Computing Edition V2.6.0 and later.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -141,15 +170,21 @@ public class CreateDataFlowTaskRequest extends TeaModel {
     public String dstDirectory;
 
     /**
-     * <p>The list of files that are executed by the dataflow task.</p>
+     * <p>The list of files for the data flow task to execute.</p>
      * <p>Limits:</p>
      * <ul>
-     * <li>The list must be encoded in UTF-8.</li>
-     * <li>The total length of the file list cannot exceed 64 KB.</li>
-     * <li>The file list is in JSON format.</li>
-     * <li>The path of a single file must be 1 to 1,023 characters in length and must start with a forward slash (/).</li>
-     * <li>If the TaskAction parameter is set to Import, each element in the list represents an OSS object name.</li>
-     * <li>If the TaskAction parameter is set to Export, each element in the list represents a CPFS file path.</li>
+     * <li><p>The list must be UTF-8 encoded.</p>
+     * </li>
+     * <li><p>The total length of the file list must be less than 64 KB.</p>
+     * </li>
+     * <li><p>The file list must be in JSON format.</p>
+     * </li>
+     * <li><p>The path of a single file must be 1 to 1,023 characters in length and must start with a forward slash (<code>/</code>).</p>
+     * </li>
+     * <li><p>If <code>TaskAction</code> is <code>Import</code>, each element in the list represents an OSS Object name.</p>
+     * </li>
+     * <li><p>If <code>TaskAction</code> is <code>Export</code>, each element in the list represents a CPFS file path.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -161,29 +196,31 @@ public class CreateDataFlowTaskRequest extends TeaModel {
     /**
      * <p>The ID of the file system.</p>
      * <ul>
-     * <li>The IDs of CPFS file systems must start with <code>cpfs-</code>. Example: cpfs-125487\<em>\</em>\<em>\</em>.</li>
-     * <li>The IDs of CPFS for Lingjun file systems must start with <code>bmcpfs-</code>. Example: bmcpfs-0015\<em>\</em>\<em>\</em>.</li>
+     * <li><p>CPFS General Purpose Edition: The ID must start with <code>cpfs-</code>, such as <code>cpfs-125487****</code>.</p>
+     * </li>
+     * <li><p>CPFS AI-Computing Edition: The ID must start with <code>bmcpfs-</code>, such as <code>bmcpfs-0015****</code>.</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>bmcpfs-290w65p03ok64ya****</p>
+     * <p>cpfs-099394bd928c****</p>
      */
     @NameInMap("FileSystemId")
     public String fileSystemId;
 
     /**
-     * <p>Filters subdirectories and transfers their contents.</p>
+     * <p>Filters the subdirectories under the <code>Directory</code> parameter and transfers the content of the filtered subdirectories.</p>
      * <blockquote>
-     * </blockquote>
      * <ul>
-     * <li><p>This parameter takes effect only when the Directory parameter is specified.</p>
+     * <li><p>This parameter takes effect only when the <code>Directory</code> parameter is specified.</p>
      * </li>
-     * <li><p>The path length of a single folder must be 1 to 1023 characters, start and end with a forward slash (/), and the total length must not exceed 3000 characters.</p>
+     * <li><p>The path of a single folder must be 1 to 1,023 characters in length and must start and end with a forward slash (<code>/</code>). The total length cannot exceed 3,000 characters.</p>
      * </li>
-     * <li><p>Only CPFS for Lingjun supports this parameter.</p>
+     * <li><p>This feature is supported only by CPFS AI-Computing Edition.</p>
      * </li>
      * </ul>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>[&quot;/test/&quot;,&quot;/test1/&quot;]</p>
@@ -192,30 +229,36 @@ public class CreateDataFlowTaskRequest extends TeaModel {
     public String includes;
 
     /**
-     * <p>If you specify SrcTaskId, you must enter the ID of the dataflow task. The system copies the TaskAction, DataType, and EntryList parameters from the destination dataflow task. You do not need to specify them.</p>
+     * <p>If you specify <code>SrcTaskId</code>, enter the ID of a data flow task. The system copies the <code>TaskAction</code>, <code>DataType</code>, and <code>EntryList</code> parameter information from the specified task. You do not need to specify these parameters.</p>
      * <blockquote>
-     * <p> Streaming dataflow tasks are not supported.</p>
+     * <p>Data flow streaming tasks are not supported.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
-     * <p>task-27aa8e890f45****</p>
+     * <p>task-29ee8e890f45****</p>
      */
     @NameInMap("SrcTaskId")
     public String srcTaskId;
 
     /**
-     * <p>Select the type of the dataflow task.</p>
-     * <p>Valid value:</p>
+     * <p>The type of the data flow task.</p>
+     * <p>Valid values:</p>
      * <ul>
-     * <li>Import: imports data stored in the source storage to a CPFS file system.</li>
-     * <li>Export: exports specified data from a CPFS file system to the source storage.</li>
-     * <li>StreamImport: batch imports the specified data from the source storage to a CPFS file system.</li>
-     * <li>StreamExport: batch exports specified data from a CPFS file system to the source storage.</li>
-     * <li>Evict: releases the data blocks of a file in a CPFS file system. After the eviction, only the metadata of the file is retained in the CPFS file system. You can still query the file. However, the data blocks of the file are cleared and do not occupy the storage space in the CPFS file system. When you access the file data, the file is loaded from the source storage as required.</li>
-     * <li>Inventory: obtains the inventory list managed by a dataflow from the CPFS file system, providing the cache status of inventories in the dataflow.</li>
+     * <li><p>Import: Imports specified data from the source storage to the CPFS file system.</p>
+     * </li>
+     * <li><p>Export: Exports specified data from the CPFS file system to the source storage.</p>
+     * </li>
+     * <li><p>StreamImport: Imports a large amount of specified data from the source storage to the CPFS file system.</p>
+     * </li>
+     * <li><p>StreamExport: Exports a large amount of specified data from the CPFS file system to the source storage.</p>
+     * </li>
+     * <li><p>Evict: Releases the data blocks of a file from the CPFS file system. After the release, only the metadata of the file is retained. You can still query the file, but its data blocks are cleared and no longer occupy storage capacity. When you access the file data, it is loaded from the source storage on demand.</p>
+     * </li>
+     * <li><p>Inventory: Obtains the inventory of files managed by a data flow for the CPFS file system. This provides the cache status of files in the data flow.</p>
+     * </li>
      * </ul>
      * <blockquote>
-     * <p> CPFS for Lingjun supports only Import, Export, StreamImport, and StreamExport. Only CPFS for Lingjun V2.6.0 and later support StreamImport and StreamExport.</p>
+     * <p>CPFS AI-Computing Edition supports only <code>Import</code>, <code>Export</code>, <code>StreamImport</code>, and <code>StreamExport</code>. <code>StreamImport</code> and <code>StreamExport</code> are supported only by CPFS AI-Computing Edition V2.6.0 and later.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -225,31 +268,35 @@ public class CreateDataFlowTaskRequest extends TeaModel {
     public String taskAction;
 
     /**
-     * <p>Specify the OSS directory and synchronize data based on the content of the CSV file in the OSS directory. Requirements:</p>
+     * <p>Specifies an OSS directory. Data is synchronized based on the content of the CSV files in this directory. The following limits apply.</p>
      * <ul>
-     * <li>Must start and end with a forward slash (/).</li>
-     * <li>Case-sensitive.</li>
-     * <li>Must be 1 to 1023 characters in length.</li>
-     * <li>Must be encoded in UTF-8.</li>
+     * <li><p>The path must start and end with a forward slash (<code>/</code>).</p>
+     * </li>
+     * <li><p>The path is case-sensitive.</p>
+     * </li>
+     * <li><p>The length must be between 1 and 1,023 characters.</p>
+     * </li>
+     * <li><p>The path must be UTF-8 encoded.</p>
+     * </li>
      * </ul>
      * <blockquote>
-     * </blockquote>
      * <ul>
-     * <li><p>TransferFileListPath,Directory, and EntryList are mutually exclusive, and only one of the three can be selected.</p>
+     * <li><p><code>TransferFileListPath</code>, <code>Directory</code>, and <code>EntryList</code> are mutually exclusive. You can specify only one of them.</p>
      * </li>
-     * <li><p>This parameter is the actual path that exists in OSS. The \*.csv file in the path is stored in OSS.</p>
+     * <li><p>This parameter specifies an existing path in OSS. The <code>*.csv</code> files are stored in this path.</p>
      * </li>
-     * <li><p>TransferFileListPath only supports Import and Export functions.</p>
+     * <li><p><code>TransferFileListPath</code> supports only the <code>Import</code> and <code>Export</code> features.</p>
      * </li>
-     * <li><p>In the import scenario, the file or directory specified in the CSV file is imported from OSS to CPFS.</p>
+     * <li><p>For an <code>Import</code> task, the files or directories specified in the CSV file are imported from OSS to the CPFS file system.</p>
      * </li>
-     * <li><p>In the export scenario, the file or directory specified in the CSV file is exported from CPFS to OSS.</p>
+     * <li><p>For an <code>Export</code> task, the files or directories specified in the CSV file are exported from the CPFS file system to OSS.</p>
      * </li>
-     * <li><p>The CSV file format should include the columns Name and Type. Name refers to the relative path, while Type supports two values: dir and file. If Type is dir, the Name must end with a &quot;/&quot;.</p>
+     * <li><p>The CSV file must contain <code>Name</code> and <code>Type</code> columns. <code>Name</code> is the relative path. <code>Type</code> can be <code>dir</code> or <code>file</code>. If <code>Type</code> is <code>dir</code>, the <code>Name</code> value must end with a forward slash (<code>/</code>).</p>
      * </li>
-     * <li><p>Only CPFS for Lingjun supports this operation.</p>
+     * <li><p>This feature is supported only by CPFS AI-Computing Edition.</p>
      * </li>
      * </ul>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>/test_oss_path/</p>

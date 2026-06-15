@@ -24,6 +24,9 @@ public class AttachVscToFilesystemsRequest extends TeaModel {
     @NameInMap("ResourceIds")
     public java.util.List<AttachVscToFilesystemsRequestResourceIds> resourceIds;
 
+    @NameInMap("RoleChain")
+    public java.util.List<AttachVscToFilesystemsRequestRoleChain> roleChain;
+
     public static AttachVscToFilesystemsRequest build(java.util.Map<String, ?> map) throws Exception {
         AttachVscToFilesystemsRequest self = new AttachVscToFilesystemsRequest();
         return TeaModel.build(map, self);
@@ -43,6 +46,14 @@ public class AttachVscToFilesystemsRequest extends TeaModel {
     }
     public java.util.List<AttachVscToFilesystemsRequestResourceIds> getResourceIds() {
         return this.resourceIds;
+    }
+
+    public AttachVscToFilesystemsRequest setRoleChain(java.util.List<AttachVscToFilesystemsRequestRoleChain> roleChain) {
+        this.roleChain = roleChain;
+        return this;
+    }
+    public java.util.List<AttachVscToFilesystemsRequestRoleChain> getRoleChain() {
+        return this.roleChain;
     }
 
     public static class AttachVscToFilesystemsRequestResourceIds extends TeaModel {
@@ -83,6 +94,47 @@ public class AttachVscToFilesystemsRequest extends TeaModel {
         }
         public String getVscId() {
             return this.vscId;
+        }
+
+    }
+
+    public static class AttachVscToFilesystemsRequestRoleChain extends TeaModel {
+        @NameInMap("AssumeRoleFor")
+        public String assumeRoleFor;
+
+        @NameInMap("RoleArn")
+        public String roleArn;
+
+        @NameInMap("RoleType")
+        public String roleType;
+
+        public static AttachVscToFilesystemsRequestRoleChain build(java.util.Map<String, ?> map) throws Exception {
+            AttachVscToFilesystemsRequestRoleChain self = new AttachVscToFilesystemsRequestRoleChain();
+            return TeaModel.build(map, self);
+        }
+
+        public AttachVscToFilesystemsRequestRoleChain setAssumeRoleFor(String assumeRoleFor) {
+            this.assumeRoleFor = assumeRoleFor;
+            return this;
+        }
+        public String getAssumeRoleFor() {
+            return this.assumeRoleFor;
+        }
+
+        public AttachVscToFilesystemsRequestRoleChain setRoleArn(String roleArn) {
+            this.roleArn = roleArn;
+            return this;
+        }
+        public String getRoleArn() {
+            return this.roleArn;
+        }
+
+        public AttachVscToFilesystemsRequestRoleChain setRoleType(String roleType) {
+            this.roleType = roleType;
+            return this;
+        }
+        public String getRoleType() {
+            return this.roleType;
         }
 
     }

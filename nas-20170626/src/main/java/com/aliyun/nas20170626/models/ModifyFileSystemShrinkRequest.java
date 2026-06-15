@@ -8,9 +8,12 @@ public class ModifyFileSystemShrinkRequest extends TeaModel {
      * <p>The description of the file system.</p>
      * <p>Limits:</p>
      * <ul>
-     * <li>The description must be 2 to 128 characters in length.</li>
-     * <li>It must start with a letter but cannot start with <code>http://</code> or <code>https://</code>.</li>
-     * <li>The description can contain letters, digits, colons (:), underscores (_), and hyphens (-).</li>
+     * <li><p>The description must be 2 to 128 characters.</p>
+     * </li>
+     * <li><p>It must start with an uppercase or lowercase letter or a Chinese character, and cannot start with <code>http://</code> or <code>https://</code>.</p>
+     * </li>
+     * <li><p>It can contain digits, colons (:), underscores (_), and hyphens (-).</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -22,9 +25,12 @@ public class ModifyFileSystemShrinkRequest extends TeaModel {
     /**
      * <p>The ID of the file system.</p>
      * <ul>
-     * <li>Sample ID of a General-purpose NAS file system: <code>31a8e4****</code>.</li>
-     * <li>The IDs of Extreme NAS file systems must start with <code>extreme-</code>. Example: <code>extreme-0015****</code>.</li>
-     * <li>The IDs of Cloud Paralleled File System (CPFS) file systems must start with <code>cpfs-</code>. Example: <code>cpfs-125487****</code>.</li>
+     * <li><p>General-purpose NAS: For example, <code>31a8e4****</code>.</p>
+     * </li>
+     * <li><p>Extreme NAS: The ID must start with <code>extreme-</code>. For example, <code>extreme-0015****</code>.</p>
+     * </li>
+     * <li><p>CPFS: The ID must start with <code>cpfs-</code>. For example, <code>cpfs-125487****</code>.</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -35,7 +41,7 @@ public class ModifyFileSystemShrinkRequest extends TeaModel {
     public String fileSystemId;
 
     /**
-     * <p>The options.</p>
+     * <p>Additional options for the file system.</p>
      */
     @NameInMap("Options")
     public String optionsShrink;

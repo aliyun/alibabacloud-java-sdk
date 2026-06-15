@@ -8,7 +8,7 @@ public class CreateProtocolServiceResponseBody extends TeaModel {
      * <p>The ID of the protocol service.</p>
      * 
      * <strong>example:</strong>
-     * <p>ptc-123****</p>
+     * <p>ptc-197ed6a00f2b****</p>
      */
     @NameInMap("ProtocolServiceId")
     public String protocolServiceId;

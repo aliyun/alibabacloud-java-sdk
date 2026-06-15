@@ -8,13 +8,14 @@ public class ListTagResourcesRequest extends TeaModel {
      * <p>The pagination token that is used in the next request to retrieve a new page of results.</p>
      * 
      * <strong>example:</strong>
-     * <p>MTcyNDU1MTYyNjIxNTMyNzM4NiMzNjExMzQxNw==</p>
+     * <p>无</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
-     * <p>The resource IDs.</p>
+     * <p>The ID of the resource.</p>
+     * <p>The ID of the destination resource. Valid values of N: 1 to 50.</p>
      * 
      * <strong>example:</strong>
      * <p>03e08484f0</p>
@@ -23,7 +24,11 @@ public class ListTagResourcesRequest extends TeaModel {
     public java.util.List<String> resourceId;
 
     /**
-     * <p>The resource type. Set the value to filesystem.</p>
+     * <p>The type of the resource. Valid values:</p>
+     * <ul>
+     * <li>filesystem</li>
+     * <li>accesspoint</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -33,7 +38,7 @@ public class ListTagResourcesRequest extends TeaModel {
     public String resourceType;
 
     /**
-     * <p>The details about the tags.</p>
+     * <p>The tags of the reserved instance. The array may contain up to 20 tags. If the array contains multiple tags, each tag key is unique.</p>
      */
     @NameInMap("Tag")
     public java.util.List<ListTagResourcesRequestTag> tag;
@@ -77,14 +82,13 @@ public class ListTagResourcesRequest extends TeaModel {
 
     public static class ListTagResourcesRequestTag extends TeaModel {
         /**
-         * <p>The tag key.</p>
+         * <p>The key of a tag.</p>
          * <p>Limits:</p>
          * <ul>
-         * <li>The tag key cannot be left empty.</li>
-         * <li>Valid values of N: 1 to 20.</li>
-         * <li>The tag key must be 1 to 128 characters in length.</li>
-         * <li>The tag key cannot start with <code>aliyun</code> or <code>acs:</code>.</li>
-         * <li>The tag key cannot contain <code>http://</code> or <code>https://</code>.</li>
+         * <li>The tag key cannot be null or an empty string.</li>
+         * <li>The tag value can be up to 128 characters in length.</li>
+         * <li>The tag value cannot start with <code>aliyun</code> or <code>acs:</code>.</li>
+         * <li>The tag value cannot contain <code>http://</code> or <code>https://</code>.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -94,12 +98,10 @@ public class ListTagResourcesRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The tag value.</p>
+         * <p>The value of a tag.</p>
          * <p>Limits:</p>
          * <ul>
-         * <li>Valid values of N: 1 to 20.</li>
-         * <li>The tag value must be 1 to 128 characters in length.</li>
-         * <li>The tag value cannot start with <code>aliyun</code> or <code>acs:</code>.</li>
+         * <li>The tag value can be up to 128 characters in length.</li>
          * <li>The tag value cannot contain <code>http://</code> or <code>https://</code>.</li>
          * </ul>
          * 
