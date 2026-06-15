@@ -11,7 +11,7 @@ public class ImportHttpApiRequest extends TeaModel {
     public java.util.List<HttpApiDeployConfig> deployConfigs;
 
     /**
-     * <p>The description of the API to import. If omitted, the description is taken from the API definition. The maximum length is 255 bytes.</p>
+     * <p>The description of the imported API. If this parameter is not specified, the description is extracted from the API definition. Maximum length: 255 bytes.</p>
      * 
      * <strong>example:</strong>
      * <p>测试专用API</p>
@@ -20,7 +20,7 @@ public class ImportHttpApiRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>Indicates whether to perform a dry run. If <code>true</code>, the system validates the request but does not import the API.</p>
+     * <p>Specifies whether to perform a dry run. If this parameter is enabled, only validation is performed without the actual import.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -47,7 +47,7 @@ public class ImportHttpApiRequest extends TeaModel {
     public String mcpRouteId;
 
     /**
-     * <p>The name of the API to import. If omitted, the name is taken from the API definition file. If an API with the same name and versioning configuration already exists, the import acts as an update based on the specified <code>strategy</code>.</p>
+     * <p>The name of the imported API. If this parameter is not specified, the name is extracted from the API definition file. If an API with the same name and version configuration already exists, this import updates the existing API definition based on the strategy parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>import-test</p>
@@ -65,7 +65,7 @@ public class ImportHttpApiRequest extends TeaModel {
     public String resourceGroupId;
 
     /**
-     * <p>The Base64-encoded API definition. It supports OpenAPI Specification (OAS) 2.0 and 3.0 and can be in either YAML or JSON format. This parameter takes precedence over <code>specFileUrl</code>. If the file size is larger than 10 MB, use the <code>specFileUrl</code> parameter.</p>
+     * <p>The Base64-encoded API definition. OAS 2.0 and OAS 3.0 specifications are supported in YAML or JSON format. This parameter takes priority over the specFileUrl parameter. If the file size exceeds 10 MB, use the specFileUrl parameter instead.</p>
      * 
      * <strong>example:</strong>
      * <p>b3BlbmFwaTogMy4wLjAKaW5mbzoKICAgIHRpdGxlOiBkZW1vCiAgICBkZXNjcmlwdGlvbjogdGhpc2lzZGVtbwogICAgdmVyc2lvbjogIiIKcGF0aHM6CiAgICAvdXNlci97dXNlcklkfToKICAgICAgICBnZXQ6CiAgICAgICAgICAgIHN1bW1hcnk6IOiOt+WPlueUqOaIt+S/oeaBrwogICAgICAgICAgICBkZXNjcmlwdGlvbjog6I635Y+W55So5oi35L+h5oGvCiAgICAgICAgICAgIG9wZXJhdGlvbklkOiBHZXRVc2VySW5mbwogICAgICAgICAgICByZXNwb25zZXM6CiAgICAgICAgICAgICAgICAiMjAwIjoKICAgICAgICAgICAgICAgICAgICBkZXNjcmlwdGlvbjog5oiQ5YqfCiAgICAgICAgICAgICAgICAgICAgY29udGVudDoKICAgICAgICAgICAgICAgICAgICAgICAgYXBwbGljYXRpb24vanNvbjtjaGFyc2V0PXV0Zi04OgogICAgICAgICAgICAgICAgICAgICAgICAgICAgc2NoZW1hOiBudWxsCnNlcnZlcnM6CiAgICAtIHVybDogaHR0cDovL2FwaS5leGFtcGxlLmNvbS92MQo=</p>
@@ -74,27 +74,25 @@ public class ImportHttpApiRequest extends TeaModel {
     public String specContentBase64;
 
     /**
-     * <p>The URL of the API definition file stored in OSS. The URL must be accessible from the public network or be an internal OSS endpoint in the same region. For OSS objects that are not publicly readable, use a presigned URL. For details, see <a href="https://help.aliyun.com/document_detail/39607.html">Download a file by using a presigned URL</a>.</p>
+     * <p>The download URL of the API definition file. The URL must be accessible over the public network or be an internal network OSS download URL in the same region. The URL must have download permissions. For OSS files that are not publicly readable, refer to References <a href="https://help.aliyun.com/document_detail/39607.html">Download objects using presigned URLs</a> and provide a URL with download permissions. Only API definition files stored in OSS are supported.</p>
      */
     @NameInMap("specFileUrl")
     public String specFileUrl;
 
     /**
-     * <p>Configuration for fetching the API definition from an OSS bucket.</p>
+     * <p>The OSS configuration.</p>
      */
     @NameInMap("specOssConfig")
     public ImportHttpApiRequestSpecOssConfig specOssConfig;
 
     /**
-     * <p>The update strategy to apply when an API with the same name and versioning configuration already exists.</p>
+     * <p>The update strategy to use when the imported API has the same name and version management configuration as an existing API. Valid values:</p>
      * <ul>
-     * <li><p><code>SpecOnly</code>: Overwrites the existing API completely with the imported definition.</p>
-     * </li>
-     * <li><p><code>SpecFirst</code>: Updates existing APIs and creates new ones based on the imported definition. Existing APIs not included in the import file are unaffected.</p>
-     * </li>
-     * <li><p><code>ExistFirst</code>: Creates new APIs from the imported definition but does not modify any existing APIs. This is the default strategy.</p>
-     * </li>
+     * <li>SpecOnly: uses the imported file as the single source of truth.</li>
+     * <li>SpecFirst: prioritizes the imported file. New operations are added and existing operations are updated. Operations not mentioned in the file remain unchanged.</li>
+     * <li>ExistFirst: prioritizes the existing API. Only new operations are added. Existing operations are not updated.</li>
      * </ul>
+     * <p>Default value: ExistFirst.</p>
      * 
      * <strong>example:</strong>
      * <p>ExistFirst</p>
@@ -103,7 +101,7 @@ public class ImportHttpApiRequest extends TeaModel {
     public String strategy;
 
     /**
-     * <p>If you specify this parameter, the import updates the specified API instead of creating a new one or searching for an existing API by name and versioning configuration. The target API must be an HTTP API.</p>
+     * <p>The ID of the target HTTP API. If this parameter is specified, this import updates the specified API instead of creating a new one or searching for an existing API by name and version management configuration. The target API must be of the REST type.</p>
      * 
      * <strong>example:</strong>
      * <p>api-xxxx</p>
@@ -112,7 +110,7 @@ public class ImportHttpApiRequest extends TeaModel {
     public String targetHttpApiId;
 
     /**
-     * <p>The versioning configuration for the API. If an existing API matches the specified name (and version, if enabled), this import updates that API.</p>
+     * <p>The API version configuration. If version configuration is enabled and an API with the same version number and name already exists, this import is treated as an update. If version configuration is not enabled and an API with the same name already exists, this import is treated as an update.</p>
      */
     @NameInMap("versionConfig")
     public HttpApiVersionConfig versionConfig;
@@ -239,7 +237,7 @@ public class ImportHttpApiRequest extends TeaModel {
 
     public static class ImportHttpApiRequestSpecOssConfig extends TeaModel {
         /**
-         * <p>The name of the OSS bucket that contains the API definition file.</p>
+         * <p>The bucket name.</p>
          * 
          * <strong>example:</strong>
          * <p>gms-service-prod</p>
@@ -248,7 +246,7 @@ public class ImportHttpApiRequest extends TeaModel {
         public String bucketName;
 
         /**
-         * <p>The object key (file path) of the API definition file within the bucket.</p>
+         * <p>The full path of the file.</p>
          * 
          * <strong>example:</strong>
          * <p>/test/swagger.json</p>
@@ -257,7 +255,7 @@ public class ImportHttpApiRequest extends TeaModel {
         public String objectKey;
 
         /**
-         * <p>The ID of the region where the OSS bucket is located.</p>
+         * <p>The region ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-shanghai</p>

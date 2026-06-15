@@ -3465,7 +3465,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Import an OpenAPI 2.0 or 3.0.x definition file to create a REST API.</p>
+     * <p>Imports an HTTP API. You can import an OpenAPI 2.0 or OpenAPI 3.0.x definition file as a REST API.</p>
      * 
      * @param request ImportHttpApiRequest
      * @param headers map
@@ -3551,7 +3551,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Import an OpenAPI 2.0 or 3.0.x definition file to create a REST API.</p>
+     * <p>Imports an HTTP API. You can import an OpenAPI 2.0 or OpenAPI 3.0.x definition file as a REST API.</p>
      * 
      * @param request ImportHttpApiRequest
      * @return ImportHttpApiResponse

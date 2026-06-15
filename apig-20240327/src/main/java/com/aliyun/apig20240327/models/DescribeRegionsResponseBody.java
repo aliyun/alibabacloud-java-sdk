@@ -11,6 +11,9 @@ public class DescribeRegionsResponseBody extends TeaModel {
     @NameInMap("code")
     public String code;
 
+    @NameInMap("data")
+    public DescribeRegionsResponseBodyData data;
+
     /**
      * <strong>example:</strong>
      * <p>success</p>
@@ -19,6 +22,7 @@ public class DescribeRegionsResponseBody extends TeaModel {
     public String message;
 
     @NameInMap("regions")
+    @Deprecated
     public DescribeRegionsResponseBodyRegions regions;
 
     /**
@@ -41,6 +45,14 @@ public class DescribeRegionsResponseBody extends TeaModel {
         return this.code;
     }
 
+    public DescribeRegionsResponseBody setData(DescribeRegionsResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public DescribeRegionsResponseBodyData getData() {
+        return this.data;
+    }
+
     public DescribeRegionsResponseBody setMessage(String message) {
         this.message = message;
         return this;
@@ -49,6 +61,7 @@ public class DescribeRegionsResponseBody extends TeaModel {
         return this.message;
     }
 
+    @Deprecated
     public DescribeRegionsResponseBody setRegions(DescribeRegionsResponseBodyRegions regions) {
         this.regions = regions;
         return this;
@@ -63,6 +76,55 @@ public class DescribeRegionsResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public static class DescribeRegionsResponseBodyDataRegions extends TeaModel {
+        @NameInMap("localName")
+        public String localName;
+
+        @NameInMap("regionId")
+        public String regionId;
+
+        public static DescribeRegionsResponseBodyDataRegions build(java.util.Map<String, ?> map) throws Exception {
+            DescribeRegionsResponseBodyDataRegions self = new DescribeRegionsResponseBodyDataRegions();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeRegionsResponseBodyDataRegions setLocalName(String localName) {
+            this.localName = localName;
+            return this;
+        }
+        public String getLocalName() {
+            return this.localName;
+        }
+
+        public DescribeRegionsResponseBodyDataRegions setRegionId(String regionId) {
+            this.regionId = regionId;
+            return this;
+        }
+        public String getRegionId() {
+            return this.regionId;
+        }
+
+    }
+
+    public static class DescribeRegionsResponseBodyData extends TeaModel {
+        @NameInMap("regions")
+        public java.util.List<DescribeRegionsResponseBodyDataRegions> regions;
+
+        public static DescribeRegionsResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
+            DescribeRegionsResponseBodyData self = new DescribeRegionsResponseBodyData();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeRegionsResponseBodyData setRegions(java.util.List<DescribeRegionsResponseBodyDataRegions> regions) {
+            this.regions = regions;
+            return this;
+        }
+        public java.util.List<DescribeRegionsResponseBodyDataRegions> getRegions() {
+            return this.regions;
+        }
+
     }
 
     public static class DescribeRegionsResponseBodyRegionsRegion extends TeaModel {
