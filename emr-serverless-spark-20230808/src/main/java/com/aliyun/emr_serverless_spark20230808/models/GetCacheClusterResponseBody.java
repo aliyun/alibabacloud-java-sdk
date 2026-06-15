@@ -1,0 +1,38 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.emr_serverless_spark20230808.models;
+
+import com.aliyun.tea.*;
+
+public class GetCacheClusterResponseBody extends TeaModel {
+    @NameInMap("cacheClusters")
+    public CacheCluster cacheClusters;
+
+    /**
+     * <strong>example:</strong>
+     * <p>DD6B1B2A-5837-5237-ABE4-FF0C8944****</p>
+     */
+    @NameInMap("requestId")
+    public String requestId;
+
+    public static GetCacheClusterResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        GetCacheClusterResponseBody self = new GetCacheClusterResponseBody();
+        return TeaModel.build(map, self);
+    }
+
+    public GetCacheClusterResponseBody setCacheClusters(CacheCluster cacheClusters) {
+        this.cacheClusters = cacheClusters;
+        return this;
+    }
+    public CacheCluster getCacheClusters() {
+        return this.cacheClusters;
+    }
+
+    public GetCacheClusterResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+}

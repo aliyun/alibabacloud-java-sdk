@@ -1590,6 +1590,53 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>获取CacheCluster详情</p>
+     * 
+     * @param request GetCacheClusterRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetCacheClusterResponse
+     */
+    public GetCacheClusterResponse getCacheClusterWithOptions(String cacheClusterId, GetCacheClusterRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("regionId", request.regionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetCacheCluster"),
+            new TeaPair("version", "2023-08-08"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/cache/" + com.aliyun.openapiutil.Client.getEncodeParam(cacheClusterId) + ""),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetCacheClusterResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取CacheCluster详情</p>
+     * 
+     * @param request GetCacheClusterRequest
+     * @return GetCacheClusterResponse
+     */
+    public GetCacheClusterResponse getCacheCluster(String cacheClusterId, GetCacheClusterRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.getCacheClusterWithOptions(cacheClusterId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Queries the number of CU-hours consumed by a queue during a specified cycle.</p>
      * 
      * @param request GetCuHoursRequest
@@ -3602,6 +3649,53 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>Start CacheCluster</p>
+     * 
+     * @param request StartCacheClusterRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return StartCacheClusterResponse
+     */
+    public StartCacheClusterResponse startCacheClusterWithOptions(String cacheClusterId, StartCacheClusterRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("regionId", request.regionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "StartCacheCluster"),
+            new TeaPair("version", "2023-08-08"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/cache/" + com.aliyun.openapiutil.Client.getEncodeParam(cacheClusterId) + "/start"),
+            new TeaPair("method", "PUT"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new StartCacheClusterResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Start CacheCluster</p>
+     * 
+     * @param request StartCacheClusterRequest
+     * @return StartCacheClusterResponse
+     */
+    public StartCacheClusterResponse startCacheCluster(String cacheClusterId, StartCacheClusterRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.startCacheClusterWithOptions(cacheClusterId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Starts a Spark Job.</p>
      * 
      * @param request StartJobRunRequest
@@ -3970,6 +4064,53 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.startSessionClusterWithOptions(workspaceId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Stops a CacheCluster.</p>
+     * 
+     * @param request StopCacheClusterRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return StopCacheClusterResponse
+     */
+    public StopCacheClusterResponse stopCacheClusterWithOptions(String cacheClusterId, StopCacheClusterRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("regionId", request.regionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "StopCacheCluster"),
+            new TeaPair("version", "2023-08-08"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/cache/" + com.aliyun.openapiutil.Client.getEncodeParam(cacheClusterId) + "/stop"),
+            new TeaPair("method", "PUT"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new StopCacheClusterResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Stops a CacheCluster.</p>
+     * 
+     * @param request StopCacheClusterRequest
+     * @return StopCacheClusterResponse
+     */
+    public StopCacheClusterResponse stopCacheCluster(String cacheClusterId, StopCacheClusterRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.stopCacheClusterWithOptions(cacheClusterId, request, headers, runtime);
     }
 
     /**

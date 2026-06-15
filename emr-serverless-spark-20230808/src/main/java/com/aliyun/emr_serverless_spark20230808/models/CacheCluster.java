@@ -4,9 +4,6 @@ package com.aliyun.emr_serverless_spark20230808.models;
 import com.aliyun.tea.*;
 
 public class CacheCluster extends TeaModel {
-    /**
-     * <p>An array of workspace IDs that are bound to the cache cluster.</p>
-     */
     @NameInMap("bindedWorkspaces")
     public java.util.List<String> bindedWorkspaces;
 
@@ -19,81 +16,48 @@ public class CacheCluster extends TeaModel {
     @NameInMap("cachesets")
     public java.util.List<CacheClusterCachesets> cachesets;
 
-    /**
-     * <p>The unique identifier of the cache cluster.</p>
-     */
     @NameInMap("clusterId")
     public String clusterId;
 
-    /**
-     * <p>The configuration of the cache cluster.</p>
-     */
     @NameInMap("configuration")
     public String configuration;
 
-    /**
-     * <p>An array of configuration objects.</p>
-     */
     @NameInMap("configurations")
     public java.util.List<CacheClusterConfigurations> configurations;
 
     @NameInMap("createTime")
     public String createTime;
 
-    /**
-     * <p>The user who created the cache cluster.</p>
-     */
     @NameInMap("creator")
     public String creator;
 
-    /**
-     * <p>The creation time of the cache cluster, provided as a UNIX timestamp.</p>
-     */
+    @NameInMap("extra")
+    public String extra;
+
     @NameInMap("gmtCreated")
     public Long gmtCreated;
 
-    /**
-     * <p>The last modification time of the cache cluster, provided as a UNIX timestamp.</p>
-     */
     @NameInMap("gmtModified")
     public Long gmtModified;
 
-    /**
-     * <p>The user who last modified the cache cluster.</p>
-     */
     @NameInMap("modifier")
     public String modifier;
 
-    /**
-     * <p>The name of the cache cluster.</p>
-     */
     @NameInMap("name")
     public String name;
 
-    /**
-     * <p>The billing method for the cache cluster.</p>
-     */
     @NameInMap("paymentType")
     public String paymentType;
 
-    /**
-     * <p>The ID of the region where the cache cluster is located.</p>
-     */
     @NameInMap("regionId")
     public String regionId;
 
     @NameInMap("resourceGroupId")
     public String resourceGroupId;
 
-    /**
-     * <p>The resource specifications of the cache cluster.</p>
-     */
     @NameInMap("resourceSpec")
     public CacheClusterResourceSpec resourceSpec;
 
-    /**
-     * <p>The current state of the cache cluster.</p>
-     */
     @NameInMap("state")
     public String state;
 
@@ -103,9 +67,6 @@ public class CacheCluster extends TeaModel {
     @NameInMap("tags")
     public java.util.List<CacheClusterTags> tags;
 
-    /**
-     * <p>The resource specifications currently in use by the cache cluster.</p>
-     */
     @NameInMap("usedResourceSpec")
     public CacheClusterUsedResourceSpec usedResourceSpec;
 
@@ -187,6 +148,14 @@ public class CacheCluster extends TeaModel {
     }
     public String getCreator() {
         return this.creator;
+    }
+
+    public CacheCluster setExtra(String extra) {
+        this.extra = extra;
+        return this;
+    }
+    public String getExtra() {
+        return this.extra;
     }
 
     public CacheCluster setGmtCreated(Long gmtCreated) {
@@ -324,15 +293,10 @@ public class CacheCluster extends TeaModel {
     }
 
     public static class CacheClusterConfigurations extends TeaModel {
-        /**
-         * <p>The content of the configuration file.</p>
-         */
         @NameInMap("content")
         public String content;
 
         /**
-         * <p>The name of the configuration file.</p>
-         * 
          * <strong>example:</strong>
          * <p>cacheset.xml</p>
          */
@@ -363,18 +327,12 @@ public class CacheCluster extends TeaModel {
     }
 
     public static class CacheClusterResourceSpec extends TeaModel {
-        /**
-         * <p>The bandwidth of the cache cluster.</p>
-         */
         @NameInMap("bandWidth")
         public Long bandWidth;
 
         @NameInMap("ha")
         public Boolean ha;
 
-        /**
-         * <p>The storage capacity of the cache cluster.</p>
-         */
         @NameInMap("storage")
         public Long storage;
 
@@ -503,15 +461,9 @@ public class CacheCluster extends TeaModel {
     }
 
     public static class CacheClusterUsedResourceSpec extends TeaModel {
-        /**
-         * <p>The amount of bandwidth consumed by the cache cluster.</p>
-         */
         @NameInMap("bandWidth")
         public Long bandWidth;
 
-        /**
-         * <p>The amount of storage capacity consumed by the cache cluster.</p>
-         */
         @NameInMap("storage")
         public Long storage;
 
