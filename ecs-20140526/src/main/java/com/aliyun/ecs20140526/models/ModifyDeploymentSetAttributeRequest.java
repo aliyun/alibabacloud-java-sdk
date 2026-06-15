@@ -4,6 +4,12 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class ModifyDeploymentSetAttributeRequest extends TeaModel {
+    /**
+     * <p>The affinity level of the deployment set. Instances in the deployment set are distributed based on this affinity level. Valid values: 1 to 10. Default value: 1.&gt;Notice:  The affinity setting is available only when the deployment strategy is set to high availability (<code>Strategy = Availability</code>).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3</p>
+     */
     @NameInMap("Affinity")
     public Long affinity;
 
@@ -18,7 +24,7 @@ public class ModifyDeploymentSetAttributeRequest extends TeaModel {
     public String deploymentSetId;
 
     /**
-     * <p>The new name of the deployment set. The name must be 2 to 128 characters in length and can contain letters, digits, colons (:), underscores (_), periods (.), and hyphens (-).</p>
+     * <p>The new name of the deployment set. The name must be 2 to 128 characters long and can contain letters, digits, Chinese characters, colons (:), underscores (_), periods (.), and hyphens (-).</p>
      * 
      * <strong>example:</strong>
      * <p>DeploymentSetTestName</p>
@@ -27,7 +33,7 @@ public class ModifyDeploymentSetAttributeRequest extends TeaModel {
     public String deploymentSetName;
 
     /**
-     * <p>The new description of the deployment set. The description must be 2 to 256 characters in length and cannot start with http:// or https://.</p>
+     * <p>The new description of the deployment set. It must be 2 to 256 characters long and cannot start with <code>http://</code> or <code>https://</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>TestDescription</p>
@@ -42,7 +48,7 @@ public class ModifyDeploymentSetAttributeRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID of the deployment set. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>The region ID of the deployment set. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to obtain the latest list of Alibaba Cloud regions.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

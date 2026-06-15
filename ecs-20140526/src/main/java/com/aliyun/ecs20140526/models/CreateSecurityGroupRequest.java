@@ -66,8 +66,10 @@ public class CreateSecurityGroupRequest extends TeaModel {
     /**
      * <p>The type of the security group. Valid values:</p>
      * <ul>
-     * <li>normal: basic security group</li>
-     * <li>enterprise: advanced security group For more information, see <a href="https://help.aliyun.com/document_detail/120621.html">Advanced security groups</a>.</li>
+     * <li><p>normal: basic security group</p>
+     * </li>
+     * <li><p>enterprise: advanced security group For more information, see <a href="https://help.aliyun.com/document_detail/120621.html">Advanced security groups</a>.</p>
+     * </li>
      * </ul>
      * <p>Default value: normal.</p>
      * 

@@ -7,8 +7,10 @@ public class RebootInstancesRequest extends TeaModel {
     /**
      * <p>The batch operation mode. Valid values:</p>
      * <ul>
-     * <li>AllTogether: In this mode, if all instances are restarted, a success message is returned. If an instance fails the verification, all instances fail to be restarted and an error message is returned.</li>
-     * <li>SuccessFirst: In this mode, each instance is restarted separately. The response contains the operation results of each instance.</li>
+     * <li><p>AllTogether: In this mode, if all instances are restarted, a success message is returned. If an instance fails the verification, all instances fail to be restarted and an error message is returned.</p>
+     * </li>
+     * <li><p>SuccessFirst: In this mode, each instance is restarted separately. The response contains the operation results of each instance.</p>
+     * </li>
      * </ul>
      * <p>Default value: AllTogether.</p>
      * 
@@ -24,7 +26,7 @@ public class RebootInstancesRequest extends TeaModel {
      * <li>true: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and instance status. If the request fails the dry run, an error message is returned. If the request passes the dry run, <code>DRYRUN.SUCCESS</code> is returned.</li>
      * </ul>
      * <blockquote>
-     * <p> If you set <code>BatchOptimization</code> to <code>SuccessFirst</code> and <code>DryRun</code> to true, only <code>DRYRUN.SUCCESS</code> is returned regardless of whether the request passes the dry run.</p>
+     * <p>If you set <code>BatchOptimization</code> to <code>SuccessFirst</code> and <code>DryRun</code> to true, only <code>DRYRUN.SUCCESS</code> is returned regardless of whether the request passes the dry run.</p>
      * </blockquote>
      * <ul>
      * <li>false: performs a dry run and sends the request. If the request passes the dry run, the instance is restarted.</li>
@@ -40,8 +42,10 @@ public class RebootInstancesRequest extends TeaModel {
     /**
      * <p>Specifies whether to forcefully restart the instance. Valid values:</p>
      * <ul>
-     * <li>true: forcefully restarts the instance. This operation is equivalent to the typical power-off operation. Cache data that is not written to storage devices on the instance is lost.</li>
-     * <li>false: normally restarts the instance.</li>
+     * <li><p>true: forcefully restarts the instance. This operation is equivalent to the typical power-off operation. Cache data that is not written to storage devices on the instance is lost.</p>
+     * </li>
+     * <li><p>false: normally restarts the instance.</p>
+     * </li>
      * </ul>
      * <p>Default value: false.</p>
      * 

@@ -7,8 +7,10 @@ public class DescribeSecurityGroupsRequest extends TeaModel {
     /**
      * <p>Specifies whether to perform only a dry run, without performing the actual request. Valid values:</p>
      * <ul>
-     * <li>true: performs only a dry run. The system checks your AccessKey pair, the permissions of the RAM user, and the required parameters. If the request passes the dry run, the DryRunOperation error code is returned. Otherwise, an error message is returned.</li>
-     * <li>false: performs a dry run and performs the actual request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.</li>
+     * <li><p>true: performs only a dry run. The system checks your AccessKey pair, the permissions of the RAM user, and the required parameters. If the request passes the dry run, the DryRunOperation error code is returned. Otherwise, an error message is returned.</p>
+     * </li>
+     * <li><p>false: performs a dry run and performs the actual request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.</p>
+     * </li>
      * </ul>
      * <p>Default value: false.</p>
      * 
@@ -32,7 +34,7 @@ public class DescribeSecurityGroupsRequest extends TeaModel {
     /**
      * <p>Specifies whether to query the capacity of the security group. If you set this parameter to True, the <code>EcsCount</code> and <code>AvailableInstanceAmount</code> values in the response are valid.</p>
      * <blockquote>
-     * <p> This parameter is deprecated.</p>
+     * <p>This parameter is deprecated.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -55,8 +57,10 @@ public class DescribeSecurityGroupsRequest extends TeaModel {
     /**
      * <p>The network type of the security group. Valid values:</p>
      * <ul>
-     * <li>vpc</li>
-     * <li>classic</li>
+     * <li><p>vpc</p>
+     * </li>
+     * <li><p>classic</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -82,7 +86,7 @@ public class DescribeSecurityGroupsRequest extends TeaModel {
 
     /**
      * <blockquote>
-     * <p> This parameter will be removed in the future. We recommend that you use NextToken and MaxResults for a paged query.</p>
+     * <p>This parameter will be removed in the future. We recommend that you use NextToken and MaxResults for a paged query.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -93,7 +97,7 @@ public class DescribeSecurityGroupsRequest extends TeaModel {
 
     /**
      * <blockquote>
-     * <p> This parameter will be removed in the future. We recommend that you use NextToken and MaxResults for a paged query.</p>
+     * <p>This parameter will be removed in the future. We recommend that you use NextToken and MaxResults for a paged query.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -160,8 +164,10 @@ public class DescribeSecurityGroupsRequest extends TeaModel {
     /**
      * <p>The type of the security group. Valid values:</p>
      * <ul>
-     * <li>normal: basic security group</li>
-     * <li>enterprise: advanced security group</li>
+     * <li><p>normal: basic security group</p>
+     * </li>
+     * <li><p>enterprise: advanced security group</p>
+     * </li>
      * </ul>
      * <blockquote>
      * <p>If you do not specify this parameter, both basic and advanced security groups are queried.</p>
@@ -176,8 +182,10 @@ public class DescribeSecurityGroupsRequest extends TeaModel {
     /**
      * <p>Specifies whether to query managed security groups. Valid values:</p>
      * <ul>
-     * <li>true</li>
-     * <li>false</li>
+     * <li><p>true</p>
+     * </li>
+     * <li><p>false</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

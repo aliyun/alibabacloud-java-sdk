@@ -14,7 +14,7 @@ public class ModifyHpcClusterAttributeRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The description of the HPC cluster. The description must be 2 to 256 characters in length, and cannot start with http:// or https://.</p>
+     * <p>The description of the HPC cluster. The description must be 2 to 256 characters in length, and cannot start with http\:// or https\://.</p>
      * <p>This parameter is empty by default.</p>
      * 
      * <strong>example:</strong>
@@ -34,7 +34,7 @@ public class ModifyHpcClusterAttributeRequest extends TeaModel {
     public String hpcClusterId;
 
     /**
-     * <p>The name of the HPC cluster. The name must be 2 to 128 characters in length. The name must start with a letter and cannot start with http:// or https://. The name can contain letters, digits, underscores (_), and hyphens (-).</p>
+     * <p>The name of the HPC cluster. The name must be 2 to 128 characters in length. The name must start with a letter and cannot start with http\:// or https\://. The name can contain letters, digits, underscores (_), and hyphens (-).</p>
      * <p>This parameter is empty by default.</p>
      * 
      * <strong>example:</strong>

@@ -8,12 +8,14 @@ public class ModifyInstanceAttributeRequest extends TeaModel {
     public ModifyInstanceAttributeRequestCpuOptions cpuOptions;
 
     /**
-     * <p>The performance mode of the burstable instance. Valid values:</p>
+     * <p>The performance mode of the burstable performance instance. Valid values:</p>
      * <ul>
-     * <li>Standard</li>
-     * <li>Unlimited</li>
+     * <li><p>Standard: standard mode.</p>
+     * </li>
+     * <li><p>Unlimited: unlimited mode.</p>
+     * </li>
      * </ul>
-     * <p>For more information about the performance modes of burstable instances, see <a href="https://help.aliyun.com/document_detail/59977.html">Overview</a>.</p>
+     * <p>For more information about the performance modes of burstable performance instances, see <a href="https://help.aliyun.com/document_detail/59977.html">Overview of burstable performance instances</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>Standard</p>
@@ -22,9 +24,9 @@ public class ModifyInstanceAttributeRequest extends TeaModel {
     public String creditSpecification;
 
     /**
-     * <p>The release protection attribute of the instance. This parameter specifies whether you can use the ECS console or call the <a href="https://help.aliyun.com/document_detail/25507.html">DeleteInstance</a> operation to release the instance.</p>
+     * <p>Specifies whether to enable deletion protection for the instance. This setting prevents the instance from being released from the console or by calling the <a href="https://help.aliyun.com/document_detail/25507.html">DeleteInstance</a> operation.</p>
      * <blockquote>
-     * <p> This parameter is applicable only to pay-as-you-go instances. The release protection attribute can protect instances against manual releases, but not against automatic releases.</p>
+     * <p>This feature applies only to pay-as-you-go instances and protects instances only from manual release operations. It does not affect system-initiated release operations.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -34,7 +36,7 @@ public class ModifyInstanceAttributeRequest extends TeaModel {
     public Boolean deletionProtection;
 
     /**
-     * <p>The description of the instance. The description must be 2 to 256 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</p>
+     * <p>The instance description. The description must be 2 to 256 characters long and cannot start with <code>http://</code> or <code>https://</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>testInstanceDescription</p>
@@ -43,16 +45,21 @@ public class ModifyInstanceAttributeRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>Specifies whether to enable the Jumbo Frames feature for the instance. Valid values:</p>
+     * <p>Specifies whether to enable jumbo frames. When jumbo frames are enabled, the MTU of the instance is 8500. When jumbo frames are disabled, the MTU of the instance is 1500. Valid values:</p>
      * <ul>
-     * <li>true: The Jumbo Frame feature is enabled for the instance.</li>
-     * <li>false: The Jumbo Frame feature is disabled for the instance.</li>
+     * <li><p>true</p>
+     * </li>
+     * <li><p>false</p>
+     * </li>
      * </ul>
-     * <p>Take note of the following items:</p>
+     * <p>Note the following when you use this parameter:</p>
      * <ul>
-     * <li>The instance must be in the Running (<code>Running</code>) or Stopped (<code>Stopped</code>) state.</li>
-     * <li>The instance must reside in a VPC.</li>
-     * <li>After the Jumbo Frames feature is enabled, the MTU value of the instance is set to 8500. After the Jumbo Frames feature is disabled, the MTU value of the instance is set to 1500. You can enable the Jumbo Frames feature only for specific instance types. For more information, see <a href="https://help.aliyun.com/document_detail/200512.html">Jumbo Frames</a>.</li>
+     * <li><p>The instance must be in the <code>Running</code> or <code>Stopped</code> state.</p>
+     * </li>
+     * <li><p>The instance must be in a VPC.</p>
+     * </li>
+     * <li><p>Only some instance types support jumbo frames. For more information, see <a href="https://help.aliyun.com/document_detail/200512.html">ECS instance MTU</a>.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -61,19 +68,38 @@ public class ModifyInstanceAttributeRequest extends TeaModel {
     @NameInMap("EnableJumboFrame")
     public Boolean enableJumboFrame;
 
+    /**
+     * <p>Specifies whether to enable VPC network traffic encryption. Valid values:</p>
+     * <ul>
+     * <li><p>true</p>
+     * </li>
+     * <li><p>false</p>
+     * </li>
+     * </ul>
+     * <blockquote>
+     * <p>This parameter is in invitation-only preview and is not publicly available.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("EnableNetworkEncryption")
     public Boolean enableNetworkEncryption;
 
     /**
-     * <p>The hostname of the instance. Take note of the following items:</p>
+     * <p>The hostname of the operating system. Note the following when you use this parameter:</p>
      * <ul>
-     * <li>The instance cannot be in the Creating (<code>Pending</code>) or Starting (<code>Starting</code>) state. Otherwise, the new hostname and the configurations in the <code>/etc/hosts</code> file may not take effect. You can call the <a href="https://help.aliyun.com/document_detail/25506.html">DescribeInstances</a> operation to query the status of the instance.</li>
-     * <li>The parameter takes effect after the instance is restarted. You can restart an instance in the ECS console. For more information, see <a href="https://help.aliyun.com/document_detail/25440.html">Restart an instance</a>. You can also call the <a href="https://help.aliyun.com/document_detail/25502.html">RebootInstance</a> operation to restart the instance. The parameter cannot take effect if you restart an instance within the operating system.</li>
+     * <li><p>The instance cannot be in the <code>Pending</code> or <code>Starting</code> state. Otherwise, the specified hostname and the <code>/etc/hosts</code> configuration may not take effect. You can call the <a href="https://help.aliyun.com/document_detail/25506.html">DescribeInstances</a> operation to query the current state of the instance.</p>
+     * </li>
+     * <li><p>The new hostname takes effect after you restart the instance from the ECS console (see <a href="https://help.aliyun.com/document_detail/25440.html">Restart an instance</a>) or by calling the <a href="https://help.aliyun.com/document_detail/25502.html">RebootInstance</a> operation. Restarting the instance from within its operating system does not apply the change.</p>
+     * </li>
      * </ul>
-     * <p>The following limits apply to the hostnames of instances that run different operating systems:</p>
+     * <p>The hostname must meet the following requirements for different operating systems:</p>
      * <ul>
-     * <li>For Windows Server, the hostname must be 2 to 15 characters in length and can contain letters, digits, and hyphens (-). The hostname cannot start or end with a hyphen (-), contain consecutive hyphens (-), or contain only digits.</li>
-     * <li>For other operating systems such as Linux, the hostname must be 2 to 64 characters in length. You can use periods (.) to separate a hostname into multiple segments. Each segment can contain letters, digits, and hyphens (-). The hostname cannot contain consecutive periods (.) or hyphens (-). The hostname cannot start or end with a period (.) or a hyphen (-).</li>
+     * <li><p>For Windows Server instances: The hostname must be 2 to 15 characters long and contain letters, digits, and hyphens (-). It cannot start or end with a hyphen, contain consecutive hyphens, or consist of only digits.</p>
+     * </li>
+     * <li><p>For other types of instances (such as Linux): The hostname must be 2 to 64 characters long. You can use periods (.) to separate the hostname into segments. Each segment can contain letters, digits, and hyphens (-). The hostname cannot start or end with a period or hyphen, and cannot contain consecutive periods or hyphens.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -83,7 +109,7 @@ public class ModifyInstanceAttributeRequest extends TeaModel {
     public String hostName;
 
     /**
-     * <p>The instance ID.</p>
+     * <p>The ID of the instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -93,7 +119,7 @@ public class ModifyInstanceAttributeRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The name of the instance. The name must be 2 to 128 characters in length. The name must start with a letter and cannot start with <code>http://</code> or <code>https://</code>. The name can contain letters, digits, colons (:), underscores (_), and hyphens (-).</p>
+     * <p>The instance name. The name must be 2 to 128 characters long. It must start with a letter or a Chinese character and cannot start with <code>http://</code> or <code>https://</code>. The name can contain digits, colons (:), underscores (_), and hyphens (-).</p>
      * 
      * <strong>example:</strong>
      * <p>testInstanceName</p>
@@ -102,11 +128,14 @@ public class ModifyInstanceAttributeRequest extends TeaModel {
     public String instanceName;
 
     /**
-     * <p>The number of queues supported by the primary elastic network interface (ENI) of the instance. Take note of the following items:</p>
+     * <p>The number of queues for the primary network interface. Note the following when you use this parameter:</p>
      * <ul>
-     * <li>The instance must be in the Stopped (<code>Stopped</code>) state.</li>
-     * <li>The number of queues supported by an ENI cannot exceed the maximum number of queues that the instance type allows for each ENI. The total number of queues on all ENIs on the instance cannot exceed the queue quota that the instance type supports. To query the maximum number of queues that an instance type allows for each ENI and the queue quota for the instance type, call the <a href="https://help.aliyun.com/document_detail/25620.html">DescribeInstanceTypes</a> operation.</li>
-     * <li>If you set this parameter to -1, the value is reset to the default value for the instance type. To query the default number of queues of an ENI of each instance type, call the <a href="https://help.aliyun.com/document_detail/25620.html">DescribeInstanceTypes</a> operation.</li>
+     * <li><p>The instance must be in the <code>Stopped</code> state.</p>
+     * </li>
+     * <li><p>The value cannot exceed the maximum number of queues that the instance type supports for a single network interface. The total number of queues across all network interfaces of the instance cannot exceed the total queue quota that the instance type supports. You can call the <a href="https://help.aliyun.com/document_detail/25620.html">DescribeInstanceTypes</a> operation to query the maximum number of queues per network interface and the total queue quota for an instance type.</p>
+     * </li>
+     * <li><p>If you set this parameter to -1, the number of queues for the primary network interface is reset to the default value for the instance type. You can call the <a href="https://help.aliyun.com/document_detail/25620.html">DescribeInstanceTypes</a> operation to query the default number of queues for an elastic network interface of an instance type.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -122,42 +151,45 @@ public class ModifyInstanceAttributeRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The password of the instance. The password must be 8 to 30 characters in length and contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters. Special characters include <em><em>( ) \` ~ ! @ # $ % ^ &amp; \</em> - _ + = | { } [ ] : ; \&quot; &lt; &gt; , . ? /</em>* The password of a Windows instance cannot start with a forward slash (/). Take note of the following items:</p>
+     * <p>The password of the instance. The password must be 8 to 30 characters long and contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters. The supported special characters are <strong>()\~!@#$%^&amp;\*-_+=|{}[]:;\&quot;&lt;&gt;,.?/</strong>. For a Windows instance, the password cannot start with a forward slash (/). Note the following when you use this parameter:</p>
      * <ul>
-     * <li>The instance cannot be in the Starting (<code>Starting</code>) state.</li>
-     * <li>The parameter takes effect after the instance is restarted. You can restart an instance in the ECS console. For more information, see <a href="https://help.aliyun.com/document_detail/25440.html">Restart an instance</a>. You can also call the <a href="https://help.aliyun.com/document_detail/25502.html">RebootInstance</a> operation to restart the instance. The parameter cannot take effect if you restart an instance within the operating system.</li>
+     * <li><p>The instance cannot be in the <code>Starting</code> state.</p>
+     * </li>
+     * <li><p>The new password takes effect after you restart the instance from the ECS console (see <a href="https://help.aliyun.com/document_detail/25440.html">Restart an instance</a>) or by calling the <a href="https://help.aliyun.com/document_detail/25502.html">RebootInstance</a> operation. Restarting the instance from within its operating system does not apply the change.</p>
+     * </li>
      * </ul>
      * <blockquote>
-     * <p> For security reasons, we recommend that you use HTTPS to send requests if <code>Password</code> is specified.</p>
+     * <p>To prevent password exposure, send requests that include the <code>Password</code> parameter over HTTPS.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
-     * <p>Test123456</p>
+     * <p>Test123456&amp;$</p>
      */
     @NameInMap("Password")
     public String password;
 
     /**
-     * <p>The private domain name options of the ECS instance.</p>
-     * <p>For information about private domain name resolution, see <a href="https://help.aliyun.com/document_detail/2844797.html">ECS private DNS resolution</a>.</p>
+     * <p>The private DNS name settings for the instance.</p>
+     * <p>For more information about private DNS name resolution, see <a href="https://help.aliyun.com/document_detail/2844797.html">ECS private DNS resolution
+     * </a>.</p>
      */
     @NameInMap("PrivateDnsNameOptions")
     public ModifyInstanceAttributeRequestPrivateDnsNameOptions privateDnsNameOptions;
 
     /**
      * <blockquote>
-     * <p> This parameter is in invitational preview and is not publicly available.</p>
+     * <p>This parameter is in invitation-only preview and is not publicly available.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
-     * <p>hide</p>
+     * <p>true</p>
      */
     @NameInMap("Recyclable")
     public Boolean recyclable;
 
     /**
      * <blockquote>
-     * <p> This parameter is in invitational preview and is not publicly available.</p>
+     * <p>This parameter is in invitation-only preview and is not publicly available.</p>
      * </blockquote>
      */
     @NameInMap("RemoteConnectionOptions")
@@ -170,16 +202,21 @@ public class ModifyInstanceAttributeRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The IDs of the new security groups to which to assign the instance. Take note of the following items:</p>
+     * <p>The IDs of security groups to assign to the instance. Note the following when you use this parameter:</p>
      * <ul>
-     * <li>The security group IDs in the array cannot be duplicate. The length of the array is related to the quota of security groups to which the instance can be assigned. For more information, see the <a href="~~25412#SecurityGroupQuota1~~">Security group limits</a> section in the &quot;Limits and quotas&quot; topic.</li>
-     * <li>The instance is moved from the current security groups to the replacement security groups. If you want the instance to remain in the current security groups, add the IDs of the current security groups to the array.</li>
-     * <li>You can move the instance to security groups of a different type. However, the array cannot contain the IDs of both basic and advanced security groups.</li>
-     * <li>The security groups and the instance must belong to the same VPC.</li>
-     * <li>Security groups of instances in the classic network cannot be changed.</li>
+     * <li><p>The security group IDs in the array must be unique. The number of security groups that an instance can join is limited. For more information, see <a href="~~25412#SecurityGroupQuota1~~">Limits</a>.</p>
+     * </li>
+     * <li><p>Specifying this parameter removes the instance from its current security groups. To retain existing security group associations, you must include their IDs in this array.</p>
+     * </li>
+     * <li><p>You can switch the security group type. However, the specified security groups cannot include both basic and enterprise security groups.</p>
+     * </li>
+     * <li><p>The security groups must belong to the same VPC as the instance.</p>
+     * </li>
+     * <li><p>This parameter is not supported for instances in the classic network.</p>
+     * </li>
      * </ul>
      * <blockquote>
-     * <p> New security groups become valid for the instance after a short delay.</p>
+     * <p>The change takes effect on the instance after a short delay.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -189,13 +226,15 @@ public class ModifyInstanceAttributeRequest extends TeaModel {
     public java.util.List<String> securityGroupIds;
 
     /**
-     * <p>The user data of the instance. We recommend that you encode the data in Base64. Take note of the following items:</p>
+     * <p>The user data of the instance. User data should be Base64-encoded before it is passed. Note the following when you use this parameter:</p>
      * <ul>
-     * <li>The instance must meet the limits for user data. For more information, see <a href="https://help.aliyun.com/document_detail/49121.html">Initialize an instance by using instance user data</a>.</li>
-     * <li>After you restart the instance, the new user data is displayed but not run as scripts.</li>
+     * <li><p>The user data must comply with the limits described in <a href="https://help.aliyun.com/document_detail/49121.html">Generate user data</a>.</p>
+     * </li>
+     * <li><p>After you restart the instance, the new user data is available on the instance but is not executed.</p>
+     * </li>
      * </ul>
      * <blockquote>
-     * <p> The maximum size of the raw data before encoding is 32 KB. We recommend that you do not pass in confidential information such as passwords and private keys in plaintext. If you must pass in confidential information, we recommend that you encrypt and Base64-encode the information before you pass it in. Then, you can decode and decrypt the information in the same way within the instance.</p>
+     * <p>The raw data cannot exceed 32 KB before being encoded. Do not pass confidential information, such as passwords and private keys, in plaintext. If you must pass confidential information, encrypt and then Base64-encode it. On the instance, decrypt the information by using the corresponding decryption method.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -371,7 +410,9 @@ public class ModifyInstanceAttributeRequest extends TeaModel {
 
     public static class ModifyInstanceAttributeRequestCpuOptions extends TeaModel {
         /**
-         * <p>The number of CPU cores. This parameter cannot be specified but only uses its default value.</p>
+         * <p>The number of CPU cores. This parameter is not customizable and uses a default value.</p>
+         * <p>&lt;props=&quot;china&quot;&gt;</p>
+         * <p>For information about the default value, see <a href="https://help.aliyun.com/document_detail/145895.html">Custom CPU options</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -380,11 +421,15 @@ public class ModifyInstanceAttributeRequest extends TeaModel {
         public Integer core;
 
         /**
-         * <p>The number of threads per CPU core. The following formula is used to calculate the number of vCPUs of the instance: <code>CpuOptions.Core</code> value × <code>CpuOptions.ThreadsPerCore</code> value.</p>
+         * <p>The number of threads per core. The total number of vCPUs for an ECS instance is the value of <code>CpuOptions.Core</code> multiplied by the value of <code>CpuOptions.ThreadsPerCore</code>.</p>
          * <ul>
-         * <li>If <code>CpuOptionsThreadPerCore</code> is set to 1, Hyper-Threading (HT) is disabled.</li>
-         * <li>This parameter is applicable only to specific instance types.</li>
+         * <li><p>Setting <code>CpuOptions.ThreadsPerCore</code> to 1 disables hyper-threading.</p>
+         * </li>
+         * <li><p>Only some instance types support specifying the number of threads per core.</p>
+         * </li>
          * </ul>
+         * <p>&lt;props=&quot;china&quot;&gt;</p>
+         * <p>For information about the valid values and default value, see <a href="https://help.aliyun.com/document_detail/145895.html">Custom CPU options</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -395,16 +440,18 @@ public class ModifyInstanceAttributeRequest extends TeaModel {
         /**
          * <p>The CPU topology type of the instance. Valid values:</p>
          * <ul>
-         * <li>ContinuousCoreToHTMapping: The Hyper-Threading (HT) technology allows continuous threads to run on the same core in the CPU topology of the instance.</li>
-         * <li>DiscreteCoreToHTMapping: The HT technology allows discrete threads to run on the same core.</li>
+         * <li><p>ContinuousCoreToHTMapping: The hyper-threads of the same core are contiguous.</p>
+         * </li>
+         * <li><p>DiscreteCoreToHTMapping: The hyper-threads of the same core are discrete.</p>
+         * </li>
          * </ul>
-         * <p>This parameter is left empty by default.</p>
-         * <p>Take note of the following items:</p>
+         * <p>Default value: None.</p>
+         * <p>Note the following when you use this parameter:</p>
          * <ul>
-         * <li>The instance must be in the Stopped (<code>Stopped</code>) state.</li>
+         * <li>The instance must be in the <code>Stopped</code> state.</li>
          * </ul>
          * <blockquote>
-         * <p> This parameter is supported only for specific instance families. For information about the supported instance families, see <a href="https://help.aliyun.com/document_detail/2636059.html">View and modify CPU topologies</a>.</p>
+         * <p>This parameter is supported by only some instance families. See <a href="https://help.aliyun.com/document_detail/2636059.html">View and modify the CPU topology</a> for a list of supported families.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -414,6 +461,10 @@ public class ModifyInstanceAttributeRequest extends TeaModel {
         public String topologyType;
 
         /**
+         * <blockquote>
+         * <p>This parameter is in invitation-only preview and is not publicly available.</p>
+         * </blockquote>
+         * 
          * <strong>example:</strong>
          * <p>enabled</p>
          */
@@ -461,10 +512,12 @@ public class ModifyInstanceAttributeRequest extends TeaModel {
 
     public static class ModifyInstanceAttributeRequestPrivateDnsNameOptions extends TeaModel {
         /**
-         * <p>Specifies whether DNS Resolution from the Instance ID-based Hostname to the Instance Primary Private IPv6 Address (AAAA Record) is enabled. Valid values:</p>
+         * <p>Specifies whether to enable resolution of the instance ID-based domain name to an IPv6 address. Valid values:</p>
          * <ul>
-         * <li>true</li>
-         * <li>false</li>
+         * <li><p>true</p>
+         * </li>
+         * <li><p>false</p>
+         * </li>
          * </ul>
          * <p>Default value: false.</p>
          * 
@@ -475,10 +528,12 @@ public class ModifyInstanceAttributeRequest extends TeaModel {
         public Boolean enableInstanceIdDnsAAAARecord;
 
         /**
-         * <p>Specifies whether DNS Resolution from the Instance ID-based Hostname to the Instance Primary Private IPv4 Address (A Record) is enabled. Valid values:</p>
+         * <p>Specifies whether to enable resolution of the instance ID-based domain name to an IPv4 address. Valid values:</p>
          * <ul>
-         * <li>true</li>
-         * <li>false</li>
+         * <li><p>true</p>
+         * </li>
+         * <li><p>false</p>
+         * </li>
          * </ul>
          * <p>Default value: false.</p>
          * 
@@ -489,10 +544,12 @@ public class ModifyInstanceAttributeRequest extends TeaModel {
         public Boolean enableInstanceIdDnsARecord;
 
         /**
-         * <p>Specifies whether DNS Resolution from the IP Address-based Hostname to the Instance Primary Private IPv4 Address (A Record) is enabled. Valid values:</p>
+         * <p>Specifies whether to enable resolution of the IP address-based domain name to an IPv4 address. Valid values:</p>
          * <ul>
-         * <li>true</li>
-         * <li>false</li>
+         * <li><p>true</p>
+         * </li>
+         * <li><p>false</p>
+         * </li>
          * </ul>
          * <p>Default value: false.</p>
          * 
@@ -503,10 +560,12 @@ public class ModifyInstanceAttributeRequest extends TeaModel {
         public Boolean enableIpDnsARecord;
 
         /**
-         * <p>Specifies whether Reverse DNS Resolution from the Instance Primary Private IPv4 Address to the IP Address-based Hostname (PTR Record) is enabled. Valid values:</p>
+         * <p>Specifies whether to enable reverse DNS resolution of an IPv4 address to an IP address-based domain name. Valid values:</p>
          * <ul>
-         * <li>true</li>
-         * <li>false</li>
+         * <li><p>true</p>
+         * </li>
+         * <li><p>false</p>
+         * </li>
          * </ul>
          * <p>Default value: false.</p>
          * 
@@ -517,11 +576,14 @@ public class ModifyInstanceAttributeRequest extends TeaModel {
         public Boolean enableIpDnsPtrRecord;
 
         /**
-         * <p>The type of the hostname. Valid values:</p>
+         * <p>The hostname type. Valid values:</p>
          * <ul>
-         * <li>Custom: custom hostname.</li>
-         * <li>IpBased: IP address-based hostname.</li>
-         * <li>InstanceIdBased: instance ID-based hostname.</li>
+         * <li><p>Custom: a custom hostname.</p>
+         * </li>
+         * <li><p>IpBased: an IP address-based hostname.</p>
+         * </li>
+         * <li><p>InstanceIdBased: an instance ID-based hostname.</p>
+         * </li>
          * </ul>
          * <p>Default value: Custom.</p>
          * 
@@ -581,7 +643,7 @@ public class ModifyInstanceAttributeRequest extends TeaModel {
     public static class ModifyInstanceAttributeRequestRemoteConnectionOptions extends TeaModel {
         /**
          * <blockquote>
-         * <p> This parameter is in invitational preview and is not publicly available.</p>
+         * <p>This parameter is in invitation-only preview and is not publicly available.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -592,7 +654,7 @@ public class ModifyInstanceAttributeRequest extends TeaModel {
 
         /**
          * <blockquote>
-         * <p> This parameter is in invitational preview and is not publicly available.</p>
+         * <p>This parameter is in invitation-only preview and is not publicly available.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

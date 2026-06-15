@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreatePlanMaintenanceWindowResponseBody extends TeaModel {
     /**
+     * <p>The ID of the maintenance window.</p>
+     * 
      * <strong>example:</strong>
      * <p>pw-bp1a9yavgq3dgttvowun</p>
      */
@@ -12,6 +14,8 @@ public class CreatePlanMaintenanceWindowResponseBody extends TeaModel {
     public String planWindowId;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>7D5B1188-3F08-56D1-A6B2-91B267452633</p>
      */

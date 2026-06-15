@@ -8,7 +8,7 @@ public class ResetDisksResponseBody extends TeaModel {
     public ResetDisksResponseBodyOperationProgressSet operationProgressSet;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>3D66C85C-AA97-4A00-B0ED-2D9A80FE782C</p>

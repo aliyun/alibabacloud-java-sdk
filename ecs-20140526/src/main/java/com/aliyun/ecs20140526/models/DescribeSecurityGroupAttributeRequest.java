@@ -19,9 +19,12 @@ public class DescribeSecurityGroupAttributeRequest extends TeaModel {
     /**
      * <p>The direction in which the security group rule is applied. Valid values:</p>
      * <ul>
-     * <li>egress: outbound</li>
-     * <li>ingress: inbound</li>
-     * <li>all: outbound and inbound</li>
+     * <li><p>egress: outbound</p>
+     * </li>
+     * <li><p>ingress: inbound</p>
+     * </li>
+     * <li><p>all: outbound and inbound</p>
+     * </li>
      * </ul>
      * <p>Default value: all.</p>
      * 
@@ -34,8 +37,10 @@ public class DescribeSecurityGroupAttributeRequest extends TeaModel {
     /**
      * <p>The maximum number of entries per page.</p>
      * <ul>
-     * <li>Minimum value: 10.</li>
-     * <li>Maximum value: 1000.</li>
+     * <li><p>Minimum value: 10.</p>
+     * </li>
+     * <li><p>Maximum value: 1000.</p>
+     * </li>
      * </ul>
      * <p>Default value: 500.</p>
      * 
@@ -59,14 +64,16 @@ public class DescribeSecurityGroupAttributeRequest extends TeaModel {
      * <ul>
      * <li><p>Valid values for rules of security groups in the classic network:</p>
      * <ul>
-     * <li>internet (default)</li>
-     * <li>intranet</li>
+     * <li><p>internet (default)</p>
+     * </li>
+     * <li><p>intranet</p>
+     * </li>
      * </ul>
-     * <p>**</p>
+     * <p>\<em>\</em></p>
      * <p><strong>Note</strong> You can query security group rules of only one NIC type in a single call. To query security group rules of both NIC types, call the operation twice.</p>
      * </li>
      * <li><p>When the security group is in a virtual private cloud (VPC), set the value to intranet, which is the default value for rules of security groups in VPCs.</p>
-     * <p>**</p>
+     * <p>\<em>\</em></p>
      * <p><strong>Note</strong> If you set this parameter to internet or leave this parameter empty, a value of intranet is automatically used.</p>
      * </li>
      * </ul>

@@ -4,6 +4,9 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class TerminateVirtualBorderRouterRequest extends TeaModel {
+    /**
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
@@ -14,6 +17,7 @@ public class TerminateVirtualBorderRouterRequest extends TeaModel {
     public Long ownerId;
 
     /**
+     * <p>The ID of the region where the VBR is deployed. You can call the <code>DescribeRegions</code> operation to obtain the region ID.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
@@ -25,10 +29,14 @@ public class TerminateVirtualBorderRouterRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The client-side CIDR block. This parameter is required for a connection over an Express Connect circuit.</p>
+     */
     @NameInMap("UserCidr")
     public String userCidr;
 
     /**
+     * <p>The ID of the VBR.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("VbrId")

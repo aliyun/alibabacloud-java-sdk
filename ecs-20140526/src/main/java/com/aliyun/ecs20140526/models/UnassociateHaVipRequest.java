@@ -4,19 +4,27 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class UnassociateHaVipRequest extends TeaModel {
+    /**
+     * <p>A client-generated token that ensures request idempotency. The token must be unique for each request, contain only ASCII characters, and be no more than 64 characters long.</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
+    /**
+     * <p>Specifies whether to forcefully disassociate the HaVip. If you set this parameter to <code>true</code>, you can disassociate the HaVip from a master instance. Valid values: <code>true</code> and <code>false</code>. The default value is <code>false</code>.</p>
+     */
     @NameInMap("Force")
     public String force;
 
     /**
+     * <p>The ID of the HaVip.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("HaVipId")
     public String haVipId;
 
     /**
+     * <p>The ID of the ECS instance to disassociate the HaVip from.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("InstanceId")
@@ -29,6 +37,7 @@ public class UnassociateHaVipRequest extends TeaModel {
     public Long ownerId;
 
     /**
+     * <p>The ID of the region where the HaVip is deployed. You can call the <code>DescribeRegions</code> operation to query the latest region list.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")

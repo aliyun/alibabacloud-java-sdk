@@ -27,7 +27,7 @@ public class DescribeCloudAssistantSettingsRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The Cloud Assistant configurations.</p>
+     * <p>The service settings to query.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("SettingType")

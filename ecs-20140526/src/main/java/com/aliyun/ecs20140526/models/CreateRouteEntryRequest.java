@@ -4,21 +4,53 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class CreateRouteEntryRequest extends TeaModel {
+    /**
+     * <p>A unique, case-sensitive identifier to ensure request idempotency. The token must be 1 to 64 ASCII characters in length.</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
+     * <p>The destination CIDR block. The value must be a valid CIDR block. Set the value to <code>0.0.0.0/0</code> to create a default route.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("DestinationCidrBlock")
     public String destinationCidrBlock;
 
+    /**
+     * <p>The ID of the next hop.</p>
+     * <p><strong>Note</strong> Specify either <code>NextHopId</code> or <code>NextHopList</code>, but not both.</p>
+     */
     @NameInMap("NextHopId")
     public String nextHopId;
 
+    /**
+     * <p>The list of next hops for an ECMP route.</p>
+     * <p><strong>Note</strong> Specify either <code>NextHopId</code> or <code>NextHopList</code>, but not both.</p>
+     */
     @NameInMap("NextHopList")
     public java.util.List<CreateRouteEntryRequestNextHopList> nextHopList;
 
+    /**
+     * <p>The type of the next hop. Valid values:</p>
+     * <ul>
+     * <li><p><strong>Instance</strong>: an ECS instance.</p>
+     * </li>
+     * <li><p><strong>HaVip</strong>: a high-availability virtual IP address.</p>
+     * </li>
+     * <li><p><strong>RouterInterface</strong>: a router interface.</p>
+     * </li>
+     * <li><p><strong>NetworkInterface</strong>: an elastic network interface.</p>
+     * </li>
+     * <li><p><strong>VpnGateway</strong>: a VPN gateway.</p>
+     * </li>
+     * <li><p><strong>Ipv6Gateway</strong>: an IPv6 gateway.</p>
+     * </li>
+     * <li><p><strong>NatGateway</strong>: a NAT gateway.</p>
+     * </li>
+     * </ul>
+     * <p><strong>Note</strong> This parameter is required if you specify <code>NextHopId</code>.</p>
+     */
     @NameInMap("NextHopType")
     public String nextHopType;
 
@@ -28,6 +60,9 @@ public class CreateRouteEntryRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The ID of the region. You can call the <a href="~~docid:36063~~">DescribeRegions</a> operation to get the latest list of regions.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
@@ -38,6 +73,7 @@ public class CreateRouteEntryRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
+     * <p>The ID of the route table.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("RouteTableId")
@@ -137,9 +173,31 @@ public class CreateRouteEntryRequest extends TeaModel {
     }
 
     public static class CreateRouteEntryRequestNextHopList extends TeaModel {
+        /**
+         * <p>The ID of the next hop in the ECMP route.</p>
+         */
         @NameInMap("NextHopId")
         public String nextHopId;
 
+        /**
+         * <p>The type of the next hop in the ECMP route. Valid values:</p>
+         * <ul>
+         * <li><p><strong>Instance</strong>: an ECS instance.</p>
+         * </li>
+         * <li><p><strong>HaVip</strong>: a high-availability virtual IP address.</p>
+         * </li>
+         * <li><p><strong>RouterInterface</strong>: a router interface.</p>
+         * </li>
+         * <li><p><strong>NetworkInterface</strong>: an elastic network interface.</p>
+         * </li>
+         * <li><p><strong>VpnGateway</strong>: a VPN gateway.</p>
+         * </li>
+         * <li><p><strong>Ipv6Gateway</strong>: an IPv6 gateway.</p>
+         * </li>
+         * <li><p><strong>NatGateway</strong>: a NAT gateway.</p>
+         * </li>
+         * </ul>
+         */
         @NameInMap("NextHopType")
         public String nextHopType;
 

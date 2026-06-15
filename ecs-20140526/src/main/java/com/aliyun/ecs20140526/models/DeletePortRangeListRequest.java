@@ -13,7 +13,7 @@ public class DeletePortRangeListRequest extends TeaModel {
     /**
      * <p>The ID of the port list.</p>
      * <blockquote>
-     * <p> If the port list is associated with other resources, you cannot delete the port list. You must disassociate the port list from the resources and then delete the port list.</p>
+     * <p>If the port list is associated with other resources, you cannot delete the port list. You must disassociate the port list from the resources and then delete the port list.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 

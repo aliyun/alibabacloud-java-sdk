@@ -14,7 +14,7 @@ public class DescribeElasticityAssuranceAutoRenewAttributeRequest extends TeaMod
     public Long ownerId;
 
     /**
-     * <p>The region ID of the elasticity assurance. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>The region ID of the elasticity assurance service. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -84,8 +84,8 @@ public class DescribeElasticityAssuranceAutoRenewAttributeRequest extends TeaMod
 
     public static class DescribeElasticityAssuranceAutoRenewAttributeRequestPrivatePoolOptions extends TeaModel {
         /**
-         * <p>The IDs of elasticity assurances.</p>
-         * <p><strong>Limits</strong>: You can specify up to 50 elasticity assurance IDs in a single request.</p>
+         * <p>弹性保障服务ID列表。</p>
+         * <p><strong>限制</strong>：单次查询的弹性保障服务数量最多不超过50个。</p>
          */
         @NameInMap("Id")
         public java.util.List<String> id;

@@ -4,6 +4,12 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class CreateCommandRequest extends TeaModel {
+    /**
+     * <p>Ensures the idempotence of the request. Generate a unique value for this parameter from your client to guarantee uniqueness across different requests. <strong>ClientToken</strong> supports only ASCII characters and cannot exceed 64 characters. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123e4567-e89b-12d3-a456-426655440000</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
@@ -14,10 +20,14 @@ public class CreateCommandRequest extends TeaModel {
      * </li>
      * <li><p>You can use custom parameters in the command content. To enable the custom parameter feature, you must set <code>EnableParameter</code> to true.</p>
      * <ul>
-     * <li>Custom parameters are defined in the <code>{{}}</code> format. Within <code>{{}}</code>, the spaces and line feeds before and after the parameter names are ignored.</li>
-     * <li>You can specify up to 20 custom parameters.</li>
-     * <li>A custom parameter name can contain only letters, digits, underscores (_), and hyphens (-). The name is case-insensitive. The ACS:: prefix cannot be used to specify non-built-in environment parameters.</li>
-     * <li>Each custom parameter name can be up to 64 bytes in length.</li>
+     * <li><p>Custom parameters are defined in the <code>{{}}</code> format. Within <code>{{}}</code>, the spaces and line feeds before and after the parameter names are ignored.</p>
+     * </li>
+     * <li><p>You can specify up to 20 custom parameters.</p>
+     * </li>
+     * <li><p>A custom parameter name can contain only letters, digits, underscores (_), and hyphens (-). The name is case-insensitive. The ACS:: prefix cannot be used to specify non-built-in environment parameters.</p>
+     * </li>
+     * <li><p>Each custom parameter name can be up to 64 bytes in length.</p>
+     * </li>
      * </ul>
      * </li>
      * <li><p>You can specify built-in environment parameters as custom parameters in a command. When you run the command, Cloud Assistant automatically uses the environment parameter values for the custom parameters. You can specify the following built-in environment variables:</p>
@@ -28,26 +38,34 @@ public class CreateCommandRequest extends TeaModel {
      * </li>
      * <li><p><code>{{ACS::InstanceId}}</code>: the instance ID. If you want to run the command on multiple instances and specify <code>{{ACS::InstanceId}}</code> as a built-in environment parameter, make sure that the Cloud Assistant Agent version is not earlier than the following versions:</p>
      * <ul>
-     * <li>Linux: 2.2.3.309</li>
-     * <li>Windows: 2.1.3.309</li>
+     * <li><p>Linux: 2.2.3.309</p>
+     * </li>
+     * <li><p>Windows: 2.1.3.309</p>
+     * </li>
      * </ul>
      * </li>
      * <li><p><code>{{ACS::InstanceName}}</code>: the instance name. If you want to run the command on multiple instances and specify <code>{{ACS::InstanceName}}</code> as a built-in environment parameter, make sure that the Cloud Assistant Agent version is not earlier than the following versions:</p>
      * <ul>
-     * <li>Linux: 2.2.3.344</li>
-     * <li>Windows: 2.1.3.344</li>
+     * <li><p>Linux: 2.2.3.344</p>
+     * </li>
+     * <li><p>Windows: 2.1.3.344</p>
+     * </li>
      * </ul>
      * </li>
      * <li><p><code>{{ACS::InvokeId}}</code>: the ID of the task. If you want to specify <code>{{ACS::InvokeId}}</code> as a built-in environment parameter, make sure that the Cloud Assistant Agent version is not earlier than the following versions:</p>
      * <ul>
-     * <li>Linux: 2.2.3.309</li>
-     * <li>Windows: 2.1.3.309</li>
+     * <li><p>Linux: 2.2.3.309</p>
+     * </li>
+     * <li><p>Windows: 2.1.3.309</p>
+     * </li>
      * </ul>
      * </li>
      * <li><p><code>{{ACS::CommandId}}</code>: the command ID. If you want to call the <a href="https://help.aliyun.com/document_detail/141751.html">RunCommand</a> operation to run the command and specify <code>{{ACS::CommandId}}</code> as a built-in environment parameter, make sure that the Cloud Assistant Agent version is not earlier than the following versions:</p>
      * <ul>
-     * <li>Linux: 2.2.3.309</li>
-     * <li>Windows: 2.1.3.309</li>
+     * <li><p>Linux: 2.2.3.309</p>
+     * </li>
+     * <li><p>Windows: 2.1.3.309</p>
+     * </li>
      * </ul>
      * </li>
      * </ul>
@@ -64,8 +82,10 @@ public class CreateCommandRequest extends TeaModel {
     /**
      * <p>The encoding mode of the command content (CommandContent). Valid values:</p>
      * <ul>
-     * <li>PlainText: The command content is not encoded.</li>
-     * <li>Base64: The command content is Base64-encoded.</li>
+     * <li><p>PlainText: The command content is not encoded.</p>
+     * </li>
+     * <li><p>Base64: The command content is Base64-encoded.</p>
+     * </li>
      * </ul>
      * <p>Default value: Base64.</p>
      * <blockquote>
@@ -154,7 +174,7 @@ public class CreateCommandRequest extends TeaModel {
     public java.util.List<CreateCommandRequestTag> tag;
 
     /**
-     * <p>he maximum timeout period for the command execution on the instance. Unit: seconds. When a command that you created cannot be run, the command times out. When a command execution times out, Cloud Assistant Agent forcefully terminates the command process by canceling the PID. </p>
+     * <p>he maximum timeout period for the command execution on the instance. Unit: seconds. When a command that you created cannot be run, the command times out. When a command execution times out, Cloud Assistant Agent forcefully terminates the command process by canceling the PID.</p>
      * <p>Default value: 60.</p>
      * 
      * <strong>example:</strong>
@@ -166,9 +186,12 @@ public class CreateCommandRequest extends TeaModel {
     /**
      * <p>The command type. Valid values:</p>
      * <ul>
-     * <li>RunBatScript: batch commands. These commands are applicable to Windows instances.</li>
-     * <li>RunPowerShellScript: PowerShell commands. These commands are applicable to Windows instances.</li>
-     * <li>RunShellScript: shell commands. These commands are applicable to Linux instances.</li>
+     * <li><p>RunBatScript: batch commands. These commands are applicable to Windows instances.</p>
+     * </li>
+     * <li><p>RunPowerShellScript: PowerShell commands. These commands are applicable to Windows instances.</p>
+     * </li>
+     * <li><p>RunShellScript: shell commands. These commands are applicable to Linux instances.</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -182,15 +205,17 @@ public class CreateCommandRequest extends TeaModel {
      * <p>The execution path of the command on ECS instances. The value can be up to 200 characters in length.</p>
      * <p>Default values:</p>
      * <ul>
-     * <li>For Linux instance, the default value is the home directory of the root user, which is the <code>/root</code> directory.</li>
-     * <li>For Windows instances, the default value is the directory where the Cloud Assistant Agent process resides, such as <code>C:\\Windows\\System32\\</code>.</li>
+     * <li><p>For Linux instance, the default value is the home directory of the root user, which is the <code>/root</code> directory.</p>
+     * </li>
+     * <li><p>For Windows instances, the default value is the directory where the Cloud Assistant Agent process resides, such as <code>C:\\Windows\\System32\\</code>.</p>
+     * </li>
      * </ul>
      * <blockquote>
-     * <p> If you set WorkingDir to a directory other than default ones, make sure that the directory exists on the instances.</p>
+     * <p>If you set WorkingDir to a directory other than default ones, make sure that the directory exists on the instances.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
-     * <p>/root/</p>
+     * <p>/home/user</p>
      */
     @NameInMap("WorkingDir")
     public String workingDir;

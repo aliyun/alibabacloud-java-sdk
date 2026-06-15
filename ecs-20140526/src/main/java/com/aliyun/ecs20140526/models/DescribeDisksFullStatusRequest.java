@@ -28,10 +28,14 @@ public class DescribeDisksFullStatusRequest extends TeaModel {
     /**
      * <p>The event type of the EBS device. Valid values:</p>
      * <ul>
-     * <li>Degraded: The performance of the EBS device is degraded.</li>
-     * <li>SeverelyDegraded: The performance of the EBS device is severely degraded.</li>
-     * <li>Stalled: The performance of the EBS device is severely affected.</li>
-     * <li>ErrorDetected: The local disk is damaged.</li>
+     * <li><p>Degraded: The performance of the EBS device is degraded.</p>
+     * </li>
+     * <li><p>SeverelyDegraded: The performance of the EBS device is severely degraded.</p>
+     * </li>
+     * <li><p>Stalled: The performance of the EBS device is severely affected.</p>
+     * </li>
+     * <li><p>ErrorDetected: The local disk is damaged.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -43,11 +47,16 @@ public class DescribeDisksFullStatusRequest extends TeaModel {
     /**
      * <p>The health status of the EBS device. Valid values:</p>
      * <ul>
-     * <li>Impaired: The EBS device is damaged.</li>
-     * <li>Warning: The performance of the EBS device is degraded.</li>
-     * <li>Initializing: The EBS device is being initialized.</li>
-     * <li>InsufficientData: The status cannot be determined due to insufficient data.</li>
-     * <li>NotApplicable: The EBS device cannot be used.</li>
+     * <li><p>Impaired: The EBS device is damaged.</p>
+     * </li>
+     * <li><p>Warning: The performance of the EBS device is degraded.</p>
+     * </li>
+     * <li><p>Initializing: The EBS device is being initialized.</p>
+     * </li>
+     * <li><p>InsufficientData: The status cannot be determined due to insufficient data.</p>
+     * </li>
+     * <li><p>NotApplicable: The EBS device cannot be used.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -110,12 +119,18 @@ public class DescribeDisksFullStatusRequest extends TeaModel {
     /**
      * <p>The lifecycle status of the EBS device. For more information, see <a href="https://help.aliyun.com/document_detail/25689.html">Disk status</a>. Valid values:</p>
      * <ul>
-     * <li>In_use: The EBS device is in use.</li>
-     * <li>Available: The EBS device can be attached.</li>
-     * <li>Attaching: The EBS device is being attached.</li>
-     * <li>Detaching: The EBS device is being detached.</li>
-     * <li>Creating: The EBS device is being created.</li>
-     * <li>ReIniting: The EBS device is being initialized.</li>
+     * <li><p>In_use: The EBS device is in use.</p>
+     * </li>
+     * <li><p>Available: The EBS device can be attached.</p>
+     * </li>
+     * <li><p>Attaching: The EBS device is being attached.</p>
+     * </li>
+     * <li><p>Detaching: The EBS device is being detached.</p>
+     * </li>
+     * <li><p>Creating: The EBS device is being created.</p>
+     * </li>
+     * <li><p>ReIniting: The EBS device is being initialized.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

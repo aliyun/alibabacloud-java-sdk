@@ -28,8 +28,10 @@ public class ModifyCapacityReservationRequest extends TeaModel {
     /**
      * <p>The release mode of the capacity reservation. Valid values:</p>
      * <ul>
-     * <li>Limited: The capacity reservation is automatically released at the specified point in time. If you configure this parameter, you must also configure <code>EndTime</code>.</li>
-     * <li>Unlimited: The capacity reservation must be manually released. You can release it anytime.</li>
+     * <li><p>Limited: The capacity reservation is automatically released at the specified point in time. If you configure this parameter, you must also configure <code>EndTime</code>.</p>
+     * </li>
+     * <li><p>Unlimited: The capacity reservation must be manually released. You can release it anytime.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -59,8 +61,10 @@ public class ModifyCapacityReservationRequest extends TeaModel {
     /**
      * <p>The operating system of the image used by the instance. Valid values:</p>
      * <ul>
-     * <li>Windows</li>
-     * <li>Linux</li>
+     * <li><p>Windows</p>
+     * </li>
+     * <li><p>Linux</p>
+     * </li>
      * </ul>
      * <blockquote>
      * <p>This parameter is unavailable.</p>

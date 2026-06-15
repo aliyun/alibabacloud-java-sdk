@@ -38,27 +38,39 @@ public class ModifySecurityGroupRuleRequest extends TeaModel {
      * <li>The case-insensitive protocol name. Valid values:</li>
      * </ol>
      * <ul>
-     * <li>ICMP</li>
-     * <li>GRE</li>
-     * <li>TCP</li>
-     * <li>UDP</li>
-     * <li>ALL: supports all protocols.</li>
+     * <li><p>ICMP</p>
+     * </li>
+     * <li><p>GRE</p>
+     * </li>
+     * <li><p>TCP</p>
+     * </li>
+     * <li><p>UDP</p>
+     * </li>
+     * <li><p>ALL: supports all protocols.</p>
+     * </li>
      * </ul>
      * <ol start="2">
      * <li>The value of the IANA-compliant protocol number, which is an integer from 0 to 255. List of regions currently available:</li>
      * </ol>
      * <ul>
-     * <li>Philippines (Manila)</li>
-     * <li>UK (London)</li>
-     * <li>Malaysia (Kuala Lumpur)</li>
-     * <li>China (Hohhot)</li>
-     * <li>China (Qingdao)</li>
-     * <li>US (Silicon Valley)</li>
-     * <li>Singapore</li>
+     * <li><p>Philippines (Manila)</p>
+     * </li>
+     * <li><p>UK (London)</p>
+     * </li>
+     * <li><p>Malaysia (Kuala Lumpur)</p>
+     * </li>
+     * <li><p>China (Hohhot)</p>
+     * </li>
+     * <li><p>China (Qingdao)</p>
+     * </li>
+     * <li><p>US (Silicon Valley)</p>
+     * </li>
+     * <li><p>Singapore</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
-     * <p>all</p>
+     * <p>ALL</p>
      */
     @NameInMap("IpProtocol")
     public String ipProtocol;
@@ -66,7 +78,7 @@ public class ModifySecurityGroupRuleRequest extends TeaModel {
     /**
      * <p>The destination IPv6 CIDR block. IPv6 CIDR blocks and IPv6 addresses are supported.</p>
      * <blockquote>
-     * <p> Only the IP addresses of instances in VPCs are supported. You cannot specify both Ipv6DestCidrIp and <code>DestCidrIp</code>.</p>
+     * <p>Only the IP addresses of instances in VPCs are supported. You cannot specify both Ipv6DestCidrIp and <code>DestCidrIp</code>.</p>
      * </blockquote>
      * <p>By default, this parameter is left empty.</p>
      * 
@@ -79,7 +91,7 @@ public class ModifySecurityGroupRuleRequest extends TeaModel {
     /**
      * <p>The source IPv6 CIDR block. IPv6 CIDR blocks and IPv6 addresses are supported.</p>
      * <blockquote>
-     * <p> Only the IP addresses of instances in virtual private clouds (VPCs) are supported. You cannot specify both Ipv6SourceCidrIp and <code>SourceCidrIp</code>.</p>
+     * <p>Only the IP addresses of instances in virtual private clouds (VPCs) are supported. You cannot specify both Ipv6SourceCidrIp and <code>SourceCidrIp</code>.</p>
      * </blockquote>
      * <p>By default, this parameter is left empty.</p>
      * 
@@ -92,7 +104,7 @@ public class ModifySecurityGroupRuleRequest extends TeaModel {
     /**
      * <p>The type of the network interface controller (NIC).</p>
      * <blockquote>
-     * <p> You cannot modify this parameter when you modify a security group rule by specifying the ID of the rule. If you want to change the NIC type of a security group rule, you can create a security group rule of a desired NIC type and delete the existing rule.</p>
+     * <p>You cannot modify this parameter when you modify a security group rule by specifying the ID of the rule. If you want to change the NIC type of a security group rule, you can create a security group rule of a desired NIC type and delete the existing rule.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -110,8 +122,10 @@ public class ModifySecurityGroupRuleRequest extends TeaModel {
     /**
      * <p>The action of the security group rule. Valid values:</p>
      * <ul>
-     * <li>accept: allows access.</li>
-     * <li>drop: denies access and returns no responses.</li>
+     * <li><p>accept: allows access.</p>
+     * </li>
+     * <li><p>drop: denies access and returns no responses.</p>
+     * </li>
      * </ul>
      * <p>Default value: accept.</p>
      * 
@@ -124,10 +138,14 @@ public class ModifySecurityGroupRuleRequest extends TeaModel {
     /**
      * <p>The range of destination ports that correspond to the transport layer protocol. Valid values:</p>
      * <ul>
-     * <li>If you set IpProtocol to TCP or UDP, the port number range is 1 to 65535. Separate the start port number and the end port number with a forward slash (/). Example: 1/200.</li>
-     * <li>If you set IpProtocol to ICMP, the port number range is -1/-1.</li>
-     * <li>If you set IpProtocol to GRE, the port number range is -1/-1.</li>
-     * <li>If you set IpProtocol to ALL, the port number range is -1/-1.</li>
+     * <li><p>If you set IpProtocol to TCP or UDP, the port number range is 1 to 65535. Separate the start port number and the end port number with a forward slash (/). Example: 1/200.</p>
+     * </li>
+     * <li><p>If you set IpProtocol to ICMP, the port number range is -1/-1.</p>
+     * </li>
+     * <li><p>If you set IpProtocol to GRE, the port number range is -1/-1.</p>
+     * </li>
+     * <li><p>If you set IpProtocol to ALL, the port number range is -1/-1.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -139,8 +157,10 @@ public class ModifySecurityGroupRuleRequest extends TeaModel {
     /**
      * <p>The ID of the port list. You can call the <code>DescribePortRangeLists</code> operation to query the IDs of available port lists.</p>
      * <ul>
-     * <li>If you specify PortRange, this parameter is ignored.</li>
-     * <li>If a security group is in the classic network, you cannot configure port lists in the rules of the security group. For information about the limits on security groups and port lists, see <a href="~~25412#SecurityGroupQuota1~~">Security group limits</a>.</li>
+     * <li><p>If you specify PortRange, this parameter is ignored.</p>
+     * </li>
+     * <li><p>If a security group is in the classic network, you cannot configure port lists in the rules of the security group. For information about the limits on security groups and port lists, see <a href="~~25412#SecurityGroupQuota1~~">Security group limits</a>.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -207,8 +227,10 @@ public class ModifySecurityGroupRuleRequest extends TeaModel {
     /**
      * <p>The source security group ID. You must specify either <code>SourceGroupId</code> or <code>SourceCidrIp</code> or specify both of them.</p>
      * <ul>
-     * <li>If <code>SourceGroupId</code> is specified but <code>SourceCidrIp</code> is not specified, the value of <code>NicType</code> must be set to intranet.</li>
-     * <li>If both <code>SourceGroupId</code> and <code>SourceCidrIp</code> are specified, the value of <code>SourceCidrIp</code> prevails by default.</li>
+     * <li><p>If <code>SourceGroupId</code> is specified but <code>SourceCidrIp</code> is not specified, the value of <code>NicType</code> must be set to intranet.</p>
+     * </li>
+     * <li><p>If both <code>SourceGroupId</code> and <code>SourceCidrIp</code> are specified, the value of <code>SourceCidrIp</code> prevails by default.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -220,8 +242,10 @@ public class ModifySecurityGroupRuleRequest extends TeaModel {
     /**
      * <p>The Alibaba Cloud account that manages the source security group when you configure a security group rule across accounts.</p>
      * <ul>
-     * <li>If both <code>SourceGroupOwnerId</code> and <code>SourceGroupOwnerAccount</code> are empty, access permissions are configured for another security group managed by your account.</li>
-     * <li>If <code>SourceCidrIp</code> is specified, <code>SourceGroupOwnerAccount</code> is ignored.</li>
+     * <li><p>If both <code>SourceGroupOwnerId</code> and <code>SourceGroupOwnerAccount</code> are empty, access permissions are configured for another security group managed by your account.</p>
+     * </li>
+     * <li><p>If <code>SourceCidrIp</code> is specified, <code>SourceGroupOwnerAccount</code> is ignored.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -233,8 +257,10 @@ public class ModifySecurityGroupRuleRequest extends TeaModel {
     /**
      * <p>The ID of the Alibaba Cloud account that manages the source security group when you configure a security group rule across accounts.</p>
      * <ul>
-     * <li>If both <code>SourceGroupOwnerId</code> and <code>SourceGroupOwnerAccount</code> are empty, access permissions are configured for another security group managed by your account.</li>
-     * <li>If <code>SourceCidrIp</code> is specified, <code>SourceGroupOwnerId</code> is ignored.</li>
+     * <li><p>If both <code>SourceGroupOwnerId</code> and <code>SourceGroupOwnerAccount</code> are empty, access permissions are configured for another security group managed by your account.</p>
+     * </li>
+     * <li><p>If <code>SourceCidrIp</code> is specified, <code>SourceGroupOwnerId</code> is ignored.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -246,10 +272,14 @@ public class ModifySecurityGroupRuleRequest extends TeaModel {
     /**
      * <p>The range of source ports that correspond to the transport layer protocol. Valid values:</p>
      * <ul>
-     * <li>If you set IpProtocol to TCP or UDP, the port number range is 1 to 65535. Separate the start port number and the end port number with a forward slash (/). Example: 1/200.</li>
-     * <li>If you set IpProtocol to ICMP, the port number range is -1/-1.</li>
-     * <li>If you set IpProtocol to GRE, the port number range is -1/-1.</li>
-     * <li>If you set IpProtocol to ALL, the port number range is -1/-1.</li>
+     * <li><p>If you set IpProtocol to TCP or UDP, the port number range is 1 to 65535. Separate the start port number and the end port number with a forward slash (/). Example: 1/200.</p>
+     * </li>
+     * <li><p>If you set IpProtocol to ICMP, the port number range is -1/-1.</p>
+     * </li>
+     * <li><p>If you set IpProtocol to GRE, the port number range is -1/-1.</p>
+     * </li>
+     * <li><p>If you set IpProtocol to ALL, the port number range is -1/-1.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

@@ -7,15 +7,20 @@ public class DetachDiskRequest extends TeaModel {
     /**
      * <p>Specifies whether to release the system disk or data disk when the instance from which you want to detach the disk is released. Valid values:</p>
      * <ul>
-     * <li>true: releases the disk when the instance is released.</li>
-     * <li>false: does not release the disk when the instance is released. The disk is retained as a pay-as-you-go data disk.</li>
+     * <li><p>true: releases the disk when the instance is released.</p>
+     * </li>
+     * <li><p>false: does not release the disk when the instance is released. The disk is retained as a pay-as-you-go data disk.</p>
+     * </li>
      * </ul>
      * <p>Default value: true.</p>
      * <p>Take note of the following items:</p>
      * <ul>
-     * <li>You cannot specify this parameter for disks for which the multi-attach feature is enabled.</li>
-     * <li>If a data disk is to be detached, the default value is <code>false</code>.</li>
-     * <li>If you want to detach an <code>elastic ephemeral disk</code>, you must set <code>DeleteWithInstance</code> to <code>true</code>.</li>
+     * <li><p>You cannot specify this parameter for disks for which the multi-attach feature is enabled.</p>
+     * </li>
+     * <li><p>If a data disk is to be detached, the default value is <code>false</code>.</p>
+     * </li>
+     * <li><p>If you want to detach an <code>elastic ephemeral disk</code>, you must set <code>DeleteWithInstance</code> to <code>true</code>.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -27,9 +32,12 @@ public class DetachDiskRequest extends TeaModel {
     /**
      * <p>The ID of the disk that you want to detach.</p>
      * <ul>
-     * <li>The disk that you want to detach must be attached to an ECS instance and in the In Use (<code>In_use</code>) state.</li>
-     * <li>The instance from which you want to detach a data disk must be in the <code>Running</code> or <code>Stopped</code> state.</li>
-     * <li>The instance from which you want to detach the system disk must be in the <code>Stopped</code> state.</li>
+     * <li><p>The disk that you want to detach must be attached to an ECS instance and in the In Use (<code>In_use</code>) state.</p>
+     * </li>
+     * <li><p>The instance from which you want to detach a data disk must be in the <code>Running</code> or <code>Stopped</code> state.</p>
+     * </li>
+     * <li><p>The instance from which you want to detach the system disk must be in the <code>Stopped</code> state.</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

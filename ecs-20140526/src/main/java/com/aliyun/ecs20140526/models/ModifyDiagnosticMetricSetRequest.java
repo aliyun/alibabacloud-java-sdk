@@ -8,7 +8,7 @@ public class ModifyDiagnosticMetricSetRequest extends TeaModel {
      * <p>The description of the diagnostic metric set.</p>
      * 
      * <strong>example:</strong>
-     * <p>connection diagnostics</p>
+     * <p>远程连接诊断</p>
      */
     @NameInMap("Description")
     public String description;

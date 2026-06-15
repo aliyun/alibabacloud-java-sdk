@@ -8,7 +8,7 @@ public class ModifyDiskChargeTypeResponseBody extends TeaModel {
      * <p>The ID of the order.</p>
      * 
      * <strong>example:</strong>
-     * <p>1234567890</p>
+     * <p>123456****</p>
      */
     @NameInMap("OrderId")
     public String orderId;

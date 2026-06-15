@@ -20,7 +20,7 @@ public class ModifyPortRangeListRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The description of the port list. The description must be 2 to 256 characters in length and cannot start with http:// or https://.</p>
+     * <p>The description of the port list. The description must be 2 to 256 characters in length and cannot start with http\:// or https\://.</p>
      * 
      * <strong>example:</strong>
      * <p>This is description.</p>
@@ -45,7 +45,7 @@ public class ModifyPortRangeListRequest extends TeaModel {
     public String portRangeListId;
 
     /**
-     * <p>The name of the port list. The name must be 2 to 128 characters in length. It must start with a letter and cannot start with http://, https://, com.aliyun, or com.alibabacloud. The name can contain letters, digits, colons (:), underscores (_), periods (.), and hyphens (-).</p>
+     * <p>The name of the port list. The name must be 2 to 128 characters in length. It must start with a letter and cannot start with http\://, https\://, com.aliyun, or com.alibabacloud. The name can contain letters, digits, colons (:), underscores (_), periods (.), and hyphens (-).</p>
      * 
      * <strong>example:</strong>
      * <p>PortRangeListNameSample</p>
@@ -170,7 +170,7 @@ public class ModifyPortRangeListRequest extends TeaModel {
 
     public static class ModifyPortRangeListRequestAddEntry extends TeaModel {
         /**
-         * <p>The description of the port range in entry N. The description must be 2 to 32 characters in length and cannot start with http:// or https://. Valid values of N: 0 to 200.</p>
+         * <p>The description of the port range in entry N. The description must be 2 to 32 characters in length and cannot start with http\:// or https\://. Valid values of N: 0 to 200.</p>
          * 
          * <strong>example:</strong>
          * <p>This is description.</p>
@@ -181,9 +181,12 @@ public class ModifyPortRangeListRequest extends TeaModel {
         /**
          * <p>The port range in entry N. Valid values of N: 0 to 200. Take note of the following limits:</p>
          * <ul>
-         * <li>The total number of entries in the port list cannot exceed the <code>MaxEntries</code> value.</li>
-         * <li><code>PortRange</code> in different entries cannot be duplicated.</li>
-         * <li>The value of this parameter cannot be the same as the value of <code>RemoveEntry.N.PortRange</code>.</li>
+         * <li><p>The total number of entries in the port list cannot exceed the <code>MaxEntries</code> value.</p>
+         * </li>
+         * <li><p><code>PortRange</code> in different entries cannot be duplicated.</p>
+         * </li>
+         * <li><p>The value of this parameter cannot be the same as the value of <code>RemoveEntry.N.PortRange</code>.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -219,8 +222,10 @@ public class ModifyPortRangeListRequest extends TeaModel {
         /**
          * <p>The port range in entry N. Valid values of N: 0 to 200. Take note of the following limits:</p>
          * <ul>
-         * <li><code>PortRange</code> in different entries cannot be duplicated.</li>
-         * <li>The value of this parameter cannot be the same as the value of <code>AddEntry.N.PortRange</code>.</li>
+         * <li><p><code>PortRange</code> in different entries cannot be duplicated.</p>
+         * </li>
+         * <li><p>The value of this parameter cannot be the same as the value of <code>AddEntry.N.PortRange</code>.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

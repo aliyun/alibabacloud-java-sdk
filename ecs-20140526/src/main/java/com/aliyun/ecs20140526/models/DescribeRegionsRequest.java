@@ -7,13 +7,20 @@ public class DescribeRegionsRequest extends TeaModel {
     /**
      * <p>The natural language that is used to filter responses. For more information, see <a href="https://tools.ietf.org/html/rfc7231">RFC 7231</a>. Valid values:</p>
      * <ul>
-     * <li>zh-CN: Simplified Chinese</li>
-     * <li>zh_TW: Traditional Chinese</li>
-     * <li>en-US: English</li>
-     * <li>ja: Japanese</li>
-     * <li>fr: French</li>
-     * <li>de: German</li>
-     * <li>ko: Korean</li>
+     * <li><p>zh-CN: Simplified Chinese</p>
+     * </li>
+     * <li><p>zh_TW: Traditional Chinese</p>
+     * </li>
+     * <li><p>en-US: English</p>
+     * </li>
+     * <li><p>ja: Japanese</p>
+     * </li>
+     * <li><p>fr: French</p>
+     * </li>
+     * <li><p>de: German</p>
+     * </li>
+     * <li><p>ko: Korean</p>
+     * </li>
      * </ul>
      * <p>Default value: zh-CN.</p>
      * 
@@ -24,13 +31,16 @@ public class DescribeRegionsRequest extends TeaModel {
     public String acceptLanguage;
 
     /**
-     * <p>The billing method of the instance.  For more information, see <a href="https://help.aliyun.com/document_detail/25398.html">Billing overview</a>.
-     *  Valid values:</p>
+     * <p>The billing method of the instance. For more information, see <a href="https://help.aliyun.com/document_detail/25398.html">Billing overview</a>.
+     * Valid values:</p>
      * <ul>
-     * <li>PrePaid: subscription. If you set this parameter to PrePaid, make sure that you have sufficient balance or credits in your account. Otherwise, the InvalidPayMethod error code is returned.</li>
-     * <li>PostPaid: pay-as-you-go.
-     * SpotWithPriceLimit: spot instance for which a maximum hourly price is specified.</li>
-     * <li>SpotAsPriceGo: spot instance for which the market price at the time of purchase is automatically used as the bid price. The market price can be up to the pay-as-you-go price.</li>
+     * <li><p>PrePaid: subscription. If you set this parameter to PrePaid, make sure that you have sufficient balance or credits in your account. Otherwise, the InvalidPayMethod error code is returned.</p>
+     * </li>
+     * <li><p>PostPaid: pay-as-you-go.
+     * SpotWithPriceLimit: spot instance for which a maximum hourly price is specified.</p>
+     * </li>
+     * <li><p>SpotAsPriceGo: spot instance for which the market price at the time of purchase is automatically used as the bid price. The market price can be up to the pay-as-you-go price.</p>
+     * </li>
      * </ul>
      * <p>Default value: PostPaid.</p>
      * 
@@ -55,10 +65,14 @@ public class DescribeRegionsRequest extends TeaModel {
     /**
      * <p>The type of resource. Valid values:</p>
      * <ul>
-     * <li>instance: Elastic Compute Service (ECS) instance</li>
-     * <li>disk: disk</li>
-     * <li>reservedinstance: reserved instance</li>
-     * <li>scu: storage capacity unit (SCU)</li>
+     * <li><p>instance: Elastic Compute Service (ECS) instance</p>
+     * </li>
+     * <li><p>disk: disk</p>
+     * </li>
+     * <li><p>reservedinstance: reserved instance</p>
+     * </li>
+     * <li><p>scu: storage capacity unit (SCU)</p>
+     * </li>
      * </ul>
      * <p>Default value: instance.</p>
      * 

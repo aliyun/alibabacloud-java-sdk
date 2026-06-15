@@ -62,7 +62,7 @@ public class DescribeDiagnosticMetricSetsResponseBody extends TeaModel {
          * <p>The description of the diagnostic metric set.</p>
          * 
          * <strong>example:</strong>
-         * <p>connection issue diagnostics</p>
+         * <p>远程连接问题诊断</p>
          */
         @NameInMap("Description")
         public String description;
@@ -86,7 +86,7 @@ public class DescribeDiagnosticMetricSetsResponseBody extends TeaModel {
          * <p>The name of the diagnostic metric set.</p>
          * 
          * <strong>example:</strong>
-         * <p>connection issue diagnostics</p>
+         * <p>远程连接问题诊断</p>
          */
         @NameInMap("MetricSetName")
         public String metricSetName;
@@ -103,8 +103,10 @@ public class DescribeDiagnosticMetricSetsResponseBody extends TeaModel {
         /**
          * <p>The type of the diagnostic metric set. Valid values:</p>
          * <ul>
-         * <li>User: user-defined diagnostic metric set</li>
-         * <li>Common: common diagnostic metric set</li>
+         * <li><p>User: user-defined diagnostic metric set</p>
+         * </li>
+         * <li><p>Common: common diagnostic metric set</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

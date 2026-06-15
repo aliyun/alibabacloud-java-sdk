@@ -4,11 +4,14 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeAutoProvisioningGroupHistoryResponseBody extends TeaModel {
+    /**
+     * <p>An array of scheduled task history records.</p>
+     */
     @NameInMap("AutoProvisioningGroupHistories")
     public DescribeAutoProvisioningGroupHistoryResponseBodyAutoProvisioningGroupHistories autoProvisioningGroupHistories;
 
     /**
-     * <p>The page number of the returned page.</p>
+     * <p>The page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -17,7 +20,7 @@ public class DescribeAutoProvisioningGroupHistoryResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries returned per page.</p>
+     * <p>The number of entries per page.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -26,7 +29,7 @@ public class DescribeAutoProvisioningGroupHistoryResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>B48A12CD-1295-4A38-A8F0-0E92C937****</p>
@@ -35,7 +38,7 @@ public class DescribeAutoProvisioningGroupHistoryResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The number of queried scheduling tasks in the auto provisioning group.</p>
+     * <p>The total number of scheduled tasks.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>

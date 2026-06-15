@@ -4,12 +4,6 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeStorageSetsRequest extends TeaModel {
-    /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that it is unique among different requests. The value of <strong>ClientToken</strong> can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>123e4567-e89b-12d3-a456-426655440000</p>
-     */
     @NameInMap("ClientToken")
     public String clientToken;
 
@@ -19,32 +13,14 @@ public class DescribeStorageSetsRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
-    /**
-     * <p>The page number. Pages start from page 1.</p>
-     * <p>Default value: 1</p>
-     * 
-     * <strong>example:</strong>
-     * <p>1</p>
-     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
-    /**
-     * <p>The number of entries to return on each page. Maximum value: 100.</p>
-     * <p>Default value: 10</p>
-     * 
-     * <strong>example:</strong>
-     * <p>1</p>
-     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
-     * <p>The region ID of the storage set. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -55,33 +31,15 @@ public class DescribeStorageSetsRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    /**
-     * <p>The IDs of storage sets. The value is a JSON array that consists of up to 100 storage set IDs. Separate the IDs with commas (,).</p>
-     * 
-     * <strong>example:</strong>
-     * <p>[&quot;ss-bp1d6tsvznfghy7y****&quot;, &quot;ss-bp1ippxbaql9zet7****&quot;, … &quot;ss-bp1ib7bcz07l****&quot;]</p>
-     */
     @NameInMap("StorageSetIds")
     public String storageSetIds;
 
-    /**
-     * <p>The name of the storage set.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>storageSetTest</p>
-     */
     @NameInMap("StorageSetName")
     public String storageSetName;
 
     @NameInMap("Tag")
     public java.util.List<DescribeStorageSetsRequestTag> tag;
 
-    /**
-     * <p>The zone ID of the storage set. You can call the <a href="https://help.aliyun.com/document_detail/25610.html">DescribeZones</a> operation to query the most recent zone list.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>cn-hangzhou-g</p>
-     */
     @NameInMap("ZoneId")
     public String zoneId;
 

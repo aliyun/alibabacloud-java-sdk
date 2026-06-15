@@ -7,8 +7,10 @@ public class DescribeReservedInstancesRequest extends TeaModel {
     /**
      * <p>The allocation type of the reserved instances. Valid values:</p>
      * <ul>
-     * <li>Normal: queries all reserved instances that belong to the current account.</li>
-     * <li>Shared: queries the reserved instances that are shared between the current main account and linked accounts.</li>
+     * <li><p>Normal: queries all reserved instances that belong to the current account.</p>
+     * </li>
+     * <li><p>Shared: queries the reserved instances that are shared between the current main account and linked accounts.</p>
+     * </li>
      * </ul>
      * <p>Default value: Normal.</p>
      * 
@@ -21,7 +23,7 @@ public class DescribeReservedInstancesRequest extends TeaModel {
     /**
      * <p>The instance type of the reserved instance. For information about the valid values, see <a href="https://help.aliyun.com/document_detail/25378.html">Overview of instance families</a>.</p>
      * <blockquote>
-     * <p> Specify the instance type that you selected when you purchased the reserved instance. If the reserved instance is a regional reserved instance, it can be used to offset the bills of instance types that belong to the same instance family as the specified instance type, regardless of instance specifications.</p>
+     * <p>Specify the instance type that you selected when you purchased the reserved instance. If the reserved instance is a regional reserved instance, it can be used to offset the bills of instance types that belong to the same instance family as the specified instance type, regardless of instance specifications.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -42,8 +44,10 @@ public class DescribeReservedInstancesRequest extends TeaModel {
     /**
      * <p>The reason why the reserved instance is locked. Valid values:</p>
      * <ul>
-     * <li>financial: The reserved instance is locked because the account has overdue payments or the service expires.</li>
-     * <li>security: The reserved instance is locked due to security reasons.</li>
+     * <li><p>financial: The reserved instance is locked because the account has overdue payments or the service expires.</p>
+     * </li>
+     * <li><p>security: The reserved instance is locked due to security reasons.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -55,9 +59,12 @@ public class DescribeReservedInstancesRequest extends TeaModel {
     /**
      * <p>The payment option of the reserved instance. Valid values:</p>
      * <ul>
-     * <li>No Upfront</li>
-     * <li>Partial Upfront</li>
-     * <li>All Upfront</li>
+     * <li><p>No Upfront</p>
+     * </li>
+     * <li><p>Partial Upfront</p>
+     * </li>
+     * <li><p>All Upfront</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -114,7 +121,7 @@ public class DescribeReservedInstancesRequest extends TeaModel {
     /**
      * <p>The name of the reserved instance.</p>
      * <blockquote>
-     * <p> Only exact search is supported.</p>
+     * <p>Only exact search is supported.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -132,8 +139,10 @@ public class DescribeReservedInstancesRequest extends TeaModel {
     /**
      * <p>The scope level of the reserved instance. Valid values:</p>
      * <ul>
-     * <li>Region: regional</li>
-     * <li>Zone: zonal</li>
+     * <li><p>Region: regional</p>
+     * </li>
+     * <li><p>Zone: zonal</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -317,9 +326,9 @@ public class DescribeReservedInstancesRequest extends TeaModel {
 
     public static class DescribeReservedInstancesRequestTag extends TeaModel {
         /**
-         * <p>The key of tag N of the reserved instance. The tag key cannot be empty and can be up to 128 characters in length. It cannot start with aliyun or acs: and cannot contain http:// or https://.</p>
+         * <p>The key of tag N of the reserved instance. The tag key cannot be empty and can be up to 128 characters in length. It cannot start with aliyun or acs: and cannot contain http\:// or https\://.</p>
          * <blockquote>
-         * <p> If you specify a single tag to query resources, up to 1,000 resources to which the tag is added are returned. If you specify multiple tags to query resources, up to 1,000 resources to which all specified tags are added are returned. To query more than 1,000 resources that have specified tags added, call the <a href="https://help.aliyun.com/document_detail/110425.html">ListTagResources</a> operation.</p>
+         * <p>If you specify a single tag to query resources, up to 1,000 resources to which the tag is added are returned. If you specify multiple tags to query resources, up to 1,000 resources to which all specified tags are added are returned. To query more than 1,000 resources that have specified tags added, call the <a href="https://help.aliyun.com/document_detail/110425.html">ListTagResources</a> operation.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

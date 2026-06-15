@@ -14,38 +14,28 @@ public class DescribeInvocationResultsRequest extends TeaModel {
     public String commandId;
 
     /**
-     * <DescribeInvocationResultsResponse>
-     *     <RequestId>473469C7-AA6F-4DC5-B3DB-A3DC0DE*****</RequestId>
-     *     <Invocation>
-     *         <InvocationResults>
-     *             <InvocationResult>
-     *                 <Dropped>0</Dropped>
-     *                 <InvocationStatus>Success</InvocationStatus>
-     *                 <InstanceId>i-bp1i7gg30r52z2em****</InstanceId>
-     *                 <ExitCode>0</ExitCode>
-     *                 <ErrorInfo>the specified instance does not exists</ErrorInfo>
-     *                 <StartTime>2019-12-20T06:15:55Z</StartTime>
-     *                 <Repeats>0</Repeats>
-     *                 <InvokeRecordStatus>Running</InvokeRecordStatus>
-     *                 <FinishedTime>2019-12-20T06:15:56Z</FinishedTime>
-     *                 <Output>MTU6MzA6MDEK</Output>
-     *                 <CommandId>c-hz0jdfwcsr****</CommandId>
-     *                 <ErrorCode>InstanceNotExists</ErrorCode>
-     *                 <InvokeId>t-hz0jdfwd9f****</InvokeId>
-     *                 <StopTime>2020-01-19T09:15:47Z</StopTime>
-     *                 <ContainerId>ab141ddfbacfe02d9dbc25966ed971536124527097398d419a6746873fea****</ContainerId>
-     *                 <ContainerName>test-container</ContainerName>
-     *                 <Tags>
-     *                     <TagKey>owner</TagKey>
-     *                     <TagValue>zhangsan</TagValue>
-     *                 </Tags>
-     *             </InvocationResult>
-     *         </InvocationResults>
-     *         <TotalCount>1</TotalCount>
-     *         <PageSize>1</PageSize>
-     *         <PageNumber>1</PageNumber>
-     *     </Invocation>
-     * </DescribeInvocationResultsResponse>
+     * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE*****
+     * 0
+     * Success
+     * i-bp1i7gg30r52z2em****
+     * 0
+     * the specified instance does not exists
+     * 2019-12-20T06:15:55Z
+     * 0
+     * Running
+     * 2019-12-20T06:15:56Z
+     * MTU6MzA6MDEK
+     * c-hz0jdfwcsr****
+     * InstanceNotExists
+     * t-hz0jdfwd9f****
+     * 2020-01-19T09:15:47Z
+     * ab141ddfbacfe02d9dbc25966ed971536124527097398d419a6746873fea****
+     * test-container
+     * owner
+     * zhangsan
+     * 1
+     * 1
+     * 1</p>
      * 
      * <strong>example:</strong>
      * <p>PlainText</p>
@@ -55,37 +45,38 @@ public class DescribeInvocationResultsRequest extends TeaModel {
 
     /**
      * <p>{
-     *   &quot;RequestId&quot; : &quot;473469C7-AA6F-4DC5-B3DB-A3DC0DE*****&quot;,
-     *   &quot;Invocation&quot; : {
-     *     &quot;InvocationResults&quot; : {
-     *       &quot;InvocationResult&quot; : [ {
-     *         &quot;Dropped&quot; : 0,
-     *         &quot;InvocationStatus&quot; : &quot;Success&quot;,
-     *         &quot;InstanceId&quot; : &quot;i-bp1i7gg30r52z2em****&quot;,
-     *         &quot;ExitCode&quot; : 0,
-     *         &quot;ErrorInfo&quot; : &quot;the specified instance does not exists&quot;,
-     *         &quot;StartTime&quot; : &quot;2019-12-20T06:15:55Z&quot;,
-     *         &quot;Repeats&quot; : 0,
-     *         &quot;InvokeRecordStatus&quot; : &quot;Running&quot;,
-     *         &quot;FinishedTime&quot; : &quot;2019-12-20T06:15:56Z&quot;,
-     *         &quot;Output&quot; : &quot;MTU6MzA6MDEK&quot;,
-     *         &quot;CommandId&quot; : &quot;c-hz0jdfwcsr****&quot;,
-     *         &quot;ErrorCode&quot; : &quot;InstanceNotExists&quot;,
-     *         &quot;InvokeId&quot; : &quot;t-hz0jdfwd9f****&quot;,
-     *         &quot;StopTime&quot; : &quot;2020-01-19T09:15:47Z&quot;,
-     *         &quot;ContainerId&quot;:&quot;ab141ddfbacfe02d9dbc25966ed971536124527097398d419a6746873fea****&quot;,
-     *         &quot;ContainerName&quot;:&quot;test-container&quot;,<br>        &quot;Tags&quot;: [
-     *                     {
-     *                         &quot;TagKey&quot;: &quot;owner&quot;,
-     *                         &quot;TagValue&quot;: &quot;zhangsan&quot;
-     *                     }
-     *                 ]
-     *       } ]
-     *     },
-     *     &quot;TotalCount&quot; : 1,
-     *     &quot;PageSize&quot; : 1,
-     *     &quot;PageNumber&quot; : 1
-     *   }
+     * &quot;RequestId&quot; : &quot;473469C7-AA6F-4DC5-B3DB-A3DC0DE\<em>\</em>\<em>\</em>\<em>&quot;,
+     * &quot;Invocation&quot; : {
+     * &quot;InvocationResults&quot; : {
+     * &quot;InvocationResult&quot; : [ {
+     * &quot;Dropped&quot; : 0,
+     * &quot;InvocationStatus&quot; : &quot;Success&quot;,
+     * &quot;InstanceId&quot; : &quot;i-bp1i7gg30r52z2em\</em>\<em>\</em>\<em>&quot;,
+     * &quot;ExitCode&quot; : 0,
+     * &quot;ErrorInfo&quot; : &quot;the specified instance does not exists&quot;,
+     * &quot;StartTime&quot; : &quot;2019-12-20T06:15:55Z&quot;,
+     * &quot;Repeats&quot; : 0,
+     * &quot;InvokeRecordStatus&quot; : &quot;Running&quot;,
+     * &quot;FinishedTime&quot; : &quot;2019-12-20T06:15:56Z&quot;,
+     * &quot;Output&quot; : &quot;MTU6MzA6MDEK&quot;,
+     * &quot;CommandId&quot; : &quot;c-hz0jdfwcsr\</em>\<em>\</em>\<em>&quot;,
+     * &quot;ErrorCode&quot; : &quot;InstanceNotExists&quot;,
+     * &quot;InvokeId&quot; : &quot;t-hz0jdfwd9f\</em>\<em>\</em>\<em>&quot;,
+     * &quot;StopTime&quot; : &quot;2020-01-19T09:15:47Z&quot;,
+     * &quot;ContainerId&quot;:&quot;ab141ddfbacfe02d9dbc25966ed971536124527097398d419a6746873fea\</em>\<em>\</em>\*&quot;,
+     * &quot;ContainerName&quot;:&quot;test-container&quot;,<br>
+     * &quot;Tags&quot;: [
+     * {
+     * &quot;TagKey&quot;: &quot;owner&quot;,
+     * &quot;TagValue&quot;: &quot;zhangsan&quot;
+     * }
+     * ]
+     * } ]
+     * },
+     * &quot;TotalCount&quot; : 1,
+     * &quot;PageSize&quot; : 1,
+     * &quot;PageNumber&quot; : 1
+     * }
      * }</p>
      * 
      * <strong>example:</strong>
@@ -146,7 +137,7 @@ public class DescribeInvocationResultsRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>acs:ecs:{#regionId}:{#accountId}:command/*</p>
+     * <p>acs:ecs:{#regionId}:{#accountId}:command/\*</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -155,7 +146,7 @@ public class DescribeInvocationResultsRequest extends TeaModel {
     public Long pageNumber;
 
     /**
-     * <p>acs:ecs:{#regionId}:{#accountId}:instance/*</p>
+     * <p>acs:ecs:{#regionId}:{#accountId}:instance/\*</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>

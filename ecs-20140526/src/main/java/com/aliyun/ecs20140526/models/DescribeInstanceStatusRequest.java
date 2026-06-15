@@ -7,7 +7,7 @@ public class DescribeInstanceStatusRequest extends TeaModel {
     /**
      * <p>The ID of the cluster to which the ECS instances belong.</p>
      * <blockquote>
-     * <p> This parameter is deprecated. We recommend that you do not use this parameter.</p>
+     * <p>This parameter is deprecated. We recommend that you do not use this parameter.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

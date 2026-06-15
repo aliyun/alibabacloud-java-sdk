@@ -17,8 +17,10 @@ public class ResetDiskRequest extends TeaModel {
     /**
      * <p>Specifies whether to check the validity of the request without actually making the request. Valid values:</p>
      * <ul>
-     * <li>true: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and resource state limits. If the request fails the dry run, an error code is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</li>
-     * <li>false: performs a dry run and performs the actual request. If the request passes the dry run, the rollback operation is performed.</li>
+     * <li><p>true: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and resource state limits. If the request fails the dry run, an error code is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</p>
+     * </li>
+     * <li><p>false: performs a dry run and performs the actual request. If the request passes the dry run, the rollback operation is performed.</p>
+     * </li>
      * </ul>
      * <p>Default value: false</p>
      * 

@@ -5,8 +5,8 @@ import com.aliyun.tea.*;
 
 public class ModifyDiskDeploymentRequest extends TeaModel {
     /**
-     * <p>The new disk category. The parameter can be used only when you migrate a disk between dedicated block storage clusters. Only ESSDs can be created in dedicated block storage clusters. Set this parameter to cloud_essd.</p>
-     * <p>This parameter is empty by default, which indicates that the disk category is not changed.</p>
+     * <p>The new category of the disk. This parameter is valid only when you migrate a disk between different dedicated block storage clusters. The only valid value is <code>cloud_essd</code> (ESSD disk).</p>
+     * <p>Default value: An empty string. If you leave this parameter empty, the category of the disk remains unchanged.</p>
      * 
      * <strong>example:</strong>
      * <p>cloud_essd</p>
@@ -25,12 +25,14 @@ public class ModifyDiskDeploymentRequest extends TeaModel {
     public String diskId;
 
     /**
-     * <p>Specifies whether to perform only a dry run, without performing the actual request. Valid values:</p>
+     * <p>Specifies whether to perform a dry run. Valid values:</p>
      * <ul>
-     * <li>true: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, service limits, and unavailable ECS resources. If the request fails the dry run, an error message is returned. If the request passes the dry run, the DryRunOperation error code is returned.</li>
-     * <li>false: performs a dry run and performs the actual request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.</li>
+     * <li><p><code>true</code>: Performs a dry run. The system checks the request for required parameters, format, service limits, and inventory. The system returns an error if the check fails, or the <code>DryRunOperation</code> error code if the check succeeds.</p>
+     * </li>
+     * <li><p><code>false</code>: Sends the request. If the request passes the check, the system returns a 2xx HTTP status code and migrates the disk.</p>
+     * </li>
      * </ul>
-     * <p>Default value: false.</p>
+     * <p>Default value: <code>false</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -45,12 +47,14 @@ public class ModifyDiskDeploymentRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The new performance level of the ESSD. The parameter can be used only when you migrate data between dedicated block storage clusters. Valid values:</p>
+     * <p>The new performance level of the ESSD disk. This parameter is valid only when you migrate a disk between different dedicated block storage clusters. Valid values:</p>
      * <ul>
-     * <li>PL0: A single ESSD can deliver up to 10000 random read/write IOPS.</li>
-     * <li>PL1: A single ESSD can deliver up to 50000 random read/write IOPS.</li>
+     * <li><p><code>PL0</code>: A maximum of 10,000 random read/write IOPS per disk.</p>
+     * </li>
+     * <li><p><code>PL1</code>: A maximum of 50,000 random read/write IOPS per disk.</p>
+     * </li>
      * </ul>
-     * <p>This parameter is empty by default, which indicates that the performance level is not modified.</p>
+     * <p>Default value: An empty string. If you leave this parameter empty, the performance level of the disk remains unchanged.</p>
      * 
      * <strong>example:</strong>
      * <p>PL1</p>
@@ -65,12 +69,14 @@ public class ModifyDiskDeploymentRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The ID of the dedicated block storage cluster to which data disk N belongs.</p>
+     * <p>The ID of the dedicated block storage cluster.</p>
      * <ul>
-     * <li>When you migrate a disk to a dedicated block storage cluster, the<code> StorageClusterId</code> parameter must be specified.</li>
-     * <li>When you migrate a disk to a public block storage cluster, the <code>StorageClusterId</code> parameter must be left empty.</li>
+     * <li><p>To migrate the disk to a dedicated block storage cluster, specify <code>StorageClusterId</code>.</p>
+     * </li>
+     * <li><p>To migrate the disk to a public cloud block storage cluster, leave <code>StorageClusterId</code> empty.</p>
+     * </li>
      * </ul>
-     * <p>This parameter is empty by default, which indicates that the disk is migrated to a public block storage cluster.</p>
+     * <p>Default value: An empty string. If you leave this parameter empty, the disk is migrated to a public cloud block storage cluster.</p>
      * 
      * <strong>example:</strong>
      * <p>dbsc-cn-c4d2uea****</p>

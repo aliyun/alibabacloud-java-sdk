@@ -8,9 +8,7 @@ public class DescribeDiagnosticReportAttributesResponseBody extends TeaModel {
      * <p>The extended attributes of the diagnostic report.</p>
      * 
      * <strong>example:</strong>
-     * <p>{
-     *     &quot;OfflineDiagReportStatus&quot;:&quot;CONFIRMED&quot;
-     * }</p>
+     * <p>{&quot;OfflineDiagReportStatus&quot;:&quot;CONFIRMED&quot;}</p>
      */
     @NameInMap("Attributes")
     public String attributes;
@@ -25,7 +23,7 @@ public class DescribeDiagnosticReportAttributesResponseBody extends TeaModel {
     public String creationTime;
 
     /**
-     * <p>The end of the reporting period of the diagnostic report. The value is the EndTime value that was passed in when you called the <a href="https://help.aliyun.com/document_detail/442490.html">CreateDiagnosticReport</a> operation to create the diagnostic report.</p>
+     * <p>The end of the diagnostic time range. This value corresponds to the <code>EndTime</code> parameter you provided when calling the <a href="https://help.aliyun.com/document_detail/442490.html">CreateDiagnosticReport</a> operation.</p>
      * 
      * <strong>example:</strong>
      * <p>2022-07-11T14:00:00Z</p>
@@ -34,7 +32,7 @@ public class DescribeDiagnosticReportAttributesResponseBody extends TeaModel {
     public String endTime;
 
     /**
-     * <p>The time when the diagnostic report was complete.</p>
+     * <p>The time when the diagnosis was complete.</p>
      * 
      * <strong>example:</strong>
      * <p>2022-07-11T14:00:00Z</p>
@@ -42,11 +40,14 @@ public class DescribeDiagnosticReportAttributesResponseBody extends TeaModel {
     @NameInMap("FinishedTime")
     public String finishedTime;
 
+    /**
+     * <p>The diagnostic results for the metrics.</p>
+     */
     @NameInMap("MetricResults")
     public DescribeDiagnosticReportAttributesResponseBodyMetricResults metricResults;
 
     /**
-     * <p>The ID of the diagnostic metric set.</p>
+     * <p>The metric set ID.</p>
      * 
      * <strong>example:</strong>
      * <p>dms-bp17p0qwtr72zmu*****</p>
@@ -55,7 +56,7 @@ public class DescribeDiagnosticReportAttributesResponseBody extends TeaModel {
     public String metricSetId;
 
     /**
-     * <p>The ID of the diagnostic report, which is the unique identifier of the report.</p>
+     * <p>The unique ID of the diagnostic report.</p>
      * 
      * <strong>example:</strong>
      * <p>dr-uf6i0tv2refv8wz*****</p>
@@ -82,7 +83,7 @@ public class DescribeDiagnosticReportAttributesResponseBody extends TeaModel {
     public String resourceId;
 
     /**
-     * <p>The type of the resource. ResourceType can only be set to instance, which indicates that only instances are supported.</p>
+     * <p>The resource type. Only <code>instance</code> is supported.</p>
      * 
      * <strong>example:</strong>
      * <p>instance</p>
@@ -91,13 +92,18 @@ public class DescribeDiagnosticReportAttributesResponseBody extends TeaModel {
     public String resourceType;
 
     /**
-     * <p>The severity level of the diagnostic report. The value of this parameter is determined by the highest severity level of all diagnostic metrics. Valid values:</p>
+     * <p>The overall severity level of the diagnostic report. This is the highest severity level among all metrics in the report. Valid values are listed below, from lowest to highest severity:</p>
      * <ul>
-     * <li>Unknown: The diagnostic has not started, failed to run, or exited unexpectedly without a diagnosis.</li>
-     * <li>Normal: No exceptions were detected.</li>
-     * <li>Info: Diagnostic information was recorded and may be related to exceptions.</li>
-     * <li>Warn: Diagnostic information was recorded and may indicate potential exceptions.</li>
-     * <li>Critical: Critical exceptions were detected.</li>
+     * <li><p>Unknown: The initial state. The diagnosis has not started or exited unexpectedly, so the result is inconclusive.</p>
+     * </li>
+     * <li><p>Normal: The resource is healthy, and no issues were found.</p>
+     * </li>
+     * <li><p>Info: Informational messages were found that may be relevant to an issue.</p>
+     * </li>
+     * <li><p>Warn: Warnings were found that may lead to an issue.</p>
+     * </li>
+     * <li><p>Critical: Critical issues were found.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -107,7 +113,7 @@ public class DescribeDiagnosticReportAttributesResponseBody extends TeaModel {
     public String severity;
 
     /**
-     * <p>The beginning of the reporting period of the diagnostic report. The value is the StartTime value that was passed in when you called the <a href="https://help.aliyun.com/document_detail/442490.html">CreateDiagnosticReport</a> operation to create the diagnostic report.</p>
+     * <p>The start of the diagnostic time range. This value corresponds to the <code>StartTime</code> parameter you provided when calling the <a href="https://help.aliyun.com/document_detail/442490.html">CreateDiagnosticReport</a> operation.</p>
      * 
      * <strong>example:</strong>
      * <p>2022-07-11T12:00:00Z</p>
@@ -116,11 +122,14 @@ public class DescribeDiagnosticReportAttributesResponseBody extends TeaModel {
     public String startTime;
 
     /**
-     * <p>The state of the diagnostic report. Valid values:</p>
+     * <p>The status of the diagnostic report. Possible values:</p>
      * <ul>
-     * <li>InProgress: The diagnostic is in progress.</li>
-     * <li>Finished: The diagnostic is complete.</li>
-     * <li>Failed: The diagnostic failed.</li>
+     * <li><p>InProgress: The diagnosis is in progress.</p>
+     * </li>
+     * <li><p>Finished: The diagnosis is complete.</p>
+     * </li>
+     * <li><p>Failed: The diagnosis failed.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

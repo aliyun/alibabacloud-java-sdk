@@ -7,8 +7,10 @@ public class CreatePrefixListRequest extends TeaModel {
     /**
      * <p>The IP address family. Valid values:</p>
      * <ul>
-     * <li>IPv4</li>
-     * <li>IPv6</li>
+     * <li><p>IPv4</p>
+     * </li>
+     * <li><p>IPv6</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -212,11 +214,16 @@ public class CreatePrefixListRequest extends TeaModel {
         /**
          * <p>The CIDR block in entry N. Valid values of N: 0 to 200. Notes:</p>
          * <ul>
-         * <li>The total number of entries cannot exceed the <code>MaxEntries</code> value.</li>
-         * <li>CIDR block types are determined by the IP address family. You cannot combine IPv4 and IPv6 CIDR blocks in a single prefix list.</li>
-         * <li>CIDR blocks must be unique across all entries in a prefix list. For example, you cannot specify 192.168.1.0/24 twice in the entries of the prefix list.</li>
-         * <li>You can set a single IP address. The system automatically converts the IP address to a CIDR block. For example, if you set 192.168.1.100, the system automatically converts it to 192.168.1.100/32.</li>
-         * <li>If you use an IPv6 CIDR block, the system automatically converts the CIDR block to zero and the letters to lowercase. For example, if you specify 2001:0DB8:0000:0000:0000:0000:0000:0000/32, the system converts it to 2001:db8::/32.</li>
+         * <li><p>The total number of entries cannot exceed the <code>MaxEntries</code> value.</p>
+         * </li>
+         * <li><p>CIDR block types are determined by the IP address family. You cannot combine IPv4 and IPv6 CIDR blocks in a single prefix list.</p>
+         * </li>
+         * <li><p>CIDR blocks must be unique across all entries in a prefix list. For example, you cannot specify 192.168.1.0/24 twice in the entries of the prefix list.</p>
+         * </li>
+         * <li><p>You can set a single IP address. The system automatically converts the IP address to a CIDR block. For example, if you set 192.168.1.100, the system automatically converts it to 192.168.1.100/32.</p>
+         * </li>
+         * <li><p>If you use an IPv6 CIDR block, the system automatically converts the CIDR block to zero and the letters to lowercase. For example, if you specify 2001:0DB8:0000:0000:0000:0000:0000:0000/32, the system converts it to 2001:db8::/32.</p>
+         * </li>
          * </ul>
          * <p>For more information about CIDR blocks, see <a href="~~185311#598efe6ef1v00~~">What is CIDR?</a></p>
          * <p>This parameter is left empty by default.</p>

@@ -7,8 +7,10 @@ public class StartInstanceRequest extends TeaModel {
     /**
      * <p>Specifies whether to perform only a dry run, without performing the actual request. Valid values:</p>
      * <ul>
-     * <li>true: performs only a dry run. The system checks the AccessKey pair, the permissions of the RAM user, and the required parameters. If the request fails the dry run, an error message is returned. If the request passes the dry run, the DryRunOperation error code is returned.</li>
-     * <li>false: performs a dry run and performs the actual request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.</li>
+     * <li><p>true: performs only a dry run. The system checks the AccessKey pair, the permissions of the RAM user, and the required parameters. If the request fails the dry run, an error message is returned. If the request passes the dry run, the DryRunOperation error code is returned.</p>
+     * </li>
+     * <li><p>false: performs a dry run and performs the actual request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.</p>
+     * </li>
      * </ul>
      * <p>Default value: false.</p>
      * 
@@ -22,7 +24,7 @@ public class StartInstanceRequest extends TeaModel {
      * <p>Specifies whether to restore the ECS instance to the initial health state on startup if a local disk fails. This parameter is applicable to ECS instances that are equipped with local disks, such as d1, i1, and i2 instances. Valid values:</p>
      * <ul>
      * <li><p>true: restores the ECS instance to the initial health state on startup.</p>
-     * <p>**</p>
+     * <p>\<em>\</em></p>
      * <p><strong>Warning</strong>: After the ECS instance is restored to the initial health state, data stored on the local disks of the instance is lost.</p>
      * </li>
      * <li><p>false: does not restore the ECS instance to the initial health state on startup. The instance remains in the current state.</p>

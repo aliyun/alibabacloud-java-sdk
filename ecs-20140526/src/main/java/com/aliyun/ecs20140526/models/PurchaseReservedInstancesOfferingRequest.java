@@ -7,8 +7,10 @@ public class PurchaseReservedInstancesOfferingRequest extends TeaModel {
     /**
      * <p>Specifies whether to enable auto-renewal for the reserved instance. Valid values:</p>
      * <ul>
-     * <li>true</li>
-     * <li>false (default)</li>
+     * <li><p>true</p>
+     * </li>
+     * <li><p>false (default)</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -60,7 +62,7 @@ public class PurchaseReservedInstancesOfferingRequest extends TeaModel {
     /**
      * <p>The instance type that the reserved instance can match.</p>
      * <blockquote>
-     * <p> The instance types that support reserved instances are subject to updates. For more information, see <a href="~~100370#3c1b682051vt4~~">Reserved instance overview</a>.</p>
+     * <p>The instance types that support reserved instances are subject to updates. For more information, see <a href="~~100370#3c1b682051vt4~~">Reserved instance overview</a>.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -73,9 +75,12 @@ public class PurchaseReservedInstancesOfferingRequest extends TeaModel {
     /**
      * <p>The payment option of the reserved instance. Valid values:</p>
      * <ul>
-     * <li>No Upfront</li>
-     * <li>Partial Upfront</li>
-     * <li>All Upfront</li>
+     * <li><p>No Upfront</p>
+     * </li>
+     * <li><p>Partial Upfront</p>
+     * </li>
+     * <li><p>All Upfront</p>
+     * </li>
      * </ul>
      * <p>Default value: All Upfront.</p>
      * 
@@ -116,8 +121,10 @@ public class PurchaseReservedInstancesOfferingRequest extends TeaModel {
     /**
      * <p>The operating system of the image used by the instance. Valid values:</p>
      * <ul>
-     * <li>Windows: Windows Server operating system</li>
-     * <li>Linux: Linux and UNIX-like operating system</li>
+     * <li><p>Windows: Windows Server operating system</p>
+     * </li>
+     * <li><p>Linux: Linux and UNIX-like operating system</p>
+     * </li>
      * </ul>
      * <p>Default value: Linux.</p>
      * 
@@ -138,7 +145,7 @@ public class PurchaseReservedInstancesOfferingRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The name of the reserved instance. The name must be 2 to 128 characters in length. The name must start with a letter and cannot start with http:// or https://. The name can contain letters, digits, colons (:), underscores (_), and hyphens (-).</p>
+     * <p>The name of the reserved instance. The name must be 2 to 128 characters in length. The name must start with a letter and cannot start with http\:// or https\://. The name can contain letters, digits, colons (:), underscores (_), and hyphens (-).</p>
      * 
      * <strong>example:</strong>
      * <p>testReservedInstanceName</p>
@@ -164,8 +171,10 @@ public class PurchaseReservedInstancesOfferingRequest extends TeaModel {
     /**
      * <p>The scope of reserved instance N. Valid values:</p>
      * <ul>
-     * <li>Region: regional</li>
-     * <li>Zone: zonal</li>
+     * <li><p>Region: regional</p>
+     * </li>
+     * <li><p>Zone: zonal</p>
+     * </li>
      * </ul>
      * <p>Default value: Region.</p>
      * 
@@ -178,7 +187,7 @@ public class PurchaseReservedInstancesOfferingRequest extends TeaModel {
     /**
      * <p>The time when you want the reserved instance to take effect. Specify the time in the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601 standard</a> in the <code>yyyy-MM-ddTHHZ</code> format. The time must be in UTC.</p>
      * <blockquote>
-     * <p> If you do not specify this parameter, the reserved instance takes effect starting on the hour when the reserved instance is purchased. For example, if you purchase a reserved instance at 13:45:35 on November 1, 2024, the reserved instance takes effect starting 13:00:00 on November 1, 2024.</p>
+     * <p>If you do not specify this parameter, the reserved instance takes effect starting on the hour when the reserved instance is purchased. For example, if you purchase a reserved instance at 13:45:35 on November 1, 2024, the reserved instance takes effect starting 13:00:00 on November 1, 2024.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

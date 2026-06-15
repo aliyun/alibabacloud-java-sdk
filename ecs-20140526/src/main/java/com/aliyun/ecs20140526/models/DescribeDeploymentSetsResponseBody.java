@@ -4,11 +4,14 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeDeploymentSetsResponseBody extends TeaModel {
+    /**
+     * <p>Details of deployment sets.</p>
+     */
     @NameInMap("DeploymentSets")
     public DescribeDeploymentSetsResponseBodyDeploymentSets deploymentSets;
 
     /**
-     * <p>The page number.</p>
+     * <p>The page number of the deployment set list.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -17,7 +20,7 @@ public class DescribeDeploymentSetsResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page.</p>
+     * <p>The number of entries returned per page.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -44,10 +47,10 @@ public class DescribeDeploymentSetsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of queried deployment sets.</p>
+     * <p>The total number of deployment sets.</p>
      * 
      * <strong>example:</strong>
-     * <p>1</p>
+     * <p>5</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;

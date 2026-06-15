@@ -25,10 +25,14 @@ public class DescribeSpotAdviceRequest extends TeaModel {
     /**
      * <p>The GPU type. Valid values:</p>
      * <ul>
-     * <li>NVIDIA P4</li>
-     * <li>NVIDIA T4</li>
-     * <li>NVIDIA P100</li>
-     * <li>NVIDIA V100</li>
+     * <li><p>NVIDIA P4</p>
+     * </li>
+     * <li><p>NVIDIA T4</p>
+     * </li>
+     * <li><p>NVIDIA P100</p>
+     * </li>
+     * <li><p>NVIDIA V100</p>
+     * </li>
      * </ul>
      * <p>This parameter is left empty by default, which indicates that all GPU types are queried. For more information, see <a href="https://help.aliyun.com/document_detail/108496.html">GPU-accelerated compute-optimized and vGPU-accelerated instance families</a>.</p>
      * 
@@ -41,9 +45,12 @@ public class DescribeSpotAdviceRequest extends TeaModel {
     /**
      * <p>The level of the instance family. Valid values:</p>
      * <ul>
-     * <li>EntryLevel.</li>
-     * <li>EnterpriseLevel.</li>
-     * <li>CreditEntryLevel. For more information, see <a href="https://help.aliyun.com/document_detail/59977.html">Overview of burstable instances</a>.</li>
+     * <li><p>EntryLevel.</p>
+     * </li>
+     * <li><p>EnterpriseLevel.</p>
+     * </li>
+     * <li><p>CreditEntryLevel. For more information, see <a href="https://help.aliyun.com/document_detail/59977.html">Overview of burstable instances</a>.</p>
+     * </li>
      * </ul>
      * <p>This parameter is left empty by default, which indicates that instance families at all levels are queried.</p>
      * 

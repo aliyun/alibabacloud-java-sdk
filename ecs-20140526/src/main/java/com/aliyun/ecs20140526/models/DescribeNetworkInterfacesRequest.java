@@ -26,8 +26,10 @@ public class DescribeNetworkInterfacesRequest extends TeaModel {
      * <p>The maximum number of entries to return on each page. Valid values: 10 to 500.</p>
      * <p>Default values:</p>
      * <ul>
-     * <li>If this parameter is not specified or if this parameter is set to a value less than 10, the default value is 10.</li>
-     * <li>If this parameter is set to a value greater than 500, the default value is 500.</li>
+     * <li><p>If this parameter is not specified or if this parameter is set to a value less than 10, the default value is 10.</p>
+     * </li>
+     * <li><p>If this parameter is set to a value greater than 500, the default value is 500.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -75,7 +77,7 @@ public class DescribeNetworkInterfacesRequest extends TeaModel {
      * <p>Pages start from page 1.</p>
      * <p>Default value: 1.</p>
      * <blockquote>
-     * <p> This parameter will be removed in the future. We recommend that you use NextToken and MaxResults for a paged query.</p>
+     * <p>This parameter will be removed in the future. We recommend that you use NextToken and MaxResults for a paged query.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -90,7 +92,7 @@ public class DescribeNetworkInterfacesRequest extends TeaModel {
      * <p>Valid values: 1 to 1000.</p>
      * <p>Default value: 10.</p>
      * <blockquote>
-     * <p> This parameter will be removed in the future. We recommend that you use NextToken and MaxResults for a paged query.</p>
+     * <p>This parameter will be removed in the future. We recommend that you use NextToken and MaxResults for a paged query.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -149,8 +151,10 @@ public class DescribeNetworkInterfacesRequest extends TeaModel {
     /**
      * <p>The ID of the security group to which the secondary ENI belongs.</p>
      * <ul>
-     * <li>To query the details of secondary ENIs based on the ID of a security group, specify this parameter.</li>
-     * <li>To query the details of primary ENIs based on the ID of a security group, call the <a href="https://help.aliyun.com/document_detail/25506.html">DescribeInstances</a> operation and specify the <code>SecurityGroupId</code> parameter.</li>
+     * <li><p>To query the details of secondary ENIs based on the ID of a security group, specify this parameter.</p>
+     * </li>
+     * <li><p>To query the details of primary ENIs based on the ID of a security group, call the <a href="https://help.aliyun.com/document_detail/25506.html">DescribeInstances</a> operation and specify the <code>SecurityGroupId</code> parameter.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -171,11 +175,16 @@ public class DescribeNetworkInterfacesRequest extends TeaModel {
     /**
      * <p>The state of the ENI. Valid values:</p>
      * <ul>
-     * <li>Available: The ENI is available.</li>
-     * <li>Attaching: The ENI is being attached to an instance.</li>
-     * <li>InUse: The ENI is attached to an instance.</li>
-     * <li>Detaching: The ENI is being detached from an instance.</li>
-     * <li>Deleting: The ENI is being deleted.</li>
+     * <li><p>Available: The ENI is available.</p>
+     * </li>
+     * <li><p>Attaching: The ENI is being attached to an instance.</p>
+     * </li>
+     * <li><p>InUse: The ENI is attached to an instance.</p>
+     * </li>
+     * <li><p>Detaching: The ENI is being detached from an instance.</p>
+     * </li>
+     * <li><p>Deleting: The ENI is being deleted.</p>
+     * </li>
      * </ul>
      * <p>This parameter is empty by default, which indicates that ENIs in all states are queried.</p>
      * 
@@ -194,8 +203,10 @@ public class DescribeNetworkInterfacesRequest extends TeaModel {
     /**
      * <p>The type of the ENI. Valid values:</p>
      * <ul>
-     * <li>Primary</li>
-     * <li>Secondary</li>
+     * <li><p>Primary</p>
+     * </li>
+     * <li><p>Secondary</p>
+     * </li>
      * </ul>
      * <p>This parameter is empty by default, which indicates that both primary and secondary ENIs are queried.</p>
      * 
@@ -218,7 +229,7 @@ public class DescribeNetworkInterfacesRequest extends TeaModel {
      * <p>The ID of the virtual private cloud (VPC) to which the elastic network interface (ENI) belongs.</p>
      * 
      * <strong>example:</strong>
-     * <p>vsw-bp16usj2p27htro3****</p>
+     * <p>vpc-bp1j7w3gc1cexjqd****</p>
      */
     @NameInMap("VpcId")
     public String vpcId;

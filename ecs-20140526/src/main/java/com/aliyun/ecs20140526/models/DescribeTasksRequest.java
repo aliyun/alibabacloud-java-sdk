@@ -75,11 +75,16 @@ public class DescribeTasksRequest extends TeaModel {
     /**
      * <p>The name of the operation that generates the task. Valid values:</p>
      * <ul>
-     * <li>ImportImage</li>
-     * <li>ExportImage</li>
-     * <li>RedeployInstance</li>
-     * <li>ModifyDiskSpec</li>
-     * <li>ArchiveSnapshot</li>
+     * <li><p>ImportImage</p>
+     * </li>
+     * <li><p>ExportImage</p>
+     * </li>
+     * <li><p>RedeployInstance</p>
+     * </li>
+     * <li><p>ModifyDiskSpec</p>
+     * </li>
+     * <li><p>ArchiveSnapshot</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -89,6 +94,14 @@ public class DescribeTasksRequest extends TeaModel {
     public String taskAction;
 
     /**
+     * <p>Task group ID.</p>
+     * <blockquote>
+     * <p>This parameter is in invitational preview. When this parameter is used, other query conditions become invalid.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>g-2ze2op2grqpclwu7****</p>
+     * 
      * <strong>if can be null:</strong>
      * <p>false</p>
      */
@@ -107,13 +120,16 @@ public class DescribeTasksRequest extends TeaModel {
     /**
      * <p>The task status. Valid values:</p>
      * <ul>
-     * <li>Finished</li>
-     * <li>Processing</li>
-     * <li>Failed</li>
+     * <li><p>Finished</p>
+     * </li>
+     * <li><p>Processing</p>
+     * </li>
+     * <li><p>Failed</p>
+     * </li>
      * </ul>
      * <p>This parameter is left empty by default.</p>
      * <blockquote>
-     * <p> The system only queries tasks in the Finished, Processing, and Failed states and ignores other values.</p>
+     * <p>The system only queries tasks in the Finished, Processing, and Failed states and ignores other values.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

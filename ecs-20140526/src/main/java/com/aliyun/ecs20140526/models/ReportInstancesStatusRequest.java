@@ -9,7 +9,7 @@ public class ReportInstancesStatusRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>The local disk is unavailable, the mount point is inaccessible, or files cannot be loaded.</p>
+     * <p>本地盘不可用，挂载点拒绝访问，无法加载文件。</p>
      */
     @NameInMap("Description")
     public String description;
@@ -61,15 +61,24 @@ public class ReportInstancesStatusRequest extends TeaModel {
     /**
      * <p>The category of the exception. This parameter is applicable only to ECS bare metal instances. Valid values:</p>
      * <ul>
-     * <li>hardware-cpu-error: CPU failure</li>
-     * <li>hardware-motherboard-error: motherboard failure</li>
-     * <li>hardware-mem-error: memory failure</li>
-     * <li>hardware-power-error: power failure</li>
-     * <li>hardware-disk-error: disk failure</li>
-     * <li>hardware-networkcard-error: network interface controller (NIC) failure</li>
-     * <li>hardware-raidcard-error: SAS/RAID card failure</li>
-     * <li>hardware-fan-error: fan failure</li>
-     * <li>others: other failures</li>
+     * <li><p>hardware-cpu-error: CPU failure</p>
+     * </li>
+     * <li><p>hardware-motherboard-error: motherboard failure</p>
+     * </li>
+     * <li><p>hardware-mem-error: memory failure</p>
+     * </li>
+     * <li><p>hardware-power-error: power failure</p>
+     * </li>
+     * <li><p>hardware-disk-error: disk failure</p>
+     * </li>
+     * <li><p>hardware-networkcard-error: network interface controller (NIC) failure</p>
+     * </li>
+     * <li><p>hardware-raidcard-error: SAS/RAID card failure</p>
+     * </li>
+     * <li><p>hardware-fan-error: fan failure</p>
+     * </li>
+     * <li><p>others: other failures</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -87,12 +96,18 @@ public class ReportInstancesStatusRequest extends TeaModel {
     /**
      * <p>The impact of the exception on the instance. Valid values:</p>
      * <ul>
-     * <li>instance-hang: The instance is unavailable or cannot be connected.</li>
-     * <li>instance-stuck-in-status: The instance is stuck in a state such as Starting or Stopping.</li>
-     * <li>abnormal-network: The instance has a network exception.</li>
-     * <li>abnormal-local-disk: A local disk attached to the instance has an exception.</li>
-     * <li>abnormal-cloud-disk: A disk or a Shared Block Storage device attached to the instance has an exception.</li>
-     * <li>others: other exception types. If the impact is not of the preceding types, you can set <code>Reason</code> to others and specify the <code>Description</code> parameter.</li>
+     * <li><p>instance-hang: The instance is unavailable or cannot be connected.</p>
+     * </li>
+     * <li><p>instance-stuck-in-status: The instance is stuck in a state such as Starting or Stopping.</p>
+     * </li>
+     * <li><p>abnormal-network: The instance has a network exception.</p>
+     * </li>
+     * <li><p>abnormal-local-disk: A local disk attached to the instance has an exception.</p>
+     * </li>
+     * <li><p>abnormal-cloud-disk: A disk or a Shared Block Storage device attached to the instance has an exception.</p>
+     * </li>
+     * <li><p>others: other exception types. If the impact is not of the preceding types, you can set <code>Reason</code> to others and specify the <code>Description</code> parameter.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

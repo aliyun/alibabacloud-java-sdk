@@ -4,6 +4,9 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DeleteVirtualBorderRouterRequest extends TeaModel {
+    /**
+     * <p>A client token that is used to ensure the idempotence of the request. This token must be unique across requests. The token can contain only ASCII characters and must not exceed 64 characters in length.</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
@@ -14,6 +17,7 @@ public class DeleteVirtualBorderRouterRequest extends TeaModel {
     public Long ownerId;
 
     /**
+     * <p>The ID of the region where the VBR is deployed. You can call the <code>DescribeRegions</code> operation to obtain the latest list of regions.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
@@ -25,10 +29,14 @@ public class DeleteVirtualBorderRouterRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The client-side CIDR block. This parameter is required only when you delete a VBR that is part of a dual-tunnel connection.</p>
+     */
     @NameInMap("UserCidr")
     public String userCidr;
 
     /**
+     * <p>The ID of the VBR to delete.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("VbrId")

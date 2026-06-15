@@ -4,6 +4,9 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class ModifyRouterInterfaceSpecRequest extends TeaModel {
+    /**
+     * <p>A client token to ensure that the request is idempotent. You can generate this token from your client, but you must ensure that it is unique across requests. The token must consist of only ASCII characters and not exceed 64 characters in length.</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
@@ -14,6 +17,7 @@ public class ModifyRouterInterfaceSpecRequest extends TeaModel {
     public Long ownerId;
 
     /**
+     * <p>The ID of the region where the router interface is located. To obtain the latest list of regions, call the <a href="~~DescribeRegions~~">DescribeRegions</a> operation.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
@@ -26,17 +30,22 @@ public class ModifyRouterInterfaceSpecRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
+     * <p>The ID of the router interface.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("RouterInterfaceId")
     public String routerInterfaceId;
 
     /**
+     * <p>The new specification of the router interface. The supported specifications vary based on the type and region of the router interface. For more information, see the pricing page of Express Connect.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Spec")
     public String spec;
 
+    /**
+     * <p>The client-side CIDR block for the router interface. This parameter is used for VBR-to-VPC connections. The system assigns a gateway IP address from this CIDR block to the VBR to forward traffic to the VPC.</p>
+     */
     @NameInMap("UserCidr")
     public String userCidr;
 

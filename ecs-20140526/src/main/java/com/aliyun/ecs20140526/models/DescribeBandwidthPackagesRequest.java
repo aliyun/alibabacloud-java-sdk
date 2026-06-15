@@ -4,9 +4,15 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeBandwidthPackagesRequest extends TeaModel {
+    /**
+     * <p>The ID of the bandwidth package.</p>
+     */
     @NameInMap("BandwidthPackageId")
     public String bandwidthPackageId;
 
+    /**
+     * <p>The ID of the nat gateway. If specified, the operation returns only bandwidth packages associated with the specified nat gateway.</p>
+     */
     @NameInMap("NatGatewayId")
     public String natGatewayId;
 
@@ -16,13 +22,20 @@ public class DescribeBandwidthPackagesRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The page number. Starting value: 1. Default value: 1.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries to return on each page. Valid values: 1 to 100. Default value: 20.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
+     * <p>The ID of the region where the bandwidth package is located.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")

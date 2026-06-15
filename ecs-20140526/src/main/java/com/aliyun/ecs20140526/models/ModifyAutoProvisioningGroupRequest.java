@@ -14,7 +14,7 @@ public class ModifyAutoProvisioningGroupRequest extends TeaModel {
     public String autoProvisioningGroupId;
 
     /**
-     * <p>The name of the auto-provisioning group. The name must be 2 to 128 characters in length. It must start with a letter and cannot start with http:// or https://.<a href="http://https://%E3%80%82%E3%80%81%EF%BC%88:%EF%BC%89%E3%80%81%EF%BC%88_%EF%BC%89%EF%BC%88-%EF%BC%89%E3%80%82"> It can contain letters, digits, colons (:), underscores (_), and hyphens (-).</a></p>
+     * <p>The name of the auto-provisioning group. The name must be 2 to 128 characters in length. It must start with a letter and cannot start with http\:// or https\://.<a href="http://https://%E3%80%82%E3%80%81%EF%BC%88:%EF%BC%89%E3%80%81%EF%BC%88_%EF%BC%89%EF%BC%88-%EF%BC%89%E3%80%82"> It can contain letters, digits, colons (:), underscores (_), and hyphens (-).</a></p>
      * 
      * <strong>example:</strong>
      * <p>apg-test</p>
@@ -25,8 +25,10 @@ public class ModifyAutoProvisioningGroupRequest extends TeaModel {
     /**
      * <p>The type of supplemental instances. When the sum of the PayAsYouGoTargetCapacity and SpotTargetCapacity values is smaller than the TotalTargetCapacity value, the auto-provisioning group creates instances of the specified type to meet the target capacity. Valid values:</p>
      * <ul>
-     * <li>PayAsYouGo: pay-as-you-go instances</li>
-     * <li>Spot: spot instances</li>
+     * <li><p>PayAsYouGo: pay-as-you-go instances</p>
+     * </li>
+     * <li><p>Spot: spot instances</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -38,8 +40,10 @@ public class ModifyAutoProvisioningGroupRequest extends TeaModel {
     /**
      * <p>Specifies whether to release the removed instances when the real-time capacity of the auto-provisioning group exceeds the target capacity and a scale-in event is triggered. Valid values:</p>
      * <ul>
-     * <li>termination: releases the removed instances.</li>
-     * <li>no-termination: removes the instances from the auto-provisioning group but does not release them.</li>
+     * <li><p>termination: releases the removed instances.</p>
+     * </li>
+     * <li><p>no-termination: removes the instances from the auto-provisioning group but does not release them.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -109,8 +113,10 @@ public class ModifyAutoProvisioningGroupRequest extends TeaModel {
     /**
      * <p>Specifies whether to release instances that are located in the auto-provisioning group after the group expires. Valid values:</p>
      * <ul>
-     * <li>true: releases instances that are located in the auto-provisioning group.</li>
-     * <li>false: removes instances from the auto-provisioning group but does not release them.</li>
+     * <li><p>true: releases instances that are located in the auto-provisioning group.</p>
+     * </li>
+     * <li><p>false: removes instances from the auto-provisioning group but does not release them.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -295,8 +301,10 @@ public class ModifyAutoProvisioningGroupRequest extends TeaModel {
          * <p>The weight of the instance type specified in the extended configuration. A greater weight indicates that a single instance has more computing power and fewer instances are required. The value must be greater than 0.</p>
          * <p>The weight is calculated based on the computing power of the instance type and the minimum computing power of a single instance in the cluster that can created by the auto-provisioning group. For example, assume that the minimum computing power of a single instance is 8 vCPUs and 60 GiB of memory.</p>
          * <ul>
-         * <li>For an instance type with 8 vCPUs and 60 GiB of memory, you can set the weight to 1.</li>
-         * <li>For an instance type with 16 vCPUs and 120 GiB of memory, you can set the weight to 2.</li>
+         * <li><p>For an instance type with 8 vCPUs and 60 GiB of memory, you can set the weight to 1.</p>
+         * </li>
+         * <li><p>For an instance type with 16 vCPUs and 120 GiB of memory, you can set the weight to 2.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class CreateNetworkInterfacePermissionResponseBody extends TeaModel {
     /**
-     * <p>Details about permissions on the ENI.</p>
+     * <p>Details of the network interface permission.</p>
      */
     @NameInMap("NetworkInterfacePermission")
     public CreateNetworkInterfacePermissionResponseBodyNetworkInterfacePermission networkInterfacePermission;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>0FCD3DEF-63D3-4605-A818-805C8BD7DB87</p>
@@ -42,7 +42,7 @@ public class CreateNetworkInterfacePermissionResponseBody extends TeaModel {
 
     public static class CreateNetworkInterfacePermissionResponseBodyNetworkInterfacePermission extends TeaModel {
         /**
-         * <p>The ID of the Alibaba Cloud partner (a certified ISV).</p>
+         * <p>The account ID of the Alibaba Cloud Partner (certified ISV).</p>
          * 
          * <strong>example:</strong>
          * <p>1234567890</p>
@@ -51,7 +51,7 @@ public class CreateNetworkInterfacePermissionResponseBody extends TeaModel {
         public Long accountId;
 
         /**
-         * <p>The ID of the ENI.</p>
+         * <p>The elastic network interface ID.</p>
          * 
          * <strong>example:</strong>
          * <p>eni-bp14v2sdd3v8htln****</p>
@@ -60,7 +60,7 @@ public class CreateNetworkInterfacePermissionResponseBody extends TeaModel {
         public String networkInterfaceId;
 
         /**
-         * <p>The ID of the permission on the ENI.</p>
+         * <p>The network interface permission ID.</p>
          * 
          * <strong>example:</strong>
          * <p>eni-perm-bp1cs4lwn56lfb****</p>
@@ -69,7 +69,7 @@ public class CreateNetworkInterfacePermissionResponseBody extends TeaModel {
         public String networkInterfacePermissionId;
 
         /**
-         * <p>The permission on the ENI.</p>
+         * <p>The permission for the elastic network interface.</p>
          * 
          * <strong>example:</strong>
          * <p>InstanceAttach</p>
@@ -78,12 +78,16 @@ public class CreateNetworkInterfacePermissionResponseBody extends TeaModel {
         public String permission;
 
         /**
-         * <p>The state of the permission on the ENI. Valid values:</p>
+         * <p>The state of the network interface permission. Possible values:</p>
          * <ul>
-         * <li>Pending: The permission is being granted.</li>
-         * <li>Granted: The permission is granted.</li>
-         * <li>Revoking: The permission is being revoked.</li>
-         * <li>Revoked: The permission is revoked.</li>
+         * <li><p>Pending: The permission is being granted.</p>
+         * </li>
+         * <li><p>Granted: The permission is granted.</p>
+         * </li>
+         * <li><p>Revoking: The permission is being revoked.</p>
+         * </li>
+         * <li><p>Revoked: The permission is revoked.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -93,7 +97,7 @@ public class CreateNetworkInterfacePermissionResponseBody extends TeaModel {
         public String permissionState;
 
         /**
-         * <p>The name of the Alibaba Cloud service.</p>
+         * <p>The name of the Alibaba Cloud service that is granted the permission.</p>
          * 
          * <strong>example:</strong>
          * <p>Elastic Compute Service</p>

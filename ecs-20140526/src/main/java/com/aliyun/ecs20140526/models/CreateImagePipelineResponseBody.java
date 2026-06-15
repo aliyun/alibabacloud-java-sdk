@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateImagePipelineResponseBody extends TeaModel {
     /**
-     * <p>The ID of the image template.</p>
+     * <p>The ID of the image pipeline.</p>
      * 
      * <strong>example:</strong>
      * <p>ip-2ze5tsl5bp6nf2b3****</p>

@@ -25,7 +25,7 @@ public class ListPluginStatusRequest extends TeaModel {
      * <p>The name of the Cloud Assistant plug-in. The name supports all character sets and must be 1 to 255 characters in length.</p>
      * <ul>
      * <li><p>If this parameter is not specified, the status of all Cloud Assistant plug-ins that are installed on the specified instances are queried.</p>
-     * <p>**</p>
+     * <p>\<em>\</em></p>
      * <p><strong>Note</strong> If this parameter is not specified, only a single instance ID can be specified.</p>
      * </li>
      * <li><p>If this parameter is specified, the status of the specified Cloud Assistant plug-in is queried.</p>
@@ -55,7 +55,7 @@ public class ListPluginStatusRequest extends TeaModel {
 
     /**
      * <blockquote>
-     * <p> This parameter will be removed in the future. We recommend that you use NextToken and MaxResults for a paged query.</p>
+     * <p>This parameter will be removed in the future. We recommend that you use NextToken and MaxResults for a paged query.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -66,7 +66,7 @@ public class ListPluginStatusRequest extends TeaModel {
 
     /**
      * <blockquote>
-     * <p> This parameter will be removed in the future. We recommend that you use NextToken and MaxResults for a paged query.</p>
+     * <p>This parameter will be removed in the future. We recommend that you use NextToken and MaxResults for a paged query.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

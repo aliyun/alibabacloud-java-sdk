@@ -4,12 +4,21 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class CreateRouterInterfaceResponseBody extends TeaModel {
+    /**
+     * <p>The order ID. This parameter is returned only for subscription-based router interfaces.</p>
+     */
     @NameInMap("OrderId")
     public Long orderId;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The router interface ID.</p>
+     */
     @NameInMap("RouterInterfaceId")
     public String routerInterfaceId;
 

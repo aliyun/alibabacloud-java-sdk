@@ -7,8 +7,10 @@ public class DescribeImageSupportInstanceTypesRequest extends TeaModel {
     /**
      * <p>The scenario in which the image is used. Valid values:</p>
      * <ul>
-     * <li>CreateEcs (default): instance creation</li>
-     * <li>ChangeOS: replacement of the system disk or operating system</li>
+     * <li><p>CreateEcs (default): instance creation</p>
+     * </li>
+     * <li><p>ChangeOS: replacement of the system disk or operating system</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

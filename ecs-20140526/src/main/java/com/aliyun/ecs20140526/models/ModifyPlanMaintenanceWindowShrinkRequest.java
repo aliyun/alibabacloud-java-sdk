@@ -5,13 +5,19 @@ import com.aliyun.tea.*;
 
 public class ModifyPlanMaintenanceWindowShrinkRequest extends TeaModel {
     /**
+     * <p>Specifies whether to enable the maintenance window. If this parameter is not specified, the enabled status remains unchanged.</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
     @NameInMap("Enable")
     public Boolean enable;
 
+    @NameInMap("MinMaintenanceInterval")
+    public Integer minMaintenanceInterval;
+
     /**
+     * <p>The ID of the maintenance window to modify.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -20,10 +26,17 @@ public class ModifyPlanMaintenanceWindowShrinkRequest extends TeaModel {
     @NameInMap("PlanWindowId")
     public String planWindowId;
 
+    /**
+     * <p>The new name of the maintenance window. If this parameter is not specified, the name remains unchanged.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>WIndowName</p>
+     */
     @NameInMap("PlanWindowName")
     public String planWindowName;
 
     /**
+     * <p>The ID of the region where the instance is located. You can call the DescribeRegions operation to query the most recent list of Alibaba Cloud regions.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -33,15 +46,23 @@ public class ModifyPlanMaintenanceWindowShrinkRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The maintenance action for the maintenance window. If this parameter is not specified, the action remains unchanged.</p>
+     * 
      * <strong>example:</strong>
      * <p>Reboot</p>
      */
     @NameInMap("SupportMaintenanceAction")
     public String supportMaintenanceAction;
 
+    /**
+     * <p>The resources to which the maintenance window applies. If this parameter is not specified, the target resources remain unchanged.</p>
+     */
     @NameInMap("TargetResource")
     public String targetResourceShrink;
 
+    /**
+     * <p>The recurrence schedule for the maintenance window. If this parameter is not specified, the schedule remains unchanged.</p>
+     */
     @NameInMap("TimePeriod")
     public String timePeriodShrink;
 
@@ -56,6 +77,14 @@ public class ModifyPlanMaintenanceWindowShrinkRequest extends TeaModel {
     }
     public Boolean getEnable() {
         return this.enable;
+    }
+
+    public ModifyPlanMaintenanceWindowShrinkRequest setMinMaintenanceInterval(Integer minMaintenanceInterval) {
+        this.minMaintenanceInterval = minMaintenanceInterval;
+        return this;
+    }
+    public Integer getMinMaintenanceInterval() {
+        return this.minMaintenanceInterval;
     }
 
     public ModifyPlanMaintenanceWindowShrinkRequest setPlanWindowId(String planWindowId) {

@@ -4,11 +4,14 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeAutoProvisioningGroupsResponseBody extends TeaModel {
+    /**
+     * <p>The auto provisioning groups.</p>
+     */
     @NameInMap("AutoProvisioningGroups")
     public DescribeAutoProvisioningGroupsResponseBodyAutoProvisioningGroups autoProvisioningGroups;
 
     /**
-     * <p>The number of the page returned.</p>
+     * <p>The page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -17,7 +20,7 @@ public class DescribeAutoProvisioningGroupsResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries returned per page.</p>
+     * <p>The number of entries per page.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -26,7 +29,7 @@ public class DescribeAutoProvisioningGroupsResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>745CEC9F-0DD7-4451-9FE7-8B752F39****</p>
@@ -35,7 +38,7 @@ public class DescribeAutoProvisioningGroupsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The number of queried auto provisioning groups.</p>
+     * <p>The total number of auto provisioning groups found.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>

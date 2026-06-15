@@ -7,8 +7,10 @@ public class DescribeStorageCapacityUnitsRequest extends TeaModel {
     /**
      * <p>The allocation type. Valid values:</p>
      * <ul>
-     * <li>Normal: queries SCUs that belong to the current Alibaba Cloud account.</li>
-     * <li>Shared: queries SCUs shared between the Alibaba Cloud account and RAM users.</li>
+     * <li><p>Normal: queries SCUs that belong to the current Alibaba Cloud account.</p>
+     * </li>
+     * <li><p>Shared: queries SCUs shared between the Alibaba Cloud account and RAM users.</p>
+     * </li>
      * </ul>
      * <p>Default value: Normal.</p>
      * 

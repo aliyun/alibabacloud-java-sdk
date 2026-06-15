@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateImageResponseBody extends TeaModel {
     /**
-     * <p>The image ID.</p>
+     * <p>The ID of the image.</p>
      * 
      * <strong>example:</strong>
      * <p>m-bp146shijn7hujku****</p>
@@ -14,7 +14,7 @@ public class CreateImageResponseBody extends TeaModel {
     public String imageId;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>C8B26B44-0189-443E-9816-*******</p>

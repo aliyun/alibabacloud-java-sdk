@@ -14,10 +14,12 @@ public class DescribeCommandsRequest extends TeaModel {
     public String commandId;
 
     /**
-     * <p>The encoding mode of the <code>CommandContent</code> and <code>Output</code> values in the response. Valid values:</p>
+     * <p>The encoding format for the <code>CommandContent</code> and <code>Output</code> values in the response. Valid values:</p>
      * <ul>
-     * <li>PlainText: returns the original command content and command output.</li>
-     * <li>Base64: returns the Base64-encoded command content and command output.</li>
+     * <li><p>PlainText: returns the raw script content and output.</p>
+     * </li>
+     * <li><p>Base64: returns the Base64-encoded script content and output.</p>
+     * </li>
      * </ul>
      * <p>Default value: Base64.</p>
      * 
@@ -29,8 +31,12 @@ public class DescribeCommandsRequest extends TeaModel {
 
     /**
      * <p>The description of the command.</p>
-     * <p>If you specify <code>Provider</code>, fuzzy search is supported by default.</p>
-     * <p>If you do not specify <code>Provider</code>, prefix-based fuzzy search is supported. For example, if you specify <code>test*</code>, all commands whose descriptions start with <code>test</code> are queried.</p>
+     * <ul>
+     * <li><p>If you specify the <code>Provider</code> parameter to query public commands, fuzzy search is supported by default.</p>
+     * </li>
+     * <li><p>If you do not specify the <code>Provider</code> parameter to query private commands, fuzzy search is supported. You can use an asterisk (\*) as a wildcard. For example, <code>test*</code> returns all commands whose descriptions start with <code>test</code>, <code>*test</code> returns all commands whose descriptions end with <code>test</code>, and <code>*test*</code> returns all commands whose descriptions contain <code>test</code>.</p>
+     * </li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>testDescription</p>
@@ -39,10 +45,12 @@ public class DescribeCommandsRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>Specifies whether to query only the latest version of common commands when common commands are queried. This parameter does not affect the query for private commands.</p>
+     * <p>Specifies whether to return only the latest version of public commands. This parameter does not affect private commands.</p>
      * <ul>
-     * <li>true: queries only the latest version of common commands.</li>
-     * <li>false: queries all versions of common commands.</li>
+     * <li><p>true: returns only the latest version of public commands.</p>
+     * </li>
+     * <li><p>false: returns all versions of public commands.</p>
+     * </li>
      * </ul>
      * <p>Default value: false.</p>
      * 
@@ -53,8 +61,8 @@ public class DescribeCommandsRequest extends TeaModel {
     public Boolean latest;
 
     /**
-     * <p>The maximum number of entries per page.</p>
-     * <p>Valid values: 1 to 50.</p>
+     * <p>The maximum number of entries to return per page.</p>
+     * <p>Maximum value: 50.</p>
      * <p>Default value: 10.</p>
      * 
      * <strong>example:</strong>
@@ -65,8 +73,12 @@ public class DescribeCommandsRequest extends TeaModel {
 
     /**
      * <p>The name of the command.</p>
-     * <p>If you specify <code>Provider</code>, fuzzy search is supported by default.</p>
-     * <p>If you do not specify <code>Provider</code>, prefix-based fuzzy search is supported. For example, if you specify <code>command*</code>, all commands whose names start with <code>command</code> are queried.</p>
+     * <ul>
+     * <li><p>If you specify the <code>Provider</code> parameter to query public commands, fuzzy search is supported by default.</p>
+     * </li>
+     * <li><p>If you do not specify the <code>Provider</code> parameter to query private commands, fuzzy search is supported. You can use an asterisk (\*) as a wildcard. For example, <code>command*</code> returns all commands whose names start with <code>command</code>, <code>*command</code> returns all commands whose names end with <code>command</code>, and <code>*command*</code> returns all commands whose names contain <code>command</code>.</p>
+     * </li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>testName</p>
@@ -75,7 +87,7 @@ public class DescribeCommandsRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of NextToken.</p>
+     * <p>The pagination token for the next page of results. To retrieve the next page, set this parameter to the <code>NextToken</code> value from a previous call.</p>
      * 
      * <strong>example:</strong>
      * <p>AAAAAdDWBF2</p>
@@ -91,7 +103,7 @@ public class DescribeCommandsRequest extends TeaModel {
 
     /**
      * <blockquote>
-     * <p> This parameter will be removed in the future. We recommend that you use NextToken and MaxResults for a paged query.</p>
+     * <p>This parameter is being deprecated. We recommend using NextToken and MaxResults for pagination instead.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -102,7 +114,7 @@ public class DescribeCommandsRequest extends TeaModel {
 
     /**
      * <blockquote>
-     * <p> This parameter will be removed in the future. We recommend that you use NextToken and MaxResults for a paged query.</p>
+     * <p>This parameter is being deprecated. We recommend using NextToken and MaxResults for pagination instead.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -112,16 +124,18 @@ public class DescribeCommandsRequest extends TeaModel {
     public Long pageSize;
 
     /**
-     * <p>The provider of the common command. Take note of the following items:</p>
+     * <p>The provider of the public command.</p>
      * <ul>
-     * <li><p>If you do not specify this parameter, all the commands that you created are queried.</p>
+     * <li><p>If you omit this parameter, the operation queries your private commands by default.</p>
      * </li>
-     * <li><p>If you set this parameter to <code>AlibabaCloud</code>, all the common commands provided by Alibaba Cloud are queried.</p>
+     * <li><p>Set this parameter to <code>AlibabaCloud</code> to query all public commands from Alibaba Cloud.</p>
      * </li>
-     * <li><p>If you set this parameter to a specific provider, all the common commands provided by the provider are queried. Examples:</p>
+     * <li><p>If you set the value to a specific provider, the public commands from that provider are queried. For example:</p>
      * <ul>
-     * <li>If you set <code>Provider</code> to AlibabaCloud.ECS.GuestOS, all the common commands provided by <code>AlibabaCloud.ECS.GuestOS</code> are queried.</li>
-     * <li>If you set <code>Provider</code> to AlibabaCloud.ECS.GuestOSDiagnose, all the common commands provided by <code>AlibabaCloud.ECS.GuestOSDiagnose</code> are queried.</li>
+     * <li><p>If you set <code>Provider</code> to <code>AlibabaCloud.ECS.GuestOS</code>, the public commands provided by AlibabaCloud.ECS.GuestOS are queried.</p>
+     * </li>
+     * <li><p>If you set <code>Provider</code> to <code>AlibabaCloud.ECS.GuestOSDiagnose</code>, the public commands provided by AlibabaCloud.ECS.GuestOSDiagnose are queried.</p>
+     * </li>
      * </ul>
      * </li>
      * </ul>
@@ -133,7 +147,7 @@ public class DescribeCommandsRequest extends TeaModel {
     public String provider;
 
     /**
-     * <p>The region ID of the command. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>The ID of the region. To view the latest list of regions, call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -158,7 +172,7 @@ public class DescribeCommandsRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The list of tags.</p>
+     * <p>The tags used to filter commands.</p>
      */
     @NameInMap("Tag")
     public java.util.List<DescribeCommandsRequestTag> tag;
@@ -166,9 +180,12 @@ public class DescribeCommandsRequest extends TeaModel {
     /**
      * <p>The type of the command. Valid values:</p>
      * <ul>
-     * <li>RunBatScript: batch command, applicable to Windows instances</li>
-     * <li>RunPowerShellScript: PowerShell command, applicable to Windows instances</li>
-     * <li>RunShellScript: shell command, applicable to Linux instances</li>
+     * <li><p>RunBatScript: A Bat script for Windows instances.</p>
+     * </li>
+     * <li><p>RunPowerShellScript: A PowerShell script for Windows instances.</p>
+     * </li>
+     * <li><p>RunShellScript: A Shell script for Linux instances.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -328,9 +345,9 @@ public class DescribeCommandsRequest extends TeaModel {
 
     public static class DescribeCommandsRequestTag extends TeaModel {
         /**
-         * <p>The key of tag N of the command. Valid values of N: 1 to 20. The tag key cannot be an empty string.</p>
-         * <p>If a single tag is specified to query resources, up to 1,000 resources that have this tag added can be displayed in the response. If multiple tags are specified to query resources, up to 1,000 resources that have all these tags added can be displayed in the response. To query more than 1,000 resources that have specified tags, call the <a href="https://help.aliyun.com/document_detail/110425.html">ListTagResources</a> operation.</p>
-         * <p>The tag key can be up to 64 characters in length and cannot start with <code>acs:</code> or <code>aliyun</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * <p>The key of the tag. You can specify up to 20 tags. The tag key cannot be an empty string.</p>
+         * <p>A query can return a maximum of 1,000 resources that match the specified tags. If more than 1,000 resources match, call the <a href="https://help.aliyun.com/document_detail/110425.html">ListTagResources</a> operation to query all matching resources.</p>
+         * <p>The key can be up to 64 characters in length, cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>TestKey</p>
@@ -339,8 +356,8 @@ public class DescribeCommandsRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The value of tag N of the command. Valid values of N: 1 to 20. The tag value can be an empty string.</p>
-         * <p>It can be up to 128 characters in length and cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * <p>The value of the tag. You can specify up to 20 tags. The tag value can be an empty string.</p>
+         * <p>The value can be up to 128 characters in length and cannot contain <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>TestValue</p>

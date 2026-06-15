@@ -16,8 +16,10 @@ public class UnlockSnapshotRequest extends TeaModel {
     /**
      * <p>Specifies whether to perform the dry run. Valid values:</p>
      * <ul>
-     * <li>true: The request is checked and is not executed. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the check fails, an error is returned. If the check is passed, the error code DryRunOperation is returned.</li>
-     * <li>false (default): sends the request. If the request passes the check, the request is directly executed.</li>
+     * <li><p>true: The request is checked and is not executed. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the check fails, an error is returned. If the check is passed, the error code DryRunOperation is returned.</p>
+     * </li>
+     * <li><p>false (default): sends the request. If the request passes the check, the request is directly executed.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

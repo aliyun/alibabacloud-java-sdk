@@ -33,9 +33,12 @@ public class DescribeInstanceMonitorDataRequest extends TeaModel {
     /**
      * <p>The interval at which to retrieve monitoring data. Unit: seconds. Valid values:</p>
      * <ul>
-     * <li>60</li>
-     * <li>600</li>
-     * <li>3600</li>
+     * <li><p>60</p>
+     * </li>
+     * <li><p>600</p>
+     * </li>
+     * <li><p>3600</p>
+     * </li>
      * </ul>
      * <p>Default value: 60.</p>
      * 

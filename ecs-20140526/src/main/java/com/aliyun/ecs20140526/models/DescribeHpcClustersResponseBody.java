@@ -8,7 +8,7 @@ public class DescribeHpcClustersResponseBody extends TeaModel {
     public DescribeHpcClustersResponseBodyHpcClusters hpcClusters;
 
     /**
-     * <p>Details about the HPC clusters. The value is an array that consists of the information of each HPC cluster.</p>
+     * <p>The page number of the HPC cluster list.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -17,7 +17,7 @@ public class DescribeHpcClustersResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The page number.</p>
+     * <p>The number of entries per page that was set when the request was made.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -26,7 +26,7 @@ public class DescribeHpcClustersResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The total number of HPC clusters.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
@@ -35,7 +35,7 @@ public class DescribeHpcClustersResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The ID of the HPC cluster.</p>
+     * <p>The total number of HPC clusters.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>

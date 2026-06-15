@@ -10,7 +10,7 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
     /**
      * <p>A pagination token. It can be used in the next request to retrieve a new page of results.</p>
      * <blockquote>
-     * <p> If the NextToken parameter is not returned when you use the MaxResults and NextToken parameters to perform a paged query, no more data is returned.</p>
+     * <p>If the NextToken parameter is not returned when you use the MaxResults and NextToken parameters to perform a paged query, no more data is returned.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -65,7 +65,7 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
     /**
      * <p>The total number of instances.</p>
      * <blockquote>
-     * <p> If you specify the MaxResults and NextToken request parameters to perform a paged query, the value of the TotalCount response parameter is invalid.</p>
+     * <p>If you specify the MaxResults and NextToken request parameters to perform a paged query, the value of the TotalCount response parameter is invalid.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

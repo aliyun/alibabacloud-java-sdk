@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateNetworkInterfacePermissionRequest extends TeaModel {
     /**
-     * <p>The ID of the Alibaba Cloud partner (a certified ISV) or individual user.</p>
+     * <p>The ID of the Alibaba Cloud account to which the permission is granted. The account can be an Alibaba Cloud partner (certified ISV) or an individual user.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class CreateNetworkInterfacePermissionRequest extends TeaModel {
     public Long accountId;
 
     /**
-     * <p>The ID of the ENI.</p>
+     * <p>The ID of the elastic network interface.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -31,8 +31,8 @@ public class CreateNetworkInterfacePermissionRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The permission on the ENI. Valid values:</p>
-     * <p>InstanceAttach: the permission to attach the ENI to an ECS instance. The ENI and the ECS instance must be in the same zone.</p>
+     * <p>The permission to grant. The only supported value is InstanceAttach.</p>
+     * <p>InstanceAttach: Allows an authorized account to attach your elastic network interface to one of its ECS instances. The ECS instance and the elastic network interface must be in the same availability zone.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -42,7 +42,7 @@ public class CreateNetworkInterfacePermissionRequest extends TeaModel {
     public String permission;
 
     /**
-     * <p>The region ID of the ENI. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>The ID of the region where the elastic network interface is located. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to obtain the latest list of Alibaba Cloud regions.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

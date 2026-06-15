@@ -11,6 +11,7 @@ public class ModifyImageShareGroupPermissionRequest extends TeaModel {
     public java.util.List<String> removeGroup;
 
     /**
+     * <p>The ID of the custom image.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("ImageId")
@@ -23,6 +24,7 @@ public class ModifyImageShareGroupPermissionRequest extends TeaModel {
     public Long ownerId;
 
     /**
+     * <p>The ID of the region. You can call the <code>DescribeRegions</code> operation to query the latest region list.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribePriceResponseBody extends TeaModel {
     /**
-     * <p>The information about the prices and promotion rules.</p>
+     * <p>Details about the price and promotional rules.</p>
      */
     @NameInMap("PriceInfo")
     public DescribePriceResponseBodyPriceInfo priceInfo;
@@ -173,9 +173,9 @@ public class DescribePriceResponseBody extends TeaModel {
 
     public static class DescribePriceResponseBodyPriceInfoPrice extends TeaModel {
         /**
-         * <p>The currency unit.</p>
-         * <p>Alibaba Cloud China site (aliyun.com): CNY.</p>
-         * <p>Alibaba Cloud International site (alibabacloud.com): USD.</p>
+         * <p>The currency.</p>
+         * <p>CNY for sites in the Chinese mainland.</p>
+         * <p>USD for international sites.</p>
          * 
          * <strong>example:</strong>
          * <p>CNY</p>
@@ -187,7 +187,7 @@ public class DescribePriceResponseBody extends TeaModel {
         public DescribePriceResponseBodyPriceInfoPriceDetailInfos detailInfos;
 
         /**
-         * <p>The discount.</p>
+         * <p>The discount amount.</p>
          * 
          * <strong>example:</strong>
          * <p>655.2</p>
@@ -205,7 +205,7 @@ public class DescribePriceResponseBody extends TeaModel {
         public Float originalPrice;
 
         /**
-         * <p>The hourly price of the reserved instance for which the No Upfront or Partial Upfront payment option is used.</p>
+         * <p>The hourly price of a No Upfront or Partial Upfront Reserved Instance Voucher.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -214,7 +214,7 @@ public class DescribePriceResponseBody extends TeaModel {
         public Float reservedInstanceHourPrice;
 
         /**
-         * <p>The transaction price of the order. The transaction price is equal to the original price minus the discount.</p>
+         * <p>The trade price, calculated as <code>OriginalPrice</code> - <code>DiscountPrice</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>3712.8</p>
@@ -279,9 +279,9 @@ public class DescribePriceResponseBody extends TeaModel {
 
     public static class DescribePriceResponseBodyPriceInfoRelatedPriceMarketplaceImagePrice extends TeaModel {
         /**
-         * <p>The currency unit.</p>
-         * <p>China site (aliyun.com): CNY</p>
-         * <p>International site (alibabacloud.com): USD</p>
+         * <p>The currency.</p>
+         * <p>CNY for sites in the Chinese mainland.</p>
+         * <p>USD for international sites.</p>
          * 
          * <strong>example:</strong>
          * <p>CNY</p>
@@ -290,7 +290,7 @@ public class DescribePriceResponseBody extends TeaModel {
         public String currency;
 
         /**
-         * <p>The discount.</p>
+         * <p>The discount amount.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -308,7 +308,7 @@ public class DescribePriceResponseBody extends TeaModel {
         public Float originalPrice;
 
         /**
-         * <p>The transaction price, which is equal to the original price minus the discount.</p>
+         * <p>The trade price, calculated as <code>OriginalPrice</code> - <code>DiscountPrice</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -357,7 +357,7 @@ public class DescribePriceResponseBody extends TeaModel {
 
     public static class DescribePriceResponseBodyPriceInfoRelatedPrice extends TeaModel {
         /**
-         * <p>The Alibaba Cloud Marketplace image price.</p>
+         * <p>The price of the marketplace image.</p>
          */
         @NameInMap("MarketplaceImagePrice")
         public DescribePriceResponseBodyPriceInfoRelatedPriceMarketplaceImagePrice marketplaceImagePrice;
@@ -428,13 +428,13 @@ public class DescribePriceResponseBody extends TeaModel {
 
     public static class DescribePriceResponseBodyPriceInfo extends TeaModel {
         /**
-         * <p>The price.</p>
+         * <p>The price details.</p>
          */
         @NameInMap("Price")
         public DescribePriceResponseBodyPriceInfoPrice price;
 
         /**
-         * <p>The related price.</p>
+         * <p>The related prices.</p>
          */
         @NameInMap("RelatedPrice")
         public DescribePriceResponseBodyPriceInfoRelatedPrice relatedPrice;

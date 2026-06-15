@@ -5,14 +5,27 @@ import com.aliyun.tea.*;
 
 public class DeleteRouteEntryRequest extends TeaModel {
     /**
+     * <p>The destination CIDR block of the route entry.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("DestinationCidrBlock")
     public String destinationCidrBlock;
 
+    /**
+     * <p>The ID of the next hop.</p>
+     * <blockquote>
+     * <p><code>NextHopId</code> and <code>NextHopList</code> are mutually exclusive. You can specify one but not both.</p>
+     * </blockquote>
+     */
     @NameInMap("NextHopId")
     public String nextHopId;
 
+    /**
+     * <p>A list of next hops for an ECMP route.</p>
+     * <blockquote>
+     * <p><code>NextHopId</code> and <code>NextHopList</code> are mutually exclusive. You can specify one but not both.</p>
+     * </blockquote>
+     */
     @NameInMap("NextHopList")
     public java.util.List<DeleteRouteEntryRequestNextHopList> nextHopList;
 
@@ -22,6 +35,9 @@ public class DeleteRouteEntryRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The ID of the region.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
@@ -32,6 +48,7 @@ public class DeleteRouteEntryRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
+     * <p>The ID of the route table that contains the route entry.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("RouteTableId")
@@ -115,9 +132,15 @@ public class DeleteRouteEntryRequest extends TeaModel {
     }
 
     public static class DeleteRouteEntryRequestNextHopList extends TeaModel {
+        /**
+         * <p>The ID of a next hop in the ECMP route.</p>
+         */
         @NameInMap("NextHopId")
         public String nextHopId;
 
+        /**
+         * <p>The type of a next hop in the ECMP route. Set the value to <code>Instance</code>.</p>
+         */
         @NameInMap("NextHopType")
         public String nextHopType;
 

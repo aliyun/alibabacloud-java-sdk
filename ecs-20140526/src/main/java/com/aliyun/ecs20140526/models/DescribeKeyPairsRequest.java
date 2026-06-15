@@ -25,10 +25,14 @@ public class DescribeKeyPairsRequest extends TeaModel {
     /**
      * <p>The name of the key pair. You can use the asterisk (\*) symbol as a wildcard in regular expressions to perform a fuzzy search for key pairs. Sample patterns:</p>
      * <ul>
-     * <li><code>*SshKey</code>: queries key pairs whose names end with SshKey, including the key pair named SshKey.</li>
-     * <li><code>SshKey*</code>: queries key pairs whose names start with SshKey, including the key pair named SshKey.</li>
-     * <li><code>*SshKey*</code>: queries key pairs whose names include SshKey, including the key pair named SshKey.</li>
-     * <li><code>SshKey</code>: queries the key pair named SshKey.</li>
+     * <li><p><code>*SshKey</code>: queries key pairs whose names end with SshKey, including the key pair named SshKey.</p>
+     * </li>
+     * <li><p><code>SshKey*</code>: queries key pairs whose names start with SshKey, including the key pair named SshKey.</p>
+     * </li>
+     * <li><p><code>*SshKey*</code>: queries key pairs whose names include SshKey, including the key pair named SshKey.</p>
+     * </li>
+     * <li><p><code>SshKey</code>: queries the key pair named SshKey.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -73,7 +77,7 @@ public class DescribeKeyPairsRequest extends TeaModel {
     /**
      * <p>The ID of the resource group. If this parameter is specified to query resources, up to 1,000 resources that belong to the specified resource group can be displayed in the response.</p>
      * <blockquote>
-     * <p> Resources in the default resource group are displayed in the response regardless of how this parameter is set.</p>
+     * <p>Resources in the default resource group are displayed in the response regardless of how this parameter is set.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

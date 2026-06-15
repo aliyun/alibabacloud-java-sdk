@@ -5,10 +5,9 @@ import com.aliyun.tea.*;
 
 public class DescribeNetworkInterfaceAttributeRequest extends TeaModel {
     /**
-     * <p>The attribute of the ENI. Valid values:</p>
-     * <p>attachment: member ENI attachment information of the trunk ENI. This value is in invitational preview and is not publicly available.</p>
-     * <p>connectionTrackingConfiguration: connection tracking configuration.</p>
-     * <p>Default value:</p>
+     * <p>The attribute to query. Valid values:</p>
+     * <p><code>attachment</code>: The attachment details for member network interfaces associated with a trunk network interface. This is an invitation-only parameter.</p>
+     * <p><code>connectionTrackingConfiguration</code>: The connection tracking configuration.</p>
      * 
      * <strong>example:</strong>
      * <p>attachment</p>
@@ -17,7 +16,7 @@ public class DescribeNetworkInterfaceAttributeRequest extends TeaModel {
     public String attribute;
 
     /**
-     * <p>The ID of the ENI.</p>
+     * <p>The ID of the elastic network interface.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -33,7 +32,7 @@ public class DescribeNetworkInterfaceAttributeRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID of the ENI. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>The ID of the region where the elastic network interface resides. Call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to get the latest list of Alibaba Cloud regions.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -50,7 +49,7 @@ public class DescribeNetworkInterfaceAttributeRequest extends TeaModel {
 
     /**
      * <blockquote>
-     * <p> This parameter is unavailable.</p>
+     * <p>This parameter is not publicly available.</p>
      * </blockquote>
      */
     @NameInMap("Tag")
@@ -128,7 +127,7 @@ public class DescribeNetworkInterfaceAttributeRequest extends TeaModel {
     public static class DescribeNetworkInterfaceAttributeRequestTag extends TeaModel {
         /**
          * <blockquote>
-         * <p> This parameter is unavailable.</p>
+         * <p>This parameter is not publicly available.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -139,7 +138,7 @@ public class DescribeNetworkInterfaceAttributeRequest extends TeaModel {
 
         /**
          * <blockquote>
-         * <p> This parameter is unavailable.</p>
+         * <p>This parameter is not publicly available.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

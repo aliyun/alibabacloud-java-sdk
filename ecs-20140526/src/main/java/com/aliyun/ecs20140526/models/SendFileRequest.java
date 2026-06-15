@@ -4,14 +4,22 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class SendFileRequest extends TeaModel {
+    /**
+     * <p>Ensures request idempotence. Generate a parameter value from your client and ensure that this parameter value is unique across different requests. <strong>ClientToken</strong> supports only ASCII characters and cannot exceed 64 characters. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123e4567-e89b-12d3-a456-426655440000</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
      * <p>The content of the file. The file must not exceed 32 KB in size after it is encoded in Base64.</p>
      * <ul>
-     * <li>If <code>ContentType</code> is set to <code>PlainText</code>, the value of Content is in plaintext.</li>
-     * <li>If <code>ContentType</code> is set to <code>Base64</code>, the value of Content is Base64-encoded.</li>
+     * <li><p>If <code>ContentType</code> is set to <code>PlainText</code>, the value of Content is in plaintext.</p>
+     * </li>
+     * <li><p>If <code>ContentType</code> is set to <code>Base64</code>, the value of Content is Base64-encoded.</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -24,8 +32,10 @@ public class SendFileRequest extends TeaModel {
     /**
      * <p>The content type of the file. Valid values:</p>
      * <ul>
-     * <li>PlainText: The file content is not encoded.</li>
-     * <li>Base64: The file content is encoded in Base64.</li>
+     * <li><p>PlainText: The file content is not encoded.</p>
+     * </li>
+     * <li><p>Base64: The file content is encoded in Base64.</p>
+     * </li>
      * </ul>
      * <p>Default value: PlainText.</p>
      * 
@@ -47,7 +57,7 @@ public class SendFileRequest extends TeaModel {
     /**
      * <p>The group of the file. This parameter takes effect only on Linux instances. Default value: root. The value can be up to 64 characters in length.</p>
      * <blockquote>
-     * <p> If you want to use a non-root user group, make sure that the user group exists in the instances.</p>
+     * <p>If you want to use a non-root user group, make sure that the user group exists in the instances.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -69,7 +79,7 @@ public class SendFileRequest extends TeaModel {
     /**
      * <p>The owner of the file. This parameter takes effect only on Linux instances. Default value: root. The value can be up to 64 characters in length.</p>
      * <blockquote>
-     * <p> If you want to use a non-root user, make sure that the user exists in the instances.</p>
+     * <p>If you want to use a non-root user, make sure that the user exists in the instances.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -101,8 +111,10 @@ public class SendFileRequest extends TeaModel {
     /**
      * <p>Specifies whether to overwrite a file in the destination directory if the file has the same name as the sent file.</p>
      * <ul>
-     * <li>true</li>
-     * <li>false</li>
+     * <li><p>true</p>
+     * </li>
+     * <li><p>false</p>
+     * </li>
      * </ul>
      * <p>Default value: false.</p>
      * 
@@ -131,8 +143,10 @@ public class SendFileRequest extends TeaModel {
     /**
      * <p>The ID of the resource group. When you specify this parameter, take note of the following items:</p>
      * <ul>
-     * <li>The instance specified by the InstanceId parameter must belong to the specified resource group.</li>
-     * <li>If you specify this parameter, you can call the <a href="https://help.aliyun.com/document_detail/184117.html">DescribeSendFileResults</a> operation to query file sending results in the specified resource group.</li>
+     * <li><p>The instance specified by the InstanceId parameter must belong to the specified resource group.</p>
+     * </li>
+     * <li><p>If you specify this parameter, you can call the <a href="https://help.aliyun.com/document_detail/184117.html">DescribeSendFileResults</a> operation to query file sending results in the specified resource group.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -166,8 +180,10 @@ public class SendFileRequest extends TeaModel {
     /**
      * <p>The timeout period for the file sending task. Unit: seconds.</p>
      * <ul>
-     * <li>A timeout error occurs when a file cannot be sent because the process slows down or because a specific module or Cloud Assistant Agent does not exist.</li>
-     * <li>If the specified timeout period is less than 10 seconds, the system sets the timeout period to 10 seconds to ensure that the file can be sent to the instances.</li>
+     * <li><p>A timeout error occurs when a file cannot be sent because the process slows down or because a specific module or Cloud Assistant Agent does not exist.</p>
+     * </li>
+     * <li><p>If the specified timeout period is less than 10 seconds, the system sets the timeout period to 10 seconds to ensure that the file can be sent to the instances.</p>
+     * </li>
      * </ul>
      * <p>Default value: 60.</p>
      * 

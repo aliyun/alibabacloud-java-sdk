@@ -8,12 +8,14 @@ public class DescribeImageComponentsRequest extends TeaModel {
      * <p>The type of the image component.</p>
      * <p>Valid values:</p>
      * <ul>
-     * <li>Build</li>
-     * <li>Test</li>
+     * <li><p>Build</p>
+     * </li>
+     * <li><p>Test</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
-     * <p>null</p>
+     * <p>Build</p>
      */
     @NameInMap("ComponentType")
     public String componentType;
@@ -21,11 +23,11 @@ public class DescribeImageComponentsRequest extends TeaModel {
     /**
      * <p>The version number of the image component in the \<major>.\<minor>.\<patch> format. You can set \<major>, \<minor>, and \<patch> to non-negative integers, or set one of \<major>, \<minor>, and \<patch> to the wildcard (\*) and the other two to non-negative integers.</p>
      * <blockquote>
-     * <p> This parameter takes effect only if you specify Name.</p>
+     * <p>This parameter takes effect only if you specify Name.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
-     * <p>null</p>
+     * <p>1.0.*</p>
      */
     @NameInMap("ComponentVersion")
     public String componentVersion;
@@ -70,8 +72,10 @@ public class DescribeImageComponentsRequest extends TeaModel {
     /**
      * <p>The type of the image component. Valid values:</p>
      * <ul>
-     * <li>SELF: the custom component that you created.</li>
-     * <li>ALIYUN: the system component provided by Alibaba Cloud.</li>
+     * <li><p>SELF: the custom component that you created.</p>
+     * </li>
+     * <li><p>ALIYUN: the system component provided by Alibaba Cloud.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -99,7 +103,7 @@ public class DescribeImageComponentsRequest extends TeaModel {
     /**
      * <p>The ID of the resource group. If this parameter is specified to query resources, up to 1,000 resources that belong to the specified resource group can be displayed in the response.</p>
      * <blockquote>
-     * <p> Resources in the default resource group are displayed in the response regardless of how this parameter is set.</p>
+     * <p>Resources in the default resource group are displayed in the response regardless of how this parameter is set.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -118,12 +122,14 @@ public class DescribeImageComponentsRequest extends TeaModel {
      * <p>The type of the operating system supported by the image component.</p>
      * <p>Valid values:</p>
      * <ul>
-     * <li>Linux</li>
-     * <li>Windows</li>
+     * <li><p>Linux</p>
+     * </li>
+     * <li><p>Windows</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
-     * <p>null</p>
+     * <p>Linux</p>
      */
     @NameInMap("SystemType")
     public String systemType;

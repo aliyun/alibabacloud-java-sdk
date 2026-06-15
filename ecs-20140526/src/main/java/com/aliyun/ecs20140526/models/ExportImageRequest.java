@@ -4,17 +4,30 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class ExportImageRequest extends TeaModel {
+    /**
+     * <p>Specifies whether to perform a dry run to check the request\&quot;s validity without actually exporting the image. Valid values:</p>
+     * <ul>
+     * <li><code>true</code>: Performs a dry run. If the check succeeds, the <code>DryRunOperation</code> error code is returned. If the check fails, an error is returned.</li>
+     * <li><code>false</code>: Sends a normal request. If the check succeeds, the image is exported.</li>
+     * </ul>
+     * <p>Default value: false.</p>
+     */
     @NameInMap("DryRun")
     public Boolean dryRun;
 
     /**
-     * <p>The format in which you want to export the custom image. Valid values:</p>
+     * <p>The format of the exported image file. Valid values:</p>
      * <ul>
-     * <li>raw</li>
-     * <li>vhd</li>
-     * <li>qcow2</li>
-     * <li>vmdk</li>
-     * <li>vdi</li>
+     * <li><p>raw.</p>
+     * </li>
+     * <li><p>vhd.</p>
+     * </li>
+     * <li><p>qcow2.</p>
+     * </li>
+     * <li><p>vmdk.</p>
+     * </li>
+     * <li><p>vdi.</p>
+     * </li>
      * </ul>
      * <p>Default value: raw.</p>
      * 
@@ -25,7 +38,7 @@ public class ExportImageRequest extends TeaModel {
     public String imageFormat;
 
     /**
-     * <p>The custom image ID.</p>
+     * <p>The ID of the custom image.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -35,7 +48,7 @@ public class ExportImageRequest extends TeaModel {
     public String imageId;
 
     /**
-     * <p>The OSS bucket in which you want to store the exported custom image.</p>
+     * <p>The destination OSS bucket for the exported image.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -45,7 +58,7 @@ public class ExportImageRequest extends TeaModel {
     public String OSSBucket;
 
     /**
-     * <p>The prefix for the name of the OSS object. The prefix must be 1 to 30 characters in length and can contain digits and letters.</p>
+     * <p>The prefix for the OSS object. The prefix must be 1 to 30 characters in length and can consist of letters and digits.</p>
      * 
      * <strong>example:</strong>
      * <p>EcsExport</p>
@@ -57,7 +70,7 @@ public class ExportImageRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID of the custom image. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>The region ID of the custom image. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to view the latest list of Alibaba Cloud regions.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -73,7 +86,7 @@ public class ExportImageRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The name of the RAM role that you want to use to export the custom image.</p>
+     * <p>The name of the RAM role used to export the image.</p>
      * 
      * <strong>example:</strong>
      * <p>AliyunECSImageExportDefaultRole</p>

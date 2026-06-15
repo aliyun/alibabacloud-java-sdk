@@ -4,9 +4,15 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class ModifyVpcAttributeRequest extends TeaModel {
+    /**
+     * <p>The primary IPv4 cidr block for the VPC. You can only expand this cidr block, for example, from <code>192.168.0.0/24</code> to <code>192.168.0.0/16</code>. You cannot modify the primary cidr block if ClassicLink is enabled.</p>
+     */
     @NameInMap("CidrBlock")
     public String cidrBlock;
 
+    /**
+     * <p>The description must be 2 to 256 characters long. It must start with a letter and cannot begin with <code>http://</code> or <code>https://</code>.</p>
+     */
     @NameInMap("Description")
     public String description;
 
@@ -16,6 +22,9 @@ public class ModifyVpcAttributeRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The ID of the VPC\&quot;s region.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
@@ -25,15 +34,22 @@ public class ModifyVpcAttributeRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>A user cidr block to add to the VPC. You can add up to three user cidr blocks. They cannot overlap with the primary cidr block, each other, or the reserved <code>100.64.0.0/10</code> cidr block.</p>
+     */
     @NameInMap("UserCidr")
     public String userCidr;
 
     /**
+     * <p>The ID of the VPC to modify.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("VpcId")
     public String vpcId;
 
+    /**
+     * <p>The name must be 2 to 128 characters long, start with a letter, and can contain letters, digits, underscores (_), and hyphens (-).</p>
+     */
     @NameInMap("VpcName")
     public String vpcName;
 

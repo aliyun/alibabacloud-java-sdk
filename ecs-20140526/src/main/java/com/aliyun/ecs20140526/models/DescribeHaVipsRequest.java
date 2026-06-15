@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeHaVipsRequest extends TeaModel {
     /**
+     * <p>The query filters. You can specify 1 to 20 filters.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Filter")
@@ -16,13 +17,20 @@ public class DescribeHaVipsRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The page number. Default value: 1.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries per page. Maximum value: 50. Default value: 10.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
+     * <p>The ID of the region.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
@@ -104,9 +112,22 @@ public class DescribeHaVipsRequest extends TeaModel {
     }
 
     public static class DescribeHaVipsRequestFilter extends TeaModel {
+        /**
+         * <p>The filter key. Valid values:</p>
+         * <p><code>HaVipId</code>: The ID of the high-availability virtual IP (HAVIP).</p>
+         * <p><code>HaVipName</code>: The name of the HAVIP.</p>
+         * <p><code>VpcId</code>: The ID of the VPC to which the HAVIP belongs.</p>
+         * <p><code>VSwitchId</code>: The ID of the vSwitch to which the HAVIP belongs.</p>
+         * <p><code>IpAddress</code>: The IP address of the HAVIP.</p>
+         * <p><code>AssociatedInstanceType</code>: The type of instance associated with the HAVIP. The value must be <code>EcsInstance</code>.</p>
+         * <p><code>AssociatedInstanceId</code>: The ID of the instance associated with the HAVIP.</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>A list of 1 to 20 values.</p>
+         */
         @NameInMap("Value")
         public java.util.List<String> value;
 

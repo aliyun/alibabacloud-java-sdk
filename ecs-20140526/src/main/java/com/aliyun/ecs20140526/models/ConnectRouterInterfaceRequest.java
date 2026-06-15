@@ -8,6 +8,7 @@ public class ConnectRouterInterfaceRequest extends TeaModel {
     public Long ownerId;
 
     /**
+     * <p>The ID of the region where the router interface is located.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
@@ -20,6 +21,7 @@ public class ConnectRouterInterfaceRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
+     * <p>The ID of the initiator router interface.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("RouterInterfaceId")

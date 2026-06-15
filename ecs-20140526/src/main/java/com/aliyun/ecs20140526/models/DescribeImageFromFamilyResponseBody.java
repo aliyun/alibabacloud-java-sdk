@@ -197,8 +197,10 @@ public class DescribeImageFromFamilyResponseBody extends TeaModel {
         /**
          * <p>The architecture of the image. Valid values:</p>
          * <ul>
-         * <li>i386</li>
-         * <li>x86_64</li>
+         * <li><p>i386</p>
+         * </li>
+         * <li><p>x86_64</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -258,10 +260,14 @@ public class DescribeImageFromFamilyResponseBody extends TeaModel {
         /**
          * <p>The alias of the image owner. Valid values:</p>
          * <ul>
-         * <li>system: public images provided by Alibaba Cloud</li>
-         * <li>self: your custom images</li>
-         * <li>others: shared images from other Alibaba Cloud accounts</li>
-         * <li>marketplace: Alibaba Cloud Marketplace images</li>
+         * <li><p>system: public images provided by Alibaba Cloud</p>
+         * </li>
+         * <li><p>self: your custom images</p>
+         * </li>
+         * <li><p>others: shared images from other Alibaba Cloud accounts</p>
+         * </li>
+         * <li><p>marketplace: Alibaba Cloud Marketplace images</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -336,8 +342,10 @@ public class DescribeImageFromFamilyResponseBody extends TeaModel {
         /**
          * <p>The type of the operating system. Valid values:</p>
          * <ul>
-         * <li>windows</li>
-         * <li>linux</li>
+         * <li><p>windows</p>
+         * </li>
+         * <li><p>linux</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -385,10 +393,14 @@ public class DescribeImageFromFamilyResponseBody extends TeaModel {
         /**
          * <p>The state of the image. Valid values:</p>
          * <ul>
-         * <li>UnAvailable</li>
-         * <li>Available</li>
-         * <li>Creating</li>
-         * <li>CreateFailed</li>
+         * <li><p>UnAvailable</p>
+         * </li>
+         * <li><p>Available</p>
+         * </li>
+         * <li><p>Creating</p>
+         * </li>
+         * <li><p>CreateFailed</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -403,8 +415,10 @@ public class DescribeImageFromFamilyResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the image has been used to create ECS instances. Valid values:</p>
          * <ul>
-         * <li>instance: The image was used to create one or more ECS instances.</li>
-         * <li>none: The image was not used to create ECS instances.</li>
+         * <li><p>instance: The image was used to create one or more ECS instances.</p>
+         * </li>
+         * <li><p>none: The image was not used to create ECS instances.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

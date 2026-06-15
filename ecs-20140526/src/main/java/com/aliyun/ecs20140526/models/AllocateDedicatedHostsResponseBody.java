@@ -10,7 +10,7 @@ public class AllocateDedicatedHostsResponseBody extends TeaModel {
     /**
      * <p>The ID of the order.</p>
      * <blockquote>
-     * <p> This parameter has a return value only when the dedicated host is a subscription one (request parameter <strong>ChargeType set to PrePaid</strong>).</p>
+     * <p>This parameter has a return value only when the dedicated host is a subscription one (request parameter <strong>ChargeType set to PrePaid</strong>).</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

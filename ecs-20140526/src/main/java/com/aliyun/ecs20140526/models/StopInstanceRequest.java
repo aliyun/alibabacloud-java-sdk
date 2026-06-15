@@ -16,8 +16,10 @@ public class StopInstanceRequest extends TeaModel {
     /**
      * <p>Specifies whether to perform only a dry run, without performing the actual request. Valid values:</p>
      * <ul>
-     * <li>true: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, service limits, and available ECS resources. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</li>
-     * <li>false: performs a dry run and performs the actual request.</li>
+     * <li><p>true: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, service limits, and available ECS resources. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</p>
+     * </li>
+     * <li><p>false: performs a dry run and performs the actual request.</p>
+     * </li>
      * </ul>
      * <p>Default value: false.</p>
      * 
@@ -30,8 +32,10 @@ public class StopInstanceRequest extends TeaModel {
     /**
      * <p>Specifies whether to forcefully stop the ECS instance. Valid values:</p>
      * <ul>
-     * <li>true: forcefully stops the ECS instance. If you set ForceStop to true, this operation is equivalent to a power-off operation. Cache data that is not written to storage devices on the instance is lost.</li>
-     * <li>false: normally stops the ECS instance.</li>
+     * <li><p>true: forcefully stops the ECS instance. If you set ForceStop to true, this operation is equivalent to a power-off operation. Cache data that is not written to storage devices on the instance is lost.</p>
+     * </li>
+     * <li><p>false: normally stops the ECS instance.</p>
+     * </li>
      * </ul>
      * <p>Default value: false.</p>
      * 
@@ -79,13 +83,17 @@ public class StopInstanceRequest extends TeaModel {
      * <ul>
      * <li><p>StopCharging: economical mode. After an instance is stopped in economical mode:</p>
      * <ul>
-     * <li>Billing for the following resources of the instance stops: computing resources (vCPUs, memory, and GPUs), image licenses, and public bandwidth of the static public IP address (if any) that uses the pay-by-bandwidth metering method.</li>
-     * <li>Billing for the following resources of the instance continues: system disk, data disks, and public bandwidth of the elastic IP address (EIP) (if any) that uses the pay-by-bandwidth metering method.</li>
-     * <li>The instance may fail to restart due to the reclaimed computing resources or insufficient resources. Try again later or change the instance type of the instance.</li>
-     * <li>If an EIP is associated with the instance before the instance is stopped, the EIP remains unchanged after the instance is restarted. If a static public IP address is associated with the instance before the instance is stopped, the static public IP address may change, but the private IP address does not change.</li>
+     * <li><p>Billing for the following resources of the instance stops: computing resources (vCPUs, memory, and GPUs), image licenses, and public bandwidth of the static public IP address (if any) that uses the pay-by-bandwidth metering method.</p>
+     * </li>
+     * <li><p>Billing for the following resources of the instance continues: system disk, data disks, and public bandwidth of the elastic IP address (EIP) (if any) that uses the pay-by-bandwidth metering method.</p>
+     * </li>
+     * <li><p>The instance may fail to restart due to the reclaimed computing resources or insufficient resources. Try again later or change the instance type of the instance.</p>
+     * </li>
+     * <li><p>If an EIP is associated with the instance before the instance is stopped, the EIP remains unchanged after the instance is restarted. If a static public IP address is associated with the instance before the instance is stopped, the static public IP address may change, but the private IP address does not change.</p>
+     * </li>
      * </ul>
      * <p>For more information, see <a href="https://help.aliyun.com/document_detail/63353.html">Economical mode</a>.</p>
-     * <p>**</p>
+     * <p>\<em>\</em></p>
      * <p><strong>Note</strong> If the instance does not support the economical mode, the system stops the instance and does not report errors during the operation call. The following types of instances are not supported: classic network instances, local disks, and monthly instances.</p>
      * </li>
      * <li><p>KeepCharging: standard mode. After the instance is stopped in standard mode, you continue to be charged for the instance.</p>

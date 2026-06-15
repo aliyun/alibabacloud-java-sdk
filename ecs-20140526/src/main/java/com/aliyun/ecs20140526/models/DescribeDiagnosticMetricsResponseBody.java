@@ -62,7 +62,7 @@ public class DescribeDiagnosticMetricsResponseBody extends TeaModel {
          * <p>The description of the diagnostic metric.</p>
          * 
          * <strong>example:</strong>
-         * <p>CPU diagnostic</p>
+         * <p>CPU诊断</p>
          */
         @NameInMap("Description")
         public String description;
@@ -98,7 +98,7 @@ public class DescribeDiagnosticMetricsResponseBody extends TeaModel {
          * <p>The name of the diagnostic metric.</p>
          * 
          * <strong>example:</strong>
-         * <p>CPU diagnostic</p>
+         * <p>CPU诊断</p>
          */
         @NameInMap("MetricName")
         public String metricName;
@@ -115,9 +115,12 @@ public class DescribeDiagnosticMetricsResponseBody extends TeaModel {
         /**
          * <p>The operating system type supported by the diagnostic metric. Valid values:</p>
          * <ul>
-         * <li>Windows</li>
-         * <li>Linux</li>
-         * <li>All: Windows and Linux</li>
+         * <li><p>Windows</p>
+         * </li>
+         * <li><p>Linux</p>
+         * </li>
+         * <li><p>All: Windows and Linux</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

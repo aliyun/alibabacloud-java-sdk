@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeNetworkInterfacePermissionsRequest extends TeaModel {
     /**
-     * <p>The ID of ENI N. You must specify <code>NetworkInterfaceId</code> or <code>NetworkInterfacePermissionId.N</code> to determine the query range.</p>
+     * <p>The network interface ID. You must specify either <code>NetworkInterfaceId</code> or <code>NetworkInterfacePermissionId.N</code> to determine the query scope.</p>
      * 
      * <strong>example:</strong>
      * <p>eni-bp17pdijfczax****</p>
@@ -14,7 +14,7 @@ public class DescribeNetworkInterfacePermissionsRequest extends TeaModel {
     public String networkInterfaceId;
 
     /**
-     * <p>The IDs of ENI permissions. You can specify up to 100 ENI permission IDs.</p>
+     * <p>An array of network interface permission IDs. The array can contain 1 to 100 IDs.</p>
      * 
      * <strong>example:</strong>
      * <p>eni-perm-bp1cs4lwn56lfb****</p>
@@ -29,9 +29,9 @@ public class DescribeNetworkInterfacePermissionsRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The page number.</p>
-     * <p>Pages start from page 1.</p>
-     * <p>Default value: 1.</p>
+     * <p>The page number to return.</p>
+     * <p>Starting value: 1</p>
+     * <p>Default value: 1</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -41,8 +41,8 @@ public class DescribeNetworkInterfacePermissionsRequest extends TeaModel {
 
     /**
      * <p>The number of entries per page.</p>
-     * <p>Maximum value: 100.</p>
-     * <p>Default value: 10.</p>
+     * <p>Maximum value: 100</p>
+     * <p>Default value: 10</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -51,7 +51,7 @@ public class DescribeNetworkInterfacePermissionsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The region ID of the ENI permission. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>The ID of the region for the network interface permission. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to obtain the latest list of Alibaba Cloud regions.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

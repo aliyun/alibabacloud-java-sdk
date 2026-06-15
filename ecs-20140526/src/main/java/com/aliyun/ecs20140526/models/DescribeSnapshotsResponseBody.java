@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeSnapshotsResponseBody extends TeaModel {
     /**
-     * <p>A pagination token. It can be used in the next request to retrieve a new page of results.</p>
+     * <p>A pagination token used to retrieve the next page of results.</p>
      * 
      * <strong>example:</strong>
      * <p>caeba0bbb2be03f84eb48b699f0a4883</p>
@@ -15,7 +15,7 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
 
     /**
      * <blockquote>
-     * <p> This parameter will be removed in the future. We recommend that you use NextToken and MaxResults for a paged query.</p>
+     * <p>This parameter is deprecated. Use the <code>NextToken</code> and <code>MaxResults</code> parameters for pagination instead.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -26,7 +26,7 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
 
     /**
      * <blockquote>
-     * <p> This parameter will be removed in the future. We recommend that you use NextToken and MaxResults for a paged query.</p>
+     * <p>This parameter is deprecated. Use the <code>NextToken</code> and <code>MaxResults</code> parameters for pagination instead.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -44,13 +44,16 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Details about the snapshots.</p>
+     */
     @NameInMap("Snapshots")
     public DescribeSnapshotsResponseBodySnapshots snapshots;
 
     /**
      * <p>The total number of snapshots.</p>
      * <blockquote>
-     * <p>When using the <code>MaxResults</code> and <code>NextToken</code> parameters for a paginated query, the returned <code>TotalCount</code> parameter value is invalid.</p>
+     * <p>The <code>TotalCount</code> value is invalid if you use the <code>MaxResults</code> and <code>NextToken</code> parameters for pagination.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

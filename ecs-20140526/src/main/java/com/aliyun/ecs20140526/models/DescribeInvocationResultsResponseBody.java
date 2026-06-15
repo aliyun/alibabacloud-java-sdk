@@ -9,32 +9,42 @@ public class DescribeInvocationResultsResponseBody extends TeaModel {
      * <ul>
      * <li><p>Running:</p>
      * <ul>
-     * <li>Scheduled task: Before you stop the scheduled execution of the command, the execution state is always Running.</li>
-     * <li>One-time task: If the command is being run on instances, the execution state is Running.</li>
+     * <li><p>Scheduled task: Before you stop the scheduled execution of the command, the execution state is always Running.</p>
+     * </li>
+     * <li><p>One-time task: If the command is being run on instances, the execution state is Running.</p>
+     * </li>
      * </ul>
      * </li>
      * <li><p>Finished:</p>
      * <ul>
-     * <li>Scheduled task: The execution state can never be Finished.</li>
-     * <li>One-time task: The execution is complete on all instances, or the execution is stopped on some instances and is complete on the other instances.</li>
+     * <li><p>Scheduled task: The execution state can never be Finished.</p>
+     * </li>
+     * <li><p>One-time task: The execution is complete on all instances, or the execution is stopped on some instances and is complete on the other instances.</p>
+     * </li>
      * </ul>
      * </li>
      * <li><p>Success:</p>
      * <ul>
-     * <li>One-time task: The execution is complete, and the exit code is 0.</li>
-     * <li>Scheduled task: The last execution is complete, the exit code is 0, and the specified period ends.</li>
+     * <li><p>One-time task: The execution is complete, and the exit code is 0.</p>
+     * </li>
+     * <li><p>Scheduled task: The last execution is complete, the exit code is 0, and the specified period ends.</p>
+     * </li>
      * </ul>
      * </li>
      * <li><p>Failed:</p>
      * <ul>
-     * <li>Scheduled task: The execution state can never be Failed.</li>
-     * <li>One-time task: The execution fails on all instances.</li>
+     * <li><p>Scheduled task: The execution state can never be Failed.</p>
+     * </li>
+     * <li><p>One-time task: The execution fails on all instances.</p>
+     * </li>
      * </ul>
      * </li>
      * <li><p>PartialFailed:</p>
      * <ul>
-     * <li>Scheduled task: The execution state can never be PartialFailed.</li>
-     * <li>One-time task: The execution fails on some instances.</li>
+     * <li><p>Scheduled task: The execution state can never be PartialFailed.</p>
+     * </li>
+     * <li><p>One-time task: The execution fails on some instances.</p>
+     * </li>
      * </ul>
      * </li>
      * <li><p>Stopped: The task is stopped.</p>
@@ -433,7 +443,7 @@ public class DescribeInvocationResultsResponseBody extends TeaModel {
 
         /**
          * <blockquote>
-         * <p> This parameter will be removed in the future. We recommend that you use NextToken and MaxResults for a paged query.</p>
+         * <p>This parameter will be removed in the future. We recommend that you use NextToken and MaxResults for a paged query.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -445,8 +455,10 @@ public class DescribeInvocationResultsResponseBody extends TeaModel {
         /**
          * <p>The encoding mode of the <code>CommandContent</code> and <code>Output</code> values in the response. Valid values:</p>
          * <ul>
-         * <li>PlainText: returns the original command content and command output.</li>
-         * <li>Base64: returns the Base64-encoded command content and command output.</li>
+         * <li><p>PlainText: returns the original command content and command output.</p>
+         * </li>
+         * <li><p>Base64: returns the Base64-encoded command content and command output.</p>
+         * </li>
          * </ul>
          * <p>Default value: Base64.</p>
          * 
@@ -459,8 +471,10 @@ public class DescribeInvocationResultsResponseBody extends TeaModel {
         /**
          * <p>Specifies whether to return the results of historical scheduled executions. Valid values:</p>
          * <ul>
-         * <li>true: returns the results of historical scheduled executions. If you set this parameter to true, you must set InvokeId to the ID of a task that is run on a schedule (RepeatMode set to Period) or on each system startup (RepeatMode set to EveryReboot).</li>
-         * <li>false: does not return the results of historical scheduled executions.</li>
+         * <li><p>true: returns the results of historical scheduled executions. If you set this parameter to true, you must set InvokeId to the ID of a task that is run on a schedule (RepeatMode set to Period) or on each system startup (RepeatMode set to EveryReboot).</p>
+         * </li>
+         * <li><p>false: does not return the results of historical scheduled executions.</p>
+         * </li>
          * </ul>
          * <p>Default value: false.</p>
          * 
@@ -472,7 +486,7 @@ public class DescribeInvocationResultsResponseBody extends TeaModel {
 
         /**
          * <blockquote>
-         * <p> This parameter will be removed in the future. We recommend that you use NextToken and MaxResults for a paged query.</p>
+         * <p>This parameter will be removed in the future. We recommend that you use NextToken and MaxResults for a paged query.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

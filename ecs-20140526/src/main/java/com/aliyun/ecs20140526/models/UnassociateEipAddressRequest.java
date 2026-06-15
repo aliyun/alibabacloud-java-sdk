@@ -5,17 +5,29 @@ import com.aliyun.tea.*;
 
 public class UnassociateEipAddressRequest extends TeaModel {
     /**
+     * <p>The allocation ID of the EIP.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("AllocationId")
     public String allocationId;
 
     /**
+     * <p>This parameter is optional because the system automatically determines the instance ID from the provided <code>AllocationId</code>.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>The type of the associated instance. Valid values:</p>
+     * <ul>
+     * <li><code>EcsInstance</code>: An ECS instance. This is the default.</li>
+     * <li><code>SlbInstance</code>: A Classic Load Balancer (CLB) instance.</li>
+     * <li><code>Nat</code>: A NAT gateway.</li>
+     * <li><code>HaVip</code>: A high-availability virtual IP address (HaVip).</li>
+     * <li><code>NetworkInterface</code>: A secondary elastic network interface.</li>
+     * </ul>
+     */
     @NameInMap("InstanceType")
     public String instanceType;
 
@@ -25,6 +37,9 @@ public class UnassociateEipAddressRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The ID of the region where the EIP is located. To get the latest list of regions, call the <code>DescribeRegions</code> operation.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

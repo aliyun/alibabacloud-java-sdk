@@ -4,9 +4,15 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class ExportSnapshotResponseBody extends TeaModel {
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The export task ID. Call the <code>DescribeTasks</code> operation to check the task status.</p>
+     */
     @NameInMap("TaskId")
     public String taskId;
 

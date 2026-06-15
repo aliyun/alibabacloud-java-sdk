@@ -10,8 +10,10 @@ public class ModifyDedicatedHostAttributeRequest extends TeaModel {
     /**
      * <p>The policy for migrating the instances deployed on the dedicated host when the dedicated host fails or needs to be repaired online. Valid values:</p>
      * <ul>
-     * <li>Migrate: The instances are migrated to another physical machine and then restarted.</li>
-     * <li>Stop: The instances are stopped. If the dedicated host cannot be repaired, the instances are migrated to another physical machine and then restarted.</li>
+     * <li><p>Migrate: The instances are migrated to another physical machine and then restarted.</p>
+     * </li>
+     * <li><p>Stop: The instances are stopped. If the dedicated host cannot be repaired, the instances are migrated to another physical machine and then restarted.</p>
+     * </li>
      * </ul>
      * <p>If the dedicated host has cloud disks attached, the default value is Migrate.</p>
      * <p>If the dedicated host has local disks attached, the default value is Stop.</p>
@@ -25,8 +27,10 @@ public class ModifyDedicatedHostAttributeRequest extends TeaModel {
     /**
      * <p>Specifies whether to add the dedicated host to the resource pool for automatic deployment. If you do not specify <strong>DedicatedHostId</strong> when you create an instance on a dedicated host, Alibaba Cloud automatically selects a dedicated host from the resource pool to host the instance. Valid values:</p>
      * <ul>
-     * <li>on: adds the dedicated host to the resource pool for automatic deployment.</li>
-     * <li>off: does not add the dedicated host to the resource pool for automatic deployment.</li>
+     * <li><p>on: adds the dedicated host to the resource pool for automatic deployment.</p>
+     * </li>
+     * <li><p>off: does not add the dedicated host to the resource pool for automatic deployment.</p>
+     * </li>
      * </ul>
      * <p>For information about automatic deployment, see <a href="https://help.aliyun.com/document_detail/118938.html">Functions and features</a>.</p>
      * 
@@ -66,7 +70,7 @@ public class ModifyDedicatedHostAttributeRequest extends TeaModel {
     public String dedicatedHostId;
 
     /**
-     * <p>The name of the dedicated host. The name must be 2 to 128 characters in length. The name must start with a letter and cannot start with http:// or https://. The name can contain letters, digits, colons (:), underscores (_), and hyphens (-).</p>
+     * <p>The name of the dedicated host. The name must be 2 to 128 characters in length. The name must start with a letter and cannot start with http\:// or https\://. The name can contain letters, digits, colons (:), underscores (_), and hyphens (-).</p>
      * 
      * <strong>example:</strong>
      * <p>testDedicatedHostName</p>

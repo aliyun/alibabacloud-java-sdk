@@ -35,7 +35,7 @@ public class DescribeResourceByTagsResponseBody extends TeaModel {
     public DescribeResourceByTagsResponseBodyResources resources;
 
     /**
-     * <p>The total number of resources returned.</p>
+     * <p>The total number of resources.</p>
      * 
      * <strong>example:</strong>
      * <p>8</p>

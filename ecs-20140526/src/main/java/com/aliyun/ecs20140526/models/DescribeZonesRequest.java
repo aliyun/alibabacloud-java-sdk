@@ -7,13 +7,20 @@ public class DescribeZonesRequest extends TeaModel {
     /**
      * <p>The natural language that is used to filter responses. For more information, see <a href="https://tools.ietf.org/html/rfc7231">RFC 7231</a>. Valid values:</p>
      * <ul>
-     * <li>zh-CN: Simplified Chinese</li>
-     * <li>zh_TW: Traditional Chinese</li>
-     * <li>en-US: English</li>
-     * <li>ja: Japanese</li>
-     * <li>fr: French</li>
-     * <li>de: German</li>
-     * <li>ko: Korean</li>
+     * <li><p>zh-CN: Simplified Chinese</p>
+     * </li>
+     * <li><p>zh_TW: Traditional Chinese</p>
+     * </li>
+     * <li><p>en-US: English</p>
+     * </li>
+     * <li><p>ja: Japanese</p>
+     * </li>
+     * <li><p>fr: French</p>
+     * </li>
+     * <li><p>de: German</p>
+     * </li>
+     * <li><p>ko: Korean</p>
+     * </li>
      * </ul>
      * <p>Default value: zh-CN.</p>
      * 
@@ -26,8 +33,10 @@ public class DescribeZonesRequest extends TeaModel {
     /**
      * <p>The billing method of resources. For more information, see <a href="https://help.aliyun.com/document_detail/25398.html">Billing overview</a>. Valid values:</p>
      * <ul>
-     * <li>Prepaid: subscription</li>
-     * <li>PostPaid: pay-as-you-go</li>
+     * <li><p>Prepaid: subscription</p>
+     * </li>
+     * <li><p>PostPaid: pay-as-you-go</p>
+     * </li>
      * </ul>
      * <p>Default value: PostPaid.</p>
      * 
@@ -62,9 +71,12 @@ public class DescribeZonesRequest extends TeaModel {
     /**
      * <p>The bidding policy for the pay-as-you-go instance. You can specify this parameter when you set <code>InstanceChargeType</code> to PostPaid. For more information, see <a href="https://help.aliyun.com/document_detail/52088.html">Spot instances</a>. Valid values:</p>
      * <ul>
-     * <li>NoSpot: The instances are regular pay-as-you-go instances.</li>
-     * <li>SpotWithPriceLimit: The instance is a spot instance that has a user-defined maximum hourly price.</li>
-     * <li>SpotAsPriceGo: The instance is a spot instance for which the market price is automatically used as the bid price. The market price can be up to the pay-as-you-go price.</li>
+     * <li><p>NoSpot: The instances are regular pay-as-you-go instances.</p>
+     * </li>
+     * <li><p>SpotWithPriceLimit: The instance is a spot instance that has a user-defined maximum hourly price.</p>
+     * </li>
+     * <li><p>SpotAsPriceGo: The instance is a spot instance for which the market price is automatically used as the bid price. The market price can be up to the pay-as-you-go price.</p>
+     * </li>
      * </ul>
      * <p>Default value: NoSpot.</p>
      * 
@@ -77,8 +89,10 @@ public class DescribeZonesRequest extends TeaModel {
     /**
      * <p>Specifies whether to display detailed information.</p>
      * <ul>
-     * <li>true: displays detailed information.</li>
-     * <li>false: does not display detailed information.</li>
+     * <li><p>true: displays detailed information.</p>
+     * </li>
+     * <li><p>false: does not display detailed information.</p>
+     * </li>
      * </ul>
      * <p>Default value: true.</p>
      * 

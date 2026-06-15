@@ -4,6 +4,9 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class CancelPhysicalConnectionRequest extends TeaModel {
+    /**
+     * <p>A client-generated token to ensure the idempotence of the request. This token must be unique for each request. It can contain only ASCII characters and must not exceed 64 characters in length.</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
@@ -14,12 +17,14 @@ public class CancelPhysicalConnectionRequest extends TeaModel {
     public Long ownerId;
 
     /**
+     * <p>The ID of the Express Connect circuit.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("PhysicalConnectionId")
     public String physicalConnectionId;
 
     /**
+     * <p>The ID of the region where the Express Connect circuit is deployed. You can call the <code>DescribeRegions</code> operation to obtain the latest list of regions.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
@@ -31,6 +36,9 @@ public class CancelPhysicalConnectionRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The client-side CIDR block of the physical connection.</p>
+     */
     @NameInMap("UserCidr")
     public String userCidr;
 

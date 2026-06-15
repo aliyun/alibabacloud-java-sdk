@@ -53,7 +53,7 @@ public class StartImagePipelineExecutionRequest extends TeaModel {
 
     /**
      * <blockquote>
-     * <p> This parameter is deprecated.</p>
+     * <p>This parameter is deprecated.</p>
      * </blockquote>
      */
     @NameInMap("TemplateTag")
@@ -183,7 +183,7 @@ public class StartImagePipelineExecutionRequest extends TeaModel {
     public static class StartImagePipelineExecutionRequestTemplateTag extends TeaModel {
         /**
          * <blockquote>
-         * <p> This parameter is deprecated.</p>
+         * <p>This parameter is deprecated.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -194,7 +194,7 @@ public class StartImagePipelineExecutionRequest extends TeaModel {
 
         /**
          * <blockquote>
-         * <p> This parameter is deprecated.</p>
+         * <p>This parameter is deprecated.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

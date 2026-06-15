@@ -120,7 +120,7 @@ public class CreateKeyPairRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The value of tag N to add to the key pair. Valid values of N: 1 to 20. The tag value can be an empty string. The tag value can be up to 128 characters in length and cannot contain http:// or https://. The tag value cannot start with acs:.</p>
+         * <p>The value of tag N to add to the key pair. Valid values of N: 1 to 20. The tag value can be an empty string. The tag value can be up to 128 characters in length and cannot contain http\:// or https\://. The tag value cannot start with acs:.</p>
          * 
          * <strong>example:</strong>
          * <p>TestValue</p>

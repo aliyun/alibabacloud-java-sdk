@@ -36,25 +36,44 @@ public class TagResourcesRequest extends TeaModel {
     /**
      * <p>The type of the resource to which the tags are added. Valid values:</p>
      * <ul>
-     * <li>instance: ECS instance</li>
-     * <li>disk: disk</li>
-     * <li>snapshot: snapshot</li>
-     * <li>image: image</li>
-     * <li>securitygroup: security group</li>
-     * <li>volume: storage volume</li>
-     * <li>eni: ENI</li>
-     * <li>ddh: dedicated host</li>
-     * <li>ddhcluster: dedicated host cluster</li>
-     * <li>keypair: SSH key pair</li>
-     * <li>launchtemplate: launch template</li>
-     * <li>reservedinstance</li>
-     * <li>snapshotpolicy: automatic snapshot policy</li>
-     * <li>elasticityassurance: elasticity assurance</li>
-     * <li>capacityreservation: capacity reservation</li>
-     * <li>command: Cloud Assistant command</li>
-     * <li>invocation: Cloud Assistant command execution result or file delivery result</li>
-     * <li>activation: activation code for a Cloud Assistant managed instance</li>
-     * <li>managedinstance: Cloud Assistant managed instance</li>
+     * <li><p>instance: ECS instance</p>
+     * </li>
+     * <li><p>disk: disk</p>
+     * </li>
+     * <li><p>snapshot: snapshot</p>
+     * </li>
+     * <li><p>image: image</p>
+     * </li>
+     * <li><p>securitygroup: security group</p>
+     * </li>
+     * <li><p>volume: storage volume</p>
+     * </li>
+     * <li><p>eni: ENI</p>
+     * </li>
+     * <li><p>ddh: dedicated host</p>
+     * </li>
+     * <li><p>ddhcluster: dedicated host cluster</p>
+     * </li>
+     * <li><p>keypair: SSH key pair</p>
+     * </li>
+     * <li><p>launchtemplate: launch template</p>
+     * </li>
+     * <li><p>reservedinstance</p>
+     * </li>
+     * <li><p>snapshotpolicy: automatic snapshot policy</p>
+     * </li>
+     * <li><p>elasticityassurance: elasticity assurance</p>
+     * </li>
+     * <li><p>capacityreservation: capacity reservation</p>
+     * </li>
+     * <li><p>command: Cloud Assistant command</p>
+     * </li>
+     * <li><p>invocation: Cloud Assistant command execution result or file delivery result</p>
+     * </li>
+     * <li><p>activation: activation code for a Cloud Assistant managed instance</p>
+     * </li>
+     * <li><p>managedinstance: Cloud Assistant managed instance</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -65,7 +84,7 @@ public class TagResourcesRequest extends TeaModel {
     public String resourceType;
 
     /**
-     * <p>The tags of the reserved instance. You can specify up to 20 tags. If you specify multiple tags, the tag keys cannot be duplicated.``</p>
+     * <p>The tags of the reserved instance. You can specify up to 20 tags. If you specify multiple tags, the tag keys cannot be duplicated.\<code>\\</code></p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Tag")

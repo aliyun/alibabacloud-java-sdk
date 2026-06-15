@@ -7,8 +7,10 @@ public class DescribePortRangeListsRequest extends TeaModel {
     /**
      * <p>The maximum number of entries per page.</p>
      * <ul>
-     * <li>Maximum value: 100</li>
-     * <li>Default value: 10.</li>
+     * <li><p>Maximum value: 100</p>
+     * </li>
+     * <li><p>Default value: 10.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -39,7 +41,7 @@ public class DescribePortRangeListsRequest extends TeaModel {
     public java.util.List<String> portRangeListId;
 
     /**
-     * <p>The name of the port list. The name must be 2 to 128 characters in length. It must start with a letter and cannot start with http://, https://, com.aliyun, or com.alibabacloud. The name can contain letters, digits, colons (:), underscores (_), periods (.), and hyphens (-).</p>
+     * <p>The name of the port list. The name must be 2 to 128 characters in length. It must start with a letter and cannot start with http\://, https\://, com.aliyun, or com.alibabacloud. The name can contain letters, digits, colons (:), underscores (_), periods (.), and hyphens (-).</p>
      * 
      * <strong>example:</strong>
      * <p>PortRangeListNameSample</p>
@@ -60,7 +62,7 @@ public class DescribePortRangeListsRequest extends TeaModel {
     /**
      * <p>The ID of the resource group. If you specify this parameter to query resources, up to 1,000 resources that belong to the specified resource group can be returned in the response. You can call the <a href="https://help.aliyun.com/document_detail/2716558.html">ListResourceGroups</a> operation to query the most recent resource group list.</p>
      * <blockquote>
-     * <p> A default resource group is not supported.</p>
+     * <p>A default resource group is not supported.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

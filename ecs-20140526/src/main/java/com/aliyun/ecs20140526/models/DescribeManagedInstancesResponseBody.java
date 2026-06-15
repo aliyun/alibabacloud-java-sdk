@@ -175,8 +175,10 @@ public class DescribeManagedInstancesResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the managed instance is connected. Valid values:</p>
          * <ul>
-         * <li>true: The managed instance is connected. You can manage the instance by using Cloud Assistant.</li>
-         * <li>false: The managed instance is not connected. The managed instance may be down or Cloud Assistant Agent may be incorrectly installed.</li>
+         * <li><p>true: The managed instance is connected. You can manage the instance by using Cloud Assistant.</p>
+         * </li>
+         * <li><p>false: The managed instance is not connected. The managed instance may be down or Cloud Assistant Agent may be incorrectly installed.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

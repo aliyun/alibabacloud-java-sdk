@@ -4,6 +4,9 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeVpcsRequest extends TeaModel {
+    /**
+     * <p>Specifies whether the VPC is a default VPC. Set to <code>true</code> to query the default VPC, or <code>false</code> to query non-default VPCs.</p>
+     */
     @NameInMap("IsDefault")
     public Boolean isDefault;
 
@@ -13,13 +16,20 @@ public class DescribeVpcsRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The page number. Default: 1.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries to return on each page. Default: 10. Valid values: 1 to 50.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
+     * <p>The ID of the region.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
@@ -31,6 +41,9 @@ public class DescribeVpcsRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The ID of the VPC.</p>
+     */
     @NameInMap("VpcId")
     public String vpcId;
 

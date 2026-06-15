@@ -4,11 +4,18 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class CreateDeploymentSetRequest extends TeaModel {
+    /**
+     * <p>The affinity level of the deployment set. This level determines how instances are distributed within the set. The value must be an integer from 1 to 10. Default value: 1.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3</p>
+     */
     @NameInMap("Affinity")
     public Long affinity;
 
     /**
-     * <p>The description of the deployment set. The description must be 2 to 256 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</p>
+     * <p>A client-generated token that you can use to ensure request idempotence. The token must be unique across requests.</p>
+     * <p>The <strong>ClientToken</strong> value must be an ASCII string of up to 64 characters. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>123e4567-e89b-12d3-a456-426655440000</p>
@@ -17,7 +24,7 @@ public class CreateDeploymentSetRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The name of the deployment set. The name must be 2 to 128 characters in length. The name must start with a letter and cannot start with <code>http://</code> or <code>https://</code>. The name can contain digits, letters, colons (:), underscores (_), and hyphens (-).</p>
+     * <p>The name of the deployment set. The name must be 2 to 128 characters long and start with a letter. It can contain digits, colons (:), underscores (_), and hyphens (-). The name cannot start with <code>http://</code> or <code>https://</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>testDeploymentSetName</p>
@@ -26,12 +33,7 @@ public class CreateDeploymentSetRequest extends TeaModel {
     public String deploymentSetName;
 
     /**
-     * <p>The emergency solution to use in the situation where instances in the deployment set cannot be evenly distributed to different zones due to resource insufficiency after the instances failover. Valid values:</p>
-     * <ul>
-     * <li>CancelMembershipAndStart: removes the instances from the deployment set and starts the instances immediately after they are failed over.</li>
-     * <li>KeepStopped: leaves the instances in the Stopped state and starts them after resources are replenished.</li>
-     * </ul>
-     * <p>Default value: CancelMembershipAndStart.</p>
+     * <p>The description of the deployment set. The description must be 2 to 256 characters long and cannot start with <code>http://</code> or <code>https://</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>testDescription</p>
@@ -41,33 +43,32 @@ public class CreateDeploymentSetRequest extends TeaModel {
 
     /**
      * <blockquote>
-     * <p> This parameter is deprecated.</p>
+     * <p>This parameter is deprecated.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
-     * <p>Default</p>
+     * <p>null</p>
      */
     @NameInMap("Domain")
     public String domain;
 
     /**
      * <blockquote>
-     * <p> This parameter is deprecated.</p>
+     * <p>This parameter is deprecated.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
-     * <p>host</p>
+     * <p>null</p>
      */
     @NameInMap("Granularity")
     public String granularity;
 
     /**
-     * <p>The deployment strategy. Valid values:</p>
-     * <ul>
-     * <li>Availability: high availability strategy.</li>
-     * <li>AvailabilityGroup: high availability group strategy.</li>
-     * </ul>
-     * <p>Default value: Availability.</p>
+     * <p>The number of partitions in the deployment set group. Valid values: 1 to 7.</p>
+     * <p>Default value: 3.</p>
+     * <blockquote>
+     * <p>This parameter is valid only when <code>Strategy</code> is set to <code>AvailabilityGroup</code>.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -76,7 +77,14 @@ public class CreateDeploymentSetRequest extends TeaModel {
     public Long groupCount;
 
     /**
-     * <p>The region ID of the deployment set. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent list of regions.</p>
+     * <p>The policy for an instance that fails to be redeployed after a failover due to insufficient resources. Valid values:</p>
+     * <ul>
+     * <li><p>CancelMembershipAndStart: Removes the instance from the deployment set and starts the instance immediately after failover.</p>
+     * </li>
+     * <li><p>KeepStopped: Keeps the instance in the deployment set and in the Stopped state.</p>
+     * </li>
+     * </ul>
+     * <p>Default value: CancelMembershipAndStart.</p>
      * 
      * <strong>example:</strong>
      * <p>CancelMembershipAndStart</p>
@@ -91,7 +99,7 @@ public class CreateDeploymentSetRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>Creates a deployment set in a specific region.</p>
+     * <p>The ID of the region for the deployment set. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to view the latest list of Alibaba Cloud regions.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -109,9 +117,12 @@ public class CreateDeploymentSetRequest extends TeaModel {
     /**
      * <p>The deployment strategy. Valid values:</p>
      * <ul>
-     * <li>Availability: high availability strategy</li>
-     * <li>AvailabilityGroup: high availability group strategy</li>
-     * <li>LowLatency: low latency strategy</li>
+     * <li><p>Availability: High availability strategy.</p>
+     * </li>
+     * <li><p>AvailabilityGroup: High availability strategy for deployment set groups.</p>
+     * </li>
+     * <li><p>LowLatency: Low-latency strategy.</p>
+     * </li>
      * </ul>
      * <p>Default value: Availability.</p>
      * 
@@ -121,6 +132,21 @@ public class CreateDeploymentSetRequest extends TeaModel {
     @NameInMap("Strategy")
     public String strategy;
 
+    /**
+     * <p>The deployment granularity. Valid values:</p>
+     * <ul>
+     * <li><p>host: Spreads instances across different hosts.</p>
+     * </li>
+     * <li><p>sw: Spreads instances across different switches.</p>
+     * </li>
+     * <li><p>rack: Spreads instances across different racks.</p>
+     * </li>
+     * </ul>
+     * <p>Default value: host.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>host</p>
+     */
     @NameInMap("Type")
     public String type;
 

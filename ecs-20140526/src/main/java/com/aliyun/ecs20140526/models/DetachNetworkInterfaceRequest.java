@@ -7,7 +7,7 @@ public class DetachNetworkInterfaceRequest extends TeaModel {
     /**
      * <p>The ID of the trunk ENI.</p>
      * <blockquote>
-     * <p> This parameter is unavailable for use.</p>
+     * <p>This parameter is unavailable for use.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 

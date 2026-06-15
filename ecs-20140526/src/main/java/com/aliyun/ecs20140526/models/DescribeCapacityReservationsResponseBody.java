@@ -17,7 +17,7 @@ public class DescribeCapacityReservationsResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>A pagination token. It can be used in the next request to retrieve a new page of results.If NextToken is empty, no next page exists.</p>
+     * <p>The token to retrieve the next page of results.</p>
      * 
      * <strong>example:</strong>
      * <p>caeba0bbb2be03f84eb48b699f0a****</p>
@@ -35,7 +35,7 @@ public class DescribeCapacityReservationsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of entries returned.</p>
+     * <p>The total number of capacity reservations that match the query.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>

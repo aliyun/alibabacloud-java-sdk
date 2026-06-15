@@ -5,15 +5,20 @@ import com.aliyun.tea.*;
 
 public class AddBandwidthPackageIpsRequest extends TeaModel {
     /**
+     * <p>The ID of the bandwidth package.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("BandwidthPackageId")
     public String bandwidthPackageId;
 
+    /**
+     * <p>A token that you can specify to ensure the idempotency of the request. The token must be unique across requests. It can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
+     * <p>The number of public IP addresses to add to the bandwidth package. Valid values: 1 to 256.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("IpCount")
@@ -26,6 +31,7 @@ public class AddBandwidthPackageIpsRequest extends TeaModel {
     public Long ownerId;
 
     /**
+     * <p>The ID of the region where the bandwidth package is located. You can call the <a href="~~DescribeRegions~~">DescribeRegions</a> operation to query the most recent region list.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")

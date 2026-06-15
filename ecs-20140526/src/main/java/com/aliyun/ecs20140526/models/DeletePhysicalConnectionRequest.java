@@ -4,6 +4,9 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DeletePhysicalConnectionRequest extends TeaModel {
+    /**
+     * <p>A client-generated, case-sensitive token used to ensure request idempotency. This token must be unique across all requests and contain a maximum of 64 ASCII characters.</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
@@ -14,12 +17,14 @@ public class DeletePhysicalConnectionRequest extends TeaModel {
     public Long ownerId;
 
     /**
+     * <p>The ID of the physical connection.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("PhysicalConnectionId")
     public String physicalConnectionId;
 
     /**
+     * <p>The region ID of the physical connection.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")

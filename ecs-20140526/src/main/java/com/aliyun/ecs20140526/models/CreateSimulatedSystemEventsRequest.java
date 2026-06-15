@@ -7,13 +7,20 @@ public class CreateSimulatedSystemEventsRequest extends TeaModel {
     /**
      * <p>The type of the system event. Valid values:</p>
      * <ul>
-     * <li>SystemMaintenance.Reboot: The instance is restarted due to system maintenance.</li>
-     * <li>SystemFailure.Reboot: The instance is restarted due to a system error.</li>
-     * <li>InstanceFailure.Reboot: The instance is restarted due to an instance error.</li>
-     * <li>SystemMaintenance.Stop: The instance is stopped due to system maintenance.</li>
-     * <li>SystemMaintenance.Redeploy: The instance is redeployed due to system maintenance.</li>
-     * <li>SystemFailure.Redeploy: The instance is redeployed due to a system error.</li>
-     * <li>SystemFailure.Stop: The instance is stopped due to a system error.</li>
+     * <li><p>SystemMaintenance.Reboot: The instance is restarted due to system maintenance.</p>
+     * </li>
+     * <li><p>SystemFailure.Reboot: The instance is restarted due to a system error.</p>
+     * </li>
+     * <li><p>InstanceFailure.Reboot: The instance is restarted due to an instance error.</p>
+     * </li>
+     * <li><p>SystemMaintenance.Stop: The instance is stopped due to system maintenance.</p>
+     * </li>
+     * <li><p>SystemMaintenance.Redeploy: The instance is redeployed due to system maintenance.</p>
+     * </li>
+     * <li><p>SystemFailure.Redeploy: The instance is redeployed due to a system error.</p>
+     * </li>
+     * <li><p>SystemFailure.Stop: The instance is stopped due to a system error.</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

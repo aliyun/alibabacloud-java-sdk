@@ -8,7 +8,7 @@ public class DescribeDisksResponseBody extends TeaModel {
     public DescribeDisksResponseBodyDisks disks;
 
     /**
-     * <p>The returned pagination token which can be used in the next request to retrieve a new page of results.</p>
+     * <p>The token returned to retrieve the next page of results.</p>
      * 
      * <strong>example:</strong>
      * <p>AAAAAdDWBF2****</p>
@@ -18,7 +18,7 @@ public class DescribeDisksResponseBody extends TeaModel {
 
     /**
      * <blockquote>
-     * <p> This parameter will be removed in the future. We recommend that you use <code>NextToken</code> and <code>MaxResults</code> for a paged query.</p>
+     * <p>This parameter is deprecated. We recommend that you use the <code>NextToken </code>and <code>MaxResults </code>parameters for pagination.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -29,7 +29,7 @@ public class DescribeDisksResponseBody extends TeaModel {
 
     /**
      * <blockquote>
-     * <p> This parameter will be removed in the future. We recommend that you use <code>NextToken</code> and <code>MaxResults</code> for a paged query.</p>
+     * <p>This parameter is deprecated. We recommend that you use the <code>NextToken </code>and <code>MaxResults </code>parameters for pagination.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -50,7 +50,7 @@ public class DescribeDisksResponseBody extends TeaModel {
     /**
      * <p>The total number of entries returned.</p>
      * <blockquote>
-     * <p>When using the <code>MaxResults</code> and <code>NextToken</code> parameters for a paginated query, the returned <code>TotalCount</code> parameter value is invalid.</p>
+     * <p>When you use the<code>MaxResults</code> and<code>NextToken</code> parameters for pagination, the value of <code>TotalCount</code> is invalid.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

@@ -14,7 +14,7 @@ public class CreateInstanceResponseBody extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The order ID. This parameter is returned only if <code>InstanceChargeType</code> is set to PrePaid.</p>
+     * <p>The order ID. This parameter is returned only when you create a Subscription ECS instance (if <code>InstanceChargeType=PrePaid</code>).</p>
      * 
      * <strong>example:</strong>
      * <p>1234567890</p>
@@ -32,7 +32,7 @@ public class CreateInstanceResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The transaction price.</p>
+     * <p>The trade price. This parameter is returned only when you create a Subscription instance.</p>
      * 
      * <strong>example:</strong>
      * <p>0.165</p>

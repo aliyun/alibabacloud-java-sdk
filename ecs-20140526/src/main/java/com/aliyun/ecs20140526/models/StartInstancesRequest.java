@@ -7,8 +7,10 @@ public class StartInstancesRequest extends TeaModel {
     /**
      * <p>The batch operation mode. Valid values:</p>
      * <ul>
-     * <li>AllTogether: starts all ECS instances at the same time. If all ECS instances are started, a success message is returned. If an ECS instance fails to be started, all the specified instances fail to be started and an error message is returned.</li>
-     * <li>SuccessFirst: separately starts each ECS instance. The response contains the operation results of each ECS instance.</li>
+     * <li><p>AllTogether: starts all ECS instances at the same time. If all ECS instances are started, a success message is returned. If an ECS instance fails to be started, all the specified instances fail to be started and an error message is returned.</p>
+     * </li>
+     * <li><p>SuccessFirst: separately starts each ECS instance. The response contains the operation results of each ECS instance.</p>
+     * </li>
      * </ul>
      * <p>Default value: AllTogether.</p>
      * 

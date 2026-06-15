@@ -8,16 +8,16 @@ public class CreateDiagnosticReportShrinkRequest extends TeaModel {
     public String additionalOptionsShrink;
 
     /**
-     * <p>The end time. This parameter takes effect only for diagnostic metrics that do not need to be assessed by running Cloud Assistant commands in guest operating systems.</p>
+     * <p>The end time. This parameter applies only to diagnostic metrics that do not require running Cloud Assistant commands in the guest OS.</p>
      * 
      * <strong>example:</strong>
-     * <p>2022-07-11T14:00:00Z</p>
+     * <p>2022-07-11T14:00Z</p>
      */
     @NameInMap("EndTime")
     public String endTime;
 
     /**
-     * <p>The ID of the diagnostic metric set. If this parameter is left empty, the dms-instancedefault set is used, which is the default diagnostic metric set provided for Elastic Compute Service (ECS) instances.</p>
+     * <p>The diagnostic metric set ID. If this parameter is omitted, the default diagnostic metric set for ECS instances, <code>dms-instancedefault</code>, is used.</p>
      * 
      * <strong>example:</strong>
      * <p>dms-uf6i0tv2refv8wz*****</p>
@@ -26,7 +26,7 @@ public class CreateDiagnosticReportShrinkRequest extends TeaModel {
     public String metricSetId;
 
     /**
-     * <p>The region ID of the security group. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>The region ID. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to get the latest list of Alibaba Cloud regions.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -36,7 +36,7 @@ public class CreateDiagnosticReportShrinkRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of resource N.</p>
+     * <p>The resource ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -46,10 +46,10 @@ public class CreateDiagnosticReportShrinkRequest extends TeaModel {
     public String resourceId;
 
     /**
-     * <p>The start time. This parameter takes effect only for diagnostic metrics that do not need to be assessed by running Cloud Assistant commands in guest operating systems.</p>
+     * <p>The start time. This parameter applies only to diagnostic metrics that do not require running Cloud Assistant commands in the guest OS.</p>
      * 
      * <strong>example:</strong>
-     * <p>2022-07-11T12:00:00Z</p>
+     * <p>2022-07-11T12:00Z</p>
      */
     @NameInMap("StartTime")
     public String startTime;

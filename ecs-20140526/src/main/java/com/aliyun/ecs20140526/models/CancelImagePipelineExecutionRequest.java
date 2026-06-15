@@ -38,7 +38,7 @@ public class CancelImagePipelineExecutionRequest extends TeaModel {
 
     /**
      * <blockquote>
-     * <p> This parameter is not publicly available.</p>
+     * <p>This parameter is not publicly available.</p>
      * </blockquote>
      */
     @NameInMap("TemplateTag")
@@ -108,7 +108,7 @@ public class CancelImagePipelineExecutionRequest extends TeaModel {
     public static class CancelImagePipelineExecutionRequestTemplateTag extends TeaModel {
         /**
          * <blockquote>
-         * <p> This parameter is not publicly available.</p>
+         * <p>This parameter is not publicly available.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -119,7 +119,7 @@ public class CancelImagePipelineExecutionRequest extends TeaModel {
 
         /**
          * <blockquote>
-         * <p> This parameter is not publicly available.</p>
+         * <p>This parameter is not publicly available.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

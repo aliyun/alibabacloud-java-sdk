@@ -39,8 +39,10 @@ public class ReleaseDedicatedHostRequest extends TeaModel {
     /**
      * <p>The expiration time of the subscription dedicated host.</p>
      * <ul>
-     * <li>true</li>
-     * <li>false</li>
+     * <li><p>true</p>
+     * </li>
+     * <li><p>false</p>
+     * </li>
      * </ul>
      * <p>Default value: false.</p>
      * 

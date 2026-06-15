@@ -117,7 +117,7 @@ public class ModifyReservedInstancesRequest extends TeaModel {
         /**
          * <p>The instance types that the new reserved instance can match.</p>
          * <blockquote>
-         * <p> The supported instance types are continuously updated. For information about the instance types supported by reserved instances, see <a href="~~100370#3c1b682051vt4~~">Overview of reserved instances</a>.</p>
+         * <p>The supported instance types are continuously updated. For information about the instance types supported by reserved instances, see <a href="~~100370#3c1b682051vt4~~">Overview of reserved instances</a>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -128,7 +128,7 @@ public class ModifyReservedInstancesRequest extends TeaModel {
 
         /**
          * <p>The name of the new reserved instance.</p>
-         * <p>The name must be 2 to 128 characters in length. The name must start with a letter and cannot start with http:// or https://. The name can contain letters, digits, colons (:), underscores (_), and hyphens (-).</p>
+         * <p>The name must be 2 to 128 characters in length. The name must start with a letter and cannot start with http\:// or https\://. The name can contain letters, digits, colons (:), underscores (_), and hyphens (-).</p>
          * 
          * <strong>example:</strong>
          * <p>testReservedInstanceName</p>
@@ -139,8 +139,10 @@ public class ModifyReservedInstancesRequest extends TeaModel {
         /**
          * <p>The scope level of the new reserved instance. Valid values:</p>
          * <ul>
-         * <li>Region</li>
-         * <li>Zone</li>
+         * <li><p>Region</p>
+         * </li>
+         * <li><p>Zone</p>
+         * </li>
          * </ul>
          * <p>Default value: Region.</p>
          * 

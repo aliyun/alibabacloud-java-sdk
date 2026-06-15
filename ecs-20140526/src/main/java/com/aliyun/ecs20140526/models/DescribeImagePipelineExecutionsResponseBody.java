@@ -4,11 +4,14 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeImagePipelineExecutionsResponseBody extends TeaModel {
+    /**
+     * <p>The details of the image pipeline executions.</p>
+     */
     @NameInMap("ImagePipelineExecution")
     public DescribeImagePipelineExecutionsResponseBodyImagePipelineExecution imagePipelineExecution;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The number of entries per page.</p>
      * 
      * <strong>example:</strong>
      * <p>50</p>
@@ -17,7 +20,7 @@ public class DescribeImagePipelineExecutionsResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The pagination token that is used in the request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of <code>NextToken</code>.</p>
+     * <p>The token returned in this call. Use this token to retrieve the next page of results. For more information, see the operation description.</p>
      * 
      * <strong>example:</strong>
      * <p>AAAAAdDWBF2****</p>
@@ -26,8 +29,7 @@ public class DescribeImagePipelineExecutionsResponseBody extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The maximum number of entries per page. Valid values: 1 to 500</p>
-     * <p>Default value: 50.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
@@ -36,7 +38,7 @@ public class DescribeImagePipelineExecutionsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>A pagination token. It can be used in the next request to retrieve a new page of results. If NextToken is empty, no next page exists. For information about how to use the returned value, see the &quot;Usage notes&quot; section in this topic.</p>
+     * <p>The total number of image pipeline executions.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>

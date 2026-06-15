@@ -9,7 +9,7 @@ public class ReplaceSystemDiskRequest extends TeaModel {
 
     /**
      * <blockquote>
-     * <p> This parameter is deprecated.</p>
+     * <p>This parameter is deprecated.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -35,7 +35,7 @@ public class ReplaceSystemDiskRequest extends TeaModel {
 
     /**
      * <blockquote>
-     * <p> This parameter is deprecated. To improve compatibility, we recommend that you use <code>ImageId</code>.</p>
+     * <p>This parameter is deprecated. To improve compatibility, we recommend that you use <code>ImageId</code>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -58,12 +58,14 @@ public class ReplaceSystemDiskRequest extends TeaModel {
     /**
      * <p>Specifies whether to encrypt the disk. Valid values:</p>
      * <ul>
-     * <li>true</li>
-     * <li>false</li>
+     * <li><p>true</p>
+     * </li>
+     * <li><p>false</p>
+     * </li>
      * </ul>
      * <p>Default value: false.</p>
      * <blockquote>
-     * <p> When you use a shared encrypted image to create the disk based on an encrypted snapshot, you must set Encrypted to true to ensure that the disk uses an encryption key of your own.</p>
+     * <p>When you use a shared encrypted image to create the disk based on an encrypted snapshot, you must set Encrypted to true to ensure that the disk uses an encryption key of your own.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -84,7 +86,7 @@ public class ReplaceSystemDiskRequest extends TeaModel {
     /**
      * <p>The ID of the instance whose operating system you want to replace.</p>
      * <blockquote>
-     * <p> Make sure that the instance is in the <code>Stopped</code> (<code>Stopped</code>) state.</p>
+     * <p>Make sure that the instance is in the <code>Stopped</code> (<code>Stopped</code>) state.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -152,7 +154,7 @@ public class ReplaceSystemDiskRequest extends TeaModel {
 
     /**
      * <blockquote>
-     * <p> This parameter is deprecated.</p>
+     * <p>This parameter is deprecated.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -170,8 +172,10 @@ public class ReplaceSystemDiskRequest extends TeaModel {
     /**
      * <p>Specifies whether to use Security Center Basic after the system disk is replaced. Valid values:</p>
      * <ul>
-     * <li>Active: uses Security Center Basic after the system disk is re-initialized. This value is applicable only to public images.</li>
-     * <li>Deactive: does not use Security Center Basic after the system disk is re-initialized. This value is applicable to all images.</li>
+     * <li><p>Active: uses Security Center Basic after the system disk is re-initialized. This value is applicable only to public images.</p>
+     * </li>
+     * <li><p>Deactive: does not use Security Center Basic after the system disk is re-initialized. This value is applicable to all images.</p>
+     * </li>
      * </ul>
      * <p>Default value: Deactive.</p>
      * 
@@ -366,10 +370,14 @@ public class ReplaceSystemDiskRequest extends TeaModel {
          * </li>
          * <li><p>Enterprise SSD (ESSD):</p>
          * <ul>
-         * <li>PL0 ESSD: Max{1, Size of the image specified by ImageId} to 2048.</li>
-         * <li>PL1 ESSD: Max{20, Size of the image specified by ImageId} to 2048.</li>
-         * <li>PL2 ESSD: Max{461, Size of the image specified by ImageId} to 2048.</li>
-         * <li>PL3 ESSD: Max{1261, Size of the image specified by ImageId} to 2048.</li>
+         * <li><p>PL0 ESSD: Max{1, Size of the image specified by ImageId} to 2048.</p>
+         * </li>
+         * <li><p>PL1 ESSD: Max{20, Size of the image specified by ImageId} to 2048.</p>
+         * </li>
+         * <li><p>PL2 ESSD: Max{461, Size of the image specified by ImageId} to 2048.</p>
+         * </li>
+         * <li><p>PL3 ESSD: Max{1261, Size of the image specified by ImageId} to 2048.</p>
+         * </li>
          * </ul>
          * </li>
          * <li><p>ESSD AutoPL disk: Max{1, Size of the image specified by ImageId} to 2048.</p>
@@ -379,7 +387,7 @@ public class ReplaceSystemDiskRequest extends TeaModel {
          * </ul>
          * <p>Default value: Max{40, Size of the image specified by ImageId}.</p>
          * <blockquote>
-         * <p> If the capacity of the new system disk exceeds <code>Max{20, Capacity of the original system disk}</code>, you are charged for the excess capacity.</p>
+         * <p>If the capacity of the new system disk exceeds <code>Max{20, Capacity of the original system disk}</code>, you are charged for the excess capacity.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

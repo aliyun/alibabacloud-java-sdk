@@ -10,8 +10,10 @@ public class ModifyPrepayInstanceSpecRequest extends TeaModel {
     /**
      * <p>Specifies whether to enable automatic payment when you upgrade the instance type. Valid values:</p>
      * <ul>
-     * <li>true: The payment is automatically completed.</li>
-     * <li>false: An order is generated but no payment is made.</li>
+     * <li><p>true: The payment is automatically completed.</p>
+     * </li>
+     * <li><p>false: An order is generated but no payment is made.</p>
+     * </li>
      * </ul>
      * <p>Default value: true.</p>
      * <blockquote>
@@ -42,7 +44,7 @@ public class ModifyPrepayInstanceSpecRequest extends TeaModel {
 
     /**
      * <blockquote>
-     * <p> This parameter is not publicly available.</p>
+     * <p>This parameter is not publicly available.</p>
      * </blockquote>
      */
     @NameInMap("Disk")
@@ -80,15 +82,19 @@ public class ModifyPrepayInstanceSpecRequest extends TeaModel {
     /**
      * <p>Specifies whether to allow cross-cluster instance type upgrade. Valid values:</p>
      * <ul>
-     * <li>true</li>
-     * <li>false</li>
+     * <li><p>true</p>
+     * </li>
+     * <li><p>false</p>
+     * </li>
      * </ul>
      * <p>Default value: false.</p>
      * <p>When you set <code>MigrateAcrossZone</code> to <code>true</code> and you upgrade the instance type of an instance based on the returned information, take note of the following items:</p>
      * <p>Instance that resides in the classic network:</p>
      * <ul>
-     * <li>For <a href="https://help.aliyun.com/document_detail/55263.html">retired instance types</a>, when a non-I/O optimized instance is upgraded to an I/O optimized instance, the private IP address, disk device names, and software authorization codes of the instance change. For a Linux instance, basic disks (cloud) are identified as xvd\* such as xvda and xvdb, and ultra disks (cloud_efficiency) and standard SSDs (cloud_ssd) are identified as vd\* such as vda and vdb.</li>
-     * <li>For <a href="https://help.aliyun.com/document_detail/25378.html">instance families available for purchase</a>, when the instance type of an instance is changed, the private IP address of the instance changes.</li>
+     * <li><p>For <a href="https://help.aliyun.com/document_detail/55263.html">retired instance types</a>, when a non-I/O optimized instance is upgraded to an I/O optimized instance, the private IP address, disk device names, and software authorization codes of the instance change. For a Linux instance, basic disks (cloud) are identified as xvd\* such as xvda and xvdb, and ultra disks (cloud_efficiency) and standard SSDs (cloud_ssd) are identified as vd\* such as vda and vdb.</p>
+     * </li>
+     * <li><p>For <a href="https://help.aliyun.com/document_detail/25378.html">instance families available for purchase</a>, when the instance type of an instance is changed, the private IP address of the instance changes.</p>
+     * </li>
      * </ul>
      * <p>Instance that resides in a virtual private cloud (VPC): For <a href="https://help.aliyun.com/document_detail/55263.html">retired instance types</a>, when a non-I/O optimized instance is upgraded to an I/O optimized instance, the disk device names and software authorization codes of the instance change. For a Linux instance, basic disks (cloud) are identified as xvd\* such as xvda and xvdb, and ultra disks (cloud_efficiency) and standard SSDs (cloud_ssd) are identified as vd\* such as vda and vdb.</p>
      * 
@@ -100,7 +106,7 @@ public class ModifyPrepayInstanceSpecRequest extends TeaModel {
 
     /**
      * <blockquote>
-     * <p> This parameter is not publicly available.</p>
+     * <p>This parameter is not publicly available.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -112,14 +118,16 @@ public class ModifyPrepayInstanceSpecRequest extends TeaModel {
     /**
      * <p>The type of the change to the instance. Valid values:</p>
      * <blockquote>
-     * <p> This parameter is optional. The system can automatically determine whether the instance change is an upgrade or a downgrade. If you want to specify this parameter, refer to the following valid values of the parameter.</p>
+     * <p>This parameter is optional. The system can automatically determine whether the instance change is an upgrade or a downgrade. If you want to specify this parameter, refer to the following valid values of the parameter.</p>
      * </blockquote>
      * <ul>
-     * <li>upgrade: upgrades the instance type. Make sure that the balance in your account is sufficient.</li>
-     * <li>downgrade: downgrades the instance type. When the new instance type specified by the <code>InstanceType</code> parameter has lower specifications than the current instance type, set <code>OperatorType</code> to downgrade.</li>
+     * <li><p>upgrade: upgrades the instance type. Make sure that the balance in your account is sufficient.</p>
+     * </li>
+     * <li><p>downgrade: downgrades the instance type. When the new instance type specified by the <code>InstanceType</code> parameter has lower specifications than the current instance type, set <code>OperatorType</code> to downgrade.</p>
+     * </li>
      * </ul>
      * <blockquote>
-     * <p> You can refer to the preceding usage notes on how to upgrade or downgrade the instance type.</p>
+     * <p>You can refer to the preceding usage notes on how to upgrade or downgrade the instance type.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -146,12 +154,14 @@ public class ModifyPrepayInstanceSpecRequest extends TeaModel {
     /**
      * <p>Specifies whether to restart the instance immediately after the instance type is changed. Valid values:</p>
      * <ul>
-     * <li>true</li>
-     * <li>false</li>
+     * <li><p>true</p>
+     * </li>
+     * <li><p>false</p>
+     * </li>
      * </ul>
      * <p>Default value: false.</p>
      * <blockquote>
-     * <p> If the instance is in the <strong>Stopped</strong> state, the instance remains in the Stopped state and no operations are performed, regardless of whether <code>RebootWhenFinished</code> is set to true.</p>
+     * <p>If the instance is in the <strong>Stopped</strong> state, the instance remains in the Stopped state and no operations are performed, regardless of whether <code>RebootWhenFinished</code> is set to true.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -321,11 +331,13 @@ public class ModifyPrepayInstanceSpecRequest extends TeaModel {
         /**
          * <p>The new category of the system disk. Valid values:</p>
          * <ul>
-         * <li>cloud_efficiency: utra disk</li>
-         * <li>cloud_ssd: standard SSD</li>
+         * <li><p>cloud_efficiency: utra disk</p>
+         * </li>
+         * <li><p>cloud_ssd: standard SSD</p>
+         * </li>
          * </ul>
          * <blockquote>
-         * <p> This parameter takes effect on an instance only when you change from a <a href="https://help.aliyun.com/document_detail/55263.html">retired instance type</a> to an instance type in an <a href="https://help.aliyun.com/document_detail/25378.html">instance family available for purchase</a> and upgrade the instance from a non-I/O optimized instance type to an I/O optimized instance type.</p>
+         * <p>This parameter takes effect on an instance only when you change from a <a href="https://help.aliyun.com/document_detail/55263.html">retired instance type</a> to an instance type in an <a href="https://help.aliyun.com/document_detail/25378.html">instance family available for purchase</a> and upgrade the instance from a non-I/O optimized instance type to an I/O optimized instance type.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -352,7 +364,7 @@ public class ModifyPrepayInstanceSpecRequest extends TeaModel {
     public static class ModifyPrepayInstanceSpecRequestDisk extends TeaModel {
         /**
          * <blockquote>
-         * <p> This parameter is not publicly available.</p>
+         * <p>This parameter is not publicly available.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -363,7 +375,7 @@ public class ModifyPrepayInstanceSpecRequest extends TeaModel {
 
         /**
          * <blockquote>
-         * <p> This parameter is not publicly available.</p>
+         * <p>This parameter is not publicly available.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -374,7 +386,7 @@ public class ModifyPrepayInstanceSpecRequest extends TeaModel {
 
         /**
          * <blockquote>
-         * <p> This parameter is not publicly available.</p>
+         * <p>This parameter is not publicly available.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

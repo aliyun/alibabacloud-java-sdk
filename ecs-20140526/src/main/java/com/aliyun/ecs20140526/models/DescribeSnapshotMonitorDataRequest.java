@@ -7,9 +7,12 @@ public class DescribeSnapshotMonitorDataRequest extends TeaModel {
     /**
      * <p>The type of the snapshot. Valid values:</p>
      * <ul>
-     * <li>Standard: standard snapshot</li>
-     * <li>Flash: local snapshot</li>
-     * <li>Archive: archive snapshot</li>
+     * <li><p>Standard: standard snapshot</p>
+     * </li>
+     * <li><p>Flash: local snapshot</p>
+     * </li>
+     * <li><p>Archive: archive snapshot</p>
+     * </li>
      * </ul>
      * <p>Default value: Standard.</p>
      * 
@@ -38,9 +41,12 @@ public class DescribeSnapshotMonitorDataRequest extends TeaModel {
     /**
      * <p>The interval at which to query the monitoring data of snapshot sizes. Unit: seconds. Valid values:</p>
      * <ul>
-     * <li>60</li>
-     * <li>600</li>
-     * <li>3600</li>
+     * <li><p>60</p>
+     * </li>
+     * <li><p>600</p>
+     * </li>
+     * <li><p>3600</p>
+     * </li>
      * </ul>
      * <p>Default value: 60.</p>
      * 

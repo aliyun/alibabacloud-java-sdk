@@ -4,6 +4,9 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class UnassociateEipAddressResponseBody extends TeaModel {
+    /**
+     * <p>The unique request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

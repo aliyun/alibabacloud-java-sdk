@@ -156,9 +156,12 @@ public class ModifyPrefixListRequest extends TeaModel {
          * <p>The CIDR block in entry N to be added to the prefix list. Valid values of N: 0 to 200.</p>
          * <p>Take note of the following items when you add the entries:</p>
          * <ul>
-         * <li>The total number of entries in the prefix list cannot exceed the maximum number of entries you specified for the prefix list. You can call the <a href="https://help.aliyun.com/document_detail/205872.html">DescribePrefixListAttributes</a> operation to query the maximum number of entries that the prefix list can contain.</li>
-         * <li>You cannot specify duplicate CIDR blocks.</li>
-         * <li>The CIDR blocks cannot be the same as the <code>RemoveEntry.N.Cidr</code> values.</li>
+         * <li><p>The total number of entries in the prefix list cannot exceed the maximum number of entries you specified for the prefix list. You can call the <a href="https://help.aliyun.com/document_detail/205872.html">DescribePrefixListAttributes</a> operation to query the maximum number of entries that the prefix list can contain.</p>
+         * </li>
+         * <li><p>You cannot specify duplicate CIDR blocks.</p>
+         * </li>
+         * <li><p>The CIDR blocks cannot be the same as the <code>RemoveEntry.N.Cidr</code> values.</p>
+         * </li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -205,8 +208,10 @@ public class ModifyPrefixListRequest extends TeaModel {
          * <p>The CIDR block in entry N to be deleted from the prefix list. Valid values of N: 0 to 200.</p>
          * <p>Take note of the following items when you delete the entries:</p>
          * <ul>
-         * <li>You cannot specify duplicate CIDR blocks.</li>
-         * <li>The CIDR blocks cannot be the same as the <code>AddEntry.N.Cidr</code> values.</li>
+         * <li><p>You cannot specify duplicate CIDR blocks.</p>
+         * </li>
+         * <li><p>The CIDR blocks cannot be the same as the <code>AddEntry.N.Cidr</code> values.</p>
+         * </li>
          * </ul>
          * <p>This parameter is required.</p>
          * 

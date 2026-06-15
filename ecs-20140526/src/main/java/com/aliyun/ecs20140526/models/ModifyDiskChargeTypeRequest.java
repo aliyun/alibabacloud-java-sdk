@@ -7,8 +7,10 @@ public class ModifyDiskChargeTypeRequest extends TeaModel {
     /**
      * <p>Specifies whether to automatically complete the payment. Valid values:</p>
      * <ul>
-     * <li>true (default): The payment is automatically completed. Maintain sufficient balance in your account. Otherwise, your order becomes invalid and must be canceled.</li>
-     * <li>false: An order is generated but no payment is made. If your account balance is insufficient, you can set AutoPay to false to generate an unpaid order. Then, log on to the <strong>Expenses and Costs console</strong>, go to the <a href="https://usercenter2-intl.aliyun.com/order/list">Orders page</a>, and pay for the order.</li>
+     * <li><p>true (default): The payment is automatically completed. Maintain sufficient balance in your account. Otherwise, your order becomes invalid and must be canceled.</p>
+     * </li>
+     * <li><p>false: An order is generated but no payment is made. If your account balance is insufficient, you can set AutoPay to false to generate an unpaid order. Then, log on to the <strong>Expenses and Costs console</strong>, go to the <a href="https://usercenter2-intl.aliyun.com/order/list">Orders page</a>, and pay for the order.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -29,11 +31,13 @@ public class ModifyDiskChargeTypeRequest extends TeaModel {
     /**
      * <p>The new billing method of the disk. Valid values:</p>
      * <ul>
-     * <li>PrePaid (default): changes the billing method from pay-as-you-go to subscription.</li>
-     * <li>PostPaid: changes the billing method from subscription to pay-as-you-go.</li>
+     * <li><p>PrePaid (default): changes the billing method from pay-as-you-go to subscription.</p>
+     * </li>
+     * <li><p>PostPaid: changes the billing method from subscription to pay-as-you-go.</p>
+     * </li>
      * </ul>
      * <blockquote>
-     * <p> When you change the billing method of a pay-as-you-go disk to subscription, the billing cycle of the disk is automatically synchronized with that of the associated ECS instance.</p>
+     * <p>When you change the billing method of a pay-as-you-go disk to subscription, the billing cycle of the disk is automatically synchronized with that of the associated ECS instance.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -47,7 +51,7 @@ public class ModifyDiskChargeTypeRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>[“d-bp67acfmxazb4ph****”, “d-bp67acfmxazb4pi****”, … “d-bp67acfmxazb4pj****”]</p>
+     * <p>[&quot;d-bp67acfmxazb4ph****&quot;, &quot;d-bp67acfmxazb4pi****&quot;, … &quot;d-bp67acfmxazb4pj****&quot;]</p>
      */
     @NameInMap("DiskIds")
     public String diskIds;

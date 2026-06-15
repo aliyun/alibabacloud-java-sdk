@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeImagePipelinesRequest extends TeaModel {
     /**
-     * <p>The IDs of image templates. Valid values of N: 1 to 20.</p>
+     * <p>The IDs of the image pipelines. You can specify up to 20 IDs.</p>
      * 
      * <strong>example:</strong>
      * <p>ip-2ze5tsl5bp6nf2b3****</p>
@@ -14,7 +14,7 @@ public class DescribeImagePipelinesRequest extends TeaModel {
     public java.util.List<String> imagePipelineId;
 
     /**
-     * <p>The maximum number of entries per page. Valid values: 1 to 500</p>
+     * <p>The number of entries to return per page. Valid values: 1 to 500.</p>
      * <p>Default value: 50.</p>
      * 
      * <strong>example:</strong>
@@ -24,7 +24,7 @@ public class DescribeImagePipelinesRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The name of the image template.</p>
+     * <p>The name of the image pipeline.</p>
      * 
      * <strong>example:</strong>
      * <p>testImagePipeline</p>
@@ -33,7 +33,7 @@ public class DescribeImagePipelinesRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of <code>NextToken</code>.</p>
+     * <p>The pagination token. To retrieve the next page of results, set this parameter to the <code>NextToken</code> value from the previous response. Omit this parameter on your first request.</p>
      * 
      * <strong>example:</strong>
      * <p>AAAAAdDWBF2****</p>
@@ -48,7 +48,7 @@ public class DescribeImagePipelinesRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID of the image template. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>The ID of the region. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to view the latest list of Alibaba Cloud regions.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -58,9 +58,9 @@ public class DescribeImagePipelinesRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of the resource group. If this parameter is specified to query resources, up to 1,000 resources that belong to the specified resource group can be displayed in the response.</p>
+     * <p>The resource group ID. If you use this parameter for filtering, you can query a maximum of 1,000 resources.</p>
      * <blockquote>
-     * <p> Resources in the default resource group are displayed in the response regardless of how this parameter is set.</p>
+     * <p>Filtering by the default resource group is not supported.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -76,7 +76,7 @@ public class DescribeImagePipelinesRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The tags of the image template.</p>
+     * <p>A list of tags.</p>
      */
     @NameInMap("Tag")
     public java.util.List<DescribeImagePipelinesRequestTag> tag;
@@ -176,7 +176,7 @@ public class DescribeImagePipelinesRequest extends TeaModel {
 
     public static class DescribeImagePipelinesRequestTag extends TeaModel {
         /**
-         * <p>The key of tag N. Valid values of N: 1 to 20.</p>
+         * <p>The key of a tag. Up to 20 tags are supported.</p>
          * 
          * <strong>example:</strong>
          * <p>TestKey</p>
@@ -185,7 +185,7 @@ public class DescribeImagePipelinesRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The value of tag N. Valid values of N: 1 to 20.</p>
+         * <p>The value of a tag. Up to 20 tags are supported.</p>
          * 
          * <strong>example:</strong>
          * <p>TestValue</p>

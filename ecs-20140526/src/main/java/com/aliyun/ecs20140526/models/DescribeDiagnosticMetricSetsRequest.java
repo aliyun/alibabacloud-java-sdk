@@ -8,8 +8,10 @@ public class DescribeDiagnosticMetricSetsRequest extends TeaModel {
      * <p>The number of entries per page. Valid values: 1 to 100.</p>
      * <p>Default value:</p>
      * <ul>
-     * <li>If this parameter is left empty, the default value is 10.</li>
-     * <li>If you set this parameter to a value that is greater than 100, the default value is 100.</li>
+     * <li><p>If this parameter is left empty, the default value is 10.</p>
+     * </li>
+     * <li><p>If you set this parameter to a value that is greater than 100, the default value is 100.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -55,8 +57,10 @@ public class DescribeDiagnosticMetricSetsRequest extends TeaModel {
     /**
      * <p>The type of the diagnostic metric set. Valid values:</p>
      * <ul>
-     * <li>User: custom diagnostic metric set</li>
-     * <li>Common: public diagnostic metric set</li>
+     * <li><p>User: custom diagnostic metric set</p>
+     * </li>
+     * <li><p>Common: public diagnostic metric set</p>
+     * </li>
      * </ul>
      * <p>Default value: User.</p>
      * 

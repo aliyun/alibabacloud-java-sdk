@@ -5,26 +5,40 @@ import com.aliyun.tea.*;
 
 public class CreatePhysicalConnectionRequest extends TeaModel {
     /**
+     * <p>The access point ID. You can call the <code>DescribeAccessPoints</code> operation to obtain a list of available access points.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("AccessPointId")
     public String accessPointId;
 
+    /**
+     * <p>The circuit code provided by the carrier.</p>
+     */
     @NameInMap("CircuitCode")
     public String circuitCode;
 
+    /**
+     * <p>A client-generated token that you can use to ensure the idempotency of the request. This token must be unique across requests, contain only ASCII characters, and be no more than 64 characters long.</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
+    /**
+     * <p>The description of the physical connection. The description must be 2 to 256 characters long and cannot start with <code>http://</code> or <code>https://</code>.</p>
+     */
     @NameInMap("Description")
     public String description;
 
     /**
+     * <p>The carrier that provides the physical connection. Valid values: <code>CT</code> (China Telecom), <code>CU</code> (China Unicom), <code>CM</code> (China Mobile), <code>CO</code> (other Chinese carriers), and <code>AL</code> (Alibaba Cloud).</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("LineOperator")
     public String lineOperator;
 
+    /**
+     * <p>The name of the physical connection. The name must be 2 to 128 characters long. It must start with a letter and can contain letters, digits, underscores (<code>_</code>), and hyphens (<code>-</code>).</p>
+     */
     @NameInMap("Name")
     public String name;
 
@@ -35,18 +49,26 @@ public class CreatePhysicalConnectionRequest extends TeaModel {
     public Long ownerId;
 
     /**
+     * <p>The physical location of your on-premises data center.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("PeerLocation")
     public String peerLocation;
 
+    /**
+     * <p>The port type of the physical connection. You cannot change this parameter after the physical connection is created. Valid values: <code>1000Base-LX</code> (1 Gbit/s), <code>10GBase-LR</code> (10 Gbit/s), and <code>40GBase-LR</code> (40 Gbit/s).</p>
+     */
     @NameInMap("PortType")
     public String portType;
 
+    /**
+     * <p>The ID of the redundant physical connection. The redundant physical connection must be in the <code>Allocated</code>, <code>Confirmed</code>, or <code>Enabled</code> state.</p>
+     */
     @NameInMap("RedundantPhysicalConnectionId")
     public String redundantPhysicalConnectionId;
 
     /**
+     * <p>The ID of the region for the physical connection. You can call the <code>DescribeRegions</code> operation to obtain the latest list of regions.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
@@ -58,12 +80,21 @@ public class CreatePhysicalConnectionRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The type of the physical connection. Valid values: <code>VPC</code> and <code>VBR</code>. The default value is <code>VPC</code>. This parameter is available only to whitelisted users.</p>
+     */
     @NameInMap("Type")
     public String type;
 
+    /**
+     * <p>The user CIDR block. This parameter is required when <code>Type</code> is set to <code>VPC</code>. The CIDR block must be a private IPv4 block. Valid CIDR blocks include the following blocks and their subnets: <code>10.0.0.0/8</code>, <code>172.16.0.0/12</code>, and <code>192.168.0.0/16</code>.</p>
+     */
     @NameInMap("UserCidr")
     public String userCidr;
 
+    /**
+     * <p>The bandwidth of the physical connection in Mbit/s. The value must be an integer that ranges from 1 to 10,240.</p>
+     */
     @NameInMap("bandwidth")
     public Integer bandwidth;
 

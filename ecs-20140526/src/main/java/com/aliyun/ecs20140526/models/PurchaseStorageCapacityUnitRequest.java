@@ -69,8 +69,10 @@ public class PurchaseStorageCapacityUnitRequest extends TeaModel {
     /**
      * <p>The validity period of the SCU. Valid values:</p>
      * <ul>
-     * <li>Valid values when PeriodUnit is set to Month: 1, 2, 3, and 6.</li>
-     * <li>Valid values when PeriodUnit is set to Year: 1, 3, and 5.</li>
+     * <li><p>Valid values when PeriodUnit is set to Month: 1, 2, 3, and 6.</p>
+     * </li>
+     * <li><p>Valid values when PeriodUnit is set to Year: 1, 3, and 5.</p>
+     * </li>
      * </ul>
      * <p>Default value: 1.</p>
      * 
@@ -83,8 +85,10 @@ public class PurchaseStorageCapacityUnitRequest extends TeaModel {
     /**
      * <p>The unit of the validity period of the SCU. Valid values:</p>
      * <ul>
-     * <li>Month</li>
-     * <li>Year</li>
+     * <li><p>Month</p>
+     * </li>
+     * <li><p>Year</p>
+     * </li>
      * </ul>
      * <p>Default value: Month.</p>
      * 
@@ -124,7 +128,7 @@ public class PurchaseStorageCapacityUnitRequest extends TeaModel {
      * <p>This parameter is left empty by default, which indicates that the SCU takes effect immediately after it is created.</p>
      * 
      * <strong>example:</strong>
-     * <p>2020-09-09T02:00:00Z</p>
+     * <p>2020-09-09T02Z</p>
      */
     @NameInMap("StartTime")
     public String startTime;

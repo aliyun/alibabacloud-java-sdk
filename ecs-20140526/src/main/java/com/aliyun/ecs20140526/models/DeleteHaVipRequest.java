@@ -4,10 +4,14 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DeleteHaVipRequest extends TeaModel {
+    /**
+     * <p>The client token used to ensure request idempotence. You can use the client to generate the token, but you must ensure that the token is unique across requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
+     * <p>The ID of the HaVip that you want to delete.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("HaVipId")
@@ -20,6 +24,7 @@ public class DeleteHaVipRequest extends TeaModel {
     public Long ownerId;
 
     /**
+     * <p>The ID of the region where the HaVip is located. You can call the <code>DescribeRegions</code> operation to obtain the latest list of regions.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")

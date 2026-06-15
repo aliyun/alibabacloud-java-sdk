@@ -104,8 +104,10 @@ public class ModifyInstanceAttachmentAttributesRequest extends TeaModel {
         /**
          * <p>The ID of the private pool. Set the value to the ID of the elasticity assurance or capacity reservation that generates the private pool.</p>
          * <ul>
-         * <li>This parameter is required when <code>PrivatePoolOptions.MatchCriteria</code> is set to <code>Target</code>.</li>
-         * <li>This parameter must be empty when <code>PrivatePoolOptions.MatchCriteria</code> is set to <code>Open</code> or <code>None</code>.</li>
+         * <li><p>This parameter is required when <code>PrivatePoolOptions.MatchCriteria</code> is set to <code>Target</code>.</p>
+         * </li>
+         * <li><p>This parameter must be empty when <code>PrivatePoolOptions.MatchCriteria</code> is set to <code>Open</code> or <code>None</code>.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -117,9 +119,12 @@ public class ModifyInstanceAttachmentAttributesRequest extends TeaModel {
         /**
          * <p>The new type of private pool. Valid values:</p>
          * <ul>
-         * <li>Open: open private pool. The system matches the instance with an open private pool. If no matching open private pools exist, the system uses resources in the public pool to start the instance.</li>
-         * <li>Target: specified private pool. The system uses the capacity in a specified private pool to start the instance. If the specified private pool is unavailable, the instance cannot be started. You must use <code>PrivatePoolOptions.Id</code> to specify the ID of a private pool.</li>
-         * <li>None: no private pool. The capacity in private pools is not used to start the instance.</li>
+         * <li><p>Open: open private pool. The system matches the instance with an open private pool. If no matching open private pools exist, the system uses resources in the public pool to start the instance.</p>
+         * </li>
+         * <li><p>Target: specified private pool. The system uses the capacity in a specified private pool to start the instance. If the specified private pool is unavailable, the instance cannot be started. You must use <code>PrivatePoolOptions.Id</code> to specify the ID of a private pool.</p>
+         * </li>
+         * <li><p>None: no private pool. The capacity in private pools is not used to start the instance.</p>
+         * </li>
          * </ul>
          * <p>This parameter is required.</p>
          * 

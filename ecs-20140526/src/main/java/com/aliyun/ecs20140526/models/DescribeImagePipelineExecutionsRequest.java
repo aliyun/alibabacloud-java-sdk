@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeImagePipelineExecutionsRequest extends TeaModel {
     /**
-     * <p>null</p>
+     * <p>The ID of the image building task.</p>
      * 
      * <strong>example:</strong>
      * <p>exec-5fb8facb8ed7427c****</p>
@@ -14,7 +14,7 @@ public class DescribeImagePipelineExecutionsRequest extends TeaModel {
     public String executionId;
 
     /**
-     * <p>The value of tag N of the image creation task. Valid values of N: 1 to 20.</p>
+     * <p>The ID of the image template.</p>
      * 
      * <strong>example:</strong>
      * <p>ip-2ze5tsl5bp6nf2b3****</p>
@@ -23,24 +23,8 @@ public class DescribeImagePipelineExecutionsRequest extends TeaModel {
     public String imagePipelineId;
 
     /**
-     * <p>The status of the image creation task. You can specify multiple values. Separate the values with commas (,). Example: <code>BUILDING,DISTRIBUTING</code>. Valid values:</p>
-     * <ul>
-     * <li>PREPARING: Resources, such as the intermediate instance, are being created.</li>
-     * <li>REPAIRING: The source image is being repaired.</li>
-     * <li>BUILDING: The user-defined commands are being run and an image is being created.</li>
-     * <li>TESTING: The user-defined test commands are being run.</li>
-     * <li>DISTRIBUTING: The created image is being copied and shared.</li>
-     * <li>RELEASING: The temporary resources generated during the image creation process are being released.</li>
-     * <li>SUCCESS: The image creation task is completed.</li>
-     * <li>PARTITION_SUCCESS: The image creation task is partially completed. The image is created, but exceptions may occur when the image was copied or shared or when temporary resources were released.</li>
-     * <li>FAILED: The image creation task fails.</li>
-     * <li>TEST_FAILED: The image is created, but the test fails.</li>
-     * <li>CANCELLING: The image creation task is being canceled.</li>
-     * <li>CANCELLED: The image creation task is canceled.</li>
-     * </ul>
-     * <blockquote>
-     * <p> If you leave this parameter empty, all image creation tasks are queried regardless of task status.</p>
-     * </blockquote>
+     * <p>The number of entries to return on each page. Valid values: 1 to 500.</p>
+     * <p>Default value: 50.</p>
      * 
      * <strong>example:</strong>
      * <p>50</p>
@@ -49,7 +33,7 @@ public class DescribeImagePipelineExecutionsRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The ID of the image creation task.</p>
+     * <p>The query token. Set the value to the <code>NextToken</code> value returned from a previous call to this operation. This parameter is not required for the first call.</p>
      * 
      * <strong>example:</strong>
      * <p>AAAAAdDWBF2****</p>
@@ -64,7 +48,7 @@ public class DescribeImagePipelineExecutionsRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the latest list of Alibaba Cloud regions.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -80,7 +64,36 @@ public class DescribeImagePipelineExecutionsRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The ID of the image template.</p>
+     * <p>The status of the image building task. You can specify multiple values, separated by commas. Example: <code>BUILDING,DISTRIBUTING</code>. Valid values:</p>
+     * <ul>
+     * <li><p>PREPARING: The system is preparing resources, such as a temporary transit instance.</p>
+     * </li>
+     * <li><p>REPAIRING: The system is repairing the source image.</p>
+     * </li>
+     * <li><p>BUILDING: The system is building the image. This includes executing user-defined commands and creating the image.</p>
+     * </li>
+     * <li><p>TESTING: The system is testing the created image by running user-defined test commands.</p>
+     * </li>
+     * <li><p>DISTRIBUTING: The system is distributing the image. This includes copying and sharing the image.</p>
+     * </li>
+     * <li><p>RELEASING: The system is releasing temporary resources generated during the build process.</p>
+     * </li>
+     * <li><p>SUCCESS: The task completed successfully.</p>
+     * </li>
+     * <li><p>PARTITION_SUCCESS: The task is partially successful. The image was created, but an error may have occurred during distribution or resource cleanup.</p>
+     * </li>
+     * <li><p>FAILED: The image building task failed.</p>
+     * </li>
+     * <li><p>TEST_FAILED: The image was created successfully, but it failed the user-defined tests.</p>
+     * </li>
+     * <li><p>CANCELLING: The system is canceling the image building task.</p>
+     * </li>
+     * <li><p>CANCELLED: The image building task was canceled.</p>
+     * </li>
+     * </ul>
+     * <blockquote>
+     * <p>If you omit this parameter, the operation returns image building tasks of all statuses.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>BUILDING</p>
@@ -89,7 +102,7 @@ public class DescribeImagePipelineExecutionsRequest extends TeaModel {
     public String status;
 
     /**
-     * <p>The tags of the image creation task.</p>
+     * <p>The list of tags.</p>
      */
     @NameInMap("Tag")
     public java.util.List<DescribeImagePipelineExecutionsRequestTag> tag;
@@ -189,7 +202,7 @@ public class DescribeImagePipelineExecutionsRequest extends TeaModel {
 
     public static class DescribeImagePipelineExecutionsRequestTag extends TeaModel {
         /**
-         * <p>The key of tag N of the image creation task. Valid values of N: 1 to 20.</p>
+         * <p>The key of tag N. The value of N can be from 1 to 20.</p>
          * 
          * <strong>example:</strong>
          * <p>TestKey</p>
@@ -198,7 +211,7 @@ public class DescribeImagePipelineExecutionsRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>null</p>
+         * <p>The value of tag N. The value of N can be from 1 to 20.</p>
          * 
          * <strong>example:</strong>
          * <p>TestValue</p>

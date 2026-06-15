@@ -7,8 +7,10 @@ public class ModifyInstanceNetworkSpecRequest extends TeaModel {
     /**
      * <p>Specifies whether to assign a public IP address. Valid values:</p>
      * <ul>
-     * <li>true</li>
-     * <li>false</li>
+     * <li><p>true</p>
+     * </li>
+     * <li><p>false</p>
+     * </li>
      * </ul>
      * <p>Default value: false.</p>
      * 
@@ -21,8 +23,10 @@ public class ModifyInstanceNetworkSpecRequest extends TeaModel {
     /**
      * <p>Specifies whether to automatically complete the payment. Valid values:</p>
      * <ul>
-     * <li>true: After you modify the bandwidth configurations, the payment is automatically completed. Make sure that your account balance is sufficient before you set AutoPay to true. If your account balance is insufficient, your order cannot be paid in the ECS console and becomes invalid. You must cancel the order.</li>
-     * <li>false: After you modify the bandwidth configurations, an order is generated but the payment is not automatically completed. If your account balance is insufficient, you can set AutoPay to false to generate an unpaid order. Then, you can log on to the <a href="https://ecs.console.aliyun.com">ECS console</a> to pay for the order.</li>
+     * <li><p>true: After you modify the bandwidth configurations, the payment is automatically completed. Make sure that your account balance is sufficient before you set AutoPay to true. If your account balance is insufficient, your order cannot be paid in the ECS console and becomes invalid. You must cancel the order.</p>
+     * </li>
+     * <li><p>false: After you modify the bandwidth configurations, an order is generated but the payment is not automatically completed. If your account balance is insufficient, you can set AutoPay to false to generate an unpaid order. Then, you can log on to the <a href="https://ecs.console.aliyun.com">ECS console</a> to pay for the order.</p>
+     * </li>
      * </ul>
      * <p>Default value: true.</p>
      * 
@@ -44,7 +48,7 @@ public class ModifyInstanceNetworkSpecRequest extends TeaModel {
     /**
      * <p>The end time of the temporary bandwidth upgrade. Specify the time in the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the yyyy-MM-ddThhZ format. The time must be in UTC and accurate to <strong>hours</strong> (hh).</p>
      * <blockquote>
-     * <p> The interval between the end time and start time of temporary bandwidth upgrade must be greater than or equal to 3 hours.</p>
+     * <p>The interval between the end time and start time of temporary bandwidth upgrade must be greater than or equal to 3 hours.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -77,8 +81,10 @@ public class ModifyInstanceNetworkSpecRequest extends TeaModel {
     /**
      * <p>The maximum inbound bandwidth from the Internet. Unit: Mbit/s. Valid values:</p>
      * <ul>
-     * <li>If the purchased outbound public bandwidth is less than or equal to 10 Mbit/s, the valid values of this parameter are 1 to 10 and the default value is 10.</li>
-     * <li>If the purchased outbound public bandwidth is greater than 10 Mbit/s, the valid values of this parameter are 1 to the <code>InternetMaxBandwidthOut</code> value and the default value is the <code>InternetMaxBandwidthOut</code> value.</li>
+     * <li><p>If the purchased outbound public bandwidth is less than or equal to 10 Mbit/s, the valid values of this parameter are 1 to 10 and the default value is 10.</p>
+     * </li>
+     * <li><p>If the purchased outbound public bandwidth is greater than 10 Mbit/s, the valid values of this parameter are 1 to the <code>InternetMaxBandwidthOut</code> value and the default value is the <code>InternetMaxBandwidthOut</code> value.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -94,13 +100,15 @@ public class ModifyInstanceNetworkSpecRequest extends TeaModel {
      * </li>
      * <li><p>Valid values when the pay-by-bandwidth billing method for network usage is used:</p>
      * <ul>
-     * <li>Valid values for subscription instances: 0 to 200.</li>
-     * <li>Valid values for pay-as-you-go instances: 0 to 100.</li>
+     * <li><p>Valid values for subscription instances: 0 to 200.</p>
+     * </li>
+     * <li><p>Valid values for pay-as-you-go instances: 0 to 100.</p>
+     * </li>
      * </ul>
      * </li>
      * </ul>
      * <blockquote>
-     * <p> The maximum outbound bandwidth of a single instance is also limited by the <strong>network baseline bandwidth (Gbit/s) and network burst bandwidth (Gbit/s)</strong> of the instance type. For more information, see <a href="https://help.aliyun.com/document_detail/25378.html">Overview of instance families</a>.</p>
+     * <p>The maximum outbound bandwidth of a single instance is also limited by the <strong>network baseline bandwidth (Gbit/s) and network burst bandwidth (Gbit/s)</strong> of the instance type. For more information, see <a href="https://help.aliyun.com/document_detail/25378.html">Overview of instance families</a>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -112,8 +120,10 @@ public class ModifyInstanceNetworkSpecRequest extends TeaModel {
     /**
      * <p>The billing method for network usage. Valid values:</p>
      * <ul>
-     * <li>PayByBandwidth</li>
-     * <li>PayByTraffic</li>
+     * <li><p>PayByBandwidth</p>
+     * </li>
+     * <li><p>PayByTraffic</p>
+     * </li>
      * </ul>
      * <blockquote>
      * <p>When the <strong>pay-by-traffic</strong> billing method for network usage is used, the maximum inbound and outbound bandwidth values are used as the upper limits of bandwidths instead of guaranteed values. In scenarios where demand outstrips resource supplies, these maximum bandwidths may be limited. If you want guaranteed bandwidths for your instance, use the <strong>pay-by-bandwidth</strong> billing method for network usage.</p>

@@ -8,8 +8,10 @@ public class DescribeDiagnosticReportsRequest extends TeaModel {
      * <p>The number of entries per page. Valid values: 1 to 100.</p>
      * <p>Default value:</p>
      * <ul>
-     * <li>If this parameter is left empty, the default value is 10.</li>
-     * <li>If you set this parameter to a value that is greater than 100, the default value is 100.</li>
+     * <li><p>If this parameter is left empty, the default value is 10.</p>
+     * </li>
+     * <li><p>If you set this parameter to a value that is greater than 100, the default value is 100.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -52,11 +54,16 @@ public class DescribeDiagnosticReportsRequest extends TeaModel {
     /**
      * <p>The severity level of the diagnostic report. Valid values:</p>
      * <ul>
-     * <li>Unknown: The diagnostic did not start, failed to run, or unexpectedly exited without a diagnosis.</li>
-     * <li>Normal: No exceptions were detected.</li>
-     * <li>Info: Diagnostic information was recorded and may be related to exceptions.</li>
-     * <li>Warn: Diagnostic information was recorded and may indicate exceptions.</li>
-     * <li>Critical: Critical exceptions were detected.</li>
+     * <li><p>Unknown: The diagnostic did not start, failed to run, or unexpectedly exited without a diagnosis.</p>
+     * </li>
+     * <li><p>Normal: No exceptions were detected.</p>
+     * </li>
+     * <li><p>Info: Diagnostic information was recorded and may be related to exceptions.</p>
+     * </li>
+     * <li><p>Warn: Diagnostic information was recorded and may indicate exceptions.</p>
+     * </li>
+     * <li><p>Critical: Critical exceptions were detected.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -68,9 +75,12 @@ public class DescribeDiagnosticReportsRequest extends TeaModel {
     /**
      * <p>The status of the diagnostic report. Valid values:</p>
      * <ul>
-     * <li>InProgress</li>
-     * <li>Failed</li>
-     * <li>Finished</li>
+     * <li><p>InProgress</p>
+     * </li>
+     * <li><p>Failed</p>
+     * </li>
+     * <li><p>Finished</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

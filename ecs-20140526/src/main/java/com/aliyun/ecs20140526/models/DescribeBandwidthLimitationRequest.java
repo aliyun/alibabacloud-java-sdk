@@ -7,8 +7,10 @@ public class DescribeBandwidthLimitationRequest extends TeaModel {
     /**
      * <p>The billing method of the instance. For more information, see <a href="https://help.aliyun.com/document_detail/25398.html">Billing overview</a>. Valid values:</p>
      * <ul>
-     * <li>PrePaid: subscription</li>
-     * <li>PostPaid: pay-as-you-go</li>
+     * <li><p>PrePaid: subscription</p>
+     * </li>
+     * <li><p>PostPaid: pay-as-you-go</p>
+     * </li>
      * </ul>
      * <p>Default value: PostPaid.</p>
      * 
@@ -31,9 +33,12 @@ public class DescribeBandwidthLimitationRequest extends TeaModel {
     /**
      * <p>Specifies the operation for which to query the maximum public bandwidth. Valid values:</p>
      * <ul>
-     * <li>Upgrade: upgrades the public bandwidth.</li>
-     * <li>Downgrade: downgrades the public bandwidth.</li>
-     * <li>Create: creates an ECS instance.</li>
+     * <li><p>Upgrade: upgrades the public bandwidth.</p>
+     * </li>
+     * <li><p>Downgrade: downgrades the public bandwidth.</p>
+     * </li>
+     * <li><p>Create: creates an ECS instance.</p>
+     * </li>
      * </ul>
      * <p>Default value: Create.</p>
      * 
@@ -62,7 +67,7 @@ public class DescribeBandwidthLimitationRequest extends TeaModel {
     /**
      * <p>The resource ID.</p>
      * <blockquote>
-     * <p> This parameter is required when the OperationType parameter is set to Upgrade or Downgrade.</p>
+     * <p>This parameter is required when the OperationType parameter is set to Upgrade or Downgrade.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -80,13 +85,16 @@ public class DescribeBandwidthLimitationRequest extends TeaModel {
     /**
      * <p>The bidding policy for the pay-as-you-go instance. Valid values:</p>
      * <ul>
-     * <li>NoSpot: The instance is a pay-as-you-go instance.</li>
-     * <li>SpotWithPriceLimit: The instance is a spot instance for which you can specify the maximum hourly price.</li>
-     * <li>SpotAsPriceGo: The instance is a spot instance for which the market price at the time of purchase is automatically used as the bid price. The market price can be up to the pay-as-you-go price.</li>
+     * <li><p>NoSpot: The instance is a pay-as-you-go instance.</p>
+     * </li>
+     * <li><p>SpotWithPriceLimit: The instance is a spot instance for which you can specify the maximum hourly price.</p>
+     * </li>
+     * <li><p>SpotAsPriceGo: The instance is a spot instance for which the market price at the time of purchase is automatically used as the bid price. The market price can be up to the pay-as-you-go price.</p>
+     * </li>
      * </ul>
      * <p>Default value: NoSpot.</p>
      * <blockquote>
-     * <p> The SpotStrategy parameter takes effect only when the InstanceChargeType parameter is set to PostPaid.</p>
+     * <p>The SpotStrategy parameter takes effect only when the InstanceChargeType parameter is set to PostPaid.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

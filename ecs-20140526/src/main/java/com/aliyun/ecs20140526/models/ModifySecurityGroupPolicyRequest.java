@@ -16,11 +16,13 @@ public class ModifySecurityGroupPolicyRequest extends TeaModel {
     /**
      * <p>The internal access control policy of the security group. Valid values:</p>
      * <ul>
-     * <li>Accept: the internal interconnectivity policy</li>
-     * <li>Drop: the internal isolation policy</li>
+     * <li><p>Accept: the internal interconnectivity policy</p>
+     * </li>
+     * <li><p>Drop: the internal isolation policy</p>
+     * </li>
      * </ul>
      * <blockquote>
-     * <p> The value of this parameter is case-insensitive.</p>
+     * <p>The value of this parameter is case-insensitive.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 

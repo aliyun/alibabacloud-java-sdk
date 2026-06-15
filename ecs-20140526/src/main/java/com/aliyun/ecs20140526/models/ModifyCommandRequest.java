@@ -6,7 +6,7 @@ import com.aliyun.tea.*;
 public class ModifyCommandRequest extends TeaModel {
     /**
      * <blockquote>
-     * <p> This parameter is no longer used and does not take effect.</p>
+     * <p>This parameter is no longer used and does not take effect.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

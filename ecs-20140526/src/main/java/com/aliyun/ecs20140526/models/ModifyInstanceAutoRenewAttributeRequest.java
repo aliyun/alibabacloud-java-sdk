@@ -7,8 +7,10 @@ public class ModifyInstanceAutoRenewAttributeRequest extends TeaModel {
     /**
      * <p>Specifies whether to enable auto-renewal.</p>
      * <ul>
-     * <li>true</li>
-     * <li>false</li>
+     * <li><p>true</p>
+     * </li>
+     * <li><p>false</p>
+     * </li>
      * </ul>
      * <p>Default value: false.</p>
      * 
@@ -21,8 +23,10 @@ public class ModifyInstanceAutoRenewAttributeRequest extends TeaModel {
     /**
      * <p>The auto-renewal period of the instance.</p>
      * <ul>
-     * <li>Valid values of <code>Duration</code> when <code>PeriodUnit</code> is set to <code>Year</code>: 1, 2, 3, 4, and 5.</li>
-     * <li>Valid values of <code>Duration</code> when <code>PeriodUnit</code> is set to <code>Month</code>: 1, 2, 3, 6, 12, 24, 36, 48, and 60.</li>
+     * <li><p>Valid values of <code>Duration</code> when <code>PeriodUnit</code> is set to <code>Year</code>: 1, 2, 3, 4, and 5.</p>
+     * </li>
+     * <li><p>Valid values of <code>Duration</code> when <code>PeriodUnit</code> is set to <code>Month</code>: 1, 2, 3, 6, 12, 24, 36, 48, and 60.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -50,8 +54,10 @@ public class ModifyInstanceAutoRenewAttributeRequest extends TeaModel {
     /**
      * <p>The unit of the renewal period (<code>Duration</code>). Valid values:</p>
      * <ul>
-     * <li>Month (default)</li>
-     * <li>Year</li>
+     * <li><p>Month (default)</p>
+     * </li>
+     * <li><p>Year</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -73,9 +79,12 @@ public class ModifyInstanceAutoRenewAttributeRequest extends TeaModel {
     /**
      * <p>The auto-renewal status of the instance. Valid values:</p>
      * <ul>
-     * <li>AutoRenewal: Auto-renewal is enabled for the instance.</li>
-     * <li>Normal: Auto-renewal is disabled for the instance.</li>
-     * <li>NotRenewal: The instance is not renewed. The system no longer sends an expiration notification but sends only a renewal notification three days before the instance expires. You can change the value of this parameter from NotRenewal to <code>Normal</code> for an instance, and then manually renew the instance. Alternatively, you can set the RenewalStatus parameter to AutoRenewal.</li>
+     * <li><p>AutoRenewal: Auto-renewal is enabled for the instance.</p>
+     * </li>
+     * <li><p>Normal: Auto-renewal is disabled for the instance.</p>
+     * </li>
+     * <li><p>NotRenewal: The instance is not renewed. The system no longer sends an expiration notification but sends only a renewal notification three days before the instance expires. You can change the value of this parameter from NotRenewal to <code>Normal</code> for an instance, and then manually renew the instance. Alternatively, you can set the RenewalStatus parameter to AutoRenewal.</p>
+     * </li>
      * </ul>
      * <blockquote>
      * <p><code>RenewalStatus</code> takes precedence over <code>AutoRenew</code>. If you do not specify <code>RenewalStatus</code>, <code>AutoRenew</code> is used by default.</p>

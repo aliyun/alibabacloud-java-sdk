@@ -17,7 +17,7 @@ public class CreateAutoProvisioningGroupResponseBody extends TeaModel {
     public CreateAutoProvisioningGroupResponseBodyLaunchResults launchResults;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>745CEC9F-0DD7-4451-9FE7-8B752F39****</p>

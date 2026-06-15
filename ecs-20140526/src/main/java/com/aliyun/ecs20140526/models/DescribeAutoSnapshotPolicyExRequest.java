@@ -179,7 +179,7 @@ public class DescribeAutoSnapshotPolicyExRequest extends TeaModel {
 
     public static class DescribeAutoSnapshotPolicyExRequestTag extends TeaModel {
         /**
-         * <p>The key of tag N of the automatic snapshot policy. Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key can be up to 128 characters in length and cannot contain http:// or https://. The tag key cannot start with acs: or aliyun.</p>
+         * <p>The key of tag N of the automatic snapshot policy. Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key can be up to 128 characters in length and cannot contain http\:// or https\://. The tag key cannot start with acs: or aliyun.</p>
          * 
          * <strong>example:</strong>
          * <p>TestKey</p>
@@ -188,7 +188,7 @@ public class DescribeAutoSnapshotPolicyExRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The value of tag N of the automatic snapshot policy. Valid values of N: 1 to 20. The tag value can be an empty string. The tag value can be up to 128 characters in length and cannot contain http:// or https://. The tag value cannot start with acs:.</p>
+         * <p>The value of tag N of the automatic snapshot policy. Valid values of N: 1 to 20. The tag value can be an empty string. The tag value can be up to 128 characters in length and cannot contain http\:// or https\://. The tag value cannot start with acs:.</p>
          * 
          * <strong>example:</strong>
          * <p>TestValue</p>

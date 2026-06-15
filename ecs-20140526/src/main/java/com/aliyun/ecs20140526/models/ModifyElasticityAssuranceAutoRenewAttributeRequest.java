@@ -16,8 +16,10 @@ public class ModifyElasticityAssuranceAutoRenewAttributeRequest extends TeaModel
     /**
      * <p>The auto-renewal period for the elasticity assurance.</p>
      * <ul>
-     * <li>Valid values when <code>PeriodUnit</code> is set to <code>Year</code>: 1, 3, and 5.</li>
-     * <li>Valid values when <code>PeriodUnit</code> is set to <code>Month</code>: 1.</li>
+     * <li><p>Valid values when <code>PeriodUnit</code> is set to <code>Year</code>: 1, 3, and 5.</p>
+     * </li>
+     * <li><p>Valid values when <code>PeriodUnit</code> is set to <code>Month</code>: 1.</p>
+     * </li>
      * </ul>
      * <p>Default value: 1.</p>
      * 
@@ -30,8 +32,10 @@ public class ModifyElasticityAssuranceAutoRenewAttributeRequest extends TeaModel
     /**
      * <p>The unit of the renewal duration. Valid values:</p>
      * <ul>
-     * <li>Month</li>
-     * <li>Year</li>
+     * <li><p>Month</p>
+     * </li>
+     * <li><p>Year</p>
+     * </li>
      * </ul>
      * <p>Default value: Month.</p>
      * 
@@ -54,9 +58,12 @@ public class ModifyElasticityAssuranceAutoRenewAttributeRequest extends TeaModel
     /**
      * <p>The auto-renewal status of the elasticity assurance. Valid values:</p>
      * <ul>
-     * <li>AutoRenewal: Auto-renewal is enabled for the elasticity assurance.</li>
-     * <li>Normal: Auto-renewal is disabled for the elasticity assurance.</li>
-     * <li>NotRenewal: The elasticity assurance is not renewed. The system no longer sends an expiration notification but sends only a renewal notification three days before the elasticity assurance expires. You can change the value of this parameter from NotRenewal to <code>Normal</code> for an elasticity assurance, and then manually renew the elasticity assurance. Alternatively, you can set the RenewalStatus parameter to AutoRenewal.</li>
+     * <li><p>AutoRenewal: Auto-renewal is enabled for the elasticity assurance.</p>
+     * </li>
+     * <li><p>Normal: Auto-renewal is disabled for the elasticity assurance.</p>
+     * </li>
+     * <li><p>NotRenewal: The elasticity assurance is not renewed. The system no longer sends an expiration notification but sends only a renewal notification three days before the elasticity assurance expires. You can change the value of this parameter from NotRenewal to <code>Normal</code> for an elasticity assurance, and then manually renew the elasticity assurance. Alternatively, you can set the RenewalStatus parameter to AutoRenewal.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -152,7 +159,7 @@ public class ModifyElasticityAssuranceAutoRenewAttributeRequest extends TeaModel
         /**
          * <p>The IDs of elasticity assurances.</p>
          * <blockquote>
-         * <p> You can renew up to 50 elasticity assurances at a time.</p>
+         * <p>You can renew up to 50 elasticity assurances at a time.</p>
          * </blockquote>
          */
         @NameInMap("Id")

@@ -34,7 +34,7 @@ public class DescribeAccountAttributesRequest extends TeaModel {
      * <li><p>max-axt-invocation-daily: the maximum number of Cloud Assistant command executions per day.</p>
      * </li>
      * <li><p>real-name-authentication: whether the account has completed the real-name verification.</p>
-     * <p>**</p>
+     * <p>\<em>\</em></p>
      * <p><strong>Note</strong> To create an ECS instance in a region in the Chinese mainland, you must complete the real-name verification.</p>
      * </li>
      * <li><p>max-cloud-assistant-activation-count: the maximum number of activation codes that can be created to use to register managed instances.</p>

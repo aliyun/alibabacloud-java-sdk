@@ -4,15 +4,27 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class CreateNatGatewayResponseBody extends TeaModel {
+    /**
+     * <p>The IDs of the EIP bandwidth plans.</p>
+     */
     @NameInMap("BandwidthPackageIds")
     public CreateNatGatewayResponseBodyBandwidthPackageIds bandwidthPackageIds;
 
+    /**
+     * <p>The IDs of the forwarding tables.</p>
+     */
     @NameInMap("ForwardTableIds")
     public CreateNatGatewayResponseBodyForwardTableIds forwardTableIds;
 
+    /**
+     * <p>The ID of the NAT gateway.</p>
+     */
     @NameInMap("NatGatewayId")
     public String natGatewayId;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

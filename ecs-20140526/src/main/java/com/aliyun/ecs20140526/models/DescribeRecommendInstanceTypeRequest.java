@@ -7,7 +7,7 @@ public class DescribeRecommendInstanceTypeRequest extends TeaModel {
     /**
      * <p>The number of vCPU cores of the instance type.</p>
      * <blockquote>
-     * <p> If you specify both <code>Cores</code> and <code>Memory</code>, the system returns all instance types that match the values of the parameters.</p>
+     * <p>If you specify both <code>Cores</code> and <code>Memory</code>, the system returns all instance types that match the values of the parameters.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -19,8 +19,10 @@ public class DescribeRecommendInstanceTypeRequest extends TeaModel {
     /**
      * <p>The billing method of the ECS instance. For more information, see <a href="https://help.aliyun.com/document_detail/25398.html">Billing overview</a>. Valid values:</p>
      * <ul>
-     * <li>PrePaid: subscription.</li>
-     * <li>PostPaid: pay-as-you-go</li>
+     * <li><p>PrePaid: subscription.</p>
+     * </li>
+     * <li><p>PostPaid: pay-as-you-go</p>
+     * </li>
      * </ul>
      * <p>Default value: PostPaid</p>
      * 
@@ -33,9 +35,12 @@ public class DescribeRecommendInstanceTypeRequest extends TeaModel {
     /**
      * <p>The level of the instance family. Valid values:</p>
      * <ul>
-     * <li>EntryLevel: entry level.</li>
-     * <li>EnterpriseLevel: enterprise level.</li>
-     * <li>CreditEntryLevel: credit-based entry level. For more information, see <a href="https://help.aliyun.com/document_detail/59977.html">Burstable instance families</a>.</li>
+     * <li><p>EntryLevel: entry level.</p>
+     * </li>
+     * <li><p>EnterpriseLevel: enterprise level.</p>
+     * </li>
+     * <li><p>CreditEntryLevel: credit-based entry level. For more information, see <a href="https://help.aliyun.com/document_detail/59977.html">Burstable instance families</a>.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -47,7 +52,7 @@ public class DescribeRecommendInstanceTypeRequest extends TeaModel {
     /**
      * <p>The instance type. For more information, see <a href="https://help.aliyun.com/document_detail/25378.html">Overview of instance families</a> or call the <a href="https://help.aliyun.com/document_detail/25620.html">DescribeInstanceTypes</a> operation to query the most recent instance type list.</p>
      * <blockquote>
-     * <p> If you specify <code>InstanceType</code>, you cannot specify <code>Cores</code> or <code>Memory</code>.</p>
+     * <p>If you specify <code>InstanceType</code>, you cannot specify <code>Cores</code> or <code>Memory</code>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -68,8 +73,10 @@ public class DescribeRecommendInstanceTypeRequest extends TeaModel {
     /**
      * <p>Specifies whether instances of the instance type are I/O optimized. You cannot specify IoOptimized if the instance type supports only non-I/O optimized instances. Valid values:</p>
      * <ul>
-     * <li>optimized: The instances are I/O optimized.</li>
-     * <li>none: The instances are non-I/O optimized.</li>
+     * <li><p>optimized: The instances are I/O optimized.</p>
+     * </li>
+     * <li><p>none: The instances are non-I/O optimized.</p>
+     * </li>
      * </ul>
      * <p>Default value: optimized.</p>
      * <p>If you query alternative instance types for retired instance types, this parameter is set to none by default.</p>
@@ -83,7 +90,7 @@ public class DescribeRecommendInstanceTypeRequest extends TeaModel {
     /**
      * <p>The maximum hourly price for pay-as-you-go instances or spot instances.</p>
      * <blockquote>
-     * <p> This parameter takes effect only when <code>SpotStrategy</code> is set to <code>SpotWithPriceLimit</code>.</p>
+     * <p>This parameter takes effect only when <code>SpotStrategy</code> is set to <code>SpotWithPriceLimit</code>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -95,7 +102,7 @@ public class DescribeRecommendInstanceTypeRequest extends TeaModel {
     /**
      * <p>The memory size of the instance type. Unit: GiB.</p>
      * <blockquote>
-     * <p> If you specify both <code>Cores</code> and <code>Memory</code>, the system returns all instance types that match the values of the parameters.</p>
+     * <p>If you specify both <code>Cores</code> and <code>Memory</code>, the system returns all instance types that match the values of the parameters.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -107,8 +114,10 @@ public class DescribeRecommendInstanceTypeRequest extends TeaModel {
     /**
      * <p>The network type of ECS instances. Valid values:</p>
      * <ul>
-     * <li>classic</li>
-     * <li>vpc</li>
+     * <li><p>classic</p>
+     * </li>
+     * <li><p>vpc</p>
+     * </li>
      * </ul>
      * <p>Default value: vpc.</p>
      * <p>This parameter is required.</p>
@@ -128,9 +137,12 @@ public class DescribeRecommendInstanceTypeRequest extends TeaModel {
     /**
      * <p>The policy for recommending instance types. Valid values:</p>
      * <ul>
-     * <li>InventoryFirst: recommends instance types in descending order of resource availability.</li>
-     * <li>PriceFirst: recommends the most cost-effective instance types. Recommended instance types appear based on the hourly prices of vCPUs in ascending order.</li>
-     * <li>NewProductFirst: recommends the latest instance types first.</li>
+     * <li><p>InventoryFirst: recommends instance types in descending order of resource availability.</p>
+     * </li>
+     * <li><p>PriceFirst: recommends the most cost-effective instance types. Recommended instance types appear based on the hourly prices of vCPUs in ascending order.</p>
+     * </li>
+     * <li><p>NewProductFirst: recommends the latest instance types first.</p>
+     * </li>
      * </ul>
      * <p>Default value: InventoryFirst.</p>
      * 
@@ -159,8 +171,10 @@ public class DescribeRecommendInstanceTypeRequest extends TeaModel {
     /**
      * <p>Specifies the scenarios in which instance types are recommended. Valid values:</p>
      * <ul>
-     * <li>UPGRADE: instance type upgrade or downgrade</li>
-     * <li>CREATE: instance creation</li>
+     * <li><p>UPGRADE: instance type upgrade or downgrade</p>
+     * </li>
+     * <li><p>CREATE: instance creation</p>
+     * </li>
      * </ul>
      * <p>Default value: CREATE.</p>
      * 
@@ -173,12 +187,15 @@ public class DescribeRecommendInstanceTypeRequest extends TeaModel {
     /**
      * <p>The bidding policy of the spot instance. Valid values:</p>
      * <ul>
-     * <li>NoSpot: The instance is created as a pay-as-you-go instance.</li>
-     * <li>SpotWithPriceLimit: The instance is a spot instance that has a user-defined maximum hourly price.</li>
-     * <li>SpotAsPriceGo: The instance is a spot instance for which the market price at the time of purchase is automatically used as the bid price. The market price can be up to the pay-as-you-go price.</li>
+     * <li><p>NoSpot: The instance is created as a pay-as-you-go instance.</p>
+     * </li>
+     * <li><p>SpotWithPriceLimit: The instance is a spot instance that has a user-defined maximum hourly price.</p>
+     * </li>
+     * <li><p>SpotAsPriceGo: The instance is a spot instance for which the market price at the time of purchase is automatically used as the bid price. The market price can be up to the pay-as-you-go price.</p>
+     * </li>
      * </ul>
      * <blockquote>
-     * <p> If you specify <code>SpotStrategy</code>, you must set <code>InstanceChargeType</code> to <code>PostPaid</code>.</p>
+     * <p>If you specify <code>SpotStrategy</code>, you must set <code>InstanceChargeType</code> to <code>PostPaid</code>.</p>
      * </blockquote>
      * <p>Default value: NoSpot.</p>
      * 
@@ -191,10 +208,14 @@ public class DescribeRecommendInstanceTypeRequest extends TeaModel {
     /**
      * <p>The category of the system disk. Valid values:</p>
      * <ul>
-     * <li>cloud_efficiency: ultra disk</li>
-     * <li>cloud_ssd: standard SSD</li>
-     * <li>cloud_essd: Enterprise SSD (ESSD)</li>
-     * <li>cloud: basic disk</li>
+     * <li><p>cloud_efficiency: ultra disk</p>
+     * </li>
+     * <li><p>cloud_ssd: standard SSD</p>
+     * </li>
+     * <li><p>cloud_essd: Enterprise SSD (ESSD)</p>
+     * </li>
+     * <li><p>cloud: basic disk</p>
+     * </li>
      * </ul>
      * <p>For non-I/O optimized instances, the default value is cloud.</p>
      * <p>For I/O optimized instances, the default value is cloud_efficiency.</p>
@@ -218,8 +239,10 @@ public class DescribeRecommendInstanceTypeRequest extends TeaModel {
     /**
      * <p>Specifies whether to recommend only instance types in the zone specified by ZoneId. Valid values:</p>
      * <ul>
-     * <li>Strict: recommends only instance types that are available in the zone specified by ZoneId.</li>
-     * <li>Include: recommends instance types that are available in the zone specified by ZoneId and instance types that are available in other zones within the same region.</li>
+     * <li><p>Strict: recommends only instance types that are available in the zone specified by ZoneId.</p>
+     * </li>
+     * <li><p>Include: recommends instance types that are available in the zone specified by ZoneId and instance types that are available in other zones within the same region.</p>
+     * </li>
      * </ul>
      * <p>If <code>ZoneId</code> is specified, the default value of this parameter is Strict, which indicates that only instance types in the zone specified by ZoneId are recommended.</p>
      * 

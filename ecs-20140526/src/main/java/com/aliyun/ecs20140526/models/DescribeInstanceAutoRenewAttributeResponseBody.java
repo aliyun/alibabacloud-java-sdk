@@ -4,6 +4,9 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeInstanceAutoRenewAttributeResponseBody extends TeaModel {
+    /**
+     * <p>The auto-renewal attributes of the instances.</p>
+     */
     @NameInMap("InstanceRenewAttributes")
     public DescribeInstanceAutoRenewAttributeResponseBodyInstanceRenewAttributes instanceRenewAttributes;
 
@@ -35,7 +38,7 @@ public class DescribeInstanceAutoRenewAttributeResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of queried instances.</p>
+     * <p>The total number of instances that are returned.</p>
      * 
      * <strong>example:</strong>
      * <p>6</p>

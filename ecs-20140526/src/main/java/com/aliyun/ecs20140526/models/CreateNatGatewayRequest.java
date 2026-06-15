@@ -5,17 +5,30 @@ import com.aliyun.tea.*;
 
 public class CreateNatGatewayRequest extends TeaModel {
     /**
+     * <p>Configurations for the bandwidth packages to create and associate with the nat gateway.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("BandwidthPackage")
     public java.util.List<CreateNatGatewayRequestBandwidthPackage> bandwidthPackage;
 
+    /**
+     * <p>A client token to ensure the idempotence of the request.</p>
+     * <p>This token is client-generated and must be unique for each request. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
+    /**
+     * <p>A description of the nat gateway.</p>
+     * <p>The description must be 2 to 256 characters in length. It must start with a letter or a Chinese character but cannot start with <code>http://</code> or <code>https://</code>.</p>
+     */
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <p>A name for the nat gateway.</p>
+     * <p>The name must be 2 to 128 characters in length. It must start with a letter or a Chinese character but cannot start with <code>http://</code> or <code>https://</code>.</p>
+     */
     @NameInMap("Name")
     public String name;
 
@@ -26,6 +39,7 @@ public class CreateNatGatewayRequest extends TeaModel {
     public Long ownerId;
 
     /**
+     * <p>The ID of the region in which to create the nat gateway.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
@@ -38,6 +52,7 @@ public class CreateNatGatewayRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
+     * <p>The ID of the VPC in which to create the nat gateway.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("VpcId")
@@ -129,12 +144,21 @@ public class CreateNatGatewayRequest extends TeaModel {
     }
 
     public static class CreateNatGatewayRequestBandwidthPackage extends TeaModel {
+        /**
+         * <p>The peak bandwidth for the EIPs in the bandwidth package. Unit: Mbit/s.</p>
+         */
         @NameInMap("Bandwidth")
         public Integer bandwidth;
 
+        /**
+         * <p>The number of EIPs to create in the bandwidth package. Valid values: 1 to 10.</p>
+         */
         @NameInMap("IpCount")
         public Integer ipCount;
 
+        /**
+         * <p>The ID of the zone in which to create the EIPs. If you do not specify a zone, the system randomly selects one.</p>
+         */
         @NameInMap("Zone")
         public String zone;
 

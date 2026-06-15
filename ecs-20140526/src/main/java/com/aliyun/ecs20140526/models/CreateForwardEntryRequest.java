@@ -5,36 +5,42 @@ import com.aliyun.tea.*;
 
 public class CreateForwardEntryRequest extends TeaModel {
     /**
+     * <p>The public IP address for the DNAT entry. This must be a public IP address of the NAT gateway associated with the DNAT table.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("ExternalIp")
     public String externalIp;
 
     /**
+     * <p>The external port used for DNAT. Valid values: 1 to 65535.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("ExternalPort")
     public String externalPort;
 
     /**
+     * <p>The ID of the DNAT table.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("ForwardTableId")
     public String forwardTableId;
 
     /**
+     * <p>The private IP address to which traffic is forwarded.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("InternalIp")
     public String internalIp;
 
     /**
+     * <p>The internal port to which traffic is forwarded. Valid values: 1 to 65535.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("InternalPort")
     public String internalPort;
 
     /**
+     * <p>The protocol. Valid values: TCP, UDP, and Any. If you set this parameter to Any, the DNAT entry applies to all protocols.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("IpProtocol")
@@ -47,6 +53,7 @@ public class CreateForwardEntryRequest extends TeaModel {
     public Long ownerId;
 
     /**
+     * <p>The ID of the region where the DNAT table is located. You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to retrieve a list of available regions.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")

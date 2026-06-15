@@ -7,8 +7,10 @@ public class DescribePrefixListsRequest extends TeaModel {
     /**
      * <p>The IP address family. Valid values:</p>
      * <ul>
-     * <li>IPv4</li>
-     * <li>IPv6</li>
+     * <li><p>IPv4</p>
+     * </li>
+     * <li><p>IPv6</p>
+     * </li>
      * </ul>
      * <p>This parameter is empty by default, which indicates that all prefix lists are queried.</p>
      * 

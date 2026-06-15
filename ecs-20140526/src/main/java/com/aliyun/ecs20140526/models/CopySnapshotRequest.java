@@ -32,7 +32,7 @@ public class CopySnapshotRequest extends TeaModel {
     public String destinationRegionId;
 
     /**
-     * <p>The description of the new snapshot. The description must be 2 to 256 characters in length and cannot start with http:// or https://.</p>
+     * <p>The description of the new snapshot. The description must be 2 to 256 characters in length and cannot start with http\:// or https\://.</p>
      * <p>This parameter is empty by default.</p>
      * <p>This parameter is required.</p>
      * 
@@ -43,7 +43,7 @@ public class CopySnapshotRequest extends TeaModel {
     public String destinationSnapshotDescription;
 
     /**
-     * <p>The name of the new snapshot. The name must be 2 to 128 characters in length. The name must start with a letter and cannot start with http:// or https://. The name can contain letters, digits, colons (:), underscores (_), periods (.), and hyphens (-).</p>
+     * <p>The name of the new snapshot. The name must be 2 to 128 characters in length. The name must start with a letter and cannot start with http\:// or https\://. The name can contain letters, digits, colons (:), underscores (_), periods (.), and hyphens (-).</p>
      * <p>This parameter is left empty by default.</p>
      * <p>This parameter is required.</p>
      * 
@@ -55,7 +55,7 @@ public class CopySnapshotRequest extends TeaModel {
 
     /**
      * <blockquote>
-     * <p> This parameter is not publicly available.</p>
+     * <p>This parameter is not publicly available.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -67,8 +67,10 @@ public class CopySnapshotRequest extends TeaModel {
     /**
      * <p>Specifies whether to encrypt the new snapshot. Valid values:</p>
      * <ul>
-     * <li>true</li>
-     * <li>false</li>
+     * <li><p>true</p>
+     * </li>
+     * <li><p>false</p>
+     * </li>
      * </ul>
      * <p>Default value: false.</p>
      * 
@@ -341,7 +343,7 @@ public class CopySnapshotRequest extends TeaModel {
 
     public static class CopySnapshotRequestTag extends TeaModel {
         /**
-         * <p>The key of tag N to add to the new snapshot. The tag key cannot be an empty string. It can be up to 128 characters in length and cannot start with acs: or aliyun. It cannot contain http:// or https://.</p>
+         * <p>The key of tag N to add to the new snapshot. The tag key cannot be an empty string. It can be up to 128 characters in length and cannot start with acs: or aliyun. It cannot contain http\:// or https\://.</p>
          * 
          * <strong>example:</strong>
          * <p>TestKey</p>
@@ -350,7 +352,7 @@ public class CopySnapshotRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The value of tag N to add to the new snapshot. The tag value can be an empty string. It can be up to 128 characters in length and cannot start with acs: or aliyun. It cannot contain http:// or https://.</p>
+         * <p>The value of tag N to add to the new snapshot. The tag value can be an empty string. It can be up to 128 characters in length and cannot start with acs: or aliyun. It cannot contain http\:// or https\://.</p>
          * 
          * <strong>example:</strong>
          * <p>TestValue</p>

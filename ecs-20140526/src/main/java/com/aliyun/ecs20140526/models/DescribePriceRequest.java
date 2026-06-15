@@ -14,7 +14,7 @@ public class DescribePriceRequest extends TeaModel {
     public DescribePriceRequestSystemDisk systemDisk;
 
     /**
-     * <p>The number of ECS instances. You can specify this parameter when you want to query the prices of multiple instances that have specific specifications. Valid values: 1 to 1000.</p>
+     * <p>The number of resources for which to query prices. Valid values: 1–1000.</p>
      * <p>Default value: 1.</p>
      * 
      * <strong>example:</strong>
@@ -24,8 +24,8 @@ public class DescribePriceRequest extends TeaModel {
     public Integer amount;
 
     /**
-     * <p>The total number of times that the elasticity assurance can be applied. Set the value to Unlimited. This value indicates that the elasticity assurance can be applied an unlimited number of times within its effective period.</p>
-     * <p>Default value: Unlimited.</p>
+     * <p>The number of times the elasticity assurance can be used. Set this to <code>Unlimited</code>, which allows the assurance to be used any number of times during its effective period.</p>
+     * <p>Default value: <code>Unlimited</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>Unlimited</p>
@@ -34,7 +34,7 @@ public class DescribePriceRequest extends TeaModel {
     public String assuranceTimes;
 
     /**
-     * <p>The storage capacity. Unit: GiB.</p>
+     * <p>The memory capacity for the elasticity assurance. Unit: GiB.</p>
      * 
      * <strong>example:</strong>
      * <p>1024</p>
@@ -43,7 +43,7 @@ public class DescribePriceRequest extends TeaModel {
     public Integer capacity;
 
     /**
-     * <p>The type of the dedicated host. You can call the <a href="https://help.aliyun.com/document_detail/134240.html">DescribeDedicatedHostTypes</a> operation to query the most recent list of dedicated host types.</p>
+     * <p>The dedicated host type. You can call the <a href="https://help.aliyun.com/document_detail/134240.html">DescribeDedicatedHostTypes</a> operation to query dedicated host types.</p>
      * 
      * <strong>example:</strong>
      * <p>ddh.c5</p>
@@ -52,8 +52,8 @@ public class DescribePriceRequest extends TeaModel {
     public String dedicatedHostType;
 
     /**
-     * <p>This parameter takes effect only when ResourceType is set to instance.</p>
-     * <p>The image ID. Images contain the runtime environments to load when instances start. You can call the <a href="https://help.aliyun.com/document_detail/25534.html">DescribeImages</a> operation to query available images. If you do not specify this parameter, the system queries the prices of Linux images.</p>
+     * <p>This parameter is valid only when <code>ResourceType</code> is set to <code>instance</code>.</p>
+     * <p>The ID of the image. The image provides the runtime environment for the instance. You can call the <a href="https://help.aliyun.com/document_detail/25534.html">DescribeImages</a> operation to query available images. If you do not specify this parameter, the system queries prices for Linux instances by default.</p>
      * 
      * <strong>example:</strong>
      * <p>centos_7_05_64_20G_alibase_20181212.vhd</p>
@@ -62,8 +62,8 @@ public class DescribePriceRequest extends TeaModel {
     public String imageId;
 
     /**
-     * <p>The total number of reserved instances for an instance type.</p>
-     * <p>Valid values: 1 to 1000.</p>
+     * <p>The number of instances to include in the reserved instance offering.</p>
+     * <p>Valid values: 1–1000.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>
@@ -72,9 +72,9 @@ public class DescribePriceRequest extends TeaModel {
     public Integer instanceAmount;
 
     /**
-     * <p>The total number of vCPUs supported by the elasticity assurance. When you call this API operation, the system calculates the number of instances that an elasticity assurance must support based on the specified value of InstanceType. The calculated value is rounded up to the nearest integer.</p>
+     * <p>The total number of vCPUs for instances that are covered by the elasticity assurance. When you call this operation, the system calculates the number of supported instances based on the specified <code>InstanceType</code> and rounds the value up to the nearest integer.</p>
      * <blockquote>
-     * <p>When you call this API operation to query the price of an elasticity assurance, you can only specify either InstanceCoreCpuCount or InstanceAmount.</p>
+     * <p>When you query the price of an elasticity assurance, you can specify only one of the <code>InstanceCpuCoreCount</code> and <code>InstanceAmount</code> parameters.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -86,10 +86,12 @@ public class DescribePriceRequest extends TeaModel {
     /**
      * <p>The network type of the instance. Valid values:</p>
      * <ul>
-     * <li>classic: classic network</li>
-     * <li>vpc: Virtual Private Cloud (VPC)</li>
+     * <li><p><code>classic</code>: classic network</p>
+     * </li>
+     * <li><p><code>vpc</code>: VPC</p>
+     * </li>
      * </ul>
-     * <p>Default value: vpc.</p>
+     * <p>Default value: <code>vpc</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>vpc</p>
@@ -98,7 +100,7 @@ public class DescribePriceRequest extends TeaModel {
     public String instanceNetworkType;
 
     /**
-     * <p>The instance type. When <code>ResourceType</code> is set to <code>instance</code>, you must specify this parameter. For more information, see <a href="https://help.aliyun.com/document_detail/25378.html">Instance families</a> or call the <a href="https://help.aliyun.com/document_detail/25620.html">DescribeInstanceTypes</a> operation to query the most recent list of instance types.</p>
+     * <p>The instance type. This parameter is required when <code>ResourceType</code> is set to <code>instance</code>. For more information, see <a href="https://help.aliyun.com/document_detail/25378.html">Instance type families</a> or call the <a href="https://help.aliyun.com/document_detail/25620.html">DescribeInstanceTypes</a> operation to query the instance types.</p>
      * 
      * <strong>example:</strong>
      * <p>ecs.g6.large</p>
@@ -107,7 +109,7 @@ public class DescribePriceRequest extends TeaModel {
     public String instanceType;
 
     /**
-     * <p>The instance types. You can select only a single instance type when you configure an elasticity assurance in unlimited mode.</p>
+     * <p>The instance type. You can specify only one instance type for an elasticity assurance of the <code>Unlimited</code> type.</p>
      * 
      * <strong>example:</strong>
      * <p>ecs.g6.xlarge</p>
@@ -118,10 +120,12 @@ public class DescribePriceRequest extends TeaModel {
     /**
      * <p>The billing method for network usage. Valid values:</p>
      * <ul>
-     * <li>PayByBandwidth: pay-by-bandwidth</li>
-     * <li>PayByTraffic: pay-by-traffic</li>
+     * <li><p><code>PayByBandwidth</code>: pay-by-bandwidth</p>
+     * </li>
+     * <li><p><code>PayByTraffic</code>: pay-by-traffic</p>
+     * </li>
      * </ul>
-     * <p>Default value: PayByTraffic</p>
+     * <p>Default value: <code>PayByTraffic</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>PayByTraffic</p>
@@ -130,7 +134,7 @@ public class DescribePriceRequest extends TeaModel {
     public String internetChargeType;
 
     /**
-     * <p>The maximum outbound public bandwidth. Unit: Mbit/s. Valid values: 0 to 100.</p>
+     * <p>The maximum outbound public bandwidth. Unit: Mbit/s. Valid values: 0–100.</p>
      * <p>Default value: 0.</p>
      * 
      * <strong>example:</strong>
@@ -142,11 +146,13 @@ public class DescribePriceRequest extends TeaModel {
     /**
      * <p>Specifies whether the instance is I/O optimized. Valid values:</p>
      * <ul>
-     * <li>none: The instance is not I/O optimized.</li>
-     * <li>optimized: The instance is I/O optimized.</li>
+     * <li><p><code>none</code>: non-I/O-optimized.</p>
+     * </li>
+     * <li><p><code>optimized</code>: I/O-optimized.</p>
+     * </li>
      * </ul>
-     * <p>When the instance type specified by the InstanceType parameter belongs to <a href="https://help.aliyun.com/document_detail/55263.html">Generation I instance families</a>, the default value of this parameter is none.</p>
-     * <p>When the instance type specified by the InstanceType parameter does not belong to <a href="https://help.aliyun.com/document_detail/55263.html">Generation I instance families</a>, the default value of this parameter is optimized.</p>
+     * <p>For <a href="https://help.aliyun.com/document_detail/55263.html">generation I</a> instances, the default value is <code>none</code>.</p>
+     * <p>For other instance types, the default value is <code>optimized</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>optimized</p>
@@ -157,10 +163,14 @@ public class DescribePriceRequest extends TeaModel {
     /**
      * <p>The Internet service provider (ISP). Valid values:</p>
      * <ul>
-     * <li>cmcc: China Mobile</li>
-     * <li>telecom: China Telecom</li>
-     * <li>unicom: China Unicom</li>
-     * <li>multiCarrier: multi-line ISP</li>
+     * <li><p><code>cmcc</code>: China Mobile</p>
+     * </li>
+     * <li><p><code>telecom</code>: China Telecom</p>
+     * </li>
+     * <li><p><code>unicom</code>: China Unicom</p>
+     * </li>
+     * <li><p><code>multiCarrier</code>: BGP (Multi-ISP)</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -170,11 +180,14 @@ public class DescribePriceRequest extends TeaModel {
     public String isp;
 
     /**
-     * <p>The payment option of the reserved instance. Valid values:</p>
+     * <p>The payment option for the reserved instance. Valid values:</p>
      * <ul>
-     * <li>No Upfront</li>
-     * <li>Partial Upfront</li>
-     * <li>All Upfront</li>
+     * <li><p><code>No Upfront</code></p>
+     * </li>
+     * <li><p><code>Partial Upfront</code></p>
+     * </li>
+     * <li><p><code>All Upfront</code></p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -190,11 +203,26 @@ public class DescribePriceRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The billing cycle of the ECS instance. Valid values:</p>
+     * <p>The billing duration of the resource. This parameter is used with <code>PriceUnit</code>. Valid values:</p>
+     * <p>&lt;props=&quot;china&quot;&gt;</p>
      * <ul>
-     * <li>Valid values when PriceUnit is set to Month: 1, 2, 3, 4, 5, 6, 7, 8, and 9.</li>
-     * <li>Valid values when PriceUnit is set to Year: 1, 2, 3, 4, and 5.</li>
-     * <li>Set the value to 1 when PriceUnit is set to Hour.</li>
+     * <li><p>If <code>PriceUnit</code> is set to <code>Month</code>: 1–9.</p>
+     * </li>
+     * <li><p>If <code>PriceUnit</code> is set to <code>Year</code>: 1–5.</p>
+     * </li>
+     * <li><p>If <code>PriceUnit</code> is set to <code>Hour</code>: 1.</p>
+     * </li>
+     * <li><p>If <code>PriceUnit</code> is set to <code>Week</code>: 1–4.</p>
+     * </li>
+     * </ul>
+     * <p>&lt;props=&quot;intl&quot;&gt;</p>
+     * <ul>
+     * <li><p>If <code>PriceUnit</code> is set to <code>Month</code>: 1–9.</p>
+     * </li>
+     * <li><p>If <code>PriceUnit</code> is set to <code>Year</code>: 1–5.</p>
+     * </li>
+     * <li><p>If <code>PriceUnit</code> is set to <code>Hour</code>: 1.</p>
+     * </li>
      * </ul>
      * <p>Default value: 1.</p>
      * 
@@ -205,10 +233,12 @@ public class DescribePriceRequest extends TeaModel {
     public Integer period;
 
     /**
-     * <p>The operating system of the image that is used by the instance. Valid values:</p>
+     * <p>The operating system of the instance. Valid values:</p>
      * <ul>
-     * <li>Windows: Windows Server operating system</li>
-     * <li>Linux: Linux and UNIX-like operating system</li>
+     * <li><p><code>Windows</code>: Windows Server</p>
+     * </li>
+     * <li><p><code>Linux</code>: Linux</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -218,11 +248,26 @@ public class DescribePriceRequest extends TeaModel {
     public String platform;
 
     /**
-     * <p>The pricing unit of the ECS resource. Valid values:</p>
+     * <p>The billing cycle of the resource. Valid values:</p>
+     * <p>&lt;props=&quot;china&quot;&gt;</p>
      * <ul>
-     * <li>Month</li>
-     * <li>Year</li>
-     * <li>Hour (default)</li>
+     * <li><p><code>Month</code>: For monthly pricing.</p>
+     * </li>
+     * <li><p><code>Year</code>: For yearly pricing.</p>
+     * </li>
+     * <li><p><code>Hour</code> (Default): For hourly pricing.</p>
+     * </li>
+     * <li><p><code>Week</code>: For weekly pricing.</p>
+     * </li>
+     * </ul>
+     * <p>&lt;props=&quot;intl&quot;&gt;</p>
+     * <ul>
+     * <li><p><code>Month</code>: For monthly pricing.</p>
+     * </li>
+     * <li><p><code>Year</code>: For yearly pricing.</p>
+     * </li>
+     * <li><p><code>Hour</code> (Default): For hourly pricing.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -232,16 +277,21 @@ public class DescribePriceRequest extends TeaModel {
     public String priceUnit;
 
     /**
-     * <p>The assurance schedules of the time-segmented elasticity assurance.</p>
+     * <p>The list of recurrence rules for the time-based elasticity assurance.</p>
+     * <p>&lt;props=&quot;china&quot;&gt;</p>
      * <blockquote>
-     * <p> Time-segmented elasticity assurances are available only in specific regions and to specific users. To use time-segmented elasticity assurances, <a href="https://smartservice.console.aliyun.com/service/create-ticket-intl">submit a ticket</a>.</p>
+     * <p>The time-based elasticity assurance feature is available only in specific regions and to specific users. To use this feature, <a href="https://selfservice.console.aliyun.com/ticket/createIndex">submit a ticket</a>.</p>
+     * </blockquote>
+     * <p>&lt;props=&quot;intl&quot;&gt;</p>
+     * <blockquote>
+     * <p>The time-based elasticity assurance feature is available only in specific regions and to specific users. To use this feature, <a href="https://smartservice.console.aliyun.com/service/create-ticket-intl">submit a ticket</a>.</p>
      * </blockquote>
      */
     @NameInMap("RecurrenceRules")
     public java.util.List<DescribePriceRequestRecurrenceRules> recurrenceRules;
 
     /**
-     * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent list of regions.</p>
+     * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the list of Alibaba Cloud regions.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -257,17 +307,24 @@ public class DescribePriceRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The type of the resource. Valid values:</p>
+     * <p>The type of the resource for which you want to query the price. Valid values:</p>
      * <ul>
-     * <li>instance: queries the most recent prices of ECS instances. If you set this parameter to <code>instance</code>, specify <code>InstanceType</code>.</li>
-     * <li>disk: queries the most recent prices of cloud disks. If you set this parameter to <code>disk</code>, specify <code>DataDisk.1.Category</code> and <code>DataDisk.1.Size</code>.</li>
-     * <li>diskperformance: Queries the most recent prices of the provioned performance of the Enterprise SSD (ESSD) AutoPL disk. You must also specify <code>DataDisk.1.Category</code> and <code>DataDisk.1.ProvisionedIops</code>.</li>
-     * <li>bandwidth: queries the most recent prices for network usage.</li>
-     * <li>ddh: queries the most recent prices of dedicated hosts.</li>
-     * <li>ElasticityAssurance: queries the most recent prices of elasticity assurances. If you set this parameter to <code>ElasticityAssurance</code>, specify <code>InstanceType</code>.</li>
-     * <li>CapacityReservation: queries the most recent prices of capacity reservations. If you set this parameter to <code>CapacityReservation</code>, specify <code>InstanceType</code>.</li>
+     * <li><p><code>instance</code>: Query the prices of ECS instances. If you set this parameter to <code>instance</code>, you must also specify the <code>InstanceType</code> parameter.</p>
+     * </li>
+     * <li><p><code>disk</code>: Query the prices of cloud disks. If you set this parameter to <code>disk</code>, you must also specify the <code>DataDisk.1.Category</code> and <code>DataDisk.1.Size</code> parameters.</p>
+     * </li>
+     * <li><p><code>diskperformance</code>: Query the prices of the provisioned performance of an ESSD AutoPL cloud disk. You must also specify the <code>DataDisk.1.Category</code> and <code>DataDisk.1.ProvisionedIops</code> parameters.</p>
+     * </li>
+     * <li><p><code>bandwidth</code>: Query the prices of network bandwidth.</p>
+     * </li>
+     * <li><p><code>ddh</code>: Query the prices of dedicated hosts.</p>
+     * </li>
+     * <li><p><code>ElasticityAssurance</code>: Query the prices of Elasticity Assurance. If you set this parameter to <code>ElasticityAssurance</code>, you must also specify the <code>InstanceType</code> parameter.</p>
+     * </li>
+     * <li><p><code>CapacityReservation</code>: Query the prices of Capacity Reservation. If you set this parameter to <code>CapacityReservation</code>, you must also specify the <code>InstanceType</code> parameter.</p>
+     * </li>
      * </ul>
-     * <p>Default value: instance.</p>
+     * <p>Default value: <code>instance</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>instance</p>
@@ -278,10 +335,12 @@ public class DescribePriceRequest extends TeaModel {
     /**
      * <p>The scope of the reserved instance. Valid values:</p>
      * <ul>
-     * <li>Region: regional</li>
-     * <li>Zone: zonal</li>
+     * <li><p><code>Region</code>: region-scoped</p>
+     * </li>
+     * <li><p><code>Zone</code>: zone-scoped</p>
+     * </li>
      * </ul>
-     * <p>Default value: Region.</p>
+     * <p>Default value: <code>Region</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>Zone</p>
@@ -292,12 +351,14 @@ public class DescribePriceRequest extends TeaModel {
     /**
      * <p>The protection period of the spot instance. Unit: hours. Default value: 1. Valid values:</p>
      * <ul>
-     * <li>1: After a spot instance is created, Alibaba Cloud ensures that the instance is not automatically released within 1 hour. After the 1-hour protection period ends, the system compares the bid price with the market price and checks the resource inventory to determine whether to retain or release the instance.</li>
-     * <li>0: After a spot instance is created, Alibaba Cloud does not ensure that the instance runs for 1 hour. The system compares the bid price with the market price and checks the resource inventory to determine whether to retain or release the instance.</li>
+     * <li><p><code>1</code>: Alibaba Cloud does not automatically release the instance within 1 hour. After the 1-hour protection period ends, the system checks the market price and resource inventory to determine whether to retain or release the instance.</p>
+     * </li>
+     * <li><p><code>0</code>: The instance has no protection period. The system checks the market price and resource inventory to determine whether to retain or release the instance.</p>
+     * </li>
      * </ul>
-     * <p>Alibaba Cloud sends an ECS system event to notify you 5 minutes before the instance is released. Spot instances are billed by second. We recommend that you specify a protection period based on your business requirements.</p>
+     * <p>Alibaba Cloud sends you an ECS system event five minutes before the instance is released. Spot instances are billed by the second. Select a protection period based on the time required to complete your task.</p>
      * <blockquote>
-     * <p> This parameter takes effect only when SpotStrategy is set to SpotWithPriceLimit or SpotAsPriceGo.</p>
+     * <p>This parameter is valid only when <code>SpotStrategy</code> is set to <code>SpotWithPriceLimit</code> or <code>SpotAsPriceGo</code>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -307,15 +368,18 @@ public class DescribePriceRequest extends TeaModel {
     public Integer spotDuration;
 
     /**
-     * <p>The bidding policy for the pay-as-you-go instance. Valid values:</p>
+     * <p>The preemption policy for the pay-as-you-go instance. Valid values:</p>
      * <ul>
-     * <li>NoSpot: The instance is a regular pay-as-you-go instance.</li>
-     * <li>SpotWithPriceLimit: The instance is created as a spot instance that has a user-defined maximum hourly price.</li>
-     * <li>SpotAsPriceGo: The instance is created as a spot instance whose bid price is based on the market price at the time of purchase. The market price can be up to the pay-as-you-go price.</li>
+     * <li><p><code>NoSpot</code>: A regular pay-as-you-go instance.</p>
+     * </li>
+     * <li><p><code>SpotWithPriceLimit</code>: A spot instance for which you specify a maximum hourly price.</p>
+     * </li>
+     * <li><p><code>SpotAsPriceGo</code>: A spot instance where the system automatically bids up to the pay-as-you-go price.</p>
+     * </li>
      * </ul>
-     * <p>Default value: NoSpot.</p>
+     * <p>Default value: <code>NoSpot</code>.</p>
      * <blockquote>
-     * <p> This parameter takes effect only when <code>PriceUnit</code> is set to Hour and <code>Period</code> is set to 1. The default value of <code>PriceUnit</code> is <code>Hour</code> and the default value of <code>Period</code> is <code>1</code>. Therefore, you do not need to set <code>PriceUnit</code> or <code>Period</code> when you set SpotStrategy.</p>
+     * <p>This parameter applies only when you query hourly prices, where <code>PriceUnit</code> is <code>Hour</code> and <code>Period</code> is <code>1</code>. Because these are the default values, you do not need to set them when you use <code>SpotStrategy</code>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -325,7 +389,7 @@ public class DescribePriceRequest extends TeaModel {
     public String spotStrategy;
 
     /**
-     * <p>The time when the time-segmented assurance of the elasticity assurance takes effect. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC. For more information, see <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a>.</p>
+     * <p>The time when the time-based elasticity assurance takes effect. The time must be specified in UTC and formatted as <code>yyyy-MM-ddTHH:mm:ssZ</code> in accordance with the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard.</p>
      * 
      * <strong>example:</strong>
      * <p>2020-10-30T06:32:00Z</p>
@@ -334,9 +398,9 @@ public class DescribePriceRequest extends TeaModel {
     public String startTime;
 
     /**
-     * <p>The zone ID.</p>
+     * <p>The ID of the availability zone.</p>
      * <blockquote>
-     * <p>Prices of spot instances vary based on zones. When you query the price of a spot instance, specify ZoneId.</p>
+     * <p>The prices of spot instances may vary by availability zone. When you query the price of a spot instance, specify <code>ZoneId</code> to query the price for a specific availability zone.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -618,14 +682,24 @@ public class DescribePriceRequest extends TeaModel {
         /**
          * <p>The category of data disk N. Valid values:</p>
          * <ul>
-         * <li>cloud: basic disk.</li>
-         * <li>cloud_efficiency: ultra disk.</li>
-         * <li>cloud_ssd: standard SSD.</li>
-         * <li>ephemeral_ssd: local SSD.</li>
-         * <li>cloud_essd: ESSD.</li>
-         * <li>cloud_auto: ESSD AutoPL disk.</li>
+         * <li><p><code>cloud</code>: basic cloud disk</p>
+         * </li>
+         * <li><p><code>cloud_efficiency</code>: efficiency cloud disk</p>
+         * </li>
+         * <li><p><code>cloud_ssd</code>: SSD cloud disk</p>
+         * </li>
+         * <li><p><code>ephemeral_ssd</code>: local SSD</p>
+         * </li>
+         * <li><p><code>cloud_essd</code>: ESSD</p>
+         * </li>
+         * <li><p><code>cloud_auto</code>: ESSD AutoPL</p>
+         * </li>
          * </ul>
-         * <p>Valid values of N: 1 to 16.</p>
+         * <p>&lt;props=&quot;china&quot;&gt;</p>
+         * <ul>
+         * <li><code>cloud_essd_entry</code>: ESSD Entry</li>
+         * </ul>
+         * <p>The value of N can be 1–16.</p>
          * 
          * <strong>example:</strong>
          * <p>cloud_ssd</p>
@@ -634,14 +708,18 @@ public class DescribePriceRequest extends TeaModel {
         public String category;
 
         /**
-         * <p>The performance level of data disk N when the disk is an ESSD. This parameter takes effect only when <code>DataDisk.N.Category</code> is set to cloud_essd. Valid values:</p>
+         * <p>The performance level of data disk N when it is an ESSD. This parameter is valid only when <code>DataDisk.N.Category</code> is set to <code>cloud_essd</code>. Valid values:</p>
          * <ul>
-         * <li>PL0</li>
-         * <li>PL1 (default)</li>
-         * <li>PL2</li>
-         * <li>PL3</li>
+         * <li><p><code>PL0</code></p>
+         * </li>
+         * <li><p><code>PL1</code> (Default)</p>
+         * </li>
+         * <li><p><code>PL2</code></p>
+         * </li>
+         * <li><p><code>PL3</code></p>
+         * </li>
          * </ul>
-         * <p>Valid values of N: 1 to 16.</p>
+         * <p>The value of N can be 1–16.</p>
          * 
          * <strong>example:</strong>
          * <p>PL1</p>
@@ -652,26 +730,35 @@ public class DescribePriceRequest extends TeaModel {
         /**
          * <p>The size of data disk N. Unit: GiB. Valid values:</p>
          * <ul>
-         * <li><p>Valid values if DataDisk.N.Category is set to cloud: 5 to 2000.</p>
+         * <li><p><code>cloud</code>: 5–2000</p>
          * </li>
-         * <li><p>Valid values if DataDisk.N.Category is set to cloud_efficiency: 20 to 32768.</p>
+         * <li><p><code>cloud_efficiency</code>: 20–32768</p>
          * </li>
-         * <li><p>Valid values if DataDisk.N.Category is set to cloud_ssd: 20 to 32768.</p>
+         * <li><p><code>cloud_ssd</code>: 20–32768</p>
          * </li>
-         * <li><p>Valid values if DataDisk.N.Category is set to cloud_auto: 1 to 32768.</p>
+         * <li><p><code>cloud_auto</code>: 1–32768</p>
          * </li>
-         * <li><p>Valid values if DataDisk.N.Category is set to cloud_essd: vary based on the <code>DataDisk.N.PerformanceLevel</code> value.</p>
+         * </ul>
+         * <p>&lt;props=&quot;china&quot;&gt;</p>
          * <ul>
-         * <li>Valid values if DataDisk.N.PerformanceLevel is set to PL0: 1 to 32768.</li>
-         * <li>Valid values if DataDisk.N.PerformanceLevel is set to PL1: 20 to 32768.</li>
-         * <li>Valid values if DataDisk.N.PerformanceLevel is set to PL2: 461 to 32768.</li>
-         * <li>Valid values if DataDisk.N.PerformanceLevel is set to PL3: 1261 to 32768.</li>
+         * <li><p><code>cloud_essd_entry</code>: 10–32768</p>
+         * </li>
+         * <li><p><code>cloud_essd</code>: The value range depends on the <code>DataDisk.N.PerformanceLevel</code>.</p>
+         * <ul>
+         * <li><p>PL0: 1–32768</p>
+         * </li>
+         * <li><p>PL1: 20–32768</p>
+         * </li>
+         * <li><p>PL2: 461–32768</p>
+         * </li>
+         * <li><p>PL3: 1261–32768</p>
+         * </li>
          * </ul>
          * </li>
-         * <li><p>Valid values if DataDisk.N.Category is set to ephemeral_ssd: 5 to 800.</p>
+         * <li><p><code>ephemeral_ssd</code>: 5–800</p>
          * </li>
          * </ul>
-         * <p>Valid values of N: 1 to 16.</p>
+         * <p>The value of N can be 1–16.</p>
          * 
          * <strong>example:</strong>
          * <p>2000</p>
@@ -680,10 +767,10 @@ public class DescribePriceRequest extends TeaModel {
         public Long size;
 
         /**
-         * <p>The provisioned read/write IOPS of the ESSD AutoPL disk to use as data disk N. Valid values: 0 to min{50,000, 1,000 × Capacity - Baseline IOPS}.</p>
-         * <p>Baseline IOPS = min{1,800 + 50 × Capacity, 50,000}.</p>
+         * <p>The provisioned read/write IOPS for the ESSD AutoPL cloud disk. Valid values: 0–<code>min{50000, 1000 * Capacity - Baseline IOPS}</code>.</p>
+         * <p><code>Baseline IOPS = min{1800 + 50 * Capacity, 50000}</code>.</p>
          * <blockquote>
-         * <p> This parameter is available only if you set <code>DataDisk.N.Category</code> to <code>cloud_auto</code>. For more information, see <a href="https://help.aliyun.com/document_detail/368372.html">ESSD AutoPL disks</a>.</p>
+         * <p>This parameter is valid only when <code>DataDisk.N.Category</code> is set to <code>cloud_auto</code>. For more information, see <a href="https://help.aliyun.com/document_detail/368372.html">ESSD AutoPL cloud disks</a>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -733,8 +820,8 @@ public class DescribePriceRequest extends TeaModel {
 
     public static class DescribePriceRequestSchedulerOptions extends TeaModel {
         /**
-         * <p>This parameter takes effect only when ResourceType is set to instance.</p>
-         * <p>The ID of the dedicated host. You can call the <a href="https://help.aliyun.com/document_detail/134242.html">DescribeDedicatedHosts</a> operation to query the dedicated host list.</p>
+         * <p>This parameter is valid only when <code>ResourceType</code> is set to <code>instance</code>.</p>
+         * <p>The ID of the dedicated host. You can call the <a href="https://help.aliyun.com/document_detail/134242.html">DescribeDedicatedHosts</a> operation to query dedicated host IDs.</p>
          * 
          * <strong>example:</strong>
          * <p>dh-bp67acfmxazb4p****</p>
@@ -742,6 +829,25 @@ public class DescribePriceRequest extends TeaModel {
         @NameInMap("DedicatedHostId")
         public String dedicatedHostId;
 
+        /**
+         * <p>The deployment set strategy. Valid values:</p>
+         * <ul>
+         * <li><p><code>Availability</code>: high availability</p>
+         * </li>
+         * <li><p><code>AvailabilityGroup</code>: high availability for deployment set groups</p>
+         * </li>
+         * <li><p><code>LowLatency</code>: low latency</p>
+         * </li>
+         * <li><p><code>ProximityLooseDispersion</code>: proximity loose dispersion</p>
+         * </li>
+         * </ul>
+         * <blockquote>
+         * <p>Only the <code>ProximityLooseDispersion</code> strategy incurs a fee. The API response includes price details for the deployment set (where <code>Resource</code> is <code>deploymentSet</code>) only when this strategy is used. Other deployment set strategies are free of charge.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>ProximityLooseDispersion</p>
+         */
         @NameInMap("DeploymentSetStrategy")
         public String deploymentSetStrategy;
 
@@ -770,23 +876,31 @@ public class DescribePriceRequest extends TeaModel {
 
     public static class DescribePriceRequestSystemDisk extends TeaModel {
         /**
-         * <p>The category of the system disk. Valid values:</p>
+         * <p>The category of the system disk. You must specify <code>ImageId</code> when you query the price of a system disk. Valid values:</p>
          * <ul>
-         * <li>cloud: basic disk</li>
-         * <li>cloud_efficiency: ultra disk</li>
-         * <li>cloud_ssd: standard SSD</li>
-         * <li>ephemeral_ssd: local SSD</li>
-         * <li>cloud_essd: Enterprise SSD (ESSD)</li>
-         * <li>cloud_auto: ESSD AutoPL disk</li>
+         * <li><p><code>cloud</code>: basic cloud disk</p>
+         * </li>
+         * <li><p><code>cloud_efficiency</code>: efficiency cloud disk</p>
+         * </li>
+         * <li><p><code>cloud_ssd</code>: SSD cloud disk</p>
+         * </li>
+         * <li><p><code>ephemeral_ssd</code>: local SSD</p>
+         * </li>
+         * <li><p><code>cloud_essd</code>: ESSD</p>
+         * </li>
+         * <li><p><code>cloud_auto</code>: ESSD AutoPL</p>
+         * </li>
          * </ul>
-         * <p>Default value:</p>
+         * <p>&lt;props=&quot;china&quot;&gt;</p>
          * <ul>
-         * <li>When InstanceType is set to a retired instance type and <code>IoOptimized</code> is set to <code>none</code>, the default value is <code>cloud</code>.</li>
-         * <li>In other cases, the default value is <code>cloud_efficiency</code>.</li>
+         * <li><code>cloud_essd_entry</code>: ESSD Entry</li>
          * </ul>
-         * <blockquote>
-         * <p> If you want to query the price of a system disk, you must also specify <code>ImageId</code>.</p>
-         * </blockquote>
+         * <ul>
+         * <li><p>For retired instance types where <code>IoOptimized</code> is <code>none</code>, the default value is <code>cloud</code>.</p>
+         * </li>
+         * <li><p>In other cases, the default value is <code>cloud_efficiency</code>.&lt;props=&quot;china&quot;&gt;After January 30, 2026, for instance types that support only ESSDs, the default value will be changed from <code>cloud_efficiency</code> to <code>cloud_essd</code> at PL0. For more information, see the <a href="https://www.aliyun.com/notice/117844">change announcement</a>.</p>
+         * </li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>cloud_ssd</p>
@@ -795,8 +909,8 @@ public class DescribePriceRequest extends TeaModel {
         public String category;
 
         /**
-         * <p>The performance level of the system disk when the disk is an ESSD. This parameter is valid only when <code>SystemDiskCategory</code> is set to cloud_essd. Valid values:</p>
-         * <p>PL0, PL1 (default), PL2, PL3.</p>
+         * <p>The performance level of the ESSD when used as a system disk. This parameter is valid only when <code>SystemDisk.Category</code> is set to <code>cloud_essd</code>. Valid values:</p>
+         * <p><code>PL0</code><br><code>PL1</code> (Default)<br><code>PL2</code><br><code>PL3</code><br><br><br></p>
          * 
          * <strong>example:</strong>
          * <p>PL1</p>
@@ -807,22 +921,26 @@ public class DescribePriceRequest extends TeaModel {
         /**
          * <p>The size of the system disk. Unit: GiB. Valid values:</p>
          * <ul>
-         * <li><p>Basic disk (cloud): 20 to 500.</p>
+         * <li><p>Basic cloud disk: 20–500.</p>
          * </li>
-         * <li><p>ESSD (cloud_essd): Valid values vary based on the SystemDisk.PerformanceLevel value.</p>
+         * <li><p>ESSD cloud disk:</p>
          * <ul>
-         * <li>Valid values when SystemDisk.PerformanceLevel is set to PL0: 1 to 2048.</li>
-         * <li>Valid values when SystemDisk.PerformanceLevel is set to PL1: 20 to 2048.</li>
-         * <li>Valid values when SystemDisk.PerformanceLevel is set to PL2: 461 to 2048.</li>
-         * <li>Valid values when SystemDisk.PerformanceLevel is set to PL3: 1261 to 2048.</li>
-         * </ul>
+         * <li><p>PL0: 1–2048.</p>
          * </li>
-         * <li><p>ESSD AutoPL disk (cloud_auto): 1 to 2048.</p>
+         * <li><p>PL1: 20–2048.</p>
          * </li>
-         * <li><p>Other disk categories: 20 to 2048.</p>
+         * <li><p>PL2: 461–2048.</p>
+         * </li>
+         * <li><p>PL3: 1261–2048.</p>
          * </li>
          * </ul>
-         * <p>Default value: 20 or the size of the image specified by ImageId, whichever is greater.</p>
+         * </li>
+         * <li><p>ESSD AutoPL cloud disk: 1–2048.</p>
+         * </li>
+         * <li><p>Other cloud disk categories: 20–2048.</p>
+         * </li>
+         * </ul>
+         * <p>Default value: <code>max{20, ImageSize}</code>, which is the greater of 20 and the size of the specified image (<code>ImageId</code>).</p>
          * 
          * <strong>example:</strong>
          * <p>80</p>
@@ -863,7 +981,7 @@ public class DescribePriceRequest extends TeaModel {
 
     public static class DescribePriceRequestRecurrenceRules extends TeaModel {
         /**
-         * <p>The end time of the assurance period for the capacity reservation of the time-segmented elasticity assurance. Specify an on-the-hour point in time.</p>
+         * <p>The end time of the time-based assurance. The value must be on the hour.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -872,14 +990,17 @@ public class DescribePriceRequest extends TeaModel {
         public Integer endHour;
 
         /**
-         * <p>The type of the assurance schedule. Valid values:</p>
+         * <p>The recurrence type of the rule. Valid values:</p>
          * <ul>
-         * <li>Daily</li>
-         * <li>Weekly</li>
-         * <li>Monthly</li>
+         * <li><p><code>Daily</code>: repeats on a daily basis.</p>
+         * </li>
+         * <li><p><code>Weekly</code>: repeats on a weekly basis.</p>
+         * </li>
+         * <li><p><code>Monthly</code>: repeats on a monthly basis.</p>
+         * </li>
          * </ul>
          * <blockquote>
-         * <p> If you specify this parameter, you must specify <code>RecurrenceType</code> and <code>RecurrenceValue</code>.</p>
+         * <p>You must specify both <code>RecurrenceType</code> and <code>RecurrenceValue</code>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -889,14 +1010,17 @@ public class DescribePriceRequest extends TeaModel {
         public String recurrenceType;
 
         /**
-         * <p>The days of the week or month on which the capacity reservation of the time-segmented elasticity assurance takes effect or the interval, in number of days, at which the capacity reservation takes effect.</p>
+         * <p>The recurrence value.</p>
          * <ul>
-         * <li>If you set <code>RecurrenceType</code> to <code>Daily</code>, you can specify only one value. Valid values: 1 to 31. The value specifies that the capacity reservation takes effect every few days.</li>
-         * <li>If you set <code>RecurrenceType</code> to <code>Weekly</code>, you can specify multiple values. Separate the values with commas (,). Valid values: 0, 1, 2, 3, 4, 5, and 6, which specify Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, and Saturday, respectively. Example: <code>1,2</code>, which specifies that the capacity reservation takes effect on Monday and Tuesday.</li>
-         * <li>If you set <code>RecurrenceType</code> to <code>Monthly</code>, you can specify two values in the <code>A-B</code> format. Valid values of A and B: 1 to 31. B must be greater than or equal to A. Example: <code>1-5</code>, which specifies that the capacity reservation takes effect every day from the first day up to the fifth day of each month.</li>
+         * <li><p>If <code>RecurrenceType</code> is set to <code>Daily</code>, this parameter takes a single value that specifies the recurrence interval in days. Valid values: 1–31.</p>
+         * </li>
+         * <li><p>If <code>RecurrenceType</code> is set to <code>Weekly</code>, this parameter can have multiple values separated by commas (,). The values 0, 1, 2, 3, 4, 5, and 6 correspond to Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, and Saturday. For example, <code>1,2</code> specifies Monday and Tuesday.</p>
+         * </li>
+         * <li><p>If <code>RecurrenceType</code> is set to <code>Monthly</code>, the value must be in the <code>A–B</code> format. The values of A and B must be between 1 and 31, and B must be greater than or equal to A. For example, <code>1–5</code> specifies the first to the fifth day of each month.</p>
+         * </li>
          * </ul>
          * <blockquote>
-         * <p> If you specify this parameter, you must specify <code>RecurrenceType</code> and <code>RecurrenceValue</code>.</p>
+         * <p>You must specify both <code>RecurrenceType</code> and <code>RecurrenceValue</code>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -906,9 +1030,9 @@ public class DescribePriceRequest extends TeaModel {
         public String recurrenceValue;
 
         /**
-         * <p>The start time of the assurance period for the capacity reservation of the time-segmented elasticity assurance. Specify an on-the-hour point in time.</p>
+         * <p>The start time of the time-based assurance. The value must be on the hour.</p>
          * <blockquote>
-         * <p> You must specify both StartHour and EndHour. The EndHour value must be at least 4 hours later than the StartHour value.</p>
+         * <p>Both <code>StartHour</code> and <code>EndHour</code> are required. The interval between them must be at least 4 hours.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

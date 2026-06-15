@@ -17,7 +17,7 @@ public class CreateLaunchTemplateResponseBody extends TeaModel {
      * <p>The version number of the launch template.</p>
      * 
      * <strong>example:</strong>
-     * <p>2</p>
+     * <p>20</p>
      */
     @NameInMap("LaunchTemplateVersionNumber")
     public Long launchTemplateVersionNumber;

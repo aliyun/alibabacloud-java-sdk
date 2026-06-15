@@ -4,6 +4,13 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeVSwitchesRequest extends TeaModel {
+    /**
+     * <p>Specifies whether the vSwitch is the default vSwitch in the zone. Valid values:</p>
+     * <ul>
+     * <li><code>true</code></li>
+     * <li><code>false</code></li>
+     * </ul>
+     */
     @NameInMap("IsDefault")
     public Boolean isDefault;
 
@@ -13,12 +20,23 @@ public class DescribeVSwitchesRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The page number to return.</p>
+     * <p>Default value: 1.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries to return on each page. Valid values: 1 to 50.</p>
+     * <p>Default value: 10.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The ID of the region where the vSwitches are located. To query the latest list of regions, call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
@@ -28,12 +46,21 @@ public class DescribeVSwitchesRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The ID of the vSwitch.</p>
+     */
     @NameInMap("VSwitchId")
     public String vSwitchId;
 
+    /**
+     * <p>The ID of the VPC.</p>
+     */
     @NameInMap("VpcId")
     public String vpcId;
 
+    /**
+     * <p>The ID of the zone.</p>
+     */
     @NameInMap("ZoneId")
     public String zoneId;
 

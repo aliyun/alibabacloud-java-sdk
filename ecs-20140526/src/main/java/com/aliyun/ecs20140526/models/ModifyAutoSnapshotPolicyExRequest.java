@@ -7,8 +7,10 @@ public class ModifyAutoSnapshotPolicyExRequest extends TeaModel {
     /**
      * <p>The retention period of the snapshot copy in the destination region. Unit: days. Valid values:</p>
      * <ul>
-     * <li>-1: The snapshot copy is retained until it is deleted.</li>
-     * <li>1 to 65535: The snapshot copy is retained for a specified number of days.</li>
+     * <li><p>-1: The snapshot copy is retained until it is deleted.</p>
+     * </li>
+     * <li><p>1 to 65535: The snapshot copy is retained for a specified number of days.</p>
+     * </li>
      * </ul>
      * <p>Default value: -1.</p>
      * 
@@ -27,8 +29,10 @@ public class ModifyAutoSnapshotPolicyExRequest extends TeaModel {
     /**
      * <p>Specifies whether to enable cross-region replication for the automatic snapshot.</p>
      * <ul>
-     * <li>true: enables cross-region replication for the automatic snapshot.</li>
-     * <li>false: disables cross-region replication for the automatic snapshot.</li>
+     * <li><p>true: enables cross-region replication for the automatic snapshot.</p>
+     * </li>
+     * <li><p>false: disables cross-region replication for the automatic snapshot.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -88,8 +92,10 @@ public class ModifyAutoSnapshotPolicyExRequest extends TeaModel {
      * <p>The days of the week on which to create automatic snapshots. Valid values are 1 to 7, which correspond to the days of the week. For example, a value of 1 indicates Monday.</p>
      * <p>To schedule multiple automatic snapshots to be created in a week, you can specify multiple days.</p>
      * <ul>
-     * <li>You can specify up to seven days over a one-week period.</li>
-     * <li>You must set this parameter to a JSON array such as <code>[&quot;1&quot;, &quot;2&quot; ... &quot;7&quot;]</code>. Separate the values in the array with commas (,).</li>
+     * <li><p>You can specify up to seven days over a one-week period.</p>
+     * </li>
+     * <li><p>You must set this parameter to a JSON array such as <code>[&quot;1&quot;, &quot;2&quot; ... &quot;7&quot;]</code>. Separate the values in the array with commas (,).</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -101,8 +107,10 @@ public class ModifyAutoSnapshotPolicyExRequest extends TeaModel {
     /**
      * <p>The retention period of the automatic snapshot. Unit: days. Valid values:</p>
      * <ul>
-     * <li>\-1: The automatic snapshot is permanently retained.</li>
-     * <li>1 to 65536: The auto snapshot is retained for the specified number of days.</li>
+     * <li><p>-1: The automatic snapshot is permanently retained.</p>
+     * </li>
+     * <li><p>1 to 65536: The auto snapshot is retained for the specified number of days.</p>
+     * </li>
      * </ul>
      * <p>Default value: -1.</p>
      * 
@@ -116,8 +124,10 @@ public class ModifyAutoSnapshotPolicyExRequest extends TeaModel {
      * <p>The points in time of the day at which to create automatic snapshots. The time must be in UTC+8. Unit: hours. Valid values are 0 to 23, which correspond to the 24 points in time on the hour from 00:00:00 to 23:00:00. For example, a value of 1 indicates 01:00:00.</p>
      * <p>To schedule multiple automatic snapshots to be created in a day, you can specify multiple hours.</p>
      * <ul>
-     * <li>You can specify up to 24 points in time.</li>
-     * <li>You must set this parameter to a JSON array such as <code>[&quot;0&quot;, &quot;1&quot;, ... &quot;23&quot;]</code>. Separate the points in time with commas (,).</li>
+     * <li><p>You can specify up to 24 points in time.</p>
+     * </li>
+     * <li><p>You must set this parameter to a JSON array such as <code>[&quot;0&quot;, &quot;1&quot;, ... &quot;23&quot;]</code>. Separate the points in time with commas (,).</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -304,8 +314,10 @@ public class ModifyAutoSnapshotPolicyExRequest extends TeaModel {
         /**
          * <p>Specifies whether to enable encryption for cross-region snapshot replication. Valid values:</p>
          * <ul>
-         * <li>true</li>
-         * <li>false</li>
+         * <li><p>true</p>
+         * </li>
+         * <li><p>false</p>
+         * </li>
          * </ul>
          * <p>Default value: false.</p>
          * 

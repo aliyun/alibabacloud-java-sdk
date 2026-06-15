@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ImportKeyPairRequest extends TeaModel {
     /**
-     * <p>The name of the key pair. The name must be unique. It must be 2 to 128 characters in length. It must start with a letter and cannot start with http:// or https://. It can contain letters, digits, colons (:), underscores (_), and hyphens (-).</p>
+     * <p>The name of the key pair. The name must be unique. It must be 2 to 128 characters in length. It must start with a letter and cannot start with http\:// or https\://. It can contain letters, digits, colons (:), underscores (_), and hyphens (-).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

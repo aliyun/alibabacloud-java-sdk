@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeRenewalPriceResponseBody extends TeaModel {
     /**
-     * <p>Details about the prices and promotion rules.</p>
+     * <p>A data type composed of price information (PriceInfo), including pricing and discount rule details.</p>
      */
     @NameInMap("PriceInfo")
     public DescribeRenewalPriceResponseBodyPriceInfo priceInfo;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>Request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3****</p>
@@ -173,9 +173,9 @@ public class DescribeRenewalPriceResponseBody extends TeaModel {
 
     public static class DescribeRenewalPriceResponseBodyPriceInfoPrice extends TeaModel {
         /**
-         * <p>The currency unit.</p>
-         * <p>Alibaba Cloud China site (aliyun.com): CNY.</p>
-         * <p>Alibaba Cloud International site (alibabacloud.com): USD.</p>
+         * <p>Currency unit.</p>
+         * <p>China site (aliyun.com): CNY.</p>
+         * <p>International site (alibabacloud.com): USD.</p>
          * 
          * <strong>example:</strong>
          * <p>CNY</p>
@@ -187,7 +187,7 @@ public class DescribeRenewalPriceResponseBody extends TeaModel {
         public DescribeRenewalPriceResponseBodyPriceInfoPriceDetailInfos detailInfos;
 
         /**
-         * <p>The discount.</p>
+         * <p>Discounted price.</p>
          * 
          * <strong>example:</strong>
          * <p>655.2</p>
@@ -196,7 +196,7 @@ public class DescribeRenewalPriceResponseBody extends TeaModel {
         public Float discountPrice;
 
         /**
-         * <p>The original price.</p>
+         * <p>Original price.</p>
          * 
          * <strong>example:</strong>
          * <p>4368</p>
@@ -205,7 +205,7 @@ public class DescribeRenewalPriceResponseBody extends TeaModel {
         public Float originalPrice;
 
         /**
-         * <p>The transaction price, which is equal to the original price minus the discount.</p>
+         * <p>Final price, calculated as the original price minus discounts.</p>
          * 
          * <strong>example:</strong>
          * <p>3712.8</p>
@@ -398,7 +398,7 @@ public class DescribeRenewalPriceResponseBody extends TeaModel {
 
     public static class DescribeRenewalPriceResponseBodyPriceInfo extends TeaModel {
         /**
-         * <p>The price.</p>
+         * <p>Price.</p>
          */
         @NameInMap("Price")
         public DescribeRenewalPriceResponseBodyPriceInfoPrice price;

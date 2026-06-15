@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ReleaseEipAddressRequest extends TeaModel {
     /**
+     * <p>The allocation ID of the EIP to release.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("AllocationId")
@@ -16,6 +17,9 @@ public class ReleaseEipAddressRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The ID of the region where the EIP is located. You can call the <code>DescribeRegions</code> operation to get the latest list of regions.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

@@ -8,7 +8,7 @@ public class DescribeInstancesRequest extends TeaModel {
     public java.util.List<DescribeInstancesRequestFilter> filter;
 
     /**
-     * <p>The additional instance attributes.</p>
+     * <p>The list of additional instance attributes.</p>
      * 
      * <strong>example:</strong>
      * <p>META_OPTIONS</p>
@@ -18,7 +18,7 @@ public class DescribeInstancesRequest extends TeaModel {
 
     /**
      * <blockquote>
-     * <p> This parameter is in invitational preview and is not publicly available.</p>
+     * <p>This parameter is in invitational preview and is not supported.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -28,10 +28,12 @@ public class DescribeInstancesRequest extends TeaModel {
     public Boolean deviceAvailable;
 
     /**
-     * <p>Specifies whether to perform only a dry run, without performing the actual request. Valid values:</p>
+     * <p>Specifies whether to perform only a dry run for the request. Valid values:</p>
      * <ul>
-     * <li>true: performs only a dry run. The system checks the request for potential issues, including invalid AccessKey pairs, unauthorized RAM users, and missing parameter values. If the request fails the dry run, an error message is returned. If the request passes the dry run, the DryRunOperation error code is returned.</li>
-     * <li>false: performs a dry run and performs the actual request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.</li>
+     * <li><p>true: Only checks the request without querying resources. Checks include AccessKey validity, RAM user permissions, and required parameters. If the check fails, an error is returned. If the check passes, the DryRunOperation error code is returned.</p>
+     * </li>
+     * <li><p>false: Sends a normal request. After passing the checks, a 2XX HTTP status code is returned and resources are queried.</p>
+     * </li>
      * </ul>
      * <p>Default value: false.</p>
      * 
@@ -42,7 +44,7 @@ public class DescribeInstancesRequest extends TeaModel {
     public Boolean dryRun;
 
     /**
-     * <p>The elastic IP addresses (EIPs) of instances. This parameter is valid when InstanceNetworkType is set to vpc. The value can be a JSON array that consists of up to 100 IP addresses. Separate the IP addresses with commas (,).</p>
+     * <p>The Elastic IP addresses of instances. This parameter takes effect only when InstanceNetworkType=vpc. Specify multiple IP addresses as a JSON array. You can specify up to 100 IP addresses. Separate IP addresses with commas (,).</p>
      * 
      * <strong>example:</strong>
      * <p>[&quot;42.1.1.<strong>&quot;, &quot;42.1.2.</strong>&quot;, … &quot;42.1.10.**&quot;]</p>
@@ -51,7 +53,7 @@ public class DescribeInstancesRequest extends TeaModel {
     public String eipAddresses;
 
     /**
-     * <p>The ID of the high-performance computing (HPC) cluster to which the instance belongs.</p>
+     * <p>The ID of the HPC cluster to which the instance belongs.</p>
      * 
      * <strong>example:</strong>
      * <p>hpc-bp67acfmxazb4p****</p>
@@ -60,14 +62,16 @@ public class DescribeInstancesRequest extends TeaModel {
     public String hpcClusterId;
 
     /**
-     * <p>Specifies whether the access channel is enabled for instance metadata. Valid values:</p>
+     * <p>Specifies whether to enable access to instance metadata. Valid values:</p>
      * <ul>
-     * <li>enabled</li>
-     * <li>disabled</li>
+     * <li><p>enabled: enabled.</p>
+     * </li>
+     * <li><p>disabled: disabled.</p>
+     * </li>
      * </ul>
      * <p>Default value: enabled.</p>
      * <blockquote>
-     * <p> For information about instance metadata, see <a href="https://help.aliyun.com/document_detail/49122.html">Access instance metadata</a>.</p>
+     * <p>For more information about instance metadata, see <a href="https://help.aliyun.com/document_detail/49122.html">Overview of instance metadata</a>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -78,7 +82,7 @@ public class DescribeInstancesRequest extends TeaModel {
 
     /**
      * <blockquote>
-     * <p> This parameter is in invitational preview and is not publicly available.</p>
+     * <p>This parameter is not available.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -88,14 +92,16 @@ public class DescribeInstancesRequest extends TeaModel {
     public Integer httpPutResponseHopLimit;
 
     /**
-     * <p>Specifies whether the security hardening mode (IMDSv2) is forcefully used to access instance metadata. Valid values:</p>
+     * <p>Specifies whether to enforce the use of IMDSv2 when accessing instance metadata. Valid values:</p>
      * <ul>
-     * <li>optional: The security hardening mode (IMDSv2) is not forcefully used.</li>
-     * <li>required: The security hardening mode (IMDSv2) is forcefully used. After you set this parameter to required, you cannot access instance metadata in normal mode.</li>
+     * <li><p>optional: does not enforce IMDSv2.</p>
+     * </li>
+     * <li><p>required: enforces IMDSv2. After this value is set, instance metadata cannot be accessed in standard mode.</p>
+     * </li>
      * </ul>
      * <p>Default value: optional.</p>
      * <blockquote>
-     * <p> For information about modes of accessing instance metadata, see <a href="https://help.aliyun.com/document_detail/150575.html">Access instance metadata</a>.</p>
+     * <p>For more information about instance metadata access modes, see <a href="https://help.aliyun.com/document_detail/150575.html">Instance metadata access modes</a>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -105,7 +111,7 @@ public class DescribeInstancesRequest extends TeaModel {
     public String httpTokens;
 
     /**
-     * <p>The ID of the image.</p>
+     * <p>The image ID.</p>
      * 
      * <strong>example:</strong>
      * <p>m-bp67acfmxazb4p****</p>
@@ -114,7 +120,7 @@ public class DescribeInstancesRequest extends TeaModel {
     public String imageId;
 
     /**
-     * <p>The internal IP addresses of instances located in the classic network. This parameter is valid when InstanceNetworkType is set to classic. The value can be a JSON array that consists of up to 100 IP addresses. Separate the IP addresses with commas (,).</p>
+     * <p>The private IP addresses of instances in the classic network. This parameter takes effect only when InstanceNetworkType=classic. Specify multiple IP addresses as a JSON array. You can specify up to 100 IP addresses. Separate IP addresses with commas (,).</p>
      * 
      * <strong>example:</strong>
      * <p>[&quot;10.1.1.1&quot;, &quot;10.1.2.1&quot;, … &quot;10.1.10.1&quot;]</p>
@@ -125,8 +131,10 @@ public class DescribeInstancesRequest extends TeaModel {
     /**
      * <p>The billing method of the instance. Valid values:</p>
      * <ul>
-     * <li>PostPaid: pay-as-you-go</li>
-     * <li>PrePaid: subscription</li>
+     * <li><p>PostPaid: pay-as-you-go.</p>
+     * </li>
+     * <li><p>PrePaid: subscription.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -136,7 +144,7 @@ public class DescribeInstancesRequest extends TeaModel {
     public String instanceChargeType;
 
     /**
-     * <p>The ID of the instance. The value can be a JSON array that consists of up to 100 instance IDs. Separate the IDs with commas (,).</p>
+     * <p>The IDs of instances. Specify multiple instance IDs as a JSON array. You can specify up to 100 IDs. Separate IDs with commas (,).</p>
      * 
      * <strong>example:</strong>
      * <p>[&quot;i-bp67acfmxazb4p****&quot;, &quot;i-bp67acfmxazb4p****&quot;, … &quot;i-bp67acfmxazb4p****&quot;]</p>
@@ -145,7 +153,7 @@ public class DescribeInstancesRequest extends TeaModel {
     public String instanceIds;
 
     /**
-     * <p>The name of the instance. Fuzzy search with asterisk (\*) wildcard characters is supported.</p>
+     * <p>The name of the instance. You can use the wildcard character \* for fuzzy search.</p>
      * 
      * <strong>example:</strong>
      * <p>Test</p>
@@ -156,8 +164,10 @@ public class DescribeInstancesRequest extends TeaModel {
     /**
      * <p>The network type of the instance. Valid values:</p>
      * <ul>
-     * <li>classic</li>
-     * <li>vpc</li>
+     * <li><p>classic: classic network.</p>
+     * </li>
+     * <li><p>vpc: Virtual Private Cloud (VPC).</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -167,7 +177,7 @@ public class DescribeInstancesRequest extends TeaModel {
     public String instanceNetworkType;
 
     /**
-     * <p>The instance type of the instance.</p>
+     * <p>The instance type.</p>
      * 
      * <strong>example:</strong>
      * <p>ecs.g5.large</p>
@@ -176,7 +186,7 @@ public class DescribeInstancesRequest extends TeaModel {
     public String instanceType;
 
     /**
-     * <p>The instance family of the instance.</p>
+     * <p>The instance family.</p>
      * 
      * <strong>example:</strong>
      * <p>ecs.g5</p>
@@ -185,13 +195,15 @@ public class DescribeInstancesRequest extends TeaModel {
     public String instanceTypeFamily;
 
     /**
-     * <p>The billing method for network usage. Valid values:</p>
+     * <p>The billing method for public bandwidth. Valid values:</p>
      * <ul>
-     * <li>PayByBandwidth</li>
-     * <li>PayByTraffic</li>
+     * <li><p>PayByBandwidth: pay-by-bandwidth.</p>
+     * </li>
+     * <li><p>PayByTraffic: pay-by-data-transfer.</p>
+     * </li>
      * </ul>
      * <blockquote>
-     * <p> When the <strong>pay-by-traffic</strong> billing method is used for network usage, the maximum inbound and outbound bandwidths are used as the upper limits of bandwidths instead of guaranteed performance specifications. In scenarios in which demands exceed resource supplies, the maximum bandwidths may not be reached. If you want guaranteed bandwidths for your instance, use the <strong>pay-by-bandwidth</strong> billing method for network usage.</p>
+     * <p>In <strong>pay-by-data-transfer</strong> mode, both inbound and outbound peak bandwidth represent upper limits and are not guaranteed service levels. During resource contention, peak bandwidth may be limited. If your business requires guaranteed bandwidth, use <strong>pay-by-bandwidth</strong> mode.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -201,10 +213,12 @@ public class DescribeInstancesRequest extends TeaModel {
     public String internetChargeType;
 
     /**
-     * <p>Specifies whether the instance is an I/O optimized instance. Valid values:</p>
+     * <p>Indicates whether the instance is I/O optimized. Valid values:</p>
      * <ul>
-     * <li>true</li>
-     * <li>false</li>
+     * <li><p>true: yes.</p>
+     * </li>
+     * <li><p>false: no.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -214,7 +228,7 @@ public class DescribeInstancesRequest extends TeaModel {
     public Boolean ioOptimized;
 
     /**
-     * <p>The IPv6 addresses assigned to elastic network interfaces (ENIs).</p>
+     * <p>The IPv6 addresses assigned to the ENI.</p>
      * 
      * <strong>if can be null:</strong>
      * <p>false</p>
@@ -223,7 +237,7 @@ public class DescribeInstancesRequest extends TeaModel {
     public java.util.List<String> ipv6Address;
 
     /**
-     * <p>The name of the SSH key pair bound to the instance.</p>
+     * <p>The name of the SSH key pair used by the instance.</p>
      * 
      * <strong>example:</strong>
      * <p>KeyPairNameTest</p>
@@ -232,13 +246,18 @@ public class DescribeInstancesRequest extends TeaModel {
     public String keyPairName;
 
     /**
-     * <p>The reason why the instance is locked. Valid values:</p>
+     * <p>The reason why the resource is locked. Valid values:</p>
      * <ul>
-     * <li>financial: The instance is locked due to overdue payments.</li>
-     * <li>security: The instance is locked due to security reasons.</li>
-     * <li>recycling: The spot instance is locked and pending release.</li>
-     * <li>dedicatedhostfinancial: The instance is locked due to overdue payments for the dedicated host.</li>
-     * <li>refunded: The instance is locked because a refund is made for the instance.</li>
+     * <li><p>financial: The instance is locked due to overdue payment.</p>
+     * </li>
+     * <li><p>security: The instance is locked for security reasons.</p>
+     * </li>
+     * <li><p>Recycling: The spot instance is locked and pending release.</p>
+     * </li>
+     * <li><p>dedicatedhostfinancial: The ECS instance is locked because the dedicated host has an overdue payment.</p>
+     * </li>
+     * <li><p>refunded: The instance is locked due to a refund.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -248,11 +267,13 @@ public class DescribeInstancesRequest extends TeaModel {
     public String lockReason;
 
     /**
-     * <p>The maximum number of entries per page. Valid values: 1 to 100.</p>
+     * <p>The maximum number of entries to return on each page. Maximum value: 100.</p>
      * <p>Default value:</p>
      * <ul>
-     * <li>If you do not specify this parameter or if you set this parameter to a value that is smaller than 10, the default value is 10.</li>
-     * <li>If you set this parameter to a value that is greater than 100, the default value is 100.</li>
+     * <li><p>If you do not specify this parameter or specify a value less than 10, the default value is 10.</p>
+     * </li>
+     * <li><p>If you specify a value greater than 100, the default value is 100.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -263,7 +284,7 @@ public class DescribeInstancesRequest extends TeaModel {
 
     /**
      * <blockquote>
-     * <p> This parameter is in invitational preview and is not publicly available.</p>
+     * <p>This parameter is in invitational preview and is not supported.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -273,7 +294,7 @@ public class DescribeInstancesRequest extends TeaModel {
     public Boolean needSaleCycle;
 
     /**
-     * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of <code>NextToken</code>.</p>
+     * <p>The pagination token. Set this parameter to the <code>NextToken</code> value returned in the last API call.</p>
      * 
      * <strong>example:</strong>
      * <p>caeba0bbb2be03f84eb48b699f0a4883</p>
@@ -289,7 +310,7 @@ public class DescribeInstancesRequest extends TeaModel {
 
     /**
      * <blockquote>
-     * <p> This parameter will be removed in the future. We recommend that you use NextToken and MaxResults for a paged query.</p>
+     * <p>This parameter will be deprecated. We recommend that you use NextToken and MaxResults to perform paged queries.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -300,7 +321,7 @@ public class DescribeInstancesRequest extends TeaModel {
 
     /**
      * <blockquote>
-     * <p> This parameter will be removed in the future. We recommend that you use NextToken and MaxResults for a paged query.</p>
+     * <p>This parameter will be deprecated. We recommend that you use NextToken and MaxResults to perform paged queries.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -310,7 +331,7 @@ public class DescribeInstancesRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The private IP addresses of instances located in a VPC. This parameter is valid when InstanceNetworkType is set to vpc. The value can be a JSON array that consists of up to 100 IP addresses. Separate the IP addresses with commas (,).</p>
+     * <p>The private IP addresses of instances in a VPC. This parameter takes effect only when InstanceNetworkType=vpc. Specify multiple IP addresses as a JSON array. You can specify up to 100 IP addresses. Separate IP addresses with commas (,).</p>
      * 
      * <strong>example:</strong>
      * <p>[&quot;172.16.1.1&quot;, &quot;172.16.2.1&quot;, … &quot;172.16.10.1&quot;]</p>
@@ -319,7 +340,7 @@ public class DescribeInstancesRequest extends TeaModel {
     public String privateIpAddresses;
 
     /**
-     * <p>The public IP addresses of instances. The value can be a JSON array that consists of up to 100 IP addresses. Separate the IP addresses with commas (,).</p>
+     * <p>The public IP addresses of instances. Specify multiple IP addresses as a JSON array. You can specify up to 100 IP addresses. Separate IP addresses with commas (,).</p>
      * 
      * <strong>example:</strong>
      * <p>[&quot;42.1.1.<strong>&quot;, &quot;42.1.2.</strong>&quot;, … &quot;42.1.10.**&quot;]</p>
@@ -328,7 +349,7 @@ public class DescribeInstancesRequest extends TeaModel {
     public String publicIpAddresses;
 
     /**
-     * <p>The remote direct memory access (RDMA) IP addresses of the instance in the HPC cluster.</p>
+     * <p>The RDMA IP address of the HPC instance.</p>
      * 
      * <strong>example:</strong>
      * <p>10.10.10.102</p>
@@ -337,7 +358,7 @@ public class DescribeInstancesRequest extends TeaModel {
     public String rdmaIpAddresses;
 
     /**
-     * <p>The region ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>The region ID of the instance. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to view the latest list of Alibaba Cloud regions.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -347,9 +368,9 @@ public class DescribeInstancesRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of the resource group to which the instance belongs. If this parameter is specified to query resources, up to 1,000 resources that belong to the specified resource group can be displayed in the response.</p>
+     * <p>The ID of the resource group to which the instance belongs. When you use this parameter to filter resources, the number of resources cannot exceed 1,000.</p>
      * <blockquote>
-     * <p> Resources in the default resource group are displayed in the response regardless of how this parameter is set.</p>
+     * <p>Filtering by the default resource group is not supported.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -365,7 +386,7 @@ public class DescribeInstancesRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The ID of the security group to which the instance belongs.</p>
+     * <p>The security group to which the instance belongs.</p>
      * 
      * <strong>example:</strong>
      * <p>sg-bp67acfmxazb4p****</p>
@@ -376,11 +397,16 @@ public class DescribeInstancesRequest extends TeaModel {
     /**
      * <p>The status of the instance. Valid values:</p>
      * <ul>
-     * <li>Pending: The instance is being created.</li>
-     * <li>Running: The instance is running.</li>
-     * <li>Starting: The instance is being started.</li>
-     * <li>Stopping: The instance is being stopped.</li>
-     * <li>Stopped: The instance is stopped.</li>
+     * <li><p>Pending: The instance is being created.</p>
+     * </li>
+     * <li><p>Running: The instance is running.</p>
+     * </li>
+     * <li><p>Starting: The instance is starting.</p>
+     * </li>
+     * <li><p>Stopping: The instance is stopping.</p>
+     * </li>
+     * <li><p>Stopped: The instance is stopped.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -390,7 +416,7 @@ public class DescribeInstancesRequest extends TeaModel {
     public String status;
 
     /**
-     * <p>The tags of the instance.</p>
+     * <p>The list of tags.</p>
      */
     @NameInMap("Tag")
     public java.util.List<DescribeInstancesRequestTag> tag;
@@ -405,7 +431,7 @@ public class DescribeInstancesRequest extends TeaModel {
     public String vSwitchId;
 
     /**
-     * <p>The ID of the virtual private cloud (VPC).</p>
+     * <p>The ID of the Virtual Private Cloud (VPC).</p>
      * 
      * <strong>example:</strong>
      * <p>v-bp67acfmxazb4p****</p>
@@ -414,7 +440,7 @@ public class DescribeInstancesRequest extends TeaModel {
     public String vpcId;
 
     /**
-     * <p>The zone ID of the instance.</p>
+     * <p>The zone ID.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou-g</p>
@@ -765,7 +791,7 @@ public class DescribeInstancesRequest extends TeaModel {
 
     public static class DescribeInstancesRequestFilter extends TeaModel {
         /**
-         * <p>The key of filter 1 used to query resources. Set the value to <code>CreationStartTime</code>. You can specify a time by setting both <code>Filter.1.Key</code> and <code>Filter.1.Value</code> to query resources that were created after the specified time.</p>
+         * <p>The filter key used to query resources. Set this parameter to <code>CreationStartTime</code>. When you set both <code>Filter.1.Key</code> and <code>Filter.1.Value</code>, you can query resources created after the specified point in time.</p>
          * 
          * <strong>example:</strong>
          * <p>CreationStartTime</p>
@@ -774,7 +800,7 @@ public class DescribeInstancesRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The value of filter 1 used to query resources. Set the value to a time. If you specify this parameter, you must also specify <code>Filter.1.Key</code>. Specify the time in the ISO 8601 standard in the <code>yyyy-MM-ddTHH:mmZ</code> format. The time must be in UTC.</p>
+         * <p>The filter value used to query resources. You must also specify the <code>Filter.1.Key</code> parameter when you specify this parameter. The value must be in the format <code>yyyy-MM-ddTHH:mmZ</code> (UTC+0).</p>
          * 
          * <strong>example:</strong>
          * <p>2017-12-05T22:40Z</p>
@@ -807,8 +833,10 @@ public class DescribeInstancesRequest extends TeaModel {
 
     public static class DescribeInstancesRequestTag extends TeaModel {
         /**
-         * <p>The key of tag N of the instance. Valid values of N: 1 to 20.</p>
-         * <p>If you specify a single tag to query resources, up to 1,000 resources to which the tag is added are returned. If you specify multiple tags to query resources, up to 1,000 resources to which all specified tags are added are returned. To query more than 1,000 resources that have specified tags added, call the <a href="https://help.aliyun.com/document_detail/110425.html">ListTagResources</a> operation.</p>
+         * <p>The tag key.</p>
+         * <blockquote>
+         * <p>To improve compatibility, we recommend that you use the <code>Tag.N.Key</code> parameter instead.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>TestKey</p>
@@ -817,7 +845,7 @@ public class DescribeInstancesRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The value of tag N of the instance. Valid values of N: 1 to 20.</p>
+         * <p>The tag value of the instance. Valid values of N: 1 to 20.</p>
          * 
          * <strong>example:</strong>
          * <p>TestValue</p>

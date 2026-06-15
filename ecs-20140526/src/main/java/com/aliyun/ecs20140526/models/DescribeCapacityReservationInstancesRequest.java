@@ -10,8 +10,10 @@ public class DescribeCapacityReservationInstancesRequest extends TeaModel {
     /**
      * <p>The number of entries per page.</p>
      * <ul>
-     * <li>Valid values: 1 to 100.</li>
-     * <li>Default value: 10.</li>
+     * <li><p>Valid values: 1 to 100.</p>
+     * </li>
+     * <li><p>Default value: 10.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

@@ -43,8 +43,10 @@ public class ModifyReservedInstanceAutoRenewAttributeRequest extends TeaModel {
     /**
      * <p>Specifies whether to automatically renew the reserved instances. Valid values:</p>
      * <ul>
-     * <li>AutoRenewal: automatically renews the reserved instances.</li>
-     * <li>Normal: manually renews the reserved instances.</li>
+     * <li><p>AutoRenewal: automatically renews the reserved instances.</p>
+     * </li>
+     * <li><p>Normal: manually renews the reserved instances.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

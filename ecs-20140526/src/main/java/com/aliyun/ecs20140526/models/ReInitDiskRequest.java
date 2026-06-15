@@ -7,8 +7,10 @@ public class ReInitDiskRequest extends TeaModel {
     /**
      * <p>Specifies whether to automatically start the instance after the disk is re-initialized. Valid values:</p>
      * <ul>
-     * <li>true</li>
-     * <li>false</li>
+     * <li><p>true</p>
+     * </li>
+     * <li><p>false</p>
+     * </li>
      * </ul>
      * <p>Default value: false.</p>
      * 
@@ -70,8 +72,10 @@ public class ReInitDiskRequest extends TeaModel {
     /**
      * <p>Specifies whether to use Security Center free of charge after the system disk is re-initialized. Valid values:</p>
      * <ul>
-     * <li>Active: uses Security Center free of charge after the system disk is re-initialized. This value is applicable to only public images.</li>
-     * <li>Deactive: does not use Security Center free of charge after the system disk is re-initialized. This value is applicable to all images.</li>
+     * <li><p>Active: uses Security Center free of charge after the system disk is re-initialized. This value is applicable to only public images.</p>
+     * </li>
+     * <li><p>Deactive: does not use Security Center free of charge after the system disk is re-initialized. This value is applicable to all images.</p>
+     * </li>
      * </ul>
      * <p>Default value: Deactive.</p>
      * 

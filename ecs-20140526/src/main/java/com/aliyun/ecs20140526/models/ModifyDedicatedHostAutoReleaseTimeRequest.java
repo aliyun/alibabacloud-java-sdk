@@ -7,10 +7,14 @@ public class ModifyDedicatedHostAutoReleaseTimeRequest extends TeaModel {
     /**
      * <p>The automatic release time of the dedicated host. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC+0.</p>
      * <ul>
-     * <li>The automatic release time must be at least 30 minutes later than the current time.</li>
-     * <li>The automatic release time can be up to 3 years earlier than the current time.</li>
-     * <li>If the value of the seconds (ss) is not 00, it is automatically set to 00.</li>
-     * <li>If <code>AutoReleaseTime</code> is not configured, the automatic release feature is disabled, and the dedicated host will not be automatically released.</li>
+     * <li><p>The automatic release time must be at least 30 minutes later than the current time.</p>
+     * </li>
+     * <li><p>The automatic release time can be up to 3 years earlier than the current time.</p>
+     * </li>
+     * <li><p>If the value of the seconds (ss) is not 00, it is automatically set to 00.</p>
+     * </li>
+     * <li><p>If <code>AutoReleaseTime</code> is not configured, the automatic release feature is disabled, and the dedicated host will not be automatically released.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

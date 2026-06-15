@@ -16,8 +16,10 @@ public class DescribeLaunchTemplateVersionsRequest extends TeaModel {
     /**
      * <p>Specifies whether to query the configurations of the launch template. Valid values:</p>
      * <ul>
-     * <li>true: queries the basic information and other details of the launch template. The details include the image ID and system disk size.</li>
-     * <li>false: queries only the basic information of the launch template. The basic information includes the template ID, template name, and default version.</li>
+     * <li><p>true: queries the basic information and other details of the launch template. The details include the image ID and system disk size.</p>
+     * </li>
+     * <li><p>false: queries only the basic information of the launch template. The basic information includes the template ID, template name, and default version.</p>
+     * </li>
      * </ul>
      * <p>Default value: true.</p>
      * 

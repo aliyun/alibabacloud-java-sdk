@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeInstanceModificationPriceResponseBody extends TeaModel {
     /**
-     * <p>Details about the prices and promotion rules.</p>
+     * <p>Price information, including price details and promotional rules.</p>
      */
     @NameInMap("PriceInfo")
     public DescribeInstanceModificationPriceResponseBodyPriceInfo priceInfo;
@@ -173,10 +173,12 @@ public class DescribeInstanceModificationPriceResponseBody extends TeaModel {
 
     public static class DescribeInstanceModificationPriceResponseBodyPriceInfoPrice extends TeaModel {
         /**
-         * <p>The currency unit. Valid values:</p>
+         * <p>The currency. Valid values:</p>
          * <ul>
-         * <li>Alibaba Cloud China site (aliyun.com): CNY</li>
-         * <li>Alibaba Cloud International site (alibabacloud.com): USD</li>
+         * <li><p><code>CNY</code>: For the China site.</p>
+         * </li>
+         * <li><p><code>USD</code>: For the international site.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -189,7 +191,7 @@ public class DescribeInstanceModificationPriceResponseBody extends TeaModel {
         public DescribeInstanceModificationPriceResponseBodyPriceInfoPriceDetailInfos detailInfos;
 
         /**
-         * <p>The discount.</p>
+         * <p>The discount amount.</p>
          * 
          * <strong>example:</strong>
          * <p>61.320</p>
@@ -207,7 +209,7 @@ public class DescribeInstanceModificationPriceResponseBody extends TeaModel {
         public Float originalPrice;
 
         /**
-         * <p>The transaction price, which is equal to the original price minus the discount.</p>
+         * <p>The final price (original price - discount).</p>
          * 
          * <strong>example:</strong>
          * <p>113.880</p>
@@ -400,7 +402,7 @@ public class DescribeInstanceModificationPriceResponseBody extends TeaModel {
 
     public static class DescribeInstanceModificationPriceResponseBodyPriceInfo extends TeaModel {
         /**
-         * <p>The price.</p>
+         * <p>The price details.</p>
          */
         @NameInMap("Price")
         public DescribeInstanceModificationPriceResponseBodyPriceInfoPrice price;

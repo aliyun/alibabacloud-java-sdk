@@ -13,13 +13,20 @@ public class DescribeInstanceHistoryEventsRequest extends TeaModel {
     /**
      * <p>The lifecycle state of the system event. This parameter takes effect only when InstanceEventCycleStatus.N is not specified. Valid values:</p>
      * <ul>
-     * <li>Scheduled</li>
-     * <li>Avoided</li>
-     * <li>Executing</li>
-     * <li>Executed</li>
-     * <li>Canceled</li>
-     * <li>Failed</li>
-     * <li>Inquiring</li>
+     * <li><p>Scheduled</p>
+     * </li>
+     * <li><p>Avoided</p>
+     * </li>
+     * <li><p>Executing</p>
+     * </li>
+     * <li><p>Executed</p>
+     * </li>
+     * <li><p>Canceled</p>
+     * </li>
+     * <li><p>Failed</p>
+     * </li>
+     * <li><p>Inquiring</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -40,19 +47,29 @@ public class DescribeInstanceHistoryEventsRequest extends TeaModel {
     /**
      * <p>The type of the system event. This parameter takes effect only when InstanceEventType.N is not specified. Valid values:</p>
      * <ul>
-     * <li>SystemMaintenance.Reboot: The instance is restarted due to system maintenance.</li>
-     * <li>SystemMaintenance.Redeploy: The instance is redeployed due to system maintenance.</li>
-     * <li>SystemFailure.Reboot: The instance is restarted due to a system error.</li>
-     * <li>SystemFailure.Redeploy: The instance is redeployed due to a system error.</li>
-     * <li>SystemFailure.Delete: The instance is released due to an instance creation failure.</li>
-     * <li>InstanceFailure.Reboot: The instance is restarted due to an instance error.</li>
-     * <li>InstanceExpiration.Stop: The subscription instance is stopped due to expiration.</li>
-     * <li>InstanceExpiration.Delete: The subscription instance is released due to expiration.</li>
-     * <li>AccountUnbalanced.Stop: The pay-as-you-go instance is stopped due to an overdue payment.</li>
-     * <li>AccountUnbalanced.Delete: The pay-as-you-go instance is released due to an overdue payment.</li>
+     * <li><p>SystemMaintenance.Reboot: The instance is restarted due to system maintenance.</p>
+     * </li>
+     * <li><p>SystemMaintenance.Redeploy: The instance is redeployed due to system maintenance.</p>
+     * </li>
+     * <li><p>SystemFailure.Reboot: The instance is restarted due to a system error.</p>
+     * </li>
+     * <li><p>SystemFailure.Redeploy: The instance is redeployed due to a system error.</p>
+     * </li>
+     * <li><p>SystemFailure.Delete: The instance is released due to an instance creation failure.</p>
+     * </li>
+     * <li><p>InstanceFailure.Reboot: The instance is restarted due to an instance error.</p>
+     * </li>
+     * <li><p>InstanceExpiration.Stop: The subscription instance is stopped due to expiration.</p>
+     * </li>
+     * <li><p>InstanceExpiration.Delete: The subscription instance is released due to expiration.</p>
+     * </li>
+     * <li><p>AccountUnbalanced.Stop: The pay-as-you-go instance is stopped due to an overdue payment.</p>
+     * </li>
+     * <li><p>AccountUnbalanced.Delete: The pay-as-you-go instance is released due to an overdue payment.</p>
+     * </li>
      * </ul>
      * <blockquote>
-     * <p> For more information, see <a href="https://help.aliyun.com/document_detail/66574.html">Overview</a>. The values of this parameter are applicable only to instance system events, but not to disk system events.</p>
+     * <p>For more information, see <a href="https://help.aliyun.com/document_detail/66574.html">Overview</a>. The values of this parameter are applicable only to instance system events, but not to disk system events.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -63,7 +80,7 @@ public class DescribeInstanceHistoryEventsRequest extends TeaModel {
 
     /**
      * <blockquote>
-     * <p> This parameter is not publicly available.</p>
+     * <p>This parameter is not publicly available.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -75,13 +92,20 @@ public class DescribeInstanceHistoryEventsRequest extends TeaModel {
     /**
      * <p>The lifecycle state of system event N. Valid values of N: 1 to 7. You can repeat this parameter to pass multiple values. Valid values:</p>
      * <ul>
-     * <li>Scheduled</li>
-     * <li>Avoided</li>
-     * <li>Executing</li>
-     * <li>Executed</li>
-     * <li>Canceled</li>
-     * <li>Failed</li>
-     * <li>Inquiring</li>
+     * <li><p>Scheduled</p>
+     * </li>
+     * <li><p>Avoided</p>
+     * </li>
+     * <li><p>Executing</p>
+     * </li>
+     * <li><p>Executed</p>
+     * </li>
+     * <li><p>Canceled</p>
+     * </li>
+     * <li><p>Failed</p>
+     * </li>
+     * <li><p>Inquiring</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -93,19 +117,29 @@ public class DescribeInstanceHistoryEventsRequest extends TeaModel {
     /**
      * <p>The type of system event N. Valid values of N: 1 to 30. You can repeat this parameter to pass multiple values. Valid values:</p>
      * <ul>
-     * <li>SystemMaintenance.Reboot: The instance is restarted due to system maintenance.</li>
-     * <li>SystemMaintenance.Redeploy: The instance is redeployed due to system maintenance.</li>
-     * <li>SystemFailure.Reboot: The instance is restarted due to a system error.</li>
-     * <li>SystemFailure.Redeploy: The instance is redeployed due to a system error.</li>
-     * <li>SystemFailure.Delete: The instance is released due to an instance creation failure.</li>
-     * <li>InstanceFailure.Reboot: The instance is restarted due to an instance error.</li>
-     * <li>InstanceExpiration.Stop: The subscription instance is stopped due to expiration.</li>
-     * <li>InstanceExpiration.Delete: The subscription instance is released due to expiration.</li>
-     * <li>AccountUnbalanced.Stop: The pay-as-you-go instance is stopped due to an overdue payment.</li>
-     * <li>AccountUnbalanced.Delete: The pay-as-you-go instance is released due to an overdue payment.</li>
+     * <li><p>SystemMaintenance.Reboot: The instance is restarted due to system maintenance.</p>
+     * </li>
+     * <li><p>SystemMaintenance.Redeploy: The instance is redeployed due to system maintenance.</p>
+     * </li>
+     * <li><p>SystemFailure.Reboot: The instance is restarted due to a system error.</p>
+     * </li>
+     * <li><p>SystemFailure.Redeploy: The instance is redeployed due to a system error.</p>
+     * </li>
+     * <li><p>SystemFailure.Delete: The instance is released due to an instance creation failure.</p>
+     * </li>
+     * <li><p>InstanceFailure.Reboot: The instance is restarted due to an instance error.</p>
+     * </li>
+     * <li><p>InstanceExpiration.Stop: The subscription instance is stopped due to expiration.</p>
+     * </li>
+     * <li><p>InstanceExpiration.Delete: The subscription instance is released due to expiration.</p>
+     * </li>
+     * <li><p>AccountUnbalanced.Stop: The pay-as-you-go instance is stopped due to an overdue payment.</p>
+     * </li>
+     * <li><p>AccountUnbalanced.Delete: The pay-as-you-go instance is released due to an overdue payment.</p>
+     * </li>
      * </ul>
      * <blockquote>
-     * <p> For more information, see <a href="https://help.aliyun.com/document_detail/66574.html">Overview</a>. The values of this parameter are applicable only to instance system events, but not to disk system events.</p>
+     * <p>For more information, see <a href="https://help.aliyun.com/document_detail/66574.html">Overview</a>. The values of this parameter are applicable only to instance system events, but not to disk system events.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -127,8 +161,10 @@ public class DescribeInstanceHistoryEventsRequest extends TeaModel {
      * <p>The number of entries to return on each page. Valid values: 10 to 100.</p>
      * <p>Default values:</p>
      * <ul>
-     * <li>If you set a value greater than 0 and less than 10, the default value is 10.</li>
-     * <li>If you set this parameter to a value that is greater than 100, the default value is 100.</li>
+     * <li><p>If you set a value greater than 0 and less than 10, the default value is 10.</p>
+     * </li>
+     * <li><p>If you set this parameter to a value that is greater than 100, the default value is 100.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -154,7 +190,7 @@ public class DescribeInstanceHistoryEventsRequest extends TeaModel {
 
     /**
      * <blockquote>
-     * <p> This parameter is deprecated. We recommend that you specify MaxResults or NextToken for a paged query.</p>
+     * <p>This parameter is deprecated. We recommend that you specify MaxResults or NextToken for a paged query.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -165,7 +201,7 @@ public class DescribeInstanceHistoryEventsRequest extends TeaModel {
 
     /**
      * <blockquote>
-     * <p> This parameter is deprecated. We recommend that you specify MaxResults or NextToken for a paged query.</p>
+     * <p>This parameter is deprecated. We recommend that you specify MaxResults or NextToken for a paged query.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -196,13 +232,16 @@ public class DescribeInstanceHistoryEventsRequest extends TeaModel {
     /**
      * <p>The ID of resource N. Valid values of N: 1 to 100. You can repeat this parameter to pass multiple values. Valid values:</p>
      * <ul>
-     * <li>When <code>ResourceType</code> is set to instance, ResourceId.N specifies the ID of instance N.</li>
-     * <li>When <code>ResourceType</code> is set to ddh, ResourceId.N specifies the ID of dedicated host N.</li>
-     * <li>When <code>ResourceType</code> is set to managedhost, ResourceId.N specifies the ID of physical machine N from a smart hosting pool.</li>
+     * <li><p>When <code>ResourceType</code> is set to instance, ResourceId.N specifies the ID of instance N.</p>
+     * </li>
+     * <li><p>When <code>ResourceType</code> is set to ddh, ResourceId.N specifies the ID of dedicated host N.</p>
+     * </li>
+     * <li><p>When <code>ResourceType</code> is set to managedhost, ResourceId.N specifies the ID of physical machine N from a smart hosting pool.</p>
+     * </li>
      * </ul>
      * <p>If this parameter is not specified, the system events of all resources of the type specified by <code>ResourceType</code> in the region specified by <code>RegionId</code> are queried.</p>
      * <blockquote>
-     * <p> We recommend that you use <code>ResourceId.N</code> to specify one or more resource IDs. If you specify both <code>ResourceId.N</code> and <code>InstanceId</code>, <code>ResourceId.N</code> takes precedence by default.</p>
+     * <p>We recommend that you use <code>ResourceId.N</code> to specify one or more resource IDs. If you specify both <code>ResourceId.N</code> and <code>InstanceId</code>, <code>ResourceId.N</code> takes precedence by default.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -220,9 +259,12 @@ public class DescribeInstanceHistoryEventsRequest extends TeaModel {
     /**
      * <p>The type of the resource. Valid values:</p>
      * <ul>
-     * <li>instance: ECS instance</li>
-     * <li>ddh: dedicated host</li>
-     * <li>managehost: physical machine in a smart hosting pool</li>
+     * <li><p>instance: ECS instance</p>
+     * </li>
+     * <li><p>ddh: dedicated host</p>
+     * </li>
+     * <li><p>managehost: physical machine in a smart hosting pool</p>
+     * </li>
      * </ul>
      * <p>Default value: instance.</p>
      * 

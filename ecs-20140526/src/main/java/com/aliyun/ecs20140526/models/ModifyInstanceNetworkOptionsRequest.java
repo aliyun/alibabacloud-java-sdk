@@ -9,11 +9,16 @@ public class ModifyInstanceNetworkOptionsRequest extends TeaModel {
      * <p>The supported values vary with instance types. You can query the bandwidth weights supported by the current instance type by using the <a href="https://help.aliyun.com/document_detail/2679699.html">DescribeInstanceTypes</a>.</p>
      * <p>Valid values:</p>
      * <ul>
-     * <li>Vpc-L1: Vpc-L1.</li>
-     * <li>Vpc-L2: Vpc-L2.</li>
-     * <li>Ebs-L1: Ebs-L1.</li>
-     * <li>Ebs-L2: Ebs-L2.</li>
-     * <li>Default: the Default.</li>
+     * <li><p>Vpc-L1: Vpc-L1.</p>
+     * </li>
+     * <li><p>Vpc-L2: Vpc-L2.</p>
+     * </li>
+     * <li><p>Ebs-L1: Ebs-L1.</p>
+     * </li>
+     * <li><p>Ebs-L2: Ebs-L2.</p>
+     * </li>
+     * <li><p>Default: the Default.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

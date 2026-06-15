@@ -4,6 +4,9 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class RecoverVirtualBorderRouterRequest extends TeaModel {
+    /**
+     * <p>A client-generated token that must be unique across requests to ensure idempotency. The token can contain only ASCII characters and must be no longer than 64 characters.</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
@@ -14,6 +17,7 @@ public class RecoverVirtualBorderRouterRequest extends TeaModel {
     public Long ownerId;
 
     /**
+     * <p>The ID of the region where the VBR is located. You can call the <code>DescribeRegions</code> operation to get the latest region list.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
@@ -25,10 +29,14 @@ public class RecoverVirtualBorderRouterRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The secondary IPv4 CIDR block of your on-premises data center. This parameter is used for disaster recovery in a dual-homed configuration.</p>
+     */
     @NameInMap("UserCidr")
     public String userCidr;
 
     /**
+     * <p>The ID of the VBR to recover.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("VbrId")

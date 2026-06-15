@@ -4,13 +4,19 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class StartTerminalSessionShrinkRequest extends TeaModel {
+    /**
+     * <p>Ensures the idempotence of the request. Generate a unique parameter value from your client to guarantee uniqueness across different requests. <strong>ClientToken</strong> supports only ASCII characters and must not exceed 64 characters. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123e4567-e89b-12d3-a456-426655440000</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
      * <p>The command to run after the session is initiated. The command length cannot exceed 512 characters.</p>
      * <blockquote>
-     * <p> If you specify the <code>CommandLine</code> parameter, you cannot specify the <code>PortNumber</code> or <code>TargetServer</code> parameter.</p>
+     * <p>If you specify the <code>CommandLine</code> parameter, you cannot specify the <code>PortNumber</code> or <code>TargetServer</code> parameter.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -22,8 +28,10 @@ public class StartTerminalSessionShrinkRequest extends TeaModel {
     /**
      * <p>The network type of the WebSocket URL required to connect to the instance. Valid values:</p>
      * <ul>
-     * <li>Internet (default)</li>
-     * <li>Intranet</li>
+     * <li><p>Internet (default)</p>
+     * </li>
+     * <li><p>Intranet</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -32,6 +40,9 @@ public class StartTerminalSessionShrinkRequest extends TeaModel {
     @NameInMap("ConnectionType")
     public String connectionType;
 
+    /**
+     * <p>Session encryption configuration items.</p>
+     */
     @NameInMap("EncryptionOptions")
     public String encryptionOptionsShrink;
 
@@ -48,6 +59,13 @@ public class StartTerminalSessionShrinkRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The password name of the user when using Session Manager on a Windows instance. The length cannot exceed 255 characters.<br>
+     * When you want to use Session Manager on a Windows instance as a non-default user (System), you must pass both Username and this parameter. To reduce the risk of password disclosure, store the plaintext password in the parameter repository of CloudOps Orchestration Service, and pass only the password name here. For more information, see <a href="https://help.aliyun.com/document_detail/186828.html">encrypted parameters</a>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>axtSecretPassword</p>
+     */
     @NameInMap("PasswordName")
     public String passwordName;
 
@@ -80,7 +98,7 @@ public class StartTerminalSessionShrinkRequest extends TeaModel {
     /**
      * <p>The IP address of the instance. You can use the IP address to access the destination service in a virtual private cloud (VPC).</p>
      * <blockquote>
-     * <p> If this parameter is not empty, <code>PortNumber</code> specifies the port number that is used by the managed instance to access the destination service in the VPC.</p>
+     * <p>If this parameter is not empty, <code>PortNumber</code> specifies the port number that is used by the managed instance to access the destination service in the VPC.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

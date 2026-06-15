@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyImageSharePermissionRequest extends TeaModel {
     /**
-     * <p>The IDs of Alibaba Cloud accounts to which you want to share the custom image. Valid values of N: 1 to 10. If you specify more than 10 Alibaba Cloud account IDs, the system processes only the first 10 account IDs. The excess account IDs are ignored.</p>
+     * <p>The IDs of the Alibaba Cloud accounts with which to share the image. You can specify up to 10 account IDs. If you specify more than 10 account IDs in a request, only the first 10 are processed.</p>
      * 
      * <strong>example:</strong>
      * <p>1234567890</p>
@@ -13,14 +13,18 @@ public class ModifyImageSharePermissionRequest extends TeaModel {
     @NameInMap("AddAccount")
     public java.util.List<String> addAccount;
 
+    /**
+     * <p>Specifies whether to perform a dry run. A dry run checks for request parameter validity and permissions. If the request is valid, the <code>DryRunOperation</code> error code is returned. Otherwise, an error is returned. If the request is valid, no fee is incurred and no resource is created. Set the value to <code>true</code> to perform a dry run. Default value: <code>false</code>.</p>
+     */
     @NameInMap("DryRun")
     public Boolean dryRun;
 
     /**
-     * <p>The ID of the shared custom image.</p>
+     * <p>The ID of the custom image.</p>
      * <blockquote>
-     * <p> You can share images encrypted by using CMKs but cannot share images encrypted by using service keys. When you share an image encrypted by using a service key, an error is reported.</p>
+     * <p>Notice: </p>
      * </blockquote>
+     * <p>You can no longer share images that are encrypted by using a service key. You can share only images that are encrypted by using a customer managed key (CMK). If you attempt to share an image that is encrypted by using a service key, the request fails.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -30,10 +34,12 @@ public class ModifyImageSharePermissionRequest extends TeaModel {
     public String imageId;
 
     /**
-     * <p>Specifies whether to publish or unpublish a community image. Valid values:</p>
+     * <p>Specifies whether to publish or unpublish the community image. Valid values:</p>
      * <ul>
-     * <li>true: publishes the custom image as a community image.</li>
-     * <li>false: unpublishes a community image. The unpublish operation takes effect only on community images.</li>
+     * <li><p>true: publishes the image as a community image.</p>
+     * </li>
+     * <li><p>false: unpublishes the community image. The image becomes a custom image. If the image is a custom image, this setting has no effect.</p>
+     * </li>
      * </ul>
      * <p>Default value: false.</p>
      * 
@@ -61,7 +67,7 @@ public class ModifyImageSharePermissionRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID of the custom image. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>The region ID of the custom image. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to view the latest list of Alibaba Cloud regions.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -71,7 +77,7 @@ public class ModifyImageSharePermissionRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The IDs of Alibaba Cloud accounts from which you want to unshare the custom image. Valid values of N: 1 to 10. If you specify more than 10 Alibaba Cloud account IDs, the system processes only the first 10 account IDs. The excess account IDs are ignored.</p>
+     * <p>The IDs of the Alibaba Cloud accounts from which to unshare the image. You can specify up to 10 account IDs. If you specify more than 10 account IDs in a request, only the first 10 are processed.</p>
      * 
      * <strong>example:</strong>
      * <p>1234567890</p>

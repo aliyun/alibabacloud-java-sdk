@@ -4,12 +4,26 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class CreateVpcRequest extends TeaModel {
+    /**
+     * <p>The IPv4 CIDR block of the VPC. You can use one of the following standard IPv4 CIDR blocks or their subnets:</p>
+     * <ul>
+     * <li><code>10.0.0.0/8</code></li>
+     * <li><code>172.16.0.0/12</code></li>
+     * <li><code>192.168.0.0/16</code></li>
+     * </ul>
+     */
     @NameInMap("CidrBlock")
     public String cidrBlock;
 
+    /**
+     * <p>A client-generated token that ensures the idempotence of the request. The token must be unique across requests, contain only ASCII characters, and not exceed 64 characters. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
+    /**
+     * <p>The VPC description. The description must be 2 to 256 characters long and cannot start with <code>http://</code> or <code>https://</code>.</p>
+     */
     @NameInMap("Description")
     public String description;
 
@@ -20,6 +34,7 @@ public class CreateVpcRequest extends TeaModel {
     public Long ownerId;
 
     /**
+     * <p>The ID of the region where the VPC will be created. You can call the <code>DescribeRegions</code> operation to query the latest list of regions.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
@@ -31,9 +46,15 @@ public class CreateVpcRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The user CIDR block. You can specify a user CIDR block as an alternative to the standard CIDR blocks. This lets you use a private IP address range other than <code>10.0.0.0/8</code>, <code>172.16.0.0/12</code>, or <code>192.168.0.0/16</code> as the CIDR block for the VPC.</p>
+     */
     @NameInMap("UserCidr")
     public String userCidr;
 
+    /**
+     * <p>The VPC name. It must be 2 to 128 characters long, start with a letter, and contain only letters, digits, underscores (_), and hyphens (-).</p>
+     */
     @NameInMap("VpcName")
     public String vpcName;
 

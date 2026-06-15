@@ -5,6 +5,13 @@ import com.aliyun.tea.*;
 
 public class CreatePlanMaintenanceWindowRequest extends TeaModel {
     /**
+     * <p>Specifies whether to enable the maintenance window.</p>
+     * <ul>
+     * <li><p><strong>true</strong>: Enables the maintenance window.</p>
+     * </li>
+     * <li><p><strong>false</strong>: Disables the maintenance window.</p>
+     * </li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -13,13 +20,21 @@ public class CreatePlanMaintenanceWindowRequest extends TeaModel {
     @NameInMap("Enable")
     public Boolean enable;
 
+    @NameInMap("MinMaintenanceInterval")
+    public Integer minMaintenanceInterval;
+
     /**
+     * <p>The name of the maintenance window. The name can be up to 200 characters long.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>WIndowName</p>
      */
     @NameInMap("PlanWindowName")
     public String planWindowName;
 
     /**
+     * <p>The ID of the region. You can call the DescribeRegions operation to query the latest list of Alibaba Cloud regions.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -29,6 +44,7 @@ public class CreatePlanMaintenanceWindowRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The maintenance operation supported by the maintenance window.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -38,12 +54,14 @@ public class CreatePlanMaintenanceWindowRequest extends TeaModel {
     public String supportMaintenanceAction;
 
     /**
+     * <p>The resources to which the maintenance window applies.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("TargetResource")
     public CreatePlanMaintenanceWindowRequestTargetResource targetResource;
 
     /**
+     * <p>The recurring schedule for the maintenance window.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("TimePeriod")
@@ -60,6 +78,14 @@ public class CreatePlanMaintenanceWindowRequest extends TeaModel {
     }
     public Boolean getEnable() {
         return this.enable;
+    }
+
+    public CreatePlanMaintenanceWindowRequest setMinMaintenanceInterval(Integer minMaintenanceInterval) {
+        this.minMaintenanceInterval = minMaintenanceInterval;
+        return this;
+    }
+    public Integer getMinMaintenanceInterval() {
+        return this.minMaintenanceInterval;
     }
 
     public CreatePlanMaintenanceWindowRequest setPlanWindowName(String planWindowName) {
@@ -103,10 +129,18 @@ public class CreatePlanMaintenanceWindowRequest extends TeaModel {
     }
 
     public static class CreatePlanMaintenanceWindowRequestTargetResourceTags extends TeaModel {
+        /**
+         * <p>The tag key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vms_qualification_孙总身份证_e5590864-1fef-4db2-b2a7-bd2d657fed43.png</p>
+         */
         @NameInMap("Key")
         public String key;
 
         /**
+         * <p>The tag value.</p>
+         * 
          * <strong>example:</strong>
          * <p>21.137.18.60</p>
          */
@@ -138,6 +172,8 @@ public class CreatePlanMaintenanceWindowRequest extends TeaModel {
 
     public static class CreatePlanMaintenanceWindowRequestTargetResource extends TeaModel {
         /**
+         * <p>The ID of the resource group. This parameter is required if <code>Scope</code> is set to <code>ResourceGroup</code>.</p>
+         * 
          * <strong>example:</strong>
          * <p>rg-aekzhm7pmnvcbty</p>
          */
@@ -145,6 +181,7 @@ public class CreatePlanMaintenanceWindowRequest extends TeaModel {
         public String resourceGroupId;
 
         /**
+         * <p>The scope of resources to which the maintenance window applies.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -153,6 +190,9 @@ public class CreatePlanMaintenanceWindowRequest extends TeaModel {
         @NameInMap("Scope")
         public String scope;
 
+        /**
+         * <p>The tags of the resources to which the maintenance window applies. This parameter is required if <code>Scope</code> is set to <code>Tag</code>.</p>
+         */
         @NameInMap("Tags")
         public java.util.List<CreatePlanMaintenanceWindowRequestTargetResourceTags> tags;
 
@@ -189,6 +229,16 @@ public class CreatePlanMaintenanceWindowRequest extends TeaModel {
 
     public static class CreatePlanMaintenanceWindowRequestTimePeriodRangeList extends TeaModel {
         /**
+         * <p>The end time of the maintenance window.</p>
+         * <ul>
+         * <li><p>If <code>PeriodUnit</code> is set to <code>Weekly</code>, use the format <code>Day,HH:mm</code>. Valid values for <code>Day</code> are <code>Monday</code>, <code>Tuesday</code>, <code>Wednesday</code>, <code>Thursday</code>, <code>Friday</code>, <code>Saturday</code>, and <code>Sunday</code>.</p>
+         * </li>
+         * <li><p>If <code>PeriodUnit</code> is set to <code>Daily</code>, use the format <code>HH:mm</code>.</p>
+         * </li>
+         * <li><p>The time is in <code>HH:mm</code> format, where <code>HH</code> is the hour (00-23) and <code>mm</code> is the minute. Only <code>00</code> is supported for the minute.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Tuesday,03:00</p>
          */
@@ -196,6 +246,16 @@ public class CreatePlanMaintenanceWindowRequest extends TeaModel {
         public String endTime;
 
         /**
+         * <p>The start time of the maintenance window.</p>
+         * <ul>
+         * <li><p>If <code>PeriodUnit</code> is set to <code>Weekly</code>, use the format <code>Day,HH:mm</code>. Valid values for <code>Day</code> are <code>Monday</code>, <code>Tuesday</code>, <code>Wednesday</code>, <code>Thursday</code>, <code>Friday</code>, <code>Saturday</code>, and <code>Sunday</code>.</p>
+         * </li>
+         * <li><p>If <code>PeriodUnit</code> is set to <code>Daily</code>, use the format <code>HH:mm</code>.</p>
+         * </li>
+         * <li><p>The time is in <code>HH:mm</code> format, where <code>HH</code> is the hour (00-23) and <code>mm</code> is the minute. Only <code>00</code> is supported for the minute.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Monday,22:00</p>
          */
@@ -227,6 +287,7 @@ public class CreatePlanMaintenanceWindowRequest extends TeaModel {
 
     public static class CreatePlanMaintenanceWindowRequestTimePeriod extends TeaModel {
         /**
+         * <p>Specifies how often the maintenance window recurs.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -236,6 +297,7 @@ public class CreatePlanMaintenanceWindowRequest extends TeaModel {
         public String periodUnit;
 
         /**
+         * <p>The time ranges of the recurring maintenance window. All times are in UTC.</p>
          * <p>This parameter is required.</p>
          */
         @NameInMap("RangeList")

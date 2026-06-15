@@ -25,8 +25,10 @@ public class DescribeSnapshotLinksRequest extends TeaModel {
     /**
      * <p>The maximum number of entries per page. Maximum value: 100. Default value:</p>
      * <ul>
-     * <li>If you do not specify this parameter or if you set a value smaller than 10, the default value is 10.</li>
-     * <li>If you set a value greater than 100, the default value is 100.</li>
+     * <li><p>If you do not specify this parameter or if you set a value smaller than 10, the default value is 10.</p>
+     * </li>
+     * <li><p>If you set a value greater than 100, the default value is 100.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

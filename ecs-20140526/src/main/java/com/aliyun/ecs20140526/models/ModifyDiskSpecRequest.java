@@ -6,7 +6,7 @@ import com.aliyun.tea.*;
 public class ModifyDiskSpecRequest extends TeaModel {
     /**
      * <blockquote>
-     * <p> This parameter is in invitational preview and is not publicly available.</p>
+     * <p>This parameter is in invitational preview and is not publicly available.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -18,10 +18,14 @@ public class ModifyDiskSpecRequest extends TeaModel {
     /**
      * <p>The new disk category of the cloud disk. Valid values:</p>
      * <ul>
-     * <li>cloud_essd: ESSD</li>
-     * <li>cloud_auto: ESSD AutoPL disk</li>
-     * <li>cloud_ssd: standard SSD</li>
-     * <li>cloud_efficiency: utra disk</li>
+     * <li><p>cloud_essd: ESSD</p>
+     * </li>
+     * <li><p>cloud_auto: ESSD AutoPL disk</p>
+     * </li>
+     * <li><p>cloud_ssd: standard SSD</p>
+     * </li>
+     * <li><p>cloud_efficiency: utra disk</p>
+     * </li>
      * </ul>
      * <p>This parameter is empty by default, which indicates that the disk category is not changed.</p>
      * <blockquote>
@@ -49,8 +53,10 @@ public class ModifyDiskSpecRequest extends TeaModel {
     /**
      * <p>Specifies whether to perform only a dry run, without performing the actual request. Valid values:</p>
      * <ul>
-     * <li>true: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, service limits, and insufficient ECS resources. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</li>
-     * <li>false: performs a dry run and performs the actual request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.</li>
+     * <li><p>true: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, service limits, and insufficient ECS resources. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</p>
+     * </li>
+     * <li><p>false: performs a dry run and performs the actual request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.</p>
+     * </li>
      * </ul>
      * <p>Default value: false.</p>
      * 
@@ -75,10 +81,14 @@ public class ModifyDiskSpecRequest extends TeaModel {
     /**
      * <p>The new performance level of the ESSD. Valid values:</p>
      * <ul>
-     * <li>PL0: An ESSD can deliver up to 10,000 random read/write IOPS.</li>
-     * <li>PL1: An ESSD can deliver up to 50,000 random read/write IOPS.</li>
-     * <li>PL2: An ESSD can deliver up to 100,000 random read/write IOPS.</li>
-     * <li>PL3: An ESSD delivers up to 1,000,000 random read/write IOPS.</li>
+     * <li><p>PL0: An ESSD can deliver up to 10,000 random read/write IOPS.</p>
+     * </li>
+     * <li><p>PL1: An ESSD can deliver up to 50,000 random read/write IOPS.</p>
+     * </li>
+     * <li><p>PL2: An ESSD can deliver up to 100,000 random read/write IOPS.</p>
+     * </li>
+     * <li><p>PL3: An ESSD delivers up to 1,000,000 random read/write IOPS.</p>
+     * </li>
      * </ul>
      * <p>Default value: PL1.</p>
      * 
@@ -93,7 +103,7 @@ public class ModifyDiskSpecRequest extends TeaModel {
      * <p>Valid values: 0 to min{50,000, 1,000 × Capacity - Baseline IOPS}.</p>
      * <p>Baseline IOPS = min{1,800 + 50 × Capacity, 50,000}.</p>
      * <blockquote>
-     * <p> This parameter is available only if you set <code>DiskCategory</code> to <code>cloud_auto</code>. For more information, see <a href="https://help.aliyun.com/document_detail/368372.html">ESSD AutoPL disks</a> and <a href="https://help.aliyun.com/document_detail/413275.html">Modify the performance configurations of an ESSD AutoPL disk</a>.</p>
+     * <p>This parameter is available only if you set <code>DiskCategory</code> to <code>cloud_auto</code>. For more information, see <a href="https://help.aliyun.com/document_detail/368372.html">ESSD AutoPL disks</a> and <a href="https://help.aliyun.com/document_detail/413275.html">Modify the performance configurations of an ESSD AutoPL disk</a>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

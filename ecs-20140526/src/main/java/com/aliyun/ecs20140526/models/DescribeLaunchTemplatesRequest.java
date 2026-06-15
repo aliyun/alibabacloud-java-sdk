@@ -7,8 +7,10 @@ public class DescribeLaunchTemplatesRequest extends TeaModel {
     /**
      * <p>The IDs of launch templates.</p>
      * <ul>
-     * <li>You can query up to 100 launch templates.</li>
-     * <li>You must specify LaunchTemplateId or LaunchTemplateName to specify a launch template.</li>
+     * <li><p>You can query up to 100 launch templates.</p>
+     * </li>
+     * <li><p>You must specify LaunchTemplateId or LaunchTemplateName to specify a launch template.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -20,8 +22,10 @@ public class DescribeLaunchTemplatesRequest extends TeaModel {
     /**
      * <p>The names of launch templates.</p>
      * <ul>
-     * <li>You can query up to 100 launch templates.</li>
-     * <li>You must specify LaunchTemplateId or LaunchTemplateName to specify a launch template.</li>
+     * <li><p>You can query up to 100 launch templates.</p>
+     * </li>
+     * <li><p>You must specify LaunchTemplateId or LaunchTemplateName to specify a launch template.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -75,7 +79,7 @@ public class DescribeLaunchTemplatesRequest extends TeaModel {
     /**
      * <p>The ID of the resource group to which the launch template belongs. If you specify this parameter to query resources, up to 1,000 resources that belong to the specified resource group can be returned.</p>
      * <blockquote>
-     * <p> The default resource group is not supported.</p>
+     * <p>The default resource group is not supported.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -87,7 +91,7 @@ public class DescribeLaunchTemplatesRequest extends TeaModel {
     /**
      * <p>The tags of the launch template.</p>
      * <blockquote>
-     * <p> You can only call API operations to add tags to and query the tags of a launch template. You cannot add tags to or view the tags of a launch template in the ECS console.</p>
+     * <p>You can only call API operations to add tags to and query the tags of a launch template. You cannot add tags to or view the tags of a launch template in the ECS console.</p>
      * </blockquote>
      */
     @NameInMap("TemplateTag")

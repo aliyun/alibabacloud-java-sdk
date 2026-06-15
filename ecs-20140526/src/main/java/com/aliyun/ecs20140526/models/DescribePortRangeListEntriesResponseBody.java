@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribePortRangeListEntriesResponseBody extends TeaModel {
     /**
-     * <p>Port list entries.</p>
+     * <p>The port range list entries.</p>
      */
     @NameInMap("Entries")
     public java.util.List<DescribePortRangeListEntriesResponseBodyEntries> entries;

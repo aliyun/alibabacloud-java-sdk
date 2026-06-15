@@ -20,8 +20,10 @@ public class CreateElasticityAssuranceRequest extends TeaModel {
     /**
      * <p>Specifies whether to enable auto-renewal for the elasticity assurance. Valid values:</p>
      * <ul>
-     * <li>true</li>
-     * <li>false</li>
+     * <li><p>true</p>
+     * </li>
+     * <li><p>false</p>
+     * </li>
      * </ul>
      * <p>Default value: false.</p>
      * 
@@ -34,11 +36,13 @@ public class CreateElasticityAssuranceRequest extends TeaModel {
     /**
      * <p>The auto-renewal period. Unit: month. Valid values: 1, 2, 3, 6, 12, 24, and 36.</p>
      * <ul>
-     * <li>Default value when <code>PeriodUnit</code> is set to Month: 1.</li>
-     * <li>Default value when <code>PeriodUnit</code> is set to Year: 12.</li>
+     * <li><p>Default value when <code>PeriodUnit</code> is set to Month: 1.</p>
+     * </li>
+     * <li><p>Default value when <code>PeriodUnit</code> is set to Year: 12.</p>
+     * </li>
      * </ul>
      * <blockquote>
-     * <p> If you set <code>AutoRenew</code> to <code>true</code>, you must specify this parameter.</p>
+     * <p>If you set <code>AutoRenew</code> to <code>true</code>, you must specify this parameter.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -70,7 +74,7 @@ public class CreateElasticityAssuranceRequest extends TeaModel {
      * <p>The total number of instances of an instance type for which you want to reserve capacity.</p>
      * <p>Valid values: 1 to 1000.</p>
      * <blockquote>
-     * <p> You must specify this parameter.</p>
+     * <p>You must specify this parameter.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -109,9 +113,12 @@ public class CreateElasticityAssuranceRequest extends TeaModel {
     /**
      * <p>The validity period of the elasticity assurance. The unit of the validity period is determined by the value of <code>PeriodUnit</code>. Specifies whether to check the image used by the instance supports hot migration. Valid values:</p>
      * <ul>
-     * <li>When the value of <code>PeriodUnit</code> is <code>Month</code>, the valid values are 1, 2, 3, 4, 5, 6, 7, 8, and 9.</li>
-     * <li>When the value of <code>PeriodUnit</code> is <code>Year</code>, the valid values are 1, 2, 3, 4, and 5.</li>
-     * <li>When the value of <code>PeriodUnit</code> is <code>Day</code>, the valid values are 1 to 365.</li>
+     * <li><p>When the value of <code>PeriodUnit</code> is <code>Month</code>, the valid values are 1, 2, 3, 4, 5, 6, 7, 8, and 9.</p>
+     * </li>
+     * <li><p>When the value of <code>PeriodUnit</code> is <code>Year</code>, the valid values are 1, 2, 3, 4, and 5.</p>
+     * </li>
+     * <li><p>When the value of <code>PeriodUnit</code> is <code>Day</code>, the valid values are 1 to 365.</p>
+     * </li>
      * </ul>
      * <p>Default value: 1</p>
      * 
@@ -129,7 +136,7 @@ public class CreateElasticityAssuranceRequest extends TeaModel {
      * <li><p>Year</p>
      * </li>
      * <li><p>Day</p>
-     * <p>**</p>
+     * <p>\<em>\</em></p>
      * <p><strong>Note</strong> If you set <code>PeriodUnit</code> to <code>Day</code>, you must specify RecurrenceRules to create a time-segmented elasticity assurance.</p>
      * </li>
      * </ul>
@@ -144,7 +151,7 @@ public class CreateElasticityAssuranceRequest extends TeaModel {
     /**
      * <p>The assurance schedules based on which the capacity reservation takes effect.</p>
      * <blockquote>
-     * <p> Time-segmented elasticity assurances are available only in specific regions and to specific users. To use time-segmented elasticity assurances, <a href="https://smartservice.console.aliyun.com/service/create-ticket-intl">submit a ticket</a>.</p>
+     * <p>Time-segmented elasticity assurances are available only in specific regions and to specific users. To use time-segmented elasticity assurances, <a href="https://smartservice.console.aliyun.com/service/create-ticket-intl">submit a ticket</a>.</p>
      * </blockquote>
      */
     @NameInMap("RecurrenceRules")
@@ -377,8 +384,10 @@ public class CreateElasticityAssuranceRequest extends TeaModel {
         /**
          * <p>The type of the private pool with which you want to associate the elasticity assurance. Valid values:</p>
          * <ul>
-         * <li>Open: open private pool. If you use the elasticity assurance to create ECS instances, the open private pool that is associated with the elasticity assurance is automatically matched. If no capacity is available in the open private pool, resources in the public pool are automatically used to create the ECS instances.</li>
-         * <li>Target: targeted private pool. If you use the elasticity assurance to create ECS instances, the specified private pool that is associated with the elasticity assurance is automatically matched. If no capacity is available in the private pool, the ECS instances fail to be created.</li>
+         * <li><p>Open: open private pool. If you use the elasticity assurance to create ECS instances, the open private pool that is associated with the elasticity assurance is automatically matched. If no capacity is available in the open private pool, resources in the public pool are automatically used to create the ECS instances.</p>
+         * </li>
+         * <li><p>Target: targeted private pool. If you use the elasticity assurance to create ECS instances, the specified private pool that is associated with the elasticity assurance is automatically matched. If no capacity is available in the private pool, the ECS instances fail to be created.</p>
+         * </li>
          * </ul>
          * <p>Default value: Open.</p>
          * 
@@ -433,12 +442,15 @@ public class CreateElasticityAssuranceRequest extends TeaModel {
         /**
          * <p>The type of the assurance schedule. Valid values:</p>
          * <ul>
-         * <li>Daily</li>
-         * <li>Weekly</li>
-         * <li>Monthly</li>
+         * <li><p>Daily</p>
+         * </li>
+         * <li><p>Weekly</p>
+         * </li>
+         * <li><p>Monthly</p>
+         * </li>
          * </ul>
          * <blockquote>
-         * <p> You must specify both <code>RecurrenceType</code> and <code>RecurrenceValue</code>.</p>
+         * <p>You must specify both <code>RecurrenceType</code> and <code>RecurrenceValue</code>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -450,9 +462,12 @@ public class CreateElasticityAssuranceRequest extends TeaModel {
         /**
          * <p>The days of the week or month on which the capacity reservation takes effect or the interval, in number of days, at which the capacity reservation takes effect.</p>
          * <ul>
-         * <li>If you set <code>RecurrenceType</code> to <code>Daily</code>, you can specify only one value for this parameter. Valid values: 1 to 31. The value specifies that the capacity reservation takes effect every few days.</li>
-         * <li>If you set <code>RecurrenceType</code> to <code>Weekly</code>, you can specify multiple values for this parameter. Separate the values with commas (,). Valid values: 0, 1, 2, 3, 4, 5, and 6, which specify Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, and Saturday, respectively. Example: <code>1,2</code>, which specifies that the capacity reservation takes effect on Monday and Tuesday.</li>
-         * <li>If you set <code>RecurrenceType</code> to <code>Monthly</code>, you can specify two values in the <code>A-B</code> format for this parameter. Valid values of A and B: 1 to 31. B must be greater than or equal to A. For example, <code>1-5</code> indicates that the execution is repeated from the 1st to 5th of each month.</li>
+         * <li><p>If you set <code>RecurrenceType</code> to <code>Daily</code>, you can specify only one value for this parameter. Valid values: 1 to 31. The value specifies that the capacity reservation takes effect every few days.</p>
+         * </li>
+         * <li><p>If you set <code>RecurrenceType</code> to <code>Weekly</code>, you can specify multiple values for this parameter. Separate the values with commas (,). Valid values: 0, 1, 2, 3, 4, 5, and 6, which specify Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, and Saturday, respectively. Example: <code>1,2</code>, which specifies that the capacity reservation takes effect on Monday and Tuesday.</p>
+         * </li>
+         * <li><p>If you set <code>RecurrenceType</code> to <code>Monthly</code>, you can specify two values in the <code>A-B</code> format for this parameter. Valid values of A and B: 1 to 31. B must be greater than or equal to A. For example, <code>1-5</code> indicates that the execution is repeated from the 1st to 5th of each month.</p>
+         * </li>
          * </ul>
          * <blockquote>
          * <p>You must specify both <code>RecurrenceType</code> and <code>RecurrenceValue</code>.</p>
@@ -467,7 +482,7 @@ public class CreateElasticityAssuranceRequest extends TeaModel {
         /**
          * <p>The start time of the assurance period for the capacity reservation. Specify an on-the-hour point in time.</p>
          * <blockquote>
-         * <p> You must specify both <code>StartHour</code> and <code>EndHour</code>. EndHour must be at least four hours later than StartHour.</p>
+         * <p>You must specify both <code>StartHour</code> and <code>EndHour</code>. EndHour must be at least four hours later than StartHour.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

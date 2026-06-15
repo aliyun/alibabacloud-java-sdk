@@ -4,6 +4,10 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class ModifyVSwitchAttributeRequest extends TeaModel {
+    /**
+     * <p>The new description for the vSwitch.\
+     * The description must be 2 to 256 characters in length and cannot start with <code>http://</code> or <code>https://</code>.\</p>
+     */
     @NameInMap("Description")
     public String description;
 
@@ -13,6 +17,9 @@ public class ModifyVSwitchAttributeRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The ID of the region where the vSwitch is located.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
@@ -23,11 +30,16 @@ public class ModifyVSwitchAttributeRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
+     * <p>The ID of the vSwitch to modify.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("VSwitchId")
     public String vSwitchId;
 
+    /**
+     * <p>The new name for the vSwitch.\
+     * The name must be 2 to 128 characters in length. It must start with a letter and can contain letters, digits, underscores (_), and hyphens (-).\</p>
+     */
     @NameInMap("VSwitchName")
     public String vSwitchName;
 

@@ -28,8 +28,10 @@ public class DescribeSpotPriceHistoryRequest extends TeaModel {
     /**
      * <p>Specifies whether the instance is I/O optimized. Valid values:</p>
      * <ul>
-     * <li>optimized: The instance is I/O optimized.</li>
-     * <li>none: The instance is not I/O optimized.</li>
+     * <li><p>optimized: The instance is I/O optimized.</p>
+     * </li>
+     * <li><p>none: The instance is not I/O optimized.</p>
+     * </li>
      * </ul>
      * <p>For instances of generation I instance families, the default value is none.</p>
      * <p>For instances of other instance families, the default value is optimized.</p>
@@ -43,8 +45,10 @@ public class DescribeSpotPriceHistoryRequest extends TeaModel {
     /**
      * <p>The network type of the spot instance. Valid values:</p>
      * <ul>
-     * <li>classic: classic network</li>
-     * <li>vpc: Virtual Private Cloud (VPC)</li>
+     * <li><p>classic: classic network</p>
+     * </li>
+     * <li><p>vpc: Virtual Private Cloud (VPC)</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -57,8 +61,10 @@ public class DescribeSpotPriceHistoryRequest extends TeaModel {
     /**
      * <p>The type of the operating system platform. Valid values:</p>
      * <ul>
-     * <li>linux</li>
-     * <li>windows</li>
+     * <li><p>linux</p>
+     * </li>
+     * <li><p>windows</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -102,12 +108,14 @@ public class DescribeSpotPriceHistoryRequest extends TeaModel {
     /**
      * <p>The protection period of the spot instance. Unit: hours. Default value: 1. Valid values:</p>
      * <ul>
-     * <li>1: After a spot instance is created, Alibaba Cloud ensures that the instance is not automatically released within 1 hour. After the 1-hour protection period ends, the system compares the bid price with the market price and checks the resource inventory to determine whether to retain or release the instance.</li>
-     * <li>0: After a spot instance is created, Alibaba Cloud does not ensure that the instance runs for 1 hour. The system compares the bid price with the market price and checks the resource inventory to determine whether to retain or release the instance.</li>
+     * <li><p>1: After a spot instance is created, Alibaba Cloud ensures that the instance is not automatically released within 1 hour. After the 1-hour protection period ends, the system compares the bid price with the market price and checks the resource inventory to determine whether to retain or release the instance.</p>
+     * </li>
+     * <li><p>0: After a spot instance is created, Alibaba Cloud does not ensure that the instance runs for 1 hour. The system compares the bid price with the market price and checks the resource inventory to determine whether to retain or release the instance.</p>
+     * </li>
      * </ul>
      * <p>Alibaba Cloud sends an ECS system event to notify you 5 minutes before the instance is released. Spot instances are billed by second. We recommend that you specify a protection period based on your business requirements.</p>
      * <blockquote>
-     * <p> This parameter takes effect only if you set SpotStrategy to SpotWithPriceLimit or SpotAsPriceGo.</p>
+     * <p>This parameter takes effect only if you set SpotStrategy to SpotWithPriceLimit or SpotAsPriceGo.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

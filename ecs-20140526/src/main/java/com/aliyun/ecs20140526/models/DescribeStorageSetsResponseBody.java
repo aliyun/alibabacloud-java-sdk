@@ -4,42 +4,18 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeStorageSetsResponseBody extends TeaModel {
-    /**
-     * <p>The page number of the returned page.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>1</p>
-     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
-    /**
-     * <p>The number of entries returned per page.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>1</p>
-     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    /**
-     * <p>The ID of the request.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("StorageSets")
     public DescribeStorageSetsResponseBodyStorageSets storageSets;
 
-    /**
-     * <p>The total number of storage sets.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>20</p>
-     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 

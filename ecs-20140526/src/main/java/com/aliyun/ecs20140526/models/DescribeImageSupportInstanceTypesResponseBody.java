@@ -7,8 +7,10 @@ public class DescribeImageSupportInstanceTypesResponseBody extends TeaModel {
     /**
      * <p>The key of filter N. Only the image ID can be used to filter instance types. Valid values:</p>
      * <ul>
-     * <li>imagId: image ID</li>
-     * <li>filter: image ID</li>
+     * <li><p>imagId: image ID</p>
+     * </li>
+     * <li><p>filter: image ID</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -22,23 +24,23 @@ public class DescribeImageSupportInstanceTypesResponseBody extends TeaModel {
 
     /**
      * <p>{
-     *     &quot;RequestId&quot;: &quot;CF661E2D-4AFE-4BCD-959A-A65E14416B44&quot;,
-     *     &quot;RegionId&quot;: &quot;cn-hangzhou&quot;,
-     *     &quot;ImageId&quot;: &quot;ubuntu_16_0402_64_20G_alibase_20180409.vhd&quot;,
-     *     &quot;InstanceTypes&quot;: {
-     *         &quot;InstanceType&quot;: [{
-     *             &quot;InstanceTypeId&quot;: &quot;ecs.t1.xsmall&quot;,
-     *             &quot;CpuCoreCount&quot;: 1,
-     *             &quot;MemorySize&quot;: 0.5,
-     *             &quot;InstanceTypeFamily&quot;: &quot;ecs.t1&quot;
-     *         },
-     *         {
-     *             &quot;InstanceTypeId&quot;: &quot;ecs.t1.small&quot;,
-     *             &quot;CpuCoreCount&quot;: 1,
-     *             &quot;MemorySize&quot;: 1,
-     *             &quot;InstanceTypeFamily&quot;: &quot;ecs.t1&quot;
-     *         }]
-     *     }
+     * &quot;RequestId&quot;: &quot;CF661E2D-4AFE-4BCD-959A-A65E14416B44&quot;,
+     * &quot;RegionId&quot;: &quot;cn-hangzhou&quot;,
+     * &quot;ImageId&quot;: &quot;ubuntu_16_0402_64_20G_alibase_20180409.vhd&quot;,
+     * &quot;InstanceTypes&quot;: {
+     * &quot;InstanceType&quot;: [{
+     * &quot;InstanceTypeId&quot;: &quot;ecs.t1.xsmall&quot;,
+     * &quot;CpuCoreCount&quot;: 1,
+     * &quot;MemorySize&quot;: 0.5,
+     * &quot;InstanceTypeFamily&quot;: &quot;ecs.t1&quot;
+     * },
+     * {
+     * &quot;InstanceTypeId&quot;: &quot;ecs.t1.small&quot;,
+     * &quot;CpuCoreCount&quot;: 1,
+     * &quot;MemorySize&quot;: 1,
+     * &quot;InstanceTypeFamily&quot;: &quot;ecs.t1&quot;
+     * }]
+     * }
      * }</p>
      * 
      * <strong>example:</strong>

@@ -7,39 +7,15 @@ public class DescribeStorageSetDetailsResponseBody extends TeaModel {
     @NameInMap("Disks")
     public DescribeStorageSetDetailsResponseBodyDisks disks;
 
-    /**
-     * <p>The page number of the returned page.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>1</p>
-     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
-    /**
-     * <p>The number of entries returned per page.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>1</p>
-     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    /**
-     * <p>The ID of the request.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>49765E79-0D5D-4451-B3AE-580A20831846</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>The total number of storage sets.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>1</p>
-     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 

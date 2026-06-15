@@ -22,13 +22,20 @@ public class DescribeInstancesFullStatusRequest extends TeaModel {
     /**
      * <p>The type of the system event. This parameter is valid only when InstanceEventType.N is not specified. Valid values:</p>
      * <ul>
-     * <li>SystemMaintenance.Reboot: The instance is restarted due to system maintenance.</li>
-     * <li>SystemFailure.Reboot: The instance is restarted due to a system failure.</li>
-     * <li>InstanceFailure.Reboot: The instance is restarted due to an instance failure.</li>
-     * <li>InstanceExpiration.Stop: The subscription instance is stopped due to expiration.</li>
-     * <li>InstanceExpiration.Delete: The subscription instance is released due to expiration.</li>
-     * <li>AccountUnbalanced.Stop: The pay-as-you-go instance is stopped due to an overdue payment.</li>
-     * <li>AccountUnbalanced.Delete: The pay-as-you-go instance is released due to an overdue payment.</li>
+     * <li><p>SystemMaintenance.Reboot: The instance is restarted due to system maintenance.</p>
+     * </li>
+     * <li><p>SystemFailure.Reboot: The instance is restarted due to a system failure.</p>
+     * </li>
+     * <li><p>InstanceFailure.Reboot: The instance is restarted due to an instance failure.</p>
+     * </li>
+     * <li><p>InstanceExpiration.Stop: The subscription instance is stopped due to expiration.</p>
+     * </li>
+     * <li><p>InstanceExpiration.Delete: The subscription instance is released due to expiration.</p>
+     * </li>
+     * <li><p>AccountUnbalanced.Stop: The pay-as-you-go instance is stopped due to an overdue payment.</p>
+     * </li>
+     * <li><p>AccountUnbalanced.Delete: The pay-as-you-go instance is released due to an overdue payment.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -40,17 +47,23 @@ public class DescribeInstancesFullStatusRequest extends TeaModel {
     /**
      * <p>The health status of the instance. Valid values:</p>
      * <ul>
-     * <li>Impaired</li>
-     * <li>Warning: The instance performance may be degraded due to maintenance or technical issues.</li>
-     * <li>Maintaining</li>
-     * <li>Initializing</li>
-     * <li>InsufficientData</li>
-     * <li>NotApplicable</li>
+     * <li><p>Impaired</p>
+     * </li>
+     * <li><p>Warning: The instance performance may be degraded due to maintenance or technical issues.</p>
+     * </li>
+     * <li><p>Maintaining</p>
+     * </li>
+     * <li><p>Initializing</p>
+     * </li>
+     * <li><p>InsufficientData</p>
+     * </li>
+     * <li><p>NotApplicable</p>
+     * </li>
      * </ul>
      * <p>All the values are case-sensitive.</p>
      * 
      * <strong>example:</strong>
-     * <p>Maintaining</p>
+     * <p>Initializing</p>
      */
     @NameInMap("HealthStatus")
     public String healthStatus;
@@ -118,9 +131,12 @@ public class DescribeInstancesFullStatusRequest extends TeaModel {
     /**
      * <p>The lifecycle status of the instance. Valid values:</p>
      * <ul>
-     * <li>Starting</li>
-     * <li>Running</li>
-     * <li>Stopped</li>
+     * <li><p>Starting</p>
+     * </li>
+     * <li><p>Running</p>
+     * </li>
+     * <li><p>Stopped</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

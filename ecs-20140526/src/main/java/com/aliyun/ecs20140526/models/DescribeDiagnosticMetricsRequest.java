@@ -8,8 +8,10 @@ public class DescribeDiagnosticMetricsRequest extends TeaModel {
      * <p>The number of entries per page. Valid values: 1 to 100.</p>
      * <p>Default value:</p>
      * <ul>
-     * <li>If this parameter is left empty, the default value is 10.</li>
-     * <li>If you set this parameter to a value that is greater than 100, the default value is 100.</li>
+     * <li><p>If this parameter is left empty, the default value is 10.</p>
+     * </li>
+     * <li><p>If you set this parameter to a value that is greater than 100, the default value is 100.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

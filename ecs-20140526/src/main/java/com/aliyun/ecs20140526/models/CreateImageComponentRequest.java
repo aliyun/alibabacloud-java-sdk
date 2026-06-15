@@ -17,12 +17,14 @@ public class CreateImageComponentRequest extends TeaModel {
      * <p>The type of the image component. Only image building components and image test components are supported.</p>
      * <p>Valid values:</p>
      * <ul>
-     * <li>Build</li>
-     * <li>Test</li>
+     * <li><p>Build</p>
+     * </li>
+     * <li><p>Test</p>
+     * </li>
      * </ul>
      * <p>Default value: Build.</p>
      * <blockquote>
-     * <p> Image building components can be used only in image building templates. Image test components can be used only in image test templates.</p>
+     * <p>Image building components can be used only in image building templates. Image test components can be used only in image test templates.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -36,7 +38,7 @@ public class CreateImageComponentRequest extends TeaModel {
      * <p>Default value: (x + 1).0.0, in which x is the maximum major version number of the image component.</p>
      * 
      * <strong>example:</strong>
-     * <p>null</p>
+     * <p>1.0.0</p>
      */
     @NameInMap("ComponentVersion")
     public String componentVersion;
@@ -45,7 +47,13 @@ public class CreateImageComponentRequest extends TeaModel {
      * <p>The content of the image component. The image component consists of multiple commands. The command content cannot exceed 16 KB in size. For information about the commands supported by Image Builder and the formats of the commands, see <a href="https://help.aliyun.com/document_detail/200206.html">Commands supported by Image Builder</a>.</p>
      * 
      * <strong>example:</strong>
-     * <p>RUN yum update -y</p>
+     * <p>Tasks:</p>
+     * <ul>
+     * <li>Name: HelloWorld
+     * Action: RunShellCommand
+     * Properties:
+     *   commandContent: echo hello world</li>
+     * </ul>
      */
     @NameInMap("Content")
     public String content;
@@ -60,9 +68,9 @@ public class CreateImageComponentRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>The name of the image component. The name must be 2 to 128 characters in length. The name must start with a letter and cannot start with http:// or https://. The name can contain letters, digits, colons (:), underscores (_), periods (.), and hyphens (-).</p>
+     * <p>The name of the image component. The name must be 2 to 128 characters in length. The name must start with a letter and cannot start with http\:// or https\://. The name can contain letters, digits, colons (:), underscores (_), periods (.), and hyphens (-).</p>
      * <blockquote>
-     * <p> If you do not specify <code>Name</code>, the return value of <code>ImageComponentId</code> is used.</p>
+     * <p>If you do not specify <code>Name</code>, the return value of <code>ImageComponentId</code> is used.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -106,8 +114,10 @@ public class CreateImageComponentRequest extends TeaModel {
      * <p>The type of the operating system supported by the image component.</p>
      * <p>Valid values:</p>
      * <ul>
-     * <li>Linux</li>
-     * <li>Windows</li>
+     * <li><p>Linux</p>
+     * </li>
+     * <li><p>Windows</p>
+     * </li>
      * </ul>
      * <p>Default value: Linux.</p>
      * 

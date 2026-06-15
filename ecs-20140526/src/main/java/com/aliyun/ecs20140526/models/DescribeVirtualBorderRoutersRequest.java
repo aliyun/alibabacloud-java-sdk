@@ -4,19 +4,29 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeVirtualBorderRoutersRequest extends TeaModel {
+    /**
+     * <p>The filter conditions.</p>
+     */
     @NameInMap("Filter")
     public java.util.List<DescribeVirtualBorderRoutersRequestFilter> filter;
 
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The page number. Pages are numbered starting from 1. Default value: 1.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries to return on each page. Valid values: 1 to 50. Default value: 10.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
+     * <p>The ID of the region where the Virtual Border Router (VBR) is located. You can call the <code>DescribeRegions</code> operation to obtain the most recent list of regions.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
@@ -90,9 +100,15 @@ public class DescribeVirtualBorderRoutersRequest extends TeaModel {
     }
 
     public static class DescribeVirtualBorderRoutersRequestFilter extends TeaModel {
+        /**
+         * <p>The filter key. Set the value to <code>VbrId</code>.</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The filter value. The value must be an array of VBR IDs.</p>
+         */
         @NameInMap("Value")
         public java.util.List<String> value;
 

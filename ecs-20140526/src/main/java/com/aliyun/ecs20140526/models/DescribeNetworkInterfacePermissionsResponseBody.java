@@ -4,6 +4,9 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeNetworkInterfacePermissionsResponseBody extends TeaModel {
+    /**
+     * <p>The elastic network interface permissions.</p>
+     */
     @NameInMap("NetworkInterfacePermissions")
     public DescribeNetworkInterfacePermissionsResponseBodyNetworkInterfacePermissions networkInterfacePermissions;
 
@@ -35,7 +38,7 @@ public class DescribeNetworkInterfacePermissionsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of entries returned.</p>
+     * <p>The total number of matching entries.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>

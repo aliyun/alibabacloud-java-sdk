@@ -10,6 +10,9 @@ public class DeleteVpcRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The ID of the region where the VPC is located. Call the <a href="~~DescribeRegions~~">DescribeRegions</a> operation to get the latest list of regions.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
@@ -20,6 +23,7 @@ public class DeleteVpcRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
+     * <p>The ID of the VPC to delete.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("VpcId")

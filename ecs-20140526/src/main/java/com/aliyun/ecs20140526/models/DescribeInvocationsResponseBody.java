@@ -8,43 +8,7 @@ public class DescribeInvocationsResponseBody extends TeaModel {
     public DescribeInvocationsResponseBodyInvocations invocations;
 
     /**
-     * <p>The overall execution status of the command task. The value of this parameter depends on the execution states of the command task on all involved instances. Valid values:</p>
-     * <ul>
-     * <li><p>Running:</p>
-     * <ul>
-     * <li>Scheduled task: Before you stop the scheduled execution of the command, the overall execution state is always Running.</li>
-     * <li>One-time task: If the command is being run on instances, the overall execution state is Running.</li>
-     * </ul>
-     * </li>
-     * <li><p>Finished:</p>
-     * <ul>
-     * <li>Scheduled task: The overall execution state can never be Finished.</li>
-     * <li>One-time task: The execution is complete on all instances, or the execution is stopped on some instances and is complete on the other instances.</li>
-     * </ul>
-     * </li>
-     * <li><p>Success: If the execution state on at least one instance is Success and the execution state on the other instances is Stopped or Success, the overall execution state is Success.</p>
-     * <ul>
-     * <li>One-time task: The execution is complete, and the exit code is 0.</li>
-     * <li>Scheduled task: The last execution is complete, the exit code is 0, and the specified period ends.</li>
-     * </ul>
-     * </li>
-     * <li><p>Failed:</p>
-     * <ul>
-     * <li>Scheduled task: The overall execution state can never be Failed.</li>
-     * <li>One-time task: The execution failed on all instances.</li>
-     * </ul>
-     * </li>
-     * <li><p>Stopped: The task is stopped.</p>
-     * </li>
-     * <li><p>Stopping: The task is being stopped.</p>
-     * </li>
-     * <li><p>PartialFailed: The task fails on some instances. If you specify both this parameter and <code>InstanceId</code>, this parameter does not take effect.</p>
-     * </li>
-     * <li><p>Pending: The command is being verified or sent. If the execution state on at least one instance is Pending, the overall execution state is Pending.</p>
-     * </li>
-     * <li><p>Scheduled: The command that is set to run on a schedule is sent and waiting to be run. If the execution state on at least one instance is Scheduled, the overall execution state is Scheduled.</p>
-     * </li>
-     * </ul>
+     * <p>Query credential value returned by this call.</p>
      * 
      * <strong>example:</strong>
      * <p>AAAAAdDWBF2</p>
@@ -53,12 +17,7 @@ public class DescribeInvocationsResponseBody extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The command type. Valid values:</p>
-     * <ul>
-     * <li>RunBatScript: batch command, applicable to Windows instances.</li>
-     * <li>RunPowerShellScript: PowerShell command, applicable to Windows instances.</li>
-     * <li>RunShellScript: shell command, applicable to Linux instances.</li>
-     * </ul>
+     * <p>Page number of the query result.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -67,7 +26,7 @@ public class DescribeInvocationsResponseBody extends TeaModel {
     public Long pageNumber;
 
     /**
-     * <p>The command ID. You can call the <a href="https://help.aliyun.com/document_detail/64843.html">DescribeCommands</a> operation to query all available command IDs.</p>
+     * <p>Number of entries per page.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -76,7 +35,7 @@ public class DescribeInvocationsResponseBody extends TeaModel {
     public Long pageSize;
 
     /**
-     * <p>The command name. If you specify both this parameter and <code>InstanceId</code>, this parameter does not take effect.</p>
+     * <p>Request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3****</p>
@@ -85,18 +44,7 @@ public class DescribeInvocationsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Specifies whether the command is to be automatically run. Valid values:</p>
-     * <ul>
-     * <li><p>true: The command is run by calling the <code>RunCommand</code> or <code>InvokeCommand</code> operation with <code>RepeatMode</code> set to <code>Period</code>, <code>NextRebootOnly</code>, or <code>EveryReboot</code>.</p>
-     * </li>
-     * <li><p>false: The command meets one of the following requirements:</p>
-     * <ul>
-     * <li>The command is run by calling the <code>RunCommand</code> or <code>InvokeCommand</code> operation with <code>RepeatMode</code> set to <code>Once</code>.</li>
-     * <li>The command task is canceled, stopped, or completed.</li>
-     * </ul>
-     * </li>
-     * </ul>
-     * <p>Default value: false.</p>
+     * <p>Total number of commands.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>

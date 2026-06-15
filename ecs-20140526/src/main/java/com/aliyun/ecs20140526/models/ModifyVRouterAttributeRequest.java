@@ -4,6 +4,9 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class ModifyVRouterAttributeRequest extends TeaModel {
+    /**
+     * <p>The description of the virtual router. The description must be 2 to 256 characters long and can contain letters, digits, underscores (_), and hyphens (-). It must start with a letter and cannot start with <code>http://</code> or <code>https://</code>.</p>
+     */
     @NameInMap("Description")
     public String description;
 
@@ -13,6 +16,9 @@ public class ModifyVRouterAttributeRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The ID of the region where the virtual router is deployed. You can call the <code>DescribeRegions</code> operation to obtain the most recent list of regions.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
@@ -23,11 +29,15 @@ public class ModifyVRouterAttributeRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
+     * <p>The ID of the VRouter to modify.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("VRouterId")
     public String VRouterId;
 
+    /**
+     * <p>The name of the virtual router. The name must be 2 to 128 characters long and can contain letters, digits, underscores (_), and hyphens (-). It must start with a letter and cannot start with <code>http://</code> or <code>https://</code>.</p>
+     */
     @NameInMap("VRouterName")
     public String VRouterName;
 

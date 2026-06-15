@@ -4,9 +4,15 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeClustersResponseBody extends TeaModel {
+    /**
+     * <p>An object that contains the list of clusters.</p>
+     */
     @NameInMap("Clusters")
     public DescribeClustersResponseBodyClusters clusters;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

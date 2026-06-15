@@ -5,12 +5,14 @@ import com.aliyun.tea.*;
 
 public class DescribeNewProjectEipMonitorDataRequest extends TeaModel {
     /**
+     * <p>The ID of the EIP.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("AllocationId")
     public String allocationId;
 
     /**
+     * <p>The end of the query time range. The time must be in UTC and formatted as <code>YYYY-MM-DDThh:mm:ssZ</code>.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("EndTime")
@@ -22,9 +24,15 @@ public class DescribeNewProjectEipMonitorDataRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The aggregation period of the monitoring data. Unit: seconds. Valid values: 60, 300, and 900.</p>
+     */
     @NameInMap("Period")
     public Integer period;
 
+    /**
+     * <p>The ID of the region where the Elastic IP address (EIP) is located.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
@@ -35,6 +43,7 @@ public class DescribeNewProjectEipMonitorDataRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
+     * <p>The start of the query time range. The time must be in UTC and formatted as <code>YYYY-MM-DDThh:mm:ssZ</code>.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("StartTime")

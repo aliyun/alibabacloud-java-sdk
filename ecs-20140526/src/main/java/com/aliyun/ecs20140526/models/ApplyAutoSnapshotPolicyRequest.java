@@ -24,7 +24,7 @@ public class ApplyAutoSnapshotPolicyRequest extends TeaModel {
     public String autoSnapshotPolicyId;
 
     /**
-     * <p>The IDs of disks. The value is a JSON array that consists of disk IDs. Separate the disk IDs with commas (,).</p>
+     * <p>A JSON array of one or more disk IDs.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -34,7 +34,7 @@ public class ApplyAutoSnapshotPolicyRequest extends TeaModel {
     public String diskIds;
 
     /**
-     * <p>The region ID of the automatic snapshot policy and the disks. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>The ID of the region where the automatic snapshot policy and target disks are located. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to get the latest list of Alibaba Cloud regions.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

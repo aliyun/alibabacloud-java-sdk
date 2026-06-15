@@ -25,8 +25,10 @@ public class PurchaseElasticityAssuranceRequest extends TeaModel {
     /**
      * <p>The validity period of the elasticity assurance. The unit of the validity period is determined by the PeriodUnit value. Valid values:</p>
      * <ul>
-     * <li>When PeriodUnit is set to Month, valid values are 1, 2, 3, 4, 5, 6, 7, 8, and 9.</li>
-     * <li>When PeriodUnit is set to Year, valid values are 1, 2, 3, 4, and 5.</li>
+     * <li><p>When PeriodUnit is set to Month, valid values are 1, 2, 3, 4, 5, 6, 7, 8, and 9.</p>
+     * </li>
+     * <li><p>When PeriodUnit is set to Year, valid values are 1, 2, 3, 4, and 5.</p>
+     * </li>
      * </ul>
      * <p>Default value: 1.</p>
      * 
@@ -39,8 +41,10 @@ public class PurchaseElasticityAssuranceRequest extends TeaModel {
     /**
      * <p>The unit of the validity period of the elasticity assurance. Valid values:</p>
      * <ul>
-     * <li>Month</li>
-     * <li>Year</li>
+     * <li><p>Month</p>
+     * </li>
+     * <li><p>Year</p>
+     * </li>
      * </ul>
      * <p>Default value: Year.</p>
      * 
@@ -70,7 +74,7 @@ public class PurchaseElasticityAssuranceRequest extends TeaModel {
      * <p>The time when the elasticity assurance takes effect. The default value is the time when the elasticity assurance is created. Specify the time in the ISO 8601 standard in the <code>yyyy-MM-ddTHH:mm:ssZ</code> format. The time must be in UTC. For more information, see <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a>.</p>
      * 
      * <strong>example:</strong>
-     * <p>2024-06-18T00:00Z</p>
+     * <p>2024-06-18T00:00:00Z</p>
      */
     @NameInMap("StartTime")
     public String startTime;
@@ -174,8 +178,10 @@ public class PurchaseElasticityAssuranceRequest extends TeaModel {
         /**
          * <p>The type of the private pool with which you want to associate the elasticity assurance. Valid values:</p>
          * <ul>
-         * <li>Open: open private pool. If you use the elasticity assurance to create Elastic Compute Service (ECS) instances, the open private pool that is associated with the elasticity assurance is automatically matched. If no capacity is available in the open private pool, resources in the public pool are automatically used to create the ECS instances.</li>
-         * <li>Target: targeted private pool. If you use the elasticity assurance to create ECS instances, the specified private pool that is associated with the elasticity assurance is automatically matched. If no capacity is available in the private pool, the ECS instances fail to be created.</li>
+         * <li><p>Open: open private pool. If you use the elasticity assurance to create Elastic Compute Service (ECS) instances, the open private pool that is associated with the elasticity assurance is automatically matched. If no capacity is available in the open private pool, resources in the public pool are automatically used to create the ECS instances.</p>
+         * </li>
+         * <li><p>Target: targeted private pool. If you use the elasticity assurance to create ECS instances, the specified private pool that is associated with the elasticity assurance is automatically matched. If no capacity is available in the private pool, the ECS instances fail to be created.</p>
+         * </li>
          * </ul>
          * <p>Default value: Open.</p>
          * 

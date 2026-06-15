@@ -7,8 +7,10 @@ public class DescribePrefixListAttributesResponseBody extends TeaModel {
     /**
      * <p>The IP address family of the prefix list. Valid values:</p>
      * <ul>
-     * <li>IPv4</li>
-     * <li>IPv6</li>
+     * <li><p>IPv4</p>
+     * </li>
+     * <li><p>IPv6</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

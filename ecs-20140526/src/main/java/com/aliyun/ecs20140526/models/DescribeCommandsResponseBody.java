@@ -8,7 +8,7 @@ public class DescribeCommandsResponseBody extends TeaModel {
     public DescribeCommandsResponseBodyCommands commands;
 
     /**
-     * <p>A pagination token. It can be used in the next request to retrieve a new page of results.</p>
+     * <p>The pagination token that is used in the next request to retrieve a new page of results. If this parameter is not returned, all results have been retrieved.</p>
      * 
      * <strong>example:</strong>
      * <p>AAAAAdDWBF2</p>
@@ -35,7 +35,7 @@ public class DescribeCommandsResponseBody extends TeaModel {
     public Long pageSize;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3****</p>

@@ -441,14 +441,19 @@ public class RevokeSecurityGroupEgressRequest extends TeaModel {
         /**
          * <p>The ID of the destination security group of the security group rule.</p>
          * <ul>
-         * <li>You must specify at least one of the following parameters: <code>DestGroupId</code>, <code>DestCidrIp</code>, <code>Ipv6DestCidrIp</code>, and <code>DestPrefixListId</code>.</li>
-         * <li>If you specify <code>DestGroupId</code> but do not specify <code>DestCidrIp</code>, you must set <code>NicType</code> to intranet.</li>
-         * <li>If you specify both <code>DestGroupId</code> and <code>DestCidrIp</code>, <code>DestCidrIp</code> takes precedence.</li>
+         * <li><p>You must specify at least one of the following parameters: <code>DestGroupId</code>, <code>DestCidrIp</code>, <code>Ipv6DestCidrIp</code>, and <code>DestPrefixListId</code>.</p>
+         * </li>
+         * <li><p>If you specify <code>DestGroupId</code> but do not specify <code>DestCidrIp</code>, you must set <code>NicType</code> to intranet.</p>
+         * </li>
+         * <li><p>If you specify both <code>DestGroupId</code> and <code>DestCidrIp</code>, <code>DestCidrIp</code> takes precedence.</p>
+         * </li>
          * </ul>
          * <p>Take note of the following items:</p>
          * <ul>
-         * <li>Advanced security groups do not support security group rules that reference security groups as authorization objects.</li>
-         * <li>Each basic security group can contain up to 20 security group rules that reference security groups as authorization objects.</li>
+         * <li><p>Advanced security groups do not support security group rules that reference security groups as authorization objects.</p>
+         * </li>
+         * <li><p>Each basic security group can contain up to 20 security group rules that reference security groups as authorization objects.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -460,8 +465,10 @@ public class RevokeSecurityGroupEgressRequest extends TeaModel {
         /**
          * <p>The Alibaba Cloud account that manages the destination security group specified in the security group rule.</p>
          * <ul>
-         * <li>If you leave <code>DestGroupOwnerAccount</code> and <code>DestGroupOwnerId</code> empty, access control configurations are removed from another security group managed by your Alibaba Cloud account.</li>
-         * <li>If you specify <code>DestCidrIp</code>, <code>DestGroupOwnerAccount</code> is invalid.</li>
+         * <li><p>If you leave <code>DestGroupOwnerAccount</code> and <code>DestGroupOwnerId</code> empty, access control configurations are removed from another security group managed by your Alibaba Cloud account.</p>
+         * </li>
+         * <li><p>If you specify <code>DestCidrIp</code>, <code>DestGroupOwnerAccount</code> is invalid.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -473,8 +480,10 @@ public class RevokeSecurityGroupEgressRequest extends TeaModel {
         /**
          * <p>The ID of the Alibaba Cloud account that manages the destination security group specified in the security group rule.</p>
          * <ul>
-         * <li>If you leave <code>DestGroupOwnerId</code> and <code>DestGroupOwnerAccount</code> empty, access control configurations are removed from another security group managed by your Alibaba Cloud account.</li>
-         * <li>If you specify <code>DestCidrIp</code>, <code>DestGroupOwnerId</code> is invalid.</li>
+         * <li><p>If you leave <code>DestGroupOwnerId</code> and <code>DestGroupOwnerAccount</code> empty, access control configurations are removed from another security group managed by your Alibaba Cloud account.</p>
+         * </li>
+         * <li><p>If you specify <code>DestCidrIp</code>, <code>DestGroupOwnerId</code> is invalid.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -487,8 +496,10 @@ public class RevokeSecurityGroupEgressRequest extends TeaModel {
          * <p>The ID of the destination prefix list of the security group rule. You can call the <a href="https://help.aliyun.com/document_detail/205046.html">DescribePrefixLists</a> operation to query the IDs of available prefix lists.</p>
          * <p>Take note of the following items:</p>
          * <ul>
-         * <li>If a security group resides in the classic network, you cannot reference prefix lists in the rules of the security group. For information about the limits on security groups and prefix lists, see the <a href="~~25412#SecurityGroupQuota1~~">Security group limits</a> section of the &quot;Limits and quotas&quot; topic.</li>
-         * <li>If you specify <code>DestCidrIp</code>, <code>Ipv6DestCidrIp</code>, or <code>DestGroupId</code>, this parameter is ignored.</li>
+         * <li><p>If a security group resides in the classic network, you cannot reference prefix lists in the rules of the security group. For information about the limits on security groups and prefix lists, see the <a href="~~25412#SecurityGroupQuota1~~">Security group limits</a> section of the &quot;Limits and quotas&quot; topic.</p>
+         * </li>
+         * <li><p>If you specify <code>DestCidrIp</code>, <code>Ipv6DestCidrIp</code>, or <code>DestGroupId</code>, this parameter is ignored.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -500,12 +511,18 @@ public class RevokeSecurityGroupEgressRequest extends TeaModel {
         /**
          * <p>The protocol type. The values of this parameter are case-insensitive. Valid values:</p>
          * <ul>
-         * <li>TCP.</li>
-         * <li>UDP.</li>
-         * <li>ICMP.</li>
-         * <li>ICMPv6.</li>
-         * <li>GRE.</li>
-         * <li>ALL: All protocols are supported.</li>
+         * <li><p>TCP.</p>
+         * </li>
+         * <li><p>UDP.</p>
+         * </li>
+         * <li><p>ICMP.</p>
+         * </li>
+         * <li><p>ICMPv6.</p>
+         * </li>
+         * <li><p>GRE.</p>
+         * </li>
+         * <li><p>ALL: All protocols are supported.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -517,7 +534,7 @@ public class RevokeSecurityGroupEgressRequest extends TeaModel {
         /**
          * <p>The destination IPv6 CIDR block of the security group rule. IPv6 CIDR blocks and IPv6 addresses are supported.</p>
          * <blockquote>
-         * <p> This parameter is valid only for Elastic Compute Service (ECS) instances that reside in virtual private clouds (VPCs) and support IPv6 CIDR blocks. You cannot specify both this parameter and <code>DestCidrIp</code> in the same request.</p>
+         * <p>This parameter is valid only for Elastic Compute Service (ECS) instances that reside in virtual private clouds (VPCs) and support IPv6 CIDR blocks. You cannot specify both this parameter and <code>DestCidrIp</code> in the same request.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -530,7 +547,7 @@ public class RevokeSecurityGroupEgressRequest extends TeaModel {
          * <p>The source IPv6 CIDR block of the security group rule. IPv6 CIDR blocks and IPv6 addresses are supported.</p>
          * <p>This parameter is used to support quintuple rules. For more information, see <a href="https://help.aliyun.com/document_detail/97439.html">Security group quintuple rules</a>.</p>
          * <blockquote>
-         * <p> This parameter is valid only for ECS instances that reside in VPCs and support IPv6 CIDR blocks. You cannot specify both this parameter and <code>DestCidrIp</code> in the same request.</p>
+         * <p>This parameter is valid only for ECS instances that reside in VPCs and support IPv6 CIDR blocks. You cannot specify both this parameter and <code>DestCidrIp</code> in the same request.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -542,8 +559,10 @@ public class RevokeSecurityGroupEgressRequest extends TeaModel {
         /**
          * <p>The network interface controller (NIC) type of the security group rule if the security group resides in the classic network. Valid values:</p>
          * <ul>
-         * <li>internet: public NIC.</li>
-         * <li>intranet: internal NIC.</li>
+         * <li><p>internet: public NIC.</p>
+         * </li>
+         * <li><p>intranet: internal NIC.</p>
+         * </li>
          * </ul>
          * <p>If the security group resides in a VPC, this parameter is set to intranet by default and cannot be modified.</p>
          * <p>If you specify <code>DestGroupId</code> to delete outbound security group rules that reference the specified security group as an authorization object, you must set this parameter to intranet.</p>
@@ -558,8 +577,10 @@ public class RevokeSecurityGroupEgressRequest extends TeaModel {
         /**
          * <p>The action of the security group rule. Valid values:</p>
          * <ul>
-         * <li>accept: allows access.</li>
-         * <li>drop: denies access and returns no responses. In this case, the request times out or the connection cannot be established.</li>
+         * <li><p>accept: allows access.</p>
+         * </li>
+         * <li><p>drop: denies access and returns no responses. In this case, the request times out or the connection cannot be established.</p>
+         * </li>
          * </ul>
          * <p>Default value: accept.</p>
          * 
@@ -572,10 +593,14 @@ public class RevokeSecurityGroupEgressRequest extends TeaModel {
         /**
          * <p>The destination port range of the security group rule. Valid values:</p>
          * <ul>
-         * <li>If you set IpProtocol to TCP or UDP, the valid values of this parameter are 1 to 65535. Specify a port range in the format of \<Start port number>/\<End port number>. Example: 1/200.</li>
-         * <li>If you set IpProtocol to ICMP, the port range is -1/-1.</li>
-         * <li>If you set IpProtocol to GRE, the port range is -1/-1.</li>
-         * <li>If you set IpProtocol to ALL, the port range is -1/-1.</li>
+         * <li><p>If you set IpProtocol to TCP or UDP, the valid values of this parameter are 1 to 65535. Specify a port range in the format of \<Start port number>/\<End port number>. Example: 1/200.</p>
+         * </li>
+         * <li><p>If you set IpProtocol to ICMP, the port range is -1/-1.</p>
+         * </li>
+         * <li><p>If you set IpProtocol to GRE, the port range is -1/-1.</p>
+         * </li>
+         * <li><p>If you set IpProtocol to ALL, the port range is -1/-1.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -587,8 +612,10 @@ public class RevokeSecurityGroupEgressRequest extends TeaModel {
         /**
          * <p>The ID of the port list. You can call the <code>DescribePortRangeLists</code> operation to query the IDs of available prefix lists.</p>
          * <ul>
-         * <li>If you specify <code>Permissions.N.PortRange</code>, this parameter is ignored.</li>
-         * <li>If a security group resides in the classic network, you cannot reference port lists in the rules of the security group. For information about the limits on security groups and port lists, see the <a href="~~25412#SecurityGroupQuota1~~">Security group limits</a> section of the &quot;Limits and quotas&quot; topic.</li>
+         * <li><p>If you specify <code>Permissions.N.PortRange</code>, this parameter is ignored.</p>
+         * </li>
+         * <li><p>If a security group resides in the classic network, you cannot reference port lists in the rules of the security group. For information about the limits on security groups and port lists, see the <a href="~~25412#SecurityGroupQuota1~~">Security group limits</a> section of the &quot;Limits and quotas&quot; topic.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -620,10 +647,14 @@ public class RevokeSecurityGroupEgressRequest extends TeaModel {
         /**
          * <p>The source port range of the security group rule. Valid values:</p>
          * <ul>
-         * <li>If you set IpProtocol to TCP or UDP, the valid values of this parameter are 1 to 65535. Specify a port range in the format of \<Start port number>/\<End port number>. Example: 1/200.</li>
-         * <li>If you set IpProtocol to ICMP, the port range is -1/-1.</li>
-         * <li>If you set IpProtocol to GRE, the port range is -1/-1.</li>
-         * <li>If you set IpProtocol to ALL, the port range is -1/-1.</li>
+         * <li><p>If you set IpProtocol to TCP or UDP, the valid values of this parameter are 1 to 65535. Specify a port range in the format of \<Start port number>/\<End port number>. Example: 1/200.</p>
+         * </li>
+         * <li><p>If you set IpProtocol to ICMP, the port range is -1/-1.</p>
+         * </li>
+         * <li><p>If you set IpProtocol to GRE, the port range is -1/-1.</p>
+         * </li>
+         * <li><p>If you set IpProtocol to ALL, the port range is -1/-1.</p>
+         * </li>
          * </ul>
          * <p>This parameter is used to support quintuple rules. For more information, see <a href="https://help.aliyun.com/document_detail/97439.html">Security group quintuple rules</a>.</p>
          * 

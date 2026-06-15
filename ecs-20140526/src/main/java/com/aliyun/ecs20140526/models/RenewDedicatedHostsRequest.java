@@ -32,8 +32,10 @@ public class RenewDedicatedHostsRequest extends TeaModel {
     /**
      * <p>The renewal duration. Valid values:</p>
      * <ul>
-     * <li>Valid values when the PeriodUnit parameter is set to Month: 1, 2, 3, 4, 5, 6, 7, 8, 9, 12, 24, 36, 48, and 60.</li>
-     * <li>Valid values when the PeriodUnit parameter is set to Year: 1, 2, 3, 4, and 5.</li>
+     * <li><p>Valid values when the PeriodUnit parameter is set to Month: 1, 2, 3, 4, 5, 6, 7, 8, 9, 12, 24, 36, 48, and 60.</p>
+     * </li>
+     * <li><p>Valid values when the PeriodUnit parameter is set to Year: 1, 2, 3, 4, and 5.</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -46,8 +48,10 @@ public class RenewDedicatedHostsRequest extends TeaModel {
     /**
      * <p>The unit of the renewal period. Valid values:</p>
      * <ul>
-     * <li>Month</li>
-     * <li>Year</li>
+     * <li><p>Month</p>
+     * </li>
+     * <li><p>Year</p>
+     * </li>
      * </ul>
      * <p>Default value: Month.</p>
      * 

@@ -27,8 +27,10 @@ public class AllocateDedicatedHostsRequest extends TeaModel {
     /**
      * <p>Specifies whether to add the dedicated host to the resource pool for automatic deployment. If you create an ECS instance on a dedicated host without specifying the <strong>DedicatedHostId</strong> parameter, Alibaba Cloud selects a dedicated host from the resource pool to host the instance. For more information, see <a href="https://help.aliyun.com/document_detail/118938.html">Automatic deployment</a>. Valid values:</p>
      * <ul>
-     * <li>on: adds the dedicated host to the resource pool for automatic deployment.</li>
-     * <li>off: does not add the dedicated host to the resource pool for automatic deployment.</li>
+     * <li><p>on: adds the dedicated host to the resource pool for automatic deployment.</p>
+     * </li>
+     * <li><p>off: does not add the dedicated host to the resource pool for automatic deployment.</p>
+     * </li>
      * </ul>
      * <p>Default value: on.</p>
      * <blockquote>
@@ -86,8 +88,10 @@ public class AllocateDedicatedHostsRequest extends TeaModel {
     /**
      * <p>The billing method of the dedicated host. Valid values:</p>
      * <ul>
-     * <li>PrePaid: subscription. If you set this parameter to PrePaid, make sure that you have sufficient account balance or credits. Otherwise, <code>InvalidPayMethod</code> is returned.</li>
-     * <li>PostPaid: pay-as-you-go.</li>
+     * <li><p>PrePaid: subscription. If you set this parameter to PrePaid, make sure that you have sufficient account balance or credits. Otherwise, <code>InvalidPayMethod</code> is returned.</p>
+     * </li>
+     * <li><p>PostPaid: pay-as-you-go.</p>
+     * </li>
      * </ul>
      * <p>Default value: PostPaid.</p>
      * 
@@ -174,8 +178,10 @@ public class AllocateDedicatedHostsRequest extends TeaModel {
     /**
      * <p>The subscription duration of the dedicated host. The <code>Period</code> parameter is required and takes effect only when the <code>ChargeType</code> parameter is set to <code>PrePaid</code>. Valid values:</p>
      * <ul>
-     * <li>Valid values when the PeriodUnit parameter is set to Month: 1, 2, 3, 4, 5, 6, 7, 8, 9, 12, 24, 36, 48, and 60.</li>
-     * <li>Valid values when the PeriodUnit parameter is set to Year: 1, 2, 3, 4, and 5.</li>
+     * <li><p>Valid values when the PeriodUnit parameter is set to Month: 1, 2, 3, 4, 5, 6, 7, 8, 9, 12, 24, 36, 48, and 60.</p>
+     * </li>
+     * <li><p>Valid values when the PeriodUnit parameter is set to Year: 1, 2, 3, 4, and 5.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -187,8 +193,10 @@ public class AllocateDedicatedHostsRequest extends TeaModel {
     /**
      * <p>The unit of the subscription duration of the dedicated host. Valid values:</p>
      * <ul>
-     * <li>Month</li>
-     * <li>Year</li>
+     * <li><p>Month</p>
+     * </li>
+     * <li><p>Year</p>
+     * </li>
      * </ul>
      * <p>Default value: Month.</p>
      * 

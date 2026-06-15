@@ -427,9 +427,12 @@ public class AuthorizeSecurityGroupEgressRequest extends TeaModel {
         /**
          * <p>The ID of the destination security group that is specified in the security group rule.</p>
          * <ul>
-         * <li>You must specify at least one of the following parameters: <code>DestGroupId</code>, <code>DestCidrIp</code>, <code>Ipv6DestCidrIp</code>, and <code>DestPrefixListId</code>.</li>
-         * <li>If you specify <code>DestGroupId</code> but do not specify <code>DestCidrIp</code>, you must set <code>NicType</code> to intranet.</li>
-         * <li>If you specify both <code>DestGroupId</code> and <code>DestCidrIp</code>, <code>DestCidrIp</code> takes precedence.</li>
+         * <li><p>You must specify at least one of the following parameters: <code>DestGroupId</code>, <code>DestCidrIp</code>, <code>Ipv6DestCidrIp</code>, and <code>DestPrefixListId</code>.</p>
+         * </li>
+         * <li><p>If you specify <code>DestGroupId</code> but do not specify <code>DestCidrIp</code>, you must set <code>NicType</code> to intranet.</p>
+         * </li>
+         * <li><p>If you specify both <code>DestGroupId</code> and <code>DestCidrIp</code>, <code>DestCidrIp</code> takes precedence.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -441,8 +444,10 @@ public class AuthorizeSecurityGroupEgressRequest extends TeaModel {
         /**
          * <p>The Alibaba Cloud account that manages the destination security group.</p>
          * <ul>
-         * <li>If both <code>DestGroupOwnerAccount</code> and <code>DestGroupOwnerId</code> are empty, the rule is created to control access to another security group in your Alibaba Cloud account.</li>
-         * <li>If <code>DestCidrIp</code> is configured, <code>DestGroupOwnerAccount</code> is ignored.</li>
+         * <li><p>If both <code>DestGroupOwnerAccount</code> and <code>DestGroupOwnerId</code> are empty, the rule is created to control access to another security group in your Alibaba Cloud account.</p>
+         * </li>
+         * <li><p>If <code>DestCidrIp</code> is configured, <code>DestGroupOwnerAccount</code> is ignored.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -454,8 +459,10 @@ public class AuthorizeSecurityGroupEgressRequest extends TeaModel {
         /**
          * <p>The ID of the Alibaba Cloud account that manages the destination security group.</p>
          * <ul>
-         * <li>If both <code>DestGroupOwnerId</code> and <code>DestGroupOwnerAccount</code> are empty, the rule is created to control access to another security group in your Alibaba Cloud account.</li>
-         * <li>If you specify <code>DestCidrIp</code>, <code>DestGroupOwnerId</code> is ignored.</li>
+         * <li><p>If both <code>DestGroupOwnerId</code> and <code>DestGroupOwnerAccount</code> are empty, the rule is created to control access to another security group in your Alibaba Cloud account.</p>
+         * </li>
+         * <li><p>If you specify <code>DestCidrIp</code>, <code>DestGroupOwnerId</code> is ignored.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -468,8 +475,10 @@ public class AuthorizeSecurityGroupEgressRequest extends TeaModel {
          * <p>The ID of the destination prefix list. You can call the <a href="https://help.aliyun.com/document_detail/205046.html">DescribePrefixLists</a> operation to query the IDs of available prefix lists.</p>
          * <p>Notes:</p>
          * <ul>
-         * <li>If a security group resides in the classic network, you cannot specify prefix lists in the rules of the security group. For information about the limits on security groups and prefix lists, see the <a href="~~25412#SecurityGroupQuota1~~">Security groups</a> section of the &quot;Limits and quotas on ECS&quot; topic.</li>
-         * <li>If you specify <code>DestCidrIp</code>, <code>Ipv6DestCidrIp</code>, or <code>DestGroupId</code>, this parameter is ignored.</li>
+         * <li><p>If a security group resides in the classic network, you cannot specify prefix lists in the rules of the security group. For information about the limits on security groups and prefix lists, see the <a href="~~25412#SecurityGroupQuota1~~">Security groups</a> section of the &quot;Limits and quotas on ECS&quot; topic.</p>
+         * </li>
+         * <li><p>If you specify <code>DestCidrIp</code>, <code>Ipv6DestCidrIp</code>, or <code>DestGroupId</code>, this parameter is ignored.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -484,23 +493,35 @@ public class AuthorizeSecurityGroupEgressRequest extends TeaModel {
          * <li>The case-insensitive protocol name. Valid value:</li>
          * </ol>
          * <ul>
-         * <li>ICMP</li>
-         * <li>GRE</li>
-         * <li>TCP</li>
-         * <li>UDP</li>
-         * <li>ALL: supports all protocols.</li>
+         * <li><p>ICMP</p>
+         * </li>
+         * <li><p>GRE</p>
+         * </li>
+         * <li><p>TCP</p>
+         * </li>
+         * <li><p>UDP</p>
+         * </li>
+         * <li><p>ALL: supports all protocols.</p>
+         * </li>
          * </ul>
          * <ol start="2">
          * <li>The value of the IANA-compliant protocol number, which is an integer from 0 to 255. List of regions currently available:</li>
          * </ol>
          * <ul>
-         * <li>Philippines (Manila)</li>
-         * <li>UK (London)</li>
-         * <li>Malaysia (Kuala Lumpur)</li>
-         * <li>China (Hohhot)</li>
-         * <li>China (Qingdao)</li>
-         * <li>US (Silicon Valley)</li>
-         * <li>Singapore</li>
+         * <li><p>Philippines (Manila)</p>
+         * </li>
+         * <li><p>UK (London)</p>
+         * </li>
+         * <li><p>Malaysia (Kuala Lumpur)</p>
+         * </li>
+         * <li><p>China (Hohhot)</p>
+         * </li>
+         * <li><p>China (Qingdao)</p>
+         * </li>
+         * <li><p>US (Silicon Valley)</p>
+         * </li>
+         * <li><p>Singapore</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -512,7 +533,7 @@ public class AuthorizeSecurityGroupEgressRequest extends TeaModel {
         /**
          * <p>The destination IPv6 CIDR block of the security group rule. IPv6 CIDR blocks and IPv6 addresses are supported.</p>
          * <blockquote>
-         * <p> This parameter is valid only for VPC-type ECS instances that support IPv6. This parameter and the <code>DestCidrIp</code> parameter cannot be set at the same time.</p>
+         * <p>This parameter is valid only for VPC-type ECS instances that support IPv6. This parameter and the <code>DestCidrIp</code> parameter cannot be set at the same time.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -525,7 +546,7 @@ public class AuthorizeSecurityGroupEgressRequest extends TeaModel {
          * <p>The source IPv6 CIDR block of the security group rule. or IPv6 address.</p>
          * <p>This property is used to support quintuple rules. For more information, see <a href="https://help.aliyun.com/document_detail/97439.html">Security group quintuple rules</a>.</p>
          * <blockquote>
-         * <p> This parameter is valid only for ECS instances that reside in virtual private clouds (VPCs) and support IPv6 CIDR blocks. You cannot specify this parameter and <code>DestCidrIp</code> in the same request.</p>
+         * <p>This parameter is valid only for ECS instances that reside in virtual private clouds (VPCs) and support IPv6 CIDR blocks. You cannot specify this parameter and <code>DestCidrIp</code> in the same request.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -541,8 +562,10 @@ public class AuthorizeSecurityGroupEgressRequest extends TeaModel {
          * </li>
          * <li><p>intranet: internal NIC.</p>
          * <ul>
-         * <li>If the security group resides in a VPC, this parameter is set to intranet by default and cannot be changed.</li>
-         * <li>If you specify only DestGroupId to create a rule that controls access to the specified security group, you must set this parameter to intranet.</li>
+         * <li><p>If the security group resides in a VPC, this parameter is set to intranet by default and cannot be changed.</p>
+         * </li>
+         * <li><p>If you specify only DestGroupId to create a rule that controls access to the specified security group, you must set this parameter to intranet.</p>
+         * </li>
          * </ul>
          * </li>
          * </ul>
@@ -557,8 +580,10 @@ public class AuthorizeSecurityGroupEgressRequest extends TeaModel {
         /**
          * <p>The action of the security group rule. Valid values:</p>
          * <ul>
-         * <li>accept: allows outbound access.</li>
-         * <li>drop: denies outbound access and returns no responses. In this case, the request times out or the connection cannot be established.</li>
+         * <li><p>accept: allows outbound access.</p>
+         * </li>
+         * <li><p>drop: denies outbound access and returns no responses. In this case, the request times out or the connection cannot be established.</p>
+         * </li>
          * </ul>
          * <p>Default value: accept.</p>
          * 
@@ -571,10 +596,14 @@ public class AuthorizeSecurityGroupEgressRequest extends TeaModel {
         /**
          * <p>The destination port range of the security group rule. Valid values:</p>
          * <ul>
-         * <li>TCP/UDP: Valid values: 1 to 65535. Use a forward slash (/) to separate the start and end ports. Example: 1/200.</li>
-         * <li>ICMP:-1/-1.</li>
-         * <li>GRE:-1/-1.</li>
-         * <li>ALL:-1/-1.</li>
+         * <li><p>TCP/UDP: Valid values: 1 to 65535. Use a forward slash (/) to separate the start and end ports. Example: 1/200.</p>
+         * </li>
+         * <li><p>ICMP:-1/-1.</p>
+         * </li>
+         * <li><p>GRE:-1/-1.</p>
+         * </li>
+         * <li><p>ALL:-1/-1.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -586,8 +615,10 @@ public class AuthorizeSecurityGroupEgressRequest extends TeaModel {
         /**
          * <p>The ID of the port list. You can call the <code>DescribePortRangeLists</code> operation to query the IDs of available prefix lists.</p>
          * <ul>
-         * <li>If you specify <code>Permissions.N.PortRange</code>, this parameter is ignored.</li>
-         * <li>If a security group resides in the classic network, you cannot reference port lists in the rules of the security group. For more information about limits on security groups and ports, see <a href="~~25412#SecurityGroupQuota1~~">Limits on security groups</a>.</li>
+         * <li><p>If you specify <code>Permissions.N.PortRange</code>, this parameter is ignored.</p>
+         * </li>
+         * <li><p>If a security group resides in the classic network, you cannot reference port lists in the rules of the security group. For more information about limits on security groups and ports, see <a href="~~25412#SecurityGroupQuota1~~">Limits on security groups</a>.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -619,10 +650,14 @@ public class AuthorizeSecurityGroupEgressRequest extends TeaModel {
         /**
          * <p>The source port range of the security group rule. Valid values:</p>
          * <ul>
-         * <li>TCP/UDP protocol: 1 to 65535. Use a forward slash (/) to separate the start and end ports. Example: 1/200.</li>
-         * <li>ICMP protocol:-1/-1.</li>
-         * <li>GRE protocol:-1/-1.</li>
-         * <li>ALL:-1/-1.</li>
+         * <li><p>TCP/UDP protocol: 1 to 65535. Use a forward slash (/) to separate the start and end ports. Example: 1/200.</p>
+         * </li>
+         * <li><p>ICMP protocol:-1/-1.</p>
+         * </li>
+         * <li><p>GRE protocol:-1/-1.</p>
+         * </li>
+         * <li><p>ALL:-1/-1.</p>
+         * </li>
          * </ul>
          * <p>This property is used to support quintuple rules. For more information, see <a href="https://help.aliyun.com/document_detail/97439.html">Security group quintuple rules</a>.</p>
          * 

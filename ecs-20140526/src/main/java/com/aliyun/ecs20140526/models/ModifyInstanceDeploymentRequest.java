@@ -7,8 +7,10 @@ public class ModifyInstanceDeploymentRequest extends TeaModel {
     /**
      * <p>Specifies whether to associate the instance with a dedicated host. Valid values:</p>
      * <ul>
-     * <li>host: associates the instance with a dedicated host. When you start a stopped instance in economical mode, the instance remains on its original dedicated host.</li>
-     * <li>default: does not associate the instance with a dedicated host. When you start a stopped instance in economical mode, the instance can be automatically deployed to another dedicated host in the automatic deployment resource pool if the resources of the original dedicated host are insufficient.</li>
+     * <li><p>host: associates the instance with a dedicated host. When you start a stopped instance in economical mode, the instance remains on its original dedicated host.</p>
+     * </li>
+     * <li><p>default: does not associate the instance with a dedicated host. When you start a stopped instance in economical mode, the instance can be automatically deployed to another dedicated host in the automatic deployment resource pool if the resources of the original dedicated host are insufficient.</p>
+     * </li>
      * </ul>
      * <p>If you want to migrate the instance from a shared host to a dedicated host, use the default value. Default value: default.</p>
      * 
@@ -31,8 +33,10 @@ public class ModifyInstanceDeploymentRequest extends TeaModel {
      * <p>The ID of the destination dedicated host. You can call the <a href="https://help.aliyun.com/document_detail/134242.html">DescribeDedicatedHosts</a> operation to query the most recent list of dedicated hosts.</p>
      * <p>When you migrate an instance from a shared host to a dedicated host or between dedicated hosts, take note of the following items:</p>
      * <ul>
-     * <li>To migrate the instance to a specific dedicated host, specify this parameter.</li>
-     * <li>To migrate the instance to a system-selected dedicated host, leave this parameter empty and set <code>Tenancy</code> to host.</li>
+     * <li><p>To migrate the instance to a specific dedicated host, specify this parameter.</p>
+     * </li>
+     * <li><p>To migrate the instance to a system-selected dedicated host, leave this parameter empty and set <code>Tenancy</code> to host.</p>
+     * </li>
      * </ul>
      * <p>For information about the automatic deployment feature, see <a href="https://help.aliyun.com/document_detail/118938.html">Functions and features</a>.</p>
      * 
@@ -71,7 +75,7 @@ public class ModifyInstanceDeploymentRequest extends TeaModel {
      * <p>Specifies whether to forcefully change the host of the instance when the deployment set of the instance is changed. Valid values:</p>
      * <ul>
      * <li><p>true: forcefully changes the host of the instance when the deployment set of the instance is changed. Hosts can be forcefully changed only for instances in the Running (Running) or Stopped (Stopped) state. The instances that are in the Stopped (Stopped) state do not include pay-as-you-go instances that are stopped in economical mode.</p>
-     * <p>**</p>
+     * <p>\<em>\</em></p>
      * <p><strong>Note</strong> If the specified instance has local disks attached, the local disks are forcefully changed when the host of the instance is forcefully changed. This may cause data loss in the local disks. Proceed with caution.</p>
      * </li>
      * <li><p>false: does not forcefully change the host of the instance when the deployment set of the instance is changed. You can add the instance to a deployment set only when the instance remains on the current host. When the Force parameter is set to false, the deployment set may fail to be changed.</p>
@@ -99,8 +103,10 @@ public class ModifyInstanceDeploymentRequest extends TeaModel {
      * <p>The instance type to which the instance is changed. You can call the <a href="https://help.aliyun.com/document_detail/25620.html">DescribeInstanceTypes</a> operation to query the most recent list of instance types.</p>
      * <p>You can change the instance type of an instance when you migrate the instance to a dedicated host. The new instance type must match the type of the specified dedicated host. For more information, see <a href="https://help.aliyun.com/document_detail/68564.html">Dedicated host types</a>.</p>
      * <ul>
-     * <li>If you specify this parameter, you must also specify <code>DedicatedHostId</code>.</li>
-     * <li>You cannot change the instance type of an instance if you use the automatic deployment feature to migrate the instance.</li>
+     * <li><p>If you specify this parameter, you must also specify <code>DedicatedHostId</code>.</p>
+     * </li>
+     * <li><p>You cannot change the instance type of an instance if you use the automatic deployment feature to migrate the instance.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -112,8 +118,10 @@ public class ModifyInstanceDeploymentRequest extends TeaModel {
     /**
      * <p>Specifies whether to stop the instance before it is migrated to the destination dedicated host. Valid values:</p>
      * <ul>
-     * <li>reboot: stops the instance before it is migrated.</li>
-     * <li>live: migrates the instance without stopping it. If you set MigrationType to live, you must specify DedicatedHostId. In this case, you cannot change the instance type of the instance when the instance is migrated.</li>
+     * <li><p>reboot: stops the instance before it is migrated.</p>
+     * </li>
+     * <li><p>live: migrates the instance without stopping it. If you set MigrationType to live, you must specify DedicatedHostId. In this case, you cannot change the instance type of the instance when the instance is migrated.</p>
+     * </li>
      * </ul>
      * <p>Default value: reboot.</p>
      * 
@@ -142,8 +150,10 @@ public class ModifyInstanceDeploymentRequest extends TeaModel {
     /**
      * <p>Specifies whether to remove the specified instance from the specified deployment set. Valid values:</p>
      * <ul>
-     * <li>true</li>
-     * <li>false</li>
+     * <li><p>true</p>
+     * </li>
+     * <li><p>false</p>
+     * </li>
      * </ul>
      * <p>Default value: false.</p>
      * <blockquote>

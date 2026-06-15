@@ -37,8 +37,10 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
     /**
      * <p>The performance mode of the burstable instance. Valid values:</p>
      * <ul>
-     * <li>Standard: the standard mode. For more information, see the <a href="~~59977#section-svb-w9d-dju~~">Performance modes</a> section of the &quot;Overview of burstable instances&quot; topic.</li>
-     * <li>Unlimited: the unlimited mode. For more information, see the <a href="~~59977#section-svb-w9d-dju~~">Performance modes</a> section of the &quot;Overview of burstable instances&quot; topic.</li>
+     * <li><p>Standard: the standard mode. For more information, see the <a href="~~59977#section-svb-w9d-dju~~">Performance modes</a> section of the &quot;Overview of burstable instances&quot; topic.</p>
+     * </li>
+     * <li><p>Unlimited: the unlimited mode. For more information, see the <a href="~~59977#section-svb-w9d-dju~~">Performance modes</a> section of the &quot;Overview of burstable instances&quot; topic.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -71,8 +73,10 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the Jumbo Frame feature is enabled for the instance. Valid values:</p>
      * <ul>
-     * <li>true</li>
-     * <li>false</li>
+     * <li><p>true</p>
+     * </li>
+     * <li><p>false</p>
+     * </li>
      * </ul>
      * <p>For more information, see <a href="https://help.aliyun.com/document_detail/200512.html">MTUs</a>.</p>
      * 
@@ -83,6 +87,17 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
     public Boolean enableJumboFrame;
 
     /**
+     * <p>Indicates whether VPC network traffic encryption is enabled for the instance. Valid values:</p>
+     * <ul>
+     * <li><p>true: Enabled.</p>
+     * </li>
+     * <li><p>false: Not enabled.</p>
+     * </li>
+     * </ul>
+     * <blockquote>
+     * <p>This parameter is in invitational preview and is not publicly available yet.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>True</p>
      */
@@ -122,8 +137,10 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
     /**
      * <p>The billing method of the instance. Valid values:</p>
      * <ul>
-     * <li>PrePaid: subscription.</li>
-     * <li>PostPaid: pay-as-you-go</li>
+     * <li><p>PrePaid: subscription.</p>
+     * </li>
+     * <li><p>PostPaid: pay-as-you-go</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -153,8 +170,10 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
     /**
      * <p>The network type of the instance. Valid values:</p>
      * <ul>
-     * <li>classic: classic network</li>
-     * <li>vpc: VPC</li>
+     * <li><p>classic: classic network</p>
+     * </li>
+     * <li><p>vpc: VPC</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -175,11 +194,13 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
     /**
      * <p>The billing method for network usage. Valid values:</p>
      * <ul>
-     * <li>PayByBandwidth</li>
-     * <li>PayByTraffic</li>
+     * <li><p>PayByBandwidth</p>
+     * </li>
+     * <li><p>PayByTraffic</p>
+     * </li>
      * </ul>
      * <blockquote>
-     * <p> When the <strong>pay-by-traffic</strong> billing method is used for network usage, the maximum inbound and outbound bandwidths are used as the upper limits of bandwidths instead of guaranteed performance specifications. In scenarios in which demands exceed resource supplies, the maximum bandwidths may not be reached. If you want guaranteed bandwidths for your instance, use the <strong>pay-by-bandwidth</strong> billing method for network usage.</p>
+     * <p>When the <strong>pay-by-traffic</strong> billing method is used for network usage, the maximum inbound and outbound bandwidths are used as the upper limits of bandwidths instead of guaranteed performance specifications. In scenarios in which demands exceed resource supplies, the maximum bandwidths may not be reached. If you want guaranteed bandwidths for your instance, use the <strong>pay-by-bandwidth</strong> billing method for network usage.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -209,12 +230,14 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the ECS instance is I/O optimized. Valid values:</p>
      * <ul>
-     * <li>optimized: The ECS instance is I/O optimized.</li>
-     * <li>none: The ECS instance is not I/O optimized.</li>
+     * <li><p>optimized: The ECS instance is I/O optimized.</p>
+     * </li>
+     * <li><p>none: The ECS instance is not I/O optimized.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
-     * <p>true</p>
+     * <p>optimized</p>
      */
     @NameInMap("IoOptimized")
     public String ioOptimized;
@@ -276,11 +299,16 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
     /**
      * <p>The status of the instance. Valid values:</p>
      * <ul>
-     * <li>Pending: The instance is being created.</li>
-     * <li>Running: The instance is running.</li>
-     * <li>Starting: The instance is being started.</li>
-     * <li>Stopping: The instance is being stopped.</li>
-     * <li>Stopped: The instance is stopped.</li>
+     * <li><p>Pending: The instance is being created.</p>
+     * </li>
+     * <li><p>Running: The instance is running.</p>
+     * </li>
+     * <li><p>Starting: The instance is being started.</p>
+     * </li>
+     * <li><p>Stopping: The instance is being stopped.</p>
+     * </li>
+     * <li><p>Stopped: The instance is stopped.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -292,9 +320,12 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the system implements billing after the instance is stopped. Valid values:</p>
      * <ul>
-     * <li>KeepCharging: The instance is stopped in standard mode. The billing of the instance continues after the instance is stopped, and resources are retained for the instance.</li>
-     * <li>StopCharging: The instance is stopped in economical mode. The billing of some resources of the instance stops after the instance is stopped. When the instance is stopped, its resources such as vCPUs, memory, and public IP address are released. The instance may be unable to start again if some required resources are out of stock in the current region.</li>
-     * <li>Not-applicable: The instance does not support economical mode.</li>
+     * <li><p>KeepCharging: The instance is stopped in standard mode. The billing of the instance continues after the instance is stopped, and resources are retained for the instance.</p>
+     * </li>
+     * <li><p>StopCharging: The instance is stopped in economical mode. The billing of some resources of the instance stops after the instance is stopped. When the instance is stopped, its resources such as vCPUs, memory, and public IP address are released. The instance may be unable to start again if some required resources are out of stock in the current region.</p>
+     * </li>
+     * <li><p>Not-applicable: The instance does not support economical mode.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -679,11 +710,13 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
         /**
          * <p>The billing method for network usage. Valid values:</p>
          * <ul>
-         * <li>PayByBandwidth</li>
-         * <li>PayByTraffic</li>
+         * <li><p>PayByBandwidth</p>
+         * </li>
+         * <li><p>PayByTraffic</p>
+         * </li>
          * </ul>
          * <blockquote>
-         * <p> When the <strong>pay-by-traffic</strong> billing method is used for network usage, the maximum inbound and outbound bandwidths are used as the upper limits of bandwidths instead of guaranteed performance specifications. In scenarios in which demands exceed resource supplies, the maximum bandwidths may not be reached. If you want guaranteed bandwidths for your instance, use the <strong>pay-by-bandwidth</strong> billing method for network usage.</p>
+         * <p>When the <strong>pay-by-traffic</strong> billing method is used for network usage, the maximum inbound and outbound bandwidths are used as the upper limits of bandwidths instead of guaranteed performance specifications. In scenarios in which demands exceed resource supplies, the maximum bandwidths may not be reached. If you want guaranteed bandwidths for your instance, use the <strong>pay-by-bandwidth</strong> billing method for network usage.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -765,11 +798,16 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
          * <p>The supported values vary with instance types. You can query the bandwidth weights supported by the current instance type by using the DescribeInstanceTypes.</p>
          * <p>Valid values:</p>
          * <ul>
-         * <li>Vpc-L1.</li>
-         * <li>Vpc-L2.</li>
-         * <li>Ebs-L1.</li>
-         * <li>Ebs-L2.</li>
-         * <li>Default.</li>
+         * <li><p>Vpc-L1.</p>
+         * </li>
+         * <li><p>Vpc-L2.</p>
+         * </li>
+         * <li><p>Ebs-L1.</p>
+         * </li>
+         * <li><p>Ebs-L2.</p>
+         * </li>
+         * <li><p>Default.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -779,6 +817,18 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
         public String bandwidthWeighting;
 
         /**
+         * <p>Indicates whether the Jumbo frame attribute is enabled for the instance. Valid values:</p>
+         * <ul>
+         * <li><p>true: Enabled.</p>
+         * </li>
+         * <li><p>false: Not enabled.</p>
+         * </li>
+         * </ul>
+         * <p>For more information, see <a href="https://help.aliyun.com/document_detail/200512.html">ECS Instance MTU</a>.</p>
+         * <blockquote>
+         * <p>This parameter is in invitational preview and is not publicly available yet.</p>
+         * </blockquote>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
@@ -786,6 +836,17 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
         public Boolean enableJumboFrame;
 
         /**
+         * <p>Indicates whether VPC network traffic encryption is enabled for the instance. Valid values:</p>
+         * <ul>
+         * <li><p>true: Enabled.</p>
+         * </li>
+         * <li><p>false: Not enabled.</p>
+         * </li>
+         * </ul>
+         * <blockquote>
+         * <p>This parameter is in invitational preview and is not publicly available yet.</p>
+         * </blockquote>
+         * 
          * <strong>example:</strong>
          * <p>False</p>
          */

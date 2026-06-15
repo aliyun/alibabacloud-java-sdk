@@ -4,21 +4,9 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class ModifyStorageSetAttributeRequest extends TeaModel {
-    /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that it is unique among different requests. The value of <strong>ClientToken</strong> can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>123e4567-e89b-12d3-a456-426655440000</p>
-     */
     @NameInMap("ClientToken")
     public String clientToken;
 
-    /**
-     * <p>The description of the storage set.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>testStorageSetDescription</p>
-     */
     @NameInMap("Description")
     public String description;
 
@@ -29,11 +17,7 @@ public class ModifyStorageSetAttributeRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID of the storage set. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -45,21 +29,11 @@ public class ModifyStorageSetAttributeRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The ID of the storage set.</p>
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>ss-bp67acfmxazb4ph****</p>
      */
     @NameInMap("StorageSetId")
     public String storageSetId;
 
-    /**
-     * <p>The name of the storage set.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>testStorageSetName</p>
-     */
     @NameInMap("StorageSetName")
     public String storageSetName;
 

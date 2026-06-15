@@ -16,8 +16,10 @@ public class DescribeSecurityGroupAttributeResponseBody extends TeaModel {
     /**
      * <p>The access control policy of the security group. Valid values:</p>
      * <ul>
-     * <li>Accept: All instances in the security group can communicate with each other.</li>
-     * <li>Drop: All instances in the security group are isolated from each other.</li>
+     * <li><p>Accept: All instances in the security group can communicate with each other.</p>
+     * </li>
+     * <li><p>Drop: All instances in the security group are isolated from each other.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

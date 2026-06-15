@@ -8,7 +8,7 @@ public class DescribeInstanceModificationPriceRequest extends TeaModel {
     public DescribeInstanceModificationPriceRequestSystemDisk systemDisk;
 
     /**
-     * <p>The information about data disks.</p>
+     * <p>The data disk configurations.</p>
      */
     @NameInMap("DataDisk")
     public java.util.List<DescribeInstanceModificationPriceRequestDataDisk> dataDisk;
@@ -35,7 +35,7 @@ public class DescribeInstanceModificationPriceRequest extends TeaModel {
     public String imageId;
 
     /**
-     * <p>The ID of the instance for which you want to query pricing information for a configuration upgrade.</p>
+     * <p>The ID of the instance for which to query the modification price.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -45,9 +45,9 @@ public class DescribeInstanceModificationPriceRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The new instance type. We recommend that you call the <a href="https://help.aliyun.com/document_detail/66187.html">DescribeResourcesModification</a> operation to query the instance types available for configuration upgrades in a specified zone.</p>
+     * <p>The target instance type for the instance upgrade. Call the <a href="https://help.aliyun.com/document_detail/66187.html">DescribeResourcesModification</a> operation to query the instance types available for upgrade in the specified availability zone.</p>
      * <blockquote>
-     * <p>When you call the DescribeInstanceModificationPrice operation, you must specify at least one of the following parameters: <code>InstanceType</code> and <code>DataDisk.N.*</code>.</p>
+     * <p>You must specify at least one of the <code>InstanceType</code> and <code>DataDisk.N.*</code> parameters.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -77,7 +77,7 @@ public class DescribeInstanceModificationPriceRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to get the latest list of Alibaba Cloud regions.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -275,17 +275,26 @@ public class DescribeInstanceModificationPriceRequest extends TeaModel {
 
     public static class DescribeInstanceModificationPriceRequestDataDisk extends TeaModel {
         /**
-         * <p>The category of data disk N. You can specify this parameter if you want to query the pricing information about newly attached subscription data disks. Valid values of N: 1 to 16. Valid values:</p>
-         * <ul>
-         * <li>cloud_efficiency: utra disk.</li>
-         * <li>cloud_ssd: standard SSD.</li>
-         * <li>cloud_essd: ESSD.</li>
-         * <li>cloud: basic disk.</li>
-         * </ul>
-         * <p>This parameter is empty by default.</p>
-         * <blockquote>
-         * <p> When you call the DescribeInstanceModificationPrice operation, you must specify at least one of the following parameters: <code>InstanceType</code> and <code>DataDisk.N.*</code>.</p>
-         * </blockquote>
+         * <p>The category of data disk N, where N is an integer from 1 to 16. Use this parameter to query the price of adding a new data disk to the instance. Valid values:\
+         * \
+         * \- <code>cloud_efficiency</code>: Ultra Disk\
+         * \
+         * \- <code>cloud_ssd</code>: Standard SSD\
+         * \
+         * \- <code>cloud_essd</code>: ESSD\
+         * \
+         * \- <code>cloud</code>: Basic Disk\
+         * \
+         * Default value: None.\
+         * \
+         * \
+         * \
+         * \
+         * \
+         * \
+         * \
+         * \
+         * \</p>
          * 
          * <strong>example:</strong>
          * <p>cloud_essd</p>
@@ -301,15 +310,13 @@ public class DescribeInstanceModificationPriceRequest extends TeaModel {
         public String diskId;
 
         /**
-         * <p>The performance level of data disk N that is an enhanced SSD (ESSD). The value of N must be the same as that in <code>DataDisk.N.Category</code> when DataDisk.N.Category is set to cloud_essd. Valid values:</p>
-         * <ul>
-         * <li>PL0: A single ESSD can deliver up to 10,000 random read/write IOPS.</li>
-         * <li>PL1: A single ESSD can deliver up to 50,000 random read/write IOPS.</li>
-         * <li>PL2: A single ESSD can deliver up to 100,000 random read/write IOPS.</li>
-         * <li>PL3: A single ESSD can deliver up to 1,000,000 random read/write IOPS.</li>
-         * </ul>
-         * <p>Default value: PL1.</p>
-         * <p>For more information about ESSD performance levels, see <a href="https://help.aliyun.com/document_detail/122389.html">ESSDs</a>.</p>
+         * <p>The performance level of the ESSD. This parameter is valid only when DataDisk.N.Category is set to cloud_essd. The value of N must match the N in DataDisk.N.Category. Valid values:
+         * \- PL0: up to 10,000 random read/write IOPS per disk.
+         * \- PL1: up to 50,000 random read/write IOPS per disk.
+         * \- PL2: up to 100,000 random read/write IOPS per disk.
+         * \- PL3: up to 1,000,000 random read/write IOPS per disk.
+         * Default value: PL1.
+         * For more information about ESSD performance levels, see <a href="https://help.aliyun.com/document_detail/122389.html">ESSDs</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>PL1</p>
@@ -318,24 +325,16 @@ public class DescribeInstanceModificationPriceRequest extends TeaModel {
         public String performanceLevel;
 
         /**
-         * <p>The capacity of data disk N. Valid values of N: 1 to 16. Unit: GiB. Valid values:</p>
-         * <ul>
-         * <li><p>Valid values when DataDisk.N.Category is set to cloud_efficiency: 20 to 32768.</p>
-         * </li>
-         * <li><p>Valid values when DataDisk.N.Category is set to cloud_ssd: 20 to 32768.</p>
-         * </li>
-         * <li><p>Valid values when DataDisk.N.Category is set to cloud_essd: vary based on the <code>DataDisk.N.PerformanceLevel</code> value.</p>
-         * <ul>
-         * <li>Valid values when DataDisk.N.PerformanceLevel is set to PL0: 1 to 32768.</li>
-         * <li>Valid values when DataDisk.N.PerformanceLevel is set to PL1: 20 to 32768.</li>
-         * <li>Valid values when DataDisk.N.PerformanceLevel is set to PL2: 461 to 32768.</li>
-         * <li>Valid values when DataDisk.N.PerformanceLevel is set to PL3: 1261 to 32768.</li>
-         * </ul>
-         * </li>
-         * <li><p>Valid values when DataDisk.N.Category is set to cloud: 5 to 2000.</p>
-         * </li>
-         * </ul>
-         * <p>The default value is the minimum capacity allowed for the specified data disk category.</p>
+         * <p>The size of data disk N in GiB, where N is an integer from 1 to 16. The value range varies based on the disk category:
+         * \- <code>cloud_efficiency</code> (Ultra Disk): 20 to 32768.
+         * \- <code>cloud_ssd</code> (Standard SSD): 20 to 32768.
+         * \- <code>cloud_essd</code>: The value range varies based on the value of <code>DataDisk.N.PerformanceLevel</code>.
+         * \- PL0: 1 to 32768.
+         * \- PL1: 20 to 32768.
+         * \- PL2: 461 to 32768.
+         * \- PL3: 1261 to 32768.
+         * \- <code>cloud</code> (Basic Disk): 5 to 2000.
+         * Default value: The minimum size supported by the specified data disk category.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>

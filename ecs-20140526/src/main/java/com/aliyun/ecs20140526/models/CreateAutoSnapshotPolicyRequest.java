@@ -7,8 +7,10 @@ public class CreateAutoSnapshotPolicyRequest extends TeaModel {
     /**
      * <p>The retention period of the snapshot copy in the destination region. Unit: days. Valid values:</p>
      * <ul>
-     * <li>\-1: The snapshot copy is retained until it is deleted.</li>
-     * <li>1 to 65535: The snapshot copy is retained for the specified number of days. After the retention period of the snapshot copy expires, the snapshot copy is automatically deleted.</li>
+     * <li><p>-1: The snapshot copy is retained until it is deleted.</p>
+     * </li>
+     * <li><p>1 to 65535: The snapshot copy is retained for the specified number of days. After the retention period of the snapshot copy expires, the snapshot copy is automatically deleted.</p>
+     * </li>
      * </ul>
      * <p>Default value: -1.</p>
      * 
@@ -27,8 +29,10 @@ public class CreateAutoSnapshotPolicyRequest extends TeaModel {
     /**
      * <p>Specifies whether to enable cross-region replication for snapshots.</p>
      * <ul>
-     * <li>true</li>
-     * <li>false</li>
+     * <li><p>true</p>
+     * </li>
+     * <li><p>false</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -82,7 +86,7 @@ public class CreateAutoSnapshotPolicyRequest extends TeaModel {
     public String targetCopyRegions;
 
     /**
-     * <p>The name of the automatic snapshot policy. The name must be 2 to 128 characters in length. The name must start with a letter and cannot start with http:// or https://. The name can contain letters, digits, colons (:), underscores (_), and hyphens (-).</p>
+     * <p>The name of the automatic snapshot policy. The name must be 2 to 128 characters in length. The name must start with a letter and cannot start with http\:// or https\://. The name can contain letters, digits, colons (:), underscores (_), and hyphens (-).</p>
      * <p>By default, this parameter is left empty.</p>
      * 
      * <strong>example:</strong>
@@ -104,8 +108,10 @@ public class CreateAutoSnapshotPolicyRequest extends TeaModel {
     /**
      * <p>The days of the week on which to create automatic snapshots. Valid values: 1 to 7, which correspond to Monday to Sunday. 1 indicates Monday. Format description:</p>
      * <ul>
-     * <li>Set this parameter to a JSON-formatted array. For example, a value of [&quot;1&quot;] specifies automatic snapshots to be created every Monday.</li>
-     * <li>To schedule multiple automatic snapshots to be created in a week, you can specify multiple values. Separate the values with commas (,). You can specify a maximum of seven days. For example, a value of [&quot;1&quot;,&quot;3&quot;,&quot;5&quot;] specifies automatic snapshots to be created every Monday, Wednesday, and Friday.</li>
+     * <li><p>Set this parameter to a JSON-formatted array. For example, a value of [&quot;1&quot;] specifies automatic snapshots to be created every Monday.</p>
+     * </li>
+     * <li><p>To schedule multiple automatic snapshots to be created in a week, you can specify multiple values. Separate the values with commas (,). You can specify a maximum of seven days. For example, a value of [&quot;1&quot;,&quot;3&quot;,&quot;5&quot;] specifies automatic snapshots to be created every Monday, Wednesday, and Friday.</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -118,8 +124,10 @@ public class CreateAutoSnapshotPolicyRequest extends TeaModel {
     /**
      * <p>The retention period of the automatic snapshot. Unit: days. Valid values:</p>
      * <ul>
-     * <li>\-1: The automatic snapshot is retained until it is deleted.</li>
-     * <li>1 to 65535: The automatic snapshot is retained for the specified number of days. After the retention period of the automatic snapshot expires, the automatic snapshot is automatically deleted.</li>
+     * <li><p>-1: The automatic snapshot is retained until it is deleted.</p>
+     * </li>
+     * <li><p>1 to 65535: The automatic snapshot is retained for the specified number of days. After the retention period of the automatic snapshot expires, the automatic snapshot is automatically deleted.</p>
+     * </li>
      * </ul>
      * <p>Default value: -1.</p>
      * <p>This parameter is required.</p>
@@ -133,11 +141,13 @@ public class CreateAutoSnapshotPolicyRequest extends TeaModel {
     /**
      * <p>The points in time of the day at which to create automatic snapshots. The time must be in UTC+8. Unit: hours. Valid values: 0 to 23, which correspond to the 24 on-the-hour points in time from 00:00:00 to 23:00:00. For example, 1 indicates 01:00:00. Format description:</p>
      * <ul>
-     * <li>Set this parameter to a JSON-formatted array. For example, a value of [&quot;1&quot;] specifies automatic snapshots to be created at 01:00:00.</li>
-     * <li>To schedule multiple automatic snapshots to be created in a day, you can specify multiple values. Separate the values with commas (,). You can specify up to 24 points in time. For example, a value of [&quot;1&quot;,&quot;3&quot;,&quot;5&quot;] specifies automatic snapshots to be created at 01:00:00, 03:00:00, and 05:00:00.</li>
+     * <li><p>Set this parameter to a JSON-formatted array. For example, a value of [&quot;1&quot;] specifies automatic snapshots to be created at 01:00:00.</p>
+     * </li>
+     * <li><p>To schedule multiple automatic snapshots to be created in a day, you can specify multiple values. Separate the values with commas (,). You can specify up to 24 points in time. For example, a value of [&quot;1&quot;,&quot;3&quot;,&quot;5&quot;] specifies automatic snapshots to be created at 01:00:00, 03:00:00, and 05:00:00.</p>
+     * </li>
      * </ul>
      * <blockquote>
-     * <p> If an automatic snapshot is being created when the time scheduled for creating another automatic snapshot is due, the new snapshot task is skipped. This may occur when a disk contains a large volume of data. For example, you scheduled snapshots to be automatically created at 09:00, 10:00, 11:00, and 12:00. The system starts to create a snapshot for the disk at 09:00:00. The process takes 80 minutes to complete because the disk contains a large volume of data and ends at 10:20:00. The system skips the automatic snapshot task scheduled for 10:00:00 and creates the next automatic snapshot for the disk at 11:00:00.</p>
+     * <p>If an automatic snapshot is being created when the time scheduled for creating another automatic snapshot is due, the new snapshot task is skipped. This may occur when a disk contains a large volume of data. For example, you scheduled snapshots to be automatically created at 09:00, 10:00, 11:00, and 12:00. The system starts to create a snapshot for the disk at 09:00:00. The process takes 80 minutes to complete because the disk contains a large volume of data and ends at 10:20:00. The system skips the automatic snapshot task scheduled for 10:00:00 and creates the next automatic snapshot for the disk at 11:00:00.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -275,7 +285,7 @@ public class CreateAutoSnapshotPolicyRequest extends TeaModel {
     public static class CreateAutoSnapshotPolicyRequestCopyEncryptionConfigurationArn extends TeaModel {
         /**
          * <blockquote>
-         * <p> This parameter is not publicly available.</p>
+         * <p>This parameter is not publicly available.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -286,7 +296,7 @@ public class CreateAutoSnapshotPolicyRequest extends TeaModel {
 
         /**
          * <blockquote>
-         * <p> This parameter is not publicly available.</p>
+         * <p>This parameter is not publicly available.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -297,7 +307,7 @@ public class CreateAutoSnapshotPolicyRequest extends TeaModel {
 
         /**
          * <blockquote>
-         * <p> This parameter is not publicly available.</p>
+         * <p>This parameter is not publicly available.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -340,7 +350,7 @@ public class CreateAutoSnapshotPolicyRequest extends TeaModel {
     public static class CreateAutoSnapshotPolicyRequestCopyEncryptionConfiguration extends TeaModel {
         /**
          * <blockquote>
-         * <p> This parameter is not publicly available.</p>
+         * <p>This parameter is not publicly available.</p>
          * </blockquote>
          */
         @NameInMap("Arn")
@@ -349,8 +359,10 @@ public class CreateAutoSnapshotPolicyRequest extends TeaModel {
         /**
          * <p>Specifies whether to enable cross-region snapshot replication and encryption. Valid values:</p>
          * <ul>
-         * <li>true</li>
-         * <li>false</li>
+         * <li><p>true</p>
+         * </li>
+         * <li><p>false</p>
+         * </li>
          * </ul>
          * <p>Default value: false.</p>
          * 
@@ -402,7 +414,7 @@ public class CreateAutoSnapshotPolicyRequest extends TeaModel {
 
     public static class CreateAutoSnapshotPolicyRequestTag extends TeaModel {
         /**
-         * <p>The key of tag N to add to the automatic snapshot policy. Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key can be up to 128 characters in length and cannot contain http:// or https://. The tag key cannot start with acs: or aliyun.</p>
+         * <p>The key of tag N to add to the automatic snapshot policy. Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key can be up to 128 characters in length and cannot contain http\:// or https\://. The tag key cannot start with acs: or aliyun.</p>
          * 
          * <strong>example:</strong>
          * <p>TestKey</p>
@@ -411,7 +423,7 @@ public class CreateAutoSnapshotPolicyRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The value of tag N to add to the automatic snapshot policy. Valid values of N: 1 to 20. The tag value can be an empty string. The tag value can be up to 128 characters in length and cannot contain http:// or https://. The tag value cannot start with acs:.</p>
+         * <p>The value of tag N to add to the automatic snapshot policy. Valid values of N: 1 to 20. The tag value can be an empty string. The tag value can be up to 128 characters in length and cannot contain http\:// or https\://. The tag value cannot start with acs:.</p>
          * 
          * <strong>example:</strong>
          * <p>TestValue</p>

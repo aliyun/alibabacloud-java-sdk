@@ -7,9 +7,12 @@ public class ModifyInstanceAutoReleaseTimeRequest extends TeaModel {
     /**
      * <p>The automatic release time of the instance. Specify the time in the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC+0.</p>
      * <ul>
-     * <li>If the value of seconds (<code>ss</code>) is not <code>00</code>, the time is automatically rounded to the nearest minute based on the value of minutes (<code>mm</code>).</li>
-     * <li>The release time must be at least 30 minutes later than the current time.</li>
-     * <li>The release time must be at most three years later than the current time.</li>
+     * <li><p>If the value of seconds (<code>ss</code>) is not <code>00</code>, the time is automatically rounded to the nearest minute based on the value of minutes (<code>mm</code>).</p>
+     * </li>
+     * <li><p>The release time must be at least 30 minutes later than the current time.</p>
+     * </li>
+     * <li><p>The release time must be at most three years later than the current time.</p>
+     * </li>
      * </ul>
      * <p>If <code>AutoReleaseTime</code> is not configured, the automatic release feature is disabled, and the instance will not be automatically released.</p>
      * 

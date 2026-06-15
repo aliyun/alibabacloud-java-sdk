@@ -5,16 +5,19 @@ import com.aliyun.tea.*;
 
 public class ModifyNetworkInterfaceAttributeRequest extends TeaModel {
     /**
-     * <p>The connection tracking configuration of the ENI.</p>
+     * <p>The connection tracking configuration.</p>
+     * <p>Before using this parameter, we recommend that you read <a href="https://help.aliyun.com/document_detail/2865958.html">Connection timeout management</a>.</p>
      */
     @NameInMap("ConnectionTrackingConfiguration")
     public ModifyNetworkInterfaceAttributeRequestConnectionTrackingConfiguration connectionTrackingConfiguration;
 
     /**
-     * <p>Specifies whether to release the ENI when the associated instance is released. Valid values:</p>
+     * <p>Specifies whether to delete the elastic network interface when its attached instance is released. Valid values:</p>
      * <ul>
-     * <li>true</li>
-     * <li>false</li>
+     * <li><p><code>true</code>: The elastic network interface is deleted.</p>
+     * </li>
+     * <li><p><code>false</code>: The elastic network interface is retained.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -24,8 +27,8 @@ public class ModifyNetworkInterfaceAttributeRequest extends TeaModel {
     public Boolean deleteOnRelease;
 
     /**
-     * <p>The description of the ENI. The description must be 2 to 255 characters in length and cannot start with <a href="http://https://%E3%80%82">http:// or https://</a>.</p>
-     * <p>This parameter is left empty by default.</p>
+     * <p>The description of the elastic network interface. The description must be 2 to 255 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</p>
+     * <p>Default value: empty.</p>
      * 
      * <strong>example:</strong>
      * <p>testDescription</p>
@@ -40,7 +43,7 @@ public class ModifyNetworkInterfaceAttributeRequest extends TeaModel {
     public ModifyNetworkInterfaceAttributeRequestEnhancedNetwork enhancedNetwork;
 
     /**
-     * <p>The ID of the ENI.</p>
+     * <p>The ID of the elastic network interface.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -50,8 +53,8 @@ public class ModifyNetworkInterfaceAttributeRequest extends TeaModel {
     public String networkInterfaceId;
 
     /**
-     * <p>The name of the ENI. The name must be 2 to 128 characters in length. The name must start with a letter and cannot start with <code>http://</code> or <code>https://</code>. The name can contain letters, digits, colons (:), underscores (_), periods (.), and hyphens (-).</p>
-     * <p>This parameter is left empty by default.</p>
+     * <p>The name of the elastic network interface. The name must be 2 to 128 characters in length, start with a letter or a Chinese character, and not start with <code>http://</code> or <code>https://</code>. It can contain letters, digits, Chinese characters, colons (:), underscores (_), periods (.), and hyphens (-).</p>
+     * <p>Default value: empty.</p>
      * 
      * <strong>example:</strong>
      * <p>eniTestName</p>
@@ -60,7 +63,7 @@ public class ModifyNetworkInterfaceAttributeRequest extends TeaModel {
     public String networkInterfaceName;
 
     /**
-     * <p>The communication parameters of the ENI.</p>
+     * <p>The traffic configuration of the elastic network interface.</p>
      */
     @NameInMap("NetworkInterfaceTrafficConfig")
     public ModifyNetworkInterfaceAttributeRequestNetworkInterfaceTrafficConfig networkInterfaceTrafficConfig;
@@ -72,10 +75,12 @@ public class ModifyNetworkInterfaceAttributeRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The number of queues supported by the ENI. Valid values: 1 to 2048.</p>
+     * <p>The number of queues for the elastic network interface. Valid values: 1 to 2048.</p>
      * <ul>
-     * <li>You can change the number of queues supported by an ENI only when the ENI is in the <code>Available</code> state or the ENI is attached (<code>InUse</code>) to an instance that is in the <code>Stopped</code> state.</li>
-     * <li>The number of queues supported by the ENI cannot exceed the maximum number of queues that the instance type allows for each ENI. The total number of queues on all ENIs on an instance cannot exceed the queue quota that the instance type supports. To query the maximum number of queues per ENI and the queue quota for an instance type, you can call the <a href="https://help.aliyun.com/document_detail/25620.html">DescribeInstanceTypes</a> operation and check the <code>MaximumQueueNumberPerEni</code> and <code>TotalEniQueueQuantity</code> values in the response.</li>
+     * <li><p>You can change the number of queues for an elastic network interface only when it is in the <code>Available</code> state or is attached to an instance in the <code>Stopped</code> state.</p>
+     * </li>
+     * <li><p>The number of queues cannot exceed the maximum supported by the instance type. The total number of queues for all elastic network interfaces attached to the instance cannot exceed the instance\&quot;s queue quota. You can call the <a href="https://help.aliyun.com/document_detail/25620.html">DescribeInstanceTypes</a> operation to query the <code>MaximumQueueNumberPerEni</code> and <code>TotalEniQueueQuantity</code> values for an instance type.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -85,7 +90,7 @@ public class ModifyNetworkInterfaceAttributeRequest extends TeaModel {
     public Integer queueNumber;
 
     /**
-     * <p>The region ID of the ENI. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>The ID of the region where the elastic network interface is located. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the latest list of Alibaba Cloud regions.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -101,11 +106,18 @@ public class ModifyNetworkInterfaceAttributeRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The receive (Rx) queue depth of the ENI.</p>
-     * <p>Take note of the following items:</p>
+     * <p>The queue depth for inbound traffic on the elastic network interface.</p>
+     * <blockquote>
+     * <p>This parameter is available by invitation only. To use this feature, submit a ticket.</p>
+     * </blockquote>
+     * <p>Note the following:</p>
      * <ul>
-     * <li>The Rx queue depth of an ENI must be the same as the transmit (Tx) queue depth of the ENI. Valid values: powers of 2 in the range of 8192 to 16384.</li>
-     * <li>A larger Rx queue depth yields higher inbound throughput but consumes more memory.</li>
+     * <li><p>This parameter is available only for instance types of the 7th generation and later.</p>
+     * </li>
+     * <li><p>This parameter is available only for instances that use Linux images.</p>
+     * </li>
+     * <li><p>A larger queue depth for inbound traffic increases throughput and reduces the packet loss rate, but consumes more memory.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -115,24 +127,28 @@ public class ModifyNetworkInterfaceAttributeRequest extends TeaModel {
     public Integer rxQueueSize;
 
     /**
-     * <p>The IDs of the security groups to which to add the secondary ENI. The secondary ENI is added to the specified security groups and removed from the original security groups.</p>
+     * <p>The IDs of new security groups to associate with the secondary elastic network interface. The interface is then detached from its original security groups.</p>
      * <ul>
-     * <li>The valid values of N vary based on the maximum number of security groups to which an ENI can be added. For more information, see the <a href="~~25412#SecurityGroupQuota~~">Security group limits</a> section of the &quot;Limits and quotas&quot; topic.</li>
-     * <li>The new security groups take effect after a short delay.</li>
+     * <li><p>The number of security groups that you can specify is limited by the maximum number of security groups to which an elastic network interface can be attached. For more information, see <a href="~~25412#SecurityGroupQuota~~">Usage limits</a>.</p>
+     * </li>
+     * <li><p>The changes take effect after a short delay.</p>
+     * </li>
      * </ul>
      */
     @NameInMap("SecurityGroupId")
     public java.util.List<String> securityGroupId;
 
     /**
-     * <p>Source and destination IP address check We recommend that you enable the feature to improve network security. Valid value:</p>
+     * <p>Specifies whether to enable the source/destination check. For enhanced security, we recommend enabling this feature. Valid values:</p>
      * <ul>
-     * <li>true</li>
-     * <li>false</li>
+     * <li><p><code>true</code>: Enabled</p>
+     * </li>
+     * <li><p><code>false</code>: Disabled</p>
+     * </li>
      * </ul>
-     * <p>Default value: false.</p>
+     * <p>Default value: <code>false</code>.</p>
      * <blockquote>
-     * <p> This feature is available only in some regions. Before you use this method, read <a href="https://help.aliyun.com/document_detail/2863210.html">Source and destination IP address check</a>.</p>
+     * <p>This feature is available only in specific regions. Before you use this parameter, read <a href="https://help.aliyun.com/document_detail/2863210.html">Source/destination check</a>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -142,11 +158,18 @@ public class ModifyNetworkInterfaceAttributeRequest extends TeaModel {
     public Boolean sourceDestCheck;
 
     /**
-     * <p>The Tx queue depth of the ENI.</p>
-     * <p>Take note of the following items:</p>
+     * <p>The queue depth for outbound traffic on the elastic network interface.</p>
+     * <blockquote>
+     * <p>This parameter is available by invitation only. To use this feature, submit a ticket.</p>
+     * </blockquote>
+     * <p>Note the following:</p>
      * <ul>
-     * <li>The Tx queue depth of an ENI must be the same as the Rx queue depth of the ENI. Valid values: powers of 2 in the range of 8192 to 16384.</li>
-     * <li>A larger Tx queue depth yields higher outbound throughput but consumes more memory.</li>
+     * <li><p>This parameter is available only for instance types of the 7th generation and later.</p>
+     * </li>
+     * <li><p>This parameter is available only for instances that use Linux images.</p>
+     * </li>
+     * <li><p>A larger queue depth for outbound traffic increases throughput and reduces the packet loss rate, but consumes more memory.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -298,10 +321,10 @@ public class ModifyNetworkInterfaceAttributeRequest extends TeaModel {
 
     public static class ModifyNetworkInterfaceAttributeRequestConnectionTrackingConfiguration extends TeaModel {
         /**
-         * <p>The timeout period for TCP connections in the TIME_WAIT or CLOSE_WAIT state. Unit: seconds. Valid values: integers from 3 to 15.</p>
+         * <p>The timeout period, in seconds, for TCP connections in the <code>TIME_WAIT</code> or <code>CLOSE_WAIT</code> state. The value must be an integer from 3 to 15.</p>
          * <p>Default value: 3.</p>
          * <blockquote>
-         * <p> If the associated ECS instance is used together with a Network Load Balancer (NLB) or Classic Load Balancer (CLB) instance, the default timeout period for TCP connections in the <code>TIME_WAIT</code> state is 15 seconds.</p>
+         * <p>If your ECS instance is used with Network Load Balancer (NLB) or Classic Load Balancer (CLB), the default timeout period for connections in the <code>TIME_WAIT</code> state is 15 seconds.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -311,7 +334,7 @@ public class ModifyNetworkInterfaceAttributeRequest extends TeaModel {
         public Integer tcpClosedAndTimeWaitTimeout;
 
         /**
-         * <p>The timeout period for TCP connections in the ESTABLISHED state. Unit: seconds. Valid values: 30, 60, 80, 100, 200, 300, 500, 700, and 910.</p>
+         * <p>The timeout period for TCP connections in the <code>ESTABLISHED</code> state, in seconds. Valid values: 30, 60, 80, 100, 200, 300, 500, 700, and 910.</p>
          * <p>Default value: 910.</p>
          * 
          * <strong>example:</strong>
@@ -321,10 +344,10 @@ public class ModifyNetworkInterfaceAttributeRequest extends TeaModel {
         public Integer tcpEstablishedTimeout;
 
         /**
-         * <p>The timeout period for UDP flows. Unit: seconds. Valid values: 10, 20, 30, 60, 80, and 100.</p>
+         * <p>The timeout period for UDP flows, in seconds. Valid values: 10, 20, 30, 60, 80, and 100.</p>
          * <p>Default value: 30.</p>
          * <blockquote>
-         * <p> If the associated ECS instance is used together with an NLB or CLB instance, the default timeout period for UDP flows is 100 seconds.</p>
+         * <p>If your ECS instance is used with Network Load Balancer (NLB) or Classic Load Balancer (CLB), the default value is 100 seconds.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -367,7 +390,7 @@ public class ModifyNetworkInterfaceAttributeRequest extends TeaModel {
     public static class ModifyNetworkInterfaceAttributeRequestEnhancedNetwork extends TeaModel {
         /**
          * <blockquote>
-         * <p> This parameter is not publicly available.</p>
+         * <p>This parameter is not publicly available.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -432,17 +455,19 @@ public class ModifyNetworkInterfaceAttributeRequest extends TeaModel {
 
     public static class ModifyNetworkInterfaceAttributeRequestNetworkInterfaceTrafficConfig extends TeaModel {
         /**
-         * <p>The communication mode of the ENI. Valid values:</p>
+         * <p>The traffic mode of the elastic network interface. Valid values:</p>
          * <ul>
-         * <li>Standard: uses the TCP communication mode.</li>
-         * <li>HighPerformance: uses the remote direct memory access (RDMA) communication mode with Elastic RDMA Interface (ERI) enabled.</li>
+         * <li><p><code>Standard</code>: The standard TCP traffic mode.</p>
+         * </li>
+         * <li><p><code>HighPerformance</code>: The RDMA traffic mode with the Elastic RDMA Interface (ERI) feature enabled.</p>
+         * </li>
          * </ul>
-         * <p>When the ENI is in the InUse state, take note of the following items:</p>
+         * <p>If the elastic network interface is attached to an instance, note the following:</p>
          * <ul>
-         * <li>The total number of ERIs attached to the instance cannot exceed the ERI quota for the instance type. To query the ERI quota for an instance type, call the DescribeInstanceTypes operation and check the EriQuantity value in the response.</li>
+         * <li>The total number of ERI-enabled elastic network interfaces on the instance cannot exceed the quota for the instance type. You can call the <a href="">DescribeInstanceTypes operation to query the value of the <code>EriQuantity</code> parameter.</a></li>
          * </ul>
          * <blockquote>
-         * <p> This parameter is in invitational preview and is not publicly available.</p>
+         * <p>This parameter is available by invitation only.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -452,13 +477,16 @@ public class ModifyNetworkInterfaceAttributeRequest extends TeaModel {
         public String networkInterfaceTrafficMode;
 
         /**
-         * <p>The number of queues supported by the ENI. When the ENI is in the InUse state, take note of the following items:</p>
+         * <p>The number of queues for the elastic network interface.
+         * If the elastic network interface is attached to an instance, note the following:</p>
          * <ul>
-         * <li>The value of this parameter cannot exceed the maximum number of queues allowed per ENI for the instance type.</li>
-         * <li>The total number of queues for all ENIs on the instance cannot exceed the queue quota for the instance type. To query the maximum number of queues per ENI and the queue quota for an instance type, call the DescribeInstanceTypes operation and check the MaximumQueueNumberPerEnig and TotalEniQueueQuantity values in the response.</li>
+         * <li><p>The value cannot exceed the maximum number of queues per elastic network interface that is supported by the instance type.</p>
+         * </li>
+         * <li><p>The total number of queues for all elastic network interfaces on the instance cannot exceed the queue quota for the instance type. You can call the <a href="">DescribeInstanceTypes operation to query the <code>MaximumQueueNumberPerEni</code> and <code>TotalEniQueueQuantity</code> values for an instance type.</a></p>
+         * </li>
          * </ul>
          * <blockquote>
-         * <p> This parameter is in invitational preview and is not publicly available.</p>
+         * <p>This parameter is available by invitation only. To use this feature, submit a ticket.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -468,12 +496,13 @@ public class ModifyNetworkInterfaceAttributeRequest extends TeaModel {
         public Integer queueNumber;
 
         /**
-         * <p>The number of queues supported by the ERI. When the ERI is in the InUse state, take note of the following items:</p>
+         * <p>The number of queue pairs for the ERI.
+         * If the elastic network interface is attached to an instance, note the following:</p>
          * <ul>
-         * <li>The value of this parameter cannot exceed the maximum number of queues allowed per ERI for the instance type. To query the maximum number of queues allowed per ERI for an instance type, call the DescribeInstanceTypes operation and check the QueuePairNumber value in the response.</li>
+         * <li>The value cannot exceed the maximum number of queue pairs per ERI that is supported by the instance type. You can call the <a href="">DescribeInstanceTypes operation to query the value of the <code>QueuePairNumber</code> parameter for an instance type.</a></li>
          * </ul>
          * <blockquote>
-         * <p> This parameter is in invitational preview and is not publicly available.</p>
+         * <p>This parameter is available by invitation only. To use this feature, submit a ticket.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -483,15 +512,19 @@ public class ModifyNetworkInterfaceAttributeRequest extends TeaModel {
         public Integer queuePairNumber;
 
         /**
-         * <p>The receive (Rx) queue depth of the ENI.</p>
-         * <p>Take note of the following items:</p>
-         * <ul>
-         * <li>The Rx queue depth of an ENI must be the same as the transmit (Tx) queue depth of the ENI. Valid values: powers of 2 in the range of 8192 to 16384.</li>
-         * <li>A larger Rx queue depth yields higher inbound throughput but consumes more memory.</li>
-         * </ul>
+         * <p>The queue depth for inbound traffic on the elastic network interface.</p>
          * <blockquote>
-         * <p> This parameter is in invitational preview and is not publicly available.</p>
+         * <p>This parameter is available by invitation only. To use this feature, submit a ticket.</p>
          * </blockquote>
+         * <p>Note the following:</p>
+         * <ul>
+         * <li><p>This parameter is available only for instance types of the 7th generation and later.</p>
+         * </li>
+         * <li><p>This parameter is available only for instances that use Linux images.</p>
+         * </li>
+         * <li><p>A larger queue depth for inbound traffic increases throughput and reduces the packet loss rate, but consumes more memory.</p>
+         * </li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>8192</p>
@@ -500,15 +533,19 @@ public class ModifyNetworkInterfaceAttributeRequest extends TeaModel {
         public Integer rxQueueSize;
 
         /**
-         * <p>The Tx queue depth of the ENI.</p>
-         * <p>Take note of the following items:</p>
-         * <ul>
-         * <li>The Tx queue depth of an ENI must be the same as the Rx queue depth of the ENI. Valid values: powers of 2 in the range of 8192 to 16384.</li>
-         * <li>A larger Tx queue depth yields higher outbound throughput but consumes more memory.</li>
-         * </ul>
+         * <p>The queue depth for outbound traffic on the elastic network interface.</p>
          * <blockquote>
-         * <p> This parameter is in invitational preview and is not publicly available.</p>
+         * <p>This parameter is available by invitation only. To use this feature, submit a ticket.</p>
          * </blockquote>
+         * <p>Note the following:</p>
+         * <ul>
+         * <li><p>This parameter is available only for instance types of the 7th generation and later.</p>
+         * </li>
+         * <li><p>This parameter is available only for instances that use Linux images.</p>
+         * </li>
+         * <li><p>A larger queue depth for outbound traffic increases throughput and reduces the packet loss rate, but consumes more memory.</p>
+         * </li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>8192</p>

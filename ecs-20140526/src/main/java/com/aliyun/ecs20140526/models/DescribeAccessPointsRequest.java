@@ -4,19 +4,32 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeAccessPointsRequest extends TeaModel {
+    /**
+     * <p>The filters to apply to the query results.</p>
+     */
     @NameInMap("Filter")
     public java.util.List<DescribeAccessPointsRequestFilter> filter;
 
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The page number.</p>
+     * <p>Default value: 1.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries to return per page.</p>
+     * <p>Valid values: 1 to 100.</p>
+     * <p>Default value: 10.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
+     * <p>The ID of the region where the access points are located. Call the <code>DescribeRegions</code> operation to query the latest list of regions.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
@@ -28,6 +41,9 @@ public class DescribeAccessPointsRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The type of the access point. Set the value to <code>ecs</code>.</p>
+     */
     @NameInMap("Type")
     public String type;
 
@@ -101,9 +117,19 @@ public class DescribeAccessPointsRequest extends TeaModel {
     }
 
     public static class DescribeAccessPointsRequestFilter extends TeaModel {
+        /**
+         * <p>The filter key. Valid values:</p>
+         * <ul>
+         * <li><code>AccessPointId</code>: Filter by access point ID.</li>
+         * <li><code>AccessPointName</code>: Filter by access point name.</li>
+         * </ul>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The filter values.</p>
+         */
         @NameInMap("Value")
         public java.util.List<String> value;
 

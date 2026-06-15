@@ -4,6 +4,9 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class TerminatePhysicalConnectionRequest extends TeaModel {
+    /**
+     * <p>A client-generated token to ensure the idempotency of the request. The token must be unique across requests and can contain only ASCII characters, with a maximum length of 64 characters.</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
@@ -14,12 +17,15 @@ public class TerminatePhysicalConnectionRequest extends TeaModel {
     public Long ownerId;
 
     /**
+     * <p>The ID of the physical connection.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("PhysicalConnectionId")
     public String physicalConnectionId;
 
     /**
+     * <p>The ID of the region where the physical connection is deployed.\
+     * You can call the <code>DescribeRegions</code> operation to get the most recent region list.\</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
@@ -31,6 +37,9 @@ public class TerminatePhysicalConnectionRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>This parameter is not used.</p>
+     */
     @NameInMap("UserCidr")
     public String userCidr;
 

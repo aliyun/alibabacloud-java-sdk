@@ -5,12 +5,14 @@ import com.aliyun.tea.*;
 
 public class ModifyBandwidthPackageSpecRequest extends TeaModel {
     /**
+     * <p>The new bandwidth of the bandwidth package. Unit: Mbit/s. The value must be an integer.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Bandwidth")
     public String bandwidth;
 
     /**
+     * <p>The ID of the bandwidth package.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("BandwidthPackageId")
@@ -23,6 +25,7 @@ public class ModifyBandwidthPackageSpecRequest extends TeaModel {
     public Long ownerId;
 
     /**
+     * <p>The ID of the region where the bandwidth package is located. You can call the <code>DescribeRegions</code> operation to query the most recent region list.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")

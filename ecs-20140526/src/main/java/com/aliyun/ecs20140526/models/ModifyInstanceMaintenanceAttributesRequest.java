@@ -7,9 +7,12 @@ public class ModifyInstanceMaintenanceAttributesRequest extends TeaModel {
     /**
      * <p>The maintenance action. Valid values:</p>
      * <ul>
-     * <li>Stop: stops the instance.</li>
-     * <li>AutoRecover: automatically recovers the instance.</li>
-     * <li>AutoRedeploy: redeploys the instance, which may damage the data disks attached to the instance.</li>
+     * <li><p>Stop: stops the instance.</p>
+     * </li>
+     * <li><p>AutoRecover: automatically recovers the instance.</p>
+     * </li>
+     * <li><p>AutoRedeploy: redeploys the instance, which may damage the data disks attached to the instance.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -36,8 +39,10 @@ public class ModifyInstanceMaintenanceAttributesRequest extends TeaModel {
     /**
      * <p>Specifies whether to send an event notification before maintenance. Valid values:</p>
      * <ul>
-     * <li>true</li>
-     * <li>false</li>
+     * <li><p>true</p>
+     * </li>
+     * <li><p>false</p>
+     * </li>
      * </ul>
      * <p>Default value: false.</p>
      * 

@@ -16,11 +16,16 @@ public class DescribeSendFileResultsRequest extends TeaModel {
     /**
      * <p>The overall sending status of the file. The overall sending status of the file varies based on the sending status of the file on all destination instances. Valid values:</p>
      * <ul>
-     * <li>Pending: The file is being verified or sent. If the sending state of the file on at least one instance is Pending, the overall sending state of the file is Pending.</li>
-     * <li>Running: The file is being sent to the instances. If the sending state of the file on at least one instance is Running, the overall sending state of the file is Running.</li>
-     * <li>Success: The file is sent. If the sending state of the file on all instances is Success, the overall sending state of the file is Success.</li>
-     * <li>Failed: The file fails to be sent. If the sending state of the file on all instances is Failed, the overall sending state of the file is Failed.</li>
-     * <li>PartialFailed: The file sending task succeeds on some instances and fails on other instances. If the sending state of the file is Success on some instances and is Failed on other instances, the overall sending state of the file is PartialFailed.</li>
+     * <li><p>Pending: The file is being verified or sent. If the sending state of the file on at least one instance is Pending, the overall sending state of the file is Pending.</p>
+     * </li>
+     * <li><p>Running: The file is being sent to the instances. If the sending state of the file on at least one instance is Running, the overall sending state of the file is Running.</p>
+     * </li>
+     * <li><p>Success: The file is sent. If the sending state of the file on all instances is Success, the overall sending state of the file is Success.</p>
+     * </li>
+     * <li><p>Failed: The file fails to be sent. If the sending state of the file on all instances is Failed, the overall sending state of the file is Failed.</p>
+     * </li>
+     * <li><p>PartialFailed: The file sending task succeeds on some instances and fails on other instances. If the sending state of the file is Success on some instances and is Failed on other instances, the overall sending state of the file is PartialFailed.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -75,7 +80,7 @@ public class DescribeSendFileResultsRequest extends TeaModel {
 
     /**
      * <blockquote>
-     * <p> This parameter will be removed in the future. We recommend that you use NextToken and MaxResults for a paged query.</p>
+     * <p>This parameter will be removed in the future. We recommend that you use NextToken and MaxResults for a paged query.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -86,7 +91,7 @@ public class DescribeSendFileResultsRequest extends TeaModel {
 
     /**
      * <blockquote>
-     * <p> This parameter will be removed in the future. We recommend that you use NextToken and MaxResults for a paged query.</p>
+     * <p>This parameter will be removed in the future. We recommend that you use NextToken and MaxResults for a paged query.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

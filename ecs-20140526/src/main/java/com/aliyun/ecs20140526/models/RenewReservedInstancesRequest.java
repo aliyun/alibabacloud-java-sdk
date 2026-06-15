@@ -7,8 +7,10 @@ public class RenewReservedInstancesRequest extends TeaModel {
     /**
      * <p>Specifies whether to enable auto-renewal for the reserved instance. Valid values:</p>
      * <ul>
-     * <li>true</li>
-     * <li>false</li>
+     * <li><p>true</p>
+     * </li>
+     * <li><p>false</p>
+     * </li>
      * </ul>
      * <p>Default value: false.</p>
      * 

@@ -42,7 +42,7 @@ public class DescribeResourcesModificationRequest extends TeaModel {
      * <p>If you set the DestinationResource parameter to SystemDisk, you must specify the InstanceType parameter. In this case, this operation queries the system disk categories supported by the specified instance type.</p>
      * 
      * <strong>example:</strong>
-     * <p>ecs.g5.large</p>
+     * <p>ecs.g7.large</p>
      */
     @NameInMap("InstanceType")
     public String instanceType;
@@ -60,16 +60,20 @@ public class DescribeResourcesModificationRequest extends TeaModel {
     /**
      * <p>Specifies whether cross-cluster instance type upgrades are supported. Valid values:</p>
      * <ul>
-     * <li>true</li>
-     * <li>false</li>
+     * <li><p>true</p>
+     * </li>
+     * <li><p>false</p>
+     * </li>
      * </ul>
      * <p>Default value: false.</p>
      * <p>When MigrateAcrossZone is set to true and you upgrade the instance type of an instance based on the returned information, take note of the following items:</p>
      * <ul>
      * <li><p>Instance that resides in the classic network:</p>
      * <ul>
-     * <li>For <a href="https://help.aliyun.com/document_detail/55263.html">retired instance types</a>, when a non-I/O optimized instance is upgraded to an I/O optimized instance, the private IP address, disk device names, and software authorization codes of the instance change. For a Linux instance, basic disks (cloud) are identified as xvd\* such as xvda and xvdb, and ultra disks (cloud_efficiency) and standard SSDs (cloud_ssd) are identified as vd\* such as vda and vdb.</li>
-     * <li>For <a href="https://help.aliyun.com/document_detail/25378.html">instance families available for purchase</a>, when the instance type of an instance is changed, the private IP address of the instance changes.</li>
+     * <li><p>For <a href="https://help.aliyun.com/document_detail/55263.html">retired instance types</a>, when a non-I/O optimized instance is upgraded to an I/O optimized instance, the private IP address, disk device names, and software authorization codes of the instance change. For a Linux instance, basic disks (cloud) are identified as xvd\* such as xvda and xvdb, and ultra disks (cloud_efficiency) and standard SSDs (cloud_ssd) are identified as vd\* such as vda and vdb.</p>
+     * </li>
+     * <li><p>For <a href="https://help.aliyun.com/document_detail/25378.html">instance families available for purchase</a>, when the instance type of an instance is changed, the private IP address of the instance changes.</p>
+     * </li>
      * </ul>
      * </li>
      * <li><p>Instance that resides in a virtual private cloud (VPC): For <a href="https://help.aliyun.com/document_detail/55263.html">retired instance types</a>, when a non-I/O optimized instance is upgraded to an I/O optimized instance, the disk device names and software authorization codes of the instance change. For a Linux instance, basic disks (cloud) are identified as xvd\* such as xvda and xvdb, and ultra disks (cloud_efficiency) and standard SSDs (cloud_ssd) are identified as vd\* such as vda and vdb.</p>
@@ -87,10 +91,14 @@ public class DescribeResourcesModificationRequest extends TeaModel {
      * <ul>
      * <li><p>Valid values for subscription resources:</p>
      * <ul>
-     * <li>Upgrade: upgrades resources.</li>
-     * <li>Downgrade: downgrades resources.</li>
-     * <li>RenewDowngrade: renews and downgrades resources.</li>
-     * <li>RenewModify: renews an expired instance and changes its configurations.</li>
+     * <li><p>Upgrade: upgrades resources.</p>
+     * </li>
+     * <li><p>Downgrade: downgrades resources.</p>
+     * </li>
+     * <li><p>RenewDowngrade: renews and downgrades resources.</p>
+     * </li>
+     * <li><p>RenewModify: renews an expired instance and changes its configurations.</p>
+     * </li>
      * </ul>
      * </li>
      * <li><p>Set the value to Upgrade for pay-as-you-go resources.</p>

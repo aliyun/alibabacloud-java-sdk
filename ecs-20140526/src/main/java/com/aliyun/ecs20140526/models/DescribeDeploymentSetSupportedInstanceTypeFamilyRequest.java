@@ -29,9 +29,12 @@ public class DescribeDeploymentSetSupportedInstanceTypeFamilyRequest extends Tea
     /**
      * <p>The deployment strategy. Valid values:</p>
      * <ul>
-     * <li>Availability: high availability strategy</li>
-     * <li>AvailabilityGroup: high availability group strategy</li>
-     * <li>LowLatency: low latency strategy</li>
+     * <li><p>Availability: high availability strategy</p>
+     * </li>
+     * <li><p>AvailabilityGroup: high availability group strategy</p>
+     * </li>
+     * <li><p>LowLatency: low latency strategy</p>
+     * </li>
      * </ul>
      * <p>Default value: Availability.</p>
      * 

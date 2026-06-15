@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribePlanMaintenanceWindowsRequest extends TeaModel {
     /**
+     * <p>Indicates whether the maintenance window is enabled.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -12,6 +14,8 @@ public class DescribePlanMaintenanceWindowsRequest extends TeaModel {
     public Boolean enable;
 
     /**
+     * <p>The number of entries to return on each page. Valid values: 1 to 100. Default value: 10.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -19,6 +23,8 @@ public class DescribePlanMaintenanceWindowsRequest extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the last query as the value of NextToken.</p>
+     * 
      * <strong>example:</strong>
      * <p>AAAAAdDWBF2</p>
      */
@@ -26,16 +32,25 @@ public class DescribePlanMaintenanceWindowsRequest extends TeaModel {
     public String nextToken;
 
     /**
+     * <p>The ID of the maintenance window.</p>
+     * 
      * <strong>example:</strong>
      * <p>pw-bp1jarob1aup7yvlrdt6</p>
      */
     @NameInMap("PlanWindowId")
     public String planWindowId;
 
+    /**
+     * <p>The name of the maintenance window.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>WIndowName</p>
+     */
     @NameInMap("PlanWindowName")
     public String planWindowName;
 
     /**
+     * <p>The ID of the region where the ECS instance is located. You can call the DescribeRegions operation to query the latest list of Alibaba Cloud regions.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -45,12 +60,17 @@ public class DescribePlanMaintenanceWindowsRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The ID of the resource group to which the maintenance window applies.</p>
+     * 
      * <strong>example:</strong>
      * <p>rg-d85g5yocioezmdrll</p>
      */
     @NameInMap("TargetResourceGroupId")
     public String targetResourceGroupId;
 
+    /**
+     * <p>The tags of the resources to which the maintenance window applies.</p>
+     */
     @NameInMap("TargetResourceTags")
     public DescribePlanMaintenanceWindowsRequestTargetResourceTags targetResourceTags;
 
@@ -124,9 +144,21 @@ public class DescribePlanMaintenanceWindowsRequest extends TeaModel {
     }
 
     public static class DescribePlanMaintenanceWindowsRequestTargetResourceTags extends TeaModel {
+        /**
+         * <p>The key of the tag.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tagKey</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The value of the tag.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tagValue</p>
+         */
         @NameInMap("Value")
         public String value;
 

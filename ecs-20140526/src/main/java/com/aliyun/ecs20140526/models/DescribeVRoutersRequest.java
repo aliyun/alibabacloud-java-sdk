@@ -10,13 +10,23 @@ public class DescribeVRoutersRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The page number.</p>
+     * <p>Default value: 1.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries per page.</p>
+     * <p>Valid values: 1 to 50.</p>
+     * <p>Default value: 10.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
+     * <p>The ID of the region where the VRouter is deployed. You can call the <code>DescribeRegions</code> operation to query the latest region list.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
@@ -28,6 +38,9 @@ public class DescribeVRoutersRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The ID of the VRouter.</p>
+     */
     @NameInMap("VRouterId")
     public String VRouterId;
 

@@ -7,12 +7,14 @@ public class AttachDiskRequest extends TeaModel {
     /**
      * <p>Specifies whether to attach the disk as the system disk. Valid values:</p>
      * <ul>
-     * <li>true: attaches the disk as the system disk.</li>
-     * <li>false: does not attach the disk as the system disk.</li>
+     * <li><p>true: attaches the disk as the system disk.</p>
+     * </li>
+     * <li><p>false: does not attach the disk as the system disk.</p>
+     * </li>
      * </ul>
      * <p>Default value: false.</p>
      * <blockquote>
-     * <p> You can set <code>Bootable</code> to true only if the instance does not have a system disk.</p>
+     * <p>You can set <code>Bootable</code> to true only if the instance does not have a system disk.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -24,15 +26,20 @@ public class AttachDiskRequest extends TeaModel {
     /**
      * <p>Specifies whether to release the disk when the instance is released. Valid values:</p>
      * <ul>
-     * <li>true: releases the disk when the instance is released.</li>
-     * <li>false: does not release the disk when the instance is released. The disk is retained as a pay-as-you-go data disk.</li>
+     * <li><p>true: releases the disk when the instance is released.</p>
+     * </li>
+     * <li><p>false: does not release the disk when the instance is released. The disk is retained as a pay-as-you-go data disk.</p>
+     * </li>
      * </ul>
      * <p>Default value: false.</p>
      * <p>When you specify this parameter, take note of the following items:</p>
      * <ul>
-     * <li>If <code>OperationLocks</code> in the DescribeInstances response contains <code>&quot;LockReason&quot; : &quot;security&quot;</code> for the instance to which the disk is attached, the instance is locked for security reasons. Regardless of whether you set <code>DeleteWithInstance</code> to <code>false</code>, the DeleteWithInstance setting is ignored, and the disk is released when the instance is released.</li>
-     * <li>If you want to attach an <code>elastic ephemeral disk</code>, you must set <code>DeleteWithInstance</code> to <code>true</code>.</li>
-     * <li>You cannot specify DeleteWithInstance for disks for which the multi-attach feature is enabled.</li>
+     * <li><p>If <code>OperationLocks</code> in the DescribeInstances response contains <code>&quot;LockReason&quot; : &quot;security&quot;</code> for the instance to which the disk is attached, the instance is locked for security reasons. Regardless of whether you set <code>DeleteWithInstance</code> to <code>false</code>, the DeleteWithInstance setting is ignored, and the disk is released when the instance is released.</p>
+     * </li>
+     * <li><p>If you want to attach an <code>elastic ephemeral disk</code>, you must set <code>DeleteWithInstance</code> to <code>true</code>.</p>
+     * </li>
+     * <li><p>You cannot specify DeleteWithInstance for disks for which the multi-attach feature is enabled.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -44,7 +51,7 @@ public class AttachDiskRequest extends TeaModel {
     /**
      * <p>The device name of the disk.</p>
      * <blockquote>
-     * <p> This parameter will be removed in the future. We recommend that you use other parameters to ensure future compatibility.</p>
+     * <p>This parameter will be removed in the future. We recommend that you use other parameters to ensure future compatibility.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -56,7 +63,7 @@ public class AttachDiskRequest extends TeaModel {
     /**
      * <p>The ID of the disk. The disk specified by <code>DiskId</code> and the instance specified by <code>InstanceId</code> must reside in the same zone.</p>
      * <blockquote>
-     * <p> For information about the limits on attaching a data disk and a system disk, see the &quot;Usage notes&quot; section of this topic.</p>
+     * <p>For information about the limits on attaching a data disk and a system disk, see the &quot;Usage notes&quot; section of this topic.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -69,12 +76,14 @@ public class AttachDiskRequest extends TeaModel {
     /**
      * <p>Specifies whether to force attach the disk to the instance. Valid values:</p>
      * <ul>
-     * <li>true: force attaches the disk to the instance.</li>
-     * <li>false: does not force attach the disk to the instance.</li>
+     * <li><p>true: force attaches the disk to the instance.</p>
+     * </li>
+     * <li><p>false: does not force attach the disk to the instance.</p>
+     * </li>
      * </ul>
      * <p>Default value: false.</p>
      * <blockquote>
-     * <p> You can set this parameter to true only for Regional Enterprise SSDs (ESSDs) (cloud_regional_disk_auto).</p>
+     * <p>You can set this parameter to true only for Regional Enterprise SSDs (ESSDs) (cloud_regional_disk_auto).</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -96,8 +105,10 @@ public class AttachDiskRequest extends TeaModel {
     /**
      * <p>The name of the SSH key pair that you bind to the Linux instance when you attach the system disk.</p>
      * <ul>
-     * <li>Windows instances do not support logons based on SSH key pairs. The <code>Password</code> parameter takes effect even if the KeyPairName parameter is specified.</li>
-     * <li>For Linux instances, the username and password-based logon method is disabled by default.</li>
+     * <li><p>Windows instances do not support logons based on SSH key pairs. The <code>Password</code> parameter takes effect even if the KeyPairName parameter is specified.</p>
+     * </li>
+     * <li><p>For Linux instances, the username and password-based logon method is disabled by default.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

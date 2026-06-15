@@ -4,18 +4,34 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class ModifyPhysicalConnectionAttributeRequest extends TeaModel {
+    /**
+     * <p>The circuit code of the physical connection, provided by the line operator.</p>
+     */
     @NameInMap("CircuitCode")
     public String circuitCode;
 
+    /**
+     * <p>A client-generated token to ensure the idempotency of the request.</p>
+     * <p>The token must be unique across requests. The client token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
+    /**
+     * <p>The new description of the physical connection.</p>
+     */
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <p>The line operator that provides the physical connection.</p>
+     */
     @NameInMap("LineOperator")
     public String lineOperator;
 
+    /**
+     * <p>The new name of the physical connection.</p>
+     */
     @NameInMap("Name")
     public String name;
 
@@ -25,22 +41,34 @@ public class ModifyPhysicalConnectionAttributeRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The peer location of the physical connection.</p>
+     */
     @NameInMap("PeerLocation")
     public String peerLocation;
 
     /**
+     * <p>The ID of the physical connection.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("PhysicalConnectionId")
     public String physicalConnectionId;
 
+    /**
+     * <p>The port type of the physical connection.</p>
+     */
     @NameInMap("PortType")
     public String portType;
 
+    /**
+     * <p>The ID of the redundant physical connection.</p>
+     */
     @NameInMap("RedundantPhysicalConnectionId")
     public String redundantPhysicalConnectionId;
 
     /**
+     * <p>The ID of the region where the physical connection is located.</p>
+     * <p>To get the latest list of regions, call the <code>DescribeRegions</code> operation.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
@@ -52,9 +80,17 @@ public class ModifyPhysicalConnectionAttributeRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The client-side IP address or CIDR block in your data center.</p>
+     * <p>This parameter is used only for outbound traffic shaping.</p>
+     */
     @NameInMap("UserCidr")
     public String userCidr;
 
+    /**
+     * <p>The bandwidth of the physical connection.</p>
+     * <p>Unit: Mbit/s.</p>
+     */
     @NameInMap("bandwidth")
     public Integer bandwidth;
 

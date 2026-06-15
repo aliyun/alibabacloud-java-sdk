@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeCloudAssistantSettingsResponseBody extends TeaModel {
     /**
-     * <p>The configurations for upgrading Cloud Assistant Agent.</p>
+     * <p>The upgrade settings for the Cloud Assistant agent.</p>
      */
     @NameInMap("AgentUpgradeConfig")
     public DescribeCloudAssistantSettingsResponseBodyAgentUpgradeConfig agentUpgradeConfig;
@@ -22,11 +22,14 @@ public class DescribeCloudAssistantSettingsResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The resource usage settings for the Cloud Assistant agent.</p>
+     */
     @NameInMap("ResourceUsageConfig")
     public DescribeCloudAssistantSettingsResponseBodyResourceUsageConfig resourceUsageConfig;
 
     /**
-     * <p>Cloud Assistant Session Manager configuration.</p>
+     * <p>Configurations for the Session Manager feature.</p>
      */
     @NameInMap("SessionManagerConfig")
     public DescribeCloudAssistantSettingsResponseBodySessionManagerConfig sessionManagerConfig;
@@ -110,14 +113,26 @@ public class DescribeCloudAssistantSettingsResponseBody extends TeaModel {
         @NameInMap("AllowedUpgradeWindows")
         public DescribeCloudAssistantSettingsResponseBodyAgentUpgradeConfigAllowedUpgradeWindows allowedUpgradeWindows;
 
+        /**
+         * <p>Indicates whether the Cloud Assistant agent checks for and applies updates upon startup.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("BootstrapUpgrade")
         public Boolean bootstrapUpgrade;
 
+        /**
+         * <p>Indicates whether to prevent the Cloud Assistant agent from automatically updating.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("DisableUpgrade")
         public Boolean disableUpgrade;
 
         /**
-         * <p>Indicates whether custom upgrade is enabled for Cloud Assistant Agent. If the value is false or empty, an upgrade attempt is performed for Cloud Assistant Agent every 30 minutes.</p>
+         * <p>Indicates whether custom agent upgrade settings are enabled. If this parameter is not specified or is set to <code>false</code>, the system attempts to upgrade the agent every 30 minutes by default.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -126,7 +141,7 @@ public class DescribeCloudAssistantSettingsResponseBody extends TeaModel {
         public Boolean enabled;
 
         /**
-         * <p>The time zone of the time windows.</p>
+         * <p>The time zone of the allowed upgrade windows.</p>
          * 
          * <strong>example:</strong>
          * <p>Asia/Shanghai</p>
@@ -286,21 +301,57 @@ public class DescribeCloudAssistantSettingsResponseBody extends TeaModel {
     }
 
     public static class DescribeCloudAssistantSettingsResponseBodyResourceUsageConfig extends TeaModel {
+        /**
+         * <p>The maximum CPU usage limit for the main process of the Cloud Assistant agent.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
+         */
         @NameInMap("CpuLimit")
         public Integer cpuLimit;
 
+        /**
+         * <p>Indicates whether to retain the script file in the Cloud Assistant directory after a command invocation is complete.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("KeepScriptFile")
         public Boolean keepScriptFile;
 
+        /**
+         * <p>The maximum number of Cloud Assistant log files to retain.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
+         */
         @NameInMap("LogFileCountLimit")
         public Integer logFileCountLimit;
 
+        /**
+         * <p>The maximum size for a single Cloud Assistant log file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100MB</p>
+         */
         @NameInMap("LogSizeLimit")
         public String logSizeLimit;
 
+        /**
+         * <p>The maximum memory usage limit for the main process of the Cloud Assistant agent.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>35MB</p>
+         */
         @NameInMap("MemoryLimit")
         public String memoryLimit;
 
+        /**
+         * <p>The number of consecutive times CPU or memory usage can exceed the configured limits before the Cloud Assistant agent process is terminated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
+         */
         @NameInMap("OverloadLimit")
         public Integer overloadLimit;
 
@@ -361,14 +412,16 @@ public class DescribeCloudAssistantSettingsResponseBody extends TeaModel {
 
     public static class DescribeCloudAssistantSettingsResponseBodySessionManagerConfig extends TeaModel {
         /**
-         * <p>Specify whether to enable Cloud Assistant Session Manager. Valid values:</p>
+         * <p>Indicates whether the Session Manager feature is enabled. Valid values:</p>
          * <ul>
-         * <li>true: Enables the feature.</li>
-         * <li>false: Disables the feature.</li>
+         * <li><p><code>true</code>: enabled</p>
+         * </li>
+         * <li><p><code>false</code>: disabled</p>
+         * </li>
          * </ul>
-         * <p>Note:</p>
+         * <p><strong>Note</strong>:</p>
          * <ul>
-         * <li>The feature applies to all regions.</li>
+         * <li>This setting takes effect in all regions.</li>
          * </ul>
          * 
          * <strong>example:</strong>

@@ -4,27 +4,51 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class ModifyRouterInterfaceAttributeRequest extends TeaModel {
+    /**
+     * <p>The new description of the router interface. The description must be 2 to 256 characters long and cannot start with <code>http://</code> or <code>https://</code>.</p>
+     */
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <p>The source IP address used for the health check.</p>
+     */
     @NameInMap("HealthCheckSourceIp")
     public String healthCheckSourceIp;
 
+    /**
+     * <p>The destination IP address used for the health check.</p>
+     */
     @NameInMap("HealthCheckTargetIp")
     public String healthCheckTargetIp;
 
+    /**
+     * <p>The new name of the router interface. The name must be 2 to 128 characters long and can contain letters, digits, underscores (_), and hyphens (-). It must start with a letter.</p>
+     */
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <p>The ID of the opposite router interface.</p>
+     */
     @NameInMap("OppositeInterfaceId")
     public String oppositeInterfaceId;
 
+    /**
+     * <p>The ID of the Alibaba Cloud account that owns the opposite router interface.</p>
+     */
     @NameInMap("OppositeInterfaceOwnerId")
     public Long oppositeInterfaceOwnerId;
 
+    /**
+     * <p>The ID of the opposite router.</p>
+     */
     @NameInMap("OppositeRouterId")
     public String oppositeRouterId;
 
+    /**
+     * <p>The type of the opposite router. Valid values: <code>VRouter</code> and <code>VBR</code>. The default value is <code>VRouter</code>.</p>
+     */
     @NameInMap("OppositeRouterType")
     public String oppositeRouterType;
 
@@ -32,6 +56,7 @@ public class ModifyRouterInterfaceAttributeRequest extends TeaModel {
     public Long ownerId;
 
     /**
+     * <p>The ID of the region where the router interface is deployed.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
@@ -44,6 +69,7 @@ public class ModifyRouterInterfaceAttributeRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
+     * <p>The ID of the router interface that you want to modify.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("RouterInterfaceId")

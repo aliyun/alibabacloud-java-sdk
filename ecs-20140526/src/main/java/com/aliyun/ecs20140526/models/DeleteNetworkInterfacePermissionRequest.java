@@ -4,10 +4,14 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DeleteNetworkInterfacePermissionRequest extends TeaModel {
+    /**
+     * <p>Specifies whether to forcibly delete the permission. Set this parameter to <code>true</code> to force the deletion.</p>
+     */
     @NameInMap("Force")
     public Boolean force;
 
     /**
+     * <p>The ID of the permission for the elastic network interface.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("NetworkInterfacePermissionId")
@@ -20,6 +24,7 @@ public class DeleteNetworkInterfacePermissionRequest extends TeaModel {
     public Long ownerId;
 
     /**
+     * <p>The ID of the region where the elastic network interface is located. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the latest region list.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")

@@ -10,8 +10,10 @@ public class RenewElasticityAssurancesRequest extends TeaModel {
     /**
      * <p>Specifies whether to enable automatic payment. Valid values:</p>
      * <ul>
-     * <li>true</li>
-     * <li>false</li>
+     * <li><p>true</p>
+     * </li>
+     * <li><p>false</p>
+     * </li>
      * </ul>
      * <p>Default value: true.</p>
      * 
@@ -24,8 +26,10 @@ public class RenewElasticityAssurancesRequest extends TeaModel {
     /**
      * <p>Specifies whether to enable auto-renewal for the elasticity assurance. Valid values:</p>
      * <ul>
-     * <li>true</li>
-     * <li>false</li>
+     * <li><p>true</p>
+     * </li>
+     * <li><p>false</p>
+     * </li>
      * </ul>
      * <p>Default value: false.</p>
      * 
@@ -38,11 +42,13 @@ public class RenewElasticityAssurancesRequest extends TeaModel {
     /**
      * <p>The auto-renewal period. Unit: month. Valid values: 1, 2, 3, 6, 12, 24, and 36.</p>
      * <ul>
-     * <li>If you set <code>PeriodUnit</code> to Month, the default value is 1.</li>
-     * <li>If you set <code>PeriodUnit</code> to Year, the default value is 12.</li>
+     * <li><p>If you set <code>PeriodUnit</code> to Month, the default value is 1.</p>
+     * </li>
+     * <li><p>If you set <code>PeriodUnit</code> to Year, the default value is 12.</p>
+     * </li>
      * </ul>
      * <blockquote>
-     * <p> This parameter is required if you set <code>AutoRenew</code> to <code>true</code>.</p>
+     * <p>This parameter is required if you set <code>AutoRenew</code> to <code>true</code>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -70,8 +76,10 @@ public class RenewElasticityAssurancesRequest extends TeaModel {
     /**
      * <p>The renewal duration. The unit of the renewal duration is determined by the <code>PeriodUnit</code> value. Valid values:</p>
      * <ul>
-     * <li>Valid values if you set <code>PeriodUnit</code> to <code>Month</code>: 1, 2, 3, 4, 5, 6, 7, 8, and 9.</li>
-     * <li>Valid values if you set <code>PeriodUnit</code> to <code>Year</code>: 1, 2, and 3.</li>
+     * <li><p>Valid values if you set <code>PeriodUnit</code> to <code>Month</code>: 1, 2, 3, 4, 5, 6, 7, 8, and 9.</p>
+     * </li>
+     * <li><p>Valid values if you set <code>PeriodUnit</code> to <code>Year</code>: 1, 2, and 3.</p>
+     * </li>
      * </ul>
      * <p>Default value: 1.</p>
      * 
@@ -84,8 +92,10 @@ public class RenewElasticityAssurancesRequest extends TeaModel {
     /**
      * <p>The unit of the renewal duration. Valid values:</p>
      * <ul>
-     * <li>Month</li>
-     * <li>Year</li>
+     * <li><p>Month</p>
+     * </li>
+     * <li><p>Year</p>
+     * </li>
      * </ul>
      * <p>Default value: Year.</p>
      * 

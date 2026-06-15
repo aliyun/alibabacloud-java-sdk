@@ -7,12 +7,14 @@ public class ModifyDedicatedHostsChargeTypeRequest extends TeaModel {
     /**
      * <p>Specifies whether to automatically complete the payment. Valid value:</p>
      * <ul>
-     * <li>true: The payment is automatically completed. Ensure that your account balance is sufficient. Otherwise, your order becomes invalid and must be canceled.</li>
-     * <li>false: An order is generated but no payment is made.</li>
+     * <li><p>true: The payment is automatically completed. Ensure that your account balance is sufficient. Otherwise, your order becomes invalid and must be canceled.</p>
+     * </li>
+     * <li><p>false: An order is generated but no payment is made.</p>
+     * </li>
      * </ul>
      * <p>Default value: true.</p>
      * <blockquote>
-     * <p> If you do not have sufficient balance in your account, you can set <code>AutoPay</code> to <code>false</code> to generate an unpaid order. Then, you can pay for the order.</p>
+     * <p>If you do not have sufficient balance in your account, you can set <code>AutoPay</code> to <code>false</code> to generate an unpaid order. Then, you can pay for the order.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -33,8 +35,10 @@ public class ModifyDedicatedHostsChargeTypeRequest extends TeaModel {
     /**
      * <p>The new billing method for the dedicated host. Valid value:</p>
      * <ul>
-     * <li>PrePaid: changes the billing method from pay-as-you-go to subscription.</li>
-     * <li>PostPaid: changes the billing method from subscription to pay-as-you-go.</li>
+     * <li><p>PrePaid: changes the billing method from pay-as-you-go to subscription.</p>
+     * </li>
+     * <li><p>PostPaid: changes the billing method from subscription to pay-as-you-go.</p>
+     * </li>
      * </ul>
      * <p>Default value: PrePaid.</p>
      * 
@@ -67,8 +71,10 @@ public class ModifyDedicatedHostsChargeTypeRequest extends TeaModel {
     /**
      * <p>Specifies whether to perform only a dry run. Valid value:</p>
      * <ul>
-     * <li>true: performs only a dry run. The system checks the request for potential issues, including invalid AccessKey pairs, unauthorized Resource Access Management (RAM) users, and missing parameter values. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</li>
-     * <li>false: performs a dry run and performs the actual request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.</li>
+     * <li><p>true: performs only a dry run. The system checks the request for potential issues, including invalid AccessKey pairs, unauthorized Resource Access Management (RAM) users, and missing parameter values. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</p>
+     * </li>
+     * <li><p>false: performs a dry run and performs the actual request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.</p>
+     * </li>
      * </ul>
      * <p>Indicates whether the nfs volume is set to the read-only mode. Default value: false.</p>
      * 
@@ -87,8 +93,10 @@ public class ModifyDedicatedHostsChargeTypeRequest extends TeaModel {
     /**
      * <p>The renewal duration of the subscription dedicated hosts. Valid values:</p>
      * <ul>
-     * <li>If you set <code>PeriodUnit</code> to Week, valid values of <code>Period</code> are 1, 2, 3, and 4.</li>
-     * <li>If you set <code>PeriodUnit</code> to Month, valid values of <code>Period</code> are 1, 2, 3, 4, 5, 6, 7, 8, 9, 12, 24, 36, 48, and 60.</li>
+     * <li><p>If you set <code>PeriodUnit</code> to Week, valid values of <code>Period</code> are 1, 2, 3, and 4.</p>
+     * </li>
+     * <li><p>If you set <code>PeriodUnit</code> to Month, valid values of <code>Period</code> are 1, 2, 3, 4, 5, 6, 7, 8, 9, 12, 24, 36, 48, and 60.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -100,8 +108,10 @@ public class ModifyDedicatedHostsChargeTypeRequest extends TeaModel {
     /**
      * <p>The unit of the renewal duration specified by <code>Period</code>. Valid values:</p>
      * <ul>
-     * <li>Week</li>
-     * <li>Month</li>
+     * <li><p>Week</p>
+     * </li>
+     * <li><p>Month</p>
+     * </li>
      * </ul>
      * <p>Default value: Month.</p>
      * 

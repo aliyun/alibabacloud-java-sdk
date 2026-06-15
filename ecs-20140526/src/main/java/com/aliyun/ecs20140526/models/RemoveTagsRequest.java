@@ -8,7 +8,7 @@ public class RemoveTagsRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID of the resource. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>The ID of the region where the resource is located. Call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to get the latest list of Alibaba Cloud regions.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -18,7 +18,7 @@ public class RemoveTagsRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of the resource. For example, if you set ResourceType to instance, you must set this parameter to the ID of the related instance.</p>
+     * <p>The ID of the resource from which to remove tags. For example, if ResourceType is set to instance, this parameter is the instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -34,20 +34,32 @@ public class RemoveTagsRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The type of the resource. Valid values:</p>
+     * <p>The resource type. Valid values:</p>
      * <ul>
-     * <li>instance</li>
-     * <li>disk</li>
-     * <li>snapshot</li>
-     * <li>image</li>
-     * <li>securitygroup</li>
-     * <li>volume</li>
-     * <li>eni</li>
-     * <li>ddh</li>
-     * <li>keypair</li>
-     * <li>launchtemplate</li>
-     * <li>reservedinstance</li>
-     * <li>snapshotpolicy</li>
+     * <li><p>instance: an ECS instance.</p>
+     * </li>
+     * <li><p>disk: a disk.</p>
+     * </li>
+     * <li><p>snapshot: a snapshot.</p>
+     * </li>
+     * <li><p>image: an image.</p>
+     * </li>
+     * <li><p>securitygroup: a security group.</p>
+     * </li>
+     * <li><p>volume: a volume.</p>
+     * </li>
+     * <li><p>eni: an elastic network interface.</p>
+     * </li>
+     * <li><p>ddh: a dedicated host.</p>
+     * </li>
+     * <li><p>keypair: an SSH key pair.</p>
+     * </li>
+     * <li><p>launchtemplate: a launch template.</p>
+     * </li>
+     * <li><p>reservedinstance: a reserved instance.</p>
+     * </li>
+     * <li><p>snapshotpolicy: an automatic snapshot policy.</p>
+     * </li>
      * </ul>
      * <p>All values must be in lowercase.</p>
      * <p>This parameter is required.</p>
@@ -59,7 +71,7 @@ public class RemoveTagsRequest extends TeaModel {
     public String resourceType;
 
     /**
-     * <p>The tags.</p>
+     * <p>A list of tags.</p>
      */
     @NameInMap("Tag")
     public java.util.List<RemoveTagsRequestTag> tag;
@@ -127,7 +139,10 @@ public class RemoveTagsRequest extends TeaModel {
 
     public static class RemoveTagsRequestTag extends TeaModel {
         /**
-         * <p>The key of tag N. Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key can be up to 64 characters in length and cannot contain <a href="http://https://%E3%80%82">http:// or https://</a>. The tag key cannot start with acs: or aliyun.</p>
+         * <p>The key of the tag.</p>
+         * <blockquote>
+         * <p>For compatibility, we recommend that you use the Tag.N.Key parameter.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>TestKey</p>
@@ -136,7 +151,7 @@ public class RemoveTagsRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The value of tag N. Valid values of N: 1 to 20. The tag value can be an empty string. The tag value can be up to 128 characters in length and cannot contain <a href="http://https://%E3%80%82">http:// or https://</a>. The tag value cannot start with acs: or aliyun.</p>
+         * <p>The value of the tag. The value can be an empty string and up to 128 characters long. It cannot start with aliyun or acs:, and cannot contain http\:// or https\://.</p>
          * 
          * <strong>example:</strong>
          * <p>TestValue</p>

@@ -37,8 +37,10 @@ public class LeaveSecurityGroupRequest extends TeaModel {
     /**
      * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
      * <ul>
-     * <li>If you want to remove an instance from a security group, you do not need to specify a region ID.</li>
-     * <li>If you want to remove an ENI from a security group, you must specify the ID of the region in which the ENI resides.</li>
+     * <li><p>If you want to remove an instance from a security group, you do not need to specify a region ID.</p>
+     * </li>
+     * <li><p>If you want to remove an ENI from a security group, you must specify the ID of the region in which the ENI resides.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

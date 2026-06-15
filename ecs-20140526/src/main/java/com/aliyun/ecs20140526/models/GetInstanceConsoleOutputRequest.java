@@ -33,8 +33,10 @@ public class GetInstanceConsoleOutputRequest extends TeaModel {
     /**
      * <p>Specifies whether to remove formatting symbols from the returned command output. Valid values:</p>
      * <ul>
-     * <li>true</li>
-     * <li>false</li>
+     * <li><p>true</p>
+     * </li>
+     * <li><p>false</p>
+     * </li>
      * </ul>
      * <p>Default value: false.</p>
      * 

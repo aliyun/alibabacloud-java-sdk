@@ -26,8 +26,10 @@ public class CreateSnapshotGroupRequest extends TeaModel {
      * <p>The IDs of the cloud disks for which you want to create a snapshot-consistent group. You can specify the IDs of cloud disks that are attached to multiple instances within the same zone. Valid values of N: 1 to 16. A snapshot-consistent group can contain snapshots of up to 16 cloud disks whose total disk size does not exceed 32 TiB.</p>
      * <p>Take note of the following:</p>
      * <ul>
-     * <li>You cannot specify both the DiskId.N and <code>ExcludeDiskId.N</code> parameters in the same request.</li>
-     * <li>If you specify <code>InstanceId</code>, you can specify the IDs of cloud disks that are attached only to the specified instance. You cannot specify the IDs of cloud disks that are attached to multiple instances.</li>
+     * <li><p>You cannot specify both the DiskId.N and <code>ExcludeDiskId.N</code> parameters in the same request.</p>
+     * </li>
+     * <li><p>If you specify <code>InstanceId</code>, you can specify the IDs of cloud disks that are attached only to the specified instance. You cannot specify the IDs of cloud disks that are attached to multiple instances.</p>
+     * </li>
      * </ul>
      */
     @NameInMap("DiskId")
@@ -37,7 +39,7 @@ public class CreateSnapshotGroupRequest extends TeaModel {
      * <p>The IDs of the cloud disks for which you do not want to create snapshots. After you specify the IDs of cloud disks, the snapshot-consistent group that you create does not contain the snapshots of the specified cloud disks. Valid values of N: 1 to 16.</p>
      * <p>This parameter is empty by default, which indicates that snapshots are created for all disks of the instance.</p>
      * <blockquote>
-     * <p> This parameter cannot be set at the same time as the <code>DiskId.N</code>.</p>
+     * <p>This parameter cannot be set at the same time as the <code>DiskId.N</code>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -58,12 +60,14 @@ public class CreateSnapshotGroupRequest extends TeaModel {
     /**
      * <p>Specifies whether to enable the instant access feature. Valid values:</p>
      * <ul>
-     * <li>true</li>
-     * <li>false</li>
+     * <li><p>true</p>
+     * </li>
+     * <li><p>false</p>
+     * </li>
      * </ul>
      * <p>Default value: false.</p>
      * <blockquote>
-     * <p> This parameter is no longer used. By default, new standard snapshots of ESSDs are upgraded to instant access snapshots free of charge without the need for additional configurations. For more information, see <a href="https://help.aliyun.com/document_detail/193667.html">Use the instant access feature</a>.</p>
+     * <p>This parameter is no longer used. By default, new standard snapshots of ESSDs are upgraded to instant access snapshots free of charge without the need for additional configurations. For more information, see <a href="https://help.aliyun.com/document_detail/193667.html">Use the instant access feature</a>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -77,7 +81,7 @@ public class CreateSnapshotGroupRequest extends TeaModel {
      * <p>This parameter takes effect only when <code>InstantAccess</code> is set to true. The instant access feature is automatically disabled when the specified duration ends.</p>
      * <p>This parameter is left empty by default, which indicates that the instant access feature is automatically disabled when the instant access snapshots are released.</p>
      * <blockquote>
-     * <p> This parameter is no longer used. By default, new standard snapshots of ESSDs are upgraded to instant access snapshots free of charge without the need for additional configurations. For more information, see <a href="https://help.aliyun.com/document_detail/193667.html">Use the instant access feature</a>.</p>
+     * <p>This parameter is no longer used. By default, new standard snapshots of ESSDs are upgraded to instant access snapshots free of charge without the need for additional configurations. For more information, see <a href="https://help.aliyun.com/document_detail/193667.html">Use the instant access feature</a>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

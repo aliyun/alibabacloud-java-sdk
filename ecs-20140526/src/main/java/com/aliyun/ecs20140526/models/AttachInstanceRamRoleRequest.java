@@ -9,7 +9,7 @@ public class AttachInstanceRamRoleRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>[“i-bp14ss25xca5ex1u****”, “i-bp154z5o1qjalfse****”, “i-bp10ws62o04ubhvi****”…]</p>
+     * <p>[&quot;i-bp14ss25xca5ex1u****&quot;,&quot;i-bp154z5o1qjalfse****&quot;, &quot;i-bp10ws62o04ubhvi****&quot;]</p>
      */
     @NameInMap("InstanceIds")
     public String instanceIds;

@@ -36,9 +36,12 @@ public class DescribeCloudAssistantStatusRequest extends TeaModel {
     /**
      * <p>The operating system type of the instance. Valid values:</p>
      * <ul>
-     * <li>Windows</li>
-     * <li>Linux</li>
-     * <li>FreeBSD</li>
+     * <li><p>Windows</p>
+     * </li>
+     * <li><p>Linux</p>
+     * </li>
+     * <li><p>FreeBSD</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -55,7 +58,7 @@ public class DescribeCloudAssistantStatusRequest extends TeaModel {
 
     /**
      * <blockquote>
-     * <p> This parameter will be removed in the future. We recommend that you use NextToken and MaxResults for a paged query.</p>
+     * <p>This parameter will be removed in the future. We recommend that you use NextToken and MaxResults for a paged query.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -66,7 +69,7 @@ public class DescribeCloudAssistantStatusRequest extends TeaModel {
 
     /**
      * <blockquote>
-     * <p> This parameter will be removed in the future. We recommend that you use NextToken and MaxResults for a paged query.</p>
+     * <p>This parameter will be removed in the future. We recommend that you use NextToken and MaxResults for a paged query.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

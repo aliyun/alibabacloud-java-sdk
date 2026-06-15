@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteBandwidthPackageRequest extends TeaModel {
     /**
+     * <p>The ID of the bandwidth package to delete.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("BandwidthPackageId")
@@ -17,6 +18,7 @@ public class DeleteBandwidthPackageRequest extends TeaModel {
     public Long ownerId;
 
     /**
+     * <p>The ID of the region where the bandwidth package is located.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")

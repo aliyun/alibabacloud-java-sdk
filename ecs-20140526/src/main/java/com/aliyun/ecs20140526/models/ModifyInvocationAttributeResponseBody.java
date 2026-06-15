@@ -7,9 +7,12 @@ public class ModifyInvocationAttributeResponseBody extends TeaModel {
     /**
      * <p>The command ID.</p>
      * <ul>
-     * <li>A new command is added and the <code>CommandId</code> value of the new command is returned only when <code>CommandContent</code> is changed.</li>
-     * <li>No new command is added and the <code>CommandId</code> value of the command that is running is returned if <code>CommandContent</code> is not changed.</li>
-     * <li>If you set <code>KeepCommand</code> to <code>true</code> when you called the <a href="https://help.aliyun.com/document_detail/64841.html">InvokeCommand</a> or <a href="https://help.aliyun.com/document_detail/141751.html">RunCommand</a> operation, a new command is added and retained. Otherwise, commands related to the task are deleted after all executions of the task are complete or the task is manually stopped.</li>
+     * <li><p>A new command is added and the <code>CommandId</code> value of the new command is returned only when <code>CommandContent</code> is changed.</p>
+     * </li>
+     * <li><p>No new command is added and the <code>CommandId</code> value of the command that is running is returned if <code>CommandContent</code> is not changed.</p>
+     * </li>
+     * <li><p>If you set <code>KeepCommand</code> to <code>true</code> when you called the <a href="https://help.aliyun.com/document_detail/64841.html">InvokeCommand</a> or <a href="https://help.aliyun.com/document_detail/141751.html">RunCommand</a> operation, a new command is added and retained. Otherwise, commands related to the task are deleted after all executions of the task are complete or the task is manually stopped.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

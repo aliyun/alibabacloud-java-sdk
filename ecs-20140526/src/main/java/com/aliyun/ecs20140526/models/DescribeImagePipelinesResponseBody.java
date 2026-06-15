@@ -8,7 +8,7 @@ public class DescribeImagePipelinesResponseBody extends TeaModel {
     public DescribeImagePipelinesResponseBodyImagePipeline imagePipeline;
 
     /**
-     * <p>The number of entries per page.</p>
+     * <p>The number of entries per page for a paginated query.</p>
      * 
      * <strong>example:</strong>
      * <p>50</p>
@@ -17,7 +17,7 @@ public class DescribeImagePipelinesResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>A pagination token. It can be used in the next request to retrieve a new page of results. For information about how to use the return value, see the &quot;Usage notes&quot; section of this topic.</p>
+     * <p>The token used to retrieve the next page of results. This value is returned if the results are paginated.</p>
      * 
      * <strong>example:</strong>
      * <p>AAAAAdDWBF2****</p>
@@ -35,7 +35,7 @@ public class DescribeImagePipelinesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of image templates returned.</p>
+     * <p>The total number of image pipelines that match the query criteria.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>

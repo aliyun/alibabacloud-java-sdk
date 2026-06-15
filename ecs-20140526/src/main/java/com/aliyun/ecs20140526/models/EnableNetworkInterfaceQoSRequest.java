@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class EnableNetworkInterfaceQoSRequest extends TeaModel {
     /**
+     * <p>The ID of the Elastic Network Interface (ENI).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -26,6 +27,7 @@ public class EnableNetworkInterfaceQoSRequest extends TeaModel {
     public EnableNetworkInterfaceQoSRequestQoS qoS;
 
     /**
+     * <p>The Region ID. You can invoke DescribeRegions to view the latest Alibaba Cloud Region list.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

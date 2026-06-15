@@ -7,7 +7,7 @@ public class DescribeInstanceRamRoleRequest extends TeaModel {
     /**
      * <p>The IDs of ECS instances. You can specify up to 50 instance IDs in a single request.</p>
      * <blockquote>
-     * <p> You must specify at least one parameter from <code>InstanceIds</code> and <code>RamRoleName</code>.</p>
+     * <p>You must specify at least one parameter from <code>InstanceIds</code> and <code>RamRoleName</code>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -44,7 +44,7 @@ public class DescribeInstanceRamRoleRequest extends TeaModel {
     /**
      * <p>The name of the instance RAM role. If you specify this parameter, all ECS instances to which the instance RAM role is attached are returned in the response. You can call the <a href="https://help.aliyun.com/document_detail/28713.html">ListRoles</a> operation of RAM to query the names of available instance RAM roles.</p>
      * <blockquote>
-     * <p> You must specify at least one parameter from <code>InstanceIds</code> and <code>RamRoleName</code>.</p>
+     * <p>You must specify at least one parameter from <code>InstanceIds</code> and <code>RamRoleName</code>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

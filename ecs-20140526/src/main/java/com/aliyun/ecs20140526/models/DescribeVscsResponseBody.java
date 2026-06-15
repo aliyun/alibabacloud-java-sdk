@@ -12,17 +12,12 @@ public class DescribeVscsResponseBody extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>Id of the request</p>
-     * 
      * <strong>example:</strong>
      * <p>473469C7-AA6F-**-B3DB-A3DC0DE3C83E</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>VSC</p>
-     */
     @NameInMap("Vscs")
     public java.util.List<DescribeVscsResponseBodyVscs> vscs;
 
@@ -126,8 +121,6 @@ public class DescribeVscsResponseBody extends TeaModel {
         public java.util.List<DescribeVscsResponseBodyVscsTags> tags;
 
         /**
-         * <p>VSC ID。</p>
-         * 
          * <strong>example:</strong>
          * <p>vsc-hp34ue**g0wmycb27bwal</p>
          */

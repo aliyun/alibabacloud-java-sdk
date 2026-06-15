@@ -24,7 +24,7 @@ public class DescribeDedicatedHostClustersRequest extends TeaModel {
 
     /**
      * <blockquote>
-     * <p> This parameter is unavailable for use.</p>
+     * <p>This parameter is unavailable for use.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -74,7 +74,7 @@ public class DescribeDedicatedHostClustersRequest extends TeaModel {
     /**
      * <p>The resource group ID of the host group. You can use a resource group ID to filter no more than 1,000 host groups.</p>
      * <blockquote>
-     * <p> A default resource group is not supported.</p>
+     * <p>A default resource group is not supported.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -91,7 +91,7 @@ public class DescribeDedicatedHostClustersRequest extends TeaModel {
 
     /**
      * <blockquote>
-     * <p> This parameter is unavailable for use.</p>
+     * <p>This parameter is unavailable for use.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

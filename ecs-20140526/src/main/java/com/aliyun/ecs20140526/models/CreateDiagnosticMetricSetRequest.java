@@ -8,7 +8,7 @@ public class CreateDiagnosticMetricSetRequest extends TeaModel {
      * <p>The description of the diagnostic metric set.</p>
      * 
      * <strong>example:</strong>
-     * <p>The ID of the request.</p>
+     * <p>远程连接问题诊断</p>
      */
     @NameInMap("Description")
     public String description;
@@ -24,7 +24,7 @@ public class CreateDiagnosticMetricSetRequest extends TeaModel {
      * <p>The name of the diagnostic metric set.</p>
      * 
      * <strong>example:</strong>
-     * <p>The IDs of diagnostic metrics. You can specify up to 100 diagnostic metric IDs.</p>
+     * <p>远程连接问题诊断</p>
      */
     @NameInMap("MetricSetName")
     public String metricSetName;
