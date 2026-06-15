@@ -4,34 +4,18 @@ package com.aliyun.green20220926.models;
 import com.aliyun.tea.*;
 
 public class DescribeOssV2ResultResponseBody extends TeaModel {
-    /**
-     * <strong>example:</strong>
-     * <p>1</p>
-     */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
     @NameInMap("Items")
     public java.util.List<DescribeOssV2ResultResponseBodyItems> items;
 
-    /**
-     * <strong>example:</strong>
-     * <p>10</p>
-     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    /**
-     * <strong>example:</strong>
-     * <p>AAAAAA-BBBB-CCCCC-DDDD-EEEEEEEE****</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <strong>example:</strong>
-     * <p>10</p>
-     */
     @NameInMap("TotalCount")
     public Long totalCount;
 
@@ -81,20 +65,12 @@ public class DescribeOssV2ResultResponseBody extends TeaModel {
     }
 
     public static class DescribeOssV2ResultResponseBodyItemsLabelDetails extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>50.00</p>
-         */
         @NameInMap("Confidence")
         public Float confidence;
 
         @NameInMap("Description")
         public String description;
 
-        /**
-         * <strong>example:</strong>
-         * <p>politics</p>
-         */
         @NameInMap("Label")
         public String label;
 
@@ -130,20 +106,12 @@ public class DescribeOssV2ResultResponseBody extends TeaModel {
     }
 
     public static class DescribeOssV2ResultResponseBodyItemsLabelDetails2 extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>90.00</p>
-         */
         @NameInMap("Confidence")
         public Float confidence;
 
         @NameInMap("Description")
         public String description;
 
-        /**
-         * <strong>example:</strong>
-         * <p>politics</p>
-         */
         @NameInMap("Label")
         public String label;
 
@@ -179,45 +147,21 @@ public class DescribeOssV2ResultResponseBody extends TeaModel {
     }
 
     public static class DescribeOssV2ResultResponseBodyItems extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>buckect_test</p>
-         */
         @NameInMap("Bucket")
         public String bucket;
 
-        /**
-         * <strong>example:</strong>
-         * <p>200</p>
-         */
         @NameInMap("Code")
         public String code;
 
-        /**
-         * <strong>example:</strong>
-         * <p>image</p>
-         */
         @NameInMap("ContentType")
         public String contentType;
 
-        /**
-         * <strong>example:</strong>
-         * <p>true</p>
-         */
         @NameInMap("Freeze")
         public Boolean freeze;
 
-        /**
-         * <strong>example:</strong>
-         * <p>FREEZED</p>
-         */
         @NameInMap("FreezeStatus")
         public String freezeStatus;
 
-        /**
-         * <strong>example:</strong>
-         * <p>ACL</p>
-         */
         @NameInMap("FreezeType")
         public String freezeType;
 
@@ -233,103 +177,45 @@ public class DescribeOssV2ResultResponseBody extends TeaModel {
         @NameInMap("Labels2")
         public java.util.List<String> labels2;
 
-        /**
-         * <strong>example:</strong>
-         * <p>FREEZE</p>
-         */
         @NameInMap("ManualFreezeAction")
         public String manualFreezeAction;
 
-        /**
-         * <strong>example:</strong>
-         * <p>2025-08-09 12:00:00</p>
-         */
         @NameInMap("ManualOperateTime")
         public String manualOperateTime;
 
-        /**
-         * <strong>example:</strong>
-         * <p>xx</p>
-         */
         @NameInMap("ManualOperator")
         public String manualOperator;
 
-        /**
-         * <strong>example:</strong>
-         * <p>54416c9b159df4a60ae03c04ccb94cb5</p>
-         */
         @NameInMap("Md5")
         public String md5;
 
-        /**
-         * <strong>example:</strong>
-         * <p>1713014531569_958.png</p>
-         */
         @NameInMap("Object")
         public String object;
 
-        /**
-         * <strong>example:</strong>
-         * <p>AAAAAAAA-BBBB-CCCC-DDDD-EEEEEEEEEEEE</p>
-         */
         @NameInMap("RequestId")
         public String requestId;
 
-        /**
-         * <strong>example:</strong>
-         * <p>high</p>
-         */
         @NameInMap("RiskLevel")
         public String riskLevel;
 
-        /**
-         * <strong>example:</strong>
-         * <p>low</p>
-         */
         @NameInMap("RiskLevel0")
         public String riskLevel0;
 
-        /**
-         * <strong>example:</strong>
-         * <p>none</p>
-         */
         @NameInMap("RiskLevel2")
         public String riskLevel2;
 
-        /**
-         * <strong>example:</strong>
-         * <p>{}</p>
-         */
         @NameInMap("ScanResult")
         public String scanResult;
 
-        /**
-         * <p>Service code。</p>
-         * 
-         * <strong>example:</strong>
-         * <p>baselineCheck</p>
-         */
         @NameInMap("ServiceCode")
         public String serviceCode;
 
-        /**
-         * <strong>example:</strong>
-         * <p>COPY</p>
-         */
         @NameInMap("SysDisposalStatus")
         public String sysDisposalStatus;
 
-        /**
-         * <strong>example:</strong>
-         * <p>P_BT3FHS</p>
-         */
         @NameInMap("TaskId")
         public String taskId;
 
-        /**
-         * <strong>example:</strong>
-         * <p>xx</p>
-         */
         @NameInMap("Url")
         public String url;
 

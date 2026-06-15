@@ -4,38 +4,18 @@ package com.aliyun.green20220926.models;
 import com.aliyun.tea.*;
 
 public class MarkOssV2ResultRequest extends TeaModel {
-    /**
-     * <strong>example:</strong>
-     * <p>2023-10-21 16:08:38 +0800</p>
-     */
     @NameInMap("EndDate")
     public String endDate;
 
-    /**
-     * <strong>example:</strong>
-     * <p>ACL</p>
-     */
     @NameInMap("FreezeType")
     public String freezeType;
 
-    /**
-     * <strong>example:</strong>
-     * <p>freeze</p>
-     */
     @NameInMap("Operation")
     public String operation;
 
-    /**
-     * <strong>example:</strong>
-     * <p>AAAAAA-BBBB-CCCCC-DDDD-EEEEEEEE****</p>
-     */
     @NameInMap("RequestIds")
     public String requestIds;
 
-    /**
-     * <strong>example:</strong>
-     * <p>2023-08-21 16:08:38 +0800</p>
-     */
     @NameInMap("StartDate")
     public String startDate;
 

@@ -7,10 +7,6 @@ public class MarkOssV2ResultResponseBody extends TeaModel {
     @NameInMap("FailureRequestIds")
     public java.util.List<String> failureRequestIds;
 
-    /**
-     * <strong>example:</strong>
-     * <p>AAAAAA-BBBB-CCCCC-DDDD-EEEEEEEE****</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 

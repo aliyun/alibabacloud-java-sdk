@@ -46,6 +46,9 @@ public class GetPromptTestResultResponseBody extends TeaModel {
         @NameInMap("Label")
         public String label;
 
+        @NameInMap("Reason")
+        public String reason;
+
         public static GetPromptTestResultResponseBodyResultLabelDetails build(java.util.Map<String, ?> map) throws Exception {
             GetPromptTestResultResponseBodyResultLabelDetails self = new GetPromptTestResultResponseBodyResultLabelDetails();
             return TeaModel.build(map, self);
@@ -65,6 +68,14 @@ public class GetPromptTestResultResponseBody extends TeaModel {
         }
         public String getLabel() {
             return this.label;
+        }
+
+        public GetPromptTestResultResponseBodyResultLabelDetails setReason(String reason) {
+            this.reason = reason;
+            return this;
+        }
+        public String getReason() {
+            return this.reason;
         }
 
     }

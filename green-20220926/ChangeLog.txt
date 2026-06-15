@@ -1,3 +1,8 @@
+2026-06-15 Version: 1.11.0
+- Support API GetTuneProposalById.
+- Update API GetPromptTestResult: add response parameters Body.Result.$.LabelDetails.$.Reason.
+
+
 2026-05-20 Version: 1.10.0
 - Support API CreateImageLib.
 - Update API ListServiceConfigs: add request parameters ProtectionType.
