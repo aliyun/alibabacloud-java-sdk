@@ -4,10 +4,15 @@ package com.aliyun.paifeaturestore20230621.models;
 import com.aliyun.tea.*;
 
 public class ListModelFeatureAvailableFeaturesResponseBody extends TeaModel {
+    /**
+     * <p>List of available features.</p>
+     */
     @NameInMap("AvaliableFeatures")
     public java.util.List<ListModelFeatureAvailableFeaturesResponseBodyAvaliableFeatures> avaliableFeatures;
 
     /**
+     * <p>Total number of features.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -15,6 +20,8 @@ public class ListModelFeatureAvailableFeaturesResponseBody extends TeaModel {
     public Long totalCount;
 
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>ED4DEA2F-F216-57F0-AE28-08D791233280</p>
      */
@@ -52,6 +59,8 @@ public class ListModelFeatureAvailableFeaturesResponseBody extends TeaModel {
 
     public static class ListModelFeatureAvailableFeaturesResponseBodyAvaliableFeatures extends TeaModel {
         /**
+         * <p>Feature name.</p>
+         * 
          * <strong>example:</strong>
          * <p>age</p>
          */
@@ -59,6 +68,8 @@ public class ListModelFeatureAvailableFeaturesResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>Source name.</p>
+         * 
          * <strong>example:</strong>
          * <p>user_fea</p>
          */
@@ -66,6 +77,14 @@ public class ListModelFeatureAvailableFeaturesResponseBody extends TeaModel {
         public String sourceName;
 
         /**
+         * <p>Feature source.</p>
+         * <ul>
+         * <li><p>FeatureView</p>
+         * </li>
+         * <li><p>LabelTable</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>FeatureView</p>
          */
@@ -73,6 +92,16 @@ public class ListModelFeatureAvailableFeaturesResponseBody extends TeaModel {
         public String sourceType;
 
         /**
+         * <p>Feature value type.</p>
+         * <ul>
+         * <li><p>INTEGER</p>
+         * </li>
+         * <li><p>DOUBLE</p>
+         * </li>
+         * <li><p>STRING</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>STRING</p>
          */

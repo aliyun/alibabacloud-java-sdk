@@ -4,10 +4,15 @@ package com.aliyun.paifeaturestore20230621.models;
 import com.aliyun.tea.*;
 
 public class ListLabelTablesResponseBody extends TeaModel {
+    /**
+     * <p>The list of label tables.</p>
+     */
     @NameInMap("LabelTables")
     public java.util.List<ListLabelTablesResponseBodyLabelTables> labelTables;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>728C5E01-ABF6-5AA8-B9FC-B3BA05DECC77</p>
      */
@@ -15,6 +20,8 @@ public class ListLabelTablesResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total number of label tables.</p>
+     * 
      * <strong>example:</strong>
      * <p>21</p>
      */
@@ -52,6 +59,8 @@ public class ListLabelTablesResponseBody extends TeaModel {
 
     public static class ListLabelTablesResponseBodyLabelTables extends TeaModel {
         /**
+         * <p>The ID of the data source.</p>
+         * 
          * <strong>example:</strong>
          * <p>3</p>
          */
@@ -59,6 +68,8 @@ public class ListLabelTablesResponseBody extends TeaModel {
         public String datasourceId;
 
         /**
+         * <p>The name of the data source.</p>
+         * 
          * <strong>example:</strong>
          * <p>datasource1</p>
          */
@@ -66,6 +77,8 @@ public class ListLabelTablesResponseBody extends TeaModel {
         public String datasourceName;
 
         /**
+         * <p>The time when the label table was created. The time is displayed in the ISO 8601 format.</p>
+         * 
          * <strong>example:</strong>
          * <p>2021-12-15T23:24:33.132+08:00</p>
          */
@@ -73,6 +86,8 @@ public class ListLabelTablesResponseBody extends TeaModel {
         public String gmtCreateTime;
 
         /**
+         * <p>The time when the label table was last modified. The time is displayed in the ISO 8601 format.</p>
+         * 
          * <strong>example:</strong>
          * <p>2021-12-15T23:24:33.132+08:00</p>
          */
@@ -80,6 +95,8 @@ public class ListLabelTablesResponseBody extends TeaModel {
         public String gmtModifiedTime;
 
         /**
+         * <p>The ID of the label table.</p>
+         * 
          * <strong>example:</strong>
          * <p>3</p>
          */
@@ -87,6 +104,8 @@ public class ListLabelTablesResponseBody extends TeaModel {
         public String labelTableId;
 
         /**
+         * <p>The name of the label table.</p>
+         * 
          * <strong>example:</strong>
          * <p>label_table1</p>
          */
@@ -94,6 +113,8 @@ public class ListLabelTablesResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>The Alibaba Cloud account ID of the owner.</p>
+         * 
          * <strong>example:</strong>
          * <p>123214213214</p>
          */
@@ -101,6 +122,8 @@ public class ListLabelTablesResponseBody extends TeaModel {
         public String owner;
 
         /**
+         * <p>The project ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -108,6 +131,8 @@ public class ListLabelTablesResponseBody extends TeaModel {
         public String projectId;
 
         /**
+         * <p>The project name.</p>
+         * 
          * <strong>example:</strong>
          * <p>project1</p>
          */

@@ -4,10 +4,15 @@ package com.aliyun.paifeaturestore20230621.models;
 import com.aliyun.tea.*;
 
 public class ListModelFeaturesResponseBody extends TeaModel {
+    /**
+     * <p>The list of model features.</p>
+     */
     @NameInMap("ModelFeatures")
     public java.util.List<ListModelFeaturesResponseBodyModelFeatures> modelFeatures;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>2CA11923-2A3D-5E5A-8314-E699D2DD15DE</p>
      */
@@ -15,6 +20,8 @@ public class ListModelFeaturesResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total number of model features.</p>
+     * 
      * <strong>example:</strong>
      * <p>4</p>
      */
@@ -52,6 +59,8 @@ public class ListModelFeaturesResponseBody extends TeaModel {
 
     public static class ListModelFeaturesResponseBodyModelFeatures extends TeaModel {
         /**
+         * <p>The time the model feature was created.</p>
+         * 
          * <strong>example:</strong>
          * <p>2023-07-04T14:46:22.227+08:00</p>
          */
@@ -59,6 +68,8 @@ public class ListModelFeaturesResponseBody extends TeaModel {
         public String gmtCreateTime;
 
         /**
+         * <p>The time the model feature was last updated.</p>
+         * 
          * <strong>example:</strong>
          * <p>2023-07-04T14:46:22.227+08:00</p>
          */
@@ -66,6 +77,8 @@ public class ListModelFeaturesResponseBody extends TeaModel {
         public String gmtModifiedTime;
 
         /**
+         * <p>The label table name.</p>
+         * 
          * <strong>example:</strong>
          * <p>label_table_1</p>
          */
@@ -73,6 +86,8 @@ public class ListModelFeaturesResponseBody extends TeaModel {
         public String labelTableName;
 
         /**
+         * <p>The model feature ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>3</p>
          */
@@ -80,6 +95,8 @@ public class ListModelFeaturesResponseBody extends TeaModel {
         public String modelFeatureId;
 
         /**
+         * <p>The model feature name.</p>
+         * 
          * <strong>example:</strong>
          * <p>model_feature1</p>
          */
@@ -87,6 +104,8 @@ public class ListModelFeaturesResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>The Alibaba Cloud account ID of the owner.</p>
+         * 
          * <strong>example:</strong>
          * <p>1231243253****</p>
          */
@@ -94,6 +113,8 @@ public class ListModelFeaturesResponseBody extends TeaModel {
         public String owner;
 
         /**
+         * <p>The project ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>5</p>
          */
@@ -101,6 +122,8 @@ public class ListModelFeaturesResponseBody extends TeaModel {
         public String projectId;
 
         /**
+         * <p>The project name.</p>
+         * 
          * <strong>example:</strong>
          * <p>project1</p>
          */

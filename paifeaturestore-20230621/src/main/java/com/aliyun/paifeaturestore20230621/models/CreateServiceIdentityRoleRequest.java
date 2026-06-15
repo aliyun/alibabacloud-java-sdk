@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateServiceIdentityRoleRequest extends TeaModel {
     /**
+     * <p>The name of the service account role.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

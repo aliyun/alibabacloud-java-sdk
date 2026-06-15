@@ -4,22 +4,36 @@ package com.aliyun.paifeaturestore20230621.models;
 import com.aliyun.tea.*;
 
 public class GetModelFeatureFGFeatureResponseBody extends TeaModel {
+    /**
+     * <p>The information about the lookup features.</p>
+     */
     @NameInMap("LookupFeatures")
     public java.util.List<GetModelFeatureFGFeatureResponseBodyLookupFeatures> lookupFeatures;
 
+    /**
+     * <p>The information about the raw features.</p>
+     */
     @NameInMap("RawFeatures")
     public java.util.List<GetModelFeatureFGFeatureResponseBodyRawFeatures> rawFeatures;
 
     /**
+     * <p>The ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>E23EFF09-58AA-5420-934F-8453AE01548D</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The reserved fields.</p>
+     */
     @NameInMap("Reserves")
     public java.util.List<String> reserves;
 
+    /**
+     * <p>The information about the sequence features.</p>
+     */
     @NameInMap("SequenceFeatures")
     public java.util.List<GetModelFeatureFGFeatureResponseBodySequenceFeatures> sequenceFeatures;
 
@@ -70,6 +84,8 @@ public class GetModelFeatureFGFeatureResponseBody extends TeaModel {
 
     public static class GetModelFeatureFGFeatureResponseBodyLookupFeatures extends TeaModel {
         /**
+         * <p>The default value.</p>
+         * 
          * <strong>example:</strong>
          * <p>-1024</p>
          */
@@ -77,6 +93,8 @@ public class GetModelFeatureFGFeatureResponseBody extends TeaModel {
         public String defaultValue;
 
         /**
+         * <p>The name of the generated feature.</p>
+         * 
          * <strong>example:</strong>
          * <p>item_id</p>
          */
@@ -84,6 +102,16 @@ public class GetModelFeatureFGFeatureResponseBody extends TeaModel {
         public String featureName;
 
         /**
+         * <p>The domain of the key feature.</p>
+         * <ul>
+         * <li><p>User: The user side.</p>
+         * </li>
+         * <li><p>Item: The item side.</p>
+         * </li>
+         * <li><p>Context: The context.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Item</p>
          */
@@ -91,6 +119,8 @@ public class GetModelFeatureFGFeatureResponseBody extends TeaModel {
         public String keyFeatureDomain;
 
         /**
+         * <p>The name of the key feature.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -98,6 +128,16 @@ public class GetModelFeatureFGFeatureResponseBody extends TeaModel {
         public String keyFeatureName;
 
         /**
+         * <p>The domain of the map feature.</p>
+         * <ul>
+         * <li><p>User: The user side.</p>
+         * </li>
+         * <li><p>Item: The item side.</p>
+         * </li>
+         * <li><p>Context: The context.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>User</p>
          */
@@ -105,6 +145,8 @@ public class GetModelFeatureFGFeatureResponseBody extends TeaModel {
         public String mapFeatureDomain;
 
         /**
+         * <p>The name of the map feature.</p>
+         * 
          * <strong>example:</strong>
          * <p>item_id</p>
          */
@@ -112,6 +154,16 @@ public class GetModelFeatureFGFeatureResponseBody extends TeaModel {
         public String mapFeatureName;
 
         /**
+         * <p>The value type of the feature.</p>
+         * <ul>
+         * <li><p>INTEGER</p>
+         * </li>
+         * <li><p>DOUBLE</p>
+         * </li>
+         * <li><p>STRING</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>STRING</p>
          */
@@ -183,6 +235,8 @@ public class GetModelFeatureFGFeatureResponseBody extends TeaModel {
 
     public static class GetModelFeatureFGFeatureResponseBodyRawFeatures extends TeaModel {
         /**
+         * <p>The default value.</p>
+         * 
          * <strong>example:</strong>
          * <p>-1024</p>
          */
@@ -190,6 +244,16 @@ public class GetModelFeatureFGFeatureResponseBody extends TeaModel {
         public String defaultValue;
 
         /**
+         * <p>The domain of the original feature.</p>
+         * <ul>
+         * <li><p>User: The user side.</p>
+         * </li>
+         * <li><p>Item: The item side.</p>
+         * </li>
+         * <li><p>Context: The context.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>User</p>
          */
@@ -197,6 +261,8 @@ public class GetModelFeatureFGFeatureResponseBody extends TeaModel {
         public String featureDomain;
 
         /**
+         * <p>The name of the generated feature.</p>
+         * 
          * <strong>example:</strong>
          * <p>item_id</p>
          */
@@ -204,6 +270,14 @@ public class GetModelFeatureFGFeatureResponseBody extends TeaModel {
         public String featureName;
 
         /**
+         * <p>The type of the raw FG feature.</p>
+         * <ul>
+         * <li><p>IdFeature: The primary key.</p>
+         * </li>
+         * <li><p>RawFeature: The raw feature.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>IdFeature</p>
          */
@@ -211,6 +285,8 @@ public class GetModelFeatureFGFeatureResponseBody extends TeaModel {
         public String featureType;
 
         /**
+         * <p>The name of the original feature.</p>
+         * 
          * <strong>example:</strong>
          * <p>item_id</p>
          */
@@ -218,6 +294,16 @@ public class GetModelFeatureFGFeatureResponseBody extends TeaModel {
         public String inputFeatureName;
 
         /**
+         * <p>The value type of the feature.</p>
+         * <ul>
+         * <li><p>INTEGER</p>
+         * </li>
+         * <li><p>DOUBLE</p>
+         * </li>
+         * <li><p>STRING</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>STRING</p>
          */
@@ -281,6 +367,8 @@ public class GetModelFeatureFGFeatureResponseBody extends TeaModel {
 
     public static class GetModelFeatureFGFeatureResponseBodySequenceFeaturesSubFeatures extends TeaModel {
         /**
+         * <p>The default value.</p>
+         * 
          * <strong>example:</strong>
          * <p>-1024</p>
          */
@@ -288,6 +376,16 @@ public class GetModelFeatureFGFeatureResponseBody extends TeaModel {
         public String defaultValue;
 
         /**
+         * <p>The domain of the original feature.</p>
+         * <ul>
+         * <li><p>User: The user side.</p>
+         * </li>
+         * <li><p>Item: The item side.</p>
+         * </li>
+         * <li><p>Context: The context.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>User</p>
          */
@@ -295,6 +393,8 @@ public class GetModelFeatureFGFeatureResponseBody extends TeaModel {
         public String featureDomain;
 
         /**
+         * <p>The name of the generated feature.</p>
+         * 
          * <strong>example:</strong>
          * <p>item_id</p>
          */
@@ -302,6 +402,14 @@ public class GetModelFeatureFGFeatureResponseBody extends TeaModel {
         public String featureName;
 
         /**
+         * <p>The type of the FG feature.</p>
+         * <ul>
+         * <li><p>IdFeature: The primary key.</p>
+         * </li>
+         * <li><p>RawFeature: The raw feature.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>IdFeature</p>
          */
@@ -309,6 +417,8 @@ public class GetModelFeatureFGFeatureResponseBody extends TeaModel {
         public String featureType;
 
         /**
+         * <p>The name of the original feature.</p>
+         * 
          * <strong>example:</strong>
          * <p>item_id</p>
          */
@@ -316,6 +426,16 @@ public class GetModelFeatureFGFeatureResponseBody extends TeaModel {
         public String inputFeatureName;
 
         /**
+         * <p>The value type of the feature.</p>
+         * <ul>
+         * <li><p>INTEGER</p>
+         * </li>
+         * <li><p>DOUBLE</p>
+         * </li>
+         * <li><p>STRING</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>STRING</p>
          */
@@ -379,6 +499,8 @@ public class GetModelFeatureFGFeatureResponseBody extends TeaModel {
 
     public static class GetModelFeatureFGFeatureResponseBodySequenceFeatures extends TeaModel {
         /**
+         * <p>The separator for feature attributes.</p>
+         * 
          * <strong>example:</strong>
          * <h1></h1>
          */
@@ -386,6 +508,8 @@ public class GetModelFeatureFGFeatureResponseBody extends TeaModel {
         public String attributeDelim;
 
         /**
+         * <p>The name of the sequence feature.</p>
+         * 
          * <strong>example:</strong>
          * <p>item_id</p>
          */
@@ -393,6 +517,8 @@ public class GetModelFeatureFGFeatureResponseBody extends TeaModel {
         public String featureName;
 
         /**
+         * <p>The separator for the sequence feature.</p>
+         * 
          * <strong>example:</strong>
          * <p>;</p>
          */
@@ -400,12 +526,17 @@ public class GetModelFeatureFGFeatureResponseBody extends TeaModel {
         public String sequenceDelim;
 
         /**
+         * <p>The maximum length of the sequence feature.</p>
+         * 
          * <strong>example:</strong>
          * <p>50</p>
          */
         @NameInMap("SequenceLength")
         public Long sequenceLength;
 
+        /**
+         * <p>A list of sub-features for the sequence feature.</p>
+         */
         @NameInMap("SubFeatures")
         public java.util.List<GetModelFeatureFGFeatureResponseBodySequenceFeaturesSubFeatures> subFeatures;
 

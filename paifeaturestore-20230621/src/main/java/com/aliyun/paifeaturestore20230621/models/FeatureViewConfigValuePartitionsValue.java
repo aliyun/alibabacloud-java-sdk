@@ -5,25 +5,34 @@ import com.aliyun.tea.*;
 
 public class FeatureViewConfigValuePartitionsValue extends TeaModel {
     /**
+     * <p>Partition value.</p>
+     * 
      * <strong>example:</strong>
-     * <p>20250101</p>
+     * <p>20230101</p>
      */
     @NameInMap("Value")
     public String value;
 
+    /**
+     * <p>List of partitions.</p>
+     */
     @NameInMap("Values")
     public java.util.List<String> values;
 
     /**
+     * <p>Start time partition.</p>
+     * 
      * <strong>example:</strong>
-     * <p>20250101</p>
+     * <p>20230101</p>
      */
     @NameInMap("StartValue")
     public String startValue;
 
     /**
+     * <p>End time partition.</p>
+     * 
      * <strong>example:</strong>
-     * <p>20250201</p>
+     * <p>20230202</p>
      */
     @NameInMap("EndValue")
     public String endValue;

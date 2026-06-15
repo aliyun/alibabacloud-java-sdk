@@ -4,10 +4,15 @@ package com.aliyun.paifeaturestore20230621.models;
 import com.aliyun.tea.*;
 
 public class ListProjectFeaturesResponseBody extends TeaModel {
+    /**
+     * <p>The list of returned features.</p>
+     */
     @NameInMap("Features")
     public java.util.List<ListProjectFeaturesResponseBodyFeatures> features;
 
     /**
+     * <p>The total number of features that match the query criteria.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -15,7 +20,7 @@ public class ListProjectFeaturesResponseBody extends TeaModel {
     public Integer totalCount;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>7D497816-607C-5B67-97B1-61354B6ACB2B</p>
@@ -54,6 +59,8 @@ public class ListProjectFeaturesResponseBody extends TeaModel {
 
     public static class ListProjectFeaturesResponseBodyFeatures extends TeaModel {
         /**
+         * <p>A comma-separated list of aliases for the feature.</p>
+         * 
          * <strong>example:</strong>
          * <p>age1,age2</p>
          */
@@ -61,6 +68,8 @@ public class ListProjectFeaturesResponseBody extends TeaModel {
         public String aliasNames;
 
         /**
+         * <p>The ID of the parent feature view.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -68,6 +77,8 @@ public class ListProjectFeaturesResponseBody extends TeaModel {
         public String featureViewId;
 
         /**
+         * <p>The name of the parent feature view.</p>
+         * 
          * <strong>example:</strong>
          * <p>fv1</p>
          */
@@ -75,6 +86,8 @@ public class ListProjectFeaturesResponseBody extends TeaModel {
         public String featureViewName;
 
         /**
+         * <p>The time the feature was created, in ISO 8601 format.</p>
+         * 
          * <strong>example:</strong>
          * <p>2021-12-15T23:24:33.132+08:00</p>
          */
@@ -82,6 +95,8 @@ public class ListProjectFeaturesResponseBody extends TeaModel {
         public String gmtCreateTime;
 
         /**
+         * <p>The number of model features that reference this feature.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -89,6 +104,8 @@ public class ListProjectFeaturesResponseBody extends TeaModel {
         public Integer modelFeatureCount;
 
         /**
+         * <p>The name of the feature.</p>
+         * 
          * <strong>example:</strong>
          * <p>f1</p>
          */
@@ -96,6 +113,8 @@ public class ListProjectFeaturesResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>The owner of the feature.</p>
+         * 
          * <strong>example:</strong>
          * <p>123456</p>
          */
@@ -103,6 +122,8 @@ public class ListProjectFeaturesResponseBody extends TeaModel {
         public String owner;
 
         /**
+         * <p>The data type of the feature.</p>
+         * 
          * <strong>example:</strong>
          * <p>STRING</p>
          */

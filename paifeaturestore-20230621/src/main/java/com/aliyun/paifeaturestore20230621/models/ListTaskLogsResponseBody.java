@@ -4,10 +4,15 @@ package com.aliyun.paifeaturestore20230621.models;
 import com.aliyun.tea.*;
 
 public class ListTaskLogsResponseBody extends TeaModel {
+    /**
+     * <p>An array of log entries.</p>
+     */
     @NameInMap("Logs")
     public java.util.List<String> logs;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>72F15A8A-5A28-5B18-A0DE-0EABD7D3245A</p>
      */
@@ -15,6 +20,8 @@ public class ListTaskLogsResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total number of log entries.</p>
+     * 
      * <strong>example:</strong>
      * <p>100</p>
      */

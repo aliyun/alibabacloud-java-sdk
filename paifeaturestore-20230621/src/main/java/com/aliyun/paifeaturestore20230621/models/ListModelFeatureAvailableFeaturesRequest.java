@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListModelFeatureAvailableFeaturesRequest extends TeaModel {
     /**
+     * <p>Filter by feature name.</p>
+     * 
      * <strong>example:</strong>
      * <p>f1</p>
      */

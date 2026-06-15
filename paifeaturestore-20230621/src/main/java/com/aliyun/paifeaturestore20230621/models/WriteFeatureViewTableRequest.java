@@ -5,6 +5,13 @@ import com.aliyun.tea.*;
 
 public class WriteFeatureViewTableRequest extends TeaModel {
     /**
+     * <p>The write mode.</p>
+     * <ul>
+     * <li><p>Overwrite: Overwrites existing data.</p>
+     * </li>
+     * <li><p>Merge: Merges the new data with existing data.</p>
+     * </li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -13,9 +20,15 @@ public class WriteFeatureViewTableRequest extends TeaModel {
     @NameInMap("Mode")
     public String mode;
 
+    /**
+     * <p>The partitions to write to.</p>
+     */
     @NameInMap("Partitions")
     public java.util.Map<String, java.util.Map<String, ?>> partitions;
 
+    /**
+     * <p>The file data source.</p>
+     */
     @NameInMap("UrlDatasource")
     public WriteFeatureViewTableRequestUrlDatasource urlDatasource;
 
@@ -50,6 +63,8 @@ public class WriteFeatureViewTableRequest extends TeaModel {
 
     public static class WriteFeatureViewTableRequestUrlDatasource extends TeaModel {
         /**
+         * <p>The file delimiter.</p>
+         * 
          * <strong>example:</strong>
          * <p>,</p>
          */
@@ -57,6 +72,8 @@ public class WriteFeatureViewTableRequest extends TeaModel {
         public String delimiter;
 
         /**
+         * <p>Specifies whether to omit the header from the source file.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -64,6 +81,8 @@ public class WriteFeatureViewTableRequest extends TeaModel {
         public Boolean omitHeader;
 
         /**
+         * <p>The data source path.</p>
+         * 
          * <strong>example:</strong>
          * <p>xxx.xxx.com/file.csv</p>
          */

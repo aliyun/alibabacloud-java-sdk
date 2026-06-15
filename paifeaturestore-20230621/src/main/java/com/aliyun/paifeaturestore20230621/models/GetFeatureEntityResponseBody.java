@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetFeatureEntityResponseBody extends TeaModel {
     /**
+     * <p>The time when the feature entity was created.</p>
+     * 
      * <strong>example:</strong>
      * <p>2021-12-15T23:24:33.132+08:00</p>
      */
@@ -12,6 +14,8 @@ public class GetFeatureEntityResponseBody extends TeaModel {
     public String gmtCreateTime;
 
     /**
+     * <p>The join ID used to associate with a feature view.</p>
+     * 
      * <strong>example:</strong>
      * <p>user_id</p>
      */
@@ -19,6 +23,8 @@ public class GetFeatureEntityResponseBody extends TeaModel {
     public String joinId;
 
     /**
+     * <p>The name of the feature entity.</p>
+     * 
      * <strong>example:</strong>
      * <p>feature_entity_1</p>
      */
@@ -26,6 +32,8 @@ public class GetFeatureEntityResponseBody extends TeaModel {
     public String name;
 
     /**
+     * <p>The Alibaba Cloud account ID of the creator.</p>
+     * 
      * <strong>example:</strong>
      * <p>123456789*****</p>
      */
@@ -33,6 +41,8 @@ public class GetFeatureEntityResponseBody extends TeaModel {
     public String owner;
 
     /**
+     * <p>The ID of the parent feature entity. An empty value or 0 indicates a root feature entity.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -40,6 +50,8 @@ public class GetFeatureEntityResponseBody extends TeaModel {
     public String parentFeatureEntityId;
 
     /**
+     * <p>The name of the parent feature entity.</p>
+     * 
      * <strong>example:</strong>
      * <p>user</p>
      */
@@ -47,6 +59,8 @@ public class GetFeatureEntityResponseBody extends TeaModel {
     public String parentFeatureEntityName;
 
     /**
+     * <p>The join ID of the parent feature entity.</p>
+     * 
      * <strong>example:</strong>
      * <p>user_id</p>
      */
@@ -54,6 +68,8 @@ public class GetFeatureEntityResponseBody extends TeaModel {
     public String parentJoinId;
 
     /**
+     * <p>The project ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>3</p>
      */
@@ -61,6 +77,8 @@ public class GetFeatureEntityResponseBody extends TeaModel {
     public String projectId;
 
     /**
+     * <p>The name of the project.</p>
+     * 
      * <strong>example:</strong>
      * <p>project_1</p>
      */
@@ -68,6 +86,8 @@ public class GetFeatureEntityResponseBody extends TeaModel {
     public String projectName;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>E23EFF09-58AA-5420-934F-8453AE01548D</p>
      */

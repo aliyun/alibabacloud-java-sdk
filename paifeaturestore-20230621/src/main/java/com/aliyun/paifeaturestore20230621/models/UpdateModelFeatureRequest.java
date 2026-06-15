@@ -4,6 +4,9 @@ package com.aliyun.paifeaturestore20230621.models;
 import com.aliyun.tea.*;
 
 public class UpdateModelFeatureRequest extends TeaModel {
+    /**
+     * <p>The list of features.</p>
+     */
     @NameInMap("Features")
     public java.util.List<UpdateModelFeatureRequestFeatures> features;
 
@@ -15,6 +18,8 @@ public class UpdateModelFeatureRequest extends TeaModel {
     public Long labelPriorityLevel;
 
     /**
+     * <p>The label table ID. You can call the ListLabelTables operation to query the label table ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>4</p>
      */
@@ -63,6 +68,8 @@ public class UpdateModelFeatureRequest extends TeaModel {
 
     public static class UpdateModelFeatureRequestFeatures extends TeaModel {
         /**
+         * <p>The feature alias.</p>
+         * 
          * <strong>example:</strong>
          * <p>sex</p>
          */
@@ -70,6 +77,7 @@ public class UpdateModelFeatureRequest extends TeaModel {
         public String aliasName;
 
         /**
+         * <p>The feature view ID. You can call the ListFeatureViews operation to query the feature view ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -79,6 +87,7 @@ public class UpdateModelFeatureRequest extends TeaModel {
         public String featureViewId;
 
         /**
+         * <p>The feature name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -88,6 +97,23 @@ public class UpdateModelFeatureRequest extends TeaModel {
         public String name;
 
         /**
+         * <strong>example:</strong>
+         * <p>cand_seq__</p>
+         */
+        @NameInMap("PrefixName")
+        public String prefixName;
+
+        /**
+         * <p>The feature type. Valid values:</p>
+         * <ul>
+         * <li>INT32</li>
+         * <li>INT64</li>
+         * <li>FLOAT</li>
+         * <li>DOUBLE</li>
+         * <li>STRING</li>
+         * <li>BOOLEAN</li>
+         * <li>TIMESTAMP.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -123,6 +149,14 @@ public class UpdateModelFeatureRequest extends TeaModel {
         }
         public String getName() {
             return this.name;
+        }
+
+        public UpdateModelFeatureRequestFeatures setPrefixName(String prefixName) {
+            this.prefixName = prefixName;
+            return this;
+        }
+        public String getPrefixName() {
+            return this.prefixName;
         }
 
         public UpdateModelFeatureRequestFeatures setType(String type) {

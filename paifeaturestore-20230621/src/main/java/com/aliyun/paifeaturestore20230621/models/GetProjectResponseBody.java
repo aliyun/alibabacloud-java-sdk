@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetProjectResponseBody extends TeaModel {
     /**
+     * <p>The project description.</p>
+     * 
      * <strong>example:</strong>
      * <p>This is a test.</p>
      */
@@ -12,6 +14,8 @@ public class GetProjectResponseBody extends TeaModel {
     public String description;
 
     /**
+     * <p>The number of feature entities.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -19,6 +23,8 @@ public class GetProjectResponseBody extends TeaModel {
     public Integer featureEntityCount;
 
     /**
+     * <p>The number of feature views.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -26,6 +32,8 @@ public class GetProjectResponseBody extends TeaModel {
     public Integer featureViewCount;
 
     /**
+     * <p>The creation time.</p>
+     * 
      * <strong>example:</strong>
      * <p>2021-12-15T23:24:33.132+08:00</p>
      */
@@ -33,6 +41,8 @@ public class GetProjectResponseBody extends TeaModel {
     public String gmtCreateTime;
 
     /**
+     * <p>The modification time.</p>
+     * 
      * <strong>example:</strong>
      * <p>2021-12-15T23:24:33.132+08:00</p>
      */
@@ -40,6 +50,8 @@ public class GetProjectResponseBody extends TeaModel {
     public String gmtModifiedTime;
 
     /**
+     * <p>The number of models.</p>
+     * 
      * <strong>example:</strong>
      * <p>5</p>
      */
@@ -47,6 +59,8 @@ public class GetProjectResponseBody extends TeaModel {
     public Integer modelCount;
 
     /**
+     * <p>The project name.</p>
+     * 
      * <strong>example:</strong>
      * <p>project1</p>
      */
@@ -54,6 +68,8 @@ public class GetProjectResponseBody extends TeaModel {
     public String name;
 
     /**
+     * <p>The offline data source ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>4</p>
      */
@@ -61,6 +77,8 @@ public class GetProjectResponseBody extends TeaModel {
     public String offlineDatasourceId;
 
     /**
+     * <p>The offline data source name.</p>
+     * 
      * <strong>example:</strong>
      * <p>datasource1</p>
      */
@@ -68,6 +86,8 @@ public class GetProjectResponseBody extends TeaModel {
     public String offlineDatasourceName;
 
     /**
+     * <p>The type of the offline data source. For example, <code>MaxCompute</code>.</p>
+     * 
      * <strong>example:</strong>
      * <p>MaxCompute</p>
      */
@@ -75,6 +95,8 @@ public class GetProjectResponseBody extends TeaModel {
     public String offlineDatasourceType;
 
     /**
+     * <p>The offline data lifecycle, in days.</p>
+     * 
      * <strong>example:</strong>
      * <p>90</p>
      */
@@ -82,6 +104,8 @@ public class GetProjectResponseBody extends TeaModel {
     public Integer offlineLifecycle;
 
     /**
+     * <p>The online data source ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>5</p>
      */
@@ -89,6 +113,8 @@ public class GetProjectResponseBody extends TeaModel {
     public String onlineDatasourceId;
 
     /**
+     * <p>The online data source name.</p>
+     * 
      * <strong>example:</strong>
      * <p>datasource2</p>
      */
@@ -96,6 +122,14 @@ public class GetProjectResponseBody extends TeaModel {
     public String onlineDatasourceName;
 
     /**
+     * <p>The online data source type.</p>
+     * <ul>
+     * <li><p>Hologres</p>
+     * </li>
+     * <li><p>Redis</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>Hologres</p>
      */
@@ -103,6 +137,8 @@ public class GetProjectResponseBody extends TeaModel {
     public String onlineDatasourceType;
 
     /**
+     * <p>The Alibaba Cloud account ID of the project owner.</p>
+     * 
      * <strong>example:</strong>
      * <p>1232132543543****</p>
      */
@@ -110,6 +146,8 @@ public class GetProjectResponseBody extends TeaModel {
     public String owner;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>C33E160C-BFCA-5719-B958-942850E949F6</p>
      */
@@ -117,6 +155,8 @@ public class GetProjectResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The workspace ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>35523</p>
      */

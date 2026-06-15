@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListDatasourceTablesRequest extends TeaModel {
     /**
+     * <p>The schema name.</p>
+     * 
      * <strong>example:</strong>
      * <p>default</p>
      */
@@ -12,6 +14,8 @@ public class ListDatasourceTablesRequest extends TeaModel {
     public String schemaName;
 
     /**
+     * <p>Filters the results by table name.</p>
+     * 
      * <strong>example:</strong>
      * <p>table1</p>
      */

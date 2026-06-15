@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListTaskLogsRequest extends TeaModel {
     /**
+     * <p>The page number. The minimum value is 1. The default value is 1.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -12,6 +14,8 @@ public class ListTaskLogsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries to return on each page. Default value: 10.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */

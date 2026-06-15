@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ExportModelFeatureTrainingSetTableResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>0FBBE454-9BD1-5D8F-9129-D14DB7FAFE0B</p>
      */
@@ -12,8 +14,10 @@ public class ExportModelFeatureTrainingSetTableResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The task ID.</p>
+     * 
      * <strong>example:</strong>
-     * <p>1</p>
+     * <p>51</p>
      */
     @NameInMap("TaskId")
     public String taskId;

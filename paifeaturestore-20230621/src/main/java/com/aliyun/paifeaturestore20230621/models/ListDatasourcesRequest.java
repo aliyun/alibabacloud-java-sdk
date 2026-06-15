@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListDatasourcesRequest extends TeaModel {
     /**
+     * <p>The name of the data source.</p>
+     * 
      * <strong>example:</strong>
      * <p>datasource1</p>
      */
@@ -12,6 +14,14 @@ public class ListDatasourcesRequest extends TeaModel {
     public String name;
 
     /**
+     * <p>The sort order. Valid values:</p>
+     * <ul>
+     * <li><p>Asc: ascending order.</p>
+     * </li>
+     * <li><p>Desc: descending order.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>Asc</p>
      */
@@ -19,6 +29,8 @@ public class ListDatasourcesRequest extends TeaModel {
     public String order;
 
     /**
+     * <p>The page number. Pages start from 1. Default value: 1.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -26,6 +38,8 @@ public class ListDatasourcesRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of data sources per page. Default value: 10.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -33,6 +47,8 @@ public class ListDatasourcesRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The field to sort by.</p>
+     * 
      * <strong>example:</strong>
      * <p>GmtModifiedTime</p>
      */
@@ -40,6 +56,16 @@ public class ListDatasourcesRequest extends TeaModel {
     public String sortBy;
 
     /**
+     * <p>The type of the data source. Valid values:</p>
+     * <ul>
+     * <li><p>Hologres</p>
+     * </li>
+     * <li><p>Redis</p>
+     * </li>
+     * <li><p>MaxCompute</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>MaxCompute</p>
      */
@@ -47,6 +73,8 @@ public class ListDatasourcesRequest extends TeaModel {
     public String type;
 
     /**
+     * <p>The ID of the workspace. Call the <a href="https://help.aliyun.com/document_detail/449124.html">ListWorkspaces</a> operation to get the workspace ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>234</p>
      */

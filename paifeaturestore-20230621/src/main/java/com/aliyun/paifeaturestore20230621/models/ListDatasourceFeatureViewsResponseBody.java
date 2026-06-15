@@ -4,16 +4,24 @@ package com.aliyun.paifeaturestore20230621.models;
 import com.aliyun.tea.*;
 
 public class ListDatasourceFeatureViewsResponseBody extends TeaModel {
+    /**
+     * <p>Feature view list.</p>
+     */
     @NameInMap("FeatureViews")
     public java.util.List<ListDatasourceFeatureViewsResponseBodyFeatureViews> featureViews;
 
     /**
+     * <p>Total count.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
     @NameInMap("TotalCount")
     public Long totalCount;
 
+    /**
+     * <p>Overall usage statistics. Only displayed for feature views using FeatureDB.</p>
+     */
     @NameInMap("TotalUsageStatistics")
     public ListDatasourceFeatureViewsResponseBodyTotalUsageStatistics totalUsageStatistics;
 
@@ -65,6 +73,8 @@ public class ListDatasourceFeatureViewsResponseBody extends TeaModel {
 
     public static class ListDatasourceFeatureViewsResponseBodyFeatureViewsUsageStatisticsReadWriteCount extends TeaModel {
         /**
+         * <p>Date.</p>
+         * 
          * <strong>example:</strong>
          * <p>2025-03-18T00:00:00+08:00</p>
          */
@@ -72,6 +82,8 @@ public class ListDatasourceFeatureViewsResponseBody extends TeaModel {
         public String date;
 
         /**
+         * <p>Read count.</p>
+         * 
          * <strong>example:</strong>
          * <p>200</p>
          */
@@ -79,6 +91,8 @@ public class ListDatasourceFeatureViewsResponseBody extends TeaModel {
         public Long readCount;
 
         /**
+         * <p>Write count.</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */
@@ -118,6 +132,8 @@ public class ListDatasourceFeatureViewsResponseBody extends TeaModel {
 
     public static class ListDatasourceFeatureViewsResponseBodyFeatureViewsUsageStatistics extends TeaModel {
         /**
+         * <p>Disk usage.</p>
+         * 
          * <strong>example:</strong>
          * <p>1.23</p>
          */
@@ -125,16 +141,23 @@ public class ListDatasourceFeatureViewsResponseBody extends TeaModel {
         public Double diskUsage;
 
         /**
+         * <p>Memory usage.</p>
+         * 
          * <strong>example:</strong>
          * <p>0.12</p>
          */
         @NameInMap("MemoryUsage")
         public Double memoryUsage;
 
+        /**
+         * <p>Read/write count statistics.</p>
+         */
         @NameInMap("ReadWriteCount")
         public java.util.List<ListDatasourceFeatureViewsResponseBodyFeatureViewsUsageStatisticsReadWriteCount> readWriteCount;
 
         /**
+         * <p>Row count.</p>
+         * 
          * <strong>example:</strong>
          * <p>10000</p>
          */
@@ -182,6 +205,8 @@ public class ListDatasourceFeatureViewsResponseBody extends TeaModel {
 
     public static class ListDatasourceFeatureViewsResponseBodyFeatureViews extends TeaModel {
         /**
+         * <p>Feature view configuration. Only feature views using FeatureDB have values, showing number of shards and number of replicas.</p>
+         * 
          * <strong>example:</strong>
          * <p>{&quot;shard_count&quot;:5,&quot;replication_count&quot;:1}</p>
          */
@@ -189,6 +214,8 @@ public class ListDatasourceFeatureViewsResponseBody extends TeaModel {
         public String config;
 
         /**
+         * <p>Feature entity name.</p>
+         * 
          * <strong>example:</strong>
          * <p>user</p>
          */
@@ -196,6 +223,8 @@ public class ListDatasourceFeatureViewsResponseBody extends TeaModel {
         public String featureEntityName;
 
         /**
+         * <p>Feature view ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>3</p>
          */
@@ -203,6 +232,8 @@ public class ListDatasourceFeatureViewsResponseBody extends TeaModel {
         public String featureViewId;
 
         /**
+         * <p>Feature view name.</p>
+         * 
          * <strong>example:</strong>
          * <p>fv1</p>
          */
@@ -210,6 +241,8 @@ public class ListDatasourceFeatureViewsResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>Project name.</p>
+         * 
          * <strong>example:</strong>
          * <p>p1</p>
          */
@@ -217,6 +250,8 @@ public class ListDatasourceFeatureViewsResponseBody extends TeaModel {
         public String projectName;
 
         /**
+         * <p>Lifecycle. Unit: seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>86400</p>
          */
@@ -224,12 +259,25 @@ public class ListDatasourceFeatureViewsResponseBody extends TeaModel {
         public Integer TTL;
 
         /**
+         * <p>Feature view type.</p>
+         * <ul>
+         * <li><p>Batch - offline feature</p>
+         * </li>
+         * <li><p>Stream - real-time feature</p>
+         * </li>
+         * <li><p>Sequence - sequence feature</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Batch</p>
          */
         @NameInMap("Type")
         public String type;
 
+        /**
+         * <p>Usage statistics. Only displayed for feature views using FeatureDB.</p>
+         */
         @NameInMap("UsageStatistics")
         public ListDatasourceFeatureViewsResponseBodyFeatureViewsUsageStatistics usageStatistics;
 
@@ -306,6 +354,8 @@ public class ListDatasourceFeatureViewsResponseBody extends TeaModel {
 
     public static class ListDatasourceFeatureViewsResponseBodyTotalUsageStatisticsTotalReadWriteCount extends TeaModel {
         /**
+         * <p>Date.</p>
+         * 
          * <strong>example:</strong>
          * <p>2025-03-18T00:00:00+08:00</p>
          */
@@ -313,6 +363,8 @@ public class ListDatasourceFeatureViewsResponseBody extends TeaModel {
         public String date;
 
         /**
+         * <p>Total read count.</p>
+         * 
          * <strong>example:</strong>
          * <p>456</p>
          */
@@ -320,6 +372,8 @@ public class ListDatasourceFeatureViewsResponseBody extends TeaModel {
         public Long totalReadCount;
 
         /**
+         * <p>Total write count.</p>
+         * 
          * <strong>example:</strong>
          * <p>123</p>
          */
@@ -359,6 +413,8 @@ public class ListDatasourceFeatureViewsResponseBody extends TeaModel {
 
     public static class ListDatasourceFeatureViewsResponseBodyTotalUsageStatistics extends TeaModel {
         /**
+         * <p>Total disk usage.</p>
+         * 
          * <strong>example:</strong>
          * <p>12.3</p>
          */
@@ -366,12 +422,17 @@ public class ListDatasourceFeatureViewsResponseBody extends TeaModel {
         public Double totalDiskUsage;
 
         /**
+         * <p>Total memory usage.</p>
+         * 
          * <strong>example:</strong>
          * <p>1.23</p>
          */
         @NameInMap("TotalMemoryUsage")
         public Double totalMemoryUsage;
 
+        /**
+         * <p>Total read/write count statistics.</p>
+         */
         @NameInMap("TotalReadWriteCount")
         public java.util.List<ListDatasourceFeatureViewsResponseBodyTotalUsageStatisticsTotalReadWriteCount> totalReadWriteCount;
 

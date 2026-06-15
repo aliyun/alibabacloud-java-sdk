@@ -4,10 +4,15 @@ package com.aliyun.paifeaturestore20230621.models;
 import com.aliyun.tea.*;
 
 public class ListDatasourcesResponseBody extends TeaModel {
+    /**
+     * <p>The list of data sources.</p>
+     */
     @NameInMap("Datasources")
     public java.util.List<ListDatasourcesResponseBodyDatasources> datasources;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>44933189-493B-5C43-A5C6-11EEC2A43520</p>
      */
@@ -15,6 +20,8 @@ public class ListDatasourcesResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total count of data sources.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -52,6 +59,8 @@ public class ListDatasourcesResponseBody extends TeaModel {
 
     public static class ListDatasourcesResponseBodyDatasources extends TeaModel {
         /**
+         * <p>The resource configuration.</p>
+         * 
          * <strong>example:</strong>
          * <p>{&quot;address&quot;: &quot;&quot;}</p>
          */
@@ -59,6 +68,8 @@ public class ListDatasourcesResponseBody extends TeaModel {
         public String config;
 
         /**
+         * <p>The ID of the data source.</p>
+         * 
          * <strong>example:</strong>
          * <p>3</p>
          */
@@ -66,6 +77,8 @@ public class ListDatasourcesResponseBody extends TeaModel {
         public String datasourceId;
 
         /**
+         * <p>The creation time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2021-12-15T23:24:33.132+08:00</p>
          */
@@ -73,6 +86,8 @@ public class ListDatasourcesResponseBody extends TeaModel {
         public String gmtCreateTime;
 
         /**
+         * <p>The last modified time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2021-12-15T23:24:33.132+08:00</p>
          */
@@ -80,6 +95,8 @@ public class ListDatasourcesResponseBody extends TeaModel {
         public String gmtModifiedTime;
 
         /**
+         * <p>The name of the data source.</p>
+         * 
          * <strong>example:</strong>
          * <p>datasource1</p>
          */
@@ -87,6 +104,16 @@ public class ListDatasourcesResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>The type of the data source.</p>
+         * <ul>
+         * <li><p>Hologres</p>
+         * </li>
+         * <li><p>Redis</p>
+         * </li>
+         * <li><p>MaxCompute</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Hologres</p>
          */
@@ -94,6 +121,8 @@ public class ListDatasourcesResponseBody extends TeaModel {
         public String type;
 
         /**
+         * <p>The resource URI.</p>
+         * 
          * <strong>example:</strong>
          * <p>igraph_instance1</p>
          */
@@ -101,6 +130,8 @@ public class ListDatasourcesResponseBody extends TeaModel {
         public String uri;
 
         /**
+         * <p>The ID of the workspace.</p>
+         * 
          * <strong>example:</strong>
          * <p>32324</p>
          */

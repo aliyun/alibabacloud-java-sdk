@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateLabelTableRequest extends TeaModel {
     /**
+     * <p>The ID of the data source that contains the label table. Call the ListDatasources operation to obtain this ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,12 +15,14 @@ public class CreateLabelTableRequest extends TeaModel {
     public String datasourceId;
 
     /**
+     * <p>The field list.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Fields")
     public java.util.List<CreateLabelTableRequestFields> fields;
 
     /**
+     * <p>The name of the label table.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -29,6 +32,7 @@ public class CreateLabelTableRequest extends TeaModel {
     public String name;
 
     /**
+     * <p>The project ID. Call the ListProjects operation to obtain this ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -83,12 +87,19 @@ public class CreateLabelTableRequest extends TeaModel {
         public String alignedEntityName;
 
         /**
+         * <p>The field attributes. Valid values include:</p>
+         * <p>● <code>Partition</code>: A partition field.</p>
+         * <p>● <code>FeatureField</code>: A feature field.</p>
+         * <p>● <code>FeatureGenerationReserveField</code>: A reserved field for Feature Generation (FG).</p>
+         * <p>● <code>EventTime</code>: The event time.</p>
+         * <p>● <code>LabelField</code>: A label field.</p>
          * <p>This parameter is required.</p>
          */
         @NameInMap("Attributes")
         public java.util.List<String> attributes;
 
         /**
+         * <p>The name of the field.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -98,6 +109,7 @@ public class CreateLabelTableRequest extends TeaModel {
         public String name;
 
         /**
+         * <p>The data type of the field.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

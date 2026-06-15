@@ -4,10 +4,15 @@ package com.aliyun.paifeaturestore20230621.models;
 import com.aliyun.tea.*;
 
 public class ListFeatureEntitiesResponseBody extends TeaModel {
+    /**
+     * <p>A list of feature entities.</p>
+     */
     @NameInMap("FeatureEntities")
     public java.util.List<ListFeatureEntitiesResponseBodyFeatureEntities> featureEntities;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>37D19490-AB69-567D-A852-407C94E510E9</p>
      */
@@ -15,6 +20,8 @@ public class ListFeatureEntitiesResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total number of feature entities.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -52,6 +59,8 @@ public class ListFeatureEntitiesResponseBody extends TeaModel {
 
     public static class ListFeatureEntitiesResponseBodyFeatureEntities extends TeaModel {
         /**
+         * <p>The feature entity ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>3</p>
          */
@@ -59,6 +68,8 @@ public class ListFeatureEntitiesResponseBody extends TeaModel {
         public String featureEntityId;
 
         /**
+         * <p>The creation time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2021-12-15T23:24:33.132+08:00</p>
          */
@@ -66,6 +77,8 @@ public class ListFeatureEntitiesResponseBody extends TeaModel {
         public String gmtCreateTime;
 
         /**
+         * <p>The join ID that links the feature entity to a feature view.</p>
+         * 
          * <strong>example:</strong>
          * <p>user_id</p>
          */
@@ -73,6 +86,8 @@ public class ListFeatureEntitiesResponseBody extends TeaModel {
         public String joinId;
 
         /**
+         * <p>The feature entity name.</p>
+         * 
          * <strong>example:</strong>
          * <p>feature_entity_1</p>
          */
@@ -80,6 +95,8 @@ public class ListFeatureEntitiesResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>The owner\&quot;s Alibaba Cloud account ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>123456789****</p>
          */
@@ -87,6 +104,8 @@ public class ListFeatureEntitiesResponseBody extends TeaModel {
         public String owner;
 
         /**
+         * <p>The parent feature entity ID. This value is empty or 0 for a root feature entity.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -94,6 +113,8 @@ public class ListFeatureEntitiesResponseBody extends TeaModel {
         public String parentFeatureEntityId;
 
         /**
+         * <p>The parent feature entity name.</p>
+         * 
          * <strong>example:</strong>
          * <p>user</p>
          */
@@ -101,6 +122,8 @@ public class ListFeatureEntitiesResponseBody extends TeaModel {
         public String parentFeatureEntityName;
 
         /**
+         * <p>The join ID of the parent feature entity.</p>
+         * 
          * <strong>example:</strong>
          * <p>user_id</p>
          */
@@ -108,6 +131,8 @@ public class ListFeatureEntitiesResponseBody extends TeaModel {
         public String parentJoinId;
 
         /**
+         * <p>The project ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>3</p>
          */
@@ -115,6 +140,8 @@ public class ListFeatureEntitiesResponseBody extends TeaModel {
         public String projectId;
 
         /**
+         * <p>The project name.</p>
+         * 
          * <strong>example:</strong>
          * <p>project_1</p>
          */

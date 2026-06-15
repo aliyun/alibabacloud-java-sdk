@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListLLMConfigsResponseBody extends TeaModel {
     /**
+     * <p>A list of LLM configuration objects.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>if can be null:</strong>
@@ -14,6 +15,8 @@ public class ListLLMConfigsResponseBody extends TeaModel {
     public java.util.List<ListLLMConfigsResponseBodyLLMConfigs> LLMConfigs;
 
     /**
+     * <p>The maximum number of results returned in this request.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -21,6 +24,8 @@ public class ListLLMConfigsResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>The token for retrieving the next page of results. If this parameter is not returned, no more results are available. To retrieve the next page, pass this value in the <code>NextToken</code> parameter of a subsequent request.</p>
+     * 
      * <strong>example:</strong>
      * <p>AAAAAV3MpHK1AP0pfERHZN5pu6mbU5D/SFHCHMApYkMcWlp5</p>
      */
@@ -28,7 +33,7 @@ public class ListLLMConfigsResponseBody extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>898DB17C-09E9-5C41-909D-269BA183EB92</p>
@@ -37,6 +42,8 @@ public class ListLLMConfigsResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total count.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -90,6 +97,8 @@ public class ListLLMConfigsResponseBody extends TeaModel {
 
     public static class ListLLMConfigsResponseBodyLLMConfigs extends TeaModel {
         /**
+         * <p>The API key.</p>
+         * 
          * <strong>example:</strong>
          * <p>apikey-abcdxy</p>
          */
@@ -97,6 +106,8 @@ public class ListLLMConfigsResponseBody extends TeaModel {
         public String apiKey;
 
         /**
+         * <p>The base URL for API calls.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="https://dashscope.aliyuncs.com/compatible-mode/v1">https://dashscope.aliyuncs.com/compatible-mode/v1</a></p>
          */
@@ -104,6 +115,8 @@ public class ListLLMConfigsResponseBody extends TeaModel {
         public String baseUrl;
 
         /**
+         * <p>The batch size.</p>
+         * 
          * <strong>example:</strong>
          * <p>8</p>
          */
@@ -111,16 +124,23 @@ public class ListLLMConfigsResponseBody extends TeaModel {
         public Integer batchSize;
 
         /**
+         * <p>The embedding dimension. If this parameter is empty or set to 0, the system uses the model\&quot;s default dimension.</p>
+         * 
          * <strong>example:</strong>
          * <p>1024</p>
          */
         @NameInMap("EmbeddingDimension")
         public Integer embeddingDimension;
 
+        /**
+         * <p>Specifies whether to enable the Fusion feature.</p>
+         */
         @NameInMap("EnableFusion")
         public Boolean enableFusion;
 
         /**
+         * <p>The creation time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2023-07-04T11:26:09.036+08:00</p>
          */
@@ -128,6 +148,8 @@ public class ListLLMConfigsResponseBody extends TeaModel {
         public String gmtCreateTime;
 
         /**
+         * <p>The modification time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2023-07-04T11:26:09.036+08:00</p>
          */
@@ -135,6 +157,8 @@ public class ListLLMConfigsResponseBody extends TeaModel {
         public String gmtModifiedTime;
 
         /**
+         * <p>The LLM configuration ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>llm_config1</p>
          */
@@ -142,6 +166,8 @@ public class ListLLMConfigsResponseBody extends TeaModel {
         public String LLMConfigId;
 
         /**
+         * <p>The maximum number of tokens to process for a single input.</p>
+         * 
          * <strong>example:</strong>
          * <p>2048</p>
          */
@@ -149,16 +175,23 @@ public class ListLLMConfigsResponseBody extends TeaModel {
         public Integer maxTokens;
 
         /**
+         * <p>The model name.</p>
+         * 
          * <strong>example:</strong>
          * <p>text-embedding-v1</p>
          */
         @NameInMap("Model")
         public String model;
 
+        /**
+         * <p>The model type.</p>
+         */
         @NameInMap("ModelType")
         public String modelType;
 
         /**
+         * <p>The name of the LLM configuration.</p>
+         * 
          * <strong>example:</strong>
          * <p>llm_config_name1</p>
          */
@@ -166,6 +199,8 @@ public class ListLLMConfigsResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>The resource group ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>rg-aek2vtzqjaohzqi</p>
          */
@@ -173,6 +208,8 @@ public class ListLLMConfigsResponseBody extends TeaModel {
         public String resourceGroupId;
 
         /**
+         * <p>The maximum number of requests per second (RPS).</p>
+         * 
          * <strong>example:</strong>
          * <p>30</p>
          */
@@ -180,6 +217,8 @@ public class ListLLMConfigsResponseBody extends TeaModel {
         public Integer rps;
 
         /**
+         * <p>The workspace ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>234</p>
          */

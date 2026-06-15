@@ -28,7 +28,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>检测资源连接状态。</p>
+     * <p>Tests connectivity to a data source.</p>
      * 
      * @param request CheckInstanceDatasourceRequest
      * @param headers map
@@ -70,7 +70,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>检测资源连接状态。</p>
+     * <p>Tests connectivity to a data source.</p>
      * 
      * @param request CheckInstanceDatasourceRequest
      * @return CheckInstanceDatasourceResponse
@@ -83,7 +83,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>检查FG配置内容是否正确，是否满足所有规则。</p>
+     * <p>Verify that the FG configuration is correct and meets all rules.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -109,7 +109,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>检查FG配置内容是否正确，是否满足所有规则。</p>
+     * <p>Verify that the FG configuration is correct and meets all rules.</p>
      * @return CheckModelFeatureFGFeatureResponse
      */
     public CheckModelFeatureFGFeatureResponse checkModelFeatureFGFeature(String InstanceId, String ModelFeatureId) throws Exception {
@@ -120,7 +120,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Register a datasource under a FeatureStore Instance. A datasource provides offline storage (<strong>MaxCompute</strong>) or online storage (<strong>Hologres</strong>, <strong>TableStore</strong>, or <strong>FeatureDB</strong>) for projects in the Instance.</p>
+     * <p>Registers a datasource in a FeatureStore instance. A datasource provides offline or online storage for a project.</p>
      * 
      * @param request CreateDatasourceRequest
      * @param headers map
@@ -170,7 +170,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Register a datasource under a FeatureStore Instance. A datasource provides offline storage (<strong>MaxCompute</strong>) or online storage (<strong>Hologres</strong>, <strong>TableStore</strong>, or <strong>FeatureDB</strong>) for projects in the Instance.</p>
+     * <p>Registers a datasource in a FeatureStore instance. A datasource provides offline or online storage for a project.</p>
      * 
      * @param request CreateDatasourceRequest
      * @return CreateDatasourceResponse
@@ -183,7 +183,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建特征实体</p>
+     * <p>Creates a feature entity. A feature entity defines a join key that links multiple feature views to it, enabling feature joining.</p>
      * 
      * @param request CreateFeatureEntityRequest
      * @param headers map
@@ -229,7 +229,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建特征实体</p>
+     * <p>Creates a feature entity. A feature entity defines a join key that links multiple feature views to it, enabling feature joining.</p>
      * 
      * @param request CreateFeatureEntityRequest
      * @return CreateFeatureEntityResponse
@@ -242,7 +242,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建特征视图。</p>
+     * <p>You can create three types of feature views: offline, real-time, and behavior sequence. Each feature view uses fields to define its structure and links to a feature entity.</p>
      * 
      * @param request CreateFeatureViewRequest
      * @param headers map
@@ -324,7 +324,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建特征视图。</p>
+     * <p>You can create three types of feature views: offline, real-time, and behavior sequence. Each feature view uses fields to define its structure and links to a feature entity.</p>
      * 
      * @param request CreateFeatureViewRequest
      * @return CreateFeatureViewResponse
@@ -337,7 +337,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建Feature Store实例。</p>
+     * <p>Creates a FeatureStore instance. This operation is idempotent. If an instance is already running or initializing in the same account, this operation returns the existing instance ID.</p>
      * 
      * @param request CreateInstanceRequest
      * @param headers map
@@ -371,7 +371,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建Feature Store实例。</p>
+     * <p>Creates a FeatureStore instance. This operation is idempotent. If an instance is already running or initializing in the same account, this operation returns the existing instance ID.</p>
      * 
      * @param request CreateInstanceRequest
      * @return CreateInstanceResponse
@@ -384,7 +384,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建大模型调用信息配置</p>
+     * <p>Creates an LLM configuration that contains the call parameters and API key for an embedding model. During creation, the service validates the ApiKey and Model. For a DashScope model, the EmbeddingDimension must match one of the fixed, valid dimensions supported by the model.</p>
      * 
      * @param request CreateLLMConfigRequest
      * @param headers map
@@ -458,7 +458,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建大模型调用信息配置</p>
+     * <p>Creates an LLM configuration that contains the call parameters and API key for an embedding model. During creation, the service validates the ApiKey and Model. For a DashScope model, the EmbeddingDimension must match one of the fixed, valid dimensions supported by the model.</p>
      * 
      * @param request CreateLLMConfigRequest
      * @return CreateLLMConfigResponse
@@ -471,7 +471,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建label表</p>
+     * <p>Creates a label table. A label table defines the schema for label data referenced by model features.</p>
      * 
      * @param request CreateLabelTableRequest
      * @param headers map
@@ -517,7 +517,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建label表</p>
+     * <p>Creates a label table. A label table defines the schema for label data referenced by model features.</p>
      * 
      * @param request CreateLabelTableRequest
      * @return CreateLabelTableResponse
@@ -530,7 +530,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建模型特征。</p>
+     * <p>Creates a model feature. A model feature associates a label table with a set of feature view fields. It is used to generate the training dataset table required for model training and to specify the feature set used for model inference.</p>
      * 
      * @param request CreateModelFeatureRequest
      * @param headers map
@@ -584,7 +584,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建模型特征。</p>
+     * <p>Creates a model feature. A model feature associates a label table with a set of feature view fields. It is used to generate the training dataset table required for model training and to specify the feature set used for model inference.</p>
      * 
      * @param request CreateModelFeatureRequest
      * @return CreateModelFeatureResponse
@@ -597,7 +597,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Create a FeatureStore project under a PAI workspace. A project groups FeatureEntities, FeatureViews, and ModelFeatures sharing one <strong>MaxCompute</strong> offline datasource and one online datasource (<strong>Hologres</strong>, <strong>TableStore</strong>, or <strong>FeatureDB</strong>).</p>
+     * <p>Creates a FeatureStore project. A project is a container for feature entities, feature views, and model features.</p>
      * 
      * @param request CreateProjectRequest
      * @param headers map
@@ -651,7 +651,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Create a FeatureStore project under a PAI workspace. A project groups FeatureEntities, FeatureViews, and ModelFeatures sharing one <strong>MaxCompute</strong> offline datasource and one online datasource (<strong>Hologres</strong>, <strong>TableStore</strong>, or <strong>FeatureDB</strong>).</p>
+     * <p>Creates a FeatureStore project. A project is a container for feature entities, feature views, and model features.</p>
      * 
      * @param request CreateProjectRequest
      * @return CreateProjectResponse
@@ -664,7 +664,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建feature store服务账户角色</p>
+     * <p>Creates a service-linked role that authorizes the FeatureStore service to access other cloud resources of the user. Returns a conflict error if the role already exists.</p>
      * 
      * @param request CreateServiceIdentityRoleRequest
      * @param headers map
@@ -698,7 +698,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建feature store服务账户角色</p>
+     * <p>Creates a service-linked role that authorizes the FeatureStore service to access other cloud resources of the user. Returns a conflict error if the role already exists.</p>
      * 
      * @param request CreateServiceIdentityRoleRequest
      * @return CreateServiceIdentityRoleResponse
@@ -711,7 +711,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Delete a datasource from a FeatureStore Instance.</p>
+     * <p>Deletes a datasource from a FeatureStore instance.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -737,7 +737,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Delete a datasource from a FeatureStore Instance.</p>
+     * <p>Deletes a datasource from a FeatureStore instance.</p>
      * @return DeleteDatasourceResponse
      */
     public DeleteDatasourceResponse deleteDatasource(String InstanceId, String DatasourceId) throws Exception {
@@ -748,7 +748,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除指定特征实体</p>
+     * <p>Deletes a feature entity.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -774,7 +774,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除指定特征实体</p>
+     * <p>Deletes a feature entity.</p>
      * @return DeleteFeatureEntityResponse
      */
     public DeleteFeatureEntityResponse deleteFeatureEntity(String InstanceId, String FeatureEntityId) throws Exception {
@@ -785,7 +785,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除指定特征视图。</p>
+     * <p>Deletes a feature view. A feature view cannot be deleted if it is referenced by a model feature. To delete the feature view, you must first delete the associated model feature.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -811,7 +811,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除指定特征视图。</p>
+     * <p>Deletes a feature view. A feature view cannot be deleted if it is referenced by a model feature. To delete the feature view, you must first delete the associated model feature.</p>
      * @return DeleteFeatureViewResponse
      */
     public DeleteFeatureViewResponse deleteFeatureView(String InstanceId, String FeatureViewId) throws Exception {
@@ -822,7 +822,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除大模型调用信息配置</p>
+     * <p>Deletes an LLM call configuration. You cannot delete a configuration referenced by a feature view. You must first delete the associated feature view.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -848,7 +848,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除大模型调用信息配置</p>
+     * <p>Deletes an LLM call configuration. You cannot delete a configuration referenced by a feature view. You must first delete the associated feature view.</p>
      * @return DeleteLLMConfigResponse
      */
     public DeleteLLMConfigResponse deleteLLMConfig(String InstanceId, String LLMConfigId) throws Exception {
@@ -859,7 +859,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除label表</p>
+     * <p>Deletes a label table. You cannot delete a label table that is referenced by a model feature. Delete the associated model feature first.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -885,7 +885,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除label表</p>
+     * <p>Deletes a label table. You cannot delete a label table that is referenced by a model feature. Delete the associated model feature first.</p>
      * @return DeleteLabelTableResponse
      */
     public DeleteLabelTableResponse deleteLabelTable(String InstanceId, String LabelTableId) throws Exception {
@@ -896,7 +896,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除指定模型特征。</p>
+     * <p>Deletes a model feature and its associated training set table.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -922,7 +922,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除指定模型特征。</p>
+     * <p>Deletes a model feature and its associated training set table.</p>
      * @return DeleteModelFeatureResponse
      */
     public DeleteModelFeatureResponse deleteModelFeature(String InstanceId, String ModelFeatureId) throws Exception {
@@ -933,7 +933,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除指定Feature Store项目。</p>
+     * <p>Deletes a FeatureStore project.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -959,7 +959,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除指定Feature Store项目。</p>
+     * <p>Deletes a FeatureStore project.</p>
      * @return DeleteProjectResponse
      */
     public DeleteProjectResponse deleteProject(String InstanceId, String ProjectId) throws Exception {
@@ -970,7 +970,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>导出训练集表。</p>
+     * <p>Export a training set table for model features. Create an export task by configuring the Label table input, the data source partition for each feature view, and the training set output partition.</p>
      * 
      * @param request ExportModelFeatureTrainingSetTableRequest
      * @param headers map
@@ -1020,7 +1020,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>导出训练集表。</p>
+     * <p>Export a training set table for model features. Create an export task by configuring the Label table input, the data source partition for each feature view, and the training set output partition.</p>
      * 
      * @param request ExportModelFeatureTrainingSetTableRequest
      * @return ExportModelFeatureTrainingSetTableResponse
@@ -1033,7 +1033,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Get the details of a datasource, including its type, connection info, and Config.</p>
+     * <p>Gets the detailed information about a data source, including its type, connection information, and configuration.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -1059,7 +1059,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Get the details of a datasource, including its type, connection info, and Config.</p>
+     * <p>Gets the detailed information about a data source, including its type, connection information, and configuration.</p>
      * @return GetDatasourceResponse
      */
     public GetDatasourceResponse getDatasource(String InstanceId, String DatasourceId) throws Exception {
@@ -1070,7 +1070,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取数据源下指定表的详细信息。</p>
+     * <p>Gets the field information for a specified table in a data source. This operation supports only MaxCompute data sources.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -1096,7 +1096,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取数据源下指定表的详细信息。</p>
+     * <p>Gets the field information for a specified table in a data source. This operation supports only MaxCompute data sources.</p>
      * @return GetDatasourceTableResponse
      */
     public GetDatasourceTableResponse getDatasourceTable(String InstanceId, String DatasourceId, String TableName) throws Exception {
@@ -1107,7 +1107,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取特征实体详细信息</p>
+     * <p>Retrieves the details of a feature entity.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -1133,7 +1133,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取特征实体详细信息</p>
+     * <p>Retrieves the details of a feature entity.</p>
      * @return GetFeatureEntityResponse
      */
     public GetFeatureEntityResponse getFeatureEntity(String InstanceId, String FeatureEntityId) throws Exception {
@@ -1144,7 +1144,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取特征视图详细信息。</p>
+     * <p>Gets the details of a feature view, including its field definitions, data source binding, and synchronization status.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -1170,7 +1170,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取特征视图详细信息。</p>
+     * <p>Gets the details of a feature view, including its field definitions, data source binding, and synchronization status.</p>
      * @return GetFeatureViewResponse
      */
     public GetFeatureViewResponse getFeatureView(String InstanceId, String FeatureViewId) throws Exception {
@@ -1181,7 +1181,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取实例详细信息</p>
+     * <p>Retrieves the details of a FeatureStore instance.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -1207,7 +1207,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取实例详细信息</p>
+     * <p>Retrieves the details of a FeatureStore instance.</p>
      * @return GetInstanceResponse
      */
     public GetInstanceResponse getInstance(String InstanceId) throws Exception {
@@ -1218,7 +1218,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取 LLMConfig 信息</p>
+     * <p>Retrieves the details of an LLM call configuration.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -1244,7 +1244,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取 LLMConfig 信息</p>
+     * <p>Retrieves the details of an LLM call configuration.</p>
      * @return GetLLMConfigResponse
      */
     public GetLLMConfigResponse getLLMConfig(String InstanceId, String LLMConfigId, String RegionId) throws Exception {
@@ -1255,7 +1255,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取Label表详细信息。</p>
+     * <p>Retrieves the details of a label table, including its field definitions and related models.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -1281,7 +1281,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取Label表详细信息。</p>
+     * <p>Retrieves the details of a label table, including its field definitions and related models.</p>
      * @return GetLabelTableResponse
      */
     public GetLabelTableResponse getLabelTable(String InstanceId, String LabelTableId) throws Exception {
@@ -1292,7 +1292,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取模型特征详情。</p>
+     * <p>Retrieves detailed information about a model feature, including the selected feature list, lineage relationships, and training set export script.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -1318,7 +1318,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取模型特征详情。</p>
+     * <p>Retrieves detailed information about a model feature, including the selected feature list, lineage relationships, and training set export script.</p>
      * @return GetModelFeatureResponse
      */
     public GetModelFeatureResponse getModelFeature(String InstanceId, String ModelFeatureId) throws Exception {
@@ -1329,7 +1329,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取模型特征的FG特征配置信息。</p>
+     * <p>Retrieves the Feature Generation (FG) feature configuration of a model feature.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -1355,7 +1355,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取模型特征的FG特征配置信息。</p>
+     * <p>Retrieves the Feature Generation (FG) feature configuration of a model feature.</p>
      * @return GetModelFeatureFGFeatureResponse
      */
     public GetModelFeatureFGFeatureResponse getModelFeatureFGFeature(String InstanceId, String ModelFeatureId) throws Exception {
@@ -1366,7 +1366,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取模型特征的fg.json文件配置信息。</p>
+     * <p>Retrieves the fg.json file configuration for a model feature.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -1392,7 +1392,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取模型特征的fg.json文件配置信息。</p>
+     * <p>Retrieves the fg.json file configuration for a model feature.</p>
      * @return GetModelFeatureFGInfoResponse
      */
     public GetModelFeatureFGInfoResponse getModelFeatureFGInfo(String InstanceId, String ModelFeatureId) throws Exception {
@@ -1403,7 +1403,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取指定Feature Store项目详细信息。</p>
+     * <p>Gets the details of a project, including its data source bindings and resource counts.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -1429,7 +1429,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取指定Feature Store项目详细信息。</p>
+     * <p>Gets the details of a project, including its data source bindings and resource counts.</p>
      * @return GetProjectResponse
      */
     public GetProjectResponse getProject(String InstanceId, String ProjectId) throws Exception {
@@ -1440,7 +1440,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取项目下特征实体详细信息</p>
+     * <p>Retrieve details of a feature entity in a project by name.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -1466,7 +1466,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取项目下特征实体详细信息</p>
+     * <p>Retrieve details of a feature entity in a project by name.</p>
      * @return GetProjectFeatureEntityResponse
      */
     public GetProjectFeatureEntityResponse getProjectFeatureEntity(String InstanceId, String ProjectId, String FeatureEntityName) throws Exception {
@@ -1477,7 +1477,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取feature store服务账户角色。</p>
+     * <p>Queries the details of a service-linked role and verifies whether the role exists and is available.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -1503,7 +1503,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取feature store服务账户角色。</p>
+     * <p>Queries the details of a service-linked role and verifies whether the role exists and is available.</p>
      * @return GetServiceIdentityRoleResponse
      */
     public GetServiceIdentityRoleResponse getServiceIdentityRole(String RoleName) throws Exception {
@@ -1514,7 +1514,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取任务详情</p>
+     * <p>Gets the details of an asynchronous task.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -1540,7 +1540,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取任务详情</p>
+     * <p>Gets the details of an asynchronous task.</p>
      * @return GetTaskResponse
      */
     public GetTaskResponse getTask(String InstanceId, String TaskId) throws Exception {
@@ -1551,7 +1551,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取数据源下所有特征视图信息。</p>
+     * <p>Retrieve all feature view information from the data source.</p>
      * 
      * @param request ListDatasourceFeatureViewsRequest
      * @param headers map
@@ -1633,7 +1633,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取数据源下所有特征视图信息。</p>
+     * <p>Retrieve all feature view information from the data source.</p>
      * 
      * @param request ListDatasourceFeatureViewsRequest
      * @return ListDatasourceFeatureViewsResponse
@@ -1646,7 +1646,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取数据源下所有表。</p>
+     * <p>Lists the tables in a datasource. This operation supports only MaxCompute datasources.</p>
      * 
      * @param request ListDatasourceTablesRequest
      * @param headers map
@@ -1684,7 +1684,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取数据源下所有表。</p>
+     * <p>Lists the tables in a datasource. This operation supports only MaxCompute datasources.</p>
      * 
      * @param request ListDatasourceTablesRequest
      * @return ListDatasourceTablesResponse
@@ -1697,7 +1697,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>List datasources under a FeatureStore Instance, filtered by workspace, type, or name.</p>
+     * <p>Lists the data sources in a FeatureStore instance. You can filter the results by workspace, type, and name.</p>
      * 
      * @param request ListDatasourcesRequest
      * @param headers map
@@ -1755,7 +1755,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>List datasources under a FeatureStore Instance, filtered by workspace, type, or name.</p>
+     * <p>Lists the data sources in a FeatureStore instance. You can filter the results by workspace, type, and name.</p>
      * 
      * @param request ListDatasourcesRequest
      * @return ListDatasourcesResponse
@@ -1768,7 +1768,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建特征实体列表</p>
+     * <p>Lists the feature entities in a FeatureStore instance. You can filter the results by project, name, owner, and parent feature entity.</p>
      * 
      * @param tmpReq ListFeatureEntitiesRequest
      * @param headers map
@@ -1840,7 +1840,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建特征实体列表</p>
+     * <p>Lists the feature entities in a FeatureStore instance. You can filter the results by project, name, owner, and parent feature entity.</p>
      * 
      * @param request ListFeatureEntitiesRequest
      * @return ListFeatureEntitiesResponse
@@ -1853,7 +1853,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取特征字段血缘关系。</p>
+     * <p>Retrieves the relationships for a specific field in a feature view, returning a list of models that reference the field and the names of the associated online and offline tables.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -1879,7 +1879,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取特征字段血缘关系。</p>
+     * <p>Retrieves the relationships for a specific field in a feature view, returning a list of models that reference the field and the names of the associated online and offline tables.</p>
      * @return ListFeatureViewFieldRelationshipsResponse
      */
     public ListFeatureViewFieldRelationshipsResponse listFeatureViewFieldRelationships(String InstanceId, String FeatureViewId, String FieldName) throws Exception {
@@ -1890,7 +1890,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取特征视图下的在线特征数据。</p>
+     * <p>Retrieves online features from a feature view based on one or more join IDs. For each join ID provided, the operation returns the corresponding feature fields as key-value pairs.</p>
      * 
      * @param tmpReq ListFeatureViewOnlineFeaturesRequest
      * @param headers map
@@ -1934,7 +1934,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取特征视图下的在线特征数据。</p>
+     * <p>Retrieves online features from a feature view based on one or more join IDs. For each join ID provided, the operation returns the corresponding feature fields as key-value pairs.</p>
      * 
      * @param request ListFeatureViewOnlineFeaturesRequest
      * @return ListFeatureViewOnlineFeaturesResponse
@@ -1947,7 +1947,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取特征视图血缘关系。</p>
+     * <p>Lists the relationships for a feature view, including the models that reference it.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -1973,7 +1973,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取特征视图血缘关系。</p>
+     * <p>Lists the relationships for a feature view, including the models that reference it.</p>
      * @return ListFeatureViewRelationshipsResponse
      */
     public ListFeatureViewRelationshipsResponse listFeatureViewRelationships(String InstanceId, String FeatureViewId) throws Exception {
@@ -1984,7 +1984,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取特征视图列表。</p>
+     * <p>Lists feature views, filterable by project, name, type, tag, and feature name.</p>
      * 
      * @param tmpReq ListFeatureViewsRequest
      * @param headers map
@@ -2064,7 +2064,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取特征视图列表。</p>
+     * <p>Lists feature views, filterable by project, name, type, tag, and feature name.</p>
      * 
      * @param request ListFeatureViewsRequest
      * @return ListFeatureViewsResponse
@@ -2077,7 +2077,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取Feature Store实例列表。</p>
+     * <p>Lists FeatureStore instances in the current account. You can filter the instances by status.</p>
      * 
      * @param request ListInstancesRequest
      * @param headers map
@@ -2127,7 +2127,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取Feature Store实例列表。</p>
+     * <p>Lists FeatureStore instances in the current account. You can filter the instances by status.</p>
      * 
      * @param request ListInstancesRequest
      * @return ListInstancesResponse
@@ -2140,7 +2140,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取大模型调用信息配置</p>
+     * <p>Lists LLM call configurations.</p>
      * 
      * @param request ListLLMConfigsRequest
      * @param headers map
@@ -2202,7 +2202,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取大模型调用信息配置</p>
+     * <p>Lists LLM call configurations.</p>
      * 
      * @param request ListLLMConfigsRequest
      * @return ListLLMConfigsResponse
@@ -2215,7 +2215,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取Label表列表。</p>
+     * <p>Lists label tables, filterable by project, name, owner, and ID.</p>
      * 
      * @param tmpReq ListLabelTablesRequest
      * @param headers map
@@ -2283,7 +2283,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取Label表列表。</p>
+     * <p>Lists label tables, filterable by project, name, owner, and ID.</p>
      * 
      * @param request ListLabelTablesRequest
      * @return ListLabelTablesResponse
@@ -2296,7 +2296,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取注册FG特征时模型特征下可选的所有特征。</p>
+     * <p>Lists the available features for a model feature when you register a feature group (FG).</p>
      * 
      * @param request ListModelFeatureAvailableFeaturesRequest
      * @param headers map
@@ -2330,7 +2330,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取注册FG特征时模型特征下可选的所有特征。</p>
+     * <p>Lists the available features for a model feature when you register a feature group (FG).</p>
      * 
      * @param request ListModelFeatureAvailableFeaturesRequest
      * @return ListModelFeatureAvailableFeaturesResponse
@@ -2343,7 +2343,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取模型特征列表。</p>
+     * <p>Lists model features, with sorting, pagination, and filtering by project, name, creator, and ID.</p>
      * 
      * @param tmpReq ListModelFeaturesRequest
      * @param headers map
@@ -2411,7 +2411,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取模型特征列表。</p>
+     * <p>Lists model features, with sorting, pagination, and filtering by project, name, creator, and ID.</p>
      * 
      * @param request ListModelFeaturesRequest
      * @return ListModelFeaturesResponse
@@ -2424,7 +2424,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取项目下的所有特征视图、特征信息。</p>
+     * <p>Lists all feature views and their available features in a project. Use this operation to select feature views and features for the CreateModelFeature and UpdateModelFeature operations.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -2450,7 +2450,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取项目下的所有特征视图、特征信息。</p>
+     * <p>Lists all feature views and their available features in a project. Use this operation to select feature views and features for the CreateModelFeature and UpdateModelFeature operations.</p>
      * @return ListProjectFeatureViewsResponse
      */
     public ListProjectFeatureViewsResponse listProjectFeatureViews(String InstanceId, String ProjectId) throws Exception {
@@ -2461,7 +2461,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取项目下所有特征信息</p>
+     * <p>Lists all features in a project. This operation supports filtering by name, alias, and feature view, as well as sorting and pagination. The response includes the data type, parent feature view, and the number of model features that reference each feature.</p>
      * 
      * @param request ListProjectFeaturesRequest
      * @param headers map
@@ -2519,7 +2519,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取项目下所有特征信息</p>
+     * <p>Lists all features in a project. This operation supports filtering by name, alias, and feature view, as well as sorting and pagination. The response includes the data type, parent feature view, and the number of model features that reference each feature.</p>
      * 
      * @param request ListProjectFeaturesRequest
      * @return ListProjectFeaturesResponse
@@ -2532,7 +2532,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取Feature Store项目列表。</p>
+     * <p>Lists projects in a Feature Store instance, filterable by name, workspace, and owner.</p>
      * 
      * @param tmpReq ListProjectsRequest
      * @param headers map
@@ -2600,7 +2600,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取Feature Store项目列表。</p>
+     * <p>Lists projects in a Feature Store instance, filterable by name, workspace, and owner.</p>
      * 
      * @param request ListProjectsRequest
      * @return ListProjectsResponse
@@ -2613,7 +2613,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取任务日志列表</p>
+     * <p>Lists the execution logs of an asynchronous task. This operation supports pagination.</p>
      * 
      * @param request ListTaskLogsRequest
      * @param headers map
@@ -2651,7 +2651,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取任务日志列表</p>
+     * <p>Lists the execution logs of an asynchronous task. This operation supports pagination.</p>
      * 
      * @param request ListTaskLogsRequest
      * @return ListTaskLogsResponse
@@ -2664,7 +2664,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取任务列表</p>
+     * <p>Lists asynchronous tasks for an instance, supporting pagination and filtering by project, object type, and status.</p>
      * 
      * @param tmpReq ListTasksRequest
      * @param headers map
@@ -2732,7 +2732,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取任务列表</p>
+     * <p>Lists asynchronous tasks for an instance, supporting pagination and filtering by project, object type, and status.</p>
      * 
      * @param request ListTasksRequest
      * @return ListTasksResponse
@@ -2745,7 +2745,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>将特征视图的离线数据发布/同步到线上。</p>
+     * <p>Creates a data synchronization task to synchronize data from a feature view\&quot;s offline table to its online store.</p>
      * 
      * @param request PublishFeatureViewTableRequest
      * @param headers map
@@ -2795,7 +2795,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>将特征视图的离线数据发布/同步到线上。</p>
+     * <p>Creates a data synchronization task to synchronize data from a feature view\&quot;s offline table to its online store.</p>
      * 
      * @param request PublishFeatureViewTableRequest
      * @return PublishFeatureViewTableResponse
@@ -2808,7 +2808,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>停止任务。</p>
+     * <p>Stops an asynchronous task. You can only stop tasks in the Initializing or Running state.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -2834,7 +2834,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>停止任务。</p>
+     * <p>Stops an asynchronous task. You can only stop tasks in the Initializing or Running state.</p>
      * @return StopTaskResponse
      */
     public StopTaskResponse stopTask(String InstanceId, String TaskId) throws Exception {
@@ -2845,7 +2845,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Update a datasource\&quot;s info. The datasource type and workspace cannot be changed.</p>
+     * <p>Updates information for a data source. Its type and workspace cannot be changed.</p>
      * 
      * @param request UpdateDatasourceRequest
      * @param headers map
@@ -2887,7 +2887,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Update a datasource\&quot;s info. The datasource type and workspace cannot be changed.</p>
+     * <p>Updates information for a data source. Its type and workspace cannot be changed.</p>
      * 
      * @param request UpdateDatasourceRequest
      * @return UpdateDatasourceResponse
@@ -2900,7 +2900,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新特征视图。</p>
+     * <p>Updates a feature view.</p>
      * 
      * @param request UpdateFeatureViewRequest
      * @param headers map
@@ -2934,7 +2934,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新特征视图。</p>
+     * <p>Updates a feature view.</p>
      * 
      * @param request UpdateFeatureViewRequest
      * @return UpdateFeatureViewResponse
@@ -2947,7 +2947,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新大模型调用信息配置</p>
+     * <p>Updates the large language model (LLM) call configuration. If you do not specify the <code>ApiKey</code> parameter, the existing key is retained. After the update, the system revalidates the model\&quot;s availability and its parameters.</p>
      * 
      * @param request UpdateLLMConfigRequest
      * @param headers map
@@ -3017,7 +3017,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新大模型调用信息配置</p>
+     * <p>Updates the large language model (LLM) call configuration. If you do not specify the <code>ApiKey</code> parameter, the existing key is retained. After the update, the system revalidates the model\&quot;s availability and its parameters.</p>
      * 
      * @param request UpdateLLMConfigRequest
      * @return UpdateLLMConfigResponse
@@ -3030,7 +3030,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新label表。</p>
+     * <p>Updates the attributes of fields in a label table. You can modify the attributes of existing fields, but you cannot add or delete fields, or change field names and types.</p>
      * 
      * @param request UpdateLabelTableRequest
      * @param headers map
@@ -3072,7 +3072,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新label表。</p>
+     * <p>Updates the attributes of fields in a label table. You can modify the attributes of existing fields, but you cannot add or delete fields, or change field names and types.</p>
      * 
      * @param request UpdateLabelTableRequest
      * @return UpdateLabelTableResponse
@@ -3085,7 +3085,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新模型特征。</p>
+     * <p>Updates the information of a model feature, including the associated label table, selected feature fields, and conflict priority policy. The update is a full replacement. The specified Features value overwrites the existing value.</p>
      * 
      * @param request UpdateModelFeatureRequest
      * @param headers map
@@ -3131,7 +3131,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新模型特征。</p>
+     * <p>Updates the information of a model feature, including the associated label table, selected feature fields, and conflict priority policy. The update is a full replacement. The specified Features value overwrites the existing value.</p>
      * 
      * @param request UpdateModelFeatureRequest
      * @return UpdateModelFeatureResponse
@@ -3144,7 +3144,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新模型特征的FG特征配置信息。</p>
+     * <p>Update the FG feature configuration for a model feature.</p>
      * 
      * @param request UpdateModelFeatureFGFeatureRequest
      * @param headers map
@@ -3190,7 +3190,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新模型特征的FG特征配置信息。</p>
+     * <p>Update the FG feature configuration for a model feature.</p>
      * 
      * @param request UpdateModelFeatureFGFeatureRequest
      * @return UpdateModelFeatureFGFeatureResponse
@@ -3203,7 +3203,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新指定Feature Store项目信息。</p>
+     * <p>Updates the description of a project.</p>
      * 
      * @param request UpdateProjectRequest
      * @param headers map
@@ -3241,7 +3241,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新指定Feature Store项目信息。</p>
+     * <p>Updates the description of a project.</p>
      * 
      * @param request UpdateProjectRequest
      * @return UpdateProjectResponse
@@ -3254,7 +3254,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取特征视图血缘关系。</p>
+     * <p>Imports data from a URL to the offline table of a feature view. This is an asynchronous operation.</p>
      * 
      * @param request WriteFeatureViewTableRequest
      * @param headers map
@@ -3296,7 +3296,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取特征视图血缘关系。</p>
+     * <p>Imports data from a URL to the offline table of a feature view. This is an asynchronous operation.</p>
      * 
      * @param request WriteFeatureViewTableRequest
      * @return WriteFeatureViewTableResponse

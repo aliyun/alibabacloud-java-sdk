@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateLLMConfigRequest extends TeaModel {
     /**
+     * <p>The API key used to call the large language model (LLM).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class UpdateLLMConfigRequest extends TeaModel {
     public String apiKey;
 
     /**
+     * <p>The base URL for calling the large language model (LLM).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,8 @@ public class UpdateLLMConfigRequest extends TeaModel {
     public String baseUrl;
 
     /**
+     * <p>The batch size.</p>
+     * 
      * <strong>example:</strong>
      * <p>8</p>
      */
@@ -30,16 +34,22 @@ public class UpdateLLMConfigRequest extends TeaModel {
     public Integer batchSize;
 
     /**
+     * <p>The embedding dimension. If you omit this parameter or set it to 0, the model uses its default dimension.</p>
+     * 
      * <strong>example:</strong>
      * <p>1024</p>
      */
     @NameInMap("EmbeddingDimension")
     public Integer embeddingDimension;
 
+    /**
+     * <p>Whether to enable data fusion.</p>
+     */
     @NameInMap("EnableFusion")
     public Boolean enableFusion;
 
     /**
+     * <p>The maximum number of input tokens per row.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -49,6 +59,7 @@ public class UpdateLLMConfigRequest extends TeaModel {
     public Integer maxTokens;
 
     /**
+     * <p>The model name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -57,10 +68,14 @@ public class UpdateLLMConfigRequest extends TeaModel {
     @NameInMap("Model")
     public String model;
 
+    /**
+     * <p>The model type.</p>
+     */
     @NameInMap("ModelType")
     public String modelType;
 
     /**
+     * <p>The name of the large language model (LLM) call configuration.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -70,6 +85,7 @@ public class UpdateLLMConfigRequest extends TeaModel {
     public String name;
 
     /**
+     * <p>The maximum number of requests per second (RPS).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

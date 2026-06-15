@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateLLMConfigResponseBody extends TeaModel {
     /**
+     * <p>The ID of the LLM configuration.</p>
+     * 
      * <strong>example:</strong>
      * <p>llm_config1</p>
      */
@@ -12,7 +14,10 @@ public class CreateLLMConfigResponseBody extends TeaModel {
     public String LLMConfigId;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>DD19A0E2-0DC8-5EAA-867D-00C813F553F9</p>
      */
     @NameInMap("RequestId")
     public String requestId;

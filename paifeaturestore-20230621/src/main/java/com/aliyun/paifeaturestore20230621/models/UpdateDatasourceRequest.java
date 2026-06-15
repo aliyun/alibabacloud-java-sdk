@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpdateDatasourceRequest extends TeaModel {
     /**
+     * <p>The resource configuration.</p>
+     * 
      * <strong>example:</strong>
      * <p>{&quot;address&quot;: &quot;&quot;}</p>
      */
@@ -12,6 +14,7 @@ public class UpdateDatasourceRequest extends TeaModel {
     public String config;
 
     /**
+     * <p>The data source name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,6 +24,7 @@ public class UpdateDatasourceRequest extends TeaModel {
     public String name;
 
     /**
+     * <p>The resource URI.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

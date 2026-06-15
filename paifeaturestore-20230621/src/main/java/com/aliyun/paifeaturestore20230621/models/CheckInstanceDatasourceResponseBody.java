@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CheckInstanceDatasourceResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>C03B2680-AC9C-59CD-93C5-8142B92537FA</p>
      */
@@ -12,6 +14,14 @@ public class CheckInstanceDatasourceResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The resource check status.</p>
+     * <ul>
+     * <li><p>Success: succeeded</p>
+     * </li>
+     * <li><p>Failure: failed</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>Success</p>
      */

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListProjectsRequest extends TeaModel {
     /**
+     * <p>The project name to filter by.</p>
+     * 
      * <strong>example:</strong>
      * <p>fs1</p>
      */
@@ -12,6 +14,14 @@ public class ListProjectsRequest extends TeaModel {
     public String name;
 
     /**
+     * <p>The sort order. Valid values:</p>
+     * <ul>
+     * <li><p><code>Asc</code>: ascending order.</p>
+     * </li>
+     * <li><p><code>Desc</code>: descending order.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>Asc</p>
      */
@@ -19,6 +29,8 @@ public class ListProjectsRequest extends TeaModel {
     public String order;
 
     /**
+     * <p>The Alibaba Cloud account ID of the project owner.</p>
+     * 
      * <strong>example:</strong>
      * <p>134324352****</p>
      */
@@ -26,6 +38,8 @@ public class ListProjectsRequest extends TeaModel {
     public String owner;
 
     /**
+     * <p>The page number. Starts from 1. Default value: 1.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -33,16 +47,23 @@ public class ListProjectsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries to return on each page. Default value: 10.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>An array of project IDs to filter by.</p>
+     */
     @NameInMap("ProjectIds")
     public java.util.List<String> projectIds;
 
     /**
+     * <p>The field to sort the results by.</p>
+     * 
      * <strong>example:</strong>
      * <p>GmtModifiedTime</p>
      */
@@ -50,6 +71,8 @@ public class ListProjectsRequest extends TeaModel {
     public String sortBy;
 
     /**
+     * <p>The ID of the workspace. Call the <a href="https://help.aliyun.com/document_detail/449124.html">ListWorkspaces</a> operation to get this ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>234</p>
      */

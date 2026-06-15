@@ -5,12 +5,17 @@ import com.aliyun.tea.*;
 
 public class PublishFeatureViewTableResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>627B5776-4D06-5A49-8A04-508AA39653F4</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The ID of the data synchronization task.</p>
+     */
     @NameInMap("TaskId")
     public String taskId;
 

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DeleteLabelTableResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>FFD39C0F-DD8D-51B2-864E-2842206DB0E8</p>
      */

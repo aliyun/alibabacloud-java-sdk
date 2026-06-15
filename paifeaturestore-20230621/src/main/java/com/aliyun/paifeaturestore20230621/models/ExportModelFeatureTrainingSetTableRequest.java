@@ -4,13 +4,21 @@ package com.aliyun.paifeaturestore20230621.models;
 import com.aliyun.tea.*;
 
 public class ExportModelFeatureTrainingSetTableRequest extends TeaModel {
+    /**
+     * <p>A map of feature view configurations.</p>
+     */
     @NameInMap("FeatureViewConfig")
     public java.util.Map<String, FeatureViewConfigValue> featureViewConfig;
 
+    /**
+     * <p>The input configuration for the label table.</p>
+     */
     @NameInMap("LabelInputConfig")
     public ExportModelFeatureTrainingSetTableRequestLabelInputConfig labelInputConfig;
 
     /**
+     * <p>The polling interval for retrieving real-time features.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -18,12 +26,17 @@ public class ExportModelFeatureTrainingSetTableRequest extends TeaModel {
     public Long realTimeIterateInterval;
 
     /**
+     * <p>The number of days for partition statistics of the real-time feature view.</p>
+     * 
      * <strong>example:</strong>
      * <p>5</p>
      */
     @NameInMap("RealTimePartitionCountValue")
     public Long realTimePartitionCountValue;
 
+    /**
+     * <p>The configuration for the training set.</p>
+     */
     @NameInMap("TrainingSetConfig")
     public ExportModelFeatureTrainingSetTableRequestTrainingSetConfig trainingSetConfig;
 
@@ -74,12 +87,17 @@ public class ExportModelFeatureTrainingSetTableRequest extends TeaModel {
 
     public static class ExportModelFeatureTrainingSetTableRequestLabelInputConfig extends TeaModel {
         /**
+         * <p>The event time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2022-07-02 00:00:00</p>
          */
         @NameInMap("EventTime")
         public String eventTime;
 
+        /**
+         * <p>The list of partitions.</p>
+         */
         @NameInMap("Partitions")
         public java.util.Map<String, java.util.Map<String, ?>> partitions;
 
@@ -107,6 +125,9 @@ public class ExportModelFeatureTrainingSetTableRequest extends TeaModel {
     }
 
     public static class ExportModelFeatureTrainingSetTableRequestTrainingSetConfig extends TeaModel {
+        /**
+         * <p>The list of partitions.</p>
+         */
         @NameInMap("Partitions")
         public java.util.Map<String, java.util.Map<String, ?>> partitions;
 

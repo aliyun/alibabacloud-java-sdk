@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateModelFeatureResponseBody extends TeaModel {
     /**
+     * <p>The model feature ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>3</p>
      */
@@ -12,6 +14,8 @@ public class CreateModelFeatureResponseBody extends TeaModel {
     public String modelFeatureId;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>37D19490-AB69-567D-A852-407C94E510E9</p>
      */

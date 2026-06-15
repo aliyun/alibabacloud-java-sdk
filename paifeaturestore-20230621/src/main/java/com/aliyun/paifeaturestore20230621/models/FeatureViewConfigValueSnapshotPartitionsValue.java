@@ -5,18 +5,29 @@ import com.aliyun.tea.*;
 
 public class FeatureViewConfigValueSnapshotPartitionsValue extends TeaModel {
     /**
+     * <p>The partition value.</p>
+     * 
      * <strong>example:</strong>
      * <p>20260101</p>
      */
     @NameInMap("Value")
     public String value;
 
+    /**
+     * <p>An array of partition values.</p>
+     */
     @NameInMap("Values")
     public java.util.List<String> values;
 
+    /**
+     * <p>The start value of the partition range.</p>
+     */
     @NameInMap("StartValue")
     public String startValue;
 
+    /**
+     * <p>The end value of the partition range.</p>
+     */
     @NameInMap("EndValue")
     public String endValue;
 

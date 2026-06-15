@@ -4,10 +4,15 @@ package com.aliyun.paifeaturestore20230621.models;
 import com.aliyun.tea.*;
 
 public class ListFeatureViewOnlineFeaturesResponseBody extends TeaModel {
+    /**
+     * <p>An array of the retrieved online feature records.</p>
+     */
     @NameInMap("OnlineFeatures")
     public java.util.List<String> onlineFeatures;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>BF349686-C932-55B5-9B31-DAFA395C0E06</p>
      */

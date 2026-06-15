@@ -4,10 +4,18 @@ package com.aliyun.paifeaturestore20230621.models;
 import com.aliyun.tea.*;
 
 public class ListDatasourceFeatureViewsRequest extends TeaModel {
+    /**
+     * <p>Return all data (no paging).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("All")
     public Boolean all;
 
     /**
+     * <p>End time for query read/write volume. Format: yyyy-mm-dd.</p>
+     * 
      * <strong>example:</strong>
      * <p>2025-03-19</p>
      */
@@ -15,6 +23,8 @@ public class ListDatasourceFeatureViewsRequest extends TeaModel {
     public String endDate;
 
     /**
+     * <p>Fuzzy filter for feature view names.</p>
+     * 
      * <strong>example:</strong>
      * <p>fv</p>
      */
@@ -22,6 +32,8 @@ public class ListDatasourceFeatureViewsRequest extends TeaModel {
     public String name;
 
     /**
+     * <p>Sort order.</p>
+     * 
      * <strong>example:</strong>
      * <p>Desc</p>
      */
@@ -29,6 +41,8 @@ public class ListDatasourceFeatureViewsRequest extends TeaModel {
     public String order;
 
     /**
+     * <p>Page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -36,6 +50,8 @@ public class ListDatasourceFeatureViewsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>Page size.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -43,6 +59,8 @@ public class ListDatasourceFeatureViewsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>Project ID. Get this ID using the ListProjects API.</p>
+     * 
      * <strong>example:</strong>
      * <p>3</p>
      */
@@ -50,16 +68,26 @@ public class ListDatasourceFeatureViewsRequest extends TeaModel {
     public String projectId;
 
     /**
+     * <p>Filter by project name.</p>
+     * 
      * <strong>example:</strong>
      * <p>fs_project</p>
      */
     @NameInMap("ProjectName")
     public String projectName;
 
+    /**
+     * <p>Show storage usage. Default is true.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("ShowStorageUsage")
     public Boolean showStorageUsage;
 
     /**
+     * <p>Sort by.</p>
+     * 
      * <strong>example:</strong>
      * <p>GmtCreateTime</p>
      */
@@ -67,6 +95,8 @@ public class ListDatasourceFeatureViewsRequest extends TeaModel {
     public String sortBy;
 
     /**
+     * <p>Start time for query read/write volume. Format: yyyy-mm-dd.</p>
+     * 
      * <strong>example:</strong>
      * <p>2025-03-14</p>
      */
@@ -74,12 +104,28 @@ public class ListDatasourceFeatureViewsRequest extends TeaModel {
     public String startDate;
 
     /**
+     * <p>Feature view type.</p>
+     * <ul>
+     * <li><p>Batch - offline feature</p>
+     * </li>
+     * <li><p>Stream - real-time feature</p>
+     * </li>
+     * <li><p>Sequence - sequence feature</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>Stream</p>
      */
     @NameInMap("Type")
     public String type;
 
+    /**
+     * <p>Show detailed information. If set to false, do not show UsageStatistics for each view; show only the total. Default is true.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Verbose")
     public Boolean verbose;
 

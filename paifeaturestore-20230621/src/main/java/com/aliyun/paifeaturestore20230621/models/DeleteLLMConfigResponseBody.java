@@ -5,7 +5,10 @@ import com.aliyun.tea.*;
 
 public class DeleteLLMConfigResponseBody extends TeaModel {
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>96EE513F-8626-50B8-B046-D57FD3D037C2</p>
      */
     @NameInMap("RequestId")
     public String requestId;

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetLabelTableResponseBody extends TeaModel {
     /**
+     * <p>The data source ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -12,16 +14,23 @@ public class GetLabelTableResponseBody extends TeaModel {
     public String datasourceId;
 
     /**
+     * <p>The data source name.</p>
+     * 
      * <strong>example:</strong>
      * <p>datasource1</p>
      */
     @NameInMap("DatasourceName")
     public String datasourceName;
 
+    /**
+     * <p>The fields in the label table.</p>
+     */
     @NameInMap("Fields")
     public java.util.List<GetLabelTableResponseBodyFields> fields;
 
     /**
+     * <p>The time when the label table was created.</p>
+     * 
      * <strong>example:</strong>
      * <p>2021-12-15T23:24:33.132+08:00</p>
      */
@@ -29,6 +38,8 @@ public class GetLabelTableResponseBody extends TeaModel {
     public String gmtCreateTime;
 
     /**
+     * <p>The time when the label table was last modified.</p>
+     * 
      * <strong>example:</strong>
      * <p>2021-12-15T23:24:33.132+08:00</p>
      */
@@ -36,6 +47,8 @@ public class GetLabelTableResponseBody extends TeaModel {
     public String gmtModifiedTime;
 
     /**
+     * <p>The label table name.</p>
+     * 
      * <strong>example:</strong>
      * <p>label_table1</p>
      */
@@ -43,6 +56,8 @@ public class GetLabelTableResponseBody extends TeaModel {
     public String name;
 
     /**
+     * <p>The Alibaba Cloud account ID of the creator.</p>
+     * 
      * <strong>example:</strong>
      * <p>12321312*****</p>
      */
@@ -50,6 +65,8 @@ public class GetLabelTableResponseBody extends TeaModel {
     public String owner;
 
     /**
+     * <p>The project ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -57,16 +74,23 @@ public class GetLabelTableResponseBody extends TeaModel {
     public String projectId;
 
     /**
+     * <p>The project name.</p>
+     * 
      * <strong>example:</strong>
      * <p>project1</p>
      */
     @NameInMap("ProjectName")
     public String projectName;
 
+    /**
+     * <p>A list of related model feature names.</p>
+     */
     @NameInMap("RelatedModelFeatures")
     public java.util.List<String> relatedModelFeatures;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>728C5E01-ABF6-5AA8-B9FC-B3BA05DECC77</p>
      */
@@ -174,10 +198,15 @@ public class GetLabelTableResponseBody extends TeaModel {
         @NameInMap("AlignedEntityName")
         public String alignedEntityName;
 
+        /**
+         * <p>A list of field attributes.</p>
+         */
         @NameInMap("Attributes")
         public java.util.List<String> attributes;
 
         /**
+         * <p>The field name.</p>
+         * 
          * <strong>example:</strong>
          * <p>field1</p>
          */
@@ -185,6 +214,8 @@ public class GetLabelTableResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>The field type.</p>
+         * 
          * <strong>example:</strong>
          * <p>INT32</p>
          */

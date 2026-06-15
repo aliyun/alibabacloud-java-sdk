@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateDatasourceRequest extends TeaModel {
     /**
+     * <p>The configuration of the resource.</p>
+     * 
      * <strong>example:</strong>
      * <p>{&quot;address&quot;: &quot;&quot;}</p>
      */
@@ -12,6 +14,7 @@ public class CreateDatasourceRequest extends TeaModel {
     public String config;
 
     /**
+     * <p>The name of the datasource.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,6 +24,11 @@ public class CreateDatasourceRequest extends TeaModel {
     public String name;
 
     /**
+     * <p>The datasource type. Valid values are:</p>
+     * <p>● Hologres</p>
+     * <p>● GraphCompute</p>
+     * <p>● Redis</p>
+     * <p>● MaxCompute</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -30,6 +38,7 @@ public class CreateDatasourceRequest extends TeaModel {
     public String type;
 
     /**
+     * <p>The URI of the resource.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -39,6 +48,7 @@ public class CreateDatasourceRequest extends TeaModel {
     public String uri;
 
     /**
+     * <p>The ID of the workspace. Call the <a href="https://help.aliyun.com/document_detail/449124.html">ListWorkspaces</a> operation to obtain this ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

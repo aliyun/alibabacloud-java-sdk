@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateProjectRequest extends TeaModel {
     /**
+     * <p>The description of the project. This description is displayed in the PAI console.</p>
+     * 
      * <strong>example:</strong>
      * <p>This is a test.</p>
      */
@@ -12,6 +14,7 @@ public class CreateProjectRequest extends TeaModel {
     public String description;
 
     /**
+     * <p>The name of the project. The name must be unique within the instance. It must be 2 to 18 characters long, begin with a letter, and contain only letters, digits, and underscores (<em>). Regex: ^[a-zA-Z][a-zA-Z0-9</em>]+$.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,6 +24,7 @@ public class CreateProjectRequest extends TeaModel {
     public String name;
 
     /**
+     * <p>The ID of the offline data source, which must be of the <strong>MaxCompute</strong> type. You can call the ListDatasources operation to obtain this ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -30,6 +34,8 @@ public class CreateProjectRequest extends TeaModel {
     public String offlineDatasourceId;
 
     /**
+     * <p>The retention period in days for offline tables created by FeatureStore. This setting does not affect existing tables registered with the RegisterTable operation. A default value of 0 means the tables are never automatically deleted.</p>
+     * 
      * <strong>example:</strong>
      * <p>90</p>
      */
@@ -37,6 +43,7 @@ public class CreateProjectRequest extends TeaModel {
     public Integer offlineLifeCycle;
 
     /**
+     * <p>The ID of the online data source. The data source type must be <strong>Hologres</strong>, <strong>Tablestore</strong>, or <strong>FeatureDB</strong>. You can call the ListDatasources operation to obtain this ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -46,6 +53,7 @@ public class CreateProjectRequest extends TeaModel {
     public String onlineDatasourceId;
 
     /**
+     * <p>The ID of the PAI workspace. You can call the <a href="https://help.aliyun.com/document_detail/449124.html">ListWorkspaces</a> operation to obtain this ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

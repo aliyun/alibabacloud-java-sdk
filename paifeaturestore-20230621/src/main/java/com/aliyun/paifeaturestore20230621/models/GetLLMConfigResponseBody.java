@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetLLMConfigResponseBody extends TeaModel {
     /**
+     * <p>The API key.</p>
+     * 
      * <strong>example:</strong>
      * <p>api-abcdxy</p>
      */
@@ -12,6 +14,8 @@ public class GetLLMConfigResponseBody extends TeaModel {
     public String apiKey;
 
     /**
+     * <p>The base URL for API calls.</p>
+     * 
      * <strong>example:</strong>
      * <p><a href="https://dashscope.aliyuncs.com/compatible-mode/v1">https://dashscope.aliyuncs.com/compatible-mode/v1</a></p>
      */
@@ -19,6 +23,8 @@ public class GetLLMConfigResponseBody extends TeaModel {
     public String baseUrl;
 
     /**
+     * <p>The batch size.</p>
+     * 
      * <strong>example:</strong>
      * <p>8</p>
      */
@@ -26,16 +32,23 @@ public class GetLLMConfigResponseBody extends TeaModel {
     public Integer batchSize;
 
     /**
+     * <p>The embedding dimension. If this parameter is unspecified or set to 0, the system uses the model\&quot;s default dimension.</p>
+     * 
      * <strong>example:</strong>
      * <p>1024</p>
      */
     @NameInMap("EmbeddingDimension")
     public Integer embeddingDimension;
 
+    /**
+     * <p>Indicates whether fusion is enabled.</p>
+     */
     @NameInMap("EnableFusion")
     public Boolean enableFusion;
 
     /**
+     * <p>The time when the configuration was created.</p>
+     * 
      * <strong>example:</strong>
      * <p>2023-07-04T11:26:09.036+08:00</p>
      */
@@ -43,6 +56,8 @@ public class GetLLMConfigResponseBody extends TeaModel {
     public String gmtCreateTime;
 
     /**
+     * <p>The time when the configuration was last modified.</p>
+     * 
      * <strong>example:</strong>
      * <p>2023-07-04T11:26:09.036+08:00</p>
      */
@@ -50,6 +65,8 @@ public class GetLLMConfigResponseBody extends TeaModel {
     public String gmtModifiedTime;
 
     /**
+     * <p>The ID of the LLM call configuration.</p>
+     * 
      * <strong>example:</strong>
      * <p>llm_config1</p>
      */
@@ -57,6 +74,8 @@ public class GetLLMConfigResponseBody extends TeaModel {
     public String LLMConfigId;
 
     /**
+     * <p>The maximum number of tokens in a single request.</p>
+     * 
      * <strong>example:</strong>
      * <p>2048</p>
      */
@@ -64,16 +83,23 @@ public class GetLLMConfigResponseBody extends TeaModel {
     public Integer maxTokens;
 
     /**
+     * <p>The model name.</p>
+     * 
      * <strong>example:</strong>
      * <p>text-embedding-v1</p>
      */
     @NameInMap("Model")
     public String model;
 
+    /**
+     * <p>The type of the model.</p>
+     */
     @NameInMap("ModelType")
     public String modelType;
 
     /**
+     * <p>The name of the LLM call configuration.</p>
+     * 
      * <strong>example:</strong>
      * <p>llm_config_name1</p>
      */
@@ -81,7 +107,7 @@ public class GetLLMConfigResponseBody extends TeaModel {
     public String name;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>C03B2680-AC9C-59CD-93C5-8142B92537FA</p>
@@ -90,6 +116,8 @@ public class GetLLMConfigResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The number of requests allowed per second.</p>
+     * 
      * <strong>example:</strong>
      * <p>30</p>
      */
@@ -97,6 +125,8 @@ public class GetLLMConfigResponseBody extends TeaModel {
     public Integer rps;
 
     /**
+     * <p>The workspace ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>234</p>
      */

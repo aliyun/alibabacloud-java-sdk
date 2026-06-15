@@ -4,10 +4,15 @@ package com.aliyun.paifeaturestore20230621.models;
 import com.aliyun.tea.*;
 
 public class CheckModelFeatureFGFeatureResponseBody extends TeaModel {
+    /**
+     * <p>The FG configuration check results.</p>
+     */
     @NameInMap("FGCheckResults")
     public java.util.List<CheckModelFeatureFGFeatureResponseBodyFGCheckResults> FGCheckResults;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>ED4DEA2F-F216-57F0-AE28-08D791233280</p>
      */
@@ -37,6 +42,8 @@ public class CheckModelFeatureFGFeatureResponseBody extends TeaModel {
 
     public static class CheckModelFeatureFGFeatureResponseBodyFGCheckResults extends TeaModel {
         /**
+         * <p>The error message.</p>
+         * 
          * <strong>example:</strong>
          * <p>f1[1]: these lookup_features\&quot;s LookupValueFeature(key) not exist in model features</p>
          */
@@ -44,6 +51,18 @@ public class CheckModelFeatureFGFeatureResponseBody extends TeaModel {
         public String message;
 
         /**
+         * <p>The rule code for the check.</p>
+         * <ul>
+         * <li><p>SeqSubEx—Are the sub-features of sequence features in the FG present in the model feature?</p>
+         * </li>
+         * <li><p>LookupKeyEx—Does the lookup key feature of query features exist in the model feature?</p>
+         * </li>
+         * <li><p>FGSetEx—Are all FG features present in the model feature?</p>
+         * </li>
+         * <li><p>ModelSetEx—Are all model feature features present in the FG?</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>SeqSubEx</p>
          */
@@ -51,6 +70,8 @@ public class CheckModelFeatureFGFeatureResponseBody extends TeaModel {
         public String ruleCode;
 
         /**
+         * <p>Whether the rule passes.</p>
+         * 
          * <strong>example:</strong>
          * <p>True</p>
          */

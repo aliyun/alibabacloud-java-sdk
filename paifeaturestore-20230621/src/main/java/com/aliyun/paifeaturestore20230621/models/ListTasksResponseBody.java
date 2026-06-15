@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class ListTasksResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>C33E160C-BFCA-5719-B958-942850E949F6</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The list of tasks.</p>
+     */
     @NameInMap("Tasks")
     public java.util.List<ListTasksResponseBodyTasks> tasks;
 
     /**
+     * <p>The total number of tasks.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -52,6 +59,8 @@ public class ListTasksResponseBody extends TeaModel {
 
     public static class ListTasksResponseBodyTasks extends TeaModel {
         /**
+         * <p>The time when the task was created.</p>
+         * 
          * <strong>example:</strong>
          * <p>2023-07-04T11:26:09.036+08:00</p>
          */
@@ -59,6 +68,8 @@ public class ListTasksResponseBody extends TeaModel {
         public String gmtCreateTime;
 
         /**
+         * <p>The time when the task was executed.</p>
+         * 
          * <strong>example:</strong>
          * <p>2023-07-04T11:26:09.036+08:00</p>
          */
@@ -66,6 +77,8 @@ public class ListTasksResponseBody extends TeaModel {
         public String gmtExecutedTime;
 
         /**
+         * <p>The time when the task was completed.</p>
+         * 
          * <strong>example:</strong>
          * <p>2023-07-04T11:26:09.036+08:00</p>
          */
@@ -73,6 +86,8 @@ public class ListTasksResponseBody extends TeaModel {
         public String gmtFinishedTime;
 
         /**
+         * <p>The ID of the object.</p>
+         * 
          * <strong>example:</strong>
          * <p>5</p>
          */
@@ -80,6 +95,10 @@ public class ListTasksResponseBody extends TeaModel {
         public String objectId;
 
         /**
+         * <p>The type of the object. Valid values:</p>
+         * <p>● ModelFeature: a model feature.</p>
+         * <p>● FeatureView: a feature view.</p>
+         * 
          * <strong>example:</strong>
          * <p>ModelFeature</p>
          */
@@ -87,6 +106,8 @@ public class ListTasksResponseBody extends TeaModel {
         public String objectType;
 
         /**
+         * <p>The project ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>4</p>
          */
@@ -94,6 +115,8 @@ public class ListTasksResponseBody extends TeaModel {
         public String projectId;
 
         /**
+         * <p>The project name.</p>
+         * 
          * <strong>example:</strong>
          * <p>project_1</p>
          */
@@ -101,6 +124,12 @@ public class ListTasksResponseBody extends TeaModel {
         public String projectName;
 
         /**
+         * <p>The status of the task. Valid values:</p>
+         * <p>● Initializing: The task is being initialized.</p>
+         * <p>● Running: The task is in progress.</p>
+         * <p>● Success: The task is successful.</p>
+         * <p>● Failure: The task failed.</p>
+         * 
          * <strong>example:</strong>
          * <p>Running</p>
          */
@@ -108,6 +137,8 @@ public class ListTasksResponseBody extends TeaModel {
         public String status;
 
         /**
+         * <p>The task ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>4</p>
          */
@@ -115,6 +146,10 @@ public class ListTasksResponseBody extends TeaModel {
         public String taskId;
 
         /**
+         * <p>The task type. Valid values:</p>
+         * <p>● OfflineToOnline: The task synchronizes data from offline to online.</p>
+         * <p>● ExportTrainingSet: The task exports a training set.</p>
+         * 
          * <strong>example:</strong>
          * <p>OfflineToOnline</p>
          */

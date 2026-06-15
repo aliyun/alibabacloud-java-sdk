@@ -12,6 +12,7 @@ public class ListFeatureViewOnlineFeaturesShrinkRequest extends TeaModel {
     public String config;
 
     /**
+     * <p>The join IDs used to retrieve online features.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("JoinIds")

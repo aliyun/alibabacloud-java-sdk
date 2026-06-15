@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateFeatureEntityRequest extends TeaModel {
     /**
+     * <p>The join key that links feature views to the feature entity.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class CreateFeatureEntityRequest extends TeaModel {
     public String joinId;
 
     /**
+     * <p>The feature entity name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,8 @@ public class CreateFeatureEntityRequest extends TeaModel {
     public String name;
 
     /**
+     * <p>The parent feature entity ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -30,6 +34,7 @@ public class CreateFeatureEntityRequest extends TeaModel {
     public String parentFeatureEntityId;
 
     /**
+     * <p>The project ID. To get this ID, call the ListInstances operation.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

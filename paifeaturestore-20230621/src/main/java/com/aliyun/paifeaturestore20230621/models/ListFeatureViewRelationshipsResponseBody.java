@@ -4,10 +4,15 @@ package com.aliyun.paifeaturestore20230621.models;
 import com.aliyun.tea.*;
 
 public class ListFeatureViewRelationshipsResponseBody extends TeaModel {
+    /**
+     * <p>A list of relationships to models that use this feature view.</p>
+     */
     @NameInMap("Relationships")
     public java.util.List<ListFeatureViewRelationshipsResponseBodyRelationships> relationships;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>0FBBE454-9BD1-5D8F-9129-D14DB7FAFE0B</p>
      */
@@ -37,6 +42,8 @@ public class ListFeatureViewRelationshipsResponseBody extends TeaModel {
 
     public static class ListFeatureViewRelationshipsResponseBodyRelationshipsModels extends TeaModel {
         /**
+         * <p>The ID of the model.</p>
+         * 
          * <strong>example:</strong>
          * <p>3</p>
          */
@@ -44,6 +51,8 @@ public class ListFeatureViewRelationshipsResponseBody extends TeaModel {
         public String modelId;
 
         /**
+         * <p>The name of the model.</p>
+         * 
          * <strong>example:</strong>
          * <p>dbmtl</p>
          */
@@ -75,16 +84,23 @@ public class ListFeatureViewRelationshipsResponseBody extends TeaModel {
 
     public static class ListFeatureViewRelationshipsResponseBodyRelationships extends TeaModel {
         /**
+         * <p>The name of the feature view.</p>
+         * 
          * <strong>example:</strong>
          * <p>fv1</p>
          */
         @NameInMap("FeatureViewName")
         public String featureViewName;
 
+        /**
+         * <p>A list of models.</p>
+         */
         @NameInMap("Models")
         public java.util.List<ListFeatureViewRelationshipsResponseBodyRelationshipsModels> models;
 
         /**
+         * <p>The name of the project.</p>
+         * 
          * <strong>example:</strong>
          * <p>project1</p>
          */

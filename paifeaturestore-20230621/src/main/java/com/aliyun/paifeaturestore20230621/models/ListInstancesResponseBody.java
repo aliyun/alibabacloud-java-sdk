@@ -4,10 +4,15 @@ package com.aliyun.paifeaturestore20230621.models;
 import com.aliyun.tea.*;
 
 public class ListInstancesResponseBody extends TeaModel {
+    /**
+     * <p>The list of instances.</p>
+     */
     @NameInMap("Instances")
     public java.util.List<ListInstancesResponseBodyInstances> instances;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>2CA11923-2A3D-5E5A-8314-E699D2DD15DE</p>
      */
@@ -15,6 +20,8 @@ public class ListInstancesResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total number of instances.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -51,6 +58,9 @@ public class ListInstancesResponseBody extends TeaModel {
     }
 
     public static class ListInstancesResponseBodyInstancesFeatureDBInfo extends TeaModel {
+        /**
+         * <p>The status of the FeatureDB instance.</p>
+         */
         @NameInMap("Status")
         public String status;
 
@@ -70,6 +80,9 @@ public class ListInstancesResponseBody extends TeaModel {
     }
 
     public static class ListInstancesResponseBodyInstancesFeatureDBInstanceInfo extends TeaModel {
+        /**
+         * <p>The status of the FeatureDB instance.</p>
+         */
         @NameInMap("Status")
         public String status;
 
@@ -89,14 +102,22 @@ public class ListInstancesResponseBody extends TeaModel {
     }
 
     public static class ListInstancesResponseBodyInstances extends TeaModel {
+        /**
+         * <p>Information about the FeatureDB instance.</p>
+         */
         @NameInMap("FeatureDBInfo")
         public ListInstancesResponseBodyInstancesFeatureDBInfo featureDBInfo;
 
+        /**
+         * <p>Information about the FeatureDB instance.</p>
+         */
         @NameInMap("FeatureDBInstanceInfo")
         @Deprecated
         public ListInstancesResponseBodyInstancesFeatureDBInstanceInfo featureDBInstanceInfo;
 
         /**
+         * <p>The creation time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2023-07-04T11:26:09.036+08:00</p>
          */
@@ -104,6 +125,8 @@ public class ListInstancesResponseBody extends TeaModel {
         public String gmtCreateTime;
 
         /**
+         * <p>The update time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2023-07-04T11:26:09.036+08:00</p>
          */
@@ -111,6 +134,8 @@ public class ListInstancesResponseBody extends TeaModel {
         public String gmtModifiedTime;
 
         /**
+         * <p>The instance ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>featureStore-cn-7mz2xfu****</p>
          */
@@ -118,6 +143,18 @@ public class ListInstancesResponseBody extends TeaModel {
         public String instanceId;
 
         /**
+         * <p>The region where the instance is located.</p>
+         * <ul>
+         * <li><p>cn-hangzhou</p>
+         * </li>
+         * <li><p>cn-beijing</p>
+         * </li>
+         * <li><p>cn-shanghai</p>
+         * </li>
+         * <li><p>cn-shenzhen</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
          */
@@ -125,6 +162,16 @@ public class ListInstancesResponseBody extends TeaModel {
         public String regionId;
 
         /**
+         * <p>The status of the instance.</p>
+         * <ul>
+         * <li><p>Initializing</p>
+         * </li>
+         * <li><p>Running</p>
+         * </li>
+         * <li><p>Stopped</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Initializing</p>
          */
@@ -132,6 +179,8 @@ public class ListInstancesResponseBody extends TeaModel {
         public String status;
 
         /**
+         * <p>The instance type. Currently, only Basic is supported.</p>
+         * 
          * <strong>example:</strong>
          * <p>Basic</p>
          */

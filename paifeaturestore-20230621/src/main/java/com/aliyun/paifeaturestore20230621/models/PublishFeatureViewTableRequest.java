@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class PublishFeatureViewTableRequest extends TeaModel {
     /**
+     * <p>Custom configurations for the task, provided as a JSON string.</p>
+     * 
      * <strong>example:</strong>
      * <p>{}</p>
      */
@@ -12,6 +14,8 @@ public class PublishFeatureViewTableRequest extends TeaModel {
     public String config;
 
     /**
+     * <p>The event time of the data to be published, in ISO 8601 format.</p>
+     * 
      * <strong>example:</strong>
      * <p>2021-12-15T23:24:33.132+08:00</p>
      */
@@ -19,6 +23,13 @@ public class PublishFeatureViewTableRequest extends TeaModel {
     public String eventTime;
 
     /**
+     * <p>The synchronization mode. The following values are supported:</p>
+     * <ul>
+     * <li><p><code>Overwrite</code>: Overwrites all data in the specified partitions.</p>
+     * </li>
+     * <li><p><code>Merge</code>: Merges the new data with existing data in the specified partitions.</p>
+     * </li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -28,6 +39,7 @@ public class PublishFeatureViewTableRequest extends TeaModel {
     public String mode;
 
     /**
+     * <p>Specifies whether to synchronize data from the offline table to the online store.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -36,6 +48,9 @@ public class PublishFeatureViewTableRequest extends TeaModel {
     @NameInMap("OfflineToOnline")
     public Boolean offlineToOnline;
 
+    /**
+     * <p>The partitions to publish.</p>
+     */
     @NameInMap("Partitions")
     public java.util.Map<String, java.util.Map<String, ?>> partitions;
 

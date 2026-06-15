@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetFeatureViewResponseBody extends TeaModel {
     /**
+     * <p>The configuration.</p>
+     * 
      * <strong>example:</strong>
      * <p>{&quot;save_original_field&quot;:true}</p>
      */
@@ -12,6 +14,8 @@ public class GetFeatureViewResponseBody extends TeaModel {
     public String config;
 
     /**
+     * <p>The feature entity ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>3</p>
      */
@@ -19,16 +23,23 @@ public class GetFeatureViewResponseBody extends TeaModel {
     public String featureEntityId;
 
     /**
+     * <p>The feature entity name.</p>
+     * 
      * <strong>example:</strong>
      * <p>featureEntity1</p>
      */
     @NameInMap("FeatureEntityName")
     public String featureEntityName;
 
+    /**
+     * <p>The list of fields.</p>
+     */
     @NameInMap("Fields")
     public java.util.List<GetFeatureViewResponseBodyFields> fields;
 
     /**
+     * <p>The creation time.</p>
+     * 
      * <strong>example:</strong>
      * <p>2021-12-15T23:24:33.132+08:00</p>
      */
@@ -36,6 +47,8 @@ public class GetFeatureViewResponseBody extends TeaModel {
     public String gmtCreateTime;
 
     /**
+     * <p>The modification time.</p>
+     * 
      * <strong>example:</strong>
      * <p>2021-12-15T23:24:33.132+08:00</p>
      */
@@ -43,6 +56,8 @@ public class GetFeatureViewResponseBody extends TeaModel {
     public String gmtModifiedTime;
 
     /**
+     * <p>The synchronization time.</p>
+     * 
      * <strong>example:</strong>
      * <p>2021-12-15T23:24:33.132+08:00</p>
      */
@@ -50,6 +65,8 @@ public class GetFeatureViewResponseBody extends TeaModel {
     public String gmtSyncTime;
 
     /**
+     * <p>The join ID of the feature entity.</p>
+     * 
      * <strong>example:</strong>
      * <p>user_id</p>
      */
@@ -57,6 +74,8 @@ public class GetFeatureViewResponseBody extends TeaModel {
     public String joinId;
 
     /**
+     * <p>The most recent synchronization configuration.</p>
+     * 
      * <strong>example:</strong>
      * <p>{
      *     &quot;mode&quot;: &quot;overwrite&quot;,
@@ -74,6 +93,8 @@ public class GetFeatureViewResponseBody extends TeaModel {
     public String lastSyncConfig;
 
     /**
+     * <p>The name of the mock data table for the stream feature view.</p>
+     * 
      * <strong>example:</strong>
      * <p>item_table_mock_1</p>
      */
@@ -81,6 +102,8 @@ public class GetFeatureViewResponseBody extends TeaModel {
     public String mockTableName;
 
     /**
+     * <p>The feature view name.</p>
+     * 
      * <strong>example:</strong>
      * <p>featureView1</p>
      */
@@ -88,6 +111,8 @@ public class GetFeatureViewResponseBody extends TeaModel {
     public String name;
 
     /**
+     * <p>The Alibaba Cloud account ID of the owner.</p>
+     * 
      * <strong>example:</strong>
      * <p>12321421412****</p>
      */
@@ -95,6 +120,8 @@ public class GetFeatureViewResponseBody extends TeaModel {
     public String owner;
 
     /**
+     * <p>The project ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>3</p>
      */
@@ -102,6 +129,8 @@ public class GetFeatureViewResponseBody extends TeaModel {
     public String projectId;
 
     /**
+     * <p>The project name.</p>
+     * 
      * <strong>example:</strong>
      * <p>project1</p>
      */
@@ -109,6 +138,8 @@ public class GetFeatureViewResponseBody extends TeaModel {
     public String projectName;
 
     /**
+     * <p>The script for data synchronization.</p>
+     * 
      * <strong>example:</strong>
      * <p>from feature_store_py.fs_client import FeatureStoreClient\nimport datetime\nfrom feature_store_py.fs_datasource import MaxComputeDataSource\nimport sys\n\ncur_day = args[\&quot;dt\&quot;]\nprint(\&quot;cur_day = \&quot;, cur_day)\n\naccess_key_id = o.account.access_id\naccess_key_secret = o.account.secret_access_key\nfs = FeatureStoreClient(access_key_id=access_key_id, access_key_secret=access_key_secret, region=\&quot;cn-beijing\&quot;)\ncur_project_name = \&quot;p1\&quot;\nproject = fs.get_project(cur_project_name)\n\nfeature_view_name = \&quot;user_fea\&quot;\nbatch_feature_view = project.get_feature_view(feature_view_name)\ntask = batch_feature_view.publish_table(partitions={\&quot;ds\&quot;:cur_day}, mode=\&quot;Overwrite\&quot;)\ntask.wait()\ntask.print_summary()\n</p>
      */
@@ -116,6 +147,8 @@ public class GetFeatureViewResponseBody extends TeaModel {
     public String publishTableScript;
 
     /**
+     * <p>The ID of the data source where the registered table resides.</p>
+     * 
      * <strong>example:</strong>
      * <p>4</p>
      */
@@ -123,6 +156,8 @@ public class GetFeatureViewResponseBody extends TeaModel {
     public String registerDatasourceId;
 
     /**
+     * <p>The name of the data source where the registered table resides.</p>
+     * 
      * <strong>example:</strong>
      * <p>datasource1</p>
      */
@@ -130,6 +165,8 @@ public class GetFeatureViewResponseBody extends TeaModel {
     public String registerDatasourceName;
 
     /**
+     * <p>The name of the registered table.</p>
+     * 
      * <strong>example:</strong>
      * <p>table1</p>
      */
@@ -137,6 +174,8 @@ public class GetFeatureViewResponseBody extends TeaModel {
     public String registerTable;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>72F15A8A-5A28-5B18-A0DE-0EABD7D3245A</p>
      */
@@ -144,6 +183,8 @@ public class GetFeatureViewResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether to synchronize the online feature table.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -151,16 +192,25 @@ public class GetFeatureViewResponseBody extends TeaModel {
     public Boolean syncOnlineTable;
 
     /**
+     * <p>The time to live (TTL).</p>
+     * 
      * <strong>example:</strong>
-     * <p>90</p>
+     * <p>86400</p>
      */
     @NameInMap("TTL")
     public Integer TTL;
 
+    /**
+     * <p>The list of tags.</p>
+     */
     @NameInMap("Tags")
     public java.util.List<String> tags;
 
     /**
+     * <p>The type of the feature view. Valid values:</p>
+     * <p>● <code>Batch</code>: A batch feature.</p>
+     * <p>● <code>Stream</code>: A stream feature.</p>
+     * 
      * <strong>example:</strong>
      * <p>Batch</p>
      */
@@ -168,12 +218,22 @@ public class GetFeatureViewResponseBody extends TeaModel {
     public String type;
 
     /**
+     * <p>The write method. Valid values:</p>
+     * <p>● <code>ByReadyMadeTable</code>: Registers the feature view by using an existing table.</p>
+     * <p>● <code>Custom</code>: Uses a custom table structure.</p>
+     * 
      * <strong>example:</strong>
      * <p>custom</p>
      */
     @NameInMap("WriteMethod")
     public String writeMethod;
 
+    /**
+     * <p>Indicates whether to write data to the online managed storage.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("WriteToFeatureDB")
     public Boolean writeToFeatureDB;
 
@@ -383,17 +443,27 @@ public class GetFeatureViewResponseBody extends TeaModel {
     }
 
     public static class GetFeatureViewResponseBodyFieldsTransformInput extends TeaModel {
+        /**
+         * <p>The modality type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TEXT</p>
+         */
         @NameInMap("Modality")
         public String modality;
 
         /**
+         * <p>The feature name.</p>
+         * 
          * <strong>example:</strong>
-         * <p>f1</p>
+         * <p>feature1</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
+         * <p>The feature type.</p>
+         * 
          * <strong>example:</strong>
          * <p>STRING</p>
          */
@@ -432,10 +502,15 @@ public class GetFeatureViewResponseBody extends TeaModel {
     }
 
     public static class GetFeatureViewResponseBodyFieldsTransform extends TeaModel {
+        /**
+         * <p>The input for the feature transformation.</p>
+         */
         @NameInMap("Input")
         public java.util.List<GetFeatureViewResponseBodyFieldsTransformInput> input;
 
         /**
+         * <p>The LLM configuration ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -443,6 +518,8 @@ public class GetFeatureViewResponseBody extends TeaModel {
         public Integer LLMConfigId;
 
         /**
+         * <p>The feature transformation type.</p>
+         * 
          * <strong>example:</strong>
          * <p>LLMEmbedding</p>
          */
@@ -481,20 +558,36 @@ public class GetFeatureViewResponseBody extends TeaModel {
     }
 
     public static class GetFeatureViewResponseBodyFields extends TeaModel {
+        /**
+         * <p>The list of field attributes. Valid values:</p>
+         * <p>● <code>Partition</code>: The partition field.</p>
+         * <p>● <code>PrimaryKey</code>: The primary key.</p>
+         * <p>● <code>EventTime</code>: The event time.</p>
+         */
         @NameInMap("Attributes")
         public java.util.List<String> attributes;
 
         /**
+         * <p>The field name.</p>
+         * 
          * <strong>example:</strong>
          * <p>user</p>
          */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The feature transformation.</p>
+         */
         @NameInMap("Transform")
         public java.util.List<GetFeatureViewResponseBodyFieldsTransform> transform;
 
         /**
+         * <p>The data type of the field. Valid values:</p>
+         * <p>● <code>int</code></p>
+         * <p>● <code>string</code></p>
+         * <p>● <code>float</code></p>
+         * 
          * <strong>example:</strong>
          * <p>int</p>
          */

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateServiceIdentityRoleResponseBody extends TeaModel {
     /**
+     * <p>The error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>ServiceLinkedRoleAlreadyExistsErrorProblem</p>
      */
@@ -12,6 +14,8 @@ public class CreateServiceIdentityRoleResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>C03B2680-AC9C-59CD-93C5-8142B92537FA</p>
      */
@@ -19,6 +23,8 @@ public class CreateServiceIdentityRoleResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The name of the service account role.</p>
+     * 
      * <strong>example:</strong>
      * <p>AliyunServiceRoleForFeatureStore</p>
      */

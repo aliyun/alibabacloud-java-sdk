@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpdateModelFeatureFGFeatureResponseBody extends TeaModel {
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>7D497816-607C-5B67-97B1-61354B6ACB2B</p>
      */

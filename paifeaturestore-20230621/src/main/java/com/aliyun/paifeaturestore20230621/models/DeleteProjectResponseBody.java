@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DeleteProjectResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>0DA35264-0877-5852-8971-7735B547C969</p>
      */

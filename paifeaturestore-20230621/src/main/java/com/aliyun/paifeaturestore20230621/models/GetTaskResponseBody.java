@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetTaskResponseBody extends TeaModel {
     /**
+     * <p>The task configuration.</p>
+     * 
      * <strong>example:</strong>
      * <p>{
      *     &quot;mode&quot;: &quot;overwrite&quot;,
@@ -20,6 +22,8 @@ public class GetTaskResponseBody extends TeaModel {
     public String config;
 
     /**
+     * <p>The creation time.</p>
+     * 
      * <strong>example:</strong>
      * <p>2023-07-04T11:26:09.036+08:00</p>
      */
@@ -27,6 +31,8 @@ public class GetTaskResponseBody extends TeaModel {
     public String gmtCreateTime;
 
     /**
+     * <p>The execution time.</p>
+     * 
      * <strong>example:</strong>
      * <p>2023-07-04T11:26:09.036+08:00</p>
      */
@@ -34,6 +40,8 @@ public class GetTaskResponseBody extends TeaModel {
     public String gmtExecutedTime;
 
     /**
+     * <p>The completion time.</p>
+     * 
      * <strong>example:</strong>
      * <p>2023-07-04T11:26:09.036+08:00</p>
      */
@@ -41,6 +49,8 @@ public class GetTaskResponseBody extends TeaModel {
     public String gmtFinishedTime;
 
     /**
+     * <p>The update time.</p>
+     * 
      * <strong>example:</strong>
      * <p>2023-07-04T11:26:09.036+08:00</p>
      */
@@ -48,6 +58,8 @@ public class GetTaskResponseBody extends TeaModel {
     public String gmtModifiedTime;
 
     /**
+     * <p>The ID of the target object.</p>
+     * 
      * <strong>example:</strong>
      * <p>3</p>
      */
@@ -55,6 +67,14 @@ public class GetTaskResponseBody extends TeaModel {
     public String objectId;
 
     /**
+     * <p>The type of the target object.</p>
+     * <ul>
+     * <li><p>ModelFeature: model feature</p>
+     * </li>
+     * <li><p>FeatureView: feature view</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>ModelFeature</p>
      */
@@ -62,6 +82,8 @@ public class GetTaskResponseBody extends TeaModel {
     public String objectType;
 
     /**
+     * <p>The project ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>3</p>
      */
@@ -69,6 +91,8 @@ public class GetTaskResponseBody extends TeaModel {
     public String projectId;
 
     /**
+     * <p>The project name.</p>
+     * 
      * <strong>example:</strong>
      * <p>project_1</p>
      */
@@ -76,6 +100,8 @@ public class GetTaskResponseBody extends TeaModel {
     public String projectName;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>37D19490-AB69-567D-A852-407C94E510E9</p>
      */
@@ -83,6 +109,8 @@ public class GetTaskResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The task runtime configuration.</p>
+     * 
      * <strong>example:</strong>
      * <p>DROP TABLE IF EXISTS public.fsxxx</p>
      */
@@ -90,6 +118,18 @@ public class GetTaskResponseBody extends TeaModel {
     public String runningConfig;
 
     /**
+     * <p>The status of the task.</p>
+     * <ul>
+     * <li><p>Initializing: The task is initializing.</p>
+     * </li>
+     * <li><p>Running: The task is running.</p>
+     * </li>
+     * <li><p>Success: The task completed successfully.</p>
+     * </li>
+     * <li><p>Failure: The task failed.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>Running</p>
      */
@@ -97,6 +137,14 @@ public class GetTaskResponseBody extends TeaModel {
     public String status;
 
     /**
+     * <p>The task type.</p>
+     * <ul>
+     * <li><p>OfflineToOnline: offline-to-online data synchronization</p>
+     * </li>
+     * <li><p>ExportTrainingSet: training sample table export</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>OfflineToOnline</p>
      */

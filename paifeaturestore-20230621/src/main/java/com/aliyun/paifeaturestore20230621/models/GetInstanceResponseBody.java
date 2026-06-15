@@ -4,14 +4,22 @@ package com.aliyun.paifeaturestore20230621.models;
 import com.aliyun.tea.*;
 
 public class GetInstanceResponseBody extends TeaModel {
+    /**
+     * <p>The information about the FeatureDB instance.</p>
+     */
     @NameInMap("FeatureDBInfo")
     public GetInstanceResponseBodyFeatureDBInfo featureDBInfo;
 
+    /**
+     * <p>The information about the FeatureDB instance.</p>
+     */
     @NameInMap("FeatureDBInstanceInfo")
     @Deprecated
     public GetInstanceResponseBodyFeatureDBInstanceInfo featureDBInstanceInfo;
 
     /**
+     * <p>The time when the instance was created. The time is in the ISO 8601 format.</p>
+     * 
      * <strong>example:</strong>
      * <p>2023-07-04T11:26:09.036+08:00</p>
      */
@@ -19,6 +27,8 @@ public class GetInstanceResponseBody extends TeaModel {
     public String gmtCreateTime;
 
     /**
+     * <p>The time when the instance was last updated. The time is in the ISO 8601 format.</p>
+     * 
      * <strong>example:</strong>
      * <p>2023-07-04T11:26:09.036+08:00</p>
      */
@@ -26,6 +36,8 @@ public class GetInstanceResponseBody extends TeaModel {
     public String gmtModifiedTime;
 
     /**
+     * <p>The message that is returned for the instance provisioning.</p>
+     * 
      * <strong>example:</strong>
      * <p>Success</p>
      */
@@ -33,6 +45,8 @@ public class GetInstanceResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The progress of instance provisioning.</p>
+     * 
      * <strong>example:</strong>
      * <p>0.8</p>
      */
@@ -40,6 +54,8 @@ public class GetInstanceResponseBody extends TeaModel {
     public Double progress;
 
     /**
+     * <p>The region where the instance is deployed.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
      */
@@ -47,6 +63,8 @@ public class GetInstanceResponseBody extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>1C5B1511-8A5B-59C3-90AF-513F9210E882</p>
      */
@@ -54,6 +72,18 @@ public class GetInstanceResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The status of the instance. Valid values:</p>
+     * <ul>
+     * <li><p>Initializing: The instance is being initialized.</p>
+     * </li>
+     * <li><p>Running: The instance is running.</p>
+     * </li>
+     * <li><p>Failure: The instance fails to be created.</p>
+     * </li>
+     * <li><p>Stopped: The instance is stopped.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>Running</p>
      */
@@ -61,6 +91,8 @@ public class GetInstanceResponseBody extends TeaModel {
     public String status;
 
     /**
+     * <p>The type of the instance.</p>
+     * 
      * <strong>example:</strong>
      * <p>Basic</p>
      */
@@ -154,6 +186,9 @@ public class GetInstanceResponseBody extends TeaModel {
     }
 
     public static class GetInstanceResponseBodyFeatureDBInfo extends TeaModel {
+        /**
+         * <p>The status of the instance.</p>
+         */
         @NameInMap("Status")
         public String status;
 
@@ -173,6 +208,9 @@ public class GetInstanceResponseBody extends TeaModel {
     }
 
     public static class GetInstanceResponseBodyFeatureDBInstanceInfo extends TeaModel {
+        /**
+         * <p>The status of the instance.</p>
+         */
         @NameInMap("Status")
         public String status;
 

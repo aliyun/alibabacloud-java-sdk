@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateInstanceResponseBody extends TeaModel {
     /**
+     * <p>The error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>InstanceAlreadyExistsErrorProblem</p>
      */
@@ -12,6 +14,8 @@ public class CreateInstanceResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>The instance ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>featureStore-cn-7mz2xfu****</p>
      */
@@ -19,6 +23,8 @@ public class CreateInstanceResponseBody extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>C33E160C-BFCA-5719-B958-942850E949F6</p>
      */

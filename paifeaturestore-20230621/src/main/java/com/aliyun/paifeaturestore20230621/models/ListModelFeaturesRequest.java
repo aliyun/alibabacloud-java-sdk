@@ -4,10 +4,15 @@ package com.aliyun.paifeaturestore20230621.models;
 import com.aliyun.tea.*;
 
 public class ListModelFeaturesRequest extends TeaModel {
+    /**
+     * <p>The IDs of the model features.</p>
+     */
     @NameInMap("ModelFeatureIds")
     public java.util.List<String> modelFeatureIds;
 
     /**
+     * <p>The name of the model feature.</p>
+     * 
      * <strong>example:</strong>
      * <p>model_feature1</p>
      */
@@ -15,6 +20,14 @@ public class ListModelFeaturesRequest extends TeaModel {
     public String name;
 
     /**
+     * <p>The sort order.</p>
+     * <ul>
+     * <li><p><code>ASC</code>: ascending order.</p>
+     * </li>
+     * <li><p><code>DESC</code>: descending order.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>ASC</p>
      */
@@ -22,6 +35,8 @@ public class ListModelFeaturesRequest extends TeaModel {
     public String order;
 
     /**
+     * <p>The Alibaba Cloud account ID of the user who creates the model feature.</p>
+     * 
      * <strong>example:</strong>
      * <p>12323143****</p>
      */
@@ -29,6 +44,8 @@ public class ListModelFeaturesRequest extends TeaModel {
     public String owner;
 
     /**
+     * <p>The page number. The value must be a positive integer. Default value: 1.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -36,6 +53,8 @@ public class ListModelFeaturesRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries to return on each page. Default value: 10.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -43,6 +62,8 @@ public class ListModelFeaturesRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The project ID. You can call the <code>ListProjects</code> API to obtain the project ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>4</p>
      */
@@ -50,6 +71,14 @@ public class ListModelFeaturesRequest extends TeaModel {
     public String projectId;
 
     /**
+     * <p>The field by which to sort the results.</p>
+     * <ul>
+     * <li><p><code>GmtCreateTime</code>: the creation time.</p>
+     * </li>
+     * <li><p><code>GmtModifiedTime</code>: the update time.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>DESC</p>
      */

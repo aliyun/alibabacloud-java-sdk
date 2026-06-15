@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateFeatureViewRequest extends TeaModel {
     /**
+     * <p>A list of fields.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Fields")
@@ -25,6 +26,8 @@ public class UpdateFeatureViewRequest extends TeaModel {
 
     public static class UpdateFeatureViewRequestFieldsTransformInput extends TeaModel {
         /**
+         * <p>The modality of the input, such as text or image.</p>
+         * 
          * <strong>example:</strong>
          * <p>NONE</p>
          */
@@ -32,6 +35,7 @@ public class UpdateFeatureViewRequest extends TeaModel {
         public String modality;
 
         /**
+         * <p>The name of the input field.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -41,6 +45,7 @@ public class UpdateFeatureViewRequest extends TeaModel {
         public String name;
 
         /**
+         * <p>The data type of the input field.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -82,12 +87,14 @@ public class UpdateFeatureViewRequest extends TeaModel {
 
     public static class UpdateFeatureViewRequestFieldsTransform extends TeaModel {
         /**
+         * <p>The input fields.</p>
          * <p>This parameter is required.</p>
          */
         @NameInMap("Input")
         public java.util.List<UpdateFeatureViewRequestFieldsTransformInput> input;
 
         /**
+         * <p>The ID of the LLM configuration.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -97,6 +104,7 @@ public class UpdateFeatureViewRequest extends TeaModel {
         public Integer LLMConfigId;
 
         /**
+         * <p>The type of feature generation.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -138,12 +146,22 @@ public class UpdateFeatureViewRequest extends TeaModel {
 
     public static class UpdateFeatureViewRequestFields extends TeaModel {
         /**
+         * <p>A list of field attributes. Valid values:</p>
+         * <ul>
+         * <li><p><code>Partition</code>: Indicates that the field is a partition field.</p>
+         * </li>
+         * <li><p><code>PrimaryKey</code>: Indicates that the field is a primary key.</p>
+         * </li>
+         * <li><p><code>EventTime</code>: Indicates that the field is the event time.</p>
+         * </li>
+         * </ul>
          * <p>This parameter is required.</p>
          */
         @NameInMap("Attributes")
         public java.util.List<String> attributes;
 
         /**
+         * <p>The name of the field.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -152,10 +170,14 @@ public class UpdateFeatureViewRequest extends TeaModel {
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The feature generation configuration.</p>
+         */
         @NameInMap("Transform")
         public java.util.List<UpdateFeatureViewRequestFieldsTransform> transform;
 
         /**
+         * <p>The data type of the field.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

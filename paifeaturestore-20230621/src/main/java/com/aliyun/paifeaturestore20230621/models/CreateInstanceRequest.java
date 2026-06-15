@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateInstanceRequest extends TeaModel {
     /**
+     * <p>The instance type. The only supported value is <code>Basic</code>.</p>
+     * 
      * <strong>example:</strong>
      * <p>Basic</p>
      */

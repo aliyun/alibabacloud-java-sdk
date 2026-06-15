@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListLLMConfigsRequest extends TeaModel {
     /**
+     * <p>The maximum number of results to return.</p>
+     * 
      * <strong>example:</strong>
      * <p>100</p>
      */
@@ -12,6 +14,8 @@ public class ListLLMConfigsRequest extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>The name of the LLM configuration.</p>
+     * 
      * <strong>example:</strong>
      * <p>llm_config_1</p>
      */
@@ -19,6 +23,8 @@ public class ListLLMConfigsRequest extends TeaModel {
     public String name;
 
     /**
+     * <p>A pagination token returned from a previous call. Pass this token to retrieve the next page of results. If you do not specify this parameter, the query starts from the beginning.</p>
+     * 
      * <strong>example:</strong>
      * <p>None</p>
      */
@@ -26,6 +32,8 @@ public class ListLLMConfigsRequest extends TeaModel {
     public String nextToken;
 
     /**
+     * <p>The sort order.</p>
+     * 
      * <strong>example:</strong>
      * <p>Asc</p>
      */
@@ -33,6 +41,8 @@ public class ListLLMConfigsRequest extends TeaModel {
     public String order;
 
     /**
+     * <p>The page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -40,6 +50,8 @@ public class ListLLMConfigsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The page size.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -47,6 +59,8 @@ public class ListLLMConfigsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The field to sort by.</p>
+     * 
      * <strong>example:</strong>
      * <p>GmtModifiedTime</p>
      */
@@ -54,6 +68,8 @@ public class ListLLMConfigsRequest extends TeaModel {
     public String sortBy;
 
     /**
+     * <p>The workspace ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>234</p>
      */

@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class ListDatasourceTablesResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>C03B2680-AC9C-59CD-93C5-8142B92537FA</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>A list of tables.</p>
+     */
     @NameInMap("Tables")
     public java.util.List<String> tables;
 
     /**
+     * <p>The total count.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */

@@ -4,10 +4,15 @@ package com.aliyun.paifeaturestore20230621.models;
 import com.aliyun.tea.*;
 
 public class ListProjectsResponseBody extends TeaModel {
+    /**
+     * <p>The list of projects.</p>
+     */
     @NameInMap("Projects")
     public java.util.List<ListProjectsResponseBodyProjects> projects;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>44933189-493B-5C43-A5C6-11EEC2A43520</p>
      */
@@ -15,6 +20,8 @@ public class ListProjectsResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total number of projects.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -52,6 +59,8 @@ public class ListProjectsResponseBody extends TeaModel {
 
     public static class ListProjectsResponseBodyProjects extends TeaModel {
         /**
+         * <p>The project description.</p>
+         * 
          * <strong>example:</strong>
          * <p>This is a test.</p>
          */
@@ -59,6 +68,8 @@ public class ListProjectsResponseBody extends TeaModel {
         public String description;
 
         /**
+         * <p>The number of feature entities.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -66,6 +77,8 @@ public class ListProjectsResponseBody extends TeaModel {
         public Integer featureEntityCount;
 
         /**
+         * <p>The number of feature views.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -73,6 +86,8 @@ public class ListProjectsResponseBody extends TeaModel {
         public Integer featureViewCount;
 
         /**
+         * <p>The creation time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2021-12-15T23:24:33.132+08:00</p>
          */
@@ -80,6 +95,8 @@ public class ListProjectsResponseBody extends TeaModel {
         public String gmtCreateTime;
 
         /**
+         * <p>The modification time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2021-12-15T23:24:33.132+08:00</p>
          */
@@ -87,6 +104,8 @@ public class ListProjectsResponseBody extends TeaModel {
         public String gmtModifiedTime;
 
         /**
+         * <p>The number of models.</p>
+         * 
          * <strong>example:</strong>
          * <p>5</p>
          */
@@ -94,6 +113,8 @@ public class ListProjectsResponseBody extends TeaModel {
         public Integer modelCount;
 
         /**
+         * <p>The project name.</p>
+         * 
          * <strong>example:</strong>
          * <p>project1</p>
          */
@@ -101,6 +122,8 @@ public class ListProjectsResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>The offline data source ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>4</p>
          */
@@ -108,6 +131,8 @@ public class ListProjectsResponseBody extends TeaModel {
         public String offlineDatasourceId;
 
         /**
+         * <p>The offline data source name.</p>
+         * 
          * <strong>example:</strong>
          * <p>datasource1</p>
          */
@@ -115,6 +140,8 @@ public class ListProjectsResponseBody extends TeaModel {
         public String offlineDatasourceName;
 
         /**
+         * <p>The offline data source type.</p>
+         * 
          * <strong>example:</strong>
          * <p>MaxCompute</p>
          */
@@ -122,6 +149,8 @@ public class ListProjectsResponseBody extends TeaModel {
         public String offlineDatasourceType;
 
         /**
+         * <p>The offline data lifecycle, in days.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -129,6 +158,8 @@ public class ListProjectsResponseBody extends TeaModel {
         public Integer offlineLifecycle;
 
         /**
+         * <p>The online data source ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>5</p>
          */
@@ -136,6 +167,8 @@ public class ListProjectsResponseBody extends TeaModel {
         public String onlineDatasourceId;
 
         /**
+         * <p>The online data source name.</p>
+         * 
          * <strong>example:</strong>
          * <p>datasource2</p>
          */
@@ -143,6 +176,8 @@ public class ListProjectsResponseBody extends TeaModel {
         public String onlineDatasourceName;
 
         /**
+         * <p>The online data source type.</p>
+         * 
          * <strong>example:</strong>
          * <p>Hologres</p>
          */
@@ -150,6 +185,8 @@ public class ListProjectsResponseBody extends TeaModel {
         public String onlineDatasourceType;
 
         /**
+         * <p>The project owner.</p>
+         * 
          * <strong>example:</strong>
          * <p>1232132543543****</p>
          */
@@ -157,6 +194,8 @@ public class ListProjectsResponseBody extends TeaModel {
         public String owner;
 
         /**
+         * <p>The project ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>3</p>
          */
@@ -164,6 +203,8 @@ public class ListProjectsResponseBody extends TeaModel {
         public String projectId;
 
         /**
+         * <p>The workspace ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>35523</p>
          */

@@ -4,10 +4,15 @@ package com.aliyun.paifeaturestore20230621.models;
 import com.aliyun.tea.*;
 
 public class ListFeatureViewFieldRelationshipsResponseBody extends TeaModel {
+    /**
+     * <p>A list of relationships.</p>
+     */
     @NameInMap("Relationships")
     public java.util.List<ListFeatureViewFieldRelationshipsResponseBodyRelationships> relationships;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>BF349686-C932-55B5-9B31-DAFA395C0E06</p>
      */
@@ -37,6 +42,8 @@ public class ListFeatureViewFieldRelationshipsResponseBody extends TeaModel {
 
     public static class ListFeatureViewFieldRelationshipsResponseBodyRelationshipsModels extends TeaModel {
         /**
+         * <p>The feature alias.</p>
+         * 
          * <strong>example:</strong>
          * <p>f1</p>
          */
@@ -44,6 +51,8 @@ public class ListFeatureViewFieldRelationshipsResponseBody extends TeaModel {
         public String featureAliasName;
 
         /**
+         * <p>The ID of the model.</p>
+         * 
          * <strong>example:</strong>
          * <p>3</p>
          */
@@ -51,6 +60,8 @@ public class ListFeatureViewFieldRelationshipsResponseBody extends TeaModel {
         public String modelId;
 
         /**
+         * <p>The name of the model.</p>
+         * 
          * <strong>example:</strong>
          * <p>dbmtl</p>
          */
@@ -90,16 +101,23 @@ public class ListFeatureViewFieldRelationshipsResponseBody extends TeaModel {
 
     public static class ListFeatureViewFieldRelationshipsResponseBodyRelationships extends TeaModel {
         /**
+         * <p>The feature view name.</p>
+         * 
          * <strong>example:</strong>
          * <p>featureView1</p>
          */
         @NameInMap("FeatureName")
         public String featureName;
 
+        /**
+         * <p>A list of models.</p>
+         */
         @NameInMap("Models")
         public java.util.List<ListFeatureViewFieldRelationshipsResponseBodyRelationshipsModels> models;
 
         /**
+         * <p>The name of the offline table.</p>
+         * 
          * <strong>example:</strong>
          * <p>table2</p>
          */
@@ -107,6 +125,8 @@ public class ListFeatureViewFieldRelationshipsResponseBody extends TeaModel {
         public String offlineTableName;
 
         /**
+         * <p>The name of the online table.</p>
+         * 
          * <strong>example:</strong>
          * <p>table1</p>
          */

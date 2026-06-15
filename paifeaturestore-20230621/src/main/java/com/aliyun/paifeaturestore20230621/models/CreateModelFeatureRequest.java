@@ -5,12 +5,15 @@ import com.aliyun.tea.*;
 
 public class CreateModelFeatureRequest extends TeaModel {
     /**
+     * <p>The list of features.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Features")
     public java.util.List<CreateModelFeatureRequestFeatures> features;
 
     /**
+     * <p>The priority level of the label table. Default value: 0, which indicates that conflicts between label table features and feature view features are not allowed. A value of 1 indicates that the label table takes precedence when conflicts occur. A value of 2 indicates that the feature view takes precedence.</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
@@ -18,6 +21,7 @@ public class CreateModelFeatureRequest extends TeaModel {
     public Long labelPriorityLevel;
 
     /**
+     * <p>The label table ID. You can call the ListLabelTables operation to obtain the label table ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -27,6 +31,7 @@ public class CreateModelFeatureRequest extends TeaModel {
     public String labelTableId;
 
     /**
+     * <p>The name of the model feature.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -36,6 +41,7 @@ public class CreateModelFeatureRequest extends TeaModel {
     public String name;
 
     /**
+     * <p>The project ID. You can call the ListProjects operation to obtain the project ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -44,6 +50,9 @@ public class CreateModelFeatureRequest extends TeaModel {
     @NameInMap("ProjectId")
     public String projectId;
 
+    /**
+     * <p>The sequence feature view IDs.</p>
+     */
     @NameInMap("SequenceFeatureViewIds")
     public java.util.List<String> sequenceFeatureViewIds;
 
@@ -102,6 +111,8 @@ public class CreateModelFeatureRequest extends TeaModel {
 
     public static class CreateModelFeatureRequestFeatures extends TeaModel {
         /**
+         * <p>The alias of the feature.</p>
+         * 
          * <strong>example:</strong>
          * <p>userid</p>
          */
@@ -109,6 +120,7 @@ public class CreateModelFeatureRequest extends TeaModel {
         public String aliasName;
 
         /**
+         * <p>The feature view ID. You can call the ListFeatureViews operation to obtain the feature view ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -118,6 +130,7 @@ public class CreateModelFeatureRequest extends TeaModel {
         public String featureViewId;
 
         /**
+         * <p>The feature name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -127,6 +140,23 @@ public class CreateModelFeatureRequest extends TeaModel {
         public String name;
 
         /**
+         * <strong>example:</strong>
+         * <p>cand_seq__</p>
+         */
+        @NameInMap("PrefixName")
+        public String prefixName;
+
+        /**
+         * <p>The feature type. Valid values:</p>
+         * <ul>
+         * <li>INT32</li>
+         * <li>INT64</li>
+         * <li>FLOAT</li>
+         * <li>DOUBLE</li>
+         * <li>STRING</li>
+         * <li>BOOLEAN</li>
+         * <li>TIMESTAMP.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -162,6 +192,14 @@ public class CreateModelFeatureRequest extends TeaModel {
         }
         public String getName() {
             return this.name;
+        }
+
+        public CreateModelFeatureRequestFeatures setPrefixName(String prefixName) {
+            this.prefixName = prefixName;
+            return this;
+        }
+        public String getPrefixName() {
+            return this.prefixName;
         }
 
         public CreateModelFeatureRequestFeatures setType(String type) {

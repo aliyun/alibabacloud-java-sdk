@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateFeatureViewRequest extends TeaModel {
     /**
+     * <p>The configurations of the feature view.</p>
+     * 
      * <strong>example:</strong>
      * <p>{&quot;save_original_field&quot;:true}</p>
      */
@@ -12,16 +14,22 @@ public class CreateFeatureViewRequest extends TeaModel {
     public String config;
 
     /**
+     * <p>The ID of the feature entity.</p>
+     * 
      * <strong>example:</strong>
      * <p>4</p>
      */
     @NameInMap("FeatureEntityId")
     public String featureEntityId;
 
+    /**
+     * <p>The fields.</p>
+     */
     @NameInMap("Fields")
     public java.util.List<CreateFeatureViewRequestFields> fields;
 
     /**
+     * <p>The name of the feature view.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -31,6 +39,7 @@ public class CreateFeatureViewRequest extends TeaModel {
     public String name;
 
     /**
+     * <p>The ID of the project.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -40,6 +49,8 @@ public class CreateFeatureViewRequest extends TeaModel {
     public String projectId;
 
     /**
+     * <p>The ID of the data source to which the table to be registered belongs. You can call the ListDatasources operation to obtain the data source ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>5</p>
      */
@@ -47,6 +58,8 @@ public class CreateFeatureViewRequest extends TeaModel {
     public String registerDatasourceId;
 
     /**
+     * <p>The name of the table to register.</p>
+     * 
      * <strong>example:</strong>
      * <p>table1</p>
      */
@@ -54,6 +67,13 @@ public class CreateFeatureViewRequest extends TeaModel {
     public String registerTable;
 
     /**
+     * <p>Specifies whether to synchronize the online feature table. Valid values:</p>
+     * <ul>
+     * <li><p><code>true</code>: Synchronizes the online feature table.</p>
+     * </li>
+     * <li><p><code>false</code>: Does not synchronize the online feature table.</p>
+     * </li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -63,16 +83,28 @@ public class CreateFeatureViewRequest extends TeaModel {
     public Boolean syncOnlineTable;
 
     /**
+     * <p>The time-to-live (TTL) of the feature view, in days.</p>
+     * 
      * <strong>example:</strong>
      * <p>90</p>
      */
     @NameInMap("TTL")
     public Integer TTL;
 
+    /**
+     * <p>The tags of the feature view.</p>
+     */
     @NameInMap("Tags")
     public java.util.List<String> tags;
 
     /**
+     * <p>The type of the feature view. Valid values:</p>
+     * <ul>
+     * <li><p><code>Batch</code>: Offline feature.</p>
+     * </li>
+     * <li><p><code>Stream</code>: Real-time feature.</p>
+     * </li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -82,6 +114,13 @@ public class CreateFeatureViewRequest extends TeaModel {
     public String type;
 
     /**
+     * <p>The write method. Valid values:</p>
+     * <ul>
+     * <li><p><code>ByReadyMadeTable</code>: Registers the feature view by using an existing table.</p>
+     * </li>
+     * <li><p><code>Custom</code>: Defines a custom table structure.</p>
+     * </li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -90,6 +129,18 @@ public class CreateFeatureViewRequest extends TeaModel {
     @NameInMap("WriteMethod")
     public String writeMethod;
 
+    /**
+     * <p>Specifies whether to write data to the online feature store. Valid values:</p>
+     * <ul>
+     * <li><p><code>true</code>: Writes data to the online feature store.</p>
+     * </li>
+     * <li><p><code>false</code>: Does not write data to the online feature store.</p>
+     * </li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("WriteToFeatureDB")
     public Boolean writeToFeatureDB;
 
@@ -203,10 +254,15 @@ public class CreateFeatureViewRequest extends TeaModel {
     }
 
     public static class CreateFeatureViewRequestFieldsTransformInput extends TeaModel {
+        /**
+         * <p>The modality of the input, such as text or image.</p>
+         */
         @NameInMap("Modality")
         public String modality;
 
         /**
+         * <p>The name of the input field.</p>
+         * 
          * <strong>example:</strong>
          * <p>f1</p>
          */
@@ -214,6 +270,8 @@ public class CreateFeatureViewRequest extends TeaModel {
         public String name;
 
         /**
+         * <p>The data type of the input field.</p>
+         * 
          * <strong>example:</strong>
          * <p>STRING</p>
          */
@@ -252,10 +310,15 @@ public class CreateFeatureViewRequest extends TeaModel {
     }
 
     public static class CreateFeatureViewRequestFieldsTransform extends TeaModel {
+        /**
+         * <p>The input for feature generation.</p>
+         */
         @NameInMap("Input")
         public java.util.List<CreateFeatureViewRequestFieldsTransformInput> input;
 
         /**
+         * <p>The ID of the large language model (LLM) configuration.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -263,6 +326,8 @@ public class CreateFeatureViewRequest extends TeaModel {
         public Integer LLMConfigId;
 
         /**
+         * <p>The type of the feature generation.</p>
+         * 
          * <strong>example:</strong>
          * <p>LLMEmbedding</p>
          */
@@ -301,20 +366,54 @@ public class CreateFeatureViewRequest extends TeaModel {
     }
 
     public static class CreateFeatureViewRequestFields extends TeaModel {
+        /**
+         * <p>The attributes of the field. Valid values:</p>
+         * <ul>
+         * <li><p><code>Partition</code>: partition field.</p>
+         * </li>
+         * <li><p><code>PrimaryKey</code>: primary key.</p>
+         * </li>
+         * <li><p><code>EventTime</code>: event time.</p>
+         * </li>
+         * </ul>
+         */
         @NameInMap("Attributes")
         public java.util.List<String> attributes;
 
         /**
+         * <p>The name of the field.</p>
+         * 
          * <strong>example:</strong>
          * <p>age</p>
          */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The feature generation configurations.</p>
+         */
         @NameInMap("Transform")
         public java.util.List<CreateFeatureViewRequestFieldsTransform> transform;
 
         /**
+         * <p>The data type of the field. Valid values:</p>
+         * <ul>
+         * <li><p>INT32</p>
+         * </li>
+         * <li><p>INT64</p>
+         * </li>
+         * <li><p>FLOAT</p>
+         * </li>
+         * <li><p>DOUBLE</p>
+         * </li>
+         * <li><p>STRING</p>
+         * </li>
+         * <li><p>BOOLEAN</p>
+         * </li>
+         * <li><p>TIMESTAMP</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>INT32</p>
          */

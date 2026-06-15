@@ -4,10 +4,15 @@ package com.aliyun.paifeaturestore20230621.models;
 import com.aliyun.tea.*;
 
 public class GetDatasourceTableResponseBody extends TeaModel {
+    /**
+     * <p>The list of fields.</p>
+     */
     @NameInMap("Fields")
     public java.util.List<GetDatasourceTableResponseBodyFields> fields;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>D7B2F8C4-49C7-5CFA-8075-9D715A114873</p>
      */
@@ -15,6 +20,8 @@ public class GetDatasourceTableResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The name of the data table.</p>
+     * 
      * <strong>example:</strong>
      * <p>table1</p>
      */
@@ -51,10 +58,18 @@ public class GetDatasourceTableResponseBody extends TeaModel {
     }
 
     public static class GetDatasourceTableResponseBodyFields extends TeaModel {
+        /**
+         * <p>The attributes of the field. Valid values:</p>
+         * <p>● Partition: indicates that the field is a partition field.</p>
+         * <p>● EventTime: indicates that the field is an event time field.</p>
+         * <p>● PrimaryKey: indicates that the field is a primary key field.</p>
+         */
         @NameInMap("Attributes")
         public java.util.List<String> attributes;
 
         /**
+         * <p>The name of the field.</p>
+         * 
          * <strong>example:</strong>
          * <p>field1</p>
          */
@@ -62,6 +77,15 @@ public class GetDatasourceTableResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>The data type of the field. Valid values:</p>
+         * <p>● INT32</p>
+         * <p>● INT64</p>
+         * <p>● FLOAT</p>
+         * <p>● DOUBLE</p>
+         * <p>● STRING</p>
+         * <p>● BOOLEAN</p>
+         * <p>● TIMESTAMP</p>
+         * 
          * <strong>example:</strong>
          * <p>INT32</p>
          */

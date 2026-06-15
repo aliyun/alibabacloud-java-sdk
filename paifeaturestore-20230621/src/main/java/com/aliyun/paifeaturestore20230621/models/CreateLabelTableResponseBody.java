@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateLabelTableResponseBody extends TeaModel {
     /**
+     * <p>The label table ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -12,6 +14,8 @@ public class CreateLabelTableResponseBody extends TeaModel {
     public String labelTableId;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>0FA90B3B-F30A-5C9D-A9FD-8114F8868062</p>
      */

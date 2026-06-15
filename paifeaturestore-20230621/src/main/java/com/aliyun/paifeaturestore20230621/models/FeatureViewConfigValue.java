@@ -4,26 +4,48 @@ package com.aliyun.paifeaturestore20230621.models;
 import com.aliyun.tea.*;
 
 public class FeatureViewConfigValue extends TeaModel {
+    /**
+     * <p>The list of partitions.</p>
+     */
     @NameInMap("Partitions")
     public java.util.Map<String, FeatureViewConfigValuePartitionsValue> partitions;
 
     /**
+     * <p>The event time.</p>
+     * 
      * <strong>example:</strong>
      * <p>1721186536</p>
      */
     @NameInMap("EventTime")
     public String eventTime;
 
+    /**
+     * <p>Specifies whether the feature\&quot;s timestamp must match the event time.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>False</p>
+     */
     @NameInMap("Equal")
     public Boolean equal;
 
+    /**
+     * <p>Specifies whether to use a mock data table.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>True</p>
+     */
     @NameInMap("UseMock")
     public Boolean useMock;
 
+    /**
+     * <p>The snapshot configuration.</p>
+     */
     @NameInMap("Snapshot")
     public FeatureViewConfigValueSnapshot snapshot;
 
     /**
+     * <p>The second join key.</p>
+     * 
      * <strong>example:</strong>
      * <p>request_id</p>
      */
@@ -95,10 +117,15 @@ public class FeatureViewConfigValue extends TeaModel {
     }
 
     public static class FeatureViewConfigValueSnapshot extends TeaModel {
+        /**
+         * <p>The partition configuration for the snapshot.</p>
+         */
         @NameInMap("Partitions")
         public java.util.Map<String, FeatureViewConfigValueSnapshotPartitionsValue> partitions;
 
         /**
+         * <p>The name of the snapshot table.</p>
+         * 
          * <strong>example:</strong>
          * <p>table_name</p>
          */

@@ -4,10 +4,15 @@ package com.aliyun.paifeaturestore20230621.models;
 import com.aliyun.tea.*;
 
 public class ListProjectFeatureViewsResponseBody extends TeaModel {
+    /**
+     * <p>The list of feature views.</p>
+     */
     @NameInMap("FeatureViews")
     public java.util.List<ListProjectFeatureViewsResponseBodyFeatureViews> featureViews;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>AE2AF33E-0C0D-51A8-B89B-C5F1DF261D92</p>
      */
@@ -15,6 +20,8 @@ public class ListProjectFeatureViewsResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total count of feature views.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -51,10 +58,23 @@ public class ListProjectFeatureViewsResponseBody extends TeaModel {
     }
 
     public static class ListProjectFeatureViewsResponseBodyFeatureViewsFeatures extends TeaModel {
+        /**
+         * <p>A list of field attributes. Valid values:</p>
+         * <ul>
+         * <li><p>Partition: Indicates that the feature is a partition field.</p>
+         * </li>
+         * <li><p>PrimaryKey: Indicates that the feature is a primary key.</p>
+         * </li>
+         * <li><p>EventTime: Indicates that the feature represents the event time.</p>
+         * </li>
+         * </ul>
+         */
         @NameInMap("Attributes")
         public java.util.List<String> attributes;
 
         /**
+         * <p>The feature name.</p>
+         * 
          * <strong>example:</strong>
          * <p>f1</p>
          */
@@ -62,6 +82,24 @@ public class ListProjectFeatureViewsResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>The feature type. Valid values include:</p>
+         * <ul>
+         * <li><p>INT32</p>
+         * </li>
+         * <li><p>INT64</p>
+         * </li>
+         * <li><p>FLOAT</p>
+         * </li>
+         * <li><p>DOUBLE</p>
+         * </li>
+         * <li><p>STRING</p>
+         * </li>
+         * <li><p>BOOLEAN</p>
+         * </li>
+         * <li><p>TIMESTAMP</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>INT32</p>
          */
@@ -101,16 +139,23 @@ public class ListProjectFeatureViewsResponseBody extends TeaModel {
 
     public static class ListProjectFeatureViewsResponseBodyFeatureViews extends TeaModel {
         /**
+         * <p>The feature view ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>3</p>
          */
         @NameInMap("FeatureViewId")
         public String featureViewId;
 
+        /**
+         * <p>A list of features.</p>
+         */
         @NameInMap("Features")
         public java.util.List<ListProjectFeatureViewsResponseBodyFeatureViewsFeatures> features;
 
         /**
+         * <p>The join ID of the feature entity.</p>
+         * 
          * <strong>example:</strong>
          * <p>item_id</p>
          */
@@ -118,6 +163,8 @@ public class ListProjectFeatureViewsResponseBody extends TeaModel {
         public String joinId;
 
         /**
+         * <p>The feature view name.</p>
+         * 
          * <strong>example:</strong>
          * <p>feature_view1</p>
          */
@@ -125,12 +172,28 @@ public class ListProjectFeatureViewsResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>The join ID of the parent feature entity.</p>
+         * 
          * <strong>example:</strong>
          * <p>item_id</p>
          */
         @NameInMap("ParentJoinId")
         public String parentJoinId;
 
+        /**
+         * <p>The type of the feature view.</p>
+         * <ul>
+         * <li><p>Batch: A feature view that processes data in batches.</p>
+         * </li>
+         * <li><p>Stream: A feature view that processes data as a stream.</p>
+         * </li>
+         * <li><p>Sequence: A feature view that represents a sequence of features.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Batch</p>
+         */
         @NameInMap("Type")
         public String type;
 

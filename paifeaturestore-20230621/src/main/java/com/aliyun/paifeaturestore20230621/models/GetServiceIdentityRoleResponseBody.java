@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetServiceIdentityRoleResponseBody extends TeaModel {
     /**
+     * <p>关联策略。</p>
+     * 
      * <strong>example:</strong>
      * <p>{
      * &quot;Version&quot;: &quot;1&quot;,
@@ -15,6 +17,8 @@ public class GetServiceIdentityRoleResponseBody extends TeaModel {
     public String policy;
 
     /**
+     * <p>请求ID。</p>
+     * 
      * <strong>example:</strong>
      * <p>6F629E92-F64D-502D-85AA-A9C54894CA3D</p>
      */
@@ -22,6 +26,8 @@ public class GetServiceIdentityRoleResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>服务账户角色名称。</p>
+     * 
      * <strong>example:</strong>
      * <p>AliyunServiceRoleForPaiFeatureStore</p>
      */

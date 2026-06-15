@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetDatasourceResponseBody extends TeaModel {
     /**
+     * <p>The resource configuration.</p>
+     * 
      * <strong>example:</strong>
      * <p>{&quot;address&quot;: &quot;&quot;}</p>
      */
@@ -12,6 +14,8 @@ public class GetDatasourceResponseBody extends TeaModel {
     public String config;
 
     /**
+     * <p>The ID of the data source.</p>
+     * 
      * <strong>example:</strong>
      * <p>3</p>
      */
@@ -19,6 +23,8 @@ public class GetDatasourceResponseBody extends TeaModel {
     public String datasourceId;
 
     /**
+     * <p>The time the data source was created.</p>
+     * 
      * <strong>example:</strong>
      * <p>2023-07-04T11:26:09.036+08:00</p>
      */
@@ -26,6 +32,8 @@ public class GetDatasourceResponseBody extends TeaModel {
     public String gmtCreateTime;
 
     /**
+     * <p>The time the data source was last updated.</p>
+     * 
      * <strong>example:</strong>
      * <p>2023-07-04T11:26:09.036+08:00</p>
      */
@@ -33,6 +41,8 @@ public class GetDatasourceResponseBody extends TeaModel {
     public String gmtModifiedTime;
 
     /**
+     * <p>The name of the data source.</p>
+     * 
      * <strong>example:</strong>
      * <p>datasource1</p>
      */
@@ -40,6 +50,8 @@ public class GetDatasourceResponseBody extends TeaModel {
     public String name;
 
     /**
+     * <p>The ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>AD7D9E95-BD31-53F2-B710-6C01866FCB05</p>
      */
@@ -47,6 +59,16 @@ public class GetDatasourceResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The type of the data source. Valid values:</p>
+     * <ul>
+     * <li><p>Hologres</p>
+     * </li>
+     * <li><p>Redis</p>
+     * </li>
+     * <li><p>MaxCompute</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>Hologres</p>
      */
@@ -54,6 +76,8 @@ public class GetDatasourceResponseBody extends TeaModel {
     public String type;
 
     /**
+     * <p>The URI of the resource.</p>
+     * 
      * <strong>example:</strong>
      * <p>igraph_instance1</p>
      */
@@ -61,6 +85,8 @@ public class GetDatasourceResponseBody extends TeaModel {
     public String uri;
 
     /**
+     * <p>The ID of the workspace.</p>
+     * 
      * <strong>example:</strong>
      * <p>32244</p>
      */

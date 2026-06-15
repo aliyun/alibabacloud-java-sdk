@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpdateLabelTableRequest extends TeaModel {
     /**
+     * <p>The ID of the data source for the label table.</p>
+     * 
      * <strong>example:</strong>
      * <p>3</p>
      */
@@ -12,12 +14,15 @@ public class UpdateLabelTableRequest extends TeaModel {
     public String datasourceId;
 
     /**
+     * <p>The fields to modify.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Fields")
     public java.util.List<UpdateLabelTableRequestFields> fields;
 
     /**
+     * <p>The name of the label table.</p>
+     * 
      * <strong>example:</strong>
      * <p>rec_test</p>
      */
@@ -62,12 +67,14 @@ public class UpdateLabelTableRequest extends TeaModel {
         public String alignedEntityName;
 
         /**
+         * <p>The field\&quot;s attributes.</p>
          * <p>This parameter is required.</p>
          */
         @NameInMap("Attributes")
         public java.util.List<String> attributes;
 
         /**
+         * <p>The name of the field.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -77,6 +84,7 @@ public class UpdateLabelTableRequest extends TeaModel {
         public String name;
 
         /**
+         * <p>The data type of the field.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

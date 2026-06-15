@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateLLMConfigRequest extends TeaModel {
     /**
+     * <p>The API key for the model.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,8 @@ public class CreateLLMConfigRequest extends TeaModel {
     public String apiKey;
 
     /**
+     * <p>The base URL of the model service.</p>
+     * 
      * <strong>example:</strong>
      * <p><a href="https://dashscope.aliyuncs.com/compatible-mode/v1">https://dashscope.aliyuncs.com/compatible-mode/v1</a></p>
      */
@@ -21,6 +24,8 @@ public class CreateLLMConfigRequest extends TeaModel {
     public String baseUrl;
 
     /**
+     * <p>The batch size.</p>
+     * 
      * <strong>example:</strong>
      * <p>8</p>
      */
@@ -28,6 +33,8 @@ public class CreateLLMConfigRequest extends TeaModel {
     public Integer batchSize;
 
     /**
+     * <p>The embedding dimension. For a DashScope model, this value must match one of the fixed, valid dimensions supported by the model.</p>
+     * 
      * <strong>example:</strong>
      * <p>1024</p>
      */
@@ -38,6 +45,8 @@ public class CreateLLMConfigRequest extends TeaModel {
     public Boolean enableFusion;
 
     /**
+     * <p>The maximum number of input tokens.</p>
+     * 
      * <strong>example:</strong>
      * <p>8192</p>
      */
@@ -45,6 +54,7 @@ public class CreateLLMConfigRequest extends TeaModel {
     public Integer maxTokens;
 
     /**
+     * <p>The name of the model.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -57,6 +67,7 @@ public class CreateLLMConfigRequest extends TeaModel {
     public String modelType;
 
     /**
+     * <p>The name of the LLM configuration.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -66,6 +77,8 @@ public class CreateLLMConfigRequest extends TeaModel {
     public String name;
 
     /**
+     * <p>The number of requests per second.</p>
+     * 
      * <strong>example:</strong>
      * <p>30</p>
      */
@@ -73,6 +86,7 @@ public class CreateLLMConfigRequest extends TeaModel {
     public Integer rps;
 
     /**
+     * <p>The workspace ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

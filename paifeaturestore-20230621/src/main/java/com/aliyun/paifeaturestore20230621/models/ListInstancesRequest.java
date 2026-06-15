@@ -5,6 +5,14 @@ import com.aliyun.tea.*;
 
 public class ListInstancesRequest extends TeaModel {
     /**
+     * <p>The sort order.</p>
+     * <ul>
+     * <li><p>ASC: Ascending order.</p>
+     * </li>
+     * <li><p>DESC: Descending order.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>DESC</p>
      */
@@ -12,6 +20,8 @@ public class ListInstancesRequest extends TeaModel {
     public String order;
 
     /**
+     * <p>The page number. Pages start at 1. Default value: 1.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -19,6 +29,8 @@ public class ListInstancesRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries to return on each page. Default value: 10.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -26,6 +38,14 @@ public class ListInstancesRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The sort key.</p>
+     * <ul>
+     * <li><p>GmtCreateTime: The creation time.</p>
+     * </li>
+     * <li><p>GmtModifiedTime: The update time.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>GmtCreateTime</p>
      */
@@ -33,6 +53,16 @@ public class ListInstancesRequest extends TeaModel {
     public String sortBy;
 
     /**
+     * <p>Filters the results by instance status.</p>
+     * <ul>
+     * <li><p>Initializing</p>
+     * </li>
+     * <li><p>Running</p>
+     * </li>
+     * <li><p>Stopped</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>Running</p>
      */

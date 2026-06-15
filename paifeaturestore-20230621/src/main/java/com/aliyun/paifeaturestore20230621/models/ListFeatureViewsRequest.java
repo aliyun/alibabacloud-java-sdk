@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class ListFeatureViewsRequest extends TeaModel {
     /**
+     * <p>Filters the results by feature name.</p>
+     * 
      * <strong>example:</strong>
      * <p>feature1</p>
      */
     @NameInMap("FeatureName")
     public String featureName;
 
+    /**
+     * <p>The feature view IDs by which to filter the results.</p>
+     */
     @NameInMap("FeatureViewIds")
     public java.util.List<String> featureViewIds;
 
     /**
+     * <p>Filters the results by feature view name.</p>
+     * 
      * <strong>example:</strong>
      * <p>fv1</p>
      */
@@ -22,6 +29,8 @@ public class ListFeatureViewsRequest extends TeaModel {
     public String name;
 
     /**
+     * <p>The sort order. Valid values: <code>Desc</code> (descending) and <code>Asc</code> (ascending).</p>
+     * 
      * <strong>example:</strong>
      * <p>Desc</p>
      */
@@ -29,6 +38,8 @@ public class ListFeatureViewsRequest extends TeaModel {
     public String order;
 
     /**
+     * <p>Filters the results by owner.</p>
+     * 
      * <strong>example:</strong>
      * <p>1232143243242****</p>
      */
@@ -36,6 +47,8 @@ public class ListFeatureViewsRequest extends TeaModel {
     public String owner;
 
     /**
+     * <p>The page number of the results to return.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -43,6 +56,8 @@ public class ListFeatureViewsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of feature views to return on each page.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -50,6 +65,8 @@ public class ListFeatureViewsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The project ID. You can obtain this ID by calling the <code>ListProjects</code> operation.</p>
+     * 
      * <strong>example:</strong>
      * <p>3</p>
      */
@@ -57,6 +74,8 @@ public class ListFeatureViewsRequest extends TeaModel {
     public String projectId;
 
     /**
+     * <p>The field by which to sort the results.</p>
+     * 
      * <strong>example:</strong>
      * <p>GmtCreateTime</p>
      */
@@ -64,6 +83,8 @@ public class ListFeatureViewsRequest extends TeaModel {
     public String sortBy;
 
     /**
+     * <p>Filters the results by tag.</p>
+     * 
      * <strong>example:</strong>
      * <p>tag1</p>
      */
@@ -71,6 +92,10 @@ public class ListFeatureViewsRequest extends TeaModel {
     public String tag;
 
     /**
+     * <p>Filters the results by type. Valid values:</p>
+     * <p>● <code>Batch</code>: batch feature</p>
+     * <p>● <code>Stream</code>: stream feature</p>
+     * 
      * <strong>example:</strong>
      * <p>Batch</p>
      */

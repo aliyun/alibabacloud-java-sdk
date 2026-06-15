@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CheckInstanceDatasourceRequest extends TeaModel {
     /**
+     * <p>The resource configuration.</p>
+     * 
      * <strong>example:</strong>
      * <p>{&quot;address&quot;: &quot;&quot;}</p>
      */
@@ -12,6 +14,15 @@ public class CheckInstanceDatasourceRequest extends TeaModel {
     public String config;
 
     /**
+     * <p>The data source type.</p>
+     * <ul>
+     * <li><p>Hologres</p>
+     * </li>
+     * <li><p>Redis</p>
+     * </li>
+     * <li><p>MaxCompute</p>
+     * </li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,6 +32,7 @@ public class CheckInstanceDatasourceRequest extends TeaModel {
     public String type;
 
     /**
+     * <p>The resource URI.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

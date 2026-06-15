@@ -4,15 +4,27 @@ package com.aliyun.paifeaturestore20230621.models;
 import com.aliyun.tea.*;
 
 public class UpdateModelFeatureFGFeatureRequest extends TeaModel {
+    /**
+     * <p>Lookup feature information.</p>
+     */
     @NameInMap("LookupFeatures")
     public java.util.List<UpdateModelFeatureFGFeatureRequestLookupFeatures> lookupFeatures;
 
+    /**
+     * <p>Basic feature information.</p>
+     */
     @NameInMap("RawFeatures")
     public java.util.List<UpdateModelFeatureFGFeatureRequestRawFeatures> rawFeatures;
 
+    /**
+     * <p>Reserved fields.</p>
+     */
     @NameInMap("Reserves")
     public java.util.List<String> reserves;
 
+    /**
+     * <p>Sequence feature information.</p>
+     */
     @NameInMap("SequenceFeatures")
     public java.util.List<UpdateModelFeatureFGFeatureRequestSequenceFeatures> sequenceFeatures;
 
@@ -55,6 +67,7 @@ public class UpdateModelFeatureFGFeatureRequest extends TeaModel {
 
     public static class UpdateModelFeatureFGFeatureRequestLookupFeatures extends TeaModel {
         /**
+         * <p>Default value.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -64,6 +77,7 @@ public class UpdateModelFeatureFGFeatureRequest extends TeaModel {
         public String defaultValue;
 
         /**
+         * <p>Generated feature name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -73,6 +87,15 @@ public class UpdateModelFeatureFGFeatureRequest extends TeaModel {
         public String featureName;
 
         /**
+         * <p>Key feature domain.</p>
+         * <ul>
+         * <li><p>User</p>
+         * </li>
+         * <li><p>Item</p>
+         * </li>
+         * <li><p>Context</p>
+         * </li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -82,6 +105,7 @@ public class UpdateModelFeatureFGFeatureRequest extends TeaModel {
         public String keyFeatureDomain;
 
         /**
+         * <p>The name of the key feature.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -91,6 +115,15 @@ public class UpdateModelFeatureFGFeatureRequest extends TeaModel {
         public String keyFeatureName;
 
         /**
+         * <p>Map feature domain.</p>
+         * <ul>
+         * <li><p>User</p>
+         * </li>
+         * <li><p>Item</p>
+         * </li>
+         * <li><p>Context</p>
+         * </li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -100,6 +133,7 @@ public class UpdateModelFeatureFGFeatureRequest extends TeaModel {
         public String mapFeatureDomain;
 
         /**
+         * <p>Map feature name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -109,6 +143,15 @@ public class UpdateModelFeatureFGFeatureRequest extends TeaModel {
         public String mapFeatureName;
 
         /**
+         * <p>Feature value type.</p>
+         * <ul>
+         * <li><p>INTEGER</p>
+         * </li>
+         * <li><p>DOUBLE</p>
+         * </li>
+         * <li><p>STRING</p>
+         * </li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -182,6 +225,7 @@ public class UpdateModelFeatureFGFeatureRequest extends TeaModel {
 
     public static class UpdateModelFeatureFGFeatureRequestRawFeatures extends TeaModel {
         /**
+         * <p>Default value.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -191,6 +235,15 @@ public class UpdateModelFeatureFGFeatureRequest extends TeaModel {
         public String defaultValue;
 
         /**
+         * <p>Input feature domain.</p>
+         * <ul>
+         * <li><p>User</p>
+         * </li>
+         * <li><p>Item</p>
+         * </li>
+         * <li><p>Context</p>
+         * </li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -200,6 +253,7 @@ public class UpdateModelFeatureFGFeatureRequest extends TeaModel {
         public String featureDomain;
 
         /**
+         * <p>Generated feature name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -209,6 +263,13 @@ public class UpdateModelFeatureFGFeatureRequest extends TeaModel {
         public String featureName;
 
         /**
+         * <p>FG basic feature type.</p>
+         * <ul>
+         * <li><p>IdFeature</p>
+         * </li>
+         * <li><p>RawFeature</p>
+         * </li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -218,6 +279,7 @@ public class UpdateModelFeatureFGFeatureRequest extends TeaModel {
         public String featureType;
 
         /**
+         * <p>The original name of the feature.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -227,6 +289,15 @@ public class UpdateModelFeatureFGFeatureRequest extends TeaModel {
         public String inputFeatureName;
 
         /**
+         * <p>Feature value type.</p>
+         * <ul>
+         * <li><p>INTEGER</p>
+         * </li>
+         * <li><p>DOUBLE</p>
+         * </li>
+         * <li><p>STRING</p>
+         * </li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -292,6 +363,7 @@ public class UpdateModelFeatureFGFeatureRequest extends TeaModel {
 
     public static class UpdateModelFeatureFGFeatureRequestSequenceFeaturesSubFeatures extends TeaModel {
         /**
+         * <p>Default value.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -301,6 +373,15 @@ public class UpdateModelFeatureFGFeatureRequest extends TeaModel {
         public String defaultValue;
 
         /**
+         * <p>Input feature domain.</p>
+         * <ul>
+         * <li><p>User</p>
+         * </li>
+         * <li><p>Item</p>
+         * </li>
+         * <li><p>Context</p>
+         * </li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -310,6 +391,7 @@ public class UpdateModelFeatureFGFeatureRequest extends TeaModel {
         public String featureDomain;
 
         /**
+         * <p>Generated subfeature name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -319,6 +401,13 @@ public class UpdateModelFeatureFGFeatureRequest extends TeaModel {
         public String featureName;
 
         /**
+         * <p>FG sequence subfeature type.</p>
+         * <ul>
+         * <li><p>IdFeature</p>
+         * </li>
+         * <li><p>RawFeature</p>
+         * </li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -328,6 +417,7 @@ public class UpdateModelFeatureFGFeatureRequest extends TeaModel {
         public String featureType;
 
         /**
+         * <p>Original feature name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -337,6 +427,15 @@ public class UpdateModelFeatureFGFeatureRequest extends TeaModel {
         public String inputFeatureName;
 
         /**
+         * <p>Feature value type.</p>
+         * <ul>
+         * <li><p>INTEGER</p>
+         * </li>
+         * <li><p>DOUBLE</p>
+         * </li>
+         * <li><p>STRING</p>
+         * </li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -402,6 +501,7 @@ public class UpdateModelFeatureFGFeatureRequest extends TeaModel {
 
     public static class UpdateModelFeatureFGFeatureRequestSequenceFeatures extends TeaModel {
         /**
+         * <p>Feature attribute delimiter.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -411,6 +511,7 @@ public class UpdateModelFeatureFGFeatureRequest extends TeaModel {
         public String attributeDelim;
 
         /**
+         * <p>Sequence feature name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -420,6 +521,7 @@ public class UpdateModelFeatureFGFeatureRequest extends TeaModel {
         public String featureName;
 
         /**
+         * <p>Sequence feature delimiter.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -429,6 +531,7 @@ public class UpdateModelFeatureFGFeatureRequest extends TeaModel {
         public String sequenceDelim;
 
         /**
+         * <p>Maximum length of the sequence feature.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -437,6 +540,9 @@ public class UpdateModelFeatureFGFeatureRequest extends TeaModel {
         @NameInMap("SequenceLength")
         public Long sequenceLength;
 
+        /**
+         * <p>List of subfeatures for the sequence feature.</p>
+         */
         @NameInMap("SubFeatures")
         public java.util.List<UpdateModelFeatureFGFeatureRequestSequenceFeaturesSubFeatures> subFeatures;
 

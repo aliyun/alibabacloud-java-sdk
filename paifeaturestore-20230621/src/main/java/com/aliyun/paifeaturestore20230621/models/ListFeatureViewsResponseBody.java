@@ -4,10 +4,15 @@ package com.aliyun.paifeaturestore20230621.models;
 import com.aliyun.tea.*;
 
 public class ListFeatureViewsResponseBody extends TeaModel {
+    /**
+     * <p>The feature view list.</p>
+     */
     @NameInMap("FeatureViews")
     public java.util.List<ListFeatureViewsResponseBodyFeatureViews> featureViews;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>C03B2680-AC9C-59CD-93C5-8142B92537FA</p>
      */
@@ -15,6 +20,8 @@ public class ListFeatureViewsResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total count of feature views.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -52,6 +59,8 @@ public class ListFeatureViewsResponseBody extends TeaModel {
 
     public static class ListFeatureViewsResponseBodyFeatureViews extends TeaModel {
         /**
+         * <p>The feature entity name.</p>
+         * 
          * <strong>example:</strong>
          * <p>featureEntity1</p>
          */
@@ -59,6 +68,8 @@ public class ListFeatureViewsResponseBody extends TeaModel {
         public String featureEntityName;
 
         /**
+         * <p>The feature view ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>3</p>
          */
@@ -66,6 +77,8 @@ public class ListFeatureViewsResponseBody extends TeaModel {
         public String featureViewId;
 
         /**
+         * <p>The creation time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2021-12-15T23:24:33.132+08:00</p>
          */
@@ -73,6 +86,8 @@ public class ListFeatureViewsResponseBody extends TeaModel {
         public String gmtCreateTime;
 
         /**
+         * <p>The update time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2021-12-15T23:24:33.132+08:00</p>
          */
@@ -80,6 +95,8 @@ public class ListFeatureViewsResponseBody extends TeaModel {
         public String gmtModifiedTime;
 
         /**
+         * <p>The feature view name.</p>
+         * 
          * <strong>example:</strong>
          * <p>featureView1</p>
          */
@@ -87,6 +104,8 @@ public class ListFeatureViewsResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>The ID of the Alibaba Cloud account that created the feature view.</p>
+         * 
          * <strong>example:</strong>
          * <p>12321421412****</p>
          */
@@ -94,6 +113,8 @@ public class ListFeatureViewsResponseBody extends TeaModel {
         public String owner;
 
         /**
+         * <p>The project ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>3</p>
          */
@@ -101,6 +122,8 @@ public class ListFeatureViewsResponseBody extends TeaModel {
         public String projectId;
 
         /**
+         * <p>The project name.</p>
+         * 
          * <strong>example:</strong>
          * <p>project1</p>
          */
@@ -108,6 +131,8 @@ public class ListFeatureViewsResponseBody extends TeaModel {
         public String projectName;
 
         /**
+         * <p>The ID of the data source for the registered table.</p>
+         * 
          * <strong>example:</strong>
          * <p>4</p>
          */
@@ -115,6 +140,8 @@ public class ListFeatureViewsResponseBody extends TeaModel {
         public String registerDatasourceId;
 
         /**
+         * <p>The name of the data source for the registered table.</p>
+         * 
          * <strong>example:</strong>
          * <p>datasource1</p>
          */
@@ -122,6 +149,8 @@ public class ListFeatureViewsResponseBody extends TeaModel {
         public String registerDatasourceName;
 
         /**
+         * <p>The registered table name.</p>
+         * 
          * <strong>example:</strong>
          * <p>table1</p>
          */
@@ -129,6 +158,8 @@ public class ListFeatureViewsResponseBody extends TeaModel {
         public String registerTable;
 
         /**
+         * <p>The TTL (Time to Live) of features in the feature view, in seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>90</p>
          */
@@ -136,12 +167,22 @@ public class ListFeatureViewsResponseBody extends TeaModel {
         public Integer TTL;
 
         /**
+         * <p>The type of the feature view. Valid values:</p>
+         * <p>● Batch feature</p>
+         * <p>● Stream feature</p>
+         * 
          * <strong>example:</strong>
          * <p>Batch</p>
          */
         @NameInMap("Type")
         public String type;
 
+        /**
+         * <p>Indicates whether data is written to the online feature store.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("WriteToFeatureDB")
         public Boolean writeToFeatureDB;
 
