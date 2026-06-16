@@ -8,7 +8,7 @@ public class DescribeSampleUploadPolicyResponseBody extends TeaModel {
      * <p>ossaccesskeyid。</p>
      * 
      * <strong>example:</strong>
-     * <p>LTAI5t9k9MsS9TipR9yW5urk</p>
+     * <p>LTAxxxxxxxxxxxxx</p>
      */
     @NameInMap("AccessId")
     public String accessId;

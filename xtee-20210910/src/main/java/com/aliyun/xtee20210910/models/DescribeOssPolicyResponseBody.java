@@ -8,7 +8,7 @@ public class DescribeOssPolicyResponseBody extends TeaModel {
      * <p>The access ID. This parameter corresponds to OSSAccessKeyId when you use the OSS SDK for upload.</p>
      * 
      * <strong>example:</strong>
-     * <p>LTAIpeYTKEbC0v10</p>
+     * <p>LTAxxxxxxxxxx</p>
      */
     @NameInMap("AccessId")
     public String accessId;

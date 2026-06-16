@@ -8,7 +8,7 @@ public class DescribeModelOssPolicyResponseBody extends TeaModel {
      * <p>Access ID for OSS.</p>
      * 
      * <strong>example:</strong>
-     * <p>LTAIpeYTKEbC0v10</p>
+     * <p>LTAxxxxxxxxx</p>
      */
     @NameInMap("AccessId")
     public String accessId;
