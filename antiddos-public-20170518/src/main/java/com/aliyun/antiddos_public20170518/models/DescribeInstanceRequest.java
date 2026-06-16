@@ -29,9 +29,12 @@ public class DescribeInstanceRequest extends TeaModel {
     /**
      * <p>The DDoS mitigation status of the asset. Valid values:</p>
      * <ul>
-     * <li><strong>mitigating</strong>: queries assets for which traffic scrubbing is triggered.</li>
-     * <li><strong>blackholed</strong>: queries assets for which blackhole filtering is triggered.</li>
-     * <li><strong>normal</strong>: queries assets that are not under DDoS attacks.</li>
+     * <li><p><strong>mitigating</strong>: queries assets for which traffic scrubbing is triggered.</p>
+     * </li>
+     * <li><p><strong>blackholed</strong>: queries assets for which blackhole filtering is triggered.</p>
+     * </li>
+     * <li><p><strong>normal</strong>: queries assets that are not under DDoS attacks.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -43,9 +46,12 @@ public class DescribeInstanceRequest extends TeaModel {
     /**
      * <p>The ID of the asset. The formats of asset IDs vary based on the value of the <strong>InstanceType</strong>. parameter.</p>
      * <ul>
-     * <li>If you set <strong>InstanceType</strong> to <strong>ecs</strong>, specify the ID of the ECS instance. For example, you can specify i-bp1cb6x80tfgocid\<em>\</em>\<em>\</em>.</li>
-     * <li>If you set <strong>InstanceType</strong> to <strong>slb</strong>, specify the ID of the SLB instance. For example, you can specify alb-vn2dqg3v31y2vd\<em>\</em>\<em>\</em>.</li>
-     * <li>If you set <strong>InstanceType</strong> to <strong>eip</strong>, specify the ID of the EIP. For example, you can specify eip-j6ce6dcx9epi7rs46\<em>\</em>\<em>\</em>.</li>
+     * <li><p>If you set <strong>InstanceType</strong> to <strong>ecs</strong>, specify the ID of the ECS instance. For example, you can specify i-bp1cb6x80tfgocid\<em>\</em>\<em>\</em>.</p>
+     * </li>
+     * <li><p>If you set <strong>InstanceType</strong> to <strong>slb</strong>, specify the ID of the SLB instance. For example, you can specify alb-vn2dqg3v31y2vd\<em>\</em>\<em>\</em>.</p>
+     * </li>
+     * <li><p>If you set <strong>InstanceType</strong> to <strong>eip</strong>, specify the ID of the EIP. For example, you can specify eip-j6ce6dcx9epi7rs46\<em>\</em>\<em>\</em>.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -75,13 +81,20 @@ public class DescribeInstanceRequest extends TeaModel {
     /**
      * <p>The type of the asset to query. Valid values:</p>
      * <ul>
-     * <li><strong>ecs</strong>: ECS instances.</li>
-     * <li><strong>slb</strong>: SLB instances.</li>
-     * <li><strong>eip</strong>: EIPs.</li>
-     * <li><strong>ipv6</strong>: IPv6 gateways.</li>
-     * <li><strong>swas</strong>: simple application servers.</li>
-     * <li><strong>waf</strong>: Web Application Firewall (WAF) instances of the Exclusive edition.</li>
-     * <li><strong>ga_basic</strong>: Global Accelerator (GA) instances.</li>
+     * <li><p><strong>ecs</strong>: ECS instances.</p>
+     * </li>
+     * <li><p><strong>slb</strong>: SLB instances.</p>
+     * </li>
+     * <li><p><strong>eip</strong>: EIPs.</p>
+     * </li>
+     * <li><p><strong>ipv6</strong>: IPv6 gateways.</p>
+     * </li>
+     * <li><p><strong>swas</strong>: simple application servers.</p>
+     * </li>
+     * <li><p><strong>waf</strong>: Web Application Firewall (WAF) instances of the Exclusive edition.</p>
+     * </li>
+     * <li><p><strong>ga_basic</strong>: Global Accelerator (GA) instances.</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

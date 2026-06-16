@@ -54,8 +54,10 @@ public class DescribeIpDdosThresholdResponseBody extends TeaModel {
         /**
          * <p>The type of the threshold. Valid values:</p>
          * <ul>
-         * <li><strong>defense</strong>: traffic scrubbing threshold</li>
-         * <li><strong>blackhole</strong>: DDoS mitigation threshold</li>
+         * <li><p><strong>defense</strong>: traffic scrubbing threshold</p>
+         * </li>
+         * <li><p><strong>blackhole</strong>: DDoS mitigation threshold</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -97,8 +99,10 @@ public class DescribeIpDdosThresholdResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the threshold is automatically adjusted. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: The scrubbing thresholds are automatically adjusted based on the traffic load on the asset.</li>
-         * <li><strong>false</strong>: The scrubbing thresholds are not automatically adjusted. You must manually specify the scrubbing thresholds.</li>
+         * <li><p><strong>true</strong>: The scrubbing thresholds are automatically adjusted based on the traffic load on the asset.</p>
+         * </li>
+         * <li><p><strong>false</strong>: The scrubbing thresholds are not automatically adjusted. You must manually specify the scrubbing thresholds.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

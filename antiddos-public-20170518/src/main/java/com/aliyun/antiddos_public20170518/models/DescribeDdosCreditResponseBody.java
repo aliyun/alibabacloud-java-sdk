@@ -22,8 +22,10 @@ public class DescribeDdosCreditResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: yes</li>
-     * <li><strong>false</strong>: no</li>
+     * <li><p><strong>true</strong>: yes</p>
+     * </li>
+     * <li><p><strong>false</strong>: no</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -83,12 +85,18 @@ public class DescribeDdosCreditResponseBody extends TeaModel {
         /**
          * <p>The security credit level. Valid values:</p>
          * <ul>
-         * <li><strong>A</strong>: outstanding</li>
-         * <li><strong>B</strong>: excellent</li>
-         * <li><strong>C</strong>: good</li>
-         * <li><strong>D</strong>: average</li>
-         * <li><strong>E</strong>: poor</li>
-         * <li><strong>F</strong>: poorer</li>
+         * <li><p><strong>A</strong>: outstanding</p>
+         * </li>
+         * <li><p><strong>B</strong>: excellent</p>
+         * </li>
+         * <li><p><strong>C</strong>: good</p>
+         * </li>
+         * <li><p><strong>D</strong>: average</p>
+         * </li>
+         * <li><p><strong>E</strong>: poor</p>
+         * </li>
+         * <li><p><strong>F</strong>: poorer</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

@@ -29,12 +29,14 @@ public class DescribeInstanceIpAddressRequest extends TeaModel {
     /**
      * <p>The DDoS mitigation status of the asset. Valid values:</p>
      * <ul>
-     * <li><strong>defense</strong>: queries assets for which traffic scrubbing is performed.</li>
-     * <li><strong>blackhole</strong>: queries assets for which blackhole filtering is triggered.</li>
+     * <li><p><strong>defense</strong>: queries assets for which traffic scrubbing is performed.</p>
+     * </li>
+     * <li><p><strong>blackhole</strong>: queries assets for which blackhole filtering is triggered.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
-     * <p>normal</p>
+     * <p>defense</p>
      */
     @NameInMap("DdosStatus")
     public String ddosStatus;
@@ -69,13 +71,20 @@ public class DescribeInstanceIpAddressRequest extends TeaModel {
     /**
      * <p>The type of the asset that is assigned a public IP address. Valid values:</p>
      * <ul>
-     * <li><strong>ecs</strong>: ECS instances.</li>
-     * <li><strong>slb</strong>: SLB instances.</li>
-     * <li><strong>eip</strong>: EIPs.</li>
-     * <li><strong>ipv6</strong>: IPv6 gateways.</li>
-     * <li><strong>swas</strong>: simple application servers.</li>
-     * <li><strong>waf</strong>: Web Application Firewall (WAF) instances of the Exclusive edition.</li>
-     * <li><strong>ga_basic</strong>: Global Accelerator (GA) instances.</li>
+     * <li><p><strong>ecs</strong>: ECS instances.</p>
+     * </li>
+     * <li><p><strong>slb</strong>: SLB instances.</p>
+     * </li>
+     * <li><p><strong>eip</strong>: EIPs.</p>
+     * </li>
+     * <li><p><strong>ipv6</strong>: IPv6 gateways.</p>
+     * </li>
+     * <li><p><strong>swas</strong>: simple application servers.</p>
+     * </li>
+     * <li><p><strong>waf</strong>: Web Application Firewall (WAF) instances of the Exclusive edition.</p>
+     * </li>
+     * <li><p><strong>ga_basic</strong>: Global Accelerator (GA) instances.</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

@@ -4,9 +4,6 @@ package com.aliyun.antiddos_public20170518.models;
 import com.aliyun.tea.*;
 
 public class DescribeRegionsResponseBody extends TeaModel {
-    /**
-     * <p>An array consisting of regions in which Anti-DDoS Origin Basic is available.</p>
-     */
     @NameInMap("Regions")
     public DescribeRegionsResponseBodyRegions regions;
 
@@ -41,39 +38,15 @@ public class DescribeRegionsResponseBody extends TeaModel {
     }
 
     public static class DescribeRegionsResponseBodyRegionsRegion extends TeaModel {
-        /**
-         * <p>The English name of the region.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>East China 1</p>
-         */
         @NameInMap("RegionEnName")
         public String regionEnName;
 
-        /**
-         * <p>The Chinese name of the region.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>China (Hangzhou)</p>
-         */
         @NameInMap("RegionName")
         public String regionName;
 
-        /**
-         * <p>The code of the region.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>cn-hangzhou-dg-a01</p>
-         */
         @NameInMap("RegionNo")
         public String regionNo;
 
-        /**
-         * <p>The ID of the region.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>cn-hangzhou</p>
-         */
         @NameInMap("RegionNoAlias")
         public String regionNoAlias;
 

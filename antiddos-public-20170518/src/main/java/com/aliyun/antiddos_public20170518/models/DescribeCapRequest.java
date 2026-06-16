@@ -46,13 +46,20 @@ public class DescribeCapRequest extends TeaModel {
     /**
      * <p>The type of the asset that is under DDoS attacks. The asset is assigned a public IP address. Valid values:</p>
      * <ul>
-     * <li><strong>ecs</strong>: an Elastic Compute Service (ECS) instance.</li>
-     * <li><strong>slb</strong>: a Server Load Balancer (SLB) instance.</li>
-     * <li><strong>eip</strong>: an elastic IP address (EIP).</li>
-     * <li><strong>ipv6</strong>: an IPv6 gateway.</li>
-     * <li><strong>swas</strong>: a simple application server.</li>
-     * <li><strong>waf</strong>: a Web Application Firewall (WAF) instance of the Exclusive edition.</li>
-     * <li><strong>ga_basic</strong>: a Global Accelerator (GA) instance.</li>
+     * <li><p><strong>ecs</strong>: an Elastic Compute Service (ECS) instance.</p>
+     * </li>
+     * <li><p><strong>slb</strong>: a Server Load Balancer (SLB) instance.</p>
+     * </li>
+     * <li><p><strong>eip</strong>: an elastic IP address (EIP).</p>
+     * </li>
+     * <li><p><strong>ipv6</strong>: an IPv6 gateway.</p>
+     * </li>
+     * <li><p><strong>swas</strong>: a simple application server.</p>
+     * </li>
+     * <li><p><strong>waf</strong>: a Web Application Firewall (WAF) instance of the Exclusive edition.</p>
+     * </li>
+     * <li><p><strong>ga_basic</strong>: a Global Accelerator (GA) instance.</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

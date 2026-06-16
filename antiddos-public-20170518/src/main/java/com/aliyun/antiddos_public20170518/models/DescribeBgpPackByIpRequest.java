@@ -20,7 +20,7 @@ public class DescribeBgpPackByIpRequest extends TeaModel {
     /**
      * <p>The IP address of the asset to query.</p>
      * <blockquote>
-     * <p> You can call the <a href="https://help.aliyun.com/document_detail/472620.html">DescribeInstanceIpAddress</a> operation to query the IDs of Elastic Compute Service (ECS) instances, Server Load Balancer (SLB) instances, and elastic IP addresses (EIPs) within the current Alibaba Cloud account.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/472620.html">DescribeInstanceIpAddress</a> operation to query the IDs of Elastic Compute Service (ECS) instances, Server Load Balancer (SLB) instances, and elastic IP addresses (EIPs) within the current Alibaba Cloud account.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 

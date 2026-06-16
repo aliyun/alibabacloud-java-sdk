@@ -62,13 +62,20 @@ public class DescribeIpLocationServiceResponseBody extends TeaModel {
         /**
          * <p>The type of the asset. Valid values:</p>
          * <ul>
-         * <li><strong>ecs</strong>: an ECS instance.</li>
-         * <li><strong>slb</strong>: an SLB instance.</li>
-         * <li><strong>eip</strong>: an EIP.</li>
-         * <li><strong>ipv6</strong>: an IPv6 gateway.</li>
-         * <li><strong>swas</strong>: a simple application server.</li>
-         * <li><strong>waf</strong>: a Web Application Firewall (WAF) instance of the Exclusive edition.</li>
-         * <li><strong>ga_basic</strong>: a Global Accelerator (GA) instance.</li>
+         * <li><p><strong>ecs</strong>: an ECS instance.</p>
+         * </li>
+         * <li><p><strong>slb</strong>: an SLB instance.</p>
+         * </li>
+         * <li><p><strong>eip</strong>: an EIP.</p>
+         * </li>
+         * <li><p><strong>ipv6</strong>: an IPv6 gateway.</p>
+         * </li>
+         * <li><p><strong>swas</strong>: a simple application server.</p>
+         * </li>
+         * <li><p><strong>waf</strong>: a Web Application Firewall (WAF) instance of the Exclusive edition.</p>
+         * </li>
+         * <li><p><strong>ga_basic</strong>: a Global Accelerator (GA) instance.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

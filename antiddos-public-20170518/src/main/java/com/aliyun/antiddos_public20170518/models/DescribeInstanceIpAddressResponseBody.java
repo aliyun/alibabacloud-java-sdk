@@ -106,9 +106,12 @@ public class DescribeInstanceIpAddressResponseBody extends TeaModel {
         /**
          * <p>The DDoS mitigation status of the asset. Valid values:</p>
          * <ul>
-         * <li><strong>mitigating</strong>: indicates that traffic scrubbing is in progress.</li>
-         * <li><strong>blackholed</strong>: indicates that blackhole filtering is triggered for the asset.</li>
-         * <li><strong>normal</strong>: indicates that no DDoS attacks are launched against the asset.</li>
+         * <li><p><strong>mitigating</strong>: indicates that traffic scrubbing is in progress.</p>
+         * </li>
+         * <li><p><strong>blackholed</strong>: indicates that blackhole filtering is triggered for the asset.</p>
+         * </li>
+         * <li><p><strong>normal</strong>: indicates that no DDoS attacks are launched against the asset.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -120,8 +123,10 @@ public class DescribeInstanceIpAddressResponseBody extends TeaModel {
         /**
          * <p>The IP version of the IP address. Valid values:</p>
          * <ul>
-         * <li><strong>v4</strong>: IPv4.</li>
-         * <li><strong>v6</strong>: IPv6.</li>
+         * <li><p><strong>v4</strong>: IPv4.</p>
+         * </li>
+         * <li><p><strong>v6</strong>: IPv6.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -133,8 +138,10 @@ public class DescribeInstanceIpAddressResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the asset is added to the instance. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong></li>
-         * <li><strong>false</strong></li>
+         * <li><p><strong>true</strong></p>
+         * </li>
+         * <li><p><strong>false</strong></p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -146,8 +153,10 @@ public class DescribeInstanceIpAddressResponseBody extends TeaModel {
         /**
          * <p>Indicates whether best-effort protection is enabled for the asset. Valid values:</p>
          * <ul>
-         * <li><strong>0</strong>: no.</li>
-         * <li><strong>1</strong>: yes.</li>
+         * <li><p><strong>0</strong>: no.</p>
+         * </li>
+         * <li><p><strong>1</strong>: yes.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -274,8 +283,10 @@ public class DescribeInstanceIpAddressResponseBody extends TeaModel {
         /**
          * <p>The DDoS mitigation status of the instance. Valid values:</p>
          * <ul>
-         * <li><strong>normal</strong>: not under DDoS attacks.</li>
-         * <li><strong>abnormal</strong>: under DDoS attacks.</li>
+         * <li><p><strong>normal</strong>: not under DDoS attacks.</p>
+         * </li>
+         * <li><p><strong>abnormal</strong>: under DDoS attacks.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -287,9 +298,12 @@ public class DescribeInstanceIpAddressResponseBody extends TeaModel {
         /**
          * <p>The type of the asset. Valid values:</p>
          * <ul>
-         * <li><strong>ecs</strong></li>
-         * <li><strong>slb</strong></li>
-         * <li><strong>eip</strong></li>
+         * <li><p><strong>ecs</strong></p>
+         * </li>
+         * <li><p><strong>slb</strong></p>
+         * </li>
+         * <li><p><strong>eip</strong></p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

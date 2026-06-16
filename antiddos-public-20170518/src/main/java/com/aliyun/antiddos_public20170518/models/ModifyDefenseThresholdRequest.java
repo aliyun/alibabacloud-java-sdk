@@ -5,11 +5,17 @@ import com.aliyun.tea.*;
 
 public class ModifyDefenseThresholdRequest extends TeaModel {
     /**
-     * <p>The traffic scrubbing threshold. Unit: Mbit/s. The traffic scrubbing threshold cannot exceed the peak inbound or outbound Internet traffic, whichever is larger, of the asset. When you modify Bps, Pps is required. Otherwise, Bps does not take effect.</p>
-     * <p>You can use the monitoring tool that is provided by the asset to query the Internet traffic of the asset:</p>
+     * <p>The scrubbing threshold for traffic in Mbps. This value cannot exceed the peak public network traffic of the instance. If you specify Bps, you must also specify Pps. Otherwise, the change does not take effect.</p>
+     * <p>Use the monitoring tools of your instance to query its public network traffic:</p>
      * <ul>
-     * <li>If the asset is an ECS instance, see <a href="https://help.aliyun.com/document_detail/25482.html">View instance monitoring information</a>.</li>
-     * <li>If the asset is an SLB instance, see <a href="https://help.aliyun.com/document_detail/85982.html">View monitoring data</a>.</li>
+     * <li><p>For an ECS instance, see <a href="https://help.aliyun.com/document_detail/25482.html">View instance monitoring information</a>.</p>
+     * </li>
+     * <li><p>For an SLB instance, see <a href="https://help.aliyun.com/document_detail/85982.html">View monitoring data</a>.</p>
+     * </li>
+     * </ul>
+     * <p>&lt;props=&quot;china&quot;&gt;</p>
+     * <ul>
+     * <li>For an EIP instance, see <a href="https://help.aliyun.com/document_detail/85354.html">View monitoring data</a>.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -22,9 +28,9 @@ public class ModifyDefenseThresholdRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The region ID of the asset for which you want to change the scrubbing thresholds.</p>
+     * <p>The region ID of the asset that is assigned a public IP address.</p>
      * <blockquote>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/353250.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>Call <a href="https://help.aliyun.com/document_detail/353250.html">DescribeRegions</a> to query all region IDs.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -35,9 +41,9 @@ public class ModifyDefenseThresholdRequest extends TeaModel {
     public String ddosRegionId;
 
     /**
-     * <p>The ID of the asset.</p>
+     * <p>The instance ID of the asset that is assigned a public IP address.</p>
      * <blockquote>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/354191.html">DescribeInstance</a> operation to query the IDs of ECS instances, SLB instances, and EIPs within the current Alibaba Cloud account.</p>
+     * <p>Call <a href="https://help.aliyun.com/document_detail/354191.html">DescribeInstance</a> to query the IDs of the ECS, SLB, and EIP instances that belong to your Alibaba Cloud account.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -48,15 +54,22 @@ public class ModifyDefenseThresholdRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The type of the asset. Valid values:</p>
+     * <p>The instance type of the asset that is assigned a public IP address. Valid values:</p>
      * <ul>
-     * <li><strong>ecs</strong>: an Elastic Compute Service (ECS) instance.</li>
-     * <li><strong>slb</strong>: a Server Load Balancer (SLB) instance.</li>
-     * <li><strong>eip</strong>: an elastic IP address (EIP).</li>
-     * <li><strong>ipv6</strong>: an IPv6 gateway.</li>
-     * <li><strong>swas</strong>: a simple application server.</li>
-     * <li><strong>waf</strong>: a Web Application Firewall (WAF) instance of the Exclusive edition.</li>
-     * <li><strong>ga_basic</strong>: a Global Accelerator (GA) instance.</li>
+     * <li><p><strong>ecs</strong>: Elastic Compute Service (ECS) instance.</p>
+     * </li>
+     * <li><p><strong>slb</strong>: Server Load Balancer (SLB) instance.</p>
+     * </li>
+     * <li><p><strong>eip</strong>: Elastic IP Address (EIP) instance.</p>
+     * </li>
+     * <li><p><strong>ipv6</strong>: IPv6 Gateway instance.</p>
+     * </li>
+     * <li><p><strong>swas</strong>: simple application server instance.</p>
+     * </li>
+     * <li><p><strong>waf</strong>: dedicated Web Application Firewall (WAF) instance.</p>
+     * </li>
+     * <li><p><strong>ga_basic</strong>: basic Global Accelerator (GA) instance.</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -67,7 +80,7 @@ public class ModifyDefenseThresholdRequest extends TeaModel {
     public String instanceType;
 
     /**
-     * <p>The IP address of the asset.</p>
+     * <p>The public IP address of the asset.</p>
      * 
      * <strong>example:</strong>
      * <p>192.0.XX.XX</p>
@@ -76,12 +89,14 @@ public class ModifyDefenseThresholdRequest extends TeaModel {
     public String internetIp;
 
     /**
-     * <p>Specifies whether to automatically adjust the scrubbing threshold based on the traffic load on the asset. Valid values:</p>
+     * <p>Specifies whether to automatically adjust the scrubbing threshold based on the traffic loads of the instance. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: automatically adjusts the scrubbing thresholds. You do not need to configure the <strong>Bps</strong> and <strong>Pps</strong> parameters.</li>
-     * <li><strong>false</strong>: The scrubbing threshold is not automatically adjusted. You must configure the <strong>Bps</strong> and <strong>Pps</strong> parameters.</li>
+     * <li><p><strong>true</strong>: The scrubbing threshold is automatically adjusted. You do not need to set the <strong>Bps</strong> and <strong>Pps</strong> parameters.</p>
+     * </li>
+     * <li><p><strong>false</strong>: The scrubbing threshold is not automatically adjusted. You must set the <strong>Bps</strong> and <strong>Pps</strong> parameters.</p>
+     * </li>
      * </ul>
-     * <p>Default value: false.</p>
+     * <p>Default value: false</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -90,11 +105,17 @@ public class ModifyDefenseThresholdRequest extends TeaModel {
     public Boolean isAuto;
 
     /**
-     * <p>The packet scrubbing threshold. Unit: packets per second (PPS). When you modify Pps, Bps is required. Otherwise, Pps does not take effect.</p>
-     * <p>The packet scrubbing threshold cannot exceed the peak number of inbound or outbound packets, whichever is larger, of the asset. You can use the monitoring tool that is provided by the asset to query the number of packets of the asset:</p>
+     * <p>The scrubbing threshold for packets per second (pps). This value cannot exceed the peak packet traffic of the instance. If you specify Pps, you must also specify Bps. Otherwise, the change does not take effect.</p>
+     * <p>Use the monitoring tools of your instance to query its packet traffic:</p>
      * <ul>
-     * <li>If the asset is an ECS instance, see <a href="https://help.aliyun.com/document_detail/25482.html">View instance monitoring information</a>.</li>
-     * <li>If the asset is an SLB instance, see <a href="https://help.aliyun.com/document_detail/85982.html">View monitoring data</a>.</li>
+     * <li><p>For an ECS instance, see <a href="https://help.aliyun.com/document_detail/25482.html">View instance monitoring information</a>.</p>
+     * </li>
+     * <li><p>For an SLB instance, see <a href="https://help.aliyun.com/document_detail/85982.html">View monitoring data</a>.</p>
+     * </li>
+     * </ul>
+     * <p>&lt;props=&quot;china&quot;&gt;</p>
+     * <ul>
+     * <li>For an EIP instance, see <a href="https://help.aliyun.com/document_detail/85354.html">View monitoring data</a>.</li>
      * </ul>
      * 
      * <strong>example:</strong>

@@ -71,7 +71,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("cn-zhangjiakou-na62-a01", "antiddos-openapi.cn-zhangjiakou.aliyuncs.com"),
             new TeaPair("cn-zhengzhou-nebula-1", "antiddos.aliyuncs.com"),
             new TeaPair("eu-west-1-oxs", "antiddos.aliyuncs.com"),
-            new TeaPair("rus-west-1-pop", "antiddos.aliyuncs.com")
+            new TeaPair("rus-west-1-pop", "antiddos.aliyuncs.com"),
+            new TeaPair("us-southeast-1", "antiddos-openapi.us-southeast-1.aliyuncs.com"),
+            new TeaPair("na-south-1", "antiddos-openapi.na-south-1.aliyuncs.com"),
+            new TeaPair("me-central-1", "antiddos-openapi.me-central-1.aliyuncs.com"),
+            new TeaPair("eu-west-2", "antiddos-openapi.eu-west-2.aliyuncs.com"),
+            new TeaPair("cn-zhongwei", "antiddos-openapi.cn-zhongwei.aliyuncs.com"),
+            new TeaPair("cn-zhengzhou-jva", "antiddos-openapi.cn-zhengzhou-jva.aliyuncs.com"),
+            new TeaPair("cn-wuhan-lr", "antiddos-openapi.cn-hangzhou-cloudstone.aliyuncs.com"),
+            new TeaPair("cn-fuzhou", "antiddos-openapi.cn-hangzhou-cloudstone.aliyuncs.com"),
+            new TeaPair("ap-southeast-8", "antiddos-openapi.ap-southeast-8.aliyuncs.com"),
+            new TeaPair("ap-southeast-7", "antiddos-openapi.ap-southeast-7.aliyuncs.com")
         );
         this.checkConfig(config);
         this._endpoint = this.getEndpoint("antiddos-public", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
@@ -281,7 +291,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the details of the security credit score of the current Alibaba Cloud account in a specific region.</p>
+     * <p>Retrieves the details of the security credit score of the current Alibaba Cloud account in a specific region.</p>
      * 
      * @param request DescribeDdosCreditRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -318,7 +328,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the details of the security credit score of the current Alibaba Cloud account in a specific region.</p>
+     * <p>Retrieves the details of the security credit score of the current Alibaba Cloud account in a specific region.</p>
      * 
      * @param request DescribeDdosCreditRequest
      * @return DescribeDdosCreditResponse
@@ -330,12 +340,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can call the DescribeDdosEventList operation to query the details of the DDoS attack events that occur on an asset by page. The details include the start time, end time, and status of each DDoS attack event.</p>
-     * <h2><a href="#qps-"></a>Limits</h2>
-     * <p>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * <p>This operation performs a paged query to retrieve the details of DDoS attack events for a specific asset with a public IP address. The details include the start time, end time, and status of each event.</p>
+     * <h2>QPS limits</h2>
+     * <p>The queries per second (QPS) limit for this operation is 10 for each user. API calls are throttled if you exceed the limit. This can affect your business. We recommend that you call this operation a reasonable number of times.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the details of the DDoS attack events that occur on an asset. The asset is assigned a public IP address.</p>
+     * <p>Lists DDoS attack events for a specified asset with a public IP address.</p>
      * 
      * @param request DescribeDdosEventListRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -391,12 +401,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can call the DescribeDdosEventList operation to query the details of the DDoS attack events that occur on an asset by page. The details include the start time, end time, and status of each DDoS attack event.</p>
-     * <h2><a href="#qps-"></a>Limits</h2>
-     * <p>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * <p>This operation performs a paged query to retrieve the details of DDoS attack events for a specific asset with a public IP address. The details include the start time, end time, and status of each event.</p>
+     * <h2>QPS limits</h2>
+     * <p>The queries per second (QPS) limit for this operation is 10 for each user. API calls are throttled if you exceed the limit. This can affect your business. We recommend that you call this operation a reasonable number of times.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the details of the DDoS attack events that occur on an asset. The asset is assigned a public IP address.</p>
+     * <p>Lists DDoS attack events for a specified asset with a public IP address.</p>
      * 
      * @param request DescribeDdosEventListRequest
      * @return DescribeDdosEventListResponse
@@ -413,7 +423,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the details of the DDoS mitigation thresholds or traffic scrubbing thresholds for specified assets. The assets can be elastic IP addresses (EIPs). The assets can also be Elastic Compute Service (ECS) instances or Server Load Balancer (SLB) instances that are assigned public IP addresses.</p>
+     * <p>Retrieves the details of the DDoS mitigation thresholds or traffic scrubbing thresholds for specified assets. The assets can be elastic IP addresses (EIPs). The assets can also be Elastic Compute Service (ECS) instances or Server Load Balancer (SLB) instances that are assigned public IP addresses.</p>
      * 
      * @param request DescribeDdosThresholdRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -462,7 +472,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the details of the DDoS mitigation thresholds or traffic scrubbing thresholds for specified assets. The assets can be elastic IP addresses (EIPs). The assets can also be Elastic Compute Service (ECS) instances or Server Load Balancer (SLB) instances that are assigned public IP addresses.</p>
+     * <p>Retrieves the details of the DDoS mitigation thresholds or traffic scrubbing thresholds for specified assets. The assets can be elastic IP addresses (EIPs). The assets can also be Elastic Compute Service (ECS) instances or Server Load Balancer (SLB) instances that are assigned public IP addresses.</p>
      * 
      * @param request DescribeDdosThresholdRequest
      * @return DescribeDdosThresholdResponse
@@ -479,7 +489,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>You can call this operation up to 200 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the details of the assets within the current Alibaba Cloud account. The assets can be elastic IP addresses (EIPs). The assets can also be Elastic Compute Service (ECS) instances or Server Load Balancer (SLB) instances that are assigned public IP addresses. This operation is phased out. We recommend that you use the DescribeInstanceIpAddress operation.</p>
+     * <p>Retrieves the details of the assets within the current Alibaba Cloud account. The assets can be elastic IP addresses (EIPs). The assets can also be Elastic Compute Service (ECS) instances or Server Load Balancer (SLB) instances that are assigned public IP addresses. This operation is phased out. We recommend that you use the DescribeInstanceIpAddress operation.</p>
      * 
      * @param request DescribeInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -544,7 +554,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>You can call this operation up to 200 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the details of the assets within the current Alibaba Cloud account. The assets can be elastic IP addresses (EIPs). The assets can also be Elastic Compute Service (ECS) instances or Server Load Balancer (SLB) instances that are assigned public IP addresses. This operation is phased out. We recommend that you use the DescribeInstanceIpAddress operation.</p>
+     * <p>Retrieves the details of the assets within the current Alibaba Cloud account. The assets can be elastic IP addresses (EIPs). The assets can also be Elastic Compute Service (ECS) instances or Server Load Balancer (SLB) instances that are assigned public IP addresses. This operation is phased out. We recommend that you use the DescribeInstanceIpAddress operation.</p>
      * 
      * @param request DescribeInstanceRequest
      * @return DescribeInstanceResponse
@@ -561,7 +571,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>You can call this operation up to 200 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the details of the assets within the current Alibaba Cloud account and the details of the Anti-DDoS Origin instance to which the assets belong. The assets can be elastic IP addresses (EIPs). The assets can also be Elastic Compute Service (ECS) instances or Server Load Balancer (SLB) instances that are assigned public IP addresses.</p>
+     * <p>Retrieves the details of the assets within the current Alibaba Cloud account and the details of the Anti-DDoS Origin instance to which the assets belong. The assets can be elastic IP addresses (EIPs). The assets can also be Elastic Compute Service (ECS) instances or Server Load Balancer (SLB) instances that are assigned public IP addresses.</p>
      * 
      * @param request DescribeInstanceIpAddressRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -626,7 +636,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>You can call this operation up to 200 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the details of the assets within the current Alibaba Cloud account and the details of the Anti-DDoS Origin instance to which the assets belong. The assets can be elastic IP addresses (EIPs). The assets can also be Elastic Compute Service (ECS) instances or Server Load Balancer (SLB) instances that are assigned public IP addresses.</p>
+     * <p>Retrieves the details of the assets within the current Alibaba Cloud account and the details of the Anti-DDoS Origin instance to which the assets belong. The assets can be elastic IP addresses (EIPs). The assets can also be Elastic Compute Service (ECS) instances or Server Load Balancer (SLB) instances that are assigned public IP addresses.</p>
      * 
      * @param request DescribeInstanceIpAddressRequest
      * @return DescribeInstanceIpAddressResponse
@@ -643,7 +653,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the details of the DDoS mitigation thresholds or traffic scrubbing thresholds for specified assets. The assets can be elastic IP addresses (EIPs). The assets can also be Elastic Compute Service (ECS) instances or Server Load Balancer (SLB) instances that are assigned public IP addresses.</p>
+     * <p>Retrieves the details of the DDoS mitigation thresholds or traffic scrubbing thresholds for specified assets. The assets can be elastic IP addresses (EIPs). The assets can also be Elastic Compute Service (ECS) instances or Server Load Balancer (SLB) instances that are assigned public IP addresses.</p>
      * 
      * @param request DescribeIpDdosThresholdRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -696,7 +706,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the details of the DDoS mitigation thresholds or traffic scrubbing thresholds for specified assets. The assets can be elastic IP addresses (EIPs). The assets can also be Elastic Compute Service (ECS) instances or Server Load Balancer (SLB) instances that are assigned public IP addresses.</p>
+     * <p>Retrieves the details of the DDoS mitigation thresholds or traffic scrubbing thresholds for specified assets. The assets can be elastic IP addresses (EIPs). The assets can also be Elastic Compute Service (ECS) instances or Server Load Balancer (SLB) instances that are assigned public IP addresses.</p>
      * 
      * @param request DescribeIpDdosThresholdRequest
      * @return DescribeIpDdosThresholdResponse
@@ -769,7 +779,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Queries the regions in which Anti-DDoS Origin Basic is available.</p>
      * 
-     * @param request DescribeRegionsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeRegionsResponse
      */
@@ -806,11 +815,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2><a href="#qps-"></a>Limits</h2>
-     * <p>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * <h2>QPS limits</h2>
+     * <p>The queries per second (QPS) limit for this API is 10 calls per second for each user. If you exceed the limit, API calls are throttled. This can affect your business. We recommend that you call this API at a reasonable rate.</p>
      * 
      * <b>summary</b> : 
-     * <p>Changes the scrubbing thresholds for an asset that is assigned a public IP address.</p>
+     * <p>Modifies the Anti-DDoS scrubbing threshold for a single asset with a public IP address.</p>
      * 
      * @param request ModifyDefenseThresholdRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -870,11 +879,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2><a href="#qps-"></a>Limits</h2>
-     * <p>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * <h2>QPS limits</h2>
+     * <p>The queries per second (QPS) limit for this API is 10 calls per second for each user. If you exceed the limit, API calls are throttled. This can affect your business. We recommend that you call this API at a reasonable rate.</p>
      * 
      * <b>summary</b> : 
-     * <p>Changes the scrubbing thresholds for an asset that is assigned a public IP address.</p>
+     * <p>Modifies the Anti-DDoS scrubbing threshold for a single asset with a public IP address.</p>
      * 
      * @param request ModifyDefenseThresholdRequest
      * @return ModifyDefenseThresholdResponse

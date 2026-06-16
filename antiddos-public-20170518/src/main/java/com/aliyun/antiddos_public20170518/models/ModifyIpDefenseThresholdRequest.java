@@ -8,9 +8,12 @@ public class ModifyIpDefenseThresholdRequest extends TeaModel {
      * <p>The traffic scrubbing threshold. Unit: Mbit/s. The traffic scrubbing threshold cannot exceed the peak inbound or outbound Internet traffic, whichever is larger, of the asset. When you modify Bps, Pps is required. Otherwise, Bps does not take effect.</p>
      * <p>You can use the monitoring tool that is provided by the asset to query the Internet traffic of the asset:</p>
      * <ul>
-     * <li>If the asset is an ECS instance, see <a href="https://help.aliyun.com/document_detail/25482.html">View instance monitoring information</a>.</li>
-     * <li>If the asset is an SLB instance, see <a href="https://help.aliyun.com/document_detail/85982.html">View monitoring data</a>.</li>
-     * <li>If the asset is an EIP, see <a href="https://help.aliyun.com/document_detail/85354.html">View monitoring data</a>.</li>
+     * <li><p>If the asset is an ECS instance, see <a href="https://help.aliyun.com/document_detail/25482.html">View instance monitoring information</a>.</p>
+     * </li>
+     * <li><p>If the asset is an SLB instance, see <a href="https://help.aliyun.com/document_detail/85982.html">View monitoring data</a>.</p>
+     * </li>
+     * <li><p>If the asset is an EIP, see <a href="https://help.aliyun.com/document_detail/85354.html">View monitoring data</a>.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -48,13 +51,20 @@ public class ModifyIpDefenseThresholdRequest extends TeaModel {
     /**
      * <p>The type of the asset. Valid values:</p>
      * <ul>
-     * <li><strong>ecs</strong>: an Elastic Compute Service (ECS) instance.</li>
-     * <li><strong>slb</strong>: a Server Load Balancer (SLB) instance.</li>
-     * <li><strong>eip</strong>: an elastic IP address (EIP).</li>
-     * <li><strong>ipv6</strong>: an IPv6 gateway.</li>
-     * <li><strong>swas</strong>: a simple application server.</li>
-     * <li><strong>waf</strong>: a Web Application Firewall (WAF) instance of the Exclusive edition.</li>
-     * <li><strong>ga_basic</strong>: a Global Accelerator (GA) instance.</li>
+     * <li><p><strong>ecs</strong>: an Elastic Compute Service (ECS) instance.</p>
+     * </li>
+     * <li><p><strong>slb</strong>: a Server Load Balancer (SLB) instance.</p>
+     * </li>
+     * <li><p><strong>eip</strong>: an elastic IP address (EIP).</p>
+     * </li>
+     * <li><p><strong>ipv6</strong>: an IPv6 gateway.</p>
+     * </li>
+     * <li><p><strong>swas</strong>: a simple application server.</p>
+     * </li>
+     * <li><p><strong>waf</strong>: a Web Application Firewall (WAF) instance of the Exclusive edition.</p>
+     * </li>
+     * <li><p><strong>ga_basic</strong>: a Global Accelerator (GA) instance.</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -77,8 +87,10 @@ public class ModifyIpDefenseThresholdRequest extends TeaModel {
     /**
      * <p>Specifies whether to automatically adjust the scrubbing threshold based on the traffic load on the asset. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: automatically adjusts the scrubbing threshold. You do not need to configure the <strong>Bps</strong> and <strong>Pps</strong> parameters.</li>
-     * <li><strong>false</strong>: The scrubbing threshold is not automatically adjusted. You must configure the <strong>Bps</strong> and <strong>Pps</strong> parameters. This is the default value.</li>
+     * <li><p><strong>true</strong>: automatically adjusts the scrubbing threshold. You do not need to configure the <strong>Bps</strong> and <strong>Pps</strong> parameters.</p>
+     * </li>
+     * <li><p><strong>false</strong>: The scrubbing threshold is not automatically adjusted. You must configure the <strong>Bps</strong> and <strong>Pps</strong> parameters. This is the default value.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -91,9 +103,12 @@ public class ModifyIpDefenseThresholdRequest extends TeaModel {
      * <p>The packet scrubbing threshold. Unit: packets per second (PPS). When you modify Pps, Bps is required. Otherwise, Pps does not take effect.</p>
      * <p>The packet scrubbing threshold cannot exceed the peak number of inbound or outbound packets, whichever is larger, of the asset. You can use the monitoring tool that is provided by the asset to query the number of packets of the asset:</p>
      * <ul>
-     * <li>If the asset is an ECS instance, see <a href="https://help.aliyun.com/document_detail/25482.html">View instance monitoring information</a>.</li>
-     * <li>If the asset is an SLB instance, see <a href="https://help.aliyun.com/document_detail/85982.html">View monitoring data</a>.</li>
-     * <li>If the asset is an EIP, see <a href="https://help.aliyun.com/document_detail/85354.html">View monitoring data</a>.</li>
+     * <li><p>If the asset is an ECS instance, see <a href="https://help.aliyun.com/document_detail/25482.html">View instance monitoring information</a>.</p>
+     * </li>
+     * <li><p>If the asset is an SLB instance, see <a href="https://help.aliyun.com/document_detail/85982.html">View monitoring data</a>.</p>
+     * </li>
+     * <li><p>If the asset is an EIP, see <a href="https://help.aliyun.com/document_detail/85354.html">View monitoring data</a>.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
