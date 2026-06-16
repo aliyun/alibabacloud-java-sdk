@@ -16,6 +16,9 @@ public class GetUserResponseBody extends TeaModel {
     @NameInMap("Code")
     public String code;
 
+    @NameInMap("DashscopeHost")
+    public String dashscopeHost;
+
     @NameInMap("Host")
     public String host;
 
@@ -66,6 +69,14 @@ public class GetUserResponseBody extends TeaModel {
     }
     public String getCode() {
         return this.code;
+    }
+
+    public GetUserResponseBody setDashscopeHost(String dashscopeHost) {
+        this.dashscopeHost = dashscopeHost;
+        return this;
+    }
+    public String getDashscopeHost() {
+        return this.dashscopeHost;
     }
 
     public GetUserResponseBody setHost(String host) {
