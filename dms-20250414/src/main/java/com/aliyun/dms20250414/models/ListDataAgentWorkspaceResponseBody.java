@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListDataAgentWorkspaceResponseBody extends TeaModel {
     /**
-     * <p>The returned data.</p>
+     * <p>The response struct.</p>
      */
     @NameInMap("Data")
     public ListDataAgentWorkspaceResponseBodyData data;
@@ -20,7 +20,7 @@ public class ListDataAgentWorkspaceResponseBody extends TeaModel {
     public String errorCode;
 
     /**
-     * <p>The error message returned if the request fails.</p>
+     * <p>The error message returned if the call failed.</p>
      * 
      * <strong>example:</strong>
      * <p>Specified parameter is not valid.</p>
@@ -29,7 +29,7 @@ public class ListDataAgentWorkspaceResponseBody extends TeaModel {
     public String errorMessage;
 
     /**
-     * <p>This parameter is not used.</p>
+     * <p>The maximum number of entries per page.</p>
      * 
      * <strong>example:</strong>
      * <p>nu use</p>
@@ -38,7 +38,7 @@ public class ListDataAgentWorkspaceResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>This parameter is not used.</p>
+     * <p>The token information.</p>
      * 
      * <strong>example:</strong>
      * <p>no use</p>
@@ -127,7 +127,7 @@ public class ListDataAgentWorkspaceResponseBody extends TeaModel {
 
     public static class ListDataAgentWorkspaceResponseBodyDataContent extends TeaModel {
         /**
-         * <p>The creation time of the workspace, provided as a UNIX timestamp in seconds.</p>
+         * <p>The creation time of the workspace. This value is a UNIX timestamp in seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1765960516</p>
@@ -136,7 +136,7 @@ public class ListDataAgentWorkspaceResponseBody extends TeaModel {
         public Long createTime;
 
         /**
-         * <p>The creator\&quot;s user ID (UID).</p>
+         * <p>The UID of the workspace creator.</p>
          * 
          * <strong>example:</strong>
          * <p>20282*****7591</p>
@@ -157,7 +157,7 @@ public class ListDataAgentWorkspaceResponseBody extends TeaModel {
         public Boolean isSessionShareEnabled;
 
         /**
-         * <p>The last modification time of the workspace, provided as a UNIX timestamp in seconds.</p>
+         * <p>The most recent modification time of the workspace. This value is a UNIX timestamp in seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1765961516</p>
@@ -166,7 +166,7 @@ public class ListDataAgentWorkspaceResponseBody extends TeaModel {
         public Long modifyTime;
 
         /**
-         * <p>The name of the user\&quot;s role in the workspace.</p>
+         * <p>The role name of the user in the workspace.</p>
          * 
          * <strong>example:</strong>
          * <p>admin</p>
@@ -183,8 +183,11 @@ public class ListDataAgentWorkspaceResponseBody extends TeaModel {
         @NameInMap("TotalMember")
         public Long totalMember;
 
+        @NameInMap("Type")
+        public String type;
+
         /**
-         * <p>The ID of the workspace.</p>
+         * <p>The workspace ID.</p>
          * 
          * <strong>example:</strong>
          * <p>20923*****7291</p>
@@ -271,6 +274,14 @@ public class ListDataAgentWorkspaceResponseBody extends TeaModel {
             return this.totalMember;
         }
 
+        public ListDataAgentWorkspaceResponseBodyDataContent setType(String type) {
+            this.type = type;
+            return this;
+        }
+        public String getType() {
+            return this.type;
+        }
+
         public ListDataAgentWorkspaceResponseBodyDataContent setWorkspaceId(String workspaceId) {
             this.workspaceId = workspaceId;
             return this;
@@ -299,13 +310,13 @@ public class ListDataAgentWorkspaceResponseBody extends TeaModel {
 
     public static class ListDataAgentWorkspaceResponseBodyData extends TeaModel {
         /**
-         * <p>The details of the workspaces.</p>
+         * <p>The configuration content.</p>
          */
         @NameInMap("Content")
         public java.util.List<ListDataAgentWorkspaceResponseBodyDataContent> content;
 
         /**
-         * <p>The page number.</p>
+         * <p>The total number of pages.</p>
          * 
          * <strong>example:</strong>
          * <p>12</p>
@@ -314,7 +325,7 @@ public class ListDataAgentWorkspaceResponseBody extends TeaModel {
         public Long pageNumber;
 
         /**
-         * <p>The number of workspaces on each page.</p>
+         * <p>The number of workspaces per page.</p>
          * 
          * <strong>example:</strong>
          * <p>50</p>

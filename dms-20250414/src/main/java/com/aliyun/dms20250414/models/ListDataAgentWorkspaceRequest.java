@@ -14,7 +14,7 @@ public class ListDataAgentWorkspaceRequest extends TeaModel {
     public String DMSUnit;
 
     /**
-     * <p>This parameter is reserved for future use.</p>
+     * <p>The maximum number of entries per page.</p>
      * 
      * <strong>example:</strong>
      * <p>no use</p>
@@ -23,7 +23,7 @@ public class ListDataAgentWorkspaceRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>This parameter is reserved for future use.</p>
+     * <p>The token information.</p>
      * 
      * <strong>example:</strong>
      * <p>no use</p>
@@ -41,7 +41,7 @@ public class ListDataAgentWorkspaceRequest extends TeaModel {
     public String order;
 
     /**
-     * <p>The field to sort by.</p>
+     * <p>The name of the field by which to sort.</p>
      * 
      * <strong>example:</strong>
      * <p>CreateTime</p>
@@ -50,7 +50,7 @@ public class ListDataAgentWorkspaceRequest extends TeaModel {
     public String orderBy;
 
     /**
-     * <p>The page number.</p>
+     * <p>The page number to start from.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -60,7 +60,7 @@ public class ListDataAgentWorkspaceRequest extends TeaModel {
     public String pageNumber;
 
     /**
-     * <p>The number of entries to return on each page.</p>
+     * <p>The number of records per page.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -79,7 +79,7 @@ public class ListDataAgentWorkspaceRequest extends TeaModel {
     public String workspaceName;
 
     /**
-     * <p>The workspace type.</p>
+     * <p>The type of workspace to query.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

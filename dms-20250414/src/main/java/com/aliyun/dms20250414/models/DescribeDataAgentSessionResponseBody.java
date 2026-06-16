@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeDataAgentSessionResponseBody extends TeaModel {
     /**
-     * <p>The response data.</p>
+     * <p>The response struct.</p>
      */
     @NameInMap("Data")
     public DescribeDataAgentSessionResponseBodyData data;
@@ -20,7 +20,7 @@ public class DescribeDataAgentSessionResponseBody extends TeaModel {
     public String errorCode;
 
     /**
-     * <p>The error message returned when the request fails.</p>
+     * <p>The error message returned if the call failed.</p>
      * 
      * <strong>example:</strong>
      * <p>UnknownError</p>
@@ -29,7 +29,7 @@ public class DescribeDataAgentSessionResponseBody extends TeaModel {
     public String errorMessage;
 
     /**
-     * <p>The request ID.</p>
+     * <p>Id of the request</p>
      * 
      * <strong>example:</strong>
      * <p>18****-*****-*******7A3122F</p>
@@ -38,12 +38,10 @@ public class DescribeDataAgentSessionResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
+     * <p>The return value. Valid values:</p>
      * <ul>
-     * <li><p><strong>true</strong>: The request was successful.</p>
-     * </li>
-     * <li><p><strong>false</strong>: The request failed.</p>
-     * </li>
+     * <li><strong>true</strong>: Succeeded.</li>
+     * <li><strong>false</strong>: Failed.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -97,9 +95,105 @@ public class DescribeDataAgentSessionResponseBody extends TeaModel {
         return this.success;
     }
 
+    public static class DescribeDataAgentSessionResponseBodyDataArtifacts extends TeaModel {
+        @NameInMap("Description")
+        public String description;
+
+        @NameInMap("FinishTime")
+        public String finishTime;
+
+        @NameInMap("Id")
+        public String id;
+
+        @NameInMap("Name")
+        public String name;
+
+        @NameInMap("ReceiveTime")
+        public String receiveTime;
+
+        @NameInMap("StartTime")
+        public String startTime;
+
+        @NameInMap("Status")
+        public String status;
+
+        @NameInMap("Type")
+        public String type;
+
+        public static DescribeDataAgentSessionResponseBodyDataArtifacts build(java.util.Map<String, ?> map) throws Exception {
+            DescribeDataAgentSessionResponseBodyDataArtifacts self = new DescribeDataAgentSessionResponseBodyDataArtifacts();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeDataAgentSessionResponseBodyDataArtifacts setDescription(String description) {
+            this.description = description;
+            return this;
+        }
+        public String getDescription() {
+            return this.description;
+        }
+
+        public DescribeDataAgentSessionResponseBodyDataArtifacts setFinishTime(String finishTime) {
+            this.finishTime = finishTime;
+            return this;
+        }
+        public String getFinishTime() {
+            return this.finishTime;
+        }
+
+        public DescribeDataAgentSessionResponseBodyDataArtifacts setId(String id) {
+            this.id = id;
+            return this;
+        }
+        public String getId() {
+            return this.id;
+        }
+
+        public DescribeDataAgentSessionResponseBodyDataArtifacts setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
+        public DescribeDataAgentSessionResponseBodyDataArtifacts setReceiveTime(String receiveTime) {
+            this.receiveTime = receiveTime;
+            return this;
+        }
+        public String getReceiveTime() {
+            return this.receiveTime;
+        }
+
+        public DescribeDataAgentSessionResponseBodyDataArtifacts setStartTime(String startTime) {
+            this.startTime = startTime;
+            return this;
+        }
+        public String getStartTime() {
+            return this.startTime;
+        }
+
+        public DescribeDataAgentSessionResponseBodyDataArtifacts setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
+        }
+
+        public DescribeDataAgentSessionResponseBodyDataArtifacts setType(String type) {
+            this.type = type;
+            return this;
+        }
+        public String getType() {
+            return this.type;
+        }
+
+    }
+
     public static class DescribeDataAgentSessionResponseBodyDataChatHistoryLocations extends TeaModel {
         /**
-         * <p>The key of the session replay history item.</p>
+         * <p>The key of the chat replay history.</p>
          * 
          * <strong>example:</strong>
          * <p>testKey1</p>
@@ -108,7 +202,7 @@ public class DescribeDataAgentSessionResponseBody extends TeaModel {
         public String key;
 
         /**
-         * <p>The OSS download URL for the session replay history item.</p>
+         * <p>The OSS download URL of the chat replay history.</p>
          * 
          * <strong>example:</strong>
          * <hr>
@@ -139,9 +233,80 @@ public class DescribeDataAgentSessionResponseBody extends TeaModel {
 
     }
 
+    public static class DescribeDataAgentSessionResponseBodyDataDataSources extends TeaModel {
+        @NameInMap("Category")
+        public String category;
+
+        @NameInMap("Detail")
+        public String detail;
+
+        public static DescribeDataAgentSessionResponseBodyDataDataSources build(java.util.Map<String, ?> map) throws Exception {
+            DescribeDataAgentSessionResponseBodyDataDataSources self = new DescribeDataAgentSessionResponseBodyDataDataSources();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeDataAgentSessionResponseBodyDataDataSources setCategory(String category) {
+            this.category = category;
+            return this;
+        }
+        public String getCategory() {
+            return this.category;
+        }
+
+        public DescribeDataAgentSessionResponseBodyDataDataSources setDetail(String detail) {
+            this.detail = detail;
+            return this;
+        }
+        public String getDetail() {
+            return this.detail;
+        }
+
+    }
+
+    public static class DescribeDataAgentSessionResponseBodyDataRecallResults extends TeaModel {
+        @NameInMap("Content")
+        public String content;
+
+        @NameInMap("Score")
+        public Double score;
+
+        @NameInMap("Type")
+        public String type;
+
+        public static DescribeDataAgentSessionResponseBodyDataRecallResults build(java.util.Map<String, ?> map) throws Exception {
+            DescribeDataAgentSessionResponseBodyDataRecallResults self = new DescribeDataAgentSessionResponseBodyDataRecallResults();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeDataAgentSessionResponseBodyDataRecallResults setContent(String content) {
+            this.content = content;
+            return this;
+        }
+        public String getContent() {
+            return this.content;
+        }
+
+        public DescribeDataAgentSessionResponseBodyDataRecallResults setScore(Double score) {
+            this.score = score;
+            return this;
+        }
+        public Double getScore() {
+            return this.score;
+        }
+
+        public DescribeDataAgentSessionResponseBodyDataRecallResults setType(String type) {
+            this.type = type;
+            return this;
+        }
+        public String getType() {
+            return this.type;
+        }
+
+    }
+
     public static class DescribeDataAgentSessionResponseBodyDataSessionConfig extends TeaModel {
         /**
-         * <p>The ID of the custom agent.</p>
+         * <p>The custom agent ID.</p>
          * 
          * <strong>example:</strong>
          * <p>ca-e*******ckd</p>
@@ -152,10 +317,8 @@ public class DescribeDataAgentSessionResponseBody extends TeaModel {
         /**
          * <p>The stage of the custom agent. Valid values:</p>
          * <ul>
-         * <li><p><strong>debug</strong>: The test stage.</p>
-         * </li>
-         * <li><p><strong>prod</strong>: The production stage.</p>
-         * </li>
+         * <li><strong>debug</strong>: Debug stage.</li>
+         * <li><strong>prod</strong>: Production stage.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -165,7 +328,7 @@ public class DescribeDataAgentSessionResponseBody extends TeaModel {
         public String customAgentStage;
 
         /**
-         * <p>Indicates whether web search is enabled.</p>
+         * <p>Specifies whether to enable web search.</p>
          * 
          * <strong>example:</strong>
          * <p>True</p>
@@ -185,10 +348,8 @@ public class DescribeDataAgentSessionResponseBody extends TeaModel {
         /**
          * <p>The language. Valid values:</p>
          * <ul>
-         * <li><p><strong>CHINESE</strong>: Chinese</p>
-         * </li>
-         * <li><p><strong>ENGLISH</strong>: English</p>
-         * </li>
+         * <li><strong>CHINESE</strong>: Chinese.</li>
+         * <li><strong>ENGLISH</strong>: English.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -198,7 +359,7 @@ public class DescribeDataAgentSessionResponseBody extends TeaModel {
         public String language;
 
         /**
-         * <p>A list of MCP server IDs.</p>
+         * <p>The list of MCP server IDs in the session configuration.</p>
          */
         @NameInMap("McpServerIds")
         public java.util.List<String> mcpServerIds;
@@ -206,12 +367,9 @@ public class DescribeDataAgentSessionResponseBody extends TeaModel {
         /**
          * <p>The mode. Valid values:</p>
          * <ul>
-         * <li><p><strong>ASK_DATA</strong>: quick inquiry mode</p>
-         * </li>
-         * <li><p><strong>ANALYSIS</strong>: analysis mode</p>
-         * </li>
-         * <li><p><strong>INSIGHT</strong>: insight mode</p>
-         * </li>
+         * <li><strong>ASK_DATA</strong>: Ask data mode.</li>
+         * <li><strong>ANALYSIS</strong>: Analysis mode.</li>
+         * <li><strong>INSIGHT</strong>: Insight mode.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -227,9 +385,9 @@ public class DescribeDataAgentSessionResponseBody extends TeaModel {
         public String reportWaterMark;
 
         /**
-         * <p>The name of the user\&quot;s OSS bucket.</p>
+         * <p>The name of the user OSS bucket.</p>
          * <ul>
-         * <li>The service can upload analysis files and reports to this bucket.</li>
+         * <li>Analysis process files and report artifacts can be uploaded to the user-specified OSS bucket.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -343,7 +501,7 @@ public class DescribeDataAgentSessionResponseBody extends TeaModel {
 
     public static class DescribeDataAgentSessionResponseBodyData extends TeaModel {
         /**
-         * <p>The ID of the agent.</p>
+         * <p>The current agent ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cu0cs*******mf</p>
@@ -352,7 +510,7 @@ public class DescribeDataAgentSessionResponseBody extends TeaModel {
         public String agentId;
 
         /**
-         * <p>The status of the agent.</p>
+         * <p>The current agent status.</p>
          * 
          * <strong>example:</strong>
          * <p>RUNNING</p>
@@ -360,14 +518,17 @@ public class DescribeDataAgentSessionResponseBody extends TeaModel {
         @NameInMap("AgentStatus")
         public String agentStatus;
 
+        @NameInMap("Artifacts")
+        public java.util.List<DescribeDataAgentSessionResponseBodyDataArtifacts> artifacts;
+
         /**
-         * <p>The session replay history.</p>
+         * <p>The chat replay history.</p>
          */
         @NameInMap("ChatHistoryLocations")
         public java.util.List<DescribeDataAgentSessionResponseBodyDataChatHistoryLocations> chatHistoryLocations;
 
         /**
-         * <p>The timestamp indicating when the session was created.</p>
+         * <p>The session creation time.</p>
          * 
          * <strong>example:</strong>
          * <p>1731645908000</p>
@@ -375,8 +536,11 @@ public class DescribeDataAgentSessionResponseBody extends TeaModel {
         @NameInMap("CreateTime")
         public Long createTime;
 
+        @NameInMap("DataSources")
+        public java.util.List<DescribeDataAgentSessionResponseBodyDataDataSources> dataSources;
+
         /**
-         * <p>Indicates whether the current user has favorited the session in the workspace.</p>
+         * <p>Indicates whether the session is saved as a favorite in the workspace by the current logged-in user.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -385,7 +549,7 @@ public class DescribeDataAgentSessionResponseBody extends TeaModel {
         public String favoriteInWorkspace;
 
         /**
-         * <p>The ID of the file.</p>
+         * <p>The file ID.</p>
          * 
          * <strong>example:</strong>
          * <p>f-8*******01m</p>
@@ -393,8 +557,11 @@ public class DescribeDataAgentSessionResponseBody extends TeaModel {
         @NameInMap("File")
         public String file;
 
+        @NameInMap("RecallResults")
+        public java.util.List<DescribeDataAgentSessionResponseBodyDataRecallResults> recallResults;
+
         /**
-         * <p>Indicates whether the current user has favorited the session.</p>
+         * <p>Indicates whether the session is saved as a favorite by the current logged-in user.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -403,13 +570,13 @@ public class DescribeDataAgentSessionResponseBody extends TeaModel {
         public Boolean saved;
 
         /**
-         * <p>The configuration of the session.</p>
+         * <p>The session configuration item.</p>
          */
         @NameInMap("SessionConfig")
         public DescribeDataAgentSessionResponseBodyDataSessionConfig sessionConfig;
 
         /**
-         * <p>The ID of the agent session.</p>
+         * <p>The agent session ID.</p>
          * 
          * <strong>example:</strong>
          * <p>976*********p</p>
@@ -418,7 +585,7 @@ public class DescribeDataAgentSessionResponseBody extends TeaModel {
         public String sessionId;
 
         /**
-         * <p>The status of the session.</p>
+         * <p>The session status.</p>
          * 
          * <strong>example:</strong>
          * <p>RUNNING</p>
@@ -427,7 +594,7 @@ public class DescribeDataAgentSessionResponseBody extends TeaModel {
         public String sessionStatus;
 
         /**
-         * <p>The title of the session.</p>
+         * <p>The title.</p>
          * 
          * <strong>example:</strong>
          * <p>分析一下这份文件，给出报告。</p>
@@ -465,6 +632,14 @@ public class DescribeDataAgentSessionResponseBody extends TeaModel {
             return this.agentStatus;
         }
 
+        public DescribeDataAgentSessionResponseBodyData setArtifacts(java.util.List<DescribeDataAgentSessionResponseBodyDataArtifacts> artifacts) {
+            this.artifacts = artifacts;
+            return this;
+        }
+        public java.util.List<DescribeDataAgentSessionResponseBodyDataArtifacts> getArtifacts() {
+            return this.artifacts;
+        }
+
         public DescribeDataAgentSessionResponseBodyData setChatHistoryLocations(java.util.List<DescribeDataAgentSessionResponseBodyDataChatHistoryLocations> chatHistoryLocations) {
             this.chatHistoryLocations = chatHistoryLocations;
             return this;
@@ -481,6 +656,14 @@ public class DescribeDataAgentSessionResponseBody extends TeaModel {
             return this.createTime;
         }
 
+        public DescribeDataAgentSessionResponseBodyData setDataSources(java.util.List<DescribeDataAgentSessionResponseBodyDataDataSources> dataSources) {
+            this.dataSources = dataSources;
+            return this;
+        }
+        public java.util.List<DescribeDataAgentSessionResponseBodyDataDataSources> getDataSources() {
+            return this.dataSources;
+        }
+
         public DescribeDataAgentSessionResponseBodyData setFavoriteInWorkspace(String favoriteInWorkspace) {
             this.favoriteInWorkspace = favoriteInWorkspace;
             return this;
@@ -495,6 +678,14 @@ public class DescribeDataAgentSessionResponseBody extends TeaModel {
         }
         public String getFile() {
             return this.file;
+        }
+
+        public DescribeDataAgentSessionResponseBodyData setRecallResults(java.util.List<DescribeDataAgentSessionResponseBodyDataRecallResults> recallResults) {
+            this.recallResults = recallResults;
+            return this;
+        }
+        public java.util.List<DescribeDataAgentSessionResponseBodyDataRecallResults> getRecallResults() {
+            return this.recallResults;
         }
 
         public DescribeDataAgentSessionResponseBodyData setSaved(Boolean saved) {

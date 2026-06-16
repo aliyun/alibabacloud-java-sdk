@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetDataAgentWorkspaceInfoResponseBody extends TeaModel {
     /**
-     * <p>The returned data.</p>
+     * <p>The response struct.</p>
      */
     @NameInMap("Data")
     public GetDataAgentWorkspaceInfoResponseBodyData data;
@@ -38,7 +38,7 @@ public class GetDataAgentWorkspaceInfoResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
+     * <p>Indicates whether the request is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -93,7 +93,7 @@ public class GetDataAgentWorkspaceInfoResponseBody extends TeaModel {
 
     public static class GetDataAgentWorkspaceInfoResponseBodyData extends TeaModel {
         /**
-         * <p>The time when the workspace was created. This value is a UNIX timestamp in seconds.</p>
+         * <p>The creation time of the session. Unit: seconds. The value is a UNIX timestamp.</p>
          * 
          * <strong>example:</strong>
          * <p>1765960516</p>
@@ -102,7 +102,7 @@ public class GetDataAgentWorkspaceInfoResponseBody extends TeaModel {
         public String createTime;
 
         /**
-         * <p>The user ID (UID) of the workspace creator.</p>
+         * <p>The UID of the workspace creator.</p>
          * 
          * <strong>example:</strong>
          * <p>20282*****7591</p>
@@ -110,14 +110,11 @@ public class GetDataAgentWorkspaceInfoResponseBody extends TeaModel {
         @NameInMap("Creator")
         public String creator;
 
-        /**
-         * <p>Indicates whether session sharing is enabled.</p>
-         */
         @NameInMap("IsSessionShareEnabled")
         public Boolean isSessionShareEnabled;
 
         /**
-         * <p>The time when the workspace was last modified. This value is a UNIX timestamp in seconds.</p>
+         * <p>The most recent modification time of the workspace. Unit: seconds. The value is a UNIX timestamp.</p>
          * 
          * <strong>example:</strong>
          * <p>1765961516</p>
@@ -126,7 +123,7 @@ public class GetDataAgentWorkspaceInfoResponseBody extends TeaModel {
         public String modifyTime;
 
         /**
-         * <p>The user\&quot;s role in the workspace.</p>
+         * <p>The role name of the user in the workspace.</p>
          * 
          * <strong>example:</strong>
          * <p>admin</p>
@@ -143,8 +140,11 @@ public class GetDataAgentWorkspaceInfoResponseBody extends TeaModel {
         @NameInMap("TotalMember")
         public String totalMember;
 
+        @NameInMap("Type")
+        public String type;
+
         /**
-         * <p>The description of the workspace.</p>
+         * <p>The description of the collaborative workspace.</p>
          * 
          * <strong>example:</strong>
          * <p>space for test</p>
@@ -153,7 +153,7 @@ public class GetDataAgentWorkspaceInfoResponseBody extends TeaModel {
         public String workspaceDesc;
 
         /**
-         * <p>The workspace ID.</p>
+         * <p>The ID of the collaborative workspace.</p>
          * 
          * <strong>example:</strong>
          * <p>20923*****7291</p>
@@ -230,6 +230,14 @@ public class GetDataAgentWorkspaceInfoResponseBody extends TeaModel {
         }
         public String getTotalMember() {
             return this.totalMember;
+        }
+
+        public GetDataAgentWorkspaceInfoResponseBodyData setType(String type) {
+            this.type = type;
+            return this;
+        }
+        public String getType() {
+            return this.type;
         }
 
         public GetDataAgentWorkspaceInfoResponseBodyData setWorkspaceDesc(String workspaceDesc) {

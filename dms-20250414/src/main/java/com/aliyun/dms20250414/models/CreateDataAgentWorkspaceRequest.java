@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateDataAgentWorkspaceRequest extends TeaModel {
     /**
-     * <p>The DMS unit.</p>
+     * <p>The current DMS unit.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -17,7 +17,7 @@ public class CreateDataAgentWorkspaceRequest extends TeaModel {
     public Boolean isSessionShareEnabled;
 
     /**
-     * <p>The description of the workspace.</p>
+     * <p>The description of the collaborative workspace.</p>
      * 
      * <strong>example:</strong>
      * <p>Space for test</p>
@@ -26,7 +26,7 @@ public class CreateDataAgentWorkspaceRequest extends TeaModel {
     public String workspaceDesc;
 
     /**
-     * <p>The name of the workspace.</p>
+     * <p>The name of the collaborative workspace.</p>
      * 
      * <strong>example:</strong>
      * <p>workspaceTest</p>

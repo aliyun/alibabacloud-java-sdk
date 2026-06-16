@@ -8,7 +8,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public Client(com.aliyun.teaopenapi.models.Config config) throws Exception {
         super(config);
-        this._endpointRule = "";
+        this._endpointRule = "regional";
+        this._endpointMap = TeaConverter.buildMap(
+            new TeaPair("us-west-1", "dms.us-west-1.aliyuncs.com"),
+            new TeaPair("us-east-1", "dms.us-east-1.aliyuncs.com"),
+            new TeaPair("cn-shenzhen", "dms.cn-shenzhen.aliyuncs.com"),
+            new TeaPair("cn-shanghai", "dms.cn-shanghai.aliyuncs.com"),
+            new TeaPair("cn-hongkong", "dms.cn-hongkong.aliyuncs.com"),
+            new TeaPair("cn-hangzhou", "dms.cn-hangzhou.aliyuncs.com"),
+            new TeaPair("cn-beijing", "dms.cn-beijing.aliyuncs.com"),
+            new TeaPair("ap-southeast-1", "dms.ap-southeast-1.aliyuncs.com")
+        );
         this.checkConfig(config);
         this._endpoint = this.getEndpoint("dms", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
     }
@@ -784,7 +794,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a DataAgent workspace.</p>
+     * <p>Creates a DataAgent collaborative workspace.</p>
      * 
      * @param request CreateDataAgentWorkspaceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -828,7 +838,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a DataAgent workspace.</p>
+     * <p>Creates a DataAgent collaborative workspace.</p>
      * 
      * @param request CreateDataAgentWorkspaceRequest
      * @return CreateDataAgentWorkspaceResponse
@@ -1848,7 +1858,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Gets the details of a DataAgent session.</p>
+     * <p>Retrieves the description of a DataAgent session.</p>
      * 
      * @param request DescribeDataAgentSessionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1888,7 +1898,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Gets the details of a DataAgent session.</p>
+     * <p>Retrieves the description of a DataAgent session.</p>
      * 
      * @param request DescribeDataAgentSessionRequest
      * @return DescribeDataAgentSessionResponse
@@ -2314,7 +2324,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves workspace details.</p>
+     * <p>Retrieves the details of a collaborative workspace.</p>
      * 
      * @param request GetDataAgentWorkspaceInfoRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2350,7 +2360,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves workspace details.</p>
+     * <p>Retrieves the details of a collaborative workspace.</p>
      * 
      * @param request GetDataAgentWorkspaceInfoRequest
      * @return GetDataAgentWorkspaceInfoResponse
@@ -3186,7 +3196,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves paginated collaboration workspaces for an Alibaba Cloud account.</p>
+     * <p>Retrieves the collaborative workspaces under the primary account with pagination.</p>
      * 
      * @param request ListDataAgentWorkspaceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3250,7 +3260,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves paginated collaboration workspaces for an Alibaba Cloud account.</p>
+     * <p>Retrieves the collaborative workspaces under the primary account with pagination.</p>
      * 
      * @param request ListDataAgentWorkspaceRequest
      * @return ListDataAgentWorkspaceResponse
@@ -4942,18 +4952,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Request</h2>
+     * <h2>Request description</h2>
      * <ul>
-     * <li>The <code>agent_id</code> and <code>session_id</code> fields are required.</li>
-     * <li>The <code>message_type</code> field defaults to <code>primary</code>. Set it to <code>additional</code> to append information or to <code>cancel</code> to end the session.</li>
-     * <li>The <code>reply_to</code> field specifies which agent message the current message is a response to. It defaults to <code>0</code>.</li>
+     * <li><code>agent_id</code> and <code>session_id</code> are required fields.</li>
+     * <li><code>message_type</code> defaults to <code>primary</code>. Set it to <code>additional</code> when appending information or <code>cancel</code> when canceling a session.</li>
+     * <li><code>reply_to</code> indicates which Agent message this message responds to. The default value is <code>0</code>.</li>
      * <li>When <code>message_type</code> is <code>additional</code>, the <code>question</code> field is required.</li>
-     * <li>Use the <code>quoted_message</code> field to reference a previous user message.</li>
-     * <li>The optional fields <code>data_source</code>, <code>dms_user</code>, <code>db_metadata</code>, and <code>session_config</code> provide more detailed context.</li>
+     * <li><code>quoted_message</code> can be used to quote the content of a previous user message.</li>
+     * <li><code>data_source</code>, <code>dms_user</code>, <code>db_metadata</code>, <code>session_config</code>, and other fields are optional but provide more detailed context information.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Sends a user message to a specified session or ends the session.</p>
+     * <p>Sends a user message to a specified session or cancels a session.</p>
      * 
      * @param tmpReq SendChatMessageRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4973,6 +4983,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(tmpReq.sessionConfig)) {
             request.sessionConfigShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.sessionConfig, "SessionConfig", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.taskConfig)) {
+            request.taskConfigShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.taskConfig, "TaskConfig", "json");
         }
 
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -5024,6 +5038,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("SessionId", request.sessionId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.taskConfigShrink)) {
+            query.put("TaskConfig", request.taskConfigShrink);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
@@ -5043,18 +5061,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Request</h2>
+     * <h2>Request description</h2>
      * <ul>
-     * <li>The <code>agent_id</code> and <code>session_id</code> fields are required.</li>
-     * <li>The <code>message_type</code> field defaults to <code>primary</code>. Set it to <code>additional</code> to append information or to <code>cancel</code> to end the session.</li>
-     * <li>The <code>reply_to</code> field specifies which agent message the current message is a response to. It defaults to <code>0</code>.</li>
+     * <li><code>agent_id</code> and <code>session_id</code> are required fields.</li>
+     * <li><code>message_type</code> defaults to <code>primary</code>. Set it to <code>additional</code> when appending information or <code>cancel</code> when canceling a session.</li>
+     * <li><code>reply_to</code> indicates which Agent message this message responds to. The default value is <code>0</code>.</li>
      * <li>When <code>message_type</code> is <code>additional</code>, the <code>question</code> field is required.</li>
-     * <li>Use the <code>quoted_message</code> field to reference a previous user message.</li>
-     * <li>The optional fields <code>data_source</code>, <code>dms_user</code>, <code>db_metadata</code>, and <code>session_config</code> provide more detailed context.</li>
+     * <li><code>quoted_message</code> can be used to quote the content of a previous user message.</li>
+     * <li><code>data_source</code>, <code>dms_user</code>, <code>db_metadata</code>, <code>session_config</code>, and other fields are optional but provide more detailed context information.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Sends a user message to a specified session or ends the session.</p>
+     * <p>Sends a user message to a specified session or cancels a session.</p>
      * 
      * @param request SendChatMessageRequest
      * @return SendChatMessageResponse

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class SendChatMessageRequest extends TeaModel {
     /**
-     * <p>The agent ID. This parameter is required. You can obtain this ID from the response of the <code>CreateAgentSession</code> operation. An agent has a lifecycle, so its ID may change with each request.</p>
+     * <p>The agent ID. This parameter is required. You can obtain the current AgentId from the response of the CreateAgentSession operation. Agent resources have a lifecycle, so the AgentId you need to specify may change with each request.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class SendChatMessageRequest extends TeaModel {
     public String agentId;
 
     /**
-     * <p>The DMS unit where your DMS instance is located. This information is used to connect to your DMS instance for database analysis. You can find this value in the DMS console. For users on the Alibaba Cloud China site, you can enter <code>cn-hangzhou</code>.</p>
+     * <p>The Data Management unit you are currently in. If you choose to analyze a database, this information is used to correctly connect to your Data Management instance. You can go to the Data Management console to view your current Data Management unit. If you are a user of Alibaba Cloud China Website (<a href="http://www.aliyun.com">www.aliyun.com</a>), set this parameter to ap-southeast-1.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -24,19 +24,19 @@ public class SendChatMessageRequest extends TeaModel {
     public String DMSUnit;
 
     /**
-     * <p>The data source information. Optional.</p>
+     * <p>The data source information. This parameter is optional.</p>
      */
     @NameInMap("DataSource")
     public SendChatMessageRequestDataSource dataSource;
 
     /**
-     * <p>A list of data sources. Optional.</p>
+     * <p>The detailed data source information. This parameter is optional.</p>
      */
     @NameInMap("DataSources")
     public java.util.List<SendChatMessageRequestDataSources> dataSources;
 
     /**
-     * <p>The content of the message to send to the agent.</p>
+     * <p>The message content to send to the Agent in this request.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -46,7 +46,7 @@ public class SendChatMessageRequest extends TeaModel {
     public String message;
 
     /**
-     * <p>The message type. The default value is <code>primary</code>. Set this parameter to <code>additional</code> when responding to a human-in-the-loop question from the agent. Set it to <code>cancel</code> to cancel the current session.</p>
+     * <p>The message type. Default value: <code>[primary]</code>. When the message is a response to the Agent\&quot;s human-in-the-loop question, set this parameter to <code>[additional]</code>. When the message is intended to cancel the current session, set this parameter to <code>[cancel]</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>primary</p>
@@ -64,7 +64,7 @@ public class SendChatMessageRequest extends TeaModel {
     public String parentSessionId;
 
     /**
-     * <p>This parameter is required if the <code>MessageType</code> is <code>additional</code>. It contains the specific question asked by the agent during the human-in-the-loop process.</p>
+     * <p>The specific question that the Agent asks the user through human-in-the-loop. This parameter is required when the message type is <code>additional</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>请提供计算GMV的口径。</p>
@@ -73,7 +73,7 @@ public class SendChatMessageRequest extends TeaModel {
     public String question;
 
     /**
-     * <p>The quoted content. This parameter is typically used when interacting with the agent.</p>
+     * <p>The quoted content, typically used during interaction with the Agent.</p>
      * 
      * <strong>example:</strong>
      * <p>{&quot;version&quot;:&quot;v0&quot;}</p>
@@ -82,7 +82,7 @@ public class SendChatMessageRequest extends TeaModel {
     public String quotedMessage;
 
     /**
-     * <p>This parameter specifies the agent message to which this message is a response, enabling message deduplication. Set this to the highest checkpoint sequence number you have received. For the first message, use 0.</p>
+     * <p>Indicates which Agent message this message responds to. Set this parameter to the largest Checkpoint sequence number currently received. Set it to 0 for the first message. This field is used for message deduplication in case of occasional network issues or duplicate message delivery.</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>
@@ -91,7 +91,7 @@ public class SendChatMessageRequest extends TeaModel {
     public String replyTo;
 
     /**
-     * <p>Session-specific configurations. These apply only if provided in the first <code>SendMessage</code> request of the session.</p>
+     * <p>The special configuration for this session. For the same session, only the configuration included in the first SendMessage call takes effect.</p>
      * 
      * <strong>if can be null:</strong>
      * <p>true</p>
@@ -100,7 +100,7 @@ public class SendChatMessageRequest extends TeaModel {
     public SendChatMessageRequestSessionConfig sessionConfig;
 
     /**
-     * <p>The session ID. This parameter is required. You can obtain the session ID by calling the <code>CreateAgentSession</code> operation.</p>
+     * <p>The session ID. This parameter is required. You can obtain the SessionId by calling the CreateAgentSession operation.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -108,6 +108,9 @@ public class SendChatMessageRequest extends TeaModel {
      */
     @NameInMap("SessionId")
     public String sessionId;
+
+    @NameInMap("TaskConfig")
+    public SendChatMessageRequestTaskConfig taskConfig;
 
     public static SendChatMessageRequest build(java.util.Map<String, ?> map) throws Exception {
         SendChatMessageRequest self = new SendChatMessageRequest();
@@ -210,9 +213,17 @@ public class SendChatMessageRequest extends TeaModel {
         return this.sessionId;
     }
 
+    public SendChatMessageRequest setTaskConfig(SendChatMessageRequestTaskConfig taskConfig) {
+        this.taskConfig = taskConfig;
+        return this;
+    }
+    public SendChatMessageRequestTaskConfig getTaskConfig() {
+        return this.taskConfig;
+    }
+
     public static class SendChatMessageRequestDataSource extends TeaModel {
         /**
-         * <p>This parameter is deprecated. Do not use it.</p>
+         * <p>Deprecated. You do not need to specify this parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>123</p>
@@ -221,7 +232,7 @@ public class SendChatMessageRequest extends TeaModel {
         public String dataSourceId;
 
         /**
-         * <p>The data source type. Valid values are <code>remote_data_center</code> for file analysis and <code>database</code> for database analysis.</p>
+         * <p>The data source type. Valid values: <code>[remote_data_center, database]</code>, indicating that the analysis is performed on a file or a database respectively.</p>
          * 
          * <strong>example:</strong>
          * <p>remote_data_center</p>
@@ -230,7 +241,7 @@ public class SendChatMessageRequest extends TeaModel {
         public String dataSourceType;
 
         /**
-         * <p>This parameter is deprecated. Do not use it.</p>
+         * <p>Deprecated. You do not need to specify this parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>test_db</p>
@@ -248,7 +259,7 @@ public class SendChatMessageRequest extends TeaModel {
         public String dbName;
 
         /**
-         * <p>The ID of the database in DMS.</p>
+         * <p>The ID of the database in Data Management.</p>
          * 
          * <strong>example:</strong>
          * <p>23******</p>
@@ -257,7 +268,7 @@ public class SendChatMessageRequest extends TeaModel {
         public String dmsDatabaseId;
 
         /**
-         * <p>The ID of the instance in DMS.</p>
+         * <p>The ID of the instance in Data Management.</p>
          * 
          * <strong>example:</strong>
          * <p>12******</p>
@@ -284,7 +295,7 @@ public class SendChatMessageRequest extends TeaModel {
         public String fileId;
 
         /**
-         * <p>This parameter is deprecated. Do not use it.</p>
+         * <p>Deprecated. You do not need to specify this parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>localhost</p>
@@ -302,7 +313,7 @@ public class SendChatMessageRequest extends TeaModel {
         public String regionId;
 
         /**
-         * <p>A list of table names to analyze.</p>
+         * <p>The list of table names to analyze.</p>
          */
         @NameInMap("Tables")
         public java.util.List<String> tables;
@@ -404,7 +415,7 @@ public class SendChatMessageRequest extends TeaModel {
 
     public static class SendChatMessageRequestDataSources extends TeaModel {
         /**
-         * <p>This parameter is deprecated. Do not use it.</p>
+         * <p>Deprecated. You do not need to specify this parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>123</p>
@@ -413,7 +424,7 @@ public class SendChatMessageRequest extends TeaModel {
         public String dataSourceId;
 
         /**
-         * <p>The data source type. Valid values are <code>remote_data_center</code> for file analysis and <code>database</code> for database analysis.</p>
+         * <p>The data source type. Valid values: [remote_data_center, database], indicating that the analysis is performed on a file or a database respectively.</p>
          * 
          * <strong>example:</strong>
          * <p>remote_data_center</p>
@@ -422,7 +433,7 @@ public class SendChatMessageRequest extends TeaModel {
         public String dataSourceType;
 
         /**
-         * <p>This parameter is deprecated. Do not use it.</p>
+         * <p>Deprecated. You do not need to specify this parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>test_db</p>
@@ -440,7 +451,7 @@ public class SendChatMessageRequest extends TeaModel {
         public String dbName;
 
         /**
-         * <p>The ID of the database in DMS.</p>
+         * <p>The ID of the database in Data Management.</p>
          * 
          * <strong>example:</strong>
          * <p>123****</p>
@@ -449,7 +460,7 @@ public class SendChatMessageRequest extends TeaModel {
         public String dmsDatabaseId;
 
         /**
-         * <p>The ID of the instance in DMS.</p>
+         * <p>The ID of the instance in Data Management.</p>
          * 
          * <strong>example:</strong>
          * <p>248*****</p>
@@ -476,7 +487,7 @@ public class SendChatMessageRequest extends TeaModel {
         public String fileId;
 
         /**
-         * <p>This parameter is deprecated. Do not use it.</p>
+         * <p>Deprecated. You do not need to specify this parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>localhost</p>
@@ -494,7 +505,7 @@ public class SendChatMessageRequest extends TeaModel {
         public String regionId;
 
         /**
-         * <p>A list of table names to analyze.</p>
+         * <p>The list of table names to analyze.</p>
          */
         @NameInMap("Tables")
         public java.util.List<String> tables;
@@ -596,7 +607,7 @@ public class SendChatMessageRequest extends TeaModel {
 
     public static class SendChatMessageRequestSessionConfig extends TeaModel {
         /**
-         * <p>This parameter is deprecated. Use the <code>CustomAgentId</code> request parameter from the <code>CreateAgentSession</code> operation instead.</p>
+         * <p>Deprecated. Use the input parameters of CreateAgentSession instead.</p>
          * 
          * <strong>example:</strong>
          * <p>null</p>
@@ -605,7 +616,7 @@ public class SendChatMessageRequest extends TeaModel {
         public String customAgentId;
 
         /**
-         * <p>This parameter is deprecated. Use the <code>CustomAgentStage</code> request parameter from the <code>CreateAgentSession</code> operation instead.</p>
+         * <p>Deprecated. Use the input parameters of CreateAgentSession instead.</p>
          * 
          * <strong>example:</strong>
          * <p>null</p>
@@ -614,7 +625,7 @@ public class SendChatMessageRequest extends TeaModel {
         public String customAgentStage;
 
         /**
-         * <p>The language of the session. Only Chinese and English are supported. The default value is Chinese. The value must be in uppercase.</p>
+         * <p>Only Chinese and English are supported. The default value is Chinese. Only uppercase values are supported.</p>
          * 
          * <strong>example:</strong>
          * <p>ENGLISH</p>
@@ -626,13 +637,25 @@ public class SendChatMessageRequest extends TeaModel {
         public String mode;
 
         /**
-         * <p>A text watermark of up to 64 characters that will be added to generated PDF reports.</p>
+         * <p>The text of up to 64 characters that is used as a watermark in the generated PDF report.</p>
          * 
          * <strong>example:</strong>
          * <p>示例水印</p>
          */
         @NameInMap("ReportWaterMark")
         public String reportWaterMark;
+
+        @NameInMap("SkipAskHuman")
+        public Boolean skipAskHuman;
+
+        @NameInMap("SkipPlan")
+        public Boolean skipPlan;
+
+        @NameInMap("SkipSqlConfirm")
+        public Boolean skipSqlConfirm;
+
+        @NameInMap("SkipWebReportConfirm")
+        public Boolean skipWebReportConfirm;
 
         public static SendChatMessageRequestSessionConfig build(java.util.Map<String, ?> map) throws Exception {
             SendChatMessageRequestSessionConfig self = new SendChatMessageRequestSessionConfig();
@@ -677,6 +700,98 @@ public class SendChatMessageRequest extends TeaModel {
         }
         public String getReportWaterMark() {
             return this.reportWaterMark;
+        }
+
+        public SendChatMessageRequestSessionConfig setSkipAskHuman(Boolean skipAskHuman) {
+            this.skipAskHuman = skipAskHuman;
+            return this;
+        }
+        public Boolean getSkipAskHuman() {
+            return this.skipAskHuman;
+        }
+
+        public SendChatMessageRequestSessionConfig setSkipPlan(Boolean skipPlan) {
+            this.skipPlan = skipPlan;
+            return this;
+        }
+        public Boolean getSkipPlan() {
+            return this.skipPlan;
+        }
+
+        public SendChatMessageRequestSessionConfig setSkipSqlConfirm(Boolean skipSqlConfirm) {
+            this.skipSqlConfirm = skipSqlConfirm;
+            return this;
+        }
+        public Boolean getSkipSqlConfirm() {
+            return this.skipSqlConfirm;
+        }
+
+        public SendChatMessageRequestSessionConfig setSkipWebReportConfirm(Boolean skipWebReportConfirm) {
+            this.skipWebReportConfirm = skipWebReportConfirm;
+            return this;
+        }
+        public Boolean getSkipWebReportConfirm() {
+            return this.skipWebReportConfirm;
+        }
+
+    }
+
+    public static class SendChatMessageRequestTaskConfigReportConfig extends TeaModel {
+        @NameInMap("ReportPrompt")
+        public String reportPrompt;
+
+        @NameInMap("ReportTheme")
+        public String reportTheme;
+
+        @NameInMap("ReportType")
+        public String reportType;
+
+        public static SendChatMessageRequestTaskConfigReportConfig build(java.util.Map<String, ?> map) throws Exception {
+            SendChatMessageRequestTaskConfigReportConfig self = new SendChatMessageRequestTaskConfigReportConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public SendChatMessageRequestTaskConfigReportConfig setReportPrompt(String reportPrompt) {
+            this.reportPrompt = reportPrompt;
+            return this;
+        }
+        public String getReportPrompt() {
+            return this.reportPrompt;
+        }
+
+        public SendChatMessageRequestTaskConfigReportConfig setReportTheme(String reportTheme) {
+            this.reportTheme = reportTheme;
+            return this;
+        }
+        public String getReportTheme() {
+            return this.reportTheme;
+        }
+
+        public SendChatMessageRequestTaskConfigReportConfig setReportType(String reportType) {
+            this.reportType = reportType;
+            return this;
+        }
+        public String getReportType() {
+            return this.reportType;
+        }
+
+    }
+
+    public static class SendChatMessageRequestTaskConfig extends TeaModel {
+        @NameInMap("ReportConfig")
+        public SendChatMessageRequestTaskConfigReportConfig reportConfig;
+
+        public static SendChatMessageRequestTaskConfig build(java.util.Map<String, ?> map) throws Exception {
+            SendChatMessageRequestTaskConfig self = new SendChatMessageRequestTaskConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public SendChatMessageRequestTaskConfig setReportConfig(SendChatMessageRequestTaskConfigReportConfig reportConfig) {
+            this.reportConfig = reportConfig;
+            return this;
+        }
+        public SendChatMessageRequestTaskConfigReportConfig getReportConfig() {
+            return this.reportConfig;
         }
 
     }

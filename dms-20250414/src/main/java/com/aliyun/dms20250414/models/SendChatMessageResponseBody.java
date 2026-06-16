@@ -11,7 +11,7 @@ public class SendChatMessageResponseBody extends TeaModel {
     public SendChatMessageResponseBodyData data;
 
     /**
-     * <p>The error code. A value of <code>Success</code> indicates that the request was successful.</p>
+     * <p>The error code.</p>
      * 
      * <strong>example:</strong>
      * <p>Success</p>
@@ -20,7 +20,7 @@ public class SendChatMessageResponseBody extends TeaModel {
     public String errorCode;
 
     /**
-     * <p>The error message. This field is empty if the request is successful.</p>
+     * <p>The error message.</p>
      * 
      * <strong>example:</strong>
      * <p>&quot;&quot;</p>
@@ -38,7 +38,7 @@ public class SendChatMessageResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
+     * <p>Success</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -93,7 +93,7 @@ public class SendChatMessageResponseBody extends TeaModel {
 
     public static class SendChatMessageResponseBodyData extends TeaModel {
         /**
-         * <p>The agent ID.</p>
+         * <p>AgentId</p>
          * 
          * <strong>example:</strong>
          * <p>3jqqdiuxun******</p>
@@ -102,7 +102,7 @@ public class SendChatMessageResponseBody extends TeaModel {
         public String agentId;
 
         /**
-         * <p>Describes the result of the request.</p>
+         * <p>Message</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -110,8 +110,11 @@ public class SendChatMessageResponseBody extends TeaModel {
         @NameInMap("Message")
         public String message;
 
+        @NameInMap("MessageId")
+        public String messageId;
+
         /**
-         * <p>The session ID.</p>
+         * <p>SessionId</p>
          * 
          * <strong>example:</strong>
          * <p>6zbqbho********</p>
@@ -138,6 +141,14 @@ public class SendChatMessageResponseBody extends TeaModel {
         }
         public String getMessage() {
             return this.message;
+        }
+
+        public SendChatMessageResponseBodyData setMessageId(String messageId) {
+            this.messageId = messageId;
+            return this;
+        }
+        public String getMessageId() {
+            return this.messageId;
         }
 
         public SendChatMessageResponseBodyData setSessionId(String sessionId) {

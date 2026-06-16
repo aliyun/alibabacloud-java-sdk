@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateDataAgentWorkspaceResponseBody extends TeaModel {
     /**
-     * <p>The returned data structure.</p>
+     * <p>The response struct.</p>
      */
     @NameInMap("Data")
     public CreateDataAgentWorkspaceResponseBodyData data;
@@ -93,7 +93,7 @@ public class CreateDataAgentWorkspaceResponseBody extends TeaModel {
 
     public static class CreateDataAgentWorkspaceResponseBodyData extends TeaModel {
         /**
-         * <p>The time the workspace was created, as a UNIX timestamp in seconds.</p>
+         * <p>The time when the workspace was created. The value is a UNIX timestamp in seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1765960516</p>
@@ -102,7 +102,7 @@ public class CreateDataAgentWorkspaceResponseBody extends TeaModel {
         public Long createTime;
 
         /**
-         * <p>The user ID of the workspace creator.</p>
+         * <p>The UID of the workspace creator.</p>
          * 
          * <strong>example:</strong>
          * <p>20282*****7591</p>
@@ -110,14 +110,11 @@ public class CreateDataAgentWorkspaceResponseBody extends TeaModel {
         @NameInMap("Creator")
         public String creator;
 
-        /**
-         * <p>Indicates whether session sharing is enabled for the workspace.</p>
-         */
         @NameInMap("IsSessionShareEnabled")
         public Boolean isSessionShareEnabled;
 
         /**
-         * <p>The time the workspace was last modified, as a UNIX timestamp in seconds.</p>
+         * <p>The time when the workspace was last modified. The value is a UNIX timestamp in seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1765961516</p>
@@ -126,7 +123,7 @@ public class CreateDataAgentWorkspaceResponseBody extends TeaModel {
         public Long modifyTime;
 
         /**
-         * <p>The name of the user\&quot;s role in the workspace.</p>
+         * <p>The role name of the user in the workspace.</p>
          * 
          * <strong>example:</strong>
          * <p>owner</p>
@@ -142,6 +139,9 @@ public class CreateDataAgentWorkspaceResponseBody extends TeaModel {
          */
         @NameInMap("TotalMember")
         public Long totalMember;
+
+        @NameInMap("Type")
+        public String type;
 
         /**
          * <p>The description of the workspace.</p>
@@ -230,6 +230,14 @@ public class CreateDataAgentWorkspaceResponseBody extends TeaModel {
         }
         public Long getTotalMember() {
             return this.totalMember;
+        }
+
+        public CreateDataAgentWorkspaceResponseBodyData setType(String type) {
+            this.type = type;
+            return this;
+        }
+        public String getType() {
+            return this.type;
         }
 
         public CreateDataAgentWorkspaceResponseBodyData setWorkspaceDesc(String workspaceDesc) {
