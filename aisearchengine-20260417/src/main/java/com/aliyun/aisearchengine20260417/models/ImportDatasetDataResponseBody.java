@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ImportDatasetDataResponseBody extends TeaModel {
     /**
+     * <p>The business status code. A value of 200 indicates a successful request. Other values indicate exceptions. For more information, see error codes.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -12,6 +14,8 @@ public class ImportDatasetDataResponseBody extends TeaModel {
     public Integer code;
 
     /**
+     * <p>The response data body, which uses an empty placeholder.</p>
+     * 
      * <strong>example:</strong>
      * <p>[]</p>
      */
@@ -19,6 +23,8 @@ public class ImportDatasetDataResponseBody extends TeaModel {
     public java.util.Map<String, ?> data;
 
     /**
+     * <p>The status description.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -26,6 +32,8 @@ public class ImportDatasetDataResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The unique request ID, used for troubleshooting.</p>
+     * 
      * <strong>example:</strong>
      * <p>1a0f40dd17774641794394269ec0e9</p>
      */

@@ -5,21 +5,25 @@ import com.aliyun.tea.*;
 
 public class QaChatRequest extends TeaModel {
     /**
+     * <p>Application ID</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>2047140750220754946</p>
+     * <p>2052929167853146113</p>
      */
     @NameInMap("appId")
     public String appId;
 
     /**
+     * <p>User message object containing role and multimodal content.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("message")
     public QaChatRequestMessage message;
 
     /**
+     * <p>No input required</p>
+     * 
      * <strong>example:</strong>
      * <p>{
      *   &quot;debug&quot;: true
@@ -29,8 +33,10 @@ public class QaChatRequest extends TeaModel {
     public java.util.Map<String, ?> options;
 
     /**
+     * <p>Q&amp;A session ID, used to track multiple Q&amp;A interactions from the same user.</p>
+     * 
      * <strong>example:</strong>
-     * <p>b2a979e79799489fbde56119bf8c4dc7</p>
+     * <p>req_123456789</p>
      */
     @NameInMap("sessionId")
     public String sessionId;
@@ -74,15 +80,27 @@ public class QaChatRequest extends TeaModel {
 
     public static class QaChatRequestMessageParts extends TeaModel {
         /**
+         * <p>Required when type = &quot;data&quot;. The data object structure is as follows:</p>
+         * <ul>
+         * <li>type: String type, required, indicates the data subtype. Currently supported value is &quot;template&quot;, indicating a video template.</li>
+         * <li>videoId: String type, conditionally required. Only required when type = &quot;template&quot;, indicating the video template ID; can be ignored or set to null for other types.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>{
-         *   &quot;templateId&quot;: &quot;456789&quot;
+         *   &quot;type&quot;: &quot;template&quot;,
+         *   &quot;videoId&quot;: &quot;xxxx&quot;
          * }</p>
          */
         @NameInMap("data")
         public Object data;
 
         /**
+         * <p>Required when <code>type=&quot;file&quot;</code>.</p>
+         * <ul>
+         * <li>Media type, currently only supports image formats JPG/PNG/WEBP/JPEG, maximum 5</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>image/png</p>
          */
@@ -90,13 +108,20 @@ public class QaChatRequest extends TeaModel {
         public String mediaType;
 
         /**
+         * <p>Required when <code>type=&quot;text&quot;</code>.</p>
+         * <ul>
+         * <li>Text content, maximum 1024 characters</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
-         * <p>帮我搜索下今天的天气</p>
+         * <p>请问这个视频讲了什么？</p>
          */
         @NameInMap("text")
         public String text;
 
         /**
+         * <p>Fixed content block type, only supports <code>&quot;text&quot;</code> / <code>&quot;file&quot;</code> / <code>&quot;data&quot;</code></p>
+         * 
          * <strong>example:</strong>
          * <p>text</p>
          */
@@ -104,8 +129,12 @@ public class QaChatRequest extends TeaModel {
         public String type;
 
         /**
+         * <p>Required when <code>type=&quot;file&quot;</code>. Supports the following two types, with format support for JPG/PNG/WEBP/JPEG:</p>
+         * <p>• Media resource CDN URL, currently supports images, maximum 5;
+         * • Image encoding, upload image files using base64 encoded strings (supports bitmap formats), maximum 5</p>
+         * 
          * <strong>example:</strong>
-         * <p><a href="https://meeting.dingtalk.com/j/4sSPAxWaPbM">https://meeting.dingtalk.com/j/4sSPAxWaPbM</a></p>
+         * <p><a href="https://example.com/img.jpg">https://example.com/img.jpg</a></p>
          */
         @NameInMap("url")
         public String url;
@@ -158,10 +187,15 @@ public class QaChatRequest extends TeaModel {
     }
 
     public static class QaChatRequestMessage extends TeaModel {
+        /**
+         * <p>Individual content block, differentiated by <code>type</code></p>
+         */
         @NameInMap("parts")
         public java.util.List<QaChatRequestMessageParts> parts;
 
         /**
+         * <p>Message role, currently only supports the <code>&quot;user&quot;</code> role</p>
+         * 
          * <strong>example:</strong>
          * <p>user</p>
          */

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetDatasetResourceUrlRequest extends TeaModel {
     /**
+     * <p>The dataset ID. You can view this in the dataset list on the console.</p>
+     * 
      * <strong>example:</strong>
      * <p>730</p>
      */
@@ -12,6 +14,7 @@ public class GetDatasetResourceUrlRequest extends TeaModel {
     public String datasetId;
 
     /**
+     * <p>The primary key value of the data record in the dataset.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

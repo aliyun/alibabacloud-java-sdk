@@ -5,15 +5,18 @@ import com.aliyun.tea.*;
 
 public class EngineSearchRequest extends TeaModel {
     /**
+     * <p>The unique ID of the application.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>507218</p>
+     * <p>2048962366415007746</p>
      */
     @NameInMap("appId")
     public String appId;
 
     /**
+     * <p>Specifies whether to access the draft version.</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -21,15 +24,15 @@ public class EngineSearchRequest extends TeaModel {
     public Boolean grey;
 
     /**
+     * <p>The query condition object.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("query")
     public EngineSearchRequestQuery query;
 
-    @NameInMap("recall")
-    public EngineSearchRequestRecall recall;
-
     /**
+     * <p>This parameter does not need to be specified.</p>
+     * 
      * <strong>example:</strong>
      * <p>2e95ef4fbc28437db5008a910bd392a4</p>
      */
@@ -37,21 +40,10 @@ public class EngineSearchRequest extends TeaModel {
     public String sessionId;
 
     /**
-     * <strong>example:</strong>
-     * <p>507218</p>
+     * <p>The user information object, used for subsequent user-perspective analysis.</p>
      */
-    @NameInMap("strategyId")
-    public String strategyId;
-
     @NameInMap("user")
     public EngineSearchRequestUser user;
-
-    /**
-     * <strong>example:</strong>
-     * <p>默认1.0</p>
-     */
-    @NameInMap("version")
-    public String version;
 
     public static EngineSearchRequest build(java.util.Map<String, ?> map) throws Exception {
         EngineSearchRequest self = new EngineSearchRequest();
@@ -82,28 +74,12 @@ public class EngineSearchRequest extends TeaModel {
         return this.query;
     }
 
-    public EngineSearchRequest setRecall(EngineSearchRequestRecall recall) {
-        this.recall = recall;
-        return this;
-    }
-    public EngineSearchRequestRecall getRecall() {
-        return this.recall;
-    }
-
     public EngineSearchRequest setSessionId(String sessionId) {
         this.sessionId = sessionId;
         return this;
     }
     public String getSessionId() {
         return this.sessionId;
-    }
-
-    public EngineSearchRequest setStrategyId(String strategyId) {
-        this.strategyId = strategyId;
-        return this;
-    }
-    public String getStrategyId() {
-        return this.strategyId;
     }
 
     public EngineSearchRequest setUser(EngineSearchRequestUser user) {
@@ -114,16 +90,10 @@ public class EngineSearchRequest extends TeaModel {
         return this.user;
     }
 
-    public EngineSearchRequest setVersion(String version) {
-        this.version = version;
-        return this;
-    }
-    public String getVersion() {
-        return this.version;
-    }
-
     public static class EngineSearchRequestQuery extends TeaModel {
         /**
+         * <p>The list of primary key IDs to exclude.<br>• Purpose: filters out previously viewed history records.</p>
+         * 
          * <strong>example:</strong>
          * <p>[&quot;24234111&quot;,&quot;12423525&quot;]</p>
          */
@@ -131,6 +101,8 @@ public class EngineSearchRequest extends TeaModel {
         public java.util.List<String> excludeIds;
 
         /**
+         * <p>The image query list.<br>• Only one image URL is supported. The maximum size of a single image is 10 MB. Supported formats: JPG, PNG, WEBP, and JPEG.</p>
+         * 
          * <strong>example:</strong>
          * <p>[&quot;<a href="https://paperreview.oss-cn-hangzhou.aliyuncs.com/59dd424f-97ed-4855-942e-c961f1f5b67e.jpeg%22%5D">https://paperreview.oss-cn-hangzhou.aliyuncs.com/59dd424f-97ed-4855-942e-c961f1f5b67e.jpeg&quot;]</a></p>
          */
@@ -138,6 +110,8 @@ public class EngineSearchRequest extends TeaModel {
         public java.util.List<String> imageUrls;
 
         /**
+         * <p>The page number, starting from 1.<br>• Default value: <code>1</code>.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -145,6 +119,8 @@ public class EngineSearchRequest extends TeaModel {
         public Integer pageNo;
 
         /**
+         * <p>The number of results returned per page.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -152,6 +128,8 @@ public class EngineSearchRequest extends TeaModel {
         public Integer pageSize;
 
         /**
+         * <p>The text query list.<br>• Only one text string is supported. The maximum length is 256 characters.</p>
+         * 
          * <strong>example:</strong>
          * <p>[&quot;梅花图片&quot;]</p>
          */
@@ -205,48 +183,12 @@ public class EngineSearchRequest extends TeaModel {
 
     }
 
-    public static class EngineSearchRequestRecall extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>false</p>
-         */
-        @NameInMap("closeRecallAsr")
-        public Boolean closeRecallAsr;
-
-        /**
-         * <strong>example:</strong>
-         * <p>true</p>
-         */
-        @NameInMap("needMergeSegments")
-        public Boolean needMergeSegments;
-
-        public static EngineSearchRequestRecall build(java.util.Map<String, ?> map) throws Exception {
-            EngineSearchRequestRecall self = new EngineSearchRequestRecall();
-            return TeaModel.build(map, self);
-        }
-
-        public EngineSearchRequestRecall setCloseRecallAsr(Boolean closeRecallAsr) {
-            this.closeRecallAsr = closeRecallAsr;
-            return this;
-        }
-        public Boolean getCloseRecallAsr() {
-            return this.closeRecallAsr;
-        }
-
-        public EngineSearchRequestRecall setNeedMergeSegments(Boolean needMergeSegments) {
-            this.needMergeSegments = needMergeSegments;
-            return this;
-        }
-        public Boolean getNeedMergeSegments() {
-            return this.needMergeSegments;
-        }
-
-    }
-
     public static class EngineSearchRequestUser extends TeaModel {
         /**
+         * <p>The unique ID of the user.</p>
+         * 
          * <strong>example:</strong>
-         * <p>&quot;123456&quot;</p>
+         * <p>asdfgnoevnor</p>
          */
         @NameInMap("userId")
         public String userId;

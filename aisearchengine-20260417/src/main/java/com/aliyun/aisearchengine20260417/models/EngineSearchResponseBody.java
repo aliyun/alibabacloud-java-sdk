@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class EngineSearchResponseBody extends TeaModel {
     /**
+     * <p>The status code. A value of 200 indicates success.</p>
+     * 
      * <strong>example:</strong>
-     * <p>SUCCESS</p>
+     * <p>200</p>
      */
     @NameInMap("code")
     public Integer code;
 
+    /**
+     * <p>The business data body.</p>
+     */
     @NameInMap("data")
     public EngineSearchResponseBodyData data;
 
     /**
+     * <p>The response message.</p>
+     * 
      * <strong>example:</strong>
      * <p>successful</p>
      */
@@ -52,6 +59,8 @@ public class EngineSearchResponseBody extends TeaModel {
 
     public static class EngineSearchResponseBodyDataItems extends TeaModel {
         /**
+         * <p>算法内容</p>
+         * 
          * <strong>example:</strong>
          * <p>{&quot;rankScore&quot;:1.0}</p>
          */
@@ -59,6 +68,8 @@ public class EngineSearchResponseBody extends TeaModel {
         public java.util.Map<String, ?> algorithm;
 
         /**
+         * <p>内容详情对象（详细结构见下文）</p>
+         * 
          * <strong>example:</strong>
          * <p>{&quot;titile&quot;:&quot;大疆无人机&quot;}</p>
          */
@@ -66,6 +77,8 @@ public class EngineSearchResponseBody extends TeaModel {
         public java.util.Map<String, ?> content;
 
         /**
+         * <p>权益绑定 ID</p>
+         * 
          * <strong>example:</strong>
          * <p>iceberg-tbl-b7420156-6d23-4555-8e05-12285b36d6ca</p>
          */
@@ -73,13 +86,19 @@ public class EngineSearchResponseBody extends TeaModel {
         public String id;
 
         /**
+         * <p>相关性得分</p>
+         * 
          * <strong>example:</strong>
-         * <p>1.75</p>
+         * <p>0.005369</p>
          */
         @NameInMap("score")
         public Float score;
 
         /**
+         * <p>回传日志时使用。</p>
+         * <p>取值：</p>
+         * <p>trace_id=ali。</p>
+         * 
          * <strong>example:</strong>
          * <p>{&quot;traceId&quot;:&quot;12285b36d6ca&quot;}</p>
          */
@@ -135,6 +154,8 @@ public class EngineSearchResponseBody extends TeaModel {
 
     public static class EngineSearchResponseBodyData extends TeaModel {
         /**
+         * <p>The error message.</p>
+         * 
          * <strong>example:</strong>
          * <p>搜索词违禁</p>
          */
@@ -142,16 +163,29 @@ public class EngineSearchResponseBody extends TeaModel {
         public String errorMessage;
 
         /**
+         * <p>The additional metadata. </p>
+         * <blockquote>
+         * <p>Contains the exclude_ids field, which represents the list of IDs that were actually excluded. The format is <code>Array[String]</code>.</p>
+         * <ul>
+         * <li>Example: [&quot;id_1&quot;, &quot;id_2&quot;].</li>
+         * </ul>
+         * </blockquote>
+         * 
          * <strong>example:</strong>
-         * <p>{}</p>
+         * <p>{exclude_ids: [&quot;id_1&quot;, &quot;id_2&quot;]}</p>
          */
         @NameInMap("extra")
         public java.util.Map<String, ?> extra;
 
+        /**
+         * <p>搜索结果列表</p>
+         */
         @NameInMap("items")
         public java.util.List<EngineSearchResponseBodyDataItems> items;
 
         /**
+         * <p>The search page number.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -159,6 +193,8 @@ public class EngineSearchResponseBody extends TeaModel {
         public Integer page;
 
         /**
+         * <p>The response ID of this request.</p>
+         * 
          * <strong>example:</strong>
          * <p>62CC3999-5380-5344-ABC7-46453625A910</p>
          */
@@ -166,6 +202,8 @@ public class EngineSearchResponseBody extends TeaModel {
         public String requestId;
 
         /**
+         * <p>The number of results returned on the current page.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -173,6 +211,10 @@ public class EngineSearchResponseBody extends TeaModel {
         public Integer size;
 
         /**
+         * <p>The execution status.
+         * 200: succeeded.
+         * 500: failed.</p>
+         * 
          * <strong>example:</strong>
          * <p>200</p>
          */
@@ -180,6 +222,8 @@ public class EngineSearchResponseBody extends TeaModel {
         public String status;
 
         /**
+         * <p>The total number of records.</p>
+         * 
          * <strong>example:</strong>
          * <p>121</p>
          */
@@ -187,6 +231,8 @@ public class EngineSearchResponseBody extends TeaModel {
         public Integer total;
 
         /**
+         * <p>The Tracing Analysis information.</p>
+         * 
          * <strong>example:</strong>
          * <p>{&quot;traceId&quot;:&quot;234234324&quot;}</p>
          */
