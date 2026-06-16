@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DocOcrResponseBody extends TeaModel {
     /**
-     * <p>Return code</p>
+     * <p>The return code.</p>
      * 
      * <strong>example:</strong>
      * <p>Success</p>
@@ -14,7 +14,7 @@ public class DocOcrResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>Return message.</p>
+     * <p>The return message.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -23,7 +23,7 @@ public class DocOcrResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>ID of the request</p>
+     * <p>Id of the request</p>
      * 
      * <strong>example:</strong>
      * <p>86C40EC3-5940-5F47-995C-BFE90B70E540</p>
@@ -32,7 +32,7 @@ public class DocOcrResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Return result</p>
+     * <p>The returned result.</p>
      */
     @NameInMap("Result")
     public DocOcrResponseBodyResult result;
@@ -76,7 +76,7 @@ public class DocOcrResponseBody extends TeaModel {
 
     public static class DocOcrResponseBodyResult extends TeaModel {
         /**
-         * <p>Card and document recognition result	Only returned when the interface response is successful</p>
+         * <p>The card and certificate recognition result. This parameter is returned only when the API response is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>{
@@ -103,10 +103,10 @@ public class DocOcrResponseBody extends TeaModel {
         public String extIdInfo;
 
         /**
-         * <p>Whether the authentication passed.</p>
+         * <p>Indicates whether the authentication is passed. Valid values:</p>
          * <ul>
-         * <li>Y: Passed</li>
-         * <li>N: Not passed</li>
+         * <li>Y: Passed.</li>
+         * <li>N: Not passed.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -116,7 +116,7 @@ public class DocOcrResponseBody extends TeaModel {
         public String passed;
 
         /**
-         * <p>Sub-result code</p>
+         * <p>The sub-result code.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -125,7 +125,7 @@ public class DocOcrResponseBody extends TeaModel {
         public String subCode;
 
         /**
-         * <p>Unique identifier of the authentication request</p>
+         * <p>The unique identifier of the authentication request.</p>
          * 
          * <strong>example:</strong>
          * <p>08573be80f944d95ac812e019e3655a8</p>

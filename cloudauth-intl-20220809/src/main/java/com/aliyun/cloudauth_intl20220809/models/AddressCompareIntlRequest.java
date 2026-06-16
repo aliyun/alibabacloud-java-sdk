@@ -5,30 +5,30 @@ import com.aliyun.tea.*;
 
 public class AddressCompareIntlRequest extends TeaModel {
     /**
-     * <p>Country name</p>
+     * <p>The country name. Valid values:</p>
      * <ul>
-     * <li>China</li>
+     * <li>China.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>fixed value：中国</p>
+     * <p>固定值：中国</p>
      */
     @NameInMap("DefaultCountry")
     public String defaultCountry;
 
     /**
-     * <p>ADD_VERIFY</p>
+     * <p>ADD_VERIFY.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>fixed value：ADD_VERIFY</p>
+     * <p>固定值：ADD_VERIFY</p>
      */
     @NameInMap("ProductCode")
     public String productCode;
 
     /**
-     * <p>Address 1</p>
+     * <p>Address 1.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -38,7 +38,7 @@ public class AddressCompareIntlRequest extends TeaModel {
     public String text1;
 
     /**
-     * <p>Address 2</p>
+     * <p>Address 2.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

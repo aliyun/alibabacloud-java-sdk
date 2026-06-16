@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CredentialVerifyIntlResponseBody extends TeaModel {
     /**
-     * <p>Return code: 200 for success, others for failure.</p>
+     * <p>The return code. A value of 200 indicates success. Other values indicate failure.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,7 +14,7 @@ public class CredentialVerifyIntlResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>Return message.</p>
+     * <p>The return message.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -23,7 +23,7 @@ public class CredentialVerifyIntlResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Request ID.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>130A2C10-B9EE-4D84-88E3-5384FF039795</p>
@@ -32,7 +32,7 @@ public class CredentialVerifyIntlResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Returned result information.</p>
+     * <p>The result information.</p>
      */
     @NameInMap("ResultObject")
     public CredentialVerifyIntlResponseBodyResultObject resultObject;
@@ -76,7 +76,7 @@ public class CredentialVerifyIntlResponseBody extends TeaModel {
 
     public static class CredentialVerifyIntlResponseBodyResultObject extends TeaModel {
         /**
-         * <p>Other information in JSON format.</p>
+         * <p>The additional information in JSON format.</p>
          * 
          * <strong>example:</strong>
          * <p>{
@@ -92,11 +92,11 @@ public class CredentialVerifyIntlResponseBody extends TeaModel {
         public String materialInfo;
 
         /**
-         * <p>Risk result:</p>
+         * <p>The risk result. Valid values:</p>
          * <ul>
-         * <li><strong>0</strong>: Low risk</li>
-         * <li><strong>1</strong>: High risk</li>
-         * <li><strong>2</strong>: Suspicious</li>
+         * <li><strong>0</strong>: Low risk.</li>
+         * <li><strong>1</strong>: High risk.</li>
+         * <li><strong>2</strong>: Suspicious.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -106,18 +106,18 @@ public class CredentialVerifyIntlResponseBody extends TeaModel {
         public String result;
 
         /**
-         * <p>Risk score map</p>
+         * <p>The risk score map.</p>
          */
         @NameInMap("RiskScore")
         public java.util.Map<String, String> riskScore;
 
         /**
-         * <p>Risk tags, separated by commas (,). Includes:</p>
+         * <p>The risk tags, separated by commas (,). Valid values:</p>
          * <ul>
-         * <li>PS: Image manipulation (Photoshop)</li>
-         * <li>SCREEN_PHOTO: Screen recapture</li>
-         * <li>SCREENSHOT: Screenshot</li>
-         * <li>ORIGINAL_PHOTO: Not original image</li>
+         * <li>PS: Image has been edited with photo editing software.</li>
+         * <li>SCREEN_PHOTO: Photo taken from a screen.</li>
+         * <li>SCREENSHOT: Screenshot.</li>
+         * <li>ORIGINAL_PHOTO: Non-original image.</li>
          * </ul>
          * 
          * <strong>example:</strong>

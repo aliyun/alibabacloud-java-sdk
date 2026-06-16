@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CheckResultRequest extends TeaModel {
     /**
-     * <p>Return additional information.</p>
+     * <p>The additional information to return.</p>
      * 
      * <strong>example:</strong>
      * <hr>
@@ -14,10 +14,10 @@ public class CheckResultRequest extends TeaModel {
     public String extraImageControlList;
 
     /**
-     * <p>Whether to return images.</p>
+     * <p>Specifies whether to return images. Valid values:</p>
      * <ul>
-     * <li>Y: Return</li>
-     * <li>N: Do not return</li>
+     * <li>Y: Return images.</li>
+     * <li>N: Do not return images.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -27,7 +27,7 @@ public class CheckResultRequest extends TeaModel {
     public String isReturnImage;
 
     /**
-     * <p>A unique business identifier defined by the merchant, used for subsequent troubleshooting. It supports a combination of letters and numbers, with a maximum length of 32 characters. Please ensure its uniqueness.</p>
+     * <p>The merchant-defined unique business ID used for subsequent troubleshooting. The value can be a combination of letters and digits with a maximum length of 32 characters. Ensure that the value is unique.</p>
      * 
      * <strong>example:</strong>
      * <p>djs20d***9-dsskc</p>
@@ -36,7 +36,7 @@ public class CheckResultRequest extends TeaModel {
     public String merchantBizId;
 
     /**
-     * <p>Whether to return anti-fraud detection results.</p>
+     * <p>Specifies whether to return the anti-spoofing detection result.</p>
      * 
      * <strong>example:</strong>
      * <p>Y</p>
@@ -45,7 +45,7 @@ public class CheckResultRequest extends TeaModel {
     public String returnFiveCategorySpoofResult;
 
     /**
-     * <p>Authentication ID.</p>
+     * <p>The verification ID.</p>
      * 
      * <strong>example:</strong>
      * <p>4ab0b***cbde97</p>

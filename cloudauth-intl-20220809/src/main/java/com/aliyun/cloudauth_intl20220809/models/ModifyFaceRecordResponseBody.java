@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ModifyFaceRecordResponseBody extends TeaModel {
     /**
+     * <p>The return code.</p>
+     * 
      * <strong>example:</strong>
      * <p>Success</p>
      */
@@ -12,6 +14,8 @@ public class ModifyFaceRecordResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>The result.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -19,6 +23,8 @@ public class ModifyFaceRecordResponseBody extends TeaModel {
     public Integer data;
 
     /**
+     * <p>The response message.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */

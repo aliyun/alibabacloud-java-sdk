@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class TempAccessTokenIntlResponseBody extends TeaModel {
     /**
-     * <p>Return code</p>
+     * <p>The return code.</p>
      * 
      * <strong>example:</strong>
      * <p>Success</p>
@@ -14,13 +14,13 @@ public class TempAccessTokenIntlResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>Return result.</p>
+     * <p>The response data.</p>
      */
     @NameInMap("Data")
     public TempAccessTokenIntlResponseBodyData data;
 
     /**
-     * <p>Return message.</p>
+     * <p>The response message.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -29,7 +29,7 @@ public class TempAccessTokenIntlResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>ID of the request</p>
+     * <p>Id of the request</p>
      * 
      * <strong>example:</strong>
      * <p>86C40EC3-5940-5F47-995C-BFE90B70E540</p>
@@ -76,7 +76,7 @@ public class TempAccessTokenIntlResponseBody extends TeaModel {
 
     public static class TempAccessTokenIntlResponseBodyData extends TeaModel {
         /**
-         * <p>AccessKeyId for temporary file upload credentials.</p>
+         * <p>The AccessKeyId of the temporary credential for file upload.</p>
          * 
          * <strong>example:</strong>
          * <hr>
@@ -85,7 +85,7 @@ public class TempAccessTokenIntlResponseBody extends TeaModel {
         public String accessKeyId;
 
         /**
-         * <p>Temporary authorization secret.</p>
+         * <p>The temporary authorization secret.</p>
          * 
          * <strong>example:</strong>
          * <p>3hxuRpEJ3Jv2Rtzyg4HooFCYqps762XcNtzhn19wQymk</p>
@@ -94,7 +94,7 @@ public class TempAccessTokenIntlResponseBody extends TeaModel {
         public String accessKeySecret;
 
         /**
-         * <p>Bucket name.</p>
+         * <p>The bucket name.</p>
          * 
          * <strong>example:</strong>
          * <p>liyi</p>
@@ -103,7 +103,7 @@ public class TempAccessTokenIntlResponseBody extends TeaModel {
         public String bucketName;
 
         /**
-         * <p>File prefix.</p>
+         * <p>The file name prefix.</p>
          * 
          * <strong>example:</strong>
          * <p>test001</p>
@@ -112,7 +112,7 @@ public class TempAccessTokenIntlResponseBody extends TeaModel {
         public String fileNamePrefix;
 
         /**
-         * <p>OSS endpoint.</p>
+         * <p>OssEndPoint。</p>
          * 
          * <strong>example:</strong>
          * <p>ossEndPoint</p>
@@ -121,7 +121,7 @@ public class TempAccessTokenIntlResponseBody extends TeaModel {
         public String ossEndPoint;
 
         /**
-         * <p>Security token for temporary file upload credentials.</p>
+         * <p>The security token of the temporary credential for file upload.</p>
          * 
          * <strong>example:</strong>
          * <hr>

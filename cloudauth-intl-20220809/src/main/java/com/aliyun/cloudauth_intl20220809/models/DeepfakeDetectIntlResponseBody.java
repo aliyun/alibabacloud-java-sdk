@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeepfakeDetectIntlResponseBody extends TeaModel {
     /**
-     * <p>Return code: 200 indicates a successful request, any other value indicates failure.</p>
+     * <p>The return code. A value of 200 indicates success. Other values indicate failure.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,7 +14,7 @@ public class DeepfakeDetectIntlResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>Return message.</p>
+     * <p>The response message.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -23,7 +23,7 @@ public class DeepfakeDetectIntlResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Request ID.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>8FC3D6AC-9FED-4311-8DA7-C4BF47D9F260</p>
@@ -32,7 +32,7 @@ public class DeepfakeDetectIntlResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Returned result information.</p>
+     * <p>The result information.</p>
      */
     @NameInMap("ResultObject")
     public DeepfakeDetectIntlResponseBodyResultObject resultObject;
@@ -76,11 +76,11 @@ public class DeepfakeDetectIntlResponseBody extends TeaModel {
 
     public static class DeepfakeDetectIntlResponseBodyResultObject extends TeaModel {
         /**
-         * <p>Risk result:</p>
+         * <p>The risk result. Valid values:</p>
          * <ul>
-         * <li><strong>0</strong>: Low risk</li>
-         * <li><strong>1</strong>: High risk</li>
-         * <li><strong>2</strong>: Suspicious</li>
+         * <li><strong>0</strong>: Low risk.</li>
+         * <li><strong>1</strong>: High risk.</li>
+         * <li><strong>2</strong>: Suspicious.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -90,20 +90,20 @@ public class DeepfakeDetectIntlResponseBody extends TeaModel {
         public String result;
 
         /**
-         * <p>Risk score map.</p>
+         * <p>The risk score map.</p>
          */
         @NameInMap("RiskScore")
         public java.util.Map<String, String> riskScore;
 
         /**
-         * <p>Risk tags. Multiple tags are separated by commas (,). Includes:</p>
+         * <p>The risk labels. Multiple labels are separated by commas (,). Valid values:</p>
          * <ul>
-         * <li><strong>SuspectDeepForgery</strong> Suspected deep forgery  </li>
-         * <li><strong>SuspectPSFace</strong> Suspected synthetic attack  </li>
-         * <li><strong>SuspectWarterMark</strong> Suspected watermark presence  </li>
-         * <li><strong>SuspectTemple</strong> Suspected template attack  </li>
-         * <li><strong>SuspectAIGCFace</strong>  Suspected generated face  </li>
-         * <li><strong>SuspectRemake</strong>  Suspected rephotographed face</li>
+         * <li><strong>SuspectDeepForgery</strong>: suspected depth forgery  </li>
+         * <li><strong>SuspectPSFace</strong>: suspected synthetic attack  </li>
+         * <li><strong>SuspectWarterMark</strong>: suspected watermark  </li>
+         * <li><strong>SuspectTemple</strong>: suspected template attack  </li>
+         * <li><strong>SuspectAIGCFace</strong>: suspected AIGC-generated face  </li>
+         * <li><strong>SuspectRemake</strong>: suspected recaptured face.</li>
          * </ul>
          * 
          * <strong>example:</strong>

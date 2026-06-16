@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CredentialGetResultIntlResponseBody extends TeaModel {
     /**
-     * <p>Return code.</p>
+     * <p>The return code.</p>
      * 
      * <strong>example:</strong>
      * <p>Success</p>
@@ -14,7 +14,7 @@ public class CredentialGetResultIntlResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>Return message.</p>
+     * <p>The return message.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -23,7 +23,7 @@ public class CredentialGetResultIntlResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>ID of the request</p>
+     * <p>Id of the request</p>
      * 
      * <strong>example:</strong>
      * <p>5E63B760-0ECB-5C07-8503-A65C27876968</p>
@@ -32,7 +32,7 @@ public class CredentialGetResultIntlResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Return result.</p>
+     * <p>The returned result.</p>
      */
     @NameInMap("Result")
     public CredentialGetResultIntlResponseBodyResult result;
@@ -76,7 +76,7 @@ public class CredentialGetResultIntlResponseBody extends TeaModel {
 
     public static class CredentialGetResultIntlResponseBodyResult extends TeaModel {
         /**
-         * <p>Identified key information, in JSON format.</p>
+         * <p>The key information identified, in JSON format.</p>
          * 
          * <strong>example:</strong>
          * <p>{
@@ -88,11 +88,11 @@ public class CredentialGetResultIntlResponseBody extends TeaModel {
         public String extIdInfo;
 
         /**
-         * <p>Task status:</p>
+         * <p>The task status. Valid values:</p>
          * <ul>
-         * <li>PROCESSING: In progress (please continue polling)</li>
-         * <li>SUCCESS: Execution succeeded</li>
-         * <li>FAILED: Execution failed</li>
+         * <li>PROCESSING: Processing. Continue polling.</li>
+         * <li>SUCCESS: Succeeded.</li>
+         * <li>FAILED: Failed.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -102,7 +102,7 @@ public class CredentialGetResultIntlResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>Authentication result description. For more information, see ResultObject.SubCode error codes.</p>
+         * <p>The description of the authentication result. For more information, refer to the ResultObject.SubCode error code description.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>

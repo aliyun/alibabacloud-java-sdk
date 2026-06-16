@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class AddressCompareIntlResponseBody extends TeaModel {
     /**
-     * <p>Return code.</p>
+     * <p>The return code.</p>
      * 
      * <strong>example:</strong>
      * <p>Success</p>
@@ -14,7 +14,7 @@ public class AddressCompareIntlResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>Return message.</p>
+     * <p>The return message.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -23,7 +23,7 @@ public class AddressCompareIntlResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Request ID.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>86C40EC3-5940-5F47-995C-BFE90B70E540</p>
@@ -32,7 +32,7 @@ public class AddressCompareIntlResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Return result.</p>
+     * <p>The returned result.</p>
      */
     @NameInMap("Result")
     public AddressCompareIntlResponseBodyResult result;
@@ -76,17 +76,17 @@ public class AddressCompareIntlResponseBody extends TeaModel {
 
     public static class AddressCompareIntlResponseBodyResult extends TeaModel {
         /**
-         * <p>The values of sameLevel include:</p>
+         * <p>The sameLevel parameter has the following valid values:</p>
          * <ul>
-         * <li>all: Exactly the same</li>
-         * <li>prov: Provincial level</li>
-         * <li>city: City level</li>
-         * <li>district: District level</li>
-         * <li>town: Town level</li>
-         * <li>road: Road level</li>
-         * <li>roadno: Road number</li>
-         * <li>poi: Point of interest (e.g., residential area)</li>
-         * <li>roomno: Room number</li>
+         * <li>all: completely identical</li>
+         * <li>prov: province level </li>
+         * <li>city: city level</li>
+         * <li>district: district level</li>
+         * <li>town: street level</li>
+         * <li>road: road level</li>
+         * <li>roadno: road number level</li>
+         * <li>poi: community/neighborhood level</li>
+         * <li>roomno: room number level.</li>
          * </ul>
          * 
          * <strong>example:</strong>

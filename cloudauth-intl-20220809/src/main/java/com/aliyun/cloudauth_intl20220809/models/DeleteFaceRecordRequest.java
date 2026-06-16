@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteFaceRecordRequest extends TeaModel {
     /**
-     * <p>Primary Key ID</p>
+     * <p>The primary key ID.</p>
      * 
      * <strong>example:</strong>
      * <p>344537</p>

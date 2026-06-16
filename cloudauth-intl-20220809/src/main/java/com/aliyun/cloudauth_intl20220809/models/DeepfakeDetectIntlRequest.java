@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class DeepfakeDetectIntlRequest extends TeaModel {
     /**
-     * <p>Input the Base64 encoded format of the face image.</p>
+     * <p>The Base64-encoded content of the facial image.</p>
      * <blockquote>
-     * <p>Choose one of FaceUrl or FaceBase64 to input.</p>
+     * <p>Specify either FaceUrl or FaceBase64.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -17,7 +17,7 @@ public class DeepfakeDetectIntlRequest extends TeaModel {
     public String faceBase64;
 
     /**
-     * <p>Input <strong>IMAGE</strong>, indicating a face image.</p>
+     * <p>Set the value to <strong>IMAGE</strong> to specify a facial image.</p>
      * 
      * <strong>example:</strong>
      * <p>IMAGE</p>
@@ -26,9 +26,9 @@ public class DeepfakeDetectIntlRequest extends TeaModel {
     public String faceInputType;
 
     /**
-     * <p>Input the URL address of the face image.</p>
+     * <p>The URL of the facial image.</p>
      * <blockquote>
-     * <p>Choose one of FaceUrl or FaceBase64 to input.</p>
+     * <p>Specify either FaceUrl or FaceBase64.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -38,7 +38,7 @@ public class DeepfakeDetectIntlRequest extends TeaModel {
     public String faceUrl;
 
     /**
-     * <p>A unique identifier for the merchant\&quot;s request, consisting of a 32-character alphanumeric combination. The first few characters are composed of a custom abbreviation defined by the merchant, the middle part can include a period of time, and the latter part can use a random or incremental sequence.</p>
+     * <p>The unique identifier of the merchant request. The value is a 32-character combination of letters and digits. The first few characters are a custom merchant abbreviation, the middle part can contain a timestamp, and the last part can be a random or incremental sequence.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -48,7 +48,7 @@ public class DeepfakeDetectIntlRequest extends TeaModel {
     public String merchantBizId;
 
     /**
-     * <p>The product solution to be integrated. Value: <strong>FACE_DEEPFAKE</strong>.</p>
+     * <p>The product solution to use. Set the value to <strong>FACE_DEEPFAKE</strong>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -58,7 +58,7 @@ public class DeepfakeDetectIntlRequest extends TeaModel {
     public String productCode;
 
     /**
-     * <p>Your custom authentication scenario ID, used for querying related records by entering this scenario ID in the console later. Supports a combination of 10 characters, including letters, numbers, or underscores.</p>
+     * <p>The custom scene ID for authentication. You can use this scene ID to query related records in the console. The value can be up to 10 characters long and can contain letters, digits, and underscores.</p>
      * 
      * <strong>example:</strong>
      * <p>1234567890</p>

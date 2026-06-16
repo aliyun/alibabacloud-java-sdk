@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CredentialSubmitIntlRequest extends TeaModel {
     /**
-     * <p>Base64 encoding of the image. If you choose to upload the photo this way, please check the photo size and avoid uploading overly large photos.</p>
+     * <p>The Base64-encoded image. If you use this method to submit a photo, check the photo size and do not submit an excessively large photo.</p>
      * 
      * <strong>example:</strong>
      * <p>base64</p>
@@ -14,7 +14,7 @@ public class CredentialSubmitIntlRequest extends TeaModel {
     public String credentialOcrPictureBase64;
 
     /**
-     * <p>Image URL, accessible via HTTP or HTTPS on the public network.</p>
+     * <p>The URL of the image. The URL must be a publicly accessible HTTP or HTTPS link.</p>
      * 
      * <strong>example:</strong>
      * <p>https://***</p>
@@ -23,9 +23,9 @@ public class CredentialSubmitIntlRequest extends TeaModel {
     public String credentialOcrPictureUrl;
 
     /**
-     * <p>Credential type:</p>
+     * <p>The credential type. Valid values:</p>
      * <ul>
-     * <li>02: Vehicle registration certificate</li>
+     * <li>02: vehicle registration certificate.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -36,10 +36,10 @@ public class CredentialSubmitIntlRequest extends TeaModel {
     public String docType;
 
     /**
-     * <p>Whether to enable tampering detection</p>
+     * <p>Specifies whether to enable tampering detection. Valid values:</p>
      * <ul>
-     * <li>true: Enable</li>
-     * <li>false: Disable</li>
+     * <li>true: Enable.</li>
+     * <li>false: Disable.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -50,7 +50,7 @@ public class CredentialSubmitIntlRequest extends TeaModel {
     public String fraudCheck;
 
     /**
-     * <p>A unique business identifier defined on the merchant side, used for troubleshooting issues later. Supports a combination of letters and digits, with a maximum length of 32 characters. Ensure uniqueness.</p>
+     * <p>The merchant-side custom business unique identifier, used for subsequent troubleshooting. The value can be a combination of letters and digits with a maximum length of 32 characters. Ensure that the value is unique.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -60,9 +60,9 @@ public class CredentialSubmitIntlRequest extends TeaModel {
     public String merchantBizId;
 
     /**
-     * <p>Extraction type:</p>
+     * <p>The extraction type. Valid values:</p>
      * <ul>
-     * <li>0201: Thai vehicle registration certificate</li>
+     * <li>0201: Thailand vehicle registration certificate.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -73,7 +73,7 @@ public class CredentialSubmitIntlRequest extends TeaModel {
     public String ocrArea;
 
     /**
-     * <p>The product solution to be integrated. Value: CREDENTIAL_RECOGNITION.</p>
+     * <p>The product solution to use. Set this parameter to CREDENTIAL_RECOGNITION.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -83,7 +83,7 @@ public class CredentialSubmitIntlRequest extends TeaModel {
     public String productCode;
 
     /**
-     * <p>Your custom authentication scenario ID, used for querying related records by entering this scenario ID in the console later. Supports a combination of 10 characters, digits, or underscores.</p>
+     * <p>The custom authentication scenario ID. You can use this scenario ID to query related records in the console. The value can be a combination of letters, digits, or underscores with a maximum length of 10 characters.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

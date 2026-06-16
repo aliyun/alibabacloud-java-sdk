@@ -3,10 +3,8 @@ package com.aliyun.cloudauth_intl20220809.models;
 
 import com.aliyun.tea.*;
 
-public class InitializeResponseBody extends TeaModel {
+public class InitializeV2ResponseBody extends TeaModel {
     /**
-     * <p>The response code.</p>
-     * 
      * <strong>example:</strong>
      * <p>Success</p>
      */
@@ -14,8 +12,6 @@ public class InitializeResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The response message.</p>
-     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -23,26 +19,21 @@ public class InitializeResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Id of the request</p>
-     * 
      * <strong>example:</strong>
-     * <p>4EB35****87EBA1</p>
+     * <p>86C40EC3-5940-5F47-995C-BFE90B70E540</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>The response result.</p>
-     */
     @NameInMap("Result")
-    public InitializeResponseBodyResult result;
+    public InitializeV2ResponseBodyResult result;
 
-    public static InitializeResponseBody build(java.util.Map<String, ?> map) throws Exception {
-        InitializeResponseBody self = new InitializeResponseBody();
+    public static InitializeV2ResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        InitializeV2ResponseBody self = new InitializeV2ResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public InitializeResponseBody setCode(String code) {
+    public InitializeV2ResponseBody setCode(String code) {
         this.code = code;
         return this;
     }
@@ -50,7 +41,7 @@ public class InitializeResponseBody extends TeaModel {
         return this.code;
     }
 
-    public InitializeResponseBody setMessage(String message) {
+    public InitializeV2ResponseBody setMessage(String message) {
         this.message = message;
         return this;
     }
@@ -58,7 +49,7 @@ public class InitializeResponseBody extends TeaModel {
         return this.message;
     }
 
-    public InitializeResponseBody setRequestId(String requestId) {
+    public InitializeV2ResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
@@ -66,18 +57,16 @@ public class InitializeResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public InitializeResponseBody setResult(InitializeResponseBodyResult result) {
+    public InitializeV2ResponseBody setResult(InitializeV2ResponseBodyResult result) {
         this.result = result;
         return this;
     }
-    public InitializeResponseBodyResult getResult() {
+    public InitializeV2ResponseBodyResult getResult() {
         return this.result;
     }
 
-    public static class InitializeResponseBodyResult extends TeaModel {
+    public static class InitializeV2ResponseBodyResult extends TeaModel {
         /**
-         * <p>The client configuration.</p>
-         * 
          * <strong>example:</strong>
          * <hr>
          */
@@ -85,11 +74,6 @@ public class InitializeResponseBody extends TeaModel {
         public String clientCfg;
 
         /**
-         * <p>The authentication standard encryption protocol.</p>
-         * <blockquote>
-         * <p>This field is required when you use iframe embedding for H5 web page integration.</p>
-         * </blockquote>
-         * 
          * <strong>example:</strong>
          * <p>hksb7ba1b28130d24e015d*********</p>
          */
@@ -97,29 +81,25 @@ public class InitializeResponseBody extends TeaModel {
         public String protocol;
 
         /**
-         * <p>The authentication ID.</p>
-         * 
          * <strong>example:</strong>
-         * <p>08573be80f944d95ac812e019e3655a8</p>
+         * <p>4ab0b***cbde97</p>
          */
         @NameInMap("TransactionId")
         public String transactionId;
 
         /**
-         * <p>The web authentication URL.</p>
-         * 
          * <strong>example:</strong>
          * <p>http****</p>
          */
         @NameInMap("TransactionUrl")
         public String transactionUrl;
 
-        public static InitializeResponseBodyResult build(java.util.Map<String, ?> map) throws Exception {
-            InitializeResponseBodyResult self = new InitializeResponseBodyResult();
+        public static InitializeV2ResponseBodyResult build(java.util.Map<String, ?> map) throws Exception {
+            InitializeV2ResponseBodyResult self = new InitializeV2ResponseBodyResult();
             return TeaModel.build(map, self);
         }
 
-        public InitializeResponseBodyResult setClientCfg(String clientCfg) {
+        public InitializeV2ResponseBodyResult setClientCfg(String clientCfg) {
             this.clientCfg = clientCfg;
             return this;
         }
@@ -127,7 +107,7 @@ public class InitializeResponseBody extends TeaModel {
             return this.clientCfg;
         }
 
-        public InitializeResponseBodyResult setProtocol(String protocol) {
+        public InitializeV2ResponseBodyResult setProtocol(String protocol) {
             this.protocol = protocol;
             return this;
         }
@@ -135,7 +115,7 @@ public class InitializeResponseBody extends TeaModel {
             return this.protocol;
         }
 
-        public InitializeResponseBodyResult setTransactionId(String transactionId) {
+        public InitializeV2ResponseBodyResult setTransactionId(String transactionId) {
             this.transactionId = transactionId;
             return this;
         }
@@ -143,7 +123,7 @@ public class InitializeResponseBody extends TeaModel {
             return this.transactionId;
         }
 
-        public InitializeResponseBodyResult setTransactionUrl(String transactionUrl) {
+        public InitializeV2ResponseBodyResult setTransactionUrl(String transactionUrl) {
             this.transactionUrl = transactionUrl;
             return this;
         }

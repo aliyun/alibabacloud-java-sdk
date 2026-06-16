@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class Mobile3MetaVerifyIntlRequest extends TeaModel {
     /**
-     * <p>ID number</p>
+     * <p>The ID card number.</p>
      * <ul>
-     * <li>When paramType is set to normal, enter the plaintext</li>
-     * <li>When paramType is set to md5, enter a 32-character lowercase md5 string</li>
+     * <li>If ParamType is set to normal, enter the plaintext value.</li>
+     * <li>If ParamType is set to md5, enter a 32-character lowercase MD5 string.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,10 +18,10 @@ public class Mobile3MetaVerifyIntlRequest extends TeaModel {
     public String identifyNum;
 
     /**
-     * <p>Mobile phone number.</p>
+     * <p>The phone number.</p>
      * <ul>
-     * <li>When paramType is set to normal, enter the plaintext</li>
-     * <li>When paramType is set to md5, enter a 32-character lowercase md5 string</li>
+     * <li>If ParamType is set to normal, enter the plaintext value.</li>
+     * <li>If ParamType is set to md5, enter a 32-character lowercase MD5 string.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -31,10 +31,10 @@ public class Mobile3MetaVerifyIntlRequest extends TeaModel {
     public String mobile;
 
     /**
-     * <p>Parameter type:</p>
+     * <p>The parameter type. Valid values:</p>
      * <ul>
-     * <li>normal: unencrypted</li>
-     * <li>md5: md5 encrypted</li>
+     * <li>normal: not encrypted</li>
+     * <li>md5: MD5-encrypted.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -44,7 +44,7 @@ public class Mobile3MetaVerifyIntlRequest extends TeaModel {
     public String paramType;
 
     /**
-     * <p>The product solution to be integrated, with a fixed value: MOBILE_3META</p>
+     * <p>The product solution code. Fixed value: MOBILE_3META.</p>
      * 
      * <strong>example:</strong>
      * <p>MOBILE_3META</p>
@@ -53,10 +53,10 @@ public class Mobile3MetaVerifyIntlRequest extends TeaModel {
     public String productCode;
 
     /**
-     * <p>Name</p>
+     * <p>The name.</p>
      * <ul>
-     * <li>When paramType is set to normal, enter the plaintext</li>
-     * <li>When paramType is set to md5, enter a 32-character lowercase md5 string</li>
+     * <li>If ParamType is set to normal, enter the plaintext value.</li>
+     * <li>If ParamType is set to md5, enter a 32-character lowercase MD5 string.</li>
      * </ul>
      * 
      * <strong>example:</strong>

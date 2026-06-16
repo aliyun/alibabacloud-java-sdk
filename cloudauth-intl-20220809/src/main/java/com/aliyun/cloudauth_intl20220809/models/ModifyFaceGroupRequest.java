@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ModifyFaceGroupRequest extends TeaModel {
     /**
+     * <p>The description.</p>
+     * 
      * <strong>example:</strong>
      * <p>description</p>
      */
@@ -12,6 +14,8 @@ public class ModifyFaceGroupRequest extends TeaModel {
     public String description;
 
     /**
+     * <p>The primary key ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>65c030cd54b23283ceb27b4ade5da49d</p>
      */
@@ -19,6 +23,7 @@ public class ModifyFaceGroupRequest extends TeaModel {
     public String id;
 
     /**
+     * <p>The name of the face library.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

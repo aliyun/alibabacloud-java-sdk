@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class QueryFaceGroupResponseBody extends TeaModel {
     /**
+     * <p>The return code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -12,16 +14,23 @@ public class QueryFaceGroupResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>The current page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
     @NameInMap("CurrentPage")
     public Long currentPage;
 
+    /**
+     * <p>The list of returned entries.</p>
+     */
     @NameInMap("Items")
     public java.util.List<QueryFaceGroupResponseBodyItems> items;
 
     /**
+     * <p>The number of entries per page in a paged query.</p>
+     * 
      * <strong>example:</strong>
      * <p>50</p>
      */
@@ -29,6 +38,8 @@ public class QueryFaceGroupResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>The return message.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -36,6 +47,8 @@ public class QueryFaceGroupResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The token for the next query.</p>
+     * 
      * <strong>example:</strong>
      * <p>N/zmQeG/x9TDWmaB/pbfBQ==</p>
      */
@@ -43,6 +56,8 @@ public class QueryFaceGroupResponseBody extends TeaModel {
     public String nextToken;
 
     /**
+     * <p>The number of entries per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>100</p>
      */
@@ -59,6 +74,8 @@ public class QueryFaceGroupResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total number of entries.</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
@@ -66,6 +83,8 @@ public class QueryFaceGroupResponseBody extends TeaModel {
     public Integer totalCount;
 
     /**
+     * <p>The total number of pages.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -159,6 +178,8 @@ public class QueryFaceGroupResponseBody extends TeaModel {
 
     public static class QueryFaceGroupResponseBodyItems extends TeaModel {
         /**
+         * <p>The code of the face library.</p>
+         * 
          * <strong>example:</strong>
          * <p>faceGroup001</p>
          */
@@ -166,6 +187,8 @@ public class QueryFaceGroupResponseBody extends TeaModel {
         public String code;
 
         /**
+         * <p>The description.</p>
+         * 
          * <strong>example:</strong>
          * <p>desc</p>
          */
@@ -173,6 +196,8 @@ public class QueryFaceGroupResponseBody extends TeaModel {
         public String description;
 
         /**
+         * <p>The primary key ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>162261</p>
          */
@@ -180,6 +205,8 @@ public class QueryFaceGroupResponseBody extends TeaModel {
         public Long id;
 
         /**
+         * <p>The name of the face library.</p>
+         * 
          * <strong>example:</strong>
          * <p>test-888</p>
          */

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DownloadVerifyRecordIntlResponseBody extends TeaModel {
     /**
-     * <p>Return code.</p>
+     * <p>The return code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,13 +14,13 @@ public class DownloadVerifyRecordIntlResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>Returned data.</p>
+     * <p>The returned data.</p>
      */
     @NameInMap("Data")
     public DownloadVerifyRecordIntlResponseBodyData data;
 
     /**
-     * <p>Return message.</p>
+     * <p>The return message.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -29,7 +29,7 @@ public class DownloadVerifyRecordIntlResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>ID of the request</p>
+     * <p>Id of the request</p>
      * 
      * <strong>example:</strong>
      * <p>86C40EC3-5940-5F47-995C-BFE90B70E540</p>
@@ -76,7 +76,7 @@ public class DownloadVerifyRecordIntlResponseBody extends TeaModel {
 
     public static class DownloadVerifyRecordIntlResponseBodyData extends TeaModel {
         /**
-         * <p>Task ID, returned in asynchronous mode, used later with QueryDownloadTaskIntl to download the exported file.</p>
+         * <p>The task ID. This parameter is returned in asynchronous mode. Use QueryDownloadTaskIntl to download the exported file.</p>
          * 
          * <strong>example:</strong>
          * <p>202511284106866</p>
@@ -85,7 +85,7 @@ public class DownloadVerifyRecordIntlResponseBody extends TeaModel {
         public String downloadTaskId;
 
         /**
-         * <p>Exported file download link.</p>
+         * <p>The download URL of the exported file.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://cn-shanghai-aliyun-cloudauth.oss-cn-shanghai.aliyuncs.com/console/xxxxxx/KYC_INVOKE_STATISTICS.xlxs">https://cn-shanghai-aliyun-cloudauth.oss-cn-shanghai.aliyuncs.com/console/xxxxxx/KYC_INVOKE_STATISTICS.xlxs</a></p>

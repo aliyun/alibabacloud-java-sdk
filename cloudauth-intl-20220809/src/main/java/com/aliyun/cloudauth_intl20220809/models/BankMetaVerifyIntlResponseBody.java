@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class BankMetaVerifyIntlResponseBody extends TeaModel {
     /**
-     * <p>Return code: 200 for success, others for failure.</p>
+     * <p>The response code. A value of 200 indicates success. Other values indicate failure.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,7 +14,7 @@ public class BankMetaVerifyIntlResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>Return message</p>
+     * <p>The response message.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -23,7 +23,7 @@ public class BankMetaVerifyIntlResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Request ID.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>4EB35****87EBA1</p>
@@ -32,7 +32,7 @@ public class BankMetaVerifyIntlResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Returned result information</p>
+     * <p>The result information.</p>
      */
     @NameInMap("ResultObject")
     public BankMetaVerifyIntlResponseBodyResultObject resultObject;
@@ -76,11 +76,11 @@ public class BankMetaVerifyIntlResponseBody extends TeaModel {
 
     public static class BankMetaVerifyIntlResponseBodyResultObject extends TeaModel {
         /**
-         * <p>Verification result code.</p>
+         * <p>The verification result code. Valid values:</p>
          * <ul>
-         * <li>1: Consistent (charged)</li>
-         * <li>2: Inconsistent (charged)</li>
-         * <li>3: No record found (not charged)</li>
+         * <li>1: Verification consistent (billable).</li>
+         * <li>2: Verification inconsistent (billable).</li>
+         * <li>3: No record found (not billable).</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -90,31 +90,31 @@ public class BankMetaVerifyIntlResponseBody extends TeaModel {
         public String bizCode;
 
         /**
-         * <p>Verification details:</p>
+         * <p>The verification details. Valid values:</p>
          * <ul>
          * <li><strong>101</strong>: Verification passed.</li>
-         * <li><strong>201</strong>: Authentication information does not match, cardholder information is incorrect.</li>
-         * <li><strong>202</strong>: Authentication information does not match, bank card has not been activated for authenticated payments.</li>
-         * <li><strong>203</strong>: Authentication information does not match, bank card has expired.</li>
-         * <li><strong>204</strong>: Authentication information does not match, bank card is a restricted card.</li>
-         * <li><strong>205</strong>: Authentication information does not match, this card has been confiscated.</li>
-         * <li><strong>206</strong>: Authentication information does not match, bank card is invalid.</li>
-         * <li><strong>207</strong>: Authentication information does not match, this card has no corresponding issuing bank.</li>
-         * <li><strong>208</strong>: Authentication information does not match, this card is uninitialized or dormant.</li>
-         * <li><strong>209</strong>: Authentication information does not match, this card is a cheating card or swallowed card.</li>
-         * <li><strong>210</strong>: Authentication information does not match, this card has been reported lost.</li>
-         * <li><strong>211</strong>: Authentication information does not match, password error limit exceeded.</li>
-         * <li><strong>212</strong>: Authentication information does not match, issuing bank does not support this transaction.</li>
-         * <li><strong>213</strong>: Authentication information does not match, card status is abnormal or card is invalid.</li>
-         * <li><strong>214</strong>: Authentication information does not match, no phone number reserved.</li>
-         * <li><strong>215</strong>: Authentication information does not match, entered password, expiration date, or CVN2 is incorrect.</li>
-         * <li><strong>216</strong>: Authentication information does not match, other card anomalies.</li>
-         * <li><strong>301</strong>: Unable to verify, bank card does not support this service.</li>
-         * <li><strong>302</strong>: Unable to verify, verification failed or bank refused verification, please contact the issuing bank.</li>
-         * <li><strong>303</strong>: Unable to verify, bank card does not currently support phone number verification.</li>
-         * <li><strong>304</strong>: Unable to verify, bank card number is incorrect.</li>
-         * <li><strong>305</strong>: Unable to verify, other reasons.</li>
-         * <li><strong>306</strong>: Unable to verify, verification attempt limit exceeded.</li>
+         * <li><strong>201</strong>: Authentication information inconsistent. The cardholder information is incorrect.</li>
+         * <li><strong>202</strong>: Authentication information inconsistent. The bank card has not enabled authenticated payment.</li>
+         * <li><strong>203</strong>: Authentication information inconsistent. The bank card has expired.</li>
+         * <li><strong>204</strong>: Authentication information inconsistent. The bank card is restricted.</li>
+         * <li><strong>205</strong>: Authentication information inconsistent. The card has been confiscated.</li>
+         * <li><strong>206</strong>: Authentication information inconsistent. The bank card is invalid.</li>
+         * <li><strong>207</strong>: Authentication information inconsistent. No issuing bank found for this card.</li>
+         * <li><strong>208</strong>: Authentication information inconsistent. The card is not initialized or is a dormant card.</li>
+         * <li><strong>209</strong>: Authentication information inconsistent. The card is a fraudulent or retained card.</li>
+         * <li><strong>210</strong>: Authentication information inconsistent. The card has been reported lost.</li>
+         * <li><strong>211</strong>: Authentication information inconsistent. The number of incorrect password attempts has exceeded the limit.</li>
+         * <li><strong>212</strong>: Authentication information inconsistent. The issuing bank does not support this transaction.</li>
+         * <li><strong>213</strong>: Authentication information inconsistent. The card status is abnormal or the card is invalid.</li>
+         * <li><strong>214</strong>: Authentication information inconsistent. No phone number is registered with the card.</li>
+         * <li><strong>215</strong>: Authentication information inconsistent. The password, expiration date, or CVN2 is incorrect.</li>
+         * <li><strong>216</strong>: Authentication information inconsistent. Other card exceptions.</li>
+         * <li><strong>301</strong>: Verification unavailable. The bank card does not support this service.</li>
+         * <li><strong>302</strong>: Verification unavailable. Verification failed or the bank rejected the verification. Contact the issuing bank.</li>
+         * <li><strong>303</strong>: Verification unavailable. The bank card does not currently support phone number verification.</li>
+         * <li><strong>304</strong>: Verification unavailable. The bank card number is incorrect.</li>
+         * <li><strong>305</strong>: Verification unavailable. Other reasons.</li>
+         * <li><strong>306</strong>: Verification unavailable. The number of verification attempts has exceeded the limit.</li>
          * </ul>
          * 
          * <strong>example:</strong>

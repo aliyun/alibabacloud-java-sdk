@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class FaceGuardRiskRequest extends TeaModel {
     /**
-     * <p>The unique ID of the current business authentication. It is used with FACE_GUARD for verification during queries.</p>
+     * <p>The customer business ID.</p>
      * 
      * <strong>example:</strong>
      * <p>LMALL20******001</p>
@@ -14,7 +14,7 @@ public class FaceGuardRiskRequest extends TeaModel {
     public String bizId;
 
     /**
-     * <p>The deviceToken obtained from the client SDK.</p>
+     * <p>The device token obtained from the Face Guard SDK.</p>
      * 
      * <strong>example:</strong>
      * <p>Tk9SSUQuMS*****************ZDNmNWY5NzQxOW1o</p>
@@ -23,7 +23,7 @@ public class FaceGuardRiskRequest extends TeaModel {
     public String deviceToken;
 
     /**
-     * <p>A custom unique business identifier. It is used to locate and troubleshoot issues. The identifier can be a combination of letters and digits up to 32 characters long. Ensure that it is unique.</p>
+     * <p>The merchant-defined unique business identifier, used for subsequent troubleshooting. The value can contain letters and digits with a maximum length of 32 characters. Make sure the value is unique.</p>
      * 
      * <strong>example:</strong>
      * <p>0c83ce0101d34eff886b1f7d1cdef67f</p>
@@ -32,7 +32,7 @@ public class FaceGuardRiskRequest extends TeaModel {
     public String merchantBizId;
 
     /**
-     * <p>The product code. Set this to the static field <strong>FACE_GUARD</strong>.</p>
+     * <p>The product code. Set the value to FACE_GUARD.</p>
      * 
      * <strong>example:</strong>
      * <p>FACE_GUARD</p>

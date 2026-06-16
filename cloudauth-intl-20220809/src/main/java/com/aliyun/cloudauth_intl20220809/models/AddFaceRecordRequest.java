@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class AddFaceRecordRequest extends TeaModel {
     /**
+     * <p>The face library code.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,8 @@ public class AddFaceRecordRequest extends TeaModel {
     public String faceGroupCode;
 
     /**
+     * <p>The Base64-encoded face image to register.</p>
+     * 
      * <strong>example:</strong>
      * <p>base64</p>
      */
@@ -21,6 +24,8 @@ public class AddFaceRecordRequest extends TeaModel {
     public String facePicture;
 
     /**
+     * <p>The file stream of the face image to register.</p>
+     * 
      * <strong>example:</strong>
      * <p>InputStream</p>
      */
@@ -28,6 +33,8 @@ public class AddFaceRecordRequest extends TeaModel {
     public String facePictureFile;
 
     /**
+     * <p>The URL of the face image to register.</p>
+     * 
      * <strong>example:</strong>
      * <p><a href="https://www.xxxxx.com/test.jpg">https://www.xxxxx.com/test.jpg</a></p>
      */
@@ -35,6 +42,12 @@ public class AddFaceRecordRequest extends TeaModel {
     public String facePictureUrl;
 
     /**
+     * <p>Specifies whether to check the quality of the face image. Valid values:</p>
+     * <ul>
+     * <li>Y: enabled.</li>
+     * <li>N: disabled (default).</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>N</p>
      */
@@ -42,6 +55,12 @@ public class AddFaceRecordRequest extends TeaModel {
     public String faceQualityCheck;
 
     /**
+     * <p>The custom unique user ID. The value cannot exceed 32 characters.</p>
+     * <ul>
+     * <li>If this parameter is specified, the system registers the user with the specified MerchantUserId.</li>
+     * <li>If this parameter is not specified, the image name is used by default.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>130A2C10B9EE4D8488E35384FF03hst</p>
      */
@@ -49,6 +68,7 @@ public class AddFaceRecordRequest extends TeaModel {
     public String merchantUserId;
 
     /**
+     * <p>The product code.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

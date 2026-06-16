@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyFaceRecordRequest extends TeaModel {
     /**
+     * <p>The face library code.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class ModifyFaceRecordRequest extends TeaModel {
     public String faceGroupCode;
 
     /**
+     * <p>The OSS information of the image.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class TempOssUrlIntlRequest extends TeaModel {
     /**
-     * <p>Object name.</p>
+     * <p>The object name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

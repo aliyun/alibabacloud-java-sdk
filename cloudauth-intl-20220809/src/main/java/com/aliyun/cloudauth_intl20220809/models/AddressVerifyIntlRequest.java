@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class AddressVerifyIntlRequest extends TeaModel {
     /**
-     * <p>Verification address type:</p>
+     * <p>The type of the address to verify. Valid values:</p>
      * <ul>
-     * <li>“0”: Text address</li>
-     * <li>“1”: Latitude and longitude</li>
+     * <li>&quot;0&quot;: text address</li>
+     * <li>&quot;1&quot;: coordinates (longitude and latitude).</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -19,7 +19,7 @@ public class AddressVerifyIntlRequest extends TeaModel {
     public String addressType;
 
     /**
-     * <p>Default city</p>
+     * <p>The default city.</p>
      * 
      * <strong>example:</strong>
      * <p>杭州市</p>
@@ -28,7 +28,7 @@ public class AddressVerifyIntlRequest extends TeaModel {
     public String defaultCity;
 
     /**
-     * <p>Country name, currently only supports: China</p>
+     * <p>The country name. Currently, only China is supported.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -38,7 +38,7 @@ public class AddressVerifyIntlRequest extends TeaModel {
     public String defaultCountry;
 
     /**
-     * <p>Default district</p>
+     * <p>The default district.</p>
      * 
      * <strong>example:</strong>
      * <p>余杭区</p>
@@ -47,7 +47,7 @@ public class AddressVerifyIntlRequest extends TeaModel {
     public String defaultDistrict;
 
     /**
-     * <p>Default province</p>
+     * <p>The default province.</p>
      * 
      * <strong>example:</strong>
      * <p>浙江省</p>
@@ -56,7 +56,7 @@ public class AddressVerifyIntlRequest extends TeaModel {
     public String defaultProvince;
 
     /**
-     * <p>Latitude.</p>
+     * <p>The latitude.</p>
      * 
      * <strong>example:</strong>
      * <p>“31.2304”</p>
@@ -65,7 +65,7 @@ public class AddressVerifyIntlRequest extends TeaModel {
     public String latitude;
 
     /**
-     * <p>Longitude.</p>
+     * <p>The longitude.</p>
      * 
      * <strong>example:</strong>
      * <p>“121.4737”</p>
@@ -74,7 +74,7 @@ public class AddressVerifyIntlRequest extends TeaModel {
     public String longitude;
 
     /**
-     * <p>Supports Chinese mobile phone numbers.</p>
+     * <p>Chinese mainland phone numbers are supported.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -84,7 +84,7 @@ public class AddressVerifyIntlRequest extends TeaModel {
     public String mobile;
 
     /**
-     * <p>Fixed value: ADD_VERIFY_PRO</p>
+     * <p>Fixed value: ADD_VERIFY_PRO.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -94,7 +94,7 @@ public class AddressVerifyIntlRequest extends TeaModel {
     public String productCode;
 
     /**
-     * <p>Detailed address text content</p>
+     * <p>The detailed address in text format.</p>
      * 
      * <strong>example:</strong>
      * <p>阿里巴巴西溪园区</p>
@@ -103,10 +103,10 @@ public class AddressVerifyIntlRequest extends TeaModel {
     public String text;
 
     /**
-     * <p>Address verification method:</p>
+     * <p>The address verification method. Valid values:</p>
      * <ul>
-     * <li>HOME: Home address verification</li>
-     * <li>WORK: Work address verification</li>
+     * <li>HOME: home address verification</li>
+     * <li>WORK: work address verification.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

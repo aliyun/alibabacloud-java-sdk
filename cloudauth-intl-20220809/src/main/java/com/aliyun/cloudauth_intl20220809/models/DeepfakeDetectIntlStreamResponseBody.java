@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeepfakeDetectIntlStreamResponseBody extends TeaModel {
     /**
-     * <p>Return code</p>
+     * <p>The response code.</p>
      * 
      * <strong>example:</strong>
      * <p>Success</p>
@@ -14,7 +14,7 @@ public class DeepfakeDetectIntlStreamResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>Return message</p>
+     * <p>The response message.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -23,7 +23,7 @@ public class DeepfakeDetectIntlStreamResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Request ID.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>4EB35****87EBA1</p>
@@ -32,7 +32,7 @@ public class DeepfakeDetectIntlStreamResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Returned result information.</p>
+     * <p>The returned result information.</p>
      */
     @NameInMap("ResultObject")
     public DeepfakeDetectIntlStreamResponseBodyResultObject resultObject;
@@ -76,7 +76,7 @@ public class DeepfakeDetectIntlStreamResponseBody extends TeaModel {
 
     public static class DeepfakeDetectIntlStreamResponseBodyResultObject extends TeaModel {
         /**
-         * <p>Risk result:</p>
+         * <p>The risk result:</p>
          * <ul>
          * <li><strong>0</strong>: Low risk</li>
          * <li><strong>1</strong>: High risk</li>
@@ -90,16 +90,16 @@ public class DeepfakeDetectIntlStreamResponseBody extends TeaModel {
         public String result;
 
         /**
-         * <p>Risk score map.</p>
+         * <p>The risk score map.</p>
          */
         @NameInMap("RiskScore")
         public java.util.Map<String, String> riskScore;
 
         /**
-         * <p>Risk tags. Multiple tags are separated by commas (,), including:</p>
+         * <p>The risk labels. Multiple labels are separated by commas (,), including:</p>
          * <ul>
          * <li>SuspectDeepForgery: Suspected deep forgery</li>
-         * <li>SuspectPSFace: Suspected synthetic attack</li>
+         * <li>SuspectPSFace: Suspected face synthesis attack</li>
          * <li>SuspectTemple: Suspected template attack</li>
          * <li>SuspectRemake: Suspected presentation attack</li>
          * </ul>

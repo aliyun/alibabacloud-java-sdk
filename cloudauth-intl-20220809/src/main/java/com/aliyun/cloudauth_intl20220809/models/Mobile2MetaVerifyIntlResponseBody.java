@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class Mobile2MetaVerifyIntlResponseBody extends TeaModel {
     /**
-     * <p><a href="https://www.alibabacloud.com/help/en/ekyc/latest/mobile-2meta?spm=a2c63.p38356.0.i13#cbf2539971xzr">Status codes</a>.</p>
+     * <p>The return code.</p>
      * 
      * <strong>example:</strong>
      * <p>Success</p>
@@ -14,7 +14,7 @@ public class Mobile2MetaVerifyIntlResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>A detailed description of the response code.</p>
+     * <p>The return message.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -32,7 +32,7 @@ public class Mobile2MetaVerifyIntlResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Return result</p>
+     * <p>The returned result.</p>
      */
     @NameInMap("Result")
     public Mobile2MetaVerifyIntlResponseBodyResult result;
@@ -76,14 +76,11 @@ public class Mobile2MetaVerifyIntlResponseBody extends TeaModel {
 
     public static class Mobile2MetaVerifyIntlResponseBodyResult extends TeaModel {
         /**
-         * <p>The verification result:</p>
+         * <p>The verification result code. Valid values:</p>
          * <ul>
-         * <li><p>1: The information is consistent. (Billed)</p>
-         * </li>
-         * <li><p>2: The information is inconsistent. (Billed)</p>
-         * </li>
-         * <li><p>3: No record is found. (Not billed)</p>
-         * </li>
+         * <li>1: Consistent.</li>
+         * <li>2: Inconsistent.</li>
+         * <li>3: No record found.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -93,14 +90,11 @@ public class Mobile2MetaVerifyIntlResponseBody extends TeaModel {
         public String bizCode;
 
         /**
-         * <p>The carrier name:</p>
+         * <p>The name of the telecommunications service provider. Valid values:</p>
          * <ul>
-         * <li><p>CMCC: China Mobile</p>
-         * </li>
-         * <li><p>CUCC: China Unicom</p>
-         * </li>
-         * <li><p>CTCC: China Telecom</p>
-         * </li>
+         * <li>CMCC: China Mobile</li>
+         * <li>CUCC: China Unicom</li>
+         * <li>CTCC: China Telecom.</li>
          * </ul>
          * 
          * <strong>example:</strong>

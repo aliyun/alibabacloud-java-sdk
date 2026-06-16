@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class DownloadVerifyRecordIntlRequest extends TeaModel {
     /**
-     * <p>Business type:</p>
+     * <p>The business type. Valid values:</p>
      * <ul>
      * <li>INVOKE_STATISTICS</li>
-     * <li>INVOKE_RECORD</li>
+     * <li>INVOKE_RECORD.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,7 +18,7 @@ public class DownloadVerifyRecordIntlRequest extends TeaModel {
     public String bizType;
 
     /**
-     * <p>Query code.</p>
+     * <p>The query code.</p>
      * 
      * <strong>example:</strong>
      * <p>vrf_intl_verify_record_real_id_idv_invoke_statistics_query</p>
@@ -27,10 +27,10 @@ public class DownloadVerifyRecordIntlRequest extends TeaModel {
     public String code;
 
     /**
-     * <p>Download mode:</p>
+     * <p>The download mode. Valid values:</p>
      * <ul>
-     * <li><strong>async</strong>: Asynchronous</li>
-     * <li><strong>sync</strong>: Synchronous</li>
+     * <li><strong>async</strong>: asynchronous</li>
+     * <li><strong>sync</strong>: synchronous.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -40,7 +40,7 @@ public class DownloadVerifyRecordIntlRequest extends TeaModel {
     public String downloadMode;
 
     /**
-     * <p>Parameters related to the export and download query task.</p>
+     * <p>The parameters for the export and download query task.</p>
      * 
      * <strong>example:</strong>
      * <p>{\&quot;productCode\&quot;:\&quot;FACE_LIVENESS\&quot;,\&quot;startDs\&quot;:\&quot;20251121\&quot;,\&quot;endDs\&quot;:\&quot;20251128\&quot;,\&quot;language\&quot;:\&quot;en\&quot;}</p>
@@ -49,7 +49,7 @@ public class DownloadVerifyRecordIntlRequest extends TeaModel {
     public String param;
 
     /**
-     * <p>Product Code.</p>
+     * <p>The product code.</p>
      * 
      * <strong>example:</strong>
      * <p>KYC</p>

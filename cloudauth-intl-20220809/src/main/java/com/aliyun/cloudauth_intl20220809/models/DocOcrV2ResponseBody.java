@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DocOcrV2ResponseBody extends TeaModel {
     /**
+     * <p>The return code.</p>
+     * 
      * <strong>example:</strong>
      * <p>Success</p>
      */
@@ -12,6 +14,8 @@ public class DocOcrV2ResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>The return message.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -27,6 +31,9 @@ public class DocOcrV2ResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The returned result.</p>
+     */
     @NameInMap("Result")
     public DocOcrV2ResponseBodyResult result;
 
@@ -68,10 +75,40 @@ public class DocOcrV2ResponseBody extends TeaModel {
     }
 
     public static class DocOcrV2ResponseBodyResult extends TeaModel {
+        /**
+         * <p>The card and certificate recognition result. This parameter is returned only when the API response is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{
+         *   &quot;idFaceQualityScore&quot;: 98.0
+         *   &quot;ocrIdInfo&quot;: {
+         *     &quot;expiryDate&quot;: &quot;&quot;,
+         *     &quot;originOfIssue&quot;: &quot;公安部出入境管理局&quot;,
+         *     &quot;englishName&quot;: &quot;LI SI&quot;,
+         *     &quot;sex&quot;: &quot;男&quot;,
+         *     &quot;name&quot;: &quot;李四&quot;,
+         *     &quot;idNumber&quot;: &quot;H11111112&quot;,
+         *     &quot;issueDate&quot;: &quot;2013-01-02&quot;,
+         *     &quot;birthDate&quot;: &quot;1990-02-21&quot;
+         *   },
+         *   &quot;spoofInfo&quot;: {
+         *     &quot;spoofResult&quot;: &quot;Y&quot;,
+         *     &quot;spoofType&quot;: [
+         *       &quot;SCREEN_REMARK&quot;
+         *     ]
+         *   }
+         * }</p>
+         */
         @NameInMap("ExtIdInfo")
         public String extIdInfo;
 
         /**
+         * <p>Indicates whether the authentication is passed. Valid values:</p>
+         * <ul>
+         * <li>Y: Passed.</li>
+         * <li>N: Not passed.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Y</p>
          */
@@ -79,6 +116,8 @@ public class DocOcrV2ResponseBody extends TeaModel {
         public String passed;
 
         /**
+         * <p>The sub-result code.</p>
+         * 
          * <strong>example:</strong>
          * <p>200</p>
          */
@@ -86,6 +125,8 @@ public class DocOcrV2ResponseBody extends TeaModel {
         public String subCode;
 
         /**
+         * <p>The unique ID of the authentication request.</p>
+         * 
          * <strong>example:</strong>
          * <p>08573be80f944d95ac812e019e3655a8</p>
          */

@@ -5,18 +5,18 @@ import com.aliyun.tea.*;
 
 public class CredentialVerifyIntlRequest extends TeaModel {
     /**
-     * <p>Credential name (numeric code):</p>
+     * <p>The credential name (specified as a numeric code). Valid values:</p>
      * <ul>
-     * <li>Starting with 03: Enterprise Qualification<ul>
-     * <li>0301: Mainland China Business License</li>
+     * <li>Codes starting with 03: enterprise qualification<ul>
+     * <li>0301: business license issued in the Chinese mainland</li>
      * </ul>
      * </li>
-     * <li>Starting with 04, Transaction Voucher<ul>
-     * <li>0401: Bank Statement</li>
-     * <li>0402: Pay Slip</li>
-     * <li>0403: Utility Bill</li>
-     * <li>0405: Credit Card Statement</li>
-     * <li>0499: Others</li>
+     * <li>Codes starting with 04: transaction voucher<ul>
+     * <li>0401: bank statement</li>
+     * <li>0402: payslip</li>
+     * <li>0403: utility bill</li>
+     * <li>0405: credit card statement</li>
+     * <li>0499: other.</li>
      * </ul>
      * </li>
      * </ul>
@@ -29,10 +29,10 @@ public class CredentialVerifyIntlRequest extends TeaModel {
     public String credName;
 
     /**
-     * <p>Credential type:</p>
+     * <p>The credential type. Valid values:</p>
      * <ul>
-     * <li>03: Enterprise Qualification</li>
-     * <li>04: Transaction Voucher</li>
+     * <li>03: enterprise qualification</li>
+     * <li>04: transaction voucher.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -43,9 +43,9 @@ public class CredentialVerifyIntlRequest extends TeaModel {
     public String credType;
 
     /**
-     * <p>Image input stream.</p>
+     * <p>The image input stream.</p>
      * <blockquote>
-     * <p>Choose either ImageUrl or ImageFile.</p>
+     * <p>Specify either ImageUrl or ImageFile.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -57,7 +57,7 @@ public class CredentialVerifyIntlRequest extends TeaModel {
     /**
      * <p>The URL of the image.</p>
      * <blockquote>
-     * <p>Choose either ImageUrl or ImageFile.</p>
+     * <p>Specify either ImageUrl or ImageFile.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -67,9 +67,9 @@ public class CredentialVerifyIntlRequest extends TeaModel {
     public String imageUrl;
 
     /**
-     * <p>Invocation mode:</p>
+     * <p>The call mode. Valid values:</p>
      * <ul>
-     * <li>ANTI_FAKE_CHECK: Image quality and tampering detection.</li>
+     * <li>ANTI_FAKE_CHECK: image quality and tampering detection.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

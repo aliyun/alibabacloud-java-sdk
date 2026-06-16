@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteFaceGroupRequest extends TeaModel {
     /**
-     * <p>Primary key ID</p>
+     * <p>The primary key ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

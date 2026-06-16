@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class EkycVerifyV2ResponseBody extends TeaModel {
     /**
+     * <p>Return code</p>
+     * 
      * <strong>example:</strong>
      * <p>Success</p>
      */
@@ -12,6 +14,8 @@ public class EkycVerifyV2ResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>Return message</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -27,6 +31,9 @@ public class EkycVerifyV2ResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Return Result</p>
+     */
     @NameInMap("Result")
     public EkycVerifyV2ResponseBodyResult result;
 
@@ -69,6 +76,8 @@ public class EkycVerifyV2ResponseBody extends TeaModel {
 
     public static class EkycVerifyV2ResponseBodyResult extends TeaModel {
         /**
+         * <p>Face detection result information</p>
+         * 
          * <strong>example:</strong>
          * <p>{
          * &quot;faceAttack&quot;: &quot;N&quot;,
@@ -80,10 +89,31 @@ public class EkycVerifyV2ResponseBody extends TeaModel {
         @NameInMap("ExtFaceInfo")
         public String extFaceInfo;
 
+        /**
+         * <p>Certificate Classification Result. Returned only when the API response Succeeded.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{
+         *  &quot;ocrIdInfo&quot;: {
+         *  &quot;firstName&quot;: &quot;<strong>龙&quot;,
+         *  &quot;lastName&quot;: &quot;</strong>&quot;,
+         *  &quot;countryCode&quot;: &quot;CHN&quot;,
+         *  &quot;docType&quot;: &quot;01560001&quot;,
+         *  &quot;dateOfBirth&quot;: &quot;2002-08-04&quot;,
+         *  &quot;idNumber&quot;: &quot;410************19&quot;
+         *  },
+         *  &quot;ocrIdPassed&quot;: &quot;N&quot;,
+         *  &quot;spoofInfo&quot;: {
+         *  &quot;spoofResult&quot;: &quot;Y&quot;,
+         *  }
+         * }</p>
+         */
         @NameInMap("ExtIdInfo")
         public String extIdInfo;
 
         /**
+         * <p>Indicates whether the verification passed. The value is Y if passed, or N if Failed.</p>
+         * 
          * <strong>example:</strong>
          * <p>Y</p>
          */
@@ -91,6 +121,8 @@ public class EkycVerifyV2ResponseBody extends TeaModel {
         public String passed;
 
         /**
+         * <p>Sub-result code</p>
+         * 
          * <strong>example:</strong>
          * <p>205</p>
          */
@@ -98,6 +130,8 @@ public class EkycVerifyV2ResponseBody extends TeaModel {
         public String subCode;
 
         /**
+         * <p>The unique id of the request</p>
+         * 
          * <strong>example:</strong>
          * <p>4ab0b***cbde97</p>
          */

@@ -5,18 +5,18 @@ import com.aliyun.tea.*;
 
 public class DocOcrMaxRequest extends TeaModel {
     /**
-     * <p>Specifies whether to enable verification with an authoritative data source to enhance document anti-spoofing capabilities.</p>
+     * <p>Specifies whether to enable authoritative data source verification to enhance document anti-forgery capabilities.</p>
      * <ul>
-     * <li><p><strong>T</strong>: Enable</p>
+     * <li><p><strong>T</strong>: enabled.</p>
      * </li>
-     * <li><p><strong>F</strong>: Disable (default)</p>
+     * <li><p><strong>F</strong>: disabled (default).</p>
      * </li>
      * </ul>
      * <blockquote>
      * <ul>
-     * <li><strong>Applicable document types</strong>: Chinese resident ID cards (CHN01001) and Chinese mainland driver\&quot;s licenses (CHN02001).</li>
-     * <li><strong>Data transfer declaration</strong>: If you enable this parameter, you agree to transfer the user\&quot;s name and certificate number to an authoritative data source in the Chinese mainland for consistency verification.</li>
-     * <li><strong>Performance impact:</strong> After you enable this feature, the response time of the API operation increases by 1 to 2 seconds. Adjust the timeout setting.</li>
+     * <li><strong>Applicable document types</strong>: China resident identity card (CHN01001) and Chinese mainland driver\&quot;s license (CHN02001).</li>
+     * <li><strong>Data transmission statement</strong>: Enabling this parameter indicates your consent to transmit the user\&quot;s name and document number to an authoritative data source in the Chinese mainland for consistency verification.</li>
+     * <li><strong>Performance impact</strong>: After this feature is enabled, the API response time increases by approximately 1 to 2 seconds. Adjust the timeout settings accordingly.</li>
      * </ul>
      * </blockquote>
      * 
@@ -27,11 +27,11 @@ public class DocOcrMaxRequest extends TeaModel {
     public String authorize;
 
     /**
-     * <p>Page expected to be recognized</p>
+     * <p>The expected page to recognize. Valid values:</p>
      * <ul>
-     * <li><p>01 (default): ID portrait.</p>
+     * <li><p>01 (default): the portrait side of the document.</p>
      * </li>
-     * <li><p>02: Back of the certificate</p>
+     * <li><p>02: the back side of the document.</p>
      * </li>
      * </ul>
      * 
@@ -42,9 +42,15 @@ public class DocOcrMaxRequest extends TeaModel {
     public String docPage;
 
     /**
-     * <p>Document type.
-     * Format: Country (region) code + document type abbreviation + page (optional)
-     * Note: If provided, it will automatically check if it matches the model recognition result; if empty, the document type will be returned after model recognition.</p>
+     * <p>The document type.</p>
+     * <ul>
+     * <li>Format: country code + document type abbreviation + page (optional).</li>
+     * </ul>
+     * <p>Note:</p>
+     * <ul>
+     * <li>OcrModel = 0: DocType is required. Specify the document type. The existing logic remains unchanged.</li>
+     * <li>OcrModel = 1 or 2: DocType must be left empty.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>CNSSC01</p>
@@ -53,7 +59,8 @@ public class DocOcrMaxRequest extends TeaModel {
     public String docType;
 
     /**
-     * <p>Document image, base64 encoded binary stream</p>
+     * <p>The Base64-encoded image of the card or certificate.</p>
+     * <p>If you use IdOcrPictureBase64 to pass in the document image, check the image size and do not pass in an excessively large image.</p>
      * 
      * <strong>example:</strong>
      * <p>base64</p>
@@ -62,7 +69,7 @@ public class DocOcrMaxRequest extends TeaModel {
     public String idOcrPictureBase64;
 
     /**
-     * <p>Document image URL</p>
+     * <p>The URL of the card or certificate image. The URL must be a publicly accessible HTTP or HTTPS link.</p>
      * 
      * <strong>example:</strong>
      * <p>https://***********.oss-cn-hangzhou.aliyuncs.com/1669520556530-expo/default/face/20221127114236530_w3kx2e6t.jpg</p>
@@ -71,11 +78,11 @@ public class DocOcrMaxRequest extends TeaModel {
     public String idOcrPictureUrl;
 
     /**
-     * <p>Whether to turn on the certificate anti-counterfeiting function:</p>
+     * <p>Specifies whether to enable the document anti-forgery feature. Valid values:</p>
      * <ul>
-     * <li><p>T: open</p>
+     * <li><p>T: enabled.</p>
      * </li>
-     * <li><p>F (default): not turned on.</p>
+     * <li><p>F (default): disabled.</p>
      * </li>
      * </ul>
      * 
@@ -86,12 +93,12 @@ public class DocOcrMaxRequest extends TeaModel {
     public String idSpoof;
 
     /**
-     * <p>Custom OCR quality detection threshold mode:</p>
+     * <p>The custom OCR quality detection threshold mode. Valid values:</p>
      * <ul>
-     * <li>0: System default</li>
-     * <li>1: Strict mode</li>
-     * <li>2: Lenient mode</li>
-     * <li>3 (default): Disable quality detection</li>
+     * <li>0: system default.</li>
+     * <li>1: strict mode.</li>
+     * <li>2: loose mode.</li>
+     * <li>3 (default): quality detection disabled.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -101,7 +108,8 @@ public class DocOcrMaxRequest extends TeaModel {
     public String idThreshold;
 
     /**
-     * <p>A unique business identifier defined by the merchant, used for subsequent problem localization and troubleshooting. It supports a combination of letters and numbers, with a maximum length of 32 characters. Please ensure its uniqueness.</p>
+     * <p>The custom unique business identifier, which is used for subsequent troubleshooting.</p>
+     * <p>The value can contain up to 32 characters, including letters and digits. Make sure the value is unique.</p>
      * 
      * <strong>example:</strong>
      * <p>e0c34a77f5ac40a5aa5e6ed20c******</p>
@@ -110,7 +118,8 @@ public class DocOcrMaxRequest extends TeaModel {
     public String merchantBizId;
 
     /**
-     * <p>Your custom user ID or other identifiers that can uniquely identify a specific user, such as a phone number or email address. It is strongly recommended to pre-desensitize the value of this field, for example, by hashing it.</p>
+     * <p>The custom user ID or another identifier that can identify a specific user, such as a phone number or email address.</p>
+     * <p>We strongly recommend that you desensitize the value of this field in advance, for example, by hashing the value.</p>
      * 
      * <strong>example:</strong>
      * <p>123456789</p>
@@ -119,9 +128,15 @@ public class DocOcrMaxRequest extends TeaModel {
     public String merchantUserId;
 
     /**
-     * <p>OCR recognition mode.
-     * 0: General document mode.
-     * 1: Custom mode.</p>
+     * <p>The OCR recognition mode. Valid values:</p>
+     * <ul>
+     * <li><p>0: general document recognition mode (default).</p>
+     * </li>
+     * <li><p>1: automatic document classification mode.</p>
+     * </li>
+     * <li><p>2: automatic document classification + general recognition mode.</p>
+     * </li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>0</p>
@@ -130,12 +145,10 @@ public class DocOcrMaxRequest extends TeaModel {
     public String ocrModel;
 
     /**
-     * <p>Specifies whether to return additional OCR fields in a standardized format:</p>
+     * <p>Specifies whether to enable OCR key field standardization. Valid values:</p>
      * <ul>
-     * <li><p><strong>0</strong>: No (default)</p>
-     * </li>
-     * <li><p><strong>1</strong>: Yes</p>
-     * </li>
+     * <li>0: no (default). </li>
+     * <li>1: yes.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -145,8 +158,8 @@ public class DocOcrMaxRequest extends TeaModel {
     public String ocrValueStandard;
 
     /**
-     * <p>The product solution to be integrated.</p>
-     * <p>Value: ID_OCR_MAX</p>
+     * <p>The product solution to use.</p>
+     * <p>Set this parameter to ID_OCR_MAX.</p>
      * 
      * <strong>example:</strong>
      * <p>ID_OCR_MAX</p>
@@ -155,16 +168,19 @@ public class DocOcrMaxRequest extends TeaModel {
     public String productCode;
 
     /**
-     * <p>Prompt (for custom mode)</p>
+     * <blockquote>
+     * <p>Warning: This field is deprecated.</warning>.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
-     * <p>xxxocr识别</p>
+     * <p>已废弃</p>
      */
     @NameInMap("Prompt")
     public String prompt;
 
     /**
-     * <p>Custom scene code, used to distinguish business scenarios, a 10-digit number.</p>
+     * <p>The custom authentication scenario ID. You can use this scenario ID to query related records in the console.</p>
+     * <p>The value can contain up to 10 characters, including letters, digits, and underscores.</p>
      * 
      * <strong>example:</strong>
      * <p>1234567890</p>
@@ -173,14 +189,10 @@ public class DocOcrMaxRequest extends TeaModel {
     public String sceneCode;
 
     /**
-     * <p>Whether to enable document anti-counterfeiting function, default is not enabled.</p>
-     * <ul>
-     * <li>T: Enable document anti-counterfeiting function.</li>
-     * <li>F: Do not enable.</li>
-     * </ul>
+     * <p><warning>This field is deprecated.</warning>.</p>
      * 
      * <strong>example:</strong>
-     * <p>F</p>
+     * <p>已废弃</p>
      */
     @NameInMap("Spoof")
     public String spoof;

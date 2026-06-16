@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class AddFaceRecordResponseBody extends TeaModel {
     /**
+     * <p>The return code.</p>
+     * 
      * <strong>example:</strong>
      * <p>Success</p>
      */
@@ -12,6 +14,8 @@ public class AddFaceRecordResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>The return message.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -27,6 +31,9 @@ public class AddFaceRecordResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The returned result.</p>
+     */
     @NameInMap("Result")
     public AddFaceRecordResponseBodyResult result;
 
@@ -69,6 +76,8 @@ public class AddFaceRecordResponseBody extends TeaModel {
 
     public static class AddFaceRecordResponseBodyResult extends TeaModel {
         /**
+         * <p>The face result information.</p>
+         * 
          * <strong>example:</strong>
          * <p>{
          * &quot;faceQuality&quot;: &quot;HIGH&quot;
@@ -78,6 +87,12 @@ public class AddFaceRecordResponseBody extends TeaModel {
         public String extFaceInfo;
 
         /**
+         * <p>Indicates whether the verification is passed. Valid values:</p>
+         * <ul>
+         * <li>Y: Passed.</li>
+         * <li>N: Not passed.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Y</p>
          */

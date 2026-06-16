@@ -5,12 +5,10 @@ import com.aliyun.tea.*;
 
 public class FaceLivenessRequest extends TeaModel {
     /**
-     * <p>Specifies whether to crop the facial image. The default value is F.</p>
+     * <p>Specifies whether to allow cropping. Default value: F. Valid values:</p>
      * <ul>
-     * <li><p><strong>T</strong>: allows cropping.</p>
-     * </li>
-     * <li><p><strong>F</strong>: Forbidden</p>
-     * </li>
+     * <li>T: enabled.</li>
+     * <li>F: disabled. (Default).</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -20,16 +18,20 @@ public class FaceLivenessRequest extends TeaModel {
     public String crop;
 
     /**
-     * <p>The Base64-encoded image. If you use this parameter to pass the facial image, check the image size. Do not pass an oversized image.</p>
+     * <p>The Base64-encoded face photo.</p>
+     * <p>Note:</p>
+     * <ul>
+     * <li>If you use FacePictureBase64 to pass in the face photo, check the photo size and do not pass in an excessively large photo.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
-     * <p>dsjisaj***oekwodsm</p>
+     * <p>Base64</p>
      */
     @NameInMap("FacePictureBase64")
     public String facePictureBase64;
 
     /**
-     * <p>The URL of the portrait image. The URL must be an HTTP or HTTPS link accessible over the Internet.</p>
+     * <p>The URL of the face photo.</p>
      * 
      * <strong>example:</strong>
      * <p><a href="https://digital-face-prod8.oss-cn-hangzhou.aliyuncs.com/1669520556530-expo/default/face/20221127114236530_w3kx2e6t.jpg">https://digital-face-prod8.oss-cn-hangzhou.aliyuncs.com/1669520556530-expo/default/face/20221127114236530_w3kx2e6t.jpg</a></p>
@@ -38,12 +40,10 @@ public class FaceLivenessRequest extends TeaModel {
     public String facePictureUrl;
 
     /**
-     * <p>Specifies whether to return the facial image quality score. The default value is F.</p>
+     * <p>Specifies whether to return the face quality score. Default value: F. Valid values:</p>
      * <ul>
-     * <li><p><strong>T</strong>: returns the score.</p>
-     * </li>
-     * <li><p><strong>F</strong>: does not return the score.</p>
-     * </li>
+     * <li>T: enabled.</li>
+     * <li>F: disabled. (Default).</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -53,6 +53,8 @@ public class FaceLivenessRequest extends TeaModel {
     public String faceQuality;
 
     /**
+     * <p>The face quality check.</p>
+     * 
      * <strong>example:</strong>
      * <p>Y</p>
      */
@@ -60,10 +62,7 @@ public class FaceLivenessRequest extends TeaModel {
     public String faceQualityCheck;
 
     /**
-     * <p>A custom unique business identifier. You can use this identifier to track and troubleshoot issues. The identifier can be up to 32 characters in length and can contain letters and digits. Make sure the identifier is unique.</p>
-     * <blockquote>
-     * <p>Alibaba Cloud servers do not check the uniqueness of this value. For better tracking, ensure this value is unique.</p>
-     * </blockquote>
+     * <p>The merchant-defined unique business ID for subsequent troubleshooting. The value can contain letters and digits with a maximum length of 32 characters. Ensure that the value is unique.</p>
      * 
      * <strong>example:</strong>
      * <p>e0c34a77f5ac40a5aa5e6ed20c353888</p>
@@ -72,7 +71,7 @@ public class FaceLivenessRequest extends TeaModel {
     public String merchantBizId;
 
     /**
-     * <p>A  custom user ID or another identifier for a specific user, such as a mobile number or email address. For security, desensitize this value in advance, for example, by hashing it.</p>
+     * <p>The merchant user ID or another identifier that can be used to identify a specific user, such as a phone number or email address. We strongly recommend that you desensitize the value of the userId field before passing it in, for example, by hashing the value.</p>
      * 
      * <strong>example:</strong>
      * <p>123456789</p>
@@ -81,12 +80,10 @@ public class FaceLivenessRequest extends TeaModel {
     public String merchantUserId;
 
     /**
-     * <p>Specifies whether to enable occlusion detection. The default value is F.</p>
+     * <p>Specifies whether to perform occlusion detection. Default value: F. Valid values:</p>
      * <ul>
-     * <li><p><strong>T</strong>: enables the feature.</p>
-     * </li>
-     * <li><p><strong>F</strong>: disables the feature.</p>
-     * </li>
+     * <li>T: enabled.</li>
+     * <li>F: disabled. (Default).</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -96,7 +93,7 @@ public class FaceLivenessRequest extends TeaModel {
     public String occlusion;
 
     /**
-     * <p>The product solution to use. Set the value to <strong>FACE_LIVENESS_MIN</strong> to use the passive liveness detection API.</p>
+     * <p>The product code.</p>
      * 
      * <strong>example:</strong>
      * <p>FACE_LIVENESS_MIN</p>

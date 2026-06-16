@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class QueryFaceRecordResponseBody extends TeaModel {
     /**
-     * <p>Return code.</p>
+     * <p>The response code.</p>
      * 
      * <strong>example:</strong>
      * <p>Success</p>
@@ -14,7 +14,7 @@ public class QueryFaceRecordResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>Current query page number.</p>
+     * <p>The current page number.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>
@@ -23,13 +23,13 @@ public class QueryFaceRecordResponseBody extends TeaModel {
     public Long currentPage;
 
     /**
-     * <p>List of returned information.</p>
+     * <p>The list of returned records.</p>
      */
     @NameInMap("Items")
     public java.util.List<QueryFaceRecordResponseBodyItems> items;
 
     /**
-     * <p>Maximum number of data entries per page.</p>
+     * <p>The maximum number of entries per page.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>
@@ -38,7 +38,7 @@ public class QueryFaceRecordResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>Return message.</p>
+     * <p>The response message.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -47,7 +47,7 @@ public class QueryFaceRecordResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Token for the next query start.</p>
+     * <p>The token for the next query.</p>
      * 
      * <strong>example:</strong>
      * <p>AAAAARfZmVDe9NvRXloR5+8CK9nwqHyx44CQz3pa71+mmu0e</p>
@@ -56,7 +56,7 @@ public class QueryFaceRecordResponseBody extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>Number of items per page.</p>
+     * <p>The number of entries per page.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -65,7 +65,7 @@ public class QueryFaceRecordResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>ID of the request</p>
+     * <p>Id of the request</p>
      * 
      * <strong>example:</strong>
      * <p>7F971622-38C0-5F56-B2EC-315367979B4F</p>
@@ -74,7 +74,7 @@ public class QueryFaceRecordResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Total number of records.</p>
+     * <p>The total number of records.</p>
      * 
      * <strong>example:</strong>
      * <p>6</p>
@@ -83,7 +83,7 @@ public class QueryFaceRecordResponseBody extends TeaModel {
     public Integer totalCount;
 
     /**
-     * <p>Total number of pages.</p>
+     * <p>The total number of pages.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -178,7 +178,7 @@ public class QueryFaceRecordResponseBody extends TeaModel {
 
     public static class QueryFaceRecordResponseBodyItems extends TeaModel {
         /**
-         * <p>Face ID.</p>
+         * <p>The face ID.</p>
          * 
          * <strong>example:</strong>
          * <p>230642938</p>
@@ -187,7 +187,7 @@ public class QueryFaceRecordResponseBody extends TeaModel {
         public String faceId;
 
         /**
-         * <p>Creation time.</p>
+         * <p>The creation time.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-01-15T02:20:28Z</p>
@@ -196,7 +196,7 @@ public class QueryFaceRecordResponseBody extends TeaModel {
         public String gmtCreate;
 
         /**
-         * <p>Primary key ID.</p>
+         * <p>The primary key ID.</p>
          * 
          * <strong>example:</strong>
          * <p>16112</p>
@@ -205,7 +205,7 @@ public class QueryFaceRecordResponseBody extends TeaModel {
         public Long id;
 
         /**
-         * <p>Face image URL.</p>
+         * <p>The URL of the face image.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="http://www.xxxx.com/1.jpg">http://www.xxxx.com/1.jpg</a></p>
@@ -214,7 +214,7 @@ public class QueryFaceRecordResponseBody extends TeaModel {
         public String imgOssUrl;
 
         /**
-         * <p>Merchant User ID.</p>
+         * <p>The merchant user ID.</p>
          * 
          * <strong>example:</strong>
          * <p>CuN6hiD08qr</p>
@@ -223,7 +223,7 @@ public class QueryFaceRecordResponseBody extends TeaModel {
         public String merchantUserId;
 
         /**
-         * <p>Registration type.</p>
+         * <p>The registration type.</p>
          * 
          * <strong>example:</strong>
          * <p>MANUAL</p>

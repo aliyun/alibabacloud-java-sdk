@@ -19,8 +19,6 @@ public class FaceLivenessV2ResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Id of the request</p>
-     * 
      * <strong>example:</strong>
      * <p>5E63B760-0ECB-5C07-8503-A65C27876968</p>
      */

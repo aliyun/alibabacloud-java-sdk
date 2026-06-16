@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class FaceCrossCompareIntlRequest extends TeaModel {
     /**
-     * <p>Comparison mode</p>
+     * <p>The comparison mode. Valid values:</p>
      * <ul>
-     * <li>0-Chain comparison (default): A:B and B:C</li>
-     * <li>1-Circular comparison: A:B and B:C and C:A</li>
+     * <li>0: chain comparison (default). A:B and B:C.</li>
+     * <li>1: circular comparison. A:B, B:C, and C:A.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,16 +18,18 @@ public class FaceCrossCompareIntlRequest extends TeaModel {
     public String compareModel;
 
     /**
-     * <p>Face matching threshold.</p>
+     * <p>The face matching threshold. This parameter is reserved by the system and does not support custom values.</p>
      * 
      * <strong>example:</strong>
-     * <p>0.5</p>
+     * <ul>
+     * <li></li>
+     * </ul>
      */
     @NameInMap("FaceVerifyThreshold")
     public String faceVerifyThreshold;
 
     /**
-     * <p>A unique business identifier for subsequent troubleshooting. It supports a combination of 32 alphanumeric characters, please ensure its uniqueness.</p>
+     * <p>The custom unique business identifier, used for subsequent troubleshooting. The value is a combination of letters and digits with a length of 32 characters. Ensure that the value is unique.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -37,8 +39,8 @@ public class FaceCrossCompareIntlRequest extends TeaModel {
     public String merchantBizId;
 
     /**
-     * <p>Product solution to be integrated. Value: 
-     * FACE_CROSS_COMPARE</p>
+     * <p>The product solution to use. Valid values:
+     * FACE_CROSS_COMPARE.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -48,7 +50,7 @@ public class FaceCrossCompareIntlRequest extends TeaModel {
     public String productCode;
 
     /**
-     * <p>Custom business scenario ID</p>
+     * <p>The custom business scenario ID.</p>
      * 
      * <strong>example:</strong>
      * <p>1234567890</p>
@@ -57,7 +59,7 @@ public class FaceCrossCompareIntlRequest extends TeaModel {
     public String sceneCode;
 
     /**
-     * <p>Base64 encoded portrait photo.</p>
+     * <p>The Base64-encoded face photo.</p>
      * 
      * <strong>example:</strong>
      * <p>base64</p>
@@ -66,7 +68,7 @@ public class FaceCrossCompareIntlRequest extends TeaModel {
     public String sourceAFacePicture;
 
     /**
-     * <p>Portrait image URL, accessible via HTTP or HTTPS on the public network.</p>
+     * <p>The URL of the face photo. The URL must be a publicly accessible HTTP or HTTPS link.</p>
      * 
      * <strong>example:</strong>
      * <p><a href="https://www.xxx.com/1.jpg">https://www.xxx.com/1.jpg</a></p>
@@ -75,7 +77,7 @@ public class FaceCrossCompareIntlRequest extends TeaModel {
     public String sourceAFacePictureUrl;
 
     /**
-     * <p>Base64 encoded portrait photo.</p>
+     * <p>The Base64-encoded face photo.</p>
      * 
      * <strong>example:</strong>
      * <p>base64</p>
@@ -84,7 +86,7 @@ public class FaceCrossCompareIntlRequest extends TeaModel {
     public String sourceBFacePicture;
 
     /**
-     * <p>Portrait image URL, accessible via HTTP or HTTPS on the public network.</p>
+     * <p>The URL of the face photo. The URL must be a publicly accessible HTTP or HTTPS link.</p>
      * 
      * <strong>example:</strong>
      * <p><a href="https://www.xxx.com/1.jpg">https://www.xxx.com/1.jpg</a></p>
@@ -93,7 +95,7 @@ public class FaceCrossCompareIntlRequest extends TeaModel {
     public String sourceBFacePictureUrl;
 
     /**
-     * <p>Base64 encoded portrait photo.</p>
+     * <p>The Base64-encoded face photo.</p>
      * 
      * <strong>example:</strong>
      * <p>base64</p>
@@ -102,7 +104,7 @@ public class FaceCrossCompareIntlRequest extends TeaModel {
     public String sourceCFacePicture;
 
     /**
-     * <p>Portrait image URL, accessible via HTTP or HTTPS on the public network.</p>
+     * <p>The URL of the face photo. The URL must be a publicly accessible HTTP or HTTPS link.</p>
      * 
      * <strong>example:</strong>
      * <p><a href="https://www.xxx.com/1.jpg">https://www.xxx.com/1.jpg</a></p>

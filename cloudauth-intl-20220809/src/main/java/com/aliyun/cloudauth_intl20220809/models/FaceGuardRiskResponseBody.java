@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class FaceGuardRiskResponseBody extends TeaModel {
     /**
-     * <p>The return code. A value of Success indicates that the API operation responded successfully. For more information about how to determine the authentication result, expand the <strong>Return codes</strong> section below.</p>
+     * <p>The return code.</p>
      * 
      * <strong>example:</strong>
      * <p>Success</p>
@@ -14,7 +14,7 @@ public class FaceGuardRiskResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>A detailed description of the return code.</p>
+     * <p>The return message.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -32,7 +32,7 @@ public class FaceGuardRiskResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Result object</p>
+     * <p>The returned result.</p>
      */
     @NameInMap("Result")
     public FaceGuardRiskResponseBodyResult result;
@@ -76,8 +76,8 @@ public class FaceGuardRiskResponseBody extends TeaModel {
 
     public static class FaceGuardRiskResponseBodyResult extends TeaModel {
         /**
-         * <p>The device risk probability predicted by the Device Guard algorithm. A higher score indicates a higher device risk.</p>
-         * <p>Valid values: 0 to 100.</p>
+         * <p>The device risk probability predicted by the Face Guard algorithm. A higher score indicates a higher device risk.</p>
+         * <p>Value range: 0 to 100.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -86,26 +86,22 @@ public class FaceGuardRiskResponseBody extends TeaModel {
         public Double guardRiskScore;
 
         /**
-         * <p>Extended information. This is empty by default.</p>
+         * <p>The extended information in JSON format. The response is customized based on tenant requirements.</p>
          * 
          * <strong>example:</strong>
-         * <p>{
-         *   &quot;code&quot;: 200
-         *   &quot;message&quot;:&quot;success&quot;
-         *   &quot;umid&quot;:&quot;07d3295d3d597b425d102a7f********&quot;,
-         *   &quot;sip&quot;:&quot;198.51.100.1&quot;,
-         *   &quot;durationMs&quot; : 4968931
-         *   &quot;queryCount&quot;:1,
-         *   &quot;querySessionCount&quot;:1,
-         *   &quot;queryUmidCount&quot;:1
-         *   &quot;platform&quot;:&quot;Android
-         * }</p>
+         * <p>默认为空</p>
          */
         @NameInMap("RiskExtends")
         public String riskExtends;
 
         /**
-         * <p>The device risk tags. Multiple risk tags are separated by commas (<strong>,</strong>). For more information about the risk tags and their meanings, expand the <strong>Risk tags (RiskTags)</strong> section below.</p>
+         * <p>The device risk tags.</p>
+         * <ul>
+         * <li><p>Multiple device risk tags are separated by commas (,), such as &quot;ROOT,VPN,HOOK&quot;.</p>
+         * </li>
+         * <li><p>For more information about device risk tags and their meanings, refer to the Face Guard tag description in the official documentation.</p>
+         * </li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>ROOT,VPN,HOOK</p>
@@ -114,7 +110,7 @@ public class FaceGuardRiskResponseBody extends TeaModel {
         public String riskTags;
 
         /**
-         * <p>The transaction ID.</p>
+         * <p>The unique identifier of the authentication request.</p>
          * 
          * <strong>example:</strong>
          * <p>hk573be80f944d95ac812e019e3655a8</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteVerifyResultRequest extends TeaModel {
     /**
-     * <p>Whether to depend on the query interface when deleting data</p>
+     * <p>Specifies whether the deletion depends on the query operation.</p>
      * 
      * <strong>example:</strong>
      * <p>Y / N</p>
@@ -14,7 +14,7 @@ public class DeleteVerifyResultRequest extends TeaModel {
     public String deleteAfterQuery;
 
     /**
-     * <p>Type of data to be deleted</p>
+     * <p>The type of data to delete.</p>
      * 
      * <strong>example:</strong>
      * <p>Img / Text / All</p>
@@ -23,7 +23,7 @@ public class DeleteVerifyResultRequest extends TeaModel {
     public String deleteType;
 
     /**
-     * <p>Unique identifier of the authentication request</p>
+     * <p>The unique identifier of the authentication request.</p>
      * 
      * <strong>example:</strong>
      * <p>4ab0b***cbde97</p>

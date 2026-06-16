@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteFaceGroupResponseBody extends TeaModel {
     /**
-     * <p>Return code</p>
+     * <p>The return code.</p>
      * 
      * <strong>example:</strong>
      * <p>Success</p>
@@ -14,7 +14,7 @@ public class DeleteFaceGroupResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>Return result.</p>
+     * <p>The response result.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -23,7 +23,7 @@ public class DeleteFaceGroupResponseBody extends TeaModel {
     public Integer data;
 
     /**
-     * <p>Return message</p>
+     * <p>The response message.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -32,7 +32,7 @@ public class DeleteFaceGroupResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>ID of the request</p>
+     * <p>Id of the request</p>
      * 
      * <strong>example:</strong>
      * <p>595E387B-3F0E-5C52-BD02-8EFE63D41FD5</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CredentialRecognitionIntlRequest extends TeaModel {
     /**
-     * <p>Base64 encoded image. If you choose to upload the photo via IdOcrPictureBase64 (photo Base64 encoding), please check the photo size and do not upload overly large photos.</p>
+     * <p>The Base64-encoded image. If you choose to pass in the image by using IdOcrPictureBase64 (Base64-encoded photo), check the photo size and do not pass in an excessively large photo.</p>
      * 
      * <strong>example:</strong>
      * <p>base64</p>
@@ -14,7 +14,7 @@ public class CredentialRecognitionIntlRequest extends TeaModel {
     public String credentialOcrPictureBase64;
 
     /**
-     * <p>Image URL, accessible over the public network via HTTP or HTTPS links.</p>
+     * <p>The URL of the image. The URL must be a publicly accessible HTTP or HTTPS link.</p>
      * 
      * <strong>example:</strong>
      * <p>https://***</p>
@@ -23,9 +23,9 @@ public class CredentialRecognitionIntlRequest extends TeaModel {
     public String credentialOcrPictureUrl;
 
     /**
-     * <p>Voucher type.</p>
+     * <p>The credential type. Valid values:</p>
      * <ul>
-     * <li>Transaction Voucher: 01 (including: water, electricity, gas, credit card, and other types of e-bill images)</li>
+     * <li>01: transaction credential (including electronic bill images for water, electricity, gas, credit cards, and other types).</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -36,10 +36,10 @@ public class CredentialRecognitionIntlRequest extends TeaModel {
     public String docType;
 
     /**
-     * <p>Whether to enable tampering detection</p>
+     * <p>Specifies whether to enable tampering detection. Valid values:</p>
      * <ul>
-     * <li>true: Enable</li>
-     * <li>false: Disable</li>
+     * <li>true: Enabled.</li>
+     * <li>false: Disabled.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -50,9 +50,9 @@ public class CredentialRecognitionIntlRequest extends TeaModel {
     public String fraudCheck;
 
     /**
-     * <p>Extraction type:</p>
+     * <p>The extraction type. Valid values:</p>
      * <ul>
-     * <li>0101: E-bill Address &amp; Name Module (extracts address and name modules through intelligent analysis)</li>
+     * <li>0101: electronic bill address and name module (extracts the address and name module through intelligent analysis).</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -63,7 +63,7 @@ public class CredentialRecognitionIntlRequest extends TeaModel {
     public String ocrArea;
 
     /**
-     * <p>The product solution to be integrated. Value: CREDENTIAL_RECOGNITION.</p>
+     * <p>The product solution to use. Set this to CREDENTIAL_RECOGNITION.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

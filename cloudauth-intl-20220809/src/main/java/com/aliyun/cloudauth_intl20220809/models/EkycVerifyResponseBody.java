@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class EkycVerifyResponseBody extends TeaModel {
     /**
-     * <p>The <a href="https://www.alibabacloud.com/help/en/ekyc/latest/im1u641gyesiqmbg?spm=a2c63.p38356.0.i18#GiGmf">response code</a>.</p>
+     * <p>The response code.</p>
      * 
      * <strong>example:</strong>
      * <p>Success</p>
@@ -14,7 +14,7 @@ public class EkycVerifyResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>A detailed description of the response code.</p>
+     * <p>The response message.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -32,7 +32,7 @@ public class EkycVerifyResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Result object</p>
+     * <p>The returned result.</p>
      */
     @NameInMap("Result")
     public EkycVerifyResponseBodyResult result;
@@ -76,7 +76,7 @@ public class EkycVerifyResponseBody extends TeaModel {
 
     public static class EkycVerifyResponseBodyResult extends TeaModel {
         /**
-         * <p>Information about the face liveness verification result. For the JSON format, see the example on the right. For more information, see <a href="https://www.alibabacloud.com/help/en/ekyc/latest/im1u641gyesiqmbg?spm=a2c63.p38356.0.i18#JJ40j">ExtFaceInfo</a>.</p>
+         * <p>The face verification result information.</p>
          * 
          * <strong>example:</strong>
          * <p>{
@@ -90,40 +90,32 @@ public class EkycVerifyResponseBody extends TeaModel {
         public String extFaceInfo;
 
         /**
-         * <p>Information about the certificate detection result.</p>
-         * <p>For the JSON format, see the example on the right. For more information, see <a href="https://www.alibabacloud.com/help/en/ekyc/latest/im1u641gyesiqmbg?spm=a2c63.p38356.0.i18#iWOBY">ExtIdInfo</a>.</p>
+         * <p>The document recognition result. This parameter is returned only when the API response is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>{
-         *   &quot;ocrIdInfo&quot;: {
-         *     &quot;expiryDate&quot;: &quot;&quot;,
-         *     &quot;originOfIssue&quot;: &quot;Exit and Entry Administration of the Ministry of Public Security&quot;,
-         *     &quot;englishName&quot;: &quot;LI SI&quot;,
-         *     &quot;sex&quot;: &quot;Male&quot;,
-         *     &quot;name&quot;: &quot;Li Si&quot;,
-         *     &quot;idNumber&quot;: &quot;H11111112&quot;,
-         *     &quot;issueDate&quot;: &quot;2013-01-02&quot;,
-         *     &quot;birthDate&quot;: &quot;1990-02-21&quot;
-         *   },
-         *   &quot;ocrIdPassed&quot;: &quot;N&quot;,
-         *   &quot;spoofInfo&quot;: {
-         *     &quot;spoofResult&quot;: &quot;Y&quot;,
-         *     &quot;spoofType&quot;: [
-         *       &quot;SCREEN_REMARK&quot;
-         *     ]
-         *   }
+         *  &quot;ocrIdInfo&quot;: {
+         *  &quot;firstName&quot;: &quot;<strong>龙&quot;,
+         *  &quot;lastName&quot;: &quot;</strong>&quot;,
+         *  &quot;countryCode&quot;: &quot;CHN&quot;,
+         *  &quot;docType&quot;: &quot;01560001&quot;,
+         *  &quot;dateOfBirth&quot;: &quot;2002-08-04&quot;,
+         *  &quot;idNumber&quot;: &quot;410************19&quot;
+         *  },
+         *  &quot;ocrIdPassed&quot;: &quot;N&quot;,
+         *  &quot;spoofInfo&quot;: {
+         *  &quot;spoofResult&quot;: &quot;Y&quot;,
+         *  }
          * }</p>
          */
         @NameInMap("ExtIdInfo")
         public String extIdInfo;
 
         /**
-         * <p>The final authentication result. Valid values:</p>
+         * <p>Indicates whether the verification is passed. Valid values:</p>
          * <ul>
-         * <li><p><strong>Y</strong>: The authentication is passed.</p>
-         * </li>
-         * <li><p><strong>N</strong>: The authentication fails.</p>
-         * </li>
+         * <li>T: Passed.</li>
+         * <li>F: Not passed.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -133,7 +125,7 @@ public class EkycVerifyResponseBody extends TeaModel {
         public String passed;
 
         /**
-         * <p>A description of the authentication result. For more information, see <a href="https://www.alibabacloud.com/help/en/ekyc/latest/im1u641gyesiqmbg?spm=a2c63.p38356.0.i18#HCGLb">Error codes for ResultObject.SubCode</a>.</p>
+         * <p>The sub-result code.</p>
          * 
          * <strong>example:</strong>
          * <p>205</p>
@@ -142,7 +134,7 @@ public class EkycVerifyResponseBody extends TeaModel {
         public String subCode;
 
         /**
-         * <p>The transaction ID.</p>
+         * <p>The unique identifier of the verification request.</p>
          * 
          * <strong>example:</strong>
          * <p>4ab0b***cbde97</p>

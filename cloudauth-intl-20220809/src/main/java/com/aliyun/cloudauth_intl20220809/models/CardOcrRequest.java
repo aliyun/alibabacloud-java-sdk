@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CardOcrRequest extends TeaModel {
     /**
-     * <p>Document type.</p>
+     * <p>The document type.</p>
      * 
      * <strong>example:</strong>
      * <p>00000006</p>
@@ -14,10 +14,10 @@ public class CardOcrRequest extends TeaModel {
     public String docType;
 
     /**
-     * <p>Whether to perform face quality detection on the document</p>
+     * <p>Specifies whether to perform face quality detection on the ID document. Valid values:</p>
      * <ul>
-     * <li>T: Indicates that detection is needed</li>
-     * <li>F: Indicates that detection is not needed (default F)</li>
+     * <li>T: Perform face quality detection.</li>
+     * <li>F: Do not perform face quality detection. This is the default value.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -27,7 +27,7 @@ public class CardOcrRequest extends TeaModel {
     public String idFaceQuality;
 
     /**
-     * <p>Base64 on the front of the document image</p>
+     * <p>The Base64-encoded image of the front side of the ID document. The value is a Base64 encoding of the image.</p>
      * 
      * <strong>example:</strong>
      * <p>base64</p>
@@ -36,7 +36,7 @@ public class CardOcrRequest extends TeaModel {
     public String idOcrPictureBase64;
 
     /**
-     * <p>URL of the front side of the document image</p>
+     * <p>The URL of the front-side image of the ID document.</p>
      * 
      * <strong>example:</strong>
      * <p><a href="https://digital-cardocr-prod8.oss-cn-hangzhou.aliyuncs.com/1669520556530-expo/default/face/20221127114236530_w3kx2e6t.jpg">https://digital-cardocr-prod8.oss-cn-hangzhou.aliyuncs.com/1669520556530-expo/default/face/20221127114236530_w3kx2e6t.jpg</a></p>
@@ -45,7 +45,7 @@ public class CardOcrRequest extends TeaModel {
     public String idOcrPictureUrl;
 
     /**
-     * <p>A unique business identifier defined by the merchant, used for subsequent troubleshooting. It supports a combination of letters and numbers, with a maximum length of 32 characters. Please ensure uniqueness.</p>
+     * <p>The merchant-defined unique business ID used for subsequent troubleshooting. The value can be a combination of letters and digits with a maximum length of 32 characters. Ensure that the value is unique.</p>
      * 
      * <strong>example:</strong>
      * <p>dso9322***dsjsd22</p>
@@ -54,7 +54,7 @@ public class CardOcrRequest extends TeaModel {
     public String merchantBizId;
 
     /**
-     * <p>Merchant user ID or other identifiers that can be used to identify specific users, such as phone numbers, email addresses, etc. It is strongly recommended to pre-desensitize the value of the userId field, for example, by hashing the value.</p>
+     * <p>The merchant user ID or another identifier that can be used to identify a specific user, such as a phone number or email address. We strongly recommend that you pre-desensitize the value of the userId field, for example, by hashing the value.</p>
      * 
      * <strong>example:</strong>
      * <p>123456789</p>
@@ -63,10 +63,10 @@ public class CardOcrRequest extends TeaModel {
     public String merchantUserId;
 
     /**
-     * <p>Whether to perform document OCR</p>
+     * <p>Specifies whether to perform OCR on the ID document. Valid values:</p>
      * <ul>
-     * <li>T: Indicates that document OCR is required (default T)</li>
-     * <li>F: Indicates that it is not required</li>
+     * <li>T: Perform OCR on the ID document. This is the default value.</li>
+     * <li>F: Do not perform OCR.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -76,7 +76,7 @@ public class CardOcrRequest extends TeaModel {
     public String ocr;
 
     /**
-     * <p>Product code</p>
+     * <p>The product code.</p>
      * 
      * <strong>example:</strong>
      * <p>ID_OCR_MIN</p>
@@ -85,10 +85,10 @@ public class CardOcrRequest extends TeaModel {
     public String productCode;
 
     /**
-     * <p>Whether to enable anti-counterfeiting detection</p>
+     * <p>Specifies whether to enable anti-spoofing detection. Valid values:</p>
      * <ul>
-     * <li>T: Indicates to enable anti-counterfeiting</li>
-     * <li>F: Indicates to disable (default F)</li>
+     * <li>T: Enable anti-spoofing detection.</li>
+     * <li>F: Disable anti-spoofing detection. This is the default value.</li>
      * </ul>
      * 
      * <strong>example:</strong>

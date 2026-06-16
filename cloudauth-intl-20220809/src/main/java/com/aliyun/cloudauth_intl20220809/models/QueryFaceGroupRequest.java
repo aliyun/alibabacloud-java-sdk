@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class QueryFaceGroupRequest extends TeaModel {
     /**
+     * <p>The current page number.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,8 @@ public class QueryFaceGroupRequest extends TeaModel {
     public Long currentPage;
 
     /**
+     * <p>The code of the face library.</p>
+     * 
      * <strong>example:</strong>
      * <p>groupCode001</p>
      */
@@ -21,6 +24,8 @@ public class QueryFaceGroupRequest extends TeaModel {
     public String groupCode;
 
     /**
+     * <p>The maximum number of entries per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>100</p>
      */
@@ -28,6 +33,8 @@ public class QueryFaceGroupRequest extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>The name of the face library.</p>
+     * 
      * <strong>example:</strong>
      * <p>test008</p>
      */
@@ -35,6 +42,8 @@ public class QueryFaceGroupRequest extends TeaModel {
     public String name;
 
     /**
+     * <p>The token for the next query.</p>
+     * 
      * <strong>example:</strong>
      * <p>WpY9RBGa5Vrzxi3+mp2Cdw==</p>
      */
@@ -42,6 +51,7 @@ public class QueryFaceGroupRequest extends TeaModel {
     public String nextToken;
 
     /**
+     * <p>The number of entries per page.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

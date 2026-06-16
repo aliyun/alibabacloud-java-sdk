@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class AddressVerifyV2IntlResponseBody extends TeaModel {
     /**
-     * <p><a href="https://www.alibabacloud.com/help/zh/ekyc/latest/add-verify-pro-api?spm=a2c63.p38356.0.i4#ae60001a3804w">Return Code</a></p>
+     * <p>The response code.</p>
      * 
      * <strong>example:</strong>
      * <p>Success</p>
@@ -14,7 +14,7 @@ public class AddressVerifyV2IntlResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>Detailed description of the return code</p>
+     * <p>The response message.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -32,7 +32,7 @@ public class AddressVerifyV2IntlResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Result object</p>
+     * <p>The verification result.</p>
      */
     @NameInMap("Result")
     public AddressVerifyV2IntlResponseBodyResult result;
@@ -78,9 +78,9 @@ public class AddressVerifyV2IntlResponseBody extends TeaModel {
         /**
          * <p>The verification result. Valid values:</p>
          * <ul>
-         * <li><strong>1</strong>: Passed (billed)</li>
-         * <li><strong>2</strong>: Failed (The device is in a prohibited region) (billed)</li>
-         * <li><strong>3</strong>: Unknown (billed)</li>
+         * <li>1: Passed.</li>
+         * <li>2: Failed (the device is in a prohibited region). </li>
+         * <li>3: Unable to determine.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -90,33 +90,12 @@ public class AddressVerifyV2IntlResponseBody extends TeaModel {
         public String bizCode;
 
         /**
-         * <p>Verification details, including：</p>
+         * <p>The verification details, which include:</p>
          * <ul>
-         * <li><p><strong>DistanceRange</strong>：Position rang：<a href="https://www.alibabacloud.com/help/zh/ekyc/latest/add-verify-pro-api?spm=a2c63.p38356.0.i27#ee274c08976er">DistanceRange description</a>。</p>
-         * <blockquote>
-         * <p>If the input phone number or address is empty, or if no carrier information is found, this field will not be returned.</p>
-         * </blockquote>
-         * </li>
-         * <li><p><strong>IspName</strong>: The carrier name:</p>
-         * <ul>
-         * <li><strong>CMCC</strong>: China Mobile</li>
-         * <li><strong>CTCC</strong>: China Telecom</li>
-         * <li><strong>CUCC</strong>: China Unicom<blockquote>
-         * <p>This parameter is not returned if the mobile phone number or address is empty in the request, or if carrier information is not found.</p>
-         * </blockquote>
-         * </li>
+         * <li>distanceRange: the location range.   </li>
+         * <li>ispName: the ISP name.     </li>
+         * <li>phoneStatus: the phone status. A value of 0 indicates abnormal. A value of 1 indicates Normal. Otherwise, the status is unknown.</li>
          * </ul>
-         * </li>
-         * <li><p><strong>PhoneStatus</strong>: The status of the mobile phone:</p>
-         * <ul>
-         * <li><strong>0</strong>: Abnormal</li>
-         * <li><strong>1</strong>: Normal</li>
-         * </ul>
-         * </li>
-         * </ul>
-         * <blockquote>
-         * <p>This parameter is not returned if the mobile phone number is empty in the request.</p>
-         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>{
@@ -129,7 +108,7 @@ public class AddressVerifyV2IntlResponseBody extends TeaModel {
         public String detail;
 
         /**
-         * <p>The transaction ID</p>
+         * <p>The authentication ID.</p>
          * 
          * <strong>example:</strong>
          * <p>hksb7ba1b28130d24e015d69********</p>
