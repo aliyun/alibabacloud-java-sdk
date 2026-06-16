@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetAppWorkspaceDirectoryResponseBody extends TeaModel {
     /**
-     * <p>Detailed reason for access denial.</p>
+     * <p>The detailed reason why access was denied.</p>
      * 
      * <strong>example:</strong>
      * <p>{}</p>
@@ -14,7 +14,7 @@ public class GetAppWorkspaceDirectoryResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
-     * <p>Is retry allowed</p>
+     * <p>Indicates whether retry is allowed.</p>
      * 
      * <strong>example:</strong>
      * <p>False</p>
@@ -23,7 +23,7 @@ public class GetAppWorkspaceDirectoryResponseBody extends TeaModel {
     public Boolean allowRetry;
 
     /**
-     * <p>App name.</p>
+     * <p>The application name.</p>
      * 
      * <strong>example:</strong>
      * <p>ish-intelligence-store-platform-admin-web</p>
@@ -32,7 +32,7 @@ public class GetAppWorkspaceDirectoryResponseBody extends TeaModel {
     public String appName;
 
     /**
-     * <p>Dynamic error code.</p>
+     * <p>The dynamic error code.</p>
      * 
      * <strong>example:</strong>
      * <p>ERROR-oo1</p>
@@ -41,7 +41,7 @@ public class GetAppWorkspaceDirectoryResponseBody extends TeaModel {
     public String dynamicCode;
 
     /**
-     * <p>Dynamic message. Not currently used. Ignore it.</p>
+     * <p>The dynamic message. This parameter is not in use. Ignore this parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>SYSTEM_ERROR</p>
@@ -50,13 +50,13 @@ public class GetAppWorkspaceDirectoryResponseBody extends TeaModel {
     public String dynamicMessage;
 
     /**
-     * <p>Returned error parameters</p>
+     * <p>The error parameters.</p>
      */
     @NameInMap("ErrorArgs")
     public java.util.List<?> errorArgs;
 
     /**
-     * <p>Returned object.</p>
+     * <p>The response object.</p>
      */
     @NameInMap("Module")
     public GetAppWorkspaceDirectoryResponseBodyModule module;
@@ -71,7 +71,7 @@ public class GetAppWorkspaceDirectoryResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Error code</p>
+     * <p>The error code.</p>
      * 
      * <strong>example:</strong>
      * <p>SYSTEM.ERROR</p>
@@ -80,7 +80,7 @@ public class GetAppWorkspaceDirectoryResponseBody extends TeaModel {
     public String rootErrorCode;
 
     /**
-     * <p>Abnormal message</p>
+     * <p>The exception message.</p>
      * 
      * <strong>example:</strong>
      * <p>系统异常</p>
@@ -89,7 +89,7 @@ public class GetAppWorkspaceDirectoryResponseBody extends TeaModel {
     public String rootErrorMsg;
 
     /**
-     * <p>Spare parameter.</p>
+     * <p>The reserved parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>True</p>
@@ -192,13 +192,13 @@ public class GetAppWorkspaceDirectoryResponseBody extends TeaModel {
 
     public static class GetAppWorkspaceDirectoryResponseBodyModuleDirectoryList extends TeaModel {
         /**
-         * <p>Child content</p>
+         * <p>The child content.</p>
          */
         @NameInMap("Children")
         public java.util.List<?> children;
 
         /**
-         * <p>Full path (relative to workspace)</p>
+         * <p>The full path relative to the workspace.</p>
          * 
          * <strong>example:</strong>
          * <p>PolarDBInnoDBRedoLogWrites</p>
@@ -207,7 +207,7 @@ public class GetAppWorkspaceDirectoryResponseBody extends TeaModel {
         public String key;
 
         /**
-         * <p>Name</p>
+         * <p>The name.</p>
          * 
          * <strong>example:</strong>
          * <p>Evaluable=true</p>
@@ -248,7 +248,7 @@ public class GetAppWorkspaceDirectoryResponseBody extends TeaModel {
 
     public static class GetAppWorkspaceDirectoryResponseBodyModule extends TeaModel {
         /**
-         * <p>Current time</p>
+         * <p>The current time.</p>
          * 
          * <strong>example:</strong>
          * <p>2026</p>
@@ -257,7 +257,7 @@ public class GetAppWorkspaceDirectoryResponseBody extends TeaModel {
         public String currentTime;
 
         /**
-         * <p>Directory structure</p>
+         * <p>The directory structure.</p>
          */
         @NameInMap("DirectoryList")
         public java.util.List<GetAppWorkspaceDirectoryResponseBodyModuleDirectoryList> directoryList;

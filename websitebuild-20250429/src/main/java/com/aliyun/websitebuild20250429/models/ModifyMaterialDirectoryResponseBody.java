@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyMaterialDirectoryResponseBody extends TeaModel {
     /**
-     * <p>Detailed reason for access denial.</p>
+     * <p>The details about the access denial.</p>
      * 
      * <strong>example:</strong>
      * <p>{}</p>
@@ -14,7 +14,7 @@ public class ModifyMaterialDirectoryResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
-     * <p>Indicates whether retry is allowed.</p>
+     * <p>Indicates whether retries are allowed.</p>
      * 
      * <strong>example:</strong>
      * <p>False</p>
@@ -23,7 +23,7 @@ public class ModifyMaterialDirectoryResponseBody extends TeaModel {
     public Boolean allowRetry;
 
     /**
-     * <p>App name.</p>
+     * <p>The application name.</p>
      * 
      * <strong>example:</strong>
      * <p>or</p>
@@ -32,7 +32,7 @@ public class ModifyMaterialDirectoryResponseBody extends TeaModel {
     public String appName;
 
     /**
-     * <p>Dynamic error code.</p>
+     * <p>The dynamic error code.</p>
      * 
      * <strong>example:</strong>
      * <p>ERROR-oo1</p>
@@ -41,7 +41,7 @@ public class ModifyMaterialDirectoryResponseBody extends TeaModel {
     public String dynamicCode;
 
     /**
-     * <p>Dynamic error message.</p>
+     * <p>The dynamic error message.</p>
      * 
      * <strong>example:</strong>
      * <p>SYSTEM_ERROR</p>
@@ -50,13 +50,13 @@ public class ModifyMaterialDirectoryResponseBody extends TeaModel {
     public String dynamicMessage;
 
     /**
-     * <p>Error parameters.</p>
+     * <p>The error parameters.</p>
      */
     @NameInMap("ErrorArgs")
     public java.util.List<?> errorArgs;
 
     /**
-     * <p>Error code. The ErrorCode field is not returned if the request succeeds. If the request fails, the ErrorCode field is returned. For more information, see the error code list in this topic.</p>
+     * <p>The error code. If the request is successful, this field is not returned. If the request fails, this field is returned. For more information, see the error codes in this topic.</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>
@@ -65,7 +65,7 @@ public class ModifyMaterialDirectoryResponseBody extends TeaModel {
     public String errorCode;
 
     /**
-     * <p>Error message.</p>
+     * <p>The error message.</p>
      * 
      * <strong>example:</strong>
      * <p>aliuid:1998006665794443 assumeRole not exist,serviceName:realtimelogpush.dcdnservices.aliyuncs.com</p>
@@ -74,7 +74,7 @@ public class ModifyMaterialDirectoryResponseBody extends TeaModel {
     public String errorMsg;
 
     /**
-     * <p>Indicates whether the modification succeeded.</p>
+     * <p>Indicates whether the folder was modified successfully.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -92,7 +92,7 @@ public class ModifyMaterialDirectoryResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Error code</p>
+     * <p>The root error code.</p>
      * 
      * <strong>example:</strong>
      * <p>SYSTEM.ERROR</p>
@@ -101,7 +101,7 @@ public class ModifyMaterialDirectoryResponseBody extends TeaModel {
     public String rootErrorCode;
 
     /**
-     * <p>Abnormal message</p>
+     * <p>The root error message.</p>
      * 
      * <strong>example:</strong>
      * <p>系统异常</p>
@@ -110,7 +110,7 @@ public class ModifyMaterialDirectoryResponseBody extends TeaModel {
     public String rootErrorMsg;
 
     /**
-     * <p>Indicates whether the request succeeded.</p>
+     * <p>Indicates whether the request was successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -119,7 +119,7 @@ public class ModifyMaterialDirectoryResponseBody extends TeaModel {
     public Boolean success;
 
     /**
-     * <p>Indicates whether the processing is synchronous.</p>
+     * <p>Indicates whether the request was processed synchronously.</p>
      * 
      * <strong>example:</strong>
      * <p>True</p>

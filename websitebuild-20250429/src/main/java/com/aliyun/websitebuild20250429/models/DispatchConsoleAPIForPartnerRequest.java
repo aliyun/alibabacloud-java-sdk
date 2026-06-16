@@ -11,13 +11,13 @@ public class DispatchConsoleAPIForPartnerRequest extends TeaModel {
     public String liveToken;
 
     /**
-     * <p>Set the operation to perform on the alert. Valid values:</p>
+     * <p>The operation to perform on the alert. Valid values:</p>
      * <ul>
-     * <li><strong>deal</strong>: Handle the alert (fencing)</li>
-     * <li><strong>ignore</strong>: Ignore</li>
-     * <li><strong>mark_mis_info</strong>: Mark as false positive (add to whitelist)</li>
-     * <li><strong>rm_mark_mis_info</strong>: Unmark as false positive (remove from whitelist)</li>
-     * <li><strong>offline_handled</strong>: Mark as Completed</li>
+     * <li><strong>deal</strong>: handles the alert (quarantine).</li>
+     * <li><strong>ignore</strong>: ignores the alert.</li>
+     * <li><strong>mark_mis_info</strong>: marks the alert as a false positive (adds it to the whitelist).</li>
+     * <li><strong>rm_mark_mis_info</strong>: unmarks the alert as a false positive (removes it from the whitelist).</li>
+     * <li><strong>offline_handled</strong>: marks the alert as handled.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -28,7 +28,7 @@ public class DispatchConsoleAPIForPartnerRequest extends TeaModel {
     public String operation;
 
     /**
-     * <p>Error parameter.</p>
+     * <p>The error parameters.</p>
      * 
      * <strong>example:</strong>
      * <p>[\&quot;\&quot;]</p>
@@ -37,7 +37,7 @@ public class DispatchConsoleAPIForPartnerRequest extends TeaModel {
     public String params;
 
     /**
-     * <p>Product code</p>
+     * <p>The product code.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

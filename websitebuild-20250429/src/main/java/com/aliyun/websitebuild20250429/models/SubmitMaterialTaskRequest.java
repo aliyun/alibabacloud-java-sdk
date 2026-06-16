@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class SubmitMaterialTaskRequest extends TeaModel {
     /**
-     * <p>Job parameters</p>
+     * <p>The parameters of the task.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -19,7 +19,7 @@ public class SubmitMaterialTaskRequest extends TeaModel {
     public String taskParam;
 
     /**
-     * <p>Task Type</p>
+     * <p>The type of the task.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

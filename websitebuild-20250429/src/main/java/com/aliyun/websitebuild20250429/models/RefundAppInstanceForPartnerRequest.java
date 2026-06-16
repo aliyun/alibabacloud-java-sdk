@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class RefundAppInstanceForPartnerRequest extends TeaModel {
     /**
-     * <p>Website building business ID</p>
+     * <p>The ID of the website building service.</p>
      * 
      * <strong>example:</strong>
      * <p>WD20250703155602000001</p>
@@ -14,7 +14,7 @@ public class RefundAppInstanceForPartnerRequest extends TeaModel {
     public String bizId;
 
     /**
-     * <p>Idempotent token</p>
+     * <p>The idempotence token.</p>
      * 
      * <strong>example:</strong>
      * <p>c6f7e8b9-a0b1-4c2d-9e0f-1a2b3c4d5e6f</p>
@@ -23,7 +23,7 @@ public class RefundAppInstanceForPartnerRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>Refund reason</p>
+     * <p>The reason for the refund.</p>
      * 
      * <strong>example:</strong>
      * <p>渠道商退款</p>
@@ -32,7 +32,7 @@ public class RefundAppInstanceForPartnerRequest extends TeaModel {
     public String refundReason;
 
     /**
-     * <p>User ID</p>
+     * <p>The ID of the user.</p>
      * 
      * <strong>example:</strong>
      * <p>123456</p>

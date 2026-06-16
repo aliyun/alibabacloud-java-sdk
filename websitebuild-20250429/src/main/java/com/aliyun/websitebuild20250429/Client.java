@@ -28,10 +28,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Query the Supabase instance information corresponding to the resource</p>
+     * <p>Queries the Supabase instance information associated with a resource.</p>
      * 
      * <b>summary</b> : 
-     * <p>Assign a Supabase instance to a resource</p>
+     * <p>Allocates a Supabase instance for resource allocation.</p>
      * 
      * @param request AllocateSupabaseForAdminRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -87,10 +87,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Query the Supabase instance information corresponding to the resource</p>
+     * <p>Queries the Supabase instance information associated with a resource.</p>
      * 
      * <b>summary</b> : 
-     * <p>Assign a Supabase instance to a resource</p>
+     * <p>Allocates a Supabase instance for resource allocation.</p>
      * 
      * @param request AllocateSupabaseForAdminRequest
      * @return AllocateSupabaseForAdminResponse
@@ -102,10 +102,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Operation resource-related Supabase instance information</p>
+     * <p>The Supabase instance information corresponding to the operated resources.</p>
      * 
      * <b>summary</b> : 
-     * <p>Batch check resource usage</p>
+     * <p>Checks resource usage in batches.</p>
      * 
      * @param request BatchCheckResourceMeasureRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -157,10 +157,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Operation resource-related Supabase instance information</p>
+     * <p>The Supabase instance information corresponding to the operated resources.</p>
      * 
      * <b>summary</b> : 
-     * <p>Batch check resource usage</p>
+     * <p>Checks resource usage in batches.</p>
      * 
      * @param request BatchCheckResourceMeasureRequest
      * @return BatchCheckResourceMeasureResponse
@@ -172,7 +172,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Bind Application Domain</p>
+     * <p>Binds a custom domain name to an application and automatically completes DNS resolution verification.</p>
      * 
      * @param request BindAppDomainRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -216,7 +216,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Bind Application Domain</p>
+     * <p>Binds a custom domain name to an application and automatically completes DNS resolution verification.</p>
      * 
      * @param request BindAppDomainRequest
      * @return BindAppDomainResponse
@@ -228,10 +228,72 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Query the Supabase instance information corresponding to the resource</p>
+     * <p>Retrieves the configuration information of the code generation plug-in.</p>
      * 
      * <b>summary</b> : 
-     * <p>Check resource usage</p>
+     * <p>Verifies a verification code.</p>
+     * 
+     * @param request CheckAppVerifyCodeRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CheckAppVerifyCodeResponse
+     */
+    public CheckAppVerifyCodeResponse checkAppVerifyCodeWithOptions(CheckAppVerifyCodeRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.bizId)) {
+            query.put("BizId", request.bizId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.code)) {
+            query.put("Code", request.code);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.target)) {
+            query.put("Target", request.target);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.type)) {
+            query.put("Type", request.type);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CheckAppVerifyCode"),
+            new TeaPair("version", "2025-04-29"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CheckAppVerifyCodeResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Retrieves the configuration information of the code generation plug-in.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Verifies a verification code.</p>
+     * 
+     * @param request CheckAppVerifyCodeRequest
+     * @return CheckAppVerifyCodeResponse
+     */
+    public CheckAppVerifyCodeResponse checkAppVerifyCode(CheckAppVerifyCodeRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.checkAppVerifyCodeWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Queries the Supabase instance information corresponding to a resource.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Checks resource usage.</p>
      * 
      * @param request CheckResourceMeasureRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -287,10 +349,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Query the Supabase instance information corresponding to the resource</p>
+     * <p>Queries the Supabase instance information corresponding to a resource.</p>
      * 
      * <b>summary</b> : 
-     * <p>Check resource usage</p>
+     * <p>Checks resource usage.</p>
      * 
      * @param request CheckResourceMeasureRequest
      * @return CheckResourceMeasureResponse
@@ -302,10 +364,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Query the Supabase instance information corresponding to the resource</p>
+     * <p>Queries the Supabase instance information corresponding to a resource.</p>
      * 
      * <b>summary</b> : 
-     * <p>Validate user resource metering</p>
+     * <p>Checks user resource metering.</p>
      * 
      * @param request CheckUserResourceMeasureRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -361,10 +423,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Query the Supabase instance information corresponding to the resource</p>
+     * <p>Queries the Supabase instance information corresponding to a resource.</p>
      * 
      * <b>summary</b> : 
-     * <p>Validate user resource metering</p>
+     * <p>Checks user resource metering.</p>
      * 
      * @param request CheckUserResourceMeasureRequest
      * @return CheckUserResourceMeasureResponse
@@ -524,10 +586,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Wan Xiaozhi 2.0 AI conversation</p>
+     * <p>Initiates a WanXiaoZhi 2.0 AI conversation.</p>
      * 
      * <b>summary</b> : 
-     * <p>Initiate an AI employee conversation asynchronously</p>
+     * <p>Asynchronously initiates a conversation with an AI employee.</p>
      * 
      * @param request CreateAIStaffChatRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -580,10 +642,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Wan Xiaozhi 2.0 AI conversation</p>
+     * <p>Initiates a WanXiaoZhi 2.0 AI conversation.</p>
      * 
      * <b>summary</b> : 
-     * <p>Initiate an AI employee conversation asynchronously</p>
+     * <p>Asynchronously initiates a conversation with an AI employee.</p>
      * 
      * @param request CreateAIStaffChatRequest
      * @return CreateAIStaffChatResponse
@@ -595,10 +657,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Wan Xiaozhi 2.0 API for creating an AI session</p>
+     * <p>Creates an AI session for WanXiaoZhi 2.0.</p>
      * 
      * <b>summary</b> : 
-     * <p>Create an AI agent session</p>
+     * <p>Creates an AI employee session.</p>
      * 
      * @param request CreateAIStaffConversationRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -630,10 +692,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Wan Xiaozhi 2.0 API for creating an AI session</p>
+     * <p>Creates an AI session for WanXiaoZhi 2.0.</p>
      * 
      * <b>summary</b> : 
-     * <p>Create an AI agent session</p>
+     * <p>Creates an AI employee session.</p>
      * 
      * @param request CreateAIStaffConversationRequest
      * @return CreateAIStaffConversationResponse
@@ -645,10 +707,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Obtain the configuration information of the code generation plugin</p>
+     * <p>Retrieves the configuration information of the code generation plugin.</p>
      * 
      * <b>summary</b> : 
-     * <p>Create Application Assistant Agent</p>
+     * <p>Creates an application assistant agent.</p>
      * 
      * @param request CreateAppAssistantAgentRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -688,10 +750,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Obtain the configuration information of the code generation plugin</p>
+     * <p>Retrieves the configuration information of the code generation plugin.</p>
      * 
      * <b>summary</b> : 
-     * <p>Create Application Assistant Agent</p>
+     * <p>Creates an application assistant agent.</p>
      * 
      * @param request CreateAppAssistantAgentRequest
      * @return CreateAppAssistantAgentResponse
@@ -703,10 +765,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Obtain the configuration information of the code generation plugin</p>
+     * <p>Retrieves the configuration information of the code generation plug-in.</p>
      * 
      * <b>summary</b> : 
-     * <p>Generate application assistant SSO logon</p>
+     * <p>Generates an SSO logon-free URL for an application assistant agent.</p>
      * 
      * @param request CreateAppAssistantAgentSsoLoginRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -746,10 +808,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Obtain the configuration information of the code generation plugin</p>
+     * <p>Retrieves the configuration information of the code generation plug-in.</p>
      * 
      * <b>summary</b> : 
-     * <p>Generate application assistant SSO logon</p>
+     * <p>Generates an SSO logon-free URL for an application assistant agent.</p>
      * 
      * @param request CreateAppAssistantAgentSsoLoginRequest
      * @return CreateAppAssistantAgentSsoLoginResponse
@@ -821,7 +883,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Create a website instance</p>
+     * <p>Creates a website builder application instance.</p>
      * 
      * @param tmpReq CreateAppInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -921,7 +983,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Create a website instance</p>
+     * <p>Creates a website builder application instance.</p>
      * 
      * @param request CreateAppInstanceRequest
      * @return CreateAppInstanceResponse
@@ -933,7 +995,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>SSO ticket</p>
+     * <p>Creates a login-free ticket for a website builder instance.</p>
      * 
      * @param request CreateAppInstanceTicketRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -969,7 +1031,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>SSO ticket</p>
+     * <p>Creates a login-free ticket for a website builder instance.</p>
      * 
      * @param request CreateAppInstanceTicketRequest
      * @return CreateAppInstanceTicketResponse
@@ -1043,10 +1105,104 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Obtain the configuration information of the code generation plugin</p>
+     * <p>Retrieves the configuration information of the code generation plug-in.</p>
      * 
      * <b>summary</b> : 
-     * <p>Activate the Wanxiao Zhi Inspiration Value service</p>
+     * <p>Creates a message notification scenario.</p>
+     * 
+     * @param request CreateAppNotificationSceneRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateAppNotificationSceneResponse
+     */
+    public CreateAppNotificationSceneResponse createAppNotificationSceneWithOptions(CreateAppNotificationSceneRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.bizId)) {
+            query.put("BizId", request.bizId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.channelsJson)) {
+            query.put("ChannelsJson", request.channelsJson);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.description)) {
+            query.put("Description", request.description);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.emailFieldsJson)) {
+            query.put("EmailFieldsJson", request.emailFieldsJson);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.emailLimitJson)) {
+            query.put("EmailLimitJson", request.emailLimitJson);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.emailRecipientIdsJson)) {
+            query.put("EmailRecipientIdsJson", request.emailRecipientIdsJson);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            query.put("Name", request.name);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.phoneRecipientIdsJson)) {
+            query.put("PhoneRecipientIdsJson", request.phoneRecipientIdsJson);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.smsFieldsJson)) {
+            query.put("SmsFieldsJson", request.smsFieldsJson);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.smsLimitJson)) {
+            query.put("SmsLimitJson", request.smsLimitJson);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tableName)) {
+            query.put("TableName", request.tableName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.triggerEventsJson)) {
+            query.put("TriggerEventsJson", request.triggerEventsJson);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateAppNotificationScene"),
+            new TeaPair("version", "2025-04-29"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateAppNotificationSceneResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Retrieves the configuration information of the code generation plug-in.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a message notification scenario.</p>
+     * 
+     * @param request CreateAppNotificationSceneRequest
+     * @return CreateAppNotificationSceneResponse
+     */
+    public CreateAppNotificationSceneResponse createAppNotificationScene(CreateAppNotificationSceneRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createAppNotificationSceneWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Retrieves the configuration information of the code generation plugin.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Activates the Wanxiaozhi inspiration value service.</p>
      * 
      * @param request CreateAppTokenServiceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1078,10 +1234,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Obtain the configuration information of the code generation plugin</p>
+     * <p>Retrieves the configuration information of the code generation plugin.</p>
      * 
      * <b>summary</b> : 
-     * <p>Activate the Wanxiao Zhi Inspiration Value service</p>
+     * <p>Activates the Wanxiaozhi inspiration value service.</p>
      * 
      * @param request CreateAppTokenServiceRequest
      * @return CreateAppTokenServiceResponse
@@ -1093,7 +1249,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Commit a job to create a logo.</p>
+     * <p>Submits a task to create a logo.</p>
      * 
      * @param request CreateLogoTaskRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1137,7 +1293,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Commit a job to create a logo.</p>
+     * <p>Submits a task to create a logo.</p>
      * 
      * @param request CreateLogoTaskRequest
      * @return CreateLogoTaskResponse
@@ -1149,7 +1305,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Create a subfolder under the parent folder.</p>
+     * <p>Creates a subfolder under a parent folder.</p>
      * 
      * @param request CreateMaterialDirectoryRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1189,7 +1345,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Create a subfolder under the parent folder.</p>
+     * <p>Creates a subfolder under a parent folder.</p>
      * 
      * @param request CreateMaterialDirectoryRequest
      * @return CreateMaterialDirectoryResponse
@@ -1201,7 +1357,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Delete the SSL certificate of a domain</p>
+     * <p>Deletes and unbinds the SSL certificate that is bound to a website.</p>
      * 
      * @param request DeleteAppDomainCertificateRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1237,7 +1393,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Delete the SSL certificate of a domain</p>
+     * <p>Deletes and unbinds the SSL certificate that is bound to a website.</p>
      * 
      * @param request DeleteAppDomainCertificateRequest
      * @return DeleteAppDomainCertificateResponse
@@ -1249,7 +1405,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Delete the domain redirection rules</p>
+     * <p>Deletes 301 redirect records bound to a website.</p>
      * 
      * @param request DeleteAppDomainRedirectRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1285,7 +1441,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Delete the domain redirection rules</p>
+     * <p>Deletes 301 redirect records bound to a website.</p>
      * 
      * @param request DeleteAppDomainRedirectRequest
      * @return DeleteAppDomainRedirectResponse
@@ -1405,6 +1561,60 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
+     * <p>查询应用实例信息</p>
+     * 
+     * <b>summary</b> : 
+     * <p>删除消息通知场景</p>
+     * 
+     * @param request DeleteAppNotificationSceneRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteAppNotificationSceneResponse
+     */
+    public DeleteAppNotificationSceneResponse deleteAppNotificationSceneWithOptions(DeleteAppNotificationSceneRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.bizId)) {
+            query.put("BizId", request.bizId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sceneId)) {
+            query.put("SceneId", request.sceneId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteAppNotificationScene"),
+            new TeaPair("version", "2025-04-29"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteAppNotificationSceneResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>查询应用实例信息</p>
+     * 
+     * <b>summary</b> : 
+     * <p>删除消息通知场景</p>
+     * 
+     * @param request DeleteAppNotificationSceneRequest
+     * @return DeleteAppNotificationSceneResponse
+     */
+    public DeleteAppNotificationSceneResponse deleteAppNotificationScene(DeleteAppNotificationSceneRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteAppNotificationSceneWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
      * <p>Operation resource corresponds to the supabase instance information</p>
      * 
      * <b>summary</b> : 
@@ -1459,7 +1669,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Delete a material folder</p>
+     * <p>Deletes a material folder.</p>
      * 
      * @param request DeleteMaterialDirectoryRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1495,7 +1705,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Delete a material folder</p>
+     * <p>Deletes a material folder.</p>
      * 
      * @param request DeleteMaterialDirectoryRequest
      * @return DeleteMaterialDirectoryResponse
@@ -1507,7 +1717,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Delete Material Generation Job</p>
+     * <p>Deletes a material generation task.</p>
      * 
      * @param tmpReq DeleteMaterialTaskRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1545,7 +1755,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Delete Material Generation Job</p>
+     * <p>Deletes a material generation task.</p>
      * 
      * @param request DeleteMaterialTaskRequest
      * @return DeleteMaterialTaskResponse
@@ -1557,7 +1767,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query the DNS resolution records of a domain</p>
+     * <p>Query website DNS resolution records. Supports CNAME resolution and verification resolution queries.</p>
      * 
      * @param request DescribeAppDomainDnsRecordRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1597,7 +1807,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query the DNS resolution records of a domain</p>
+     * <p>Query website DNS resolution records. Supports CNAME resolution and verification resolution queries.</p>
      * 
      * @param request DescribeAppDomainDnsRecordRequest
      * @return DescribeAppDomainDnsRecordResponse
@@ -1609,7 +1819,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>DispatchConsoleAPIForPartner</p>
+     * <p>Calls a general-purpose API operation.</p>
      * 
      * @param request DispatchConsoleAPIForPartnerRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1657,7 +1867,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>DispatchConsoleAPIForPartner</p>
+     * <p>Calls a general-purpose API operation.</p>
      * 
      * @param request DispatchConsoleAPIForPartnerRequest
      * @return DispatchConsoleAPIForPartnerResponse
@@ -1669,7 +1879,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Edit plugin configuration.</p>
+     * <p>Edits a plug-in configuration.</p>
      * 
      * @param request EditPluginConfigRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1717,7 +1927,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Edit plugin configuration.</p>
+     * <p>Edits a plug-in configuration.</p>
      * 
      * @param request EditPluginConfigRequest
      * @return EditPluginConfigResponse
@@ -1729,7 +1939,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Export material files</p>
+     * <p>Exports a material file.</p>
      * 
      * @param tmpReq ExportMaterialFileRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1771,7 +1981,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Export material files</p>
+     * <p>Exports a material file.</p>
      * 
      * @param request ExportMaterialFileRequest
      * @return ExportMaterialFileResponse
@@ -1941,10 +2151,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Wan Xiaozhi 2.0 API for creating AI sessions</p>
+     * <p>Creates an AI session through the WanXiaoZhi 2.0 interface.</p>
      * 
      * <b>summary</b> : 
-     * <p>Obtain session lock status</p>
+     * <p>Retrieves the session lock status.</p>
      * 
      * @param request GetAppConversationLockStatusRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1976,10 +2186,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Wan Xiaozhi 2.0 API for creating AI sessions</p>
+     * <p>Creates an AI session through the WanXiaoZhi 2.0 interface.</p>
      * 
      * <b>summary</b> : 
-     * <p>Obtain session lock status</p>
+     * <p>Retrieves the session lock status.</p>
      * 
      * @param request GetAppConversationLockStatusRequest
      * @return GetAppConversationLockStatusResponse
@@ -2099,7 +2309,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query Application Instance Details</p>
+     * <p>Queries the details of a website builder application instance.</p>
      * 
      * @param request GetAppInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2131,7 +2341,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query Application Instance Details</p>
+     * <p>Queries the details of a website builder application instance.</p>
      * 
      * @param request GetAppInstanceRequest
      * @return GetAppInstanceResponse
@@ -2193,10 +2403,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>查询应用实例信息</p>
+     * <p>Queries application instance information.</p>
      * 
      * <b>summary</b> : 
-     * <p>Query application instance information</p>
+     * <p>Queries application instance information.</p>
      * 
      * @param request GetAppInstanceForAdminRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2232,10 +2442,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>查询应用实例信息</p>
+     * <p>Queries application instance information.</p>
      * 
      * <b>summary</b> : 
-     * <p>Query application instance information</p>
+     * <p>Queries application instance information.</p>
      * 
      * @param request GetAppInstanceForAdminRequest
      * @return GetAppInstanceForAdminResponse
@@ -2247,10 +2457,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Obtain the configuration information of the code generation plugin</p>
+     * <p>Retrieves the configuration information of a code generation plugin.</p>
      * 
      * <b>summary</b> : 
-     * <p>Query instance details</p>
+     * <p>Queries instance details.</p>
      * 
      * @param request GetAppInstanceForPartnerRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2282,10 +2492,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Obtain the configuration information of the code generation plugin</p>
+     * <p>Retrieves the configuration information of a code generation plugin.</p>
      * 
      * <b>summary</b> : 
-     * <p>Query instance details</p>
+     * <p>Queries instance details.</p>
      * 
      * @param request GetAppInstanceForPartnerRequest
      * @return GetAppInstanceForPartnerResponse
@@ -2347,10 +2557,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Obtain the configuration information of the code generation plugin.</p>
+     * <p>Retrieves the configuration information of a code generation plugin.</p>
      * 
      * <b>summary</b> : 
-     * <p>Obtain plugin configuration information.</p>
+     * <p>Retrieves the configuration information of a plugin.</p>
      * 
      * @param request GetAppPluginConfigRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2386,10 +2596,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Obtain the configuration information of the code generation plugin.</p>
+     * <p>Retrieves the configuration information of a code generation plugin.</p>
      * 
      * <b>summary</b> : 
-     * <p>Obtain plugin configuration information.</p>
+     * <p>Retrieves the configuration information of a plugin.</p>
      * 
      * @param request GetAppPluginConfigRequest
      * @return GetAppPluginConfigResponse
@@ -2459,10 +2669,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Obtain barcode generation plugin configuration information</p>
+     * <p>Retrieves the configuration information of the code generation plugin.</p>
      * 
      * <b>summary</b> : 
-     * <p>Query recommended products</p>
+     * <p>Queries recommended commodities.</p>
      * 
      * @param request GetAppRecommendedCommoditiesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2506,10 +2716,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Obtain barcode generation plugin configuration information</p>
+     * <p>Retrieves the configuration information of the code generation plugin.</p>
      * 
      * <b>summary</b> : 
-     * <p>Query recommended products</p>
+     * <p>Queries recommended commodities.</p>
      * 
      * @param request GetAppRecommendedCommoditiesRequest
      * @return GetAppRecommendedCommoditiesResponse
@@ -2521,10 +2731,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Obtain barcode generation plugin configuration information</p>
+     * <p>Retrieves the configuration information of the code generation plugin.</p>
      * 
      * <b>summary</b> : 
-     * <p>Requirement query</p>
+     * <p>Queries requirements.</p>
      * 
      * @param request GetAppRequirementRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2556,10 +2766,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Obtain barcode generation plugin configuration information</p>
+     * <p>Retrieves the configuration information of the code generation plugin.</p>
      * 
      * <b>summary</b> : 
-     * <p>Requirement query</p>
+     * <p>Queries requirements.</p>
      * 
      * @param request GetAppRequirementRequest
      * @return GetAppRequirementResponse
@@ -3007,10 +3217,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Obtain the configuration information of the code generation plugin</p>
+     * <p>Retrieves the configuration information of the code generation plug-in.</p>
      * 
      * <b>summary</b> : 
-     * <p>Query the Wan Xiaozhi Inspiration Value service</p>
+     * <p>Queries the Wanxiaozhi inspiration value service.</p>
      * 
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetAppTokenServiceResponse
@@ -3033,10 +3243,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Obtain the configuration information of the code generation plugin</p>
+     * <p>Retrieves the configuration information of the code generation plug-in.</p>
      * 
      * <b>summary</b> : 
-     * <p>Query the Wan Xiaozhi Inspiration Value service</p>
+     * <p>Queries the Wanxiaozhi inspiration value service.</p>
      * @return GetAppTokenServiceResponse
      */
     public GetAppTokenServiceResponse getAppTokenService() throws Exception {
@@ -3046,10 +3256,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Query application instance information</p>
+     * <p>Queries application instance information.</p>
      * 
      * <b>summary</b> : 
-     * <p>Obtain the workspace directory structure</p>
+     * <p>Retrieves the directory structure of a workspace.</p>
      * 
      * @param request GetAppWorkspaceDirectoryRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3089,10 +3299,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Query application instance information</p>
+     * <p>Queries application instance information.</p>
      * 
      * <b>summary</b> : 
-     * <p>Obtain the workspace directory structure</p>
+     * <p>Retrieves the directory structure of a workspace.</p>
      * 
      * @param request GetAppWorkspaceDirectoryRequest
      * @return GetAppWorkspaceDirectoryResponse
@@ -3104,7 +3314,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query the Logo creation job</p>
+     * <p>Queries a logo creation task.</p>
      * 
      * @param request GetCreateLogoTaskRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3136,7 +3346,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query the Logo creation job</p>
+     * <p>Queries a logo creation task.</p>
      * 
      * @param request GetCreateLogoTaskRequest
      * @return GetCreateLogoTaskResponse
@@ -3148,7 +3358,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Domain name query API provided to service providers</p>
+     * <p>Provides a domain name query API for service providers.</p>
      * 
      * @param request GetDomainInfoForPartnerRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3188,7 +3398,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Domain name query API provided to service providers</p>
+     * <p>Provides a domain name query API for service providers.</p>
      * 
      * @param request GetDomainInfoForPartnerRequest
      * @return GetDomainInfoForPartnerResponse
@@ -3200,7 +3410,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query ICP filing information of a domain name</p>
+     * <p>Queries the China Internet Content Provider (ICP) filing information of a domain name.</p>
      * 
      * @param request GetIcpFilingInfoForPartnerRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3236,7 +3446,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query ICP filing information of a domain name</p>
+     * <p>Queries the China Internet Content Provider (ICP) filing information of a domain name.</p>
      * 
      * @param request GetIcpFilingInfoForPartnerRequest
      * @return GetIcpFilingInfoForPartnerResponse
@@ -3248,10 +3458,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Query the Supabase instance configuration information corresponding to the resource.</p>
+     * <p>Queries the Supabase instance configuration information for a specified resource.</p>
      * 
      * <b>summary</b> : 
-     * <p>Query LLM Proxy configuration</p>
+     * <p>Queries the LLM Proxy configuration.</p>
      * 
      * @param request GetLlmProxyConfigForAdminRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3287,10 +3497,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Query the Supabase instance configuration information corresponding to the resource.</p>
+     * <p>Queries the Supabase instance configuration information for a specified resource.</p>
      * 
      * <b>summary</b> : 
-     * <p>Query LLM Proxy configuration</p>
+     * <p>Queries the LLM Proxy configuration.</p>
      * 
      * @param request GetLlmProxyConfigForAdminRequest
      * @return GetLlmProxyConfigForAdminResponse
@@ -3570,7 +3780,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Exchange temporary AccessKey for accessToken</p>
+     * <p>Exchanges a temporary AccessKey pair for an access token.</p>
      * 
      * @param request GetUserAccessTokenForPartnerRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3606,7 +3816,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Exchange temporary AccessKey for accessToken</p>
+     * <p>Exchanges a temporary AccessKey pair for an access token.</p>
      * 
      * @param request GetUserAccessTokenForPartnerRequest
      * @return GetUserAccessTokenForPartnerResponse
@@ -3618,7 +3828,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Partnership obtains temporary credentials for User SLR role authorization</p>
+     * <p>Obtains temporary credentials for a partner to assume a user\&quot;s service-linked role.</p>
      * 
      * @param request GetUserTmpIdentityForPartnerRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3666,7 +3876,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Partnership obtains temporary credentials for User SLR role authorization</p>
+     * <p>Obtains temporary credentials for a partner to assume a user\&quot;s service-linked role.</p>
      * 
      * @param request GetUserTmpIdentityForPartnerRequest
      * @return GetUserTmpIdentityForPartnerResponse
@@ -3678,7 +3888,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Introspection analysis of免登 accessToken</p>
+     * <p>Performs introspection analysis on a China Chinese China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China.</p>
      * 
      * @param request IntrospectAppInstanceTicketForPreviewRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3714,7 +3924,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Introspection analysis of免登 accessToken</p>
+     * <p>Performs introspection analysis on a China Chinese China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China.</p>
      * 
      * @param request IntrospectAppInstanceTicketForPreviewRequest
      * @return IntrospectAppInstanceTicketForPreviewResponse
@@ -3726,10 +3936,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Wan Xiaozhi 2.0 – Retrieve streaming output results of AI sessions</p>
+     * <p>Retrieves the streaming output results of an AI conversation.</p>
      * 
      * <b>summary</b> : 
-     * <p>Obtain incremental SSE events of AI employee conversations</p>
+     * <p>Retrieves incremental SSE events for an AI agent conversation.</p>
      * 
      * @param request ListAIStaffChatEventsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3775,10 +3985,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Wan Xiaozhi 2.0 – Retrieve streaming output results of AI sessions</p>
+     * <p>Retrieves the streaming output results of an AI conversation.</p>
      * 
      * <b>summary</b> : 
-     * <p>Obtain incremental SSE events of AI employee conversations</p>
+     * <p>Retrieves incremental SSE events for an AI agent conversation.</p>
      * 
      * @param request ListAIStaffChatEventsRequest
      * @return ListAIStaffChatEventsResponse
@@ -3790,10 +4000,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Wan Xiaozhi 2.0 - API for querying AI session history information</p>
+     * <p>Queries the AI session history for WanXiaoZhi 2.0.</p>
      * 
      * <b>summary</b> : 
-     * <p>Paged query of AI employee conversation message list</p>
+     * <p>Queries the conversation message list of an AI employee by paging.</p>
      * 
      * @param request ListAIStaffChatMessagesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3839,10 +4049,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Wan Xiaozhi 2.0 - API for querying AI session history information</p>
+     * <p>Queries the AI session history for WanXiaoZhi 2.0.</p>
      * 
      * <b>summary</b> : 
-     * <p>Paged query of AI employee conversation message list</p>
+     * <p>Queries the conversation message list of an AI employee by paging.</p>
      * 
      * @param request ListAIStaffChatMessagesRequest
      * @return ListAIStaffChatMessagesResponse
@@ -3854,10 +4064,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Query application instance information</p>
+     * <p>Queries application instance information.</p>
      * 
      * <b>summary</b> : 
-     * <p>Query the list of application assistant agents</p>
+     * <p>Queries the list of application assistant agents.</p>
      * 
      * @param request ListAppAssistantAgentsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3893,10 +4103,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Query application instance information</p>
+     * <p>Queries application instance information.</p>
      * 
      * <b>summary</b> : 
-     * <p>Query the list of application assistant agents</p>
+     * <p>Queries the list of application assistant agents.</p>
      * 
      * @param request ListAppAssistantAgentsRequest
      * @return ListAppAssistantAgentsResponse
@@ -3974,10 +4184,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Obtain the configuration information of the code generation plugin</p>
+     * <p>Retrieves the configuration information of the code generation plug-in.</p>
      * 
      * <b>summary</b> : 
-     * <p>Product information data</p>
+     * <p>The product information data.</p>
      * 
      * @deprecated OpenAPI ListAppCommoditySpecificationsForPartner is deprecated, please use WebsiteBuild::2025-04-29::ListAppCommoditySpecificationsV2ForPartner instead.
      * 
@@ -4004,10 +4214,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Obtain the configuration information of the code generation plugin</p>
+     * <p>Retrieves the configuration information of the code generation plug-in.</p>
      * 
      * <b>summary</b> : 
-     * <p>Product information data</p>
+     * <p>The product information data.</p>
      * 
      * @deprecated OpenAPI ListAppCommoditySpecificationsForPartner is deprecated, please use WebsiteBuild::2025-04-29::ListAppCommoditySpecificationsV2ForPartner instead.
      * @return ListAppCommoditySpecificationsForPartnerResponse
@@ -4021,10 +4231,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Obtain the configuration information of the code generation plugin</p>
+     * <p>Get QR code plugin configuration information</p>
      * 
      * <b>summary</b> : 
-     * <p>Query website building product details</p>
+     * <p>Query Website Build Product Details</p>
      * 
      * @param request ListAppCommoditySpecificationsV2ForPartnerRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4060,10 +4270,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Obtain the configuration information of the code generation plugin</p>
+     * <p>Get QR code plugin configuration information</p>
      * 
      * <b>summary</b> : 
-     * <p>Query website building product details</p>
+     * <p>Query Website Build Product Details</p>
      * 
      * @param request ListAppCommoditySpecificationsV2ForPartnerRequest
      * @return ListAppCommoditySpecificationsV2ForPartnerResponse
@@ -4223,7 +4433,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query the list of domain redirection rules</p>
+     * <p>Queries the list of HTTP 301 status code redirects for a website.</p>
      * 
      * @param request ListAppDomainRedirectRecordsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4263,7 +4473,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query the list of domain redirection rules</p>
+     * <p>Queries the list of HTTP 301 status code redirects for a website.</p>
      * 
      * @param request ListAppDomainRedirectRecordsRequest
      * @return ListAppDomainRedirectRecordsResponse
@@ -4275,7 +4485,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>List all domain names under the application instance</p>
+     * <p>Queries the list of domain names bound to a website.</p>
      * 
      * @param request ListAppInstanceDomainsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4335,7 +4545,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>List all domain names under the application instance</p>
+     * <p>Queries the list of domain names bound to a website.</p>
      * 
      * @param request ListAppInstanceDomainsRequest
      * @return ListAppInstanceDomainsResponse
@@ -4347,7 +4557,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Website Instance List Query</p>
+     * <p>Queries the list of application instances.</p>
      * 
      * @param tmpReq ListAppInstancesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4429,7 +4639,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Website Instance List Query</p>
+     * <p>Queries the list of application instances.</p>
      * 
      * @param request ListAppInstancesRequest
      * @return ListAppInstancesResponse
@@ -4861,7 +5071,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modify the configuration of a building instance</p>
+     * <p>Modifies the specifications of a website building application instance.</p>
      * 
      * @param request ModifyAppInstanceSpecRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4917,7 +5127,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modify the configuration of a building instance</p>
+     * <p>Modifies the specifications of a website building application instance.</p>
      * 
      * @param request ModifyAppInstanceSpecRequest
      * @return ModifyAppInstanceSpecResponse
@@ -4929,7 +5139,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modify a material folder</p>
+     * <p>Modifies a material folder.</p>
      * 
      * @param request ModifyMaterialDirectoryRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4969,7 +5179,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modify a material folder</p>
+     * <p>Modifies a material folder.</p>
      * 
      * @param request ModifyMaterialDirectoryRequest
      * @return ModifyMaterialDirectoryResponse
@@ -4981,7 +5191,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modify a material file</p>
+     * <p>Modifies a material file.</p>
      * 
      * @param request ModifyMaterialFileRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5021,7 +5231,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modify a material file</p>
+     * <p>Modifies a material file.</p>
      * 
      * @param request ModifyMaterialFileRequest
      * @return ModifyMaterialFileResponse
@@ -5033,7 +5243,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modify the status of a material file</p>
+     * <p>Modifies the status of a material file.</p>
      * 
      * @param tmpReq ModifyMaterialFileStatusRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5079,7 +5289,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modify the status of a material file</p>
+     * <p>Modifies the status of a material file.</p>
      * 
      * @param request ModifyMaterialFileStatusRequest
      * @return ModifyMaterialFileStatusResponse
@@ -5091,7 +5301,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Shift material folder</p>
+     * <p>Moves a material file folder.</p>
      * 
      * @param request MoveMaterialDirectoryRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5135,7 +5345,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Shift material folder</p>
+     * <p>Moves a material file folder.</p>
      * 
      * @param request MoveMaterialDirectoryRequest
      * @return MoveMaterialDirectoryResponse
@@ -5147,7 +5357,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Shift material files</p>
+     * <p>Moves media asset files.</p>
      * 
      * @param tmpReq MoveMaterialFileRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5193,7 +5403,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Shift material files</p>
+     * <p>Moves media asset files.</p>
      * 
      * @param request MoveMaterialFileRequest
      * @return MoveMaterialFileResponse
@@ -5204,8 +5414,66 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>查询应用实例信息</p>
+     * 
      * <b>summary</b> : 
-     * <p>Operate application for Partnership</p>
+     * <p>数据变更通知触发（for admin）</p>
+     * 
+     * @param request NotifyAppNotificationForAdminRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return NotifyAppNotificationForAdminResponse
+     */
+    public NotifyAppNotificationForAdminResponse notifyAppNotificationForAdminWithOptions(NotifyAppNotificationForAdminRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.bizId)) {
+            query.put("BizId", request.bizId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.env)) {
+            query.put("Env", request.env);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sceneId)) {
+            query.put("SceneId", request.sceneId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "NotifyAppNotificationForAdmin"),
+            new TeaPair("version", "2025-04-29"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new NotifyAppNotificationForAdminResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>查询应用实例信息</p>
+     * 
+     * <b>summary</b> : 
+     * <p>数据变更通知触发（for admin）</p>
+     * 
+     * @param request NotifyAppNotificationForAdminRequest
+     * @return NotifyAppNotificationForAdminResponse
+     */
+    public NotifyAppNotificationForAdminResponse notifyAppNotificationForAdmin(NotifyAppNotificationForAdminRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.notifyAppNotificationForAdminWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Operates an application by a partner.</p>
      * 
      * @param request OperateAppInstanceForPartnerRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5241,7 +5509,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Operate application for Partnership</p>
+     * <p>Operates an application by a partner.</p>
      * 
      * @param request OperateAppInstanceForPartnerRequest
      * @return OperateAppInstanceForPartnerResponse
@@ -5253,7 +5521,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Partnership operates application services.</p>
+     * <p>Operates application services on behalf of a partner.</p>
      * 
      * @param request OperateAppServiceForPartnerRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5297,7 +5565,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Partnership operates application services.</p>
+     * <p>Operates application services on behalf of a partner.</p>
      * 
      * @param request OperateAppServiceForPartnerRequest
      * @return OperateAppServiceForPartnerResponse
@@ -5363,10 +5631,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Supabase instance information corresponding to the operation resource</p>
+     * <p>The Supabase instance information corresponding to the operated resource.</p>
      * 
      * <b>summary</b> : 
-     * <p>Supabase instance information corresponding to the operation resource</p>
+     * <p>Operates on the Supabase instance information corresponding to a resource.</p>
      * 
      * @param request OperateSupabaseForAdminRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5442,10 +5710,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Supabase instance information corresponding to the operation resource</p>
+     * <p>The Supabase instance information corresponding to the operated resource.</p>
      * 
      * <b>summary</b> : 
-     * <p>Supabase instance information corresponding to the operation resource</p>
+     * <p>Operates on the Supabase instance information corresponding to a resource.</p>
      * 
      * @param request OperateSupabaseForAdminRequest
      * @return OperateSupabaseForAdminResponse
@@ -5527,10 +5795,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Query the Supabase instance information corresponding to the resource</p>
+     * <p>Queries the Supabase instance information corresponding to a resource.</p>
      * 
      * <b>summary</b> : 
-     * <p>Push resource metering data</p>
+     * <p>Pushes resource metering data.</p>
      * 
      * @param request PushResourceMeasureRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5594,10 +5862,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Query the Supabase instance information corresponding to the resource</p>
+     * <p>Queries the Supabase instance information corresponding to a resource.</p>
      * 
      * <b>summary</b> : 
-     * <p>Push resource metering data</p>
+     * <p>Pushes resource metering data.</p>
      * 
      * @param request PushResourceMeasureRequest
      * @return PushResourceMeasureResponse
@@ -5609,10 +5877,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Query the Supabase instance information corresponding to the resource</p>
+     * <p>Queries the Supabase instance information associated with a resource.</p>
      * 
      * <b>summary</b> : 
-     * <p>Query the details of inspiration value acquisition (quota account list, including expiration mark)</p>
+     * <p>Queries the details of inspiration point acquisition (quota account list, including expiration flags).</p>
      * 
      * @param request QueryInspirationAccountDetailsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5668,10 +5936,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Query the Supabase instance information corresponding to the resource</p>
+     * <p>Queries the Supabase instance information associated with a resource.</p>
      * 
      * <b>summary</b> : 
-     * <p>Query the details of inspiration value acquisition (quota account list, including expiration mark)</p>
+     * <p>Queries the details of inspiration point acquisition (quota account list, including expiration flags).</p>
      * 
      * @param request QueryInspirationAccountDetailsRequest
      * @return QueryInspirationAccountDetailsResponse
@@ -5683,10 +5951,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Query the Supabase instance information corresponding to the resource</p>
+     * <p>Query the Supabase instance information corresponding to the resource.</p>
      * 
      * <b>summary</b> : 
-     * <p>Query the overview of inspiration balance</p>
+     * <p>Query Inspiration Balance Overview</p>
      * 
      * @param runtime runtime options for this request RuntimeOptions
      * @return QueryInspirationBalanceResponse
@@ -5709,10 +5977,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Query the Supabase instance information corresponding to the resource</p>
+     * <p>Query the Supabase instance information corresponding to the resource.</p>
      * 
      * <b>summary</b> : 
-     * <p>Query the overview of inspiration balance</p>
+     * <p>Query Inspiration Balance Overview</p>
      * @return QueryInspirationBalanceResponse
      */
     public QueryInspirationBalanceResponse queryInspirationBalance() throws Exception {
@@ -5722,10 +5990,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Obtain the configuration information of the code generation plugin</p>
+     * <p>Retrieves the configuration information of the code generation plug-in.</p>
      * 
      * <b>summary</b> : 
-     * <p>Query inspiration value consumption details</p>
+     * <p>Queries the details of inspiration point consumption.</p>
      * 
      * @param request QueryInspirationConsumeRecordsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5781,10 +6049,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Obtain the configuration information of the code generation plugin</p>
+     * <p>Retrieves the configuration information of the code generation plug-in.</p>
      * 
      * <b>summary</b> : 
-     * <p>Query inspiration value consumption details</p>
+     * <p>Queries the details of inspiration point consumption.</p>
      * 
      * @param request QueryInspirationConsumeRecordsRequest
      * @return QueryInspirationConsumeRecordsResponse
@@ -5796,7 +6064,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query the material folder tree</p>
+     * <p>Queries the material folder tree.</p>
      * 
      * @param request QueryMaterialDirectoryTreeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5836,7 +6104,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query the material folder tree</p>
+     * <p>Queries the material folder tree.</p>
      * 
      * @param request QueryMaterialDirectoryTreeRequest
      * @return QueryMaterialDirectoryTreeResponse
@@ -5848,7 +6116,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query Material File Details</p>
+     * <p>Queries the details of a material file.</p>
      * 
      * @param request QueryMaterialFileDetailRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5884,7 +6152,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query Material File Details</p>
+     * <p>Queries the details of a material file.</p>
      * 
      * @param request QueryMaterialFileDetailRequest
      * @return QueryMaterialFileDetailResponse
@@ -5896,7 +6164,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query the list of material files</p>
+     * <p>Queries the list of material files.</p>
      * 
      * @param tmpReq QueryMaterialFileListRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5994,7 +6262,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query the list of material files</p>
+     * <p>Queries the list of material files.</p>
      * 
      * @param request QueryMaterialFileListRequest
      * @return QueryMaterialFileListResponse
@@ -6006,7 +6274,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query file overview</p>
+     * <p>Queries the file overview.</p>
      * 
      * @param tmpReq QueryMaterialFileSummaryInfoRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6080,7 +6348,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query file overview</p>
+     * <p>Queries the file overview.</p>
      * 
      * @param request QueryMaterialFileSummaryInfoRequest
      * @return QueryMaterialFileSummaryInfoResponse
@@ -6092,7 +6360,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query the details of a Material generation Job</p>
+     * <p>Queries the details of a material generation task.</p>
      * 
      * @param request QueryMaterialTaskDetailRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6124,7 +6392,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query the details of a Material generation Job</p>
+     * <p>Queries the details of a material generation task.</p>
      * 
      * @param request QueryMaterialTaskDetailRequest
      * @return QueryMaterialTaskDetailResponse
@@ -6136,7 +6404,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query the list of Material generation Jobs</p>
+     * <p>Query Material Generation Task List</p>
      * 
      * @param tmpReq QueryMaterialTaskListRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6206,7 +6474,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query the list of Material generation Jobs</p>
+     * <p>Query Material Generation Task List</p>
      * 
      * @param request QueryMaterialTaskListRequest
      * @return QueryMaterialTaskListResponse
@@ -6218,10 +6486,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Query the auth configuration information of the Supabase instance corresponding to the resource</p>
+     * <p>Queries the auth configuration of a Supabase instance associated with a resource.</p>
      * 
      * <b>summary</b> : 
-     * <p>Query the auth configuration information of the Supabase instance corresponding to the resource</p>
+     * <p>Queries the auth configuration of a Supabase instance associated with a resource.</p>
      * 
      * @param request QuerySupabaseAuthConfigsForAdminRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6281,10 +6549,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Query the auth configuration information of the Supabase instance corresponding to the resource</p>
+     * <p>Queries the auth configuration of a Supabase instance associated with a resource.</p>
      * 
      * <b>summary</b> : 
-     * <p>Query the auth configuration information of the Supabase instance corresponding to the resource</p>
+     * <p>Queries the auth configuration of a Supabase instance associated with a resource.</p>
      * 
      * @param request QuerySupabaseAuthConfigsForAdminRequest
      * @return QuerySupabaseAuthConfigsForAdminResponse
@@ -6296,10 +6564,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Query the Supabase instance configuration information corresponding to the resource.</p>
+     * <p>Queries the Supabase instance configuration information for a specified resource.</p>
      * 
      * <b>summary</b> : 
-     * <p>Query the Supabase instance configuration information corresponding to the resource.</p>
+     * <p>Queries the Supabase instance configuration information for a specified resource.</p>
      * 
      * @param request QuerySupabaseConfigsForAdminRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6355,10 +6623,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Query the Supabase instance configuration information corresponding to the resource.</p>
+     * <p>Queries the Supabase instance configuration information for a specified resource.</p>
      * 
      * <b>summary</b> : 
-     * <p>Query the Supabase instance configuration information corresponding to the resource.</p>
+     * <p>Queries the Supabase instance configuration information for a specified resource.</p>
      * 
      * @param request QuerySupabaseConfigsForAdminRequest
      * @return QuerySupabaseConfigsForAdminResponse
@@ -6370,10 +6638,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Query the Supabase instance information corresponding to the resource</p>
+     * <p>Queries the Supabase instance information for a specified resource.</p>
      * 
      * <b>summary</b> : 
-     * <p>Query the Supabase instance information corresponding to the resource</p>
+     * <p>Queries the Supabase instance information for a specified resource.</p>
      * 
      * @param request QuerySupabaseInstanceInfoForAdminRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6429,10 +6697,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Query the Supabase instance information corresponding to the resource</p>
+     * <p>Queries the Supabase instance information for a specified resource.</p>
      * 
      * <b>summary</b> : 
-     * <p>Query the Supabase instance information corresponding to the resource</p>
+     * <p>Queries the Supabase instance information for a specified resource.</p>
      * 
      * @param request QuerySupabaseInstanceInfoForAdminRequest
      * @return QuerySupabaseInstanceInfoForAdminResponse
@@ -6444,10 +6712,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Obtain QR code plugin Configuration Information</p>
+     * <p>Retrieves the configuration information of the code generation plugin.</p>
      * 
      * <b>summary</b> : 
-     * <p>Reconnect AI conversation</p>
+     * <p>Reconnects an AI conversation.</p>
      * 
      * @param request ReconnectAppChatRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6455,21 +6723,21 @@ public class Client extends com.aliyun.teaopenapi.Client {
      */
     public ReconnectAppChatResponse reconnectAppChatWithOptions(ReconnectAppChatRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.chatId)) {
-            query.put("ChatId", request.chatId);
+            body.put("ChatId", request.chatId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.conversationId)) {
-            query.put("ConversationId", request.conversationId);
+            body.put("ConversationId", request.conversationId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.lastEventId)) {
-            query.put("LastEventId", request.lastEventId);
+            body.put("LastEventId", request.lastEventId);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
         com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "ReconnectAppChat"),
@@ -6487,10 +6755,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Obtain QR code plugin Configuration Information</p>
+     * <p>Retrieves the configuration information of the code generation plugin.</p>
      * 
      * <b>summary</b> : 
-     * <p>Reconnect AI conversation</p>
+     * <p>Reconnects an AI conversation.</p>
      * 
      * @param request ReconnectAppChatRequest
      * @return ReconnectAppChatResponse
@@ -6502,7 +6770,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Refresh ticket</p>
+     * <p>Refreshes the password-free login ticket for a website building instance.</p>
      * 
      * @param request RefreshAppInstanceTicketRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6542,7 +6810,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Refresh ticket</p>
+     * <p>Refreshes the password-free login ticket for a website building instance.</p>
      * 
      * @param request RefreshAppInstanceTicketRequest
      * @return RefreshAppInstanceTicketResponse
@@ -6554,7 +6822,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Refund for channel partner website building service.</p>
+     * <p>Processes a refund for a channel partner website building service.</p>
      * 
      * @param request RefundAppInstanceForPartnerRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6598,7 +6866,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Refund for channel partner website building service.</p>
+     * <p>Processes a refund for a channel partner website building service.</p>
      * 
      * @param request RefundAppInstanceForPartnerRequest
      * @return RefundAppInstanceForPartnerResponse
@@ -6610,7 +6878,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Renewal of website building instance</p>
+     * <p>Renews a website builder application instance.</p>
      * 
      * @param request RenewAppInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6662,7 +6930,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Renewal of website building instance</p>
+     * <p>Renews a website builder application instance.</p>
      * 
      * @param request RenewAppInstanceRequest
      * @return RenewAppInstanceResponse
@@ -6674,10 +6942,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Obtain the configuration information of the code generation plugin</p>
+     * <p>Retrieves the configuration information of the code generation plug-in.</p>
      * 
      * <b>summary</b> : 
-     * <p>Renewal/Purge Sandbox Environment</p>
+     * <p>Renews or refreshes a sandbox environment.</p>
      * 
      * @param request RenewAppSandboxRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6709,10 +6977,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Obtain the configuration information of the code generation plugin</p>
+     * <p>Retrieves the configuration information of the code generation plug-in.</p>
      * 
      * <b>summary</b> : 
-     * <p>Renewal/Purge Sandbox Environment</p>
+     * <p>Renews or refreshes a sandbox environment.</p>
      * 
      * @param request RenewAppSandboxRequest
      * @return RenewAppSandboxResponse
@@ -6950,7 +7218,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Image retrieval</p>
+     * <p>Searches for images.</p>
      * 
      * @param tmpReq SearchImageRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7044,7 +7312,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Image retrieval</p>
+     * <p>Searches for images.</p>
      * 
      * @param request SearchImageRequest
      * @return SearchImageResponse
@@ -7056,7 +7324,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Set the SSL certificate for a domain</p>
+     * <p>Sets the SSL certificate for a website.</p>
      * 
      * @param request SetAppDomainCertificateRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7108,7 +7376,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Set the SSL certificate for a domain</p>
+     * <p>Sets the SSL certificate for a website.</p>
      * 
      * @param request SetAppDomainCertificateRequest
      * @return SetAppDomainCertificateResponse
@@ -7182,7 +7450,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Submit a Material Generation Job</p>
+     * <p>Submits a material generation task.</p>
      * 
      * @param request SubmitMaterialTaskRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7218,7 +7486,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Submit a Material Generation Job</p>
+     * <p>Submits a material generation task.</p>
      * 
      * @param request SubmitMaterialTaskRequest
      * @return SubmitMaterialTaskResponse
@@ -7288,7 +7556,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Partnership synchronizes application instance</p>
+     * <p>Synchronizes an application instance from a partner.</p>
      * 
      * @param tmpReq SyncAppInstanceForPartnerRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7342,7 +7610,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Partnership synchronizes application instance</p>
+     * <p>Synchronizes an application instance from a partner.</p>
      * 
      * @param request SyncAppInstanceForPartnerRequest
      * @return SyncAppInstanceForPartnerResponse
@@ -7354,7 +7622,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Unbind Application Domain</p>
+     * <p>Unbinds a domain name from a website and deletes the related DNS records.</p>
      * 
      * @param request UnbindAppDomainRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7390,7 +7658,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Unbind Application Domain</p>
+     * <p>Unbinds a domain name from a website and deletes the related DNS records.</p>
      * 
      * @param request UnbindAppDomainRequest
      * @return UnbindAppDomainResponse
@@ -7990,7 +8258,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Upload material files</p>
+     * <p>Uploads a material file.</p>
      * 
      * @param request UploadMaterialFileRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8034,7 +8302,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Upload material files</p>
+     * <p>Uploads a material file.</p>
      * 
      * @param request UploadMaterialFileRequest
      * @return UploadMaterialFileResponse

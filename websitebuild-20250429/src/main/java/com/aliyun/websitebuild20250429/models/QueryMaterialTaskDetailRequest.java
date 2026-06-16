@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class QueryMaterialTaskDetailRequest extends TeaModel {
     /**
-     * <p>Job ID</p>
+     * <p>The task ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

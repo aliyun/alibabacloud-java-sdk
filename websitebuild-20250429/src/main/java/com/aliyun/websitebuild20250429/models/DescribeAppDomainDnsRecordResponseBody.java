@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeAppDomainDnsRecordResponseBody extends TeaModel {
     /**
-     * <p>Details of access denial; this field is returned only when RAM verification fails.</p>
+     * <p>The access denied details. This field is returned only when RAM authentication fails.</p>
      * 
      * <strong>example:</strong>
      * <p>{}</p>
@@ -14,7 +14,7 @@ public class DescribeAppDomainDnsRecordResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
-     * <p>Whether retry is allowed</p>
+     * <p>Indicates whether retry is allowed.</p>
      * 
      * <strong>example:</strong>
      * <p>False</p>
@@ -23,7 +23,7 @@ public class DescribeAppDomainDnsRecordResponseBody extends TeaModel {
     public Boolean allowRetry;
 
     /**
-     * <p>应用名称，查询此名称的应用</p>
+     * <p>The application name. Queries the application with this name.</p>
      * 
      * <strong>example:</strong>
      * <p>ish-intelligence-store-platform-admin-web</p>
@@ -32,7 +32,7 @@ public class DescribeAppDomainDnsRecordResponseBody extends TeaModel {
     public String appName;
 
     /**
-     * <p>Dynamic error code.</p>
+     * <p>The dynamic error code.</p>
      * 
      * <strong>example:</strong>
      * <p>ERROR-oo1</p>
@@ -41,7 +41,7 @@ public class DescribeAppDomainDnsRecordResponseBody extends TeaModel {
     public String dynamicCode;
 
     /**
-     * <p>Dynamic message.</p>
+     * <p>The dynamic message.</p>
      * 
      * <strong>example:</strong>
      * <p>SYSTEM_ERROR</p>
@@ -50,19 +50,19 @@ public class DescribeAppDomainDnsRecordResponseBody extends TeaModel {
     public String dynamicMessage;
 
     /**
-     * <p>返回错误参数</p>
+     * <p>The returned error parameters.</p>
      */
     @NameInMap("ErrorArgs")
     public java.util.List<?> errorArgs;
 
     /**
-     * <p>Application module</p>
+     * <p>The application module.</p>
      */
     @NameInMap("Module")
     public DescribeAppDomainDnsRecordResponseBodyModule module;
 
     /**
-     * <p>ID of the request</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>6C6B99AC-39EC-5350-874C-204128C905E6</p>
@@ -71,7 +71,7 @@ public class DescribeAppDomainDnsRecordResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Error code</p>
+     * <p>The error code.</p>
      * 
      * <strong>example:</strong>
      * <p>SYSTEM.ERROR</p>
@@ -80,7 +80,7 @@ public class DescribeAppDomainDnsRecordResponseBody extends TeaModel {
     public String rootErrorCode;
 
     /**
-     * <p>Exception message</p>
+     * <p>The exception message.</p>
      * 
      * <strong>example:</strong>
      * <p>系统异常</p>
@@ -89,7 +89,7 @@ public class DescribeAppDomainDnsRecordResponseBody extends TeaModel {
     public String rootErrorMsg;
 
     /**
-     * <p>Backup parameter.</p>
+     * <p>The reserved parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>True</p>
@@ -192,7 +192,7 @@ public class DescribeAppDomainDnsRecordResponseBody extends TeaModel {
 
     public static class DescribeAppDomainDnsRecordResponseBodyModule extends TeaModel {
         /**
-         * <p>Host record</p>
+         * <p>The host record.</p>
          * 
          * <strong>example:</strong>
          * <p>*.com</p>
@@ -201,7 +201,7 @@ public class DescribeAppDomainDnsRecordResponseBody extends TeaModel {
         public String host;
 
         /**
-         * <p>Record type</p>
+         * <p>The record type.</p>
          * 
          * <strong>example:</strong>
          * <p>A</p>
@@ -210,7 +210,7 @@ public class DescribeAppDomainDnsRecordResponseBody extends TeaModel {
         public String recordType;
 
         /**
-         * <p>Record value</p>
+         * <p>The record value.</p>
          * 
          * <strong>example:</strong>
          * <p>Maintenance</p>

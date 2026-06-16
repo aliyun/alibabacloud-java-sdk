@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetIcpFilingInfoForPartnerResponseBody extends TeaModel {
     /**
-     * <p>Request result.</p>
+     * <p>The request result.</p>
      */
     @NameInMap("Data")
     public GetIcpFilingInfoForPartnerResponseBodyData data;
@@ -42,7 +42,7 @@ public class GetIcpFilingInfoForPartnerResponseBody extends TeaModel {
 
     public static class GetIcpFilingInfoForPartnerResponseBodyData extends TeaModel {
         /**
-         * <p>The ICP filing number associated with the domain name. Supports entity ICP filing numbers and website ICP filing numbers.</p>
+         * <p>The ICP filing number associated with the domain name. Both entity ICP filing numbers and website ICP filing numbers are supported.</p>
          * 
          * <strong>example:</strong>
          * <p>京ICP备15023563号-3</p>
@@ -51,13 +51,13 @@ public class GetIcpFilingInfoForPartnerResponseBody extends TeaModel {
         public String icpNumber;
 
         /**
-         * <p>Whether the domain is filed for ICP</p>
+         * <p>Indicates whether the domain name has an ICP filing.</p>
          */
         @NameInMap("Recorded")
         public Boolean recorded;
 
         /**
-         * <p>The website ICP filing number corresponding to the domain name</p>
+         * <p>The website ICP filing number associated with the domain name.</p>
          * 
          * <strong>example:</strong>
          * <p>湘ICP备14011526号-3A</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetAppRequirementRequest extends TeaModel {
     /**
-     * <p>Session ID</p>
+     * <p>The session ID.</p>
      * 
      * <strong>example:</strong>
      * <p>81bc5a34-1d8d-4ef7-a208-7401c51b054b</p>

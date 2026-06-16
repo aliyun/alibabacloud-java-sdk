@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetAppInstanceForAdminResponseBody extends TeaModel {
     /**
-     * <p>Detailed reason for access denial.</p>
+     * <p>The details of the permission verification failure.</p>
      * 
      * <strong>example:</strong>
      * <p>{}</p>
@@ -14,7 +14,7 @@ public class GetAppInstanceForAdminResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
-     * <p>Whether retry is allowed</p>
+     * <p>Indicates whether retry is allowed.</p>
      * 
      * <strong>example:</strong>
      * <p>False</p>
@@ -23,7 +23,7 @@ public class GetAppInstanceForAdminResponseBody extends TeaModel {
     public Boolean allowRetry;
 
     /**
-     * <p>The name of the application. The name must be 4 to 26 characters in length. The name can contain letters, digits, and underscores (_), and must start with a letter.</p>
+     * <p>The application name that was queried.</p>
      * 
      * <strong>example:</strong>
      * <p>or</p>
@@ -32,7 +32,7 @@ public class GetAppInstanceForAdminResponseBody extends TeaModel {
     public String appName;
 
     /**
-     * <p>Dynamic error code.</p>
+     * <p>The dynamic error code.</p>
      * 
      * <strong>example:</strong>
      * <p>ERROR-oo1</p>
@@ -41,10 +41,7 @@ public class GetAppInstanceForAdminResponseBody extends TeaModel {
     public String dynamicCode;
 
     /**
-     * <p>Dynamic error message, used to replace <code>%s</code> in the error message of the returned parameter <strong>ErrMessage</strong>.</p>
-     * <blockquote>
-     * <p>If <strong>ErrMessage</strong> returns <strong>The Value of Input Parameter %s is not valid</strong>, and <strong>DynamicMessage</strong> returns <strong>DtsJobId</strong>, it means that the input request parameter <strong>DtsJobId</strong> is invalid.</p>
-     * </blockquote>
+     * <p>The dynamic error message.</p>
      * 
      * <strong>example:</strong>
      * <p>abc</p>
@@ -53,21 +50,13 @@ public class GetAppInstanceForAdminResponseBody extends TeaModel {
     public String dynamicMessage;
 
     /**
-     * <p>The parameter whose value is invalid.</p>
+     * <p>The error parameters returned.</p>
      */
     @NameInMap("ErrorArgs")
     public java.util.List<?> errorArgs;
 
     /**
-     * <p>Data table module.</p>
-     * <ul>
-     * <li><p>ABTest: Experiment data table</p>
-     * </li>
-     * <li><p>ExperimentTool: Experiment tool table</p>
-     * </li>
-     * <li><p>DataDiagnosis: Data diagnosis</p>
-     * </li>
-     * </ul>
+     * <p>The response data.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -85,7 +74,7 @@ public class GetAppInstanceForAdminResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Error Code</p>
+     * <p>The error code.</p>
      * 
      * <strong>example:</strong>
      * <p>SYSTEM.ERROR</p>
@@ -94,7 +83,7 @@ public class GetAppInstanceForAdminResponseBody extends TeaModel {
     public String rootErrorCode;
 
     /**
-     * <p>Error message</p>
+     * <p>The exception message.</p>
      * 
      * <strong>example:</strong>
      * <p>系统异常</p>
@@ -103,7 +92,7 @@ public class GetAppInstanceForAdminResponseBody extends TeaModel {
     public String rootErrorMsg;
 
     /**
-     * <p>Reserved parameter.</p>
+     * <p>The reserved parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>True</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class AppMaterialTask extends TeaModel {
     /**
-     * <p>Job completion time</p>
+     * <p>The task completion time.</p>
      * 
      * <strong>example:</strong>
      * <p>2025-12-26 11:30:05</p>
@@ -14,7 +14,7 @@ public class AppMaterialTask extends TeaModel {
     public String completeTime;
 
     /**
-     * <p>Completion time display format</p>
+     * <p>The display format of the completion time.</p>
      * 
      * <strong>example:</strong>
      * <p>1分钟前</p>
@@ -23,7 +23,7 @@ public class AppMaterialTask extends TeaModel {
     public String completeTimeFormat;
 
     /**
-     * <p>Reason for failure</p>
+     * <p>The failure reason.</p>
      * 
      * <strong>example:</strong>
      * <p>参数不合规</p>
@@ -32,13 +32,13 @@ public class AppMaterialTask extends TeaModel {
     public String failReason;
 
     /**
-     * <p>List of final files</p>
+     * <p>The list of final files.</p>
      */
     @NameInMap("FinalFileUrls")
     public java.util.List<String> finalFileUrls;
 
     /**
-     * <p>Task Status</p>
+     * <p>The task status.</p>
      * 
      * <strong>example:</strong>
      * <p>RUNNING</p>
@@ -47,7 +47,7 @@ public class AppMaterialTask extends TeaModel {
     public String status;
 
     /**
-     * <p>Job substatus</p>
+     * <p>The task substatus.</p>
      * 
      * <strong>example:</strong>
      * <p>PENDING</p>
@@ -56,7 +56,7 @@ public class AppMaterialTask extends TeaModel {
     public String subStatus;
 
     /**
-     * <p>Submitted At.</p>
+     * <p>The submit time.</p>
      * 
      * <strong>example:</strong>
      * <p>2025-12-26 11:30:05</p>
@@ -65,7 +65,7 @@ public class AppMaterialTask extends TeaModel {
     public String submitTime;
 
     /**
-     * <p>Job ID.</p>
+     * <p>The task ID.</p>
      * 
      * <strong>example:</strong>
      * <p>81d04d62c3483b32bacf1d306d2622b2</p>
@@ -74,7 +74,7 @@ public class AppMaterialTask extends TeaModel {
     public String taskId;
 
     /**
-     * <p>Job parameter</p>
+     * <p>The task parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>{
@@ -87,7 +87,7 @@ public class AppMaterialTask extends TeaModel {
     public String taskParam;
 
     /**
-     * <p>Task Type.</p>
+     * <p>The task type.</p>
      * 
      * <strong>example:</strong>
      * <p>IMAGE_LOGO</p>

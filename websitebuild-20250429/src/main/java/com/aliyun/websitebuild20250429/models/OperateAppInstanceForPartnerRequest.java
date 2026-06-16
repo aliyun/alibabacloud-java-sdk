@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class OperateAppInstanceForPartnerRequest extends TeaModel {
     /**
-     * <p>extension information</p>
+     * <p>The extended information.</p>
      * 
      * <strong>example:</strong>
      * <p>{\&quot;deliveryNodeName\&quot;:\&quot;交付质检\&quot;,\&quot;deliveryNodeStatus\&quot;:\&quot;Finish\&quot;,\&quot;deliveryOperatorRole\&quot;:\&quot;Provider\&quot;}</p>
@@ -14,7 +14,7 @@ public class OperateAppInstanceForPartnerRequest extends TeaModel {
     public String extend;
 
     /**
-     * <p>event type of the operation</p>
+     * <p>The operation event type.</p>
      * 
      * <strong>example:</strong>
      * <p>SERVICE_DELIVERY_PROCESS</p>

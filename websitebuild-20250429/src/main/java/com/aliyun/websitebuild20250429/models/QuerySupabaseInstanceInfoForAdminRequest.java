@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class QuerySupabaseInstanceInfoForAdminRequest extends TeaModel {
     /**
-     * <p>Business instance ID</p>
+     * <p>The business instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class QuerySupabaseInstanceInfoForAdminRequest extends TeaModel {
     public String bizId;
 
     /**
-     * <p>Environment identity</p>
+     * <p>The environment identifier.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,31 +25,35 @@ public class QuerySupabaseInstanceInfoForAdminRequest extends TeaModel {
     public String env;
 
     /**
-     * <p>Sorting field</p>
+     * <p>The field by which to sort the results.</p>
      */
     @NameInMap("OrderColumn")
     public String orderColumn;
 
     /**
-     * <p>Sorting type: ASC or DESC</p>
+     * <p>The sort order. Valid values:</p>
+     * <ul>
+     * <li>ASC: ascending order.</li>
+     * <li>DESC: descending order.</li>
+     * </ul>
      */
     @NameInMap("OrderType")
     public String orderType;
 
     /**
-     * <p>Page number, default is 1</p>
+     * <p>The page number. Default value: 1.</p>
      */
     @NameInMap("PageNum")
     public Integer pageNum;
 
     /**
-     * <p>Page size, default is 10</p>
+     * <p>The number of entries per page. Default value: 10.</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
-     * <p>User ID</p>
+     * <p>The user ID.</p>
      * 
      * <strong>example:</strong>
      * <p>123</p>

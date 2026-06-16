@@ -14,7 +14,7 @@ public class QueryInspirationBalanceResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
-     * <p>Whether retry is allowed</p>
+     * <p>Indicates whether retry is allowed.</p>
      * 
      * <strong>example:</strong>
      * <p>False</p>
@@ -23,7 +23,7 @@ public class QueryInspirationBalanceResponseBody extends TeaModel {
     public Boolean allowRetry;
 
     /**
-     * <p>Application name; query the application with this name</p>
+     * <p>Application name. Query the application with this name.</p>
      * 
      * <strong>example:</strong>
      * <p>dewuApp</p>
@@ -41,7 +41,7 @@ public class QueryInspirationBalanceResponseBody extends TeaModel {
     public String dynamicCode;
 
     /**
-     * <p>Dynamic error message used to replace <code>%s</code> in the <strong>ErrMessage</strong> error message.  </p>
+     * <p>Dynamic error message, used to replace <code>%s</code> in the <strong>ErrMessage</strong> error message of the response parameters.</p>
      * <blockquote>
      * <p>If <strong>ErrMessage</strong> returns <strong>The Value of Input Parameter %s is not valid</strong> and <strong>DynamicMessage</strong> returns <strong>DtsJobId</strong>, it indicates that the request parameter <strong>DtsJobId</strong> is invalid.</p>
      * </blockquote>
@@ -53,13 +53,13 @@ public class QueryInspirationBalanceResponseBody extends TeaModel {
     public String dynamicMessage;
 
     /**
-     * <p>Fault parameters.</p>
+     * <p>Error parameters.</p>
      */
     @NameInMap("ErrorArgs")
     public java.util.List<?> errorArgs;
 
     /**
-     * <p>Response data</p>
+     * <p>Response data.</p>
      */
     @NameInMap("Module")
     public QueryInspirationBalanceResponseBodyModule module;
@@ -74,7 +74,7 @@ public class QueryInspirationBalanceResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Error code</p>
+     * <p>Error code.</p>
      * 
      * <strong>example:</strong>
      * <p>SYSTEM.ERROR</p>
@@ -83,7 +83,7 @@ public class QueryInspirationBalanceResponseBody extends TeaModel {
     public String rootErrorCode;
 
     /**
-     * <p>Abnormal message</p>
+     * <p>Exception message.</p>
      * 
      * <strong>example:</strong>
      * <p>系统异常</p>
@@ -92,7 +92,7 @@ public class QueryInspirationBalanceResponseBody extends TeaModel {
     public String rootErrorMsg;
 
     /**
-     * <p>Whether processing is synchronous</p>
+     * <p>Indicates whether to process synchronously.</p>
      * 
      * <strong>example:</strong>
      * <p>True</p>
@@ -195,7 +195,7 @@ public class QueryInspirationBalanceResponseBody extends TeaModel {
 
     public static class QueryInspirationBalanceResponseBodyModule extends TeaModel {
         /**
-         * <p>Remaining (totalQuota - totalUsed)</p>
+         * <p>Remaining (totalQuota - totalUsed).</p>
          * 
          * <strong>example:</strong>
          * <p>8</p>
@@ -207,7 +207,7 @@ public class QueryInspirationBalanceResponseBody extends TeaModel {
         public String remainingStr;
 
         /**
-         * <p>Total quota (sum of initQuota from all valid accounts)</p>
+         * <p>Total quota (sum of initQuota for all active accounts).</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -219,7 +219,7 @@ public class QueryInspirationBalanceResponseBody extends TeaModel {
         public String totalQuotaStr;
 
         /**
-         * <p>Consumed amount (sum of used from all valid accounts)</p>
+         * <p>Total used (sum of used for all active accounts).</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>

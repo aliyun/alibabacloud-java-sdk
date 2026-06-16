@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class QueryMaterialFileSummaryInfoShrinkRequest extends TeaModel {
     /**
-     * <p>Business instance ID</p>
+     * <p>The business instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class QueryMaterialFileSummaryInfoShrinkRequest extends TeaModel {
     public String bizId;
 
     /**
-     * <p>Folder ID</p>
+     * <p>The ID of the directory.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,7 +25,7 @@ public class QueryMaterialFileSummaryInfoShrinkRequest extends TeaModel {
     public String directoryId;
 
     /**
-     * <p>File name</p>
+     * <p>The file name.</p>
      * 
      * <strong>example:</strong>
      * <p>文件名</p>
@@ -34,7 +34,7 @@ public class QueryMaterialFileSummaryInfoShrinkRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>Sorting field</p>
+     * <p>The field by which to sort the results.</p>
      * 
      * <strong>example:</strong>
      * <p>CreationTime</p>
@@ -43,7 +43,7 @@ public class QueryMaterialFileSummaryInfoShrinkRequest extends TeaModel {
     public String orderColumn;
 
     /**
-     * <p>Sorting type: ASC or DESC</p>
+     * <p>The sort order. Valid values: ASC and DESC.</p>
      * 
      * <strong>example:</strong>
      * <p>BUY</p>
@@ -52,7 +52,7 @@ public class QueryMaterialFileSummaryInfoShrinkRequest extends TeaModel {
     public String orderType;
 
     /**
-     * <p>Page number. Default is 1.</p>
+     * <p>The page number. Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -61,7 +61,7 @@ public class QueryMaterialFileSummaryInfoShrinkRequest extends TeaModel {
     public Integer pageNum;
 
     /**
-     * <p>Page size. Default is 10.</p>
+     * <p>The number of entries per page. Default value: 10.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -70,13 +70,13 @@ public class QueryMaterialFileSummaryInfoShrinkRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>File status</p>
+     * <p>The file status.</p>
      */
     @NameInMap("StatusList")
     public String statusListShrink;
 
     /**
-     * <p>File type</p>
+     * <p>The file type.</p>
      */
     @NameInMap("TypeList")
     public String typeListShrink;

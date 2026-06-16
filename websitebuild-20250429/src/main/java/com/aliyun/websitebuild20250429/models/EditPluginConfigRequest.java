@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class EditPluginConfigRequest extends TeaModel {
     /**
-     * <p>Business ID</p>
+     * <p>The business ID.</p>
      * 
      * <strong>example:</strong>
      * <p>WD20250703155602000001</p>
@@ -14,7 +14,7 @@ public class EditPluginConfigRequest extends TeaModel {
     public String bizId;
 
     /**
-     * <p>Plugin configuration</p>
+     * <p>The plug-in configuration.</p>
      * 
      * <strong>example:</strong>
      * <p>{}</p>
@@ -23,7 +23,7 @@ public class EditPluginConfigRequest extends TeaModel {
     public String pluginConfig;
 
     /**
-     * <p>Plugin description</p>
+     * <p>The plug-in description.</p>
      * 
      * <strong>example:</strong>
      * <p>根据关键字查询相关的Github Repositories</p>
@@ -32,7 +32,7 @@ public class EditPluginConfigRequest extends TeaModel {
     public String pluginDesc;
 
     /**
-     * <p>Plugin ID</p>
+     * <p>The plug-in ID.</p>
      * 
      * <strong>example:</strong>
      * <p>aliplayer-react</p>
@@ -41,7 +41,7 @@ public class EditPluginConfigRequest extends TeaModel {
     public String pluginId;
 
     /**
-     * <p>Plugin name</p>
+     * <p>The plug-in name.</p>
      * 
      * <strong>example:</strong>
      * <p>alisecguard</p>

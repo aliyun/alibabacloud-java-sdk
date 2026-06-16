@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class QuerySupabaseAuthConfigsForAdminResponseBody extends TeaModel {
     /**
-     * <p>Details of access denied</p>
+     * <p>The details of the permission verification failure.</p>
      * 
      * <strong>example:</strong>
      * <p>{}</p>
@@ -14,7 +14,7 @@ public class QuerySupabaseAuthConfigsForAdminResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
-     * <p>Is retry allowed</p>
+     * <p>Indicates whether retry is allowed.</p>
      * 
      * <strong>example:</strong>
      * <p>False</p>
@@ -23,7 +23,7 @@ public class QuerySupabaseAuthConfigsForAdminResponseBody extends TeaModel {
     public Boolean allowRetry;
 
     /**
-     * <p>App Name.</p>
+     * <p>The application name.</p>
      * 
      * <strong>example:</strong>
      * <p>or</p>
@@ -32,7 +32,7 @@ public class QuerySupabaseAuthConfigsForAdminResponseBody extends TeaModel {
     public String appName;
 
     /**
-     * <p>Dynamic error code</p>
+     * <p>The dynamic error code.</p>
      * 
      * <strong>example:</strong>
      * <p>ERROR-oo1</p>
@@ -41,7 +41,7 @@ public class QuerySupabaseAuthConfigsForAdminResponseBody extends TeaModel {
     public String dynamicCode;
 
     /**
-     * <p>Dynamic message. Not currently used. Ignore it.</p>
+     * <p>The dynamic message. This parameter is not in use. Ignore this parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>SYSTEM_ERROR</p>
@@ -50,13 +50,13 @@ public class QuerySupabaseAuthConfigsForAdminResponseBody extends TeaModel {
     public String dynamicMessage;
 
     /**
-     * <p>Returned error parameters</p>
+     * <p>The error parameters returned.</p>
      */
     @NameInMap("ErrorArgs")
     public java.util.List<?> errorArgs;
 
     /**
-     * <p>Task object</p>
+     * <p>The task object.</p>
      */
     @NameInMap("Module")
     public QuerySupabaseAuthConfigsForAdminResponseBodyModule module;
@@ -71,7 +71,7 @@ public class QuerySupabaseAuthConfigsForAdminResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>error code</p>
+     * <p>The error code.</p>
      * 
      * <strong>example:</strong>
      * <p>SYSTEM.ERROR</p>
@@ -80,7 +80,7 @@ public class QuerySupabaseAuthConfigsForAdminResponseBody extends TeaModel {
     public String rootErrorCode;
 
     /**
-     * <p>Fault message</p>
+     * <p>The error message.</p>
      * 
      * <strong>example:</strong>
      * <p>系统异常</p>
@@ -89,7 +89,7 @@ public class QuerySupabaseAuthConfigsForAdminResponseBody extends TeaModel {
     public String rootErrorMsg;
 
     /**
-     * <p>Is processed synchronously</p>
+     * <p>Indicates whether the request is synchronously processed.</p>
      * 
      * <strong>example:</strong>
      * <p>True</p>
@@ -192,15 +192,22 @@ public class QuerySupabaseAuthConfigsForAdminResponseBody extends TeaModel {
 
     public static class QuerySupabaseAuthConfigsForAdminResponseBodyModule extends TeaModel {
         /**
-         * <p>Configuration values. Valid values:  </p>
+         * <p>The configuration value. Valid values:</p>
          * <ul>
-         * <li>cc_rule: CC rule.  </li>
-         * <li>ddos_dispatch: DDoS filter interaction scheduling.  </li>
-         * <li>edge_safe: Edge application security.  </li>
-         * <li>blocked_regions: Geo-blocking.  </li>
-         * <li>http_acl_policy: Precise ACL rule.  </li>
-         * <li>bot_manager: Bot traffic Management.  </li>
-         * <li>ip_reputation: IP reputation investigation.</li>
+         * <li><p>cc_rule: HTTP flood mitigation rule.</p>
+         * </li>
+         * <li><p>ddos_dispatch: DDoS interaction scheduling.</p>
+         * </li>
+         * <li><p>edge_safe: edge application security.</p>
+         * </li>
+         * <li><p>blocked_regions: Location Blacklist.</p>
+         * </li>
+         * <li><p>http_acl_policy: Accurate Access Control.</p>
+         * </li>
+         * <li><p>bot_manager: bot traffic management.</p>
+         * </li>
+         * <li><p>ip_reputation: IP reputation library.</p>
+         * </li>
          * </ul>
          */
         @NameInMap("Configs")

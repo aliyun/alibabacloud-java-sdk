@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class MoveMaterialDirectoryResponseBody extends TeaModel {
     /**
-     * <p>Detailed reason for access denial.</p>
+     * <p>The detailed reason why access was denied.</p>
      * 
      * <strong>example:</strong>
      * <p>{}</p>
@@ -14,7 +14,7 @@ public class MoveMaterialDirectoryResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
-     * <p>is retry allowed</p>
+     * <p>Indicates whether retries are allowed.</p>
      * 
      * <strong>example:</strong>
      * <p>False</p>
@@ -23,7 +23,7 @@ public class MoveMaterialDirectoryResponseBody extends TeaModel {
     public Boolean allowRetry;
 
     /**
-     * <p>application Name. Query the application with this Name.</p>
+     * <p>The application name. The application with this name is queried.</p>
      * 
      * <strong>example:</strong>
      * <p>dewuApp</p>
@@ -32,7 +32,7 @@ public class MoveMaterialDirectoryResponseBody extends TeaModel {
     public String appName;
 
     /**
-     * <p>dynamic error code.</p>
+     * <p>The dynamic error code.</p>
      * 
      * <strong>example:</strong>
      * <p>ERROR-oo1</p>
@@ -41,7 +41,7 @@ public class MoveMaterialDirectoryResponseBody extends TeaModel {
     public String dynamicCode;
 
     /**
-     * <p>dynamic error message.</p>
+     * <p>The dynamic error message.</p>
      * 
      * <strong>example:</strong>
      * <p>SYSTEM_ERROR</p>
@@ -50,13 +50,13 @@ public class MoveMaterialDirectoryResponseBody extends TeaModel {
     public String dynamicMessage;
 
     /**
-     * <p>returned error parameters</p>
+     * <p>The error parameters returned.</p>
      */
     @NameInMap("ErrorArgs")
     public java.util.List<?> errorArgs;
 
     /**
-     * <p>error code. The value is described as follows: If the request succeeded, the ErrorCode field is not returned. If the request failed, the ErrorCode field is returned. For more information, see the error code List in this topic.</p>
+     * <p>The error code. The ErrorCode field is not returned if the request is successful. The ErrorCode field is returned if the request fails. For more information, see the error codes in this topic.</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>
@@ -65,7 +65,7 @@ public class MoveMaterialDirectoryResponseBody extends TeaModel {
     public String errorCode;
 
     /**
-     * <p>error message.</p>
+     * <p>The error message.</p>
      * 
      * <strong>example:</strong>
      * <p>aliuid:1998006665794443 assumeRole not exist,serviceName:realtimelogpush.dcdnservices.aliyuncs.com</p>
@@ -74,7 +74,7 @@ public class MoveMaterialDirectoryResponseBody extends TeaModel {
     public String errorMsg;
 
     /**
-     * <p>is shift succeeded</p>
+     * <p>Indicates whether the folder was moved successfully.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -92,7 +92,7 @@ public class MoveMaterialDirectoryResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>error code</p>
+     * <p>The root error code.</p>
      * 
      * <strong>example:</strong>
      * <p>SYSTEM.ERROR</p>
@@ -101,7 +101,7 @@ public class MoveMaterialDirectoryResponseBody extends TeaModel {
     public String rootErrorCode;
 
     /**
-     * <p>abnormal message</p>
+     * <p>The root error message.</p>
      * 
      * <strong>example:</strong>
      * <p>系统异常</p>
@@ -110,7 +110,7 @@ public class MoveMaterialDirectoryResponseBody extends TeaModel {
     public String rootErrorMsg;
 
     /**
-     * <p>identity indicating whether the request succeeded or failed.</p>
+     * <p>Indicates whether the request was successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -119,7 +119,7 @@ public class MoveMaterialDirectoryResponseBody extends TeaModel {
     public Boolean success;
 
     /**
-     * <p>Backup parameter.</p>
+     * <p>The reserved parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>True</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class BatchCheckResourceMeasureResponseBody extends TeaModel {
     /**
-     * <p>Detailed reason for access denial.</p>
+     * <p>The detailed reason why access was denied.</p>
      * 
      * <strong>example:</strong>
      * <p>{}</p>
@@ -14,7 +14,7 @@ public class BatchCheckResourceMeasureResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
-     * <p>Is retry allowed</p>
+     * <p>Indicates whether retries are allowed.</p>
      * 
      * <strong>example:</strong>
      * <p>False</p>
@@ -23,7 +23,7 @@ public class BatchCheckResourceMeasureResponseBody extends TeaModel {
     public Boolean allowRetry;
 
     /**
-     * <p>App name.</p>
+     * <p>The application name.</p>
      * 
      * <strong>example:</strong>
      * <p>watermark</p>
@@ -32,7 +32,7 @@ public class BatchCheckResourceMeasureResponseBody extends TeaModel {
     public String appName;
 
     /**
-     * <p>Dynamic error code.</p>
+     * <p>The dynamic error code.</p>
      * 
      * <strong>example:</strong>
      * <p>ERROR-oo1</p>
@@ -41,7 +41,7 @@ public class BatchCheckResourceMeasureResponseBody extends TeaModel {
     public String dynamicCode;
 
     /**
-     * <p>Dynamic error message.</p>
+     * <p>The dynamic error message.</p>
      * 
      * <strong>example:</strong>
      * <p>SYSTEM_ERROR</p>
@@ -50,13 +50,13 @@ public class BatchCheckResourceMeasureResponseBody extends TeaModel {
     public String dynamicMessage;
 
     /**
-     * <p>Returned error parameters</p>
+     * <p>The error parameters.</p>
      */
     @NameInMap("ErrorArgs")
     public java.util.List<?> errorArgs;
 
     /**
-     * <p>Returned object.</p>
+     * <p>The response object.</p>
      */
     @NameInMap("Module")
     public BatchCheckResourceMeasureResponseBodyModule module;
@@ -71,7 +71,7 @@ public class BatchCheckResourceMeasureResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Error code</p>
+     * <p>The error code.</p>
      * 
      * <strong>example:</strong>
      * <p>SYSTEM.ERROR</p>
@@ -80,7 +80,7 @@ public class BatchCheckResourceMeasureResponseBody extends TeaModel {
     public String rootErrorCode;
 
     /**
-     * <p>Abnormal message</p>
+     * <p>The exception message.</p>
      * 
      * <strong>example:</strong>
      * <p>系统异常</p>
@@ -89,7 +89,7 @@ public class BatchCheckResourceMeasureResponseBody extends TeaModel {
     public String rootErrorMsg;
 
     /**
-     * <p>Is processed synchronously</p>
+     * <p>Indicates whether the request is synchronously processed.</p>
      * 
      * <strong>example:</strong>
      * <p>True</p>
@@ -192,13 +192,13 @@ public class BatchCheckResourceMeasureResponseBody extends TeaModel {
 
     public static class BatchCheckResourceMeasureResponseBodyModule extends TeaModel {
         /**
-         * <p>Are all passed</p>
+         * <p>Indicates whether all checks passed.</p>
          */
         @NameInMap("AllPassed")
         public Boolean allPassed;
 
         /**
-         * <p>Check results for each resource, key=resourceCode</p>
+         * <p>The check result for each resource, where the key is resourceCode.</p>
          */
         @NameInMap("Results")
         public java.util.Map<String, ModuleResultsValue> results;

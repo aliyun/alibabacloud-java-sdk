@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetDomainInfoForPartnerResponseBody extends TeaModel {
     /**
-     * <p>Request result.</p>
+     * <p>The request result.</p>
      */
     @NameInMap("Data")
     public GetDomainInfoForPartnerResponseBodyData data;
@@ -42,7 +42,7 @@ public class GetDomainInfoForPartnerResponseBody extends TeaModel {
 
     public static class GetDomainInfoForPartnerResponseBodyDataOwnership extends TeaModel {
         /**
-         * <p>Member name.</p>
+         * <p>The member name.</p>
          * 
          * <strong>example:</strong>
          * <p>1189245564569485</p>
@@ -51,7 +51,7 @@ public class GetDomainInfoForPartnerResponseBody extends TeaModel {
         public String account;
 
         /**
-         * <p>Provider</p>
+         * <p>The provider.</p>
          * 
          * <strong>example:</strong>
          * <p>pai</p>
@@ -84,7 +84,7 @@ public class GetDomainInfoForPartnerResponseBody extends TeaModel {
 
     public static class GetDomainInfoForPartnerResponseBodyData extends TeaModel {
         /**
-         * <p>Domain name.</p>
+         * <p>The domain name.</p>
          * 
          * <strong>example:</strong>
          * <p>playnew-alilive.daotantan.com</p>
@@ -93,7 +93,7 @@ public class GetDomainInfoForPartnerResponseBody extends TeaModel {
         public String domainName;
 
         /**
-         * <p>List of DNS server IP addresses.</p>
+         * <p>The list of DNS server IP addresses.</p>
          * 
          * <strong>example:</strong>
          * <p>NS3.ALIYUN.COM,NS4.ALIYUN.COM</p>
@@ -102,13 +102,13 @@ public class GetDomainInfoForPartnerResponseBody extends TeaModel {
         public String nameServers;
 
         /**
-         * <p>IP ownership.</p>
+         * <p>The IP ownership.</p>
          */
         @NameInMap("Ownership")
         public GetDomainInfoForPartnerResponseBodyDataOwnership ownership;
 
         /**
-         * <p>Domain name registrar</p>
+         * <p>The domain name registrar.</p>
          * 
          * <strong>example:</strong>
          * <p>aliyun</p>

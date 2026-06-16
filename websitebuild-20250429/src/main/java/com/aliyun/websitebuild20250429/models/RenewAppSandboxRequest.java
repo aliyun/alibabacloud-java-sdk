@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class RenewAppSandboxRequest extends TeaModel {
     /**
-     * <p>Session ID</p>
+     * <p>The session ID.</p>
      * 
      * <strong>example:</strong>
      * <p>5b7105a2-2999-430b-ba23-ba09149d5434</p>

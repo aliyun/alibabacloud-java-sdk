@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class RefreshAppInstanceTicketResponseBody extends TeaModel {
     /**
-     * <p>Detailed reason for access denial.</p>
+     * <p>The detailed reason why access is denied.</p>
      * 
      * <strong>example:</strong>
      * <p>{}</p>
@@ -14,7 +14,7 @@ public class RefreshAppInstanceTicketResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
-     * <p>Whether to allow retry</p>
+     * <p>Indicates whether retry is allowed.</p>
      * 
      * <strong>example:</strong>
      * <p>False</p>
@@ -23,7 +23,7 @@ public class RefreshAppInstanceTicketResponseBody extends TeaModel {
     public Boolean allowRetry;
 
     /**
-     * <p>App name.</p>
+     * <p>The application name.</p>
      * 
      * <strong>example:</strong>
      * <p>mar</p>
@@ -32,7 +32,7 @@ public class RefreshAppInstanceTicketResponseBody extends TeaModel {
     public String appName;
 
     /**
-     * <p>Dynamic error code.</p>
+     * <p>The dynamic error code.</p>
      * 
      * <strong>example:</strong>
      * <p>ERROR-oo1</p>
@@ -41,9 +41,9 @@ public class RefreshAppInstanceTicketResponseBody extends TeaModel {
     public String dynamicCode;
 
     /**
-     * <p>Dynamic error message, used to replace the <code>%s</code> in the <strong>ErrMessage</strong> error message.</p>
+     * <p>The dynamic error message, which is used to replace the <code>%s</code> placeholder in the <strong>ErrMessage</strong> response parameter.</p>
      * <blockquote>
-     * <p>If <strong>ErrMessage</strong> returns <strong>The Value of Input Parameter %s is not valid</strong>, and <strong>DynamicMessage</strong> returns <strong>DtsJobId</strong>, it indicates that the input request parameter <strong>DtsJobId</strong> is invalid.</p>
+     * <p>If <strong>ErrMessage</strong> returns <strong>The Value of Input Parameter %s is not valid</strong> and <strong>DynamicMessage</strong> returns <strong>DtsJobId</strong>, the request parameter <strong>DtsJobId</strong> is invalid.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -53,19 +53,19 @@ public class RefreshAppInstanceTicketResponseBody extends TeaModel {
     public String dynamicMessage;
 
     /**
-     * <p>Returned error parameters</p>
+     * <p>The error parameters returned.</p>
      */
     @NameInMap("ErrorArgs")
     public java.util.List<?> errorArgs;
 
     /**
-     * <p>Application module</p>
+     * <p>The application module.</p>
      */
     @NameInMap("Module")
     public RefreshAppInstanceTicketResponseBodyModule module;
 
     /**
-     * <p>ID of the request</p>
+     * <p>Id of the request</p>
      * 
      * <strong>example:</strong>
      * <p>6C6B99AC-39EC-5350-874C-204128C905E6</p>
@@ -74,7 +74,7 @@ public class RefreshAppInstanceTicketResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Error code</p>
+     * <p>The error code.</p>
      * 
      * <strong>example:</strong>
      * <p>SYSTEM.ERROR</p>
@@ -83,7 +83,7 @@ public class RefreshAppInstanceTicketResponseBody extends TeaModel {
     public String rootErrorCode;
 
     /**
-     * <p>Exception message</p>
+     * <p>The exception message.</p>
      * 
      * <strong>example:</strong>
      * <p>系统异常</p>
@@ -92,7 +92,7 @@ public class RefreshAppInstanceTicketResponseBody extends TeaModel {
     public String rootErrorMsg;
 
     /**
-     * <p>Reserved parameter.</p>
+     * <p>The reserved parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>True</p>
@@ -195,7 +195,7 @@ public class RefreshAppInstanceTicketResponseBody extends TeaModel {
 
     public static class RefreshAppInstanceTicketResponseBodyModule extends TeaModel {
         /**
-         * <p>Access token expiration time</p>
+         * <p>The time when the access token expires.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-12-18T22:30:00+08:00</p>
@@ -204,7 +204,7 @@ public class RefreshAppInstanceTicketResponseBody extends TeaModel {
         public String accessTokenExpiresAt;
 
         /**
-         * <p>Access token issuance time</p>
+         * <p>The time when the access token was issued.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-12-18T22:30:00+08:00</p>
@@ -213,7 +213,7 @@ public class RefreshAppInstanceTicketResponseBody extends TeaModel {
         public String accessTokenIssuedAt;
 
         /**
-         * <p>Access token value</p>
+         * <p>The access token value.</p>
          * 
          * <strong>example:</strong>
          * <p>2108341e17661121129745384e79f9</p>
@@ -222,7 +222,7 @@ public class RefreshAppInstanceTicketResponseBody extends TeaModel {
         public String accessTokenValue;
 
         /**
-         * <p>User ID</p>
+         * <p>The user ID.</p>
          * 
          * <strong>example:</strong>
          * <p>1907880872137014</p>
@@ -231,7 +231,7 @@ public class RefreshAppInstanceTicketResponseBody extends TeaModel {
         public String aliyunPk;
 
         /**
-         * <p>Extended attributes</p>
+         * <p>The extended properties.</p>
          * 
          * <strong>example:</strong>
          * <p>{}</p>
@@ -240,7 +240,7 @@ public class RefreshAppInstanceTicketResponseBody extends TeaModel {
         public String attributes;
 
         /**
-         * <p>Authorization grant type</p>
+         * <p>The authorization code type.</p>
          * 
          * <strong>example:</strong>
          * <p>authorization_code</p>
@@ -249,7 +249,7 @@ public class RefreshAppInstanceTicketResponseBody extends TeaModel {
         public String authorizationGrantType;
 
         /**
-         * <p>business id for user</p>
+         * <p>bid</p>
          * 
          * <strong>example:</strong>
          * <p>26842</p>
@@ -258,7 +258,7 @@ public class RefreshAppInstanceTicketResponseBody extends TeaModel {
         public String bid;
 
         /**
-         * <p>User ID</p>
+         * <p>The user ID.</p>
          * 
          * <strong>example:</strong>
          * <p>1907880872137014</p>
@@ -267,7 +267,7 @@ public class RefreshAppInstanceTicketResponseBody extends TeaModel {
         public String parentPk;
 
         /**
-         * <p>刷新token过期时间</p>
+         * <p>The time when the refresh token expires.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-12-18T22:30:00+08:00</p>
@@ -276,7 +276,7 @@ public class RefreshAppInstanceTicketResponseBody extends TeaModel {
         public String refreshTokenExpiresAt;
 
         /**
-         * <p>刷新token颁发时间</p>
+         * <p>The time when the refresh token was issued.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-12-18T22:30:00+08:00</p>
@@ -285,7 +285,7 @@ public class RefreshAppInstanceTicketResponseBody extends TeaModel {
         public String refreshTokenIssuedAt;
 
         /**
-         * <p>刷新token值</p>
+         * <p>The refresh token value.</p>
          * 
          * <strong>example:</strong>
          * <p>2108341e17661121129745384e79f9</p>
@@ -294,7 +294,7 @@ public class RefreshAppInstanceTicketResponseBody extends TeaModel {
         public String refreshTokenValue;
 
         /**
-         * <p>Unique identifier externally</p>
+         * <p>The external unique identifier.</p>
          * 
          * <strong>example:</strong>
          * <p>357504C7F21FCAE502756332ECE8B533</p>

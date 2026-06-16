@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class AppMaterialFile extends TeaModel {
     /**
-     * <p>Application instance ID</p>
+     * <p>The application instance ID.</p>
      * 
      * <strong>example:</strong>
      * <p>WD20250703155602000001</p>
@@ -14,7 +14,7 @@ public class AppMaterialFile extends TeaModel {
     public String bizId;
 
     /**
-     * <p>Content Type</p>
+     * <p>The content type.</p>
      * 
      * <strong>example:</strong>
      * <p>image/png</p>
@@ -23,7 +23,7 @@ public class AppMaterialFile extends TeaModel {
     public String contentType;
 
     /**
-     * <p>Creation Time.</p>
+     * <p>The creation time.</p>
      * 
      * <strong>example:</strong>
      * <p>2025-11-03 02:05:01</p>
@@ -32,7 +32,7 @@ public class AppMaterialFile extends TeaModel {
     public String createTime;
 
     /**
-     * <p>Deletion Time</p>
+     * <p>The deletion time.</p>
      * 
      * <strong>example:</strong>
      * <p>2025-11-03 02:05:01</p>
@@ -41,7 +41,7 @@ public class AppMaterialFile extends TeaModel {
     public String deletedTime;
 
     /**
-     * <p>Folder ID</p>
+     * <p>The folder ID.</p>
      * 
      * <strong>example:</strong>
      * <p>ddddwww</p>
@@ -50,7 +50,7 @@ public class AppMaterialFile extends TeaModel {
     public String directoryId;
 
     /**
-     * <p>File ID</p>
+     * <p>The file ID.</p>
      * 
      * <strong>example:</strong>
      * <p>d75e1e9693cc460da218419d67735567</p>
@@ -59,7 +59,7 @@ public class AppMaterialFile extends TeaModel {
     public String fileId;
 
     /**
-     * <p>File URL</p>
+     * <p>The file URL.</p>
      * 
      * <strong>example:</strong>
      * <p><a href="https://demo-moshicloud-test.oss-cn-hangzhou-internal.aliyuncs.com/document/testcase/aliyun/api_case/pdf_angle90_page1.pdf">https://demo-moshicloud-test.oss-cn-hangzhou-internal.aliyuncs.com/document/testcase/aliyun/api_case/pdf_angle90_page1.pdf</a></p>
@@ -68,7 +68,7 @@ public class AppMaterialFile extends TeaModel {
     public String fileUrl;
 
     /**
-     * <p>Image height</p>
+     * <p>The image height.</p>
      * 
      * <strong>example:</strong>
      * <p>1280</p>
@@ -77,7 +77,7 @@ public class AppMaterialFile extends TeaModel {
     public Integer height;
 
     /**
-     * <p>File name</p>
+     * <p>The file name.</p>
      * 
      * <strong>example:</strong>
      * <p>文件名</p>
@@ -86,7 +86,7 @@ public class AppMaterialFile extends TeaModel {
     public String name;
 
     /**
-     * <p>File Status</p>
+     * <p>The file status.</p>
      * 
      * <strong>example:</strong>
      * <p>NORMAL</p>
@@ -95,7 +95,7 @@ public class AppMaterialFile extends TeaModel {
     public String status;
 
     /**
-     * <p>Bucket size.</p>
+     * <p>The storage size.</p>
      * 
      * <strong>example:</strong>
      * <p>23M</p>
@@ -104,7 +104,7 @@ public class AppMaterialFile extends TeaModel {
     public String storageSize;
 
     /**
-     * <p>File suffix</p>
+     * <p>The file name extension.</p>
      * 
      * <strong>example:</strong>
      * <p>png</p>
@@ -113,7 +113,7 @@ public class AppMaterialFile extends TeaModel {
     public String suffix;
 
     /**
-     * <p>File Type</p>
+     * <p>The file type.</p>
      * 
      * <strong>example:</strong>
      * <p>IMAGE</p>
@@ -122,7 +122,7 @@ public class AppMaterialFile extends TeaModel {
     public String type;
 
     /**
-     * <p>Image width</p>
+     * <p>The image width.</p>
      * 
      * <strong>example:</strong>
      * <p>1920</p>

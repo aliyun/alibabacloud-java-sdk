@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class QueryMaterialFileDetailRequest extends TeaModel {
     /**
-     * <p>Application instance ID</p>
+     * <p>The application instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class QueryMaterialFileDetailRequest extends TeaModel {
     public String bizId;
 
     /**
-     * <p>File ID</p>
+     * <p>The file ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

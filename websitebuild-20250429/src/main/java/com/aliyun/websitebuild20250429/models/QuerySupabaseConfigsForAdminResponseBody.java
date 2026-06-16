@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class QuerySupabaseConfigsForAdminResponseBody extends TeaModel {
     /**
-     * <p>Detailed reason for access denial.</p>
+     * <p>The detailed reason why access was denied.</p>
      * 
      * <strong>example:</strong>
      * <p>{}</p>
@@ -27,7 +27,7 @@ public class QuerySupabaseConfigsForAdminResponseBody extends TeaModel {
     public Boolean allowRetry;
 
     /**
-     * <p>App Name.</p>
+     * <p>The application name.</p>
      * 
      * <strong>example:</strong>
      * <p>spring-cloud-b</p>
@@ -36,7 +36,7 @@ public class QuerySupabaseConfigsForAdminResponseBody extends TeaModel {
     public String appName;
 
     /**
-     * <p>Dynamic error code.</p>
+     * <p>The dynamic error code.</p>
      * 
      * <strong>example:</strong>
      * <p>ERROR-oo1</p>
@@ -45,7 +45,7 @@ public class QuerySupabaseConfigsForAdminResponseBody extends TeaModel {
     public String dynamicCode;
 
     /**
-     * <p>Dynamic message.</p>
+     * <p>The dynamic message.</p>
      * 
      * <strong>example:</strong>
      * <p>SYSTEM_ERROR</p>
@@ -54,13 +54,13 @@ public class QuerySupabaseConfigsForAdminResponseBody extends TeaModel {
     public String dynamicMessage;
 
     /**
-     * <p>Returned error parameters</p>
+     * <p>The error parameters.</p>
      */
     @NameInMap("ErrorArgs")
     public java.util.List<?> errorArgs;
 
     /**
-     * <p>Task object</p>
+     * <p>The task object.</p>
      */
     @NameInMap("Module")
     public QuerySupabaseConfigsForAdminResponseBodyModule module;
@@ -75,7 +75,7 @@ public class QuerySupabaseConfigsForAdminResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Error code</p>
+     * <p>The error code.</p>
      * 
      * <strong>example:</strong>
      * <p>SYSTEM.ERROR</p>
@@ -84,7 +84,7 @@ public class QuerySupabaseConfigsForAdminResponseBody extends TeaModel {
     public String rootErrorCode;
 
     /**
-     * <p>Abnormal message</p>
+     * <p>The error message.</p>
      * 
      * <strong>example:</strong>
      * <p>系统异常</p>
@@ -93,7 +93,7 @@ public class QuerySupabaseConfigsForAdminResponseBody extends TeaModel {
     public String rootErrorMsg;
 
     /**
-     * <p>Indicates whether the processing is synchronous.</p>
+     * <p>Indicates whether the request is synchronously processed.</p>
      * 
      * <strong>example:</strong>
      * <p>True</p>
@@ -196,7 +196,7 @@ public class QuerySupabaseConfigsForAdminResponseBody extends TeaModel {
 
     public static class QuerySupabaseConfigsForAdminResponseBodyModule extends TeaModel {
         /**
-         * <p>Scope. Currently supports subUser and owner.</p>
+         * <p>The scope. Valid values: subUser and owner.</p>
          */
         @NameInMap("Configs")
         public java.util.Map<String, ?> configs;

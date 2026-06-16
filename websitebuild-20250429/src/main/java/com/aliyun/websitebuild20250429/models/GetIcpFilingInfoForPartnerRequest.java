@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetIcpFilingInfoForPartnerRequest extends TeaModel {
     /**
-     * <p>Customer business ID</p>
+     * <p>The customer business ID.</p>
      * 
      * <strong>example:</strong>
      * <p>WD20250703155602000001</p>
@@ -14,7 +14,7 @@ public class GetIcpFilingInfoForPartnerRequest extends TeaModel {
     public String bizId;
 
     /**
-     * <p>Domain name.</p>
+     * <p>The domain name.</p>
      * 
      * <strong>example:</strong>
      * <p>yjdw.bpu.edu.cn-waf</p>

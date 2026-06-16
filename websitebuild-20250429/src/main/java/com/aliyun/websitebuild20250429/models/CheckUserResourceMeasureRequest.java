@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CheckUserResourceMeasureRequest extends TeaModel {
     /**
-     * <p>Belonging ID (site ID or Alibaba Cloud User ID)</p>
+     * <p>The owner ID, which can be a website ID or an Alibaba Cloud account ID.</p>
      * 
      * <strong>example:</strong>
      * <p>123456</p>
@@ -14,7 +14,11 @@ public class CheckUserResourceMeasureRequest extends TeaModel {
     public String belongId;
 
     /**
-     * <p>Belonging ID Type (siteId, uid)</p>
+     * <p>The type of the owner ID. Valid values:</p>
+     * <ul>
+     * <li>siteId</li>
+     * <li>uid.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>USER</p>
@@ -23,7 +27,7 @@ public class CheckUserResourceMeasureRequest extends TeaModel {
     public String belongIdType;
 
     /**
-     * <p>ESP business type</p>
+     * <p>The ESP business type.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -32,7 +36,7 @@ public class CheckUserResourceMeasureRequest extends TeaModel {
     public String bizType;
 
     /**
-     * <p>ESP business ID</p>
+     * <p>The ESP business ID.</p>
      * 
      * <strong>example:</strong>
      * <p>p20202933455</p>
@@ -41,7 +45,7 @@ public class CheckUserResourceMeasureRequest extends TeaModel {
     public String espBizId;
 
     /**
-     * <p>Order module information (espBizId and bizType cannot be empty when this is empty)</p>
+     * <p>The order module information. If this parameter is empty, espBizId and bizType cannot be empty.</p>
      * 
      * <strong>example:</strong>
      * <p>{&quot;siteversion&quot;:&quot;test&quot;}</p>
@@ -50,7 +54,7 @@ public class CheckUserResourceMeasureRequest extends TeaModel {
     public String orderComponentParams;
 
     /**
-     * <p>Resource identity</p>
+     * <p>The resource identifier.</p>
      * 
      * <strong>example:</strong>
      * <p>InspirationTokens</p>
@@ -59,7 +63,11 @@ public class CheckUserResourceMeasureRequest extends TeaModel {
     public String resourceCode;
 
     /**
-     * <p>Resource value. Default is empty. Required only for feature-type resources. 0 means not supported, and 1 means supported.</p>
+     * <p>The resource value. This parameter is empty by default and is required only for feature-type resources. Valid values:</p>
+     * <ul>
+     * <li>0: Not supported.</li>
+     * <li>1: Supported.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>1</p>

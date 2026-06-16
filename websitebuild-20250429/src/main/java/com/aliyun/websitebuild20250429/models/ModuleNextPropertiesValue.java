@@ -14,7 +14,7 @@ public class ModuleNextPropertiesValue extends TeaModel {
     public String code;
 
     /**
-     * <p>List of attribute values</p>
+     * <p>Property value list</p>
      */
     @NameInMap("Values")
     public java.util.List<ModuleNextPropertiesValueValues> values;

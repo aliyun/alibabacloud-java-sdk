@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class EditPluginConfigResponseBody extends TeaModel {
     /**
-     * <p>Detailed reason for access denial.</p>
+     * <p>The detailed reason why access was denied.</p>
      * 
      * <strong>example:</strong>
      * <p>{}</p>
@@ -14,7 +14,7 @@ public class EditPluginConfigResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
-     * <p>Whether retry is allowed</p>
+     * <p>Indicates whether retry is allowed.</p>
      * 
      * <strong>example:</strong>
      * <p>False</p>
@@ -23,7 +23,7 @@ public class EditPluginConfigResponseBody extends TeaModel {
     public Boolean allowRetry;
 
     /**
-     * <p>The application name must start with a letter and can contain letters, digits, underscores (_), and hyphens (-). It supports up to 36 characters.</p>
+     * <p>The application name. The name must start with a letter and can contain letters, digits, underscores (_), and hyphens (-). The name can be up to 36 characters in length.</p>
      * 
      * <strong>example:</strong>
      * <p>spring-cloud-b</p>
@@ -32,7 +32,7 @@ public class EditPluginConfigResponseBody extends TeaModel {
     public String appName;
 
     /**
-     * <p>Dynamic code, currently unused. Please ignore.</p>
+     * <p>The dynamic code. This parameter is not in use. Ignore this parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>ERROR-oo1</p>
@@ -41,7 +41,7 @@ public class EditPluginConfigResponseBody extends TeaModel {
     public String dynamicCode;
 
     /**
-     * <p>Error message</p>
+     * <p>The error message.</p>
      * 
      * <strong>example:</strong>
      * <p>SYSTEM_ERROR</p>
@@ -50,13 +50,13 @@ public class EditPluginConfigResponseBody extends TeaModel {
     public String dynamicMessage;
 
     /**
-     * <p>Faulty parameters.</p>
+     * <p>The error parameters.</p>
      */
     @NameInMap("ErrorArgs")
     public java.util.List<?> errorArgs;
 
     /**
-     * <p>Response data</p>
+     * <p>The response data.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -74,7 +74,7 @@ public class EditPluginConfigResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Error code</p>
+     * <p>The error code.</p>
      * 
      * <strong>example:</strong>
      * <p>SYSTEM.ERROR</p>
@@ -83,7 +83,7 @@ public class EditPluginConfigResponseBody extends TeaModel {
     public String rootErrorCode;
 
     /**
-     * <p>Abnormal message</p>
+     * <p>The exception message.</p>
      * 
      * <strong>example:</strong>
      * <p>系统异常</p>
@@ -92,7 +92,7 @@ public class EditPluginConfigResponseBody extends TeaModel {
     public String rootErrorMsg;
 
     /**
-     * <p>Whether processing is synchronous</p>
+     * <p>Indicates whether the request is synchronously processed.</p>
      * 
      * <strong>example:</strong>
      * <p>True</p>

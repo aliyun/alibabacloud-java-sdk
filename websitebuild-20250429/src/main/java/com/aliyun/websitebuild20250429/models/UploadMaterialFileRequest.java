@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UploadMaterialFileRequest extends TeaModel {
     /**
-     * <p>Application Instance Business ID</p>
+     * <p>The business ID of the application instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class UploadMaterialFileRequest extends TeaModel {
     public String bizId;
 
     /**
-     * <p>Parent Folder ID</p>
+     * <p>The ID of the parent folder.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,7 +25,7 @@ public class UploadMaterialFileRequest extends TeaModel {
     public String directoryId;
 
     /**
-     * <p>File Path</p>
+     * <p>The path of the file.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -35,7 +35,7 @@ public class UploadMaterialFileRequest extends TeaModel {
     public String fileUrl;
 
     /**
-     * <p>File Name</p>
+     * <p>The name of the file.</p>
      * 
      * <strong>example:</strong>
      * <p>测试文件</p>

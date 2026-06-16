@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class MoveMaterialDirectoryRequest extends TeaModel {
     /**
-     * <p>Application instance ID</p>
+     * <p>The application instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class MoveMaterialDirectoryRequest extends TeaModel {
     public String bizId;
 
     /**
-     * <p>Folder ID</p>
+     * <p>The folder ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,7 +25,7 @@ public class MoveMaterialDirectoryRequest extends TeaModel {
     public String directoryId;
 
     /**
-     * <p>Parent folder ID after shift</p>
+     * <p>The parent folder ID after the move.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -35,7 +35,7 @@ public class MoveMaterialDirectoryRequest extends TeaModel {
     public String parentDirectoryId;
 
     /**
-     * <p>Sorting ordinal number</p>
+     * <p>The sort number.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

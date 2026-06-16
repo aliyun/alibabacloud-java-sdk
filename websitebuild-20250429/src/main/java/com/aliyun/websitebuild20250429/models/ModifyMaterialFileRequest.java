@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyMaterialFileRequest extends TeaModel {
     /**
-     * <p>Application instance business ID</p>
+     * <p>The business ID of the application instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class ModifyMaterialFileRequest extends TeaModel {
     public String bizId;
 
     /**
-     * <p>File ID</p>
+     * <p>The file ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,7 +25,7 @@ public class ModifyMaterialFileRequest extends TeaModel {
     public String fileId;
 
     /**
-     * <p>Modified file Name</p>
+     * <p>The new name of the file after modification.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class QueryMaterialTaskListShrinkRequest extends TeaModel {
     /**
-     * <p>Number of results per query.</p>
+     * <p>The number of entries per query.</p>
      * <p>Valid values: 10 to 100. Default value: 20.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class QueryMaterialTaskListShrinkRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>Token indicating the start of the next query. This field is empty if there is no next query.</p>
+     * <p>The token for the next query. This parameter is empty if no more results exist.</p>
      * 
      * <strong>example:</strong>
      * <p>FFh3Xqm+JgZ/U9Jyb7wdVr9LWk80Tghn5UZjbcWEVEderBcbVF+Y6PS0i8PpCL4PQZ3e0C9oEH0Asd4tJEuGtkl2WuKdiWZpEwadNydQdJPFM=</p>
@@ -24,7 +24,7 @@ public class QueryMaterialTaskListShrinkRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>Sorting field.</p>
+     * <p>Sort field</p>
      * 
      * <strong>example:</strong>
      * <p>gmtCreated</p>
@@ -33,7 +33,7 @@ public class QueryMaterialTaskListShrinkRequest extends TeaModel {
     public String orderColumn;
 
     /**
-     * <p>Sorting type: ASC or DESC</p>
+     * <p>Sort type ASC|DESC</p>
      * 
      * <strong>example:</strong>
      * <p>DESC</p>
@@ -42,7 +42,7 @@ public class QueryMaterialTaskListShrinkRequest extends TeaModel {
     public String orderType;
 
     /**
-     * <p>Page number. Default value is 1.</p>
+     * <p>Page number. Default value: 1</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -51,7 +51,7 @@ public class QueryMaterialTaskListShrinkRequest extends TeaModel {
     public Integer pageNum;
 
     /**
-     * <p>Page size. Default value: 10.</p>
+     * <p>Page size. Default value: 10</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -60,13 +60,13 @@ public class QueryMaterialTaskListShrinkRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>List of task statuses.</p>
+     * <p>Task status list</p>
      */
     @NameInMap("StatusList")
     public String statusListShrink;
 
     /**
-     * <p>List of task types.</p>
+     * <p>Task type list</p>
      */
     @NameInMap("TaskTypeList")
     public String taskTypeListShrink;

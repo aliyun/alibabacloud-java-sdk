@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteAppDomainCertificateResponseBody extends TeaModel {
     /**
-     * <p>Details of permission check failure</p>
+     * <p>The details of the permission verification failure.</p>
      * 
      * <strong>example:</strong>
      * <p>{}</p>
@@ -14,10 +14,10 @@ public class DeleteAppDomainCertificateResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
-     * <p>Whether retry is allowed. Values:</p>
+     * <p>Indicates whether retry is allowed. Valid values:</p>
      * <ul>
-     * <li>false: Not allowed to retry.</li>
-     * <li>true: Allowed to retry.</li>
+     * <li>false: Retry is not allowed.</li>
+     * <li>true: Retry is allowed.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -27,7 +27,7 @@ public class DeleteAppDomainCertificateResponseBody extends TeaModel {
     public Boolean allowRetry;
 
     /**
-     * <p>Application name. Allows a combination of numbers, letters, and hyphens (-). Must start with a letter, cannot end with a hyphen (-), and must not exceed 36 characters.</p>
+     * <p>The application name. The name can contain digits, letters, and hyphens (-). It must start with a letter and cannot end with a hyphen (-). The name cannot exceed 36 characters in length.</p>
      * 
      * <strong>example:</strong>
      * <p>spring-cloud-b</p>
@@ -36,7 +36,7 @@ public class DeleteAppDomainCertificateResponseBody extends TeaModel {
     public String appName;
 
     /**
-     * <p>Dynamic code, not in use, please ignore</p>
+     * <p>The dynamic code. This parameter is not in use. Ignore this parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>ERROR-oo1</p>
@@ -45,7 +45,7 @@ public class DeleteAppDomainCertificateResponseBody extends TeaModel {
     public String dynamicCode;
 
     /**
-     * <p>Dynamic message.</p>
+     * <p>The dynamic message.</p>
      * 
      * <strong>example:</strong>
      * <p>SYSTEM_ERROR</p>
@@ -54,19 +54,19 @@ public class DeleteAppDomainCertificateResponseBody extends TeaModel {
     public String dynamicMessage;
 
     /**
-     * <p>Returned error parameters</p>
+     * <p>The error parameters.</p>
      */
     @NameInMap("ErrorArgs")
     public java.util.List<?> errorArgs;
 
     /**
-     * <p>Response data</p>
+     * <p>The response data.</p>
      */
     @NameInMap("Module")
     public DeleteAppDomainCertificateResponseBodyModule module;
 
     /**
-     * <p>ID of the request</p>
+     * <p>Id of the request</p>
      * 
      * <strong>example:</strong>
      * <p>6C6B99AC-39EC-5350-874C-204128C905E6</p>
@@ -75,7 +75,7 @@ public class DeleteAppDomainCertificateResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Error code</p>
+     * <p>The error code.</p>
      * 
      * <strong>example:</strong>
      * <p>SYSTEM.ERROR</p>
@@ -84,7 +84,7 @@ public class DeleteAppDomainCertificateResponseBody extends TeaModel {
     public String rootErrorCode;
 
     /**
-     * <p>Exception message</p>
+     * <p>The error message.</p>
      * 
      * <strong>example:</strong>
      * <p>系统异常</p>
@@ -93,7 +93,7 @@ public class DeleteAppDomainCertificateResponseBody extends TeaModel {
     public String rootErrorMsg;
 
     /**
-     * <p>Whether it is processed synchronously</p>
+     * <p>Indicates whether the request is synchronously processed.</p>
      * 
      * <strong>example:</strong>
      * <p>True</p>
@@ -196,7 +196,7 @@ public class DeleteAppDomainCertificateResponseBody extends TeaModel {
 
     public static class DeleteAppDomainCertificateResponseBodyModule extends TeaModel {
         /**
-         * <p>Whether it was successful</p>
+         * <p>Indicates whether the operation is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>

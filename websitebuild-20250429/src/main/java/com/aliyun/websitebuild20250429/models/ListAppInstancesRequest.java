@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListAppInstancesRequest extends TeaModel {
     /**
-     * <p>Business ID</p>
+     * <p>The business ID.</p>
      * 
      * <strong>example:</strong>
      * <p>WS20250731233102000001</p>
@@ -14,7 +14,7 @@ public class ListAppInstancesRequest extends TeaModel {
     public String bizId;
 
     /**
-     * <p>End time start</p>
+     * <p>The start of the expiration time range.</p>
      * 
      * <strong>example:</strong>
      * <p>2025-12-18T14:30:00Z</p>
@@ -23,7 +23,7 @@ public class ListAppInstancesRequest extends TeaModel {
     public String endTimeBegin;
 
     /**
-     * <p>End time end</p>
+     * <p>The end of the expiration time range.</p>
      * 
      * <strong>example:</strong>
      * <p>2025-12-31T14:30:00Z</p>
@@ -32,7 +32,7 @@ public class ListAppInstancesRequest extends TeaModel {
     public String endTimeEnd;
 
     /**
-     * <p>Extended information</p>
+     * <p>The extended information.</p>
      * 
      * <strong>example:</strong>
      * <p>{}</p>
@@ -41,8 +41,8 @@ public class ListAppInstancesRequest extends TeaModel {
     public String extend;
 
     /**
-     * <p>Number of results per query.</p>
-     * <p>Range: 10~100. Default value: 20.</p>
+     * <p>The number of entries per query.</p>
+     * <p>Valid values: 10 to 100. Default value: 20.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -51,7 +51,7 @@ public class ListAppInstancesRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>Token for the next query. It will be empty if there is no next query.</p>
+     * <p>The token for the next query. This parameter is empty if no more results exist.</p>
      * 
      * <strong>example:</strong>
      * <p>AAAAARbaCuN6hiD08qrLdwJ9Fh3BFw8paIJ7ylB6A7Qn9JjM</p>
@@ -60,7 +60,7 @@ public class ListAppInstancesRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>Order column</p>
+     * <p>The field by which to sort the results.</p>
      * 
      * <strong>example:</strong>
      * <p>gmtCreated</p>
@@ -69,7 +69,7 @@ public class ListAppInstancesRequest extends TeaModel {
     public String orderColumn;
 
     /**
-     * <p>Order type ASC|DESC</p>
+     * <p>The sort order. Valid values: ASC and DESC.</p>
      * 
      * <strong>example:</strong>
      * <p>DOWNGRADE</p>
@@ -78,7 +78,7 @@ public class ListAppInstancesRequest extends TeaModel {
     public String orderType;
 
     /**
-     * <p>Page number, default is 1</p>
+     * <p>The page number. Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>
@@ -87,7 +87,7 @@ public class ListAppInstancesRequest extends TeaModel {
     public Integer pageNum;
 
     /**
-     * <p>Page size, default is 10</p>
+     * <p>The number of entries per page. Default value: 10.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -96,7 +96,7 @@ public class ListAppInstancesRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>Query parameter</p>
+     * <p>The query parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>{\&quot;RequestId\&quot;:\&quot;\&quot;}</p>
@@ -105,7 +105,7 @@ public class ListAppInstancesRequest extends TeaModel {
     public String query;
 
     /**
-     * <p>Status range</p>
+     * <p>The status range.</p>
      */
     @NameInMap("StatusList")
     public java.util.List<String> statusList;

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class SearchImageShrinkRequest extends TeaModel {
     /**
-     * <p>Color</p>
+     * <p>The color.</p>
      * 
      * <strong>example:</strong>
      * <p>#B0B0B0</p>
@@ -14,7 +14,7 @@ public class SearchImageShrinkRequest extends TeaModel {
     public String colorHex;
 
     /**
-     * <p>Indicates whether the image contains a person.</p>
+     * <p>Specifies whether the image contains a person.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -23,11 +23,11 @@ public class SearchImageShrinkRequest extends TeaModel {
     public Boolean hasPerson;
 
     /**
-     * <p>Image category. Valid values:</p>
+     * <p>The image category. Valid values:</p>
      * <ul>
-     * <li>normal: Illustrations or article images.</li>
-     * <li>banner: Background images or image carousels.</li>
-     * <li>goods: Product or service images.</li>
+     * <li>normal: illustrations or article images.</li>
+     * <li>banner: background images or carousel images.</li>
+     * <li>goods: product or service images.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -37,13 +37,13 @@ public class SearchImageShrinkRequest extends TeaModel {
     public String imageCategory;
 
     /**
-     * <p>Image aspect ratio, including:
+     * <p>The aspect ratio of the image. Valid values:
      * &quot;16:9&quot;
      * &quot;4:3&quot;
      * &quot;2:1&quot;
      * &quot;1:1&quot;
      * &quot;3:4&quot;
-     * &quot;9:16&quot;</p>
+     * &quot;9:16&quot;.</p>
      * 
      * <strong>example:</strong>
      * <p>16:9</p>
@@ -52,7 +52,7 @@ public class SearchImageShrinkRequest extends TeaModel {
     public String imageRatio;
 
     /**
-     * <p>Maximum image height.</p>
+     * <p>The maximum height of the image.</p>
      * 
      * <strong>example:</strong>
      * <p>4000</p>
@@ -61,7 +61,7 @@ public class SearchImageShrinkRequest extends TeaModel {
     public Integer maxHeight;
 
     /**
-     * <p>Number of items per page in a paged query. Maximum value is 100. Default value is 20.</p>
+     * <p>The number of entries per page for paging queries. Maximum value: 100. Default value: 20.</p>
      * 
      * <strong>example:</strong>
      * <p>500</p>
@@ -70,7 +70,7 @@ public class SearchImageShrinkRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>Maximum image width (inclusive).</p>
+     * <p>The maximum width of the image, inclusive.</p>
      * 
      * <strong>example:</strong>
      * <p>4000</p>
@@ -79,7 +79,7 @@ public class SearchImageShrinkRequest extends TeaModel {
     public Integer maxWidth;
 
     /**
-     * <p>Minimum image height</p>
+     * <p>The minimum height of the image.</p>
      * 
      * <strong>example:</strong>
      * <p>500</p>
@@ -88,7 +88,7 @@ public class SearchImageShrinkRequest extends TeaModel {
     public Integer minHeight;
 
     /**
-     * <p>Minimum image width (inclusive).</p>
+     * <p>The minimum width of the image, inclusive.</p>
      * 
      * <strong>example:</strong>
      * <p>500</p>
@@ -97,7 +97,7 @@ public class SearchImageShrinkRequest extends TeaModel {
     public Integer minWidth;
 
     /**
-     * <p>Query credential (Token). Set this parameter to the NextToken value returned in the previous API call. You do not need to set this parameter for the initial API call. If NextToken is specified, the request parameters PageSize and PageNumber become invalid, and the TotalCount in the returned data is also invalid.</p>
+     * <p>The pagination token. Set this parameter to the NextToken value returned in the previous call. You do not need to set this parameter for the first request. If NextToken is specified, the PageSize and PageNumber request parameters do not take effect, and the TotalCount value in the response is invalid.</p>
      * 
      * <strong>example:</strong>
      * <p>FFh3Xqm+JgZ/U9Jyb7wdVr9LWk80Tghn5UZjbcWEVEderBcbVF+Y6PS0i8PpCL4PQZ3e0C9oEH0Asd4tJEuGtkl2WuKdiWZpEwadNydQdJPFM=</p>
@@ -106,7 +106,7 @@ public class SearchImageShrinkRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>Osskey。</p>
+     * <p>The OSS key.</p>
      * 
      * <strong>example:</strong>
      * <p>backend/detection/objects/r-0008ujvfksltf5j45n81/task-000hckiuwyau0gwn17vq.jpg</p>
@@ -115,7 +115,7 @@ public class SearchImageShrinkRequest extends TeaModel {
     public String ossKey;
 
     /**
-     * <p>Number of results to return. Default value is 10.</p>
+     * <p>The number of returned results. Default value: 10.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -124,7 +124,7 @@ public class SearchImageShrinkRequest extends TeaModel {
     public Integer size;
 
     /**
-     * <p>Starting position of the return result. Valid values: 0 to 499. Default value is 0.</p>
+     * <p>The start position of the returned results. Valid values: 0 to 499. Default value: 0.</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>
@@ -133,15 +133,15 @@ public class SearchImageShrinkRequest extends TeaModel {
     public Integer start;
 
     /**
-     * <p>Tags.</p>
+     * <p>The tags.</p>
      */
     @NameInMap("Tags")
     public String tagsShrink;
 
     /**
-     * <p>Description text for searching images.</p>
+     * <p>The description text used to search for images.</p>
      * <blockquote>
-     * <p>Supports up to 512 characters.</p>
+     * <p>Maximum length: 512 characters.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

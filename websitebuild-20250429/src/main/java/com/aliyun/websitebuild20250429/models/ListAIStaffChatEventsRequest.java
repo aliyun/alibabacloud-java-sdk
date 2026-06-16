@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListAIStaffChatEventsRequest extends TeaModel {
     /**
-     * <p>Business ID</p>
+     * <p>The business ID.</p>
      * 
      * <strong>example:</strong>
      * <p>WS20250731233102000001</p>
@@ -14,7 +14,7 @@ public class ListAIStaffChatEventsRequest extends TeaModel {
     public String bizId;
 
     /**
-     * <p>Chat ID (optional; if not provided, the latest chatId is used)</p>
+     * <p>The chat ID. This parameter is optional. If not specified, the latest chat ID is used.</p>
      * 
      * <strong>example:</strong>
      * <p>20833ba4-d189-4c50-9a44-a6bcbda2c93b</p>
@@ -23,7 +23,7 @@ public class ListAIStaffChatEventsRequest extends TeaModel {
     public String chatId;
 
     /**
-     * <p>session ID</p>
+     * <p>The conversation ID.</p>
      * 
      * <strong>example:</strong>
      * <p>593fe1a2-d0b4-4fde-a2b0-78ad6a438d41</p>
@@ -32,7 +32,7 @@ public class ListAIStaffChatEventsRequest extends TeaModel {
     public String conversationId;
 
     /**
-     * <p>Last event ID, used for incremental retrieval</p>
+     * <p>The ID of the last event, used for incremental retrieval.</p>
      * 
      * <strong>example:</strong>
      * <p>event-71ece53b7d474e01b755a9b5fa5305e6</p>

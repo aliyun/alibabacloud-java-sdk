@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateAIStaffChatRequest extends TeaModel {
     /**
-     * <p>Site ID</p>
+     * <p>The site ID.</p>
      * 
      * <strong>example:</strong>
      * <p>WS20250801154628000001</p>
@@ -14,7 +14,7 @@ public class CreateAIStaffChatRequest extends TeaModel {
     public String bizId;
 
     /**
-     * <p>Conversation ID (provided when recovering from a break)</p>
+     * <p>The chat ID. Pass in this parameter to resume a conversation after an interruption.</p>
      * 
      * <strong>example:</strong>
      * <p>3b465fe1-6f06-4899-af9f-d43d9338df25</p>
@@ -23,7 +23,7 @@ public class CreateAIStaffChatRequest extends TeaModel {
     public String chatId;
 
     /**
-     * <p>session ID</p>
+     * <p>The conversation ID.</p>
      * 
      * <strong>example:</strong>
      * <p>5b7105a2-2999-430b-ba23-ba09149d5434</p>
@@ -32,13 +32,13 @@ public class CreateAIStaffChatRequest extends TeaModel {
     public String conversationId;
 
     /**
-     * <p>List of conversation messages</p>
+     * <p>The list of conversation messages.</p>
      */
     @NameInMap("Messages")
     public java.util.List<CreateAIStaffChatRequestMessages> messages;
 
     /**
-     * <p>Additional conversation information</p>
+     * <p>The additional information for the conversation.</p>
      */
     @NameInMap("MetaData")
     public java.util.Map<String, String> metaData;
@@ -90,7 +90,7 @@ public class CreateAIStaffChatRequest extends TeaModel {
 
     public static class CreateAIStaffChatRequestMessages extends TeaModel {
         /**
-         * <p>Message content</p>
+         * <p>The message content.</p>
          * 
          * <strong>example:</strong>
          * <p>{\&quot;CodeRevision\&quot;: \&quot;1750040991876284109\&quot;}</p>
@@ -99,7 +99,7 @@ public class CreateAIStaffChatRequest extends TeaModel {
         public String content;
 
         /**
-         * <p>Content type</p>
+         * <p>The content type.</p>
          * 
          * <strong>example:</strong>
          * <p>application/octet-stream</p>
@@ -108,13 +108,13 @@ public class CreateAIStaffChatRequest extends TeaModel {
         public String contentType;
 
         /**
-         * <p>Business extension metadata (in Map format, must be a JSON string)</p>
+         * <p>The business extension metadata in Map format. The value must be a JSON string.</p>
          */
         @NameInMap("MetaData")
         public java.util.Map<String, String> metaData;
 
         /**
-         * <p>Role in the conversation</p>
+         * <p>The conversation role.</p>
          * 
          * <strong>example:</strong>
          * <p>polarx_dn</p>
@@ -123,7 +123,7 @@ public class CreateAIStaffChatRequest extends TeaModel {
         public String role;
 
         /**
-         * <p>File type</p>
+         * <p>The file type.</p>
          * 
          * <strong>example:</strong>
          * <p>risk</p>

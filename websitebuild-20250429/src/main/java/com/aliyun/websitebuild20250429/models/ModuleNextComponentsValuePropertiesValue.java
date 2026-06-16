@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModuleNextComponentsValuePropertiesValue extends TeaModel {
     /**
-     * <p>Attribute code (internal system identifier)</p>
+     * <p>Property code (internal system identifier)</p>
      * 
      * <strong>example:</strong>
      * <p>placeholder</p>
@@ -14,7 +14,7 @@ public class ModuleNextComponentsValuePropertiesValue extends TeaModel {
     public String code;
 
     /**
-     * <p>Property display name (User-visible name)</p>
+     * <p>Property display name (user-visible name)</p>
      * 
      * <strong>example:</strong>
      * <p>placeholder</p>
@@ -23,7 +23,7 @@ public class ModuleNextComponentsValuePropertiesValue extends TeaModel {
     public String name;
 
     /**
-     * <p>Attribute Value encoding (internal System value)</p>
+     * <p>Property value code (internal system value)</p>
      * 
      * <strong>example:</strong>
      * <p>placeholder</p>
@@ -32,7 +32,7 @@ public class ModuleNextComponentsValuePropertiesValue extends TeaModel {
     public String value;
 
     /**
-     * <p>List of module attribute values</p>
+     * <p>Module property value list</p>
      */
     @NameInMap("Values")
     public java.util.List<ModuleNextComponentsValuePropertiesValueValues> values;
@@ -76,7 +76,7 @@ public class ModuleNextComponentsValuePropertiesValue extends TeaModel {
 
     public static class ModuleNextComponentsValuePropertiesValueValues extends TeaModel {
         /**
-         * <p>Attribute code (internal system identifier)</p>
+         * <p>Property code (internal system identifier)</p>
          * 
          * <strong>example:</strong>
          * <p>placeholder</p>
@@ -85,7 +85,7 @@ public class ModuleNextComponentsValuePropertiesValue extends TeaModel {
         public String code;
 
         /**
-         * <p>Attribute value code (internal system value)</p>
+         * <p>Property value code (internal system value)</p>
          * 
          * <strong>example:</strong>
          * <p>placeholder</p>
@@ -94,7 +94,7 @@ public class ModuleNextComponentsValuePropertiesValue extends TeaModel {
         public String value;
 
         /**
-         * <p>Attribute display name (user-visible name)</p>
+         * <p>Property display name (user-visible name)</p>
          * 
          * <strong>example:</strong>
          * <p>placeholder</p>

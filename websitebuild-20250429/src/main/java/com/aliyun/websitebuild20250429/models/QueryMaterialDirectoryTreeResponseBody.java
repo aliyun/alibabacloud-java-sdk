@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class QueryMaterialDirectoryTreeResponseBody extends TeaModel {
     /**
-     * <p>Detailed reason for access denial.</p>
+     * <p>The detailed reason why access was denied.</p>
      * 
      * <strong>example:</strong>
      * <p>{}</p>
@@ -23,7 +23,7 @@ public class QueryMaterialDirectoryTreeResponseBody extends TeaModel {
     public Boolean allowRetry;
 
     /**
-     * <p>Application name. Query the application with this name.</p>
+     * <p>The application name. The application with this name is queried.</p>
      * 
      * <strong>example:</strong>
      * <p>dewuApp</p>
@@ -32,7 +32,7 @@ public class QueryMaterialDirectoryTreeResponseBody extends TeaModel {
     public String appName;
 
     /**
-     * <p>Dynamic error code.</p>
+     * <p>The dynamic error code.</p>
      * 
      * <strong>example:</strong>
      * <p>ERROR-oo1</p>
@@ -41,7 +41,7 @@ public class QueryMaterialDirectoryTreeResponseBody extends TeaModel {
     public String dynamicCode;
 
     /**
-     * <p>dynamic message.</p>
+     * <p>The dynamic message.</p>
      * 
      * <strong>example:</strong>
      * <p>SYSTEM_ERROR</p>
@@ -50,13 +50,13 @@ public class QueryMaterialDirectoryTreeResponseBody extends TeaModel {
     public String dynamicMessage;
 
     /**
-     * <p>parameters that caused the error</p>
+     * <p>The error parameters.</p>
      */
     @NameInMap("ErrorArgs")
     public java.util.List<?> errorArgs;
 
     /**
-     * <p>Error code. The ErrorCode field is not returned if the request succeeds. If the request fails, the ErrorCode field is returned. For more information, see the error code list in this topic.</p>
+     * <p>The error code. If the request is successful, the ErrorCode field is not returned. If the request fails, the ErrorCode field is returned. For more information, see the error codes in this topic.</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>
@@ -65,7 +65,7 @@ public class QueryMaterialDirectoryTreeResponseBody extends TeaModel {
     public String errorCode;
 
     /**
-     * <p>error message.</p>
+     * <p>The error message.</p>
      * 
      * <strong>example:</strong>
      * <p>aliuid:1998006665794443 assumeRole not exist,serviceName:realtimelogpush.dcdnservices.aliyuncs.com</p>
@@ -74,7 +74,7 @@ public class QueryMaterialDirectoryTreeResponseBody extends TeaModel {
     public String errorMsg;
 
     /**
-     * <p>Response data</p>
+     * <p>The response data.</p>
      */
     @NameInMap("Module")
     public QueryMaterialDirectoryTreeResponseBodyModule module;
@@ -89,7 +89,7 @@ public class QueryMaterialDirectoryTreeResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>error code</p>
+     * <p>The error code.</p>
      * 
      * <strong>example:</strong>
      * <p>SYSTEM.ERROR</p>
@@ -98,7 +98,7 @@ public class QueryMaterialDirectoryTreeResponseBody extends TeaModel {
     public String rootErrorCode;
 
     /**
-     * <p>abnormal message</p>
+     * <p>The exception message.</p>
      * 
      * <strong>example:</strong>
      * <p>系统异常</p>
@@ -107,7 +107,7 @@ public class QueryMaterialDirectoryTreeResponseBody extends TeaModel {
     public String rootErrorMsg;
 
     /**
-     * <p>Indicates whether the request succeeded.</p>
+     * <p>Indicates whether the request was successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -116,7 +116,7 @@ public class QueryMaterialDirectoryTreeResponseBody extends TeaModel {
     public Boolean success;
 
     /**
-     * <p>Indicates whether the processing is synchronous.</p>
+     * <p>Indicates whether the request is synchronously processed.</p>
      * 
      * <strong>example:</strong>
      * <p>True</p>
@@ -243,7 +243,7 @@ public class QueryMaterialDirectoryTreeResponseBody extends TeaModel {
 
     public static class QueryMaterialDirectoryTreeResponseBodyModule extends TeaModel {
         /**
-         * <p>Top-level folder</p>
+         * <p>The first-level folders.</p>
          */
         @NameInMap("DirectoryList")
         public java.util.List<AppMaterialDirectory> directoryList;

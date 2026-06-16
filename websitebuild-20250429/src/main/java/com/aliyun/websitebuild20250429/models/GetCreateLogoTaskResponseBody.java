@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetCreateLogoTaskResponseBody extends TeaModel {
     /**
-     * <p>The error code. The ErrorCode field is not returned if the request succeeds. If the request fails, the ErrorCode field is returned. For more information, see the error code list in this topic.</p>
+     * <p>The error code. If the request is successful, this field is not returned. If the request fails, this field is returned. For more information, see the error code list in this topic.</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>
@@ -32,7 +32,7 @@ public class GetCreateLogoTaskResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request succeeded.</p>
+     * <p>Indicates whether the request was successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -41,7 +41,7 @@ public class GetCreateLogoTaskResponseBody extends TeaModel {
     public Boolean success;
 
     /**
-     * <p>Job information</p>
+     * <p>The task information.</p>
      */
     @NameInMap("Task")
     public GetCreateLogoTaskResponseBodyTask task;
@@ -93,7 +93,7 @@ public class GetCreateLogoTaskResponseBody extends TeaModel {
 
     public static class GetCreateLogoTaskResponseBodyTask extends TeaModel {
         /**
-         * <p>The job ID.</p>
+         * <p>The task ID.</p>
          * 
          * <strong>example:</strong>
          * <p>604860995</p>
@@ -102,13 +102,13 @@ public class GetCreateLogoTaskResponseBody extends TeaModel {
         public String taskId;
 
         /**
-         * <p>The current status of the job:</p>
+         * <p>The current status of the task. Valid values:</p>
          * <ul>
-         * <li>pending: Pending execution  </li>
-         * <li>configuring: Configuring  </li>
-         * <li>success: Succeeded  </li>
-         * <li>failed: Failed  </li>
-         * <li>partialFailed: Partially failed</li>
+         * <li>pending: pending execution</li>
+         * <li>configuring: being configured</li>
+         * <li>success: succeeded</li>
+         * <li>failed: failed</li>
+         * <li>partialFailed: partially failed.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -118,7 +118,7 @@ public class GetCreateLogoTaskResponseBody extends TeaModel {
         public String taskStatus;
 
         /**
-         * <p>The URLs of the prefetched resources.</p>
+         * <p>The URL of the prefetched resource.</p>
          */
         @NameInMap("Urls")
         public java.util.List<String> urls;

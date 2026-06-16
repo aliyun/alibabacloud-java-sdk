@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class QueryMaterialTaskDetailResponseBody extends TeaModel {
     /**
-     * <p>access denied details</p>
+     * <p>The details of the permission verification failure.</p>
      * 
      * <strong>example:</strong>
      * <p>{}</p>
@@ -14,9 +14,9 @@ public class QueryMaterialTaskDetailResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
-     * <p>Indicates whether retry is allowed. Valid values:  </p>
+     * <p>Indicates whether retry is allowed. Valid values:</p>
      * <ul>
-     * <li>false: Retry is not allowed.  </li>
+     * <li>false: Retry is not allowed.</li>
      * <li>true: Retry is allowed.</li>
      * </ul>
      * 
@@ -27,7 +27,7 @@ public class QueryMaterialTaskDetailResponseBody extends TeaModel {
     public Boolean allowRetry;
 
     /**
-     * <p>AppName. It can contain digits, letters, and hyphens (-). It must start with a letter, cannot end with a hyphen (-), and cannot exceed 36 characters in length.</p>
+     * <p>The application name. The name can contain digits, letters, and hyphens (-). It must start with a letter, cannot end with a hyphen (-), and cannot exceed 36 characters in length.</p>
      * 
      * <strong>example:</strong>
      * <p>or</p>
@@ -36,7 +36,7 @@ public class QueryMaterialTaskDetailResponseBody extends TeaModel {
     public String appName;
 
     /**
-     * <p>Dynamic error code</p>
+     * <p>The dynamic error code.</p>
      * 
      * <strong>example:</strong>
      * <p>ERROR-oo1</p>
@@ -45,7 +45,7 @@ public class QueryMaterialTaskDetailResponseBody extends TeaModel {
     public String dynamicCode;
 
     /**
-     * <p>dynamic message</p>
+     * <p>The dynamic message.</p>
      * 
      * <strong>example:</strong>
      * <p>SYSTEM_ERROR</p>
@@ -54,13 +54,13 @@ public class QueryMaterialTaskDetailResponseBody extends TeaModel {
     public String dynamicMessage;
 
     /**
-     * <p>returned error parameters</p>
+     * <p>The error parameters returned.</p>
      */
     @NameInMap("ErrorArgs")
     public java.util.List<?> errorArgs;
 
     /**
-     * <p>error code. The ErrorCode field is returned only when the Request fails. If the Request succeeds, the ErrorCode field is not returned. For more information, see the error code List in this topic.</p>
+     * <p>The error code. If the request is successful, the ErrorCode field is not returned. If the request fails, the ErrorCode field is returned. For more information, see the error code list in this topic.</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>
@@ -69,7 +69,7 @@ public class QueryMaterialTaskDetailResponseBody extends TeaModel {
     public String errorCode;
 
     /**
-     * <p>error message</p>
+     * <p>The error message.</p>
      * 
      * <strong>example:</strong>
      * <p>aliuid:1998006665794443 assumeRole not exist,serviceName:realtimelogpush.dcdnservices.aliyuncs.com</p>
@@ -78,7 +78,7 @@ public class QueryMaterialTaskDetailResponseBody extends TeaModel {
     public String errorMsg;
 
     /**
-     * <p>Response data</p>
+     * <p>The response data.</p>
      * 
      * <strong>example:</strong>
      * <p>{\&quot;Success\&quot;: True}</p>
@@ -96,7 +96,7 @@ public class QueryMaterialTaskDetailResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>error code</p>
+     * <p>The error code.</p>
      * 
      * <strong>example:</strong>
      * <p>SYSTEM.ERROR</p>
@@ -105,7 +105,7 @@ public class QueryMaterialTaskDetailResponseBody extends TeaModel {
     public String rootErrorCode;
 
     /**
-     * <p>abnormal message</p>
+     * <p>The exception message.</p>
      * 
      * <strong>example:</strong>
      * <p>系统异常</p>
@@ -114,7 +114,7 @@ public class QueryMaterialTaskDetailResponseBody extends TeaModel {
     public String rootErrorMsg;
 
     /**
-     * <p>Indicates whether the Request succeeded.</p>
+     * <p>Indicates whether the request was successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -123,7 +123,7 @@ public class QueryMaterialTaskDetailResponseBody extends TeaModel {
     public Boolean success;
 
     /**
-     * <p>Reserved parameter.</p>
+     * <p>The reserved parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>True</p>

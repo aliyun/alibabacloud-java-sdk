@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateLogoTaskResponseBody extends TeaModel {
     /**
-     * <p>Error code. The values are as follows: If the request succeeds, the ErrorCode field is not returned. If the request fails, the ErrorCode field is returned. For more information, see the error code list in this topic.</p>
+     * <p>The error code. If the request is successful, this field is not returned. If the request fails, this field is returned. For more information, see the error codes in this topic.</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>
@@ -14,7 +14,7 @@ public class CreateLogoTaskResponseBody extends TeaModel {
     public String errorCode;
 
     /**
-     * <p>Error message.</p>
+     * <p>The error message.</p>
      * 
      * <strong>example:</strong>
      * <p>aliuid:1998006665794443 assumeRole not exist,serviceName:realtimelogpush.dcdnservices.aliyuncs.com</p>
@@ -32,7 +32,7 @@ public class CreateLogoTaskResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request succeeded.</p>
+     * <p>Indicates whether the request was successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -41,7 +41,7 @@ public class CreateLogoTaskResponseBody extends TeaModel {
     public Boolean success;
 
     /**
-     * <p>The job ID returned when the invocation succeeds. Note: Keep this ID securely. You need this ID to query the logo creation status.</p>
+     * <p>The task ID returned when the call is successful. Keep this ID safe. This ID is required when you query the creation status.</p>
      * 
      * <strong>example:</strong>
      * <p>c3r127e325at9yd</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class PushResourceMeasureRequest extends TeaModel {
     /**
-     * <p>Resource usage amount</p>
+     * <p>The resource usage amount.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>
@@ -14,7 +14,7 @@ public class PushResourceMeasureRequest extends TeaModel {
     public Long amount;
 
     /**
-     * <p>Belonging ID</p>
+     * <p>The owner ID.</p>
      * 
      * <strong>example:</strong>
      * <p>123456</p>
@@ -23,7 +23,7 @@ public class PushResourceMeasureRequest extends TeaModel {
     public String belongId;
 
     /**
-     * <p>Belonging ID Type (siteId, uid)</p>
+     * <p>The type of the owner ID (siteId or uid).</p>
      * 
      * <strong>example:</strong>
      * <p>USER</p>
@@ -32,7 +32,7 @@ public class PushResourceMeasureRequest extends TeaModel {
     public String belongIdType;
 
     /**
-     * <p>Business ID associated with this push, such as session ID, Job ID, or file ID</p>
+     * <p>The business ID associated with this push, such as a session ID, task ID, or file ID.</p>
      * 
      * <strong>example:</strong>
      * <p>WS20250801154628000001</p>
@@ -41,7 +41,7 @@ public class PushResourceMeasureRequest extends TeaModel {
     public String bizId;
 
     /**
-     * <p>Metering data, used to flexibly push multiple data points such as model invocation count and token usage (JSON string)</p>
+     * <p>The metering data used to flexibly push multiple data points such as the number of model calls and token usage. The value must be a JSON string.</p>
      * 
      * <strong>example:</strong>
      * <p>{\&quot;MD5\&quot;:\&quot;8ba46100bd898461f0f589704f2fad25\&quot;,\&quot;driver\&quot;:\&quot;vhd\&quot;,\&quot;flag\&quot;:\&quot;769\&quot;,\&quot;imds_support\&quot;:\&quot;v1\&quot;,\&quot;io_optimized\&quot;:true,\&quot;nvme_supported\&quot;:false,\&quot;uefi_preferred\&quot;:false}</p>
@@ -50,7 +50,7 @@ public class PushResourceMeasureRequest extends TeaModel {
     public String measureData;
 
     /**
-     * <p>Business extension metadata (in Map format, must be a JSON string)</p>
+     * <p>The business extension metadata in Map format. The value must be a JSON string.</p>
      * 
      * <strong>example:</strong>
      * <p>{\&quot;MD5\&quot;:\&quot;8ba46100bd898461f0f589704f2fad25\&quot;,\&quot;driver\&quot;:\&quot;vhd\&quot;,\&quot;flag\&quot;:\&quot;769\&quot;,\&quot;imds_support\&quot;:\&quot;v1\&quot;,\&quot;io_optimized\&quot;:true,\&quot;nvme_supported\&quot;:false,\&quot;uefi_preferred\&quot;:false}</p>
@@ -59,7 +59,7 @@ public class PushResourceMeasureRequest extends TeaModel {
     public String metaData;
 
     /**
-     * <p>Resource identity</p>
+     * <p>The resource identifier.</p>
      * 
      * <strong>example:</strong>
      * <p>InspirationTokens</p>
@@ -68,7 +68,7 @@ public class PushResourceMeasureRequest extends TeaModel {
     public String resourceCode;
 
     /**
-     * <p>Usage time, format: yyyy-MM-dd HH:mm:ss</p>
+     * <p>The usage time in the yyyy-MM-dd HH:mm:ss format.</p>
      * 
      * <strong>example:</strong>
      * <p>yyyy-MM-dd HH:mm:ss</p>
@@ -77,7 +77,7 @@ public class PushResourceMeasureRequest extends TeaModel {
     public String useTime;
 
     /**
-     * <p>Usage type</p>
+     * <p>The usage type.</p>
      * 
      * <strong>example:</strong>
      * <p>MANUAL_BIZ</p>

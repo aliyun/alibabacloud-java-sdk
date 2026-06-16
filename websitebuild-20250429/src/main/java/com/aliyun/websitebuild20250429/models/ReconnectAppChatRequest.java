@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ReconnectAppChatRequest extends TeaModel {
     /**
-     * <p>Chat record ID</p>
+     * <p>The chat record ID.</p>
      * 
      * <strong>example:</strong>
      * <p>20833ba4-d189-4c50-9a44-a6bcbda2c93b</p>
@@ -14,7 +14,7 @@ public class ReconnectAppChatRequest extends TeaModel {
     public String chatId;
 
     /**
-     * <p>Session ID</p>
+     * <p>The session ID.</p>
      * 
      * <strong>example:</strong>
      * <p>5b7105a2-2999-430b-ba23-ba09149d5434</p>
@@ -23,7 +23,7 @@ public class ReconnectAppChatRequest extends TeaModel {
     public String conversationId;
 
     /**
-     * <p>Last management event ID</p>
+     * <p>The ID of the last event.</p>
      * 
      * <strong>example:</strong>
      * <p>event-71ece53b7d474e01b755a9b5fa5305e6</p>

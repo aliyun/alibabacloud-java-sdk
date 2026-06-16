@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteAppDomainCertificateRequest extends TeaModel {
     /**
-     * <p>Business ID of the application instance</p>
+     * <p>The business ID of the application instance.</p>
      * 
      * <strong>example:</strong>
      * <p>202506170003</p>
@@ -14,7 +14,7 @@ public class DeleteAppDomainCertificateRequest extends TeaModel {
     public String bizId;
 
     /**
-     * <p>Domain name</p>
+     * <p>The domain name.</p>
      * 
      * <strong>example:</strong>
      * <p>aliwmzs.com</p>

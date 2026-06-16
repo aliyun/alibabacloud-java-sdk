@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class QueryInspirationConsumeRecordsResponseBody extends TeaModel {
     /**
-     * <p>Detailed reason for access denial.</p>
+     * <p>The detailed reason why access is denied.</p>
      * 
      * <strong>example:</strong>
      * <p>{}</p>
@@ -14,7 +14,7 @@ public class QueryInspirationConsumeRecordsResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
-     * <p>Is retry allowed</p>
+     * <p>Indicates whether a retry is allowed.</p>
      * 
      * <strong>example:</strong>
      * <p>False</p>
@@ -23,7 +23,7 @@ public class QueryInspirationConsumeRecordsResponseBody extends TeaModel {
     public Boolean allowRetry;
 
     /**
-     * <p>Application Name. Query the application with this name.</p>
+     * <p>The application name. The application with this name is queried.</p>
      * 
      * <strong>example:</strong>
      * <p>ish-intelligence-store-platform-admin-web</p>
@@ -32,7 +32,7 @@ public class QueryInspirationConsumeRecordsResponseBody extends TeaModel {
     public String appName;
 
     /**
-     * <p>Dynamic error code.</p>
+     * <p>The dynamic error code.</p>
      * 
      * <strong>example:</strong>
      * <p>ERROR-oo1</p>
@@ -41,7 +41,7 @@ public class QueryInspirationConsumeRecordsResponseBody extends TeaModel {
     public String dynamicCode;
 
     /**
-     * <p>Dynamic message. Not currently used. Please ignore.</p>
+     * <p>The dynamic message. This parameter is not in use. Ignore this parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>SYSTEM_ERROR</p>
@@ -50,13 +50,13 @@ public class QueryInspirationConsumeRecordsResponseBody extends TeaModel {
     public String dynamicMessage;
 
     /**
-     * <p>Returned error parameters</p>
+     * <p>The error parameters.</p>
      */
     @NameInMap("ErrorArgs")
     public java.util.List<?> errorArgs;
 
     /**
-     * <p>Whether the deletion succeeded</p>
+     * <p>Indicates whether the deletion is successful.</p>
      */
     @NameInMap("Module")
     public QueryInspirationConsumeRecordsResponseBodyModule module;
@@ -71,7 +71,7 @@ public class QueryInspirationConsumeRecordsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Error code</p>
+     * <p>The error code.</p>
      * 
      * <strong>example:</strong>
      * <p>SYSTEM.ERROR</p>
@@ -80,7 +80,7 @@ public class QueryInspirationConsumeRecordsResponseBody extends TeaModel {
     public String rootErrorCode;
 
     /**
-     * <p>Abnormal message</p>
+     * <p>The error message.</p>
      * 
      * <strong>example:</strong>
      * <p>系统异常</p>
@@ -89,7 +89,7 @@ public class QueryInspirationConsumeRecordsResponseBody extends TeaModel {
     public String rootErrorMsg;
 
     /**
-     * <p>Is processed synchronously</p>
+     * <p>Indicates whether the request is synchronously processed.</p>
      * 
      * <strong>example:</strong>
      * <p>True</p>
@@ -192,7 +192,7 @@ public class QueryInspirationConsumeRecordsResponseBody extends TeaModel {
 
     public static class QueryInspirationConsumeRecordsResponseBodyModuleData extends TeaModel {
         /**
-         * <p>Quantity of inspiration value consumed</p>
+         * <p>The number of inspiration points consumed.</p>
          * 
          * <strong>example:</strong>
          * <p>120</p>
@@ -204,7 +204,7 @@ public class QueryInspirationConsumeRecordsResponseBody extends TeaModel {
         public String amountStr;
 
         /**
-         * <p>Consumption time</p>
+         * <p>The consumption time.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-06-01 12:00:00</p>
@@ -216,7 +216,7 @@ public class QueryInspirationConsumeRecordsResponseBody extends TeaModel {
         public String consumeType;
 
         /**
-         * <p>Extension information (in JSON string format)</p>
+         * <p>The extended information in JSON string format.</p>
          * 
          * <strong>example:</strong>
          * <p>{\&quot;MD5\&quot;:\&quot;296f6c01e7fea2697ffe1cf41082b774\&quot;,\&quot;driver\&quot;:\&quot;vhd\&quot;,\&quot;flag\&quot;:\&quot;12845825\&quot;,\&quot;imds_support\&quot;:\&quot;v1\&quot;,\&quot;io_optimized\&quot;:true,\&quot;nvme_supported\&quot;:true,\&quot;uefi_preferred\&quot;:false}</p>
@@ -228,7 +228,7 @@ public class QueryInspirationConsumeRecordsResponseBody extends TeaModel {
         public String recordKey;
 
         /**
-         * <p>Consumption scenario Name (such as AI application development, AI creative image generation, AI Video creation, AI Content creation)</p>
+         * <p>The name of the consumption scenario, such as AI Application Development, AI Creative Illustration, AI Video Creation, or AI Content Creation.</p>
          * 
          * <strong>example:</strong>
          * <p>家装</p>
@@ -301,7 +301,7 @@ public class QueryInspirationConsumeRecordsResponseBody extends TeaModel {
 
     public static class QueryInspirationConsumeRecordsResponseBodyModuleNext extends TeaModel {
         /**
-         * <p>Quantity of inspiration value consumed</p>
+         * <p>The number of inspiration points consumed.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -313,7 +313,7 @@ public class QueryInspirationConsumeRecordsResponseBody extends TeaModel {
         public String amountStr;
 
         /**
-         * <p>Consumption Time</p>
+         * <p>The consumption time.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-06-01 12:00:00</p>
@@ -325,7 +325,7 @@ public class QueryInspirationConsumeRecordsResponseBody extends TeaModel {
         public String consumeType;
 
         /**
-         * <p>Extension information (in JSON string format)</p>
+         * <p>The extended information in JSON string format.</p>
          * 
          * <strong>example:</strong>
          * <p>{\&quot;MD5\&quot;:\&quot;1042e65a2b7cdd3059b6a873ee1a3260\&quot;,\&quot;driver\&quot;:\&quot;vhd\&quot;,\&quot;flag\&quot;:\&quot;12845825\&quot;,\&quot;imds_support\&quot;:\&quot;v1\&quot;,\&quot;io_optimized\&quot;:true,\&quot;nvme_supported\&quot;:true,\&quot;uefi_preferred\&quot;:false}</p>
@@ -334,7 +334,7 @@ public class QueryInspirationConsumeRecordsResponseBody extends TeaModel {
         public String metaData;
 
         /**
-         * <p>Consumption scenario Name (such as AI application development, AI creative image generation, AI Video creation, AI Content creation)</p>
+         * <p>The name of the consumption scenario, such as AI Application Development, AI Creative Illustration, AI Video Creation, or AI Content Creation.</p>
          * 
          * <strong>example:</strong>
          * <p>家装</p>
@@ -399,7 +399,7 @@ public class QueryInspirationConsumeRecordsResponseBody extends TeaModel {
 
     public static class QueryInspirationConsumeRecordsResponseBodyModule extends TeaModel {
         /**
-         * <p>Current page number.</p>
+         * <p>The current page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -408,19 +408,19 @@ public class QueryInspirationConsumeRecordsResponseBody extends TeaModel {
         public Integer currentPageNum;
 
         /**
-         * <p>Request Result.</p>
+         * <p>The request result.</p>
          */
         @NameInMap("Data")
         public java.util.List<QueryInspirationConsumeRecordsResponseBodyModuleData> data;
 
         /**
-         * <p>Next feature ID</p>
+         * <p>The ID of the next feature.</p>
          */
         @NameInMap("Next")
         public QueryInspirationConsumeRecordsResponseBodyModuleNext next;
 
         /**
-         * <p>Indicates whether there is a next page.</p>
+         * <p>Indicates whether a next page exists.</p>
          * 
          * <strong>example:</strong>
          * <p>False</p>
@@ -429,7 +429,7 @@ public class QueryInspirationConsumeRecordsResponseBody extends TeaModel {
         public Boolean nextPage;
 
         /**
-         * <p>Paging size.</p>
+         * <p>The page size.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -438,7 +438,7 @@ public class QueryInspirationConsumeRecordsResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
-         * <p>Whether there is a previous page.</p>
+         * <p>Indicates whether a previous page exists.</p>
          * 
          * <strong>example:</strong>
          * <p>False</p>
@@ -447,13 +447,13 @@ public class QueryInspirationConsumeRecordsResponseBody extends TeaModel {
         public Boolean prePage;
 
         /**
-         * <p>In addition to paging limits, the server-side processes at most the latest 1 000 records for the current query. If the result exceeds 1 000 records, <strong>ResultLimit</strong> is <strong>true</strong>; you should narrow the Time Range and search again. Otherwise, <strong>ResultLimit</strong> is <strong>false</strong>.</p>
+         * <p>Apart from pagination limits, the server processes up to 1,000 recent records for the current query. If the results exceed 1,000 records, <strong>ResultLimit</strong> is <strong>true</strong>. In this case, narrow the time range and search again. Otherwise, <strong>ResultLimit</strong> is <strong>false</strong>.</p>
          */
         @NameInMap("ResultLimit")
         public Boolean resultLimit;
 
         /**
-         * <p>Total number of records.</p>
+         * <p>The total number of entries.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -462,7 +462,7 @@ public class QueryInspirationConsumeRecordsResponseBody extends TeaModel {
         public Integer totalItemNum;
 
         /**
-         * <p>Total number of pages.</p>
+         * <p>The total number of pages.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>

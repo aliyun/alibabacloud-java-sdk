@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CheckUserResourceMeasureResponseBody extends TeaModel {
     /**
-     * <p>Detailed reason for access denial.</p>
+     * <p>The detailed reason why access is denied.</p>
      * 
      * <strong>example:</strong>
      * <p>{}</p>
@@ -14,10 +14,10 @@ public class CheckUserResourceMeasureResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
-     * <p>Indicates whether retry is allowed. Valid values:  </p>
+     * <p>Indicates whether a retry is allowed. Valid values:</p>
      * <ul>
-     * <li>false: Retry is not allowed.  </li>
-     * <li>true: Retry is allowed.</li>
+     * <li>false: A retry is not allowed.</li>
+     * <li>true: A retry is allowed.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -27,7 +27,7 @@ public class CheckUserResourceMeasureResponseBody extends TeaModel {
     public Boolean allowRetry;
 
     /**
-     * <p>Application name. Query the application with this name.</p>
+     * <p>The application name. The application with this name is queried.</p>
      * 
      * <strong>example:</strong>
      * <p>spring-cloud-b</p>
@@ -36,7 +36,7 @@ public class CheckUserResourceMeasureResponseBody extends TeaModel {
     public String appName;
 
     /**
-     * <p>Dynamic error code.</p>
+     * <p>The dynamic error code.</p>
      * 
      * <strong>example:</strong>
      * <p>ERROR-oo1</p>
@@ -45,9 +45,9 @@ public class CheckUserResourceMeasureResponseBody extends TeaModel {
     public String dynamicCode;
 
     /**
-     * <p>Dynamic error message used to replace <code>%s</code> in the <strong>ErrMessage</strong> error message.  </p>
+     * <p>The dynamic error message, which is used to replace the <code>%s</code> placeholder in the <strong>ErrMessage</strong> response element.</p>
      * <blockquote>
-     * <p>If <strong>ErrMessage</strong> returns <strong>The Value of Input Parameter %s is not valid</strong> and <strong>DynamicMessage</strong> returns <strong>DtsJobId</strong>, it indicates that the provided request parameter <strong>DtsJobId</strong> is invalid.</p>
+     * <p>If <strong>ErrMessage</strong> returns <strong>The Value of Input Parameter %s is not valid</strong> and <strong>DynamicMessage</strong> returns <strong>DtsJobId</strong>, the request parameter <strong>DtsJobId</strong> is invalid.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -57,13 +57,13 @@ public class CheckUserResourceMeasureResponseBody extends TeaModel {
     public String dynamicMessage;
 
     /**
-     * <p>Returned error parameters</p>
+     * <p>The error parameters.</p>
      */
     @NameInMap("ErrorArgs")
     public java.util.List<?> errorArgs;
 
     /**
-     * <p>Returned object.</p>
+     * <p>The response object.</p>
      */
     @NameInMap("Module")
     public CheckUserResourceMeasureResponseBodyModule module;
@@ -78,7 +78,7 @@ public class CheckUserResourceMeasureResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Error code</p>
+     * <p>The error code.</p>
      * 
      * <strong>example:</strong>
      * <p>SYSTEM.ERROR</p>
@@ -87,7 +87,7 @@ public class CheckUserResourceMeasureResponseBody extends TeaModel {
     public String rootErrorCode;
 
     /**
-     * <p>Abnormal message</p>
+     * <p>The exception message.</p>
      * 
      * <strong>example:</strong>
      * <p>系统异常</p>
@@ -96,7 +96,7 @@ public class CheckUserResourceMeasureResponseBody extends TeaModel {
     public String rootErrorMsg;
 
     /**
-     * <p>Reserved parameter.</p>
+     * <p>A reserved parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>True</p>
@@ -199,7 +199,7 @@ public class CheckUserResourceMeasureResponseBody extends TeaModel {
 
     public static class CheckUserResourceMeasureResponseBodyModule extends TeaModel {
         /**
-         * <p>Error code when failed; null when passed</p>
+         * <p>The error code when the check fails. This value is null when the check passes.</p>
          * 
          * <strong>example:</strong>
          * <p>Success</p>
@@ -208,7 +208,7 @@ public class CheckUserResourceMeasureResponseBody extends TeaModel {
         public String errorCode;
 
         /**
-         * <p>Error message when failed; null when passed</p>
+         * <p>The error message when the check fails. This value is null when the check passes.</p>
          * 
          * <strong>example:</strong>
          * <p>stream push failed</p>
@@ -217,7 +217,7 @@ public class CheckUserResourceMeasureResponseBody extends TeaModel {
         public String errorMessage;
 
         /**
-         * <p>Indicates whether the check passed</p>
+         * <p>Indicates whether the check is passed.</p>
          * 
          * <strong>example:</strong>
          * <p>False</p>
@@ -226,7 +226,7 @@ public class CheckUserResourceMeasureResponseBody extends TeaModel {
         public Boolean passed;
 
         /**
-         * <p>Resource identity</p>
+         * <p>The resource identifier.</p>
          * 
          * <strong>example:</strong>
          * <p>TransitRouterVpcAttachment</p>

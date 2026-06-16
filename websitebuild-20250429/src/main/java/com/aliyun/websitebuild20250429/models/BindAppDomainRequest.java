@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class BindAppDomainRequest extends TeaModel {
     /**
-     * <p>Business ID</p>
+     * <p>The business ID.</p>
      * 
      * <strong>example:</strong>
      * <p>WD20250820143531000001</p>
@@ -14,7 +14,7 @@ public class BindAppDomainRequest extends TeaModel {
     public String bizId;
 
     /**
-     * <p>Domain Name</p>
+     * <p>The domain name.</p>
      * 
      * <strong>example:</strong>
      * <p>xiaoniu.link</p>
@@ -23,7 +23,7 @@ public class BindAppDomainRequest extends TeaModel {
     public String domainName;
 
     /**
-     * <p>Extended Information (OverwriteExistingRecord)</p>
+     * <p>The extended information (OverwriteExistingRecord).</p>
      * 
      * <strong>example:</strong>
      * <p>{\&quot;deliveryNodeName\&quot;:\&quot;网站验收\&quot;,\&quot;deliveryNodeStatus\&quot;:\&quot;Reject\&quot;,\&quot;deliveryOperatorRole\&quot;:\&quot;Customer\&quot;}</p>
@@ -32,7 +32,7 @@ public class BindAppDomainRequest extends TeaModel {
     public String extend;
 
     /**
-     * <p>Domain Binding - Operation Type</p>
+     * <p>The operation type for domain name binding.</p>
      * 
      * <strong>example:</strong>
      * <p>vul_fix</p>

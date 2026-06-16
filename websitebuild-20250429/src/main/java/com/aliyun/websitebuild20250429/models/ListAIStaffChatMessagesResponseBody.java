@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListAIStaffChatMessagesResponseBody extends TeaModel {
     /**
-     * <p>Permission denied information</p>
+     * <p>The access denied details.</p>
      * 
      * <strong>example:</strong>
      * <p>{}</p>
@@ -14,7 +14,7 @@ public class ListAIStaffChatMessagesResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
-     * <p>Is retry allowed</p>
+     * <p>Indicates whether retry is allowed.</p>
      * 
      * <strong>example:</strong>
      * <p>False</p>
@@ -23,7 +23,7 @@ public class ListAIStaffChatMessagesResponseBody extends TeaModel {
     public Boolean allowRetry;
 
     /**
-     * <p>App Name.</p>
+     * <p>The application name.</p>
      * 
      * <strong>example:</strong>
      * <p>or</p>
@@ -32,7 +32,7 @@ public class ListAIStaffChatMessagesResponseBody extends TeaModel {
     public String appName;
 
     /**
-     * <p>Dynamic error code.</p>
+     * <p>The dynamic error code.</p>
      * 
      * <strong>example:</strong>
      * <p>ERROR-oo1</p>
@@ -41,7 +41,7 @@ public class ListAIStaffChatMessagesResponseBody extends TeaModel {
     public String dynamicCode;
 
     /**
-     * <p>Dynamic message. Not currently used. Please ignore.</p>
+     * <p>The dynamic message. This parameter is not in use. Ignore it.</p>
      * 
      * <strong>example:</strong>
      * <p>SYSTEM_ERROR</p>
@@ -50,13 +50,13 @@ public class ListAIStaffChatMessagesResponseBody extends TeaModel {
     public String dynamicMessage;
 
     /**
-     * <p>Returned error parameters</p>
+     * <p>The error parameters.</p>
      */
     @NameInMap("ErrorArgs")
     public java.util.List<?> errorArgs;
 
     /**
-     * <p>Response data</p>
+     * <p>The response data.</p>
      */
     @NameInMap("Module")
     public ListAIStaffChatMessagesResponseBodyModule module;
@@ -71,7 +71,7 @@ public class ListAIStaffChatMessagesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Error code</p>
+     * <p>The error code.</p>
      * 
      * <strong>example:</strong>
      * <p>SYSTEM.ERROR</p>
@@ -80,7 +80,7 @@ public class ListAIStaffChatMessagesResponseBody extends TeaModel {
     public String rootErrorCode;
 
     /**
-     * <p>Abnormal message</p>
+     * <p>The error message.</p>
      * 
      * <strong>example:</strong>
      * <p>系统异常</p>
@@ -89,7 +89,7 @@ public class ListAIStaffChatMessagesResponseBody extends TeaModel {
     public String rootErrorMsg;
 
     /**
-     * <p>Reserved parameter.</p>
+     * <p>The reserved parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>True</p>
@@ -192,7 +192,7 @@ public class ListAIStaffChatMessagesResponseBody extends TeaModel {
 
     public static class ListAIStaffChatMessagesResponseBodyModuleMessages extends TeaModel {
         /**
-         * <p>Bot ID.</p>
+         * <p>The bot ID.</p>
          * 
          * <strong>example:</strong>
          * <p>Zero2</p>
@@ -201,7 +201,7 @@ public class ListAIStaffChatMessagesResponseBody extends TeaModel {
         public String botId;
 
         /**
-         * <p>Current conversation round ID</p>
+         * <p>The ID of the current conversation turn.</p>
          * 
          * <strong>example:</strong>
          * <p>54a0bfa0-41bd-4e96-acd9-fb13c0474452</p>
@@ -210,7 +210,7 @@ public class ListAIStaffChatMessagesResponseBody extends TeaModel {
         public String chatId;
 
         /**
-         * <p>Current session status</p>
+         * <p>The current conversation status.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -219,7 +219,7 @@ public class ListAIStaffChatMessagesResponseBody extends TeaModel {
         public String chatStatus;
 
         /**
-         * <p>ID of the invoked data class API.</p>
+         * <p>The ID of the data API operation that is called.</p>
          * 
          * <strong>example:</strong>
          * <p>domain cnamen<a href="http://www.buyhao8.com">www.buyhao8.com</a> <a href="http://www.buyhao8.com.a1.initrr.comn">www.buyhao8.com.a1.initrr.comn</a></p>
@@ -228,7 +228,7 @@ public class ListAIStaffChatMessagesResponseBody extends TeaModel {
         public String content;
 
         /**
-         * <p>Content type</p>
+         * <p>The content type.</p>
          * 
          * <strong>example:</strong>
          * <p>application/octet-stream</p>
@@ -237,7 +237,7 @@ public class ListAIStaffChatMessagesResponseBody extends TeaModel {
         public String contentType;
 
         /**
-         * <p>Session ID</p>
+         * <p>The conversation ID.</p>
          * 
          * <strong>example:</strong>
          * <p>job-675163021891846144</p>
@@ -246,7 +246,7 @@ public class ListAIStaffChatMessagesResponseBody extends TeaModel {
         public String conversationId;
 
         /**
-         * <p>Creation Time</p>
+         * <p>The creation time.</p>
          * 
          * <strong>example:</strong>
          * <p>1723532098</p>
@@ -255,7 +255,7 @@ public class ListAIStaffChatMessagesResponseBody extends TeaModel {
         public String gmtCreate;
 
         /**
-         * <p>Updated At</p>
+         * <p>The modification time.</p>
          * 
          * <strong>example:</strong>
          * <p>1591339051000</p>
@@ -264,7 +264,7 @@ public class ListAIStaffChatMessagesResponseBody extends TeaModel {
         public String gmtModified;
 
         /**
-         * <p>Message ID</p>
+         * <p>The message ID.</p>
          * 
          * <strong>example:</strong>
          * <p>1dafa033-e72b-44c2-99b7-bc202c5b6198</p>
@@ -273,25 +273,25 @@ public class ListAIStaffChatMessagesResponseBody extends TeaModel {
         public String messageId;
 
         /**
-         * <p>Business extension metadata (in Map format, must be a JSON string)</p>
+         * <p>The business extension metadata in Map format. The value must be a JSON string.</p>
          */
         @NameInMap("MetaData")
         public java.util.Map<String, ?> metaData;
 
         /**
-         * <p>Indicates the role of the participant in the conversation. Valid values include:</p>
+         * <p>The role of the conversation participant. Valid values:</p>
          * <ul>
-         * <li><p>user: User</p>
+         * <li><p>user: User.</p>
          * </li>
-         * <li><p>assistant: Assistant</p>
+         * <li><p>assistant: Assistant.</p>
          * </li>
-         * <li><p>system: System</p>
+         * <li><p>system: System.</p>
          * </li>
-         * <li><p>function: Function</p>
+         * <li><p>function: Function.</p>
          * </li>
-         * <li><p>plugin: Plugin</p>
+         * <li><p>plugin: Plugin.</p>
          * </li>
-         * <li><p>tool: Tool</p>
+         * <li><p>tool: Tool.</p>
          * </li>
          * </ul>
          * 
@@ -302,7 +302,7 @@ public class ListAIStaffChatMessagesResponseBody extends TeaModel {
         public String role;
 
         /**
-         * <p>Section ID of the inspection item.</p>
+         * <p>The section ID of the check item.</p>
          * 
          * <strong>example:</strong>
          * <p>324</p>
@@ -311,7 +311,7 @@ public class ListAIStaffChatMessagesResponseBody extends TeaModel {
         public String sectionId;
 
         /**
-         * <p>Site ID.</p>
+         * <p>The site ID.</p>
          * 
          * <strong>example:</strong>
          * <p>928636774795776</p>
@@ -320,7 +320,7 @@ public class ListAIStaffChatMessagesResponseBody extends TeaModel {
         public String siteId;
 
         /**
-         * <p>File type</p>
+         * <p>The file type.</p>
          * 
          * <strong>example:</strong>
          * <p>SINGLE</p>
@@ -449,12 +449,12 @@ public class ListAIStaffChatMessagesResponseBody extends TeaModel {
 
     public static class ListAIStaffChatMessagesResponseBodyModule extends TeaModel {
         /**
-         * <p>Sender type.  </p>
-         * <p>Enumeration values:  </p>
+         * <p>The sender type.</p>
+         * <p>Valid values:</p>
          * <ul>
-         * <li><strong>ADMIN</strong>: System  </li>
-         * <li><strong>CUSTOMER</strong>: Visitor  </li>
-         * <li><strong>AGENT</strong>: Agent</li>
+         * <li><strong>ADMIN</strong>: System.</li>
+         * <li><strong>CUSTOMER</strong>: Visitor.</li>
+         * <li><strong>AGENT</strong>: Agent.</li>
          * </ul>
          */
         @NameInMap("Messages")

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class QueryInspirationConsumeRecordsRequest extends TeaModel {
     /**
-     * <p>Query end time</p>
+     * <p>The end time of the query.</p>
      * 
      * <strong>example:</strong>
      * <p>1762999521</p>
@@ -14,7 +14,7 @@ public class QueryInspirationConsumeRecordsRequest extends TeaModel {
     public String endTime;
 
     /**
-     * <p>Sorting field</p>
+     * <p>The field used for sorting.</p>
      * 
      * <strong>example:</strong>
      * <p>CreationTime</p>
@@ -23,7 +23,7 @@ public class QueryInspirationConsumeRecordsRequest extends TeaModel {
     public String orderColumn;
 
     /**
-     * <p>Sorting type: ASC or DESC</p>
+     * <p>The sort order. Valid values: ASC and DESC.</p>
      * 
      * <strong>example:</strong>
      * <p>DESC</p>
@@ -32,7 +32,7 @@ public class QueryInspirationConsumeRecordsRequest extends TeaModel {
     public String orderType;
 
     /**
-     * <p>Page number, default is 1</p>
+     * <p>The page number. Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>
@@ -41,7 +41,7 @@ public class QueryInspirationConsumeRecordsRequest extends TeaModel {
     public Integer pageNum;
 
     /**
-     * <p>Page size, default is 10</p>
+     * <p>The number of entries per page. Default value: 10.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -50,7 +50,7 @@ public class QueryInspirationConsumeRecordsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>Scenario Name.</p>
+     * <p>The scenario name.</p>
      * 
      * <strong>example:</strong>
      * <p>百灵鸟-人员认证</p>
@@ -59,7 +59,7 @@ public class QueryInspirationConsumeRecordsRequest extends TeaModel {
     public String sceneName;
 
     /**
-     * <p>Start Time</p>
+     * <p>The start time of the query.</p>
      * 
      * <strong>example:</strong>
      * <p>2025-10-19T16:00:00Z</p>

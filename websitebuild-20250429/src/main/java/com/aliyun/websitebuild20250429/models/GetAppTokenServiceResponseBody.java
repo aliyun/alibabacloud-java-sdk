@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetAppTokenServiceResponseBody extends TeaModel {
     /**
-     * <p>Permission denied information</p>
+     * <p>The access denied detail.</p>
      * 
      * <strong>example:</strong>
      * <p>{}</p>
@@ -14,9 +14,9 @@ public class GetAppTokenServiceResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
-     * <p>Indicates whether retry is allowed. Valid values:  </p>
+     * <p>Indicates whether retry is allowed. Valid values:</p>
      * <ul>
-     * <li>false: Retry is not allowed.  </li>
+     * <li>false: Retry is not allowed.</li>
      * <li>true: Retry is allowed.</li>
      * </ul>
      * 
@@ -27,7 +27,7 @@ public class GetAppTokenServiceResponseBody extends TeaModel {
     public Boolean allowRetry;
 
     /**
-     * <p>App Name.</p>
+     * <p>The application name.</p>
      * 
      * <strong>example:</strong>
      * <p>spring-cloud-b</p>
@@ -36,7 +36,7 @@ public class GetAppTokenServiceResponseBody extends TeaModel {
     public String appName;
 
     /**
-     * <p>Dynamic error code.</p>
+     * <p>The dynamic error code.</p>
      * 
      * <strong>example:</strong>
      * <p>ERROR-oo1</p>
@@ -45,7 +45,7 @@ public class GetAppTokenServiceResponseBody extends TeaModel {
     public String dynamicCode;
 
     /**
-     * <p>Dynamic message. This field is not currently used. Ignore it.</p>
+     * <p>The dynamic message. This parameter is not in use. Ignore this parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>SYSTEM_ERROR</p>
@@ -54,13 +54,13 @@ public class GetAppTokenServiceResponseBody extends TeaModel {
     public String dynamicMessage;
 
     /**
-     * <p>Returned error parameters</p>
+     * <p>The error parameters returned.</p>
      */
     @NameInMap("ErrorArgs")
     public java.util.List<?> errorArgs;
 
     /**
-     * <p>Application module</p>
+     * <p>The application module.</p>
      */
     @NameInMap("Module")
     public GetAppTokenServiceResponseBodyModule module;
@@ -75,7 +75,7 @@ public class GetAppTokenServiceResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Error code</p>
+     * <p>The error code.</p>
      * 
      * <strong>example:</strong>
      * <p>SYSTEM.ERROR</p>
@@ -84,7 +84,7 @@ public class GetAppTokenServiceResponseBody extends TeaModel {
     public String rootErrorCode;
 
     /**
-     * <p>Abnormal message</p>
+     * <p>The root error message.</p>
      * 
      * <strong>example:</strong>
      * <p>系统异常</p>
@@ -93,7 +93,7 @@ public class GetAppTokenServiceResponseBody extends TeaModel {
     public String rootErrorMsg;
 
     /**
-     * <p>Reserved parameter.</p>
+     * <p>The reserved parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>True</p>
@@ -196,7 +196,7 @@ public class GetAppTokenServiceResponseBody extends TeaModel {
 
     public static class GetAppTokenServiceResponseBodyModule extends TeaModel {
         /**
-         * <p>Extension information</p>
+         * <p>The extended information.</p>
          * 
          * <strong>example:</strong>
          * <p>{\&quot;deliveryNodeName\&quot;:\&quot;绑定域名及发布\&quot;,\&quot;deliveryNodeStatus\&quot;:\&quot;Finish\&quot;,\&quot;deliveryOperatorRole\&quot;:\&quot;Provider\&quot;}</p>

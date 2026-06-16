@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class SyncAppInstanceForPartnerResponseBody extends TeaModel {
     /**
-     * <p>Request result.</p>
+     * <p>The request result.</p>
      */
     @NameInMap("Data")
     public SyncAppInstanceForPartnerResponseBodyData data;
@@ -42,7 +42,7 @@ public class SyncAppInstanceForPartnerResponseBody extends TeaModel {
 
     public static class SyncAppInstanceForPartnerResponseBodyDataAppInstance extends TeaModel {
         /**
-         * <p>Customer business ID</p>
+         * <p>The customer business ID.</p>
          * 
          * <strong>example:</strong>
          * <p>WD20250626114752000001</p>
@@ -67,7 +67,7 @@ public class SyncAppInstanceForPartnerResponseBody extends TeaModel {
 
     public static class SyncAppInstanceForPartnerResponseBodyData extends TeaModel {
         /**
-         * <p>Application instance information</p>
+         * <p>The website instance information.</p>
          */
         @NameInMap("AppInstance")
         public SyncAppInstanceForPartnerResponseBodyDataAppInstance appInstance;

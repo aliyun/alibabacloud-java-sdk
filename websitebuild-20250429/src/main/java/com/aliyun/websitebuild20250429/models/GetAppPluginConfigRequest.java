@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetAppPluginConfigRequest extends TeaModel {
     /**
-     * <p>Customer business ID</p>
+     * <p>The business ID of the customer.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class GetAppPluginConfigRequest extends TeaModel {
     public String bizId;
 
     /**
-     * <p>Gateway plugin ID</p>
+     * <p>The ID of the gateway plugin.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

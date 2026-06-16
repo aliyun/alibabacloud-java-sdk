@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class SyncAppInstanceForPartnerShrinkRequest extends TeaModel {
     /**
-     * <p>Application instance object data</p>
+     * <p>The website instance object data.</p>
      */
     @NameInMap("AppInstance")
     public String appInstanceShrink;
 
     /**
-     * <p>Type of system event. CREATE, UPDATE, COMPLETE</p>
+     * <p>The type of the system event. Valid values: CREATE, UPDATE, and COMPLETE.</p>
      * 
      * <strong>example:</strong>
      * <p>CREATE</p>
@@ -20,7 +20,7 @@ public class SyncAppInstanceForPartnerShrinkRequest extends TeaModel {
     public String eventType;
 
     /**
-     * <p>Operator ID</p>
+     * <p>The employee ID of the operator.</p>
      * 
      * <strong>example:</strong>
      * <p>system</p>
@@ -29,7 +29,7 @@ public class SyncAppInstanceForPartnerShrinkRequest extends TeaModel {
     public String operator;
 
     /**
-     * <p>Source business ID.</p>
+     * <p>The source business ID.</p>
      * 
      * <strong>example:</strong>
      * <p>31104757</p>
@@ -38,7 +38,7 @@ public class SyncAppInstanceForPartnerShrinkRequest extends TeaModel {
     public String sourceBizId;
 
     /**
-     * <p>Source: MARKET_CLOUD_DREAM</p>
+     * <p>The source. Set this parameter to MARKET_CLOUD_DREAM.</p>
      * 
      * <strong>example:</strong>
      * <p>MARKET_CLOUD_DREAM</p>

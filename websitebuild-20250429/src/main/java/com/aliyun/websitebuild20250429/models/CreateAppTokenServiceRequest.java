@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateAppTokenServiceRequest extends TeaModel {
     /**
-     * <p>Subscription Type: OPEN_SUBSCRIPTION</p>
+     * <p>The subscription type: OPEN_SUBSCRIPTION.</p>
      * 
      * <strong>example:</strong>
      * <p>OPEN_SUBSCRIPTION</p>

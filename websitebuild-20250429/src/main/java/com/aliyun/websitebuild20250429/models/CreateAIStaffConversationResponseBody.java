@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateAIStaffConversationResponseBody extends TeaModel {
     /**
-     * <p>Detailed reason for access denial.</p>
+     * <p>The detailed reason why access was denied.</p>
      * 
      * <strong>example:</strong>
      * <p>{}</p>
@@ -14,7 +14,7 @@ public class CreateAIStaffConversationResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
-     * <p>Is retry allowed</p>
+     * <p>Indicates whether retry is allowed.</p>
      * 
      * <strong>example:</strong>
      * <p>False</p>
@@ -23,7 +23,7 @@ public class CreateAIStaffConversationResponseBody extends TeaModel {
     public Boolean allowRetry;
 
     /**
-     * <p>Application name. Query the application with this name.</p>
+     * <p>The application name. The application with this name is queried.</p>
      * 
      * <strong>example:</strong>
      * <p>spring-cloud-b</p>
@@ -32,7 +32,7 @@ public class CreateAIStaffConversationResponseBody extends TeaModel {
     public String appName;
 
     /**
-     * <p>Dynamic error code.</p>
+     * <p>The dynamic error code.</p>
      * 
      * <strong>example:</strong>
      * <p>ERROR-oo1</p>
@@ -41,7 +41,7 @@ public class CreateAIStaffConversationResponseBody extends TeaModel {
     public String dynamicCode;
 
     /**
-     * <p>Dynamic message.</p>
+     * <p>The dynamic message.</p>
      * 
      * <strong>example:</strong>
      * <p>SYSTEM_ERROR</p>
@@ -50,13 +50,13 @@ public class CreateAIStaffConversationResponseBody extends TeaModel {
     public String dynamicMessage;
 
     /**
-     * <p>Returned error parameters</p>
+     * <p>The error parameters returned.</p>
      */
     @NameInMap("ErrorArgs")
     public java.util.List<?> errorArgs;
 
     /**
-     * <p>Response data</p>
+     * <p>The response data.</p>
      */
     @NameInMap("Module")
     public CreateAIStaffConversationResponseBodyModule module;
@@ -71,7 +71,7 @@ public class CreateAIStaffConversationResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>error code</p>
+     * <p>The error code.</p>
      * 
      * <strong>example:</strong>
      * <p>SYSTEM.ERROR</p>
@@ -80,7 +80,7 @@ public class CreateAIStaffConversationResponseBody extends TeaModel {
     public String rootErrorCode;
 
     /**
-     * <p>Abnormal message</p>
+     * <p>The exception message.</p>
      * 
      * <strong>example:</strong>
      * <p>系统异常</p>
@@ -89,7 +89,7 @@ public class CreateAIStaffConversationResponseBody extends TeaModel {
     public String rootErrorMsg;
 
     /**
-     * <p>Backup parameter.</p>
+     * <p>The reserved parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>True</p>
@@ -192,7 +192,7 @@ public class CreateAIStaffConversationResponseBody extends TeaModel {
 
     public static class CreateAIStaffConversationResponseBodyModule extends TeaModel {
         /**
-         * <p>Bot ID</p>
+         * <p>The chatbot ID.</p>
          * 
          * <strong>example:</strong>
          * <p>Zero2</p>
@@ -201,7 +201,7 @@ public class CreateAIStaffConversationResponseBody extends TeaModel {
         public String botId;
 
         /**
-         * <p>ID of the chat.</p>
+         * <p>The chat ID.</p>
          * 
          * <strong>example:</strong>
          * <p>53467af9-8c4e-4498-9032-1f26978007f8</p>
@@ -210,7 +210,7 @@ public class CreateAIStaffConversationResponseBody extends TeaModel {
         public String chatId;
 
         /**
-         * <p>Session ID</p>
+         * <p>The session ID.</p>
          * 
          * <strong>example:</strong>
          * <p>8642d886-0322-43a9-b12f-6629b067978c</p>
@@ -219,7 +219,7 @@ public class CreateAIStaffConversationResponseBody extends TeaModel {
         public String conversationId;
 
         /**
-         * <p>Section ID of the check item.</p>
+         * <p>The section ID of the check item.</p>
          * 
          * <strong>example:</strong>
          * <p>11</p>
@@ -228,7 +228,7 @@ public class CreateAIStaffConversationResponseBody extends TeaModel {
         public String sectionId;
 
         /**
-         * <p>Site ID, which can be obtained by invoking the <a href="~~ListSites~~">ListSites</a> API.</p>
+         * <p>The site ID. You can call the <a href="~~ListSites~~">ListSites</a> operation to obtain the site ID.</p>
          * 
          * <strong>example:</strong>
          * <p>865181640657408</p>
@@ -237,7 +237,7 @@ public class CreateAIStaffConversationResponseBody extends TeaModel {
         public String siteId;
 
         /**
-         * <p>Current point, equivalent to a news title</p>
+         * <p>The current viewpoint, equivalent to the news title.</p>
          * 
          * <strong>example:</strong>
          * <p>Feel Like Makin\&quot; Love</p>

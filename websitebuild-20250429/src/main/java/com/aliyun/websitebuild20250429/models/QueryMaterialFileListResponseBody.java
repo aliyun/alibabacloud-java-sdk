@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class QueryMaterialFileListResponseBody extends TeaModel {
     /**
-     * <p>Detailed reason for access denial.</p>
+     * <p>The details about the access denial.</p>
      * 
      * <strong>example:</strong>
      * <p>{}</p>
@@ -14,9 +14,9 @@ public class QueryMaterialFileListResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
-     * <p>Indicates whether retry is allowed. Valid values:  </p>
+     * <p>Indicates whether retry is allowed. Valid values:</p>
      * <ul>
-     * <li>false: Retry is not allowed.  </li>
+     * <li>false: Retry is not allowed.</li>
      * <li>true: Retry is allowed.</li>
      * </ul>
      * 
@@ -27,7 +27,7 @@ public class QueryMaterialFileListResponseBody extends TeaModel {
     public Boolean allowRetry;
 
     /**
-     * <p>Application name. It can contain digits, letters, and hyphens (-). It must start with a letter, cannot end with a hyphen (-), and must be no more than 36 characters in length.</p>
+     * <p>The application name. The name can contain digits, letters, and hyphens (-). It must start with a letter and cannot end with a hyphen (-). The name cannot exceed 36 characters in length.</p>
      * 
      * <strong>example:</strong>
      * <p>or</p>
@@ -36,7 +36,7 @@ public class QueryMaterialFileListResponseBody extends TeaModel {
     public String appName;
 
     /**
-     * <p>Dynamic code. Not currently used. Please ignore.</p>
+     * <p>The dynamic code. This parameter is not in use. Ignore this parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>ERROR-oo1</p>
@@ -45,7 +45,7 @@ public class QueryMaterialFileListResponseBody extends TeaModel {
     public String dynamicCode;
 
     /**
-     * <p>Dynamic message.</p>
+     * <p>The dynamic message.</p>
      * 
      * <strong>example:</strong>
      * <p>SYSTEM.ERROR</p>
@@ -54,13 +54,13 @@ public class QueryMaterialFileListResponseBody extends TeaModel {
     public String dynamicMessage;
 
     /**
-     * <p>Returned error parameters</p>
+     * <p>The error parameters.</p>
      */
     @NameInMap("ErrorArgs")
     public java.util.List<?> errorArgs;
 
     /**
-     * <p>Error code. The value is interpreted as follows: If the request succeeded, the ErrorCode field is not returned. If the request failed, the ErrorCode field is returned. For details, see the error code list in this topic.</p>
+     * <p>The error code. The ErrorCode parameter is not returned if the request is successful. If the request fails, the ErrorCode parameter is returned. For more information, see the error codes in this topic.</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>
@@ -69,7 +69,7 @@ public class QueryMaterialFileListResponseBody extends TeaModel {
     public String errorCode;
 
     /**
-     * <p>Error message.</p>
+     * <p>The error message.</p>
      * 
      * <strong>example:</strong>
      * <p>aliuid:1998006665794443 assumeRole not exist,serviceName:realtimelogpush.dcdnservices.aliyuncs.com</p>
@@ -78,7 +78,7 @@ public class QueryMaterialFileListResponseBody extends TeaModel {
     public String errorMsg;
 
     /**
-     * <p>Number of results returned per query.  </p>
+     * <p>The maximum number of entries to return per query.</p>
      * <p>Valid values: 10 to 100. Default value: 20.</p>
      * 
      * <strong>example:</strong>
@@ -88,13 +88,13 @@ public class QueryMaterialFileListResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>Response data</p>
+     * <p>The response data.</p>
      */
     @NameInMap("Module")
     public QueryMaterialFileListResponseBodyModule module;
 
     /**
-     * <p>Token for starting the next query. This value is empty if there is no next query.</p>
+     * <p>The token for the next query. This parameter is empty if no more results exist.</p>
      * 
      * <strong>example:</strong>
      * <p>AAAAARbaCuN6hiD08qrLdwJ9Fh3BFw8paIJ7ylB6A7Qn9JjM</p>
@@ -112,7 +112,7 @@ public class QueryMaterialFileListResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Error code</p>
+     * <p>The root error code.</p>
      * 
      * <strong>example:</strong>
      * <p>SYSTEM.ERROR</p>
@@ -121,7 +121,7 @@ public class QueryMaterialFileListResponseBody extends TeaModel {
     public String rootErrorCode;
 
     /**
-     * <p>Abnormal message</p>
+     * <p>The root error message.</p>
      * 
      * <strong>example:</strong>
      * <p>系统异常</p>
@@ -130,7 +130,7 @@ public class QueryMaterialFileListResponseBody extends TeaModel {
     public String rootErrorMsg;
 
     /**
-     * <p>Indicates whether the request succeeded.</p>
+     * <p>Indicates whether the request was successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -139,7 +139,7 @@ public class QueryMaterialFileListResponseBody extends TeaModel {
     public Boolean success;
 
     /**
-     * <p>Reserved parameter.</p>
+     * <p>The reserved parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>True</p>
@@ -282,7 +282,7 @@ public class QueryMaterialFileListResponseBody extends TeaModel {
 
     public static class QueryMaterialFileListResponseBodyModule extends TeaModel {
         /**
-         * <p>Current page number.</p>
+         * <p>The current page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -291,7 +291,7 @@ public class QueryMaterialFileListResponseBody extends TeaModel {
         public Integer currentPageNum;
 
         /**
-         * <p>Request result.</p>
+         * <p>The query results.</p>
          */
         @NameInMap("Data")
         public java.util.List<AppMaterialFile> data;
@@ -303,7 +303,7 @@ public class QueryMaterialFileListResponseBody extends TeaModel {
         public Boolean nextPage;
 
         /**
-         * <p>Page size.</p>
+         * <p>The page size.</p>
          * 
          * <strong>example:</strong>
          * <p>50</p>
@@ -318,13 +318,13 @@ public class QueryMaterialFileListResponseBody extends TeaModel {
         public Boolean prePage;
 
         /**
-         * <p>For the current query, aside from pagination limits, the server-side processes at most the latest 1 000 records. If the result exceeds 1 000 records, <strong>ResultLimit</strong> is <strong>true</strong>. In this case, narrow the time range and search again. Otherwise, <strong>ResultLimit</strong> is <strong>false</strong>.</p>
+         * <p>Apart from pagination limits, the server processes up to 1,000 recent records per query. If the results exceed 1,000 records, <strong>ResultLimit</strong> is <strong>true</strong>. Narrow the time range and search again. Otherwise, <strong>ResultLimit</strong> is <strong>false</strong>.</p>
          */
         @NameInMap("ResultLimit")
         public Boolean resultLimit;
 
         /**
-         * <p>Total number of records.</p>
+         * <p>The total number of entries.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -333,7 +333,7 @@ public class QueryMaterialFileListResponseBody extends TeaModel {
         public Integer totalItemNum;
 
         /**
-         * <p>Total number of pages.</p>
+         * <p>The total number of pages.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>

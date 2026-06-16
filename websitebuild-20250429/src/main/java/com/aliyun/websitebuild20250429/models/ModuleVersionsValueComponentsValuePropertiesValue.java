@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModuleVersionsValueComponentsValuePropertiesValue extends TeaModel {
     /**
-     * <p>Property code (system internal identity)</p>
+     * <p>属性编码（系统内部标识）</p>
      * 
      * <strong>example:</strong>
      * <p>code</p>
@@ -14,7 +14,7 @@ public class ModuleVersionsValueComponentsValuePropertiesValue extends TeaModel 
     public String code;
 
     /**
-     * <p>Property display name (user-visible name)</p>
+     * <p>属性显示名称（用户可见名称）</p>
      * 
      * <strong>example:</strong>
      * <p>name</p>
@@ -23,7 +23,7 @@ public class ModuleVersionsValueComponentsValuePropertiesValue extends TeaModel 
     public String name;
 
     /**
-     * <p>Attribute value code (system internal value)</p>
+     * <p>属性值编码（系统内部值）</p>
      * 
      * <strong>example:</strong>
      * <p>value</p>
@@ -32,7 +32,7 @@ public class ModuleVersionsValueComponentsValuePropertiesValue extends TeaModel 
     public String value;
 
     /**
-     * <p>List of module Attribute Values</p>
+     * <p>模块属性值列表</p>
      */
     @NameInMap("Values")
     public java.util.List<ModuleVersionsValueComponentsValuePropertiesValueValues> values;
@@ -76,7 +76,7 @@ public class ModuleVersionsValueComponentsValuePropertiesValue extends TeaModel 
 
     public static class ModuleVersionsValueComponentsValuePropertiesValueValues extends TeaModel {
         /**
-         * <p>Property code (system internal identity)</p>
+         * <p>属性编码（系统内部标识）</p>
          * 
          * <strong>example:</strong>
          * <p>code</p>
@@ -85,7 +85,7 @@ public class ModuleVersionsValueComponentsValuePropertiesValue extends TeaModel 
         public String code;
 
         /**
-         * <p>Attribute Value encoding (internal System value)</p>
+         * <p>属性值编码（系统内部值）</p>
          * 
          * <strong>example:</strong>
          * <p>value</p>
@@ -94,7 +94,7 @@ public class ModuleVersionsValueComponentsValuePropertiesValue extends TeaModel 
         public String value;
 
         /**
-         * <p>Property display name (User-visible name)</p>
+         * <p>属性显示名称（用户可见名称）</p>
          * 
          * <strong>example:</strong>
          * <p>name</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetAppRecommendedCommoditiesRequest extends TeaModel {
     /**
-     * <p>Application instance business ID (required in scenario 1, used to filter instance versions during query)</p>
+     * <p>The business ID of the application instance. This parameter is required in scenario 1 and is used to filter by instance version.</p>
      * 
      * <strong>example:</strong>
      * <p>WD20250703155602000001</p>
@@ -20,7 +20,11 @@ public class GetAppRecommendedCommoditiesRequest extends TeaModel {
     public String resourceConditions;
 
     /**
-     * <p>Scenarios: ai_chat | inspiration</p>
+     * <p>Scenarios. Valid values:</p>
+     * <ul>
+     * <li>ai_chat</li>
+     * <li>inspiration.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>DataworksManualTask</p>
