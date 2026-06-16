@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListRevokeCertificateRequest extends TeaModel {
     /**
-     * <p>The number of the page to return. Default value: <strong>1</strong>.</p>
+     * <p>The page number. Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -14,7 +14,7 @@ public class ListRevokeCertificateRequest extends TeaModel {
     public Integer currentPage;
 
     /**
-     * <p>The number of revoked certificates to return on each page. Default value: <strong>20</strong>.</p>
+     * <p>The number of entries to return on each page. Default value: 20.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>

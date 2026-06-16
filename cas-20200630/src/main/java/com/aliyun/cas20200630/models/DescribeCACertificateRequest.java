@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class DescribeCACertificateRequest extends TeaModel {
     /**
-     * <p>The unique identifier of the CA certificate that you want to query.</p>
+     * <p>The unique identifier of the CA certificate to query.</p>
      * <blockquote>
-     * <p> You can call the <a href="https://help.aliyun.com/document_detail/328095.html">DescribeCACertificateList</a> operation to query the unique identifiers of all CA certificates.</p>
+     * <p>Call <a href="https://help.aliyun.com/document_detail/465957.html">DescribeCACertificateList</a> to query the unique identifiers of all CA certificates.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

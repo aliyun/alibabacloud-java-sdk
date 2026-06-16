@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class CreateServerCertificateWithCsrRequest extends TeaModel {
     /**
-     * <p>The expiration time of the server certificate. This value is a UNIX timestamp. Unit: seconds.</p>
+     * <p>Expiration time of the server-side certificate, in UNIX timestamp format. Unit: seconds.</p>
      * <blockquote>
-     * <p> The <strong>BeforeTime</strong> and <strong>AfterTime</strong> parameters must be both empty or both specified.</p>
+     * <p>The <strong>BeforeTime</strong> and <strong>AfterTime</strong> parameters must both be empty or both configured.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -17,19 +17,26 @@ public class CreateServerCertificateWithCsrRequest extends TeaModel {
     public Long afterTime;
 
     /**
-     * <p>The key algorithm of the server certificate. The key algorithm is in the <code>&lt;Encryption algorithm&gt;_&lt;Key length&gt;</code> format. Valid values:</p>
+     * <p>Key algorithm for the server-side certificate. Use the format <code>&lt;encryption algorithm&gt;_&lt;key length&gt;</code>. Valid values:</p>
      * <ul>
-     * <li><strong>RSA_1024</strong>: The signature algorithm is Sha256WithRSA.</li>
-     * <li><strong>RSA_2048</strong>: The signature algorithm is Sha256WithRSA.</li>
-     * <li><strong>RSA_4096</strong>: The signature algorithm is Sha256WithRSA.</li>
-     * <li><strong>ECC_256</strong>: The signature algorithm is Sha256WithECDSA.</li>
-     * <li><strong>ECC_384</strong>: The signature algorithm is Sha256WithECDSA.</li>
-     * <li><strong>ECC_512</strong>: The signature algorithm is Sha256WithECDSA.</li>
-     * <li><strong>SM2_256</strong>: The signature algorithm is SM3WithSM2.</li>
+     * <li><p><strong>RSA_1024</strong>: Signature algorithm is Sha256WithRSA.</p>
+     * </li>
+     * <li><p><strong>RSA_2048</strong>: Signature algorithm is Sha256WithRSA.</p>
+     * </li>
+     * <li><p><strong>RSA_4096</strong>: Signature algorithm is Sha256WithRSA.</p>
+     * </li>
+     * <li><p><strong>ECC_256</strong>: Signature algorithm is Sha256WithECDSA.</p>
+     * </li>
+     * <li><p><strong>ECC_384</strong>: Signature algorithm is Sha256WithECDSA.</p>
+     * </li>
+     * <li><p><strong>ECC_512</strong>: Signature algorithm is Sha256WithECDSA.</p>
+     * </li>
+     * <li><p><strong>SM2_256</strong>: Signature algorithm is SM3WithSM2.</p>
+     * </li>
      * </ul>
-     * <p>The encryption algorithm of the server certificate must be the same as the encryption algorithm of the intermediate CA certificate. The key length can be different. For example, if the key algorithm of the intermediate CA certificate is RSA_2048, the key algorithm of the server certificate must be RSA_1024, RSA_2048, or RSA_4096.</p>
+     * <p>The encryption algorithm of the server-side certificate must match that of the sub-CA certificate. The key length can differ. For example, if the sub-CA certificate uses RSA_2048, the server-side certificate must use RSA_1024, RSA_2048, or RSA_4096.</p>
      * <blockquote>
-     * <p> You can call the <a href="https://help.aliyun.com/document_detail/328096.html">DescribeCACertificate</a> operation to query the key algorithm of an intermediate CA certificate.</p>
+     * <p>Call <a href="https://help.aliyun.com/document_detail/465954.html">DescribeCACertificate</a> to check the key algorithm of the sub-CA certificate.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -39,9 +46,9 @@ public class CreateServerCertificateWithCsrRequest extends TeaModel {
     public String algorithm;
 
     /**
-     * <p>The issuance time of the server certificate. This value is a UNIX timestamp. The default value is the time when you call this operation. Unit: seconds.</p>
+     * <p>Issue time of the server-side certificate, in UNIX timestamp format. Default: current time when you call this API. Unit: seconds.</p>
      * <blockquote>
-     * <p> The <strong>BeforeTime</strong> and <strong>AfterTime</strong> parameters must be both empty or both specified.</p>
+     * <p>The <strong>BeforeTime</strong> and <strong>AfterTime</strong> parameters must both be empty or both configured.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -51,7 +58,10 @@ public class CreateServerCertificateWithCsrRequest extends TeaModel {
     public Long beforeTime;
 
     /**
-     * <p>The name of the certificate user. The user of a server certificate is a server. We recommend that you enter the domain name or IP address of the server.</p>
+     * <p>Set the common name for the certificate. Supports Chinese, English, and other characters.</p>
+     * <blockquote>
+     * <p>If you set the <strong>Csr</strong> parameter, the value of <strong>CommonName</strong> comes from the corresponding field in the <strong>Csr</strong> parameter.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>mtcsq.com</p>
@@ -60,7 +70,7 @@ public class CreateServerCertificateWithCsrRequest extends TeaModel {
     public String commonName;
 
     /**
-     * <p>The code of the country in which the organization is located, such as CN or US.</p>
+     * <p>The country code. For example, CN or US.</p>
      * 
      * <strong>example:</strong>
      * <p>CN</p>
@@ -69,8 +79,9 @@ public class CreateServerCertificateWithCsrRequest extends TeaModel {
     public String country;
 
     /**
-     * <p>The content of the CSR.</p>
-     * <p>You can generate a CSR by using the OpenSSL tool or the Keytool tool. For more information, see <a href="https://help.aliyun.com/document_detail/42218.html">How do I create a CSR file?</a></p>
+     * <p>You can generate a CSR using OpenSSL or Keytool. For more information, see <a href="https://help.aliyun.com/document_detail/42218.html">How to create a CSR file</a>.</p>
+     * <p>&lt;props=&quot;china&quot;&gt;</p>
+     * <p>You can also create a CSR in the SSL Certificate console. For more information, see <a href="https://help.aliyun.com/document_detail/313297.html">Create a CSR</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -79,21 +90,30 @@ public class CreateServerCertificateWithCsrRequest extends TeaModel {
     @NameInMap("Csr")
     public String csr;
 
+    /**
+     * <p>A custom identifier. This is a unique key.</p>
+     * 
+     * <strong>example:</strong>
+     * <p><em><strong>e6bb538d538c70c01f81hfd3</strong></em>*</p>
+     */
     @NameInMap("CustomIdentifier")
     public String customIdentifier;
 
     /**
-     * <p>The validity period of the server certificate. Unit: days.</p>
-     * <p>You must specify at least one of the <strong>Days</strong>, <strong>BeforeTime</strong>, and <strong>AfterTime</strong> parameters. The <strong>BeforeTime</strong> and <strong>AfterTime</strong> parameters must be both empty or both specified. The following list describes how to specify these parameters:</p>
+     * <p>The <strong>Days</strong>, <strong>BeforeTime</strong>, and <strong>AfterTime</strong> parameters cannot all be empty. The <strong>BeforeTime</strong> and <strong>AfterTime</strong> parameters must both be empty or both set. Follow these rules:</p>
      * <ul>
-     * <li>If you specify the <strong>Days</strong> parameter, you can specify both the <strong>BeforeTime</strong> and <strong>AfterTime</strong> parameters or leave them both empty.********</li>
-     * <li>If you do not specify the <strong>Days</strong> parameter, you must specify both the <strong>BeforeTime</strong> and <strong>AfterTime</strong> parameters.</li>
+     * <li><p>If you set <strong>Days</strong>, you can optionally set <strong>BeforeTime</strong> and <strong>AfterTime</strong>.</p>
+     * </li>
+     * <li><p>If you do not set <strong>Days</strong>, you must set both <strong>BeforeTime</strong> and <strong>AfterTime</strong>.</p>
+     * </li>
      * </ul>
      * <blockquote>
+     * <ul>
+     * <li>If you set <strong>Days</strong>, <strong>BeforeTime</strong>, and <strong>AfterTime</strong> together, the validity period uses the value of <strong>Days</strong>.</li>
+     * </ul>
      * </blockquote>
      * <ul>
-     * <li>If you specify the <strong>Days</strong>, <strong>BeforeTime</strong>, and <strong>AfterTime</strong> parameters at the same time, the validity period of the server certificate is determined by the value of the <strong>Days</strong> parameter.</li>
-     * <li>The validity period of the server certificate cannot exceed the validity period of the intermediate CA certificate. You can call the <a href="https://help.aliyun.com/document_detail/328096.html">DescribeCACertificate</a> operation to query the validity period of an intermediate CA certificate.</li>
+     * <li>The server-side certificate validity period cannot exceed that of the sub-CA certificate. Call <a href="https://help.aliyun.com/document_detail/465954.html">DescribeCACertificate</a> to check the sub-CA certificate validity period.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -103,8 +123,8 @@ public class CreateServerCertificateWithCsrRequest extends TeaModel {
     public Integer days;
 
     /**
-     * <p>The additional domain names or additional IP addresses of the server certificate. After you add additional domain names and additional IP addresses to a certificate, you can apply the certificate to the domain names and IP addresses.</p>
-     * <p>You can specify multiple domain names and IP addresses. If you specify multiple domain names and IP addresses, separate them with commas (,).</p>
+     * <p>Additional domain names or IP addresses for the server-side certificate. Adding this information lets you apply the certificate to multiple domains or IP addresses.</p>
+     * <p>You can enter multiple domain names and IP addresses. Separate them with commas (,).</p>
      * 
      * <strong>example:</strong>
      * <p>example.com</p>
@@ -113,11 +133,9 @@ public class CreateServerCertificateWithCsrRequest extends TeaModel {
     public String domain;
 
     /**
-     * <p>include the CRL address.</p>
-     * <ul>
-     * <li>0- No</li>
-     * <li>1- Yes</li>
-     * </ul>
+     * <p>Specifies whether to include the certificate revocation list (CRL) address.</p>
+     * <p>0 - No</p>
+     * <p>1 - Yes</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -126,11 +144,14 @@ public class CreateServerCertificateWithCsrRequest extends TeaModel {
     public Long enableCrl;
 
     /**
-     * <p>Specifies whether to return the certificate. Valid values:</p>
+     * <p>Specifies whether to return the digital certificate immediately.</p>
      * <ul>
-     * <li><strong>0</strong>: does not return the certificate. This is the default value.</li>
-     * <li><strong>1</strong>: returns the certificate.</li>
-     * <li><strong>2</strong>: returns the certificate and the certificate chain of the certificate.</li>
+     * <li><p><strong>0</strong>: Do not return. Default.</p>
+     * </li>
+     * <li><p><strong>1</strong>: Return the certificate.</p>
+     * </li>
+     * <li><p><strong>2</strong>: Return the certificate and its certificate chain.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -140,7 +161,7 @@ public class CreateServerCertificateWithCsrRequest extends TeaModel {
     public Integer immediately;
 
     /**
-     * <p>The name of the city in which the organization is located. The value can contain letters. The default value is the name of the city in which the organization is located. The organization is associated with the intermediate CA certificate from which the certificate is issued.</p>
+     * <p>The city where the organization for the certificate is located. The name can contain both Chinese and English characters. By default, this parameter is set to the city of the organization for the issuing subordinate Certificate Authority (CA).</p>
      * 
      * <strong>example:</strong>
      * <p>Hangzhou</p>
@@ -149,7 +170,7 @@ public class CreateServerCertificateWithCsrRequest extends TeaModel {
     public String locality;
 
     /**
-     * <p>The validity period of the server certificate. Unit: months.</p>
+     * <p>The validity period of the certificate, in months.</p>
      * 
      * <strong>example:</strong>
      * <p>12</p>
@@ -161,13 +182,13 @@ public class CreateServerCertificateWithCsrRequest extends TeaModel {
      * <p>The name of the organization. Default value: Alibaba Inc.</p>
      * 
      * <strong>example:</strong>
-     * <p>ec server o</p>
+     * <p>阿里云</p>
      */
     @NameInMap("Organization")
     public String organization;
 
     /**
-     * <p>The name of the department. Default value: Aliyun CDN.</p>
+     * <p>The name of the department. Default value: Alibaba Cloud CDN.</p>
      * 
      * <strong>example:</strong>
      * <p>IT</p>
@@ -176,9 +197,9 @@ public class CreateServerCertificateWithCsrRequest extends TeaModel {
     public String organizationUnit;
 
     /**
-     * <p>The unique identifier of the intermediate CA certificate from which the server certificate is issued.</p>
+     * <p>Unique identifier of the sub-CA certificate that issues this certificate.</p>
      * <blockquote>
-     * <p> You can call the <a href="https://help.aliyun.com/document_detail/328095.html">DescribeCACertificateList</a> operation to query the unique identifier of an intermediate CA certificate.</p>
+     * <p>Call <a href="https://help.aliyun.com/document_detail/465957.html">DescribeCACertificateList</a> to query the unique identifier of the sub-CA certificate.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -188,11 +209,18 @@ public class CreateServerCertificateWithCsrRequest extends TeaModel {
     @NameInMap("ParentIdentifier")
     public String parentIdentifier;
 
+    /**
+     * <p>The ID of the resource group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-aek****wia</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
     /**
-     * <p>The province, municipality, or autonomous region in which the organization is located. The value can contain letters. The default value is the name of the province, municipality, or autonomous region in which the organization is located. The organization is associated with the intermediate CA certificate from which the certificate is issued.</p>
+     * <p>&lt;props=&quot;china&quot;&gt;Set the name of the province, municipality, or autonomous region where the organization is located. Supports Chinese, English, and other characters. Defaults to the province, municipality, or autonomous region of the issuing sub-CA certificate\&quot;s organization.
+     * &lt;props=&quot;intl&quot;&gt;Set the name of the state or province where the organization is located. Supports Chinese, English, and other characters. Defaults to the state or province of the issuing sub-CA certificate\&quot;s organization.</p>
      * 
      * <strong>example:</strong>
      * <p>Zhejiang</p>
@@ -200,11 +228,14 @@ public class CreateServerCertificateWithCsrRequest extends TeaModel {
     @NameInMap("State")
     public String state;
 
+    /**
+     * <p>A list of tags.</p>
+     */
     @NameInMap("Tags")
     public java.util.List<CreateServerCertificateWithCsrRequestTags> tags;
 
     /**
-     * <p>The validity period of the server certificate. Unit: years.</p>
+     * <p>The validity period of the certificate, in years.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -378,9 +409,21 @@ public class CreateServerCertificateWithCsrRequest extends TeaModel {
     }
 
     public static class CreateServerCertificateWithCsrRequestTags extends TeaModel {
+        /**
+         * <p>Tag key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>account</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>Tag value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
+         */
         @NameInMap("Value")
         public String value;
 

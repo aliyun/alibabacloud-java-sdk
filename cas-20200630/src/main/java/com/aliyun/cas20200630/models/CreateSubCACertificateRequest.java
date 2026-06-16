@@ -5,17 +5,22 @@ import com.aliyun.tea.*;
 
 public class CreateSubCACertificateRequest extends TeaModel {
     /**
-     * <p>The type of the key algorithm of the intermediate CA. The key algorithm is in the <code>&lt;Encryption algorithm&gt;_&lt;Key length&gt;</code> format. Valid values:</p>
+     * <p>The key algorithm for the intermediate CA certificate. The algorithm is in the <code>&lt;Encryption algorithm&gt;_&lt;Key length&gt;</code> format. Valid values:</p>
      * <ul>
-     * <li><strong>RSA_1024</strong>: The signature algorithm is Sha256WithRSA.</li>
-     * <li><strong>RSA_2048</strong>: The signature algorithm is Sha256WithRSA.</li>
-     * <li><strong>RSA_4096</strong>: The signature algorithm is Sha256WithRSA.</li>
-     * <li><strong>ECC_256</strong>: The signature algorithm is Sha256WithECDSA.</li>
-     * <li><strong>SM2_256</strong>: The signature algorithm is SM3WithSM2.</li>
+     * <li><p><strong>RSA_1024</strong>: The corresponding signature algorithm is Sha256WithRSA.</p>
+     * </li>
+     * <li><p><strong>RSA_2048</strong>: The corresponding signature algorithm is Sha256WithRSA.</p>
+     * </li>
+     * <li><p><strong>RSA_4096</strong>: The corresponding signature algorithm is Sha256WithRSA.</p>
+     * </li>
+     * <li><p><strong>ECC_256</strong>: The corresponding signature algorithm is Sha256WithECDSA.</p>
+     * </li>
+     * <li><p><strong>SM2_256</strong>: The corresponding signature algorithm is SM3WithSM2.</p>
+     * </li>
      * </ul>
-     * <p>The encryption algorithm of an intermediate CA certificate must be consistent with the encryption algorithm of a root CA certificate. The length of the keys can be different. For example, if the key algorithm of the root CA certificate is <strong>RSA_2048</strong>, the key algorithm of the intermediate CA certificate must be <strong>RSA_1024</strong>, <strong>RSA_2048</strong>, or <strong>RSA_4096</strong>.</p>
+     * <p>The encryption algorithm of the intermediate CA certificate must be the same as that of the root CA certificate, but the key length can be different. For example, if the root CA certificate uses the <strong>RSA_2048</strong> algorithm, the intermediate CA certificate must use <strong>RSA_1024</strong>, <strong>RSA_2048</strong>, or <strong>RSA_4096</strong>.</p>
      * <blockquote>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/465954.html">DescribeCACertificate</a> operation to query the key algorithm of a root CA certificate.</p>
+     * <p>Call the <a href="https://help.aliyun.com/document_detail/465954.html">DescribeCACertificate</a> operation to get the key algorithm of the root CA certificate.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -28,11 +33,17 @@ public class CreateSubCACertificateRequest extends TeaModel {
     @NameInMap("CertMaxTime")
     public Integer certMaxTime;
 
+    /**
+     * <p>A client-generated token that is used to ensure the idempotence of the request. The token must be unique for each request. The token can be up to 64 ASCII characters in length.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>XXX</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
-     * <p>The common name or abbreviation of the organization. The value can contain letters.</p>
+     * <p>The common name of your organization. The name can contain Chinese characters and English letters.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -42,8 +53,8 @@ public class CreateSubCACertificateRequest extends TeaModel {
     public String commonName;
 
     /**
-     * <p>The code of the country or region in which the organization is located. You can enter an alpha-2 or alpha-3 code. For example, you can use <strong>CN</strong> to indicate China and use <strong>US</strong> to indicate the United States.</p>
-     * <p>For more information about country codes, see the <strong>&quot;Country codes&quot;</strong> section in <a href="https://help.aliyun.com/document_detail/198289.html">Manage company profiles</a>.</p>
+     * <p>The two- or three-letter country or region code in uppercase. For example, <strong>CN</strong> indicates China and <strong>US</strong> indicates the United States.</p>
+     * <p>For more information, see the <strong>Country codes</strong> section in <a href="https://help.aliyun.com/document_detail/198289.html">Manage company information</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>CN</p>
@@ -52,7 +63,7 @@ public class CreateSubCACertificateRequest extends TeaModel {
     public String countryCode;
 
     /**
-     * <p>CRL validity period: 1-365 days</p>
+     * <p>The validity period of the CRL, in days. Valid values: 1 to 365.</p>
      * 
      * <strong>example:</strong>
      * <p>30</p>
@@ -61,26 +72,28 @@ public class CreateSubCACertificateRequest extends TeaModel {
     public Integer crlDay;
 
     /**
-     * <p>Enable Crl Service.</p>
+     * <p>Specifies whether to enable the certificate revocation list (CRL) feature.</p>
      * <ul>
-     * <li>0- No</li>
-     * <li>1- Yes</li>
+     * <li><p>false: No</p>
+     * </li>
+     * <li><p>true: Yes</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
-     * <p>1</p>
+     * <p>true</p>
      */
     @NameInMap("EnableCrl")
     public Boolean enableCrl;
 
     /**
-     * <p>The extended key usages of the certificate.</p>
+     * <p>The extended key usages.</p>
      */
     @NameInMap("ExtendedKeyUsages")
     public java.util.List<String> extendedKeyUsages;
 
     /**
-     * <p>The name of the city in which the organization is located. The value can contain letters.</p>
+     * <p>The name of the city where your organization is located. The name can contain Chinese characters and English letters.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -90,17 +103,17 @@ public class CreateSubCACertificateRequest extends TeaModel {
     public String locality;
 
     /**
-     * <p>The name of the organization that is associated with the intermediate CA certificate. You can enter the name of your enterprise or company. The value can contain letters.</p>
+     * <p>The name of your organization, such as your company. The name can contain Chinese characters and English letters.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>Maizi Technology</p>
+     * <p>Alibaba</p>
      */
     @NameInMap("Organization")
     public String organization;
 
     /**
-     * <p>The name of the department or branch in the organization. The value can contain letters.</p>
+     * <p>The name of the department in your organization. The name can contain Chinese characters and English letters.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -112,7 +125,7 @@ public class CreateSubCACertificateRequest extends TeaModel {
     /**
      * <p>The unique identifier of the root CA certificate.</p>
      * <blockquote>
-     * <p>You can call the [DescribeCACertificateList] operation to query the unique identifiers of all CA certificates.</p>
+     * <p>Call the <a href="https://help.aliyun.com/document_detail/465957.html">DescribeCACertificateList</a> operation to get the unique identifiers of all CA certificates.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -122,7 +135,7 @@ public class CreateSubCACertificateRequest extends TeaModel {
     public String parentIdentifier;
 
     /**
-     * <p>The path length constraint of the certificate. Default value: 0.</p>
+     * <p>The certificate path length constraint. The default value is 0.</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>
@@ -130,11 +143,18 @@ public class CreateSubCACertificateRequest extends TeaModel {
     @NameInMap("PathLenConstraint")
     public Integer pathLenConstraint;
 
+    /**
+     * <p>The ID of the resource group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-ae****vty</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
     /**
-     * <p>The name of the province or state in which the organization is located. The value can contain letters.</p>
+     * <p>&lt;props=&quot;china&quot;&gt;The name of the province, municipality, or autonomous region where the organization is located. Chinese characters and English letters are supported.
+     * &lt;props=&quot;intl&quot;&gt;The name of the province or state where the organization is located. Chinese characters and English letters are supported.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -143,14 +163,17 @@ public class CreateSubCACertificateRequest extends TeaModel {
     @NameInMap("State")
     public String state;
 
+    /**
+     * <p>A list of tags.</p>
+     */
     @NameInMap("Tags")
     public java.util.List<CreateSubCACertificateRequestTags> tags;
 
     /**
-     * <p>The validity period of the intermediate CA certificate. Unit: years.</p>
-     * <p>We recommend that you set this parameter to 5 to 10.</p>
+     * <p>The validity period of the intermediate CA certificate, in years. Valid values: 5 to 10.</p>
+     * <p>Set this parameter to a value from 5 to 10.</p>
      * <blockquote>
-     * <p>The validity period of the intermediate CA certificate cannot exceed the validity period of the root CA certificate. You can call the [DescribeCACertificate]operation to query the validity period of a root CA certificate.</p>
+     * <p>The validity period of the intermediate CA certificate cannot exceed that of the root CA certificate. Call the <a href="https://help.aliyun.com/document_detail/465954.html">DescribeCACertificate</a> operation to get the validity period of the root CA certificate.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -302,9 +325,21 @@ public class CreateSubCACertificateRequest extends TeaModel {
     }
 
     public static class CreateSubCACertificateRequestTags extends TeaModel {
+        /**
+         * <p>The tag key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testKey</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The tag value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
+         */
         @NameInMap("Value")
         public String value;
 

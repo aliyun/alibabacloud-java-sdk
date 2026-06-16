@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateClientCertificateResponseBody extends TeaModel {
     /**
-     * <p>The certificate chain of the client certificate.</p>
+     * <p>The CA certificate chain.</p>
      * 
      * <strong>example:</strong>
      * <p>-----BEGIN CERTIFICATE-----\n......\n-----END CERTIFICATE-----\n-----BEGIN CERTIFICATE-----\n......\n-----END CERTIFICATE-----\n</p>
@@ -23,7 +23,7 @@ public class CreateClientCertificateResponseBody extends TeaModel {
     public String identifier;
 
     /**
-     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>8C467B38-3910-447D-87BC-AC049166F216</p>
@@ -32,10 +32,10 @@ public class CreateClientCertificateResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The serial number of the certificate.</p>
+     * <p>The certificate serial number.</p>
      * 
      * <strong>example:</strong>
-     * <p>0f29522da2dae7a1c4b6ab7132ad3c06</p>
+     * <p>084bde9cd233f0ddae33adc438cfbbbd****</p>
      */
     @NameInMap("SerialNumber")
     public String serialNumber;

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetCAInstanceStatusResponseBody extends TeaModel {
     /**
-     * <p>The status information of the private CA instance.</p>
+     * <p>The status details of the private CA instance.</p>
      */
     @NameInMap("InstanceStatusList")
     public java.util.List<GetCAInstanceStatusResponseBodyInstanceStatusList> instanceStatusList;
@@ -44,7 +44,7 @@ public class GetCAInstanceStatusResponseBody extends TeaModel {
         /**
          * <p>The expiration date of the private CA certificate. This value is a UNIX timestamp. Unit: milliseconds.</p>
          * <blockquote>
-         * <p> This parameter is returned only when the value of the <strong>Status</strong> parameter is <strong>USED</strong> or <strong>REVOKE</strong>. The value USED indicates that the private CA instance is enabled, and the value REVOKE indicates that the instance is revoked.</p>
+         * <p>This parameter is returned only if <strong>Status</strong> is <strong>USED</strong> (the private CA instance is enabled) or <strong>REVOKE</strong> (the private CA instance is revoked).</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -56,7 +56,7 @@ public class GetCAInstanceStatusResponseBody extends TeaModel {
         /**
          * <p>The issuance date of the private CA certificate. This value is a UNIX timestamp. Unit: milliseconds.</p>
          * <blockquote>
-         * <p> This parameter is returned only when the value of the <strong>Status</strong> parameter is <strong>USED</strong> or <strong>REVOKE</strong>. The value USED indicates that the private CA instance is enabled, and the value REVOKE indicates that the instance is revoked.</p>
+         * <p>This parameter is returned only if <strong>Status</strong> is <strong>USED</strong> (the private CA instance is enabled) or <strong>REVOKE</strong> (the private CA instance is revoked).</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -66,7 +66,7 @@ public class GetCAInstanceStatusResponseBody extends TeaModel {
         public Long beforeTime;
 
         /**
-         * <p>The number of certificates that are issued by using the private CA instance.</p>
+         * <p>The number of certificates that the private CA instance has issued.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -75,9 +75,8 @@ public class GetCAInstanceStatusResponseBody extends TeaModel {
         public Integer certIssuedCount;
 
         /**
-         * <p>The number of certificates that can be issued by using the private CA instance.</p>
-         * <p>For a private root CA instance whose <strong>Type</strong> is <strong>ROOT</strong>, this parameter indicates the number of intermediate CA certificates that can be issued.</p>
-         * <p>For a private intermediate CA instance whose <strong>Type</strong> is <strong>SUB_ROOT</strong>, this parameter indicates the total number of client certificates and server certificates that can be issued</p>
+         * <p>The number of certificates that the private CA instance can issue.</p>
+         * <p>If the private CA is a root CA (<strong>Type</strong> is <strong>ROOT</strong>), this parameter indicates the number of intermediate CA certificates that can be issued. If the private CA is an intermediate CA (<strong>Type</strong> is <strong>SUB_ROOT</strong>), this parameter indicates the total number of client certificates and server-side certificates that can be issued.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -88,7 +87,7 @@ public class GetCAInstanceStatusResponseBody extends TeaModel {
         /**
          * <p>The unique identifier of the private CA certificate.</p>
          * <blockquote>
-         * <p> This parameter is returned only when the value of the <strong>Status</strong> parameter is <strong>USED</strong> or <strong>REVOKE</strong>. The value USED indicates that the private CA instance is enabled, and the value REVOKE indicates that the instance is revoked.</p>
+         * <p>This parameter is returned only if <strong>Status</strong> is <strong>USED</strong> (the private CA instance is enabled) or <strong>REVOKE</strong> (the private CA instance is revoked).</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -109,10 +108,14 @@ public class GetCAInstanceStatusResponseBody extends TeaModel {
         /**
          * <p>The status of the private CA instance. Valid values:</p>
          * <ul>
-         * <li><strong>BUY</strong>: The private CA instance is purchased but is not enabled.</li>
-         * <li><strong>USED</strong>: The private CA instance is enabled.</li>
-         * <li><strong>REFUND</strong>: The private CA instance is refunded.</li>
-         * <li><strong>REVOKE</strong>: The private CA instance is revoked.</li>
+         * <li><p><strong>BUY</strong>: The instance is purchased but not enabled.</p>
+         * </li>
+         * <li><p><strong>USED</strong>: The instance is enabled.</p>
+         * </li>
+         * <li><p><strong>REFUND</strong>: A refund has been issued for the instance.</p>
+         * </li>
+         * <li><p><strong>REVOKE</strong>: The instance is revoked.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -124,8 +127,10 @@ public class GetCAInstanceStatusResponseBody extends TeaModel {
         /**
          * <p>The type of the private CA instance. Valid values:</p>
          * <ul>
-         * <li><strong>ROOT</strong>: root CA instance</li>
-         * <li><strong>SUB_ROOT</strong>: intermediate CA instance</li>
+         * <li><p><strong>ROOT</strong>: Root CA instance.</p>
+         * </li>
+         * <li><p><strong>SUB_ROOT</strong>: Intermediate CA instance.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -137,7 +142,7 @@ public class GetCAInstanceStatusResponseBody extends TeaModel {
         /**
          * <p>The expiration date of the private CA instance. This value is a UNIX timestamp. Unit: milliseconds.</p>
          * <blockquote>
-         * <p> This parameter corresponds to the duration that you select when you purchase the private CA instance. The duration indicates the subscription period of the Private Certificate Authority (PCA) service.</p>
+         * <p>This parameter corresponds to the subscription duration that you selected for the Private Certificate Authority (PCA) service when you purchased the instance.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

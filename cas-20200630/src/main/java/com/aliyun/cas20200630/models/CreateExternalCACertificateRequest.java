@@ -4,6 +4,9 @@ package com.aliyun.cas20200630.models;
 import com.aliyun.tea.*;
 
 public class CreateExternalCACertificateRequest extends TeaModel {
+    /**
+     * <p>Specifies API parameters that override content from the CSR or add information to the CA certificate.</p>
+     */
     @NameInMap("ApiPassthrough")
     public CreateExternalCACertificateRequestApiPassthrough apiPassthrough;
 
@@ -11,6 +14,8 @@ public class CreateExternalCACertificateRequest extends TeaModel {
     public Integer certMaxTime;
 
     /**
+     * <p>The certificate signing request (CSR). The CSR can contain information such as the SubjectDN and custom extensions for the CA certificate. The CA generates the SubjectKeyIdentifier, AuthorityKeyIdentifier, and CRLDistributionPoints extensions, ignoring any corresponding values in the CSR.</p>
+     * 
      * <strong>example:</strong>
      * <p>-----BEGIN CERTIFICATE REQUEST-----
      * MIIBczCCARgCAQAwgYoxFDASBgNVBAMMC2FsaXl1bi50ZXN0MQ0wCwYDVQQ
@@ -22,19 +27,52 @@ public class CreateExternalCACertificateRequest extends TeaModel {
     public String csr;
 
     /**
+     * <p>The ID of the external subordinate CA instance.</p>
+     * 
      * <strong>example:</strong>
      * <p>cas_deposit-cn-1234abcd</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>The ID of the resource group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
+    /**
+     * <p>The tags to add to the certificate.</p>
+     */
     @NameInMap("Tags")
     public java.util.List<CreateExternalCACertificateRequestTags> tags;
 
     /**
+     * <p>The certificate validity period. You can specify this using either relative or absolute time.</p>
+     * <blockquote>
+     * <p>Relative time: Supported units are year, month, and day.</p>
+     * </blockquote>
+     * <ul>
+     * <li><p>y - year</p>
+     * </li>
+     * <li><p>m - month</p>
+     * </li>
+     * <li><p>d - day</p>
+     * </li>
+     * </ul>
+     * <blockquote>
+     * <p>Absolute time: Use GMT time in the <code>yyyy-MM-dd\\&quot;T\\&quot;HH:mm:ss\\&quot;Z\\&quot;</code> format.</p>
+     * </blockquote>
+     * <ul>
+     * <li><p>To specify only the expiration time, use <code>$NotAfter</code>.</p>
+     * </li>
+     * <li><p>To specify both the start and expiration times, use <code>$NotBefore/$NotAfter</code>.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>10y</p>
      */
@@ -103,10 +141,15 @@ public class CreateExternalCACertificateRequest extends TeaModel {
     }
 
     public static class CreateExternalCACertificateRequestApiPassthroughExtensions extends TeaModel {
+        /**
+         * <p>The extended key usages.</p>
+         */
         @NameInMap("ExtendedKeyUsages")
         public java.util.List<String> extendedKeyUsages;
 
         /**
+         * <p>The certificate path length constraint. For an end-entity CA, set this parameter to 0. A value of 0 indicates the CA will issue end-entity certificates.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -137,25 +180,57 @@ public class CreateExternalCACertificateRequest extends TeaModel {
     }
 
     public static class CreateExternalCACertificateRequestApiPassthroughSubject extends TeaModel {
+        /**
+         * <p>The name of the CA certificate.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Testing CA</p>
+         */
         @NameInMap("CommonName")
         public String commonName;
 
         /**
+         * <p>The two-letter country code (ISO 3166-1).</p>
+         * 
          * <strong>example:</strong>
          * <p>CN</p>
          */
         @NameInMap("Country")
         public String country;
 
+        /**
+         * <p>The city or region.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Hangzhou</p>
+         */
         @NameInMap("Locality")
         public String locality;
 
+        /**
+         * <p>The organization or company.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Alibaba</p>
+         */
         @NameInMap("Organization")
         public String organization;
 
+        /**
+         * <p>The organizational subdivision, such as a department, team, project group, or branch.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Cloud Security</p>
+         */
         @NameInMap("OrganizationUnit")
         public String organizationUnit;
 
+        /**
+         * <p>The state or province.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Zhejiang</p>
+         */
         @NameInMap("State")
         public String state;
 
@@ -215,9 +290,15 @@ public class CreateExternalCACertificateRequest extends TeaModel {
     }
 
     public static class CreateExternalCACertificateRequestApiPassthrough extends TeaModel {
+        /**
+         * <p>Specifies the extensions for the CA certificate. If specified, these values override the corresponding extensions in the CSR or are added to the CA certificate.</p>
+         */
         @NameInMap("Extensions")
         public CreateExternalCACertificateRequestApiPassthroughExtensions extensions;
 
+        /**
+         * <p>The subject information for the CA certificate. If specified, this value overwrites the SubjectDN from the CSR.</p>
+         */
         @NameInMap("Subject")
         public CreateExternalCACertificateRequestApiPassthroughSubject subject;
 
@@ -245,9 +326,21 @@ public class CreateExternalCACertificateRequest extends TeaModel {
     }
 
     public static class CreateExternalCACertificateRequestTags extends TeaModel {
+        /**
+         * <p>The tag\&quot;s key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>database</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The tag\&quot;s value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Value")
         public String value;
 

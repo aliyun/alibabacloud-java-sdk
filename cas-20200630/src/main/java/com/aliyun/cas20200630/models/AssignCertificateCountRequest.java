@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class AssignCertificateCountRequest extends TeaModel {
     /**
+     * <p>The total number of certificate records.</p>
+     * 
      * <strong>example:</strong>
      * <p>5</p>
      */
@@ -12,6 +14,8 @@ public class AssignCertificateCountRequest extends TeaModel {
     public Integer certTotalCount;
 
     /**
+     * <p>The ID of the data source.</p>
+     * 
      * <strong>example:</strong>
      * <p>33285</p>
      */

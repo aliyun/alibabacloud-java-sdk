@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListTagResourcesRequest extends TeaModel {
     /**
+     * <p>The maximum number of entries to return for this call.</p>
+     * 
      * <strong>example:</strong>
      * <p>1000</p>
      */
@@ -12,6 +14,8 @@ public class ListTagResourcesRequest extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>The token that is used to start the next query. If this parameter is empty, no more results exist.</p>
+     * 
      * <strong>example:</strong>
      * <p>1d2db86sca4384811e0b5e8707e68181f</p>
      */
@@ -19,6 +23,7 @@ public class ListTagResourcesRequest extends TeaModel {
     public String nextToken;
 
     /**
+     * <p>The region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -27,10 +32,14 @@ public class ListTagResourcesRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The resource ID.</p>
+     */
     @NameInMap("ResourceId")
     public java.util.List<String> resourceId;
 
     /**
+     * <p>The resource type. Set the value to <strong>instance</strong>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -39,6 +48,9 @@ public class ListTagResourcesRequest extends TeaModel {
     @NameInMap("ResourceType")
     public String resourceType;
 
+    /**
+     * <p>The information about the instances and tags that are queried.</p>
+     */
     @NameInMap("Tag")
     public java.util.List<ListTagResourcesRequestTag> tag;
 
@@ -97,6 +109,8 @@ public class ListTagResourcesRequest extends TeaModel {
 
     public static class ListTagResourcesRequestTag extends TeaModel {
         /**
+         * <p>The key of the tag to query. You can specify multiple tag keys. n is a positive integer.</p>
+         * 
          * <strong>example:</strong>
          * <p>testKey1</p>
          */
@@ -104,6 +118,8 @@ public class ListTagResourcesRequest extends TeaModel {
         public String key;
 
         /**
+         * <p>The tag value. The value of n can be from 1 to 20.</p>
+         * 
          * <strong>example:</strong>
          * <p>testValue1</p>
          */

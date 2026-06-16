@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class ListCertResponseBody extends TeaModel {
     /**
+     * <p>The current page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
+    /**
+     * <p>The list of certificates.</p>
+     */
     @NameInMap("List")
     public java.util.List<ListCertResponseBodyList> list;
 
     /**
+     * <p>The maximum number of entries returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -22,6 +29,8 @@ public class ListCertResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>A token to retrieve the next page of results. If this value is empty, all results have been returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>1d2db86sca4384811e0b5e8707e68181f</p>
      */
@@ -29,6 +38,8 @@ public class ListCertResponseBody extends TeaModel {
     public String nextToken;
 
     /**
+     * <p>The number of pages.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -36,6 +47,8 @@ public class ListCertResponseBody extends TeaModel {
     public Integer pageCount;
 
     /**
+     * <p>The ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>15C66C7B-671A-4297-9187-2C4477247A74</p>
      */
@@ -43,6 +56,8 @@ public class ListCertResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The page size.</p>
+     * 
      * <strong>example:</strong>
      * <p>50</p>
      */
@@ -50,6 +65,8 @@ public class ListCertResponseBody extends TeaModel {
     public Integer showSize;
 
     /**
+     * <p>The total number of certificates.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -127,6 +144,8 @@ public class ListCertResponseBody extends TeaModel {
 
     public static class ListCertResponseBodyList extends TeaModel {
         /**
+         * <p>The expiration time of the certificate.</p>
+         * 
          * <strong>example:</strong>
          * <p>2024-05-13 12:59:45</p>
          */
@@ -134,6 +153,11 @@ public class ListCertResponseBody extends TeaModel {
         public String afterDate;
 
         /**
+         * <p>The expiration time of the client certificate. This value is a UNIX timestamp. Unit: milliseconds.</p>
+         * <blockquote>
+         * <p>The <strong>BeforeTime</strong> and <strong>AfterTime</strong> parameters must be both left empty or both specified.</p>
+         * </blockquote>
+         * 
          * <strong>example:</strong>
          * <p>1728921600000</p>
          */
@@ -141,16 +165,26 @@ public class ListCertResponseBody extends TeaModel {
         public Long afterTime;
 
         /**
+         * <p>The public key algorithm.</p>
+         * 
          * <strong>example:</strong>
          * <p>RSA</p>
          */
         @NameInMap("Algorithm")
         public String algorithm;
 
+        /**
+         * <p>The alias of the certificate.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
+         */
         @NameInMap("AliasName")
         public String aliasName;
 
         /**
+         * <p>The issuance time of the certificate.</p>
+         * 
          * <strong>example:</strong>
          * <p>2026-05-19</p>
          */
@@ -158,6 +192,11 @@ public class ListCertResponseBody extends TeaModel {
         public String beforeDate;
 
         /**
+         * <p>The issuance time of the client certificate. This value is a UNIX timestamp. Unit: milliseconds.</p>
+         * <blockquote>
+         * <p>The <strong>BeforeTime</strong> and <strong>AfterTime</strong> parameters must be both left empty or both specified.</p>
+         * </blockquote>
+         * 
          * <strong>example:</strong>
          * <p>1728921600000</p>
          */
@@ -165,6 +204,16 @@ public class ListCertResponseBody extends TeaModel {
         public Long beforeTime;
 
         /**
+         * <p>The type of the certificate. Valid values:</p>
+         * <ul>
+         * <li><p><code>free</code>: Free certificate.</p>
+         * </li>
+         * <li><p><code>cas</code>: Alibaba Cloud Security certificate.</p>
+         * </li>
+         * <li><p><code>upload</code>: A user-uploaded certificate.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Server</p>
          */
@@ -172,23 +221,35 @@ public class ListCertResponseBody extends TeaModel {
         public String certificateType;
 
         /**
+         * <p>The primary domain name of the certificate.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="http://www.kfsjn.xyz">www.kfsjn.xyz</a></p>
          */
         @NameInMap("CommonName")
         public String commonName;
 
+        /**
+         * <p>A unique, user-defined identifier for the certificate.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><em><strong>b86sca4384811e0b5e8707e68</strong></em></p>
+         */
         @NameInMap("CustomIdentifier")
         public String customIdentifier;
 
         /**
+         * <p>A JSON string containing extended attributes.</p>
+         * 
          * <strong>example:</strong>
-         * <p>{\&quot;appId\&quot;:\&quot;APP_PFHMIGUHKDUW6S3N7ZL2\&quot;}</p>
+         * <p>{&quot;appId&quot;:&quot;APP_PFHMIGUHKDUW6S3N7ZL2&quot;}</p>
          */
         @NameInMap("Extra")
         public String extra;
 
         /**
+         * <p>The ID of the data source to which the certificate order belongs.</p>
+         * 
          * <strong>example:</strong>
          * <p>1806958</p>
          */
@@ -196,19 +257,41 @@ public class ListCertResponseBody extends TeaModel {
         public Long id;
 
         /**
+         * <p>The unique identifier of the certificate.</p>
+         * 
          * <strong>example:</strong>
          * <p>1ef539a8-1e1f-6b88-8c11-21cf01a203e9</p>
          */
         @NameInMap("Identifier")
         public String identifier;
 
+        /**
+         * <p>Specifies if the private key is exportable. Valid values:</p>
+         * <ul>
+         * <li><p><code>true</code>: The private key is exportable.</p>
+         * </li>
+         * <li><p><code>false</code>: The private key is not exportable.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("KeyExportable")
         public Boolean keyExportable;
 
+        /**
+         * <p>The organization specified in the certificate.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
+         */
         @NameInMap("Organization")
         public String organization;
 
         /**
+         * <p>The organizational unit (OU) specified in the certificate.</p>
+         * 
          * <strong>example:</strong>
          * <p>IT</p>
          */
@@ -216,6 +299,8 @@ public class ListCertResponseBody extends TeaModel {
         public String organizationUnit;
 
         /**
+         * <p>The certificate serial number.</p>
+         * 
          * <strong>example:</strong>
          * <p>3a3ee3c3597d675e</p>
          */
@@ -223,6 +308,14 @@ public class ListCertResponseBody extends TeaModel {
         public String serialNumber;
 
         /**
+         * <p>The status of the certificate. Valid values:</p>
+         * <ul>
+         * <li><p><code>ISSUE</code>: Issued.</p>
+         * </li>
+         * <li><p><code>REVOKE</code>: Revoked.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>complete</p>
          */
@@ -230,12 +323,17 @@ public class ListCertResponseBody extends TeaModel {
         public String status;
 
         /**
+         * <p>The distinguished name (DN) of the certificate subject.</p>
+         * 
          * <strong>example:</strong>
          * <p>SubjectDn</p>
          */
         @NameInMap("SubjectDn")
         public String subjectDn;
 
+        /**
+         * <p>The tags of the certificate.</p>
+         */
         @NameInMap("Tags")
         public java.util.List<String> tags;
 

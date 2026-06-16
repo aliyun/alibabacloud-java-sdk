@@ -4,10 +4,15 @@ package com.aliyun.cas20200630.models;
 import com.aliyun.tea.*;
 
 public class ListTagResourcesResponseBody extends TeaModel {
+    /**
+     * <p>The data returned.</p>
+     */
     @NameInMap("Data")
     public ListTagResourcesResponseBodyData data;
 
     /**
+     * <p>The ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>2D69A58F-345C-4FDE-88E4-BF5189484043</p>
      */
@@ -108,6 +113,8 @@ public class ListTagResourcesResponseBody extends TeaModel {
 
     public static class ListTagResourcesResponseBodyData extends TeaModel {
         /**
+         * <p>The maximum number of entries returned for this call.</p>
+         * 
          * <strong>example:</strong>
          * <p>20</p>
          */
@@ -115,12 +122,17 @@ public class ListTagResourcesResponseBody extends TeaModel {
         public Integer maxResults;
 
         /**
+         * <p>The token that is used to start the next query. If this parameter is empty, no more results exist.</p>
+         * 
          * <strong>example:</strong>
          * <p>24262</p>
          */
         @NameInMap("NextToken")
         public String nextToken;
 
+        /**
+         * <p>The tag resources.</p>
+         */
         @NameInMap("TagResources")
         public ListTagResourcesResponseBodyDataTagResources tagResources;
 

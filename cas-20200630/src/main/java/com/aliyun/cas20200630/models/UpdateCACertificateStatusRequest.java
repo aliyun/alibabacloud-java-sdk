@@ -4,13 +4,23 @@ package com.aliyun.cas20200630.models;
 import com.aliyun.tea.*;
 
 public class UpdateCACertificateStatusRequest extends TeaModel {
+    /**
+     * <p>A client token used to ensure the idempotence of the request.</p>
+     * <p>Generate a unique parameter value from your client for each request. The ClientToken parameter supports only ASCII characters.</p>
+     * <blockquote>
+     * <p>If you do not specify this parameter, the system automatically uses the <strong>RequestId</strong> of the API request as the <strong>ClientToken</strong>. The <strong>RequestId</strong> of each API request is different.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>3838B684-3075-582B-9A45-8C99104029DF</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
-     * <p>The unique identifier of the CA certificate whose status you want to change.</p>
+     * <p>The unique identifier of the CA certificate.</p>
      * <blockquote>
-     * <p> You can call the <a href="https://help.aliyun.com/document_detail/328095.html">DescribeCACertificateList</a> operation to query the unique identifiers of all CA certificates.</p>
+     * <p>Call <a href="https://help.aliyun.com/document_detail/465957.html">DescribeCACertificateList</a> to query the unique identifiers of all CA certificates.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -21,9 +31,9 @@ public class UpdateCACertificateStatusRequest extends TeaModel {
     public String identifier;
 
     /**
-     * <p>The state to which you want to change the CA certificate. Set to the value to <strong>REVOKE</strong>. After this operation is called, the status of the CA certificate is changed to <strong>REVOKE</strong>.</p>
+     * <p>The operation to perform on the CA certificate. Set the value to <strong>REVOKE</strong>. This revokes the CA certificate and changes its status to <strong>REVOKE</strong>.</p>
      * <blockquote>
-     * <p> You can call this operation only if the status of a CA certificate is <strong>ISSUE</strong>. You can call the <a href="https://help.aliyun.com/document_detail/328096.html">DescribeCACertificate</a> operation to query the status of a CA certificate.</p>
+     * <p>This operation is supported only when the CA certificate is in the <strong>ISSUE</strong> state. Call <a href="https://help.aliyun.com/document_detail/465954.html">DescribeCACertificate</a> to query the current status of the CA certificate.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

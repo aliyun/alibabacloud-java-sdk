@@ -5,19 +5,35 @@ import com.aliyun.tea.*;
 
 public class DescribePcaAndExternalCACertificateListRequest extends TeaModel {
     /**
+     * <p>The current page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
+    /**
+     * <p>One or more certificate identifiers, separated by commas.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>aaa,bbb</p>
+     */
     @NameInMap("Identifiers")
     public String identifiers;
 
+    /**
+     * <p>The keyword for a fuzzy search on the name, domain name, and SAN fields.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test_name</p>
+     */
     @NameInMap("KeyWord")
     public String keyWord;
 
     /**
+     * <p>The number of entries to return per page. The default value is 50.</p>
+     * 
      * <strong>example:</strong>
      * <p>50</p>
      */

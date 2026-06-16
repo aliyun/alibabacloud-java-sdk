@@ -5,20 +5,23 @@ import com.aliyun.tea.*;
 
 public class DescribeCertificatePrivateKeyRequest extends TeaModel {
     /**
-     * <p>The password that is used to encrypt the private key. The password can contain letters, digits, and special characters, such as <code>, + - _ #</code>. The password can be up to 32 bytes in length.</p>
-     * <p><strong>Warning</strong> You must remember the password that you specify. The password is required to decrypt the encrypted private key. If you forget the password, the encrypted private key that is returned cannot be decrypted. You must call this operation again.</p>
+     * <p>The password to encrypt the private key. The password can contain uppercase letters, lowercase letters, digits, and special characters, such as <code>,.+-_#</code>. The maximum length is 32 bytes.</p>
+     * <blockquote>
+     * <p>Warning: </p>
+     * </blockquote>
+     * <p>Remember the password you set. You need this password to decrypt the encrypted private key. If you forget the password, you cannot decrypt the private key that you get from this API call. You must call this API again to get a new encrypted key.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>!QA@WS3ed</p>
+     * <p>!Demo@WS3ed</p>
      */
     @NameInMap("EncryptedCode")
     public String encryptedCode;
 
     /**
-     * <p>The unique identifier of the client certificate or server certificate that you want to query.</p>
+     * <p>The unique identifier of the client or server-side certificate for which you want to get the private key.</p>
      * <blockquote>
-     * <p> You can call the <a href="https://help.aliyun.com/document_detail/330884.html">ListClientCertificate</a> operation to query the unique identifiers of all client certificates and server certificates.</p>
+     * <p>Call <a href="https://help.aliyun.com/document_detail/465990.html">ListClientCertificate</a> to query the unique identifiers of all client and server-side certificates.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -28,6 +31,12 @@ public class DescribeCertificatePrivateKeyRequest extends TeaModel {
     @NameInMap("Identifier")
     public String identifier;
 
+    /**
+     * <p>The ID of the resource group to which the certificate belongs.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 

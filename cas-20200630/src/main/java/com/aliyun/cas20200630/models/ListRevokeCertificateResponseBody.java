@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListRevokeCertificateResponseBody extends TeaModel {
     /**
-     * <p>An array that consists of the details about the revoked client certificates or server certificates.</p>
+     * <p>The details of the revoked client or server-side certificates.</p>
      */
     @NameInMap("CertificateList")
     public java.util.List<ListRevokeCertificateResponseBodyCertificateList> certificateList;
@@ -38,7 +38,7 @@ public class ListRevokeCertificateResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The number of revoked certificates that are returned per page.</p>
+     * <p>The number of revoked certificates on each page.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -47,7 +47,7 @@ public class ListRevokeCertificateResponseBody extends TeaModel {
     public Integer showSize;
 
     /**
-     * <p>The total number of revoked client certificates and server certificates that are returned.</p>
+     * <p>The total number of revoked client and server-side certificates.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -110,7 +110,7 @@ public class ListRevokeCertificateResponseBody extends TeaModel {
 
     public static class ListRevokeCertificateResponseBodyCertificateList extends TeaModel {
         /**
-         * <p>The expiration date of the certificate. The date is in the <code>yyyy-MM-ddT00:00Z</code> format. For example, the value <code>2021-12-31T00:00Z</code> indicates December 31, 2021.</p>
+         * <p>The expiration date of the certificate. The format is <code>yyyy-MM-ddT00:00Z</code>. For example, <code>2021-12-31T00:00Z</code> indicates December 31, 2021.</p>
          * 
          * <strong>example:</strong>
          * <p>2021-12-31T00:00Z</p>
@@ -121,9 +121,12 @@ public class ListRevokeCertificateResponseBody extends TeaModel {
         /**
          * <p>The type of the encryption algorithm of the certificate. Valid values:</p>
          * <ul>
-         * <li><strong>RSA</strong>: the Rivest-Shamir-Adleman (RSA) algorithm.</li>
-         * <li><strong>ECC</strong>: the elliptic curve cryptography (ECC) algorithm.</li>
-         * <li><strong>SM2</strong>: the SM2 algorithm, which is developed and approved by the State Cryptography Administration of China.</li>
+         * <li><p><strong>RSA</strong>: the RSA algorithm.</p>
+         * </li>
+         * <li><p><strong>ECC</strong>: the ECC algorithm.</p>
+         * </li>
+         * <li><p><strong>SM2</strong>: the SM2 algorithm.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -133,7 +136,7 @@ public class ListRevokeCertificateResponseBody extends TeaModel {
         public String algorithm;
 
         /**
-         * <p>The issuance date of the certificate. The date is in the <code>yyyy-MM-ddT00:00Z</code> format. For example, the value <code>2021-01-01T00:00Z</code> indicates January 1, 2021.</p>
+         * <p>The date when the certificate was issued. The format is <code>yyyy-MM-ddT00:00Z</code>. For example, <code>2021-01-01T00:00Z</code> indicates January 1, 2021.</p>
          * 
          * <strong>example:</strong>
          * <p>2021-01-01T00:00Z</p>
@@ -160,8 +163,8 @@ public class ListRevokeCertificateResponseBody extends TeaModel {
         public String commonName;
 
         /**
-         * <p>The code of the country in which the organization is located. The organization is associated with the intermediate certificate from which the certificate is issued.</p>
-         * <p>For more information about country codes, see the <strong>&quot;Country codes&quot;</strong> section of the <a href="https://help.aliyun.com/document_detail/198289.html">Manage company profiles</a> topic.</p>
+         * <p>The country code of the organization that is associated with the subordinate CA certificate that issued the certificate.</p>
+         * <p>For more information about country codes, see the &quot;Country codes&quot; section in <a href="https://help.aliyun.com/document_detail/198289.html">Manage company information</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>CN</p>
@@ -169,6 +172,12 @@ public class ListRevokeCertificateResponseBody extends TeaModel {
         @NameInMap("CountryCode")
         public String countryCode;
 
+        /**
+         * <p>The custom identifier. This is a unique key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><strong><strong>48d8d3ecc9976d9ecd2b2f25</strong></strong></p>
+         */
         @NameInMap("CustomIdentifier")
         public String customIdentifier;
 
@@ -191,7 +200,7 @@ public class ListRevokeCertificateResponseBody extends TeaModel {
         public Integer keySize;
 
         /**
-         * <p>The name of the city in which the organization is located. The organization is associated with the intermediate certificate from which the certificate is issued.</p>
+         * <p>The name of the city where the organization of the subordinate CA certificate that issued the certificate is located.</p>
          * 
          * <strong>example:</strong>
          * <p>Hangzhou</p>
@@ -209,16 +218,16 @@ public class ListRevokeCertificateResponseBody extends TeaModel {
         public String md5;
 
         /**
-         * <p>The name of the organization. The organization is associated with the intermediate certificate from which the certificate is issued.</p>
+         * <p>The name of the organization that is associated with the subordinate CA certificate that issued the certificate.</p>
          * 
          * <strong>example:</strong>
-         * <p>Alibaba Cloud Computing Co., Ltd.</p>
+         * <p>阿里云计算有限公司</p>
          */
         @NameInMap("Organization")
         public String organization;
 
         /**
-         * <p>The name of the department in the organization. The organization is associated with the intermediate certificate authority (CA) certificate from which the certificate is issued.</p>
+         * <p>The name of the department of the organization that is associated with the subordinate CA certificate that issued the certificate.</p>
          * 
          * <strong>example:</strong>
          * <p>Security</p>
@@ -227,7 +236,7 @@ public class ListRevokeCertificateResponseBody extends TeaModel {
         public String organizationUnit;
 
         /**
-         * <p>The identifier of the root certificate.</p>
+         * <p>The identifier of the parent certificate.</p>
          * 
          * <strong>example:</strong>
          * <p>160ae6bb538d538c70c01f81dcf2****</p>
@@ -236,7 +245,7 @@ public class ListRevokeCertificateResponseBody extends TeaModel {
         public String parentIdentifier;
 
         /**
-         * <p>The date on which the certificate was revoked. The value is in the <code>yyyy-MM-ddT00:00Z</code> format. For example, the value <code>2021-09-01T00:00Z</code> indicates September 1, 2021.</p>
+         * <p>The date when the certificate was revoked. The format is <code>yyyy-MM-ddT00:00Z</code>. For example, <code>2021-09-01T00:00Z</code> indicates September 1, 2021.</p>
          * 
          * <strong>example:</strong>
          * <p>2021-09-01T00:00Z</p>
@@ -245,18 +254,22 @@ public class ListRevokeCertificateResponseBody extends TeaModel {
         public String revokeDate;
 
         /**
-         * <p>The subject alternative name (SAN) extension of the certificate.</p>
-         * <p>The value is a string that consists of JSON arrays. Each element in a JSON array is a JSON struct that corresponds to a SAN extension. A SAN extension struct contains the following parameters:</p>
+         * <p>The Subject Alternative Name (SAN) extension of the certificate.</p>
+         * <p>This parameter is a string that is converted from a JSON array. Each element in the JSON array is a struct that corresponds to a SAN extension. Each SAN extension struct contains the following parameters:</p>
          * <ul>
-         * <li><p><strong>Type</strong>: the type of the extension. Data type: integer. Valid values:</p>
+         * <li><p><strong>Type</strong>: The type of the extension. This parameter is of the integer type. Valid values:</p>
          * <ul>
-         * <li><strong>1</strong>: an email address</li>
-         * <li><strong>2</strong>: a domain name</li>
-         * <li><strong>6</strong>: a Uniform Resource Identifier (URI)</li>
-         * <li><strong>7</strong>: an IP address</li>
+         * <li><p><strong>1</strong>: an email address.</p>
+         * </li>
+         * <li><p><strong>2</strong>: a domain name.</p>
+         * </li>
+         * <li><p><strong>6</strong>: a Uniform Resource Identifier (URI).</p>
+         * </li>
+         * <li><p><strong>7</strong>: an IP address.</p>
+         * </li>
          * </ul>
          * </li>
-         * <li><p><strong>Value</strong>: the value of the extension. Data type: string.</p>
+         * <li><p><strong>Value</strong>: The content of the extension. This parameter is of the string type.</p>
          * </li>
          * </ul>
          * 
@@ -294,7 +307,7 @@ public class ListRevokeCertificateResponseBody extends TeaModel {
         public String signAlgorithm;
 
         /**
-         * <p>The name of the province, municipality, or autonomous region in which the organization is located. The organization is associated with the intermediate certificate from which the certificate is issued.</p>
+         * <p>The name of the province or state of the organization that is associated with the subordinate CA certificate that issued the certificate.</p>
          * 
          * <strong>example:</strong>
          * <p>Zhejiang</p>
@@ -303,7 +316,7 @@ public class ListRevokeCertificateResponseBody extends TeaModel {
         public String state;
 
         /**
-         * <p>The status.</p>
+         * <p>The status of the certificate.</p>
          * 
          * <strong>example:</strong>
          * <p>ISSUE</p>
@@ -312,18 +325,31 @@ public class ListRevokeCertificateResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The distinguished name (DN) extension of the certificate, which indicates the user of the certificate. The DN extension includes the following information:</p>
+         * <p>The Distinguished Name (DN) of the certificate. The DN indicates the user of the certificate and contains the following information:</p>
          * <ul>
-         * <li><strong>C</strong>: the country</li>
-         * <li><strong>O</strong>: the organization</li>
-         * <li><strong>OU</strong>: the department</li>
-         * <li><strong>L</strong>: the city</li>
-         * <li><strong>ST</strong>: the province, municipality, or autonomous region</li>
-         * <li><strong>CN</strong>: the common name</li>
+         * <li><p><strong>C</strong>: The country.</p>
+         * </li>
+         * <li><p><strong>O</strong>: The organization.</p>
+         * </li>
+         * <li><p><strong>OU</strong>: The department.</p>
+         * </li>
+         * <li><p><strong>CN</strong>: The common name.</p>
+         * </li>
+         * </ul>
+         * <p>&lt;props=&quot;china&quot;&gt;</p>
+         * <ul>
+         * <li><strong>ST</strong>: The province, municipality, or autonomous region.</li>
+         * </ul>
+         * <p>&lt;props=&quot;intl&quot;&gt;</p>
+         * <ul>
+         * <li><p><strong>ST</strong>: The province or state.</p>
+         * </li>
+         * <li><p><strong>CN</strong>: The common name.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
-         * <p>C=CN,O=Alibaba Cloud Computing Co., Ltd.,OU=Security,L=ZheJiang,ST=HangZhou,CN=aliyundoc.com</p>
+         * <p>C=CN,O=阿里云计算有限公司,OU=Security,L=ZheJiang,ST=HangZhou,CN=aliyundoc.com</p>
          */
         @NameInMap("SubjectDN")
         public String subjectDN;

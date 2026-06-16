@@ -4,10 +4,15 @@ package com.aliyun.cas20200630.models;
 import com.aliyun.tea.*;
 
 public class DescribeClientCertificateForSerialNumberResponseBody extends TeaModel {
+    /**
+     * <p>Details of the client or server certificates.</p>
+     */
     @NameInMap("CertificateList")
     public java.util.List<DescribeClientCertificateForSerialNumberResponseBodyCertificateList> certificateList;
 
     /**
+     * <p>The ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>15C66C7B-671A-4297-9187-2C4477247A74</p>
      */
@@ -37,6 +42,8 @@ public class DescribeClientCertificateForSerialNumberResponseBody extends TeaMod
 
     public static class DescribeClientCertificateForSerialNumberResponseBodyCertificateList extends TeaModel {
         /**
+         * <p>The expiration time of the certificate.</p>
+         * 
          * <strong>example:</strong>
          * <p>2022-08-23T16:15Z</p>
          */
@@ -44,6 +51,16 @@ public class DescribeClientCertificateForSerialNumberResponseBody extends TeaMod
         public String afterDate;
 
         /**
+         * <p>The encryption algorithm of the certificate. Valid values:</p>
+         * <ul>
+         * <li><p><strong>RSA</strong>: The RSA algorithm.</p>
+         * </li>
+         * <li><p><strong>ECC</strong>: The ECC algorithm.</p>
+         * </li>
+         * <li><p><strong>SM2</strong>: The SM2 algorithm.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>RSA</p>
          */
@@ -51,16 +68,26 @@ public class DescribeClientCertificateForSerialNumberResponseBody extends TeaMod
         public String algorithm;
 
         /**
+         * <p>The issuance time of the certificate.</p>
+         * 
          * <strong>example:</strong>
          * <p>2021-10-28T16:15Z</p>
          */
         @NameInMap("BeforeDate")
         public String beforeDate;
 
+        /**
+         * <p>The type of the certificate.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SUB_ROOT</p>
+         */
         @NameInMap("CertificateType")
         public String certificateType;
 
         /**
+         * <p>The common name of the certificate.</p>
+         * 
          * <strong>example:</strong>
          * <p>aliyun.com</p>
          */
@@ -68,6 +95,9 @@ public class DescribeClientCertificateForSerialNumberResponseBody extends TeaMod
         public String commonName;
 
         /**
+         * <p>The two-letter country code of the issuer.</p>
+         * <p>For more information about country codes, see the <strong>Country codes</strong> section in <a href="https://help.aliyun.com/document_detail/198289.html">Manage company profiles</a>.</p>
+         * 
          * <strong>example:</strong>
          * <p>CN</p>
          */
@@ -75,6 +105,8 @@ public class DescribeClientCertificateForSerialNumberResponseBody extends TeaMod
         public String countryCode;
 
         /**
+         * <p>The unique identifier of the certificate.</p>
+         * 
          * <strong>example:</strong>
          * <p>d3b95700998e47afc4d95f886579****</p>
          */
@@ -82,6 +114,8 @@ public class DescribeClientCertificateForSerialNumberResponseBody extends TeaMod
         public String identifier;
 
         /**
+         * <p>The key length of the certificate.</p>
+         * 
          * <strong>example:</strong>
          * <p>4096</p>
          */
@@ -89,6 +123,8 @@ public class DescribeClientCertificateForSerialNumberResponseBody extends TeaMod
         public Integer keySize;
 
         /**
+         * <p>The city of the issuer.</p>
+         * 
          * <strong>example:</strong>
          * <p>Hangzhou</p>
          */
@@ -96,26 +132,61 @@ public class DescribeClientCertificateForSerialNumberResponseBody extends TeaMod
         public String locality;
 
         /**
+         * <p>The MD5 fingerprint of the certificate.</p>
+         * 
          * <strong>example:</strong>
          * <p>d3b95700998e47afc4d95f886579****</p>
          */
         @NameInMap("Md5")
         public String md5;
 
+        /**
+         * <p>The organization of the issuer.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>阿里云计算有限公司</p>
+         */
         @NameInMap("Organization")
         public String organization;
 
         /**
+         * <p>The organizational unit of the issuer.</p>
+         * 
          * <strong>example:</strong>
          * <p>Security</p>
          */
         @NameInMap("OrganizationUnit")
         public String organizationUnit;
 
+        /**
+         * <p>The identifier of the issuer. This parameter is returned only if the certificate is issued by Alibaba Cloud.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1a83bcbb89e562885e40aa0108f5****</p>
+         */
         @NameInMap("ParentIdentifier")
         public String parentIdentifier;
 
         /**
+         * <p>The subject alternative name (SAN) extension, which specifies identifiers such as email addresses, domain names, URIs, and IP addresses.</p>
+         * <p>A JSON string that represents an array of SAN objects. Each object contains the following parameters:</p>
+         * <ul>
+         * <li><p><strong>Type</strong>: The type of the extension. This parameter is an integer. Valid values:</p>
+         * <ul>
+         * <li><p><strong>1</strong>: email address.</p>
+         * </li>
+         * <li><p><strong>2</strong>: domain name.</p>
+         * </li>
+         * <li><p><strong>6</strong>: uniform resource identifier (URI).</p>
+         * </li>
+         * <li><p><strong>7</strong>: IP address.</p>
+         * </li>
+         * </ul>
+         * </li>
+         * <li><p><strong>Value</strong>: The content of the extension. This parameter is a string.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>[ {&quot;Type&quot;: 7, &quot;Value&quot;: &quot;192.0.XX.XX&quot;}, {&quot;Type&quot;: 2, &quot;Value&quot;: &quot;<a href="http://www.aliyundoc.com%22%7D">www.aliyundoc.com&quot;}</a>, ]</p>
          */
@@ -123,6 +194,8 @@ public class DescribeClientCertificateForSerialNumberResponseBody extends TeaMod
         public String sans;
 
         /**
+         * <p>The serial number of the certificate.</p>
+         * 
          * <strong>example:</strong>
          * <p>084bde9cd233f0ddae33adc438cfbbbd****</p>
          */
@@ -130,6 +203,8 @@ public class DescribeClientCertificateForSerialNumberResponseBody extends TeaMod
         public String serialNumber;
 
         /**
+         * <p>The SHA-256 fingerprint of the certificate.</p>
+         * 
          * <strong>example:</strong>
          * <p>14dcc8afc7578e1fcec36d658f7e20de18f6957bbac42b373a66bc9de4e9****</p>
          */
@@ -137,6 +212,8 @@ public class DescribeClientCertificateForSerialNumberResponseBody extends TeaMod
         public String sha2;
 
         /**
+         * <p>The signature algorithm of the certificate.</p>
+         * 
          * <strong>example:</strong>
          * <p>SHA256WITHRSA</p>
          */
@@ -144,6 +221,9 @@ public class DescribeClientCertificateForSerialNumberResponseBody extends TeaMod
         public String signAlgorithm;
 
         /**
+         * <p>&lt;props=&quot;china&quot;&gt;The state or province of the issuer.
+         * &lt;props=&quot;intl&quot;&gt;The state or province of the issuer.</p>
+         * 
          * <strong>example:</strong>
          * <p>Zhejiang</p>
          */
@@ -151,16 +231,53 @@ public class DescribeClientCertificateForSerialNumberResponseBody extends TeaMod
         public String state;
 
         /**
+         * <p>The status of the certificate. Valid values:</p>
+         * <ul>
+         * <li><p><strong>ISSUE</strong>: The certificate is issued.</p>
+         * </li>
+         * <li><p><strong>REVOKE</strong>: The certificate is revoked.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>ISSUE</p>
          */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The distinguished name (DN) of the certificate. The DN contains information about the certificate subject, including:</p>
+         * <ul>
+         * <li><p><strong>C</strong>: Country.</p>
+         * </li>
+         * <li><p><strong>O</strong>: Organization.</p>
+         * </li>
+         * <li><p><strong>OU</strong>: Organizational unit.</p>
+         * </li>
+         * <li><p><strong>L</strong>: City.</p>
+         * </li>
+         * </ul>
+         * <p>&lt;props=&quot;china&quot;&gt;</p>
+         * <ul>
+         * <li><strong>ST</strong>: State or province.</li>
+         * </ul>
+         * <p>&lt;props=&quot;intl&quot;&gt;</p>
+         * <ul>
+         * <li><p><strong>ST</strong>: State or province.</p>
+         * </li>
+         * <li><p><strong>CN</strong>: Common name.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>C=CN,O=阿里云计算有限公司,OU=Security,L=Hangzhou,ST=Zhejiang,CN=Aliyun</p>
+         */
         @NameInMap("SubjectDN")
         public String subjectDN;
 
         /**
+         * <p>The certificate content.</p>
+         * 
          * <strong>example:</strong>
          * <p>-----BEGIN CERTIFICATE-----  ...... -----END CERTIFICATE-----</p>
          */
@@ -168,6 +285,8 @@ public class DescribeClientCertificateForSerialNumberResponseBody extends TeaMod
         public String x509Certificate;
 
         /**
+         * <p>This parameter is deprecated.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */

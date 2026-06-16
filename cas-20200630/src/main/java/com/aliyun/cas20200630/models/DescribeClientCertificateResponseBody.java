@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeClientCertificateResponseBody extends TeaModel {
     /**
-     * <p>The details about the client certificate or the server certificate.</p>
+     * <p>The details of the client certificate or server-side certificate.</p>
      */
     @NameInMap("Certificate")
     public DescribeClientCertificateResponseBodyCertificate certificate;
@@ -41,9 +41,21 @@ public class DescribeClientCertificateResponseBody extends TeaModel {
     }
 
     public static class DescribeClientCertificateResponseBodyCertificateTags extends TeaModel {
+        /**
+         * <p>The tag key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testKey</p>
+         */
         @NameInMap("TagKey")
         public String tagKey;
 
+        /**
+         * <p>The tag value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[{\&quot;tag\&quot;:\&quot;PROPERTY_TYPE\&quot;,\&quot;values\&quot;:[]}]</p>
+         */
         @NameInMap("TagValue")
         public String tagValue;
 
@@ -81,11 +93,14 @@ public class DescribeClientCertificateResponseBody extends TeaModel {
         public Long afterDate;
 
         /**
-         * <p>The type of the encryption algorithm of the certificate. Valid values:</p>
+         * <p>The type of the encryption algorithm. Valid values:</p>
          * <ul>
-         * <li><strong>RSA</strong>: the Rivest-Shamir-Adleman (RSA) algorithm.</li>
-         * <li><strong>ECC</strong>: the elliptic curve cryptography (ECC) algorithm.</li>
-         * <li><strong>SM2</strong>: the SM2 algorithm, which is developed and approved by the State Cryptography Administration of China.</li>
+         * <li><p><strong>RSA</strong>: the RSA algorithm.</p>
+         * </li>
+         * <li><p><strong>ECC</strong>: the ECC algorithm.</p>
+         * </li>
+         * <li><p><strong>SM2</strong>: the SM2 algorithm.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -94,6 +109,12 @@ public class DescribeClientCertificateResponseBody extends TeaModel {
         @NameInMap("Algorithm")
         public String algorithm;
 
+        /**
+         * <p>The alias of the issued certificate.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rsa_root_2048</p>
+         */
         @NameInMap("AliasName")
         public String aliasName;
 
@@ -106,14 +127,30 @@ public class DescribeClientCertificateResponseBody extends TeaModel {
         @NameInMap("BeforeDate")
         public Long beforeDate;
 
+        /**
+         * <p>The complete certificate chain.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>-----BEGIN CERTIFICATE-----
+         * cert
+         * -----END CERTIFICATE-----
+         * -----BEGIN CERTIFICATE-----
+         * subCA
+         * -----END CERTIFICATE-----
+         * -----BEGIN CERTIFICATE-----
+         * rootCA
+         * -----END CERTIFICATE-----</p>
+         */
         @NameInMap("CertChain")
         public String certChain;
 
         /**
          * <p>The type of the certificate. Valid values:</p>
          * <ul>
-         * <li><strong>CLIENT</strong>: client certificate</li>
-         * <li><strong>SERVER</strong>: server certificate</li>
+         * <li><p><strong>CLIENT</strong>: a client certificate.</p>
+         * </li>
+         * <li><p><strong>SERVER</strong>: a server-side certificate.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -132,8 +169,8 @@ public class DescribeClientCertificateResponseBody extends TeaModel {
         public String commonName;
 
         /**
-         * <p>The code of the country in which the organization is located. The organization is associated with the intermediate certificate from which the certificate is issued.</p>
-         * <p>For more information about country codes, see the <strong>&quot;Country codes&quot;</strong> section of the <a href="https://help.aliyun.com/document_detail/198289.html">Manage company profiles</a> topic.</p>
+         * <p>The country code of the subject organization.</p>
+         * <p>For more information about country codes, see the <strong>International codes</strong> section in <a href="https://help.aliyun.com/document_detail/198289.html">Manage company profiles</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>CN</p>
@@ -141,6 +178,12 @@ public class DescribeClientCertificateResponseBody extends TeaModel {
         @NameInMap("CountryCode")
         public String countryCode;
 
+        /**
+         * <p>The custom identifier, which is a unique key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><em><strong>3a32d96883a6650e672ea0276</strong></em>*</p>
+         */
         @NameInMap("CustomIdentifier")
         public String customIdentifier;
 
@@ -153,9 +196,21 @@ public class DescribeClientCertificateResponseBody extends TeaModel {
         @NameInMap("Days")
         public Integer days;
 
+        /**
+         * <p>The algorithm and its length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>RSA_2048</p>
+         */
         @NameInMap("FullAlgorithm")
         public String fullAlgorithm;
 
+        /**
+         * <p>The ID of the data source to which the certificate order belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1137354</p>
+         */
         @NameInMap("Id")
         public Long id;
 
@@ -178,7 +233,7 @@ public class DescribeClientCertificateResponseBody extends TeaModel {
         public Integer keySize;
 
         /**
-         * <p>The name of the city in which the organization is located. The organization is associated with the intermediate certificate from which the certificate is issued.</p>
+         * <p>The city where the subject organization is located.</p>
          * 
          * <strong>example:</strong>
          * <p>Hangzhou</p>
@@ -196,16 +251,16 @@ public class DescribeClientCertificateResponseBody extends TeaModel {
         public String md5;
 
         /**
-         * <p>The name of the organization. The organization is associated with the intermediate certificate from which the certificate is issued.</p>
+         * <p>The organization associated with the certificate of the issuing subordinate CA.</p>
          * 
          * <strong>example:</strong>
-         * <p>Alibaba Cloud Computing Co., Ltd.</p>
+         * <p>Aliyun</p>
          */
         @NameInMap("Organization")
         public String organization;
 
         /**
-         * <p>The name of the department in the organization. The organization is associated with the intermediate certificate authority (CA) certificate from which the certificate is issued.</p>
+         * <p>The organizational unit of the certificate subject.</p>
          * 
          * <strong>example:</strong>
          * <p>Security</p>
@@ -214,7 +269,7 @@ public class DescribeClientCertificateResponseBody extends TeaModel {
         public String organizationUnit;
 
         /**
-         * <p>The unique identifier of the intermediate certificate from which the client certificate is issued.</p>
+         * <p>The unique identifier of the subordinate CA certificate that issued the certificate.</p>
          * 
          * <strong>example:</strong>
          * <p>160ae6bb538d538c70c01f81dcf2****</p>
@@ -222,22 +277,32 @@ public class DescribeClientCertificateResponseBody extends TeaModel {
         @NameInMap("ParentIdentifier")
         public String parentIdentifier;
 
+        /**
+         * <p>The ID of the resource group to which the certificate belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmxllajdpw3fi</p>
+         */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
         /**
-         * <p>The subject alternative name (SAN) extension of the certificate. The value indicates additional information, including the additional domain names or IP addresses that are associated with the certificate.</p>
-         * <p>The value is a string that consists of JSON arrays. Each element in a JSON array is a JSON struct that corresponds to a SAN extension. A SAN extension struct contains the following parameters:</p>
+         * <p>The Subject Alternative Name (SAN) extension of the certificate. The SAN extension indicates other domain names or IP addresses that are associated with the certificate.</p>
+         * <p>This parameter is a string that is converted from a JSON array. Each element in the JSON array is a struct that corresponds to a SAN extension. Each SAN extension struct contains the following parameters:</p>
          * <ul>
-         * <li><p><strong>Type</strong>: the type of the extension. Data type: integer. Valid values:</p>
+         * <li><p><strong>Type</strong>: The type of the extension. This parameter is of the Integer type. Valid values:</p>
          * <ul>
-         * <li><strong>1</strong>: an email address</li>
-         * <li><strong>2</strong>: a domain name</li>
-         * <li><strong>6</strong>: a Uniform Resource Identifier (URI)</li>
-         * <li><strong>7</strong>: an IP address</li>
+         * <li><p><strong>1</strong>: an email address.</p>
+         * </li>
+         * <li><p><strong>2</strong>: a domain name.</p>
+         * </li>
+         * <li><p><strong>6</strong>: a Uniform Resource Identifier (URI).</p>
+         * </li>
+         * <li><p><strong>7</strong>: an IP address.</p>
+         * </li>
          * </ul>
          * </li>
-         * <li><p><strong>Value</strong>: the value of the extension. Data type: string.</p>
+         * <li><p><strong>Value</strong>: The content of the extension. This parameter is of the String type.</p>
          * </li>
          * </ul>
          * 
@@ -275,7 +340,7 @@ public class DescribeClientCertificateResponseBody extends TeaModel {
         public String signAlgorithm;
 
         /**
-         * <p>The name of the province, municipality, or autonomous region in which the organization is located. The organization is associated with the intermediate certificate from which the certificate is issued.</p>
+         * <p>The state or province where the subject organization is located.</p>
          * 
          * <strong>example:</strong>
          * <p>Zhejiang</p>
@@ -286,8 +351,10 @@ public class DescribeClientCertificateResponseBody extends TeaModel {
         /**
          * <p>The status of the certificate. Valid values:</p>
          * <ul>
-         * <li><strong>ISSUE</strong>: issued</li>
-         * <li><strong>REVOKE</strong>: revoked</li>
+         * <li><p><strong>ISSUE</strong>: The certificate is issued.</p>
+         * </li>
+         * <li><p><strong>REVOKE</strong>: The certificate is revoked.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -297,25 +364,50 @@ public class DescribeClientCertificateResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The distinguished name (DN) extension of the certificate, which indicates the user of the certificate. The DN extension includes the following information:</p>
+         * <p>The subject Distinguished Name (DN) of the certificate. This value is composed of the following fields:</p>
          * <ul>
-         * <li><strong>C</strong>: the country</li>
-         * <li><strong>O</strong>: the organization</li>
-         * <li><strong>OU</strong>: the department</li>
-         * <li><strong>L</strong>: the city</li>
-         * <li><strong>ST</strong>: the province, municipality, or autonomous region</li>
-         * <li><strong>CN</strong>: the common name</li>
+         * <li><p><strong>C</strong>: Country.</p>
+         * </li>
+         * <li><p><strong>O</strong>: Organization.</p>
+         * </li>
+         * <li><p><strong>OU</strong>: Organizational unit.</p>
+         * </li>
+         * <li><p><strong>CN</strong>: Common name.</p>
+         * </li>
+         * </ul>
+         * <p>&lt;props=&quot;china&quot;&gt;</p>
+         * <ul>
+         * <li><strong>ST</strong>: The province, municipality, or autonomous region.</li>
+         * </ul>
+         * <p>&lt;props=&quot;intl&quot;&gt;</p>
+         * <ul>
+         * <li><p><strong>ST</strong>: Province or state.</p>
+         * </li>
+         * <li><p><strong>CN</strong>: Common name.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
-         * <p>C=CN,O=Alibaba Cloud Computing Co., Ltd.,OU=Security,L=Hangzhou,ST=Zhejiang,CN=Aliyun</p>
+         * <p>C=CN,O=Aliyun,OU=Security,L=Hangzhou,ST=Zhejiang,CN=Aliyun</p>
          */
         @NameInMap("SubjectDN")
         public String subjectDN;
 
+        /**
+         * <p>The list of tags.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mtls</p>
+         */
         @NameInMap("Tags")
         public java.util.List<DescribeClientCertificateResponseBodyCertificateTags> tags;
 
+        /**
+         * <p>Indicates whether the certificate is synchronized to Digital Certificate Management Service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("UploadFlag")
         public Integer uploadFlag;
 

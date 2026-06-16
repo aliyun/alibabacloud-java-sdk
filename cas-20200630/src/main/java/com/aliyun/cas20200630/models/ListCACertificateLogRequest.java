@@ -5,6 +5,10 @@ import com.aliyun.tea.*;
 
 public class ListCACertificateLogRequest extends TeaModel {
     /**
+     * <p>The unique identifier of the CA certificate to query.</p>
+     * <blockquote>
+     * <p>Call <a href="https://help.aliyun.com/document_detail/328095.html">DescribeCACertificateList</a> to query the unique identifiers of all CA certificates.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

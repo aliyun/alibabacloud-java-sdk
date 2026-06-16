@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class UploadPcaCertToCasRequest extends TeaModel {
     /**
+     * <p>The list of primary key identifiers to synchronize to Certificate Service. Separate multiple IDs with commas (,).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

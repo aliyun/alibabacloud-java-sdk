@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpdatePcaCertificateRequest extends TeaModel {
     /**
+     * <p>The alias of the certificate.</p>
+     * 
      * <strong>example:</strong>
      * <p>cert-name</p>
      */
@@ -12,6 +14,8 @@ public class UpdatePcaCertificateRequest extends TeaModel {
     public String aliasName;
 
     /**
+     * <p>A client token used to ensure the idempotence of the request. The client generates this value to make sure that it is unique among different requests. The token can be a maximum of 64 ASCII characters and cannot contain non-ASCII characters.</p>
+     * 
      * <strong>example:</strong>
      * <p>XXX</p>
      */
@@ -19,6 +23,11 @@ public class UpdatePcaCertificateRequest extends TeaModel {
     public String clientToken;
 
     /**
+     * <p>The unique identifier of the CA certificate.</p>
+     * <blockquote>
+     * <p>Call <a href="https://help.aliyun.com/document_detail/328095.html">DescribeCACertificateList</a> to query the unique identifiers of all CA certificates.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>160ae6bb538d538c70c01f81dcf2****</p>
      */
@@ -26,12 +35,17 @@ public class UpdatePcaCertificateRequest extends TeaModel {
     public String identifier;
 
     /**
+     * <p>The ID of the resource group.</p>
+     * 
      * <strong>example:</strong>
      * <p>rg-ae******4wia</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
+    /**
+     * <p>A list of tags.</p>
+     */
     @NameInMap("Tags")
     public java.util.List<UpdatePcaCertificateRequestTags> tags;
 
@@ -82,6 +96,8 @@ public class UpdatePcaCertificateRequest extends TeaModel {
 
     public static class UpdatePcaCertificateRequestTags extends TeaModel {
         /**
+         * <p>The tag key.</p>
+         * 
          * <strong>example:</strong>
          * <p>runtime</p>
          */
@@ -89,6 +105,8 @@ public class UpdatePcaCertificateRequest extends TeaModel {
         public String key;
 
         /**
+         * <p>The tag value.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */

@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class ListAllEndEntityInstanceResponseBody extends TeaModel {
     /**
+     * <p>The page number of the instance list.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
+    /**
+     * <p>The list of instances.</p>
+     */
     @NameInMap("List")
     public java.util.List<java.util.Map<String, ?>> list;
 
     /**
+     * <p>The maximum number of entries returned in this call.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -22,6 +29,8 @@ public class ListAllEndEntityInstanceResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>The token that you can use to retrieve the next page of results. If this parameter is empty, all results have been returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>1d2db86sca4384811e0b5e8707e68181f</p>
      */
@@ -29,6 +38,8 @@ public class ListAllEndEntityInstanceResponseBody extends TeaModel {
     public String nextToken;
 
     /**
+     * <p>The total number of pages.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -36,6 +47,8 @@ public class ListAllEndEntityInstanceResponseBody extends TeaModel {
     public Integer pageCount;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>443C05A8-6C16-52B5-BB97-5D8798F7A49A</p>
      */
@@ -43,6 +56,8 @@ public class ListAllEndEntityInstanceResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The maximum number of entries displayed on each page of a paged query.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -50,6 +65,8 @@ public class ListAllEndEntityInstanceResponseBody extends TeaModel {
     public Integer showSize;
 
     /**
+     * <p>The total number of records.</p>
+     * 
      * <strong>example:</strong>
      * <p>23</p>
      */

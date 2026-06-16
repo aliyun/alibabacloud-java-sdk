@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeCertificatePrivateKeyResponseBody extends TeaModel {
     /**
-     * <p>The content of the encrypted private key.</p>
+     * <p>The encrypted content of the private key.</p>
      * 
      * <strong>example:</strong>
      * <p>-----BEGIN ENCRYPTED PRIVATE KEY----- …… -----END ENCRYPTED PRIVATE KEY-----</p>

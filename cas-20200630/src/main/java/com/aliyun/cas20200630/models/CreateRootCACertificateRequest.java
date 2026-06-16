@@ -5,17 +5,24 @@ import com.aliyun.tea.*;
 
 public class CreateRootCACertificateRequest extends TeaModel {
     /**
-     * <p>The key algorithm of the root CA certificate. The key algorithm is in the <code>&lt;Encryption algorithm&gt;_&lt;Key length&gt;</code> format. Valid values:</p>
+     * <p>The key algorithm of the root CA certificate. The key algorithm is in the <code>&lt;encryption algorithm&gt;_&lt;key length&gt;</code> format. Valid values:</p>
      * <ul>
-     * <li><strong>RSA_1024</strong>: The signature algorithm is Sha256WithRSA.</li>
-     * <li><strong>RSA_2048</strong>: The signature algorithm is Sha256WithRSA.</li>
-     * <li><strong>RSA_4096</strong>: The signature algorithm is Sha256WithRSA.</li>
-     * <li><strong>ECC_256</strong>: The signature algorithm is Sha256WithECDSA.</li>
-     * <li><strong>ECC_384</strong>: The signature algorithm is Sha256WithECDSA.</li>
-     * <li><strong>ECC_512</strong>: The signature algorithm is Sha256WithECDSA.</li>
-     * <li><strong>SM2_256</strong>: The signature algorithm is SM3WithSM2.</li>
+     * <li><p><strong>RSA_1024</strong>: The corresponding signature algorithm is Sha256WithRSA.</p>
+     * </li>
+     * <li><p><strong>RSA_2048</strong>: The corresponding signature algorithm is Sha256WithRSA.</p>
+     * </li>
+     * <li><p><strong>RSA_4096</strong>: The corresponding signature algorithm is Sha256WithRSA.</p>
+     * </li>
+     * <li><p><strong>ECC_256</strong>: The corresponding signature algorithm is Sha256WithECDSA.</p>
+     * </li>
+     * <li><p><strong>ECC_384</strong>: The corresponding signature algorithm is Sha256WithECDSA.</p>
+     * </li>
+     * <li><p><strong>ECC_512</strong>: The corresponding signature algorithm is Sha256WithECDSA.</p>
+     * </li>
+     * <li><p><strong>SM2_256</strong>: The corresponding signature algorithm is SM3WithSM2.</p>
+     * </li>
      * </ul>
-     * <p>The encryption algorithm of the root CA certificate must be consistent with the <strong>encryption algorithm</strong> of the private root CA instance that you purchase. For example, if the <strong>encryption algorithm</strong> of the private root CA instance that you purchase is <strong>RSA</strong>, the key algorithm of the root CA certificate must be <strong>RSA_1024</strong>, <strong>RSA_2048</strong>, or <strong>RSA_4096</strong>.</p>
+     * <p>The encryption algorithm of the root CA certificate must be the same as the <strong>Certificate Algorithm</strong> of the private root CA that you purchased. For example, if you set <strong>Certificate Algorithm</strong> to <strong>RSA</strong> when you purchase a private root CA, the key algorithm of the root CA certificate must be <strong>RSA_1024</strong>, <strong>RSA_2048</strong>, or <strong>RSA_4096</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>RSA_2048</p>
@@ -23,11 +30,21 @@ public class CreateRootCACertificateRequest extends TeaModel {
     @NameInMap("Algorithm")
     public String algorithm;
 
+    /**
+     * <p>A client token to ensure the idempotence of the request.</p>
+     * <p>Generate a unique value for this parameter from your client. The token supports only ASCII characters.</p>
+     * <blockquote>
+     * <p>If you do not specify this parameter, the system uses the <strong>RequestId</strong> of the request as the <strong>ClientToken</strong>. The <strong>RequestId</strong> may be different for each request.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>3838B684-3075-582B-9A45-8C99104029DF</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
-     * <p>The common name or abbreviation of the organization. The value can contain letters.</p>
+     * <p>The common name or abbreviation of the organization. Supports Chinese characters and letters.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -37,8 +54,8 @@ public class CreateRootCACertificateRequest extends TeaModel {
     public String commonName;
 
     /**
-     * <p>The code of the country or region in which the organization is located. You can enter an alpha-2 code. For example, you can use <strong>CN</strong> to indicate China and use <strong>US</strong> to indicate the United States.</p>
-     * <p>For more information about country codes, see the <strong>&quot;Country codes&quot;</strong> section of the <a href="https://help.aliyun.com/document_detail/198289.html">Manage company profiles</a> topic.</p>
+     * <p>The two-letter uppercase code of the country or region where the organization is located. For example, <strong>CN</strong> indicates China and <strong>US</strong> indicates the United States.</p>
+     * <p>For more information about country codes, see the <strong>Country codes</strong> section in <a href="https://help.aliyun.com/document_detail/198289.html">Manage company information</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>CN</p>
@@ -47,7 +64,7 @@ public class CreateRootCACertificateRequest extends TeaModel {
     public String countryCode;
 
     /**
-     * <p>The name of the city in which the organization is located. The value can contain letters.</p>
+     * <p>The name of the city where the organization is located. Supports Chinese characters and letters.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -57,17 +74,17 @@ public class CreateRootCACertificateRequest extends TeaModel {
     public String locality;
 
     /**
-     * <p>The name of the organization that is associated with the root CA certificate. You can enter the name of your enterprise or company. The value can contain letters.</p>
+     * <p>The name of the organization for the root CA certificate. This is typically your company or enterprise name. Supports Chinese characters and letters.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>Alibaba</p>
+     * <p>Aliyun</p>
      */
     @NameInMap("Organization")
     public String organization;
 
     /**
-     * <p>The name of the department or branch in the organization. The value can contain letters.</p>
+     * <p>The name of the department or branch in the organization. Supports Chinese characters and letters.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -76,11 +93,17 @@ public class CreateRootCACertificateRequest extends TeaModel {
     @NameInMap("OrganizationUnit")
     public String organizationUnit;
 
+    /**
+     * <p>The ID of the resource group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-aek****wia</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
     /**
-     * <p>The name of the province, municipality, or autonomous region in which the organization is located. The value can contain letters.</p>
+     * <p>&lt;props=&quot;intl&quot;&gt;The name of the province or state where the organization is located. Supports Chinese characters and letters.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -89,13 +112,16 @@ public class CreateRootCACertificateRequest extends TeaModel {
     @NameInMap("State")
     public String state;
 
+    /**
+     * <p>A list of tags.</p>
+     */
     @NameInMap("Tags")
     public java.util.List<CreateRootCACertificateRequestTags> tags;
 
     /**
      * <p>The validity period of the root CA certificate. Unit: years.</p>
      * <blockquote>
-     * <p> We recommend that you set this parameter to a value from 5 to 10.</p>
+     * <p>Set the validity period to 5 to 10 years.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -199,9 +225,21 @@ public class CreateRootCACertificateRequest extends TeaModel {
     }
 
     public static class CreateRootCACertificateRequestTags extends TeaModel {
+        /**
+         * <p>The tag key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>runtime</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The tag value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Value")
         public String value;
 

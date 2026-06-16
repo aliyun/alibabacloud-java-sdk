@@ -5,7 +5,10 @@ import com.aliyun.tea.*;
 
 public class DescribeClientCertificateStatusForSerialNumberRequest extends TeaModel {
     /**
-     * <p>The serial number of the certificate.</p>
+     * <p>The serial number of the client or server certificate to query. To query multiple certificates, separate their serial numbers with a comma.</p>
+     * <blockquote>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/330884.html">ListClientCertificate</a> operation to retrieve the serial numbers of all client and server certificates.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

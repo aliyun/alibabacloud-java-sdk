@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class CreateCustomCertificateRequest extends TeaModel {
     /**
-     * <p>The passthrough parameters.</p>
+     * <p>Pass-through parameters.</p>
      */
     @NameInMap("ApiPassthrough")
     public CreateCustomCertificateRequestApiPassthrough apiPassthrough;
 
     /**
-     * <p>The content of the CSR. You can generate a CSR by using the OpenSSL tool or the Keytool tool. For more information, see <a href="https://help.aliyun.com/document_detail/42218.html">How do I create a CSR file?</a></p>
+     * <p>The content of the CSR. You can generate a CSR using tools such as OpenSSL or Keytool. For more information, see <a href="https://help.aliyun.com/document_detail/42218.html">Create a CSR file</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -27,10 +27,12 @@ public class CreateCustomCertificateRequest extends TeaModel {
     public String csr;
 
     /**
-     * <p>include the CRL address.</p>
+     * <p>Specifies whether to include a CRL address.</p>
      * <ul>
-     * <li>0- No</li>
-     * <li>1- Yes</li>
+     * <li><p>0 - No</p>
+     * </li>
+     * <li><p>1 - Yes</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -40,11 +42,14 @@ public class CreateCustomCertificateRequest extends TeaModel {
     public Long enableCrl;
 
     /**
-     * <p>Specifies whether to immediately issue the certificate. Valid values:</p>
+     * <p>Obtain the certificate immediately.</p>
      * <ul>
-     * <li>0: asynchronously issues the certificate.</li>
-     * <li>1: immediately issues the certificate.</li>
-     * <li>2: immediately issues the certificate and returns the certificate chain.</li>
+     * <li><p>0 - Issue the certificate asynchronously.</p>
+     * </li>
+     * <li><p>1 - Issue the certificate immediately.</p>
+     * </li>
+     * <li><p>2 - Issue the certificate immediately and return the CA certificate chain.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -54,7 +59,7 @@ public class CreateCustomCertificateRequest extends TeaModel {
     public Integer immediately;
 
     /**
-     * <p>The identifier of the certificate.</p>
+     * <p>The identifier of the CA certificate.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -63,39 +68,59 @@ public class CreateCustomCertificateRequest extends TeaModel {
     @NameInMap("ParentIdentifier")
     public String parentIdentifier;
 
+    /**
+     * <p>The ID of the resource group. You can obtain this ID by calling the <a href="https://help.aliyun.com/document_detail/2716559.html">ListResources</a> operation.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-aek****wia</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
+    /**
+     * <p>The list of tags.</p>
+     */
     @NameInMap("Tags")
     public java.util.List<CreateCustomCertificateRequestTags> tags;
 
     /**
-     * <p>The validity period of the certificate. The value cannot exceed the validity period of the certificate instance. Relative time and absolute time are supported.</p>
-     * <p>Units of relative time: year, month, and day.</p>
+     * <p>The validity period of the certificate. This period cannot exceed the validity period of the instance. You can use relative time or absolute time.</p>
+     * <p>Relative time: Supports years, months, and days.</p>
      * <ul>
-     * <li>Use y to specify years.</li>
-     * <li>Use m to specify months.</li>
-     * <li>Use d to specify days.</li>
+     * <li><p>Year - y</p>
+     * </li>
+     * <li><p>Month - m</p>
+     * </li>
+     * <li><p>Day - d</p>
+     * </li>
      * </ul>
-     * <p>Absolute time: Use Greenwich Mean Time (GMT). Format: <code>yyyy-MM-dd\\&quot;T\\&quot;HH:mm:ss\\&quot;Z\\&quot;</code></p>
+     * <p>Absolute time: Uses GMT. Format: <code>yyyy-MM-dd\\&quot;T\\&quot;HH:mm:ss\\&quot;Z\\&quot;</code></p>
      * <ul>
-     * <li>Format of the end time: $NotAfter</li>
-     * <li>Format of the start time and end time: $NotBefore/$NotAfter</li>
+     * <li><p>Specify the end time - $NotAfter</p>
+     * </li>
+     * <li><p>Specify the start and end times - $NotBefore/$NotAfter</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>Relative time:
-     *  ● 1y
-     *  ● 3m
-     *  ● 7d
-     * Absolute time: 
-     * ● 2006-01-02T15:04:05Z 
+     * <p>相对时间：
+     * ● 1y
+     * ● 3m
+     * ● 7d</p>
+     * <p>绝对时间：
+     * ● 2006-01-02T15:04:05Z
      * ● 2006-01-02T15:04:05Z/2023-03-09T17:48:13Z</p>
      */
     @NameInMap("Validity")
     public String validity;
 
+    /**
+     * <p>A custom identifier.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>XXX068c-6f1b-6deb-8e32-3f8439a8XXX</p>
+     */
     @NameInMap("customIdentifier")
     public String customIdentifier;
 
@@ -178,7 +203,7 @@ public class CreateCustomCertificateRequest extends TeaModel {
 
     public static class CreateCustomCertificateRequestApiPassthroughExtensionsKeyUsage extends TeaModel {
         /**
-         * <p>The original name of the parameter is NonRepudiation.</p>
+         * <p>Content commitment. Formerly known as NonRepudiation. Allows the certificate key to be used for content commitment.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -187,7 +212,7 @@ public class CreateCustomCertificateRequest extends TeaModel {
         public Boolean contentCommitment;
 
         /**
-         * <p>Specifies whether the key can be used for data encryption.</p>
+         * <p>Data encipherment.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -196,7 +221,7 @@ public class CreateCustomCertificateRequest extends TeaModel {
         public Boolean dataEncipherment;
 
         /**
-         * <p>Specifies whether the key can be used only for data decryption.</p>
+         * <p>When KeyAgreement is true, this marks that the certificate key can only be used for decryption.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -205,7 +230,7 @@ public class CreateCustomCertificateRequest extends TeaModel {
         public Boolean decipherOnly;
 
         /**
-         * <p>Specifies whether the key can be used for digital signing. If you set this parameter to true, the private key of the certificate can be used to generate digital signatures, and the public key of the certificate can be used to verify digital signatures.</p>
+         * <p>Digital signature. Allows the private key of the certificate to be used for digital signatures and the public key to be used to verify digital signatures.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -214,7 +239,7 @@ public class CreateCustomCertificateRequest extends TeaModel {
         public Boolean digitalSignature;
 
         /**
-         * <p>Specifies whether the key can be used only for data encryption.</p>
+         * <p>When KeyAgreement is true, this marks that the certificate key can only be used for encryption.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -223,7 +248,7 @@ public class CreateCustomCertificateRequest extends TeaModel {
         public Boolean encipherOnly;
 
         /**
-         * <p>Specifies whether the key can be used for key agreement.</p>
+         * <p>Key agreement.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -232,7 +257,7 @@ public class CreateCustomCertificateRequest extends TeaModel {
         public Boolean keyAgreement;
 
         /**
-         * <p>Specifies whether the key can be used for data encipherment.</p>
+         * <p>Key encipherment. Allows the certificate key to be used to encrypt other keys.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -241,7 +266,7 @@ public class CreateCustomCertificateRequest extends TeaModel {
         public Boolean keyEncipherment;
 
         /**
-         * <p>Specifies whether the key can be used for non-repudiation. This parameter is renamed ContentCommitment in the X.509 standard.</p>
+         * <p>Non-repudiation. This has been renamed to ContentCommitment in the X.509 standard.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -322,12 +347,16 @@ public class CreateCustomCertificateRequest extends TeaModel {
 
     public static class CreateCustomCertificateRequestApiPassthroughExtensionsSubjectAlternativeNames extends TeaModel {
         /**
-         * <p>The type of the alias. Valid values:</p>
+         * <p>The following values are allowed:</p>
          * <ul>
-         * <li>rfc822Name: email address</li>
-         * <li>dNSName: domain name</li>
-         * <li>uniformResourceIdentifier: URI</li>
-         * <li>iPAddress: IP address</li>
+         * <li><p>rfc822Name - Email address</p>
+         * </li>
+         * <li><p>dNSName - Domain name</p>
+         * </li>
+         * <li><p>uniformResourceIdentifier - Uniform Resource Identifier (URI)</p>
+         * </li>
+         * <li><p>iPAddress - IP address</p>
+         * </li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -338,13 +367,13 @@ public class CreateCustomCertificateRequest extends TeaModel {
         public String type;
 
         /**
-         * <p>The alias that meets the requirement of a specified type.</p>
+         * <p>A value that matches the specified Type.</p>
          * 
          * <strong>example:</strong>
          * <p>rfc822Name:
-         * <a href="mailto:exmaple@certqa.cn">exmaple@certqa.cn</a></p>
+         * example.aliyundoc.com</p>
          * <p>dNSName:
-         * <a href="http://www.certqa.cn">www.certqa.cn</a></p>
+         * learn.aliyundoc.com</p>
          * <p>uniformResourceIdentifier:
          * acs:ecs:regionid:15619224785*****:instance/i-bp1bzvz55uz27hf*****</p>
          * <p>iPAddress:
@@ -378,13 +407,13 @@ public class CreateCustomCertificateRequest extends TeaModel {
 
     public static class CreateCustomCertificateRequestApiPassthroughExtensions extends TeaModel {
         /**
-         * <p>If it is a necessary parameter, the critical list contains the parameter name.</p>
+         * <p>If an extension is critical, its name is included in the criticals list.</p>
          */
         @NameInMap("Criticals")
         public java.util.List<String> criticals;
 
         /**
-         * <p>The extended key usage.</p>
+         * <p>The extended key usages.</p>
          */
         @NameInMap("ExtendedKeyUsages")
         public java.util.List<String> extendedKeyUsages;
@@ -396,7 +425,7 @@ public class CreateCustomCertificateRequest extends TeaModel {
         public CreateCustomCertificateRequestApiPassthroughExtensionsKeyUsage keyUsage;
 
         /**
-         * <p>The aliases of the entities.</p>
+         * <p>The subject alternative names (SANs) of the certificate.</p>
          */
         @NameInMap("SubjectAlternativeNames")
         public java.util.List<CreateCustomCertificateRequestApiPassthroughExtensionsSubjectAlternativeNames> subjectAlternativeNames;
@@ -442,21 +471,34 @@ public class CreateCustomCertificateRequest extends TeaModel {
 
     public static class CreateCustomCertificateRequestApiPassthroughSubjectCustomAttributes extends TeaModel {
         /**
-         * <p>Custom attribute type as:</p>
+         * <p>The key of the custom property. It must comply with industry standards. Examples:</p>
          * <ul>
-         * <li>2.5.4.6 : country</li>
-         * <li>2.5.4.10 : organization</li>
-         * <li>2.5.4.11 : organizational unit</li>
-         * <li>2.5.4.12 : title</li>
-         * <li>2.5.4.3 : common name</li>
-         * <li>2.5.4.9 : street</li>
-         * <li>2.5.4.5 : serial number</li>
-         * <li>2.5.4.7 : locality</li>
-         * <li>2.5.4.8 : state</li>
-         * <li>1.3.6.1.4.1.37244.1.1 : Matter Operational Certificate - Node ID</li>
-         * <li>1.3.6.1.4.1.37244.1.5 : Matter Operational Certificate - Fabric ID</li>
-         * <li>1.3.6.1.4.1.37244.2.1 : Matter Device Attestation Certificate Vender ID (VID)</li>
-         * <li>1.3.6.1.4.1.37244.2.2 : Matter Device Attestation Certificate Product ID (PID).</li>
+         * <li><p>2.5.4.6: Country code</p>
+         * </li>
+         * <li><p>2.5.4.10: Organization</p>
+         * </li>
+         * <li><p>2.5.4.11: Organizational unit name</p>
+         * </li>
+         * <li><p>2.5.4.12: Title</p>
+         * </li>
+         * <li><p>2.5.4.3: Common name</p>
+         * </li>
+         * <li><p>2.5.4.9: Street</p>
+         * </li>
+         * <li><p>2.5.4.5: Serial number</p>
+         * </li>
+         * <li><p>2.5.4.7: Locality</p>
+         * </li>
+         * <li><p>2.5.4.8: State or province</p>
+         * </li>
+         * <li><p>1.3.6.1.4.1.37244.1.1: Matter certificate - Node ID</p>
+         * </li>
+         * <li><p>1.3.6.1.4.1.37244.1.5: Matter certificate - Fabric ID</p>
+         * </li>
+         * <li><p>1.3.6.1.4.1.37244.2.1: Matter certificate Vendor ID (VID)</p>
+         * </li>
+         * <li><p>1.3.6.1.4.1.37244.2.2: Matter certificate Product ID (PID)</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -466,7 +508,7 @@ public class CreateCustomCertificateRequest extends TeaModel {
         public String objectIdentifier;
 
         /**
-         * <p>Custom attribute value.</p>
+         * <p>The value of the custom property.</p>
          * 
          * <strong>example:</strong>
          * <p>Aliyun</p>
@@ -502,13 +544,13 @@ public class CreateCustomCertificateRequest extends TeaModel {
          * <p>The common name of the certificate user.</p>
          * 
          * <strong>example:</strong>
-         * <p>Bob</p>
+         * <p>张三</p>
          */
         @NameInMap("CommonName")
         public String commonName;
 
         /**
-         * <p>The code of the country. The value is an alpha-2 country code that complies with the ISO 3166-1 standard. For more information about country codes, visit <a href="https://www.iso.org/obp/ui/#search/code/">https://www.iso.org/obp/ui/#search/code/</a>.</p>
+         * <p>The country code. Use the two-letter country code from ISO 3166-1. For more information, see <a href="https://www.iso.org/obp/ui/#search/code/">ISO</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>CN</p>
@@ -517,16 +559,16 @@ public class CreateCustomCertificateRequest extends TeaModel {
         public String country;
 
         /**
-         * <p>Customize the Subject attributes of the certificate.</p>
+         * <p>The custom subject properties of the certificate.</p>
          */
         @NameInMap("CustomAttributes")
         public java.util.List<CreateCustomCertificateRequestApiPassthroughSubjectCustomAttributes> customAttributes;
 
         /**
-         * <p>The name of the city in which the organization is located. The value can contain letters.</p>
+         * <p>The name of the city where the organization is located. Chinese characters and letters are supported.</p>
          * 
          * <strong>example:</strong>
-         * <p>Hangzhou</p>
+         * <p>杭州市</p>
          */
         @NameInMap("Locality")
         public String locality;
@@ -535,25 +577,25 @@ public class CreateCustomCertificateRequest extends TeaModel {
          * <p>The name of the organization.</p>
          * 
          * <strong>example:</strong>
-         * <p>XXX company</p>
+         * <p>XXX公司</p>
          */
         @NameInMap("Organization")
         public String organization;
 
         /**
-         * <p>The name of the department or branch in the organization.</p>
+         * <p>The name of the department or branch within the organization.</p>
          * 
          * <strong>example:</strong>
-         * <p>XXX department</p>
+         * <p>XXX部门</p>
          */
         @NameInMap("OrganizationUnit")
         public String organizationUnit;
 
         /**
-         * <p>The name of the province or state in which the organization associated with the certificate is located.</p>
+         * <p>The province or state where the organization is located.</p>
          * 
          * <strong>example:</strong>
-         * <p>Zhejiang</p>
+         * <p>浙江省</p>
          */
         @NameInMap("State")
         public String state;
@@ -623,13 +665,13 @@ public class CreateCustomCertificateRequest extends TeaModel {
 
     public static class CreateCustomCertificateRequestApiPassthrough extends TeaModel {
         /**
-         * <p>The extensions of the certificate.</p>
+         * <p>The certificate extensions.</p>
          */
         @NameInMap("Extensions")
         public CreateCustomCertificateRequestApiPassthroughExtensions extensions;
 
         /**
-         * <p>The serial number MUST be a positive integer assigned by the CA to each certificate.</p>
+         * <p>The custom serial number of the certificate. Must be a long integer.</p>
          * 
          * <strong>example:</strong>
          * <p>16889526086333</p>
@@ -638,7 +680,7 @@ public class CreateCustomCertificateRequest extends TeaModel {
         public String serialNumber;
 
         /**
-         * <p>The name of the entity that uses the certificate.</p>
+         * <p>The certificate subject.</p>
          */
         @NameInMap("Subject")
         public CreateCustomCertificateRequestApiPassthroughSubject subject;
@@ -675,9 +717,21 @@ public class CreateCustomCertificateRequest extends TeaModel {
     }
 
     public static class CreateCustomCertificateRequestTags extends TeaModel {
+        /**
+         * <p>The tag key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testKey</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The tag value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Value")
         public String value;
 

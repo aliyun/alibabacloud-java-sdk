@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListClientCertificateRequest extends TeaModel {
     /**
-     * <p>The number of the page to return. Default value: <strong>1</strong>.</p>
+     * <p>The page number. Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -14,22 +14,28 @@ public class ListClientCertificateRequest extends TeaModel {
     public Integer currentPage;
 
     /**
-     * <p>The unique identifier of the client certificate or the server certificate that you want to query.</p>
+     * <p>The unique identifier of the client or server-side certificate that you want to query.</p>
      * <blockquote>
-     * <p> You can call the <a href="https://help.aliyun.com/document_detail/330884.html">ListClientCertificate</a> operation to query the unique identifiers of all client certificates and server certificates.</p>
+     * <p>You can call <a href="https://help.aliyun.com/document_detail/330884.html">ListClientCertificate</a> to query the unique identifiers of all client and server-side certificates.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
-     * <p>190ae6bb538d538c70c01f81dcf2****</p>
+     * <p>160ae6bb538d538c70c01f81dcf2****</p>
      */
     @NameInMap("Identifier")
     public String identifier;
 
+    /**
+     * <p>The ID of the resource group. Call the <a href="https://help.aliyun.com/document_detail/2716559.html">ListResources</a> operation to obtain this ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-ae******4wia</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
     /**
-     * <p>The number of certificates to return on each page. Default value: <strong>20</strong>.</p>
+     * <p>The number of entries to return on each page. Default value: 20.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>

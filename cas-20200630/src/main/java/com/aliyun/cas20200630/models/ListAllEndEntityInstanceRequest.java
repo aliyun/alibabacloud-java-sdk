@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListAllEndEntityInstanceRequest extends TeaModel {
     /**
+     * <p>The page number. Default value: 1.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -12,6 +14,8 @@ public class ListAllEndEntityInstanceRequest extends TeaModel {
     public Integer currentPage;
 
     /**
+     * <p>The maximum number of entries to return for this call.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -19,6 +23,8 @@ public class ListAllEndEntityInstanceRequest extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>The token that is used to retrieve the next page of results. You can get this token from the \<code>NextToken\\</code> response parameter of the previous query.</p>
+     * 
      * <strong>example:</strong>
      * <p>1d2db86sca4384811e0b5e8707e68181f</p>
      */
@@ -26,6 +32,8 @@ public class ListAllEndEntityInstanceRequest extends TeaModel {
     public String nextToken;
 
     /**
+     * <p>The ID of the parent instance.</p>
+     * 
      * <strong>example:</strong>
      * <p>37633</p>
      */
@@ -33,6 +41,8 @@ public class ListAllEndEntityInstanceRequest extends TeaModel {
     public Long parentId;
 
     /**
+     * <p>Specifies whether to return information about the billing type in the response. Valid values: -<strong>0</strong>: The information is not returned. -<strong>1</strong>: The information is returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>9</p>
      */
@@ -40,6 +50,8 @@ public class ListAllEndEntityInstanceRequest extends TeaModel {
     public Integer recursiveChildren;
 
     /**
+     * <p>The number of entries to return on each page. Default value: 20.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */

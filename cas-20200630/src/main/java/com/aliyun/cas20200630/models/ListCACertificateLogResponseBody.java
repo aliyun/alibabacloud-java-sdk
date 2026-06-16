@@ -4,10 +4,15 @@ package com.aliyun.cas20200630.models;
 import com.aliyun.tea.*;
 
 public class ListCACertificateLogResponseBody extends TeaModel {
+    /**
+     * <p>A list of operation logs for the CA certificate.</p>
+     */
     @NameInMap("LogList")
     public java.util.List<ListCACertificateLogResponseBodyLogList> logList;
 
     /**
+     * <p>The ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>15C66C7B-671A-4297-9187-2C4477247A74</p>
      */
@@ -37,6 +42,8 @@ public class ListCACertificateLogResponseBody extends TeaModel {
 
     public static class ListCACertificateLogResponseBodyLogList extends TeaModel {
         /**
+         * <p>The description of the operation.</p>
+         * 
          * <strong>example:</strong>
          * <p>add sub-root ca</p>
          */
@@ -44,6 +51,8 @@ public class ListCACertificateLogResponseBody extends TeaModel {
         public String content;
 
         /**
+         * <p>The time of the operation. This is a UNIX timestamp. Unit: milliseconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>1634539509000</p>
          */
@@ -51,6 +60,8 @@ public class ListCACertificateLogResponseBody extends TeaModel {
         public Long createTime;
 
         /**
+         * <p>The unique identifier of the CA certificate.</p>
+         * 
          * <strong>example:</strong>
          * <p>160ae6bb538d538c70c01f81dcf2****</p>
          */
@@ -58,6 +69,14 @@ public class ListCACertificateLogResponseBody extends TeaModel {
         public String identifier;
 
         /**
+         * <p>The type of the operation. Valid values:</p>
+         * <ul>
+         * <li><p><strong>ADD</strong>: A CA certificate is created.</p>
+         * </li>
+         * <li><p><strong>UPDATE</strong>: The status of the CA certificate is updated.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>ADD</p>
          */

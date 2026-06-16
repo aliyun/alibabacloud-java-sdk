@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeCACertificateResponseBody extends TeaModel {
     /**
-     * <p>The details about the CA certificate.</p>
+     * <p>The details of the CA certificate.</p>
      */
     @NameInMap("Certificate")
     public DescribeCACertificateResponseBodyCertificate certificate;
@@ -58,9 +58,21 @@ public class DescribeCACertificateResponseBody extends TeaModel {
     }
 
     public static class DescribeCACertificateResponseBodyCertificateTags extends TeaModel {
+        /**
+         * <p>The key of the tag.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>使用状态</p>
+         */
         @NameInMap("TagKey")
         public String tagKey;
 
+        /**
+         * <p>The value of the tag.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BMS</p>
+         */
         @NameInMap("TagValue")
         public String tagValue;
 
@@ -89,7 +101,7 @@ public class DescribeCACertificateResponseBody extends TeaModel {
 
     public static class DescribeCACertificateResponseBodyCertificate extends TeaModel {
         /**
-         * <p>The expiration date of the CA certificate. This value is a UNIX timestamp. Unit: milliseconds.</p>
+         * <p>The date when the CA certificate expires. This is a UNIX timestamp. Unit: milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1665819958000</p>
@@ -98,11 +110,14 @@ public class DescribeCACertificateResponseBody extends TeaModel {
         public Long afterDate;
 
         /**
-         * <p>The encryption algorithm of the CA certificate. Valid values:</p>
+         * <p>The type of the encryption algorithm of the CA certificate. Valid values:</p>
          * <ul>
-         * <li><strong>RSA</strong>: the Rivest-Shamir-Adleman (RSA) algorithm.</li>
-         * <li><strong>ECC</strong>: the elliptic curve cryptography (ECC) algorithm.</li>
-         * <li><strong>SM2</strong>: the SM2 algorithm, which is developed and approved by the State Cryptography Administration of China.</li>
+         * <li><p><strong>RSA</strong>: The RSA algorithm.</p>
+         * </li>
+         * <li><p><strong>ECC</strong>: The ECC algorithm.</p>
+         * </li>
+         * <li><p><strong>SM2</strong>: The SM2 algorithm.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -112,7 +127,7 @@ public class DescribeCACertificateResponseBody extends TeaModel {
         public String algorithm;
 
         /**
-         * <p>The issuance date of the CA certificate. This value is a UNIX timestamp. Unit: milliseconds.</p>
+         * <p>The date when the CA certificate was issued. This is a UNIX timestamp. Unit: milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1634283958000</p>
@@ -121,24 +136,21 @@ public class DescribeCACertificateResponseBody extends TeaModel {
         public Long beforeDate;
 
         /**
-         * <p>CA certificate chain.</p>
+         * <p>The complete certificate chain.</p>
          * 
          * <strong>example:</strong>
          * <p>-----BEGIN CERTIFICATE-----
-         * 用户证书
          * -----END CERTIFICATE-----</p>
          * <p>-----BEGIN CERTIFICATE-----
-         * 中间证书
          * -----END CERTIFICATE-----</p>
          * <p>-----BEGIN CERTIFICATE-----
-         * 根证书
          * -----END CERTIFICATE-----</p>
          */
         @NameInMap("CaCertChain")
         public String caCertChain;
 
         /**
-         * <p>The number of certificates issued by private CA instances.</p>
+         * <p>The number of certificates that the private CA instance has issued.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -146,8 +158,11 @@ public class DescribeCACertificateResponseBody extends TeaModel {
         @NameInMap("CertIssuedCount")
         public Long certIssuedCount;
 
+        @NameInMap("CertMaxTime")
+        public Integer certMaxTime;
+
         /**
-         * <p>The remaining number of assignable certificate quotas.</p>
+         * <p>The number of remaining certificates that can be issued.</p>
          * 
          * <strong>example:</strong>
          * <p>30</p>
@@ -156,7 +171,7 @@ public class DescribeCACertificateResponseBody extends TeaModel {
         public Long certRemainingCount;
 
         /**
-         * <p>The total number of purchased certificate quotas.</p>
+         * <p>The total certificate quota you purchased.</p>
          * 
          * <strong>example:</strong>
          * <p>40</p>
@@ -167,8 +182,10 @@ public class DescribeCACertificateResponseBody extends TeaModel {
         /**
          * <p>The type of the CA certificate. Valid values:</p>
          * <ul>
-         * <li><strong>ROOT</strong>: root CA certificate</li>
-         * <li><strong>SUB_ROOT</strong>: intermediate CA certificate</li>
+         * <li><p><strong>ROOT</strong>: A root CA certificate.</p>
+         * </li>
+         * <li><p><strong>SUB_ROOT</strong>: A subordinate CA certificate.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -177,6 +194,12 @@ public class DescribeCACertificateResponseBody extends TeaModel {
         @NameInMap("CertificateType")
         public String certificateType;
 
+        /**
+         * <p>The ID of the hardware security module (HSM) cluster. This parameter is available when the CA is enabled using an HSM.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>XXX-id</p>
+         */
         @NameInMap("ClusterId")
         public String clusterId;
 
@@ -190,8 +213,8 @@ public class DescribeCACertificateResponseBody extends TeaModel {
         public String commonName;
 
         /**
-         * <p>The code of the country in which the organization is located.</p>
-         * <p>For more information about country codes, see the <strong>&quot;Country codes&quot;</strong> section of the <a href="https://help.aliyun.com/document_detail/198289.html">Manage company profiles</a> topic.</p>
+         * <p>The country code of the organization that is associated with the CA certificate.</p>
+         * <p>For more information about country codes, see the <strong>International codes</strong> section in <a href="https://help.aliyun.com/document_detail/198289.html">Manage company information</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>CN</p>
@@ -200,7 +223,7 @@ public class DescribeCACertificateResponseBody extends TeaModel {
         public String countryCode;
 
         /**
-         * <p>CRL validity period: 1-365 days.</p>
+         * <p>The validity period of the CRL. Valid values: 1 to 365. Unit: days.</p>
          * 
          * <strong>example:</strong>
          * <p>90</p>
@@ -209,7 +232,7 @@ public class DescribeCACertificateResponseBody extends TeaModel {
         public Integer crlDay;
 
         /**
-         * <p>The status of the certificate revocation list (CRL) feature.</p>
+         * <p>The status of the Certificate Revocation List (CRL).</p>
          * 
          * <strong>example:</strong>
          * <p>ACTIVE</p>
@@ -218,7 +241,7 @@ public class DescribeCACertificateResponseBody extends TeaModel {
         public String crlStatus;
 
         /**
-         * <p>The address of the CRL.</p>
+         * <p>The CRL URL.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://crl-cn-publish.oss-cn-hangzhou.aliyuncs.com/pca/crl/1925647866611395/1ed40789-483f-6023-b6b8-29ddd3bb0a9a.crl">https://crl-cn-publish.oss-cn-hangzhou.aliyuncs.com/pca/crl/1925647866611395/1ed40789-483f-6023-b6b8-29ddd3bb0a9a.crl</a></p>
@@ -226,6 +249,12 @@ public class DescribeCACertificateResponseBody extends TeaModel {
         @NameInMap("CrlUrl")
         public String crlUrl;
 
+        /**
+         * <p>The algorithm and its key length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>RSA_2048</p>
+         */
         @NameInMap("FullAlgorithm")
         public String fullAlgorithm;
 
@@ -238,9 +267,29 @@ public class DescribeCACertificateResponseBody extends TeaModel {
         @NameInMap("Identifier")
         public String identifier;
 
+        /**
+         * <p>The issuer of the CA. Valid values:</p>
+         * <ul>
+         * <li><p>local: A private certificate.</p>
+         * </li>
+         * <li><p>iTrusChina: A compliance CA.</p>
+         * </li>
+         * <li><p>external: An imported certificate.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>local</p>
+         */
         @NameInMap("IssuerType")
         public String issuerType;
 
+        /**
+         * <p>The index of the key in the HSM. This parameter is available when the CA is enabled using an HSM.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8</p>
+         */
         @NameInMap("KeyIndex")
         public Integer keyIndex;
 
@@ -254,7 +303,7 @@ public class DescribeCACertificateResponseBody extends TeaModel {
         public Integer keySize;
 
         /**
-         * <p>The name of the city in which the organization is located.</p>
+         * <p>The name of the city where the organization associated with the CA certificate is located.</p>
          * 
          * <strong>example:</strong>
          * <p>Hangzhou</p>
@@ -275,13 +324,13 @@ public class DescribeCACertificateResponseBody extends TeaModel {
          * <p>The name of the organization that is associated with the CA certificate.</p>
          * 
          * <strong>example:</strong>
-         * <p>Alibaba Cloud Computing Co., Ltd.</p>
+         * <p>aliyun</p>
          */
         @NameInMap("Organization")
         public String organization;
 
         /**
-         * <p>The name of the department or branch in the organization that is associated with the CA certificate.</p>
+         * <p>The name of the department in the organization that is associated with the CA certificate.</p>
          * 
          * <strong>example:</strong>
          * <p>Security</p>
@@ -290,9 +339,9 @@ public class DescribeCACertificateResponseBody extends TeaModel {
         public String organizationUnit;
 
         /**
-         * <p>The unique identifier of the root CA certificate from which the CA certificate is issued.</p>
+         * <p>The unique identifier of the root CA certificate that issued the CA certificate.</p>
          * <blockquote>
-         * <p> This parameter is returned only if the value of the <strong>CertificateType</strong> parameter is <strong>SUB_ROOT</strong>. The value SUB_ROOT indicates an intermediate CA certificate.</p>
+         * <p>This parameter is returned only when <strong>CertificateType</strong> is <strong>SUB_ROOT</strong>, which indicates a subordinate CA certificate.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -301,6 +350,12 @@ public class DescribeCACertificateResponseBody extends TeaModel {
         @NameInMap("ParentIdentifier")
         public String parentIdentifier;
 
+        /**
+         * <p>The ID of the resource group to which the certificate belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-aek2pxd7ekpoo2y</p>
+         */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
@@ -341,7 +396,8 @@ public class DescribeCACertificateResponseBody extends TeaModel {
         public String signAlgorithm;
 
         /**
-         * <p>The name of the province, municipality, or autonomous region in which the organization is located.</p>
+         * <p>&lt;props=&quot;china&quot;&gt;The name of the province, municipality, or autonomous region where the organization associated with the CA certificate is located.
+         * &lt;props=&quot;intl&quot;&gt;The name of the province or state where the organization associated with the CA certificate is located.</p>
          * 
          * <strong>example:</strong>
          * <p>Zhejiang</p>
@@ -352,8 +408,10 @@ public class DescribeCACertificateResponseBody extends TeaModel {
         /**
          * <p>The status of the CA certificate. Valid values:</p>
          * <ul>
-         * <li><strong>ISSUE</strong>: The CA certificate is issued.</li>
-         * <li><strong>REVOKE</strong>: The CA certificate is revoked.</li>
+         * <li><p><strong>ISSUE</strong>: The certificate is issued.</p>
+         * </li>
+         * <li><p><strong>REVOKE</strong>: The certificate is revoked.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -363,22 +421,38 @@ public class DescribeCACertificateResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The user attribute of the CA certificate, which contains the following information:</p>
+         * <p>The subject of the CA certificate. It contains the following information:</p>
          * <ul>
-         * <li><strong>C</strong>: the country code in which the organization is located</li>
-         * <li><strong>O</strong>: the name of the organization</li>
-         * <li><strong>OU</strong>: the name of the department or branch in the organization</li>
-         * <li><strong>L</strong>: the name of the city in which the organization is located</li>
-         * <li><strong>ST</strong>: the name of the province, municipality, or autonomous region in which the organization is located</li>
-         * <li><strong>CN</strong>: the common name or abbreviation of the organization</li>
+         * <li><p><strong>C</strong>: The country code of the organization.</p>
+         * </li>
+         * <li><p><strong>O</strong>: The name of the organization.</p>
+         * </li>
+         * <li><p><strong>OU</strong>: The department of the organization.</p>
+         * </li>
+         * <li><p><strong>L</strong>: The city where the organization is located.</p>
+         * </li>
+         * </ul>
+         * <p>&lt;props=&quot;china&quot;&gt;</p>
+         * <ul>
+         * <li><strong>ST</strong>: The province, municipality, or autonomous region where the organization is located.</li>
+         * </ul>
+         * <p>&lt;props=&quot;intl&quot;&gt;</p>
+         * <ul>
+         * <li><p><strong>ST</strong>: The province or state where the organization is located.</p>
+         * </li>
+         * <li><p><strong>CN</strong>: The common name or abbreviation of the organization.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
-         * <p>C=CN,O=Alibaba Cloud Computing Co., Ltd.,OU=Security,L=Hangzhou,ST=Zhejiang,CN=Aliyun</p>
+         * <p>C=CN,O=aliyun,OU=Security,L=Hangzhou,ST=Zhejiang,CN=Aliyun</p>
          */
         @NameInMap("SubjectDN")
         public String subjectDN;
 
+        /**
+         * <p>The list of tags.</p>
+         */
         @NameInMap("Tags")
         public java.util.List<DescribeCACertificateResponseBodyCertificateTags> tags;
 
@@ -391,6 +465,12 @@ public class DescribeCACertificateResponseBody extends TeaModel {
         @NameInMap("X509Certificate")
         public String x509Certificate;
 
+        /**
+         * <p>The validity period of the CA certificate. Unit: years.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Years")
         public Integer years;
 
@@ -437,6 +517,14 @@ public class DescribeCACertificateResponseBody extends TeaModel {
         }
         public Long getCertIssuedCount() {
             return this.certIssuedCount;
+        }
+
+        public DescribeCACertificateResponseBodyCertificate setCertMaxTime(Integer certMaxTime) {
+            this.certMaxTime = certMaxTime;
+            return this;
+        }
+        public Integer getCertMaxTime() {
+            return this.certMaxTime;
         }
 
         public DescribeCACertificateResponseBodyCertificate setCertRemainingCount(Long certRemainingCount) {

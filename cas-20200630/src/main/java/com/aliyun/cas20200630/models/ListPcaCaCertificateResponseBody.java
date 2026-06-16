@@ -4,10 +4,15 @@ package com.aliyun.cas20200630.models;
 import com.aliyun.tea.*;
 
 public class ListPcaCaCertificateResponseBody extends TeaModel {
+    /**
+     * <p>The list of CA certificates.</p>
+     */
     @NameInMap("List")
     public java.util.List<ListPcaCaCertificateResponseBodyList> list;
 
     /**
+     * <p>The maximum number of entries to return on each page.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -15,6 +20,8 @@ public class ListPcaCaCertificateResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>The token for the next page of results. Leave this parameter empty to start the query from the first page. If this parameter is not returned, all results have been returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>1d2db86sca4384811e0b5e8707e68181f</p>
      */
@@ -22,6 +29,8 @@ public class ListPcaCaCertificateResponseBody extends TeaModel {
     public String nextToken;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>12345678-1234-1234-1234-123456789ABC</p>
      */
@@ -29,6 +38,8 @@ public class ListPcaCaCertificateResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total number of entries in the result set.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -82,6 +93,8 @@ public class ListPcaCaCertificateResponseBody extends TeaModel {
 
     public static class ListPcaCaCertificateResponseBodyList extends TeaModel {
         /**
+         * <p>The certificate identifier. Use this identifier to query certificate details.</p>
+         * 
          * <strong>example:</strong>
          * <p>1ef78be5-******-b5ef0f0eba3d</p>
          */
@@ -89,6 +102,8 @@ public class ListPcaCaCertificateResponseBody extends TeaModel {
         public String certIdentifier;
 
         /**
+         * <p>The common name of the certificate. This value matches the CommonName field in the certificate Subject.</p>
+         * 
          * <strong>example:</strong>
          * <p>Example Co., Ltd.</p>
          */
@@ -96,6 +111,8 @@ public class ListPcaCaCertificateResponseBody extends TeaModel {
         public String commonName;
 
         /**
+         * <p>The identifier of the issuer certificate. Use this identifier to query the issuer certificate.</p>
+         * 
          * <strong>example:</strong>
          * <p>1ef78be5-******-b5ef0f0eba3d</p>
          */
@@ -103,6 +120,8 @@ public class ListPcaCaCertificateResponseBody extends TeaModel {
         public String issuerIdentifier;
 
         /**
+         * <p>The ID of the private CA instance.</p>
+         * 
          * <strong>example:</strong>
          * <p>cas_deposit-cn-******</p>
          */
@@ -110,6 +129,8 @@ public class ListPcaCaCertificateResponseBody extends TeaModel {
         public String privateCaInstanceId;
 
         /**
+         * <p>The region ID of the private CA instance.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
          */
@@ -117,6 +138,8 @@ public class ListPcaCaCertificateResponseBody extends TeaModel {
         public String privateCaRegionId;
 
         /**
+         * <p>The certificate status.</p>
+         * 
          * <strong>example:</strong>
          * <p>ISSUE</p>
          */
@@ -124,6 +147,8 @@ public class ListPcaCaCertificateResponseBody extends TeaModel {
         public String status;
 
         /**
+         * <p>The Alibaba Cloud account ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>166********</p>
          */

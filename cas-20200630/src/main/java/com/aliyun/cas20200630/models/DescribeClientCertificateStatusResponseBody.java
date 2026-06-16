@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeClientCertificateStatusResponseBody extends TeaModel {
     /**
-     * <p>An array that consists of the status information about the certificates.</p>
+     * <p>The details of the certificate status.</p>
      */
     @NameInMap("CertificateStatus")
     public java.util.List<DescribeClientCertificateStatusResponseBodyCertificateStatus> certificateStatus;
@@ -42,9 +42,9 @@ public class DescribeClientCertificateStatusResponseBody extends TeaModel {
 
     public static class DescribeClientCertificateStatusResponseBodyCertificateStatus extends TeaModel {
         /**
-         * <p>The date on which the certificate was revoked.</p>
+         * <p>The date when the certificate was revoked.</p>
          * <blockquote>
-         * <p> This parameter is returned only when the value of the <strong>Status</strong> parameter is <strong>revoked</strong>. The value revoked indicates that the certificate is revoked.</p>
+         * <p>This parameter is returned only when the value of <strong>Status</strong> is <strong>revoked</strong>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -63,11 +63,14 @@ public class DescribeClientCertificateStatusResponseBody extends TeaModel {
         public String serialNumber;
 
         /**
-         * <p>The status of the certificate. Valid values:</p>
+         * <p>The current status of the certificate. Valid values:</p>
          * <ul>
-         * <li><strong>good</strong>: The certificate is not revoked.</li>
-         * <li><strong>revoked</strong>: The certificate is revoked.</li>
-         * <li><strong>unknown</strong>: The server cannot determine the status of the certificate.</li>
+         * <li><p><strong>good</strong>: The certificate is not revoked.</p>
+         * </li>
+         * <li><p><strong>revoked</strong>: The certificate is revoked.</p>
+         * </li>
+         * <li><p><strong>unknown</strong>: The server cannot determine the status of the certificate.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
