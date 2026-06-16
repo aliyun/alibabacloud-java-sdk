@@ -5,6 +5,16 @@ import com.aliyun.tea.*;
 
 public class CreateNotificationConfigurationRequest extends TeaModel {
     /**
+     * <p>The codec for the content of message notifications. Valid values:</p>
+     * <ul>
+     * <li>PlainText: No encoding; messages are transmitted in plaintext.</li>
+     * <li>Base64: Messages are encoded in Base64.</li>
+     * </ul>
+     * <p>Default value: Base64.</p>
+     * <blockquote>
+     * <p>This parameter applies only to MNS notification objects.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>PlainText</p>
      */

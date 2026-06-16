@@ -37,6 +37,12 @@ public class ApplyEciScalingConfigurationRequest extends TeaModel {
     @NameInMap("Content")
     public String content;
 
+    /**
+     * <p>Optional. Set the value to YAML.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>YAML</p>
+     */
     @NameInMap("Format")
     public String format;
 

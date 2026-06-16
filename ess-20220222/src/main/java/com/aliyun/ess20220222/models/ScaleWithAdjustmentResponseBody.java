@@ -6,8 +6,8 @@ import com.aliyun.tea.*;
 public class ScaleWithAdjustmentResponseBody extends TeaModel {
     /**
      * <p>The type of the scaling activity.</p>
-     * <p>If <code>ActivityType</code> is set to <code>CapacityChange</code>, only the expected number of instances is changed during the scaling activity specified by ScalingActivityId and no scale-out is triggered.</p>
-     * <p>This parameter is applicable to only scaling groups that have an expected number of instances.</p>
+     * <p>If this parameter is set to <code>CapacityChange</code>, the scaling activity only adjusts the desired capacity of the scaling group without immediately adding or removing instances.</p>
+     * <p>This setting only affects scaling groups with a configured desired capacity.</p>
      * 
      * <strong>example:</strong>
      * <p>CapacityChange</p>
@@ -16,13 +16,13 @@ public class ScaleWithAdjustmentResponseBody extends TeaModel {
     public String activityType;
 
     /**
-     * <p>The elastic planning result returned when the ExecutionMode is set to PlanOnly.</p>
+     * <p>The scaling plan result returned when ExecutionMode is set to PlanOnly.</p>
      */
     @NameInMap("PlanResult")
     public ScaleWithAdjustmentResponseBodyPlanResult planResult;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3****</p>
@@ -89,8 +89,10 @@ public class ScaleWithAdjustmentResponseBody extends TeaModel {
         /**
          * <p>The billing method of the instance. Valid values:</p>
          * <ul>
-         * <li><strong>Prepaid</strong>: subscription.</li>
-         * <li><strong>Postpaid</strong>: pay-as-you-go.</li>
+         * <li><p><strong>Prepaid</strong>: subscription</p>
+         * </li>
+         * <li><p><strong>PostPaid</strong>: pay-as-you-go</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -109,11 +111,14 @@ public class ScaleWithAdjustmentResponseBody extends TeaModel {
         public String instanceType;
 
         /**
-         * <p>The spot policy of instances. Valid values:</p>
+         * <p>The spot strategy of the instance. Valid values:</p>
          * <ul>
-         * <li>NoSpot: The instances are created as pay-as-you-go instances.</li>
-         * <li>SpotWithPriceLimit: The instances are created as spot instances for which you can specify the maximum hourly price.</li>
-         * <li>SpotAsPriceGo: The instances are spot instances for which the market price at the time of purchase is automatically used as the bid price.</li>
+         * <li><p>NoSpot: A pay-as-you-go instance.</p>
+         * </li>
+         * <li><p>SpotWithPriceLimit: A spot instance with a user-specified price limit.</p>
+         * </li>
+         * <li><p>SpotAsPriceGo: A spot instance where the system automatically bids based on the current market price.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -123,7 +128,7 @@ public class ScaleWithAdjustmentResponseBody extends TeaModel {
         public String spotStrategy;
 
         /**
-         * <p>The ID of the zone.</p>
+         * <p>The availability zone ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-beijing-g</p>
@@ -180,7 +185,7 @@ public class ScaleWithAdjustmentResponseBody extends TeaModel {
 
     public static class ScaleWithAdjustmentResponseBodyPlanResult extends TeaModel {
         /**
-         * <p>The resource allocation information in the elastic planning result.</p>
+         * <p>The resource allocation details in the scaling plan result.</p>
          */
         @NameInMap("ResourceAllocations")
         public java.util.List<ScaleWithAdjustmentResponseBodyPlanResultResourceAllocations> resourceAllocations;

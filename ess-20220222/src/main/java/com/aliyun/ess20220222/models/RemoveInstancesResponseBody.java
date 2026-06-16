@@ -4,14 +4,17 @@ package com.aliyun.ess20220222.models;
 import com.aliyun.tea.*;
 
 public class RemoveInstancesResponseBody extends TeaModel {
+    /**
+     * <p>The instances that were not removed and the reasons why they were not removed.</p>
+     */
     @NameInMap("IgnoredInstances")
     public java.util.List<RemoveInstancesResponseBodyIgnoredInstances> ignoredInstances;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
-     * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
+     * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -55,12 +58,21 @@ public class RemoveInstancesResponseBody extends TeaModel {
     }
 
     public static class RemoveInstancesResponseBodyIgnoredInstances extends TeaModel {
+        /**
+         * <p>The error code that indicates the reason why the instance was not removed.</p>
+         */
         @NameInMap("Code")
         public String code;
 
+        /**
+         * <p>The ID of the instance that was not removed.</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <p>The error message that indicates the reason why the instance was not removed.</p>
+         */
         @NameInMap("Message")
         public String message;
 

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class RemoveInstancesShrinkRequest extends TeaModel {
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25965.html">How to ensure idempotence</a>.</p>
+     * <p>A client-generated token to ensure request idempotence. This token must be unique for each request, contain only ASCII characters, and not exceed 64 characters. For more information, see <a href="https://help.aliyun.com/document_detail/25965.html">How to ensure idempotence</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>123e4567-e89b-12d3-a456-42665544****</p>
@@ -14,10 +14,12 @@ public class RemoveInstancesShrinkRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>Specifies whether to adjust the expected number of ECS instances in the scaling group. Valid values:</p>
+     * <p>Specifies whether to decrease the desired capacity of the scaling group. Valid values:</p>
      * <ul>
-     * <li>true: After ECS instances are removed from the scaling group, the expected number of ECS instances in the scaling group decreases.</li>
-     * <li>false: After ECS instances are removed from the scaling group, the expected number of ECS instances in the scaling group remains unchanged.</li>
+     * <li><p><code>true</code>: Decreases the desired capacity of the scaling group by the number of removed instances.</p>
+     * </li>
+     * <li><p><code>false</code>: The desired capacity of the scaling group remains unchanged.</p>
+     * </li>
      * </ul>
      * <p>Default value: true.</p>
      * 
@@ -28,10 +30,12 @@ public class RemoveInstancesShrinkRequest extends TeaModel {
     public Boolean decreaseDesiredCapacity;
 
     /**
-     * <p>Specifies whether to ignore invalid instances when you remove a batch of instances from the scaling group. Valid values:</p>
+     * <p>Specifies whether to ignore invalid instances when you remove multiple instances from a scaling group. Valid values:</p>
      * <ul>
-     * <li>true: ignores invalid instances. If invalid instances exist and valid instances are deleted, the corresponding scaling activity enters the Warning state. You can check the scaling activity details to view the invalid instances that are ignored.</li>
-     * <li>false: does not ignore invalid instances. If invalid instances exist in the batch of instances that you want to remove from the scaling group, an error is reported.</li>
+     * <li><p><code>true</code>: Invalid instances are ignored. If valid instances are removed while invalid ones are present, the scaling activity status is set to Warning. The invalid instances are listed in the scaling activity details.</p>
+     * </li>
+     * <li><p><code>false</code>: The request is rejected and an error is returned if it contains any invalid instances.</p>
+     * </li>
      * </ul>
      * <p>Default value: false.</p>
      * 
@@ -42,7 +46,7 @@ public class RemoveInstancesShrinkRequest extends TeaModel {
     public Boolean ignoreInvalidInstance;
 
     /**
-     * <p>The IDs of the ECS instances that you want to remove from the scaling group.</p>
+     * <p>The IDs of the ECS instances to remove.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("InstanceIds")
@@ -70,21 +74,26 @@ public class RemoveInstancesShrinkRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The action subsequent to the removal of the Elastic Compute Service (ECS) instances. Valid values:</p>
+     * <p>Specifies the action to take on removed ECS instances. Valid values:</p>
      * <ul>
-     * <li><p>recycle: The ECS instances enter the Economical Mode.</p>
-     * <p>**</p>
-     * <p><strong>Note</strong> This setting is applicable only if you set <code>ScalingPolicy</code> to <code>recycle</code>.</p>
+     * <li><p>recycle: The ECS instances enter the economical mode.</p>
+     * <blockquote>
+     * <p>This value takes effect only when the <code>ScalingPolicy</code> parameter of the scaling group is set to <code>recycle</code>.</p>
+     * </blockquote>
      * </li>
      * <li><p>release: The ECS instances are released.</p>
      * </li>
      * </ul>
-     * <p>ScalingPolicy of the CreateScalingGroup operation specifies the reclaim mode of the scaling group while RemovePolicy of the RemoveInstances operation specifies the subsequent action when an ECS instance is removed from the scaling group. Examples:</p>
+     * <p>The <code>ScalingPolicy</code> parameter of the <code>CreateScalingGroup</code> operation specifies the reclamation mode of a scaling group. However, the <code>RemovePolicy</code> parameter of the <code>RemoveInstances</code> operation determines the action taken when an instance is removed. For example:</p>
      * <ul>
-     * <li>If you set ScalingPolicy and RemovePolicy to recycle, the ECS instances enter the Economical Mode when they are removed.</li>
-     * <li>If you set ScalingPolicy to recycle and RemovePolicy to release, the ECS instances are released when they are removed.</li>
-     * <li>If you set ScalingPolicy to release and RemovePolicy to recycle, the ECS instances are released when they are removed.</li>
-     * <li>If you set ScalingPolicy and RemovePolicy to release, the ECS instances are released when they are removed.</li>
+     * <li><p>If <code>ScalingPolicy</code> is <code>recycle</code> and <code>RemovePolicy</code> is <code>recycle</code>, the ECS instances enter the economical mode.</p>
+     * </li>
+     * <li><p>If <code>ScalingPolicy</code> is <code>recycle</code> and <code>RemovePolicy</code> is <code>release</code>, the ECS instances are released.</p>
+     * </li>
+     * <li><p>If <code>ScalingPolicy</code> is <code>release</code> and <code>RemovePolicy</code> is <code>recycle</code>, the ECS instances are released.</p>
+     * </li>
+     * <li><p>If <code>ScalingPolicy</code> is <code>release</code> and <code>RemovePolicy</code> is <code>release</code>, the ECS instances are released.</p>
+     * </li>
      * </ul>
      * <p>Default value: release.</p>
      * 
@@ -111,19 +120,19 @@ public class RemoveInstancesShrinkRequest extends TeaModel {
     public String scalingGroupId;
 
     /**
-     * <p>The period of time required by the ECS instance to enter the Stopped state. Unit: seconds. Valid values: 30 to 240.</p>
+     * <p>The timeout period, in seconds, for an ECS instance to stop during a scale-in. Valid values: 30 to 240.</p>
      * <blockquote>
-     * </blockquote>
      * <ul>
-     * <li><p>By default, this parameter inherits the value of StopInstanceTimeout specified in the CreateScalingGroup or ModifyScalingGroup operation. You can also specify a different value for this parameter in the RemoveInstances operation.</p>
+     * <li><p>By default, this parameter inherits its value from the scaling group, but you can override it when calling the <code>RemoveInstances</code> operation.</p>
      * </li>
-     * <li><p>This parameter takes effect only if you set RemovePolicy to release.</p>
+     * <li><p>This parameter takes effect only during scale-in events where <code>RemovePolicy</code> is set to <code>release</code>.</p>
      * </li>
-     * <li><p>If you specify this parameter, the system waits for the ECS instance to enter the Stopped state only for up to the specified period of time before continuing with the scale-in operation, regardless of the status of the ECS instance.</p>
+     * <li><p>If this parameter is set, the system waits for the specified duration for the instance to stop. The scale-in process continues after the timeout expires, regardless of the instance\&quot;s state.</p>
      * </li>
-     * <li><p>If you do not specify this parameter, the system continues with the scale-in operation until the ECS instance enters the Stopped state. If the ECS instance is not successfully stopped, the scale-in process is rolled back and considered failed.</p>
+     * <li><p>If this parameter is not set, the system waits until the instance stops before continuing the scale-in process. If the instance fails to stop, the scale-in operation is rolled back and fails.</p>
      * </li>
      * </ul>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>60</p>

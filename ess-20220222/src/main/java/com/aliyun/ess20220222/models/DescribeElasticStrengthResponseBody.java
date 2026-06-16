@@ -5,11 +5,14 @@ import com.aliyun.tea.*;
 
 public class DescribeElasticStrengthResponseBody extends TeaModel {
     /**
-     * <p>The scaling strength level of the scaling group. Valid values:</p>
+     * <p>The elastic strength of the current scaling group. Valid values:</p>
      * <ul>
-     * <li>Strong</li>
-     * <li>Medium</li>
-     * <li>Weak</li>
+     * <li><p>Strong: high elastic strength.</p>
+     * </li>
+     * <li><p>Medium: medium elastic strength.</p>
+     * </li>
+     * <li><p>Weak: weak elastic strength.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -19,7 +22,7 @@ public class DescribeElasticStrengthResponseBody extends TeaModel {
     public String elasticStrength;
 
     /**
-     * <p>The scaling strength models.</p>
+     * <p>An array of elastic strength details, returned when the API call targets multiple scaling groups.</p>
      */
     @NameInMap("ElasticStrengthModels")
     public java.util.List<DescribeElasticStrengthResponseBodyElasticStrengthModels> elasticStrengthModels;
@@ -34,15 +37,13 @@ public class DescribeElasticStrengthResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The resource pools.</p>
+     * <p>An array of resource pools. This parameter is returned when the API call targets a single scaling group.</p>
      */
     @NameInMap("ResourcePools")
     public java.util.List<DescribeElasticStrengthResponseBodyResourcePools> resourcePools;
 
     /**
-     * <p>The scaling strength score of the scaling group. Each combination of instance type + zone is scored from 0 to 1 based on its availability, with 0 being the weakest scaling strength and 1 being the strongest. The scaling strength score of the scaling group is measured by the combined scores of all the combinations of instance type + zone.</p>
-     * <p>**</p>
-     * <p><strong>Warning</strong> This parameter is deprecated.</p>
+     * <p>The total elastic strength of the scaling group. The strength is the sum of scores from all configured instance type and zone combinations. Each combination is scored from 0 (low strength) to 1 (high strength) based on resource availability.&gt;Warning:  This parameter is deprecated.</p>
      * 
      * <strong>example:</strong>
      * <p>1.5</p>
@@ -107,13 +108,16 @@ public class DescribeElasticStrengthResponseBody extends TeaModel {
         public Integer adequacyScore;
 
         /**
-         * <p>The score of the inventory health.</p>
+         * <p>The health score.</p>
          * <ul>
-         * <li>A score between 5 and 6 indicates a sufficient inventory.</li>
-         * <li>A score between 1 and 4 indicates that there is no guarantee of a sufficient inventory. Select a reservation as necessary.</li>
-         * <li>A score between -3 and 0 indicates that the inventory is sufficient, and an alert is triggered. Select another instance type.</li>
+         * <li><p>A score from 5 to 6 indicates high confidence in supply.</p>
+         * </li>
+         * <li><p>A score from 1 to 4 indicates that supply is not guaranteed. Consider making on-demand reservations.</p>
+         * </li>
+         * <li><p>A score from -3 to 0 indicates a supply health alert. Consider using a different instance type.</p>
+         * </li>
          * </ul>
-         * <p>Calculation formula: <code>HealthScore</code> = <code>AdequacyScore</code> + <code>SupplyScore</code> - <code>HotScore</code>.</p>
+         * <p>The health score is calculated using the formula: <code>HealthScore</code> = <code>AdequacyScore</code> + <code>SupplyScore</code> - <code>HotScore</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>3</p>
@@ -122,7 +126,7 @@ public class DescribeElasticStrengthResponseBody extends TeaModel {
         public Integer healthScore;
 
         /**
-         * <p>The popularity score.</p>
+         * <p>The hot score.</p>
          * <p>Valid values: 0 to 3.</p>
          * 
          * <strong>example:</strong>
@@ -132,7 +136,7 @@ public class DescribeElasticStrengthResponseBody extends TeaModel {
         public Integer hotScore;
 
         /**
-         * <p>The score of the replenishment capability.</p>
+         * <p>The supply score.</p>
          * <p>Valid values: 0 to 3.</p>
          * 
          * <strong>example:</strong>
@@ -182,7 +186,7 @@ public class DescribeElasticStrengthResponseBody extends TeaModel {
 
     public static class DescribeElasticStrengthResponseBodyElasticStrengthModelsResourcePools extends TeaModel {
         /**
-         * <p>The error code returned when the scaling strength is the weakest.</p>
+         * <p>The error code returned when the elastic strength is 0.</p>
          * 
          * <strong>example:</strong>
          * <p>InstanceTypesOrDiskTypesNotSupported</p>
@@ -190,6 +194,20 @@ public class DescribeElasticStrengthResponseBody extends TeaModel {
         @NameInMap("Code")
         public String code;
 
+        /**
+         * <p>The elastic strength of the resource pool, which is based on its inventory health and current stock. Valid values:</p>
+         * <ul>
+         * <li><p>Strong: high elastic strength.</p>
+         * </li>
+         * <li><p>Medium: medium elastic strength.</p>
+         * </li>
+         * <li><p>Weak: weak elastic strength.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Strong</p>
+         */
         @NameInMap("ElasticStrength")
         public String elasticStrength;
 
@@ -209,7 +227,7 @@ public class DescribeElasticStrengthResponseBody extends TeaModel {
         public DescribeElasticStrengthResponseBodyElasticStrengthModelsResourcePoolsInventoryHealth inventoryHealth;
 
         /**
-         * <p>The error message returned when the scaling strength is the weakest.</p>
+         * <p>The error message returned when the elastic strength is 0.</p>
          * 
          * <strong>example:</strong>
          * <p>The instanceTypes or diskTypes are not supported.</p>
@@ -218,10 +236,12 @@ public class DescribeElasticStrengthResponseBody extends TeaModel {
         public String msg;
 
         /**
-         * <p>Indicates whether the resource pool is available. Valid values:</p>
+         * <p>The availability of the resource pool. Valid values:</p>
          * <ul>
-         * <li>Available</li>
-         * <li>Unavailable (If a constraint is not provided, the instance type is not deployed, or the instance type is out of stock, the resource pool becomes unavailable.)</li>
+         * <li><p>Available: The resource pool is available.</p>
+         * </li>
+         * <li><p>Unavailable: The resource pool is unavailable. This can occur if the instance type is not deployed in the zone, has insufficient inventory, or does not meet other constraints.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -231,9 +251,7 @@ public class DescribeElasticStrengthResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The scaling strength of the resource pool.</p>
-         * <p>**</p>
-         * <p><strong>Warning</strong> This parameter is deprecated.</p>
+         * <p>The elastic strength of the resource pool.&gt;Warning:  This parameter is deprecated.</p>
          * 
          * <strong>example:</strong>
          * <p>0.6</p>
@@ -242,7 +260,7 @@ public class DescribeElasticStrengthResponseBody extends TeaModel {
         public Double strength;
 
         /**
-         * <p>The IDs of the vSwitches in the zones of the resource pool.</p>
+         * <p>The VSwitches in the zone of the resource pool.</p>
          */
         @NameInMap("VSwitchIds")
         public java.util.List<String> vSwitchIds;
@@ -337,11 +355,14 @@ public class DescribeElasticStrengthResponseBody extends TeaModel {
 
     public static class DescribeElasticStrengthResponseBodyElasticStrengthModels extends TeaModel {
         /**
-         * <p>The scaling strength level of the scaling group. Valid values:</p>
+         * <p>The elastic strength of the current scaling group. Valid values:</p>
          * <ul>
-         * <li>Strong</li>
-         * <li>Medium</li>
-         * <li>Weak</li>
+         * <li><p>Strong: high elastic strength.</p>
+         * </li>
+         * <li><p>Medium: medium elastic strength.</p>
+         * </li>
+         * <li><p>Weak: weak elastic strength.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -351,13 +372,13 @@ public class DescribeElasticStrengthResponseBody extends TeaModel {
         public String elasticStrength;
 
         /**
-         * <p>The resource pools.</p>
+         * <p>Details of the resource pools within the scaling group.</p>
          */
         @NameInMap("ResourcePools")
         public java.util.List<DescribeElasticStrengthResponseBodyElasticStrengthModelsResourcePools> resourcePools;
 
         /**
-         * <p>The ID of the scaling group.</p>
+         * <p>The scaling group ID.</p>
          * 
          * <strong>example:</strong>
          * <p>asg-wz98mnj7nblv9gc****</p>
@@ -366,9 +387,7 @@ public class DescribeElasticStrengthResponseBody extends TeaModel {
         public String scalingGroupId;
 
         /**
-         * <p>The scaling strength score of the scaling group. Each combination of instance type + zone is scored from 0 to 1 based on its availability, with 0 being the weakest scaling strength and 1 being the strongest. The scaling strength score of the scaling group is measured by the combined scores of all the combinations of instance type + zone.</p>
-         * <p>**</p>
-         * <p><strong>Warning</strong> This parameter is deprecated.</p>
+         * <p>The total elastic strength of the scaling group. The strength is the sum of scores from all configured instance type and zone combinations. Each combination is scored from 0 (low strength) to 1 (high strength) based on resource availability.&gt;Warning:  This parameter is deprecated.</p>
          * 
          * <strong>example:</strong>
          * <p>1.5</p>
@@ -427,13 +446,16 @@ public class DescribeElasticStrengthResponseBody extends TeaModel {
         public Integer adequacyScore;
 
         /**
-         * <p>The inventory health score.</p>
+         * <p>The health score.</p>
          * <ul>
-         * <li>A score between 5 and 6 indicates a sufficient inventory.</li>
-         * <li>A score between 1 and 4 indicates that there is no guarantee of a sufficient inventory. Select a reservation as necessary.</li>
-         * <li>A score between -3 and 0 indicates that the inventory is sufficient, and an alert is triggered. Select another instance type.</li>
+         * <li><p>A score from 5 to 6 indicates high confidence in supply.</p>
+         * </li>
+         * <li><p>A score from 1 to 4 indicates that supply is not guaranteed. Consider making on-demand reservations.</p>
+         * </li>
+         * <li><p>A score from -3 to 0 indicates a supply health alert. Consider using a different instance type.</p>
+         * </li>
          * </ul>
-         * <p>Calculation formula: <code>HealthScore</code> = <code>AdequacyScore</code> + <code>SupplyScore</code> - <code>HotScore</code>.</p>
+         * <p>The health score is calculated using the formula: <code>HealthScore</code> = <code>AdequacyScore</code> + <code>SupplyScore</code> - <code>HotScore</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>3</p>
@@ -442,7 +464,7 @@ public class DescribeElasticStrengthResponseBody extends TeaModel {
         public Integer healthScore;
 
         /**
-         * <p>The popularity score.</p>
+         * <p>The hot score.</p>
          * <p>Valid values: 0 to 3.</p>
          * 
          * <strong>example:</strong>
@@ -452,7 +474,7 @@ public class DescribeElasticStrengthResponseBody extends TeaModel {
         public Integer hotScore;
 
         /**
-         * <p>The replenishment capability score.</p>
+         * <p>The supply score.</p>
          * <p>Valid values: 0 to 3.</p>
          * 
          * <strong>example:</strong>
@@ -502,7 +524,7 @@ public class DescribeElasticStrengthResponseBody extends TeaModel {
 
     public static class DescribeElasticStrengthResponseBodyResourcePools extends TeaModel {
         /**
-         * <p>The error code returned when the scaling strength is the weakest.</p>
+         * <p>The error code returned when the elastic strength is 0.</p>
          * 
          * <strong>example:</strong>
          * <p>IMG_NOT_SUPPORTED</p>
@@ -510,6 +532,20 @@ public class DescribeElasticStrengthResponseBody extends TeaModel {
         @NameInMap("Code")
         public String code;
 
+        /**
+         * <p>The elastic strength of the resource pool, which is based on its inventory health and current stock. Valid values:</p>
+         * <ul>
+         * <li><p>Strong: high elastic strength.</p>
+         * </li>
+         * <li><p>Medium: medium elastic strength.</p>
+         * </li>
+         * <li><p>Weak: weak elastic strength.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Medium</p>
+         */
         @NameInMap("ElasticStrength")
         public String elasticStrength;
 
@@ -529,7 +565,7 @@ public class DescribeElasticStrengthResponseBody extends TeaModel {
         public DescribeElasticStrengthResponseBodyResourcePoolsInventoryHealth inventoryHealth;
 
         /**
-         * <p>The error message returned when the scaling strength is the weakest.</p>
+         * <p>The error message returned when the elastic strength is 0.</p>
          * 
          * <strong>example:</strong>
          * <p>The instanceType does not support the image in the configuration.</p>
@@ -538,10 +574,12 @@ public class DescribeElasticStrengthResponseBody extends TeaModel {
         public String msg;
 
         /**
-         * <p>Indicates whether the resource pool is available. Valid values:</p>
+         * <p>The availability of the resource pool. Valid values:</p>
          * <ul>
-         * <li>Available</li>
-         * <li>Unavailable (If a constraint is not provided, the instance type is not deployed, or the instance type is out of stock, the resource pool becomes unavailable.)</li>
+         * <li><p>Available: The resource pool is available.</p>
+         * </li>
+         * <li><p>Unavailable: The resource pool is unavailable. This can occur if the instance type is not deployed in the zone, has insufficient inventory, or does not meet other constraints.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -551,7 +589,7 @@ public class DescribeElasticStrengthResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The scaling strength of the resource pool.</p>
+         * <p>The elastic strength of the resource pool.</p>
          * 
          * <strong>example:</strong>
          * <p>0.6</p>
@@ -560,7 +598,7 @@ public class DescribeElasticStrengthResponseBody extends TeaModel {
         public Double strength;
 
         /**
-         * <p>The IDs of the vSwitches in the zones of the resource pool.</p>
+         * <p>The VSwitches in the zone of the resource pool.</p>
          */
         @NameInMap("VSwitchIds")
         public java.util.List<String> vSwitchIds;

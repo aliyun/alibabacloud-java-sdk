@@ -8,7 +8,7 @@ public class DescribeScalingGroupDetailRequest extends TeaModel {
      * <p>The output format. Set the value to yaml.</p>
      * 
      * <strong>example:</strong>
-     * <p>yaml</p>
+     * <p>YAML</p>
      */
     @NameInMap("OutputFormat")
     public String outputFormat;

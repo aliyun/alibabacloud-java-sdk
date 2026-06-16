@@ -5,18 +5,18 @@ import com.aliyun.tea.*;
 
 public class DescribeElasticStrengthRequest extends TeaModel {
     /**
-     * <p>The disk categories of the data disks. The disk categories that do not match the specified criteria are returned after you call this operation.</p>
+     * <p>A list of data disk categories used to evaluate elastic strength. If a category is incompatible, the response identifies the specific mismatched category.</p>
      * <blockquote>
-     * <p> If you do not specify the scaling group ID, you must specify this parameter.</p>
+     * <p>You can specify this parameter if <code>ScalingGroupId</code> is not specified.</p>
      * </blockquote>
      */
     @NameInMap("DataDiskCategories")
     public java.util.List<String> dataDiskCategories;
 
     /**
-     * <p>The name of the image family. You can specify the ImageFamily request parameter to obtain the most recent available images in the current image family for instance creation. If you specify ImageId, you cannot specify ImageFamily.</p>
+     * <p>The name of the image family. You can set this parameter to use the latest available image from the specified image family to create instances. If you specify ImageId, this parameter is ignored.</p>
      * <blockquote>
-     * <p> If you do not specify the scaling group ID, you must specify at least one of ImageId, ImageName, and ImageFamily.</p>
+     * <p>If <code>ScalingGroupId</code> is not specified, you must specify at least one of <code>ImageId</code>, <code>ImageName</code>, or <code>ImageFamily</code>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -26,9 +26,9 @@ public class DescribeElasticStrengthRequest extends TeaModel {
     public String imageFamily;
 
     /**
-     * <p>The ID of the image file that provides the image resource for Auto Scaling to create instances.</p>
+     * <p>The ID of the image used to create instances.</p>
      * <blockquote>
-     * <p> If you do not specify the scaling group ID, you must specify at least one of ImageId, ImageName, and ImageFamily.</p>
+     * <p>If <code>ScalingGroupId</code> is not specified, you must specify at least one of <code>ImageId</code>, <code>ImageName</code>, or <code>ImageFamily</code>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -38,10 +38,10 @@ public class DescribeElasticStrengthRequest extends TeaModel {
     public String imageId;
 
     /**
-     * <p>The name of the image. Each image name must be unique in a region. If you specify ImageId, ImageName is ignored.</p>
-     * <p>You cannot use ImageName to specify an Alibaba Cloud Marketplace image.</p>
+     * <p>The name of the image. The name must be unique within a region. If you specify <code>ImageId</code>, this parameter is ignored.</p>
+     * <p>You cannot use this parameter to specify a Marketplace image.</p>
      * <blockquote>
-     * <p> If you do not specify the scaling group ID, you must specify at least one of ImageId, ImageName, and ImageFamily.</p>
+     * <p>If <code>ScalingGroupId</code> is not specified, you must specify at least one of <code>ImageId</code>, <code>ImageName</code>, or <code>ImageFamily</code>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -51,15 +51,15 @@ public class DescribeElasticStrengthRequest extends TeaModel {
     public String imageName;
 
     /**
-     * <p>The instance types. The instance types specified by this parameter overwrite the instance types specified in the scaling configuration.</p>
+     * <p>A list of ECS instance types. If specified, this parameter overrides the instance types in the scaling configuration.</p>
      */
     @NameInMap("InstanceTypes")
     public java.util.List<String> instanceTypes;
 
     /**
-     * <p>The number of IPv6 addresses. If the instance type that you specified does meet the requirement for the number of IPv6 addresses, the scaling strength is weak.</p>
+     * <p>The number of IPv6 addresses to be configured for each instance. The elastic strength is lowered for instance types that do not support the specified number of IPv6 addresses.</p>
      * <blockquote>
-     * <p> If you do not specify the scaling group ID, you must specify this parameter.</p>
+     * <p>You can specify this parameter if <code>ScalingGroupId</code> is not specified.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -69,15 +69,19 @@ public class DescribeElasticStrengthRequest extends TeaModel {
     public Integer ipv6AddressCount;
 
     /**
-     * <p>**</p>
-     * <p><strong>Warning</strong> This parameter is deprecated. We recommend that you use SpotStrategy.</p>
-     * <p>The preemption policy that you want to apply to pay-as-you-go instances. The preemption policy specified by this parameter overwrites the preemption policy specified in the scaling configuration. Valid values:</p>
+     * <blockquote>
+     * <p>Warning: This parameter is deprecated. Use <code>SpotStrategy</code> instead.
+     * The spot strategy for pay-as-you-go instances. If specified, this parameter overrides the spot strategy in the scaling configuration. Valid values:</p>
+     * </blockquote>
      * <ul>
-     * <li>NoSpot: The instances are created as regular pay-as-you-go instances.</li>
-     * <li>SpotWithPriceLimit: The instances are created as preemptible instances with a user-defined maximum hourly price.</li>
-     * <li>SpotAsPriceGo: The instances are created as preemptible instances for which the market price at the time of purchase is automatically used as the bidding price.</li>
+     * <li><p><code>NoSpot</code>: A regular pay-as-you-go instance.</p>
+     * </li>
+     * <li><p><code>SpotWithPriceLimit</code>: A spot instance with a specified maximum price.</p>
+     * </li>
+     * <li><p><code>SpotAsPriceGo</code>: A spot instance where the system automatically bids at the current market price.</p>
+     * </li>
      * </ul>
-     * <p>Default value: NoSpot.</p>
+     * <p>Default value: <code>NoSpot</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>NoSpot</p>
@@ -86,7 +90,7 @@ public class DescribeElasticStrengthRequest extends TeaModel {
     public String priorityStrategy;
 
     /**
-     * <p>The region ID of the scaling group.</p>
+     * <p>The ID of the region where the scaling group is located.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -105,19 +109,22 @@ public class DescribeElasticStrengthRequest extends TeaModel {
     public String scalingGroupId;
 
     /**
-     * <p>The IDs of the scaling groups that you want to query.</p>
+     * <p>The IDs of one or more scaling groups to query in a batch operation.</p>
      */
     @NameInMap("ScalingGroupIds")
     public java.util.List<String> scalingGroupIds;
 
     /**
-     * <p>The instance bidding policy. Valid values:</p>
+     * <p>The spot strategy for instances. Valid values:</p>
      * <ul>
-     * <li>NoSpot: The instances are created as pay-as-you-go instances.</li>
-     * <li>SpotWithPriceLimit: The instances are created as preemptible instances with a user-defined maximum hourly price.</li>
-     * <li>SpotAsPriceGo: The instances are created as preemptible instances for which the market price at the time of purchase is used as the bid price.</li>
+     * <li><p><code>NoSpot</code>: A regular pay-as-you-go instance.</p>
+     * </li>
+     * <li><p><code>SpotWithPriceLimit</code>: A spot instance with a specified maximum price.</p>
+     * </li>
+     * <li><p><code>SpotAsPriceGo</code>: A spot instance where the system automatically bids at the current market price.</p>
+     * </li>
      * </ul>
-     * <p>Default value: NoSpot.</p>
+     * <p>Default value: <code>NoSpot</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>NoSpot</p>
@@ -126,24 +133,28 @@ public class DescribeElasticStrengthRequest extends TeaModel {
     public String spotStrategy;
 
     /**
-     * <p>The categories of the system disks. The categories of the system disks specified by this parameter overwrite the categories of the system disks specified in the scaling configuration. Valid values:</p>
+     * <p>A list of system disk categories. If specified, this parameter overrides the system disk categories in the scaling configuration. Valid values:</p>
      * <ul>
-     * <li>cloud: basic disk.</li>
-     * <li>cloud_efficiency: ultra disk.</li>
-     * <li>cloud_ssd: standard SSD.</li>
-     * <li>cloud_essd: Enterprise SSD (ESSD).</li>
+     * <li><p><code>cloud</code>: Basic Cloud Disk.</p>
+     * </li>
+     * <li><p><code>cloud_efficiency</code>: Ultra Cloud Disk.</p>
+     * </li>
+     * <li><p><code>cloud_ssd</code>: Standard SSD.</p>
+     * </li>
+     * <li><p><code>cloud_essd</code>: ESSD.</p>
+     * </li>
      * </ul>
      * <blockquote>
-     * <p> If you do not specify the scaling group ID, you must specify this parameter.</p>
+     * <p>This parameter is required if <code>ScalingGroupId</code> is not specified.</p>
      * </blockquote>
      */
     @NameInMap("SystemDiskCategories")
     public java.util.List<String> systemDiskCategories;
 
     /**
-     * <p>The vSwitch IDs.</p>
+     * <p>A list of VSwitch IDs.</p>
      * <blockquote>
-     * <p> If you do not specify the scaling group ID, you must specify this parameter.</p>
+     * <p>This parameter is required if <code>ScalingGroupId</code> is not specified.</p>
      * </blockquote>
      */
     @NameInMap("VSwitchIds")

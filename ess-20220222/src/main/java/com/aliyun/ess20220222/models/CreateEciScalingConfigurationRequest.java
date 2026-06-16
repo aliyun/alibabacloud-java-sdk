@@ -47,7 +47,7 @@ public class CreateEciScalingConfigurationRequest extends TeaModel {
      * <p>If you want to use an ordered instance name, specify the value for this parameter in the following format: name_prefix[begin_number,bits]name_suffix.</p>
      * 
      * <strong>example:</strong>
-     * <p>nginx-test</p>
+     * <p>nginx-test-(AUTO_INCREMENT)[0,3]</p>
      */
     @NameInMap("ContainerGroupName")
     public String containerGroupName;
@@ -445,7 +445,7 @@ public class CreateEciScalingConfigurationRequest extends TeaModel {
      * <p>Default value: NoSpot.</p>
      * 
      * <strong>example:</strong>
-     * <p>SpotPriceLimit</p>
+     * <p>SpotWithPriceLimit</p>
      */
     @NameInMap("SpotStrategy")
     public String spotStrategy;
@@ -2338,7 +2338,7 @@ public class CreateEciScalingConfigurationRequest extends TeaModel {
          * <p>The password of the image repository.</p>
          * 
          * <strong>example:</strong>
-         * <p>yourpaasword</p>
+         * <p>yourpassword</p>
          */
         @NameInMap("Password")
         public String password;

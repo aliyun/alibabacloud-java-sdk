@@ -5,6 +5,12 @@ import com.aliyun.tea.*;
 
 public class DescribeCandidateInstanceTypeRequest extends TeaModel {
     /**
+     * <p>Specifies whether to include vSwitches from other availability zones as candidates.</p>
+     * <blockquote>
+     * <p>The instance types remain unchanged. Only new availability zones are added as candidates. If a scaling group fails to scale out in all selected availability zones due to issues such as insufficient inventory, Auto Scaling automatically adds a vSwitch in a new availability zone to the scaling group based on this setting.
+     * For example, if a scaling group is configured for the cn-hangzhou-h and cn-hangzhou-g availability zones and a scale-out fails in both zones, Auto Scaling may create a vSwitch in the cn-hangzhou-k availability zone and add it to the scaling group based on real-time inventory.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -12,16 +18,29 @@ public class DescribeCandidateInstanceTypeRequest extends TeaModel {
     public Boolean allowCrossAz;
 
     /**
+     * <p>Specifies whether to include instance types from other generations as candidates.</p>
+     * <ul>
+     * <li>For example, if the current instance type is ecs.c7.large, you can set this parameter to true to include instance types such as ecs.c6.large and ecs.c8.large in the list of candidates.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
     @NameInMap("AllowDifferentGeneration")
     public Boolean allowDifferentGeneration;
 
+    /**
+     * <p>The data disk categories, ordered by priority from high to low. If Auto Scaling cannot create a data disk by using a higher-priority category, it tries the next one in the list.</p>
+     */
     @NameInMap("DataDiskCategories")
     public java.util.List<String> dataDiskCategories;
 
     /**
+     * <p>The name of the image family. When specified, the latest image in this family is used to create instances. This parameter cannot be used with ImageId.</p>
+     * <blockquote>
+     * <p>If you do not specify the scaling group ID, you must specify at least one of ImageId, ImageName, and ImageFamily.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>hangzhou-daily-update</p>
      */
@@ -29,6 +48,11 @@ public class DescribeCandidateInstanceTypeRequest extends TeaModel {
     public String imageFamily;
 
     /**
+     * <p>The ID of the image used to create instances.</p>
+     * <blockquote>
+     * <p>If the specified image contains both a system disk and data disks, any existing data disk information in the scaling configuration is cleared.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>centos6u5_64_20G_aliaegis****.vhd</p>
      */
@@ -36,16 +60,26 @@ public class DescribeCandidateInstanceTypeRequest extends TeaModel {
     public String imageId;
 
     /**
+     * <p>The name of the image. The name must be unique within a region. You cannot use this parameter to specify an image from Alibaba Cloud Marketplace.</p>
+     * <blockquote>
+     * <p>This parameter is an alternative to the <code>ImageId</code> parameter. If you specify <code>ImageId</code>, <code>ImageName</code> is ignored.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>centos6u5_64_20G_aliaegis_20140703.vhd</p>
      */
     @NameInMap("ImageName")
     public String imageName;
 
+    /**
+     * <p>The specified ECS instance types.</p>
+     */
     @NameInMap("InstanceTypes")
     public java.util.List<String> instanceTypes;
 
     /**
+     * <p>The number of IPv6 addresses.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -53,6 +87,8 @@ public class DescribeCandidateInstanceTypeRequest extends TeaModel {
     public Integer ipv6AddressCount;
 
     /**
+     * <p>The maximum price for a candidate instance type.</p>
+     * 
      * <strong>example:</strong>
      * <p>2</p>
      */
@@ -63,6 +99,8 @@ public class DescribeCandidateInstanceTypeRequest extends TeaModel {
     public Long ownerId;
 
     /**
+     * <p>The ID of the region where the scaling group is located.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-qingdao</p>
      */
@@ -76,15 +114,32 @@ public class DescribeCandidateInstanceTypeRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
+     * <p>The bidding strategy for pay-as-you-go instances. Valid values:</p>
+     * <ul>
+     * <li><p>NoSpot: a standard pay-as-you-go instance.</p>
+     * </li>
+     * <li><p>SpotWithPriceLimit: a spot instance with a user-defined maximum price.</p>
+     * </li>
+     * <li><p>SpotAsPriceGo: a spot instance where the system automatically bids at the market price.</p>
+     * </li>
+     * </ul>
+     * <p>Default value: NoSpot.</p>
+     * 
      * <strong>example:</strong>
      * <p>NoSpot</p>
      */
     @NameInMap("SpotStrategy")
     public String spotStrategy;
 
+    /**
+     * <p>The system disk categories, ordered by priority from high to low. If Auto Scaling cannot create a system disk by using a higher-priority category, it tries the next one in the list.</p>
+     */
     @NameInMap("SystemDiskCategories")
     public java.util.List<String> systemDiskCategories;
 
+    /**
+     * <p>The specified availability zones.</p>
+     */
     @NameInMap("ZoneIds")
     public java.util.List<String> zoneIds;
 

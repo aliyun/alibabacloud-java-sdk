@@ -38,6 +38,9 @@ public class CreateScalingRuleRequest extends TeaModel {
     @NameInMap("AlarmDimensions")
     public java.util.List<CreateScalingRuleRequestAlarmDimensions> alarmDimensions;
 
+    /**
+     * <p>Definition of alerting properties.</p>
+     */
     @NameInMap("AlarmOptions")
     public CreateScalingRuleRequestAlarmOptions alarmOptions;
 
@@ -563,6 +566,18 @@ public class CreateScalingRuleRequest extends TeaModel {
 
     public static class CreateScalingRuleRequestAlarmOptions extends TeaModel {
         /**
+         * <p>The period for aggregating monitoring metric data in a target tracking rule, in seconds. Valid values:</p>
+         * <ul>
+         * <li>15</li>
+         * <li>60</li>
+         * <li>120</li>
+         * <li>300</li>
+         * <li>900</li>
+         * </ul>
+         * <blockquote>
+         * <p>Default Value: 60.</p>
+         * </blockquote>
+         * 
          * <strong>example:</strong>
          * <p>60</p>
          */

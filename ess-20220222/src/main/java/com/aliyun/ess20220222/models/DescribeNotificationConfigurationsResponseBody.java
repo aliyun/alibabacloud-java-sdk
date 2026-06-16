@@ -42,6 +42,8 @@ public class DescribeNotificationConfigurationsResponseBody extends TeaModel {
 
     public static class DescribeNotificationConfigurationsResponseBodyNotificationConfigurationModels extends TeaModel {
         /**
+         * <p>The codec of the notification message content.</p>
+         * 
          * <strong>example:</strong>
          * <p>PlainText</p>
          */

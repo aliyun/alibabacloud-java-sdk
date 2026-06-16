@@ -120,6 +120,15 @@ public class ModifyScalingGroupRequest extends TeaModel {
     public Integer desiredCapacity;
 
     /**
+     * <p>Specifies whether to disable the expected number of instances feature for the scaling group. Valid values:</p>
+     * <ul>
+     * <li>false: Enables the expected number of instances feature.</li>
+     * <li>true: Disables the expected number of instances feature.</li>
+     * </ul>
+     * <blockquote>
+     * <p>You can set this parameter to true (to disable the expected number of instances feature) only when no scaling activity is currently running in the scaling group. When this feature is disabled, the current DesiredCapacity property of the scaling group is cleared, but the actual number of instances in the scaling group remains unchanged.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */

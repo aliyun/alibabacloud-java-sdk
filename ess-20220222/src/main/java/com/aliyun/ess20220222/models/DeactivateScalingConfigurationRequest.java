@@ -14,11 +14,7 @@ public class DeactivateScalingConfigurationRequest extends TeaModel {
     public String resourceOwnerAccount;
 
     /**
-     * <p>The ID of the scaling configuration.</p>
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>asc-bp1ahp2ud7qkzt2a****</p>
      */
     @NameInMap("ScalingConfigurationId")
     public String scalingConfigurationId;

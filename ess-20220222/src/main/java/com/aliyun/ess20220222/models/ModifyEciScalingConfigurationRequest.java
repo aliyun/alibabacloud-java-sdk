@@ -3271,7 +3271,7 @@ public class ModifyEciScalingConfigurationRequest extends TeaModel {
          * <p>The endpoint of the NFS server.</p>
          * 
          * <strong>example:</strong>
-         * <p>3f9cd4a596-naw76.cn-shanghai.nas.aliyuncs.com</p>
+         * <p>3f9cd4a596-n****.cn-shanghai.nas.aliyuncs.com</p>
          */
         @NameInMap("Server")
         public String server;
