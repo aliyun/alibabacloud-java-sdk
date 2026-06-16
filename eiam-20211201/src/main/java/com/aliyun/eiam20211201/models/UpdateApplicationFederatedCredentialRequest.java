@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateApplicationFederatedCredentialRequest extends TeaModel {
     /**
-     * <p>应用联邦凭证Id</p>
+     * <p>The ID of the application\&quot;s federated credential.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class UpdateApplicationFederatedCredentialRequest extends TeaModel {
     public String applicationFederatedCredentialId;
 
     /**
-     * <p>IDaaS的应用资源ID。</p>
+     * <p>The application ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,13 +25,13 @@ public class UpdateApplicationFederatedCredentialRequest extends TeaModel {
     public String applicationId;
 
     /**
-     * <p>属性映射</p>
+     * <p>The attribute mappings.</p>
      */
     @NameInMap("AttributeMappings")
     public java.util.List<UpdateApplicationFederatedCredentialRequestAttributeMappings> attributeMappings;
 
     /**
-     * <p>IDaaS EIAM实例的ID。</p>
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -41,7 +41,7 @@ public class UpdateApplicationFederatedCredentialRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>校验条件</p>
+     * <p>The verification condition.</p>
      * 
      * <strong>example:</strong>
      * <p>IsNullOrEmpty(&quot;&quot;)</p>
@@ -96,7 +96,7 @@ public class UpdateApplicationFederatedCredentialRequest extends TeaModel {
 
     public static class UpdateApplicationFederatedCredentialRequestAttributeMappings extends TeaModel {
         /**
-         * <p>源值表达式</p>
+         * <p>The source value expression.</p>
          * 
          * <strong>example:</strong>
          * <p>Append(client.applicationFederatedCredentialId, &quot;:&quot;, cert.subject.CN, &quot;:&quot;, cert.serialNumber)</p>
@@ -105,7 +105,7 @@ public class UpdateApplicationFederatedCredentialRequest extends TeaModel {
         public String sourceValueExpression;
 
         /**
-         * <p>目标字段</p>
+         * <p>The target field.</p>
          * 
          * <strong>example:</strong>
          * <p>client.activeSubjectUrn</p>

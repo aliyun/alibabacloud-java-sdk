@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListNetworkAccessEndpointsRequest extends TeaModel {
     /**
-     * <p>IDaaS EIAM实例的ID。</p>
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class ListNetworkAccessEndpointsRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>分页查询时每页行数。默认值为20，最大值为100。</p>
+     * <p>The number of entries to return on each page. The maximum value is 100.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -24,7 +24,18 @@ public class ListNetworkAccessEndpointsRequest extends TeaModel {
     public Long maxResults;
 
     /**
-     * <p>专属网络端点连接的状态。NetworkAccessEndpointType取值为shared时不生效。</p>
+     * <p>The status of the network endpoint. Valid values:</p>
+     * <ul>
+     * <li><p>pending: The endpoint is pending initialization.</p>
+     * </li>
+     * <li><p>creating: The endpoint is being created.</p>
+     * </li>
+     * <li><p>running: The endpoint is running.</p>
+     * </li>
+     * <li><p>deleting: The endpoint is being deleted.</p>
+     * </li>
+     * </ul>
+     * <p>This parameter does not take effect when NetworkAccessEndpointType is set to shared.</p>
      * 
      * <strong>example:</strong>
      * <p>running</p>
@@ -33,7 +44,14 @@ public class ListNetworkAccessEndpointsRequest extends TeaModel {
     public String networkAccessEndpointStatus;
 
     /**
-     * <p>专属网络端点连接的类型。取值可选范围：1. private - 专属网络端点；2. shared - 共享网络端点</p>
+     * <p>The type of the network endpoint. Valid values:</p>
+     * <ul>
+     * <li><p>shared: a shared network endpoint.</p>
+     * </li>
+     * <li><p>private: a private network endpoint.</p>
+     * </li>
+     * </ul>
+     * <p>The default value is private.</p>
      * 
      * <strong>example:</strong>
      * <p>private</p>
@@ -42,7 +60,7 @@ public class ListNetworkAccessEndpointsRequest extends TeaModel {
     public String networkAccessEndpointType;
 
     /**
-     * <p>查询凭证（Token），取值为上一次API调用返回的NextToken参数值。</p>
+     * <p>The token used for the next query. Set this parameter to the NextToken value returned from the previous API call. Leave this parameter empty for the first query.</p>
      * 
      * <strong>example:</strong>
      * <p>NTxxxxxexample</p>
@@ -51,7 +69,7 @@ public class ListNetworkAccessEndpointsRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>专属网络端点连接的Vpc ID。NetworkAccessEndpointType取值为shared时不生效。</p>
+     * <p>The ID of the VPC to which the private network endpoint is connected. This parameter does not take effect when NetworkAccessEndpointType is set to shared.</p>
      * 
      * <strong>example:</strong>
      * <p>vpc-examplexxx</p>
@@ -60,7 +78,7 @@ public class ListNetworkAccessEndpointsRequest extends TeaModel {
     public String vpcId;
 
     /**
-     * <p>专属网络端点连接的Vpc所属地域，该地域取值必须在ListNetworkAccessEndpointAvailableRegions接口中返回。NetworkAccessEndpointType取值为shared时不生效。</p>
+     * <p>The region ID of the VPC to which the private network endpoint is connected. The value of this parameter must be a region returned by the ListNetworkAccessEndpointAvailableRegions operation. This parameter does not take effect when NetworkAccessEndpointType is set to shared.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>

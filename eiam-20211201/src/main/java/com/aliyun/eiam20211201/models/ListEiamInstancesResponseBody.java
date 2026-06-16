@@ -45,7 +45,7 @@ public class ListEiamInstancesResponseBody extends TeaModel {
          * <p>The instance description.</p>
          * 
          * <strong>example:</strong>
-         * <p>instance test</p>
+         * <p>Production environment</p>
          */
         @NameInMap("Description")
         public String description;
@@ -90,8 +90,10 @@ public class ListEiamInstancesResponseBody extends TeaModel {
          * <p>The instance version.</p>
          * <p>Valid values:</p>
          * <ul>
-         * <li>EIAM 2.0</li>
-         * <li>EIAM 1.0</li>
+         * <li><p>EIAM 2.0</p>
+         * </li>
+         * <li><p>EIAM 1.0</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -119,7 +121,7 @@ public class ListEiamInstancesResponseBody extends TeaModel {
         public String openAPIPublicDomain;
 
         /**
-         * <p>The single sign-on (SSO) domain  of the instance.</p>
+         * <p>The single sign-on (SSO) domain of the instance.</p>
          * 
          * <strong>example:</strong>
          * <p>xxxx.aliyunidaas.com</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateNetworkZoneRequest extends TeaModel {
     /**
-     * <p>保证请求幂等性。从您的客户端生成一个参数值，确保不同请求间该参数值唯一。ClientToken只支持ASCII字符，且不能超过64个字符。</p>
+     * <p>The idempotence token.</p>
      * 
      * <strong>example:</strong>
      * <p>client-token-example</p>
@@ -14,16 +14,16 @@ public class CreateNetworkZoneRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>网络区域描述</p>
+     * <p>The description of the network zone.</p>
      * 
      * <strong>example:</strong>
-     * <p>测试描述</p>
+     * <p>Test description</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
-     * <p>IDaaS EIAM实例的ID。</p>
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -33,7 +33,7 @@ public class CreateNetworkZoneRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>网络区域ipv4Cidr</p>
+     * <p>The IPv4 CIDR blocks of the network zone.</p>
      * 
      * <strong>example:</strong>
      * <p>0.0.0.0/0</p>
@@ -42,7 +42,7 @@ public class CreateNetworkZoneRequest extends TeaModel {
     public java.util.List<String> ipv4Cidrs;
 
     /**
-     * <p>网络区域ipv6Cidr</p>
+     * <p>The IPv6 CIDR blocks of the network zone.</p>
      * 
      * <strong>example:</strong>
      * <p>::/0</p>
@@ -51,7 +51,7 @@ public class CreateNetworkZoneRequest extends TeaModel {
     public java.util.List<String> ipv6Cidrs;
 
     /**
-     * <p>网络区域名称</p>
+     * <p>The name of the network zone.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -61,7 +61,7 @@ public class CreateNetworkZoneRequest extends TeaModel {
     public String networkZoneName;
 
     /**
-     * <p>网络区域类型</p>
+     * <p>The type of the network zone.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -71,7 +71,7 @@ public class CreateNetworkZoneRequest extends TeaModel {
     public String networkZoneType;
 
     /**
-     * <p>专有网络VpcId</p>
+     * <p>The ID of the VPC.</p>
      * 
      * <strong>example:</strong>
      * <p>vpc_xxxxx</p>

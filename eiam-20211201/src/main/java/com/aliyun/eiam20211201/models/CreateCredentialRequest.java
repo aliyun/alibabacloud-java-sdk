@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateCredentialRequest extends TeaModel {
     /**
-     * <p>保证请求幂等性。从您的客户端生成一个参数值，确保不同请求间该参数值唯一。ClientToken只支持ASCII字符，且不能超过64个字符。</p>
+     * <p>A client-generated token that ensures the idempotence of the request. This token must be a unique value that contains only ASCII characters and is no more than 64 characters long. For more information, see <a href="https://www.alibabacloud.com/help/zh/ecs/developer-reference/how-to-ensure-idempotence">How to ensure idempotence</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class CreateCredentialRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>凭据的内容。</p>
+     * <p>The credential content.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("CredentialContent")
@@ -25,7 +25,7 @@ public class CreateCredentialRequest extends TeaModel {
     public String credentialExternalId;
 
     /**
-     * <p>凭据标识。</p>
+     * <p>The credential identifier.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -35,7 +35,7 @@ public class CreateCredentialRequest extends TeaModel {
     public String credentialIdentifier;
 
     /**
-     * <p>凭据名称。</p>
+     * <p>The credential name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -45,7 +45,13 @@ public class CreateCredentialRequest extends TeaModel {
     public String credentialName;
 
     /**
-     * <p>凭据的使用场景标签。</p>
+     * <p>The use case label of the credential. Valid values:</p>
+     * <ul>
+     * <li><p><code>llm</code>: large language model.</p>
+     * </li>
+     * <li><p><code>saas</code>: third-party SaaS.</p>
+     * </li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>llm</p>
@@ -57,7 +63,7 @@ public class CreateCredentialRequest extends TeaModel {
     public String credentialSharingScope;
 
     /**
-     * <p>凭据所属的主体ID。</p>
+     * <p>The ID of the credential\&quot;s subject.</p>
      * 
      * <strong>example:</strong>
      * <p>apt_werthgfdsasffxxxxx</p>
@@ -66,7 +72,10 @@ public class CreateCredentialRequest extends TeaModel {
     public String credentialSubjectId;
 
     /**
-     * <p>凭据所属的主体类型。</p>
+     * <p>The subject type of the credential. Valid value:</p>
+     * <ul>
+     * <li><code>authentication_token_provider</code>: an authentication token provider.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>authentication_token_provider</p>
@@ -75,7 +84,13 @@ public class CreateCredentialRequest extends TeaModel {
     public String credentialSubjectType;
 
     /**
-     * <p>凭据类型。</p>
+     * <p>The credential type. Valid values:</p>
+     * <ul>
+     * <li><p><code>api_key</code>: an API key.</p>
+     * </li>
+     * <li><p><code>oauth_client</code>: an OAuth client.</p>
+     * </li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -85,7 +100,7 @@ public class CreateCredentialRequest extends TeaModel {
     public String credentialType;
 
     /**
-     * <p>描述</p>
+     * <p>The credential description.</p>
      * 
      * <strong>example:</strong>
      * <p>credential_description</p>
@@ -97,7 +112,7 @@ public class CreateCredentialRequest extends TeaModel {
     public String exclusiveUserId;
 
     /**
-     * <p>IDaaS EIAM实例的ID。</p>
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -217,7 +232,7 @@ public class CreateCredentialRequest extends TeaModel {
 
     public static class CreateCredentialRequestCredentialContentApiKeyContent extends TeaModel {
         /**
-         * <p>API Key 凭证类型的凭据内容。</p>
+         * <p>The API key.</p>
          * 
          * <strong>example:</strong>
          * <p>nsklnertyt5ddwizncxxxx</p>
@@ -242,7 +257,7 @@ public class CreateCredentialRequest extends TeaModel {
 
     public static class CreateCredentialRequestCredentialContentOAuthClientContent extends TeaModel {
         /**
-         * <p>OAuth协议的client_id。</p>
+         * <p>The <code>client_id</code> of the OAuth protocol.</p>
          * 
          * <strong>example:</strong>
          * <p>dmvncmxersdxxxxxx</p>
@@ -251,7 +266,7 @@ public class CreateCredentialRequest extends TeaModel {
         public String clientId;
 
         /**
-         * <p>OAuth协议的client_secret。</p>
+         * <p>The <code>client_secret</code> of the OAuth protocol.</p>
          * 
          * <strong>example:</strong>
          * <p>nsklncmwizncxxxx</p>
@@ -284,13 +299,13 @@ public class CreateCredentialRequest extends TeaModel {
 
     public static class CreateCredentialRequestCredentialContent extends TeaModel {
         /**
-         * <p>Api Key的内容。</p>
+         * <p>The credential content of the API key type.</p>
          */
         @NameInMap("ApiKeyContent")
         public CreateCredentialRequestCredentialContentApiKeyContent apiKeyContent;
 
         /**
-         * <p>OAuth客户端认证凭证类型的凭据内容。</p>
+         * <p>The credential content of the OAuth client type.</p>
          */
         @NameInMap("OAuthClientContent")
         public CreateCredentialRequestCredentialContentOAuthClientContent OAuthClientContent;

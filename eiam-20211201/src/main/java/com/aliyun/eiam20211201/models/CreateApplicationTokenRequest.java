@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateApplicationTokenRequest extends TeaModel {
     /**
-     * <p>IDaaS的应用资源ID。</p>
+     * <p>The application ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class CreateApplicationTokenRequest extends TeaModel {
     public String applicationId;
 
     /**
-     * <p>应用token类型</p>
+     * <p>The application token type.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,7 +25,7 @@ public class CreateApplicationTokenRequest extends TeaModel {
     public String applicationTokenType;
 
     /**
-     * <p>不填，默认1年后到期</p>
+     * <p>The expiration time.</p>
      * 
      * <strong>example:</strong>
      * <p>1735530123762</p>
@@ -34,7 +34,7 @@ public class CreateApplicationTokenRequest extends TeaModel {
     public Long expirationTime;
 
     /**
-     * <p>IDaaS EIAM实例的ID。</p>
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

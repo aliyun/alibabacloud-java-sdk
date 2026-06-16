@@ -4,10 +4,15 @@ package com.aliyun.eiam20211201.models;
 import com.aliyun.tea.*;
 
 public class GetInstanceModuleInfoResponseBody extends TeaModel {
+    /**
+     * <p>The instance information.</p>
+     */
     @NameInMap("Module")
     public GetInstanceModuleInfoResponseBodyModule module;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>0441BD79-92F3-53AA-8657-F8CE4A2B912A</p>
      */
@@ -37,7 +42,7 @@ public class GetInstanceModuleInfoResponseBody extends TeaModel {
 
     public static class GetInstanceModuleInfoResponseBodyModuleFeatures extends TeaModel {
         /**
-         * <p>二级模块标识</p>
+         * <p>The identifier of the secondary module.</p>
          * 
          * <strong>example:</strong>
          * <p>urn:alibaba:idaas:license:module:application:standard:oidc</p>
@@ -46,7 +51,7 @@ public class GetInstanceModuleInfoResponseBody extends TeaModel {
         public String featureKey;
 
         /**
-         * <p>二级模块状态</p>
+         * <p>The status of the secondary module.</p>
          * 
          * <strong>example:</strong>
          * <p>enabled</p>
@@ -79,13 +84,13 @@ public class GetInstanceModuleInfoResponseBody extends TeaModel {
 
     public static class GetInstanceModuleInfoResponseBodyModule extends TeaModel {
         /**
-         * <p>二级模块信息</p>
+         * <p>The information about the secondary modules.</p>
          */
         @NameInMap("Features")
         public java.util.List<GetInstanceModuleInfoResponseBodyModuleFeatures> features;
 
         /**
-         * <p>模块状态</p>
+         * <p>The identifier of the primary module.</p>
          * 
          * <strong>example:</strong>
          * <p>urn:alibaba:idaas:license:module:application</p>
@@ -94,7 +99,7 @@ public class GetInstanceModuleInfoResponseBody extends TeaModel {
         public String moduleKey;
 
         /**
-         * <p>一级模块状态</p>
+         * <p>The status of the primary module.</p>
          * 
          * <strong>example:</strong>
          * <p>enabled</p>

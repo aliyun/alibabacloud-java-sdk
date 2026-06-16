@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetInstanceTrialStatusResponseBody extends TeaModel {
     /**
+     * <p>The ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>0441BD79-92F3-53AA-8657-F8CE4A2B912A</p>
      */
@@ -12,6 +14,8 @@ public class GetInstanceTrialStatusResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The trial status of the instance.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class BindUserAuthnSourceMappingRequest extends TeaModel {
     /**
-     * <p>来源Idp Id</p>
+     * <p>The source IdP ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class BindUserAuthnSourceMappingRequest extends TeaModel {
     public String identityProviderId;
 
     /**
-     * <p>IDaaS EIAM实例的ID。</p>
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,7 +25,7 @@ public class BindUserAuthnSourceMappingRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>外部关联ID</p>
+     * <p>The external mapping ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -35,7 +35,7 @@ public class BindUserAuthnSourceMappingRequest extends TeaModel {
     public String userExternalId;
 
     /**
-     * <p>用户ID</p>
+     * <p>The user ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

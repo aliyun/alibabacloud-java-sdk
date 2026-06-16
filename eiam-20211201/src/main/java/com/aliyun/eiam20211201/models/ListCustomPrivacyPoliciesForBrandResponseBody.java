@@ -4,11 +4,14 @@ package com.aliyun.eiam20211201.models;
 import com.aliyun.tea.*;
 
 public class ListCustomPrivacyPoliciesForBrandResponseBody extends TeaModel {
+    /**
+     * <p>The list of custom privacy policies associated with the brand.</p>
+     */
     @NameInMap("BrandCustomPrivacyPolicies")
     public java.util.List<ListCustomPrivacyPoliciesForBrandResponseBodyBrandCustomPrivacyPolicies> brandCustomPrivacyPolicies;
 
     /**
-     * <p>分页查询时每页行数。</p>
+     * <p>The number of entries returned on each page.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -17,7 +20,7 @@ public class ListCustomPrivacyPoliciesForBrandResponseBody extends TeaModel {
     public Long maxResults;
 
     /**
-     * <p>本次调用返回的查询凭证（Token）值，用于下一次翻页查询。</p>
+     * <p>The token to retrieve the next page of results.</p>
      * 
      * <strong>example:</strong>
      * <p>NTxxxexample</p>
@@ -26,7 +29,7 @@ public class ListCustomPrivacyPoliciesForBrandResponseBody extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>本次调用返回的查询凭证（Token）值，用于上一次翻页查询。</p>
+     * <p>The token to retrieve the previous page of results.</p>
      * 
      * <strong>example:</strong>
      * <p>PTxxxexample</p>
@@ -35,6 +38,8 @@ public class ListCustomPrivacyPoliciesForBrandResponseBody extends TeaModel {
     public String previousToken;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>0441BD79-92F3-53AA-8657-F8CE4A2B912A</p>
      */
@@ -42,6 +47,8 @@ public class ListCustomPrivacyPoliciesForBrandResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total number of entries.</p>
+     * 
      * <strong>example:</strong>
      * <p>100</p>
      */
@@ -103,7 +110,7 @@ public class ListCustomPrivacyPoliciesForBrandResponseBody extends TeaModel {
 
     public static class ListCustomPrivacyPoliciesForBrandResponseBodyBrandCustomPrivacyPolicies extends TeaModel {
         /**
-         * <p>条款ID</p>
+         * <p>The privacy policy ID.</p>
          * 
          * <strong>example:</strong>
          * <p>pp_xxxx</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListApplicationsForGroupRequest extends TeaModel {
     /**
-     * <p>非必填，如果填写则可以基于应用ID进行过滤，列表中最多包含100个元素。</p>
+     * <p>The list of application IDs. A maximum of 100 application IDs are supported.</p>
      * 
      * <strong>example:</strong>
      * <p>app_mkv7rgt4d7i4u7zqtzev2mxxxx</p>
@@ -14,7 +14,7 @@ public class ListApplicationsForGroupRequest extends TeaModel {
     public java.util.List<String> applicationIds;
 
     /**
-     * <p>组的唯一标识。</p>
+     * <p>The group ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -24,7 +24,7 @@ public class ListApplicationsForGroupRequest extends TeaModel {
     public String groupId;
 
     /**
-     * <p>IDaaS EIAM实例的ID。</p>
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -34,7 +34,7 @@ public class ListApplicationsForGroupRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>当前查询的列表页码，默认为1。</p>
+     * <p>The page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -43,7 +43,7 @@ public class ListApplicationsForGroupRequest extends TeaModel {
     public Long pageNumber;
 
     /**
-     * <p>当前查询的列表页码，默认为20。</p>
+     * <p>The number of entries per page.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>

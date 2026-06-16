@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListGroupsForApplicationResponseBody extends TeaModel {
     /**
-     * <p>The group IDs.</p>
+     * <p>The list of groups.</p>
      */
     @NameInMap("Groups")
     public java.util.List<ListGroupsForApplicationResponseBodyGroups> groups;
@@ -20,7 +20,7 @@ public class ListGroupsForApplicationResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of entries returned.</p>
+     * <p>The total number of entries.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>
@@ -59,7 +59,7 @@ public class ListGroupsForApplicationResponseBody extends TeaModel {
 
     public static class ListGroupsForApplicationResponseBodyGroupsApplicationRoles extends TeaModel {
         /**
-         * <p>应用角色标识。</p>
+         * <p>The ID of the application role.</p>
          * 
          * <strong>example:</strong>
          * <p>app_role_mkv7rgt4ds8d8v0qtzev2mxxxx</p>
@@ -84,7 +84,7 @@ public class ListGroupsForApplicationResponseBody extends TeaModel {
 
     public static class ListGroupsForApplicationResponseBodyGroups extends TeaModel {
         /**
-         * <p>应用角色列表。</p>
+         * <p>The list of application roles. This parameter is not returned for SAML applications.</p>
          */
         @NameInMap("ApplicationRoles")
         public java.util.List<ListGroupsForApplicationResponseBodyGroupsApplicationRoles> applicationRoles;

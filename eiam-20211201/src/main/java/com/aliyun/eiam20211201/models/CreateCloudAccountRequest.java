@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateCloudAccountRequest extends TeaModel {
     /**
+     * <p>A client token that ensures the idempotence of the request. The client must generate a unique token for each request. The token must consist of only ASCII characters and be no more than 64 characters in length. For more information, see <a href="https://www.alibabacloud.com/help/zh/ecs/developer-reference/how-to-ensure-idempotence">How to ensure idempotence</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,7 +15,7 @@ public class CreateCloudAccountRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>云账号唯一标识</p>
+     * <p>The external unique identifier of the cloud account.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -24,7 +25,7 @@ public class CreateCloudAccountRequest extends TeaModel {
     public String cloudAccountExternalId;
 
     /**
-     * <p>云账号名称</p>
+     * <p>The name of the cloud account.</p>
      * 
      * <strong>example:</strong>
      * <p>cloud_accout_xxxx</p>
@@ -33,7 +34,7 @@ public class CreateCloudAccountRequest extends TeaModel {
     public String cloudAccountName;
 
     /**
-     * <p>云账号提供商名称</p>
+     * <p>The name of the identity provider.</p>
      * 
      * <strong>example:</strong>
      * <p>idaas-eiam-oidc-provider</p>
@@ -41,18 +42,36 @@ public class CreateCloudAccountRequest extends TeaModel {
     @NameInMap("CloudAccountProviderName")
     public String cloudAccountProviderName;
 
+    /**
+     * <p>The site of the cloud account. Valid values:</p>
+     * <ul>
+     * <li><p>global: international site</p>
+     * </li>
+     * <li><p>china_mainland: China mainland site</p>
+     * </li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>china_mainland</p>
+     */
     @NameInMap("CloudAccountSite")
     public String cloudAccountSite;
 
     /**
-     * <p>云账号类型</p>
+     * <p>The type of the cloud account. Valid value:</p>
+     * <ul>
+     * <li>alibaba_cloud: Alibaba Cloud</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Alibaba_cloud(Alibaba Cloud)</p>
      */
     @NameInMap("CloudAccountVendorType")
     public String cloudAccountVendorType;
 
     /**
-     * <p>云账号描述</p>
+     * <p>The description of the cloud account.</p>
      * 
      * <strong>example:</strong>
      * <p>cloud_accout_description</p>
@@ -61,7 +80,7 @@ public class CreateCloudAccountRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>IDaaS EIAM实例的ID。</p>
+     * <p>The ID of the instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

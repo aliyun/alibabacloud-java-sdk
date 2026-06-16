@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListNetworkAccessEndpointAvailableRegionsResponseBody extends TeaModel {
     /**
-     * <p>The information of region.</p>
+     * <p>The collection of available regions.</p>
      */
     @NameInMap("Regions")
     public java.util.List<ListNetworkAccessEndpointAvailableRegionsResponseBodyRegions> regions;
@@ -42,7 +42,7 @@ public class ListNetworkAccessEndpointAvailableRegionsResponseBody extends TeaMo
 
     public static class ListNetworkAccessEndpointAvailableRegionsResponseBodyRegions extends TeaModel {
         /**
-         * <p>The name of the region.</p>
+         * <p>The region name.</p>
          * 
          * <strong>example:</strong>
          * <p>China (Hangzhou)</p>

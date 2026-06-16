@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListIdentityProvidersForNetworkAccessEndpointRequest extends TeaModel {
     /**
-     * <p>IDaaS EIAM实例的ID。</p>
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class ListIdentityProvidersForNetworkAccessEndpointRequest extends TeaMod
     public String instanceId;
 
     /**
-     * <p>分页查询时每页行数。默认值为20，最大值为100。</p>
+     * <p>The number of entries to return on each page.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -24,7 +24,7 @@ public class ListIdentityProvidersForNetworkAccessEndpointRequest extends TeaMod
     public Long maxResults;
 
     /**
-     * <p>网络端点ID。</p>
+     * <p>The network endpoint ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -34,7 +34,7 @@ public class ListIdentityProvidersForNetworkAccessEndpointRequest extends TeaMod
     public String networkAccessEndpointId;
 
     /**
-     * <p>查询凭证（Token），取值为上一次API调用返回的NextToken参数值。</p>
+     * <p>The query token.</p>
      * 
      * <strong>example:</strong>
      * <p>NTxxxxxexample</p>

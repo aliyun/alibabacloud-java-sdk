@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateFederatedCredentialProviderDescriptionRequest extends TeaModel {
     /**
-     * <p>联邦凭证提供方描述</p>
+     * <p>The description of the federated credential provider.</p>
      * 
      * <strong>example:</strong>
      * <p>test</p>
@@ -14,7 +14,7 @@ public class UpdateFederatedCredentialProviderDescriptionRequest extends TeaMode
     public String description;
 
     /**
-     * <p>联邦凭证提供方ID</p>
+     * <p>The federated credential provider ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -24,7 +24,7 @@ public class UpdateFederatedCredentialProviderDescriptionRequest extends TeaMode
     public String federatedCredentialProviderId;
 
     /**
-     * <p>IDaaS EIAM实例的ID。</p>
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

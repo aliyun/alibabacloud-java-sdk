@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CheckInstanceModuleStatusRequest extends TeaModel {
     /**
-     * <p>二级模块标识</p>
+     * <p>The identifier for the secondary module.</p>
      * 
      * <strong>example:</strong>
      * <p>urn:alibaba:idaas:license:module:ud:customField</p>
@@ -14,7 +14,7 @@ public class CheckInstanceModuleStatusRequest extends TeaModel {
     public String featureKey;
 
     /**
-     * <p>IDaaS EIAM实例的ID。</p>
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -24,7 +24,7 @@ public class CheckInstanceModuleStatusRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>一级模块标识，必填</p>
+     * <p>The identifier for the primary module.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -34,6 +34,8 @@ public class CheckInstanceModuleStatusRequest extends TeaModel {
     public String moduleKey;
 
     /**
+     * <p>The identifier for the tertiary module.</p>
+     * 
      * <strong>example:</strong>
      * <p>urn:alibaba:idaas:license:module:idp:alibaba:dingtalk:pull:advanced_configuration</p>
      */

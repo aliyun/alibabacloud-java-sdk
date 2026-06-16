@@ -4,10 +4,15 @@ package com.aliyun.eiam20211201.models;
 import com.aliyun.tea.*;
 
 public class ListApplicationsForGroupResponseBody extends TeaModel {
+    /**
+     * <p>The list of applications that are granted access.</p>
+     */
     @NameInMap("Applications")
     public java.util.List<ListApplicationsForGroupResponseBodyApplications> applications;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>0441BD79-92F3-53AA-8657-F8CE4A2B912A</p>
      */
@@ -15,6 +20,8 @@ public class ListApplicationsForGroupResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total number of entries.</p>
+     * 
      * <strong>example:</strong>
      * <p>100</p>
      */
@@ -52,7 +59,7 @@ public class ListApplicationsForGroupResponseBody extends TeaModel {
 
     public static class ListApplicationsForGroupResponseBodyApplicationsApplicationRoles extends TeaModel {
         /**
-         * <p>应用角色标识。</p>
+         * <p>The application role ID.</p>
          * 
          * <strong>example:</strong>
          * <p>app_role_mkv7rgt4ds8d8v0qtzev2mxxxx</p>
@@ -77,7 +84,7 @@ public class ListApplicationsForGroupResponseBody extends TeaModel {
 
     public static class ListApplicationsForGroupResponseBodyApplications extends TeaModel {
         /**
-         * <p>应用的唯一标识。</p>
+         * <p>The application ID.</p>
          * 
          * <strong>example:</strong>
          * <p>app_mkv7rgt4d7i4u7zqtzev2mxxxx</p>
@@ -86,13 +93,19 @@ public class ListApplicationsForGroupResponseBody extends TeaModel {
         public String applicationId;
 
         /**
-         * <p>应用角色列表。</p>
+         * <p>The list of application roles.</p>
          */
         @NameInMap("ApplicationRoles")
         public java.util.List<ListApplicationsForGroupResponseBodyApplicationsApplicationRoles> applicationRoles;
 
         /**
-         * <p>直接分配给当前用户的权限，视为直接授权。</p>
+         * <p>Indicates whether a direct authorization exists. Valid values:</p>
+         * <ul>
+         * <li><p>true: A direct authorization record exists between the application and the group.</p>
+         * </li>
+         * <li><p>false: No direct authorization record exists between the application and the group.</p>
+         * </li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -101,7 +114,7 @@ public class ListApplicationsForGroupResponseBody extends TeaModel {
         public Boolean hasDirectAuthorization;
 
         /**
-         * <p>通过用户隶属的组织、组获取的权限，视为继承权限。</p>
+         * <p>Indicates whether an inherited authorization exists.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListApplicationSupportedProvisionProtocolTypesRequest extends TeaModel {
     /**
-     * <p>IDaaS的应用资源ID。</p>
+     * <p>The application ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class ListApplicationSupportedProvisionProtocolTypesRequest extends TeaMo
     public String applicationId;
 
     /**
-     * <p>IDaaS EIAM的实例id</p>
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

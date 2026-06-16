@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateApplicationClientSecretExpirationTimeRequest extends TeaModel {
     /**
-     * <p>IDaaS的应用资源ID。</p>
+     * <p>The application ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class UpdateApplicationClientSecretExpirationTimeRequest extends TeaModel
     public String applicationId;
 
     /**
-     * <p>client secret的有效期时间，Unix时间戳格式，单位为毫秒</p>
+     * <p>The expiration time of the client secret. This is a UNIX timestamp in milliseconds. The minimum validity period is 1 day, and the maximum validity period is 3 years.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,7 +25,7 @@ public class UpdateApplicationClientSecretExpirationTimeRequest extends TeaModel
     public Long expirationTime;
 
     /**
-     * <p>IDaaS EIAM实例的ID。</p>
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -35,7 +35,7 @@ public class UpdateApplicationClientSecretExpirationTimeRequest extends TeaModel
     public String instanceId;
 
     /**
-     * <p>OIDC 场景下用于客户端身份验证的客户端密钥</p>
+     * <p>The ID of the client secret.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

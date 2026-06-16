@@ -54,7 +54,7 @@ public class GetRootOrganizationalUnitResponseBody extends TeaModel {
          * <p>The description of the organizational unit.</p>
          * 
          * <strong>example:</strong>
-         * <p>Test organizational unit</p>
+         * <p>Test organization</p>
          */
         @NameInMap("Description")
         public String description;

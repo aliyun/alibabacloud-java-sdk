@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateBrandResponseBody extends TeaModel {
     /**
+     * <p>The brand ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>brand_xxxx</p>
      */
@@ -12,6 +14,8 @@ public class CreateBrandResponseBody extends TeaModel {
     public String brandId;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>0441BD79-92F3-53AA-8657-F8CE4A2B912A</p>
      */

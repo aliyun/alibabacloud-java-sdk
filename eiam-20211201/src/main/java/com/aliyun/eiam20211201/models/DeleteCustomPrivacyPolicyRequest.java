@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteCustomPrivacyPolicyRequest extends TeaModel {
     /**
-     * <p>自定义条款ID</p>
+     * <p>The custom privacy policy ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class DeleteCustomPrivacyPolicyRequest extends TeaModel {
     public String customPrivacyPolicyId;
 
     /**
-     * <p>IDaaS EIAM实例的ID。</p>
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

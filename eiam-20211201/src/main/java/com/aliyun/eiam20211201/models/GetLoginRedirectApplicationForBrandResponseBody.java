@@ -4,10 +4,15 @@ package com.aliyun.eiam20211201.models;
 import com.aliyun.tea.*;
 
 public class GetLoginRedirectApplicationForBrandResponseBody extends TeaModel {
+    /**
+     * <p>The information about the post-logon redirect application for the brand.</p>
+     */
     @NameInMap("BrandLoginRedirectApplication")
     public GetLoginRedirectApplicationForBrandResponseBodyBrandLoginRedirectApplication brandLoginRedirectApplication;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>0441BD79-92F3-53AA-8657-F8CE4A2B912A</p>
      */
@@ -37,7 +42,7 @@ public class GetLoginRedirectApplicationForBrandResponseBody extends TeaModel {
 
     public static class GetLoginRedirectApplicationForBrandResponseBodyBrandLoginRedirectApplication extends TeaModel {
         /**
-         * <p>应用ID</p>
+         * <p>The application ID.</p>
          * 
          * <strong>example:</strong>
          * <p>app_xxxx</p>
@@ -46,7 +51,7 @@ public class GetLoginRedirectApplicationForBrandResponseBody extends TeaModel {
         public String applicationId;
 
         /**
-         * <p>品牌ID</p>
+         * <p>The brand ID.</p>
          * 
          * <strong>example:</strong>
          * <p>brand_xxxx</p>
@@ -55,7 +60,7 @@ public class GetLoginRedirectApplicationForBrandResponseBody extends TeaModel {
         public String brandId;
 
         /**
-         * <p>实例ID</p>
+         * <p>The instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>idaas_ue2jvisn35ea5lmthk267xxxxx</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListApplicationFederatedCredentialsRequest extends TeaModel {
     /**
-     * <p>应用联邦凭证提供者类型</p>
+     * <p>The type of the application federated credential.</p>
      * 
      * <strong>example:</strong>
      * <p>oidc</p>
@@ -14,7 +14,7 @@ public class ListApplicationFederatedCredentialsRequest extends TeaModel {
     public String applicationFederatedCredentialType;
 
     /**
-     * <p>应用ID</p>
+     * <p>The application ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -24,7 +24,7 @@ public class ListApplicationFederatedCredentialsRequest extends TeaModel {
     public String applicationId;
 
     /**
-     * <p>IDaaS EIAM实例的ID。</p>
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -34,7 +34,7 @@ public class ListApplicationFederatedCredentialsRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>分页查询时每页行数。默认值为20，最大值为100。</p>
+     * <p>The number of entries to return on each page.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -43,7 +43,7 @@ public class ListApplicationFederatedCredentialsRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>查询凭证（Token），取值为上一次API调用返回的NextToken参数值。</p>
+     * <p>The query token.</p>
      * 
      * <strong>example:</strong>
      * <p>NTxxxxxexample</p>
@@ -52,7 +52,7 @@ public class ListApplicationFederatedCredentialsRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>查询上一页凭证（Token），取值为上一次API调用返回的previousToken参数值。</p>
+     * <p>The token to retrieve the previous page of results.</p>
      * 
      * <strong>example:</strong>
      * <p>PTxxxxxexample</p>

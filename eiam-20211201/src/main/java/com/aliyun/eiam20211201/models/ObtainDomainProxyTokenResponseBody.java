@@ -42,7 +42,7 @@ public class ObtainDomainProxyTokenResponseBody extends TeaModel {
 
     public static class ObtainDomainProxyTokenResponseBodyDomainProxyToken extends TeaModel {
         /**
-         * <p>The time when the proxy token of the domain name was created. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         * <p>The time when the domain name proxy token was created. This value is a UNIX timestamp. Unit: milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1649830226000</p>
@@ -51,7 +51,7 @@ public class ObtainDomainProxyTokenResponseBody extends TeaModel {
         public Long createTime;
 
         /**
-         * <p>The ID of the domain name.</p>
+         * <p>The domain ID.</p>
          * 
          * <strong>example:</strong>
          * <p>dm_examplexxxx</p>
@@ -60,7 +60,7 @@ public class ObtainDomainProxyTokenResponseBody extends TeaModel {
         public String domainId;
 
         /**
-         * <p>The proxy token of the domain name.</p>
+         * <p>The domain name proxy token.</p>
          * 
          * <strong>example:</strong>
          * <p>PTxxxxxxxx</p>
@@ -69,7 +69,7 @@ public class ObtainDomainProxyTokenResponseBody extends TeaModel {
         public String domainProxyToken;
 
         /**
-         * <p>The ID of the proxy token of the domain name.</p>
+         * <p>The ID of the domain name proxy token.</p>
          * 
          * <strong>example:</strong>
          * <p>pt_examplexxxx</p>
@@ -87,7 +87,7 @@ public class ObtainDomainProxyTokenResponseBody extends TeaModel {
         public String instanceId;
 
         /**
-         * <p>The time when the proxy token of the domain name was last used. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         * <p>The time when the domain name proxy token was last used. This value is a UNIX timestamp. Unit: milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1649830226000</p>
@@ -96,10 +96,12 @@ public class ObtainDomainProxyTokenResponseBody extends TeaModel {
         public Long lastUsedTime;
 
         /**
-         * <p>The state of the proxy token. Valid values:</p>
+         * <p>The status of the token. Valid values:</p>
          * <ul>
-         * <li>enabled</li>
-         * <li>disabled</li>
+         * <li><p>enabled: The token is enabled.</p>
+         * </li>
+         * <li><p>disabled: The token is disabled.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -109,7 +111,7 @@ public class ObtainDomainProxyTokenResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The time when the proxy token of the domain name was last updated. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         * <p>The time when the domain name proxy token was last updated. This value is a UNIX timestamp. Unit: milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1649830226000</p>

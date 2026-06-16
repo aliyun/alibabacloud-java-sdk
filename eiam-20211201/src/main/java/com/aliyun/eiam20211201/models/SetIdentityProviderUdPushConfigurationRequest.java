@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class SetIdentityProviderUdPushConfigurationRequest extends TeaModel {
     /**
-     * <p>IDaaS的身份提供方主键id</p>
+     * <p>The ID of the identity provider.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class SetIdentityProviderUdPushConfigurationRequest extends TeaModel {
     public String identityProviderId;
 
     /**
-     * <p>增量回调状态，是否处理来自IdP的增量回调数据</p>
+     * <p>Specifies whether to process incremental callback data from the IdP.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,7 +25,7 @@ public class SetIdentityProviderUdPushConfigurationRequest extends TeaModel {
     public String incrementalCallbackStatus;
 
     /**
-     * <p>IDaaS EIAM的实例id</p>
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -34,13 +34,21 @@ public class SetIdentityProviderUdPushConfigurationRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>The configurations for LDAP push synchronization.</p>
+     */
     @NameInMap("LdapUdPushConfig")
     public SetIdentityProviderUdPushConfigurationRequestLdapUdPushConfig ldapUdPushConfig;
 
+    /**
+     * <p>The configuration for periodic synchronization.</p>
+     */
     @NameInMap("PeriodicSyncConfig")
     public SetIdentityProviderUdPushConfigurationRequestPeriodicSyncConfig periodicSyncConfig;
 
     /**
+     * <p>The status of periodic synchronization.</p>
+     * 
      * <strong>example:</strong>
      * <p>disabled</p>
      */
@@ -48,7 +56,7 @@ public class SetIdentityProviderUdPushConfigurationRequest extends TeaModel {
     public String periodicSyncStatus;
 
     /**
-     * <p>同步出配置信息</p>
+     * <p>The push synchronization configurations.</p>
      */
     @NameInMap("UdSyncScopeConfigs")
     public java.util.List<SetIdentityProviderUdPushConfigurationRequestUdSyncScopeConfigs> udSyncScopeConfigs;
@@ -116,6 +124,8 @@ public class SetIdentityProviderUdPushConfigurationRequest extends TeaModel {
 
     public static class SetIdentityProviderUdPushConfigurationRequestLdapUdPushConfig extends TeaModel {
         /**
+         * <p>The object class for organizations.</p>
+         * 
          * <strong>example:</strong>
          * <p>ou,top</p>
          */
@@ -123,6 +133,8 @@ public class SetIdentityProviderUdPushConfigurationRequest extends TeaModel {
         public String organizationUnitObjectClass;
 
         /**
+         * <p>The RDN for organizations.</p>
+         * 
          * <strong>example:</strong>
          * <p>ou</p>
          */
@@ -130,6 +142,8 @@ public class SetIdentityProviderUdPushConfigurationRequest extends TeaModel {
         public String organizationalUnitRdn;
 
         /**
+         * <p>Specifies whether to synchronize passwords.</p>
+         * 
          * <strong>example:</strong>
          * <p>enabled</p>
          */
@@ -137,6 +151,8 @@ public class SetIdentityProviderUdPushConfigurationRequest extends TeaModel {
         public String passwordSyncStatus;
 
         /**
+         * <p>The object class for users.</p>
+         * 
          * <strong>example:</strong>
          * <p>user,top</p>
          */
@@ -144,6 +160,8 @@ public class SetIdentityProviderUdPushConfigurationRequest extends TeaModel {
         public String userObjectClass;
 
         /**
+         * <p>The Relative Distinguished Name (RDN) for users.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn</p>
          */
@@ -199,16 +217,23 @@ public class SetIdentityProviderUdPushConfigurationRequest extends TeaModel {
 
     public static class SetIdentityProviderUdPushConfigurationRequestPeriodicSyncConfig extends TeaModel {
         /**
+         * <p>The cron expression.</p>
+         * 
          * <strong>example:</strong>
          * <p>0 45 1 * * ?</p>
          */
         @NameInMap("PeriodicSyncCron")
         public String periodicSyncCron;
 
+        /**
+         * <p>A collection of time points.</p>
+         */
         @NameInMap("PeriodicSyncTimes")
         public java.util.List<Integer> periodicSyncTimes;
 
         /**
+         * <p>The type of periodic synchronization.</p>
+         * 
          * <strong>example:</strong>
          * <p>cron</p>
          */
@@ -248,13 +273,13 @@ public class SetIdentityProviderUdPushConfigurationRequest extends TeaModel {
 
     public static class SetIdentityProviderUdPushConfigurationRequestUdSyncScopeConfigs extends TeaModel {
         /**
-         * <p>同步来源节点</p>
+         * <p>The source nodes for synchronization.</p>
          */
         @NameInMap("SourceScopes")
         public java.util.List<String> sourceScopes;
 
         /**
-         * <p>同步目标节点</p>
+         * <p>The target node for synchronization.</p>
          * 
          * <strong>example:</strong>
          * <p>6537211</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListApplicationRolesRequest extends TeaModel {
     /**
-     * <p>应用ID</p>
+     * <p>The application ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,11 +14,14 @@ public class ListApplicationRolesRequest extends TeaModel {
     @NameInMap("ApplicationId")
     public String applicationId;
 
+    /**
+     * <p>The filter conditions.</p>
+     */
     @NameInMap("Filter")
     public java.util.List<ListApplicationRolesRequestFilter> filter;
 
     /**
-     * <p>IDaaS EIAM实例的ID。</p>
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -28,6 +31,8 @@ public class ListApplicationRolesRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>The number of entries to return on each page.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -35,7 +40,7 @@ public class ListApplicationRolesRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>查询凭证（Token），取值为上一次API调用返回的NextToken参数值。</p>
+     * <p>The token used to start the next query. Set this parameter to the value of NextToken that is returned in the last API call. Leave this parameter empty for the first query.</p>
      * 
      * <strong>example:</strong>
      * <p>NTxxxxexample</p>
@@ -90,12 +95,17 @@ public class ListApplicationRolesRequest extends TeaModel {
 
     public static class ListApplicationRolesRequestFilter extends TeaModel {
         /**
+         * <p>The name of the filter condition.</p>
+         * 
          * <strong>example:</strong>
          * <p>ApplicationRoleNameStartsWith</p>
          */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The values of the filter condition.</p>
+         */
         @NameInMap("Value")
         public java.util.List<String> value;
 

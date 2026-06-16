@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class SetPasswordExpirationConfigurationRequest extends TeaModel {
     /**
-     * <p>Effective authentication sourceIds</p>
+     * <p>The list of IDs of authentication sources that take effect.</p>
      */
     @NameInMap("EffectiveAuthenticationSourceIds")
     public java.util.List<String> effectiveAuthenticationSourceIds;
@@ -21,11 +21,11 @@ public class SetPasswordExpirationConfigurationRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The action to take upon password expiration. This parameter must be specified when PasswordExpirationStatus is set to enabled. Valid values:</p>
+     * <p>The action to be performed when a password expires. This parameter is required when PasswordExpirationStatus is set to enabled. Valid values:</p>
      * <ul>
-     * <li>forbid_login: Users cannot log on to IDaaS.</li>
-     * <li>force_update_password: Users must change the password.</li>
-     * <li>remind_update_password: IDaaS reminds users to change the password upon each logon.</li>
+     * <li>forbid_login: Prohibit logon.</li>
+     * <li>force_update_password: Force the user to change the password.</li>
+     * <li>remind_update_password: Remind the user to change the password.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -35,7 +35,7 @@ public class SetPasswordExpirationConfigurationRequest extends TeaModel {
     public String passwordExpirationAction;
 
     /**
-     * <p>The methods for receiving password expiration notifications. This parameter must be specified when PasswordExpirationNotificationStatus is set to enabled.</p>
+     * <p>The list of notification channels for password expiration. This parameter is required when PasswordExpirationNotificationStatus is set to enabled.</p>
      * 
      * <strong>example:</strong>
      * <p>login</p>
@@ -44,7 +44,7 @@ public class SetPasswordExpirationConfigurationRequest extends TeaModel {
     public java.util.List<String> passwordExpirationNotificationChannels;
 
     /**
-     * <p>The number of days before the expiration date during which password expiration notifications are sent. Unit: day. This parameter must be specified when PasswordExpirationNotificationStatus is set to enabled.</p>
+     * <p>The time when a password expiration notification is sent. Unit: days. This parameter is required when PasswordExpirationNotificationStatus is set to enabled.</p>
      * 
      * <strong>example:</strong>
      * <p>7</p>
@@ -53,10 +53,10 @@ public class SetPasswordExpirationConfigurationRequest extends TeaModel {
     public Integer passwordExpirationNotificationDuration;
 
     /**
-     * <p>Specifies whether to enable the password expiration notification feature. Valid values:</p>
+     * <p>The status of the password expiration notification. Valid values:</p>
      * <ul>
-     * <li>enabled</li>
-     * <li>disabled</li>
+     * <li>enabled: The password expiration notification is enabled.</li>
+     * <li>disabled: The password expiration notification is disabled.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -66,10 +66,10 @@ public class SetPasswordExpirationConfigurationRequest extends TeaModel {
     public String passwordExpirationNotificationStatus;
 
     /**
-     * <p>Specifies whether to enable the password expiration feature. Valid values:</p>
+     * <p>The status of the password expiration configuration. Valid values:</p>
      * <ul>
-     * <li>enabled</li>
-     * <li>disabled</li>
+     * <li>enabled: The password expiration configuration is enabled.</li>
+     * <li>disabled: The password expiration configuration is disabled.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -80,7 +80,7 @@ public class SetPasswordExpirationConfigurationRequest extends TeaModel {
     public String passwordExpirationStatus;
 
     /**
-     * <p>The number of days before which users must change the password to prevent password expiration. Unit: day. You must set this parameter to a value greater than the value of PasswordExpirationNotificationDuration.</p>
+     * <p>The time when a user is forced to change the password. Unit: days. The value of this parameter must be greater than the value of PasswordExpirationNotificationDuration.</p>
      * 
      * <strong>example:</strong>
      * <p>7</p>
@@ -89,7 +89,7 @@ public class SetPasswordExpirationConfigurationRequest extends TeaModel {
     public Integer passwordForcedUpdateDuration;
 
     /**
-     * <p>The validity period of a password. Unit: day. This parameter must be specified when PasswordExpirationStatus is set to enabled.</p>
+     * <p>The validity period of a password in days. This parameter is required when PasswordExpirationStatus is set to enabled.</p>
      * 
      * <strong>example:</strong>
      * <p>180</p>

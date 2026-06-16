@@ -4,14 +4,26 @@ package com.aliyun.eiam20211201.models;
 import com.aliyun.tea.*;
 
 public class ListUsersResponseBody extends TeaModel {
+    /**
+     * <p>The number of entries returned per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
+     */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
+    /**
+     * <p>The token used to retrieve the next page of results.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>NTxxxxxexample</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>0441BD79-92F3-53AA-8657-F8CE4A2B912A</p>
@@ -20,7 +32,7 @@ public class ListUsersResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The number of entries in the list.</p>
+     * <p>The total number of entries.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>
@@ -29,7 +41,7 @@ public class ListUsersResponseBody extends TeaModel {
     public Long totalCount;
 
     /**
-     * <p>The list of data objects of accounts.</p>
+     * <p>The list of users.</p>
      */
     @NameInMap("Users")
     public java.util.List<ListUsersResponseBodyUsers> users;
@@ -81,7 +93,7 @@ public class ListUsersResponseBody extends TeaModel {
 
     public static class ListUsersResponseBodyUsers extends TeaModel {
         /**
-         * <p>The time when the account expires. This value is a UNIX timestamp. Unit: milliseconds.</p>
+         * <p>The account expiration time. This is a Unix timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1652085686179</p>
@@ -90,7 +102,7 @@ public class ListUsersResponseBody extends TeaModel {
         public Long accountExpireTime;
 
         /**
-         * <p>The time when the account was created. This value is a UNIX timestamp. Unit: milliseconds.</p>
+         * <p>The creation time. This is a Unix timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1652085686179</p>
@@ -99,16 +111,16 @@ public class ListUsersResponseBody extends TeaModel {
         public Long createTime;
 
         /**
-         * <p>The description of the account.</p>
+         * <p>The user description.</p>
          * 
          * <strong>example:</strong>
-         * <p>Test account</p>
+         * <p>xxxx</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
-         * <p>The display name of the account.</p>
+         * <p>The display name.</p>
          * 
          * <strong>example:</strong>
          * <p>display_name001</p>
@@ -117,7 +129,7 @@ public class ListUsersResponseBody extends TeaModel {
         public String displayName;
 
         /**
-         * <p>The email address of the user who owns the account.</p>
+         * <p>The email address.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="mailto:user@example.com">user@example.com</a></p>
@@ -126,7 +138,7 @@ public class ListUsersResponseBody extends TeaModel {
         public String email;
 
         /**
-         * <p>Indicates whether the email address has been verified. A value of true indicates that the email address has been verified by the user or has been set to the verified status by the administrator. A value of false indicates that the email address has not been verified.</p>
+         * <p>Indicates whether the email address is verified. <code>true</code> means the user has verified the email address or an administrator has marked it as verified. <code>false</code> means the email address is not verified.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -135,7 +147,7 @@ public class ListUsersResponseBody extends TeaModel {
         public Boolean emailVerified;
 
         /**
-         * <p>The ID of the instance</p>
+         * <p>The instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>idaas_ue2jvisn35ea5lmthk267xxxxx</p>
@@ -144,7 +156,7 @@ public class ListUsersResponseBody extends TeaModel {
         public String instanceId;
 
         /**
-         * <p>The time when the account lock expires. This value is a UNIX timestamp. Unit: milliseconds.</p>
+         * <p>The account lock expiration time. This is a Unix timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1652085686179</p>
@@ -153,7 +165,7 @@ public class ListUsersResponseBody extends TeaModel {
         public Long lockExpireTime;
 
         /**
-         * <p>Time When Password Expires</p>
+         * <p>The password expiration time. This is a Unix timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1652085686179</p>
@@ -171,7 +183,7 @@ public class ListUsersResponseBody extends TeaModel {
         public Boolean passwordSet;
 
         /**
-         * <p>The mobile number of the user who owns the account.</p>
+         * <p>The phone number.</p>
          * 
          * <strong>example:</strong>
          * <p>156xxxxxxx</p>
@@ -180,7 +192,7 @@ public class ListUsersResponseBody extends TeaModel {
         public String phoneNumber;
 
         /**
-         * <p>Indicates whether the mobile number has been verified. A value of true indicates that the mobile number has been verified by the user or has been set to the verified status by the administrator. A value of false indicates that the mobile number has not been verified.</p>
+         * <p>Indicates whether the phone number is verified. <code>true</code> means the user has verified the phone number or an administrator has marked it as verified. <code>false</code> means the phone number is not verified.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -189,7 +201,7 @@ public class ListUsersResponseBody extends TeaModel {
         public Boolean phoneNumberVerified;
 
         /**
-         * <p>The country code of the mobile number. For example, the country code of China is 86 without 00 or +.</p>
+         * <p>The country calling code. For example, specify <code>86</code> for Chinese mainland. Do not include <code>00</code> or a plus sign (+).</p>
          * 
          * <strong>example:</strong>
          * <p>86</p>
@@ -198,7 +210,7 @@ public class ListUsersResponseBody extends TeaModel {
         public String phoneRegion;
 
         /**
-         * <p>The time when the account was registered. This value is a UNIX timestamp. Unit: milliseconds.</p>
+         * <p>The registration time. This is a Unix timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1652085686179</p>
@@ -207,10 +219,12 @@ public class ListUsersResponseBody extends TeaModel {
         public Long registerTime;
 
         /**
-         * <p>The status of the account. Valid values:</p>
+         * <p>The status. Valid values:</p>
          * <ul>
-         * <li>enabled: The account is enabled.</li>
-         * <li>disabled: The account is disabled.</li>
+         * <li><p><code>enabled</code>: The user is enabled.</p>
+         * </li>
+         * <li><p><code>disabled</code>: The user is disabled.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -220,7 +234,7 @@ public class ListUsersResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The time when the account was last updated. The value is a UNIX timestamp. Unit: milliseconds.</p>
+         * <p>The last update time. This is a Unix timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1652085686179</p>
@@ -229,8 +243,8 @@ public class ListUsersResponseBody extends TeaModel {
         public Long updateTime;
 
         /**
-         * <p>The external ID of the account. The external ID can be used by external data to map the data of the account in IDaaS EIAM. By default, the external ID is the account ID.</p>
-         * <p>For accounts with the same source type and source ID, each account has a unique external ID.</p>
+         * <p>The external user ID. This ID maps data from an external system to a user in IDaaS. It defaults to the user ID.</p>
+         * <p>Note: The external user ID must be unique for the same source type and source ID.</p>
          * 
          * <strong>example:</strong>
          * <p>user_d6sbsuumeta4h66ec3il7yxxxx</p>
@@ -239,7 +253,7 @@ public class ListUsersResponseBody extends TeaModel {
         public String userExternalId;
 
         /**
-         * <p>The ID of the account.</p>
+         * <p>The user ID.</p>
          * 
          * <strong>example:</strong>
          * <p>user_d6sbsuumeta4h66ec3il7yxxxx</p>
@@ -248,8 +262,8 @@ public class ListUsersResponseBody extends TeaModel {
         public String userId;
 
         /**
-         * <p>The source ID of the account.</p>
-         * <p>If the account was created in IDaaS, its source ID is the ID of the IDaaS instance. If the account was imported, its source ID is the enterprise ID in the source. For example, if the account was imported from DingTalk, its source ID is the corpId value of the enterprise in DingTalk.</p>
+         * <p>The user source ID.</p>
+         * <p>If the user is built-in, this is the instance ID. For users from other sources, this is the enterprise ID from the source, such as the <code>corpId</code> for a DingTalk organization.</p>
          * 
          * <strong>example:</strong>
          * <p>idaas_ue2jvisn35ea5lmthk267xxxxx</p>
@@ -258,12 +272,16 @@ public class ListUsersResponseBody extends TeaModel {
         public String userSourceId;
 
         /**
-         * <p>The source type of the account. Valid values:</p>
+         * <p>The user source type. Valid values:</p>
          * <ul>
-         * <li>build_in: The account was created in IDaaS.</li>
-         * <li>ding_talk: The account was imported from DingTalk.</li>
-         * <li>ad: The account was imported from Microsoft Active Directory (AD).</li>
-         * <li>ldap: The account was imported from a Lightweight Directory Access Protocol (LDAP) service.</li>
+         * <li><p><code>build_in</code>: The user is a built-in user.</p>
+         * </li>
+         * <li><p><code>ding_talk</code>: The user is imported from DingTalk.</p>
+         * </li>
+         * <li><p><code>ad</code>: The user is imported from AD.</p>
+         * </li>
+         * <li><p><code>ldap</code>: The user is imported from LDAP.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -273,7 +291,7 @@ public class ListUsersResponseBody extends TeaModel {
         public String userSourceType;
 
         /**
-         * <p>The username of the account.</p>
+         * <p>The user name.</p>
          * 
          * <strong>example:</strong>
          * <p>name001</p>

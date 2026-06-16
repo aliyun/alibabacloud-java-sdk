@@ -18,7 +18,7 @@ public class UpdateApplicationDescriptionRequest extends TeaModel {
      * <p>The description of the application.</p>
      * 
      * <strong>example:</strong>
-     * <p>A demo application that is used for test.</p>
+     * <p>Demo application for testing</p>
      */
     @NameInMap("Description")
     public String description;

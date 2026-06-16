@@ -5,12 +5,17 @@ import com.aliyun.tea.*;
 
 public class GenerateWebAuthnAuthenticatorRegistrationUrlResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>0441BD79-92F3-53AA-8657-F8CE4A2B912A</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Information about the WebAuthn authenticator registration URL.</p>
+     */
     @NameInMap("WebAuthnAuthenticatorRegistrationUrl")
     public GenerateWebAuthnAuthenticatorRegistrationUrlResponseBodyWebAuthnAuthenticatorRegistrationUrl webAuthnAuthenticatorRegistrationUrl;
 
@@ -37,7 +42,7 @@ public class GenerateWebAuthnAuthenticatorRegistrationUrlResponseBody extends Te
 
     public static class GenerateWebAuthnAuthenticatorRegistrationUrlResponseBodyWebAuthnAuthenticatorRegistrationUrl extends TeaModel {
         /**
-         * <p>注册WebAuthn认证器URL</p>
+         * <p>The WebAuthn authenticator registration URL.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://012cnaliyunidaas..com./login/webauthn/registration">https://012cnaliyunidaas..com./login/webauthn/registration</a></p>
@@ -46,7 +51,7 @@ public class GenerateWebAuthnAuthenticatorRegistrationUrlResponseBody extends Te
         public String registrationUrl;
 
         /**
-         * <p>注册WebAuthn认证器URL参数</p>
+         * <p>The parameters for the WebAuthn authenticator registration URL.</p>
          * 
          * <strong>example:</strong>
          * <p>eyJhbGciOiJkaXIiLCJlbmMiOiJBMjU2R0NNIiwia2lkIjoia2V5X29ueWNzbXNib3Y1bmV2anlncHgyZnlsbjdhIn0</p>

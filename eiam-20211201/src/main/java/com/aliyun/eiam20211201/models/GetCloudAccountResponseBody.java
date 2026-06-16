@@ -4,10 +4,15 @@ package com.aliyun.eiam20211201.models;
 import com.aliyun.tea.*;
 
 public class GetCloudAccountResponseBody extends TeaModel {
+    /**
+     * <p>The details of the Alibaba Cloud account.</p>
+     */
     @NameInMap("CloudAccount")
     public GetCloudAccountResponseBodyCloudAccount cloudAccount;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>0441BD79-92F3-53AA-8657-F8CE4A2B912A</p>
      */
@@ -37,6 +42,8 @@ public class GetCloudAccountResponseBody extends TeaModel {
 
     public static class GetCloudAccountResponseBodyCloudAccountCloudAccountHealthCheckResultErrorReason extends TeaModel {
         /**
+         * <p>The error code.</p>
+         * 
          * <strong>example:</strong>
          * <p>AuthenticationFail.NoPermission</p>
          */
@@ -44,6 +51,8 @@ public class GetCloudAccountResponseBody extends TeaModel {
         public String errorCode;
 
         /**
+         * <p>The description of the error.</p>
+         * 
          * <strong>example:</strong>
          * <p>There is no permission.</p>
          */
@@ -74,10 +83,15 @@ public class GetCloudAccountResponseBody extends TeaModel {
     }
 
     public static class GetCloudAccountResponseBodyCloudAccountCloudAccountHealthCheckResult extends TeaModel {
+        /**
+         * <p>The reason for the fault. This field returns a value when the health check status is unhealthy.</p>
+         */
         @NameInMap("ErrorReason")
         public GetCloudAccountResponseBodyCloudAccountCloudAccountHealthCheckResultErrorReason errorReason;
 
         /**
+         * <p>The time of the last check. The value is a UNIX timestamp in milliseconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>1649830226000</p>
          */
@@ -85,6 +99,14 @@ public class GetCloudAccountResponseBody extends TeaModel {
         public Long lastCheckTime;
 
         /**
+         * <p>The result of the health check for the cloud account. Valid values:</p>
+         * <ul>
+         * <li><p>success: The health check was successful.</p>
+         * </li>
+         * <li><p>failed: The health check failed.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>success</p>
          */
@@ -124,7 +146,7 @@ public class GetCloudAccountResponseBody extends TeaModel {
 
     public static class GetCloudAccountResponseBodyCloudAccountCloudAccountProviderConfig extends TeaModel {
         /**
-         * <p>受众标识</p>
+         * <p>The audience identity.</p>
          * 
          * <strong>example:</strong>
          * <p>urn:cloud:idaas:sts:xxx:xxx</p>
@@ -133,7 +155,7 @@ public class GetCloudAccountResponseBody extends TeaModel {
         public String audience;
 
         /**
-         * <p>授权服务ID</p>
+         * <p>The ID of the authorization server.</p>
          * 
          * <strong>example:</strong>
          * <p>iauths_system</p>
@@ -142,7 +164,7 @@ public class GetCloudAccountResponseBody extends TeaModel {
         public String authorizationServerId;
 
         /**
-         * <p>Issuer。</p>
+         * <p>The issuer.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://xxxxx.aliyunidaas.com/api/v2/iauths_system/oauth2">https://xxxxx.aliyunidaas.com/api/v2/iauths_system/oauth2</a></p>
@@ -151,7 +173,7 @@ public class GetCloudAccountResponseBody extends TeaModel {
         public String issuer;
 
         /**
-         * <p>验签公钥端点</p>
+         * <p>The public key endpoint for signature verification.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://xxxxx.aliyunidaas.com/api/v2/iauths_system/oauth2/jwks">https://xxxxx.aliyunidaas.com/api/v2/iauths_system/oauth2/jwks</a></p>
@@ -200,7 +222,7 @@ public class GetCloudAccountResponseBody extends TeaModel {
 
     public static class GetCloudAccountResponseBodyCloudAccount extends TeaModel {
         /**
-         * <p>云账号外部唯一ID</p>
+         * <p>The unique external ID of the Alibaba Cloud account.</p>
          * 
          * <strong>example:</strong>
          * <p>1234567</p>
@@ -209,7 +231,15 @@ public class GetCloudAccountResponseBody extends TeaModel {
         public String cloudAccountExternalId;
 
         /**
-         * <p>云账号状态</p>
+         * <p>The health status of the Alibaba Cloud account. Valid values:</p>
+         * <ul>
+         * <li><p>healthy: Healthy.</p>
+         * </li>
+         * <li><p>unhealthy: Unhealthy.</p>
+         * </li>
+         * <li><p>unknown: Unknown.</p>
+         * </li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>healthy</p>
@@ -217,11 +247,14 @@ public class GetCloudAccountResponseBody extends TeaModel {
         @NameInMap("CloudAccountHealth")
         public String cloudAccountHealth;
 
+        /**
+         * <p>The health check result for the cloud account.</p>
+         */
         @NameInMap("CloudAccountHealthCheckResult")
         public GetCloudAccountResponseBodyCloudAccountCloudAccountHealthCheckResult cloudAccountHealthCheckResult;
 
         /**
-         * <p>云账号ID</p>
+         * <p>The ID of the Alibaba Cloud account.</p>
          * 
          * <strong>example:</strong>
          * <p>ca_01kmegjc11qa1txxxxx</p>
@@ -230,7 +263,7 @@ public class GetCloudAccountResponseBody extends TeaModel {
         public String cloudAccountId;
 
         /**
-         * <p>云账号名称</p>
+         * <p>The name of the Alibaba Cloud account.</p>
          * 
          * <strong>example:</strong>
          * <p>cloud_accout_xxxx</p>
@@ -239,13 +272,13 @@ public class GetCloudAccountResponseBody extends TeaModel {
         public String cloudAccountName;
 
         /**
-         * <p>云账号提供商配置</p>
+         * <p>The configuration of the identity provider.</p>
          */
         @NameInMap("CloudAccountProviderConfig")
         public GetCloudAccountResponseBodyCloudAccountCloudAccountProviderConfig cloudAccountProviderConfig;
 
         /**
-         * <p>云账号提供商名称</p>
+         * <p>The name of the identity provider.</p>
          * 
          * <strong>example:</strong>
          * <p>idaas-eiam-oidc-provider</p>
@@ -254,7 +287,10 @@ public class GetCloudAccountResponseBody extends TeaModel {
         public String cloudAccountProviderName;
 
         /**
-         * <p>云账号类别</p>
+         * <p>The type of the Alibaba Cloud account. The valid value is:</p>
+         * <ul>
+         * <li>alibaba_cloud: Alibaba Cloud</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>alibaba_cloud</p>
@@ -263,6 +299,8 @@ public class GetCloudAccountResponseBody extends TeaModel {
         public String cloudAccountVendorType;
 
         /**
+         * <p>The creation time. The value is a UNIX timestamp in milliseconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>1649830225000</p>
          */
@@ -270,7 +308,7 @@ public class GetCloudAccountResponseBody extends TeaModel {
         public Long createTime;
 
         /**
-         * <p>云账号描述</p>
+         * <p>The description of the Alibaba Cloud account.</p>
          * 
          * <strong>example:</strong>
          * <p>cloud_accout_description</p>
@@ -279,7 +317,7 @@ public class GetCloudAccountResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>IDaaS EIAM 实例Id</p>
+         * <p>The instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>idaas_ue2jvisn35ea5lmthk267xxxxx</p>
@@ -288,6 +326,8 @@ public class GetCloudAccountResponseBody extends TeaModel {
         public String instanceId;
 
         /**
+         * <p>The time of the last update. The value is a UNIX timestamp in milliseconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>1649830227000</p>
          */

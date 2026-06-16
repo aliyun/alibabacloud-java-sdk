@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListApplicationAccountsRequest extends TeaModel {
     /**
-     * <p>IDaaS的应用主键id</p>
+     * <p>The application ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class ListApplicationAccountsRequest extends TeaModel {
     public String applicationId;
 
     /**
-     * <p>IDaaS EIAM的实例id</p>
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,7 +25,7 @@ public class ListApplicationAccountsRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>当前查询的列表页码，默认为1</p>
+     * <p>The page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -34,7 +34,7 @@ public class ListApplicationAccountsRequest extends TeaModel {
     public Long pageNumber;
 
     /**
-     * <p>当前查询的列表页码，默认为20</p>
+     * <p>The number of entries per page.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>

@@ -8,7 +8,7 @@ public class UpdateInstanceDescriptionRequest extends TeaModel {
      * <p>The new description of the instance.</p>
      * 
      * <strong>example:</strong>
-     * <p>测试实例</p>
+     * <p>For production use.</p>
      */
     @NameInMap("Description")
     public String description;

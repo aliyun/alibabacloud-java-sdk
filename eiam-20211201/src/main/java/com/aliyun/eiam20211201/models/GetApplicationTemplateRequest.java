@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetApplicationTemplateRequest extends TeaModel {
     /**
-     * <p>应用模板id</p>
+     * <p>The ID of the application template.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

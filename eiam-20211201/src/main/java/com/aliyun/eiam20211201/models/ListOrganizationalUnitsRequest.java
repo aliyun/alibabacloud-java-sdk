@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListOrganizationalUnitsRequest extends TeaModel {
     /**
-     * <p>The ID of the instance.</p>
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class ListOrganizationalUnitsRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The IDs of organizational units.</p>
+     * <p>The list of organizational unit IDs. The number of IDs in the list cannot exceed 100.</p>
      * 
      * <strong>example:</strong>
      * <p>[ou_wovwffm62xifdziem7an7xxxxx]</p>
@@ -24,7 +24,7 @@ public class ListOrganizationalUnitsRequest extends TeaModel {
     public java.util.List<String> organizationalUnitIds;
 
     /**
-     * <p>The name of the organizational unit.</p>
+     * <p>The name of the organizational unit. An exact match is used for the query.</p>
      * 
      * <strong>example:</strong>
      * <p>name_001</p>
@@ -33,7 +33,7 @@ public class ListOrganizationalUnitsRequest extends TeaModel {
     public String organizationalUnitName;
 
     /**
-     * <p>Organization name, matching left</p>
+     * <p>The prefix of the name of the organizational unit. A left-side match is used for the query.</p>
      * 
      * <strong>example:</strong>
      * <p>name</p>
@@ -42,7 +42,7 @@ public class ListOrganizationalUnitsRequest extends TeaModel {
     public String organizationalUnitNameStartsWith;
 
     /**
-     * <p>The number of the page to return. Default value: 1.</p>
+     * <p>The page number of the page to return. Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -51,7 +51,7 @@ public class ListOrganizationalUnitsRequest extends TeaModel {
     public Long pageNumber;
 
     /**
-     * <p>The number of entries to return on each page. Default value: 20.</p>
+     * <p>The number of entries to return on each page. Default value: 20. Maximum value: 100.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UnbindTotpAuthenticatorRequest extends TeaModel {
     /**
-     * <p>IDaaS EIAM实例的ID。</p>
+     * <p>Instance ID</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class UnbindTotpAuthenticatorRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>UserID</p>
+     * <p>User ID</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

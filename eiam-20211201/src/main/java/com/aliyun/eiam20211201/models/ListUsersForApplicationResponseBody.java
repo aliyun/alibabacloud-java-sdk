@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListUsersForApplicationResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>0441BD79-92F3-53AA-8657-F8CE4A2B912A</p>
@@ -14,7 +14,7 @@ public class ListUsersForApplicationResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of returned entries.</p>
+     * <p>The total number of entries.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>
@@ -23,7 +23,7 @@ public class ListUsersForApplicationResponseBody extends TeaModel {
     public Long totalCount;
 
     /**
-     * <p>The IDs of the accounts.</p>
+     * <p>The list of accounts.</p>
      */
     @NameInMap("Users")
     public java.util.List<ListUsersForApplicationResponseBodyUsers> users;
@@ -59,7 +59,7 @@ public class ListUsersForApplicationResponseBody extends TeaModel {
 
     public static class ListUsersForApplicationResponseBodyUsersApplicationRoles extends TeaModel {
         /**
-         * <p>应用角色标识。</p>
+         * <p>The application role ID.</p>
          * 
          * <strong>example:</strong>
          * <p>app_role_mkv7rgt4ds8d8v0qtzev2mxxxx</p>
@@ -84,13 +84,13 @@ public class ListUsersForApplicationResponseBody extends TeaModel {
 
     public static class ListUsersForApplicationResponseBodyUsers extends TeaModel {
         /**
-         * <p>应用角色列表。</p>
+         * <p>The list of application roles.</p>
          */
         @NameInMap("ApplicationRoles")
         public java.util.List<ListUsersForApplicationResponseBodyUsersApplicationRoles> applicationRoles;
 
         /**
-         * <p>The ID of the account.</p>
+         * <p>The account ID.</p>
          * 
          * <strong>example:</strong>
          * <p>user_d6sbsuumeta4h66ec3il7yxxxx</p>

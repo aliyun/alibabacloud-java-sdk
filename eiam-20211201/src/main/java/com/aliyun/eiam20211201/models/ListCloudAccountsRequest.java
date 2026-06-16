@@ -4,11 +4,14 @@ package com.aliyun.eiam20211201.models;
 import com.aliyun.tea.*;
 
 public class ListCloudAccountsRequest extends TeaModel {
+    /**
+     * <p>The filter conditions.</p>
+     */
     @NameInMap("Filter")
     public java.util.List<ListCloudAccountsRequestFilter> filter;
 
     /**
-     * <p>IDaaS EIAM实例的ID。</p>
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -18,7 +21,13 @@ public class ListCloudAccountsRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>分页查询时每页行数。默认值为20，最大值为100。</p>
+     * <p>The maximum number of records to return on each page.</p>
+     * <ul>
+     * <li><p>The default value is 20.</p>
+     * </li>
+     * <li><p>The maximum value is 100.</p>
+     * </li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -27,7 +36,10 @@ public class ListCloudAccountsRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>查询凭证（Token），取值为上一次API调用返回的NextToken参数值。</p>
+     * <p>The token that specifies the start of the next page.</p>
+     * <ul>
+     * <li>If you leave this parameter empty, the query starts from the first page.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>NTxxxxxexample</p>
@@ -74,12 +86,25 @@ public class ListCloudAccountsRequest extends TeaModel {
 
     public static class ListCloudAccountsRequestFilter extends TeaModel {
         /**
+         * <p>The name of the filter field. Valid values:</p>
+         * <ul>
+         * <li><p>CloudAccountId: The ID of the Alibaba Cloud account.</p>
+         * </li>
+         * <li><p>CloudAccountExternalId: The external unique ID of the Alibaba Cloud account.</p>
+         * </li>
+         * <li><p>CloudAccountVendorType: The type of the Alibaba Cloud account.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>CloudAccountId</p>
          */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>A list of values for the filter field.</p>
+         */
         @NameInMap("Value")
         public java.util.List<String> value;
 

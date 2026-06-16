@@ -5,12 +5,17 @@ import com.aliyun.tea.*;
 
 public class GenerateOauthTokenResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>0441BD79-92F3-53AA-8657-F8CE4XXXXXXX</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The token response.</p>
+     */
     @NameInMap("TokenResponse")
     public GenerateOauthTokenResponseBodyTokenResponse tokenResponse;
 
@@ -37,7 +42,7 @@ public class GenerateOauthTokenResponseBody extends TeaModel {
 
     public static class GenerateOauthTokenResponseBodyTokenResponse extends TeaModel {
         /**
-         * <p>Access Token。</p>
+         * <p>The access token.</p>
          * 
          * <strong>example:</strong>
          * <hr>
@@ -46,6 +51,8 @@ public class GenerateOauthTokenResponseBody extends TeaModel {
         public String accessToken;
 
         /**
+         * <p>The expiration time, in Unix timestamp format (seconds since epoch).</p>
+         * 
          * <strong>example:</strong>
          * <p>1770186372</p>
          */
@@ -53,6 +60,8 @@ public class GenerateOauthTokenResponseBody extends TeaModel {
         public Long expiresAt;
 
         /**
+         * <p>The validity period, in seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>1200</p>
          */
@@ -60,6 +69,8 @@ public class GenerateOauthTokenResponseBody extends TeaModel {
         public Long expiresIn;
 
         /**
+         * <p>The token type. Only Bearer is supported.</p>
+         * 
          * <strong>example:</strong>
          * <p>Bearer</p>
          */

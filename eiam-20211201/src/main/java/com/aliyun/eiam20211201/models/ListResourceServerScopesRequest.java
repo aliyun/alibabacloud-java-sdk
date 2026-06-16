@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListResourceServerScopesRequest extends TeaModel {
     /**
-     * <p>IDaaS的应用资源ID。</p>
+     * <p>Application ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,6 +15,8 @@ public class ListResourceServerScopesRequest extends TeaModel {
     public String applicationId;
 
     /**
+     * <p>Authorization type.</p>
+     * 
      * <strong>example:</strong>
      * <p>authorize_required</p>
      */
@@ -22,7 +24,7 @@ public class ListResourceServerScopesRequest extends TeaModel {
     public String authorizationType;
 
     /**
-     * <p>IDaaS EIAM实例的ID。</p>
+     * <p>Instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -32,7 +34,7 @@ public class ListResourceServerScopesRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>分页查询时每页行数。默认值为20，最大值为100。</p>
+     * <p>Number of rows per page in paginated queries.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -41,7 +43,7 @@ public class ListResourceServerScopesRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>查询凭证（Token），取值为上一次API调用返回的NextToken参数值。</p>
+     * <p>Token for the next page query. Set this to the NextToken value returned by the previous API call. Leave empty for the first query.</p>
      * 
      * <strong>example:</strong>
      * <p>NTxxxxxexample</p>
@@ -50,17 +52,22 @@ public class ListResourceServerScopesRequest extends TeaModel {
     public String nextToken;
 
     /**
+     * <p>Token for the previous page query. Set this to the PreviousToken value returned by the previous API call.</p>
+     * 
      * <strong>example:</strong>
      * <p>PTxxxxxexample</p>
      */
     @NameInMap("PreviousToken")
     public String previousToken;
 
+    /**
+     * <p>List of Scope permission IDs.</p>
+     */
     @NameInMap("ResourceServerScopeIds")
     public java.util.List<String> resourceServerScopeIds;
 
     /**
-     * <p>权限名称</p>
+     * <p>Scope permission name.</p>
      * 
      * <strong>example:</strong>
      * <p>读取全部用户</p>
@@ -69,6 +76,8 @@ public class ListResourceServerScopesRequest extends TeaModel {
     public String resourceServerScopeName;
 
     /**
+     * <p>Scope permission type.</p>
+     * 
      * <strong>example:</strong>
      * <p>urn:alibaba:idaas:resourceserver:scope:delegated</p>
      */
@@ -76,7 +85,7 @@ public class ListResourceServerScopesRequest extends TeaModel {
     public String resourceServerScopeType;
 
     /**
-     * <p>权限值，大小写不敏感，格式(${ResourceType}:${ResourceOption}:${ResourceRestrict})</p>
+     * <p>Scope permission value.</p>
      * 
      * <strong>example:</strong>
      * <p>User:Write:ALL</p>

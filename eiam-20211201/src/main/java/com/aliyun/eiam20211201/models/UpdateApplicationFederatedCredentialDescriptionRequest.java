@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateApplicationFederatedCredentialDescriptionRequest extends TeaModel {
     /**
-     * <p>应用联邦凭证Id</p>
+     * <p>The ID of the application\&quot;s federated credential.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class UpdateApplicationFederatedCredentialDescriptionRequest extends TeaM
     public String applicationFederatedCredentialId;
 
     /**
-     * <p>IDaaS的应用资源ID。</p>
+     * <p>The application ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,7 +25,7 @@ public class UpdateApplicationFederatedCredentialDescriptionRequest extends TeaM
     public String applicationId;
 
     /**
-     * <p>联邦凭证描述</p>
+     * <p>The description of the federated credential.</p>
      * 
      * <strong>example:</strong>
      * <p>test</p>
@@ -34,7 +34,7 @@ public class UpdateApplicationFederatedCredentialDescriptionRequest extends TeaM
     public String description;
 
     /**
-     * <p>IDaaS EIAM实例的ID。</p>
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

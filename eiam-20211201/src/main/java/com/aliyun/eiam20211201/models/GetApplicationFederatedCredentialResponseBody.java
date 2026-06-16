@@ -4,10 +4,15 @@ package com.aliyun.eiam20211201.models;
 import com.aliyun.tea.*;
 
 public class GetApplicationFederatedCredentialResponseBody extends TeaModel {
+    /**
+     * <p>The application federated credential object.</p>
+     */
     @NameInMap("ApplicationFederatedCredential")
     public GetApplicationFederatedCredentialResponseBodyApplicationFederatedCredential applicationFederatedCredential;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>0441BD79-92F3-53AA-8657-F8CE4A2B912A</p>
      */
@@ -37,7 +42,7 @@ public class GetApplicationFederatedCredentialResponseBody extends TeaModel {
 
     public static class GetApplicationFederatedCredentialResponseBodyApplicationFederatedCredentialAttributeMappings extends TeaModel {
         /**
-         * <p>源值表达式</p>
+         * <p>The source value expression.</p>
          * 
          * <strong>example:</strong>
          * <p>Append(client.applicationFederatedCredentialId, &quot;:&quot;, cert.subject.CN, &quot;:&quot;, cert.serialNumber)</p>
@@ -46,7 +51,7 @@ public class GetApplicationFederatedCredentialResponseBody extends TeaModel {
         public String sourceValueExpression;
 
         /**
-         * <p>目标字段</p>
+         * <p>The target field.</p>
          * 
          * <strong>example:</strong>
          * <p>client.activeSubjectUrn</p>
@@ -79,7 +84,7 @@ public class GetApplicationFederatedCredentialResponseBody extends TeaModel {
 
     public static class GetApplicationFederatedCredentialResponseBodyApplicationFederatedCredential extends TeaModel {
         /**
-         * <p>应用联邦凭证ID</p>
+         * <p>The ID of the application\&quot;s federated credential.</p>
          * 
          * <strong>example:</strong>
          * <p>afc_aaaaa1111</p>
@@ -88,7 +93,7 @@ public class GetApplicationFederatedCredentialResponseBody extends TeaModel {
         public String applicationFederatedCredentialId;
 
         /**
-         * <p>应用联邦凭证名称</p>
+         * <p>The name of the application\&quot;s federated credential.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -97,7 +102,7 @@ public class GetApplicationFederatedCredentialResponseBody extends TeaModel {
         public String applicationFederatedCredentialName;
 
         /**
-         * <p>应用联邦凭证类型</p>
+         * <p>The type of the application\&quot;s federated credential.</p>
          * 
          * <strong>example:</strong>
          * <p>oidc</p>
@@ -106,7 +111,7 @@ public class GetApplicationFederatedCredentialResponseBody extends TeaModel {
         public String applicationFederatedCredentialType;
 
         /**
-         * <p>应用ID</p>
+         * <p>The application ID.</p>
          * 
          * <strong>example:</strong>
          * <p>app_mkv7rgt4d7i4u7zqtzev2mxxxx</p>
@@ -115,13 +120,13 @@ public class GetApplicationFederatedCredentialResponseBody extends TeaModel {
         public String applicationId;
 
         /**
-         * <p>属性映射</p>
+         * <p>The attribute mappings.</p>
          */
         @NameInMap("AttributeMappings")
         public java.util.List<GetApplicationFederatedCredentialResponseBodyApplicationFederatedCredentialAttributeMappings> attributeMappings;
 
         /**
-         * <p>创建时间</p>
+         * <p>The time when the credential was created.</p>
          * 
          * <strong>example:</strong>
          * <p>1758785994982</p>
@@ -130,7 +135,7 @@ public class GetApplicationFederatedCredentialResponseBody extends TeaModel {
         public Long createTime;
 
         /**
-         * <p>应用联邦凭证描述</p>
+         * <p>The description of the application\&quot;s federated credential.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -139,7 +144,7 @@ public class GetApplicationFederatedCredentialResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>应用联邦凭证提供者ID</p>
+         * <p>The ID of the federated credential provider.</p>
          * 
          * <strong>example:</strong>
          * <p>fcp_asda1dasdxxxx</p>
@@ -148,7 +153,7 @@ public class GetApplicationFederatedCredentialResponseBody extends TeaModel {
         public String federatedCredentialProviderId;
 
         /**
-         * <p>EAIM 实例ID</p>
+         * <p>The instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>idaas_ue2jvisn35ea5lmthk267xxxxx</p>
@@ -157,7 +162,7 @@ public class GetApplicationFederatedCredentialResponseBody extends TeaModel {
         public String instanceId;
 
         /**
-         * <p>最近使用时间</p>
+         * <p>The time when the credential was last used.</p>
          * 
          * <strong>example:</strong>
          * <p>1758785994982</p>
@@ -166,7 +171,7 @@ public class GetApplicationFederatedCredentialResponseBody extends TeaModel {
         public Long lastUsedTime;
 
         /**
-         * <p>应用联邦凭证状态</p>
+         * <p>The status of the application\&quot;s federated credential.</p>
          * 
          * <strong>example:</strong>
          * <p>enabled</p>
@@ -175,7 +180,7 @@ public class GetApplicationFederatedCredentialResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>更新时间</p>
+         * <p>The time when the credential was last updated.</p>
          * 
          * <strong>example:</strong>
          * <p>1758785994982</p>
@@ -184,7 +189,7 @@ public class GetApplicationFederatedCredentialResponseBody extends TeaModel {
         public Long updateTime;
 
         /**
-         * <p>验证条件</p>
+         * <p>The verification condition.</p>
          * 
          * <strong>example:</strong>
          * <p>Equals(cert.subject.CN, &quot;test&quot;)</p>

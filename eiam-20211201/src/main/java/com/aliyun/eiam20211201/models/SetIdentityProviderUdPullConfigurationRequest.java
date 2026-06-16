@@ -5,7 +5,13 @@ import com.aliyun.tea.*;
 
 public class SetIdentityProviderUdPullConfigurationRequest extends TeaModel {
     /**
-     * <p>Group synchronization status.</p>
+     * <p>The group synchronization status. Valid values:</p>
+     * <ul>
+     * <li><p>disabled: The feature is disabled.</p>
+     * </li>
+     * <li><p>enabled: The feature is enabled.</p>
+     * </li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>disabled</p>
@@ -14,7 +20,7 @@ public class SetIdentityProviderUdPullConfigurationRequest extends TeaModel {
     public String groupSyncStatus;
 
     /**
-     * <p>Identity provider ID</p>
+     * <p>The identity provider ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -24,7 +30,13 @@ public class SetIdentityProviderUdPullConfigurationRequest extends TeaModel {
     public String identityProviderId;
 
     /**
-     * <p>Incremental callback status, whether to process incremental callback data from IdP.</p>
+     * <p>The status of incremental callback. This parameter specifies whether to process incremental callback data from the IdP. Valid values:</p>
+     * <ul>
+     * <li><p>disabled: The feature is disabled.</p>
+     * </li>
+     * <li><p>enabled: The feature is enabled.</p>
+     * </li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -44,19 +56,25 @@ public class SetIdentityProviderUdPullConfigurationRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>Ldap ud pull config</p>
+     * <p>The configurations of LDAP synchronization.</p>
      */
     @NameInMap("LdapUdPullConfig")
     public SetIdentityProviderUdPullConfigurationRequestLdapUdPullConfig ldapUdPullConfig;
 
     /**
-     * <p>Periodic synchronize config</p>
+     * <p>The scheduled synchronization configuration.</p>
      */
     @NameInMap("PeriodicSyncConfig")
     public SetIdentityProviderUdPullConfigurationRequestPeriodicSyncConfig periodicSyncConfig;
 
     /**
-     * <p>Periodic synchronize status</p>
+     * <p>The status of scheduled check. This parameter specifies whether to periodically check for data inconsistencies between IDaaS and the IdP. Valid values:</p>
+     * <ul>
+     * <li><p>disabled: The feature is disabled.</p>
+     * </li>
+     * <li><p>enabled: The feature is enabled.</p>
+     * </li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>disabled</p>
@@ -65,13 +83,13 @@ public class SetIdentityProviderUdPullConfigurationRequest extends TeaModel {
     public String periodicSyncStatus;
 
     /**
-     * <p>Synchronize protected rule</p>
+     * <p>The inbound synchronization protection rule.</p>
      */
     @NameInMap("PullProtectedRule")
     public SetIdentityProviderUdPullConfigurationRequestPullProtectedRule pullProtectedRule;
 
     /**
-     * <p>Synchronize configuration information.</p>
+     * <p>The inbound synchronization configuration.</p>
      */
     @NameInMap("UdSyncScopeConfig")
     public SetIdentityProviderUdPullConfigurationRequestUdSyncScopeConfig udSyncScopeConfig;
@@ -155,25 +173,25 @@ public class SetIdentityProviderUdPullConfigurationRequest extends TeaModel {
 
     public static class SetIdentityProviderUdPullConfigurationRequestLdapUdPullConfig extends TeaModel {
         /**
-         * <p>Group member attribute name</p>
+         * <p>The group member identifier.</p>
          * 
          * <strong>example:</strong>
-         * <p>memberxxx</p>
+         * <p>member</p>
          */
         @NameInMap("GroupMemberAttributeName")
         public String groupMemberAttributeName;
 
         /**
-         * <p>GroupObjectClass</p>
+         * <p>The group objectClass.</p>
          * 
          * <strong>example:</strong>
-         * <p>groupxxx</p>
+         * <p>group</p>
          */
         @NameInMap("GroupObjectClass")
         public String groupObjectClass;
 
         /**
-         * <p>GroupObjectClass custom filter</p>
+         * <p>The custom group filter.</p>
          * 
          * <strong>example:</strong>
          * <p>(|(cn=test)(group=<a href="mailto:test@test.com">test@test.com</a>))</p>
@@ -182,25 +200,25 @@ public class SetIdentityProviderUdPullConfigurationRequest extends TeaModel {
         public String groupObjectClassCustomFilter;
 
         /**
-         * <p>OrganizationUnitObjectClass</p>
+         * <p>The organizational unit objectClass.</p>
          * 
          * <strong>example:</strong>
-         * <p>organizationUnitxxx,top</p>
+         * <p>organizationUnit,top</p>
          */
         @NameInMap("OrganizationUnitObjectClass")
         public String organizationUnitObjectClass;
 
         /**
-         * <p>UserObjectClass</p>
+         * <p>The user objectClass.</p>
          * 
          * <strong>example:</strong>
-         * <p>userPrincipalNamexxx, mail</p>
+         * <p>userPrincipalName, mail</p>
          */
         @NameInMap("UserObjectClass")
         public String userObjectClass;
 
         /**
-         * <p>UserObjectClass custom filter</p>
+         * <p>The custom user filter.</p>
          * 
          * <strong>example:</strong>
          * <p>(|(cn=test)(mail=<a href="mailto:test@test.com">test@test.com</a>))</p>
@@ -265,7 +283,7 @@ public class SetIdentityProviderUdPullConfigurationRequest extends TeaModel {
 
     public static class SetIdentityProviderUdPullConfigurationRequestPeriodicSyncConfig extends TeaModel {
         /**
-         * <p>Periodic synchronize cron</p>
+         * <p>The cron expression. This parameter is required when periodicSyncType is set to cron.</p>
          * 
          * <strong>example:</strong>
          * <p>0 45 1 * * ?</p>
@@ -274,13 +292,13 @@ public class SetIdentityProviderUdPullConfigurationRequest extends TeaModel {
         public String periodicSyncCron;
 
         /**
-         * <p>Periodic synchronize times</p>
+         * <p>The time points for synchronization. This parameter is required when periodicSyncType is set to time. For example, if you set this parameter to [3, 5], the synchronization is performed from 03:00 to 04:00 and from 05:00 to 06:00.</p>
          */
         @NameInMap("PeriodicSyncTimes")
         public java.util.List<Integer> periodicSyncTimes;
 
         /**
-         * <p>Periodic synchronize type</p>
+         * <p>The type.</p>
          * 
          * <strong>example:</strong>
          * <p>cron</p>
@@ -321,7 +339,7 @@ public class SetIdentityProviderUdPullConfigurationRequest extends TeaModel {
 
     public static class SetIdentityProviderUdPullConfigurationRequestPullProtectedRule extends TeaModel {
         /**
-         * <p>Group deleted threshold</p>
+         * <p>The threshold for the number of groups to be deleted. If the number of groups to be deleted exceeds this value, the synchronization task is stopped.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -330,7 +348,7 @@ public class SetIdentityProviderUdPullConfigurationRequest extends TeaModel {
         public Integer groupDeletedThreshold;
 
         /**
-         * <p>OrganizationalUnit deleted threshold</p>
+         * <p>The threshold for the number of organizational units to be deleted. If the number of organizational units to be deleted exceeds this value, the synchronization task is stopped.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -339,7 +357,7 @@ public class SetIdentityProviderUdPullConfigurationRequest extends TeaModel {
         public Integer organizationalUnitDeletedThreshold;
 
         /**
-         * <p>User deleted threshold</p>
+         * <p>The threshold for the number of users to be deleted. If the number of users to be deleted exceeds this value, the synchronization task is stopped.</p>
          * 
          * <strong>example:</strong>
          * <p>30</p>
@@ -380,13 +398,13 @@ public class SetIdentityProviderUdPullConfigurationRequest extends TeaModel {
 
     public static class SetIdentityProviderUdPullConfigurationRequestUdSyncScopeConfig extends TeaModel {
         /**
-         * <p>Synchronize source scopes</p>
+         * <p>The list of source nodes for synchronization.</p>
          */
         @NameInMap("SourceScopes")
         public java.util.List<String> sourceScopes;
 
         /**
-         * <p>Synchronize target scope</p>
+         * <p>The target node for synchronization.</p>
          * 
          * <strong>example:</strong>
          * <p>ou_asdaq1addsxzdq1XXX</p>

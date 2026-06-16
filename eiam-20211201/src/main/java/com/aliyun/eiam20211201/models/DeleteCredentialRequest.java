@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteCredentialRequest extends TeaModel {
     /**
-     * <p>凭据ID。</p>
+     * <p>Credential ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class DeleteCredentialRequest extends TeaModel {
     public String credentialId;
 
     /**
-     * <p>IDaaS EIAM实例的ID。</p>
+     * <p>Instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

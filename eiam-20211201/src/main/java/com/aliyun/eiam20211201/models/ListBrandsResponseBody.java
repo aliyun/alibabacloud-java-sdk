@@ -4,11 +4,14 @@ package com.aliyun.eiam20211201.models;
 import com.aliyun.tea.*;
 
 public class ListBrandsResponseBody extends TeaModel {
+    /**
+     * <p>A list of brands.</p>
+     */
     @NameInMap("Brands")
     public java.util.List<ListBrandsResponseBodyBrands> brands;
 
     /**
-     * <p>分页查询时每页行数。</p>
+     * <p>The number of entries per page.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -17,7 +20,7 @@ public class ListBrandsResponseBody extends TeaModel {
     public Long maxResults;
 
     /**
-     * <p>本次调用返回的查询凭证（Token）值，用于下一次翻页查询。</p>
+     * <p>The token that is used to retrieve the next page of results.</p>
      * 
      * <strong>example:</strong>
      * <p>NTxxxexample</p>
@@ -26,7 +29,7 @@ public class ListBrandsResponseBody extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>本次调用返回的查询凭证（Token）值，用于上一次翻页查询。</p>
+     * <p>The token that is used to retrieve the previous page of results.</p>
      * 
      * <strong>example:</strong>
      * <p>PTxxxexample</p>
@@ -35,6 +38,8 @@ public class ListBrandsResponseBody extends TeaModel {
     public String previousToken;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>0441BD79-92F3-53AA-8657-F8CE4A2B912A</p>
      */
@@ -42,6 +47,8 @@ public class ListBrandsResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total number of entries.</p>
+     * 
      * <strong>example:</strong>
      * <p>100</p>
      */
@@ -103,7 +110,7 @@ public class ListBrandsResponseBody extends TeaModel {
 
     public static class ListBrandsResponseBodyBrands extends TeaModel {
         /**
-         * <p>品牌ID</p>
+         * <p>The brand ID.</p>
          * 
          * <strong>example:</strong>
          * <p>brand_xxxx</p>
@@ -112,7 +119,7 @@ public class ListBrandsResponseBody extends TeaModel {
         public String brandId;
 
         /**
-         * <p>品牌名称</p>
+         * <p>The brand name.</p>
          * 
          * <strong>example:</strong>
          * <p>Custom Brand</p>
@@ -121,7 +128,7 @@ public class ListBrandsResponseBody extends TeaModel {
         public String brandName;
 
         /**
-         * <p>品牌类型</p>
+         * <p>The brand type.</p>
          * 
          * <strong>example:</strong>
          * <p>user_custom</p>
@@ -130,7 +137,7 @@ public class ListBrandsResponseBody extends TeaModel {
         public String brandType;
 
         /**
-         * <p>实例ID。</p>
+         * <p>The instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>idaas_ue2jvisn35ea5lmthk267xxxxx</p>
@@ -139,7 +146,7 @@ public class ListBrandsResponseBody extends TeaModel {
         public String instanceId;
 
         /**
-         * <p>品牌状态</p>
+         * <p>The brand status.</p>
          * 
          * <strong>example:</strong>
          * <p>enabled</p>

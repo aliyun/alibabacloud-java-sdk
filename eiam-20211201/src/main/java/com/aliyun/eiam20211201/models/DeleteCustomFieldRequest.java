@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteCustomFieldRequest extends TeaModel {
     /**
-     * <p>fieldId</p>
+     * <p>The field ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class DeleteCustomFieldRequest extends TeaModel {
     public String fieldId;
 
     /**
-     * <p>IDaaS EIAM实例的ID。</p>
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

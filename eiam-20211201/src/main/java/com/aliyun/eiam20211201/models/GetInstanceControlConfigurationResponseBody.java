@@ -4,10 +4,15 @@ package com.aliyun.eiam20211201.models;
 import com.aliyun.tea.*;
 
 public class GetInstanceControlConfigurationResponseBody extends TeaModel {
+    /**
+     * <p>The instance control configuration.</p>
+     */
     @NameInMap("InstanceControlConfiguration")
     public GetInstanceControlConfigurationResponseBodyInstanceControlConfiguration instanceControlConfiguration;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>0441BD79-92F3-53AA-8657-F8CE4A2B912A</p>
      */
@@ -37,6 +42,8 @@ public class GetInstanceControlConfigurationResponseBody extends TeaModel {
 
     public static class GetInstanceControlConfigurationResponseBodyInstanceControlConfigurationControlElementsHumanVerificationConfig extends TeaModel {
         /**
+         * <p>The human verification type.</p>
+         * 
          * <strong>example:</strong>
          * <p>urn:alibaba:idaas:humanverification:alibaba-cloud-jigsaw-verification</p>
          */
@@ -60,7 +67,7 @@ public class GetInstanceControlConfigurationResponseBody extends TeaModel {
 
     public static class GetInstanceControlConfigurationResponseBodyInstanceControlConfigurationControlElements extends TeaModel {
         /**
-         * <p>实例控制项名称，如human_verification。</p>
+         * <p>The element name.</p>
          * 
          * <strong>example:</strong>
          * <p>human_verification</p>
@@ -68,11 +75,14 @@ public class GetInstanceControlConfigurationResponseBody extends TeaModel {
         @NameInMap("ElementName")
         public String elementName;
 
+        /**
+         * <p>The human verification configuration.</p>
+         */
         @NameInMap("HumanVerificationConfig")
         public GetInstanceControlConfigurationResponseBodyInstanceControlConfigurationControlElementsHumanVerificationConfig humanVerificationConfig;
 
         /**
-         * <p>实例控制项状态，enabled或者disabled。</p>
+         * <p>The status of the control element.</p>
          * 
          * <strong>example:</strong>
          * <p>enabled</p>
@@ -113,7 +123,7 @@ public class GetInstanceControlConfigurationResponseBody extends TeaModel {
 
     public static class GetInstanceControlConfigurationResponseBodyInstanceControlConfiguration extends TeaModel {
         /**
-         * <p>实例控制配置项</p>
+         * <p>The list of control elements.</p>
          */
         @NameInMap("ControlElements")
         public java.util.List<GetInstanceControlConfigurationResponseBodyInstanceControlConfigurationControlElements> controlElements;

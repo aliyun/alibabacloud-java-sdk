@@ -5,12 +5,17 @@ import com.aliyun.tea.*;
 
 public class GetResourceServerScopeResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>0441BD79-92F3-53AA-8657-F8CE4A2B912A</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The information about the scope permission of the resource server.</p>
+     */
     @NameInMap("ResourceServerScope")
     public GetResourceServerScopeResponseBodyResourceServerScope resourceServerScope;
 
@@ -37,7 +42,7 @@ public class GetResourceServerScopeResponseBody extends TeaModel {
 
     public static class GetResourceServerScopeResponseBodyResourceServerScope extends TeaModel {
         /**
-         * <p>IDaaS EIAM 应用Id</p>
+         * <p>The application ID.</p>
          * 
          * <strong>example:</strong>
          * <p>app_xxxxxxxxxxx</p>
@@ -46,6 +51,8 @@ public class GetResourceServerScopeResponseBody extends TeaModel {
         public String applicationId;
 
         /**
+         * <p>The authorization type.</p>
+         * 
          * <strong>example:</strong>
          * <p>authorize_required</p>
          */
@@ -53,7 +60,7 @@ public class GetResourceServerScopeResponseBody extends TeaModel {
         public String authorizationType;
 
         /**
-         * <p>IDaaS EIAM 实例Id</p>
+         * <p>The instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>idaas_xxxxxxxxxxx</p>
@@ -62,7 +69,7 @@ public class GetResourceServerScopeResponseBody extends TeaModel {
         public String instanceId;
 
         /**
-         * <p>IDaaS EIAM ResourceServer下权限Id</p>
+         * <p>The ID of the scope permission.</p>
          * 
          * <strong>example:</strong>
          * <p>rss_xxxxxxxxxxx</p>
@@ -71,16 +78,16 @@ public class GetResourceServerScopeResponseBody extends TeaModel {
         public String resourceServerScopeId;
 
         /**
-         * <p>IDaaS EIAM ResourceServer下权限名称</p>
+         * <p>The name of the scope permission.</p>
          * 
          * <strong>example:</strong>
-         * <p>读取全部用户</p>
+         * <p>Read User Info</p>
          */
         @NameInMap("ResourceServerScopeName")
         public String resourceServerScopeName;
 
         /**
-         * <p>IDaaS EIAM ResourceServer下权限类型</p>
+         * <p>The type of the scope permission.</p>
          * 
          * <strong>example:</strong>
          * <p>urn:alibaba:idaas:resourceserver:scope:delegated</p>
@@ -89,7 +96,7 @@ public class GetResourceServerScopeResponseBody extends TeaModel {
         public String resourceServerScopeType;
 
         /**
-         * <p>IDaaS EIAM ResourceServer下权限值</p>
+         * <p>The value of the scope permission.</p>
          * 
          * <strong>example:</strong>
          * <p>User:Read:ALL</p>

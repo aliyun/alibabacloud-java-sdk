@@ -28,7 +28,7 @@ public class CreateNetworkAccessEndpointRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>eiam-vpc-access-endpoint</p>
+     * <p>Xx-business VPC access endpoint</p>
      */
     @NameInMap("NetworkAccessEndpointName")
     public String networkAccessEndpointName;

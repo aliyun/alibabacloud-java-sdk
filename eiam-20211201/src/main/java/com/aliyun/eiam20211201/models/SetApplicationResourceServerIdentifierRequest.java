@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class SetApplicationResourceServerIdentifierRequest extends TeaModel {
     /**
-     * <p>IDaaS的应用资源ID。</p>
+     * <p>The application ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,6 +15,8 @@ public class SetApplicationResourceServerIdentifierRequest extends TeaModel {
     public String applicationId;
 
     /**
+     * <p>A client token to ensure the idempotence of the request. Generate a unique value from your client for this parameter. The client token can contain only ASCII characters and cannot be longer than 64 characters. For more information, see <a href="https://www.alibabacloud.com/help/en/ecs/developer-reference/how-to-ensure-idempotence">How to ensure idempotence</a>.</p>
+     * 
      * <strong>example:</strong>
      * <p>client-token-example</p>
      */
@@ -22,7 +24,7 @@ public class SetApplicationResourceServerIdentifierRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>IDaaS EIAM实例的ID。</p>
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -32,7 +34,7 @@ public class SetApplicationResourceServerIdentifierRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>ResourceServer唯一标识，对应ResourceServer受众</p>
+     * <p>The unique identifier of the resource server.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

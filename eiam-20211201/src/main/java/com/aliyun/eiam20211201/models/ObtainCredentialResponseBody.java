@@ -4,10 +4,15 @@ package com.aliyun.eiam20211201.models;
 import com.aliyun.tea.*;
 
 public class ObtainCredentialResponseBody extends TeaModel {
+    /**
+     * <p>The credential details.</p>
+     */
     @NameInMap("Credential")
     public ObtainCredentialResponseBodyCredential credential;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>0441BD79-92F3-53AA-8657-F8CE4A2B912A</p>
      */
@@ -37,6 +42,8 @@ public class ObtainCredentialResponseBody extends TeaModel {
 
     public static class ObtainCredentialResponseBodyCredentialCredentialContentApiKeyContent extends TeaModel {
         /**
+         * <p>The API key.</p>
+         * 
          * <strong>example:</strong>
          * <p>nsklncmwizncxxxx</p>
          */
@@ -60,7 +67,7 @@ public class ObtainCredentialResponseBody extends TeaModel {
 
     public static class ObtainCredentialResponseBodyCredentialCredentialContentOAuthClientContent extends TeaModel {
         /**
-         * <p>OAuth协议的client_id</p>
+         * <p>The client ID.</p>
          * 
          * <strong>example:</strong>
          * <p>dmvncmxersdxxxxxx</p>
@@ -69,6 +76,8 @@ public class ObtainCredentialResponseBody extends TeaModel {
         public String clientId;
 
         /**
+         * <p>The client secret.</p>
+         * 
          * <strong>example:</strong>
          * <p>nsklnertyt5ddwizncxxxx</p>
          */
@@ -99,11 +108,14 @@ public class ObtainCredentialResponseBody extends TeaModel {
     }
 
     public static class ObtainCredentialResponseBodyCredentialCredentialContent extends TeaModel {
+        /**
+         * <p>The details of the API key credential.</p>
+         */
         @NameInMap("ApiKeyContent")
         public ObtainCredentialResponseBodyCredentialCredentialContentApiKeyContent apiKeyContent;
 
         /**
-         * <p>OAuth客户端认证凭证类型的凭据内容。</p>
+         * <p>The details of the OAuth 2.0 client credential.</p>
          */
         @NameInMap("OAuthClientContent")
         public ObtainCredentialResponseBodyCredentialCredentialContentOAuthClientContent OAuthClientContent;
@@ -133,7 +145,7 @@ public class ObtainCredentialResponseBody extends TeaModel {
 
     public static class ObtainCredentialResponseBodyCredential extends TeaModel {
         /**
-         * <p>云角色创建时间</p>
+         * <p>The time when the credential was created. This value is a Unix timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1649830225000</p>
@@ -142,13 +154,19 @@ public class ObtainCredentialResponseBody extends TeaModel {
         public Long createTime;
 
         /**
-         * <p>凭据的内容。</p>
+         * <p>The credential content.</p>
          */
         @NameInMap("CredentialContent")
         public ObtainCredentialResponseBodyCredentialCredentialContent credentialContent;
 
         /**
-         * <p>凭据的创建类型。</p>
+         * <p>The credential creation type. Valid values:</p>
+         * <ul>
+         * <li><p><code>system_init</code>: The system created the credential.</p>
+         * </li>
+         * <li><p><code>user_custom</code>: A user created the credential.</p>
+         * </li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>user_custom</p>
@@ -160,7 +178,7 @@ public class ObtainCredentialResponseBody extends TeaModel {
         public String credentialExternalId;
 
         /**
-         * <p>凭据ID。</p>
+         * <p>The credential ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cred_mkv7rgt4d7i4u7zqtzev2mxxxx</p>
@@ -169,7 +187,7 @@ public class ObtainCredentialResponseBody extends TeaModel {
         public String credentialId;
 
         /**
-         * <p>凭据标识</p>
+         * <p>The credential identifier.</p>
          * 
          * <strong>example:</strong>
          * <p>credential_identifier_test</p>
@@ -178,7 +196,7 @@ public class ObtainCredentialResponseBody extends TeaModel {
         public String credentialIdentifier;
 
         /**
-         * <p>凭据名称</p>
+         * <p>The credential name.</p>
          * 
          * <strong>example:</strong>
          * <p>credential_name</p>
@@ -187,7 +205,13 @@ public class ObtainCredentialResponseBody extends TeaModel {
         public String credentialName;
 
         /**
-         * <p>凭据的使用场景标签。</p>
+         * <p>The credential scenario label. Valid values:</p>
+         * <ul>
+         * <li><p><code>llm</code>: The credential is used for an LLM.</p>
+         * </li>
+         * <li><p><code>saas</code>: The credential is used for a SaaS application.</p>
+         * </li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>llm</p>
@@ -199,7 +223,7 @@ public class ObtainCredentialResponseBody extends TeaModel {
         public String credentialSharingScope;
 
         /**
-         * <p>凭据所属的主体ID。</p>
+         * <p>The credential subject ID.</p>
          * 
          * <strong>example:</strong>
          * <p>apt_werthgfdsasffxxxxx</p>
@@ -208,7 +232,10 @@ public class ObtainCredentialResponseBody extends TeaModel {
         public String credentialSubjectId;
 
         /**
-         * <p>凭据所属的主体类型。</p>
+         * <p>The credential subject type. Valid value:</p>
+         * <ul>
+         * <li><code>authentication_token_provider</code>: The credential subject is an authentication token provider.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>authentication_token_provider</p>
@@ -217,7 +244,13 @@ public class ObtainCredentialResponseBody extends TeaModel {
         public String credentialSubjectType;
 
         /**
-         * <p>凭据类型。</p>
+         * <p>The credential type. Valid values:</p>
+         * <ul>
+         * <li><p><code>api_key</code>: An API key.</p>
+         * </li>
+         * <li><p><code>oauth_client</code>: An OAuth 2.0 client credential.</p>
+         * </li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>api_key</p>
@@ -226,7 +259,7 @@ public class ObtainCredentialResponseBody extends TeaModel {
         public String credentialType;
 
         /**
-         * <p>描述</p>
+         * <p>The description.</p>
          * 
          * <strong>example:</strong>
          * <p>credential_description</p>
@@ -238,7 +271,7 @@ public class ObtainCredentialResponseBody extends TeaModel {
         public String exclusiveUserId;
 
         /**
-         * <p>EIAM实例ID。</p>
+         * <p>The instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>idaas_ue2jvisn35ea5lmthk267xxxxx</p>
@@ -247,7 +280,13 @@ public class ObtainCredentialResponseBody extends TeaModel {
         public String instanceId;
 
         /**
-         * <p>凭据状态</p>
+         * <p>The status. Valid values:</p>
+         * <ul>
+         * <li><p><code>enabled</code>: The credential can be used.</p>
+         * </li>
+         * <li><p><code>disabled</code>: The credential cannot be used.</p>
+         * </li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>enabled</p>
@@ -256,7 +295,7 @@ public class ObtainCredentialResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>云角色更新时间</p>
+         * <p>The time when the credential was last updated. This value is a Unix timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1649830227000</p>

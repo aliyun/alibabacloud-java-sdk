@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateCustomPrivacyPolicyResponseBody extends TeaModel {
     /**
+     * <p>The ID of the custom privacy policy.</p>
+     * 
      * <strong>example:</strong>
      * <p>pp_neagxpoznsjdtxxxxx</p>
      */
@@ -12,6 +14,8 @@ public class CreateCustomPrivacyPolicyResponseBody extends TeaModel {
     public String customPrivacyPolicyId;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>0441BD79-92F3-53AA-8657-F8CE4A2B912A</p>
      */

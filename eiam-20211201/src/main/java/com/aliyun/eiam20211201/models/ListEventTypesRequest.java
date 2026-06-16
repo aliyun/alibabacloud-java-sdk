@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListEventTypesRequest extends TeaModel {
     /**
-     * <p>查询分页页码（从1开始计数）</p>
+     * <p>Page number for paging</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -14,7 +14,7 @@ public class ListEventTypesRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>分页大小（从1开始计数）</p>
+     * <p>Number of items per page</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>

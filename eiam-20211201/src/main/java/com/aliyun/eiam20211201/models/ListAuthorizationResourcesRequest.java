@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListAuthorizationResourcesRequest extends TeaModel {
     /**
-     * <p>授权规则标识。</p>
+     * <p>The authorization rule ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,13 +15,13 @@ public class ListAuthorizationResourcesRequest extends TeaModel {
     public String authorizationRuleId;
 
     /**
-     * <p>过滤条件</p>
+     * <p>The filter conditions.</p>
      */
     @NameInMap("Filter")
     public java.util.List<ListAuthorizationResourcesRequestFilter> filter;
 
     /**
-     * <p>IDaaS EIAM实例的ID。</p>
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -31,7 +31,13 @@ public class ListAuthorizationResourcesRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>分页查询时每页行数。默认值为20，最大值为100。</p>
+     * <p>The maximum number of entries to return on each page.</p>
+     * <ul>
+     * <li><p>The default value is 20.</p>
+     * </li>
+     * <li><p>The maximum value is 100.</p>
+     * </li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -40,7 +46,10 @@ public class ListAuthorizationResourcesRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>查询凭证（Token），取值为上一次API调用返回的NextToken参数值。</p>
+     * <p>The token to start the next page of results.</p>
+     * <ul>
+     * <li>If you do not specify this parameter, the query starts from the first page.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>NTxxxxxexample</p>
@@ -95,7 +104,13 @@ public class ListAuthorizationResourcesRequest extends TeaModel {
 
     public static class ListAuthorizationResourcesRequestFilter extends TeaModel {
         /**
-         * <p>过滤条件名称。</p>
+         * <p>The filter field name. Valid values:</p>
+         * <ul>
+         * <li><p>AuthorizationResourceEntityType: The type of the associated resource entity.</p>
+         * </li>
+         * <li><p>AuthorizationResourceEntityId: The ID of the associated resource entity.</p>
+         * </li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>AuthorizationResourceEntityId</p>
@@ -104,7 +119,7 @@ public class ListAuthorizationResourcesRequest extends TeaModel {
         public String name;
 
         /**
-         * <p>过滤条件值。</p>
+         * <p>A list of filter field values.</p>
          */
         @NameInMap("Value")
         public java.util.List<String> value;

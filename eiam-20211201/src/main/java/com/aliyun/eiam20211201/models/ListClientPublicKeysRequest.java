@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListClientPublicKeysRequest extends TeaModel {
     /**
-     * <p>IDaaS的应用资源ID。</p>
+     * <p>The application ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class ListClientPublicKeysRequest extends TeaModel {
     public String applicationId;
 
     /**
-     * <p>IDaaS EIAM实例的ID。</p>
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,6 +25,8 @@ public class ListClientPublicKeysRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>The number of entries to return on each page of a paged query.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -32,7 +34,7 @@ public class ListClientPublicKeysRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>查询凭证（Token），取值为上一次API调用返回的NextToken参数值。</p>
+     * <p>The token for the next page of results. Set this to the NextToken value from the previous API call. For the first query, leave this parameter empty.</p>
      * 
      * <strong>example:</strong>
      * <p>NTxxxxxexample</p>

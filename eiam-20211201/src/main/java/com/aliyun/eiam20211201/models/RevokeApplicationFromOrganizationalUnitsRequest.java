@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class RevokeApplicationFromOrganizationalUnitsRequest extends TeaModel {
     /**
-     * <p>The ID of the application.</p>
+     * <p>The application ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -24,7 +24,7 @@ public class RevokeApplicationFromOrganizationalUnitsRequest extends TeaModel {
     public String applicationRoleId;
 
     /**
-     * <p>The ID of the instance.</p>
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -34,7 +34,7 @@ public class RevokeApplicationFromOrganizationalUnitsRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The IDs of the organizations. You can revoke the access permissions from a maximum of 100 organizations at a time.</p>
+     * <p>A list of organizational unit IDs. A single operation supports up to 100 organizational unit IDs.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

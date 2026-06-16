@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DisableCredentialProviderRequest extends TeaModel {
     /**
-     * <p>认证令牌提供商ID。</p>
+     * <p>The credential provider ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class DisableCredentialProviderRequest extends TeaModel {
     public String credentialProviderId;
 
     /**
-     * <p>IDaaS EIAM实例的ID。</p>
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

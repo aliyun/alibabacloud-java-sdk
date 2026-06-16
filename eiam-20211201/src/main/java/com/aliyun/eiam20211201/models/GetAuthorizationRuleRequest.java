@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetAuthorizationRuleRequest extends TeaModel {
     /**
-     * <p>授权规则标识。</p>
+     * <p>Authorization rule ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class GetAuthorizationRuleRequest extends TeaModel {
     public String authorizationRuleId;
 
     /**
-     * <p>IDaaS EIAM实例的ID。</p>
+     * <p>Instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

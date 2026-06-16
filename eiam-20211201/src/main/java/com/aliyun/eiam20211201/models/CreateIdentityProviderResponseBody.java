@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateIdentityProviderResponseBody extends TeaModel {
     /**
-     * <p>Identity provider ID.</p>
+     * <p>The ID of the identity provider.</p>
      * 
      * <strong>example:</strong>
      * <p>idp_mwpcwnhrimlr2horxXXXX</p>

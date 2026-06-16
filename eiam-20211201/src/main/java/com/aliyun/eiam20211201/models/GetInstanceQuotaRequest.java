@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetInstanceQuotaRequest extends TeaModel {
     /**
-     * <p>IDaaS EIAM实例的ID。</p>
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class GetInstanceQuotaRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>配额类型，QuotaEnum</p>
+     * <p>The quota type.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

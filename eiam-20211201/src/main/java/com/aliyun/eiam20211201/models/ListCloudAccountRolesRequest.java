@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListCloudAccountRolesRequest extends TeaModel {
     /**
+     * <p>The ID of the Alibaba Cloud account.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -13,10 +14,14 @@ public class ListCloudAccountRolesRequest extends TeaModel {
     @NameInMap("CloudAccountId")
     public String cloudAccountId;
 
+    /**
+     * <p>The filter conditions.</p>
+     */
     @NameInMap("Filter")
     public java.util.List<ListCloudAccountRolesRequestFilter> filter;
 
     /**
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -26,7 +31,13 @@ public class ListCloudAccountRolesRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>分页查询时每页行数。默认值为20，最大值为100。</p>
+     * <p>The maximum number of records to return on each page.</p>
+     * <ul>
+     * <li><p>The default value is 20.</p>
+     * </li>
+     * <li><p>The maximum value is 100.</p>
+     * </li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -35,7 +46,10 @@ public class ListCloudAccountRolesRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>查询凭证（Token），取值为上一次API调用返回的NextToken参数值。</p>
+     * <p>The token that specifies the start of the next page of results.</p>
+     * <ul>
+     * <li>If this parameter is not specified, the query starts from the first page.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>NTxxxxxexample</p>
@@ -90,12 +104,27 @@ public class ListCloudAccountRolesRequest extends TeaModel {
 
     public static class ListCloudAccountRolesRequestFilter extends TeaModel {
         /**
+         * <p>The name of the filter field. Valid values:</p>
+         * <ul>
+         * <li><p>CloudAccountRoleId: The ID of the cloud role.</p>
+         * </li>
+         * <li><p>CloudAccountRoleName: The name of the cloud role.</p>
+         * </li>
+         * <li><p>CloudAccountRoleExternalId: The external ID of the cloud role.</p>
+         * </li>
+         * <li><p>CloudAccountRoleUsageType: The usage type of the cloud role.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>CloudAccountRoleId</p>
          */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The list of values for the filter field.</p>
+         */
         @NameInMap("Value")
         public java.util.List<String> value;
 

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetServiceQuotaRequest extends TeaModel {
     /**
-     * <p>Quota 配额的唯一标识。</p>
+     * <p>The unique identifier of the quota.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

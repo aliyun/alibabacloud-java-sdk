@@ -2237,7 +2237,7 @@ public class GetSynchronizationJobResponseBody extends TeaModel {
          * <p>The error code corresponding to the error message.</p>
          * 
          * <strong>example:</strong>
-         * <p>ResourceNotFound. SynchronizationJob</p>
+         * <p>ErrorCodeNotFound</p>
          */
         @NameInMap("ErrorCode")
         public String errorCode;
@@ -2246,7 +2246,7 @@ public class GetSynchronizationJobResponseBody extends TeaModel {
          * <p>The error message returned in the case of an error.</p>
          * 
          * <strong>example:</strong>
-         * <p>The specified SynchronizationJob resource: %s not found.</p>
+         * <p>Internal error</p>
          */
         @NameInMap("ErrorMessage")
         public String errorMessage;
@@ -2334,8 +2334,10 @@ public class GetSynchronizationJobResponseBody extends TeaModel {
         /**
          * <p>The direction of the synchronization job. Valid values:</p>
          * <ul>
-         * <li>ingress</li>
-         * <li>egress</li>
+         * <li><p>ingress</p>
+         * </li>
+         * <li><p>egress</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -2371,11 +2373,16 @@ public class GetSynchronizationJobResponseBody extends TeaModel {
         /**
          * <p>The status of the synchronization job. Valid values:</p>
          * <ul>
-         * <li>pending</li>
-         * <li>running</li>
-         * <li>failed</li>
-         * <li>partial_success</li>
-         * <li>success</li>
+         * <li><p>pending</p>
+         * </li>
+         * <li><p>running</p>
+         * </li>
+         * <li><p>failed</p>
+         * </li>
+         * <li><p>partial_success</p>
+         * </li>
+         * <li><p>success</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -2405,8 +2412,10 @@ public class GetSynchronizationJobResponseBody extends TeaModel {
         /**
          * <p>The type of the synchronization destination. Valid values:</p>
          * <ul>
-         * <li>identity_provider</li>
-         * <li>application</li>
+         * <li><p>identity_provider</p>
+         * </li>
+         * <li><p>application</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -2418,8 +2427,10 @@ public class GetSynchronizationJobResponseBody extends TeaModel {
         /**
          * <p>The trigger type of the synchronization. Valid values:</p>
          * <ul>
-         * <li>auto</li>
-         * <li>manual</li>
+         * <li><p>auto</p>
+         * </li>
+         * <li><p>manual</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

@@ -4,20 +4,23 @@ package com.aliyun.eiam20211201.models;
 import com.aliyun.tea.*;
 
 public class ListActionTrackEventTypesResponseBody extends TeaModel {
+    /**
+     * <p>The list of event types.</p>
+     */
     @NameInMap("EventTypes")
     public java.util.List<ListActionTrackEventTypesResponseBodyEventTypes> eventTypes;
 
     /**
-     * <p>分页查询时每页行数。</p>
+     * <p>The number of entries per page.</p>
      * 
      * <strong>example:</strong>
-     * <p>20</p>
+     * <p>100</p>
      */
     @NameInMap("MaxResults")
     public Long maxResults;
 
     /**
-     * <p>本次调用返回的查询凭证（Token）值，用于下一次翻页查询。</p>
+     * <p>The token to retrieve the next page of results.</p>
      * 
      * <strong>example:</strong>
      * <p>NTxxxexample</p>
@@ -26,7 +29,7 @@ public class ListActionTrackEventTypesResponseBody extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>本次调用返回的查询凭证（Token）值，用于上一次翻页查询。</p>
+     * <p>The token to retrieve the previous page of results.</p>
      * 
      * <strong>example:</strong>
      * <p>PTxxxexample</p>
@@ -35,6 +38,8 @@ public class ListActionTrackEventTypesResponseBody extends TeaModel {
     public String previousToken;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>0441BD79-92F3-53AA-8657-F8CE4A2B912A</p>
      */
@@ -42,6 +47,8 @@ public class ListActionTrackEventTypesResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total number of entries.</p>
+     * 
      * <strong>example:</strong>
      * <p>100</p>
      */
@@ -103,6 +110,8 @@ public class ListActionTrackEventTypesResponseBody extends TeaModel {
 
     public static class ListActionTrackEventTypesResponseBodyEventTypes extends TeaModel {
         /**
+         * <p>The event type.</p>
+         * 
          * <strong>example:</strong>
          * <p>urn:alibaba:idaas:event:user:create</p>
          */

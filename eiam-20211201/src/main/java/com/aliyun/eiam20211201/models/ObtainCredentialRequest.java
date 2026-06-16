@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ObtainCredentialRequest extends TeaModel {
     /**
-     * <p>凭据ID。</p>
+     * <p>The credential ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class ObtainCredentialRequest extends TeaModel {
     public String credentialId;
 
     /**
-     * <p>IDaaS EIAM实例的ID。</p>
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

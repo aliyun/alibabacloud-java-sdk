@@ -4,11 +4,14 @@ package com.aliyun.eiam20211201.models;
 import com.aliyun.tea.*;
 
 public class ListApplicationFederatedCredentialsForProviderResponseBody extends TeaModel {
+    /**
+     * <p>The list of application federated credentials.</p>
+     */
     @NameInMap("ApplicationFederatedCredentials")
     public java.util.List<ListApplicationFederatedCredentialsForProviderResponseBodyApplicationFederatedCredentials> applicationFederatedCredentials;
 
     /**
-     * <p>分页查询时每页行数。</p>
+     * <p>The number of entries returned on each page.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -17,7 +20,7 @@ public class ListApplicationFederatedCredentialsForProviderResponseBody extends 
     public Integer maxResults;
 
     /**
-     * <p>本次调用返回的查询凭证（Token）值，用于下一次翻页查询。</p>
+     * <p>The token to retrieve the next page of results.</p>
      * 
      * <strong>example:</strong>
      * <p>NTxxxexample</p>
@@ -26,7 +29,7 @@ public class ListApplicationFederatedCredentialsForProviderResponseBody extends 
     public String nextToken;
 
     /**
-     * <p>本次调用返回的查询凭证（Token）值，用于上一次翻页查询。</p>
+     * <p>The query token returned by this call.</p>
      * 
      * <strong>example:</strong>
      * <p>PTxxxexample</p>
@@ -35,6 +38,8 @@ public class ListApplicationFederatedCredentialsForProviderResponseBody extends 
     public String previousToken;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>0441BD79-92F3-53AA-8657-F8CE4A2B912A</p>
      */
@@ -42,6 +47,8 @@ public class ListApplicationFederatedCredentialsForProviderResponseBody extends 
     public String requestId;
 
     /**
+     * <p>The total number of entries.</p>
+     * 
      * <strong>example:</strong>
      * <p>100</p>
      */
@@ -103,7 +110,7 @@ public class ListApplicationFederatedCredentialsForProviderResponseBody extends 
 
     public static class ListApplicationFederatedCredentialsForProviderResponseBodyApplicationFederatedCredentials extends TeaModel {
         /**
-         * <p>应用联邦凭证ID</p>
+         * <p>The application federated credential ID.</p>
          * 
          * <strong>example:</strong>
          * <p>afc_dads12sadxxxxx</p>
@@ -112,7 +119,7 @@ public class ListApplicationFederatedCredentialsForProviderResponseBody extends 
         public String applicationFederatedCredentialId;
 
         /**
-         * <p>应用联邦凭证名称</p>
+         * <p>The name of the application federated credential.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -121,7 +128,7 @@ public class ListApplicationFederatedCredentialsForProviderResponseBody extends 
         public String applicationFederatedCredentialName;
 
         /**
-         * <p>应用联邦凭证类型</p>
+         * <p>The type of the application federated credential.</p>
          * 
          * <strong>example:</strong>
          * <p>oidc</p>
@@ -130,7 +137,7 @@ public class ListApplicationFederatedCredentialsForProviderResponseBody extends 
         public String applicationFederatedCredentialType;
 
         /**
-         * <p>应用ID</p>
+         * <p>The application ID.</p>
          * 
          * <strong>example:</strong>
          * <p>app_asda1dsadxxxxx</p>
@@ -139,7 +146,7 @@ public class ListApplicationFederatedCredentialsForProviderResponseBody extends 
         public String applicationId;
 
         /**
-         * <p>创建时间</p>
+         * <p>The time when the credential was created.</p>
          * 
          * <strong>example:</strong>
          * <p>1758785994982</p>
@@ -148,7 +155,7 @@ public class ListApplicationFederatedCredentialsForProviderResponseBody extends 
         public Long createTime;
 
         /**
-         * <p>应用联邦凭证描述</p>
+         * <p>The description of the application federated credential.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -157,7 +164,7 @@ public class ListApplicationFederatedCredentialsForProviderResponseBody extends 
         public String description;
 
         /**
-         * <p>应用联邦凭证提供者ID</p>
+         * <p>The federated credential provider ID.</p>
          * 
          * <strong>example:</strong>
          * <p>fcp_adasd12dxxxxx</p>
@@ -166,7 +173,7 @@ public class ListApplicationFederatedCredentialsForProviderResponseBody extends 
         public String federatedCredentialProviderId;
 
         /**
-         * <p>EAIM 实例ID</p>
+         * <p>The instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>idaas_ue2jvisn35ea5lmthk267xxxxx</p>
@@ -175,7 +182,7 @@ public class ListApplicationFederatedCredentialsForProviderResponseBody extends 
         public String instanceId;
 
         /**
-         * <p>最近使用时间</p>
+         * <p>The time when the credential was last used.</p>
          * 
          * <strong>example:</strong>
          * <p>1758785994982</p>
@@ -184,7 +191,7 @@ public class ListApplicationFederatedCredentialsForProviderResponseBody extends 
         public Long lastUsedTime;
 
         /**
-         * <p>应用联邦凭证状态</p>
+         * <p>The status of the application federated credential.</p>
          * 
          * <strong>example:</strong>
          * <p>enabled</p>
@@ -193,7 +200,7 @@ public class ListApplicationFederatedCredentialsForProviderResponseBody extends 
         public String status;
 
         /**
-         * <p>更新时间</p>
+         * <p>The time when the credential was last updated.</p>
          * 
          * <strong>example:</strong>
          * <p>1758785994982</p>

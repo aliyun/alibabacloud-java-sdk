@@ -4,17 +4,37 @@ package com.aliyun.eiam20211201.models;
 import com.aliyun.tea.*;
 
 public class ListInstancesRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>disabled</p>
+     */
+    @NameInMap("CrossRegionReplication")
+    public String crossRegionReplication;
+
+    /**
+     * <p>The edition of the license. Valid values:</p>
+     * <ul>
+     * <li>free: Free edition.</li>
+     * <li>trial: Trial edition.</li>
+     * <li>scalability: Scalability edition.</li>
+     * <li>standard: Standard edition.</li>
+     * <li>enterprise: Enterprise edition.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>free</p>
+     */
     @NameInMap("Edition")
     public String edition;
 
     /**
-     * <p>The list of instance IDs.</p>
+     * <p>Instance ID list.</p>
      */
     @NameInMap("InstanceIds")
     public java.util.List<String> instanceIds;
 
     /**
-     * <p>The number of the page to return.</p>
+     * <p>Page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -23,7 +43,7 @@ public class ListInstancesRequest extends TeaModel {
     public Long pageNumber;
 
     /**
-     * <p>The number of entries to return on each page.</p>
+     * <p>Page size.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -32,10 +52,10 @@ public class ListInstancesRequest extends TeaModel {
     public Long pageSize;
 
     /**
-     * <p>The status of the instance. Valid values:</p>
+     * <p>Instance status. Valid values:</p>
      * <ul>
-     * <li>creating</li>
-     * <li>running</li>
+     * <li>creating: Being created.</li>
+     * <li>running: Running.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -47,6 +67,14 @@ public class ListInstancesRequest extends TeaModel {
     public static ListInstancesRequest build(java.util.Map<String, ?> map) throws Exception {
         ListInstancesRequest self = new ListInstancesRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ListInstancesRequest setCrossRegionReplication(String crossRegionReplication) {
+        this.crossRegionReplication = crossRegionReplication;
+        return this;
+    }
+    public String getCrossRegionReplication() {
+        return this.crossRegionReplication;
     }
 
     public ListInstancesRequest setEdition(String edition) {

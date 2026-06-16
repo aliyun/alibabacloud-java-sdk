@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GenerateUploadAuthRequest extends TeaModel {
     /**
-     * <p>IDaaS EIAM的实例id</p>
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class GenerateUploadAuthRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>文件用途</p>
+     * <p>The purpose of the file.</p>
      * 
      * <strong>example:</strong>
      * <p>user_import</p>
@@ -24,7 +24,7 @@ public class GenerateUploadAuthRequest extends TeaModel {
     public String purpose;
 
     /**
-     * <p>文件类型，目前只支持image,最大1M</p>
+     * <p>The file type.</p>
      * 
      * <strong>example:</strong>
      * <p>image</p>

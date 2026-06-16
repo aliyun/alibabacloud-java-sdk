@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetNetworkZoneRequest extends TeaModel {
     /**
-     * <p>IDaaS EIAM实例的ID。</p>
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class GetNetworkZoneRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>IDaaS的网络区域主键id</p>
+     * <p>The network zone ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

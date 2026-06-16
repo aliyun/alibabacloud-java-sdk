@@ -5,22 +5,25 @@ import com.aliyun.tea.*;
 
 public class ListCredentialProvidersRequest extends TeaModel {
     /**
-     * <p>认证令牌提供商ID列表。</p>
+     * <p>List of credential provider IDs.</p>
      */
     @NameInMap("CredentialProviderIds")
     public java.util.List<String> credentialProviderIds;
 
     /**
-     * <p>认证令牌提供商类型列表。</p>
+     * <p>List of credential provider types.</p>
      */
     @NameInMap("CredentialProviderTypes")
     public java.util.List<String> credentialProviderTypes;
 
+    /**
+     * <p>List of filter conditions.</p>
+     */
     @NameInMap("Filter")
     public java.util.List<ListCredentialProvidersRequestFilter> filter;
 
     /**
-     * <p>IDaaS EIAM实例的ID。</p>
+     * <p>Instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -30,7 +33,7 @@ public class ListCredentialProvidersRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>分页查询时每页行数。默认值为20，最大值为100。</p>
+     * <p>Page size for paged queries.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -39,7 +42,7 @@ public class ListCredentialProvidersRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>查询凭证（Token），取值为上一次API调用返回的NextToken参数值。</p>
+     * <p>Query token.</p>
      * 
      * <strong>example:</strong>
      * <p>NTxxxxxexample</p>
@@ -48,7 +51,7 @@ public class ListCredentialProvidersRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>认证令牌提供商状态列表。</p>
+     * <p>List of credential provider statuses.</p>
      */
     @NameInMap("Statuses")
     public java.util.List<String> statuses;
@@ -116,12 +119,23 @@ public class ListCredentialProvidersRequest extends TeaModel {
 
     public static class ListCredentialProvidersRequestFilter extends TeaModel {
         /**
+         * <p>Filter condition name. Valid values:</p>
+         * <ul>
+         * <li><p>CredentialProviderName: Credential provider name.</p>
+         * </li>
+         * <li><p>CredentialProviderIdentifier: Credential provider identifier.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>CredentialProviderName</p>
          */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>List of filter condition values.</p>
+         */
         @NameInMap("Value")
         public java.util.List<String> value;
 

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class RevokeResourceServerScopesFromGroupRequest extends TeaModel {
     /**
-     * <p>IDaaS的应用资源ID。</p>
+     * <p>The ID of the resource server application.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,6 +15,7 @@ public class RevokeResourceServerScopesFromGroupRequest extends TeaModel {
     public String applicationId;
 
     /**
+     * <p>The group ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -24,7 +25,7 @@ public class RevokeResourceServerScopesFromGroupRequest extends TeaModel {
     public String groupId;
 
     /**
-     * <p>IDaaS EIAM实例的ID。</p>
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -34,7 +35,7 @@ public class RevokeResourceServerScopesFromGroupRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>ResourceServer权限ID。</p>
+     * <p>A list of scope permission IDs for the resource server.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListUsersForApplicationRequest extends TeaModel {
     /**
-     * <p>The ID of the application.</p>
+     * <p>The application ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -24,7 +24,7 @@ public class ListUsersForApplicationRequest extends TeaModel {
     public String applicationRoleId;
 
     /**
-     * <p>The ID of the instance.</p>
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -34,7 +34,7 @@ public class ListUsersForApplicationRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The number of the page to return</p>
+     * <p>The page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -43,7 +43,7 @@ public class ListUsersForApplicationRequest extends TeaModel {
     public Long pageNumber;
 
     /**
-     * <p>The number of entries to return on each page.</p>
+     * <p>The number of entries per page.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -52,7 +52,7 @@ public class ListUsersForApplicationRequest extends TeaModel {
     public Long pageSize;
 
     /**
-     * <p>The IDs of the accounts. You can query a maximum of 100 accounts at a time.</p>
+     * <p>The list of account IDs. A maximum of 100 account IDs are supported in a single request.</p>
      * 
      * <strong>example:</strong>
      * <p>user_d6sbsuumeta4h66ec3il7yxxxx</p>

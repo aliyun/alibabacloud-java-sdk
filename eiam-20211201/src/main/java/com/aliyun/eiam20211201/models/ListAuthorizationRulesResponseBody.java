@@ -4,11 +4,14 @@ package com.aliyun.eiam20211201.models;
 import com.aliyun.tea.*;
 
 public class ListAuthorizationRulesResponseBody extends TeaModel {
+    /**
+     * <p>The list of authorization rules.</p>
+     */
     @NameInMap("AuthorizationRules")
     public java.util.List<ListAuthorizationRulesResponseBodyAuthorizationRules> authorizationRules;
 
     /**
-     * <p>分页查询时每页行数。</p>
+     * <p>The number of entries per page.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -17,7 +20,7 @@ public class ListAuthorizationRulesResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>本次调用返回的查询凭证（Token）值，用于下一次翻页查询。</p>
+     * <p>The token returned by this call. Use it in the next call to retrieve the next page of results.</p>
      * 
      * <strong>example:</strong>
      * <p>NTxxxexample</p>
@@ -26,6 +29,8 @@ public class ListAuthorizationRulesResponseBody extends TeaModel {
     public String nextToken;
 
     /**
+     * <p>The ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>0441BD79-92F3-53AA-8657-F8CE4A2B912A</p>
      */
@@ -33,6 +38,8 @@ public class ListAuthorizationRulesResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total number of entries in the list.</p>
+     * 
      * <strong>example:</strong>
      * <p>100</p>
      */
@@ -86,7 +93,13 @@ public class ListAuthorizationRulesResponseBody extends TeaModel {
 
     public static class ListAuthorizationRulesResponseBodyAuthorizationRules extends TeaModel {
         /**
-         * <p>授权资源范围，枚举值：global（项目下所有资源）、custom（指定资源）。</p>
+         * <p>The scope of resources to authorize. Valid values:</p>
+         * <ul>
+         * <li><p>global: global resources in the project</p>
+         * </li>
+         * <li><p>custom: resources in a specific project</p>
+         * </li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>global</p>
@@ -95,7 +108,13 @@ public class ListAuthorizationRulesResponseBody extends TeaModel {
         public String authorizationResourceScope;
 
         /**
-         * <p>授权规则的创建类型，枚举类型：user_created（用户创建)，approval_created（审批创建)。</p>
+         * <p>The type of authorization rule creation. Valid values:</p>
+         * <ul>
+         * <li><p>system_init: created by the system</p>
+         * </li>
+         * <li><p>user_custom: created by a user</p>
+         * </li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>user_custom</p>
@@ -104,7 +123,7 @@ public class ListAuthorizationRulesResponseBody extends TeaModel {
         public String authorizationRuleCreationType;
 
         /**
-         * <p>授权规则标识。</p>
+         * <p>The ID of the authorization rule.</p>
          * 
          * <strong>example:</strong>
          * <p>arrule_01kf143ug06fg7m9f43u7vahxxxx</p>
@@ -113,7 +132,7 @@ public class ListAuthorizationRulesResponseBody extends TeaModel {
         public String authorizationRuleId;
 
         /**
-         * <p>授权规则名称。</p>
+         * <p>The name of the authorization rule.</p>
          * 
          * <strong>example:</strong>
          * <p>test-name</p>
@@ -122,25 +141,46 @@ public class ListAuthorizationRulesResponseBody extends TeaModel {
         public String authorizationRuleName;
 
         /**
-         * <p>授权规则主体ID，主体类型对应的主体ID。</p>
+         * <p>The ID of the subject associated with the authorization rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>user_d6sbsuumeta4h66ec3il7yxxxx</p>
          */
         @NameInMap("AuthorizationRuleSubjectId")
         public String authorizationRuleSubjectId;
 
         /**
-         * <p>授权规则主体范围，枚举类型：shared（共享型，即支持所有主体，包括账户、应用），exclusive（专属类型）</p>
+         * <p>The scope of subjects for the authorization rule. Valid values:</p>
+         * <ul>
+         * <li><p>shared: applies to all subjects, such as accounts and applications</p>
+         * </li>
+         * <li><p>exclusive: applies only to a specific subject</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>shared</p>
          */
         @NameInMap("AuthorizationRuleSubjectScope")
         public String authorizationRuleSubjectScope;
 
         /**
-         * <p>授权规则主体类型，枚举类型：application（应用)，user（账户)。</p>
+         * <p>The type of subject associated with the authorization rule. This parameter takes effect only when AuthorizationRuleSubjectScope is exclusive. Valid values:</p>
+         * <ul>
+         * <li><p>application</p>
+         * </li>
+         * <li><p>user</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>user</p>
          */
         @NameInMap("AuthorizationRuleSubjectType")
         public String authorizationRuleSubjectType;
 
         /**
-         * <p>创建时间，Unix时间戳格式，单位为毫秒。</p>
+         * <p>The time when the authorization rule was created, in Unix timestamp format. Unit: milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1652085686179</p>
@@ -149,7 +189,7 @@ public class ListAuthorizationRulesResponseBody extends TeaModel {
         public Long createTime;
 
         /**
-         * <p>授权规则描述，长度限制为128字符。</p>
+         * <p>The description of the authorization rule.</p>
          * 
          * <strong>example:</strong>
          * <p>this is a test</p>
@@ -158,7 +198,7 @@ public class ListAuthorizationRulesResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>实例ID。</p>
+         * <p>The ID of the instance.</p>
          * 
          * <strong>example:</strong>
          * <p>idaas_ue2jvisn35ea5lmthk267xxxxx</p>
@@ -167,7 +207,7 @@ public class ListAuthorizationRulesResponseBody extends TeaModel {
         public String instanceId;
 
         /**
-         * <p>授权规则关联的项目标识。</p>
+         * <p>The ID of the project associated with the authorization rule.</p>
          * 
          * <strong>example:</strong>
          * <p>iprj_system_default</p>
@@ -176,7 +216,13 @@ public class ListAuthorizationRulesResponseBody extends TeaModel {
         public String projectId;
 
         /**
-         * <p>授权规则状态，枚举值：enabled（启用）、disabled（禁用）。</p>
+         * <p>The status of the authorization rule. Valid values:</p>
+         * <ul>
+         * <li><p>enabled</p>
+         * </li>
+         * <li><p>disabled</p>
+         * </li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>enabled</p>
@@ -185,7 +231,7 @@ public class ListAuthorizationRulesResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>最近一次更新时间，Unix时间戳格式，单位为毫秒。</p>
+         * <p>The time when the authorization rule was last updated, in Unix timestamp format. Unit: milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1652085686179</p>

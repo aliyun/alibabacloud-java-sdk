@@ -4,6 +4,12 @@ package com.aliyun.eiam20211201.models;
 import com.aliyun.tea.*;
 
 public class ListDomainsRequest extends TeaModel {
+    /**
+     * <p>The brand ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>brand_xxxx</p>
+     */
     @NameInMap("BrandId")
     public String brandId;
 

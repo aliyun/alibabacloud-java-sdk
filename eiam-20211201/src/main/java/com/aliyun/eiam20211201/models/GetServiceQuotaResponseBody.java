@@ -5,12 +5,17 @@ import com.aliyun.tea.*;
 
 public class GetServiceQuotaResponseBody extends TeaModel {
     /**
+     * <p>The ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>0441BD79-92F3-53AA-8657-F8CE4A2B912A</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The service quota.</p>
+     */
     @NameInMap("ServiceQuota")
     public GetServiceQuotaResponseBodyServiceQuota serviceQuota;
 
@@ -37,7 +42,7 @@ public class GetServiceQuotaResponseBody extends TeaModel {
 
     public static class GetServiceQuotaResponseBodyServiceQuota extends TeaModel {
         /**
-         * <p>Quota 配额的唯一标识。</p>
+         * <p>The unique identifier of the quota.</p>
          * 
          * <strong>example:</strong>
          * <p>instanceTrialNumber</p>
@@ -46,7 +51,7 @@ public class GetServiceQuotaResponseBody extends TeaModel {
         public String quotaType;
 
         /**
-         * <p>Quota 配额的值。</p>
+         * <p>The value of the quota.</p>
          * 
          * <strong>example:</strong>
          * <p>5</p>
@@ -55,7 +60,7 @@ public class GetServiceQuotaResponseBody extends TeaModel {
         public Long quotaValue;
 
         /**
-         * <p>Quota 配额的当前用量。</p>
+         * <p>The current usage of the quota.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>

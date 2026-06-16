@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateFederatedCredentialProviderRequest extends TeaModel {
     /**
-     * <p>联邦凭证提供方ID</p>
+     * <p>The ID of the federated credential provider.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class UpdateFederatedCredentialProviderRequest extends TeaModel {
     public String federatedCredentialProviderId;
 
     /**
-     * <p>联邦凭证提供方名称</p>
+     * <p>The name of the federated credential provider.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,7 +25,7 @@ public class UpdateFederatedCredentialProviderRequest extends TeaModel {
     public String federatedCredentialProviderName;
 
     /**
-     * <p>IDaaS EIAM实例的ID。</p>
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -35,7 +35,7 @@ public class UpdateFederatedCredentialProviderRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>网络端点ID</p>
+     * <p>The ID of the network access endpoint.</p>
      * 
      * <strong>example:</strong>
      * <p>nae_public</p>
@@ -44,19 +44,19 @@ public class UpdateFederatedCredentialProviderRequest extends TeaModel {
     public String networkAccessEndpointId;
 
     /**
-     * <p>OIDC配置</p>
+     * <p>The OpenID Connect (OIDC) configuration.</p>
      */
     @NameInMap("OidcProviderConfig")
     public UpdateFederatedCredentialProviderRequestOidcProviderConfig oidcProviderConfig;
 
     /**
-     * <p>PKCS7配置</p>
+     * <p>The PKCS7 configuration.</p>
      */
     @NameInMap("Pkcs7ProviderConfig")
     public UpdateFederatedCredentialProviderRequestPkcs7ProviderConfig pkcs7ProviderConfig;
 
     /**
-     * <p>私有CA配置</p>
+     * <p>The configuration of the private certificate authority (CA).</p>
      */
     @NameInMap("PrivateCaProviderConfig")
     public UpdateFederatedCredentialProviderRequestPrivateCaProviderConfig privateCaProviderConfig;
@@ -123,11 +123,14 @@ public class UpdateFederatedCredentialProviderRequest extends TeaModel {
     }
 
     public static class UpdateFederatedCredentialProviderRequestOidcProviderConfig extends TeaModel {
+        /**
+         * <p>The list of audiences.</p>
+         */
         @NameInMap("Audiences")
         public java.util.List<String> audiences;
 
         /**
-         * <p>Jwks来源</p>
+         * <p>The source of the JSON Web Key Set (JWKS).</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -137,7 +140,7 @@ public class UpdateFederatedCredentialProviderRequest extends TeaModel {
         public String jwksSource;
 
         /**
-         * <p>JWKS 端点</p>
+         * <p>JWKS endpoint</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://example.com/jwks">https://example.com/jwks</a></p>
@@ -146,7 +149,7 @@ public class UpdateFederatedCredentialProviderRequest extends TeaModel {
         public String jwksUri;
 
         /**
-         * <p>静态获取的jwks</p>
+         * <p>The statically obtained JWKS.</p>
          * 
          * <strong>example:</strong>
          * <p>{
@@ -165,7 +168,7 @@ public class UpdateFederatedCredentialProviderRequest extends TeaModel {
         public String staticJwks;
 
         /**
-         * <p>信任条件</p>
+         * <p>The trust condition.</p>
          * 
          * <strong>example:</strong>
          * <p>IsNullOrEmpty(&quot;jwt.issuer&quot;)</p>
@@ -222,7 +225,7 @@ public class UpdateFederatedCredentialProviderRequest extends TeaModel {
 
     public static class UpdateFederatedCredentialProviderRequestPkcs7ProviderConfigCertificates extends TeaModel {
         /**
-         * <p>Root证书内容</p>
+         * <p>The content of the root certificate.</p>
          * 
          * <strong>example:</strong>
          * <p>-----BEGIN CERTIFICATE-----
@@ -249,13 +252,13 @@ public class UpdateFederatedCredentialProviderRequest extends TeaModel {
 
     public static class UpdateFederatedCredentialProviderRequestPkcs7ProviderConfig extends TeaModel {
         /**
-         * <p>pkcs7证书列表</p>
+         * <p>The list of PKCS7 certificates.</p>
          */
         @NameInMap("Certificates")
         public java.util.List<UpdateFederatedCredentialProviderRequestPkcs7ProviderConfigCertificates> certificates;
 
         /**
-         * <p>CMS验证模式</p>
+         * <p>The Cryptographic Message Syntax (CMS) verification mode.</p>
          * 
          * <strong>example:</strong>
          * <p>cert</p>
@@ -264,7 +267,7 @@ public class UpdateFederatedCredentialProviderRequest extends TeaModel {
         public String cmsVerificationMode;
 
         /**
-         * <p>签名有效期, 单位秒，1200</p>
+         * <p>The validity period of the signature.</p>
          * 
          * <strong>example:</strong>
          * <p>1200</p>
@@ -273,6 +276,8 @@ public class UpdateFederatedCredentialProviderRequest extends TeaModel {
         public Long signatureEffectiveTime;
 
         /**
+         * <p>The expression to obtain the signing time.</p>
+         * 
          * <strong>example:</strong>
          * <p>pkcs7.signingTime</p>
          */
@@ -280,7 +285,7 @@ public class UpdateFederatedCredentialProviderRequest extends TeaModel {
         public String signingTimeValueExpression;
 
         /**
-         * <p>证书信任锚点来源</p>
+         * <p>The source of the certificate trust anchor.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -290,7 +295,7 @@ public class UpdateFederatedCredentialProviderRequest extends TeaModel {
         public String trustAnchorSource;
 
         /**
-         * <p>信任条件</p>
+         * <p>The trust condition.</p>
          * 
          * <strong>example:</strong>
          * <p>IsNullOrEmpty(&quot;jwt.issuer&quot;)</p>
@@ -355,7 +360,7 @@ public class UpdateFederatedCredentialProviderRequest extends TeaModel {
 
     public static class UpdateFederatedCredentialProviderRequestPrivateCaProviderConfigCertificates extends TeaModel {
         /**
-         * <p>Root证书内容</p>
+         * <p>The content of the root certificate.</p>
          * 
          * <strong>example:</strong>
          * <p>-----BEGIN CERTIFICATE-----
@@ -382,13 +387,13 @@ public class UpdateFederatedCredentialProviderRequest extends TeaModel {
 
     public static class UpdateFederatedCredentialProviderRequestPrivateCaProviderConfig extends TeaModel {
         /**
-         * <p>Root证书列表</p>
+         * <p>The list of root certificates.</p>
          */
         @NameInMap("Certificates")
         public java.util.List<UpdateFederatedCredentialProviderRequestPrivateCaProviderConfigCertificates> certificates;
 
         /**
-         * <p>Root证书获取方式</p>
+         * <p>The method to obtain the root certificate.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -398,7 +403,7 @@ public class UpdateFederatedCredentialProviderRequest extends TeaModel {
         public String trustAnchorSource;
 
         /**
-         * <p>Root证书的信任条件</p>
+         * <p>The trust condition for the root certificate.</p>
          * 
          * <strong>example:</strong>
          * <p>IsNullOrEmpty(&quot;jwt.issuer&quot;)</p>

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class AddApplicationAccountToUserResponseBody extends TeaModel {
     /**
+     * <p>The ID of the application account.</p>
+     * 
      * <strong>example:</strong>
      * <p>aac_m6z7awz5kresi2ezgajsbkxxxx</p>
      */
@@ -12,6 +14,8 @@ public class AddApplicationAccountToUserResponseBody extends TeaModel {
     public String applicationAccountId;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>0441BD79-92F3-53AA-8657-F8CE4A2B912A</p>
      */

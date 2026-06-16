@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class CreateApplicationClientSecretResponseBody extends TeaModel {
     /**
-     * <p>The information about the client key.</p>
+     * <p>The information about the client secret.</p>
      */
     @NameInMap("ApplicationClientSecret")
     public CreateApplicationClientSecretResponseBodyApplicationClientSecret applicationClientSecret;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>0441BD79-92F3-53AA-8657-F8CE4A2B912A</p>
@@ -51,7 +51,7 @@ public class CreateApplicationClientSecretResponseBody extends TeaModel {
         public String clientId;
 
         /**
-         * <p>The client key secret of the application.</p>
+         * <p>The value of the client secret.</p>
          * 
          * <strong>example:</strong>
          * <p>CSEHDcHcrUKHw1CuxkJEHPveWRXBGqVqRsxxxx</p>
@@ -60,7 +60,7 @@ public class CreateApplicationClientSecretResponseBody extends TeaModel {
         public String clientSecret;
 
         /**
-         * <p>The client key ID of the application.</p>
+         * <p>The ID of the client secret.</p>
          * 
          * <strong>example:</strong>
          * <p>sci_k52x2ru63rlkflina5utgkxxxx</p>

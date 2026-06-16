@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DisableAuthorizationRuleRequest extends TeaModel {
     /**
-     * <p>授权规则标识。</p>
+     * <p>The authorization rule ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,6 +15,7 @@ public class DisableAuthorizationRuleRequest extends TeaModel {
     public String authorizationRuleId;
 
     /**
+     * <p>A client token to ensure the idempotence of the request. Generate a unique value from your client for this parameter. The value can contain only ASCII characters and must be no more than 64 characters in length. For more information, see <a href="https://www.alibabacloud.com/help/zh/ecs/developer-reference/how-to-ensure-idempotence">How to ensure idempotence</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -24,7 +25,7 @@ public class DisableAuthorizationRuleRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>IDaaS EIAM实例的ID。</p>
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

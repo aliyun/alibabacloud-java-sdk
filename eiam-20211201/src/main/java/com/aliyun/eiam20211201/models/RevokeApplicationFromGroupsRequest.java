@@ -24,7 +24,7 @@ public class RevokeApplicationFromGroupsRequest extends TeaModel {
     public String applicationRoleId;
 
     /**
-     * <p>The group IDs. You can specify up to 100 group IDs at a time.</p>
+     * <p>A list of group IDs. A single operation supports up to 100 group IDs.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

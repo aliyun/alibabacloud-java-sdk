@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateCredentialProviderDescriptionRequest extends TeaModel {
     /**
-     * <p>认证令牌提供商ID。</p>
+     * <p>The ID of the credential provider.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,10 @@ public class UpdateCredentialProviderDescriptionRequest extends TeaModel {
     public String credentialProviderId;
 
     /**
-     * <p>描述。</p>
+     * <p>A description of the credential provider.</p>
+     * <blockquote>
+     * <p>The description can be up to 128 characters long.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>This is an example description</p>
@@ -24,7 +27,7 @@ public class UpdateCredentialProviderDescriptionRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>IDaaS EIAM实例的ID。</p>
+     * <p>The ID of the instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

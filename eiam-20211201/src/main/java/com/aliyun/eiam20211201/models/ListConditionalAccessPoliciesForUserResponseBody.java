@@ -4,10 +4,15 @@ package com.aliyun.eiam20211201.models;
 import com.aliyun.tea.*;
 
 public class ListConditionalAccessPoliciesForUserResponseBody extends TeaModel {
+    /**
+     * <p>A collection of conditional access policies.</p>
+     */
     @NameInMap("ConditionalAccessPolicies")
     public java.util.List<ListConditionalAccessPoliciesForUserResponseBodyConditionalAccessPolicies> conditionalAccessPolicies;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>0441BD79-92F3-53AA-8657-F8CE4A2B912A</p>
      */
@@ -37,13 +42,13 @@ public class ListConditionalAccessPoliciesForUserResponseBody extends TeaModel {
 
     public static class ListConditionalAccessPoliciesForUserResponseBodyConditionalAccessPoliciesConditionsConfigApplications extends TeaModel {
         /**
-         * <p>排除的应用</p>
+         * <p>The excluded applications.</p>
          */
         @NameInMap("ExcludeApplications")
         public java.util.List<String> excludeApplications;
 
         /**
-         * <p>选择的应用</p>
+         * <p>The included applications.</p>
          */
         @NameInMap("IncludeApplications")
         public java.util.List<String> includeApplications;
@@ -73,13 +78,13 @@ public class ListConditionalAccessPoliciesForUserResponseBody extends TeaModel {
 
     public static class ListConditionalAccessPoliciesForUserResponseBodyConditionalAccessPoliciesConditionsConfigNetworkZones extends TeaModel {
         /**
-         * <p>排除的网络区域</p>
+         * <p>The excluded network zones.</p>
          */
         @NameInMap("ExcludeNetworkZones")
         public java.util.List<String> excludeNetworkZones;
 
         /**
-         * <p>选择的网络区域</p>
+         * <p>The included network zones.</p>
          */
         @NameInMap("IncludeNetworkZones")
         public java.util.List<String> includeNetworkZones;
@@ -109,37 +114,37 @@ public class ListConditionalAccessPoliciesForUserResponseBody extends TeaModel {
 
     public static class ListConditionalAccessPoliciesForUserResponseBodyConditionalAccessPoliciesConditionsConfigUsers extends TeaModel {
         /**
-         * <p>排除的用户组</p>
+         * <p>The excluded groups.</p>
          */
         @NameInMap("ExcludeGroups")
         public java.util.List<String> excludeGroups;
 
         /**
-         * <p>排除的组织</p>
+         * <p>The excluded organizations.</p>
          */
         @NameInMap("ExcludeOrganizationalUnits")
         public java.util.List<String> excludeOrganizationalUnits;
 
         /**
-         * <p>排除的用户</p>
+         * <p>The excluded users.</p>
          */
         @NameInMap("ExcludeUsers")
         public java.util.List<String> excludeUsers;
 
         /**
-         * <p>选择的用户组</p>
+         * <p>The included groups.</p>
          */
         @NameInMap("IncludeGroups")
         public java.util.List<String> includeGroups;
 
         /**
-         * <p>选择的组织</p>
+         * <p>The included organizations.</p>
          */
         @NameInMap("IncludeOrganizationalUnits")
         public java.util.List<String> includeOrganizationalUnits;
 
         /**
-         * <p>选择的用户</p>
+         * <p>The included users.</p>
          */
         @NameInMap("IncludeUsers")
         public java.util.List<String> includeUsers;
@@ -201,19 +206,19 @@ public class ListConditionalAccessPoliciesForUserResponseBody extends TeaModel {
 
     public static class ListConditionalAccessPoliciesForUserResponseBodyConditionalAccessPoliciesConditionsConfig extends TeaModel {
         /**
-         * <p>条件访问策略目标应用</p>
+         * <p>The target applications of the conditional access policy.</p>
          */
         @NameInMap("Applications")
         public ListConditionalAccessPoliciesForUserResponseBodyConditionalAccessPoliciesConditionsConfigApplications applications;
 
         /**
-         * <p>条件访问策略网络区域</p>
+         * <p>The network zones of the conditional access policy.</p>
          */
         @NameInMap("NetworkZones")
         public ListConditionalAccessPoliciesForUserResponseBodyConditionalAccessPoliciesConditionsConfigNetworkZones networkZones;
 
         /**
-         * <p>条件访问策略目标用户</p>
+         * <p>The target users of the conditional access policy.</p>
          */
         @NameInMap("Users")
         public ListConditionalAccessPoliciesForUserResponseBodyConditionalAccessPoliciesConditionsConfigUsers users;
@@ -251,6 +256,8 @@ public class ListConditionalAccessPoliciesForUserResponseBody extends TeaModel {
 
     public static class ListConditionalAccessPoliciesForUserResponseBodyConditionalAccessPoliciesDecisionConfig extends TeaModel {
         /**
+         * <p>Indicates whether session reuse is enabled.</p>
+         * 
          * <strong>example:</strong>
          * <p>disabled</p>
          */
@@ -258,7 +265,7 @@ public class ListConditionalAccessPoliciesForUserResponseBody extends TeaModel {
         public String activeSessionReuseStatus;
 
         /**
-         * <p>IDaaS EIAM 条件访问策略决策Action</p>
+         * <p>The action of the conditional access policy.</p>
          * 
          * <strong>example:</strong>
          * <p>allow</p>
@@ -267,7 +274,7 @@ public class ListConditionalAccessPoliciesForUserResponseBody extends TeaModel {
         public String effect;
 
         /**
-         * <p>IDaaS EIAM 条件访问策略重复认证时间间隔(秒)</p>
+         * <p>The interval for repeated authentication, in seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>300</p>
@@ -276,13 +283,13 @@ public class ListConditionalAccessPoliciesForUserResponseBody extends TeaModel {
         public Long mfaAuthenticationIntervalSeconds;
 
         /**
-         * <p>IDaaS EIAM 条件访问策略允许使用的mfa类型</p>
+         * <p>The MFA methods allowed by the conditional access policy.</p>
          */
         @NameInMap("MfaAuthenticationMethods")
         public java.util.List<String> mfaAuthenticationMethods;
 
         /**
-         * <p>IDaaS EIAM 条件访问策略Mfa类型</p>
+         * <p>The multi-factor authentication (MFA) type of the conditional access policy.</p>
          * 
          * <strong>example:</strong>
          * <p>directly_access</p>
@@ -339,7 +346,7 @@ public class ListConditionalAccessPoliciesForUserResponseBody extends TeaModel {
 
     public static class ListConditionalAccessPoliciesForUserResponseBodyConditionalAccessPolicies extends TeaModel {
         /**
-         * <p>IDaaS EIAM 条件访问策略Id</p>
+         * <p>The conditional access policy ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cap_m5etun43kejxphsbke6mjxxxxx</p>
@@ -348,13 +355,16 @@ public class ListConditionalAccessPoliciesForUserResponseBody extends TeaModel {
         public String conditionalAccessPolicyId;
 
         /**
-         * <p>IDaaS EIAM 条件访问策略名称</p>
+         * <p>The name of the conditional access policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>policyName</p>
          */
         @NameInMap("ConditionalAccessPolicyName")
         public String conditionalAccessPolicyName;
 
         /**
-         * <p>IDaaS EIAM 条件访问策略类型</p>
+         * <p>The type of the conditional access policy.</p>
          * 
          * <strong>example:</strong>
          * <p>arn:alibaba:idaas:authn:access:policy:system</p>
@@ -363,13 +373,13 @@ public class ListConditionalAccessPoliciesForUserResponseBody extends TeaModel {
         public String conditionalAccessPolicyType;
 
         /**
-         * <p>IDaaS EIAM 条件访问策略内容</p>
+         * <p>The content of the conditional access policy.</p>
          */
         @NameInMap("ConditionsConfig")
         public ListConditionalAccessPoliciesForUserResponseBodyConditionalAccessPoliciesConditionsConfig conditionsConfig;
 
         /**
-         * <p>创建时间</p>
+         * <p>The creation time.</p>
          * 
          * <strong>example:</strong>
          * <p>1741857554000</p>
@@ -378,13 +388,13 @@ public class ListConditionalAccessPoliciesForUserResponseBody extends TeaModel {
         public Long createTime;
 
         /**
-         * <p>IDaaS EIAM 条件访问策略执行Action</p>
+         * <p>The execution configuration of the conditional access policy.</p>
          */
         @NameInMap("DecisionConfig")
         public ListConditionalAccessPoliciesForUserResponseBodyConditionalAccessPoliciesDecisionConfig decisionConfig;
 
         /**
-         * <p>IDaaS EIAM 条件访问策略执行类型</p>
+         * <p>The execution type of the conditional access policy.</p>
          * 
          * <strong>example:</strong>
          * <p>enforcement</p>
@@ -393,13 +403,16 @@ public class ListConditionalAccessPoliciesForUserResponseBody extends TeaModel {
         public String decisionType;
 
         /**
-         * <p>IDaaS EIAM 条件访问策略描述</p>
+         * <p>The description of the conditional access policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testPolicy</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
-         * <p>IDaaS EIAM 条件访问策略执行点</p>
+         * <p>The policy enforcement point.</p>
          * 
          * <strong>example:</strong>
          * <p>arn:alibaba:idaas:authn:access:rule:eval_at:after_step1</p>
@@ -408,7 +421,7 @@ public class ListConditionalAccessPoliciesForUserResponseBody extends TeaModel {
         public String evaluateAt;
 
         /**
-         * <p>IDaaS EIAM 实例Id</p>
+         * <p>The instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>idaas_oynbcyaaejuik6b37eldz4xxxx</p>
@@ -417,7 +430,7 @@ public class ListConditionalAccessPoliciesForUserResponseBody extends TeaModel {
         public String instanceId;
 
         /**
-         * <p>更新时间</p>
+         * <p>The last update time.</p>
          * 
          * <strong>example:</strong>
          * <p>1741857554000</p>
@@ -426,7 +439,7 @@ public class ListConditionalAccessPoliciesForUserResponseBody extends TeaModel {
         public Long lastUpdatedTime;
 
         /**
-         * <p>优先级</p>
+         * <p>The priority.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -435,7 +448,7 @@ public class ListConditionalAccessPoliciesForUserResponseBody extends TeaModel {
         public Integer priority;
 
         /**
-         * <p>IDaaS EIAM 条件访问策略启用禁用状态</p>
+         * <p>The status of the conditional access policy.</p>
          * 
          * <strong>example:</strong>
          * <p>disabled</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateDomainRequest extends TeaModel {
     /**
-     * <p>The domain name of the website.</p>
+     * <p>The domain name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class CreateDomainRequest extends TeaModel {
     public String domain;
 
     /**
-     * <p>Registration information parameters.</p>
+     * <p>The parameters for ICP filing information.</p>
      */
     @NameInMap("Filing")
     public CreateDomainRequestFiling filing;
@@ -61,10 +61,10 @@ public class CreateDomainRequest extends TeaModel {
 
     public static class CreateDomainRequestFiling extends TeaModel {
         /**
-         * <p>Record number associated with the domain name.</p>
+         * <p>The ICP filing number associated with the domain name.</p>
          * 
          * <strong>example:</strong>
-         * <p>浙xx-xxxxxx</p>
+         * <p>xICPxxxxxx-xx</p>
          */
         @NameInMap("IcpNumber")
         public String icpNumber;

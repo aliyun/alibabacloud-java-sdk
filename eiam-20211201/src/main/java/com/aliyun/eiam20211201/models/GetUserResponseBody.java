@@ -294,9 +294,12 @@ public class GetUserResponseBody extends TeaModel {
         /**
          * <p>The time when the password of the account expires. This value is a UNIX timestamp. Unit: milliseconds.</p>
          * <ul>
-         * <li>If the value -1 is returned, the password does not expire.</li>
-         * <li>If no value is returned, the password does not expire.</li>
-         * <li>If a UNIX timestamp is returned, the password expires at the indicated point of time.</li>
+         * <li><p>If the value -1 is returned, the password does not expire.</p>
+         * </li>
+         * <li><p>If no value is returned, the password does not expire.</p>
+         * </li>
+         * <li><p>If a UNIX timestamp is returned, the password expires at the indicated point of time.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -371,8 +374,10 @@ public class GetUserResponseBody extends TeaModel {
         /**
          * <p>The status of the account. Valid values:</p>
          * <ul>
-         * <li>enabled: The account is enabled.</li>
-         * <li>disabled: The account is disabled.</li>
+         * <li><p>enabled: The account is enabled.</p>
+         * </li>
+         * <li><p>disabled: The account is disabled.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -422,10 +427,14 @@ public class GetUserResponseBody extends TeaModel {
         /**
          * <p>The source type of the account. Valid values:</p>
          * <ul>
-         * <li>build_in: The account was created in IDaaS.</li>
-         * <li>ding_talk: The account was imported from DingTalk.</li>
-         * <li>ad: The account was imported from Microsoft Active Directory (AD).</li>
-         * <li>ldap: The account was imported from a Lightweight Directory Access Protocol (LDAP) service.</li>
+         * <li><p>build_in: The account was created in IDaaS.</p>
+         * </li>
+         * <li><p>ding_talk: The account was imported from DingTalk.</p>
+         * </li>
+         * <li><p>ad: The account was imported from Microsoft Active Directory (AD).</p>
+         * </li>
+         * <li><p>ldap: The account was imported from a Lightweight Directory Access Protocol (LDAP) service.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

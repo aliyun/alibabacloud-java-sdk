@@ -4,10 +4,15 @@ package com.aliyun.eiam20211201.models;
 import com.aliyun.tea.*;
 
 public class CheckApplicationProvisioningUserPrimaryOrganizationalUnitResponseBody extends TeaModel {
+    /**
+     * <p>The authorization information.</p>
+     */
     @NameInMap("CheckApplicationProvisioningUserPrimaryOuResult")
     public CheckApplicationProvisioningUserPrimaryOrganizationalUnitResponseBodyCheckApplicationProvisioningUserPrimaryOuResult checkApplicationProvisioningUserPrimaryOuResult;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>0441BD79-92F3-53AA-8657-F8CE4A2B912A</p>
      */
@@ -37,13 +42,13 @@ public class CheckApplicationProvisioningUserPrimaryOrganizationalUnitResponseBo
 
     public static class CheckApplicationProvisioningUserPrimaryOrganizationalUnitResponseBodyCheckApplicationProvisioningUserPrimaryOuResult extends TeaModel {
         /**
-         * <p>是否授权</p>
+         * <p>Indicates if the authorization is granted.</p>
          */
         @NameInMap("AllowAuthorization")
         public Boolean allowAuthorization;
 
         /**
-         * <p>IDaaS EIAM 实例Id</p>
+         * <p>The application ID.</p>
          * 
          * <strong>example:</strong>
          * <p>app_mkv7rgt4d7i4u7zqtzev2mxxxx</p>
@@ -52,7 +57,7 @@ public class CheckApplicationProvisioningUserPrimaryOrganizationalUnitResponseBo
         public String applicationId;
 
         /**
-         * <p>IDaaS EIAM 实例Id</p>
+         * <p>The instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>idaas_ue2jvisn35ea5lmthk267xxxxx</p>

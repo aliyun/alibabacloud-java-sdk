@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetInstanceModuleInfoRequest extends TeaModel {
     /**
-     * <p>IDaaS EIAM实例的ID。</p>
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class GetInstanceModuleInfoRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>一级模块标识，必填</p>
+     * <p>The identifier of the primary module.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

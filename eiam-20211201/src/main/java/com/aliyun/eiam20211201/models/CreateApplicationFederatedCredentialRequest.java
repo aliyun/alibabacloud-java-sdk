@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateApplicationFederatedCredentialRequest extends TeaModel {
     /**
-     * <p>应用联邦凭证名称</p>
+     * <p>The name of the application federated credential.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class CreateApplicationFederatedCredentialRequest extends TeaModel {
     public String applicationFederatedCredentialName;
 
     /**
-     * <p>应用联邦凭证类型</p>
+     * <p>The type of the application federated credential.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,7 +25,7 @@ public class CreateApplicationFederatedCredentialRequest extends TeaModel {
     public String applicationFederatedCredentialType;
 
     /**
-     * <p>IDaaS的应用资源ID。</p>
+     * <p>The application ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -35,22 +35,22 @@ public class CreateApplicationFederatedCredentialRequest extends TeaModel {
     public String applicationId;
 
     /**
-     * <p>属性映射</p>
+     * <p>The attribute mappings.</p>
      */
     @NameInMap("AttributeMappings")
     public java.util.List<CreateApplicationFederatedCredentialRequestAttributeMappings> attributeMappings;
 
     /**
-     * <p>描述</p>
+     * <p>The description.</p>
      * 
      * <strong>example:</strong>
-     * <p>描述</p>
+     * <p>description_text</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
-     * <p>联邦凭证提供方ID</p>
+     * <p>The ID of the federated credential provider.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -60,7 +60,7 @@ public class CreateApplicationFederatedCredentialRequest extends TeaModel {
     public String federatedCredentialProviderId;
 
     /**
-     * <p>IDaaS EIAM实例的ID。</p>
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -70,7 +70,7 @@ public class CreateApplicationFederatedCredentialRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>校验条件</p>
+     * <p>The verification condition.</p>
      * 
      * <strong>example:</strong>
      * <p>IsNullOrEmpty(&quot;jwt.issuer&quot;)</p>
@@ -149,7 +149,7 @@ public class CreateApplicationFederatedCredentialRequest extends TeaModel {
 
     public static class CreateApplicationFederatedCredentialRequestAttributeMappings extends TeaModel {
         /**
-         * <p>源值表达式</p>
+         * <p>The source value expression.</p>
          * 
          * <strong>example:</strong>
          * <p>Append(client.applicationFederatedCredentialId, &quot;:&quot;, cert.subject.CN, &quot;:&quot;, cert.serialNumber)</p>
@@ -158,7 +158,7 @@ public class CreateApplicationFederatedCredentialRequest extends TeaModel {
         public String sourceValueExpression;
 
         /**
-         * <p>目标字段</p>
+         * <p>The target field.</p>
          * 
          * <strong>example:</strong>
          * <p>client.activeSubjectUrn</p>

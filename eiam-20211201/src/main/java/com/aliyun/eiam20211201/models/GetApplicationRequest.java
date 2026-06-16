@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetApplicationRequest extends TeaModel {
     /**
-     * <p>The ID of the application that you want to query.</p>
+     * <p>The application ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class GetApplicationRequest extends TeaModel {
     public String applicationId;
 
     /**
-     * <p>The ID of the instance.</p>
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

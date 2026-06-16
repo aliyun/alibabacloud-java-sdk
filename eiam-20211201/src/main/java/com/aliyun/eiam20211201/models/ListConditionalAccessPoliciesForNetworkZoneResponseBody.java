@@ -358,7 +358,7 @@ public class ListConditionalAccessPoliciesForNetworkZoneResponseBody extends Tea
          * <p>Conditional access policy name</p>
          * 
          * <strong>example:</strong>
-         * <p>My Policy</p>
+         * <p>My policy</p>
          */
         @NameInMap("ConditionalAccessPolicyName")
         public String conditionalAccessPolicyName;

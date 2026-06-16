@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class AuthorizeResourceServerScopesToOrganizationalUnitRequest extends TeaModel {
     /**
-     * <p>IDaaS的应用资源ID。</p>
+     * <p>The ID of the resource server application.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,6 +15,7 @@ public class AuthorizeResourceServerScopesToOrganizationalUnitRequest extends Te
     public String applicationId;
 
     /**
+     * <p>A client token to ensure the idempotence of the request. Generate a unique value from your client. This token can contain only ASCII characters and must be no more than 64 characters long. For more information, see <a href="https://www.alibabacloud.com/help/zh/ecs/developer-reference/how-to-ensure-idempotence">How to ensure idempotence</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -24,7 +25,7 @@ public class AuthorizeResourceServerScopesToOrganizationalUnitRequest extends Te
     public String clientToken;
 
     /**
-     * <p>IDaaS EIAM实例的ID。</p>
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -34,7 +35,7 @@ public class AuthorizeResourceServerScopesToOrganizationalUnitRequest extends Te
     public String instanceId;
 
     /**
-     * <p>组织ID。</p>
+     * <p>The organization ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -44,7 +45,7 @@ public class AuthorizeResourceServerScopesToOrganizationalUnitRequest extends Te
     public String organizationalUnitId;
 
     /**
-     * <p>ResourceServer权限ID。</p>
+     * <p>A list of scope permission IDs for the resource server.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

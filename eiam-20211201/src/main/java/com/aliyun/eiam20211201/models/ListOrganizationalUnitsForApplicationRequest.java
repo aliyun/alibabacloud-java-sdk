@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListOrganizationalUnitsForApplicationRequest extends TeaModel {
     /**
-     * <p>The ID of the application that you want to query.</p>
+     * <p>The application ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -24,7 +24,7 @@ public class ListOrganizationalUnitsForApplicationRequest extends TeaModel {
     public String applicationRoleId;
 
     /**
-     * <p>The ID of the instance.</p>
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -34,7 +34,7 @@ public class ListOrganizationalUnitsForApplicationRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The IDs of the organizations that are allowed to access the application. You can query a maximum of 100 organization IDs at a time.</p>
+     * <p>The list of organization IDs. A single request can contain up to 100 organization IDs.</p>
      * 
      * <strong>example:</strong>
      * <p>ou_wovwffm62xifdziem7an7xxxxx</p>
@@ -43,7 +43,7 @@ public class ListOrganizationalUnitsForApplicationRequest extends TeaModel {
     public java.util.List<String> organizationalUnitIds;
 
     /**
-     * <p>The number of the page to return.</p>
+     * <p>The page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -52,7 +52,7 @@ public class ListOrganizationalUnitsForApplicationRequest extends TeaModel {
     public Long pageNumber;
 
     /**
-     * <p>The number of entries to return on each page.</p>
+     * <p>The number of entries per page.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>

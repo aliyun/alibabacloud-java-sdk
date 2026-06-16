@@ -4,10 +4,15 @@ package com.aliyun.eiam20211201.models;
 import com.aliyun.tea.*;
 
 public class GetBrandResponseBody extends TeaModel {
+    /**
+     * <p>The brand.</p>
+     */
     @NameInMap("Brand")
     public GetBrandResponseBodyBrand brand;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>0441BD79-92F3-53AA-8657-F8CE4A2B912A</p>
      */
@@ -37,7 +42,7 @@ public class GetBrandResponseBody extends TeaModel {
 
     public static class GetBrandResponseBodyBrand extends TeaModel {
         /**
-         * <p>品牌ID</p>
+         * <p>The brand ID.</p>
          * 
          * <strong>example:</strong>
          * <p>brand_xxxx</p>
@@ -46,7 +51,7 @@ public class GetBrandResponseBody extends TeaModel {
         public String brandId;
 
         /**
-         * <p>品牌名称</p>
+         * <p>The brand name.</p>
          * 
          * <strong>example:</strong>
          * <p>Custom Brand</p>
@@ -55,7 +60,7 @@ public class GetBrandResponseBody extends TeaModel {
         public String brandName;
 
         /**
-         * <p>品牌类型</p>
+         * <p>The brand type.</p>
          * 
          * <strong>example:</strong>
          * <p>user_custom</p>
@@ -64,7 +69,7 @@ public class GetBrandResponseBody extends TeaModel {
         public String brandType;
 
         /**
-         * <p>实例ID。</p>
+         * <p>The instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>idaas_ue2jvisn35ea5lmthk267xxxxx</p>
@@ -73,7 +78,7 @@ public class GetBrandResponseBody extends TeaModel {
         public String instanceId;
 
         /**
-         * <p>品牌状态</p>
+         * <p>The brand status.</p>
          * 
          * <strong>example:</strong>
          * <p>enabled</p>

@@ -51,8 +51,7 @@ public class GetNetworkAccessEndpointResponseBody extends TeaModel {
         public Long createTime;
 
         /**
-         * <p>Public egress ip address range of the dedicated network endpoint
-         * This field is returned only when NetworkEndpointType is set to private.</p>
+         * <p>Public egress ip address range of the dedicated network endpoint This field is returned only when NetworkEndpointType is set to private.</p>
          * 
          * <strong>example:</strong>
          * <p>172.168.x.x</p>
@@ -61,11 +60,10 @@ public class GetNetworkAccessEndpointResponseBody extends TeaModel {
         public java.util.List<String> egressPrivateIpAddresses;
 
         /**
-         * <p>Public egress ip address range of the shared network endpoint
-         * This field is returned only when networkEndpointType is set to shared.</p>
+         * <p>Public egress ip address range of the shared network endpoint This field is returned only when networkEndpointType is set to shared.</p>
          * 
          * <strong>example:</strong>
-         * <p>8.xx.xx.xxx/27</p>
+         * <p>203.0.XX.XX/27</p>
          */
         @NameInMap("EgressPublicIpAddresses")
         public java.util.List<String> egressPublicIpAddresses;
@@ -92,14 +90,13 @@ public class GetNetworkAccessEndpointResponseBody extends TeaModel {
          * <p>Private network endpoint name.</p>
          * 
          * <strong>example:</strong>
-         * <p>xx business VPC access endpoint</p>
+         * <p>Xx-business VPC access endpoint</p>
          */
         @NameInMap("NetworkAccessEndpointName")
         public String networkAccessEndpointName;
 
         /**
-         * <p>Type of the Network Endpoint
-         * Possible values:</p>
+         * <p>Type of the Network Endpoint Possible values:</p>
          * <p>shared: Shared network endpoint</p>
          * <p>private: Dedicated network endpoint</p>
          * 
@@ -119,8 +116,7 @@ public class GetNetworkAccessEndpointResponseBody extends TeaModel {
         public String securityGroupId;
 
         /**
-         * <p>Status of the Network Endpoint
-         * Possible values:</p>
+         * <p>Status of the Network Endpoint Possible values:</p>
          * <p>pending: Pending initialization</p>
          * <p>creating: Being created</p>
          * <p>running: Running</p>

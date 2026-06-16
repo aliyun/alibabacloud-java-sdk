@@ -4,10 +4,15 @@ package com.aliyun.eiam20211201.models;
 import com.aliyun.tea.*;
 
 public class GetInstanceQuotaResponseBody extends TeaModel {
+    /**
+     * <p>The quota information.</p>
+     */
     @NameInMap("Quota")
     public GetInstanceQuotaResponseBodyQuota quota;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>0441BD79-92F3-53AA-8657-F8CE4A2B912A</p>
      */
@@ -37,7 +42,7 @@ public class GetInstanceQuotaResponseBody extends TeaModel {
 
     public static class GetInstanceQuotaResponseBodyQuota extends TeaModel {
         /**
-         * <p>Quota 配额的Key，同请求参数</p>
+         * <p>The key of the quota.</p>
          * 
          * <strong>example:</strong>
          * <p>userMaxNumber</p>
@@ -46,7 +51,7 @@ public class GetInstanceQuotaResponseBody extends TeaModel {
         public String quotaKey;
 
         /**
-         * <p>Quota 配额的值。</p>
+         * <p>The value of the quota.</p>
          * 
          * <strong>example:</strong>
          * <p>5</p>

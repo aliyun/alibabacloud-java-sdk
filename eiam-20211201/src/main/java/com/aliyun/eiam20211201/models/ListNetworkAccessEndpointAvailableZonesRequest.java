@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListNetworkAccessEndpointAvailableZonesRequest extends TeaModel {
     /**
-     * <p>专属网络端点支持的地域</p>
+     * <p>The ID of the region that supports exclusive network endpoints.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

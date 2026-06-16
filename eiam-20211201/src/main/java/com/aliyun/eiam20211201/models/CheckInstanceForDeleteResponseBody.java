@@ -4,10 +4,15 @@ package com.aliyun.eiam20211201.models;
 import com.aliyun.tea.*;
 
 public class CheckInstanceForDeleteResponseBody extends TeaModel {
+    /**
+     * <p>The returned result.</p>
+     */
     @NameInMap("CheckInstanceResult")
     public CheckInstanceForDeleteResponseBodyCheckInstanceResult checkInstanceResult;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>0441BD79-92F3-53AA-8657-F8CE4A2B912A</p>
      */
@@ -37,7 +42,7 @@ public class CheckInstanceForDeleteResponseBody extends TeaModel {
 
     public static class CheckInstanceForDeleteResponseBodyCheckInstanceResultRestrictScenarios extends TeaModel {
         /**
-         * <p>有帮助的控制台地址，可以管理对应的资源，从而解除实例删除限制。可能返回为空，不一定所有的资源ID都有管理地址返回。</p>
+         * <p>The URL of a helpful console page.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://console-rpa.aliyun.com/">https://console-rpa.aliyun.com/</a></p>
@@ -46,7 +51,7 @@ public class CheckInstanceForDeleteResponseBody extends TeaModel {
         public String helpfulConsoleUrl;
 
         /**
-         * <p>导致实例删除受限的资源ID。</p>
+         * <p>The resource ID.</p>
          * 
          * <strong>example:</strong>
          * <p>eas-r-nguosqgr75ndg784k8</p>
@@ -55,7 +60,7 @@ public class CheckInstanceForDeleteResponseBody extends TeaModel {
         public String resourceId;
 
         /**
-         * <p>针对实例删除受限的原因文字描述。</p>
+         * <p>The reason for the restriction.</p>
          * 
          * <strong>example:</strong>
          * <p>cloud_product_dependency</p>
@@ -96,7 +101,7 @@ public class CheckInstanceForDeleteResponseBody extends TeaModel {
 
     public static class CheckInstanceForDeleteResponseBodyCheckInstanceResult extends TeaModel {
         /**
-         * <p>true表示实例可以被删除；false表示实例不可被删除，具体查看RestrictScenarios属性。</p>
+         * <p>Indicates whether the instance can be deleted.</p>
          * 
          * <strong>example:</strong>
          * <p>True</p>
@@ -105,7 +110,7 @@ public class CheckInstanceForDeleteResponseBody extends TeaModel {
         public Boolean deletable;
 
         /**
-         * <p>true表示实例可以被删除；false表示实例不可被删除，具体查看RestrictScenarios属性。</p>
+         * <p>The restriction information that prevents deletion.</p>
          */
         @NameInMap("RestrictScenarios")
         public java.util.List<CheckInstanceForDeleteResponseBodyCheckInstanceResultRestrictScenarios> restrictScenarios;

@@ -4,10 +4,15 @@ package com.aliyun.eiam20211201.models;
 import com.aliyun.tea.*;
 
 public class GetInstanceGlobalizationConfigResponseBody extends TeaModel {
+    /**
+     * <p>The language and time zone configuration for the instance.</p>
+     */
     @NameInMap("GlobalizationConfig")
     public GetInstanceGlobalizationConfigResponseBodyGlobalizationConfig globalizationConfig;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>0441BD79-92F3-53AA-8657-F8CE4A2B912A</p>
      */
@@ -37,7 +42,7 @@ public class GetInstanceGlobalizationConfigResponseBody extends TeaModel {
 
     public static class GetInstanceGlobalizationConfigResponseBodyGlobalizationConfig extends TeaModel {
         /**
-         * <p>语言</p>
+         * <p>The language.</p>
          * 
          * <strong>example:</strong>
          * <p>zh-Hans-CN</p>
@@ -46,7 +51,7 @@ public class GetInstanceGlobalizationConfigResponseBody extends TeaModel {
         public String language;
 
         /**
-         * <p>时区</p>
+         * <p>The time zone.</p>
          * 
          * <strong>example:</strong>
          * <p>Asia/Shanghai</p>

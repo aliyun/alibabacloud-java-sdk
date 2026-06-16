@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class SetInstanceControlConfigurationRequest extends TeaModel {
     /**
-     * <p>实例控制项。</p>
+     * <p>The control items for the instance.</p>
      */
     @NameInMap("ControlElements")
     public java.util.List<SetInstanceControlConfigurationRequestControlElements> controlElements;
 
     /**
-     * <p>IDaaS EIAM实例的ID。</p>
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -43,6 +43,8 @@ public class SetInstanceControlConfigurationRequest extends TeaModel {
 
     public static class SetInstanceControlConfigurationRequestControlElementsHumanVerificationConfig extends TeaModel {
         /**
+         * <p>The CAPTCHA type.</p>
+         * 
          * <strong>example:</strong>
          * <p>urn:alibaba:idaas:humanverification:alibaba-cloud-slider-verification</p>
          */
@@ -66,7 +68,7 @@ public class SetInstanceControlConfigurationRequest extends TeaModel {
 
     public static class SetInstanceControlConfigurationRequestControlElements extends TeaModel {
         /**
-         * <p>实例控制项名称，如human_verification。</p>
+         * <p>The name of the control item.</p>
          * 
          * <strong>example:</strong>
          * <p>human_verification</p>
@@ -74,11 +76,14 @@ public class SetInstanceControlConfigurationRequest extends TeaModel {
         @NameInMap("ElementName")
         public String elementName;
 
+        /**
+         * <p>The CAPTCHA configuration.</p>
+         */
         @NameInMap("HumanVerificationConfig")
         public SetInstanceControlConfigurationRequestControlElementsHumanVerificationConfig humanVerificationConfig;
 
         /**
-         * <p>实例控制项状态。</p>
+         * <p>The status of the control item.</p>
          * 
          * <strong>example:</strong>
          * <p>enabled</p>

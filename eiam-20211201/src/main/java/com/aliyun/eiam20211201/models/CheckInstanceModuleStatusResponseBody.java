@@ -4,10 +4,15 @@ package com.aliyun.eiam20211201.models;
 import com.aliyun.tea.*;
 
 public class CheckInstanceModuleStatusResponseBody extends TeaModel {
+    /**
+     * <p>Status update information.</p>
+     */
     @NameInMap("Module")
     public CheckInstanceModuleStatusResponseBodyModule module;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>0441BD79-92F3-53AA-8657-F8CE4A2B912A</p>
      */
@@ -37,7 +42,7 @@ public class CheckInstanceModuleStatusResponseBody extends TeaModel {
 
     public static class CheckInstanceModuleStatusResponseBodyModule extends TeaModel {
         /**
-         * <p>模块状态</p>
+         * <p>The status of the module.</p>
          * 
          * <strong>example:</strong>
          * <p>enabled</p>

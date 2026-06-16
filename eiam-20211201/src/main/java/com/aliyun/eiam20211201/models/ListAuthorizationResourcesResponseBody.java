@@ -4,11 +4,14 @@ package com.aliyun.eiam20211201.models;
 import com.aliyun.tea.*;
 
 public class ListAuthorizationResourcesResponseBody extends TeaModel {
+    /**
+     * <p>A list of authorized resources.</p>
+     */
     @NameInMap("AuthorizationResources")
     public java.util.List<ListAuthorizationResourcesResponseBodyAuthorizationResources> authorizationResources;
 
     /**
-     * <p>分页查询时每页行数。</p>
+     * <p>The number of entries per page.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -17,7 +20,7 @@ public class ListAuthorizationResourcesResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>本次调用返回的查询凭证（Token）值，用于下一次翻页查询。</p>
+     * <p>The token to retrieve the next page of results. This parameter is returned when the results are paged.</p>
      * 
      * <strong>example:</strong>
      * <p>NTxxxexample</p>
@@ -26,6 +29,8 @@ public class ListAuthorizationResourcesResponseBody extends TeaModel {
     public String nextToken;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>0441BD79-92F3-53AA-8657-F8CE4A2B912A</p>
      */
@@ -33,6 +38,8 @@ public class ListAuthorizationResourcesResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total number of entries.</p>
+     * 
      * <strong>example:</strong>
      * <p>100</p>
      */
@@ -86,7 +93,7 @@ public class ListAuthorizationResourcesResponseBody extends TeaModel {
 
     public static class ListAuthorizationResourcesResponseBodyAuthorizationResources extends TeaModel {
         /**
-         * <p>资源实体标识</p>
+         * <p>The ID of the associated resource entity.</p>
          * 
          * <strong>example:</strong>
          * <p>carole_01kmek49aqxxxx</p>
@@ -95,7 +102,10 @@ public class ListAuthorizationResourcesResponseBody extends TeaModel {
         public String authorizationResourceEntityId;
 
         /**
-         * <p>资源实体类型，枚举类型：asset（资产）、credential（凭据）、cloud_identity_role（云账号角色）</p>
+         * <p>The type of the associated resource entity. Valid values:</p>
+         * <ul>
+         * <li>cloud_account_role: A cloud role.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>cloud_account_role</p>
@@ -104,7 +114,7 @@ public class ListAuthorizationResourcesResponseBody extends TeaModel {
         public String authorizationResourceEntityType;
 
         /**
-         * <p>授权资源标识</p>
+         * <p>The authorized resource ID.</p>
          * 
          * <strong>example:</strong>
          * <p>arres_01kgh3jvt7pk093rv6giu0c0qxxxx</p>
@@ -113,7 +123,7 @@ public class ListAuthorizationResourcesResponseBody extends TeaModel {
         public String authorizationResourceId;
 
         /**
-         * <p>授权规则标识</p>
+         * <p>The authorization rule ID.</p>
          * 
          * <strong>example:</strong>
          * <p>arrule_01kf143ug06fg7m9f43u7vahxxxx</p>
@@ -122,7 +132,7 @@ public class ListAuthorizationResourcesResponseBody extends TeaModel {
         public String authorizationRuleId;
 
         /**
-         * <p>云账号ID。</p>
+         * <p>The ID of the Alibaba Cloud account that owns the associated resource entity.</p>
          * 
          * <strong>example:</strong>
          * <p>ca_01kmegjc11qa1txxxxx</p>
@@ -131,7 +141,7 @@ public class ListAuthorizationResourcesResponseBody extends TeaModel {
         public String cloudAccountId;
 
         /**
-         * <p>实例ID</p>
+         * <p>The instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>idaas_ue2jvisn35ea5lmthk267xxxxx</p>

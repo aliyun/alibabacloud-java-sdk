@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListAuthorizationRulesRequest extends TeaModel {
     /**
-     * <p>过滤条件</p>
+     * <p>The filter conditions.</p>
      */
     @NameInMap("Filter")
     public java.util.List<ListAuthorizationRulesRequestFilter> filter;
 
     /**
-     * <p>IDaaS EIAM实例的ID。</p>
+     * <p>The ID of the instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,7 +21,13 @@ public class ListAuthorizationRulesRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>分页查询时每页行数。默认值为20，最大值为100。</p>
+     * <p>The maximum number of entries to return on each page.</p>
+     * <ul>
+     * <li><p>If you do not specify this parameter, the default value is 20.</p>
+     * </li>
+     * <li><p>The maximum value is 100.</p>
+     * </li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -30,7 +36,10 @@ public class ListAuthorizationRulesRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>查询凭证（Token），取值为上一次API调用返回的NextToken参数值。</p>
+     * <p>The token that identifies the start of the next page of results.</p>
+     * <ul>
+     * <li>If you do not specify this parameter, the system returns the first page of results.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>NTxxxxxexample</p>
@@ -77,7 +86,13 @@ public class ListAuthorizationRulesRequest extends TeaModel {
 
     public static class ListAuthorizationRulesRequestFilter extends TeaModel {
         /**
-         * <p>过滤条件名称。</p>
+         * <p>The name of the field to filter. Valid values:</p>
+         * <ul>
+         * <li><p>AuthorizationRuleId: the ID of the authorization rule.</p>
+         * </li>
+         * <li><p>AuthorizationRuleNameStartWith: the leftmost characters of the authorization rule name.</p>
+         * </li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>AuthorizationRuleId</p>
@@ -86,7 +101,7 @@ public class ListAuthorizationRulesRequest extends TeaModel {
         public String name;
 
         /**
-         * <p>过滤条件值。</p>
+         * <p>The list of values for the field to filter.</p>
          */
         @NameInMap("Value")
         public java.util.List<String> value;

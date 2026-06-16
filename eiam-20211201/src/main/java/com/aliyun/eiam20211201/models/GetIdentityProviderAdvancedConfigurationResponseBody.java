@@ -4,10 +4,15 @@ package com.aliyun.eiam20211201.models;
 import com.aliyun.tea.*;
 
 public class GetIdentityProviderAdvancedConfigurationResponseBody extends TeaModel {
+    /**
+     * <p>Advanced configuration information</p>
+     */
     @NameInMap("AdvancedConfiguration")
     public GetIdentityProviderAdvancedConfigurationResponseBodyAdvancedConfiguration advancedConfiguration;
 
     /**
+     * <p>Request ID</p>
+     * 
      * <strong>example:</strong>
      * <p>0441BD79-92F3-53AA-8657-F8CE4A2B912A</p>
      */
@@ -37,7 +42,7 @@ public class GetIdentityProviderAdvancedConfigurationResponseBody extends TeaMod
 
     public static class GetIdentityProviderAdvancedConfigurationResponseBodyAdvancedConfigurationDingtalkAdvancedConfig extends TeaModel {
         /**
-         * <p>IDaaS EIAM 钉钉一方应用的AppKey</p>
+         * <p>AppKey of the DingTalk first-party application</p>
          * 
          * <strong>example:</strong>
          * <p>ding5xo9rg0csw3f6xxx</p>
@@ -46,7 +51,7 @@ public class GetIdentityProviderAdvancedConfigurationResponseBody extends TeaMod
         public String appKey;
 
         /**
-         * <p>IDaaS EIAM 钉钉一方应用的AppSecret</p>
+         * <p>App secret of the DingTalk first-party application</p>
          * 
          * <strong>example:</strong>
          * <hr>
@@ -79,13 +84,13 @@ public class GetIdentityProviderAdvancedConfigurationResponseBody extends TeaMod
 
     public static class GetIdentityProviderAdvancedConfigurationResponseBodyAdvancedConfiguration extends TeaModel {
         /**
-         * <p>钉钉高阶配置</p>
+         * <p>DingTalk advanced configuration</p>
          */
         @NameInMap("DingtalkAdvancedConfig")
         public GetIdentityProviderAdvancedConfigurationResponseBodyAdvancedConfigurationDingtalkAdvancedConfig dingtalkAdvancedConfig;
 
         /**
-         * <p>IDaaS EIAM 身份提供方ID</p>
+         * <p>Identity provider ID</p>
          * 
          * <strong>example:</strong>
          * <p>idp_na2rzpyc67zr7ixdfy35zgrxxx</p>
@@ -94,7 +99,7 @@ public class GetIdentityProviderAdvancedConfigurationResponseBody extends TeaMod
         public String identityProviderId;
 
         /**
-         * <p>IDaaS EIAM 实例Id</p>
+         * <p>Instance ID</p>
          * 
          * <strong>example:</strong>
          * <p>idaas_kpvmhktvun6u66dgpjh3l4wxxx</p>

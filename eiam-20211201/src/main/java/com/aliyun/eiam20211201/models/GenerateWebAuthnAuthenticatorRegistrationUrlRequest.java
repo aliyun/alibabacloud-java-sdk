@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GenerateWebAuthnAuthenticatorRegistrationUrlRequest extends TeaModel {
     /**
+     * <p>The domain ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>dm_nfplcagj5cguo2267bkjxxxx</p>
      */
@@ -12,7 +14,7 @@ public class GenerateWebAuthnAuthenticatorRegistrationUrlRequest extends TeaMode
     public String domainId;
 
     /**
-     * <p>IDaaS EIAM实例的ID。</p>
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -22,7 +24,7 @@ public class GenerateWebAuthnAuthenticatorRegistrationUrlRequest extends TeaMode
     public String instanceId;
 
     /**
-     * <p>UserID</p>
+     * <p>The user ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

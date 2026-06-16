@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateDomainBrandRequest extends TeaModel {
     /**
+     * <p>The brand ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,7 +15,7 @@ public class UpdateDomainBrandRequest extends TeaModel {
     public String brandId;
 
     /**
-     * <p>域名ID。</p>
+     * <p>The domain name ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -24,7 +25,7 @@ public class UpdateDomainBrandRequest extends TeaModel {
     public String domainId;
 
     /**
-     * <p>IDaaS EIAM实例的ID。</p>
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

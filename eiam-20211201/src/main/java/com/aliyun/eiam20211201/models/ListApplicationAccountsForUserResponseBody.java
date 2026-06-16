@@ -4,10 +4,15 @@ package com.aliyun.eiam20211201.models;
 import com.aliyun.tea.*;
 
 public class ListApplicationAccountsForUserResponseBody extends TeaModel {
+    /**
+     * <p>The information about the member accounts.</p>
+     */
     @NameInMap("ApplicationAccounts")
     public java.util.List<ListApplicationAccountsForUserResponseBodyApplicationAccounts> applicationAccounts;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>0441BD79-92F3-53AA-8657-F8CE4A2B912A</p>
      */
@@ -15,6 +20,8 @@ public class ListApplicationAccountsForUserResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total number of entries.</p>
+     * 
      * <strong>example:</strong>
      * <p>100</p>
      */
@@ -52,7 +59,7 @@ public class ListApplicationAccountsForUserResponseBody extends TeaModel {
 
     public static class ListApplicationAccountsForUserResponseBodyApplicationAccounts extends TeaModel {
         /**
-         * <p>IDaaS EIAM 应用账号Id</p>
+         * <p>The application account ID.</p>
          * 
          * <strong>example:</strong>
          * <p>aac_m6e3ukegwvbcb2fne7j32xxxxxx</p>
@@ -61,7 +68,7 @@ public class ListApplicationAccountsForUserResponseBody extends TeaModel {
         public String applicationAccountId;
 
         /**
-         * <p>IDaaS EIAM 应用Id</p>
+         * <p>The application ID.</p>
          * 
          * <strong>example:</strong>
          * <p>app_na2r76irswrwfgpkz7xvcj7xxxxx</p>
@@ -70,7 +77,7 @@ public class ListApplicationAccountsForUserResponseBody extends TeaModel {
         public String applicationId;
 
         /**
-         * <p>IDaaS EIAM 应用账号名称</p>
+         * <p>The name of the application account.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -79,7 +86,7 @@ public class ListApplicationAccountsForUserResponseBody extends TeaModel {
         public String applicationUsername;
 
         /**
-         * <p>创建时间</p>
+         * <p>The time when the account was created.</p>
          * 
          * <strong>example:</strong>
          * <p>1754359439000</p>
@@ -88,7 +95,7 @@ public class ListApplicationAccountsForUserResponseBody extends TeaModel {
         public Long createTime;
 
         /**
-         * <p>IDaaS EIAM 实例Id</p>
+         * <p>The ID of the IDaaS EIAM instance.</p>
          * 
          * <strong>example:</strong>
          * <p>idaas_ki6hd7ihir4ybawogqk6xxxxx</p>
@@ -97,7 +104,7 @@ public class ListApplicationAccountsForUserResponseBody extends TeaModel {
         public String instanceId;
 
         /**
-         * <p>IDaaS EIAM 用户Id</p>
+         * <p>The user ID.</p>
          * 
          * <strong>example:</strong>
          * <p>user_tkmboufpnvpbitdpzrlng6mxxxxx</p>

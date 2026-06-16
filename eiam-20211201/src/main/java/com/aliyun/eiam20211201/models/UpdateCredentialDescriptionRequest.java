@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateCredentialDescriptionRequest extends TeaModel {
     /**
-     * <p>保证请求幂等性。从您的客户端生成一个参数值，确保不同请求间该参数值唯一。ClientToken只支持ASCII字符，且不能超过64个字符。</p>
+     * <p>Ensures idempotence. Generate a unique value on your client for each request. The ClientToken value must contain only ASCII characters and cannot exceed 64 characters. For more information, see <a href="https://www.alibabacloud.com/help/zh/ecs/developer-reference/how-to-ensure-idempotence">How to Ensure Idempotence</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class UpdateCredentialDescriptionRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>凭据ID。</p>
+     * <p>The ID of the credential.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,7 +25,7 @@ public class UpdateCredentialDescriptionRequest extends TeaModel {
     public String credentialId;
 
     /**
-     * <p>描述</p>
+     * <p>The description of the credential.</p>
      * 
      * <strong>example:</strong>
      * <p>credential_description</p>
@@ -34,7 +34,7 @@ public class UpdateCredentialDescriptionRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>IDaaS EIAM实例的ID。</p>
+     * <p>The ID of the instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

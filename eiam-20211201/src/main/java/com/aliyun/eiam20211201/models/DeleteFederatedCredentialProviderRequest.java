@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteFederatedCredentialProviderRequest extends TeaModel {
     /**
-     * <p>联邦凭证提供方ID</p>
+     * <p>The ID of the federated credential provider.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class DeleteFederatedCredentialProviderRequest extends TeaModel {
     public String federatedCredentialProviderId;
 
     /**
-     * <p>IDaaS EIAM实例的ID。</p>
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

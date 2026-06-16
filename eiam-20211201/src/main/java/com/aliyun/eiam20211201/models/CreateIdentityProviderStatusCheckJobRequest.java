@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateIdentityProviderStatusCheckJobRequest extends TeaModel {
     /**
-     * <p>IDaaS的身份提供方主键id</p>
+     * <p>The ID of the identity provider.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class CreateIdentityProviderStatusCheckJobRequest extends TeaModel {
     public String identityProviderId;
 
     /**
-     * <p>IDaaS EIAM实例的ID。</p>
+     * <p>The ID of the instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

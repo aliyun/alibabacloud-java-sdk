@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class GenerateOauthTokenRequest extends TeaModel {
     /**
+     * <p>The application ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class GenerateOauthTokenRequest extends TeaModel {
     public String applicationId;
 
     /**
+     * <p>The audience identifier of the resource server.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,7 @@ public class GenerateOauthTokenRequest extends TeaModel {
     public String audience;
 
     /**
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -32,6 +35,7 @@ public class GenerateOauthTokenRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>The scope of permissions.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("ScopeValues")

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateClientPublicKeyResponseBody extends TeaModel {
     /**
+     * <p>The ID of the client public key for the application.</p>
+     * 
      * <strong>example:</strong>
      * <p>KEYCKmEYW9byWTdjuRbmCjd2Bhg6VpkAxxxx</p>
      */
@@ -12,6 +14,8 @@ public class CreateClientPublicKeyResponseBody extends TeaModel {
     public String clientPublicKeyId;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>0441BD79-92F3-53AA-8657-F8CE4A2B912A</p>
      */

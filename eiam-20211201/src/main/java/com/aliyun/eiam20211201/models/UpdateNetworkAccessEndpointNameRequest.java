@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateNetworkAccessEndpointNameRequest extends TeaModel {
     /**
-     * <p>IDaaS EIAM实例的ID。</p>
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class UpdateNetworkAccessEndpointNameRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>专属网络端点ID。</p>
+     * <p>The ID of the private network access endpoint.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,11 +25,11 @@ public class UpdateNetworkAccessEndpointNameRequest extends TeaModel {
     public String networkAccessEndpointId;
 
     /**
-     * <p>专属网络端点名称。</p>
+     * <p>The name of the private network access endpoint. The endpoint type must be private.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>xx业务VPC访问端点</p>
+     * <p>VPC access endpoint for xx service</p>
      */
     @NameInMap("NetworkAccessEndpointName")
     public String networkAccessEndpointName;

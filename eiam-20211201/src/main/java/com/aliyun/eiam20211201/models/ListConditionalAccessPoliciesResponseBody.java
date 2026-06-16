@@ -316,9 +316,7 @@ public class ListConditionalAccessPoliciesResponseBody extends TeaModel {
         public String activeSessionReuseStatus;
 
         /**
-         * <p>Decision action of the conditional access policy:
-         * deny  Deny
-         * allow Allow</p>
+         * <p>Decision action of the conditional access policy: deny Deny allow Allow</p>
          * 
          * <strong>example:</strong>
          * <p>deny</p>
@@ -411,7 +409,7 @@ public class ListConditionalAccessPoliciesResponseBody extends TeaModel {
          * <p>Conditional access policy name</p>
          * 
          * <strong>example:</strong>
-         * <p>My Policy</p>
+         * <p>My policy</p>
          */
         @NameInMap("ConditionalAccessPolicyName")
         public String conditionalAccessPolicyName;
@@ -459,7 +457,7 @@ public class ListConditionalAccessPoliciesResponseBody extends TeaModel {
          * <p>Description of the conditional access policy</p>
          * 
          * <strong>example:</strong>
-         * <p>My Policy Description</p>
+         * <p>My policy description</p>
          */
         @NameInMap("Description")
         public String description;

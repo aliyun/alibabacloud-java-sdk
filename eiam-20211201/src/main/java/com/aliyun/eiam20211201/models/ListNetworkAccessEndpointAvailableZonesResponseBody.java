@@ -5,12 +5,17 @@ import com.aliyun.tea.*;
 
 public class ListNetworkAccessEndpointAvailableZonesResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>0441BD79-92F3-53AA-8657-F8CE4A2B912A</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The list of zones that support network endpoints in the current region.</p>
+     */
     @NameInMap("Zones")
     public java.util.List<ListNetworkAccessEndpointAvailableZonesResponseBodyZones> zones;
 
@@ -37,16 +42,16 @@ public class ListNetworkAccessEndpointAvailableZonesResponseBody extends TeaMode
 
     public static class ListNetworkAccessEndpointAvailableZonesResponseBodyZones extends TeaModel {
         /**
-         * <p>可用区名称。</p>
+         * <p>The name of the zone.</p>
          * 
          * <strong>example:</strong>
-         * <p>华东1（杭州）可用区J</p>
+         * <p>China (Hangzhou) Zone J</p>
          */
         @NameInMap("LocalName")
         public String localName;
 
         /**
-         * <p>可用区ID。</p>
+         * <p>The zone ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou-j</p>

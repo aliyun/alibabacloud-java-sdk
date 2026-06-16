@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateAuthorizationRuleDescriptionRequest extends TeaModel {
     /**
-     * <p>授权规则标识。</p>
+     * <p>The authorization rule ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,6 +15,7 @@ public class UpdateAuthorizationRuleDescriptionRequest extends TeaModel {
     public String authorizationRuleId;
 
     /**
+     * <p>A client token used to ensure the idempotence of the request. Generate a unique value from your client for this parameter. The token can contain only ASCII characters and must be 64 characters or less in length. For more information, see <a href="https://www.alibabacloud.com/help/zh/ecs/developer-reference/how-to-ensure-idempotence">How to ensure idempotence</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -24,7 +25,7 @@ public class UpdateAuthorizationRuleDescriptionRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>授权规则备注描述，长度限制最大128个字符。</p>
+     * <p>The description of the authorization rule. The description can be up to 128 characters long.</p>
      * 
      * <strong>example:</strong>
      * <p>this is a test rule</p>
@@ -33,7 +34,7 @@ public class UpdateAuthorizationRuleDescriptionRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>IDaaS EIAM实例的ID。</p>
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

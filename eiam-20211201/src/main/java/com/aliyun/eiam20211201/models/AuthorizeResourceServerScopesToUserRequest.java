@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class AuthorizeResourceServerScopesToUserRequest extends TeaModel {
     /**
-     * <p>IDaaS的应用资源ID。</p>
+     * <p>The ID of the resource server application.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,6 +15,7 @@ public class AuthorizeResourceServerScopesToUserRequest extends TeaModel {
     public String applicationId;
 
     /**
+     * <p>Ensures the idempotence of the request. Generate a parameter value from your client to make sure that the value is unique among different requests. ClientToken can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://www.alibabacloud.com/help/en/ecs/developer-reference/how-to-ensure-idempotence">How to ensure idempotence</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -24,7 +25,7 @@ public class AuthorizeResourceServerScopesToUserRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>IDaaS EIAM实例的ID。</p>
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -34,7 +35,7 @@ public class AuthorizeResourceServerScopesToUserRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>ResourceServer权限ID。</p>
+     * <p>A list of scope permission IDs under the resource server.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -44,7 +45,7 @@ public class AuthorizeResourceServerScopesToUserRequest extends TeaModel {
     public java.util.List<String> resourceServerScopeIds;
 
     /**
-     * <p>用户ID。</p>
+     * <p>The ID of the account.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

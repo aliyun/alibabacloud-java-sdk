@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListConditionalAccessPoliciesForApplicationRequest extends TeaModel {
     /**
-     * <p>条件访问策略关联的应用ID</p>
+     * <p>The ID of the application that is associated with the conditional access policy.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class ListConditionalAccessPoliciesForApplicationRequest extends TeaModel
     public String applicationId;
 
     /**
-     * <p>IDaaS EIAM实例的ID。</p>
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -15,7 +15,7 @@ public class ListNetworkAccessPathsRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>Network access endpoint ID.</p>
+     * <p>The ID of the dedicated network endpoint.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

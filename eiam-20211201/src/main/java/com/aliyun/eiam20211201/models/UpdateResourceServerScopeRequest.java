@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateResourceServerScopeRequest extends TeaModel {
     /**
-     * <p>IDaaS的应用资源ID。</p>
+     * <p>The ID of the ResourceServer application.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class UpdateResourceServerScopeRequest extends TeaModel {
     public String applicationId;
 
     /**
-     * <p>IDaaS EIAM实例的ID。</p>
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,7 +25,7 @@ public class UpdateResourceServerScopeRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>ResourceServer下Scope唯一标识。</p>
+     * <p>The ID of the scope permission for the resource server.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -35,7 +35,7 @@ public class UpdateResourceServerScopeRequest extends TeaModel {
     public String resourceServerScopeId;
 
     /**
-     * <p>权限名称</p>
+     * <p>The name of the scope permission.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

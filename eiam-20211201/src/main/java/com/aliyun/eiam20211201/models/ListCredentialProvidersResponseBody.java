@@ -4,11 +4,14 @@ package com.aliyun.eiam20211201.models;
 import com.aliyun.tea.*;
 
 public class ListCredentialProvidersResponseBody extends TeaModel {
+    /**
+     * <p>List of credential providers.</p>
+     */
     @NameInMap("CredentialProviders")
     public java.util.List<ListCredentialProvidersResponseBodyCredentialProviders> credentialProviders;
 
     /**
-     * <p>分页查询时每页行数。</p>
+     * <p>Page size for paged queries.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -17,7 +20,7 @@ public class ListCredentialProvidersResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>本次调用返回的查询凭证（Token）值，用于下一次翻页查询。</p>
+     * <p>The query token returned by this call.</p>
      * 
      * <strong>example:</strong>
      * <p>NTxxxexample</p>
@@ -26,6 +29,8 @@ public class ListCredentialProvidersResponseBody extends TeaModel {
     public String nextToken;
 
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>0441BD79-92F3-53AA-8657-F8CE4A2B912A</p>
      */
@@ -33,6 +38,8 @@ public class ListCredentialProvidersResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Total count.</p>
+     * 
      * <strong>example:</strong>
      * <p>100</p>
      */
@@ -86,13 +93,13 @@ public class ListCredentialProvidersResponseBody extends TeaModel {
 
     public static class ListCredentialProvidersResponseBodyCredentialProvidersCredentialProviderConfigJwtProviderConfig extends TeaModel {
         /**
-         * <p>签发出的JWT中的issuer字段的允许列表。</p>
+         * <p>List of allowed JWT issuers.</p>
          */
         @NameInMap("AllowedTokenIssuers")
         public java.util.List<String> allowedTokenIssuers;
 
         /**
-         * <p>是否开启JWT派生短令牌能力。</p>
+         * <p>Enable JWT derived short token capability.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -101,7 +108,7 @@ public class ListCredentialProvidersResponseBody extends TeaModel {
         public Boolean derivedShortTokenEnabled;
 
         /**
-         * <p>JWT的有效时长，单位秒。</p>
+         * <p>Validity period of the JWT, in seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>900</p>
@@ -110,7 +117,7 @@ public class ListCredentialProvidersResponseBody extends TeaModel {
         public Integer expiration;
 
         /**
-         * <p>是否开启JWT过期清理。</p>
+         * <p>Enable JWT expiration cleanup.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -119,7 +126,7 @@ public class ListCredentialProvidersResponseBody extends TeaModel {
         public Boolean expirationCleanupEnabled;
 
         /**
-         * <p>JWT issuer。</p>
+         * <p>JWT issuer.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://test.issuer.com">https://test.issuer.com</a></p>
@@ -128,7 +135,7 @@ public class ListCredentialProvidersResponseBody extends TeaModel {
         public String issuer;
 
         /**
-         * <p>JWKs端点地址。</p>
+         * <p>JWKs endpoint address.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://example123456.aliyunidaas.com/api/v2/auths_ngz2wj35ixxxdyat55nexxxxxx/oauth2/jwks">https://example123456.aliyunidaas.com/api/v2/auths_ngz2wj35ixxxdyat55nexxxxxx/oauth2/jwks</a></p>
@@ -193,7 +200,7 @@ public class ListCredentialProvidersResponseBody extends TeaModel {
 
     public static class ListCredentialProvidersResponseBodyCredentialProvidersCredentialProviderConfigOAuthProviderConfig extends TeaModel {
         /**
-         * <p>OAuth协议中的client_id，客户端ID。</p>
+         * <p>The client_id in the OAuth protocol, also known as the client ID.</p>
          * 
          * <strong>example:</strong>
          * <p>client_id_example_xxx</p>
@@ -202,7 +209,14 @@ public class ListCredentialProvidersResponseBody extends TeaModel {
         public String clientId;
 
         /**
-         * <p>OAuth协议中的scope，权限范围。</p>
+         * <p>The scope in the OAuth protocol, which defines permission scope.</p>
+         * <blockquote>
+         * <p>The Scope configuration for the OAuth credential provider acts as a fallback. If you do not specify the scope parameter when calling the DeveloperAPI to get an OAuth Access Token, the credential provider\&quot;s Scope configuration is used for issuance.</p>
+         * </blockquote>
+         * <blockquote>
+         * <p>Notice: </p>
+         * </blockquote>
+         * <p>Multiple Scope values are separated by spaces.</p>
          * 
          * <strong>example:</strong>
          * <p>example:test_01 example:test_02</p>
@@ -211,7 +225,7 @@ public class ListCredentialProvidersResponseBody extends TeaModel {
         public String scope;
 
         /**
-         * <p>OAuth协议的Token端点。</p>
+         * <p>The Token endpoint of the OAuth protocol.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://example.com/token">https://example.com/token</a></p>
@@ -252,19 +266,22 @@ public class ListCredentialProvidersResponseBody extends TeaModel {
 
     public static class ListCredentialProvidersResponseBodyCredentialProvidersCredentialProviderConfig extends TeaModel {
         /**
-         * <p>JWT身份提供商配置。</p>
+         * <p>Configuration for JWT credential providers.</p>
          */
         @NameInMap("JwtProviderConfig")
         public ListCredentialProvidersResponseBodyCredentialProvidersCredentialProviderConfigJwtProviderConfig jwtProviderConfig;
 
         /**
-         * <p>OAuth 2LO机用类型的提供商的配置。</p>
+         * <p>Configuration for OAuth credential providers.</p>
          */
         @NameInMap("OAuthProviderConfig")
         public ListCredentialProvidersResponseBodyCredentialProvidersCredentialProviderConfigOAuthProviderConfig OAuthProviderConfig;
 
         /**
-         * <p>认证令牌提供商的敏感配置对应的凭据ID列表。</p>
+         * <p>List of credential IDs for the sensitive configuration of the credential provider.</p>
+         * <blockquote>
+         * <p>The system securely stores sensitive credential provider configuration as credentials.</p>
+         * </blockquote>
          */
         @NameInMap("ProviderCredentialIds")
         public java.util.List<String> providerCredentialIds;
@@ -302,7 +319,7 @@ public class ListCredentialProvidersResponseBody extends TeaModel {
 
     public static class ListCredentialProvidersResponseBodyCredentialProviders extends TeaModel {
         /**
-         * <p>认证令牌提供商的创建时间，Unix时间戳。</p>
+         * <p>Creation time of the credential provider, in Unix timestamp format (milliseconds).</p>
          * 
          * <strong>example:</strong>
          * <p>1649830225000</p>
@@ -311,13 +328,19 @@ public class ListCredentialProvidersResponseBody extends TeaModel {
         public Long createTime;
 
         /**
-         * <p>认证令牌提供商的配置。</p>
+         * <p>Credential provider configuration.</p>
          */
         @NameInMap("CredentialProviderConfig")
         public ListCredentialProvidersResponseBodyCredentialProvidersCredentialProviderConfig credentialProviderConfig;
 
         /**
-         * <p>认证令牌提供商的创建类型。</p>
+         * <p>Credential provider creation type. Valid values:</p>
+         * <ul>
+         * <li><p>system_init: System created.</p>
+         * </li>
+         * <li><p>user_custom: User created.</p>
+         * </li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>user_custom</p>
@@ -326,7 +349,7 @@ public class ListCredentialProvidersResponseBody extends TeaModel {
         public String credentialProviderCreationType;
 
         /**
-         * <p>认证令牌提供商ID。</p>
+         * <p>Credential provider ID.</p>
          * 
          * <strong>example:</strong>
          * <p>atp_01kr2cmj5gxxx4fvmls2e93dxxxxx</p>
@@ -335,7 +358,7 @@ public class ListCredentialProvidersResponseBody extends TeaModel {
         public String credentialProviderId;
 
         /**
-         * <p>认证令牌提供商的业务标识。</p>
+         * <p>Credential provider identifier.</p>
          * 
          * <strong>example:</strong>
          * <p>test_example_identifier</p>
@@ -344,7 +367,7 @@ public class ListCredentialProvidersResponseBody extends TeaModel {
         public String credentialProviderIdentifier;
 
         /**
-         * <p>认证令牌提供商名称。</p>
+         * <p>Credential provider name.</p>
          * 
          * <strong>example:</strong>
          * <p>test_example_name</p>
@@ -353,7 +376,13 @@ public class ListCredentialProvidersResponseBody extends TeaModel {
         public String credentialProviderName;
 
         /**
-         * <p>认证令牌提供商的类型。</p>
+         * <p>Credential provider type. Valid values:</p>
+         * <ul>
+         * <li><p>oauth: OAuth credential provider</p>
+         * </li>
+         * <li><p>jwt: JWT credential provider</p>
+         * </li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>oauth</p>
@@ -362,7 +391,7 @@ public class ListCredentialProvidersResponseBody extends TeaModel {
         public String credentialProviderType;
 
         /**
-         * <p>描述。</p>
+         * <p>Description.</p>
          * 
          * <strong>example:</strong>
          * <p>This is an example description</p>
@@ -371,7 +400,7 @@ public class ListCredentialProvidersResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>EIAM实例ID。</p>
+         * <p>Instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>idaas_ue2jvisn35ea5lmthk267xxxxx</p>
@@ -380,7 +409,13 @@ public class ListCredentialProvidersResponseBody extends TeaModel {
         public String instanceId;
 
         /**
-         * <p>认证令牌提供商的状态。</p>
+         * <p>Credential provider status. Valid values:</p>
+         * <ul>
+         * <li><p>enabled: Enabled.</p>
+         * </li>
+         * <li><p>disabled: Disabled.</p>
+         * </li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>enabled</p>
@@ -389,7 +424,7 @@ public class ListCredentialProvidersResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>认证令牌提供商的更新时间，Unix时间戳。</p>
+         * <p>Update time of the credential provider, in Unix timestamp format (milliseconds).</p>
          * 
          * <strong>example:</strong>
          * <p>1649830225000</p>

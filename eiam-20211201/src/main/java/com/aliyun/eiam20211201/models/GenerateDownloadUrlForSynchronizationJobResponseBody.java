@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GenerateDownloadUrlForSynchronizationJobResponseBody extends TeaModel {
     /**
+     * <p>The download URL of the template.</p>
+     * 
      * <strong>example:</strong>
      * <p><a href="https://test.oss.aliyuncs.com/idaas_ly77wa2oexrciw5v672vxxxx/tmp/eiam_user_export_1766469463365.csv">https://test.oss.aliyuncs.com/idaas_ly77wa2oexrciw5v672vxxxx/tmp/eiam_user_export_1766469463365.csv</a></p>
      */
@@ -12,6 +14,8 @@ public class GenerateDownloadUrlForSynchronizationJobResponseBody extends TeaMod
     public String fileDownloadUrl;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>0441BD79-92F3-53AA-8657-F8CE4A2B912A</p>
      */

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class RevokeApplicationFromUsersRequest extends TeaModel {
     /**
-     * <p>The ID of the application.</p>
+     * <p>The application ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -24,7 +24,7 @@ public class RevokeApplicationFromUsersRequest extends TeaModel {
     public String applicationRoleId;
 
     /**
-     * <p>The ID of the instance.</p>
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -34,7 +34,7 @@ public class RevokeApplicationFromUsersRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The IDs of the accounts. You can revoke the access permissions from a maximum of 100 accounts at a time.</p>
+     * <p>A list of account IDs. A single operation supports up to 100 account IDs.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteUsersRequest extends TeaModel {
     /**
-     * <p>IDaaS EIAM实例的ID。</p>
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class DeleteUsersRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>账号ID列表</p>
+     * <p>A list of account IDs.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

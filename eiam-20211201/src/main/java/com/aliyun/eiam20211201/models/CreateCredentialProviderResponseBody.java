@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateCredentialProviderResponseBody extends TeaModel {
     /**
+     * <p>The ID of the credential provider.</p>
+     * 
      * <strong>example:</strong>
      * <p>atp_01kr2cmj5gxxx4fvmls2e93dxxxxx</p>
      */
@@ -12,6 +14,8 @@ public class CreateCredentialProviderResponseBody extends TeaModel {
     public String credentialProviderId;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>0441BD79-92F3-53AA-8657-F8CE4A2B912A</p>
      */

@@ -4,11 +4,14 @@ package com.aliyun.eiam20211201.models;
 import com.aliyun.tea.*;
 
 public class ListIdentityProvidersForNetworkAccessEndpointResponseBody extends TeaModel {
+    /**
+     * <p>The collection of IdPs for the network endpoint.</p>
+     */
     @NameInMap("IdentityProvidersForNetworkAccessEndpoint")
     public java.util.List<ListIdentityProvidersForNetworkAccessEndpointResponseBodyIdentityProvidersForNetworkAccessEndpoint> identityProvidersForNetworkAccessEndpoint;
 
     /**
-     * <p>本次调用返回的查询凭证（Token）值，用于下一次翻页查询。</p>
+     * <p>The token that is returned from the call.</p>
      * 
      * <strong>example:</strong>
      * <p>NTxxxexample</p>
@@ -17,6 +20,8 @@ public class ListIdentityProvidersForNetworkAccessEndpointResponseBody extends T
     public String nextToken;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>0441BD79-92F3-53AA-8657-F8CE4A2B912A</p>
      */
@@ -24,6 +29,8 @@ public class ListIdentityProvidersForNetworkAccessEndpointResponseBody extends T
     public String requestId;
 
     /**
+     * <p>The total number of entries.</p>
+     * 
      * <strong>example:</strong>
      * <p>100</p>
      */
@@ -69,7 +76,7 @@ public class ListIdentityProvidersForNetworkAccessEndpointResponseBody extends T
 
     public static class ListIdentityProvidersForNetworkAccessEndpointResponseBodyIdentityProvidersForNetworkAccessEndpoint extends TeaModel {
         /**
-         * <p>IdP的ID。</p>
+         * <p>The ID of the IdP.</p>
          * 
          * <strong>example:</strong>
          * <p>idp_nbq7i4ylodmm64iy6t5muxxxxx</p>
@@ -78,7 +85,7 @@ public class ListIdentityProvidersForNetworkAccessEndpointResponseBody extends T
         public String identityProviderId;
 
         /**
-         * <p>IdP名称。</p>
+         * <p>The name of the IdP.</p>
          * 
          * <strong>example:</strong>
          * <p>OIDC Provider</p>
@@ -87,7 +94,7 @@ public class ListIdentityProvidersForNetworkAccessEndpointResponseBody extends T
         public String identityProviderName;
 
         /**
-         * <p>IDaaS EIAM 实例ID</p>
+         * <p>The instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>idaas_elk5evwagodqlmwpfehasxxxxx</p>

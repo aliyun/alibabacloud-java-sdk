@@ -4,11 +4,14 @@ package com.aliyun.eiam20211201.models;
 import com.aliyun.tea.*;
 
 public class ListCustomPrivacyPoliciesResponseBody extends TeaModel {
+    /**
+     * <p>A list of custom privacy policies.</p>
+     */
     @NameInMap("CustomPrivacyPolicies")
     public java.util.List<ListCustomPrivacyPoliciesResponseBodyCustomPrivacyPolicies> customPrivacyPolicies;
 
     /**
-     * <p>分页查询时每页行数。</p>
+     * <p>The number of entries to return on each page.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -17,7 +20,7 @@ public class ListCustomPrivacyPoliciesResponseBody extends TeaModel {
     public Long maxResults;
 
     /**
-     * <p>本次调用返回的查询凭证（Token）值，用于下一次翻页查询。</p>
+     * <p>The token that is used to retrieve the next page of results.</p>
      * 
      * <strong>example:</strong>
      * <p>NTxxxexample</p>
@@ -26,7 +29,7 @@ public class ListCustomPrivacyPoliciesResponseBody extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>本次调用返回的查询凭证（Token）值，用于上一次翻页查询。</p>
+     * <p>The token that is used to retrieve the previous page of results.</p>
      * 
      * <strong>example:</strong>
      * <p>PTxxxexample</p>
@@ -35,6 +38,8 @@ public class ListCustomPrivacyPoliciesResponseBody extends TeaModel {
     public String previousToken;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>0441BD79-92F3-53AA-8657-F8CE4A2B912A</p>
      */
@@ -42,6 +47,8 @@ public class ListCustomPrivacyPoliciesResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total number of entries.</p>
+     * 
      * <strong>example:</strong>
      * <p>100</p>
      */
@@ -103,7 +110,7 @@ public class ListCustomPrivacyPoliciesResponseBody extends TeaModel {
 
     public static class ListCustomPrivacyPoliciesResponseBodyCustomPrivacyPolicies extends TeaModel {
         /**
-         * <p>自定义条款Id</p>
+         * <p>The ID of the custom privacy policy.</p>
          * 
          * <strong>example:</strong>
          * <p>pp_xxxxx</p>
@@ -112,7 +119,7 @@ public class ListCustomPrivacyPoliciesResponseBody extends TeaModel {
         public String customPrivacyPolicyId;
 
         /**
-         * <p>自定义条款名称</p>
+         * <p>The name of the custom privacy policy.</p>
          * 
          * <strong>example:</strong>
          * <p>Custom Privacy Policy Name</p>
@@ -121,7 +128,7 @@ public class ListCustomPrivacyPoliciesResponseBody extends TeaModel {
         public String customPrivacyPolicyName;
 
         /**
-         * <p>若显示语言未配置时，门户侧展示默认语言展示条款。</p>
+         * <p>The default language of the policy. The value is the LanguageCode returned by the ListLanguages operation.</p>
          * 
          * <strong>example:</strong>
          * <p>zh-Hans-CN</p>
@@ -130,7 +137,7 @@ public class ListCustomPrivacyPoliciesResponseBody extends TeaModel {
         public String defaultLanguageCode;
 
         /**
-         * <p>实例id</p>
+         * <p>The instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>idaas_ue2jvisn35ea5lmthk267xxxxx</p>
@@ -139,7 +146,7 @@ public class ListCustomPrivacyPoliciesResponseBody extends TeaModel {
         public String instanceId;
 
         /**
-         * <p>自定义条款状态</p>
+         * <p>The status of the custom privacy policy.</p>
          * 
          * <strong>example:</strong>
          * <p>enabled</p>
@@ -148,7 +155,7 @@ public class ListCustomPrivacyPoliciesResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>自定义条款同意类型，是默认同意，还是用户勾选同意</p>
+         * <p>The user consent type for the policy.</p>
          * 
          * <strong>example:</strong>
          * <p>implied_consent</p>

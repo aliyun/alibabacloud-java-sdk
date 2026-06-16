@@ -5,6 +5,14 @@ import com.aliyun.tea.*;
 
 public class CreateApplicationRequest extends TeaModel {
     /**
+     * <p>The identity type of the application. The default value is application. Valid values:</p>
+     * <ul>
+     * <li><p>application: A standard application.</p>
+     * </li>
+     * <li><p>agent: An automated agent.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>application</p>
      */
@@ -12,7 +20,7 @@ public class CreateApplicationRequest extends TeaModel {
     public String applicationIdentityType;
 
     /**
-     * <p>The name of the application.</p>
+     * <p>The application name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,10 +33,12 @@ public class CreateApplicationRequest extends TeaModel {
     public CreateApplicationRequestApplicationOwner applicationOwner;
 
     /**
-     * <p>The type of the application source. Valid values:</p>
+     * <p>Specifies how the application is created. Valid values:</p>
      * <ul>
-     * <li>urn:alibaba:idaas:app:source:template: application template</li>
-     * <li>urn:alibaba:idaas:app:source:standard: standard protocol</li>
+     * <li><p>urn:alibaba:idaas:app:source:template: Creates the application from an application template.</p>
+     * </li>
+     * <li><p>urn:alibaba:idaas:app:source:standard: Creates the application from a standard protocol.</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -39,10 +49,10 @@ public class CreateApplicationRequest extends TeaModel {
     public String applicationSourceType;
 
     /**
-     * <p>The ID of the application template. This parameter is required if you set the ApplicationSourceType parameter to urn:alibaba:idaas:app:source:template.</p>
+     * <p>The ID of the application template. This parameter is required if ApplicationSourceType is urn:alibaba:idaas:app:source:template.</p>
      * 
      * <strong>example:</strong>
-     * <p>template_cloud_ram</p>
+     * <p>apt_ramuser_mjqrsi</p>
      */
     @NameInMap("ApplicationTemplateId")
     public String applicationTemplateId;
@@ -51,16 +61,16 @@ public class CreateApplicationRequest extends TeaModel {
     public java.util.List<CreateApplicationRequestCustomFields> customFields;
 
     /**
-     * <p>The description of the application.</p>
+     * <p>The application description.</p>
      * 
      * <strong>example:</strong>
-     * <p>RAM user SSO application</p>
+     * <p>RAM account SSO application</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
-     * <p>The ID of the instance.</p>
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -79,10 +89,12 @@ public class CreateApplicationRequest extends TeaModel {
     public String logoUrl;
 
     /**
-     * <p>The SSO protocol. Valid values:</p>
+     * <p>The single sign-on (SSO) protocol. Valid values:</p>
      * <ul>
-     * <li>saml2: the SAML 2.0 protocol.</li>
-     * <li>oidc: the OpenID Connect protocol.</li>
+     * <li><p>saml2: SAML 2.0</p>
+     * </li>
+     * <li><p>oidc: OpenID Connect</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

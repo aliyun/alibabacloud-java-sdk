@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListGroupsForResourceServerRequest extends TeaModel {
     /**
+     * <p>The ID of the resource server application.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -13,11 +14,14 @@ public class ListGroupsForResourceServerRequest extends TeaModel {
     @NameInMap("ApplicationId")
     public String applicationId;
 
+    /**
+     * <p>The filter conditions.</p>
+     */
     @NameInMap("Filter")
     public java.util.List<ListGroupsForResourceServerRequestFilter> filter;
 
     /**
-     * <p>IDaaS EIAM实例的ID。</p>
+     * <p>The ID of the instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -27,6 +31,8 @@ public class ListGroupsForResourceServerRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>The maximum number of entries to return on each page.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -34,7 +40,7 @@ public class ListGroupsForResourceServerRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>查询凭证（Token），取值为上一次API调用返回的NextToken参数值。</p>
+     * <p>The token for the next page of results. You do not need to provide this parameter for the first request. For subsequent requests, set this to the <code>NextToken</code> value from the previous response.</p>
      * 
      * <strong>example:</strong>
      * <p>NTxxxxxexample</p>
@@ -43,7 +49,7 @@ public class ListGroupsForResourceServerRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>权限唯一标识。</p>
+     * <p>The ID of the scope.</p>
      * 
      * <strong>example:</strong>
      * <p>ress_nbte4bb3qqqnaq73rlmkqixxxx</p>
@@ -106,12 +112,17 @@ public class ListGroupsForResourceServerRequest extends TeaModel {
 
     public static class ListGroupsForResourceServerRequestFilter extends TeaModel {
         /**
+         * <p>The name of the filter condition. The only valid value is GroupIds.</p>
+         * 
          * <strong>example:</strong>
          * <p>GroupIds</p>
          */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The values for the filter condition.</p>
+         */
         @NameInMap("Value")
         public java.util.List<String> value;
 

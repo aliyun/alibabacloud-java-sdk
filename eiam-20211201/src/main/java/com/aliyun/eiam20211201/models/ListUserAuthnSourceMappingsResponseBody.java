@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListUserAuthnSourceMappingsResponseBody extends TeaModel {
     /**
-     * <p>分页查询时每页行数。</p>
+     * <p>The maximum number of entries returned on each page.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -14,7 +14,7 @@ public class ListUserAuthnSourceMappingsResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>本次调用返回的查询凭证（Token）值，用于下一次翻页查询。</p>
+     * <p>The token to retrieve the next page of results.</p>
      * 
      * <strong>example:</strong>
      * <p>NTxxxexample</p>
@@ -23,7 +23,7 @@ public class ListUserAuthnSourceMappingsResponseBody extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>本次调用返回的查询凭证（Token）值，用于上一次翻页查询。</p>
+     * <p>The token to retrieve the previous page of results.</p>
      * 
      * <strong>example:</strong>
      * <p>PTxxxexample</p>
@@ -32,6 +32,8 @@ public class ListUserAuthnSourceMappingsResponseBody extends TeaModel {
     public String previousToken;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>0441BD79-92F3-53AA-8657-F8CE4A2B912A</p>
      */
@@ -39,12 +41,17 @@ public class ListUserAuthnSourceMappingsResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total number of entries returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>100</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
+    /**
+     * <p>A list of bindings for third-party account logons.</p>
+     */
     @NameInMap("UserAuthnSourceMappings")
     public java.util.List<ListUserAuthnSourceMappingsResponseBodyUserAuthnSourceMappings> userAuthnSourceMappings;
 
@@ -103,7 +110,7 @@ public class ListUserAuthnSourceMappingsResponseBody extends TeaModel {
 
     public static class ListUserAuthnSourceMappingsResponseBodyUserAuthnSourceMappings extends TeaModel {
         /**
-         * <p>来源Idp类型</p>
+         * <p>The authentication source type.</p>
          * 
          * <strong>example:</strong>
          * <p>urn:alibaba:idaas:authntype:oidc</p>
@@ -112,7 +119,7 @@ public class ListUserAuthnSourceMappingsResponseBody extends TeaModel {
         public String authnSourceType;
 
         /**
-         * <p>创建时间</p>
+         * <p>The time when the binding was created.</p>
          * 
          * <strong>example:</strong>
          * <p>1762309642177</p>
@@ -120,11 +127,17 @@ public class ListUserAuthnSourceMappingsResponseBody extends TeaModel {
         @NameInMap("CreateTime")
         public Long createTime;
 
+        /**
+         * <p>Information about the associated third-party account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{\&quot;userId\&quot;:\&quot;xxxx\&quot;,\&quot;name\&quot;:\&quot;xxx\&quot;,\&quot;bindTime\&quot;:\&quot;1766050298872\&quot;,\&quot;description\&quot;:\&quot;bind request id: reqpre_xxx\&quot;}</p>
+         */
         @NameInMap("ExternalData")
         public String externalData;
 
         /**
-         * <p>来源Idp Id</p>
+         * <p>The source IdP ID.</p>
          * 
          * <strong>example:</strong>
          * <p>idp_my664lwkhpicbyzirog3xxxxx</p>
@@ -133,7 +146,7 @@ public class ListUserAuthnSourceMappingsResponseBody extends TeaModel {
         public String identityProviderId;
 
         /**
-         * <p>实例Id</p>
+         * <p>The instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>idaas_ue2jvisn35ea5lmthk267xxxxx</p>
@@ -142,7 +155,7 @@ public class ListUserAuthnSourceMappingsResponseBody extends TeaModel {
         public String instanceId;
 
         /**
-         * <p>最近一次更新时间</p>
+         * <p>The time when the binding was last updated.</p>
          * 
          * <strong>example:</strong>
          * <p>1762309642177</p>
@@ -151,7 +164,7 @@ public class ListUserAuthnSourceMappingsResponseBody extends TeaModel {
         public Long updateTime;
 
         /**
-         * <p>外部ID</p>
+         * <p>The external ID.</p>
          * 
          * <strong>example:</strong>
          * <p>xxxxxx</p>
@@ -160,7 +173,7 @@ public class ListUserAuthnSourceMappingsResponseBody extends TeaModel {
         public String userExternalId;
 
         /**
-         * <p>用户ID</p>
+         * <p>The user ID.</p>
          * 
          * <strong>example:</strong>
          * <p>user_ue2jvisn35exxxxx</p>

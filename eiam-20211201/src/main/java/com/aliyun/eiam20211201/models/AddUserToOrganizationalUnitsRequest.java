@@ -15,7 +15,7 @@ public class AddUserToOrganizationalUnitsRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The organization IDs. You can add an account to a maximum of 100 organizations.</p>
+     * <p>The list of organization IDs. The list can contain up to 100 IDs.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("OrganizationalUnitIds")

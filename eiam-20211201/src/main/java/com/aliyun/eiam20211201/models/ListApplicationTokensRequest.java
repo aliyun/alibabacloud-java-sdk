@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListApplicationTokensRequest extends TeaModel {
     /**
-     * <p>IDaaS的应用资源ID。</p>
+     * <p>The application ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class ListApplicationTokensRequest extends TeaModel {
     public String applicationId;
 
     /**
-     * <p>ApplicationToken的类型</p>
+     * <p>The type of the application token.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,7 +25,7 @@ public class ListApplicationTokensRequest extends TeaModel {
     public String applicationTokenType;
 
     /**
-     * <p>IDaaS EIAM实例的ID。</p>
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

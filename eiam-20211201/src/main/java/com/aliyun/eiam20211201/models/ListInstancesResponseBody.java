@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListInstancesResponseBody extends TeaModel {
     /**
-     * <p>The information of instances.</p>
+     * <p>The list of instance information.</p>
      */
     @NameInMap("Instances")
     public java.util.List<ListInstancesResponseBodyInstances> instances;
 
     /**
-     * <p>The request ID.</p>
+     * <p>Request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>0441BD79-92F3-53AA-8657-F8CE4A2B912A</p>
@@ -20,7 +20,7 @@ public class ListInstancesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of entries returned.</p>
+     * <p>Total number of entries.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>
@@ -59,7 +59,7 @@ public class ListInstancesResponseBody extends TeaModel {
 
     public static class ListInstancesResponseBodyInstancesDefaultEndpoint extends TeaModel {
         /**
-         * <p>The endpoint of the instance.</p>
+         * <p>The endpoint address of the instance.</p>
          * 
          * <strong>example:</strong>
          * <p>example-xxx.aliyunidaas.com</p>
@@ -68,10 +68,10 @@ public class ListInstancesResponseBody extends TeaModel {
         public String endpoint;
 
         /**
-         * <p>The status of the endpoint. Valid values:</p>
+         * <p>The status of the instance endpoint. Valid values:</p>
          * <ul>
-         * <li>resolved</li>
-         * <li>unresolved</li>
+         * <li>resolved: Resolved.</li>
+         * <li>unresolved: Unresolved.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -103,15 +103,112 @@ public class ListInstancesResponseBody extends TeaModel {
 
     }
 
+    public static class ListInstancesResponseBodyInstancesReplicationConfiguration extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>idaas_xxxxxx</p>
+         */
+        @NameInMap("BackupInstanceId")
+        public String backupInstanceId;
+
+        /**
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
+         */
+        @NameInMap("BackupInstanceRegionId")
+        public String backupInstanceRegionId;
+
+        /**
+         * <strong>example:</strong>
+         * <p>idaas_xxxxxx</p>
+         */
+        @NameInMap("PrimaryInstanceId")
+        public String primaryInstanceId;
+
+        /**
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
+         */
+        @NameInMap("PrimaryInstanceRegionId")
+        public String primaryInstanceRegionId;
+
+        /**
+         * <strong>example:</strong>
+         * <p>1778499337000</p>
+         */
+        @NameInMap("ReplicationCreateTime")
+        public Long replicationCreateTime;
+
+        public static ListInstancesResponseBodyInstancesReplicationConfiguration build(java.util.Map<String, ?> map) throws Exception {
+            ListInstancesResponseBodyInstancesReplicationConfiguration self = new ListInstancesResponseBodyInstancesReplicationConfiguration();
+            return TeaModel.build(map, self);
+        }
+
+        public ListInstancesResponseBodyInstancesReplicationConfiguration setBackupInstanceId(String backupInstanceId) {
+            this.backupInstanceId = backupInstanceId;
+            return this;
+        }
+        public String getBackupInstanceId() {
+            return this.backupInstanceId;
+        }
+
+        public ListInstancesResponseBodyInstancesReplicationConfiguration setBackupInstanceRegionId(String backupInstanceRegionId) {
+            this.backupInstanceRegionId = backupInstanceRegionId;
+            return this;
+        }
+        public String getBackupInstanceRegionId() {
+            return this.backupInstanceRegionId;
+        }
+
+        public ListInstancesResponseBodyInstancesReplicationConfiguration setPrimaryInstanceId(String primaryInstanceId) {
+            this.primaryInstanceId = primaryInstanceId;
+            return this;
+        }
+        public String getPrimaryInstanceId() {
+            return this.primaryInstanceId;
+        }
+
+        public ListInstancesResponseBodyInstancesReplicationConfiguration setPrimaryInstanceRegionId(String primaryInstanceRegionId) {
+            this.primaryInstanceRegionId = primaryInstanceRegionId;
+            return this;
+        }
+        public String getPrimaryInstanceRegionId() {
+            return this.primaryInstanceRegionId;
+        }
+
+        public ListInstancesResponseBodyInstancesReplicationConfiguration setReplicationCreateTime(Long replicationCreateTime) {
+            this.replicationCreateTime = replicationCreateTime;
+            return this;
+        }
+        public Long getReplicationCreateTime() {
+            return this.replicationCreateTime;
+        }
+
+    }
+
     public static class ListInstancesResponseBodyInstances extends TeaModel {
         /**
-         * <p>The time when the instance was created. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         * <p>The creation time of the instance, in Unix timestamp format, in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1550115455000</p>
          */
         @NameInMap("CreateTime")
         public Long createTime;
+
+        /**
+         * <strong>example:</strong>
+         * <p>enabled</p>
+         */
+        @NameInMap("CrossRegionReplication")
+        public String crossRegionReplication;
+
+        /**
+         * <strong>example:</strong>
+         * <p>primary</p>
+         */
+        @NameInMap("CrossRegionReplicationRole")
+        public String crossRegionReplicationRole;
 
         /**
          * <p>The default endpoint of the instance.</p>
@@ -121,12 +218,22 @@ public class ListInstancesResponseBody extends TeaModel {
 
         /**
          * <p>The description of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>instance_for_test</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
-         * <p>The instance ID.</p>
+         * <strong>example:</strong>
+         * <p>inactive</p>
+         */
+        @NameInMap("InstanceFailoverStatus")
+        public String instanceFailoverStatus;
+
+        /**
+         * <p>Instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>idaas_eypq6ljgyeuwmlw672sulxxxxx</p>
@@ -135,20 +242,31 @@ public class ListInstancesResponseBody extends TeaModel {
         public String instanceId;
 
         /**
+         * <p>The service code of the cloud service that manages the instance.</p>
+         * 
          * <strong>example:</strong>
          * <p>sase</p>
          */
         @NameInMap("ManagedServiceCode")
         public String managedServiceCode;
 
+        @NameInMap("ReplicationConfiguration")
+        public ListInstancesResponseBodyInstancesReplicationConfiguration replicationConfiguration;
+
+        /**
+         * <p>Indicates whether the instance is managed by a cloud service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("ServiceManaged")
         public Boolean serviceManaged;
 
         /**
-         * <p>The status of the instance. Valid values:</p>
+         * <p>Instance status. Valid values:</p>
          * <ul>
-         * <li>creating</li>
-         * <li>running</li>
+         * <li>creating: Being created.</li>
+         * <li>running: Running.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -170,6 +288,22 @@ public class ListInstancesResponseBody extends TeaModel {
             return this.createTime;
         }
 
+        public ListInstancesResponseBodyInstances setCrossRegionReplication(String crossRegionReplication) {
+            this.crossRegionReplication = crossRegionReplication;
+            return this;
+        }
+        public String getCrossRegionReplication() {
+            return this.crossRegionReplication;
+        }
+
+        public ListInstancesResponseBodyInstances setCrossRegionReplicationRole(String crossRegionReplicationRole) {
+            this.crossRegionReplicationRole = crossRegionReplicationRole;
+            return this;
+        }
+        public String getCrossRegionReplicationRole() {
+            return this.crossRegionReplicationRole;
+        }
+
         public ListInstancesResponseBodyInstances setDefaultEndpoint(ListInstancesResponseBodyInstancesDefaultEndpoint defaultEndpoint) {
             this.defaultEndpoint = defaultEndpoint;
             return this;
@@ -186,6 +320,14 @@ public class ListInstancesResponseBody extends TeaModel {
             return this.description;
         }
 
+        public ListInstancesResponseBodyInstances setInstanceFailoverStatus(String instanceFailoverStatus) {
+            this.instanceFailoverStatus = instanceFailoverStatus;
+            return this;
+        }
+        public String getInstanceFailoverStatus() {
+            return this.instanceFailoverStatus;
+        }
+
         public ListInstancesResponseBodyInstances setInstanceId(String instanceId) {
             this.instanceId = instanceId;
             return this;
@@ -200,6 +342,14 @@ public class ListInstancesResponseBody extends TeaModel {
         }
         public String getManagedServiceCode() {
             return this.managedServiceCode;
+        }
+
+        public ListInstancesResponseBodyInstances setReplicationConfiguration(ListInstancesResponseBodyInstancesReplicationConfiguration replicationConfiguration) {
+            this.replicationConfiguration = replicationConfiguration;
+            return this;
+        }
+        public ListInstancesResponseBodyInstancesReplicationConfiguration getReplicationConfiguration() {
+            return this.replicationConfiguration;
         }
 
         public ListInstancesResponseBodyInstances setServiceManaged(Boolean serviceManaged) {

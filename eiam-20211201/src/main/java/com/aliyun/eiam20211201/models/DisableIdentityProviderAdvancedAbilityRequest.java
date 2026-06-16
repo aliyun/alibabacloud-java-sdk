@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DisableIdentityProviderAdvancedAbilityRequest extends TeaModel {
     /**
-     * <p>IDaaS的身份提供方主键id</p>
+     * <p>The identity provider ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class DisableIdentityProviderAdvancedAbilityRequest extends TeaModel {
     public String identityProviderId;
 
     /**
-     * <p>IDaaS EIAM的实例id</p>
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateApplicationAdvancedConfigRequest extends TeaModel {
     /**
-     * <p>IDaaS的应用资源ID。</p>
+     * <p>The application ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class UpdateApplicationAdvancedConfigRequest extends TeaModel {
     public String applicationId;
 
     /**
-     * <p>IDaaS EIAM实例的ID。</p>
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,7 +25,7 @@ public class UpdateApplicationAdvancedConfigRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>Scim Server 高阶配置</p>
+     * <p>The advanced configuration of the SCIM server.</p>
      */
     @NameInMap("ScimServerAdvancedConfig")
     public UpdateApplicationAdvancedConfigRequestScimServerAdvancedConfig scimServerAdvancedConfig;
@@ -61,13 +61,13 @@ public class UpdateApplicationAdvancedConfigRequest extends TeaModel {
 
     public static class UpdateApplicationAdvancedConfigRequestScimServerAdvancedConfig extends TeaModel {
         /**
-         * <p>支持的用户自定义字段ID列表。</p>
+         * <p>A list of IDs of supported custom user fields.</p>
          */
         @NameInMap("SupportedUserCustomFieldIds")
         public java.util.List<String> supportedUserCustomFieldIds;
 
         /**
-         * <p>用户扩展字段的命名空间。</p>
+         * <p>The namespace of the user extension fields.</p>
          * 
          * <strong>example:</strong>
          * <p>urn:ietf:params:scim:schemas:extension:customfield:2.0:User</p>

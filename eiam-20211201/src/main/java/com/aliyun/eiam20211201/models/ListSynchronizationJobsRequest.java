@@ -5,7 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListSynchronizationJobsRequest extends TeaModel {
     /**
-     * <p>同步方向[ingress,egress]</p>
+     * <p>The direction of the sync task. Valid values:</p>
+     * <ul>
+     * <li><p>ingress: Inbound.</p>
+     * </li>
+     * <li><p>egress: Outbound.</p>
+     * </li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>ingress</p>
@@ -14,7 +20,7 @@ public class ListSynchronizationJobsRequest extends TeaModel {
     public String direction;
 
     /**
-     * <p>同步结束时间</p>
+     * <p>The synchronization end time. The value is a UNIX timestamp. Unit: milliseconds.</p>
      * 
      * <strong>example:</strong>
      * <p>1649830226000</p>
@@ -22,11 +28,14 @@ public class ListSynchronizationJobsRequest extends TeaModel {
     @NameInMap("EndTime")
     public Long endTime;
 
+    /**
+     * <p>The filter parameters.</p>
+     */
     @NameInMap("Filters")
     public java.util.List<ListSynchronizationJobsRequestFilters> filters;
 
     /**
-     * <p>IDaaS EIAM实例的ID。</p>
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -36,7 +45,7 @@ public class ListSynchronizationJobsRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>分页查询时每页行数。默认值为20，最大值为100。</p>
+     * <p>The number of entries to return on each page. The maximum value is 100.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -45,7 +54,7 @@ public class ListSynchronizationJobsRequest extends TeaModel {
     public Long maxResults;
 
     /**
-     * <p>查询凭证（Token），取值为上一次API调用返回的NextToken参数值。</p>
+     * <p>The token to retrieve the next page of results. If no more pages exist, this parameter is not returned.</p>
      * 
      * <strong>example:</strong>
      * <p>NTxxxxxexample</p>
@@ -54,7 +63,7 @@ public class ListSynchronizationJobsRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>当前查询的列表页码，默认为1。</p>
+     * <p>The page number. The value starts from 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -63,7 +72,7 @@ public class ListSynchronizationJobsRequest extends TeaModel {
     public Long pageNumber;
 
     /**
-     * <p>当前查询的列表页码，默认为20。</p>
+     * <p>The number of entries per page. The maximum value is 100.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -72,7 +81,7 @@ public class ListSynchronizationJobsRequest extends TeaModel {
     public Long pageSize;
 
     /**
-     * <p>同步开始时间</p>
+     * <p>The synchronization start time. The value is a UNIX timestamp. Unit: milliseconds.</p>
      * 
      * <strong>example:</strong>
      * <p>1649830226000</p>
@@ -81,7 +90,19 @@ public class ListSynchronizationJobsRequest extends TeaModel {
     public Long startTime;
 
     /**
-     * <p>同步状态[pending,running,suspending,failed,partial_success,success]</p>
+     * <p>The status of the sync task. Valid values:</p>
+     * <ul>
+     * <li><p>pending: The task is pending.</p>
+     * </li>
+     * <li><p>running: The task is running.</p>
+     * </li>
+     * <li><p>failed: The task failed.</p>
+     * </li>
+     * <li><p>partial_success: The task is partially successful.</p>
+     * </li>
+     * <li><p>success: The task is successful.</p>
+     * </li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>running</p>
@@ -90,7 +111,7 @@ public class ListSynchronizationJobsRequest extends TeaModel {
     public String status;
 
     /**
-     * <p>同步目标ID</p>
+     * <p>A list of synchronization target IDs. For example, \<code>[idp_111XXXX,idp_222XXXX]\\</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>target_001</p>
@@ -99,7 +120,13 @@ public class ListSynchronizationJobsRequest extends TeaModel {
     public java.util.List<String> targetIds;
 
     /**
-     * <p>同步目标类型[identity_provider,organizational_unit,application,user]</p>
+     * <p>The type of the synchronization target. Valid values:</p>
+     * <ul>
+     * <li><p>identity_provider: Identity provider.</p>
+     * </li>
+     * <li><p>application: Application.</p>
+     * </li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>identity_provider</p>
@@ -209,9 +236,18 @@ public class ListSynchronizationJobsRequest extends TeaModel {
     }
 
     public static class ListSynchronizationJobsRequestFilters extends TeaModel {
+        /**
+         * <p>The name of the dynamic parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>qps</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The values of the dynamic parameter.</p>
+         */
         @NameInMap("Values")
         public java.util.List<String> values;
 

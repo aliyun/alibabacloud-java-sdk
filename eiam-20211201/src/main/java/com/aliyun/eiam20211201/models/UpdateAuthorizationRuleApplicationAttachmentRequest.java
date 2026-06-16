@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateAuthorizationRuleApplicationAttachmentRequest extends TeaModel {
     /**
-     * <p>应用 ID。</p>
+     * <p>The application ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class UpdateAuthorizationRuleApplicationAttachmentRequest extends TeaMode
     public String applicationId;
 
     /**
-     * <p>授权规则标识。</p>
+     * <p>The authorization rule ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,6 +25,7 @@ public class UpdateAuthorizationRuleApplicationAttachmentRequest extends TeaMode
     public String authorizationRuleId;
 
     /**
+     * <p>A client token to ensure the idempotence of the request. Generate a unique value from your client for this parameter. The ClientToken can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://www.alibabacloud.com/help/zh/ecs/developer-reference/how-to-ensure-idempotence">How to ensure idempotence</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -34,7 +35,7 @@ public class UpdateAuthorizationRuleApplicationAttachmentRequest extends TeaMode
     public String clientToken;
 
     /**
-     * <p>IDaaS EIAM实例的ID。</p>
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -44,13 +45,19 @@ public class UpdateAuthorizationRuleApplicationAttachmentRequest extends TeaMode
     public String instanceId;
 
     /**
-     * <p>有效周期，当validityPeriodType为custom有效。</p>
+     * <p>The time range of the validity period. This parameter takes effect only when <strong>ValidityType</strong> is set to <strong>time_bound</strong>.</p>
      */
     @NameInMap("ValidityPeriod")
     public UpdateAuthorizationRuleApplicationAttachmentRequestValidityPeriod validityPeriod;
 
     /**
-     * <p>有效期类型，枚举值：permanent（永久），time_bound（自定义时间范围）。</p>
+     * <p>The validity type of the relationship. Valid values:</p>
+     * <ul>
+     * <li><p>permanent: The relationship is permanent.</p>
+     * </li>
+     * <li><p>time_bound: The relationship is valid for a custom time range.</p>
+     * </li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -114,7 +121,7 @@ public class UpdateAuthorizationRuleApplicationAttachmentRequest extends TeaMode
 
     public static class UpdateAuthorizationRuleApplicationAttachmentRequestValidityPeriod extends TeaModel {
         /**
-         * <p>授权规则生效结束时间，采用unix纪元精确到毫秒。</p>
+         * <p>The end time of the validity period. This is a UNIX timestamp. Unit: milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1704062061000</p>
@@ -123,7 +130,7 @@ public class UpdateAuthorizationRuleApplicationAttachmentRequest extends TeaMode
         public Long endTime;
 
         /**
-         * <p>授权规则生效开始时间，采用unix纪元精确到毫秒。</p>
+         * <p>The start time of the validity period. This is a UNIX timestamp. Unit: milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1704042061000</p>

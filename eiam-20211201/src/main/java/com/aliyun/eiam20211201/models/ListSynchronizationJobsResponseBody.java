@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListSynchronizationJobsResponseBody extends TeaModel {
     /**
-     * <p>本次调用返回的查询凭证（Token）值，用于下一次翻页查询。</p>
+     * <p>The token to retrieve the next page of results.</p>
      * 
      * <strong>example:</strong>
      * <p>NTxxxexample</p>
@@ -14,16 +14,23 @@ public class ListSynchronizationJobsResponseBody extends TeaModel {
     public String nextToken;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>0441BD79-92F3-53AA-8657-F8CE4A2B912A</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>A list of sync task information.</p>
+     */
     @NameInMap("SynchronizationJobs")
     public java.util.List<ListSynchronizationJobsResponseBodySynchronizationJobs> synchronizationJobs;
 
     /**
+     * <p>The total number of entries.</p>
+     * 
      * <strong>example:</strong>
      * <p>100</p>
      */
@@ -69,7 +76,7 @@ public class ListSynchronizationJobsResponseBody extends TeaModel {
 
     public static class ListSynchronizationJobsResponseBodySynchronizationJobsResultGroupMemberStatisticsBinded extends TeaModel {
         /**
-         * <p>失败数目</p>
+         * <p>The number of failed operations.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -78,7 +85,7 @@ public class ListSynchronizationJobsResponseBody extends TeaModel {
         public Long failed;
 
         /**
-         * <p>跳过数目</p>
+         * <p>The number of skipped operations.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -87,7 +94,7 @@ public class ListSynchronizationJobsResponseBody extends TeaModel {
         public Long skipped;
 
         /**
-         * <p>成功数目</p>
+         * <p>The number of successful operations.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -96,7 +103,7 @@ public class ListSynchronizationJobsResponseBody extends TeaModel {
         public Long success;
 
         /**
-         * <p>总共数目</p>
+         * <p>The total number.</p>
          * 
          * <strong>example:</strong>
          * <p>3</p>
@@ -145,7 +152,7 @@ public class ListSynchronizationJobsResponseBody extends TeaModel {
 
     public static class ListSynchronizationJobsResponseBodySynchronizationJobsResultGroupMemberStatisticsCreated extends TeaModel {
         /**
-         * <p>失败数目</p>
+         * <p>The number of failed operations.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -154,7 +161,7 @@ public class ListSynchronizationJobsResponseBody extends TeaModel {
         public Long failed;
 
         /**
-         * <p>跳过数目</p>
+         * <p>The number of skipped operations.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -163,7 +170,7 @@ public class ListSynchronizationJobsResponseBody extends TeaModel {
         public Long skipped;
 
         /**
-         * <p>成功数目</p>
+         * <p>The number of successful operations.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -172,7 +179,7 @@ public class ListSynchronizationJobsResponseBody extends TeaModel {
         public Long success;
 
         /**
-         * <p>总共数目</p>
+         * <p>The total number.</p>
          * 
          * <strong>example:</strong>
          * <p>3</p>
@@ -221,7 +228,7 @@ public class ListSynchronizationJobsResponseBody extends TeaModel {
 
     public static class ListSynchronizationJobsResponseBodySynchronizationJobsResultGroupMemberStatisticsDeleted extends TeaModel {
         /**
-         * <p>失败数目</p>
+         * <p>The number of failed operations.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -230,7 +237,7 @@ public class ListSynchronizationJobsResponseBody extends TeaModel {
         public Long failed;
 
         /**
-         * <p>跳过数目</p>
+         * <p>The number of skipped operations.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -239,7 +246,7 @@ public class ListSynchronizationJobsResponseBody extends TeaModel {
         public Long skipped;
 
         /**
-         * <p>成功数目</p>
+         * <p>The number of successful operations.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -248,7 +255,7 @@ public class ListSynchronizationJobsResponseBody extends TeaModel {
         public Long success;
 
         /**
-         * <p>总共数目</p>
+         * <p>The total number.</p>
          * 
          * <strong>example:</strong>
          * <p>3</p>
@@ -297,7 +304,7 @@ public class ListSynchronizationJobsResponseBody extends TeaModel {
 
     public static class ListSynchronizationJobsResponseBodySynchronizationJobsResultGroupMemberStatisticsPushed extends TeaModel {
         /**
-         * <p>失败数目</p>
+         * <p>The number of failed operations.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -306,7 +313,7 @@ public class ListSynchronizationJobsResponseBody extends TeaModel {
         public Long failed;
 
         /**
-         * <p>跳过数目</p>
+         * <p>The number of skipped operations.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -315,7 +322,7 @@ public class ListSynchronizationJobsResponseBody extends TeaModel {
         public Long skipped;
 
         /**
-         * <p>成功数目</p>
+         * <p>The number of successful operations.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -324,7 +331,7 @@ public class ListSynchronizationJobsResponseBody extends TeaModel {
         public Long success;
 
         /**
-         * <p>总共数目</p>
+         * <p>The total number.</p>
          * 
          * <strong>example:</strong>
          * <p>3</p>
@@ -373,7 +380,7 @@ public class ListSynchronizationJobsResponseBody extends TeaModel {
 
     public static class ListSynchronizationJobsResponseBodySynchronizationJobsResultGroupMemberStatisticsSame extends TeaModel {
         /**
-         * <p>失败数目</p>
+         * <p>The number of failed operations.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -382,7 +389,7 @@ public class ListSynchronizationJobsResponseBody extends TeaModel {
         public Long failed;
 
         /**
-         * <p>跳过数目</p>
+         * <p>The number of skipped operations.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -391,7 +398,7 @@ public class ListSynchronizationJobsResponseBody extends TeaModel {
         public Long skipped;
 
         /**
-         * <p>成功数目</p>
+         * <p>The number of successful operations.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -400,7 +407,7 @@ public class ListSynchronizationJobsResponseBody extends TeaModel {
         public Long success;
 
         /**
-         * <p>总共数目</p>
+         * <p>The total number.</p>
          * 
          * <strong>example:</strong>
          * <p>3</p>
@@ -449,7 +456,7 @@ public class ListSynchronizationJobsResponseBody extends TeaModel {
 
     public static class ListSynchronizationJobsResponseBodySynchronizationJobsResultGroupMemberStatisticsUpdated extends TeaModel {
         /**
-         * <p>失败数目</p>
+         * <p>The number of failed operations.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -458,7 +465,7 @@ public class ListSynchronizationJobsResponseBody extends TeaModel {
         public Long failed;
 
         /**
-         * <p>跳过数目</p>
+         * <p>The number of skipped operations.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -467,7 +474,7 @@ public class ListSynchronizationJobsResponseBody extends TeaModel {
         public Long skipped;
 
         /**
-         * <p>成功数目</p>
+         * <p>The number of successful operations.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -476,7 +483,7 @@ public class ListSynchronizationJobsResponseBody extends TeaModel {
         public Long success;
 
         /**
-         * <p>总共数目</p>
+         * <p>The total number.</p>
          * 
          * <strong>example:</strong>
          * <p>3</p>
@@ -525,37 +532,37 @@ public class ListSynchronizationJobsResponseBody extends TeaModel {
 
     public static class ListSynchronizationJobsResponseBodySynchronizationJobsResultGroupMemberStatistics extends TeaModel {
         /**
-         * <p>绑定结果统计</p>
+         * <p>The statistics of binding results.</p>
          */
         @NameInMap("Binded")
         public ListSynchronizationJobsResponseBodySynchronizationJobsResultGroupMemberStatisticsBinded binded;
 
         /**
-         * <p>创建结果统计</p>
+         * <p>The statistics of creation results.</p>
          */
         @NameInMap("Created")
         public ListSynchronizationJobsResponseBodySynchronizationJobsResultGroupMemberStatisticsCreated created;
 
         /**
-         * <p>删除结果统计</p>
+         * <p>The statistics of deletion results.</p>
          */
         @NameInMap("Deleted")
         public ListSynchronizationJobsResponseBodySynchronizationJobsResultGroupMemberStatisticsDeleted deleted;
 
         /**
-         * <p>推送结果统计</p>
+         * <p>The statistics of push results.</p>
          */
         @NameInMap("Pushed")
         public ListSynchronizationJobsResponseBodySynchronizationJobsResultGroupMemberStatisticsPushed pushed;
 
         /**
-         * <p>相同结果统计</p>
+         * <p>The statistics of identical entries.</p>
          */
         @NameInMap("Same")
         public ListSynchronizationJobsResponseBodySynchronizationJobsResultGroupMemberStatisticsSame same;
 
         /**
-         * <p>更新结果统计</p>
+         * <p>The statistics of update results.</p>
          */
         @NameInMap("Updated")
         public ListSynchronizationJobsResponseBodySynchronizationJobsResultGroupMemberStatisticsUpdated updated;
@@ -617,7 +624,7 @@ public class ListSynchronizationJobsResponseBody extends TeaModel {
 
     public static class ListSynchronizationJobsResponseBodySynchronizationJobsResultGroupStatisticsBinded extends TeaModel {
         /**
-         * <p>失败数目</p>
+         * <p>The number of failed operations.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -626,7 +633,7 @@ public class ListSynchronizationJobsResponseBody extends TeaModel {
         public Long failed;
 
         /**
-         * <p>跳过数目</p>
+         * <p>The number of skipped operations.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -635,7 +642,7 @@ public class ListSynchronizationJobsResponseBody extends TeaModel {
         public Long skipped;
 
         /**
-         * <p>成功数目</p>
+         * <p>The number of successful operations.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -644,7 +651,7 @@ public class ListSynchronizationJobsResponseBody extends TeaModel {
         public Long success;
 
         /**
-         * <p>总共数目</p>
+         * <p>The total number.</p>
          * 
          * <strong>example:</strong>
          * <p>3</p>
@@ -693,7 +700,7 @@ public class ListSynchronizationJobsResponseBody extends TeaModel {
 
     public static class ListSynchronizationJobsResponseBodySynchronizationJobsResultGroupStatisticsCreated extends TeaModel {
         /**
-         * <p>失败数目</p>
+         * <p>The number of failed operations.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -702,7 +709,7 @@ public class ListSynchronizationJobsResponseBody extends TeaModel {
         public Long failed;
 
         /**
-         * <p>跳过数目</p>
+         * <p>The number of skipped operations.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -711,7 +718,7 @@ public class ListSynchronizationJobsResponseBody extends TeaModel {
         public Long skipped;
 
         /**
-         * <p>成功数目</p>
+         * <p>The number of successful operations.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -720,7 +727,7 @@ public class ListSynchronizationJobsResponseBody extends TeaModel {
         public Long success;
 
         /**
-         * <p>总共数目</p>
+         * <p>The total number.</p>
          * 
          * <strong>example:</strong>
          * <p>3</p>
@@ -769,7 +776,7 @@ public class ListSynchronizationJobsResponseBody extends TeaModel {
 
     public static class ListSynchronizationJobsResponseBodySynchronizationJobsResultGroupStatisticsDeleted extends TeaModel {
         /**
-         * <p>失败数目</p>
+         * <p>The number of failed operations.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -778,7 +785,7 @@ public class ListSynchronizationJobsResponseBody extends TeaModel {
         public Long failed;
 
         /**
-         * <p>跳过数目</p>
+         * <p>The number of skipped operations.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -787,7 +794,7 @@ public class ListSynchronizationJobsResponseBody extends TeaModel {
         public Long skipped;
 
         /**
-         * <p>成功数目</p>
+         * <p>The number of successful operations.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -796,7 +803,7 @@ public class ListSynchronizationJobsResponseBody extends TeaModel {
         public Long success;
 
         /**
-         * <p>总共数目</p>
+         * <p>The total number.</p>
          * 
          * <strong>example:</strong>
          * <p>3</p>
@@ -845,7 +852,7 @@ public class ListSynchronizationJobsResponseBody extends TeaModel {
 
     public static class ListSynchronizationJobsResponseBodySynchronizationJobsResultGroupStatisticsPushed extends TeaModel {
         /**
-         * <p>失败数目</p>
+         * <p>The number of failed operations.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -854,7 +861,7 @@ public class ListSynchronizationJobsResponseBody extends TeaModel {
         public Long failed;
 
         /**
-         * <p>跳过数目</p>
+         * <p>The number of skipped operations.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -863,7 +870,7 @@ public class ListSynchronizationJobsResponseBody extends TeaModel {
         public Long skipped;
 
         /**
-         * <p>成功数目</p>
+         * <p>The number of successful operations.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -872,7 +879,7 @@ public class ListSynchronizationJobsResponseBody extends TeaModel {
         public Long success;
 
         /**
-         * <p>总共数目</p>
+         * <p>The total number.</p>
          * 
          * <strong>example:</strong>
          * <p>3</p>
@@ -921,7 +928,7 @@ public class ListSynchronizationJobsResponseBody extends TeaModel {
 
     public static class ListSynchronizationJobsResponseBodySynchronizationJobsResultGroupStatisticsSame extends TeaModel {
         /**
-         * <p>失败数目</p>
+         * <p>The number of failed operations.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -930,7 +937,7 @@ public class ListSynchronizationJobsResponseBody extends TeaModel {
         public Long failed;
 
         /**
-         * <p>跳过数目</p>
+         * <p>The number of skipped operations.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -939,7 +946,7 @@ public class ListSynchronizationJobsResponseBody extends TeaModel {
         public Long skipped;
 
         /**
-         * <p>成功数目</p>
+         * <p>The number of successful operations.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -948,7 +955,7 @@ public class ListSynchronizationJobsResponseBody extends TeaModel {
         public Long success;
 
         /**
-         * <p>总共数目</p>
+         * <p>The total number.</p>
          * 
          * <strong>example:</strong>
          * <p>3</p>
@@ -997,7 +1004,7 @@ public class ListSynchronizationJobsResponseBody extends TeaModel {
 
     public static class ListSynchronizationJobsResponseBodySynchronizationJobsResultGroupStatisticsUpdated extends TeaModel {
         /**
-         * <p>失败数目</p>
+         * <p>The number of failed operations.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -1006,7 +1013,7 @@ public class ListSynchronizationJobsResponseBody extends TeaModel {
         public Long failed;
 
         /**
-         * <p>跳过数目</p>
+         * <p>The number of skipped operations.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -1015,7 +1022,7 @@ public class ListSynchronizationJobsResponseBody extends TeaModel {
         public Long skipped;
 
         /**
-         * <p>成功数目</p>
+         * <p>The number of successful operations.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -1024,7 +1031,7 @@ public class ListSynchronizationJobsResponseBody extends TeaModel {
         public Long success;
 
         /**
-         * <p>总共数目</p>
+         * <p>The total number.</p>
          * 
          * <strong>example:</strong>
          * <p>3</p>
@@ -1073,37 +1080,37 @@ public class ListSynchronizationJobsResponseBody extends TeaModel {
 
     public static class ListSynchronizationJobsResponseBodySynchronizationJobsResultGroupStatistics extends TeaModel {
         /**
-         * <p>绑定结果统计</p>
+         * <p>The statistics of binding results.</p>
          */
         @NameInMap("Binded")
         public ListSynchronizationJobsResponseBodySynchronizationJobsResultGroupStatisticsBinded binded;
 
         /**
-         * <p>创建结果统计</p>
+         * <p>The statistics of creation results.</p>
          */
         @NameInMap("Created")
         public ListSynchronizationJobsResponseBodySynchronizationJobsResultGroupStatisticsCreated created;
 
         /**
-         * <p>删除结果统计</p>
+         * <p>The statistics of deletion results.</p>
          */
         @NameInMap("Deleted")
         public ListSynchronizationJobsResponseBodySynchronizationJobsResultGroupStatisticsDeleted deleted;
 
         /**
-         * <p>推送结果统计</p>
+         * <p>The statistics of push results.</p>
          */
         @NameInMap("Pushed")
         public ListSynchronizationJobsResponseBodySynchronizationJobsResultGroupStatisticsPushed pushed;
 
         /**
-         * <p>相同结果统计</p>
+         * <p>The statistics of identical entries.</p>
          */
         @NameInMap("Same")
         public ListSynchronizationJobsResponseBodySynchronizationJobsResultGroupStatisticsSame same;
 
         /**
-         * <p>更新结果统计</p>
+         * <p>The statistics of update results.</p>
          */
         @NameInMap("Updated")
         public ListSynchronizationJobsResponseBodySynchronizationJobsResultGroupStatisticsUpdated updated;
@@ -1165,7 +1172,7 @@ public class ListSynchronizationJobsResponseBody extends TeaModel {
 
     public static class ListSynchronizationJobsResponseBodySynchronizationJobsResultOrganizationalUnitStatisticsBinded extends TeaModel {
         /**
-         * <p>失败数目</p>
+         * <p>The number of failed operations.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -1174,7 +1181,7 @@ public class ListSynchronizationJobsResponseBody extends TeaModel {
         public Long failed;
 
         /**
-         * <p>跳过数目</p>
+         * <p>The number of skipped operations.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -1183,7 +1190,7 @@ public class ListSynchronizationJobsResponseBody extends TeaModel {
         public Long skipped;
 
         /**
-         * <p>成功数目</p>
+         * <p>The number of successful operations.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -1192,7 +1199,7 @@ public class ListSynchronizationJobsResponseBody extends TeaModel {
         public Long success;
 
         /**
-         * <p>总共数目</p>
+         * <p>The total number.</p>
          * 
          * <strong>example:</strong>
          * <p>3</p>
@@ -1241,7 +1248,7 @@ public class ListSynchronizationJobsResponseBody extends TeaModel {
 
     public static class ListSynchronizationJobsResponseBodySynchronizationJobsResultOrganizationalUnitStatisticsCreated extends TeaModel {
         /**
-         * <p>失败数目</p>
+         * <p>The number of failed operations.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -1250,7 +1257,7 @@ public class ListSynchronizationJobsResponseBody extends TeaModel {
         public Long failed;
 
         /**
-         * <p>跳过数目</p>
+         * <p>The number of skipped operations.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -1259,7 +1266,7 @@ public class ListSynchronizationJobsResponseBody extends TeaModel {
         public Long skipped;
 
         /**
-         * <p>成功数目</p>
+         * <p>The number of successful operations.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -1268,7 +1275,7 @@ public class ListSynchronizationJobsResponseBody extends TeaModel {
         public Long success;
 
         /**
-         * <p>总共数目</p>
+         * <p>The total number.</p>
          * 
          * <strong>example:</strong>
          * <p>3</p>
@@ -1317,7 +1324,7 @@ public class ListSynchronizationJobsResponseBody extends TeaModel {
 
     public static class ListSynchronizationJobsResponseBodySynchronizationJobsResultOrganizationalUnitStatisticsDeleted extends TeaModel {
         /**
-         * <p>失败数目</p>
+         * <p>The number of failed operations.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -1326,7 +1333,7 @@ public class ListSynchronizationJobsResponseBody extends TeaModel {
         public Long failed;
 
         /**
-         * <p>跳过数目</p>
+         * <p>The number of skipped operations.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -1335,7 +1342,7 @@ public class ListSynchronizationJobsResponseBody extends TeaModel {
         public Long skipped;
 
         /**
-         * <p>成功数目</p>
+         * <p>The number of successful operations.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -1344,7 +1351,7 @@ public class ListSynchronizationJobsResponseBody extends TeaModel {
         public Long success;
 
         /**
-         * <p>总共数目</p>
+         * <p>The total number.</p>
          * 
          * <strong>example:</strong>
          * <p>3</p>
@@ -1393,7 +1400,7 @@ public class ListSynchronizationJobsResponseBody extends TeaModel {
 
     public static class ListSynchronizationJobsResponseBodySynchronizationJobsResultOrganizationalUnitStatisticsPushed extends TeaModel {
         /**
-         * <p>失败数目</p>
+         * <p>The number of failed operations.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -1402,7 +1409,7 @@ public class ListSynchronizationJobsResponseBody extends TeaModel {
         public Long failed;
 
         /**
-         * <p>跳过数目</p>
+         * <p>The number of skipped operations.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -1411,7 +1418,7 @@ public class ListSynchronizationJobsResponseBody extends TeaModel {
         public Long skipped;
 
         /**
-         * <p>成功数目</p>
+         * <p>The number of successful operations.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -1420,7 +1427,7 @@ public class ListSynchronizationJobsResponseBody extends TeaModel {
         public Long success;
 
         /**
-         * <p>总共数目</p>
+         * <p>The total number.</p>
          * 
          * <strong>example:</strong>
          * <p>3</p>
@@ -1469,7 +1476,7 @@ public class ListSynchronizationJobsResponseBody extends TeaModel {
 
     public static class ListSynchronizationJobsResponseBodySynchronizationJobsResultOrganizationalUnitStatisticsSame extends TeaModel {
         /**
-         * <p>失败数目</p>
+         * <p>The number of failed operations.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -1478,7 +1485,7 @@ public class ListSynchronizationJobsResponseBody extends TeaModel {
         public Long failed;
 
         /**
-         * <p>跳过数目</p>
+         * <p>The number of skipped operations.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -1487,7 +1494,7 @@ public class ListSynchronizationJobsResponseBody extends TeaModel {
         public Long skipped;
 
         /**
-         * <p>成功数目</p>
+         * <p>The number of successful operations.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -1496,7 +1503,7 @@ public class ListSynchronizationJobsResponseBody extends TeaModel {
         public Long success;
 
         /**
-         * <p>总共数目</p>
+         * <p>The total number.</p>
          * 
          * <strong>example:</strong>
          * <p>3</p>
@@ -1545,7 +1552,7 @@ public class ListSynchronizationJobsResponseBody extends TeaModel {
 
     public static class ListSynchronizationJobsResponseBodySynchronizationJobsResultOrganizationalUnitStatisticsUpdated extends TeaModel {
         /**
-         * <p>失败数目</p>
+         * <p>The number of failed operations.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -1554,7 +1561,7 @@ public class ListSynchronizationJobsResponseBody extends TeaModel {
         public Long failed;
 
         /**
-         * <p>跳过数目</p>
+         * <p>The number of skipped operations.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -1563,7 +1570,7 @@ public class ListSynchronizationJobsResponseBody extends TeaModel {
         public Long skipped;
 
         /**
-         * <p>成功数目</p>
+         * <p>The number of successful operations.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -1572,7 +1579,7 @@ public class ListSynchronizationJobsResponseBody extends TeaModel {
         public Long success;
 
         /**
-         * <p>总共数目</p>
+         * <p>The total number.</p>
          * 
          * <strong>example:</strong>
          * <p>3</p>
@@ -1621,37 +1628,37 @@ public class ListSynchronizationJobsResponseBody extends TeaModel {
 
     public static class ListSynchronizationJobsResponseBodySynchronizationJobsResultOrganizationalUnitStatistics extends TeaModel {
         /**
-         * <p>绑定结果统计</p>
+         * <p>The statistics of binding results.</p>
          */
         @NameInMap("Binded")
         public ListSynchronizationJobsResponseBodySynchronizationJobsResultOrganizationalUnitStatisticsBinded binded;
 
         /**
-         * <p>创建结果统计</p>
+         * <p>The statistics of creation results.</p>
          */
         @NameInMap("Created")
         public ListSynchronizationJobsResponseBodySynchronizationJobsResultOrganizationalUnitStatisticsCreated created;
 
         /**
-         * <p>删除结果统计</p>
+         * <p>The statistics of deletion results.</p>
          */
         @NameInMap("Deleted")
         public ListSynchronizationJobsResponseBodySynchronizationJobsResultOrganizationalUnitStatisticsDeleted deleted;
 
         /**
-         * <p>推送结果统计</p>
+         * <p>The statistics of push results.</p>
          */
         @NameInMap("Pushed")
         public ListSynchronizationJobsResponseBodySynchronizationJobsResultOrganizationalUnitStatisticsPushed pushed;
 
         /**
-         * <p>相同结果统计</p>
+         * <p>The statistics of identical entries.</p>
          */
         @NameInMap("Same")
         public ListSynchronizationJobsResponseBodySynchronizationJobsResultOrganizationalUnitStatisticsSame same;
 
         /**
-         * <p>更新结果统计</p>
+         * <p>The statistics of update results.</p>
          */
         @NameInMap("Updated")
         public ListSynchronizationJobsResponseBodySynchronizationJobsResultOrganizationalUnitStatisticsUpdated updated;
@@ -1713,7 +1720,7 @@ public class ListSynchronizationJobsResponseBody extends TeaModel {
 
     public static class ListSynchronizationJobsResponseBodySynchronizationJobsResultUserStatisticsBinded extends TeaModel {
         /**
-         * <p>失败数目</p>
+         * <p>The number of failed operations.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -1722,7 +1729,7 @@ public class ListSynchronizationJobsResponseBody extends TeaModel {
         public Long failed;
 
         /**
-         * <p>跳过数目</p>
+         * <p>The number of skipped operations.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -1731,7 +1738,7 @@ public class ListSynchronizationJobsResponseBody extends TeaModel {
         public Long skipped;
 
         /**
-         * <p>成功数目</p>
+         * <p>The number of successful operations.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -1740,7 +1747,7 @@ public class ListSynchronizationJobsResponseBody extends TeaModel {
         public Long success;
 
         /**
-         * <p>总共数目</p>
+         * <p>The total number.</p>
          * 
          * <strong>example:</strong>
          * <p>3</p>
@@ -1789,7 +1796,7 @@ public class ListSynchronizationJobsResponseBody extends TeaModel {
 
     public static class ListSynchronizationJobsResponseBodySynchronizationJobsResultUserStatisticsCreated extends TeaModel {
         /**
-         * <p>失败数目</p>
+         * <p>The number of failed operations.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -1798,7 +1805,7 @@ public class ListSynchronizationJobsResponseBody extends TeaModel {
         public Long failed;
 
         /**
-         * <p>跳过数目</p>
+         * <p>The number of skipped operations.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -1807,7 +1814,7 @@ public class ListSynchronizationJobsResponseBody extends TeaModel {
         public Long skipped;
 
         /**
-         * <p>成功数目</p>
+         * <p>The number of successful operations.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -1816,7 +1823,7 @@ public class ListSynchronizationJobsResponseBody extends TeaModel {
         public Long success;
 
         /**
-         * <p>总共数目</p>
+         * <p>The total number.</p>
          * 
          * <strong>example:</strong>
          * <p>3</p>
@@ -1865,7 +1872,7 @@ public class ListSynchronizationJobsResponseBody extends TeaModel {
 
     public static class ListSynchronizationJobsResponseBodySynchronizationJobsResultUserStatisticsDeleted extends TeaModel {
         /**
-         * <p>失败数目</p>
+         * <p>The number of failed operations.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -1874,7 +1881,7 @@ public class ListSynchronizationJobsResponseBody extends TeaModel {
         public Long failed;
 
         /**
-         * <p>跳过数目</p>
+         * <p>The number of skipped operations.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -1883,7 +1890,7 @@ public class ListSynchronizationJobsResponseBody extends TeaModel {
         public Long skipped;
 
         /**
-         * <p>成功数目</p>
+         * <p>The number of successful operations.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -1892,7 +1899,7 @@ public class ListSynchronizationJobsResponseBody extends TeaModel {
         public Long success;
 
         /**
-         * <p>总共数目</p>
+         * <p>The total number.</p>
          * 
          * <strong>example:</strong>
          * <p>3</p>
@@ -1940,15 +1947,39 @@ public class ListSynchronizationJobsResponseBody extends TeaModel {
     }
 
     public static class ListSynchronizationJobsResponseBodySynchronizationJobsResultUserStatisticsExported extends TeaModel {
+        /**
+         * <p>The number of failed operations.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("Failed")
         public Long failed;
 
+        /**
+         * <p>The number of skipped operations.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Skipped")
         public Long skipped;
 
+        /**
+         * <p>The number of successful operations.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("Success")
         public Long success;
 
+        /**
+         * <p>The total number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
+         */
         @NameInMap("Total")
         public Long total;
 
@@ -1993,7 +2024,7 @@ public class ListSynchronizationJobsResponseBody extends TeaModel {
 
     public static class ListSynchronizationJobsResponseBodySynchronizationJobsResultUserStatisticsPushed extends TeaModel {
         /**
-         * <p>失败数目</p>
+         * <p>The number of failed operations.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -2002,7 +2033,7 @@ public class ListSynchronizationJobsResponseBody extends TeaModel {
         public Long failed;
 
         /**
-         * <p>跳过数目</p>
+         * <p>The number of skipped operations.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -2011,7 +2042,7 @@ public class ListSynchronizationJobsResponseBody extends TeaModel {
         public Long skipped;
 
         /**
-         * <p>成功数目</p>
+         * <p>The number of successful operations.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -2020,7 +2051,7 @@ public class ListSynchronizationJobsResponseBody extends TeaModel {
         public Long success;
 
         /**
-         * <p>总共数目</p>
+         * <p>The total number.</p>
          * 
          * <strong>example:</strong>
          * <p>3</p>
@@ -2069,7 +2100,7 @@ public class ListSynchronizationJobsResponseBody extends TeaModel {
 
     public static class ListSynchronizationJobsResponseBodySynchronizationJobsResultUserStatisticsSame extends TeaModel {
         /**
-         * <p>失败数目</p>
+         * <p>The number of failed operations.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -2078,7 +2109,7 @@ public class ListSynchronizationJobsResponseBody extends TeaModel {
         public Long failed;
 
         /**
-         * <p>跳过数目</p>
+         * <p>The number of skipped operations.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -2087,7 +2118,7 @@ public class ListSynchronizationJobsResponseBody extends TeaModel {
         public Long skipped;
 
         /**
-         * <p>成功数目</p>
+         * <p>The number of successful operations.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -2096,7 +2127,7 @@ public class ListSynchronizationJobsResponseBody extends TeaModel {
         public Long success;
 
         /**
-         * <p>总共数目</p>
+         * <p>The total number.</p>
          * 
          * <strong>example:</strong>
          * <p>3</p>
@@ -2145,7 +2176,7 @@ public class ListSynchronizationJobsResponseBody extends TeaModel {
 
     public static class ListSynchronizationJobsResponseBodySynchronizationJobsResultUserStatisticsUpdated extends TeaModel {
         /**
-         * <p>失败数目</p>
+         * <p>The number of failed operations.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -2154,7 +2185,7 @@ public class ListSynchronizationJobsResponseBody extends TeaModel {
         public Long failed;
 
         /**
-         * <p>跳过数目</p>
+         * <p>The number of skipped operations.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -2163,7 +2194,7 @@ public class ListSynchronizationJobsResponseBody extends TeaModel {
         public Long skipped;
 
         /**
-         * <p>成功数目</p>
+         * <p>The number of successful operations.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -2172,7 +2203,7 @@ public class ListSynchronizationJobsResponseBody extends TeaModel {
         public Long success;
 
         /**
-         * <p>总共数目</p>
+         * <p>The total number.</p>
          * 
          * <strong>example:</strong>
          * <p>3</p>
@@ -2221,40 +2252,43 @@ public class ListSynchronizationJobsResponseBody extends TeaModel {
 
     public static class ListSynchronizationJobsResponseBodySynchronizationJobsResultUserStatistics extends TeaModel {
         /**
-         * <p>绑定结果统计</p>
+         * <p>The statistics of binding results.</p>
          */
         @NameInMap("Binded")
         public ListSynchronizationJobsResponseBodySynchronizationJobsResultUserStatisticsBinded binded;
 
         /**
-         * <p>创建结果统计</p>
+         * <p>The statistics of creation results.</p>
          */
         @NameInMap("Created")
         public ListSynchronizationJobsResponseBodySynchronizationJobsResultUserStatisticsCreated created;
 
         /**
-         * <p>删除结果统计</p>
+         * <p>The statistics of deletion results.</p>
          */
         @NameInMap("Deleted")
         public ListSynchronizationJobsResponseBodySynchronizationJobsResultUserStatisticsDeleted deleted;
 
+        /**
+         * <p>The statistics of export results.</p>
+         */
         @NameInMap("Exported")
         public ListSynchronizationJobsResponseBodySynchronizationJobsResultUserStatisticsExported exported;
 
         /**
-         * <p>推送结果统计</p>
+         * <p>The statistics of push results.</p>
          */
         @NameInMap("Pushed")
         public ListSynchronizationJobsResponseBodySynchronizationJobsResultUserStatisticsPushed pushed;
 
         /**
-         * <p>相同结果统计</p>
+         * <p>The statistics of identical entries.</p>
          */
         @NameInMap("Same")
         public ListSynchronizationJobsResponseBodySynchronizationJobsResultUserStatisticsSame same;
 
         /**
-         * <p>更新结果统计</p>
+         * <p>The statistics of update results.</p>
          */
         @NameInMap("Updated")
         public ListSynchronizationJobsResponseBodySynchronizationJobsResultUserStatisticsUpdated updated;
@@ -2324,40 +2358,43 @@ public class ListSynchronizationJobsResponseBody extends TeaModel {
 
     public static class ListSynchronizationJobsResponseBodySynchronizationJobsResult extends TeaModel {
         /**
-         * <p>同步结果错误码</p>
+         * <p>The error code for the synchronization result.</p>
          * 
          * <strong>example:</strong>
-         * <p>ErrorCodeNotFound</p>
+         * <p>MissingParameter.Username</p>
          */
         @NameInMap("ErrorCode")
         public String errorCode;
 
         /**
-         * <p>同步结果错误信息描述</p>
+         * <p>The error message for the synchronization result.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The specified parameter Username is required!</p>
          */
         @NameInMap("ErrorMessage")
         public String errorMessage;
 
         /**
-         * <p>组成员同步结果统计</p>
+         * <p>The statistics of group member synchronization results.</p>
          */
         @NameInMap("GroupMemberStatistics")
         public ListSynchronizationJobsResponseBodySynchronizationJobsResultGroupMemberStatistics groupMemberStatistics;
 
         /**
-         * <p>组同步结果统计</p>
+         * <p>The statistics of group synchronization results.</p>
          */
         @NameInMap("GroupStatistics")
         public ListSynchronizationJobsResponseBodySynchronizationJobsResultGroupStatistics groupStatistics;
 
         /**
-         * <p>组织同步结果统计</p>
+         * <p>The statistics of organization synchronization results.</p>
          */
         @NameInMap("OrganizationalUnitStatistics")
         public ListSynchronizationJobsResponseBodySynchronizationJobsResultOrganizationalUnitStatistics organizationalUnitStatistics;
 
         /**
-         * <p>用户同步结果统计</p>
+         * <p>The statistics of user synchronization results.</p>
          */
         @NameInMap("UserStatistics")
         public ListSynchronizationJobsResponseBodySynchronizationJobsResultUserStatistics userStatistics;
@@ -2419,14 +2456,22 @@ public class ListSynchronizationJobsResponseBody extends TeaModel {
 
     public static class ListSynchronizationJobsResponseBodySynchronizationJobs extends TeaModel {
         /**
+         * <p>The description of the sync task.</p>
+         * 
          * <strong>example:</strong>
-         * <p>描述</p>
+         * <p>Description</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
-         * <p>同步任务方向</p>
+         * <p>The direction of the sync task. Valid values:</p>
+         * <ul>
+         * <li><p>ingress: Inbound.</p>
+         * </li>
+         * <li><p>egress: Outbound.</p>
+         * </li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>ingress</p>
@@ -2435,7 +2480,7 @@ public class ListSynchronizationJobsResponseBody extends TeaModel {
         public String direction;
 
         /**
-         * <p>同步结束时间</p>
+         * <p>The synchronization end time. The value is a UNIX timestamp. Unit: milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1649830226000</p>
@@ -2444,13 +2489,13 @@ public class ListSynchronizationJobsResponseBody extends TeaModel {
         public Long endTime;
 
         /**
-         * <p>同步任务结果</p>
+         * <p>The result of the sync task.</p>
          */
         @NameInMap("Result")
         public ListSynchronizationJobsResponseBodySynchronizationJobsResult result;
 
         /**
-         * <p>同步开始时间</p>
+         * <p>The synchronization start time. The value is a UNIX timestamp. Unit: milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1649830226000</p>
@@ -2459,7 +2504,19 @@ public class ListSynchronizationJobsResponseBody extends TeaModel {
         public Long startTime;
 
         /**
-         * <p>同步任务状态</p>
+         * <p>The status of the sync task. Valid values:</p>
+         * <ul>
+         * <li><p>pending: The task is pending.</p>
+         * </li>
+         * <li><p>running: The task is running.</p>
+         * </li>
+         * <li><p>failed: The task failed.</p>
+         * </li>
+         * <li><p>partial_success: The task is partially successful.</p>
+         * </li>
+         * <li><p>success: The task is successful.</p>
+         * </li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -2468,7 +2525,7 @@ public class ListSynchronizationJobsResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>同步任务ID</p>
+         * <p>The sync task ID.</p>
          * 
          * <strong>example:</strong>
          * <p>sync_0000347vjovtcf41li0fgsd98gn24q9njxxxxx</p>
@@ -2477,7 +2534,7 @@ public class ListSynchronizationJobsResponseBody extends TeaModel {
         public String synchronizationJobId;
 
         /**
-         * <p>同步目标ID</p>
+         * <p>The synchronization target ID.</p>
          * 
          * <strong>example:</strong>
          * <p>idp_my664lwkhpicbyzirog3xxxxx</p>
@@ -2486,7 +2543,13 @@ public class ListSynchronizationJobsResponseBody extends TeaModel {
         public String targetId;
 
         /**
-         * <p>同步目标类型</p>
+         * <p>The type of the synchronization target. Valid values:</p>
+         * <ul>
+         * <li><p>identity_provider: Identity provider.</p>
+         * </li>
+         * <li><p>application: Application.</p>
+         * </li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>identity_provider</p>
@@ -2495,7 +2558,13 @@ public class ListSynchronizationJobsResponseBody extends TeaModel {
         public String targetType;
 
         /**
-         * <p>同步触发类型</p>
+         * <p>The trigger type of the synchronization. Valid values:</p>
+         * <ul>
+         * <li><p>auto: Automatic.</p>
+         * </li>
+         * <li><p>manual: Manual.</p>
+         * </li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>auto</p>

@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListOrganizationalUnitsForApplicationResponseBody extends TeaModel {
     /**
-     * <p>The IDs of the organizations that are allowed to access the application.</p>
+     * <p>The list of organizations.</p>
      */
     @NameInMap("OrganizationalUnits")
     public java.util.List<ListOrganizationalUnitsForApplicationResponseBodyOrganizationalUnits> organizationalUnits;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>0441BD79-92F3-53AA-8657-F8CE4A2B912A</p>
@@ -20,7 +20,7 @@ public class ListOrganizationalUnitsForApplicationResponseBody extends TeaModel 
     public String requestId;
 
     /**
-     * <p>The total number of the returned entries.</p>
+     * <p>The total number of entries.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>
@@ -59,7 +59,7 @@ public class ListOrganizationalUnitsForApplicationResponseBody extends TeaModel 
 
     public static class ListOrganizationalUnitsForApplicationResponseBodyOrganizationalUnitsApplicationRoles extends TeaModel {
         /**
-         * <p>应用角色标识。</p>
+         * <p>The ID of the application role.</p>
          * 
          * <strong>example:</strong>
          * <p>app_role_mkv7rgt4ds8d8v0qtzev2mxxxx</p>
@@ -84,13 +84,13 @@ public class ListOrganizationalUnitsForApplicationResponseBody extends TeaModel 
 
     public static class ListOrganizationalUnitsForApplicationResponseBodyOrganizationalUnits extends TeaModel {
         /**
-         * <p>应用角色列表。</p>
+         * <p>The list of application roles.</p>
          */
         @NameInMap("ApplicationRoles")
         public java.util.List<ListOrganizationalUnitsForApplicationResponseBodyOrganizationalUnitsApplicationRoles> applicationRoles;
 
         /**
-         * <p>The ID of the organization that is allowed to access the application.</p>
+         * <p>The organization ID.</p>
          * 
          * <strong>example:</strong>
          * <p>ou_wovwffm62xifdziem7an7xxxxx</p>

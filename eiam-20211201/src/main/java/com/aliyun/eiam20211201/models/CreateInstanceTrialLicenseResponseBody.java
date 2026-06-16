@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateInstanceTrialLicenseResponseBody extends TeaModel {
     /**
+     * <p>The unique ID of the license.</p>
+     * 
      * <strong>example:</strong>
      * <p>license_463hfmewi2njxxxx</p>
      */
@@ -12,6 +14,8 @@ public class CreateInstanceTrialLicenseResponseBody extends TeaModel {
     public String licenseId;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>0441BD79-92F3-53AA-8657-F8CE4A2B912A</p>
      */

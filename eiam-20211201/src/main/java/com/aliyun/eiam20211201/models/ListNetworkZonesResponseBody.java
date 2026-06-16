@@ -4,11 +4,14 @@ package com.aliyun.eiam20211201.models;
 import com.aliyun.tea.*;
 
 public class ListNetworkZonesResponseBody extends TeaModel {
+    /**
+     * <p>The list of network zones.</p>
+     */
     @NameInMap("NetworkZones")
     public java.util.List<ListNetworkZonesResponseBodyNetworkZones> networkZones;
 
     /**
-     * <p>本次调用返回的查询凭证（Token）值，用于下一次翻页查询。</p>
+     * <p>The token that is used to retrieve the next page of results.</p>
      * 
      * <strong>example:</strong>
      * <p>NTxxxexample</p>
@@ -17,6 +20,8 @@ public class ListNetworkZonesResponseBody extends TeaModel {
     public String nextToken;
 
     /**
+     * <p>The token that is used to retrieve the previous page of results.</p>
+     * 
      * <strong>example:</strong>
      * <p>PTxxxxxexample</p>
      */
@@ -24,6 +29,8 @@ public class ListNetworkZonesResponseBody extends TeaModel {
     public String previousToken;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>0441BD79-92F3-53AA-8657-F8CE4A2B912A</p>
      */
@@ -31,6 +38,8 @@ public class ListNetworkZonesResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total number of entries.</p>
+     * 
      * <strong>example:</strong>
      * <p>100</p>
      */
@@ -84,7 +93,7 @@ public class ListNetworkZonesResponseBody extends TeaModel {
 
     public static class ListNetworkZonesResponseBodyNetworkZones extends TeaModel {
         /**
-         * <p>IDaaS EIAM 网络区域描述</p>
+         * <p>The description of the network zone.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -93,7 +102,7 @@ public class ListNetworkZonesResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>实例ID。</p>
+         * <p>The instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>idaas_ue2jvisn35ea5lmthk267xxxxx</p>
@@ -101,14 +110,20 @@ public class ListNetworkZonesResponseBody extends TeaModel {
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <p>The IPv4 CIDR blocks.</p>
+         */
         @NameInMap("Ipv4Cidrs")
         public java.util.List<String> ipv4Cidrs;
 
+        /**
+         * <p>The IPv6 CIDR blocks.</p>
+         */
         @NameInMap("Ipv6Cidrs")
         public java.util.List<String> ipv6Cidrs;
 
         /**
-         * <p>IDaaS EIAM 网络区域Id</p>
+         * <p>The network zone ID.</p>
          * 
          * <strong>example:</strong>
          * <p>network_m223wbvc3sn3uakfnxvhbxxxxx</p>
@@ -117,7 +132,7 @@ public class ListNetworkZonesResponseBody extends TeaModel {
         public String networkZoneId;
 
         /**
-         * <p>IDaaS EIAM 网络区域名称</p>
+         * <p>The network zone name.</p>
          * 
          * <strong>example:</strong>
          * <p>test_name</p>
@@ -126,7 +141,7 @@ public class ListNetworkZonesResponseBody extends TeaModel {
         public String networkZoneName;
 
         /**
-         * <p>IDaaS EIAM 网络区域类型</p>
+         * <p>The type of the network zone.</p>
          * 
          * <strong>example:</strong>
          * <p>arn:alibaba:idaas:network:zone:classic</p>
@@ -135,7 +150,7 @@ public class ListNetworkZonesResponseBody extends TeaModel {
         public String networkZoneType;
 
         /**
-         * <p>IDaaS EIAM 专有网络VpcId</p>
+         * <p>The VPC ID.</p>
          * 
          * <strong>example:</strong>
          * <p>vpc-bp1usdmfqcgoy5ebxxxxx</p>

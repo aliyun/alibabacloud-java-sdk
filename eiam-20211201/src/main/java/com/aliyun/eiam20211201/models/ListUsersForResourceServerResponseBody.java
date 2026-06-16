@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListUsersForResourceServerResponseBody extends TeaModel {
     /**
+     * <p>The number of entries per page for paged queries.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -12,7 +14,7 @@ public class ListUsersForResourceServerResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>本次调用返回的查询凭证（Token）值，用于下一次翻页查询。</p>
+     * <p>The token for the next page.</p>
      * 
      * <strong>example:</strong>
      * <p>NTxxxexample</p>
@@ -21,6 +23,8 @@ public class ListUsersForResourceServerResponseBody extends TeaModel {
     public String nextToken;
 
     /**
+     * <p>The ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>0441BD79-92F3-53AA-8657-F8CE4A2B912A</p>
      */
@@ -28,12 +32,17 @@ public class ListUsersForResourceServerResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total number of entries in the list.</p>
+     * 
      * <strong>example:</strong>
      * <p>100</p>
      */
     @NameInMap("TotalCount")
     public Long totalCount;
 
+    /**
+     * <p>A list of user accounts.</p>
+     */
     @NameInMap("Users")
     public java.util.List<ListUsersForResourceServerResponseBodyUsers> users;
 
@@ -84,7 +93,7 @@ public class ListUsersForResourceServerResponseBody extends TeaModel {
 
     public static class ListUsersForResourceServerResponseBodyUsersResourceServerScopes extends TeaModel {
         /**
-         * <p>ResourceServerScope唯一标识</p>
+         * <p>The ID of the scope permission.</p>
          * 
          * <strong>example:</strong>
          * <p>ress_nbte4bb3qqqnaq73rlmkqixxxx</p>
@@ -93,7 +102,7 @@ public class ListUsersForResourceServerResponseBody extends TeaModel {
         public String resourceServerScopeId;
 
         /**
-         * <p>ResourceServerScope名称</p>
+         * <p>The name of the scope permission.</p>
          * 
          * <strong>example:</strong>
          * <p>Read All User</p>
@@ -126,7 +135,7 @@ public class ListUsersForResourceServerResponseBody extends TeaModel {
 
     public static class ListUsersForResourceServerResponseBodyUsers extends TeaModel {
         /**
-         * <p>实例唯一标识</p>
+         * <p>The ID of the instance.</p>
          * 
          * <strong>example:</strong>
          * <p>idaas_qsw77zl5vrllwzyrrfwbmpxxxx</p>
@@ -135,13 +144,13 @@ public class ListUsersForResourceServerResponseBody extends TeaModel {
         public String instanceId;
 
         /**
-         * <p>资源服务Scope权限集合</p>
+         * <p>A list of granted scope permissions.</p>
          */
         @NameInMap("ResourceServerScopes")
         public java.util.List<ListUsersForResourceServerResponseBodyUsersResourceServerScopes> resourceServerScopes;
 
         /**
-         * <p>用户的唯一标识</p>
+         * <p>The ID of the user account.</p>
          * 
          * <strong>example:</strong>
          * <p>user_nbsomva32b6utec3hgi7scxxxx</p>

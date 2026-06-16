@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetPasswordComplexityConfigurationResponseBody extends TeaModel {
     /**
-     * <p>The password complexity configurations.</p>
+     * <p>The password complexity policy configuration.</p>
      */
     @NameInMap("PasswordComplexityConfiguration")
     public GetPasswordComplexityConfigurationResponseBodyPasswordComplexityConfiguration passwordComplexityConfiguration;
@@ -42,16 +42,24 @@ public class GetPasswordComplexityConfigurationResponseBody extends TeaModel {
 
     public static class GetPasswordComplexityConfigurationResponseBodyPasswordComplexityConfigurationPasswordComplexityRules extends TeaModel {
         /**
-         * <p>The type of the password check. Valid values:</p>
+         * <p>The password check type. Valid values:</p>
          * <ul>
-         * <li>inclusion_upper_case: The password must contain uppercase letters.</li>
-         * <li>inclusion_lower_case: The password must contain lowercase letters.</li>
-         * <li>inclusion_special_case: The password must contain one or more of the following special characters: @ % + \ / \&quot; ! # $ ^ ? : , ( ) { } [ ] ~ - _ .</li>
-         * <li>inclusion_number: The password must contain digits.</li>
-         * <li>exclusion_username: The password cannot contain a username.</li>
-         * <li>exclusion_email: The password cannot contain an email prefix.</li>
-         * <li>exclusion_phone_number: The password cannot contain a mobile number.</li>
-         * <li>exclusion_display_name: The password cannot contain a display name.</li>
+         * <li><p>inclusion_upper_case: The password must contain uppercase letters.</p>
+         * </li>
+         * <li><p>inclusion_lower_case: The password must contain lowercase letters.</p>
+         * </li>
+         * <li><p>inclusion_special_case: The password must contain at least one of the following special characters: \<code> @ % + \\ / \\&quot; ! # $ ^ ? : , ( ) { } [ ] \\~ - _ . \\</code>.</p>
+         * </li>
+         * <li><p>inclusion_number: The password must contain digits.</p>
+         * </li>
+         * <li><p>exclusion_username: The password cannot contain the username.</p>
+         * </li>
+         * <li><p>exclusion_email: The password cannot contain the email address.</p>
+         * </li>
+         * <li><p>exclusion_phone_number: The password cannot contain the mobile number.</p>
+         * </li>
+         * <li><p>exclusion_display_name: The password cannot contain the display name.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -76,20 +84,32 @@ public class GetPasswordComplexityConfigurationResponseBody extends TeaModel {
     }
 
     public static class GetPasswordComplexityConfigurationResponseBodyPasswordComplexityConfiguration extends TeaModel {
+        /**
+         * <p>Indicates whether logon with a weak password is disabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("DisabledWeakPasswordLogin")
         public Boolean disabledWeakPasswordLogin;
 
+        /**
+         * <p>The time when the weak password logon restriction takes effect.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1773383634936</p>
+         */
         @NameInMap("DisabledWeakPasswordLoginStartedAt")
         public Long disabledWeakPasswordLoginStartedAt;
 
         /**
-         * <p>The password complexity rules.</p>
+         * <p>The list of password complexity rules.</p>
          */
         @NameInMap("PasswordComplexityRules")
         public java.util.List<GetPasswordComplexityConfigurationResponseBodyPasswordComplexityConfigurationPasswordComplexityRules> passwordComplexityRules;
 
         /**
-         * <p>The minimum number of characters in a password.</p>
+         * <p>The minimum password length.</p>
          * 
          * <strong>example:</strong>
          * <p>3</p>

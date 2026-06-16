@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class RemoveApplicationAccountFromUserRequest extends TeaModel {
     /**
-     * <p>应用账号Id</p>
+     * <p>The ID of the application account.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class RemoveApplicationAccountFromUserRequest extends TeaModel {
     public String applicationAccountId;
 
     /**
-     * <p>IDaaS的应用主键id</p>
+     * <p>The ID of the application.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,7 +25,7 @@ public class RemoveApplicationAccountFromUserRequest extends TeaModel {
     public String applicationId;
 
     /**
-     * <p>IDaaS EIAM的实例id</p>
+     * <p>The ID of the instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -35,7 +35,7 @@ public class RemoveApplicationAccountFromUserRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>用户Id</p>
+     * <p>The ID of the user.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

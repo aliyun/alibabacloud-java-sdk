@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListUsersForAuthorizationRuleResponseBody extends TeaModel {
     /**
-     * <p>分页查询时每页行数。</p>
+     * <p>The number of entries returned per page.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -14,7 +14,7 @@ public class ListUsersForAuthorizationRuleResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>本次调用返回的查询凭证（Token）值，用于下一次翻页查询。</p>
+     * <p>The token returned from the current call. Use this token to start the next paged query.</p>
      * 
      * <strong>example:</strong>
      * <p>NTxxxexample</p>
@@ -23,6 +23,8 @@ public class ListUsersForAuthorizationRuleResponseBody extends TeaModel {
     public String nextToken;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>0441BD79-92F3-53AA-8657-F8CE4A2B912A</p>
      */
@@ -30,12 +32,17 @@ public class ListUsersForAuthorizationRuleResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total number of entries.</p>
+     * 
      * <strong>example:</strong>
      * <p>100</p>
      */
     @NameInMap("TotalCount")
     public Long totalCount;
 
+    /**
+     * <p>The list of accounts.</p>
+     */
     @NameInMap("Users")
     public java.util.List<ListUsersForAuthorizationRuleResponseBodyUsers> users;
 
@@ -86,7 +93,7 @@ public class ListUsersForAuthorizationRuleResponseBody extends TeaModel {
 
     public static class ListUsersForAuthorizationRuleResponseBodyUsersValidityPeriod extends TeaModel {
         /**
-         * <p>授权生效结束时间。</p>
+         * <p>The end time of the validity period. This is a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1704042061000</p>
@@ -95,7 +102,7 @@ public class ListUsersForAuthorizationRuleResponseBody extends TeaModel {
         public Long endTime;
 
         /**
-         * <p>授权生效开始时间。</p>
+         * <p>The start time of the validity period. This is a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1704042061000</p>
@@ -128,7 +135,7 @@ public class ListUsersForAuthorizationRuleResponseBody extends TeaModel {
 
     public static class ListUsersForAuthorizationRuleResponseBodyUsers extends TeaModel {
         /**
-         * <p>实例ID。</p>
+         * <p>The instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>idaas_ue2jvisn35ea5lmthk267xxxxx</p>
@@ -137,7 +144,7 @@ public class ListUsersForAuthorizationRuleResponseBody extends TeaModel {
         public String instanceId;
 
         /**
-         * <p>账户标识。</p>
+         * <p>The account ID.</p>
          * 
          * <strong>example:</strong>
          * <p>user_d6sbsuumeta4h66ec3il7yxxxx</p>
@@ -146,13 +153,19 @@ public class ListUsersForAuthorizationRuleResponseBody extends TeaModel {
         public String userId;
 
         /**
-         * <p>有效周期。</p>
+         * <p>The time range of the validity period. This parameter takes effect only when <strong>ValidityType</strong> is set to <strong>time_bound</strong>.</p>
          */
         @NameInMap("ValidityPeriod")
         public ListUsersForAuthorizationRuleResponseBodyUsersValidityPeriod validityPeriod;
 
         /**
-         * <p>有效期类型，枚举值：permanent（永久），time_bound（自定义时间范围）。</p>
+         * <p>The type of the validity period for the relationship. Valid values:</p>
+         * <ul>
+         * <li><p>permanent: permanent</p>
+         * </li>
+         * <li><p>time_bound: custom time range</p>
+         * </li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>permanent</p>

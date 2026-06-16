@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateApplicationRoleResponseBody extends TeaModel {
     /**
+     * <p>The ID of the application role.</p>
+     * 
      * <strong>example:</strong>
      * <p>approle_01kghbvoptu5262q35aalvq7cxxxx</p>
      */
@@ -12,6 +14,8 @@ public class CreateApplicationRoleResponseBody extends TeaModel {
     public String applicationRoleId;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>0441BD79-92F3-53AA-8657-F8CE4A2B912A</p>
      */

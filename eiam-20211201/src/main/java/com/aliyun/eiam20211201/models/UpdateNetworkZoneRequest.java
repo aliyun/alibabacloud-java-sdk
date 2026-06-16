@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpdateNetworkZoneRequest extends TeaModel {
     /**
+     * <p>The idempotence token.</p>
+     * 
      * <strong>example:</strong>
      * <p>client-token-examplexxxx</p>
      */
@@ -12,7 +14,7 @@ public class UpdateNetworkZoneRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>IDaaS EIAM实例的ID。</p>
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -22,19 +24,19 @@ public class UpdateNetworkZoneRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>包含的CIDR</p>
+     * <p>The IPv4 CIDR blocks of the network zone.</p>
      */
     @NameInMap("Ipv4Cidrs")
     public java.util.List<String> ipv4Cidrs;
 
     /**
-     * <p>网络区域ipv6Cidr</p>
+     * <p>The IPv6 CIDR blocks of the network zone.</p>
      */
     @NameInMap("Ipv6Cidrs")
     public java.util.List<String> ipv6Cidrs;
 
     /**
-     * <p>IDaaS的网络区域主键id</p>
+     * <p>The network zone ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -44,7 +46,7 @@ public class UpdateNetworkZoneRequest extends TeaModel {
     public String networkZoneId;
 
     /**
-     * <p>网络区域名称</p>
+     * <p>The name of the network zone.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -54,7 +56,7 @@ public class UpdateNetworkZoneRequest extends TeaModel {
     public String networkZoneName;
 
     /**
-     * <p>专有网络VpcId</p>
+     * <p>The ID of the virtual private cloud (VPC).</p>
      * 
      * <strong>example:</strong>
      * <p>vpc_xxxxx</p>

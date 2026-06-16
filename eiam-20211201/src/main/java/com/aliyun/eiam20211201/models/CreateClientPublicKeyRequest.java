@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateClientPublicKeyRequest extends TeaModel {
     /**
-     * <p>IDaaS的应用ClientpublicKey算法类型</p>
+     * <p>The algorithm type.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class CreateClientPublicKeyRequest extends TeaModel {
     public String algorithmType;
 
     /**
-     * <p>IDaaS的应用资源ID。</p>
+     * <p>The application ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,6 +25,7 @@ public class CreateClientPublicKeyRequest extends TeaModel {
     public String applicationId;
 
     /**
+     * <p>A client token used to ensure the idempotence of the request. Generate a unique value from your client for this parameter. The ClientToken value can contain only ASCII characters and must be no more than 64 characters long. For more information, see <a href="https://www.alibabacloud.com/help/en/ecs/developer-reference/how-to-ensure-idempotence">How to ensure idempotence</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -34,7 +35,7 @@ public class CreateClientPublicKeyRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>IDaaS EIAM实例的ID。</p>
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -44,7 +45,7 @@ public class CreateClientPublicKeyRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>应用ClientpublicKey的公钥，只接收 PEM 格式</p>
+     * <p>The public key in the Subject Public Key Info (SPKI) type of the Privacy-Enhanced Mail (PEM) format. The key must start with -----BEGIN PUBLIC KEY----- and end with -----END PUBLIC KEY-----.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

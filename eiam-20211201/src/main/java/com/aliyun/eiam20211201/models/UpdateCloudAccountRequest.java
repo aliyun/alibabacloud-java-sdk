@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateCloudAccountRequest extends TeaModel {
     /**
+     * <p>A client token used to ensure the idempotence of the request. Generate a value from your client that is unique across different requests. The token can contain only ASCII characters and must be no more than 64 characters in length. For more information, see <a href="https://www.alibabacloud.com/help/zh/ecs/developer-reference/how-to-ensure-idempotence">How to ensure idempotence</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,7 +15,7 @@ public class UpdateCloudAccountRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>云账号ID。</p>
+     * <p>The ID of the Alibaba Cloud account.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -24,6 +25,7 @@ public class UpdateCloudAccountRequest extends TeaModel {
     public String cloudAccountId;
 
     /**
+     * <p>The name of the Alibaba Cloud account.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -33,7 +35,7 @@ public class UpdateCloudAccountRequest extends TeaModel {
     public String cloudAccountName;
 
     /**
-     * <p>IDaaS EIAM实例的ID。</p>
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

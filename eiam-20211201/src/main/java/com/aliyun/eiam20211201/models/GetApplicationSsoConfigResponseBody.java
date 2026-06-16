@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class GetApplicationSsoConfigResponseBody extends TeaModel {
     /**
-     * <p>The single sign-on (SSO) configuration information of the application.</p>
+     * <p>The SSO configuration of the application.</p>
      */
     @NameInMap("ApplicationSsoConfig")
     public GetApplicationSsoConfigResponseBodyApplicationSsoConfig applicationSsoConfig;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>0441BD79-92F3-53AA-8657-F8CE4A2B912A</p>
@@ -42,7 +42,7 @@ public class GetApplicationSsoConfigResponseBody extends TeaModel {
 
     public static class GetApplicationSsoConfigResponseBodyApplicationSsoConfigOidcSsoConfigCustomClaims extends TeaModel {
         /**
-         * <p>The claim name.</p>
+         * <p>The name of the claim.</p>
          * 
          * <strong>example:</strong>
          * <p>userOuIds</p>
@@ -51,7 +51,7 @@ public class GetApplicationSsoConfigResponseBody extends TeaModel {
         public String claimName;
 
         /**
-         * <p>The expression that is used to generate the value of the claim.</p>
+         * <p>The expression used to generate the value of the claim.</p>
          * 
          * <strong>example:</strong>
          * <p>ObjectToJsonString(user.organizationalUnits)</p>
@@ -84,7 +84,7 @@ public class GetApplicationSsoConfigResponseBody extends TeaModel {
 
     public static class GetApplicationSsoConfigResponseBodyApplicationSsoConfigOidcSsoConfig extends TeaModel {
         /**
-         * <p>The validity period of the issued access token. Unit: seconds. Default value: 1200.</p>
+         * <p>The validity period of the access token. Unit: seconds. Default value: 1200 (20 minutes).</p>
          * 
          * <strong>example:</strong>
          * <p>1200</p>
@@ -92,11 +92,17 @@ public class GetApplicationSsoConfigResponseBody extends TeaModel {
         @NameInMap("AccessTokenEffectiveTime")
         public Long accessTokenEffectiveTime;
 
+        /**
+         * <p>Indicates whether the application is allowed to make requests to the IDaaS EIAM authorization server as a public client. This feature is supported only for the authorization code and device code grant types. Default value: false.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("AllowedPublicClient")
         public String allowedPublicClient;
 
         /**
-         * <p>The validity period of the issued code. Unit: seconds. Default value: 60.</p>
+         * <p>The validity period of the authorization code. Unit: seconds. Default value: 60 (1 minute).</p>
          * 
          * <strong>example:</strong>
          * <p>60</p>
@@ -105,13 +111,13 @@ public class GetApplicationSsoConfigResponseBody extends TeaModel {
         public Long codeEffectiveTime;
 
         /**
-         * <p>The custom claims that are returned for the ID token.</p>
+         * <p>The custom claims that are returned in the ID token.</p>
          */
         @NameInMap("CustomClaims")
         public java.util.List<GetApplicationSsoConfigResponseBodyApplicationSsoConfigOidcSsoConfigCustomClaims> customClaims;
 
         /**
-         * <p>The scopes of user attributes that can be returned for the UserInfo endpoint or ID token.</p>
+         * <p>The OIDC-compliant scope parameter. This parameter specifies the scope of user attributes that can be returned by the userinfo endpoint or included in the ID token.</p>
          * 
          * <strong>example:</strong>
          * <p>profile，email</p>
@@ -120,7 +126,7 @@ public class GetApplicationSsoConfigResponseBody extends TeaModel {
         public java.util.List<String> grantScopes;
 
         /**
-         * <p>The list of grant types that are supported for OIDC protocols.</p>
+         * <p>The list of OIDC grant types that are supported.</p>
          * 
          * <strong>example:</strong>
          * <p>authorization_code</p>
@@ -129,7 +135,7 @@ public class GetApplicationSsoConfigResponseBody extends TeaModel {
         public java.util.List<String> grantTypes;
 
         /**
-         * <p>The validity period of the issued ID token. Unit: seconds. Default value: 300.</p>
+         * <p>The validity period of the ID token. Unit: seconds. Default value: 300 (5 minutes).</p>
          * 
          * <strong>example:</strong>
          * <p>1200</p>
@@ -138,7 +144,7 @@ public class GetApplicationSsoConfigResponseBody extends TeaModel {
         public Long idTokenEffectiveTime;
 
         /**
-         * <p>The ID of the identity authentication source in password mode. This parameter is returned only when the value of the GrantTypes parameter includes the password mode.</p>
+         * <p>The ID of the authentication source for password-based logon. This parameter is valid only if GrantTypes for the OIDC application is set to password.</p>
          * 
          * <strong>example:</strong>
          * <p>ia_password</p>
@@ -147,7 +153,7 @@ public class GetApplicationSsoConfigResponseBody extends TeaModel {
         public String passwordAuthenticationSourceId;
 
         /**
-         * <p>Indicates whether time-based one-time password (TOTP) authentication is required in password mode. This parameter is returned only when the value of the GrantTypes parameter includes the password mode.</p>
+         * <p>Indicates whether Time-based One-Time Password (TOTP) multi-factor authentication (MFA) is required for password-based logon. This parameter is valid only if GrantTypes for the OIDC application is set to password.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -156,7 +162,7 @@ public class GetApplicationSsoConfigResponseBody extends TeaModel {
         public Boolean passwordTotpMfaRequired;
 
         /**
-         * <p>The algorithms that are used to calculate the code challenge for PKCE.</p>
+         * <p>The algorithm used to calculate the code challenge in PKCE.</p>
          * 
          * <strong>example:</strong>
          * <p>S256</p>
@@ -165,7 +171,7 @@ public class GetApplicationSsoConfigResponseBody extends TeaModel {
         public java.util.List<String> pkceChallengeMethods;
 
         /**
-         * <p>Indicates whether the SSO of the application requires Proof Key for Code Exchange (PKCE) (RFC 7636).</p>
+         * <p>Indicates whether Proof Key for Code Exchange (PKCE) is required for the application SSO. For more information, see RFC 7636.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -174,19 +180,19 @@ public class GetApplicationSsoConfigResponseBody extends TeaModel {
         public Boolean pkceRequired;
 
         /**
-         * <p>The list of logout redirect URIs that are supported by the application.</p>
+         * <p>The list of post-logout redirect URIs.</p>
          */
         @NameInMap("PostLogoutRedirectUris")
         public java.util.List<String> postLogoutRedirectUris;
 
         /**
-         * <p>The list of redirect URIs that are supported by the application.</p>
+         * <p>The list of redirect URIs that the application supports.</p>
          */
         @NameInMap("RedirectUris")
         public java.util.List<String> redirectUris;
 
         /**
-         * <p>The validity period of the issued refresh token. Unit: seconds. Default value: 86400.</p>
+         * <p>The validity period of the refresh token. Unit: seconds. Default value: 86400 (1 day).</p>
          * 
          * <strong>example:</strong>
          * <p>86400</p>
@@ -195,7 +201,7 @@ public class GetApplicationSsoConfigResponseBody extends TeaModel {
         public Long refreshTokenEffective;
 
         /**
-         * <p>The response types that are supported by the application. This parameter is returned when the value of the GrantTypes parameter includes the implicit mode.</p>
+         * <p>The response type that the application supports. This parameter is returned only if OidcSsoConfig.GrantTypes is set to implicit.</p>
          * 
          * <strong>example:</strong>
          * <p>token id_token</p>
@@ -204,7 +210,7 @@ public class GetApplicationSsoConfigResponseBody extends TeaModel {
         public java.util.List<String> responseTypes;
 
         /**
-         * <p>The custom expression that is used to generate the subject ID returned for the ID token.</p>
+         * <p>The expression used to generate the value of the sub claim in the ID token.</p>
          * 
          * <strong>example:</strong>
          * <p>user.userid</p>
@@ -349,7 +355,7 @@ public class GetApplicationSsoConfigResponseBody extends TeaModel {
 
     public static class GetApplicationSsoConfigResponseBodyApplicationSsoConfigProtocolEndpointDomain extends TeaModel {
         /**
-         * <p>The OAuth2.0 authorization endpoint. This parameter is returned only when the SSO protocol of the application is an OIDC protocol.</p>
+         * <p>The OAuth 2.0 authorization endpoint. This parameter is returned only when the application uses OIDC for SSO.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://l1seshcn.aliyunidaas.com/login/app/app_mltta64q65enci54slingvvsgq/oauth2/authorize">https://l1seshcn.aliyunidaas.com/login/app/app_mltta64q65enci54slingvvsgq/oauth2/authorize</a></p>
@@ -358,7 +364,7 @@ public class GetApplicationSsoConfigResponseBody extends TeaModel {
         public String oauth2AuthorizationEndpoint;
 
         /**
-         * <p>The OAuth2.0 device authorization endpoint. This parameter is returned only when the SSO protocol of the application is an OIDC protocol.</p>
+         * <p>The OAuth 2.0 device authorization endpoint. This parameter is returned only when the application uses OIDC for SSO.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://eiam-api-cn-hangzhou.aliyuncs.com/v2/idaas_ue2jvisn35ea5lmthk2676rypm/app_mltta64q65enci54slingvvsgq/oauth2/device/code">https://eiam-api-cn-hangzhou.aliyuncs.com/v2/idaas_ue2jvisn35ea5lmthk2676rypm/app_mltta64q65enci54slingvvsgq/oauth2/device/code</a></p>
@@ -367,7 +373,7 @@ public class GetApplicationSsoConfigResponseBody extends TeaModel {
         public String oauth2DeviceAuthorizationEndpoint;
 
         /**
-         * <p>The OAuth2.0 token revocation endpoint. This parameter is returned only when the SSO protocol of the application is an OIDC protocol.</p>
+         * <p>The OAuth 2.0 token revocation endpoint. This parameter is returned only when the application uses OIDC for SSO.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://eiam-api-cn-hangzhou.aliyuncs.com/v2/idaas_ue2jvisn35ea5lmthk2676rypm/app_mltta64q65enci54slingvvsgq/oauth2/revoke">https://eiam-api-cn-hangzhou.aliyuncs.com/v2/idaas_ue2jvisn35ea5lmthk2676rypm/app_mltta64q65enci54slingvvsgq/oauth2/revoke</a></p>
@@ -376,7 +382,7 @@ public class GetApplicationSsoConfigResponseBody extends TeaModel {
         public String oauth2RevokeEndpoint;
 
         /**
-         * <p>The OAuth2.0 token endpoint. This parameter is returned only when the SSO protocol of the application is an OIDC protocol.</p>
+         * <p>The OAuth 2.0 token endpoint. This parameter is returned only when the application uses OIDC for SSO.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://eiam-api-cn-hangzhou.aliyuncs.com/v2/idaas_ue2jvisn35ea5lmthk2676rypm/app_mltta64q65enci54slingvvsgq/oauth2/token">https://eiam-api-cn-hangzhou.aliyuncs.com/v2/idaas_ue2jvisn35ea5lmthk2676rypm/app_mltta64q65enci54slingvvsgq/oauth2/token</a></p>
@@ -385,7 +391,7 @@ public class GetApplicationSsoConfigResponseBody extends TeaModel {
         public String oauth2TokenEndpoint;
 
         /**
-         * <p>The OIDC UserInfo endpoint. This parameter is returned only when the SSO protocol of the application is an OIDC protocol.</p>
+         * <p>The OIDC userinfo endpoint. This parameter is returned only when the application uses OIDC for SSO.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://eiam-api-cn-hangzhou.aliyuncs.com/v2/idaas_ue2jvisn35ea5lmthk2676rypm/app_mltta64q65enci54slingvvsgq/oauth2/userinfo">https://eiam-api-cn-hangzhou.aliyuncs.com/v2/idaas_ue2jvisn35ea5lmthk2676rypm/app_mltta64q65enci54slingvvsgq/oauth2/userinfo</a></p>
@@ -394,7 +400,7 @@ public class GetApplicationSsoConfigResponseBody extends TeaModel {
         public String oauth2UserinfoEndpoint;
 
         /**
-         * <p>The information about the OIDC issuer. This parameter is returned only when the SSO protocol of the application is an OIDC protocol.</p>
+         * <p>The OIDC issuer. This parameter is returned only when the application uses OIDC for SSO.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://eiam-api-cn-hangzhou.aliyuncs.com/v2/idaas_ue2jvisn35ea5lmthk2676rypm/app_mltta64q65enci54slingvvsgq/oidc">https://eiam-api-cn-hangzhou.aliyuncs.com/v2/idaas_ue2jvisn35ea5lmthk2676rypm/app_mltta64q65enci54slingvvsgq/oidc</a></p>
@@ -403,7 +409,7 @@ public class GetApplicationSsoConfigResponseBody extends TeaModel {
         public String oidcIssuer;
 
         /**
-         * <p>The JSON Web Key Set (JWKS) URL of the OIDC issuer. This parameter is returned only when the SSO protocol of the application is an OIDC protocol.</p>
+         * <p>The JSON Web Key Set (JWKS) endpoint for OIDC. This parameter is returned only when the application uses OIDC for SSO.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://eiam-api-cn-hangzhou.aliyuncs.com/v2/idaas_ue2jvisn35ea5lmthk2676rypm/app_mltta64q65enci54slingvvsgq/oidc/jwks">https://eiam-api-cn-hangzhou.aliyuncs.com/v2/idaas_ue2jvisn35ea5lmthk2676rypm/app_mltta64q65enci54slingvvsgq/oidc/jwks</a></p>
@@ -412,7 +418,7 @@ public class GetApplicationSsoConfigResponseBody extends TeaModel {
         public String oidcJwksEndpoint;
 
         /**
-         * <p>The OIDC relying party (RP)-initiated logout endpoint. This parameter is returned only when the SSO protocol of the application is an OIDC protocol.</p>
+         * <p>The OIDC Relying Party (RP)-initiated logout endpoint. This parameter is returned only when the application uses OIDC for SSO.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://l1seshcn.aliyunidaas.com/login/app/app_mltta64q65enci54slingvvsgq/oauth2/logout">https://l1seshcn.aliyunidaas.com/login/app/app_mltta64q65enci54slingvvsgq/oauth2/logout</a></p>
@@ -421,7 +427,7 @@ public class GetApplicationSsoConfigResponseBody extends TeaModel {
         public String oidcLogoutEndpoint;
 
         /**
-         * <p>The metadata URL of the SAML protocol. This parameter is returned only when the SSO protocol of the application is SAML 2.0.</p>
+         * <p>The metadata endpoint for the SAML protocol. This parameter is returned only when the application uses SAML 2.0 for SSO.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://l1seshcn.aliyunidaas.com/api/v2/app_mltuxdwd4lq4eer6tmtlmaxm5e/saml2/meta">https://l1seshcn.aliyunidaas.com/api/v2/app_mltuxdwd4lq4eer6tmtlmaxm5e/saml2/meta</a></p>
@@ -430,7 +436,7 @@ public class GetApplicationSsoConfigResponseBody extends TeaModel {
         public String samlMetaEndpoint;
 
         /**
-         * <p>The request receiving URL of the SAML protocol. This parameter is returned only when the SSO protocol of the application is SAML 2.0.</p>
+         * <p>The endpoint that receives AuthnRequest requests for the SAML protocol. This parameter is returned only when the application uses SAML 2.0 for SSO.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://l1seshcn.aliyunidaas.com/login/app/app_mltuxdwd4lq4eer6tmtlmaxm5e/saml2/sso">https://l1seshcn.aliyunidaas.com/login/app/app_mltuxdwd4lq4eer6tmtlmaxm5e/saml2/sso</a></p>
@@ -527,7 +533,7 @@ public class GetApplicationSsoConfigResponseBody extends TeaModel {
 
     public static class GetApplicationSsoConfigResponseBodyApplicationSsoConfigSamlSsoConfigAttributeStatements extends TeaModel {
         /**
-         * <p>The attribute name.</p>
+         * <p>The name of the attribute in the SAML assertion.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://www.aliyun.com/SAML-Role/Attributes/RoleSessionName">https://www.aliyun.com/SAML-Role/Attributes/RoleSessionName</a></p>
@@ -536,7 +542,7 @@ public class GetApplicationSsoConfigResponseBody extends TeaModel {
         public String attributeName;
 
         /**
-         * <p>The expression that is used to generate the value of the attribute.</p>
+         * <p>The expression used to generate the value of the attribute in the SAML assertion.</p>
          * 
          * <strong>example:</strong>
          * <p>user.username</p>
@@ -569,7 +575,7 @@ public class GetApplicationSsoConfigResponseBody extends TeaModel {
 
     public static class GetApplicationSsoConfigResponseBodyApplicationSsoConfigSamlSsoConfigOptionalRelayStates extends TeaModel {
         /**
-         * <p>The display name of the RelayState</p>
+         * <p>The display name of the RelayState.</p>
          * 
          * <strong>example:</strong>
          * <p>Ram Account SSO</p>
@@ -578,7 +584,7 @@ public class GetApplicationSsoConfigResponseBody extends TeaModel {
         public String displayName;
 
         /**
-         * <p>RelayState.The user will see the display names of multiple optional redirect addresses in the application card of the application portal. After the user clicks and completes SSO, they will automatically jump to the corresponding address. This field can only be filled in after the default redirect address is filled in.</p>
+         * <p>The optional RelayState value. The display names of multiple redirect URLs are shown on the application card in the application portal. After a user clicks a URL and completes the SSO, the user is redirected to the URL.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://home.console.aliyun.com">https://home.console.aliyun.com</a></p>
@@ -611,9 +617,13 @@ public class GetApplicationSsoConfigResponseBody extends TeaModel {
 
     public static class GetApplicationSsoConfigResponseBodyApplicationSsoConfigSamlSsoConfig extends TeaModel {
         /**
-         * <p>Whether the Assertion needs a signature. ResponseSigned and AssertionSigned cannot be false at the same time.</p>
-         * <p>true: signature is required.
-         * false: signature is not required.</p>
+         * <p>Indicates whether the assertion needs to be signed. ResponseSigned and AssertionSigned cannot both be false.</p>
+         * <ul>
+         * <li><p>true: The assertion must be signed.</p>
+         * </li>
+         * <li><p>false: The assertion does not need to be signed.</p>
+         * </li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -622,13 +632,13 @@ public class GetApplicationSsoConfigResponseBody extends TeaModel {
         public Boolean assertionSigned;
 
         /**
-         * <p>The additional user attributes in the SAML assertion.</p>
+         * <p>The configuration of additional user attributes in the SAML assertion.</p>
          */
         @NameInMap("AttributeStatements")
         public java.util.List<GetApplicationSsoConfigResponseBodyApplicationSsoConfigSamlSsoConfigAttributeStatements> attributeStatements;
 
         /**
-         * <p>The default value of the RelayState attribute. If the SSO request is initiated in EIAM, the RelayState attribute in the SAML response is set to this default value.</p>
+         * <p>The default value of RelayState. If the SSO is initiated by EIAM, the RelayState in the SAML response is set to this value.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://home.console.aliyun.com">https://home.console.aliyun.com</a></p>
@@ -637,7 +647,7 @@ public class GetApplicationSsoConfigResponseBody extends TeaModel {
         public String defaultRelayState;
 
         /**
-         * <p>The custom issuer ID.</p>
+         * <p>The EntityID of the identity provider (IdP) in the SAML protocol.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://example.com/">https://example.com/</a></p>
@@ -646,12 +656,16 @@ public class GetApplicationSsoConfigResponseBody extends TeaModel {
         public String idPEntityId;
 
         /**
-         * <p>The Format attribute of the NameID element in the SAML assertion. Valid values:</p>
+         * <p>The format of the NameID in the SAML protocol. Valid values:</p>
          * <ul>
-         * <li>urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified: No format is specified. How to resolve the NameID element depends on the application.</li>
-         * <li>urn:oasis:names:tc:SAML:1.1:nameid-format:emailAddress: The NameID element must be an email address.</li>
-         * <li>urn:oasis:names:tc:SAML:2.0:nameid-format:persistent: The NameID element must be persistent.</li>
-         * <li>urn:oasis:names:tc:SAML:2.0:nameid-format:transient: The NameID element must be transient.</li>
+         * <li><p>urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified: Unspecified. The application determines how to parse the NameID.</p>
+         * </li>
+         * <li><p>urn:oasis:names:tc:SAML:1.1:nameid-format:emailAddress: Email address format.</p>
+         * </li>
+         * <li><p>urn:oasis:names:tc:SAML:2.0:nameid-format:persistent: Persistent NameID.</p>
+         * </li>
+         * <li><p>urn:oasis:names:tc:SAML:2.0:nameid-format:transient: Transient NameID.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -661,7 +675,7 @@ public class GetApplicationSsoConfigResponseBody extends TeaModel {
         public String nameIdFormat;
 
         /**
-         * <p>The expression that is used to generate the value of NameID in the SAML assertion.</p>
+         * <p>The expression used to generate the value of the NameID in the SAML assertion.</p>
          * 
          * <strong>example:</strong>
          * <p>user.username</p>
@@ -670,15 +684,19 @@ public class GetApplicationSsoConfigResponseBody extends TeaModel {
         public String nameIdValueExpression;
 
         /**
-         * <p>Optional RelayState. The user will see the display names of multiple optional redirect addresses in the application card of the application portal. After the user clicks and completes SSO, they will automatically jump to the corresponding address. This field can only be filled in after the default redirect address is filled in.</p>
+         * <p>The optional RelayState values. The display names of multiple redirect URLs are shown on the application card in the application portal. After a user clicks a URL and completes the SSO, the user is redirected to the URL. You must specify a default redirect URL before you can specify optional RelayState values.</p>
          */
         @NameInMap("OptionalRelayStates")
         public java.util.List<GetApplicationSsoConfigResponseBodyApplicationSsoConfigSamlSsoConfigOptionalRelayStates> optionalRelayStates;
 
         /**
-         * <p>Whether the response needs to be signed. ResponseSigned and AssertionSigned cannot be false at the same time.</p>
-         * <p>true: signature is required.
-         * false: signature is not required.</p>
+         * <p>Indicates whether the response needs to be signed. ResponseSigned and AssertionSigned cannot both be false.</p>
+         * <ul>
+         * <li><p>true: The response must be signed.</p>
+         * </li>
+         * <li><p>false: The response does not need to be signed.</p>
+         * </li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -687,7 +705,7 @@ public class GetApplicationSsoConfigResponseBody extends TeaModel {
         public Boolean responseSigned;
 
         /**
-         * <p>The algorithm that is used to calculate the signature for the SAML assertion.</p>
+         * <p>The signature algorithm for the SAML assertion.</p>
          * 
          * <strong>example:</strong>
          * <p>RSA-SHA256</p>
@@ -696,7 +714,7 @@ public class GetApplicationSsoConfigResponseBody extends TeaModel {
         public String signatureAlgorithm;
 
         /**
-         * <p>The entity ID of the application in SAML. The application assumes the role of service provider.</p>
+         * <p>The SAML EntityID of the application (service provider).</p>
          * 
          * <strong>example:</strong>
          * <p>urn:alibaba:cloudcomputing</p>
@@ -705,7 +723,7 @@ public class GetApplicationSsoConfigResponseBody extends TeaModel {
         public String spEntityId;
 
         /**
-         * <p>The Assertion Consumer Service (ACS) URL of the application in SAML. The application assumes the role of service provider.</p>
+         * <p>The SAML assertion consumer service (ACS) URL of the application (service provider).</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://signin.aliyun.com/saml-role/sso">https://signin.aliyun.com/saml-role/sso</a></p>
@@ -810,10 +828,12 @@ public class GetApplicationSsoConfigResponseBody extends TeaModel {
 
     public static class GetApplicationSsoConfigResponseBodyApplicationSsoConfig extends TeaModel {
         /**
-         * <p>The initial SSO method. Valid values:</p>
+         * <p>The SSO initiation method. Valid values:</p>
          * <ul>
-         * <li>only_app_init_sso: Only application-initiated SSO is allowed. This method is selected by default when the SSO protocol of the application is an OIDC protocol. If this method is selected when the SSO protocol of the application is SAML, the InitLoginUrl parameter is required.</li>
-         * <li>idaas_or_app_init_sso: IDaaS-initiated SSO and application-initiated SSO are allowed. This method is selected by default when the SSO protocol of the application is SAML. If this method is selected when the SSO protocol of the application is an OIDC protocol, the InitLoginUrl parameter is required.</li>
+         * <li><p>only_app_init_sso: SSO is initiated only by the application. This is the default value for OIDC applications. If this method is used for a SAML application, you must specify InitLoginUrl.</p>
+         * </li>
+         * <li><p>idaas_or_app_init_sso: SSO can be initiated by the IDaaS console or the application. This is the default value for SAML applications. If this method is used for an OIDC application, you must specify InitLoginUrl.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -823,7 +843,7 @@ public class GetApplicationSsoConfigResponseBody extends TeaModel {
         public String initLoginType;
 
         /**
-         * <p>The initial webhook URL of SSO. This parameter is required when the SSO protocol of the application is an OIDC protocol and the InitLoginType parameters is set to idaas_or_app_init_sso or when the SSO protocol of the application is SAML and the InitLoginType parameter is set to only_app_init_sso.</p>
+         * <p>The URL that triggers SSO. This parameter is required when InitLoginType for an OIDC application is set to idaas_or_app_init_sso. This parameter is also required when InitLoginType for a SAML application is set to only_app_init_sso.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="http://127.0.0.1:8000/start_login?enterprise_code=ABCDEF">http://127.0.0.1:8000/start_login?enterprise_code=ABCDEF</a></p>
@@ -832,7 +852,7 @@ public class GetApplicationSsoConfigResponseBody extends TeaModel {
         public String initLoginUrl;
 
         /**
-         * <p>The Open ID Connect (OIDC)-based SSO configuration attributes of the application. This parameter is returned only when the SSO protocol of the application is an OIDC protocol.</p>
+         * <p>The SSO configuration parameters for the application that uses OpenID Connect (OIDC). This parameter is returned only when the application uses OIDC for SSO.</p>
          */
         @NameInMap("OidcSsoConfig")
         public GetApplicationSsoConfigResponseBodyApplicationSsoConfigOidcSsoConfig oidcSsoConfig;
@@ -844,16 +864,18 @@ public class GetApplicationSsoConfigResponseBody extends TeaModel {
         public GetApplicationSsoConfigResponseBodyApplicationSsoConfigProtocolEndpointDomain protocolEndpointDomain;
 
         /**
-         * <p>The Security Assertion Markup Language (SAML)-based SSO configuration attributes of the application. This parameter is returned only if the SSO protocol of the application is SAML 2.0.</p>
+         * <p>The SSO configuration parameters for the application that uses Security Assertion Markup Language (SAML) 2.0. This parameter is returned only when the application uses SAML 2.0 for SSO.</p>
          */
         @NameInMap("SamlSsoConfig")
         public GetApplicationSsoConfigResponseBodyApplicationSsoConfigSamlSsoConfig samlSsoConfig;
 
         /**
-         * <p>The SSO feature status of the application. Valid values:</p>
+         * <p>The status of the SSO feature for the application. Valid values:</p>
          * <ul>
-         * <li>enabled: The feature is enabled.</li>
-         * <li>disabled: The feature is disabled.</li>
+         * <li><p>enabled: Enabled.</p>
+         * </li>
+         * <li><p>disabled: Disabled.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

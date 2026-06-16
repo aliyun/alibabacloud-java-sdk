@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class SetApplicationProvisioningConfigRequest extends TeaModel {
     /**
-     * <p>The ID of the application.</p>
+     * <p>The application ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,13 +15,13 @@ public class SetApplicationProvisioningConfigRequest extends TeaModel {
     public String applicationId;
 
     /**
-     * <p>The configuration of event callback synchronization. This parameter is required when the ProvisionProtocolType parameter is set to idaas_callback.</p>
+     * <p>The application event callback synchronization configuration. This parameter is required when ProvisionProtocolType is set to idaas_callback.</p>
      */
     @NameInMap("CallbackProvisioningConfig")
     public SetApplicationProvisioningConfigRequestCallbackProvisioningConfig callbackProvisioningConfig;
 
     /**
-     * <p>The ID of the instance.</p>
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -30,14 +30,22 @@ public class SetApplicationProvisioningConfigRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>The network endpoint ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>nae_examplexxxx</p>
+     */
     @NameInMap("NetworkAccessEndpointId")
     public String networkAccessEndpointId;
 
     /**
-     * <p>Specifies whether to synchronize the password in IDaaS user event callbacks. Valid values:</p>
+     * <p>Indicates whether to synchronize passwords for IDaaS user event callbacks. Valid values:</p>
      * <ul>
-     * <li>true: synchronize the password.</li>
-     * <li>false: do not synchronize the password.</li>
+     * <li><p>true: Synchronize passwords.</p>
+     * </li>
+     * <li><p>false: Do not synchronize passwords.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -47,10 +55,12 @@ public class SetApplicationProvisioningConfigRequest extends TeaModel {
     public Boolean provisionPassword;
 
     /**
-     * <p>The synchronization protocol type of the application. Valid values:</p>
+     * <p>The account synchronization protocol. Valid values:</p>
      * <ul>
-     * <li>idaas_callback: custom event callback protocol of IDaaS.</li>
-     * <li>scim2: System for Cross-domain Identity Management (SCIM) protocol.</li>
+     * <li><p>idaas_callback: IDaaS custom event callback for account synchronization.</p>
+     * </li>
+     * <li><p>scim2: System for Cross-domain Identity Management (SCIM) protocol for synchronization.</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -61,7 +71,7 @@ public class SetApplicationProvisioningConfigRequest extends TeaModel {
     public String provisionProtocolType;
 
     /**
-     * <p>The configuration of SCIM-based IDaaS synchronization. This parameter is required when the ProvisionProtocolType parameter is set to scim2.</p>
+     * <p>The IDaaS SCIM protocol synchronization configuration parameters. This parameter is required when ProvisionProtocolType is set to scim2.</p>
      */
     @NameInMap("ScimProvisioningConfig")
     public SetApplicationProvisioningConfigRequestScimProvisioningConfig scimProvisioningConfig;
@@ -129,7 +139,7 @@ public class SetApplicationProvisioningConfigRequest extends TeaModel {
 
     public static class SetApplicationProvisioningConfigRequestCallbackProvisioningConfig extends TeaModel {
         /**
-         * <p>The URL that the application uses to receive IDaaS event callbacks.</p>
+         * <p>The destination address where the application accepts IDaaS event callbacks.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://example.com/event/callback">https://example.com/event/callback</a></p>
@@ -138,7 +148,7 @@ public class SetApplicationProvisioningConfigRequest extends TeaModel {
         public String callbackUrl;
 
         /**
-         * <p>The symmetric key for IDaaS event callbacks. The key is an AES-256 encryption key in the HEX format.</p>
+         * <p>The symmetric key for encrypting and decrypting IDaaS event callbacks. The key uses the AES-256 algorithm and is in hexadecimal format.</p>
          * 
          * <strong>example:</strong>
          * <p>ad3b248**************************b3561a73d7</p>
@@ -147,10 +157,12 @@ public class SetApplicationProvisioningConfigRequest extends TeaModel {
         public String encryptKey;
 
         /**
-         * <p>Specifies whether to encrypt IDaaS event callback messages. Valid values:</p>
+         * <p>Indicates whether to encrypt IDaaS event callback messages. Valid values:</p>
          * <ul>
-         * <li>true: encrypt the messages.</li>
-         * <li>false: transmit the messages in plaintext.</li>
+         * <li><p>true: Encrypt the messages.</p>
+         * </li>
+         * <li><p>false: Do not encrypt the messages. The messages are transmitted in plaintext.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -160,7 +172,7 @@ public class SetApplicationProvisioningConfigRequest extends TeaModel {
         public Boolean encryptRequired;
 
         /**
-         * <p>The list of types of IDaaS event callback messages that are supported by the listener.</p>
+         * <p>The list of message types for the IDaaS event callback listener.</p>
          */
         @NameInMap("ListenEventScopes")
         public java.util.List<String> listenEventScopes;
@@ -206,7 +218,7 @@ public class SetApplicationProvisioningConfigRequest extends TeaModel {
 
     public static class SetApplicationProvisioningConfigRequestScimProvisioningConfigAuthnConfigurationAuthnParam extends TeaModel {
         /**
-         * <p>The access token. If the GrantType parameter is set to bearer_token, you can set this parameter.</p>
+         * <p>The access token. You can update this field when the grant type is bearer_token.</p>
          * 
          * <strong>example:</strong>
          * <p>k52x2ru63rlkflina5utgkxxxx</p>
@@ -215,10 +227,12 @@ public class SetApplicationProvisioningConfigRequest extends TeaModel {
         public String accessToken;
 
         /**
-         * <p>The authentication mode of the SCIM protocol. Valid values:</p>
+         * <p>The authentication method for the SCIM protocol. Valid values:</p>
          * <ul>
-         * <li>client_secret_basic: The client secret is passed in the request header.</li>
-         * <li>client_secret_post: The client secret is passed in the request body.</li>
+         * <li><p>client_secret_basic: The key is passed in the request header.</p>
+         * </li>
+         * <li><p>client_secret_post: The key is passed in the request body.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -303,9 +317,9 @@ public class SetApplicationProvisioningConfigRequest extends TeaModel {
 
     public static class SetApplicationProvisioningConfigRequestScimProvisioningConfigAuthnConfiguration extends TeaModel {
         /**
-         * <p>The authentication mode of the SCIM protocol. Valid value:</p>
+         * <p>The authorization mode for the SCIM protocol interface. Valid values:</p>
          * <ul>
-         * <li>oauth2: OAuth2.0 mode.</li>
+         * <li>oauth2: OAuth2 mode.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -315,20 +329,24 @@ public class SetApplicationProvisioningConfigRequest extends TeaModel {
         public String authnMode;
 
         /**
-         * <p>The configuration parameters related to authorization.</p>
+         * <p>The authorization configuration parameters. The usage is as follows:</p>
          * <ul>
-         * <li>If the GrantType parameter is set to client_credentials, you can set the configuration parameters ClientId, ClientSecret, and AuthnMethod.</li>
-         * <li>If the GrantType parameter is set to bearer_token, you can set the configuration parameter AccessToken.</li>
+         * <li><p>If GrantType is set to client_credentials, you can update ClientId, ClientSecret, and AuthnMethod.</p>
+         * </li>
+         * <li><p>If GrantType is set to bearer_token, you can update AccessToken.</p>
+         * </li>
          * </ul>
          */
         @NameInMap("AuthnParam")
         public SetApplicationProvisioningConfigRequestScimProvisioningConfigAuthnConfigurationAuthnParam authnParam;
 
         /**
-         * <p>The grant type of the SCIM protocol. Valid values:</p>
+         * <p>The authorization grant type for the SCIM protocol. Valid values:</p>
          * <ul>
-         * <li>client_credentials: client mode.</li>
-         * <li>bearer_token: key mode.</li>
+         * <li><p>client_credentials: Client credentials mode.</p>
+         * </li>
+         * <li><p>bearer_token: Bearer token mode.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -370,33 +388,36 @@ public class SetApplicationProvisioningConfigRequest extends TeaModel {
 
     public static class SetApplicationProvisioningConfigRequestScimProvisioningConfig extends TeaModel {
         /**
-         * <p>The configuration parameters related to SCIM-based synchronization.</p>
+         * <p>The configuration parameters for SCIM protocol synchronization.</p>
          */
         @NameInMap("AuthnConfiguration")
         public SetApplicationProvisioningConfigRequestScimProvisioningConfigAuthnConfiguration authnConfiguration;
 
         /**
-         * <p>The full synchronization scope of the SCIM protocol. Valid value:</p>
+         * <p>The scope of a full push for the SCIM protocol. Valid values:</p>
          * <ul>
-         * <li>urn:alibaba:idaas:app:scim:User:PUSH: full account data synchronization.</li>
+         * <li>urn:alibaba:idaas:app:scim:User:PUSH: Full synchronization of users.</li>
          * </ul>
          */
         @NameInMap("FullPushScopes")
         public java.util.List<String> fullPushScopes;
 
         /**
-         * <p>The resource operations of the SCIM protocol. Valid values:</p>
+         * <p>The operations on the target resource for the SCIM protocol. Valid values:</p>
          * <ul>
-         * <li>urn:alibaba:idaas:app:scim:User:CREATE: account creation.</li>
-         * <li>urn:alibaba:idaas:app:scim:User:UPDATE: account update.</li>
-         * <li>urn:alibaba:idaas:app:scim:User:DELETE: account deletion.</li>
+         * <li><p>urn:alibaba:idaas:app:scim:User:CREATE: Create an account.</p>
+         * </li>
+         * <li><p>urn:alibaba:idaas:app:scim:User:UPDATE: Update an account.</p>
+         * </li>
+         * <li><p>urn:alibaba:idaas:app:scim:User:DELETE: Delete an account.</p>
+         * </li>
          * </ul>
          */
         @NameInMap("ProvisioningActions")
         public java.util.List<String> provisioningActions;
 
         /**
-         * <p>The base URL that the application uses to receive the SCIM protocol for IDaaS synchronization.</p>
+         * <p>The base URL where the application accepts IDaaS SCIM protocol synchronization.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://example.com/scim">https://example.com/scim</a></p>

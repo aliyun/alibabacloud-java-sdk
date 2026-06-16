@@ -4,17 +4,23 @@ package com.aliyun.eiam20211201.models;
 import com.aliyun.tea.*;
 
 public class UpdateIdentityProviderRequest extends TeaModel {
+    /**
+     * <p>A client-generated token to ensure request idempotence. This value must be unique across requests.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>client-examplexxx</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
-     * <p>钉钉出基本信息</p>
+     * <p>The configuration for the DingTalk identity provider.</p>
      */
     @NameInMap("DingtalkAppConfig")
     public UpdateIdentityProviderRequestDingtalkAppConfig dingtalkAppConfig;
 
     /**
-     * <p>IDaaS的身份提供方主键id</p>
+     * <p>The ID of the identity provider.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -24,7 +30,7 @@ public class UpdateIdentityProviderRequest extends TeaModel {
     public String identityProviderId;
 
     /**
-     * <p>身份提供方名称</p>
+     * <p>The name of the identity provider.</p>
      * 
      * <strong>example:</strong>
      * <p>test</p>
@@ -33,7 +39,7 @@ public class UpdateIdentityProviderRequest extends TeaModel {
     public String identityProviderName;
 
     /**
-     * <p>IDaaS EIAM实例的ID。</p>
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -43,22 +49,28 @@ public class UpdateIdentityProviderRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>飞书配置</p>
+     * <p>The configuration for the Lark identity provider.</p>
      */
     @NameInMap("LarkConfig")
     public UpdateIdentityProviderRequestLarkConfig larkConfig;
 
     /**
-     * <p>AD/LDAP基本信息</p>
+     * <p>The configuration for the Active Directory (AD) or Lightweight Directory Access Protocol (LDAP) identity provider.</p>
      */
     @NameInMap("LdapConfig")
     public UpdateIdentityProviderRequestLdapConfig ldapConfig;
 
+    /**
+     * <p>The URL of the application logo.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>idaas-image://idaas_23aqr2ye554csg33dqpch5exxxx/tmp/d17d9adc-a943-45e7-ba0c-2838dddea678xxxx</p>
+     */
     @NameInMap("LogoUrl")
     public String logoUrl;
 
     /**
-     * <p>网络端点ID</p>
+     * <p>The ID of the network access endpoint.</p>
      * 
      * <strong>example:</strong>
      * <p>nae_examplexxxx</p>
@@ -67,16 +79,19 @@ public class UpdateIdentityProviderRequest extends TeaModel {
     public String networkAccessEndpointId;
 
     /**
-     * <p>OIDC IdP配置。</p>
+     * <p>The OpenID Connect (OIDC) configuration.</p>
      */
     @NameInMap("OidcConfig")
     public UpdateIdentityProviderRequestOidcConfig oidcConfig;
 
+    /**
+     * <p>The configuration for the SAML identity provider.</p>
+     */
     @NameInMap("SamlConfig")
     public UpdateIdentityProviderRequestSamlConfig samlConfig;
 
     /**
-     * <p>企业微信基本信息</p>
+     * <p>The configuration for the WeCom identity provider.</p>
      */
     @NameInMap("WeComConfig")
     public UpdateIdentityProviderRequestWeComConfig weComConfig;
@@ -184,7 +199,7 @@ public class UpdateIdentityProviderRequest extends TeaModel {
 
     public static class UpdateIdentityProviderRequestDingtalkAppConfig extends TeaModel {
         /**
-         * <p>钉钉一方应用的AppKey</p>
+         * <p>The AppKey of the DingTalk application.</p>
          * 
          * <strong>example:</strong>
          * <p>49nyeaqumk7f</p>
@@ -193,7 +208,7 @@ public class UpdateIdentityProviderRequest extends TeaModel {
         public String appKey;
 
         /**
-         * <p>钉钉一方应用的AppSecret</p>
+         * <p>The AppSecret of the DingTalk application.</p>
          * 
          * <strong>example:</strong>
          * <p>86nozWFL2CxgwnhKiXaG8dN4keLPkUNc5xxxx</p>
@@ -202,15 +217,29 @@ public class UpdateIdentityProviderRequest extends TeaModel {
         public String appSecret;
 
         /**
+         * <p>The version of the DingTalk QR code login.</p>
+         * 
          * <strong>example:</strong>
-         * <p>dingtalk</p>
+         * <p>new_version</p>
          */
         @NameInMap("DingtalkLoginVersion")
         public String dingtalkLoginVersion;
 
+        /**
+         * <p>The EncryptKey of the DingTalk application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>VkdWw91mdkrjVFr3ObNwefap21dfxxxx</p>
+         */
         @NameInMap("EncryptKey")
         public String encryptKey;
 
+        /**
+         * <p>The verification token of the DingTalk application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>myDingApp_VerifyTokenxxxxx</p>
+         */
         @NameInMap("VerificationToken")
         public String verificationToken;
 
@@ -263,6 +292,8 @@ public class UpdateIdentityProviderRequest extends TeaModel {
 
     public static class UpdateIdentityProviderRequestLarkConfig extends TeaModel {
         /**
+         * <p>The application ID of the custom application in Lark.</p>
+         * 
          * <strong>example:</strong>
          * <p>cli_xxxx</p>
          */
@@ -270,15 +301,29 @@ public class UpdateIdentityProviderRequest extends TeaModel {
         public String appId;
 
         /**
+         * <p>The application secret of the custom application in Lark.</p>
+         * 
          * <strong>example:</strong>
          * <p>KiiLzh5Dueh4wbLxxxx</p>
          */
         @NameInMap("AppSecret")
         public String appSecret;
 
+        /**
+         * <p>The EncryptKey of the custom application in Lark.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>VkdWw91mdkrjVFr3ObNwefap21dfbZbKxxxx</p>
+         */
         @NameInMap("EncryptKey")
         public String encryptKey;
 
+        /**
+         * <p>The verification token of the custom application in Lark.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>feishuVerifyTokenxxxxx</p>
+         */
         @NameInMap("VerificationToken")
         public String verificationToken;
 
@@ -323,7 +368,7 @@ public class UpdateIdentityProviderRequest extends TeaModel {
 
     public static class UpdateIdentityProviderRequestLdapConfig extends TeaModel {
         /**
-         * <p>管理员密码</p>
+         * <p>The password for the administrator account.</p>
          * 
          * <strong>example:</strong>
          * <p>xxxxxx</p>
@@ -332,7 +377,7 @@ public class UpdateIdentityProviderRequest extends TeaModel {
         public String administratorPassword;
 
         /**
-         * <p>管理员账号</p>
+         * <p>The administrator account.</p>
          * 
          * <strong>example:</strong>
          * <p>DC=example,DC=com</p>
@@ -341,7 +386,13 @@ public class UpdateIdentityProviderRequest extends TeaModel {
         public String administratorUsername;
 
         /**
-         * <p>是否验证指纹证书</p>
+         * <p>Specifies whether to enable certificate fingerprint verification. Valid values:</p>
+         * <ul>
+         * <li><p><code>disabled</code>: Verification is disabled.</p>
+         * </li>
+         * <li><p><code>enabled</code>: Verification is enabled.</p>
+         * </li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>enabled</p>
@@ -350,13 +401,13 @@ public class UpdateIdentityProviderRequest extends TeaModel {
         public String certificateFingerprintStatus;
 
         /**
-         * <p>证书指纹列表</p>
+         * <p>The list of certificate fingerprints.</p>
          */
         @NameInMap("CertificateFingerprints")
         public java.util.List<String> certificateFingerprints;
 
         /**
-         * <p>通信协议</p>
+         * <p>The communication protocol.</p>
          * 
          * <strong>example:</strong>
          * <p>ldap</p>
@@ -365,7 +416,7 @@ public class UpdateIdentityProviderRequest extends TeaModel {
         public String ldapProtocol;
 
         /**
-         * <p>ad/ldap 服务器地址</p>
+         * <p>The server address.</p>
          * 
          * <strong>example:</strong>
          * <p>123.xx.xx.89</p>
@@ -374,7 +425,7 @@ public class UpdateIdentityProviderRequest extends TeaModel {
         public String ldapServerHost;
 
         /**
-         * <p>端口号</p>
+         * <p>The port number.</p>
          * 
          * <strong>example:</strong>
          * <p>636</p>
@@ -383,7 +434,13 @@ public class UpdateIdentityProviderRequest extends TeaModel {
         public Integer ldapServerPort;
 
         /**
-         * <p>startTls是否开启</p>
+         * <p>Specifies whether to enable StartTLS. Valid values:</p>
+         * <ul>
+         * <li><p><code>disabled</code>: StartTLS is disabled.</p>
+         * </li>
+         * <li><p><code>enabled</code>: StartTLS is enabled.</p>
+         * </li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>enabled</p>
@@ -464,7 +521,13 @@ public class UpdateIdentityProviderRequest extends TeaModel {
 
     public static class UpdateIdentityProviderRequestOidcConfigAuthnParam extends TeaModel {
         /**
-         * <p>OIDC/oAuth2 认证方法。</p>
+         * <p>The OIDC client authentication method. Valid values:</p>
+         * <ul>
+         * <li><p><code>client_secret_basic</code></p>
+         * </li>
+         * <li><p><code>client_secret_post</code></p>
+         * </li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>client_secret_post</p>
@@ -473,7 +536,7 @@ public class UpdateIdentityProviderRequest extends TeaModel {
         public String authnMethod;
 
         /**
-         * <p>OIDC/oAuth2 客户端密钥。</p>
+         * <p>The OIDC client secret.</p>
          * 
          * <strong>example:</strong>
          * <p>CSEHDddddddxxxxuxkJEHPveWRXBGqVqRsxxxx</p>
@@ -506,7 +569,7 @@ public class UpdateIdentityProviderRequest extends TeaModel {
 
     public static class UpdateIdentityProviderRequestOidcConfigEndpointConfig extends TeaModel {
         /**
-         * <p>oAuth2 授权端点。</p>
+         * <p>The OIDC authorization endpoint.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://example.com/oauth/authorize">https://example.com/oauth/authorize</a></p>
@@ -515,7 +578,7 @@ public class UpdateIdentityProviderRequest extends TeaModel {
         public String authorizationEndpoint;
 
         /**
-         * <p>OIDC issuer信息。</p>
+         * <p>The OIDC issuer.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://example.com/oauth">https://example.com/oauth</a></p>
@@ -524,7 +587,7 @@ public class UpdateIdentityProviderRequest extends TeaModel {
         public String issuer;
 
         /**
-         * <p>OIDC jwks地址。</p>
+         * <p>The JSON Web Key Set (JWKS) URI.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://example.com/oauth/jwks">https://example.com/oauth/jwks</a></p>
@@ -533,7 +596,7 @@ public class UpdateIdentityProviderRequest extends TeaModel {
         public String jwksUri;
 
         /**
-         * <p>oAuth2 Token端点。</p>
+         * <p>The OIDC token endpoint.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://example.com/oauth/token">https://example.com/oauth/token</a></p>
@@ -542,7 +605,7 @@ public class UpdateIdentityProviderRequest extends TeaModel {
         public String tokenEndpoint;
 
         /**
-         * <p>OIDC 用户信息端点。</p>
+         * <p>The OIDC userinfo endpoint.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://example.com/oauth/userinfo">https://example.com/oauth/userinfo</a></p>
@@ -599,19 +662,19 @@ public class UpdateIdentityProviderRequest extends TeaModel {
 
     public static class UpdateIdentityProviderRequestOidcConfig extends TeaModel {
         /**
-         * <p>OIDC客户端认证配置。</p>
+         * <p>The OIDC client authentication configuration.</p>
          */
         @NameInMap("AuthnParam")
         public UpdateIdentityProviderRequestOidcConfigAuthnParam authnParam;
 
         /**
-         * <p>OIDC 端点配置。</p>
+         * <p>The OIDC endpoint configuration.</p>
          */
         @NameInMap("EndpointConfig")
         public UpdateIdentityProviderRequestOidcConfigEndpointConfig endpointConfig;
 
         /**
-         * <p>OIDC标准参数，如profile、email等</p>
+         * <p>The OIDC authorization scopes.</p>
          * 
          * <strong>example:</strong>
          * <p>openid</p>
@@ -620,7 +683,7 @@ public class UpdateIdentityProviderRequest extends TeaModel {
         public java.util.List<String> grantScopes;
 
         /**
-         * <p>OIDC授权类型。</p>
+         * <p>The OIDC grant type.</p>
          * 
          * <strong>example:</strong>
          * <p>authorization_code</p>
@@ -629,7 +692,13 @@ public class UpdateIdentityProviderRequest extends TeaModel {
         public String grantType;
 
         /**
-         * <p>支持的PKCE算法类型。</p>
+         * <p>The Proof Key for Code Exchange (PKCE) method. Valid values:</p>
+         * <ul>
+         * <li><p><code>S256</code>: The SHA-256 algorithm.</p>
+         * </li>
+         * <li><p><code>plain</code>: The plaintext format.</p>
+         * </li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>S256</p>
@@ -638,7 +707,7 @@ public class UpdateIdentityProviderRequest extends TeaModel {
         public String pkceChallengeMethod;
 
         /**
-         * <p>AuthorizationCode授权模式下是否使用PKCE。</p>
+         * <p>Specifies whether PKCE is required for the authorization code grant type.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -703,6 +772,8 @@ public class UpdateIdentityProviderRequest extends TeaModel {
 
     public static class UpdateIdentityProviderRequestSamlConfigCertificates extends TeaModel {
         /**
+         * <p>The content of the signing certificate.</p>
+         * 
          * <strong>example:</strong>
          * <p>-----BEGIN CERTIFICATE----- MIIC0jCCAbqgAwIBAgIQXXXXX-----END CERTIFICATE-----</p>
          */
@@ -726,16 +797,23 @@ public class UpdateIdentityProviderRequest extends TeaModel {
 
     public static class UpdateIdentityProviderRequestSamlConfig extends TeaModel {
         /**
+         * <p>The SAML binding method for the SSO request. Valid values are <code>HTTP-POST</code> and <code>HTTP-REDIRECT</code>.</p>
+         * 
          * <strong>example:</strong>
          * <p>HTTP-REDIRECT</p>
          */
         @NameInMap("BindingMethod")
         public String bindingMethod;
 
+        /**
+         * <p>The signing certificates from the SAML identity provider.</p>
+         */
         @NameInMap("Certificates")
         public java.util.List<UpdateIdentityProviderRequestSamlConfigCertificates> certificates;
 
         /**
+         * <p>The entity ID of the SAML identity provider.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="http://dc.test.com/adfs/services/trust">http://dc.test.com/adfs/services/trust</a></p>
          */
@@ -743,6 +821,8 @@ public class UpdateIdentityProviderRequest extends TeaModel {
         public String idPEntityId;
 
         /**
+         * <p>The single sign-on (SSO) URL of the SAML identity provider.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="https://dc.test.com/adfs/ls/">https://dc.test.com/adfs/ls/</a></p>
          */
@@ -750,6 +830,8 @@ public class UpdateIdentityProviderRequest extends TeaModel {
         public String idPSsoUrl;
 
         /**
+         * <p>The maximum allowed clock skew, in seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>180</p>
          */
@@ -757,15 +839,23 @@ public class UpdateIdentityProviderRequest extends TeaModel {
         public Long maxClockSkew;
 
         /**
+         * <p>Specifies whether the SAML authentication request must be signed.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
         @NameInMap("RequireRequestSigned")
         public Boolean requireRequestSigned;
 
+        /**
+         * <p>Specifies whether the assertions in the SAML response must be signed.</p>
+         */
         @NameInMap("WantAssertionsSigned")
         public Boolean wantAssertionsSigned;
 
+        /**
+         * <p>Specifies whether the SAML response must be signed.</p>
+         */
         @NameInMap("WantResponseSigned")
         public Boolean wantResponseSigned;
 
@@ -842,7 +932,7 @@ public class UpdateIdentityProviderRequest extends TeaModel {
 
     public static class UpdateIdentityProviderRequestWeComConfig extends TeaModel {
         /**
-         * <p>企业微信自建应用的Id</p>
+         * <p>The agent ID of the custom application in WeCom.</p>
          * 
          * <strong>example:</strong>
          * <p>1237403</p>
@@ -851,7 +941,7 @@ public class UpdateIdentityProviderRequest extends TeaModel {
         public String agentId;
 
         /**
-         * <p>授权回调域</p>
+         * <p>The authorized callback domain.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://xxx.aliyunidaas.com/xxxxx">https://xxx.aliyunidaas.com/xxxxx</a></p>
@@ -860,7 +950,7 @@ public class UpdateIdentityProviderRequest extends TeaModel {
         public String authorizeCallbackDomain;
 
         /**
-         * <p>企业微信自建应用的corpSecret</p>
+         * <p>The CorpSecret of the custom application in WeCom.</p>
          * 
          * <strong>example:</strong>
          * <p>CSEHDddddddxxxxuxkJEHPveWRXBGqVqRsxxxx</p>
@@ -869,7 +959,7 @@ public class UpdateIdentityProviderRequest extends TeaModel {
         public String corpSecret;
 
         /**
-         * <p>可信域名</p>
+         * <p>The trusted domain.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://xxx.aliyunidaas.com">https://xxx.aliyunidaas.com</a></p>

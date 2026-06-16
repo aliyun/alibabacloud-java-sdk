@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListApplicationsForUserResponseBody extends TeaModel {
     /**
-     * <p>The applications that the EIAM account can access.</p>
+     * <p>The list of applications that the account is authorized to access.</p>
      */
     @NameInMap("Applications")
     public java.util.List<ListApplicationsForUserResponseBodyApplications> applications;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>0441BD79-92F3-53AA-8657-F8CE4A2B912A</p>
@@ -20,7 +20,7 @@ public class ListApplicationsForUserResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of the returned entries.</p>
+     * <p>The total number of entries.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>
@@ -59,7 +59,7 @@ public class ListApplicationsForUserResponseBody extends TeaModel {
 
     public static class ListApplicationsForUserResponseBodyApplicationsApplicationRoles extends TeaModel {
         /**
-         * <p>应用角色标识。</p>
+         * <p>The ID of the application role.</p>
          * 
          * <strong>example:</strong>
          * <p>app_role_mkv7rgt4ds8d8v0qtzev2mxxxx</p>
@@ -68,7 +68,7 @@ public class ListApplicationsForUserResponseBody extends TeaModel {
         public String applicationRoleId;
 
         /**
-         * <p>直接分配给当前用户的权限，视为直接授权。</p>
+         * <p>Indicates whether the role is directly assigned to the user.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -77,7 +77,7 @@ public class ListApplicationsForUserResponseBody extends TeaModel {
         public Boolean hasDirectAuthorization;
 
         /**
-         * <p>通过用户隶属的组织、组获取的权限，视为继承权限。</p>
+         * <p>Indicates whether the role is inherited from an organization or a group to which the user belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -118,7 +118,7 @@ public class ListApplicationsForUserResponseBody extends TeaModel {
 
     public static class ListApplicationsForUserResponseBodyApplications extends TeaModel {
         /**
-         * <p>The ID of the application that the EIAM account can access.</p>
+         * <p>The application ID.</p>
          * 
          * <strong>example:</strong>
          * <p>app_mkv7rgt4d7i4u7zqtzev2mxxxx</p>
@@ -127,16 +127,18 @@ public class ListApplicationsForUserResponseBody extends TeaModel {
         public String applicationId;
 
         /**
-         * <p>应用角色列表。</p>
+         * <p>The list of application roles.</p>
          */
         @NameInMap("ApplicationRoles")
         public java.util.List<ListApplicationsForUserResponseBodyApplicationsApplicationRoles> applicationRoles;
 
         /**
-         * <p>Indicates whether the EIAM account has direct permissions on the application. Valid values:</p>
+         * <p>Indicates whether a direct authorization exists. Valid values:</p>
          * <ul>
-         * <li>true: The EIAM account has direct permissions on the application.</li>
-         * <li>false: The EIAM account does not have direct permissions on the application.</li>
+         * <li><p>true: A direct authorization record exists between the application and the account.</p>
+         * </li>
+         * <li><p>false: No direct authorization record exists between the application and the account.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -146,10 +148,12 @@ public class ListApplicationsForUserResponseBody extends TeaModel {
         public Boolean hasDirectAuthorization;
 
         /**
-         * <p>Indicates whether the EIAM account has inherited permissions on the application. Valid values:</p>
+         * <p>Indicates whether an inherited authorization exists. Valid values:</p>
          * <ul>
-         * <li>true: A parent organization or an organization to which the EIAM account belongs has direct permissions on the application.</li>
-         * <li>false: A parent organization or an organization to which the EIAM account belongs does not have direct permissions on the application.</li>
+         * <li><p>true: A direct authorization record exists between the application and a parent organization or a group to which the account belongs.</p>
+         * </li>
+         * <li><p>false: No direct authorization record exists between the application and any of the parent organizations or groups to which the account belongs.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

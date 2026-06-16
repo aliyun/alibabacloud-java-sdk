@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListCustomPrivacyPoliciesForBrandRequest extends TeaModel {
     /**
-     * <p>品牌化Id</p>
+     * <p>The brand ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class ListCustomPrivacyPoliciesForBrandRequest extends TeaModel {
     public String brandId;
 
     /**
-     * <p>IDaaS EIAM实例的ID。</p>
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,7 +25,7 @@ public class ListCustomPrivacyPoliciesForBrandRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>分页查询时每页行数。默认值为20，最大值为100。</p>
+     * <p>The number of entries to return on each page.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -34,7 +34,7 @@ public class ListCustomPrivacyPoliciesForBrandRequest extends TeaModel {
     public Long maxResults;
 
     /**
-     * <p>查询凭证（Token），取值为上一次API调用返回的NextToken参数值。</p>
+     * <p>The token that is used to retrieve the next page of results.</p>
      * 
      * <strong>example:</strong>
      * <p>NTxxxxxexample</p>
@@ -43,7 +43,7 @@ public class ListCustomPrivacyPoliciesForBrandRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>查询上一页凭证（Token），取值为上一次API调用返回的previousToken参数值。</p>
+     * <p>The token that is used to retrieve the previous page of results.</p>
      * 
      * <strong>example:</strong>
      * <p>PTxxxxxexample</p>

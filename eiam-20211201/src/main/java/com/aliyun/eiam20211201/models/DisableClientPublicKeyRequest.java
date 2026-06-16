@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DisableClientPublicKeyRequest extends TeaModel {
     /**
-     * <p>IDaaS的应用资源ID。</p>
+     * <p>The application ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class DisableClientPublicKeyRequest extends TeaModel {
     public String applicationId;
 
     /**
-     * <p>应用ClientPublicKey的ID</p>
+     * <p>The ID of the ClientPublicKey for the application.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,6 +25,7 @@ public class DisableClientPublicKeyRequest extends TeaModel {
     public String clientPublicKeyId;
 
     /**
+     * <p>A client-generated token that you can use to ensure the idempotence of the request. Make sure that the token is unique for each request. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://www.alibabacloud.com/help/zh/ecs/developer-reference/how-to-ensure-idempotence">How to ensure idempotence</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -34,7 +35,7 @@ public class DisableClientPublicKeyRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>IDaaS EIAM实例的ID。</p>
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

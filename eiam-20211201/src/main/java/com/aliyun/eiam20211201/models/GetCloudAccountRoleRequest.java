@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetCloudAccountRoleRequest extends TeaModel {
     /**
+     * <p>The ID of the Alibaba Cloud account.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,7 +15,7 @@ public class GetCloudAccountRoleRequest extends TeaModel {
     public String cloudAccountId;
 
     /**
-     * <p>云账号角色ID。</p>
+     * <p>The ID of the cloud role.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -24,7 +25,7 @@ public class GetCloudAccountRoleRequest extends TeaModel {
     public String cloudAccountRoleId;
 
     /**
-     * <p>IDaaS EIAM实例的ID。</p>
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

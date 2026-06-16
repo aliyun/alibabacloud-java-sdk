@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateAuthorizationResourceRequest extends TeaModel {
     /**
-     * <p>授权资源关联的资源标识。</p>
+     * <p>The ID of the resource entity that is associated with the authorization resource.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,10 @@ public class CreateAuthorizationResourceRequest extends TeaModel {
     public String authorizationResourceEntityId;
 
     /**
-     * <p>授权资源的资源类型。枚举取值:asset(资产)、credential(凭据)、cloudAccountRole(云账号角色)。</p>
+     * <p>The type of the resource entity that is associated with the authorization resource. Valid value:</p>
+     * <ul>
+     * <li>cloud_account_role: indicates a cloud role.</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,7 +28,7 @@ public class CreateAuthorizationResourceRequest extends TeaModel {
     public String authorizationResourceEntityType;
 
     /**
-     * <p>授权规则标识。</p>
+     * <p>The authorization rule ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -35,6 +38,7 @@ public class CreateAuthorizationResourceRequest extends TeaModel {
     public String authorizationRuleId;
 
     /**
+     * <p>A client token used to ensure the idempotence of the request. Generate a unique value for this parameter from your client. The client token can contain only ASCII characters and must be no more than 64 characters long. For more information, see <a href="https://www.alibabacloud.com/help/zh/ecs/developer-reference/how-to-ensure-idempotence">How to ensure idempotence</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -44,7 +48,7 @@ public class CreateAuthorizationResourceRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>IDaaS EIAM实例的ID。</p>
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

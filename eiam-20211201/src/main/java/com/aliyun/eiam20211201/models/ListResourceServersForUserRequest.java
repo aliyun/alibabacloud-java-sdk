@@ -4,11 +4,14 @@ package com.aliyun.eiam20211201.models;
 import com.aliyun.tea.*;
 
 public class ListResourceServersForUserRequest extends TeaModel {
+    /**
+     * <p>The list of filter conditions.</p>
+     */
     @NameInMap("Filter")
     public java.util.List<ListResourceServersForUserRequestFilter> filter;
 
     /**
-     * <p>IDaaS EIAM实例的ID。</p>
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -18,6 +21,8 @@ public class ListResourceServersForUserRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>The number of entries per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -25,7 +30,7 @@ public class ListResourceServersForUserRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>查询凭证（Token），取值为上一次API调用返回的NextToken参数值。</p>
+     * <p>The token for the next page of results. Set this to the NextToken value from the previous API call.</p>
      * 
      * <strong>example:</strong>
      * <p>NTxxxxxexample</p>
@@ -34,7 +39,7 @@ public class ListResourceServersForUserRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>用户ID。</p>
+     * <p>The account ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -90,12 +95,17 @@ public class ListResourceServersForUserRequest extends TeaModel {
 
     public static class ListResourceServersForUserRequestFilter extends TeaModel {
         /**
+         * <p>The name of the filter condition.</p>
+         * 
          * <strong>example:</strong>
          * <p>ApplicationIds</p>
          */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The list of filter condition values.</p>
+         */
         @NameInMap("Value")
         public java.util.List<String> value;
 

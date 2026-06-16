@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class SetApplicationProvisioningUserPrimaryOrganizationalUnitRequest extends TeaModel {
     /**
-     * <p>IDaaS的应用资源ID。</p>
+     * <p>The application ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class SetApplicationProvisioningUserPrimaryOrganizationalUnitRequest exte
     public String applicationId;
 
     /**
-     * <p>IDaaS EIAM实例的ID。</p>
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,7 +25,7 @@ public class SetApplicationProvisioningUserPrimaryOrganizationalUnitRequest exte
     public String instanceId;
 
     /**
-     * <p>组织ID。</p>
+     * <p>The organization ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

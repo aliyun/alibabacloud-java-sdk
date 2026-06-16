@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class AddApplicationAccountToUserRequest extends TeaModel {
     /**
-     * <p>IDaaS的应用主键id</p>
+     * <p>The application ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class AddApplicationAccountToUserRequest extends TeaModel {
     public String applicationId;
 
     /**
-     * <p>应用账号名称</p>
+     * <p>The name of the application account.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,7 +25,7 @@ public class AddApplicationAccountToUserRequest extends TeaModel {
     public String applicationUsername;
 
     /**
-     * <p>IDaaS EIAM的实例id</p>
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -35,7 +35,7 @@ public class AddApplicationAccountToUserRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>用户Id</p>
+     * <p>The user ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

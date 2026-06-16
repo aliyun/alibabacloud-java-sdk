@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListIdentityProvidersRequest extends TeaModel {
     /**
+     * <p>The data synchronization direction of the identity provider.</p>
+     * 
      * <strong>example:</strong>
      * <p>pull</p>
      */
@@ -22,7 +24,7 @@ public class ListIdentityProvidersRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The number of the page to return.</p>
+     * <p>The page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>

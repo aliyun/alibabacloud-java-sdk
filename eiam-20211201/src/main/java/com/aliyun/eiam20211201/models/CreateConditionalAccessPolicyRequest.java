@@ -18,7 +18,7 @@ public class CreateConditionalAccessPolicyRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>My Conditional Access Policy</p>
+     * <p>My conditional access policy</p>
      */
     @NameInMap("ConditionalAccessPolicyName")
     public String conditionalAccessPolicyName;
@@ -61,7 +61,7 @@ public class CreateConditionalAccessPolicyRequest extends TeaModel {
      * <p>Description of the conditional access policy</p>
      * 
      * <strong>example:</strong>
-     * <p>Test Description</p>
+     * <p>Test description</p>
      */
     @NameInMap("Description")
     public String description;
@@ -90,9 +90,7 @@ public class CreateConditionalAccessPolicyRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>Priority of the conditional access policy, lower values indicate higher priority
-     * Minimum value: 1
-     * Maximum value: 100</p>
+     * <p>Priority of the conditional access policy, lower values indicate higher priority Minimum value: 1 Maximum value: 100</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -412,8 +410,10 @@ public class CreateConditionalAccessPolicyRequest extends TeaModel {
         /**
          * <p>Decision action for the conditional access policy, with the following options:</p>
          * <ul>
-         * <li>allow: Allow.</li>
-         * <li>deny: Deny.</li>
+         * <li><p>allow: Allow.</p>
+         * </li>
+         * <li><p>deny: Deny.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -425,8 +425,10 @@ public class CreateConditionalAccessPolicyRequest extends TeaModel {
         /**
          * <p>Re-authentication interval (in seconds) for the conditional access policy</p>
          * <ul>
-         * <li>Maximum MFA re-authentication interval: 86400</li>
-         * <li>Minimum MFA re-authentication interval: 300</li>
+         * <li><p>Maximum MFA re-authentication interval: 86400</p>
+         * </li>
+         * <li><p>Minimum MFA re-authentication interval: 300</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -438,10 +440,14 @@ public class CreateConditionalAccessPolicyRequest extends TeaModel {
         /**
          * <p>Allowed MFA types for the conditional access policy, with the following options:</p>
          * <ul>
-         * <li>ia_otp_sms: SMS verification code</li>
-         * <li>ia_otp_email: Email verification code</li>
-         * <li>ia_totp: OTP dynamic password</li>
-         * <li>ia_webauthn: WebAuthn</li>
+         * <li><p>ia_otp_sms: SMS verification code</p>
+         * </li>
+         * <li><p>ia_otp_email: Email verification code</p>
+         * </li>
+         * <li><p>ia_totp: OTP dynamic password</p>
+         * </li>
+         * <li><p>ia_webauthn: WebAuthn</p>
+         * </li>
          * </ul>
          */
         @NameInMap("MfaAuthenticationMethods")
@@ -450,8 +456,10 @@ public class CreateConditionalAccessPolicyRequest extends TeaModel {
         /**
          * <p>MFA type for the conditional access policy, with the following options:</p>
          * <ul>
-         * <li>directly_access: Direct access</li>
-         * <li>mfa_required: MFA required</li>
+         * <li><p>directly_access: Direct access</p>
+         * </li>
+         * <li><p>mfa_required: MFA required</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateApplicationClientSecretRequest extends TeaModel {
     /**
-     * <p>The ID of the application for which you want to create a client key.</p>
+     * <p>The application ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,6 +15,8 @@ public class CreateApplicationClientSecretRequest extends TeaModel {
     public String applicationId;
 
     /**
+     * <p>The expiration time. This parameter is a UNIX timestamp. Unit: milliseconds. If you leave this parameter empty, the client secret does not expire. The minimum validity period is 1 day and the maximum validity period is 3 years.</p>
+     * 
      * <strong>example:</strong>
      * <p>1735530123762</p>
      */
@@ -22,7 +24,7 @@ public class CreateApplicationClientSecretRequest extends TeaModel {
     public Long expirationTime;
 
     /**
-     * <p>The ID of the instance.</p>
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

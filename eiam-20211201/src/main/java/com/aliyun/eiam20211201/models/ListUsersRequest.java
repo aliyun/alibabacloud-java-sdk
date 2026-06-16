@@ -5,16 +5,16 @@ import com.aliyun.tea.*;
 
 public class ListUsersRequest extends TeaModel {
     /**
-     * <p>Displayname</p>
+     * <p>The prefix of the display name. The query is performed based on the prefix.</p>
      * 
      * <strong>example:</strong>
-     * <p>name_001</p>
+     * <p>name</p>
      */
     @NameInMap("DisplayNameStartsWith")
     public String displayNameStartsWith;
 
     /**
-     * <p>The email address of the user who owns the account.</p>
+     * <p>The email address of the user.</p>
      * 
      * <strong>example:</strong>
      * <p><a href="mailto:user@example.com">user@example.com</a></p>
@@ -23,7 +23,7 @@ public class ListUsersRequest extends TeaModel {
     public String email;
 
     /**
-     * <p>The ID of the instance.</p>
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -32,9 +32,21 @@ public class ListUsersRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>The number of entries per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
+     */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
+    /**
+     * <p>The pagination token that is used in the next request to retrieve a new page of results.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>NTxxxxexample</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
@@ -48,7 +60,7 @@ public class ListUsersRequest extends TeaModel {
     public String organizationalUnitId;
 
     /**
-     * <p>The number of the page to return. Default value: 1.</p>
+     * <p>The page number. The default value is 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -57,7 +69,7 @@ public class ListUsersRequest extends TeaModel {
     public Long pageNumber;
 
     /**
-     * <p>The number of entries to return on each page. Default value: 20.</p>
+     * <p>The number of entries per page. The default value is 20. The maximum value is 100.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -66,7 +78,7 @@ public class ListUsersRequest extends TeaModel {
     public Long pageSize;
 
     /**
-     * <p>The mobile number of the user who owns the account.</p>
+     * <p>The mobile number of the user.</p>
      * 
      * <strong>example:</strong>
      * <p>156xxxxxxx</p>
@@ -75,7 +87,7 @@ public class ListUsersRequest extends TeaModel {
     public String phoneNumber;
 
     /**
-     * <p>The country code of the mobile number. For example, the country code of China is 86 without 00 or +.</p>
+     * <p>The country calling code. For example, the country calling code of China is <code>86</code>. Do not add <code>00</code> or <code>+</code> to the country calling code.</p>
      * 
      * <strong>example:</strong>
      * <p>86</p>
@@ -84,10 +96,12 @@ public class ListUsersRequest extends TeaModel {
     public String phoneRegion;
 
     /**
-     * <p>The status of the account. Valid values:</p>
+     * <p>The status of the user. Valid values:</p>
      * <ul>
-     * <li>enabled: The account is enabled.</li>
-     * <li>disabled: The account is disabled.</li>
+     * <li><p><code>enabled</code>: The user is enabled.</p>
+     * </li>
+     * <li><p><code>disabled</code>: The user is disabled.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -97,8 +111,10 @@ public class ListUsersRequest extends TeaModel {
     public String status;
 
     /**
-     * <p>The external ID of the account. The external ID can be used by external data to map the data of the account in IDaaS EIAM.</p>
-     * <p>For accounts with the same source type and source ID, each account has a unique external ID.</p>
+     * <p>The external ID of the user. The external ID can be used to associate the user with a user in an external system.</p>
+     * <blockquote>
+     * <p>The external ID must be unique within the same source type and source ID.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>id_wovwffm62xifdziem7an7xxxxx</p>
@@ -107,14 +123,17 @@ public class ListUsersRequest extends TeaModel {
     public String userExternalId;
 
     /**
-     * <p>User ID set</p>
+     * <p>The list of user IDs.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
      */
     @NameInMap("UserIds")
     public java.util.List<String> userIds;
 
     /**
-     * <p>The source ID of the account.</p>
-     * <p>If the account was created in IDaaS, its source ID is the ID of the IDaaS instance. If the account was imported, its source ID is the enterprise ID in the source. For example, if the account was imported from DingTalk, its source ID is the corpId value of the enterprise in DingTalk.</p>
+     * <p>The source ID of the user.</p>
+     * <p>If the user is created in EIAM, the value of this parameter is the ID of the EIAM instance. If the user is imported from an external system, the value of this parameter is the enterprise ID of the user in the external system. For example, if the user is imported from DingTalk, the value of this parameter is the <code>corpId</code> of the enterprise in DingTalk.</p>
      * 
      * <strong>example:</strong>
      * <p>idaas_ue2jvisn35ea5lmthk267xxxxx</p>
@@ -123,12 +142,18 @@ public class ListUsersRequest extends TeaModel {
     public String userSourceId;
 
     /**
-     * <p>The source type of the account. Valid values:</p>
+     * <p>The source type of the user. Valid values:</p>
      * <ul>
-     * <li>build_in: The account was created in IDaaS.</li>
-     * <li>ding_talk: The account was imported from DingTalk.</li>
-     * <li>ad: The account was imported from Microsoft Active Directory (AD).</li>
-     * <li>ldap: The account was imported from a Lightweight Directory Access Protocol (LDAP) service.</li>
+     * <li><p><code>build_in</code>: The user is created in EIAM.</p>
+     * </li>
+     * <li><p><code>ding_talk</code>: The user is imported from DingTalk.</p>
+     * </li>
+     * <li><p><code>ad</code>: The user is imported from Active Directory (AD).</p>
+     * </li>
+     * <li><p><code>ldap</code>: The user is imported from a Lightweight Directory Access Protocol (LDAP) directory.</p>
+     * </li>
+     * <li><p><code>we_com</code>: The user is imported from WeCom.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -138,7 +163,7 @@ public class ListUsersRequest extends TeaModel {
     public String userSourceType;
 
     /**
-     * <p>Username</p>
+     * <p>The prefix of the username. The query is performed based on the prefix.</p>
      * 
      * <strong>example:</strong>
      * <p>name_001</p>

@@ -4,11 +4,14 @@ package com.aliyun.eiam20211201.models;
 import com.aliyun.tea.*;
 
 public class ListApplicationsForNetworkAccessEndpointResponseBody extends TeaModel {
+    /**
+     * <p>The collection of applications for the network access endpoint.</p>
+     */
     @NameInMap("ApplicationsForNetworkAccessEndpoint")
     public java.util.List<ListApplicationsForNetworkAccessEndpointResponseBodyApplicationsForNetworkAccessEndpoint> applicationsForNetworkAccessEndpoint;
 
     /**
-     * <p>本次调用返回的查询凭证（Token）值，用于下一次翻页查询。</p>
+     * <p>The token for the next page of results.</p>
      * 
      * <strong>example:</strong>
      * <p>NTxxxexample</p>
@@ -17,6 +20,8 @@ public class ListApplicationsForNetworkAccessEndpointResponseBody extends TeaMod
     public String nextToken;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>0441BD79-92F3-53AA-8657-F8CE4A2B912A</p>
      */
@@ -24,6 +29,8 @@ public class ListApplicationsForNetworkAccessEndpointResponseBody extends TeaMod
     public String requestId;
 
     /**
+     * <p>The total number of entries.</p>
+     * 
      * <strong>example:</strong>
      * <p>100</p>
      */
@@ -69,7 +76,7 @@ public class ListApplicationsForNetworkAccessEndpointResponseBody extends TeaMod
 
     public static class ListApplicationsForNetworkAccessEndpointResponseBodyApplicationsForNetworkAccessEndpoint extends TeaModel {
         /**
-         * <p>应用ID。</p>
+         * <p>The application ID.</p>
          * 
          * <strong>example:</strong>
          * <p>app_m5nzr3kk4njkco2nnc4wjxxxxx</p>
@@ -78,13 +85,16 @@ public class ListApplicationsForNetworkAccessEndpointResponseBody extends TeaMod
         public String applicationId;
 
         /**
-         * <p>应用名称。</p>
+         * <p>The application name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cloudSSO</p>
          */
         @NameInMap("ApplicationName")
         public String applicationName;
 
         /**
-         * <p>IDaaS EIAM 实例ID</p>
+         * <p>The instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>idaas_6ed5syotlwdrgmbzn7qn5xxxxx</p>

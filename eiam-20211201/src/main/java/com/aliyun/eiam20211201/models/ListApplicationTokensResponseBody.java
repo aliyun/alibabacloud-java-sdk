@@ -4,10 +4,15 @@ package com.aliyun.eiam20211201.models;
 import com.aliyun.tea.*;
 
 public class ListApplicationTokensResponseBody extends TeaModel {
+    /**
+     * <p>The application tokens.</p>
+     */
     @NameInMap("ApplicationTokens")
     public java.util.List<ListApplicationTokensResponseBodyApplicationTokens> applicationTokens;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>0441BD79-92F3-53AA-8657-F8CE4A2B912A</p>
      */
@@ -37,7 +42,7 @@ public class ListApplicationTokensResponseBody extends TeaModel {
 
     public static class ListApplicationTokensResponseBodyApplicationTokens extends TeaModel {
         /**
-         * <p>aliUid。</p>
+         * <p>The Alibaba Cloud account ID.</p>
          * 
          * <strong>example:</strong>
          * <p>1973166921975xxxx</p>
@@ -46,7 +51,7 @@ public class ListApplicationTokensResponseBody extends TeaModel {
         public Long aliUid;
 
         /**
-         * <p>应用ID</p>
+         * <p>The application ID.</p>
          * 
          * <strong>example:</strong>
          * <p>app_m7ar5tms4dwtggavalk3j3mxxxx</p>
@@ -55,7 +60,7 @@ public class ListApplicationTokensResponseBody extends TeaModel {
         public String applicationId;
 
         /**
-         * <p>应用token</p>
+         * <p>The application token.</p>
          * 
          * <strong>example:</strong>
          * <p>SATFwqX8zxGf83pJcJw78KFGjmrft4erWeZYBGS8oE7NN6qoE217yaJpUdMb1UuuGqhDiF43sCA4CF91CTL5iGntqwyLuaAcS9FJ9HfGadE5a7TjiwVafwrBYktxxxx</p>
@@ -64,7 +69,7 @@ public class ListApplicationTokensResponseBody extends TeaModel {
         public String applicationToken;
 
         /**
-         * <p>应用token ID</p>
+         * <p>The ID of the application token.</p>
          * 
          * <strong>example:</strong>
          * <p>token_ndfxxigahelfne2y2hodehrxxxx</p>
@@ -73,7 +78,7 @@ public class ListApplicationTokensResponseBody extends TeaModel {
         public String applicationTokenId;
 
         /**
-         * <p>应用token类型</p>
+         * <p>The type of the application token.</p>
          * 
          * <strong>example:</strong>
          * <p>bearer_token</p>
@@ -82,6 +87,8 @@ public class ListApplicationTokensResponseBody extends TeaModel {
         public String applicationTokenType;
 
         /**
+         * <p>The creation time.</p>
+         * 
          * <strong>example:</strong>
          * <p>1747796654000</p>
          */
@@ -89,7 +96,7 @@ public class ListApplicationTokensResponseBody extends TeaModel {
         public Long createTime;
 
         /**
-         * <p>应用token描述</p>
+         * <p>The description of the application token.</p>
          * 
          * <strong>example:</strong>
          * <p>jwqtts-0430</p>
@@ -98,7 +105,7 @@ public class ListApplicationTokensResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>到期时间</p>
+         * <p>The expiration time.</p>
          * 
          * <strong>example:</strong>
          * <p>1747796654000</p>
@@ -107,7 +114,7 @@ public class ListApplicationTokensResponseBody extends TeaModel {
         public Long expirationTime;
 
         /**
-         * <p>IDaaS EIAM 实例Id</p>
+         * <p>The ID of the IDaaS EIAM instance.</p>
          * 
          * <strong>example:</strong>
          * <p>idaas_ki6hd7ihir4ybawogqk6kqxxxx</p>
@@ -116,7 +123,7 @@ public class ListApplicationTokensResponseBody extends TeaModel {
         public String instanceId;
 
         /**
-         * <p>最后使用时间</p>
+         * <p>The last used time.</p>
          * 
          * <strong>example:</strong>
          * <p>1747796654000</p>
@@ -125,7 +132,7 @@ public class ListApplicationTokensResponseBody extends TeaModel {
         public Long lastUsedTime;
 
         /**
-         * <p>应用状态</p>
+         * <p>The status.</p>
          * 
          * <strong>example:</strong>
          * <p>enabled</p>

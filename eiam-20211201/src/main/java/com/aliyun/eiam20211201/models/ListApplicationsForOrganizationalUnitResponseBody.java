@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListApplicationsForOrganizationalUnitResponseBody extends TeaModel {
     /**
-     * <p>The applications that the EIAM organization can access.</p>
+     * <p>A list of applications that are granted access.</p>
      */
     @NameInMap("Applications")
     public java.util.List<ListApplicationsForOrganizationalUnitResponseBodyApplications> applications;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>0441BD79-92F3-53AA-8657-F8CE4A2B912A</p>
@@ -20,7 +20,7 @@ public class ListApplicationsForOrganizationalUnitResponseBody extends TeaModel 
     public String requestId;
 
     /**
-     * <p>The total number of the returned entries.</p>
+     * <p>The total number of entries.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>
@@ -59,7 +59,7 @@ public class ListApplicationsForOrganizationalUnitResponseBody extends TeaModel 
 
     public static class ListApplicationsForOrganizationalUnitResponseBodyApplicationsApplicationRoles extends TeaModel {
         /**
-         * <p>应用角色标识。</p>
+         * <p>The ID of the application role.</p>
          * 
          * <strong>example:</strong>
          * <p>app_role_mkv7rgt4ds8d8v0qtzev2mxxxx</p>
@@ -84,7 +84,7 @@ public class ListApplicationsForOrganizationalUnitResponseBody extends TeaModel 
 
     public static class ListApplicationsForOrganizationalUnitResponseBodyApplications extends TeaModel {
         /**
-         * <p>The ID of the application that the EIAM organization can access.</p>
+         * <p>The application ID.</p>
          * 
          * <strong>example:</strong>
          * <p>app_mkv7rgt4d7i4u7zqtzev2mxxxx</p>
@@ -93,7 +93,7 @@ public class ListApplicationsForOrganizationalUnitResponseBody extends TeaModel 
         public String applicationId;
 
         /**
-         * <p>应用角色列表。</p>
+         * <p>A list of application roles.</p>
          */
         @NameInMap("ApplicationRoles")
         public java.util.List<ListApplicationsForOrganizationalUnitResponseBodyApplicationsApplicationRoles> applicationRoles;

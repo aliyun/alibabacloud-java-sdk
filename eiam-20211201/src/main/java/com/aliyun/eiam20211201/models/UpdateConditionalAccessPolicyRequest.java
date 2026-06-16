@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateConditionalAccessPolicyRequest extends TeaModel {
     /**
-     * <p>The client token that is used to ensure the idempotence of the request.</p>
+     * <p>A client token that is used to ensure the idempotence of the request. The client generates the value of this parameter to ensure that the value is unique among different requests.</p>
      * 
      * <strong>example:</strong>
      * <p>client-examplexxx</p>
@@ -14,7 +14,7 @@ public class UpdateConditionalAccessPolicyRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>Conditional Access Policy ID</p>
+     * <p>The ID of the conditional access policy.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -24,39 +24,39 @@ public class UpdateConditionalAccessPolicyRequest extends TeaModel {
     public String conditionalAccessPolicyId;
 
     /**
-     * <p>Conditional Access Policy Name</p>
+     * <p>The name of the conditional access policy.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>My Policy</p>
+     * <p>My conditional access policy</p>
      */
     @NameInMap("ConditionalAccessPolicyName")
     public String conditionalAccessPolicyName;
 
     /**
-     * <p>Conditional Access Policy Condition Content Configuration</p>
+     * <p>The condition configuration of the conditional access policy.</p>
      */
     @NameInMap("ConditionsConfig")
     public UpdateConditionalAccessPolicyRequestConditionsConfig conditionsConfig;
 
     /**
-     * <p>Conditional Access Policy Action Configuration</p>
+     * <p>The action configuration of the conditional access policy.</p>
      */
     @NameInMap("DecisionConfig")
     public UpdateConditionalAccessPolicyRequestDecisionConfig decisionConfig;
 
     /**
-     * <p>Conditional Access Policy Execution Type</p>
+     * <p>The action that is performed by the conditional access policy.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>enforcement</p>
+     * <p>reportOnly</p>
      */
     @NameInMap("DecisionType")
     public String decisionType;
 
     /**
-     * <p>Instance ID.</p>
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -66,7 +66,7 @@ public class UpdateConditionalAccessPolicyRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>Priority of the conditional access policy</p>
+     * <p>The priority of the conditional access policy.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -145,13 +145,13 @@ public class UpdateConditionalAccessPolicyRequest extends TeaModel {
 
     public static class UpdateConditionalAccessPolicyRequestConditionsConfigApplications extends TeaModel {
         /**
-         * <p>Excluded Applications</p>
+         * <p>The excluded applications.</p>
          */
         @NameInMap("ExcludeApplications")
         public java.util.List<String> excludeApplications;
 
         /**
-         * <p>Included Applications</p>
+         * <p>The selected applications.</p>
          */
         @NameInMap("IncludeApplications")
         public java.util.List<String> includeApplications;
@@ -181,13 +181,13 @@ public class UpdateConditionalAccessPolicyRequest extends TeaModel {
 
     public static class UpdateConditionalAccessPolicyRequestConditionsConfigNetworkZones extends TeaModel {
         /**
-         * <p>Excluded network zones</p>
+         * <p>The excluded network zones.</p>
          */
         @NameInMap("ExcludeNetworkZones")
         public java.util.List<String> excludeNetworkZones;
 
         /**
-         * <p>Included network zones</p>
+         * <p>The selected network zones.</p>
          */
         @NameInMap("IncludeNetworkZones")
         public java.util.List<String> includeNetworkZones;
@@ -217,37 +217,37 @@ public class UpdateConditionalAccessPolicyRequest extends TeaModel {
 
     public static class UpdateConditionalAccessPolicyRequestConditionsConfigUsers extends TeaModel {
         /**
-         * <p>Excluded user groups</p>
+         * <p>The excluded user groups.</p>
          */
         @NameInMap("ExcludeGroups")
         public java.util.List<String> excludeGroups;
 
         /**
-         * <p>Excluded organizations</p>
+         * <p>The excluded organizations.</p>
          */
         @NameInMap("ExcludeOrganizationalUnits")
         public java.util.List<String> excludeOrganizationalUnits;
 
         /**
-         * <p>Excluded Users</p>
+         * <p>The excluded users.</p>
          */
         @NameInMap("ExcludeUsers")
         public java.util.List<String> excludeUsers;
 
         /**
-         * <p>Included User Groups</p>
+         * <p>The selected user groups.</p>
          */
         @NameInMap("IncludeGroups")
         public java.util.List<String> includeGroups;
 
         /**
-         * <p>Included organizations</p>
+         * <p>The selected organizations.</p>
          */
         @NameInMap("IncludeOrganizationalUnits")
         public java.util.List<String> includeOrganizationalUnits;
 
         /**
-         * <p>Included Users</p>
+         * <p>The selected users.</p>
          */
         @NameInMap("IncludeUsers")
         public java.util.List<String> includeUsers;
@@ -309,19 +309,19 @@ public class UpdateConditionalAccessPolicyRequest extends TeaModel {
 
     public static class UpdateConditionalAccessPolicyRequestConditionsConfig extends TeaModel {
         /**
-         * <p>Target Applications for the Conditional Access Policy</p>
+         * <p>The target applications of the conditional access policy.</p>
          */
         @NameInMap("Applications")
         public UpdateConditionalAccessPolicyRequestConditionsConfigApplications applications;
 
         /**
-         * <p>Network zones for conditional access policy</p>
+         * <p>The network zones of the conditional access policy.</p>
          */
         @NameInMap("NetworkZones")
         public UpdateConditionalAccessPolicyRequestConditionsConfigNetworkZones networkZones;
 
         /**
-         * <p>Target Users for the Conditional Access Policy</p>
+         * <p>The target users of the conditional access policy.</p>
          */
         @NameInMap("Users")
         public UpdateConditionalAccessPolicyRequestConditionsConfigUsers users;
@@ -359,7 +359,7 @@ public class UpdateConditionalAccessPolicyRequest extends TeaModel {
 
     public static class UpdateConditionalAccessPolicyRequestDecisionConfig extends TeaModel {
         /**
-         * <p>Whether to enable session reuse</p>
+         * <p>Indicates whether to enable session reuse.</p>
          * 
          * <strong>example:</strong>
          * <p>enabled</p>
@@ -368,7 +368,7 @@ public class UpdateConditionalAccessPolicyRequest extends TeaModel {
         public String activeSessionReuseStatus;
 
         /**
-         * <p>Conditional Access Policy Decision Action</p>
+         * <p>The action of the conditional access policy.</p>
          * 
          * <strong>example:</strong>
          * <p>allow</p>
@@ -377,7 +377,7 @@ public class UpdateConditionalAccessPolicyRequest extends TeaModel {
         public String effect;
 
         /**
-         * <p>Conditional Access Policy Re-authentication Interval (seconds)</p>
+         * <p>The interval at which the conditional access policy is repeatedly authenticated. Unit: seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>300</p>
@@ -386,13 +386,13 @@ public class UpdateConditionalAccessPolicyRequest extends TeaModel {
         public Long mfaAuthenticationIntervalSeconds;
 
         /**
-         * <p>Allowed MFA types for the Conditional Access Policy</p>
+         * <p>The MFA methods allowed by the conditional access policy.</p>
          */
         @NameInMap("MfaAuthenticationMethods")
         public java.util.List<String> mfaAuthenticationMethods;
 
         /**
-         * <p>Conditional Access Policy MFA Type</p>
+         * <p>The multi-factor authentication (MFA) type of the conditional access policy.</p>
          * 
          * <strong>example:</strong>
          * <p>directly_access</p>

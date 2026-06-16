@@ -5,22 +5,25 @@ import com.aliyun.tea.*;
 
 public class SetIdentityProviderAuthnConfigurationRequest extends TeaModel {
     /**
-     * <p>自动创建账户账户规则配置。</p>
+     * <p>Automatic Account Creation Rule Configuration.</p>
      */
     @NameInMap("AutoCreateUserConfig")
     public SetIdentityProviderAuthnConfigurationRequestAutoCreateUserConfig autoCreateUserConfig;
 
+    /**
+     * <p>Automatic Account Update Configuration</p>
+     */
     @NameInMap("AutoUpdateUserConfig")
     public SetIdentityProviderAuthnConfigurationRequestAutoUpdateUserConfig autoUpdateUserConfig;
 
     /**
-     * <p>账户绑定规则配置</p>
+     * <p>Account Binding Rule Configuration</p>
      */
     @NameInMap("BindingConfig")
     public SetIdentityProviderAuthnConfigurationRequestBindingConfig bindingConfig;
 
     /**
-     * <p>IDaaS的身份提供方主键id</p>
+     * <p>Identity Provider ID</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -30,7 +33,7 @@ public class SetIdentityProviderAuthnConfigurationRequest extends TeaModel {
     public String identityProviderId;
 
     /**
-     * <p>IDaaS EIAM实例的ID。</p>
+     * <p>Instance ID</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -40,7 +43,7 @@ public class SetIdentityProviderAuthnConfigurationRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>AD/LDAP配置</p>
+     * <p>AD/LDAP Authentication Configuration</p>
      */
     @NameInMap("LdapAuthnConfig")
     public SetIdentityProviderAuthnConfigurationRequestLdapAuthnConfig ldapAuthnConfig;
@@ -100,7 +103,7 @@ public class SetIdentityProviderAuthnConfigurationRequest extends TeaModel {
 
     public static class SetIdentityProviderAuthnConfigurationRequestAutoCreateUserConfig extends TeaModel {
         /**
-         * <p>自动创建账户是否开启</p>
+         * <p>Automatic account creation status.</p>
          * 
          * <strong>example:</strong>
          * <p>disabled</p>
@@ -108,6 +111,9 @@ public class SetIdentityProviderAuthnConfigurationRequest extends TeaModel {
         @NameInMap("AutoCreateUserStatus")
         public String autoCreateUserStatus;
 
+        /**
+         * <p>Organization ID</p>
+         */
         @NameInMap("TargetOrganizationalUnitIds")
         public java.util.List<String> targetOrganizationalUnitIds;
 
@@ -136,6 +142,8 @@ public class SetIdentityProviderAuthnConfigurationRequest extends TeaModel {
 
     public static class SetIdentityProviderAuthnConfigurationRequestAutoUpdateUserConfig extends TeaModel {
         /**
+         * <p>Specifies whether to enable automatic account updates.</p>
+         * 
          * <strong>example:</strong>
          * <p>disabled</p>
          */
@@ -159,17 +167,17 @@ public class SetIdentityProviderAuthnConfigurationRequest extends TeaModel {
 
     public static class SetIdentityProviderAuthnConfigurationRequestBindingConfigAutoMatchUserProfileExpressions extends TeaModel {
         /**
-         * <p>表达式的类型</p>
+         * <p>Type of expression.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>filed</p>
+         * <p>field</p>
          */
         @NameInMap("ExpressionMappingType")
         public String expressionMappingType;
 
         /**
-         * <p>映射属性取值表达式</p>
+         * <p>Expression for mapping attribute value.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -179,7 +187,7 @@ public class SetIdentityProviderAuthnConfigurationRequest extends TeaModel {
         public String sourceValueExpression;
 
         /**
-         * <p>映射目标属性名称</p>
+         * <p>Target attribute name for mapping.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -189,7 +197,7 @@ public class SetIdentityProviderAuthnConfigurationRequest extends TeaModel {
         public String targetField;
 
         /**
-         * <p>映射目标属性名称</p>
+         * <p>Target attribute name for mapping.</p>
          * 
          * <strong>example:</strong>
          * <p>username</p>
@@ -238,13 +246,13 @@ public class SetIdentityProviderAuthnConfigurationRequest extends TeaModel {
 
     public static class SetIdentityProviderAuthnConfigurationRequestBindingConfig extends TeaModel {
         /**
-         * <p>自动匹配账户的规则</p>
+         * <p>Rules for automatic account matching.</p>
          */
         @NameInMap("AutoMatchUserProfileExpressions")
         public java.util.List<SetIdentityProviderAuthnConfigurationRequestBindingConfigAutoMatchUserProfileExpressions> autoMatchUserProfileExpressions;
 
         /**
-         * <p>自动匹配账户是否开启</p>
+         * <p>Automatic account matching status.</p>
          * 
          * <strong>example:</strong>
          * <p>disabled</p>
@@ -253,7 +261,7 @@ public class SetIdentityProviderAuthnConfigurationRequest extends TeaModel {
         public String autoMatchUserStatus;
 
         /**
-         * <p>用户手动绑定账户功能是否开启</p>
+         * <p>Specifies whether the manual account binding feature is enabled.</p>
          * 
          * <strong>example:</strong>
          * <p>enabled</p>
@@ -294,7 +302,7 @@ public class SetIdentityProviderAuthnConfigurationRequest extends TeaModel {
 
     public static class SetIdentityProviderAuthnConfigurationRequestLdapAuthnConfig extends TeaModel {
         /**
-         * <p>是否支持自动更新密码</p>
+         * <p>Specifies whether to automatically update passwords.</p>
          * 
          * <strong>example:</strong>
          * <p>enabled</p>
@@ -303,7 +311,7 @@ public class SetIdentityProviderAuthnConfigurationRequest extends TeaModel {
         public String autoUpdatePasswordStatus;
 
         /**
-         * <p>用户登录标识</p>
+         * <p>User Login Identifier</p>
          * 
          * <strong>example:</strong>
          * <p>email</p>
@@ -312,7 +320,7 @@ public class SetIdentityProviderAuthnConfigurationRequest extends TeaModel {
         public String userLoginIdentifier;
 
         /**
-         * <p>用户ObjectClass</p>
+         * <p>User ObjectClass</p>
          * 
          * <strong>example:</strong>
          * <p>posixAccount</p>

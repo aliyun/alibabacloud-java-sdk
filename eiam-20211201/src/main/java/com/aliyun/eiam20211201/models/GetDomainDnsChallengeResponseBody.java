@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetDomainDnsChallengeResponseBody extends TeaModel {
     /**
-     * <p>The DNS challenge records.</p>
+     * <p>The DNS Challenge record.</p>
      */
     @NameInMap("DomainDnsChallenge")
     public GetDomainDnsChallengeResponseBodyDomainDnsChallenge domainDnsChallenge;
@@ -42,25 +42,25 @@ public class GetDomainDnsChallengeResponseBody extends TeaModel {
 
     public static class GetDomainDnsChallengeResponseBodyDomainDnsChallenge extends TeaModel {
         /**
-         * <p>The name of the DNS challenge record.</p>
+         * <p>The name of the DNS Challenge.</p>
          * 
          * <strong>example:</strong>
-         * <p>_idaas-challenge.${domain}</p>
+         * <p>_idaas-challenge.login.example.com</p>
          */
         @NameInMap("DnsChallengeName")
         public String dnsChallengeName;
 
         /**
-         * <p>The value of the DNS challenge record.</p>
+         * <p>The value of the DNS Challenge.</p>
          * 
          * <strong>example:</strong>
-         * <p>exmple123xxx</p>
+         * <p>yriov8FD/rIGjQTU3/JjqkwxRbo5dyGftHWOtP5xfCI=</p>
          */
         @NameInMap("DnsChallengeValue")
         public String dnsChallengeValue;
 
         /**
-         * <p>The type of the DNS challenge record.</p>
+         * <p>The type of the DNS record.</p>
          * 
          * <strong>example:</strong>
          * <p>txt</p>

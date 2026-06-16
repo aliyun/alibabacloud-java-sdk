@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateApplicationRoleRequest extends TeaModel {
     /**
-     * <p>IDaaS的应用资源ID。</p>
+     * <p>The application ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,16 +15,17 @@ public class CreateApplicationRoleRequest extends TeaModel {
     public String applicationId;
 
     /**
-     * <p>应用角色名称</p>
+     * <p>The name of the application role.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>管理员角色</p>
+     * <p>Admin Role</p>
      */
     @NameInMap("ApplicationRoleName")
     public String applicationRoleName;
 
     /**
+     * <p>The value of the application role.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -34,6 +35,7 @@ public class CreateApplicationRoleRequest extends TeaModel {
     public String applicationRoleValue;
 
     /**
+     * <p>A client token used to ensure the idempotence of the request. Generate a unique value for this parameter from your client. The client token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://www.alibabacloud.com/help/zh/ecs/developer-reference/how-to-ensure-idempotence">How to ensure idempotence</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -43,7 +45,7 @@ public class CreateApplicationRoleRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>IDaaS EIAM实例的ID。</p>
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

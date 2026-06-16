@@ -4,11 +4,14 @@ package com.aliyun.eiam20211201.models;
 import com.aliyun.tea.*;
 
 public class ListApplicationsForNetworkZoneResponseBody extends TeaModel {
+    /**
+     * <p>The list of applications.</p>
+     */
     @NameInMap("Applications")
     public java.util.List<ListApplicationsForNetworkZoneResponseBodyApplications> applications;
 
     /**
-     * <p>分页查询时每页行数。</p>
+     * <p>The number of entries returned on each page.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -17,7 +20,7 @@ public class ListApplicationsForNetworkZoneResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>本次调用返回的查询凭证（Token）值，用于下一次翻页查询。</p>
+     * <p>The token returned for the next query.</p>
      * 
      * <strong>example:</strong>
      * <p>NTxxxexample</p>
@@ -26,7 +29,7 @@ public class ListApplicationsForNetworkZoneResponseBody extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>本次调用返回的查询凭证（Token）值，用于上一次翻页查询。</p>
+     * <p>The token returned for the previous query.</p>
      * 
      * <strong>example:</strong>
      * <p>PTxxxexample</p>
@@ -35,6 +38,8 @@ public class ListApplicationsForNetworkZoneResponseBody extends TeaModel {
     public String previousToken;
 
     /**
+     * <p>The ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>0441BD79-92F3-53AA-8657-F8CE4A2B912A</p>
      */
@@ -42,6 +47,8 @@ public class ListApplicationsForNetworkZoneResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total number of entries returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>100</p>
      */
@@ -103,7 +110,7 @@ public class ListApplicationsForNetworkZoneResponseBody extends TeaModel {
 
     public static class ListApplicationsForNetworkZoneResponseBodyApplications extends TeaModel {
         /**
-         * <p>IDaaS EIAM 应用Id</p>
+         * <p>The ID of the application.</p>
          * 
          * <strong>example:</strong>
          * <p>app_mkv7rgt4d7i4u7zqtzev2mxxxx</p>
@@ -112,13 +119,16 @@ public class ListApplicationsForNetworkZoneResponseBody extends TeaModel {
         public String applicationId;
 
         /**
-         * <p>IDaaS EIAM 应用名称</p>
+         * <p>The name of the application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cloudSSO</p>
          */
         @NameInMap("ApplicationName")
         public String applicationName;
 
         /**
-         * <p>IDaaS EIAM 实例Id</p>
+         * <p>The ID of the IDaaS EIAM instance.</p>
          * 
          * <strong>example:</strong>
          * <p>idaas_ue2jvisn35ea5lmthk267xxxxx</p>

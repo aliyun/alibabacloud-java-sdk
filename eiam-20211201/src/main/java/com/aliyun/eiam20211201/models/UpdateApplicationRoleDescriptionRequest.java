@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateApplicationRoleDescriptionRequest extends TeaModel {
     /**
-     * <p>IDaaS的应用资源ID。</p>
+     * <p>The application ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class UpdateApplicationRoleDescriptionRequest extends TeaModel {
     public String applicationId;
 
     /**
-     * <p>应用角色的唯一标识</p>
+     * <p>The application role ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,7 +25,7 @@ public class UpdateApplicationRoleDescriptionRequest extends TeaModel {
     public String applicationRoleId;
 
     /**
-     * <p>应用角色的唯一标识</p>
+     * <p>The description of the application role.</p>
      * 
      * <strong>example:</strong>
      * <p>Admin Role Description</p>
@@ -34,7 +34,7 @@ public class UpdateApplicationRoleDescriptionRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>IDaaS EIAM实例的ID。</p>
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

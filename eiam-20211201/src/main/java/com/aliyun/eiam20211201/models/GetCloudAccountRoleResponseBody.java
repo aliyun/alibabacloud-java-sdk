@@ -4,10 +4,15 @@ package com.aliyun.eiam20211201.models;
 import com.aliyun.tea.*;
 
 public class GetCloudAccountRoleResponseBody extends TeaModel {
+    /**
+     * <p>The details of the cloud role.</p>
+     */
     @NameInMap("CloudAccountRole")
     public GetCloudAccountRoleResponseBodyCloudAccountRole cloudAccountRole;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>0441BD79-92F3-53AA-8657-F8CE4A2B912A</p>
      */
@@ -37,7 +42,7 @@ public class GetCloudAccountRoleResponseBody extends TeaModel {
 
     public static class GetCloudAccountRoleResponseBodyCloudAccountRoleCloudAccountRoleHealthCheckResultErrorReason extends TeaModel {
         /**
-         * <p>错误码</p>
+         * <p>The error code.</p>
          * 
          * <strong>example:</strong>
          * <p>AuthenticationFail.NoPermission</p>
@@ -46,7 +51,7 @@ public class GetCloudAccountRoleResponseBody extends TeaModel {
         public String errorCode;
 
         /**
-         * <p>错误信息</p>
+         * <p>The error message.</p>
          * 
          * <strong>example:</strong>
          * <p>There is no permission.</p>
@@ -79,13 +84,13 @@ public class GetCloudAccountRoleResponseBody extends TeaModel {
 
     public static class GetCloudAccountRoleResponseBodyCloudAccountRoleCloudAccountRoleHealthCheckResult extends TeaModel {
         /**
-         * <p>错误原因</p>
+         * <p>The reason for the error. This parameter is returned only if the value of CloudAccountRoleHealth is unhealthy.</p>
          */
         @NameInMap("ErrorReason")
         public GetCloudAccountRoleResponseBodyCloudAccountRoleCloudAccountRoleHealthCheckResultErrorReason errorReason;
 
         /**
-         * <p>检测时间</p>
+         * <p>The time of the last check. This value is a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1649830226000</p>
@@ -94,7 +99,13 @@ public class GetCloudAccountRoleResponseBody extends TeaModel {
         public Long lastCheckTime;
 
         /**
-         * <p>结果</p>
+         * <p>The result of the health check. Valid values:</p>
+         * <ul>
+         * <li><p>success: The health check is successful.</p>
+         * </li>
+         * <li><p>failed: The health check failed.</p>
+         * </li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -135,7 +146,7 @@ public class GetCloudAccountRoleResponseBody extends TeaModel {
 
     public static class GetCloudAccountRoleResponseBodyCloudAccountRole extends TeaModel {
         /**
-         * <p>云账号ID</p>
+         * <p>The ID of the Alibaba Cloud account.</p>
          * 
          * <strong>example:</strong>
          * <p>ca_01kmegjc11qa1txxxxx</p>
@@ -144,7 +155,7 @@ public class GetCloudAccountRoleResponseBody extends TeaModel {
         public String cloudAccountId;
 
         /**
-         * <p>云账号角色外部唯一ID</p>
+         * <p>The external ID of the cloud account role.</p>
          * 
          * <strong>example:</strong>
          * <p>acs:ram::xxx:role/role-test</p>
@@ -153,7 +164,15 @@ public class GetCloudAccountRoleResponseBody extends TeaModel {
         public String cloudAccountRoleExternalId;
 
         /**
-         * <p>云账号角色可用性</p>
+         * <p>The health check status of the cloud role. Valid values:</p>
+         * <ul>
+         * <li><p>healthy: The role is healthy.</p>
+         * </li>
+         * <li><p>unhealthy: The role is unhealthy.</p>
+         * </li>
+         * <li><p>unknown: The health status is unknown.</p>
+         * </li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>healthy</p>
@@ -162,13 +181,13 @@ public class GetCloudAccountRoleResponseBody extends TeaModel {
         public String cloudAccountRoleHealth;
 
         /**
-         * <p>云账号角色验证结果</p>
+         * <p>The result of the health check for the cloud role.</p>
          */
         @NameInMap("CloudAccountRoleHealthCheckResult")
         public GetCloudAccountRoleResponseBodyCloudAccountRoleCloudAccountRoleHealthCheckResult cloudAccountRoleHealthCheckResult;
 
         /**
-         * <p>云账号角色ID</p>
+         * <p>The ID of the cloud role.</p>
          * 
          * <strong>example:</strong>
          * <p>carole_01kmek49aqxxxx</p>
@@ -177,7 +196,7 @@ public class GetCloudAccountRoleResponseBody extends TeaModel {
         public String cloudAccountRoleId;
 
         /**
-         * <p>云账号名称</p>
+         * <p>The name of the cloud role.</p>
          * 
          * <strong>example:</strong>
          * <p>role-test</p>
@@ -186,7 +205,10 @@ public class GetCloudAccountRoleResponseBody extends TeaModel {
         public String cloudAccountRoleName;
 
         /**
-         * <p>云账号角色用途</p>
+         * <p>The type of the cloud role. The format of this parameter varies based on the cloud account type. The following value is supported:</p>
+         * <ul>
+         * <li>role: for an Alibaba Cloud account.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>role</p>
@@ -195,7 +217,13 @@ public class GetCloudAccountRoleResponseBody extends TeaModel {
         public String cloudAccountRoleType;
 
         /**
-         * <p>云账号角色类型</p>
+         * <p>The usage type of the cloud role. Valid values:</p>
+         * <ul>
+         * <li><p>system: The role is used by the system.</p>
+         * </li>
+         * <li><p>user: The role is used by a user.</p>
+         * </li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>system</p>
@@ -204,6 +232,8 @@ public class GetCloudAccountRoleResponseBody extends TeaModel {
         public String cloudAccountRoleUsageType;
 
         /**
+         * <p>The time when the cloud role was created. This value is a UNIX timestamp in milliseconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>1719320115000</p>
          */
@@ -211,6 +241,8 @@ public class GetCloudAccountRoleResponseBody extends TeaModel {
         public Long createTime;
 
         /**
+         * <p>The description of the cloud role.</p>
+         * 
          * <strong>example:</strong>
          * <p>cloud_account_role_description</p>
          */
@@ -218,7 +250,7 @@ public class GetCloudAccountRoleResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>IDaaS EIAM 实例Id</p>
+         * <p>The instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>idaas_ue2jvisn35ea5lmthk267xxxxx</p>
@@ -227,7 +259,13 @@ public class GetCloudAccountRoleResponseBody extends TeaModel {
         public String instanceId;
 
         /**
-         * <p>云账号角色状态</p>
+         * <p>The status of the cloud role. Valid values:</p>
+         * <ul>
+         * <li><p>enabled: The role is enabled.</p>
+         * </li>
+         * <li><p>disable: The role is disabled.</p>
+         * </li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>enabled</p>
@@ -236,6 +274,8 @@ public class GetCloudAccountRoleResponseBody extends TeaModel {
         public String status;
 
         /**
+         * <p>The time when the cloud role was last updated. This value is a UNIX timestamp in milliseconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>1649830227000</p>
          */

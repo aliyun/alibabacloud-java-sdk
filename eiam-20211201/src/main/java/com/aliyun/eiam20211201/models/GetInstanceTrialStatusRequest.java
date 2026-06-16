@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetInstanceTrialStatusRequest extends TeaModel {
     /**
-     * <p>IDaaS EIAM的实例id</p>
+     * <p>The ID of the instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

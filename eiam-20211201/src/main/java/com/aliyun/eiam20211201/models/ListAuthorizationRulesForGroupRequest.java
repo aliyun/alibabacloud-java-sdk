@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListAuthorizationRulesForGroupRequest extends TeaModel {
     /**
-     * <p>组标识。</p>
+     * <p>The group ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class ListAuthorizationRulesForGroupRequest extends TeaModel {
     public String groupId;
 
     /**
-     * <p>IDaaS EIAM实例的ID。</p>
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,7 +25,13 @@ public class ListAuthorizationRulesForGroupRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>分页查询时每页行数。默认值为20，最大值为100。</p>
+     * <p>The maximum number of records to return on each page.</p>
+     * <ul>
+     * <li><p>If this parameter is not specified, the default value is 20.</p>
+     * </li>
+     * <li><p>The maximum value is 100.</p>
+     * </li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -34,7 +40,10 @@ public class ListAuthorizationRulesForGroupRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>查询凭证（Token），取值为上一次API调用返回的NextToken参数值。</p>
+     * <p>The token that specifies the start of the next page for a paged query.</p>
+     * <ul>
+     * <li>If this parameter is not specified, the query starts from the first page.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>NTxxxxxexample</p>

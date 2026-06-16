@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateDomainIcpNumberRequest extends TeaModel {
     /**
-     * <p>域名ID。</p>
+     * <p>The domain name ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class UpdateDomainIcpNumberRequest extends TeaModel {
     public String domainId;
 
     /**
-     * <p>域名关联的备案号，长度最大限制64。</p>
+     * <p>The ICP filing number associated with the domain name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,7 +25,7 @@ public class UpdateDomainIcpNumberRequest extends TeaModel {
     public String icpNumber;
 
     /**
-     * <p>IDaaS EIAM实例的ID。</p>
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

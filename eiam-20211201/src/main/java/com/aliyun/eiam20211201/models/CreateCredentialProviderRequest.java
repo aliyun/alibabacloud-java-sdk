@@ -5,7 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateCredentialProviderRequest extends TeaModel {
     /**
-     * <p>保证请求幂等性。从您的客户端生成一个参数值，确保不同请求间该参数值唯一。ClientToken只支持ASCII字符，且不能超过64个字符。</p>
+     * <p>The idempotence token. It is used to ensure the idempotence of the request.</p>
+     * <p>Generate a parameter value from your client to make sure that the value is unique among different requests. The ClientToken parameter can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://www.alibabacloud.com/help/zh/ecs/developer-reference/how-to-ensure-idempotence">How to ensure idempotence</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,13 +16,16 @@ public class CreateCredentialProviderRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>认证令牌提供商的配置。</p>
+     * <p>The configuration of the credential provider.</p>
      */
     @NameInMap("CredentialProviderConfig")
     public CreateCredentialProviderRequestCredentialProviderConfig credentialProviderConfig;
 
     /**
-     * <p>认证令牌提供商的业务标识。是一个具备可读性的唯一标识。</p>
+     * <p>The identifier of the credential provider.</p>
+     * <blockquote>
+     * <p>The identifier can contain uppercase letters, lowercase letters, digits, and the following special characters: <code>.-_</code>. The identifier cannot exceed 64 characters in length.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -31,7 +35,10 @@ public class CreateCredentialProviderRequest extends TeaModel {
     public String credentialProviderIdentifier;
 
     /**
-     * <p>认证令牌提供商名称。</p>
+     * <p>The name of the credential provider.</p>
+     * <blockquote>
+     * <p>The name cannot exceed 64 characters in length.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -41,7 +48,13 @@ public class CreateCredentialProviderRequest extends TeaModel {
     public String credentialProviderName;
 
     /**
-     * <p>认证令牌提供商的类型。</p>
+     * <p>The type of the credential provider. Valid values:</p>
+     * <ul>
+     * <li><p>oauth: OAuth credential provider</p>
+     * </li>
+     * <li><p>jwt: JWT credential provider</p>
+     * </li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -51,7 +64,10 @@ public class CreateCredentialProviderRequest extends TeaModel {
     public String credentialProviderType;
 
     /**
-     * <p>描述。</p>
+     * <p>The description.</p>
+     * <blockquote>
+     * <p>The description cannot exceed 128 characters in length.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>This is an example description</p>
@@ -60,7 +76,7 @@ public class CreateCredentialProviderRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>IDaaS EIAM实例的ID。</p>
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -132,13 +148,16 @@ public class CreateCredentialProviderRequest extends TeaModel {
 
     public static class CreateCredentialProviderRequestCredentialProviderConfigJwtProviderConfig extends TeaModel {
         /**
-         * <p>签发出的JWT中的issuer字段的允许列表。</p>
+         * <p>The list of allowed issuers for JWTs.</p>
+         * <blockquote>
+         * <p>The list can contain a maximum of 200 issuers.</p>
+         * </blockquote>
          */
         @NameInMap("AllowedTokenIssuers")
         public java.util.List<String> allowedTokenIssuers;
 
         /**
-         * <p>是否开启JWT派生短令牌能力。</p>
+         * <p>Specifies whether to enable the short-lived token derivation feature for JWTs.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -147,7 +166,7 @@ public class CreateCredentialProviderRequest extends TeaModel {
         public Boolean derivedShortTokenEnabled;
 
         /**
-         * <p>JWT的有效时长，单位秒。</p>
+         * <p>The validity period of the JSON Web Token (JWT). Unit: seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>900</p>
@@ -156,7 +175,7 @@ public class CreateCredentialProviderRequest extends TeaModel {
         public Integer expiration;
 
         /**
-         * <p>是否开启JWT过期清理。</p>
+         * <p>Specifies whether to enable the cleanup of expired JWTs.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -205,7 +224,10 @@ public class CreateCredentialProviderRequest extends TeaModel {
 
     public static class CreateCredentialProviderRequestCredentialProviderConfigOAuthProviderConfig extends TeaModel {
         /**
-         * <p>OAuth协议中的client_id，客户端ID。</p>
+         * <p>The client ID. This parameter corresponds to the client_id parameter in the OAuth protocol.</p>
+         * <blockquote>
+         * <p>The client ID cannot exceed 128 characters in length.</p>
+         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -215,7 +237,10 @@ public class CreateCredentialProviderRequest extends TeaModel {
         public String clientId;
 
         /**
-         * <p>OAuth协议中的client_secret，客户端密钥。</p>
+         * <p>The client key. This parameter corresponds to the client_secret parameter in the OAuth protocol.</p>
+         * <blockquote>
+         * <p>The client key cannot exceed 1024 characters in length.</p>
+         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -225,7 +250,25 @@ public class CreateCredentialProviderRequest extends TeaModel {
         public String clientSecret;
 
         /**
-         * <p>OAuth协议中的scope，权限范围。</p>
+         * <p>The scope of permissions. This parameter corresponds to the scope parameter in the OAuth protocol.</p>
+         * <blockquote>
+         * <p>The scope that you configure for the OAuth credential provider is used as a fallback value. If you do not specify the scope parameter when you call a DeveloperAPI operation to obtain an OAuth access token, the scope that you configure for the credential provider is used.</p>
+         * </blockquote>
+         * <blockquote>
+         * <p>Notice: </p>
+         * </blockquote>
+         * <p>Separate multiple scopes with spaces.</p>
+         * <p>The following limits apply to a single scope:</p>
+         * <ol>
+         * <li><p>The scope can contain lowercase letters, digits, and the following special characters: <code>|/:_-.</code></p>
+         * </li>
+         * <li><p>The scope must contain lowercase letters or digits.</p>
+         * </li>
+         * <li><p>The scope must start with a special character <code>.</code>, a lowercase letter, or a digit.</p>
+         * </li>
+         * <li><p>The scope cannot exceed 1024 characters in length.</p>
+         * </li>
+         * </ol>
          * 
          * <strong>example:</strong>
          * <p>example:test_01 example:test_02</p>
@@ -234,7 +277,10 @@ public class CreateCredentialProviderRequest extends TeaModel {
         public String scope;
 
         /**
-         * <p>OAuth协议的Token端点。</p>
+         * <p>The token endpoint. This parameter corresponds to the token endpoint in the OAuth protocol.</p>
+         * <blockquote>
+         * <p>The value must start with <code>http://</code> or <code>https://</code> and cannot exceed 1024 characters in length.</p>
+         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -284,13 +330,13 @@ public class CreateCredentialProviderRequest extends TeaModel {
 
     public static class CreateCredentialProviderRequestCredentialProviderConfig extends TeaModel {
         /**
-         * <p>JWT身份提供商配置。</p>
+         * <p>The configuration of the JWT credential provider.</p>
          */
         @NameInMap("JwtProviderConfig")
         public CreateCredentialProviderRequestCredentialProviderConfigJwtProviderConfig jwtProviderConfig;
 
         /**
-         * <p>OAuth 2LO机用类型的提供商的配置。</p>
+         * <p>The configuration of the OAuth credential provider.</p>
          */
         @NameInMap("OAuthProviderConfig")
         public CreateCredentialProviderRequestCredentialProviderConfigOAuthProviderConfig OAuthProviderConfig;

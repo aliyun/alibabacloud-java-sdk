@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateResourceServerScopeResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>0441BD79-92F3-53AA-8657-F8CE4A2B912A</p>
      */
@@ -12,6 +14,8 @@ public class CreateResourceServerScopeResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The ID of the scope permission.</p>
+     * 
      * <strong>example:</strong>
      * <p>ress_neg35flu6byysxwutaxu3dxxxx</p>
      */

@@ -4,10 +4,15 @@ package com.aliyun.eiam20211201.models;
 import com.aliyun.tea.*;
 
 public class ListApplicationSupportedProvisionProtocolTypesResponseBody extends TeaModel {
+    /**
+     * <p>The supported synchronization protocols for the application.</p>
+     */
     @NameInMap("ApplicationSupportedProvisionProtocolType")
     public ListApplicationSupportedProvisionProtocolTypesResponseBodyApplicationSupportedProvisionProtocolType applicationSupportedProvisionProtocolType;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>0441BD79-92F3-53AA-8657-F8CE4A2B912A</p>
      */
@@ -37,7 +42,13 @@ public class ListApplicationSupportedProvisionProtocolTypesResponseBody extends 
 
     public static class ListApplicationSupportedProvisionProtocolTypesResponseBodyApplicationSupportedProvisionProtocolType extends TeaModel {
         /**
-         * <p>账户同步支持类型</p>
+         * <p>The account synchronization protocols that the application supports. Valid values:</p>
+         * <ul>
+         * <li><p>idaas_callback: event callback.</p>
+         * </li>
+         * <li><p>scim2: System for Cross-domain Identity Management (SCIM) protocol.</p>
+         * </li>
+         * </ul>
          */
         @NameInMap("ProvisionProtocolType")
         public java.util.List<String> provisionProtocolType;

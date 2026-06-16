@@ -4,10 +4,15 @@ package com.aliyun.eiam20211201.models;
 import com.aliyun.tea.*;
 
 public class GetAuthorizationResourceResponseBody extends TeaModel {
+    /**
+     * <p>The authorized resource.</p>
+     */
     @NameInMap("AuthorizationResource")
     public GetAuthorizationResourceResponseBodyAuthorizationResource authorizationResource;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>0441BD79-92F3-53AA-8657-F8CE4A2B912A</p>
      */
@@ -37,7 +42,7 @@ public class GetAuthorizationResourceResponseBody extends TeaModel {
 
     public static class GetAuthorizationResourceResponseBodyAuthorizationResource extends TeaModel {
         /**
-         * <p>资源实体标识</p>
+         * <p>The ID of the resource entity that is associated with the authorized resource.</p>
          * 
          * <strong>example:</strong>
          * <p>carole_01kmek49aqxxxx</p>
@@ -46,7 +51,10 @@ public class GetAuthorizationResourceResponseBody extends TeaModel {
         public String authorizationResourceEntityId;
 
         /**
-         * <p>资源实体类型，枚举类型：asset（资产）、credential（凭据）、cloud_identity_role（云账号角色）</p>
+         * <p>The type of the resource entity that is associated with the authorized resource. Valid value:</p>
+         * <ul>
+         * <li>cloud_account_role: a cloud role</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>cloud_account_role</p>
@@ -55,7 +63,7 @@ public class GetAuthorizationResourceResponseBody extends TeaModel {
         public String authorizationResourceEntityType;
 
         /**
-         * <p>授权资源标识</p>
+         * <p>The authorization resource ID.</p>
          * 
          * <strong>example:</strong>
          * <p>arres_01kgh3jvt7pk093rv6giu0c0qxxxx</p>
@@ -64,7 +72,7 @@ public class GetAuthorizationResourceResponseBody extends TeaModel {
         public String authorizationResourceId;
 
         /**
-         * <p>授权规则标识</p>
+         * <p>The authorization rule ID.</p>
          * 
          * <strong>example:</strong>
          * <p>arrule_01kf143ug06fg7m9f43u7vahxxxx</p>
@@ -73,7 +81,7 @@ public class GetAuthorizationResourceResponseBody extends TeaModel {
         public String authorizationRuleId;
 
         /**
-         * <p>云账号ID。</p>
+         * <p>The ID of the Alibaba Cloud account to which the resource entity that is associated with the authorized resource belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>ca_01kmegjc11qa1txxxxx</p>
@@ -82,7 +90,7 @@ public class GetAuthorizationResourceResponseBody extends TeaModel {
         public String cloudAccountId;
 
         /**
-         * <p>实例ID</p>
+         * <p>The instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>idaas_ue2jvisn35ea5lmthk267xxxxx</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateApplicationInfoRequest extends TeaModel {
     /**
-     * <p>IDaaS的应用主键id</p>
+     * <p>The application ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class UpdateApplicationInfoRequest extends TeaModel {
     public String applicationId;
 
     /**
-     * <p>应用的表示名称</p>
+     * <p>The application name.</p>
      * 
      * <strong>example:</strong>
      * <p>Ram Account SSO</p>
@@ -26,10 +26,15 @@ public class UpdateApplicationInfoRequest extends TeaModel {
     @NameInMap("ApplicationOwner")
     public UpdateApplicationInfoRequestApplicationOwner applicationOwner;
 
+    /**
+     * <p>The collection of application visibility settings.</p>
+     */
     @NameInMap("ApplicationVisibility")
     public java.util.List<String> applicationVisibility;
 
     /**
+     * <p>The idempotent token.</p>
+     * 
      * <strong>example:</strong>
      * <p>client-token-example</p>
      */
@@ -40,7 +45,7 @@ public class UpdateApplicationInfoRequest extends TeaModel {
     public java.util.List<UpdateApplicationInfoRequestCustomFields> customFields;
 
     /**
-     * <p>IDaaS EIAM的实例id</p>
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -50,7 +55,7 @@ public class UpdateApplicationInfoRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>应用Logo地址</p>
+     * <p>The URL of the application logo.</p>
      * 
      * <strong>example:</strong>
      * <p><a href="https://example.aliyuncs.com/logo.png">https://example.aliyuncs.com/logo.png</a></p>

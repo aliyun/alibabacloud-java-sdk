@@ -4,11 +4,14 @@ package com.aliyun.eiam20211201.models;
 import com.aliyun.tea.*;
 
 public class ListNetworkAccessEndpointsResponseBody extends TeaModel {
+    /**
+     * <p>A collection of network endpoints.</p>
+     */
     @NameInMap("NetworkAccessEndpoints")
     public java.util.List<ListNetworkAccessEndpointsResponseBodyNetworkAccessEndpoints> networkAccessEndpoints;
 
     /**
-     * <p>本次调用返回的查询凭证（Token）值，用于下一次翻页查询。</p>
+     * <p>The token returned for the next query.</p>
      * 
      * <strong>example:</strong>
      * <p>NTxxxexample</p>
@@ -17,6 +20,8 @@ public class ListNetworkAccessEndpointsResponseBody extends TeaModel {
     public String nextToken;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>0441BD79-92F3-53AA-8657-F8CE4A2B912A</p>
      */
@@ -24,6 +29,8 @@ public class ListNetworkAccessEndpointsResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total number of entries.</p>
+     * 
      * <strong>example:</strong>
      * <p>100</p>
      */
@@ -69,7 +76,7 @@ public class ListNetworkAccessEndpointsResponseBody extends TeaModel {
 
     public static class ListNetworkAccessEndpointsResponseBodyNetworkAccessEndpoints extends TeaModel {
         /**
-         * <p>专属网络端点创建时间，Unix时间戳格式，单位为毫秒。</p>
+         * <p>The time when the network endpoint was created. This value is a UNIX timestamp. Unit: milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1649830226000</p>
@@ -78,7 +85,7 @@ public class ListNetworkAccessEndpointsResponseBody extends TeaModel {
         public Long createTime;
 
         /**
-         * <p>实例ID。</p>
+         * <p>The instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>idaas_ue2jvisn35ea5lmthk267xxxxx</p>
@@ -87,7 +94,7 @@ public class ListNetworkAccessEndpointsResponseBody extends TeaModel {
         public String instanceId;
 
         /**
-         * <p>专属网络端点ID。</p>
+         * <p>The network endpoint ID.</p>
          * 
          * <strong>example:</strong>
          * <p>nae_examplexxx</p>
@@ -96,16 +103,22 @@ public class ListNetworkAccessEndpointsResponseBody extends TeaModel {
         public String networkAccessEndpointId;
 
         /**
-         * <p>专属网络端点名称。</p>
+         * <p>The name of the network endpoint.</p>
          * 
          * <strong>example:</strong>
-         * <p>xx业务VPC访问端点</p>
+         * <p>VPC access endpoint for xx service</p>
          */
         @NameInMap("NetworkAccessEndpointName")
         public String networkAccessEndpointName;
 
         /**
-         * <p>专属网络端点连接的类型。</p>
+         * <p>The type of the network endpoint. Valid values:</p>
+         * <ul>
+         * <li><p>shared: a shared network endpoint.</p>
+         * </li>
+         * <li><p>private: a private network endpoint.</p>
+         * </li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>private</p>
@@ -114,7 +127,7 @@ public class ListNetworkAccessEndpointsResponseBody extends TeaModel {
         public String networkAccessEndpointType;
 
         /**
-         * <p>专属网络端点使用的安全组ID。</p>
+         * <p>The ID of the security group used by the private network endpoint.</p>
          * 
          * <strong>example:</strong>
          * <p>sg-examplexxx</p>
@@ -123,7 +136,17 @@ public class ListNetworkAccessEndpointsResponseBody extends TeaModel {
         public String securityGroupId;
 
         /**
-         * <p>专属网络端点状态。</p>
+         * <p>The status of the network endpoint. Valid values:</p>
+         * <ul>
+         * <li><p>pending: The endpoint is pending initialization.</p>
+         * </li>
+         * <li><p>creating: The endpoint is being created.</p>
+         * </li>
+         * <li><p>running: The endpoint is running.</p>
+         * </li>
+         * <li><p>deleting: The endpoint is being deleted.</p>
+         * </li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>running</p>
@@ -132,7 +155,7 @@ public class ListNetworkAccessEndpointsResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>专属网络端点最近更新时间，Unix时间戳格式，单位为毫秒。</p>
+         * <p>The time when the network endpoint was last updated. This value is a UNIX timestamp. Unit: milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1649830226000</p>
@@ -141,7 +164,7 @@ public class ListNetworkAccessEndpointsResponseBody extends TeaModel {
         public Long updateTime;
 
         /**
-         * <p>专属网络端点连接的指定vSwitch列表。</p>
+         * <p>A list of vSwitches to which the private network endpoint is connected.</p>
          * 
          * <strong>example:</strong>
          * <p>vsw-examplexxx</p>
@@ -150,7 +173,7 @@ public class ListNetworkAccessEndpointsResponseBody extends TeaModel {
         public java.util.List<String> vSwitchIds;
 
         /**
-         * <p>专属网络端点连接的VpcID。</p>
+         * <p>The ID of the VPC to which the private network endpoint is connected.</p>
          * 
          * <strong>example:</strong>
          * <p>vpc-examplexxx</p>
@@ -159,7 +182,7 @@ public class ListNetworkAccessEndpointsResponseBody extends TeaModel {
         public String vpcId;
 
         /**
-         * <p>专属网络端点连接的Vpc所属地域。</p>
+         * <p>The region ID of the VPC to which the private network endpoint is connected.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>

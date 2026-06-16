@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateCustomFieldRequest extends TeaModel {
     /**
-     * <p>字段默认值，必须与数据类型一致</p>
+     * <p>The default value of the field. If the field has configuration items, the default value must be one of the enabled configuration items. The default value can be up to 1024 characters in length.</p>
      * 
      * <strong>example:</strong>
      * <p>string</p>
@@ -14,16 +14,16 @@ public class CreateCustomFieldRequest extends TeaModel {
     public String defaultValue;
 
     /**
-     * <p>对字段的描述信息</p>
+     * <p>The description of the field. The description can be up to 512 characters in length.</p>
      * 
      * <strong>example:</strong>
-     * <p>字段测试</p>
+     * <p>Field test</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
-     * <p>是否加密，默认false</p>
+     * <p>Indicates whether to encrypt the field value. If you set this parameter to true, the system encrypts the data value before storing it.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -32,7 +32,10 @@ public class CreateCustomFieldRequest extends TeaModel {
     public Boolean encrypted;
 
     /**
-     * <p>字段归属实体。实体包括账户、组、组织</p>
+     * <p>The entity to which the field belongs. Valid value:</p>
+     * <ul>
+     * <li>user: an account.</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -42,13 +45,21 @@ public class CreateCustomFieldRequest extends TeaModel {
     public String entityType;
 
     /**
-     * <p>字段值配置项，必须与数据类型一致</p>
+     * <p>The configuration items of the field value.</p>
      */
     @NameInMap("FieldDataConfig")
     public CreateCustomFieldRequestFieldDataConfig fieldDataConfig;
 
     /**
-     * <p>数据类型，枚举值：string、number、boolean</p>
+     * <p>The data type of the field. Valid values:</p>
+     * <ul>
+     * <li><p>string: a string.</p>
+     * </li>
+     * <li><p>number: a number. The number can be up to 32 digits in length and can be a positive integer or a decimal.</p>
+     * </li>
+     * <li><p>boolean: a Boolean value.</p>
+     * </li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -58,7 +69,7 @@ public class CreateCustomFieldRequest extends TeaModel {
     public String fieldDataType;
 
     /**
-     * <p>字段展示名，长度不超过128字符</p>
+     * <p>The display name of the field. The display name can be up to 64 characters in length.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -68,7 +79,15 @@ public class CreateCustomFieldRequest extends TeaModel {
     public String fieldDisplayName;
 
     /**
-     * <p>字段展示类型，枚举值，select、checkbox、input</p>
+     * <p>The display type of the field. Valid values:</p>
+     * <ul>
+     * <li><p>input: a text box. This display type supports the string and number data types.</p>
+     * </li>
+     * <li><p>select: a drop-down list. This display type supports the string and Boolean data types.</p>
+     * </li>
+     * <li><p>checkbox: a check box. This display type supports the string data type.</p>
+     * </li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -78,7 +97,7 @@ public class CreateCustomFieldRequest extends TeaModel {
     public String fieldDisplayType;
 
     /**
-     * <p>字段标识，英文字母、下划线</p>
+     * <p>The name of the field. The name can be up to 40 characters in length and can contain lowercase letters and underscores (<em>). It cannot start with an underscore (</em>).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -88,7 +107,7 @@ public class CreateCustomFieldRequest extends TeaModel {
     public String fieldName;
 
     /**
-     * <p>IDaaS EIAM实例的ID。</p>
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -98,7 +117,7 @@ public class CreateCustomFieldRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>是否必填，默认false</p>
+     * <p>Indicates whether the field is required.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -107,7 +126,7 @@ public class CreateCustomFieldRequest extends TeaModel {
     public Boolean required;
 
     /**
-     * <p>是否唯一，默认false</p>
+     * <p>Indicates whether the field value is unique. If you set this parameter to true, the value of this field must be unique for the specified entity type.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -116,7 +135,15 @@ public class CreateCustomFieldRequest extends TeaModel {
     public Boolean unique;
 
     /**
-     * <p>用户端(portal侧)权限，hide、read_only、read_write，默认read_only</p>
+     * <p>The permission on the field in the portal. Valid values:</p>
+     * <ul>
+     * <li><p>hide: The field is not visible in the portal.</p>
+     * </li>
+     * <li><p>read_only: The field is visible but cannot be modified in the portal.</p>
+     * </li>
+     * <li><p>read_write: The field is visible and can be modified in the portal.</p>
+     * </li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -235,7 +262,7 @@ public class CreateCustomFieldRequest extends TeaModel {
 
     public static class CreateCustomFieldRequestFieldDataConfigItems extends TeaModel {
         /**
-         * <p>配置项展示名</p>
+         * <p>The display name of the configuration item. The display name can be up to 128 characters in length.</p>
          * 
          * <strong>example:</strong>
          * <p>string</p>
@@ -244,7 +271,14 @@ public class CreateCustomFieldRequest extends TeaModel {
         public String displayName;
 
         /**
-         * <p>配置项状态，枚举值，enabled、disabled</p>
+         * <p>The status of the configuration item. Valid values:</p>
+         * <ul>
+         * <li><p>enabled: The configuration item is enabled.</p>
+         * </li>
+         * <li><p>disabled: The configuration item is disabled.</p>
+         * </li>
+         * </ul>
+         * <p>If a configuration item is disabled, it is unavailable when you create or update the field value for an entity.</p>
          * 
          * <strong>example:</strong>
          * <p>string</p>
@@ -253,7 +287,7 @@ public class CreateCustomFieldRequest extends TeaModel {
         public String status;
 
         /**
-         * <p>配置项展示值</p>
+         * <p>The value of the configuration item. The value can be up to 64 characters in length.</p>
          * 
          * <strong>example:</strong>
          * <p>string</p>
@@ -294,7 +328,7 @@ public class CreateCustomFieldRequest extends TeaModel {
 
     public static class CreateCustomFieldRequestFieldDataConfig extends TeaModel {
         /**
-         * <p>字段值配置项，必须与数据类型一致，只能新增数据项，不可删除，项字段：displayName、value、status</p>
+         * <p>A list of field configuration items. The list can contain up to 100 items.</p>
          * 
          * <strong>example:</strong>
          * <p>string</p>

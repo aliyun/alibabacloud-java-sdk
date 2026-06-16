@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListOrganizationalUnitsForResourceServerResponseBody extends TeaModel {
     /**
+     * <p>The maximum number of results per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -12,7 +14,7 @@ public class ListOrganizationalUnitsForResourceServerResponseBody extends TeaMod
     public Integer maxResults;
 
     /**
-     * <p>本次调用返回的查询凭证（Token）值，用于下一次翻页查询。</p>
+     * <p>A token to retrieve the next page of results.</p>
      * 
      * <strong>example:</strong>
      * <p>NTxxxexample</p>
@@ -20,10 +22,15 @@ public class ListOrganizationalUnitsForResourceServerResponseBody extends TeaMod
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <p>A list of organizational units.</p>
+     */
     @NameInMap("OrganizationalUnits")
     public java.util.List<ListOrganizationalUnitsForResourceServerResponseBodyOrganizationalUnits> organizationalUnits;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>0441BD79-92F3-53AA-8657-F8CE4A2B912A</p>
      */
@@ -31,6 +38,8 @@ public class ListOrganizationalUnitsForResourceServerResponseBody extends TeaMod
     public String requestId;
 
     /**
+     * <p>The total number of results.</p>
+     * 
      * <strong>example:</strong>
      * <p>100</p>
      */
@@ -84,7 +93,7 @@ public class ListOrganizationalUnitsForResourceServerResponseBody extends TeaMod
 
     public static class ListOrganizationalUnitsForResourceServerResponseBodyOrganizationalUnitsResourceServerScopes extends TeaModel {
         /**
-         * <p>ResourceServerScope唯一标识</p>
+         * <p>The scope ID.</p>
          * 
          * <strong>example:</strong>
          * <p>ress_nbte4bb3qqqnaq73rlmkqixxxx</p>
@@ -93,10 +102,10 @@ public class ListOrganizationalUnitsForResourceServerResponseBody extends TeaMod
         public String resourceServerScopeId;
 
         /**
-         * <p>ResourceServerScope名称</p>
+         * <p>The scope name.</p>
          * 
          * <strong>example:</strong>
-         * <p>获取资源信息</p>
+         * <p>Read User Info</p>
          */
         @NameInMap("ResourceServerScopeName")
         public String resourceServerScopeName;
@@ -126,7 +135,7 @@ public class ListOrganizationalUnitsForResourceServerResponseBody extends TeaMod
 
     public static class ListOrganizationalUnitsForResourceServerResponseBodyOrganizationalUnits extends TeaModel {
         /**
-         * <p>实例唯一标识</p>
+         * <p>The instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>idaas_qsw77zl5vrllwzyrrfwbmpxxxx</p>
@@ -135,7 +144,7 @@ public class ListOrganizationalUnitsForResourceServerResponseBody extends TeaMod
         public String instanceId;
 
         /**
-         * <p>组织的唯一标识</p>
+         * <p>The organizational unit ID.</p>
          * 
          * <strong>example:</strong>
          * <p>ou_nbsomva32b6utec3hgi7scxxxx</p>
@@ -144,7 +153,7 @@ public class ListOrganizationalUnitsForResourceServerResponseBody extends TeaMod
         public String organizationalUnitId;
 
         /**
-         * <p>资源服务Scope权限集合</p>
+         * <p>A list of scopes.</p>
          */
         @NameInMap("ResourceServerScopes")
         public java.util.List<ListOrganizationalUnitsForResourceServerResponseBodyOrganizationalUnitsResourceServerScopes> resourceServerScopes;

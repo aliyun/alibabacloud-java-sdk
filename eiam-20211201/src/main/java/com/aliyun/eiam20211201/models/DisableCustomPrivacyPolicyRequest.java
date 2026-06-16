@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DisableCustomPrivacyPolicyRequest extends TeaModel {
     /**
+     * <p>The ID of the custom privacy policy.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,7 +15,7 @@ public class DisableCustomPrivacyPolicyRequest extends TeaModel {
     public String customPrivacyPolicyId;
 
     /**
-     * <p>IDaaS EIAM实例的ID。</p>
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
