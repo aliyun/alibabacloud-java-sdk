@@ -15,6 +15,9 @@ public class UpdateCustinsParamRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>数仓抽数地址</p>
      */
     @NameInMap("Name")
     public String name;

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DeleteEvaluateAndImportTaskResponseBody extends TeaModel {
     /**
+     * <p>Indicates whether the task is deleted.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -12,6 +14,8 @@ public class DeleteEvaluateAndImportTaskResponseBody extends TeaModel {
     public Boolean data;
 
     /**
+     * <p>The returned message. &gt; This parameter is empty when the request succeeds. If the request fails, an exception message is returned, such as an error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>msg</p>
      */
@@ -19,6 +23,8 @@ public class DeleteEvaluateAndImportTaskResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>14036EBE-***-44DB-ACE9-AC6157D3A6FC</p>
      */
@@ -26,6 +32,8 @@ public class DeleteEvaluateAndImportTaskResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request is successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

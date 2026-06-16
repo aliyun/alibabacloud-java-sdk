@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateStoragePoolRequest extends TeaModel {
     /**
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class CreateStoragePoolRequest extends TeaModel {
     public String DBInstanceName;
 
     /**
+     * <p>The region ID of the instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,8 @@ public class CreateStoragePoolRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The resource group ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>rg-xxxxx</p>
      */
@@ -30,6 +34,8 @@ public class CreateStoragePoolRequest extends TeaModel {
     public String resourceGroupId;
 
     /**
+     * <p>The list of storage pool DNs.</p>
+     * 
      * <strong>example:</strong>
      * <p>node6</p>
      */
@@ -37,6 +43,8 @@ public class CreateStoragePoolRequest extends TeaModel {
     public String storagePoolDNList;
 
     /**
+     * <p>The name of the storage pool.</p>
+     * 
      * <strong>example:</strong>
      * <p>test</p>
      */

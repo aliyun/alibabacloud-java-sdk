@@ -4,9 +4,15 @@ package com.aliyun.polardbx20200202.models;
 import com.aliyun.tea.*;
 
 public class DescribeArchiveTableListResponseBody extends TeaModel {
+    /**
+     * <p>The data returned.</p>
+     */
     @NameInMap("Data")
     public DescribeArchiveTableListResponseBodyData data;
 
+    /**
+     * <p>requestId</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -35,21 +41,36 @@ public class DescribeArchiveTableListResponseBody extends TeaModel {
         @NameInMap("ArchiveStatus")
         public String archiveStatus;
 
+        /**
+         * <p>The time when the table was created.</p>
+         */
         @NameInMap("CreatedDate")
         public Long createdDate;
 
+        /**
+         * <p>The number of files.</p>
+         */
         @NameInMap("FileCount")
         public Integer fileCount;
 
         @NameInMap("LastSuccessArchiveTime")
         public Long lastSuccessArchiveTime;
 
+        /**
+         * <p>The database name.</p>
+         */
         @NameInMap("SchemaName")
         public String schemaName;
 
+        /**
+         * <p>The space occupied by the table.</p>
+         */
         @NameInMap("SpaceSize")
         public Double spaceSize;
 
+        /**
+         * <p>The table name.</p>
+         */
         @NameInMap("TableName")
         public String tableName;
 
@@ -117,9 +138,15 @@ public class DescribeArchiveTableListResponseBody extends TeaModel {
     }
 
     public static class DescribeArchiveTableListResponseBodyData extends TeaModel {
+        /**
+         * <p>The page number.</p>
+         */
         @NameInMap("PageIndex")
         public Long pageIndex;
 
+        /**
+         * <p>The number of entries per page.</p>
+         */
         @NameInMap("PageSize")
         public Long pageSize;
 
@@ -138,6 +165,9 @@ public class DescribeArchiveTableListResponseBody extends TeaModel {
         @NameInMap("TobeArchivedConut")
         public Integer tobeArchivedConut;
 
+        /**
+         * <p>The total number of entries.</p>
+         */
         @NameInMap("Total")
         public Long total;
 

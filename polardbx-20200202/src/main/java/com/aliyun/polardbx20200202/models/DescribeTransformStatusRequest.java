@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeTransformStatusRequest extends TeaModel {
     /**
+     * <p>The instance name.</p>
+     * 
      * <strong>example:</strong>
      * <p>pxc-xxx</p>
      */
@@ -12,6 +14,8 @@ public class DescribeTransformStatusRequest extends TeaModel {
     public String DBInstanceName;
 
     /**
+     * <p>The verification report.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -19,6 +23,8 @@ public class DescribeTransformStatusRequest extends TeaModel {
     public Boolean queryReport;
 
     /**
+     * <p>The region ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
      */

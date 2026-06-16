@@ -4,6 +4,9 @@ package com.aliyun.polardbx20200202.models;
 import com.aliyun.tea.*;
 
 public class DescribeTransformStatusResponseBody extends TeaModel {
+    /**
+     * <p>The monitoring data.</p>
+     */
     @NameInMap("Data")
     public DescribeTransformStatusResponseBodyData data;
 
@@ -39,6 +42,8 @@ public class DescribeTransformStatusResponseBody extends TeaModel {
 
     public static class DescribeTransformStatusResponseBodyData extends TeaModel {
         /**
+         * <p>Indicates whether the task can be canceled.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -46,19 +51,36 @@ public class DescribeTransformStatusResponseBody extends TeaModel {
         public Boolean canCancel;
 
         /**
+         * <p>Indicates whether the current task is completed.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
         @NameInMap("CanFinish")
         public Boolean canFinish;
 
+        /**
+         * <p>Indicates whether the migration switchover can be performed. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: The migration switchover can be performed.</li>
+         * <li><strong>false</strong>: The migration switchover cannot be performed.</li>
+         * </ul>
+         * <blockquote>
+         * <p>This parameter is used by the one-click upgrade feature of PolarDB.</p>
+         * </blockquote>
+         */
         @NameInMap("CanSwitch")
         public Boolean canSwitch;
 
+        /**
+         * <p>Indicates whether the switchover operation can be reverted.</p>
+         */
         @NameInMap("CanUndoSwitch")
         public Boolean canUndoSwitch;
 
         /**
+         * <p>The Enterprise Edition instance name.</p>
+         * 
          * <strong>example:</strong>
          * <p>pxc-*****</p>
          */
@@ -66,16 +88,23 @@ public class DescribeTransformStatusResponseBody extends TeaModel {
         public String enterpriseInsName;
 
         /**
+         * <p>The current migration or upgrade phase.</p>
+         * 
          * <strong>example:</strong>
          * <p>none</p>
          */
         @NameInMap("Phase")
         public String phase;
 
+        /**
+         * <p>The report summary.</p>
+         */
         @NameInMap("ReportSummary")
         public java.util.Map<String, ?> reportSummary;
 
         /**
+         * <p>The date when the data report was generated.</p>
+         * 
          * <strong>example:</strong>
          * <p>2025-09-02 16:52:47.0</p>
          */
@@ -83,6 +112,8 @@ public class DescribeTransformStatusResponseBody extends TeaModel {
         public Long reportTime;
 
         /**
+         * <p>The standard instance name.</p>
+         * 
          * <strong>example:</strong>
          * <p>pxc-*****</p>
          */

@@ -4,10 +4,18 @@ package com.aliyun.polardbx20200202.models;
 import com.aliyun.tea.*;
 
 public class DeleteGdnInstanceResponseBody extends TeaModel {
+    /**
+     * <p>The data struct.</p>
+     */
     @NameInMap("Data")
     public DeleteGdnInstanceResponseBodyData data;
 
     /**
+     * <p>The response message.</p>
+     * <blockquote>
+     * <p>This parameter is empty when the request succeeds. If the request fails, an exception message is returned, such as an error code.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <hr>
      */
@@ -24,6 +32,8 @@ public class DeleteGdnInstanceResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -69,6 +79,8 @@ public class DeleteGdnInstanceResponseBody extends TeaModel {
 
     public static class DeleteGdnInstanceResponseBodyData extends TeaModel {
         /**
+         * <p>The task ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>2209883</p>
          */

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateAccountRequest extends TeaModel {
     /**
+     * <p>The description of the account.</p>
+     * 
      * <strong>example:</strong>
      * <p>test</p>
      */
@@ -12,6 +14,7 @@ public class CreateAccountRequest extends TeaModel {
     public String accountDescription;
 
     /**
+     * <p>The name of the account to be created.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,6 +24,7 @@ public class CreateAccountRequest extends TeaModel {
     public String accountName;
 
     /**
+     * <p>The password of the account to be created.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -30,6 +34,14 @@ public class CreateAccountRequest extends TeaModel {
     public String accountPassword;
 
     /**
+     * <p>The permissions to be granted to the new account on the specified database. Valid values:</p>
+     * <ul>
+     * <li>ReadWrite</li>
+     * <li>ReadOnly</li>
+     * <li>DMLOnly</li>
+     * <li>DDLOnly.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>ReadWrite</p>
      */
@@ -37,6 +49,7 @@ public class CreateAccountRequest extends TeaModel {
     public String accountPrivilege;
 
     /**
+     * <p>The name of the instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -46,6 +59,8 @@ public class CreateAccountRequest extends TeaModel {
     public String DBInstanceName;
 
     /**
+     * <p>The name of the database to be authorized.</p>
+     * 
      * <strong>example:</strong>
      * <p>testdb</p>
      */
@@ -53,6 +68,7 @@ public class CreateAccountRequest extends TeaModel {
     public String DBName;
 
     /**
+     * <p>The region in which the instance resides.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -62,6 +78,11 @@ public class CreateAccountRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The name of the security administrator account.</p>
+     * <blockquote>
+     * <p>If three-role mode is enabled, this parameter is required. If three-role mode is not enabled, this parameter is not required.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>securityAccount</p>
      */
@@ -69,6 +90,11 @@ public class CreateAccountRequest extends TeaModel {
     public String securityAccountName;
 
     /**
+     * <p>The password of the security administrator account.</p>
+     * <blockquote>
+     * <p>If three-role mode is enabled, this parameter is required. If three-role mode is not enabled, this parameter is not required.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>securityPassword</p>
      */

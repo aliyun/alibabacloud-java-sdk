@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeActiveOperationTaskCountRequest extends TeaModel {
     /**
+     * <p>A reserved parameter. You do not need to specify this parameter.</p>
+     * 
      * <strong>example:</strong>
      * <p>Category</p>
      */
@@ -12,6 +14,8 @@ public class DescribeActiveOperationTaskCountRequest extends TeaModel {
     public String category;
 
     /**
+     * <p>The product. Default value: polarx.</p>
+     * 
      * <strong>example:</strong>
      * <p>polarx</p>
      */
@@ -19,6 +23,7 @@ public class DescribeActiveOperationTaskCountRequest extends TeaModel {
     public String product;
 
     /**
+     * <p>The region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class CheckCloudResourceAuthorizedRequest extends TeaModel {
     /**
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class CheckCloudResourceAuthorizedRequest extends TeaModel {
     public String DBInstanceName;
 
     /**
+     * <p>The ID of the region in which the instance resides.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,12 @@ public class CheckCloudResourceAuthorizedRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The global resource descriptor ARN (Alibaba Cloud Resource Name) of the authorized role. After the authorization of this role is complete, the related KMS can be used. Format: acs:ram::$accountID:role/$roleName.</p>
+     * <ul>
+     * <li>$accountID: the Alibaba Cloud account ID. To view the ID, logon to the Alibaba Cloud Management Console, move the mouse over the profile picture in the upper-right corner, and then click Security Settings.</li>
+     * <li>$roleName: the RAM role name. The value is fixed as AliyunRdsInstanceEncryptionDefaultRole.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>acs:ram::123456789012****:role/AliyunRdsInstanceEncryptionDefaultRole</p>
      */

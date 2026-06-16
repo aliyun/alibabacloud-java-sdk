@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeOpenBackupSetRequest extends TeaModel {
     /**
+     * <p>The instance name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,8 @@ public class DescribeOpenBackupSetRequest extends TeaModel {
     public String DBInstanceName;
 
     /**
+     * <p>The region ID of the instance.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
      */
@@ -21,6 +24,8 @@ public class DescribeOpenBackupSetRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The point in time to which you want to restore the instance. Specify the time in the yyyy-MM-ddTHH:mm:ssZ format (UTC).</p>
+     * 
      * <strong>example:</strong>
      * <p>2024-10-14T00:00:00Z</p>
      */

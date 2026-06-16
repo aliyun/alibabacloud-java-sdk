@@ -4,10 +4,15 @@ package com.aliyun.polardbx20200202.models;
 import com.aliyun.tea.*;
 
 public class StartSwitchDatabaseResponseBody extends TeaModel {
+    /**
+     * <p>The monitoring data.</p>
+     */
     @NameInMap("Data")
     public StartSwitchDatabaseResponseBodyData data;
 
     /**
+     * <p>The response message.</p>
+     * 
      * <strong>example:</strong>
      * <hr>
      */
@@ -24,6 +29,8 @@ public class StartSwitchDatabaseResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -69,6 +76,8 @@ public class StartSwitchDatabaseResponseBody extends TeaModel {
 
     public static class StartSwitchDatabaseResponseBodyData extends TeaModel {
         /**
+         * <p>The ID of the slink task.</p>
+         * 
          * <strong>example:</strong>
          * <p>etx-szr2rr6i*****</p>
          */

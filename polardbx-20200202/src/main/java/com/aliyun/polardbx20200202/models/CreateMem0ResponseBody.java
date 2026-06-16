@@ -4,6 +4,9 @@ package com.aliyun.polardbx20200202.models;
 import com.aliyun.tea.*;
 
 public class CreateMem0ResponseBody extends TeaModel {
+    /**
+     * <p>The data struct.</p>
+     */
     @NameInMap("Data")
     public CreateMem0ResponseBodyData data;
 
@@ -39,6 +42,8 @@ public class CreateMem0ResponseBody extends TeaModel {
 
     public static class CreateMem0ResponseBodyData extends TeaModel {
         /**
+         * <p>The task ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>2209883</p>
          */

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CheckSqlAuditSlsStatusResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>173CA69A-3513-591D-8A09-C1EA37CBE2D9</p>
      */
@@ -12,6 +14,12 @@ public class CheckSqlAuditSlsStatusResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The enabling status of the SQL audit feature. Valid values:</p>
+     * <ul>
+     * <li>enabled: Enabled.</li>
+     * <li>disabled: Not enabled.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>enabled</p>
      */

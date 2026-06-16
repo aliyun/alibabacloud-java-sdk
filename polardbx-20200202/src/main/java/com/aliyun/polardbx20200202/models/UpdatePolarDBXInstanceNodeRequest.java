@@ -8,6 +8,8 @@ public class UpdatePolarDBXInstanceNodeRequest extends TeaModel {
     public String addDNSpec;
 
     /**
+     * <p>The number of compute nodes.</p>
+     * 
      * <strong>example:</strong>
      * <p>2</p>
      */
@@ -15,6 +17,8 @@ public class UpdatePolarDBXInstanceNodeRequest extends TeaModel {
     public Integer CNNodeCount;
 
     /**
+     * <p>The client token. You can set this parameter to any random string.</p>
+     * 
      * <strong>example:</strong>
      * <p>FEA5DC20-6D8A-5979-97AA-FC57546ADC20</p>
      */
@@ -22,6 +26,7 @@ public class UpdatePolarDBXInstanceNodeRequest extends TeaModel {
     public String clientToken;
 
     /**
+     * <p>The instance name ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -31,6 +36,8 @@ public class UpdatePolarDBXInstanceNodeRequest extends TeaModel {
     public String DBInstanceName;
 
     /**
+     * <p>The number of storage nodes.</p>
+     * 
      * <strong>example:</strong>
      * <p>2</p>
      */
@@ -38,6 +45,8 @@ public class UpdatePolarDBXInstanceNodeRequest extends TeaModel {
     public Integer DNNodeCount;
 
     /**
+     * <p>The target number of nodes for the instance. Valid values: 0 to 99.</p>
+     * 
      * <strong>example:</strong>
      * <p>3</p>
      */
@@ -48,6 +57,7 @@ public class UpdatePolarDBXInstanceNodeRequest extends TeaModel {
     public String deleteDNIds;
 
     /**
+     * <p>The region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

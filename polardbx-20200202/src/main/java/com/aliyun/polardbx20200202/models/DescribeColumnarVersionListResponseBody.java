@@ -4,6 +4,9 @@ package com.aliyun.polardbx20200202.models;
 import com.aliyun.tea.*;
 
 public class DescribeColumnarVersionListResponseBody extends TeaModel {
+    /**
+     * <p>The parameter details.</p>
+     */
     @NameInMap("Data")
     public DescribeColumnarVersionListResponseBodyData data;
 
@@ -38,6 +41,9 @@ public class DescribeColumnarVersionListResponseBody extends TeaModel {
     }
 
     public static class DescribeColumnarVersionListResponseBodyData extends TeaModel {
+        /**
+         * <p>The version list.</p>
+         */
         @NameInMap("VersionList")
         public java.util.List<String> versionList;
 

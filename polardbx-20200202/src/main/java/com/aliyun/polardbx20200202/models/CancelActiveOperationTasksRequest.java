@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class CancelActiveOperationTasksRequest extends TeaModel {
     /**
+     * <p>The event IDs, separated by commas.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class CancelActiveOperationTasksRequest extends TeaModel {
     public String ids;
 
     /**
+     * <p>The region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

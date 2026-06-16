@@ -4,10 +4,15 @@ package com.aliyun.polardbx20200202.models;
 import com.aliyun.tea.*;
 
 public class DescribeRplInspectionTaskResponseBody extends TeaModel {
+    /**
+     * <p>The task details.</p>
+     */
     @NameInMap("Data")
     public DescribeRplInspectionTaskResponseBodyData data;
 
     /**
+     * <p>The error message of the task.</p>
+     * 
      * <strong>example:</strong>
      * <hr>
      */
@@ -15,6 +20,8 @@ public class DescribeRplInspectionTaskResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>1AD222E9-E606-4A42-BF6D-8A4442913CEF</p>
      */
@@ -22,6 +29,8 @@ public class DescribeRplInspectionTaskResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -67,6 +76,8 @@ public class DescribeRplInspectionTaskResponseBody extends TeaModel {
 
     public static class DescribeRplInspectionTaskResponseBodyDataInspectionTaskList extends TeaModel {
         /**
+         * <p>The timestamp when the task was created.</p>
+         * 
          * <strong>example:</strong>
          * <p>2025-09-25T02:36:20.000+0000</p>
          */
@@ -74,6 +85,8 @@ public class DescribeRplInspectionTaskResponseBody extends TeaModel {
         public Long createTime;
 
         /**
+         * <p>The description of the inspection task.</p>
+         * 
          * <strong>example:</strong>
          * <p>For database: wms ,Found SIMPLE sequences in 1.0. PolarDB-X 2.0 does not support SIMPLE sequence any more， please use show sequence to check them.</p>
          */
@@ -81,6 +94,8 @@ public class DescribeRplInspectionTaskResponseBody extends TeaModel {
         public String description;
 
         /**
+         * <p>The task ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>10142</p>
          */
@@ -97,6 +112,8 @@ public class DescribeRplInspectionTaskResponseBody extends TeaModel {
         public String slinkTaskId;
 
         /**
+         * <p>The stage name.</p>
+         * 
          * <strong>example:</strong>
          * <p>CONNECTIVITY</p>
          */
@@ -104,6 +121,8 @@ public class DescribeRplInspectionTaskResponseBody extends TeaModel {
         public String stage;
 
         /**
+         * <p>The task status.</p>
+         * 
          * <strong>example:</strong>
          * <p>SUCCEEDED</p>
          */
@@ -111,6 +130,8 @@ public class DescribeRplInspectionTaskResponseBody extends TeaModel {
         public String status;
 
         /**
+         * <p>The timestamp of the most recent task update.</p>
+         * 
          * <strong>example:</strong>
          * <p>2025-09-23T03:25:21.000+0000</p>
          */
@@ -181,10 +202,15 @@ public class DescribeRplInspectionTaskResponseBody extends TeaModel {
     }
 
     public static class DescribeRplInspectionTaskResponseBodyData extends TeaModel {
+        /**
+         * <p>The machine task information.</p>
+         */
         @NameInMap("InspectionTaskList")
         public java.util.List<DescribeRplInspectionTaskResponseBodyDataInspectionTaskList> inspectionTaskList;
 
         /**
+         * <p>The slink status.</p>
+         * 
          * <strong>example:</strong>
          * <p>PRE_CHECK</p>
          */

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DisableSqlAuditResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>DC3DAE3E-0F8A-4596-9104-F5167C******</p>
      */

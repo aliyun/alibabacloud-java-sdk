@@ -22,8 +22,6 @@ public class DescribeDBInstanceEndpointResponseBody extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>Id of the request</p>
-     * 
      * <strong>example:</strong>
      * <p>A501A191-BD70-5E50-98A9-C2A486A82****</p>
      */
@@ -355,6 +353,10 @@ public class DescribeDBInstanceEndpointResponseBody extends TeaModel {
         @NameInMap("Port")
         public String port;
 
+        /**
+         * <strong>example:</strong>
+         * <p>节点id</p>
+         */
         @NameInMap("ReplicaId")
         public Long replicaId;
 

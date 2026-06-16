@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class PreCheckSqlFlashbackTaskRequest extends TeaModel {
     /**
+     * <p>The database name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class PreCheckSqlFlashbackTaskRequest extends TeaModel {
     public String dbName;
 
     /**
+     * <p>The end time of the flashback SQL execution.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,7 @@ public class PreCheckSqlFlashbackTaskRequest extends TeaModel {
     public String endTime;
 
     /**
+     * <p>The cluster ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -32,6 +35,7 @@ public class PreCheckSqlFlashbackTaskRequest extends TeaModel {
     public String polardbxInstanceId;
 
     /**
+     * <p>The region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -41,6 +45,7 @@ public class PreCheckSqlFlashbackTaskRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The start time of the flashback SQL execution.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

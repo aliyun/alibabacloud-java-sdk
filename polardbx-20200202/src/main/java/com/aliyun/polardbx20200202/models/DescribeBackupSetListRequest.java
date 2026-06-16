@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeBackupSetListRequest extends TeaModel {
     /**
+     * <p>The name of the instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -13,10 +14,18 @@ public class DescribeBackupSetListRequest extends TeaModel {
     @NameInMap("DBInstanceName")
     public String DBInstanceName;
 
+    /**
+     * <p>The region where the backup sets reside. If you specify this parameter, backup sets in the specified region are returned. You can specify only one region at a time.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
+     */
     @NameInMap("DestCrossRegion")
     public String destCrossRegion;
 
     /**
+     * <p>The end time. Specify a UNIX timestamp in milliseconds.</p>
+     * 
      * <strong>example:</strong>
      * <p>1635707845000</p>
      */
@@ -24,6 +33,8 @@ public class DescribeBackupSetListRequest extends TeaModel {
     public Long endTime;
 
     /**
+     * <p>The page number. The value starts from 1.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -31,6 +42,8 @@ public class DescribeBackupSetListRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>30</p>
      */
@@ -38,6 +51,7 @@ public class DescribeBackupSetListRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The ID of the region where the instance resides.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -47,6 +61,8 @@ public class DescribeBackupSetListRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The start time. Specify a UNIX timestamp in milliseconds.</p>
+     * 
      * <strong>example:</strong>
      * <p>1635707845000</p>
      */

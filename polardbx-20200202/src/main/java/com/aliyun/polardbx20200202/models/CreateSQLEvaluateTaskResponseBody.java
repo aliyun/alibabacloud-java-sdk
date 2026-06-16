@@ -4,10 +4,15 @@ package com.aliyun.polardbx20200202.models;
 import com.aliyun.tea.*;
 
 public class CreateSQLEvaluateTaskResponseBody extends TeaModel {
+    /**
+     * <p>The returned result.</p>
+     */
     @NameInMap("Data")
     public CreateSQLEvaluateTaskResponseBodyData data;
 
     /**
+     * <p>The returned message. &gt; This parameter is empty when the request succeeds. If the request fails, an error message is returned, such as an error code.</p>
+     * 
      * <strong>example:</strong>
      * <hr>
      */
@@ -15,6 +20,8 @@ public class CreateSQLEvaluateTaskResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>6352AC16-76BF-5135-B1EA-ED49293526E6</p>
      */
@@ -22,6 +29,8 @@ public class CreateSQLEvaluateTaskResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>True</p>
      */
@@ -67,6 +76,8 @@ public class CreateSQLEvaluateTaskResponseBody extends TeaModel {
 
     public static class CreateSQLEvaluateTaskResponseBodyData extends TeaModel {
         /**
+         * <p>The Slink task ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>etx-szr2rr6i*****</p>
          */

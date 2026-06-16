@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeSqlFlashbackTaskListRequest extends TeaModel {
     /**
+     * <p>The instance ID of the PolarDB-X instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class DescribeSqlFlashbackTaskListRequest extends TeaModel {
     public String polardbxInstanceId;
 
     /**
+     * <p>The region in which the instance resides.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

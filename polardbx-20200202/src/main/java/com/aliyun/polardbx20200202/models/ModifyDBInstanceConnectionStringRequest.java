@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyDBInstanceConnectionStringRequest extends TeaModel {
     /**
+     * <p>The original connection string.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class ModifyDBInstanceConnectionStringRequest extends TeaModel {
     public String connectionString;
 
     /**
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,7 @@ public class ModifyDBInstanceConnectionStringRequest extends TeaModel {
     public String DBInstanceName;
 
     /**
+     * <p>The new port number.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -32,6 +35,7 @@ public class ModifyDBInstanceConnectionStringRequest extends TeaModel {
     public String newPort;
 
     /**
+     * <p>The new connection string prefix.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -41,6 +45,7 @@ public class ModifyDBInstanceConnectionStringRequest extends TeaModel {
     public String newPrefix;
 
     /**
+     * <p>The region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

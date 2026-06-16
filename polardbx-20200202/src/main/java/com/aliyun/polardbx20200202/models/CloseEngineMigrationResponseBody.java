@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class CloseEngineMigrationResponseBody extends TeaModel {
     /**
+     * <p>The response code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The new endpoint information.</p>
+     */
     @NameInMap("Data")
     public CloseEngineMigrationResponseBodyData data;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -22,6 +29,8 @@ public class CloseEngineMigrationResponseBody extends TeaModel {
     public String httpStatusCode;
 
     /**
+     * <p>The error message. This parameter is empty if the request is successful.</p>
+     * 
      * <strong>example:</strong>
      * <hr>
      */
@@ -38,6 +47,8 @@ public class CloseEngineMigrationResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request is successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -99,6 +110,8 @@ public class CloseEngineMigrationResponseBody extends TeaModel {
 
     public static class CloseEngineMigrationResponseBodyData extends TeaModel {
         /**
+         * <p>The instance ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>pxc-hzjasd****</p>
          */
@@ -106,6 +119,8 @@ public class CloseEngineMigrationResponseBody extends TeaModel {
         public String DBInstanceName;
 
         /**
+         * <p>The backend task ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>2209883</p>
          */

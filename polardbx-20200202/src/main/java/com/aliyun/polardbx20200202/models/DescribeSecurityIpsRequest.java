@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeSecurityIpsRequest extends TeaModel {
     /**
+     * <p>The name of the instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class DescribeSecurityIpsRequest extends TeaModel {
     public String DBInstanceName;
 
     /**
+     * <p>The region ID of the instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

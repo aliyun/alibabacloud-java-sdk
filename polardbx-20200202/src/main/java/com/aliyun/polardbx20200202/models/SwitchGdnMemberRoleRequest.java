@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class SwitchGdnMemberRoleRequest extends TeaModel {
     /**
+     * <p>The instance ID of the primary instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +24,7 @@ public class SwitchGdnMemberRoleRequest extends TeaModel {
     public String isModifyEndpoint;
 
     /**
+     * <p>The region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -38,11 +40,22 @@ public class SwitchGdnMemberRoleRequest extends TeaModel {
     public String srcMainPort;
 
     /**
+     * <p>The switchover mode.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>常规切换：switch_over
+     * 强制切换：fail_over</p>
      */
     @NameInMap("SwitchMode")
     public String switchMode;
 
+    /**
+     * <p>The timeout period of the switchover task. Unit: seconds.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("TaskTimeout")
     public Long taskTimeout;
 

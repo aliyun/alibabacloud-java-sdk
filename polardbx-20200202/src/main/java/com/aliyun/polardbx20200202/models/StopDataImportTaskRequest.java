@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class StopDataImportTaskRequest extends TeaModel {
     /**
+     * <p>The page number. The value must be a positive integer that does not exceed the maximum value of the integer data type. Default value: <strong>1</strong>.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -12,6 +14,8 @@ public class StopDataImportTaskRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries per page. Valid values: <em><strong>30</strong></em><strong>50</strong>*<strong>100</strong>. Default value: <strong>30</strong>.</p>
+     * 
      * <strong>example:</strong>
      * <p>30</p>
      */
@@ -19,6 +23,7 @@ public class StopDataImportTaskRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The region where the instance resides.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -28,6 +33,8 @@ public class StopDataImportTaskRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The task ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>etx-szr2rr6i*****</p>
      */

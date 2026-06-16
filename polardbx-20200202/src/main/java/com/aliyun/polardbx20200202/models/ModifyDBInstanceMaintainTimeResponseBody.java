@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ModifyDBInstanceMaintainTimeResponseBody extends TeaModel {
     /**
+     * <p>The unique request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>73559800-3c8c-11ec-bd40-99cfcff3fe1e</p>
      */

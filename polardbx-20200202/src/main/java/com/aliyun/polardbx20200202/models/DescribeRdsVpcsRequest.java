@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeRdsVpcsRequest extends TeaModel {
     /**
+     * <p>The region ID of the instance. &gt; You can call the <a href="https://help.aliyun.com/document_detail/196841.html">DescribeRegions</a> operation to query the regions supported by PolarDB-X, including region IDs.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,8 @@ public class DescribeRdsVpcsRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The zone ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-beijing-h</p>
      */

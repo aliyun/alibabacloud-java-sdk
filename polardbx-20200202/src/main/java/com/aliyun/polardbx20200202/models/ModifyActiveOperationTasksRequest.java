@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyActiveOperationTasksRequest extends TeaModel {
     /**
+     * <p>The O&amp;M event ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,12 @@ public class ModifyActiveOperationTasksRequest extends TeaModel {
     public String ids;
 
     /**
+     * <p>Specifies whether to immediately execute the event. Valid values:</p>
+     * <ul>
+     * <li>1: immediately execute</li>
+     * <li>0: execute at the specified time.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -21,6 +28,7 @@ public class ModifyActiveOperationTasksRequest extends TeaModel {
     public Long immediateStart;
 
     /**
+     * <p>The region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -30,6 +38,8 @@ public class ModifyActiveOperationTasksRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The switchover start time in the YYYY-MM-DDThh:mm:ssZ format.</p>
+     * 
      * <strong>example:</strong>
      * <p>2021-08-15T12:00:00Z</p>
      */

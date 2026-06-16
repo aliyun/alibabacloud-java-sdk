@@ -4,10 +4,15 @@ package com.aliyun.polardbx20200202.models;
 import com.aliyun.tea.*;
 
 public class DescribeBackupSetResponseBody extends TeaModel {
+    /**
+     * <p>The data list.</p>
+     */
     @NameInMap("Data")
     public java.util.List<DescribeBackupSetResponseBodyData> data;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>successs</p>
      */
@@ -15,6 +20,8 @@ public class DescribeBackupSetResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>1A6D328C-84B8-40DC-BF49-6C73984D7494</p>
      */
@@ -22,6 +29,8 @@ public class DescribeBackupSetResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -67,6 +76,8 @@ public class DescribeBackupSetResponseBody extends TeaModel {
 
     public static class DescribeBackupSetResponseBodyDataOSSList extends TeaModel {
         /**
+         * <p>The OSS file name.</p>
+         * 
          * <strong>example:</strong>
          * <p>hins3084_data_20220418110623_qp.xb</p>
          */
@@ -74,13 +85,17 @@ public class DescribeBackupSetResponseBody extends TeaModel {
         public String backupSetFile;
 
         /**
+         * <p>The public download URL.</p>
+         * 
          * <strong>example:</strong>
-         * <p><a href="https://pre-rdsbak-cn-xxx.oss-cn-beijing.aliyuncs.com/custins2255/hins3084_data_20220418110623_qp.xb?OSSAccessKeyId=LTAI5tJEmRFdJ8aBPDR7****&Expires=1650441697&dd=7KJzkUSbXf6dwy">https://pre-rdsbak-cn-xxx.oss-cn-beijing.aliyuncs.com/custins2255/hins3084_data_20220418110623_qp.xb?OSSAccessKeyId=LTAI5tJEmRFdJ8aBPDR7****&amp;Expires=1650441697&amp;dd=7KJzkUSbXf6dwy</a></p>
+         * <p><a href="https://pre-rdsbak-cn-xxx.oss-cn-beijing.aliyuncs.com/custins2255/hins3084_data_20220418110623_qp.xb?OSSAccessKeyId=LTAI****************&Expires=1650441697&dd=7KJzkUSbXf6dwy">https://pre-rdsbak-cn-xxx.oss-cn-beijing.aliyuncs.com/custins2255/hins3084_data_20220418110623_qp.xb?OSSAccessKeyId=LTAI****************&amp;Expires=1650441697&amp;dd=7KJzkUSbXf6dwy</a></p>
          */
         @NameInMap("DownloadLink")
         public String downloadLink;
 
         /**
+         * <p>The internal network download URL for the OSS file.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="http://pre-rdsbak-cn-beijing.oss-cn-beijing-internal.aliyuncs.com/custins2255/hins3084_data_20220418110623_qp.xb">http://pre-rdsbak-cn-beijing.oss-cn-beijing-internal.aliyuncs.com/custins2255/hins3084_data_20220418110623_qp.xb</a>?</p>
          */
@@ -88,6 +103,8 @@ public class DescribeBackupSetResponseBody extends TeaModel {
         public String intranetDownloadLink;
 
         /**
+         * <p>The expiration time of the OSS file link.</p>
+         * 
          * <strong>example:</strong>
          * <p>2022-04-20T08:01:37Z</p>
          */
@@ -135,6 +152,12 @@ public class DescribeBackupSetResponseBody extends TeaModel {
 
     public static class DescribeBackupSetResponseBodyData extends TeaModel {
         /**
+         * <p>The backup mode. Valid values:</p>
+         * <ul>
+         * <li><strong>0</strong>: Automatic backup.</li>
+         * <li><strong>1</strong>: Manual backup.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -142,6 +165,8 @@ public class DescribeBackupSetResponseBody extends TeaModel {
         public Integer backupModel;
 
         /**
+         * <p>The backup set ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>111</p>
          */
@@ -149,6 +174,8 @@ public class DescribeBackupSetResponseBody extends TeaModel {
         public Long backupSetId;
 
         /**
+         * <p>The size of the backup set, in bytes.</p>
+         * 
          * <strong>example:</strong>
          * <p>88803195</p>
          */
@@ -156,6 +183,12 @@ public class DescribeBackupSetResponseBody extends TeaModel {
         public Long backupSetSize;
 
         /**
+         * <p>The backup type. Valid values:</p>
+         * <ul>
+         * <li><strong>0</strong>: Fast backup.</li>
+         * <li><strong>1</strong>: Consistent backup.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -163,6 +196,8 @@ public class DescribeBackupSetResponseBody extends TeaModel {
         public Integer backupType;
 
         /**
+         * <p>The time when the backup started.</p>
+         * 
          * <strong>example:</strong>
          * <p>1650250861754</p>
          */
@@ -170,16 +205,28 @@ public class DescribeBackupSetResponseBody extends TeaModel {
         public Long beginTime;
 
         /**
+         * <p>The time when the backup ended.</p>
+         * 
          * <strong>example:</strong>
          * <p>1650251308000</p>
          */
         @NameInMap("EndTime")
         public Long endTime;
 
+        /**
+         * <p>The list of OSS information for the backup set.</p>
+         */
         @NameInMap("OSSList")
         public java.util.List<DescribeBackupSetResponseBodyDataOSSList> OSSList;
 
         /**
+         * <p>The status of the backup set. Valid values:</p>
+         * <ul>
+         * <li><strong>0</strong>: Backing up.</li>
+         * <li><strong>1</strong>: Backup succeeded.</li>
+         * <li><strong>2</strong>: Backup failed.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */

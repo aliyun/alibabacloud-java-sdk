@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ReleaseInstancePublicConnectionRequest extends TeaModel {
     /**
+     * <p>The connection string of the instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class ReleaseInstancePublicConnectionRequest extends TeaModel {
     public String currentConnectionString;
 
     /**
+     * <p>The instance name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,8 @@ public class ReleaseInstancePublicConnectionRequest extends TeaModel {
     public String DBInstanceName;
 
     /**
+     * <p>The region ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
      */

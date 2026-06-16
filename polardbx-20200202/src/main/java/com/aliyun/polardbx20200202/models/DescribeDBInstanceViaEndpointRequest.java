@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeDBInstanceViaEndpointRequest extends TeaModel {
     /**
+     * <p>The endpoint of the instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,7 +15,11 @@ public class DescribeDBInstanceViaEndpointRequest extends TeaModel {
     public String endpoint;
 
     /**
+     * <p>The region ID.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;

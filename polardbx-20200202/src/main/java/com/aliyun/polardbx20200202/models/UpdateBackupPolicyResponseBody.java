@@ -4,10 +4,15 @@ package com.aliyun.polardbx20200202.models;
 import com.aliyun.tea.*;
 
 public class UpdateBackupPolicyResponseBody extends TeaModel {
+    /**
+     * <p>The details of the backup policy.</p>
+     */
     @NameInMap("Data")
     public UpdateBackupPolicyResponseBodyData data;
 
     /**
+     * <p>The response message. The value success is returned if the request is successful. Otherwise, the corresponding error code is returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -15,6 +20,8 @@ public class UpdateBackupPolicyResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>FEA5DC20-6D8A-5979-97AA-FC57546ADC20</p>
      */
@@ -22,6 +29,8 @@ public class UpdateBackupPolicyResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request is successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

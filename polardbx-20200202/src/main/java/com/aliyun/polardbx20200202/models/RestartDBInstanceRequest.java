@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class RestartDBInstanceRequest extends TeaModel {
     /**
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class RestartDBInstanceRequest extends TeaModel {
     public String DBInstanceName;
 
     /**
+     * <p>The region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

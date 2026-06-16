@@ -4,9 +4,15 @@ package com.aliyun.polardbx20200202.models;
 import com.aliyun.tea.*;
 
 public class DescribeColdDataBasicInfoResponseBody extends TeaModel {
+    /**
+     * <p>The details.</p>
+     */
     @NameInMap("Data")
     public DescribeColdDataBasicInfoResponseBodyData data;
 
+    /**
+     * <p>requestId</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,21 +38,36 @@ public class DescribeColdDataBasicInfoResponseBody extends TeaModel {
     }
 
     public static class DescribeColdDataBasicInfoResponseBodyData extends TeaModel {
+        /**
+         * <p>The number of backup sets.</p>
+         */
         @NameInMap("BackupSetCount")
         public Integer backupSetCount;
 
+        /**
+         * <p>The data size of valid backup sets.</p>
+         */
         @NameInMap("BackupSetSpaceSize")
         public Double backupSetSpaceSize;
 
+        /**
+         * <p>The underlying storage cloud service.</p>
+         */
         @NameInMap("CloudProduct")
         public String cloudProduct;
 
+        /**
+         * <p>The data size of cold storage.</p>
+         */
         @NameInMap("CurrentSpaceSize")
         public Double currentSpaceSize;
 
         @NameInMap("DataRedundancyType")
         public String dataRedundancyType;
 
+        /**
+         * <p>Indicates whether cold storage is enabled.</p>
+         */
         @NameInMap("EnableStatus")
         public Boolean enableStatus;
 
@@ -56,6 +77,9 @@ public class DescribeColdDataBasicInfoResponseBody extends TeaModel {
         @NameInMap("RegionId")
         public String regionId;
 
+        /**
+         * <p>The storage volume name.</p>
+         */
         @NameInMap("VolumeName")
         public String volumeName;
 

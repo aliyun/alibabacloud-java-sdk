@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class AttachColumnarInstanceResponseBody extends TeaModel {
     /**
+     * <p>The name of the created instance.</p>
+     * 
      * <strong>example:</strong>
      * <p>pxc-xxx</p>
      */
@@ -12,6 +14,8 @@ public class AttachColumnarInstanceResponseBody extends TeaModel {
     public String DBInstanceName;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>9B2F3840-5C98-475C-B269-2D5C3A31797C</p>
      */
@@ -19,6 +23,8 @@ public class AttachColumnarInstanceResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The backend task ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>422922413</p>
      */

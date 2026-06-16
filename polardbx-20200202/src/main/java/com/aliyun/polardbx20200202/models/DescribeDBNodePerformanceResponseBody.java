@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeDBNodePerformanceResponseBody extends TeaModel {
     /**
+     * <p>The instance name.</p>
+     * 
      * <strong>example:</strong>
      * <p>pxc-********</p>
      */
@@ -12,6 +14,8 @@ public class DescribeDBNodePerformanceResponseBody extends TeaModel {
     public String DBInstanceName;
 
     /**
+     * <p>The end of the time range to query. The time is in the YYYY-MM-ddTHH:mm:ssZ format (UTC).</p>
+     * 
      * <strong>example:</strong>
      * <p>2021-10-20T02:00Z</p>
      */
@@ -22,6 +26,8 @@ public class DescribeDBNodePerformanceResponseBody extends TeaModel {
     public DescribeDBNodePerformanceResponseBodyPerformanceKeys performanceKeys;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>EFB5E10B-5268-170F-A378-9AF86CCEACC8</p>
      */
@@ -29,6 +35,8 @@ public class DescribeDBNodePerformanceResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The beginning of the time range to query. The time is in the YYYY-MM-ddTHH:mm:ssZ format (UTC).</p>
+     * 
      * <strong>example:</strong>
      * <p>2021-10-20T00:00Z</p>
      */

@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateCustomEndpointRequest extends TeaModel {
     /**
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class CreateCustomEndpointRequest extends TeaModel {
     public String DBInstanceName;
 
     /**
+     * <p>The name of the access control instance. The name must be 2 to 128 characters in length and must start with a letter or a Chinese character. The name can contain digits, underscores (_), and hyphens (-).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,7 @@ public class CreateCustomEndpointRequest extends TeaModel {
     public String name;
 
     /**
+     * <p>Specifies whether a node automatically joins the cluster and starts providing services after the node is added or recovered.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -32,6 +35,7 @@ public class CreateCustomEndpointRequest extends TeaModel {
     public Boolean nodeAutoEnter;
 
     /**
+     * <p>The IDs of the monitored nodes when RemindUnit (object type) is set to NODE (node). Separate multiple IDs with commas (,). A maximum of 50 nodes can be monitored per rule.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -41,6 +45,11 @@ public class CreateCustomEndpointRequest extends TeaModel {
     public String nodeIds;
 
     /**
+     * <p>To query the metrics of a read-only node in a cloud-native read/write splitting architecture instance, set this parameter to <strong>READONLY</strong> and specify the <strong>NodeId</strong> parameter.</p>
+     * <blockquote>
+     * <p> In other cases, you do not need to specify this parameter or you can set it to <strong>MASTER</strong>.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>READONLY</p>
      */
@@ -48,6 +57,8 @@ public class CreateCustomEndpointRequest extends TeaModel {
     public String nodeRole;
 
     /**
+     * <p>The region in which the instance resides.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
      */
@@ -55,6 +66,7 @@ public class CreateCustomEndpointRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The vSwitch ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -64,6 +76,7 @@ public class CreateCustomEndpointRequest extends TeaModel {
     public String vSwitchId;
 
     /**
+     * <p>The ID of the virtual private cloud (VPC) in which the endpoint resides.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

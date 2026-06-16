@@ -4,10 +4,14 @@ package com.aliyun.polardbx20200202.models;
 import com.aliyun.tea.*;
 
 public class DescribeColumnarInfoResponseBody extends TeaModel {
+    /**
+     * <p>The data struct.</p>
+     */
     @NameInMap("Data")
     public DescribeColumnarInfoResponseBodyData data;
 
     /**
+     * <p>The HTTP status code.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -26,6 +30,7 @@ public class DescribeColumnarInfoResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -73,6 +78,8 @@ public class DescribeColumnarInfoResponseBody extends TeaModel {
 
     public static class DescribeColumnarInfoResponseBodyDataInstanceTopologyListPhysicalNodes extends TeaModel {
         /**
+         * <p>The zone in which the instance resides.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-hangzhou-h</p>
          */
@@ -80,6 +87,8 @@ public class DescribeColumnarInfoResponseBody extends TeaModel {
         public String AZone;
 
         /**
+         * <p>The disk size, in MB.</p>
+         * 
          * <strong>example:</strong>
          * <p>204800</p>
          */
@@ -87,6 +96,8 @@ public class DescribeColumnarInfoResponseBody extends TeaModel {
         public Integer disk;
 
         /**
+         * <p>The instance specifications.</p>
+         * 
          * <strong>example:</strong>
          * <p>polarx.n8.medium.col</p>
          */
@@ -94,6 +105,8 @@ public class DescribeColumnarInfoResponseBody extends TeaModel {
         public String nodeClass;
 
         /**
+         * <p>The node ID.</p>
+         * 
          * <strong>example:</strong>
          * <hr>
          */
@@ -101,6 +114,8 @@ public class DescribeColumnarInfoResponseBody extends TeaModel {
         public String nodeId;
 
         /**
+         * <p>The instance status.</p>
+         * 
          * <strong>example:</strong>
          * <p>ACTIVATION</p>
          */
@@ -108,6 +123,8 @@ public class DescribeColumnarInfoResponseBody extends TeaModel {
         public String status;
 
         /**
+         * <p>The instance version.</p>
+         * 
          * <strong>example:</strong>
          * <p>polarx-col-kernel-5.4.20-20250819_17555906</p>
          */
@@ -171,6 +188,8 @@ public class DescribeColumnarInfoResponseBody extends TeaModel {
 
     public static class DescribeColumnarInfoResponseBodyDataInstanceTopologyList extends TeaModel {
         /**
+         * <p>The instance type description.</p>
+         * 
          * <strong>example:</strong>
          * <hr>
          */
@@ -178,12 +197,17 @@ public class DescribeColumnarInfoResponseBody extends TeaModel {
         public String comment;
 
         /**
+         * <p>The instance name.</p>
+         * 
          * <strong>example:</strong>
          * <p>pxc-***</p>
          */
         @NameInMap("InstanceName")
         public String instanceName;
 
+        /**
+         * <p>The node array.</p>
+         */
         @NameInMap("PhysicalNodes")
         public java.util.List<DescribeColumnarInfoResponseBodyDataInstanceTopologyListPhysicalNodes> physicalNodes;
 
@@ -220,6 +244,8 @@ public class DescribeColumnarInfoResponseBody extends TeaModel {
 
     public static class DescribeColumnarInfoResponseBodyData extends TeaModel {
         /**
+         * <p>The number of days that binlogs are retained.</p>
+         * 
          * <strong>example:</strong>
          * <p>30</p>
          */
@@ -227,6 +253,7 @@ public class DescribeColumnarInfoResponseBody extends TeaModel {
         public Integer binlogPersistTime;
 
         /**
+         * <p>The binlog size.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -236,6 +263,8 @@ public class DescribeColumnarInfoResponseBody extends TeaModel {
         public Integer binlogSize;
 
         /**
+         * <p>The checksum switch.</p>
+         * 
          * <strong>example:</strong>
          * <p>ON</p>
          */
@@ -243,6 +272,8 @@ public class DescribeColumnarInfoResponseBody extends TeaModel {
         public String checkSumSwitch;
 
         /**
+         * <p>The instance specifications.</p>
+         * 
          * <strong>example:</strong>
          * <p>polarx.n8.medium.col</p>
          */
@@ -250,6 +281,7 @@ public class DescribeColumnarInfoResponseBody extends TeaModel {
         public String classCode;
 
         /**
+         * <p>The new column store version.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -259,12 +291,17 @@ public class DescribeColumnarInfoResponseBody extends TeaModel {
         public String columnarNewVersion;
 
         /**
+         * <p>The column store version.</p>
+         * 
          * <strong>example:</strong>
          * <p>polarx-col-kernel-5.4.20-20250819_17555906</p>
          */
         @NameInMap("ColumnarVersion")
         public String columnarVersion;
 
+        /**
+         * <p>The instance list.</p>
+         */
         @NameInMap("InstanceTopologyList")
         public java.util.List<DescribeColumnarInfoResponseBodyDataInstanceTopologyList> instanceTopologyList;
 

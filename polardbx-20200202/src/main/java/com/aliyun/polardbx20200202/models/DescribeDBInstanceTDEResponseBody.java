@@ -4,10 +4,15 @@ package com.aliyun.polardbx20200202.models;
 import com.aliyun.tea.*;
 
 public class DescribeDBInstanceTDEResponseBody extends TeaModel {
+    /**
+     * <p>The data struct.</p>
+     */
     @NameInMap("Data")
     public DescribeDBInstanceTDEResponseBodyData data;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>C458B1E8-1683-3645-B154-6BA32080EEA</p>
      */
@@ -37,6 +42,12 @@ public class DescribeDBInstanceTDEResponseBody extends TeaModel {
 
     public static class DescribeDBInstanceTDEResponseBodyData extends TeaModel {
         /**
+         * <p>Indicates whether TDE is enabled. Valid values:</p>
+         * <ul>
+         * <li>0: TDE is disabled.</li>
+         * <li>1: TDE is enabled.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */

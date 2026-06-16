@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ModifyAccountPrivilegeResponseBody extends TeaModel {
     /**
+     * <p>Returns success if the request is successful. Otherwise, returns the corresponding error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -12,6 +14,8 @@ public class ModifyAccountPrivilegeResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The unique request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>73559800-3c8c-11ec-bd40-99cfcff3fe1e</p>
      */
@@ -19,6 +23,8 @@ public class ModifyAccountPrivilegeResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request is successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

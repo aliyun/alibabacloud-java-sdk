@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class RefreshImportMetaRequest extends TeaModel {
     /**
+     * <p>The instance ID. &gt; You can call the <a href="https://help.aliyun.com/document_detail/196830.html">DescribeDBInstances</a> operation to query the details of all instances in the target region, including instance IDs.</p>
+     * 
      * <strong>example:</strong>
      * <p>pxc-xxx</p>
      */
@@ -12,6 +14,7 @@ public class RefreshImportMetaRequest extends TeaModel {
     public String DBInstanceName;
 
     /**
+     * <p>The region ID. &gt; You can call the <a href="https://help.aliyun.com/document_detail/196841.html">DescribeRegions</a> operation to query the regions supported by PolarDB-X, including region IDs.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,6 +24,7 @@ public class RefreshImportMetaRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The task ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

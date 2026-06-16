@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeCdcVersionListRequest extends TeaModel {
     /**
+     * <p>The name of the instance.</p>
+     * 
      * <strong>example:</strong>
      * <p>pxc-bjrl7****k2vp7</p>
      */
@@ -15,6 +17,8 @@ public class DescribeCdcVersionListRequest extends TeaModel {
     public String instanceName;
 
     /**
+     * <p>The ID of the region in which the instance resides.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-beijing</p>
      */

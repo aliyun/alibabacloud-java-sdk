@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class EnableRightsSeparationRequest extends TeaModel {
     /**
+     * <p>The description of the audit account.</p>
+     * 
      * <strong>example:</strong>
      * <p>test123</p>
      */
@@ -12,6 +14,7 @@ public class EnableRightsSeparationRequest extends TeaModel {
     public String auditAccountDescription;
 
     /**
+     * <p>The name of the audit account.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,6 +24,7 @@ public class EnableRightsSeparationRequest extends TeaModel {
     public String auditAccountName;
 
     /**
+     * <p>The password of the audit account.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -30,6 +34,7 @@ public class EnableRightsSeparationRequest extends TeaModel {
     public String auditAccountPassword;
 
     /**
+     * <p>The name of the instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -39,6 +44,7 @@ public class EnableRightsSeparationRequest extends TeaModel {
     public String DBInstanceName;
 
     /**
+     * <p>The region ID of the instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -48,6 +54,8 @@ public class EnableRightsSeparationRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The description of the security administrator account.</p>
+     * 
      * <strong>example:</strong>
      * <p>test123</p>
      */
@@ -55,6 +63,7 @@ public class EnableRightsSeparationRequest extends TeaModel {
     public String securityAccountDescription;
 
     /**
+     * <p>The name of the security administrator account.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -64,6 +73,7 @@ public class EnableRightsSeparationRequest extends TeaModel {
     public String securityAccountName;
 
     /**
+     * <p>The password of the security administrator account.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

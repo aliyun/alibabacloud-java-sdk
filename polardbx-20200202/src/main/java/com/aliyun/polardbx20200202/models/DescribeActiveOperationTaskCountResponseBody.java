@@ -5,6 +5,12 @@ import com.aliyun.tea.*;
 
 public class DescribeActiveOperationTaskCountResponseBody extends TeaModel {
     /**
+     * <p>Indicates whether a pop-up notification is required. Valid values:</p>
+     * <ul>
+     * <li>1: Required.</li>
+     * <li>0: Not required.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -12,6 +18,8 @@ public class DescribeActiveOperationTaskCountResponseBody extends TeaModel {
     public Long needPop;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>EC7E27FC-58F8-4722-89BB-D1B6D0971956</p>
      */
@@ -19,6 +27,8 @@ public class DescribeActiveOperationTaskCountResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total number.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */

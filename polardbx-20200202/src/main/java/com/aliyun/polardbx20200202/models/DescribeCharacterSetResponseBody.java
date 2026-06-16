@@ -4,10 +4,15 @@ package com.aliyun.polardbx20200202.models;
 import com.aliyun.tea.*;
 
 public class DescribeCharacterSetResponseBody extends TeaModel {
+    /**
+     * <p>The data struct.</p>
+     */
     @NameInMap("Data")
     public DescribeCharacterSetResponseBodyData data;
 
     /**
+     * <p>The response message. &quot;success&quot; is returned if the request is successful. Otherwise, an error code is returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -15,6 +20,8 @@ public class DescribeCharacterSetResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>709C1E40-092D-4A3D-9958-6D7438******</p>
      */
@@ -22,6 +29,8 @@ public class DescribeCharacterSetResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request is successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -66,10 +75,21 @@ public class DescribeCharacterSetResponseBody extends TeaModel {
     }
 
     public static class DescribeCharacterSetResponseBodyData extends TeaModel {
+        /**
+         * <p>The character sets supported by the instance. Valid values:</p>
+         * <ul>
+         * <li>utf8mb4</li>
+         * <li>gbk</li>
+         * <li>latin1</li>
+         * <li>utf8.</li>
+         * </ul>
+         */
         @NameInMap("CharacterSet")
         public java.util.List<String> characterSet;
 
         /**
+         * <p>The storage type of databases in the target instance. Currently, only polarx is supported.</p>
+         * 
          * <strong>example:</strong>
          * <p>polarx</p>
          */

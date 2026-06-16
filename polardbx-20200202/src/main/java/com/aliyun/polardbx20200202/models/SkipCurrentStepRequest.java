@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class SkipCurrentStepRequest extends TeaModel {
     /**
+     * <p>The current operation step of the task.</p>
+     * 
      * <strong>example:</strong>
      * <p>PRE_CHECK</p>
      */
@@ -12,6 +14,8 @@ public class SkipCurrentStepRequest extends TeaModel {
     public String currentStep;
 
     /**
+     * <p>The region where the instance is located.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
      */
@@ -19,6 +23,8 @@ public class SkipCurrentStepRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The import task ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>etx-szr2rr6i*****</p>
      */

@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteEvaluateAndImportTaskRequest extends TeaModel {
     /**
+     * <p>The ID of the region where the instance resides. &gt; You can call the <a href="https://help.aliyun.com/document_detail/196841.html">DescribeRegions</a> operation to query the regions supported by PolarDB-X, including region IDs.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,8 @@ public class DeleteEvaluateAndImportTaskRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The ID of the switch task.</p>
+     * 
      * <strong>example:</strong>
      * <p>etx-szr2rr6i*****</p>
      */

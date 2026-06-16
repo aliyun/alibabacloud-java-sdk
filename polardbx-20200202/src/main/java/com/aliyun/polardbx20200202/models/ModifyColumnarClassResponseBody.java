@@ -4,6 +4,9 @@ package com.aliyun.polardbx20200202.models;
 import com.aliyun.tea.*;
 
 public class ModifyColumnarClassResponseBody extends TeaModel {
+    /**
+     * <p>The policy details returned.</p>
+     */
     @NameInMap("Data")
     public ModifyColumnarClassResponseBodyData data;
 
@@ -39,6 +42,8 @@ public class ModifyColumnarClassResponseBody extends TeaModel {
 
     public static class ModifyColumnarClassResponseBodyData extends TeaModel {
         /**
+         * <p>The task ID.</p>
+         * 
          * <strong>example:</strong>
          * <hr>
          */

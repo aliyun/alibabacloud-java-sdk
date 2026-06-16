@@ -4,10 +4,15 @@ package com.aliyun.polardbx20200202.models;
 import com.aliyun.tea.*;
 
 public class DescribeStructureImportTaskInfoResponseBody extends TeaModel {
+    /**
+     * <p>The returned result set.</p>
+     */
     @NameInMap("Data")
     public DescribeStructureImportTaskInfoResponseBodyData data;
 
     /**
+     * <p>The returned message. This parameter is empty if the request is successful. If the request fails, an error message is returned, such as an error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -15,6 +20,8 @@ public class DescribeStructureImportTaskInfoResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>1AD222E9-E606-4A42-BF6D-8A4442913CEF</p>
      */
@@ -22,6 +29,8 @@ public class DescribeStructureImportTaskInfoResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request is successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -67,6 +76,8 @@ public class DescribeStructureImportTaskInfoResponseBody extends TeaModel {
 
     public static class DescribeStructureImportTaskInfoResponseBodyDataStructureImportResult extends TeaModel {
         /**
+         * <p>The cause of the exception.</p>
+         * 
          * <strong>example:</strong>
          * <p>java.sql.SQLException: [1a7a5f22aa403000][10.239.190.4:3058][hash_realtime_new]ERR-CODE: [TDDL-5123][ERR_INSTANCE_READ_ONLY_OPTION_NOT_SUPPORT] server is running with the instance-read-only option so it cannot execute this statement</p>
          */
@@ -74,6 +85,8 @@ public class DescribeStructureImportTaskInfoResponseBody extends TeaModel {
         public String exceptionDetail;
 
         /**
+         * <p>The name of the table that encountered an exception.</p>
+         * 
          * <strong>example:</strong>
          * <p>hash_realtime_new.wm_in_job_et</p>
          */
@@ -81,6 +94,8 @@ public class DescribeStructureImportTaskInfoResponseBody extends TeaModel {
         public String exceptionFullTableName;
 
         /**
+         * <p>The number of completed records.</p>
+         * 
          * <strong>example:</strong>
          * <p>118</p>
          */
@@ -88,6 +103,8 @@ public class DescribeStructureImportTaskInfoResponseBody extends TeaModel {
         public Integer finishedNum;
 
         /**
+         * <p>The current progress in percentage.</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */
@@ -95,6 +112,8 @@ public class DescribeStructureImportTaskInfoResponseBody extends TeaModel {
         public Integer percentage;
 
         /**
+         * <p>The import status.</p>
+         * 
          * <strong>example:</strong>
          * <p>finish</p>
          */
@@ -102,6 +121,8 @@ public class DescribeStructureImportTaskInfoResponseBody extends TeaModel {
         public String status;
 
         /**
+         * <p>The total number of results.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -165,12 +186,17 @@ public class DescribeStructureImportTaskInfoResponseBody extends TeaModel {
 
     public static class DescribeStructureImportTaskInfoResponseBodyData extends TeaModel {
         /**
+         * <p>The slink status.</p>
+         * 
          * <strong>example:</strong>
          * <p>STRUCTURE_IMPORT</p>
          */
         @NameInMap("SlinkStage")
         public String slinkStage;
 
+        /**
+         * <p>The import result of the schema import task.</p>
+         */
         @NameInMap("StructureImportResult")
         public DescribeStructureImportTaskInfoResponseBodyDataStructureImportResult structureImportResult;
 

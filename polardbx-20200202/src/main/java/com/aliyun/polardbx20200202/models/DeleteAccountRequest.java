@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteAccountRequest extends TeaModel {
     /**
+     * <p>The name of the account to delete.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class DeleteAccountRequest extends TeaModel {
     public String accountName;
 
     /**
+     * <p>The name of the instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,7 @@ public class DeleteAccountRequest extends TeaModel {
     public String DBInstanceName;
 
     /**
+     * <p>The region in which the instance resides.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -32,6 +35,11 @@ public class DeleteAccountRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The name of the security administrator account.</p>
+     * <blockquote>
+     * <p>If three-role mode is enabled, this parameter is required. If three-role mode is not enabled, you do not need to specify this parameter.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>securityAccount</p>
      */
@@ -39,6 +47,11 @@ public class DeleteAccountRequest extends TeaModel {
     public String securityAccountName;
 
     /**
+     * <p>The password of the security administrator account.</p>
+     * <blockquote>
+     * <p>If three-role mode is enabled, this parameter is required. If three-role mode is not enabled, you do not need to specify this parameter.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>securityPassword</p>
      */

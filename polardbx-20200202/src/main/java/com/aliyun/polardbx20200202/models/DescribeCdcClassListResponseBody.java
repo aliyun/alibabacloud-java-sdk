@@ -4,6 +4,9 @@ package com.aliyun.polardbx20200202.models;
 import com.aliyun.tea.*;
 
 public class DescribeCdcClassListResponseBody extends TeaModel {
+    /**
+     * <p>The data struct.</p>
+     */
     @NameInMap("Data")
     public DescribeCdcClassListResponseBodyData data;
 
@@ -39,6 +42,8 @@ public class DescribeCdcClassListResponseBody extends TeaModel {
 
     public static class DescribeCdcClassListResponseBodyDataClassCodeList extends TeaModel {
         /**
+         * <p>The instance specification.</p>
+         * 
          * <strong>example:</strong>
          * <p>polarx.n2.small.2e.cdc</p>
          */
@@ -46,6 +51,8 @@ public class DescribeCdcClassListResponseBody extends TeaModel {
         public String classCode;
 
         /**
+         * <p>The number of CPU cores.</p>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */
@@ -53,6 +60,8 @@ public class DescribeCdcClassListResponseBody extends TeaModel {
         public String cpuCore;
 
         /**
+         * <p>The total memory size of the tenant. Unit: GB.</p>
+         * 
          * <strong>example:</strong>
          * <p>2048</p>
          */

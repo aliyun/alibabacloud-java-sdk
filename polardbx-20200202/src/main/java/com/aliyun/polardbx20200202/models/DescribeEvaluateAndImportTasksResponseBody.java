@@ -4,10 +4,15 @@ package com.aliyun.polardbx20200202.models;
 import com.aliyun.tea.*;
 
 public class DescribeEvaluateAndImportTasksResponseBody extends TeaModel {
+    /**
+     * <p>The task details.</p>
+     */
     @NameInMap("Data")
     public java.util.List<DescribeEvaluateAndImportTasksResponseBodyData> data;
 
     /**
+     * <p>The returned message. &gt; This parameter is empty when the request succeeds. When the request fails, exception information (such as error codes) is returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -15,6 +20,8 @@ public class DescribeEvaluateAndImportTasksResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -22,6 +29,8 @@ public class DescribeEvaluateAndImportTasksResponseBody extends TeaModel {
     public Long pageNumber;
 
     /**
+     * <p>The number of entries per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
@@ -29,6 +38,8 @@ public class DescribeEvaluateAndImportTasksResponseBody extends TeaModel {
     public Long pageSize;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>81519FDE-713B-****-B6F1-231479A4C9DB</p>
      */
@@ -36,6 +47,8 @@ public class DescribeEvaluateAndImportTasksResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>True</p>
      */
@@ -43,6 +56,8 @@ public class DescribeEvaluateAndImportTasksResponseBody extends TeaModel {
     public Boolean success;
 
     /**
+     * <p>The total number of entries.</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
@@ -112,6 +127,8 @@ public class DescribeEvaluateAndImportTasksResponseBody extends TeaModel {
 
     public static class DescribeEvaluateAndImportTasksResponseBodyData extends TeaModel {
         /**
+         * <p>The business ID of the import task.</p>
+         * 
          * <strong>example:</strong>
          * <p>26842</p>
          */
@@ -119,6 +136,8 @@ public class DescribeEvaluateAndImportTasksResponseBody extends TeaModel {
         public String bid;
 
         /**
+         * <p>The creator of the import task.</p>
+         * 
          * <strong>example:</strong>
          * <p>346650</p>
          */
@@ -126,6 +145,8 @@ public class DescribeEvaluateAndImportTasksResponseBody extends TeaModel {
         public String creator;
 
         /**
+         * <p>Indicates whether the task is deleted.</p>
+         * 
          * <strong>example:</strong>
          * <p>fase</p>
          */
@@ -133,6 +154,8 @@ public class DescribeEvaluateAndImportTasksResponseBody extends TeaModel {
         public Boolean deleted;
 
         /**
+         * <p>The task creation timestamp, in milliseconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>2025-01-08T15:00Z</p>
          */
@@ -140,6 +163,8 @@ public class DescribeEvaluateAndImportTasksResponseBody extends TeaModel {
         public Long gmtCreated;
 
         /**
+         * <p>The modification time of the metadata information.</p>
+         * 
          * <strong>example:</strong>
          * <p>2025-04-02T02:10:59Z</p>
          */
@@ -147,6 +172,8 @@ public class DescribeEvaluateAndImportTasksResponseBody extends TeaModel {
         public Long gmtModified;
 
         /**
+         * <p>The task ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>ap-northeast-1</p>
          */
@@ -154,6 +181,8 @@ public class DescribeEvaluateAndImportTasksResponseBody extends TeaModel {
         public Long id;
 
         /**
+         * <p>The region ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-zhangjiakou</p>
          */
@@ -161,6 +190,8 @@ public class DescribeEvaluateAndImportTasksResponseBody extends TeaModel {
         public String regionId;
 
         /**
+         * <p>The name of the slink destination database.</p>
+         * 
          * <strong>example:</strong>
          * <p>e3plus_*****_prod</p>
          */
@@ -168,6 +199,8 @@ public class DescribeEvaluateAndImportTasksResponseBody extends TeaModel {
         public String slinkDstDb;
 
         /**
+         * <p>The instance ID of the destination.</p>
+         * 
          * <strong>example:</strong>
          * <p>pxc-hzrehc****5zye</p>
          */
@@ -175,6 +208,8 @@ public class DescribeEvaluateAndImportTasksResponseBody extends TeaModel {
         public String slinkDstResId;
 
         /**
+         * <p>The username for the data connection of the destination.</p>
+         * 
          * <strong>example:</strong>
          * <p>dts_temp_2_23</p>
          */
@@ -182,6 +217,8 @@ public class DescribeEvaluateAndImportTasksResponseBody extends TeaModel {
         public String slinkDstUserName;
 
         /**
+         * <p>The name of the slink source database.</p>
+         * 
          * <strong>example:</strong>
          * <p>stock</p>
          */
@@ -189,6 +226,8 @@ public class DescribeEvaluateAndImportTasksResponseBody extends TeaModel {
         public String slinkSrcDb;
 
         /**
+         * <p>The instance ID of the source.</p>
+         * 
          * <strong>example:</strong>
          * <p>drdshbga*****w4p</p>
          */
@@ -196,6 +235,8 @@ public class DescribeEvaluateAndImportTasksResponseBody extends TeaModel {
         public String slinkSrcResId;
 
         /**
+         * <p>The resource type of the source.</p>
+         * 
          * <strong>example:</strong>
          * <p>RDS_MYSQL</p>
          */
@@ -203,6 +244,8 @@ public class DescribeEvaluateAndImportTasksResponseBody extends TeaModel {
         public String slinkSrcResType;
 
         /**
+         * <p>The username for the data connection of the source.</p>
+         * 
          * <strong>example:</strong>
          * <p>dtdba</p>
          */
@@ -210,6 +253,8 @@ public class DescribeEvaluateAndImportTasksResponseBody extends TeaModel {
         public String slinkSrcUserName;
 
         /**
+         * <p>The stage of the synchronization task.</p>
+         * 
          * <strong>example:</strong>
          * <p>DATA_IMPORT_RUNNING</p>
          */
@@ -217,6 +262,8 @@ public class DescribeEvaluateAndImportTasksResponseBody extends TeaModel {
         public String slinkStage;
 
         /**
+         * <p>The running status of the synchronization task.</p>
+         * 
          * <strong>example:</strong>
          * <p>IMPORT_NOT_BEGIN</p>
          */
@@ -224,6 +271,8 @@ public class DescribeEvaluateAndImportTasksResponseBody extends TeaModel {
         public String slinkStatus;
 
         /**
+         * <p>The description of the slink task.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -231,6 +280,8 @@ public class DescribeEvaluateAndImportTasksResponseBody extends TeaModel {
         public String slinkTaskDesc;
 
         /**
+         * <p>The slink task ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>etx-szr2rr6i*****</p>
          */
@@ -238,6 +289,8 @@ public class DescribeEvaluateAndImportTasksResponseBody extends TeaModel {
         public String slinkTaskId;
 
         /**
+         * <p>The synchronization type.</p>
+         * 
          * <strong>example:</strong>
          * <p>evaluate_import</p>
          */

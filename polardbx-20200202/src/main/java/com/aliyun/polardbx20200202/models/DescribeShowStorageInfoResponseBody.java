@@ -5,12 +5,17 @@ import com.aliyun.tea.*;
 
 public class DescribeShowStorageInfoResponseBody extends TeaModel {
     /**
+     * <p>The return code of the request. This parameter is empty when the request is successful. When the request fails, exception information such as an error code is returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The data.</p>
+     */
     @NameInMap("Data")
     public DescribeShowStorageInfoResponseBodyData data;
 
@@ -54,6 +59,8 @@ public class DescribeShowStorageInfoResponseBody extends TeaModel {
 
     public static class DescribeShowStorageInfoResponseBodyDataStorageInfos extends TeaModel {
         /**
+         * <p>The specification type (specification code) of the instance.</p>
+         * 
          * <strong>example:</strong>
          * <p>polar.mysql.x4.large</p>
          */
@@ -61,6 +68,8 @@ public class DescribeShowStorageInfoResponseBody extends TeaModel {
         public String _class;
 
         /**
+         * <p>The number of databases.</p>
+         * 
          * <strong>example:</strong>
          * <p>3</p>
          */
@@ -68,6 +77,8 @@ public class DescribeShowStorageInfoResponseBody extends TeaModel {
         public Long dbCount;
 
         /**
+         * <p>Indicates whether the instance can be deleted.</p>
+         * 
          * <strong>example:</strong>
          * <p>True</p>
          */
@@ -75,6 +86,8 @@ public class DescribeShowStorageInfoResponseBody extends TeaModel {
         public Boolean deletable;
 
         /**
+         * <p>The number of node groups.</p>
+         * 
          * <strong>example:</strong>
          * <p>12</p>
          */
@@ -82,6 +95,11 @@ public class DescribeShowStorageInfoResponseBody extends TeaModel {
         public Long groupCount;
 
         /**
+         * <p>The role type of the instance. Valid values:
+         * MASTER: primary instance.
+         * READONLY: read-only instance.
+         * STANDBY: standby instance (high-availability scenario).</p>
+         * 
          * <strong>example:</strong>
          * <p>MASTER</p>
          */
@@ -89,6 +107,8 @@ public class DescribeShowStorageInfoResponseBody extends TeaModel {
         public String instKind;
 
         /**
+         * <p>Indicates whether the instance or cluster is currently in a healthy state.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -96,6 +116,8 @@ public class DescribeShowStorageInfoResponseBody extends TeaModel {
         public Boolean isHealthy;
 
         /**
+         * <p>The identifier of the leader node.</p>
+         * 
          * <strong>example:</strong>
          * <p>11.117.237.205:3029</p>
          */
@@ -103,6 +125,8 @@ public class DescribeShowStorageInfoResponseBody extends TeaModel {
         public String leaderNode;
 
         /**
+         * <p>The instance status.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -110,6 +134,8 @@ public class DescribeShowStorageInfoResponseBody extends TeaModel {
         public Long status;
 
         /**
+         * <p>The instance name.</p>
+         * 
          * <strong>example:</strong>
          * <p>pxc-xdb-m-pxcbjrylg49skcxb17394</p>
          */
@@ -196,6 +222,9 @@ public class DescribeShowStorageInfoResponseBody extends TeaModel {
     }
 
     public static class DescribeShowStorageInfoResponseBodyData extends TeaModel {
+        /**
+         * <p>The list of storage information.</p>
+         */
         @NameInMap("StorageInfos")
         public java.util.List<DescribeShowStorageInfoResponseBodyDataStorageInfos> storageInfos;
 

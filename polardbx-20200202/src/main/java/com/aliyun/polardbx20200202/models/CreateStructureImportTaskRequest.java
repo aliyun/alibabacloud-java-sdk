@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateStructureImportTaskRequest extends TeaModel {
     /**
+     * <p>The configuration information.</p>
+     * 
      * <strong>example:</strong>
      * <p>[{\&quot;schemaName\&quot;:\&quot;transfer_test\&quot;,\&quot;tableList\&quot;:[]}]</p>
      */
@@ -12,6 +14,8 @@ public class CreateStructureImportTaskRequest extends TeaModel {
     public String config;
 
     /**
+     * <p>The instance ID. &gt; You can call the <a href="https://help.aliyun.com/document_detail/196830.html">DescribeDBInstances</a> operation to query the details of all instances in the specified region, including instance IDs.</p>
+     * 
      * <strong>example:</strong>
      * <p>pxc-********</p>
      */
@@ -19,6 +23,7 @@ public class CreateStructureImportTaskRequest extends TeaModel {
     public String DBInstanceName;
 
     /**
+     * <p>The region in which the instance resides.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -28,6 +33,7 @@ public class CreateStructureImportTaskRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The ID of the target task. &gt; You can call the <a href="https://help.aliyun.com/document_detail/196830.html">DescribeSlinkTasks</a> operation to query the execution status of the target task, including the task ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

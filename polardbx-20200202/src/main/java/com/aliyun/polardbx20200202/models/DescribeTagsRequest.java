@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeTagsRequest extends TeaModel {
     /**
+     * <p>The instance name.</p>
+     * 
      * <strong>example:</strong>
      * <p>pxc-xxx</p>
      */
@@ -12,6 +14,7 @@ public class DescribeTagsRequest extends TeaModel {
     public String DBInstanceName;
 
     /**
+     * <p>The region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,6 +24,8 @@ public class DescribeTagsRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The tag key.</p>
+     * 
      * <strong>example:</strong>
      * <p>test</p>
      */

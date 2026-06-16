@@ -4,6 +4,9 @@ package com.aliyun.polardbx20200202.models;
 import com.aliyun.tea.*;
 
 public class DescribeParameterGroupsResponseBody extends TeaModel {
+    /**
+     * <p>The instance details.</p>
+     */
     @NameInMap("Data")
     public DescribeParameterGroupsResponseBodyData data;
 
@@ -38,10 +41,15 @@ public class DescribeParameterGroupsResponseBody extends TeaModel {
     }
 
     public static class DescribeParameterGroupsResponseBodyDataParameterGroups extends TeaModel {
+        /**
+         * <p>Indicates whether a forced restart of CN is required.</p>
+         */
         @NameInMap("CnForceRestart")
         public Boolean cnForceRestart;
 
         /**
+         * <p>The number of CN parameters.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -49,6 +57,8 @@ public class DescribeParameterGroupsResponseBody extends TeaModel {
         public Integer cnParamCount;
 
         /**
+         * <p>The database type.</p>
+         * 
          * <strong>example:</strong>
          * <p>polarx</p>
          */
@@ -56,16 +66,23 @@ public class DescribeParameterGroupsResponseBody extends TeaModel {
         public String dbType;
 
         /**
+         * <p>The database engine version.</p>
+         * 
          * <strong>example:</strong>
          * <p>5.7</p>
          */
         @NameInMap("DbVersion")
         public String dbVersion;
 
+        /**
+         * <p>Indicates whether a forced restart of DN is required.</p>
+         */
         @NameInMap("DnForceRestart")
         public Boolean dnForceRestart;
 
         /**
+         * <p>The number of DN parameters.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -73,6 +90,8 @@ public class DescribeParameterGroupsResponseBody extends TeaModel {
         public Integer dnParamCount;
 
         /**
+         * <p>The time when the account was created.</p>
+         * 
          * <strong>example:</strong>
          * <p>2024-12-19T16:41:31+08:00</p>
          */
@@ -80,6 +99,8 @@ public class DescribeParameterGroupsResponseBody extends TeaModel {
         public String gmtCreated;
 
         /**
+         * <p>The modification time, in timestamp format.</p>
+         * 
          * <strong>example:</strong>
          * <p>1605079985000</p>
          */
@@ -87,6 +108,11 @@ public class DescribeParameterGroupsResponseBody extends TeaModel {
         public String gmtModified;
 
         /**
+         * <p>The parameter template ID.</p>
+         * <blockquote>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/207178.html">DescribeParameterGroups</a> operation to query the details of all parameter templates in the specified region, including the parameter template ID.</p>
+         * </blockquote>
+         * 
          * <strong>example:</strong>
          * <p>rpg-s1y1xy06****fqs7y</p>
          */
@@ -94,6 +120,8 @@ public class DescribeParameterGroupsResponseBody extends TeaModel {
         public String parameterGroupId;
 
         /**
+         * <p>The parameter template name.</p>
+         * 
          * <strong>example:</strong>
          * <p>dstest_api_new</p>
          */
@@ -101,6 +129,8 @@ public class DescribeParameterGroupsResponseBody extends TeaModel {
         public String parameterGroupName;
 
         /**
+         * <p>The parameter templatetype.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -108,6 +138,12 @@ public class DescribeParameterGroupsResponseBody extends TeaModel {
         public String parameterGroupType;
 
         /**
+         * <p>The instance edition. Valid values:</p>
+         * <ul>
+         * <li><strong>enterprise</strong>: Enterprise Edition.</li>
+         * <li><strong>standard</strong>: Standard Edition.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>enterprise</p>
          */
@@ -218,10 +254,15 @@ public class DescribeParameterGroupsResponseBody extends TeaModel {
     }
 
     public static class DescribeParameterGroupsResponseBodyData extends TeaModel {
+        /**
+         * <p>The parameter template name.</p>
+         */
         @NameInMap("ParameterGroups")
         public java.util.List<DescribeParameterGroupsResponseBodyDataParameterGroups> parameterGroups;
 
         /**
+         * <p>The request ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>1E5DCFFC-A00D-****-836E-73318F8CA577</p>
          */

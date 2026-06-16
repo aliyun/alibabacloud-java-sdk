@@ -4,10 +4,15 @@ package com.aliyun.polardbx20200202.models;
 import com.aliyun.tea.*;
 
 public class UpgradeColumnarVersionResponseBody extends TeaModel {
+    /**
+     * <p>The returned data.</p>
+     */
     @NameInMap("Data")
     public UpgradeColumnarVersionResponseBodyData data;
 
     /**
+     * <p>The response message.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -24,6 +29,8 @@ public class UpgradeColumnarVersionResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -69,6 +76,8 @@ public class UpgradeColumnarVersionResponseBody extends TeaModel {
 
     public static class UpgradeColumnarVersionResponseBodyDataTaskList extends TeaModel {
         /**
+         * <p>The instance ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>rm-uf68f345****88zf8</p>
          */
@@ -76,6 +85,8 @@ public class UpgradeColumnarVersionResponseBody extends TeaModel {
         public String dbInstanceName;
 
         /**
+         * <p>The target task ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>1861190497624654848</p>
          */
@@ -107,12 +118,17 @@ public class UpgradeColumnarVersionResponseBody extends TeaModel {
 
     public static class UpgradeColumnarVersionResponseBodyData extends TeaModel {
         /**
+         * <p>The target version number.</p>
+         * 
          * <strong>example:</strong>
          * <p>polardb-2.4.0_5.4.19-20250116_xcluster5.4.20-20241213</p>
          */
         @NameInMap("MinorVersion")
         public String minorVersion;
 
+        /**
+         * <p>The list of upgrade tasks.</p>
+         */
         @NameInMap("TaskList")
         public java.util.List<UpgradeColumnarVersionResponseBodyDataTaskList> taskList;
 

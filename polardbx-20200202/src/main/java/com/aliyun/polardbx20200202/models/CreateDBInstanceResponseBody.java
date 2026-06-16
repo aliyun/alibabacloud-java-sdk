@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateDBInstanceResponseBody extends TeaModel {
     /**
+     * <p>The name of the created instance.</p>
+     * 
      * <strong>example:</strong>
      * <p>pxc-*********</p>
      */
@@ -12,6 +14,8 @@ public class CreateDBInstanceResponseBody extends TeaModel {
     public String DBInstanceName;
 
     /**
+     * <p>The order ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>12345</p>
      */
@@ -19,6 +23,8 @@ public class CreateDBInstanceResponseBody extends TeaModel {
     public String orderId;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>9B2F3840-5C98-475C-B269-2D5C3A31797C</p>
      */

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeAvailableCrossRegionsRequest extends TeaModel {
     /**
+     * <p>The instance name.</p>
+     * 
      * <strong>example:</strong>
      * <p>pxc-hzjasd****</p>
      */
@@ -12,6 +14,8 @@ public class DescribeAvailableCrossRegionsRequest extends TeaModel {
     public String DBInstanceName;
 
     /**
+     * <p>The region in which the instance resides.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
      */

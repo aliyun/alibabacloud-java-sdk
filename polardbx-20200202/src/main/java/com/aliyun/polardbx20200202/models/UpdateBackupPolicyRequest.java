@@ -5,6 +5,17 @@ import com.aliyun.tea.*;
 
 public class UpdateBackupPolicyRequest extends TeaModel {
     /**
+     * <p>The backup cycle. You must specify at least 2 days. The value is a 7-digit number. From left to right, each digit indicates whether backup is enabled from Monday to Sunday. A value of 0 indicates that backup is disabled, and a value of 1 indicates that backup is enabled:</p>
+     * <ul>
+     * <li>First digit: Monday</li>
+     * <li>Second digit: Tuesday</li>
+     * <li>Third digit: Wednesday</li>
+     * <li>Fourth digit: Thursday</li>
+     * <li>Fifth digit: Friday</li>
+     * <li>Sixth digit: Saturday</li>
+     * <li>Seventh digit: Sunday.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>1001000</p>
      */
@@ -12,6 +23,8 @@ public class UpdateBackupPolicyRequest extends TeaModel {
     public String backupPeriod;
 
     /**
+     * <p>The start time of the daily backup, in UTC.</p>
+     * 
      * <strong>example:</strong>
      * <p>03:00Z</p>
      */
@@ -19,6 +32,8 @@ public class UpdateBackupPolicyRequest extends TeaModel {
     public String backupPlanBegin;
 
     /**
+     * <p>The retention period of backup sets. Unit: days.</p>
+     * 
      * <strong>example:</strong>
      * <p>30</p>
      */
@@ -26,6 +41,8 @@ public class UpdateBackupPolicyRequest extends TeaModel {
     public Integer backupSetRetention;
 
     /**
+     * <p>The backup type. Currently, only &quot;0&quot; is supported, which indicates fast backup.</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
@@ -33,6 +50,12 @@ public class UpdateBackupPolicyRequest extends TeaModel {
     public String backupType;
 
     /**
+     * <p>The backup method. Valid values:</p>
+     * <ul>
+     * <li><strong>P</strong>: physical backup</li>
+     * <li><strong>L</strong>: logical backup.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>P</p>
      */
@@ -40,6 +63,8 @@ public class UpdateBackupPolicyRequest extends TeaModel {
     public String backupWay;
 
     /**
+     * <p>The interval for cold data backups. Unit: days. Valid values: 1 to 59.</p>
+     * 
      * <strong>example:</strong>
      * <p>30</p>
      */
@@ -47,22 +72,37 @@ public class UpdateBackupPolicyRequest extends TeaModel {
     public Integer coldDataBackupInterval;
 
     /**
+     * <p>The retention period for cold data backups. Unit: days. Valid values: 30 to 730.</p>
+     * 
      * <strong>example:</strong>
      * <p>30</p>
      */
     @NameInMap("ColdDataBackupRetention")
     public Integer coldDataBackupRetention;
 
+    /**
+     * <p>The retention period for cross-region data backups. Unit: days.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>30</p>
+     */
     @NameInMap("CrossRegionDataBackupRetention")
     public Integer crossRegionDataBackupRetention;
 
     @NameInMap("CrossRegionFilterValue")
     public String crossRegionFilterValue;
 
+    /**
+     * <p>The retention period for cross-region log backups. Unit: days.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>30</p>
+     */
     @NameInMap("CrossRegionLogBackupRetention")
     public Integer crossRegionLogBackupRetention;
 
     /**
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -71,23 +111,49 @@ public class UpdateBackupPolicyRequest extends TeaModel {
     @NameInMap("DBInstanceName")
     public String DBInstanceName;
 
+    /**
+     * <p>The destination region for cross-region backup.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shanghai</p>
+     */
     @NameInMap("DestCrossRegion")
     public String destCrossRegion;
 
     /**
+     * <p>Specifies whether to forcibly clean up binary logs when the total space usage of the instance exceeds 80% or the remaining space is less than 50 GB. The cleanup starts from the earliest logs until the total space usage drops below 80% and the remaining space exceeds 50 GB. Valid values:</p>
+     * <ul>
+     * <li><strong>1</strong>: yes</li>
+     * <li><strong>0</strong>: no.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
     @NameInMap("ForceCleanOnHighSpaceUsage")
     public Integer forceCleanOnHighSpaceUsage;
 
+    /**
+     * <p>Specifies whether to enable cross-region data backup. Default value: false.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("IsCrossRegionDataBackupEnabled")
     public Boolean isCrossRegionDataBackupEnabled;
 
+    /**
+     * <p>Specifies whether to enable cross-region log backup. Default value: false.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("IsCrossRegionLogBackupEnabled")
     public Boolean isCrossRegionLogBackupEnabled;
 
     /**
+     * <p>Specifies whether to enable backup. The value is fixed to 1, which indicates that backup is enabled.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -95,16 +161,26 @@ public class UpdateBackupPolicyRequest extends TeaModel {
     public Integer isEnabled;
 
     /**
+     * <p>The number of hours that log backups are retained locally. Valid values: 0 to 168 (7 × 24 hours). A value of 0 indicates that log backups are not retained locally. Default value: 7.</p>
+     * 
      * <strong>example:</strong>
      * <p>7</p>
      */
     @NameInMap("LocalLogRetention")
     public Integer localLogRetention;
 
+    /**
+     * <p>The number of binary logs retained locally. Default value: 60. Valid values: 6 to 100.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>60</p>
+     */
     @NameInMap("LocalLogRetentionNumber")
     public Integer localLogRetentionNumber;
 
     /**
+     * <p>The maximum space usage for binary logs, expressed as a percentage. Valid values: 0 to 50. This parameter specifies a loop space. Default value: 30.</p>
+     * 
      * <strong>example:</strong>
      * <p>30</p>
      */
@@ -112,6 +188,7 @@ public class UpdateBackupPolicyRequest extends TeaModel {
     public Integer logLocalRetentionSpace;
 
     /**
+     * <p>The region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -121,6 +198,8 @@ public class UpdateBackupPolicyRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The number of days that log backups are retained remotely. Valid values: 7 to 730. Unit: days. Default value: 7.</p>
+     * 
      * <strong>example:</strong>
      * <p>7</p>
      */

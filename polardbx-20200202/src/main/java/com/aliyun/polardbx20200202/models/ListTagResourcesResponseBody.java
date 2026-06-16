@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListTagResourcesResponseBody extends TeaModel {
     /**
+     * <p>The token for the next query. If this parameter is empty, no more results exist.</p>
+     * 
      * <strong>example:</strong>
      * <p>xxdd</p>
      */
@@ -12,6 +14,8 @@ public class ListTagResourcesResponseBody extends TeaModel {
     public String nextToken;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>xxxx-xxxxxx</p>
      */

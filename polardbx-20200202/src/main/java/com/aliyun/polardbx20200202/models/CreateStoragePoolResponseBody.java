@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateStoragePoolResponseBody extends TeaModel {
     /**
+     * <p>The response code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */

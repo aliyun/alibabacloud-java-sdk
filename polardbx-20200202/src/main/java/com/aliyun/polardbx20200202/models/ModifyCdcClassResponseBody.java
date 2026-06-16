@@ -4,6 +4,9 @@ package com.aliyun.polardbx20200202.models;
 import com.aliyun.tea.*;
 
 public class ModifyCdcClassResponseBody extends TeaModel {
+    /**
+     * <p>The data struct.</p>
+     */
     @NameInMap("Data")
     public ModifyCdcClassResponseBodyData data;
 
@@ -39,6 +42,8 @@ public class ModifyCdcClassResponseBody extends TeaModel {
 
     public static class ModifyCdcClassResponseBodyData extends TeaModel {
         /**
+         * <p>The task ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>2209883</p>
          */

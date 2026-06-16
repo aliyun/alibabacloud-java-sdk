@@ -4,10 +4,19 @@ package com.aliyun.polardbx20200202.models;
 import com.aliyun.tea.*;
 
 public class DescribeActiveOperationMaintainConfResponseBody extends TeaModel {
+    /**
+     * <p>The configuration information.</p>
+     */
     @NameInMap("Config")
     public DescribeActiveOperationMaintainConfResponseBodyConfig config;
 
     /**
+     * <p>Indicates whether the O&amp;M window has been configured. Valid values:</p>
+     * <ul>
+     * <li>1: configured.</li>
+     * <li>0: not configured.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -15,6 +24,8 @@ public class DescribeActiveOperationMaintainConfResponseBody extends TeaModel {
     public Long hasConfig;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>1A586DCB-39A6-4050-81CC-C7BD4CCDB49F</p>
      */
@@ -52,6 +63,8 @@ public class DescribeActiveOperationMaintainConfResponseBody extends TeaModel {
 
     public static class DescribeActiveOperationMaintainConfResponseBodyConfig extends TeaModel {
         /**
+         * <p>The creation time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2021-08-11T10:08:27Z</p>
          */
@@ -59,6 +72,8 @@ public class DescribeActiveOperationMaintainConfResponseBody extends TeaModel {
         public String createdTime;
 
         /**
+         * <p>The cycle time.</p>
+         * 
          * <strong>example:</strong>
          * <p>1,2,3,4,5,6,7</p>
          */
@@ -66,6 +81,8 @@ public class DescribeActiveOperationMaintainConfResponseBody extends TeaModel {
         public String cycleTime;
 
         /**
+         * <p>The cycle type.</p>
+         * 
          * <strong>example:</strong>
          * <p>Week</p>
          */
@@ -73,6 +90,8 @@ public class DescribeActiveOperationMaintainConfResponseBody extends TeaModel {
         public String cycleType;
 
         /**
+         * <p>The end time of the O&amp;M window.</p>
+         * 
          * <strong>example:</strong>
          * <p>04:00:00Z</p>
          */
@@ -80,6 +99,8 @@ public class DescribeActiveOperationMaintainConfResponseBody extends TeaModel {
         public String maintainEndTime;
 
         /**
+         * <p>The start time of the O&amp;M window.</p>
+         * 
          * <strong>example:</strong>
          * <p>04:00:00Z</p>
          */
@@ -87,6 +108,8 @@ public class DescribeActiveOperationMaintainConfResponseBody extends TeaModel {
         public String maintainStartTime;
 
         /**
+         * <p>The modification time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2021-08-11T10:08:27Z</p>
          */
@@ -94,6 +117,8 @@ public class DescribeActiveOperationMaintainConfResponseBody extends TeaModel {
         public String modifiedTime;
 
         /**
+         * <p>The status.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */

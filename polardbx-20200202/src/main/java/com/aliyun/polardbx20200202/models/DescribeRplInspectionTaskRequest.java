@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeRplInspectionTaskRequest extends TeaModel {
     /**
+     * <p>The current page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -12,6 +14,8 @@ public class DescribeRplInspectionTaskRequest extends TeaModel {
     public Integer failPageNumber;
 
     /**
+     * <p>The number of records per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -19,6 +23,7 @@ public class DescribeRplInspectionTaskRequest extends TeaModel {
     public Integer failPageSize;
 
     /**
+     * <p>The region where the instance resides.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -28,6 +33,8 @@ public class DescribeRplInspectionTaskRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The switchover task ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>etx-szr2rr6i*****</p>
      */
@@ -35,6 +42,8 @@ public class DescribeRplInspectionTaskRequest extends TeaModel {
     public String slinkTaskId;
 
     /**
+     * <p>The requested page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -42,6 +51,8 @@ public class DescribeRplInspectionTaskRequest extends TeaModel {
     public Long successPageNumber;
 
     /**
+     * <p>The number of records per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>15</p>
      */

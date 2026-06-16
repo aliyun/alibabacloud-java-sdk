@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateDBRequest extends TeaModel {
     /**
+     * <p>The name of the account that is authorized to access the created database.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,14 @@ public class CreateDBRequest extends TeaModel {
     public String accountName;
 
     /**
+     * <p>The permissions granted to the account on the database. Valid values:</p>
+     * <ul>
+     * <li><strong>ReadWrite</strong>: read and write permissions.</li>
+     * <li><strong>ReadOnly</strong>: read-only permissions.</li>
+     * <li><strong>DMLOnly</strong>: DML-only permissions.</li>
+     * <li><strong>DDLOnly</strong>: DDL-only permissions.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>ReadWrite</p>
      */
@@ -21,6 +30,13 @@ public class CreateDBRequest extends TeaModel {
     public String accountPrivilege;
 
     /**
+     * <p>The character set. Valid values:</p>
+     * <ul>
+     * <li><strong>utf8</strong></li>
+     * <li><strong>gbk</strong></li>
+     * <li><strong>latin1</strong></li>
+     * <li><strong>utf8mb4</strong>.</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -30,6 +46,7 @@ public class CreateDBRequest extends TeaModel {
     public String charset;
 
     /**
+     * <p>The name of the instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -39,6 +56,8 @@ public class CreateDBRequest extends TeaModel {
     public String DBInstanceName;
 
     /**
+     * <p>The description of the database.</p>
+     * 
      * <strong>example:</strong>
      * <p>db for test</p>
      */
@@ -46,6 +65,7 @@ public class CreateDBRequest extends TeaModel {
     public String dbDescription;
 
     /**
+     * <p>The name of the database to create.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -55,6 +75,12 @@ public class CreateDBRequest extends TeaModel {
     public String dbName;
 
     /**
+     * <p>The mode of the database. Valid values:</p>
+     * <ul>
+     * <li><strong>auto</strong>: The database supports automatic partitioning. You do not need to specify a partition key when you create a table.</li>
+     * <li><strong>drds</strong>: The database does not support automatic partitioning. You must use the dedicated sharding syntax to specify sharding keys when you create a table.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>auto</p>
      */
@@ -62,6 +88,7 @@ public class CreateDBRequest extends TeaModel {
     public String mode;
 
     /**
+     * <p>The region where the instance resides.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -71,6 +98,11 @@ public class CreateDBRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The name of the security administrator account.</p>
+     * <blockquote>
+     * <p>If the three-role mode is enabled, this parameter is required. If the three-role mode is not enabled, this parameter is not required.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>securityAccount</p>
      */
@@ -78,6 +110,11 @@ public class CreateDBRequest extends TeaModel {
     public String securityAccountName;
 
     /**
+     * <p>The password of the security administrator account.</p>
+     * <blockquote>
+     * <p>If the three-role mode is enabled, this parameter is required. If the three-role mode is not enabled, this parameter is not required.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>securityPassword</p>
      */

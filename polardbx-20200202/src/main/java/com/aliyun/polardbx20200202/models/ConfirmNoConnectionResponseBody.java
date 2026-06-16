@@ -4,10 +4,15 @@ package com.aliyun.polardbx20200202.models;
 import com.aliyun.tea.*;
 
 public class ConfirmNoConnectionResponseBody extends TeaModel {
+    /**
+     * <p>The returned data.</p>
+     */
     @NameInMap("Data")
     public ConfirmNoConnectionResponseBodyData data;
 
     /**
+     * <p>The additional information returned. The value success is returned if the request is successful. Otherwise, an error code is returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>Success</p>
      */
@@ -15,6 +20,8 @@ public class ConfirmNoConnectionResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>6BA32080EEA</p>
      */
@@ -22,6 +29,8 @@ public class ConfirmNoConnectionResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request is successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -67,6 +76,8 @@ public class ConfirmNoConnectionResponseBody extends TeaModel {
 
     public static class ConfirmNoConnectionResponseBodyData extends TeaModel {
         /**
+         * <p>The original task ID, used to match the response with the request.</p>
+         * 
          * <strong>example:</strong>
          * <p>etx-szr2rr6i*****</p>
          */

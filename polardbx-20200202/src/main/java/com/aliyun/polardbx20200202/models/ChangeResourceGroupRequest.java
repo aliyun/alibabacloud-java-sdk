@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ChangeResourceGroupRequest extends TeaModel {
     /**
+     * <p>The ID of the new resource group.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class ChangeResourceGroupRequest extends TeaModel {
     public String newResourceGroupId;
 
     /**
+     * <p>The region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,7 @@ public class ChangeResourceGroupRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The resource ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -32,10 +35,11 @@ public class ChangeResourceGroupRequest extends TeaModel {
     public String resourceId;
 
     /**
+     * <p>The resource type. Currently, only PolarDB-X 2.0 instances are supported.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>PolarDBXInstance</p>
+     * <p>polardbxinstance</p>
      */
     @NameInMap("ResourceType")
     public String resourceType;

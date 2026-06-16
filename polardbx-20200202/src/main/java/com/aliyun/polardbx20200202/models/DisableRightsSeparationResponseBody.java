@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DisableRightsSeparationResponseBody extends TeaModel {
     /**
+     * <p>Returns success if the request is successful. Otherwise, returns the corresponding error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -12,6 +14,8 @@ public class DisableRightsSeparationResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The unique request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>FE5D94E3-3C93-3594-95D9-AAED2A980915</p>
      */
@@ -19,6 +23,8 @@ public class DisableRightsSeparationResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request is successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

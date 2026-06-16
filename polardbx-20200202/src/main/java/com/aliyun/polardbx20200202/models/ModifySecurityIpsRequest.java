@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifySecurityIpsRequest extends TeaModel {
     /**
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,8 @@ public class ModifySecurityIpsRequest extends TeaModel {
     public String DBInstanceName;
 
     /**
+     * <p>The name of the whitelist group of the instance.</p>
+     * 
      * <strong>example:</strong>
      * <p>default</p>
      */
@@ -21,6 +24,13 @@ public class ModifySecurityIpsRequest extends TeaModel {
     public String groupName;
 
     /**
+     * <p>The modification mode of the whitelist. Valid values:</p>
+     * <ul>
+     * <li>0: overwrites the whitelist group.</li>
+     * <li>1: adds a whitelist group.</li>
+     * <li>2: deletes a whitelist group.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -28,6 +38,7 @@ public class ModifySecurityIpsRequest extends TeaModel {
     public String modifyMode;
 
     /**
+     * <p>The region ID of the instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -37,6 +48,7 @@ public class ModifySecurityIpsRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The list of IP addresses in the whitelist group. Separate multiple IP addresses with commas (,).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

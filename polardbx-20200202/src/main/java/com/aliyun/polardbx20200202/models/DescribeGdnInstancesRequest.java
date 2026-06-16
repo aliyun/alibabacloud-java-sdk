@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeGdnInstancesRequest extends TeaModel {
     /**
+     * <p>The message filter type.</p>
+     * 
      * <strong>example:</strong>
      * <p>gdn_id、
      * polarx_id</p>
@@ -13,6 +15,9 @@ public class DescribeGdnInstancesRequest extends TeaModel {
     public String filterType;
 
     /**
+     * <p>The filter value for querying resources.</p>
+     * <p>This parameter is used together with FilterKey.</p>
+     * 
      * <strong>example:</strong>
      * <p>gdn-<em><strong>、
      * pxc-</strong></em></p>
@@ -21,7 +26,7 @@ public class DescribeGdnInstancesRequest extends TeaModel {
     public String filterValue;
 
     /**
-     * <p>GDN ID。</p>
+     * <p>The GDN ID.</p>
      * 
      * <strong>example:</strong>
      * <p>gdn-***</p>
@@ -30,6 +35,8 @@ public class DescribeGdnInstancesRequest extends TeaModel {
     public String GDNId;
 
     /**
+     * <p>The page number. The value must be a positive integer that does not exceed the maximum value of the Integer data type. Default value: 1.</p>
+     * 
      * <strong>example:</strong>
      * <p>50</p>
      */
@@ -37,6 +44,8 @@ public class DescribeGdnInstancesRequest extends TeaModel {
     public String pageNum;
 
     /**
+     * <p>The page size.</p>
+     * 
      * <strong>example:</strong>
      * <p>30</p>
      */
@@ -44,6 +53,8 @@ public class DescribeGdnInstancesRequest extends TeaModel {
     public String pageSize;
 
     /**
+     * <p>The region ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
      */

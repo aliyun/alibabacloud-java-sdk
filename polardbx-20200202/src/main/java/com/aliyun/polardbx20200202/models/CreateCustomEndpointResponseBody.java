@@ -4,6 +4,9 @@ package com.aliyun.polardbx20200202.models;
 import com.aliyun.tea.*;
 
 public class CreateCustomEndpointResponseBody extends TeaModel {
+    /**
+     * <p>The returned data.</p>
+     */
     @NameInMap("Data")
     public CreateCustomEndpointResponseBodyData data;
 
@@ -39,6 +42,8 @@ public class CreateCustomEndpointResponseBody extends TeaModel {
 
     public static class CreateCustomEndpointResponseBodyData extends TeaModel {
         /**
+         * <p>The endpoint ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>pxe-c4gkgqg****7sgyg</p>
          */
@@ -46,6 +51,8 @@ public class CreateCustomEndpointResponseBody extends TeaModel {
         public String customEndpointId;
 
         /**
+         * <p>The instance ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>pxc-*********</p>
          */

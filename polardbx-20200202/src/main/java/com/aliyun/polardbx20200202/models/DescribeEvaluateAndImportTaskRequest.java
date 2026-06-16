@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeEvaluateAndImportTaskRequest extends TeaModel {
     /**
+     * <p>The region where the instance resides.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,8 @@ public class DescribeEvaluateAndImportTaskRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The ID of the link task.</p>
+     * 
      * <strong>example:</strong>
      * <p>etx-szr2rr6i*****</p>
      */

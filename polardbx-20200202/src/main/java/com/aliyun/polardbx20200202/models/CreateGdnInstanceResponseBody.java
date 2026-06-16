@@ -4,10 +4,18 @@ package com.aliyun.polardbx20200202.models;
 import com.aliyun.tea.*;
 
 public class CreateGdnInstanceResponseBody extends TeaModel {
+    /**
+     * <p>The instance details.</p>
+     */
     @NameInMap("Data")
     public CreateGdnInstanceResponseBodyData data;
 
     /**
+     * <p>The returned message.</p>
+     * <blockquote>
+     * <p>This parameter is empty when the request succeeds. If the request fails, an error message is returned, such as an error code.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <hr>
      */
@@ -24,6 +32,8 @@ public class CreateGdnInstanceResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>True</p>
      */
@@ -69,6 +79,8 @@ public class CreateGdnInstanceResponseBody extends TeaModel {
 
     public static class CreateGdnInstanceResponseBodyData extends TeaModel {
         /**
+         * <p>The task ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>2209883</p>
          */

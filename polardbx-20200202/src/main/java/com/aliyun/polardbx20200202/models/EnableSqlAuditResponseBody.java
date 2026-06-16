@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class EnableSqlAuditResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>DC3ABA3E-0F8A-4596-9104-F5167C******</p>
      */
@@ -12,6 +14,8 @@ public class EnableSqlAuditResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

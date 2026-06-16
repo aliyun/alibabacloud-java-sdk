@@ -4,10 +4,15 @@ package com.aliyun.polardbx20200202.models;
 import com.aliyun.tea.*;
 
 public class DescribeEnabledCrossRegionsResponseBody extends TeaModel {
+    /**
+     * <p>The parameter details.</p>
+     */
     @NameInMap("Data")
     public java.util.List<DescribeEnabledCrossRegionsResponseBodyData> data;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
      * <hr>
      */
@@ -24,6 +29,8 @@ public class DescribeEnabledCrossRegionsResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -68,6 +75,9 @@ public class DescribeEnabledCrossRegionsResponseBody extends TeaModel {
     }
 
     public static class DescribeEnabledCrossRegionsResponseBodyData extends TeaModel {
+        /**
+         * <p>Indicates whether VPC is supported.</p>
+         */
         @NameInMap("Regions")
         public java.util.List<String> regions;
 

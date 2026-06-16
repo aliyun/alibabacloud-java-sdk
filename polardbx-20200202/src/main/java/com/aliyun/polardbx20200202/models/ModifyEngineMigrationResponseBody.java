@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class ModifyEngineMigrationResponseBody extends TeaModel {
     /**
+     * <p>The response code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The returned data.</p>
+     */
     @NameInMap("Data")
     public ModifyEngineMigrationResponseBodyData data;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -22,6 +29,8 @@ public class ModifyEngineMigrationResponseBody extends TeaModel {
     public String httpStatusCode;
 
     /**
+     * <p>The additional information. The value success is returned if the request succeeds. Otherwise, an error code is returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>Success</p>
      */
@@ -38,6 +47,8 @@ public class ModifyEngineMigrationResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -99,6 +110,8 @@ public class ModifyEngineMigrationResponseBody extends TeaModel {
 
     public static class ModifyEngineMigrationResponseBodyData extends TeaModel {
         /**
+         * <p>The instance ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>pxc-*********</p>
          */
@@ -106,6 +119,8 @@ public class ModifyEngineMigrationResponseBody extends TeaModel {
         public String DBInstanceName;
 
         /**
+         * <p>The task ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>42292****</p>
          */

@@ -4,10 +4,15 @@ package com.aliyun.polardbx20200202.models;
 import com.aliyun.tea.*;
 
 public class DescribeTasksResponseBody extends TeaModel {
+    /**
+     * <p>The list of result items.</p>
+     */
     @NameInMap("Items")
     public java.util.List<DescribeTasksResponseBodyItems> items;
 
     /**
+     * <p>The page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -15,6 +20,8 @@ public class DescribeTasksResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>30</p>
      */
@@ -22,6 +29,8 @@ public class DescribeTasksResponseBody extends TeaModel {
     public Integer pageRecordCount;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>D6045D78-C119-5A17-9DEA-0F810394E008</p>
      */
@@ -29,6 +38,8 @@ public class DescribeTasksResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total number of entries.</p>
+     * 
      * <strong>example:</strong>
      * <p>2</p>
      */
@@ -82,6 +93,8 @@ public class DescribeTasksResponseBody extends TeaModel {
 
     public static class DescribeTasksResponseBodyItems extends TeaModel {
         /**
+         * <p>The start time of the task, in the yyyy-MM-dd\&quot;T\&quot;HH:mm:ss\&quot;Z\&quot; format.</p>
+         * 
          * <strong>example:</strong>
          * <p>2021-10-20T19:40:00Z</p>
          */
@@ -89,6 +102,8 @@ public class DescribeTasksResponseBody extends TeaModel {
         public String beginTime;
 
         /**
+         * <p>The database name associated with the task. This parameter is generally empty.</p>
+         * 
          * <strong>example:</strong>
          * <p>DBName</p>
          */
@@ -96,6 +111,8 @@ public class DescribeTasksResponseBody extends TeaModel {
         public String DBName;
 
         /**
+         * <p>The end time of the task, in the yyyy-MM-dd\&quot;T\&quot;HH:mm:ss\&quot;Z\&quot; format.</p>
+         * 
          * <strong>example:</strong>
          * <p>2021-10-20T20:00:00Z</p>
          */
@@ -103,6 +120,8 @@ public class DescribeTasksResponseBody extends TeaModel {
         public String finishTime;
 
         /**
+         * <p>The task progress, in percentage.</p>
+         * 
          * <strong>example:</strong>
          * <p>80</p>
          */
@@ -110,6 +129,8 @@ public class DescribeTasksResponseBody extends TeaModel {
         public String progress;
 
         /**
+         * <p>The detailed progress information of the task. This parameter is generally empty.</p>
+         * 
          * <strong>example:</strong>
          * <p>ProgressInfo</p>
          */
@@ -117,6 +138,8 @@ public class DescribeTasksResponseBody extends TeaModel {
         public String progressInfo;
 
         /**
+         * <p>The scale-out ID if the task is a scale-out task. This value serves as a unique key in the backend.</p>
+         * 
          * <strong>example:</strong>
          * <p>FEA5DC20-6D8A-5979-97AA-FC57546ADC20</p>
          */
@@ -124,6 +147,12 @@ public class DescribeTasksResponseBody extends TeaModel {
         public String scaleOutToken;
 
         /**
+         * <p>The task status. Valid values:</p>
+         * <ul>
+         * <li><strong>RUNNING</strong>: The task is running.</li>
+         * <li><strong>FAILED</strong>: The task failed.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>RUNNING</p>
          */
@@ -131,6 +160,8 @@ public class DescribeTasksResponseBody extends TeaModel {
         public String status;
 
         /**
+         * <p>The task action, which serves as the unique key for the backend task type.</p>
+         * 
          * <strong>example:</strong>
          * <p>multi_scale_out</p>
          */
@@ -138,6 +169,8 @@ public class DescribeTasksResponseBody extends TeaModel {
         public String taskAction;
 
         /**
+         * <p>The error code of the failed task.</p>
+         * 
          * <strong>example:</strong>
          * <p>TaskErrorCode</p>
          */
@@ -145,6 +178,8 @@ public class DescribeTasksResponseBody extends TeaModel {
         public String taskErrorCode;
 
         /**
+         * <p>The error message of the failed task.</p>
+         * 
          * <strong>example:</strong>
          * <p>TaskErrorMessage</p>
          */
@@ -152,6 +187,8 @@ public class DescribeTasksResponseBody extends TeaModel {
         public String taskErrorMessage;
 
         /**
+         * <p>The task ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>20089398</p>
          */

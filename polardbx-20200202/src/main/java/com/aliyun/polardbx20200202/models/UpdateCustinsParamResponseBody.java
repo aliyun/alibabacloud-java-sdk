@@ -8,8 +8,6 @@ public class UpdateCustinsParamResponseBody extends TeaModel {
     public UpdateCustinsParamResponseBodyData data;
 
     /**
-     * <p>Id of the request</p>
-     * 
      * <strong>example:</strong>
      * <p>73559800-3c8c-****-bd40-99cfcff3fe1e</p>
      */

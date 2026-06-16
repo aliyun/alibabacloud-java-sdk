@@ -4,10 +4,15 @@ package com.aliyun.polardbx20200202.models;
 import com.aliyun.tea.*;
 
 public class DeleteMem0ResponseBody extends TeaModel {
+    /**
+     * <p>The returned data.</p>
+     */
     @NameInMap("Data")
     public DeleteMem0ResponseBodyData data;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>173CA69A-3513-591D-8A09-C1EA37CBE2D9</p>
      */
@@ -37,6 +42,8 @@ public class DeleteMem0ResponseBody extends TeaModel {
 
     public static class DeleteMem0ResponseBodyData extends TeaModel {
         /**
+         * <p>The task ID.</p>
+         * 
          * <strong>example:</strong>
          * <hr>
          */

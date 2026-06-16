@@ -129,7 +129,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>开通冷存储</p>
+     * <p>Calls the AllocateColdDataVolume operation.</p>
      * 
      * @param request AllocateColdDataVolumeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -165,7 +165,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>开通冷存储</p>
+     * <p>Calls the AllocateColdDataVolume operation.</p>
      * 
      * @param request AllocateColdDataVolumeRequest
      * @return AllocateColdDataVolumeResponse
@@ -177,7 +177,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>开通公网域名</p>
+     * <p>Calls the AllocateInstancePublicConnection operation to create a public IP address.</p>
      * 
      * @param request AllocateInstancePublicConnectionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -241,7 +241,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>开通公网域名</p>
+     * <p>Calls the AllocateInstancePublicConnection operation to create a public IP address.</p>
      * 
      * @param request AllocateInstancePublicConnectionRequest
      * @return AllocateInstancePublicConnectionResponse
@@ -252,6 +252,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Mounts a columnar instance to a specified primary database instance.</p>
+     * 
      * @param request AttachColumnarInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return AttachColumnarInstanceResponse
@@ -285,6 +288,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Mounts a columnar instance to a specified primary database instance.</p>
+     * 
      * @param request AttachColumnarInstanceRequest
      * @return AttachColumnarInstanceResponse
      */
@@ -295,7 +301,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>取消主动运维任务</p>
+     * <p>Cancels active O&amp;M event tasks by calling the CancelActiveOperationTasks operation.</p>
      * 
      * @param request CancelActiveOperationTasksRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -323,7 +329,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>取消主动运维任务</p>
+     * <p>Cancels active O&amp;M event tasks by calling the CancelActiveOperationTasks operation.</p>
      * 
      * @param request CancelActiveOperationTasksRequest
      * @return CancelActiveOperationTasksResponse
@@ -334,8 +340,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Note: </p>
+     * <ul>
+     * <li>The <strong>endpoint</strong> differs from other operations. Use <strong>polardbx.aliyuncs.com</strong> for Chinese mainland regions and Singapore. For other regions, use <strong>polardbx.{region id}.aliyunc.com</strong>.</li>
+     * <li>When testing this API operation, if a service unavailable error is returned, verify that the <strong>endpoint</strong> is correct. You can switch the <strong>service address</strong> to <strong>Dubai</strong> or <strong>India</strong> to change the <strong>endpoint</strong> to <strong>polardbx.aliyuncs.com</strong>.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>修改实例所在资源组.</p>
+     * <p>Modifies the resource group of an instance.</p>
      * 
      * @param request ChangeResourceGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -378,8 +391,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Note: </p>
+     * <ul>
+     * <li>The <strong>endpoint</strong> differs from other operations. Use <strong>polardbx.aliyuncs.com</strong> for Chinese mainland regions and Singapore. For other regions, use <strong>polardbx.{region id}.aliyunc.com</strong>.</li>
+     * <li>When testing this API operation, if a service unavailable error is returned, verify that the <strong>endpoint</strong> is correct. You can switch the <strong>service address</strong> to <strong>Dubai</strong> or <strong>India</strong> to change the <strong>endpoint</strong> to <strong>polardbx.aliyuncs.com</strong>.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>修改实例所在资源组.</p>
+     * <p>Modifies the resource group of an instance.</p>
      * 
      * @param request ChangeResourceGroupRequest
      * @return ChangeResourceGroupResponse
@@ -390,6 +410,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Checks whether a PolarDB-X instance is authorized to use Key Management Service (KMS).</p>
+     * 
      * @param request CheckCloudResourceAuthorizedRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CheckCloudResourceAuthorizedResponse
@@ -427,6 +450,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Checks whether a PolarDB-X instance is authorized to use Key Management Service (KMS).</p>
+     * 
      * @param request CheckCloudResourceAuthorizedRequest
      * @return CheckCloudResourceAuthorizedResponse
      */
@@ -436,6 +462,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <blockquote>
+     * <ul>
+     * <li>The SQL audit and analysis feature of PolarDB-X 2.0 is free of charge. However, Simple Log Service charges fees for storage space, read traffic, number of requests, data transformation, and data delivery. For more information about the SQL audit feature, see <a href="https://help.aliyun.com/document_detail/184619.html">Enable SQL audit and analysis</a>.</li>
+     * </ul>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Checks whether SQL audit logs of a specified database instance have been successfully connected to Simple Log Service (SLS).
+     * After the call, the system returns the connection status between the SQL audit feature and SLS for the current instance, the project and Logstore configuration information, and whether synchronization is normal.</p>
+     * 
      * @param request CheckSqlAuditSlsStatusRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CheckSqlAuditSlsStatusResponse
@@ -465,6 +502,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <blockquote>
+     * <ul>
+     * <li>The SQL audit and analysis feature of PolarDB-X 2.0 is free of charge. However, Simple Log Service charges fees for storage space, read traffic, number of requests, data transformation, and data delivery. For more information about the SQL audit feature, see <a href="https://help.aliyun.com/document_detail/184619.html">Enable SQL audit and analysis</a>.</li>
+     * </ul>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Checks whether SQL audit logs of a specified database instance have been successfully connected to Simple Log Service (SLS).
+     * After the call, the system returns the connection status between the SQL audit feature and SLS for the current instance, the project and Logstore configuration information, and whether synchronization is normal.</p>
+     * 
      * @param request CheckSqlAuditSlsStatusRequest
      * @return CheckSqlAuditSlsStatusResponse
      */
@@ -475,7 +523,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>取消实例迁移</p>
+     * <p>Closes the database engine migration process for a specified instance. After you start a data migration task from another database (such as a self-managed MySQL database or an ApsaraDB RDS instance) to PolarDB-X, you can call this operation to safely stop the migration process if you need to terminate or clean up the migration state.</p>
      * 
      * @param request CloseEngineMigrationRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -515,7 +563,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>取消实例迁移</p>
+     * <p>Closes the database engine migration process for a specified instance. After you start a data migration task from another database (such as a self-managed MySQL database or an ApsaraDB RDS instance) to PolarDB-X, you can call this operation to safely stop the migration process if you need to terminate or clean up the migration state.</p>
      * 
      * @param request CloseEngineMigrationRequest
      * @return CloseEngineMigrationResponse
@@ -526,8 +574,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Confirms that no active connections exist before a rollback task to ensure operation safety.</p>
+     * 
      * <b>summary</b> : 
-     * <p>回滚切换时确认无连接</p>
+     * <p>Confirms that no active connections exist before performing a rollback switchover.</p>
      * 
      * @param request ConfirmNoConnectionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -566,8 +617,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Confirms that no active connections exist before a rollback task to ensure operation safety.</p>
+     * 
      * <b>summary</b> : 
-     * <p>回滚切换时确认无连接</p>
+     * <p>Confirms that no active connections exist before performing a rollback switchover.</p>
      * 
      * @param request ConfirmNoConnectionRequest
      * @return ConfirmNoConnectionResponse
@@ -578,6 +632,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Creates an account by calling the CreateAccount operation.</p>
+     * 
      * @param request CreateAccountRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateAccountResponse
@@ -639,6 +696,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Creates an account by calling the CreateAccount operation.</p>
+     * 
      * @param request CreateAccountRequest
      * @return CreateAccountResponse
      */
@@ -648,6 +708,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Calls the CreateBackup operation to create a backup.</p>
+     * 
      * @param request CreateBackupRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateBackupResponse
@@ -685,6 +748,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Calls the CreateBackup operation to create a backup.</p>
+     * 
      * @param request CreateBackupRequest
      * @return CreateBackupResponse
      */
@@ -694,8 +760,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>&lt;props=&quot;china&quot;&gt;For more information about instance accounts, see <a href="https://help.aliyun.com/document_detail/172163.html">Account management</a>..</p>
+     * 
      * <b>summary</b> : 
-     * <p>创建自定义endpoint</p>
+     * <p>Creates a custom endpoint for a database instance.</p>
      * 
      * @param request CreateCustomEndpointRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -754,8 +823,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>&lt;props=&quot;china&quot;&gt;For more information about instance accounts, see <a href="https://help.aliyun.com/document_detail/172163.html">Account management</a>..</p>
+     * 
      * <b>summary</b> : 
-     * <p>创建自定义endpoint</p>
+     * <p>Creates a custom endpoint for a database instance.</p>
      * 
      * @param request CreateCustomEndpointRequest
      * @return CreateCustomEndpointResponse
@@ -766,6 +838,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Creates a database by calling the CreateDB operation.</p>
+     * 
      * @param request CreateDBRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateDBResponse
@@ -835,6 +910,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Creates a database by calling the CreateDB operation.</p>
+     * 
      * @param request CreateDBRequest
      * @return CreateDBResponse
      */
@@ -844,8 +922,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <hr>
+     * 
      * <b>summary</b> : 
-     * <p>Creates a PolarDB-X instance.</p>
+     * <p>Calls the CreateDBInstance operation to create a PolarDB-X instance.</p>
      * 
      * @param tmpReq CreateDBInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1002,8 +1083,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <hr>
+     * 
      * <b>summary</b> : 
-     * <p>Creates a PolarDB-X instance.</p>
+     * <p>Calls the CreateDBInstance operation to create a PolarDB-X instance.</p>
      * 
      * @param request CreateDBInstanceRequest
      * @return CreateDBInstanceResponse
@@ -1014,8 +1098,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Creates a data import task that imports SQL or CSV files stored in OSS or ECS, or directly provided files, into a target database instance. By specifying the instance ID, database name, engine type, data source (such as an OSS path), and import type, the system performs data write operations asynchronously or synchronously. This operation is applicable to scenarios such as data migration, initialization, and data backfill. A task ID is returned for subsequent status queries and management.</p>
+     * 
      * <b>summary</b> : 
-     * <p>创建评估升级的数据迁移任务</p>
+     * <p>Creates a data import task to import external data files, such as SQL scripts and CSV files, into a target database instance.</p>
      * 
      * @param request CreateDataImportTaskRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1086,8 +1173,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Creates a data import task that imports SQL or CSV files stored in OSS or ECS, or directly provided files, into a target database instance. By specifying the instance ID, database name, engine type, data source (such as an OSS path), and import type, the system performs data write operations asynchronously or synchronously. This operation is applicable to scenarios such as data migration, initialization, and data backfill. A task ID is returned for subsequent status queries and management.</p>
+     * 
      * <b>summary</b> : 
-     * <p>创建评估升级的数据迁移任务</p>
+     * <p>Creates a data import task to import external data files, such as SQL scripts and CSV files, into a target database instance.</p>
      * 
      * @param request CreateDataImportTaskRequest
      * @return CreateDataImportTaskResponse
@@ -1099,7 +1189,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建GDN实例</p>
+     * <p>Creates a Global Database Network (GDN) instance.</p>
      * 
      * @param request CreateGdnInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1155,7 +1245,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建GDN实例</p>
+     * <p>Creates a Global Database Network (GDN) instance.</p>
      * 
      * @param request CreateGdnInstanceRequest
      * @return CreateGdnInstanceResponse
@@ -1166,6 +1256,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>&lt;props=&quot;china&quot;&gt;更多关于实例账号的信息，请参见<a href="https://help.aliyun.com/document_detail/172163.html">账号管理</a>。</p>
+     * 
      * <b>summary</b> : 
      * <p>创建GDN从实例</p>
      * 
@@ -1290,6 +1383,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>&lt;props=&quot;china&quot;&gt;更多关于实例账号的信息，请参见<a href="https://help.aliyun.com/document_detail/172163.html">账号管理</a>。</p>
+     * 
      * <b>summary</b> : 
      * <p>创建GDN从实例</p>
      * 
@@ -1302,8 +1398,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>&lt;props=&quot;china&quot;&gt;For more information about instance accounts, see <a href="https://help.aliyun.com/document_detail/172163.html">Account management</a>..</p>
+     * 
      * <b>summary</b> : 
-     * <p>创建mem0</p>
+     * <p>Enables the memory engine.</p>
      * 
      * @param request CreateMem0Request
      * @param runtime runtime options for this request RuntimeOptions
@@ -1338,8 +1437,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>&lt;props=&quot;china&quot;&gt;For more information about instance accounts, see <a href="https://help.aliyun.com/document_detail/172163.html">Account management</a>..</p>
+     * 
      * <b>summary</b> : 
-     * <p>创建mem0</p>
+     * <p>Enables the memory engine.</p>
      * 
      * @param request CreateMem0Request
      * @return CreateMem0Response
@@ -1350,8 +1452,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>During the data synchronization phase, proactively initiates a diagnostic task for the replication task to check for issues such as latency, replication interruption, or data inconsistency.</p>
+     * 
      * <b>summary</b> : 
-     * <p>创建评估预检任务</p>
+     * <p>Performs a health check on the replication task during data migration.</p>
      * 
      * @param request CreateRplInspectionTaskRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1410,8 +1515,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>During the data synchronization phase, proactively initiates a diagnostic task for the replication task to check for issues such as latency, replication interruption, or data inconsistency.</p>
+     * 
      * <b>summary</b> : 
-     * <p>创建评估预检任务</p>
+     * <p>Performs a health check on the replication task during data migration.</p>
      * 
      * @param request CreateRplInspectionTaskRequest
      * @return CreateRplInspectionTaskResponse
@@ -1423,7 +1531,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建评估升级的兼容性评估任务</p>
+     * <p>Creates a SQL statement assessment task. You submit SQL statements through this operation, and the system performs static analysis and risk assessment to identify execution risks and compatibility issues on the target database instance.</p>
      * 
      * @param request CreateSQLEvaluateTaskRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1503,7 +1611,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建评估升级的兼容性评估任务</p>
+     * <p>Creates a SQL statement assessment task. You submit SQL statements through this operation, and the system performs static analysis and risk assessment to identify execution risks and compatibility issues on the target database instance.</p>
      * 
      * @param request CreateSQLEvaluateTaskRequest
      * @return CreateSQLEvaluateTaskResponse
@@ -1515,7 +1623,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建 PolarDB-X 存储资源池</p>
+     * <p>Creates a resource storage pool.</p>
      * 
      * @param request CreateStoragePoolRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1563,7 +1671,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建 PolarDB-X 存储资源池</p>
+     * <p>Creates a resource storage pool.</p>
      * 
      * @param request CreateStoragePoolRequest
      * @return CreateStoragePoolResponse
@@ -1575,7 +1683,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建评估升级的结构迁移任务</p>
+     * <p>Creates a database schema import task. This operation allows you to import SQL script files or text content that contains DDL statements into a target database instance, and automatically performs schema operations such as creating tables, indexes, views, and stored procedures.</p>
      * 
      * @param request CreateStructureImportTaskRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1621,7 +1729,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建评估升级的结构迁移任务</p>
+     * <p>Creates a database schema import task. This operation allows you to import SQL script files or text content that contains DDL statements into a target database instance, and automatically performs schema operations such as creating tables, indexes, views, and stored procedures.</p>
      * 
      * @param request CreateStructureImportTaskRequest
      * @return CreateStructureImportTaskResponse
@@ -1694,6 +1802,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Creates a privileged user. Each instance can have only one privileged user.</p>
+     * 
      * @param request CreateSuperAccountRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateSuperAccountResponse
@@ -1739,6 +1850,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Creates a privileged user. Each instance can have only one privileged user.</p>
+     * 
      * @param request CreateSuperAccountRequest
      * @return CreateSuperAccountResponse
      */
@@ -1749,7 +1863,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建标准版迁移到企业版的操作任务</p>
+     * <p>Creates a conversion task to change a specific status or configuration of an instance.</p>
      * 
      * @param request CreateTransformOperationRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1789,7 +1903,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建标准版迁移到企业版的操作任务</p>
+     * <p>Creates a conversion task to change a specific status or configuration of an instance.</p>
      * 
      * @param request CreateTransformOperationRequest
      * @return CreateTransformOperationResponse
@@ -1800,6 +1914,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Deletes an account by calling the DeleteAccount operation.</p>
+     * 
      * @param request DeleteAccountRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteAccountResponse
@@ -1845,6 +1962,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Deletes an account by calling the DeleteAccount operation.</p>
+     * 
      * @param request DeleteAccountRequest
      * @return DeleteAccountResponse
      */
@@ -1854,8 +1974,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Deletes the custom endpoint of a specified database instance and disables access through the domain name.</p>
+     * 
      * <b>summary</b> : 
-     * <p>删除自定义endpoint</p>
+     * <p>Deletes a custom endpoint domain name.</p>
      * 
      * @param request DeleteCustomEndpointRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1894,8 +2017,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Deletes the custom endpoint of a specified database instance and disables access through the domain name.</p>
+     * 
      * <b>summary</b> : 
-     * <p>删除自定义endpoint</p>
+     * <p>Deletes a custom endpoint domain name.</p>
      * 
      * @param request DeleteCustomEndpointRequest
      * @return DeleteCustomEndpointResponse
@@ -1906,6 +2032,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Deletes a database by calling the DeleteDB operation.</p>
+     * 
      * @param request DeleteDBRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteDBResponse
@@ -1943,6 +2072,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Deletes a database by calling the DeleteDB operation.</p>
+     * 
      * @param request DeleteDBRequest
      * @return DeleteDBResponse
      */
@@ -1953,7 +2085,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>释放实例</p>
+     * <p>Calls the DeleteDBInstance operation to delete an instance.</p>
      * 
      * @param request DeleteDBInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1989,7 +2121,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>释放实例</p>
+     * <p>Calls the DeleteDBInstance operation to delete an instance.</p>
      * 
      * @param request DeleteDBInstanceRequest
      * @return DeleteDBInstanceResponse
@@ -2000,8 +2132,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Deletes a created evaluation task and performs subsequent data import operations.</p>
+     * 
      * <b>summary</b> : 
-     * <p>删除评估导入任务</p>
+     * <p>Deletes an evaluation import task.</p>
      * 
      * @param request DeleteEvaluateAndImportTaskRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2036,8 +2171,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Deletes a created evaluation task and performs subsequent data import operations.</p>
+     * 
      * <b>summary</b> : 
-     * <p>删除评估导入任务</p>
+     * <p>Deletes an evaluation import task.</p>
      * 
      * @param request DeleteEvaluateAndImportTaskRequest
      * @return DeleteEvaluateAndImportTaskResponse
@@ -2049,7 +2187,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除GDN实例</p>
+     * <p>Deletes a global database network (GDN) instance.</p>
      * 
      * @param request DeleteGdnInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2085,7 +2223,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除GDN实例</p>
+     * <p>Deletes a global database network (GDN) instance.</p>
      * 
      * @param request DeleteGdnInstanceRequest
      * @return DeleteGdnInstanceResponse
@@ -2096,8 +2234,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Deletes the custom endpoint of a specified database instance and disables the access entry for the domain name.</p>
+     * 
      * <b>summary</b> : 
-     * <p>删除mem0</p>
+     * <p>Disables the memory engine.</p>
      * 
      * @param request DeleteMem0Request
      * @param runtime runtime options for this request RuntimeOptions
@@ -2132,8 +2273,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Deletes the custom endpoint of a specified database instance and disables the access entry for the domain name.</p>
+     * 
      * <b>summary</b> : 
-     * <p>删除mem0</p>
+     * <p>Disables the memory engine.</p>
      * 
      * @param request DeleteMem0Request
      * @return DeleteMem0Response
@@ -2202,6 +2346,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Queries the list of accounts by calling the DescribeAccountList operation.</p>
+     * 
      * @param request DescribeAccountListRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeAccountListResponse
@@ -2243,6 +2390,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Queries the list of accounts by calling the DescribeAccountList operation.</p>
+     * 
      * @param request DescribeAccountListRequest
      * @return DescribeAccountListResponse
      */
@@ -2253,7 +2403,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>展示全局运维窗口配置</p>
+     * <p>Calls the DescribeActiveOperationMaintainConf operation to display the O&amp;M window configuration.</p>
      * 
      * @param request DescribeActiveOperationMaintainConfRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2285,7 +2435,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>展示全局运维窗口配置</p>
+     * <p>Calls the DescribeActiveOperationMaintainConf operation to display the O&amp;M window configuration.</p>
      * 
      * @param request DescribeActiveOperationMaintainConfRequest
      * @return DescribeActiveOperationMaintainConfResponse
@@ -2297,7 +2447,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取主动运维任务数量</p>
+     * <p>Retrieves the total number of O&amp;M events.</p>
      * 
      * @param request DescribeActiveOperationTaskCountRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2325,7 +2475,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取主动运维任务数量</p>
+     * <p>Retrieves the total number of O&amp;M events.</p>
      * 
      * @param request DescribeActiveOperationTaskCountRequest
      * @return DescribeActiveOperationTaskCountResponse
@@ -2337,7 +2487,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取待执行自动运维任务列表</p>
+     * <p>Queries O&amp;M events by calling the DescribeActiveOperationTasks operation.</p>
      * 
      * @param request DescribeActiveOperationTasksRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2365,7 +2515,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取待执行自动运维任务列表</p>
+     * <p>Queries O&amp;M events by calling the DescribeActiveOperationTasks operation.</p>
      * 
      * @param request DescribeActiveOperationTasksRequest
      * @return DescribeActiveOperationTasksResponse
@@ -2377,7 +2527,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>冷存储表列表</p>
+     * <p>Lists cold storage tables.</p>
      * 
      * @param request DescribeArchiveTableListRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2433,7 +2583,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>冷存储表列表</p>
+     * <p>Lists cold storage tables.</p>
      * 
      * @param request DescribeArchiveTableListRequest
      * @return DescribeArchiveTableListResponse
@@ -2445,7 +2595,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取已开启跨地域备份的地域</p>
+     * <p>Queries the list of available regions that support cross-region operations, typically used for multi-region deployment or data replication scenarios.</p>
      * 
      * @param request DescribeAvailableCrossRegionsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2481,7 +2631,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取已开启跨地域备份的地域</p>
+     * <p>Queries the list of available regions that support cross-region operations, typically used for multi-region deployment or data replication scenarios.</p>
      * 
      * @param request DescribeAvailableCrossRegionsRequest
      * @return DescribeAvailableCrossRegionsResponse
@@ -2493,7 +2643,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>描述备份策略</p>
+     * <p>Calls the DescribeBackupPolicy operation to query the backup settings of an instance.</p>
      * 
      * @param request DescribeBackupPolicyRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2529,7 +2679,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>描述备份策略</p>
+     * <p>Calls the DescribeBackupPolicy operation to query the backup settings of an instance.</p>
      * 
      * @param request DescribeBackupPolicyRequest
      * @return DescribeBackupPolicyResponse
@@ -2541,7 +2691,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>备份集详情</p>
+     * <p>Queries the details of a backup set by calling the DescribeBackupSet operation.</p>
      * 
      * @param request DescribeBackupSetRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2585,7 +2735,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>备份集详情</p>
+     * <p>Queries the details of a backup set by calling the DescribeBackupSet operation.</p>
      * 
      * @param request DescribeBackupSetRequest
      * @return DescribeBackupSetResponse
@@ -2596,6 +2746,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Calls the DescribeBackupSetList operation to query the list of backup sets.</p>
+     * 
      * @param request DescribeBackupSetListRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeBackupSetListResponse
@@ -2621,6 +2774,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Calls the DescribeBackupSetList operation to query the list of backup sets.</p>
+     * 
      * @param request DescribeBackupSetListRequest
      * @return DescribeBackupSetListResponse
      */
@@ -2630,6 +2786,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li>Binlog files are retained for 15 days by default.</li>
+     * <li>The returned log list includes all logs whose record end time is after the query start time and whose record start time is before the query end time.</li>
+     * <li>When the DownloadLink is not NULL, you can use this URL to download the backup file. This URL is valid for 2 days after it is generated. Download the file before the URL expires.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Calls the DescribeBinaryLogList operation to query binlog logs.</p>
+     * 
      * @param request DescribeBinaryLogListRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeBinaryLogListResponse
@@ -2683,6 +2849,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li>Binlog files are retained for 15 days by default.</li>
+     * <li>The returned log list includes all logs whose record end time is after the query start time and whose record start time is before the query end time.</li>
+     * <li>When the DownloadLink is not NULL, you can use this URL to download the backup file. This URL is valid for 2 days after it is generated. Download the file before the URL expires.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Calls the DescribeBinaryLogList operation to query binlog logs.</p>
+     * 
      * @param request DescribeBinaryLogListRequest
      * @return DescribeBinaryLogListResponse
      */
@@ -2692,8 +2868,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li>Binary log files are retained for 15 days by default.</li>
+     * <li>The returned log list includes all logs whose log record end time is after the query start time and whose log record start time is before the query end time.</li>
+     * <li>If DownloadLink is not NULL, you can use this URL to download the backup file. This URL is valid for 2 days after it is generated. Download the file before the URL expires.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>查询多流规格列表</p>
+     * <p>Queries the list of instance specifications.</p>
      * 
      * @param request DescribeCdcClassListRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2732,8 +2915,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li>Binary log files are retained for 15 days by default.</li>
+     * <li>The returned log list includes all logs whose log record end time is after the query start time and whose log record start time is before the query end time.</li>
+     * <li>If DownloadLink is not NULL, you can use this URL to download the backup file. This URL is valid for 2 days after it is generated. Download the file before the URL expires.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>查询多流规格列表</p>
+     * <p>Queries the list of instance specifications.</p>
      * 
      * @param request DescribeCdcClassListRequest
      * @return DescribeCdcClassListResponse
@@ -2745,7 +2935,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询CDC信息</p>
+     * <p>Queries CDC information.</p>
      * 
      * @param request DescribeCdcInfoRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2781,7 +2971,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询CDC信息</p>
+     * <p>Queries CDC information.</p>
      * 
      * @param request DescribeCdcInfoRequest
      * @return DescribeCdcInfoResponse
@@ -2792,8 +2982,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li>Binary log files are retained for 15 days by default.</li>
+     * <li>The returned log list includes all logs whose log record end time is after the query start time and whose log record start time is before the query end time.</li>
+     * <li>When DownloadLink is not NULL, you can download the backup file from this URL. The URL is valid for 2 days after it is generated. Download the file before the URL expires.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>获取CDC版本列表</p>
+     * <p>Retrieves the list of CDC versions.</p>
      * 
      * @param request DescribeCdcVersionListRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2832,8 +3029,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li>Binary log files are retained for 15 days by default.</li>
+     * <li>The returned log list includes all logs whose log record end time is after the query start time and whose log record start time is before the query end time.</li>
+     * <li>When DownloadLink is not NULL, you can download the backup file from this URL. The URL is valid for 2 days after it is generated. Download the file before the URL expires.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>获取CDC版本列表</p>
+     * <p>Retrieves the list of CDC versions.</p>
      * 
      * @param request DescribeCdcVersionListRequest
      * @return DescribeCdcVersionListResponse
@@ -2844,6 +3048,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Invokes the DescribeCharacterSet operation to query the character set types supported by databases in a target instance.</p>
+     * 
      * @param request DescribeCharacterSetRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeCharacterSetResponse
@@ -2877,6 +3084,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Invokes the DescribeCharacterSet operation to query the character set types supported by databases in a target instance.</p>
+     * 
      * @param request DescribeCharacterSetRequest
      * @return DescribeCharacterSetResponse
      */
@@ -2887,7 +3097,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>冷存储基础信息</p>
+     * <p>The cold storage basic information.</p>
      * 
      * @param request DescribeColdDataBasicInfoRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2915,7 +3125,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>冷存储基础信息</p>
+     * <p>The cold storage basic information.</p>
      * 
      * @param request DescribeColdDataBasicInfoRequest
      * @return DescribeColdDataBasicInfoResponse
@@ -2927,7 +3137,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询列存规格列表</p>
+     * <p>Queries the list of column store specifications for an instance.</p>
      * 
      * @param request DescribeColumnarClassListRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2967,7 +3177,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询列存规格列表</p>
+     * <p>Queries the list of column store specifications for an instance.</p>
      * 
      * @param request DescribeColumnarClassListRequest
      * @return DescribeColumnarClassListResponse
@@ -2979,7 +3189,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询Columnar信息</p>
+     * <p>Queries column store information.</p>
      * 
      * @param request DescribeColumnarInfoRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3015,7 +3225,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询Columnar信息</p>
+     * <p>Queries column store information.</p>
      * 
      * @param request DescribeColumnarInfoRequest
      * @return DescribeColumnarInfoResponse
@@ -3026,8 +3236,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li>Binary log files are retained for 15 days by default.</li>
+     * <li>The returned log list includes all logs whose log record end time is after the query start time and whose log record start time is before the query end time.</li>
+     * <li>When DownloadLink is not NULL, you can download the backup file from this URL. This URL is valid for 2 days after it is generated. Download the file before the expiration time.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>获取Columnar版本列表</p>
+     * <p>Queries column store version information.</p>
      * 
      * @param request DescribeColumnarVersionListRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3062,8 +3279,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li>Binary log files are retained for 15 days by default.</li>
+     * <li>The returned log list includes all logs whose log record end time is after the query start time and whose log record start time is before the query end time.</li>
+     * <li>When DownloadLink is not NULL, you can download the backup file from this URL. This URL is valid for 2 days after it is generated. Download the file before the expiration time.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>获取Columnar版本列表</p>
+     * <p>Queries column store version information.</p>
      * 
      * @param request DescribeColumnarVersionListRequest
      * @return DescribeColumnarVersionListResponse
@@ -3075,7 +3299,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询PolarDB-X 实例指定组件的属性列表</p>
+     * <p>Retrieves the property information of a specified component, including property names and types.</p>
      * 
      * @param request DescribeComponentPropetiesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3119,7 +3343,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询PolarDB-X 实例指定组件的属性列表</p>
+     * <p>Retrieves the property information of a specified component, including property names and types.</p>
      * 
      * @param request DescribeComponentPropetiesRequest
      * @return DescribeComponentPropetiesResponse
@@ -3130,8 +3354,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Queries the list of custom endpoints configured by the user. You can use this operation to manage and view the settings of private connections or VPC endpoint services.</p>
+     * 
      * <b>summary</b> : 
-     * <p>查询自定义连接信息</p>
+     * <p>Queries the list of custom endpoints defined by the user.</p>
      * 
      * @param request DescribeCustomEndpointListRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3174,8 +3401,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Queries the list of custom endpoints configured by the user. You can use this operation to manage and view the settings of private connections or VPC endpoint services.</p>
+     * 
      * <b>summary</b> : 
-     * <p>查询自定义连接信息</p>
+     * <p>Queries the list of custom endpoints defined by the user.</p>
      * 
      * @param request DescribeCustomEndpointListRequest
      * @return DescribeCustomEndpointListResponse
@@ -3187,7 +3417,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取实例详情</p>
+     * <p>Calls the DescribeDBInstanceAttribute operation to retrieve instance attributes.</p>
      * 
      * @param request DescribeDBInstanceAttributeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3227,7 +3457,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取实例详情</p>
+     * <p>Calls the DescribeDBInstanceAttribute operation to retrieve instance attributes.</p>
      * 
      * @param request DescribeDBInstanceAttributeRequest
      * @return DescribeDBInstanceAttributeResponse
@@ -3239,7 +3469,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询实例配置信息</p>
+     * <p>Calls the DescribeDBInstanceConfig operation to retrieve the configuration parameters of an instance.</p>
      * 
      * @param request DescribeDBInstanceConfigRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3279,7 +3509,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询实例配置信息</p>
+     * <p>Calls the DescribeDBInstanceConfig operation to retrieve the configuration parameters of an instance.</p>
      * 
      * @param request DescribeDBInstanceConfigRequest
      * @return DescribeDBInstanceConfigResponse
@@ -3290,6 +3520,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>该接口用于获取用户已配置的自定义终端节点（Endpoint）列表，便于管理和查看私有连接或VPC终端服务的设置。</p>
+     * 
      * <b>summary</b> : 
      * <p>查询endpoint列表</p>
      * 
@@ -3334,6 +3567,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>该接口用于获取用户已配置的自定义终端节点（Endpoint）列表，便于管理和查看私有连接或VPC终端服务的设置。</p>
+     * 
      * <b>summary</b> : 
      * <p>查询endpoint列表</p>
      * 
@@ -3347,7 +3583,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询实例的HA信息</p>
+     * <p>Queries the high availability (HA) information of an instance.</p>
      * 
      * @param request DescribeDBInstanceHARequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3383,7 +3619,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询实例的HA信息</p>
+     * <p>Queries the high availability (HA) information of an instance.</p>
      * 
      * @param request DescribeDBInstanceHARequest
      * @return DescribeDBInstanceHAResponse
@@ -3394,6 +3630,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Views SSL information.</p>
+     * 
      * @param request DescribeDBInstanceSSLRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeDBInstanceSSLResponse
@@ -3427,6 +3666,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Views SSL information.</p>
+     * 
      * @param request DescribeDBInstanceSSLRequest
      * @return DescribeDBInstanceSSLResponse
      */
@@ -3436,6 +3678,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Calls the DescribeDBInstanceTDE operation to retrieve the details of Transparent Data Encryption (TDE) for an instance.</p>
+     * 
      * @param request DescribeDBInstanceTDERequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeDBInstanceTDEResponse
@@ -3469,6 +3714,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Calls the DescribeDBInstanceTDE operation to retrieve the details of Transparent Data Encryption (TDE) for an instance.</p>
+     * 
      * @param request DescribeDBInstanceTDERequest
      * @return DescribeDBInstanceTDEResponse
      */
@@ -3479,7 +3727,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询实例拓扑</p>
+     * <p>Calls the DescribeDBInstanceTopology operation to retrieve the topology information of an instance.</p>
      * 
      * @param request DescribeDBInstanceTopologyRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3527,7 +3775,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询实例拓扑</p>
+     * <p>Calls the DescribeDBInstanceTopology operation to retrieve the topology information of an instance.</p>
      * 
      * @param request DescribeDBInstanceTopologyRequest
      * @return DescribeDBInstanceTopologyResponse
@@ -3539,7 +3787,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>通过Endpoint查询实例</p>
+     * <p>Retrieves the basic information about an instance by using the endpoint of the instance.</p>
      * 
      * @param request DescribeDBInstanceViaEndpointRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3575,7 +3823,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>通过Endpoint查询实例</p>
+     * <p>Retrieves the basic information about an instance by using the endpoint of the instance.</p>
      * 
      * @param request DescribeDBInstanceViaEndpointRequest
      * @return DescribeDBInstanceViaEndpointResponse
@@ -3587,7 +3835,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取PolarDB-X实例列表</p>
+     * <p>Calls the DescribeDBInstances operation to query a list of instances.</p>
      * 
      * @param request DescribeDBInstancesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3655,7 +3903,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取PolarDB-X实例列表</p>
+     * <p>Calls the DescribeDBInstances operation to query a list of instances.</p>
      * 
      * @param request DescribeDBInstancesRequest
      * @return DescribeDBInstancesResponse
@@ -3666,8 +3914,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Note: </p>
+     * <ul>
+     * <li>The <strong>endpoint</strong> differs from other API operations. Use <strong>polardbx.aliyuncs.com</strong> for Chinese regions and Singapore. For other regions, use <strong>polardbx.{region id}.aliyunc.com</strong>.</li>
+     * <li>When debugging this API operation, if a service not active error is returned, confirm that the <strong>endpoint</strong> is correct. You can switch the <strong>service address</strong> to <strong>Dubai</strong> or <strong>India</strong> and change the <strong>endpoint</strong> to <strong>polardbx.aliyuncs.com</strong>.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>性能监控数据接口</p>
+     * <p>Queries the performance data of an instance by calling the DescribeDBNodePerformance operation.</p>
      * 
      * @param request DescribeDBNodePerformanceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3726,8 +3981,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Note: </p>
+     * <ul>
+     * <li>The <strong>endpoint</strong> differs from other API operations. Use <strong>polardbx.aliyuncs.com</strong> for Chinese regions and Singapore. For other regions, use <strong>polardbx.{region id}.aliyunc.com</strong>.</li>
+     * <li>When debugging this API operation, if a service not active error is returned, confirm that the <strong>endpoint</strong> is correct. You can switch the <strong>service address</strong> to <strong>Dubai</strong> or <strong>India</strong> and change the <strong>endpoint</strong> to <strong>polardbx.aliyuncs.com</strong>.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>性能监控数据接口</p>
+     * <p>Queries the performance data of an instance by calling the DescribeDBNodePerformance operation.</p>
      * 
      * @param request DescribeDBNodePerformanceRequest
      * @return DescribeDBNodePerformanceResponse
@@ -3739,7 +4001,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>导入任务详情</p>
+     * <p>Queries the execution details of a data import task.</p>
      * 
      * @param request DescribeDataImportTaskInfoRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3791,7 +4053,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>导入任务详情</p>
+     * <p>Queries the execution details of a data import task.</p>
      * 
      * @param request DescribeDataImportTaskInfoRequest
      * @return DescribeDataImportTaskInfoResponse
@@ -3802,6 +4064,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Queries the list of databases by calling the DescribeDbList operation.</p>
+     * 
      * @param request DescribeDbListRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeDbListResponse
@@ -3839,6 +4104,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Queries the list of databases by calling the DescribeDbList operation.</p>
+     * 
      * @param request DescribeDbListRequest
      * @return DescribeDbListResponse
      */
@@ -3848,6 +4116,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Calls the DescribeDistributeTableList operation to retrieve the list of database tables.</p>
+     * 
      * @param request DescribeDistributeTableListRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeDistributeTableListResponse
@@ -3885,6 +4156,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Calls the DescribeDistributeTableList operation to retrieve the list of database tables.</p>
+     * 
      * @param request DescribeDistributeTableListRequest
      * @return DescribeDistributeTableListResponse
      */
@@ -3895,7 +4169,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取已开启跨地域备份的地域</p>
+     * <p>Queries the currently enabled cross-zone configurations.</p>
      * 
      * @param request DescribeEnabledCrossRegionsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3931,7 +4205,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取已开启跨地域备份的地域</p>
+     * <p>Queries the currently enabled cross-zone configurations.</p>
      * 
      * @param request DescribeEnabledCrossRegionsRequest
      * @return DescribeEnabledCrossRegionsResponse
@@ -3943,7 +4217,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询单个评估迁移任务详情</p>
+     * <p>Queries the list of PolarDB-X assessment import tasks. (Single).</p>
      * 
      * @param request DescribeEvaluateAndImportTaskRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3979,7 +4253,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询单个评估迁移任务详情</p>
+     * <p>Queries the list of PolarDB-X assessment import tasks. (Single).</p>
      * 
      * @param request DescribeEvaluateAndImportTaskRequest
      * @return DescribeEvaluateAndImportTaskResponse
@@ -3990,8 +4264,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Creates a data import task. You can use this operation to import SQL or CSV files stored in OSS or ECS, or directly provided files, into a destination database instance. By specifying the instance ID, database name, engine type, data source (such as an OSS path), and import type, the system performs data write operations asynchronously or synchronously. This operation is applicable to scenarios such as data migration, initialization, and data backfill. A task ID is returned for subsequent status queries and management.</p>
+     * 
      * <b>summary</b> : 
-     * <p>请求评估导入任务列表</p>
+     * <p>Queries a list of assessment import tasks for PolarDB-X.</p>
      * 
      * @param request DescribeEvaluateAndImportTasksRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4030,8 +4307,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Creates a data import task. You can use this operation to import SQL or CSV files stored in OSS or ECS, or directly provided files, into a destination database instance. By specifying the instance ID, database name, engine type, data source (such as an OSS path), and import type, the system performs data write operations asynchronously or synchronously. This operation is applicable to scenarios such as data migration, initialization, and data backfill. A task ID is returned for subsequent status queries and management.</p>
+     * 
      * <b>summary</b> : 
-     * <p>请求评估导入任务列表</p>
+     * <p>Queries a list of assessment import tasks for PolarDB-X.</p>
      * 
      * @param request DescribeEvaluateAndImportTasksRequest
      * @return DescribeEvaluateAndImportTasksResponse
@@ -4043,7 +4323,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>历史事件</p>
+     * <p>Retrieves historical events.</p>
      * 
      * @param request DescribeEventsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4071,7 +4351,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>历史事件</p>
+     * <p>Retrieves historical events.</p>
      * 
      * @param request DescribeEventsRequest
      * @return DescribeEventsResponse
@@ -4083,7 +4363,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取GDN实例列表</p>
+     * <p>Retrieves a list of global database network (GDN) instances.</p>
      * 
      * @param request DescribeGdnInstancesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4135,7 +4415,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取GDN实例列表</p>
+     * <p>Retrieves a list of global database network (GDN) instances.</p>
      * 
      * @param request DescribeGdnInstancesRequest
      * @return DescribeGdnInstancesResponse
@@ -4146,8 +4426,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <blockquote>
+     * <ul>
+     * <li>The PolarDB-X 2.0 SQL Audit and Analysis feature is free to use. However, Simple Log Service charges for storage space, read traffic, request quantity, data transformation, data shipping, and other resources. For more details about the SQL Audit feature, see <a href="https://help.aliyun.com/document_detail/184619.html">Enable SQL Audit and Analysis</a>.</li>
+     * </ul>
+     * </blockquote>
+     * 
      * <b>summary</b> : 
-     * <p>查询mem0实例信息</p>
+     * <p>Query mem0 instance information</p>
      * 
      * @param request DescribeMem0InfoRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4182,8 +4469,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <blockquote>
+     * <ul>
+     * <li>The PolarDB-X 2.0 SQL Audit and Analysis feature is free to use. However, Simple Log Service charges for storage space, read traffic, request quantity, data transformation, data shipping, and other resources. For more details about the SQL Audit feature, see <a href="https://help.aliyun.com/document_detail/184619.html">Enable SQL Audit and Analysis</a>.</li>
+     * </ul>
+     * </blockquote>
+     * 
      * <b>summary</b> : 
-     * <p>查询mem0实例信息</p>
+     * <p>Query mem0 instance information</p>
      * 
      * @param request DescribeMem0InfoRequest
      * @return DescribeMem0InfoResponse
@@ -4195,7 +4489,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>开放商业备份集</p>
+     * <p>Exposes instance topology information and download links for commercial backup sets to support offline restoration of cloud instances.</p>
      * 
      * @param request DescribeOpenBackupSetRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4235,7 +4529,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>开放商业备份集</p>
+     * <p>Exposes instance topology information and download links for commercial backup sets to support offline restoration of cloud instances.</p>
      * 
      * @param request DescribeOpenBackupSetRequest
      * @return DescribeOpenBackupSetResponse
@@ -4247,7 +4541,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询参数模版列表</p>
+     * <p>Queries the list of database parameter templates created by users or supported by the system, including basic information, associated engine types, and modification times of each parameter template.</p>
      * 
      * @param request DescribeParameterGroupsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4275,7 +4569,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询参数模版列表</p>
+     * <p>Queries the list of database parameter templates created by users or supported by the system, including basic information, associated engine types, and modification times of each parameter template.</p>
      * 
      * @param request DescribeParameterGroupsRequest
      * @return DescribeParameterGroupsResponse
@@ -4287,7 +4581,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查看参数模版</p>
+     * <p>Calls the DescribeParameterTemplates operation to retrieve the parameter template list for an instance.</p>
      * 
      * @param request DescribeParameterTemplatesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4331,7 +4625,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查看参数模版</p>
+     * <p>Calls the DescribeParameterTemplates operation to retrieve the parameter template list for an instance.</p>
      * 
      * @param request DescribeParameterTemplatesRequest
      * @return DescribeParameterTemplatesResponse
@@ -4342,6 +4636,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Calls the DescribeParameters operation to retrieve instance parameters.</p>
+     * 
      * @param request DescribeParametersRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeParametersResponse
@@ -4379,6 +4676,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Calls the DescribeParameters operation to retrieve instance parameters.</p>
+     * 
      * @param request DescribeParametersRequest
      * @return DescribeParametersResponse
      */
@@ -4389,7 +4689,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询数据节点列表</p>
+     * <p>Queries the details of all data nodes (Data Nodes) in a PolarDB-X instance, including node status, storage usage, and network addresses, to facilitate operations management and monitoring.</p>
      * 
      * @param request DescribePolarxDataNodesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4437,7 +4737,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询数据节点列表</p>
+     * <p>Queries the details of all data nodes (Data Nodes) in a PolarDB-X instance, including node status, storage usage, and network addresses, to facilitate operations management and monitoring.</p>
      * 
      * @param request DescribePolarxDataNodesRequest
      * @return DescribePolarxDataNodesResponse
@@ -4448,6 +4748,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Queries the list of Virtual Private Clouds (VPCs) available under your account for database instances. You can use this operation to select an appropriate network environment when creating or managing database instances.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the list of VPCs available for PolarDB-X.</p>
+     * 
      * @param request DescribeRdsVpcsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeRdsVpcsResponse
@@ -4481,6 +4787,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Queries the list of Virtual Private Clouds (VPCs) available under your account for database instances. You can use this operation to select an appropriate network environment when creating or managing database instances.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the list of VPCs available for PolarDB-X.</p>
+     * 
      * @param request DescribeRdsVpcsRequest
      * @return DescribeRdsVpcsResponse
      */
@@ -4490,8 +4802,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Queries the list of available virtual private clouds (VPCs) under your account for an instance, so that you can select an appropriate network environment when creating or managing a database instance.</p>
+     * 
      * <b>summary</b> : 
-     * <p>查询Vswitch信息</p>
+     * <p>Queries the list of available vSwitches in a virtual private cloud (VPC) for an ApsaraDB RDS instance.</p>
      * 
      * @param request DescribeRdsVswitchesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4530,8 +4845,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Queries the list of available virtual private clouds (VPCs) under your account for an instance, so that you can select an appropriate network environment when creating or managing a database instance.</p>
+     * 
      * <b>summary</b> : 
-     * <p>查询Vswitch信息</p>
+     * <p>Queries the list of available vSwitches in a virtual private cloud (VPC) for an ApsaraDB RDS instance.</p>
      * 
      * @param request DescribeRdsVswitchesRequest
      * @return DescribeRdsVswitchesResponse
@@ -4542,6 +4860,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Calls the DescribeRegions operation to obtain the list of regions.</p>
+     * 
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeRegionsResponse
      */
@@ -4562,6 +4883,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Calls the DescribeRegions operation to obtain the list of regions.</p>
      * @return DescribeRegionsResponse
      */
     public DescribeRegionsResponse describeRegions() throws Exception {
@@ -4570,8 +4893,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>During the data synchronization phase, proactively initiates a diagnostic task for the replication task to check for exceptions such as latency, interruption, or data inconsistency.</p>
+     * 
      * <b>summary</b> : 
-     * <p>查询预检任务结果</p>
+     * <p>Queries the details of a replication lag inspection task for an instance.</p>
      * 
      * @param request DescribeRplInspectionTaskRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4622,8 +4948,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>During the data synchronization phase, proactively initiates a diagnostic task for the replication task to check for exceptions such as latency, interruption, or data inconsistency.</p>
+     * 
      * <b>summary</b> : 
-     * <p>查询预检任务结果</p>
+     * <p>Queries the details of a replication lag inspection task for an instance.</p>
      * 
      * @param request DescribeRplInspectionTaskRequest
      * @return DescribeRplInspectionTaskResponse
@@ -4634,6 +4963,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Display the ScaleOut migration task progress.</p>
+     * 
      * @param request DescribeScaleOutMigrateTaskListRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeScaleOutMigrateTaskListResponse
@@ -4683,6 +5015,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Display the ScaleOut migration task progress.</p>
+     * 
      * @param request DescribeScaleOutMigrateTaskListRequest
      * @return DescribeScaleOutMigrateTaskListResponse
      */
@@ -4692,6 +5027,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Calls the DescribeSecurityIps operation to view the IP whitelist of an instance.</p>
+     * 
      * @param request DescribeSecurityIpsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeSecurityIpsResponse
@@ -4725,6 +5063,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Calls the DescribeSecurityIps operation to view the IP whitelist of an instance.</p>
+     * 
      * @param request DescribeSecurityIpsRequest
      * @return DescribeSecurityIpsResponse
      */
@@ -4735,7 +5076,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询 PolarDB-X 存储节点信息</p>
+     * <p>Queries the storage usage details of an instance, including the total capacity, used space, remaining space, and other information.</p>
      * 
      * @param request DescribeShowStorageInfoRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4775,7 +5116,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询 PolarDB-X 存储节点信息</p>
+     * <p>Queries the storage usage details of an instance, including the total capacity, used space, remaining space, and other information.</p>
      * 
      * @param request DescribeShowStorageInfoRequest
      * @return DescribeShowStorageInfoResponse
@@ -4787,7 +5128,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>慢SQL明细</p>
+     * <p>Queries the details of slow SQL statements on compute nodes and storage nodes of a PolarDB-X instance.</p>
      * 
      * @param request DescribeSlowLogRecordsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4851,7 +5192,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>慢SQL明细</p>
+     * <p>Queries the details of slow SQL statements on compute nodes and storage nodes of a PolarDB-X instance.</p>
      * 
      * @param request DescribeSlowLogRecordsRequest
      * @return DescribeSlowLogRecordsResponse
@@ -4862,6 +5203,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <blockquote>
+     * <ul>
+     * <li>The SQL audit and analysis feature of PolarDB-X 2.0 is free of charge. However, Simple Log Service charges fees for storage space, read traffic, number of requests, data transformation, and data delivery. For more information about the SQL audit feature, see <a href="https://help.aliyun.com/document_detail/184619.html">Enable SQL audit and analysis</a>.</li>
+     * </ul>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries SQL audit information.</p>
+     * 
      * @param request DescribeSqlAuditInfoRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeSqlAuditInfoResponse
@@ -4903,6 +5254,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <blockquote>
+     * <ul>
+     * <li>The SQL audit and analysis feature of PolarDB-X 2.0 is free of charge. However, Simple Log Service charges fees for storage space, read traffic, number of requests, data transformation, and data delivery. For more information about the SQL audit feature, see <a href="https://help.aliyun.com/document_detail/184619.html">Enable SQL audit and analysis</a>.</li>
+     * </ul>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries SQL audit information.</p>
+     * 
      * @param request DescribeSqlAuditInfoRequest
      * @return DescribeSqlAuditInfoResponse
      */
@@ -4913,7 +5274,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>SQL闪回任务列表查询</p>
+     * <p>Queries the list of SQL flashback tasks by calling the DescribeSqlFlashbackTaskList operation.</p>
      * 
      * @param request DescribeSqlFlashbackTaskListRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4949,7 +5310,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>SQL闪回任务列表查询</p>
+     * <p>Queries the list of SQL flashback tasks by calling the DescribeSqlFlashbackTaskList operation.</p>
      * 
      * @param request DescribeSqlFlashbackTaskListRequest
      * @return DescribeSqlFlashbackTaskListResponse
@@ -4961,7 +5322,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询 PolarDB-X 存储资源池信息</p>
+     * <p>Queries the details of a storage pool, including capacity, usage, and status.</p>
      * 
      * @param request DescribeStoragePoolInfoRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5001,7 +5362,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询 PolarDB-X 存储资源池信息</p>
+     * <p>Queries the details of a storage pool, including capacity, usage, and status.</p>
      * 
      * @param request DescribeStoragePoolInfoRequest
      * @return DescribeStoragePoolInfoResponse
@@ -5012,8 +5373,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>The CreateDataImportTask operation creates a data import task. You can use this operation to import SQL or CSV files stored in OSS or ECS, or directly provided, into a destination database instance. Specify the instance ID, database name, engine type, data source (such as an OSS path), and import type. The system performs the data write operation asynchronously or synchronously. This operation is applicable to scenarios such as data migration, initialization, and data backfill. A task ID is returned for subsequent status queries and management.</p>
+     * 
      * <b>summary</b> : 
-     * <p>查询结构迁移任务结果</p>
+     * <p>Queries the details of a database schema import task.</p>
      * 
      * @param request DescribeStructureImportTaskInfoRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5048,8 +5412,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>The CreateDataImportTask operation creates a data import task. You can use this operation to import SQL or CSV files stored in OSS or ECS, or directly provided, into a destination database instance. Specify the instance ID, database name, engine type, data source (such as an OSS path), and import type. The system performs the data write operation asynchronously or synchronously. This operation is applicable to scenarios such as data migration, initialization, and data backfill. A task ID is returned for subsequent status queries and management.</p>
+     * 
      * <b>summary</b> : 
-     * <p>查询结构迁移任务结果</p>
+     * <p>Queries the details of a database schema import task.</p>
      * 
      * @param request DescribeStructureImportTaskInfoRequest
      * @return DescribeStructureImportTaskInfoResponse
@@ -5061,7 +5428,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>标签列表查询</p>
+     * <p>Retrieves tag information.</p>
      * 
      * @param request DescribeTagsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5101,7 +5468,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>标签列表查询</p>
+     * <p>Retrieves tag information.</p>
      * 
      * @param request DescribeTagsRequest
      * @return DescribeTagsResponse
@@ -5112,6 +5479,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Retrieves the task list of an instance.</p>
+     * 
      * @param request DescribeTasksRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeTasksResponse
@@ -5177,6 +5547,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Retrieves the task list of an instance.</p>
+     * 
      * @param request DescribeTasksRequest
      * @return DescribeTasksResponse
      */
@@ -5187,7 +5560,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询标准版迁移到企业版的任务状态</p>
+     * <p>Queries the current status of a task that upgrades or converts a standard instance to an Enterprise instance.</p>
      * 
      * @param request DescribeTransformStatusRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5227,7 +5600,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询标准版迁移到企业版的任务状态</p>
+     * <p>Queries the current status of a task that upgrades or converts a standard instance to an Enterprise instance.</p>
      * 
      * @param request DescribeTransformStatusRequest
      * @return DescribeTransformStatusResponse
@@ -5238,6 +5611,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Calls the DescribeUserEncryptionKeyList operation to retrieve the list of Transparent Data Encryption (TDE) keys for a user.</p>
+     * 
      * @param request DescribeUserEncryptionKeyListRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeUserEncryptionKeyListResponse
@@ -5271,6 +5647,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Calls the DescribeUserEncryptionKeyList operation to retrieve the list of Transparent Data Encryption (TDE) keys for a user.</p>
+     * 
      * @param request DescribeUserEncryptionKeyListRequest
      * @return DescribeUserEncryptionKeyListResponse
      */
@@ -5280,6 +5659,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Disables three-role mode.</p>
+     * 
      * @param request DisableRightsSeparationRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DisableRightsSeparationResponse
@@ -5321,6 +5703,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Disables three-role mode.</p>
+     * 
      * @param request DisableRightsSeparationRequest
      * @return DisableRightsSeparationResponse
      */
@@ -5330,6 +5715,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <blockquote>
+     * <p>After the SQL audit and analysis feature is disabled, data is no longer written to Simple Log Service. However, you can still view historical data, which incurs storage and indexing fees. You can delete all data to deactivate Simple Log Service. After Simple Log Service is deactivated, no further fees are incurred. For more information about deactivating Simple Log Service, see <a href="https://help.aliyun.com/document_detail/90650.html">Deactivate Simple Log Service</a>.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Disables the SQL audit feature.</p>
+     * 
      * @param request DisableSqlAuditRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DisableSqlAuditResponse
@@ -5371,6 +5764,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <blockquote>
+     * <p>After the SQL audit and analysis feature is disabled, data is no longer written to Simple Log Service. However, you can still view historical data, which incurs storage and indexing fees. You can delete all data to deactivate Simple Log Service. After Simple Log Service is deactivated, no further fees are incurred. For more information about deactivating Simple Log Service, see <a href="https://help.aliyun.com/document_detail/90650.html">Deactivate Simple Log Service</a>.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Disables the SQL audit feature.</p>
+     * 
      * @param request DisableSqlAuditRequest
      * @return DisableSqlAuditResponse
      */
@@ -5381,7 +5782,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>开启三权分立</p>
+     * <p>Enables three-role mode.</p>
      * 
      * @param request EnableRightsSeparationRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5441,7 +5842,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>开启三权分立</p>
+     * <p>Enables three-role mode.</p>
      * 
      * @param request EnableRightsSeparationRequest
      * @return EnableRightsSeparationResponse
@@ -5452,6 +5853,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <blockquote>
+     * <ul>
+     * <li>The PolarDB-X 2.0 SQL audit and analysis feature itself is free of charge. However, Log Service charges fees for storage space, read traffic, number of requests, data transformation, data shipping, and other services. For more information about the SQL audit feature, see <a href="https://help.aliyun.com/document_detail/184619.html">Enable SQL Audit and Analysis</a>.</li>
+     * </ul>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Enables the SQL audit feature.</p>
+     * 
      * @param request EnableSqlAuditRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return EnableSqlAuditResponse
@@ -5497,6 +5908,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <blockquote>
+     * <ul>
+     * <li>The PolarDB-X 2.0 SQL audit and analysis feature itself is free of charge. However, Log Service charges fees for storage space, read traffic, number of requests, data transformation, data shipping, and other services. For more information about the SQL audit feature, see <a href="https://help.aliyun.com/document_detail/184619.html">Enable SQL Audit and Analysis</a>.</li>
+     * </ul>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Enables the SQL audit feature.</p>
+     * 
      * @param request EnableSqlAuditRequest
      * @return EnableSqlAuditResponse
      */
@@ -5507,7 +5928,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查标签接口</p>
+     * <p>Retrieves a list of labels.</p>
      * 
      * @param request ListTagResourcesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5555,7 +5976,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查标签接口</p>
+     * <p>Retrieves a list of labels.</p>
      * 
      * @param request ListTagResourcesRequest
      * @return ListTagResourcesResponse
@@ -5566,6 +5987,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Migrates an instance from one zone to another.</p>
+     * 
      * @param request MigrateDBInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return MigrateDBInstanceResponse
@@ -5627,6 +6051,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Migrates an instance from one zone to another.</p>
+     * 
      * @param request MigrateDBInstanceRequest
      * @return MigrateDBInstanceResponse
      */
@@ -5636,6 +6063,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Calls the ModifyAccountDescription operation to modify the description of an account.</p>
+     * 
      * @param request ModifyAccountDescriptionRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ModifyAccountDescriptionResponse
@@ -5677,6 +6107,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Calls the ModifyAccountDescription operation to modify the description of an account.</p>
+     * 
      * @param request ModifyAccountDescriptionRequest
      * @return ModifyAccountDescriptionResponse
      */
@@ -5686,6 +6119,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Modifies the permissions of a standard account.</p>
+     * 
      * @param request ModifyAccountPrivilegeRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ModifyAccountPrivilegeResponse
@@ -5739,6 +6175,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Modifies the permissions of a standard account.</p>
+     * 
      * @param request ModifyAccountPrivilegeRequest
      * @return ModifyAccountPrivilegeResponse
      */
@@ -5749,7 +6188,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改全局运维窗口信息</p>
+     * <p>Calls the ModifyActiveOperationMaintainConf operation to modify the time configuration of O&amp;M events.</p>
      * 
      * @param request ModifyActiveOperationMaintainConfRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5777,7 +6216,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改全局运维窗口信息</p>
+     * <p>Calls the ModifyActiveOperationMaintainConf operation to modify the time configuration of O&amp;M events.</p>
      * 
      * @param request ModifyActiveOperationMaintainConfRequest
      * @return ModifyActiveOperationMaintainConfResponse
@@ -5789,7 +6228,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改主动运维任务</p>
+     * <p>Calls the ModifyActiveOperationTasks operation to modify the execution time of O&amp;M events.</p>
      * 
      * @param request ModifyActiveOperationTasksRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5833,7 +6272,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改主动运维任务</p>
+     * <p>Calls the ModifyActiveOperationTasks operation to modify the execution time of O&amp;M events.</p>
      * 
      * @param request ModifyActiveOperationTasksRequest
      * @return ModifyActiveOperationTasksResponse
@@ -5845,10 +6284,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <hr>
+     * <p>***.</p>
      * 
      * <b>summary</b> : 
-     * <p>CDC变配</p>
+     * <p>Modifies the CDC configuration.</p>
      * 
      * @param request ModifyCdcClassRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5896,10 +6335,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <hr>
+     * <p>***.</p>
      * 
      * <b>summary</b> : 
-     * <p>CDC变配</p>
+     * <p>Modifies the CDC configuration.</p>
      * 
      * @param request ModifyCdcClassRequest
      * @return ModifyCdcClassResponse
@@ -5911,10 +6350,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <hr>
+     * <p>***.</p>
      * 
      * <b>summary</b> : 
-     * <p>Columnar变配</p>
+     * <p>Modifies the column store specifications.</p>
      * 
      * @param request ModifyColumnarClassRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5962,10 +6401,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <hr>
+     * <p>***.</p>
      * 
      * <b>summary</b> : 
-     * <p>Columnar变配</p>
+     * <p>Modifies the column store specifications.</p>
      * 
      * @param request ModifyColumnarClassRequest
      * @return ModifyColumnarClassResponse
@@ -5976,8 +6415,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>In PolarDB-X, in addition to the default primary endpoint and read-only endpoint, you can create custom endpoints to implement more flexible read/write splitting, load balancing, or business isolation strategies. The ModifyCustomEndpoint operation allows you to dynamically adjust the attributes of these custom endpoints without restarting the instance.</p>
+     * 
      * <b>summary</b> : 
-     * <p>修复自定连接基本信息</p>
+     * <p>Modifies the configuration of a custom endpoint.</p>
      * 
      * @param request ModifyCustomEndpointRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6032,8 +6474,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>In PolarDB-X, in addition to the default primary endpoint and read-only endpoint, you can create custom endpoints to implement more flexible read/write splitting, load balancing, or business isolation strategies. The ModifyCustomEndpoint operation allows you to dynamically adjust the attributes of these custom endpoints without restarting the instance.</p>
+     * 
      * <b>summary</b> : 
-     * <p>修复自定连接基本信息</p>
+     * <p>Modifies the configuration of a custom endpoint.</p>
      * 
      * @param request ModifyCustomEndpointRequest
      * @return ModifyCustomEndpointResponse
@@ -6044,8 +6489,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Deletes the custom endpoint of a specified database instance and disables access through the domain name.</p>
+     * 
      * <b>summary</b> : 
-     * <p>修复自定连接的网络信息</p>
+     * <p>Modifies the network configurations of a custom network endpoint, such as the subnet, security group, and public network access settings.</p>
      * 
      * @param request ModifyCustomEndpointNetRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6100,8 +6548,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Deletes the custom endpoint of a specified database instance and disables access through the domain name.</p>
+     * 
      * <b>summary</b> : 
-     * <p>修复自定连接的网络信息</p>
+     * <p>Modifies the network configurations of a custom network endpoint, such as the subnet, security group, and public network access settings.</p>
      * 
      * @param request ModifyCustomEndpointNetRequest
      * @return ModifyCustomEndpointNetResponse
@@ -6112,6 +6563,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Modifies the specifications of an instance by calling the ModifyDBInstanceClass operation.</p>
+     * 
      * @param request ModifyDBInstanceClassRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ModifyDBInstanceClassResponse
@@ -6181,6 +6635,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Modifies the specifications of an instance by calling the ModifyDBInstanceClass operation.</p>
+     * 
      * @param request ModifyDBInstanceClassRequest
      * @return ModifyDBInstanceClassResponse
      */
@@ -6191,7 +6648,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改实例配置</p>
+     * <p>Calls the ModifyDBInstanceConfig operation to modify instance configuration items.</p>
      * 
      * @param request ModifyDBInstanceConfigRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6235,7 +6692,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改实例配置</p>
+     * <p>Calls the ModifyDBInstanceConfig operation to modify instance configuration items.</p>
      * 
      * @param request ModifyDBInstanceConfigRequest
      * @return ModifyDBInstanceConfigResponse
@@ -6247,7 +6704,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改实例链接串</p>
+     * <p>Modifies the connection string of an instance.</p>
      * 
      * @param request ModifyDBInstanceConnectionStringRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6295,7 +6752,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改实例链接串</p>
+     * <p>Modifies the connection string of an instance.</p>
      * 
      * @param request ModifyDBInstanceConnectionStringRequest
      * @return ModifyDBInstanceConnectionStringResponse
@@ -6306,6 +6763,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Calls the ModifyDBInstanceDescription operation to modify the description of an instance.</p>
+     * 
      * @param request ModifyDBInstanceDescriptionRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ModifyDBInstanceDescriptionResponse
@@ -6343,6 +6803,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Calls the ModifyDBInstanceDescription operation to modify the description of an instance.</p>
+     * 
      * @param request ModifyDBInstanceDescriptionRequest
      * @return ModifyDBInstanceDescriptionResponse
      */
@@ -6352,6 +6815,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>***.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Modifies the maintenance window of an instance.</p>
+     * 
      * @param request ModifyDBInstanceMaintainTimeRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ModifyDBInstanceMaintainTimeResponse
@@ -6393,6 +6862,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>***.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Modifies the maintenance window of an instance.</p>
+     * 
      * @param request ModifyDBInstanceMaintainTimeRequest
      * @return ModifyDBInstanceMaintainTimeResponse
      */
@@ -6403,10 +6878,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <hr>
+     * <p>***.</p>
      * 
      * <b>summary</b> : 
-     * <p>切换交换机</p>
+     * <p>Modifies the virtual IP (VIP) address or network properties bound to a database instance. This operation supports changing the internal IP address, adjusting the vSwitch, migrating across zones, and other operations.</p>
      * 
      * @param request ModifyDBInstanceVipRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6454,10 +6929,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <hr>
+     * <p>***.</p>
      * 
      * <b>summary</b> : 
-     * <p>切换交换机</p>
+     * <p>Modifies the virtual IP (VIP) address or network properties bound to a database instance. This operation supports changing the internal IP address, adjusting the vSwitch, migrating across zones, and other operations.</p>
      * 
      * @param request ModifyDBInstanceVipRequest
      * @return ModifyDBInstanceVipResponse
@@ -6468,6 +6943,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Calls the ModifyDatabaseDescription operation to modify the description of a database.</p>
+     * 
      * @param request ModifyDatabaseDescriptionRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ModifyDatabaseDescriptionResponse
@@ -6509,6 +6987,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Calls the ModifyDatabaseDescription operation to modify the description of a database.</p>
+     * 
      * @param request ModifyDatabaseDescriptionRequest
      * @return ModifyDatabaseDescriptionResponse
      */
@@ -6519,10 +7000,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <hr>
+     * <p>***.</p>
      * 
      * <b>summary</b> : 
-     * <p>ModifyEngineMigration</p>
+     * <p>Modifies the configuration or migration parameters of a database engine migration task, such as the source database, destination database, migration objects, or migration mode.</p>
      * 
      * @param request ModifyEngineMigrationRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6574,10 +7055,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <hr>
+     * <p>***.</p>
      * 
      * <b>summary</b> : 
-     * <p>ModifyEngineMigration</p>
+     * <p>Modifies the configuration or migration parameters of a database engine migration task, such as the source database, destination database, migration objects, or migration mode.</p>
      * 
      * @param request ModifyEngineMigrationRequest
      * @return ModifyEngineMigrationResponse
@@ -6588,6 +7069,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Calls the ModifyParameter operation to modify instance parameters, including compute layer and storage layer parameters.</p>
+     * 
      * @param request ModifyParameterRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ModifyParameterResponse
@@ -6637,6 +7121,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Calls the ModifyParameter operation to modify instance parameters, including compute layer and storage layer parameters.</p>
+     * 
      * @param request ModifyParameterRequest
      * @return ModifyParameterResponse
      */
@@ -6646,6 +7133,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Calls the ModifySecurityIps operation to modify the whitelist of an instance.</p>
+     * 
      * @param request ModifySecurityIpsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ModifySecurityIpsResponse
@@ -6691,6 +7181,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Calls the ModifySecurityIps operation to modify the whitelist of an instance.</p>
+     * 
      * @param request ModifySecurityIpsRequest
      * @return ModifySecurityIpsResponse
      */
@@ -6701,7 +7194,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>SQL闪回任务预检</p>
+     * <p>Performs a pre-check and feasibility assessment for a recovery task before you execute SQL flashback recovery.</p>
      * 
      * @param request PreCheckSqlFlashbackTaskRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6749,7 +7242,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>SQL闪回任务预检</p>
+     * <p>Performs a pre-check and feasibility assessment for a recovery task before you execute SQL flashback recovery.</p>
      * 
      * @param request PreCheckSqlFlashbackTaskRequest
      * @return PreCheckSqlFlashbackTaskResponse
@@ -6761,7 +7254,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>刷新评估升级任务的导入元数据</p>
+     * <p>Refreshes the metadata of an import task.</p>
      * 
      * @param request RefreshImportMetaRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6801,7 +7294,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>刷新评估升级任务的导入元数据</p>
+     * <p>Refreshes the metadata of an import task.</p>
      * 
      * @param request RefreshImportMetaRequest
      * @return RefreshImportMetaResponse
@@ -6813,7 +7306,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>关闭冷存储</p>
+     * <p>Calls the ReleaseColdDataVolume operation.</p>
      * 
      * @param request ReleaseColdDataVolumeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6849,7 +7342,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>关闭冷存储</p>
+     * <p>Calls the ReleaseColdDataVolume operation.</p>
      * 
      * @param request ReleaseColdDataVolumeRequest
      * @return ReleaseColdDataVolumeResponse
@@ -6860,6 +7353,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Releases the public network connection of an instance by calling the ReleaseInstancePublicConnection operation.</p>
+     * 
      * @param request ReleaseInstancePublicConnectionRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ReleaseInstancePublicConnectionResponse
@@ -6897,6 +7393,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Releases the public network connection of an instance by calling the ReleaseInstancePublicConnection operation.</p>
+     * 
      * @param request ReleaseInstancePublicConnectionRequest
      * @return ReleaseInstancePublicConnectionResponse
      */
@@ -6906,6 +7405,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Resets the password of an account.</p>
+     * 
      * @param request ResetAccountPasswordRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ResetAccountPasswordResponse
@@ -6955,6 +7457,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Resets the password of an account.</p>
+     * 
      * @param request ResetAccountPasswordRequest
      * @return ResetAccountPasswordResponse
      */
@@ -6965,7 +7470,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <hr>
+     * <p>***.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Resets the password of an account.</p>
      * 
      * @param request ResetAccountPasswordRestrictRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7017,7 +7525,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <hr>
+     * <p>***.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Resets the password of an account.</p>
      * 
      * @param request ResetAccountPasswordRestrictRequest
      * @return ResetAccountPasswordRestrictResponse
@@ -7028,6 +7539,67 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>***.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Resets the API key of the memory engine.</p>
+     * 
+     * @param request ResetMem0AccountPasswordRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ResetMem0AccountPasswordResponse
+     */
+    public ResetMem0AccountPasswordResponse resetMem0AccountPasswordWithOptions(ResetMem0AccountPasswordRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.DBInstanceName)) {
+            query.put("DBInstanceName", request.DBInstanceName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.mem0ApiKey)) {
+            query.put("Mem0ApiKey", request.mem0ApiKey);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ResetMem0AccountPassword"),
+            new TeaPair("version", "2020-02-02"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ResetMem0AccountPasswordResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>***.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Resets the API key of the memory engine.</p>
+     * 
+     * @param request ResetMem0AccountPasswordRequest
+     * @return ResetMem0AccountPasswordResponse
+     */
+    public ResetMem0AccountPasswordResponse resetMem0AccountPassword(ResetMem0AccountPasswordRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.resetMem0AccountPasswordWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Restarts an instance by calling the RestartDBInstance operation.</p>
+     * 
      * @param request RestartDBInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return RestartDBInstanceResponse
@@ -7061,6 +7633,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Restarts an instance by calling the RestartDBInstance operation.</p>
+     * 
      * @param request RestartDBInstanceRequest
      * @return RestartDBInstanceResponse
      */
@@ -7071,7 +7646,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>重启数据导入任务</p>
+     * <p>Restarts a data import task.</p>
      * 
      * @param request RestartDataImportTaskRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7115,7 +7690,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>重启数据导入任务</p>
+     * <p>Restarts a data import task.</p>
      * 
      * @param request RestartDataImportTaskRequest
      * @return RestartDataImportTaskResponse
@@ -7297,7 +7872,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>跳过评估迁移的当前步骤</p>
+     * <p>This API is used to skip the current step.</p>
      * 
      * @param request SkipCurrentStepRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7337,7 +7912,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>跳过评估迁移的当前步骤</p>
+     * <p>This API is used to skip the current step.</p>
      * 
      * @param request SkipCurrentStepRequest
      * @return SkipCurrentStepResponse
@@ -7349,7 +7924,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>开始评估迁移切换</p>
+     * <p>Starts a database cutover for a database migration or synchronization task.</p>
      * 
      * @param request StartSwitchDatabaseRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7409,7 +7984,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>开始评估迁移切换</p>
+     * <p>Starts a database cutover for a database migration or synchronization task.</p>
      * 
      * @param request StartSwitchDatabaseRequest
      * @return StartSwitchDatabaseResponse
@@ -7421,7 +7996,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>暂停数据导入任务</p>
+     * <p>Stops a data import task.</p>
      * 
      * @param request StopDataImportTaskRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7465,7 +8040,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>暂停数据导入任务</p>
+     * <p>Stops a data import task.</p>
      * 
      * @param request StopDataImportTaskRequest
      * @return StopDataImportTaskResponse
@@ -7477,7 +8052,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>提交SQL闪回任务</p>
+     * <p>Creates a SQL flashback task by calling the SubmitSqlFlashbackTask operation.</p>
      * 
      * @param request SubmitSqlFlashbackTaskRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7549,7 +8124,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>提交SQL闪回任务</p>
+     * <p>Creates a SQL flashback task by calling the SubmitSqlFlashbackTask operation.</p>
      * 
      * @param request SubmitSqlFlashbackTaskRequest
      * @return SubmitSqlFlashbackTaskResponse
@@ -7619,7 +8194,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>GDN主备切换</p>
+     * <p>Performs a primary/secondary switchover for a global database network (GDN).</p>
      * 
      * @param request SwitchGdnMemberRoleRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7683,7 +8258,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>GDN主备切换</p>
+     * <p>Performs a primary/secondary switchover for a global database network (GDN).</p>
      * 
      * @param request SwitchGdnMemberRoleRequest
      * @return SwitchGdnMemberRoleResponse
@@ -7695,7 +8270,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>打标签接口</p>
+     * <p>Calls the TagResources operation to add tags to resources.</p>
      * 
      * @param request TagResourcesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7739,7 +8314,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>打标签接口</p>
+     * <p>Calls the TagResources operation to add tags to resources.</p>
      * 
      * @param request TagResourcesRequest
      * @return TagResourcesResponse
@@ -7751,7 +8326,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删标签接口</p>
+     * <p>Removes tags from a resource.</p>
      * 
      * @param request UntagResourcesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7799,7 +8374,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删标签接口</p>
+     * <p>Removes tags from a resource.</p>
      * 
      * @param request UntagResourcesRequest
      * @return UntagResourcesResponse
@@ -7811,7 +8386,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新备份策略</p>
+     * <p>Calls the UpdateBackupPolicy operation to modify the backup policy of an instance.</p>
      * 
      * @param request UpdateBackupPolicyRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7923,7 +8498,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新备份策略</p>
+     * <p>Calls the UpdateBackupPolicy operation to modify the backup policy of an instance.</p>
      * 
      * @param request UpdateBackupPolicyRequest
      * @return UpdateBackupPolicyResponse
@@ -7934,6 +8509,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>&lt;props=&quot;china&quot;&gt;更多关于实例账号的信息，请参见<a href="https://help.aliyun.com/document_detail/172163.html">账号管理</a>。</p>
+     * 
      * <b>summary</b> : 
      * <p>更新实例的管控参数</p>
      * 
@@ -7978,6 +8556,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>&lt;props=&quot;china&quot;&gt;更多关于实例账号的信息，请参见<a href="https://help.aliyun.com/document_detail/172163.html">账号管理</a>。</p>
+     * 
      * <b>summary</b> : 
      * <p>更新实例的管控参数</p>
      * 
@@ -7990,6 +8571,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Updates the SSL configuration of an instance.</p>
+     * 
      * @param request UpdateDBInstanceSSLRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return UpdateDBInstanceSSLResponse
@@ -8031,6 +8615,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Updates the SSL configuration of an instance.</p>
+     * 
      * @param request UpdateDBInstanceSSLRequest
      * @return UpdateDBInstanceSSLResponse
      */
@@ -8040,6 +8627,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Enables Transparent Data Encryption (TDE) for an instance by calling the UpdateDBInstanceTDE operation.</p>
+     * 
      * @param request UpdateDBInstanceTDERequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return UpdateDBInstanceTDEResponse
@@ -8085,6 +8675,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Enables Transparent Data Encryption (TDE) for an instance by calling the UpdateDBInstanceTDE operation.</p>
+     * 
      * @param request UpdateDBInstanceTDERequest
      * @return UpdateDBInstanceTDEResponse
      */
@@ -8095,7 +8688,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>扩缩容实例节点数</p>
+     * <p>Calls the UpdatePolarDBXInstanceNode operation to change the number of nodes for an instance, including scaling out and scaling in. This request generates a billable order.</p>
      * 
      * @param request UpdatePolarDBXInstanceNodeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8159,7 +8752,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>扩缩容实例节点数</p>
+     * <p>Calls the UpdatePolarDBXInstanceNode operation to change the number of nodes for an instance, including scaling out and scaling in. This request generates a billable order.</p>
      * 
      * @param request UpdatePolarDBXInstanceNodeRequest
      * @return UpdatePolarDBXInstanceNodeResponse
@@ -8171,7 +8764,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>升级CDC版本</p>
+     * <p>Upgrades the CDC node version of a PolarDB-X instance.</p>
      * 
      * @param request UpgradeCDCVersionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8223,7 +8816,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>升级CDC版本</p>
+     * <p>Upgrades the CDC node version of a PolarDB-X instance.</p>
      * 
      * @param request UpgradeCDCVersionRequest
      * @return UpgradeCDCVersionResponse
@@ -8235,7 +8828,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>升级Columnar版本</p>
+     * <p>Updates the column store version.</p>
      * 
      * @param request UpgradeColumnarVersionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8283,7 +8876,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>升级Columnar版本</p>
+     * <p>Updates the column store version.</p>
      * 
      * @param request UpgradeColumnarVersionRequest
      * @return UpgradeColumnarVersionResponse
@@ -8294,6 +8887,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Invokes the UpgradeDBInstanceKernelVersion operation to update the kernel version of an instance.</p>
+     * 
      * @param request UpgradeDBInstanceKernelVersionRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return UpgradeDBInstanceKernelVersionResponse
@@ -8335,6 +8931,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Invokes the UpgradeDBInstanceKernelVersion operation to update the kernel version of an instance.</p>
+     * 
      * @param request UpgradeDBInstanceKernelVersionRequest
      * @return UpgradeDBInstanceKernelVersionResponse
      */

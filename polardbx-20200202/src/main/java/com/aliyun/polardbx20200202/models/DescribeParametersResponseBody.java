@@ -4,10 +4,15 @@ package com.aliyun.polardbx20200202.models;
 import com.aliyun.tea.*;
 
 public class DescribeParametersResponseBody extends TeaModel {
+    /**
+     * <p>The parameter details.</p>
+     */
     @NameInMap("Data")
     public DescribeParametersResponseBodyData data;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>6BA32080EEA</p>
      */
@@ -36,10 +41,18 @@ public class DescribeParametersResponseBody extends TeaModel {
     }
 
     public static class DescribeParametersResponseBodyDataConfigParameters extends TeaModel {
+        /**
+         * <p>The parameter description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>存储节点私有协议开关(-1关闭，0开启)</p>
+         */
         @NameInMap("ParameterDescription")
         public String parameterDescription;
 
         /**
+         * <p>The parameter name.</p>
+         * 
          * <strong>example:</strong>
          * <p>CONN_POOL_XPROTO_STORAGE_DB_PORT</p>
          */
@@ -47,6 +60,8 @@ public class DescribeParametersResponseBody extends TeaModel {
         public String parameterName;
 
         /**
+         * <p>The parameter value.</p>
+         * 
          * <strong>example:</strong>
          * <p>-1</p>
          */
@@ -85,10 +100,18 @@ public class DescribeParametersResponseBody extends TeaModel {
     }
 
     public static class DescribeParametersResponseBodyDataRunningParameters extends TeaModel {
+        /**
+         * <p>The parameter description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>存储节点私有协议开关(-1关闭，0开启)</p>
+         */
         @NameInMap("ParameterDescription")
         public String parameterDescription;
 
         /**
+         * <p>The parameter name.</p>
+         * 
          * <strong>example:</strong>
          * <p>CONN_POOL_XPROTO_STORAGE_DB_PORT</p>
          */
@@ -96,6 +119,8 @@ public class DescribeParametersResponseBody extends TeaModel {
         public String parameterName;
 
         /**
+         * <p>The parameter value.</p>
+         * 
          * <strong>example:</strong>
          * <p>-1</p>
          */
@@ -134,6 +159,9 @@ public class DescribeParametersResponseBody extends TeaModel {
     }
 
     public static class DescribeParametersResponseBodyData extends TeaModel {
+        /**
+         * <p>The list of original parameters.</p>
+         */
         @NameInMap("ConfigParameters")
         public java.util.List<DescribeParametersResponseBodyDataConfigParameters> configParameters;
 
@@ -141,6 +169,8 @@ public class DescribeParametersResponseBody extends TeaModel {
         public String DBInstanceId;
 
         /**
+         * <p>The engine. Default value: polarx.</p>
+         * 
          * <strong>example:</strong>
          * <p>polarx</p>
          */
@@ -148,12 +178,17 @@ public class DescribeParametersResponseBody extends TeaModel {
         public String engine;
 
         /**
+         * <p>The DPI engine version. Default value: 2.0.</p>
+         * 
          * <strong>example:</strong>
          * <p>2.0</p>
          */
         @NameInMap("EngineVersion")
         public String engineVersion;
 
+        /**
+         * <p>The list of running parameter details.</p>
+         */
         @NameInMap("RunningParameters")
         public java.util.List<DescribeParametersResponseBodyDataRunningParameters> runningParameters;
 

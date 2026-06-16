@@ -4,10 +4,17 @@ package com.aliyun.polardbx20200202.models;
 import com.aliyun.tea.*;
 
 public class ModifyAccountDescriptionRequest extends TeaModel {
+    /**
+     * <p>The description of the account.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>测试账号</p>
+     */
     @NameInMap("AccountDescription")
     public String accountDescription;
 
     /**
+     * <p>The name of the instance account.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -17,6 +24,7 @@ public class ModifyAccountDescriptionRequest extends TeaModel {
     public String accountName;
 
     /**
+     * <p>The name of the instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -26,6 +34,7 @@ public class ModifyAccountDescriptionRequest extends TeaModel {
     public String DBInstanceName;
 
     /**
+     * <p>The region ID of the instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

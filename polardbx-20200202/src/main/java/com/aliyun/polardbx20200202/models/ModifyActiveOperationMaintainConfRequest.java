@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyActiveOperationMaintainConfRequest extends TeaModel {
     /**
+     * <p>The day of the week. Valid values: 1 to 7.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class ModifyActiveOperationMaintainConfRequest extends TeaModel {
     public String cycleTime;
 
     /**
+     * <p>The cycle mode. Set this parameter to Week.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,7 @@ public class ModifyActiveOperationMaintainConfRequest extends TeaModel {
     public String cycleType;
 
     /**
+     * <p>The end time.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -32,6 +35,7 @@ public class ModifyActiveOperationMaintainConfRequest extends TeaModel {
     public String maintainEndTime;
 
     /**
+     * <p>The start time.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -41,6 +45,7 @@ public class ModifyActiveOperationMaintainConfRequest extends TeaModel {
     public String maintainStartTime;
 
     /**
+     * <p>The region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -50,6 +55,11 @@ public class ModifyActiveOperationMaintainConfRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>Specifies whether to enable the configuration. Valid values:</p>
+     * <ul>
+     * <li><strong>1</strong>: Enabled.</li>
+     * <li><strong>0</strong>: Disabled.</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ResetAccountPasswordRequest extends TeaModel {
     /**
+     * <p>The name of the account.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class ResetAccountPasswordRequest extends TeaModel {
     public String accountName;
 
     /**
+     * <p>The password of the account.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,7 @@ public class ResetAccountPasswordRequest extends TeaModel {
     public String accountPassword;
 
     /**
+     * <p>The name of the instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -32,6 +35,7 @@ public class ResetAccountPasswordRequest extends TeaModel {
     public String DBInstanceName;
 
     /**
+     * <p>The region ID of the instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -41,6 +45,8 @@ public class ResetAccountPasswordRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The name of the security administrator account.</p>
+     * 
      * <strong>example:</strong>
      * <p>account_sec</p>
      */
@@ -48,6 +54,8 @@ public class ResetAccountPasswordRequest extends TeaModel {
     public String securityAccountName;
 
     /**
+     * <p>The password of the security administrator account.</p>
+     * 
      * <strong>example:</strong>
      * <hr>
      */

@@ -4,6 +4,9 @@ package com.aliyun.polardbx20200202.models;
 import com.aliyun.tea.*;
 
 public class DescribeCustomEndpointListResponseBody extends TeaModel {
+    /**
+     * <p>The data struct.</p>
+     */
     @NameInMap("Data")
     public DescribeCustomEndpointListResponseBodyData data;
 
@@ -45,6 +48,8 @@ public class DescribeCustomEndpointListResponseBody extends TeaModel {
         public java.util.List<String> cnNames;
 
         /**
+         * <p>The endpoint of the instance.</p>
+         * 
          * <strong>example:</strong>
          * <p>pxc-shra****zq0j01.polarx.rds.aliyuncs.com</p>
          */
@@ -52,6 +57,8 @@ public class DescribeCustomEndpointListResponseBody extends TeaModel {
         public String connectionString;
 
         /**
+         * <p>The ID of the custom endpoint.</p>
+         * 
          * <strong>example:</strong>
          * <p>pxe-b6e****o4pfap1s</p>
          */
@@ -59,6 +66,8 @@ public class DescribeCustomEndpointListResponseBody extends TeaModel {
         public String customEndpointId;
 
         /**
+         * <p>The instance ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>pxc-hz****zoxherr7</p>
          */
@@ -66,6 +75,8 @@ public class DescribeCustomEndpointListResponseBody extends TeaModel {
         public String DBInstanceName;
 
         /**
+         * <p>The name of the custom endpoint.</p>
+         * 
          * <strong>example:</strong>
          * <p>Name</p>
          */
@@ -73,6 +84,8 @@ public class DescribeCustomEndpointListResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>Indicates whether a node automatically joins the cluster and starts providing services after the node is added or recovered.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -80,6 +93,11 @@ public class DescribeCustomEndpointListResponseBody extends TeaModel {
         public String nodeAutoEnter;
 
         /**
+         * <p>To query the metrics of a read-only node in a cloud-native read/write splitting architecture instance, set this parameter to <strong>READONLY</strong> and specify the <strong>NodeId</strong> parameter.</p>
+         * <blockquote>
+         * <p> In other cases, you do not need to specify this parameter or you can set it to <strong>MASTER</strong>.</p>
+         * </blockquote>
+         * 
          * <strong>example:</strong>
          * <p>same_azone_as_last</p>
          */
@@ -87,6 +105,8 @@ public class DescribeCustomEndpointListResponseBody extends TeaModel {
         public String nodeRole;
 
         /**
+         * <p>The port used to connect to the instance.</p>
+         * 
          * <strong>example:</strong>
          * <p>3306</p>
          */
@@ -94,6 +114,8 @@ public class DescribeCustomEndpointListResponseBody extends TeaModel {
         public Integer port;
 
         /**
+         * <p>The status of the custom endpoint.</p>
+         * 
          * <strong>example:</strong>
          * <p>created</p>
          */
@@ -101,6 +123,8 @@ public class DescribeCustomEndpointListResponseBody extends TeaModel {
         public String status;
 
         /**
+         * <p>The ID of the vSwitch.</p>
+         * 
          * <strong>example:</strong>
          * <p>vsw-8vbkw****5yh4nrd639ih</p>
          */
@@ -108,6 +132,8 @@ public class DescribeCustomEndpointListResponseBody extends TeaModel {
         public String vSwitchId;
 
         /**
+         * <p>The ID of the virtual private cloud (VPC) in which the endpoint resides.</p>
+         * 
          * <strong>example:</strong>
          * <p>vpc-uf61h****dj1zg5fqp5x7</p>
          */
@@ -211,12 +237,17 @@ public class DescribeCustomEndpointListResponseBody extends TeaModel {
 
     public static class DescribeCustomEndpointListResponseBodyData extends TeaModel {
         /**
+         * <p>Indicates whether the node can be deleted.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
         @NameInMap("CanDeleteCount")
         public Integer canDeleteCount;
 
+        /**
+         * <p>The details of the endpoints.</p>
+         */
         @NameInMap("Endpoints")
         public java.util.List<DescribeCustomEndpointListResponseBodyDataEndpoints> endpoints;
 

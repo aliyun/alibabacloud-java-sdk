@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ModifyCustomEndpointNetRequest extends TeaModel {
     /**
+     * <p>The connection prefix.</p>
+     * 
      * <strong>example:</strong>
      * <p>pxc-****</p>
      */
@@ -12,6 +14,7 @@ public class ModifyCustomEndpointNetRequest extends TeaModel {
     public String connPrefix;
 
     /**
+     * <p>The ID of the custom endpoint.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,6 +24,7 @@ public class ModifyCustomEndpointNetRequest extends TeaModel {
     public String customEndpointId;
 
     /**
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -30,6 +34,8 @@ public class ModifyCustomEndpointNetRequest extends TeaModel {
     public String DBInstanceName;
 
     /**
+     * <p>The public endpoint port.</p>
+     * 
      * <strong>example:</strong>
      * <p>3306</p>
      */
@@ -37,6 +43,8 @@ public class ModifyCustomEndpointNetRequest extends TeaModel {
     public Integer port;
 
     /**
+     * <p>The region in which the instance resides.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
      */
@@ -44,6 +52,8 @@ public class ModifyCustomEndpointNetRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The vSwitch ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>vsw-*********</p>
      */
@@ -51,6 +61,8 @@ public class ModifyCustomEndpointNetRequest extends TeaModel {
     public String vSwitchId;
 
     /**
+     * <p>The ID of the virtual private cloud (VPC) in which the endpoint resides.</p>
+     * 
      * <strong>example:</strong>
      * <p>vpc-bp1ndoug37dtwoedlmru0</p>
      */

@@ -5,6 +5,11 @@ import com.aliyun.tea.*;
 
 public class ModifyEngineMigrationRequest extends TeaModel {
     /**
+     * <p>The specific endpoints to switch. Set this parameter to a JSON string that contains the pairs of endpoints to swap.</p>
+     * <blockquote>
+     * <p>This parameter takes effect only when SwapConnectionString is set to true.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>{\&quot;pc-bp1m9tt23o5kh834y.rwlb.rds.aliyuncs.com\&quot;:\&quot;rm-bp1ycl5o6ojs957o0.mysql.rds.aliyuncs.com\&quot;}</p>
      */
@@ -12,6 +17,8 @@ public class ModifyEngineMigrationRequest extends TeaModel {
     public String connectionStrings;
 
     /**
+     * <p>The instance ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>pxc-htri0****r4k9p</p>
      */
@@ -19,6 +26,8 @@ public class ModifyEngineMigrationRequest extends TeaModel {
     public String DBInstanceName;
 
     /**
+     * <p>The name of the new primary instance after the migration is complete.</p>
+     * 
      * <strong>example:</strong>
      * <p>newmaster789</p>
      */
@@ -26,6 +35,8 @@ public class ModifyEngineMigrationRequest extends TeaModel {
     public String newMasterDBInstanceName;
 
     /**
+     * <p>The region ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-shanghai</p>
      */
@@ -33,6 +44,8 @@ public class ModifyEngineMigrationRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The name of the source database instance.</p>
+     * 
      * <strong>example:</strong>
      * <p>source456</p>
      */
@@ -40,6 +53,14 @@ public class ModifyEngineMigrationRequest extends TeaModel {
     public String sourceDBInstanceName;
 
     /**
+     * <p>Specifies whether to automatically swap connection strings. Valid values:</p>
+     * <ul>
+     * <li><p>true: The application does not need to modify its configuration. Connections are automatically directed to the new instance.</p>
+     * </li>
+     * <li><p>false: You must manually update the application endpoint.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

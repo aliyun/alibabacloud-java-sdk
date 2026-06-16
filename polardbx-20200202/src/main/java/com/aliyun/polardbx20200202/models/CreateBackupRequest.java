@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateBackupRequest extends TeaModel {
     /**
+     * <p>The backup type. Currently, only &quot;0&quot; is supported, which indicates fast backup.</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
@@ -12,6 +14,7 @@ public class CreateBackupRequest extends TeaModel {
     public String backupType;
 
     /**
+     * <p>The name of the instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,6 +24,7 @@ public class CreateBackupRequest extends TeaModel {
     public String DBInstanceName;
 
     /**
+     * <p>The region where the instance resides.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

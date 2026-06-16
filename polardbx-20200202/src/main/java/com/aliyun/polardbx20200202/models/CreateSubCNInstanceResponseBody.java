@@ -8,8 +8,6 @@ public class CreateSubCNInstanceResponseBody extends TeaModel {
     public CreateSubCNInstanceResponseBodyData data;
 
     /**
-     * <p>Id of the request</p>
-     * 
      * <strong>example:</strong>
      * <p>D6A4256F-7B83-5BD7-9AC0-72E1FAC05330</p>
      */

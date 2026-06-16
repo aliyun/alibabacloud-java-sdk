@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyCustomEndpointRequest extends TeaModel {
     /**
+     * <p>The ID of the custom endpoint.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class ModifyCustomEndpointRequest extends TeaModel {
     public String customEndpointId;
 
     /**
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,8 @@ public class ModifyCustomEndpointRequest extends TeaModel {
     public String DBInstanceName;
 
     /**
+     * <p>The name of the custom endpoint.</p>
+     * 
      * <strong>example:</strong>
      * <p>secondary-endpoint</p>
      */
@@ -30,6 +34,8 @@ public class ModifyCustomEndpointRequest extends TeaModel {
     public String name;
 
     /**
+     * <p>Specifies whether a node automatically joins the cluster and starts providing services after it is added or recovered.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -37,7 +43,7 @@ public class ModifyCustomEndpointRequest extends TeaModel {
     public Boolean nodeAutoEnter;
 
     /**
-     * <p>node ids</p>
+     * <p>The node IDs.</p>
      * 
      * <strong>example:</strong>
      * <p>node3</p>
@@ -46,6 +52,8 @@ public class ModifyCustomEndpointRequest extends TeaModel {
     public String nodeIds;
 
     /**
+     * <p>The role of the node.</p>
+     * 
      * <strong>example:</strong>
      * <p>master</p>
      */
@@ -53,6 +61,8 @@ public class ModifyCustomEndpointRequest extends TeaModel {
     public String nodeRole;
 
     /**
+     * <p>The region ID of the instance.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-zhangjiakou</p>
      */

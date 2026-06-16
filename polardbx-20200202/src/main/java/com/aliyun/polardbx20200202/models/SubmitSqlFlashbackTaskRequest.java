@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class SubmitSqlFlashbackTaskRequest extends TeaModel {
     /**
+     * <p>The name of the database.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class SubmitSqlFlashbackTaskRequest extends TeaModel {
     public String dbName;
 
     /**
+     * <p>The end time for executing the flashback SQL.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,7 @@ public class SubmitSqlFlashbackTaskRequest extends TeaModel {
     public String endTime;
 
     /**
+     * <p>The instance ID of the PolarDB-X instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -32,6 +35,11 @@ public class SubmitSqlFlashbackTaskRequest extends TeaModel {
     public String polardbxInstanceId;
 
     /**
+     * <p>The restoration type. Valid values:</p>
+     * <ul>
+     * <li><strong>1</strong>: Image-based restoration.</li>
+     * <li><strong>0</strong>: Reverse restoration.</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -41,6 +49,12 @@ public class SubmitSqlFlashbackTaskRequest extends TeaModel {
     public String recallRestoreType;
 
     /**
+     * <p>The matching mode. Valid values:</p>
+     * <ul>
+     * <li><strong>0</strong>: exact match.</li>
+     * <li><strong>1</strong>: fuzzy match.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      * 
@@ -51,6 +65,7 @@ public class SubmitSqlFlashbackTaskRequest extends TeaModel {
     public String recallType;
 
     /**
+     * <p>The region where the instance resides.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -60,6 +75,8 @@ public class SubmitSqlFlashbackTaskRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The primary key of the flashback SQL.</p>
+     * 
      * <strong>example:</strong>
      * <p>1111</p>
      * 
@@ -70,6 +87,8 @@ public class SubmitSqlFlashbackTaskRequest extends TeaModel {
     public String sqlPk;
 
     /**
+     * <p>The type of SQL. Valid values: INSERT, UPDATE, and DELETE. Separate multiple types with commas (,).</p>
+     * 
      * <strong>example:</strong>
      * <p>INSERT,UPDATE</p>
      * 
@@ -80,6 +99,7 @@ public class SubmitSqlFlashbackTaskRequest extends TeaModel {
     public String sqlType;
 
     /**
+     * <p>The start time for executing the flashback SQL.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -89,6 +109,8 @@ public class SubmitSqlFlashbackTaskRequest extends TeaModel {
     public String startTime;
 
     /**
+     * <p>The name of the table on which the flashback SQL operation is performed.</p>
+     * 
      * <strong>example:</strong>
      * <p>test</p>
      * 
@@ -99,6 +121,8 @@ public class SubmitSqlFlashbackTaskRequest extends TeaModel {
     public String tableName;
 
     /**
+     * <p>The trace ID of the flashback SQL.</p>
+     * 
      * <strong>example:</strong>
      * <p>ase*****</p>
      * 

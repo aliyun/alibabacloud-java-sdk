@@ -4,10 +4,15 @@ package com.aliyun.polardbx20200202.models;
 import com.aliyun.tea.*;
 
 public class SwitchGdnMemberRoleResponseBody extends TeaModel {
+    /**
+     * <p>The data struct.</p>
+     */
     @NameInMap("Data")
     public SwitchGdnMemberRoleResponseBodyData data;
 
     /**
+     * <p>The additional information returned. If the request is successful, success is returned. If the request fails, the corresponding error code is returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -24,6 +29,8 @@ public class SwitchGdnMemberRoleResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request is successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -69,6 +76,8 @@ public class SwitchGdnMemberRoleResponseBody extends TeaModel {
 
     public static class SwitchGdnMemberRoleResponseBodyData extends TeaModel {
         /**
+         * <p>The task ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>2209883</p>
          */

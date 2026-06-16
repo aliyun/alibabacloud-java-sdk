@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DisableSqlAuditRequest extends TeaModel {
     /**
+     * <p>The name of the audit administrator account. &gt; If the three-role mode is enabled, this parameter is required. For more information about the three-role mode, see <a href="https://help.aliyun.com/document_detail/213824.html">Three-role mode</a>.</p>
+     * 
      * <strong>example:</strong>
      * <p>test_daa</p>
      */
@@ -12,6 +14,8 @@ public class DisableSqlAuditRequest extends TeaModel {
     public String auditAccountName;
 
     /**
+     * <p>The password of the audit administrator account. &gt; If the three-role mode is enabled, this parameter is required. For more information about the three-role mode, see <a href="https://help.aliyun.com/document_detail/213824.html">Three-role mode</a>.</p>
+     * 
      * <strong>example:</strong>
      * <p>Pw@11111</p>
      */
@@ -19,6 +23,7 @@ public class DisableSqlAuditRequest extends TeaModel {
     public String auditAccountPassword;
 
     /**
+     * <p>The instance ID. &gt; You can call the <a href="https://help.aliyun.com/document_detail/196830.html">DescribeDBInstances</a> operation to query the details of all instances in the specified region, including instance IDs.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -28,6 +33,7 @@ public class DisableSqlAuditRequest extends TeaModel {
     public String DBInstanceId;
 
     /**
+     * <p>The region ID of the instance. &gt; You can call the <a href="https://help.aliyun.com/document_detail/196841.html">DescribeRegions</a> operation to query the regions supported by PolarDB-X, including region IDs.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

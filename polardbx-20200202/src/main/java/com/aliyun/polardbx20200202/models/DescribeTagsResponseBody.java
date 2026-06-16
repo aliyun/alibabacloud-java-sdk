@@ -13,6 +13,9 @@ public class DescribeTagsResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The list of tag information.</p>
+     */
     @NameInMap("TagInfos")
     public java.util.List<DescribeTagsResponseBodyTagInfos> tagInfos;
 
@@ -38,10 +41,15 @@ public class DescribeTagsResponseBody extends TeaModel {
     }
 
     public static class DescribeTagsResponseBodyTagInfos extends TeaModel {
+        /**
+         * <p>The list of database instances associated with the tag.</p>
+         */
         @NameInMap("DBInstanceIds")
         public java.util.List<String> DBInstanceIds;
 
         /**
+         * <p>The tag key.</p>
+         * 
          * <strong>example:</strong>
          * <p>testKey</p>
          */
@@ -49,6 +57,8 @@ public class DescribeTagsResponseBody extends TeaModel {
         public String tagKey;
 
         /**
+         * <p>The tag value.</p>
+         * 
          * <strong>example:</strong>
          * <p>testValue</p>
          */

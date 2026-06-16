@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyColumnarClassRequest extends TeaModel {
     /**
+     * <p>The column store specifications.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,8 @@ public class ModifyColumnarClassRequest extends TeaModel {
     public String columnarClass;
 
     /**
+     * <p>The number of column store nodes.</p>
+     * 
      * <strong>example:</strong>
      * <p>**</p>
      */
@@ -21,6 +24,7 @@ public class ModifyColumnarClassRequest extends TeaModel {
     public String columnarNodeCount;
 
     /**
+     * <p>The instance name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -30,6 +34,7 @@ public class ModifyColumnarClassRequest extends TeaModel {
     public String instanceName;
 
     /**
+     * <p>The region in which the instance resides. &gt; You can call the <a href="https://help.aliyun.com/document_detail/196841.html">DescribeRegions</a> operation to query the regions supported by PolarDB-X, including region IDs.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -39,6 +44,8 @@ public class ModifyColumnarClassRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The switch mode.</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */

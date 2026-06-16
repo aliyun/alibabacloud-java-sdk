@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class StartSwitchDatabaseRequest extends TeaModel {
     /**
+     * <p>The name of the instance.</p>
+     * 
      * <strong>example:</strong>
      * <p>pxc-xxx</p>
      */
@@ -12,6 +14,8 @@ public class StartSwitchDatabaseRequest extends TeaModel {
     public String DBInstanceName;
 
     /**
+     * <p>The endpoint of the primary node of the target instance.</p>
+     * 
      * <strong>example:</strong>
      * <p>pxc-*********.polarx.rds.aliyuncs.com</p>
      */
@@ -19,6 +23,8 @@ public class StartSwitchDatabaseRequest extends TeaModel {
     public String dstMainConnectString;
 
     /**
+     * <p>The port number of the target instance.</p>
+     * 
      * <strong>example:</strong>
      * <p>3313</p>
      */
@@ -26,6 +32,8 @@ public class StartSwitchDatabaseRequest extends TeaModel {
     public String dstMainPort;
 
     /**
+     * <p>Specifies whether to modify the endpoint or port of the source or target instance.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -33,6 +41,7 @@ public class StartSwitchDatabaseRequest extends TeaModel {
     public String isModifyEndpoint;
 
     /**
+     * <p>The region ID of the instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -42,6 +51,7 @@ public class StartSwitchDatabaseRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The ID of the import task.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -51,6 +61,8 @@ public class StartSwitchDatabaseRequest extends TeaModel {
     public String slinkTaskId;
 
     /**
+     * <p>The endpoint of the primary node of the source instance, which is typically the internal or public endpoint of the instance.</p>
+     * 
      * <strong>example:</strong>
      * <p>rm-*********.mysql.rds.aliyuncs.com</p>
      */
@@ -58,6 +70,8 @@ public class StartSwitchDatabaseRequest extends TeaModel {
     public String srcMainConnectString;
 
     /**
+     * <p>The port number of the primary node of the source instance.</p>
+     * 
      * <strong>example:</strong>
      * <p>3308</p>
      */

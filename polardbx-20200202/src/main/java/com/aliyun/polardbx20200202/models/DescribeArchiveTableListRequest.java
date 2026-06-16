@@ -11,6 +11,7 @@ public class DescribeArchiveTableListRequest extends TeaModel {
     public String DBInstanceName;
 
     /**
+     * <p>The page number. Pages start from 1.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("PageIndex")

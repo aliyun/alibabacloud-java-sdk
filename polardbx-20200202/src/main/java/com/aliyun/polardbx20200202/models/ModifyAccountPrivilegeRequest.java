@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyAccountPrivilegeRequest extends TeaModel {
     /**
+     * <p>The account name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,14 @@ public class ModifyAccountPrivilegeRequest extends TeaModel {
     public String accountName;
 
     /**
+     * <p>The account permissions. Valid values:</p>
+     * <ul>
+     * <li><strong>ReadWrite</strong></li>
+     * <li><strong>ReadOnly</strong></li>
+     * <li><strong>DMLOnly</strong></li>
+     * <li><strong>DDLOnly</strong>.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>ReadWrite</p>
      */
@@ -21,6 +30,7 @@ public class ModifyAccountPrivilegeRequest extends TeaModel {
     public String accountPrivilege;
 
     /**
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -30,6 +40,8 @@ public class ModifyAccountPrivilegeRequest extends TeaModel {
     public String DBInstanceName;
 
     /**
+     * <p>The database name.</p>
+     * 
      * <strong>example:</strong>
      * <p>sbtest</p>
      */
@@ -37,6 +49,7 @@ public class ModifyAccountPrivilegeRequest extends TeaModel {
     public String dbName;
 
     /**
+     * <p>The region ID of the instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -46,6 +59,8 @@ public class ModifyAccountPrivilegeRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The name of the security administrator account.</p>
+     * 
      * <strong>example:</strong>
      * <p>account_audit</p>
      */
@@ -53,6 +68,8 @@ public class ModifyAccountPrivilegeRequest extends TeaModel {
     public String securityAccountName;
 
     /**
+     * <p>The password of the security administrator account.</p>
+     * 
      * <strong>example:</strong>
      * <hr>
      */

@@ -4,10 +4,15 @@ package com.aliyun.polardbx20200202.models;
 import com.aliyun.tea.*;
 
 public class DescribeDBInstancesResponseBody extends TeaModel {
+    /**
+     * <p>The list of instances.</p>
+     */
     @NameInMap("DBInstances")
     public java.util.List<DescribeDBInstancesResponseBodyDBInstances> DBInstances;
 
     /**
+     * <p>The page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -15,6 +20,8 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The page size.</p>
+     * 
      * <strong>example:</strong>
      * <p>30</p>
      */
@@ -22,6 +29,8 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>C458B1E8-1683-3645-B154-6BA32080EEA</p>
      */
@@ -29,6 +38,8 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total number of entries.</p>
+     * 
      * <strong>example:</strong>
      * <p>30</p>
      */
@@ -82,12 +93,20 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
 
     public static class DescribeDBInstancesResponseBodyDBInstancesNodes extends TeaModel {
         /**
+         * <p>The instance specifications.</p>
+         * 
          * <strong>example:</strong>
          * <p>polarx.x4.large.2e</p>
          */
         @NameInMap("ClassCode")
         public String classCode;
 
+        /**
+         * <p>The node ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pxi-zd89wrzqh******</p>
+         */
         @NameInMap("Id")
         public String id;
 
@@ -99,6 +118,8 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>The region ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-hangzhou-g-aliyun</p>
          */
@@ -106,6 +127,8 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         public String regionId;
 
         /**
+         * <p>The zone ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-hangzhou-g</p>
          */
@@ -161,6 +184,8 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
 
     public static class DescribeDBInstancesResponseBodyDBInstancesTagSet extends TeaModel {
         /**
+         * <p>The tag key.</p>
+         * 
          * <strong>example:</strong>
          * <p>key1</p>
          */
@@ -168,6 +193,8 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         public String key;
 
         /**
+         * <p>The tag value.</p>
+         * 
          * <strong>example:</strong>
          * <p>value1</p>
          */
@@ -199,6 +226,8 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
 
     public static class DescribeDBInstancesResponseBodyDBInstances extends TeaModel {
         /**
+         * <p>The name of the log node.</p>
+         * 
          * <strong>example:</strong>
          * <p>pxc-c-dmlgit****</p>
          */
@@ -206,6 +235,21 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         public String cdcInstanceName;
 
         /**
+         * <p>The CN node specifications. Valid values:</p>
+         * <ul>
+         * <li><strong>polarx.x4.medium.2e</strong>: 2 cores, 8 GB memory</li>
+         * <li><strong>polarx.x4.large.2e</strong>: 4 cores, 16 GB memory</li>
+         * <li><strong>polarx.x8.large.2e</strong>: 4 cores, 32 GB memory</li>
+         * <li><strong>polarx.x4.xlarge.2e</strong>: 8 cores, 32 GB memory</li>
+         * <li><strong>polarx.x8.xlarge.2e</strong>: 8 cores, 64 GB memory</li>
+         * <li><strong>polarx.x4.2xlarge.2e</strong>: 16 cores, 64 GB memory</li>
+         * <li><strong>polarx.x8.2xlarge.2e</strong>: 16 cores, 128 GB memory</li>
+         * <li><strong>polarx.x4.4xlarge.2e</strong>: 32 cores, 128 GB memory</li>
+         * <li><strong>polarx.x8.4xlarge.2e</strong>: 32 cores, 256 GB memory</li>
+         * <li><strong>polarx.st.8xlarge.2e</strong>: 60 cores, 470 GB memory</li>
+         * <li><strong>polarx.st.12xlarge.2e</strong>: 90 cores, 720 GB memory.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>polarx.x4.large.2e</p>
          */
@@ -213,19 +257,32 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         public String cnNodeClassCode;
 
         /**
+         * <p>The number of CN nodes.</p>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */
         @NameInMap("CnNodeCount")
         public Integer cnNodeCount;
 
+        /**
+         * <p>The name of the column store engine instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxxxxxxx</p>
+         */
         @NameInMap("ColumnarInstanceName")
         public String columnarInstanceName;
 
+        /**
+         * <p>The column store read-only instance information.</p>
+         */
         @NameInMap("ColumnarReadDBInstances")
         public java.util.List<String> columnarReadDBInstances;
 
         /**
+         * <p>The commodity code.</p>
+         * 
          * <strong>example:</strong>
          * <p>drds_polarxpre_public_cn</p>
          */
@@ -233,6 +290,12 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         public String commodityCode;
 
         /**
+         * <p>Indicates whether the instance contains the multi-stream log service. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: The instance contains the multi-stream log service.</li>
+         * <li><strong>false</strong>: The instance does not contain the multi-stream log service.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -243,6 +306,8 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         public String cpuType;
 
         /**
+         * <p>The creation time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2021-11-01T03:49:50.000+0000</p>
          */
@@ -250,6 +315,8 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         public String createTime;
 
         /**
+         * <p>The name of the database instance.</p>
+         * 
          * <strong>example:</strong>
          * <p>pxc-xxxxx</p>
          */
@@ -257,6 +324,8 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         public String DBInstanceName;
 
         /**
+         * <p>The database type.</p>
+         * 
          * <strong>example:</strong>
          * <p>polarx</p>
          */
@@ -264,16 +333,43 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         public String DBType;
 
         /**
+         * <p>The database version.</p>
+         * 
          * <strong>example:</strong>
          * <p>5.7</p>
          */
         @NameInMap("DBVersion")
         public String DBVersion;
 
+        /**
+         * <p>The database description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>测试</p>
+         */
         @NameInMap("Description")
         public String description;
 
         /**
+         * <p>The DN node specifications. Valid values:</p>
+         * <ul>
+         * <li><strong>mysql.n2.medium.25</strong>: 2 cores, 4 GB memory</li>
+         * <li><strong>mysql.n4.medium.25</strong>: 2 cores, 8 GB memory</li>
+         * <li><strong>mysql.x8.medium.25</strong>: 2 cores, 16 GB memory</li>
+         * <li><strong>mysql.n2.large.25</strong>: 4 cores, 8 GB memory</li>
+         * <li><strong>mysql.n4.large.25</strong>: 4 cores, 16 GB memory</li>
+         * <li><strong>mysql.x8.large.25</strong>: 4 cores, 32 GB memory</li>
+         * <li><strong>mysql.n2.xlarge.25</strong>: 8 cores, 16 GB memory</li>
+         * <li><strong>mysql.n4.xlarge.25</strong>: 8 cores, 32 GB memory</li>
+         * <li><strong>mysql.x8.xlarge.25</strong>: 8 cores, 64 GB memory</li>
+         * <li><strong>mysql.n4.2xlarge.25</strong>: 16 cores, 64 GB memory</li>
+         * <li><strong>mysql.x8.2xlarge.25</strong>: 16 cores, 128 GB memory</li>
+         * <li><strong>mysql.x4.4xlarge.25</strong>: 32 cores, 128 GB memory</li>
+         * <li><strong>mysql.x8.4xlarge.25</strong>: 32 cores, 256 GB memory</li>
+         * <li><strong>mysql.st.8xlarge.25</strong>: 60 cores, 470 GB memory</li>
+         * <li><strong>mysql.st.12xlarge.25</strong>: 90 cores, 720 GB memory.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>mysql.n4.medium.25</p>
          */
@@ -281,6 +377,8 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         public String dnNodeClassCode;
 
         /**
+         * <p>The number of DN nodes.</p>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */
@@ -288,6 +386,8 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         public Integer dnNodeCount;
 
         /**
+         * <p>The engine type.</p>
+         * 
          * <strong>example:</strong>
          * <p>polarx</p>
          */
@@ -298,6 +398,8 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         public String engineVersion;
 
         /**
+         * <p>The expiration time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2021-12-01T16:00:00.000+0000</p>
          */
@@ -305,6 +407,8 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         public String expireTime;
 
         /**
+         * <p>Indicates whether the instance has expired.</p>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
@@ -312,23 +416,35 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         public Boolean expired;
 
         /**
+         * <p>The instance ID.</p>
+         * 
          * <strong>example:</strong>
-         * <p>pxc-hzr2yeov9jmg3z</p>
+         * <p>pxc-hzr2yeov******</p>
          */
         @NameInMap("Id")
         public String id;
 
         /**
+         * <p>Indicates whether the instance is locked.</p>
+         * 
          * <strong>example:</strong>
          * <p>Unlock</p>
          */
         @NameInMap("LockMode")
         public String lockMode;
 
+        /**
+         * <p>The reason why the instance is locked.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>欠费</p>
+         */
         @NameInMap("LockReason")
         public String lockReason;
 
         /**
+         * <p>The current Milvus version.</p>
+         * 
          * <strong>example:</strong>
          * <p>polarx-kernel_5.4.12-16349923_xcluster-20210926</p>
          */
@@ -336,6 +452,8 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         public String minorVersion;
 
         /**
+         * <p>The network type.</p>
+         * 
          * <strong>example:</strong>
          * <p>VPC</p>
          */
@@ -343,6 +461,8 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         public String network;
 
         /**
+         * <p>The node specifications.</p>
+         * 
          * <strong>example:</strong>
          * <p>polarx.x4.large.2e</p>
          */
@@ -350,16 +470,27 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         public String nodeClass;
 
         /**
+         * <p>The number of nodes.</p>
+         * 
          * <strong>example:</strong>
          * <p>5</p>
          */
         @NameInMap("NodeCount")
         public Integer nodeCount;
 
+        /**
+         * <p>The list of nodes.</p>
+         */
         @NameInMap("Nodes")
         public java.util.List<DescribeDBInstancesResponseBodyDBInstancesNodes> nodes;
 
         /**
+         * <p>The billing method of the instance. Valid values:</p>
+         * <ul>
+         * <li><strong>Postpaid</strong>: pay-as-you-go.</li>
+         * <li><strong>Prepaid</strong>: subscription.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Prepaid</p>
          */
@@ -370,16 +501,24 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         public String primaryInstanceId;
 
         /**
-         * <p>主可用区。</p>
+         * <p>The primary zone.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-j</p>
          */
         @NameInMap("PrimaryZone")
         public String primaryZone;
 
+        /**
+         * <p>The list of read-only instances.</p>
+         */
         @NameInMap("ReadDBInstances")
         public java.util.List<String> readDBInstances;
 
         /**
+         * <p>The region ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
          */
@@ -387,6 +526,8 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         public String regionId;
 
         /**
+         * <p>The resource group ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>rg-xxxxxx</p>
          */
@@ -394,12 +535,21 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         public String resourceGroupId;
 
         /**
-         * <p>次可用区。</p>
+         * <p>The secondary zone.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-l</p>
          */
         @NameInMap("SecondaryZone")
         public String secondaryZone;
 
         /**
+         * <p>The instance edition. Valid values:</p>
+         * <ul>
+         * <li><strong>enterprise</strong>: Enterprise Edition.</li>
+         * <li><strong>standard</strong>: Standard Edition.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>enterprise</p>
          */
@@ -407,6 +557,8 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         public String series;
 
         /**
+         * <p>The instance status. For more information, see <a href="https://help.aliyun.com/document_detail/339826.html">Instance status table</a>.</p>
+         * 
          * <strong>example:</strong>
          * <p>Running</p>
          */
@@ -417,6 +569,8 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         public String storageType;
 
         /**
+         * <p>The storage usage.</p>
+         * 
          * <strong>example:</strong>
          * <p>40658534400</p>
          */
@@ -424,33 +578,54 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         public Long storageUsed;
 
         /**
+         * <p>Indicates whether the instance supports multi-stream. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: Yes.</li>
+         * <li><strong>false</strong>: No.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
         @NameInMap("SupportBinlogX")
         public Boolean supportBinlogX;
 
+        /**
+         * <p>The set of tags.</p>
+         */
         @NameInMap("TagSet")
         public java.util.List<DescribeDBInstancesResponseBodyDBInstancesTagSet> tagSet;
 
         /**
-         * <p>第三可用区。</p>
+         * <p>The third zone in the three-zone deployment.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-k</p>
          */
         @NameInMap("TertiaryZone")
         public String tertiaryZone;
 
         /**
-         * <p>拓扑类型：</p>
+         * <p>The topology type. Valid values:</p>
          * <ul>
-         * <li><strong>3azones</strong>：三可用区；</li>
-         * <li><strong>1azone</strong>：单可用区。</li>
+         * <li><strong>3azones</strong>: three-zone deployment.</li>
+         * <li><strong>1azone</strong>: single-zone deployment.</li>
          * </ul>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3azones</p>
          */
         @NameInMap("TopologyType")
         public String topologyType;
 
         /**
+         * <p>The instance type. Valid values:</p>
+         * <ul>
+         * <li><strong>ReadWrite</strong>: primary instance.</li>
+         * <li><strong>ReadOnly</strong>: read-only instance.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>ReadWrite</p>
          */
@@ -467,6 +642,8 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         public String VPCId;
 
         /**
+         * <p>The zone ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-hangzhou-g</p>
          */

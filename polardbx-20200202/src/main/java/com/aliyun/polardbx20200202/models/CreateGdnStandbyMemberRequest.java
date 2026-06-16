@@ -34,6 +34,10 @@ public class CreateGdnStandbyMemberRequest extends TeaModel {
     @NameInMap("CloneInstanceName")
     public String cloneInstanceName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>4核32G</p>
+     */
     @NameInMap("CnClass")
     public String cnClass;
 
@@ -51,6 +55,10 @@ public class CreateGdnStandbyMemberRequest extends TeaModel {
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <strong>example:</strong>
+     * <p>4核32G</p>
+     */
     @NameInMap("DnClass")
     public String dnClass;
 
@@ -163,8 +171,6 @@ public class CreateGdnStandbyMemberRequest extends TeaModel {
     public Integer usedTime;
 
     /**
-     * <p>VPC ID。</p>
-     * 
      * <strong>example:</strong>
      * <p>vpc-*****</p>
      */

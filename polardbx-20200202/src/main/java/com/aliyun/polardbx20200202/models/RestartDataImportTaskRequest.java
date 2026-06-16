@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class RestartDataImportTaskRequest extends TeaModel {
     /**
+     * <p>The page number. The value must be a positive integer that does not exceed the maximum value of the INTEGER data type. Default value: <strong>1</strong>.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -12,6 +14,8 @@ public class RestartDataImportTaskRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries per page. Valid values: <em><strong>30</strong></em><strong>50</strong>*<strong>100</strong>. Default value: <strong>30</strong>.</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
@@ -19,6 +23,7 @@ public class RestartDataImportTaskRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The region where the instance resides. &gt; You can call the <a href="https://help.aliyun.com/document_detail/196841.html">DescribeRegions</a> operation to query the regions supported by PolarDB-X, including region IDs.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -28,6 +33,8 @@ public class RestartDataImportTaskRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The ID of the destination task.</p>
+     * 
      * <strong>example:</strong>
      * <p>etx-szr2rr6i*****</p>
      */

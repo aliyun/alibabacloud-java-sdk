@@ -4,10 +4,15 @@ package com.aliyun.polardbx20200202.models;
 import com.aliyun.tea.*;
 
 public class DescribeSecurityIpsResponseBody extends TeaModel {
+    /**
+     * <p>The returned data.</p>
+     */
     @NameInMap("Data")
     public DescribeSecurityIpsResponseBodyData data;
 
     /**
+     * <p>The additional information returned. If the request is successful, success is returned. If the request fails, the corresponding error code is returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -15,6 +20,8 @@ public class DescribeSecurityIpsResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>14036EBE-CF2E-44DB-ACE9-AC6157D3A6FC</p>
      */
@@ -22,6 +29,8 @@ public class DescribeSecurityIpsResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request is successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -67,6 +76,8 @@ public class DescribeSecurityIpsResponseBody extends TeaModel {
 
     public static class DescribeSecurityIpsResponseBodyDataGroupItems extends TeaModel {
         /**
+         * <p>The name of the whitelist group.</p>
+         * 
          * <strong>example:</strong>
          * <p>defaultGroup</p>
          */
@@ -74,6 +85,8 @@ public class DescribeSecurityIpsResponseBody extends TeaModel {
         public String groupName;
 
         /**
+         * <p>The details of the whitelist in the group.</p>
+         * 
          * <strong>example:</strong>
          * <p>127.0.0.1,172.168.0.0</p>
          */
@@ -105,12 +118,17 @@ public class DescribeSecurityIpsResponseBody extends TeaModel {
 
     public static class DescribeSecurityIpsResponseBodyData extends TeaModel {
         /**
+         * <p>The name of the instance.</p>
+         * 
          * <strong>example:</strong>
          * <p>pxc-hzjasd****</p>
          */
         @NameInMap("DBInstanceName")
         public String DBInstanceName;
 
+        /**
+         * <p>The list of whitelist groups.</p>
+         */
         @NameInMap("GroupItems")
         public java.util.List<DescribeSecurityIpsResponseBodyDataGroupItems> groupItems;
 

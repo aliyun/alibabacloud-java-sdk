@@ -5,6 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribePolarxDataNodesRequest extends TeaModel {
     /**
+     * <p>The type of nodes to query. Valid values:</p>
+     * <ul>
+     * <li>all: queries both dn and gms nodes.</li>
+     * <li>gms: queries only gms nodes.</li>
+     * <li>dn: queries only dn nodes.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>dn</p>
      */
@@ -12,6 +19,8 @@ public class DescribePolarxDataNodesRequest extends TeaModel {
     public String nodeType;
 
     /**
+     * <p>The page number. The value must be a positive integer that does not exceed the maximum value of the integer data type. Default value: <strong>1</strong>.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -19,6 +28,8 @@ public class DescribePolarxDataNodesRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>30</p>
      */
@@ -26,6 +37,7 @@ public class DescribePolarxDataNodesRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The region in which the instance resides.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -35,6 +47,8 @@ public class DescribePolarxDataNodesRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The keyword for filtering query results.</p>
+     * 
      * <strong>example:</strong>
      * <p>pc-bp1c5w4fx****2274</p>
      */

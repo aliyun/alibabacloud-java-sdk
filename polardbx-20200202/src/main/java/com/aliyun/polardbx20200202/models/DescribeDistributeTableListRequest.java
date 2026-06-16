@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeDistributeTableListRequest extends TeaModel {
     /**
+     * <p>The name of the instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class DescribeDistributeTableListRequest extends TeaModel {
     public String DBInstanceName;
 
     /**
+     * <p>The name of the database.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,7 @@ public class DescribeDistributeTableListRequest extends TeaModel {
     public String dbName;
 
     /**
+     * <p>The region ID of the instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

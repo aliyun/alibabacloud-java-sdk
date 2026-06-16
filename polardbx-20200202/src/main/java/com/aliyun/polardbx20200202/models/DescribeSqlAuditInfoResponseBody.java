@@ -4,10 +4,15 @@ package com.aliyun.polardbx20200202.models;
 import com.aliyun.tea.*;
 
 public class DescribeSqlAuditInfoResponseBody extends TeaModel {
+    /**
+     * <p>The returned result set.</p>
+     */
     @NameInMap("Data")
     public DescribeSqlAuditInfoResponseBodyData data;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>DC3ABA3E-0F8A-4596-9104-F5155C******</p>
      */
@@ -37,6 +42,8 @@ public class DescribeSqlAuditInfoResponseBody extends TeaModel {
 
     public static class DescribeSqlAuditInfoResponseBodyData extends TeaModel {
         /**
+         * <p>Indicates whether the SQL audit feature is enabled.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -44,6 +51,8 @@ public class DescribeSqlAuditInfoResponseBody extends TeaModel {
         public Boolean isEnabled;
 
         /**
+         * <p>The name of the Simple Log Service Logstore.</p>
+         * 
          * <strong>example:</strong>
          * <p>polardbx-sqlaudit-log</p>
          */
@@ -51,8 +60,10 @@ public class DescribeSqlAuditInfoResponseBody extends TeaModel {
         public String SLSLogStore;
 
         /**
+         * <p>The name of the Simple Log Service project.</p>
+         * 
          * <strong>example:</strong>
-         * <p>polardbx-sqlaudit-cn-hangzhou-123456789</p>
+         * <p>polardbx-sqlaudit-cn-hangzhou-1852045029120897</p>
          */
         @NameInMap("SLSProject")
         public String SLSProject;

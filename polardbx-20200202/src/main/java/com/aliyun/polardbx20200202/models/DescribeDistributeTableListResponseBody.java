@@ -4,10 +4,15 @@ package com.aliyun.polardbx20200202.models;
 import com.aliyun.tea.*;
 
 public class DescribeDistributeTableListResponseBody extends TeaModel {
+    /**
+     * <p>The data struct.</p>
+     */
     @NameInMap("Data")
     public DescribeDistributeTableListResponseBodyData data;
 
     /**
+     * <p>The response message. &quot;success&quot; is returned if the request is successful. Otherwise, an error code is returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>Success</p>
      */
@@ -15,6 +20,8 @@ public class DescribeDistributeTableListResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>C458B1E8-1683-3645-B154-6BA32080EEA</p>
      */
@@ -22,6 +29,8 @@ public class DescribeDistributeTableListResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request is successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -67,6 +76,8 @@ public class DescribeDistributeTableListResponseBody extends TeaModel {
 
     public static class DescribeDistributeTableListResponseBodyDataTables extends TeaModel {
         /**
+         * <p>The data key.</p>
+         * 
          * <strong>example:</strong>
          * <p>id</p>
          */
@@ -74,6 +85,8 @@ public class DescribeDistributeTableListResponseBody extends TeaModel {
         public String dbKey;
 
         /**
+         * <p>The table name.</p>
+         * 
          * <strong>example:</strong>
          * <p>sbtest1</p>
          */
@@ -81,6 +94,8 @@ public class DescribeDistributeTableListResponseBody extends TeaModel {
         public String tableName;
 
         /**
+         * <p>The table type.</p>
+         * 
          * <strong>example:</strong>
          * <p>multi</p>
          */
@@ -88,6 +103,8 @@ public class DescribeDistributeTableListResponseBody extends TeaModel {
         public String tableType;
 
         /**
+         * <p>The table key.</p>
+         * 
          * <strong>example:</strong>
          * <p>“”</p>
          */
@@ -134,6 +151,9 @@ public class DescribeDistributeTableListResponseBody extends TeaModel {
     }
 
     public static class DescribeDistributeTableListResponseBodyData extends TeaModel {
+        /**
+         * <p>The list of tables.</p>
+         */
         @NameInMap("Tables")
         public java.util.List<DescribeDistributeTableListResponseBodyDataTables> tables;
 

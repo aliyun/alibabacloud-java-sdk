@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeCdcClassListRequest extends TeaModel {
     /**
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,8 @@ public class DescribeCdcClassListRequest extends TeaModel {
     public String DBInstanceName;
 
     /**
+     * <p>The instance name.</p>
+     * 
      * <strong>example:</strong>
      * <p>pxc-hzrh51fze****pon-cdc</p>
      */
@@ -21,6 +24,7 @@ public class DescribeCdcClassListRequest extends TeaModel {
     public String instanceName;
 
     /**
+     * <p>The region in which the instance resides.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DisableRightsSeparationRequest extends TeaModel {
     /**
+     * <p>The name of the database instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class DisableRightsSeparationRequest extends TeaModel {
     public String DBInstanceName;
 
     /**
+     * <p>The name of the DBA account.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,7 @@ public class DisableRightsSeparationRequest extends TeaModel {
     public String dbaAccountName;
 
     /**
+     * <p>The password of the DBA account.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -32,6 +35,7 @@ public class DisableRightsSeparationRequest extends TeaModel {
     public String dbaAccountPassword;
 
     /**
+     * <p>The region ID of the instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

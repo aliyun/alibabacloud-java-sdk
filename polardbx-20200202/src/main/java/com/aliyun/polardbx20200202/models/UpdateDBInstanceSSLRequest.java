@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpdateDBInstanceSSLRequest extends TeaModel {
     /**
+     * <p>The domain name bound to the certificate.</p>
+     * 
      * <strong>example:</strong>
      * <p>pxc-hzrqjarxdocd4t.polarx.rds.aliyuncs.com</p>
      */
@@ -12,6 +14,7 @@ public class UpdateDBInstanceSSLRequest extends TeaModel {
     public String certCommonName;
 
     /**
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,6 +24,7 @@ public class UpdateDBInstanceSSLRequest extends TeaModel {
     public String DBInstanceName;
 
     /**
+     * <p>Specifies whether to enable SSL.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -30,6 +34,8 @@ public class UpdateDBInstanceSSLRequest extends TeaModel {
     public Boolean enableSSL;
 
     /**
+     * <p>The region ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
      */

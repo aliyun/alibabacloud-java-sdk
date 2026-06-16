@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeDBInstanceTopologyRequest extends TeaModel {
     /**
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -13,13 +14,26 @@ public class DescribeDBInstanceTopologyRequest extends TeaModel {
     @NameInMap("DBInstanceName")
     public String DBInstanceName;
 
+    /**
+     * <p>The end time of the time range for querying historical instances in the topology. Format: yyyy-MM-dd HH:mm:ss.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2021-10-22T10:30:45Z 04:00:00</p>
+     */
     @NameInMap("EndTime")
     public String endTime;
 
+    /**
+     * <p>Specifies whether to query the historical topology.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("MinuteSimple")
     public Boolean minuteSimple;
 
     /**
+     * <p>The region ID of the instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -28,6 +42,12 @@ public class DescribeDBInstanceTopologyRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The start time of the time range for querying historical instances in the topology. Format: yyyy-MM-dd HH:mm:ss.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2021-10-21T10:30:45Z 04:00:00</p>
+     */
     @NameInMap("StartTime")
     public String startTime;
 

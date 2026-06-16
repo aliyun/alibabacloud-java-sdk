@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeAccountListRequest extends TeaModel {
     /**
+     * <p>The name of the account. Specify this parameter to query a specific account.</p>
+     * 
      * <strong>example:</strong>
      * <p>testaccount</p>
      */
@@ -12,6 +14,12 @@ public class DescribeAccountListRequest extends TeaModel {
     public String accountName;
 
     /**
+     * <p>The type of the account. Specify this parameter to query accounts of a specific type. If you set this parameter to null, all accounts are returned.</p>
+     * <ul>
+     * <li>Before three-role mode is enabled: 0 indicates a standard account, and 1 indicates a privileged user account.</li>
+     * <li>After three-role mode is enabled: 0 indicates a standard account, 2 indicates a system administrator account, 3 indicates a security administrator account, and 4 indicates an audit administrator account.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
@@ -19,6 +27,7 @@ public class DescribeAccountListRequest extends TeaModel {
     public String accountType;
 
     /**
+     * <p>The name of the instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -28,6 +37,7 @@ public class DescribeAccountListRequest extends TeaModel {
     public String DBInstanceName;
 
     /**
+     * <p>The region where the instance resides.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

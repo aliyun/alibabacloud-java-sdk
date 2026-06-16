@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ResetAccountPasswordRestrictResponseBody extends TeaModel {
     /**
+     * <p>The additional information about the call result.</p>
+     * 
      * <strong>example:</strong>
      * <hr>
      */
@@ -12,6 +14,8 @@ public class ResetAccountPasswordRestrictResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>9B2F3840-5C98-****-B269-2D5C3A31797C</p>
      */
@@ -19,6 +23,8 @@ public class ResetAccountPasswordRestrictResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

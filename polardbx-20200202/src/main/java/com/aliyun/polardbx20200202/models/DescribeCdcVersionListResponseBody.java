@@ -4,6 +4,9 @@ package com.aliyun.polardbx20200202.models;
 import com.aliyun.tea.*;
 
 public class DescribeCdcVersionListResponseBody extends TeaModel {
+    /**
+     * <p>The data struct.</p>
+     */
     @NameInMap("Data")
     public DescribeCdcVersionListResponseBodyData data;
 
@@ -38,6 +41,9 @@ public class DescribeCdcVersionListResponseBody extends TeaModel {
     }
 
     public static class DescribeCdcVersionListResponseBodyData extends TeaModel {
+        /**
+         * <p>The ID of the associated legacy project. You can ignore this parameter.</p>
+         */
         @NameInMap("VersionList")
         public java.util.List<String> versionList;
 

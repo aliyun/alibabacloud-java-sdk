@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ModifyCdcClassRequest extends TeaModel {
     /**
+     * <p>The number of CDC nodes.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -12,6 +14,7 @@ public class ModifyCdcClassRequest extends TeaModel {
     public String CDCNodeCount;
 
     /**
+     * <p>The instance type.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,6 +24,7 @@ public class ModifyCdcClassRequest extends TeaModel {
     public String cdcClass;
 
     /**
+     * <p>The instance name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -30,6 +34,7 @@ public class ModifyCdcClassRequest extends TeaModel {
     public String instanceName;
 
     /**
+     * <p>The region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -39,6 +44,8 @@ public class ModifyCdcClassRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The switch mode.</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */

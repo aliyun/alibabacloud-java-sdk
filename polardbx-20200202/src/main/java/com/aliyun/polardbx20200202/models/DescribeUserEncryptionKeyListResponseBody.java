@@ -4,10 +4,15 @@ package com.aliyun.polardbx20200202.models;
 import com.aliyun.tea.*;
 
 public class DescribeUserEncryptionKeyListResponseBody extends TeaModel {
+    /**
+     * <p>The returned data.</p>
+     */
     @NameInMap("Data")
     public DescribeUserEncryptionKeyListResponseBodyData data;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>FEA5DC20-6D8A-5979-97AA-FC57546ADC20</p>
      */
@@ -36,6 +41,9 @@ public class DescribeUserEncryptionKeyListResponseBody extends TeaModel {
     }
 
     public static class DescribeUserEncryptionKeyListResponseBodyData extends TeaModel {
+        /**
+         * <p>The key list.</p>
+         */
         @NameInMap("KeyIds")
         public java.util.List<String> keyIds;
 

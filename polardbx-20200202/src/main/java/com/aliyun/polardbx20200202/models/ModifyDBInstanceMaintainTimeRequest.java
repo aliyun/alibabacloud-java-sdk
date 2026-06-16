@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ModifyDBInstanceMaintainTimeRequest extends TeaModel {
     /**
+     * <p>The unique token.</p>
+     * 
      * <strong>example:</strong>
      * <p>73559800-3c8c-11ec-bd40-99cfcff3fe1e</p>
      */
@@ -12,6 +14,7 @@ public class ModifyDBInstanceMaintainTimeRequest extends TeaModel {
     public String clientToken;
 
     /**
+     * <p>The name of the instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,15 +24,17 @@ public class ModifyDBInstanceMaintainTimeRequest extends TeaModel {
     public String DBInstanceName;
 
     /**
+     * <p>The maintenance window in UTC. Valid values: 00:00Z-23:59Z.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>19:00Z-20:00Z</p>
+     * <p>21:00Z-00:00Z</p>
      */
     @NameInMap("MaintainTime")
     public String maintainTime;
 
     /**
+     * <p>The region ID of the instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

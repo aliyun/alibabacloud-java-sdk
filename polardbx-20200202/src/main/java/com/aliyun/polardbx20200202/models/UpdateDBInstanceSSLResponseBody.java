@@ -4,10 +4,15 @@ package com.aliyun.polardbx20200202.models;
 import com.aliyun.tea.*;
 
 public class UpdateDBInstanceSSLResponseBody extends TeaModel {
+    /**
+     * <p>The data returned by the request.</p>
+     */
     @NameInMap("Data")
     public UpdateDBInstanceSSLResponseBodyData data;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>FEA5DC20-6D8A-5979-97AA-FC57546ADC20</p>
      */
@@ -37,6 +42,8 @@ public class UpdateDBInstanceSSLResponseBody extends TeaModel {
 
     public static class UpdateDBInstanceSSLResponseBodyData extends TeaModel {
         /**
+         * <p>The backend task ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>2209883</p>
          */

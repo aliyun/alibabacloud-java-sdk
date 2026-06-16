@@ -19,8 +19,6 @@ public class CreateGdnStandbyMemberResponseBody extends TeaModel {
     public String orderId;
 
     /**
-     * <p>Id of the request</p>
-     * 
      * <strong>example:</strong>
      * <p>173CA69A-3513-591D-8A09-C1EA37CBE2D9</p>
      */

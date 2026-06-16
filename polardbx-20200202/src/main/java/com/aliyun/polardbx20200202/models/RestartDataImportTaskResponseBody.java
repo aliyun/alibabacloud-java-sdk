@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class RestartDataImportTaskResponseBody extends TeaModel {
     /**
+     * <p>The returned result.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -12,6 +14,8 @@ public class RestartDataImportTaskResponseBody extends TeaModel {
     public Boolean data;
 
     /**
+     * <p>The response message. &gt; This parameter is empty if the request is successful. If the request fails, an exception message is returned, such as an error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>Success</p>
      */
@@ -19,6 +23,8 @@ public class RestartDataImportTaskResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>FEA5DC20-6D8A-5979-97AA-FC57546ADC20</p>
      */
@@ -26,6 +32,8 @@ public class RestartDataImportTaskResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request is successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

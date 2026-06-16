@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeDataImportTaskInfoRequest extends TeaModel {
     /**
+     * <p>The page number of failed records.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -12,6 +14,8 @@ public class DescribeDataImportTaskInfoRequest extends TeaModel {
     public Integer failPageNumber;
 
     /**
+     * <p>The number of failed records to display per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -19,6 +23,7 @@ public class DescribeDataImportTaskInfoRequest extends TeaModel {
     public Integer failPageSize;
 
     /**
+     * <p>The region where the instance resides.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -28,6 +33,7 @@ public class DescribeDataImportTaskInfoRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The task ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -37,6 +43,8 @@ public class DescribeDataImportTaskInfoRequest extends TeaModel {
     public String slinkTaskId;
 
     /**
+     * <p>The page number of successful records.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -44,6 +52,8 @@ public class DescribeDataImportTaskInfoRequest extends TeaModel {
     public Long successPageNumber;
 
     /**
+     * <p>The number of successful records to display per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>15</p>
      */

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpgradeColumnarVersionRequest extends TeaModel {
     /**
+     * <p>The column store version.</p>
+     * 
      * <strong>example:</strong>
      * <p>polarx-col-kernel-5.4.20-20250819_17555906</p>
      */
@@ -12,6 +14,8 @@ public class UpgradeColumnarVersionRequest extends TeaModel {
     public String columnarVersion;
 
     /**
+     * <p>The instance name.</p>
+     * 
      * <strong>example:</strong>
      * <p>pxc-xxx</p>
      */
@@ -19,6 +23,8 @@ public class UpgradeColumnarVersionRequest extends TeaModel {
     public String DBInstanceName;
 
     /**
+     * <p>The instance name.</p>
+     * 
      * <strong>example:</strong>
      * <p>pxc-hzrh51fze****pon-cdc</p>
      */
@@ -26,6 +32,8 @@ public class UpgradeColumnarVersionRequest extends TeaModel {
     public String instanceName;
 
     /**
+     * <p>The region in which the instance resides.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
      */
@@ -33,6 +41,8 @@ public class UpgradeColumnarVersionRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The switch mode.</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */

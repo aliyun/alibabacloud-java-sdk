@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ModifyDatabaseDescriptionResponseBody extends TeaModel {
     /**
+     * <p>The additional information returned. The value success is returned if the request is successful. Otherwise, an error code is returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -12,6 +14,8 @@ public class ModifyDatabaseDescriptionResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>FEA5DC20-6D8A-5979-97AA-FC57546ADC20</p>
      */
@@ -19,6 +23,8 @@ public class ModifyDatabaseDescriptionResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request is successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

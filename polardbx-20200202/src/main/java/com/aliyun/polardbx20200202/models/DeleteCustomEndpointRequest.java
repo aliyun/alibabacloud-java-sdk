@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DeleteCustomEndpointRequest extends TeaModel {
     /**
+     * <p>The ID of the custom endpoint domain name.</p>
+     * 
      * <strong>example:</strong>
      * <p>pxe-8if3zrfsu****hgw</p>
      */
@@ -12,6 +14,8 @@ public class DeleteCustomEndpointRequest extends TeaModel {
     public String customEndpointId;
 
     /**
+     * <p>The name of the instance.</p>
+     * 
      * <strong>example:</strong>
      * <p>pxc-hzravgpt8q****</p>
      */
@@ -19,6 +23,8 @@ public class DeleteCustomEndpointRequest extends TeaModel {
     public String DBInstanceName;
 
     /**
+     * <p>The region in which the instance resides.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
      */

@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class DescribeDataImportTaskInfoResponseBody extends TeaModel {
     /**
+     * <p>The return code. This parameter is empty when the request succeeds. When the request fails, an exception message such as an error code is returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("Code")
     public Long code;
 
+    /**
+     * <p>The returned result set.</p>
+     */
     @NameInMap("Data")
     public DescribeDataImportTaskInfoResponseBodyData data;
 
     /**
+     * <p>The returned message. This parameter has a value only when the task status is success. Otherwise, an empty value is returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -22,6 +29,8 @@ public class DescribeDataImportTaskInfoResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>9B2F3840-5C98-****-B269-2D5C3A31797C</p>
      */
@@ -29,6 +38,8 @@ public class DescribeDataImportTaskInfoResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -82,6 +93,8 @@ public class DescribeDataImportTaskInfoResponseBody extends TeaModel {
 
     public static class DescribeDataImportTaskInfoResponseBodyDataDataImportTaskDetailInfoServiceDetailListTaskDetailList extends TeaModel {
         /**
+         * <p>The delay time.</p>
+         * 
          * <strong>example:</strong>
          * <p>58329</p>
          */
@@ -89,6 +102,8 @@ public class DescribeDataImportTaskInfoResponseBody extends TeaModel {
         public Long delay;
 
         /**
+         * <p>The most recent error message.</p>
+         * 
          * <strong>example:</strong>
          * <p>null</p>
          */
@@ -96,6 +111,8 @@ public class DescribeDataImportTaskInfoResponseBody extends TeaModel {
         public String lastError;
 
         /**
+         * <p>The physical database name.</p>
+         * 
          * <strong>example:</strong>
          * <p>drds_test</p>
          */
@@ -103,6 +120,8 @@ public class DescribeDataImportTaskInfoResponseBody extends TeaModel {
         public String physicalDbName;
 
         /**
+         * <p>The data import progress.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -110,6 +129,8 @@ public class DescribeDataImportTaskInfoResponseBody extends TeaModel {
         public Long progress;
 
         /**
+         * <p>The performance and runtime metrics collected during the execution of the data migration or import task.</p>
+         * 
          * <strong>example:</strong>
          * <p>{
          *   &quot;applyCount&quot;: 0,
@@ -122,6 +143,8 @@ public class DescribeDataImportTaskInfoResponseBody extends TeaModel {
         public String statistics;
 
         /**
+         * <p>The task status.</p>
+         * 
          * <strong>example:</strong>
          * <p>active</p>
          */
@@ -129,6 +152,8 @@ public class DescribeDataImportTaskInfoResponseBody extends TeaModel {
         public String status;
 
         /**
+         * <p>The task ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>fc3b1568-ad96-****-adca-dfe018b38077</p>
          */
@@ -136,6 +161,8 @@ public class DescribeDataImportTaskInfoResponseBody extends TeaModel {
         public Long taskId;
 
         /**
+         * <p>The task type.</p>
+         * 
          * <strong>example:</strong>
          * <p>FULL_COPY</p>
          */
@@ -215,6 +242,8 @@ public class DescribeDataImportTaskInfoResponseBody extends TeaModel {
 
     public static class DescribeDataImportTaskInfoResponseBodyDataDataImportTaskDetailInfoServiceDetailList extends TeaModel {
         /**
+         * <p>The service detail ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>1991609</p>
          */
@@ -222,16 +251,27 @@ public class DescribeDataImportTaskInfoResponseBody extends TeaModel {
         public Long id;
 
         /**
+         * <p>The task execution status.</p>
+         * 
          * <strong>example:</strong>
          * <p>FINISHED</p>
          */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The task details.</p>
+         */
         @NameInMap("TaskDetailList")
         public java.util.List<DescribeDataImportTaskInfoResponseBodyDataDataImportTaskDetailInfoServiceDetailListTaskDetailList> taskDetailList;
 
         /**
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>FULL_COPY: full replication.</li>
+         * <li>INC_COPY: incremental replication.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>FULL_COPY</p>
          */
@@ -279,6 +319,8 @@ public class DescribeDataImportTaskInfoResponseBody extends TeaModel {
 
     public static class DescribeDataImportTaskInfoResponseBodyDataDataImportTaskDetailInfo extends TeaModel {
         /**
+         * <p>The progress ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -286,6 +328,8 @@ public class DescribeDataImportTaskInfoResponseBody extends TeaModel {
         public Long fsmId;
 
         /**
+         * <p>The state identifier in a data migration or synchronization task.</p>
+         * 
          * <strong>example:</strong>
          * <p>RECON_FINISHED_CATCH_UP</p>
          */
@@ -293,12 +337,17 @@ public class DescribeDataImportTaskInfoResponseBody extends TeaModel {
         public String fsmState;
 
         /**
+         * <p>The status in a data migration, import, or synchronization system.</p>
+         * 
          * <strong>example:</strong>
          * <p>IMPORT_NOT_BEGIN</p>
          */
         @NameInMap("FsmStatus")
         public String fsmStatus;
 
+        /**
+         * <p>The data import task details.</p>
+         */
         @NameInMap("ServiceDetailList")
         public java.util.List<DescribeDataImportTaskInfoResponseBodyDataDataImportTaskDetailInfoServiceDetailList> serviceDetailList;
 
@@ -342,6 +391,9 @@ public class DescribeDataImportTaskInfoResponseBody extends TeaModel {
     }
 
     public static class DescribeDataImportTaskInfoResponseBodyData extends TeaModel {
+        /**
+         * <p>The task details.</p>
+         */
         @NameInMap("DataImportTaskDetailInfo")
         public DescribeDataImportTaskInfoResponseBodyDataDataImportTaskDetailInfo dataImportTaskDetailInfo;
 

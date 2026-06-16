@@ -4,10 +4,15 @@ package com.aliyun.polardbx20200202.models;
 import com.aliyun.tea.*;
 
 public class CreateBackupResponseBody extends TeaModel {
+    /**
+     * <p>The returned data.</p>
+     */
     @NameInMap("Data")
     public CreateBackupResponseBodyData data;
 
     /**
+     * <p>Empty if the request is successful. An error message is returned if the request fails.</p>
+     * 
      * <strong>example:</strong>
      * <hr>
      */
@@ -15,6 +20,8 @@ public class CreateBackupResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>9B2F3840-5C98-475C-B269-2D5C3A31797C</p>
      */
@@ -22,6 +29,8 @@ public class CreateBackupResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request is successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

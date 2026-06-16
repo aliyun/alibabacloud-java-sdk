@@ -4,10 +4,15 @@ package com.aliyun.polardbx20200202.models;
 import com.aliyun.tea.*;
 
 public class SkipCurrentStepResponseBody extends TeaModel {
+    /**
+     * <p>The returned data.</p>
+     */
     @NameInMap("Data")
     public SkipCurrentStepResponseBodyData data;
 
     /**
+     * <p>The return message. This parameter is empty when the request succeeds. When the request fails, exception information such as error codes is returned.</p>
+     * 
      * <strong>example:</strong>
      * <hr>
      */
@@ -24,6 +29,8 @@ public class SkipCurrentStepResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request is successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>True</p>
      */
@@ -69,6 +76,8 @@ public class SkipCurrentStepResponseBody extends TeaModel {
 
     public static class SkipCurrentStepResponseBodyData extends TeaModel {
         /**
+         * <p>The Slink task ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>etx-szr2rr6i*****</p>
          */

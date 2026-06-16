@@ -4,10 +4,15 @@ package com.aliyun.polardbx20200202.models;
 import com.aliyun.tea.*;
 
 public class DescribeSqlFlashbackTaskListResponseBody extends TeaModel {
+    /**
+     * <p>The data returned by the request.</p>
+     */
     @NameInMap("Data")
     public DescribeSqlFlashbackTaskListResponseBodyData data;
 
     /**
+     * <p>The description of the request result.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
@@ -15,6 +20,8 @@ public class DescribeSqlFlashbackTaskListResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>9B2F3840-5C98-475C-B269-2D5C3A31797C</p>
      */
@@ -22,6 +29,8 @@ public class DescribeSqlFlashbackTaskListResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the API request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -67,6 +76,8 @@ public class DescribeSqlFlashbackTaskListResponseBody extends TeaModel {
 
     public static class DescribeSqlFlashbackTaskListResponseBodyDataSqlFlashbackTasks extends TeaModel {
         /**
+         * <p>The name of the database on which the flashback task was performed.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -74,6 +85,8 @@ public class DescribeSqlFlashbackTaskListResponseBody extends TeaModel {
         public String dbName;
 
         /**
+         * <p>The download URL of the result file.</p>
+         * 
          * <strong>example:</strong>
          * <p>http://...</p>
          */
@@ -81,6 +94,8 @@ public class DescribeSqlFlashbackTaskListResponseBody extends TeaModel {
         public String downloadUrl;
 
         /**
+         * <p>The expiration time of the download URL. Unit: ms.</p>
+         * 
          * <strong>example:</strong>
          * <p>1569216270000</p>
          */
@@ -88,6 +103,8 @@ public class DescribeSqlFlashbackTaskListResponseBody extends TeaModel {
         public String expireTime;
 
         /**
+         * <p>The creation time of the flashback task in the database. Unit: ms.</p>
+         * 
          * <strong>example:</strong>
          * <p>1568611408000</p>
          */
@@ -95,6 +112,8 @@ public class DescribeSqlFlashbackTaskListResponseBody extends TeaModel {
         public String gmtCreate;
 
         /**
+         * <p>The last modification time of the flashback task in the database. Unit: ms.</p>
+         * 
          * <strong>example:</strong>
          * <p>1568611469000</p>
          */
@@ -102,6 +121,8 @@ public class DescribeSqlFlashbackTaskListResponseBody extends TeaModel {
         public String gmtModified;
 
         /**
+         * <p>The primary key ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>111</p>
          */
@@ -109,6 +130,8 @@ public class DescribeSqlFlashbackTaskListResponseBody extends TeaModel {
         public String id;
 
         /**
+         * <p>The instance ID of the PolarDB-X instance.</p>
+         * 
          * <strong>example:</strong>
          * <p>pxc-********</p>
          */
@@ -116,6 +139,8 @@ public class DescribeSqlFlashbackTaskListResponseBody extends TeaModel {
         public String instId;
 
         /**
+         * <p>The execution progress of the flashback task. Value range: 1 to 100.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -123,6 +148,12 @@ public class DescribeSqlFlashbackTaskListResponseBody extends TeaModel {
         public String recallProgress;
 
         /**
+         * <p>The SQL flashback restoration type. Valid values: </p>
+         * <ul>
+         * <li><strong>1</strong>: Image-based restoration.</li>
+         * <li><strong>2</strong>: Reverse restoration.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -130,6 +161,12 @@ public class DescribeSqlFlashbackTaskListResponseBody extends TeaModel {
         public String recallRestoreType;
 
         /**
+         * <p>The status of the data recall task. Valid values:</p>
+         * <ul>
+         * <li><strong>1</strong>: In progress.</li>
+         * <li><strong>2</strong>: Completed.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -137,6 +174,12 @@ public class DescribeSqlFlashbackTaskListResponseBody extends TeaModel {
         public String recallStatus;
 
         /**
+         * <p>The recall type. Valid values:</p>
+         * <ul>
+         * <li><strong>0</strong>: exact match.</li>
+         * <li><strong>1</strong>: fuzzy match.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -144,6 +187,8 @@ public class DescribeSqlFlashbackTaskListResponseBody extends TeaModel {
         public String recallType;
 
         /**
+         * <p>The end time specified when the SQL flashback task was submitted. Unit: ms.</p>
+         * 
          * <strong>example:</strong>
          * <p>1568609597000</p>
          */
@@ -151,6 +196,8 @@ public class DescribeSqlFlashbackTaskListResponseBody extends TeaModel {
         public String searchEndTime;
 
         /**
+         * <p>The start time specified when the SQL flashback task was submitted. Unit: ms.</p>
+         * 
          * <strong>example:</strong>
          * <p>1568609597000</p>
          */
@@ -158,6 +205,8 @@ public class DescribeSqlFlashbackTaskListResponseBody extends TeaModel {
         public String searchStartTime;
 
         /**
+         * <p>The number of recovered data rows.</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */
@@ -165,6 +214,8 @@ public class DescribeSqlFlashbackTaskListResponseBody extends TeaModel {
         public String sqlCounter;
 
         /**
+         * <p>The primary key value involved in the SQL statement.</p>
+         * 
          * <strong>example:</strong>
          * <p>id</p>
          */
@@ -172,6 +223,8 @@ public class DescribeSqlFlashbackTaskListResponseBody extends TeaModel {
         public String sqlPk;
 
         /**
+         * <p>The type of the SQL statement. Valid values: INSERT, UPDATE, and DELETE. Multiple types are separated by commas (,).</p>
+         * 
          * <strong>example:</strong>
          * <p>INSERT,UPDATE</p>
          */
@@ -179,6 +232,8 @@ public class DescribeSqlFlashbackTaskListResponseBody extends TeaModel {
         public String sqlType;
 
         /**
+         * <p>The name of the table to which the data belongs.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -186,6 +241,8 @@ public class DescribeSqlFlashbackTaskListResponseBody extends TeaModel {
         public String tableName;
 
         /**
+         * <p>The trace_id of the SQL statement.</p>
+         * 
          * <strong>example:</strong>
          * <p>13ed05705f801000</p>
          */
@@ -344,6 +401,9 @@ public class DescribeSqlFlashbackTaskListResponseBody extends TeaModel {
     }
 
     public static class DescribeSqlFlashbackTaskListResponseBodyData extends TeaModel {
+        /**
+         * <p>The flashback task objects.</p>
+         */
         @NameInMap("SqlFlashbackTasks")
         public java.util.List<DescribeSqlFlashbackTaskListResponseBodyDataSqlFlashbackTasks> sqlFlashbackTasks;
 

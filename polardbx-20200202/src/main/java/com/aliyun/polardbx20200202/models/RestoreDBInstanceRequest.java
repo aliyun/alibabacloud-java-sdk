@@ -217,8 +217,6 @@ public class RestoreDBInstanceRequest extends TeaModel {
     public Integer usedTime;
 
     /**
-     * <p>VPC ID。</p>
-     * 
      * <strong>example:</strong>
      * <p>vpc-*****</p>
      */

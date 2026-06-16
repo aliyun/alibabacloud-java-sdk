@@ -4,10 +4,15 @@ package com.aliyun.polardbx20200202.models;
 import com.aliyun.tea.*;
 
 public class DescribeDbListResponseBody extends TeaModel {
+    /**
+     * <p>The list of databases.</p>
+     */
     @NameInMap("Data")
     public java.util.List<DescribeDbListResponseBodyData> data;
 
     /**
+     * <p>The response message. &quot;success&quot; is returned if the request is successful. Otherwise, an error code is returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>Success</p>
      */
@@ -15,6 +20,8 @@ public class DescribeDbListResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>C458B1E8-1683-3645-B154-6BA32080EEA</p>
      */
@@ -22,6 +29,8 @@ public class DescribeDbListResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request is successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -67,6 +76,8 @@ public class DescribeDbListResponseBody extends TeaModel {
 
     public static class DescribeDbListResponseBodyDataAccounts extends TeaModel {
         /**
+         * <p>The account name.</p>
+         * 
          * <strong>example:</strong>
          * <p>root4test</p>
          */
@@ -74,6 +85,8 @@ public class DescribeDbListResponseBody extends TeaModel {
         public String accountName;
 
         /**
+         * <p>The account privilege.</p>
+         * 
          * <strong>example:</strong>
          * <p>ReadWrite</p>
          */
@@ -104,10 +117,15 @@ public class DescribeDbListResponseBody extends TeaModel {
     }
 
     public static class DescribeDbListResponseBodyData extends TeaModel {
+        /**
+         * <p>The list of accounts.</p>
+         */
         @NameInMap("Accounts")
         public java.util.List<DescribeDbListResponseBodyDataAccounts> accounts;
 
         /**
+         * <p>The character set.</p>
+         * 
          * <strong>example:</strong>
          * <p>utf8mb4</p>
          */
@@ -115,6 +133,8 @@ public class DescribeDbListResponseBody extends TeaModel {
         public String characterSetName;
 
         /**
+         * <p>The database description.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -122,6 +142,8 @@ public class DescribeDbListResponseBody extends TeaModel {
         public String DBDescription;
 
         /**
+         * <p>The instance name.</p>
+         * 
          * <strong>example:</strong>
          * <p>pxc-********</p>
          */
@@ -129,6 +151,8 @@ public class DescribeDbListResponseBody extends TeaModel {
         public String DBInstanceName;
 
         /**
+         * <p>The database name.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */

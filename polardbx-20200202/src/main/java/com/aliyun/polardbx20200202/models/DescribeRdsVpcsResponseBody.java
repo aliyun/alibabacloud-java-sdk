@@ -5,12 +5,17 @@ import com.aliyun.tea.*;
 
 public class DescribeRdsVpcsResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>4C1A7CFB-9F73-5041-8C74-27626E58985A</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The VPC information.</p>
+     */
     @NameInMap("Vpcs")
     public DescribeRdsVpcsResponseBodyVpcs vpcs;
 
@@ -37,6 +42,8 @@ public class DescribeRdsVpcsResponseBody extends TeaModel {
 
     public static class DescribeRdsVpcsResponseBodyVpcsVpcVSwitchs extends TeaModel {
         /**
+         * <p>The vSwitch CIDR block.</p>
+         * 
          * <strong>example:</strong>
          * <p>10.0.0.0/24</p>
          */
@@ -44,6 +51,8 @@ public class DescribeRdsVpcsResponseBody extends TeaModel {
         public String cidrBlock;
 
         /**
+         * <p>The time when the vSwitch was created. The value is a UNIX timestamp accurate to milliseconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>1574156944000</p>
          */
@@ -51,6 +60,8 @@ public class DescribeRdsVpcsResponseBody extends TeaModel {
         public String gmtCreate;
 
         /**
+         * <p>The time when the vSwitch was last modified. The value is a UNIX timestamp.</p>
+         * 
          * <strong>example:</strong>
          * <p>2025-09-03T19:19:13+08:00</p>
          */
@@ -58,6 +69,8 @@ public class DescribeRdsVpcsResponseBody extends TeaModel {
         public String gmtModified;
 
         /**
+         * <p>Indicates whether the vSwitch is the default vSwitch.</p>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
@@ -65,6 +78,8 @@ public class DescribeRdsVpcsResponseBody extends TeaModel {
         public Boolean isDefault;
 
         /**
+         * <p>The zone ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-beijing-g</p>
          */
@@ -72,6 +87,8 @@ public class DescribeRdsVpcsResponseBody extends TeaModel {
         public String izNo;
 
         /**
+         * <p>The vSwitch status.</p>
+         * 
          * <strong>example:</strong>
          * <p>Available</p>
          */
@@ -79,6 +96,8 @@ public class DescribeRdsVpcsResponseBody extends TeaModel {
         public String status;
 
         /**
+         * <p>The vSwitch ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>vsw-8vbkwmpn****4nrd639ih</p>
          */
@@ -86,6 +105,8 @@ public class DescribeRdsVpcsResponseBody extends TeaModel {
         public String vSwitchId;
 
         /**
+         * <p>The name of the vSwitch.</p>
+         * 
          * <strong>example:</strong>
          * <p>cloud_auto_g</p>
          */
@@ -165,6 +186,8 @@ public class DescribeRdsVpcsResponseBody extends TeaModel {
 
     public static class DescribeRdsVpcsResponseBodyVpcsVpc extends TeaModel {
         /**
+         * <p>The Alibaba Cloud account ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>314****36</p>
          */
@@ -172,6 +195,8 @@ public class DescribeRdsVpcsResponseBody extends TeaModel {
         public String aliUid;
 
         /**
+         * <p>The VPC ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>26842</p>
          */
@@ -179,6 +204,8 @@ public class DescribeRdsVpcsResponseBody extends TeaModel {
         public String bid;
 
         /**
+         * <p>The IPv4 CIDR block of the VPC.</p>
+         * 
          * <strong>example:</strong>
          * <p>47.121.246.0/24</p>
          */
@@ -186,6 +213,8 @@ public class DescribeRdsVpcsResponseBody extends TeaModel {
         public String cidrBlock;
 
         /**
+         * <p>The time when the VPC was created.</p>
+         * 
          * <strong>example:</strong>
          * <p>Mon May 12 10:13:14 CST 2025</p>
          */
@@ -193,6 +222,8 @@ public class DescribeRdsVpcsResponseBody extends TeaModel {
         public String gmtCreate;
 
         /**
+         * <p>The time when the VPC was last modified.</p>
+         * 
          * <strong>example:</strong>
          * <p>2024-09-29 17:47:56</p>
          */
@@ -200,6 +231,8 @@ public class DescribeRdsVpcsResponseBody extends TeaModel {
         public String gmtModified;
 
         /**
+         * <p>Indicates whether the VPC is the default VPC. Valid values: <strong>true</strong>: The VPC is the default VPC. <strong>false</strong>: The VPC is not the default VPC.</p>
+         * 
          * <strong>example:</strong>
          * <p>False</p>
          */
@@ -207,6 +240,8 @@ public class DescribeRdsVpcsResponseBody extends TeaModel {
         public Boolean isDefault;
 
         /**
+         * <p>The region in which the VPC resides.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-shanghai</p>
          */
@@ -214,16 +249,23 @@ public class DescribeRdsVpcsResponseBody extends TeaModel {
         public String regionNo;
 
         /**
+         * <p>The VPC status.</p>
+         * 
          * <strong>example:</strong>
          * <p>True</p>
          */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The vSwitch information of the VPC.</p>
+         */
         @NameInMap("VSwitchs")
         public java.util.List<DescribeRdsVpcsResponseBodyVpcsVpcVSwitchs> vSwitchs;
 
         /**
+         * <p>The ID of the VPC.</p>
+         * 
          * <strong>example:</strong>
          * <p>vpc-2zekldxxy28nobay7o1f3</p>
          */
@@ -231,6 +273,8 @@ public class DescribeRdsVpcsResponseBody extends TeaModel {
         public String vpcId;
 
         /**
+         * <p>The name of the VPC.</p>
+         * 
          * <strong>example:</strong>
          * <p>cloud_auto_test</p>
          */
@@ -333,6 +377,9 @@ public class DescribeRdsVpcsResponseBody extends TeaModel {
     }
 
     public static class DescribeRdsVpcsResponseBodyVpcs extends TeaModel {
+        /**
+         * <p>The VPC information.</p>
+         */
         @NameInMap("Vpc")
         public java.util.List<DescribeRdsVpcsResponseBodyVpcsVpc> vpc;
 

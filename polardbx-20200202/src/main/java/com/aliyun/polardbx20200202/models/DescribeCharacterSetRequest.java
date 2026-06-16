@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeCharacterSetRequest extends TeaModel {
     /**
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class DescribeCharacterSetRequest extends TeaModel {
     public String DBInstanceName;
 
     /**
+     * <p>The ID of the region where the instance resides.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

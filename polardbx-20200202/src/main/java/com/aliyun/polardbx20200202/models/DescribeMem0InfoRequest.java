@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeMem0InfoRequest extends TeaModel {
     /**
+     * <p>Instance name</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class DescribeMem0InfoRequest extends TeaModel {
     public String DBInstanceName;
 
     /**
+     * <p>Region</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

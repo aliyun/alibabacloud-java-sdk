@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateGdnInstanceRequest extends TeaModel {
     /**
+     * <p>The name of the primary instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,8 @@ public class CreateGdnInstanceRequest extends TeaModel {
     public String DBInstanceName;
 
     /**
+     * <p>The description of the instance.</p>
+     * 
      * <strong>example:</strong>
      * <p>FASTJSON 2.0.x has been released, faster and more secure, recommend you upgrade.</p>
      */
@@ -21,6 +24,8 @@ public class CreateGdnInstanceRequest extends TeaModel {
     public String description;
 
     /**
+     * <p>The GDN mode.</p>
+     * 
      * <strong>example:</strong>
      * <p>gdn_mode_master_slave, gdn_mode_bidirectional</p>
      */
@@ -28,6 +33,7 @@ public class CreateGdnInstanceRequest extends TeaModel {
     public String gdnMode;
 
     /**
+     * <p>The region in which the instance resides.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -37,6 +43,8 @@ public class CreateGdnInstanceRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The conflict strategy.</p>
+     * 
      * <strong>example:</strong>
      * <p>DIRECT_OVERWRITE, OVERWRITE, IGNORE, INTERRUPT</p>
      */
@@ -44,12 +52,17 @@ public class CreateGdnInstanceRequest extends TeaModel {
     public String rplConflictStrategy;
 
     /**
+     * <p>The DML replication policy.</p>
+     * 
      * <strong>example:</strong>
      * <p>MERGE,  SERIAL, TRANSACTION, SPLIT</p>
      */
     @NameInMap("RplDmlStrategy")
     public String rplDmlStrategy;
 
+    /**
+     * <p>Specifies whether to synchronize DDL statements.</p>
+     */
     @NameInMap("RplSyncDdl")
     public Boolean rplSyncDdl;
 

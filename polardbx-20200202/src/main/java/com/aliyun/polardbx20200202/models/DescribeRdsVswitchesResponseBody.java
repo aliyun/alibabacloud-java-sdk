@@ -4,6 +4,9 @@ package com.aliyun.polardbx20200202.models;
 import com.aliyun.tea.*;
 
 public class DescribeRdsVswitchesResponseBody extends TeaModel {
+    /**
+     * <p>The data struct.</p>
+     */
     @NameInMap("Data")
     public DescribeRdsVswitchesResponseBodyData data;
 
@@ -39,6 +42,8 @@ public class DescribeRdsVswitchesResponseBody extends TeaModel {
 
     public static class DescribeRdsVswitchesResponseBodyDataVswitchList extends TeaModel {
         /**
+         * <p>The number of available IP addresses.</p>
+         * 
          * <strong>example:</strong>
          * <p>16378</p>
          */
@@ -46,6 +51,8 @@ public class DescribeRdsVswitchesResponseBody extends TeaModel {
         public String availabeIpCount;
 
         /**
+         * <p>The CIDR block of the VPC.</p>
+         * 
          * <strong>example:</strong>
          * <p>172.16.0.0/24</p>
          */
@@ -53,6 +60,8 @@ public class DescribeRdsVswitchesResponseBody extends TeaModel {
         public String cidrBlock;
 
         /**
+         * <p>The description of the database.</p>
+         * 
          * <strong>example:</strong>
          * <p>describe</p>
          */
@@ -60,6 +69,8 @@ public class DescribeRdsVswitchesResponseBody extends TeaModel {
         public String description;
 
         /**
+         * <p>The node ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>babac91eff704edf9bdccfaa6ba4efce</p>
          */
@@ -67,6 +78,8 @@ public class DescribeRdsVswitchesResponseBody extends TeaModel {
         public Long id;
 
         /**
+         * <p>The instance ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>drdshbgae0han226</p>
          */
@@ -74,6 +87,12 @@ public class DescribeRdsVswitchesResponseBody extends TeaModel {
         public String instanceId;
 
         /**
+         * <p>Indicates whether the VPC is the default VPC. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: The VPC is the default VPC.</li>
+         * <li><strong>false</strong>: The VPC is not the default VPC.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -81,6 +100,8 @@ public class DescribeRdsVswitchesResponseBody extends TeaModel {
         public String isDefault;
 
         /**
+         * <p>The zone ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-hangzhou-j</p>
          */
@@ -88,6 +109,8 @@ public class DescribeRdsVswitchesResponseBody extends TeaModel {
         public String izNo;
 
         /**
+         * <p>The name.</p>
+         * 
          * <strong>example:</strong>
          * <p>szt-backup</p>
          */
@@ -183,6 +206,9 @@ public class DescribeRdsVswitchesResponseBody extends TeaModel {
     }
 
     public static class DescribeRdsVswitchesResponseBodyData extends TeaModel {
+        /**
+         * <p>The vSwitch list.</p>
+         */
         @NameInMap("VswitchList")
         public java.util.List<DescribeRdsVswitchesResponseBodyDataVswitchList> vswitchList;
 

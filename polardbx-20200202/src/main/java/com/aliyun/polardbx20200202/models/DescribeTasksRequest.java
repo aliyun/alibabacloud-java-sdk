@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeTasksRequest extends TeaModel {
     /**
+     * <p>The instance name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class DescribeTasksRequest extends TeaModel {
     public String DBInstanceId;
 
     /**
+     * <p>The end time of the task.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -29,16 +31,25 @@ public class DescribeTasksRequest extends TeaModel {
     public Long ownerId;
 
     /**
+     * <p>The page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>30</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries per page. Valid values: 5 to 1000.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
+     * <p>The region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -54,6 +65,7 @@ public class DescribeTasksRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
+     * <p>The start time of the task.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

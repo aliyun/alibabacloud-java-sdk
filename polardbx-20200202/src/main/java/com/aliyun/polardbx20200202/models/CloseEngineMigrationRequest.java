@@ -5,6 +5,16 @@ import com.aliyun.tea.*;
 
 public class CloseEngineMigrationRequest extends TeaModel {
     /**
+     * <p>Specifies whether to keep binlog enabled. Valid values:</p>
+     * <ul>
+     * <li><strong>true</strong>: Keeps binlog enabled.</li>
+     * <li><strong>false</strong>: Disables binlog.</li>
+     * </ul>
+     * <p>Default value: <strong>true</strong>.</p>
+     * <blockquote>
+     * <p>Disabling binlog restarts your PolarDB cluster.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -12,6 +22,7 @@ public class CloseEngineMigrationRequest extends TeaModel {
     public String continueEnableBinlog;
 
     /**
+     * <p>The name of the instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,6 +32,8 @@ public class CloseEngineMigrationRequest extends TeaModel {
     public String DBInstanceName;
 
     /**
+     * <p>The region ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
      */

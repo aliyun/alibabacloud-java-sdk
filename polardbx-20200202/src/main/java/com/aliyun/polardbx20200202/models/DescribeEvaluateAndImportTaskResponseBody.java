@@ -4,10 +4,15 @@ package com.aliyun.polardbx20200202.models;
 import com.aliyun.tea.*;
 
 public class DescribeEvaluateAndImportTaskResponseBody extends TeaModel {
+    /**
+     * <p>The returned result.</p>
+     */
     @NameInMap("Data")
     public DescribeEvaluateAndImportTaskResponseBodyData data;
 
     /**
+     * <p>The response message. This parameter is empty when the request succeeds. If the request fails, an exception message is returned, such as an error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>Success</p>
      */
@@ -15,6 +20,8 @@ public class DescribeEvaluateAndImportTaskResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>73559800-****-11ec-bd40-99cfcff3fe1e</p>
      */
@@ -22,6 +29,8 @@ public class DescribeEvaluateAndImportTaskResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -67,16 +76,26 @@ public class DescribeEvaluateAndImportTaskResponseBody extends TeaModel {
 
     public static class DescribeEvaluateAndImportTaskResponseBodyData extends TeaModel {
         /**
+         * <p>The business ID of the import task.</p>
+         * 
          * <strong>example:</strong>
          * <p>26842</p>
          */
         @NameInMap("Bid")
         public String bid;
 
+        /**
+         * <p>The summary information.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;{\&quot;structureImportResult\&quot;:{\&quot;status\&quot;:\&quot;finish\&quot;,\&quot;finishedNum\&quot;:382,\&quot;totalNum\&quot;:382,\&quot;percentage\&quot;:100},\&quot;switchTips\&quot;:\&quot;正向同步延迟较小时才允许开始正向切换\&quot;,\&quot;autoTableSuggestionSwitch\&quot;:false,\&quot;structureAlterationMap\&quot;:{},\&quot;acceptFilterMap\&quot;:{\&quot;fr_import\&quot;:[\&quot;dy_dr_new\&quot;],\&quot;e3plus_drp_prod_new\&quot;:[],\&quot;qbtong_prod\&quot;:[],\&quot;e3plus_account_prod\&quot;:[],\&quot;e3plus_drp_prod\&quot;:[]},\&quot;structChunkMap\&quot;:{},\&quot;count\&quot;:1,\&quot;requestId\&quot;:\&quot;9380D025-C9B1-51D6-A4B9-733C4879CC4A\&quot;}&quot;,</p>
+         */
         @NameInMap("Context")
         public String context;
 
         /**
+         * <p>The creator of the import task.</p>
+         * 
          * <strong>example:</strong>
          * <p>346650</p>
          */
@@ -84,6 +103,8 @@ public class DescribeEvaluateAndImportTaskResponseBody extends TeaModel {
         public String creator;
 
         /**
+         * <p>Indicates whether the import task is successful.</p>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
@@ -91,6 +112,8 @@ public class DescribeEvaluateAndImportTaskResponseBody extends TeaModel {
         public Boolean deleted;
 
         /**
+         * <p>The timestamp when the task was created.</p>
+         * 
          * <strong>example:</strong>
          * <p>2025-06-08T15:00Z</p>
          */
@@ -98,6 +121,8 @@ public class DescribeEvaluateAndImportTaskResponseBody extends TeaModel {
         public Long gmtCreated;
 
         /**
+         * <p>The modification time in timestamp format.</p>
+         * 
          * <strong>example:</strong>
          * <p>1605080537000</p>
          */
@@ -105,6 +130,8 @@ public class DescribeEvaluateAndImportTaskResponseBody extends TeaModel {
         public Long gmtModified;
 
         /**
+         * <p>The task ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>76251</p>
          */
@@ -112,6 +139,8 @@ public class DescribeEvaluateAndImportTaskResponseBody extends TeaModel {
         public Long id;
 
         /**
+         * <p>The region ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
          */
@@ -119,6 +148,8 @@ public class DescribeEvaluateAndImportTaskResponseBody extends TeaModel {
         public String regionId;
 
         /**
+         * <p>The name of the slink destination database.</p>
+         * 
          * <strong>example:</strong>
          * <p>fr_import</p>
          */
@@ -126,6 +157,8 @@ public class DescribeEvaluateAndImportTaskResponseBody extends TeaModel {
         public String slinkDstDb;
 
         /**
+         * <p>The instance ID of the destination.</p>
+         * 
          * <strong>example:</strong>
          * <p>pxc-hzrehc60jz5zye</p>
          */
@@ -133,6 +166,8 @@ public class DescribeEvaluateAndImportTaskResponseBody extends TeaModel {
         public String slinkDstResId;
 
         /**
+         * <p>The username for the data connection of the destination.</p>
+         * 
          * <strong>example:</strong>
          * <p>dts_dtdba</p>
          */
@@ -140,6 +175,8 @@ public class DescribeEvaluateAndImportTaskResponseBody extends TeaModel {
         public String slinkDstUserName;
 
         /**
+         * <p>The name of the slink source database.</p>
+         * 
          * <strong>example:</strong>
          * <p>fr_import</p>
          */
@@ -147,6 +184,8 @@ public class DescribeEvaluateAndImportTaskResponseBody extends TeaModel {
         public String slinkSrcDb;
 
         /**
+         * <p>The instance ID of the source.</p>
+         * 
          * <strong>example:</strong>
          * <p>drdshbga69378w4p</p>
          */
@@ -154,6 +193,8 @@ public class DescribeEvaluateAndImportTaskResponseBody extends TeaModel {
         public String slinkSrcResId;
 
         /**
+         * <p>The resource type of the source.</p>
+         * 
          * <strong>example:</strong>
          * <p>POLARX1</p>
          */
@@ -161,6 +202,8 @@ public class DescribeEvaluateAndImportTaskResponseBody extends TeaModel {
         public String slinkSrcResType;
 
         /**
+         * <p>The username for the data connection of the source.</p>
+         * 
          * <strong>example:</strong>
          * <p>dtdba</p>
          */
@@ -168,6 +211,8 @@ public class DescribeEvaluateAndImportTaskResponseBody extends TeaModel {
         public String slinkSrcUserName;
 
         /**
+         * <p>The stage of the synchronization.</p>
+         * 
          * <strong>example:</strong>
          * <p>DATA_IMPORT_RUNNING</p>
          */
@@ -175,6 +220,8 @@ public class DescribeEvaluateAndImportTaskResponseBody extends TeaModel {
         public String slinkStage;
 
         /**
+         * <p>The running status of the synchronization.</p>
+         * 
          * <strong>example:</strong>
          * <p>IMPORT_RUNNING</p>
          */
@@ -182,6 +229,8 @@ public class DescribeEvaluateAndImportTaskResponseBody extends TeaModel {
         public String slinkStatus;
 
         /**
+         * <p>The description of the slink task.</p>
+         * 
          * <strong>example:</strong>
          * <p>drdsprod_to_2.0</p>
          */
@@ -189,6 +238,8 @@ public class DescribeEvaluateAndImportTaskResponseBody extends TeaModel {
         public String slinkTaskDesc;
 
         /**
+         * <p>The slink task ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>etx-szr2rr6i*****</p>
          */
@@ -196,6 +247,8 @@ public class DescribeEvaluateAndImportTaskResponseBody extends TeaModel {
         public String slinkTaskId;
 
         /**
+         * <p>The synchronization type.</p>
+         * 
          * <strong>example:</strong>
          * <p>evaluate_import</p>
          */

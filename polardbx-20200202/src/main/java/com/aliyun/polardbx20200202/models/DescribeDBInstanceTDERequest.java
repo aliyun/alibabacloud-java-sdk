@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeDBInstanceTDERequest extends TeaModel {
     /**
+     * <p>The instance ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>pxc-********</p>
      */
@@ -12,6 +14,8 @@ public class DescribeDBInstanceTDERequest extends TeaModel {
     public String DBInstanceName;
 
     /**
+     * <p>The region ID of the instance.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
      */

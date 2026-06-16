@@ -8,8 +8,6 @@ public class DeleteSubCNInstanceResponseBody extends TeaModel {
     public DeleteSubCNInstanceResponseBodyData data;
 
     /**
-     * <p>Id of the request</p>
-     * 
      * <strong>example:</strong>
      * <p>1A586DCB-39A6-4050-81CC-C7BD4CCDB49F</p>
      */

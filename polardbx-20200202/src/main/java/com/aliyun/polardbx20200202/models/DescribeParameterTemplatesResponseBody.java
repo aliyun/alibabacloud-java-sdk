@@ -4,10 +4,15 @@ package com.aliyun.polardbx20200202.models;
 import com.aliyun.tea.*;
 
 public class DescribeParameterTemplatesResponseBody extends TeaModel {
+    /**
+     * <p>The data struct.</p>
+     */
     @NameInMap("Data")
     public DescribeParameterTemplatesResponseBodyData data;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>C458B1E8-1683-3645-B154-6BA32080EEA</p>
      */
@@ -37,6 +42,8 @@ public class DescribeParameterTemplatesResponseBody extends TeaModel {
 
     public static class DescribeParameterTemplatesResponseBodyDataParameters extends TeaModel {
         /**
+         * <p>The validation constraint.</p>
+         * 
          * <strong>example:</strong>
          * <p>[0|1]</p>
          */
@@ -44,6 +51,12 @@ public class DescribeParameterTemplatesResponseBody extends TeaModel {
         public String checkingCode;
 
         /**
+         * <p>Indicates whether the parameter is dynamic. Valid values:</p>
+         * <ul>
+         * <li><strong>0</strong>: No.</li>
+         * <li><strong>1</strong>: Yes.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -51,6 +64,8 @@ public class DescribeParameterTemplatesResponseBody extends TeaModel {
         public Integer dynamic;
 
         /**
+         * <p>The parameter description.</p>
+         * 
          * <strong>example:</strong>
          * <p>polarx hatp addition param</p>
          */
@@ -58,6 +73,8 @@ public class DescribeParameterTemplatesResponseBody extends TeaModel {
         public String parameterDescription;
 
         /**
+         * <p>The parameter name.</p>
+         * 
          * <strong>example:</strong>
          * <p>loose_enable_gts</p>
          */
@@ -65,6 +82,8 @@ public class DescribeParameterTemplatesResponseBody extends TeaModel {
         public String parameterName;
 
         /**
+         * <p>The parameter value.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -72,6 +91,12 @@ public class DescribeParameterTemplatesResponseBody extends TeaModel {
         public String parameterValue;
 
         /**
+         * <p>Indicates whether the parameter can be modified. Valid values:</p>
+         * <ul>
+         * <li><strong>0</strong>: The parameter cannot be modified.</li>
+         * <li><strong>1</strong>: The parameter can be modified.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -150,6 +175,8 @@ public class DescribeParameterTemplatesResponseBody extends TeaModel {
 
     public static class DescribeParameterTemplatesResponseBodyData extends TeaModel {
         /**
+         * <p>The engine. Default value: polarx.</p>
+         * 
          * <strong>example:</strong>
          * <p>polarx</p>
          */
@@ -157,6 +184,8 @@ public class DescribeParameterTemplatesResponseBody extends TeaModel {
         public String engine;
 
         /**
+         * <p>The DPI engine version. Default value: 2.0.</p>
+         * 
          * <strong>example:</strong>
          * <p>2.0</p>
          */
@@ -164,12 +193,17 @@ public class DescribeParameterTemplatesResponseBody extends TeaModel {
         public String engineVersion;
 
         /**
+         * <p>The number of parameters.</p>
+         * 
          * <strong>example:</strong>
          * <p>218</p>
          */
         @NameInMap("ParameterCount")
         public Integer parameterCount;
 
+        /**
+         * <p>The parameter list.</p>
+         */
         @NameInMap("Parameters")
         public java.util.List<DescribeParameterTemplatesResponseBodyDataParameters> parameters;
 

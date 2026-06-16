@@ -4,6 +4,9 @@ package com.aliyun.polardbx20200202.models;
 import com.aliyun.tea.*;
 
 public class DescribeColumnarClassListResponseBody extends TeaModel {
+    /**
+     * <p>The data struct.</p>
+     */
     @NameInMap("Data")
     public DescribeColumnarClassListResponseBodyData data;
 
@@ -39,6 +42,8 @@ public class DescribeColumnarClassListResponseBody extends TeaModel {
 
     public static class DescribeColumnarClassListResponseBodyDataClassCodeList extends TeaModel {
         /**
+         * <p>The instance specification.</p>
+         * 
          * <strong>example:</strong>
          * <p>polarx.n8.large.col</p>
          */
@@ -46,6 +51,8 @@ public class DescribeColumnarClassListResponseBody extends TeaModel {
         public String classCode;
 
         /**
+         * <p>The number of CPU cores.</p>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */
@@ -53,6 +60,8 @@ public class DescribeColumnarClassListResponseBody extends TeaModel {
         public String cpuCore;
 
         /**
+         * <p>The memory size. Unit: GB.</p>
+         * 
          * <strong>example:</strong>
          * <p>2048</p>
          */

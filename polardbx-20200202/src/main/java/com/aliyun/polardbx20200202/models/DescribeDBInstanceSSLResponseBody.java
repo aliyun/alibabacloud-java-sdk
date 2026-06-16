@@ -4,10 +4,15 @@ package com.aliyun.polardbx20200202.models;
 import com.aliyun.tea.*;
 
 public class DescribeDBInstanceSSLResponseBody extends TeaModel {
+    /**
+     * <p>The data structure.</p>
+     */
     @NameInMap("Data")
     public DescribeDBInstanceSSLResponseBodyData data;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>C458B1E8-1683-3645-B154-6BA32080EEA</p>
      */
@@ -37,6 +42,8 @@ public class DescribeDBInstanceSSLResponseBody extends TeaModel {
 
     public static class DescribeDBInstanceSSLResponseBodyData extends TeaModel {
         /**
+         * <p>The domain name bound to the certificate.</p>
+         * 
          * <strong>example:</strong>
          * <p>pxc-sddddddcym7g7w****.polarx.singapore.rds.aliyuncs.com</p>
          */
@@ -44,6 +51,12 @@ public class DescribeDBInstanceSSLResponseBody extends TeaModel {
         public String certCommonName;
 
         /**
+         * <p>Indicates whether SSL is enabled for the instance:</p>
+         * <ul>
+         * <li><strong>true</strong>: enabled</li>
+         * <li><strong>false</strong>: disabled</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
@@ -51,6 +64,8 @@ public class DescribeDBInstanceSSLResponseBody extends TeaModel {
         public Boolean SSLEnabled;
 
         /**
+         * <p>The expiration time of the SSL certificate.</p>
+         * 
          * <strong>example:</strong>
          * <p>2022-11-04T09:39:07Z</p>
          */

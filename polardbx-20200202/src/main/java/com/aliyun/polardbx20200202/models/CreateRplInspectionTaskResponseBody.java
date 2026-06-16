@@ -4,10 +4,15 @@ package com.aliyun.polardbx20200202.models;
 import com.aliyun.tea.*;
 
 public class CreateRplInspectionTaskResponseBody extends TeaModel {
+    /**
+     * <p>The task details.</p>
+     */
     @NameInMap("Data")
     public CreateRplInspectionTaskResponseBodyData data;
 
     /**
+     * <p>The error message of the task. &gt; This parameter is returned only when the task status is <strong>stop</strong>.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -15,6 +20,8 @@ public class CreateRplInspectionTaskResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>9B2F3840-5C98-475C-B269-2D5C3A31797C</p>
      */
@@ -22,6 +29,8 @@ public class CreateRplInspectionTaskResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -67,6 +76,8 @@ public class CreateRplInspectionTaskResponseBody extends TeaModel {
 
     public static class CreateRplInspectionTaskResponseBodyData extends TeaModel {
         /**
+         * <p>The slink task ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>etx-szr2rr6i*****</p>
          */

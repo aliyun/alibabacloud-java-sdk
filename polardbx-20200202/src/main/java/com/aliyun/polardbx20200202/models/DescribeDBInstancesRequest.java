@@ -7,20 +7,36 @@ public class DescribeDBInstancesRequest extends TeaModel {
     @NameInMap("DbVersion")
     public String dbVersion;
 
+    /**
+     * <p>The description or remarks of the database.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>app-test</p>
+     */
     @NameInMap("Description")
     public String description;
 
     /**
+     * <p>The instance ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>dinga93c84f4d***</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>Specifies whether the instance must have a log engine.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("MustHasCdc")
     public Boolean mustHasCdc;
 
     /**
+     * <p>The page number. Starts from 1.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -28,13 +44,24 @@ public class DescribeDBInstancesRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries per page. Valid values:</p>
+     * <ul>
+     * <li>30</li>
+     * <li>50</li>
+     * <li><ol start="100">
+     * <li></li>
+     * </ol>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
-     * <p>20</p>
+     * <p>30</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
+     * <p>The region ID of the instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -44,13 +71,21 @@ public class DescribeDBInstancesRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The resource group ID.</p>
+     * 
      * <strong>example:</strong>
-     * <p>rg-acfmyst47hjw***</p>
+     * <p>rg-acfmyst47******</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
     /**
+     * <p>The instance edition. Valid values:</p>
+     * <ul>
+     * <li><strong>enterprise</strong>: Enterprise Edition.</li>
+     * <li><strong>standard</strong>: Standard Edition.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>enterprise</p>
      */
@@ -58,6 +93,8 @@ public class DescribeDBInstancesRequest extends TeaModel {
     public String series;
 
     /**
+     * <p>The list of tags.</p>
+     * 
      * <strong>example:</strong>
      * <p>[{\&quot;TagKey\&quot;:\&quot;test\&quot;,\&quot;TagValue\&quot;:\&quot;test-value\&quot;}]</p>
      */

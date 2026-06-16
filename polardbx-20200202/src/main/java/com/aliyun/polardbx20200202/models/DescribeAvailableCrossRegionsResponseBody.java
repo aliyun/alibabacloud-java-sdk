@@ -4,10 +4,15 @@ package com.aliyun.polardbx20200202.models;
 import com.aliyun.tea.*;
 
 public class DescribeAvailableCrossRegionsResponseBody extends TeaModel {
+    /**
+     * <p>The parameter details.</p>
+     */
     @NameInMap("Data")
     public java.util.List<DescribeAvailableCrossRegionsResponseBodyData> data;
 
     /**
+     * <p>The additional information returned. If the request is successful, success is returned. If the request fails, the corresponding error code is returned.</p>
+     * 
      * <strong>example:</strong>
      * <hr>
      */
@@ -24,6 +29,8 @@ public class DescribeAvailableCrossRegionsResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request is successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -68,6 +75,9 @@ public class DescribeAvailableCrossRegionsResponseBody extends TeaModel {
     }
 
     public static class DescribeAvailableCrossRegionsResponseBodyData extends TeaModel {
+        /**
+         * <p>The instance ID.</p>
+         */
         @NameInMap("Regions")
         public java.util.List<String> regions;
 

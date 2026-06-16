@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class AllocateInstancePublicConnectionRequest extends TeaModel {
     /**
+     * <p>The prefix of the public endpoint.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class AllocateInstancePublicConnectionRequest extends TeaModel {
     public String connectionStringPrefix;
 
     /**
+     * <p>The instance name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -36,6 +38,7 @@ public class AllocateInstancePublicConnectionRequest extends TeaModel {
     public Long ownerId;
 
     /**
+     * <p>The port of the public endpoint.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -45,6 +48,8 @@ public class AllocateInstancePublicConnectionRequest extends TeaModel {
     public String port;
 
     /**
+     * <p>The region in which the instance resides.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
      */

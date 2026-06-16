@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeRdsVswitchesRequest extends TeaModel {
     /**
+     * <p>The region in which the instance resides.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
      */
@@ -12,6 +14,8 @@ public class DescribeRdsVswitchesRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The ID of the VPC in which the endpoint resides.</p>
+     * 
      * <strong>example:</strong>
      * <p>vpc-bp1ndou****twoedlmru0</p>
      */
@@ -19,6 +23,8 @@ public class DescribeRdsVswitchesRequest extends TeaModel {
     public String vpcId;
 
     /**
+     * <p>The zone ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou-a</p>
      */

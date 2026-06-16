@@ -4,10 +4,15 @@ package com.aliyun.polardbx20200202.models;
 import com.aliyun.tea.*;
 
 public class SubmitSqlFlashbackTaskResponseBody extends TeaModel {
+    /**
+     * <p>The data returned by the request.</p>
+     */
     @NameInMap("Data")
     public SubmitSqlFlashbackTaskResponseBodyData data;
 
     /**
+     * <p>The description of the request result.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
@@ -15,6 +20,8 @@ public class SubmitSqlFlashbackTaskResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>1AD222E9-E606-4A42-BF6D-8A4442913CEF</p>
      */
@@ -22,6 +29,8 @@ public class SubmitSqlFlashbackTaskResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the API request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -67,6 +76,8 @@ public class SubmitSqlFlashbackTaskResponseBody extends TeaModel {
 
     public static class SubmitSqlFlashbackTaskResponseBodyData extends TeaModel {
         /**
+         * <p>The task ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>1111</p>
          */

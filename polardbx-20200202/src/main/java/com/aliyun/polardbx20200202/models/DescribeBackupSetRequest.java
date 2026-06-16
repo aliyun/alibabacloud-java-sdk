@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeBackupSetRequest extends TeaModel {
     /**
+     * <p>The backup set ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class DescribeBackupSetRequest extends TeaModel {
     public String backupSetId;
 
     /**
+     * <p>The name of the PolarDB-X instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -22,10 +24,18 @@ public class DescribeBackupSetRequest extends TeaModel {
     @NameInMap("DBInstanceName")
     public String DBInstanceName;
 
+    /**
+     * <p>The destination region for cross-region backup.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shanghai</p>
+     */
     @NameInMap("DestCrossRegion")
     public String destCrossRegion;
 
     /**
+     * <p>The region ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
      */

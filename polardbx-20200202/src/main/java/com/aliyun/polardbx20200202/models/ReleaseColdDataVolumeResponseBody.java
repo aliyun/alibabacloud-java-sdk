@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ReleaseColdDataVolumeResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>EA330983-C895-57C0-AE82-5A63106EBB10</p>
      */

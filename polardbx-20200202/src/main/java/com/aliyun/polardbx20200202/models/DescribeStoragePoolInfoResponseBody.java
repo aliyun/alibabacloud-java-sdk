@@ -5,12 +5,17 @@ import com.aliyun.tea.*;
 
 public class DescribeStoragePoolInfoResponseBody extends TeaModel {
     /**
+     * <p>The response code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The list of instance details.</p>
+     */
     @NameInMap("Data")
     public DescribeStoragePoolInfoResponseBodyData data;
 
@@ -54,6 +59,8 @@ public class DescribeStoragePoolInfoResponseBody extends TeaModel {
 
     public static class DescribeStoragePoolInfoResponseBodyDataStoragePools extends TeaModel {
         /**
+         * <p>The specification type of the instance (the specification code).</p>
+         * 
          * <strong>example:</strong>
          * <p>polar.mysql.x4.large</p>
          */
@@ -61,6 +68,8 @@ public class DescribeStoragePoolInfoResponseBody extends TeaModel {
         public String _class;
 
         /**
+         * <p>The list of DN IDs.</p>
+         * 
          * <strong>example:</strong>
          * <p>[pxc-xdb-s-pxcbj<strong><strong>xxnwp0wac2c4\&quot;,\&quot;pxc-xdb-s-pxcbjr3b8</strong></strong>p0wa1589\&quot;]</p>
          */
@@ -77,6 +86,8 @@ public class DescribeStoragePoolInfoResponseBody extends TeaModel {
         public String dnIdString;
 
         /**
+         * <p>The reserved field.</p>
+         * 
          * <strong>example:</strong>
          * <p>{\&quot;appId\&quot;:\&quot;APP_ETLUP1E5FMI5ND5IFO8W\&quot;}</p>
          */
@@ -84,6 +95,8 @@ public class DescribeStoragePoolInfoResponseBody extends TeaModel {
         public String extra;
 
         /**
+         * <p>The time when the account was created.</p>
+         * 
          * <strong>example:</strong>
          * <p>2025-08-27 23:19:52.0</p>
          */
@@ -91,6 +104,8 @@ public class DescribeStoragePoolInfoResponseBody extends TeaModel {
         public String gmtCreated;
 
         /**
+         * <p>The time when the storage pool was last modified, in timestamp format.</p>
+         * 
          * <strong>example:</strong>
          * <p>2025-09-02 16:52:47.0</p>
          */
@@ -98,6 +113,8 @@ public class DescribeStoragePoolInfoResponseBody extends TeaModel {
         public String gmtModified;
 
         /**
+         * <p>The list of idle DN IDs.</p>
+         * 
          * <strong>example:</strong>
          * <p>none</p>
          */
@@ -105,6 +122,8 @@ public class DescribeStoragePoolInfoResponseBody extends TeaModel {
         public java.util.List<String> idleDNIdList;
 
         /**
+         * <p>The name.</p>
+         * 
          * <strong>example:</strong>
          * <p>test-cacheapi</p>
          */
@@ -112,6 +131,8 @@ public class DescribeStoragePoolInfoResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>The DN that cannot be deleted.</p>
+         * 
          * <strong>example:</strong>
          * <p>pxc-xdb-s-hzr*****6j4se284344</p>
          */
@@ -198,6 +219,9 @@ public class DescribeStoragePoolInfoResponseBody extends TeaModel {
     }
 
     public static class DescribeStoragePoolInfoResponseBodyData extends TeaModel {
+        /**
+         * <p>The storage pools.</p>
+         */
         @NameInMap("StoragePools")
         public java.util.List<DescribeStoragePoolInfoResponseBodyDataStoragePools> storagePools;
 

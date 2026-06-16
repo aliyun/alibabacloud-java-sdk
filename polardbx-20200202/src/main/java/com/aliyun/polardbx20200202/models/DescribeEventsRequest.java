@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeEventsRequest extends TeaModel {
     /**
+     * <p>The end time.</p>
+     * 
      * <strong>example:</strong>
      * <p>2021-10-18T03:07:25Z</p>
      */
@@ -12,6 +14,8 @@ public class DescribeEventsRequest extends TeaModel {
     public String endTime;
 
     /**
+     * <p>The page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -19,6 +23,8 @@ public class DescribeEventsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The page size.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -26,6 +32,7 @@ public class DescribeEventsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -35,6 +42,8 @@ public class DescribeEventsRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The start time.</p>
+     * 
      * <strong>example:</strong>
      * <p>2021-10-18T03:07:25Z</p>
      */

@@ -4,10 +4,15 @@ package com.aliyun.polardbx20200202.models;
 import com.aliyun.tea.*;
 
 public class DescribeEventsResponseBody extends TeaModel {
+    /**
+     * <p>The event items.</p>
+     */
     @NameInMap("EventItems")
     public java.util.List<DescribeEventsResponseBodyEventItems> eventItems;
 
     /**
+     * <p>The page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -15,6 +20,8 @@ public class DescribeEventsResponseBody extends TeaModel {
     public Long pageNumber;
 
     /**
+     * <p>The page size.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -22,6 +29,8 @@ public class DescribeEventsResponseBody extends TeaModel {
     public Long pageSize;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>4748127A-6D50-432C-B635-433467074C27</p>
      */
@@ -29,6 +38,8 @@ public class DescribeEventsResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total number of pages.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -82,6 +93,8 @@ public class DescribeEventsResponseBody extends TeaModel {
 
     public static class DescribeEventsResponseBodyEventItems extends TeaModel {
         /**
+         * <p>The event ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>50421290</p>
          */
@@ -89,6 +102,8 @@ public class DescribeEventsResponseBody extends TeaModel {
         public Long eventId;
 
         /**
+         * <p>The event name.</p>
+         * 
          * <strong>example:</strong>
          * <p>ModifySecurityIps</p>
          */
@@ -96,6 +111,8 @@ public class DescribeEventsResponseBody extends TeaModel {
         public String eventName;
 
         /**
+         * <p>The supplementary information.</p>
+         * 
          * <strong>example:</strong>
          * <p>{\&quot;Domain\&quot;: \&quot;rds-cn-hangzhou.aliyuncs.com\&quot;}</p>
          */
@@ -103,6 +120,8 @@ public class DescribeEventsResponseBody extends TeaModel {
         public String eventPayload;
 
         /**
+         * <p>The reason.</p>
+         * 
          * <strong>example:</strong>
          * <p>FROM_USER</p>
          */
@@ -110,6 +129,8 @@ public class DescribeEventsResponseBody extends TeaModel {
         public String eventReason;
 
         /**
+         * <p>The record time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2021-10-15T06:39:49Z</p>
          */
@@ -117,6 +138,8 @@ public class DescribeEventsResponseBody extends TeaModel {
         public String eventRecordTime;
 
         /**
+         * <p>The event time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2021-10-15T06:35:00Z</p>
          */
@@ -124,6 +147,8 @@ public class DescribeEventsResponseBody extends TeaModel {
         public String eventTime;
 
         /**
+         * <p>The event type.</p>
+         * 
          * <strong>example:</strong>
          * <p>SecurityManagement</p>
          */
@@ -131,6 +156,8 @@ public class DescribeEventsResponseBody extends TeaModel {
         public String eventType;
 
         /**
+         * <p>The event user type.</p>
+         * 
          * <strong>example:</strong>
          * <p>USRE</p>
          */
@@ -138,6 +165,8 @@ public class DescribeEventsResponseBody extends TeaModel {
         public String eventUserType;
 
         /**
+         * <p>The region ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
          */
@@ -145,6 +174,8 @@ public class DescribeEventsResponseBody extends TeaModel {
         public String regionId;
 
         /**
+         * <p>The resource name.</p>
+         * 
          * <strong>example:</strong>
          * <p>px-bp1v8udesc89g156g</p>
          */
@@ -152,6 +183,8 @@ public class DescribeEventsResponseBody extends TeaModel {
         public String resourceName;
 
         /**
+         * <p>The resource type.</p>
+         * 
          * <strong>example:</strong>
          * <p>instance</p>
          */

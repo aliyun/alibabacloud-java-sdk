@@ -4,10 +4,15 @@ package com.aliyun.polardbx20200202.models;
 import com.aliyun.tea.*;
 
 public class DescribeActiveOperationTasksResponseBody extends TeaModel {
+    /**
+     * <p>The list of parameters.</p>
+     */
     @NameInMap("Items")
     public java.util.List<DescribeActiveOperationTasksResponseBodyItems> items;
 
     /**
+     * <p>The page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -15,6 +20,8 @@ public class DescribeActiveOperationTasksResponseBody extends TeaModel {
     public Long pageNumber;
 
     /**
+     * <p>The number of entries per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>12</p>
      */
@@ -22,6 +29,8 @@ public class DescribeActiveOperationTasksResponseBody extends TeaModel {
     public Long pageSize;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>xxxx</p>
      */
@@ -29,6 +38,8 @@ public class DescribeActiveOperationTasksResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total number of records.</p>
+     * 
      * <strong>example:</strong>
      * <p>23</p>
      */
@@ -82,6 +93,12 @@ public class DescribeActiveOperationTasksResponseBody extends TeaModel {
 
     public static class DescribeActiveOperationTasksResponseBodyItems extends TeaModel {
         /**
+         * <p>Indicates whether cancellation is allowed. Valid values:</p>
+         * <ul>
+         * <li><strong>0</strong>: Not allowed.</li>
+         * <li><strong>1</strong>: Allowed.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -89,6 +106,12 @@ public class DescribeActiveOperationTasksResponseBody extends TeaModel {
         public String allowCancel;
 
         /**
+         * <p>Indicates whether modification is allowed. Valid values:</p>
+         * <ul>
+         * <li><strong>0</strong>: Not allowed.</li>
+         * <li><strong>1</strong>: Allowed.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -96,6 +119,8 @@ public class DescribeActiveOperationTasksResponseBody extends TeaModel {
         public String allowChange;
 
         /**
+         * <p>The change level. This parameter can be ignored.</p>
+         * 
          * <strong>example:</strong>
          * <p>Risk</p>
          */
@@ -103,16 +128,26 @@ public class DescribeActiveOperationTasksResponseBody extends TeaModel {
         public String changeLevel;
 
         /**
+         * <p>The change level in English.</p>
+         * 
          * <strong>example:</strong>
          * <p>Risk repairment</p>
          */
         @NameInMap("ChangeLevelEn")
         public String changeLevelEn;
 
+        /**
+         * <p>The change level in Chinese.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>风险修复</p>
+         */
         @NameInMap("ChangeLevelZh")
         public String changeLevelZh;
 
         /**
+         * <p>The creation time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2021-06-15T16:00:00Z</p>
          */
@@ -120,6 +155,8 @@ public class DescribeActiveOperationTasksResponseBody extends TeaModel {
         public String createdTime;
 
         /**
+         * <p>The current availability zone.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-shanghai-et-a</p>
          */
@@ -127,6 +164,8 @@ public class DescribeActiveOperationTasksResponseBody extends TeaModel {
         public String currentAVZ;
 
         /**
+         * <p>The database type.</p>
+         * 
          * <strong>example:</strong>
          * <p>polarx</p>
          */
@@ -134,6 +173,8 @@ public class DescribeActiveOperationTasksResponseBody extends TeaModel {
         public String dbType;
 
         /**
+         * <p>The database version.</p>
+         * 
          * <strong>example:</strong>
          * <p>2.0</p>
          */
@@ -141,6 +182,8 @@ public class DescribeActiveOperationTasksResponseBody extends TeaModel {
         public String dbVersion;
 
         /**
+         * <p>The deadline.</p>
+         * 
          * <strong>example:</strong>
          * <p>2021-06-15T16:00:00Z</p>
          */
@@ -148,6 +191,8 @@ public class DescribeActiveOperationTasksResponseBody extends TeaModel {
         public String deadline;
 
         /**
+         * <p>The task ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -155,6 +200,8 @@ public class DescribeActiveOperationTasksResponseBody extends TeaModel {
         public Long id;
 
         /**
+         * <p>The impact. This parameter is not returned.</p>
+         * 
          * <strong>example:</strong>
          * <p>--</p>
          */
@@ -162,16 +209,26 @@ public class DescribeActiveOperationTasksResponseBody extends TeaModel {
         public String impact;
 
         /**
+         * <p>The impact description in English.</p>
+         * 
          * <strong>example:</strong>
          * <p>Transient instance disconnection</p>
          */
         @NameInMap("ImpactEn")
         public String impactEn;
 
+        /**
+         * <p>The impact description in Chinese.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>中断</p>
+         */
         @NameInMap("ImpactZh")
         public String impactZh;
 
         /**
+         * <p>The description.</p>
+         * 
          * <strong>example:</strong>
          * <p>xxx</p>
          */
@@ -179,6 +236,8 @@ public class DescribeActiveOperationTasksResponseBody extends TeaModel {
         public String insComment;
 
         /**
+         * <p>The instance name.</p>
+         * 
          * <strong>example:</strong>
          * <p>pxc-dd</p>
          */
@@ -186,6 +245,8 @@ public class DescribeActiveOperationTasksResponseBody extends TeaModel {
         public String insName;
 
         /**
+         * <p>The modification time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2021-06-15T16:00:00Z</p>
          */
@@ -193,6 +254,8 @@ public class DescribeActiveOperationTasksResponseBody extends TeaModel {
         public String modifiedTime;
 
         /**
+         * <p>The preparation interval.</p>
+         * 
          * <strong>example:</strong>
          * <p>03:00:00</p>
          */
@@ -200,6 +263,8 @@ public class DescribeActiveOperationTasksResponseBody extends TeaModel {
         public String prepareInterval;
 
         /**
+         * <p>The region.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-shanghai-et15-b01</p>
          */
@@ -207,6 +272,8 @@ public class DescribeActiveOperationTasksResponseBody extends TeaModel {
         public String region;
 
         /**
+         * <p>The result information. This parameter can be ignored.</p>
+         * 
          * <strong>example:</strong>
          * <p>--</p>
          */
@@ -214,6 +281,8 @@ public class DescribeActiveOperationTasksResponseBody extends TeaModel {
         public String resultInfo;
 
         /**
+         * <p>The start time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2021-06-15T16:00:00Z</p>
          */
@@ -221,16 +290,27 @@ public class DescribeActiveOperationTasksResponseBody extends TeaModel {
         public String startTime;
 
         /**
+         * <p>The status. Valid values:</p>
+         * <ul>
+         * <li><strong>3</strong>: Pending. </li>
+         * <li><strong>4</strong>: Running.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>3</p>
          */
         @NameInMap("Status")
         public Long status;
 
+        /**
+         * <p>The list of child instances.</p>
+         */
         @NameInMap("SubInsNames")
         public java.util.List<String> subInsNames;
 
         /**
+         * <p>The switchover time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2021-06-15T16:00:00Z</p>
          */
@@ -238,6 +318,8 @@ public class DescribeActiveOperationTasksResponseBody extends TeaModel {
         public String switchTime;
 
         /**
+         * <p>The task type.</p>
+         * 
          * <strong>example:</strong>
          * <p>rds_apsaradb_transfer</p>
          */
@@ -245,6 +327,8 @@ public class DescribeActiveOperationTasksResponseBody extends TeaModel {
         public String taskType;
 
         /**
+         * <p>The task type in English. This parameter can be ignored.</p>
+         * 
          * <strong>example:</strong>
          * <p>--</p>
          */
@@ -252,6 +336,8 @@ public class DescribeActiveOperationTasksResponseBody extends TeaModel {
         public String taskTypeEn;
 
         /**
+         * <p>The task type in Chinese. This parameter can be ignored.</p>
+         * 
          * <strong>example:</strong>
          * <p>--</p>
          */

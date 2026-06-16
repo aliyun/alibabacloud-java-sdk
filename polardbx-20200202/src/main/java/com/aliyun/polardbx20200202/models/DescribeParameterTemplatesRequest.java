@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeParameterTemplatesRequest extends TeaModel {
     /**
+     * <p>The instance ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>pxc-********</p>
      */
@@ -15,6 +17,12 @@ public class DescribeParameterTemplatesRequest extends TeaModel {
     public String engineVersion;
 
     /**
+     * <p>The parameter level. Valid values:</p>
+     * <ul>
+     * <li><strong>compute</strong>: compute layer.</li>
+     * <li><strong>storage</strong>: storage layer.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>compute</p>
      */
@@ -22,6 +30,7 @@ public class DescribeParameterTemplatesRequest extends TeaModel {
     public String paramLevel;
 
     /**
+     * <p>The region ID of the instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ConfirmNoConnectionRequest extends TeaModel {
     /**
+     * <p>The instance name.</p>
+     * 
      * <strong>example:</strong>
      * <p>pxc-hzravgpt8q****</p>
      */
@@ -12,6 +14,7 @@ public class ConfirmNoConnectionRequest extends TeaModel {
     public String DBInstanceName;
 
     /**
+     * <p>The region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,6 +24,7 @@ public class ConfirmNoConnectionRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The unique ID of the short-link task that identifies the task to be rolled back.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

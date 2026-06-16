@@ -4,10 +4,18 @@ package com.aliyun.polardbx20200202.models;
 import com.aliyun.tea.*;
 
 public class DescribeGdnInstancesResponseBody extends TeaModel {
+    /**
+     * <p>The list of instance details.</p>
+     */
     @NameInMap("Data")
     public DescribeGdnInstancesResponseBodyData data;
 
     /**
+     * <p>The response message.</p>
+     * <blockquote>
+     * <p>This parameter is empty when the request succeeds. When the request fails, an exception message is returned, such as an error code.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -15,6 +23,8 @@ public class DescribeGdnInstancesResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>7B044BD1-6402-5DE9-9AED-63D15A994E37</p>
      */
@@ -22,6 +32,8 @@ public class DescribeGdnInstancesResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>True</p>
      */
@@ -67,6 +79,8 @@ public class DescribeGdnInstancesResponseBody extends TeaModel {
 
     public static class DescribeGdnInstancesResponseBodyDataGdnInstanceListMemberList extends TeaModel {
         /**
+         * <p>The instance type.</p>
+         * 
          * <strong>example:</strong>
          * <p>polarx.x4.medium.2e</p>
          */
@@ -74,6 +88,21 @@ public class DescribeGdnInstancesResponseBody extends TeaModel {
         public String classCode;
 
         /**
+         * <p>The CN node specifications. Valid values:</p>
+         * <ul>
+         * <li><strong>polarx.x4.medium.2e</strong>: 2 cores, 8 GB</li>
+         * <li><strong>polarx.x4.large.2e</strong>: 4 cores, 16 GB</li>
+         * <li><strong>polarx.x8.large.2e</strong>: 4 cores, 32 GB</li>
+         * <li><strong>polarx.x4.xlarge.2e</strong>: 8 cores, 32 GB</li>
+         * <li><strong>polarx.x8.xlarge.2e</strong>: 8 cores, 64 GB</li>
+         * <li><strong>polarx.x4.2xlarge.2e</strong>: 16 cores, 64 GB</li>
+         * <li><strong>polarx.x8.2xlarge.2e</strong>: 16 cores, 128 GB</li>
+         * <li><strong>polarx.x4.4xlarge.2e</strong>: 32 cores, 128 GB</li>
+         * <li><strong>polarx.x8.4xlarge.2e</strong>: 32 cores, 256 GB</li>
+         * <li><strong>polarx.st.8xlarge.2e</strong>: 60 cores, 470 GB</li>
+         * <li><strong>polarx.st.12xlarge.2e</strong>: 90 cores, 720 GB.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>polarx.x4.medium.2e</p>
          */
@@ -81,6 +110,8 @@ public class DescribeGdnInstancesResponseBody extends TeaModel {
         public String cnNodeClassCode;
 
         /**
+         * <p>The number of CN nodes.</p>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */
@@ -88,6 +119,8 @@ public class DescribeGdnInstancesResponseBody extends TeaModel {
         public String cnNodeCount;
 
         /**
+         * <p>The commodity code.</p>
+         * 
          * <strong>example:</strong>
          * <p>drds_polarxpre_public_cn</p>
          */
@@ -98,6 +131,25 @@ public class DescribeGdnInstancesResponseBody extends TeaModel {
         public String dataSyncStatus;
 
         /**
+         * <p>The DN node specifications. Valid values:</p>
+         * <ul>
+         * <li><strong>mysql.n2.medium.25</strong>: 2 cores, 4 GB</li>
+         * <li><strong>mysql.n4.medium.25</strong>: 2 cores, 8 GB</li>
+         * <li><strong>mysql.x8.medium.25</strong>: 2 cores, 16 GB</li>
+         * <li><strong>mysql.n2.large.25</strong>: 4 cores, 8 GB</li>
+         * <li><strong>mysql.n4.large.25</strong>: 4 cores, 16 GB</li>
+         * <li><strong>mysql.x8.large.25</strong>: 4 cores, 32 GB</li>
+         * <li><strong>mysql.n2.xlarge.25</strong>: 8 cores, 16 GB</li>
+         * <li><strong>mysql.n4.xlarge.25</strong>: 8 cores, 32 GB</li>
+         * <li><strong>mysql.x8.xlarge.25</strong>: 8 cores, 64 GB</li>
+         * <li><strong>mysql.n4.2xlarge.25</strong>: 16 cores, 64 GB</li>
+         * <li><strong>mysql.x8.2xlarge.25</strong>: 16 cores, 128 GB</li>
+         * <li><strong>mysql.x4.4xlarge.25</strong>: 32 cores, 128 GB</li>
+         * <li><strong>mysql.x8.4xlarge.25</strong>: 32 cores, 256 GB</li>
+         * <li><strong>mysql.st.8xlarge.25</strong>: 60 cores, 470 GB</li>
+         * <li><strong>mysql.st.12xlarge.25</strong>: 90 cores, 720 GB.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>mysql.n4.medium.25</p>
          */
@@ -105,6 +157,8 @@ public class DescribeGdnInstancesResponseBody extends TeaModel {
         public String dnNodeClassCode;
 
         /**
+         * <p>The number of DN nodes.</p>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */
@@ -112,6 +166,8 @@ public class DescribeGdnInstancesResponseBody extends TeaModel {
         public String dnNodeCount;
 
         /**
+         * <p>The expiration time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2025-01-02T13:11:10.000+0000</p>
          */
@@ -119,6 +175,8 @@ public class DescribeGdnInstancesResponseBody extends TeaModel {
         public String expireTime;
 
         /**
+         * <p>The creation time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2025-01-02T13:11:10.000+0000</p>
          */
@@ -126,6 +184,8 @@ public class DescribeGdnInstancesResponseBody extends TeaModel {
         public String gmtCreated;
 
         /**
+         * <p>The member name (PolarDB-X instance name).</p>
+         * 
          * <strong>example:</strong>
          * <p>pxc-***</p>
          */
@@ -133,6 +193,12 @@ public class DescribeGdnInstancesResponseBody extends TeaModel {
         public String memberName;
 
         /**
+         * <p>The billing method of the instance. Valid values:</p>
+         * <ul>
+         * <li><strong>Postpaid</strong>: pay-as-you-go.</li>
+         * <li><strong>Prepaid</strong>: subscription.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Prepaid</p>
          */
@@ -140,6 +206,8 @@ public class DescribeGdnInstancesResponseBody extends TeaModel {
         public String payType;
 
         /**
+         * <p>The primary zone.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-zhangjiakou-a</p>
          */
@@ -150,6 +218,8 @@ public class DescribeGdnInstancesResponseBody extends TeaModel {
         public String readWriteStatus;
 
         /**
+         * <p>The region ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
          */
@@ -157,6 +227,8 @@ public class DescribeGdnInstancesResponseBody extends TeaModel {
         public String regionId;
 
         /**
+         * <p>The member role.</p>
+         * 
          * <strong>example:</strong>
          * <p>primary、
          * standby</p>
@@ -165,6 +237,8 @@ public class DescribeGdnInstancesResponseBody extends TeaModel {
         public String role;
 
         /**
+         * <p>The secondary zone.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-zhangjiakou-a</p>
          */
@@ -172,6 +246,8 @@ public class DescribeGdnInstancesResponseBody extends TeaModel {
         public String secondaryZone;
 
         /**
+         * <p>The data latency.</p>
+         * 
          * <strong>example:</strong>
          * <p>1s</p>
          */
@@ -179,16 +255,30 @@ public class DescribeGdnInstancesResponseBody extends TeaModel {
         public String secondsBehindMaster;
 
         /**
+         * <p>The member status.</p>
+         * 
          * <strong>example:</strong>
          * <p>Creating</p>
          */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The switchover task status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>prepared：参数初始化完毕
+         * set_old_primary_readonly：原主实例已禁写
+         * set_new_primary_read_write：已切换
+         * timeout：任务超时
+         * rollback：已回滚</p>
+         */
         @NameInMap("TaskStatus")
         public String taskStatus;
 
         /**
+         * <p>The zone for Three-zone deployment. This zone is active only when three-zone deployment is enabled.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-zhangjiakou-a</p>
          */
@@ -196,6 +286,8 @@ public class DescribeGdnInstancesResponseBody extends TeaModel {
         public String tertiaryZone;
 
         /**
+         * <p>The zone ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-zhangjiakou-a</p>
          */
@@ -379,6 +471,8 @@ public class DescribeGdnInstancesResponseBody extends TeaModel {
 
     public static class DescribeGdnInstancesResponseBodyDataGdnInstanceList extends TeaModel {
         /**
+         * <p>The description.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -386,6 +480,8 @@ public class DescribeGdnInstancesResponseBody extends TeaModel {
         public String description;
 
         /**
+         * <p>The GDN instance name.</p>
+         * 
          * <strong>example:</strong>
          * <p>gdn-***</p>
          */
@@ -396,16 +492,23 @@ public class DescribeGdnInstancesResponseBody extends TeaModel {
         public String gdnMode;
 
         /**
+         * <p>The creation time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2025-01-02T13:11:10.000+0000</p>
          */
         @NameInMap("GmtCreated")
         public String gmtCreated;
 
+        /**
+         * <p>The list of members.</p>
+         */
         @NameInMap("MemberList")
         public java.util.List<DescribeGdnInstancesResponseBodyDataGdnInstanceListMemberList> memberList;
 
         /**
+         * <p>The MySQL version supported by the instance.</p>
+         * 
          * <strong>example:</strong>
          * <p>5.7</p>
          */
@@ -422,6 +525,8 @@ public class DescribeGdnInstancesResponseBody extends TeaModel {
         public Boolean rplSyncDdl;
 
         /**
+         * <p>The status.</p>
+         * 
          * <strong>example:</strong>
          * <p>Creating</p>
          */
@@ -429,6 +534,8 @@ public class DescribeGdnInstancesResponseBody extends TeaModel {
         public String status;
 
         /**
+         * <p>The switchover log.</p>
+         * 
          * <strong>example:</strong>
          * <p>&quot;&quot;</p>
          */
@@ -531,10 +638,15 @@ public class DescribeGdnInstancesResponseBody extends TeaModel {
     }
 
     public static class DescribeGdnInstancesResponseBodyData extends TeaModel {
+        /**
+         * <p>The list of GDN instances.</p>
+         */
         @NameInMap("GdnInstanceList")
         public java.util.List<DescribeGdnInstancesResponseBodyDataGdnInstanceList> gdnInstanceList;
 
         /**
+         * <p>The page number.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -542,6 +654,8 @@ public class DescribeGdnInstancesResponseBody extends TeaModel {
         public String pageNumber;
 
         /**
+         * <p>The page size.</p>
+         * 
          * <strong>example:</strong>
          * <p>30</p>
          */
@@ -549,6 +663,8 @@ public class DescribeGdnInstancesResponseBody extends TeaModel {
         public String pageSize;
 
         /**
+         * <p>The total number of entries.</p>
+         * 
          * <strong>example:</strong>
          * <p>130</p>
          */

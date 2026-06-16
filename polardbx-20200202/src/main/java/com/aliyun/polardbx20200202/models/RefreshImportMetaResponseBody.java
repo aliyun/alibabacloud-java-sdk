@@ -4,10 +4,15 @@ package com.aliyun.polardbx20200202.models;
 import com.aliyun.tea.*;
 
 public class RefreshImportMetaResponseBody extends TeaModel {
+    /**
+     * <p>The monitoring data.</p>
+     */
     @NameInMap("Data")
     public RefreshImportMetaResponseBodyData data;
 
     /**
+     * <p>The result details of the import or export task. &gt; This parameter is empty unless an exception occurs.</p>
+     * 
      * <strong>example:</strong>
      * <hr>
      */
@@ -15,6 +20,8 @@ public class RefreshImportMetaResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>AE4F6C34-065F-45AA-B5DC-4B8D816F6305</p>
      */
@@ -22,6 +29,8 @@ public class RefreshImportMetaResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -67,6 +76,8 @@ public class RefreshImportMetaResponseBody extends TeaModel {
 
     public static class RefreshImportMetaResponseBodyData extends TeaModel {
         /**
+         * <p>The export task ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>etx-szr2rr6i*****</p>
          */

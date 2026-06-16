@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteGdnInstanceRequest extends TeaModel {
     /**
+     * <p>The name of the GDN instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,8 @@ public class DeleteGdnInstanceRequest extends TeaModel {
     public String gdnInstanceName;
 
     /**
+     * <p>The region ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
      */

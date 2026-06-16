@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeUserEncryptionKeyListRequest extends TeaModel {
     /**
+     * <p>The instance ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>pxc-hzjasd****</p>
      */
@@ -12,6 +14,8 @@ public class DescribeUserEncryptionKeyListRequest extends TeaModel {
     public String DBInstanceName;
 
     /**
+     * <p>The region ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
      */

@@ -4,6 +4,9 @@ package com.aliyun.polardbx20200202.models;
 import com.aliyun.tea.*;
 
 public class DescribeComponentPropetiesResponseBody extends TeaModel {
+    /**
+     * <p>The export parameters of the exception event.</p>
+     */
     @NameInMap("Properties")
     public java.util.List<DescribeComponentPropetiesResponseBodyProperties> properties;
 
@@ -38,10 +41,19 @@ public class DescribeComponentPropetiesResponseBody extends TeaModel {
     }
 
     public static class DescribeComponentPropetiesResponseBodyProperties extends TeaModel {
+        /**
+         * <p>The name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4核32G</p>
+         */
         @NameInMap("Name")
         public String name;
 
         /**
+         * <p>The display order of the commodity module property.</p>
+         * <p>The returned content varies depending on the commodity module.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -49,6 +61,8 @@ public class DescribeComponentPropetiesResponseBody extends TeaModel {
         public String orderIndex;
 
         /**
+         * <p>The commodity module.</p>
+         * 
          * <strong>example:</strong>
          * <p>dn_node_spec</p>
          */
@@ -56,6 +70,8 @@ public class DescribeComponentPropetiesResponseBody extends TeaModel {
         public String propertyCode;
 
         /**
+         * <p>The label value.</p>
+         * 
          * <strong>example:</strong>
          * <p>172.27.35.</p>
          */

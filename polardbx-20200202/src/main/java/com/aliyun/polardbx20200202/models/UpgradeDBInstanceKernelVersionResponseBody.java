@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpgradeDBInstanceKernelVersionResponseBody extends TeaModel {
     /**
+     * <p>The instance ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>pxc-hzjasd****</p>
      */
@@ -12,6 +14,8 @@ public class UpgradeDBInstanceKernelVersionResponseBody extends TeaModel {
     public String DBInstanceName;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>FEA5DC20-6D8A-5979-97AA-FC57546ADC20</p>
      */
@@ -19,6 +23,8 @@ public class UpgradeDBInstanceKernelVersionResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The target version number.</p>
+     * 
      * <strong>example:</strong>
      * <p>polarx-kernel_5.4.7-16001481_xcluster-20200910</p>
      */
@@ -26,6 +32,8 @@ public class UpgradeDBInstanceKernelVersionResponseBody extends TeaModel {
     public String targetMinorVersion;
 
     /**
+     * <p>The backend task ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>422922413</p>
      */

@@ -4,10 +4,15 @@ package com.aliyun.polardbx20200202.models;
 import com.aliyun.tea.*;
 
 public class DescribePolarxDataNodesResponseBody extends TeaModel {
+    /**
+     * <p>The list of node information.</p>
+     */
     @NameInMap("DBInstanceDataNodes")
     public java.util.List<DescribePolarxDataNodesResponseBodyDBInstanceDataNodes> DBInstanceDataNodes;
 
     /**
+     * <p>The page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -15,6 +20,8 @@ public class DescribePolarxDataNodesResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
@@ -22,6 +29,8 @@ public class DescribePolarxDataNodesResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>BD99340C-4A45-548B-****-27584B0BCFFF</p>
      */
@@ -29,6 +38,8 @@ public class DescribePolarxDataNodesResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total number of nodes.</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
@@ -81,10 +92,18 @@ public class DescribePolarxDataNodesResponseBody extends TeaModel {
     }
 
     public static class DescribePolarxDataNodesResponseBodyDBInstanceDataNodes extends TeaModel {
+        /**
+         * <p>The description of the node instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pxc-z****nfxsxy728 : PROD-OMS-Auto-生产库克隆实例</p>
+         */
         @NameInMap("DBInstanceDescription")
         public String DBInstanceDescription;
 
         /**
+         * <p>The instance ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>pxc-hzrlcjc****sz9</p>
          */
@@ -92,6 +111,8 @@ public class DescribePolarxDataNodesResponseBody extends TeaModel {
         public String DBInstanceId;
 
         /**
+         * <p>The instance ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>pxc-hzrp5m****04w4</p>
          */

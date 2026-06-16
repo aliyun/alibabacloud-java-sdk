@@ -4,10 +4,14 @@ package com.aliyun.polardbx20200202.models;
 import com.aliyun.tea.*;
 
 public class DescribeCdcInfoResponseBody extends TeaModel {
+    /**
+     * <p>The instance data.</p>
+     */
     @NameInMap("Data")
     public DescribeCdcInfoResponseBodyData data;
 
     /**
+     * <p>The HTTP status code of the request.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -26,6 +30,7 @@ public class DescribeCdcInfoResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -73,6 +78,8 @@ public class DescribeCdcInfoResponseBody extends TeaModel {
 
     public static class DescribeCdcInfoResponseBodyDataInstanceTopologyListPhysicalNodes extends TeaModel {
         /**
+         * <p>The zone in which the instance resides.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-hangzhou-h</p>
          */
@@ -80,6 +87,8 @@ public class DescribeCdcInfoResponseBody extends TeaModel {
         public String AZone;
 
         /**
+         * <p>The disk size. Unit: MB.</p>
+         * 
          * <strong>example:</strong>
          * <p>204800</p>
          */
@@ -87,6 +96,8 @@ public class DescribeCdcInfoResponseBody extends TeaModel {
         public Integer disk;
 
         /**
+         * <p>The instance specifications.</p>
+         * 
          * <strong>example:</strong>
          * <p>polarx.x4.large.2e.cdc</p>
          */
@@ -94,6 +105,8 @@ public class DescribeCdcInfoResponseBody extends TeaModel {
         public String nodeClass;
 
         /**
+         * <p>The node ID.</p>
+         * 
          * <strong>example:</strong>
          * <hr>
          */
@@ -101,6 +114,8 @@ public class DescribeCdcInfoResponseBody extends TeaModel {
         public String nodeId;
 
         /**
+         * <p>The name of the node.</p>
+         * 
          * <strong>example:</strong>
          * <p>pxc-c-***</p>
          */
@@ -108,6 +123,8 @@ public class DescribeCdcInfoResponseBody extends TeaModel {
         public String nodeName;
 
         /**
+         * <p>The instance status.</p>
+         * 
          * <strong>example:</strong>
          * <p>ACTIVATION</p>
          */
@@ -115,6 +132,8 @@ public class DescribeCdcInfoResponseBody extends TeaModel {
         public String status;
 
         /**
+         * <p>The instance version.</p>
+         * 
          * <strong>example:</strong>
          * <p>polarx-cdc-kernel-***</p>
          */
@@ -186,6 +205,8 @@ public class DescribeCdcInfoResponseBody extends TeaModel {
 
     public static class DescribeCdcInfoResponseBodyDataInstanceTopologyList extends TeaModel {
         /**
+         * <p>The cluster type.</p>
+         * 
          * <strong>example:</strong>
          * <p>BINLOG_X</p>
          */
@@ -193,6 +214,8 @@ public class DescribeCdcInfoResponseBody extends TeaModel {
         public String clusterType;
 
         /**
+         * <p>The remarks on the instance type.</p>
+         * 
          * <strong>example:</strong>
          * <hr>
          */
@@ -200,6 +223,8 @@ public class DescribeCdcInfoResponseBody extends TeaModel {
         public String comment;
 
         /**
+         * <p>The name of the multi-stream group.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -207,6 +232,8 @@ public class DescribeCdcInfoResponseBody extends TeaModel {
         public String groupName;
 
         /**
+         * <p>The split level.</p>
+         * 
          * <strong>example:</strong>
          * <p>RECORD</p>
          */
@@ -214,16 +241,23 @@ public class DescribeCdcInfoResponseBody extends TeaModel {
         public String hashLevel;
 
         /**
+         * <p>The name of the instance.</p>
+         * 
          * <strong>example:</strong>
          * <p>pxc-***</p>
          */
         @NameInMap("InstanceName")
         public String instanceName;
 
+        /**
+         * <p>The array of nodes.</p>
+         */
         @NameInMap("PhysicalNodes")
         public java.util.List<DescribeCdcInfoResponseBodyDataInstanceTopologyListPhysicalNodes> physicalNodes;
 
         /**
+         * <p>The number of splits.</p>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */
@@ -295,6 +329,8 @@ public class DescribeCdcInfoResponseBody extends TeaModel {
 
     public static class DescribeCdcInfoResponseBodyData extends TeaModel {
         /**
+         * <p>The number of days that binlogs are retained.</p>
+         * 
          * <strong>example:</strong>
          * <p>15</p>
          */
@@ -302,6 +338,7 @@ public class DescribeCdcInfoResponseBody extends TeaModel {
         public Integer binlogPersistTime;
 
         /**
+         * <p>The size of the binlog.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -311,6 +348,7 @@ public class DescribeCdcInfoResponseBody extends TeaModel {
         public Integer binlogSize;
 
         /**
+         * <p>The latest CDC version.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -320,6 +358,8 @@ public class DescribeCdcInfoResponseBody extends TeaModel {
         public String cdcNewVersion;
 
         /**
+         * <p>The checksum switch status.</p>
+         * 
          * <strong>example:</strong>
          * <p>ON</p>
          */
@@ -327,12 +367,17 @@ public class DescribeCdcInfoResponseBody extends TeaModel {
         public String checkSumSwitch;
 
         /**
+         * <p>Indicates whether bidirectional replication is supported.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
         @NameInMap("EnableCyclicReplication")
         public Boolean enableCyclicReplication;
 
+        /**
+         * <p>The list of instances.</p>
+         */
         @NameInMap("InstanceTopologyList")
         public java.util.List<DescribeCdcInfoResponseBodyDataInstanceTopologyList> instanceTopologyList;
 
@@ -347,6 +392,8 @@ public class DescribeCdcInfoResponseBody extends TeaModel {
         public Integer serverId;
 
         /**
+         * <p>Indicates whether multi-stream CDC is supported.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */

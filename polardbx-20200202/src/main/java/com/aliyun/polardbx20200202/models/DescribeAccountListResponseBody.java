@@ -4,10 +4,15 @@ package com.aliyun.polardbx20200202.models;
 import com.aliyun.tea.*;
 
 public class DescribeAccountListResponseBody extends TeaModel {
+    /**
+     * <p>The data struct.</p>
+     */
     @NameInMap("Data")
     public java.util.List<DescribeAccountListResponseBodyData> data;
 
     /**
+     * <p>The response message. &quot;success&quot; is returned if the request is successful. Otherwise, the corresponding error code is returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -15,6 +20,8 @@ public class DescribeAccountListResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>9B2F3840-5C98-475C-B269-2D5C3A31797C</p>
      */
@@ -22,6 +29,8 @@ public class DescribeAccountListResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request is successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -67,6 +76,8 @@ public class DescribeAccountListResponseBody extends TeaModel {
 
     public static class DescribeAccountListResponseBodyData extends TeaModel {
         /**
+         * <p>The description of the account.</p>
+         * 
          * <strong>example:</strong>
          * <p>testaccount desc</p>
          */
@@ -74,6 +85,8 @@ public class DescribeAccountListResponseBody extends TeaModel {
         public String accountDescription;
 
         /**
+         * <p>The name of the account.</p>
+         * 
          * <strong>example:</strong>
          * <p>testAccount</p>
          */
@@ -81,6 +94,8 @@ public class DescribeAccountListResponseBody extends TeaModel {
         public String accountName;
 
         /**
+         * <p>The permissions granted to the account.</p>
+         * 
          * <strong>example:</strong>
          * <p>ReadWrite</p>
          */
@@ -88,6 +103,12 @@ public class DescribeAccountListResponseBody extends TeaModel {
         public String accountPrivilege;
 
         /**
+         * <p>The type of the account.</p>
+         * <ul>
+         * <li>Before three-role mode is enabled: 0 indicates a standard account, and 1 indicates a privileged user account.</li>
+         * <li>After three-role mode is enabled: 0 indicates a standard account, 2 indicates a system administrator account, 3 indicates a security administrator account, and 4 indicates an audit administrator account.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -95,6 +116,8 @@ public class DescribeAccountListResponseBody extends TeaModel {
         public String accountType;
 
         /**
+         * <p>The name of the instance.</p>
+         * 
          * <strong>example:</strong>
          * <p>pxc-*********</p>
          */
@@ -102,6 +125,8 @@ public class DescribeAccountListResponseBody extends TeaModel {
         public String DBInstanceName;
 
         /**
+         * <p>The database to which the account is granted permissions.</p>
+         * 
          * <strong>example:</strong>
          * <p>testdb</p>
          */
@@ -109,6 +134,8 @@ public class DescribeAccountListResponseBody extends TeaModel {
         public String DBName;
 
         /**
+         * <p>The time when the account was created.</p>
+         * 
          * <strong>example:</strong>
          * <p>2012-06-08T15:00Z</p>
          */

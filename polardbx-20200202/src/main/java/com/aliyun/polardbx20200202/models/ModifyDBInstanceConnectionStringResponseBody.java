@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class ModifyDBInstanceConnectionStringResponseBody extends TeaModel {
     /**
+     * <p>The response code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("Code")
     public Long code;
 
+    /**
+     * <p>The new connection string information.</p>
+     */
     @NameInMap("Data")
     public ModifyDBInstanceConnectionStringResponseBodyData data;
 
     /**
+     * <p>The response message. This is typically an error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -22,6 +29,8 @@ public class ModifyDBInstanceConnectionStringResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID. It is a unique identifier.</p>
+     * 
      * <strong>example:</strong>
      * <p>c3cf535c-a585-11ea-8263-00163e04d3a7</p>
      */
@@ -67,6 +76,8 @@ public class ModifyDBInstanceConnectionStringResponseBody extends TeaModel {
 
     public static class ModifyDBInstanceConnectionStringResponseBodyData extends TeaModel {
         /**
+         * <p>The connection string.</p>
+         * 
          * <strong>example:</strong>
          * <p>test2.polarx.huhehaote.rds.aliyuncs.com</p>
          */
@@ -74,6 +85,8 @@ public class ModifyDBInstanceConnectionStringResponseBody extends TeaModel {
         public String connectionString;
 
         /**
+         * <p>The instance ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>pxc-unrf5ssig0ecg8</p>
          */
@@ -81,6 +94,8 @@ public class ModifyDBInstanceConnectionStringResponseBody extends TeaModel {
         public String DBInstanceName;
 
         /**
+         * <p>The network type of the connection string.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -88,6 +103,8 @@ public class ModifyDBInstanceConnectionStringResponseBody extends TeaModel {
         public String DBInstanceNetType;
 
         /**
+         * <p>The port number.</p>
+         * 
          * <strong>example:</strong>
          * <p>3300</p>
          */

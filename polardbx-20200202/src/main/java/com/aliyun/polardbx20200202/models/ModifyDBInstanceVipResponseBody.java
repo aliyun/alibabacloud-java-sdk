@@ -5,6 +5,11 @@ import com.aliyun.tea.*;
 
 public class ModifyDBInstanceVipResponseBody extends TeaModel {
     /**
+     * <p>The response message.</p>
+     * <blockquote>
+     * <p>This parameter is empty when the request succeeds. When the request fails, an exception message is returned, such as an error code.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <hr>
      */
@@ -12,6 +17,8 @@ public class ModifyDBInstanceVipResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>9B2F3840-5C98-475C-B269-2D5C3A31797C</p>
      */
@@ -19,6 +26,8 @@ public class ModifyDBInstanceVipResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

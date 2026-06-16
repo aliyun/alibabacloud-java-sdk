@@ -4,10 +4,15 @@ package com.aliyun.polardbx20200202.models;
 import com.aliyun.tea.*;
 
 public class DescribeMem0InfoResponseBody extends TeaModel {
+    /**
+     * <p>Returned Data</p>
+     */
     @NameInMap("Data")
     public DescribeMem0InfoResponseBodyData data;
 
     /**
+     * <p>request ID</p>
+     * 
      * <strong>example:</strong>
      * <p>C457B28E-9CAB-4B77-B5C6-5D71B7870B6E</p>
      */
@@ -37,6 +42,8 @@ public class DescribeMem0InfoResponseBody extends TeaModel {
 
     public static class DescribeMem0InfoResponseBodyDataInstanceConnAddrs extends TeaModel {
         /**
+         * <p>connection address</p>
+         * 
          * <strong>example:</strong>
          * <p>pxc-spsil01pww4hfz.polarx.singapore.rds.aliyuncs.com</p>
          */
@@ -44,6 +51,8 @@ public class DescribeMem0InfoResponseBody extends TeaModel {
         public String connectionString;
 
         /**
+         * <p>port</p>
+         * 
          * <strong>example:</strong>
          * <p>3306</p>
          */
@@ -51,6 +60,8 @@ public class DescribeMem0InfoResponseBody extends TeaModel {
         public Integer port;
 
         /**
+         * <p>Type of connection address</p>
+         * 
          * <strong>example:</strong>
          * <p>VPC</p>
          */
@@ -67,6 +78,8 @@ public class DescribeMem0InfoResponseBody extends TeaModel {
         public String VPCId;
 
         /**
+         * <p>vSwitch ID</p>
+         * 
          * <strong>example:</strong>
          * <p>vsw-t4ny14pr37spmjsbv5dc2</p>
          */
@@ -74,6 +87,8 @@ public class DescribeMem0InfoResponseBody extends TeaModel {
         public String vSwitchId;
 
         /**
+         * <p>VPC-connected instance ID</p>
+         * 
          * <strong>example:</strong>
          * <p>pxc-spsil01pww4hfzjayd-cn-20251013180429</p>
          */
@@ -137,16 +152,23 @@ public class DescribeMem0InfoResponseBody extends TeaModel {
 
     public static class DescribeMem0InfoResponseBodyDataInstance extends TeaModel {
         /**
+         * <p>instance type</p>
+         * 
          * <strong>example:</strong>
          * <p>mysql.x2.large.2c</p>
          */
         @NameInMap("ClassCode")
         public String classCode;
 
+        /**
+         * <p>List of connection addresses</p>
+         */
         @NameInMap("ConnAddrs")
         public java.util.List<DescribeMem0InfoResponseBodyDataInstanceConnAddrs> connAddrs;
 
         /**
+         * <p>Creation Time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2026-02-17T02:00:20Z</p>
          */
@@ -154,6 +176,8 @@ public class DescribeMem0InfoResponseBody extends TeaModel {
         public String createTime;
 
         /**
+         * <p>instance ID</p>
+         * 
          * <strong>example:</strong>
          * <p>pxc-spsil01pww4hfz-mem</p>
          */
@@ -161,6 +185,8 @@ public class DescribeMem0InfoResponseBody extends TeaModel {
         public String instanceId;
 
         /**
+         * <p>Number of edge zones</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -168,6 +194,8 @@ public class DescribeMem0InfoResponseBody extends TeaModel {
         public Integer nodeCount;
 
         /**
+         * <p>Region ID</p>
+         * 
          * <strong>example:</strong>
          * <p>ap-southeast-1</p>
          */
@@ -175,6 +203,8 @@ public class DescribeMem0InfoResponseBody extends TeaModel {
         public String regionId;
 
         /**
+         * <p>instance status</p>
+         * 
          * <strong>example:</strong>
          * <p>Running</p>
          */
@@ -182,6 +212,8 @@ public class DescribeMem0InfoResponseBody extends TeaModel {
         public String status;
 
         /**
+         * <p>storage class</p>
+         * 
          * <strong>example:</strong>
          * <p>local_ssd</p>
          */
@@ -198,6 +230,8 @@ public class DescribeMem0InfoResponseBody extends TeaModel {
         public String VPCId;
 
         /**
+         * <p>vSwitch ID</p>
+         * 
          * <strong>example:</strong>
          * <p>vsw-t4ny14pr37spmjsbv5dc2</p>
          */
@@ -205,6 +239,8 @@ public class DescribeMem0InfoResponseBody extends TeaModel {
         public String vSwitchId;
 
         /**
+         * <p>zone ID</p>
+         * 
          * <strong>example:</strong>
          * <p>ap-southeast-1a</p>
          */
@@ -307,6 +343,9 @@ public class DescribeMem0InfoResponseBody extends TeaModel {
     }
 
     public static class DescribeMem0InfoResponseBodyData extends TeaModel {
+        /**
+         * <p>Instance information</p>
+         */
         @NameInMap("Instance")
         public DescribeMem0InfoResponseBodyDataInstance instance;
 

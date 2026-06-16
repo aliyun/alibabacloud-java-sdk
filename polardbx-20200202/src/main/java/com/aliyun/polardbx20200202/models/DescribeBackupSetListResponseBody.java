@@ -4,10 +4,15 @@ package com.aliyun.polardbx20200202.models;
 import com.aliyun.tea.*;
 
 public class DescribeBackupSetListResponseBody extends TeaModel {
+    /**
+     * <p>The data struct.</p>
+     */
     @NameInMap("Data")
     public java.util.List<DescribeBackupSetListResponseBodyData> data;
 
     /**
+     * <p>The response message. &quot;success&quot; is returned if the request is successful. Otherwise, an error code is returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -15,6 +20,8 @@ public class DescribeBackupSetListResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>1A6D328C-84B8-40DC-BF49-6C73984D7494</p>
      */
@@ -22,6 +29,8 @@ public class DescribeBackupSetListResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request is successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -67,6 +76,12 @@ public class DescribeBackupSetListResponseBody extends TeaModel {
 
     public static class DescribeBackupSetListResponseBodyData extends TeaModel {
         /**
+         * <p>The backup mode. Valid values:</p>
+         * <ul>
+         * <li><strong>0</strong>: automatic backup.</li>
+         * <li><strong>1</strong>: manual backup.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -74,6 +89,8 @@ public class DescribeBackupSetListResponseBody extends TeaModel {
         public Integer backupModel;
 
         /**
+         * <p>The ID of the backup set.</p>
+         * 
          * <strong>example:</strong>
          * <p>111</p>
          */
@@ -81,6 +98,8 @@ public class DescribeBackupSetListResponseBody extends TeaModel {
         public String backupSetId;
 
         /**
+         * <p>The size of the backup set. Unit: bytes.</p>
+         * 
          * <strong>example:</strong>
          * <p>88803195</p>
          */
@@ -88,6 +107,12 @@ public class DescribeBackupSetListResponseBody extends TeaModel {
         public Long backupSetSize;
 
         /**
+         * <p>The backup type. Valid values:</p>
+         * <ul>
+         * <li><strong>0</strong>: fast backup.</li>
+         * <li><strong>1</strong>: consistent backup.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -95,6 +120,8 @@ public class DescribeBackupSetListResponseBody extends TeaModel {
         public Integer backupType;
 
         /**
+         * <p>The time when the backup started.</p>
+         * 
          * <strong>example:</strong>
          * <p>1635706960956</p>
          */
@@ -102,6 +129,8 @@ public class DescribeBackupSetListResponseBody extends TeaModel {
         public Long beginTime;
 
         /**
+         * <p>The time when the backup ended.</p>
+         * 
          * <strong>example:</strong>
          * <p>1635706960956</p>
          */
@@ -109,6 +138,13 @@ public class DescribeBackupSetListResponseBody extends TeaModel {
         public Long endTime;
 
         /**
+         * <p>The status of the backup set. Valid values:</p>
+         * <ul>
+         * <li><strong>0</strong>: Being backed up.</li>
+         * <li><strong>1</strong>: Backup succeeded.</li>
+         * <li><strong>2</strong>: Backup failed.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
