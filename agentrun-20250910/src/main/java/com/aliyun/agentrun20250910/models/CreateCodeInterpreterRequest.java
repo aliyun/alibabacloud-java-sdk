@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateCodeInterpreterRequest extends TeaModel {
     /**
+     * <p>Request body for creating a code interpreter.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("body")

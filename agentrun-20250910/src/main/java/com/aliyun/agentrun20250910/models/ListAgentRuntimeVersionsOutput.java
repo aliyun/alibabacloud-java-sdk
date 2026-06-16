@@ -4,15 +4,27 @@ package com.aliyun.agentrun20250910.models;
 import com.aliyun.tea.*;
 
 public class ListAgentRuntimeVersionsOutput extends TeaModel {
+    /**
+     * <p>List of projects</p>
+     */
     @NameInMap("items")
     public java.util.List<AgentRuntimeVersion> items;
 
+    /**
+     * <p>Page number</p>
+     */
     @NameInMap("pageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>Page size</p>
+     */
     @NameInMap("pageSize")
     public Integer pageSize;
 
+    /**
+     * <p>Total count</p>
+     */
     @NameInMap("total")
     public Integer total;
 

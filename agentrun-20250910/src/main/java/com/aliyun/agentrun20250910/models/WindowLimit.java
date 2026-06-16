@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class WindowLimit extends TeaModel {
     /**
-     * <p>限流时间窗口的持续时间，单位为秒</p>
+     * <p>The duration of the time window in seconds.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class WindowLimit extends TeaModel {
     public Long durationSecs;
 
     /**
-     * <p>在指定时间窗口内允许的最大请求数量</p>
+     * <p>The maximum requests allowed within the time window.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

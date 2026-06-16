@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateFlowEndpointRequest extends TeaModel {
     /**
-     * <p>创建工作流端点所需的完整配置信息</p>
+     * <p>Request parameters for creating a flow endpoint</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("body")

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListFlowEndpointsRequest extends TeaModel {
     /**
-     * <p>当前页码，从1开始计数</p>
+     * <p>The page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -14,7 +14,7 @@ public class ListFlowEndpointsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>每页返回的记录数量</p>
+     * <p>The number of entries per page.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>

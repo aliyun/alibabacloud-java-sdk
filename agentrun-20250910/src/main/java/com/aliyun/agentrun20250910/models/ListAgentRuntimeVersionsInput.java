@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListAgentRuntimeVersionsInput extends TeaModel {
     /**
-     * <p>页码</p>
+     * <p>The page number to retrieve.</p>
      */
     @NameInMap("pageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>每页记录数</p>
+     * <p>The maximum number of results to return per page.</p>
      */
     @NameInMap("pageSize")
     public Integer pageSize;

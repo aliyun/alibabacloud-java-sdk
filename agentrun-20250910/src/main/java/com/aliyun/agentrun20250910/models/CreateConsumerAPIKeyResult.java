@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateConsumerAPIKeyResult extends TeaModel {
     /**
-     * <p>SUCCESS 为成功，失败情况返回对应错误类型</p>
+     * <p><code>SUCCESS</code> for a successful operation; otherwise, the corresponding error type.</p>
      * 
      * <strong>example:</strong>
      * <p>SUCCESS</p>
@@ -14,7 +14,7 @@ public class CreateConsumerAPIKeyResult extends TeaModel {
     public String code;
 
     /**
-     * <p>创建的消费者API密钥详细信息（包含完整密钥）</p>
+     * <p>Details of the new consumer API key, including the complete key.</p>
      * 
      * <strong>example:</strong>
      * <p>{}</p>
@@ -23,7 +23,7 @@ public class CreateConsumerAPIKeyResult extends TeaModel {
     public CreateConsumerAPIKeyOutput data;
 
     /**
-     * <p>唯一的请求标识符，用于问题追踪</p>
+     * <p>A unique request id for issue tracking.</p>
      * 
      * <strong>example:</strong>
      * <p>F8A0F5F3-0C3E-4C82-9D4F-5E4B6A7C8D9E</p>

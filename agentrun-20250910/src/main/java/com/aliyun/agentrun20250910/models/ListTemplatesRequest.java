@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListTemplatesRequest extends TeaModel {
     /**
-     * <p>当前页码，从1开始计数</p>
+     * <p>The number of the page to return.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -14,7 +14,7 @@ public class ListTemplatesRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>每页返回的记录数量</p>
+     * <p>The number of entries to return on each page.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -23,6 +23,8 @@ public class ListTemplatesRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The status of the template. Use this parameter to filter templates.</p>
+     * 
      * <strong>example:</strong>
      * <p>READY</p>
      */
@@ -30,6 +32,8 @@ public class ListTemplatesRequest extends TeaModel {
     public String status;
 
     /**
+     * <p>The name of the template. Use this parameter to filter templates.</p>
+     * 
      * <strong>example:</strong>
      * <p>temp-abc</p>
      */
@@ -37,7 +41,7 @@ public class ListTemplatesRequest extends TeaModel {
     public String templateName;
 
     /**
-     * <p>按模板类型过滤</p>
+     * <p>The type of the template. Use this parameter to filter templates.</p>
      * 
      * <strong>example:</strong>
      * <p>Browser</p>
@@ -46,12 +50,17 @@ public class ListTemplatesRequest extends TeaModel {
     public String templateType;
 
     /**
+     * <p>The ID of the workspace to which the template belongs.</p>
+     * 
      * <strong>example:</strong>
      * <p>aaa</p>
      */
     @NameInMap("workspaceId")
     public String workspaceId;
 
+    /**
+     * <p>The IDs of the workspaces. You can use this parameter to query templates from multiple workspaces.</p>
+     */
     @NameInMap("workspaceIds")
     public String workspaceIds;
 

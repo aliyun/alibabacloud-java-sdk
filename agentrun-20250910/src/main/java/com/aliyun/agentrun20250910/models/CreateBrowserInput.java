@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateBrowserInput extends TeaModel {
     /**
+     * <p>The name of the browser.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,7 +15,7 @@ public class CreateBrowserInput extends TeaModel {
     public String browserName;
 
     /**
-     * <p>CPU资源配置（单位：核）</p>
+     * <p>The CPU cores to allocate to the browser instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -24,6 +25,8 @@ public class CreateBrowserInput extends TeaModel {
     public Float cpu;
 
     /**
+     * <p>The credential ID used for authentication.</p>
+     * 
      * <strong>example:</strong>
      * <p>cred-1234567890abcdef</p>
      */
@@ -31,6 +34,8 @@ public class CreateBrowserInput extends TeaModel {
     public String credentialId;
 
     /**
+     * <p>A description of the browser instance.</p>
+     * 
      * <strong>example:</strong>
      * <p>Web automation browser for testing</p>
      */
@@ -38,6 +43,8 @@ public class CreateBrowserInput extends TeaModel {
     public String description;
 
     /**
+     * <p>The ARN of the execution role.</p>
+     * 
      * <strong>example:</strong>
      * <p>acs:ram::1760720386195983:role/BrowserExecutionRole</p>
      */
@@ -45,7 +52,7 @@ public class CreateBrowserInput extends TeaModel {
     public String executionRoleArn;
 
     /**
-     * <p>内存资源配置（单位：MB）</p>
+     * <p>The memory (in MB) to allocate to the browser instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -55,13 +62,14 @@ public class CreateBrowserInput extends TeaModel {
     public Integer memory;
 
     /**
+     * <p>The network configuration for the browser instance.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("networkConfiguration")
     public NetworkConfiguration networkConfiguration;
 
     /**
-     * <p>会话的空闲超时时间，单位为秒。实例没有会话请求后处于空闲状态，空闲态为闲置计费模式，超过此超时时间后会话自动过期，不可继续使用</p>
+     * <p>The idle time in seconds before a session expires. When a session is idle, the instance enters an idle billing mode.</p>
      * 
      * <strong>example:</strong>
      * <p>3600</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class RoutingConfiguration extends TeaModel {
     /**
-     * <p>不同版本的流量权重配置</p>
+     * <p>Traffic weight configuration for different versions</p>
      */
     @NameInMap("versionWeights")
     public java.util.List<VersionWeight> versionWeights;

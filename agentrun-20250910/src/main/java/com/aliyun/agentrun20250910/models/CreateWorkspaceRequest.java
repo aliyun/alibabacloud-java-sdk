@@ -4,6 +4,9 @@ package com.aliyun.agentrun20250910.models;
 import com.aliyun.tea.*;
 
 public class CreateWorkspaceRequest extends TeaModel {
+    /**
+     * <p>The request body.</p>
+     */
     @NameInMap("body")
     public CreateWorkspaceInput body;
 

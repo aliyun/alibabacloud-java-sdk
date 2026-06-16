@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class BrowserResult extends TeaModel {
     /**
-     * <p>SUCCESS 为成功，失败情况返回对应错误类型，比如 ERR_BAD_REQUEST ERR_VALIDATION_FAILED ERR_INTERNAL_SERVER_ERROR</p>
+     * <p>The operation status code. <code>SUCCESS</code> indicates success. A failed operation returns an error code, such as <code>ERR_BAD_REQUEST</code>, <code>ERR_VALIDATION_FAILED</code>, or <code>ERR_INTERNAL_SERVER_ERROR</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>SUCCESS</p>
@@ -14,7 +14,7 @@ public class BrowserResult extends TeaModel {
     public String code;
 
     /**
-     * <p>浏览器的详细信息</p>
+     * <p>The returned browser object.</p>
      * 
      * <strong>example:</strong>
      * <p>{}</p>
@@ -23,7 +23,7 @@ public class BrowserResult extends TeaModel {
     public Browser data;
 
     /**
-     * <p>唯一的请求标识符，用于问题追踪</p>
+     * <p>The unique request identifier. Use it for troubleshooting.</p>
      * 
      * <strong>example:</strong>
      * <p>F8A0F5F3-0C3E-4C82-9D4F-5E4B6A7C8D9E</p>

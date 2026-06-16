@@ -136,7 +136,7 @@ public class ConvertFlowDSLData extends TeaModel {
          * <p>解决建议</p>
          * 
          * <strong>example:</strong>
-         * <p>Install Toolset &quot;google&quot; before using this flow</p>
+         * <p>Install Toolset \&quot;google\&quot; before using this flow</p>
          */
         @NameInMap("suggestion")
         public String suggestion;

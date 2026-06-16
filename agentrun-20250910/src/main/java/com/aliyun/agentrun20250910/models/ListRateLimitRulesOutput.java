@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListRateLimitRulesOutput extends TeaModel {
     /**
-     * <p>限流规则列表</p>
+     * <p>The list of rate-limiting rules.</p>
      */
     @NameInMap("items")
     public java.util.List<RateLimitRule> items;
 
     /**
-     * <p>当前页码</p>
+     * <p>The current page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -20,7 +20,7 @@ public class ListRateLimitRulesOutput extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>每页记录数</p>
+     * <p>The number of entries per page.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -29,7 +29,7 @@ public class ListRateLimitRulesOutput extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>符合条件的限流规则总数</p>
+     * <p>The total number of matching rate-limiting rules.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>

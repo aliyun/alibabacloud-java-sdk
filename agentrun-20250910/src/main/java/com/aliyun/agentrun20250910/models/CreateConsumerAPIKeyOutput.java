@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateConsumerAPIKeyOutput extends TeaModel {
     /**
-     * <p>密钥是否启用</p>
+     * <p>Indicates whether the consumer API key is active.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -14,7 +14,7 @@ public class CreateConsumerAPIKeyOutput extends TeaModel {
     public Boolean active;
 
     /**
-     * <p>完整的API密钥明文，仅在创建时返回一次，请妥善保存</p>
+     * <p>The complete plaintext API key. This key is returned only upon creation and cannot be retrieved again. Store it securely.</p>
      * 
      * <strong>example:</strong>
      * <p>sk-xxxxxxxxxxxxxxxxxxxx</p>
@@ -23,7 +23,7 @@ public class CreateConsumerAPIKeyOutput extends TeaModel {
     public String apiKey;
 
     /**
-     * <p>消费者API密钥的唯一标识符</p>
+     * <p>The unique identifier of the consumer API key.</p>
      * 
      * <strong>example:</strong>
      * <p>12345678-1234-1234-1234-123456789abc</p>
@@ -32,7 +32,7 @@ public class CreateConsumerAPIKeyOutput extends TeaModel {
     public String consumerApiKeyId;
 
     /**
-     * <p>创建时间，采用ISO 8601格式</p>
+     * <p>The creation time, in ISO 8601 format.</p>
      * 
      * <strong>example:</strong>
      * <p>2025-01-10T10:30:00Z</p>
@@ -41,7 +41,7 @@ public class CreateConsumerAPIKeyOutput extends TeaModel {
     public String createdAt;
 
     /**
-     * <p>消费者API密钥的描述信息</p>
+     * <p>A description of the consumer API key.</p>
      * 
      * <strong>example:</strong>
      * <p>用于生产环境的API密钥</p>
@@ -50,7 +50,7 @@ public class CreateConsumerAPIKeyOutput extends TeaModel {
     public String description;
 
     /**
-     * <p>更新时间，采用ISO 8601格式</p>
+     * <p>The last update time, in ISO 8601 format.</p>
      * 
      * <strong>example:</strong>
      * <p>2025-01-10T10:30:00Z</p>
@@ -59,7 +59,7 @@ public class CreateConsumerAPIKeyOutput extends TeaModel {
     public String lastUpdatedAt;
 
     /**
-     * <p>API密钥的掩码展示形式</p>
+     * <p>A masked version of the API key for display purposes.</p>
      * 
      * <strong>example:</strong>
      * <p>sk-****1234</p>
@@ -68,7 +68,7 @@ public class CreateConsumerAPIKeyOutput extends TeaModel {
     public String maskedKey;
 
     /**
-     * <p>关联的模型连接标识符</p>
+     * <p>The associated model connection identifier.</p>
      * 
      * <strong>example:</strong>
      * <p>mc-1234567890abcdef</p>

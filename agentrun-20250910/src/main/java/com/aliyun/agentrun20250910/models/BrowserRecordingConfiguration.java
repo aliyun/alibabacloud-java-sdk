@@ -4,9 +4,15 @@ package com.aliyun.agentrun20250910.models;
 import com.aliyun.tea.*;
 
 public class BrowserRecordingConfiguration extends TeaModel {
+    /**
+     * <p>Is recording enabled</p>
+     */
     @NameInMap("enabled")
     public Boolean enabled;
 
+    /**
+     * <p>OSS storage location</p>
+     */
     @NameInMap("ossLocation")
     public BrowserOssLocation ossLocation;
 

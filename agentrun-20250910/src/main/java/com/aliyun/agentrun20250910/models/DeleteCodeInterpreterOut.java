@@ -4,12 +4,21 @@ package com.aliyun.agentrun20250910.models;
 import com.aliyun.tea.*;
 
 public class DeleteCodeInterpreterOut extends TeaModel {
+    /**
+     * <p>ID of the code interpreter.</p>
+     */
     @NameInMap("codeInterpreterId")
     public String codeInterpreterId;
 
+    /**
+     * <p>Name of the code interpreter.</p>
+     */
     @NameInMap("codeInterpreterName")
     public String codeInterpreterName;
 
+    /**
+     * <p>Status of the code interpreter.</p>
+     */
     @NameInMap("status")
     public String status;
 

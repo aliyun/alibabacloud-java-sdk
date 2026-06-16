@@ -4,27 +4,41 @@ package com.aliyun.agentrun20250910.models;
 import com.aliyun.tea.*;
 
 public class CreateSandboxInput extends TeaModel {
+    /**
+     * <p>The NAS configuration.</p>
+     */
     @NameInMap("nasConfig")
     public NASConfig nasConfig;
 
+    /**
+     * <p>The OSS mount configuration.</p>
+     */
     @NameInMap("ossMountConfig")
     public OSSMountConfig ossMountConfig;
 
+    /**
+     * <p>The PolarFS configuration.</p>
+     */
     @NameInMap("polarFsConfig")
     public PolarFsConfig polarFsConfig;
 
     /**
+     * <p>The unique identifier of the sandbox instance.</p>
+     * 
      * <strong>example:</strong>
      * <p>01KE8DAJ35JC8SKP9CNFRZ8CW7</p>
      */
     @NameInMap("sandboxId")
     public String sandboxId;
 
+    /**
+     * <p>The idle timeout for the sandbox, in seconds.</p>
+     */
     @NameInMap("sandboxIdleTimeoutInSeconds")
     public Integer sandboxIdleTimeoutInSeconds;
 
     /**
-     * <p>沙箱空闲超时时间（秒）</p>
+     * <p>The idle timeout for the sandbox, in seconds.</p>
      * 
      * <strong>example:</strong>
      * <p>1800</p>
@@ -34,7 +48,7 @@ public class CreateSandboxInput extends TeaModel {
     public Integer sandboxIdleTimeoutSeconds;
 
     /**
-     * <p>模板名称（系统内部通过 templateName 查询 template_id）</p>
+     * <p>The template name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

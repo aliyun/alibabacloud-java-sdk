@@ -4,15 +4,27 @@ package com.aliyun.agentrun20250910.models;
 import com.aliyun.tea.*;
 
 public class ListBrowsersOutput extends TeaModel {
+    /**
+     * <p>Browser list</p>
+     */
     @NameInMap("items")
     public java.util.List<Browser> items;
 
+    /**
+     * <p>Page number</p>
+     */
     @NameInMap("pageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>Page size</p>
+     */
     @NameInMap("pageSize")
     public Integer pageSize;
 
+    /**
+     * <p>Total count</p>
+     */
     @NameInMap("total")
     public Long total;
 

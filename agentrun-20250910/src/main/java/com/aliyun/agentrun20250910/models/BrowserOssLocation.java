@@ -4,9 +4,15 @@ package com.aliyun.agentrun20250910.models;
 import com.aliyun.tea.*;
 
 public class BrowserOssLocation extends TeaModel {
+    /**
+     * <p>The name of the OSS bucket.</p>
+     */
     @NameInMap("bucket")
     public String bucket;
 
+    /**
+     * <p>The storage prefix within the bucket.</p>
+     */
     @NameInMap("prefix")
     public String prefix;
 

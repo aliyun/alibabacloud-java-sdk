@@ -5,25 +5,25 @@ import com.aliyun.tea.*;
 
 public class ListAgentRuntimeEndpointsInput extends TeaModel {
     /**
-     * <p>按端点名称过滤</p>
+     * <p>Filter by endpoint name</p>
      */
     @NameInMap("endpointName")
     public String endpointName;
 
     /**
-     * <p>页码</p>
+     * <p>Page number</p>
      */
     @NameInMap("pageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>每页记录数</p>
+     * <p>Number of records per page</p>
      */
     @NameInMap("pageSize")
     public Integer pageSize;
 
     /**
-     * <p>按状态过滤</p>
+     * <p>Filter by status</p>
      */
     @NameInMap("statuses")
     public java.util.List<String> statuses;

@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class UpdateModelConnectionInput extends TeaModel {
     /**
-     * <p>更新绑定的消费者API密钥列表</p>
+     * <p>A list of consumer API keys to associate with the model connection.</p>
      */
     @NameInMap("consumerApiKeys")
     public java.util.List<UpdateModelConnectionInputConsumerApiKeys> consumerApiKeys;
 
     /**
-     * <p>更新后的描述信息</p>
+     * <p>A new description for the model connection.</p>
      * 
      * <strong>example:</strong>
      * <p>Updated connection description</p>
@@ -20,13 +20,13 @@ public class UpdateModelConnectionInput extends TeaModel {
     public String description;
 
     /**
-     * <p>更新后的模型元数据配置列表</p>
+     * <p>A new list of model metadata configurations.</p>
      */
     @NameInMap("modelInfoConfigs")
     public java.util.List<ModelInfoConfig> modelInfoConfigs;
 
     /**
-     * <p>更新后的模型提供商配置信息</p>
+     * <p>A new configuration for the model provider.</p>
      * 
      * <strong>example:</strong>
      * <p>{}</p>

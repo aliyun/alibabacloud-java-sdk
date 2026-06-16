@@ -4,6 +4,9 @@ package com.aliyun.agentrun20250910.models;
 import com.aliyun.tea.*;
 
 public class UpdateCustomDomainRequest extends TeaModel {
+    /**
+     * <p>The updated configuration for the custom domain.</p>
+     */
     @NameInMap("body")
     public UpdateCustomDomainInput body;
 

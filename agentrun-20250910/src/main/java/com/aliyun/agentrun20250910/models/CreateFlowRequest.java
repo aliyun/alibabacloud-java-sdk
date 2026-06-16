@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateFlowRequest extends TeaModel {
     /**
-     * <p>创建工作流所需的完整配置信息，包括工作流名称、定义、执行模式等</p>
+     * <p>Complete configuration information required to create a workflow, including the workflow name, definition, and execution role.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("body")

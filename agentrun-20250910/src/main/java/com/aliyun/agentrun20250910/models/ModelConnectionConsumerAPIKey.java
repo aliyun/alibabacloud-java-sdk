@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModelConnectionConsumerAPIKey extends TeaModel {
     /**
-     * <p>消费者API密钥记录的唯一标识</p>
+     * <p>The unique identifier for the consumer API key.</p>
      * 
      * <strong>example:</strong>
      * <p>12345678-1234-1234-1234-123456789abc</p>
@@ -13,6 +13,9 @@ public class ModelConnectionConsumerAPIKey extends TeaModel {
     @NameInMap("apiKeyId")
     public String apiKeyId;
 
+    /**
+     * <p>The value of the consumer API key.</p>
+     */
     @NameInMap("value")
     public String value;
 

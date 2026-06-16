@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CodeInterpreter extends TeaModel {
     /**
-     * <p>代码解释器的唯一标识符</p>
+     * <p>The unique identifier for the CodeInterpreter.</p>
      * 
      * <strong>example:</strong>
      * <p>ci-1234567890abcdef</p>
@@ -14,7 +14,7 @@ public class CodeInterpreter extends TeaModel {
     public String codeInterpreterId;
 
     /**
-     * <p>代码解释器的名称，用于标识和区分不同的代码解释器实例</p>
+     * <p>A user-defined name for the CodeInterpreter instance.</p>
      * 
      * <strong>example:</strong>
      * <p>my-code-interpreter</p>
@@ -23,6 +23,8 @@ public class CodeInterpreter extends TeaModel {
     public String codeInterpreterName;
 
     /**
+     * <p>The number of CPU cores allocated to the instance.</p>
+     * 
      * <strong>example:</strong>
      * <p>2.0</p>
      */
@@ -30,7 +32,7 @@ public class CodeInterpreter extends TeaModel {
     public Float cpu;
 
     /**
-     * <p>代码解释器的创建时间，采用ISO 8601格式</p>
+     * <p>The creation timestamp for the CodeInterpreter, in ISO 8601 format.</p>
      * 
      * <strong>example:</strong>
      * <p>2025-01-10T10:30:00Z</p>
@@ -39,7 +41,7 @@ public class CodeInterpreter extends TeaModel {
     public String createdAt;
 
     /**
-     * <p>代码解释器的描述信息，说明该解释器的用途和功能</p>
+     * <p>The description of the CodeInterpreter.</p>
      * 
      * <strong>example:</strong>
      * <p>Python code interpreter for data analysis</p>
@@ -48,7 +50,7 @@ public class CodeInterpreter extends TeaModel {
     public String description;
 
     /**
-     * <p>此代码解释器的执行角色</p>
+     * <p>The ARN of the execution role for this CodeInterpreter.</p>
      * 
      * <strong>example:</strong>
      * <p>acs:ram::1760720386195983:role/CodeInterpreterExecutionRole</p>
@@ -57,7 +59,7 @@ public class CodeInterpreter extends TeaModel {
     public String executionRoleArn;
 
     /**
-     * <p>代码解释器的最后更新时间，采用ISO 8601格式</p>
+     * <p>The last update timestamp for the CodeInterpreter, in ISO 8601 format.</p>
      * 
      * <strong>example:</strong>
      * <p>2025-01-10T11:45:00Z</p>
@@ -66,7 +68,7 @@ public class CodeInterpreter extends TeaModel {
     public String lastUpdatedAt;
 
     /**
-     * <p>内存资源配置（单位：MB）</p>
+     * <p>The memory allocated to the instance, in MB.</p>
      * 
      * <strong>example:</strong>
      * <p>2048</p>
@@ -75,13 +77,13 @@ public class CodeInterpreter extends TeaModel {
     public Integer memory;
 
     /**
-     * <p>代码解释器的网络配置信息</p>
+     * <p>The network configuration for the CodeInterpreter.</p>
      */
     @NameInMap("networkConfiguration")
     public NetworkConfiguration networkConfiguration;
 
     /**
-     * <p>代码解释器的当前状态，如READY（就绪）、TERMINATED（已终止）等</p>
+     * <p>The current status of the CodeInterpreter, such as READY or TERMINATED.</p>
      * 
      * <strong>example:</strong>
      * <p>READY</p>
@@ -90,7 +92,7 @@ public class CodeInterpreter extends TeaModel {
     public String status;
 
     /**
-     * <p>当前状态的原因说明（如适用）</p>
+     * <p>The reason for the current status, if applicable.</p>
      * 
      * <strong>example:</strong>
      * <p>Code interpreter is ready for use</p>
@@ -99,6 +101,8 @@ public class CodeInterpreter extends TeaModel {
     public String statusReason;
 
     /**
+     * <p>The unique identifier for the tenant.</p>
+     * 
      * <strong>example:</strong>
      * <p>tenant-1234567890abcdef</p>
      */

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModelConnectionProviderSettings extends TeaModel {
     /**
-     * <p>模型提供商的默认API基础地址</p>
+     * <p>The default API base URL for the model provider.</p>
      * 
      * <strong>example:</strong>
      * <p><a href="https://api.openai.com/v1">https://api.openai.com/v1</a></p>
@@ -14,7 +14,7 @@ public class ModelConnectionProviderSettings extends TeaModel {
     public String baseUrl;
 
     /**
-     * <p>该连接支持的模型名称列表</p>
+     * <p>The list of model names supported by this connection.</p>
      */
     @NameInMap("modelNames")
     public java.util.List<String> modelNames;

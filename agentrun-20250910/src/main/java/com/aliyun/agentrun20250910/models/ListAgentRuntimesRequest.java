@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListAgentRuntimesRequest extends TeaModel {
     /**
-     * <p>根据智能体运行时名称进行模糊匹配过滤</p>
+     * <p>Filters the results by agent runtime name.</p>
      * 
      * <strong>example:</strong>
      * <p>my-runtime</p>
@@ -14,7 +14,7 @@ public class ListAgentRuntimesRequest extends TeaModel {
     public String agentRuntimeName;
 
     /**
-     * <p>用于服务发现的资源组标识符</p>
+     * <p>The service discovery resource group ID.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-123456</p>
@@ -24,7 +24,7 @@ public class ListAgentRuntimesRequest extends TeaModel {
     public String discoveryResourceGroupId;
 
     /**
-     * <p>当前页码，从1开始计数</p>
+     * <p>The page number to return.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -33,7 +33,7 @@ public class ListAgentRuntimesRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>每页返回的记录数量</p>
+     * <p>The number of entries to return per page.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -41,12 +41,15 @@ public class ListAgentRuntimesRequest extends TeaModel {
     @NameInMap("pageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The ID of the resource group. This parameter is deprecated.</p>
+     */
     @NameInMap("resourceGroupId")
     @Deprecated
     public String resourceGroupId;
 
     /**
-     * <p>查询模式，支持精确查询和模糊查询</p>
+     * <p>The search mode.</p>
      * 
      * <strong>example:</strong>
      * <p>fuzzy</p>
@@ -55,7 +58,7 @@ public class ListAgentRuntimesRequest extends TeaModel {
     public String searchMode;
 
     /**
-     * <p>根据状态进行过滤，多个状态用逗号分隔，支持精确匹配</p>
+     * <p>Filters the results by status.</p>
      * 
      * <strong>example:</strong>
      * <p>READY,CREATING</p>
@@ -64,7 +67,7 @@ public class ListAgentRuntimesRequest extends TeaModel {
     public String status;
 
     /**
-     * <p>根据系统标签进行过滤，多个标签用逗号分隔，支持精确匹配</p>
+     * <p>Filters the results by system tags. Separate multiple tags with commas. This parameter supports only exact matches.</p>
      * 
      * <strong>example:</strong>
      * <p>acs:ecs:tag1,acs:ecs:tag2</p>
@@ -73,7 +76,7 @@ public class ListAgentRuntimesRequest extends TeaModel {
     public String systemTags;
 
     /**
-     * <p>根据工作空间ID进行过滤，用于资源隔离和权限管理</p>
+     * <p>The workspace ID.</p>
      * 
      * <strong>example:</strong>
      * <p>ws-1234567890abcdef</p>
@@ -81,6 +84,9 @@ public class ListAgentRuntimesRequest extends TeaModel {
     @NameInMap("workspaceId")
     public String workspaceId;
 
+    /**
+     * <p>A comma-separated string of workspace IDs.</p>
+     */
     @NameInMap("workspaceIds")
     public String workspaceIds;
 

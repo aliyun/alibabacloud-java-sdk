@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class StartCodeInterpreterSessionInput extends TeaModel {
     /**
-     * <p>代码解释器会话的名称，用于标识和区分不同的会话实例</p>
+     * <p>The name of the code interpreter session, used to identify and distinguish between different session instances</p>
      * 
      * <strong>if can be null:</strong>
      * <p>true</p>

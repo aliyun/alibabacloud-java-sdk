@@ -4,6 +4,9 @@ package com.aliyun.agentrun20250910.models;
 import com.aliyun.tea.*;
 
 public class UpdateWorkspaceRequest extends TeaModel {
+    /**
+     * <p>The parameters used to update the workspace.</p>
+     */
     @NameInMap("body")
     public UpdateWorkspaceInput body;
 

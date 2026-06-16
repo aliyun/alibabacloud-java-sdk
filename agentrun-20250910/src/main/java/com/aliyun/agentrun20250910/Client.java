@@ -8,7 +8,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public Client(com.aliyun.teaopenapi.models.Config config) throws Exception {
         super(config);
-        this._endpointRule = "";
+        this._endpointRule = "regional";
+        this._endpointMap = TeaConverter.buildMap(
+            new TeaPair("cn-shenzhen", "agentrun.cn-shenzhen.aliyuncs.com"),
+            new TeaPair("cn-shanghai", "agentrun.cn-shanghai.aliyuncs.com"),
+            new TeaPair("cn-hangzhou", "agentrun.cn-hangzhou.aliyuncs.com"),
+            new TeaPair("cn-beijing", "agentrun.cn-beijing.aliyuncs.com"),
+            new TeaPair("ap-southeast-1", "agentrun.ap-southeast-1.aliyuncs.com")
+        );
         this.checkConfig(config);
         this._endpoint = this.getEndpoint("agentrun", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
     }
@@ -27,8 +34,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>After activation, the platform automatically deploys the <code>MCP service</code> <code>function</code> for the specified <code>sandbox</code> <code>template</code>. The <code>MCP service</code> ensures a unique mapping between an <code>mcp-session-id</code> and a <code>SandboxID</code>. When an MCP <code>client</code> invokes a <code>tool</code>, the <code>MCP service</code> automatically creates a <code>sandbox</code>.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Enable the TemplateMCP service.</p>
+     * <p>Activates the <code>MCP service</code> for a <code>sandbox</code> <code>template</code>. This enables a client to access the <code>sandbox</code> using the MCP protocol.</p>
      * 
      * @param request ActivateTemplateMCPRequest
      * @param headers map
@@ -65,8 +75,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>After activation, the platform automatically deploys the <code>MCP service</code> <code>function</code> for the specified <code>sandbox</code> <code>template</code>. The <code>MCP service</code> ensures a unique mapping between an <code>mcp-session-id</code> and a <code>SandboxID</code>. When an MCP <code>client</code> invokes a <code>tool</code>, the <code>MCP service</code> automatically creates a <code>sandbox</code>.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Enable the TemplateMCP service.</p>
+     * <p>Activates the <code>MCP service</code> for a <code>sandbox</code> <code>template</code>. This enables a client to access the <code>sandbox</code> using the MCP protocol.</p>
      * 
      * @param request ActivateTemplateMCPRequest
      * @return ActivateTemplateMCPResponse
@@ -79,10 +92,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>将第三方工作流DSL（如Dify、n8n等）转换为AgentRun Flow定义。支持兼容性检查、插件识别和元数据提取，返回转换后的Flow配置、兼容性分析报告和所需的Toolset安装配置。此操作为dry-run模式，不会创建实际的Flow资源。</p>
+     * <p>This operation converts a third-party workflow DSL, such as Dify or n8n, into an AgentRun Flow definition. It performs compatibility checks, identifies plugins, and extracts metadata. The operation runs in dry-run mode, returning the converted Flow configuration, a compatibility analysis report, and the required Toolset installation configuration without creating a Flow resource.</p>
      * 
      * <b>summary</b> : 
-     * <p>转换Flow DSL</p>
+     * <p>Converts a Flow DSL.</p>
      * 
      * @param request ConvertFlowDSLRequest
      * @param headers map
@@ -111,10 +124,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>将第三方工作流DSL（如Dify、n8n等）转换为AgentRun Flow定义。支持兼容性检查、插件识别和元数据提取，返回转换后的Flow配置、兼容性分析报告和所需的Toolset安装配置。此操作为dry-run模式，不会创建实际的Flow资源。</p>
+     * <p>This operation converts a third-party workflow DSL, such as Dify or n8n, into an AgentRun Flow definition. It performs compatibility checks, identifies plugins, and extracts metadata. The operation runs in dry-run mode, returning the converted Flow configuration, a compatibility analysis report, and the required Toolset installation configuration without creating a Flow resource.</p>
      * 
      * <b>summary</b> : 
-     * <p>转换Flow DSL</p>
+     * <p>Converts a Flow DSL.</p>
      * 
      * @param request ConvertFlowDSLRequest
      * @return ConvertFlowDSLResponse
@@ -130,7 +143,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>创建一个新的智能体运行时实例，用于执行AI代理任务。智能体运行时是AgentRun服务的核心组件，提供代码执行、浏览器操作、内存管理等能力。</p>
      * 
      * <b>summary</b> : 
-     * <p>CreateAgentRuntime</p>
+     * <p>Creates an agent runtime.</p>
      * 
      * @param request CreateAgentRuntimeRequest
      * @param headers map
@@ -162,7 +175,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>创建一个新的智能体运行时实例，用于执行AI代理任务。智能体运行时是AgentRun服务的核心组件，提供代码执行、浏览器操作、内存管理等能力。</p>
      * 
      * <b>summary</b> : 
-     * <p>CreateAgentRuntime</p>
+     * <p>Creates an agent runtime.</p>
      * 
      * @param request CreateAgentRuntimeRequest
      * @return CreateAgentRuntimeResponse
@@ -175,10 +188,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>为指定的智能体运行时创建新的端点，用于外部访问和调用。端点是智能体运行时对外提供服务的入口。</p>
+     * <p>Creates a new endpoint for the specified agent runtime, used for external access and invocation. An endpoint serves as the entry point through which an agent runtime provides services externally.</p>
      * 
      * <b>summary</b> : 
-     * <p>创建智能体运行时端点</p>
+     * <p>Create an access endpoint for an agent runtime</p>
      * 
      * @param request CreateAgentRuntimeEndpointRequest
      * @param headers map
@@ -207,10 +220,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>为指定的智能体运行时创建新的端点，用于外部访问和调用。端点是智能体运行时对外提供服务的入口。</p>
+     * <p>Creates a new endpoint for the specified agent runtime, used for external access and invocation. An endpoint serves as the entry point through which an agent runtime provides services externally.</p>
      * 
      * <b>summary</b> : 
-     * <p>创建智能体运行时端点</p>
+     * <p>Create an access endpoint for an agent runtime</p>
      * 
      * @param request CreateAgentRuntimeEndpointRequest
      * @return CreateAgentRuntimeEndpointResponse
@@ -223,10 +236,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>创建一个新的浏览器实例，用于执行网页自动化任务。浏览器实例提供网页浏览、元素操作、截图录制等功能。</p>
+     * <p>Create a new browser instance for executing web automation tasks. The browser instance provides features such as web browsing, element manipulation, and screenshot recording.</p>
      * 
      * <b>summary</b> : 
-     * <p>创建浏览器实例</p>
+     * <p>Create Browser Sandbox</p>
      * 
      * @param request CreateBrowserRequest
      * @param headers map
@@ -255,10 +268,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>创建一个新的浏览器实例，用于执行网页自动化任务。浏览器实例提供网页浏览、元素操作、截图录制等功能。</p>
+     * <p>Create a new browser instance for executing web automation tasks. The browser instance provides features such as web browsing, element manipulation, and screenshot recording.</p>
      * 
      * <b>summary</b> : 
-     * <p>创建浏览器实例</p>
+     * <p>Create Browser Sandbox</p>
      * 
      * @param request CreateBrowserRequest
      * @return CreateBrowserResponse
@@ -274,7 +287,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>创建一个新的代码解释器实例，用于执行代码解释和运行任务。代码解释器提供Python代码执行、数据处理、机器学习等功能。</p>
      * 
      * <b>summary</b> : 
-     * <p>创建代码解释器</p>
+     * <p>Creates a code interpreter.</p>
      * 
      * @param request CreateCodeInterpreterRequest
      * @param headers map
@@ -306,7 +319,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>创建一个新的代码解释器实例，用于执行代码解释和运行任务。代码解释器提供Python代码执行、数据处理、机器学习等功能。</p>
      * 
      * <b>summary</b> : 
-     * <p>创建代码解释器</p>
+     * <p>Creates a code interpreter.</p>
      * 
      * @param request CreateCodeInterpreterRequest
      * @return CreateCodeInterpreterResponse
@@ -318,8 +331,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This operation creates a credential for an agent.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Create a credential</p>
+     * <p>Creates a new credential.</p>
      * 
      * @param request CreateCredentialRequest
      * @param headers map
@@ -347,8 +363,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This operation creates a credential for an agent.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Create a credential</p>
+     * <p>Creates a new credential.</p>
      * 
      * @param request CreateCredentialRequest
      * @return CreateCredentialResponse
@@ -361,7 +380,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建自定义域名</p>
+     * <p>Creates a custom domain.</p>
      * 
      * @param request CreateCustomDomainRequest
      * @param headers map
@@ -390,7 +409,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建自定义域名</p>
+     * <p>Creates a custom domain.</p>
      * 
      * @param request CreateCustomDomainRequest
      * @return CreateCustomDomainResponse
@@ -403,10 +422,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>创建一个新的工作流实例，用于定义和执行自动化流程。工作流是AgentRun服务的核心组件，支持可视化编排和版本管理。</p>
+     * <p>Creates a flow orchestration agent. Flow orchestration is a core component of the AgentRun service that supports visual orchestration and version management.</p>
      * 
      * <b>summary</b> : 
-     * <p>创建工作流</p>
+     * <p>Creates a workflow.</p>
      * 
      * @param request CreateFlowRequest
      * @param headers map
@@ -435,10 +454,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>创建一个新的工作流实例，用于定义和执行自动化流程。工作流是AgentRun服务的核心组件，支持可视化编排和版本管理。</p>
+     * <p>Creates a flow orchestration agent. Flow orchestration is a core component of the AgentRun service that supports visual orchestration and version management.</p>
      * 
      * <b>summary</b> : 
-     * <p>创建工作流</p>
+     * <p>Creates a workflow.</p>
      * 
      * @param request CreateFlowRequest
      * @return CreateFlowResponse
@@ -454,7 +473,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>为指定工作流创建一个新的端点，用于对外提供服务访问。</p>
      * 
      * <b>summary</b> : 
-     * <p>创建工作流端点</p>
+     * <p>Creates a flow endpoint.</p>
      * 
      * @param request CreateFlowEndpointRequest
      * @param headers map
@@ -486,7 +505,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>为指定工作流创建一个新的端点，用于对外提供服务访问。</p>
      * 
      * <b>summary</b> : 
-     * <p>创建工作流端点</p>
+     * <p>Creates a flow endpoint.</p>
      * 
      * @param request CreateFlowEndpointRequest
      * @return CreateFlowEndpointResponse
@@ -499,10 +518,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>POST /2025-09-10/agents/im-bots；成功 HTTP 201；请求体无 status（创建后恒为 running）；Body 标准包装，data 为 IMBotInfo</p>
+     * <p>A successful request returns an HTTP 201 status code. Once created, an IM Bot\&quot;s status is always <code>running</code>. The response is in a standard format, and its <code>data</code> field contains an <code>IMBotInfo</code> object.</p>
      * 
      * <b>summary</b> : 
-     * <p>创建 IM Bot</p>
+     * <p>Creates an IM Bot.</p>
      * 
      * @param request CreateIMBotRequest
      * @param headers map
@@ -531,10 +550,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>POST /2025-09-10/agents/im-bots；成功 HTTP 201；请求体无 status（创建后恒为 running）；Body 标准包装，data 为 IMBotInfo</p>
+     * <p>A successful request returns an HTTP 201 status code. Once created, an IM Bot\&quot;s status is always <code>running</code>. The response is in a standard format, and its <code>data</code> field contains an <code>IMBotInfo</code> object.</p>
      * 
      * <b>summary</b> : 
-     * <p>创建 IM Bot</p>
+     * <p>Creates an IM Bot.</p>
      * 
      * @param request CreateIMBotRequest
      * @return CreateIMBotResponse
@@ -547,7 +566,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建知识库</p>
+     * <p>Creates a knowledge base.</p>
      * 
      * @param request CreateKnowledgeBaseRequest
      * @param headers map
@@ -576,7 +595,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建知识库</p>
+     * <p>Creates a knowledge base.</p>
      * 
      * @param request CreateKnowledgeBaseRequest
      * @return CreateKnowledgeBaseResponse
@@ -589,7 +608,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>添加记忆存储</p>
+     * <p>Creates a memory collection.</p>
      * 
      * @param request CreateMemoryCollectionRequest
      * @param headers map
@@ -618,7 +637,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>添加记忆存储</p>
+     * <p>Creates a memory collection.</p>
      * 
      * @param request CreateMemoryCollectionRequest
      * @return CreateMemoryCollectionResponse
@@ -630,8 +649,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This operation creates a Model Proxy based on the specified configuration.</p>
+     * 
      * <b>summary</b> : 
-     * <p>新增模型</p>
+     * <p>Creates a Model Proxy.</p>
      * 
      * @param request CreateModelProxyRequest
      * @param headers map
@@ -659,8 +681,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This operation creates a Model Proxy based on the specified configuration.</p>
+     * 
      * <b>summary</b> : 
-     * <p>新增模型</p>
+     * <p>Creates a Model Proxy.</p>
      * 
      * @param request CreateModelProxyRequest
      * @return CreateModelProxyResponse
@@ -672,8 +697,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This operation creates a model service, such as a code interpreter, based on the specified configuration.</p>
+     * 
      * <b>summary</b> : 
-     * <p>新增模型</p>
+     * <p>Creates a model service.</p>
      * 
      * @param request CreateModelServiceRequest
      * @param headers map
@@ -701,8 +729,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This operation creates a model service, such as a code interpreter, based on the specified configuration.</p>
+     * 
      * <b>summary</b> : 
-     * <p>新增模型</p>
+     * <p>Creates a model service.</p>
      * 
      * @param request CreateModelServiceRequest
      * @return CreateModelServiceResponse
@@ -715,10 +746,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>根据模板创建一个新的沙箱实例。沙箱是运行时的执行环境，可以执行代码或运行浏览器。</p>
+     * <p>Creates a new sandbox instance from a specified template. A sandbox provides an isolated execution environment to run code or launch a browser.</p>
      * 
      * <b>summary</b> : 
-     * <p>创建沙箱</p>
+     * <p>Creates a sandbox.</p>
      * 
      * @param request CreateSandboxRequest
      * @param headers map
@@ -747,10 +778,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>根据模板创建一个新的沙箱实例。沙箱是运行时的执行环境，可以执行代码或运行浏览器。</p>
+     * <p>Creates a new sandbox instance from a specified template. A sandbox provides an isolated execution environment to run code or launch a browser.</p>
      * 
      * <b>summary</b> : 
-     * <p>创建沙箱</p>
+     * <p>Creates a sandbox.</p>
      * 
      * @param request CreateSandboxRequest
      * @return CreateSandboxResponse
@@ -763,10 +794,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>创建一个新的模板，用于后续创建沙箱。模板定义了沙箱的运行时环境、资源配置等。</p>
+     * <p>Creates a template for launching sandboxes. A template defines the runtime environment, resource configuration, and other settings for a sandbox.</p>
      * 
      * <b>summary</b> : 
-     * <p>Create a template.</p>
+     * <p>Creates a template.</p>
      * 
      * @param request CreateTemplateRequest
      * @param headers map
@@ -795,10 +826,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>创建一个新的模板，用于后续创建沙箱。模板定义了沙箱的运行时环境、资源配置等。</p>
+     * <p>Creates a template for launching sandboxes. A template defines the runtime environment, resource configuration, and other settings for a sandbox.</p>
      * 
      * <b>summary</b> : 
-     * <p>Create a template.</p>
+     * <p>Creates a template.</p>
      * 
      * @param request CreateTemplateRequest
      * @return CreateTemplateResponse
@@ -811,10 +842,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>创建一个新的工具，支持创建 MCP、函数调用和技能等多种类型的工具。工具创建后可以被 Agent 调用以扩展其能力。</p>
+     * <p>This operation creates various types of tools, such as MCP, function call, and skill. An Agent can then call a tool to extend its capabilities.</p>
      * 
      * <b>summary</b> : 
-     * <p>创建工具</p>
+     * <p>Creates a tool.</p>
      * 
      * @param request CreateToolRequest
      * @param headers map
@@ -843,10 +874,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>创建一个新的工具，支持创建 MCP、函数调用和技能等多种类型的工具。工具创建后可以被 Agent 调用以扩展其能力。</p>
+     * <p>This operation creates various types of tools, such as MCP, function call, and skill. An Agent can then call a tool to extend its capabilities.</p>
      * 
      * <b>summary</b> : 
-     * <p>创建工具</p>
+     * <p>Creates a tool.</p>
      * 
      * @param request CreateToolRequest
      * @return CreateToolResponse
@@ -859,10 +890,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>创建工作空间</p>
+     * <p>Creates a workspace.</p>
      * 
      * <b>summary</b> : 
-     * <p>创建工作空间</p>
+     * <p>Creates a workspace.</p>
      * 
      * @param request CreateWorkspaceRequest
      * @param headers map
@@ -891,10 +922,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>创建工作空间</p>
+     * <p>Creates a workspace.</p>
      * 
      * <b>summary</b> : 
-     * <p>创建工作空间</p>
+     * <p>Creates a workspace.</p>
      * 
      * @param request CreateWorkspaceRequest
      * @return CreateWorkspaceResponse
@@ -907,10 +938,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>删除指定的智能体运行时实例，包括其所有相关资源和数据。删除操作不可逆，请谨慎操作。</p>
+     * <p>Deletes a specified agent runtime instance, including all associated resources and data. This operation is irreversible. Proceed with caution.</p>
      * 
      * <b>summary</b> : 
-     * <p>删除智能体运行时</p>
+     * <p>Delete Agent Runtime</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -936,10 +967,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>删除指定的智能体运行时实例，包括其所有相关资源和数据。删除操作不可逆，请谨慎操作。</p>
+     * <p>Deletes a specified agent runtime instance, including all associated resources and data. This operation is irreversible. Proceed with caution.</p>
      * 
      * <b>summary</b> : 
-     * <p>删除智能体运行时</p>
+     * <p>Delete Agent Runtime</p>
      * @return DeleteAgentRuntimeResponse
      */
     public DeleteAgentRuntimeResponse deleteAgentRuntime(String agentRuntimeId) throws Exception {
@@ -950,7 +981,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Delete an agent runtime endpoint</p>
+     * <p>Delete Agent Runtime Endpoint</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -976,7 +1007,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Delete an agent runtime endpoint</p>
+     * <p>Delete Agent Runtime Endpoint</p>
      * @return DeleteAgentRuntimeEndpointResponse
      */
     public DeleteAgentRuntimeEndpointResponse deleteAgentRuntimeEndpoint(String agentRuntimeId, String agentRuntimeEndpointId) throws Exception {
@@ -987,10 +1018,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>删除指定的浏览器实例，包括其所有相关资源和数据。删除操作不可逆，请谨慎操作。</p>
+     * <p>Delete the specified browser instance, including all its associated resources and data. The deletion is irreversible. Please proceed with caution.</p>
      * 
      * <b>summary</b> : 
-     * <p>删除浏览器实例</p>
+     * <p>Delete Browser Sandbox</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -1016,10 +1047,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>删除指定的浏览器实例，包括其所有相关资源和数据。删除操作不可逆，请谨慎操作。</p>
+     * <p>Delete the specified browser instance, including all its associated resources and data. The deletion is irreversible. Please proceed with caution.</p>
      * 
      * <b>summary</b> : 
-     * <p>删除浏览器实例</p>
+     * <p>Delete Browser Sandbox</p>
      * @return DeleteBrowserResponse
      */
     public DeleteBrowserResponse deleteBrowser(String browserId) throws Exception {
@@ -1030,10 +1061,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>删除指定的代码解释器实例，包括其所有相关资源和数据。删除操作不可逆，请谨慎操作。</p>
+     * <p>Delete a specified code interpreter instance, including all its associated resources and data. This operation is irreversible. Please proceed with caution.</p>
      * 
      * <b>summary</b> : 
-     * <p>删除代码解释器</p>
+     * <p>Delete Code Interpreter</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -1059,10 +1090,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>删除指定的代码解释器实例，包括其所有相关资源和数据。删除操作不可逆，请谨慎操作。</p>
+     * <p>Delete a specified code interpreter instance, including all its associated resources and data. This operation is irreversible. Please proceed with caution.</p>
      * 
      * <b>summary</b> : 
-     * <p>删除代码解释器</p>
+     * <p>Delete Code Interpreter</p>
      * @return DeleteCodeInterpreterResponse
      */
     public DeleteCodeInterpreterResponse deleteCodeInterpreter(String codeInterpreterId) throws Exception {
@@ -1072,8 +1103,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This operation deletes the specified credential. This action cannot be undone.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Delete a credential</p>
+     * <p>Deletes the specified credential.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -1098,8 +1132,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This operation deletes the specified credential. This action cannot be undone.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Delete a credential</p>
+     * <p>Deletes the specified credential.</p>
      * @return DeleteCredentialResponse
      */
     public DeleteCredentialResponse deleteCredential(String credentialName) throws Exception {
@@ -1110,7 +1147,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Delete a custom domain</p>
+     * <p>Deletes a custom domain.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -1136,7 +1173,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Delete a custom domain</p>
+     * <p>Deletes a custom domain.</p>
      * @return DeleteCustomDomainResponse
      */
     public DeleteCustomDomainResponse deleteCustomDomain(String domainName) throws Exception {
@@ -1147,10 +1184,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>删除指定的工作流实例，包括其所有相关资源和数据。删除操作不可逆，请谨慎操作。</p>
+     * <p>Deletes a specified flow instance, along with all its related resources and data. This operation is irreversible and cannot be undone. Use with caution.</p>
      * 
      * <b>summary</b> : 
-     * <p>删除工作流</p>
+     * <p>Deletes a flow.</p>
      * 
      * @param request DeleteFlowRequest
      * @param headers map
@@ -1178,10 +1215,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>删除指定的工作流实例，包括其所有相关资源和数据。删除操作不可逆，请谨慎操作。</p>
+     * <p>Deletes a specified flow instance, along with all its related resources and data. This operation is irreversible and cannot be undone. Use with caution.</p>
      * 
      * <b>summary</b> : 
-     * <p>删除工作流</p>
+     * <p>Deletes a flow.</p>
      * 
      * @param request DeleteFlowRequest
      * @return DeleteFlowResponse
@@ -1194,10 +1231,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>删除指定的工作流端点。删除操作不可逆，请谨慎操作。</p>
+     * <p>Deletes the specified flow endpoint. This operation is irreversible. Proceed with caution.</p>
      * 
      * <b>summary</b> : 
-     * <p>删除工作流端点</p>
+     * <p>Deletes a flow endpoint.</p>
      * 
      * @param request DeleteFlowEndpointRequest
      * @param headers map
@@ -1225,10 +1262,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>删除指定的工作流端点。删除操作不可逆，请谨慎操作。</p>
+     * <p>Deletes the specified flow endpoint. This operation is irreversible. Proceed with caution.</p>
      * 
      * <b>summary</b> : 
-     * <p>删除工作流端点</p>
+     * <p>Deletes a flow endpoint.</p>
      * 
      * @param request DeleteFlowEndpointRequest
      * @return DeleteFlowEndpointResponse
@@ -1241,10 +1278,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>删除指定工作流的指定版本。删除操作不可逆，请谨慎操作。</p>
+     * <p>Deletes a specified version of a workflow. This operation is irreversible. Proceed with caution.</p>
      * 
      * <b>summary</b> : 
-     * <p>删除工作流版本</p>
+     * <p>Deletes a workflow version.</p>
      * 
      * @param request DeleteFlowVersionRequest
      * @param headers map
@@ -1272,10 +1309,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>删除指定工作流的指定版本。删除操作不可逆，请谨慎操作。</p>
+     * <p>Deletes a specified version of a workflow. This operation is irreversible. Proceed with caution.</p>
      * 
      * <b>summary</b> : 
-     * <p>删除工作流版本</p>
+     * <p>Deletes a workflow version.</p>
      * 
      * @param request DeleteFlowVersionRequest
      * @return DeleteFlowVersionResponse
@@ -1288,10 +1325,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>DELETE /2025-09-10/agents/im-bots/{imBotId}；成功为 HTTP 204 No Content，无 JSON 响应体</p>
+     * <p>This operation deletes an IM bot via a <code>DELETE</code> request to the <code>/2025-09-10/agents/im-bots/{imBotId}</code> endpoint. A successful request returns an HTTP <code>204 No Content</code> status code and an empty response body.</p>
      * 
      * <b>summary</b> : 
-     * <p>删除 IM Bot</p>
+     * <p>Deletes an IM bot.</p>
      * 
      * @param request DeleteIMBotRequest
      * @param headers map
@@ -1319,10 +1356,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>DELETE /2025-09-10/agents/im-bots/{imBotId}；成功为 HTTP 204 No Content，无 JSON 响应体</p>
+     * <p>This operation deletes an IM bot via a <code>DELETE</code> request to the <code>/2025-09-10/agents/im-bots/{imBotId}</code> endpoint. A successful request returns an HTTP <code>204 No Content</code> status code and an empty response body.</p>
      * 
      * <b>summary</b> : 
-     * <p>删除 IM Bot</p>
+     * <p>Deletes an IM bot.</p>
      * 
      * @param request DeleteIMBotRequest
      * @return DeleteIMBotResponse
@@ -1335,7 +1372,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除知识库</p>
+     * <p>Deletes a knowledge base.</p>
+     * <blockquote>
+     * <p>This operation is permanent and cannot be undone.</p>
+     * </blockquote>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -1361,7 +1401,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除知识库</p>
+     * <p>Deletes a knowledge base.</p>
+     * <blockquote>
+     * <p>This operation is permanent and cannot be undone.</p>
+     * </blockquote>
      * @return DeleteKnowledgeBaseResponse
      */
     public DeleteKnowledgeBaseResponse deleteKnowledgeBase(String knowledgeBaseName) throws Exception {
@@ -1372,7 +1415,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除记忆存储</p>
+     * <p>Deletes a memory collection.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -1398,7 +1441,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除记忆存储</p>
+     * <p>Deletes a memory collection.</p>
      * @return DeleteMemoryCollectionResponse
      */
     public DeleteMemoryCollectionResponse deleteMemoryCollection(String memoryCollectionName) throws Exception {
@@ -1408,8 +1451,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This operation deletes the specified model proxy configuration without deleting the underlying models or related resources.</p>
+     * 
      * <b>summary</b> : 
-     * <p>删除模型</p>
+     * <p>Deletes a model proxy.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -1434,8 +1480,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This operation deletes the specified model proxy configuration without deleting the underlying models or related resources.</p>
+     * 
      * <b>summary</b> : 
-     * <p>删除模型</p>
+     * <p>Deletes a model proxy.</p>
      * @return DeleteModelProxyResponse
      */
     public DeleteModelProxyResponse deleteModelProxy(String modelProxyName) throws Exception {
@@ -1445,8 +1494,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This operation deletes a model service. You must specify the name of the service to delete.</p>
+     * 
      * <b>summary</b> : 
-     * <p>删除模型</p>
+     * <p>Deletes a model service.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -1471,8 +1523,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This operation deletes a model service. You must specify the name of the service to delete.</p>
+     * 
      * <b>summary</b> : 
-     * <p>删除模型</p>
+     * <p>Deletes a model service.</p>
      * @return DeleteModelServiceResponse
      */
     public DeleteModelServiceResponse deleteModelService(String modelServiceName) throws Exception {
@@ -1482,8 +1537,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Deletes a sandbox instance.</p>
+     * 
      * <b>summary</b> : 
-     * <p>删除Sandbox</p>
+     * <p>Deletes a sandbox instance.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -1508,8 +1566,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Deletes a sandbox instance.</p>
+     * 
      * <b>summary</b> : 
-     * <p>删除Sandbox</p>
+     * <p>Deletes a sandbox instance.</p>
      * @return DeleteSandboxResponse
      */
     public DeleteSandboxResponse deleteSandbox(String sandboxId) throws Exception {
@@ -1520,10 +1581,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>删除指定的模板。删除后，该模板将无法再用于创建新的沙箱。</p>
+     * <p>Deletes the specified template. After you delete a template, you can no longer use it to create new sandboxes.</p>
      * 
      * <b>summary</b> : 
-     * <p>删除模板</p>
+     * <p>Deletes a template.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -1549,10 +1610,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>删除指定的模板。删除后，该模板将无法再用于创建新的沙箱。</p>
+     * <p>Deletes the specified template. After you delete a template, you can no longer use it to create new sandboxes.</p>
      * 
      * <b>summary</b> : 
-     * <p>删除模板</p>
+     * <p>Deletes a template.</p>
      * @return DeleteTemplateResponse
      */
     public DeleteTemplateResponse deleteTemplate(String templateName) throws Exception {
@@ -1563,10 +1624,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>删除指定的工具。删除操作不可逆，请谨慎操作。删除工具后，所有引用该工具的 Agent 将无法继续使用该工具。</p>
+     * <p>Delete the specified tool. The delete operation is irreversible. Proceed with caution. After the tool is deleted, all Agents that reference this tool will no longer be able to use it.</p>
      * 
      * <b>summary</b> : 
-     * <p>删除工具</p>
+     * <p>Delete a tool</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -1592,10 +1653,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>删除指定的工具。删除操作不可逆，请谨慎操作。删除工具后，所有引用该工具的 Agent 将无法继续使用该工具。</p>
+     * <p>Delete the specified tool. The delete operation is irreversible. Proceed with caution. After the tool is deleted, all Agents that reference this tool will no longer be able to use it.</p>
      * 
      * <b>summary</b> : 
-     * <p>删除工具</p>
+     * <p>Delete a tool</p>
      * @return DeleteToolResponse
      */
     public DeleteToolResponse deleteTool(String toolName) throws Exception {
@@ -1606,10 +1667,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>删除工作空间</p>
+     * <p>Deletes the specified workspace.</p>
      * 
      * <b>summary</b> : 
-     * <p>删除工作空间</p>
+     * <p>Deletes a workspace.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -1635,10 +1696,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>删除工作空间</p>
+     * <p>Deletes the specified workspace.</p>
      * 
      * <b>summary</b> : 
-     * <p>删除工作空间</p>
+     * <p>Deletes a workspace.</p>
      * @return DeleteWorkspaceResponse
      */
     public DeleteWorkspaceResponse deleteWorkspace(String workspaceId) throws Exception {
@@ -1648,8 +1709,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Obtains a temporary accessToken that is used to authenticate subsequent API requests.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Get access token for a resource</p>
+     * <p>Obtains an access token.</p>
      * 
      * @param request GetAccessTokenRequest
      * @param headers map
@@ -1690,8 +1754,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Obtains a temporary accessToken that is used to authenticate subsequent API requests.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Get access token for a resource</p>
+     * <p>Obtains an access token.</p>
      * 
      * @param request GetAccessTokenRequest
      * @return GetAccessTokenResponse
@@ -1704,10 +1771,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>根据智能体运行时ID获取指定智能体运行时的详细信息，包括配置、状态、资源使用情况等。</p>
+     * <p>Retrieves detailed information about a specified agent runtime by its agent runtime ID, including configuration, status, resource usage, and more.</p>
      * 
      * <b>summary</b> : 
-     * <p>获取智能体运行时详情</p>
+     * <p>Get Agent Runtime</p>
      * 
      * @param request GetAgentRuntimeRequest
      * @param headers map
@@ -1741,10 +1808,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>根据智能体运行时ID获取指定智能体运行时的详细信息，包括配置、状态、资源使用情况等。</p>
+     * <p>Retrieves detailed information about a specified agent runtime by its agent runtime ID, including configuration, status, resource usage, and more.</p>
      * 
      * <b>summary</b> : 
-     * <p>获取智能体运行时详情</p>
+     * <p>Get Agent Runtime</p>
      * 
      * @param request GetAgentRuntimeRequest
      * @return GetAgentRuntimeResponse
@@ -1757,7 +1824,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Get an agent runtime endpoint</p>
+     * <p>Get Agent Runtime Access Endpoint</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -1783,7 +1850,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Get an agent runtime endpoint</p>
+     * <p>Get Agent Runtime Access Endpoint</p>
      * @return GetAgentRuntimeEndpointResponse
      */
     public GetAgentRuntimeEndpointResponse getAgentRuntimeEndpoint(String agentRuntimeId, String agentRuntimeEndpointId) throws Exception {
@@ -1794,10 +1861,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>根据浏览器ID获取指定浏览器实例的详细信息，包括配置、状态、资源使用情况等。</p>
+     * <p>Retrieves detailed information about a specified browser instance by browser ID, including configuration, status, resource usage, and more.</p>
      * 
      * <b>summary</b> : 
-     * <p>获取浏览器实例详情</p>
+     * <p>GetBrowserSandbox</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -1823,10 +1890,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>根据浏览器ID获取指定浏览器实例的详细信息，包括配置、状态、资源使用情况等。</p>
+     * <p>Retrieves detailed information about a specified browser instance by browser ID, including configuration, status, resource usage, and more.</p>
      * 
      * <b>summary</b> : 
-     * <p>获取浏览器实例详情</p>
+     * <p>GetBrowserSandbox</p>
      * @return GetBrowserResponse
      */
     public GetBrowserResponse getBrowser(String browserId) throws Exception {
@@ -1840,7 +1907,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>根据代码解释器ID获取指定代码解释器实例的详细信息，包括配置、状态、资源使用情况等。</p>
      * 
      * <b>summary</b> : 
-     * <p>获取代码解释器详情</p>
+     * <p>Retrieves an interpreter.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -1869,7 +1936,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>根据代码解释器ID获取指定代码解释器实例的详细信息，包括配置、状态、资源使用情况等。</p>
      * 
      * <b>summary</b> : 
-     * <p>获取代码解释器详情</p>
+     * <p>Retrieves an interpreter.</p>
      * @return GetCodeInterpreterResponse
      */
     public GetCodeInterpreterResponse getCodeInterpreter(String codeInterpreterId) throws Exception {
@@ -1879,8 +1946,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Retrieves detailed information about a specified credential, including its configuration, metadata, and related resources.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Get a credential</p>
+     * <p>Retrieves information about a specific credential.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -1905,8 +1975,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Retrieves detailed information about a specified credential, including its configuration, metadata, and related resources.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Get a credential</p>
+     * <p>Retrieves information about a specific credential.</p>
      * @return GetCredentialResponse
      */
     public GetCredentialResponse getCredential(String credentialName) throws Exception {
@@ -1917,7 +1990,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取自定义域名详情</p>
+     * <p>Retrieves the configuration of a custom domain.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -1943,7 +2016,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取自定义域名详情</p>
+     * <p>Retrieves the configuration of a custom domain.</p>
      * @return GetCustomDomainResponse
      */
     public GetCustomDomainResponse getCustomDomain(String domainName) throws Exception {
@@ -1957,7 +2030,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>根据工作流ID获取指定工作流的详细信息，包括配置、定义、版本信息等。</p>
      * 
      * <b>summary</b> : 
-     * <p>获取工作流详情</p>
+     * <p>Get flow details</p>
      * 
      * @param request GetFlowRequest
      * @param headers map
@@ -1988,7 +2061,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>根据工作流ID获取指定工作流的详细信息，包括配置、定义、版本信息等。</p>
      * 
      * <b>summary</b> : 
-     * <p>获取工作流详情</p>
+     * <p>Get flow details</p>
      * 
      * @param request GetFlowRequest
      * @return GetFlowResponse
@@ -2004,7 +2077,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>获取指定工作流的草稿版本，返回草稿中的配置信息。</p>
      * 
      * <b>summary</b> : 
-     * <p>获取工作流草稿</p>
+     * <p>Get the workflow draft.</p>
      * 
      * @param request GetFlowDraftRequest
      * @param headers map
@@ -2035,7 +2108,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>获取指定工作流的草稿版本，返回草稿中的配置信息。</p>
      * 
      * <b>summary</b> : 
-     * <p>获取工作流草稿</p>
+     * <p>Get the workflow draft.</p>
      * 
      * @param request GetFlowDraftRequest
      * @return GetFlowDraftResponse
@@ -2051,7 +2124,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>根据工作流ID和端点ID获取指定工作流端点的详细信息。</p>
      * 
      * <b>summary</b> : 
-     * <p>获取工作流端点详情</p>
+     * <p>Retrieves the details of a workflow endpoint.</p>
      * 
      * @param request GetFlowEndpointRequest
      * @param headers map
@@ -2082,7 +2155,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>根据工作流ID和端点ID获取指定工作流端点的详细信息。</p>
      * 
      * <b>summary</b> : 
-     * <p>获取工作流端点详情</p>
+     * <p>Retrieves the details of a workflow endpoint.</p>
      * 
      * @param request GetFlowEndpointRequest
      * @return GetFlowEndpointResponse
@@ -2095,10 +2168,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>根据工作流名称和版本号获取指定版本的详细信息，包括该版本的完整配置快照（定义、环境变量、追踪配置、日志配置等）。</p>
+     * <p>Retrieves the details of a specific workflow version, including a complete configuration snapshot of its definition, environment variables, tracing configuration, and logging configuration.</p>
      * 
      * <b>summary</b> : 
-     * <p>获取工作流版本详情</p>
+     * <p>Retrieves the details of a workflow version.</p>
      * 
      * @param request GetFlowVersionRequest
      * @param headers map
@@ -2126,10 +2199,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>根据工作流名称和版本号获取指定版本的详细信息，包括该版本的完整配置快照（定义、环境变量、追踪配置、日志配置等）。</p>
+     * <p>Retrieves the details of a specific workflow version, including a complete configuration snapshot of its definition, environment variables, tracing configuration, and logging configuration.</p>
      * 
      * <b>summary</b> : 
-     * <p>获取工作流版本详情</p>
+     * <p>Retrieves the details of a workflow version.</p>
      * 
      * @param request GetFlowVersionRequest
      * @return GetFlowVersionResponse
@@ -2145,7 +2218,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>GET /2025-09-10/agents/im-bots/{imBotId}；200 OK，Body 标准包装，data 为 IMBotInfo</p>
      * 
      * <b>summary</b> : 
-     * <p>获取 IM Bot</p>
+     * <p>Gets the details of a specific IM Bot.</p>
      * 
      * @param request GetIMBotRequest
      * @param headers map
@@ -2176,7 +2249,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>GET /2025-09-10/agents/im-bots/{imBotId}；200 OK，Body 标准包装，data 为 IMBotInfo</p>
      * 
      * <b>summary</b> : 
-     * <p>获取 IM Bot</p>
+     * <p>Gets the details of a specific IM Bot.</p>
      * 
      * @param request GetIMBotRequest
      * @return GetIMBotResponse
@@ -2189,7 +2262,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取知识库</p>
+     * <p>Gets information about a knowledge base.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -2215,7 +2288,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取知识库</p>
+     * <p>Gets information about a knowledge base.</p>
      * @return GetKnowledgeBaseResponse
      */
     public GetKnowledgeBaseResponse getKnowledgeBase(String knowledgeBaseName) throws Exception {
@@ -2226,7 +2299,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询记忆存储详情</p>
+     * <p>Retrieves details for a specific memory collection.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -2252,7 +2325,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询记忆存储详情</p>
+     * <p>Retrieves details for a specific memory collection.</p>
      * @return GetMemoryCollectionResponse
      */
     public GetMemoryCollectionResponse getMemoryCollection(String memoryCollectionName) throws Exception {
@@ -2262,8 +2335,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This operation retrieves the configuration details of a specific model proxy.</p>
+     * 
      * <b>summary</b> : 
-     * <p>查看model</p>
+     * <p>Retrieves model governance information.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -2288,8 +2364,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This operation retrieves the configuration details of a specific model proxy.</p>
+     * 
      * <b>summary</b> : 
-     * <p>查看model</p>
+     * <p>Retrieves model governance information.</p>
      * @return GetModelProxyResponse
      */
     public GetModelProxyResponse getModelProxy(String modelProxyName) throws Exception {
@@ -2299,8 +2378,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Retrieves the details of a specified model service.</p>
+     * 
      * <b>summary</b> : 
-     * <p>查看model</p>
+     * <p>Retrieves the details of a specified model service.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -2325,8 +2407,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Retrieves the details of a specified model service.</p>
+     * 
      * <b>summary</b> : 
-     * <p>查看model</p>
+     * <p>Retrieves the details of a specified model service.</p>
      * @return GetModelServiceResponse
      */
     public GetModelServiceResponse getModelService(String modelServiceName) throws Exception {
@@ -2337,10 +2422,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>根据沙箱ID获取指定沙箱的详细信息，包括状态、配置等。</p>
+     * <p>Retrieves the details of a specific sandbox by its <code>sandboxId</code>, including its status and configuration.</p>
      * 
      * <b>summary</b> : 
-     * <p>获取沙箱</p>
+     * <p>Retrieves the details of a specific sandbox.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -2366,10 +2451,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>根据沙箱ID获取指定沙箱的详细信息，包括状态、配置等。</p>
+     * <p>Retrieves the details of a specific sandbox by its <code>sandboxId</code>, including its status and configuration.</p>
      * 
      * <b>summary</b> : 
-     * <p>获取沙箱</p>
+     * <p>Retrieves the details of a specific sandbox.</p>
      * @return GetSandboxResponse
      */
     public GetSandboxResponse getSandbox(String sandboxId) throws Exception {
@@ -2380,10 +2465,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>根据模板名称获取指定模板的详细信息，包括配置、状态等。</p>
+     * <p>Retrieves the details of a template by its name. The response includes the template\&quot;s configuration and status.</p>
      * 
      * <b>summary</b> : 
-     * <p>获取模板</p>
+     * <p>Retrieves a template.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -2409,10 +2494,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>根据模板名称获取指定模板的详细信息，包括配置、状态等。</p>
+     * <p>Retrieves the details of a template by its name. The response includes the template\&quot;s configuration and status.</p>
      * 
      * <b>summary</b> : 
-     * <p>获取模板</p>
+     * <p>Retrieves a template.</p>
      * @return GetTemplateResponse
      */
     public GetTemplateResponse getTemplate(String templateName) throws Exception {
@@ -2423,10 +2508,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>根据工具名称获取工具的完整配置信息，包括工具的基本信息、资源配置、网络配置、运行状态等所有详细信息。</p>
+     * <p>Obtain the complete configuration information of a tool by its name, including basic information, resource configuration, network configuration, running status, and all other detailed information.</p>
      * 
      * <b>summary</b> : 
-     * <p>获取工具详情</p>
+     * <p>Get a tool</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -2452,10 +2537,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>根据工具名称获取工具的完整配置信息，包括工具的基本信息、资源配置、网络配置、运行状态等所有详细信息。</p>
+     * <p>Obtain the complete configuration information of a tool by its name, including basic information, resource configuration, network configuration, running status, and all other detailed information.</p>
      * 
      * <b>summary</b> : 
-     * <p>获取工具详情</p>
+     * <p>Get a tool</p>
      * @return GetToolResponse
      */
     public GetToolResponse getTool(String toolName) throws Exception {
@@ -2466,10 +2551,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>查看工作空间</p>
+     * <p>Retrieves the details of a specific workspace.</p>
      * 
      * <b>summary</b> : 
-     * <p>查看工作空间</p>
+     * <p>Retrieves the details of a specific workspace.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -2495,10 +2580,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>查看工作空间</p>
+     * <p>Retrieves the details of a specific workspace.</p>
      * 
      * <b>summary</b> : 
-     * <p>查看工作空间</p>
+     * <p>Retrieves the details of a specific workspace.</p>
      * @return GetWorkspaceResponse
      */
     public GetWorkspaceResponse getWorkspace(String workspaceId) throws Exception {
@@ -2509,7 +2594,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取工作空间下的发现端点</p>
+     * <p>Gets the discovery endpoints for a workspace.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -2535,7 +2620,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取工作空间下的发现端点</p>
+     * <p>Gets the discovery endpoints for a workspace.</p>
      * @return GetWorkspaceDiscoveryEndpointsResponse
      */
     public GetWorkspaceDiscoveryEndpointsResponse getWorkspaceDiscoveryEndpoints(String workspaceId) throws Exception {
@@ -2549,7 +2634,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>获取指定智能体运行时的所有端点列表，支持按名称过滤和分页查询。端点用于外部系统访问智能体运行时服务。</p>
      * 
      * <b>summary</b> : 
-     * <p>Retrieve the list of access endpoints for an agent runtime</p>
+     * <p>List Agent Runtime Endpoints</p>
      * 
      * @param request ListAgentRuntimeEndpointsRequest
      * @param headers map
@@ -2598,7 +2683,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>获取指定智能体运行时的所有端点列表，支持按名称过滤和分页查询。端点用于外部系统访问智能体运行时服务。</p>
      * 
      * <b>summary</b> : 
-     * <p>Retrieve the list of access endpoints for an agent runtime</p>
+     * <p>List Agent Runtime Endpoints</p>
      * 
      * @param request ListAgentRuntimeEndpointsRequest
      * @return ListAgentRuntimeEndpointsResponse
@@ -2611,7 +2696,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>List agent runtime versions</p>
+     * <p>Retrieves agent runtime versions.</p>
      * 
      * @param request ListAgentRuntimeVersionsRequest
      * @param headers map
@@ -2649,7 +2734,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>List agent runtime versions</p>
+     * <p>Retrieves agent runtime versions.</p>
      * 
      * @param request ListAgentRuntimeVersionsRequest
      * @return ListAgentRuntimeVersionsResponse
@@ -2662,10 +2747,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>获取当前用户的所有智能体运行时列表，支持按名称、标签等条件过滤，支持分页查询。</p>
+     * <p>Retrieves a list of agent runtimes for the current user. You can filter the results based on criteria such as name and tags. This operation supports pagination.</p>
      * 
      * <b>summary</b> : 
-     * <p>列出智能体运行时</p>
+     * <p>Retrieves a list of agent runtimes.</p>
      * 
      * @param request ListAgentRuntimesRequest
      * @param headers map
@@ -2735,10 +2820,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>获取当前用户的所有智能体运行时列表，支持按名称、标签等条件过滤，支持分页查询。</p>
+     * <p>Retrieves a list of agent runtimes for the current user. You can filter the results based on criteria such as name and tags. This operation supports pagination.</p>
      * 
      * <b>summary</b> : 
-     * <p>列出智能体运行时</p>
+     * <p>Retrieves a list of agent runtimes.</p>
      * 
      * @param request ListAgentRuntimesRequest
      * @return ListAgentRuntimesResponse
@@ -2751,10 +2836,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>获取当前用户的所有浏览器实例列表，支持按名称、状态等条件过滤，支持分页查询。</p>
+     * <p>Retrieves a list of all browser instances for the current user. Supports filtering by conditions such as name and status, and supports paginated queries.</p>
      * 
      * <b>summary</b> : 
-     * <p>列出浏览器实例</p>
+     * <p>List Browser Sandboxes</p>
      * 
      * @param request ListBrowsersRequest
      * @param headers map
@@ -2800,10 +2885,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>获取当前用户的所有浏览器实例列表，支持按名称、状态等条件过滤，支持分页查询。</p>
+     * <p>Retrieves a list of all browser instances for the current user. Supports filtering by conditions such as name and status, and supports paginated queries.</p>
      * 
      * <b>summary</b> : 
-     * <p>列出浏览器实例</p>
+     * <p>List Browser Sandboxes</p>
      * 
      * @param request ListBrowsersRequest
      * @return ListBrowsersResponse
@@ -2816,10 +2901,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>获取当前用户的所有代码解释器实例列表，支持按名称等条件过滤，支持分页查询。</p>
+     * <p>Retrieve a list of all code interpreter instances for the current user, with support for filtering by name and pagination.</p>
      * 
      * <b>summary</b> : 
-     * <p>列出代码解释器</p>
+     * <p>List Code Interpreters</p>
      * 
      * @param request ListCodeInterpretersRequest
      * @param headers map
@@ -2861,10 +2946,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>获取当前用户的所有代码解释器实例列表，支持按名称等条件过滤，支持分页查询。</p>
+     * <p>Retrieve a list of all code interpreter instances for the current user, with support for filtering by name and pagination.</p>
      * 
      * <b>summary</b> : 
-     * <p>列出代码解释器</p>
+     * <p>List Code Interpreters</p>
      * 
      * @param request ListCodeInterpretersRequest
      * @return ListCodeInterpretersResponse
@@ -2876,8 +2961,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Lists the credentials in your account. This operation supports filtering and pagination.</p>
+     * 
      * <b>summary</b> : 
-     * <p>List credentials</p>
+     * <p>Lists all credentials.</p>
      * 
      * @param request ListCredentialsRequest
      * @param headers map
@@ -2942,8 +3030,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Lists the credentials in your account. This operation supports filtering and pagination.</p>
+     * 
      * <b>summary</b> : 
-     * <p>List credentials</p>
+     * <p>Lists all credentials.</p>
      * 
      * @param request ListCredentialsRequest
      * @return ListCredentialsResponse
@@ -2956,7 +3047,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>自定义域名列表</p>
+     * <p>Lists custom domains.</p>
      * 
      * @param request ListCustomDomainsRequest
      * @param headers map
@@ -3010,7 +3101,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>自定义域名列表</p>
+     * <p>Lists custom domains.</p>
      * 
      * @param request ListCustomDomainsRequest
      * @return ListCustomDomainsResponse
@@ -3023,10 +3114,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>获取指定工作流的所有端点列表，支持分页查询。</p>
+     * <p>Retrieve all endpoints for a specified workflow, with pagination support.</p>
      * 
      * <b>summary</b> : 
-     * <p>列出工作流端点</p>
+     * <p>List workflow endpoints.</p>
      * 
      * @param request ListFlowEndpointsRequest
      * @param headers map
@@ -3064,10 +3155,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>获取指定工作流的所有端点列表，支持分页查询。</p>
+     * <p>Retrieve all endpoints for a specified workflow, with pagination support.</p>
      * 
      * <b>summary</b> : 
-     * <p>列出工作流端点</p>
+     * <p>List workflow endpoints.</p>
      * 
      * @param request ListFlowEndpointsRequest
      * @return ListFlowEndpointsResponse
@@ -3080,10 +3171,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>获取指定工作流的所有版本列表，支持分页查询。</p>
+     * <p>Returns a paginated list of all versions for a specified flow.</p>
      * 
      * <b>summary</b> : 
-     * <p>列出工作流版本</p>
+     * <p>Lists the versions of a flow.</p>
      * 
      * @param request ListFlowVersionsRequest
      * @param headers map
@@ -3121,10 +3212,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>获取指定工作流的所有版本列表，支持分页查询。</p>
+     * <p>Returns a paginated list of all versions for a specified flow.</p>
      * 
      * <b>summary</b> : 
-     * <p>列出工作流版本</p>
+     * <p>Lists the versions of a flow.</p>
      * 
      * @param request ListFlowVersionsRequest
      * @return ListFlowVersionsResponse
@@ -3140,7 +3231,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>获取当前用户的工作流列表，支持按名称、工作空间等条件过滤，支持分页查询。</p>
      * 
      * <b>summary</b> : 
-     * <p>列出工作流</p>
+     * <p>List flows</p>
      * 
      * @param request ListFlowsRequest
      * @param headers map
@@ -3193,7 +3284,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>获取当前用户的工作流列表，支持按名称、工作空间等条件过滤，支持分页查询。</p>
      * 
      * <b>summary</b> : 
-     * <p>列出工作流</p>
+     * <p>List flows</p>
      * 
      * @param request ListFlowsRequest
      * @return ListFlowsResponse
@@ -3206,10 +3297,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>GET /2025-09-10/agents/im-bots；200 OK；data 含 items、pageNumber、pageSize、total；pageNumber 默认 1、pageSize 默认 20、上限 100；可按 botName（子串忽略大小写）、agentRuntimeId、botBizType、status 筛选</p>
+     * <p>Send a GET request to the <code>/2025-09-10/agents/im-bots</code> endpoint to retrieve a paginated list of IM bots. Use the <code>botName</code>, <code>agentRuntimeId</code>, <code>botBizType</code>, and <code>status</code> query parameters to filter the results. For pagination, the <code>pageNumber</code> defaults to 1 and the <code>pageSize</code> defaults to 20, with a maximum of 100.</p>
      * 
      * <b>summary</b> : 
-     * <p>分页列举 IM Bots</p>
+     * <p>Retrieves a paginated list of IM bots.</p>
      * 
      * @param request ListIMBotsRequest
      * @param headers map
@@ -3263,10 +3354,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>GET /2025-09-10/agents/im-bots；200 OK；data 含 items、pageNumber、pageSize、total；pageNumber 默认 1、pageSize 默认 20、上限 100；可按 botName（子串忽略大小写）、agentRuntimeId、botBizType、status 筛选</p>
+     * <p>Send a GET request to the <code>/2025-09-10/agents/im-bots</code> endpoint to retrieve a paginated list of IM bots. Use the <code>botName</code>, <code>agentRuntimeId</code>, <code>botBizType</code>, and <code>status</code> query parameters to filter the results. For pagination, the <code>pageNumber</code> defaults to 1 and the <code>pageSize</code> defaults to 20, with a maximum of 100.</p>
      * 
      * <b>summary</b> : 
-     * <p>分页列举 IM Bots</p>
+     * <p>Retrieves a paginated list of IM bots.</p>
      * 
      * @param request ListIMBotsRequest
      * @return ListIMBotsResponse
@@ -3279,7 +3370,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>列出知识库</p>
+     * <p>Lists the knowledge bases in your account.</p>
      * 
      * @param request ListKnowledgeBasesRequest
      * @param headers map
@@ -3329,7 +3420,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>列出知识库</p>
+     * <p>Lists the knowledge bases in your account.</p>
      * 
      * @param request ListKnowledgeBasesRequest
      * @return ListKnowledgeBasesResponse
@@ -3342,7 +3433,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询记忆存储列表</p>
+     * <p>Returns a paginated list of memory collections.</p>
      * 
      * @param request ListMemoryCollectionsRequest
      * @param headers map
@@ -3400,7 +3491,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询记忆存储列表</p>
+     * <p>Returns a paginated list of memory collections.</p>
      * 
      * @param request ListMemoryCollectionsRequest
      * @return ListMemoryCollectionsResponse
@@ -3412,8 +3503,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Lists the available model providers. This operation supports filtering and pagination.</p>
+     * 
      * <b>summary</b> : 
-     * <p>查询支持的模型提供商及其模型</p>
+     * <p>Lists all model providers.</p>
      * 
      * @param request ListModelProvidersRequest
      * @param headers map
@@ -3462,8 +3556,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Lists the available model providers. This operation supports filtering and pagination.</p>
+     * 
      * <b>summary</b> : 
-     * <p>查询支持的模型提供商及其模型</p>
+     * <p>Lists all model providers.</p>
      * 
      * @param request ListModelProvidersRequest
      * @return ListModelProvidersResponse
@@ -3475,8 +3572,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Retrieves a paginated list of all Model Proxies for the current user. You can filter the list by status.</p>
+     * 
      * <b>summary</b> : 
-     * <p>model列表</p>
+     * <p>Lists all Model Proxies.</p>
      * 
      * @param request ListModelProxiesRequest
      * @param headers map
@@ -3529,8 +3629,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Retrieves a paginated list of all Model Proxies for the current user. You can filter the list by status.</p>
+     * 
      * <b>summary</b> : 
-     * <p>model列表</p>
+     * <p>Lists all Model Proxies.</p>
      * 
      * @param request ListModelProxiesRequest
      * @return ListModelProxiesResponse
@@ -3542,8 +3645,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Retrieves a list of all models for the current user. You can filter the models by type and paginate the results.</p>
+     * 
      * <b>summary</b> : 
-     * <p>model列表</p>
+     * <p>Lists all models.</p>
      * 
      * @param request ListModelServicesRequest
      * @param headers map
@@ -3600,8 +3706,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Retrieves a list of all models for the current user. You can filter the models by type and paginate the results.</p>
+     * 
      * <b>summary</b> : 
-     * <p>model列表</p>
+     * <p>Lists all models.</p>
      * 
      * @param request ListModelServicesRequest
      * @return ListModelServicesResponse
@@ -3614,10 +3723,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>获取当前用户的所有沙箱列表，支持按模板名称过滤，支持分页查询。</p>
+     * <p>Retrieves a list of sandboxes for the current user. You can filter the results by template name, template type, or status. This operation supports pagination.</p>
      * 
      * <b>summary</b> : 
-     * <p>列出沙箱</p>
+     * <p>Returns a list of sandboxes.</p>
      * 
      * @param request ListSandboxesRequest
      * @param headers map
@@ -3671,10 +3780,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>获取当前用户的所有沙箱列表，支持按模板名称过滤，支持分页查询。</p>
+     * <p>Retrieves a list of sandboxes for the current user. You can filter the results by template name, template type, or status. This operation supports pagination.</p>
      * 
      * <b>summary</b> : 
-     * <p>列出沙箱</p>
+     * <p>Returns a list of sandboxes.</p>
      * 
      * @param request ListSandboxesRequest
      * @return ListSandboxesResponse
@@ -3687,10 +3796,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>获取当前用户的所有模板列表，支持按模板类型过滤，支持分页查询。</p>
+     * <p>Lists all templates for the current user. You can filter the results by template type and use pagination.</p>
      * 
      * <b>summary</b> : 
-     * <p>列出模板</p>
+     * <p>Lists templates.</p>
      * 
      * @param request ListTemplatesRequest
      * @param headers map
@@ -3748,10 +3857,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>获取当前用户的所有模板列表，支持按模板类型过滤，支持分页查询。</p>
+     * <p>Lists all templates for the current user. You can filter the results by template type and use pagination.</p>
      * 
      * <b>summary</b> : 
-     * <p>列出模板</p>
+     * <p>Lists templates.</p>
      * 
      * @param request ListTemplatesRequest
      * @return ListTemplatesResponse
@@ -3764,10 +3873,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>查询工具列表，支持分页查询和按工具类型、工作空间等条件过滤。返回符合条件的工具列表及分页信息。</p>
+     * <p>Query the tool list. Support paged query and conditional filtering by tool type, workspace, and other criteria. Return the list of tools that meet the conditions and paging information.</p>
      * 
      * <b>summary</b> : 
-     * <p>工具列表</p>
+     * <p>List tools</p>
      * 
      * @param request ListToolsRequest
      * @param headers map
@@ -3821,10 +3930,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>查询工具列表，支持分页查询和按工具类型、工作空间等条件过滤。返回符合条件的工具列表及分页信息。</p>
+     * <p>Query the tool list. Support paged query and conditional filtering by tool type, workspace, and other criteria. Return the list of tools that meet the conditions and paging information.</p>
      * 
      * <b>summary</b> : 
-     * <p>工具列表</p>
+     * <p>List tools</p>
      * 
      * @param request ListToolsRequest
      * @return ListToolsResponse
@@ -3837,10 +3946,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>获取工作空间列表</p>
+     * <p>Lists all workspaces.</p>
      * 
      * <b>summary</b> : 
-     * <p>获取工作空间列表</p>
+     * <p>Lists all workspaces in your account.</p>
      * 
      * @param request ListWorkspacesRequest
      * @param headers map
@@ -3886,10 +3995,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>获取工作空间列表</p>
+     * <p>Lists all workspaces.</p>
      * 
      * <b>summary</b> : 
-     * <p>获取工作空间列表</p>
+     * <p>Lists all workspaces in your account.</p>
      * 
      * @param request ListWorkspacesRequest
      * @return ListWorkspacesResponse
@@ -3902,10 +4011,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>停止指定的沙箱实例。停止后，沙箱将进入TERMINATED状态。</p>
+     * <p>This API is used to pause a sandbox. When invoked, the system takes a snapshot of the sandbox, capturing and persisting the memory and disk states. The user can recover the sandbox at a later time.<br>Note that sandbox snapshots are retained for only 30 days. After 30 days, recovery becomes unavailable.</p>
      * 
      * <b>summary</b> : 
-     * <p>暂停沙箱</p>
+     * <p>Pause the sandbox and retain snapshots of its memory and file system. The sandbox enters the PAUSED state so that it can be recovered later.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -3931,10 +4040,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>停止指定的沙箱实例。停止后，沙箱将进入TERMINATED状态。</p>
+     * <p>This API is used to pause a sandbox. When invoked, the system takes a snapshot of the sandbox, capturing and persisting the memory and disk states. The user can recover the sandbox at a later time.<br>Note that sandbox snapshots are retained for only 30 days. After 30 days, recovery becomes unavailable.</p>
      * 
      * <b>summary</b> : 
-     * <p>暂停沙箱</p>
+     * <p>Pause the sandbox and retain snapshots of its memory and file system. The sandbox enters the PAUSED state so that it can be recovered later.</p>
      * @return PauseSandboxResponse
      */
     public PauseSandboxResponse pauseSandbox(String sandboxId) throws Exception {
@@ -3945,10 +4054,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>为指定工作流发布新版本，用于版本管理和回滚。</p>
+     * <p>Publishes a new version of a specified workflow. This operation supports version management and rollbacks.</p>
      * 
      * <b>summary</b> : 
-     * <p>发布工作流版本</p>
+     * <p>Publishes a workflow version.</p>
      * 
      * @param request PublishFlowVersionRequest
      * @param headers map
@@ -3977,10 +4086,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>为指定工作流发布新版本，用于版本管理和回滚。</p>
+     * <p>Publishes a new version of a specified workflow. This operation supports version management and rollbacks.</p>
      * 
      * <b>summary</b> : 
-     * <p>发布工作流版本</p>
+     * <p>Publishes a workflow version.</p>
      * 
      * @param request PublishFlowVersionRequest
      * @return PublishFlowVersionResponse
@@ -3993,10 +4102,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>为指定的智能体运行时发布新版本，用于版本管理和部署。新版本可以包含代码更新、配置变更等内容。</p>
+     * <p>Publishes a new version for a specified agent runtime for version management and deployment. The new version can include code updates, configuration changes, and other content.</p>
      * 
      * <b>summary</b> : 
-     * <p>发布运行时版本</p>
+     * <p>Publishes a new version of an agent runtime.</p>
      * 
      * @param request PublishRuntimeVersionRequest
      * @param headers map
@@ -4025,10 +4134,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>为指定的智能体运行时发布新版本，用于版本管理和部署。新版本可以包含代码更新、配置变更等内容。</p>
+     * <p>Publishes a new version for a specified agent runtime for version management and deployment. The new version can include code updates, configuration changes, and other content.</p>
      * 
      * <b>summary</b> : 
-     * <p>发布运行时版本</p>
+     * <p>Publishes a new version of an agent runtime.</p>
      * 
      * @param request PublishRuntimeVersionRequest
      * @return PublishRuntimeVersionResponse
@@ -4040,8 +4149,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This API resumes a sandbox instance from the paused state to the ready state, allowing the user to invoke it and restore it to the state it was in before being paused.</p>
+     * 
      * <b>summary</b> : 
-     * <p>恢复沙箱</p>
+     * <p>Resume a paused sandbox instance to restore it from the PAUSED state to the READY (running) state.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -4066,8 +4178,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This API resumes a sandbox instance from the paused state to the ready state, allowing the user to invoke it and restore it to the state it was in before being paused.</p>
+     * 
      * <b>summary</b> : 
-     * <p>恢复沙箱</p>
+     * <p>Resume a paused sandbox instance to restore it from the PAUSED state to the READY (running) state.</p>
      * @return ResumeSandboxResponse
      */
     public ResumeSandboxResponse resumeSandbox(String sandboxId) throws Exception {
@@ -4078,10 +4193,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>停止指定的沙箱实例。停止后，沙箱将进入TERMINATED状态。</p>
+     * <p>Stops the specified sandbox instance. After the operation, the sandbox enters the TERMINATED state.</p>
      * 
      * <b>summary</b> : 
-     * <p>停止沙箱</p>
+     * <p>Stops a sandbox.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -4107,10 +4222,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>停止指定的沙箱实例。停止后，沙箱将进入TERMINATED状态。</p>
+     * <p>Stops the specified sandbox instance. After the operation, the sandbox enters the TERMINATED state.</p>
      * 
      * <b>summary</b> : 
-     * <p>停止沙箱</p>
+     * <p>Stops a sandbox.</p>
      * @return StopSandboxResponse
      */
     public StopSandboxResponse stopSandbox(String sandboxId) throws Exception {
@@ -4120,8 +4235,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Stopping the MCP service deletes the associated MCP resources and makes the endpoint inaccessible.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Stop the TemplateMCP service.</p>
+     * <p>Stops the TemplateMCP service.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -4146,8 +4264,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Stopping the MCP service deletes the associated MCP resources and makes the endpoint inaccessible.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Stop the TemplateMCP service.</p>
+     * <p>Stops the TemplateMCP service.</p>
      * @return StopTemplateMCPResponse
      */
     public StopTemplateMCPResponse stopTemplateMCP(String templateName) throws Exception {
@@ -4158,10 +4279,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>更新指定智能体运行时的配置信息，包括资源分配、网络配置、环境变量等。更新操作会触发运行时重启。</p>
+     * <p>Updates the configuration of a specified agent runtime, including resource allocation, network configuration, and environment variables. The update operation triggers a runtime restart.</p>
      * 
      * <b>summary</b> : 
-     * <p>更新智能体运行时</p>
+     * <p>UpdateAgentRuntime</p>
      * 
      * @param request UpdateAgentRuntimeRequest
      * @param headers map
@@ -4190,10 +4311,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>更新指定智能体运行时的配置信息，包括资源分配、网络配置、环境变量等。更新操作会触发运行时重启。</p>
+     * <p>Updates the configuration of a specified agent runtime, including resource allocation, network configuration, and environment variables. The update operation triggers a runtime restart.</p>
      * 
      * <b>summary</b> : 
-     * <p>更新智能体运行时</p>
+     * <p>UpdateAgentRuntime</p>
      * 
      * @param request UpdateAgentRuntimeRequest
      * @return UpdateAgentRuntimeResponse
@@ -4206,7 +4327,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Update an agent runtime endpoint</p>
+     * <p>Update Agent Runtime Endpoint</p>
      * 
      * @param request UpdateAgentRuntimeEndpointRequest
      * @param headers map
@@ -4235,7 +4356,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Update an agent runtime endpoint</p>
+     * <p>Update Agent Runtime Endpoint</p>
      * 
      * @param request UpdateAgentRuntimeEndpointRequest
      * @return UpdateAgentRuntimeEndpointResponse
@@ -4247,8 +4368,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Updates the configuration of a specified credential.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Update a credential</p>
+     * <p>Updates a credential.</p>
      * 
      * @param request UpdateCredentialRequest
      * @param headers map
@@ -4276,8 +4400,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Updates the configuration of a specified credential.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Update a credential</p>
+     * <p>Updates a credential.</p>
      * 
      * @param request UpdateCredentialRequest
      * @return UpdateCredentialResponse
@@ -4290,7 +4417,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新自定义域名</p>
+     * <p>Updates a custom domain.</p>
      * 
      * @param request UpdateCustomDomainRequest
      * @param headers map
@@ -4319,7 +4446,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新自定义域名</p>
+     * <p>Updates a custom domain.</p>
      * 
      * @param request UpdateCustomDomainRequest
      * @return UpdateCustomDomainResponse
@@ -4332,10 +4459,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>更新指定工作流的配置信息，包括定义、执行模式、环境变量等。</p>
+     * <p>Updates the configuration of a specified workflow, including the definition, execution mode, and environment variables.</p>
      * 
      * <b>summary</b> : 
-     * <p>更新工作流</p>
+     * <p>Updates a workflow.</p>
      * 
      * @param request UpdateFlowRequest
      * @param headers map
@@ -4364,10 +4491,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>更新指定工作流的配置信息，包括定义、执行模式、环境变量等。</p>
+     * <p>Updates the configuration of a specified workflow, including the definition, execution mode, and environment variables.</p>
      * 
      * <b>summary</b> : 
-     * <p>更新工作流</p>
+     * <p>Updates a workflow.</p>
      * 
      * @param request UpdateFlowRequest
      * @return UpdateFlowResponse
@@ -4383,7 +4510,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>更新指定工作流的草稿版本，草稿更新不影响已发布的工作流版本。</p>
      * 
      * <b>summary</b> : 
-     * <p>更新工作流草稿</p>
+     * <p>Update a flow draft.</p>
      * 
      * @param request UpdateFlowDraftRequest
      * @param headers map
@@ -4415,7 +4542,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>更新指定工作流的草稿版本，草稿更新不影响已发布的工作流版本。</p>
      * 
      * <b>summary</b> : 
-     * <p>更新工作流草稿</p>
+     * <p>Update a flow draft.</p>
      * 
      * @param request UpdateFlowDraftRequest
      * @return UpdateFlowDraftResponse
@@ -4431,7 +4558,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>更新指定工作流端点的配置信息，包括目标版本、路由配置等。</p>
      * 
      * <b>summary</b> : 
-     * <p>更新工作流端点</p>
+     * <p>Update Flow Endpoint</p>
      * 
      * @param request UpdateFlowEndpointRequest
      * @param headers map
@@ -4463,7 +4590,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>更新指定工作流端点的配置信息，包括目标版本、路由配置等。</p>
      * 
      * <b>summary</b> : 
-     * <p>更新工作流端点</p>
+     * <p>Update Flow Endpoint</p>
      * 
      * @param request UpdateFlowEndpointRequest
      * @return UpdateFlowEndpointResponse
@@ -4479,7 +4606,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>PUT /2025-09-10/agents/im-bots/{imBotId}；成功建议 HTTP 202，Body 标准包装，data 为更新后 IMBotInfo</p>
      * 
      * <b>summary</b> : 
-     * <p>更新 IM Bot</p>
+     * <p>Updates an IM bot.</p>
      * 
      * @param request UpdateIMBotRequest
      * @param headers map
@@ -4511,7 +4638,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>PUT /2025-09-10/agents/im-bots/{imBotId}；成功建议 HTTP 202，Body 标准包装，data 为更新后 IMBotInfo</p>
      * 
      * <b>summary</b> : 
-     * <p>更新 IM Bot</p>
+     * <p>Updates an IM bot.</p>
      * 
      * @param request UpdateIMBotRequest
      * @return UpdateIMBotResponse
@@ -4524,7 +4651,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新知识库</p>
+     * <p>Updates the configuration of a knowledge base.</p>
      * 
      * @param request UpdateKnowledgeBaseRequest
      * @param headers map
@@ -4553,7 +4680,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新知识库</p>
+     * <p>Updates the configuration of a knowledge base.</p>
      * 
      * @param request UpdateKnowledgeBaseRequest
      * @return UpdateKnowledgeBaseResponse
@@ -4566,7 +4693,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改记忆存储信息</p>
+     * <p>Modifies a memory collection.</p>
      * 
      * @param request UpdateMemoryCollectionRequest
      * @param headers map
@@ -4595,7 +4722,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改记忆存储信息</p>
+     * <p>Modifies a memory collection.</p>
      * 
      * @param request UpdateMemoryCollectionRequest
      * @return UpdateMemoryCollectionResponse
@@ -4607,8 +4734,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Use this operation to update the configuration of a specific model proxy.</p>
+     * 
      * <b>summary</b> : 
-     * <p>更新模型</p>
+     * <p>Updates the configuration of a model proxy.</p>
      * 
      * @param request UpdateModelProxyRequest
      * @param headers map
@@ -4636,8 +4766,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Use this operation to update the configuration of a specific model proxy.</p>
+     * 
      * <b>summary</b> : 
-     * <p>更新模型</p>
+     * <p>Updates the configuration of a model proxy.</p>
      * 
      * @param request UpdateModelProxyRequest
      * @return UpdateModelProxyResponse
@@ -4649,8 +4782,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This operation modifies the configuration of an existing model service.</p>
+     * 
      * <b>summary</b> : 
-     * <p>更新模型</p>
+     * <p>Updates a model service.</p>
      * 
      * @param request UpdateModelServiceRequest
      * @param headers map
@@ -4678,8 +4814,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This operation modifies the configuration of an existing model service.</p>
+     * 
      * <b>summary</b> : 
-     * <p>更新模型</p>
+     * <p>Updates a model service.</p>
      * 
      * @param request UpdateModelServiceRequest
      * @return UpdateModelServiceResponse
@@ -4692,10 +4831,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>更新指定模板的配置信息，包括资源配置、网络配置、环境变量等。</p>
+     * <p>Updates a template\&quot;s configuration, including its resource configuration, network configuration, and environment variables.</p>
      * 
      * <b>summary</b> : 
-     * <p>更新模板</p>
+     * <p>Updates a template.</p>
      * 
      * @param request UpdateTemplateRequest
      * @param headers map
@@ -4730,10 +4869,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>更新指定模板的配置信息，包括资源配置、网络配置、环境变量等。</p>
+     * <p>Updates a template\&quot;s configuration, including its resource configuration, network configuration, and environment variables.</p>
      * 
      * <b>summary</b> : 
-     * <p>更新模板</p>
+     * <p>Updates a template.</p>
      * 
      * @param request UpdateTemplateRequest
      * @return UpdateTemplateResponse
@@ -4746,10 +4885,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>更新现有工具的配置信息，可以修改工具的描述、资源配置、网络配置等。更新操作支持部分更新，只需提供需要修改的字段。</p>
+     * <p>Updates the configuration of an existing tool. You can modify its description, resource configuration, network configuration, and more. This operation supports partial updates. You only need to specify the fields that you want to modify.</p>
      * 
      * <b>summary</b> : 
-     * <p>更新工具</p>
+     * <p>Updates a tool.</p>
      * 
      * @param request UpdateToolRequest
      * @param headers map
@@ -4778,10 +4917,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>更新现有工具的配置信息，可以修改工具的描述、资源配置、网络配置等。更新操作支持部分更新，只需提供需要修改的字段。</p>
+     * <p>Updates the configuration of an existing tool. You can modify its description, resource configuration, network configuration, and more. This operation supports partial updates. You only need to specify the fields that you want to modify.</p>
      * 
      * <b>summary</b> : 
-     * <p>更新工具</p>
+     * <p>Updates a tool.</p>
      * 
      * @param request UpdateToolRequest
      * @return UpdateToolResponse
@@ -4794,10 +4933,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>更新工作空间</p>
+     * <p>Updates the properties of a workspace.</p>
      * 
      * <b>summary</b> : 
-     * <p>更新工作空间</p>
+     * <p>Updates a workspace.</p>
      * 
      * @param request UpdateWorkspaceRequest
      * @param headers map
@@ -4826,10 +4965,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>更新工作空间</p>
+     * <p>Updates the properties of a workspace.</p>
      * 
      * <b>summary</b> : 
-     * <p>更新工作空间</p>
+     * <p>Updates a workspace.</p>
      * 
      * @param request UpdateWorkspaceRequest
      * @return UpdateWorkspaceResponse
@@ -4842,7 +4981,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取工作空间下的发现端点</p>
+     * <p>Updates the discovery endpoint configuration for a specified workspace.</p>
      * 
      * @param request UpdateWorkspaceDiscoveryEndpointsRequest
      * @param headers map
@@ -4871,7 +5010,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取工作空间下的发现端点</p>
+     * <p>Updates the discovery endpoint configuration for a specified workspace.</p>
      * 
      * @param request UpdateWorkspaceDiscoveryEndpointsRequest
      * @return UpdateWorkspaceDiscoveryEndpointsResponse

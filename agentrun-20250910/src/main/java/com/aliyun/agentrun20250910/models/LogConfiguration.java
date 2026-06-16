@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class LogConfiguration extends TeaModel {
     /**
-     * <p>SLS日志库名称</p>
+     * <p>The name of the SLS logstore.</p>
      * 
      * <strong>example:</strong>
      * <p>agent-runtime-logs</p>
@@ -14,7 +14,7 @@ public class LogConfiguration extends TeaModel {
     public String logstore;
 
     /**
-     * <p>SLS项目名称</p>
+     * <p>The name of the SLS project.</p>
      * 
      * <strong>example:</strong>
      * <p>agent-runtime-logs</p>

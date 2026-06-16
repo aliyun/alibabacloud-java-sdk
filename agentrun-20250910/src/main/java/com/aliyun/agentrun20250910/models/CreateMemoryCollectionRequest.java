@@ -4,6 +4,9 @@ package com.aliyun.agentrun20250910.models;
 import com.aliyun.tea.*;
 
 public class CreateMemoryCollectionRequest extends TeaModel {
+    /**
+     * <p>Configuration settings to create a memory collection.</p>
+     */
     @NameInMap("body")
     public CreateMemoryCollectionInput body;
 

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateTemplateInput extends TeaModel {
     /**
+     * <p>Controls whether data plane calls can create, stop, or delete the sandbox.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      * 
@@ -14,17 +16,20 @@ public class CreateTemplateInput extends TeaModel {
     @NameInMap("allowAnonymousManage")
     public Boolean allowAnonymousManage;
 
+    /**
+     * <p>The Application Real-Time Monitoring Service (ARMS) configuration.</p>
+     */
     @NameInMap("armsConfiguration")
     public ArmsConfiguration armsConfiguration;
 
     /**
-     * <p>容器配置，只允许基于 Browser/Code Interpreter 基础镜像的 image</p>
+     * <p>The container configuration. You can only use images based on the Browser or Code Interpreter base images.</p>
      */
     @NameInMap("containerConfiguration")
     public ContainerConfiguration containerConfiguration;
 
     /**
-     * <p>CPU资源配置（单位：核心）</p>
+     * <p>The number of CPU cores.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -33,40 +38,65 @@ public class CreateTemplateInput extends TeaModel {
     @NameInMap("cpu")
     public Float cpu;
 
+    /**
+     * <p>The credential configuration.</p>
+     */
     @NameInMap("credentialConfiguration")
     public CredentialConfiguration credentialConfiguration;
 
+    /**
+     * <p>The template description.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>模板描述</p>
+     */
     @NameInMap("description")
     public String description;
 
     /**
+     * <p>The disk size in MB.</p>
+     * 
      * <strong>example:</strong>
      * <p>10240</p>
      */
     @NameInMap("diskSize")
     public Integer diskSize;
 
+    /**
+     * <p>Controls whether to enable the Sandbox Agent.</p>
+     */
     @NameInMap("enableAgent")
     public Boolean enableAgent;
 
+    /**
+     * <p>Specifies whether to enable the pre-stop hook.</p>
+     */
     @NameInMap("enablePreStop")
     public Boolean enablePreStop;
 
+    /**
+     * <p>The environment variables for the sandbox.</p>
+     */
     @NameInMap("environmentVariables")
     public java.util.Map<String, String> environmentVariables;
 
     /**
+     * <p>The Alibaba Cloud Resource Name (ARN) of the execution role.</p>
+     * 
      * <strong>example:</strong>
      * <p>acs:ram::123456789:role/aliyunfcdefaultrole</p>
      */
     @NameInMap("executionRoleArn")
     public String executionRoleArn;
 
+    /**
+     * <p>The log configuration.</p>
+     */
     @NameInMap("logConfiguration")
     public LogConfiguration logConfiguration;
 
     /**
-     * <p>内存资源配置（单位：MB）</p>
+     * <p>The memory size in MB.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -75,23 +105,33 @@ public class CreateTemplateInput extends TeaModel {
     @NameInMap("memory")
     public Integer memory;
 
+    /**
+     * <p>The Network Attached Storage (NAS) mount configuration.</p>
+     */
     @NameInMap("nasConfig")
     public NASConfig nasConfig;
 
     /**
+     * <p>The network configuration.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("networkConfiguration")
     public NetworkConfiguration networkConfiguration;
 
+    /**
+     * <p>A list of Object Storage Service (OSS) configurations.</p>
+     */
     @NameInMap("ossConfiguration")
     public java.util.List<OssConfiguration> ossConfiguration;
 
+    /**
+     * <p>The timeout for the pre-stop hook, in seconds. This parameter applies only when <code>enablePreStop</code> is set to <code>true</code>.</p>
+     */
     @NameInMap("preStopTimeoutInSeconds")
     public Integer preStopTimeoutInSeconds;
 
     /**
-     * <p>沙箱空闲超时时间（秒）</p>
+     * <p>The duration in seconds that a sandbox can be idle before it is automatically stopped.</p>
      * 
      * <strong>example:</strong>
      * <p>1800</p>
@@ -100,7 +140,7 @@ public class CreateTemplateInput extends TeaModel {
     public Integer sandboxIdleTimeoutInSeconds;
 
     /**
-     * <p>沙箱存活时间（秒）</p>
+     * <p>The maximum time-to-live (TTL) in seconds for the sandbox. The sandbox is terminated after this duration, regardless of activity.</p>
      * 
      * <strong>example:</strong>
      * <p>26000</p>
@@ -108,17 +148,20 @@ public class CreateTemplateInput extends TeaModel {
     @NameInMap("sandboxTTLInSeconds")
     public Integer sandboxTTLInSeconds;
 
+    /**
+     * <p>The scaling configuration.</p>
+     */
     @NameInMap("scalingConfig")
     public ScalingConfig scalingConfig;
 
     /**
-     * <p>模板配置（灵活的对象结构，根据 templateType 不同而不同）</p>
+     * <p>The template configuration. This is a flexible object whose structure varies depending on the <code>templateType</code>.</p>
      */
     @NameInMap("templateConfiguration")
     public java.util.Map<String, ?> templateConfiguration;
 
     /**
-     * <p>模板名称（要求账号唯一的）</p>
+     * <p>A unique name for the template within your account.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -128,6 +171,7 @@ public class CreateTemplateInput extends TeaModel {
     public String templateName;
 
     /**
+     * <p>The template type.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -136,6 +180,9 @@ public class CreateTemplateInput extends TeaModel {
     @NameInMap("templateType")
     public String templateType;
 
+    /**
+     * <p>The ID of the workspace.</p>
+     */
     @NameInMap("workspaceId")
     public String workspaceId;
 

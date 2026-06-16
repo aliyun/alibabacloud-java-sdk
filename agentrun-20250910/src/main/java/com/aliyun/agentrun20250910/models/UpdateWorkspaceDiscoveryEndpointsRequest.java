@@ -4,6 +4,9 @@ package com.aliyun.agentrun20250910.models;
 import com.aliyun.tea.*;
 
 public class UpdateWorkspaceDiscoveryEndpointsRequest extends TeaModel {
+    /**
+     * <p>The discovery endpoint configuration to apply.</p>
+     */
     @NameInMap("body")
     public UpdateDiscoveryEndpointsInput body;
 

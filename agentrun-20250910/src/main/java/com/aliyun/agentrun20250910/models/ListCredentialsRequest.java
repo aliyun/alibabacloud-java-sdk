@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListCredentialsRequest extends TeaModel {
     /**
-     * <p>credentialAuthType</p>
+     * <p>Filters the results by credential type.</p>
      * 
      * <strong>example:</strong>
      * <p>credentialAuthType</p>
@@ -14,7 +14,7 @@ public class ListCredentialsRequest extends TeaModel {
     public String credentialAuthType;
 
     /**
-     * <p>credentialName</p>
+     * <p>Filters the results by credential name.</p>
      * 
      * <strong>example:</strong>
      * <p>credentialName</p>
@@ -23,7 +23,7 @@ public class ListCredentialsRequest extends TeaModel {
     public String credentialName;
 
     /**
-     * <p>credentialSourceType</p>
+     * <p>Filters the results by credential source type.</p>
      * 
      * <strong>example:</strong>
      * <p>credentialSourceType</p>
@@ -32,6 +32,8 @@ public class ListCredentialsRequest extends TeaModel {
     public String credentialSourceType;
 
     /**
+     * <p>Filters the results based on the credential\&quot;s enabled status.</p>
+     * 
      * <strong>example:</strong>
      * <p>False</p>
      */
@@ -39,6 +41,8 @@ public class ListCredentialsRequest extends TeaModel {
     public Boolean enabled;
 
     /**
+     * <p>The page number of the results to return.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -46,6 +50,8 @@ public class ListCredentialsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of credentials to return per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
@@ -53,15 +59,29 @@ public class ListCredentialsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>Filters the results by provider.</p>
+     * 
      * <strong>example:</strong>
      * <p>Aliyun</p>
      */
     @NameInMap("provider")
     public String provider;
 
+    /**
+     * <p>Unique identifier of the workspace</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ws-1</p>
+     */
     @NameInMap("workspaceId")
     public String workspaceId;
 
+    /**
+     * <p>Multiple workspace identifiers</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ws-1,ws-2</p>
+     */
     @NameInMap("workspaceIds")
     public String workspaceIds;
 

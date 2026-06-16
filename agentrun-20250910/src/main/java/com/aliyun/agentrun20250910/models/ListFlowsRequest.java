@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListFlowsRequest extends TeaModel {
     /**
-     * <p>根据工作流名称进行模糊匹配过滤</p>
+     * <p>Filter by flow name</p>
      * 
      * <strong>example:</strong>
      * <p>my-flow</p>
@@ -14,7 +14,7 @@ public class ListFlowsRequest extends TeaModel {
     public String flowName;
 
     /**
-     * <p>当前页码，从1开始计数</p>
+     * <p>Page number</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -23,7 +23,7 @@ public class ListFlowsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>每页返回的记录数量</p>
+     * <p>Page size</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -32,7 +32,7 @@ public class ListFlowsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>根据工作空间ID进行过滤，用于资源隔离和权限管理</p>
+     * <p>Workspace ID</p>
      * 
      * <strong>example:</strong>
      * <p>ws-1234567890abcdef</p>
@@ -41,6 +41,8 @@ public class ListFlowsRequest extends TeaModel {
     public String workspaceId;
 
     /**
+     * <p>List of workspace IDs</p>
+     * 
      * <strong>example:</strong>
      * <p>ws-1234567890abcdef,ws-1234567890bcdefg</p>
      */

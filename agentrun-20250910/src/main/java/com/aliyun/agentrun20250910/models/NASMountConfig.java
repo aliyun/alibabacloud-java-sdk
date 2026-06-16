@@ -4,10 +4,15 @@ package com.aliyun.agentrun20250910.models;
 import com.aliyun.tea.*;
 
 public class NASMountConfig extends TeaModel {
+    /**
+     * <p>Specifies whether to enable encryption in transit. This option is supported only for general-purpose NAS.</p>
+     */
     @NameInMap("enableTLS")
     public Boolean enableTLS;
 
     /**
+     * <p>Specifies the local mount directory.</p>
+     * 
      * <strong>example:</strong>
      * <p>/home/test</p>
      */
@@ -15,6 +20,8 @@ public class NASMountConfig extends TeaModel {
     public String mountDir;
 
     /**
+     * <p>Specifies the NAS server address.</p>
+     * 
      * <strong>example:</strong>
      * <p>***-uni85.cn-hangzhou.nas.com:/</p>
      */

@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateBrowserRequest extends TeaModel {
     /**
+     * <p>Request body for creation parameters</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("body")

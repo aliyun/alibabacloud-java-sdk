@@ -5,12 +5,14 @@ import com.aliyun.tea.*;
 
 public class ProtocolConfiguration extends TeaModel {
     /**
-     * <p>详细的协议配置信息</p>
+     * <p>Detailed protocol configuration information</p>
      */
     @NameInMap("protocolSettings")
     public java.util.List<ProtocolSettings> protocolSettings;
 
     /**
+     * <p>Protocol Type</p>
+     * 
      * <strong>example:</strong>
      * <p>HTTP</p>
      */

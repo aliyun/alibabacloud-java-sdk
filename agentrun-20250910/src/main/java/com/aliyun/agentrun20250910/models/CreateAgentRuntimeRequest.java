@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateAgentRuntimeRequest extends TeaModel {
     /**
-     * <p>创建智能体运行时所需的完整配置信息，包括运行时名称、资源规格、网络配置、协议配置等</p>
+     * <p>Request parameters for creating an agent runtime</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("body")

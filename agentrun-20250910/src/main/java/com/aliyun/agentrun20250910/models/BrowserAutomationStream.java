@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class BrowserAutomationStream extends TeaModel {
     /**
+     * <p>The WebSocket URL for the stream endpoint.</p>
+     * 
      * <strong>example:</strong>
      * <p>wss://browser-automation.cn-hangzhou.agentrun.aliyuncs.com/stream/bs-1234567890abcdef</p>
      */
@@ -12,6 +14,8 @@ public class BrowserAutomationStream extends TeaModel {
     public String streamEndpoint;
 
     /**
+     * <p>The status of the stream.</p>
+     * 
      * <strong>example:</strong>
      * <p>ACTIVE</p>
      */

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class BrowserStreams extends TeaModel {
     /**
+     * <p>automation stream</p>
+     * 
      * <strong>example:</strong>
      * <p>{}</p>
      */
@@ -12,6 +14,8 @@ public class BrowserStreams extends TeaModel {
     public BrowserAutomationStream automationStream;
 
     /**
+     * <p>real-time view stream</p>
+     * 
      * <strong>example:</strong>
      * <p>{}</p>
      */

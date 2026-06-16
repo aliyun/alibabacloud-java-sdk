@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateIMBotRequest extends TeaModel {
     /**
+     * <p>Contains the configuration details to update for the IM bot.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("body")

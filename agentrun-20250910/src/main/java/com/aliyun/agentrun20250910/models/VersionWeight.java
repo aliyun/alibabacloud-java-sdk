@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class VersionWeight extends TeaModel {
     /**
-     * <p>智能体运行时版本号</p>
+     * <p>Agent runtime version number</p>
      */
     @NameInMap("version")
     public String version;
 
     /**
-     * <p>流量权重比例（0.0-1.0）</p>
+     * <p>Traffic weight ratio (0.0–1.0)</p>
      */
     @NameInMap("weight")
     public Float weight;

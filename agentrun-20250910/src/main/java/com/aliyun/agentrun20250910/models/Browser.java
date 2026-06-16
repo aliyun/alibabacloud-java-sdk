@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class Browser extends TeaModel {
     /**
+     * <p>The unique identifier of the browser.</p>
+     * 
      * <strong>example:</strong>
      * <p>browser-1234567890abcdef</p>
      */
@@ -12,6 +14,8 @@ public class Browser extends TeaModel {
     public String browserId;
 
     /**
+     * <p>The name of the browser.</p>
+     * 
      * <strong>example:</strong>
      * <p>my-browser</p>
      */
@@ -19,6 +23,8 @@ public class Browser extends TeaModel {
     public String browserName;
 
     /**
+     * <p>The number of CPU cores allocated to the browser.</p>
+     * 
      * <strong>example:</strong>
      * <p>2.0</p>
      */
@@ -26,6 +32,8 @@ public class Browser extends TeaModel {
     public Float cpu;
 
     /**
+     * <p>The time the browser was created, in ISO 8601 format.</p>
+     * 
      * <strong>example:</strong>
      * <p>2025-01-10T10:30:00Z</p>
      */
@@ -33,6 +41,8 @@ public class Browser extends TeaModel {
     public String createdAt;
 
     /**
+     * <p>The unique identifier for the credential associated with the browser.</p>
+     * 
      * <strong>example:</strong>
      * <p>cred-1234567890abcdef</p>
      */
@@ -40,6 +50,8 @@ public class Browser extends TeaModel {
     public String credentialId;
 
     /**
+     * <p>A user-defined description for the browser.</p>
+     * 
      * <strong>example:</strong>
      * <p>Web automation browser for testing</p>
      */
@@ -47,6 +59,8 @@ public class Browser extends TeaModel {
     public String description;
 
     /**
+     * <p>The Alibaba Cloud Resource Name (ARN) of the execution role used by the browser.</p>
+     * 
      * <strong>example:</strong>
      * <p>acs:ram::1760720386195983:role/BrowserExecutionRole</p>
      */
@@ -54,6 +68,8 @@ public class Browser extends TeaModel {
     public String executionRoleArn;
 
     /**
+     * <p>The time the browser was last updated, in ISO 8601 format.</p>
+     * 
      * <strong>example:</strong>
      * <p>2025-01-10T11:45:00Z</p>
      */
@@ -61,7 +77,7 @@ public class Browser extends TeaModel {
     public String lastUpdatedAt;
 
     /**
-     * <p>内存资源配置（单位：MB）</p>
+     * <p>The memory allocated to the browser, in megabytes (MB).</p>
      * 
      * <strong>example:</strong>
      * <p>2048</p>
@@ -69,13 +85,21 @@ public class Browser extends TeaModel {
     @NameInMap("memory")
     public Integer memory;
 
+    /**
+     * <p>The network configuration for the browser.</p>
+     */
     @NameInMap("networkConfiguration")
     public NetworkConfiguration networkConfiguration;
 
+    /**
+     * <p>The recording configuration for the browser.</p>
+     */
     @NameInMap("recording")
     public BrowserRecordingConfiguration recording;
 
     /**
+     * <p>The current status of the browser.</p>
+     * 
      * <strong>example:</strong>
      * <p>READY</p>
      */
@@ -83,7 +107,7 @@ public class Browser extends TeaModel {
     public String status;
 
     /**
-     * <p>当前状态的原因说明（如适用）</p>
+     * <p>The reason for the current status, if any.</p>
      * 
      * <strong>example:</strong>
      * <p>Browser is ready for use</p>
@@ -92,6 +116,8 @@ public class Browser extends TeaModel {
     public String statusReason;
 
     /**
+     * <p>The unique identifier of the tenant that owns the browser.</p>
+     * 
      * <strong>example:</strong>
      * <p>tenant-1234567890abcdef</p>
      */

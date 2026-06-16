@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateAgentRuntimeRequest extends TeaModel {
     /**
-     * <p>包含要更新的智能体运行时配置信息的请求体</p>
+     * <p>The input parameters for updating an agent runtime.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("body")

@@ -4,10 +4,15 @@ package com.aliyun.agentrun20250910.models;
 import com.aliyun.tea.*;
 
 public class ActivateTemplateMCPRequest extends TeaModel {
+    /**
+     * <p>A list of tools to enable.</p>
+     */
     @NameInMap("enabledTools")
     public java.util.List<String> enabledTools;
 
     /**
+     * <p>The transport protocol.</p>
+     * 
      * <strong>example:</strong>
      * <p>streamable-http</p>
      */

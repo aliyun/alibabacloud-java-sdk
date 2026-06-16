@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpdateAgentRuntimeEndpointInput extends TeaModel {
     /**
+     * <p>Agent runtime endpoint Name</p>
+     * 
      * <strong>example:</strong>
      * <p>production-endpoint</p>
      */
@@ -18,6 +20,8 @@ public class UpdateAgentRuntimeEndpointInput extends TeaModel {
     public Boolean deleteScalingConfig;
 
     /**
+     * <p>Description</p>
+     * 
      * <strong>example:</strong>
      * <p>Updated endpoint configuration</p>
      */
@@ -25,13 +29,13 @@ public class UpdateAgentRuntimeEndpointInput extends TeaModel {
     public String description;
 
     /**
-     * <p>是否禁用该端点的公网访问</p>
+     * <p>Whether to disable public network access for this endpoint</p>
      */
     @NameInMap("disablePublicNetworkAccess")
     public Boolean disablePublicNetworkAccess;
 
     /**
-     * <p>智能体运行时端点的路由配置，支持多版本权重分配</p>
+     * <p>The Ingress configuration of the agent runtime endpoint, which supports weight assignment across multiple versions</p>
      * 
      * <strong>example:</strong>
      * <p>{}</p>
@@ -46,7 +50,7 @@ public class UpdateAgentRuntimeEndpointInput extends TeaModel {
     public ScalingConfig scalingConfig;
 
     /**
-     * <p>智能体运行时的目标版本</p>
+     * <p>Target Version of the agent runtime</p>
      * 
      * <strong>example:</strong>
      * <p>LATEST</p>

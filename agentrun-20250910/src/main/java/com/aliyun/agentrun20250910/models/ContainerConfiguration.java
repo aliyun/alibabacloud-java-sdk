@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ContainerConfiguration extends TeaModel {
     /**
-     * <p>阿里云容器镜像服务（ACR）的实例ID或名称</p>
+     * <p>The instance ID or name of Alibaba Cloud Container Registry (ACR).</p>
      * 
      * <strong>example:</strong>
      * <p>cri-xxxxx</p>
@@ -14,7 +14,7 @@ public class ContainerConfiguration extends TeaModel {
     public String acrInstanceId;
 
     /**
-     * <p>在容器中运行的命令（例如：[&quot;python3&quot;, &quot;app.py&quot;]）</p>
+     * <p>The sandbox entrypoint command. For example: [\&quot;python3\&quot;, \&quot;app.py\&quot;].</p>
      * 
      * <strong>example:</strong>
      * <p>python3,app.py</p>
@@ -23,6 +23,8 @@ public class ContainerConfiguration extends TeaModel {
     public java.util.List<String> command;
 
     /**
+     * <p>The container image URI.</p>
+     * 
      * <strong>example:</strong>
      * <p>registry.cn-hangzhou.aliyuncs.com/my-namespace/agent-runtime:latest</p>
      */
@@ -30,7 +32,7 @@ public class ContainerConfiguration extends TeaModel {
     public String image;
 
     /**
-     * <p>容器镜像的来源类型，支持ACR（阿里云容器镜像服务）、ACREE（阿里云容器镜像服务企业版）、CUSTOM（自定义镜像仓库）</p>
+     * <p>The source of the container image. Valid values: ACR (Alibaba Cloud Container Registry), ACREE (Alibaba Cloud Container Registry Enterprise Edition), and CUSTOM (a custom image repository).</p>
      * 
      * <strong>example:</strong>
      * <p>ACR</p>
@@ -38,6 +40,12 @@ public class ContainerConfiguration extends TeaModel {
     @NameInMap("imageRegistryType")
     public String imageRegistryType;
 
+    /**
+     * <p>The listening port for the sandbox runtime.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5000</p>
+     */
     @NameInMap("port")
     public Integer port;
 

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateFlowEndpointInput extends TeaModel {
     /**
-     * <p>工作流端点的描述信息</p>
+     * <p>The description of the flow endpoint.</p>
      * 
      * <strong>example:</strong>
      * <p>Production endpoint for flow</p>
@@ -14,13 +14,13 @@ public class CreateFlowEndpointInput extends TeaModel {
     public String description;
 
     /**
-     * <p>是否禁用该端点的公网访问。创建时未指定则从父工作流继承</p>
+     * <p>Whether to disable public network access for the endpoint. If unspecified, the endpoint inherits this setting from its parent workflow.</p>
      */
     @NameInMap("disablePublicNetworkAccess")
     public Boolean disablePublicNetworkAccess;
 
     /**
-     * <p>工作流端点的唯一标识名称</p>
+     * <p>The unique name of the flow endpoint.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -30,7 +30,7 @@ public class CreateFlowEndpointInput extends TeaModel {
     public String flowEndpointName;
 
     /**
-     * <p>工作流端点的版本路由配置，用于流量分配</p>
+     * <p>The routing configuration that defines traffic distribution across different flow versions.</p>
      * 
      * <strong>example:</strong>
      * <p>[]</p>
@@ -39,7 +39,7 @@ public class CreateFlowEndpointInput extends TeaModel {
     public java.util.List<FlowEndpointRoutingConfig> routingConfiguration;
 
     /**
-     * <p>工作流端点指向的目标版本号</p>
+     * <p>The target version for the flow endpoint.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>

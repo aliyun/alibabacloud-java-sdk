@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class TemplateResult extends TeaModel {
     /**
-     * <p>SUCCESS 为成功，失败情况返回对应错误类型</p>
+     * <p>SUCCESS indicates success. In case of failure, the corresponding Error Type is returned.</p>
      * 
      * <strong>example:</strong>
      * <p>SUCCESS</p>
@@ -14,14 +14,14 @@ public class TemplateResult extends TeaModel {
     public String code;
 
     /**
-     * <p>模板的详细信息</p>
+     * <p>Detailed information about the template</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("data")
     public Template data;
 
     /**
-     * <p>唯一的请求标识符，用于问题追踪</p>
+     * <p>Unique request ID used for troubleshooting</p>
      * 
      * <strong>example:</strong>
      * <p>F8A0F5F3-0C3E-4C82-9D4F-5E4B6A7C8D9E</p>

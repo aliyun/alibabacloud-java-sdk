@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class ListCustomDomainsRequest extends TeaModel {
     /**
+     * <p>The custom domain name.</p>
+     * 
      * <strong>example:</strong>
      * <p>mydomain.com</p>
      */
     @NameInMap("domainName")
     public String domainName;
 
+    /**
+     * <p>The domain type used for filtering. Valid values: STANDARD and SANDBOX.</p>
+     */
     @NameInMap("domainType")
     public String domainType;
 
     /**
+     * <p>The page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -22,6 +29,8 @@ public class ListCustomDomainsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -29,6 +38,8 @@ public class ListCustomDomainsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The name of the resource associated with the custom domain.</p>
+     * 
      * <strong>example:</strong>
      * <p>agent-1</p>
      */
@@ -36,6 +47,8 @@ public class ListCustomDomainsRequest extends TeaModel {
     public String resourceName;
 
     /**
+     * <p>The type of the resource associated with the custom domain.</p>
+     * 
      * <strong>example:</strong>
      * <p>runtime</p>
      */

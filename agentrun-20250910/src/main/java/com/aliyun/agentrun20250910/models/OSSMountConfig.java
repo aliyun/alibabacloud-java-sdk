@@ -4,6 +4,9 @@ package com.aliyun.agentrun20250910.models;
 import com.aliyun.tea.*;
 
 public class OSSMountConfig extends TeaModel {
+    /**
+     * <p>An array of OSS mount points.</p>
+     */
     @NameInMap("mountPoints")
     public java.util.List<OSSMountPoint> mountPoints;
 

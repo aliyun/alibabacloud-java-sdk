@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListSandboxesResult extends TeaModel {
     /**
-     * <p>SUCCESS 为成功，失败情况返回对应错误类型，比如 ERR_BAD_REQUEST ERR_VALIDATION_FAILED ERR_INTERNAL_SERVER_ERROR</p>
+     * <p>The status of the request. A value of \&quot;SUCCESS\&quot; indicates that the request was successful. If the request fails, an error code is returned, such as \&quot;ERR_BAD_REQUEST\&quot;, \&quot;ERR_VALIDATION_FAILED\&quot;, or \&quot;ERR_INTERNAL_SERVER_ERROR\&quot;.</p>
      * 
      * <strong>example:</strong>
      * <p>SUCCESS</p>
@@ -14,13 +14,13 @@ public class ListSandboxesResult extends TeaModel {
     public String code;
 
     /**
-     * <p>沙箱列表的详细信息</p>
+     * <p>Contains the list of sandboxes.</p>
      */
     @NameInMap("data")
     public ListSandboxesOutput data;
 
     /**
-     * <p>唯一的请求标识符，用于问题追踪</p>
+     * <p>The unique request ID used for issue tracking.</p>
      * 
      * <strong>example:</strong>
      * <p>55D4BE40-2811-5CFB-8482-E0E98D575B1E</p>

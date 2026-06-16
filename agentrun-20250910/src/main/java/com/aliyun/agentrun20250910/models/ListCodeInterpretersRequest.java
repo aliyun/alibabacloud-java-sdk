@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListCodeInterpretersRequest extends TeaModel {
     /**
-     * <p>根据代码解释器实例名称进行模糊匹配过滤</p>
+     * <p>Filter by code interpreter name</p>
      * 
      * <strong>example:</strong>
      * <p>code</p>
@@ -14,7 +14,7 @@ public class ListCodeInterpretersRequest extends TeaModel {
     public String codeInterpreterName;
 
     /**
-     * <p>当前页码，从1开始计数</p>
+     * <p>Page number</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -23,7 +23,7 @@ public class ListCodeInterpretersRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>每页返回的记录数量</p>
+     * <p>Page size</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>

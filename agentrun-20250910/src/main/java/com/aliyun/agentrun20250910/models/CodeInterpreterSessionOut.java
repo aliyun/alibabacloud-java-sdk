@@ -5,45 +5,45 @@ import com.aliyun.tea.*;
 
 public class CodeInterpreterSessionOut extends TeaModel {
     /**
-     * <p>关联的代码解释器的唯一标识符</p>
+     * <p>The Unique Identifier of the associated code interpreter</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("codeInterpreterId")
     public String codeInterpreterId;
 
     /**
-     * <p>代码解释器会话的名称</p>
+     * <p>The name of the code interpreter session</p>
      */
     @NameInMap("codeInterpreterName")
     public String codeInterpreterName;
 
     /**
-     * <p>代码解释器会话的创建时间，采用ISO 8601格式</p>
+     * <p>The creation time of the code interpreter session, in ISO 8601 format</p>
      */
     @NameInMap("createdAt")
     public String createdAt;
 
     /**
-     * <p>代码解释器会话的最后更新时间，采用ISO 8601格式</p>
+     * <p>The last update time of the code interpreter session, in ISO 8601 format</p>
      */
     @NameInMap("lastUpdatedAt")
     public String lastUpdatedAt;
 
     /**
-     * <p>代码解释器会话的唯一标识符</p>
+     * <p>The Unique Identifier of the code interpreter session</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("sessionId")
     public String sessionId;
 
     /**
-     * <p>代码解释器会话的空闲超时时间，单位为秒。实例没有会话请求后处于空闲状态，空闲态为闲置计费模式，超过此超时时间后会话自动过期，不可继续使用</p>
+     * <p>The idle timeout duration of the code interpreter session, in seconds. After the instance receives no session requests, it enters an idle state, which is billed under the idle billing model. If the idle duration exceeds this timeout, the session automatically expires and can no longer be used.</p>
      */
     @NameInMap("sessionIdleTimeoutSeconds")
     public Integer sessionIdleTimeoutSeconds;
 
     /**
-     * <p>代码解释器会话的当前状态</p>
+     * <p>The current status of the code interpreter session</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("status")

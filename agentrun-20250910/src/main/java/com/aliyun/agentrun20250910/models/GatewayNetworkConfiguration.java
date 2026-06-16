@@ -4,9 +4,15 @@ package com.aliyun.agentrun20250910.models;
 import com.aliyun.tea.*;
 
 public class GatewayNetworkConfiguration extends TeaModel {
+    /**
+     * <p>Network mode</p>
+     */
     @NameInMap("networkMode")
     public String networkMode;
 
+    /**
+     * <p>Virtual private cloud (VPC) ID</p>
+     */
     @NameInMap("vpcId")
     public String vpcId;
 

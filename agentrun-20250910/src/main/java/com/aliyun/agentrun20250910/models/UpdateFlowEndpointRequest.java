@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateFlowEndpointRequest extends TeaModel {
     /**
-     * <p>包含要更新的工作流端点配置信息的请求体</p>
+     * <p>Update Flow Endpoint Input Parameters</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("body")

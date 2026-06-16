@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListAgentRuntimeEndpointsRequest extends TeaModel {
     /**
-     * <p>根据端点名称进行模糊匹配过滤</p>
+     * <p>Filter by endpoint name.</p>
      * 
      * <strong>example:</strong>
      * <p>my-endpoint</p>
@@ -14,7 +14,7 @@ public class ListAgentRuntimeEndpointsRequest extends TeaModel {
     public String endpointName;
 
     /**
-     * <p>当前页码，从1开始计数</p>
+     * <p>Page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -23,7 +23,7 @@ public class ListAgentRuntimeEndpointsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>每页返回的记录数量</p>
+     * <p>Page size.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -32,7 +32,7 @@ public class ListAgentRuntimeEndpointsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>查询模式，支持精确查询和模糊查询</p>
+     * <p>Search mode.</p>
      * 
      * <strong>example:</strong>
      * <p>fuzzy</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class FlowEndpoint extends TeaModel {
     /**
-     * <p>工作流端点的创建时间，采用ISO 8601格式</p>
+     * <p>The creation timestamp for the flow endpoint, in ISO 8601 format.</p>
      * 
      * <strong>example:</strong>
      * <p>2025-01-10T10:30:00Z</p>
@@ -14,7 +14,7 @@ public class FlowEndpoint extends TeaModel {
     public String createdAt;
 
     /**
-     * <p>工作流端点的描述信息</p>
+     * <p>The description of the flow endpoint.</p>
      * 
      * <strong>example:</strong>
      * <p>Production endpoint for flow</p>
@@ -23,13 +23,13 @@ public class FlowEndpoint extends TeaModel {
     public String description;
 
     /**
-     * <p>是否禁用该端点的公网访问</p>
+     * <p>Set to true to disable public network access for this endpoint.</p>
      */
     @NameInMap("disablePublicNetworkAccess")
     public Boolean disablePublicNetworkAccess;
 
     /**
-     * <p>工作流端点的全局唯一资源名称</p>
+     * <p>The Alibaba Cloud Resource Name (ARN) of the flow endpoint.</p>
      * 
      * <strong>example:</strong>
      * <p>acs:agentrun:cn-hangzhou:1760720386195983:workspaces/ws-xxx/flows/flow-xxx/endpoints/fe-xxx</p>
@@ -38,7 +38,7 @@ public class FlowEndpoint extends TeaModel {
     public String flowEndpointArn;
 
     /**
-     * <p>工作流端点的唯一标识符</p>
+     * <p>The unique identifier of the flow endpoint.</p>
      * 
      * <strong>example:</strong>
      * <p>fe-1234567890abcdef</p>
@@ -47,7 +47,7 @@ public class FlowEndpoint extends TeaModel {
     public String flowEndpointId;
 
     /**
-     * <p>工作流端点的名称</p>
+     * <p>The name of the flow endpoint.</p>
      * 
      * <strong>example:</strong>
      * <p>my-flow-endpoint</p>
@@ -56,7 +56,7 @@ public class FlowEndpoint extends TeaModel {
     public String flowEndpointName;
 
     /**
-     * <p>工作流的唯一标识符</p>
+     * <p>The unique identifier of the flow.</p>
      * 
      * <strong>example:</strong>
      * <p>flow-1234567890abcdef</p>
@@ -65,7 +65,7 @@ public class FlowEndpoint extends TeaModel {
     public String flowId;
 
     /**
-     * <p>工作流端点最后一次更新的时间，采用ISO 8601格式</p>
+     * <p>The last update timestamp for the flow endpoint, in ISO 8601 format.</p>
      * 
      * <strong>example:</strong>
      * <p>2025-01-10T11:45:00Z</p>
@@ -74,7 +74,7 @@ public class FlowEndpoint extends TeaModel {
     public String lastUpdatedAt;
 
     /**
-     * <p>工作流端点的版本路由配置</p>
+     * <p>The routing configuration that distributes traffic to different versions of the flow.</p>
      * 
      * <strong>example:</strong>
      * <p>[]</p>
@@ -83,7 +83,7 @@ public class FlowEndpoint extends TeaModel {
     public java.util.List<FlowEndpointRoutingConfig> routingConfiguration;
 
     /**
-     * <p>工作流端点指向的目标版本号</p>
+     * <p>The flow version targeted by the endpoint.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>

@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class StopSandboxResult extends TeaModel {
     /**
+     * <p>Result code</p>
+     * 
      * <strong>example:</strong>
      * <p>SUCCESS</p>
      */
     @NameInMap("code")
     public String code;
 
+    /**
+     * <p>Details of the code interpreter, including all configuration and status information of the interpreter</p>
+     */
     @NameInMap("data")
     public Sandbox data;
 
     /**
+     * <p>Request ID</p>
+     * 
      * <strong>example:</strong>
      * <p>F8A0F5F3-0C3E-4C82-9D4F-5E4B6A7C8D9E</p>
      */

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class BrowserViewPort extends TeaModel {
     /**
+     * <p>The height of the browser viewport in pixels.</p>
+     * 
      * <strong>example:</strong>
      * <p>1080</p>
      */
@@ -12,6 +14,8 @@ public class BrowserViewPort extends TeaModel {
     public Double height;
 
     /**
+     * <p>The width of the browser viewport in pixels.</p>
+     * 
      * <strong>example:</strong>
      * <p>1920</p>
      */

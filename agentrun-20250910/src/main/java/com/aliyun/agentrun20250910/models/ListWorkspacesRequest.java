@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListWorkspacesRequest extends TeaModel {
     /**
+     * <p>The name of the workspace. Used to filter the results.</p>
+     * 
      * <strong>example:</strong>
      * <p>intl_synonym_module</p>
      */
@@ -12,6 +14,8 @@ public class ListWorkspacesRequest extends TeaModel {
     public String name;
 
     /**
+     * <p>The page number to return. Default value: 1.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -19,6 +23,8 @@ public class ListWorkspacesRequest extends TeaModel {
     public String pageNumber;
 
     /**
+     * <p>The number of entries to return per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -26,6 +32,8 @@ public class ListWorkspacesRequest extends TeaModel {
     public String pageSize;
 
     /**
+     * <p>The ID of the resource group to which the workspace belongs.</p>
+     * 
      * <strong>example:</strong>
      * <p>rg-aek25sodlatnioq</p>
      */

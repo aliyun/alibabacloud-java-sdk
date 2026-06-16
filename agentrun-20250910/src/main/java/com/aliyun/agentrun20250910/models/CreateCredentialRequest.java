@@ -4,6 +4,9 @@ package com.aliyun.agentrun20250910.models;
 import com.aliyun.tea.*;
 
 public class CreateCredentialRequest extends TeaModel {
+    /**
+     * <p>The parameters for creating a credential.</p>
+     */
     @NameInMap("body")
     public CreateCredentialInput body;
 

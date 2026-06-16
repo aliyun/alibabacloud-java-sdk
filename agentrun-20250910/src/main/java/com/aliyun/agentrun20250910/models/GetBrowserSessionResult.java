@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetBrowserSessionResult extends TeaModel {
     /**
-     * <p>SUCCESS 为成功，失败情况返回对应错误类型，比如 ERR_BAD_REQUEST ERR_VALIDATION_FAILED ERR_INTERNAL_SERVER_ERROR</p>
+     * <p><code>SUCCESS</code> for a successful request; otherwise, an error type such as <code>ERR_BAD_REQUEST</code>, <code>ERR_VALIDATION_FAILED</code>, or <code>ERR_INTERNAL_SERVER_ERROR</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>SUCCESS</p>
@@ -14,6 +14,8 @@ public class GetBrowserSessionResult extends TeaModel {
     public String code;
 
     /**
+     * <p>The details of the browser session.</p>
+     * 
      * <strong>example:</strong>
      * <p>{}</p>
      */
@@ -21,6 +23,8 @@ public class GetBrowserSessionResult extends TeaModel {
     public BrowserSessionOut data;
 
     /**
+     * <p>A unique identifier for the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>F8A0F5F3-0C3E-4C82-9D4F-5E4B6A7C8D9E</p>
      */

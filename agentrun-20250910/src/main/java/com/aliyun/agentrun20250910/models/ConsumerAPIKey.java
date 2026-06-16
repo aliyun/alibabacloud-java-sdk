@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ConsumerAPIKey extends TeaModel {
     /**
-     * <p>密钥是否启用，true表示启用，false表示禁用</p>
+     * <p>Specifies if the key is enabled (true) or disabled (false).</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -14,7 +14,7 @@ public class ConsumerAPIKey extends TeaModel {
     public Boolean active;
 
     /**
-     * <p>消费者API密钥的唯一标识符</p>
+     * <p>The unique identifier of the consumer API key.</p>
      * 
      * <strong>example:</strong>
      * <p>12345678-1234-1234-1234-123456789abc</p>
@@ -23,7 +23,7 @@ public class ConsumerAPIKey extends TeaModel {
     public String consumerApiKeyId;
 
     /**
-     * <p>消费者API密钥的创建时间，采用ISO 8601格式</p>
+     * <p>The creation time of the consumer API key, in ISO 8601 format.</p>
      * 
      * <strong>example:</strong>
      * <p>2025-01-10T10:30:00Z</p>
@@ -32,7 +32,7 @@ public class ConsumerAPIKey extends TeaModel {
     public String createdAt;
 
     /**
-     * <p>消费者API密钥的描述信息</p>
+     * <p>A user-defined description for the consumer API key.</p>
      * 
      * <strong>example:</strong>
      * <p>用于生产环境的API密钥</p>
@@ -41,7 +41,7 @@ public class ConsumerAPIKey extends TeaModel {
     public String description;
 
     /**
-     * <p>消费者API密钥最后一次更新的时间，采用ISO 8601格式</p>
+     * <p>The last update time of the consumer API key, in ISO 8601 format.</p>
      * 
      * <strong>example:</strong>
      * <p>2025-01-10T11:45:00Z</p>
@@ -50,7 +50,7 @@ public class ConsumerAPIKey extends TeaModel {
     public String lastUpdatedAt;
 
     /**
-     * <p>API密钥的掩码展示形式，仅显示前后几位字符</p>
+     * <p>The masked API key, showing only the first and last few characters.</p>
      * 
      * <strong>example:</strong>
      * <p>sk-****1234</p>
@@ -59,7 +59,7 @@ public class ConsumerAPIKey extends TeaModel {
     public String maskedKey;
 
     /**
-     * <p>关联的模型连接标识符</p>
+     * <p>The identifier of the associated model connection.</p>
      * 
      * <strong>example:</strong>
      * <p>mc-1234567890abcdef</p>

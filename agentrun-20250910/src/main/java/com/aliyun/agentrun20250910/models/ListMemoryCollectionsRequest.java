@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListMemoryCollectionsRequest extends TeaModel {
     /**
+     * <p>Filters the results by memory collection name.</p>
+     * 
      * <strong>example:</strong>
      * <p>my-memory-1</p>
      */
@@ -12,6 +14,8 @@ public class ListMemoryCollectionsRequest extends TeaModel {
     public String memoryCollectionName;
 
     /**
+     * <p>The page number. Defaults to 1.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -19,6 +23,8 @@ public class ListMemoryCollectionsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries to return per page. Defaults to 20.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -26,6 +32,8 @@ public class ListMemoryCollectionsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>Filters the results by memory collection status.</p>
+     * 
      * <strong>example:</strong>
      * <p>READY</p>
      */
@@ -33,15 +41,23 @@ public class ListMemoryCollectionsRequest extends TeaModel {
     public String status;
 
     /**
+     * <p>Filters the results by memory collection type.</p>
+     * 
      * <strong>example:</strong>
      * <p>mem0</p>
      */
     @NameInMap("type")
     public String type;
 
+    /**
+     * <p>The ID of the workspace to filter by.</p>
+     */
     @NameInMap("workspaceId")
     public String workspaceId;
 
+    /**
+     * <p>The IDs of the workspaces to filter by, provided as a comma-separated string.</p>
+     */
     @NameInMap("workspaceIds")
     public String workspaceIds;
 

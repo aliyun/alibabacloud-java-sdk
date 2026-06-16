@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateFlowRequest extends TeaModel {
     /**
-     * <p>包含要更新的工作流配置信息的请求体</p>
+     * <p>The input parameters for updating the workflow.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("body")

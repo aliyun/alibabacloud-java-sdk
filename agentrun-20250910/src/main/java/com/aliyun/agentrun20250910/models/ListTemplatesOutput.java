@@ -5,12 +5,14 @@ import com.aliyun.tea.*;
 
 public class ListTemplatesOutput extends TeaModel {
     /**
+     * <p>An array of template objects.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("items")
     public java.util.List<Template> items;
 
     /**
+     * <p>The page number of the returned results.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -20,6 +22,7 @@ public class ListTemplatesOutput extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The maximum number of items to return per page.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -29,6 +32,7 @@ public class ListTemplatesOutput extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The total number of templates available.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

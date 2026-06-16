@@ -4,6 +4,9 @@ package com.aliyun.agentrun20250910.models;
 import com.aliyun.tea.*;
 
 public class CreateModelServiceRequest extends TeaModel {
+    /**
+     * <p>Parameters for creating the model service.</p>
+     */
     @NameInMap("body")
     public CreateModelServiceInput body;
 

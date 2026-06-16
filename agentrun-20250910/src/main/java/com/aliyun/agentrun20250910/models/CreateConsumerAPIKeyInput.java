@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateConsumerAPIKeyInput extends TeaModel {
     /**
-     * <p>用户自定义的完整API密钥；为空时由服务自动生成</p>
+     * <p>A custom API key. If omitted, the service generates one automatically.</p>
      * 
      * <strong>example:</strong>
      * <p>sk-xxxxxxxxxxxxxxxxxxxx</p>
@@ -14,7 +14,7 @@ public class CreateConsumerAPIKeyInput extends TeaModel {
     public String apiKey;
 
     /**
-     * <p>消费者API密钥的描述信息，用于说明该密钥的用途</p>
+     * <p>A description for the consumer API key.</p>
      * 
      * <strong>example:</strong>
      * <p>用于生产环境的API密钥</p>
@@ -23,7 +23,7 @@ public class CreateConsumerAPIKeyInput extends TeaModel {
     public String description;
 
     /**
-     * <p>关联的模型连接标识符</p>
+     * <p>The identifier for the model connection.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

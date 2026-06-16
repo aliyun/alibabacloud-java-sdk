@@ -5,14 +5,14 @@ import com.aliyun.tea.*;
 
 public class UpdateTemplateRequest extends TeaModel {
     /**
-     * <p>更新模板所需的配置信息</p>
+     * <p>The request body for the template update.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("body")
     public UpdateTemplateInput body;
 
     /**
-     * <p>用于确保请求幂等性的唯一标识符</p>
+     * <p>A unique client token to ensure request idempotency.</p>
      * 
      * <strong>example:</strong>
      * <p>clientToken</p>

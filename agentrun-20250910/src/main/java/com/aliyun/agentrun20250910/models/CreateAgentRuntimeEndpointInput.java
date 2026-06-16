@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateAgentRuntimeEndpointInput extends TeaModel {
     /**
+     * <p>The name of the agent runtime endpoint.</p>
+     * 
      * <strong>example:</strong>
      * <p>production-endpoint</p>
      */
@@ -12,6 +14,8 @@ public class CreateAgentRuntimeEndpointInput extends TeaModel {
     public String agentRuntimeEndpointName;
 
     /**
+     * <p>The description of the agent runtime endpoint.</p>
+     * 
      * <strong>example:</strong>
      * <p>Production endpoint for customer service agent</p>
      */
@@ -19,13 +23,13 @@ public class CreateAgentRuntimeEndpointInput extends TeaModel {
     public String description;
 
     /**
-     * <p>是否禁用该端点的公网访问</p>
+     * <p>Specifies whether to disable public network access for the endpoint.</p>
      */
     @NameInMap("disablePublicNetworkAccess")
     public Boolean disablePublicNetworkAccess;
 
     /**
-     * <p>智能体运行时端点的路由配置，支持多版本权重分配</p>
+     * <p>The routing configuration for the agent runtime endpoint. This configuration distributes traffic to multiple versions based on weights.</p>
      * 
      * <strong>example:</strong>
      * <p>{}</p>
@@ -40,7 +44,7 @@ public class CreateAgentRuntimeEndpointInput extends TeaModel {
     public ScalingConfig scalingConfig;
 
     /**
-     * <p>智能体运行时的目标版本</p>
+     * <p>The target version of the agent runtime.</p>
      * 
      * <strong>example:</strong>
      * <p>LATEST</p>

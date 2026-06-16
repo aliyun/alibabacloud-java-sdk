@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateModelServiceInput extends TeaModel {
     /**
+     * <p>The credential name for authenticating with the cloud provider.</p>
+     * 
      * <strong>example:</strong>
      * <p>credentialName</p>
      */
@@ -12,6 +14,8 @@ public class CreateModelServiceInput extends TeaModel {
     public String credentialName;
 
     /**
+     * <p>An optional description of the model service.</p>
+     * 
      * <strong>example:</strong>
      * <p>Auto generate task: Pipeline[pipeline-run-1742178254775] pipelineTemplate[data-export-service-online-iVnQB5] taskTemplate[serverless-runner-task], time[2025-03-17T02:24:36Z]</p>
      */
@@ -19,13 +23,13 @@ public class CreateModelServiceInput extends TeaModel {
     public String description;
 
     /**
-     * <p>modelInfoConfigs</p>
+     * <p>A list of configurations for models in the service.</p>
      */
     @NameInMap("modelInfoConfigs")
     public java.util.List<ModelInfoConfig> modelInfoConfigs;
 
     /**
-     * <p>modelServiceName</p>
+     * <p>The name of the model service.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -35,6 +39,13 @@ public class CreateModelServiceInput extends TeaModel {
     public String modelServiceName;
 
     /**
+     * <p>The model type. Valid values include:</p>
+     * <ul>
+     * <li><p><code>system</code>: A built-in model that the service provides.</p>
+     * </li>
+     * <li><p><code>deployment</code>: A custom model that a user deploys.</p>
+     * </li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -43,10 +54,14 @@ public class CreateModelServiceInput extends TeaModel {
     @NameInMap("modelType")
     public String modelType;
 
+    /**
+     * <p>The network configuration for the model service. See <code>NetworkConfiguration</code> for details.</p>
+     */
     @NameInMap("networkConfiguration")
     public NetworkConfiguration networkConfiguration;
 
     /**
+     * <p>The cloud provider for the model service. Currently, only Alibaba Cloud is supported.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -56,12 +71,15 @@ public class CreateModelServiceInput extends TeaModel {
     public String provider;
 
     /**
-     * <p>providerSettings</p>
+     * <p>Provider-specific configuration settings. See <code>ProviderSettings</code> for details.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("providerSettings")
     public ProviderSettings providerSettings;
 
+    /**
+     * <p>The ID of the workspace in which to create the model service.</p>
+     */
     @NameInMap("workspaceId")
     public String workspaceId;
 

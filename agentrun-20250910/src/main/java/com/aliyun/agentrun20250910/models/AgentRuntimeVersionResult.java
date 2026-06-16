@@ -5,19 +5,19 @@ import com.aliyun.tea.*;
 
 public class AgentRuntimeVersionResult extends TeaModel {
     /**
-     * <p>SUCCESS 为成功，失败情况返回对应错误类型，比如 ERR_BAD_REQUEST ERR_VALIDATION_FAILED ERR_INTERNAL_SERVER_ERROR</p>
+     * <p>SUCCESS indicates success. In case of failure, the corresponding error type is returned, such as ERR_BAD_REQUEST, ERR_VALIDATION_FAILED, or ERR_INTERNAL_SERVER_ERROR.</p>
      */
     @NameInMap("code")
     public String code;
 
     /**
-     * <p>智能体运行时版本的详细信息</p>
+     * <p>Detailed information about the agent runtime version</p>
      */
     @NameInMap("data")
     public AgentRuntimeVersion data;
 
     /**
-     * <p>唯一的请求标识符，用于问题追踪</p>
+     * <p>A unique request identifier used for troubleshooting</p>
      */
     @NameInMap("requestId")
     public String requestId;

@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class PublishRuntimeVersionInput extends TeaModel {
     /**
-     * <p>此版本的描述</p>
+     * <p>Description of this version</p>
      */
     @NameInMap("description")
     public String description;
 
     /**
-     * <p>发布此版本的用户或系统标识</p>
+     * <p>Identity of the user or system that publishes this version</p>
      * 
      * <strong>example:</strong>
      * <p>user123</p>

@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListConsumerAPIKeysOutput extends TeaModel {
     /**
-     * <p>消费者API密钥列表</p>
+     * <p>A list of consumer API keys.</p>
      */
     @NameInMap("items")
     public java.util.List<ConsumerAPIKey> items;
 
     /**
-     * <p>当前页码</p>
+     * <p>The current page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -20,7 +20,7 @@ public class ListConsumerAPIKeysOutput extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>每页记录数</p>
+     * <p>The number of entries per page.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -29,7 +29,7 @@ public class ListConsumerAPIKeysOutput extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>符合条件的消费者API密钥总数</p>
+     * <p>The total number of matching consumer API keys.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>

@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateIMBotRequest extends TeaModel {
     /**
+     * <p>The request body.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("body")

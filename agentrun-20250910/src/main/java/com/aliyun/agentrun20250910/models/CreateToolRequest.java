@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateToolRequest extends TeaModel {
     /**
-     * <p>创建工具的请求参数，包含工具的所有配置信息</p>
+     * <p>The request body.</p>
      */
     @NameInMap("body")
     public CreateToolInputV2 body;

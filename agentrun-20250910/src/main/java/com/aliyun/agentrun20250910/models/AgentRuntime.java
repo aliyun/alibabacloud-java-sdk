@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class AgentRuntime extends TeaModel {
     /**
-     * <p>智能体运行时的全局唯一资源名称</p>
+     * <p>The Alibaba Cloud Resource Name (ARN) of the agent runtime.</p>
      * 
      * <strong>example:</strong>
      * <p>acs:agentrun:cn-hangzhou:1760720386195983:runtimes/7a1b6d39-9f8f-4ce2-b9c9-6db1b0b9e169</p>
@@ -14,7 +14,7 @@ public class AgentRuntime extends TeaModel {
     public String agentRuntimeArn;
 
     /**
-     * <p>智能体运行时的唯一标识符</p>
+     * <p>The unique identifier of the agent runtime.</p>
      * 
      * <strong>example:</strong>
      * <p>ar-1234567890abcdef</p>
@@ -23,7 +23,7 @@ public class AgentRuntime extends TeaModel {
     public String agentRuntimeId;
 
     /**
-     * <p>智能体运行时的名称，用于标识和区分不同的运行时实例</p>
+     * <p>The name of the agent runtime.</p>
      * 
      * <strong>example:</strong>
      * <p>my-agent-runtime</p>
@@ -32,7 +32,7 @@ public class AgentRuntime extends TeaModel {
     public String agentRuntimeName;
 
     /**
-     * <p>智能体运行时的版本号，用于版本管理和回滚</p>
+     * <p>The version number of the agent runtime.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -41,7 +41,7 @@ public class AgentRuntime extends TeaModel {
     public String agentRuntimeVersion;
 
     /**
-     * <p>智能体运行时的部署类型，支持Code（代码模式）和Container（容器模式）</p>
+     * <p>The deployment type of the agent runtime. Valid values: <code>Code</code> and <code>Container</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>Code</p>
@@ -50,7 +50,7 @@ public class AgentRuntime extends TeaModel {
     public String artifactType;
 
     /**
-     * <p>当artifactType为Code时的代码配置信息</p>
+     * <p>The code configuration details. This parameter is applicable when <code>artifactType</code> is set to <code>Code</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>{}</p>
@@ -59,7 +59,7 @@ public class AgentRuntime extends TeaModel {
     public CodeConfiguration codeConfiguration;
 
     /**
-     * <p>当artifactType为Container时的容器配置信息</p>
+     * <p>The container configuration details. This parameter is applicable when <code>artifactType</code> is set to <code>Container</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>{}</p>
@@ -68,7 +68,7 @@ public class AgentRuntime extends TeaModel {
     public ContainerConfiguration containerConfiguration;
 
     /**
-     * <p>智能体运行时分配的CPU资源，单位为核数</p>
+     * <p>The amount of CPU allocated to the agent runtime, in vCPUs.</p>
      * 
      * <strong>example:</strong>
      * <p>2.0</p>
@@ -77,7 +77,7 @@ public class AgentRuntime extends TeaModel {
     public Float cpu;
 
     /**
-     * <p>智能体运行时的创建时间，采用ISO 8601格式</p>
+     * <p>The creation time of the agent runtime, in ISO 8601 format.</p>
      * 
      * <strong>example:</strong>
      * <p>2025-01-10T10:30:00Z</p>
@@ -86,7 +86,7 @@ public class AgentRuntime extends TeaModel {
     public String createdAt;
 
     /**
-     * <p>用于访问智能体的凭证名称，访问智能体运行时将使用此凭证进行身份验证</p>
+     * <p>The name of the credential used to authenticate requests to the agent runtime.</p>
      * 
      * <strong>example:</strong>
      * <p>my-credential</p>
@@ -95,7 +95,7 @@ public class AgentRuntime extends TeaModel {
     public String credentialName;
 
     /**
-     * <p>智能体运行时的描述信息，说明该运行时的用途和功能</p>
+     * <p>The description of the agent runtime.</p>
      * 
      * <strong>example:</strong>
      * <p>AI agent runtime for customer service automation</p>
@@ -104,7 +104,16 @@ public class AgentRuntime extends TeaModel {
     public String description;
 
     /**
-     * <p>是否禁用会话亲和性。默认为 false（即默认启用会话亲和），设置为 true 时关闭会话亲和</p>
+     * <p>Specifies whether to disable on-demand elasticity. Default: <code>false</code>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
+    @NameInMap("disableOndemand")
+    public Boolean disableOndemand;
+
+    /**
+     * <p>Specifies whether to disable session affinity. Default: <code>false</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -112,14 +121,20 @@ public class AgentRuntime extends TeaModel {
     @NameInMap("disableSessionAffinity")
     public Boolean disableSessionAffinity;
 
+    /**
+     * <p>The disk size.</p>
+     */
     @NameInMap("diskSize")
     public Integer diskSize;
 
+    /**
+     * <p>The edition of the agent runtime.</p>
+     */
     @NameInMap("edition")
     public String edition;
 
     /**
-     * <p>是否启用会话隔离，启用后每个会话将在独立的环境中运行</p>
+     * <p>Specifies whether to enable session isolation. If enabled, each session runs in an isolated environment.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -128,7 +143,7 @@ public class AgentRuntime extends TeaModel {
     public Boolean enableSessionIsolation;
 
     /**
-     * <p>智能体运行时的环境变量配置</p>
+     * <p>The environment variables for the agent runtime.</p>
      * 
      * <strong>example:</strong>
      * <p>ENV_VAR1=value1,ENV_VAR2=value2</p>
@@ -137,7 +152,7 @@ public class AgentRuntime extends TeaModel {
     public java.util.Map<String, String> environmentVariables;
 
     /**
-     * <p>为智能体运行时提供访问云服务权限的执行角色ARN</p>
+     * <p>The ARN of the execution role that grants the agent runtime permission to access cloud services.</p>
      * 
      * <strong>example:</strong>
      * <p>acs:ram::1760720386195983:role/AgentRunExecutionRole</p>
@@ -146,7 +161,7 @@ public class AgentRuntime extends TeaModel {
     public String executionRoleArn;
 
     /**
-     * <p>外部注册类型的智能体访问端点地址，用于连接已部署在外部的智能体服务</p>
+     * <p>The endpoint URL of an externally deployed agent service.</p>
      * 
      * <strong>example:</strong>
      * <p><a href="https://external-agent.example.com/api">https://external-agent.example.com/api</a></p>
@@ -155,7 +170,16 @@ public class AgentRuntime extends TeaModel {
     public String externalAgentEndpointUrl;
 
     /**
-     * <p>智能体运行时的健康检查配置，用于监控运行时实例的健康状态</p>
+     * <p>The name of the request header used for session affinity when <code>sessionAffinityType</code> is <code>HEADER_FIELD</code>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>x-agentrun-session-id</p>
+     */
+    @NameInMap("headerFieldName")
+    public String headerFieldName;
+
+    /**
+     * <p>The health check configuration.</p>
      * 
      * <strong>example:</strong>
      * <p>{}</p>
@@ -164,7 +188,7 @@ public class AgentRuntime extends TeaModel {
     public HealthCheckConfiguration healthCheckConfiguration;
 
     /**
-     * <p>智能体运行时最后一次更新的时间，采用ISO 8601格式</p>
+     * <p>The last update time of the agent runtime, in ISO 8601 format.</p>
      * 
      * <strong>example:</strong>
      * <p>2025-01-10T11:45:00Z</p>
@@ -173,7 +197,7 @@ public class AgentRuntime extends TeaModel {
     public String lastUpdatedAt;
 
     /**
-     * <p>SLS（简单日志服务）配置</p>
+     * <p>The Log Service configuration.</p>
      * 
      * <strong>example:</strong>
      * <p>{}</p>
@@ -182,7 +206,7 @@ public class AgentRuntime extends TeaModel {
     public LogConfiguration logConfiguration;
 
     /**
-     * <p>智能体运行时分配的内存资源，单位为MB</p>
+     * <p>The amount of memory allocated to the agent runtime, in MB.</p>
      * 
      * <strong>example:</strong>
      * <p>2048</p>
@@ -191,7 +215,7 @@ public class AgentRuntime extends TeaModel {
     public Integer memory;
 
     /**
-     * <p>文件存储NAS的配置信息，用于挂载NAS文件系统到智能体运行时</p>
+     * <p>The NAS file system configuration.</p>
      * 
      * <strong>example:</strong>
      * <p>{}</p>
@@ -200,7 +224,7 @@ public class AgentRuntime extends TeaModel {
     public NASConfig nasConfig;
 
     /**
-     * <p>智能体运行时的网络配置信息</p>
+     * <p>The network configuration of the agent runtime.</p>
      * 
      * <strong>example:</strong>
      * <p>{}</p>
@@ -209,7 +233,7 @@ public class AgentRuntime extends TeaModel {
     public NetworkConfiguration networkConfiguration;
 
     /**
-     * <p>对象存储OSS的挂载配置信息，用于挂载OSS存储桶到智能体运行时</p>
+     * <p>The OSS bucket mount configuration.</p>
      * 
      * <strong>example:</strong>
      * <p>{}</p>
@@ -218,7 +242,7 @@ public class AgentRuntime extends TeaModel {
     public OSSMountConfig ossMountConfig;
 
     /**
-     * <p>智能体运行时监听的端口号</p>
+     * <p>The port on which the agent runtime listens.</p>
      * 
      * <strong>example:</strong>
      * <p>8080</p>
@@ -227,7 +251,7 @@ public class AgentRuntime extends TeaModel {
     public Integer port;
 
     /**
-     * <p>智能体运行时的通信协议配置</p>
+     * <p>The communication protocol configuration for the agent runtime.</p>
      * 
      * <strong>example:</strong>
      * <p>{}</p>
@@ -235,12 +259,24 @@ public class AgentRuntime extends TeaModel {
     @NameInMap("protocolConfiguration")
     public ProtocolConfiguration protocolConfiguration;
 
+    /**
+     * <p>The ID of the resource group to which the agent runtime belongs.</p>
+     */
     @NameInMap("resourceGroupId")
     @Deprecated
     public String resourceGroupId;
 
     /**
-     * <p>每个运行时实例允许的最大并发会话数</p>
+     * <p>The session affinity mode. Valid values: <code>NONE</code>, <code>HEADER_FIELD</code>, and <code>GENERATED_COOKIE</code>. <code>COOKIE</code> is a compatibility alias for <code>GENERATED_COOKIE</code>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>GENERATED_COOKIE</p>
+     */
+    @NameInMap("sessionAffinityType")
+    public String sessionAffinityType;
+
+    /**
+     * <p>The maximum number of concurrent sessions allowed per runtime instance.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>
@@ -249,7 +285,7 @@ public class AgentRuntime extends TeaModel {
     public Integer sessionConcurrencyLimitPerInstance;
 
     /**
-     * <p>会话的空闲超时时间，单位为秒。实例没有会话请求后处于空闲状态，空闲态为闲置计费模式，超过此超时时间后会话自动过期，不可继续使用</p>
+     * <p>The idle timeout period for a session, in seconds. After this period of inactivity, the session expires and can no longer be used.</p>
      * 
      * <strong>example:</strong>
      * <p>3600</p>
@@ -258,7 +294,7 @@ public class AgentRuntime extends TeaModel {
     public Integer sessionIdleTimeoutSeconds;
 
     /**
-     * <p>智能体运行时的当前状态，如READY（就绪）、CREATING（创建中）、FAILED（失败）等</p>
+     * <p>The current status of the agent runtime. Possible values: <code>READY</code>, <code>CREATING</code>, and <code>FAILED</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>READY</p>
@@ -267,7 +303,7 @@ public class AgentRuntime extends TeaModel {
     public String status;
 
     /**
-     * <p>当前状态的原因说明（如适用）</p>
+     * <p>The reason for the current status.</p>
      * 
      * <strong>example:</strong>
      * <p>Runtime is ready for use</p>
@@ -276,7 +312,7 @@ public class AgentRuntime extends TeaModel {
     public String statusReason;
 
     /**
-     * <p>智能体运行时的系统标签信息，用于系统级别的资源分类和管理</p>
+     * <p>The system tags for the agent runtime.</p>
      * 
      * <strong>example:</strong>
      * <p>system-tag-1,system-tag-2</p>
@@ -285,7 +321,7 @@ public class AgentRuntime extends TeaModel {
     public java.util.List<String> systemTags;
 
     /**
-     * <p>智能体运行时所属的工作空间标识符，用于资源隔离和权限管理</p>
+     * <p>The ID of the workspace for the agent runtime.</p>
      * 
      * <strong>example:</strong>
      * <p>ws-1234567890abcdef</p>
@@ -386,6 +422,14 @@ public class AgentRuntime extends TeaModel {
         return this.description;
     }
 
+    public AgentRuntime setDisableOndemand(Boolean disableOndemand) {
+        this.disableOndemand = disableOndemand;
+        return this;
+    }
+    public Boolean getDisableOndemand() {
+        return this.disableOndemand;
+    }
+
     public AgentRuntime setDisableSessionAffinity(Boolean disableSessionAffinity) {
         this.disableSessionAffinity = disableSessionAffinity;
         return this;
@@ -440,6 +484,14 @@ public class AgentRuntime extends TeaModel {
     }
     public String getExternalAgentEndpointUrl() {
         return this.externalAgentEndpointUrl;
+    }
+
+    public AgentRuntime setHeaderFieldName(String headerFieldName) {
+        this.headerFieldName = headerFieldName;
+        return this;
+    }
+    public String getHeaderFieldName() {
+        return this.headerFieldName;
     }
 
     public AgentRuntime setHealthCheckConfiguration(HealthCheckConfiguration healthCheckConfiguration) {
@@ -521,6 +573,14 @@ public class AgentRuntime extends TeaModel {
     }
     public String getResourceGroupId() {
         return this.resourceGroupId;
+    }
+
+    public AgentRuntime setSessionAffinityType(String sessionAffinityType) {
+        this.sessionAffinityType = sessionAffinityType;
+        return this;
+    }
+    public String getSessionAffinityType() {
+        return this.sessionAffinityType;
     }
 
     public AgentRuntime setSessionConcurrencyLimitPerInstance(Integer sessionConcurrencyLimitPerInstance) {

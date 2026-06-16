@@ -4,10 +4,14 @@ package com.aliyun.agentrun20250910.models;
 import com.aliyun.tea.*;
 
 public class CreateModelProxyInput extends TeaModel {
+    /**
+     * <p>Specifies the configuration for Application Real-Time Monitoring Service (ARMS).</p>
+     */
     @NameInMap("armsConfiguration")
     public ArmsConfiguration armsConfiguration;
 
     /**
+     * <p>The number of CPU cores for the proxy.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -17,7 +21,7 @@ public class CreateModelProxyInput extends TeaModel {
     public Float cpu;
 
     /**
-     * <p>credentialName</p>
+     * <p>The name of the credential for accessing the model service.</p>
      * 
      * <strong>example:</strong>
      * <p>credentialName</p>
@@ -26,6 +30,8 @@ public class CreateModelProxyInput extends TeaModel {
     public String credentialName;
 
     /**
+     * <p>Optional. A custom description for the model proxy.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -33,6 +39,8 @@ public class CreateModelProxyInput extends TeaModel {
     public String description;
 
     /**
+     * <p>The ARN of the execution role the service assumes to act on your behalf.</p>
+     * 
      * <strong>example:</strong>
      * <p>executionRoleArn</p>
      */
@@ -40,7 +48,7 @@ public class CreateModelProxyInput extends TeaModel {
     public String executionRoleArn;
 
     /**
-     * <p>litellmVersion</p>
+     * <p>The version of LiteLLM for the proxy.</p>
      * 
      * <strong>example:</strong>
      * <p>litellmVersion</p>
@@ -48,10 +56,14 @@ public class CreateModelProxyInput extends TeaModel {
     @NameInMap("litellmVersion")
     public String litellmVersion;
 
+    /**
+     * <p>The Log Service (SLS) configuration for the Agent runtime.</p>
+     */
     @NameInMap("logConfiguration")
     public LogConfiguration logConfiguration;
 
     /**
+     * <p>The memory size for the proxy, in GiB.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -61,7 +73,7 @@ public class CreateModelProxyInput extends TeaModel {
     public Integer memory;
 
     /**
-     * <p>modelProxyName</p>
+     * <p>The unique name for the model proxy.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -71,24 +83,35 @@ public class CreateModelProxyInput extends TeaModel {
     public String modelProxyName;
 
     /**
+     * <p>The model type. Valid values:</p>
+     * <ul>
+     * <li><p><code>system</code>: Specifies a system model.</p>
+     * </li>
+     * <li><p><code>deployment</code>: Specifies a custom deployment model.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>system</p>
      */
     @NameInMap("modelType")
     public String modelType;
 
+    /**
+     * <p>Specifies the network configuration for the proxy.</p>
+     */
     @NameInMap("networkConfiguration")
     public NetworkConfiguration networkConfiguration;
 
     /**
-     * <p>ProxyConfig</p>
+     * <p>The configuration settings for the proxy.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("proxyConfig")
     public ProxyConfig proxyConfig;
 
     /**
-     * <p>proxyMode</p>
+     * <p>Specifies the operational mode of the proxy.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -98,7 +121,7 @@ public class CreateModelProxyInput extends TeaModel {
     public String proxyMode;
 
     /**
-     * <p>serviceRegionId</p>
+     * <p>The ID of the region for the model service.</p>
      * 
      * <strong>example:</strong>
      * <p>serviceRegionId</p>
@@ -106,6 +129,9 @@ public class CreateModelProxyInput extends TeaModel {
     @NameInMap("serviceRegionId")
     public String serviceRegionId;
 
+    /**
+     * <p>The ID of the workspace that contains the model proxy.</p>
+     */
     @NameInMap("workspaceId")
     public String workspaceId;
 

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateRateLimitRuleInput extends TeaModel {
     /**
-     * <p>限流规则的描述符标识；非model维时必填，model维由服务端拼接</p>
+     * <p>The descriptor ID for the rate limit rule. This parameter is required if the descriptor type is not <code>model</code>. For <code>model</code> types, the server assembles the ID.</p>
      * 
      * <strong>example:</strong>
      * <p>model:gpt-4</p>
@@ -14,7 +14,7 @@ public class CreateRateLimitRuleInput extends TeaModel {
     public String descriptorId;
 
     /**
-     * <p>限流规则的描述符类型，如model、user等</p>
+     * <p>The descriptor type for the rate limit rule, such as <code>model</code> or <code>user</code>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -24,7 +24,7 @@ public class CreateRateLimitRuleInput extends TeaModel {
     public String descriptorType;
 
     /**
-     * <p>是否启用该限流规则</p>
+     * <p>Whether to enable the rate limit rule.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -33,7 +33,7 @@ public class CreateRateLimitRuleInput extends TeaModel {
     public Boolean enabled;
 
     /**
-     * <p>限流时间窗口配置列表，至少需要一个窗口</p>
+     * <p>A list of time window configurations. At least one window is required.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("windows")

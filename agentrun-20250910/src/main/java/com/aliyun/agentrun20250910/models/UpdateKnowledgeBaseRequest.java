@@ -4,6 +4,9 @@ package com.aliyun.agentrun20250910.models;
 import com.aliyun.tea.*;
 
 public class UpdateKnowledgeBaseRequest extends TeaModel {
+    /**
+     * <p>The request body for updating a knowledge base.</p>
+     */
     @NameInMap("body")
     public UpdateKnowledgeBaseInput body;
 

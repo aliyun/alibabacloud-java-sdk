@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateConsumerAPIKeyInput extends TeaModel {
     /**
-     * <p>是否启用该密钥</p>
+     * <p>Indicates if the key is active.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -14,7 +14,7 @@ public class UpdateConsumerAPIKeyInput extends TeaModel {
     public Boolean active;
 
     /**
-     * <p>更新后的描述信息</p>
+     * <p>A new description for the key.</p>
      * 
      * <strong>example:</strong>
      * <p>更新后的密钥描述</p>

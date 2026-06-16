@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class CreateModelConnectionInput extends TeaModel {
     /**
-     * <p>要绑定的消费者API密钥列表；空表示开放模式</p>
+     * <p>A list of consumer API keys for the model connection. If this list is empty, the connection enters open mode.</p>
      */
     @NameInMap("consumerApiKeys")
     public java.util.List<CreateModelConnectionInputConsumerApiKeys> consumerApiKeys;
 
     /**
-     * <p>模型连接的描述信息</p>
+     * <p>A description of the model connection.</p>
      * 
      * <strong>example:</strong>
      * <p>OpenAI GPT-4 connection for production</p>
@@ -20,7 +20,7 @@ public class CreateModelConnectionInput extends TeaModel {
     public String description;
 
     /**
-     * <p>模型连接的唯一名称标识</p>
+     * <p>A unique name for the model connection.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -30,13 +30,13 @@ public class CreateModelConnectionInput extends TeaModel {
     public String modelConnectionName;
 
     /**
-     * <p>模型元数据配置列表</p>
+     * <p>A list of model metadata configurations.</p>
      */
     @NameInMap("modelInfoConfigs")
     public java.util.List<ModelInfoConfig> modelInfoConfigs;
 
     /**
-     * <p>模型提供商名称</p>
+     * <p>The model provider name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -46,7 +46,7 @@ public class CreateModelConnectionInput extends TeaModel {
     public String provider;
 
     /**
-     * <p>模型提供商的配置信息，包括基础URL、模型列表等</p>
+     * <p>Configuration settings for the model provider, such as the base URL and a list of models.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -56,7 +56,7 @@ public class CreateModelConnectionInput extends TeaModel {
     public ModelConnectionProviderSettings providerSettings;
 
     /**
-     * <p>模型连接所属的工作空间标识符</p>
+     * <p>The ID of the workspace containing the model connection.</p>
      * 
      * <strong>example:</strong>
      * <p>ws-1234567890abcdef</p>

@@ -5,14 +5,20 @@ import com.aliyun.tea.*;
 
 public class GetCodeInterpreterSessionResult extends TeaModel {
     /**
-     * <p>SUCCESS 为成功，失败情况返回对应错误类型，比如 ERR_BAD_REQUEST ERR_VALIDATION_FAILED ERR_INTERNAL_SERVER_ERROR</p>
+     * <p>SUCCESS indicates success. In case of failure, the corresponding error type is returned, such as ERR_BAD_REQUEST, ERR_VALIDATION_FAILED, or ERR_INTERNAL_SERVER_ERROR.</p>
      */
     @NameInMap("code")
     public String code;
 
+    /**
+     * <p>Data</p>
+     */
     @NameInMap("data")
     public CodeInterpreterSessionOut data;
 
+    /**
+     * <p>Request ID</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 

@@ -4,12 +4,21 @@ package com.aliyun.agentrun20250910.models;
 import com.aliyun.tea.*;
 
 public class DeleteBrowserOut extends TeaModel {
+    /**
+     * <p>The browser ID.</p>
+     */
     @NameInMap("browserId")
     public String browserId;
 
+    /**
+     * <p>The browser name.</p>
+     */
     @NameInMap("browserName")
     public String browserName;
 
+    /**
+     * <p>The operation status.</p>
+     */
     @NameInMap("status")
     public String status;
 

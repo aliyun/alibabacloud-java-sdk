@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateCodeInterpreterInput extends TeaModel {
     /**
-     * <p>代码解释器的名称，用于标识和区分不同的代码解释器实例</p>
+     * <p>The name of the code interpreter. Use this to identify and distinguish code interpreter instances.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class CreateCodeInterpreterInput extends TeaModel {
     public String codeInterpreterName;
 
     /**
-     * <p>CPU资源配置（单位：核数）</p>
+     * <p>The amount of CPU to allocate, in cores.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,6 +25,8 @@ public class CreateCodeInterpreterInput extends TeaModel {
     public Float cpu;
 
     /**
+     * <p>The credential ID used for authentication.</p>
+     * 
      * <strong>example:</strong>
      * <p>cred-1234567890abcdef</p>
      */
@@ -32,7 +34,7 @@ public class CreateCodeInterpreterInput extends TeaModel {
     public String credentialId;
 
     /**
-     * <p>代码解释器的描述信息，说明该解释器的用途和功能</p>
+     * <p>A description of the code interpreter.</p>
      * 
      * <strong>example:</strong>
      * <p>Python code interpreter for data analysis</p>
@@ -41,7 +43,7 @@ public class CreateCodeInterpreterInput extends TeaModel {
     public String description;
 
     /**
-     * <p>此代码解释器的执行角色</p>
+     * <p>The Alibaba Cloud Resource Name (ARN) of the execution role for the code interpreter.</p>
      * 
      * <strong>example:</strong>
      * <p>acs:ram::1760720386195983:role/CodeInterpreterExecutionRole</p>
@@ -50,7 +52,7 @@ public class CreateCodeInterpreterInput extends TeaModel {
     public String executionRoleArn;
 
     /**
-     * <p>内存资源配置（单位：MB）</p>
+     * <p>The amount of memory to allocate, in megabytes (MB).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -60,7 +62,7 @@ public class CreateCodeInterpreterInput extends TeaModel {
     public Integer memory;
 
     /**
-     * <p>代码解释器的网络配置，包括VPC、安全组等网络访问设置</p>
+     * <p>Specifies the network configuration for the code interpreter, including VPC and security group settings.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -70,7 +72,7 @@ public class CreateCodeInterpreterInput extends TeaModel {
     public NetworkConfiguration networkConfiguration;
 
     /**
-     * <p>会话的空闲超时时间，单位为秒。实例没有会话请求后处于空闲状态，空闲态为闲置计费模式，超过此超时时间后会话自动过期，不可继续使用</p>
+     * <p>The idle timeout for a session, in seconds. If an instance has no new requests for this duration, its session expires and cannot be reused.</p>
      * 
      * <strong>example:</strong>
      * <p>3600</p>

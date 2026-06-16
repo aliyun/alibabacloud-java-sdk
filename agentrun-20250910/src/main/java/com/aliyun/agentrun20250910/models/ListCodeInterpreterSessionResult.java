@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListCodeInterpreterSessionResult extends TeaModel {
     /**
-     * <p>SUCCESS 为成功，失败情况返回对应错误类型，比如 ERR_BAD_REQUEST ERR_VALIDATION_FAILED ERR_INTERNAL_SERVER_ERROR</p>
+     * <p>The request status. A value of SUCCESS indicates that the request succeeded. Other values include error codes such as <code>ERR_BAD_REQUEST</code>, <code>ERR_VALIDATION_FAILED</code>, and <code>ERR_INTERNAL_SERVER_ERROR</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>SUCCESS</p>
@@ -14,6 +14,8 @@ public class ListCodeInterpreterSessionResult extends TeaModel {
     public String code;
 
     /**
+     * <p>Contains the list of code interpreter sessions.</p>
+     * 
      * <strong>example:</strong>
      * <p>{}</p>
      */
@@ -21,6 +23,8 @@ public class ListCodeInterpreterSessionResult extends TeaModel {
     public CodeInterpreterSessionListOut data;
 
     /**
+     * <p>Unique identifier for the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>F8A0F5F3-0C3E-4C82-9D4F-5E4B6A7C8D9E</p>
      */

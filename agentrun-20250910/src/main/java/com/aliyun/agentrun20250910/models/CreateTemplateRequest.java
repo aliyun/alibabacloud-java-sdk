@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateTemplateRequest extends TeaModel {
     /**
-     * <p>创建模板所需的完整配置信息，包括模板名称、类型、资源规格、网络配置等</p>
+     * <p>Contains the parameters for creating the template.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("body")

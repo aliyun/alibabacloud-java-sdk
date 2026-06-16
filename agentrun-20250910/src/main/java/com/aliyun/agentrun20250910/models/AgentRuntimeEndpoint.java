@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class AgentRuntimeEndpoint extends TeaModel {
     /**
+     * <p>The Alibaba Cloud Resource Name (ARN) of the agent runtime endpoint.</p>
+     * 
      * <strong>example:</strong>
      * <p>acs:agentrun:cn-hangzhou:1760720386195983:runtime-endpoints/e56d483c-db80-4116-9ec4-25f16f5facfd</p>
      */
@@ -12,6 +14,8 @@ public class AgentRuntimeEndpoint extends TeaModel {
     public String agentRuntimeEndpointArn;
 
     /**
+     * <p>The unique identifier of the agent runtime endpoint.</p>
+     * 
      * <strong>example:</strong>
      * <p>are-1234567890abcdef</p>
      */
@@ -19,6 +23,8 @@ public class AgentRuntimeEndpoint extends TeaModel {
     public String agentRuntimeEndpointId;
 
     /**
+     * <p>The name of the agent runtime endpoint.</p>
+     * 
      * <strong>example:</strong>
      * <p>production-endpoint</p>
      */
@@ -26,6 +32,8 @@ public class AgentRuntimeEndpoint extends TeaModel {
     public String agentRuntimeEndpointName;
 
     /**
+     * <p>The unique identifier of the agent runtime.</p>
+     * 
      * <strong>example:</strong>
      * <p>ar-1234567890abcdef</p>
      */
@@ -33,6 +41,8 @@ public class AgentRuntimeEndpoint extends TeaModel {
     public String agentRuntimeId;
 
     /**
+     * <p>The description of the agent runtime endpoint.</p>
+     * 
      * <strong>example:</strong>
      * <p>Production endpoint for customer service agent</p>
      */
@@ -40,13 +50,13 @@ public class AgentRuntimeEndpoint extends TeaModel {
     public String description;
 
     /**
-     * <p>是否禁用该端点的公网访问</p>
+     * <p>If <code>true</code>, public access for this endpoint is disabled.</p>
      */
     @NameInMap("disablePublicNetworkAccess")
     public Boolean disablePublicNetworkAccess;
 
     /**
-     * <p>智能体运行时端点的公网访问地址</p>
+     * <p>The public access address for the agent runtime endpoint.</p>
      * 
      * <strong>example:</strong>
      * <p><a href="https://ar-1234567890abcdef.cn-hangzhou.agentrun.aliyuncs.com">https://ar-1234567890abcdef.cn-hangzhou.agentrun.aliyuncs.com</a></p>
@@ -55,7 +65,7 @@ public class AgentRuntimeEndpoint extends TeaModel {
     public String endpointPublicUrl;
 
     /**
-     * <p>智能体运行时端点的路由配置，支持多版本权重分配</p>
+     * <p>The configuration for weight-based routing across multiple agent versions.</p>
      */
     @NameInMap("routingConfiguration")
     public RoutingConfiguration routingConfiguration;
@@ -67,6 +77,8 @@ public class AgentRuntimeEndpoint extends TeaModel {
     public ScalingStatus scalingStatus;
 
     /**
+     * <p>The current status of the agent runtime endpoint.</p>
+     * 
      * <strong>example:</strong>
      * <p>ACTIVE</p>
      */
@@ -74,6 +86,8 @@ public class AgentRuntimeEndpoint extends TeaModel {
     public String status;
 
     /**
+     * <p>The reason for the current status of the endpoint.</p>
+     * 
      * <strong>example:</strong>
      * <p>Endpoint is active and ready</p>
      */
@@ -81,6 +95,8 @@ public class AgentRuntimeEndpoint extends TeaModel {
     public String statusReason;
 
     /**
+     * <p>The agent version that the endpoint targets.</p>
+     * 
      * <strong>example:</strong>
      * <p>LATEST</p>
      */

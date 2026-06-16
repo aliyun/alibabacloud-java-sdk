@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class PolarFsMountConfig extends TeaModel {
     /**
+     * <p>Instance ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>pfs-cn-6sa48a6gk001</p>
      */
@@ -12,6 +14,8 @@ public class PolarFsMountConfig extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>Local mount folder.</p>
+     * 
      * <strong>example:</strong>
      * <p>/</p>
      */
@@ -19,6 +23,8 @@ public class PolarFsMountConfig extends TeaModel {
     public String mountDir;
 
     /**
+     * <p>Remote mount folder</p>
+     * 
      * <strong>example:</strong>
      * <p>/mnt/pfs</p>
      */

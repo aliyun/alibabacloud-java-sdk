@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class PublishFlowVersionRequest extends TeaModel {
     /**
-     * <p>包含版本描述等信息的请求体</p>
+     * <p>The input parameters for publishing a workflow version.</p>
      */
     @NameInMap("body")
     public PublishFlowVersionInput body;

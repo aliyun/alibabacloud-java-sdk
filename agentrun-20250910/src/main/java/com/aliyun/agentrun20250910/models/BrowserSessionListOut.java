@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class BrowserSessionListOut extends TeaModel {
     /**
+     * <p>An array of browser session objects.</p>
+     * 
      * <strong>example:</strong>
      * <p>[]</p>
      */
@@ -12,6 +14,8 @@ public class BrowserSessionListOut extends TeaModel {
     public java.util.List<BrowserSessionOut> items;
 
     /**
+     * <p>The current page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -19,6 +23,8 @@ public class BrowserSessionListOut extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of sessions per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -26,6 +32,8 @@ public class BrowserSessionListOut extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The total number of sessions.</p>
+     * 
      * <strong>example:</strong>
      * <p>2</p>
      */

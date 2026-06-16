@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpdateAgentRuntimeInput extends TeaModel {
     /**
+     * <p>The name of the agent runtime.</p>
+     * 
      * <strong>example:</strong>
      * <p>my-agent-runtime</p>
      */
@@ -21,6 +23,8 @@ public class UpdateAgentRuntimeInput extends TeaModel {
     public ArmsConfiguration armsConfiguration;
 
     /**
+     * <p>The artifact type.</p>
+     * 
      * <strong>example:</strong>
      * <p>Code</p>
      */
@@ -28,7 +32,7 @@ public class UpdateAgentRuntimeInput extends TeaModel {
     public String artifactType;
 
     /**
-     * <p>当artifactType为Code时的代码配置信息，包括代码源、入口文件等</p>
+     * <p>The code configuration.</p>
      * 
      * <strong>example:</strong>
      * <p>{}</p>
@@ -37,7 +41,7 @@ public class UpdateAgentRuntimeInput extends TeaModel {
     public CodeConfiguration codeConfiguration;
 
     /**
-     * <p>当artifactType为Container时的容器配置信息，包括镜像地址、启动命令等</p>
+     * <p>The container configuration.</p>
      * 
      * <strong>example:</strong>
      * <p>{}</p>
@@ -46,6 +50,7 @@ public class UpdateAgentRuntimeInput extends TeaModel {
     public ContainerConfiguration containerConfiguration;
 
     /**
+     * <p>The number of CPU cores.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -55,7 +60,7 @@ public class UpdateAgentRuntimeInput extends TeaModel {
     public Float cpu;
 
     /**
-     * <p>用于访问智能体的凭证名称，访问智能体运行时将使用此凭证进行身份验证</p>
+     * <p>The name of the credential that the agent runtime uses to authenticate requests.</p>
      * 
      * <strong>example:</strong>
      * <p>my-credential</p>
@@ -64,6 +69,8 @@ public class UpdateAgentRuntimeInput extends TeaModel {
     public String credentialName;
 
     /**
+     * <p>The description of the agent runtime.</p>
+     * 
      * <strong>example:</strong>
      * <p>更新后的智能体运行时描述</p>
      */
@@ -71,7 +78,16 @@ public class UpdateAgentRuntimeInput extends TeaModel {
     public String description;
 
     /**
-     * <p>是否禁用会话亲和性。默认为 false（即默认启用会话亲和），设置为 true 时关闭会话亲和</p>
+     * <p>Specifies whether to disable on-demand elasticity. Set to true to disable. Default: false.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
+    @NameInMap("disableOndemand")
+    public Boolean disableOndemand;
+
+    /**
+     * <p>Specifies whether to disable session affinity. Set to true to disable. Default: false.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -79,6 +95,9 @@ public class UpdateAgentRuntimeInput extends TeaModel {
     @NameInMap("disableSessionAffinity")
     public Boolean disableSessionAffinity;
 
+    /**
+     * <p>The disk size in gigabytes (GB).</p>
+     */
     @NameInMap("diskSize")
     public Integer diskSize;
 
@@ -86,7 +105,7 @@ public class UpdateAgentRuntimeInput extends TeaModel {
     public String edition;
 
     /**
-     * <p>是否启用会话隔离，启用后每个会话将在独立的环境中运行</p>
+     * <p>Specifies whether to enable session isolation. If enabled, each session runs in an isolated environment.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -95,7 +114,7 @@ public class UpdateAgentRuntimeInput extends TeaModel {
     public Boolean enableSessionIsolation;
 
     /**
-     * <p>智能体运行时的环境变量配置，用于在运行时传递配置参数</p>
+     * <p>Environment variables for the agent runtime.</p>
      * 
      * <strong>example:</strong>
      * <p>ENV_VAR1=value1,ENV_VAR2=value2</p>
@@ -104,7 +123,7 @@ public class UpdateAgentRuntimeInput extends TeaModel {
     public java.util.Map<String, String> environmentVariables;
 
     /**
-     * <p>为智能体运行时提供访问云服务权限的执行角色ARN</p>
+     * <p>The execution role ARN that grants the agent runtime permissions to access cloud services.</p>
      * 
      * <strong>example:</strong>
      * <p>acs:ram::1760720386195983:role/AgentRunExecutionRole</p>
@@ -113,7 +132,7 @@ public class UpdateAgentRuntimeInput extends TeaModel {
     public String executionRoleArn;
 
     /**
-     * <p>外部注册类型的智能体访问端点地址，用于连接已部署在外部的智能体服务</p>
+     * <p>The endpoint URL for an externally registered agent. The platform uses this URL to connect to an agent service deployed outside the platform.</p>
      * 
      * <strong>example:</strong>
      * <p><a href="https://external-agent.example.com/api">https://external-agent.example.com/api</a></p>
@@ -122,7 +141,25 @@ public class UpdateAgentRuntimeInput extends TeaModel {
     public String externalAgentEndpointUrl;
 
     /**
-     * <p>智能体运行时的健康检查配置，用于监控运行时实例的健康状态</p>
+     * <p>Specifies whether to perform a best-effort eviction of active Function Compute (FC) sessions when the configuration is updated. This helps the new settings take effect faster.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
+    @NameInMap("forceEvictInstances")
+    public Boolean forceEvictInstances;
+
+    /**
+     * <p>The name of the request header used for session affinity when sessionAffinityType is set to &quot;HEADER_FIELD&quot;.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>x-agentrun-session-id</p>
+     */
+    @NameInMap("headerFieldName")
+    public String headerFieldName;
+
+    /**
+     * <p>The health check configuration for monitoring the health of agent runtime instances.</p>
      * 
      * <strong>example:</strong>
      * <p>{}</p>
@@ -131,7 +168,7 @@ public class UpdateAgentRuntimeInput extends TeaModel {
     public HealthCheckConfiguration healthCheckConfiguration;
 
     /**
-     * <p>SLS（简单日志服务）配置</p>
+     * <p>The configuration for Simple Log Service (SLS).</p>
      * 
      * <strong>example:</strong>
      * <p>{}</p>
@@ -140,6 +177,8 @@ public class UpdateAgentRuntimeInput extends TeaModel {
     public LogConfiguration logConfiguration;
 
     /**
+     * <p>The amount of memory in megabytes (MB).</p>
+     * 
      * <strong>example:</strong>
      * <p>1024</p>
      */
@@ -147,7 +186,7 @@ public class UpdateAgentRuntimeInput extends TeaModel {
     public Integer memory;
 
     /**
-     * <p>文件存储NAS的配置信息，用于挂载NAS文件系统到智能体运行时</p>
+     * <p>Configuration for mounting a NAS file system to the agent runtime.</p>
      * 
      * <strong>example:</strong>
      * <p>{}</p>
@@ -156,7 +195,7 @@ public class UpdateAgentRuntimeInput extends TeaModel {
     public NASConfig nasConfig;
 
     /**
-     * <p>智能体运行时的网络配置，包括VPC、安全组等网络访问设置</p>
+     * <p>The network configuration.</p>
      * 
      * <strong>example:</strong>
      * <p>{}</p>
@@ -165,7 +204,7 @@ public class UpdateAgentRuntimeInput extends TeaModel {
     public NetworkConfiguration networkConfiguration;
 
     /**
-     * <p>对象存储OSS的挂载配置信息，用于挂载OSS存储桶到智能体运行时</p>
+     * <p>Configuration for mounting an OSS bucket to the agent runtime.</p>
      * 
      * <strong>example:</strong>
      * <p>{}</p>
@@ -174,6 +213,8 @@ public class UpdateAgentRuntimeInput extends TeaModel {
     public OSSMountConfig ossMountConfig;
 
     /**
+     * <p>The port on which the agent service listens.</p>
+     * 
      * <strong>example:</strong>
      * <p>8080</p>
      */
@@ -181,7 +222,7 @@ public class UpdateAgentRuntimeInput extends TeaModel {
     public Integer port;
 
     /**
-     * <p>智能体运行时的通信协议配置，定义运行时如何与外部系统交互</p>
+     * <p>The protocol configuration.</p>
      * 
      * <strong>example:</strong>
      * <p>{}</p>
@@ -190,7 +231,16 @@ public class UpdateAgentRuntimeInput extends TeaModel {
     public ProtocolConfiguration protocolConfiguration;
 
     /**
-     * <p>每个运行时实例允许的最大并发会话数</p>
+     * <p>The session affinity mode. Valid values: NONE (disables session affinity), HEADER_FIELD (routes requests based on a request header), and GENERATED_COOKIE (routes requests using a cookie generated by Function Compute (FC)). The value COOKIE is an alias for GENERATED_COOKIE.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>GENERATED_COOKIE</p>
+     */
+    @NameInMap("sessionAffinityType")
+    public String sessionAffinityType;
+
+    /**
+     * <p>The maximum number of concurrent sessions allowed per runtime instance.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>
@@ -199,7 +249,7 @@ public class UpdateAgentRuntimeInput extends TeaModel {
     public Integer sessionConcurrencyLimitPerInstance;
 
     /**
-     * <p>会话的空闲超时时间，单位为秒。实例没有会话请求后处于空闲状态，空闲态为闲置计费模式，超过此超时时间后会话自动过期，不可继续使用</p>
+     * <p>The idle timeout for a session, in seconds. If an instance remains idle longer than this timeout after receiving no requests, the session expires.</p>
      * 
      * <strong>example:</strong>
      * <p>3600</p>
@@ -208,7 +258,7 @@ public class UpdateAgentRuntimeInput extends TeaModel {
     public Integer sessionIdleTimeoutSeconds;
 
     /**
-     * <p>智能体运行时的系统标签信息，用于系统级别的资源分类和管理</p>
+     * <p>The system tags for the agent runtime, used for resource classification and management.</p>
      * 
      * <strong>example:</strong>
      * <p>system-tag-1,system-tag-2</p>
@@ -216,6 +266,9 @@ public class UpdateAgentRuntimeInput extends TeaModel {
     @NameInMap("systemTags")
     public java.util.List<String> systemTags;
 
+    /**
+     * <p>The ID of the workspace.</p>
+     */
     @NameInMap("workspaceId")
     public String workspaceId;
 
@@ -288,6 +341,14 @@ public class UpdateAgentRuntimeInput extends TeaModel {
         return this.description;
     }
 
+    public UpdateAgentRuntimeInput setDisableOndemand(Boolean disableOndemand) {
+        this.disableOndemand = disableOndemand;
+        return this;
+    }
+    public Boolean getDisableOndemand() {
+        return this.disableOndemand;
+    }
+
     public UpdateAgentRuntimeInput setDisableSessionAffinity(Boolean disableSessionAffinity) {
         this.disableSessionAffinity = disableSessionAffinity;
         return this;
@@ -342,6 +403,22 @@ public class UpdateAgentRuntimeInput extends TeaModel {
     }
     public String getExternalAgentEndpointUrl() {
         return this.externalAgentEndpointUrl;
+    }
+
+    public UpdateAgentRuntimeInput setForceEvictInstances(Boolean forceEvictInstances) {
+        this.forceEvictInstances = forceEvictInstances;
+        return this;
+    }
+    public Boolean getForceEvictInstances() {
+        return this.forceEvictInstances;
+    }
+
+    public UpdateAgentRuntimeInput setHeaderFieldName(String headerFieldName) {
+        this.headerFieldName = headerFieldName;
+        return this;
+    }
+    public String getHeaderFieldName() {
+        return this.headerFieldName;
     }
 
     public UpdateAgentRuntimeInput setHealthCheckConfiguration(HealthCheckConfiguration healthCheckConfiguration) {
@@ -406,6 +483,14 @@ public class UpdateAgentRuntimeInput extends TeaModel {
     }
     public ProtocolConfiguration getProtocolConfiguration() {
         return this.protocolConfiguration;
+    }
+
+    public UpdateAgentRuntimeInput setSessionAffinityType(String sessionAffinityType) {
+        this.sessionAffinityType = sessionAffinityType;
+        return this;
+    }
+    public String getSessionAffinityType() {
+        return this.sessionAffinityType;
     }
 
     public UpdateAgentRuntimeInput setSessionConcurrencyLimitPerInstance(Integer sessionConcurrencyLimitPerInstance) {

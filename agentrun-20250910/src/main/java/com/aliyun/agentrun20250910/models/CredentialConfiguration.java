@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CredentialConfiguration extends TeaModel {
     /**
-     * <p>凭证的唯一标识符</p>
+     * <p>The unique identifier for the credential.</p>
      * 
      * <strong>example:</strong>
      * <p>deepagent-key</p>

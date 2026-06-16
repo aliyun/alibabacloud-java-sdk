@@ -5,37 +5,37 @@ import com.aliyun.tea.*;
 
 public class HealthCheckConfig extends TeaModel {
     /**
-     * <p>在将容器视为不健康之前，连续失败的健康检查次数</p>
+     * <p>The number of consecutive failed health checks before the container is considered unhealthy</p>
      */
     @NameInMap("failureThreshold")
     public Integer failureThreshold;
 
     /**
-     * <p>用于健康检查的HTTP GET请求的URL地址</p>
+     * <p>The URL address for the HTTP GET request used in health checks</p>
      */
     @NameInMap("httpGetUrl")
     public String httpGetUrl;
 
     /**
-     * <p>在容器启动后，首次执行健康检查前的延迟时间（秒）</p>
+     * <p>The delay time (in seconds) after the container starts before the first health check is executed</p>
      */
     @NameInMap("initialDelaySeconds")
     public Integer initialDelaySeconds;
 
     /**
-     * <p>执行健康检查的时间间隔（秒）</p>
+     * <p>The time interval (in seconds) between health checks</p>
      */
     @NameInMap("periodSeconds")
     public Integer periodSeconds;
 
     /**
-     * <p>在将容器视为健康之前，连续成功的健康检查次数</p>
+     * <p>The number of consecutive successful health checks required before the container is considered healthy</p>
      */
     @NameInMap("successThreshold")
     public Integer successThreshold;
 
     /**
-     * <p>健康检查的超时时间（秒）</p>
+     * <p>The timeout duration (in seconds) for health checks</p>
      */
     @NameInMap("timeoutSeconds")
     public Integer timeoutSeconds;

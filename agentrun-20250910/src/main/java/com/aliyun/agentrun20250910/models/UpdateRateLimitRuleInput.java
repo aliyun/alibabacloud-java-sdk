@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateRateLimitRuleInput extends TeaModel {
     /**
-     * <p>是否启用该限流规则</p>
+     * <p>Specifies whether to enable the rate limit rule.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -14,7 +14,7 @@ public class UpdateRateLimitRuleInput extends TeaModel {
     public Boolean enabled;
 
     /**
-     * <p>限流时间窗口配置列表，提供时将整组覆盖</p>
+     * <p>A list of time window configurations. Providing this parameter replaces the entire existing list.</p>
      */
     @NameInMap("windows")
     public java.util.List<WindowLimit> windows;

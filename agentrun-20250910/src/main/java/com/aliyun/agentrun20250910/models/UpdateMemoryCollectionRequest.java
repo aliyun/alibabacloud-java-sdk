@@ -4,6 +4,9 @@ package com.aliyun.agentrun20250910.models;
 import com.aliyun.tea.*;
 
 public class UpdateMemoryCollectionRequest extends TeaModel {
+    /**
+     * <p>The request body to update the memory collection.</p>
+     */
     @NameInMap("body")
     public UpdateMemoryCollectionInput body;
 

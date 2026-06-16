@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpdateTemplateInput extends TeaModel {
     /**
+     * <p>Specifies whether the data link is allowed to invoke APIs to create, stop, or delete sandboxes</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      * 
@@ -14,17 +16,20 @@ public class UpdateTemplateInput extends TeaModel {
     @NameInMap("allowAnonymousManage")
     public Boolean allowAnonymousManage;
 
+    /**
+     * <p>Configuration information for Application Real-Time Monitoring Service (ARMS)</p>
+     */
     @NameInMap("armsConfiguration")
     public ArmsConfiguration armsConfiguration;
 
     /**
-     * <p>容器配置（内置的不可改）</p>
+     * <p>Container configuration (built-in and immutable)</p>
      */
     @NameInMap("containerConfiguration")
     public ContainerConfiguration containerConfiguration;
 
     /**
-     * <p>CPU资源配置（单位：核心）</p>
+     * <p>CPU resource configuration (unit: core)</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>
@@ -32,10 +37,15 @@ public class UpdateTemplateInput extends TeaModel {
     @NameInMap("cpu")
     public Float cpu;
 
+    /**
+     * <p>Credential configuration</p>
+     */
     @NameInMap("credentialConfiguration")
     public CredentialConfiguration credentialConfiguration;
 
     /**
+     * <p>Template description</p>
+     * 
      * <strong>example:</strong>
      * <p>demo description</p>
      */
@@ -43,6 +53,8 @@ public class UpdateTemplateInput extends TeaModel {
     public String description;
 
     /**
+     * <p>Sandbox Agent toggle</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -52,21 +64,29 @@ public class UpdateTemplateInput extends TeaModel {
     @NameInMap("enablePreStop")
     public Boolean enablePreStop;
 
+    /**
+     * <p>Environment variables</p>
+     */
     @NameInMap("environmentVariables")
     public java.util.Map<String, String> environmentVariables;
 
     /**
+     * <p>Execution role ARN</p>
+     * 
      * <strong>example:</strong>
      * <p>arn:acs:agentrun:cn-hangzhou:123456789:xxx/test</p>
      */
     @NameInMap("executionRoleArn")
     public String executionRoleArn;
 
+    /**
+     * <p>Log configuration</p>
+     */
     @NameInMap("logConfiguration")
     public LogConfiguration logConfiguration;
 
     /**
-     * <p>内存资源配置（单位：MB）</p>
+     * <p>Memory resource configuration (unit: MB)</p>
      * 
      * <strong>example:</strong>
      * <p>4</p>
@@ -74,12 +94,21 @@ public class UpdateTemplateInput extends TeaModel {
     @NameInMap("memory")
     public Integer memory;
 
+    /**
+     * <p>NAS mount configuration item</p>
+     */
     @NameInMap("nasConfig")
     public NASConfig nasConfig;
 
+    /**
+     * <p>Network configuration</p>
+     */
     @NameInMap("networkConfiguration")
     public NetworkConfiguration networkConfiguration;
 
+    /**
+     * <p>OSS mount configuration</p>
+     */
     @NameInMap("ossConfiguration")
     public java.util.List<OssConfiguration> ossConfiguration;
 
@@ -87,7 +116,7 @@ public class UpdateTemplateInput extends TeaModel {
     public Integer preStopTimeoutInSeconds;
 
     /**
-     * <p>沙箱空闲超时时间（秒）</p>
+     * <p>Sandbox idle timeout (seconds)</p>
      * 
      * <strong>example:</strong>
      * <p>21600</p>
@@ -96,7 +125,7 @@ public class UpdateTemplateInput extends TeaModel {
     public Integer sandboxIdleTimeoutInSeconds;
 
     /**
-     * <p>沙箱存活时间（秒）</p>
+     * <p>Sandbox time to live (seconds)</p>
      * 
      * <strong>example:</strong>
      * <p>86400</p>
@@ -104,16 +133,21 @@ public class UpdateTemplateInput extends TeaModel {
     @NameInMap("sandboxTTLInSeconds")
     public Integer sandboxTTLInSeconds;
 
+    /**
+     * <p>Elasticity configuration</p>
+     */
     @NameInMap("scalingConfig")
     public ScalingConfig scalingConfig;
 
     /**
-     * <p>模板配置（灵活的对象结构，根据 templateType 不同而不同）</p>
+     * <p>Template configuration (a flexible object structure that varies based on templateType)</p>
      */
     @NameInMap("templateConfiguration")
     public java.util.Map<String, ?> templateConfiguration;
 
     /**
+     * <p>Associated Space ID</p>
+     * 
      * <strong>example:</strong>
      * <p>ws-1234567890abcdef</p>
      */

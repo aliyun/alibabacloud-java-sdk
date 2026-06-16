@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListKnowledgeBasesRequest extends TeaModel {
     /**
+     * <p>The page number to return. The value must be 1 or greater. The default value is 1.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -12,6 +14,8 @@ public class ListKnowledgeBasesRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of results to return per page. The default value is 20.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -19,6 +23,8 @@ public class ListKnowledgeBasesRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The knowledge base provider.</p>
+     * 
      * <strong>example:</strong>
      * <p>bailian</p>
      */

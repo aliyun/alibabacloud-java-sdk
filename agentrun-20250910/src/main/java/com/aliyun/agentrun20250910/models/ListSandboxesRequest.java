@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListSandboxesRequest extends TeaModel {
     /**
-     * <p>当前页码，从1开始计数</p>
+     * <p>The maximum number of results to return.</p>
      * 
      * <strong>example:</strong>
      * <p>1000</p>
@@ -14,6 +14,8 @@ public class ListSandboxesRequest extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>The pagination token for the next set of results. A non-empty value indicates that more data is available.</p>
+     * 
      * <strong>example:</strong>
      * <p>dnLkmeaJc9vHgbzREh2l0J4dD+2BRJj42DLT6GrZysw=</p>
      */
@@ -28,6 +30,8 @@ public class ListSandboxesRequest extends TeaModel {
     public String sandboxId;
 
     /**
+     * <p>Filters the results by status.</p>
+     * 
      * <strong>example:</strong>
      * <p>CREATING</p>
      */
@@ -35,7 +39,7 @@ public class ListSandboxesRequest extends TeaModel {
     public String status;
 
     /**
-     * <p>按模板名称过滤</p>
+     * <p>Filters the results by template name.</p>
      * 
      * <strong>example:</strong>
      * <p>templateName</p>
@@ -44,6 +48,8 @@ public class ListSandboxesRequest extends TeaModel {
     public String templateName;
 
     /**
+     * <p>Filters the results by template type.</p>
+     * 
      * <strong>example:</strong>
      * <p>TASK</p>
      */

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateToolRequest extends TeaModel {
     /**
-     * <p>更新工具的请求参数，只需提供需要修改的字段</p>
+     * <p>The request body.</p>
      */
     @NameInMap("body")
     public UpdateToolInputV2 body;

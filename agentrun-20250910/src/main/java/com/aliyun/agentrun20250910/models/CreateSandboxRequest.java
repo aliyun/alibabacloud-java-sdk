@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateSandboxRequest extends TeaModel {
     /**
-     * <p>创建沙箱所需的配置信息，包括模板名称、沙箱名称等</p>
+     * <p>The configuration for the sandbox.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("body")

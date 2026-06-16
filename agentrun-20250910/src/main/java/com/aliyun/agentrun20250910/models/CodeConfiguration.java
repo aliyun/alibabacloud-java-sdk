@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CodeConfiguration extends TeaModel {
     /**
-     * <p>代码包的CRC-64校验值。如果提供了checksum，则函数计算会校验代码包的checksum是否和提供的一致</p>
+     * <p>The CRC-64 checksum of the code package. If you provide <code>checksum</code>, Function Compute verifies that the code package\&quot;s computed checksum matches this value.</p>
      * 
      * <strong>example:</strong>
      * <p>1234567890123456789</p>
@@ -14,7 +14,7 @@ public class CodeConfiguration extends TeaModel {
     public String checksum;
 
     /**
-     * <p>在运行时中运行的命令（例如：[&quot;python&quot;]）</p>
+     * <p>The command and arguments to run in the runtime.</p>
      * 
      * <strong>example:</strong>
      * <p>python,main.py</p>
@@ -23,7 +23,7 @@ public class CodeConfiguration extends TeaModel {
     public java.util.List<String> command;
 
     /**
-     * <p>代码运行时的编程语言，如 python3、nodejs 等</p>
+     * <p>The programming language for the function\&quot;s runtime, such as python3 or nodejs.</p>
      * 
      * <strong>example:</strong>
      * <p>python3.12</p>
@@ -32,6 +32,8 @@ public class CodeConfiguration extends TeaModel {
     public String language;
 
     /**
+     * <p>The name of the OSS bucket that contains the function\&quot;s code package.</p>
+     * 
      * <strong>example:</strong>
      * <p>my-agent-code-bucket</p>
      */
@@ -39,6 +41,8 @@ public class CodeConfiguration extends TeaModel {
     public String ossBucketName;
 
     /**
+     * <p>The name of the OSS object for the function\&quot;s code package.</p>
+     * 
      * <strong>example:</strong>
      * <p>agent-code-v1.0.zip</p>
      */
@@ -46,7 +50,7 @@ public class CodeConfiguration extends TeaModel {
     public String ossObjectName;
 
     /**
-     * <p>智能体代码ZIP包的Base64编码</p>
+     * <p>The base64-encoded content of the agent\&quot;s code package.</p>
      * 
      * <strong>example:</strong>
      * <p>UEsDBAoAAAAAANF</p>

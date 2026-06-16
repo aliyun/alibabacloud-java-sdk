@@ -4,6 +4,9 @@ package com.aliyun.agentrun20250910.models;
 import com.aliyun.tea.*;
 
 public class UpdateModelProxyRequest extends TeaModel {
+    /**
+     * <p>The new configuration for the model proxy.</p>
+     */
     @NameInMap("body")
     public UpdateModelProxyInput body;
 

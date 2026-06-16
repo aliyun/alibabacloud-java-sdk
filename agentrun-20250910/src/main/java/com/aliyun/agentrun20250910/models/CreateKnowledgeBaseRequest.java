@@ -4,6 +4,9 @@ package com.aliyun.agentrun20250910.models;
 import com.aliyun.tea.*;
 
 public class CreateKnowledgeBaseRequest extends TeaModel {
+    /**
+     * <p>The data structure to create a knowledge base.</p>
+     */
     @NameInMap("body")
     public CreateKnowledgeBaseInput body;
 

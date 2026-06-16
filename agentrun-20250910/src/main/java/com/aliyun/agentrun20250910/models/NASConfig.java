@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class NASConfig extends TeaModel {
     /**
+     * <p>The group ID for file system access.</p>
+     * 
      * <strong>example:</strong>
      * <p>100</p>
      */
     @NameInMap("groupId")
     public Integer groupId;
 
+    /**
+     * <p>A list of mount point configurations.</p>
+     */
     @NameInMap("mountPoints")
     public java.util.List<NASMountConfig> mountPoints;
 
     /**
+     * <p>The user ID for file system access.</p>
+     * 
      * <strong>example:</strong>
      * <p>100</p>
      */

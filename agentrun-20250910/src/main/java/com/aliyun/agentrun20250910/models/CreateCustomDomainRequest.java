@@ -4,6 +4,9 @@ package com.aliyun.agentrun20250910.models;
 import com.aliyun.tea.*;
 
 public class CreateCustomDomainRequest extends TeaModel {
+    /**
+     * <p>The request body used to create a custom domain.</p>
+     */
     @NameInMap("body")
     public CreateCustomDomainInput body;
 

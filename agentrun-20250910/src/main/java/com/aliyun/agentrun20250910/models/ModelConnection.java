@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ModelConnection extends TeaModel {
     /**
-     * <p>绑定的消费者API密钥列表</p>
+     * <p>A list of consumer API keys bound to this model connection.</p>
      */
     @NameInMap("consumerApiKeys")
     public java.util.List<ModelConnectionConsumerAPIKey> consumerApiKeys;
 
     /**
-     * <p>模型连接的创建时间，采用ISO 8601格式</p>
+     * <p>The time the model connection was created, in ISO 8601 format.</p>
      * 
      * <strong>example:</strong>
      * <p>2025-01-10T10:30:00Z</p>
@@ -20,7 +20,7 @@ public class ModelConnection extends TeaModel {
     public String createdAt;
 
     /**
-     * <p>模型连接的描述信息</p>
+     * <p>A description of the model connection.</p>
      * 
      * <strong>example:</strong>
      * <p>OpenAI GPT-4 connection for production</p>
@@ -29,7 +29,7 @@ public class ModelConnection extends TeaModel {
     public String description;
 
     /**
-     * <p>模型连接最后一次更新的时间，采用ISO 8601格式</p>
+     * <p>The time the model connection was last updated, in ISO 8601 format.</p>
      * 
      * <strong>example:</strong>
      * <p>2025-01-10T11:45:00Z</p>
@@ -38,7 +38,7 @@ public class ModelConnection extends TeaModel {
     public String lastUpdatedAt;
 
     /**
-     * <p>模型连接的唯一标识符</p>
+     * <p>The model connection\&quot;s unique identifier.</p>
      * 
      * <strong>example:</strong>
      * <p>mc-1234567890abcdef</p>
@@ -47,7 +47,7 @@ public class ModelConnection extends TeaModel {
     public String modelConnectionId;
 
     /**
-     * <p>模型连接的唯一名称标识</p>
+     * <p>A unique name identifying the model connection.</p>
      * 
      * <strong>example:</strong>
      * <p>my-openai-connection</p>
@@ -56,13 +56,13 @@ public class ModelConnection extends TeaModel {
     public String modelConnectionName;
 
     /**
-     * <p>模型元数据配置列表，包含各个模型的功能特性和参数规则</p>
+     * <p>A list of model metadata configurations. Each configuration includes the features and parameter rules for a specific model.</p>
      */
     @NameInMap("modelInfoConfigs")
     public java.util.List<ModelInfoConfig> modelInfoConfigs;
 
     /**
-     * <p>模型提供商名称</p>
+     * <p>The model provider\&quot;s name.</p>
      * 
      * <strong>example:</strong>
      * <p>openai</p>
@@ -71,7 +71,7 @@ public class ModelConnection extends TeaModel {
     public String provider;
 
     /**
-     * <p>模型提供商的配置信息</p>
+     * <p>The settings for the model provider.</p>
      * 
      * <strong>example:</strong>
      * <p>{}</p>
@@ -80,7 +80,7 @@ public class ModelConnection extends TeaModel {
     public ModelConnectionProviderSettings providerSettings;
 
     /**
-     * <p>模型连接所属的工作空间标识符</p>
+     * <p>The identifier of the workspace containing the model connection.</p>
      * 
      * <strong>example:</strong>
      * <p>ws-1234567890abcdef</p>

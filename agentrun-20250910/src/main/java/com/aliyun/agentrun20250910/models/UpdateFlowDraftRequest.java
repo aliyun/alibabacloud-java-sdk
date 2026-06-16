@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateFlowDraftRequest extends TeaModel {
     /**
-     * <p>包含要更新的工作流草稿配置信息的请求体</p>
+     * <p>Input parameters for updating flow draft</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("body")

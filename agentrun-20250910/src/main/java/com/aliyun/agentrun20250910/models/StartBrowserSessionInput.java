@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class StartBrowserSessionInput extends TeaModel {
     /**
+     * <p>Browser session name</p>
+     * 
      * <strong>example:</strong>
      * <p>my-browser-session</p>
      * 

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListAgentRuntimeEndpointsResult extends TeaModel {
     /**
-     * <p>SUCCESS 为成功，失败情况返回对应错误类型，比如 ERR_BAD_REQUEST ERR_VALIDATION_FAILED ERR_INTERNAL_SERVER_ERROR</p>
+     * <p>The status code of the response. <code>SUCCESS</code> indicates that the operation succeeded. If the operation fails, an error code is returned, such as <code>ERR_BAD_REQUEST</code>, <code>ERR_VALIDATION_FAILED</code>, or <code>ERR_INTERNAL_SERVER_ERROR</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>SUCCESS</p>
@@ -14,7 +14,7 @@ public class ListAgentRuntimeEndpointsResult extends TeaModel {
     public String code;
 
     /**
-     * <p>智能体运行时端点列表的详细信息</p>
+     * <p>Detailed information about the agent runtime endpoints.</p>
      * 
      * <strong>example:</strong>
      * <p>{}</p>
@@ -23,7 +23,7 @@ public class ListAgentRuntimeEndpointsResult extends TeaModel {
     public ListAgentRuntimeEndpointsOutput data;
 
     /**
-     * <p>唯一的请求标识符，用于问题追踪</p>
+     * <p>A unique request identifier for troubleshooting purposes.</p>
      * 
      * <strong>example:</strong>
      * <p>F8A0F5F3-0C3E-4C82-9D4F-5E4B6A7C8D9E</p>

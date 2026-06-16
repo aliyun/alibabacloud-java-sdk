@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class OssConfiguration extends TeaModel {
     /**
+     * <p>The name of the OSS bucket.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -13,7 +14,11 @@ public class OssConfiguration extends TeaModel {
     @NameInMap("bucketName")
     public String bucketName;
 
+    @NameInMap("endpoint")
+    public String endpoint;
+
     /**
+     * <p>The mount point for the OSS bucket.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +28,8 @@ public class OssConfiguration extends TeaModel {
     public String mountPoint;
 
     /**
+     * <p>The access permission for the mount point.</p>
+     * 
      * <strong>example:</strong>
      * <p>READ_WRITE</p>
      */
@@ -30,6 +37,7 @@ public class OssConfiguration extends TeaModel {
     public String permission;
 
     /**
+     * <p>The object prefix or path within the OSS bucket.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -39,6 +47,8 @@ public class OssConfiguration extends TeaModel {
     public String prefix;
 
     /**
+     * <p>The region where the OSS bucket is located.</p>
+     * 
      * <strong>example:</strong>
      * <p>ch-hangzhou</p>
      */
@@ -56,6 +66,14 @@ public class OssConfiguration extends TeaModel {
     }
     public String getBucketName() {
         return this.bucketName;
+    }
+
+    public OssConfiguration setEndpoint(String endpoint) {
+        this.endpoint = endpoint;
+        return this;
+    }
+    public String getEndpoint() {
+        return this.endpoint;
     }
 
     public OssConfiguration setMountPoint(String mountPoint) {

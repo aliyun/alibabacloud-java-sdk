@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class GrayTrafficWeight extends TeaModel {
     /**
-     * <p>灰度版本号</p>
+     * <p>The identifier of the gray version.</p>
      */
     @NameInMap("version")
     public String version;
 
     /**
-     * <p>流量权重比例（0.0-1.0）</p>
+     * <p>The traffic weight, a value from 0.0 to 1.0.</p>
      */
     @NameInMap("weight")
     public Float weight;

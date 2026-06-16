@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListBrowsersRequest extends TeaModel {
     /**
-     * <p>根据浏览器实例名称进行模糊匹配过滤</p>
+     * <p>Filter by browser name</p>
      * 
      * <strong>example:</strong>
      * <p>browser</p>
@@ -14,7 +14,7 @@ public class ListBrowsersRequest extends TeaModel {
     public String browserName;
 
     /**
-     * <p>当前页码，从1开始计数</p>
+     * <p>Page number</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -23,7 +23,7 @@ public class ListBrowsersRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>每页返回的记录数量</p>
+     * <p>Page size</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -32,7 +32,7 @@ public class ListBrowsersRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>根据浏览器实例的运行状态进行过滤，可选值：CREATING、READY、DELETING等</p>
+     * <p>Filter by status</p>
      * 
      * <strong>example:</strong>
      * <p>CREATING</p>

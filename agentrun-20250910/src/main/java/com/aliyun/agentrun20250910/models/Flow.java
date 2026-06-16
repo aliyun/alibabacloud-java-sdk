@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class Flow extends TeaModel {
     /**
-     * <p>工作流的创建时间，采用ISO 8601格式</p>
+     * <p>The time when the workflow was created, in ISO 8601 format.</p>
      * 
      * <strong>example:</strong>
      * <p>2025-01-10T10:30:00Z</p>
@@ -14,7 +14,7 @@ public class Flow extends TeaModel {
     public String createdAt;
 
     /**
-     * <p>工作流的定义内容</p>
+     * <p>The definition of the workflow.</p>
      * 
      * <strong>example:</strong>
      * <p>{}</p>
@@ -23,7 +23,7 @@ public class Flow extends TeaModel {
     public String definition;
 
     /**
-     * <p>工作流的描述信息，说明该工作流的用途和功能</p>
+     * <p>The description of the workflow, which explains the purpose and functionality of the workflow.</p>
      * 
      * <strong>example:</strong>
      * <p>Customer service automation flow</p>
@@ -32,28 +32,28 @@ public class Flow extends TeaModel {
     public String description;
 
     /**
-     * <p>是否禁用该工作流的公网访问，作为工作流级别的默认策略</p>
+     * <p>Specifies whether to disable public network access for the workflow. This setting serves as the default policy at the workflow level.</p>
      */
     @NameInMap("disablePublicNetworkAccess")
     public Boolean disablePublicNetworkAccess;
 
     /**
-     * <p>工作流的环境变量配置，包含一组命名变量列表</p>
+     * <p>The environment variable configuration of the workflow, which contains a list of named variables.</p>
      */
     @NameInMap("environmentConfiguration")
     public EnvironmentConfiguration environmentConfiguration;
 
     /**
-     * <p>为工作流提供访问云服务权限的执行角色ARN</p>
+     * <p>The ARN of the execution role that grants the workflow permissions to access cloud services.</p>
      * 
      * <strong>example:</strong>
-     * <p>acs:ram::1760720386195983:role/FlowExecutionRole</p>
+     * <p>acs:ram::123456789012:role/FlowExecutionRole</p>
      */
     @NameInMap("executionRoleArn")
     public String executionRoleArn;
 
     /**
-     * <p>工作流的外部存储位置</p>
+     * <p>The external storage location of the workflow.</p>
      * 
      * <strong>example:</strong>
      * <p>oss://bucket/path</p>
@@ -62,16 +62,16 @@ public class Flow extends TeaModel {
     public String externalStorageLocation;
 
     /**
-     * <p>工作流的全局唯一资源名称</p>
+     * <p>The globally unique Alibaba Cloud Resource Name (ARN) of the workflow.</p>
      * 
      * <strong>example:</strong>
-     * <p>acs:agentrun:cn-hangzhou:1760720386195983:workspaces/ws-xxx/flows/flow-xxx</p>
+     * <p>acs:agentrun:cn-hangzhou:123456789012:workspaces/ws-xxx/flows/flow-xxx</p>
      */
     @NameInMap("flowArn")
     public String flowArn;
 
     /**
-     * <p>工作流的唯一标识符</p>
+     * <p>The unique identifier of the workflow.</p>
      * 
      * <strong>example:</strong>
      * <p>flow-1234567890abcdef</p>
@@ -80,7 +80,7 @@ public class Flow extends TeaModel {
     public String flowId;
 
     /**
-     * <p>工作流的名称，用于标识和区分不同的工作流实例</p>
+     * <p>The name of the workflow, which is used to identify and distinguish different workflow instances.</p>
      * 
      * <strong>example:</strong>
      * <p>my-flow</p>
@@ -89,7 +89,7 @@ public class Flow extends TeaModel {
     public String flowName;
 
     /**
-     * <p>工作流最后一次更新的时间，采用ISO 8601格式</p>
+     * <p>The time when the workflow was last updated, in ISO 8601 format.</p>
      * 
      * <strong>example:</strong>
      * <p>2025-01-10T11:45:00Z</p>
@@ -98,13 +98,13 @@ public class Flow extends TeaModel {
     public String lastUpdatedAt;
 
     /**
-     * <p>工作流的日志配置</p>
+     * <p>The logging configuration of the workflow.</p>
      */
     @NameInMap("loggingConfiguration")
     public LoggingConfiguration loggingConfiguration;
 
     /**
-     * <p>工作流所属的资源组标识符</p>
+     * <p>The ID of the resource group to which the workflow belongs.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-acfmxsn4m4a4b4a</p>
@@ -113,13 +113,13 @@ public class Flow extends TeaModel {
     public String resourceGroupId;
 
     /**
-     * <p>工作流的链路追踪配置</p>
+     * <p>The Tracing Analysis configuration of the workflow.</p>
      */
     @NameInMap("tracingConfiguration")
     public TracingConfiguration tracingConfiguration;
 
     /**
-     * <p>工作流所属的工作空间标识符</p>
+     * <p>The ID of the workspace to which the workflow belongs.</p>
      * 
      * <strong>example:</strong>
      * <p>ws-1234567890abcdef</p>

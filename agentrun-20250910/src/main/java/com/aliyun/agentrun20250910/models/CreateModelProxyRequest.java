@@ -4,6 +4,9 @@ package com.aliyun.agentrun20250910.models;
 import com.aliyun.tea.*;
 
 public class CreateModelProxyRequest extends TeaModel {
+    /**
+     * <p>The configuration for the Model Proxy.</p>
+     */
     @NameInMap("body")
     public CreateModelProxyInput body;
 

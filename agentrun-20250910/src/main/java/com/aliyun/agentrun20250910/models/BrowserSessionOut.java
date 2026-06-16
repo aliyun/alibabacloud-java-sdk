@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class BrowserSessionOut extends TeaModel {
     /**
+     * <p>The unique identifier for the browser.</p>
+     * 
      * <strong>example:</strong>
      * <p>browser-1234567890abcdef</p>
      */
@@ -12,6 +14,8 @@ public class BrowserSessionOut extends TeaModel {
     public String browserId;
 
     /**
+     * <p>The browser name.</p>
+     * 
      * <strong>example:</strong>
      * <p>my-browser-session</p>
      */
@@ -19,6 +23,8 @@ public class BrowserSessionOut extends TeaModel {
     public String browserName;
 
     /**
+     * <p>The time the session was created.</p>
+     * 
      * <strong>example:</strong>
      * <p>2025-01-10T10:30:00Z</p>
      */
@@ -26,6 +32,8 @@ public class BrowserSessionOut extends TeaModel {
     public String createdAt;
 
     /**
+     * <p>The time the session was last updated.</p>
+     * 
      * <strong>example:</strong>
      * <p>2025-01-10T11:45:00Z</p>
      */
@@ -33,6 +41,7 @@ public class BrowserSessionOut extends TeaModel {
     public String lastUpdatedAt;
 
     /**
+     * <p>The unique identifier for the session.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -42,7 +51,7 @@ public class BrowserSessionOut extends TeaModel {
     public String sessionId;
 
     /**
-     * <p>会话空闲超时时间，单位为秒</p>
+     * <p>The session idle timeout, in seconds.</p>
      * 
      * <strong>example:</strong>
      * <p>3600</p>
@@ -51,6 +60,8 @@ public class BrowserSessionOut extends TeaModel {
     public Integer sessionIdleTimeoutSeconds;
 
     /**
+     * <p>The session status.</p>
+     * 
      * <strong>example:</strong>
      * <p>RUNNING</p>
      */

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListModelProxiesRequest extends TeaModel {
     /**
+     * <p>The page number for pagination.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -12,6 +14,8 @@ public class ListModelProxiesRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries per page. The default is 20.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -19,7 +23,7 @@ public class ListModelProxiesRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>proxyMode</p>
+     * <p>Specifies the proxy mode.</p>
      * 
      * <strong>example:</strong>
      * <p>proxyMode</p>
@@ -28,15 +32,23 @@ public class ListModelProxiesRequest extends TeaModel {
     public String proxyMode;
 
     /**
+     * <p>Filters the list by Model Proxy status.</p>
+     * 
      * <strong>example:</strong>
      * <p>CREATING</p>
      */
     @NameInMap("status")
     public String status;
 
+    /**
+     * <p>The ID of the workspace.</p>
+     */
     @NameInMap("workspaceId")
     public String workspaceId;
 
+    /**
+     * <p>A comma-separated list of workspace IDs to query.</p>
+     */
     @NameInMap("workspaceIds")
     public String workspaceIds;
 

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateAgentRuntimeEndpointRequest extends TeaModel {
     /**
-     * <p>包含要创建的智能体运行时端点配置信息的请求体</p>
+     * <p>Create agent runtime endpoint input</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("body")

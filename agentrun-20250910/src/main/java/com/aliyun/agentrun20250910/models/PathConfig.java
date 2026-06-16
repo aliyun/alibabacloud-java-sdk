@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class PathConfig extends TeaModel {
     /**
-     * <p>agent runtime 版本（仅当 resourceType 为 runtime 时有效）</p>
+     * <p>The agent runtime version. This parameter takes effect only when <code>resourceType</code> is <code>runtime</code>.</p>
      */
     @NameInMap("agentRuntimeEndpointName")
     public String agentRuntimeEndpointName;
 
     /**
-     * <p>兼容协议，指定后端响应格式转换。仅当 resourceType 为 flow 时必填：native 表示 FnF 原生调用；openai、dify-workflow、dify-chatflow 为对应兼容 API。</p>
+     * <p>The compatible protocol, used to convert the backend response format. This parameter is required only when <code>resourceType</code> is <code>flow</code>. Valid values: <code>native</code> indicates an FnF native call; <code>openai</code>, <code>dify-workflow</code>, and <code>dify-chatflow</code> map to their corresponding compatible APIs.</p>
      * 
      * <strong>example:</strong>
      * <p>native</p>
@@ -20,7 +20,7 @@ public class PathConfig extends TeaModel {
     public String compatibleProtocol;
 
     /**
-     * <p>Flow 版本/别名（仅当 resourceType 为 flow 时有效，默认 Default）</p>
+     * <p>The Flow version/alias. This parameter takes effect only when <code>resourceType</code> is <code>flow</code>. Default value: <code>Default</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>Default</p>
@@ -29,16 +29,16 @@ public class PathConfig extends TeaModel {
     public String flowEndpointName;
 
     /**
-     * <p>支持的方法有：HEAD, GET, POST, PUT, DELETE, PATCH, OPTIONS</p>
+     * <p>Supported methods: HEAD, GET, POST, PUT, DELETE, PATCH, and OPTIONS.</p>
      * 
      * <strong>example:</strong>
-     * <p>[&quot;GET&quot;]</p>
+     * <p>[\&quot;GET\&quot;]</p>
      */
     @NameInMap("methods")
     public java.util.List<String> methods;
 
     /**
-     * <p>此条路由规则对应的请求路径。</p>
+     * <p>The path for this routing rule.</p>
      * 
      * <strong>example:</strong>
      * <p>/login</p>
@@ -50,13 +50,13 @@ public class PathConfig extends TeaModel {
     public Boolean removeBasePathOnForward;
 
     /**
-     * <p>资源名称</p>
+     * <p>The resource name.</p>
      */
     @NameInMap("resourceName")
     public String resourceName;
 
     /**
-     * <p>资源类型（和凭证关联资源类型一致）</p>
+     * <p>The resource type. This type must match the one associated with the credential.</p>
      * 
      * <strong>example:</strong>
      * <p>runtime</p>

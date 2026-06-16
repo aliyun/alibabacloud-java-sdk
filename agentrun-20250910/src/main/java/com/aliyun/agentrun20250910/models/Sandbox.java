@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class Sandbox extends TeaModel {
     /**
-     * <p>沙箱创建时间</p>
+     * <p>Sandbox Creation Time</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,6 +15,8 @@ public class Sandbox extends TeaModel {
     public String createdAt;
 
     /**
+     * <p>Sandbox stop time</p>
+     * 
      * <strong>example:</strong>
      * <p>2025-11-26T10:54:17.770719+08:00</p>
      */
@@ -22,7 +24,7 @@ public class Sandbox extends TeaModel {
     public String endedAt;
 
     /**
-     * <p>最后更新时间</p>
+     * <p>Last Update Time</p>
      * 
      * <strong>example:</strong>
      * <p>2025-11-26T10:54:17.770719+08:00</p>
@@ -31,6 +33,8 @@ public class Sandbox extends TeaModel {
     public String lastUpdatedAt;
 
     /**
+     * <p>Sandbox metadata</p>
+     * 
      * <strong>example:</strong>
      * <p>{}</p>
      */
@@ -38,6 +42,8 @@ public class Sandbox extends TeaModel {
     public java.util.Map<String, ?> metadata;
 
     /**
+     * <p>Sandbox resource ARN</p>
+     * 
      * <strong>example:</strong>
      * <p>acs:ram::1760720386195983:role/aliyunfcdefaultrole</p>
      */
@@ -45,6 +51,7 @@ public class Sandbox extends TeaModel {
     public String sandboxArn;
 
     /**
+     * <p>Sandbox ID</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -53,11 +60,17 @@ public class Sandbox extends TeaModel {
     @NameInMap("sandboxId")
     public String sandboxId;
 
+    /**
+     * <p>Sandbox lifecycle duration (deprecated)</p>
+     * 
+     * <strong>example:</strong>
+     * <p>已弃用</p>
+     */
     @NameInMap("sandboxIdleTTLInSeconds")
     public Integer sandboxIdleTTLInSeconds;
 
     /**
-     * <p>沙箱空闲超时时间（秒）</p>
+     * <p>Sandbox idle timeout (seconds)</p>
      * 
      * <strong>example:</strong>
      * <p>1800</p>
@@ -66,6 +79,7 @@ public class Sandbox extends TeaModel {
     public Integer sandboxIdleTimeoutSeconds;
 
     /**
+     * <p>Status</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -75,6 +89,7 @@ public class Sandbox extends TeaModel {
     public String status;
 
     /**
+     * <p>Template ID</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -84,6 +99,8 @@ public class Sandbox extends TeaModel {
     public String templateId;
 
     /**
+     * <p>Template Name</p>
+     * 
      * <strong>example:</strong>
      * <p>my-template</p>
      */

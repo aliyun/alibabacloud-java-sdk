@@ -8,7 +8,7 @@ public class TLSConfig extends TeaModel {
      * <p>TLS 加密套件列表。</p>
      * 
      * <strong>example:</strong>
-     * <p>[&quot;TLS_RSA_WITH_RC4_128_SHA&quot;]</p>
+     * <p>[\&quot;TLS_RSA_WITH_RC4_128_SHA\&quot;]</p>
      */
     @NameInMap("cipherSuites")
     public java.util.List<String> cipherSuites;

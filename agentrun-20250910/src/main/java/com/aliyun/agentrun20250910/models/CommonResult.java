@@ -5,19 +5,19 @@ import com.aliyun.tea.*;
 
 public class CommonResult extends TeaModel {
     /**
-     * <p>SUCCESS 为成功，失败情况返回对应错误类型，比如 ERR_BAD_REQUEST ERR_VALIDATION_FAILED ERR_INTERNAL_SERVER_ERROR</p>
+     * <p>Indicates the request status. A value of <code>SUCCESS</code> indicates success. On failure, an error code is returned, such as <code>ERR_BAD_REQUEST</code>, <code>ERR_VALIDATION_FAILED</code>, or <code>ERR_INTERNAL_SERVER_ERROR</code>.</p>
      */
     @NameInMap("code")
     public String code;
 
     /**
-     * <p>实际的业务数据内容</p>
+     * <p>The returned business data.</p>
      */
     @NameInMap("data")
     public Object data;
 
     /**
-     * <p>唯一的请求标识符，用于问题追踪</p>
+     * <p>A unique request identifier for issue tracking.</p>
      */
     @NameInMap("requestId")
     public String requestId;

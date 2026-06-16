@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class RateLimitRule extends TeaModel {
     /**
-     * <p>限流规则的创建时间，采用ISO 8601格式</p>
+     * <p>The creation time of the rate limit rule, in ISO 8601 format.</p>
      * 
      * <strong>example:</strong>
      * <p>2025-01-10T10:30:00Z</p>
@@ -14,7 +14,7 @@ public class RateLimitRule extends TeaModel {
     public String createdAt;
 
     /**
-     * <p>限流规则的描述符标识，用于关联具体的限流对象</p>
+     * <p>The descriptor ID for the rate limit rule, which associates the rule with a specific throttling target.</p>
      * 
      * <strong>example:</strong>
      * <p>model:gpt-4</p>
@@ -23,7 +23,7 @@ public class RateLimitRule extends TeaModel {
     public String descriptorId;
 
     /**
-     * <p>限流规则的描述符类型，如model、user等</p>
+     * <p>The descriptor type for the rate limit rule, such as \&quot;model\&quot; or \&quot;user\&quot;.</p>
      * 
      * <strong>example:</strong>
      * <p>model</p>
@@ -32,7 +32,7 @@ public class RateLimitRule extends TeaModel {
     public String descriptorType;
 
     /**
-     * <p>限流规则是否启用，true表示启用，false表示禁用</p>
+     * <p>Indicates whether the rate limit rule is enabled.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -41,7 +41,7 @@ public class RateLimitRule extends TeaModel {
     public Boolean enabled;
 
     /**
-     * <p>限流规则最后一次更新的时间，采用ISO 8601格式</p>
+     * <p>The last update time of the rate limit rule, in ISO 8601 format.</p>
      * 
      * <strong>example:</strong>
      * <p>2025-01-10T11:45:00Z</p>
@@ -50,7 +50,7 @@ public class RateLimitRule extends TeaModel {
     public String lastUpdatedAt;
 
     /**
-     * <p>限流规则的唯一标识符</p>
+     * <p>The unique identifier for the rate limit rule.</p>
      * 
      * <strong>example:</strong>
      * <p>12345678-1234-1234-1234-123456789abc</p>
@@ -59,7 +59,7 @@ public class RateLimitRule extends TeaModel {
     public String rateLimitRuleId;
 
     /**
-     * <p>限流时间窗口配置列表，支持多个窗口叠加限流</p>
+     * <p>A list of time window configurations. Multiple windows can be used to enforce layered rate limiting.</p>
      */
     @NameInMap("windows")
     public java.util.List<WindowLimit> windows;

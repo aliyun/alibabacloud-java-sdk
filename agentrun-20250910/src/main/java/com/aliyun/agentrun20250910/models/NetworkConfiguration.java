@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class NetworkConfiguration extends TeaModel {
     /**
+     * <p>The network mode.</p>
+     * 
      * <strong>example:</strong>
      * <p>PRIVATE</p>
      */
@@ -12,6 +14,8 @@ public class NetworkConfiguration extends TeaModel {
     public String networkMode;
 
     /**
+     * <p>The security group ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>sg-1234567890abcdef0</p>
      */
@@ -19,6 +23,8 @@ public class NetworkConfiguration extends TeaModel {
     public String securityGroupId;
 
     /**
+     * <p>The VPC ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>vpc-1234567890abcdef0</p>
      */
@@ -26,6 +32,8 @@ public class NetworkConfiguration extends TeaModel {
     public String vpcId;
 
     /**
+     * <p>An array of VSwitch IDs.</p>
+     * 
      * <strong>example:</strong>
      * <p>vsw-1234567890abcdef0,vsw-abcdef1234567890</p>
      */

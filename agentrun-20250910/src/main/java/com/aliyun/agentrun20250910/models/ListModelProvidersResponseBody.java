@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class ListModelProvidersResponseBody extends TeaModel {
     /**
+     * <p>The response code.</p>
+     * 
      * <strong>example:</strong>
      * <p>SUCCESS</p>
      */
     @NameInMap("code")
     public String code;
 
+    /**
+     * <p>The response data.</p>
+     */
     @NameInMap("data")
     public ListModelProvidersResponseBodyData data;
 
     /**
+     * <p>The unique request identifier. Include this ID when reporting issues.</p>
+     * 
      * <strong>example:</strong>
      * <p>F8A0F5F3-0C3E-4C82-9D4F-5E4B6A7C8D9E</p>
      */
@@ -52,7 +59,7 @@ public class ListModelProvidersResponseBody extends TeaModel {
 
     public static class ListModelProvidersResponseBodyDataItems extends TeaModel {
         /**
-         * <p>baseUrl</p>
+         * <p>The base URL of the model provider.</p>
          * 
          * <strong>example:</strong>
          * <p>baseUrl</p>
@@ -67,16 +74,33 @@ public class ListModelProvidersResponseBody extends TeaModel {
         public ModelInfoConfig modelInfoConfig;
 
         /**
+         * <p>The model type. Valid values:</p>
+         * <ul>
+         * <li><p><code>text_embedding</code>: text embedding</p>
+         * </li>
+         * <li><p><code>text_sparse_embedding</code>: text sparse embedding</p>
+         * </li>
+         * <li><p><code>image_embedding</code>: image embedding</p>
+         * </li>
+         * <li><p><code>image_analyze</code>: image analysis</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>native</p>
          */
         @NameInMap("modelType")
         public String modelType;
 
+        /**
+         * <p>An array of model names.</p>
+         */
         @NameInMap("models")
         public java.util.List<String> models;
 
         /**
+         * <p>The name of the model provider.</p>
+         * 
          * <strong>example:</strong>
          * <p>providerName</p>
          */
@@ -131,10 +155,15 @@ public class ListModelProvidersResponseBody extends TeaModel {
     }
 
     public static class ListModelProvidersResponseBodyData extends TeaModel {
+        /**
+         * <p>An array of model provider objects.</p>
+         */
         @NameInMap("items")
         public java.util.List<ListModelProvidersResponseBodyDataItems> items;
 
         /**
+         * <p>页码</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -142,6 +171,8 @@ public class ListModelProvidersResponseBody extends TeaModel {
         public Integer pageNumber;
 
         /**
+         * <p>页面大小</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -149,6 +180,8 @@ public class ListModelProvidersResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
+         * <p>总数</p>
+         * 
          * <strong>example:</strong>
          * <p>211</p>
          */

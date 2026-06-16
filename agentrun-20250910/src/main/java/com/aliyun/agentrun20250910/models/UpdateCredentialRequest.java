@@ -4,6 +4,9 @@ package com.aliyun.agentrun20250910.models;
 import com.aliyun.tea.*;
 
 public class UpdateCredentialRequest extends TeaModel {
+    /**
+     * <p>The new configuration for the credential.</p>
+     */
     @NameInMap("body")
     public UpdateCredentialInput body;
 

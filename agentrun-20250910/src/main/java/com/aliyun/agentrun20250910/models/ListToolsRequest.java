@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListToolsRequest extends TeaModel {
     /**
-     * <p>当前页码，从 1 开始</p>
+     * <p>Page number</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -14,7 +14,7 @@ public class ListToolsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>每页返回的工具数量，用于分页查询</p>
+     * <p>Page size</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -23,6 +23,8 @@ public class ListToolsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>Tool Name, supports fuzzy search</p>
+     * 
      * <strong>example:</strong>
      * <p>tool-1</p>
      */
@@ -30,7 +32,7 @@ public class ListToolsRequest extends TeaModel {
     public String toolName;
 
     /**
-     * <p>按工具类型过滤，可选值：MCP、FUNCTIONCALL、SKILL</p>
+     * <p>Tool type</p>
      * 
      * <strong>example:</strong>
      * <p>MCP</p>
@@ -39,7 +41,7 @@ public class ListToolsRequest extends TeaModel {
     public String toolType;
 
     /**
-     * <p>按工作空间ID过滤，查询指定工作空间下的工具</p>
+     * <p>Workspace ID</p>
      * 
      * <strong>example:</strong>
      * <p>workspace-xyz789</p>
@@ -48,6 +50,8 @@ public class ListToolsRequest extends TeaModel {
     public String workspaceId;
 
     /**
+     * <p>List of workspace IDs, separated by commas</p>
+     * 
      * <strong>example:</strong>
      * <p>ws1,ws2</p>
      */

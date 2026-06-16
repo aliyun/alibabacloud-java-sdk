@@ -4,6 +4,9 @@ package com.aliyun.agentrun20250910.models;
 import com.aliyun.tea.*;
 
 public class PublishRuntimeVersionRequest extends TeaModel {
+    /**
+     * <p>The request body for publishing a version.</p>
+     */
     @NameInMap("body")
     public PublishRuntimeVersionInput body;
 

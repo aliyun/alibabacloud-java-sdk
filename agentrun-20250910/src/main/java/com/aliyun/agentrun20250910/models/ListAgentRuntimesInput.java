@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListAgentRuntimesInput extends TeaModel {
     /**
-     * <p>按名称过滤</p>
+     * <p>Filters the results by agent runtime name.</p>
      * 
      * <strong>example:</strong>
      * <p>my-agent-runtime</p>
@@ -14,7 +14,7 @@ public class ListAgentRuntimesInput extends TeaModel {
     public String agentRuntimeName;
 
     /**
-     * <p>页码</p>
+     * <p>The page number for pagination.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -23,7 +23,7 @@ public class ListAgentRuntimesInput extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>每页记录数</p>
+     * <p>The maximum number of results to return per page.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -32,7 +32,7 @@ public class ListAgentRuntimesInput extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>按状态过滤</p>
+     * <p>Filters the results by status.</p>
      * 
      * <strong>example:</strong>
      * <p>READY,CREATING</p>

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetAccessTokenRequest extends TeaModel {
     /**
+     * <p>The resource ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>mod-kw1750tjqs94n9k37o5hjk</p>
      */
@@ -12,6 +14,8 @@ public class GetAccessTokenRequest extends TeaModel {
     public String resourceId;
 
     /**
+     * <p>The resource name of the agent runtime.</p>
+     * 
      * <strong>example:</strong>
      * <p>COUPON_OPERATION_CALLBACK</p>
      */
@@ -19,6 +23,8 @@ public class GetAccessTokenRequest extends TeaModel {
     public String resourceName;
 
     /**
+     * <p>The resource type.</p>
+     * 
      * <strong>example:</strong>
      * <p>SceneTestingTask</p>
      */

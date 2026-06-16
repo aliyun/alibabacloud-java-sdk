@@ -5,14 +5,20 @@ import com.aliyun.tea.*;
 
 public class ListCodeInterpretersInput extends TeaModel {
     /**
-     * <p>按代码解释器名称过滤</p>
+     * <p>Filters results by code interpreter name.</p>
      */
     @NameInMap("codeInterpreterName")
     public String codeInterpreterName;
 
+    /**
+     * <p>The page number of the results to return. Default: 1.</p>
+     */
     @NameInMap("pageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>Maximum number of results to return per page. Valid values: 1 to 100. Default: 20.</p>
+     */
     @NameInMap("pageSize")
     public Integer pageSize;
 

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListModelProvidersRequest extends TeaModel {
     /**
+     * <p>The name of the model to filter by.</p>
+     * 
      * <strong>example:</strong>
      * <p>aa</p>
      */
@@ -12,6 +14,14 @@ public class ListModelProvidersRequest extends TeaModel {
     public String modelName;
 
     /**
+     * <p>The model type to filter by. Valid values:</p>
+     * <ul>
+     * <li><p><code>system</code>: A system model.</p>
+     * </li>
+     * <li><p><code>deployment</code>: A custom deployment model.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>pop</p>
      */
@@ -19,6 +29,8 @@ public class ListModelProvidersRequest extends TeaModel {
     public String modelType;
 
     /**
+     * <p>The page number to retrieve.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -26,6 +38,8 @@ public class ListModelProvidersRequest extends TeaModel {
     public String pageNumber;
 
     /**
+     * <p>The number of results to return per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -33,6 +47,8 @@ public class ListModelProvidersRequest extends TeaModel {
     public String pageSize;
 
     /**
+     * <p>The cloud provider. To specify Alibaba Cloud, use the value \&quot;Aliyun\&quot;.</p>
+     * 
      * <strong>example:</strong>
      * <p>Aliyun</p>
      */

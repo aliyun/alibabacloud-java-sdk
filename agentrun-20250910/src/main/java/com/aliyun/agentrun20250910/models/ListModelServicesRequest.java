@@ -5,6 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListModelServicesRequest extends TeaModel {
     /**
+     * <p>The model type. Valid values:</p>
+     * <ul>
+     * <li><p><code>system</code>: A built-in model.</p>
+     * </li>
+     * <li><p><code>deployment</code>: A model from a custom deployment.</p>
+     * </li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +21,8 @@ public class ListModelServicesRequest extends TeaModel {
     public String modelType;
 
     /**
+     * <p>The page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -21,6 +30,8 @@ public class ListModelServicesRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The page size.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -28,6 +39,8 @@ public class ListModelServicesRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The cloud provider. Currently, only Alibaba Cloud is supported.</p>
+     * 
      * <strong>example:</strong>
      * <p>Aliyun</p>
      */
@@ -35,6 +48,8 @@ public class ListModelServicesRequest extends TeaModel {
     public String provider;
 
     /**
+     * <p>The provider type.</p>
+     * 
      * <strong>example:</strong>
      * <p>providerType</p>
      */

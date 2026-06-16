@@ -4,27 +4,39 @@ package com.aliyun.agentrun20250910.models;
 import com.aliyun.tea.*;
 
 public class ListIMBotsRequest extends TeaModel {
+    /**
+     * <p>The ID of the agent runtime.</p>
+     */
     @NameInMap("agentRuntimeId")
     public String agentRuntimeId;
 
+    /**
+     * <p>The business type of the bot.</p>
+     */
     @NameInMap("botBizType")
     public String botBizType;
 
+    /**
+     * <p>The name of the IM bot. The system performs a case-insensitive substring search.</p>
+     */
     @NameInMap("botName")
     public String botName;
 
     /**
-     * <p>默认 1；传入时须 ≥ 1</p>
+     * <p>The page number. Must be greater than or equal to 1. Default: 1.</p>
      */
     @NameInMap("pageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>默认 20；传入时须 1–100</p>
+     * <p>The number of entries per page. Valid values: 1–100. Default: 20.</p>
      */
     @NameInMap("pageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The status of the bot.</p>
+     */
     @NameInMap("status")
     public String status;
 
