@@ -13,6 +13,9 @@ public class ListImageLibRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    @NameInMap("ServiceCode")
+    public String serviceCode;
+
     public static ListImageLibRequest build(java.util.Map<String, ?> map) throws Exception {
         ListImageLibRequest self = new ListImageLibRequest();
         return TeaModel.build(map, self);
@@ -24,6 +27,14 @@ public class ListImageLibRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public ListImageLibRequest setServiceCode(String serviceCode) {
+        this.serviceCode = serviceCode;
+        return this;
+    }
+    public String getServiceCode() {
+        return this.serviceCode;
     }
 
 }

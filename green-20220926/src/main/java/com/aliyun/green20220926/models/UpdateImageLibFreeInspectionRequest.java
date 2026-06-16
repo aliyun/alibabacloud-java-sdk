@@ -19,6 +19,9 @@ public class UpdateImageLibFreeInspectionRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    @NameInMap("ServiceCode")
+    public String serviceCode;
+
     public static UpdateImageLibFreeInspectionRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateImageLibFreeInspectionRequest self = new UpdateImageLibFreeInspectionRequest();
         return TeaModel.build(map, self);
@@ -38,6 +41,14 @@ public class UpdateImageLibFreeInspectionRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public UpdateImageLibFreeInspectionRequest setServiceCode(String serviceCode) {
+        this.serviceCode = serviceCode;
+        return this;
+    }
+    public String getServiceCode() {
+        return this.serviceCode;
     }
 
 }

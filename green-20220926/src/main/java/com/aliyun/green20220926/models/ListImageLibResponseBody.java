@@ -28,6 +28,9 @@ public class ListImageLibResponseBody extends TeaModel {
     @NameInMap("LibList")
     public java.util.List<ListImageLibResponseBodyLibList> libList;
 
+    @NameInMap("MaxLibCount")
+    public Integer maxLibCount;
+
     /**
      * <p>Further description of the error code.</p>
      * 
@@ -82,6 +85,14 @@ public class ListImageLibResponseBody extends TeaModel {
     }
     public java.util.List<ListImageLibResponseBodyLibList> getLibList() {
         return this.libList;
+    }
+
+    public ListImageLibResponseBody setMaxLibCount(Integer maxLibCount) {
+        this.maxLibCount = maxLibCount;
+        return this;
+    }
+    public Integer getMaxLibCount() {
+        return this.maxLibCount;
     }
 
     public ListImageLibResponseBody setMsg(String msg) {

@@ -91,6 +91,25 @@ public class ListKeywordsResponseBody extends TeaModel {
         return this.success;
     }
 
+    public static class ListKeywordsResponseBodyDataItemsProperties extends TeaModel {
+        @NameInMap("Attribute")
+        public String attribute;
+
+        public static ListKeywordsResponseBodyDataItemsProperties build(java.util.Map<String, ?> map) throws Exception {
+            ListKeywordsResponseBodyDataItemsProperties self = new ListKeywordsResponseBodyDataItemsProperties();
+            return TeaModel.build(map, self);
+        }
+
+        public ListKeywordsResponseBodyDataItemsProperties setAttribute(String attribute) {
+            this.attribute = attribute;
+            return this;
+        }
+        public String getAttribute() {
+            return this.attribute;
+        }
+
+    }
+
     public static class ListKeywordsResponseBodyDataItems extends TeaModel {
         /**
          * <p>Creation time.</p>
@@ -136,6 +155,9 @@ public class ListKeywordsResponseBody extends TeaModel {
          */
         @NameInMap("KeywordMd5Id")
         public Long keywordMd5Id;
+
+        @NameInMap("Properties")
+        public ListKeywordsResponseBodyDataItemsProperties properties;
 
         /**
          * <p>Keyword.</p>
@@ -189,6 +211,14 @@ public class ListKeywordsResponseBody extends TeaModel {
         }
         public Long getKeywordMd5Id() {
             return this.keywordMd5Id;
+        }
+
+        public ListKeywordsResponseBodyDataItems setProperties(ListKeywordsResponseBodyDataItemsProperties properties) {
+            this.properties = properties;
+            return this;
+        }
+        public ListKeywordsResponseBodyDataItemsProperties getProperties() {
+            return this.properties;
         }
 
         public ListKeywordsResponseBodyDataItems setWord(String word) {

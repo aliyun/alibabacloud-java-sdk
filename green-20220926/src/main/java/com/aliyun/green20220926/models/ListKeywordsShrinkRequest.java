@@ -46,6 +46,9 @@ public class ListKeywordsShrinkRequest extends TeaModel {
     @NameInMap("Sort")
     public String sortShrink;
 
+    @NameInMap("TenantCode")
+    public String tenantCode;
+
     /**
      * <p>Keyword.</p>
      * 
@@ -98,6 +101,14 @@ public class ListKeywordsShrinkRequest extends TeaModel {
     }
     public String getSortShrink() {
         return this.sortShrink;
+    }
+
+    public ListKeywordsShrinkRequest setTenantCode(String tenantCode) {
+        this.tenantCode = tenantCode;
+        return this;
+    }
+    public String getTenantCode() {
+        return this.tenantCode;
     }
 
     public ListKeywordsShrinkRequest setWord(String word) {

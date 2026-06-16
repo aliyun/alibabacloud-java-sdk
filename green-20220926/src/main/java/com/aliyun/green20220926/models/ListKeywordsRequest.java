@@ -46,6 +46,9 @@ public class ListKeywordsRequest extends TeaModel {
     @NameInMap("Sort")
     public java.util.Map<String, String> sort;
 
+    @NameInMap("TenantCode")
+    public String tenantCode;
+
     /**
      * <p>Keyword.</p>
      * 
@@ -98,6 +101,14 @@ public class ListKeywordsRequest extends TeaModel {
     }
     public java.util.Map<String, String> getSort() {
         return this.sort;
+    }
+
+    public ListKeywordsRequest setTenantCode(String tenantCode) {
+        this.tenantCode = tenantCode;
+        return this;
+    }
+    public String getTenantCode() {
+        return this.tenantCode;
     }
 
     public ListKeywordsRequest setWord(String word) {

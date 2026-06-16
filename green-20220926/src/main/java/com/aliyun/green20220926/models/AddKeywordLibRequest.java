@@ -31,6 +31,9 @@ public class AddKeywordLibRequest extends TeaModel {
     @NameInMap("LibName")
     public String libName;
 
+    @NameInMap("Properties")
+    public String properties;
+
     /**
      * <p>Region ID</p>
      * 
@@ -39,6 +42,9 @@ public class AddKeywordLibRequest extends TeaModel {
      */
     @NameInMap("RegionId")
     public String regionId;
+
+    @NameInMap("TenantCode")
+    public String tenantCode;
 
     public static AddKeywordLibRequest build(java.util.Map<String, ?> map) throws Exception {
         AddKeywordLibRequest self = new AddKeywordLibRequest();
@@ -69,12 +75,28 @@ public class AddKeywordLibRequest extends TeaModel {
         return this.libName;
     }
 
+    public AddKeywordLibRequest setProperties(String properties) {
+        this.properties = properties;
+        return this;
+    }
+    public String getProperties() {
+        return this.properties;
+    }
+
     public AddKeywordLibRequest setRegionId(String regionId) {
         this.regionId = regionId;
         return this;
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public AddKeywordLibRequest setTenantCode(String tenantCode) {
+        this.tenantCode = tenantCode;
+        return this;
+    }
+    public String getTenantCode() {
+        return this.tenantCode;
     }
 
 }

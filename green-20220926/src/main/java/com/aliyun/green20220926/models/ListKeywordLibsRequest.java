@@ -13,6 +13,9 @@ public class ListKeywordLibsRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    @NameInMap("TenantCode")
+    public String tenantCode;
+
     public static ListKeywordLibsRequest build(java.util.Map<String, ?> map) throws Exception {
         ListKeywordLibsRequest self = new ListKeywordLibsRequest();
         return TeaModel.build(map, self);
@@ -24,6 +27,14 @@ public class ListKeywordLibsRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public ListKeywordLibsRequest setTenantCode(String tenantCode) {
+        this.tenantCode = tenantCode;
+        return this;
+    }
+    public String getTenantCode() {
+        return this.tenantCode;
     }
 
 }

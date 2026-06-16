@@ -40,6 +40,9 @@ public class DeleteKeywordRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    @NameInMap("TenantCode")
+    public String tenantCode;
+
     public static DeleteKeywordRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteKeywordRequest self = new DeleteKeywordRequest();
         return TeaModel.build(map, self);
@@ -75,6 +78,14 @@ public class DeleteKeywordRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public DeleteKeywordRequest setTenantCode(String tenantCode) {
+        this.tenantCode = tenantCode;
+        return this;
+    }
+    public String getTenantCode() {
+        return this.tenantCode;
     }
 
 }

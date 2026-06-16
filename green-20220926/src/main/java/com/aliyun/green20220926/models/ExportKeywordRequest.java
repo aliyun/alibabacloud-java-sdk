@@ -22,6 +22,9 @@ public class ExportKeywordRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    @NameInMap("TenantCode")
+    public String tenantCode;
+
     public static ExportKeywordRequest build(java.util.Map<String, ?> map) throws Exception {
         ExportKeywordRequest self = new ExportKeywordRequest();
         return TeaModel.build(map, self);
@@ -41,6 +44,14 @@ public class ExportKeywordRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public ExportKeywordRequest setTenantCode(String tenantCode) {
+        this.tenantCode = tenantCode;
+        return this;
+    }
+    public String getTenantCode() {
+        return this.tenantCode;
     }
 
 }

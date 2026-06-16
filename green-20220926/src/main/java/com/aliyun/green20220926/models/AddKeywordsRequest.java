@@ -40,6 +40,9 @@ public class AddKeywordsRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    @NameInMap("TenantCode")
+    public String tenantCode;
+
     public static AddKeywordsRequest build(java.util.Map<String, ?> map) throws Exception {
         AddKeywordsRequest self = new AddKeywordsRequest();
         return TeaModel.build(map, self);
@@ -75,6 +78,14 @@ public class AddKeywordsRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public AddKeywordsRequest setTenantCode(String tenantCode) {
+        this.tenantCode = tenantCode;
+        return this;
+    }
+    public String getTenantCode() {
+        return this.tenantCode;
     }
 
 }
