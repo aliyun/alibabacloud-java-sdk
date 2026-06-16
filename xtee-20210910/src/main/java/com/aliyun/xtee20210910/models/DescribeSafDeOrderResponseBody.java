@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeSafDeOrderResponseBody extends TeaModel {
     /**
-     * <p>Request ID</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>AE7E6105-7DEB-5125-9B24-DCBC139F6CD2</p>
@@ -14,7 +14,7 @@ public class DescribeSafDeOrderResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Return object</p>
+     * <p>The response object.</p>
      */
     @NameInMap("resultObject")
     public DescribeSafDeOrderResponseBodyResultObject resultObject;
@@ -42,7 +42,7 @@ public class DescribeSafDeOrderResponseBody extends TeaModel {
 
     public static class DescribeSafDeOrderResponseBodyResultObjectRegions extends TeaModel {
         /**
-         * <p>Expiration date (timestamp).</p>
+         * <p>The expiration date (timestamp).</p>
          * 
          * <strong>example:</strong>
          * <p>2117750400000</p>
@@ -51,7 +51,7 @@ public class DescribeSafDeOrderResponseBody extends TeaModel {
         public Long expirationDate;
 
         /**
-         * <p>Region ID.</p>
+         * <p>The region ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-shanghai</p>
@@ -60,11 +60,11 @@ public class DescribeSafDeOrderResponseBody extends TeaModel {
         public String region;
 
         /**
-         * <p>Specification model:</p>
-         * <p>1: Basic Edition 
-         * 2: Advanced Edition 
-         * 3: Premium Edition 
-         * 4: Flagship Edition</p>
+         * <p>The specification type:</p>
+         * <p> 1: Basic Edition
+         *  2: Advanced Edition
+         *  3: Premium Edition
+         *  4: Ultimate Edition.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -105,7 +105,7 @@ public class DescribeSafDeOrderResponseBody extends TeaModel {
 
     public static class DescribeSafDeOrderResponseBodyResultObject extends TeaModel {
         /**
-         * <p>Expiration time</p>
+         * <p>The expiration time.</p>
          * 
          * <strong>example:</strong>
          * <p>1728008155799</p>
@@ -114,10 +114,10 @@ public class DescribeSafDeOrderResponseBody extends TeaModel {
         public Long expirationDate;
 
         /**
-         * <p>Based on the product type subscribed by the customer, the console permissions are divided into three categories:</p>
-         * <pre><code> 1. New Customer: Has not purchased/subscribed to any service.
-         *  2. Old Customer (Subscription): Customers who have purchased the SAF product.
-         *  3. Pay-As-You-Go: Customers who have purchased the SAF_BAG product or activated SAF_POS.
+         * <p>The console permissions are classified into three categories based on the commodity type activated by the customer:</p>
+         * <pre><code> 1. New customer: has not purchased or activated any service.
+         *  2. Existing customer (subscription): has purchased the saf commodity.
+         *  3. Pay-as-you-go: has purchased the saf_bag commodity or activated saf_pos.
          * </code></pre>
          * 
          * <strong>example:</strong>
@@ -127,7 +127,7 @@ public class DescribeSafDeOrderResponseBody extends TeaModel {
         public Integer openUserType;
 
         /**
-         * <p>Activated region permission addresses.</p>
+         * <p>The activated region permission addresses.</p>
          */
         @NameInMap("regions")
         public java.util.List<DescribeSafDeOrderResponseBodyResultObjectRegions> regions;

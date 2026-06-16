@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeApiNameListResponseBody extends TeaModel {
     /**
-     * <p>Request ID.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>A32FE941-35F2-5378-B37C-4B8FDB16F094</p>
@@ -14,7 +14,7 @@ public class DescribeApiNameListResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Return object</p>
+     * <p>The response object.</p>
      */
     @NameInMap("resultObject")
     public java.util.List<DescribeApiNameListResponseBodyResultObject> resultObject;
@@ -42,7 +42,7 @@ public class DescribeApiNameListResponseBody extends TeaModel {
 
     public static class DescribeApiNameListResponseBodyResultObject extends TeaModel {
         /**
-         * <p>API ID.</p>
+         * <p>The API ID.</p>
          * 
          * <strong>example:</strong>
          * <p>33</p>
@@ -51,7 +51,7 @@ public class DescribeApiNameListResponseBody extends TeaModel {
         public String apiId;
 
         /**
-         * <p>API name.</p>
+         * <p>The API name.</p>
          * 
          * <strong>example:</strong>
          * <p>ListAuditLog</p>

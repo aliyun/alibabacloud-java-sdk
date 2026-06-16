@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class DescribeSampleDataListRequest extends TeaModel {
     /**
-     * <p>Sets the language type for requests and received messages, default value is <strong>zh</strong>. Values: </p>
+     * <p>The language of the request and response. Default value: <strong>zh</strong>. Valid values:</p>
      * <ul>
-     * <li><strong>zh</strong>: Chinese</li>
-     * <li><strong>en</strong>: English</li>
+     * <li><strong>zh</strong>: Chinese.</li>
+     * <li><strong>en</strong>: English.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,7 +18,7 @@ public class DescribeSampleDataListRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>Current page number.</p>
+     * <p>The current page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -27,7 +27,7 @@ public class DescribeSampleDataListRequest extends TeaModel {
     public String currentPage;
 
     /**
-     * <p>Deletion status</p>
+     * <p>The deletion status.</p>
      * 
      * <strong>example:</strong>
      * <p>DELETE</p>
@@ -36,7 +36,7 @@ public class DescribeSampleDataListRequest extends TeaModel {
     public String deleteTag;
 
     /**
-     * <p>Page size, default value is 10.</p>
+     * <p>The number of entries per page. Default value: 10.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -45,7 +45,7 @@ public class DescribeSampleDataListRequest extends TeaModel {
     public String pageSize;
 
     /**
-     * <p>Query content</p>
+     * <p>The query content.</p>
      * 
      * <strong>example:</strong>
      * <p>手机号</p>
@@ -54,7 +54,7 @@ public class DescribeSampleDataListRequest extends TeaModel {
     public String queryContent;
 
     /**
-     * <p>Region code</p>
+     * <p>The region code.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -63,7 +63,7 @@ public class DescribeSampleDataListRequest extends TeaModel {
     public String regId;
 
     /**
-     * <p>Sample ID.</p>
+     * <p>The sample ID.</p>
      * 
      * <strong>example:</strong>
      * <p>5467</p>
@@ -72,7 +72,7 @@ public class DescribeSampleDataListRequest extends TeaModel {
     public Long sampleId;
 
     /**
-     * <p>Scene</p>
+     * <p>The scenario.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -81,7 +81,7 @@ public class DescribeSampleDataListRequest extends TeaModel {
     public String scene;
 
     /**
-     * <p>Status.</p>
+     * <p>The status.</p>
      * 
      * <strong>example:</strong>
      * <p>CREATE</p>

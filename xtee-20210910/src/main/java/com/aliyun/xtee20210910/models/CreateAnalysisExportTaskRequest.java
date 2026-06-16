@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class CreateAnalysisExportTaskRequest extends TeaModel {
     /**
-     * <p>Sets the language type for the request and response messages, with a default value of <strong>zh</strong>. Values:</p>
+     * <p>The language type for the request and response messages. Default value: <strong>zh</strong>. Valid values:</p>
      * <ul>
      * <li><strong>zh</strong>: Chinese</li>
-     * <li><strong>en</strong>: English</li>
+     * <li><strong>en</strong>: English.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,7 +18,7 @@ public class CreateAnalysisExportTaskRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>Custom columns</p>
+     * <p>The custom columns.</p>
      * 
      * <strong>example:</strong>
      * <p>[
@@ -64,7 +64,7 @@ public class CreateAnalysisExportTaskRequest extends TeaModel {
     public String columns;
 
     /**
-     * <p>Query expression</p>
+     * <p>The query expression.</p>
      * 
      * <strong>example:</strong>
      * <p>{
@@ -76,7 +76,7 @@ public class CreateAnalysisExportTaskRequest extends TeaModel {
     public String conditions;
 
     /**
-     * <p>Start time, accurate to milliseconds (ms).</p>
+     * <p>The start time, in milliseconds (ms).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -86,7 +86,7 @@ public class CreateAnalysisExportTaskRequest extends TeaModel {
     public Long eventBeginTime;
 
     /**
-     * <p>Event code.</p>
+     * <p>The event code.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -96,7 +96,7 @@ public class CreateAnalysisExportTaskRequest extends TeaModel {
     public String eventCodes;
 
     /**
-     * <p>End time, accurate to milliseconds (ms).</p>
+     * <p>The end time, in milliseconds (ms).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -106,7 +106,7 @@ public class CreateAnalysisExportTaskRequest extends TeaModel {
     public Long eventEndTime;
 
     /**
-     * <p>Field name</p>
+     * <p>The field name.</p>
      * 
      * <strong>example:</strong>
      * <p>age</p>
@@ -115,7 +115,7 @@ public class CreateAnalysisExportTaskRequest extends TeaModel {
     public String fieldName;
 
     /**
-     * <p>Field value</p>
+     * <p>The field value.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -124,7 +124,7 @@ public class CreateAnalysisExportTaskRequest extends TeaModel {
     public String fieldValue;
 
     /**
-     * <p>File format, Excel, CSV</p>
+     * <p>The file format. Valid values: Excel and CSV.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -134,7 +134,7 @@ public class CreateAnalysisExportTaskRequest extends TeaModel {
     public String fileFormat;
 
     /**
-     * <p>Region code</p>
+     * <p>The region code.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -144,7 +144,11 @@ public class CreateAnalysisExportTaskRequest extends TeaModel {
     public String regId;
 
     /**
-     * <p>Export scope: ALL: All, SELECT: Selected rows</p>
+     * <p>The export scope. Valid values:</p>
+     * <ul>
+     * <li>ALL: all data</li>
+     * <li>SELECT: selected rows.</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -154,7 +158,12 @@ public class CreateAnalysisExportTaskRequest extends TeaModel {
     public String scope;
 
     /**
-     * <p>Type, BASIC: Basic query, ADVANCE: Advanced query, BATCH: Batch query</p>
+     * <p>The query type. Valid values:</p>
+     * <ul>
+     * <li>BASIC: basic query</li>
+     * <li>ADVANCE: advanced query</li>
+     * <li>BATCH: batch query.</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

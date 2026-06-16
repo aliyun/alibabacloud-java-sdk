@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class DescribeVariableBindDetailRequest extends TeaModel {
     /**
-     * <p>Sets the language type for requests and received messages, with a default value of <strong>zh</strong>. Values:</p>
+     * <p>The language type for the request and response messages. Default value: <strong>zh</strong>. Valid values:</p>
      * <ul>
-     * <li><strong>zh</strong>: Chinese</li>
-     * <li><strong>en</strong>: English</li>
+     * <li><strong>zh</strong>: Chinese.</li>
+     * <li><strong>en</strong>: English.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,7 +18,7 @@ public class DescribeVariableBindDetailRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>Bound variable definition ID</p>
+     * <p>The ID of the bound variable definition.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -27,7 +27,7 @@ public class DescribeVariableBindDetailRequest extends TeaModel {
     public Long defineId;
 
     /**
-     * <p>Primary key ID of the variable, which is empty if it\&quot;s a new addition</p>
+     * <p>The primary key ID of the variable. Leave this parameter empty for new entries.</p>
      * 
      * <strong>example:</strong>
      * <p>3144</p>
@@ -36,7 +36,7 @@ public class DescribeVariableBindDetailRequest extends TeaModel {
     public Long id;
 
     /**
-     * <p>Region code</p>
+     * <p>The region code.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>

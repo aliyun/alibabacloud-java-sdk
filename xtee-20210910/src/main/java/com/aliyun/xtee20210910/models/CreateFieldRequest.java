@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class CreateFieldRequest extends TeaModel {
     /**
-     * <p>Sets the language type for requests and received messages, with a default value of <strong>zh</strong>. Values:</p>
+     * <p>The language of the request and response. Default value: <strong>zh</strong>. Valid values:</p>
      * <ul>
-     * <li><strong>zh</strong>: Chinese</li>
-     * <li><strong>en</strong>: English</li>
+     * <li><strong>zh</strong>: Chinese.</li>
+     * <li><strong>en</strong>: English.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,7 +18,7 @@ public class CreateFieldRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>Field classification.</p>
+     * <p>The field classification.</p>
      * 
      * <strong>example:</strong>
      * <p>REQUEST_PARAM</p>
@@ -27,7 +27,7 @@ public class CreateFieldRequest extends TeaModel {
     public String classify;
 
     /**
-     * <p>Description information.</p>
+     * <p>The description.</p>
      * 
      * <strong>example:</strong>
      * <p>字段描述信息</p>
@@ -36,7 +36,7 @@ public class CreateFieldRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>Enum data.</p>
+     * <p>The enumeration data.</p>
      * 
      * <strong>example:</strong>
      * <p>enum</p>
@@ -45,7 +45,7 @@ public class CreateFieldRequest extends TeaModel {
     public String enumData;
 
     /**
-     * <p>Field name.</p>
+     * <p>The field name.</p>
      * 
      * <strong>example:</strong>
      * <p>age</p>
@@ -54,7 +54,7 @@ public class CreateFieldRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>Region code.</p>
+     * <p>The region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -64,7 +64,7 @@ public class CreateFieldRequest extends TeaModel {
     public String regId;
 
     /**
-     * <p>Business source.</p>
+     * <p>The business source.</p>
      * 
      * <strong>example:</strong>
      * <p>DEFINE</p>
@@ -73,7 +73,7 @@ public class CreateFieldRequest extends TeaModel {
     public String source;
 
     /**
-     * <p>Title.</p>
+     * <p>The title.</p>
      * 
      * <strong>example:</strong>
      * <p>年龄</p>
@@ -82,7 +82,7 @@ public class CreateFieldRequest extends TeaModel {
     public String title;
 
     /**
-     * <p>Field type.</p>
+     * <p>The field type.</p>
      * 
      * <strong>example:</strong>
      * <p>STRING</p>

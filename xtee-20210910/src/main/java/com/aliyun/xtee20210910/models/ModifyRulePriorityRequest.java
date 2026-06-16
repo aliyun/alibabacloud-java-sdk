@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class ModifyRulePriorityRequest extends TeaModel {
     /**
-     * <p>Set the language type for requests and received messages, default value is <strong>zh</strong>. Values: </p>
+     * <p>The language of the request and response. Default value: <strong>zh</strong>. Valid values:</p>
      * <ul>
      * <li><strong>zh</strong>: Chinese</li>
-     * <li><strong>en</strong>: English</li>
+     * <li><strong>en</strong>: English.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,7 +18,7 @@ public class ModifyRulePriorityRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>Primary key ID of the policy</p>
+     * <p>The primary key ID of the policy.</p>
      * 
      * <strong>example:</strong>
      * <p>3581</p>
@@ -27,7 +27,7 @@ public class ModifyRulePriorityRequest extends TeaModel {
     public Long consoleRuleId;
 
     /**
-     * <p>Policy priority, the higher the number, the higher the priority.</p>
+     * <p>The policy priority. A larger value indicates a higher priority.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -36,7 +36,7 @@ public class ModifyRulePriorityRequest extends TeaModel {
     public Integer priority;
 
     /**
-     * <p>Region code</p>
+     * <p>The region code.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -45,7 +45,7 @@ public class ModifyRulePriorityRequest extends TeaModel {
     public String regId;
 
     /**
-     * <p>Policy ID</p>
+     * <p>The policy ID.</p>
      * 
      * <strong>example:</strong>
      * <p>101796</p>

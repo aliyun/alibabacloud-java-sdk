@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeAuthScenePageListResponseBody extends TeaModel {
     /**
-     * <p>Request ID.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>A32FE941-35F2-5378-B37C-4B8FDB16F094</p>
@@ -14,7 +14,7 @@ public class DescribeAuthScenePageListResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Current page number.</p>
+     * <p>The current page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -23,7 +23,7 @@ public class DescribeAuthScenePageListResponseBody extends TeaModel {
     public Long currentPage;
 
     /**
-     * <p>Page size, default value is 10</p>
+     * <p>The number of entries per page. Default value: 10.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -32,13 +32,13 @@ public class DescribeAuthScenePageListResponseBody extends TeaModel {
     public Long pageSize;
 
     /**
-     * <p>Returned object</p>
+     * <p>The returned object.</p>
      */
     @NameInMap("resultObject")
     public java.util.List<DescribeAuthScenePageListResponseBodyResultObject> resultObject;
 
     /**
-     * <p>Total number of items</p>
+     * <p>The total number of entries.</p>
      * 
      * <strong>example:</strong>
      * <p>6</p>
@@ -47,7 +47,7 @@ public class DescribeAuthScenePageListResponseBody extends TeaModel {
     public Long totalItem;
 
     /**
-     * <p>Total number of pages.</p>
+     * <p>The total number of pages.</p>
      * 
      * <strong>example:</strong>
      * <p>9</p>
@@ -110,7 +110,7 @@ public class DescribeAuthScenePageListResponseBody extends TeaModel {
 
     public static class DescribeAuthScenePageListResponseBodyResultObject extends TeaModel {
         /**
-         * <p>Number of common rules</p>
+         * <p>The number of General Policy policies.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -119,7 +119,7 @@ public class DescribeAuthScenePageListResponseBody extends TeaModel {
         public Long commonRuleCount;
 
         /**
-         * <p>Number of custom rules</p>
+         * <p>The number of custom policies.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -128,7 +128,7 @@ public class DescribeAuthScenePageListResponseBody extends TeaModel {
         public Long customRuleCount;
 
         /**
-         * <p>Event code</p>
+         * <p>The event code.</p>
          * 
          * <strong>example:</strong>
          * <p>de_avypfd8253</p>
@@ -137,7 +137,7 @@ public class DescribeAuthScenePageListResponseBody extends TeaModel {
         public String eventCode;
 
         /**
-         * <p>Scene name.</p>
+         * <p>The scenario name.</p>
          * 
          * <strong>example:</strong>
          * <p>注册风险识别服务</p>
@@ -146,7 +146,7 @@ public class DescribeAuthScenePageListResponseBody extends TeaModel {
         public String sceneName;
 
         /**
-         * <p>Service name.</p>
+         * <p>The service name.</p>
          * 
          * <strong>example:</strong>
          * <p>account_abuse</p>

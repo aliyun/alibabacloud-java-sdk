@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class DescribeVariableSceneListRequest extends TeaModel {
     /**
-     * <p>Sets the language type for requests and received messages, default value is <strong>zh</strong>. Values:</p>
+     * <p>The language type for the request and response messages. Default value: <strong>zh</strong>. Valid values:</p>
      * <ul>
-     * <li><strong>zh</strong>: Chinese</li>
-     * <li><strong>en</strong>: English</li>
+     * <li><strong>zh</strong>: Chinese.</li>
+     * <li><strong>en</strong>: English.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,7 +18,7 @@ public class DescribeVariableSceneListRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>Business type.</p>
+     * <p>The business type.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -28,7 +28,7 @@ public class DescribeVariableSceneListRequest extends TeaModel {
     public String bizType;
 
     /**
-     * <p>Configuration key.</p>
+     * <p>The configuration key.</p>
      * 
      * <strong>example:</strong>
      * <p>account_abuse_detection</p>
@@ -37,7 +37,7 @@ public class DescribeVariableSceneListRequest extends TeaModel {
     public String configKey;
 
     /**
-     * <p>Current page number.</p>
+     * <p>The current page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -46,7 +46,7 @@ public class DescribeVariableSceneListRequest extends TeaModel {
     public String currentPage;
 
     /**
-     * <p>Page size, default value is 10.</p>
+     * <p>The number of entries per page. Default value: 10.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -55,7 +55,7 @@ public class DescribeVariableSceneListRequest extends TeaModel {
     public String pageSize;
 
     /**
-     * <p>Paging flag, default is true.</p>
+     * <p>Specifies whether to enable paging. Default value: true.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -65,7 +65,7 @@ public class DescribeVariableSceneListRequest extends TeaModel {
     public Boolean paging;
 
     /**
-     * <p>Region code.</p>
+     * <p>The region code.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>

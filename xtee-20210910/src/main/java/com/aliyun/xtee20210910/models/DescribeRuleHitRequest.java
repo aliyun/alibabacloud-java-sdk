@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class DescribeRuleHitRequest extends TeaModel {
     /**
-     * <p>Sets the language type for requests and received messages, with a default value of <strong>zh</strong>. Values:</p>
+     * <p>The language of the request and response. Default value: <strong>zh</strong>. Valid values:</p>
      * <ul>
      * <li><strong>zh</strong>: Chinese</li>
-     * <li><strong>en</strong>: English</li>
+     * <li><strong>en</strong>: English.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,7 +18,7 @@ public class DescribeRuleHitRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>Region code</p>
+     * <p>The region code.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -27,7 +27,7 @@ public class DescribeRuleHitRequest extends TeaModel {
     public String regId;
 
     /**
-     * <p>Execution time</p>
+     * <p>The execution time.</p>
      * 
      * <strong>example:</strong>
      * <p>1752571330000</p>
@@ -36,7 +36,7 @@ public class DescribeRuleHitRequest extends TeaModel {
     public Long requestTime;
 
     /**
-     * <p>Rule ID</p>
+     * <p>The policy ID.</p>
      * 
      * <strong>example:</strong>
      * <p>102059</p>
@@ -45,7 +45,7 @@ public class DescribeRuleHitRequest extends TeaModel {
     public String ruleId;
 
     /**
-     * <p>Snapshot ID.</p>
+     * <p>The snapshot ID.</p>
      * 
      * <strong>example:</strong>
      * <p>27</p>
@@ -54,7 +54,7 @@ public class DescribeRuleHitRequest extends TeaModel {
     public String ruleSnapshotId;
 
     /**
-     * <p>Request ID.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>60C97040-D5D5-4906-9522-B9B413730CAA</p>

@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class QueryAuthRuleDetailByRuleIdRequest extends TeaModel {
     /**
-     * <p>Set the language type for requests and received messages, default value is <strong>zh</strong>. Values:</p>
+     * <p>The language of the request and response. Default value: <strong>zh</strong>. Valid values:</p>
      * <ul>
      * <li><strong>zh</strong>: Chinese</li>
-     * <li><strong>en</strong>: English</li>
+     * <li><strong>en</strong>: English.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,7 +18,7 @@ public class QueryAuthRuleDetailByRuleIdRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>Primary key ID of the strategy</p>
+     * <p>The primary key ID of the policy.</p>
      * 
      * <strong>example:</strong>
      * <p>6843</p>
@@ -27,7 +27,7 @@ public class QueryAuthRuleDetailByRuleIdRequest extends TeaModel {
     public Long consoleRuleId;
 
     /**
-     * <p>Region code</p>
+     * <p>The region code.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -37,7 +37,7 @@ public class QueryAuthRuleDetailByRuleIdRequest extends TeaModel {
     public String regId;
 
     /**
-     * <p>Strategy ID</p>
+     * <p>The policy ID.</p>
      * 
      * <strong>example:</strong>
      * <p>102224</p>
@@ -46,7 +46,7 @@ public class QueryAuthRuleDetailByRuleIdRequest extends TeaModel {
     public String ruleId;
 
     /**
-     * <p>Primary key ID of the strategy version</p>
+     * <p>The primary key ID of the policy version.</p>
      * 
      * <strong>example:</strong>
      * <p>11519</p>

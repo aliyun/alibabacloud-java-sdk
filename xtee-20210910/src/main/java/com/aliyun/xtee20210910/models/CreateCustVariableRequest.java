@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class CreateCustVariableRequest extends TeaModel {
     /**
-     * <p>Sets the language type for requests and received messages, with a default value of <strong>zh</strong>. Values: </p>
+     * <p>The language of the request and response. Default value: <strong>zh</strong>. Valid values:</p>
      * <ul>
-     * <li><strong>zh</strong>: Chinese</li>
-     * <li><strong>en</strong>: English</li>
+     * <li><strong>zh</strong>: Chinese.</li>
+     * <li><strong>en</strong>: English.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,7 +18,7 @@ public class CreateCustVariableRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>Condition value.</p>
+     * <p>The condition value.</p>
      * 
      * <strong>example:</strong>
      * <p>{&quot;relationship&quot;:&quot;and&quot;,&quot;list&quot;:[{&quot;deepCount&quot;:1,&quot;left&quot;:{&quot;hasRightVariable&quot;:true,&quot;fieldType&quot;:&quot;INT&quot;,&quot;functionName&quot;:&quot;&quot;,&quot;leftVariableType&quot;:&quot;NATIVE&quot;,&quot;name&quot;:&quot;DEtest222&quot;,&quot;operatorCode&quot;:&quot;equals&quot;},&quot;right&quot;:{&quot;rightVariableType&quot;:&quot;constant&quot;,&quot;name&quot;:&quot;11&quot;,&quot;functionName&quot;:&quot;&quot;},&quot;operatorCode&quot;:&quot;equals&quot;}]}</p>
@@ -27,7 +27,7 @@ public class CreateCustVariableRequest extends TeaModel {
     public String condition;
 
     /**
-     * <p>Creation type</p>
+     * <p>The creation type.</p>
      * 
      * <strong>example:</strong>
      * <p>NORMAL</p>
@@ -36,7 +36,7 @@ public class CreateCustVariableRequest extends TeaModel {
     public String createType;
 
     /**
-     * <p>Description information.</p>
+     * <p>The description.</p>
      * 
      * <strong>example:</strong>
      * <p>ip调用次数累计描述</p>
@@ -45,7 +45,7 @@ public class CreateCustVariableRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>Event code</p>
+     * <p>The event code.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -55,7 +55,7 @@ public class CreateCustVariableRequest extends TeaModel {
     public String eventCodes;
 
     /**
-     * <p>Value type</p>
+     * <p>The value type.</p>
      * 
      * <strong>example:</strong>
      * <p>EARLIEST</p>
@@ -64,7 +64,7 @@ public class CreateCustVariableRequest extends TeaModel {
     public String historyValueType;
 
     /**
-     * <p>Accumulative object</p>
+     * <p>The cumulative object.</p>
      * 
      * <strong>example:</strong>
      * <p>age</p>
@@ -73,7 +73,7 @@ public class CreateCustVariableRequest extends TeaModel {
     public String object;
 
     /**
-     * <p>Variable return type</p>
+     * <p>The return type of the variable.</p>
      * 
      * <strong>example:</strong>
      * <p>STRING</p>
@@ -82,7 +82,7 @@ public class CreateCustVariableRequest extends TeaModel {
     public String outputs;
 
     /**
-     * <p>Region code</p>
+     * <p>The region code.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -91,7 +91,7 @@ public class CreateCustVariableRequest extends TeaModel {
     public String regId;
 
     /**
-     * <p>Primary object</p>
+     * <p>The subject object.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -101,7 +101,7 @@ public class CreateCustVariableRequest extends TeaModel {
     public String subject;
 
     /**
-     * <p>Time slice type</p>
+     * <p>The time slice type.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -111,7 +111,7 @@ public class CreateCustVariableRequest extends TeaModel {
     public String timeType;
 
     /**
-     * <p>Title.</p>
+     * <p>The title.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -121,7 +121,7 @@ public class CreateCustVariableRequest extends TeaModel {
     public String title;
 
     /**
-     * <p>Number of time units</p>
+     * <p>The number of time units.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -130,7 +130,7 @@ public class CreateCustVariableRequest extends TeaModel {
     public Integer twCount;
 
     /**
-     * <p>Variable type</p>
+     * <p>The variable type.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -140,7 +140,7 @@ public class CreateCustVariableRequest extends TeaModel {
     public String velocityFC;
 
     /**
-     * <p>Time slice unit</p>
+     * <p>The time slice unit.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

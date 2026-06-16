@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeEventVariableTemplateListResponseBody extends TeaModel {
     /**
-     * <p>Request ID.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>A32FE941-35F2-5378-B37C-4B8FDB16F094</p>
@@ -14,7 +14,7 @@ public class DescribeEventVariableTemplateListResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Return object</p>
+     * <p>The response object.</p>
      */
     @NameInMap("resultObject")
     public java.util.List<DescribeEventVariableTemplateListResponseBodyResultObject> resultObject;
@@ -42,7 +42,7 @@ public class DescribeEventVariableTemplateListResponseBody extends TeaModel {
 
     public static class DescribeEventVariableTemplateListResponseBodyResultObjectVariables extends TeaModel {
         /**
-         * <p>Variable code</p>
+         * <p>The variable code.</p>
          * 
          * <strong>example:</strong>
          * <p>age</p>
@@ -51,7 +51,7 @@ public class DescribeEventVariableTemplateListResponseBody extends TeaModel {
         public String code;
 
         /**
-         * <p>Description information.</p>
+         * <p>The description.</p>
          * 
          * <strong>example:</strong>
          * <p>描述</p>
@@ -60,7 +60,7 @@ public class DescribeEventVariableTemplateListResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>Variable input type</p>
+         * <p>The variable input type.</p>
          * 
          * <strong>example:</strong>
          * <p>STRING</p>
@@ -69,7 +69,7 @@ public class DescribeEventVariableTemplateListResponseBody extends TeaModel {
         public String fieldType;
 
         /**
-         * <p>Primary key ID</p>
+         * <p>The primary key ID.</p>
          * 
          * <strong>example:</strong>
          * <p>454</p>
@@ -78,7 +78,7 @@ public class DescribeEventVariableTemplateListResponseBody extends TeaModel {
         public Long id;
 
         /**
-         * <p>Variable name</p>
+         * <p>The variable name.</p>
          * 
          * <strong>example:</strong>
          * <p>age</p>
@@ -87,7 +87,7 @@ public class DescribeEventVariableTemplateListResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>Title.</p>
+         * <p>The title.</p>
          * 
          * <strong>example:</strong>
          * <p>年龄</p>
@@ -96,7 +96,7 @@ public class DescribeEventVariableTemplateListResponseBody extends TeaModel {
         public String title;
 
         /**
-         * <p>Variable type.</p>
+         * <p>The variable type.</p>
          * 
          * <strong>example:</strong>
          * <p>NATIVE</p>
@@ -169,7 +169,7 @@ public class DescribeEventVariableTemplateListResponseBody extends TeaModel {
 
     public static class DescribeEventVariableTemplateListResponseBodyResultObject extends TeaModel {
         /**
-         * <p>Template code.</p>
+         * <p>The template code.</p>
          * 
          * <strong>example:</strong>
          * <p>register</p>
@@ -178,7 +178,7 @@ public class DescribeEventVariableTemplateListResponseBody extends TeaModel {
         public String templateCode;
 
         /**
-         * <p>Template name.</p>
+         * <p>The template name.</p>
          * 
          * <strong>example:</strong>
          * <p>注册模版</p>
@@ -187,7 +187,7 @@ public class DescribeEventVariableTemplateListResponseBody extends TeaModel {
         public String templateName;
 
         /**
-         * <p>Variable list.</p>
+         * <p>The list of variables.</p>
          */
         @NameInMap("variables")
         public java.util.List<DescribeEventVariableTemplateListResponseBodyResultObjectVariables> variables;

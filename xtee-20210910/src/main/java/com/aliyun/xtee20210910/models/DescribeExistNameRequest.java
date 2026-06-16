@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class DescribeExistNameRequest extends TeaModel {
     /**
-     * <p>Set the language type for request and response messages, default value is <strong>zh</strong>. Values: </p>
+     * <p>The language type for the request and response messages. Default value: <strong>zh</strong>. Valid values:</p>
      * <ul>
-     * <li><strong>zh</strong>: Chinese</li>
-     * <li><strong>en</strong>: English</li>
+     * <li><strong>zh</strong>: Chinese.</li>
+     * <li><strong>en</strong>: English.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,7 +18,7 @@ public class DescribeExistNameRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>Variable name</p>
+     * <p>The variable name.</p>
      * 
      * <strong>example:</strong>
      * <p>age</p>
@@ -27,7 +27,7 @@ public class DescribeExistNameRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>Region code</p>
+     * <p>The region code.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeDownloadUrlRequest extends TeaModel {
     /**
-     * <p>File type</p>
+     * <p>The file type.</p>
      * 
      * <strong>example:</strong>
      * <p>CSV</p>
@@ -14,10 +14,10 @@ public class DescribeDownloadUrlRequest extends TeaModel {
     public String fileType;
 
     /**
-     * <p>Sets the language type for requests and received messages, default value is <strong>zh</strong>. Values:</p>
+     * <p>The language of the request and response. Default value: <strong>zh</strong>. Valid values:</p>
      * <ul>
      * <li><strong>zh</strong>: Chinese</li>
-     * <li><strong>en</strong>: English</li>
+     * <li><strong>en</strong>: English.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -27,7 +27,7 @@ public class DescribeDownloadUrlRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>Region code</p>
+     * <p>The region code.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -36,7 +36,7 @@ public class DescribeDownloadUrlRequest extends TeaModel {
     public String regId;
 
     /**
-     * <p>Task ID.</p>
+     * <p>The task ID.</p>
      * 
      * <strong>example:</strong>
      * <p>18191</p>
@@ -45,7 +45,7 @@ public class DescribeDownloadUrlRequest extends TeaModel {
     public Long taskId;
 
     /**
-     * <p>Download type</p>
+     * <p>The download type.</p>
      * 
      * <strong>example:</strong>
      * <p>FILE</p>

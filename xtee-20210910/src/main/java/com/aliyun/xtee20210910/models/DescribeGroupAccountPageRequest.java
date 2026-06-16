@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeGroupAccountPageRequest extends TeaModel {
     /**
-     * <p>Sets the language type for requests and received messages, default value is <strong>zh</strong>. Values: </p>
+     * <p>The language type for sending and receiving messages. Default value: <strong>zh</strong>. Valid values:</p>
      * <ul>
      * <li><strong>zh</strong>: Chinese</li>
      * <li><strong>en</strong>: English</li>
@@ -18,7 +18,7 @@ public class DescribeGroupAccountPageRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>Community number.</p>
+     * <p>The community number.</p>
      * 
      * <strong>example:</strong>
      * <p>129838420210118141502KiJ1SZL2</p>
@@ -27,7 +27,7 @@ public class DescribeGroupAccountPageRequest extends TeaModel {
     public String communityNo;
 
     /**
-     * <p>Current page number.</p>
+     * <p>The current page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -36,7 +36,7 @@ public class DescribeGroupAccountPageRequest extends TeaModel {
     public String currentPage;
 
     /**
-     * <p>Order direction.</p>
+     * <p>The sort order.</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>
@@ -45,7 +45,7 @@ public class DescribeGroupAccountPageRequest extends TeaModel {
     public String direction;
 
     /**
-     * <p>fieldKey.</p>
+     * <p>fieldKey</p>
      * 
      * <strong>example:</strong>
      * <p>mobile</p>
@@ -54,7 +54,7 @@ public class DescribeGroupAccountPageRequest extends TeaModel {
     public String fieldKey;
 
     /**
-     * <p>fieldVal.</p>
+     * <p>fieldVal</p>
      * 
      * <strong>example:</strong>
      * <p>18000000000</p>
@@ -63,7 +63,7 @@ public class DescribeGroupAccountPageRequest extends TeaModel {
     public String fieldVal;
 
     /**
-     * <p>Whether to paginate.</p>
+     * <p>Specifies whether to enable pagination.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -72,7 +72,7 @@ public class DescribeGroupAccountPageRequest extends TeaModel {
     public Boolean isPage;
 
     /**
-     * <p>Sorting condition.</p>
+     * <p>The sort condition.</p>
      * 
      * <strong>example:</strong>
      * <p>asc</p>
@@ -81,7 +81,7 @@ public class DescribeGroupAccountPageRequest extends TeaModel {
     public String order;
 
     /**
-     * <p>Page size, default value is 10.</p>
+     * <p>The number of entries per page. Default value: 10.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -90,7 +90,7 @@ public class DescribeGroupAccountPageRequest extends TeaModel {
     public String pageSize;
 
     /**
-     * <p>Region code.</p>
+     * <p>The region ID.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -99,7 +99,7 @@ public class DescribeGroupAccountPageRequest extends TeaModel {
     public String regId;
 
     /**
-     * <p>Task ID.</p>
+     * <p>The task ID.</p>
      * 
      * <strong>example:</strong>
      * <p>6770764</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeAllRootVariableResponseBody extends TeaModel {
     /**
-     * <p>Request ID.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>A32FE941-35F2-5378-B37C-4B8FDB16F094</p>
@@ -14,7 +14,7 @@ public class DescribeAllRootVariableResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Return object</p>
+     * <p>The returned object.</p>
      */
     @NameInMap("resultObject")
     public java.util.List<DescribeAllRootVariableResponseBodyResultObject> resultObject;
@@ -42,7 +42,7 @@ public class DescribeAllRootVariableResponseBody extends TeaModel {
 
     public static class DescribeAllRootVariableResponseBodyResultObjectOutputThreshold extends TeaModel {
         /**
-         * <p>Maximum value</p>
+         * <p>The maximum value.</p>
          * 
          * <strong>example:</strong>
          * <p>1000</p>
@@ -51,7 +51,7 @@ public class DescribeAllRootVariableResponseBody extends TeaModel {
         public Double maxValue;
 
         /**
-         * <p>Minimum value.</p>
+         * <p>The minimum value.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -84,7 +84,7 @@ public class DescribeAllRootVariableResponseBody extends TeaModel {
 
     public static class DescribeAllRootVariableResponseBodyResultObject extends TeaModel {
         /**
-         * <p>Variable code</p>
+         * <p>The variable code.</p>
          * 
          * <strong>example:</strong>
          * <p>age</p>
@@ -93,7 +93,7 @@ public class DescribeAllRootVariableResponseBody extends TeaModel {
         public String code;
 
         /**
-         * <p>Variable description.</p>
+         * <p>The variable description.</p>
          * 
          * <strong>example:</strong>
          * <p>年龄</p>
@@ -102,7 +102,7 @@ public class DescribeAllRootVariableResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>Display type and group label</p>
+         * <p>The display type and group label.</p>
          * 
          * <strong>example:</strong>
          * <p>NATIVE</p>
@@ -111,7 +111,7 @@ public class DescribeAllRootVariableResponseBody extends TeaModel {
         public String displayType;
 
         /**
-         * <p>Favorite flag</p>
+         * <p>The favorite flag.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -120,7 +120,7 @@ public class DescribeAllRootVariableResponseBody extends TeaModel {
         public Boolean favoriteFlag;
 
         /**
-         * <p>Field ranking</p>
+         * <p>The field sorting order.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -129,7 +129,7 @@ public class DescribeAllRootVariableResponseBody extends TeaModel {
         public Long fieldRank;
 
         /**
-         * <p>Field type.</p>
+         * <p>The field type.</p>
          * 
          * <strong>example:</strong>
          * <p>STRING</p>
@@ -138,7 +138,7 @@ public class DescribeAllRootVariableResponseBody extends TeaModel {
         public String fieldType;
 
         /**
-         * <p>Variable ID.</p>
+         * <p>The variable ID.</p>
          * 
          * <strong>example:</strong>
          * <p>497</p>
@@ -147,7 +147,7 @@ public class DescribeAllRootVariableResponseBody extends TeaModel {
         public Long id;
 
         /**
-         * <p>Input field type.</p>
+         * <p>The input type of the parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>STRING</p>
@@ -156,7 +156,7 @@ public class DescribeAllRootVariableResponseBody extends TeaModel {
         public String inputFieldType;
 
         /**
-         * <p>Variable input.</p>
+         * <p>The inputs of the variable.</p>
          * 
          * <strong>example:</strong>
          * <p>age</p>
@@ -165,7 +165,7 @@ public class DescribeAllRootVariableResponseBody extends TeaModel {
         public String inputs;
 
         /**
-         * <p>Variable name.</p>
+         * <p>The variable name.</p>
          * 
          * <strong>example:</strong>
          * <p>age</p>
@@ -174,13 +174,13 @@ public class DescribeAllRootVariableResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>Maximum cross-sectional area of the checkbox.</p>
+         * <p>The maximum cross-sectional area of the check box.</p>
          */
         @NameInMap("outputThreshold")
         public DescribeAllRootVariableResponseBodyResultObjectOutputThreshold outputThreshold;
 
         /**
-         * <p>Data source</p>
+         * <p>The data source.</p>
          * 
          * <strong>example:</strong>
          * <p>SAF</p>
@@ -189,7 +189,7 @@ public class DescribeAllRootVariableResponseBody extends TeaModel {
         public String sourceType;
 
         /**
-         * <p>Title.</p>
+         * <p>The title.</p>
          * 
          * <strong>example:</strong>
          * <p>年龄</p>
@@ -198,7 +198,7 @@ public class DescribeAllRootVariableResponseBody extends TeaModel {
         public String title;
 
         /**
-         * <p>Variable type.</p>
+         * <p>The variable type.</p>
          * 
          * <strong>example:</strong>
          * <p>NATIVE</p>

@@ -4,10 +4,22 @@ package com.aliyun.xtee20210910.models;
 import com.aliyun.tea.*;
 
 public class CreateForeignPocSampleAdvanceRequest extends TeaModel {
+    /**
+     * <p>OSS path of the file.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>saf/cpoc/953c883cde33b2e21d722eb661d26375/1779172027996_自动回溯测试 2605191.csv</p>
+     */
     @NameInMap("File")
     public java.io.InputStream fileObject;
 
     /**
+     * <p>Set the language type for requests and received messages. Default value is <strong>zh</strong>. Valid values:</p>
+     * <ul>
+     * <li><strong>zh</strong>: Chinese</li>
+     * <li><strong>en</strong>: English</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>zh</p>
      */
@@ -15,6 +27,8 @@ public class CreateForeignPocSampleAdvanceRequest extends TeaModel {
     public String lang;
 
     /**
+     * <p>Area encoding.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
      */
@@ -22,6 +36,8 @@ public class CreateForeignPocSampleAdvanceRequest extends TeaModel {
     public String regId;
 
     /**
+     * <p>Remarks.</p>
+     * 
      * <strong>example:</strong>
      * <p>nemo-test</p>
      */
@@ -29,6 +45,8 @@ public class CreateForeignPocSampleAdvanceRequest extends TeaModel {
     public String remark;
 
     /**
+     * <p>Sample Name.</p>
+     * 
      * <strong>example:</strong>
      * <p>SampleNameTest</p>
      */
@@ -36,6 +54,8 @@ public class CreateForeignPocSampleAdvanceRequest extends TeaModel {
     public String sampleName;
 
     /**
+     * <p>Scenario.</p>
+     * 
      * <strong>example:</strong>
      * <p>FINANCE</p>
      */

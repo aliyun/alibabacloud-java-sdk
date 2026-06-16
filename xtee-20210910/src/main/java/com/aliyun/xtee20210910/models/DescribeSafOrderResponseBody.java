@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeSafOrderResponseBody extends TeaModel {
     /**
-     * <p>Request ID.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>A32FE941-35F2-5378-B37C-4B8FDB16F094</p>
@@ -14,7 +14,7 @@ public class DescribeSafOrderResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Returned object.</p>
+     * <p>The response object.</p>
      */
     @NameInMap("resultObject")
     public DescribeSafOrderResponseBodyResultObject resultObject;
@@ -42,7 +42,7 @@ public class DescribeSafOrderResponseBody extends TeaModel {
 
     public static class DescribeSafOrderResponseBodyResultObject extends TeaModel {
         /**
-         * <p>Expiration date (timestamp).</p>
+         * <p>The expiration date (UNIX timestamp).</p>
          * 
          * <strong>example:</strong>
          * <p>1755076800000</p>

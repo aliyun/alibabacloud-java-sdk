@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreatePocEvRequest extends TeaModel {
     /**
-     * <p>Date format type</p>
+     * <p>The date format type.</p>
      * 
      * <strong>example:</strong>
      * <p>yyyyMMdd</p>
@@ -14,9 +14,9 @@ public class CreatePocEvRequest extends TeaModel {
     public String dateFormat;
 
     /**
-     * <p>File name.</p>
+     * <p>The file name.</p>
      * <blockquote>
-     * <p>The file name must end with txt or sql. For example, test.txt, test.sql.</p>
+     * <p>The file name must end with txt or sql. Example: test.txt or test.sql.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -26,7 +26,7 @@ public class CreatePocEvRequest extends TeaModel {
     public String fileName;
 
     /**
-     * <p>File type</p>
+     * <p>The file type.</p>
      * 
      * <strong>example:</strong>
      * <p>CSV</p>
@@ -35,7 +35,7 @@ public class CreatePocEvRequest extends TeaModel {
     public String fileType;
 
     /**
-     * <p>File URL.</p>
+     * <p>The file URL.</p>
      * 
      * <strong>example:</strong>
      * <p>saf/cpoc/953c883cde33b2e21d722eb661d26375/测试文件模板-通用.csv</p>
@@ -44,10 +44,10 @@ public class CreatePocEvRequest extends TeaModel {
     public String fileUrl;
 
     /**
-     * <p>Sets the language type for requests and received messages, with a default value of <strong>zh</strong>. Values:</p>
+     * <p>The language type for the request and response messages. Default value: <strong>zh</strong>. Valid values:</p>
      * <ul>
      * <li><strong>zh</strong>: Chinese</li>
-     * <li><strong>en</strong>: English</li>
+     * <li><strong>en</strong>: English.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -57,7 +57,7 @@ public class CreatePocEvRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>Region code</p>
+     * <p>The region code.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -66,7 +66,7 @@ public class CreatePocEvRequest extends TeaModel {
     public String regId;
 
     /**
-     * <p>Service code.</p>
+     * <p>The service code.</p>
      * 
      * <strong>example:</strong>
      * <p>anti_fraud_v2</p>
@@ -75,7 +75,7 @@ public class CreatePocEvRequest extends TeaModel {
     public String serviceCode;
 
     /**
-     * <p>Service name.</p>
+     * <p>The service name.</p>
      * 
      * <strong>example:</strong>
      * <p>注册风险</p>
@@ -84,7 +84,7 @@ public class CreatePocEvRequest extends TeaModel {
     public String serviceName;
 
     /**
-     * <p>Scenario.</p>
+     * <p>The scenario.</p>
      * 
      * <strong>example:</strong>
      * <p>INTERNET</p>
@@ -93,7 +93,7 @@ public class CreatePocEvRequest extends TeaModel {
     public String tab;
 
     /**
-     * <p>Task name.</p>
+     * <p>The task name.</p>
      * 
      * <strong>example:</strong>
      * <p>er-log-s3</p>
@@ -102,7 +102,7 @@ public class CreatePocEvRequest extends TeaModel {
     public String taskName;
 
     /**
-     * <p>Access type.</p>
+     * <p>The access type.</p>
      * 
      * <strong>example:</strong>
      * <p>SAF_CONSOLE</p>

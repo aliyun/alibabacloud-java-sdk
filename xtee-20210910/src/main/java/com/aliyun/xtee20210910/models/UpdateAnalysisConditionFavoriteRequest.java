@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class UpdateAnalysisConditionFavoriteRequest extends TeaModel {
     /**
-     * <p>Sets the language type for requests and received messages, with a default value of <strong>zh</strong>. Values:</p>
+     * <p>The language of the request and response. Default value: <strong>zh</strong>. Valid values:</p>
      * <ul>
-     * <li><strong>zh</strong>: Chinese</li>
-     * <li><strong>en</strong>: English</li>
+     * <li><strong>zh</strong>: Chinese.</li>
+     * <li><strong>en</strong>: English.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,7 +18,7 @@ public class UpdateAnalysisConditionFavoriteRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>Condition value.</p>
+     * <p>The condition value.</p>
      * 
      * <strong>example:</strong>
      * <p>{\&quot;relationship\&quot;:\&quot;and\&quot;,\&quot;list\&quot;:[{\&quot;deepCount\&quot;:1,\&quot;left\&quot;:{\&quot;hasRightVariable\&quot;:true,\&quot;fieldType\&quot;:\&quot;INT\&quot;,\&quot;functionName\&quot;:\&quot;\&quot;,\&quot;leftVariableType\&quot;:\&quot;NATIVE\&quot;,\&quot;name\&quot;:\&quot;DEtest222\&quot;,\&quot;operatorCode\&quot;:\&quot;equals\&quot;},\&quot;right\&quot;:{\&quot;rightVariableType\&quot;:\&quot;constant\&quot;,\&quot;name\&quot;:\&quot;9007199254\&quot;,\&quot;functionName\&quot;:\&quot;\&quot;},\&quot;operatorCode\&quot;:\&quot;equals\&quot;}]}</p>
@@ -27,7 +27,7 @@ public class UpdateAnalysisConditionFavoriteRequest extends TeaModel {
     public String condition;
 
     /**
-     * <p>Start time, accurate to milliseconds (ms).</p>
+     * <p>The start time, in milliseconds (ms).</p>
      * 
      * <strong>example:</strong>
      * <p>1752076800000</p>
@@ -36,7 +36,7 @@ public class UpdateAnalysisConditionFavoriteRequest extends TeaModel {
     public Long eventBeginTime;
 
     /**
-     * <p>Event code</p>
+     * <p>The event code.</p>
      * 
      * <strong>example:</strong>
      * <p>de_ajnoqe2016</p>
@@ -45,7 +45,7 @@ public class UpdateAnalysisConditionFavoriteRequest extends TeaModel {
     public String eventCode;
 
     /**
-     * <p>End time, accurate to milliseconds (ms).</p>
+     * <p>The end time, in milliseconds (ms).</p>
      * 
      * <strong>example:</strong>
      * <p>1753891199000</p>
@@ -54,7 +54,7 @@ public class UpdateAnalysisConditionFavoriteRequest extends TeaModel {
     public Long eventEndTime;
 
     /**
-     * <p>Field name</p>
+     * <p>The field name.</p>
      * 
      * <strong>example:</strong>
      * <p>age</p>
@@ -63,7 +63,7 @@ public class UpdateAnalysisConditionFavoriteRequest extends TeaModel {
     public String fieldName;
 
     /**
-     * <p>Field value</p>
+     * <p>The field value.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -72,7 +72,7 @@ public class UpdateAnalysisConditionFavoriteRequest extends TeaModel {
     public String fieldValue;
 
     /**
-     * <p>Primary key ID</p>
+     * <p>The primary key ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -82,7 +82,7 @@ public class UpdateAnalysisConditionFavoriteRequest extends TeaModel {
     public Long id;
 
     /**
-     * <p>Condition name</p>
+     * <p>The condition name.</p>
      * 
      * <strong>example:</strong>
      * <p>查询条件1</p>
@@ -91,7 +91,7 @@ public class UpdateAnalysisConditionFavoriteRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>Region code</p>
+     * <p>The region code.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -101,7 +101,12 @@ public class UpdateAnalysisConditionFavoriteRequest extends TeaModel {
     public String regId;
 
     /**
-     * <p>Type, BASIC: Basic query, ADVANCE: Advanced query, BATCH: Batch query</p>
+     * <p>The type. Valid values:</p>
+     * <ul>
+     * <li>BASIC: basic query.</li>
+     * <li>ADVANCE: advanced query.</li>
+     * <li>BATCH: batch query.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>BASIC</p>

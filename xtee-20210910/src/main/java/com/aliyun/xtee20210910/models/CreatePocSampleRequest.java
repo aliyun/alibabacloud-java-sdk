@@ -5,16 +5,26 @@ import com.aliyun.tea.*;
 
 public class CreatePocSampleRequest extends TeaModel {
     /**
+     * <p>File Name.</p>
+     * 
      * <strong>example:</strong>
      * <p>P4911_2707.csv</p>
      */
     @NameInMap("FileName")
     public String fileName;
 
+    /**
+     * <p>File URL.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>saf/cpoc/953c883cde33b2e21d722eb661d26375/测试文件模板-通用.csv</p>
+     */
     @NameInMap("FileUrl")
     public String fileUrl;
 
     /**
+     * <p>The language of the error message returned by the API. Valid values: zh: Chinese. en: English. The default value is en.</p>
+     * 
      * <strong>example:</strong>
      * <p>zh</p>
      */
@@ -22,6 +32,8 @@ public class CreatePocSampleRequest extends TeaModel {
     public String lang;
 
     /**
+     * <p>The area encoding.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
      */
@@ -29,6 +41,8 @@ public class CreatePocSampleRequest extends TeaModel {
     public String regId;
 
     /**
+     * <p>The remark for the topic. It can only contain letters, digits, underscores (_), and hyphens (-). The length must be 3 to 64 characters.</p>
+     * 
      * <strong>example:</strong>
      * <p>cs-pub</p>
      */
@@ -36,6 +50,8 @@ public class CreatePocSampleRequest extends TeaModel {
     public String remark;
 
     /**
+     * <p>Sample Name.</p>
+     * 
      * <strong>example:</strong>
      * <p>SampleNameTest</p>
      */
@@ -43,6 +59,8 @@ public class CreatePocSampleRequest extends TeaModel {
     public String sampleName;
 
     /**
+     * <p>Scenario.</p>
+     * 
      * <strong>example:</strong>
      * <p>INTERNET</p>
      */
@@ -50,6 +68,8 @@ public class CreatePocSampleRequest extends TeaModel {
     public String tab;
 
     /**
+     * <p>Access type.</p>
+     * 
      * <strong>example:</strong>
      * <p>SAF_CONSOLE</p>
      */

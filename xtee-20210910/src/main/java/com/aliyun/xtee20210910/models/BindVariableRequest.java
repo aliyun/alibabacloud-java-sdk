@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class BindVariableRequest extends TeaModel {
     /**
-     * <p>Sets the language type for requests and received messages, default value is <strong>zh</strong>. Values: </p>
+     * <p>The language type for the request and response messages. Default value: <strong>zh</strong>. Valid values:</p>
      * <ul>
-     * <li><strong>zh</strong>: Chinese</li>
-     * <li><strong>en</strong>: English</li>
+     * <li><strong>zh</strong>: Chinese.</li>
+     * <li><strong>en</strong>: English.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,7 +18,7 @@ public class BindVariableRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>API region ID</p>
+     * <p>The API region ID.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -27,7 +27,7 @@ public class BindVariableRequest extends TeaModel {
     public String apiRegionId;
 
     /**
-     * <p>API type</p>
+     * <p>The API type.</p>
      * 
      * <strong>example:</strong>
      * <p>SELF</p>
@@ -36,7 +36,7 @@ public class BindVariableRequest extends TeaModel {
     public String apiType;
 
     /**
-     * <p>Creation type</p>
+     * <p>The creation type.</p>
      * 
      * <strong>example:</strong>
      * <p>NORMAL</p>
@@ -45,7 +45,7 @@ public class BindVariableRequest extends TeaModel {
     public String createType;
 
     /**
-     * <p>Associated variable definition primary key ID</p>
+     * <p>The primary key ID of the associated variable definition.</p>
      * 
      * <strong>example:</strong>
      * <p>2438</p>
@@ -54,7 +54,7 @@ public class BindVariableRequest extends TeaModel {
     public String defineId;
 
     /**
-     * <p>Variable definition IDs, can be multiple. If binding multiple IDs, separate them with commas</p>
+     * <p>The variable definition IDs. You can specify multiple IDs separated by commas.</p>
      * 
      * <strong>example:</strong>
      * <p>1546, 1547</p>
@@ -63,7 +63,7 @@ public class BindVariableRequest extends TeaModel {
     public String defineIds;
 
     /**
-     * <p>Description information.</p>
+     * <p>The description.</p>
      * 
      * <strong>example:</strong>
      * <p>变量描述</p>
@@ -72,7 +72,7 @@ public class BindVariableRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>Event code</p>
+     * <p>The event code.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -82,7 +82,7 @@ public class BindVariableRequest extends TeaModel {
     public String eventCode;
 
     /**
-     * <p>Exception value</p>
+     * <p>The exception value.</p>
      * 
      * <strong>example:</strong>
      * <p>SYS_ERROR</p>
@@ -91,7 +91,7 @@ public class BindVariableRequest extends TeaModel {
     public String exceptionValue;
 
     /**
-     * <p>Variable primary key ID</p>
+     * <p>The primary key ID of the variable.</p>
      * 
      * <strong>example:</strong>
      * <p>106875</p>
@@ -100,7 +100,7 @@ public class BindVariableRequest extends TeaModel {
     public Long id;
 
     /**
-     * <p>Output field path</p>
+     * <p>The output field path.</p>
      * 
      * <strong>example:</strong>
      * <p>BOOLEAN</p>
@@ -109,7 +109,7 @@ public class BindVariableRequest extends TeaModel {
     public String outputField;
 
     /**
-     * <p>Output type</p>
+     * <p>The output type.</p>
      * 
      * <strong>example:</strong>
      * <p>STRING</p>
@@ -118,7 +118,7 @@ public class BindVariableRequest extends TeaModel {
     public String outputType;
 
     /**
-     * <p>Binding input parameter information</p>
+     * <p>The input parameter information for the binding.</p>
      * 
      * <strong>example:</strong>
      * <p>{&quot;accountId&quot;:&quot;accountId&quot;,&quot;mobile&quot;:&quot;&quot;}</p>
@@ -127,7 +127,7 @@ public class BindVariableRequest extends TeaModel {
     public String params;
 
     /**
-     * <p>Event parameter mapping 2.0, either params or paramsList must not be empty. List, JSON structure</p>
+     * <p>The event parameter mapping 2.0. Either params or paramsList must be non-empty. This is a List JSON structure.</p>
      * 
      * <strong>example:</strong>
      * <p>[{&quot;eventFieldName&quot;:&quot;accountId&quot;,&quot;required&quot;:false}]</p>
@@ -136,7 +136,7 @@ public class BindVariableRequest extends TeaModel {
     public String paramsList;
 
     /**
-     * <p>Region code</p>
+     * <p>The region code.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -145,7 +145,7 @@ public class BindVariableRequest extends TeaModel {
     public String regId;
 
     /**
-     * <p>Variable source</p>
+     * <p>The variable source.</p>
      * 
      * <strong>example:</strong>
      * <p>SAF</p>
@@ -154,7 +154,7 @@ public class BindVariableRequest extends TeaModel {
     public String sourceType;
 
     /**
-     * <p>Title</p>
+     * <p>The title.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

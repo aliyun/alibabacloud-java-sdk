@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeRuleBarChartResponseBody extends TeaModel {
     /**
-     * <p>Status code.</p>
+     * <p>The status code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,7 +14,7 @@ public class DescribeRuleBarChartResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>HTTP status code.</p>
+     * <p>The HTTP status code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -23,7 +23,7 @@ public class DescribeRuleBarChartResponseBody extends TeaModel {
     public String httpStatusCode;
 
     /**
-     * <p>Error message.</p>
+     * <p>The error message.</p>
      * 
      * <strong>example:</strong>
      * <p>The input parameter data is not valid. order_storage_company_num component not found</p>
@@ -32,7 +32,7 @@ public class DescribeRuleBarChartResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Request ID.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>AE7E6105-7DEB-5125-9B24-DCBC139F6CD2</p>
@@ -41,13 +41,13 @@ public class DescribeRuleBarChartResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Returned object</p>
+     * <p>The response object.</p>
      */
     @NameInMap("resultObject")
     public DescribeRuleBarChartResponseBodyResultObject resultObject;
 
     /**
-     * <p>Whether the request was successful.</p>
+     * <p>Indicates whether the request was successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -110,7 +110,7 @@ public class DescribeRuleBarChartResponseBody extends TeaModel {
 
     public static class DescribeRuleBarChartResponseBodyResultObjectSeriesData extends TeaModel {
         /**
-         * <p>Event name.</p>
+         * <p>The event name.</p>
          * 
          * <strong>example:</strong>
          * <p>营销事件</p>
@@ -119,7 +119,7 @@ public class DescribeRuleBarChartResponseBody extends TeaModel {
         public String eventName;
 
         /**
-         * <p>Number.</p>
+         * <p>The quantity.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -128,7 +128,7 @@ public class DescribeRuleBarChartResponseBody extends TeaModel {
         public Long num;
 
         /**
-         * <p>Policy name</p>
+         * <p>The policy name.</p>
          * 
          * <strong>example:</strong>
          * <p>营销风险识别评分_高风险_拒绝</p>
@@ -137,7 +137,7 @@ public class DescribeRuleBarChartResponseBody extends TeaModel {
         public String ruleName;
 
         /**
-         * <p>Status.</p>
+         * <p>The status.</p>
          * 
          * <strong>example:</strong>
          * <p>RUNNING</p>
@@ -186,13 +186,13 @@ public class DescribeRuleBarChartResponseBody extends TeaModel {
 
     public static class DescribeRuleBarChartResponseBodyResultObjectSeries extends TeaModel {
         /**
-         * <p>Response data.</p>
+         * <p>The response data.</p>
          */
         @NameInMap("data")
         public java.util.List<DescribeRuleBarChartResponseBodyResultObjectSeriesData> data;
 
         /**
-         * <p>Bar chart type</p>
+         * <p>The bar chart type.</p>
          * 
          * <strong>example:</strong>
          * <p>bar</p>
@@ -225,7 +225,7 @@ public class DescribeRuleBarChartResponseBody extends TeaModel {
 
     public static class DescribeRuleBarChartResponseBodyResultObjectYaxis extends TeaModel {
         /**
-         * <p>yaxis data items</p>
+         * <p>The y-axis data items.</p>
          */
         @NameInMap("data")
         public java.util.List<String> data;
@@ -247,13 +247,13 @@ public class DescribeRuleBarChartResponseBody extends TeaModel {
 
     public static class DescribeRuleBarChartResponseBodyResultObject extends TeaModel {
         /**
-         * <p>Data list</p>
+         * <p>The data list.</p>
          */
         @NameInMap("series")
         public java.util.List<DescribeRuleBarChartResponseBodyResultObjectSeries> series;
 
         /**
-         * <p>yaxis related results.</p>
+         * <p>The y-axis results.</p>
          */
         @NameInMap("yaxis")
         public DescribeRuleBarChartResponseBodyResultObjectYaxis yaxis;

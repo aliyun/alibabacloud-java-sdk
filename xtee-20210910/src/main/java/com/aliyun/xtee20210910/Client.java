@@ -297,7 +297,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Variable binding operation</p>
+     * <p>Performs a variable binding operation.</p>
      * 
      * @param request BindVariableRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -393,7 +393,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Variable binding operation</p>
+     * <p>Performs a variable binding operation.</p>
      * 
      * @param request BindVariableRequest
      * @return BindVariableResponse
@@ -405,7 +405,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建任务组</p>
+     * <p>Create a task group</p>
      * 
      * @param request CancelSubTaskRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -449,7 +449,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建任务组</p>
+     * <p>Create a task group</p>
      * 
      * @param request CancelSubTaskRequest
      * @return CancelSubTaskResponse
@@ -525,7 +525,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Check if the cumulative number of variables exceeds the limit</p>
+     * <p>Checks whether the number of cumulative variables exceeds the limit.</p>
      * 
      * @param request CheckCustVariableLimitRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -565,7 +565,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Check if the cumulative number of variables exceeds the limit</p>
+     * <p>Checks whether the number of cumulative variables exceeds the limit.</p>
      * 
      * @param request CheckCustVariableLimitRequest
      * @return CheckCustVariableLimitResponse
@@ -577,7 +577,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Check if Creating Variables Exceeds the Limit</p>
+     * <p>Checks whether creating a variable exceeds the upper limit.</p>
      * 
      * @param request CheckExpressionVariableLimitRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -613,7 +613,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Check if Creating Variables Exceeds the Limit</p>
+     * <p>Checks whether creating a variable exceeds the upper limit.</p>
      * 
      * @param request CheckExpressionVariableLimitRequest
      * @return CheckExpressionVariableLimitResponse
@@ -625,7 +625,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Check if the number of fields exceeds the limit</p>
+     * <p>Checks whether the number of fields exceeds the specified limit.</p>
      * 
      * @param request CheckFieldLimitRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -665,7 +665,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Check if the number of fields exceeds the limit</p>
+     * <p>Checks whether the number of fields exceeds the specified limit.</p>
      * 
      * @param request CheckFieldLimitRequest
      * @return CheckFieldLimitResponse
@@ -677,7 +677,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>样本名称唯一性校验</p>
+     * <p>Validate sample name uniqueness</p>
      * 
      * @param request CheckSampleNameRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -717,7 +717,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>样本名称唯一性校验</p>
+     * <p>Validate sample name uniqueness</p>
      * 
      * @param request CheckSampleNameRequest
      * @return CheckSampleNameResponse
@@ -729,7 +729,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>任务组名称唯一性校验</p>
+     * <p>Validate the uniqueness of the task group name</p>
      * 
      * @param request CheckTaskGroupNameRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -769,7 +769,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>任务组名称唯一性校验</p>
+     * <p>Validate the uniqueness of the task group name</p>
      * 
      * @param request CheckTaskGroupNameRequest
      * @return CheckTaskGroupNameResponse
@@ -781,7 +781,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Validate Variable Reference</p>
+     * <p>Checks variable references.</p>
      * 
      * @param request CheckUsageVariableRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -821,7 +821,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Validate Variable Reference</p>
+     * <p>Checks variable references.</p>
      * 
      * @param request CheckUsageVariableRequest
      * @return CheckUsageVariableResponse
@@ -953,7 +953,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Add Query Conditions</p>
+     * <p>Creates a query condition.</p>
      * 
      * @param request CreateAnalysisConditionFavoriteRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1021,7 +1021,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Add Query Conditions</p>
+     * <p>Creates a query condition.</p>
      * 
      * @param request CreateAnalysisConditionFavoriteRequest
      * @return CreateAnalysisConditionFavoriteResponse
@@ -1033,7 +1033,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Create Export Task</p>
+     * <p>Creates an export task.</p>
      * 
      * @param request CreateAnalysisExportTaskRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1109,7 +1109,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Create Export Task</p>
+     * <p>Creates an export task.</p>
      * 
      * @param request CreateAnalysisExportTaskRequest
      * @return CreateAnalysisExportTaskResponse
@@ -1121,7 +1121,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Create AppKey</p>
+     * <p>Create an AppKey.</p>
      * 
      * @param request CreateAppKeyRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1157,7 +1157,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Create AppKey</p>
+     * <p>Create an AppKey.</p>
      * 
      * @param request CreateAppKeyRequest
      * @return CreateAppKeyResponse
@@ -1169,7 +1169,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Create Accumulative Variable</p>
+     * <p>Creates a cumulative variable.</p>
      * 
      * @param request CreateCustVariableRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1257,7 +1257,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Create Accumulative Variable</p>
+     * <p>Creates a cumulative variable.</p>
      * 
      * @param request CreateCustVariableRequest
      * @return CreateCustVariableResponse
@@ -1269,7 +1269,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Add Data Source</p>
+     * <p>Creates a data source.</p>
      * 
      * @param request CreateDataSourceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1321,7 +1321,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Add Data Source</p>
+     * <p>Creates a data source.</p>
      * 
      * @param request CreateDataSourceRequest
      * @return CreateDataSourceResponse
@@ -1333,7 +1333,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Create Event</p>
+     * <p>Creates an event.</p>
      * 
      * @param request CreateEventRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1397,7 +1397,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Create Event</p>
+     * <p>Creates an event.</p>
      * 
      * @param request CreateEventRequest
      * @return CreateEventResponse
@@ -1409,7 +1409,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Create Custom Variable</p>
+     * <p>Creates a custom variable.</p>
      * 
      * @param request CreateExpressionVariableRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1477,7 +1477,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Create Custom Variable</p>
+     * <p>Creates a custom variable.</p>
      * 
      * @param request CreateExpressionVariableRequest
      * @return CreateExpressionVariableResponse
@@ -1489,7 +1489,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Add New Field</p>
+     * <p>Creates a field.</p>
      * 
      * @param request CreateFieldRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1553,7 +1553,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Add New Field</p>
+     * <p>Creates a field.</p>
      * 
      * @param request CreateFieldRequest
      * @return CreateFieldResponse
@@ -1565,7 +1565,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建样本记录对客</p>
+     * <p>Create a sample record for the customer.</p>
      * 
      * @param request CreateForeignPocSampleRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1617,7 +1617,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建样本记录对客</p>
+     * <p>Create a sample record for the customer.</p>
      * 
      * @param request CreateForeignPocSampleRequest
      * @return CreateForeignPocSampleResponse
@@ -1793,7 +1793,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Create POC</p>
+     * <p>Creates a POC.</p>
      * 
      * @param request CreatePocEvRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1865,7 +1865,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Create POC</p>
+     * <p>Creates a POC.</p>
      * 
      * @param request CreatePocEvRequest
      * @return CreatePocEvResponse
@@ -1877,7 +1877,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建样本记录</p>
+     * <p>Create a sample record</p>
      * 
      * @param request CreatePocSampleRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1937,7 +1937,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建样本记录</p>
+     * <p>Create a sample record</p>
      * 
      * @param request CreatePocSampleRequest
      * @return CreatePocSampleResponse
@@ -1949,7 +1949,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Add New Custom Query Variable</p>
+     * <p>Creates a custom query variable.</p>
      * 
      * @param request CreateQueryVariableRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2021,7 +2021,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Add New Custom Query Variable</p>
+     * <p>Creates a custom query variable.</p>
      * 
      * @param request CreateQueryVariableRequest
      * @return CreateQueryVariableResponse
@@ -2033,7 +2033,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Create Recommended Event Strategy</p>
+     * <p>Creates a recommended event policy.</p>
      * 
      * @param request CreateRecommendEventRuleRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2085,7 +2085,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Create Recommended Event Strategy</p>
+     * <p>Creates a recommended event policy.</p>
      * 
      * @param request CreateRecommendEventRuleRequest
      * @return CreateRecommendEventRuleResponse
@@ -2097,7 +2097,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Create Recommendation Task</p>
+     * <p>Creates a recommendation task.</p>
      * 
      * @param request CreateRecommendTaskRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2149,7 +2149,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Create Recommendation Task</p>
+     * <p>Creates a recommendation task.</p>
      * 
      * @param request CreateRecommendTaskRequest
      * @return CreateRecommendTaskResponse
@@ -2161,7 +2161,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Create Policy &amp; Version</p>
+     * <p>Creates a policy and version.</p>
      * 
      * @param request CreateRuleRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2245,7 +2245,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Create Policy &amp; Version</p>
+     * <p>Creates a policy and version.</p>
      * 
      * @param request CreateRuleRequest
      * @return CreateRuleResponse
@@ -2257,7 +2257,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Add Sample</p>
+     * <p>Adds a data sample.</p>
      * 
      * @param request CreateSampleRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2321,7 +2321,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Add Sample</p>
+     * <p>Adds a data sample.</p>
      * 
      * @param request CreateSampleRequest
      * @return CreateSampleResponse
@@ -2333,7 +2333,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>User-level Single API to Create Sample Batches</p>
+     * <p>Creates a sample batch for a single API at the user level.</p>
      * 
      * @param request CreateSampleApiRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2385,7 +2385,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>User-level Single API to Create Sample Batches</p>
+     * <p>Creates a sample batch for a single API at the user level.</p>
      * 
      * @param request CreateSampleApiRequest
      * @return CreateSampleApiResponse
@@ -2473,7 +2473,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Create Sample Data</p>
+     * <p>Creates sample data.</p>
      * 
      * @param request CreateSampleDataRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2537,7 +2537,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Create Sample Data</p>
+     * <p>Creates sample data.</p>
      * 
      * @param request CreateSampleDataRequest
      * @return CreateSampleDataResponse
@@ -2549,7 +2549,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Create Task</p>
+     * <p>Creates a task.</p>
      * 
      * @param request CreateSimulationTaskRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2621,7 +2621,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Create Task</p>
+     * <p>Creates a task.</p>
      * 
      * @param request CreateSimulationTaskRequest
      * @return CreateSimulationTaskResponse
@@ -2633,7 +2633,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>取消子任务</p>
+     * <p>Cancels a subtask.</p>
      * 
      * @param request CreateTaskGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2660,6 +2660,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.serviceCodes)) {
             query.put("ServiceCodes", request.serviceCodes);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.serviceList)) {
+            query.put("ServiceList", request.serviceList);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.serviceNames)) {
@@ -2697,7 +2701,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>取消子任务</p>
+     * <p>Cancels a subtask.</p>
      * 
      * @param request CreateTaskGroupRequest
      * @return CreateTaskGroupResponse
@@ -2793,7 +2797,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Delete Query Condition</p>
+     * <p>Deletes a query condition.</p>
      * 
      * @param request DeleteAnalysisConditionFavoriteRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2833,7 +2837,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Delete Query Condition</p>
+     * <p>Deletes a query condition.</p>
      * 
      * @param request DeleteAnalysisConditionFavoriteRequest
      * @return DeleteAnalysisConditionFavoriteResponse
@@ -2845,7 +2849,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Delete Bypass Event</p>
+     * <p>Deletes a bypass event.</p>
      * 
      * @param request DeleteByPassShuntEventRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2885,7 +2889,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Delete Bypass Event</p>
+     * <p>Deletes a bypass event.</p>
      * 
      * @param request DeleteByPassShuntEventRequest
      * @return DeleteByPassShuntEventResponse
@@ -2897,7 +2901,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Delete Accumulated Variable</p>
+     * <p>Deletes a cumulative variable.</p>
      * 
      * @param request DeleteCustVariableRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2945,7 +2949,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Delete Accumulated Variable</p>
+     * <p>Deletes a cumulative variable.</p>
      * 
      * @param request DeleteCustVariableRequest
      * @return DeleteCustVariableResponse
@@ -2957,7 +2961,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Delete Data Source</p>
+     * <p>Deletes a data source.</p>
      * 
      * @param request DeleteDataSourceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2997,7 +3001,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Delete Data Source</p>
+     * <p>Deletes a data source.</p>
      * 
      * @param request DeleteDataSourceRequest
      * @return DeleteDataSourceResponse
@@ -3065,7 +3069,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Delete Custom Variable</p>
+     * <p>Deletes a custom variable.</p>
      * 
      * @param request DeleteExpressionVariableRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3109,7 +3113,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Delete Custom Variable</p>
+     * <p>Deletes a custom variable.</p>
      * 
      * @param request DeleteExpressionVariableRequest
      * @return DeleteExpressionVariableResponse
@@ -3121,7 +3125,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Delete Field</p>
+     * <p>Deletes a field.</p>
      * 
      * @param request DeleteFieldRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3165,7 +3169,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Delete Field</p>
+     * <p>Deletes a field.</p>
      * 
      * @param request DeleteFieldRequest
      * @return DeleteFieldResponse
@@ -3177,7 +3181,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Delete Name List</p>
+     * <p>Deletes a list.</p>
      * 
      * @param request DeleteNameListRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3217,7 +3221,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Delete Name List</p>
+     * <p>Deletes a list.</p>
      * 
      * @param request DeleteNameListRequest
      * @return DeleteNameListResponse
@@ -3229,7 +3233,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Delete (pseudo) name list variable data</p>
+     * <p>Deletes list variable data.</p>
      * 
      * @param request DeleteNameListDataRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3269,7 +3273,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Delete (pseudo) name list variable data</p>
+     * <p>Deletes list variable data.</p>
      * 
      * @param request DeleteNameListDataRequest
      * @return DeleteNameListDataResponse
@@ -3281,7 +3285,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Delete Query Variable</p>
+     * <p>Deletes a custom query variable.</p>
      * 
      * @param request DeleteQueryVariableRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3321,7 +3325,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Delete Query Variable</p>
+     * <p>Deletes a custom query variable.</p>
      * 
      * @param request DeleteQueryVariableRequest
      * @return DeleteQueryVariableResponse
@@ -3333,7 +3337,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Delete Policy Version</p>
+     * <p>Deletes a policy version.</p>
      * 
      * @param request DeleteRuleRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3381,7 +3385,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Delete Policy Version</p>
+     * <p>Deletes a policy version.</p>
      * 
      * @param request DeleteRuleRequest
      * @return DeleteRuleResponse
@@ -3393,7 +3397,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除样本</p>
+     * <p>Delete sample</p>
      * 
      * @param request DeleteSampleRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3433,7 +3437,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除样本</p>
+     * <p>Delete sample</p>
      * 
      * @param request DeleteSampleRequest
      * @return DeleteSampleResponse
@@ -3445,7 +3449,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Batch Delete Samples</p>
+     * <p>Deletes samples in batches.</p>
      * 
      * @param request DeleteSampleBatchRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3489,7 +3493,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Batch Delete Samples</p>
+     * <p>Deletes samples in batches.</p>
      * 
      * @param request DeleteSampleBatchRequest
      * @return DeleteSampleBatchResponse
@@ -3553,7 +3557,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Delete Sample Data</p>
+     * <p>Deletes sample data.</p>
      * 
      * @param request DeleteSampleDataRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3593,7 +3597,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Delete Sample Data</p>
+     * <p>Deletes sample data.</p>
      * 
      * @param request DeleteSampleDataRequest
      * @return DeleteSampleDataResponse
@@ -3657,7 +3661,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Advanced Query to Get Left Variables Interface</p>
+     * <p>Retrieves left-hand variables for advanced queries.</p>
      * 
      * @param request DescribeAdvanceSearchLeftVariableListRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3701,7 +3705,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Advanced Query to Get Left Variables Interface</p>
+     * <p>Retrieves left-hand variables for advanced queries.</p>
      * 
      * @param request DescribeAdvanceSearchLeftVariableListRequest
      * @return DescribeAdvanceSearchLeftVariableListResponse
@@ -3713,7 +3717,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Advanced Query</p>
+     * <p>Performs an advanced query for event analysis.</p>
      * 
      * @param request DescribeAdvanceSearchPageListRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3781,7 +3785,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Advanced Query</p>
+     * <p>Performs an advanced query for event analysis.</p>
      * 
      * @param request DescribeAdvanceSearchPageListRequest
      * @return DescribeAdvanceSearchPageListResponse
@@ -3793,7 +3797,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Data Source List</p>
+     * <p>Lists data sources.</p>
      * 
      * @param request DescribeAllDataSourceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3829,7 +3833,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Data Source List</p>
+     * <p>Lists data sources.</p>
      * 
      * @param request DescribeAllDataSourceRequest
      * @return DescribeAllDataSourceResponse
@@ -3841,7 +3845,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Event List Query</p>
+     * <p>Queries the event list.</p>
      * 
      * @param request DescribeAllEventNameAndCodeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3881,7 +3885,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Event List Query</p>
+     * <p>Queries the event list.</p>
      * 
      * @param request DescribeAllEventNameAndCodeRequest
      * @return DescribeAllEventNameAndCodeResponse
@@ -3893,7 +3897,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Display all root variables when testing custom expressions</p>
+     * <p>Displays all root variables during custom expression testing.</p>
      * 
      * @param request DescribeAllRootVariableRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3961,7 +3965,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Display all root variables when testing custom expressions</p>
+     * <p>Displays all root variables during custom expression testing.</p>
      * 
      * @param request DescribeAllRootVariableRequest
      * @return DescribeAllRootVariableResponse
@@ -3973,7 +3977,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Display All Fields</p>
+     * <p>Displays all fields.</p>
      * 
      * @param request DescribeAnalysisColumnFieldListRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4009,7 +4013,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Display All Fields</p>
+     * <p>Displays all fields.</p>
      * 
      * @param request DescribeAnalysisColumnFieldListRequest
      * @return DescribeAnalysisColumnFieldListResponse
@@ -4021,7 +4025,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query Custom Columns</p>
+     * <p>Queries custom columns.</p>
      * 
      * @param request DescribeAnalysisColumnListRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4057,7 +4061,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query Custom Columns</p>
+     * <p>Queries custom columns.</p>
      * 
      * @param request DescribeAnalysisColumnListRequest
      * @return DescribeAnalysisColumnListResponse
@@ -4069,7 +4073,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query Condition List</p>
+     * <p>Queries the condition favorite list.</p>
      * 
      * @param request DescribeAnalysisConditionFavoriteListRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4105,7 +4109,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query Condition List</p>
+     * <p>Queries the condition favorite list.</p>
      * 
      * @param request DescribeAnalysisConditionFavoriteListRequest
      * @return DescribeAnalysisConditionFavoriteListResponse
@@ -4117,7 +4121,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Download Query Results</p>
+     * <p>Download query results.</p>
      * 
      * @param request DescribeAnalysisExportTaskDownloadUrlRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4153,7 +4157,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Download Query Results</p>
+     * <p>Download query results.</p>
      * 
      * @param request DescribeAnalysisExportTaskDownloadUrlRequest
      * @return DescribeAnalysisExportTaskDownloadUrlResponse
@@ -4165,7 +4169,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Get API Details</p>
+     * <p>Retrieves the details of an API.</p>
      * 
      * @param request DescribeApiRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4213,7 +4217,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Get API Details</p>
+     * <p>Retrieves the details of an API.</p>
      * 
      * @param request DescribeApiRequest
      * @return DescribeApiResponse
@@ -4225,7 +4229,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Get API groups including those purchased by the user and custom ones</p>
+     * <p>Retrieves API groups, including purchased and custom groups.</p>
      * 
      * @param request DescribeApiGroupsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4265,7 +4269,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Get API groups including those purchased by the user and custom ones</p>
+     * <p>Retrieves API groups, including purchased and custom groups.</p>
      * 
      * @param request DescribeApiGroupsRequest
      * @return DescribeApiGroupsResponse
@@ -4277,7 +4281,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query the limit information for creating API tasks</p>
+     * <p>Queries the limit information for creating API tasks.</p>
      * 
      * @param request DescribeApiLimitRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4313,7 +4317,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query the limit information for creating API tasks</p>
+     * <p>Queries the limit information for creating API tasks.</p>
      * 
      * @param request DescribeApiLimitRequest
      * @return DescribeApiLimitResponse
@@ -4325,7 +4329,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Get API Service Name</p>
+     * <p>Retrieves API service names.</p>
      * 
      * @param request DescribeApiNameListRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4361,7 +4365,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Get API Service Name</p>
+     * <p>Retrieves API service names.</p>
      * 
      * @param request DescribeApiNameListRequest
      * @return DescribeApiNameListResponse
@@ -4373,7 +4377,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query Variable Details</p>
+     * <p>Query variable details.</p>
      * 
      * @param request DescribeApiVariableRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4413,7 +4417,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query Variable Details</p>
+     * <p>Query variable details.</p>
      * 
      * @param request DescribeApiVariableRequest
      * @return DescribeApiVariableResponse
@@ -4425,7 +4429,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Get API list including purchased and customized APIs</p>
+     * <p>Retrieves the API list, including purchased and custom APIs.</p>
      * 
      * @param request DescribeApisRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4473,7 +4477,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Get API list including purchased and customized APIs</p>
+     * <p>Retrieves the API list, including purchased and custom APIs.</p>
      * 
      * @param request DescribeApisRequest
      * @return DescribeApisResponse
@@ -4485,7 +4489,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query appKey List</p>
+     * <p>Queries the list of appKeys.</p>
      * 
      * @param request DescribeAppKeyPageRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4529,7 +4533,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query appKey List</p>
+     * <p>Queries the list of appKeys.</p>
      * 
      * @param request DescribeAppKeyPageRequest
      * @return DescribeAppKeyPageResponse
@@ -4541,7 +4545,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Approval Switch</p>
+     * <p>Configures the approval switch.</p>
      * 
      * @param request DescribeAuditConfigRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4581,7 +4585,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Approval Switch</p>
+     * <p>Configures the approval switch.</p>
      * 
      * @param request DescribeAuditConfigRequest
      * @return DescribeAuditConfigResponse
@@ -4593,7 +4597,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Approval Details</p>
+     * <p>Retrieves approval details.</p>
      * 
      * @param request DescribeAuditDetailsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4633,7 +4637,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Approval Details</p>
+     * <p>Retrieves approval details.</p>
      * 
      * @param request DescribeAuditDetailsRequest
      * @return DescribeAuditDetailsResponse
@@ -4645,7 +4649,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Display and Query of Audit List</p>
+     * <p>Displays and queries the audit list.</p>
      * 
      * @param request DescribeAuditPageListRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4701,7 +4705,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Display and Query of Audit List</p>
+     * <p>Displays and queries the audit list.</p>
      * 
      * @param request DescribeAuditPageListRequest
      * @return DescribeAuditPageListResponse
@@ -4713,7 +4717,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query the list of event names for the current user</p>
+     * <p>Queries the list of event names for the current user.</p>
      * 
      * @param request DescribeAuthEventNameListRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4749,7 +4753,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query the list of event names for the current user</p>
+     * <p>Queries the list of event names for the current user.</p>
      * 
      * @param request DescribeAuthEventNameListRequest
      * @return DescribeAuthEventNameListResponse
@@ -4761,7 +4765,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Policy List</p>
+     * <p>Queries a list of policies.</p>
      * 
      * @param request DescribeAuthRulePageListRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4809,7 +4813,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Policy List</p>
+     * <p>Queries a list of policies.</p>
      * 
      * @param request DescribeAuthRulePageListRequest
      * @return DescribeAuthRulePageListResponse
@@ -4821,7 +4825,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>List of Scenarios</p>
+     * <p>Queries the list of scenarios.</p>
      * 
      * @param request DescribeAuthSceneListRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4857,7 +4861,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>List of Scenarios</p>
+     * <p>Queries the list of scenarios.</p>
      * 
      * @param request DescribeAuthSceneListRequest
      * @return DescribeAuthSceneListResponse
@@ -4869,7 +4873,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Scene List</p>
+     * <p>Queries the list of scenarios.</p>
      * 
      * @param request DescribeAuthScenePageListRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4909,7 +4913,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Scene List</p>
+     * <p>Queries the list of scenarios.</p>
      * 
      * @param request DescribeAuthScenePageListRequest
      * @return DescribeAuthScenePageListResponse
@@ -4921,7 +4925,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Check Authorization</p>
+     * <p>Checks whether authorization is granted.</p>
      * 
      * @param request DescribeAuthStatusRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4957,7 +4961,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Check Authorization</p>
+     * <p>Checks whether authorization is granted.</p>
      * 
      * @param request DescribeAuthStatusRequest
      * @return DescribeAuthStatusResponse
@@ -4969,7 +4973,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Average Execution Time</p>
+     * <p>Average execution duration.</p>
      * 
      * @param request DescribeAvgExecuteCostReportRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5005,7 +5009,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Average Execution Time</p>
+     * <p>Average execution duration.</p>
      * 
      * @param request DescribeAvgExecuteCostReportRequest
      * @return DescribeAvgExecuteCostReportResponse
@@ -5017,7 +5021,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Basic Query</p>
+     * <p>Performs a basic query.</p>
      * 
      * @param request DescribeBasicSearchPageListRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5081,7 +5085,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Basic Query</p>
+     * <p>Performs a basic query.</p>
      * 
      * @param request DescribeBasicSearchPageListRequest
      * @return DescribeBasicSearchPageListResponse
@@ -5093,7 +5097,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Basic Statistics</p>
+     * <p>Queries basic statistics.</p>
      * 
      * @param request DescribeBasicStartRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5141,7 +5145,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Basic Statistics</p>
+     * <p>Queries basic statistics.</p>
      * 
      * @param request DescribeBasicStartRequest
      * @return DescribeBasicStartResponse
@@ -5153,7 +5157,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>View Bypass Event</p>
+     * <p>Queries a bypass event.</p>
      * 
      * @param request DescribeByPassShuntEventRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5193,7 +5197,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>View Bypass Event</p>
+     * <p>Queries a bypass event.</p>
      * 
      * @param request DescribeByPassShuntEventRequest
      * @return DescribeByPassShuntEventResponse
@@ -5205,7 +5209,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query the type configuration of custom accumulated variables</p>
+     * <p>Queries the type configurations of custom cumulative variables.</p>
      * 
      * @param request DescribeCustVariableConfigListRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5249,7 +5253,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query the type configuration of custom accumulated variables</p>
+     * <p>Queries the type configurations of custom cumulative variables.</p>
      * 
      * @param request DescribeCustVariableConfigListRequest
      * @return DescribeCustVariableConfigListResponse
@@ -5261,7 +5265,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Cumulative Variable Details</p>
+     * <p>Queries the details of a cumulative variable.</p>
      * 
      * @param request DescribeCustVariableDetailRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5301,7 +5305,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Cumulative Variable Details</p>
+     * <p>Queries the details of a cumulative variable.</p>
      * 
      * @param request DescribeCustVariableDetailRequest
      * @return DescribeCustVariableDetailResponse
@@ -5313,10 +5317,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>List Query of Accumulated Variables</p>
+     * <p>Queries the list of cumulative variables.</p>
      * 
      * <b>summary</b> : 
-     * <p>Query Custom Accumulated Variable List</p>
+     * <p>Queries the list of custom cumulative variables.</p>
      * 
      * @param request DescribeCustVariablePageRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5376,10 +5380,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>List Query of Accumulated Variables</p>
+     * <p>Queries the list of cumulative variables.</p>
      * 
      * <b>summary</b> : 
-     * <p>Query Custom Accumulated Variable List</p>
+     * <p>Queries the list of custom cumulative variables.</p>
      * 
      * @param request DescribeCustVariablePageRequest
      * @return DescribeCustVariablePageResponse
@@ -5391,7 +5395,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Get Data Source Data Download Link</p>
+     * <p>Retrieves the download URL for data source data.</p>
      * 
      * @param request DescribeDataSourceDataDownloadUrlRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5431,7 +5435,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Get Data Source Data Download Link</p>
+     * <p>Retrieves the download URL for data source data.</p>
      * 
      * @param request DescribeDataSourceDataDownloadUrlRequest
      * @return DescribeDataSourceDataDownloadUrlResponse
@@ -5443,7 +5447,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieve all fields of a data source</p>
+     * <p>Retrieves all fields of a data source.</p>
      * 
      * @param request DescribeDataSourceFieldsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5483,7 +5487,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieve all fields of a data source</p>
+     * <p>Retrieves all fields of a data source.</p>
      * 
      * @param request DescribeDataSourceFieldsRequest
      * @return DescribeDataSourceFieldsResponse
@@ -5495,7 +5499,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Data Source List Interface</p>
+     * <p>Queries a list of data sources.</p>
      * 
      * @param request DescribeDataSourcePageListRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5551,7 +5555,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Data Source List Interface</p>
+     * <p>Queries a list of data sources.</p>
      * 
      * @param request DescribeDataSourcePageListRequest
      * @return DescribeDataSourcePageListResponse
@@ -5563,7 +5567,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Decision Result Fluctuation Detection</p>
+     * <p>Detects fluctuations in decision results.</p>
      * 
      * @param request DescribeDecisionResultFluctuationRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5603,7 +5607,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Decision Result Fluctuation Detection</p>
+     * <p>Detects fluctuations in decision results.</p>
      * 
      * @param request DescribeDecisionResultFluctuationRequest
      * @return DescribeDecisionResultFluctuationResponse
@@ -5615,7 +5619,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Decision Result Fluctuation Trend</p>
+     * <p>Queries the fluctuation trend of decision results.</p>
      * 
      * @param request DescribeDecisionResultTrendRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5663,7 +5667,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Decision Result Fluctuation Trend</p>
+     * <p>Queries the fluctuation trend of decision results.</p>
      * 
      * @param request DescribeDecisionResultTrendRequest
      * @return DescribeDecisionResultTrendResponse
@@ -5675,7 +5679,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Detailed Statistics</p>
+     * <p>Retrieves detailed statistics.</p>
      * 
      * @param request DescribeDetailStartRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5723,7 +5727,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Detailed Statistics</p>
+     * <p>Retrieves detailed statistics.</p>
      * 
      * @param request DescribeDetailStartRequest
      * @return DescribeDetailStartResponse
@@ -5735,7 +5739,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Download</p>
+     * <p>Downloads a file.</p>
      * 
      * @param request DescribeDownloadUrlRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5783,7 +5787,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Download</p>
+     * <p>Downloads a file.</p>
      * 
      * @param request DescribeDownloadUrlRequest
      * @return DescribeDownloadUrlResponse
@@ -5795,7 +5799,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query Event Details</p>
+     * <p>Queries event details.</p>
      * 
      * @param request DescribeEventBaseInfoByEventCodeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5839,7 +5843,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query Event Details</p>
+     * <p>Queries event details.</p>
      * 
      * @param request DescribeEventBaseInfoByEventCodeRequest
      * @return DescribeEventBaseInfoByEventCodeResponse
@@ -5851,7 +5855,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query Total Event Count</p>
+     * <p>Queries the total number of events.</p>
      * 
      * @param request DescribeEventCountRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5891,7 +5895,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query Total Event Count</p>
+     * <p>Queries the total number of events.</p>
      * 
      * @param request DescribeEventCountRequest
      * @return DescribeEventCountResponse
@@ -5903,7 +5907,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query event details based on the request ID</p>
+     * <p>Queries event details by request ID.</p>
      * 
      * @param request DescribeEventDetailByRequestIdRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5951,7 +5955,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query event details based on the request ID</p>
+     * <p>Queries event details by request ID.</p>
      * 
      * @param request DescribeEventDetailByRequestIdRequest
      * @return DescribeEventDetailByRequestIdResponse
@@ -5963,7 +5967,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query Event History Details</p>
+     * <p>Queries the details of an event history.</p>
      * 
      * @param request DescribeEventLogDetailRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6003,7 +6007,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query Event History Details</p>
+     * <p>Queries the details of an event history.</p>
      * 
      * @param request DescribeEventLogDetailRequest
      * @return DescribeEventLogDetailResponse
@@ -6015,7 +6019,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query Event History List</p>
+     * <p>Queries the event history list.</p>
      * 
      * @param request DescribeEventLogPageRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6163,7 +6167,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query Event History List</p>
+     * <p>Queries the event history list.</p>
      * 
      * @param request DescribeEventLogPageRequest
      * @return DescribeEventLogPageResponse
@@ -6175,7 +6179,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Paged Query for Events</p>
+     * <p>Queries events by paging.</p>
      * 
      * @param request DescribeEventPageListRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6235,7 +6239,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Paged Query for Events</p>
+     * <p>Queries events by paging.</p>
      * 
      * @param request DescribeEventPageListRequest
      * @return DescribeEventPageListResponse
@@ -6307,7 +6311,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Event Overview List</p>
+     * <p>Queries the event overview list.</p>
      * 
      * @param request DescribeEventResultListRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6359,7 +6363,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Event Overview List</p>
+     * <p>Queries the event overview list.</p>
      * 
      * @param request DescribeEventResultListRequest
      * @return DescribeEventResultListResponse
@@ -6371,7 +6375,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query Policy Download List</p>
+     * <p>Queries the policy download list.</p>
      * 
      * @param request DescribeEventTaskHistoryRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6407,7 +6411,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query Policy Download List</p>
+     * <p>Queries the policy download list.</p>
      * 
      * @param request DescribeEventTaskHistoryRequest
      * @return DescribeEventTaskHistoryResponse
@@ -6419,7 +6423,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Event Invocation Count</p>
+     * <p>Call event count</p>
      * 
      * @param request DescribeEventTotalCountReportRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6455,7 +6459,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Event Invocation Count</p>
+     * <p>Call event count</p>
      * 
      * @param request DescribeEventTotalCountReportRequest
      * @return DescribeEventTotalCountReportResponse
@@ -6467,7 +6471,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Batch Import Policy</p>
+     * <p>Imports policies in batches.</p>
      * 
      * @param request DescribeEventUploadPolicyRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6503,7 +6507,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Batch Import Policy</p>
+     * <p>Imports policies in batches.</p>
      * 
      * @param request DescribeEventUploadPolicyRequest
      * @return DescribeEventUploadPolicyResponse
@@ -6515,10 +6519,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Cumulative Variable List Query</p>
+     * <p>Queries the list of cumulative variables.</p>
      * 
      * <b>summary</b> : 
-     * <p>Query event variables</p>
+     * <p>Queries event variables.</p>
      * 
      * @param request DescribeEventVariableListRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6574,10 +6578,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Cumulative Variable List Query</p>
+     * <p>Queries the list of cumulative variables.</p>
      * 
      * <b>summary</b> : 
-     * <p>Query event variables</p>
+     * <p>Queries event variables.</p>
      * 
      * @param request DescribeEventVariableListRequest
      * @return DescribeEventVariableListResponse
@@ -6589,7 +6593,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query Event Template</p>
+     * <p>Queries an event pattern template.</p>
      * 
      * @param request DescribeEventVariableTemplateBindRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6637,7 +6641,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query Event Template</p>
+     * <p>Queries an event pattern template.</p>
      * 
      * @param request DescribeEventVariableTemplateBindRequest
      * @return DescribeEventVariableTemplateBindResponse
@@ -6649,7 +6653,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query Event Template</p>
+     * <p>Queries an event pattern template.</p>
      * 
      * @param request DescribeEventVariableTemplateListRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6697,7 +6701,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query Event Template</p>
+     * <p>Queries an event pattern template.</p>
      * 
      * @param request DescribeEventVariableTemplateListRequest
      * @return DescribeEventVariableTemplateListResponse
@@ -6709,7 +6713,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query Event Variables</p>
+     * <p>Queries event variables.</p>
      * 
      * @param request DescribeEventsVariableListRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6761,7 +6765,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query Event Variables</p>
+     * <p>Queries event variables.</p>
      * 
      * @param request DescribeEventsVariableListRequest
      * @return DescribeEventsVariableListResponse
@@ -6773,7 +6777,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Self-service call list.</p>
+     * <p>Self-service invocation list.</p>
      * 
      * @param request DescribeExcuteNumRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6825,7 +6829,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Self-service call list.</p>
+     * <p>Self-service invocation list.</p>
      * 
      * @param request DescribeExcuteNumRequest
      * @return DescribeExcuteNumResponse
@@ -6837,7 +6841,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Validate if the field name is duplicated (based on user\&quot;s organization)</p>
+     * <p>Checks whether a field name is duplicate based on the user unit.</p>
      * 
      * @param request DescribeExistNameRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6877,7 +6881,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Validate if the field name is duplicated (based on user\&quot;s organization)</p>
+     * <p>Checks whether a field name is duplicate based on the user unit.</p>
      * 
      * @param request DescribeExistNameRequest
      * @return DescribeExistNameResponse
@@ -6889,7 +6893,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Check if Scene Exists</p>
+     * <p>Checks whether a scenario exists.</p>
      * 
      * @param request DescribeExistSceneRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6929,7 +6933,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Check if Scene Exists</p>
+     * <p>Checks whether a scenario exists.</p>
      * 
      * @param request DescribeExistSceneRequest
      * @return DescribeExistSceneResponse
@@ -6941,7 +6945,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Custom Variable Details</p>
+     * <p>Queries the details of a custom variable.</p>
      * 
      * @param request DescribeExpressionVariableDetailRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6981,7 +6985,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Custom Variable Details</p>
+     * <p>Queries the details of a custom variable.</p>
      * 
      * @param request DescribeExpressionVariableDetailRequest
      * @return DescribeExpressionVariableDetailResponse
@@ -6993,7 +6997,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Function List</p>
+     * <p>Queries the function list.</p>
      * 
      * @param request DescribeExpressionVariableFunctionListRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7029,7 +7033,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Function List</p>
+     * <p>Queries the function list.</p>
      * 
      * @param request DescribeExpressionVariableFunctionListRequest
      * @return DescribeExpressionVariableFunctionListResponse
@@ -7041,7 +7045,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Paged Query for Custom Variables.</p>
+     * <p>Performs a paging query of custom variables.</p>
      * 
      * @param request DescribeExpressionVariablePageRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7101,7 +7105,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Paged Query for Custom Variables.</p>
+     * <p>Performs a paging query of custom variables.</p>
      * 
      * @param request DescribeExpressionVariablePageRequest
      * @return DescribeExpressionVariablePageResponse
@@ -7177,7 +7181,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Get Field Details</p>
+     * <p>Retrieves field details.</p>
      * 
      * @param request DescribeFieldByIdRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7217,7 +7221,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Get Field Details</p>
+     * <p>Retrieves field details.</p>
      * 
      * @param request DescribeFieldByIdRequest
      * @return DescribeFieldByIdResponse
@@ -7229,7 +7233,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query Field List</p>
+     * <p>Queries the list of fields.</p>
      * 
      * @param request DescribeFieldListRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7273,7 +7277,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query Field List</p>
+     * <p>Queries the list of fields.</p>
      * 
      * @param request DescribeFieldListRequest
      * @return DescribeFieldListResponse
@@ -7285,7 +7289,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query paged list of fields</p>
+     * <p>Queries a paginated list of fields.</p>
      * 
      * @param request DescribeFieldPageRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7357,7 +7361,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query paged list of fields</p>
+     * <p>Queries a paginated list of fields.</p>
      * 
      * @param request DescribeFieldPageRequest
      * @return DescribeFieldPageResponse
@@ -7369,7 +7373,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Community Account List</p>
+     * <p>Queries the list of community accounts.</p>
      * 
      * @param request DescribeGroupAccountPageRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7441,7 +7445,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Community Account List</p>
+     * <p>Queries the list of community accounts.</p>
      * 
      * @param request DescribeGroupAccountPageRequest
      * @return DescribeGroupAccountPageResponse
@@ -7453,7 +7457,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Community List Query Conditions</p>
+     * <p>Queries the filter conditions for the community list.</p>
      * 
      * @param request DescribeGroupConditionListRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7489,7 +7493,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Community List Query Conditions</p>
+     * <p>Queries the filter conditions for the community list.</p>
      * 
      * @param request DescribeGroupConditionListRequest
      * @return DescribeGroupConditionListResponse
@@ -7501,7 +7505,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Community List</p>
+     * <p>Queries the list of communities.</p>
      * 
      * @param request DescribeGroupPageRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7561,7 +7565,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Community List</p>
+     * <p>Queries the list of communities.</p>
      * 
      * @param request DescribeGroupPageRequest
      * @return DescribeGroupPageResponse
@@ -7573,7 +7577,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Risk Communities Discovered Today</p>
+     * <p>Queries the risk communities discovered on the current day.</p>
      * 
      * @param request DescribeGroupStatisticsByTodayRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7609,7 +7613,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Risk Communities Discovered Today</p>
+     * <p>Queries the risk communities discovered on the current day.</p>
      * 
      * @param request DescribeGroupStatisticsByTodayRequest
      * @return DescribeGroupStatisticsByTodayResponse
@@ -7621,7 +7625,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Recent Trends in Risk Communities</p>
+     * <p>Queries recent trends of risky communities.</p>
      * 
      * @param request DescribeGroupTrendRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7661,7 +7665,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Recent Trends in Risk Communities</p>
+     * <p>Queries recent trends of risky communities.</p>
      * 
      * @param request DescribeGroupTrendRequest
      * @return DescribeGroupTrendResponse
@@ -7673,7 +7677,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Check if the policy name under the event name exists</p>
+     * <p>Queries whether a policy name exists under a specified event name.</p>
      * 
      * @param request DescribeHasRuleNameByEventCodeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7721,7 +7725,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Check if the policy name under the event name exists</p>
+     * <p>Queries whether a policy name exists under a specified event name.</p>
      * 
      * @param request DescribeHasRuleNameByEventCodeRequest
      * @return DescribeHasRuleNameByEventCodeResponse
@@ -7733,7 +7737,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Risk Map Overview Chart (Pie Chart)</p>
+     * <p>Retrieves the risk map overview chart (pie chart).</p>
      * 
      * @param request DescribeHighRiskPieChartRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7781,7 +7785,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Risk Map Overview Chart (Pie Chart)</p>
+     * <p>Retrieves the risk map overview chart (pie chart).</p>
      * 
      * @param request DescribeHighRiskPieChartRequest
      * @return DescribeHighRiskPieChartResponse
@@ -7793,7 +7797,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Policy Hit Fluctuation Detection</p>
+     * <p>Detects fluctuations in policy hits.</p>
      * 
      * @param request DescribeHitRuleFluctuationRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7837,7 +7841,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Policy Hit Fluctuation Detection</p>
+     * <p>Detects fluctuations in policy hits.</p>
      * 
      * @param request DescribeHitRuleFluctuationRequest
      * @return DescribeHitRuleFluctuationResponse
@@ -7849,7 +7853,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Top 20 Hits for Main Events/Bypass/Diversion Strategies</p>
+     * <p>Queries the top 20 policies by hits for main events, bypass, and automatic request distribution.</p>
      * 
      * @param request DescribeHitRuleListRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7901,7 +7905,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Top 20 Hits for Main Events/Bypass/Diversion Strategies</p>
+     * <p>Queries the top 20 policies by hits for main events, bypass, and automatic request distribution.</p>
      * 
      * @param request DescribeHitRuleListRequest
      * @return DescribeHitRuleListResponse
@@ -7913,7 +7917,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Hit Rule Trend</p>
+     * <p>Queries the policy hit trends.</p>
      * 
      * @param request DescribeHitRuleTrendRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7965,7 +7969,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Hit Rule Trend</p>
+     * <p>Queries the policy hit trends.</p>
      * 
      * @param request DescribeHitRuleTrendRequest
      * @return DescribeHitRuleTrendResponse
@@ -8035,7 +8039,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query Total Number of Events</p>
+     * <p>Queries the total number of events.</p>
      * 
      * @param request DescribeInputFeildCountByEventCodeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8079,7 +8083,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query Total Number of Events</p>
+     * <p>Queries the total number of events.</p>
      * 
      * @param request DescribeInputFeildCountByEventCodeRequest
      * @return DescribeInputFeildCountByEventCodeResponse
@@ -8143,7 +8147,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Task List</p>
+     * <p>Queries the list of tasks.</p>
      * 
      * @param request DescribeListPocRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8199,7 +8203,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Task List</p>
+     * <p>Queries the list of tasks.</p>
      * 
      * @param request DescribeListPocRequest
      * @return DescribeListPocResponse
@@ -8211,7 +8215,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Get Monitoring Object List</p>
+     * <p>Queries the list of monitoring objects.</p>
      * 
      * @param request DescribeLoanExecListRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8267,7 +8271,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Get Monitoring Object List</p>
+     * <p>Queries the list of monitoring objects.</p>
      * 
      * @param request DescribeLoanExecListRequest
      * @return DescribeLoanExecListResponse
@@ -8279,7 +8283,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Get Loan Monitoring Task List</p>
+     * <p>Retrieves the list of in-loan monitoring tasks.</p>
      * 
      * @param request DescribeLoanTaskListRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8331,7 +8335,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Get Loan Monitoring Task List</p>
+     * <p>Retrieves the list of in-loan monitoring tasks.</p>
      * 
      * @param request DescribeLoanTaskListRequest
      * @return DescribeLoanTaskListResponse
@@ -8343,7 +8347,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Mark List</p>
+     * <p>Queries the tagging list.</p>
      * 
      * @param request DescribeMarkPageRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8403,7 +8407,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Mark List</p>
+     * <p>Queries the tagging list.</p>
      * 
      * @param request DescribeMarkPageRequest
      * @return DescribeMarkPageResponse
@@ -8415,7 +8419,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Check Permission</p>
+     * <p>Queries whether the current user has the specified permission.</p>
      * 
      * @param request DescribeMenuPermissionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8455,7 +8459,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Check Permission</p>
+     * <p>Queries whether the current user has the specified permission.</p>
      * 
      * @param request DescribeMenuPermissionRequest
      * @return DescribeMenuPermissionResponse
@@ -8563,7 +8567,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query Task Limit</p>
+     * <p>Queries the limits of tasks.</p>
      * 
      * @param request DescribeMonitorTaskLimitRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8599,7 +8603,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query Task Limit</p>
+     * <p>Queries the limits of tasks.</p>
      * 
      * @param request DescribeMonitorTaskLimitRequest
      * @return DescribeMonitorTaskLimitResponse
@@ -8611,7 +8615,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query Name List Pagination</p>
+     * <p>Queries a name list by page.</p>
      * 
      * @param request DescribeNameListRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8667,7 +8671,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query Name List Pagination</p>
+     * <p>Queries a name list by page.</p>
      * 
      * @param request DescribeNameListRequest
      * @return DescribeNameListResponse
@@ -8679,7 +8683,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Download Name List</p>
+     * <p>Downloads the content of a list.</p>
      * 
      * @param request DescribeNameListDownloadUrlRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8719,7 +8723,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Download Name List</p>
+     * <p>Downloads the content of a list.</p>
      * 
      * @param request DescribeNameListDownloadUrlRequest
      * @return DescribeNameListDownloadUrlResponse
@@ -8731,7 +8735,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query Name List Limit</p>
+     * <p>Queries the quota limit for lists.</p>
      * 
      * @param request DescribeNameListLimitRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8771,7 +8775,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query Name List Limit</p>
+     * <p>Queries the quota limit for lists.</p>
      * 
      * @param request DescribeNameListLimitRequest
      * @return DescribeNameListLimitResponse
@@ -8783,7 +8787,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query the content of the list</p>
+     * <p>Queries the content of a list.</p>
      * 
      * @param request DescribeNameListPageListRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8843,7 +8847,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query the content of the list</p>
+     * <p>Queries the content of a list.</p>
      * 
      * @param request DescribeNameListPageListRequest
      * @return DescribeNameListPageListResponse
@@ -8855,7 +8859,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>List of Name Types</p>
+     * <p>Queries the list of name list types.</p>
      * 
      * @param request DescribeNameListTypeListRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8891,7 +8895,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>List of Name Types</p>
+     * <p>Queries the list of name list types.</p>
      * 
      * @param request DescribeNameListTypeListRequest
      * @return DescribeNameListTypeListResponse
@@ -8903,7 +8907,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Name List</p>
+     * <p>Queries a list of named lists.</p>
      * 
      * @param request DescribeNameListVariablePageListRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8959,7 +8963,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Name List</p>
+     * <p>Queries a list of named lists.</p>
      * 
      * @param request DescribeNameListVariablePageListRequest
      * @return DescribeNameListVariablePageListResponse
@@ -9031,7 +9035,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query event list by event name</p>
+     * <p>Queries the list of events by event name.</p>
      * 
      * @param request DescribeOperationLogPageListRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9091,7 +9095,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query event list by event name</p>
+     * <p>Queries the list of events by event name.</p>
      * 
      * @param request DescribeOperationLogPageListRequest
      * @return DescribeOperationLogPageListResponse
@@ -9103,7 +9107,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query the operator mapping list based on customer ID</p>
+     * <p>Queries the operator mapping list by customer ID.</p>
      * 
      * @param request DescribeOperatorListRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9139,7 +9143,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query the operator mapping list based on customer ID</p>
+     * <p>Queries the operator mapping list by customer ID.</p>
      * 
      * @param request DescribeOperatorListRequest
      * @return DescribeOperatorListResponse
@@ -9151,7 +9155,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query Operator Mapping List</p>
+     * <p>Queries the operator mapping list.</p>
      * 
      * @param request DescribeOperatorListBySceneRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9191,7 +9195,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query Operator Mapping List</p>
+     * <p>Queries the operator mapping list.</p>
      * 
      * @param request DescribeOperatorListBySceneRequest
      * @return DescribeOperatorListBySceneResponse
@@ -9203,7 +9207,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query Operator Mapping List</p>
+     * <p>Queries the list of operator mappings.</p>
      * 
      * @param request DescribeOperatorListByTypeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9239,7 +9243,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query Operator Mapping List</p>
+     * <p>Queries the list of operator mappings.</p>
      * 
      * @param request DescribeOperatorListByTypeRequest
      * @return DescribeOperatorListByTypeResponse
@@ -9251,7 +9255,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Check Oss Authorization</p>
+     * <p>Checks whether OSS is authorized.</p>
      * 
      * @param request DescribeOssAuthStatusRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9287,7 +9291,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Check Oss Authorization</p>
+     * <p>Checks whether OSS is authorized.</p>
      * 
      * @param request DescribeOssAuthStatusRequest
      * @return DescribeOssAuthStatusResponse
@@ -9299,7 +9303,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Get OSS Policy</p>
+     * <p>Retrieves the OSS policy.</p>
      * 
      * @param request DescribeOssPolicyRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9339,7 +9343,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Get OSS Policy</p>
+     * <p>Retrieves the OSS policy.</p>
      * 
      * @param request DescribeOssPolicyRequest
      * @return DescribeOssPolicyResponse
@@ -9351,7 +9355,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Get File Upload Credentials</p>
+     * <p>Retrieves the upload credential for a file.</p>
      * 
      * @param request DescribeOssTokenRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9395,7 +9399,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Get File Upload Credentials</p>
+     * <p>Retrieves the upload credential for a file.</p>
      * 
      * @param request DescribeOssTokenRequest
      * @return DescribeOssTokenResponse
@@ -9407,7 +9411,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query Event Property List</p>
+     * <p>Queries the list of event properties.</p>
      * 
      * @param request DescribeParamByEventCodesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9451,7 +9455,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query Event Property List</p>
+     * <p>Queries the list of event properties.</p>
      * 
      * @param request DescribeParamByEventCodesRequest
      * @return DescribeParamByEventCodesResponse
@@ -9463,7 +9467,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Get File Upload Credentials</p>
+     * <p>Retrieves the file upload credential.</p>
      * 
      * @param request DescribePocOssTokenRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9499,7 +9503,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Get File Upload Credentials</p>
+     * <p>Retrieves the file upload credential.</p>
      * 
      * @param request DescribePocOssTokenRequest
      * @return DescribePocOssTokenResponse
@@ -9511,7 +9515,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Get POC Task List</p>
+     * <p>Retrieves the list of POC tasks.</p>
      * 
      * @param request DescribePocTaskListRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9559,7 +9563,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Get POC Task List</p>
+     * <p>Retrieves the list of POC tasks.</p>
      * 
      * @param request DescribePocTaskListRequest
      * @return DescribePocTaskListResponse
@@ -9571,7 +9575,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Determine if Stack Private Domain Mode is Enabled</p>
+     * <p>Checks whether the Stack private domain mode is enabled.</p>
      * 
      * @param request DescribePrivateStackRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9603,7 +9607,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Determine if Stack Private Domain Mode is Enabled</p>
+     * <p>Checks whether the Stack private domain mode is enabled.</p>
      * 
      * @param request DescribePrivateStackRequest
      * @return DescribePrivateStackResponse
@@ -9615,7 +9619,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query Variable Detail Query</p>
+     * <p>Queries the details of a custom query variable.</p>
      * 
      * @param request DescribeQueryVariableDetailRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9655,7 +9659,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query Variable Detail Query</p>
+     * <p>Queries the details of a custom query variable.</p>
      * 
      * @param request DescribeQueryVariableDetailRequest
      * @return DescribeQueryVariableDetailResponse
@@ -9667,7 +9671,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query Variable List Query</p>
+     * <p>Queries a list of custom query variables.</p>
      * 
      * @param request DescribeQueryVariablePageListRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9723,7 +9727,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query Variable List Query</p>
+     * <p>Queries a list of custom query variables.</p>
      * 
      * @param request DescribeQueryVariablePageListRequest
      * @return DescribeQueryVariablePageListResponse
@@ -9735,7 +9739,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query Variable List under Sample &amp; Scenario</p>
+     * <p>Queries the list of variables under a data sample and scenario.</p>
      * 
      * @param request DescribeRecommendSceneVariablesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9775,7 +9779,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query Variable List under Sample &amp; Scenario</p>
+     * <p>Queries the list of variables under a data sample and scenario.</p>
      * 
      * @param request DescribeRecommendSceneVariablesRequest
      * @return DescribeRecommendSceneVariablesResponse
@@ -9787,7 +9791,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Variable Recommendation Details Query Interface</p>
+     * <p>Queries the details of variable recommendations.</p>
      * 
      * @param request DescribeRecommendTaskDetailRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9827,7 +9831,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Variable Recommendation Details Query Interface</p>
+     * <p>Queries the details of variable recommendations.</p>
      * 
      * @param request DescribeRecommendTaskDetailRequest
      * @return DescribeRecommendTaskDetailResponse
@@ -9839,7 +9843,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Variable Recommendation List Query Interface</p>
+     * <p>Queries the variable recommendation list.</p>
      * 
      * @param request DescribeRecommendTaskPageListRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9887,7 +9891,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Variable Recommendation List Query Interface</p>
+     * <p>Queries the variable recommendation list.</p>
      * 
      * @param request DescribeRecommendTaskPageListRequest
      * @return DescribeRecommendTaskPageListResponse
@@ -9899,7 +9903,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query Indicators Information under Variables</p>
+     * <p>Queries the metric information of a variable.</p>
      * 
      * @param request DescribeRecommendVariablesVelocityRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9943,7 +9947,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query Indicators Information under Variables</p>
+     * <p>Queries the metric information of a variable.</p>
      * 
      * @param request DescribeRecommendVariablesVelocityRequest
      * @return DescribeRecommendVariablesVelocityResponse
@@ -9955,7 +9959,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query Supported Metrics List</p>
+     * <p>Queries the list of supported metrics.</p>
      * 
      * @param request DescribeRecommendVelocitiesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9999,7 +10003,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query Supported Metrics List</p>
+     * <p>Queries the list of supported metrics.</p>
      * 
      * @param request DescribeRecommendVelocitiesRequest
      * @return DescribeRecommendVelocitiesResponse
@@ -10011,7 +10015,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query the list of regions supported by ApiGateway</p>
+     * <p>Queries the list of regions supported by API Gateway.</p>
      * 
      * @param request DescribeRegionsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -10047,7 +10051,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query the list of regions supported by ApiGateway</p>
+     * <p>Queries the list of regions supported by API Gateway.</p>
      * 
      * @param request DescribeRegionsRequest
      * @return DescribeRegionsResponse
@@ -10059,7 +10063,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query Request Hit Details</p>
+     * <p>Queries the hit details of a request.</p>
      * 
      * @param request DescribeRequestHitRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -10099,7 +10103,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query Request Hit Details</p>
+     * <p>Queries the hit details of a request.</p>
      * 
      * @param request DescribeRequestHitRequest
      * @return DescribeRequestHitResponse
@@ -10111,7 +10115,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Request Peak</p>
+     * <p>Request Rate (QPS).</p>
      * 
      * @param request DescribeRequestPeakReportRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -10147,7 +10151,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Request Peak</p>
+     * <p>Request Rate (QPS).</p>
      * 
      * @param request DescribeRequestPeakReportRequest
      * @return DescribeRequestPeakReportResponse
@@ -10159,7 +10163,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Drill-down Analysis</p>
+     * <p>Performs drill-down analysis.</p>
      * 
      * @param request DescribeResultCountRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -10203,7 +10207,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Drill-down Analysis</p>
+     * <p>Performs drill-down analysis.</p>
      * 
      * @param request DescribeResultCountRequest
      * @return DescribeResultCountResponse
@@ -10215,7 +10219,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Risk map overview chart (line chart)</p>
+     * <p>Risk Map Overview Chart (Line Chart)</p>
      * 
      * @param request DescribeRiskLineChartRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -10263,7 +10267,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Risk map overview chart (line chart)</p>
+     * <p>Risk Map Overview Chart (Line Chart)</p>
      * 
      * @param request DescribeRiskLineChartRequest
      * @return DescribeRiskLineChartResponse
@@ -10335,7 +10339,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Policy Overview List</p>
+     * <p>Queries the policy overview list.</p>
      * 
      * @param request DescribeRuleBarChartRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -10383,7 +10387,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Policy Overview List</p>
+     * <p>Queries the policy overview list.</p>
      * 
      * @param request DescribeRuleBarChartRequest
      * @return DescribeRuleBarChartResponse
@@ -10395,7 +10399,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query Policy Count by User ID</p>
+     * <p>Queries the number of policies by user ID.</p>
      * 
      * @param request DescribeRuleCountByUserIdRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -10435,7 +10439,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query Policy Count by User ID</p>
+     * <p>Queries the number of policies by user ID.</p>
      * 
      * @param request DescribeRuleCountByUserIdRequest
      * @return DescribeRuleCountByUserIdResponse
@@ -10447,7 +10451,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query policy/version details</p>
+     * <p>Query policy/version details.</p>
      * 
      * @param request DescribeRuleDetailByRuleIdRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -10495,7 +10499,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query policy/version details</p>
+     * <p>Query policy/version details.</p>
      * 
      * @param request DescribeRuleDetailByRuleIdRequest
      * @return DescribeRuleDetailByRuleIdResponse
@@ -10507,7 +10511,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query rule hit details</p>
+     * <p>Queries the details of policy rule hits.</p>
      * 
      * @param request DescribeRuleHitRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -10559,7 +10563,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query rule hit details</p>
+     * <p>Queries the details of policy rule hits.</p>
      * 
      * @param request DescribeRuleHitRequest
      * @return DescribeRuleHitResponse
@@ -10571,7 +10575,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query policy list</p>
+     * <p>Queries a list of policies.</p>
      * 
      * @param request DescribeRuleListByEventCodesListRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -10611,7 +10615,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query policy list</p>
+     * <p>Queries a list of policies.</p>
      * 
      * @param request DescribeRuleListByEventCodesListRequest
      * @return DescribeRuleListByEventCodesListResponse
@@ -10623,7 +10627,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query the list of policies</p>
+     * <p>Queries a list of policies.</p>
      * 
      * @param request DescribeRulePageListRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -10691,7 +10695,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query the list of policies</p>
+     * <p>Queries a list of policies.</p>
      * 
      * @param request DescribeRulePageListRequest
      * @return DescribeRulePageListResponse
@@ -10703,7 +10707,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query historical snapshots based on ruleId and version</p>
+     * <p>Query historical snapshots based on ruleId and version.</p>
      * 
      * @param request DescribeRuleSnapshotRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -10747,7 +10751,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query historical snapshots based on ruleId and version</p>
+     * <p>Query historical snapshots based on ruleId and version.</p>
      * 
      * @param request DescribeRuleSnapshotRequest
      * @return DescribeRuleSnapshotResponse
@@ -10759,7 +10763,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query Policy Version List</p>
+     * <p>Queries the list of policy versions.</p>
      * 
      * @param request DescribeRuleVersionListRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -10811,7 +10815,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query Policy Version List</p>
+     * <p>Queries the list of policy versions.</p>
      * 
      * @param request DescribeRuleVersionListRequest
      * @return DescribeRuleVersionListResponse
@@ -10823,7 +10827,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>SDK Download List</p>
+     * <p>Queries the list of SDK downloads.</p>
      * 
      * @param request DescribeSDKDownloadListRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -10867,7 +10871,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>SDK Download List</p>
+     * <p>Queries the list of SDK downloads.</p>
      * 
      * @param request DescribeSDKDownloadListRequest
      * @return DescribeSDKDownloadListResponse
@@ -10879,7 +10883,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query SAF permissions.</p>
+     * <p>Queries SAF permissions.</p>
      * 
      * @param request DescribeSafConsoleRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -10919,7 +10923,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query SAF permissions.</p>
+     * <p>Queries SAF permissions.</p>
      * 
      * @param request DescribeSafConsoleRequest
      * @return DescribeSafConsoleResponse
@@ -10931,7 +10935,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query saf_de Order</p>
+     * <p>Queries saf_de orders.</p>
      * 
      * @param request DescribeSafDeOrderRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -10983,7 +10987,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query saf_de Order</p>
+     * <p>Queries saf_de orders.</p>
      * 
      * @param request DescribeSafDeOrderRequest
      * @return DescribeSafDeOrderResponse
@@ -10995,7 +10999,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query Order Information</p>
+     * <p>Queries order information.</p>
      * 
      * @param request DescribeSafOrderRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -11051,7 +11055,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query Order Information</p>
+     * <p>Queries order information.</p>
      * 
      * @param request DescribeSafOrderRequest
      * @return DescribeSafOrderResponse
@@ -11063,7 +11067,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query Access Configuration</p>
+     * <p>Queries the access configuration.</p>
      * 
      * @param request DescribeSafStartConfigRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -11099,7 +11103,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query Access Configuration</p>
+     * <p>Queries the access configuration.</p>
      * 
      * @param request DescribeSafStartConfigRequest
      * @return DescribeSafStartConfigResponse
@@ -11111,7 +11115,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query Access Configuration</p>
+     * <p>Queries access configurations.</p>
      * 
      * @param request DescribeSafStartStepsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -11167,7 +11171,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query Access Configuration</p>
+     * <p>Queries access configurations.</p>
      * 
      * @param request DescribeSafStartStepsRequest
      * @return DescribeSafStartStepsResponse
@@ -11179,7 +11183,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Get Risk Tag List</p>
+     * <p>Retrieves the list of risk labels.</p>
      * 
      * @param request DescribeSafTagListRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -11231,7 +11235,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Get Risk Tag List</p>
+     * <p>Retrieves the list of risk labels.</p>
      * 
      * @param request DescribeSafTagListRequest
      * @return DescribeSafTagListResponse
@@ -11367,7 +11371,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Paged Query of Sample List</p>
+     * <p>Performs a paging query on the sample list.</p>
      * 
      * @param request DescribeSampleDataListRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -11431,7 +11435,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Paged Query of Sample List</p>
+     * <p>Performs a paging query on the sample list.</p>
      * 
      * @param request DescribeSampleDataListRequest
      * @return DescribeSampleDataListResponse
@@ -11511,7 +11515,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query Sample Example Authorization</p>
+     * <p>Queries the authorization of a data sample.</p>
      * 
      * @param request DescribeSampleDemoDownloadUrlRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -11551,7 +11555,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query Sample Example Authorization</p>
+     * <p>Queries the authorization of a data sample.</p>
      * 
      * @param request DescribeSampleDemoDownloadUrlRequest
      * @return DescribeSampleDemoDownloadUrlResponse
@@ -11563,7 +11567,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query Sample Download Authorization Information</p>
+     * <p>Queries the authorization information for downloading a data sample.</p>
      * 
      * @param request DescribeSampleDownloadUrlRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -11603,7 +11607,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query Sample Download Authorization Information</p>
+     * <p>Queries the authorization information for downloading a data sample.</p>
      * 
      * @param request DescribeSampleDownloadUrlRequest
      * @return DescribeSampleDownloadUrlResponse
@@ -11615,7 +11619,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query Sample Details</p>
+     * <p>Queries the details of a data sample.</p>
      * 
      * @param request DescribeSampleInfoRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -11659,7 +11663,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query Sample Details</p>
+     * <p>Queries the details of a data sample.</p>
      * 
      * @param request DescribeSampleInfoRequest
      * @return DescribeSampleInfoResponse
@@ -11671,7 +11675,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query Sample List</p>
+     * <p>Queries the sample list.</p>
      * 
      * @param request DescribeSampleListRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -11723,7 +11727,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query Sample List</p>
+     * <p>Queries the sample list.</p>
      * 
      * @param request DescribeSampleListRequest
      * @return DescribeSampleListResponse
@@ -11735,7 +11739,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query Scene List</p>
+     * <p>Queries the list of scenarios.</p>
      * 
      * @param request DescribeSampleSceneListRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -11771,7 +11775,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query Scene List</p>
+     * <p>Queries the list of scenarios.</p>
      * 
      * @param request DescribeSampleSceneListRequest
      * @return DescribeSampleSceneListResponse
@@ -11783,7 +11787,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Get Tag List</p>
+     * <p>Retrieves the list of labels.</p>
      * 
      * @param request DescribeSampleTagListRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -11819,7 +11823,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Get Tag List</p>
+     * <p>Retrieves the list of labels.</p>
      * 
      * @param request DescribeSampleTagListRequest
      * @return DescribeSampleTagListResponse
@@ -11831,7 +11835,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query Sample Upload Authorization Information</p>
+     * <p>Queries the authorization information for sample uploads.</p>
      * 
      * @param request DescribeSampleUploadPolicyRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -11867,7 +11871,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query Sample Upload Authorization Information</p>
+     * <p>Queries the authorization information for sample uploads.</p>
      * 
      * @param request DescribeSampleUploadPolicyRequest
      * @return DescribeSampleUploadPolicyResponse
@@ -11939,10 +11943,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Dropdown list for scenario-based risk control events</p>
+     * <p>Queries the dropdown list of scenario-based risk control events.</p>
      * 
      * <b>summary</b> : 
-     * <p>Dropdown list for scenario-based service events</p>
+     * <p>Queries the dropdown list of scenario-based risk control events.</p>
      * 
      * @param request DescribeSceneAllEventNameCodeListRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -11982,10 +11986,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Dropdown list for scenario-based risk control events</p>
+     * <p>Queries the dropdown list of scenario-based risk control events.</p>
      * 
      * <b>summary</b> : 
-     * <p>Dropdown list for scenario-based service events</p>
+     * <p>Queries the dropdown list of scenario-based risk control events.</p>
      * 
      * @param request DescribeSceneAllEventNameCodeListRequest
      * @return DescribeSceneAllEventNameCodeListResponse
@@ -11997,7 +12001,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>List of Scenario-based Risk Control Events</p>
+     * <p>Queries the list of scenario-based risk control events.</p>
      * 
      * @param request DescribeSceneEventPageListRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -12045,7 +12049,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>List of Scenario-based Risk Control Events</p>
+     * <p>Queries the list of scenario-based risk control events.</p>
      * 
      * @param request DescribeSceneEventPageListRequest
      * @return DescribeSceneEventPageListResponse
@@ -12057,10 +12061,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Query the list of scenarized risk control event strategies</p>
+     * <p>Queries the list of scenario-based risk control event policies.</p>
      * 
      * <b>summary</b> : 
-     * <p>White-boxed strategy list for risk control services</p>
+     * <p>Queries the list of scenario-based risk control event policies.</p>
      * 
      * @param request DescribeSceneRulePageListRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -12124,10 +12128,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Query the list of scenarized risk control event strategies</p>
+     * <p>Queries the list of scenario-based risk control event policies.</p>
      * 
      * <b>summary</b> : 
-     * <p>White-boxed strategy list for risk control services</p>
+     * <p>Queries the list of scenario-based risk control event policies.</p>
      * 
      * @param request DescribeSceneRulePageListRequest
      * @return DescribeSceneRulePageListResponse
@@ -12187,7 +12191,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Score Range Quantity Analysis</p>
+     * <p>Analyzes the quantity distribution across score ranges.</p>
      * 
      * @param request DescribeScoreSectionNumLineChartRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -12243,7 +12247,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Score Range Quantity Analysis</p>
+     * <p>Analyzes the quantity distribution across score ranges.</p>
      * 
      * @param request DescribeScoreSectionNumLineChartRequest
      * @return DescribeScoreSectionNumLineChartResponse
@@ -12255,7 +12259,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Proportion of Score Ranges for Main Events/Bypass Events/Diversion Events</p>
+     * <p>Queries the score range distribution of main events, bypass events, and diversion events.</p>
      * 
      * @param request DescribeScoreSectionPieChartRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -12307,7 +12311,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Proportion of Score Ranges for Main Events/Bypass Events/Diversion Events</p>
+     * <p>Queries the score range distribution of main events, bypass events, and diversion events.</p>
      * 
      * @param request DescribeScoreSectionPieChartRequest
      * @return DescribeScoreSectionPieChartResponse
@@ -12319,7 +12323,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Score Section Ratio Analysis</p>
+     * <p>Score Range Proportion Analysis</p>
      * 
      * @param request DescribeScoreSectionRatioLineChartRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -12375,7 +12379,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Score Section Ratio Analysis</p>
+     * <p>Score Range Proportion Analysis</p>
      * 
      * @param request DescribeScoreSectionRatioLineChartRequest
      * @return DescribeScoreSectionRatioLineChartResponse
@@ -12387,7 +12391,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query Task ID List</p>
+     * <p>Queries the list of task IDs.</p>
      * 
      * @param request DescribeSelectItemRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -12423,7 +12427,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query Task ID List</p>
+     * <p>Queries the list of task IDs.</p>
      * 
      * @param request DescribeSelectItemRequest
      * @return DescribeSelectItemResponse
@@ -12435,7 +12439,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>ServiceAppkey dropdown</p>
+     * <p>Retrieves the dropdown values for ServiceAppkey.</p>
      * 
      * @param request DescribeServiceAppKeyRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -12467,7 +12471,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>ServiceAppkey dropdown</p>
+     * <p>Retrieves the dropdown values for ServiceAppkey.</p>
      * 
      * @param request DescribeServiceAppKeyRequest
      * @return DescribeServiceAppKeyResponse
@@ -12527,7 +12531,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Get Service List</p>
+     * <p>Retrieves the list of services.</p>
      * 
      * @param request DescribeServiceListRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -12563,7 +12567,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Get Service List</p>
+     * <p>Retrieves the list of services.</p>
      * 
      * @param request DescribeServiceListRequest
      * @return DescribeServiceListResponse
@@ -12575,7 +12579,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Estimate Call Information</p>
+     * <p>Estimates call information.</p>
      * 
      * @param request DescribeSimulationPreditInfoRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -12619,7 +12623,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Estimate Call Information</p>
+     * <p>Estimates call information.</p>
      * 
      * @param request DescribeSimulationPreditInfoRequest
      * @return DescribeSimulationPreditInfoResponse
@@ -12631,7 +12635,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query Task Record Count</p>
+     * <p>Queries the number of task records.</p>
      * 
      * @param request DescribeSimulationTaskCountRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -12691,7 +12695,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query Task Record Count</p>
+     * <p>Queries the number of task records.</p>
      * 
      * @param request DescribeSimulationTaskCountRequest
      * @return DescribeSimulationTaskCountResponse
@@ -12703,7 +12707,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Task List</p>
+     * <p>Queries the task list.</p>
      * 
      * @param request DescribeSimulationTaskListRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -12759,7 +12763,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Task List</p>
+     * <p>Queries the task list.</p>
      * 
      * @param request DescribeSimulationTaskListRequest
      * @return DescribeSimulationTaskListResponse
@@ -12771,7 +12775,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Get Project Configuration</p>
+     * <p>Retrieves the project configuration.</p>
      * 
      * @param request DescribeSlsUrlConfigRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -12807,7 +12811,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Get Project Configuration</p>
+     * <p>Retrieves the project configuration.</p>
      * 
      * @param request DescribeSlsUrlConfigRequest
      * @return DescribeSlsUrlConfigResponse
@@ -12819,7 +12823,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query List of Policies Supporting Simulation</p>
+     * <p>Queries the list of policies that support simulation.</p>
      * 
      * @param request DescribeSupportRuleListRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -12859,7 +12863,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query List of Policies Supporting Simulation</p>
+     * <p>Queries the list of policies that support simulation.</p>
      * 
      * @param request DescribeSupportRuleListRequest
      * @return DescribeSupportRuleListResponse
@@ -12871,7 +12875,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Tag List</p>
+     * <p>Queries the label list.</p>
      * 
      * @param request DescribeTagListRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -12911,7 +12915,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Tag List</p>
+     * <p>Queries the label list.</p>
      * 
      * @param request DescribeTagListRequest
      * @return DescribeTagListResponse
@@ -12923,7 +12927,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Tag Overview List</p>
+     * <p>Queries the tag overview list.</p>
      * 
      * @param request DescribeTagsBarChartRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -12975,7 +12979,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Tag Overview List</p>
+     * <p>Queries the tag overview list.</p>
      * 
      * @param request DescribeTagsBarChartRequest
      * @return DescribeTagsBarChartResponse
@@ -12987,7 +12991,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Tag Fluctuation Detection</p>
+     * <p>Detects label fluctuations.</p>
      * 
      * @param request DescribeTagsFluctuationRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -13027,7 +13031,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Tag Fluctuation Detection</p>
+     * <p>Detects label fluctuations.</p>
      * 
      * @param request DescribeTagsFluctuationRequest
      * @return DescribeTagsFluctuationResponse
@@ -13039,7 +13043,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Get Tag List</p>
+     * <p>Retrieves the list of labels.</p>
      * 
      * @param request DescribeTagsListRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -13075,7 +13079,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Get Tag List</p>
+     * <p>Retrieves the list of labels.</p>
      * 
      * @param request DescribeTagsListRequest
      * @return DescribeTagsListResponse
@@ -13087,7 +13091,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Tag Hit Count Analysis</p>
+     * <p>Analyzes the number of label hits.</p>
      * 
      * @param request DescribeTagsNumLineChartRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -13143,7 +13147,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Tag Hit Count Analysis</p>
+     * <p>Analyzes the number of label hits.</p>
      * 
      * @param request DescribeTagsNumLineChartRequest
      * @return DescribeTagsNumLineChartResponse
@@ -13155,7 +13159,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Tag Hit Ratio Analysis</p>
+     * <p>Analyzes the tag hit ratio distribution.</p>
      * 
      * @param request DescribeTagsRatioLineChartRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -13211,7 +13215,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Tag Hit Ratio Analysis</p>
+     * <p>Analyzes the tag hit ratio distribution.</p>
      * 
      * @param request DescribeTagsRatioLineChartRequest
      * @return DescribeTagsRatioLineChartResponse
@@ -13223,7 +13227,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Tag Hit Trend</p>
+     * <p>Queries the trend of tag hits.</p>
      * 
      * @param request DescribeTagsTrendRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -13275,7 +13279,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Tag Hit Trend</p>
+     * <p>Queries the trend of tag hits.</p>
      * 
      * @param request DescribeTagsTrendRequest
      * @return DescribeTagsTrendResponse
@@ -13287,7 +13291,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Task List</p>
+     * <p>Queries the task list.</p>
      * 
      * @param request DescribeTaskListRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -13335,7 +13339,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Task List</p>
+     * <p>Queries the task list.</p>
      * 
      * @param request DescribeTaskListRequest
      * @return DescribeTaskListResponse
@@ -13347,7 +13351,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Task Log List</p>
+     * <p>Queries the task logs.</p>
      * 
      * @param request DescribeTaskLogListRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -13403,7 +13407,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Task Log List</p>
+     * <p>Queries the task logs.</p>
      * 
      * @param request DescribeTaskLogListRequest
      * @return DescribeTaskLogListResponse
@@ -13415,7 +13419,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query Total Event Count</p>
+     * <p>Queries the total number of events.</p>
      * 
      * @param request DescribeTemplateCountRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -13451,7 +13455,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query Total Event Count</p>
+     * <p>Queries the total number of events.</p>
      * 
      * @param request DescribeTemplateCountRequest
      * @return DescribeTemplateCountResponse
@@ -13463,7 +13467,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Template Download</p>
+     * <p>Downloads a template.</p>
      * 
      * @param request DescribeTemplateDownloadRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -13499,7 +13503,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Template Download</p>
+     * <p>Downloads a template.</p>
      * 
      * @param request DescribeTemplateDownloadRequest
      * @return DescribeTemplateDownloadResponse
@@ -13511,7 +13515,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query Event List by Event Name</p>
+     * <p>Queries a list of events by event name.</p>
      * 
      * @param request DescribeTemplatePageListRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -13575,7 +13579,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query Event List by Event Name</p>
+     * <p>Queries a list of events by event name.</p>
      * 
      * @param request DescribeTemplatePageListRequest
      * @return DescribeTemplatePageListResponse
@@ -13587,7 +13591,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Get List of Services Used by User</p>
+     * <p>Queries the list of services used by the user.</p>
      * 
      * @param request DescribeUsedServiceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -13623,7 +13627,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Get List of Services Used by User</p>
+     * <p>Queries the list of services used by the user.</p>
      * 
      * @param request DescribeUsedServiceRequest
      * @return DescribeUsedServiceResponse
@@ -13635,7 +13639,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Get Current Logged-in User Information</p>
+     * <p>Retrieves the information about the current logged-on user.</p>
      * 
      * @param request DescribeUserInfoRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -13671,7 +13675,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Get Current Logged-in User Information</p>
+     * <p>Retrieves the information about the current logged-on user.</p>
      * 
      * @param request DescribeUserInfoRequest
      * @return DescribeUserInfoResponse
@@ -13683,7 +13687,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query Variable Binding Information</p>
+     * <p>Queries variable binding information.</p>
      * 
      * @param request DescribeVariableBindDetailRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -13727,7 +13731,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query Variable Binding Information</p>
+     * <p>Queries variable binding information.</p>
      * 
      * @param request DescribeVariableBindDetailRequest
      * @return DescribeVariableBindDetailResponse
@@ -13739,7 +13743,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query variable details</p>
+     * <p>Queries the details of a variable.</p>
      * 
      * @param request DescribeVariableDetailRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -13779,7 +13783,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query variable details</p>
+     * <p>Queries the details of a variable.</p>
      * 
      * @param request DescribeVariableDetailRequest
      * @return DescribeVariableDetailResponse
@@ -13791,7 +13795,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query Variable Fee Information</p>
+     * <p>Queries the billing information of variables.</p>
      * 
      * @param request DescribeVariableFeeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -13831,7 +13835,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query Variable Fee Information</p>
+     * <p>Queries the billing information of variables.</p>
      * 
      * @param request DescribeVariableFeeRequest
      * @return DescribeVariableFeeResponse
@@ -13843,7 +13847,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query Variable Details</p>
+     * <p>Queries the details of variables.</p>
      * 
      * @param request DescribeVariableListRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -13911,7 +13915,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query Variable Details</p>
+     * <p>Queries the details of variables.</p>
      * 
      * @param request DescribeVariableListRequest
      * @return DescribeVariableListResponse
@@ -13923,7 +13927,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query Variable Definitions</p>
+     * <p>Queries variable definitions.</p>
      * 
      * @param request DescribeVariableMarketListRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -13991,7 +13995,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query Variable Definitions</p>
+     * <p>Queries variable definitions.</p>
      * 
      * @param request DescribeVariableMarketListRequest
      * @return DescribeVariableMarketListResponse
@@ -14003,7 +14007,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query Configuration Information</p>
+     * <p>Queries configuration information.</p>
      * 
      * @param request DescribeVariableSceneListRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -14059,7 +14063,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query Configuration Information</p>
+     * <p>Queries configuration information.</p>
      * 
      * @param request DescribeVariableSceneListRequest
      * @return DescribeVariableSceneListResponse
@@ -14215,7 +14219,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>下载样本文件</p>
+     * <p>Download sample file</p>
      * 
      * @param request DownloadSampleFileRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -14259,7 +14263,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>下载样本文件</p>
+     * <p>Download sample file</p>
      * 
      * @param request DownloadSampleFileRequest
      * @return DownloadSampleFileResponse
@@ -14323,7 +14327,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>下载子任务结果</p>
+     * <p>Download subtask result</p>
      * 
      * @param request DownloadSubTaskResultRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -14363,7 +14367,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>下载子任务结果</p>
+     * <p>Download subtask result</p>
      * 
      * @param request DownloadSubTaskResultRequest
      * @return DownloadSubTaskResultResponse
@@ -14375,7 +14379,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Custom Variable Test</p>
+     * <p>Tests a custom variable.</p>
      * 
      * @param request ExpressionTestRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -14431,7 +14435,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Custom Variable Test</p>
+     * <p>Tests a custom variable.</p>
      * 
      * @param request ExpressionTestRequest
      * @return ExpressionTestResponse
@@ -14443,7 +14447,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>File Upload</p>
+     * <p>Uploads a file.</p>
      * 
      * @param request FileUploadRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -14487,7 +14491,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>File Upload</p>
+     * <p>Uploads a file.</p>
      * 
      * @param request FileUploadRequest
      * @return FileUploadResponse
@@ -14499,7 +14503,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建样本记录</p>
+     * <p>Create a sample record</p>
      * 
      * @param request GetSampleDetailRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -14539,7 +14543,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建样本记录</p>
+     * <p>Create a sample record</p>
      * 
      * @param request GetSampleDetailRequest
      * @return GetSampleDetailResponse
@@ -14551,7 +14555,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查看子任务结果</p>
+     * <p>View subtask results</p>
      * 
      * @param request GetSubTaskResultRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -14591,7 +14595,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查看子任务结果</p>
+     * <p>View subtask results</p>
      * 
      * @param request GetSubTaskResultRequest
      * @return GetSubTaskResultResponse
@@ -14655,7 +14659,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Create or Import Name List</p>
+     * <p>Creates or imports a list.</p>
      * 
      * @param request ImportNameListRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -14723,7 +14727,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Create or Import Name List</p>
+     * <p>Creates or imports a list.</p>
      * 
      * @param request ImportNameListRequest
      * @return ImportNameListResponse
@@ -14735,7 +14739,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Import Template Event</p>
+     * <p>Imports template events.</p>
      * 
      * @param request ImportTemplateEventRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -14775,7 +14779,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Import Template Event</p>
+     * <p>Imports template events.</p>
      * 
      * @param request ImportTemplateEventRequest
      * @return ImportTemplateEventResponse
@@ -14787,7 +14791,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>样本列表查询</p>
+     * <p>Sample List Query</p>
      * 
      * @param request ListSampleRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -14851,7 +14855,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>样本列表查询</p>
+     * <p>Sample List Query</p>
      * 
      * @param request ListSampleRequest
      * @return ListSampleResponse
@@ -14863,7 +14867,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>任务组列表查询</p>
+     * <p>Query task group list</p>
      * 
      * @param request ListTaskGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -14919,7 +14923,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>任务组列表查询</p>
+     * <p>Query task group list</p>
      * 
      * @param request ListTaskGroupRequest
      * @return ListTaskGroupResponse
@@ -15027,7 +15031,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>合并下载</p>
+     * <p>Merge Download</p>
      * 
      * @param request MergeDownloadRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -15067,7 +15071,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>合并下载</p>
+     * <p>Merge Download</p>
      * 
      * @param request MergeDownloadRequest
      * @return MergeDownloadResponse
@@ -15327,7 +15331,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Update Memo</p>
+     * <p>Update memo.</p>
      * 
      * @param request ModifyAppKeyRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -15371,7 +15375,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Update Memo</p>
+     * <p>Update memo.</p>
      * 
      * @param request ModifyAppKeyRequest
      * @return ModifyAppKeyResponse
@@ -15383,7 +15387,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Edit Accumulated Variable</p>
+     * <p>Edits a cumulative variable.</p>
      * 
      * @param request ModifyCustVariableRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -15447,7 +15451,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Edit Accumulated Variable</p>
+     * <p>Edits a cumulative variable.</p>
      * 
      * @param request ModifyCustVariableRequest
      * @return ModifyCustVariableResponse
@@ -15459,7 +15463,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Edit Event</p>
+     * <p>Edits an event.</p>
      * 
      * @param request ModifyEventRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -15523,7 +15527,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Edit Event</p>
+     * <p>Edits an event.</p>
      * 
      * @param request ModifyEventRequest
      * @return ModifyEventResponse
@@ -15535,7 +15539,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modify Event Status</p>
+     * <p>Modifies the status of an event.</p>
      * 
      * @param request ModifyEventStatusRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -15587,7 +15591,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modify Event Status</p>
+     * <p>Modifies the status of an event.</p>
      * 
      * @param request ModifyEventStatusRequest
      * @return ModifyEventStatusResponse
@@ -15599,7 +15603,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Edit Custom Variable</p>
+     * <p>Edits a custom variable.</p>
      * 
      * @param request ModifyExpressionVariableRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -15679,7 +15683,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Edit Custom Variable</p>
+     * <p>Edits a custom variable.</p>
      * 
      * @param request ModifyExpressionVariableRequest
      * @return ModifyExpressionVariableResponse
@@ -15691,7 +15695,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modify Field</p>
+     * <p>Modifies a field.</p>
      * 
      * @param request ModifyFieldRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -15751,7 +15755,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modify Field</p>
+     * <p>Modifies a field.</p>
      * 
      * @param request ModifyFieldRequest
      * @return ModifyFieldResponse
@@ -15763,7 +15767,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modify Policy Priority</p>
+     * <p>Modifies the priority of a policy.</p>
      * 
      * @param request ModifyRulePriorityRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -15811,7 +15815,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modify Policy Priority</p>
+     * <p>Modifies the priority of a policy.</p>
      * 
      * @param request ModifyRulePriorityRequest
      * @return ModifyRulePriorityResponse
@@ -15823,7 +15827,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Change the status of a policy version application</p>
+     * <p>Changes the approval status of a policy version.</p>
      * 
      * @param request ModifyRuleStatusRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -15899,7 +15903,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Change the status of a policy version application</p>
+     * <p>Changes the approval status of a policy version.</p>
      * 
      * @param request ModifyRuleStatusRequest
      * @return ModifyRuleStatusResponse
@@ -15911,7 +15915,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Activate Service</p>
+     * <p>Activates a service.</p>
      * 
      * @param request OpenConsoleSlsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -15951,7 +15955,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Activate Service</p>
+     * <p>Activates a service.</p>
      * 
      * @param request OpenConsoleSlsRequest
      * @return OpenConsoleSlsResponse
@@ -15963,7 +15967,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Operate Favorites</p>
+     * <p>Manages favorites.</p>
      * 
      * @param request OperateFavoriteVariableRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -16007,7 +16011,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Operate Favorites</p>
+     * <p>Manages favorites.</p>
      * 
      * @param request OperateFavoriteVariableRequest
      * @return OperateFavoriteVariableResponse
@@ -16019,7 +16023,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Enterprise Verification</p>
+     * <p>Performs a precondition check.</p>
      * 
      * @param request PermissionCheckRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -16055,7 +16059,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Enterprise Verification</p>
+     * <p>Performs a precondition check.</p>
      * 
      * @param request PermissionCheckRequest
      * @return PermissionCheckResponse
@@ -16287,7 +16291,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query White-box Strategy Details</p>
+     * <p>Queries the details of a whitebox implementation policy.</p>
      * 
      * @param request QueryAuthRuleDetailByRuleIdRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -16335,7 +16339,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query White-box Strategy Details</p>
+     * <p>Queries the details of a whitebox implementation policy.</p>
      * 
      * @param request QueryAuthRuleDetailByRuleIdRequest
      * @return QueryAuthRuleDetailByRuleIdResponse
@@ -16347,7 +16351,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Recall.</p>
+     * <p>Withdraws a review.</p>
      * 
      * @param request RecallRuleAuditRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -16383,7 +16387,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Recall.</p>
+     * <p>Withdraws a review.</p>
      * 
      * @param request RecallRuleAuditRequest
      * @return RecallRuleAuditResponse
@@ -16395,7 +16399,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Delete Event</p>
+     * <p>Deletes an event.</p>
      * 
      * @param request RemoveEventRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -16447,7 +16451,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Delete Event</p>
+     * <p>Deletes an event.</p>
      * 
      * @param request RemoveEventRequest
      * @return RemoveEventResponse
@@ -16459,7 +16463,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Template Download</p>
+     * <p>Download template.</p>
      * 
      * @param request SampleFileDownloadRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -16499,7 +16503,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Template Download</p>
+     * <p>Download template.</p>
      * 
      * @param request SampleFileDownloadRequest
      * @return SampleFileDownloadResponse
@@ -16511,7 +16515,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Save Custom Columns</p>
+     * <p>Saves custom columns.</p>
      * 
      * @param request SaveAnalysisColumnRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -16551,7 +16555,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Save Custom Columns</p>
+     * <p>Saves custom columns.</p>
      * 
      * @param request SaveAnalysisColumnRequest
      * @return SaveAnalysisColumnResponse
@@ -16563,7 +16567,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Bypass/Shunt Configuration</p>
+     * <p>The bypass/diversion configuration.</p>
      * 
      * @param request SaveByPassOrShuntEventRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -16611,7 +16615,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Bypass/Shunt Configuration</p>
+     * <p>The bypass/diversion configuration.</p>
      * 
      * @param request SaveByPassOrShuntEventRequest
      * @return SaveByPassOrShuntEventResponse
@@ -16623,7 +16627,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>样本列表查询</p>
+     * <p>Sample Search</p>
      * 
      * @param request SearchSampleRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -16679,7 +16683,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>样本列表查询</p>
+     * <p>Sample Search</p>
      * 
      * @param request SearchSampleRequest
      * @return SearchSampleResponse
@@ -16691,7 +16695,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Start/Stop Bypass Event</p>
+     * <p>Starts or stops a bypass event.</p>
      * 
      * @param request StartOrStopByPassShuntEventRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -16735,7 +16739,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Start/Stop Bypass Event</p>
+     * <p>Starts or stops a bypass event.</p>
      * 
      * @param request StartOrStopByPassShuntEventRequest
      * @return StartOrStopByPassShuntEventResponse
@@ -16747,7 +16751,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Start Task Execution</p>
+     * <p>Starts executing a task.</p>
      * 
      * @param request StartSimulationTaskRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -16787,7 +16791,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Start Task Execution</p>
+     * <p>Starts executing a task.</p>
      * 
      * @param request StartSimulationTaskRequest
      * @return StartSimulationTaskResponse
@@ -16799,7 +16803,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Stop Task</p>
+     * <p>Stops a task.</p>
      * 
      * @param request StopSimulationTaskRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -16839,7 +16843,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Stop Task</p>
+     * <p>Stops a task.</p>
      * 
      * @param request StopSimulationTaskRequest
      * @return StopSimulationTaskResponse
@@ -16851,7 +16855,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Custom Variable Switch</p>
+     * <p>Enables or disables a custom variable.</p>
      * 
      * @param request SwitchExpressionVariableRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -16899,7 +16903,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Custom Variable Switch</p>
+     * <p>Enables or disables a custom variable.</p>
      * 
      * @param request SwitchExpressionVariableRequest
      * @return SwitchExpressionVariableResponse
@@ -16911,7 +16915,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Field Switch</p>
+     * <p>Toggles a field on or off.</p>
      * 
      * @param request SwitchFieldRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -16963,7 +16967,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Field Switch</p>
+     * <p>Toggles a field on or off.</p>
      * 
      * @param request SwitchFieldRequest
      * @return SwitchFieldResponse
@@ -16975,7 +16979,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query Variable Enable/Disable</p>
+     * <p>Queries the enabling or disabling status of a variable.</p>
      * 
      * @param request SwitchQueryVariableRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -17019,7 +17023,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query Variable Enable/Disable</p>
+     * <p>Queries the enabling or disabling status of a variable.</p>
      * 
      * @param request SwitchQueryVariableRequest
      * @return SwitchQueryVariableResponse
@@ -17031,7 +17035,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>One-click switch online</p>
+     * <p>Switches an event to online with one click.</p>
      * 
      * @param request SwitchToOnlineRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -17071,7 +17075,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>One-click switch online</p>
+     * <p>Switches an event to online with one click.</p>
      * 
      * @param request SwitchToOnlineRequest
      * @return SwitchToOnlineResponse
@@ -17083,7 +17087,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Cumulative Variable Switch</p>
+     * <p>Enables or disables a cumulative variable.</p>
      * 
      * @param request SwitchVariableRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -17135,7 +17139,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Cumulative Variable Switch</p>
+     * <p>Enables or disables a cumulative variable.</p>
      * 
      * @param request SwitchVariableRequest
      * @return SwitchVariableResponse
@@ -17147,7 +17151,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Determine if the task name is duplicated</p>
+     * <p>Checks whether a task name is duplicate.</p>
      * 
      * @param request TaskNameByUserIdRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -17187,7 +17191,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Determine if the task name is duplicated</p>
+     * <p>Checks whether a task name is duplicate.</p>
      * 
      * @param request TaskNameByUserIdRequest
      * @return TaskNameByUserIdResponse
@@ -17199,7 +17203,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modify Query Conditions</p>
+     * <p>Modifies a query condition.</p>
      * 
      * @param request UpdateAnalysisConditionFavoriteRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -17271,7 +17275,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modify Query Conditions</p>
+     * <p>Modifies a query condition.</p>
      * 
      * @param request UpdateAnalysisConditionFavoriteRequest
      * @return UpdateAnalysisConditionFavoriteResponse
@@ -17283,7 +17287,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Approval</p>
+     * <p>Processes an approval request.</p>
      * 
      * @param request UpdateAuditRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -17335,7 +17339,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Approval</p>
+     * <p>Processes an approval request.</p>
      * 
      * @param request UpdateAuditRequest
      * @return UpdateAuditResponse
@@ -17347,7 +17351,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modify Authorization Policy</p>
+     * <p>Modifies an authorization policy.</p>
      * 
      * @param request UpdateAuthRuleRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -17407,7 +17411,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modify Authorization Policy</p>
+     * <p>Modifies an authorization policy.</p>
      * 
      * @param request UpdateAuthRuleRequest
      * @return UpdateAuthRuleResponse
@@ -17419,7 +17423,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Edit Bypass Event</p>
+     * <p>Edits a bypass event.</p>
      * 
      * @param request UpdateByPassShuntEventRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -17463,7 +17467,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Edit Bypass Event</p>
+     * <p>Edits a bypass event.</p>
      * 
      * @param request UpdateByPassShuntEventRequest
      * @return UpdateByPassShuntEventResponse
@@ -17475,7 +17479,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modify Data Source</p>
+     * <p>Modifies a data source.</p>
      * 
      * @param request UpdateDataSourceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -17531,7 +17535,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modify Data Source</p>
+     * <p>Modifies a data source.</p>
      * 
      * @param request UpdateDataSourceRequest
      * @return UpdateDataSourceResponse
@@ -17543,7 +17547,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modify Custom Query Variable</p>
+     * <p>Modifies a custom query variable.</p>
      * 
      * @param request UpdateQueryVariableRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -17619,7 +17623,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modify Custom Query Variable</p>
+     * <p>Modifies a custom query variable.</p>
      * 
      * @param request UpdateQueryVariableRequest
      * @return UpdateQueryVariableResponse
@@ -17631,7 +17635,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Update Policy</p>
+     * <p>Updates a policy.</p>
      * 
      * @param request UpdateRuleRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -17715,7 +17719,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Update Policy</p>
+     * <p>Updates a policy.</p>
      * 
      * @param request UpdateRuleRequest
      * @return UpdateRuleResponse
@@ -17727,7 +17731,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Update Basic Policy Information</p>
+     * <p>Updates the basic information of a policy.</p>
      * 
      * @param request UpdateRuleBaseRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -17783,7 +17787,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Update Basic Policy Information</p>
+     * <p>Updates the basic information of a policy.</p>
      * 
      * @param request UpdateRuleBaseRequest
      * @return UpdateRuleBaseResponse
@@ -17795,7 +17799,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Batch Update Samples</p>
+     * <p>Modifies samples in batches.</p>
      * 
      * @param request UpdateSampleBatchRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -17843,7 +17847,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Batch Update Samples</p>
+     * <p>Modifies samples in batches.</p>
      * 
      * @param request UpdateSampleBatchRequest
      * @return UpdateSampleBatchResponse
@@ -17923,7 +17927,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>上传并校验样本文件</p>
+     * <p>Upload and validate the sample file for the customer.</p>
      * 
      * @param request UploadForeignSampleFileRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -17967,7 +17971,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>上传并校验样本文件</p>
+     * <p>Upload and validate the sample file for the customer.</p>
      * 
      * @param request UploadForeignSampleFileRequest
      * @return UploadForeignSampleFileResponse
@@ -18067,7 +18071,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>上传并校验样本文件</p>
+     * <p>Upload and validate the sample file</p>
      * 
      * @param request UploadSampleFileRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -18119,7 +18123,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>上传并校验样本文件</p>
+     * <p>Upload and validate the sample file</p>
      * 
      * @param request UploadSampleFileRequest
      * @return UploadSampleFileResponse

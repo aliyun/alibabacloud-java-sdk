@@ -11,7 +11,7 @@ public class DescribeExcuteNumResponseBody extends TeaModel {
     public java.util.List<String> categories;
 
     /**
-     * <p>Returned data.</p>
+     * <p>Response data.</p>
      */
     @NameInMap("Data")
     public java.util.List<String> data;

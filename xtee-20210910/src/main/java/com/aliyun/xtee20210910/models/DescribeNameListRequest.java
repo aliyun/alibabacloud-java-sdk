@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeNameListRequest extends TeaModel {
     /**
-     * <p>Sets the language type for requests and received messages, with a default value of <strong>zh</strong>. Values: </p>
+     * <p>Sets the language type for the request and response messages. Default value: <strong>zh</strong>. Valid values:</p>
      * <ul>
      * <li><strong>zh</strong>: Chinese</li>
      * <li><strong>en</strong>: English</li>
@@ -18,7 +18,7 @@ public class DescribeNameListRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>Creation type.</p>
+     * <p>The creation type.</p>
      * 
      * <strong>example:</strong>
      * <p>NORMAL</p>
@@ -27,7 +27,7 @@ public class DescribeNameListRequest extends TeaModel {
     public String createType;
 
     /**
-     * <p>Current page number.</p>
+     * <p>The current page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -36,7 +36,7 @@ public class DescribeNameListRequest extends TeaModel {
     public String currentPage;
 
     /**
-     * <p>Page size, with a default value of 10.</p>
+     * <p>The number of entries per page. Default value: 10.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -45,7 +45,7 @@ public class DescribeNameListRequest extends TeaModel {
     public String pageSize;
 
     /**
-     * <p>Region code.</p>
+     * <p>The region ID.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -54,7 +54,7 @@ public class DescribeNameListRequest extends TeaModel {
     public String regId;
 
     /**
-     * <p>Search value.</p>
+     * <p>The search value.</p>
      * 
      * <strong>example:</strong>
      * <p>白名单</p>
@@ -63,7 +63,7 @@ public class DescribeNameListRequest extends TeaModel {
     public String value;
 
     /**
-     * <p>Variable ID.</p>
+     * <p>The variable ID.</p>
      * 
      * <strong>example:</strong>
      * <p>393314</p>

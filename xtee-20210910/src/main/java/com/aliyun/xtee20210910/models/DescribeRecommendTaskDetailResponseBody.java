@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeRecommendTaskDetailResponseBody extends TeaModel {
     /**
-     * <p>Request ID.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>A32FE941-35F2-5378-B37C-4B8FDB16F094</p>
@@ -14,7 +14,7 @@ public class DescribeRecommendTaskDetailResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Return result</p>
+     * <p>The returned result.</p>
      */
     @NameInMap("resultObject")
     public DescribeRecommendTaskDetailResponseBodyResultObject resultObject;
@@ -42,7 +42,7 @@ public class DescribeRecommendTaskDetailResponseBody extends TeaModel {
 
     public static class DescribeRecommendTaskDetailResponseBodyResultObjectRecommendRuleDTOsRecommendRules extends TeaModel {
         /**
-         * <p>Left variable</p>
+         * <p>The left variable.</p>
          * 
          * <strong>example:</strong>
          * <p>age</p>
@@ -51,7 +51,7 @@ public class DescribeRecommendTaskDetailResponseBody extends TeaModel {
         public String left;
 
         /**
-         * <p>Operator</p>
+         * <p>The operator.</p>
          * 
          * <strong>example:</strong>
          * <p>equals</p>
@@ -60,7 +60,7 @@ public class DescribeRecommendTaskDetailResponseBody extends TeaModel {
         public String operator;
 
         /**
-         * <p>Right variable</p>
+         * <p>The right variable.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -101,7 +101,7 @@ public class DescribeRecommendTaskDetailResponseBody extends TeaModel {
 
     public static class DescribeRecommendTaskDetailResponseBodyResultObjectRecommendRuleDTOs extends TeaModel {
         /**
-         * <p>Calculation path</p>
+         * <p>The computation path.</p>
          * 
          * <strong>example:</strong>
          * <p>1&amp;2</p>
@@ -110,7 +110,7 @@ public class DescribeRecommendTaskDetailResponseBody extends TeaModel {
         public String computeExpression;
 
         /**
-         * <p>Number of hit samples</p>
+         * <p>The number of samples that are hit.</p>
          * 
          * <strong>example:</strong>
          * <p>99</p>
@@ -119,7 +119,7 @@ public class DescribeRecommendTaskDetailResponseBody extends TeaModel {
         public Long hitSample;
 
         /**
-         * <p>Primary key ID of the rule</p>
+         * <p>The primary key ID of the policy.</p>
          * 
          * <strong>example:</strong>
          * <p>30</p>
@@ -128,7 +128,7 @@ public class DescribeRecommendTaskDetailResponseBody extends TeaModel {
         public Long id;
 
         /**
-         * <p>Number of unhit samples</p>
+         * <p>The number of samples that are not hit.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -137,13 +137,13 @@ public class DescribeRecommendTaskDetailResponseBody extends TeaModel {
         public Long notHitSample;
 
         /**
-         * <p>List of candidate rules</p>
+         * <p>The list of candidate policies.</p>
          */
         @NameInMap("recommendRules")
         public java.util.List<DescribeRecommendTaskDetailResponseBodyResultObjectRecommendRuleDTOsRecommendRules> recommendRules;
 
         /**
-         * <p>Strategy ID</p>
+         * <p>The policy ID.</p>
          * 
          * <strong>example:</strong>
          * <p>102224</p>
@@ -152,7 +152,7 @@ public class DescribeRecommendTaskDetailResponseBody extends TeaModel {
         public String ruleId;
 
         /**
-         * <p>Rule name</p>
+         * <p>The policy name.</p>
          * 
          * <strong>example:</strong>
          * <p>营销风险识别评分_高风险_拒绝_副本</p>
@@ -161,7 +161,7 @@ public class DescribeRecommendTaskDetailResponseBody extends TeaModel {
         public String ruleName;
 
         /**
-         * <p>Status</p>
+         * <p>The status.</p>
          * 
          * <strong>example:</strong>
          * <p>NO_RULE</p>
@@ -170,7 +170,7 @@ public class DescribeRecommendTaskDetailResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>List of indicators in JSON string format</p>
+         * <p>The list of metrics in JSON string format.</p>
          * 
          * <strong>example:</strong>
          * <p>[{&quot;key&quot;:&quot;dxkkLw8fe18&quot;,&quot;value&quot;:&quot;2&quot;}]</p>
@@ -259,7 +259,7 @@ public class DescribeRecommendTaskDetailResponseBody extends TeaModel {
 
     public static class DescribeRecommendTaskDetailResponseBodyResultObjectRecommendVariableDTOs extends TeaModel {
         /**
-         * <p>Primary key ID</p>
+         * <p>The primary key ID.</p>
          * 
          * <strong>example:</strong>
          * <p>234</p>
@@ -268,7 +268,7 @@ public class DescribeRecommendTaskDetailResponseBody extends TeaModel {
         public Long id;
 
         /**
-         * <p>Title</p>
+         * <p>The title.</p>
          * 
          * <strong>example:</strong>
          * <p>手机号</p>
@@ -301,7 +301,7 @@ public class DescribeRecommendTaskDetailResponseBody extends TeaModel {
 
     public static class DescribeRecommendTaskDetailResponseBodyResultObject extends TeaModel {
         /**
-         * <p>Event code</p>
+         * <p>The event code.</p>
          * 
          * <strong>example:</strong>
          * <p>de_aszbjb7236</p>
@@ -310,7 +310,7 @@ public class DescribeRecommendTaskDetailResponseBody extends TeaModel {
         public String eventCode;
 
         /**
-         * <p>Event name.</p>
+         * <p>The event name.</p>
          * 
          * <strong>example:</strong>
          * <p>注册风险</p>
@@ -319,13 +319,13 @@ public class DescribeRecommendTaskDetailResponseBody extends TeaModel {
         public String eventName;
 
         /**
-         * <p>Comparison indicators</p>
+         * <p>The comparison metrics.</p>
          */
         @NameInMap("expectVelocities")
         public java.util.List<String> expectVelocities;
 
         /**
-         * <p>Creation time</p>
+         * <p>The creation time.</p>
          * 
          * <strong>example:</strong>
          * <p>1621578648000</p>
@@ -334,7 +334,7 @@ public class DescribeRecommendTaskDetailResponseBody extends TeaModel {
         public Long gmtCreate;
 
         /**
-         * <p>Number of normal samples</p>
+         * <p>The number of normal samples.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -343,19 +343,19 @@ public class DescribeRecommendTaskDetailResponseBody extends TeaModel {
         public Long normalSize;
 
         /**
-         * <p>Recommended strategy list</p>
+         * <p>The list of recommended policies.</p>
          */
         @NameInMap("recommendRuleDTOs")
         public java.util.List<DescribeRecommendTaskDetailResponseBodyResultObjectRecommendRuleDTOs> recommendRuleDTOs;
 
         /**
-         * <p>Selected variable list</p>
+         * <p>The list of selected variables.</p>
          */
         @NameInMap("recommendVariableDTOs")
         public java.util.List<DescribeRecommendTaskDetailResponseBodyResultObjectRecommendVariableDTOs> recommendVariableDTOs;
 
         /**
-         * <p>Number of risk samples</p>
+         * <p>The number of risk samples.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -364,7 +364,7 @@ public class DescribeRecommendTaskDetailResponseBody extends TeaModel {
         public Long riskSize;
 
         /**
-         * <p>Sample name</p>
+         * <p>The sample name.</p>
          * 
          * <strong>example:</strong>
          * <p>白样本</p>
@@ -373,7 +373,7 @@ public class DescribeRecommendTaskDetailResponseBody extends TeaModel {
         public String sampleName;
 
         /**
-         * <p>Sample scenario</p>
+         * <p>The sample scenario.</p>
          * 
          * <strong>example:</strong>
          * <p>account_abuse_detection</p>
@@ -382,7 +382,7 @@ public class DescribeRecommendTaskDetailResponseBody extends TeaModel {
         public String sampleScene;
 
         /**
-         * <p>Sample scenario name</p>
+         * <p>The sample scenario name.</p>
          * 
          * <strong>example:</strong>
          * <p>防虚假账号</p>
@@ -391,7 +391,7 @@ public class DescribeRecommendTaskDetailResponseBody extends TeaModel {
         public String sampleSceneName;
 
         /**
-         * <p>Task ID</p>
+         * <p>The task ID.</p>
          * 
          * <strong>example:</strong>
          * <p>887</p>
@@ -400,7 +400,7 @@ public class DescribeRecommendTaskDetailResponseBody extends TeaModel {
         public Long taskId;
 
         /**
-         * <p>Task name</p>
+         * <p>The task name.</p>
          * 
          * <strong>example:</strong>
          * <p>策略推荐任务</p>
@@ -409,7 +409,7 @@ public class DescribeRecommendTaskDetailResponseBody extends TeaModel {
         public String taskName;
 
         /**
-         * <p>Task status.</p>
+         * <p>The task status.</p>
          * 
          * <strong>example:</strong>
          * <p>CREATE</p>

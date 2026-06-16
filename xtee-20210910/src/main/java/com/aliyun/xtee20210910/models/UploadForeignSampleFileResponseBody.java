@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UploadForeignSampleFileResponseBody extends TeaModel {
     /**
+     * <p>status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -12,6 +14,8 @@ public class UploadForeignSampleFileResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -19,6 +23,8 @@ public class UploadForeignSampleFileResponseBody extends TeaModel {
     public String httpStatusCode;
 
     /**
+     * <p>Return message.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -26,12 +32,17 @@ public class UploadForeignSampleFileResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>A32FE941-35F2-5378-B37C-4B8FDB16F094</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Return Result.</p>
+     */
     @NameInMap("ResultObject")
     public UploadForeignSampleFileResponseBodyResultObject resultObject;
 
@@ -82,6 +93,8 @@ public class UploadForeignSampleFileResponseBody extends TeaModel {
 
     public static class UploadForeignSampleFileResponseBodyResultObjectColumnStats extends TeaModel {
         /**
+         * <p>De-duplication Count.</p>
+         * 
          * <strong>example:</strong>
          * <p>4</p>
          */
@@ -89,6 +102,8 @@ public class UploadForeignSampleFileResponseBody extends TeaModel {
         public Integer distinctNumber;
 
         /**
+         * <p>De-duplication rate.</p>
+         * 
          * <strong>example:</strong>
          * <p>23.87%</p>
          */
@@ -96,6 +111,8 @@ public class UploadForeignSampleFileResponseBody extends TeaModel {
         public String distinctRate;
 
         /**
+         * <p>Field Name.</p>
+         * 
          * <strong>example:</strong>
          * <p>repoName</p>
          */
@@ -103,6 +120,8 @@ public class UploadForeignSampleFileResponseBody extends TeaModel {
         public String fieldName;
 
         /**
+         * <p>Missing count.</p>
+         * 
          * <strong>example:</strong>
          * <p>3</p>
          */
@@ -110,6 +129,8 @@ public class UploadForeignSampleFileResponseBody extends TeaModel {
         public Integer missNumber;
 
         /**
+         * <p>Missing rate.</p>
+         * 
          * <strong>example:</strong>
          * <p>25.32%</p>
          */
@@ -117,6 +138,8 @@ public class UploadForeignSampleFileResponseBody extends TeaModel {
         public String missRate;
 
         /**
+         * <p>Row number of the record.</p>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */
@@ -179,9 +202,15 @@ public class UploadForeignSampleFileResponseBody extends TeaModel {
     }
 
     public static class UploadForeignSampleFileResponseBodyResultObjectPreviewData extends TeaModel {
+        /**
+         * <p>Header information returned.</p>
+         */
         @NameInMap("Headers")
         public java.util.List<String> headers;
 
+        /**
+         * <p>Row data.</p>
+         */
         @NameInMap("Rows")
         public java.util.List<java.util.List<String>> rows;
 
@@ -210,16 +239,23 @@ public class UploadForeignSampleFileResponseBody extends TeaModel {
 
     public static class UploadForeignSampleFileResponseBodyResultObject extends TeaModel {
         /**
+         * <p>Number of jobs.</p>
+         * 
          * <strong>example:</strong>
          * <p>3</p>
          */
         @NameInMap("BeyondBacktrackingPeriodNum")
         public Integer beyondBacktrackingPeriodNum;
 
+        /**
+         * <p>Column.</p>
+         */
         @NameInMap("ColumnStats")
         public java.util.List<UploadForeignSampleFileResponseBodyResultObjectColumnStats> columnStats;
 
         /**
+         * <p>Time type.</p>
+         * 
          * <strong>example:</strong>
          * <p>yyyyMMdd</p>
          */
@@ -227,6 +263,8 @@ public class UploadForeignSampleFileResponseBody extends TeaModel {
         public String dateType;
 
         /**
+         * <p>File name.</p>
+         * 
          * <strong>example:</strong>
          * <p>Acct71b_Sample140934_md5_batch20250916.csv</p>
          */
@@ -234,6 +272,8 @@ public class UploadForeignSampleFileResponseBody extends TeaModel {
         public String fileName;
 
         /**
+         * <p>File Size.</p>
+         * 
          * <strong>example:</strong>
          * <p>78</p>
          */
@@ -241,25 +281,35 @@ public class UploadForeignSampleFileResponseBody extends TeaModel {
         public Integer fileSize;
 
         /**
+         * <p>File URL.</p>
+         * 
          * <strong>example:</strong>
          * <p>saf/cpoc/34cd7959590ef568086035b956210495/1760580976089_XN_test_1016_100000.csv</p>
          */
         @NameInMap("FileUrl")
         public String fileUrl;
 
+        /**
+         * <p>Non-existent scenarios.</p>
+         */
         @NameInMap("NotExistScenes")
         public java.util.List<String> notExistScenes;
 
         /**
-         * <p>PhoneInvalidList。</p>
+         * <p>PhoneInvalidList.</p>
          */
         @NameInMap("PhoneInvalidList")
         public java.util.List<String> phoneInvalidList;
 
+        /**
+         * <p>Table data.</p>
+         */
         @NameInMap("PreviewData")
         public UploadForeignSampleFileResponseBodyResultObjectPreviewData previewData;
 
         /**
+         * <p>Number of rows.</p>
+         * 
          * <strong>example:</strong>
          * <p>284</p>
          */

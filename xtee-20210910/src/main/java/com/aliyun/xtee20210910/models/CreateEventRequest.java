@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class CreateEventRequest extends TeaModel {
     /**
-     * <p>Sets the language type for requests and received messages, default value is <strong>zh</strong>. Values:</p>
+     * <p>The language of the request and response. Default value: <strong>zh</strong>. Valid values:</p>
      * <ul>
-     * <li><strong>zh</strong>: Chinese</li>
-     * <li><strong>en</strong>: English</li>
+     * <li><strong>zh</strong>: Chinese.</li>
+     * <li><strong>en</strong>: English.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,7 +18,7 @@ public class CreateEventRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>Creation type</p>
+     * <p>The creation type.</p>
      * 
      * <strong>example:</strong>
      * <p>NORMAL</p>
@@ -27,7 +27,7 @@ public class CreateEventRequest extends TeaModel {
     public String createType;
 
     /**
-     * <p>Event name.</p>
+     * <p>The event name.</p>
      * 
      * <strong>example:</strong>
      * <p>登录事件</p>
@@ -36,7 +36,7 @@ public class CreateEventRequest extends TeaModel {
     public String eventName;
 
     /**
-     * <p>Input parameters, JSON string.</p>
+     * <p>The input parameters in a JSON string.</p>
      * 
      * <strong>example:</strong>
      * <p>[{&quot;fieldCode&quot;:&quot;accountId&quot;,&quot;description&quot;:&quot;用户的账户ID，唯一标识一个账户的id&quot;,&quot;fieldRank&quot;:1,&quot;title&quot;:&quot;账户ID&quot;,&quot;fieldType&quot;:&quot;STRING&quot;,&quot;fieldSource&quot;:&quot;DEFAULT&quot;},{&quot;fieldCode&quot;:&quot;hitRules&quot;,&quot;fieldRank&quot;:2,&quot;title&quot;:&quot;命中策略&quot;,&quot;fieldType&quot;:&quot;STRING&quot;,&quot;fieldSource&quot;:&quot;DEFAULT&quot;},{&quot;fieldCode&quot;:&quot;age&quot;,&quot;description&quot;:&quot;&quot;,&quot;fieldRank&quot;:3,&quot;title&quot;:&quot;年龄&quot;,&quot;fieldType&quot;:&quot;INT&quot;,&quot;fieldSource&quot;:&quot;DEFAULT&quot;},{&quot;fieldCode&quot;:&quot;ip&quot;,&quot;description&quot;:&quot;IP地址&quot;,&quot;fieldRank&quot;:4,&quot;title&quot;:&quot;IP地址&quot;,&quot;fieldType&quot;:&quot;STRING&quot;,&quot;fieldSource&quot;:&quot;DEFAULT&quot;},{&quot;fieldCode&quot;:&quot;tags&quot;,&quot;fieldRank&quot;:5,&quot;title&quot;:&quot;风险标签&quot;,&quot;fieldType&quot;:&quot;STRING&quot;,&quot;fieldSource&quot;:&quot;DEFAULT&quot;},{&quot;fieldCode&quot;:&quot;score&quot;,&quot;fieldRank&quot;:6,&quot;title&quot;:&quot;风险分值&quot;,&quot;fieldType&quot;:&quot;DOUBLE&quot;,&quot;fieldSource&quot;:&quot;DEFAULT&quot;},{&quot;fieldCode&quot;:&quot;hitList&quot;,&quot;fieldRank&quot;:7}]</p>
@@ -45,7 +45,7 @@ public class CreateEventRequest extends TeaModel {
     public String inputFieldsStr;
 
     /**
-     * <p>Memo information</p>
+     * <p>The remarks.</p>
      * 
      * <strong>example:</strong>
      * <p>登录事件描述</p>
@@ -54,7 +54,7 @@ public class CreateEventRequest extends TeaModel {
     public String memo;
 
     /**
-     * <p>Region code</p>
+     * <p>The region code.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -63,7 +63,7 @@ public class CreateEventRequest extends TeaModel {
     public String regId;
 
     /**
-     * <p>Input field template type</p>
+     * <p>The templatetype of the input field.</p>
      * 
      * <strong>example:</strong>
      * <p>register</p>
@@ -72,7 +72,7 @@ public class CreateEventRequest extends TeaModel {
     public String templateCode;
 
     /**
-     * <p>Published template name.</p>
+     * <p>The name of the published template.</p>
      * 
      * <strong>example:</strong>
      * <p>注册事件模版</p>
@@ -81,7 +81,7 @@ public class CreateEventRequest extends TeaModel {
     public String templateName;
 
     /**
-     * <p>Template type.</p>
+     * <p>The templatetype.</p>
      * 
      * <strong>example:</strong>
      * <p>TASK</p>

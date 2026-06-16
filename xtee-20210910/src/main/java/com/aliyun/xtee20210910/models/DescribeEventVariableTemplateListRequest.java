@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class DescribeEventVariableTemplateListRequest extends TeaModel {
     /**
-     * <p>Sets the language type for the request and response messages. The default value is <strong>zh</strong>. Values: </p>
+     * <p>The language of the request and response. Default value: <strong>zh</strong>. Valid values:</p>
      * <ul>
      * <li><strong>zh</strong>: Chinese</li>
-     * <li><strong>en</strong>: English</li>
+     * <li><strong>en</strong>: English.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,7 +18,7 @@ public class DescribeEventVariableTemplateListRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>Input parameters, separated by commas.</p>
+     * <p>The input parameters. Separate multiple values with commas (,).</p>
      * 
      * <strong>example:</strong>
      * <p>age,ip</p>
@@ -27,7 +27,7 @@ public class DescribeEventVariableTemplateListRequest extends TeaModel {
     public String inputs;
 
     /**
-     * <p>Region code</p>
+     * <p>The region code.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -36,7 +36,7 @@ public class DescribeEventVariableTemplateListRequest extends TeaModel {
     public String regId;
 
     /**
-     * <p>Template code.</p>
+     * <p>The template code.</p>
      * 
      * <strong>example:</strong>
      * <p>register</p>
@@ -45,7 +45,7 @@ public class DescribeEventVariableTemplateListRequest extends TeaModel {
     public String templateCode;
 
     /**
-     * <p>Template type.</p>
+     * <p>The templatetype.</p>
      * 
      * <strong>example:</strong>
      * <p>NATIVE</p>

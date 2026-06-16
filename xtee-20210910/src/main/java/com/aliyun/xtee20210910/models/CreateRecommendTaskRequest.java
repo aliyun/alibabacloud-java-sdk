@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class CreateRecommendTaskRequest extends TeaModel {
     /**
-     * <p>Set the language type for requests and received messages, default value is <strong>zh</strong>. Values:</p>
+     * <p>The language of the request and response. Default value: <strong>zh</strong>. Valid values:</p>
      * <ul>
-     * <li><strong>zh</strong>: Chinese</li>
-     * <li><strong>en</strong>: English</li>
+     * <li><strong>zh</strong>: Chinese.</li>
+     * <li><strong>en</strong>: English.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,7 +18,7 @@ public class CreateRecommendTaskRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>Name</p>
+     * <p>The name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -28,7 +28,7 @@ public class CreateRecommendTaskRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>Region code</p>
+     * <p>The region code.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -37,7 +37,7 @@ public class CreateRecommendTaskRequest extends TeaModel {
     public String regId;
 
     /**
-     * <p>Task ID.</p>
+     * <p>The task ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -47,7 +47,7 @@ public class CreateRecommendTaskRequest extends TeaModel {
     public Long sampleId;
 
     /**
-     * <p>Variables to be calculated, variables</p>
+     * <p>The variables to be calculated.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -57,7 +57,7 @@ public class CreateRecommendTaskRequest extends TeaModel {
     public String variablesStr;
 
     /**
-     * <p>Indicator effect</p>
+     * <p>The metric results.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

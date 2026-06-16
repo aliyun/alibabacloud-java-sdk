@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeExpressionVariableFunctionListResponseBody extends TeaModel {
     /**
-     * <p>Request ID.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>6E8817D5-5354-5953-84B1-D98379F036DC</p>
@@ -14,7 +14,7 @@ public class DescribeExpressionVariableFunctionListResponseBody extends TeaModel
     public String requestId;
 
     /**
-     * <p>Return object</p>
+     * <p>The response object.</p>
      */
     @NameInMap("resultObject")
     public java.util.List<DescribeExpressionVariableFunctionListResponseBodyResultObject> resultObject;
@@ -42,7 +42,7 @@ public class DescribeExpressionVariableFunctionListResponseBody extends TeaModel
 
     public static class DescribeExpressionVariableFunctionListResponseBodyResultObject extends TeaModel {
         /**
-         * <p>Description information.</p>
+         * <p>The description.</p>
          * 
          * <strong>example:</strong>
          * <p>描述</p>
@@ -51,7 +51,7 @@ public class DescribeExpressionVariableFunctionListResponseBody extends TeaModel
         public String description;
 
         /**
-         * <p>Function name</p>
+         * <p>The function name.</p>
          * 
          * <strong>example:</strong>
          * <p>concat</p>
@@ -60,7 +60,7 @@ public class DescribeExpressionVariableFunctionListResponseBody extends TeaModel
         public String key;
 
         /**
-         * <p>Maximum number of parameters</p>
+         * <p>The maximum number of input parameters.</p>
          * 
          * <strong>example:</strong>
          * <p>4</p>
@@ -69,7 +69,7 @@ public class DescribeExpressionVariableFunctionListResponseBody extends TeaModel
         public Long maxParamSize;
 
         /**
-         * <p>Minimum number of parameters</p>
+         * <p>The minimum number of input parameters.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -78,7 +78,7 @@ public class DescribeExpressionVariableFunctionListResponseBody extends TeaModel
         public Long minParamSize;
 
         /**
-         * <p>Parameter types</p>
+         * <p>The input parameter types.</p>
          * 
          * <strong>example:</strong>
          * <p>*STRING</p>
@@ -87,7 +87,7 @@ public class DescribeExpressionVariableFunctionListResponseBody extends TeaModel
         public String paramTypes;
 
         /**
-         * <p>Whether it is directly invoked</p>
+         * <p>Indicates whether the function is directly invoked.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -96,7 +96,7 @@ public class DescribeExpressionVariableFunctionListResponseBody extends TeaModel
         public Boolean redirect;
 
         /**
-         * <p>Method return types</p>
+         * <p>The return type of the method.</p>
          * 
          * <strong>example:</strong>
          * <p>STRING</p>
@@ -105,7 +105,7 @@ public class DescribeExpressionVariableFunctionListResponseBody extends TeaModel
         public String returnTypes;
 
         /**
-         * <p>Function value</p>
+         * <p>The function value.</p>
          * 
          * <strong>example:</strong>
          * <p>concat</p>

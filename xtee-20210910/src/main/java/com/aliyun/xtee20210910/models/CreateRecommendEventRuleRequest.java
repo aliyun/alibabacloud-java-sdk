@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class CreateRecommendEventRuleRequest extends TeaModel {
     /**
-     * <p>Set the language type for requests and received messages, default value is <strong>zh</strong>. Values:</p>
+     * <p>The language of the request and response. Default value: <strong>zh</strong>. Valid values:</p>
      * <ul>
-     * <li><strong>zh</strong>: Chinese</li>
-     * <li><strong>en</strong>: English</li>
+     * <li><strong>zh</strong>: Chinese.</li>
+     * <li><strong>en</strong>: English.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,7 +18,7 @@ public class CreateRecommendEventRuleRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>Event code.</p>
+     * <p>The event code.</p>
      * 
      * <strong>example:</strong>
      * <p>de_ahqido8038</p>
@@ -27,7 +27,7 @@ public class CreateRecommendEventRuleRequest extends TeaModel {
     public String eventCode;
 
     /**
-     * <p>Event name.</p>
+     * <p>The event name.</p>
      * 
      * <strong>example:</strong>
      * <p>用户昵称文本审核检测结果</p>
@@ -36,7 +36,7 @@ public class CreateRecommendEventRuleRequest extends TeaModel {
     public String eventName;
 
     /**
-     * <p>Strategy ID.</p>
+     * <p>The policy ID.</p>
      * 
      * <strong>example:</strong>
      * <p>[\&quot;100234\&quot;,\&quot;100235\&quot;]</p>
@@ -45,7 +45,7 @@ public class CreateRecommendEventRuleRequest extends TeaModel {
     public String recommendRuleIdsStr;
 
     /**
-     * <p>Region code.</p>
+     * <p>The region code.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -54,7 +54,7 @@ public class CreateRecommendEventRuleRequest extends TeaModel {
     public String regId;
 
     /**
-     * <p>Task ID.</p>
+     * <p>The task ID.</p>
      * 
      * <strong>example:</strong>
      * <p>6770764</p>

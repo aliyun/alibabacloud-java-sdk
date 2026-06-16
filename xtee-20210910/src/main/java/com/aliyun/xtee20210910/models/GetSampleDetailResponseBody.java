@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetSampleDetailResponseBody extends TeaModel {
     /**
+     * <p>The status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -12,6 +14,8 @@ public class GetSampleDetailResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -19,6 +23,8 @@ public class GetSampleDetailResponseBody extends TeaModel {
     public String httpStatusCode;
 
     /**
+     * <p>The returned message.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -26,12 +32,17 @@ public class GetSampleDetailResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>A32FE941-35F2-5378-B37C-4B8FDB16F094</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Request result.</p>
+     */
     @NameInMap("ResultObject")
     public GetSampleDetailResponseBodyResultObject resultObject;
 
@@ -82,6 +93,8 @@ public class GetSampleDetailResponseBody extends TeaModel {
 
     public static class GetSampleDetailResponseBodyResultObjectColumnStats extends TeaModel {
         /**
+         * <p>De-duplication count.</p>
+         * 
          * <strong>example:</strong>
          * <p>23</p>
          */
@@ -89,6 +102,8 @@ public class GetSampleDetailResponseBody extends TeaModel {
         public Integer distinctNumber;
 
         /**
+         * <p>De-duplication rate.</p>
+         * 
          * <strong>example:</strong>
          * <p>23.87%</p>
          */
@@ -96,6 +111,8 @@ public class GetSampleDetailResponseBody extends TeaModel {
         public String distinctRate;
 
         /**
+         * <p>Field Name.</p>
+         * 
          * <strong>example:</strong>
          * <p>repoName</p>
          */
@@ -103,6 +120,8 @@ public class GetSampleDetailResponseBody extends TeaModel {
         public String fieldName;
 
         /**
+         * <p>Number of missing values.</p>
+         * 
          * <strong>example:</strong>
          * <p>3</p>
          */
@@ -110,6 +129,8 @@ public class GetSampleDetailResponseBody extends TeaModel {
         public Integer missNumber;
 
         /**
+         * <p>Missing rate.</p>
+         * 
          * <strong>example:</strong>
          * <p>25.32%</p>
          */
@@ -117,6 +138,8 @@ public class GetSampleDetailResponseBody extends TeaModel {
         public String missRate;
 
         /**
+         * <p>Row number of the record.</p>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */
@@ -179,9 +202,15 @@ public class GetSampleDetailResponseBody extends TeaModel {
     }
 
     public static class GetSampleDetailResponseBodyResultObjectPreviewData extends TeaModel {
+        /**
+         * <p>Header information returned.</p>
+         */
         @NameInMap("Headers")
         public java.util.List<String> headers;
 
+        /**
+         * <p>Row data.</p>
+         */
         @NameInMap("Rows")
         public java.util.List<java.util.List<String>> rows;
 
@@ -209,10 +238,15 @@ public class GetSampleDetailResponseBody extends TeaModel {
     }
 
     public static class GetSampleDetailResponseBodyResultObject extends TeaModel {
+        /**
+         * <p>Columns.</p>
+         */
         @NameInMap("ColumnStats")
         public java.util.List<GetSampleDetailResponseBodyResultObjectColumnStats> columnStats;
 
         /**
+         * <p>The time filter Type. You can filter by the last 7 Days, last 30 Days, last 6 months, or Custom.</p>
+         * 
          * <strong>example:</strong>
          * <p>month</p>
          */
@@ -220,26 +254,44 @@ public class GetSampleDetailResponseBody extends TeaModel {
         public String dateType;
 
         /**
+         * <p>The download URL of the file.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="https://cas-documents-service.oss-cn-shanghai.aliyuncs.com/Batch_Upload_Monitor_Domain.xlsx?Expires=1753755419&OSSAccessKeyId=****&Signature=">https://cas-documents-service.oss-cn-shanghai.aliyuncs.com/Batch_Upload_Monitor_Domain.xlsx?Expires=1753755419&amp;OSSAccessKeyId=****&amp;Signature=</a>****</p>
          */
         @NameInMap("DownloadUrl")
         public String downloadUrl;
 
+        /**
+         * <p>File name.  </p>
+         * <blockquote>
+         * <p>The file name must end with .txt or .sql. For example, test.txt or test.sql.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>回溯朴道_建模样本_样本量694049_part_01-(定制增强版).csv</p>
+         */
         @NameInMap("FileName")
         public String fileName;
 
         /**
+         * <p>File Size (bytes).</p>
+         * 
          * <strong>example:</strong>
          * <p>199</p>
          */
         @NameInMap("FileSize")
         public Integer fileSize;
 
+        /**
+         * <p>Table data.</p>
+         */
         @NameInMap("PreviewData")
         public GetSampleDetailResponseBodyResultObjectPreviewData previewData;
 
         /**
+         * <p>Remarks.</p>
+         * 
          * <strong>example:</strong>
          * <p>ios_fb</p>
          */
@@ -247,6 +299,8 @@ public class GetSampleDetailResponseBody extends TeaModel {
         public String remark;
 
         /**
+         * <p>The number of result records returned.</p>
+         * 
          * <strong>example:</strong>
          * <p>325</p>
          */
@@ -254,6 +308,8 @@ public class GetSampleDetailResponseBody extends TeaModel {
         public Integer rowCount;
 
         /**
+         * <p>The sample ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -261,6 +317,8 @@ public class GetSampleDetailResponseBody extends TeaModel {
         public Integer sampleId;
 
         /**
+         * <p>Sample name.</p>
+         * 
          * <strong>example:</strong>
          * <p>SampleTest</p>
          */
@@ -268,6 +326,8 @@ public class GetSampleDetailResponseBody extends TeaModel {
         public String sampleName;
 
         /**
+         * <p>Scenario.</p>
+         * 
          * <strong>example:</strong>
          * <p>FINANCE</p>
          */
@@ -275,12 +335,20 @@ public class GetSampleDetailResponseBody extends TeaModel {
         public String tab;
 
         /**
+         * <p>File upload time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2024-09-27 10:23:40</p>
          */
         @NameInMap("UploadTime")
         public String uploadTime;
 
+        /**
+         * <p>Uploader.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dsg</p>
+         */
         @NameInMap("UploadUserName")
         public String uploadUserName;
 

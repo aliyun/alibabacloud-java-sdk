@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class DescribeHitRuleListRequest extends TeaModel {
     /**
-     * <p>Sets the language type for requests and received messages, with a default value of <strong>zh</strong>. Values:</p>
+     * <p>The language of the request and response. Default value: <strong>zh</strong>. Valid values:</p>
      * <ul>
      * <li><strong>zh</strong>: Chinese</li>
-     * <li><strong>en</strong>: English</li>
+     * <li><strong>en</strong>: English.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,7 +18,7 @@ public class DescribeHitRuleListRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>Start time, accurate to milliseconds (ms).</p>
+     * <p>The start time, in milliseconds (ms).</p>
      * 
      * <strong>example:</strong>
      * <p>1737101348000</p>
@@ -27,7 +27,7 @@ public class DescribeHitRuleListRequest extends TeaModel {
     public Long beginTime;
 
     /**
-     * <p>End time, accurate to milliseconds (ms).</p>
+     * <p>The end time, in milliseconds (ms).</p>
      * 
      * <strong>example:</strong>
      * <p>1752027960000</p>
@@ -36,7 +36,7 @@ public class DescribeHitRuleListRequest extends TeaModel {
     public Long endTime;
 
     /**
-     * <p>Event codes, separated by commas if multiple.</p>
+     * <p>The event codes. Separate multiple event codes with commas (,).</p>
      * 
      * <strong>example:</strong>
      * <p>de_ahqhsw7665,de_ahqhsw7622</p>
@@ -45,7 +45,7 @@ public class DescribeHitRuleListRequest extends TeaModel {
     public String eventCodes;
 
     /**
-     * <p>Event type</p>
+     * <p>The event type.</p>
      * 
      * <strong>example:</strong>
      * <p>MAIN</p>
@@ -54,7 +54,7 @@ public class DescribeHitRuleListRequest extends TeaModel {
     public String eventType;
 
     /**
-     * <p>Region code</p>
+     * <p>The region code.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeAuthSceneListResponseBody extends TeaModel {
     /**
-     * <p>Request ID.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>A32FE941-35F2-5378-B37C-4B8FDB16F094</p>
@@ -14,7 +14,7 @@ public class DescribeAuthSceneListResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Returned object</p>
+     * <p>The returned object.</p>
      */
     @NameInMap("resultObject")
     public java.util.List<DescribeAuthSceneListResponseBodyResultObject> resultObject;
@@ -42,7 +42,7 @@ public class DescribeAuthSceneListResponseBody extends TeaModel {
 
     public static class DescribeAuthSceneListResponseBodyResultObject extends TeaModel {
         /**
-         * <p>Service code</p>
+         * <p>The service code.</p>
          * 
          * <strong>example:</strong>
          * <p>account_abuse</p>

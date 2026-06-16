@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class DescribeParamByEventCodesRequest extends TeaModel {
     /**
-     * <p>Set the language type for request and response, default value is <strong>zh</strong>. Values:</p>
+     * <p>The language type for the request and response messages. Default value: <strong>zh</strong>. Valid values:</p>
      * <ul>
-     * <li><strong>zh</strong>: Chinese</li>
-     * <li><strong>en</strong>: English</li>
+     * <li><strong>zh</strong>: Chinese.</li>
+     * <li><strong>en</strong>: English.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,7 +18,7 @@ public class DescribeParamByEventCodesRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>Event code.</p>
+     * <p>The event code.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -28,7 +28,7 @@ public class DescribeParamByEventCodesRequest extends TeaModel {
     public String eventCodes;
 
     /**
-     * <p>Query condition</p>
+     * <p>The query condition.</p>
      * 
      * <strong>example:</strong>
      * <p>标题/描述</p>
@@ -37,7 +37,7 @@ public class DescribeParamByEventCodesRequest extends TeaModel {
     public String parma;
 
     /**
-     * <p>Region code</p>
+     * <p>The region code.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>

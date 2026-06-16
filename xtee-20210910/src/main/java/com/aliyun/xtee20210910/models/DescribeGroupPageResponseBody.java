@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeGroupPageResponseBody extends TeaModel {
     /**
-     * <p>Request ID.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>A32FE941-35F2-5378-B37C-4B8FDB16F094</p>
@@ -14,7 +14,7 @@ public class DescribeGroupPageResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Current page number.</p>
+     * <p>The current page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -23,7 +23,7 @@ public class DescribeGroupPageResponseBody extends TeaModel {
     public Integer currentPage;
 
     /**
-     * <p>Page size, with a default value of 10.</p>
+     * <p>The number of entries per page. Default value: 10.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -32,13 +32,13 @@ public class DescribeGroupPageResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>Returned object.</p>
+     * <p>The returned object.</p>
      */
     @NameInMap("resultObject")
     public java.util.List<DescribeGroupPageResponseBodyResultObject> resultObject;
 
     /**
-     * <p>Total number of items.</p>
+     * <p>The total number of entries.</p>
      * 
      * <strong>example:</strong>
      * <p>3</p>
@@ -47,7 +47,7 @@ public class DescribeGroupPageResponseBody extends TeaModel {
     public Integer totalItem;
 
     /**
-     * <p>Total number of pages.</p>
+     * <p>The total number of pages.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -110,7 +110,7 @@ public class DescribeGroupPageResponseBody extends TeaModel {
 
     public static class DescribeGroupPageResponseBodyResultObject extends TeaModel {
         /**
-         * <p>Community number.</p>
+         * <p>The community number.</p>
          * 
          * <strong>example:</strong>
          * <p>129838420210118141502RaMMIgVG</p>
@@ -119,7 +119,7 @@ public class DescribeGroupPageResponseBody extends TeaModel {
         public String communityNo;
 
         /**
-         * <p>Creation time.</p>
+         * <p>The creation time.</p>
          * 
          * <strong>example:</strong>
          * <p>1699450018265</p>
@@ -128,7 +128,7 @@ public class DescribeGroupPageResponseBody extends TeaModel {
         public Long createTime;
 
         /**
-         * <p>Group risk concentration.</p>
+         * <p>The risk concentration.</p>
          * 
          * <strong>example:</strong>
          * <p>80</p>
@@ -137,7 +137,7 @@ public class DescribeGroupPageResponseBody extends TeaModel {
         public String groupRisk;
 
         /**
-         * <p>Group scale.</p>
+         * <p>The community scale.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -146,7 +146,7 @@ public class DescribeGroupPageResponseBody extends TeaModel {
         public String groupScale;
 
         /**
-         * <p>Primary key ID.</p>
+         * <p>The primary key ID.</p>
          * 
          * <strong>example:</strong>
          * <p>497</p>
@@ -155,7 +155,7 @@ public class DescribeGroupPageResponseBody extends TeaModel {
         public Long id;
 
         /**
-         * <p>Scene name.</p>
+         * <p>The scenario name.</p>
          * 
          * <strong>example:</strong>
          * <p>通用图计算</p>
@@ -164,7 +164,7 @@ public class DescribeGroupPageResponseBody extends TeaModel {
         public String sceneName;
 
         /**
-         * <p>Task ID.</p>
+         * <p>The task ID.</p>
          * 
          * <strong>example:</strong>
          * <p>6770764</p>
@@ -173,7 +173,7 @@ public class DescribeGroupPageResponseBody extends TeaModel {
         public Long taskId;
 
         /**
-         * <p>User UID.</p>
+         * <p>The user UID.</p>
          * 
          * <strong>example:</strong>
          * <p>1519714049632764</p>

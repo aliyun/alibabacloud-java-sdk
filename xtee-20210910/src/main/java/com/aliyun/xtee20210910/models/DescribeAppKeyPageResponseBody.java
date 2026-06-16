@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeAppKeyPageResponseBody extends TeaModel {
     /**
-     * <p>Request ID.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>E01E1B4A-6747-5329-9046-B6D6B2D91349</p>
@@ -14,7 +14,7 @@ public class DescribeAppKeyPageResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Current page number.</p>
+     * <p>The current page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -23,7 +23,7 @@ public class DescribeAppKeyPageResponseBody extends TeaModel {
     public Integer currentPage;
 
     /**
-     * <p>Number of items per page, default value is 10.</p>
+     * <p>The number of entries per page. Default value: 10.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -32,13 +32,13 @@ public class DescribeAppKeyPageResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>Returned object.</p>
+     * <p>The returned object.</p>
      */
     @NameInMap("resultObject")
     public java.util.List<DescribeAppKeyPageResponseBodyResultObject> resultObject;
 
     /**
-     * <p>Total number of items.</p>
+     * <p>The total number of entries.</p>
      * 
      * <strong>example:</strong>
      * <p>3</p>
@@ -47,7 +47,7 @@ public class DescribeAppKeyPageResponseBody extends TeaModel {
     public Integer totalItem;
 
     /**
-     * <p>Total number of pages.</p>
+     * <p>The total number of pages.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -110,7 +110,7 @@ public class DescribeAppKeyPageResponseBody extends TeaModel {
 
     public static class DescribeAppKeyPageResponseBodyResultObject extends TeaModel {
         /**
-         * <p>Android SDK download URL.</p>
+         * <p>The download URL of the Android SDK.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://xxxxx-oss-xxxxx.xxxxxx.aliyuncs.com/xx/xx/xxx/xxxxxx.csv?Expires=1753433384&OSSAccessKeyId=xxxxxxxxx&Signature=%2F%xxxxxxxxxxxx%3D">https://xxxxx-oss-xxxxx.xxxxxx.aliyuncs.com/xx/xx/xxx/xxxxxx.csv?Expires=1753433384&amp;OSSAccessKeyId=xxxxxxxxx&amp;Signature=%2F%xxxxxxxxxxxx%3D</a></p>
@@ -119,7 +119,7 @@ public class DescribeAppKeyPageResponseBody extends TeaModel {
         public String androidSdkUrl;
 
         /**
-         * <p>Android SDK version number.</p>
+         * <p>The version number of the Android SDK.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -128,7 +128,7 @@ public class DescribeAppKeyPageResponseBody extends TeaModel {
         public String androidSdkVersion;
 
         /**
-         * <p>Application appkey.</p>
+         * <p>The appKey of the application.</p>
          * 
          * <strong>example:</strong>
          * <p>sh9a71f07fhs556bd767586307e82795</p>
@@ -137,7 +137,7 @@ public class DescribeAppKeyPageResponseBody extends TeaModel {
         public String appKey;
 
         /**
-         * <p>Creation time.</p>
+         * <p>The creation time.</p>
          * 
          * <strong>example:</strong>
          * <p>1621578648000</p>
@@ -146,7 +146,7 @@ public class DescribeAppKeyPageResponseBody extends TeaModel {
         public Long gmtCreate;
 
         /**
-         * <p>iOS SDK download URL.</p>
+         * <p>The download URL of the iOS SDK.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://xxxxx-oss-xxxxx.xxxxxx.aliyuncs.com/xx/xx/xxx/xxxxxx.csv?Expires=1753433384&OSSAccessKeyId=xxxxxxxxx&Signature=%2F%xxxxxxxxxxxx%3D">https://xxxxx-oss-xxxxx.xxxxxx.aliyuncs.com/xx/xx/xxx/xxxxxx.csv?Expires=1753433384&amp;OSSAccessKeyId=xxxxxxxxx&amp;Signature=%2F%xxxxxxxxxxxx%3D</a></p>
@@ -155,7 +155,7 @@ public class DescribeAppKeyPageResponseBody extends TeaModel {
         public String iosSdkUrl;
 
         /**
-         * <p>iOS SDK version number.</p>
+         * <p>The version number of the iOS SDK.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -164,7 +164,7 @@ public class DescribeAppKeyPageResponseBody extends TeaModel {
         public String iosSdkVersion;
 
         /**
-         * <p>Memo.</p>
+         * <p>The remarks.</p>
          * 
          * <strong>example:</strong>
          * <p>备注</p>
@@ -182,7 +182,7 @@ public class DescribeAppKeyPageResponseBody extends TeaModel {
         public String sdkItems;
 
         /**
-         * <p>Whether this appKey is integrated.</p>
+         * <p>Indicates whether the appKey is integrated.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeSampleListResponseBody extends TeaModel {
     /**
-     * <p>Request ID.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>A32FE941-35F2-5378-B37C-4B8FDB16F094</p>
@@ -14,7 +14,7 @@ public class DescribeSampleListResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Current page number.</p>
+     * <p>The current page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -23,7 +23,7 @@ public class DescribeSampleListResponseBody extends TeaModel {
     public Integer currentPage;
 
     /**
-     * <p>Page size, with a default value of 10</p>
+     * <p>The number of entries per page. Default value: 10.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -32,13 +32,13 @@ public class DescribeSampleListResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>Returned object</p>
+     * <p>The returned objects.</p>
      */
     @NameInMap("resultObject")
     public java.util.List<DescribeSampleListResponseBodyResultObject> resultObject;
 
     /**
-     * <p>Total count.</p>
+     * <p>The total number of entries.</p>
      * 
      * <strong>example:</strong>
      * <p>6</p>
@@ -47,7 +47,7 @@ public class DescribeSampleListResponseBody extends TeaModel {
     public Integer totalItem;
 
     /**
-     * <p>Total pages</p>
+     * <p>The total number of pages.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -110,7 +110,7 @@ public class DescribeSampleListResponseBody extends TeaModel {
 
     public static class DescribeSampleListResponseBodyResultObject extends TeaModel {
         /**
-         * <p>Database ID.</p>
+         * <p>The database ID.</p>
          * 
          * <strong>example:</strong>
          * <p>497</p>
@@ -119,7 +119,7 @@ public class DescribeSampleListResponseBody extends TeaModel {
         public Long id;
 
         /**
-         * <p>Sample tags.</p>
+         * <p>The sample tags.</p>
          * 
          * <strong>example:</strong>
          * <p>rm0102</p>
@@ -128,7 +128,7 @@ public class DescribeSampleListResponseBody extends TeaModel {
         public String sampleTags;
 
         /**
-         * <p>Sample type</p>
+         * <p>The sample type.</p>
          * 
          * <strong>example:</strong>
          * <p>PHONE</p>
@@ -137,7 +137,7 @@ public class DescribeSampleListResponseBody extends TeaModel {
         public Integer sampleType;
 
         /**
-         * <p>Sample value.</p>
+         * <p>The sample value.</p>
          * 
          * <strong>example:</strong>
          * <p>1770000000</p>
@@ -146,7 +146,7 @@ public class DescribeSampleListResponseBody extends TeaModel {
         public String sampleValue;
 
         /**
-         * <p>Update time.</p>
+         * <p>The update time.</p>
          * 
          * <strong>example:</strong>
          * <p>1699450018265</p>
@@ -155,7 +155,7 @@ public class DescribeSampleListResponseBody extends TeaModel {
         public Long updateTime;
 
         /**
-         * <p>Version number.</p>
+         * <p>The version number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>

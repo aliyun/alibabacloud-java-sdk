@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeEventPageListResponseBody extends TeaModel {
     /**
-     * <p>Request ID.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>A32FE941-35F2-5378-B37C-4B8FDB16F094</p>
@@ -14,7 +14,7 @@ public class DescribeEventPageListResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Current page number.</p>
+     * <p>The current page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -23,7 +23,7 @@ public class DescribeEventPageListResponseBody extends TeaModel {
     public Integer currentPage;
 
     /**
-     * <p>Page size, with a default value of 10</p>
+     * <p>The number of entries per page. Default value: 10.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -32,13 +32,13 @@ public class DescribeEventPageListResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>Returned object</p>
+     * <p>The returned object.</p>
      */
     @NameInMap("resultObject")
     public java.util.List<DescribeEventPageListResponseBodyResultObject> resultObject;
 
     /**
-     * <p>Total number of items</p>
+     * <p>The total number of entries.</p>
      * 
      * <strong>example:</strong>
      * <p>3</p>
@@ -47,7 +47,7 @@ public class DescribeEventPageListResponseBody extends TeaModel {
     public Integer totalItem;
 
     /**
-     * <p>Total number of pages.</p>
+     * <p>The total number of pages.</p>
      * 
      * <strong>example:</strong>
      * <p>9</p>
@@ -110,7 +110,7 @@ public class DescribeEventPageListResponseBody extends TeaModel {
 
     public static class DescribeEventPageListResponseBodyResultObjectChildren extends TeaModel {
         /**
-         * <p>Event code.</p>
+         * <p>The event code.</p>
          * 
          * <strong>example:</strong>
          * <p>de_aamexg3015</p>
@@ -119,7 +119,7 @@ public class DescribeEventPageListResponseBody extends TeaModel {
         public String eventCode;
 
         /**
-         * <p>Event name.</p>
+         * <p>The event name.</p>
          * 
          * <strong>example:</strong>
          * <p>测试</p>
@@ -128,7 +128,7 @@ public class DescribeEventPageListResponseBody extends TeaModel {
         public String eventName;
 
         /**
-         * <p>Event status.</p>
+         * <p>The event status.</p>
          * 
          * <strong>example:</strong>
          * <p>ONLINE</p>
@@ -137,7 +137,7 @@ public class DescribeEventPageListResponseBody extends TeaModel {
         public String eventStatus;
 
         /**
-         * <p>Event type.</p>
+         * <p>The event type.</p>
          * 
          * <strong>example:</strong>
          * <p>BYPASS</p>
@@ -146,7 +146,7 @@ public class DescribeEventPageListResponseBody extends TeaModel {
         public String eventType;
 
         /**
-         * <p>Creation time.</p>
+         * <p>The creation time.</p>
          * 
          * <strong>example:</strong>
          * <p>1621578648000</p>
@@ -155,7 +155,7 @@ public class DescribeEventPageListResponseBody extends TeaModel {
         public Long gmtCreate;
 
         /**
-         * <p>Modification time</p>
+         * <p>The modification time.</p>
          * 
          * <strong>example:</strong>
          * <p>1621578648000</p>
@@ -164,7 +164,7 @@ public class DescribeEventPageListResponseBody extends TeaModel {
         public Long gmtModified;
 
         /**
-         * <p>Primary key ID</p>
+         * <p>The primary key ID.</p>
          * 
          * <strong>example:</strong>
          * <p>334</p>
@@ -173,7 +173,7 @@ public class DescribeEventPageListResponseBody extends TeaModel {
         public Long id;
 
         /**
-         * <p>Total number of rules.</p>
+         * <p>The total number of rules.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -254,13 +254,13 @@ public class DescribeEventPageListResponseBody extends TeaModel {
 
     public static class DescribeEventPageListResponseBodyResultObject extends TeaModel {
         /**
-         * <p>Object</p>
+         * <p>The object.</p>
          */
         @NameInMap("children")
         public java.util.List<DescribeEventPageListResponseBodyResultObjectChildren> children;
 
         /**
-         * <p>Event code</p>
+         * <p>The event code.</p>
          * 
          * <strong>example:</strong>
          * <p>de_aszbjb7236</p>
@@ -269,7 +269,7 @@ public class DescribeEventPageListResponseBody extends TeaModel {
         public String eventCode;
 
         /**
-         * <p>Event name.</p>
+         * <p>The event name.</p>
          * 
          * <strong>example:</strong>
          * <p>注册风险</p>
@@ -278,7 +278,7 @@ public class DescribeEventPageListResponseBody extends TeaModel {
         public String eventName;
 
         /**
-         * <p>Event status.</p>
+         * <p>The event status.</p>
          * 
          * <strong>example:</strong>
          * <p>ONLINE</p>
@@ -287,7 +287,7 @@ public class DescribeEventPageListResponseBody extends TeaModel {
         public String eventStatus;
 
         /**
-         * <p>Event type.</p>
+         * <p>The event type.</p>
          * 
          * <strong>example:</strong>
          * <p>MAIN</p>
@@ -296,7 +296,7 @@ public class DescribeEventPageListResponseBody extends TeaModel {
         public String eventType;
 
         /**
-         * <p>Creation time.</p>
+         * <p>The creation time.</p>
          * 
          * <strong>example:</strong>
          * <p>1621578648000</p>
@@ -305,7 +305,7 @@ public class DescribeEventPageListResponseBody extends TeaModel {
         public Long gmtCreate;
 
         /**
-         * <p>Modification time</p>
+         * <p>The modification time.</p>
          * 
          * <strong>example:</strong>
          * <p>1565701886000</p>
@@ -314,7 +314,7 @@ public class DescribeEventPageListResponseBody extends TeaModel {
         public Long gmtModified;
 
         /**
-         * <p>Database ID.</p>
+         * <p>The database ID.</p>
          * 
          * <strong>example:</strong>
          * <p>497</p>
@@ -323,7 +323,7 @@ public class DescribeEventPageListResponseBody extends TeaModel {
         public Long id;
 
         /**
-         * <p>Total number of rules.</p>
+         * <p>The total number of rules.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -332,7 +332,7 @@ public class DescribeEventPageListResponseBody extends TeaModel {
         public Integer ruleCount;
 
         /**
-         * <p>Template code</p>
+         * <p>The template code.</p>
          * 
          * <strong>example:</strong>
          * <p>register</p>
@@ -341,7 +341,7 @@ public class DescribeEventPageListResponseBody extends TeaModel {
         public String templateCode;
 
         /**
-         * <p>Template name.</p>
+         * <p>The template name.</p>
          * 
          * <strong>example:</strong>
          * <p>注册模版</p>
@@ -350,7 +350,7 @@ public class DescribeEventPageListResponseBody extends TeaModel {
         public String templateName;
 
         /**
-         * <p>Template type</p>
+         * <p>The template type.</p>
          * 
          * <strong>example:</strong>
          * <p>UNIVERSAL</p>
@@ -359,7 +359,7 @@ public class DescribeEventPageListResponseBody extends TeaModel {
         public String templateType;
 
         /**
-         * <p>Number of customer authorizations</p>
+         * <p>The number of authorized users.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeUserInfoResponseBody extends TeaModel {
     /**
-     * <p>Status code.</p>
+     * <p>The status code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,7 +14,7 @@ public class DescribeUserInfoResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>HTTP status code</p>
+     * <p>The HTTP status code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -23,7 +23,7 @@ public class DescribeUserInfoResponseBody extends TeaModel {
     public String httpStatusCode;
 
     /**
-     * <p>Error message</p>
+     * <p>The error message.</p>
      * 
      * <strong>example:</strong>
      * <p>The input parameter data is not valid. order_storage_company_num component not found</p>
@@ -32,7 +32,7 @@ public class DescribeUserInfoResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Returned object</p>
+     * <p>The returned object.</p>
      */
     @NameInMap("resultObject")
     public DescribeUserInfoResponseBodyResultObject resultObject;
@@ -93,7 +93,7 @@ public class DescribeUserInfoResponseBody extends TeaModel {
 
     public static class DescribeUserInfoResponseBodyResultObject extends TeaModel {
         /**
-         * <p>Client IP.</p>
+         * <p>The client IP address.</p>
          * 
          * <strong>example:</strong>
          * <p>192.168.0.1</p>
@@ -102,7 +102,7 @@ public class DescribeUserInfoResponseBody extends TeaModel {
         public String clientIp;
 
         /**
-         * <p>Sub-account ID</p>
+         * <p>The RAM user ID.</p>
          * 
          * <strong>example:</strong>
          * <p>555666</p>
@@ -111,7 +111,7 @@ public class DescribeUserInfoResponseBody extends TeaModel {
         public String subId;
 
         /**
-         * <p>User UID</p>
+         * <p>The user UID.</p>
          * 
          * <strong>example:</strong>
          * <p>15633333331111</p>
@@ -120,7 +120,7 @@ public class DescribeUserInfoResponseBody extends TeaModel {
         public Long userId;
 
         /**
-         * <p>User name</p>
+         * <p>The username.</p>
          * 
          * <strong>example:</strong>
          * <p>root</p>

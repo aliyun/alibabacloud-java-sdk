@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class CreateSampleDataRequest extends TeaModel {
     /**
-     * <p>Set the language type for requests and received messages, default value is <strong>zh</strong>. Values:</p>
+     * <p>The language of the request and response. Default value: <strong>zh</strong>. Valid values:</p>
      * <ul>
      * <li><strong>zh</strong>: Chinese</li>
-     * <li><strong>en</strong>: English</li>
+     * <li><strong>en</strong>: English.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,7 +18,7 @@ public class CreateSampleDataRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>Description.</p>
+     * <p>The description.</p>
      * 
      * <strong>example:</strong>
      * <p>描述</p>
@@ -27,7 +27,12 @@ public class CreateSampleDataRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>Encryption type</p>
+     * <p>The encryption type. Valid values:</p>
+     * <ul>
+     * <li><strong>ALL</strong>: all encryption</li>
+     * <li><strong>LABEL</strong>: label encryption</li>
+     * <li><strong>NONE</strong>: no encryption.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>LABEL</p>
@@ -36,7 +41,7 @@ public class CreateSampleDataRequest extends TeaModel {
     public String encryptType;
 
     /**
-     * <p>Name</p>
+     * <p>The name.</p>
      * 
      * <strong>example:</strong>
      * <p>注册样本</p>
@@ -45,7 +50,7 @@ public class CreateSampleDataRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>Region code</p>
+     * <p>The region code.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -54,7 +59,7 @@ public class CreateSampleDataRequest extends TeaModel {
     public String regId;
 
     /**
-     * <p>Specified risk value</p>
+     * <p>The specified risk value.</p>
      * 
      * <strong>example:</strong>
      * <p>black</p>
@@ -63,7 +68,7 @@ public class CreateSampleDataRequest extends TeaModel {
     public String riskValue;
 
     /**
-     * <p>Scene</p>
+     * <p>The scenario.</p>
      * 
      * <strong>example:</strong>
      * <p>PHONE</p>
@@ -72,7 +77,7 @@ public class CreateSampleDataRequest extends TeaModel {
     public String scene;
 
     /**
-     * <p>Storage path</p>
+     * <p>The storage path.</p>
      * 
      * <strong>example:</strong>
      * <p>saf/de/sample/3dc2spspHKq4G3YI9d08</p>
@@ -81,7 +86,7 @@ public class CreateSampleDataRequest extends TeaModel {
     public String storePath;
 
     /**
-     * <p>Storage type</p>
+     * <p>The storage type.</p>
      * 
      * <strong>example:</strong>
      * <p>OSS</p>

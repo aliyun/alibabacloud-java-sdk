@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeFieldListResponseBody extends TeaModel {
     /**
-     * <p>Request ID.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>A32FE941-35F2-5378-B37C-4B8FDB16F094</p>
@@ -14,7 +14,7 @@ public class DescribeFieldListResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Current page number.</p>
+     * <p>The current page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -23,7 +23,7 @@ public class DescribeFieldListResponseBody extends TeaModel {
     public Integer currentPage;
 
     /**
-     * <p>Page size, default value is 10</p>
+     * <p>The number of entries per page. Default value: 10.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -32,13 +32,13 @@ public class DescribeFieldListResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>Returned object</p>
+     * <p>The returned object.</p>
      */
     @NameInMap("resultObject")
     public java.util.List<DescribeFieldListResponseBodyResultObject> resultObject;
 
     /**
-     * <p>Total number of items</p>
+     * <p>The total number of entries.</p>
      * 
      * <strong>example:</strong>
      * <p>101</p>
@@ -47,7 +47,7 @@ public class DescribeFieldListResponseBody extends TeaModel {
     public Integer totalItem;
 
     /**
-     * <p>Total number of pages</p>
+     * <p>The total number of pages.</p>
      * 
      * <strong>example:</strong>
      * <p>9</p>
@@ -110,7 +110,7 @@ public class DescribeFieldListResponseBody extends TeaModel {
 
     public static class DescribeFieldListResponseBodyResultObject extends TeaModel {
         /**
-         * <p>Field classification</p>
+         * <p>The field classification.</p>
          * 
          * <strong>example:</strong>
          * <p>REQUEST_PARAM</p>
@@ -119,7 +119,7 @@ public class DescribeFieldListResponseBody extends TeaModel {
         public String classify;
 
         /**
-         * <p>Description information.</p>
+         * <p>The description.</p>
          * 
          * <strong>example:</strong>
          * <p>描述</p>
@@ -128,7 +128,7 @@ public class DescribeFieldListResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>Enum data</p>
+         * <p>The enumeration data.</p>
          * 
          * <strong>example:</strong>
          * <p>STATUS</p>
@@ -137,7 +137,7 @@ public class DescribeFieldListResponseBody extends TeaModel {
         public String enumData;
 
         /**
-         * <p>Field ID.</p>
+         * <p>The field ID.</p>
          * 
          * <strong>example:</strong>
          * <p>497</p>
@@ -146,7 +146,7 @@ public class DescribeFieldListResponseBody extends TeaModel {
         public Long id;
 
         /**
-         * <p>Field name</p>
+         * <p>The field name.</p>
          * 
          * <strong>example:</strong>
          * <p>age</p>
@@ -155,7 +155,7 @@ public class DescribeFieldListResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>Field source</p>
+         * <p>The field source.</p>
          * 
          * <strong>example:</strong>
          * <p>DEFINE</p>
@@ -164,7 +164,7 @@ public class DescribeFieldListResponseBody extends TeaModel {
         public String source;
 
         /**
-         * <p>Status.</p>
+         * <p>The status.</p>
          * 
          * <strong>example:</strong>
          * <p>ENABLE</p>
@@ -173,7 +173,7 @@ public class DescribeFieldListResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>Title.</p>
+         * <p>The title.</p>
          * 
          * <strong>example:</strong>
          * <p>年龄</p>
@@ -182,7 +182,7 @@ public class DescribeFieldListResponseBody extends TeaModel {
         public String title;
 
         /**
-         * <p>Field type</p>
+         * <p>The field type.</p>
          * 
          * <strong>example:</strong>
          * <p>STRING</p>

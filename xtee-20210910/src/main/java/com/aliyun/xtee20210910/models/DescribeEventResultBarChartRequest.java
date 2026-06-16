@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeEventResultBarChartRequest extends TeaModel {
     /**
-     * <p>Sets the language type for requests and received messages, default value is <strong>zh</strong>. Values:</p>
+     * <p>Sets the language type for requests and responses. Default value: <strong>zh</strong>. Valid values:</p>
      * <ul>
      * <li><strong>zh</strong>: Chinese</li>
      * <li><strong>en</strong>: English</li>
@@ -18,7 +18,7 @@ public class DescribeEventResultBarChartRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>Start time, accurate to milliseconds (ms).</p>
+     * <p>The start time, accurate to milliseconds (ms).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -28,7 +28,7 @@ public class DescribeEventResultBarChartRequest extends TeaModel {
     public Long beginTime;
 
     /**
-     * <p>End time, accurate to milliseconds (ms).</p>
+     * <p>The end time, accurate to milliseconds (ms).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -38,7 +38,7 @@ public class DescribeEventResultBarChartRequest extends TeaModel {
     public Long endTime;
 
     /**
-     * <p>Event code.</p>
+     * <p>Event codes.</p>
      * 
      * <strong>example:</strong>
      * <p>de_ahqhsw7665,de_ahqhsw7622</p>
@@ -47,7 +47,7 @@ public class DescribeEventResultBarChartRequest extends TeaModel {
     public String eventCodes;
 
     /**
-     * <p>Region code</p>
+     * <p>Region ID.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>

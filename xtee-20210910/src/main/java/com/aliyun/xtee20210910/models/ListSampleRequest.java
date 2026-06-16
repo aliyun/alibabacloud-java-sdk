@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListSampleRequest extends TeaModel {
     /**
+     * <p>Current page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -12,6 +14,8 @@ public class ListSampleRequest extends TeaModel {
     public Integer currentPage;
 
     /**
+     * <p>Language of error messages returned by the API. Valid values: zh: Chinese. en: English. Default value: en.</p>
+     * 
      * <strong>example:</strong>
      * <p>zh</p>
      */
@@ -19,6 +23,8 @@ public class ListSampleRequest extends TeaModel {
     public String lang;
 
     /**
+     * <p>Page size.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -26,6 +32,8 @@ public class ListSampleRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>Area code.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
      */
@@ -33,6 +41,8 @@ public class ListSampleRequest extends TeaModel {
     public String regId;
 
     /**
+     * <p>Sample name.</p>
+     * 
      * <strong>example:</strong>
      * <p>SampleTest</p>
      */
@@ -40,6 +50,8 @@ public class ListSampleRequest extends TeaModel {
     public String sampleName;
 
     /**
+     * <p>Scenario.</p>
+     * 
      * <strong>example:</strong>
      * <p>FINANCE</p>
      */
@@ -47,6 +59,8 @@ public class ListSampleRequest extends TeaModel {
     public String tab;
 
     /**
+     * <p>Access type.</p>
+     * 
      * <strong>example:</strong>
      * <p>SAF_CONSOLE</p>
      */
@@ -54,6 +68,8 @@ public class ListSampleRequest extends TeaModel {
     public String type;
 
     /**
+     * <p>Upload end time.</p>
+     * 
      * <strong>example:</strong>
      * <p>2023-03-09 14:45:26</p>
      */
@@ -61,6 +77,8 @@ public class ListSampleRequest extends TeaModel {
     public String uploadTimeEnd;
 
     /**
+     * <p>Upload start time.</p>
+     * 
      * <strong>example:</strong>
      * <p>2023-03-09 14:45:23</p>
      */

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeDecisionResultFluctuationResponseBody extends TeaModel {
     /**
-     * <p>Status code.</p>
+     * <p>The status code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,7 +14,7 @@ public class DescribeDecisionResultFluctuationResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>HTTP status code</p>
+     * <p>The HTTP status code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -23,7 +23,7 @@ public class DescribeDecisionResultFluctuationResponseBody extends TeaModel {
     public String httpStatusCode;
 
     /**
-     * <p>Error details</p>
+     * <p>The error details.</p>
      * 
      * <strong>example:</strong>
      * <p>The input parameter data is not valid. order_storage_company_num component not found</p>
@@ -32,7 +32,7 @@ public class DescribeDecisionResultFluctuationResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Request ID.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>AE7E6105-7DEB-5125-9B24-DCBC139F6CD2</p>
@@ -41,13 +41,13 @@ public class DescribeDecisionResultFluctuationResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Return object</p>
+     * <p>The returned object.</p>
      */
     @NameInMap("resultObject")
     public java.util.List<DescribeDecisionResultFluctuationResponseBodyResultObject> resultObject;
 
     /**
-     * <p>Indicates whether the operation was successful.</p>
+     * <p>Indicates whether the request was successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -110,7 +110,7 @@ public class DescribeDecisionResultFluctuationResponseBody extends TeaModel {
 
     public static class DescribeDecisionResultFluctuationResponseBodyResultObject extends TeaModel {
         /**
-         * <p>Execution status.</p>
+         * <p>The execution status.</p>
          * 
          * <strong>example:</strong>
          * <p>PASS</p>
@@ -119,7 +119,7 @@ public class DescribeDecisionResultFluctuationResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>Today\&quot;s count</p>
+         * <p>The count for today.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -128,7 +128,7 @@ public class DescribeDecisionResultFluctuationResponseBody extends TeaModel {
         public Long todayNum;
 
         /**
-         * <p>Count within the last seven days</p>
+         * <p>The count for the last seven days.</p>
          * 
          * <strong>example:</strong>
          * <p>600</p>
@@ -137,7 +137,7 @@ public class DescribeDecisionResultFluctuationResponseBody extends TeaModel {
         public String withinSevenDayNum;
 
         /**
-         * <p>Count within the last thirty days</p>
+         * <p>The count for the last thirty days.</p>
          * 
          * <strong>example:</strong>
          * <p>1200</p>
@@ -146,7 +146,7 @@ public class DescribeDecisionResultFluctuationResponseBody extends TeaModel {
         public String withinThirtyDayNum;
 
         /**
-         * <p>Count within the last three days</p>
+         * <p>The count for the last three days.</p>
          * 
          * <strong>example:</strong>
          * <p>300</p>
@@ -155,7 +155,7 @@ public class DescribeDecisionResultFluctuationResponseBody extends TeaModel {
         public String withinThreeDayNum;
 
         /**
-         * <p>Yesterday\&quot;s count</p>
+         * <p>The count for yesterday.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>

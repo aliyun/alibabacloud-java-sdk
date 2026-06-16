@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeTagsRatioLineChartResponseBody extends TeaModel {
     /**
-     * <p>Request ID</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>AE7E6105-7DEB-5125-9B24-DCBC139F6CD2</p>
@@ -14,7 +14,7 @@ public class DescribeTagsRatioLineChartResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Return object</p>
+     * <p>The response object.</p>
      */
     @NameInMap("resultObject")
     public DescribeTagsRatioLineChartResponseBodyResultObject resultObject;
@@ -42,13 +42,13 @@ public class DescribeTagsRatioLineChartResponseBody extends TeaModel {
 
     public static class DescribeTagsRatioLineChartResponseBodyResultObjectSeries extends TeaModel {
         /**
-         * <p>Result data.</p>
+         * <p>The result data.</p>
          */
         @NameInMap("data")
         public java.util.List<String> data;
 
         /**
-         * <p>Series name.</p>
+         * <p>The series name.</p>
          * 
          * <strong>example:</strong>
          * <p>rn101</p>
@@ -81,7 +81,7 @@ public class DescribeTagsRatioLineChartResponseBody extends TeaModel {
 
     public static class DescribeTagsRatioLineChartResponseBodyResultObjectXaxis extends TeaModel {
         /**
-         * <p>X-axis data</p>
+         * <p>The X-axis data.</p>
          */
         @NameInMap("data")
         public java.util.List<String> data;
@@ -103,13 +103,13 @@ public class DescribeTagsRatioLineChartResponseBody extends TeaModel {
 
     public static class DescribeTagsRatioLineChartResponseBodyResultObject extends TeaModel {
         /**
-         * <p>Data list</p>
+         * <p>The data list.</p>
          */
         @NameInMap("series")
         public java.util.List<DescribeTagsRatioLineChartResponseBodyResultObjectSeries> series;
 
         /**
-         * <p>xaxis node.</p>
+         * <p>The xaxis node.</p>
          */
         @NameInMap("xaxis")
         public DescribeTagsRatioLineChartResponseBodyResultObjectXaxis xaxis;

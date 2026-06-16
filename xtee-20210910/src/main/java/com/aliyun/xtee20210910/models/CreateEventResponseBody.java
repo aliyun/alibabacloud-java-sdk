@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateEventResponseBody extends TeaModel {
     /**
-     * <p>Return result.</p>
+     * <p>The returned result.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -14,7 +14,7 @@ public class CreateEventResponseBody extends TeaModel {
     public Boolean data;
 
     /**
-     * <p>Request ID.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>AE7E6105-7DEB-5125-9B24-DCBC139F6CD2</p>

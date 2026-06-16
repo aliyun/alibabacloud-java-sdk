@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeApiVariableRequest extends TeaModel {
     /**
-     * <p>Sets the language type for requests and received messages, with a default value of <strong>zh</strong>. Values: </p>
+     * <p>The language type for the request and response messages. Default value: <strong>zh</strong>. Valid values:</p>
      * <ul>
      * <li><strong>zh</strong>: Chinese</li>
      * <li><strong>en</strong>: English</li>
@@ -18,7 +18,7 @@ public class DescribeApiVariableRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>Variable ID</p>
+     * <p>The variable ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -28,7 +28,7 @@ public class DescribeApiVariableRequest extends TeaModel {
     public String id;
 
     /**
-     * <p>Region code</p>
+     * <p>The region ID.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>

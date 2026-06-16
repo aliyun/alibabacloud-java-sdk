@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class DescribeVariableFeeRequest extends TeaModel {
     /**
-     * <p>Sets the language type for requests and received messages, default value is <strong>zh</strong>. Values:</p>
+     * <p>The language of the request and response. Default value: <strong>zh</strong>. Valid values:</p>
      * <ul>
-     * <li><strong>zh</strong>: Chinese</li>
-     * <li><strong>en</strong>: English</li>
+     * <li><strong>zh</strong>: Chinese.</li>
+     * <li><strong>en</strong>: English.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,14 +18,14 @@ public class DescribeVariableFeeRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>Variable ID</p>
+     * <p>The variable ID.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("ids")
     public java.util.List<Long> ids;
 
     /**
-     * <p>Region code</p>
+     * <p>The region code.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>

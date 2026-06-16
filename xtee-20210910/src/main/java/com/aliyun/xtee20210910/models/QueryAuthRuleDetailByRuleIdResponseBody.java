@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class QueryAuthRuleDetailByRuleIdResponseBody extends TeaModel {
     /**
-     * <p>Request ID</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>A32FE941-35F2-5378-B37C-4B8FDB16F094</p>
@@ -14,7 +14,7 @@ public class QueryAuthRuleDetailByRuleIdResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Returned object</p>
+     * <p>The returned object.</p>
      */
     @NameInMap("resultObject")
     public QueryAuthRuleDetailByRuleIdResponseBodyResultObject resultObject;
@@ -42,7 +42,7 @@ public class QueryAuthRuleDetailByRuleIdResponseBody extends TeaModel {
 
     public static class QueryAuthRuleDetailByRuleIdResponseBodyResultObject extends TeaModel {
         /**
-         * <p>Audit ID</p>
+         * <p>The approval ID.</p>
          * 
          * <strong>example:</strong>
          * <p>225</p>
@@ -51,7 +51,7 @@ public class QueryAuthRuleDetailByRuleIdResponseBody extends TeaModel {
         public Long auditId;
 
         /**
-         * <p>Authorization type</p>
+         * <p>The authorization type.</p>
          * 
          * <strong>example:</strong>
          * <p>all</p>
@@ -60,7 +60,7 @@ public class QueryAuthRuleDetailByRuleIdResponseBody extends TeaModel {
         public String authType;
 
         /**
-         * <p>Authorized user UID</p>
+         * <p>The UID of the authorized user.</p>
          * 
          * <strong>example:</strong>
          * <ul>
@@ -71,7 +71,7 @@ public class QueryAuthRuleDetailByRuleIdResponseBody extends TeaModel {
         public String authUsers;
 
         /**
-         * <p>Primary key ID of the strategy</p>
+         * <p>The primary key ID of the policy.</p>
          * 
          * <strong>example:</strong>
          * <p>6843</p>
@@ -80,7 +80,7 @@ public class QueryAuthRuleDetailByRuleIdResponseBody extends TeaModel {
         public Long consoleRuleId;
 
         /**
-         * <p>Event code</p>
+         * <p>The event code.</p>
          * 
          * <strong>example:</strong>
          * <p>de_aszbjb7236</p>
@@ -89,7 +89,7 @@ public class QueryAuthRuleDetailByRuleIdResponseBody extends TeaModel {
         public String eventCode;
 
         /**
-         * <p>Event name.</p>
+         * <p>The event name.</p>
          * 
          * <strong>example:</strong>
          * <p>注册风险</p>
@@ -98,7 +98,7 @@ public class QueryAuthRuleDetailByRuleIdResponseBody extends TeaModel {
         public String eventName;
 
         /**
-         * <p>Creation time.</p>
+         * <p>The creation time.</p>
          * 
          * <strong>example:</strong>
          * <p>1621578648000</p>
@@ -107,7 +107,7 @@ public class QueryAuthRuleDetailByRuleIdResponseBody extends TeaModel {
         public Long gmtCreate;
 
         /**
-         * <p>Modification time</p>
+         * <p>The modification time.</p>
          * 
          * <strong>example:</strong>
          * <p>1565701886000</p>
@@ -116,7 +116,7 @@ public class QueryAuthRuleDetailByRuleIdResponseBody extends TeaModel {
         public Long gmtModified;
 
         /**
-         * <p>Execution logic</p>
+         * <p>The execution logic.</p>
          * 
          * <strong>example:</strong>
          * <p>1&amp;2</p>
@@ -125,7 +125,7 @@ public class QueryAuthRuleDetailByRuleIdResponseBody extends TeaModel {
         public String logicExpression;
 
         /**
-         * <p>Description</p>
+         * <p>The description.</p>
          * 
          * <strong>example:</strong>
          * <p>描述</p>
@@ -134,7 +134,7 @@ public class QueryAuthRuleDetailByRuleIdResponseBody extends TeaModel {
         public String memo;
 
         /**
-         * <p>Rule priority, the higher the number, the higher the priority.</p>
+         * <p>The policy priority. A larger value indicates a higher priority.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -143,13 +143,13 @@ public class QueryAuthRuleDetailByRuleIdResponseBody extends TeaModel {
         public Long priority;
 
         /**
-         * <p>Returned rule action structure.</p>
+         * <p>The returned rule action struct.</p>
          */
         @NameInMap("ruleActionMap")
         public java.util.Map<String, String> ruleActionMap;
 
         /**
-         * <p>Output actions</p>
+         * <p>The output actions.</p>
          * 
          * <strong>example:</strong>
          * <p>[{\&quot;inputs\&quot;:[\&quot;unusualBrand\&quot;],\&quot;name\&quot;:\&quot;<strong>addDeTags</strong>\&quot;,\&quot;actionType\&quot;:\&quot;TAG\&quot;,\&quot;outputType\&quot;:\&quot;const\&quot;}]</p>
@@ -158,7 +158,7 @@ public class QueryAuthRuleDetailByRuleIdResponseBody extends TeaModel {
         public String ruleActions;
 
         /**
-         * <p>Rule authorization type</p>
+         * <p>The policy type.</p>
          * 
          * <strong>example:</strong>
          * <p>WHITE_BOX</p>
@@ -167,7 +167,7 @@ public class QueryAuthRuleDetailByRuleIdResponseBody extends TeaModel {
         public String ruleAuthType;
 
         /**
-         * <p>Rule expressions.</p>
+         * <p>The rule expressions.</p>
          * 
          * <strong>example:</strong>
          * <p>[{\&quot;expressionName\&quot;:\&quot;同一设备同一IP上的注册用户数\&quot;,\&quot;itemId\&quot;:1,\&quot;left\&quot;:{\&quot;name\&quot;:\&quot;dK7EXHr490f\&quot;},\&quot;operatorCode\&quot;:\&quot;gte\&quot;,\&quot;operatorName\&quot;:\&quot;大于等于\&quot;,\&quot;right\&quot;:{\&quot;fieldValue\&quot;:\&quot;2\&quot;}}]</p>
@@ -176,7 +176,7 @@ public class QueryAuthRuleDetailByRuleIdResponseBody extends TeaModel {
         public String ruleExpressions;
 
         /**
-         * <p>Strategy ID</p>
+         * <p>The policy ID.</p>
          * 
          * <strong>example:</strong>
          * <p>102224</p>
@@ -185,7 +185,7 @@ public class QueryAuthRuleDetailByRuleIdResponseBody extends TeaModel {
         public String ruleId;
 
         /**
-         * <p>Strategy name</p>
+         * <p>The policy name.</p>
          * 
          * <strong>example:</strong>
          * <p>营销风险识别</p>
@@ -194,7 +194,7 @@ public class QueryAuthRuleDetailByRuleIdResponseBody extends TeaModel {
         public String ruleName;
 
         /**
-         * <p>Strategy status</p>
+         * <p>The policy status.</p>
          * 
          * <strong>example:</strong>
          * <p>RUNNING</p>
@@ -203,7 +203,7 @@ public class QueryAuthRuleDetailByRuleIdResponseBody extends TeaModel {
         public String ruleStatus;
 
         /**
-         * <p>Rule type</p>
+         * <p>The policy type.</p>
          * 
          * <strong>example:</strong>
          * <p>DEFAULT</p>
@@ -212,7 +212,7 @@ public class QueryAuthRuleDetailByRuleIdResponseBody extends TeaModel {
         public String ruleType;
 
         /**
-         * <p>Primary key ID of the strategy version</p>
+         * <p>The primary key ID of the policy version.</p>
          * 
          * <strong>example:</strong>
          * <p>11519</p>
@@ -221,7 +221,7 @@ public class QueryAuthRuleDetailByRuleIdResponseBody extends TeaModel {
         public Long ruleVersionId;
 
         /**
-         * <p>Template type</p>
+         * <p>The template type.</p>
          * 
          * <strong>example:</strong>
          * <p>PUB_SERVICE</p>
@@ -230,7 +230,7 @@ public class QueryAuthRuleDetailByRuleIdResponseBody extends TeaModel {
         public String templateType;
 
         /**
-         * <p>Version number</p>
+         * <p>The version number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class RecallRuleAuditRequest extends TeaModel {
     /**
-     * <p>Primary key ID</p>
+     * <p>The primary key ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class RecallRuleAuditRequest extends TeaModel {
     public Long id;
 
     /**
-     * <p>Region code</p>
+     * <p>The region encoding.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>

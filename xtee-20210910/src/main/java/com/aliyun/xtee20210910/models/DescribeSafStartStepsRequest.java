@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class DescribeSafStartStepsRequest extends TeaModel {
     /**
-     * <p>Set the language type for requests and received messages, default value is <strong>zh</strong>. Values:</p>
+     * <p>The language of the request and response. Default value: <strong>zh</strong>. Valid values:</p>
      * <ul>
      * <li><strong>zh</strong>: Chinese</li>
-     * <li><strong>en</strong>: English</li>
+     * <li><strong>en</strong>: English.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,8 +18,7 @@ public class DescribeSafStartStepsRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>Whether the server is an Alibaba Cloud server</p>
-     * <p>true or false</p>
+     * <p>Specifies whether the server is an Alibaba Cloud server. Valid values: true and false.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -28,8 +27,8 @@ public class DescribeSafStartStepsRequest extends TeaModel {
     public Boolean aliyunServer;
 
     /**
-     * <p>Used to receive a collection of strings from the frontend that POP cannot accept</p>
-     * <p>Device type</p>
+     * <p>The string of device type collection passed from the frontend that cannot be received by POP.</p>
+     * <p>The device type.</p>
      * 
      * <strong>example:</strong>
      * <p>ios</p>
@@ -38,7 +37,7 @@ public class DescribeSafStartStepsRequest extends TeaModel {
     public String deviceTypesStr;
 
     /**
-     * <p>Event code</p>
+     * <p>The event code.</p>
      * 
      * <strong>example:</strong>
      * <p>de_ahqido8038</p>
@@ -47,10 +46,10 @@ public class DescribeSafStartStepsRequest extends TeaModel {
     public String eventCode;
 
     /**
-     * <p>Language, parameters can be passed</p>
+     * <p>The language. Valid values:</p>
      * <ul>
      * <li>zh-CN: Chinese (default)</li>
-     * <li>en-US: English</li>
+     * <li>en-US: English.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -60,7 +59,7 @@ public class DescribeSafStartStepsRequest extends TeaModel {
     public String language;
 
     /**
-     * <p>Region code</p>
+     * <p>The region code.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -69,7 +68,7 @@ public class DescribeSafStartStepsRequest extends TeaModel {
     public String regId;
 
     /**
-     * <p>Server region</p>
+     * <p>The region where the server resides.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>

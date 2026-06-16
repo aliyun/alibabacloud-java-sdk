@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class ModifyEventRequest extends TeaModel {
     /**
-     * <p>Set the language type for requests and received messages, default value is <strong>zh</strong>. Values:</p>
+     * <p>The language of the request and response. Default value: <strong>zh</strong>. Valid values:</p>
      * <ul>
-     * <li><strong>zh</strong>: Chinese</li>
-     * <li><strong>en</strong>: English</li>
+     * <li><strong>zh</strong>: Chinese.</li>
+     * <li><strong>en</strong>: English.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,7 +18,7 @@ public class ModifyEventRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>Version number (latest).</p>
+     * <p>The version number (latest).</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -27,7 +27,7 @@ public class ModifyEventRequest extends TeaModel {
     public Integer bizVersion;
 
     /**
-     * <p>Creation type</p>
+     * <p>The creation type.</p>
      * 
      * <strong>example:</strong>
      * <p>NORMAL</p>
@@ -36,7 +36,7 @@ public class ModifyEventRequest extends TeaModel {
     public String createType;
 
     /**
-     * <p>Event code</p>
+     * <p>The event code.</p>
      * 
      * <strong>example:</strong>
      * <p>de_ambiby3420</p>
@@ -45,7 +45,7 @@ public class ModifyEventRequest extends TeaModel {
     public String eventCode;
 
     /**
-     * <p>Event name.</p>
+     * <p>The event name.</p>
      * 
      * <strong>example:</strong>
      * <p>注册事件</p>
@@ -54,7 +54,7 @@ public class ModifyEventRequest extends TeaModel {
     public String eventName;
 
     /**
-     * <p>Input parameters, JSON string.</p>
+     * <p>The input parameters in a JSON string.</p>
      * 
      * <strong>example:</strong>
      * <p>[{\&quot;fieldCode\&quot;:\&quot;sessionId\&quot;,\&quot;description\&quot;:\&quot;会话ID\&quot;,\&quot;fieldRank\&quot;:0,\&quot;title\&quot;:\&quot;会话ID\&quot;,\&quot;fieldType\&quot;:\&quot;STRING\&quot;,\&quot;fieldSource\&quot;:\&quot;DEFAULT\&quot;},{\&quot;fieldCode\&quot;:\&quot;tags\&quot;,\&quot;fieldRank\&quot;:1,\&quot;title\&quot;:\&quot;风险标签\&quot;,\&quot;fieldType\&quot;:\&quot;STRING\&quot;,\&quot;fieldSource\&quot;:\&quot;DEFAULT\&quot;},{\&quot;fieldCode\&quot;:\&quot;score\&quot;,\&quot;fieldRank\&quot;:2,\&quot;title\&quot;:\&quot;风险分值\&quot;,\&quot;fieldType\&quot;:\&quot;DOUBLE\&quot;,\&quot;fieldSource\&quot;:\&quot;DEFAULT\&quot;},{\&quot;fieldCode\&quot;:\&quot;hitRules\&quot;,\&quot;fieldRank\&quot;:3,\&quot;title\&quot;:\&quot;命中策略\&quot;,\&quot;fieldType\&quot;:\&quot;STRING\&quot;,\&quot;fieldSource\&quot;:\&quot;DEFAULT\&quot;}]</p>
@@ -63,7 +63,7 @@ public class ModifyEventRequest extends TeaModel {
     public String inputFieldsStr;
 
     /**
-     * <p>Memo.</p>
+     * <p>The remarks.</p>
      * 
      * <strong>example:</strong>
      * <p>备注</p>
@@ -72,7 +72,7 @@ public class ModifyEventRequest extends TeaModel {
     public String memo;
 
     /**
-     * <p>Region code</p>
+     * <p>The region code.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -81,7 +81,7 @@ public class ModifyEventRequest extends TeaModel {
     public String regId;
 
     /**
-     * <p>Template type</p>
+     * <p>The template type.</p>
      * 
      * <strong>example:</strong>
      * <p>暂无</p>

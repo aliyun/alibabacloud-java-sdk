@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class UpdateSampleBatchRequest extends TeaModel {
     /**
-     * <p>Sets the language type for requests and received messages, default value is <strong>zh</strong>. Values:</p>
+     * <p>The language type for the request and response. Default value: <strong>zh</strong>. Valid values:</p>
      * <ul>
-     * <li><strong>zh</strong>: Chinese</li>
-     * <li><strong>en</strong>: English</li>
+     * <li><strong>zh</strong>: Chinese.</li>
+     * <li><strong>en</strong>: English.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,7 +18,7 @@ public class UpdateSampleBatchRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>Batch operation IDs.</p>
+     * <p>The IDs of the samples to be modified in batches.</p>
      * 
      * <strong>example:</strong>
      * <p>324,343</p>
@@ -27,7 +27,7 @@ public class UpdateSampleBatchRequest extends TeaModel {
     public String ids;
 
     /**
-     * <p>Region code.</p>
+     * <p>The region code.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -36,7 +36,7 @@ public class UpdateSampleBatchRequest extends TeaModel {
     public String regId;
 
     /**
-     * <p>Tags (comma-separated).</p>
+     * <p>The tags, separated by commas.</p>
      * 
      * <strong>example:</strong>
      * <p>rm0102,rm0103</p>
@@ -45,7 +45,7 @@ public class UpdateSampleBatchRequest extends TeaModel {
     public String tags;
 
     /**
-     * <p>Version number (latest).</p>
+     * <p>The latest version numbers.</p>
      * 
      * <strong>example:</strong>
      * <p>1,1</p>

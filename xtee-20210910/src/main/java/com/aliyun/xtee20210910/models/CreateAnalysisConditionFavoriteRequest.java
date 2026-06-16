@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class CreateAnalysisConditionFavoriteRequest extends TeaModel {
     /**
-     * <p>Sets the language type for requests and received messages, with a default value of <strong>zh</strong>. Values:</p>
+     * <p>The language of the request and response. Default value: <strong>zh</strong>. Valid values:</p>
      * <ul>
-     * <li><strong>zh</strong>: Chinese</li>
-     * <li><strong>en</strong>: English</li>
+     * <li><strong>zh</strong>: Chinese.</li>
+     * <li><strong>en</strong>: English.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,7 +18,7 @@ public class CreateAnalysisConditionFavoriteRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>Condition value.</p>
+     * <p>The condition value.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -28,7 +28,7 @@ public class CreateAnalysisConditionFavoriteRequest extends TeaModel {
     public String condition;
 
     /**
-     * <p>Start time, accurate to milliseconds (ms).</p>
+     * <p>The start time, in milliseconds (ms).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -38,7 +38,7 @@ public class CreateAnalysisConditionFavoriteRequest extends TeaModel {
     public Long eventBeginTime;
 
     /**
-     * <p>Event codes, separated by commas</p>
+     * <p>The event codes. Separate multiple event codes with commas (,).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -48,7 +48,7 @@ public class CreateAnalysisConditionFavoriteRequest extends TeaModel {
     public String eventCodes;
 
     /**
-     * <p>End time, accurate to milliseconds (ms).</p>
+     * <p>The end time, in milliseconds (ms).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -58,7 +58,7 @@ public class CreateAnalysisConditionFavoriteRequest extends TeaModel {
     public Long eventEndTime;
 
     /**
-     * <p>Field name</p>
+     * <p>The field name.</p>
      * 
      * <strong>example:</strong>
      * <p>age</p>
@@ -67,7 +67,7 @@ public class CreateAnalysisConditionFavoriteRequest extends TeaModel {
     public String fieldName;
 
     /**
-     * <p>Field value</p>
+     * <p>The field value.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -76,7 +76,7 @@ public class CreateAnalysisConditionFavoriteRequest extends TeaModel {
     public String fieldValue;
 
     /**
-     * <p>Condition favorite name</p>
+     * <p>The name of the saved query condition.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -86,7 +86,7 @@ public class CreateAnalysisConditionFavoriteRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>Region code</p>
+     * <p>The region code.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -96,7 +96,7 @@ public class CreateAnalysisConditionFavoriteRequest extends TeaModel {
     public String regId;
 
     /**
-     * <p>Query type</p>
+     * <p>The query type.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

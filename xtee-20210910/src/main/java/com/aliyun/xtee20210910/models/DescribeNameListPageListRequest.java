@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class DescribeNameListPageListRequest extends TeaModel {
     /**
-     * <p>Sets the language type for requests and received messages, default value is <strong>zh</strong>. Values:</p>
+     * <p>The language type for the request and response messages. Default value: <strong>zh</strong>. Valid values:</p>
      * <ul>
      * <li><strong>zh</strong>: Chinese</li>
-     * <li><strong>en</strong>: English</li>
+     * <li><strong>en</strong>: English.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,7 +18,7 @@ public class DescribeNameListPageListRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>Current page number.</p>
+     * <p>The current page number.</p>
      * 
      * <strong>example:</strong>
      * <p>3</p>
@@ -27,7 +27,7 @@ public class DescribeNameListPageListRequest extends TeaModel {
     public Integer currentPage;
 
     /**
-     * <p>Page size, default value is 10</p>
+     * <p>The number of entries per page. Default value: 10.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -36,7 +36,7 @@ public class DescribeNameListPageListRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>Region code</p>
+     * <p>The region code.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -45,7 +45,7 @@ public class DescribeNameListPageListRequest extends TeaModel {
     public String regId;
 
     /**
-     * <p>Update start time.</p>
+     * <p>The start time of the update period.</p>
      * 
      * <strong>example:</strong>
      * <p>1753372800000</p>
@@ -54,7 +54,7 @@ public class DescribeNameListPageListRequest extends TeaModel {
     public Long updateBeginTime;
 
     /**
-     * <p>Update end time.</p>
+     * <p>The end time of the update period.</p>
      * 
      * <strong>example:</strong>
      * <p>1753459199059</p>
@@ -63,7 +63,7 @@ public class DescribeNameListPageListRequest extends TeaModel {
     public Long updateEndTime;
 
     /**
-     * <p>Variable name/description</p>
+     * <p>The variable name or description.</p>
      * 
      * <strong>example:</strong>
      * <p>白名单</p>
@@ -72,7 +72,7 @@ public class DescribeNameListPageListRequest extends TeaModel {
     public String value;
 
     /**
-     * <p>Variable ID</p>
+     * <p>The variable ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

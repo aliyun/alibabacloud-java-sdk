@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class DescribeEventVariableTemplateBindRequest extends TeaModel {
     /**
-     * <p>Sets the language type for requests and received messages. Default value is <strong>zh</strong>. Values:</p>
+     * <p>The language of the request and response. Default value: <strong>zh</strong>. Valid values:</p>
      * <ul>
-     * <li><strong>zh</strong>: Chinese</li>
-     * <li><strong>en</strong>: English</li>
+     * <li><strong>zh</strong>: Chinese.</li>
+     * <li><strong>en</strong>: English.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,7 +18,7 @@ public class DescribeEventVariableTemplateBindRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>Input parameters, separated by commas if multiple.</p>
+     * <p>The input parameters. Separate multiple values with commas (,).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -28,7 +28,7 @@ public class DescribeEventVariableTemplateBindRequest extends TeaModel {
     public String inputs;
 
     /**
-     * <p>Region code</p>
+     * <p>The region code.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -37,7 +37,7 @@ public class DescribeEventVariableTemplateBindRequest extends TeaModel {
     public String regId;
 
     /**
-     * <p>Template code.</p>
+     * <p>The template code.</p>
      * 
      * <strong>example:</strong>
      * <p>register</p>
@@ -46,7 +46,7 @@ public class DescribeEventVariableTemplateBindRequest extends TeaModel {
     public String templateCode;
 
     /**
-     * <p>Type</p>
+     * <p>The type.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

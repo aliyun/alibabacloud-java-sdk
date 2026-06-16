@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class DeleteNameListRequest extends TeaModel {
     /**
-     * <p>Sets the language type for requests and received messages, default value is <strong>zh</strong>. Values: </p>
+     * <p>The language type for the request and response. Default value: <strong>zh</strong>. Valid values:</p>
      * <ul>
-     * <li><strong>zh</strong>: Chinese</li>
-     * <li><strong>en</strong>: English</li>
+     * <li><strong>zh</strong>: Chinese.</li>
+     * <li><strong>en</strong>: English.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,7 +18,7 @@ public class DeleteNameListRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>Name list ID, multiple IDs should be separated by commas</p>
+     * <p>The list IDs. Separate multiple IDs with commas (,).</p>
      * 
      * <strong>example:</strong>
      * <p>23,24,25</p>
@@ -27,7 +27,7 @@ public class DeleteNameListRequest extends TeaModel {
     public String ids;
 
     /**
-     * <p>Region code</p>
+     * <p>The region code.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>

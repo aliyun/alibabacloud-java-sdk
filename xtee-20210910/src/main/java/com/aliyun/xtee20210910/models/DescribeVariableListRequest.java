@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class DescribeVariableListRequest extends TeaModel {
     /**
-     * <p>Set the language type for requests and responses, default value is <strong>zh</strong>. Values: </p>
+     * <p>The language of the request and response. Default value: <strong>zh</strong>. Valid values:</p>
      * <ul>
      * <li><strong>zh</strong>: Chinese</li>
-     * <li><strong>en</strong>: English</li>
+     * <li><strong>en</strong>: English.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,7 +18,7 @@ public class DescribeVariableListRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>Creation type.</p>
+     * <p>The creation type.</p>
      * 
      * <strong>example:</strong>
      * <p>NORMAL</p>
@@ -27,7 +27,7 @@ public class DescribeVariableListRequest extends TeaModel {
     public String createType;
 
     /**
-     * <p>Current page number.</p>
+     * <p>The current page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -36,7 +36,7 @@ public class DescribeVariableListRequest extends TeaModel {
     public String currentPage;
 
     /**
-     * <p>Page size, default value is 10.</p>
+     * <p>The number of entries per page. Default value: 10.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -45,7 +45,7 @@ public class DescribeVariableListRequest extends TeaModel {
     public String pageSize;
 
     /**
-     * <p>Associated event ID.</p>
+     * <p>The ID of the associated event.</p>
      * 
      * <strong>example:</strong>
      * <p>de_avypfd8253</p>
@@ -54,7 +54,7 @@ public class DescribeVariableListRequest extends TeaModel {
     public String refObjId;
 
     /**
-     * <p>Region code.</p>
+     * <p>The region code.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -63,7 +63,7 @@ public class DescribeVariableListRequest extends TeaModel {
     public String regId;
 
     /**
-     * <p>Source type.</p>
+     * <p>The source type.</p>
      * 
      * <strong>example:</strong>
      * <p>SAF</p>
@@ -72,7 +72,7 @@ public class DescribeVariableListRequest extends TeaModel {
     public String sourceType;
 
     /**
-     * <p>Type.</p>
+     * <p>The type.</p>
      * 
      * <strong>example:</strong>
      * <p>IDENTIFY_SERVICE</p>
@@ -81,7 +81,7 @@ public class DescribeVariableListRequest extends TeaModel {
     public String type;
 
     /**
-     * <p>JSON array string of types.</p>
+     * <p>The type JSON array string.</p>
      * 
      * <strong>example:</strong>
      * <p>[\&quot;coupon_abuse_detection\&quot;]</p>
@@ -90,7 +90,7 @@ public class DescribeVariableListRequest extends TeaModel {
     public String typesStr;
 
     /**
-     * <p>Value for fuzzy search.</p>
+     * <p>The value for fuzzy match.</p>
      * 
      * <strong>example:</strong>
      * <p>注册</p>

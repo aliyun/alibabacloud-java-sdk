@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class DescribeDataSourcePageListRequest extends TeaModel {
     /**
-     * <p>Set the language type for request and response, default value is <strong>zh</strong>. Values:</p>
+     * <p>The language of the request and response. Default value: <strong>zh</strong>. Valid values:</p>
      * <ul>
      * <li><strong>zh</strong>: Chinese</li>
-     * <li><strong>en</strong>: English</li>
+     * <li><strong>en</strong>: English.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,7 +18,7 @@ public class DescribeDataSourcePageListRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>Request source IP.</p>
+     * <p>The source IP address of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>220.250.21.83</p>
@@ -27,7 +27,7 @@ public class DescribeDataSourcePageListRequest extends TeaModel {
     public String sourceIp;
 
     /**
-     * <p>Current page number.</p>
+     * <p>The current page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -36,7 +36,7 @@ public class DescribeDataSourcePageListRequest extends TeaModel {
     public Long currentPage;
 
     /**
-     * <p>Variable name</p>
+     * <p>The variable name.</p>
      * 
      * <strong>example:</strong>
      * <p>data_source</p>
@@ -45,7 +45,7 @@ public class DescribeDataSourcePageListRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>Page size, default value is 10</p>
+     * <p>The number of entries per page. Default value: 10.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -54,7 +54,7 @@ public class DescribeDataSourcePageListRequest extends TeaModel {
     public Long pageSize;
 
     /**
-     * <p>Region code</p>
+     * <p>The region ID.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -63,7 +63,7 @@ public class DescribeDataSourcePageListRequest extends TeaModel {
     public String regId;
 
     /**
-     * <p>Type</p>
+     * <p>The type.</p>
      * 
      * <strong>example:</strong>
      * <p>FILE</p>

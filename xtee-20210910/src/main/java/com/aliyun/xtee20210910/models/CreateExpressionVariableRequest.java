@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class CreateExpressionVariableRequest extends TeaModel {
     /**
-     * <p>Sets the language type for requests and received messages, with a default value of <strong>zh</strong>. Values:</p>
+     * <p>The language of the request and response. Default value: <strong>zh</strong>. Valid values:</p>
      * <ul>
-     * <li><strong>zh</strong>: Chinese</li>
-     * <li><strong>en</strong>: English</li>
+     * <li><strong>zh</strong>: Chinese.</li>
+     * <li><strong>en</strong>: English.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,7 +18,7 @@ public class CreateExpressionVariableRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>Description.</p>
+     * <p>The description.</p>
      * 
      * <strong>example:</strong>
      * <p>获取入参的手机号前7位</p>
@@ -27,7 +27,7 @@ public class CreateExpressionVariableRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>Event code</p>
+     * <p>The event code.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -37,7 +37,7 @@ public class CreateExpressionVariableRequest extends TeaModel {
     public String eventCode;
 
     /**
-     * <p>Calculation expression</p>
+     * <p>The calculation expression.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -47,7 +47,7 @@ public class CreateExpressionVariableRequest extends TeaModel {
     public String expression;
 
     /**
-     * <p>Display value of calculation expression</p>
+     * <p>The display value of the calculation expression.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -57,7 +57,7 @@ public class CreateExpressionVariableRequest extends TeaModel {
     public String expressionTitle;
 
     /**
-     * <p>Calculation expression variable</p>
+     * <p>The variable of the calculation expression.</p>
      * 
      * <strong>example:</strong>
      * <p>[{&quot;name&quot;:&quot;ex_GX9rrlTq4b67&quot;,&quot;code&quot;:&quot;deInvokeSelfVariable(44659)&quot;,&quot;fieldType&quot;:&quot;INT&quot;}]</p>
@@ -66,7 +66,7 @@ public class CreateExpressionVariableRequest extends TeaModel {
     public String expressionVariable;
 
     /**
-     * <p>Outlier</p>
+     * <p>The outlier value.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -76,7 +76,7 @@ public class CreateExpressionVariableRequest extends TeaModel {
     public String outlier;
 
     /**
-     * <p>Variable return type</p>
+     * <p>The return type of the variable.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -86,7 +86,7 @@ public class CreateExpressionVariableRequest extends TeaModel {
     public String outputs;
 
     /**
-     * <p>Region code</p>
+     * <p>The region code.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -96,7 +96,7 @@ public class CreateExpressionVariableRequest extends TeaModel {
     public String regId;
 
     /**
-     * <p>Title.</p>
+     * <p>The title.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

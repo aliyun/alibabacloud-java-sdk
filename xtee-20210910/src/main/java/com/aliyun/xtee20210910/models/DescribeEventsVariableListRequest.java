@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class DescribeEventsVariableListRequest extends TeaModel {
     /**
-     * <p>Sets the language type for requests and received messages, with a default value of <strong>zh</strong>. Values:</p>
+     * <p>The language of the request and response. Default value: <strong>zh</strong>. Valid values:</p>
      * <ul>
-     * <li><strong>zh</strong>: Chinese</li>
-     * <li><strong>en</strong>: English</li>
+     * <li><strong>zh</strong>: Chinese.</li>
+     * <li><strong>en</strong>: English.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,7 +18,7 @@ public class DescribeEventsVariableListRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>Creation type</p>
+     * <p>The creation type.</p>
      * 
      * <strong>example:</strong>
      * <p>NORMAL</p>
@@ -27,7 +27,7 @@ public class DescribeEventsVariableListRequest extends TeaModel {
     public String createType;
 
     /**
-     * <p>Event code.</p>
+     * <p>The event code.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -37,7 +37,7 @@ public class DescribeEventsVariableListRequest extends TeaModel {
     public String eventCodes;
 
     /**
-     * <p>Filter object</p>
+     * <p>The filter object.</p>
      * 
      * <strong>example:</strong>
      * <p>{\&quot;type\&quot;:\&quot;EXPRESSION\&quot;,\&quot;name\&quot;:\&quot;ex_NgR6nDVD821c\&quot;}</p>
@@ -46,7 +46,7 @@ public class DescribeEventsVariableListRequest extends TeaModel {
     public String filterDTO;
 
     /**
-     * <p>Region code</p>
+     * <p>The region code.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -55,7 +55,7 @@ public class DescribeEventsVariableListRequest extends TeaModel {
     public String regId;
 
     /**
-     * <p>Applicable scene code</p>
+     * <p>The applicable scenario code.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

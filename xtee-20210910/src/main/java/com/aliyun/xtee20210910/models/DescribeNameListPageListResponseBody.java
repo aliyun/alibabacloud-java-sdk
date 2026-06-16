@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeNameListPageListResponseBody extends TeaModel {
     /**
-     * <p>Current page number.</p>
+     * <p>The current page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -14,7 +14,7 @@ public class DescribeNameListPageListResponseBody extends TeaModel {
     public String currentPage;
 
     /**
-     * <p>Page size, default value is 10</p>
+     * <p>The number of entries per page. Default value: 10.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -23,7 +23,7 @@ public class DescribeNameListPageListResponseBody extends TeaModel {
     public String pageSize;
 
     /**
-     * <p>Request ID.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>AE7E6105-7DEB-5125-9B24-DCBC139F6CD2</p>
@@ -32,13 +32,13 @@ public class DescribeNameListPageListResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Returned object</p>
+     * <p>The returned object.</p>
      */
     @NameInMap("resultObject")
     public java.util.List<DescribeNameListPageListResponseBodyResultObject> resultObject;
 
     /**
-     * <p>Total number of items</p>
+     * <p>The total number of entries.</p>
      * 
      * <strong>example:</strong>
      * <p>101</p>
@@ -47,7 +47,7 @@ public class DescribeNameListPageListResponseBody extends TeaModel {
     public String totalItem;
 
     /**
-     * <p>Total number of pages</p>
+     * <p>The total number of pages.</p>
      * 
      * <strong>example:</strong>
      * <p>9</p>
@@ -110,7 +110,7 @@ public class DescribeNameListPageListResponseBody extends TeaModel {
 
     public static class DescribeNameListPageListResponseBodyResultObject extends TeaModel {
         /**
-         * <p>Creation time.</p>
+         * <p>The creation time.</p>
          * 
          * <strong>example:</strong>
          * <p>1621578648000</p>
@@ -119,7 +119,7 @@ public class DescribeNameListPageListResponseBody extends TeaModel {
         public Long gmtCreate;
 
         /**
-         * <p>Modification time.</p>
+         * <p>The modification time.</p>
          * 
          * <strong>example:</strong>
          * <p>1565701886000</p>
@@ -128,7 +128,7 @@ public class DescribeNameListPageListResponseBody extends TeaModel {
         public Long gmtModified;
 
         /**
-         * <p>ID of the list variable content data</p>
+         * <p>The ID of the list variable content data.</p>
          * 
          * <strong>example:</strong>
          * <p>497</p>
@@ -137,16 +137,16 @@ public class DescribeNameListPageListResponseBody extends TeaModel {
         public Long id;
 
         /**
-         * <p>NameList Content memo</p>
+         * <p>The remarks.</p>
          * 
          * <strong>example:</strong>
-         * <p>名单内容描述</p>
+         * <p>本迭代测试</p>
          */
         @NameInMap("memo")
         public String memo;
 
         /**
-         * <p>Variable name</p>
+         * <p>The variable name.</p>
          * 
          * <strong>example:</strong>
          * <p>nl_UN8otElLb490</p>
@@ -155,7 +155,7 @@ public class DescribeNameListPageListResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>Variable type</p>
+         * <p>The variable type.</p>
          * 
          * <strong>example:</strong>
          * <p>accountId</p>
@@ -164,7 +164,7 @@ public class DescribeNameListPageListResponseBody extends TeaModel {
         public String nameListType;
 
         /**
-         * <p>Title.</p>
+         * <p>The title.</p>
          * 
          * <strong>example:</strong>
          * <p>白名单</p>
@@ -173,7 +173,7 @@ public class DescribeNameListPageListResponseBody extends TeaModel {
         public String title;
 
         /**
-         * <p>User UID</p>
+         * <p>The user UID.</p>
          * 
          * <strong>example:</strong>
          * <p>130433202307074287</p>
@@ -182,7 +182,7 @@ public class DescribeNameListPageListResponseBody extends TeaModel {
         public String userId;
 
         /**
-         * <p>Variable value</p>
+         * <p>The variable value.</p>
          * 
          * <strong>example:</strong>
          * <p>130433202307074287</p>
@@ -191,7 +191,7 @@ public class DescribeNameListPageListResponseBody extends TeaModel {
         public String value;
 
         /**
-         * <p>Variable ID.</p>
+         * <p>The variable ID.</p>
          * 
          * <strong>example:</strong>
          * <p>762</p>

@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class DescribeBasicSearchPageListRequest extends TeaModel {
     /**
-     * <p>Sets the language type for requests and received messages, with a default value of <strong>zh</strong>. Values:</p>
+     * <p>The language of the request and response. Default value: <strong>zh</strong>. Valid values:</p>
      * <ul>
      * <li><strong>zh</strong>: Chinese</li>
-     * <li><strong>en</strong>: English</li>
+     * <li><strong>en</strong>: English.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,7 +18,7 @@ public class DescribeBasicSearchPageListRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>Current page number.</p>
+     * <p>The current page number.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -28,7 +28,7 @@ public class DescribeBasicSearchPageListRequest extends TeaModel {
     public Long currentPage;
 
     /**
-     * <p>Query start time, accurate to milliseconds (ms).</p>
+     * <p>The start time of the query, in milliseconds (ms).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -38,7 +38,7 @@ public class DescribeBasicSearchPageListRequest extends TeaModel {
     public Long eventBeginTime;
 
     /**
-     * <p>Event code.</p>
+     * <p>The event code.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -48,7 +48,7 @@ public class DescribeBasicSearchPageListRequest extends TeaModel {
     public String eventCodes;
 
     /**
-     * <p>End time, accurate to milliseconds (ms).</p>
+     * <p>The end time of the query, in milliseconds (ms).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -58,7 +58,7 @@ public class DescribeBasicSearchPageListRequest extends TeaModel {
     public Long eventEndTime;
 
     /**
-     * <p>Field name</p>
+     * <p>The field name.</p>
      * 
      * <strong>example:</strong>
      * <p>age</p>
@@ -67,7 +67,7 @@ public class DescribeBasicSearchPageListRequest extends TeaModel {
     public String fieldName;
 
     /**
-     * <p>Field value</p>
+     * <p>The field value.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -76,7 +76,7 @@ public class DescribeBasicSearchPageListRequest extends TeaModel {
     public String fieldValue;
 
     /**
-     * <p>Page size, with a default value of 10</p>
+     * <p>The number of entries per page. Default value: 10.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -86,7 +86,7 @@ public class DescribeBasicSearchPageListRequest extends TeaModel {
     public Long pageSize;
 
     /**
-     * <p>Region code</p>
+     * <p>The region code.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

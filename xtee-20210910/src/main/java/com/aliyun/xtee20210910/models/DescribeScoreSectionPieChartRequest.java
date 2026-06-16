@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class DescribeScoreSectionPieChartRequest extends TeaModel {
     /**
-     * <p>Sets the language type for requests and received messages, default value is <strong>zh</strong>. Values: </p>
+     * <p>The language of the request and response. Default value: <strong>zh</strong>. Valid values:</p>
      * <ul>
      * <li><strong>zh</strong>: Chinese</li>
-     * <li><strong>en</strong>: English</li>
+     * <li><strong>en</strong>: English.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,7 +18,7 @@ public class DescribeScoreSectionPieChartRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>Start time, accurate to milliseconds (ms).</p>
+     * <p>The start time, in milliseconds (ms).</p>
      * 
      * <strong>example:</strong>
      * <p>1751249559000</p>
@@ -27,7 +27,7 @@ public class DescribeScoreSectionPieChartRequest extends TeaModel {
     public Long beginTime;
 
     /**
-     * <p>End time, accurate to milliseconds (ms).</p>
+     * <p>The end time, in milliseconds (ms).</p>
      * 
      * <strong>example:</strong>
      * <p>1740535600000</p>
@@ -36,7 +36,7 @@ public class DescribeScoreSectionPieChartRequest extends TeaModel {
     public Long endTime;
 
     /**
-     * <p>Event code.</p>
+     * <p>The event code.</p>
      * 
      * <strong>example:</strong>
      * <p>de_afghcf6411</p>
@@ -45,7 +45,7 @@ public class DescribeScoreSectionPieChartRequest extends TeaModel {
     public String eventCodes;
 
     /**
-     * <p>Event type.</p>
+     * <p>The event type.</p>
      * 
      * <strong>example:</strong>
      * <p>MAIN</p>
@@ -54,7 +54,7 @@ public class DescribeScoreSectionPieChartRequest extends TeaModel {
     public String eventType;
 
     /**
-     * <p>Region code</p>
+     * <p>The region code.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>

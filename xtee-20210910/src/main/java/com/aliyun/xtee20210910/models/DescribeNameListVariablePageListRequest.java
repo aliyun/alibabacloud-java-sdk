@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class DescribeNameListVariablePageListRequest extends TeaModel {
     /**
-     * <p>Sets the language type for requests and received messages, default value is <strong>zh</strong>. Values:</p>
+     * <p>The language type for the request and response messages. Default value: <strong>zh</strong>. Valid values:</p>
      * <ul>
      * <li><strong>zh</strong>: Chinese</li>
-     * <li><strong>en</strong>: English</li>
+     * <li><strong>en</strong>: English.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,7 +18,7 @@ public class DescribeNameListVariablePageListRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>Current page number.</p>
+     * <p>The current page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -27,7 +27,7 @@ public class DescribeNameListVariablePageListRequest extends TeaModel {
     public Integer currentPage;
 
     /**
-     * <p>Variable name</p>
+     * <p>The variable name.</p>
      * 
      * <strong>example:</strong>
      * <p>age</p>
@@ -36,7 +36,7 @@ public class DescribeNameListVariablePageListRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>Variable type</p>
+     * <p>The variable type.</p>
      * 
      * <strong>example:</strong>
      * <p>accountId</p>
@@ -45,7 +45,7 @@ public class DescribeNameListVariablePageListRequest extends TeaModel {
     public String nameListType;
 
     /**
-     * <p>Page size, default value is 10</p>
+     * <p>The number of entries per page. Default value: 10.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -54,7 +54,7 @@ public class DescribeNameListVariablePageListRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>Region code</p>
+     * <p>The region code.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -63,7 +63,7 @@ public class DescribeNameListVariablePageListRequest extends TeaModel {
     public String regId;
 
     /**
-     * <p>Name list value</p>
+     * <p>The named list value.</p>
      * 
      * <strong>example:</strong>
      * <p>valuexxx</p>

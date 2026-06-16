@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class DescribeOperationLogPageListRequest extends TeaModel {
     /**
-     * <p>Set the language type for request and response messages, default value is <strong>zh</strong>. Values:</p>
+     * <p>The language of the request and response. Default value: <strong>zh</strong>. Valid values:</p>
      * <ul>
      * <li><strong>zh</strong>: Chinese</li>
-     * <li><strong>en</strong>: English</li>
+     * <li><strong>en</strong>: English.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,7 +18,7 @@ public class DescribeOperationLogPageListRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>Current page number.</p>
+     * <p>The current page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -27,7 +27,7 @@ public class DescribeOperationLogPageListRequest extends TeaModel {
     public Integer currentPage;
 
     /**
-     * <p>End time.</p>
+     * <p>The end time.</p>
      * 
      * <strong>example:</strong>
      * <p>1733364850919</p>
@@ -36,16 +36,16 @@ public class DescribeOperationLogPageListRequest extends TeaModel {
     public Long endDate;
 
     /**
-     * <p>Operation Summary.</p>
+     * <p>The change content to query.</p>
      * 
      * <strong>example:</strong>
-     * <p>Update</p>
+     * <p>修改变量</p>
      */
     @NameInMap("operationSummary")
     public String operationSummary;
 
     /**
-     * <p>Page size, default value is 10</p>
+     * <p>The number of entries per page. Default value: 10.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -54,7 +54,7 @@ public class DescribeOperationLogPageListRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>Region code.</p>
+     * <p>The region code.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -63,7 +63,7 @@ public class DescribeOperationLogPageListRequest extends TeaModel {
     public String regId;
 
     /**
-     * <p>Start time.</p>
+     * <p>The start time.</p>
      * 
      * <strong>example:</strong>
      * <p>1733364850919</p>
@@ -72,7 +72,7 @@ public class DescribeOperationLogPageListRequest extends TeaModel {
     public Long startDate;
 
     /**
-     * <p>User Name Search.</p>
+     * <p>The operator name to query.</p>
      * 
      * <strong>example:</strong>
      * <p>root</p>

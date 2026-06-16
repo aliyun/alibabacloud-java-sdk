@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class UpdateRuleRequest extends TeaModel {
     /**
-     * <p>Sets the language type for requests and received messages, default value is <strong>zh</strong>. Values: </p>
+     * <p>The language of the request and response. Default value: <strong>zh</strong>. Valid values:</p>
      * <ul>
      * <li><strong>zh</strong>: Chinese</li>
-     * <li><strong>en</strong>: English</li>
+     * <li><strong>en</strong>: English.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,7 +18,7 @@ public class UpdateRuleRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>Primary key ID of the policy</p>
+     * <p>The primary key ID of the policy.</p>
      * 
      * <strong>example:</strong>
      * <p>6843</p>
@@ -27,7 +27,7 @@ public class UpdateRuleRequest extends TeaModel {
     public Long consoleRuleId;
 
     /**
-     * <p>Event code</p>
+     * <p>The event code.</p>
      * 
      * <strong>example:</strong>
      * <p>de_agdxgz0246</p>
@@ -36,7 +36,7 @@ public class UpdateRuleRequest extends TeaModel {
     public String eventCode;
 
     /**
-     * <p>Execution logic</p>
+     * <p>The execution logic.</p>
      * 
      * <strong>example:</strong>
      * <p>1&amp;2</p>
@@ -45,7 +45,7 @@ public class UpdateRuleRequest extends TeaModel {
     public String logicExpression;
 
     /**
-     * <p>Description</p>
+     * <p>The description.</p>
      * 
      * <strong>example:</strong>
      * <p>备注</p>
@@ -54,7 +54,7 @@ public class UpdateRuleRequest extends TeaModel {
     public String memo;
 
     /**
-     * <p>Region code</p>
+     * <p>The region code.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -63,7 +63,7 @@ public class UpdateRuleRequest extends TeaModel {
     public String regId;
 
     /**
-     * <p>Output action</p>
+     * <p>The output actions.</p>
      * 
      * <strong>example:</strong>
      * <p>[{\&quot;inputs\&quot;:[\&quot;rn0301\&quot;],\&quot;name\&quot;:\&quot;<strong>addDeTags</strong>\&quot;,\&quot;actionType\&quot;:\&quot;TAG\&quot;,\&quot;outputType\&quot;:\&quot;const\&quot;}]</p>
@@ -72,7 +72,7 @@ public class UpdateRuleRequest extends TeaModel {
     public String ruleActions;
 
     /**
-     * <p>DSL policy expression</p>
+     * <p>The DSL policy expression.</p>
      * 
      * <strong>example:</strong>
      * <p>{
@@ -222,7 +222,7 @@ public class UpdateRuleRequest extends TeaModel {
     public String ruleBody;
 
     /**
-     * <p>Policy expression</p>
+     * <p>The policy expressions.</p>
      * 
      * <strong>example:</strong>
      * <p>[{\&quot;expressionName\&quot;:\&quot;手机号MD5命中人脸测试名单\&quot;,\&quot;itemId\&quot;:1,\&quot;left\&quot;:{\&quot;name\&quot;:\&quot;mobileMd5\&quot;},\&quot;operatorCode\&quot;:\&quot;deInNameList\&quot;,\&quot;operatorName\&quot;:\&quot;在名单中\&quot;,\&quot;right\&quot;:{\&quot;fieldValue\&quot;:\&quot;nl_5tolf69W138c\&quot;}}]</p>
@@ -231,7 +231,7 @@ public class UpdateRuleRequest extends TeaModel {
     public String ruleExpressions;
 
     /**
-     * <p>Policy ID</p>
+     * <p>The policy ID.</p>
      * 
      * <strong>example:</strong>
      * <p>102224</p>
@@ -240,7 +240,7 @@ public class UpdateRuleRequest extends TeaModel {
     public String ruleId;
 
     /**
-     * <p>Policy name</p>
+     * <p>The policy name.</p>
      * 
      * <strong>example:</strong>
      * <p>分析中心事件测试_策略01</p>
@@ -249,7 +249,7 @@ public class UpdateRuleRequest extends TeaModel {
     public String ruleName;
 
     /**
-     * <p>Policy status</p>
+     * <p>The policy status.</p>
      * 
      * <strong>example:</strong>
      * <p>RUNNING</p>
@@ -258,7 +258,7 @@ public class UpdateRuleRequest extends TeaModel {
     public String ruleStatus;
 
     /**
-     * <p>Policy type</p>
+     * <p>The policy type.</p>
      * 
      * <strong>example:</strong>
      * <p>DEFAULT</p>
@@ -267,7 +267,7 @@ public class UpdateRuleRequest extends TeaModel {
     public String ruleType;
 
     /**
-     * <p>Primary key ID of the policy version</p>
+     * <p>The primary key ID of the policy version.</p>
      * 
      * <strong>example:</strong>
      * <p>11519</p>

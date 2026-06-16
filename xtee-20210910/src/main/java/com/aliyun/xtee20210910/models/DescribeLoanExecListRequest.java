@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeLoanExecListRequest extends TeaModel {
     /**
-     * <p>Set the language type for request and response messages, default value is <strong>zh</strong>. Values:</p>
+     * <p>The language type for sending requests and receiving responses. Default value: <strong>zh</strong>. Valid values:</p>
      * <ul>
      * <li><strong>zh</strong>: Chinese</li>
      * <li><strong>en</strong>: English</li>
@@ -18,7 +18,7 @@ public class DescribeLoanExecListRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>Import batch number.</p>
+     * <p>The import batch number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -27,7 +27,7 @@ public class DescribeLoanExecListRequest extends TeaModel {
     public String batchNo;
 
     /**
-     * <p>Current page number.</p>
+     * <p>The current page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -36,7 +36,7 @@ public class DescribeLoanExecListRequest extends TeaModel {
     public String currentPage;
 
     /**
-     * <p>Monitoring metric data.</p>
+     * <p>The monitoring metric data.</p>
      * 
      * <strong>example:</strong>
      * <p>de_afghcf6411</p>
@@ -45,7 +45,7 @@ public class DescribeLoanExecListRequest extends TeaModel {
     public String monitorObj;
 
     /**
-     * <p>Status</p>
+     * <p>The status.</p>
      * 
      * <strong>example:</strong>
      * <p>WAIT</p>
@@ -54,7 +54,7 @@ public class DescribeLoanExecListRequest extends TeaModel {
     public String monitorStatus;
 
     /**
-     * <p>Page size, with a default value of 10.</p>
+     * <p>The number of entries per page. Default value: 10.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -63,7 +63,7 @@ public class DescribeLoanExecListRequest extends TeaModel {
     public String pageSize;
 
     /**
-     * <p>Region code</p>
+     * <p>The region ID.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>

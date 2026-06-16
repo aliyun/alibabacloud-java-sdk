@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class RecallRuleAuditResponseBody extends TeaModel {
     /**
-     * <p>Request ID.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>4C7DC1C8-557F-5483-9E96-74D77A15EEB5</p>
@@ -14,7 +14,7 @@ public class RecallRuleAuditResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Return object</p>
+     * <p>The response object.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>

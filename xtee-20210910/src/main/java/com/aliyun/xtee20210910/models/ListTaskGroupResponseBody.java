@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListTaskGroupResponseBody extends TeaModel {
     /**
+     * <p>Status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -12,6 +14,8 @@ public class ListTaskGroupResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>Current page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>2</p>
      */
@@ -19,6 +23,8 @@ public class ListTaskGroupResponseBody extends TeaModel {
     public Integer currentPage;
 
     /**
+     * <p>HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -26,6 +32,8 @@ public class ListTaskGroupResponseBody extends TeaModel {
     public String httpStatusCode;
 
     /**
+     * <p>Return message.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -33,6 +41,8 @@ public class ListTaskGroupResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>Page size.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -40,16 +50,23 @@ public class ListTaskGroupResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>A32FE941-35F2-5378-B37C-4B8FDB16F094</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Request result.</p>
+     */
     @NameInMap("ResultObject")
     public java.util.List<ListTaskGroupResponseBodyResultObject> resultObject;
 
     /**
+     * <p>Total number of returned items.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -57,6 +74,8 @@ public class ListTaskGroupResponseBody extends TeaModel {
     public Integer totalItem;
 
     /**
+     * <p>Total number of pages.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -142,6 +161,8 @@ public class ListTaskGroupResponseBody extends TeaModel {
 
     public static class ListTaskGroupResponseBodyResultObjectSubTaskList extends TeaModel {
         /**
+         * <p>Job end time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2026-01-12 15:47:23</p>
          */
@@ -149,6 +170,8 @@ public class ListTaskGroupResponseBody extends TeaModel {
         public Long finishTime;
 
         /**
+         * <p>Group name.</p>
+         * 
          * <strong>example:</strong>
          * <p>pts-demo</p>
          */
@@ -156,6 +179,8 @@ public class ListTaskGroupResponseBody extends TeaModel {
         public String groupName;
 
         /**
+         * <p>Indicates whether to hide.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -163,6 +188,8 @@ public class ListTaskGroupResponseBody extends TeaModel {
         public Boolean hideViewResultButton;
 
         /**
+         * <p>Indicates whether the subtask is charged.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -170,6 +197,8 @@ public class ListTaskGroupResponseBody extends TeaModel {
         public Boolean isCharge;
 
         /**
+         * <p>Model scenario.</p>
+         * 
          * <strong>example:</strong>
          * <p>rfs</p>
          */
@@ -177,6 +206,8 @@ public class ListTaskGroupResponseBody extends TeaModel {
         public String modelScene;
 
         /**
+         * <p>Sample ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>4</p>
          */
@@ -184,6 +215,8 @@ public class ListTaskGroupResponseBody extends TeaModel {
         public Integer sampleId;
 
         /**
+         * <p>Sample name.</p>
+         * 
          * <strong>example:</strong>
          * <p>fs</p>
          */
@@ -191,16 +224,26 @@ public class ListTaskGroupResponseBody extends TeaModel {
         public String sampleName;
 
         /**
+         * <p>Service code.</p>
+         * 
          * <strong>example:</strong>
          * <p>anti_fraud_riskscreening</p>
          */
         @NameInMap("ServiceCode")
         public String serviceCode;
 
+        /**
+         * <p>Service name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>申请反欺诈V5（分值版）</p>
+         */
         @NameInMap("ServiceName")
         public String serviceName;
 
         /**
+         * <p>Subtask ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>3</p>
          */
@@ -208,6 +251,12 @@ public class ListTaskGroupResponseBody extends TeaModel {
         public Integer subTaskId;
 
         /**
+         * <p>Indicates whether the job can be canceled. Valid values:  </p>
+         * <ul>
+         * <li>true: The job can be canceled.  </li>
+         * <li>false: The job cannot be canceled.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -215,6 +264,8 @@ public class ListTaskGroupResponseBody extends TeaModel {
         public Boolean supportCancel;
 
         /**
+         * <p>Supports download.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -222,6 +273,8 @@ public class ListTaskGroupResponseBody extends TeaModel {
         public Boolean supportDownload;
 
         /**
+         * <p>Indicates whether merge download is supported.</p>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
@@ -229,6 +282,8 @@ public class ListTaskGroupResponseBody extends TeaModel {
         public Boolean supportMergeSelect;
 
         /**
+         * <p>Indicates whether viewing is supported.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -236,6 +291,8 @@ public class ListTaskGroupResponseBody extends TeaModel {
         public Boolean supportView;
 
         /**
+         * <p>Scenario.</p>
+         * 
          * <strong>example:</strong>
          * <p>FINANCE</p>
          */
@@ -243,6 +300,8 @@ public class ListTaskGroupResponseBody extends TeaModel {
         public String tab;
 
         /**
+         * <p>Task group ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>4</p>
          */
@@ -250,6 +309,12 @@ public class ListTaskGroupResponseBody extends TeaModel {
         public Integer taskGroupId;
 
         /**
+         * <p>The execution status of the import job:  </p>
+         * <ul>
+         * <li>DOING: running  </li>
+         * <li>FINISH: execution completed.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Finished</p>
          */
@@ -401,36 +466,56 @@ public class ListTaskGroupResponseBody extends TeaModel {
 
     public static class ListTaskGroupResponseBodyResultObject extends TeaModel {
         /**
+         * <p>Creation Time.</p>
+         * 
          * <strong>example:</strong>
          * <p>1588820785212</p>
          */
         @NameInMap("CreateTime")
         public Long createTime;
 
+        /**
+         * <p>Creator.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>324253</p>
+         */
         @NameInMap("CreatorUserId")
         public Long creatorUserId;
 
         /**
+         * <p>Audience group status.</p>
+         * 
          * <strong>example:</strong>
          * <p>RUNNING</p>
          */
         @NameInMap("GroupStatus")
         public String groupStatus;
 
+        /**
+         * <p>Task group name.</p>
+         */
         @NameInMap("SampleNames")
         public java.util.List<String> sampleNames;
 
         /**
+         * <p>Number of subtasks parsed and split from the task.</p>
+         * 
          * <strong>example:</strong>
          * <p>4</p>
          */
         @NameInMap("SubTaskCount")
         public Integer subTaskCount;
 
+        /**
+         * <p>Subtask.</p>
+         */
         @NameInMap("SubTaskList")
         public java.util.List<ListTaskGroupResponseBodyResultObjectSubTaskList> subTaskList;
 
         /**
+         * <p>Scenario.</p>
+         * 
          * <strong>example:</strong>
          * <p>FINANCE</p>
          */
@@ -438,6 +523,8 @@ public class ListTaskGroupResponseBody extends TeaModel {
         public String tab;
 
         /**
+         * <p>Task group ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>g-uf62fwvw2f8dx88xo2lt</p>
          */
@@ -445,6 +532,8 @@ public class ListTaskGroupResponseBody extends TeaModel {
         public Integer taskGroupId;
 
         /**
+         * <p>Task group name.</p>
+         * 
          * <strong>example:</strong>
          * <p>GroupTest</p>
          */

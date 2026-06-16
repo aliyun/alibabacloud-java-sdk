@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class DescribeSDKDownloadListRequest extends TeaModel {
     /**
-     * <p>Sets the language type for requests and received messages, with a default value of <strong>zh</strong>. Values: </p>
+     * <p>The language type for the request and response messages. Default value: <strong>zh</strong>. Valid values:</p>
      * <ul>
      * <li><strong>zh</strong>: Chinese</li>
-     * <li><strong>en</strong>: English</li>
+     * <li><strong>en</strong>: English.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,7 +18,7 @@ public class DescribeSDKDownloadListRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>Device type.</p>
+     * <p>The device type.</p>
      * 
      * <strong>example:</strong>
      * <p>ANDROID</p>
@@ -27,7 +27,7 @@ public class DescribeSDKDownloadListRequest extends TeaModel {
     public String deviceType;
 
     /**
-     * <p>Download type</p>
+     * <p>The download type.</p>
      * 
      * <strong>example:</strong>
      * <p>OLD</p>
@@ -36,7 +36,7 @@ public class DescribeSDKDownloadListRequest extends TeaModel {
     public String listType;
 
     /**
-     * <p>Region code</p>
+     * <p>The region code.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>

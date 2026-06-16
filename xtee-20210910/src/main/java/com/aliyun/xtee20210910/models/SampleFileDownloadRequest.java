@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class SampleFileDownloadRequest extends TeaModel {
     /**
-     * <p>Sets the language type for requests and received messages, default value is <strong>zh</strong>. Values:</p>
+     * <p>The language type for the request and response messages. Default value: <strong>zh</strong>. Valid values:</p>
      * <ul>
      * <li><strong>zh</strong>: Chinese</li>
      * <li><strong>en</strong>: English</li>
@@ -18,7 +18,7 @@ public class SampleFileDownloadRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>Region code.</p>
+     * <p>The region ID.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -27,7 +27,7 @@ public class SampleFileDownloadRequest extends TeaModel {
     public String regId;
 
     /**
-     * <p>Scenario.</p>
+     * <p>The scenario.</p>
      * 
      * <strong>example:</strong>
      * <p>FINANCE</p>

@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class DescribeAuditPageListRequest extends TeaModel {
     /**
-     * <p>Sets the language type for requests and received messages, default value is <strong>zh</strong>. Values:</p>
+     * <p>The language of the request and response. Default value: <strong>zh</strong>. Valid values:</p>
      * <ul>
-     * <li><strong>zh</strong>: Chinese</li>
-     * <li><strong>en</strong>: English</li>
+     * <li><strong>zh</strong>: Chinese.</li>
+     * <li><strong>en</strong>: English.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,7 +18,7 @@ public class DescribeAuditPageListRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>Audit status</p>
+     * <p>The audit status.</p>
      * 
      * <strong>example:</strong>
      * <p>SUCCESS</p>
@@ -27,7 +27,7 @@ public class DescribeAuditPageListRequest extends TeaModel {
     public String auditStatus;
 
     /**
-     * <p>Current page number.</p>
+     * <p>The current page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -36,7 +36,7 @@ public class DescribeAuditPageListRequest extends TeaModel {
     public String currentPage;
 
     /**
-     * <p>Event code</p>
+     * <p>The event code.</p>
      * 
      * <strong>example:</strong>
      * <p>de_awukck7117</p>
@@ -45,7 +45,7 @@ public class DescribeAuditPageListRequest extends TeaModel {
     public String eventCode;
 
     /**
-     * <p>Page size, default value is 10</p>
+     * <p>The number of entries per page. Default value: 10.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -54,7 +54,7 @@ public class DescribeAuditPageListRequest extends TeaModel {
     public String pageSize;
 
     /**
-     * <p>Region code</p>
+     * <p>The region code.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -63,7 +63,7 @@ public class DescribeAuditPageListRequest extends TeaModel {
     public String regId;
 
     /**
-     * <p>Policy name</p>
+     * <p>The policy name.</p>
      * 
      * <strong>example:</strong>
      * <p>手机号MD5命中人脸测试名单</p>

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreatePocSampleResponseBody extends TeaModel {
     /**
+     * <p>Status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -12,6 +14,8 @@ public class CreatePocSampleResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -19,6 +23,8 @@ public class CreatePocSampleResponseBody extends TeaModel {
     public String httpStatusCode;
 
     /**
+     * <p>Return message.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -26,12 +32,17 @@ public class CreatePocSampleResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>A32FE941-35F2-5378-B37C-4B8FDB16F094</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Return Result.</p>
+     */
     @NameInMap("ResultObject")
     public CreatePocSampleResponseBodyResultObject resultObject;
 
@@ -82,6 +93,8 @@ public class CreatePocSampleResponseBody extends TeaModel {
 
     public static class CreatePocSampleResponseBodyResultObject extends TeaModel {
         /**
+         * <p>Indicates whether validation warnings exist.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -89,6 +102,8 @@ public class CreatePocSampleResponseBody extends TeaModel {
         public Boolean hasWarnings;
 
         /**
+         * <p>Sample ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -96,6 +111,8 @@ public class CreatePocSampleResponseBody extends TeaModel {
         public Integer sampleId;
 
         /**
+         * <p>Sample Name.</p>
+         * 
          * <strong>example:</strong>
          * <p>SampleNameTest</p>
          */
@@ -103,6 +120,8 @@ public class CreatePocSampleResponseBody extends TeaModel {
         public String sampleName;
 
         /**
+         * <p>Scenario.</p>
+         * 
          * <strong>example:</strong>
          * <p>FINANCE</p>
          */
@@ -110,6 +129,8 @@ public class CreatePocSampleResponseBody extends TeaModel {
         public String tab;
 
         /**
+         * <p>Warning summary.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */

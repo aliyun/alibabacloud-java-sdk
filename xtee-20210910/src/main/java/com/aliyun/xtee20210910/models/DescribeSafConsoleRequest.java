@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class DescribeSafConsoleRequest extends TeaModel {
     /**
-     * <p>Set the language type for requests and received messages, default value is <strong>zh</strong>. Values:</p>
+     * <p>The language of the request and response. Default value: <strong>zh</strong>. Valid values:</p>
      * <ul>
-     * <li><strong>zh</strong>: Chinese</li>
-     * <li><strong>en</strong>: English</li>
+     * <li><strong>zh</strong>: Chinese.</li>
+     * <li><strong>en</strong>: English.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,7 +18,7 @@ public class DescribeSafConsoleRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>Query content.</p>
+     * <p>The query content.</p>
      * 
      * <strong>example:</strong>
      * <p>ei_riskLpInfo</p>
@@ -27,7 +27,7 @@ public class DescribeSafConsoleRequest extends TeaModel {
     public String content;
 
     /**
-     * <p>Service to be called.</p>
+     * <p>The service to call.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

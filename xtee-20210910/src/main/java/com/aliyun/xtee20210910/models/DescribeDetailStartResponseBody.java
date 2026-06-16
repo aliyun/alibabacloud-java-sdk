@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeDetailStartResponseBody extends TeaModel {
     /**
-     * <p>Status code.</p>
+     * <p>The status code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,7 +14,7 @@ public class DescribeDetailStartResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>HTTP status code</p>
+     * <p>The HTTP status code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -23,7 +23,7 @@ public class DescribeDetailStartResponseBody extends TeaModel {
     public String httpStatusCode;
 
     /**
-     * <p>Error details</p>
+     * <p>The error details.</p>
      * 
      * <strong>example:</strong>
      * <p>The input parameter data is not valid. order_storage_company_num component not found</p>
@@ -32,7 +32,7 @@ public class DescribeDetailStartResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Request ID.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>AE7E6105-7DEB-5125-9B24-DCBC139F6CD2</p>
@@ -41,7 +41,7 @@ public class DescribeDetailStartResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Returned object</p>
+     * <p>The response object.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -50,7 +50,7 @@ public class DescribeDetailStartResponseBody extends TeaModel {
     public Boolean resultObject;
 
     /**
-     * <p>Indicates whether the operation was successful, with true representing success.</p>
+     * <p>Indicates whether the operation was successful. A value of true indicates success.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>

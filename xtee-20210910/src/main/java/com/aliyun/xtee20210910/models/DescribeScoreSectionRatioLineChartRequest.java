@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeScoreSectionRatioLineChartRequest extends TeaModel {
     /**
-     * <p>Sets the language type for request and response messages, with a default value of <strong>zh</strong>. Values: </p>
+     * <p>Sets the language type for sending and receiving messages. Default value: <strong>zh</strong>. Valid values:</p>
      * <ul>
      * <li><strong>zh</strong>: Chinese</li>
      * <li><strong>en</strong>: English</li>
@@ -18,7 +18,7 @@ public class DescribeScoreSectionRatioLineChartRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>Start time, accurate to milliseconds (ms).</p>
+     * <p>The start time, accurate to milliseconds (ms).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -28,7 +28,7 @@ public class DescribeScoreSectionRatioLineChartRequest extends TeaModel {
     public String beginTime;
 
     /**
-     * <p>Bypass event code</p>
+     * <p>Bypass event codes.</p>
      * 
      * <strong>example:</strong>
      * <p>de_amnhke2482</p>
@@ -37,7 +37,7 @@ public class DescribeScoreSectionRatioLineChartRequest extends TeaModel {
     public String byPassEventCodes;
 
     /**
-     * <p>End time, accurate to milliseconds (ms).</p>
+     * <p>The end time, accurate to milliseconds (ms).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -47,7 +47,7 @@ public class DescribeScoreSectionRatioLineChartRequest extends TeaModel {
     public String endTime;
 
     /**
-     * <p>Main event code</p>
+     * <p>Main event codes.</p>
      * 
      * <strong>example:</strong>
      * <p>de_avcqzc3714</p>
@@ -56,7 +56,7 @@ public class DescribeScoreSectionRatioLineChartRequest extends TeaModel {
     public String mainEventCodes;
 
     /**
-     * <p>Region code</p>
+     * <p>Region ID.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -65,7 +65,7 @@ public class DescribeScoreSectionRatioLineChartRequest extends TeaModel {
     public String regId;
 
     /**
-     * <p>Shunt event code</p>
+     * <p>Shunt event codes.</p>
      * 
      * <strong>example:</strong>
      * <p>de_amnhke2488</p>

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetSubTaskResultRequest extends TeaModel {
     /**
+     * <p>Language of the error message returned by the API. Valid values: zh: Chinese. en: English. Default value: en.</p>
+     * 
      * <strong>example:</strong>
      * <p>zh</p>
      */
@@ -12,6 +14,8 @@ public class GetSubTaskResultRequest extends TeaModel {
     public String lang;
 
     /**
+     * <p>Area encoding.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
      */
@@ -19,6 +23,8 @@ public class GetSubTaskResultRequest extends TeaModel {
     public String regId;
 
     /**
+     * <p>Subtask ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>2</p>
      */

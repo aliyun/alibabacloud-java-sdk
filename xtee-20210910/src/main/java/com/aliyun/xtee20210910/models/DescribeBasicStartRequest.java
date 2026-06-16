@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeBasicStartRequest extends TeaModel {
     /**
-     * <p>Application appkey.</p>
+     * <p>The AppKey of the application.</p>
      * 
      * <strong>example:</strong>
      * <hr>
@@ -14,7 +14,7 @@ public class DescribeBasicStartRequest extends TeaModel {
     public String appKey;
 
     /**
-     * <p>End time, accurate to milliseconds (ms).</p>
+     * <p>The end time, in milliseconds (ms).</p>
      * 
      * <strong>example:</strong>
      * <p>20250320</p>
@@ -23,7 +23,7 @@ public class DescribeBasicStartRequest extends TeaModel {
     public String endDs;
 
     /**
-     * <p>Region code</p>
+     * <p>The region code.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -32,7 +32,7 @@ public class DescribeBasicStartRequest extends TeaModel {
     public String regId;
 
     /**
-     * <p>Service to call</p>
+     * <p>The service to call.</p>
      * 
      * <strong>example:</strong>
      * <p>service_tender_cee</p>
@@ -41,7 +41,7 @@ public class DescribeBasicStartRequest extends TeaModel {
     public String service;
 
     /**
-     * <p>Start time, accurate to milliseconds (ms).</p>
+     * <p>The start time, in milliseconds (ms).</p>
      * 
      * <strong>example:</strong>
      * <p>20250310</p>

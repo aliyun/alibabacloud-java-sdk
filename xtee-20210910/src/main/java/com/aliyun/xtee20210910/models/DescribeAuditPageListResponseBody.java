@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeAuditPageListResponseBody extends TeaModel {
     /**
-     * <p>Current page number.</p>
+     * <p>The current page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -14,7 +14,7 @@ public class DescribeAuditPageListResponseBody extends TeaModel {
     public Integer currentPage;
 
     /**
-     * <p>Number of records per page, default value: 10.</p>
+     * <p>The number of entries per page. Default value: 10.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -23,7 +23,7 @@ public class DescribeAuditPageListResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>Request ID.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>AE7E6105-7DEB-5125-9B24-DCBC139F6CD2</p>
@@ -32,7 +32,7 @@ public class DescribeAuditPageListResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Return object</p>
+     * <p>The returned object.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -41,7 +41,7 @@ public class DescribeAuditPageListResponseBody extends TeaModel {
     public Boolean resultObject;
 
     /**
-     * <p>Total items</p>
+     * <p>The total number of entries.</p>
      * 
      * <strong>example:</strong>
      * <p>6</p>
@@ -50,7 +50,7 @@ public class DescribeAuditPageListResponseBody extends TeaModel {
     public Integer totalItem;
 
     /**
-     * <p>Total pages</p>
+     * <p>The total number of pages.</p>
      * 
      * <strong>example:</strong>
      * <p>4</p>

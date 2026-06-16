@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeRuleDetailByRuleIdRequest extends TeaModel {
     /**
-     * <p>Set the language type for requests and received messages, default value is <strong>zh</strong>. Values:</p>
+     * <p>Sets the language type for the request and response messages. Default value: <strong>zh</strong>. Valid values:</p>
      * <ul>
      * <li><strong>zh</strong>: Chinese</li>
      * <li><strong>en</strong>: English</li>
@@ -18,7 +18,7 @@ public class DescribeRuleDetailByRuleIdRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>Primary key ID of the policy.</p>
+     * <p>The primary key ID of the policy.</p>
      * 
      * <strong>example:</strong>
      * <p>7110</p>
@@ -27,7 +27,7 @@ public class DescribeRuleDetailByRuleIdRequest extends TeaModel {
     public Long consoleRuleId;
 
     /**
-     * <p>Region code.</p>
+     * <p>The region ID.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -36,7 +36,7 @@ public class DescribeRuleDetailByRuleIdRequest extends TeaModel {
     public String regId;
 
     /**
-     * <p>Policy ID.</p>
+     * <p>The policy ID.</p>
      * 
      * <strong>example:</strong>
      * <p>102059</p>
@@ -45,7 +45,7 @@ public class DescribeRuleDetailByRuleIdRequest extends TeaModel {
     public String ruleId;
 
     /**
-     * <p>Primary key ID of the policy version.</p>
+     * <p>The primary key ID of the policy version.</p>
      * 
      * <strong>example:</strong>
      * <p>10203</p>

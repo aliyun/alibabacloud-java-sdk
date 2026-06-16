@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class DescribeHitRuleFluctuationRequest extends TeaModel {
     /**
-     * <p>Sets the language type for requests and received messages, default value is <strong>zh</strong>. Values:</p>
+     * <p>The language of the request and response. Default value: <strong>zh</strong>. Valid values:</p>
      * <ul>
      * <li><strong>zh</strong>: Chinese</li>
-     * <li><strong>en</strong>: English</li>
+     * <li><strong>en</strong>: English.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,7 +18,7 @@ public class DescribeHitRuleFluctuationRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>Event codes, separated by commas (,).</p>
+     * <p>The event codes. Separate multiple event codes with commas (,).</p>
      * 
      * <strong>example:</strong>
      * <p>de_ahqhsw7665,de_agbzfi5134</p>
@@ -27,7 +27,7 @@ public class DescribeHitRuleFluctuationRequest extends TeaModel {
     public String eventCodes;
 
     /**
-     * <p>Region code</p>
+     * <p>The region code.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -36,7 +36,7 @@ public class DescribeHitRuleFluctuationRequest extends TeaModel {
     public String regId;
 
     /**
-     * <p>Policy status</p>
+     * <p>The policy status.</p>
      * 
      * <strong>example:</strong>
      * <p>DRAFT</p>

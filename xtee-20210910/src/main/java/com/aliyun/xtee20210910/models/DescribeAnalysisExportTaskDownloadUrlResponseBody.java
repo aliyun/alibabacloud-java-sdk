@@ -14,7 +14,7 @@ public class DescribeAnalysisExportTaskDownloadUrlResponseBody extends TeaModel 
     public String requestId;
 
     /**
-     * <p>Returned object</p>
+     * <p>Response object.</p>
      */
     @NameInMap("resultObject")
     public DescribeAnalysisExportTaskDownloadUrlResponseBodyResultObject resultObject;
@@ -51,7 +51,7 @@ public class DescribeAnalysisExportTaskDownloadUrlResponseBody extends TeaModel 
         public String downloadFileUrl;
 
         /**
-         * <p>Download execution time</p>
+         * <p>Download execution time.</p>
          * 
          * <strong>example:</strong>
          * <p>1753891199000</p>

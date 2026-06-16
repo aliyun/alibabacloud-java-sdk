@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeCustVariableConfigListResponseBody extends TeaModel {
     /**
-     * <p>Request ID.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>A32FE941-35F2-5378-B37C-4B8FDB16F094</p>
@@ -14,7 +14,7 @@ public class DescribeCustVariableConfigListResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Return object</p>
+     * <p>The returned object.</p>
      */
     @NameInMap("resultObject")
     public java.util.List<DescribeCustVariableConfigListResponseBodyResultObject> resultObject;
@@ -42,7 +42,7 @@ public class DescribeCustVariableConfigListResponseBody extends TeaModel {
 
     public static class DescribeCustVariableConfigListResponseBodyResultObject extends TeaModel {
         /**
-         * <p>Configuration key</p>
+         * <p>The key of the configuration item.</p>
          * 
          * <strong>example:</strong>
          * <p>COUNT</p>
@@ -51,7 +51,7 @@ public class DescribeCustVariableConfigListResponseBody extends TeaModel {
         public String configKey;
 
         /**
-         * <p>Configuration value</p>
+         * <p>The value of the configuration item.</p>
          * 
          * <strong>example:</strong>
          * <p>累计</p>

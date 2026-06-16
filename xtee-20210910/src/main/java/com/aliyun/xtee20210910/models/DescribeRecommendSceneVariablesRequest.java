@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class DescribeRecommendSceneVariablesRequest extends TeaModel {
     /**
-     * <p>Sets the language type for requests and received messages, with a default value of <strong>zh</strong>. Values: </p>
+     * <p>The language type for the request and response. Default value: <strong>zh</strong>. Valid values:</p>
      * <ul>
-     * <li><strong>zh</strong>: Chinese</li>
-     * <li><strong>en</strong>: English</li>
+     * <li><strong>zh</strong>: Chinese.</li>
+     * <li><strong>en</strong>: English.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,7 +18,7 @@ public class DescribeRecommendSceneVariablesRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>Region Code</p>
+     * <p>The region code.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -27,7 +27,7 @@ public class DescribeRecommendSceneVariablesRequest extends TeaModel {
     public String regId;
 
     /**
-     * <p>Sample ID</p>
+     * <p>The ID of the data sample.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

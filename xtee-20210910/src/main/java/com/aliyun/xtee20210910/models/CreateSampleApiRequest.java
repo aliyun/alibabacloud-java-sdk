@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateSampleApiRequest extends TeaModel {
     /**
-     * <p>Same as input parameter</p>
+     * <p>Same as the request parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>ip/accountID</p>
@@ -14,7 +14,7 @@ public class CreateSampleApiRequest extends TeaModel {
     public String dataType;
 
     /**
-     * <p>Specific data value</p>
+     * <p>The specific data value.</p>
      * 
      * <strong>example:</strong>
      * <p>同参数</p>
@@ -23,10 +23,10 @@ public class CreateSampleApiRequest extends TeaModel {
     public String dataValue;
 
     /**
-     * <p>Sets the language type for requests and received messages, with a default value of <strong>zh</strong>. Values:</p>
+     * <p>The language type for the request and response messages. Default value: <strong>zh</strong>. Valid values:</p>
      * <ul>
-     * <li><strong>zh</strong>: Chinese</li>
-     * <li><strong>en</strong>: English</li>
+     * <li><strong>zh</strong>: Chinese.</li>
+     * <li><strong>en</strong>: English.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -36,7 +36,7 @@ public class CreateSampleApiRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>regionId</p>
+     * <p>The region ID.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-shanghai</p>
@@ -45,7 +45,7 @@ public class CreateSampleApiRequest extends TeaModel {
     public String regId;
 
     /**
-     * <p>Sample batch type</p>
+     * <p>The sample batch type.</p>
      * 
      * <strong>example:</strong>
      * <p>白名单/黑名单/混合</p>
@@ -54,7 +54,7 @@ public class CreateSampleApiRequest extends TeaModel {
     public String sampleBatchType;
 
     /**
-     * <p>Service list.</p>
+     * <p>The list of services.</p>
      * 
      * <strong>example:</strong>
      * <p>同参数</p>

@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class DescribeVariableMarketListRequest extends TeaModel {
     /**
-     * <p>Sets the language type for requests and received messages, with a default value of <strong>zh</strong>. Values:</p>
+     * <p>The language of the request and response. Default value: <strong>zh</strong>. Valid values:</p>
      * <ul>
      * <li><strong>zh</strong>: Chinese</li>
-     * <li><strong>en</strong>: English</li>
+     * <li><strong>en</strong>: English.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,7 +18,7 @@ public class DescribeVariableMarketListRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>Charging mode</p>
+     * <p>The billing mode.</p>
      * 
      * <strong>example:</strong>
      * <p>FREE</p>
@@ -27,7 +27,7 @@ public class DescribeVariableMarketListRequest extends TeaModel {
     public String chargingMode;
 
     /**
-     * <p>Current page number.</p>
+     * <p>The current page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -36,7 +36,7 @@ public class DescribeVariableMarketListRequest extends TeaModel {
     public Integer currentPage;
 
     /**
-     * <p>Page size, with a default value of 10.</p>
+     * <p>The number of entries per page. Default value: 10.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -45,7 +45,7 @@ public class DescribeVariableMarketListRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>Paging indicator, default is true.</p>
+     * <p>Specifies whether to enable paging. Default value: true.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -54,8 +54,7 @@ public class DescribeVariableMarketListRequest extends TeaModel {
     public String paging;
 
     /**
-     * <p>Query content, supports fuzzy search.</p>
-     * <p> Title/Description</p>
+     * <p>The query content. Fuzzy match is supported for the title or description.</p>
      * 
      * <strong>example:</strong>
      * <p>手机号</p>
@@ -64,7 +63,7 @@ public class DescribeVariableMarketListRequest extends TeaModel {
     public String queryContent;
 
     /**
-     * <p>Region code</p>
+     * <p>The region code.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -73,7 +72,7 @@ public class DescribeVariableMarketListRequest extends TeaModel {
     public String regId;
 
     /**
-     * <p>Scenario</p>
+     * <p>The scenario.</p>
      * 
      * <strong>example:</strong>
      * <p>[\&quot;coupon_abuse_detection\&quot;]</p>
@@ -82,7 +81,7 @@ public class DescribeVariableMarketListRequest extends TeaModel {
     public String scenesStr;
 
     /**
-     * <p>Source</p>
+     * <p>The source.</p>
      * 
      * <strong>example:</strong>
      * <p>SAF</p>
@@ -91,7 +90,7 @@ public class DescribeVariableMarketListRequest extends TeaModel {
     public String source;
 
     /**
-     * <p>Title.</p>
+     * <p>The title.</p>
      * 
      * <strong>example:</strong>
      * <p>设备风险识别_标签</p>

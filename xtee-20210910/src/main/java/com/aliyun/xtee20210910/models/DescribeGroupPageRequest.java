@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class DescribeGroupPageRequest extends TeaModel {
     /**
-     * <p>Sets the language type for requests and responses, with a default value of <strong>zh</strong>. Values:</p>
+     * <p>The language type for the request and response. Default value: <strong>zh</strong>. Valid values:</p>
      * <ul>
-     * <li><strong>zh</strong>: Chinese</li>
-     * <li><strong>en</strong>: English</li>
+     * <li><strong>zh</strong>: Chinese.</li>
+     * <li><strong>en</strong>: English.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,7 +18,7 @@ public class DescribeGroupPageRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>Current page number.</p>
+     * <p>The current page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -27,7 +27,7 @@ public class DescribeGroupPageRequest extends TeaModel {
     public String currentPage;
 
     /**
-     * <p>Order.</p>
+     * <p>The sort order.</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>
@@ -36,7 +36,7 @@ public class DescribeGroupPageRequest extends TeaModel {
     public String direction;
 
     /**
-     * <p>Sorting condition.</p>
+     * <p>The sort condition.</p>
      * 
      * <strong>example:</strong>
      * <p>asc</p>
@@ -45,7 +45,7 @@ public class DescribeGroupPageRequest extends TeaModel {
     public String order;
 
     /**
-     * <p>Page size, with a default value of 10.</p>
+     * <p>The number of entries per page. Default value: 10.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -54,7 +54,7 @@ public class DescribeGroupPageRequest extends TeaModel {
     public String pageSize;
 
     /**
-     * <p>Region code.</p>
+     * <p>The region code.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -63,7 +63,7 @@ public class DescribeGroupPageRequest extends TeaModel {
     public String regId;
 
     /**
-     * <p>Task ID.</p>
+     * <p>The task ID.</p>
      * 
      * <strong>example:</strong>
      * <p>6770764</p>
@@ -72,7 +72,7 @@ public class DescribeGroupPageRequest extends TeaModel {
     public String taskId;
 
     /**
-     * <p>Time type.</p>
+     * <p>The time type.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>

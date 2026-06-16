@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeEventTaskHistoryResponseBody extends TeaModel {
     /**
-     * <p>Request ID.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>A32FE941-35F2-5378-B37C-4B8FDB16F094</p>
@@ -14,7 +14,7 @@ public class DescribeEventTaskHistoryResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Return object</p>
+     * <p>The response object.</p>
      */
     @NameInMap("resultObject")
     public java.util.List<DescribeEventTaskHistoryResponseBodyResultObject> resultObject;
@@ -42,7 +42,7 @@ public class DescribeEventTaskHistoryResponseBody extends TeaModel {
 
     public static class DescribeEventTaskHistoryResponseBodyResultObject extends TeaModel {
         /**
-         * <p>Task code.</p>
+         * <p>The task code.</p>
          * 
          * <strong>example:</strong>
          * <p>de_aoxcdy9473</p>
@@ -51,7 +51,7 @@ public class DescribeEventTaskHistoryResponseBody extends TeaModel {
         public String taskCode;
 
         /**
-         * <p>Task name</p>
+         * <p>The task name.</p>
          * 
          * <strong>example:</strong>
          * <p>仿真任务</p>
@@ -60,7 +60,7 @@ public class DescribeEventTaskHistoryResponseBody extends TeaModel {
         public String taskName;
 
         /**
-         * <p>Task status.</p>
+         * <p>The task status.</p>
          * 
          * <strong>example:</strong>
          * <p>SUCCESSFUL</p>
@@ -69,7 +69,7 @@ public class DescribeEventTaskHistoryResponseBody extends TeaModel {
         public String taskStatus;
 
         /**
-         * <p>OSS download URL</p>
+         * <p>The OSS download URL.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://xxxxx-oss-xxxxx.xxxxxx.aliyuncs.com/xx/xx/xxx/xxxxxx.csv?Expires=1753433384&OSSAccessKeyId=xxxxxxxxx&Signature=%2F%xxxxxxxxxxxx%3D">https://xxxxx-oss-xxxxx.xxxxxx.aliyuncs.com/xx/xx/xxx/xxxxxx.csv?Expires=1753433384&amp;OSSAccessKeyId=xxxxxxxxx&amp;Signature=%2F%xxxxxxxxxxxx%3D</a></p>

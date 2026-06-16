@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeNameListLimitResponseBody extends TeaModel {
     /**
-     * <p>Request ID.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>A32FE941-35F2-5378-B37C-4B8FDB16F094</p>
@@ -14,7 +14,7 @@ public class DescribeNameListLimitResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Return object</p>
+     * <p>The returned object.</p>
      */
     @NameInMap("resultObject")
     public DescribeNameListLimitResponseBodyResultObject resultObject;
@@ -42,7 +42,7 @@ public class DescribeNameListLimitResponseBody extends TeaModel {
 
     public static class DescribeNameListLimitResponseBodyResultObject extends TeaModel {
         /**
-         * <p>Whether it exceeds the maximum quantity</p>
+         * <p>Indicates whether the maximum number of entries is exceeded.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -51,7 +51,7 @@ public class DescribeNameListLimitResponseBody extends TeaModel {
         public Boolean limit;
 
         /**
-         * <p>Maximum number of creatable items</p>
+         * <p>The maximum number of entries that can be created.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -60,7 +60,7 @@ public class DescribeNameListLimitResponseBody extends TeaModel {
         public Long maxTotalItem;
 
         /**
-         * <p>Total number of items</p>
+         * <p>The total number of entries.</p>
          * 
          * <strong>example:</strong>
          * <p>101</p>

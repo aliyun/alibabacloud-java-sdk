@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class ModifyEventStatusRequest extends TeaModel {
     /**
-     * <p>Sets the language type for requests and received messages, default value is <strong>zh</strong>. Values: </p>
+     * <p>The language of the request and response. Default value: <strong>zh</strong>. Valid values:</p>
      * <ul>
-     * <li><strong>zh</strong>: Chinese</li>
-     * <li><strong>en</strong>: English</li>
+     * <li><strong>zh</strong>: Chinese.</li>
+     * <li><strong>en</strong>: English.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,7 +18,7 @@ public class ModifyEventStatusRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>Creation type</p>
+     * <p>The creation type.</p>
      * 
      * <strong>example:</strong>
      * <p>NORMAL</p>
@@ -27,7 +27,7 @@ public class ModifyEventStatusRequest extends TeaModel {
     public String createType;
 
     /**
-     * <p>Event code</p>
+     * <p>The event code.</p>
      * 
      * <strong>example:</strong>
      * <p>de_aamexg3015</p>
@@ -36,7 +36,7 @@ public class ModifyEventStatusRequest extends TeaModel {
     public String eventCode;
 
     /**
-     * <p>Initial event status, to avoid duplicate submissions or historical replays</p>
+     * <p>The original event status. This parameter is used to prevent duplicate submissions or historical replays.</p>
      * 
      * <strong>example:</strong>
      * <p>ONLINE</p>
@@ -45,7 +45,7 @@ public class ModifyEventStatusRequest extends TeaModel {
     public String fromEventSatus;
 
     /**
-     * <p>Region code</p>
+     * <p>The region code.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -54,7 +54,7 @@ public class ModifyEventStatusRequest extends TeaModel {
     public String regId;
 
     /**
-     * <p>Updated event status</p>
+     * <p>The event status to update to.</p>
      * 
      * <strong>example:</strong>
      * <p>OFFLINE</p>

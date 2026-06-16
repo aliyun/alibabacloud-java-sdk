@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class DescribeQueryVariablePageListRequest extends TeaModel {
     /**
-     * <p>Sets the language type for requests and received messages, default value is <strong>zh</strong>. Values:</p>
+     * <p>The language type for the request and response messages. Default value: <strong>zh</strong>. Valid values:</p>
      * <ul>
      * <li><strong>zh</strong>: Chinese</li>
-     * <li><strong>en</strong>: English</li>
+     * <li><strong>en</strong>: English.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,7 +18,7 @@ public class DescribeQueryVariablePageListRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>Current page number.</p>
+     * <p>The current page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -27,7 +27,7 @@ public class DescribeQueryVariablePageListRequest extends TeaModel {
     public Long currentPage;
 
     /**
-     * <p>Data source code</p>
+     * <p>The data source code.</p>
      * 
      * <strong>example:</strong>
      * <p>ds_vcaoii1697</p>
@@ -36,7 +36,7 @@ public class DescribeQueryVariablePageListRequest extends TeaModel {
     public String dataSourceCode;
 
     /**
-     * <p>Event code</p>
+     * <p>The event code.</p>
      * 
      * <strong>example:</strong>
      * <p>de_ahpayh4121</p>
@@ -45,7 +45,7 @@ public class DescribeQueryVariablePageListRequest extends TeaModel {
     public String eventCode;
 
     /**
-     * <p>Query variable name</p>
+     * <p>The name of the custom query variable.</p>
      * 
      * <strong>example:</strong>
      * <p>名称</p>
@@ -54,7 +54,7 @@ public class DescribeQueryVariablePageListRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>Page size, default value is 10</p>
+     * <p>The number of entries per page. Default value: 10.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -63,7 +63,7 @@ public class DescribeQueryVariablePageListRequest extends TeaModel {
     public Long pageSize;
 
     /**
-     * <p>Region code</p>
+     * <p>The region code.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

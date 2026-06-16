@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class DescribeExpressionVariablePageRequest extends TeaModel {
     /**
-     * <p>Sets the language type for requests and received messages, with a default value of <strong>zh</strong>. Values:</p>
+     * <p>The language type for the request and response. Default value: <strong>zh</strong>. Valid values:</p>
      * <ul>
      * <li><strong>zh</strong>: Chinese</li>
-     * <li><strong>en</strong>: English</li>
+     * <li><strong>en</strong>: English.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,7 +18,7 @@ public class DescribeExpressionVariablePageRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>Current page number.</p>
+     * <p>The current page number.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -28,7 +28,7 @@ public class DescribeExpressionVariablePageRequest extends TeaModel {
     public String currentPage;
 
     /**
-     * <p>Event code.</p>
+     * <p>The event code.</p>
      * 
      * <strong>example:</strong>
      * <p>de_aamexg3015,de_aamexg3342</p>
@@ -37,7 +37,7 @@ public class DescribeExpressionVariablePageRequest extends TeaModel {
     public String eventCode;
 
     /**
-     * <p>Variable return type.</p>
+     * <p>The variable return type.</p>
      * 
      * <strong>example:</strong>
      * <p>STRING</p>
@@ -46,7 +46,7 @@ public class DescribeExpressionVariablePageRequest extends TeaModel {
     public String outputs;
 
     /**
-     * <p>Page size, with a default value of 10.</p>
+     * <p>The number of entries per page. Default value: 10.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -56,7 +56,7 @@ public class DescribeExpressionVariablePageRequest extends TeaModel {
     public String pageSize;
 
     /**
-     * <p>Region code.</p>
+     * <p>The region code.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -66,7 +66,7 @@ public class DescribeExpressionVariablePageRequest extends TeaModel {
     public String regId;
 
     /**
-     * <p>Status.</p>
+     * <p>The status.</p>
      * 
      * <strong>example:</strong>
      * <p>ENABLE</p>
@@ -75,7 +75,7 @@ public class DescribeExpressionVariablePageRequest extends TeaModel {
     public String status;
 
     /**
-     * <p>Variable name/description.</p>
+     * <p>The variable name or description.</p>
      * 
      * <strong>example:</strong>
      * <p>自定义变量</p>

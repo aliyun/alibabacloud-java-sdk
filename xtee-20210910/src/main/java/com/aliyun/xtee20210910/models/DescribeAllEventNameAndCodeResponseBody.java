@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeAllEventNameAndCodeResponseBody extends TeaModel {
     /**
-     * <p>Status code.</p>
+     * <p>The status code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,7 +14,7 @@ public class DescribeAllEventNameAndCodeResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>HTTP status code</p>
+     * <p>The HTTP status code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -23,7 +23,7 @@ public class DescribeAllEventNameAndCodeResponseBody extends TeaModel {
     public String httpStatusCode;
 
     /**
-     * <p>Error message.</p>
+     * <p>The error message.</p>
      * 
      * <strong>example:</strong>
      * <p>The input parameter data is not valid. order_storage_company_num component not found</p>
@@ -32,7 +32,7 @@ public class DescribeAllEventNameAndCodeResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Request ID.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>AE7E6105-7DEB-5125-9B24-DCBC139F6CD2</p>
@@ -41,13 +41,13 @@ public class DescribeAllEventNameAndCodeResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Returned object</p>
+     * <p>The returned object.</p>
      */
     @NameInMap("resultObject")
     public java.util.List<DescribeAllEventNameAndCodeResponseBodyResultObject> resultObject;
 
     /**
-     * <p>Whether the operation was successful.</p>
+     * <p>Indicates whether the request was successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -110,7 +110,7 @@ public class DescribeAllEventNameAndCodeResponseBody extends TeaModel {
 
     public static class DescribeAllEventNameAndCodeResponseBodyResultObjectChildren extends TeaModel {
         /**
-         * <p>Creation type</p>
+         * <p>The creation type.</p>
          * 
          * <strong>example:</strong>
          * <p>NORMAL</p>
@@ -119,7 +119,7 @@ public class DescribeAllEventNameAndCodeResponseBody extends TeaModel {
         public String createType;
 
         /**
-         * <p>Event code</p>
+         * <p>The event code.</p>
          * 
          * <strong>example:</strong>
          * <p>de_aamexg3015</p>
@@ -128,7 +128,7 @@ public class DescribeAllEventNameAndCodeResponseBody extends TeaModel {
         public String eventCode;
 
         /**
-         * <p>Event name.</p>
+         * <p>The event name.</p>
          * 
          * <strong>example:</strong>
          * <p>注册风险旁路</p>
@@ -137,7 +137,7 @@ public class DescribeAllEventNameAndCodeResponseBody extends TeaModel {
         public String eventName;
 
         /**
-         * <p>Event type</p>
+         * <p>The event type.</p>
          * 
          * <strong>example:</strong>
          * <p>BYPASS</p>
@@ -186,13 +186,13 @@ public class DescribeAllEventNameAndCodeResponseBody extends TeaModel {
 
     public static class DescribeAllEventNameAndCodeResponseBodyResultObject extends TeaModel {
         /**
-         * <p>List of child fields.</p>
+         * <p>The list of child fields.</p>
          */
         @NameInMap("children")
         public java.util.List<DescribeAllEventNameAndCodeResponseBodyResultObjectChildren> children;
 
         /**
-         * <p>Creation type</p>
+         * <p>The creation type.</p>
          * 
          * <strong>example:</strong>
          * <p>MORMAL</p>
@@ -201,7 +201,7 @@ public class DescribeAllEventNameAndCodeResponseBody extends TeaModel {
         public String createType;
 
         /**
-         * <p>Event code</p>
+         * <p>The event code.</p>
          * 
          * <strong>example:</strong>
          * <p>de_aszbjb7236</p>
@@ -210,7 +210,7 @@ public class DescribeAllEventNameAndCodeResponseBody extends TeaModel {
         public String eventCode;
 
         /**
-         * <p>Event name.</p>
+         * <p>The event name.</p>
          * 
          * <strong>example:</strong>
          * <p>注册风险</p>
@@ -219,7 +219,7 @@ public class DescribeAllEventNameAndCodeResponseBody extends TeaModel {
         public String eventName;
 
         /**
-         * <p>Event type</p>
+         * <p>The event type.</p>
          * 
          * <strong>example:</strong>
          * <p>MAIN</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeDataSourceDataDownloadUrlResponseBody extends TeaModel {
     /**
-     * <p>Request ID.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>A32FE941-35F2-5378-B37C-4B8FDB16F094</p>
@@ -14,7 +14,7 @@ public class DescribeDataSourceDataDownloadUrlResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Return object</p>
+     * <p>The response object.</p>
      */
     @NameInMap("resultObject")
     public DescribeDataSourceDataDownloadUrlResponseBodyResultObject resultObject;
@@ -42,7 +42,7 @@ public class DescribeDataSourceDataDownloadUrlResponseBody extends TeaModel {
 
     public static class DescribeDataSourceDataDownloadUrlResponseBodyResultObject extends TeaModel {
         /**
-         * <p>Download URL.</p>
+         * <p>The download URL.</p>
          * 
          * <strong>example:</strong>
          * <p>https:/xxxxx.oss-cn-xxxxxx.aliyuncs.com/xxxx/xxx/xxxxxx/xxx/xxxxxxxxxx?Expires=1753421064&amp;OSSAccessKeyId=xxxxxxx&amp;Signature=xxxxxxx%3D</p>

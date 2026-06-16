@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeTagListResponseBody extends TeaModel {
     /**
-     * <p>Status code.</p>
+     * <p>The status code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,7 +14,7 @@ public class DescribeTagListResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>HTTP status code</p>
+     * <p>The HTTP status code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -23,7 +23,7 @@ public class DescribeTagListResponseBody extends TeaModel {
     public String httpStatusCode;
 
     /**
-     * <p>Error message.</p>
+     * <p>The error message.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -32,7 +32,7 @@ public class DescribeTagListResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Request ID.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>A32FE941-35F2-5378-B37C-4B8FDB16F094</p>
@@ -41,7 +41,7 @@ public class DescribeTagListResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Result object.</p>
+     * <p>The result object.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>

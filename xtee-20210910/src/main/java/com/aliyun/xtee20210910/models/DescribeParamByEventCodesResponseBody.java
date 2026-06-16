@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeParamByEventCodesResponseBody extends TeaModel {
     /**
-     * <p>Request ID.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>A32FE941-35F2-5378-B37C-4B8FDB16F094</p>
@@ -14,7 +14,7 @@ public class DescribeParamByEventCodesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Return object</p>
+     * <p>The returned object.</p>
      */
     @NameInMap("resultObject")
     public java.util.List<DescribeParamByEventCodesResponseBodyResultObject> resultObject;
@@ -42,7 +42,7 @@ public class DescribeParamByEventCodesResponseBody extends TeaModel {
 
     public static class DescribeParamByEventCodesResponseBodyResultObject extends TeaModel {
         /**
-         * <p>Return code.</p>
+         * <p>The return code.</p>
          * 
          * <strong>example:</strong>
          * <p>age</p>
@@ -51,7 +51,7 @@ public class DescribeParamByEventCodesResponseBody extends TeaModel {
         public String code;
 
         /**
-         * <p>Name</p>
+         * <p>The name.</p>
          * 
          * <strong>example:</strong>
          * <p>年龄</p>

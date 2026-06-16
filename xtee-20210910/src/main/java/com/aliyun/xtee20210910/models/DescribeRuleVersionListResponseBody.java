@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeRuleVersionListResponseBody extends TeaModel {
     /**
-     * <p>Current page number.</p>
+     * <p>The current page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -14,7 +14,7 @@ public class DescribeRuleVersionListResponseBody extends TeaModel {
     public Integer currentPage;
 
     /**
-     * <p>Page size, default value is 10</p>
+     * <p>The number of entries per page. Default value: 10.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -23,7 +23,7 @@ public class DescribeRuleVersionListResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>Request ID.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>AE7E6105-7DEB-5125-9B24-DCBC139F6CD2</p>
@@ -32,13 +32,13 @@ public class DescribeRuleVersionListResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Returned object</p>
+     * <p>The returned object.</p>
      */
     @NameInMap("resultObject")
     public java.util.List<DescribeRuleVersionListResponseBodyResultObject> resultObject;
 
     /**
-     * <p>Total number of items</p>
+     * <p>The total number of entries.</p>
      * 
      * <strong>example:</strong>
      * <p>3</p>
@@ -47,7 +47,7 @@ public class DescribeRuleVersionListResponseBody extends TeaModel {
     public Integer totalItem;
 
     /**
-     * <p>Total number of pages.</p>
+     * <p>The total number of pages.</p>
      * 
      * <strong>example:</strong>
      * <p>7</p>
@@ -110,7 +110,7 @@ public class DescribeRuleVersionListResponseBody extends TeaModel {
 
     public static class DescribeRuleVersionListResponseBodyResultObjectConsoleAudit extends TeaModel {
         /**
-         * <p>Initiator UID</p>
+         * <p>The UID of the applicant.</p>
          * 
          * <strong>example:</strong>
          * <p>1519714049632764</p>
@@ -119,7 +119,7 @@ public class DescribeRuleVersionListResponseBody extends TeaModel {
         public String applyUserId;
 
         /**
-         * <p>Initiator name</p>
+         * <p>The name of the applicant.</p>
          * 
          * <strong>example:</strong>
          * <p>root</p>
@@ -128,7 +128,7 @@ public class DescribeRuleVersionListResponseBody extends TeaModel {
         public String applyUserName;
 
         /**
-         * <p>Approval comment</p>
+         * <p>The approval comment.</p>
          * 
          * <strong>example:</strong>
          * <p>同意</p>
@@ -137,7 +137,7 @@ public class DescribeRuleVersionListResponseBody extends TeaModel {
         public String auditMsg;
 
         /**
-         * <p>Final approver UID</p>
+         * <p>The UID of the final approver.</p>
          * 
          * <strong>example:</strong>
          * <p>1519714049632764</p>
@@ -146,7 +146,7 @@ public class DescribeRuleVersionListResponseBody extends TeaModel {
         public String auditRealUserId;
 
         /**
-         * <p>Final approver name</p>
+         * <p>The name of the final approver.</p>
          * 
          * <strong>example:</strong>
          * <p>root</p>
@@ -155,7 +155,7 @@ public class DescribeRuleVersionListResponseBody extends TeaModel {
         public String auditRealUserName;
 
         /**
-         * <p>Approver\&quot;s remarks.</p>
+         * <p>The remark of the approver.</p>
          * 
          * <strong>example:</strong>
          * <p>备注</p>
@@ -164,7 +164,7 @@ public class DescribeRuleVersionListResponseBody extends TeaModel {
         public String auditRemark;
 
         /**
-         * <p>Approval status</p>
+         * <p>The approval status.</p>
          * 
          * <strong>example:</strong>
          * <p>AGREE</p>
@@ -173,7 +173,7 @@ public class DescribeRuleVersionListResponseBody extends TeaModel {
         public String auditStatus;
 
         /**
-         * <p>Approval time.</p>
+         * <p>The approval time.</p>
          * 
          * <strong>example:</strong>
          * <p>1545726028000</p>
@@ -182,7 +182,7 @@ public class DescribeRuleVersionListResponseBody extends TeaModel {
         public Long auditTime;
 
         /**
-         * <p>Designated approver UID</p>
+         * <p>The UID of the designated approver.</p>
          * 
          * <strong>example:</strong>
          * <p>1519714049632764</p>
@@ -191,7 +191,7 @@ public class DescribeRuleVersionListResponseBody extends TeaModel {
         public String auditUserId;
 
         /**
-         * <p>Designated auditor\&quot;s name</p>
+         * <p>The name of the designated approver.</p>
          * 
          * <strong>example:</strong>
          * <p>root</p>
@@ -200,7 +200,7 @@ public class DescribeRuleVersionListResponseBody extends TeaModel {
         public String auditUserName;
 
         /**
-         * <p>Creation time.</p>
+         * <p>The creation time.</p>
          * 
          * <strong>example:</strong>
          * <p>1545726028000</p>
@@ -209,7 +209,7 @@ public class DescribeRuleVersionListResponseBody extends TeaModel {
         public Long gmtCreate;
 
         /**
-         * <p>Primary key ID</p>
+         * <p>The primary key ID.</p>
          * 
          * <strong>example:</strong>
          * <p>1728</p>
@@ -218,7 +218,7 @@ public class DescribeRuleVersionListResponseBody extends TeaModel {
         public Long id;
 
         /**
-         * <p>Information of related others (in JSON format)</p>
+         * <p>The information about other related persons in JSON format.</p>
          * 
          * <strong>example:</strong>
          * <p>{}</p>
@@ -227,7 +227,7 @@ public class DescribeRuleVersionListResponseBody extends TeaModel {
         public String relationExt;
 
         /**
-         * <p>ID of the associated transaction</p>
+         * <p>The transaction ID associated with the approval.</p>
          * 
          * <strong>example:</strong>
          * <p>123</p>
@@ -236,7 +236,7 @@ public class DescribeRuleVersionListResponseBody extends TeaModel {
         public Long relationId;
 
         /**
-         * <p>Name of the associated item</p>
+         * <p>The name associated with the approval.</p>
          * 
          * <strong>example:</strong>
          * <p>营销风险识别</p>
@@ -245,7 +245,7 @@ public class DescribeRuleVersionListResponseBody extends TeaModel {
         public String relationName;
 
         /**
-         * <p>Type of approval (e.g., <code>rule</code> for policy approval)</p>
+         * <p>The type of the approval. For example, rule indicates a policy approval.</p>
          * 
          * <strong>example:</strong>
          * <p>RULE</p>
@@ -390,13 +390,13 @@ public class DescribeRuleVersionListResponseBody extends TeaModel {
 
     public static class DescribeRuleVersionListResponseBodyResultObject extends TeaModel {
         /**
-         * <p>Audit object</p>
+         * <p>The approval object.</p>
          */
         @NameInMap("consoleAudit")
         public DescribeRuleVersionListResponseBodyResultObjectConsoleAudit consoleAudit;
 
         /**
-         * <p>Console rule ID.</p>
+         * <p>The console rule ID.</p>
          * 
          * <strong>example:</strong>
          * <p>6715</p>
@@ -405,7 +405,7 @@ public class DescribeRuleVersionListResponseBody extends TeaModel {
         public Long consoleRuleId;
 
         /**
-         * <p>Associated policy remarks</p>
+         * <p>The remark of the associated policy.</p>
          * 
          * <strong>example:</strong>
          * <p>备注</p>
@@ -414,7 +414,7 @@ public class DescribeRuleVersionListResponseBody extends TeaModel {
         public String consoleRuleMemo;
 
         /**
-         * <p>Associated policy name</p>
+         * <p>The Policy Name of the associated policy.</p>
          * 
          * <strong>example:</strong>
          * <p>营销风险识别</p>
@@ -423,7 +423,7 @@ public class DescribeRuleVersionListResponseBody extends TeaModel {
         public String consoleRuleName;
 
         /**
-         * <p>Event code</p>
+         * <p>The event code.</p>
          * 
          * <strong>example:</strong>
          * <p>de_aszbjb7236</p>
@@ -432,7 +432,7 @@ public class DescribeRuleVersionListResponseBody extends TeaModel {
         public String eventCode;
 
         /**
-         * <p>Event type</p>
+         * <p>The event type.</p>
          * 
          * <strong>example:</strong>
          * <p>MAIN</p>
@@ -441,7 +441,7 @@ public class DescribeRuleVersionListResponseBody extends TeaModel {
         public String eventType;
 
         /**
-         * <p>Creation time.</p>
+         * <p>The creation time.</p>
          * 
          * <strong>example:</strong>
          * <p>1621578648000</p>
@@ -450,7 +450,7 @@ public class DescribeRuleVersionListResponseBody extends TeaModel {
         public Long gmtCreate;
 
         /**
-         * <p>Modification time.</p>
+         * <p>The modification time.</p>
          * 
          * <strong>example:</strong>
          * <p>1565701886000</p>
@@ -459,7 +459,7 @@ public class DescribeRuleVersionListResponseBody extends TeaModel {
         public Long gmtModified;
 
         /**
-         * <p>Primary key ID of the policy</p>
+         * <p>The primary key ID of the policy.</p>
          * 
          * <strong>example:</strong>
          * <p>376773</p>
@@ -468,7 +468,7 @@ public class DescribeRuleVersionListResponseBody extends TeaModel {
         public Long id;
 
         /**
-         * <p>The user who last operated.</p>
+         * <p>The user who last performed an operation.</p>
          * 
          * <strong>example:</strong>
          * <p>1519714049632764</p>
@@ -477,7 +477,7 @@ public class DescribeRuleVersionListResponseBody extends TeaModel {
         public String lastOperator;
 
         /**
-         * <p>Policy priority, the higher the number, the higher the priority.</p>
+         * <p>The policy priority. A larger value indicates a higher priority.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -486,7 +486,7 @@ public class DescribeRuleVersionListResponseBody extends TeaModel {
         public Long priority;
 
         /**
-         * <p>Policy ID</p>
+         * <p>The policy ID.</p>
          * 
          * <strong>example:</strong>
          * <p>102224</p>
@@ -495,7 +495,7 @@ public class DescribeRuleVersionListResponseBody extends TeaModel {
         public String ruleId;
 
         /**
-         * <p>Policy status</p>
+         * <p>The policy status.</p>
          * 
          * <strong>example:</strong>
          * <p>RUNNING</p>
@@ -504,7 +504,7 @@ public class DescribeRuleVersionListResponseBody extends TeaModel {
         public String ruleStatus;
 
         /**
-         * <p>Rule Type</p>
+         * <p>The policy type.</p>
          * 
          * <strong>example:</strong>
          * <p>DEFAULT</p>
@@ -513,7 +513,7 @@ public class DescribeRuleVersionListResponseBody extends TeaModel {
         public String ruleType;
 
         /**
-         * <p>Version number</p>
+         * <p>The version number.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>

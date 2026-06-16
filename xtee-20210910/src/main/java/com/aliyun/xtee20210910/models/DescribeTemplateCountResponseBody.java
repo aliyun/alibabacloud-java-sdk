@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeTemplateCountResponseBody extends TeaModel {
     /**
-     * <p>Request ID</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>AE7E6105-7DEB-5125-9B24-DCBC139F6CD2</p>
@@ -14,7 +14,7 @@ public class DescribeTemplateCountResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Returned object</p>
+     * <p>The returned object.</p>
      */
     @NameInMap("resultObject")
     public DescribeTemplateCountResponseBodyResultObject resultObject;
@@ -42,7 +42,7 @@ public class DescribeTemplateCountResponseBody extends TeaModel {
 
     public static class DescribeTemplateCountResponseBodyResultObject extends TeaModel {
         /**
-         * <p>Template quantity limit.</p>
+         * <p>The template quantity limit.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -51,7 +51,7 @@ public class DescribeTemplateCountResponseBody extends TeaModel {
         public Boolean limit;
 
         /**
-         * <p>Maximum count</p>
+         * <p>The maximum number of items.</p>
          * 
          * <strong>example:</strong>
          * <p>1000</p>
@@ -60,7 +60,7 @@ public class DescribeTemplateCountResponseBody extends TeaModel {
         public Integer maxTotalItem;
 
         /**
-         * <p>Total count.</p>
+         * <p>The total number of items.</p>
          * 
          * <strong>example:</strong>
          * <p>13</p>

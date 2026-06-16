@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeEventVariableListResponseBody extends TeaModel {
     /**
-     * <p>Request ID.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>A32FE941-35F2-5378-B37C-4B8FDB16F094</p>
@@ -14,7 +14,7 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Return object.</p>
+     * <p>The response object.</p>
      */
     @NameInMap("resultObject")
     public DescribeEventVariableListResponseBodyResultObject resultObject;
@@ -42,7 +42,7 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
 
     public static class DescribeEventVariableListResponseBodyResultObjectActionsOutputThreshold extends TeaModel {
         /**
-         * <p>Maximum value.</p>
+         * <p>The maximum value.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -51,7 +51,7 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
         public Double maxValue;
 
         /**
-         * <p>Minimum value.</p>
+         * <p>The minimum value.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -84,7 +84,7 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
 
     public static class DescribeEventVariableListResponseBodyResultObjectActionsVariableVelocity extends TeaModel {
         /**
-         * <p>iv value. This type of variable does not return this field.</p>
+         * <p>The information value (IV). This field is not returned for this type of variable.</p>
          * 
          * <strong>example:</strong>
          * <p>This type does not have this field</p>
@@ -109,7 +109,7 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
 
     public static class DescribeEventVariableListResponseBodyResultObjectActions extends TeaModel {
         /**
-         * <p>Variable code.</p>
+         * <p>The variable code.</p>
          * 
          * <strong>example:</strong>
          * <p>deAddResult</p>
@@ -118,7 +118,7 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
         public String code;
 
         /**
-         * <p>Data distribution display in JSON format. This field is not returned for this type of variable.</p>
+         * <p>The data distribution display in JSON format. This field is not returned for this type of variable.</p>
          * 
          * <strong>example:</strong>
          * <p>This type does not have this field</p>
@@ -127,7 +127,7 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
         public String dataDisplay;
 
         /**
-         * <p>Variable definition ID. This type of variable does not return this field.</p>
+         * <p>The variable definition ID. This field is not returned for this type of variable.</p>
          * 
          * <strong>example:</strong>
          * <p>This type does not have this field</p>
@@ -136,7 +136,7 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
         public String defineId;
 
         /**
-         * <p>Description information.</p>
+         * <p>The description.</p>
          * 
          * <strong>example:</strong>
          * <p>决策结果</p>
@@ -145,7 +145,7 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>Display type and group label.</p>
+         * <p>The display type and group label.</p>
          * 
          * <strong>example:</strong>
          * <p>ACTION</p>
@@ -154,7 +154,7 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
         public String displayType;
 
         /**
-         * <p>Expression display. This type of variable does not return this field.</p>
+         * <p>The expression display. This field is not returned for this type of variable.</p>
          * 
          * <strong>example:</strong>
          * <p>This type does not have this field</p>
@@ -163,7 +163,7 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
         public String expressionTitle;
 
         /**
-         * <p>Favorite identifier.</p>
+         * <p>The favorite flag.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -172,7 +172,7 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
         public Boolean favoriteFlag;
 
         /**
-         * <p>Details of the field pool. This type of variable does not return this field.</p>
+         * <p>The field pool field details. This field is not returned for this type of variable.</p>
          * 
          * <strong>example:</strong>
          * <p>This type does not have this field</p>
@@ -181,7 +181,7 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
         public String fieldDetail;
 
         /**
-         * <p>Field sorting.</p>
+         * <p>The field sort order.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -190,7 +190,7 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
         public Integer fieldRank;
 
         /**
-         * <p>Source of the field. This type of variable does not return this field.</p>
+         * <p>The field source. This field is not returned for this type of variable.</p>
          * 
          * <strong>example:</strong>
          * <p>This type does not have this field</p>
@@ -199,7 +199,7 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
         public String fieldSource;
 
         /**
-         * <p>Field type. This field is not returned for this type of variable.</p>
+         * <p>The field type. This field is not returned for this type of variable.</p>
          * 
          * <strong>example:</strong>
          * <p>This type does not have this field</p>
@@ -208,7 +208,7 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
         public String fieldType;
 
         /**
-         * <p>Primary key ID.</p>
+         * <p>The primary key ID.</p>
          * 
          * <strong>example:</strong>
          * <p>3144</p>
@@ -217,7 +217,7 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
         public Long id;
 
         /**
-         * <p>Input type of the parameter.</p>
+         * <p>The input type of the parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>STRING</p>
@@ -226,7 +226,7 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
         public String inputFieldType;
 
         /**
-         * <p>Required parameter. This type of variable does not return this field.</p>
+         * <p>The required parameter. This field is not returned for this type of variable.</p>
          * 
          * <strong>example:</strong>
          * <p>This type does not have this field</p>
@@ -235,7 +235,7 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
         public String inputRequired;
 
         /**
-         * <p>Input parameters. This field is not returned for this type of variable.</p>
+         * <p>The input parameters. This field is not returned for this type of variable.</p>
          * 
          * <strong>example:</strong>
          * <p>This type does not have this field</p>
@@ -244,7 +244,7 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
         public String inputs;
 
         /**
-         * <p>Variable name.</p>
+         * <p>The variable name.</p>
          * 
          * <strong>example:</strong>
          * <p><strong>addDeResult</strong></p>
@@ -253,7 +253,7 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>Anomaly value. This field is not returned for this type of variable.</p>
+         * <p>The outlier value. This field is not returned for this type of variable.</p>
          * 
          * <strong>example:</strong>
          * <p>This type does not have this field</p>
@@ -262,13 +262,13 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
         public String outlier;
 
         /**
-         * <p>Output value threshold.</p>
+         * <p>The output value threshold.</p>
          */
         @NameInMap("outputThreshold")
         public DescribeEventVariableListResponseBodyResultObjectActionsOutputThreshold outputThreshold;
 
         /**
-         * <p>Parent node. This field is not returned for this type of variable.</p>
+         * <p>The parent node. This field is not returned for this type of variable.</p>
          * 
          * <strong>example:</strong>
          * <p>This type does not have this field</p>
@@ -277,7 +277,7 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
         public String parentName;
 
         /**
-         * <p>Source type.</p>
+         * <p>The source type.</p>
          * 
          * <strong>example:</strong>
          * <p>SAF</p>
@@ -286,7 +286,7 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
         public String sourceType;
 
         /**
-         * <p>Title.</p>
+         * <p>The title.</p>
          * 
          * <strong>example:</strong>
          * <p>决策结果</p>
@@ -295,7 +295,7 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
         public String title;
 
         /**
-         * <p>Variable type.</p>
+         * <p>The variable type.</p>
          * 
          * <strong>example:</strong>
          * <p>ACTION</p>
@@ -304,13 +304,13 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
         public String type;
 
         /**
-         * <p>Variable metric information. This field is not returned for this type of variable.</p>
+         * <p>The variable metric information. This field is not returned for this type of variable.</p>
          */
         @NameInMap("variableVelocity")
         public DescribeEventVariableListResponseBodyResultObjectActionsVariableVelocity variableVelocity;
 
         /**
-         * <p>x label. This type of variable does not return this field.</p>
+         * <p>The X-axis label. This field is not returned for this type of variable.</p>
          * 
          * <strong>example:</strong>
          * <p>This type does not have this field</p>
@@ -319,7 +319,7 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
         public String xLabel;
 
         /**
-         * <p>y label. This type of variable does not return this field.</p>
+         * <p>The Y-axis label. This field is not returned for this type of variable.</p>
          * 
          * <strong>example:</strong>
          * <p>This type does not have this field</p>
@@ -536,7 +536,7 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
 
     public static class DescribeEventVariableListResponseBodyResultObjectDeviceVariablesOutputThreshold extends TeaModel {
         /**
-         * <p>The minimum value.</p>
+         * <p>The maximum value.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -578,7 +578,7 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
 
     public static class DescribeEventVariableListResponseBodyResultObjectDeviceVariablesVariableVelocity extends TeaModel {
         /**
-         * <p>The IV value. This field is not returned for this type of variable.</p>
+         * <p>The information value (IV). This field is not returned for this type of variable.</p>
          * 
          * <strong>example:</strong>
          * <p>This type does not have this field</p>
@@ -603,7 +603,7 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
 
     public static class DescribeEventVariableListResponseBodyResultObjectDeviceVariables extends TeaModel {
         /**
-         * <p>Variable code.</p>
+         * <p>The variable code.</p>
          * 
          * <strong>example:</strong>
          * <p>queryPhoneSimulatorInfo(deviceToken)?.deviceName</p>
@@ -612,7 +612,7 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
         public String code;
 
         /**
-         * <p>Data distribution display in JSON format. This field is not returned for this type of variable.</p>
+         * <p>The data distribution display in JSON format. This field is not returned for this type of variable.</p>
          * 
          * <strong>example:</strong>
          * <p>This type does not have this field</p>
@@ -621,7 +621,7 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
         public String dataDisplay;
 
         /**
-         * <p>Variable definition ID. This type of variable does not return this field.</p>
+         * <p>The variable definition ID. This field is not returned for this type of variable.</p>
          * 
          * <strong>example:</strong>
          * <p>This type does not have this field</p>
@@ -630,7 +630,7 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
         public String defineId;
 
         /**
-         * <p>Description information.</p>
+         * <p>The description.</p>
          * 
          * <strong>example:</strong>
          * <p>设备信息-设备名称</p>
@@ -639,7 +639,7 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The display type and grouping label.</p>
+         * <p>The display type and group label.</p>
          * 
          * <strong>example:</strong>
          * <p>DEVICE</p>
@@ -666,7 +666,7 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
         public Boolean favoriteFlag;
 
         /**
-         * <p>The detailed information of the field in the field pool. This field is not returned for this type of variable.</p>
+         * <p>The field pool field details. This field is not returned for this type of variable.</p>
          * 
          * <strong>example:</strong>
          * <p>This type does not have this field</p>
@@ -675,7 +675,7 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
         public String fieldDetail;
 
         /**
-         * <p>The field rank.</p>
+         * <p>The field sort order.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -684,7 +684,7 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
         public Integer fieldRank;
 
         /**
-         * <p>The source of the field. This field is not returned for this type of variable.</p>
+         * <p>The field source. This field is not returned for this type of variable.</p>
          * 
          * <strong>example:</strong>
          * <p>This type does not have this field</p>
@@ -693,7 +693,7 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
         public String fieldSource;
 
         /**
-         * <p>Field type.</p>
+         * <p>The field type.</p>
          * 
          * <strong>example:</strong>
          * <p>STRING</p>
@@ -702,7 +702,7 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
         public String fieldType;
 
         /**
-         * <p>Primary key ID.</p>
+         * <p>The primary key ID.</p>
          * 
          * <strong>example:</strong>
          * <p>41</p>
@@ -729,7 +729,7 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
         public String inputRequired;
 
         /**
-         * <p>Input for the variable. This field is not returned for this type of variable.</p>
+         * <p>The input of the variable. This field is not returned for this type of variable.</p>
          * 
          * <strong>example:</strong>
          * <p>This type does not have this field</p>
@@ -738,7 +738,7 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
         public String inputs;
 
         /**
-         * <p>Variable name.</p>
+         * <p>The variable name.</p>
          * 
          * <strong>example:</strong>
          * <p><strong>device_name</strong></p>
@@ -762,7 +762,7 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
         public DescribeEventVariableListResponseBodyResultObjectDeviceVariablesOutputThreshold outputThreshold;
 
         /**
-         * <p>Parent node. This field is not returned for this type of variable.</p>
+         * <p>The parent node. This field is not returned for this type of variable.</p>
          * 
          * <strong>example:</strong>
          * <p>This type does not have this field</p>
@@ -780,7 +780,7 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
         public String sourceType;
 
         /**
-         * <p>Title.</p>
+         * <p>The title.</p>
          * 
          * <strong>example:</strong>
          * <p>设备信息-设备名称-deviceName</p>
@@ -789,7 +789,7 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
         public String title;
 
         /**
-         * <p>Variable type.</p>
+         * <p>The variable type.</p>
          * 
          * <strong>example:</strong>
          * <p>DEVICE</p>
@@ -804,7 +804,7 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
         public DescribeEventVariableListResponseBodyResultObjectDeviceVariablesVariableVelocity variableVelocity;
 
         /**
-         * <p>The X label. This field is not returned for this type of variable.</p>
+         * <p>The X-axis label. This field is not returned for this type of variable.</p>
          * 
          * <strong>example:</strong>
          * <p>This type does not have this field</p>
@@ -813,7 +813,7 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
         public String xLabel;
 
         /**
-         * <p>The Y label. This field is not returned for this type of variable.</p>
+         * <p>The Y-axis label. This field is not returned for this type of variable.</p>
          * 
          * <strong>example:</strong>
          * <p>This type does not have this field</p>
@@ -1072,7 +1072,7 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
 
     public static class DescribeEventVariableListResponseBodyResultObjectExpressionVariablesVariableVelocity extends TeaModel {
         /**
-         * <p>The IV value. This field is not returned for this type of variable.</p>
+         * <p>The information value (IV). This field is not returned for this type of variable.</p>
          * 
          * <strong>example:</strong>
          * <p>This type does not have this field</p>
@@ -1097,7 +1097,7 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
 
     public static class DescribeEventVariableListResponseBodyResultObjectExpressionVariables extends TeaModel {
         /**
-         * <p>The code of the variable.</p>
+         * <p>The variable code.</p>
          * 
          * <strong>example:</strong>
          * <p>deInvokeSelfVariable(390397)</p>
@@ -1106,7 +1106,7 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
         public String code;
 
         /**
-         * <p>Data distribution display, in JSON format. This field is not returned for this type of variable.</p>
+         * <p>The data distribution display in JSON format. This field is not returned for this type of variable.</p>
          * 
          * <strong>example:</strong>
          * <p>This type does not have this field</p>
@@ -1115,7 +1115,7 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
         public String dataDisplay;
 
         /**
-         * <p>The definition ID of the variable. This field is not returned for this type of variable.</p>
+         * <p>The variable definition ID. This field is not returned for this type of variable.</p>
          * 
          * <strong>example:</strong>
          * <p>This type does not have this field</p>
@@ -1124,7 +1124,7 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
         public String defineId;
 
         /**
-         * <p>The description of the variable.</p>
+         * <p>The variable description.</p>
          * 
          * <strong>example:</strong>
          * <p>获取手机号前7位</p>
@@ -1133,7 +1133,7 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The display type and grouping label.</p>
+         * <p>The display type and group label.</p>
          * 
          * <strong>example:</strong>
          * <p>EXPRESSION</p>
@@ -1160,7 +1160,7 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
         public Boolean favoriteFlag;
 
         /**
-         * <p>The detailed information of the field in the field pool. This field is not returned for this type of variable.</p>
+         * <p>The field pool field details. This field is not returned for this type of variable.</p>
          * 
          * <strong>example:</strong>
          * <p>This type does not have this field</p>
@@ -1169,7 +1169,7 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
         public String fieldDetail;
 
         /**
-         * <p>The field rank.</p>
+         * <p>The field sort order.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -1178,7 +1178,7 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
         public Integer fieldRank;
 
         /**
-         * <p>The source of the field. This field is not returned for this type of variable.</p>
+         * <p>The field source. This field is not returned for this type of variable.</p>
          * 
          * <strong>example:</strong>
          * <p>This type does not have this field</p>
@@ -1187,7 +1187,7 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
         public String fieldSource;
 
         /**
-         * <p>The input type of the variable.</p>
+         * <p>The variable input type.</p>
          * 
          * <strong>example:</strong>
          * <p>STRING</p>
@@ -1196,7 +1196,7 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
         public String fieldType;
 
         /**
-         * <p>Primary key ID.</p>
+         * <p>The primary key ID.</p>
          * 
          * <strong>example:</strong>
          * <p>3148</p>
@@ -1223,7 +1223,7 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
         public String inputRequired;
 
         /**
-         * <p>Multiple input parameters separated by commas. This field is not returned for this type of variable.</p>
+         * <p>The input parameters, separated by commas if multiple. This field is not returned for this type of variable.</p>
          * 
          * <strong>example:</strong>
          * <p>This type does not have this field</p>
@@ -1232,7 +1232,7 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
         public String inputs;
 
         /**
-         * <p>The name of the variable.</p>
+         * <p>The variable name.</p>
          * 
          * <strong>example:</strong>
          * <p>ex_w2yIClHCc150</p>
@@ -1274,7 +1274,7 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
         public String sourceType;
 
         /**
-         * <p>Title.</p>
+         * <p>The title.</p>
          * 
          * <strong>example:</strong>
          * <p>获取手机号前7位</p>
@@ -1283,7 +1283,7 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
         public String title;
 
         /**
-         * <p>The type of the variable.</p>
+         * <p>The variable type.</p>
          * 
          * <strong>example:</strong>
          * <p>EXPRESSION</p>
@@ -1298,7 +1298,7 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
         public DescribeEventVariableListResponseBodyResultObjectExpressionVariablesVariableVelocity variableVelocity;
 
         /**
-         * <p>The X label. This field is not returned for this type of variable.</p>
+         * <p>The X-axis label. This field is not returned for this type of variable.</p>
          * 
          * <strong>example:</strong>
          * <p>This type does not have this field</p>
@@ -1307,7 +1307,7 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
         public String xLabel;
 
         /**
-         * <p>The Y label. This field is not returned for this type of variable.</p>
+         * <p>The Y-axis label. This field is not returned for this type of variable.</p>
          * 
          * <strong>example:</strong>
          * <p>This type does not have this field</p>
@@ -1524,7 +1524,7 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
 
     public static class DescribeEventVariableListResponseBodyResultObjectFavoriteVariablesOutputThreshold extends TeaModel {
         /**
-         * <p>Maximum value.</p>
+         * <p>The maximum value.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -1533,7 +1533,7 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
         public Double maxValue;
 
         /**
-         * <p>Minimum value.</p>
+         * <p>The minimum value.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -1566,7 +1566,7 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
 
     public static class DescribeEventVariableListResponseBodyResultObjectFavoriteVariablesVariableVelocity extends TeaModel {
         /**
-         * <p>iv value. This type of variable does not return this field.</p>
+         * <p>The information value (IV). This field is not returned for this type of variable.</p>
          * 
          * <strong>example:</strong>
          * <p>This type does not have this field</p>
@@ -1591,7 +1591,7 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
 
     public static class DescribeEventVariableListResponseBodyResultObjectFavoriteVariables extends TeaModel {
         /**
-         * <p>Variable code.</p>
+         * <p>The variable code.</p>
          * 
          * <strong>example:</strong>
          * <p>deFunctionProcess(ip,\&quot;isIp\&quot;)</p>
@@ -1600,7 +1600,7 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
         public String code;
 
         /**
-         * <p>Data distribution display in JSON format. This field is not returned for this type of variable.</p>
+         * <p>The data distribution display in JSON format. This field is not returned for this type of variable.</p>
          * 
          * <strong>example:</strong>
          * <p>This type does not have this field</p>
@@ -1609,7 +1609,7 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
         public String dataDisplay;
 
         /**
-         * <p>Variable definition ID.</p>
+         * <p>The variable definition ID.</p>
          * 
          * <strong>example:</strong>
          * <p>16</p>
@@ -1618,7 +1618,7 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
         public String defineId;
 
         /**
-         * <p>Description of the variable.</p>
+         * <p>The variable description.</p>
          * 
          * <strong>example:</strong>
          * <p>判断是否符合IPv4标准</p>
@@ -1627,7 +1627,7 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>Display type and group label.</p>
+         * <p>The display type and group label.</p>
          * 
          * <strong>example:</strong>
          * <p>SYSTEM_BIND</p>
@@ -1636,7 +1636,7 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
         public String displayType;
 
         /**
-         * <p>Expression display value. This type of variable does not return this field.</p>
+         * <p>The expression display value. This field is not returned for this type of variable.</p>
          * 
          * <strong>example:</strong>
          * <p>This type does not have this field</p>
@@ -1645,7 +1645,7 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
         public String expressionTitle;
 
         /**
-         * <p>Favorite identifier.</p>
+         * <p>The favorite flag.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -1654,7 +1654,7 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
         public Boolean favoriteFlag;
 
         /**
-         * <p>Details of the field pool. This type of variable does not return this field.</p>
+         * <p>The field pool field details. This field is not returned for this type of variable.</p>
          * 
          * <strong>example:</strong>
          * <p>This type does not have this field</p>
@@ -1663,7 +1663,7 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
         public String fieldDetail;
 
         /**
-         * <p>Field sorting.</p>
+         * <p>The field sort order.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -1672,7 +1672,7 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
         public Integer fieldRank;
 
         /**
-         * <p>Source of the field. This type of variable does not return this field.</p>
+         * <p>The field source. This field is not returned for this type of variable.</p>
          * 
          * <strong>example:</strong>
          * <p>This type does not have this field</p>
@@ -1681,7 +1681,7 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
         public String fieldSource;
 
         /**
-         * <p>Field type.</p>
+         * <p>The field type.</p>
          * 
          * <strong>example:</strong>
          * <p>BOOLEAN</p>
@@ -1690,7 +1690,7 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
         public String fieldType;
 
         /**
-         * <p>Primary key ID.</p>
+         * <p>The primary key ID.</p>
          * 
          * <strong>example:</strong>
          * <p>34</p>
@@ -1699,7 +1699,7 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
         public Long id;
 
         /**
-         * <p>Input type of the parameter. This field is not returned for this type of variable.</p>
+         * <p>The input type of the parameter. This field is not returned for this type of variable.</p>
          * 
          * <strong>example:</strong>
          * <p>This type does not have this field</p>
@@ -1708,7 +1708,7 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
         public String inputFieldType;
 
         /**
-         * <p>Required parameter. This field is not returned for this type of variable.</p>
+         * <p>The required parameter. This field is not returned for this type of variable.</p>
          * 
          * <strong>example:</strong>
          * <p>This type does not have this field</p>
@@ -1717,7 +1717,7 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
         public String inputRequired;
 
         /**
-         * <p>Input parameters should be separated by commas. Some variables may not have this field.</p>
+         * <p>The input parameters, separated by commas if multiple. Some variables do not have this field.</p>
          * 
          * <strong>example:</strong>
          * <p>ip</p>
@@ -1726,7 +1726,7 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
         public String inputs;
 
         /**
-         * <p>Variable name.</p>
+         * <p>The variable name.</p>
          * 
          * <strong>example:</strong>
          * <p><strong>isIpAddressV4</strong></p>
@@ -1735,7 +1735,7 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>Anomaly value. This field is not returned for this type of variable.</p>
+         * <p>The outlier value. This field is not returned for this type of variable.</p>
          * 
          * <strong>example:</strong>
          * <p>This type does not have this field</p>
@@ -1744,13 +1744,13 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
         public String outlier;
 
         /**
-         * <p>Output value threshold.</p>
+         * <p>The output value threshold.</p>
          */
         @NameInMap("outputThreshold")
         public DescribeEventVariableListResponseBodyResultObjectFavoriteVariablesOutputThreshold outputThreshold;
 
         /**
-         * <p>Parent node. This field is not returned for this type of variable.</p>
+         * <p>The parent node. This field is not returned for this type of variable.</p>
          * 
          * <strong>example:</strong>
          * <p>This type does not have this field</p>
@@ -1759,7 +1759,7 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
         public String parentName;
 
         /**
-         * <p>Source type.</p>
+         * <p>The source type.</p>
          * 
          * <strong>example:</strong>
          * <p>SAF</p>
@@ -1768,7 +1768,7 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
         public String sourceType;
 
         /**
-         * <p>Title.</p>
+         * <p>The title.</p>
          * 
          * <strong>example:</strong>
          * <p>IP是否符合IPV4格式</p>
@@ -1777,7 +1777,7 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
         public String title;
 
         /**
-         * <p>Variable type.</p>
+         * <p>The variable type.</p>
          * 
          * <strong>example:</strong>
          * <p>SYSTEM_BIND</p>
@@ -1786,13 +1786,13 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
         public String type;
 
         /**
-         * <p>Variable metric information. This field is not returned for this type of variable.</p>
+         * <p>The variable metric information. This field is not returned for this type of variable.</p>
          */
         @NameInMap("variableVelocity")
         public DescribeEventVariableListResponseBodyResultObjectFavoriteVariablesVariableVelocity variableVelocity;
 
         /**
-         * <p>x label. This type of variable does not return this field.</p>
+         * <p>The X-axis label. This field is not returned for this type of variable.</p>
          * 
          * <strong>example:</strong>
          * <p>This type does not have this field</p>
@@ -1801,7 +1801,7 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
         public String xLabel;
 
         /**
-         * <p>y label. This type of variable does not return this field.</p>
+         * <p>The Y-axis label. This field is not returned for this type of variable.</p>
          * 
          * <strong>example:</strong>
          * <p>This type does not have this field</p>
@@ -2018,7 +2018,7 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
 
     public static class DescribeEventVariableListResponseBodyResultObjectMiddleVariablesOutputThreshold extends TeaModel {
         /**
-         * <p>Maximum value.</p>
+         * <p>The maximum value.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -2027,7 +2027,7 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
         public Double maxValue;
 
         /**
-         * <p>Minimum value.</p>
+         * <p>The minimum value.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -2060,7 +2060,7 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
 
     public static class DescribeEventVariableListResponseBodyResultObjectMiddleVariablesVariableVelocity extends TeaModel {
         /**
-         * <p>id value. This type of variable does not return this field.</p>
+         * <p>The ID value. This field is not returned for this type of variable.</p>
          * 
          * <strong>example:</strong>
          * <p>This type does not have this field</p>
@@ -2085,7 +2085,7 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
 
     public static class DescribeEventVariableListResponseBodyResultObjectMiddleVariables extends TeaModel {
         /**
-         * <p>Variable code.</p>
+         * <p>The variable code.</p>
          * 
          * <strong>example:</strong>
          * <p>mid</p>
@@ -2094,7 +2094,7 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
         public String code;
 
         /**
-         * <p>Data distribution display in JSON format. This field is not returned for this type of variable.</p>
+         * <p>The data distribution display in JSON format. This field is not returned for this type of variable.</p>
          * 
          * <strong>example:</strong>
          * <p>This type does not have this field</p>
@@ -2103,7 +2103,7 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
         public String dataDisplay;
 
         /**
-         * <p>Variable definition ID.</p>
+         * <p>The variable definition ID.</p>
          * 
          * <strong>example:</strong>
          * <p>register</p>
@@ -2112,7 +2112,7 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
         public String defineId;
 
         /**
-         * <p>Variable description.</p>
+         * <p>The variable description.</p>
          * 
          * <strong>example:</strong>
          * <p>description</p>
@@ -2121,7 +2121,7 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>Display type and group label.</p>
+         * <p>The display type and group label.</p>
          * 
          * <strong>example:</strong>
          * <p>MIDDLE</p>
@@ -2130,7 +2130,7 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
         public String displayType;
 
         /**
-         * <p>Calculate the display value of the expression. This type of variable does not return this field.</p>
+         * <p>The display value of the calculation expression. This field is not returned for this type of variable.</p>
          * 
          * <strong>example:</strong>
          * <p>This type does not have this field</p>
@@ -2139,7 +2139,7 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
         public String expressionTitle;
 
         /**
-         * <p>Favorite identifier.</p>
+         * <p>The favorite flag.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -2148,7 +2148,7 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
         public Boolean favoriteFlag;
 
         /**
-         * <p>Details of the field pool. This type of variable does not return this field.</p>
+         * <p>The field pool field details. This field is not returned for this type of variable.</p>
          * 
          * <strong>example:</strong>
          * <p>This type does not have this field</p>
@@ -2157,7 +2157,7 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
         public String fieldDetail;
 
         /**
-         * <p>Field sorting.</p>
+         * <p>The field sort order.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -2166,7 +2166,7 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
         public Integer fieldRank;
 
         /**
-         * <p>Variable source.</p>
+         * <p>The variable source.</p>
          * 
          * <strong>example:</strong>
          * <p>DEFAULT</p>
@@ -2175,7 +2175,7 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
         public String fieldSource;
 
         /**
-         * <p>Field type.</p>
+         * <p>The field type.</p>
          * 
          * <strong>example:</strong>
          * <p>STRING</p>
@@ -2184,7 +2184,7 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
         public String fieldType;
 
         /**
-         * <p>Primary key ID.</p>
+         * <p>The primary key ID.</p>
          * 
          * <strong>example:</strong>
          * <p>49</p>
@@ -2193,7 +2193,7 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
         public Long id;
 
         /**
-         * <p>Input field type, indicating the type of input parameters, mainly used for function classification. This type of variable does not return this field.</p>
+         * <p>The input field type, which indicates the input parameter type and is mainly used for function classification. This field is not returned for this type of variable.</p>
          * 
          * <strong>example:</strong>
          * <p>This type does not have this field</p>
@@ -2202,7 +2202,7 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
         public String inputFieldType;
 
         /**
-         * <p>Required parameter. This field is not returned for this type of variable.</p>
+         * <p>The required parameter. This field is not returned for this type of variable.</p>
          * 
          * <strong>example:</strong>
          * <p>This type does not have this field</p>
@@ -2211,7 +2211,7 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
         public String inputRequired;
 
         /**
-         * <p>Input of the variable.</p>
+         * <p>The input of the variable.</p>
          * 
          * <strong>example:</strong>
          * <p>This type does not have this field</p>
@@ -2220,7 +2220,7 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
         public String inputs;
 
         /**
-         * <p>Variable name.</p>
+         * <p>The variable name.</p>
          * 
          * <strong>example:</strong>
          * <p>mid</p>
@@ -2229,7 +2229,7 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>Outlier value. This field is not returned for this type of variable.</p>
+         * <p>The outlier value. This field is not returned for this type of variable.</p>
          * 
          * <strong>example:</strong>
          * <p>This type does not have this field</p>
@@ -2238,13 +2238,13 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
         public String outlier;
 
         /**
-         * <p>Output value threshold.</p>
+         * <p>The output value threshold.</p>
          */
         @NameInMap("outputThreshold")
         public DescribeEventVariableListResponseBodyResultObjectMiddleVariablesOutputThreshold outputThreshold;
 
         /**
-         * <p>Parent node. This field is not returned for this type of variable.</p>
+         * <p>The parent node. This field is not returned for this type of variable.</p>
          * 
          * <strong>example:</strong>
          * <p>This type does not have this field</p>
@@ -2253,7 +2253,7 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
         public String parentName;
 
         /**
-         * <p>Source type.</p>
+         * <p>The source type.</p>
          * 
          * <strong>example:</strong>
          * <p>SAF</p>
@@ -2262,7 +2262,7 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
         public String sourceType;
 
         /**
-         * <p>Title.</p>
+         * <p>The title.</p>
          * 
          * <strong>example:</strong>
          * <p>midVaribale</p>
@@ -2271,7 +2271,7 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
         public String title;
 
         /**
-         * <p>Variable type.</p>
+         * <p>The variable type.</p>
          * 
          * <strong>example:</strong>
          * <p>MIDDLE</p>
@@ -2280,13 +2280,13 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
         public String type;
 
         /**
-         * <p>Variable metric information. This type of variable does not return this field.</p>
+         * <p>The variable metric information. This field is not returned for this type of variable.</p>
          */
         @NameInMap("variableVelocity")
         public DescribeEventVariableListResponseBodyResultObjectMiddleVariablesVariableVelocity variableVelocity;
 
         /**
-         * <p>x label. This type of variable does not return this field.</p>
+         * <p>The X-axis label. This field is not returned for this type of variable.</p>
          * 
          * <strong>example:</strong>
          * <p>This type does not have this field</p>
@@ -2295,7 +2295,7 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
         public String xLabel;
 
         /**
-         * <p>y label. This type of variable does not return this field.</p>
+         * <p>The Y-axis label. This field is not returned for this type of variable.</p>
          * 
          * <strong>example:</strong>
          * <p>This type does not have this field</p>
@@ -2554,7 +2554,7 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
 
     public static class DescribeEventVariableListResponseBodyResultObjectModelVariablesVariableVelocity extends TeaModel {
         /**
-         * <p>The IV value. This field is not returned for this type of variable.</p>
+         * <p>The information value (IV). This field is not returned for this type of variable.</p>
          * 
          * <strong>example:</strong>
          * <p>This type does not have this field</p>
@@ -2579,7 +2579,7 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
 
     public static class DescribeEventVariableListResponseBodyResultObjectModelVariables extends TeaModel {
         /**
-         * <p>The code of the model variable.</p>
+         * <p>The variable code.</p>
          * 
          * <strong>example:</strong>
          * <p>getAIData(model)</p>
@@ -2588,7 +2588,7 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
         public String code;
 
         /**
-         * <p>Data distribution display, in JSON format. This field is not returned for this type of variable.</p>
+         * <p>The data distribution display in JSON format. This field is not returned for this type of variable.</p>
          * 
          * <strong>example:</strong>
          * <p>This type does not have this field</p>
@@ -2597,7 +2597,7 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
         public String dataDisplay;
 
         /**
-         * <p>The definition ID of the model variable. This field is not returned for this type of variable.</p>
+         * <p>The variable definition ID. This field is not returned for this type of variable.</p>
          * 
          * <strong>example:</strong>
          * <p>This type does not have this field</p>
@@ -2606,7 +2606,7 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
         public String defineId;
 
         /**
-         * <p>The description of the model variable.</p>
+         * <p>The variable description.</p>
          * 
          * <strong>example:</strong>
          * <p>BL_t_show</p>
@@ -2615,7 +2615,7 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The display type and grouping label.</p>
+         * <p>The display type and group label.</p>
          * 
          * <strong>example:</strong>
          * <p>MODEL</p>
@@ -2642,7 +2642,7 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
         public Boolean favoriteFlag;
 
         /**
-         * <p>The detailed information of the field in the field pool. This field is not returned for this type of variable.</p>
+         * <p>The field pool field details. This field is not returned for this type of variable.</p>
          * 
          * <strong>example:</strong>
          * <p>This type does not have this field</p>
@@ -2651,7 +2651,7 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
         public String fieldDetail;
 
         /**
-         * <p>The field rank.</p>
+         * <p>The field sort order.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -2660,7 +2660,7 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
         public Integer fieldRank;
 
         /**
-         * <p>The source of the field. This field is not returned for this type of variable.</p>
+         * <p>The field source. This field is not returned for this type of variable.</p>
          * 
          * <strong>example:</strong>
          * <p>This type does not have this field</p>
@@ -2669,7 +2669,7 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
         public String fieldSource;
 
         /**
-         * <p>The type of the field.</p>
+         * <p>The field type.</p>
          * 
          * <strong>example:</strong>
          * <p>DOUBLE</p>
@@ -2705,7 +2705,7 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
         public String inputRequired;
 
         /**
-         * <p>Multiple input parameters separated by commas. This field is not returned for this type of variable.</p>
+         * <p>The input parameters, separated by commas if multiple. This field is not returned for this type of variable.</p>
          * 
          * <strong>example:</strong>
          * <p>This type does not have this field</p>
@@ -2714,7 +2714,7 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
         public String inputs;
 
         /**
-         * <p>The name of the model variable.</p>
+         * <p>The variable name.</p>
          * 
          * <strong>example:</strong>
          * <p>mo_qbbyf33o66f2</p>
@@ -2756,7 +2756,7 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
         public String sourceType;
 
         /**
-         * <p>The title of the model variable.</p>
+         * <p>The title.</p>
          * 
          * <strong>example:</strong>
          * <p>BL_t_show</p>
@@ -2765,7 +2765,7 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
         public String title;
 
         /**
-         * <p>The type of the model variable.</p>
+         * <p>The variable type.</p>
          * 
          * <strong>example:</strong>
          * <p>MODEL</p>
@@ -2780,7 +2780,7 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
         public DescribeEventVariableListResponseBodyResultObjectModelVariablesVariableVelocity variableVelocity;
 
         /**
-         * <p>The X label. This field is not returned for this type of variable.</p>
+         * <p>The X-axis label. This field is not returned for this type of variable.</p>
          * 
          * <strong>example:</strong>
          * <p>This type does not have this field</p>
@@ -2789,7 +2789,7 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
         public String xLabel;
 
         /**
-         * <p>The Y label. This field is not returned for this type of variable.</p>
+         * <p>The Y-axis label. This field is not returned for this type of variable.</p>
          * 
          * <strong>example:</strong>
          * <p>This type does not have this field</p>
@@ -3006,7 +3006,7 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
 
     public static class DescribeEventVariableListResponseBodyResultObjectNameListOutputThreshold extends TeaModel {
         /**
-         * <p>Maximum value.</p>
+         * <p>The maximum value.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -3015,7 +3015,7 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
         public Double maxValue;
 
         /**
-         * <p>Minimum value.</p>
+         * <p>The minimum value.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -3048,7 +3048,7 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
 
     public static class DescribeEventVariableListResponseBodyResultObjectNameListVariableVelocity extends TeaModel {
         /**
-         * <p>iv value. This type of variable does not return this field.</p>
+         * <p>The information value (IV). This field is not returned for this type of variable.</p>
          * 
          * <strong>example:</strong>
          * <p>This type does not have this field</p>
@@ -3073,7 +3073,7 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
 
     public static class DescribeEventVariableListResponseBodyResultObjectNameList extends TeaModel {
         /**
-         * <p>Variable code.</p>
+         * <p>The variable code.</p>
          * 
          * <strong>example:</strong>
          * <p>nl_UN8otElLb490</p>
@@ -3082,7 +3082,7 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
         public String code;
 
         /**
-         * <p>Data distribution display in JSON format. This field is not currently returned.</p>
+         * <p>The data distribution display in JSON format. This field is not currently returned.</p>
          * 
          * <strong>example:</strong>
          * <p>This type does not have this field</p>
@@ -3091,7 +3091,7 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
         public String dataDisplay;
 
         /**
-         * <p>Variable definition ID. This type of variable does not return this field.</p>
+         * <p>The variable definition ID. This field is not returned for this type of variable.</p>
          * 
          * <strong>example:</strong>
          * <p>This type does not have this field</p>
@@ -3100,7 +3100,7 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
         public String defineId;
 
         /**
-         * <p>Description information.</p>
+         * <p>The description.</p>
          * 
          * <strong>example:</strong>
          * <p>描述</p>
@@ -3109,7 +3109,7 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>Display type and group label.</p>
+         * <p>The display type and group label.</p>
          * 
          * <strong>example:</strong>
          * <p>NAME_LIST</p>
@@ -3118,7 +3118,7 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
         public String displayType;
 
         /**
-         * <p>Calculate the expression display value. This type of variable does not return this field.</p>
+         * <p>The display value of the calculation expression. This field is not returned for this type of variable.</p>
          * 
          * <strong>example:</strong>
          * <p>This type does not have this field</p>
@@ -3127,7 +3127,7 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
         public String expressionTitle;
 
         /**
-         * <p>Favorite identifier.</p>
+         * <p>The favorite flag.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -3136,7 +3136,7 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
         public Boolean favoriteFlag;
 
         /**
-         * <p>Details of the field pool. This type of variable does not return this field.</p>
+         * <p>The field pool field details. This field is not returned for this type of variable.</p>
          * 
          * <strong>example:</strong>
          * <p>This type does not have this field</p>
@@ -3145,7 +3145,7 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
         public String fieldDetail;
 
         /**
-         * <p>Field sorting.</p>
+         * <p>The field sort order.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -3154,7 +3154,7 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
         public Integer fieldRank;
 
         /**
-         * <p>Source of the field. This type of variable does not return this field.</p>
+         * <p>The field source. This field is not returned for this type of variable.</p>
          * 
          * <strong>example:</strong>
          * <p>This type does not have this field</p>
@@ -3163,7 +3163,7 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
         public String fieldSource;
 
         /**
-         * <p>Field type. This field is not returned for this type of variable.</p>
+         * <p>The field type. This field is not returned for this type of variable.</p>
          * 
          * <strong>example:</strong>
          * <p>This type does not have this field</p>
@@ -3172,7 +3172,7 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
         public String fieldType;
 
         /**
-         * <p>Primary key ID.</p>
+         * <p>The primary key ID.</p>
          * 
          * <strong>example:</strong>
          * <p>34</p>
@@ -3181,7 +3181,7 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
         public Long id;
 
         /**
-         * <p>Input type of the parameter. This field is not returned for this type of variable.</p>
+         * <p>The input type of the parameter. This field is not returned for this type of variable.</p>
          * 
          * <strong>example:</strong>
          * <p>This type does not have this field</p>
@@ -3190,7 +3190,7 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
         public String inputFieldType;
 
         /**
-         * <p>Required parameter. This field is not returned for this type of variable.</p>
+         * <p>The required parameter. This field is not returned for this type of variable.</p>
          * 
          * <strong>example:</strong>
          * <p>This type does not have this field</p>
@@ -3199,7 +3199,7 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
         public String inputRequired;
 
         /**
-         * <p>Input parameters. This field is not returned for this type of variable.</p>
+         * <p>The input parameters. This field is not returned for this type of variable.</p>
          * 
          * <strong>example:</strong>
          * <p>This type does not have this field</p>
@@ -3208,7 +3208,7 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
         public String inputs;
 
         /**
-         * <p>Variable name.</p>
+         * <p>The variable name.</p>
          * 
          * <strong>example:</strong>
          * <p>nl_UN8otElLb490</p>
@@ -3217,7 +3217,7 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>Outlier value. This field is not returned for this type of variable.</p>
+         * <p>The outlier value. This field is not returned for this type of variable.</p>
          * 
          * <strong>example:</strong>
          * <p>This type does not have this field</p>
@@ -3226,13 +3226,13 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
         public String outlier;
 
         /**
-         * <p>Output value threshold.</p>
+         * <p>The output value threshold.</p>
          */
         @NameInMap("outputThreshold")
         public DescribeEventVariableListResponseBodyResultObjectNameListOutputThreshold outputThreshold;
 
         /**
-         * <p>Parent node. This field is not returned currently.</p>
+         * <p>The parent node. This field is not currently returned.</p>
          * 
          * <strong>example:</strong>
          * <p>This type does not have this field</p>
@@ -3241,7 +3241,7 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
         public String parentName;
 
         /**
-         * <p>Source type.</p>
+         * <p>The source type.</p>
          * 
          * <strong>example:</strong>
          * <p>SAF</p>
@@ -3250,7 +3250,7 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
         public String sourceType;
 
         /**
-         * <p>Title.</p>
+         * <p>The title.</p>
          * 
          * <strong>example:</strong>
          * <p>白名单</p>
@@ -3259,7 +3259,7 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
         public String title;
 
         /**
-         * <p>Variable type.</p>
+         * <p>The variable type.</p>
          * 
          * <strong>example:</strong>
          * <p>NAME_LIST</p>
@@ -3268,13 +3268,13 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
         public String type;
 
         /**
-         * <p>Variable metric information. This field is not returned for this type of variable.</p>
+         * <p>The variable metric information. This field is not returned for this type of variable.</p>
          */
         @NameInMap("variableVelocity")
         public DescribeEventVariableListResponseBodyResultObjectNameListVariableVelocity variableVelocity;
 
         /**
-         * <p>x label. This type of variable does not return this field.</p>
+         * <p>The X-axis label. This field is not returned for this type of variable.</p>
          * 
          * <strong>example:</strong>
          * <p>This type does not have this field</p>
@@ -3283,7 +3283,7 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
         public String xLabel;
 
         /**
-         * <p>y label. This type of variable does not return this field.</p>
+         * <p>The Y-axis label. This field is not returned for this type of variable.</p>
          * 
          * <strong>example:</strong>
          * <p>This type does not have this field</p>
@@ -3500,7 +3500,7 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
 
     public static class DescribeEventVariableListResponseBodyResultObjectNativeVariableFunctionsOutputThreshold extends TeaModel {
         /**
-         * <p>Maximum value.</p>
+         * <p>The maximum value.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -3509,7 +3509,7 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
         public Double maxValue;
 
         /**
-         * <p>Minimum value.</p>
+         * <p>The minimum value.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -3542,7 +3542,7 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
 
     public static class DescribeEventVariableListResponseBodyResultObjectNativeVariableFunctionsVariableVelocity extends TeaModel {
         /**
-         * <p>iv value. This type of variable does not return this field.</p>
+         * <p>The information value (IV). This field is not returned for this type of variable.</p>
          * 
          * <strong>example:</strong>
          * <p>This type does not have this field</p>
@@ -3567,7 +3567,7 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
 
     public static class DescribeEventVariableListResponseBodyResultObjectNativeVariableFunctions extends TeaModel {
         /**
-         * <p>Variable code.</p>
+         * <p>The variable code.</p>
          * 
          * <strong>example:</strong>
          * <p>getHourOfTimestamp({data})</p>
@@ -3576,7 +3576,7 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
         public String code;
 
         /**
-         * <p>Data distribution display in JSON format. This field is not returned for this type of variable.</p>
+         * <p>The data distribution display in JSON format. This field is not returned for this type of variable.</p>
          * 
          * <strong>example:</strong>
          * <p>This type does not have this field</p>
@@ -3585,7 +3585,7 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
         public String dataDisplay;
 
         /**
-         * <p>Variable definition ID. This type of variable does not return this field.</p>
+         * <p>The variable definition ID. This field is not returned for this type of variable.</p>
          * 
          * <strong>example:</strong>
          * <p>This type does not have this field</p>
@@ -3594,7 +3594,7 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
         public String defineId;
 
         /**
-         * <p>Description information.</p>
+         * <p>The description.</p>
          * 
          * <strong>example:</strong>
          * <p>时间戳，可以是秒或者毫秒</p>
@@ -3603,7 +3603,7 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>Display type and group label.</p>
+         * <p>The display type and group label.</p>
          * 
          * <strong>example:</strong>
          * <p>FUNC</p>
@@ -3612,7 +3612,7 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
         public String displayType;
 
         /**
-         * <p>Calculate the expression display value. This field is not returned for this type of variable.</p>
+         * <p>The display value of the calculation expression. This field is not returned for this type of variable.</p>
          * 
          * <strong>example:</strong>
          * <p>This type does not have this field</p>
@@ -3621,7 +3621,7 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
         public String expressionTitle;
 
         /**
-         * <p>Favorite identifier.</p>
+         * <p>The favorite flag.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -3630,7 +3630,7 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
         public Boolean favoriteFlag;
 
         /**
-         * <p>Details of the field pool. This type of variable does not return this field.</p>
+         * <p>The field pool field details. This field is not returned for this type of variable.</p>
          * 
          * <strong>example:</strong>
          * <p>This type does not have this field</p>
@@ -3639,7 +3639,7 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
         public String fieldDetail;
 
         /**
-         * <p>Field sorting.</p>
+         * <p>The field sort order.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -3648,7 +3648,7 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
         public Integer fieldRank;
 
         /**
-         * <p>Source of the field. This type of variable does not return this field.</p>
+         * <p>The field source. This field is not returned for this type of variable.</p>
          * 
          * <strong>example:</strong>
          * <p>This type does not have this field</p>
@@ -3657,7 +3657,7 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
         public String fieldSource;
 
         /**
-         * <p>Variable return type.</p>
+         * <p>The variable return value type.</p>
          * 
          * <strong>example:</strong>
          * <p>LONG</p>
@@ -3666,7 +3666,7 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
         public String fieldType;
 
         /**
-         * <p>Primary key ID.</p>
+         * <p>The primary key ID.</p>
          * 
          * <strong>example:</strong>
          * <p>93</p>
@@ -3684,7 +3684,7 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
         public String inputFieldType;
 
         /**
-         * <p>Required parameter. This field is not returned for this type of variable.</p>
+         * <p>The required parameter. This field is not returned for this type of variable.</p>
          * 
          * <strong>example:</strong>
          * <p>This type does not have this field</p>
@@ -3693,7 +3693,7 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
         public String inputRequired;
 
         /**
-         * <p>Input field. This type of variable does not return this field.</p>
+         * <p>The input fields. This field is not returned for this type of variable.</p>
          * 
          * <strong>example:</strong>
          * <p>This type does not have this field</p>
@@ -3702,7 +3702,7 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
         public String inputs;
 
         /**
-         * <p>Variable name.</p>
+         * <p>The variable name.</p>
          * 
          * <strong>example:</strong>
          * <p><strong>getHourOfTimestamp</strong></p>
@@ -3711,7 +3711,7 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>Exception value. This type of variable does not return this field.</p>
+         * <p>The outlier value. This field is not returned for this type of variable.</p>
          * 
          * <strong>example:</strong>
          * <p>This type does not have this field</p>
@@ -3720,13 +3720,13 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
         public String outlier;
 
         /**
-         * <p>Output value threshold.</p>
+         * <p>The output value threshold.</p>
          */
         @NameInMap("outputThreshold")
         public DescribeEventVariableListResponseBodyResultObjectNativeVariableFunctionsOutputThreshold outputThreshold;
 
         /**
-         * <p>Parent node. This field is not returned for this type of variable.</p>
+         * <p>The parent node. This field is not returned for this type of variable.</p>
          * 
          * <strong>example:</strong>
          * <p>This type does not have this field</p>
@@ -3735,7 +3735,7 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
         public String parentName;
 
         /**
-         * <p>Source type.</p>
+         * <p>The source type.</p>
          * 
          * <strong>example:</strong>
          * <p>SAF</p>
@@ -3744,7 +3744,7 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
         public String sourceType;
 
         /**
-         * <p>Variable title.</p>
+         * <p>The variable title.</p>
          * 
          * <strong>example:</strong>
          * <p>根据时间戳获取小时</p>
@@ -3753,7 +3753,7 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
         public String title;
 
         /**
-         * <p>Variable type.</p>
+         * <p>The variable type.</p>
          * 
          * <strong>example:</strong>
          * <p>FUNC</p>
@@ -3762,13 +3762,13 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
         public String type;
 
         /**
-         * <p>Variable metric information. This type of variable does not return this field.</p>
+         * <p>The variable metric information. This field is not returned for this type of variable.</p>
          */
         @NameInMap("variableVelocity")
         public DescribeEventVariableListResponseBodyResultObjectNativeVariableFunctionsVariableVelocity variableVelocity;
 
         /**
-         * <p>x label. This type of variable does not return this field.</p>
+         * <p>The X-axis label. This field is not returned for this type of variable.</p>
          * 
          * <strong>example:</strong>
          * <p>This type does not have this field</p>
@@ -3777,7 +3777,7 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
         public String xLabel;
 
         /**
-         * <p>y label. This type of variable does not return this field.</p>
+         * <p>The Y-axis label. This field is not returned for this type of variable.</p>
          * 
          * <strong>example:</strong>
          * <p>This type does not have this field</p>
@@ -3994,7 +3994,7 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
 
     public static class DescribeEventVariableListResponseBodyResultObjectNativeVariablesOutputThreshold extends TeaModel {
         /**
-         * <p>Maximum value.</p>
+         * <p>The maximum value.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -4003,7 +4003,7 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
         public Double maxValue;
 
         /**
-         * <p>Minimum value.</p>
+         * <p>The minimum value.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -4036,7 +4036,7 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
 
     public static class DescribeEventVariableListResponseBodyResultObjectNativeVariablesVariableVelocity extends TeaModel {
         /**
-         * <p>iv value.</p>
+         * <p>The information value (IV).</p>
          * 
          * <strong>example:</strong>
          * <p>无</p>
@@ -4061,7 +4061,7 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
 
     public static class DescribeEventVariableListResponseBodyResultObjectNativeVariables extends TeaModel {
         /**
-         * <p>variable code.</p>
+         * <p>The variable code.</p>
          * 
          * <strong>example:</strong>
          * <p>age</p>
@@ -4070,7 +4070,7 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
         public String code;
 
         /**
-         * <p>Data distribution display, in JSON format.</p>
+         * <p>The data distribution display in JSON format.</p>
          * 
          * <strong>example:</strong>
          * <p>{}</p>
@@ -4079,7 +4079,7 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
         public String dataDisplay;
 
         /**
-         * <p>Associated variable definition ID.</p>
+         * <p>The associated variable definition ID.</p>
          * 
          * <strong>example:</strong>
          * <p>register</p>
@@ -4088,7 +4088,7 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
         public String defineId;
 
         /**
-         * <p>Variable description.</p>
+         * <p>The variable description.</p>
          * 
          * <strong>example:</strong>
          * <p>描述</p>
@@ -4097,7 +4097,7 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>Display type and group label.</p>
+         * <p>The display type and group label.</p>
          * 
          * <strong>example:</strong>
          * <p>NATIVE</p>
@@ -4106,7 +4106,7 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
         public String displayType;
 
         /**
-         * <p>Calculate expression display value.</p>
+         * <p>The display value of the calculation expression.</p>
          * 
          * <strong>example:</strong>
          * <p>无</p>
@@ -4115,7 +4115,7 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
         public String expressionTitle;
 
         /**
-         * <p>Favorite Identifier.</p>
+         * <p>The favorite flag.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -4124,7 +4124,7 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
         public Boolean favoriteFlag;
 
         /**
-         * <p>Field pool field details.</p>
+         * <p>The field pool field details.</p>
          * 
          * <strong>example:</strong>
          * <p>无</p>
@@ -4133,7 +4133,7 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
         public String fieldDetail;
 
         /**
-         * <p>Field Sorting.</p>
+         * <p>The field sort order.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -4142,7 +4142,7 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
         public Integer fieldRank;
 
         /**
-         * <p>Variable source.</p>
+         * <p>The variable source.</p>
          * 
          * <strong>example:</strong>
          * <p>DEFINE</p>
@@ -4151,7 +4151,7 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
         public String fieldSource;
 
         /**
-         * <p>Field type.</p>
+         * <p>The field type.</p>
          * 
          * <strong>example:</strong>
          * <p>STRING</p>
@@ -4160,7 +4160,7 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
         public String fieldType;
 
         /**
-         * <p>Variable ID.</p>
+         * <p>The variable ID.</p>
          * 
          * <strong>example:</strong>
          * <p>223</p>
@@ -4169,7 +4169,7 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
         public Long id;
 
         /**
-         * <p>Input field type, indicating the type of input parameters, mainly used for function categorization.</p>
+         * <p>The input field type, which indicates the input parameter type and is mainly used for function classification.</p>
          * 
          * <strong>example:</strong>
          * <p>STRING</p>
@@ -4178,7 +4178,7 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
         public String inputFieldType;
 
         /**
-         * <p>Required parameters.</p>
+         * <p>The required parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>无</p>
@@ -4187,7 +4187,7 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
         public String inputRequired;
 
         /**
-         * <p>Input of the variable. Event field is not present.</p>
+         * <p>The input of the variable. This field is not returned for event fields.</p>
          * 
          * <strong>example:</strong>
          * <p>无</p>
@@ -4196,7 +4196,7 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
         public String inputs;
 
         /**
-         * <p>variable name.</p>
+         * <p>The variable name.</p>
          * 
          * <strong>example:</strong>
          * <p>age</p>
@@ -4205,7 +4205,7 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>outlier.</p>
+         * <p>The outlier value.</p>
          * 
          * <strong>example:</strong>
          * <p>无</p>
@@ -4214,13 +4214,13 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
         public String outlier;
 
         /**
-         * <p>Output score threshold.</p>
+         * <p>The output score threshold.</p>
          */
         @NameInMap("outputThreshold")
         public DescribeEventVariableListResponseBodyResultObjectNativeVariablesOutputThreshold outputThreshold;
 
         /**
-         * <p>Parent name.</p>
+         * <p>The parent name.</p>
          * 
          * <strong>example:</strong>
          * <p>parentName</p>
@@ -4229,7 +4229,7 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
         public String parentName;
 
         /**
-         * <p>Variable source type.</p>
+         * <p>The variable source type.</p>
          * 
          * <strong>example:</strong>
          * <p>SAF</p>
@@ -4238,7 +4238,7 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
         public String sourceType;
 
         /**
-         * <p>Variable name.</p>
+         * <p>The variable name.</p>
          * 
          * <strong>example:</strong>
          * <p>年龄</p>
@@ -4247,7 +4247,7 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
         public String title;
 
         /**
-         * <p>Variable type.</p>
+         * <p>The variable type.</p>
          * 
          * <strong>example:</strong>
          * <p>NATIVE</p>
@@ -4256,13 +4256,13 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
         public String type;
 
         /**
-         * <p>Variable indicator information.</p>
+         * <p>The variable metric information.</p>
          */
         @NameInMap("variableVelocity")
         public DescribeEventVariableListResponseBodyResultObjectNativeVariablesVariableVelocity variableVelocity;
 
         /**
-         * <p>x label.</p>
+         * <p>The X-axis label.</p>
          * 
          * <strong>example:</strong>
          * <p>x</p>
@@ -4271,7 +4271,7 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
         public String xLabel;
 
         /**
-         * <p>y label.</p>
+         * <p>The Y-axis label.</p>
          * 
          * <strong>example:</strong>
          * <p>y</p>
@@ -4530,7 +4530,7 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
 
     public static class DescribeEventVariableListResponseBodyResultObjectQueryVariablesVariableVelocity extends TeaModel {
         /**
-         * <p>The IV value. This field is not returned for this type of variable.</p>
+         * <p>The information value (IV). This field is not returned for this type of variable.</p>
          * 
          * <strong>example:</strong>
          * <p>This type does not have this field</p>
@@ -4555,7 +4555,7 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
 
     public static class DescribeEventVariableListResponseBodyResultObjectQueryVariables extends TeaModel {
         /**
-         * <p>The code of the query variable.</p>
+         * <p>The variable code.</p>
          * 
          * <strong>example:</strong>
          * <p>deInvokeQueryVariable(376773)</p>
@@ -4564,7 +4564,7 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
         public String code;
 
         /**
-         * <p>Data distribution display, in JSON format. This field is not returned for this type of variable.</p>
+         * <p>The data distribution display in JSON format. This field is not returned for this type of variable.</p>
          * 
          * <strong>example:</strong>
          * <p>This type does not have this field</p>
@@ -4573,7 +4573,7 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
         public String dataDisplay;
 
         /**
-         * <p>The definition ID of the query variable. This field is not returned for this type of variable.</p>
+         * <p>The variable definition ID. This field is not returned for this type of variable.</p>
          * 
          * <strong>example:</strong>
          * <p>This type does not have this field</p>
@@ -4582,7 +4582,7 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
         public String defineId;
 
         /**
-         * <p>The description of the query variable.</p>
+         * <p>The description.</p>
          * 
          * <strong>example:</strong>
          * <p>年龄计算</p>
@@ -4591,7 +4591,7 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The display type and grouping label.</p>
+         * <p>The display type and group label.</p>
          * 
          * <strong>example:</strong>
          * <p>QUERY_EXPRESSION</p>
@@ -4618,7 +4618,7 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
         public Boolean favoriteFlag;
 
         /**
-         * <p>The detailed information of the field in the field pool. This field is not returned for this type of variable.</p>
+         * <p>The field pool field details. This field is not returned for this type of variable.</p>
          * 
          * <strong>example:</strong>
          * <p>This type does not have this field</p>
@@ -4627,7 +4627,7 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
         public String fieldDetail;
 
         /**
-         * <p>The field rank.</p>
+         * <p>The field sort order.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -4636,7 +4636,7 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
         public Integer fieldRank;
 
         /**
-         * <p>The source of the field. This field is not returned for this type of variable.</p>
+         * <p>The field source. This field is not returned for this type of variable.</p>
          * 
          * <strong>example:</strong>
          * <p>This type does not have this field</p>
@@ -4645,7 +4645,7 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
         public String fieldSource;
 
         /**
-         * <p>The type of the field.</p>
+         * <p>The field type.</p>
          * 
          * <strong>example:</strong>
          * <p>STRING</p>
@@ -4681,7 +4681,7 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
         public String inputRequired;
 
         /**
-         * <p>Multiple input parameters separated by commas. This field is not returned for this type of variable.</p>
+         * <p>The input parameters, separated by commas if multiple. This field is not returned for this type of variable.</p>
          * 
          * <strong>example:</strong>
          * <p>This type does not have this field</p>
@@ -4690,7 +4690,7 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
         public String inputs;
 
         /**
-         * <p>The name of the query variable.</p>
+         * <p>The variable name.</p>
          * 
          * <strong>example:</strong>
          * <p>ex_qWtKgCox350f</p>
@@ -4732,7 +4732,7 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
         public String sourceType;
 
         /**
-         * <p>The title of the query variable. The title of the query variable.</p>
+         * <p>The title.</p>
          * 
          * <strong>example:</strong>
          * <p>年龄计算</p>
@@ -4741,7 +4741,7 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
         public String title;
 
         /**
-         * <p>The type of the query variable.</p>
+         * <p>The variable type.</p>
          * 
          * <strong>example:</strong>
          * <p>QUERY_EXPRESSION</p>
@@ -4756,7 +4756,7 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
         public DescribeEventVariableListResponseBodyResultObjectQueryVariablesVariableVelocity variableVelocity;
 
         /**
-         * <p>The X label. This field is not returned for this type of variable.</p>
+         * <p>The X-axis label. This field is not returned for this type of variable.</p>
          * 
          * <strong>example:</strong>
          * <p>This type does not have this field</p>
@@ -4765,7 +4765,7 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
         public String xLabel;
 
         /**
-         * <p>The Y label. This field is not returned for this type of variable.</p>
+         * <p>The X-axis label. This field is not returned for this type of variable.</p>
          * 
          * <strong>example:</strong>
          * <p>This type does not have this field</p>
@@ -4982,7 +4982,7 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
 
     public static class DescribeEventVariableListResponseBodyResultObjectSelfVariablesOutputThreshold extends TeaModel {
         /**
-         * <p>Maximum value.</p>
+         * <p>The maximum value.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -4991,7 +4991,7 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
         public Double maxValue;
 
         /**
-         * <p>Minimum value.</p>
+         * <p>The minimum value.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -5024,7 +5024,7 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
 
     public static class DescribeEventVariableListResponseBodyResultObjectSelfVariablesVariableVelocity extends TeaModel {
         /**
-         * <p>iv value. This type of variable does not return this field.</p>
+         * <p>The information value (IV). This field is not returned for this type of variable.</p>
          * 
          * <strong>example:</strong>
          * <p>This type does not have this field</p>
@@ -5049,7 +5049,7 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
 
     public static class DescribeEventVariableListResponseBodyResultObjectSelfVariables extends TeaModel {
         /**
-         * <p>Variable code.</p>
+         * <p>The variable code.</p>
          * 
          * <strong>example:</strong>
          * <p>deReadVelocity(hitRules,\&quot;dUd5ioJ8014\&quot;,1,\&quot;MO\&quot;,0,true,\&quot;SUM\&quot;)</p>
@@ -5058,7 +5058,7 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
         public String code;
 
         /**
-         * <p>Data distribution display, in JSON format. This field is not returned for this type of variable.</p>
+         * <p>The data distribution display in JSON format. This field is not returned for this type of variable.</p>
          * 
          * <strong>example:</strong>
          * <p>This type does not have this field</p>
@@ -5067,7 +5067,7 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
         public String dataDisplay;
 
         /**
-         * <p>Variable definition ID. Only returned for custom system variables.</p>
+         * <p>The variable definition ID. This field is returned only for custom system variables.</p>
          * 
          * <strong>example:</strong>
          * <p>49</p>
@@ -5076,7 +5076,7 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
         public String defineId;
 
         /**
-         * <p>Description of the variable.</p>
+         * <p>The variable description.</p>
          * 
          * <strong>example:</strong>
          * <p>变量的描述信息</p>
@@ -5085,7 +5085,7 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>Display type and group label.</p>
+         * <p>The display type and group label.</p>
          * 
          * <strong>example:</strong>
          * <p>SELF_BIND</p>
@@ -5094,7 +5094,7 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
         public String displayType;
 
         /**
-         * <p>Expression name.</p>
+         * <p>The expression name.</p>
          * 
          * <strong>example:</strong>
          * <p>@IP地址</p>
@@ -5103,7 +5103,7 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
         public String expressionTitle;
 
         /**
-         * <p>Favorite identifier.</p>
+         * <p>The favorite flag.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -5112,7 +5112,7 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
         public Boolean favoriteFlag;
 
         /**
-         * <p>Details of the field pool. This type of variable does not return this field.</p>
+         * <p>The field pool field details. This field is not returned for this type of variable.</p>
          * 
          * <strong>example:</strong>
          * <p>This type does not have this field</p>
@@ -5121,7 +5121,7 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
         public String fieldDetail;
 
         /**
-         * <p>Field sorting.</p>
+         * <p>The field sort order.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -5130,7 +5130,7 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
         public Integer fieldRank;
 
         /**
-         * <p>Source of the field. This type of variable does not return this field.</p>
+         * <p>The field source. This field is not returned for this type of variable.</p>
          * 
          * <strong>example:</strong>
          * <p>This type does not have this field</p>
@@ -5139,7 +5139,7 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
         public String fieldSource;
 
         /**
-         * <p>Field type.</p>
+         * <p>The field type.</p>
          * 
          * <strong>example:</strong>
          * <p>STRING</p>
@@ -5148,7 +5148,7 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
         public String fieldType;
 
         /**
-         * <p>Variable ID.</p>
+         * <p>The variable ID.</p>
          * 
          * <strong>example:</strong>
          * <p>3174</p>
@@ -5166,7 +5166,7 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
         public String inputFieldType;
 
         /**
-         * <p>Required parameter. This field is not returned for this type of variable.</p>
+         * <p>The required parameter. This field is not returned for this type of variable.</p>
          * 
          * <strong>example:</strong>
          * <p>This type does not have this field</p>
@@ -5175,7 +5175,7 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
         public String inputRequired;
 
         /**
-         * <p>Input parameters. Only returned when custom system variables are defined.</p>
+         * <p>The input parameters. This field is returned only for custom system variables.</p>
          * 
          * <strong>example:</strong>
          * <p>ip</p>
@@ -5184,7 +5184,7 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
         public String inputs;
 
         /**
-         * <p>Variable name.</p>
+         * <p>The variable name.</p>
          * 
          * <strong>example:</strong>
          * <p>ex_isvspbF2c7ac</p>
@@ -5193,7 +5193,7 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>Anomaly value. Returned when the variable is a custom variable (type= EXPRESSION).</p>
+         * <p>The outlier value. This field is returned when the variable is a custom variable (type=EXPRESSION).</p>
          * 
          * <strong>example:</strong>
          * <p>-1</p>
@@ -5202,13 +5202,13 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
         public String outlier;
 
         /**
-         * <p>Output value threshold.</p>
+         * <p>The output value threshold.</p>
          */
         @NameInMap("outputThreshold")
         public DescribeEventVariableListResponseBodyResultObjectSelfVariablesOutputThreshold outputThreshold;
 
         /**
-         * <p>Parent node. This field is not returned currently.</p>
+         * <p>The parent node. This field is not currently returned.</p>
          * 
          * <strong>example:</strong>
          * <p>This type does not have this field</p>
@@ -5217,7 +5217,7 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
         public String parentName;
 
         /**
-         * <p>Source type.</p>
+         * <p>The source type.</p>
          * 
          * <strong>example:</strong>
          * <p>SAF</p>
@@ -5226,7 +5226,7 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
         public String sourceType;
 
         /**
-         * <p>Title.</p>
+         * <p>The title.</p>
          * 
          * <strong>example:</strong>
          * <p>获取手机号前七位</p>
@@ -5235,7 +5235,7 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
         public String title;
 
         /**
-         * <p>Variable type.</p>
+         * <p>The variable type.</p>
          * 
          * <strong>example:</strong>
          * <p>EXPRESSION</p>
@@ -5244,13 +5244,13 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
         public String type;
 
         /**
-         * <p>Variable metric information. This field is not returned for this type of variable.</p>
+         * <p>The variable metric information. This field is not returned for this type of variable.</p>
          */
         @NameInMap("variableVelocity")
         public DescribeEventVariableListResponseBodyResultObjectSelfVariablesVariableVelocity variableVelocity;
 
         /**
-         * <p>x label. This type of variable does not return this field.</p>
+         * <p>The X-axis label. This field is not returned for this type of variable.</p>
          * 
          * <strong>example:</strong>
          * <p>This type does not have this field</p>
@@ -5259,7 +5259,7 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
         public String xLabel;
 
         /**
-         * <p>y label. This type of variable does not return this field.</p>
+         * <p>The Y-axis label. This field is not returned for this type of variable.</p>
          * 
          * <strong>example:</strong>
          * <p>This type does not have this field</p>
@@ -5476,7 +5476,7 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
 
     public static class DescribeEventVariableListResponseBodyResultObjectSysVariablesOutputThreshold extends TeaModel {
         /**
-         * <p>Maximum value.</p>
+         * <p>The maximum value.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -5485,7 +5485,7 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
         public Double maxValue;
 
         /**
-         * <p>Minimum value.</p>
+         * <p>The minimum value.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -5518,7 +5518,7 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
 
     public static class DescribeEventVariableListResponseBodyResultObjectSysVariablesVariableVelocity extends TeaModel {
         /**
-         * <p>iv value. This type of variable does not return this field.</p>
+         * <p>The information value (IV). This field is not returned for this type of variable.</p>
          * 
          * <strong>example:</strong>
          * <p>This type does not have this field</p>
@@ -5543,7 +5543,7 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
 
     public static class DescribeEventVariableListResponseBodyResultObjectSysVariables extends TeaModel {
         /**
-         * <p>Variable code.</p>
+         * <p>The variable code.</p>
          * 
          * <strong>example:</strong>
          * <p>parseIpV2(ip)?.cityId</p>
@@ -5552,7 +5552,7 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
         public String code;
 
         /**
-         * <p>Data distribution display, in JSON format. This field is not returned for this type of variable.</p>
+         * <p>The data distribution display in JSON format. This field is not returned for this type of variable.</p>
          * 
          * <strong>example:</strong>
          * <p>This type does not have this field</p>
@@ -5561,7 +5561,7 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
         public String dataDisplay;
 
         /**
-         * <p>ID of the bound variable definition.</p>
+         * <p>The bound variable definition ID.</p>
          * 
          * <strong>example:</strong>
          * <p>2488</p>
@@ -5570,7 +5570,7 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
         public String defineId;
 
         /**
-         * <p>Description of the variable.</p>
+         * <p>The variable description.</p>
          * 
          * <strong>example:</strong>
          * <p>通过IP地址库解析IP所在的城市Code，例如，输入“42.120.74.211”，经过该变量运算，输出“330100”。</p>
@@ -5579,7 +5579,7 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>Display type and group label.</p>
+         * <p>The display type and group label.</p>
          * 
          * <strong>example:</strong>
          * <p>SYSTEM_BIND</p>
@@ -5588,7 +5588,7 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
         public String displayType;
 
         /**
-         * <p>Calculate the expression display value. This type of variable does not return this field.</p>
+         * <p>The display value of the calculation expression. This field is not returned for this type of variable.</p>
          * 
          * <strong>example:</strong>
          * <p>This type does not have this field</p>
@@ -5597,7 +5597,7 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
         public String expressionTitle;
 
         /**
-         * <p>Favorite identifier.</p>
+         * <p>The favorite flag.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -5606,7 +5606,7 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
         public Boolean favoriteFlag;
 
         /**
-         * <p>Details of the field pool. This type of variable does not return this field.</p>
+         * <p>The field pool field details. This field is not returned for this type of variable.</p>
          * 
          * <strong>example:</strong>
          * <p>This type does not have this field</p>
@@ -5615,7 +5615,7 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
         public String fieldDetail;
 
         /**
-         * <p>Field sorting.</p>
+         * <p>The field sort order.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -5624,7 +5624,7 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
         public Integer fieldRank;
 
         /**
-         * <p>Source of the field. This type of variable does not return this field.</p>
+         * <p>The field source. This field is not returned for this type of variable.</p>
          * 
          * <strong>example:</strong>
          * <p>This type does not have this field</p>
@@ -5633,7 +5633,7 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
         public String fieldSource;
 
         /**
-         * <p>Field type.</p>
+         * <p>The field type.</p>
          * 
          * <strong>example:</strong>
          * <p>STRING</p>
@@ -5642,7 +5642,7 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
         public String fieldType;
 
         /**
-         * <p>Variable ID.</p>
+         * <p>The variable ID.</p>
          * 
          * <strong>example:</strong>
          * <p>3151</p>
@@ -5651,7 +5651,7 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
         public Long id;
 
         /**
-         * <p>Input type of the parameter. This field is not returned for this type of variable.</p>
+         * <p>The input type of the parameter. This field is not returned for this type of variable.</p>
          * 
          * <strong>example:</strong>
          * <p>This type does not have this field</p>
@@ -5660,7 +5660,7 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
         public String inputFieldType;
 
         /**
-         * <p>Required parameter. This field is not returned for this type of variable.</p>
+         * <p>The required parameter. This field is not returned for this type of variable.</p>
          * 
          * <strong>example:</strong>
          * <p>This type does not have this field</p>
@@ -5669,7 +5669,7 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
         public String inputRequired;
 
         /**
-         * <p>Variable value input.</p>
+         * <p>The variable value input.</p>
          * 
          * <strong>example:</strong>
          * <p>ip</p>
@@ -5678,7 +5678,7 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
         public String inputs;
 
         /**
-         * <p>Variable name.</p>
+         * <p>The variable name.</p>
          * 
          * <strong>example:</strong>
          * <p><strong>ipLocationCityCode</strong></p>
@@ -5687,7 +5687,7 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>Outlier value. This field is not returned for this type of variable.</p>
+         * <p>The outlier value. This field is not returned for this type of variable.</p>
          * 
          * <strong>example:</strong>
          * <p>This type does not have this field</p>
@@ -5696,13 +5696,13 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
         public String outlier;
 
         /**
-         * <p>Output value threshold.</p>
+         * <p>The output value threshold.</p>
          */
         @NameInMap("outputThreshold")
         public DescribeEventVariableListResponseBodyResultObjectSysVariablesOutputThreshold outputThreshold;
 
         /**
-         * <p>Parent name.</p>
+         * <p>The parent name.</p>
          * 
          * <strong>example:</strong>
          * <p>无</p>
@@ -5711,7 +5711,7 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
         public String parentName;
 
         /**
-         * <p>Source type.</p>
+         * <p>The source type.</p>
          * 
          * <strong>example:</strong>
          * <p>SAF</p>
@@ -5720,7 +5720,7 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
         public String sourceType;
 
         /**
-         * <p>Title.</p>
+         * <p>The title.</p>
          * 
          * <strong>example:</strong>
          * <p>IP所在地_城市Code</p>
@@ -5729,7 +5729,7 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
         public String title;
 
         /**
-         * <p>Variable type.</p>
+         * <p>The variable type.</p>
          * 
          * <strong>example:</strong>
          * <p>SYSTEM_BIND</p>
@@ -5738,13 +5738,13 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
         public String type;
 
         /**
-         * <p>Variable metric information. This field is not returned for this type of variable.</p>
+         * <p>The variable metric information. This field is not returned for this type of variable.</p>
          */
         @NameInMap("variableVelocity")
         public DescribeEventVariableListResponseBodyResultObjectSysVariablesVariableVelocity variableVelocity;
 
         /**
-         * <p>x label. This type of variable does not return this field.</p>
+         * <p>The X-axis label. This field is not returned for this type of variable.</p>
          * 
          * <strong>example:</strong>
          * <p>This type does not have this field</p>
@@ -5753,7 +5753,7 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
         public String xLabel;
 
         /**
-         * <p>y label. This type of variable does not return this field.</p>
+         * <p>The Y-axis label. This field is not returned for this type of variable.</p>
          * 
          * <strong>example:</strong>
          * <p>This type does not have this field</p>
@@ -6012,7 +6012,7 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
 
     public static class DescribeEventVariableListResponseBodyResultObjectVelocityVariablesVariableVelocity extends TeaModel {
         /**
-         * <p>The IV value. This field is not returned for this type of variable.</p>
+         * <p>The information value (IV). This field is not returned for this type of variable.</p>
          * 
          * <strong>example:</strong>
          * <p>This type does not have this field</p>
@@ -6037,7 +6037,7 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
 
     public static class DescribeEventVariableListResponseBodyResultObjectVelocityVariables extends TeaModel {
         /**
-         * <p>The code of the variable.</p>
+         * <p>The variable code.</p>
          * 
          * <strong>example:</strong>
          * <p>deReadVelocity(userId,\&quot;hFsEFUEe88a\&quot;,1,\&quot;H\&quot;,0,true,\&quot;COUNT\&quot;)</p>
@@ -6046,7 +6046,7 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
         public String code;
 
         /**
-         * <p>Data distribution display, in JSON format. This field is not returned for this type of variable.</p>
+         * <p>The data distribution display in JSON format. This field is not returned for this type of variable.</p>
          * 
          * <strong>example:</strong>
          * <p>This type does not have this field</p>
@@ -6055,7 +6055,7 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
         public String dataDisplay;
 
         /**
-         * <p>The definition ID of the variable. This field is not returned for this type of variable.</p>
+         * <p>The variable definition ID. This field is not returned for this type of variable.</p>
          * 
          * <strong>example:</strong>
          * <p>This type does not have this field</p>
@@ -6064,7 +6064,7 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
         public String defineId;
 
         /**
-         * <p>The description of the variable.</p>
+         * <p>The variable description.</p>
          * 
          * <strong>example:</strong>
          * <p>累计用户省份次数。</p>
@@ -6073,7 +6073,7 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The display type and grouping label.</p>
+         * <p>The display type and group label.</p>
          * 
          * <strong>example:</strong>
          * <p>SELF_VELOCITY</p>
@@ -6100,7 +6100,7 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
         public Boolean favoriteFlag;
 
         /**
-         * <p>The detailed information of the field in the field pool. This field is not returned for this type of variable.</p>
+         * <p>The field pool field details. This field is not returned for this type of variable.</p>
          * 
          * <strong>example:</strong>
          * <p>This type does not have this field</p>
@@ -6109,7 +6109,7 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
         public String fieldDetail;
 
         /**
-         * <p>The field rank.</p>
+         * <p>The field sort order.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -6118,7 +6118,7 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
         public Integer fieldRank;
 
         /**
-         * <p>The source of the field. This field is not returned for this type of variable.</p>
+         * <p>The field source. This field is not returned for this type of variable.</p>
          * 
          * <strong>example:</strong>
          * <p>This type does not have this field</p>
@@ -6127,7 +6127,7 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
         public String fieldSource;
 
         /**
-         * <p>The type of the field.</p>
+         * <p>The field type.</p>
          * 
          * <strong>example:</strong>
          * <p>DOUBLE</p>
@@ -6163,7 +6163,7 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
         public String inputRequired;
 
         /**
-         * <p>Multiple input parameters separated by commas. This field is not returned for this type of variable.</p>
+         * <p>The input parameters, separated by commas if multiple. This field is not returned for this type of variable.</p>
          * 
          * <strong>example:</strong>
          * <p>This type does not have this field</p>
@@ -6172,7 +6172,7 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
         public String inputs;
 
         /**
-         * <p>The name of the variable.</p>
+         * <p>The variable name.</p>
          * 
          * <strong>example:</strong>
          * <p>hFsEFUEe88a</p>
@@ -6214,7 +6214,7 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
         public String sourceType;
 
         /**
-         * <p>The title of the variable.</p>
+         * <p>The title.</p>
          * 
          * <strong>example:</strong>
          * <p>累计用户省份次数</p>
@@ -6223,7 +6223,7 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
         public String title;
 
         /**
-         * <p>The type of the variable.</p>
+         * <p>The variable type.</p>
          * 
          * <strong>example:</strong>
          * <p>SELF_VELOCITY</p>
@@ -6238,7 +6238,7 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
         public DescribeEventVariableListResponseBodyResultObjectVelocityVariablesVariableVelocity variableVelocity;
 
         /**
-         * <p>The X label. This field is not returned for this type of variable.</p>
+         * <p>The X-axis label. This field is not returned for this type of variable.</p>
          * 
          * <strong>example:</strong>
          * <p>This type does not have this field</p>
@@ -6247,7 +6247,7 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
         public String xLabel;
 
         /**
-         * <p>The Y label. This field is not returned for this type of variable.</p>
+         * <p>The X-axis label. This field is not returned for this type of variable.</p>
          * 
          * <strong>example:</strong>
          * <p>This type does not have this field</p>
@@ -6464,79 +6464,79 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
 
     public static class DescribeEventVariableListResponseBodyResultObject extends TeaModel {
         /**
-         * <p>Action variable.</p>
+         * <p>The action variables.</p>
          */
         @NameInMap("actions")
         public java.util.List<DescribeEventVariableListResponseBodyResultObjectActions> actions;
 
         /**
-         * <p>Device variable.</p>
+         * <p>The device variables.</p>
          */
         @NameInMap("deviceVariables")
         public java.util.List<DescribeEventVariableListResponseBodyResultObjectDeviceVariables> deviceVariables;
 
         /**
-         * <p>Custom variable.</p>
+         * <p>The custom variables.</p>
          */
         @NameInMap("expressionVariables")
         public java.util.List<DescribeEventVariableListResponseBodyResultObjectExpressionVariables> expressionVariables;
 
         /**
-         * <p>Favorite variables.</p>
+         * <p>The favorite variables.</p>
          */
         @NameInMap("favoriteVariables")
         public java.util.List<DescribeEventVariableListResponseBodyResultObjectFavoriteVariables> favoriteVariables;
 
         /**
-         * <p>Intermediate variable return object.</p>
+         * <p>The intermediate variable response object.</p>
          */
         @NameInMap("middleVariables")
         public java.util.List<DescribeEventVariableListResponseBodyResultObjectMiddleVariables> middleVariables;
 
         /**
-         * <p>An array of model variables.</p>
+         * <p>The model variables.</p>
          */
         @NameInMap("modelVariables")
         public java.util.List<DescribeEventVariableListResponseBodyResultObjectModelVariables> modelVariables;
 
         /**
-         * <p>List of name variables.</p>
+         * <p>The list variables.</p>
          */
         @NameInMap("nameList")
         public java.util.List<DescribeEventVariableListResponseBodyResultObjectNameList> nameList;
 
         /**
-         * <p>List of available functions for the original variable.</p>
+         * <p>The list of available functions for native variables.</p>
          */
         @NameInMap("nativeVariableFunctions")
         public java.util.List<DescribeEventVariableListResponseBodyResultObjectNativeVariableFunctions> nativeVariableFunctions;
 
         /**
-         * <p>List of event fields.</p>
+         * <p>The list of event fields.</p>
          */
         @NameInMap("nativeVariables")
         public java.util.List<DescribeEventVariableListResponseBodyResultObjectNativeVariables> nativeVariables;
 
         /**
-         * <p>An array of custom query variables.</p>
+         * <p>The custom query variables.</p>
          */
         @NameInMap("queryVariables")
         public java.util.List<DescribeEventVariableListResponseBodyResultObjectQueryVariables> queryVariables;
 
         /**
-         * <p>Custom variables (custom variables, cumulative variables, custom system variables).</p>
+         * <p>The custom variables (custom variables, cumulative variables, and custom system variables).</p>
          */
         @NameInMap("selfVariables")
         public java.util.List<DescribeEventVariableListResponseBodyResultObjectSelfVariables> selfVariables;
 
         /**
-         * <p>System variables.</p>
+         * <p>The system variables.</p>
          */
         @NameInMap("sysVariables")
         public java.util.List<DescribeEventVariableListResponseBodyResultObjectSysVariables> sysVariables;
 
         /**
-         * <p>Other related variables.</p>
+         * <p>The other variables.</p>
          * 
          * <strong>example:</strong>
          * <p>{}</p>
@@ -6545,7 +6545,7 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
         public java.util.Map<String, ?> thirdVariables;
 
         /**
-         * <p>An array of accumulated variables.</p>
+         * <p>The custom cumulative variables.</p>
          */
         @NameInMap("velocityVariables")
         public java.util.List<DescribeEventVariableListResponseBodyResultObjectVelocityVariables> velocityVariables;

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeAuthRulePageListResponseBody extends TeaModel {
     /**
-     * <p>Request ID</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>A32FE941-35F2-5378-B37C-4B8FDB16F094</p>
@@ -14,7 +14,7 @@ public class DescribeAuthRulePageListResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Current page number.</p>
+     * <p>The current page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -23,7 +23,7 @@ public class DescribeAuthRulePageListResponseBody extends TeaModel {
     public Long currentPage;
 
     /**
-     * <p>Page size, default value is 10</p>
+     * <p>The number of entries per page. Default value: 10.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -32,13 +32,13 @@ public class DescribeAuthRulePageListResponseBody extends TeaModel {
     public Long pageSize;
 
     /**
-     * <p>Returned object</p>
+     * <p>The returned object.</p>
      */
     @NameInMap("resultObject")
     public java.util.List<DescribeAuthRulePageListResponseBodyResultObject> resultObject;
 
     /**
-     * <p>Total items</p>
+     * <p>The total number of entries.</p>
      * 
      * <strong>example:</strong>
      * <p>6</p>
@@ -47,7 +47,7 @@ public class DescribeAuthRulePageListResponseBody extends TeaModel {
     public Long totalItem;
 
     /**
-     * <p>Total pages</p>
+     * <p>The total number of pages.</p>
      * 
      * <strong>example:</strong>
      * <p>9</p>
@@ -110,7 +110,7 @@ public class DescribeAuthRulePageListResponseBody extends TeaModel {
 
     public static class DescribeAuthRulePageListResponseBodyResultObject extends TeaModel {
         /**
-         * <p>Console rule ID.</p>
+         * <p>The console rule ID.</p>
          * 
          * <strong>example:</strong>
          * <p>6715</p>
@@ -119,7 +119,7 @@ public class DescribeAuthRulePageListResponseBody extends TeaModel {
         public Long consoleRuleId;
 
         /**
-         * <p>Creation type</p>
+         * <p>The creation type.</p>
          * 
          * <strong>example:</strong>
          * <p>MORMAL</p>
@@ -128,7 +128,7 @@ public class DescribeAuthRulePageListResponseBody extends TeaModel {
         public String createType;
 
         /**
-         * <p>Modification time</p>
+         * <p>The modification time.</p>
          * 
          * <strong>example:</strong>
          * <p>1565701886000</p>
@@ -137,7 +137,7 @@ public class DescribeAuthRulePageListResponseBody extends TeaModel {
         public Long gmtModified;
 
         /**
-         * <p>Policy primary key ID</p>
+         * <p>The primary key ID of the policy.</p>
          * 
          * <strong>example:</strong>
          * <p>497</p>
@@ -146,7 +146,7 @@ public class DescribeAuthRulePageListResponseBody extends TeaModel {
         public Long id;
 
         /**
-         * <p>Memo</p>
+         * <p>The remarks.</p>
          * 
          * <strong>example:</strong>
          * <p>分析中心事件测试_策略01</p>
@@ -155,7 +155,7 @@ public class DescribeAuthRulePageListResponseBody extends TeaModel {
         public String memo;
 
         /**
-         * <p>Policy ID</p>
+         * <p>The policy ID.</p>
          * 
          * <strong>example:</strong>
          * <p>102059</p>
@@ -164,7 +164,7 @@ public class DescribeAuthRulePageListResponseBody extends TeaModel {
         public String ruleId;
 
         /**
-         * <p>Policy name</p>
+         * <p>The policy name.</p>
          * 
          * <strong>example:</strong>
          * <p>营销风险识别</p>
@@ -173,7 +173,7 @@ public class DescribeAuthRulePageListResponseBody extends TeaModel {
         public String ruleName;
 
         /**
-         * <p>Policy version primary key ID</p>
+         * <p>The primary key ID of the policy version.</p>
          * 
          * <strong>example:</strong>
          * <p>3823</p>
@@ -182,7 +182,7 @@ public class DescribeAuthRulePageListResponseBody extends TeaModel {
         public Long ruleVersionId;
 
         /**
-         * <p>Status.</p>
+         * <p>The status.</p>
          * 
          * <strong>example:</strong>
          * <p>RUNNING</p>
@@ -191,7 +191,7 @@ public class DescribeAuthRulePageListResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>Version number</p>
+         * <p>The version number.</p>
          * 
          * <strong>example:</strong>
          * <p>8</p>

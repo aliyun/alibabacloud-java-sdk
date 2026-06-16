@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeRuleSnapshotResponseBody extends TeaModel {
     /**
-     * <p>Request ID</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>A32FE941-35F2-5378-B37C-4B8FDB16F094</p>
@@ -14,7 +14,7 @@ public class DescribeRuleSnapshotResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Returned object</p>
+     * <p>The response object.</p>
      */
     @NameInMap("resultObject")
     public DescribeRuleSnapshotResponseBodyResultObject resultObject;
@@ -42,7 +42,7 @@ public class DescribeRuleSnapshotResponseBody extends TeaModel {
 
     public static class DescribeRuleSnapshotResponseBodyResultObject extends TeaModel {
         /**
-         * <p>Business version.</p>
+         * <p>The business version.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -51,7 +51,7 @@ public class DescribeRuleSnapshotResponseBody extends TeaModel {
         public String bizVersion;
 
         /**
-         * <p>Event code</p>
+         * <p>The event code.</p>
          * 
          * <strong>example:</strong>
          * <p>de_aszbjb7236</p>
@@ -60,7 +60,7 @@ public class DescribeRuleSnapshotResponseBody extends TeaModel {
         public String eventCode;
 
         /**
-         * <p>Event name.</p>
+         * <p>The event name.</p>
          * 
          * <strong>example:</strong>
          * <p>注册风险</p>
@@ -69,7 +69,7 @@ public class DescribeRuleSnapshotResponseBody extends TeaModel {
         public String eventName;
 
         /**
-         * <p>Creation time.</p>
+         * <p>The creation time.</p>
          * 
          * <strong>example:</strong>
          * <p>1621578648000</p>
@@ -78,7 +78,7 @@ public class DescribeRuleSnapshotResponseBody extends TeaModel {
         public Long gmtCreate;
 
         /**
-         * <p>Modification time.</p>
+         * <p>The modification time.</p>
          * 
          * <strong>example:</strong>
          * <p>1565701886000</p>
@@ -87,7 +87,7 @@ public class DescribeRuleSnapshotResponseBody extends TeaModel {
         public Long gmtModified;
 
         /**
-         * <p>Expression for analysis results.</p>
+         * <p>The expression of the analysis results.</p>
          * 
          * <strong>example:</strong>
          * <p>1&amp;2</p>
@@ -96,7 +96,7 @@ public class DescribeRuleSnapshotResponseBody extends TeaModel {
         public String logicExpression;
 
         /**
-         * <p>Memo.</p>
+         * <p>The remarks.</p>
          * 
          * <strong>example:</strong>
          * <p>备注</p>
@@ -105,7 +105,7 @@ public class DescribeRuleSnapshotResponseBody extends TeaModel {
         public String memo;
 
         /**
-         * <p>Rule actions.</p>
+         * <p>The rule actions.</p>
          * 
          * <strong>example:</strong>
          * <p>[{\&quot;inputs\&quot;:[\&quot;LdShop\&quot;],\&quot;name\&quot;:\&quot;<strong>addDeTags</strong>\&quot;,\&quot;actionType\&quot;:\&quot;TAG\&quot;,\&quot;outputType\&quot;:\&quot;const\&quot;}]</p>
@@ -114,7 +114,7 @@ public class DescribeRuleSnapshotResponseBody extends TeaModel {
         public String ruleActions;
 
         /**
-         * <p>DSL rule expression. This field is required when ruleType is DSL.</p>
+         * <p>The DSL policy expression. This field is not empty when ruleType is DSL.</p>
          * 
          * <strong>example:</strong>
          * <p>{\&quot;elseIfStatement\&quot;:[{\&quot;condition\&quot;:{\&quot;currentId\&quot;:0,\&quot;deepCount\&quot;:1,\&quot;list\&quot;:[{\&quot;currentId\&quot;:0,\&quot;deepCount\&quot;:1,\&quot;left\&quot;:{\&quot;code\&quot;:\&quot;getLbsRegion(longitude, latitude)?.prov\&quot;,\&quot;description\&quot;:\&quot;根据经纬度得到省份信息，比如经度：111.878062，纬度：22.585409，则经过运算，输出”广东省“\&quot;,\&quot;displayType\&quot;:\&quot;SELF_BIND\&quot;,\&quot;fieldType\&quot;:\&quot;STRING\&quot;,\&quot;functionCode\&quot;:\&quot;\&quot;,\&quot;functionName\&quot;:\&quot;\&quot;,\&quot;hasRightVariable\&quot;:true,\&quot;name\&quot;:\&quot;sl_S02sHLFT7818\&quot;,\&quot;outputThreshold\&quot;:{},\&quot;sourceType\&quot;:\&quot;SAF\&quot;,\&quot;title\&quot;:\&quot;经纬度自定义系统变量\&quot;,\&quot;type\&quot;:\&quot;SELF_BIND\&quot;},\&quot;operatorCode\&quot;:\&quot;equals\&quot;,\&quot;operatorName\&quot;:\&quot;等于\&quot;,\&quot;parentId\&quot;:0,\&quot;right\&quot;:{\&quot;name\&quot;:\&quot;cc\&quot;,\&quot;rightVariableType\&quot;:\&quot;constant\&quot;},\&quot;sequence\&quot;:5}],\&quot;parentId\&quot;:0,\&quot;relationship\&quot;:\&quot;and\&quot;},\&quot;then\&quot;:[{\&quot;actionType\&quot;:\&quot;TAG\&quot;,\&quot;code\&quot;:\&quot;addDeTags\&quot;,\&quot;description\&quot;:\&quot;打标签\&quot;,\&quot;displayType\&quot;:\&quot;ACTION\&quot;,\&quot;fieldType\&quot;:\&quot;STRING\&quot;,\&quot;inputs\&quot;:[\&quot;332\&quot;],\&quot;name\&quot;:\&quot;<strong>addDeTags</strong>\&quot;,\&quot;outputType\&quot;:\&quot;const\&quot;,\&quot;sourceType\&quot;:\&quot;SAF\&quot;,\&quot;title\&quot;:\&quot;打标签\&quot;,\&quot;type\&quot;:\&quot;ACTION\&quot;}]}],\&quot;elseStatement\&quot;:{\&quot;then\&quot;:[{\&quot;actionType\&quot;:\&quot;TAG\&quot;,\&quot;code\&quot;:\&quot;addDeTags\&quot;,\&quot;description\&quot;:\&quot;打标签\&quot;,\&quot;displayType\&quot;:\&quot;ACTION\&quot;,\&quot;fieldType\&quot;:\&quot;STRING\&quot;,\&quot;inputs\&quot;:[\&quot;321\&quot;],\&quot;name\&quot;:\&quot;<strong>addDeTags</strong>\&quot;,\&quot;outputType\&quot;:\&quot;const\&quot;,\&quot;sourceType\&quot;:\&quot;SAF\&quot;,\&quot;title\&quot;:\&quot;打标签\&quot;,\&quot;type\&quot;:\&quot;ACTION\&quot;}]},\&quot;ifStatement\&quot;:{\&quot;condition\&quot;:{\&quot;currentId\&quot;:0,\&quot;deepCount\&quot;:1,\&quot;list\&quot;:[{\&quot;currentId\&quot;:0,\&quot;deepCount\&quot;:1,\&quot;left\&quot;:{\&quot;code\&quot;:\&quot;queryPhoneSimulatorInfo(deviceToken)?.brand\&quot;,\&quot;description\&quot;:\&quot;设备信息-终端品牌\&quot;,\&quot;displayType\&quot;:\&quot;DEVICE\&quot;,\&quot;fieldType\&quot;:\&quot;STRING\&quot;,\&quot;functionCode\&quot;:\&quot;\&quot;,\&quot;functionName\&quot;:\&quot;\&quot;,\&quot;hasRightVariable\&quot;:true,\&quot;name\&quot;:\&quot;<strong>device_brand</strong>\&quot;,\&quot;sourceType\&quot;:\&quot;SAF\&quot;,\&quot;title\&quot;:\&quot;设备信息-终端品牌-brand\&quot;,\&quot;type\&quot;:\&quot;DEVICE\&quot;},\&quot;operatorCode\&quot;:\&quot;deInNameList\&quot;,\&quot;operatorName\&quot;:\&quot;在名单中\&quot;,\&quot;parentId\&quot;:0,\&quot;right\&quot;:{\&quot;code\&quot;:\&quot;nl_UN8otElLb490\&quot;,\&quot;description\&quot;:\&quot;描述11\&quot;,\&quot;displayType\&quot;:\&quot;NAME_LIST\&quot;,\&quot;name\&quot;:\&quot;nl_UN8otElLb490\&quot;,\&quot;rightVariableType\&quot;:\&quot;constant\&quot;,\&quot;sourceType\&quot;:\&quot;SAF\&quot;,\&quot;title\&quot;:\&quot;wtz_名单新建测试02\&quot;,\&quot;type\&quot;:\&quot;NAME_LIST\&quot;},\&quot;sequence\&quot;:1},{\&quot;currentId\&quot;:0,\&quot;deepCount\&quot;:1,\&quot;left\&quot;:{\&quot;code\&quot;:\&quot;deFunctionProcess(ip,\\\&quot;isIp\\\&quot;)\&quot;,\&quot;description\&quot;:\&quot;判断是否符合IPv4标准\&quot;,\&quot;displayType\&quot;:\&quot;SYSTEM_BIND\&quot;,\&quot;fieldType\&quot;:\&quot;BOOLEAN\&quot;,\&quot;functionCode\&quot;:\&quot;\&quot;,\&quot;functionName\&quot;:\&quot;\&quot;,\&quot;hasRightVariable\&quot;:false,\&quot;name\&quot;:\&quot;<strong>isIpAddressV4</strong>\&quot;,\&quot;outputThreshold\&quot;:{},\&quot;sourceType\&quot;:\&quot;SAF\&quot;,\&quot;title\&quot;:\&quot;IP是否符合IPV4格式\&quot;,\&quot;type\&quot;:\&quot;SYSTEM_BIND\&quot;},\&quot;operatorCode\&quot;:\&quot;boolIsTrue\&quot;,\&quot;operatorName\&quot;:\&quot;为true\&quot;,\&quot;parentId\&quot;:0,\&quot;right\&quot;:{\&quot;name\&quot;:\&quot;\&quot;,\&quot;rightVariableType\&quot;:\&quot;constant\&quot;},\&quot;sequence\&quot;:2},{\&quot;currentId\&quot;:0,\&quot;deepCount\&quot;:1,\&quot;list\&quot;:[{\&quot;currentId\&quot;:0,\&quot;deepCount\&quot;:1,\&quot;left\&quot;:{\&quot;code\&quot;:\&quot;parseIpV2(ip)?.cityId\&quot;,\&quot;description\&quot;:\&quot;通过IP地址库解析IP所在的城市Code，例如，输入“42.120.74.211”，经过该变量运算，输出“330100”。\&quot;,\&quot;displayType\&quot;:\&quot;SYSTEM_BIND\&quot;,\&quot;fieldType\&quot;:\&quot;STRING\&quot;,\&quot;functionCode\&quot;:\&quot;\&quot;,\&quot;functionName\&quot;:\&quot;\&quot;,\&quot;hasRightVariable\&quot;:true,\&quot;name\&quot;:\&quot;<strong>ipLocationCityCode</strong>\&quot;,\&quot;outputThreshold\&quot;:{},\&quot;sourceType\&quot;:\&quot;SAF\&quot;,\&quot;title\&quot;:\&quot;IP所在地_城市Code\&quot;,\&quot;type\&quot;:\&quot;SYSTEM_BIND\&quot;},\&quot;operatorCode\&quot;:\&quot;equals\&quot;,\&quot;operatorName\&quot;:\&quot;等于\&quot;,\&quot;parentId\&quot;:0,\&quot;right\&quot;:{\&quot;code\&quot;:\&quot;deFunctionProcess(ip,\\\&quot;getCountry\\\&quot;)\&quot;,\&quot;description\&quot;:\&quot;通过IP地址库解析IP所在的城市名称，例如，输入“42.120.74.211”，经过该变量运算，输出“CN”。\&quot;,\&quot;displayType\&quot;:\&quot;SYSTEM_BIND\&quot;,\&quot;fieldType\&quot;:\&quot;STRING\&quot;,\&quot;functionCode\&quot;:\&quot;\&quot;,\&quot;functionName\&quot;:\&quot;\&quot;,\&quot;name\&quot;:\&quot;<strong>ipLocationCountryId</strong>\&quot;,\&quot;outputThreshold\&quot;:{},\&quot;rightVariableType\&quot;:\&quot;variable\&quot;,\&quot;sourceType\&quot;:\&quot;SAF\&quot;,\&quot;title\&quot;:\&quot;IP所在地_国家Code\&quot;,\&quot;type\&quot;:\&quot;SYSTEM_BIND\&quot;},\&quot;sequence\&quot;:3},{\&quot;currentId\&quot;:0,\&quot;deepCount\&quot;:1,\&quot;list\&quot;:[{\&quot;currentId\&quot;:0,\&quot;deepCount\&quot;:1,\&quot;left\&quot;:{\&quot;code\&quot;:\&quot;parseIpV2(ip)?.cityId\&quot;,\&quot;description\&quot;:\&quot;通过IP地址库解析IP所在的城市Code，例如，输入“42.120.74.211”，经过该变量运算，输出“330100”。\&quot;,\&quot;displayType\&quot;:\&quot;SYSTEM_BIND\&quot;,\&quot;fieldType\&quot;:\&quot;STRING\&quot;,\&quot;functionCode\&quot;:\&quot;\&quot;,\&quot;functionName\&quot;:\&quot;\&quot;,\&quot;hasRightVariable\&quot;:true,\&quot;name\&quot;:\&quot;<strong>ipLocationCityCode</strong>\&quot;,\&quot;outputThreshold\&quot;:{\&quot;$ref\&quot;:\&quot;$.ifStatement.condition.list[2].list[0].left.outputThreshold\&quot;},\&quot;sourceType\&quot;:\&quot;SAF\&quot;,\&quot;title\&quot;:\&quot;IP所在地_城市Code\&quot;,\&quot;type\&quot;:\&quot;SYSTEM_BIND\&quot;},\&quot;operatorCode\&quot;:\&quot;deInNameList\&quot;,\&quot;operatorName\&quot;:\&quot;在名单中\&quot;,\&quot;parentId\&quot;:0,\&quot;right\&quot;:{\&quot;code\&quot;:\&quot;nl_NsVwBD2s11e0\&quot;,\&quot;displayType\&quot;:\&quot;NAME_LIST\&quot;,\&quot;name\&quot;:\&quot;nl_NsVwBD2s11e0\&quot;,\&quot;rightVariableType\&quot;:\&quot;constant\&quot;,\&quot;sourceType\&quot;:\&quot;SAF\&quot;,\&quot;title\&quot;:\&quot;device_block_list\&quot;,\&quot;type\&quot;:\&quot;NAME_LIST\&quot;},\&quot;sequence\&quot;:4}],\&quot;parentId\&quot;:0,\&quot;relationship\&quot;:\&quot;and\&quot;}],\&quot;parentId\&quot;:0,\&quot;relationship\&quot;:\&quot;and\&quot;}],\&quot;parentId\&quot;:0,\&quot;relationship\&quot;:\&quot;and\&quot;},\&quot;then\&quot;:[{\&quot;actionType\&quot;:\&quot;TAG\&quot;,\&quot;code\&quot;:\&quot;addDeTags\&quot;,\&quot;description\&quot;:\&quot;打标签\&quot;,\&quot;displayType\&quot;:\&quot;ACTION\&quot;,\&quot;fieldType\&quot;:\&quot;STRING\&quot;,\&quot;inputs\&quot;:[\&quot;123\&quot;],\&quot;name\&quot;:\&quot;<strong>addDeTags</strong>\&quot;,\&quot;outputType\&quot;:\&quot;const\&quot;,\&quot;sourceType\&quot;:\&quot;SAF\&quot;,\&quot;title\&quot;:\&quot;打标签\&quot;,\&quot;type\&quot;:\&quot;ACTION\&quot;}]}}</p>
@@ -123,7 +123,7 @@ public class DescribeRuleSnapshotResponseBody extends TeaModel {
         public String ruleBody;
 
         /**
-         * <p>Expression.</p>
+         * <p>The expressions.</p>
          * 
          * <strong>example:</strong>
          * <p>[{\&quot;expressionName\&quot;:\&quot;代下单_记录日志\&quot;,\&quot;itemId\&quot;:1,\&quot;left\&quot;:{\&quot;name\&quot;:\&quot;dhcfX2v7670\&quot;},\&quot;operatorCode\&quot;:\&quot;gte\&quot;,\&quot;operatorName\&quot;:\&quot;大于等于\&quot;,\&quot;right\&quot;:{\&quot;fieldValue\&quot;:\&quot;2\&quot;}}]</p>
@@ -132,7 +132,7 @@ public class DescribeRuleSnapshotResponseBody extends TeaModel {
         public String ruleExpressions;
 
         /**
-         * <p>Policy ID</p>
+         * <p>The policy ID</p>
          * 
          * <strong>example:</strong>
          * <p>101804</p>
@@ -141,7 +141,7 @@ public class DescribeRuleSnapshotResponseBody extends TeaModel {
         public String ruleId;
 
         /**
-         * <p>Policy name</p>
+         * <p>The policy name.</p>
          * 
          * <strong>example:</strong>
          * <p>营销风险识别</p>
@@ -150,7 +150,7 @@ public class DescribeRuleSnapshotResponseBody extends TeaModel {
         public String ruleName;
 
         /**
-         * <p>Policy status</p>
+         * <p>The policy status.</p>
          * 
          * <strong>example:</strong>
          * <p>RUNNING</p>
@@ -159,7 +159,7 @@ public class DescribeRuleSnapshotResponseBody extends TeaModel {
         public String ruleStatus;
 
         /**
-         * <p>Rule type.</p>
+         * <p>The policy type.</p>
          * 
          * <strong>example:</strong>
          * <p>DSL</p>

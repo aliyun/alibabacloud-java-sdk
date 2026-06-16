@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyAppKeyRequest extends TeaModel {
     /**
-     * <p>Sets the language type for requests and received messages, default value is <strong>zh</strong>. Values:</p>
+     * <p>Specifies the language type of the request and response messages. Default value: <strong>zh</strong>. Valid values:</p>
      * <ul>
      * <li><strong>zh</strong>: Chinese</li>
      * <li><strong>en</strong>: English</li>
@@ -18,7 +18,7 @@ public class ModifyAppKeyRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>appkey information.</p>
+     * <p>The AppKey information.</p>
      * 
      * <strong>example:</strong>
      * <hr>
@@ -27,7 +27,7 @@ public class ModifyAppKeyRequest extends TeaModel {
     public String appKey;
 
     /**
-     * <p>Application memo information.</p>
+     * <p>The memo information of the application.</p>
      * 
      * <strong>example:</strong>
      * <p>备注</p>
@@ -36,7 +36,7 @@ public class ModifyAppKeyRequest extends TeaModel {
     public String memo;
 
     /**
-     * <p>Region code</p>
+     * <p>The region ID.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>

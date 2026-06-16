@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class DescribeLoanTaskListRequest extends TeaModel {
     /**
-     * <p>Set the language type for request and response messages, default value is <strong>zh</strong>. Values:</p>
+     * <p>The language type for the request and response. Default value: <strong>zh</strong>. Valid values:</p>
      * <ul>
-     * <li><strong>zh</strong>: Chinese</li>
-     * <li><strong>en</strong>: English</li>
+     * <li><strong>zh</strong>: Chinese.</li>
+     * <li><strong>en</strong>: English.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,7 +18,7 @@ public class DescribeLoanTaskListRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>Import batch number.</p>
+     * <p>The import batch number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -27,7 +27,7 @@ public class DescribeLoanTaskListRequest extends TeaModel {
     public String batchNo;
 
     /**
-     * <p>Current page number. Default is: 1.</p>
+     * <p>The current page number. Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -36,7 +36,7 @@ public class DescribeLoanTaskListRequest extends TeaModel {
     public String currentPage;
 
     /**
-     * <p>Task status.</p>
+     * <p>The task status.</p>
      * 
      * <strong>example:</strong>
      * <p>WAIT</p>
@@ -45,7 +45,7 @@ public class DescribeLoanTaskListRequest extends TeaModel {
     public String monitorStatus;
 
     /**
-     * <p>Page size, default value is 10.</p>
+     * <p>The number of entries per page. Default value: 10.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -54,7 +54,7 @@ public class DescribeLoanTaskListRequest extends TeaModel {
     public String pageSize;
 
     /**
-     * <p>Region code.</p>
+     * <p>The region code.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>

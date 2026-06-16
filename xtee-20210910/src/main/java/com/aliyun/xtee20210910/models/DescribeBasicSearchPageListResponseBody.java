@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeBasicSearchPageListResponseBody extends TeaModel {
     /**
-     * <p>Request ID</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>A32FE941-35F2-5378-B37C-4B8FDB16F094</p>
@@ -14,7 +14,7 @@ public class DescribeBasicSearchPageListResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Return object</p>
+     * <p>The returned object.</p>
      */
     @NameInMap("resultObject")
     public DescribeBasicSearchPageListResponseBodyResultObject resultObject;
@@ -42,7 +42,7 @@ public class DescribeBasicSearchPageListResponseBody extends TeaModel {
 
     public static class DescribeBasicSearchPageListResponseBodyResultObjectHeader extends TeaModel {
         /**
-         * <p>Field name</p>
+         * <p>The field name.</p>
          * 
          * <strong>example:</strong>
          * <p>age</p>
@@ -51,7 +51,7 @@ public class DescribeBasicSearchPageListResponseBody extends TeaModel {
         public String fieldName;
 
         /**
-         * <p>Field title.</p>
+         * <p>The field name.</p>
          * 
          * <strong>example:</strong>
          * <p>年龄</p>
@@ -60,10 +60,10 @@ public class DescribeBasicSearchPageListResponseBody extends TeaModel {
         public String fieldTitle;
 
         /**
-         * <p>Whether it is a default display field (displayed in the response, not used as a parameter)</p>
+         * <p>Indicates whether the field is displayed by default. This field is included in the response only and is not used as a request parameter. Valid values:</p>
          * <ul>
-         * <li>true: Yes</li>
-         * <li>false: No</li>
+         * <li>true: The field is displayed by default.</li>
+         * <li>false: The field is not displayed by default.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -105,7 +105,7 @@ public class DescribeBasicSearchPageListResponseBody extends TeaModel {
 
     public static class DescribeBasicSearchPageListResponseBodyResultObject extends TeaModel {
         /**
-         * <p>Current page number in pagination queries.</p>
+         * <p>The current page number in the paged query.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -114,19 +114,19 @@ public class DescribeBasicSearchPageListResponseBody extends TeaModel {
         public Long currentPage;
 
         /**
-         * <p>Returned data object</p>
+         * <p>The returned data object.</p>
          */
         @NameInMap("data")
         public java.util.List<java.util.Map<String, ?>> data;
 
         /**
-         * <p>Table header</p>
+         * <p>The table header.</p>
          */
         @NameInMap("header")
         public java.util.List<DescribeBasicSearchPageListResponseBodyResultObjectHeader> header;
 
         /**
-         * <p>Page size, with a default value of 10</p>
+         * <p>The number of entries per page. Default value: 10.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -135,7 +135,7 @@ public class DescribeBasicSearchPageListResponseBody extends TeaModel {
         public Long pageSize;
 
         /**
-         * <p>Total number of items</p>
+         * <p>The total number of entries.</p>
          * 
          * <strong>example:</strong>
          * <p>6</p>
@@ -144,7 +144,7 @@ public class DescribeBasicSearchPageListResponseBody extends TeaModel {
         public Long totalItem;
 
         /**
-         * <p>Total number of pages</p>
+         * <p>The total number of pages.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>

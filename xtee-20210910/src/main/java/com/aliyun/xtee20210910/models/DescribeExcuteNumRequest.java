@@ -15,7 +15,7 @@ public class DescribeExcuteNumRequest extends TeaModel {
     public String code;
 
     /**
-     * <p>This field is currently unused and has no query significance.</p>
+     * <p>This field is currently not in use and has no query significance.</p>
      * 
      * <strong>example:</strong>
      * <p>暂时不需要传入</p>
@@ -24,7 +24,7 @@ public class DescribeExcuteNumRequest extends TeaModel {
     public String degree;
 
     /**
-     * <p>End date, format yyyy-MM-dd, e.g., 2025-03-13.</p>
+     * <p>End date in the format yyyy-MM-dd, for example, 2025-03-15.</p>
      * 
      * <strong>example:</strong>
      * <p>2025-03-15</p>
@@ -33,7 +33,7 @@ public class DescribeExcuteNumRequest extends TeaModel {
     public String endDate;
 
     /**
-     * <p>Set the language type for requests and received messages, default value is <strong>zh</strong>. Values:</p>
+     * <p>Specifies the language type for request and response messages. Default value: <strong>zh</strong>. Valid values:</p>
      * <ul>
      * <li><strong>zh</strong>: Chinese</li>
      * <li><strong>en</strong>: English</li>
@@ -46,7 +46,7 @@ public class DescribeExcuteNumRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>Request source IP address.</p>
+     * <p>Source IP address of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>220.250.21.83</p>
@@ -55,7 +55,7 @@ public class DescribeExcuteNumRequest extends TeaModel {
     public String sourceIp;
 
     /**
-     * <p>Start date, format yyyy-MM-dd, e.g., 2025-03-10.</p>
+     * <p>Start date in the format yyyy-MM-dd, for example, 2025-03-10.</p>
      * 
      * <strong>example:</strong>
      * <p>2025-03-10</p>

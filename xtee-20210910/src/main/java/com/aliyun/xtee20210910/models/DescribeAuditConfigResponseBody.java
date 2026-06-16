@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeAuditConfigResponseBody extends TeaModel {
     /**
-     * <p>Status code.</p>
+     * <p>The status code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,7 +14,7 @@ public class DescribeAuditConfigResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>HTTP status code</p>
+     * <p>The HTTP status code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -23,7 +23,7 @@ public class DescribeAuditConfigResponseBody extends TeaModel {
     public String httpStatusCode;
 
     /**
-     * <p>Error message</p>
+     * <p>The error message.</p>
      * 
      * <strong>example:</strong>
      * <p>The input parameter data is not valid. order_storage_company_num component not found</p>
@@ -32,7 +32,7 @@ public class DescribeAuditConfigResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Returned object</p>
+     * <p>The response object.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -41,7 +41,7 @@ public class DescribeAuditConfigResponseBody extends TeaModel {
     public Boolean resultObject;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
+     * <p>Indicates whether the request is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>

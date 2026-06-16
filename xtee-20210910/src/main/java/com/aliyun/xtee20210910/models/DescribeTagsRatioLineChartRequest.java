@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class DescribeTagsRatioLineChartRequest extends TeaModel {
     /**
-     * <p>Sets the language type for requests and received messages, default value is <strong>zh</strong>. Values:</p>
+     * <p>The language of the request and response. Default value: <strong>zh</strong>. Valid values:</p>
      * <ul>
      * <li><strong>zh</strong>: Chinese</li>
-     * <li><strong>en</strong>: English</li>
+     * <li><strong>en</strong>: English.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,7 +18,7 @@ public class DescribeTagsRatioLineChartRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>Start time, accurate to milliseconds (ms).</p>
+     * <p>The start time, in milliseconds (ms).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -28,7 +28,7 @@ public class DescribeTagsRatioLineChartRequest extends TeaModel {
     public Long beginTime;
 
     /**
-     * <p>Bypass event code</p>
+     * <p>The bypass event codes.</p>
      * 
      * <strong>example:</strong>
      * <p>de_amnhke2482</p>
@@ -37,7 +37,7 @@ public class DescribeTagsRatioLineChartRequest extends TeaModel {
     public String byPassEventCodes;
 
     /**
-     * <p>End time, accurate to milliseconds (ms).</p>
+     * <p>The end time, in milliseconds (ms).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -47,7 +47,7 @@ public class DescribeTagsRatioLineChartRequest extends TeaModel {
     public Long endTime;
 
     /**
-     * <p>Main event code</p>
+     * <p>The main event codes.</p>
      * 
      * <strong>example:</strong>
      * <p>de_amnhke2482</p>
@@ -56,7 +56,7 @@ public class DescribeTagsRatioLineChartRequest extends TeaModel {
     public String mainEventCodes;
 
     /**
-     * <p>Region code</p>
+     * <p>The region code.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -66,7 +66,7 @@ public class DescribeTagsRatioLineChartRequest extends TeaModel {
     public String regId;
 
     /**
-     * <p>Shunt event code</p>
+     * <p>The diversion event codes.</p>
      * 
      * <strong>example:</strong>
      * <p>de_amnhke2488</p>

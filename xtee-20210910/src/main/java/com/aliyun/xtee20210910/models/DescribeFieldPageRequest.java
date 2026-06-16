@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class DescribeFieldPageRequest extends TeaModel {
     /**
-     * <p>Set the language type for request and response messages, default value is <strong>zh</strong>. Values:</p>
+     * <p>The language type for the request and response messages. Default value: <strong>zh</strong>. Valid values:</p>
      * <ul>
      * <li><strong>zh</strong>: Chinese</li>
-     * <li><strong>en</strong>: English</li>
+     * <li><strong>en</strong>: English.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,7 +18,7 @@ public class DescribeFieldPageRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>Field classification</p>
+     * <p>The field classification.</p>
      * 
      * <strong>example:</strong>
      * <p>REQUEST_PARAM</p>
@@ -27,7 +27,7 @@ public class DescribeFieldPageRequest extends TeaModel {
     public String classify;
 
     /**
-     * <p>Query input parameter name or title</p>
+     * <p>The query parameter: name or title.</p>
      * 
      * <strong>example:</strong>
      * <p>age/年龄</p>
@@ -36,7 +36,7 @@ public class DescribeFieldPageRequest extends TeaModel {
     public String condition;
 
     /**
-     * <p>Current page number</p>
+     * <p>The current page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -45,7 +45,7 @@ public class DescribeFieldPageRequest extends TeaModel {
     public String currentPage;
 
     /**
-     * <p>Field name</p>
+     * <p>The field name.</p>
      * 
      * <strong>example:</strong>
      * <p>age</p>
@@ -54,7 +54,7 @@ public class DescribeFieldPageRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>Number of items per page, default value is 10</p>
+     * <p>The number of entries per page. Default value: 10.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -63,7 +63,7 @@ public class DescribeFieldPageRequest extends TeaModel {
     public String pageSize;
 
     /**
-     * <p>Region code</p>
+     * <p>The region code.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -72,7 +72,7 @@ public class DescribeFieldPageRequest extends TeaModel {
     public String regId;
 
     /**
-     * <p>Field source</p>
+     * <p>The field source.</p>
      * 
      * <strong>example:</strong>
      * <p>DEFINE</p>
@@ -81,7 +81,7 @@ public class DescribeFieldPageRequest extends TeaModel {
     public String source;
 
     /**
-     * <p>Status.</p>
+     * <p>The status.</p>
      * 
      * <strong>example:</strong>
      * <p>ENABLE</p>
@@ -90,7 +90,7 @@ public class DescribeFieldPageRequest extends TeaModel {
     public String status;
 
     /**
-     * <p>Title.</p>
+     * <p>The title.</p>
      * 
      * <strong>example:</strong>
      * <p>年龄</p>
@@ -99,7 +99,7 @@ public class DescribeFieldPageRequest extends TeaModel {
     public String title;
 
     /**
-     * <p>Field type</p>
+     * <p>The field type.</p>
      * 
      * <strong>example:</strong>
      * <p>STRING</p>

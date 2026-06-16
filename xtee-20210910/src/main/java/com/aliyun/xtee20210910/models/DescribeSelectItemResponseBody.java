@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeSelectItemResponseBody extends TeaModel {
     /**
-     * <p>Request ID.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>A32FE941-35F2-5378-B37C-4B8FDB16F094</p>
@@ -14,7 +14,7 @@ public class DescribeSelectItemResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Return object</p>
+     * <p>The response object.</p>
      */
     @NameInMap("resultObject")
     public DescribeSelectItemResponseBodyResultObject resultObject;
@@ -42,13 +42,13 @@ public class DescribeSelectItemResponseBody extends TeaModel {
 
     public static class DescribeSelectItemResponseBodyResultObject extends TeaModel {
         /**
-         * <p>Monitoring status list.</p>
+         * <p>The list of monitoring statuses.</p>
          */
         @NameInMap("monitorStatusList")
         public java.util.List<String> monitorStatusList;
 
         /**
-         * <p>Task ID list.</p>
+         * <p>The list of task IDs.</p>
          */
         @NameInMap("taskIdList")
         public java.util.List<String> taskIdList;

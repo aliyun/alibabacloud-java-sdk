@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class DescribeEventPageListRequest extends TeaModel {
     /**
-     * <p>Sets the language type for requests and received messages, with a default value of <strong>zh</strong>. Values:</p>
+     * <p>The language of the request and response. Default value: <strong>zh</strong>. Valid values:</p>
      * <ul>
      * <li><strong>zh</strong>: Chinese</li>
-     * <li><strong>en</strong>: English</li>
+     * <li><strong>en</strong>: English.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,7 +18,7 @@ public class DescribeEventPageListRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>Creation type</p>
+     * <p>The creation type.</p>
      * 
      * <strong>example:</strong>
      * <p>NORMAL</p>
@@ -27,7 +27,7 @@ public class DescribeEventPageListRequest extends TeaModel {
     public String createType;
 
     /**
-     * <p>Current page number.</p>
+     * <p>The current page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -36,7 +36,7 @@ public class DescribeEventPageListRequest extends TeaModel {
     public Integer currentPage;
 
     /**
-     * <p>Event code</p>
+     * <p>The event code.</p>
      * 
      * <strong>example:</strong>
      * <p>de_aikqxy3122</p>
@@ -45,7 +45,7 @@ public class DescribeEventPageListRequest extends TeaModel {
     public String eventCode;
 
     /**
-     * <p>Event name.</p>
+     * <p>The event name.</p>
      * 
      * <strong>example:</strong>
      * <p>注册风险旁路</p>
@@ -54,7 +54,7 @@ public class DescribeEventPageListRequest extends TeaModel {
     public String eventName;
 
     /**
-     * <p>Event status.</p>
+     * <p>The event status.</p>
      * 
      * <strong>example:</strong>
      * <p>ONLINE</p>
@@ -63,7 +63,7 @@ public class DescribeEventPageListRequest extends TeaModel {
     public String eventStatus;
 
     /**
-     * <p>Page size, with a default value of 10</p>
+     * <p>The number of entries per page. Default value: 10.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -72,7 +72,7 @@ public class DescribeEventPageListRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>Region code</p>
+     * <p>The region code.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>

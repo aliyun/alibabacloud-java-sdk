@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class SwitchExpressionVariableRequest extends TeaModel {
     /**
-     * <p>Sets the language type for requests and received messages, with a default value of <strong>zh</strong>. Values: </p>
+     * <p>The language of the request and response. Default value: <strong>zh</strong>. Valid values:</p>
      * <ul>
-     * <li><strong>zh</strong>: Chinese</li>
-     * <li><strong>en</strong>: English</li>
+     * <li><strong>zh</strong>: Chinese.</li>
+     * <li><strong>en</strong>: English.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,7 +18,7 @@ public class SwitchExpressionVariableRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>Data version.</p>
+     * <p>The data version.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -28,7 +28,7 @@ public class SwitchExpressionVariableRequest extends TeaModel {
     public Long dataVersion;
 
     /**
-     * <p>Variable ID</p>
+     * <p>The variable ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -38,7 +38,7 @@ public class SwitchExpressionVariableRequest extends TeaModel {
     public Long id;
 
     /**
-     * <p>Region code</p>
+     * <p>The region code.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -48,7 +48,11 @@ public class SwitchExpressionVariableRequest extends TeaModel {
     public String regId;
 
     /**
-     * <p>Status.</p>
+     * <p>The status. Valid values:</p>
+     * <ul>
+     * <li>DISABLE</li>
+     * <li>ENABLE.</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

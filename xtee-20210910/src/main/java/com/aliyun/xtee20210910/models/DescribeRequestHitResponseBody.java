@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeRequestHitResponseBody extends TeaModel {
     /**
-     * <p>Request ID.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>AE7E6105-7DEB-5125-9B24-DCBC139F6CD2</p>
@@ -14,7 +14,7 @@ public class DescribeRequestHitResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Return object</p>
+     * <p>The returned object.</p>
      */
     @NameInMap("resultObject")
     public DescribeRequestHitResponseBodyResultObject resultObject;
@@ -42,7 +42,7 @@ public class DescribeRequestHitResponseBody extends TeaModel {
 
     public static class DescribeRequestHitResponseBodyResultObjectRuleHitRecords extends TeaModel {
         /**
-         * <p>Duration</p>
+         * <p>The time consumed.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -51,7 +51,7 @@ public class DescribeRequestHitResponseBody extends TeaModel {
         public Integer cost;
 
         /**
-         * <p>Whether the rule was hit.</p>
+         * <p>Indicates whether the rule is hit.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -60,7 +60,7 @@ public class DescribeRequestHitResponseBody extends TeaModel {
         public Boolean hitSuccessful;
 
         /**
-         * <p>Whether to show details</p>
+         * <p>Indicates whether to display details.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -69,7 +69,7 @@ public class DescribeRequestHitResponseBody extends TeaModel {
         public Boolean isShowDetail;
 
         /**
-         * <p>Order.</p>
+         * <p>The order.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -78,7 +78,7 @@ public class DescribeRequestHitResponseBody extends TeaModel {
         public Integer order;
 
         /**
-         * <p>Policy ID</p>
+         * <p>The policy ID.</p>
          * 
          * <strong>example:</strong>
          * <p>101544</p>
@@ -87,7 +87,7 @@ public class DescribeRequestHitResponseBody extends TeaModel {
         public String ruleId;
 
         /**
-         * <p>Policy name</p>
+         * <p>The policy name.</p>
          * 
          * <strong>example:</strong>
          * <p>注册手机号是11位数字</p>
@@ -96,7 +96,7 @@ public class DescribeRequestHitResponseBody extends TeaModel {
         public String ruleName;
 
         /**
-         * <p>Rule snapshot ID</p>
+         * <p>The rule snapshot ID.</p>
          * 
          * <strong>example:</strong>
          * <p>27</p>
@@ -105,7 +105,7 @@ public class DescribeRequestHitResponseBody extends TeaModel {
         public String ruleSnapshotId;
 
         /**
-         * <p>Policy status</p>
+         * <p>The policy status.</p>
          * 
          * <strong>example:</strong>
          * <p>RUNNING</p>
@@ -114,7 +114,7 @@ public class DescribeRequestHitResponseBody extends TeaModel {
         public String ruleStatus;
 
         /**
-         * <p>Rule Type</p>
+         * <p>The policy type.</p>
          * 
          * <strong>example:</strong>
          * <p>DEFAULT</p>
@@ -203,7 +203,7 @@ public class DescribeRequestHitResponseBody extends TeaModel {
 
     public static class DescribeRequestHitResponseBodyResultObject extends TeaModel {
         /**
-         * <p>Event code</p>
+         * <p>The event code.</p>
          * 
          * <strong>example:</strong>
          * <p>de_aszbjb7236</p>
@@ -212,7 +212,7 @@ public class DescribeRequestHitResponseBody extends TeaModel {
         public String eventCode;
 
         /**
-         * <p>Event name.</p>
+         * <p>The event name.</p>
          * 
          * <strong>example:</strong>
          * <p>注册风险</p>
@@ -221,7 +221,7 @@ public class DescribeRequestHitResponseBody extends TeaModel {
         public String eventName;
 
         /**
-         * <p>Input parameters.</p>
+         * <p>The input parameters.</p>
          * 
          * <strong>example:</strong>
          * <p>{\&quot;eventCode\&quot;:\&quot;de_afghcf6411\&quot;,\&quot;ip\&quot;:\&quot;196.168.0.1\&quot;,\&quot;DEtest222\&quot;:9007199254740999,\&quot;age\&quot;:20}</p>
@@ -230,7 +230,7 @@ public class DescribeRequestHitResponseBody extends TeaModel {
         public String inputs;
 
         /**
-         * <p>Output parameters</p>
+         * <p>The output parameters.</p>
          * 
          * <strong>example:</strong>
          * <p>{\&quot;tags\&quot;:\&quot;rm0102,test_tag,age\&quot;,\&quot;score\&quot;:\&quot;30.0\&quot;,\&quot;extend\&quot;:\&quot;{\\\&quot;OUT_V01\\\&quot;:\\\&quot;Maritime\\\&quot;,\\\&quot;OUT_V02\\\&quot;:\\\&quot;Lome\\\&quot;,\\\&quot;OUT_V03\\\&quot;:\\\&quot;196.168.0.1_A\\\&quot;}\&quot;,\&quot;finalDecision\&quot;:\&quot;REJECT\&quot;}</p>
@@ -239,7 +239,7 @@ public class DescribeRequestHitResponseBody extends TeaModel {
         public String outputs;
 
         /**
-         * <p>Timestamp of the request.</p>
+         * <p>The timestamp of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>1752571330000</p>
@@ -248,13 +248,13 @@ public class DescribeRequestHitResponseBody extends TeaModel {
         public Long requestTime;
 
         /**
-         * <p>Details of the executed rules.</p>
+         * <p>The details of the rules executed by the request.</p>
          */
         @NameInMap("ruleHitRecords")
         public java.util.List<DescribeRequestHitResponseBodyResultObjectRuleHitRecords> ruleHitRecords;
 
         /**
-         * <p>Request ID</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>60C97040-D5D5-4906-9522-B9B413730CAA</p>
@@ -263,7 +263,7 @@ public class DescribeRequestHitResponseBody extends TeaModel {
         public String sRequestId;
 
         /**
-         * <p>Total amount of the request</p>
+         * <p>The total cost of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>4</p>

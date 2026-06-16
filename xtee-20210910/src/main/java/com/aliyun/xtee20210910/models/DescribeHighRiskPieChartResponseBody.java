@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeHighRiskPieChartResponseBody extends TeaModel {
     /**
-     * <p>Status code</p>
+     * <p>The status code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,7 +14,7 @@ public class DescribeHighRiskPieChartResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>HTTP status code</p>
+     * <p>The HTTP status code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -23,7 +23,7 @@ public class DescribeHighRiskPieChartResponseBody extends TeaModel {
     public String httpStatusCode;
 
     /**
-     * <p>Error details</p>
+     * <p>The error details.</p>
      * 
      * <strong>example:</strong>
      * <p>The input parameter data is not valid. order_storage_company_num component not found</p>
@@ -32,7 +32,7 @@ public class DescribeHighRiskPieChartResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Request ID</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>AE7E6105-7DEB-5125-9B24-DCBC139F6CD2</p>
@@ -41,13 +41,13 @@ public class DescribeHighRiskPieChartResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Returned object</p>
+     * <p>The response object.</p>
      */
     @NameInMap("resultObject")
     public DescribeHighRiskPieChartResponseBodyResultObject resultObject;
 
     /**
-     * <p>Whether the request was successful.</p>
+     * <p>Indicates whether the request was successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -110,7 +110,7 @@ public class DescribeHighRiskPieChartResponseBody extends TeaModel {
 
     public static class DescribeHighRiskPieChartResponseBodyResultObjectHighRiskIPCityGrid extends TeaModel {
         /**
-         * <p>Chart flag, default false</p>
+         * <p>The chart identifier. Default value: false.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -135,7 +135,7 @@ public class DescribeHighRiskPieChartResponseBody extends TeaModel {
 
     public static class DescribeHighRiskPieChartResponseBodyResultObjectHighRiskIPCitySeriesData extends TeaModel {
         /**
-         * <p>Field name</p>
+         * <p>The field name.</p>
          * 
          * <strong>example:</strong>
          * <p>杭州市</p>
@@ -144,7 +144,7 @@ public class DescribeHighRiskPieChartResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>Data value</p>
+         * <p>The data value.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -177,13 +177,13 @@ public class DescribeHighRiskPieChartResponseBody extends TeaModel {
 
     public static class DescribeHighRiskPieChartResponseBodyResultObjectHighRiskIPCitySeries extends TeaModel {
         /**
-         * <p>Returned data object</p>
+         * <p>The response data object.</p>
          */
         @NameInMap("data")
         public java.util.List<DescribeHighRiskPieChartResponseBodyResultObjectHighRiskIPCitySeriesData> data;
 
         /**
-         * <p>Field name</p>
+         * <p>The field name.</p>
          * 
          * <strong>example:</strong>
          * <p>杭州市</p>
@@ -192,7 +192,7 @@ public class DescribeHighRiskPieChartResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>Chart identifier, default is false</p>
+         * <p>The chart identifier. Default value: false.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -233,7 +233,7 @@ public class DescribeHighRiskPieChartResponseBody extends TeaModel {
 
     public static class DescribeHighRiskPieChartResponseBodyResultObjectHighRiskIPCity extends TeaModel {
         /**
-         * <p>Chart flag, default true</p>
+         * <p>The chart identifier. Default value: true.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -242,13 +242,13 @@ public class DescribeHighRiskPieChartResponseBody extends TeaModel {
         public Boolean animation;
 
         /**
-         * <p>Belonging grid.</p>
+         * <p>The grid to which the chart belongs.</p>
          */
         @NameInMap("grid")
         public DescribeHighRiskPieChartResponseBodyResultObjectHighRiskIPCityGrid grid;
 
         /**
-         * <p>Chart data</p>
+         * <p>The chart data.</p>
          */
         @NameInMap("series")
         public java.util.List<DescribeHighRiskPieChartResponseBodyResultObjectHighRiskIPCitySeries> series;
@@ -286,7 +286,7 @@ public class DescribeHighRiskPieChartResponseBody extends TeaModel {
 
     public static class DescribeHighRiskPieChartResponseBodyResultObjectHighRiskIPProvinceGrid extends TeaModel {
         /**
-         * <p>Chart identifier, default is false</p>
+         * <p>The chart identifier. Default value: false.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -311,7 +311,7 @@ public class DescribeHighRiskPieChartResponseBody extends TeaModel {
 
     public static class DescribeHighRiskPieChartResponseBodyResultObjectHighRiskIPProvinceSeriesData extends TeaModel {
         /**
-         * <p>Variable name</p>
+         * <p>The variable name.</p>
          * 
          * <strong>example:</strong>
          * <p>浙江省</p>
@@ -320,7 +320,7 @@ public class DescribeHighRiskPieChartResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>Data value</p>
+         * <p>The data value.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -353,13 +353,13 @@ public class DescribeHighRiskPieChartResponseBody extends TeaModel {
 
     public static class DescribeHighRiskPieChartResponseBodyResultObjectHighRiskIPProvinceSeries extends TeaModel {
         /**
-         * <p>Returned data object</p>
+         * <p>The response data object.</p>
          */
         @NameInMap("data")
         public java.util.List<DescribeHighRiskPieChartResponseBodyResultObjectHighRiskIPProvinceSeriesData> data;
 
         /**
-         * <p>Field name</p>
+         * <p>The field name.</p>
          * 
          * <strong>example:</strong>
          * <p>浙江省</p>
@@ -368,7 +368,7 @@ public class DescribeHighRiskPieChartResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>Chart identifier, default is false</p>
+         * <p>The chart identifier. Default value: false.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -409,7 +409,7 @@ public class DescribeHighRiskPieChartResponseBody extends TeaModel {
 
     public static class DescribeHighRiskPieChartResponseBodyResultObjectHighRiskIPProvince extends TeaModel {
         /**
-         * <p>Chart identifier, default is true</p>
+         * <p>The chart identifier. Default value: true.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -418,13 +418,13 @@ public class DescribeHighRiskPieChartResponseBody extends TeaModel {
         public Boolean animation;
 
         /**
-         * <p>Belonging grid.</p>
+         * <p>The grid to which the chart belongs.</p>
          */
         @NameInMap("grid")
         public DescribeHighRiskPieChartResponseBodyResultObjectHighRiskIPProvinceGrid grid;
 
         /**
-         * <p>Chart data</p>
+         * <p>The chart data.</p>
          */
         @NameInMap("series")
         public java.util.List<DescribeHighRiskPieChartResponseBodyResultObjectHighRiskIPProvinceSeries> series;
@@ -462,7 +462,7 @@ public class DescribeHighRiskPieChartResponseBody extends TeaModel {
 
     public static class DescribeHighRiskPieChartResponseBodyResultObjectHighRiskMobileCityGrid extends TeaModel {
         /**
-         * <p>Chart flag, default is false</p>
+         * <p>The chart identifier. Default value: false.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -487,7 +487,7 @@ public class DescribeHighRiskPieChartResponseBody extends TeaModel {
 
     public static class DescribeHighRiskPieChartResponseBodyResultObjectHighRiskMobileCitySeriesData extends TeaModel {
         /**
-         * <p>Field name</p>
+         * <p>The field name.</p>
          * 
          * <strong>example:</strong>
          * <p>杭州市</p>
@@ -496,7 +496,7 @@ public class DescribeHighRiskPieChartResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>Data value</p>
+         * <p>The data value.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -529,13 +529,13 @@ public class DescribeHighRiskPieChartResponseBody extends TeaModel {
 
     public static class DescribeHighRiskPieChartResponseBodyResultObjectHighRiskMobileCitySeries extends TeaModel {
         /**
-         * <p>Returned data object</p>
+         * <p>The response data object.</p>
          */
         @NameInMap("data")
         public java.util.List<DescribeHighRiskPieChartResponseBodyResultObjectHighRiskMobileCitySeriesData> data;
 
         /**
-         * <p>Field name</p>
+         * <p>The field name.</p>
          * 
          * <strong>example:</strong>
          * <p>杭州市</p>
@@ -544,7 +544,7 @@ public class DescribeHighRiskPieChartResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>Chart flag, default is false</p>
+         * <p>The chart identifier. Default value: false.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -585,7 +585,7 @@ public class DescribeHighRiskPieChartResponseBody extends TeaModel {
 
     public static class DescribeHighRiskPieChartResponseBodyResultObjectHighRiskMobileCity extends TeaModel {
         /**
-         * <p>Chart flag, default is true</p>
+         * <p>The chart identifier. Default value: true.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -594,13 +594,13 @@ public class DescribeHighRiskPieChartResponseBody extends TeaModel {
         public Boolean animation;
 
         /**
-         * <p>Belongs to grid.</p>
+         * <p>The grid to which the chart belongs.</p>
          */
         @NameInMap("grid")
         public DescribeHighRiskPieChartResponseBodyResultObjectHighRiskMobileCityGrid grid;
 
         /**
-         * <p>Chart data</p>
+         * <p>The chart data.</p>
          */
         @NameInMap("series")
         public java.util.List<DescribeHighRiskPieChartResponseBodyResultObjectHighRiskMobileCitySeries> series;
@@ -638,7 +638,7 @@ public class DescribeHighRiskPieChartResponseBody extends TeaModel {
 
     public static class DescribeHighRiskPieChartResponseBodyResultObjectHighRiskMobileProvinceGrid extends TeaModel {
         /**
-         * <p>Chart flag, default is false</p>
+         * <p>The chart identifier. Default value: false.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -663,7 +663,7 @@ public class DescribeHighRiskPieChartResponseBody extends TeaModel {
 
     public static class DescribeHighRiskPieChartResponseBodyResultObjectHighRiskMobileProvinceSeriesData extends TeaModel {
         /**
-         * <p>Field name</p>
+         * <p>The field name.</p>
          * 
          * <strong>example:</strong>
          * <p>浙江省</p>
@@ -672,7 +672,7 @@ public class DescribeHighRiskPieChartResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>Data value</p>
+         * <p>The data value.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -705,13 +705,13 @@ public class DescribeHighRiskPieChartResponseBody extends TeaModel {
 
     public static class DescribeHighRiskPieChartResponseBodyResultObjectHighRiskMobileProvinceSeries extends TeaModel {
         /**
-         * <p>High-risk position data.</p>
+         * <p>The high-risk location data.</p>
          */
         @NameInMap("data")
         public java.util.List<DescribeHighRiskPieChartResponseBodyResultObjectHighRiskMobileProvinceSeriesData> data;
 
         /**
-         * <p>Display title</p>
+         * <p>The display title.</p>
          * 
          * <strong>example:</strong>
          * <p>分值区间占比</p>
@@ -720,7 +720,7 @@ public class DescribeHighRiskPieChartResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>Chart identifier, default false</p>
+         * <p>The chart identifier. Default value: false.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -761,7 +761,7 @@ public class DescribeHighRiskPieChartResponseBody extends TeaModel {
 
     public static class DescribeHighRiskPieChartResponseBodyResultObjectHighRiskMobileProvince extends TeaModel {
         /**
-         * <p>Indicator, default true</p>
+         * <p>The identifier. Default value: true.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -770,13 +770,13 @@ public class DescribeHighRiskPieChartResponseBody extends TeaModel {
         public Boolean animation;
 
         /**
-         * <p>Belongs to grid.</p>
+         * <p>The grid to which the chart belongs.</p>
          */
         @NameInMap("grid")
         public DescribeHighRiskPieChartResponseBodyResultObjectHighRiskMobileProvinceGrid grid;
 
         /**
-         * <p>Chart data</p>
+         * <p>The chart data.</p>
          */
         @NameInMap("series")
         public java.util.List<DescribeHighRiskPieChartResponseBodyResultObjectHighRiskMobileProvinceSeries> series;
@@ -814,25 +814,25 @@ public class DescribeHighRiskPieChartResponseBody extends TeaModel {
 
     public static class DescribeHighRiskPieChartResponseBodyResultObject extends TeaModel {
         /**
-         * <p>High-risk IP city</p>
+         * <p>The city to which the high-risk IP address belongs.</p>
          */
         @NameInMap("highRiskIPCity")
         public DescribeHighRiskPieChartResponseBodyResultObjectHighRiskIPCity highRiskIPCity;
 
         /**
-         * <p>High-risk IP归属province</p>
+         * <p>The province to which the high-risk IP address belongs.</p>
          */
         @NameInMap("highRiskIPProvince")
         public DescribeHighRiskPieChartResponseBodyResultObjectHighRiskIPProvince highRiskIPProvince;
 
         /**
-         * <p>High-risk mobile phone归属city</p>
+         * <p>The city to which the high-risk phone number belongs.</p>
          */
         @NameInMap("highRiskMobileCity")
         public DescribeHighRiskPieChartResponseBodyResultObjectHighRiskMobileCity highRiskMobileCity;
 
         /**
-         * <p>High-risk mobile phone\&quot;s province of origin</p>
+         * <p>The province to which the high-risk phone number belongs.</p>
          */
         @NameInMap("highRiskMobileProvince")
         public DescribeHighRiskPieChartResponseBodyResultObjectHighRiskMobileProvince highRiskMobileProvince;

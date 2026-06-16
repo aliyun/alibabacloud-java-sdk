@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateSampleResponseBody extends TeaModel {
     /**
-     * <p>Request ID.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>A32FE941-35F2-5378-B37C-4B8FDB16F094</p>
@@ -14,7 +14,7 @@ public class CreateSampleResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Return object</p>
+     * <p>The returned object.</p>
      */
     @NameInMap("resultObject")
     public CreateSampleResponseBodyResultObject resultObject;
@@ -42,7 +42,7 @@ public class CreateSampleResponseBody extends TeaModel {
 
     public static class CreateSampleResponseBodyResultObject extends TeaModel {
         /**
-         * <p>Number of colored groups</p>
+         * <p>The number of tainted groups.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -51,7 +51,7 @@ public class CreateSampleResponseBody extends TeaModel {
         public Integer communityCount;
 
         /**
-         * <p>Number of failed samples</p>
+         * <p>The number of failed data samples.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -60,7 +60,7 @@ public class CreateSampleResponseBody extends TeaModel {
         public Integer failCount;
 
         /**
-         * <p>Recall probability</p>
+         * <p>The recall probability.</p>
          * 
          * <strong>example:</strong>
          * <p>2.5%</p>
@@ -69,7 +69,7 @@ public class CreateSampleResponseBody extends TeaModel {
         public String recallProbability;
 
         /**
-         * <p>Risk density</p>
+         * <p>The risk density.</p>
          * 
          * <strong>example:</strong>
          * <p>1.5%</p>
@@ -78,7 +78,7 @@ public class CreateSampleResponseBody extends TeaModel {
         public String riskDensity;
 
         /**
-         * <p>Number of samples</p>
+         * <p>The number of data samples.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -87,7 +87,7 @@ public class CreateSampleResponseBody extends TeaModel {
         public Integer sampleCount;
 
         /**
-         * <p>Number of successful samples</p>
+         * <p>The number of successful data samples.</p>
          * 
          * <strong>example:</strong>
          * <p>99</p>

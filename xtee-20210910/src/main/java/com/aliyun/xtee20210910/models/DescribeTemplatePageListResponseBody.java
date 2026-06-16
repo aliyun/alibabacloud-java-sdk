@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeTemplatePageListResponseBody extends TeaModel {
     /**
-     * <p>Current page number.</p>
+     * <p>The current page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -14,7 +14,7 @@ public class DescribeTemplatePageListResponseBody extends TeaModel {
     public Integer currentPage;
 
     /**
-     * <p>Number of items per page, default value is 10</p>
+     * <p>The number of entries per page. Default value: 10.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -23,7 +23,7 @@ public class DescribeTemplatePageListResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>Request ID</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>AE7E6105-7DEB-5125-9B24-DCBC139F6CD2</p>
@@ -32,13 +32,13 @@ public class DescribeTemplatePageListResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Returned object</p>
+     * <p>The returned object.</p>
      */
     @NameInMap("resultObject")
     public java.util.List<DescribeTemplatePageListResponseBodyResultObject> resultObject;
 
     /**
-     * <p>Total number of items</p>
+     * <p>The total number of entries.</p>
      * 
      * <strong>example:</strong>
      * <p>6</p>
@@ -47,7 +47,7 @@ public class DescribeTemplatePageListResponseBody extends TeaModel {
     public Integer totalItem;
 
     /**
-     * <p>Total number of pages</p>
+     * <p>The total number of pages.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -110,7 +110,7 @@ public class DescribeTemplatePageListResponseBody extends TeaModel {
 
     public static class DescribeTemplatePageListResponseBodyResultObject extends TeaModel {
         /**
-         * <p>Description information.</p>
+         * <p>The description.</p>
          * 
          * <strong>example:</strong>
          * <p>描述</p>
@@ -119,7 +119,7 @@ public class DescribeTemplatePageListResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>Event code</p>
+         * <p>The event code.</p>
          * 
          * <strong>example:</strong>
          * <p>de_aszbjb7236</p>
@@ -128,7 +128,7 @@ public class DescribeTemplatePageListResponseBody extends TeaModel {
         public String eventCode;
 
         /**
-         * <p>Event name.</p>
+         * <p>The event name.</p>
          * 
          * <strong>example:</strong>
          * <p>注册风险</p>
@@ -137,7 +137,7 @@ public class DescribeTemplatePageListResponseBody extends TeaModel {
         public String eventName;
 
         /**
-         * <p>Creation time.</p>
+         * <p>The creation time.</p>
          * 
          * <strong>example:</strong>
          * <p>1621578648000</p>
@@ -146,7 +146,7 @@ public class DescribeTemplatePageListResponseBody extends TeaModel {
         public Long gmtCreate;
 
         /**
-         * <p>Modification time.</p>
+         * <p>The modification time.</p>
          * 
          * <strong>example:</strong>
          * <p>1565701886000</p>
@@ -155,7 +155,7 @@ public class DescribeTemplatePageListResponseBody extends TeaModel {
         public Long gmtModified;
 
         /**
-         * <p>Template ID.</p>
+         * <p>The template ID.</p>
          * 
          * <strong>example:</strong>
          * <p>497</p>
@@ -164,7 +164,7 @@ public class DescribeTemplatePageListResponseBody extends TeaModel {
         public Long id;
 
         /**
-         * <p>Number of policies</p>
+         * <p>The number of policies.</p>
          * 
          * <strong>example:</strong>
          * <p>3</p>
@@ -173,7 +173,7 @@ public class DescribeTemplatePageListResponseBody extends TeaModel {
         public Integer ruleCount;
 
         /**
-         * <p>Template code.</p>
+         * <p>The template code.</p>
          * 
          * <strong>example:</strong>
          * <p>register</p>
@@ -182,7 +182,7 @@ public class DescribeTemplatePageListResponseBody extends TeaModel {
         public String templateCode;
 
         /**
-         * <p>Template name.</p>
+         * <p>The template name.</p>
          * 
          * <strong>example:</strong>
          * <p>注册事件</p>
@@ -191,7 +191,7 @@ public class DescribeTemplatePageListResponseBody extends TeaModel {
         public String templateName;
 
         /**
-         * <p>Event status</p>
+         * <p>The event status.</p>
          * 
          * <strong>example:</strong>
          * <p>ONLINE</p>
@@ -200,7 +200,7 @@ public class DescribeTemplatePageListResponseBody extends TeaModel {
         public String templateStatus;
 
         /**
-         * <p>Template type</p>
+         * <p>The template type.</p>
          * 
          * <strong>example:</strong>
          * <p>PUB_SERVICE</p>
@@ -209,7 +209,7 @@ public class DescribeTemplatePageListResponseBody extends TeaModel {
         public String templateType;
 
         /**
-         * <p>Number of customer authorizations</p>
+         * <p>The number of authorized customers.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -218,7 +218,7 @@ public class DescribeTemplatePageListResponseBody extends TeaModel {
         public Integer userCount;
 
         /**
-         * <p>Version number.</p>
+         * <p>The version number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>

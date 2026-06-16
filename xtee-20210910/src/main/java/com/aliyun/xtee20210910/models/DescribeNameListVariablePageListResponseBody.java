@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeNameListVariablePageListResponseBody extends TeaModel {
     /**
-     * <p>Current page number.</p>
+     * <p>The current page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -14,7 +14,7 @@ public class DescribeNameListVariablePageListResponseBody extends TeaModel {
     public Integer currentPage;
 
     /**
-     * <p>Page size, default value is 10</p>
+     * <p>The number of entries per page. Default value: 10.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -23,7 +23,7 @@ public class DescribeNameListVariablePageListResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>Request ID</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>AE7E6105-7DEB-5125-9B24-DCBC139F6CD2</p>
@@ -32,13 +32,13 @@ public class DescribeNameListVariablePageListResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Return object</p>
+     * <p>The returned object.</p>
      */
     @NameInMap("resultObject")
     public java.util.List<DescribeNameListVariablePageListResponseBodyResultObject> resultObject;
 
     /**
-     * <p>Total number of items</p>
+     * <p>The total number of entries.</p>
      * 
      * <strong>example:</strong>
      * <p>101</p>
@@ -47,7 +47,7 @@ public class DescribeNameListVariablePageListResponseBody extends TeaModel {
     public Integer totalItem;
 
     /**
-     * <p>Total number of pages</p>
+     * <p>The total number of pages.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -110,7 +110,7 @@ public class DescribeNameListVariablePageListResponseBody extends TeaModel {
 
     public static class DescribeNameListVariablePageListResponseBodyResultObject extends TeaModel {
         /**
-         * <p>Used capacity</p>
+         * <p>The used capacity.</p>
          * 
          * <strong>example:</strong>
          * <p>3</p>
@@ -119,7 +119,7 @@ public class DescribeNameListVariablePageListResponseBody extends TeaModel {
         public Long capacity;
 
         /**
-         * <p>Description information.</p>
+         * <p>The description.</p>
          * 
          * <strong>example:</strong>
          * <p>变量描述</p>
@@ -128,7 +128,7 @@ public class DescribeNameListVariablePageListResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>Creation time.</p>
+         * <p>The creation time.</p>
          * 
          * <strong>example:</strong>
          * <p>1621578648000</p>
@@ -137,7 +137,7 @@ public class DescribeNameListVariablePageListResponseBody extends TeaModel {
         public Long gmtCreate;
 
         /**
-         * <p>Modification time</p>
+         * <p>The modification time.</p>
          * 
          * <strong>example:</strong>
          * <p>1565701886000</p>
@@ -146,7 +146,7 @@ public class DescribeNameListVariablePageListResponseBody extends TeaModel {
         public Long gmtModified;
 
         /**
-         * <p>Name list ID</p>
+         * <p>The named list ID.</p>
          * 
          * <strong>example:</strong>
          * <p>497</p>
@@ -155,7 +155,7 @@ public class DescribeNameListVariablePageListResponseBody extends TeaModel {
         public Long id;
 
         /**
-         * <p>Remaining capacity</p>
+         * <p>The remaining capacity.</p>
          * 
          * <strong>example:</strong>
          * <p>99997</p>
@@ -164,7 +164,7 @@ public class DescribeNameListVariablePageListResponseBody extends TeaModel {
         public Long leftCapacity;
 
         /**
-         * <p>Parameter name.</p>
+         * <p>The parameter name.</p>
          * 
          * <strong>example:</strong>
          * <p>nl_UN8otElLb490</p>
@@ -173,7 +173,7 @@ public class DescribeNameListVariablePageListResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>Name list type</p>
+         * <p>The named list type.</p>
          * 
          * <strong>example:</strong>
          * <p>手机号</p>
@@ -182,7 +182,7 @@ public class DescribeNameListVariablePageListResponseBody extends TeaModel {
         public String nameListType;
 
         /**
-         * <p>Associated event eventCode</p>
+         * <p>The associated event code.</p>
          * 
          * <strong>example:</strong>
          * <p>-1</p>
@@ -191,7 +191,7 @@ public class DescribeNameListVariablePageListResponseBody extends TeaModel {
         public String refObjId;
 
         /**
-         * <p>Association type</p>
+         * <p>The association type.</p>
          * 
          * <strong>example:</strong>
          * <p>EVENT</p>
@@ -200,7 +200,7 @@ public class DescribeNameListVariablePageListResponseBody extends TeaModel {
         public Long refObjType;
 
         /**
-         * <p>Data source</p>
+         * <p>The data source.</p>
          * 
          * <strong>example:</strong>
          * <p>SAF</p>
@@ -209,7 +209,7 @@ public class DescribeNameListVariablePageListResponseBody extends TeaModel {
         public String sourceType;
 
         /**
-         * <p>Title.</p>
+         * <p>The title.</p>
          * 
          * <strong>example:</strong>
          * <p>白名单</p>
@@ -218,7 +218,7 @@ public class DescribeNameListVariablePageListResponseBody extends TeaModel {
         public String title;
 
         /**
-         * <p>Variable type</p>
+         * <p>The variable type.</p>
          * 
          * <strong>example:</strong>
          * <p>NAME_LIST</p>
@@ -227,7 +227,7 @@ public class DescribeNameListVariablePageListResponseBody extends TeaModel {
         public String type;
 
         /**
-         * <p>User UID</p>
+         * <p>The user UID.</p>
          * 
          * <strong>example:</strong>
          * <p>180650758xxxxxxx</p>

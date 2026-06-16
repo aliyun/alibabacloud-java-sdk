@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class DescribeSimulationTaskListRequest extends TeaModel {
     /**
-     * <p>Sets the language type for requests and received messages, with a default value of <strong>zh</strong>. Values:</p>
+     * <p>The language of the request and response. Default value: <strong>zh</strong>. Valid values:</p>
      * <ul>
      * <li><strong>zh</strong>: Chinese</li>
-     * <li><strong>en</strong>: English</li>
+     * <li><strong>en</strong>: English.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,7 +18,7 @@ public class DescribeSimulationTaskListRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>Current page number.</p>
+     * <p>The current page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -27,7 +27,7 @@ public class DescribeSimulationTaskListRequest extends TeaModel {
     public String currentPage;
 
     /**
-     * <p>Primary key ID</p>
+     * <p>The primary key ID.</p>
      * 
      * <strong>example:</strong>
      * <p>3144</p>
@@ -36,7 +36,7 @@ public class DescribeSimulationTaskListRequest extends TeaModel {
     public String id;
 
     /**
-     * <p>Name</p>
+     * <p>The name.</p>
      * 
      * <strong>example:</strong>
      * <p>SIMULATION</p>
@@ -45,7 +45,7 @@ public class DescribeSimulationTaskListRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>Page size, with a default value of 10</p>
+     * <p>The number of entries per page. Default value: 10.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -54,7 +54,7 @@ public class DescribeSimulationTaskListRequest extends TeaModel {
     public String pageSize;
 
     /**
-     * <p>Region code</p>
+     * <p>The region code.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -63,7 +63,7 @@ public class DescribeSimulationTaskListRequest extends TeaModel {
     public String regId;
 
     /**
-     * <p>Title.</p>
+     * <p>The title.</p>
      * 
      * <strong>example:</strong>
      * <p>仿真任务</p>

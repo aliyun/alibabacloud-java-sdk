@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class UpdateAuthRuleRequest extends TeaModel {
     /**
-     * <p>Sets the language type for requests and received messages, with a default value of <strong>zh</strong>. Values:</p>
+     * <p>The language type for the request and response messages. Default value: <strong>zh</strong>. Valid values:</p>
      * <ul>
-     * <li><strong>zh</strong>: Chinese</li>
-     * <li><strong>en</strong>: English</li>
+     * <li><strong>zh</strong>: Chinese.</li>
+     * <li><strong>en</strong>: English.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,7 +18,7 @@ public class UpdateAuthRuleRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>Policy primary key ID</p>
+     * <p>The primary key ID of the policy.</p>
      * 
      * <strong>example:</strong>
      * <p>7088</p>
@@ -27,7 +27,7 @@ public class UpdateAuthRuleRequest extends TeaModel {
     public Long consoleRuleId;
 
     /**
-     * <p>Event code</p>
+     * <p>The event code.</p>
      * 
      * <strong>example:</strong>
      * <p>de_afghcf6411</p>
@@ -36,7 +36,7 @@ public class UpdateAuthRuleRequest extends TeaModel {
     public String eventCode;
 
     /**
-     * <p>Region code</p>
+     * <p>The region code.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -46,7 +46,7 @@ public class UpdateAuthRuleRequest extends TeaModel {
     public String regId;
 
     /**
-     * <p>Policy output action</p>
+     * <p>The output action of the policy.</p>
      * 
      * <strong>example:</strong>
      * <p>[{\&quot;inputs\&quot;:[\&quot;auto_accselist\&quot;],\&quot;name\&quot;:\&quot;<strong>addDeTags</strong>\&quot;,\&quot;actionType\&quot;:\&quot;TAG\&quot;,\&quot;outputType\&quot;:\&quot;const\&quot;}]</p>
@@ -55,7 +55,7 @@ public class UpdateAuthRuleRequest extends TeaModel {
     public String ruleActions;
 
     /**
-     * <p>Expression</p>
+     * <p>The expression.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -65,7 +65,7 @@ public class UpdateAuthRuleRequest extends TeaModel {
     public String ruleExpressions;
 
     /**
-     * <p>Policy ID</p>
+     * <p>The policy ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -75,7 +75,7 @@ public class UpdateAuthRuleRequest extends TeaModel {
     public String ruleId;
 
     /**
-     * <p>Policy version primary key ID</p>
+     * <p>The primary key ID of the policy version.</p>
      * 
      * <strong>example:</strong>
      * <p>5190</p>

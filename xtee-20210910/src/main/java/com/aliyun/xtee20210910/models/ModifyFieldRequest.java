@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class ModifyFieldRequest extends TeaModel {
     /**
-     * <p>Sets the language type for requests and received messages, default value is <strong>zh</strong>. Values:</p>
+     * <p>The language of the request and response. Default value: <strong>zh</strong>. Valid values:</p>
      * <ul>
      * <li><strong>zh</strong>: Chinese</li>
-     * <li><strong>en</strong>: English</li>
+     * <li><strong>en</strong>: English.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,7 +18,7 @@ public class ModifyFieldRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>Field classification</p>
+     * <p>The field category.</p>
      * 
      * <strong>example:</strong>
      * <p>REQUEST_PARAM</p>
@@ -27,7 +27,7 @@ public class ModifyFieldRequest extends TeaModel {
     public String classify;
 
     /**
-     * <p>Description information.</p>
+     * <p>The description.</p>
      * 
      * <strong>example:</strong>
      * <p>描述</p>
@@ -36,7 +36,7 @@ public class ModifyFieldRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>Enum type</p>
+     * <p>The enumeration type.</p>
      * 
      * <strong>example:</strong>
      * <p>[{\&quot;name\&quot;:\&quot;ENABLE\&quot;,\&quot;value\&quot;:\&quot;禁用\&quot;}]</p>
@@ -45,7 +45,7 @@ public class ModifyFieldRequest extends TeaModel {
     public String enumData;
 
     /**
-     * <p>Variable ID</p>
+     * <p>The variable ID.</p>
      * 
      * <strong>example:</strong>
      * <p>376773</p>
@@ -54,7 +54,7 @@ public class ModifyFieldRequest extends TeaModel {
     public Long id;
 
     /**
-     * <p>Variable name</p>
+     * <p>The variable name.</p>
      * 
      * <strong>example:</strong>
      * <p>age</p>
@@ -63,7 +63,7 @@ public class ModifyFieldRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>Region code</p>
+     * <p>The region code.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -73,7 +73,7 @@ public class ModifyFieldRequest extends TeaModel {
     public String regId;
 
     /**
-     * <p>Title.</p>
+     * <p>The title.</p>
      * 
      * <strong>example:</strong>
      * <p>年龄</p>

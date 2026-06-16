@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeAvgExecuteCostReportResponseBody extends TeaModel {
     /**
-     * <p>Status code.</p>
+     * <p>The status code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,7 +14,7 @@ public class DescribeAvgExecuteCostReportResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>HTTP status code</p>
+     * <p>The HTTP status code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -23,7 +23,7 @@ public class DescribeAvgExecuteCostReportResponseBody extends TeaModel {
     public String httpStatusCode;
 
     /**
-     * <p>Error message.</p>
+     * <p>The error message.</p>
      * 
      * <strong>example:</strong>
      * <p>The input parameter data is not valid. order_storage_company_num component not found</p>
@@ -32,7 +32,7 @@ public class DescribeAvgExecuteCostReportResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Request ID.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>AE7E6105-7DEB-5125-9B24-DCBC139F6CD2</p>
@@ -41,13 +41,13 @@ public class DescribeAvgExecuteCostReportResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Return object</p>
+     * <p>The response object.</p>
      */
     @NameInMap("resultObject")
     public java.util.List<DescribeAvgExecuteCostReportResponseBodyResultObject> resultObject;
 
     /**
-     * <p>Whether the call was successful</p>
+     * <p>Indicates whether the call was successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -110,7 +110,7 @@ public class DescribeAvgExecuteCostReportResponseBody extends TeaModel {
 
     public static class DescribeAvgExecuteCostReportResponseBodyResultObject extends TeaModel {
         /**
-         * <p>Comparison with yesterday\&quot;s average execution time</p>
+         * <p>The day-over-day ratio compared to yesterday\&quot;s average execution duration.</p>
          * 
          * <strong>example:</strong>
          * <p>0.2</p>
@@ -119,7 +119,7 @@ public class DescribeAvgExecuteCostReportResponseBody extends TeaModel {
         public String ratio;
 
         /**
-         * <p>Today\&quot;s average execution time</p>
+         * <p>The average execution duration for today.</p>
          * 
          * <strong>example:</strong>
          * <p>0.1 毫秒</p>

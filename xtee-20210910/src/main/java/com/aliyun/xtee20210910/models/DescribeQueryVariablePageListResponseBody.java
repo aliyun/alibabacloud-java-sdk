@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeQueryVariablePageListResponseBody extends TeaModel {
     /**
-     * <p>Request ID.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>A32FE941-35F2-5378-B37C-4B8FDB16F094</p>
@@ -14,7 +14,7 @@ public class DescribeQueryVariablePageListResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Pagination parameter, current page.</p>
+     * <p>The current page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -23,7 +23,7 @@ public class DescribeQueryVariablePageListResponseBody extends TeaModel {
     public Long currentPage;
 
     /**
-     * <p>Page size, default value is 10</p>
+     * <p>The number of entries per page. Default value: 10.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -32,13 +32,13 @@ public class DescribeQueryVariablePageListResponseBody extends TeaModel {
     public Long pageSize;
 
     /**
-     * <p>Return object</p>
+     * <p>The returned object.</p>
      */
     @NameInMap("resultObject")
     public java.util.List<DescribeQueryVariablePageListResponseBodyResultObject> resultObject;
 
     /**
-     * <p>Total items</p>
+     * <p>The total number of entries.</p>
      * 
      * <strong>example:</strong>
      * <p>6</p>
@@ -47,7 +47,7 @@ public class DescribeQueryVariablePageListResponseBody extends TeaModel {
     public Long totalItem;
 
     /**
-     * <p>Total pages</p>
+     * <p>The total number of pages.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -110,7 +110,7 @@ public class DescribeQueryVariablePageListResponseBody extends TeaModel {
 
     public static class DescribeQueryVariablePageListResponseBodyResultObject extends TeaModel {
         /**
-         * <p>Data source code.</p>
+         * <p>The data source code.</p>
          * 
          * <strong>example:</strong>
          * <p>ds_vcaoii1697</p>
@@ -119,7 +119,7 @@ public class DescribeQueryVariablePageListResponseBody extends TeaModel {
         public Long dataSourceCode;
 
         /**
-         * <p>Data source name.</p>
+         * <p>The data source name.</p>
          * 
          * <strong>example:</strong>
          * <p>姓名数据源</p>
@@ -128,7 +128,7 @@ public class DescribeQueryVariablePageListResponseBody extends TeaModel {
         public String dataSourceName;
 
         /**
-         * <p>Description information.</p>
+         * <p>The description.</p>
          * 
          * <strong>example:</strong>
          * <p>变量描述</p>
@@ -137,7 +137,7 @@ public class DescribeQueryVariablePageListResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>Event name.</p>
+         * <p>The event name.</p>
          * 
          * <strong>example:</strong>
          * <p>注册风险</p>
@@ -146,7 +146,7 @@ public class DescribeQueryVariablePageListResponseBody extends TeaModel {
         public String eventName;
 
         /**
-         * <p>Return value type</p>
+         * <p>The return value type.</p>
          * 
          * <strong>example:</strong>
          * <p>STRING</p>
@@ -155,7 +155,7 @@ public class DescribeQueryVariablePageListResponseBody extends TeaModel {
         public String fieldType;
 
         /**
-         * <p>Creation time.</p>
+         * <p>The creation time.</p>
          * 
          * <strong>example:</strong>
          * <p>1621578648000</p>
@@ -164,7 +164,7 @@ public class DescribeQueryVariablePageListResponseBody extends TeaModel {
         public Long gmtCreate;
 
         /**
-         * <p>Modification time</p>
+         * <p>The modification time.</p>
          * 
          * <strong>example:</strong>
          * <p>1565701886000</p>
@@ -173,7 +173,7 @@ public class DescribeQueryVariablePageListResponseBody extends TeaModel {
         public Long gmtModified;
 
         /**
-         * <p>Query variable primary key ID</p>
+         * <p>The primary key ID of the custom query variable.</p>
          * 
          * <strong>example:</strong>
          * <p>497</p>
@@ -182,7 +182,7 @@ public class DescribeQueryVariablePageListResponseBody extends TeaModel {
         public Long id;
 
         /**
-         * <p>Query variable name</p>
+         * <p>The name of the custom query variable.</p>
          * 
          * <strong>example:</strong>
          * <p>查询变量名称</p>
@@ -191,7 +191,7 @@ public class DescribeQueryVariablePageListResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>Status.</p>
+         * <p>The status.</p>
          * 
          * <strong>example:</strong>
          * <p>ENABLE</p>
@@ -200,7 +200,7 @@ public class DescribeQueryVariablePageListResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>Total count</p>
+         * <p>The total number of entries.</p>
          * 
          * <strong>example:</strong>
          * <p>24</p>
@@ -209,7 +209,7 @@ public class DescribeQueryVariablePageListResponseBody extends TeaModel {
         public Long total;
 
         /**
-         * <p>Version number.</p>
+         * <p>The version number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class FileUploadRequest extends TeaModel {
     /**
-     * <p>File name.</p>
+     * <p>The file name.</p>
      * 
      * <strong>example:</strong>
      * <p>P4911_2707.csv</p>
@@ -14,7 +14,7 @@ public class FileUploadRequest extends TeaModel {
     public String fileName;
 
     /**
-     * <p>File URL</p>
+     * <p>The file URL.</p>
      * 
      * <strong>example:</strong>
      * <p><a href="https://res-v1.cupl-fdfs.com/direct/79886bdc-9855-4ff4-aa34-eb5b21cd43a7">https://res-v1.cupl-fdfs.com/direct/79886bdc-9855-4ff4-aa34-eb5b21cd43a7</a></p>
@@ -23,10 +23,10 @@ public class FileUploadRequest extends TeaModel {
     public String fileUrl;
 
     /**
-     * <p>Sets the language type for requests and received messages, default value is <strong>zh</strong>. Values:</p>
+     * <p>The language of the request and response. Default value: <strong>zh</strong>. Valid values:</p>
      * <ul>
      * <li><strong>zh</strong>: Chinese</li>
-     * <li><strong>en</strong>: English</li>
+     * <li><strong>en</strong>: English.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -36,7 +36,7 @@ public class FileUploadRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>Scenario.</p>
+     * <p>The scenario.</p>
      * 
      * <strong>example:</strong>
      * <p>FNNCIEA</p>

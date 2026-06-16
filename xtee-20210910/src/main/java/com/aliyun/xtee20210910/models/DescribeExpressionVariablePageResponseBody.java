@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeExpressionVariablePageResponseBody extends TeaModel {
     /**
-     * <p>Request ID.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>A32FE941-35F2-5378-B37C-4B8FDB16F094</p>
@@ -14,7 +14,7 @@ public class DescribeExpressionVariablePageResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Current page number.</p>
+     * <p>The current page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -23,7 +23,7 @@ public class DescribeExpressionVariablePageResponseBody extends TeaModel {
     public Integer currentPage;
 
     /**
-     * <p>Page size, with a default value of 10.</p>
+     * <p>The number of entries per page. Default value: 10.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -32,13 +32,13 @@ public class DescribeExpressionVariablePageResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>Returned object.</p>
+     * <p>The returned object.</p>
      */
     @NameInMap("resultObject")
     public java.util.List<DescribeExpressionVariablePageResponseBodyResultObject> resultObject;
 
     /**
-     * <p>Total number of items.</p>
+     * <p>The total number of entries.</p>
      * 
      * <strong>example:</strong>
      * <p>31</p>
@@ -47,7 +47,7 @@ public class DescribeExpressionVariablePageResponseBody extends TeaModel {
     public Integer totalItem;
 
     /**
-     * <p>Total number of pages.</p>
+     * <p>The total number of pages.</p>
      * 
      * <strong>example:</strong>
      * <p>9</p>
@@ -110,7 +110,7 @@ public class DescribeExpressionVariablePageResponseBody extends TeaModel {
 
     public static class DescribeExpressionVariablePageResponseBodyResultObject extends TeaModel {
         /**
-         * <p>Description information.</p>
+         * <p>The description.</p>
          * 
          * <strong>example:</strong>
          * <p>变量描述</p>
@@ -119,7 +119,7 @@ public class DescribeExpressionVariablePageResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>Event name.</p>
+         * <p>The event name.</p>
          * 
          * <strong>example:</strong>
          * <p>注册风险</p>
@@ -128,7 +128,7 @@ public class DescribeExpressionVariablePageResponseBody extends TeaModel {
         public String eventName;
 
         /**
-         * <p>Modification time.</p>
+         * <p>The modification time.</p>
          * 
          * <strong>example:</strong>
          * <p>1565701886000</p>
@@ -137,7 +137,7 @@ public class DescribeExpressionVariablePageResponseBody extends TeaModel {
         public Long gmtModified;
 
         /**
-         * <p>Primary key of custom variable.</p>
+         * <p>The primary key of the custom variable.</p>
          * 
          * <strong>example:</strong>
          * <p>2793</p>
@@ -146,7 +146,7 @@ public class DescribeExpressionVariablePageResponseBody extends TeaModel {
         public Long id;
 
         /**
-         * <p>Query variable name.</p>
+         * <p>The variable name.</p>
          * 
          * <strong>example:</strong>
          * <p>ex_OERlw0Zqfb23</p>
@@ -155,7 +155,7 @@ public class DescribeExpressionVariablePageResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>Variable return type.</p>
+         * <p>The variable return type.</p>
          * 
          * <strong>example:</strong>
          * <p>DOUBLE</p>
@@ -164,13 +164,13 @@ public class DescribeExpressionVariablePageResponseBody extends TeaModel {
         public String outputs;
 
         /**
-         * <p>Associated Strategies.</p>
+         * <p>The rule ID of the associated policy.</p>
          */
         @NameInMap("ruleList")
         public java.util.List<String> ruleList;
 
         /**
-         * <p>Status.</p>
+         * <p>The status.</p>
          * 
          * <strong>example:</strong>
          * <p>ENABLE</p>
@@ -179,7 +179,7 @@ public class DescribeExpressionVariablePageResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>Title.</p>
+         * <p>The title.</p>
          * 
          * <strong>example:</strong>
          * <p>获取手机号前7位自定义变量</p>
@@ -188,7 +188,7 @@ public class DescribeExpressionVariablePageResponseBody extends TeaModel {
         public String title;
 
         /**
-         * <p>Version information.</p>
+         * <p>The version information.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>

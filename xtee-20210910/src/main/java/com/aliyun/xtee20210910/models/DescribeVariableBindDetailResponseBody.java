@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeVariableBindDetailResponseBody extends TeaModel {
     /**
-     * <p>Request ID.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>A32FE941-35F2-5378-B37C-4B8FDB16F094</p>
@@ -14,7 +14,7 @@ public class DescribeVariableBindDetailResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Return object</p>
+     * <p>The returned object.</p>
      */
     @NameInMap("resultObject")
     public DescribeVariableBindDetailResponseBodyResultObject resultObject;
@@ -42,7 +42,7 @@ public class DescribeVariableBindDetailResponseBody extends TeaModel {
 
     public static class DescribeVariableBindDetailResponseBodyResultObjectParams extends TeaModel {
         /**
-         * <p>Event field name</p>
+         * <p>The name of the event field.</p>
          * 
          * <strong>example:</strong>
          * <p>ip</p>
@@ -51,7 +51,7 @@ public class DescribeVariableBindDetailResponseBody extends TeaModel {
         public String eventFieldName;
 
         /**
-         * <p>Whether it is required, default is false</p>
+         * <p>Indicates whether this parameter is required. Default value: false.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -60,7 +60,7 @@ public class DescribeVariableBindDetailResponseBody extends TeaModel {
         public Boolean required;
 
         /**
-         * <p>Bound variable name</p>
+         * <p>The name of the bound variable.</p>
          * 
          * <strong>example:</strong>
          * <p>ip</p>
@@ -101,7 +101,7 @@ public class DescribeVariableBindDetailResponseBody extends TeaModel {
 
     public static class DescribeVariableBindDetailResponseBodyResultObjectRelationRules extends TeaModel {
         /**
-         * <p>Policy rule ID</p>
+         * <p>The policy ruleId.</p>
          * 
          * <strong>example:</strong>
          * <p>104566</p>
@@ -110,7 +110,7 @@ public class DescribeVariableBindDetailResponseBody extends TeaModel {
         public String key;
 
         /**
-         * <p>Policy name</p>
+         * <p>The policy name.</p>
          * 
          * <strong>example:</strong>
          * <p>营销风险识别</p>
@@ -143,7 +143,7 @@ public class DescribeVariableBindDetailResponseBody extends TeaModel {
 
     public static class DescribeVariableBindDetailResponseBodyResultObject extends TeaModel {
         /**
-         * <p>Whether modification is allowed, default is false</p>
+         * <p>Indicates whether modification is allowed. Default value: false.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -152,7 +152,7 @@ public class DescribeVariableBindDetailResponseBody extends TeaModel {
         public Boolean allowModify;
 
         /**
-         * <p>Variable definition ID</p>
+         * <p>The variable definition ID.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -161,7 +161,7 @@ public class DescribeVariableBindDetailResponseBody extends TeaModel {
         public Long defineId;
 
         /**
-         * <p>Variable definition title</p>
+         * <p>The variable definition title.</p>
          * 
          * <strong>example:</strong>
          * <p>IP所在地_城市Code</p>
@@ -170,7 +170,7 @@ public class DescribeVariableBindDetailResponseBody extends TeaModel {
         public String defineTitle;
 
         /**
-         * <p>Variable description information</p>
+         * <p>The variable description.</p>
          * 
          * <strong>example:</strong>
          * <p>描述</p>
@@ -179,7 +179,7 @@ public class DescribeVariableBindDetailResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>Event code</p>
+         * <p>The event code.</p>
          * 
          * <strong>example:</strong>
          * <p>de_aszbjb7236</p>
@@ -188,7 +188,7 @@ public class DescribeVariableBindDetailResponseBody extends TeaModel {
         public String eventCode;
 
         /**
-         * <p>Variable ID.</p>
+         * <p>The variable ID.</p>
          * 
          * <strong>example:</strong>
          * <p>497</p>
@@ -197,19 +197,19 @@ public class DescribeVariableBindDetailResponseBody extends TeaModel {
         public Long id;
 
         /**
-         * <p>Bound parameters.</p>
+         * <p>The bound parameters.</p>
          */
         @NameInMap("params")
         public java.util.List<DescribeVariableBindDetailResponseBodyResultObjectParams> params;
 
         /**
-         * <p>List of associated policies</p>
+         * <p>The list of associated policies.</p>
          */
         @NameInMap("relationRules")
         public java.util.List<DescribeVariableBindDetailResponseBodyResultObjectRelationRules> relationRules;
 
         /**
-         * <p>Title.</p>
+         * <p>The title.</p>
          * 
          * <strong>example:</strong>
          * <p>变量title</p>

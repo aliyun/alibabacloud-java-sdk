@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeSafTagListResponseBody extends TeaModel {
     /**
-     * <p>Request ID.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>A32FE941-35F2-5378-B37C-4B8FDB16F094</p>
@@ -14,7 +14,7 @@ public class DescribeSafTagListResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Current page number.</p>
+     * <p>The current page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -23,7 +23,7 @@ public class DescribeSafTagListResponseBody extends TeaModel {
     public Integer currentPage;
 
     /**
-     * <p>Page size, default value is 10.</p>
+     * <p>The number of entries per page. Default value: 10.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -32,13 +32,13 @@ public class DescribeSafTagListResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>Returned object.</p>
+     * <p>The returned object.</p>
      */
     @NameInMap("resultObject")
     public java.util.List<DescribeSafTagListResponseBodyResultObject> resultObject;
 
     /**
-     * <p>Total number of items.</p>
+     * <p>The total number of entries.</p>
      * 
      * <strong>example:</strong>
      * <p>6</p>
@@ -47,7 +47,7 @@ public class DescribeSafTagListResponseBody extends TeaModel {
     public Integer totalItem;
 
     /**
-     * <p>Total number of pages.</p>
+     * <p>The total number of pages.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -110,7 +110,7 @@ public class DescribeSafTagListResponseBody extends TeaModel {
 
     public static class DescribeSafTagListResponseBodyResultObject extends TeaModel {
         /**
-         * <p>Tag description.</p>
+         * <p>The label description.</p>
          * 
          * <strong>example:</strong>
          * <p>依赖IP画像模型识别输出风险高、中高、中的判定\n数据来源主要基于IP的网络属性数据和对黑产行为轨迹的情报监控数据，涵盖可识别检测IP网络属性特征、恶意属性等特征\n而模型评分的高中低主要是根据当前IP号段命中风险行为的恶意程度和种类来判定的\n备注：以下rn0311、rn0312、rn0313、rn0314、rn0315属于IP画像模型针对当前请求IP识别出的风险类别</p>
@@ -119,7 +119,7 @@ public class DescribeSafTagListResponseBody extends TeaModel {
         public String tagDesc;
 
         /**
-         * <p>Tag meaning.</p>
+         * <p>The label meaning.</p>
          * 
          * <strong>example:</strong>
          * <p>IP风险评分高</p>
@@ -128,7 +128,7 @@ public class DescribeSafTagListResponseBody extends TeaModel {
         public String tagMean;
 
         /**
-         * <p>Tag name.</p>
+         * <p>The label name.</p>
          * 
          * <strong>example:</strong>
          * <p>rn0301</p>
@@ -137,7 +137,7 @@ public class DescribeSafTagListResponseBody extends TeaModel {
         public String tagName;
 
         /**
-         * <p>Tag identifier.</p>
+         * <p>The label identifier.</p>
          * 
          * <strong>example:</strong>
          * <p>rn0301</p>
@@ -146,7 +146,7 @@ public class DescribeSafTagListResponseBody extends TeaModel {
         public String tagState;
 
         /**
-         * <p>Tag type.</p>
+         * <p>The label type.</p>
          * 
          * <strong>example:</strong>
          * <p>IP风险类</p>
@@ -155,7 +155,7 @@ public class DescribeSafTagListResponseBody extends TeaModel {
         public String tagType;
 
         /**
-         * <p>Unique identifier of the tag key.</p>
+         * <p>The unique identifier of the label key.</p>
          * 
          * <strong>example:</strong>
          * <p>rn0301</p>
@@ -164,7 +164,7 @@ public class DescribeSafTagListResponseBody extends TeaModel {
         public String tagUid;
 
         /**
-         * <p>Update time.</p>
+         * <p>The update time.</p>
          * 
          * <strong>example:</strong>
          * <p>1684744034000</p>

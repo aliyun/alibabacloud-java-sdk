@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeAllDataSourceResponseBody extends TeaModel {
     /**
-     * <p>Request ID.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>A32FE941-35F2-5378-B37C-4B8FDB16F094</p>
@@ -14,7 +14,7 @@ public class DescribeAllDataSourceResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Return object</p>
+     * <p>The returned object.</p>
      */
     @NameInMap("resultObject")
     public java.util.List<DescribeAllDataSourceResponseBodyResultObject> resultObject;
@@ -42,7 +42,7 @@ public class DescribeAllDataSourceResponseBody extends TeaModel {
 
     public static class DescribeAllDataSourceResponseBodyResultObject extends TeaModel {
         /**
-         * <p>Event code</p>
+         * <p>The event code.</p>
          * 
          * <strong>example:</strong>
          * <p>de_aszbjb7236</p>
@@ -51,7 +51,7 @@ public class DescribeAllDataSourceResponseBody extends TeaModel {
         public String eventCode;
 
         /**
-         * <p>Event name.</p>
+         * <p>The event name.</p>
          * 
          * <strong>example:</strong>
          * <p>注册风险</p>
@@ -60,7 +60,7 @@ public class DescribeAllDataSourceResponseBody extends TeaModel {
         public String eventName;
 
         /**
-         * <p>Policy primary key ID</p>
+         * <p>The primary key ID of the policy.</p>
          * 
          * <strong>example:</strong>
          * <p>497</p>

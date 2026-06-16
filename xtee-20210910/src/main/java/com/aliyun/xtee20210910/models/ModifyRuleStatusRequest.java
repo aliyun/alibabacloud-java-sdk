@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class ModifyRuleStatusRequest extends TeaModel {
     /**
-     * <p>Set the language type for requests and received messages, default value is <strong>zh</strong>. Values:</p>
+     * <p>The language of the request and response. Default value: <strong>zh</strong>. Valid values:</p>
      * <ul>
      * <li><strong>zh</strong>: Chinese</li>
-     * <li><strong>en</strong>: English</li>
+     * <li><strong>en</strong>: English.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,7 +18,7 @@ public class ModifyRuleStatusRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>UID of the applicant.</p>
+     * <p>The UID of the user who initiated the approval.</p>
      * 
      * <strong>example:</strong>
      * <p>1519714049632764</p>
@@ -27,7 +27,7 @@ public class ModifyRuleStatusRequest extends TeaModel {
     public String applyUserId;
 
     /**
-     * <p>Name of the applicant.</p>
+     * <p>The name of the user who initiated the approval.</p>
      * 
      * <strong>example:</strong>
      * <p>root</p>
@@ -36,7 +36,7 @@ public class ModifyRuleStatusRequest extends TeaModel {
     public String applyUserName;
 
     /**
-     * <p>Approval remarks.</p>
+     * <p>The remarks for the approval request.</p>
      * 
      * <strong>example:</strong>
      * <p>申请发布上线</p>
@@ -45,7 +45,7 @@ public class ModifyRuleStatusRequest extends TeaModel {
     public String auditRemark;
 
     /**
-     * <p>UID of the auditor.</p>
+     * <p>The UID of the approver.</p>
      * 
      * <strong>example:</strong>
      * <p>1519714049632764</p>
@@ -54,7 +54,7 @@ public class ModifyRuleStatusRequest extends TeaModel {
     public String auditUserId;
 
     /**
-     * <p>Name of the auditor.</p>
+     * <p>The name of the approver.</p>
      * 
      * <strong>example:</strong>
      * <p>root</p>
@@ -63,7 +63,7 @@ public class ModifyRuleStatusRequest extends TeaModel {
     public String auditUserName;
 
     /**
-     * <p>Primary key ID of the policy.</p>
+     * <p>The primary key ID of the policy.</p>
      * 
      * <strong>example:</strong>
      * <p>6843</p>
@@ -72,7 +72,7 @@ public class ModifyRuleStatusRequest extends TeaModel {
     public Long consoleRuleId;
 
     /**
-     * <p>Event type.</p>
+     * <p>The event type.</p>
      * 
      * <strong>example:</strong>
      * <p>MAIN</p>
@@ -81,7 +81,7 @@ public class ModifyRuleStatusRequest extends TeaModel {
     public String eventType;
 
     /**
-     * <p>Region code.</p>
+     * <p>The region code.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -90,7 +90,7 @@ public class ModifyRuleStatusRequest extends TeaModel {
     public String regId;
 
     /**
-     * <p>Audit status.</p>
+     * <p>The approval status.</p>
      * 
      * <strong>example:</strong>
      * <p>DRAFT_TO_RUNNING</p>
@@ -99,7 +99,7 @@ public class ModifyRuleStatusRequest extends TeaModel {
     public String ruleAuditType;
 
     /**
-     * <p>Policy ID.</p>
+     * <p>The policy ID.</p>
      * 
      * <strong>example:</strong>
      * <p>101544</p>
@@ -108,7 +108,7 @@ public class ModifyRuleStatusRequest extends TeaModel {
     public String ruleId;
 
     /**
-     * <p>Primary key ID of the policy version.</p>
+     * <p>The primary key ID of the policy version.</p>
      * 
      * <strong>example:</strong>
      * <p>11519</p>

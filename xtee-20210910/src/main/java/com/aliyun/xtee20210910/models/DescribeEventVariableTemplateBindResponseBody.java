@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeEventVariableTemplateBindResponseBody extends TeaModel {
     /**
-     * <p>Request ID.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>A32FE941-35F2-5378-B37C-4B8FDB16F094</p>
@@ -14,7 +14,7 @@ public class DescribeEventVariableTemplateBindResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Return object</p>
+     * <p>The response object.</p>
      */
     @NameInMap("resultObject")
     public DescribeEventVariableTemplateBindResponseBodyResultObject resultObject;
@@ -42,7 +42,7 @@ public class DescribeEventVariableTemplateBindResponseBody extends TeaModel {
 
     public static class DescribeEventVariableTemplateBindResponseBodyResultObjectChargeVariables extends TeaModel {
         /**
-         * <p>Variable code</p>
+         * <p>The variable code.</p>
          * 
          * <strong>example:</strong>
          * <p>ip</p>
@@ -51,7 +51,7 @@ public class DescribeEventVariableTemplateBindResponseBody extends TeaModel {
         public String code;
 
         /**
-         * <p>Description of the variable.</p>
+         * <p>The variable description.</p>
          * 
          * <strong>example:</strong>
          * <p>描述</p>
@@ -60,7 +60,7 @@ public class DescribeEventVariableTemplateBindResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>Field type.</p>
+         * <p>The field type.</p>
          * 
          * <strong>example:</strong>
          * <p>STRING</p>
@@ -69,7 +69,7 @@ public class DescribeEventVariableTemplateBindResponseBody extends TeaModel {
         public String fieldType;
 
         /**
-         * <p>Primary key ID</p>
+         * <p>The primary key ID.</p>
          * 
          * <strong>example:</strong>
          * <p>456</p>
@@ -78,7 +78,7 @@ public class DescribeEventVariableTemplateBindResponseBody extends TeaModel {
         public Long id;
 
         /**
-         * <p>Variable name</p>
+         * <p>The variable name.</p>
          * 
          * <strong>example:</strong>
          * <p>ip</p>
@@ -87,7 +87,7 @@ public class DescribeEventVariableTemplateBindResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>Title.</p>
+         * <p>The title.</p>
          * 
          * <strong>example:</strong>
          * <p>ip</p>
@@ -96,7 +96,7 @@ public class DescribeEventVariableTemplateBindResponseBody extends TeaModel {
         public String title;
 
         /**
-         * <p>Variable type.</p>
+         * <p>The variable type.</p>
          * 
          * <strong>example:</strong>
          * <p>NATIVE</p>
@@ -169,7 +169,7 @@ public class DescribeEventVariableTemplateBindResponseBody extends TeaModel {
 
     public static class DescribeEventVariableTemplateBindResponseBodyResultObjectFreeVariables extends TeaModel {
         /**
-         * <p>Variable code</p>
+         * <p>The variable code.</p>
          * 
          * <strong>example:</strong>
          * <p>age</p>
@@ -178,7 +178,7 @@ public class DescribeEventVariableTemplateBindResponseBody extends TeaModel {
         public String code;
 
         /**
-         * <p>Variable description.</p>
+         * <p>The variable description.</p>
          * 
          * <strong>example:</strong>
          * <p>描述</p>
@@ -187,7 +187,7 @@ public class DescribeEventVariableTemplateBindResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>Field type.</p>
+         * <p>The field type.</p>
          * 
          * <strong>example:</strong>
          * <p>STRING</p>
@@ -196,7 +196,7 @@ public class DescribeEventVariableTemplateBindResponseBody extends TeaModel {
         public String fieldType;
 
         /**
-         * <p>Primary key ID</p>
+         * <p>The primary key ID.</p>
          * 
          * <strong>example:</strong>
          * <p>234</p>
@@ -205,7 +205,7 @@ public class DescribeEventVariableTemplateBindResponseBody extends TeaModel {
         public Long id;
 
         /**
-         * <p>Variable name</p>
+         * <p>The variable name.</p>
          * 
          * <strong>example:</strong>
          * <p>age</p>
@@ -214,7 +214,7 @@ public class DescribeEventVariableTemplateBindResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>Title.</p>
+         * <p>The title.</p>
          * 
          * <strong>example:</strong>
          * <p>年龄</p>
@@ -223,7 +223,7 @@ public class DescribeEventVariableTemplateBindResponseBody extends TeaModel {
         public String title;
 
         /**
-         * <p>Variable type.</p>
+         * <p>The variable type.</p>
          * 
          * <strong>example:</strong>
          * <p>NATIVE</p>
@@ -296,19 +296,19 @@ public class DescribeEventVariableTemplateBindResponseBody extends TeaModel {
 
     public static class DescribeEventVariableTemplateBindResponseBodyResultObject extends TeaModel {
         /**
-         * <p>List of chargeable variables</p>
+         * <p>The list of paid variables.</p>
          */
         @NameInMap("chargeVariables")
         public java.util.List<DescribeEventVariableTemplateBindResponseBodyResultObjectChargeVariables> chargeVariables;
 
         /**
-         * <p>List of free variables</p>
+         * <p>The list of free variables.</p>
          */
         @NameInMap("freeVariables")
         public java.util.List<DescribeEventVariableTemplateBindResponseBodyResultObjectFreeVariables> freeVariables;
 
         /**
-         * <p>Template code</p>
+         * <p>The template code.</p>
          * 
          * <strong>example:</strong>
          * <p>register</p>
@@ -317,7 +317,7 @@ public class DescribeEventVariableTemplateBindResponseBody extends TeaModel {
         public String templateCode;
 
         /**
-         * <p>Total count</p>
+         * <p>The total number of entries.</p>
          * 
          * <strong>example:</strong>
          * <p>38</p>

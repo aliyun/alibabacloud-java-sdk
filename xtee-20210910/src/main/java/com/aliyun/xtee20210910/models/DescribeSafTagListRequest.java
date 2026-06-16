@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class DescribeSafTagListRequest extends TeaModel {
     /**
-     * <p>Sets the language type for requests and received messages, default value is <strong>zh</strong>. Values:</p>
+     * <p>The language type for the request and response messages. Default value: <strong>zh</strong>. Valid values:</p>
      * <ul>
-     * <li><strong>zh</strong>: Chinese</li>
-     * <li><strong>en</strong>: English</li>
+     * <li><strong>zh</strong>: Chinese.</li>
+     * <li><strong>en</strong>: English.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,7 +18,7 @@ public class DescribeSafTagListRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>Tag name. Fuzzy search.</p>
+     * <p>The label name. Fuzzy match is supported.</p>
      * 
      * <strong>example:</strong>
      * <p>rn0301</p>
@@ -27,7 +27,7 @@ public class DescribeSafTagListRequest extends TeaModel {
     public String tagName;
 
     /**
-     * <p>API service ID.</p>
+     * <p>The API service ID.</p>
      * 
      * <strong>example:</strong>
      * <p>34</p>
@@ -36,7 +36,7 @@ public class DescribeSafTagListRequest extends TeaModel {
     public String apiId;
 
     /**
-     * <p>Current page number.</p>
+     * <p>The current page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -45,7 +45,7 @@ public class DescribeSafTagListRequest extends TeaModel {
     public String currentPage;
 
     /**
-     * <p>Page size, default value is 10.</p>
+     * <p>The number of entries per page. Default value: 10.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -54,7 +54,7 @@ public class DescribeSafTagListRequest extends TeaModel {
     public String pageSize;
 
     /**
-     * <p>Region code.</p>
+     * <p>The region code.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>

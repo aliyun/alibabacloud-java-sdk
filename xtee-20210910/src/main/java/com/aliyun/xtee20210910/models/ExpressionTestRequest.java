@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class ExpressionTestRequest extends TeaModel {
     /**
-     * <p>Sets the language type for requests and received messages, with a default value of <strong>zh</strong>. Values: </p>
+     * <p>The language of the request and response. Default value: <strong>zh</strong>. Valid values:</p>
      * <ul>
-     * <li><strong>zh</strong>: Chinese</li>
-     * <li><strong>en</strong>: English</li>
+     * <li><strong>zh</strong>: Chinese.</li>
+     * <li><strong>en</strong>: English.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,7 +18,7 @@ public class ExpressionTestRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>Test expression.</p>
+     * <p>The test expression.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -28,7 +28,7 @@ public class ExpressionTestRequest extends TeaModel {
     public String expression;
 
     /**
-     * <p>Calculation expression variable</p>
+     * <p>The calculation expression variable.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -38,7 +38,7 @@ public class ExpressionTestRequest extends TeaModel {
     public String expressionVariable;
 
     /**
-     * <p>Associated variable ID</p>
+     * <p>The associated variable ID.</p>
      * 
      * <strong>example:</strong>
      * <p>[44659]</p>
@@ -47,7 +47,7 @@ public class ExpressionTestRequest extends TeaModel {
     public String expressionVariableIds;
 
     /**
-     * <p>Variable ID</p>
+     * <p>The variable ID.</p>
      * 
      * <strong>example:</strong>
      * <p>3144</p>
@@ -56,7 +56,7 @@ public class ExpressionTestRequest extends TeaModel {
     public Long id;
 
     /**
-     * <p>Region code</p>
+     * <p>The region code.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -66,7 +66,7 @@ public class ExpressionTestRequest extends TeaModel {
     public String regId;
 
     /**
-     * <p>Scene</p>
+     * <p>The scenario.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

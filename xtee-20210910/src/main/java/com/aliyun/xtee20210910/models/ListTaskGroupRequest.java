@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListTaskGroupRequest extends TeaModel {
     /**
+     * <p>Current page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -12,6 +14,8 @@ public class ListTaskGroupRequest extends TeaModel {
     public Integer currentPage;
 
     /**
+     * <p>The language of the error message returned by the API. Valid values: zh: Chinese; en: English. The default value is en.</p>
+     * 
      * <strong>example:</strong>
      * <p>zh</p>
      */
@@ -19,6 +23,8 @@ public class ListTaskGroupRequest extends TeaModel {
     public String lang;
 
     /**
+     * <p>Page size.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -26,6 +32,8 @@ public class ListTaskGroupRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The area encoding.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
      */
@@ -33,6 +41,8 @@ public class ListTaskGroupRequest extends TeaModel {
     public String regId;
 
     /**
+     * <p>Sample name.</p>
+     * 
      * <strong>example:</strong>
      * <p>TEst</p>
      */
@@ -40,6 +50,8 @@ public class ListTaskGroupRequest extends TeaModel {
     public String sampleName;
 
     /**
+     * <p>Task group name.</p>
+     * 
      * <strong>example:</strong>
      * <p>TeskGroupTest</p>
      */
@@ -47,6 +59,8 @@ public class ListTaskGroupRequest extends TeaModel {
     public String taskGroupName;
 
     /**
+     * <p>Access type.</p>
+     * 
      * <strong>example:</strong>
      * <p>SAF_CONSOLE</p>
      */

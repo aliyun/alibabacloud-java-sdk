@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListSampleResponseBody extends TeaModel {
     /**
+     * <p>Status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -12,6 +14,8 @@ public class ListSampleResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>Current page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -19,6 +23,8 @@ public class ListSampleResponseBody extends TeaModel {
     public Integer currentPage;
 
     /**
+     * <p>HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -26,6 +32,8 @@ public class ListSampleResponseBody extends TeaModel {
     public String httpStatusCode;
 
     /**
+     * <p>Error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>successful</p>
      */
@@ -33,6 +41,8 @@ public class ListSampleResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>Page size.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -40,16 +50,23 @@ public class ListSampleResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>A32FE941-35F2-5378-B37C-4B8FDB16F094</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Return Result.</p>
+     */
     @NameInMap("ResultObject")
     public java.util.List<ListSampleResponseBodyResultObject> resultObject;
 
     /**
+     * <p>Total Number of Returned Items.</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
@@ -57,6 +74,8 @@ public class ListSampleResponseBody extends TeaModel {
     public Integer totalItem;
 
     /**
+     * <p>Total number of pages.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -142,6 +161,8 @@ public class ListSampleResponseBody extends TeaModel {
 
     public static class ListSampleResponseBodyResultObject extends TeaModel {
         /**
+         * <p>File Name.</p>
+         * 
          * <strong>example:</strong>
          * <p>202604016426_2_MOB_10W.csv</p>
          */
@@ -149,6 +170,8 @@ public class ListSampleResponseBody extends TeaModel {
         public String fileName;
 
         /**
+         * <p>File Size. Unit: bytes.</p>
+         * 
          * <strong>example:</strong>
          * <p>78</p>
          */
@@ -156,6 +179,8 @@ public class ListSampleResponseBody extends TeaModel {
         public Integer fileSize;
 
         /**
+         * <p>Remarks.</p>
+         * 
          * <strong>example:</strong>
          * <p>vpc-gw8hs2m7qiiy4onxnjf7x</p>
          */
@@ -163,6 +188,8 @@ public class ListSampleResponseBody extends TeaModel {
         public String remark;
 
         /**
+         * <p>Table Row Count.</p>
+         * 
          * <strong>example:</strong>
          * <p>284</p>
          */
@@ -170,6 +197,8 @@ public class ListSampleResponseBody extends TeaModel {
         public Integer rowCount;
 
         /**
+         * <p>Sample ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>7</p>
          */
@@ -177,6 +206,8 @@ public class ListSampleResponseBody extends TeaModel {
         public Integer sampleId;
 
         /**
+         * <p>Sample Name.</p>
+         * 
          * <strong>example:</strong>
          * <p>TEst</p>
          */
@@ -184,6 +215,8 @@ public class ListSampleResponseBody extends TeaModel {
         public String sampleName;
 
         /**
+         * <p>Scenario.</p>
+         * 
          * <strong>example:</strong>
          * <p>FINANCE</p>
          */
@@ -191,6 +224,8 @@ public class ListSampleResponseBody extends TeaModel {
         public String tab;
 
         /**
+         * <p>File Upload Time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2023-04-09 12:45:23</p>
          */
@@ -198,6 +233,8 @@ public class ListSampleResponseBody extends TeaModel {
         public String uploadTime;
 
         /**
+         * <p>Uploader.</p>
+         * 
          * <strong>example:</strong>
          * <p>mest</p>
          */

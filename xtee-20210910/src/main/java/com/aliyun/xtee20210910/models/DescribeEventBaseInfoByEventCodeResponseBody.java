@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeEventBaseInfoByEventCodeResponseBody extends TeaModel {
     /**
-     * <p>Request ID.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>A32FE941-35F2-5378-B37C-4B8FDB16F094</p>
@@ -14,7 +14,7 @@ public class DescribeEventBaseInfoByEventCodeResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Return object</p>
+     * <p>The returned object.</p>
      */
     @NameInMap("resultObject")
     public DescribeEventBaseInfoByEventCodeResponseBodyResultObject resultObject;
@@ -42,7 +42,7 @@ public class DescribeEventBaseInfoByEventCodeResponseBody extends TeaModel {
 
     public static class DescribeEventBaseInfoByEventCodeResponseBodyResultObjectInputFields extends TeaModel {
         /**
-         * <p>Field description.</p>
+         * <p>The field description.</p>
          * 
          * <strong>example:</strong>
          * <p>描述</p>
@@ -51,7 +51,7 @@ public class DescribeEventBaseInfoByEventCodeResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>Field code</p>
+         * <p>The field code.</p>
          * 
          * <strong>example:</strong>
          * <p>age</p>
@@ -60,7 +60,7 @@ public class DescribeEventBaseInfoByEventCodeResponseBody extends TeaModel {
         public String fieldCode;
 
         /**
-         * <p>Field ranking</p>
+         * <p>The field sort order.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -69,7 +69,7 @@ public class DescribeEventBaseInfoByEventCodeResponseBody extends TeaModel {
         public String fieldRank;
 
         /**
-         * <p>Field source.</p>
+         * <p>The source of the field.</p>
          * 
          * <strong>example:</strong>
          * <p>DEFAULT</p>
@@ -78,7 +78,7 @@ public class DescribeEventBaseInfoByEventCodeResponseBody extends TeaModel {
         public String fieldSource;
 
         /**
-         * <p>Field type.</p>
+         * <p>The field type.</p>
          * 
          * <strong>example:</strong>
          * <p>STRING</p>
@@ -87,7 +87,7 @@ public class DescribeEventBaseInfoByEventCodeResponseBody extends TeaModel {
         public String fieldType;
 
         /**
-         * <p>Field name.</p>
+         * <p>The field name.</p>
          * 
          * <strong>example:</strong>
          * <p>年龄</p>
@@ -152,7 +152,7 @@ public class DescribeEventBaseInfoByEventCodeResponseBody extends TeaModel {
 
     public static class DescribeEventBaseInfoByEventCodeResponseBodyResultObjectRuleDetails extends TeaModel {
         /**
-         * <p>Policy Execution Logic</p>
+         * <p>The policy execution logic.</p>
          * 
          * <strong>example:</strong>
          * <p>3&amp;((1&amp;2&amp;4)</p>
@@ -161,7 +161,7 @@ public class DescribeEventBaseInfoByEventCodeResponseBody extends TeaModel {
         public String logicExpression;
 
         /**
-         * <p>Memo</p>
+         * <p>The remarks.</p>
          * 
          * <strong>example:</strong>
          * <p>描述</p>
@@ -170,7 +170,7 @@ public class DescribeEventBaseInfoByEventCodeResponseBody extends TeaModel {
         public String memo;
 
         /**
-         * <p>Rule Actions</p>
+         * <p>The rule actions.</p>
          * 
          * <strong>example:</strong>
          * <p>[{\&quot;inputs\&quot;:[\&quot;auto_accselist\&quot;],\&quot;name\&quot;:\&quot;<strong>addDeTags</strong>\&quot;,\&quot;actionType\&quot;:\&quot;TAG\&quot;,\&quot;outputType\&quot;:\&quot;const\&quot;}]</p>
@@ -179,7 +179,7 @@ public class DescribeEventBaseInfoByEventCodeResponseBody extends TeaModel {
         public String ruleActions;
 
         /**
-         * <p>Policy Type</p>
+         * <p>The policy type.</p>
          * 
          * <strong>example:</strong>
          * <p>DEFAULT</p>
@@ -188,7 +188,7 @@ public class DescribeEventBaseInfoByEventCodeResponseBody extends TeaModel {
         public String ruleAuthType;
 
         /**
-         * <p>Event Expressions.</p>
+         * <p>The event expressions.</p>
          * 
          * <strong>example:</strong>
          * <p>[{\&quot;expressionName\&quot;:\&quot;同一设备同一IP上的注册用户数\&quot;,\&quot;itemId\&quot;:1,\&quot;left\&quot;:{\&quot;name\&quot;:\&quot;dK7EXHr490f\&quot;},\&quot;operatorCode\&quot;:\&quot;gte\&quot;,\&quot;operatorName\&quot;:\&quot;大于等于\&quot;,\&quot;right\&quot;:{\&quot;fieldValue\&quot;:\&quot;2\&quot;}}]</p>
@@ -197,7 +197,7 @@ public class DescribeEventBaseInfoByEventCodeResponseBody extends TeaModel {
         public String ruleExpressions;
 
         /**
-         * <p>Policy ID</p>
+         * <p>The policy ID.</p>
          * 
          * <strong>example:</strong>
          * <p>101544</p>
@@ -206,7 +206,7 @@ public class DescribeEventBaseInfoByEventCodeResponseBody extends TeaModel {
         public String ruleId;
 
         /**
-         * <p>Policy Name</p>
+         * <p>The policy name.</p>
          * 
          * <strong>example:</strong>
          * <p>手机号MD5命中人脸测试名单</p>
@@ -215,7 +215,7 @@ public class DescribeEventBaseInfoByEventCodeResponseBody extends TeaModel {
         public String ruleName;
 
         /**
-         * <p>Policy Status</p>
+         * <p>The policy status.</p>
          * 
          * <strong>example:</strong>
          * <p>DRAFT</p>
@@ -296,7 +296,7 @@ public class DescribeEventBaseInfoByEventCodeResponseBody extends TeaModel {
 
     public static class DescribeEventBaseInfoByEventCodeResponseBodyResultObject extends TeaModel {
         /**
-         * <p>Business version number</p>
+         * <p>The business version number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -305,7 +305,7 @@ public class DescribeEventBaseInfoByEventCodeResponseBody extends TeaModel {
         public Integer bizVersion;
 
         /**
-         * <p>Event code</p>
+         * <p>The event code.</p>
          * 
          * <strong>example:</strong>
          * <p>de_aszbjb7236</p>
@@ -314,7 +314,7 @@ public class DescribeEventBaseInfoByEventCodeResponseBody extends TeaModel {
         public String eventCode;
 
         /**
-         * <p>Event name.</p>
+         * <p>The event name.</p>
          * 
          * <strong>example:</strong>
          * <p>注册风险</p>
@@ -323,7 +323,7 @@ public class DescribeEventBaseInfoByEventCodeResponseBody extends TeaModel {
         public String eventName;
 
         /**
-         * <p>Event status.</p>
+         * <p>The event status.</p>
          * 
          * <strong>example:</strong>
          * <p>ONLINE</p>
@@ -332,13 +332,13 @@ public class DescribeEventBaseInfoByEventCodeResponseBody extends TeaModel {
         public String eventStauts;
 
         /**
-         * <p>Field list.</p>
+         * <p>The field list.</p>
          */
         @NameInMap("inputFields")
         public java.util.List<DescribeEventBaseInfoByEventCodeResponseBodyResultObjectInputFields> inputFields;
 
         /**
-         * <p>Memo.</p>
+         * <p>The remarks.</p>
          * 
          * <strong>example:</strong>
          * <p>备注</p>
@@ -347,13 +347,13 @@ public class DescribeEventBaseInfoByEventCodeResponseBody extends TeaModel {
         public String memo;
 
         /**
-         * <p>Policy Information</p>
+         * <p>The policy information.</p>
          */
         @NameInMap("ruleDetails")
         public java.util.List<DescribeEventBaseInfoByEventCodeResponseBodyResultObjectRuleDetails> ruleDetails;
 
         /**
-         * <p>Operation template code</p>
+         * <p>The operation template code.</p>
          * 
          * <strong>example:</strong>
          * <p>register</p>
@@ -362,7 +362,7 @@ public class DescribeEventBaseInfoByEventCodeResponseBody extends TeaModel {
         public String templateCode;
 
         /**
-         * <p>Template name</p>
+         * <p>The template name.</p>
          * 
          * <strong>example:</strong>
          * <p>注册事件模板</p>
@@ -371,7 +371,7 @@ public class DescribeEventBaseInfoByEventCodeResponseBody extends TeaModel {
         public String templateName;
 
         /**
-         * <p>Template type.</p>
+         * <p>The templatetype.</p>
          * 
          * <strong>example:</strong>
          * <p>TEMPLATE</p>

@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class ImportNameListRequest extends TeaModel {
     /**
-     * <p>Set the language type for request and response messages, default value is <strong>zh</strong>. Values:</p>
+     * <p>The language type for the request and response. Default value: <strong>zh</strong>. Valid values:</p>
      * <ul>
-     * <li><strong>zh</strong>: Chinese</li>
-     * <li><strong>en</strong>: English</li>
+     * <li><strong>zh</strong>: Chinese.</li>
+     * <li><strong>en</strong>: English.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,7 +18,7 @@ public class ImportNameListRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>Creation type</p>
+     * <p>The creation type.</p>
      * 
      * <strong>example:</strong>
      * <p>NORMAL</p>
@@ -27,7 +27,7 @@ public class ImportNameListRequest extends TeaModel {
     public String createType;
 
     /**
-     * <p>Import name list.</p>
+     * <p>The list of names to import.</p>
      * 
      * <strong>example:</strong>
      * <p>aa\nbb\ncc</p>
@@ -36,19 +36,19 @@ public class ImportNameListRequest extends TeaModel {
     public String data;
 
     /**
-     * <p>Description information.</p>
+     * <p>The description.</p>
      * 
      * <strong>example:</strong>
-     * <p>描述</p>
+     * <p>description</p>
      */
     @NameInMap("description")
     public String description;
 
     /**
-     * <p>Document import type:</p>
-     * <p>INPUT: Text input
-     * CSV: CSV upload
-     * NONE: Do not upload for now</p>
+     * <p>The document import type. Valid values:</p>
+     * <p>INPUT: data entry.
+     * CSV: CSV upload.
+     * NONE: no upload.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -58,16 +58,16 @@ public class ImportNameListRequest extends TeaModel {
     public String importType;
 
     /**
-     * <p>name content memo</p>
+     * <p>The description.</p>
      * 
      * <strong>example:</strong>
-     * <p>名单内容描述</p>
+     * <p>test</p>
      */
     @NameInMap("memo")
     public String memo;
 
     /**
-     * <p>nameListType</p>
+     * <p>The nameListType.</p>
      * 
      * <strong>example:</strong>
      * <p>accountId</p>
@@ -76,7 +76,7 @@ public class ImportNameListRequest extends TeaModel {
     public String nameListType;
 
     /**
-     * <p>Region code</p>
+     * <p>The region code.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -85,7 +85,7 @@ public class ImportNameListRequest extends TeaModel {
     public String regId;
 
     /**
-     * <p>Title.</p>
+     * <p>The title.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -95,7 +95,7 @@ public class ImportNameListRequest extends TeaModel {
     public String title;
 
     /**
-     * <p>Variable ID</p>
+     * <p>The variable ID.</p>
      * 
      * <strong>example:</strong>
      * <p>393314</p>

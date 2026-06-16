@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeNameListResponseBody extends TeaModel {
     /**
-     * <p>Request ID.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>A32FE941-35F2-5378-B37C-4B8FDB16F094</p>
@@ -14,7 +14,7 @@ public class DescribeNameListResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Current page number.</p>
+     * <p>The current page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -23,7 +23,7 @@ public class DescribeNameListResponseBody extends TeaModel {
     public Integer currentPage;
 
     /**
-     * <p>Page size, with a default value of 10.</p>
+     * <p>The number of entries per page. Default value: 10.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -32,13 +32,13 @@ public class DescribeNameListResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>Returned object.</p>
+     * <p>The returned objects.</p>
      */
     @NameInMap("resultObject")
     public java.util.List<DescribeNameListResponseBodyResultObject> resultObject;
 
     /**
-     * <p>Total number of items.</p>
+     * <p>The total number of entries.</p>
      * 
      * <strong>example:</strong>
      * <p>6</p>
@@ -47,7 +47,7 @@ public class DescribeNameListResponseBody extends TeaModel {
     public Integer totalItem;
 
     /**
-     * <p>Total number of pages.</p>
+     * <p>The total number of pages.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -110,7 +110,7 @@ public class DescribeNameListResponseBody extends TeaModel {
 
     public static class DescribeNameListResponseBodyResultObject extends TeaModel {
         /**
-         * <p>Creation time.</p>
+         * <p>The creation time.</p>
          * 
          * <strong>example:</strong>
          * <p>1621578648000</p>
@@ -119,7 +119,7 @@ public class DescribeNameListResponseBody extends TeaModel {
         public Long gmtCreate;
 
         /**
-         * <p>Modification time.</p>
+         * <p>The modification time.</p>
          * 
          * <strong>example:</strong>
          * <p>1565701886000</p>
@@ -128,7 +128,7 @@ public class DescribeNameListResponseBody extends TeaModel {
         public Long gmtModified;
 
         /**
-         * <p>Name list content ID.</p>
+         * <p>The name list content ID.</p>
          * 
          * <strong>example:</strong>
          * <p>30</p>
@@ -137,7 +137,7 @@ public class DescribeNameListResponseBody extends TeaModel {
         public Long id;
 
         /**
-         * <p>Variable identifier.</p>
+         * <p>The variable identifier.</p>
          * 
          * <strong>example:</strong>
          * <p>NAME_LIST</p>
@@ -146,7 +146,7 @@ public class DescribeNameListResponseBody extends TeaModel {
         public String identifier;
 
         /**
-         * <p>Title.</p>
+         * <p>The title.</p>
          * 
          * <strong>example:</strong>
          * <p>变量的title</p>
@@ -155,7 +155,7 @@ public class DescribeNameListResponseBody extends TeaModel {
         public String title;
 
         /**
-         * <p>Value.</p>
+         * <p>The value.</p>
          * 
          * <strong>example:</strong>
          * <p>321311193502064288</p>
@@ -164,7 +164,7 @@ public class DescribeNameListResponseBody extends TeaModel {
         public String value;
 
         /**
-         * <p>Variable ID.</p>
+         * <p>The variable ID.</p>
          * 
          * <strong>example:</strong>
          * <p>393314</p>

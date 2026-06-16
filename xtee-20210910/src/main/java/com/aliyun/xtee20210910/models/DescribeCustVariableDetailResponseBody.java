@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeCustVariableDetailResponseBody extends TeaModel {
     /**
-     * <p>Request ID</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>A32FE941-35F2-5378-B37C-4B8FDB16F094</p>
@@ -14,7 +14,7 @@ public class DescribeCustVariableDetailResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Return object</p>
+     * <p>The returned object.</p>
      */
     @NameInMap("resultObject")
     public java.util.List<DescribeCustVariableDetailResponseBodyResultObject> resultObject;
@@ -42,7 +42,7 @@ public class DescribeCustVariableDetailResponseBody extends TeaModel {
 
     public static class DescribeCustVariableDetailResponseBodyResultObject extends TeaModel {
         /**
-         * <p>Condition value.</p>
+         * <p>The condition value.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;currentId&quot;:1,&quot;deepCount&quot;:0,&quot;list&quot;:[{&quot;currentId&quot;:2,&quot;deepCount&quot;:1,&quot;left&quot;:{&quot;code&quot;:&quot;accountId&quot;,&quot;fieldType&quot;:&quot;STRING&quot;,&quot;functionName&quot;:&quot;&quot;,&quot;hasRightVariable&quot;:false,&quot;name&quot;:&quot;accountId&quot;},&quot;operatorCode&quot;:&quot;isNotEmptyWrapper&quot;,&quot;parentId&quot;:1,&quot;right&quot;:{&quot;code&quot;:&quot;\&quot;A\nB\nC\&quot;&quot;,&quot;functionName&quot;:&quot;&quot;,&quot;name&quot;:&quot;&quot;,&quot;rightVariableType&quot;:&quot;constant&quot;}}],&quot;parentId&quot;:0,&quot;relationship&quot;:&quot;and&quot;}</p>
@@ -51,7 +51,7 @@ public class DescribeCustVariableDetailResponseBody extends TeaModel {
         public String condition;
 
         /**
-         * <p>Data version.</p>
+         * <p>The data version.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -60,7 +60,7 @@ public class DescribeCustVariableDetailResponseBody extends TeaModel {
         public Long dataVersion;
 
         /**
-         * <p>Description information.</p>
+         * <p>The description.</p>
          * 
          * <strong>example:</strong>
          * <p>变量描述</p>
@@ -69,7 +69,7 @@ public class DescribeCustVariableDetailResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>Event code.</p>
+         * <p>The event code.</p>
          * 
          * <strong>example:</strong>
          * <p>de_ahespg8137</p>
@@ -78,7 +78,7 @@ public class DescribeCustVariableDetailResponseBody extends TeaModel {
         public String eventCodes;
 
         /**
-         * <p>Value type</p>
+         * <p>The value type.</p>
          * 
          * <strong>example:</strong>
          * <p>EARLIEST</p>
@@ -87,7 +87,7 @@ public class DescribeCustVariableDetailResponseBody extends TeaModel {
         public String historyValueType;
 
         /**
-         * <p>Primary key ID of the cumulative variable</p>
+         * <p>The primary key ID of the cumulative variable.</p>
          * 
          * <strong>example:</strong>
          * <p>2793</p>
@@ -96,7 +96,7 @@ public class DescribeCustVariableDetailResponseBody extends TeaModel {
         public Long id;
 
         /**
-         * <p>Cumulative object</p>
+         * <p>The cumulative object.</p>
          * 
          * <strong>example:</strong>
          * <p>DEpage</p>
@@ -105,7 +105,7 @@ public class DescribeCustVariableDetailResponseBody extends TeaModel {
         public String object;
 
         /**
-         * <p>Variable return type</p>
+         * <p>The variable return type.</p>
          * 
          * <strong>example:</strong>
          * <p>DOUBLE</p>
@@ -114,7 +114,7 @@ public class DescribeCustVariableDetailResponseBody extends TeaModel {
         public String outputs;
 
         /**
-         * <p>Main object</p>
+         * <p>The primary object.</p>
          * 
          * <strong>example:</strong>
          * <p>DEpname</p>
@@ -123,7 +123,7 @@ public class DescribeCustVariableDetailResponseBody extends TeaModel {
         public String subject;
 
         /**
-         * <p>Time slice type</p>
+         * <p>The time slice type.</p>
          * 
          * <strong>example:</strong>
          * <p>NEAR</p>
@@ -132,7 +132,7 @@ public class DescribeCustVariableDetailResponseBody extends TeaModel {
         public String timeType;
 
         /**
-         * <p>Title.</p>
+         * <p>The title.</p>
          * 
          * <strong>example:</strong>
          * <p>累计变量求平均值</p>
@@ -141,7 +141,7 @@ public class DescribeCustVariableDetailResponseBody extends TeaModel {
         public String title;
 
         /**
-         * <p>Time count</p>
+         * <p>The number of time windows.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -150,7 +150,7 @@ public class DescribeCustVariableDetailResponseBody extends TeaModel {
         public String twCount;
 
         /**
-         * <p>Variable type</p>
+         * <p>The variable type.</p>
          * 
          * <strong>example:</strong>
          * <p>DISTINCT</p>
@@ -159,7 +159,7 @@ public class DescribeCustVariableDetailResponseBody extends TeaModel {
         public String velocityFC;
 
         /**
-         * <p>Time slice unit</p>
+         * <p>The time slice unit.</p>
          * 
          * <strong>example:</strong>
          * <p>HOUR_1</p>

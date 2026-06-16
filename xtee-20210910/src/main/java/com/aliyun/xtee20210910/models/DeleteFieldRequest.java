@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class DeleteFieldRequest extends TeaModel {
     /**
-     * <p>Set the language type for requests and received messages, default value is <strong>zh</strong>. Values: </p>
+     * <p>The language type for the request and response messages. Default value: <strong>zh</strong>. Valid values:</p>
      * <ul>
-     * <li><strong>zh</strong>: Chinese</li>
-     * <li><strong>en</strong>: English</li>
+     * <li><strong>zh</strong>: Chinese.</li>
+     * <li><strong>en</strong>: English.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,7 +18,7 @@ public class DeleteFieldRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>Primary key ID of the field</p>
+     * <p>The primary key ID of the field.</p>
      * 
      * <strong>example:</strong>
      * <p>2556</p>
@@ -27,7 +27,7 @@ public class DeleteFieldRequest extends TeaModel {
     public Long id;
 
     /**
-     * <p>Name of the field.</p>
+     * <p>The name of the field.</p>
      * 
      * <strong>example:</strong>
      * <p>age</p>
@@ -36,7 +36,7 @@ public class DeleteFieldRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>Region code</p>
+     * <p>The region code.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

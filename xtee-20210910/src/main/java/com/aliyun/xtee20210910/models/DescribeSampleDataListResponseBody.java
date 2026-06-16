@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeSampleDataListResponseBody extends TeaModel {
     /**
-     * <p>Request ID.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>A32FE941-35F2-5378-B37C-4B8FDB16F094</p>
@@ -14,7 +14,7 @@ public class DescribeSampleDataListResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Current page number.</p>
+     * <p>The current page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -23,7 +23,7 @@ public class DescribeSampleDataListResponseBody extends TeaModel {
     public Integer currentPage;
 
     /**
-     * <p>Page size, default value is 10.</p>
+     * <p>The number of entries per page. Default value: 10.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -32,13 +32,13 @@ public class DescribeSampleDataListResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>Returned object</p>
+     * <p>The returned object.</p>
      */
     @NameInMap("resultObject")
     public java.util.List<DescribeSampleDataListResponseBodyResultObject> resultObject;
 
     /**
-     * <p>Total number of items.</p>
+     * <p>The total number of entries.</p>
      * 
      * <strong>example:</strong>
      * <p>6</p>
@@ -47,7 +47,7 @@ public class DescribeSampleDataListResponseBody extends TeaModel {
     public Integer totalItem;
 
     /**
-     * <p>Total number of pages.</p>
+     * <p>The total number of pages.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -110,7 +110,7 @@ public class DescribeSampleDataListResponseBody extends TeaModel {
 
     public static class DescribeSampleDataListResponseBodyResultObject extends TeaModel {
         /**
-         * <p>Classification type, binary or multi-class.</p>
+         * <p>The classification type, such as binary classification or multi-class classification.</p>
          * 
          * <strong>example:</strong>
          * <p>二分类</p>
@@ -119,7 +119,7 @@ public class DescribeSampleDataListResponseBody extends TeaModel {
         public String classificationType;
 
         /**
-         * <p>Criterion value for sample data calculation</p>
+         * <p>The benchmark value used for sample data calculation.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;正样本&quot;:&quot;1&quot;，&quot;负样本&quot;:&quot;1&quot;}</p>
@@ -128,7 +128,7 @@ public class DescribeSampleDataListResponseBody extends TeaModel {
         public String dataDistributed;
 
         /**
-         * <p>First row of sample data. Used to define the values of each column.</p>
+         * <p>The first row of the sample data. This row defines the value of each column.</p>
          * 
          * <strong>example:</strong>
          * <p>17700000000</p>
@@ -137,7 +137,7 @@ public class DescribeSampleDataListResponseBody extends TeaModel {
         public String dataTitle;
 
         /**
-         * <p>Deletion tag.</p>
+         * <p>The deletion tag.</p>
          * 
          * <strong>example:</strong>
          * <p>DELETE</p>
@@ -146,7 +146,7 @@ public class DescribeSampleDataListResponseBody extends TeaModel {
         public String deleteTag;
 
         /**
-         * <p>Description information.</p>
+         * <p>The description.</p>
          * 
          * <strong>example:</strong>
          * <p>描述</p>
@@ -155,7 +155,7 @@ public class DescribeSampleDataListResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>Creation time.</p>
+         * <p>The creation time.</p>
          * 
          * <strong>example:</strong>
          * <p>1621578648000</p>
@@ -164,7 +164,7 @@ public class DescribeSampleDataListResponseBody extends TeaModel {
         public Long gmtCreate;
 
         /**
-         * <p>Modification time.</p>
+         * <p>The modification time.</p>
          * 
          * <strong>example:</strong>
          * <p>1565701886000</p>
@@ -173,7 +173,7 @@ public class DescribeSampleDataListResponseBody extends TeaModel {
         public Long gmtModified;
 
         /**
-         * <p>Primary key ID</p>
+         * <p>The primary key ID.</p>
          * 
          * <strong>example:</strong>
          * <p>497</p>
@@ -182,7 +182,7 @@ public class DescribeSampleDataListResponseBody extends TeaModel {
         public Long id;
 
         /**
-         * <p>Name</p>
+         * <p>The name.</p>
          * 
          * <strong>example:</strong>
          * <p>注册样本</p>
@@ -191,7 +191,7 @@ public class DescribeSampleDataListResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>Number of normal samples</p>
+         * <p>The number of normal samples.</p>
          * 
          * <strong>example:</strong>
          * <p>999</p>
@@ -200,7 +200,7 @@ public class DescribeSampleDataListResponseBody extends TeaModel {
         public Long normalSize;
 
         /**
-         * <p>Recall configuration</p>
+         * <p>The backtracking configuration.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;variables&quot;:&quot;a,b,c&quot;}</p>
@@ -209,7 +209,7 @@ public class DescribeSampleDataListResponseBody extends TeaModel {
         public String recallConfig;
 
         /**
-         * <p>Number of risk samples</p>
+         * <p>The number of risky samples.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -218,7 +218,7 @@ public class DescribeSampleDataListResponseBody extends TeaModel {
         public Long riskSize;
 
         /**
-         * <p>Specified risk value</p>
+         * <p>The specified risk value.</p>
          * 
          * <strong>example:</strong>
          * <p>black</p>
@@ -227,7 +227,7 @@ public class DescribeSampleDataListResponseBody extends TeaModel {
         public String riskValue;
 
         /**
-         * <p>Sample label details</p>
+         * <p>The sample label details.</p>
          * 
          * <strong>example:</strong>
          * <p>[{&quot;type&quot;:&quot;positive&quot;,&quot;size&quot;:&quot;2000&quot;,&quot;value&quot;:1},{&quot;type&quot;:&quot;negative&quot;,&quot;size&quot;:1900,&quot;value&quot;:0}]</p>
@@ -236,7 +236,7 @@ public class DescribeSampleDataListResponseBody extends TeaModel {
         public String sampleLabelDetail;
 
         /**
-         * <p>Sample size</p>
+         * <p>The number of samples.</p>
          * 
          * <strong>example:</strong>
          * <p>1000</p>
@@ -245,7 +245,7 @@ public class DescribeSampleDataListResponseBody extends TeaModel {
         public Long sampleSize;
 
         /**
-         * <p>Scene code</p>
+         * <p>The scenario code.</p>
          * 
          * <strong>example:</strong>
          * <p>account_abuse_detection</p>
@@ -254,7 +254,7 @@ public class DescribeSampleDataListResponseBody extends TeaModel {
         public String scene;
 
         /**
-         * <p>Status.</p>
+         * <p>The status.</p>
          * 
          * <strong>example:</strong>
          * <p>CREATE</p>
@@ -263,7 +263,7 @@ public class DescribeSampleDataListResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>Storage path</p>
+         * <p>The storage path.</p>
          * 
          * <strong>example:</strong>
          * <p>saf/de/sample/3dc2spspHKq4G3YI9d08</p>
@@ -272,7 +272,7 @@ public class DescribeSampleDataListResponseBody extends TeaModel {
         public String storePath;
 
         /**
-         * <p>Storage type</p>
+         * <p>The storage type.</p>
          * 
          * <strong>example:</strong>
          * <p>OSS</p>
@@ -281,7 +281,7 @@ public class DescribeSampleDataListResponseBody extends TeaModel {
         public String storeType;
 
         /**
-         * <p>Whether recall is supported</p>
+         * <p>Indicates whether backtracking is supported.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -290,7 +290,7 @@ public class DescribeSampleDataListResponseBody extends TeaModel {
         public String supportRecall;
 
         /**
-         * <p>User UID</p>
+         * <p>The user UID.</p>
          * 
          * <strong>example:</strong>
          * <p>1519714049632764</p>
@@ -299,7 +299,7 @@ public class DescribeSampleDataListResponseBody extends TeaModel {
         public Long userId;
 
         /**
-         * <p>Version</p>
+         * <p>The version.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateAnalysisExportTaskResponseBody extends TeaModel {
     /**
-     * <p>Request ID</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>A32FE941-35F2-5378-B37C-4B8FDB16F094</p>
@@ -14,7 +14,7 @@ public class CreateAnalysisExportTaskResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Returned object</p>
+     * <p>The returned object.</p>
      */
     @NameInMap("resultObject")
     public CreateAnalysisExportTaskResponseBodyResultObject resultObject;
@@ -42,7 +42,7 @@ public class CreateAnalysisExportTaskResponseBody extends TeaModel {
 
     public static class CreateAnalysisExportTaskResponseBodyResultObject extends TeaModel {
         /**
-         * <p>Export list.</p>
+         * <p>The export list.</p>
          * 
          * <strong>example:</strong>
          * <p>[
@@ -88,7 +88,7 @@ public class CreateAnalysisExportTaskResponseBody extends TeaModel {
         public String columns;
 
         /**
-         * <p>Export task conditions.</p>
+         * <p>The conditions of the export task.</p>
          * 
          * <strong>example:</strong>
          * <p>{
@@ -100,7 +100,7 @@ public class CreateAnalysisExportTaskResponseBody extends TeaModel {
         public String conditions;
 
         /**
-         * <p>Event start time.</p>
+         * <p>The event start time.</p>
          * 
          * <strong>example:</strong>
          * <p>1752076800000</p>
@@ -109,7 +109,7 @@ public class CreateAnalysisExportTaskResponseBody extends TeaModel {
         public Long eventBeginTime;
 
         /**
-         * <p>Event code.</p>
+         * <p>The event code.</p>
          * 
          * <strong>example:</strong>
          * <p>de_ahespg8137</p>
@@ -118,7 +118,7 @@ public class CreateAnalysisExportTaskResponseBody extends TeaModel {
         public String eventCodes;
 
         /**
-         * <p>End time.</p>
+         * <p>The end time.</p>
          * 
          * <strong>example:</strong>
          * <p>1753891199000</p>
@@ -127,7 +127,7 @@ public class CreateAnalysisExportTaskResponseBody extends TeaModel {
         public Long eventEndTime;
 
         /**
-         * <p>File format.</p>
+         * <p>The file format.</p>
          * 
          * <strong>example:</strong>
          * <p>CSV</p>
@@ -136,7 +136,7 @@ public class CreateAnalysisExportTaskResponseBody extends TeaModel {
         public String fileFormat;
 
         /**
-         * <p>OSS-generated key.</p>
+         * <p>The randomly generated OSS key.</p>
          * 
          * <strong>example:</strong>
          * <p>xxxxx</p>
@@ -145,7 +145,7 @@ public class CreateAnalysisExportTaskResponseBody extends TeaModel {
         public String ossKey;
 
         /**
-         * <p>Export task scope.</p>
+         * <p>The scope of the export task.</p>
          * 
          * <strong>example:</strong>
          * <p>ALL</p>
@@ -154,7 +154,7 @@ public class CreateAnalysisExportTaskResponseBody extends TeaModel {
         public String scope;
 
         /**
-         * <p>Task status.</p>
+         * <p>The task status.</p>
          * 
          * <strong>example:</strong>
          * <p>RUNNING</p>
@@ -163,7 +163,7 @@ public class CreateAnalysisExportTaskResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>Export task type.</p>
+         * <p>The export task type.</p>
          * 
          * <strong>example:</strong>
          * <p>BASIC</p>
@@ -172,7 +172,7 @@ public class CreateAnalysisExportTaskResponseBody extends TeaModel {
         public String type;
 
         /**
-         * <p>User UID</p>
+         * <p>The user UID.</p>
          * 
          * <strong>example:</strong>
          * <p>1519714049632764</p>

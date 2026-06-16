@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreatePocEvResponseBody extends TeaModel {
     /**
-     * <p>Response code.</p>
+     * <p>The response code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,7 +14,7 @@ public class CreatePocEvResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>HTTP status code</p>
+     * <p>The HTTP status code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -23,7 +23,7 @@ public class CreatePocEvResponseBody extends TeaModel {
     public String httpStatusCode;
 
     /**
-     * <p>Return message.</p>
+     * <p>The returned message.</p>
      * 
      * <strong>example:</strong>
      * <p>successful</p>
@@ -32,7 +32,7 @@ public class CreatePocEvResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Request ID.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>A32FE941-35F2-5378-B37C-4B8FDB16F094</p>
@@ -41,7 +41,7 @@ public class CreatePocEvResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Return result</p>
+     * <p>The returned result.</p>
      * 
      * <strong>example:</strong>
      * <p>True</p>

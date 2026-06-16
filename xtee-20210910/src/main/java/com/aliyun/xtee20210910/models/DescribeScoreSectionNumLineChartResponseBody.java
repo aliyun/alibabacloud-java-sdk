@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeScoreSectionNumLineChartResponseBody extends TeaModel {
     /**
-     * <p>Request ID.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>A32FE941-35F2-5378-B37C-4B8FDB16F094</p>
@@ -14,7 +14,7 @@ public class DescribeScoreSectionNumLineChartResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Returned object</p>
+     * <p>The response object.</p>
      */
     @NameInMap("resultObject")
     public DescribeScoreSectionNumLineChartResponseBodyResultObject resultObject;
@@ -42,13 +42,13 @@ public class DescribeScoreSectionNumLineChartResponseBody extends TeaModel {
 
     public static class DescribeScoreSectionNumLineChartResponseBodyResultObjectSeries extends TeaModel {
         /**
-         * <p>List of current category results.</p>
+         * <p>The result list for the current category.</p>
          */
         @NameInMap("data")
         public java.util.List<String> data;
 
         /**
-         * <p>Category name.</p>
+         * <p>The category name.</p>
          * 
          * <strong>example:</strong>
          * <p>旁路事件</p>
@@ -81,7 +81,7 @@ public class DescribeScoreSectionNumLineChartResponseBody extends TeaModel {
 
     public static class DescribeScoreSectionNumLineChartResponseBodyResultObjectXaxis extends TeaModel {
         /**
-         * <p>Data structure.</p>
+         * <p>The data structure.</p>
          */
         @NameInMap("data")
         public java.util.List<String> data;
@@ -103,13 +103,13 @@ public class DescribeScoreSectionNumLineChartResponseBody extends TeaModel {
 
     public static class DescribeScoreSectionNumLineChartResponseBodyResultObject extends TeaModel {
         /**
-         * <p>Data list</p>
+         * <p>The data list.</p>
          */
         @NameInMap("series")
         public java.util.List<DescribeScoreSectionNumLineChartResponseBodyResultObjectSeries> series;
 
         /**
-         * <p>Details of xaxis node.</p>
+         * <p>The xaxis node details.</p>
          */
         @NameInMap("xaxis")
         public DescribeScoreSectionNumLineChartResponseBodyResultObjectXaxis xaxis;

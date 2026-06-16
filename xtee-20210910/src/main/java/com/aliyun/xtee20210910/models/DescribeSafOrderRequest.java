@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class DescribeSafOrderRequest extends TeaModel {
     /**
-     * <p>Set the language type for request and response, default value is <strong>zh</strong>. Values:</p>
+     * <p>The language type for the request and response messages. Default value: <strong>zh</strong>. Valid values:</p>
      * <ul>
-     * <li><strong>zh</strong>: Chinese</li>
-     * <li><strong>en</strong>: English</li>
+     * <li><strong>zh</strong>: Chinese.</li>
+     * <li><strong>en</strong>: English.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,7 +18,7 @@ public class DescribeSafOrderRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>Current page number.</p>
+     * <p>The current page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -27,7 +27,7 @@ public class DescribeSafOrderRequest extends TeaModel {
     public Integer currentPage;
 
     /**
-     * <p>End date.</p>
+     * <p>The end date.</p>
      * 
      * <strong>example:</strong>
      * <p>1755076800000</p>
@@ -36,7 +36,7 @@ public class DescribeSafOrderRequest extends TeaModel {
     public String endDate;
 
     /**
-     * <p>Product code.</p>
+     * <p>The product code.</p>
      * 
      * <strong>example:</strong>
      * <p>saf_de</p>
@@ -45,7 +45,7 @@ public class DescribeSafOrderRequest extends TeaModel {
     public String exactProductCode;
 
     /**
-     * <p>Page size, default value is 10.</p>
+     * <p>The number of entries per page. Default value: 10.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -54,7 +54,7 @@ public class DescribeSafOrderRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>Region code.</p>
+     * <p>The region code.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -63,7 +63,7 @@ public class DescribeSafOrderRequest extends TeaModel {
     public String regId;
 
     /**
-     * <p>Start time.</p>
+     * <p>The start date.</p>
      * 
      * <strong>example:</strong>
      * <p>1752076800000</p>

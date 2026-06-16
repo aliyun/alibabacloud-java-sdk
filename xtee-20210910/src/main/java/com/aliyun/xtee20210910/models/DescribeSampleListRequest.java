@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeSampleListRequest extends TeaModel {
     /**
-     * <p>Sets the language type for requests and received messages, with a default value of <strong>zh</strong>. Values:</p>
+     * <p>Sets the language type for request and response messages. Default value: <strong>zh</strong>. Valid values:</p>
      * <ul>
      * <li><strong>zh</strong>: Chinese</li>
      * <li><strong>en</strong>: English</li>
@@ -18,7 +18,7 @@ public class DescribeSampleListRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>Current page number.</p>
+     * <p>The current page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -27,7 +27,7 @@ public class DescribeSampleListRequest extends TeaModel {
     public Integer currentPage;
 
     /**
-     * <p>Page size, with a default value of 10</p>
+     * <p>The number of entries per page. Default value: 10.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -36,7 +36,7 @@ public class DescribeSampleListRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>Region code</p>
+     * <p>The region ID.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -45,7 +45,7 @@ public class DescribeSampleListRequest extends TeaModel {
     public String regId;
 
     /**
-     * <p>Sample type</p>
+     * <p>The sample type.</p>
      * 
      * <strong>example:</strong>
      * <p>PHONE</p>
@@ -54,7 +54,7 @@ public class DescribeSampleListRequest extends TeaModel {
     public String sampleType;
 
     /**
-     * <p>Sample data value.</p>
+     * <p>The sample data value.</p>
      * 
      * <strong>example:</strong>
      * <p>1770000000</p>

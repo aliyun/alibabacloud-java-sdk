@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeSafStartStepsResponseBody extends TeaModel {
     /**
-     * <p>Request ID.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>A32FE941-35F2-5378-B37C-4B8FDB16F094</p>
@@ -14,7 +14,7 @@ public class DescribeSafStartStepsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Return object</p>
+     * <p>The response object.</p>
      */
     @NameInMap("resultObject")
     public java.util.List<DescribeSafStartStepsResponseBodyResultObject> resultObject;
@@ -42,7 +42,7 @@ public class DescribeSafStartStepsResponseBody extends TeaModel {
 
     public static class DescribeSafStartStepsResponseBodyResultObject extends TeaModel {
         /**
-         * <p>Step content</p>
+         * <p>The step content.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://help.aliyun.com/document_detail/177689.html">https://help.aliyun.com/document_detail/177689.html</a></p>
@@ -51,7 +51,7 @@ public class DescribeSafStartStepsResponseBody extends TeaModel {
         public String content;
 
         /**
-         * <p>Step title</p>
+         * <p>The step title.</p>
          * 
          * <strong>example:</strong>
          * <p>ios</p>
@@ -60,7 +60,7 @@ public class DescribeSafStartStepsResponseBody extends TeaModel {
         public String id;
 
         /**
-         * <p>Type</p>
+         * <p>The type.</p>
          * 
          * <strong>example:</strong>
          * <p>URL</p>

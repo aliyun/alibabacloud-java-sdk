@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeRecommendSceneVariablesResponseBody extends TeaModel {
     /**
-     * <p>Request ID.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>A32FE941-35F2-5378-B37C-4B8FDB16F094</p>
@@ -14,7 +14,7 @@ public class DescribeRecommendSceneVariablesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Return Object</p>
+     * <p>The returned object.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>

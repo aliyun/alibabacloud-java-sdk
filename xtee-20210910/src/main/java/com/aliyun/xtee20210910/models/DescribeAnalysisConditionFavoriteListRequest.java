@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeAnalysisConditionFavoriteListRequest extends TeaModel {
     /**
-     * <p>Sets the language type for requests and received messages, with a default value of <strong>zh</strong>. Values: </p>
+     * <p>The language type for the request and response messages. Default value: <strong>zh</strong>. Valid values:</p>
      * <ul>
      * <li><strong>zh</strong>: Chinese</li>
      * <li><strong>en</strong>: English</li>
@@ -18,7 +18,7 @@ public class DescribeAnalysisConditionFavoriteListRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>Region code</p>
+     * <p>The region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribePrivateStackRequest extends TeaModel {
     /**
-     * <p>Region Code</p>
+     * <p>The region ID.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>

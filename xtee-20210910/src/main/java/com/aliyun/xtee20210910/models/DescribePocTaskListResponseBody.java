@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribePocTaskListResponseBody extends TeaModel {
     /**
-     * <p>Request ID.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>A32FE941-35F2-5378-B37C-4B8FDB16F094</p>
@@ -14,7 +14,7 @@ public class DescribePocTaskListResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Current page number.</p>
+     * <p>The current page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -23,7 +23,7 @@ public class DescribePocTaskListResponseBody extends TeaModel {
     public Integer currentPage;
 
     /**
-     * <p>Page size, with a default value of 10.</p>
+     * <p>The number of entries per page. Default value: 10.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -32,13 +32,13 @@ public class DescribePocTaskListResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>Returned object.</p>
+     * <p>The returned object.</p>
      */
     @NameInMap("resultObject")
     public java.util.List<DescribePocTaskListResponseBodyResultObject> resultObject;
 
     /**
-     * <p>Total number of items.</p>
+     * <p>The total number of entries.</p>
      * 
      * <strong>example:</strong>
      * <p>6</p>
@@ -47,7 +47,7 @@ public class DescribePocTaskListResponseBody extends TeaModel {
     public Integer totalItem;
 
     /**
-     * <p>Total number of pages.</p>
+     * <p>The total number of pages.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -110,7 +110,7 @@ public class DescribePocTaskListResponseBody extends TeaModel {
 
     public static class DescribePocTaskListResponseBodyResultObject extends TeaModel {
         /**
-         * <p>Creation time.</p>
+         * <p>The creation time.</p>
          * 
          * <strong>example:</strong>
          * <p>1753804800000</p>
@@ -119,7 +119,7 @@ public class DescribePocTaskListResponseBody extends TeaModel {
         public String createTime;
 
         /**
-         * <p>Download URL.</p>
+         * <p>The download URL.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://xxxxx-oss-xxxxx.xxxxxx.aliyuncs.com/xx/xx/xxx/xxxxxx.csv?Expires=1753433384&OSSAccessKeyId=xxxxxxxxx&Signature=%2F%xxxxxxxxxxxx%3D">https://xxxxx-oss-xxxxx.xxxxxx.aliyuncs.com/xx/xx/xxx/xxxxxx.csv?Expires=1753433384&amp;OSSAccessKeyId=xxxxxxxxx&amp;Signature=%2F%xxxxxxxxxxxx%3D</a></p>
@@ -128,7 +128,7 @@ public class DescribePocTaskListResponseBody extends TeaModel {
         public String downloadUrl;
 
         /**
-         * <p>File type.</p>
+         * <p>The file type.</p>
          * 
          * <strong>example:</strong>
          * <p>EXCEL</p>
@@ -137,7 +137,7 @@ public class DescribePocTaskListResponseBody extends TeaModel {
         public String fileType;
 
         /**
-         * <p>Service name.</p>
+         * <p>The service name.</p>
          * 
          * <strong>example:</strong>
          * <p>注册风险识别</p>
@@ -146,7 +146,7 @@ public class DescribePocTaskListResponseBody extends TeaModel {
         public String serviceName;
 
         /**
-         * <p>Status.</p>
+         * <p>The status.</p>
          * 
          * <strong>example:</strong>
          * <p>WAIT_CHECK</p>
@@ -155,7 +155,7 @@ public class DescribePocTaskListResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>Task ID.</p>
+         * <p>The task ID.</p>
          * 
          * <strong>example:</strong>
          * <p>7</p>
@@ -164,7 +164,7 @@ public class DescribePocTaskListResponseBody extends TeaModel {
         public String taskId;
 
         /**
-         * <p>Task name.</p>
+         * <p>The task name.</p>
          * 
          * <strong>example:</strong>
          * <p>任务</p>
@@ -173,7 +173,7 @@ public class DescribePocTaskListResponseBody extends TeaModel {
         public String taskName;
 
         /**
-         * <p>Last modified time.</p>
+         * <p>The last modification time.</p>
          * 
          * <strong>example:</strong>
          * <p>1753804800000</p>

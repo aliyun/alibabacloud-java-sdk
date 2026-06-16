@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class DeleteSampleDataRequest extends TeaModel {
     /**
-     * <p>Sets the language type for requests and received messages, with a default value of <strong>zh</strong>. Values:</p>
+     * <p>The language of the request and response. Default value: <strong>zh</strong>. Valid values:</p>
      * <ul>
-     * <li><strong>zh</strong>: Chinese</li>
-     * <li><strong>en</strong>: English</li>
+     * <li><strong>zh</strong>: Chinese.</li>
+     * <li><strong>en</strong>: English.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,7 +18,7 @@ public class DeleteSampleDataRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>Primary key ID</p>
+     * <p>The primary key ID.</p>
      * 
      * <strong>example:</strong>
      * <p>3144</p>
@@ -27,7 +27,7 @@ public class DeleteSampleDataRequest extends TeaModel {
     public String id;
 
     /**
-     * <p>Region code</p>
+     * <p>The region code.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>

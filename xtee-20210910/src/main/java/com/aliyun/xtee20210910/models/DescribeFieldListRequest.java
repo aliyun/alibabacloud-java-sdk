@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class DescribeFieldListRequest extends TeaModel {
     /**
-     * <p>Sets the language type for requests and received messages, default value is <strong>zh</strong>. Values: </p>
+     * <p>The language of the request and response messages. Default value: <strong>zh</strong>. Valid values:</p>
      * <ul>
      * <li><strong>zh</strong>: Chinese</li>
-     * <li><strong>en</strong>: English</li>
+     * <li><strong>en</strong>: English.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,7 +18,7 @@ public class DescribeFieldListRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>Query input name or title</p>
+     * <p>The query parameter name or title.</p>
      * 
      * <strong>example:</strong>
      * <p>ip</p>
@@ -27,7 +27,7 @@ public class DescribeFieldListRequest extends TeaModel {
     public String condition;
 
     /**
-     * <p>Selected fields</p>
+     * <p>The selected fields.</p>
      * 
      * <strong>example:</strong>
      * <p>sex,ip,id</p>
@@ -36,7 +36,7 @@ public class DescribeFieldListRequest extends TeaModel {
     public String inputs;
 
     /**
-     * <p>Region code</p>
+     * <p>The region code.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

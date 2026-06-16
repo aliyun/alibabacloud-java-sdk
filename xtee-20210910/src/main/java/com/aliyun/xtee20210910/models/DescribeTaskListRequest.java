@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeTaskListRequest extends TeaModel {
     /**
-     * <p>Current page.</p>
+     * <p>The current page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -14,7 +14,7 @@ public class DescribeTaskListRequest extends TeaModel {
     public String currentPage;
 
     /**
-     * <p>Whether to paginate.</p>
+     * <p>Specifies whether to enable pagination.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -23,10 +23,10 @@ public class DescribeTaskListRequest extends TeaModel {
     public Boolean isPage;
 
     /**
-     * <p>Sets the language type for requests and received messages, with a default value of <strong>zh</strong>. Values:</p>
+     * <p>The language type for the request and response messages. Default value: <strong>zh</strong>. Valid values:</p>
      * <ul>
      * <li><strong>zh</strong>: Chinese</li>
-     * <li><strong>en</strong>: English</li>
+     * <li><strong>en</strong>: English.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -36,7 +36,7 @@ public class DescribeTaskListRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>Page size, with a default value of 10.</p>
+     * <p>The number of entries per page. Default value: 10.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -45,7 +45,7 @@ public class DescribeTaskListRequest extends TeaModel {
     public String pageSize;
 
     /**
-     * <p>Region code</p>
+     * <p>The region code.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>

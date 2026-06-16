@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeDecisionResultTrendResponseBody extends TeaModel {
     /**
-     * <p>Status code</p>
+     * <p>The status code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,7 +14,7 @@ public class DescribeDecisionResultTrendResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>HTTP status code</p>
+     * <p>The HTTP status code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -23,7 +23,7 @@ public class DescribeDecisionResultTrendResponseBody extends TeaModel {
     public String httpStatusCode;
 
     /**
-     * <p>Error details</p>
+     * <p>The error details.</p>
      * 
      * <strong>example:</strong>
      * <p>The input parameter data is not valid. order_storage_company_num component not found</p>
@@ -32,7 +32,7 @@ public class DescribeDecisionResultTrendResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Request ID.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>AE7E6105-7DEB-5125-9B24-DCBC139F6CD2</p>
@@ -41,13 +41,13 @@ public class DescribeDecisionResultTrendResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Returned object</p>
+     * <p>The returned object.</p>
      */
     @NameInMap("resultObject")
     public DescribeDecisionResultTrendResponseBodyResultObject resultObject;
 
     /**
-     * <p>Whether the request was successful.</p>
+     * <p>Indicates whether the request was successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -110,7 +110,7 @@ public class DescribeDecisionResultTrendResponseBody extends TeaModel {
 
     public static class DescribeDecisionResultTrendResponseBodyResultObjectSeriesData extends TeaModel {
         /**
-         * <p>Number</p>
+         * <p>The quantity.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -119,7 +119,7 @@ public class DescribeDecisionResultTrendResponseBody extends TeaModel {
         public Long num;
 
         /**
-         * <p>ratio</p>
+         * <p>The ratio.</p>
          * 
          * <strong>example:</strong>
          * <p>5.56%</p>
@@ -152,13 +152,13 @@ public class DescribeDecisionResultTrendResponseBody extends TeaModel {
 
     public static class DescribeDecisionResultTrendResponseBodyResultObjectSeries extends TeaModel {
         /**
-         * <p>Returned data object</p>
+         * <p>The returned data object.</p>
          */
         @NameInMap("data")
         public java.util.List<DescribeDecisionResultTrendResponseBodyResultObjectSeriesData> data;
 
         /**
-         * <p>Name.</p>
+         * <p>The name.</p>
          * 
          * <strong>example:</strong>
          * <p>IpTag_FFF</p>
@@ -191,7 +191,7 @@ public class DescribeDecisionResultTrendResponseBody extends TeaModel {
 
     public static class DescribeDecisionResultTrendResponseBodyResultObjectXaxis extends TeaModel {
         /**
-         * <p>X-axis data structure.</p>
+         * <p>The xaxis data structure.</p>
          */
         @NameInMap("data")
         public java.util.List<String> data;
@@ -213,13 +213,13 @@ public class DescribeDecisionResultTrendResponseBody extends TeaModel {
 
     public static class DescribeDecisionResultTrendResponseBodyResultObject extends TeaModel {
         /**
-         * <p>Chart data</p>
+         * <p>The chart data.</p>
          */
         @NameInMap("series")
         public java.util.List<DescribeDecisionResultTrendResponseBodyResultObjectSeries> series;
 
         /**
-         * <p>X-axis data</p>
+         * <p>The x-axis data.</p>
          */
         @NameInMap("xaxis")
         public DescribeDecisionResultTrendResponseBodyResultObjectXaxis xaxis;

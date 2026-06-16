@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class SwitchQueryVariableResponseBody extends TeaModel {
     /**
-     * <p>Request ID</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>A32FE941-35F2-5378-B37C-4B8FDB16F094</p>
@@ -14,7 +14,7 @@ public class SwitchQueryVariableResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Return object</p>
+     * <p>The response object.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>

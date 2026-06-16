@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class DescribeHasRuleNameByEventCodeRequest extends TeaModel {
     /**
-     * <p>Sets the language type for requests and received messages, default value is <strong>zh</strong>. Values: </p>
+     * <p>The language of the request and response. Default value: <strong>zh</strong>. Valid values:</p>
      * <ul>
-     * <li><strong>zh</strong>: Chinese</li>
-     * <li><strong>en</strong>: English</li>
+     * <li><strong>zh</strong>: Chinese.</li>
+     * <li><strong>en</strong>: English.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,7 +18,7 @@ public class DescribeHasRuleNameByEventCodeRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>Event code</p>
+     * <p>The event code.</p>
      * 
      * <strong>example:</strong>
      * <p>de_atvmlf7412</p>
@@ -27,7 +27,7 @@ public class DescribeHasRuleNameByEventCodeRequest extends TeaModel {
     public String eventCode;
 
     /**
-     * <p>Excluded policy ID</p>
+     * <p>The ID of the policy to exclude.</p>
      * 
      * <strong>example:</strong>
      * <p>10621</p>
@@ -36,7 +36,7 @@ public class DescribeHasRuleNameByEventCodeRequest extends TeaModel {
     public String excludeRuleId;
 
     /**
-     * <p>Region code</p>
+     * <p>The region code.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -45,7 +45,7 @@ public class DescribeHasRuleNameByEventCodeRequest extends TeaModel {
     public String regId;
 
     /**
-     * <p>Policy name</p>
+     * <p>The policy name.</p>
      * 
      * <strong>example:</strong>
      * <p>非常见设备</p>

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CancelSubTaskResponseBody extends TeaModel {
     /**
+     * <p>Service code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -12,6 +14,8 @@ public class CancelSubTaskResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -19,6 +23,8 @@ public class CancelSubTaskResponseBody extends TeaModel {
     public String httpStatusCode;
 
     /**
+     * <p>Message returned by the API request.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -26,6 +32,8 @@ public class CancelSubTaskResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>A32FE941-35F2-5378-B37C-4B8FDB16F094</p>
      */
@@ -33,6 +41,8 @@ public class CancelSubTaskResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Return Result.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

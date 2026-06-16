@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeListPocResponseBody extends TeaModel {
     /**
-     * <p>Status code.</p>
+     * <p>The status code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,7 +14,7 @@ public class DescribeListPocResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>Current page.</p>
+     * <p>The current page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -23,7 +23,7 @@ public class DescribeListPocResponseBody extends TeaModel {
     public String currentPage;
 
     /**
-     * <p>HTTP status code.</p>
+     * <p>The HTTP status code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -32,7 +32,7 @@ public class DescribeListPocResponseBody extends TeaModel {
     public String httpStatusCode;
 
     /**
-     * <p>Return message.</p>
+     * <p>The response message.</p>
      * 
      * <strong>example:</strong>
      * <p>successful</p>
@@ -41,7 +41,7 @@ public class DescribeListPocResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Page size.</p>
+     * <p>The number of entries per page.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -50,7 +50,7 @@ public class DescribeListPocResponseBody extends TeaModel {
     public String pageSize;
 
     /**
-     * <p>Request ID.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>A32FE941-35F2-5378-B37C-4B8FDB16F094</p>
@@ -59,7 +59,7 @@ public class DescribeListPocResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Return result.</p>
+     * <p>The returned result.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -68,7 +68,7 @@ public class DescribeListPocResponseBody extends TeaModel {
     public Boolean resultObject;
 
     /**
-     * <p>Total number of items returned.</p>
+     * <p>The total number of entries returned.</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>
@@ -77,7 +77,7 @@ public class DescribeListPocResponseBody extends TeaModel {
     public String totalItem;
 
     /**
-     * <p>Total number of pages.</p>
+     * <p>The total number of pages.</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>

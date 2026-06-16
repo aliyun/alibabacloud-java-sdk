@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeRuleListByEventCodesListResponseBody extends TeaModel {
     /**
-     * <p>Request ID.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>A32FE941-35F2-5378-B37C-4B8FDB16F094</p>
@@ -14,7 +14,7 @@ public class DescribeRuleListByEventCodesListResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Returned object</p>
+     * <p>The returned object.</p>
      */
     @NameInMap("resultObject")
     public java.util.List<DescribeRuleListByEventCodesListResponseBodyResultObject> resultObject;
@@ -42,7 +42,7 @@ public class DescribeRuleListByEventCodesListResponseBody extends TeaModel {
 
     public static class DescribeRuleListByEventCodesListResponseBodyResultObject extends TeaModel {
         /**
-         * <p>Policy ID</p>
+         * <p>The policy ID.</p>
          * 
          * <strong>example:</strong>
          * <p>4730</p>
@@ -51,7 +51,7 @@ public class DescribeRuleListByEventCodesListResponseBody extends TeaModel {
         public String ruleId;
 
         /**
-         * <p>Policy name</p>
+         * <p>The policy name.</p>
          * 
          * <strong>example:</strong>
          * <p>营销风险识别</p>

@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class UpdateRuleBaseRequest extends TeaModel {
     /**
-     * <p>Set the language type for requests and received messages, default value is <strong>zh</strong>. Values:</p>
+     * <p>The language of the request and response. Default value: <strong>zh</strong>. Valid values:</p>
      * <ul>
      * <li><strong>zh</strong>: Chinese</li>
-     * <li><strong>en</strong>: English</li>
+     * <li><strong>en</strong>: English.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,7 +18,7 @@ public class UpdateRuleBaseRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>Policy primary key ID</p>
+     * <p>The primary key ID of the policy.</p>
      * 
      * <strong>example:</strong>
      * <p>6843</p>
@@ -27,7 +27,7 @@ public class UpdateRuleBaseRequest extends TeaModel {
     public Long consoleRuleId;
 
     /**
-     * <p>Event code</p>
+     * <p>The event code.</p>
      * 
      * <strong>example:</strong>
      * <p>de_arcehq4370</p>
@@ -36,7 +36,7 @@ public class UpdateRuleBaseRequest extends TeaModel {
     public String eventCode;
 
     /**
-     * <p>Description</p>
+     * <p>The description.</p>
      * 
      * <strong>example:</strong>
      * <p>备注</p>
@@ -45,7 +45,7 @@ public class UpdateRuleBaseRequest extends TeaModel {
     public String memo;
 
     /**
-     * <p>Region code</p>
+     * <p>The region code.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -54,7 +54,7 @@ public class UpdateRuleBaseRequest extends TeaModel {
     public String regId;
 
     /**
-     * <p>Policy ID</p>
+     * <p>The policy ID.</p>
      * 
      * <strong>example:</strong>
      * <p>102224</p>
@@ -63,7 +63,7 @@ public class UpdateRuleBaseRequest extends TeaModel {
     public String ruleId;
 
     /**
-     * <p>Policy name</p>
+     * <p>The policy name.</p>
      * 
      * <strong>example:</strong>
      * <p>营销风险识别</p>

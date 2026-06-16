@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeQueryVariableDetailResponseBody extends TeaModel {
     /**
-     * <p>Request ID.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>A32FE941-35F2-5378-B37C-4B8FDB16F094</p>
@@ -14,7 +14,7 @@ public class DescribeQueryVariableDetailResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Returned object</p>
+     * <p>The returned object.</p>
      */
     @NameInMap("resultObject")
     public DescribeQueryVariableDetailResponseBodyResultObject resultObject;
@@ -42,7 +42,7 @@ public class DescribeQueryVariableDetailResponseBody extends TeaModel {
 
     public static class DescribeQueryVariableDetailResponseBodyResultObject extends TeaModel {
         /**
-         * <p>Data source code.</p>
+         * <p>The data source code.</p>
          * 
          * <strong>example:</strong>
          * <p>ds_vcaoii1697</p>
@@ -51,7 +51,7 @@ public class DescribeQueryVariableDetailResponseBody extends TeaModel {
         public Long dataSourceCode;
 
         /**
-         * <p>Data source name</p>
+         * <p>The data source name.</p>
          * 
          * <strong>example:</strong>
          * <p>名称数据源</p>
@@ -60,7 +60,7 @@ public class DescribeQueryVariableDetailResponseBody extends TeaModel {
         public String dataSourceName;
 
         /**
-         * <p>Description.</p>
+         * <p>The description.</p>
          * 
          * <strong>example:</strong>
          * <p>变量描述</p>
@@ -69,7 +69,7 @@ public class DescribeQueryVariableDetailResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>Event code</p>
+         * <p>The event code.</p>
          * 
          * <strong>example:</strong>
          * <p>de_aszbjb7236</p>
@@ -78,7 +78,7 @@ public class DescribeQueryVariableDetailResponseBody extends TeaModel {
         public String eventCode;
 
         /**
-         * <p>Expression.</p>
+         * <p>The expression.</p>
          * 
          * <strong>example:</strong>
          * <p>SELECT  AVG( $source )\nFROM ds_vcaoii1697 \nWHERE  $age &gt; 0</p>
@@ -87,7 +87,7 @@ public class DescribeQueryVariableDetailResponseBody extends TeaModel {
         public String expression;
 
         /**
-         * <p>Expression title.</p>
+         * <p>The expression name.</p>
          * 
          * <strong>example:</strong>
          * <p>SELECT  AVG( $source )\nFROM testCase\nWHERE  $age &gt; 0</p>
@@ -96,7 +96,7 @@ public class DescribeQueryVariableDetailResponseBody extends TeaModel {
         public String expressionTitle;
 
         /**
-         * <p>Expression variable.</p>
+         * <p>The expression variable.</p>
          * 
          * <strong>example:</strong>
          * <p>[96426]</p>
@@ -105,7 +105,7 @@ public class DescribeQueryVariableDetailResponseBody extends TeaModel {
         public String expressionVariable;
 
         /**
-         * <p>Variable ID</p>
+         * <p>The variable ID.</p>
          * 
          * <strong>example:</strong>
          * <p>355</p>
@@ -114,7 +114,7 @@ public class DescribeQueryVariableDetailResponseBody extends TeaModel {
         public Long id;
 
         /**
-         * <p>Outlier</p>
+         * <p>The outlier value.</p>
          * 
          * <strong>example:</strong>
          * <p>-1</p>
@@ -123,7 +123,7 @@ public class DescribeQueryVariableDetailResponseBody extends TeaModel {
         public String outlier;
 
         /**
-         * <p>Output results.</p>
+         * <p>The output result.</p>
          * 
          * <strong>example:</strong>
          * <p>DOUBLE</p>
@@ -132,7 +132,7 @@ public class DescribeQueryVariableDetailResponseBody extends TeaModel {
         public String outputs;
 
         /**
-         * <p>Title.</p>
+         * <p>The title.</p>
          * 
          * <strong>example:</strong>
          * <p>自定义查询变量标题</p>

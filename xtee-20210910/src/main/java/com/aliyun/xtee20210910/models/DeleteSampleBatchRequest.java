@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class DeleteSampleBatchRequest extends TeaModel {
     /**
-     * <p>Sets the language type for requests and received messages, with a default value of <strong>zh</strong>. Values: </p>
+     * <p>The language type for the request and response. Default value: <strong>zh</strong>. Valid values:</p>
      * <ul>
-     * <li><strong>zh</strong>: Chinese</li>
-     * <li><strong>en</strong>: English</li>
+     * <li><strong>zh</strong>: Chinese.</li>
+     * <li><strong>en</strong>: English.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,7 +18,7 @@ public class DeleteSampleBatchRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>IDs for batch deletion operations.</p>
+     * <p>The IDs of the samples to delete in batches.</p>
      * 
      * <strong>example:</strong>
      * <p>324,343</p>
@@ -27,7 +27,7 @@ public class DeleteSampleBatchRequest extends TeaModel {
     public String ids;
 
     /**
-     * <p>Region code.</p>
+     * <p>The region code.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -36,7 +36,7 @@ public class DeleteSampleBatchRequest extends TeaModel {
     public String regId;
 
     /**
-     * <p>List of versions.</p>
+     * <p>The list of versions.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

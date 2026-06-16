@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeTaskListResponseBody extends TeaModel {
     /**
-     * <p>Request ID.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>A32FE941-35F2-5378-B37C-4B8FDB16F094</p>
@@ -14,7 +14,7 @@ public class DescribeTaskListResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Current page number.</p>
+     * <p>The current page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -23,7 +23,7 @@ public class DescribeTaskListResponseBody extends TeaModel {
     public Integer currentPage;
 
     /**
-     * <p>Page size, with a default value of 10</p>
+     * <p>The number of entries per page. Default value: 10.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -32,13 +32,13 @@ public class DescribeTaskListResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>Returned object</p>
+     * <p>The returned object.</p>
      */
     @NameInMap("resultObject")
     public java.util.List<DescribeTaskListResponseBodyResultObject> resultObject;
 
     /**
-     * <p>Total number of items</p>
+     * <p>The total number of entries.</p>
      * 
      * <strong>example:</strong>
      * <p>6</p>
@@ -47,7 +47,7 @@ public class DescribeTaskListResponseBody extends TeaModel {
     public Integer totalItem;
 
     /**
-     * <p>Total number of pages</p>
+     * <p>The total number of pages.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -110,7 +110,7 @@ public class DescribeTaskListResponseBody extends TeaModel {
 
     public static class DescribeTaskListResponseBodyResultObject extends TeaModel {
         /**
-         * <p>Completion time, in milliseconds.</p>
+         * <p>The completion time. Unit: milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1753804800000</p>
@@ -119,7 +119,7 @@ public class DescribeTaskListResponseBody extends TeaModel {
         public Long completionTime;
 
         /**
-         * <p>Creation time.</p>
+         * <p>The creation time.</p>
          * 
          * <strong>example:</strong>
          * <p>1753804800000</p>
@@ -128,7 +128,7 @@ public class DescribeTaskListResponseBody extends TeaModel {
         public Long createTime;
 
         /**
-         * <p>Task ID.</p>
+         * <p>The task ID.</p>
          * 
          * <strong>example:</strong>
          * <p>497</p>
@@ -137,7 +137,7 @@ public class DescribeTaskListResponseBody extends TeaModel {
         public Long id;
 
         /**
-         * <p>Total number of mark information.</p>
+         * <p>The total number of mark entries.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -146,7 +146,7 @@ public class DescribeTaskListResponseBody extends TeaModel {
         public Integer mark;
 
         /**
-         * <p>Remark.</p>
+         * <p>The remarks.</p>
          * 
          * <strong>example:</strong>
          * <p>备注</p>
@@ -155,7 +155,7 @@ public class DescribeTaskListResponseBody extends TeaModel {
         public String remark;
 
         /**
-         * <p>Scene name</p>
+         * <p>The scenario name.</p>
          * 
          * <strong>example:</strong>
          * <p>样本调度</p>
@@ -164,11 +164,13 @@ public class DescribeTaskListResponseBody extends TeaModel {
         public String sceneName;
 
         /**
-         * <p>Data status.</p>
-         * <p>-1: Failed
-         * 0: Deleted
-         * 1: Pending
-         * 2: Success</p>
+         * <p>The data status. Valid values:</p>
+         * <ul>
+         * <li>-1: Failed.</li>
+         * <li>0: Deleted.</li>
+         * <li>1: Pending.</li>
+         * <li>2: Succeeded.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -177,7 +179,7 @@ public class DescribeTaskListResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>Task ID.</p>
+         * <p>The task ID.</p>
          * 
          * <strong>example:</strong>
          * <p>1102</p>
@@ -186,10 +188,12 @@ public class DescribeTaskListResponseBody extends TeaModel {
         public Long taskLogId;
 
         /**
-         * <p>Task type
-         * 1: Data upload
-         * 2: Supplemental upload
-         * 3: Labeling</p>
+         * <p>The task type. Valid values:</p>
+         * <ul>
+         * <li>1: data upload</li>
+         * <li>2: supplementary upload</li>
+         * <li>3: labeling.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>1</p>

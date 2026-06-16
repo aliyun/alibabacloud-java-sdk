@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class MergeDownloadResponseBody extends TeaModel {
     /**
+     * <p>Status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -12,6 +14,8 @@ public class MergeDownloadResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -19,6 +23,8 @@ public class MergeDownloadResponseBody extends TeaModel {
     public String httpStatusCode;
 
     /**
+     * <p>Return message.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -26,12 +32,17 @@ public class MergeDownloadResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>A32FE941-35F2-5378-B37C-4B8FDB16F094</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Return Result.</p>
+     */
     @NameInMap("ResultObject")
     public MergeDownloadResponseBodyResultObject resultObject;
 
@@ -82,6 +93,8 @@ public class MergeDownloadResponseBody extends TeaModel {
 
     public static class MergeDownloadResponseBodyResultObject extends TeaModel {
         /**
+         * <p>Status.</p>
+         * 
          * <strong>example:</strong>
          * <p>Success</p>
          */
@@ -89,6 +102,8 @@ public class MergeDownloadResponseBody extends TeaModel {
         public String status;
 
         /**
+         * <p>OSS download URL.</p>
+         * 
          * <strong>example:</strong>
          * <p>rtmp://push-live.gaotime.com/jiaenguang789/21645251932448?auth_key=1768357031-0-0-6e2a4815fe4e2287a86be1105d42bf53</p>
          */

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeEventResultBarChartResponseBody extends TeaModel {
     /**
-     * <p>Status code.</p>
+     * <p>The status code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,7 +14,7 @@ public class DescribeEventResultBarChartResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>HTTP status code</p>
+     * <p>The HTTP status code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -23,7 +23,7 @@ public class DescribeEventResultBarChartResponseBody extends TeaModel {
     public String httpStatusCode;
 
     /**
-     * <p>Error message.</p>
+     * <p>The error message.</p>
      * 
      * <strong>example:</strong>
      * <p>The input parameter data is not valid. order_storage_company_num component not found</p>
@@ -32,7 +32,7 @@ public class DescribeEventResultBarChartResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Request ID</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>AE7E6105-7DEB-5125-9B24-DCBC139F6CD2</p>
@@ -41,13 +41,13 @@ public class DescribeEventResultBarChartResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Returned object</p>
+     * <p>The response object.</p>
      */
     @NameInMap("resultObject")
     public DescribeEventResultBarChartResponseBodyResultObject resultObject;
 
     /**
-     * <p>Whether the request was successful.</p>
+     * <p>Indicates whether the request was successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -110,7 +110,7 @@ public class DescribeEventResultBarChartResponseBody extends TeaModel {
 
     public static class DescribeEventResultBarChartResponseBodyResultObjectSeriesData extends TeaModel {
         /**
-         * <p>Number.</p>
+         * <p>The quantity.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -119,7 +119,7 @@ public class DescribeEventResultBarChartResponseBody extends TeaModel {
         public Long num;
 
         /**
-         * <p>Scale</p>
+         * <p>The proportion.</p>
          * 
          * <strong>example:</strong>
          * <p>50.00%</p>
@@ -152,13 +152,13 @@ public class DescribeEventResultBarChartResponseBody extends TeaModel {
 
     public static class DescribeEventResultBarChartResponseBodyResultObjectSeries extends TeaModel {
         /**
-         * <p>Returned data object</p>
+         * <p>The response data.</p>
          */
         @NameInMap("data")
         public java.util.List<DescribeEventResultBarChartResponseBodyResultObjectSeriesData> data;
 
         /**
-         * <p>Series name.</p>
+         * <p>The name of the series.</p>
          * 
          * <strong>example:</strong>
          * <p>通过</p>
@@ -167,7 +167,7 @@ public class DescribeEventResultBarChartResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>Label key</p>
+         * <p>The tag key.</p>
          * 
          * <strong>example:</strong>
          * <p>通过</p>
@@ -208,7 +208,7 @@ public class DescribeEventResultBarChartResponseBody extends TeaModel {
 
     public static class DescribeEventResultBarChartResponseBodyResultObjectXaxis extends TeaModel {
         /**
-         * <p>Returned data object</p>
+         * <p>The response data.</p>
          */
         @NameInMap("data")
         public java.util.List<String> data;
@@ -230,13 +230,13 @@ public class DescribeEventResultBarChartResponseBody extends TeaModel {
 
     public static class DescribeEventResultBarChartResponseBodyResultObject extends TeaModel {
         /**
-         * <p>Chart data</p>
+         * <p>The chart data.</p>
          */
         @NameInMap("series")
         public java.util.List<DescribeEventResultBarChartResponseBodyResultObjectSeries> series;
 
         /**
-         * <p>xaxis interface configuration.</p>
+         * <p>The xaxis configuration.</p>
          */
         @NameInMap("xaxis")
         public DescribeEventResultBarChartResponseBodyResultObjectXaxis xaxis;

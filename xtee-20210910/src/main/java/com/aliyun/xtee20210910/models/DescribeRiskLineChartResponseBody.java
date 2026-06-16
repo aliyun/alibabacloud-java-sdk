@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeRiskLineChartResponseBody extends TeaModel {
     /**
-     * <p>Status code.</p>
+     * <p>The status code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,7 +14,7 @@ public class DescribeRiskLineChartResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>HTTP status code</p>
+     * <p>The HTTP status code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -23,7 +23,7 @@ public class DescribeRiskLineChartResponseBody extends TeaModel {
     public String httpStatusCode;
 
     /**
-     * <p>Error message.</p>
+     * <p>The error message.</p>
      * 
      * <strong>example:</strong>
      * <p>The input parameter data is not valid. order_storage_company_num component not found</p>
@@ -32,7 +32,7 @@ public class DescribeRiskLineChartResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Request ID.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>AE7E6105-7DEB-5125-9B24-DCBC139F6CD2</p>
@@ -41,13 +41,13 @@ public class DescribeRiskLineChartResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Returned object</p>
+     * <p>The returned object.</p>
      */
     @NameInMap("resultObject")
     public DescribeRiskLineChartResponseBodyResultObject resultObject;
 
     /**
-     * <p>Whether the request was successful.</p>
+     * <p>Indicates whether the request was successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -110,13 +110,13 @@ public class DescribeRiskLineChartResponseBody extends TeaModel {
 
     public static class DescribeRiskLineChartResponseBodyResultObjectSeries extends TeaModel {
         /**
-         * <p>Line chart data</p>
+         * <p>The data of the line chart.</p>
          */
         @NameInMap("data")
         public java.util.List<String> data;
 
         /**
-         * <p>Title of the line segment in the line chart</p>
+         * <p>The title of the line segment in the line chart.</p>
          * 
          * <strong>example:</strong>
          * <p>rm0102</p>
@@ -149,7 +149,7 @@ public class DescribeRiskLineChartResponseBody extends TeaModel {
 
     public static class DescribeRiskLineChartResponseBodyResultObjectXaxis extends TeaModel {
         /**
-         * <p>Returns x-axis data points</p>
+         * <p>The data of the X-axis.</p>
          */
         @NameInMap("data")
         public java.util.List<String> data;
@@ -171,13 +171,13 @@ public class DescribeRiskLineChartResponseBody extends TeaModel {
 
     public static class DescribeRiskLineChartResponseBodyResultObject extends TeaModel {
         /**
-         * <p>Data list</p>
+         * <p>The data list.</p>
          */
         @NameInMap("series")
         public java.util.List<DescribeRiskLineChartResponseBodyResultObjectSeries> series;
 
         /**
-         * <p>Details of xaxis node.</p>
+         * <p>The details of the xaxis node.</p>
          */
         @NameInMap("xaxis")
         public DescribeRiskLineChartResponseBodyResultObjectXaxis xaxis;

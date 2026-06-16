@@ -5,16 +5,16 @@ import com.aliyun.tea.*;
 
 public class DescribeOssPolicyResponseBody extends TeaModel {
     /**
-     * <p>accessId, a parameter used in OSS SDK uploads, corresponding to OSSAccessKeyId</p>
+     * <p>The access ID. This parameter corresponds to OSSAccessKeyId when you use the OSS SDK for upload.</p>
      * 
      * <strong>example:</strong>
-     * <p>LTAxxxxxxxxxxxx</p>
+     * <p>LTAIpeYTKEbC0v10</p>
      */
     @NameInMap("AccessId")
     public String accessId;
 
     /**
-     * <p>OSS host ID.</p>
+     * <p>The host ID of OSS.</p>
      * 
      * <strong>example:</strong>
      * <p>testvm.biubiubiuu.com</p>
@@ -23,7 +23,7 @@ public class DescribeOssPolicyResponseBody extends TeaModel {
     public String host;
 
     /**
-     * <p>Key required for file upload.</p>
+     * <p>The key required for file upload.</p>
      * 
      * <strong>example:</strong>
      * <p>saf/a/uid/ccc</p>
@@ -32,7 +32,7 @@ public class DescribeOssPolicyResponseBody extends TeaModel {
     public String key;
 
     /**
-     * <p>OSS security policy</p>
+     * <p>The OSS security policy.</p>
      * 
      * <strong>example:</strong>
      * <p>eyJleHBpxxxxxx</p>
@@ -41,7 +41,7 @@ public class DescribeOssPolicyResponseBody extends TeaModel {
     public String policy;
 
     /**
-     * <p>Signature data.</p>
+     * <p>The signature data.</p>
      * 
      * <strong>example:</strong>
      * <p>tzl1wL4q8rR/xxxxxx</p>
@@ -50,7 +50,7 @@ public class DescribeOssPolicyResponseBody extends TeaModel {
     public String signature;
 
     /**
-     * <p>Request ID.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>AE7E6105-7DEB-5125-9B24-DCBC139F6CD2</p>

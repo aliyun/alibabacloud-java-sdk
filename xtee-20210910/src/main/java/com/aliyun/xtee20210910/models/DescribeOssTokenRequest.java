@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class DescribeOssTokenRequest extends TeaModel {
     /**
-     * <p>Sets the language type for requests and received messages, with a default value of <strong>zh</strong>. Values:</p>
+     * <p>The language of the request and response. Default value: <strong>zh</strong>. Valid values:</p>
      * <ul>
-     * <li><strong>zh</strong>: Chinese</li>
-     * <li><strong>en</strong>: English</li>
+     * <li><strong>zh</strong>: Chinese.</li>
+     * <li><strong>en</strong>: English.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,7 +18,7 @@ public class DescribeOssTokenRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>File name.</p>
+     * <p>The file name.</p>
      * 
      * <strong>example:</strong>
      * <p>test.csv</p>
@@ -27,7 +27,7 @@ public class DescribeOssTokenRequest extends TeaModel {
     public String fileName;
 
     /**
-     * <p>Region code</p>
+     * <p>The region code.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -36,7 +36,7 @@ public class DescribeOssTokenRequest extends TeaModel {
     public String regId;
 
     /**
-     * <p>Upload type</p>
+     * <p>The upload type.</p>
      * 
      * <strong>example:</strong>
      * <p>COMMUNITY_SAMPLE</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeEventTotalCountReportRequest extends TeaModel {
     /**
-     * <p>Sets the language type for requests and received messages, default value is <strong>zh</strong>. Values:</p>
+     * <p>Sets the language type for requests and responses. Default value: <strong>zh</strong>. Valid values:</p>
      * <ul>
      * <li><strong>zh</strong>: Chinese</li>
      * <li><strong>en</strong>: English</li>
@@ -18,7 +18,7 @@ public class DescribeEventTotalCountReportRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>Region code</p>
+     * <p>Region ID.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>

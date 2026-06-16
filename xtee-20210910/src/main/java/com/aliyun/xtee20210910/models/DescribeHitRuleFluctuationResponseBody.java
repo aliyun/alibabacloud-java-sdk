@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeHitRuleFluctuationResponseBody extends TeaModel {
     /**
-     * <p>Status code.</p>
+     * <p>The status code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,7 +14,7 @@ public class DescribeHitRuleFluctuationResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>HTTP status code</p>
+     * <p>The HTTP status code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -23,7 +23,7 @@ public class DescribeHitRuleFluctuationResponseBody extends TeaModel {
     public String httpStatusCode;
 
     /**
-     * <p>Error message.</p>
+     * <p>The error message.</p>
      * 
      * <strong>example:</strong>
      * <p>The input parameter data is not valid. order_storage_company_num component not found</p>
@@ -32,7 +32,7 @@ public class DescribeHitRuleFluctuationResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Request ID.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>AE7E6105-7DEB-5125-9B24-DCBC139F6CD2</p>
@@ -41,13 +41,13 @@ public class DescribeHitRuleFluctuationResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Return object</p>
+     * <p>The returned object.</p>
      */
     @NameInMap("resultObject")
     public java.util.List<DescribeHitRuleFluctuationResponseBodyResultObject> resultObject;
 
     /**
-     * <p>Whether the request was successful.</p>
+     * <p>Indicates whether the request was successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -110,7 +110,7 @@ public class DescribeHitRuleFluctuationResponseBody extends TeaModel {
 
     public static class DescribeHitRuleFluctuationResponseBodyResultObject extends TeaModel {
         /**
-         * <p>Policy ID</p>
+         * <p>The policy ID.</p>
          * 
          * <strong>example:</strong>
          * <p>115019</p>
@@ -119,7 +119,7 @@ public class DescribeHitRuleFluctuationResponseBody extends TeaModel {
         public String ruleId;
 
         /**
-         * <p>Policy name</p>
+         * <p>The policy name.</p>
          * 
          * <strong>example:</strong>
          * <p>营销风险识别</p>
@@ -128,7 +128,7 @@ public class DescribeHitRuleFluctuationResponseBody extends TeaModel {
         public String ruleName;
 
         /**
-         * <p>Today\&quot;s count</p>
+         * <p>The number of hits today.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -137,7 +137,7 @@ public class DescribeHitRuleFluctuationResponseBody extends TeaModel {
         public Long todayNum;
 
         /**
-         * <p>Count within seven days</p>
+         * <p>The number of hits in the last seven days.</p>
          * 
          * <strong>example:</strong>
          * <p>600</p>
@@ -146,7 +146,7 @@ public class DescribeHitRuleFluctuationResponseBody extends TeaModel {
         public String withinSevenDayNum;
 
         /**
-         * <p>Count within thirty days</p>
+         * <p>The number of hits in the last thirty days.</p>
          * 
          * <strong>example:</strong>
          * <p>1200</p>
@@ -155,7 +155,7 @@ public class DescribeHitRuleFluctuationResponseBody extends TeaModel {
         public String withinThirtyDayNum;
 
         /**
-         * <p>Count within three days</p>
+         * <p>The number of hits in the last three days.</p>
          * 
          * <strong>example:</strong>
          * <p>300</p>
@@ -164,7 +164,7 @@ public class DescribeHitRuleFluctuationResponseBody extends TeaModel {
         public String withinThreeDayNum;
 
         /**
-         * <p>Yesterday\&quot;s count</p>
+         * <p>The number of hits yesterday.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>

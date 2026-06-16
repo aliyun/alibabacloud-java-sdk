@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeOperatorListResponseBody extends TeaModel {
     /**
-     * <p>Request ID.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>A32FE941-35F2-5378-B37C-4B8FDB16F094</p>
@@ -14,7 +14,7 @@ public class DescribeOperatorListResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Return object</p>
+     * <p>The returned object.</p>
      */
     @NameInMap("resultObject")
     public java.util.List<DescribeOperatorListResponseBodyResultObject> resultObject;
@@ -42,7 +42,7 @@ public class DescribeOperatorListResponseBody extends TeaModel {
 
     public static class DescribeOperatorListResponseBodyResultObjectOperatorsRightVariables extends TeaModel {
         /**
-         * <p>Field name.</p>
+         * <p>The field name.</p>
          * 
          * <strong>example:</strong>
          * <p>年龄</p>
@@ -51,7 +51,7 @@ public class DescribeOperatorListResponseBody extends TeaModel {
         public String fieldName;
 
         /**
-         * <p>Field type.</p>
+         * <p>The type of the field.</p>
          * 
          * <strong>example:</strong>
          * <p>INT</p>
@@ -60,7 +60,7 @@ public class DescribeOperatorListResponseBody extends TeaModel {
         public String fieldType;
 
         /**
-         * <p>Field value.</p>
+         * <p>The field value.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -101,7 +101,7 @@ public class DescribeOperatorListResponseBody extends TeaModel {
 
     public static class DescribeOperatorListResponseBodyResultObjectOperators extends TeaModel {
         /**
-         * <p>Operator code</p>
+         * <p>The operator code.</p>
          * 
          * <strong>example:</strong>
          * <p>equals</p>
@@ -110,7 +110,7 @@ public class DescribeOperatorListResponseBody extends TeaModel {
         public String code;
 
         /**
-         * <p>Whether it contains a right variable</p>
+         * <p>Indicates whether a right variable exists.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -119,7 +119,7 @@ public class DescribeOperatorListResponseBody extends TeaModel {
         public Boolean hasRightVariable;
 
         /**
-         * <p>Description</p>
+         * <p>The description.</p>
          * 
          * <strong>example:</strong>
          * <p>等于</p>
@@ -128,7 +128,7 @@ public class DescribeOperatorListResponseBody extends TeaModel {
         public String memo;
 
         /**
-         * <p>Operator name</p>
+         * <p>The operator name.</p>
          * 
          * <strong>example:</strong>
          * <p>等于</p>
@@ -137,7 +137,7 @@ public class DescribeOperatorListResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>Right variable object</p>
+         * <p>The right variable object.</p>
          */
         @NameInMap("rightVariables")
         public java.util.List<DescribeOperatorListResponseBodyResultObjectOperatorsRightVariables> rightVariables;
@@ -191,7 +191,7 @@ public class DescribeOperatorListResponseBody extends TeaModel {
 
     public static class DescribeOperatorListResponseBodyResultObject extends TeaModel {
         /**
-         * <p>Return value type</p>
+         * <p>The type of the return value.</p>
          * 
          * <strong>example:</strong>
          * <p>STRING</p>
@@ -200,7 +200,7 @@ public class DescribeOperatorListResponseBody extends TeaModel {
         public String fieldType;
 
         /**
-         * <p>Operator list</p>
+         * <p>The list of operators.</p>
          */
         @NameInMap("operators")
         public java.util.List<DescribeOperatorListResponseBodyResultObjectOperators> operators;

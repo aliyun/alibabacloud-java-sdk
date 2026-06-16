@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeAuthEventNameListResponseBody extends TeaModel {
     /**
-     * <p>Request ID.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>AE7E6105-7DEB-5125-9B24-DCBC139F6CD2</p>
@@ -14,7 +14,7 @@ public class DescribeAuthEventNameListResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Return object</p>
+     * <p>The returned object.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>

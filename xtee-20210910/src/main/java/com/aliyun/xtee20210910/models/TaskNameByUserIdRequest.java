@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class TaskNameByUserIdRequest extends TeaModel {
     /**
-     * <p>Set the language type for requests and received messages, default value is <strong>zh</strong>. Values:</p>
+     * <p>The language type for the request and response messages. Default value: <strong>zh</strong>. Valid values:</p>
      * <ul>
-     * <li><strong>zh</strong>: Chinese</li>
-     * <li><strong>en</strong>: English</li>
+     * <li><strong>zh</strong>: Chinese.</li>
+     * <li><strong>en</strong>: English.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,7 +18,7 @@ public class TaskNameByUserIdRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>Region code.</p>
+     * <p>The region ID.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -27,7 +27,7 @@ public class TaskNameByUserIdRequest extends TeaModel {
     public String regId;
 
     /**
-     * <p>Task name.</p>
+     * <p>The task name.</p>
      * 
      * <strong>example:</strong>
      * <p>Methylation_node_5_3</p>

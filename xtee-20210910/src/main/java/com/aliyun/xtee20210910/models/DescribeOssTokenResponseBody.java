@@ -5,16 +5,16 @@ import com.aliyun.tea.*;
 
 public class DescribeOssTokenResponseBody extends TeaModel {
     /**
-     * <p>AccessKeyId for OSS file upload.</p>
+     * <p>The AccessKey ID used to upload files to OSS.</p>
      * 
      * <strong>example:</strong>
-     * <p>LTAxxxxxxxxxxxx</p>
+     * <p>LTAI5tJWSnmmTpJGN6sJCNG3</p>
      */
     @NameInMap("AccessId")
     public String accessId;
 
     /**
-     * <p>Host address.</p>
+     * <p>The host address.</p>
      * 
      * <strong>example:</strong>
      * <p>kf.sunwoosoft.com</p>
@@ -23,7 +23,7 @@ public class DescribeOssTokenResponseBody extends TeaModel {
     public String host;
 
     /**
-     * <p>The Key required for file upload.</p>
+     * <p>The key required for file upload.</p>
      * 
      * <strong>example:</strong>
      * <p>saf/de/namelist/e924/ufzgsedX9bd3a7</p>
@@ -32,7 +32,7 @@ public class DescribeOssTokenResponseBody extends TeaModel {
     public String key;
 
     /**
-     * <p>Permission policy for ossbucket.</p>
+     * <p>The access policy of the OSS bucket.</p>
      * 
      * <strong>example:</strong>
      * <p>eyJleHBpcmF0aW9uIjoiMjAyNS0wNy0zMFQwNjowNTo0OS45NTRaIiwiY29uZGl0aW9ucyI6W1siY29udGVudC1sZW5ndGgtcmFuZ2UiLDAsMTA0ODU3NjAwMF0sWyJlcSIsIiRrZXkiLCJzYWZcL2RlXC9uYW1lbGlzdFwvZTkyNFwvdWZ6Z3NlZFg5Ymxxxxxxxxxxx</p>
@@ -41,7 +41,7 @@ public class DescribeOssTokenResponseBody extends TeaModel {
     public String policy;
 
     /**
-     * <p>Request ID.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>A32FE941-35F2-5378-B37C-4B8FDB16F094</p>
@@ -50,7 +50,7 @@ public class DescribeOssTokenResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>OSS signature.</p>
+     * <p>The OSS signature.</p>
      * 
      * <strong>example:</strong>
      * <p>n29by5MWBmAjcweVoPEY/OHktog=</p>
@@ -59,7 +59,7 @@ public class DescribeOssTokenResponseBody extends TeaModel {
     public String signature;
 
     /**
-     * <p>Temporary identity credential.</p>
+     * <p>The temporary security credential.</p>
      * 
      * <strong>example:</strong>
      * <p>tT44bMQxxxxxxxxxxxxxxx</p>

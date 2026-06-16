@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeTagsBarChartResponseBody extends TeaModel {
     /**
-     * <p>Status code.</p>
+     * <p>The status code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,7 +14,7 @@ public class DescribeTagsBarChartResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>HTTP status code</p>
+     * <p>The HTTP status code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -23,7 +23,7 @@ public class DescribeTagsBarChartResponseBody extends TeaModel {
     public String httpStatusCode;
 
     /**
-     * <p>Error message.</p>
+     * <p>The error message.</p>
      * 
      * <strong>example:</strong>
      * <p>The input parameter data is not valid. order_storage_company_num component not found</p>
@@ -32,7 +32,7 @@ public class DescribeTagsBarChartResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Request ID</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>AE7E6105-7DEB-5125-9B24-DCBC139F6CD2</p>
@@ -41,13 +41,13 @@ public class DescribeTagsBarChartResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Return object</p>
+     * <p>The returned object.</p>
      */
     @NameInMap("resultObject")
     public DescribeTagsBarChartResponseBodyResultObject resultObject;
 
     /**
-     * <p>Whether the request was successful.</p>
+     * <p>Indicates whether the request was successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -110,7 +110,7 @@ public class DescribeTagsBarChartResponseBody extends TeaModel {
 
     public static class DescribeTagsBarChartResponseBodyResultObjectSeriesData extends TeaModel {
         /**
-         * <p>Number.</p>
+         * <p>The quantity.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -119,7 +119,7 @@ public class DescribeTagsBarChartResponseBody extends TeaModel {
         public Long num;
 
         /**
-         * <p>Scale</p>
+         * <p>The ratio.</p>
          * 
          * <strong>example:</strong>
          * <p>10%</p>
@@ -152,13 +152,13 @@ public class DescribeTagsBarChartResponseBody extends TeaModel {
 
     public static class DescribeTagsBarChartResponseBodyResultObjectSeries extends TeaModel {
         /**
-         * <p>Chart data list</p>
+         * <p>The chart data list.</p>
          */
         @NameInMap("data")
         public java.util.List<DescribeTagsBarChartResponseBodyResultObjectSeriesData> data;
 
         /**
-         * <p>Series name.</p>
+         * <p>The series name.</p>
          * 
          * <strong>example:</strong>
          * <p>tag</p>
@@ -167,7 +167,7 @@ public class DescribeTagsBarChartResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>Chart field, same as name</p>
+         * <p>The chart field, which is the same as the name.</p>
          * 
          * <strong>example:</strong>
          * <p>tag</p>
@@ -208,7 +208,7 @@ public class DescribeTagsBarChartResponseBody extends TeaModel {
 
     public static class DescribeTagsBarChartResponseBodyResultObjectXaxis extends TeaModel {
         /**
-         * <p>xaxis data items</p>
+         * <p>The x-axis data items.</p>
          */
         @NameInMap("data")
         public java.util.List<String> data;
@@ -230,13 +230,13 @@ public class DescribeTagsBarChartResponseBody extends TeaModel {
 
     public static class DescribeTagsBarChartResponseBodyResultObject extends TeaModel {
         /**
-         * <p>Data list</p>
+         * <p>The data list.</p>
          */
         @NameInMap("series")
         public java.util.List<DescribeTagsBarChartResponseBodyResultObjectSeries> series;
 
         /**
-         * <p>xaxis interface configuration.</p>
+         * <p>The x-axis configuration.</p>
          */
         @NameInMap("xaxis")
         public DescribeTagsBarChartResponseBodyResultObjectXaxis xaxis;

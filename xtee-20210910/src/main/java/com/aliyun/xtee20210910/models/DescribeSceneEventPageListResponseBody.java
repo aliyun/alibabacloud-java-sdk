@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeSceneEventPageListResponseBody extends TeaModel {
     /**
-     * <p>Current page number.</p>
+     * <p>The current page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -14,7 +14,7 @@ public class DescribeSceneEventPageListResponseBody extends TeaModel {
     public Integer currentPage;
 
     /**
-     * <p>Number of items per page. Default value: 20, minimum value: 1, maximum value: 50.</p>
+     * <p>The number of entries per page in the response. Default value: 20. Minimum value: 1. Maximum value: 50.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -23,7 +23,7 @@ public class DescribeSceneEventPageListResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>Request ID, each request has a unique value, which facilitates subsequent troubleshooting</p>
+     * <p>The request ID. Each request has a unique ID for troubleshooting purposes.</p>
      * 
      * <strong>example:</strong>
      * <p>AE7E6105-7DEB-5125-9B24-DCBC139F6CD2</p>
@@ -32,13 +32,13 @@ public class DescribeSceneEventPageListResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Return array</p>
+     * <p>The returned array.</p>
      */
     @NameInMap("resultObject")
     public java.util.List<DescribeSceneEventPageListResponseBodyResultObject> resultObject;
 
     /**
-     * <p>Total number of items</p>
+     * <p>The total number of entries.</p>
      * 
      * <strong>example:</strong>
      * <p>3</p>
@@ -47,7 +47,7 @@ public class DescribeSceneEventPageListResponseBody extends TeaModel {
     public Integer totalItem;
 
     /**
-     * <p>Total number of pages</p>
+     * <p>The total number of pages.</p>
      * 
      * <strong>example:</strong>
      * <p>9</p>
@@ -110,7 +110,7 @@ public class DescribeSceneEventPageListResponseBody extends TeaModel {
 
     public static class DescribeSceneEventPageListResponseBodyResultObject extends TeaModel {
         /**
-         * <p>Number of common rules</p>
+         * <p>The number of General Policy rules.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -119,7 +119,7 @@ public class DescribeSceneEventPageListResponseBody extends TeaModel {
         public String commonRuleCount;
 
         /**
-         * <p>Number of custom rules</p>
+         * <p>The number of custom policies.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -128,7 +128,7 @@ public class DescribeSceneEventPageListResponseBody extends TeaModel {
         public String customRuleCount;
 
         /**
-         * <p>Event code</p>
+         * <p>The event code.</p>
          * 
          * <strong>example:</strong>
          * <p>de_aszbjb7236</p>
@@ -137,7 +137,7 @@ public class DescribeSceneEventPageListResponseBody extends TeaModel {
         public String eventCode;
 
         /**
-         * <p>Event name.</p>
+         * <p>The event name.</p>
          * 
          * <strong>example:</strong>
          * <p>注册风险</p>
@@ -146,7 +146,7 @@ public class DescribeSceneEventPageListResponseBody extends TeaModel {
         public String eventName;
 
         /**
-         * <p>Modification time</p>
+         * <p>The time when the event was last modified.</p>
          * 
          * <strong>example:</strong>
          * <p>1565701886000</p>
@@ -155,7 +155,7 @@ public class DescribeSceneEventPageListResponseBody extends TeaModel {
         public String gmtModified;
 
         /**
-         * <p>Modifier</p>
+         * <p>The user who last modified the event.</p>
          * 
          * <strong>example:</strong>
          * <p>公有云用户uid</p>
@@ -164,7 +164,7 @@ public class DescribeSceneEventPageListResponseBody extends TeaModel {
         public String modifier;
 
         /**
-         * <p>Number of custom rules</p>
+         * <p>The number of user-defined policies.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -173,7 +173,7 @@ public class DescribeSceneEventPageListResponseBody extends TeaModel {
         public String normalRuleCount;
 
         /**
-         * <p>Service code</p>
+         * <p>The service code.</p>
          * 
          * <strong>example:</strong>
          * <p>device_risk</p>
@@ -182,7 +182,7 @@ public class DescribeSceneEventPageListResponseBody extends TeaModel {
         public String service;
 
         /**
-         * <p>Usage status</p>
+         * <p>The usage status.</p>
          * 
          * <strong>example:</strong>
          * <p>使用/未使用</p>
@@ -191,7 +191,7 @@ public class DescribeSceneEventPageListResponseBody extends TeaModel {
         public String useStatus;
 
         /**
-         * <p>Number of white-box rules</p>
+         * <p>The number of whitebox implementation policies.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeVariableDetailResponseBody extends TeaModel {
     /**
-     * <p>Request ID.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>A32FE941-35F2-5378-B37C-4B8FDB16F094</p>
@@ -14,7 +14,7 @@ public class DescribeVariableDetailResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Return object</p>
+     * <p>The returned object.</p>
      */
     @NameInMap("resultObject")
     public DescribeVariableDetailResponseBodyResultObject resultObject;
@@ -42,7 +42,13 @@ public class DescribeVariableDetailResponseBody extends TeaModel {
 
     public static class DescribeVariableDetailResponseBodyResultObjectBaseInfo extends TeaModel {
         /**
-         * <p>Whether variable binding is allowed</p>
+         * <p>Specifies whether variable binding is allowed. Valid values:</p>
+         * <ul>
+         * <li><strong>DISABLE</strong>: unavailable</li>
+         * <li><strong>ALL</strong>: all</li>
+         * <li><strong>ENABLE</strong>: available</li>
+         * <li><strong>PART_ENABLE</strong>: partially available.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>ENABLE</p>
@@ -51,7 +57,11 @@ public class DescribeVariableDetailResponseBody extends TeaModel {
         public String allowBind;
 
         /**
-         * <p>Charging mode</p>
+         * <p>The billing mode. Valid values:</p>
+         * <ul>
+         * <li><strong>PAY_PER_VIEW</strong>: paid</li>
+         * <li><strong>FREE</strong>: free.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>FREE</p>
@@ -60,7 +70,7 @@ public class DescribeVariableDetailResponseBody extends TeaModel {
         public String chargingMode;
 
         /**
-         * <p>Charging mode description</p>
+         * <p>The billing mode description.</p>
          * 
          * <strong>example:</strong>
          * <p>免费</p>
@@ -69,7 +79,7 @@ public class DescribeVariableDetailResponseBody extends TeaModel {
         public String chargingModeDesc;
 
         /**
-         * <p>Creator.</p>
+         * <p>The creator.</p>
          * 
          * <strong>example:</strong>
          * <p>176020</p>
@@ -78,7 +88,7 @@ public class DescribeVariableDetailResponseBody extends TeaModel {
         public String creator;
 
         /**
-         * <p>Data distribution display, in JSON format</p>
+         * <p>The data distribution display in JSON format.</p>
          * 
          * <strong>example:</strong>
          * <p>{}</p>
@@ -87,7 +97,7 @@ public class DescribeVariableDetailResponseBody extends TeaModel {
         public String dataDisplay;
 
         /**
-         * <p>Data valid range, left-closed and right-closed</p>
+         * <p>The valid data range, inclusive on both ends.</p>
          * 
          * <strong>example:</strong>
          * <p>(0,10)</p>
@@ -96,7 +106,7 @@ public class DescribeVariableDetailResponseBody extends TeaModel {
         public String dataThreshold;
 
         /**
-         * <p>Deduction factor</p>
+         * <p>The deduction coefficient.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -105,7 +115,7 @@ public class DescribeVariableDetailResponseBody extends TeaModel {
         public Integer deductionFactor;
 
         /**
-         * <p>Description.</p>
+         * <p>The description.</p>
          * 
          * <strong>example:</strong>
          * <p>描述</p>
@@ -114,7 +124,11 @@ public class DescribeVariableDetailResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>Front-end binding allowed</p>
+         * <p>Specifies whether front-end binding is allowed. Valid values:</p>
+         * <ul>
+         * <li><strong>DISABLE</strong>: not allowed</li>
+         * <li><strong>ENABLE</strong>: allowed.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>ENABLE</p>
@@ -123,7 +137,7 @@ public class DescribeVariableDetailResponseBody extends TeaModel {
         public String frontAllowBind;
 
         /**
-         * <p>Creation time.</p>
+         * <p>The creation time.</p>
          * 
          * <strong>example:</strong>
          * <p>1698143758000</p>
@@ -132,7 +146,7 @@ public class DescribeVariableDetailResponseBody extends TeaModel {
         public Long gmtCreate;
 
         /**
-         * <p>Modification time.</p>
+         * <p>The modification time.</p>
          * 
          * <strong>example:</strong>
          * <p>1698143758000</p>
@@ -141,7 +155,7 @@ public class DescribeVariableDetailResponseBody extends TeaModel {
         public Long gmtModified;
 
         /**
-         * <p>Primary key ID</p>
+         * <p>The primary key ID.</p>
          * 
          * <strong>example:</strong>
          * <p>3144</p>
@@ -150,11 +164,10 @@ public class DescribeVariableDetailResponseBody extends TeaModel {
         public Long id;
 
         /**
-         * <p>Required parameters</p>
-         * <pre><code> When inputRequired=__all__, it means all parameters are required
-         *  When inputRequired=__one__, it means only one input is needed
-         *  Required fields are separated by commas, e.g., mobile,ip,email
-         * </code></pre>
+         * <p>The required parameters.</p>
+         * <p>When inputRequired is set to <strong>all</strong>, all parameters are required.
+         * When inputRequired is set to <strong>one</strong>, only one input parameter is required.
+         * Required fields are separated by commas, such as mobile,ip,email.</p>
          * 
          * <strong>example:</strong>
          * <p><strong>one</strong></p>
@@ -163,7 +176,7 @@ public class DescribeVariableDetailResponseBody extends TeaModel {
         public String inputRequired;
 
         /**
-         * <p>Input parameters.</p>
+         * <p>The input parameters.</p>
          * 
          * <strong>example:</strong>
          * <p>ip,age,mobile</p>
@@ -172,7 +185,7 @@ public class DescribeVariableDetailResponseBody extends TeaModel {
         public String inputs;
 
         /**
-         * <p>Input parameter description.</p>
+         * <p>The input parameter description.</p>
          * 
          * <strong>example:</strong>
          * <p>ip,年龄,手机号</p>
@@ -181,7 +194,7 @@ public class DescribeVariableDetailResponseBody extends TeaModel {
         public String inputsDesc;
 
         /**
-         * <p>Invoke key</p>
+         * <p>The invocation key.</p>
          * 
          * <strong>example:</strong>
          * <p>onlineScamDetectionTags_v</p>
@@ -190,7 +203,7 @@ public class DescribeVariableDetailResponseBody extends TeaModel {
         public String invokeKey;
 
         /**
-         * <p>Invoke RT, unit: milliseconds</p>
+         * <p>The invocation response time, in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -199,7 +212,7 @@ public class DescribeVariableDetailResponseBody extends TeaModel {
         public Integer invokeRt;
 
         /**
-         * <p>Invocation success rate</p>
+         * <p>The invocation success rate.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -208,7 +221,7 @@ public class DescribeVariableDetailResponseBody extends TeaModel {
         public String invokeSuccessRate;
 
         /**
-         * <p>Number of invocations</p>
+         * <p>The number of invocations.</p>
          * 
          * <strong>example:</strong>
          * <p>100000</p>
@@ -217,7 +230,7 @@ public class DescribeVariableDetailResponseBody extends TeaModel {
         public Long invokeTimes;
 
         /**
-         * <p>Last modifier.</p>
+         * <p>The last modifier.</p>
          * 
          * <strong>example:</strong>
          * <p>root</p>
@@ -226,7 +239,7 @@ public class DescribeVariableDetailResponseBody extends TeaModel {
         public String lastModifiedOperator;
 
         /**
-         * <p>Variable name</p>
+         * <p>The variable name.</p>
          * 
          * <strong>example:</strong>
          * <p><strong>onlineScamDetectionTags</strong></p>
@@ -235,7 +248,7 @@ public class DescribeVariableDetailResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>Output</p>
+         * <p>The outputs.</p>
          * 
          * <strong>example:</strong>
          * <p>STRING</p>
@@ -244,7 +257,7 @@ public class DescribeVariableDetailResponseBody extends TeaModel {
         public String outputs;
 
         /**
-         * <p>Output description</p>
+         * <p>The output description.</p>
          * 
          * <strong>example:</strong>
          * <p>字符串</p>
@@ -253,19 +266,19 @@ public class DescribeVariableDetailResponseBody extends TeaModel {
         public String outputsDesc;
 
         /**
-         * <p>Code of applicable scenarios</p>
+         * <p>The applicable scenario code.</p>
          */
         @NameInMap("scene")
         public java.util.List<String> scene;
 
         /**
-         * <p>Applicable scenario description</p>
+         * <p>The applicable scenario description.</p>
          */
         @NameInMap("sceneDesc")
         public java.util.List<String> sceneDesc;
 
         /**
-         * <p>Display order</p>
+         * <p>The display order.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -274,7 +287,7 @@ public class DescribeVariableDetailResponseBody extends TeaModel {
         public String showOrder;
 
         /**
-         * <p>Source</p>
+         * <p>The source.</p>
          * 
          * <strong>example:</strong>
          * <p>SAF</p>
@@ -283,7 +296,7 @@ public class DescribeVariableDetailResponseBody extends TeaModel {
         public String source;
 
         /**
-         * <p>Source description</p>
+         * <p>The source description.</p>
          * 
          * <strong>example:</strong>
          * <p>风险识别</p>
@@ -292,7 +305,7 @@ public class DescribeVariableDetailResponseBody extends TeaModel {
         public String sourceDesc;
 
         /**
-         * <p>Status.</p>
+         * <p>The status.</p>
          * 
          * <strong>example:</strong>
          * <p>ENABLE</p>
@@ -301,13 +314,13 @@ public class DescribeVariableDetailResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>List of supported regions.</p>
+         * <p>The list of supported regions.</p>
          */
         @NameInMap("supportRegions")
         public java.util.List<String> supportRegions;
 
         /**
-         * <p>Title.</p>
+         * <p>The title.</p>
          * 
          * <strong>example:</strong>
          * <p>诈骗引流识别_标签</p>
@@ -316,7 +329,7 @@ public class DescribeVariableDetailResponseBody extends TeaModel {
         public String title;
 
         /**
-         * <p>Type</p>
+         * <p>The type.</p>
          * 
          * <strong>example:</strong>
          * <p>NATIVE</p>
@@ -325,7 +338,7 @@ public class DescribeVariableDetailResponseBody extends TeaModel {
         public String type;
 
         /**
-         * <p>Category description</p>
+         * <p>The category description.</p>
          * 
          * <strong>example:</strong>
          * <p>事件字段</p>
@@ -334,7 +347,7 @@ public class DescribeVariableDetailResponseBody extends TeaModel {
         public String typeDesc;
 
         /**
-         * <p>X-axis label for data distribution display</p>
+         * <p>The X-axis label for the data distribution chart.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -343,7 +356,7 @@ public class DescribeVariableDetailResponseBody extends TeaModel {
         public String xLabel;
 
         /**
-         * <p>Data distribution display y-axis label</p>
+         * <p>The Y-axis label for the data distribution chart.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -640,7 +653,7 @@ public class DescribeVariableDetailResponseBody extends TeaModel {
 
     public static class DescribeVariableDetailResponseBodyResultObject extends TeaModel {
         /**
-         * <p>Basic attributes.</p>
+         * <p>The basic properties.</p>
          */
         @NameInMap("baseInfo")
         public DescribeVariableDetailResponseBodyResultObjectBaseInfo baseInfo;

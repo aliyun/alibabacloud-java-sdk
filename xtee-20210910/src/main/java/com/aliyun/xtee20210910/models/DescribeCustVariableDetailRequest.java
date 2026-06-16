@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class DescribeCustVariableDetailRequest extends TeaModel {
     /**
-     * <p>Sets the language type for requests and received messages, default value is <strong>zh</strong>. Values: </p>
+     * <p>The language of the request and response. Default value: <strong>zh</strong>. Valid values:</p>
      * <ul>
      * <li><strong>zh</strong>: Chinese</li>
-     * <li><strong>en</strong>: English</li>
+     * <li><strong>en</strong>: English.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,7 +18,7 @@ public class DescribeCustVariableDetailRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>Primary key ID of the cumulative variable</p>
+     * <p>The primary key ID of the cumulative variable.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -28,7 +28,7 @@ public class DescribeCustVariableDetailRequest extends TeaModel {
     public Long id;
 
     /**
-     * <p>Region code</p>
+     * <p>The region code.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeSlsUrlConfigResponseBody extends TeaModel {
     /**
-     * <p>Request ID.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>AE7E6105-7DEB-5125-9B24-DCBC139F6CD2</p>
@@ -14,7 +14,7 @@ public class DescribeSlsUrlConfigResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Returned object</p>
+     * <p>The response object.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>

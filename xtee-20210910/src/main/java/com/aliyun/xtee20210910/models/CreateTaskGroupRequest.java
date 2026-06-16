@@ -5,6 +5,13 @@ import com.aliyun.tea.*;
 
 public class CreateTaskGroupRequest extends TeaModel {
     /**
+     * <p>The language of the error message returned by the operation. Valid values:</p>
+     * <ul>
+     * <li>zh: Chinese.</li>
+     * <li>en: English.</li>
+     * </ul>
+     * <p>Default value: en.</p>
+     * 
      * <strong>example:</strong>
      * <p>zh</p>
      */
@@ -12,6 +19,8 @@ public class CreateTaskGroupRequest extends TeaModel {
     public String lang;
 
     /**
+     * <p>The region code.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
      */
@@ -19,6 +28,8 @@ public class CreateTaskGroupRequest extends TeaModel {
     public String regId;
 
     /**
+     * <p>The sample IDs.</p>
+     * 
      * <strong>example:</strong>
      * <p>1,2</p>
      */
@@ -26,6 +37,8 @@ public class CreateTaskGroupRequest extends TeaModel {
     public String sampleIds;
 
     /**
+     * <p>The scenarios corresponding to the service.</p>
+     * 
      * <strong>example:</strong>
      * <p>[\&quot;porn\&quot;,\&quot;terrorism\&quot;,\&quot;ad\&quot;]</p>
      */
@@ -33,6 +46,8 @@ public class CreateTaskGroupRequest extends TeaModel {
     public String scenes;
 
     /**
+     * <p>The service codes.</p>
+     * 
      * <strong>example:</strong>
      * <p>oss</p>
      */
@@ -40,6 +55,17 @@ public class CreateTaskGroupRequest extends TeaModel {
     public String serviceCodes;
 
     /**
+     * <p>The service list.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[{&quot;serviceCode&quot;:&quot;anti_fraud_v4_score&quot;},{&quot;serviceCode&quot;:&quot;antif2_score&quot;},{&quot;serviceCode&quot;:&quot;anti_fraud_customed&quot;,&quot;scenes&quot;:[&quot;TC_general_1&quot;,&quot;aliyun_cust_feat_all&quot;]},{&quot;serviceCode&quot;:&quot;antif2_customed_plus&quot;,&quot;scenes&quot;:[&quot;antif2_customed_v1_feature&quot;]}]</p>
+     */
+    @NameInMap("ServiceList")
+    public String serviceList;
+
+    /**
+     * <p>The list of service names for per-application statistics.</p>
+     * 
      * <strong>example:</strong>
      * <p>Test</p>
      */
@@ -47,6 +73,8 @@ public class CreateTaskGroupRequest extends TeaModel {
     public String serviceNames;
 
     /**
+     * <p>The scenario.</p>
+     * 
      * <strong>example:</strong>
      * <p>INTERNET</p>
      */
@@ -54,6 +82,8 @@ public class CreateTaskGroupRequest extends TeaModel {
     public String tab;
 
     /**
+     * <p>The task group name.</p>
+     * 
      * <strong>example:</strong>
      * <p>TeskGroupTest</p>
      */
@@ -61,6 +91,8 @@ public class CreateTaskGroupRequest extends TeaModel {
     public String taskGroupName;
 
     /**
+     * <p>The access type.</p>
+     * 
      * <strong>example:</strong>
      * <p>SAF_CONSOLE</p>
      */
@@ -110,6 +142,14 @@ public class CreateTaskGroupRequest extends TeaModel {
     }
     public String getServiceCodes() {
         return this.serviceCodes;
+    }
+
+    public CreateTaskGroupRequest setServiceList(String serviceList) {
+        this.serviceList = serviceList;
+        return this;
+    }
+    public String getServiceList() {
+        return this.serviceList;
     }
 
     public CreateTaskGroupRequest setServiceNames(String serviceNames) {

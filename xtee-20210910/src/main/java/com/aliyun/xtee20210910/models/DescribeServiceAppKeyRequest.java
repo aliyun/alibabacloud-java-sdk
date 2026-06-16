@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeServiceAppKeyRequest extends TeaModel {
     /**
-     * <p>Region code</p>
+     * <p>The region code.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>

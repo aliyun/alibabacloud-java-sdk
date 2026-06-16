@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class DescribeSafDeOrderRequest extends TeaModel {
     /**
-     * <p>Set the language type for request and response messages, default value is <strong>zh</strong>. Values:</p>
+     * <p>The language type for the request and response messages. Default value: <strong>zh</strong>. Valid values:</p>
      * <ul>
-     * <li><strong>zh</strong>: Chinese</li>
-     * <li><strong>en</strong>: English</li>
+     * <li><strong>zh</strong>: Chinese.</li>
+     * <li><strong>en</strong>: English.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,7 +18,7 @@ public class DescribeSafDeOrderRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>Current page number.</p>
+     * <p>The current page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -27,7 +27,7 @@ public class DescribeSafDeOrderRequest extends TeaModel {
     public Integer currentPage;
 
     /**
-     * <p>End date</p>
+     * <p>The end time.</p>
      * 
      * <strong>example:</strong>
      * <p>1728008155799</p>
@@ -36,7 +36,7 @@ public class DescribeSafDeOrderRequest extends TeaModel {
     public String endDate;
 
     /**
-     * <p>Page size, default value is 10</p>
+     * <p>The number of entries per page. Default value: 10.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -45,7 +45,7 @@ public class DescribeSafDeOrderRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>Region code</p>
+     * <p>The region code.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -54,7 +54,7 @@ public class DescribeSafDeOrderRequest extends TeaModel {
     public String regId;
 
     /**
-     * <p>Start date.</p>
+     * <p>The start date.</p>
      * 
      * <strong>example:</strong>
      * <p>1728008155799</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeDataSourcePageListResponseBody extends TeaModel {
     /**
-     * <p>Request ID.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>A32FE941-35F2-5378-B37C-4B8FDB16F094</p>
@@ -14,7 +14,7 @@ public class DescribeDataSourcePageListResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Current page number.</p>
+     * <p>The current page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -23,7 +23,7 @@ public class DescribeDataSourcePageListResponseBody extends TeaModel {
     public Integer currentPage;
 
     /**
-     * <p>Page size, default value is 10</p>
+     * <p>The number of entries per page. Default value: 10.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -32,13 +32,13 @@ public class DescribeDataSourcePageListResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>Return object</p>
+     * <p>The returned object.</p>
      */
     @NameInMap("resultObject")
     public java.util.List<DescribeDataSourcePageListResponseBodyResultObject> resultObject;
 
     /**
-     * <p>Total items</p>
+     * <p>The total number of entries.</p>
      * 
      * <strong>example:</strong>
      * <p>3</p>
@@ -47,7 +47,7 @@ public class DescribeDataSourcePageListResponseBody extends TeaModel {
     public Integer totalItem;
 
     /**
-     * <p>Total pages</p>
+     * <p>The total number of pages.</p>
      * 
      * <strong>example:</strong>
      * <p>9</p>
@@ -110,7 +110,7 @@ public class DescribeDataSourcePageListResponseBody extends TeaModel {
 
     public static class DescribeDataSourcePageListResponseBodyResultObject extends TeaModel {
         /**
-         * <p>Creator of the data source.</p>
+         * <p>The creator of the data source.</p>
          * 
          * <strong>example:</strong>
          * <p>xxxx</p>
@@ -119,7 +119,7 @@ public class DescribeDataSourcePageListResponseBody extends TeaModel {
         public String creator;
 
         /**
-         * <p>Data source description.</p>
+         * <p>The description of the data source.</p>
          * 
          * <strong>example:</strong>
          * <p>描述</p>
@@ -128,7 +128,7 @@ public class DescribeDataSourcePageListResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>Time when the data source was created.</p>
+         * <p>The time when the data source was created.</p>
          * 
          * <strong>example:</strong>
          * <p>1621578648000</p>
@@ -137,7 +137,7 @@ public class DescribeDataSourcePageListResponseBody extends TeaModel {
         public String gmtCreate;
 
         /**
-         * <p>Time when the data source was last modified.</p>
+         * <p>The time when the data source was last modified.</p>
          * 
          * <strong>example:</strong>
          * <p>1565701886000</p>
@@ -146,7 +146,7 @@ public class DescribeDataSourcePageListResponseBody extends TeaModel {
         public String gmtModified;
 
         /**
-         * <p>Data source ID.</p>
+         * <p>The data source ID.</p>
          * 
          * <strong>example:</strong>
          * <p>497</p>
@@ -155,7 +155,7 @@ public class DescribeDataSourcePageListResponseBody extends TeaModel {
         public Long id;
 
         /**
-         * <p>Last modifier.</p>
+         * <p>The user who last modified the data source.</p>
          * 
          * <strong>example:</strong>
          * <p>xxxxx</p>
@@ -164,7 +164,7 @@ public class DescribeDataSourcePageListResponseBody extends TeaModel {
         public String modifier;
 
         /**
-         * <p>Data source name.</p>
+         * <p>The data source name.</p>
          * 
          * <strong>example:</strong>
          * <p>data_source</p>
@@ -173,7 +173,7 @@ public class DescribeDataSourcePageListResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>Total pages.</p>
+         * <p>The total number of pages.</p>
          * 
          * <strong>example:</strong>
          * <p>4</p>
@@ -182,7 +182,7 @@ public class DescribeDataSourcePageListResponseBody extends TeaModel {
         public Long total;
 
         /**
-         * <p>Data source type.</p>
+         * <p>The data source type.</p>
          * 
          * <strong>example:</strong>
          * <p>FILE</p>

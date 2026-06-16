@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetSubTaskResultResponseBody extends TeaModel {
     /**
+     * <p>Status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -12,6 +14,8 @@ public class GetSubTaskResultResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -19,6 +23,8 @@ public class GetSubTaskResultResponseBody extends TeaModel {
     public String httpStatusCode;
 
     /**
+     * <p>Return message.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -26,12 +32,17 @@ public class GetSubTaskResultResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>0A519CFA-0EEC-580A-A5C1-F9C653FB2354</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Return Result.</p>
+     */
     @NameInMap("ResultObject")
     public GetSubTaskResultResponseBodyResultObject resultObject;
 
@@ -82,6 +93,8 @@ public class GetSubTaskResultResponseBody extends TeaModel {
 
     public static class GetSubTaskResultResponseBodyResultObjectConfig extends TeaModel {
         /**
+         * <p>Backing field for service support.</p>
+         * 
          * <strong>example:</strong>
          * <p>repl_lag</p>
          */
@@ -89,6 +102,8 @@ public class GetSubTaskResultResponseBody extends TeaModel {
         public String item;
 
         /**
+         * <p>Product description information.</p>
+         * 
          * <strong>example:</strong>
          * <p>des</p>
          */
@@ -96,12 +111,17 @@ public class GetSubTaskResultResponseBody extends TeaModel {
         public String itemDesc;
 
         /**
+         * <p>Sample.</p>
+         * 
          * <strong>example:</strong>
          * <p>sample</p>
          */
         @NameInMap("SampleItem")
         public String sampleItem;
 
+        /**
+         * <p>List of fields corresponding to the sample.</p>
+         */
         @NameInMap("SampleItems")
         public java.util.List<String> sampleItems;
 
@@ -146,7 +166,7 @@ public class GetSubTaskResultResponseBody extends TeaModel {
 
     public static class GetSubTaskResultResponseBodyResultObjectFileCol extends TeaModel {
         /**
-         * <p>A0。</p>
+         * <p>A0.</p>
          * 
          * <strong>example:</strong>
          * <p>A0</p>
@@ -155,7 +175,7 @@ public class GetSubTaskResultResponseBody extends TeaModel {
         public String a0;
 
         /**
-         * <p>A1。</p>
+         * <p>A1.</p>
          * 
          * <strong>example:</strong>
          * <p>A1</p>
@@ -164,7 +184,7 @@ public class GetSubTaskResultResponseBody extends TeaModel {
         public String a1;
 
         /**
-         * <p>A10。</p>
+         * <p>A10.</p>
          * 
          * <strong>example:</strong>
          * <p>A10</p>
@@ -173,7 +193,7 @@ public class GetSubTaskResultResponseBody extends TeaModel {
         public String a10;
 
         /**
-         * <p>A11。</p>
+         * <p>A11.</p>
          * 
          * <strong>example:</strong>
          * <p>A11</p>
@@ -182,7 +202,7 @@ public class GetSubTaskResultResponseBody extends TeaModel {
         public String a11;
 
         /**
-         * <p>A2。</p>
+         * <p>A2.</p>
          * 
          * <strong>example:</strong>
          * <p>A2</p>
@@ -191,7 +211,7 @@ public class GetSubTaskResultResponseBody extends TeaModel {
         public String a2;
 
         /**
-         * <p>A3。</p>
+         * <p>A3.</p>
          * 
          * <strong>example:</strong>
          * <p>A3</p>
@@ -200,7 +220,7 @@ public class GetSubTaskResultResponseBody extends TeaModel {
         public String a3;
 
         /**
-         * <p>A4。</p>
+         * <p>A4.</p>
          * 
          * <strong>example:</strong>
          * <p>A4</p>
@@ -209,7 +229,7 @@ public class GetSubTaskResultResponseBody extends TeaModel {
         public String a4;
 
         /**
-         * <p>A5。</p>
+         * <p>A5.</p>
          * 
          * <strong>example:</strong>
          * <p>A5</p>
@@ -218,7 +238,7 @@ public class GetSubTaskResultResponseBody extends TeaModel {
         public String a5;
 
         /**
-         * <p>A6。</p>
+         * <p>A6.</p>
          * 
          * <strong>example:</strong>
          * <p>A6</p>
@@ -227,7 +247,7 @@ public class GetSubTaskResultResponseBody extends TeaModel {
         public String a6;
 
         /**
-         * <p>A7。</p>
+         * <p>A7.</p>
          * 
          * <strong>example:</strong>
          * <p>A7</p>
@@ -236,7 +256,7 @@ public class GetSubTaskResultResponseBody extends TeaModel {
         public String a7;
 
         /**
-         * <p>A8。</p>
+         * <p>A8.</p>
          * 
          * <strong>example:</strong>
          * <p>A8</p>
@@ -245,7 +265,7 @@ public class GetSubTaskResultResponseBody extends TeaModel {
         public String a8;
 
         /**
-         * <p>A9。</p>
+         * <p>A9.</p>
          * 
          * <strong>example:</strong>
          * <p>A9</p>
@@ -357,9 +377,15 @@ public class GetSubTaskResultResponseBody extends TeaModel {
     }
 
     public static class GetSubTaskResultResponseBodyResultObjectFile extends TeaModel {
+        /**
+         * <p>Column names.</p>
+         */
         @NameInMap("Col")
         public java.util.List<GetSubTaskResultResponseBodyResultObjectFileCol> col;
 
+        /**
+         * <p>Variable title.</p>
+         */
         @NameInMap("Title")
         public java.util.List<String> title;
 
@@ -388,6 +414,8 @@ public class GetSubTaskResultResponseBody extends TeaModel {
 
     public static class GetSubTaskResultResponseBodyResultObjectLog extends TeaModel {
         /**
+         * <p>Processing type.</p>
+         * 
          * <strong>example:</strong>
          * <p>RELEASE</p>
          */
@@ -395,6 +423,8 @@ public class GetSubTaskResultResponseBody extends TeaModel {
         public String operateType;
 
         /**
+         * <p>Reason for the service status.</p>
+         * 
          * <strong>example:</strong>
          * <p>PasswordExpired</p>
          */
@@ -402,6 +432,8 @@ public class GetSubTaskResultResponseBody extends TeaModel {
         public String reason;
 
         /**
+         * <p>Time. Unit: ms.</p>
+         * 
          * <strong>example:</strong>
          * <p>1760408725312</p>
          */
@@ -440,16 +472,30 @@ public class GetSubTaskResultResponseBody extends TeaModel {
     }
 
     public static class GetSubTaskResultResponseBodyResultObject extends TeaModel {
+        /**
+         * <p>Outputs List Settings.</p>
+         */
         @NameInMap("Config")
         public java.util.List<GetSubTaskResultResponseBodyResultObjectConfig> config;
 
+        /**
+         * <p>Additional extension information.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{\&quot;approveNodeInfo\&quot;:[{\&quot;approver\&quot;:[\&quot;325337\&quot;,\&quot;270729\&quot;,\&quot;290278\&quot;,\&quot;371000\&quot;,\&quot;175234\&quot;,\&quot;237109\&quot;],\&quot;nodeName\&quot;:\&quot;团队审批人\&quot;,\&quot;nodeCode\&quot;:1,\&quot;approveRule\&quot;:\&quot;ONE\&quot;}]}</p>
+         */
         @NameInMap("ExtraInfo")
         public String extraInfo;
 
+        /**
+         * <p>File.</p>
+         */
         @NameInMap("File")
         public GetSubTaskResultResponseBodyResultObjectFile file;
 
         /**
+         * <p>File name.</p>
+         * 
          * <strong>example:</strong>
          * <p>enorl-20w-0926.csv</p>
          */
@@ -457,6 +503,8 @@ public class GetSubTaskResultResponseBody extends TeaModel {
         public String fileName;
 
         /**
+         * <p>File type.</p>
+         * 
          * <strong>example:</strong>
          * <p>CSV</p>
          */
@@ -464,19 +512,32 @@ public class GetSubTaskResultResponseBody extends TeaModel {
         public String fileType;
 
         /**
+         * <p>File URL.</p>
+         * 
          * <strong>example:</strong>
          * <p>saf/cpoc/34cd7959590ef568086035b956210495/1760580976089_XN_test_1016_100000.csv</p>
          */
         @NameInMap("FileUrl")
         public String fileUrl;
 
+        /**
+         * <p>Is charged.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>是否收费</p>
+         */
         @NameInMap("IsCharge")
         public Boolean isCharge;
 
+        /**
+         * <p>Log content.</p>
+         */
         @NameInMap("Log")
         public java.util.List<GetSubTaskResultResponseBodyResultObjectLog> log;
 
         /**
+         * <p>Reason.</p>
+         * 
          * <strong>example:</strong>
          * <p>managed.by.apig</p>
          */
@@ -484,6 +545,8 @@ public class GetSubTaskResultResponseBody extends TeaModel {
         public String reason;
 
         /**
+         * <p>Result URL.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="http://shuanglu-prod.oss-cn-shanghai-finance-1-pub.aliyuncs.com/idrs/24/local/remoteresult?Expires=1756436489&OSSAccessKeyId=****&Signature=">http://shuanglu-prod.oss-cn-shanghai-finance-1-pub.aliyuncs.com/idrs/24/local/remoteresult?Expires=1756436489&amp;OSSAccessKeyId=****&amp;Signature=</a>****</p>
          */
@@ -491,6 +554,8 @@ public class GetSubTaskResultResponseBody extends TeaModel {
         public String resultUrl;
 
         /**
+         * <p>Schedule type.</p>
+         * 
          * <strong>example:</strong>
          * <p>rate</p>
          */
@@ -498,16 +563,26 @@ public class GetSubTaskResultResponseBody extends TeaModel {
         public String scheduleType;
 
         /**
+         * <p>Service code.</p>
+         * 
          * <strong>example:</strong>
          * <p>anti_fraud_customed_v3</p>
          */
         @NameInMap("ServiceCode")
         public String serviceCode;
 
+        /**
+         * <p>Service name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>申请反欺诈（定制增强版）</p>
+         */
         @NameInMap("ServiceName")
         public String serviceName;
 
         /**
+         * <p>Status.</p>
+         * 
          * <strong>example:</strong>
          * <p>CLASS_CHANGING</p>
          */
@@ -515,6 +590,8 @@ public class GetSubTaskResultResponseBody extends TeaModel {
         public String status;
 
         /**
+         * <p>Job ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>19150</p>
          */
@@ -522,6 +599,8 @@ public class GetSubTaskResultResponseBody extends TeaModel {
         public String taskId;
 
         /**
+         * <p>Task Name.</p>
+         * 
          * <strong>example:</strong>
          * <p>icekredit_model_A_2025a_508185</p>
          */
@@ -529,6 +608,8 @@ public class GetSubTaskResultResponseBody extends TeaModel {
         public String taskName;
 
         /**
+         * <p>User ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>5129547232</p>
          */

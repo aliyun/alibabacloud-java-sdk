@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class DescribeMenuPermissionRequest extends TeaModel {
     /**
-     * <p>Sets the language type for requests and responses, with a default value of <strong>zh</strong>. Values:</p>
+     * <p>The language of the request and response. Default value: <strong>zh</strong>. Valid values:</p>
      * <ul>
      * <li><strong>zh</strong>: Chinese</li>
-     * <li><strong>en</strong>: English</li>
+     * <li><strong>en</strong>: English.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,7 +18,7 @@ public class DescribeMenuPermissionRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>Permission type</p>
+     * <p>The permission type.</p>
      * 
      * <strong>example:</strong>
      * <p>MENU</p>
@@ -27,7 +27,7 @@ public class DescribeMenuPermissionRequest extends TeaModel {
     public String permissionType;
 
     /**
-     * <p>Region code</p>
+     * <p>The region code.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>

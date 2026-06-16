@@ -5,6 +5,12 @@ import com.aliyun.tea.*;
 
 public class CancelSubTaskRequest extends TeaModel {
     /**
+     * <p>Set the language type for requests and received messages. The default value is <strong>zh</strong>. Valid values:  </p>
+     * <ul>
+     * <li><strong>zh</strong>: Chinese  </li>
+     * <li><strong>en</strong>: English</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>zh</p>
      */
@@ -12,6 +18,8 @@ public class CancelSubTaskRequest extends TeaModel {
     public String lang;
 
     /**
+     * <p>Area encoding.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
      */
@@ -19,6 +27,8 @@ public class CancelSubTaskRequest extends TeaModel {
     public String regId;
 
     /**
+     * <p>Subtask ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>2</p>
      */
@@ -26,6 +36,8 @@ public class CancelSubTaskRequest extends TeaModel {
     public Integer subTaskId;
 
     /**
+     * <p>Scenario.</p>
+     * 
      * <strong>example:</strong>
      * <p>FINANCE</p>
      */

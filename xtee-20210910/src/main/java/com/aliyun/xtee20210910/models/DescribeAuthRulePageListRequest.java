@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class DescribeAuthRulePageListRequest extends TeaModel {
     /**
-     * <p>Sets the language type for requests and received messages, default value is <strong>zh</strong>. Values: </p>
+     * <p>The language type for the request and response messages. Default value: <strong>zh</strong>. Valid values:</p>
      * <ul>
-     * <li><strong>zh</strong>: Chinese</li>
-     * <li><strong>en</strong>: English</li>
+     * <li><strong>zh</strong>: Chinese.</li>
+     * <li><strong>en</strong>: English.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,7 +18,7 @@ public class DescribeAuthRulePageListRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>Event code</p>
+     * <p>The event code.</p>
      * 
      * <strong>example:</strong>
      * <p>de_arcehq4370</p>
@@ -27,7 +27,7 @@ public class DescribeAuthRulePageListRequest extends TeaModel {
     public String eventCode;
 
     /**
-     * <p>Region code</p>
+     * <p>The region code.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -37,7 +37,7 @@ public class DescribeAuthRulePageListRequest extends TeaModel {
     public String regId;
 
     /**
-     * <p>Policy name</p>
+     * <p>The policy name.</p>
      * 
      * <strong>example:</strong>
      * <p>分析中心事件测试_策略01</p>
@@ -46,7 +46,7 @@ public class DescribeAuthRulePageListRequest extends TeaModel {
     public String ruleName;
 
     /**
-     * <p>Status.</p>
+     * <p>The status.</p>
      * 
      * <strong>example:</strong>
      * <p>RUNNING</p>

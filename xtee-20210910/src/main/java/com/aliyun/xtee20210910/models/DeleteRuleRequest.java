@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class DeleteRuleRequest extends TeaModel {
     /**
-     * <p>Sets the language type for requests and received messages, default value is <strong>zh</strong>. Values:</p>
+     * <p>The language of the request and response. Default value: <strong>zh</strong>. Valid values:</p>
      * <ul>
      * <li><strong>zh</strong>: Chinese</li>
-     * <li><strong>en</strong>: English</li>
+     * <li><strong>en</strong>: English.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,7 +18,7 @@ public class DeleteRuleRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>Policy primary key ID</p>
+     * <p>The primary key ID of the policy.</p>
      * 
      * <strong>example:</strong>
      * <p>7035</p>
@@ -27,7 +27,7 @@ public class DeleteRuleRequest extends TeaModel {
     public Long consoleRuleId;
 
     /**
-     * <p>Region code</p>
+     * <p>The region code.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -36,7 +36,7 @@ public class DeleteRuleRequest extends TeaModel {
     public String regId;
 
     /**
-     * <p>Policy ID</p>
+     * <p>The policy ID.</p>
      * 
      * <strong>example:</strong>
      * <p>102059</p>
@@ -45,7 +45,7 @@ public class DeleteRuleRequest extends TeaModel {
     public String ruleId;
 
     /**
-     * <p>Policy version primary key ID</p>
+     * <p>The primary key ID of the policy version number.</p>
      * 
      * <strong>example:</strong>
      * <p>10203</p>

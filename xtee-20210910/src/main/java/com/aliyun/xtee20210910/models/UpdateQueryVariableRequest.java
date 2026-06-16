@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class UpdateQueryVariableRequest extends TeaModel {
     /**
-     * <p>Sets the language type for requests and received messages, with a default value of <strong>zh</strong>. Values:</p>
+     * <p>The language of the request and response. Default value: <strong>zh</strong>. Valid values:</p>
      * <ul>
      * <li><strong>zh</strong>: Chinese</li>
-     * <li><strong>en</strong>: English</li>
+     * <li><strong>en</strong>: English.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,7 +18,7 @@ public class UpdateQueryVariableRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>Data source code</p>
+     * <p>The data source code.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -28,7 +28,7 @@ public class UpdateQueryVariableRequest extends TeaModel {
     public String dataSourceCode;
 
     /**
-     * <p>Description.</p>
+     * <p>The description.</p>
      * 
      * <strong>example:</strong>
      * <p>描述</p>
@@ -37,7 +37,7 @@ public class UpdateQueryVariableRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>Event code</p>
+     * <p>The event code.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -47,7 +47,7 @@ public class UpdateQueryVariableRequest extends TeaModel {
     public String eventCode;
 
     /**
-     * <p>Expression.</p>
+     * <p>The expression.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -57,7 +57,7 @@ public class UpdateQueryVariableRequest extends TeaModel {
     public String expression;
 
     /**
-     * <p>Display expression</p>
+     * <p>The display expression.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -67,7 +67,7 @@ public class UpdateQueryVariableRequest extends TeaModel {
     public String expressionTitle;
 
     /**
-     * <p>Expression associated variable</p>
+     * <p>The variable associated with the expression.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -77,7 +77,7 @@ public class UpdateQueryVariableRequest extends TeaModel {
     public String expressionVariable;
 
     /**
-     * <p>Primary key ID</p>
+     * <p>The primary key ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -87,7 +87,7 @@ public class UpdateQueryVariableRequest extends TeaModel {
     public Long id;
 
     /**
-     * <p>Outlier</p>
+     * <p>The outlier value.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -97,7 +97,7 @@ public class UpdateQueryVariableRequest extends TeaModel {
     public String outlier;
 
     /**
-     * <p>Variable return type</p>
+     * <p>The return type of the variable.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -107,7 +107,7 @@ public class UpdateQueryVariableRequest extends TeaModel {
     public String outputs;
 
     /**
-     * <p>Region code</p>
+     * <p>The region code.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -117,7 +117,7 @@ public class UpdateQueryVariableRequest extends TeaModel {
     public String regId;
 
     /**
-     * <p>Title.</p>
+     * <p>The title.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

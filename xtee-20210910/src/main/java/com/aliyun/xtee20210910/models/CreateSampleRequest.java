@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class CreateSampleRequest extends TeaModel {
     /**
-     * <p>Sets the language type for requests and received messages, with a default value of <strong>zh</strong>. Values: </p>
+     * <p>The language of the request and response. Default value: <strong>zh</strong>. Valid values:</p>
      * <ul>
-     * <li><strong>zh</strong>: Chinese</li>
-     * <li><strong>en</strong>: English</li>
+     * <li><strong>zh</strong>: Chinese.</li>
+     * <li><strong>en</strong>: English.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,7 +18,7 @@ public class CreateSampleRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>OSS client uploaded file name</p>
+     * <p>The name of the file uploaded by the OSS client.</p>
      * 
      * <strong>example:</strong>
      * <p>样本文件.csv</p>
@@ -27,7 +27,7 @@ public class CreateSampleRequest extends TeaModel {
     public String clientFileName;
 
     /**
-     * <p>OSS client address</p>
+     * <p>The OSS client address.</p>
      * 
      * <strong>example:</strong>
      * <p>sample/path</p>
@@ -36,7 +36,7 @@ public class CreateSampleRequest extends TeaModel {
     public String clientPath;
 
     /**
-     * <p>File type</p>
+     * <p>The file type.</p>
      * 
      * <strong>example:</strong>
      * <p>CSV</p>
@@ -45,7 +45,7 @@ public class CreateSampleRequest extends TeaModel {
     public String fileType;
 
     /**
-     * <p>Region code</p>
+     * <p>The region code.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -54,7 +54,7 @@ public class CreateSampleRequest extends TeaModel {
     public String regId;
 
     /**
-     * <p>Sample tag</p>
+     * <p>The label of the data sample.</p>
      * 
      * <strong>example:</strong>
      * <p>rm0102</p>
@@ -63,7 +63,7 @@ public class CreateSampleRequest extends TeaModel {
     public String sampleTag;
 
     /**
-     * <p>Sample type</p>
+     * <p>The type of the data sample.</p>
      * 
      * <strong>example:</strong>
      * <p>PHONE</p>
@@ -72,7 +72,7 @@ public class CreateSampleRequest extends TeaModel {
     public String sampleType;
 
     /**
-     * <p>Sample values</p>
+     * <p>The values of the data sample.</p>
      * 
      * <strong>example:</strong>
      * <p>1777000000,1777000001</p>
@@ -81,7 +81,7 @@ public class CreateSampleRequest extends TeaModel {
     public String sampleValues;
 
     /**
-     * <p>Upload type</p>
+     * <p>The upload type.</p>
      * 
      * <strong>example:</strong>
      * <p>ANNEX</p>

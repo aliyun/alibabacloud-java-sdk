@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeScoreSectionRatioLineChartResponseBody extends TeaModel {
     /**
-     * <p>Request ID</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>A32FE941-35F2-5378-B37C-4B8FDB16F094</p>
@@ -14,7 +14,7 @@ public class DescribeScoreSectionRatioLineChartResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Return object</p>
+     * <p>The response object.</p>
      */
     @NameInMap("resultObject")
     public DescribeScoreSectionRatioLineChartResponseBodyResultObject resultObject;
@@ -42,13 +42,13 @@ public class DescribeScoreSectionRatioLineChartResponseBody extends TeaModel {
 
     public static class DescribeScoreSectionRatioLineChartResponseBodyResultObjectSeries extends TeaModel {
         /**
-         * <p>Chart data list</p>
+         * <p>The chart data list.</p>
          */
         @NameInMap("data")
         public java.util.List<String> data;
 
         /**
-         * <p>Statistical dimension.</p>
+         * <p>The statistical dimension.</p>
          * 
          * <strong>example:</strong>
          * <p>旁路事件</p>
@@ -81,7 +81,7 @@ public class DescribeScoreSectionRatioLineChartResponseBody extends TeaModel {
 
     public static class DescribeScoreSectionRatioLineChartResponseBodyResultObjectXaxis extends TeaModel {
         /**
-         * <p>Chart data list</p>
+         * <p>The chart data list.</p>
          */
         @NameInMap("data")
         public java.util.List<String> data;
@@ -103,7 +103,7 @@ public class DescribeScoreSectionRatioLineChartResponseBody extends TeaModel {
 
     public static class DescribeScoreSectionRatioLineChartResponseBodyResultObject extends TeaModel {
         /**
-         * <p>Data list</p>
+         * <p>The data list.</p>
          */
         @NameInMap("series")
         public java.util.List<DescribeScoreSectionRatioLineChartResponseBodyResultObjectSeries> series;

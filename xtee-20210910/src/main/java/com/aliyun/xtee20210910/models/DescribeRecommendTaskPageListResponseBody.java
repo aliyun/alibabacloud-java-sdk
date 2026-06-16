@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeRecommendTaskPageListResponseBody extends TeaModel {
     /**
-     * <p>Request ID</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>A32FE941-35F2-5378-B37C-4B8FDB16F094</p>
@@ -14,7 +14,7 @@ public class DescribeRecommendTaskPageListResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Current page number</p>
+     * <p>The current page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -23,7 +23,7 @@ public class DescribeRecommendTaskPageListResponseBody extends TeaModel {
     public Integer currentPage;
 
     /**
-     * <p>Page size, with a default value of 10</p>
+     * <p>The number of entries per page. Default value: 10.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -32,13 +32,13 @@ public class DescribeRecommendTaskPageListResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>Returned object</p>
+     * <p>The returned object.</p>
      */
     @NameInMap("resultObject")
     public java.util.List<DescribeRecommendTaskPageListResponseBodyResultObject> resultObject;
 
     /**
-     * <p>Total number of items</p>
+     * <p>The total number of entries.</p>
      * 
      * <strong>example:</strong>
      * <p>3</p>
@@ -47,7 +47,7 @@ public class DescribeRecommendTaskPageListResponseBody extends TeaModel {
     public Integer totalItem;
 
     /**
-     * <p>Total number of pages.</p>
+     * <p>The total number of pages.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -110,13 +110,13 @@ public class DescribeRecommendTaskPageListResponseBody extends TeaModel {
 
     public static class DescribeRecommendTaskPageListResponseBodyResultObject extends TeaModel {
         /**
-         * <p>Impact indicators</p>
+         * <p>The affected metrics.</p>
          */
         @NameInMap("expectVelocities")
         public java.util.List<String> expectVelocities;
 
         /**
-         * <p>Creation time.</p>
+         * <p>The creation time.</p>
          * 
          * <strong>example:</strong>
          * <p>1621578648000</p>
@@ -125,7 +125,7 @@ public class DescribeRecommendTaskPageListResponseBody extends TeaModel {
         public Long gmtCreate;
 
         /**
-         * <p>Number of samples</p>
+         * <p>The number of samples.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -134,7 +134,7 @@ public class DescribeRecommendTaskPageListResponseBody extends TeaModel {
         public Long normalCount;
 
         /**
-         * <p>Number of normal samples</p>
+         * <p>The number of normal samples.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -143,7 +143,7 @@ public class DescribeRecommendTaskPageListResponseBody extends TeaModel {
         public Long normalSize;
 
         /**
-         * <p>Number of records displayed on the current page.</p>
+         * <p>The number of records displayed on the current page.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -152,7 +152,7 @@ public class DescribeRecommendTaskPageListResponseBody extends TeaModel {
         public Long riskCount;
 
         /**
-         * <p>Number of risk samples</p>
+         * <p>The number of risky samples.</p>
          * 
          * <strong>example:</strong>
          * <p>5</p>
@@ -161,7 +161,7 @@ public class DescribeRecommendTaskPageListResponseBody extends TeaModel {
         public Long riskSize;
 
         /**
-         * <p>Sample name</p>
+         * <p>The sample name.</p>
          * 
          * <strong>example:</strong>
          * <p>白样本</p>
@@ -170,7 +170,7 @@ public class DescribeRecommendTaskPageListResponseBody extends TeaModel {
         public String sampleName;
 
         /**
-         * <p>Sample scenario</p>
+         * <p>The sample scenario.</p>
          * 
          * <strong>example:</strong>
          * <p>account_abuse_detection</p>
@@ -179,7 +179,7 @@ public class DescribeRecommendTaskPageListResponseBody extends TeaModel {
         public String sampleScene;
 
         /**
-         * <p>Task ID.</p>
+         * <p>The task ID.</p>
          * 
          * <strong>example:</strong>
          * <p>240c93ddffa74e38be3a00375eb3041d</p>
@@ -188,7 +188,7 @@ public class DescribeRecommendTaskPageListResponseBody extends TeaModel {
         public Long taskId;
 
         /**
-         * <p>Task name.</p>
+         * <p>The task name.</p>
          * 
          * <strong>example:</strong>
          * <p>策略推荐任务</p>
@@ -197,7 +197,7 @@ public class DescribeRecommendTaskPageListResponseBody extends TeaModel {
         public String taskName;
 
         /**
-         * <p>Task status.</p>
+         * <p>The task status.</p>
          * 
          * <strong>example:</strong>
          * <p>CREATE</p>

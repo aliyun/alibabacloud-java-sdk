@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class DescribeTemplatePageListRequest extends TeaModel {
     /**
-     * <p>Sets the language type for requests and received messages, default value is <strong>zh</strong>. Values:</p>
+     * <p>The language type for the request and response messages. Default value: <strong>zh</strong>. Valid values:</p>
      * <ul>
-     * <li><strong>zh</strong>: Chinese</li>
-     * <li><strong>en</strong>: English</li>
+     * <li><strong>zh</strong>: Chinese.</li>
+     * <li><strong>en</strong>: English.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,7 +18,7 @@ public class DescribeTemplatePageListRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>Current page number.</p>
+     * <p>The current page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -27,7 +27,7 @@ public class DescribeTemplatePageListRequest extends TeaModel {
     public String currentPage;
 
     /**
-     * <p>Event code.</p>
+     * <p>The event code.</p>
      * 
      * <strong>example:</strong>
      * <p>d6_h1fe4cfa1g</p>
@@ -36,7 +36,7 @@ public class DescribeTemplatePageListRequest extends TeaModel {
     public String eventCodes;
 
     /**
-     * <p>Page size, default value is 10</p>
+     * <p>The number of entries per page. Default value: 10.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -45,7 +45,7 @@ public class DescribeTemplatePageListRequest extends TeaModel {
     public String pageSize;
 
     /**
-     * <p>Region code</p>
+     * <p>The region code.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -54,7 +54,7 @@ public class DescribeTemplatePageListRequest extends TeaModel {
     public String regId;
 
     /**
-     * <p>Event name</p>
+     * <p>The event name.</p>
      * 
      * <strong>example:</strong>
      * <p>注册事件</p>
@@ -63,7 +63,7 @@ public class DescribeTemplatePageListRequest extends TeaModel {
     public String templateName;
 
     /**
-     * <p>Event template search field</p>
+     * <p>The search field for event templates.</p>
      * 
      * <strong>example:</strong>
      * <p>age</p>
@@ -72,7 +72,7 @@ public class DescribeTemplatePageListRequest extends TeaModel {
     public String templateSearchItem;
 
     /**
-     * <p>Event status</p>
+     * <p>The event status.</p>
      * 
      * <strong>example:</strong>
      * <p>ONLINE</p>
@@ -81,7 +81,7 @@ public class DescribeTemplatePageListRequest extends TeaModel {
     public String templateStatus;
 
     /**
-     * <p>Template type</p>
+     * <p>The templatetype.</p>
      * 
      * <strong>example:</strong>
      * <p>PUB_SERVICE</p>

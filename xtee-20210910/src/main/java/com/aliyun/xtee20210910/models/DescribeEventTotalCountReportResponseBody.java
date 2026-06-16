@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeEventTotalCountReportResponseBody extends TeaModel {
     /**
-     * <p>Status code</p>
+     * <p>Status code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,7 +14,7 @@ public class DescribeEventTotalCountReportResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>HTTP status code</p>
+     * <p>HTTP status code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -41,13 +41,13 @@ public class DescribeEventTotalCountReportResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Returned object</p>
+     * <p>Response object.</p>
      */
     @NameInMap("resultObject")
     public DescribeEventTotalCountReportResponseBodyResultObject resultObject;
 
     /**
-     * <p>Indicates whether this operation was successful, <code>true</code> means success.</p>
+     * <p>Indicates whether the operation was successful. A value of true indicates success.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -110,7 +110,7 @@ public class DescribeEventTotalCountReportResponseBody extends TeaModel {
 
     public static class DescribeEventTotalCountReportResponseBodyResultObject extends TeaModel {
         /**
-         * <p>Comparison with yesterday\&quot;s event invocation count</p>
+         * <p>Day-over-day comparison of call event count.</p>
          * 
          * <strong>example:</strong>
          * <p>101</p>
@@ -119,7 +119,7 @@ public class DescribeEventTotalCountReportResponseBody extends TeaModel {
         public String ratio;
 
         /**
-         * <p>Today\&quot;s event invocation count</p>
+         * <p>Total number of call events today.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>

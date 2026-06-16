@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeVariableSceneListResponseBody extends TeaModel {
     /**
-     * <p>Request ID.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>A32FE941-35F2-5378-B37C-4B8FDB16F094</p>
@@ -14,7 +14,7 @@ public class DescribeVariableSceneListResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Current page number.</p>
+     * <p>The current page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -23,7 +23,7 @@ public class DescribeVariableSceneListResponseBody extends TeaModel {
     public Integer currentPage;
 
     /**
-     * <p>Page size, default value is 10.</p>
+     * <p>The number of entries per page. Default value: 10.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -32,13 +32,13 @@ public class DescribeVariableSceneListResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>Returned object.</p>
+     * <p>The returned object.</p>
      */
     @NameInMap("resultObject")
     public java.util.List<DescribeVariableSceneListResponseBodyResultObject> resultObject;
 
     /**
-     * <p>Total number of items.</p>
+     * <p>The total number of entries.</p>
      * 
      * <strong>example:</strong>
      * <p>6</p>
@@ -47,7 +47,7 @@ public class DescribeVariableSceneListResponseBody extends TeaModel {
     public Integer totalItem;
 
     /**
-     * <p>Total number of pages.</p>
+     * <p>The total number of pages.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -110,7 +110,7 @@ public class DescribeVariableSceneListResponseBody extends TeaModel {
 
     public static class DescribeVariableSceneListResponseBodyResultObject extends TeaModel {
         /**
-         * <p>Business category identifier.</p>
+         * <p>The business category identifier.</p>
          * 
          * <strong>example:</strong>
          * <p>variable_scene</p>
@@ -119,7 +119,7 @@ public class DescribeVariableSceneListResponseBody extends TeaModel {
         public String bizType;
 
         /**
-         * <p>Configuration key.</p>
+         * <p>The configuration item key.</p>
          * 
          * <strong>example:</strong>
          * <p>account_abuse_detection</p>
@@ -128,7 +128,7 @@ public class DescribeVariableSceneListResponseBody extends TeaModel {
         public String configKey;
 
         /**
-         * <p>Configuration value.</p>
+         * <p>The configuration item value.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -137,7 +137,7 @@ public class DescribeVariableSceneListResponseBody extends TeaModel {
         public String configValue;
 
         /**
-         * <p>Created by.</p>
+         * <p>The creator.</p>
          * 
          * <strong>example:</strong>
          * <p>1519714049632764</p>
@@ -146,7 +146,7 @@ public class DescribeVariableSceneListResponseBody extends TeaModel {
         public String creator;
 
         /**
-         * <p>Description information.</p>
+         * <p>The description.</p>
          * 
          * <strong>example:</strong>
          * <p>配置描述信息</p>
@@ -155,7 +155,7 @@ public class DescribeVariableSceneListResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>Creation time.</p>
+         * <p>The creation time.</p>
          * 
          * <strong>example:</strong>
          * <p>1621578648000</p>
@@ -164,7 +164,7 @@ public class DescribeVariableSceneListResponseBody extends TeaModel {
         public Long gmtCreate;
 
         /**
-         * <p>Modification time.</p>
+         * <p>The modification time.</p>
          * 
          * <strong>example:</strong>
          * <p>1565701886000</p>
@@ -173,7 +173,7 @@ public class DescribeVariableSceneListResponseBody extends TeaModel {
         public Long gmtModified;
 
         /**
-         * <p>Primary key ID of the configuration.</p>
+         * <p>The primary key ID of the configuration item.</p>
          * 
          * <strong>example:</strong>
          * <p>497</p>
@@ -182,7 +182,7 @@ public class DescribeVariableSceneListResponseBody extends TeaModel {
         public Long id;
 
         /**
-         * <p>Last modified by.</p>
+         * <p>The last modifier.</p>
          * 
          * <strong>example:</strong>
          * <p>1519714049632764</p>
@@ -191,7 +191,7 @@ public class DescribeVariableSceneListResponseBody extends TeaModel {
         public String lastModifiedOperator;
 
         /**
-         * <p>Status.</p>
+         * <p>The status.</p>
          * 
          * <strong>example:</strong>
          * <p>ENABLE</p>

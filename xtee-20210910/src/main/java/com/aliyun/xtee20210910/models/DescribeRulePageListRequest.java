@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class DescribeRulePageListRequest extends TeaModel {
     /**
-     * <p>Set the language type for requests and responses, default value is <strong>zh</strong>. Values:</p>
+     * <p>The language type for the request and response messages. Default value: <strong>zh</strong>. Valid values:</p>
      * <ul>
      * <li><strong>zh</strong>: Chinese</li>
-     * <li><strong>en</strong>: English</li>
+     * <li><strong>en</strong>: English.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,7 +18,7 @@ public class DescribeRulePageListRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>Creation type.</p>
+     * <p>The creation type.</p>
      * 
      * <strong>example:</strong>
      * <p>NORMAL</p>
@@ -27,7 +27,7 @@ public class DescribeRulePageListRequest extends TeaModel {
     public String createType;
 
     /**
-     * <p>Current page number.</p>
+     * <p>The current page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -36,7 +36,7 @@ public class DescribeRulePageListRequest extends TeaModel {
     public String currentPage;
 
     /**
-     * <p>Event code.</p>
+     * <p>The event code.</p>
      * 
      * <strong>example:</strong>
      * <p>de_asssce8122</p>
@@ -45,7 +45,7 @@ public class DescribeRulePageListRequest extends TeaModel {
     public String eventCode;
 
     /**
-     * <p>Page size, default value is 10.</p>
+     * <p>The number of entries per page. Default value: 10.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -54,7 +54,7 @@ public class DescribeRulePageListRequest extends TeaModel {
     public String pageSize;
 
     /**
-     * <p>Region code.</p>
+     * <p>The region code.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -63,7 +63,7 @@ public class DescribeRulePageListRequest extends TeaModel {
     public String regId;
 
     /**
-     * <p>Policy type.</p>
+     * <p>The policy type.</p>
      * 
      * <strong>example:</strong>
      * <p>NOMAL</p>
@@ -72,7 +72,7 @@ public class DescribeRulePageListRequest extends TeaModel {
     public String ruleAuthType;
 
     /**
-     * <p>Policy name.</p>
+     * <p>The policy name.</p>
      * 
      * <strong>example:</strong>
      * <p>营销风险识别评分</p>
@@ -81,7 +81,7 @@ public class DescribeRulePageListRequest extends TeaModel {
     public String ruleName;
 
     /**
-     * <p>Policy status.</p>
+     * <p>The policy status.</p>
      * 
      * <strong>example:</strong>
      * <p>RUNNING</p>
@@ -90,10 +90,10 @@ public class DescribeRulePageListRequest extends TeaModel {
     public String ruleStatus;
 
     /**
-     * <p>Sorting method, default value is desc.</p>
+     * <p>The sort order. Default value: desc.</p>
      * <ul>
      * <li>desc: descending order</li>
-     * <li>asc: ascending order</li>
+     * <li>asc: ascending order.</li>
      * </ul>
      * 
      * <strong>example:</strong>

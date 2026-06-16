@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class SearchSampleResponseBody extends TeaModel {
     /**
+     * <p>The status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -12,6 +14,8 @@ public class SearchSampleResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -19,6 +23,8 @@ public class SearchSampleResponseBody extends TeaModel {
     public String httpStatusCode;
 
     /**
+     * <p>The returned message.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -26,12 +32,17 @@ public class SearchSampleResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>A32FE941-35F2-5378-B37C-4B8FDB16F094</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Return Result.</p>
+     */
     @NameInMap("ResultObject")
     public java.util.List<SearchSampleResponseBodyResultObject> resultObject;
 
@@ -82,6 +93,8 @@ public class SearchSampleResponseBody extends TeaModel {
 
     public static class SearchSampleResponseBodyResultObject extends TeaModel {
         /**
+         * <p>File Name.</p>
+         * 
          * <strong>example:</strong>
          * <p>icekredit_model_A_2025c_1755826424_870000.csv</p>
          */
@@ -89,6 +102,8 @@ public class SearchSampleResponseBody extends TeaModel {
         public String fileName;
 
         /**
+         * <p>File Size.</p>
+         * 
          * <strong>example:</strong>
          * <p>572</p>
          */
@@ -96,6 +111,8 @@ public class SearchSampleResponseBody extends TeaModel {
         public Integer fileSize;
 
         /**
+         * <p>Remarks.</p>
+         * 
          * <strong>example:</strong>
          * <p>ios_velo</p>
          */
@@ -103,6 +120,8 @@ public class SearchSampleResponseBody extends TeaModel {
         public String remark;
 
         /**
+         * <p>Number of Records.</p>
+         * 
          * <strong>example:</strong>
          * <p>325</p>
          */
@@ -110,6 +129,8 @@ public class SearchSampleResponseBody extends TeaModel {
         public Integer rowCount;
 
         /**
+         * <p>Sample ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>9b020e69bbae49d88c07a377c3ab7a71</p>
          */
@@ -117,6 +138,8 @@ public class SearchSampleResponseBody extends TeaModel {
         public Integer sampleId;
 
         /**
+         * <p>Sample Name.</p>
+         * 
          * <strong>example:</strong>
          * <p>Test</p>
          */
@@ -124,6 +147,8 @@ public class SearchSampleResponseBody extends TeaModel {
         public String sampleName;
 
         /**
+         * <p>Scenario.</p>
+         * 
          * <strong>example:</strong>
          * <p>FINANCE</p>
          */
@@ -131,6 +156,8 @@ public class SearchSampleResponseBody extends TeaModel {
         public String tab;
 
         /**
+         * <p>File Upload Time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2023-12-01 12:23:34</p>
          */
@@ -138,6 +165,8 @@ public class SearchSampleResponseBody extends TeaModel {
         public String uploadTime;
 
         /**
+         * <p>Uploader.</p>
+         * 
          * <strong>example:</strong>
          * <p>ds</p>
          */

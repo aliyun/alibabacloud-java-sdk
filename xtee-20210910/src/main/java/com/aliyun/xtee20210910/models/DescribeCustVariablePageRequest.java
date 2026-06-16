@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class DescribeCustVariablePageRequest extends TeaModel {
     /**
-     * <p>Sets the language type for requests and received messages, default value is <strong>zh</strong>. Values:</p>
+     * <p>The language type for the request and response messages. Default value: <strong>zh</strong>. Valid values:</p>
      * <ul>
      * <li><strong>zh</strong>: Chinese</li>
-     * <li><strong>en</strong>: English</li>
+     * <li><strong>en</strong>: English.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,7 +18,7 @@ public class DescribeCustVariablePageRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>Creation type.</p>
+     * <p>The creation type.</p>
      * 
      * <strong>example:</strong>
      * <p>NORMAL</p>
@@ -27,7 +27,7 @@ public class DescribeCustVariablePageRequest extends TeaModel {
     public String createType;
 
     /**
-     * <p>Pagination parameter, current page number.</p>
+     * <p>The current page number for pagination.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -36,7 +36,7 @@ public class DescribeCustVariablePageRequest extends TeaModel {
     public Integer currentPage;
 
     /**
-     * <p>Description.</p>
+     * <p>The description.</p>
      * 
      * <strong>example:</strong>
      * <p>累计变量描述</p>
@@ -45,7 +45,7 @@ public class DescribeCustVariablePageRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>Event code.</p>
+     * <p>The event code.</p>
      * 
      * <strong>example:</strong>
      * <p>de_aheldm3876</p>
@@ -54,7 +54,7 @@ public class DescribeCustVariablePageRequest extends TeaModel {
     public String eventCode;
 
     /**
-     * <p>Number of records per page, default value: 10.</p>
+     * <p>The number of records per page. Default value: 10.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -63,7 +63,7 @@ public class DescribeCustVariablePageRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>Region code.</p>
+     * <p>The region code.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -72,7 +72,7 @@ public class DescribeCustVariablePageRequest extends TeaModel {
     public String regId;
 
     /**
-     * <p>status.</p>
+     * <p>The status.</p>
      * 
      * <strong>example:</strong>
      * <p>ENABLE</p>

@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class DescribeRecommendVelocitiesRequest extends TeaModel {
     /**
-     * <p>Sets the language type for requests and responses, with a default value of <strong>zh</strong>. Values:</p>
+     * <p>The language of the request and response. Default value: <strong>zh</strong>. Valid values:</p>
      * <ul>
-     * <li><strong>zh</strong>: Chinese</li>
-     * <li><strong>en</strong>: English</li>
+     * <li><strong>zh</strong>: Chinese.</li>
+     * <li><strong>en</strong>: English.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,7 +18,7 @@ public class DescribeRecommendVelocitiesRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>Metric code</p>
+     * <p>The metric code.</p>
      * 
      * <strong>example:</strong>
      * <p>coupon_abuse_detection</p>
@@ -27,7 +27,7 @@ public class DescribeRecommendVelocitiesRequest extends TeaModel {
     public String code;
 
     /**
-     * <p>Region ID</p>
+     * <p>The region code.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -36,7 +36,7 @@ public class DescribeRecommendVelocitiesRequest extends TeaModel {
     public String regId;
 
     /**
-     * <p>Metric type</p>
+     * <p>The metric type.</p>
      * 
      * <strong>example:</strong>
      * <p>recommend_velocity</p>

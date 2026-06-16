@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeEventResultListResponseBody extends TeaModel {
     /**
-     * <p>Status code.</p>
+     * <p>The status code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,7 +14,7 @@ public class DescribeEventResultListResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>Current page number.</p>
+     * <p>The current page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -23,7 +23,7 @@ public class DescribeEventResultListResponseBody extends TeaModel {
     public Long currentPage;
 
     /**
-     * <p>HTTP status code</p>
+     * <p>The HTTP status code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -32,7 +32,7 @@ public class DescribeEventResultListResponseBody extends TeaModel {
     public String httpStatusCode;
 
     /**
-     * <p>Error details</p>
+     * <p>The error details.</p>
      * 
      * <strong>example:</strong>
      * <p>The input parameter data is not valid. order_storage_company_num component not found</p>
@@ -41,7 +41,7 @@ public class DescribeEventResultListResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Page size, default value is 10</p>
+     * <p>The number of entries per page. Default value: 10.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -50,7 +50,7 @@ public class DescribeEventResultListResponseBody extends TeaModel {
     public Long pageSize;
 
     /**
-     * <p>Request ID.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>AE7E6105-7DEB-5125-9B24-DCBC139F6CD2</p>
@@ -59,13 +59,13 @@ public class DescribeEventResultListResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Returned object</p>
+     * <p>The returned object.</p>
      */
     @NameInMap("resultObject")
     public java.util.List<DescribeEventResultListResponseBodyResultObject> resultObject;
 
     /**
-     * <p>Whether the query was successful.</p>
+     * <p>Indicates whether the query was successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -74,7 +74,7 @@ public class DescribeEventResultListResponseBody extends TeaModel {
     public Boolean success;
 
     /**
-     * <p>Total number of items.</p>
+     * <p>The total number of entries.</p>
      * 
      * <strong>example:</strong>
      * <p>31</p>
@@ -83,7 +83,7 @@ public class DescribeEventResultListResponseBody extends TeaModel {
     public Long totalItem;
 
     /**
-     * <p>Total number of pages</p>
+     * <p>The total number of pages.</p>
      * 
      * <strong>example:</strong>
      * <p>9</p>
@@ -178,7 +178,7 @@ public class DescribeEventResultListResponseBody extends TeaModel {
 
     public static class DescribeEventResultListResponseBodyResultObject extends TeaModel {
         /**
-         * <p>Event code</p>
+         * <p>The event code.</p>
          * 
          * <strong>example:</strong>
          * <p>de_aszbjb7236</p>
@@ -187,7 +187,7 @@ public class DescribeEventResultListResponseBody extends TeaModel {
         public String eventCode;
 
         /**
-         * <p>Event name.</p>
+         * <p>The event name.</p>
          * 
          * <strong>example:</strong>
          * <p>注册风险</p>
@@ -196,7 +196,7 @@ public class DescribeEventResultListResponseBody extends TeaModel {
         public String eventName;
 
         /**
-         * <p>Number of passed checks.</p>
+         * <p>The number of entries that passed the check.</p>
          * 
          * <strong>example:</strong>
          * <p>90</p>
@@ -205,7 +205,7 @@ public class DescribeEventResultListResponseBody extends TeaModel {
         public Long passNum;
 
         /**
-         * <p>Number of pending items.</p>
+         * <p>The number of pending entries.</p>
          * 
          * <strong>example:</strong>
          * <p>5</p>
@@ -214,7 +214,7 @@ public class DescribeEventResultListResponseBody extends TeaModel {
         public Long pendingNum;
 
         /**
-         * <p>Number of rejected approvals.</p>
+         * <p>The number of entries rejected during approval.</p>
          * 
          * <strong>example:</strong>
          * <p>5</p>
@@ -223,7 +223,7 @@ public class DescribeEventResultListResponseBody extends TeaModel {
         public Long rejectNum;
 
         /**
-         * <p>Total number of items.</p>
+         * <p>The total number of entries.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>

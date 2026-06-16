@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeRiskLineChartRequest extends TeaModel {
     /**
-     * <p>Sets the language type for requests and received messages, default value is <strong>zh</strong>. Values: </p>
+     * <p>Sets the language type for the request and response messages. Default value: <strong>zh</strong>. Valid values:</p>
      * <ul>
      * <li><strong>zh</strong>: Chinese</li>
      * <li><strong>en</strong>: English</li>
@@ -18,7 +18,7 @@ public class DescribeRiskLineChartRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>Query start time, accurate to milliseconds (ms).</p>
+     * <p>The beginning of the time range to query, in milliseconds (ms).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -28,7 +28,7 @@ public class DescribeRiskLineChartRequest extends TeaModel {
     public Long beginTime;
 
     /**
-     * <p>End time, accurate to milliseconds (ms).</p>
+     * <p>The end of the time range to query, in milliseconds (ms).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -38,7 +38,7 @@ public class DescribeRiskLineChartRequest extends TeaModel {
     public Long endTime;
 
     /**
-     * <p>Event codes, separated by commas (,).</p>
+     * <p>Event codes. Separate multiple event codes with commas (,).</p>
      * 
      * <strong>example:</strong>
      * <p>de_afghcf6411,de_awkhwh0314</p>
@@ -47,7 +47,7 @@ public class DescribeRiskLineChartRequest extends TeaModel {
     public String eventCodes;
 
     /**
-     * <p>Region code</p>
+     * <p>Region ID.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>

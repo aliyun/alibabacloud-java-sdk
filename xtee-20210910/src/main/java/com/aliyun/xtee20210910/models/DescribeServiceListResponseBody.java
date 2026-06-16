@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeServiceListResponseBody extends TeaModel {
     /**
-     * <p>Request ID.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>A32FE941-35F2-5378-B37C-4B8FDB16F094</p>
@@ -14,7 +14,7 @@ public class DescribeServiceListResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Return object</p>
+     * <p>The response object.</p>
      */
     @NameInMap("resultObject")
     public java.util.List<DescribeServiceListResponseBodyResultObject> resultObject;
@@ -42,7 +42,7 @@ public class DescribeServiceListResponseBody extends TeaModel {
 
     public static class DescribeServiceListResponseBodyResultObject extends TeaModel {
         /**
-         * <p>Service code</p>
+         * <p>The service code.</p>
          * 
          * <strong>example:</strong>
          * <p>coupon_abuse_detection</p>
@@ -51,7 +51,7 @@ public class DescribeServiceListResponseBody extends TeaModel {
         public String serviceCode;
 
         /**
-         * <p>Service name.</p>
+         * <p>The service name.</p>
          * 
          * <strong>example:</strong>
          * <p>coupon_abuse_detection</p>

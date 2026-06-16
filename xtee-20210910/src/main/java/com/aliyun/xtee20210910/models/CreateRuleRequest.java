@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class CreateRuleRequest extends TeaModel {
     /**
-     * <p>Sets the language type for requests and received messages, default value is <strong>zh</strong>. Values: </p>
+     * <p>The language of the request and response. Default value: <strong>zh</strong>. Valid values:</p>
      * <ul>
-     * <li><strong>zh</strong>: Chinese</li>
-     * <li><strong>en</strong>: English</li>
+     * <li><strong>zh</strong>: Chinese.</li>
+     * <li><strong>en</strong>: English.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,7 +18,7 @@ public class CreateRuleRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>Rule ID.</p>
+     * <p>The rule ID.</p>
      * 
      * <strong>example:</strong>
      * <p>5178</p>
@@ -27,7 +27,7 @@ public class CreateRuleRequest extends TeaModel {
     public Long consoleRuleId;
 
     /**
-     * <p>Creation type</p>
+     * <p>The creation type.</p>
      * 
      * <strong>example:</strong>
      * <p>NORMAL</p>
@@ -36,7 +36,7 @@ public class CreateRuleRequest extends TeaModel {
     public String createType;
 
     /**
-     * <p>Event code</p>
+     * <p>The event code.</p>
      * 
      * <strong>example:</strong>
      * <p>de_acytyt7036</p>
@@ -45,7 +45,7 @@ public class CreateRuleRequest extends TeaModel {
     public String eventCode;
 
     /**
-     * <p>Event name.</p>
+     * <p>The event name.</p>
      * 
      * <strong>example:</strong>
      * <p>登录事件</p>
@@ -54,7 +54,7 @@ public class CreateRuleRequest extends TeaModel {
     public String eventName;
 
     /**
-     * <p>Policy expression execution logic</p>
+     * <p>The execution logic of the policy expression.</p>
      * 
      * <strong>example:</strong>
      * <p>1&amp;2</p>
@@ -63,7 +63,7 @@ public class CreateRuleRequest extends TeaModel {
     public String logicExpression;
 
     /**
-     * <p>Memo</p>
+     * <p>The remarks.</p>
      * 
      * <strong>example:</strong>
      * <p>描述信息</p>
@@ -72,7 +72,7 @@ public class CreateRuleRequest extends TeaModel {
     public String memo;
 
     /**
-     * <p>Region code</p>
+     * <p>The region code.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -81,7 +81,7 @@ public class CreateRuleRequest extends TeaModel {
     public String regId;
 
     /**
-     * <p>Policy execution output action</p>
+     * <p>The output actions of the policy execution.</p>
      * 
      * <strong>example:</strong>
      * <p>[{&quot;inputs&quot;:[&quot;123&quot;],&quot;name&quot;:&quot;<strong>addDeTags</strong>&quot;,&quot;actionType&quot;:&quot;TAG&quot;,&quot;outputType&quot;:&quot;const&quot;},{&quot;inputs&quot;:[&quot;123&quot;],&quot;name&quot;:&quot;<strong>addDeScore</strong>&quot;,&quot;actionType&quot;:&quot;SCORE&quot;,&quot;outputType&quot;:&quot;const&quot;,&quot;inputTitle&quot;:&quot;123&quot;},{&quot;actionType&quot;:&quot;MIDDLE_VARIABLE&quot;,&quot;fieldValue&quot;:&quot;123&quot;,&quot;inputs&quot;:[&quot;mid1&quot;]},{&quot;actionType&quot;:&quot;VARIABLE&quot;,&quot;inputs&quot;:[&quot;gg&quot;],&quot;name&quot;:&quot;mid1&quot;}]</p>
@@ -90,7 +90,7 @@ public class CreateRuleRequest extends TeaModel {
     public String ruleActions;
 
     /**
-     * <p>DSL policy execution logic</p>
+     * <p>The DSL policy execution logic.</p>
      * 
      * <strong>example:</strong>
      * <p>{&quot;elseIfStatement&quot;:[],&quot;elseStatement&quot;:{},&quot;ifStatement&quot;:{&quot;condition&quot;:{&quot;currentId&quot;:0,&quot;deepCount&quot;:1,&quot;list&quot;:[{&quot;currentId&quot;:0,&quot;deepCount&quot;:1,&quot;left&quot;:{&quot;code&quot;:&quot;deFunctionProcess(ip,\&quot;isIp\&quot;)&quot;,&quot;description&quot;:&quot;判断是否符合IPv4标准&quot;,&quot;displayType&quot;:&quot;SYSTEM_BIND&quot;,&quot;fieldType&quot;:&quot;BOOLEAN&quot;,&quot;functionCode&quot;:&quot;&quot;,&quot;functionName&quot;:&quot;&quot;,&quot;hasRightVariable&quot;:false,&quot;name&quot;:&quot;<strong>isIpAddressV4</strong>&quot;,&quot;outputThreshold&quot;:{},&quot;sourceType&quot;:&quot;SAF&quot;,&quot;title&quot;:&quot;IP是否符合IPV4格式&quot;,&quot;type&quot;:&quot;SYSTEM_BIND&quot;},&quot;operatorCode&quot;:&quot;boolIsFalse&quot;,&quot;operatorName&quot;:&quot;为false&quot;,&quot;parentId&quot;:0,&quot;sequence&quot;:1}],&quot;parentId&quot;:0,&quot;relationship&quot;:&quot;and&quot;},&quot;then&quot;:[{&quot;inputs&quot;:[&quot;123&quot;],&quot;name&quot;:&quot;<strong>addDeTags</strong>&quot;,&quot;actionType&quot;:&quot;TAG&quot;,&quot;outputType&quot;:&quot;const&quot;}]}}</p>
@@ -99,7 +99,7 @@ public class CreateRuleRequest extends TeaModel {
     public String ruleBody;
 
     /**
-     * <p>Policy expression</p>
+     * <p>The policy expressions.</p>
      * 
      * <strong>example:</strong>
      * <p>[{&quot;expressionName&quot;:&quot;cc&quot;,&quot;itemId&quot;:1,&quot;left&quot;:{&quot;name&quot;:&quot;<strong>ipLocationCityCode</strong>&quot;},&quot;operatorCode&quot;:&quot;equals&quot;,&quot;operatorName&quot;:&quot;等于&quot;,&quot;right&quot;:{&quot;fieldValue&quot;:&quot;a&quot;}}]</p>
@@ -108,7 +108,7 @@ public class CreateRuleRequest extends TeaModel {
     public String ruleExpressions;
 
     /**
-     * <p>Policy name</p>
+     * <p>The policy name.</p>
      * 
      * <strong>example:</strong>
      * <p>注册手机号是11位数字</p>
@@ -117,7 +117,7 @@ public class CreateRuleRequest extends TeaModel {
     public String ruleName;
 
     /**
-     * <p>Policy status</p>
+     * <p>The policy status.</p>
      * 
      * <strong>example:</strong>
      * <p>DRAFT</p>
@@ -126,7 +126,7 @@ public class CreateRuleRequest extends TeaModel {
     public String ruleStatus;
 
     /**
-     * <p>Policy type</p>
+     * <p>The policy type.</p>
      * 
      * <strong>example:</strong>
      * <p>DRAFT</p>

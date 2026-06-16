@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeSDKDownloadListResponseBody extends TeaModel {
     /**
-     * <p>Request ID.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>A32FE941-35F2-5378-B37C-4B8FDB16F094</p>
@@ -14,7 +14,7 @@ public class DescribeSDKDownloadListResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Return object</p>
+     * <p>The returned object.</p>
      */
     @NameInMap("resultObject")
     public java.util.List<DescribeSDKDownloadListResponseBodyResultObject> resultObject;
@@ -42,7 +42,7 @@ public class DescribeSDKDownloadListResponseBody extends TeaModel {
 
     public static class DescribeSDKDownloadListResponseBodyResultObject extends TeaModel {
         /**
-         * <p>Description information.</p>
+         * <p>The description.</p>
          * 
          * <strong>example:</strong>
          * <p>描述</p>
@@ -51,7 +51,7 @@ public class DescribeSDKDownloadListResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>Developer</p>
+         * <p>The developer.</p>
          * 
          * <strong>example:</strong>
          * <p>阿里云安全-风险识别</p>
@@ -60,7 +60,7 @@ public class DescribeSDKDownloadListResponseBody extends TeaModel {
         public String developer;
 
         /**
-         * <p>Device type.</p>
+         * <p>The device type.</p>
          * 
          * <strong>example:</strong>
          * <p>ANDROID</p>
@@ -69,7 +69,7 @@ public class DescribeSDKDownloadListResponseBody extends TeaModel {
         public String deviceType;
 
         /**
-         * <p>Download URL.</p>
+         * <p>The download URL.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://aliyun-xxxx.oss-cn-xxx.xxx.com/sdk/xxx/10056.1/Android-AliyunDeviceEnhance-10056.1-20250611.tgz">https://aliyun-xxxx.oss-cn-xxx.xxx.com/sdk/xxx/10056.1/Android-AliyunDeviceEnhance-10056.1-20250611.tgz</a></p>
@@ -78,7 +78,7 @@ public class DescribeSDKDownloadListResponseBody extends TeaModel {
         public String downloadUrl;
 
         /**
-         * <p>File MD5.</p>
+         * <p>The MD5 hash of the file.</p>
          * 
          * <strong>example:</strong>
          * <p>E582EEB6B4BC9B5CB168AA5A7DD0EE93</p>
@@ -87,7 +87,7 @@ public class DescribeSDKDownloadListResponseBody extends TeaModel {
         public String md5;
 
         /**
-         * <p>Package name</p>
+         * <p>The package name.</p>
          * 
          * <strong>example:</strong>
          * <p>net.security.device</p>
@@ -96,7 +96,7 @@ public class DescribeSDKDownloadListResponseBody extends TeaModel {
         public String packageName;
 
         /**
-         * <p>Risk recognition SDK privacy policy link</p>
+         * <p>The privacy policy link for the risk identification SDK.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://terms.aliyun.com/legal-agreement/terms/suit_bu1_ali_cloud/suit_bu1_ali_cloud202111120818_92724.html">https://terms.aliyun.com/legal-agreement/terms/suit_bu1_ali_cloud/suit_bu1_ali_cloud202111120818_92724.html</a></p>
@@ -105,7 +105,7 @@ public class DescribeSDKDownloadListResponseBody extends TeaModel {
         public String privacyLink;
 
         /**
-         * <p>Release time</p>
+         * <p>The release time.</p>
          * 
          * <strong>example:</strong>
          * <p>1751212800000</p>
@@ -114,7 +114,7 @@ public class DescribeSDKDownloadListResponseBody extends TeaModel {
         public String pushTime;
 
         /**
-         * <p>SDK version.</p>
+         * <p>The SDK version.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -123,7 +123,7 @@ public class DescribeSDKDownloadListResponseBody extends TeaModel {
         public String sdkVersion;
 
         /**
-         * <p>Size</p>
+         * <p>The size.</p>
          * 
          * <strong>example:</strong>
          * <p>4.12 MB</p>

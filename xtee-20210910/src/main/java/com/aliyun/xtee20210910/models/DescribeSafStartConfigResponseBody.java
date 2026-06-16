@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeSafStartConfigResponseBody extends TeaModel {
     /**
-     * <p>Request ID.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>A32FE941-35F2-5378-B37C-4B8FDB16F094</p>
@@ -14,7 +14,7 @@ public class DescribeSafStartConfigResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Returned object</p>
+     * <p>The returned object.</p>
      */
     @NameInMap("resultObject")
     public DescribeSafStartConfigResponseBodyResultObject resultObject;
@@ -42,25 +42,25 @@ public class DescribeSafStartConfigResponseBody extends TeaModel {
 
     public static class DescribeSafStartConfigResponseBodyResultObject extends TeaModel {
         /**
-         * <p>List of device types.</p>
+         * <p>The device type list.</p>
          */
         @NameInMap("deviceTypes")
         public java.util.List<String> deviceTypes;
 
         /**
-         * <p>Event codes.</p>
+         * <p>The event codes.</p>
          */
         @NameInMap("eventCodes")
         public java.util.List<String> eventCodes;
 
         /**
-         * <p>Configuration language details.</p>
+         * <p>The configuration language details.</p>
          */
         @NameInMap("languages")
         public java.util.List<String> languages;
 
         /**
-         * <p>Server region</p>
+         * <p>The server regions.</p>
          */
         @NameInMap("serverRegions")
         public java.util.List<String> serverRegions;

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeAdvanceSearchLeftVariableListResponseBody extends TeaModel {
     /**
-     * <p>Request ID.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>AE7E6105-7DEB-5125-9B24-DCBC139F6CD2</p>
@@ -14,7 +14,7 @@ public class DescribeAdvanceSearchLeftVariableListResponseBody extends TeaModel 
     public String requestId;
 
     /**
-     * <p>Return object</p>
+     * <p>The returned object.</p>
      */
     @NameInMap("resultObject")
     public java.util.List<DescribeAdvanceSearchLeftVariableListResponseBodyResultObject> resultObject;
@@ -42,7 +42,7 @@ public class DescribeAdvanceSearchLeftVariableListResponseBody extends TeaModel 
 
     public static class DescribeAdvanceSearchLeftVariableListResponseBodyResultObject extends TeaModel {
         /**
-         * <p>Variable code</p>
+         * <p>The variable code.</p>
          * 
          * <strong>example:</strong>
          * <p>age</p>
@@ -51,7 +51,7 @@ public class DescribeAdvanceSearchLeftVariableListResponseBody extends TeaModel 
         public String code;
 
         /**
-         * <p>Description.</p>
+         * <p>The description.</p>
          * 
          * <strong>example:</strong>
          * <p>年龄描述</p>
@@ -60,7 +60,7 @@ public class DescribeAdvanceSearchLeftVariableListResponseBody extends TeaModel 
         public String description;
 
         /**
-         * <p>Display type and grouping label</p>
+         * <p>The display type and group label.</p>
          * 
          * <strong>example:</strong>
          * <p>NATIVE</p>
@@ -69,7 +69,7 @@ public class DescribeAdvanceSearchLeftVariableListResponseBody extends TeaModel 
         public String displayType;
 
         /**
-         * <p>Variable return value type</p>
+         * <p>The return value type of the variable.</p>
          * 
          * <strong>example:</strong>
          * <p>STRING</p>
@@ -78,7 +78,7 @@ public class DescribeAdvanceSearchLeftVariableListResponseBody extends TeaModel 
         public Long fieldRank;
 
         /**
-         * <p>Field table sorting</p>
+         * <p>The field table sorting.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -87,7 +87,7 @@ public class DescribeAdvanceSearchLeftVariableListResponseBody extends TeaModel 
         public String fieldType;
 
         /**
-         * <p>Primary key ID</p>
+         * <p>The primary key ID.</p>
          * 
          * <strong>example:</strong>
          * <p>2453</p>
@@ -96,7 +96,7 @@ public class DescribeAdvanceSearchLeftVariableListResponseBody extends TeaModel 
         public Long id;
 
         /**
-         * <p>Variable name</p>
+         * <p>The variable name.</p>
          * 
          * <strong>example:</strong>
          * <p>age</p>
@@ -105,7 +105,7 @@ public class DescribeAdvanceSearchLeftVariableListResponseBody extends TeaModel 
         public String name;
 
         /**
-         * <p>Parent node</p>
+         * <p>The parent node.</p>
          * 
          * <strong>example:</strong>
          * <p>name</p>
@@ -114,7 +114,7 @@ public class DescribeAdvanceSearchLeftVariableListResponseBody extends TeaModel 
         public String parentName;
 
         /**
-         * <p>Data source</p>
+         * <p>The data source.</p>
          * 
          * <strong>example:</strong>
          * <p>SAF</p>
@@ -123,7 +123,7 @@ public class DescribeAdvanceSearchLeftVariableListResponseBody extends TeaModel 
         public String sourceType;
 
         /**
-         * <p>Title.</p>
+         * <p>The title.</p>
          * 
          * <strong>example:</strong>
          * <p>年龄</p>
@@ -132,7 +132,7 @@ public class DescribeAdvanceSearchLeftVariableListResponseBody extends TeaModel 
         public String title;
 
         /**
-         * <p>Variable type</p>
+         * <p>The variable type.</p>
          * 
          * <strong>example:</strong>
          * <p>NATIVE</p>

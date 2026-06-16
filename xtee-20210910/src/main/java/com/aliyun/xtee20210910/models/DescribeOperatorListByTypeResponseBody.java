@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeOperatorListByTypeResponseBody extends TeaModel {
     /**
-     * <p>Request ID.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>A32FE941-35F2-5378-B37C-4B8FDB16F094</p>
@@ -14,7 +14,7 @@ public class DescribeOperatorListByTypeResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Return object</p>
+     * <p>The returned object.</p>
      */
     @NameInMap("resultObject")
     public java.util.List<DescribeOperatorListByTypeResponseBodyResultObject> resultObject;
@@ -42,7 +42,7 @@ public class DescribeOperatorListByTypeResponseBody extends TeaModel {
 
     public static class DescribeOperatorListByTypeResponseBodyResultObjectOperators extends TeaModel {
         /**
-         * <p>Operator code</p>
+         * <p>The operator code.</p>
          * 
          * <strong>example:</strong>
          * <p>equals</p>
@@ -51,7 +51,7 @@ public class DescribeOperatorListByTypeResponseBody extends TeaModel {
         public String code;
 
         /**
-         * <p>Whether it contains a right variable</p>
+         * <p>Indicates whether the operator has a right variable.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -60,7 +60,7 @@ public class DescribeOperatorListByTypeResponseBody extends TeaModel {
         public Boolean hasRightVariable;
 
         /**
-         * <p>Operator name</p>
+         * <p>The operator name.</p>
          * 
          * <strong>example:</strong>
          * <p>等于</p>
@@ -101,7 +101,7 @@ public class DescribeOperatorListByTypeResponseBody extends TeaModel {
 
     public static class DescribeOperatorListByTypeResponseBodyResultObject extends TeaModel {
         /**
-         * <p>Return value type</p>
+         * <p>The return value type.</p>
          * 
          * <strong>example:</strong>
          * <p>STRING</p>
@@ -110,7 +110,7 @@ public class DescribeOperatorListByTypeResponseBody extends TeaModel {
         public String fieldType;
 
         /**
-         * <p>Operator list</p>
+         * <p>The list of operators.</p>
          */
         @NameInMap("operators")
         public java.util.List<DescribeOperatorListByTypeResponseBodyResultObjectOperators> operators;

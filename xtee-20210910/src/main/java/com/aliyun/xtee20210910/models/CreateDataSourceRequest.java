@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class CreateDataSourceRequest extends TeaModel {
     /**
-     * <p>Sets the language type for requests and received messages, default value is <strong>zh</strong>. Values:</p>
+     * <p>The language of the request and response. Default value: <strong>zh</strong>. Valid values:</p>
      * <ul>
-     * <li><strong>zh</strong>: Chinese</li>
-     * <li><strong>en</strong>: English</li>
+     * <li><strong>zh</strong>: Chinese.</li>
+     * <li><strong>en</strong>: English.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,7 +18,7 @@ public class CreateDataSourceRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>Data source description.</p>
+     * <p>The description of the data source.</p>
      * 
      * <strong>example:</strong>
      * <p>数据源描述</p>
@@ -27,7 +27,7 @@ public class CreateDataSourceRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>Data source name.</p>
+     * <p>The data source name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -37,7 +37,7 @@ public class CreateDataSourceRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>OSS file key.</p>
+     * <p>The OSS file key.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -47,7 +47,7 @@ public class CreateDataSourceRequest extends TeaModel {
     public String ossKey;
 
     /**
-     * <p>Region code</p>
+     * <p>The region code.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -57,7 +57,7 @@ public class CreateDataSourceRequest extends TeaModel {
     public String regId;
 
     /**
-     * <p>Data source type</p>
+     * <p>The data source type.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

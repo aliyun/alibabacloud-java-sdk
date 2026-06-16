@@ -5,7 +5,11 @@ import com.aliyun.tea.*;
 
 public class DescribeEventVariableListRequest extends TeaModel {
     /**
-     * <p>Sets the language type for requests and received messages, with a default value of <strong>zh</strong>. The values are: - <strong>zh</strong>: Chinese - <strong>en</strong>: English</p>
+     * <p>The language type for the request and response messages. Default value: <strong>zh</strong>. Valid values:</p>
+     * <ul>
+     * <li><strong>zh</strong>: Chinese</li>
+     * <li><strong>en</strong>: English.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>zh</p>
@@ -14,7 +18,7 @@ public class DescribeEventVariableListRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>Create Type.</p>
+     * <p>The creation type.</p>
      * 
      * <strong>example:</strong>
      * <p>NORMAL</p>
@@ -23,7 +27,7 @@ public class DescribeEventVariableListRequest extends TeaModel {
     public String createType;
 
     /**
-     * <p>Filter object.</p>
+     * <p>The filter object.</p>
      * 
      * <strong>example:</strong>
      * <p>{
@@ -35,7 +39,7 @@ public class DescribeEventVariableListRequest extends TeaModel {
     public String filterDTO;
 
     /**
-     * <p>Associated event eventCode.</p>
+     * <p>The associated event code (eventCode).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -45,7 +49,7 @@ public class DescribeEventVariableListRequest extends TeaModel {
     public String refObjId;
 
     /**
-     * <p>Association Type.</p>
+     * <p>The association type.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -55,7 +59,7 @@ public class DescribeEventVariableListRequest extends TeaModel {
     public String refObjType;
 
     /**
-     * <p>Region Code.</p>
+     * <p>The region code.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -64,7 +68,7 @@ public class DescribeEventVariableListRequest extends TeaModel {
     public String regId;
 
     /**
-     * <p>type.</p>
+     * <p>The type.</p>
      * 
      * <strong>example:</strong>
      * <p>NATIVE</p>

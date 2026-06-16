@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyCustVariableResponseBody extends TeaModel {
     /**
-     * <p>Request ID.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>A32FE941-35F2-5378-B37C-4B8FDB16F094</p>
@@ -14,7 +14,7 @@ public class ModifyCustVariableResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Return object</p>
+     * <p>The response object.</p>
      */
     @NameInMap("resultObject")
     public java.util.List<ModifyCustVariableResponseBodyResultObject> resultObject;
@@ -42,7 +42,7 @@ public class ModifyCustVariableResponseBody extends TeaModel {
 
     public static class ModifyCustVariableResponseBodyResultObject extends TeaModel {
         /**
-         * <p>Failure type</p>
+         * <p>The failure type.</p>
          * 
          * <strong>example:</strong>
          * <p>rule</p>
@@ -51,7 +51,7 @@ public class ModifyCustVariableResponseBody extends TeaModel {
         public String failType;
 
         /**
-         * <p>Detailed information.</p>
+         * <p>The detailed information.</p>
          * 
          * <strong>example:</strong>
          * <p>ok</p>
@@ -60,7 +60,7 @@ public class ModifyCustVariableResponseBody extends TeaModel {
         public String message;
 
         /**
-         * <p>Whether the operation was successful</p>
+         * <p>Indicates whether the operation is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>

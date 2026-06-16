@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class UpdateDataSourceRequest extends TeaModel {
     /**
-     * <p>Sets the language type for requests and received messages, default value is <strong>zh</strong>. Values: </p>
+     * <p>The language of the request and response. Default value: <strong>zh</strong>. Valid values:</p>
      * <ul>
-     * <li><strong>zh</strong>: Chinese</li>
-     * <li><strong>en</strong>: English</li>
+     * <li><strong>zh</strong>: Chinese.</li>
+     * <li><strong>en</strong>: English.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,7 +18,7 @@ public class UpdateDataSourceRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>Description information.</p>
+     * <p>The description.</p>
      * 
      * <strong>example:</strong>
      * <p>描述</p>
@@ -27,7 +27,7 @@ public class UpdateDataSourceRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>Primary key ID</p>
+     * <p>The primary key ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -37,7 +37,7 @@ public class UpdateDataSourceRequest extends TeaModel {
     public Long id;
 
     /**
-     * <p>Data source name.</p>
+     * <p>The data source name.</p>
      * 
      * <strong>example:</strong>
      * <p>年龄数据源</p>
@@ -46,7 +46,7 @@ public class UpdateDataSourceRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>OSS file key.</p>
+     * <p>The OSS file key.</p>
      * 
      * <strong>example:</strong>
      * <p>saf/path/xxx</p>
@@ -55,7 +55,7 @@ public class UpdateDataSourceRequest extends TeaModel {
     public String ossKey;
 
     /**
-     * <p>Region code</p>
+     * <p>The region code.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -65,7 +65,7 @@ public class UpdateDataSourceRequest extends TeaModel {
     public String regId;
 
     /**
-     * <p>Data source type</p>
+     * <p>The data source type.</p>
      * 
      * <strong>example:</strong>
      * <p>FILE</p>

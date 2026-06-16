@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeListPocRequest extends TeaModel {
     /**
-     * <p>Current page number.</p>
+     * <p>The current page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -14,10 +14,10 @@ public class DescribeListPocRequest extends TeaModel {
     public Long currentPage;
 
     /**
-     * <p>Sets the language type for requests and received messages, with a default value of <strong>zh</strong>. Values:</p>
+     * <p>The language type for the request and response messages. Default value: <strong>zh</strong>. Valid values:</p>
      * <ul>
      * <li><strong>zh</strong>: Chinese</li>
-     * <li><strong>en</strong>: English</li>
+     * <li><strong>en</strong>: English.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -27,7 +27,7 @@ public class DescribeListPocRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>Page size.</p>
+     * <p>The number of entries per page.</p>
      * 
      * <strong>example:</strong>
      * <p>30</p>
@@ -36,7 +36,7 @@ public class DescribeListPocRequest extends TeaModel {
     public Long pageSize;
 
     /**
-     * <p>Region code</p>
+     * <p>The region code.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -45,29 +45,29 @@ public class DescribeListPocRequest extends TeaModel {
     public String regId;
 
     /**
-     * <p>Task name.</p>
+     * <p>The task name.</p>
      * 
      * <strong>example:</strong>
-     * <p>Task_001</p>
+     * <p>task1</p>
      */
     @NameInMap("TaskName")
     public String taskName;
 
     /**
-     * <p>The status of the import task. Valid values:</p>
+     * <p>The execution status of the import task. Valid values:</p>
      * <ul>
-     * <li>DOING</li>
-     * <li>FINISH</li>
+     * <li>DOING: running</li>
+     * <li>FINISH: completed.</li>
      * </ul>
      * 
      * <strong>example:</strong>
-     * <p>FINISH</p>
+     * <p>DOING</p>
      */
     @NameInMap("TaskStatus")
     public String taskStatus;
 
     /**
-     * <p>Type</p>
+     * <p>The type.</p>
      * 
      * <strong>example:</strong>
      * <p>SAF_CONSOLE</p>

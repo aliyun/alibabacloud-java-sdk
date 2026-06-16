@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class DescribeSimulationTaskCountRequest extends TeaModel {
     /**
-     * <p>Sets the language type for requests and received messages, default value is <strong>zh</strong>. Values:</p>
+     * <p>The language type for the request and response messages. Default value: <strong>zh</strong>. Valid values:</p>
      * <ul>
      * <li><strong>zh</strong>: Chinese</li>
-     * <li><strong>en</strong>: English</li>
+     * <li><strong>en</strong>: English.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,7 +18,7 @@ public class DescribeSimulationTaskCountRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>Data source configuration</p>
+     * <p>The datasource config.</p>
      * 
      * <strong>example:</strong>
      * <p>{}</p>
@@ -27,7 +27,7 @@ public class DescribeSimulationTaskCountRequest extends TeaModel {
     public String dataSourceConfig;
 
     /**
-     * <p>Data source type</p>
+     * <p>The data source type.</p>
      * 
      * <strong>example:</strong>
      * <p>SLS</p>
@@ -36,7 +36,7 @@ public class DescribeSimulationTaskCountRequest extends TeaModel {
     public String dataSourceType;
 
     /**
-     * <p>Task end time.</p>
+     * <p>The end time of the task.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -46,7 +46,7 @@ public class DescribeSimulationTaskCountRequest extends TeaModel {
     public Long endTime;
 
     /**
-     * <p>Event code</p>
+     * <p>The event code.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -56,7 +56,7 @@ public class DescribeSimulationTaskCountRequest extends TeaModel {
     public String eventCode;
 
     /**
-     * <p>Filter</p>
+     * <p>The filter.</p>
      * 
      * <strong>example:</strong>
      * <p>{&quot;left&quot;:&quot;score&quot;,&quot;operate&quot;:&quot;bw&quot;,&quot;right&quot;:&quot;222,333&quot;}</p>
@@ -65,7 +65,7 @@ public class DescribeSimulationTaskCountRequest extends TeaModel {
     public String filtersStr;
 
     /**
-     * <p>Region code</p>
+     * <p>The region code.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -74,7 +74,7 @@ public class DescribeSimulationTaskCountRequest extends TeaModel {
     public String regId;
 
     /**
-     * <p>Task start time.</p>
+     * <p>The start time of the task.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

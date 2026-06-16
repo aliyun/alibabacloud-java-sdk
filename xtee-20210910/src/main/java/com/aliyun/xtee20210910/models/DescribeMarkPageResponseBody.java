@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeMarkPageResponseBody extends TeaModel {
     /**
-     * <p>Request ID.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>A32FE941-35F2-5378-B37C-4B8FDB16F094</p>
@@ -14,7 +14,7 @@ public class DescribeMarkPageResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Current page number.</p>
+     * <p>The current page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -23,7 +23,7 @@ public class DescribeMarkPageResponseBody extends TeaModel {
     public Integer currentPage;
 
     /**
-     * <p>Page size, default value is 10.</p>
+     * <p>The number of entries per page. Default value: 10.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -32,13 +32,13 @@ public class DescribeMarkPageResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>Returned object.</p>
+     * <p>The returned object.</p>
      */
     @NameInMap("resultObject")
     public java.util.List<DescribeMarkPageResponseBodyResultObject> resultObject;
 
     /**
-     * <p>Total number of items.</p>
+     * <p>The total number of entries.</p>
      * 
      * <strong>example:</strong>
      * <p>6</p>
@@ -47,7 +47,7 @@ public class DescribeMarkPageResponseBody extends TeaModel {
     public Integer totalItem;
 
     /**
-     * <p>Total number of pages.</p>
+     * <p>The total number of pages.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -110,7 +110,7 @@ public class DescribeMarkPageResponseBody extends TeaModel {
 
     public static class DescribeMarkPageResponseBodyResultObject extends TeaModel {
         /**
-         * <p>Field name.</p>
+         * <p>The field name.</p>
          * 
          * <strong>example:</strong>
          * <p>mobile</p>
@@ -119,7 +119,7 @@ public class DescribeMarkPageResponseBody extends TeaModel {
         public String fieldName;
 
         /**
-         * <p>Field value.</p>
+         * <p>The field value.</p>
          * 
          * <strong>example:</strong>
          * <p>18000000000</p>
@@ -128,7 +128,7 @@ public class DescribeMarkPageResponseBody extends TeaModel {
         public String fieldValue;
 
         /**
-         * <p>Primary key ID.</p>
+         * <p>The primary key ID.</p>
          * 
          * <strong>example:</strong>
          * <p>2793</p>
@@ -137,7 +137,11 @@ public class DescribeMarkPageResponseBody extends TeaModel {
         public Long id;
 
         /**
-         * <p>Mark (0 No / 1 Yes).</p>
+         * <p>Indicates whether the entry is tagged. Valid values:</p>
+         * <ul>
+         * <li><strong>0</strong>: not tagged.</li>
+         * <li><strong>1</strong>: tagged.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>1</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeSampleInfoResponseBody extends TeaModel {
     /**
-     * <p>Request ID.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>A32FE941-35F2-5378-B37C-4B8FDB16F094</p>
@@ -14,7 +14,7 @@ public class DescribeSampleInfoResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Returned object</p>
+     * <p>The returned object.</p>
      */
     @NameInMap("resultObject")
     public DescribeSampleInfoResponseBodyResultObject resultObject;
@@ -42,7 +42,7 @@ public class DescribeSampleInfoResponseBody extends TeaModel {
 
     public static class DescribeSampleInfoResponseBodyResultObject extends TeaModel {
         /**
-         * <p>Primary key ID</p>
+         * <p>The primary key ID.</p>
          * 
          * <strong>example:</strong>
          * <p>3144</p>
@@ -51,7 +51,7 @@ public class DescribeSampleInfoResponseBody extends TeaModel {
         public Long id;
 
         /**
-         * <p>Sample tags.</p>
+         * <p>The sample tags.</p>
          * 
          * <strong>example:</strong>
          * <p>em0102</p>
@@ -60,7 +60,7 @@ public class DescribeSampleInfoResponseBody extends TeaModel {
         public String sampleTags;
 
         /**
-         * <p>Sample type</p>
+         * <p>The data sample type.</p>
          * 
          * <strong>example:</strong>
          * <p>PHONE</p>
@@ -69,7 +69,7 @@ public class DescribeSampleInfoResponseBody extends TeaModel {
         public String sampleType;
 
         /**
-         * <p>Sample value.</p>
+         * <p>The sample value.</p>
          * 
          * <strong>example:</strong>
          * <p>17700000000</p>
@@ -78,7 +78,7 @@ public class DescribeSampleInfoResponseBody extends TeaModel {
         public String sampleValue;
 
         /**
-         * <p>Update time.</p>
+         * <p>The update time.</p>
          * 
          * <strong>example:</strong>
          * <p>1753804800000</p>
@@ -87,7 +87,7 @@ public class DescribeSampleInfoResponseBody extends TeaModel {
         public String updateTime;
 
         /**
-         * <p>Version number.</p>
+         * <p>The version number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>

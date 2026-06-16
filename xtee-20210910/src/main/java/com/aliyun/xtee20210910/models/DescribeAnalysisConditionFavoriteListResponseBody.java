@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeAnalysisConditionFavoriteListResponseBody extends TeaModel {
     /**
-     * <p>Request ID.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>A32FE941-35F2-5378-B37C-4B8FDB16F094</p>
@@ -14,7 +14,7 @@ public class DescribeAnalysisConditionFavoriteListResponseBody extends TeaModel 
     public String requestId;
 
     /**
-     * <p>Returned object</p>
+     * <p>The response object.</p>
      */
     @NameInMap("resultObject")
     public java.util.List<DescribeAnalysisConditionFavoriteListResponseBodyResultObject> resultObject;
@@ -42,7 +42,7 @@ public class DescribeAnalysisConditionFavoriteListResponseBody extends TeaModel 
 
     public static class DescribeAnalysisConditionFavoriteListResponseBodyResultObject extends TeaModel {
         /**
-         * <p>Condition value.</p>
+         * <p>The condition value.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;currentId&quot;:1,&quot;deepCount&quot;:0,&quot;list&quot;:[{&quot;currentId&quot;:2,&quot;deepCount&quot;:1,&quot;left&quot;:{&quot;code&quot;:&quot;accountId&quot;,&quot;fieldType&quot;:&quot;STRING&quot;,&quot;functionName&quot;:&quot;&quot;,&quot;hasRightVariable&quot;:false,&quot;name&quot;:&quot;accountId&quot;},&quot;operatorCode&quot;:&quot;isNotEmptyWrapper&quot;,&quot;parentId&quot;:1,&quot;right&quot;:{&quot;code&quot;:&quot;\&quot;A\nB\nC\&quot;&quot;,&quot;functionName&quot;:&quot;&quot;,&quot;name&quot;:&quot;&quot;,&quot;rightVariableType&quot;:&quot;constant&quot;}}],&quot;parentId&quot;:0,&quot;relationship&quot;:&quot;and&quot;}</p>
@@ -51,7 +51,7 @@ public class DescribeAnalysisConditionFavoriteListResponseBody extends TeaModel 
         public String condition;
 
         /**
-         * <p>Event start timestamp.</p>
+         * <p>The event start timestamp.</p>
          * 
          * <strong>example:</strong>
          * <p>1752076800000</p>
@@ -60,7 +60,7 @@ public class DescribeAnalysisConditionFavoriteListResponseBody extends TeaModel 
         public Long eventBeginTime;
 
         /**
-         * <p>Event codes.</p>
+         * <p>The event code.</p>
          * 
          * <strong>example:</strong>
          * <p>de_ahespg8137</p>
@@ -69,7 +69,7 @@ public class DescribeAnalysisConditionFavoriteListResponseBody extends TeaModel 
         public String eventCodes;
 
         /**
-         * <p>Event end time.</p>
+         * <p>The event end timestamp.</p>
          * 
          * <strong>example:</strong>
          * <p>1753891199000</p>
@@ -78,7 +78,7 @@ public class DescribeAnalysisConditionFavoriteListResponseBody extends TeaModel 
         public Long eventEndTime;
 
         /**
-         * <p>Field name.</p>
+         * <p>The field name.</p>
          * 
          * <strong>example:</strong>
          * <p>age</p>
@@ -87,7 +87,7 @@ public class DescribeAnalysisConditionFavoriteListResponseBody extends TeaModel 
         public String fieldName;
 
         /**
-         * <p>Field value.</p>
+         * <p>The field value.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -96,7 +96,7 @@ public class DescribeAnalysisConditionFavoriteListResponseBody extends TeaModel 
         public String fieldValue;
 
         /**
-         * <p>Primary key ID</p>
+         * <p>The primary key ID.</p>
          * 
          * <strong>example:</strong>
          * <p>497</p>
@@ -105,7 +105,7 @@ public class DescribeAnalysisConditionFavoriteListResponseBody extends TeaModel 
         public Long id;
 
         /**
-         * <p>Condition name</p>
+         * <p>The condition name.</p>
          * 
          * <strong>example:</strong>
          * <p>查询条件1</p>
@@ -114,7 +114,7 @@ public class DescribeAnalysisConditionFavoriteListResponseBody extends TeaModel 
         public String name;
 
         /**
-         * <p>Type, BASIC: Basic query, ADVANCE: Advanced query, BATCH: Batch query</p>
+         * <p>The type. Valid values: BASIC: basic query. ADVANCE: advanced query. BATCH: batch query.</p>
          * 
          * <strong>example:</strong>
          * <p>BASIC</p>

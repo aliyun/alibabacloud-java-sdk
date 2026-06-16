@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeAnalysisColumnListResponseBody extends TeaModel {
     /**
-     * <p>Request ID.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>A32FE941-35F2-5378-B37C-4B8FDB16F094</p>
@@ -14,7 +14,7 @@ public class DescribeAnalysisColumnListResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Returned object</p>
+     * <p>The returned object.</p>
      */
     @NameInMap("resultObject")
     public java.util.List<DescribeAnalysisColumnListResponseBodyResultObject> resultObject;
@@ -42,7 +42,7 @@ public class DescribeAnalysisColumnListResponseBody extends TeaModel {
 
     public static class DescribeAnalysisColumnListResponseBodyResultObject extends TeaModel {
         /**
-         * <p>Event code</p>
+         * <p>The event code.</p>
          * 
          * <strong>example:</strong>
          * <p>de_aszbjb7236</p>
@@ -51,7 +51,7 @@ public class DescribeAnalysisColumnListResponseBody extends TeaModel {
         public String eventCode;
 
         /**
-         * <p>Event name.</p>
+         * <p>The event name.</p>
          * 
          * <strong>example:</strong>
          * <p>注册风险</p>
@@ -60,7 +60,7 @@ public class DescribeAnalysisColumnListResponseBody extends TeaModel {
         public String eventName;
 
         /**
-         * <p>Whether it is a default column.</p>
+         * <p>Indicates whether the column is a default column.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -69,7 +69,7 @@ public class DescribeAnalysisColumnListResponseBody extends TeaModel {
         public Boolean isDefault;
 
         /**
-         * <p>Variable name.</p>
+         * <p>The variable name.</p>
          * 
          * <strong>example:</strong>
          * <p>age</p>
@@ -78,7 +78,7 @@ public class DescribeAnalysisColumnListResponseBody extends TeaModel {
         public String variableName;
 
         /**
-         * <p>Variable title.</p>
+         * <p>The variable name.</p>
          * 
          * <strong>example:</strong>
          * <p>年龄</p>
@@ -87,7 +87,7 @@ public class DescribeAnalysisColumnListResponseBody extends TeaModel {
         public String variableTitle;
 
         /**
-         * <p>Variable type.</p>
+         * <p>The variable type.</p>
          * 
          * <strong>example:</strong>
          * <p>NATIVE</p>

@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class DescribeAllRootVariableRequest extends TeaModel {
     /**
-     * <p>Set the language type for requests and received messages, default value is <strong>zh</strong>. Values: </p>
+     * <p>The language of the request and response. Default value: <strong>zh</strong>. Valid values:</p>
      * <ul>
      * <li><strong>zh</strong>: Chinese</li>
-     * <li><strong>en</strong>: English</li>
+     * <li><strong>en</strong>: English.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,7 +18,7 @@ public class DescribeAllRootVariableRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>Request source IP. No need to fill in, the system will automatically obtain it.</p>
+     * <p>The source IP address of the request. You do not need to specify this parameter. The system automatically obtains the value.</p>
      * 
      * <strong>example:</strong>
      * <p>61.169.104.202</p>
@@ -27,7 +27,7 @@ public class DescribeAllRootVariableRequest extends TeaModel {
     public String sourceIp;
 
     /**
-     * <p>Device variable list</p>
+     * <p>The list of device variables.</p>
      * 
      * <strong>example:</strong>
      * <p>[180]</p>
@@ -36,7 +36,7 @@ public class DescribeAllRootVariableRequest extends TeaModel {
     public String deviceVariableIds;
 
     /**
-     * <p>Event code</p>
+     * <p>The event code.</p>
      * 
      * <strong>example:</strong>
      * <p>de_arqbuy7206</p>
@@ -45,7 +45,7 @@ public class DescribeAllRootVariableRequest extends TeaModel {
     public String eventCode;
 
     /**
-     * <p>Custom variable list</p>
+     * <p>The list of custom variables.</p>
      * 
      * <strong>example:</strong>
      * <p>[6780]</p>
@@ -54,7 +54,7 @@ public class DescribeAllRootVariableRequest extends TeaModel {
     public String expressionVariableIds;
 
     /**
-     * <p>Variable ID.</p>
+     * <p>The variable ID.</p>
      * 
      * <strong>example:</strong>
      * <p>2557</p>
@@ -63,7 +63,7 @@ public class DescribeAllRootVariableRequest extends TeaModel {
     public Long id;
 
     /**
-     * <p>Event field list</p>
+     * <p>The list of event fields.</p>
      * 
      * <strong>example:</strong>
      * <p>[106780]</p>
@@ -72,7 +72,7 @@ public class DescribeAllRootVariableRequest extends TeaModel {
     public String nativeVariableIds;
 
     /**
-     * <p>Custom query variable</p>
+     * <p>The custom query variables.</p>
      * 
      * <strong>example:</strong>
      * <p>[2678]</p>
@@ -81,7 +81,7 @@ public class DescribeAllRootVariableRequest extends TeaModel {
     public String queryVariableIds;
 
     /**
-     * <p>Region code</p>
+     * <p>The region code.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -90,7 +90,7 @@ public class DescribeAllRootVariableRequest extends TeaModel {
     public String regId;
 
     /**
-     * <p>Custom cumulative variable</p>
+     * <p>The custom cumulative variables.</p>
      * 
      * <strong>example:</strong>
      * <p>[780]</p>

@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class SwitchFieldRequest extends TeaModel {
     /**
-     * <p>Sets the language type for requests and received messages, with a default value of <strong>zh</strong>. Values:</p>
+     * <p>The language of the request and response. Default value: <strong>zh</strong>. Valid values:</p>
      * <ul>
      * <li><strong>zh</strong>: Chinese</li>
-     * <li><strong>en</strong>: English</li>
+     * <li><strong>en</strong>: English.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,7 +18,7 @@ public class SwitchFieldRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>Primary Key ID</p>
+     * <p>The primary key ID.</p>
      * 
      * <strong>example:</strong>
      * <p>250002</p>
@@ -27,7 +27,7 @@ public class SwitchFieldRequest extends TeaModel {
     public Long id;
 
     /**
-     * <p>Parameter Name.</p>
+     * <p>The parameter name.</p>
      * 
      * <strong>example:</strong>
      * <p>age</p>
@@ -36,7 +36,7 @@ public class SwitchFieldRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>Region Code</p>
+     * <p>The region code.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -46,7 +46,11 @@ public class SwitchFieldRequest extends TeaModel {
     public String regId;
 
     /**
-     * <p>Field Source</p>
+     * <p>The field source. Valid values:</p>
+     * <ul>
+     * <li><strong>DEFINE</strong>: custom</li>
+     * <li><strong>DEFAULT</strong>: system default.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>DEFINE</p>
@@ -55,7 +59,11 @@ public class SwitchFieldRequest extends TeaModel {
     public String source;
 
     /**
-     * <p>Status.</p>
+     * <p>The status. Valid values:</p>
+     * <ul>
+     * <li><strong>DISABLE</strong>: disabled</li>
+     * <li><strong>ENABLE</strong>: enabled.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>ENABLE</p>

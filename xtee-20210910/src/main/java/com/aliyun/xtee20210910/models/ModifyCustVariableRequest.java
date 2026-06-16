@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class ModifyCustVariableRequest extends TeaModel {
     /**
-     * <p>Sets the language type for requests and received messages, default value is <strong>zh</strong>. Values: </p>
+     * <p>The language type for the request and response messages. Default value: <strong>zh</strong>. Valid values:</p>
      * <ul>
-     * <li><strong>zh</strong>: Chinese</li>
-     * <li><strong>en</strong>: English</li>
+     * <li><strong>zh</strong>: Chinese.</li>
+     * <li><strong>en</strong>: English.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,7 +18,7 @@ public class ModifyCustVariableRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>Condition value.</p>
+     * <p>The condition value.</p>
      * 
      * <strong>example:</strong>
      * <p>{\&quot;currentId\&quot;:1,\&quot;deepCount\&quot;:0,\&quot;list\&quot;:[{\&quot;currentId\&quot;:2,\&quot;deepCount\&quot;:1,\&quot;left\&quot;:{\&quot;code\&quot;:\&quot;__hit_rules\&quot;,\&quot;fieldType\&quot;:\&quot;STRING\&quot;,\&quot;functionName\&quot;:\&quot;\&quot;,\&quot;hasRightVariable\&quot;:true,\&quot;name\&quot;:\&quot;hitRules\&quot;,\&quot;operatorCode\&quot;:\&quot;deNotInNameList\&quot;},\&quot;operatorCode\&quot;:\&quot;deNotInNameList\&quot;,\&quot;parentId\&quot;:1,\&quot;right\&quot;:{\&quot;code\&quot;:\&quot;\&quot;nl_Xcufc8wV6624\&quot;\&quot;,\&quot;name\&quot;:\&quot;nl_Xcufc8wV6624\&quot;,\&quot;rightVariableType\&quot;:\&quot;variable\&quot;}},{\&quot;currentId\&quot;:3,\&quot;deepCount\&quot;:1,\&quot;list\&quot;:[{\&quot;currentId\&quot;:4,\&quot;deepCount\&quot;:2,\&quot;left\&quot;:{\&quot;code\&quot;:\&quot;__v_safde\&quot;,\&quot;fieldType\&quot;:\&quot;DOUBLE\&quot;,\&quot;functionName\&quot;:\&quot;\&quot;,\&quot;hasRightVariable\&quot;:true,\&quot;name\&quot;:\&quot;score\&quot;,\&quot;operatorCode\&quot;:\&quot;equals\&quot;},\&quot;operatorCode\&quot;:\&quot;equals\&quot;,\&quot;parentId\&quot;:3,\&quot;right\&quot;:{\&quot;code\&quot;:\&quot;\&quot;99\&quot;\&quot;,\&quot;name\&quot;:\&quot;99\&quot;,\&quot;rightVariableType\&quot;:\&quot;constant\&quot;}},{\&quot;currentId\&quot;:5,\&quot;deepCount\&quot;:2,\&quot;left\&quot;:{\&quot;code\&quot;:\&quot;queryPhoneSimulatorInfo(deviceToken)?\&quot;,\&quot;fieldType\&quot;:\&quot;STRING\&quot;,\&quot;functionName\&quot;:\&quot;\&quot;,\&quot;hasRightVariable\&quot;:false,\&quot;name\&quot;:\&quot;<strong>device-test01</strong>\&quot;,\&quot;operatorCode\&quot;:\&quot;isNotEmptyWrapper\&quot;},\&quot;operatorCode\&quot;:\&quot;isNotEmptyWrapper\&quot;,\&quot;parentId\&quot;:3,\&quot;right\&quot;:{\&quot;functionName\&quot;:\&quot;\&quot;,\&quot;name\&quot;:\&quot;\&quot;,\&quot;rightVariableType\&quot;:\&quot;constant\&quot;}}],\&quot;parentId\&quot;:1,\&quot;relationship\&quot;:\&quot;and\&quot;}],\&quot;parentId\&quot;:0,\&quot;relationship\&quot;:\&quot;and\&quot;}</p>
@@ -27,7 +27,7 @@ public class ModifyCustVariableRequest extends TeaModel {
     public String condition;
 
     /**
-     * <p>Data version.</p>
+     * <p>The data version.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -37,7 +37,7 @@ public class ModifyCustVariableRequest extends TeaModel {
     public Long dataVersion;
 
     /**
-     * <p>Description information.</p>
+     * <p>The description.</p>
      * 
      * <strong>example:</strong>
      * <p>描述</p>
@@ -46,7 +46,7 @@ public class ModifyCustVariableRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>Event code.</p>
+     * <p>The event code.</p>
      * 
      * <strong>example:</strong>
      * <p>account_abuse_pro,account_abuse</p>
@@ -55,7 +55,7 @@ public class ModifyCustVariableRequest extends TeaModel {
     public String eventCodes;
 
     /**
-     * <p>Variable ID</p>
+     * <p>The variable ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -65,7 +65,7 @@ public class ModifyCustVariableRequest extends TeaModel {
     public Long id;
 
     /**
-     * <p>Variable name</p>
+     * <p>The variable name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -75,7 +75,7 @@ public class ModifyCustVariableRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>Output</p>
+     * <p>The output.</p>
      * 
      * <strong>example:</strong>
      * <p>STRING</p>
@@ -84,7 +84,7 @@ public class ModifyCustVariableRequest extends TeaModel {
     public String outputs;
 
     /**
-     * <p>Region code</p>
+     * <p>The region code.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>

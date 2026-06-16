@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeVariableListResponseBody extends TeaModel {
     /**
-     * <p>Request ID.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>A32FE941-35F2-5378-B37C-4B8FDB16F094</p>
@@ -14,7 +14,7 @@ public class DescribeVariableListResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Current page number.</p>
+     * <p>The current page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -23,7 +23,7 @@ public class DescribeVariableListResponseBody extends TeaModel {
     public Integer currentPage;
 
     /**
-     * <p>Page size, default value is 10.</p>
+     * <p>The number of entries per page. Default value: 10.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -32,13 +32,13 @@ public class DescribeVariableListResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>Returned object.</p>
+     * <p>The returned object.</p>
      */
     @NameInMap("resultObject")
     public java.util.List<DescribeVariableListResponseBodyResultObject> resultObject;
 
     /**
-     * <p>Total number of items.</p>
+     * <p>The total number of entries.</p>
      * 
      * <strong>example:</strong>
      * <p>27</p>
@@ -47,7 +47,7 @@ public class DescribeVariableListResponseBody extends TeaModel {
     public Integer totalItem;
 
     /**
-     * <p>Total number of pages.</p>
+     * <p>The total number of pages.</p>
      * 
      * <strong>example:</strong>
      * <p>3</p>
@@ -110,7 +110,7 @@ public class DescribeVariableListResponseBody extends TeaModel {
 
     public static class DescribeVariableListResponseBodyResultObject extends TeaModel {
         /**
-         * <p>Capacity.</p>
+         * <p>The capacity.</p>
          * 
          * <strong>example:</strong>
          * <p>100000</p>
@@ -119,7 +119,7 @@ public class DescribeVariableListResponseBody extends TeaModel {
         public Long capacity;
 
         /**
-         * <p>Variable definition ID.</p>
+         * <p>The variable definition ID.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -128,7 +128,7 @@ public class DescribeVariableListResponseBody extends TeaModel {
         public String defineId;
 
         /**
-         * <p>Description information.</p>
+         * <p>The description.</p>
          * 
          * <strong>example:</strong>
          * <p>变量描述</p>
@@ -137,7 +137,7 @@ public class DescribeVariableListResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>Extended information.</p>
+         * <p>The extended information.</p>
          * 
          * <strong>example:</strong>
          * <p>暂无</p>
@@ -146,7 +146,7 @@ public class DescribeVariableListResponseBody extends TeaModel {
         public java.util.Map<String, ?> extendInfo;
 
         /**
-         * <p>Creation time.</p>
+         * <p>The creation time.</p>
          * 
          * <strong>example:</strong>
          * <p>1621578648000</p>
@@ -155,7 +155,7 @@ public class DescribeVariableListResponseBody extends TeaModel {
         public Long gmtCreate;
 
         /**
-         * <p>Modification time.</p>
+         * <p>The modification time.</p>
          * 
          * <strong>example:</strong>
          * <p>1565701886000</p>
@@ -164,7 +164,7 @@ public class DescribeVariableListResponseBody extends TeaModel {
         public Long gmtModified;
 
         /**
-         * <p>Variable ID.</p>
+         * <p>The variable ID.</p>
          * 
          * <strong>example:</strong>
          * <p>497</p>
@@ -173,7 +173,7 @@ public class DescribeVariableListResponseBody extends TeaModel {
         public Long id;
 
         /**
-         * <p>Remaining capacity.</p>
+         * <p>The remaining capacity.</p>
          * 
          * <strong>example:</strong>
          * <p>100000</p>
@@ -182,7 +182,7 @@ public class DescribeVariableListResponseBody extends TeaModel {
         public Long leftCapacity;
 
         /**
-         * <p>Variable name</p>
+         * <p>The variable name.</p>
          * 
          * <strong>example:</strong>
          * <p><strong>ipLocationCityCode</strong></p>
@@ -191,7 +191,7 @@ public class DescribeVariableListResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>Variable output type</p>
+         * <p>The output type of the variable.</p>
          * 
          * <strong>example:</strong>
          * <p>STRING</p>
@@ -200,7 +200,7 @@ public class DescribeVariableListResponseBody extends TeaModel {
         public String outputsType;
 
         /**
-         * <p>Associated event ID.</p>
+         * <p>The associated event of the variable.</p>
          * 
          * <strong>example:</strong>
          * <p>de_agdxgz0246</p>
@@ -209,7 +209,7 @@ public class DescribeVariableListResponseBody extends TeaModel {
         public String refObjId;
 
         /**
-         * <p>Associated event name.</p>
+         * <p>The name of the associated event of the variable.</p>
          * 
          * <strong>example:</strong>
          * <p>注册事件</p>
@@ -218,7 +218,7 @@ public class DescribeVariableListResponseBody extends TeaModel {
         public String refObjName;
 
         /**
-         * <p>Associated object type of the variable</p>
+         * <p>The association type of the variable.</p>
          * 
          * <strong>example:</strong>
          * <p>EVENT</p>
@@ -227,7 +227,7 @@ public class DescribeVariableListResponseBody extends TeaModel {
         public String refObjType;
 
         /**
-         * <p>Source type.</p>
+         * <p>The source type.</p>
          * 
          * <strong>example:</strong>
          * <p>SAF</p>
@@ -236,7 +236,7 @@ public class DescribeVariableListResponseBody extends TeaModel {
         public String sourceType;
 
         /**
-         * <p>Title.</p>
+         * <p>The title.</p>
          * 
          * <strong>example:</strong>
          * <p>设备风险识别_标签</p>
@@ -245,7 +245,7 @@ public class DescribeVariableListResponseBody extends TeaModel {
         public String title;
 
         /**
-         * <p>Variable type.</p>
+         * <p>The variable type.</p>
          * 
          * <strong>example:</strong>
          * <p>NATIVE</p>
@@ -254,7 +254,7 @@ public class DescribeVariableListResponseBody extends TeaModel {
         public String type;
 
         /**
-         * <p>User ID to which the data belongs.</p>
+         * <p>The UID of the user who owns the data.</p>
          * 
          * <strong>example:</strong>
          * <p>100000</p>

@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class UpdateAuditRequest extends TeaModel {
     /**
-     * <p>Sets the language type for requests and received messages, default value is <strong>zh</strong>. Values:</p>
+     * <p>The language of the request and response. Default value: <strong>zh</strong>. Valid values:</p>
      * <ul>
      * <li><strong>zh</strong>: Chinese</li>
-     * <li><strong>en</strong>: English</li>
+     * <li><strong>en</strong>: English.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,7 +18,7 @@ public class UpdateAuditRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>Approval comments</p>
+     * <p>The approval comment.</p>
      * 
      * <strong>example:</strong>
      * <p>同意</p>
@@ -27,7 +27,7 @@ public class UpdateAuditRequest extends TeaModel {
     public String auditMsg;
 
     /**
-     * <p>Associated type</p>
+     * <p>The association type.</p>
      * 
      * <strong>example:</strong>
      * <p>RULE</p>
@@ -36,7 +36,7 @@ public class UpdateAuditRequest extends TeaModel {
     public String auditRelationType;
 
     /**
-     * <p>Status</p>
+     * <p>The approval status.</p>
      * 
      * <strong>example:</strong>
      * <p>AGREE</p>
@@ -45,7 +45,7 @@ public class UpdateAuditRequest extends TeaModel {
     public String auditStatus;
 
     /**
-     * <p>The ID of the approval to be updated.</p>
+     * <p>The ID of the approval to update.</p>
      * 
      * <strong>example:</strong>
      * <p>376773</p>
@@ -54,7 +54,7 @@ public class UpdateAuditRequest extends TeaModel {
     public Long id;
 
     /**
-     * <p>Region code</p>
+     * <p>The region code.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UploadSampleFileRequest extends TeaModel {
     /**
+     * <p>File name.</p>
+     * 
      * <strong>example:</strong>
      * <p>icekredit_202312_23a_1764640368_6908.csv</p>
      */
@@ -12,6 +14,8 @@ public class UploadSampleFileRequest extends TeaModel {
     public String fileName;
 
     /**
+     * <p>File URL.</p>
+     * 
      * <strong>example:</strong>
      * <p>saf/cpoc/34cd7959590ef568086035b956210495/1761186218068_XN_test JR142_1023_204794.csv</p>
      */
@@ -19,6 +23,8 @@ public class UploadSampleFileRequest extends TeaModel {
     public String fileUrl;
 
     /**
+     * <p>Language of the error message returned by the API. Valid values: zh: Chinese. en: English. Default value: en.</p>
+     * 
      * <strong>example:</strong>
      * <p>zh</p>
      */
@@ -26,6 +32,8 @@ public class UploadSampleFileRequest extends TeaModel {
     public String lang;
 
     /**
+     * <p>Area encoding.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
      */
@@ -33,6 +41,8 @@ public class UploadSampleFileRequest extends TeaModel {
     public String regId;
 
     /**
+     * <p>Scenario.</p>
+     * 
      * <strong>example:</strong>
      * <p>INTERNET</p>
      */
@@ -40,6 +50,8 @@ public class UploadSampleFileRequest extends TeaModel {
     public String tab;
 
     /**
+     * <p>Access type.</p>
+     * 
      * <strong>example:</strong>
      * <p>SAF_CONSOLE</p>
      */

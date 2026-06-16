@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeRulePageListResponseBody extends TeaModel {
     /**
-     * <p>Current page number.</p>
+     * <p>The current page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -14,7 +14,7 @@ public class DescribeRulePageListResponseBody extends TeaModel {
     public Integer currentPage;
 
     /**
-     * <p>Page size, default value is 10.</p>
+     * <p>The number of entries per page. Default value: 10.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -23,7 +23,7 @@ public class DescribeRulePageListResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>Request ID.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>AE7E6105-7DEB-5125-9B24-DCBC139F6CD2</p>
@@ -32,13 +32,13 @@ public class DescribeRulePageListResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Returned object.</p>
+     * <p>The returned object.</p>
      */
     @NameInMap("resultObject")
     public java.util.List<DescribeRulePageListResponseBodyResultObject> resultObject;
 
     /**
-     * <p>Total number of items.</p>
+     * <p>The total number of entries.</p>
      * 
      * <strong>example:</strong>
      * <p>28</p>
@@ -47,7 +47,7 @@ public class DescribeRulePageListResponseBody extends TeaModel {
     public Integer totalItem;
 
     /**
-     * <p>Total number of pages.</p>
+     * <p>The total number of pages.</p>
      * 
      * <strong>example:</strong>
      * <p>3</p>
@@ -110,7 +110,7 @@ public class DescribeRulePageListResponseBody extends TeaModel {
 
     public static class DescribeRulePageListResponseBodyResultObjectConsoleAudit extends TeaModel {
         /**
-         * <p>UID of the user who passed the audit</p>
+         * <p>The UID of the user who approved the request.</p>
          * 
          * <strong>example:</strong>
          * <p>用户uid</p>
@@ -119,7 +119,7 @@ public class DescribeRulePageListResponseBody extends TeaModel {
         public String applyUserId;
 
         /**
-         * <p>Name of the user who passed the audit</p>
+         * <p>The name of the user who approved the request.</p>
          * 
          * <strong>example:</strong>
          * <p>root</p>
@@ -128,7 +128,7 @@ public class DescribeRulePageListResponseBody extends TeaModel {
         public String applyUserName;
 
         /**
-         * <p>Approval comments</p>
+         * <p>The approval comment.</p>
          * 
          * <strong>example:</strong>
          * <p>同意</p>
@@ -137,7 +137,7 @@ public class DescribeRulePageListResponseBody extends TeaModel {
         public String auditMsg;
 
         /**
-         * <p>UID of the final auditor</p>
+         * <p>The UID of the final reviewer.</p>
          * 
          * <strong>example:</strong>
          * <p>1728</p>
@@ -146,7 +146,7 @@ public class DescribeRulePageListResponseBody extends TeaModel {
         public String auditRealUserId;
 
         /**
-         * <p>Name of the final auditor</p>
+         * <p>The name of the final reviewer.</p>
          * 
          * <strong>example:</strong>
          * <p>root</p>
@@ -155,7 +155,7 @@ public class DescribeRulePageListResponseBody extends TeaModel {
         public String auditRealUserName;
 
         /**
-         * <p>Remarks by the approver.</p>
+         * <p>The remark from the reviewer.</p>
          * 
          * <strong>example:</strong>
          * <p>备注</p>
@@ -164,7 +164,7 @@ public class DescribeRulePageListResponseBody extends TeaModel {
         public String auditRemark;
 
         /**
-         * <p>Application audit status</p>
+         * <p>The approval status.</p>
          * 
          * <strong>example:</strong>
          * <p>AGREE</p>
@@ -173,7 +173,7 @@ public class DescribeRulePageListResponseBody extends TeaModel {
         public String auditStatus;
 
         /**
-         * <p>Approval time</p>
+         * <p>The approval time.</p>
          * 
          * <strong>example:</strong>
          * <p>1545726028000</p>
@@ -182,7 +182,7 @@ public class DescribeRulePageListResponseBody extends TeaModel {
         public Long auditTime;
 
         /**
-         * <p>UID of the auditor</p>
+         * <p>The UID of the reviewer.</p>
          * 
          * <strong>example:</strong>
          * <p>1234xxxx</p>
@@ -191,7 +191,7 @@ public class DescribeRulePageListResponseBody extends TeaModel {
         public String auditUserId;
 
         /**
-         * <p>Name of the auditor</p>
+         * <p>The name of the reviewer.</p>
          * 
          * <strong>example:</strong>
          * <p>root</p>
@@ -200,7 +200,7 @@ public class DescribeRulePageListResponseBody extends TeaModel {
         public String auditUserName;
 
         /**
-         * <p>Creation time.</p>
+         * <p>The creation time.</p>
          * 
          * <strong>example:</strong>
          * <p>1545726028000</p>
@@ -209,7 +209,7 @@ public class DescribeRulePageListResponseBody extends TeaModel {
         public Long gmtCreate;
 
         /**
-         * <p>Primary key ID</p>
+         * <p>The primary key ID.</p>
          * 
          * <strong>example:</strong>
          * <p>1728</p>
@@ -218,7 +218,7 @@ public class DescribeRulePageListResponseBody extends TeaModel {
         public Long id;
 
         /**
-         * <p>Information of other related parties (in JSON format)</p>
+         * <p>The information about other associated users in JSON format.</p>
          * 
          * <strong>example:</strong>
          * <p>{}</p>
@@ -227,7 +227,7 @@ public class DescribeRulePageListResponseBody extends TeaModel {
         public String relationExt;
 
         /**
-         * <p>ID of the related transaction for the approval</p>
+         * <p>The transaction ID associated with the approval.</p>
          * 
          * <strong>example:</strong>
          * <p>123</p>
@@ -236,7 +236,7 @@ public class DescribeRulePageListResponseBody extends TeaModel {
         public Long relationId;
 
         /**
-         * <p>Name of the related transaction for the approval (can be null)</p>
+         * <p>The transaction name associated with the approval. This parameter can be empty.</p>
          * 
          * <strong>example:</strong>
          * <p>策略1</p>
@@ -245,7 +245,7 @@ public class DescribeRulePageListResponseBody extends TeaModel {
         public String relationName;
 
         /**
-         * <p>Type of the approval (e.g., <code>rule</code> represents the approval of a rule)</p>
+         * <p>The type of the approval. For example, rule indicates a policy approval.</p>
          * 
          * <strong>example:</strong>
          * <p>RULE</p>
@@ -390,7 +390,7 @@ public class DescribeRulePageListResponseBody extends TeaModel {
 
     public static class DescribeRulePageListResponseBodyResultObject extends TeaModel {
         /**
-         * <p>Service authorization type</p>
+         * <p>The service authorization type.</p>
          * 
          * <strong>example:</strong>
          * <p>all</p>
@@ -399,13 +399,13 @@ public class DescribeRulePageListResponseBody extends TeaModel {
         public String authType;
 
         /**
-         * <p>Audit object</p>
+         * <p>The approval object.</p>
          */
         @NameInMap("consoleAudit")
         public DescribeRulePageListResponseBodyResultObjectConsoleAudit consoleAudit;
 
         /**
-         * <p>Event code.</p>
+         * <p>The event code.</p>
          * 
          * <strong>example:</strong>
          * <p>de_arcehq4370</p>
@@ -414,7 +414,7 @@ public class DescribeRulePageListResponseBody extends TeaModel {
         public String eventCode;
 
         /**
-         * <p>Event name.</p>
+         * <p>The event name.</p>
          * 
          * <strong>example:</strong>
          * <p>注册风险</p>
@@ -423,7 +423,7 @@ public class DescribeRulePageListResponseBody extends TeaModel {
         public String eventName;
 
         /**
-         * <p>Event type</p>
+         * <p>The event type.</p>
          * 
          * <strong>example:</strong>
          * <p>MAIN</p>
@@ -432,7 +432,7 @@ public class DescribeRulePageListResponseBody extends TeaModel {
         public String eventType;
 
         /**
-         * <p>External name of the rule</p>
+         * <p>The customer-facing policy name.</p>
          * 
          * <strong>example:</strong>
          * <p>策略1</p>
@@ -441,7 +441,7 @@ public class DescribeRulePageListResponseBody extends TeaModel {
         public String externalRuleName;
 
         /**
-         * <p>Creation time.</p>
+         * <p>The creation time.</p>
          * 
          * <strong>example:</strong>
          * <p>1621578648000</p>
@@ -450,7 +450,7 @@ public class DescribeRulePageListResponseBody extends TeaModel {
         public Long gmtCreate;
 
         /**
-         * <p>Modification time.</p>
+         * <p>The modification time.</p>
          * 
          * <strong>example:</strong>
          * <p>1565701886000</p>
@@ -459,7 +459,7 @@ public class DescribeRulePageListResponseBody extends TeaModel {
         public Long gmtModified;
 
         /**
-         * <p>Whether there is a new version</p>
+         * <p>Indicates whether a new version is available.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -468,7 +468,7 @@ public class DescribeRulePageListResponseBody extends TeaModel {
         public Boolean hasNewVersion;
 
         /**
-         * <p>Primary key ID of the policy.</p>
+         * <p>The primary key ID of the policy.</p>
          * 
          * <strong>example:</strong>
          * <p>2793</p>
@@ -477,7 +477,7 @@ public class DescribeRulePageListResponseBody extends TeaModel {
         public Long id;
 
         /**
-         * <p>Main rule ID</p>
+         * <p>The ID of the main policy.</p>
          * 
          * <strong>example:</strong>
          * <p>4399</p>
@@ -486,7 +486,7 @@ public class DescribeRulePageListResponseBody extends TeaModel {
         public String mainRuleId;
 
         /**
-         * <p>Policy priority, the higher the number, the higher the priority.</p>
+         * <p>The policy priority. A larger value indicates a higher priority.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -495,7 +495,7 @@ public class DescribeRulePageListResponseBody extends TeaModel {
         public Long priority;
 
         /**
-         * <p>Rule type</p>
+         * <p>The policy type.</p>
          * 
          * <strong>example:</strong>
          * <p>NORMAL</p>
@@ -504,7 +504,7 @@ public class DescribeRulePageListResponseBody extends TeaModel {
         public String ruleAuthType;
 
         /**
-         * <p>Policy ID.</p>
+         * <p>The policy ID.</p>
          * 
          * <strong>example:</strong>
          * <p>102059</p>
@@ -513,7 +513,7 @@ public class DescribeRulePageListResponseBody extends TeaModel {
         public String ruleId;
 
         /**
-         * <p>Policy description.</p>
+         * <p>The policy description.</p>
          * 
          * <strong>example:</strong>
          * <p>描述信息</p>
@@ -522,7 +522,7 @@ public class DescribeRulePageListResponseBody extends TeaModel {
         public String ruleMemo;
 
         /**
-         * <p>Policy name.</p>
+         * <p>The policy name.</p>
          * 
          * <strong>example:</strong>
          * <p>营销风险识别</p>
@@ -531,7 +531,7 @@ public class DescribeRulePageListResponseBody extends TeaModel {
         public String ruleName;
 
         /**
-         * <p>Policy status.</p>
+         * <p>The policy status.</p>
          * 
          * <strong>example:</strong>
          * <p>RUNNING</p>
@@ -540,7 +540,7 @@ public class DescribeRulePageListResponseBody extends TeaModel {
         public String ruleStatus;
 
         /**
-         * <p>Rule type</p>
+         * <p>The policy type.</p>
          * 
          * <strong>example:</strong>
          * <p>NORMAL</p>
@@ -549,7 +549,7 @@ public class DescribeRulePageListResponseBody extends TeaModel {
         public String ruleType;
 
         /**
-         * <p>Primary key ID of the rule version.</p>
+         * <p>The primary key ID of the policy version.</p>
          * 
          * <strong>example:</strong>
          * <p>11300</p>
@@ -558,7 +558,7 @@ public class DescribeRulePageListResponseBody extends TeaModel {
         public Long ruleVersionId;
 
         /**
-         * <p>Template ID.</p>
+         * <p>The template ID.</p>
          * 
          * <strong>example:</strong>
          * <p>register</p>
@@ -567,7 +567,7 @@ public class DescribeRulePageListResponseBody extends TeaModel {
         public Long templateId;
 
         /**
-         * <p>Version number.</p>
+         * <p>The version number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DownloadSubTaskResultResponseBody extends TeaModel {
     /**
+     * <p>status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -12,6 +14,8 @@ public class DownloadSubTaskResultResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -19,6 +23,8 @@ public class DownloadSubTaskResultResponseBody extends TeaModel {
     public String httpStatusCode;
 
     /**
+     * <p>Return message.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -26,12 +32,17 @@ public class DownloadSubTaskResultResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>E01E1B4A-6747-5329-9046-B6D6B2D91349</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Return Result.</p>
+     */
     @NameInMap("ResultObject")
     public DownloadSubTaskResultResponseBodyResultObject resultObject;
 
@@ -82,6 +93,8 @@ public class DownloadSubTaskResultResponseBody extends TeaModel {
 
     public static class DownloadSubTaskResultResponseBodyResultObject extends TeaModel {
         /**
+         * <p>Status.</p>
+         * 
          * <strong>example:</strong>
          * <p>Running</p>
          */
@@ -89,6 +102,8 @@ public class DownloadSubTaskResultResponseBody extends TeaModel {
         public String status;
 
         /**
+         * <p>OSS download URL.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="https://mass.alipay.com/enhance/afts/file/n5XnQounknwAAAAAZfAAAAgAhvocAAFr?t=2hrPX0at3hhaRjlScory9JzLGiLchaonac5suH-Z1BgDAAAAZAABHPpobI2j">https://mass.alipay.com/enhance/afts/file/n5XnQounknwAAAAAZfAAAAgAhvocAAFr?t=2hrPX0at3hhaRjlScory9JzLGiLchaonac5suH-Z1BgDAAAAZAABHPpobI2j</a></p>
          */

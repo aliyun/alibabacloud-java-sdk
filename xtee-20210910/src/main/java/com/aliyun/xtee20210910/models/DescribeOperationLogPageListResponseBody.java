@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeOperationLogPageListResponseBody extends TeaModel {
     /**
-     * <p>Request ID.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>A32FE941-35F2-5378-B37C-4B8FDB16F094</p>
@@ -14,7 +14,7 @@ public class DescribeOperationLogPageListResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Current page number.</p>
+     * <p>The current page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -23,7 +23,7 @@ public class DescribeOperationLogPageListResponseBody extends TeaModel {
     public Integer currentPage;
 
     /**
-     * <p>Page size, default value is 10</p>
+     * <p>The number of entries per page. Default value: 10.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -32,13 +32,13 @@ public class DescribeOperationLogPageListResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>Returned object</p>
+     * <p>The returned object.</p>
      */
     @NameInMap("resultObject")
     public java.util.List<DescribeOperationLogPageListResponseBodyResultObject> resultObject;
 
     /**
-     * <p>Total number of items</p>
+     * <p>The total number of entries.</p>
      * 
      * <strong>example:</strong>
      * <p>3</p>
@@ -47,7 +47,7 @@ public class DescribeOperationLogPageListResponseBody extends TeaModel {
     public Integer totalItem;
 
     /**
-     * <p>Total number of pages</p>
+     * <p>The total number of pages.</p>
      * 
      * <strong>example:</strong>
      * <p>3</p>
@@ -110,7 +110,7 @@ public class DescribeOperationLogPageListResponseBody extends TeaModel {
 
     public static class DescribeOperationLogPageListResponseBodyResultObject extends TeaModel {
         /**
-         * <p>Client IP.</p>
+         * <p>The client IP address.</p>
          * 
          * <strong>example:</strong>
          * <p>100.68.***.166</p>
@@ -119,7 +119,7 @@ public class DescribeOperationLogPageListResponseBody extends TeaModel {
         public String clientIp;
 
         /**
-         * <p>Creation time.</p>
+         * <p>The creation time.</p>
          * 
          * <strong>example:</strong>
          * <p>1621578648000</p>
@@ -128,7 +128,7 @@ public class DescribeOperationLogPageListResponseBody extends TeaModel {
         public Long gmtCreate;
 
         /**
-         * <p>Content after operation</p>
+         * <p>The content after the operation.</p>
          * 
          * <strong>example:</strong>
          * <p>@selfvariable_02</p>
@@ -137,7 +137,7 @@ public class DescribeOperationLogPageListResponseBody extends TeaModel {
         public String newContent;
 
         /**
-         * <p>Content before operation</p>
+         * <p>The content before the operation.</p>
          * 
          * <strong>example:</strong>
          * <p>@selfvariable_02 + 1001</p>
@@ -146,7 +146,7 @@ public class DescribeOperationLogPageListResponseBody extends TeaModel {
         public String oldContent;
 
         /**
-         * <p>Operation summary</p>
+         * <p>The brief description of the operation.</p>
          * 
          * <strong>example:</strong>
          * <p>更新事件:决策引擎可观测性持续建设_事件A(de_afghcf6411)</p>
@@ -155,7 +155,7 @@ public class DescribeOperationLogPageListResponseBody extends TeaModel {
         public String operationSummary;
 
         /**
-         * <p>Operation type.</p>
+         * <p>The operation type.</p>
          * 
          * <strong>example:</strong>
          * <p>CREATE_EVENT</p>
@@ -164,7 +164,7 @@ public class DescribeOperationLogPageListResponseBody extends TeaModel {
         public String operationType;
 
         /**
-         * <p>Operator</p>
+         * <p>The operator.</p>
          * 
          * <strong>example:</strong>
          * <p>root</p>

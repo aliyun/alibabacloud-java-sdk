@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DownloadSampleFileResponseBody extends TeaModel {
     /**
+     * <p>Status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -12,6 +14,8 @@ public class DownloadSampleFileResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -19,6 +23,8 @@ public class DownloadSampleFileResponseBody extends TeaModel {
     public String httpStatusCode;
 
     /**
+     * <p>Return message.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -26,12 +32,17 @@ public class DownloadSampleFileResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>A32FE941-35F2-5378-B37C-4B8FDB16F094</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Return Result.</p>
+     */
     @NameInMap("ResultObject")
     public DownloadSampleFileResponseBodyResultObject resultObject;
 
@@ -82,6 +93,8 @@ public class DownloadSampleFileResponseBody extends TeaModel {
 
     public static class DownloadSampleFileResponseBodyResultObject extends TeaModel {
         /**
+         * <p>Model status.</p>
+         * 
          * <strong>example:</strong>
          * <p>Success</p>
          */
@@ -89,6 +102,8 @@ public class DownloadSampleFileResponseBody extends TeaModel {
         public String status;
 
         /**
+         * <p>OSS download URL.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="https://pic.zfp.cn/image/2026/02/06/45b5fee18baf4b99b13025987486319c.jpg">https://pic.zfp.cn/image/2026/02/06/45b5fee18baf4b99b13025987486319c.jpg</a></p>
          */
