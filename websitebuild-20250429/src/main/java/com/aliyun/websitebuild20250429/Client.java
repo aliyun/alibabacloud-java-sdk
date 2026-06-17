@@ -8,7 +8,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public Client(com.aliyun.teaopenapi.models.Config config) throws Exception {
         super(config);
-        this._endpointRule = "";
+        this._endpointRule = "regional";
+        this._endpointMap = TeaConverter.buildMap(
+            new TeaPair("public", "websitebuild.aliyuncs.com"),
+            new TeaPair("cn-zhangjiakou", "websitebuild.aliyuncs.com")
+        );
         this.checkConfig(config);
         this._endpoint = this.getEndpoint("websitebuild", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
     }
@@ -438,10 +442,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>查询应用实例信息</p>
+     * <p>Queries application instance information.</p>
      * 
      * <b>summary</b> : 
-     * <p>试用转正</p>
+     * <p>Converts a trial instance to a paid instance.</p>
      * 
      * @param request ConfirmAppInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -517,10 +521,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>查询应用实例信息</p>
+     * <p>Queries application instance information.</p>
      * 
      * <b>summary</b> : 
-     * <p>试用转正</p>
+     * <p>Converts a trial instance to a paid instance.</p>
      * 
      * @param request ConfirmAppInstanceRequest
      * @return ConfirmAppInstanceResponse
@@ -5415,10 +5419,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>查询应用实例信息</p>
+     * <p>Queries application instance information.</p>
      * 
      * <b>summary</b> : 
-     * <p>数据变更通知触发（for admin）</p>
+     * <p>Triggers a data change notification (for admin).</p>
      * 
      * @param request NotifyAppNotificationForAdminRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5433,6 +5437,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.env)) {
             query.put("Env", request.env);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.payload)) {
+            query.put("Payload", request.payload);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.sceneId)) {
@@ -5458,10 +5466,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>查询应用实例信息</p>
+     * <p>Queries application instance information.</p>
      * 
      * <b>summary</b> : 
-     * <p>数据变更通知触发（for admin）</p>
+     * <p>Triggers a data change notification (for admin).</p>
      * 
      * @param request NotifyAppNotificationForAdminRequest
      * @return NotifyAppNotificationForAdminResponse

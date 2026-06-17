@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class NotifyAppNotificationForAdminRequest extends TeaModel {
     /**
+     * <p>The business ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>WS20260206134746000001</p>
      */
@@ -12,13 +14,20 @@ public class NotifyAppNotificationForAdminRequest extends TeaModel {
     public String bizId;
 
     /**
+     * <p>The environment identifier.</p>
+     * 
      * <strong>example:</strong>
      * <p>staging</p>
      */
     @NameInMap("Env")
     public String env;
 
+    @NameInMap("Payload")
+    public String payload;
+
     /**
+     * <p>The scene ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>8c909373-6c33-41a7-aa38-3650e288a63e</p>
      */
@@ -44,6 +53,14 @@ public class NotifyAppNotificationForAdminRequest extends TeaModel {
     }
     public String getEnv() {
         return this.env;
+    }
+
+    public NotifyAppNotificationForAdminRequest setPayload(String payload) {
+        this.payload = payload;
+        return this;
+    }
+    public String getPayload() {
+        return this.payload;
     }
 
     public NotifyAppNotificationForAdminRequest setSceneId(String sceneId) {

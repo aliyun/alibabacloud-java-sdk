@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ConfirmAppInstanceRequest extends TeaModel {
     /**
+     * <p>The application type.</p>
+     * 
      * <strong>example:</strong>
      * <p>PC_WebSite</p>
      */
@@ -12,6 +14,8 @@ public class ConfirmAppInstanceRequest extends TeaModel {
     public String applicationType;
 
     /**
+     * <p>Specifies whether to enable auto-renewal upon expiration.</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -19,6 +23,8 @@ public class ConfirmAppInstanceRequest extends TeaModel {
     public Boolean autoRenew;
 
     /**
+     * <p>The client token that is used to ensure the idempotence of the request. Generate a unique value from your client. The ClientToken value can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+     * 
      * <strong>example:</strong>
      * <p>123456</p>
      */
@@ -26,6 +32,8 @@ public class ConfirmAppInstanceRequest extends TeaModel {
     public String clientToken;
 
     /**
+     * <p>The deployment region.</p>
+     * 
      * <strong>example:</strong>
      * <p>HongKong</p>
      */
@@ -33,6 +41,8 @@ public class ConfirmAppInstanceRequest extends TeaModel {
     public String deployArea;
 
     /**
+     * <p>Required. The number of subscription periods.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -40,6 +50,8 @@ public class ConfirmAppInstanceRequest extends TeaModel {
     public Integer duration;
 
     /**
+     * <p>The extended information.</p>
+     * 
      * <strong>example:</strong>
      * <p>{\&quot;deliveryNodeName\&quot;:\&quot;视觉设计确认\&quot;,\&quot;deliveryNodeStatus\&quot;:\&quot;Reject\&quot;,\&quot;deliveryOperatorRole\&quot;:\&quot;Customer\&quot;}</p>
      */
@@ -47,6 +59,8 @@ public class ConfirmAppInstanceRequest extends TeaModel {
     public String extend;
 
     /**
+     * <p>The payment type.</p>
+     * 
      * <strong>example:</strong>
      * <p>AUTO_PAY</p>
      */
@@ -54,6 +68,14 @@ public class ConfirmAppInstanceRequest extends TeaModel {
     public String paymentType;
 
     /**
+     * <p>Required. The unit of the subscription period. Valid values:</p>
+     * <ul>
+     * <li>Year: year</li>
+     * <li>Month: month</li>
+     * <li>Day: day</li>
+     * <li>Hour: hour.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>Month</p>
      */
@@ -61,6 +83,8 @@ public class ConfirmAppInstanceRequest extends TeaModel {
     public String pricingCycle;
 
     /**
+     * <p>Required. The number of instances to purchase.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -68,6 +92,8 @@ public class ConfirmAppInstanceRequest extends TeaModel {
     public Integer quantity;
 
     /**
+     * <p>The website version.</p>
+     * 
      * <strong>example:</strong>
      * <p>Basic_Edition</p>
      */
@@ -75,6 +101,8 @@ public class ConfirmAppInstanceRequest extends TeaModel {
     public String siteVersion;
 
     /**
+     * <p>The business ID of the trial instance.</p>
+     * 
      * <strong>example:</strong>
      * <p>WS123456</p>
      */

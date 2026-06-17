@@ -13,6 +13,12 @@ public class AppInstanceProfile extends TeaModel {
     @NameInMap("BizId")
     public String bizId;
 
+    @NameInMap("ChatbiTaskId")
+    public String chatbiTaskId;
+
+    @NameInMap("ChatbiTaskStatus")
+    public String chatbiTaskStatus;
+
     @NameInMap("CommodityCode")
     public String commodityCode;
 
@@ -24,6 +30,9 @@ public class AppInstanceProfile extends TeaModel {
 
     @NameInMap("InstanceId")
     public String instanceId;
+
+    @NameInMap("OpenChatBi")
+    public Boolean openChatBi;
 
     @NameInMap("OrdTime")
     public String ordTime;
@@ -55,12 +64,6 @@ public class AppInstanceProfile extends TeaModel {
     @NameInMap("TemplateId")
     public String templateId;
 
-    @NameInMap("chatbiTaskId")
-    public String chatbiTaskId;
-
-    @NameInMap("chatbiTaskStatus")
-    public String chatbiTaskStatus;
-
     public static AppInstanceProfile build(java.util.Map<String, ?> map) throws Exception {
         AppInstanceProfile self = new AppInstanceProfile();
         return TeaModel.build(map, self);
@@ -88,6 +91,22 @@ public class AppInstanceProfile extends TeaModel {
     }
     public String getBizId() {
         return this.bizId;
+    }
+
+    public AppInstanceProfile setChatbiTaskId(String chatbiTaskId) {
+        this.chatbiTaskId = chatbiTaskId;
+        return this;
+    }
+    public String getChatbiTaskId() {
+        return this.chatbiTaskId;
+    }
+
+    public AppInstanceProfile setChatbiTaskStatus(String chatbiTaskStatus) {
+        this.chatbiTaskStatus = chatbiTaskStatus;
+        return this;
+    }
+    public String getChatbiTaskStatus() {
+        return this.chatbiTaskStatus;
     }
 
     public AppInstanceProfile setCommodityCode(String commodityCode) {
@@ -120,6 +139,14 @@ public class AppInstanceProfile extends TeaModel {
     }
     public String getInstanceId() {
         return this.instanceId;
+    }
+
+    public AppInstanceProfile setOpenChatBi(Boolean openChatBi) {
+        this.openChatBi = openChatBi;
+        return this;
+    }
+    public Boolean getOpenChatBi() {
+        return this.openChatBi;
     }
 
     public AppInstanceProfile setOrdTime(String ordTime) {
@@ -200,22 +227,6 @@ public class AppInstanceProfile extends TeaModel {
     }
     public String getTemplateId() {
         return this.templateId;
-    }
-
-    public AppInstanceProfile setChatbiTaskId(String chatbiTaskId) {
-        this.chatbiTaskId = chatbiTaskId;
-        return this;
-    }
-    public String getChatbiTaskId() {
-        return this.chatbiTaskId;
-    }
-
-    public AppInstanceProfile setChatbiTaskStatus(String chatbiTaskStatus) {
-        this.chatbiTaskStatus = chatbiTaskStatus;
-        return this;
-    }
-    public String getChatbiTaskStatus() {
-        return this.chatbiTaskStatus;
     }
 
 }
