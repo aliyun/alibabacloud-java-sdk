@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateInstanceSyncTaskResponseBody extends TeaModel {
     /**
+     * <p>The application module.</p>
+     * 
      * <strong>example:</strong>
      * <p>ips_server</p>
      */
@@ -12,6 +14,8 @@ public class CreateInstanceSyncTaskResponseBody extends TeaModel {
     public String module;
 
     /**
+     * <p>The ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>D19D8F70-D64B-5A95-905A-6073BF4A****</p>
      */

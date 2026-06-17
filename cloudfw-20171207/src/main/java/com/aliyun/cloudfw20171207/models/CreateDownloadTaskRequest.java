@@ -5,11 +5,13 @@ import com.aliyun.tea.*;
 
 public class CreateDownloadTaskRequest extends TeaModel {
     /**
-     * <p>The language of the content within the response.</p>
+     * <p>The language of the response message.</p>
      * <p>Valid values:</p>
      * <ul>
-     * <li><strong>zh</strong>: Chinese (default)</li>
-     * <li><strong>en</strong>: English</li>
+     * <li><p><strong>zh</strong>: Chinese (default)</p>
+     * </li>
+     * <li><p><strong>en</strong>: English</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -19,7 +21,7 @@ public class CreateDownloadTaskRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The query condition of the download task.</p>
+     * <p>The query conditions for the download task.</p>
      * 
      * <strong>example:</strong>
      * <p>{\&quot;SearchItem\&quot;:\&quot;\&quot;,\&quot;UserType\&quot;:\&quot;buy\&quot;,\&quot;IpVersion\&quot;:\&quot;4\&quot;}</p>
@@ -28,7 +30,7 @@ public class CreateDownloadTaskRequest extends TeaModel {
     public String taskData;
 
     /**
-     * <p>The type of the task. For more information about task types, see the descriptions in the &quot;DescribeDownloadTaskType&quot; topic.</p>
+     * <p>The type of the task. For a list of valid values, see the API for querying file download task types.</p>
      * 
      * <strong>example:</strong>
      * <p>InternetFirewallAsset</p>
@@ -37,7 +39,7 @@ public class CreateDownloadTaskRequest extends TeaModel {
     public String taskType;
 
     /**
-     * <p>The time zone of the time information in the downloaded file. The value must be an identifier of a time zone in the Internet Assigned Numbers Authority (IANA) database. The default value is Asia/Shanghai, which indicates UTC+8.</p>
+     * <p>The time zone of the time information in the downloaded file. The value is an IANA time zone identifier. The default value is Asia/Shanghai, which corresponds to UTC+8.</p>
      * 
      * <strong>example:</strong>
      * <p>Asia/Shanghai</p>

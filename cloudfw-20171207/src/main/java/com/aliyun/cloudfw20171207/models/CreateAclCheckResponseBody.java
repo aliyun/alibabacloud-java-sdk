@@ -5,12 +5,17 @@ import com.aliyun.tea.*;
 
 public class CreateAclCheckResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>4FB718F0-CC04-5A12-B17B-188CFC3F****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The list of task IDs.</p>
+     */
     @NameInMap("TaskIds")
     public java.util.List<String> taskIds;
 

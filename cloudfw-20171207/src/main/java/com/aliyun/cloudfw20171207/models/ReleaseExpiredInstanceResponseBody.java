@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ReleaseExpiredInstanceResponseBody extends TeaModel {
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -12,6 +14,14 @@ public class ReleaseExpiredInstanceResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>Indicates whether the instance was released:</p>
+     * <ul>
+     * <li><p><strong>true</strong>: Successful.</p>
+     * </li>
+     * <li><p><strong>false</strong>: Failed.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -19,6 +29,8 @@ public class ReleaseExpiredInstanceResponseBody extends TeaModel {
     public String releaseStatus;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>9EC1DB0F-EE53-5D36-B5DA-71CB******</p>
      */
@@ -26,6 +38,8 @@ public class ReleaseExpiredInstanceResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

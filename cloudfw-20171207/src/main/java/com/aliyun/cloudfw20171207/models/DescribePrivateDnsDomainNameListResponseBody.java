@@ -4,10 +4,15 @@ package com.aliyun.cloudfw20171207.models;
 import com.aliyun.tea.*;
 
 public class DescribePrivateDnsDomainNameListResponseBody extends TeaModel {
+    /**
+     * <p>The list of domain names.</p>
+     */
     @NameInMap("DomainNameList")
     public java.util.List<String> domainNameList;
 
     /**
+     * <p>The page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -15,6 +20,8 @@ public class DescribePrivateDnsDomainNameListResponseBody extends TeaModel {
     public Integer pageNo;
 
     /**
+     * <p>The number of entries on the current page.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -22,6 +29,8 @@ public class DescribePrivateDnsDomainNameListResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>822B9125-6E1A-551C-8EAF-6E7AE74****</p>
      */
@@ -29,6 +38,8 @@ public class DescribePrivateDnsDomainNameListResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total number of private DNS domain names.</p>
+     * 
      * <strong>example:</strong>
      * <p>132</p>
      */

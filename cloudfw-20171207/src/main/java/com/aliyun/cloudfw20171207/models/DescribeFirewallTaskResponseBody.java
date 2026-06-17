@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeFirewallTaskResponseBody extends TeaModel {
     /**
+     * <p>Indicates whether the task exists.</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -12,6 +14,8 @@ public class DescribeFirewallTaskResponseBody extends TeaModel {
     public Boolean isFound;
 
     /**
+     * <p>The ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>7D5483BF-2262-586D-8706-BDDB8B42****</p>
      */
@@ -19,6 +23,8 @@ public class DescribeFirewallTaskResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The timestamp when the task was completed.</p>
+     * 
      * <strong>example:</strong>
      * <p>17151381075</p>
      */
@@ -26,6 +32,8 @@ public class DescribeFirewallTaskResponseBody extends TeaModel {
     public String taskFinishTimestamp;
 
     /**
+     * <p>The ID of the task.</p>
+     * 
      * <strong>example:</strong>
      * <p>189997648</p>
      */
@@ -33,6 +41,8 @@ public class DescribeFirewallTaskResponseBody extends TeaModel {
     public Long taskId;
 
     /**
+     * <p>The name of the task.</p>
+     * 
      * <strong>example:</strong>
      * <p>egressgw</p>
      */
@@ -40,6 +50,8 @@ public class DescribeFirewallTaskResponseBody extends TeaModel {
     public String taskName;
 
     /**
+     * <p>The timestamp when the task started.</p>
+     * 
      * <strong>example:</strong>
      * <p>17151361285</p>
      */
@@ -47,16 +59,35 @@ public class DescribeFirewallTaskResponseBody extends TeaModel {
     public String taskStartTimestamp;
 
     /**
+     * <p>The status of the task. Valid values:</p>
+     * <ul>
+     * <li><p><strong>init</strong></p>
+     * </li>
+     * <li><p><strong>running</strong></p>
+     * </li>
+     * <li><p><strong>finished</strong></p>
+     * </li>
+     * <li><p><strong>rollback</strong></p>
+     * </li>
+     * <li><p><strong>rollbackDone</strong></p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>init</p>
      */
     @NameInMap("TaskStatus")
     public String taskStatus;
 
+    /**
+     * <p>The steps of the task.</p>
+     */
     @NameInMap("TaskSteps")
     public java.util.List<DescribeFirewallTaskResponseBodyTaskSteps> taskSteps;
 
     /**
+     * <p>The waiting time in minutes.</p>
+     * 
      * <strong>example:</strong>
      * <p>30</p>
      */
@@ -142,6 +173,8 @@ public class DescribeFirewallTaskResponseBody extends TeaModel {
 
     public static class DescribeFirewallTaskResponseBodyTaskSteps extends TeaModel {
         /**
+         * <p>The information about the task step.</p>
+         * 
          * <strong>example:</strong>
          * <p>abcd</p>
          */
@@ -149,6 +182,8 @@ public class DescribeFirewallTaskResponseBody extends TeaModel {
         public String stepInfo;
 
         /**
+         * <p>Creating the Cloud Firewall.</p>
+         * 
          * <strong>example:</strong>
          * <p>Create Firewall</p>
          */
@@ -156,6 +191,8 @@ public class DescribeFirewallTaskResponseBody extends TeaModel {
         public String stepName;
 
         /**
+         * <p>The progress of the task step.</p>
+         * 
          * <strong>example:</strong>
          * <p>80</p>
          */
@@ -163,6 +200,18 @@ public class DescribeFirewallTaskResponseBody extends TeaModel {
         public String stepProgress;
 
         /**
+         * <p>The status of the task step. Valid values:</p>
+         * <ul>
+         * <li><p><strong>init</strong></p>
+         * </li>
+         * <li><p><strong>running</strong></p>
+         * </li>
+         * <li><p><strong>finished</strong></p>
+         * </li>
+         * <li><p><strong>failed</strong></p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>init</p>
          */

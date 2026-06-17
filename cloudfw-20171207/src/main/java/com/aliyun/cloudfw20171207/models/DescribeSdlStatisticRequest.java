@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeSdlStatisticRequest extends TeaModel {
     /**
+     * <p>The end time. The value is a UNIX timestamp in seconds.</p>
+     * 
      * <strong>example:</strong>
      * <p>1748916368</p>
      */
@@ -12,6 +14,8 @@ public class DescribeSdlStatisticRequest extends TeaModel {
     public Long endTime;
 
     /**
+     * <p>The language of the request and response.</p>
+     * 
      * <strong>example:</strong>
      * <p>zh</p>
      */
@@ -19,6 +23,8 @@ public class DescribeSdlStatisticRequest extends TeaModel {
     public String lang;
 
     /**
+     * <p>The start time. The value is a UNIX timestamp in seconds.</p>
+     * 
      * <strong>example:</strong>
      * <p>1656664560</p>
      */

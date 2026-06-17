@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeConfiguredDomainNamesRequest extends TeaModel {
     /**
+     * <p>The page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -12,6 +14,7 @@ public class DescribeConfiguredDomainNamesRequest extends TeaModel {
     public String currentPage;
 
     /**
+     * <p>The traffic direction.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,6 +24,8 @@ public class DescribeConfiguredDomainNamesRequest extends TeaModel {
     public String direction;
 
     /**
+     * <p>The domain name.</p>
+     * 
      * <strong>example:</strong>
      * <p>example.com</p>
      */
@@ -28,6 +33,7 @@ public class DescribeConfiguredDomainNamesRequest extends TeaModel {
     public String domainName;
 
     /**
+     * <p>The group name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -37,6 +43,8 @@ public class DescribeConfiguredDomainNamesRequest extends TeaModel {
     public String groupName;
 
     /**
+     * <p>The language of the response.</p>
+     * 
      * <strong>example:</strong>
      * <p>zh</p>
      */
@@ -44,6 +52,8 @@ public class DescribeConfiguredDomainNamesRequest extends TeaModel {
     public String lang;
 
     /**
+     * <p>The number of entries per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -51,6 +61,7 @@ public class DescribeConfiguredDomainNamesRequest extends TeaModel {
     public String pageSize;
 
     /**
+     * <p>The trace code.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -60,6 +71,8 @@ public class DescribeConfiguredDomainNamesRequest extends TeaModel {
     public String sourceCode;
 
     /**
+     * <p>The source IP address.</p>
+     * 
      * <strong>example:</strong>
      * <p>1.202.149.XXX</p>
      */

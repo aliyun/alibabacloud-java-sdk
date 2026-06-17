@@ -4,10 +4,15 @@ package com.aliyun.cloudfw20171207.models;
 import com.aliyun.tea.*;
 
 public class DescribeInternetDropTrafficTrendResponseBody extends TeaModel {
+    /**
+     * <p>The data list.</p>
+     */
     @NameInMap("DataList")
     public java.util.List<DescribeInternetDropTrafficTrendResponseBodyDataList> dataList;
 
     /**
+     * <p>The peak number of dropped sessions in the specified period.</p>
+     * 
      * <strong>example:</strong>
      * <p>8090</p>
      */
@@ -15,6 +20,8 @@ public class DescribeInternetDropTrafficTrendResponseBody extends TeaModel {
     public Long dropSessionMax;
 
     /**
+     * <p>The average drop ratio for the entire query period, expressed as a percentage.</p>
+     * 
      * <strong>example:</strong>
      * <p>12.34</p>
      */
@@ -22,6 +29,8 @@ public class DescribeInternetDropTrafficTrendResponseBody extends TeaModel {
     public String ratioAverage;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>F0F82705-CFC7-5F83-86C8-A063892F****</p>
      */
@@ -29,6 +38,8 @@ public class DescribeInternetDropTrafficTrendResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The average drop ratio from the previous cycle, expressed as a percentage.</p>
+     * 
      * <strong>example:</strong>
      * <p>1.23</p>
      */
@@ -82,6 +93,8 @@ public class DescribeInternetDropTrafficTrendResponseBody extends TeaModel {
 
     public static class DescribeInternetDropTrafficTrendResponseBodyDataList extends TeaModel {
         /**
+         * <p>The number of sessions dropped by access control list (ACL) rules.</p>
+         * 
          * <strong>example:</strong>
          * <p>12</p>
          */
@@ -89,6 +102,8 @@ public class DescribeInternetDropTrafficTrendResponseBody extends TeaModel {
         public Long aclDrop;
 
         /**
+         * <p>The current time point. The time is in the <code>YYYY-MM-DD HH:mm:ss</code> format.</p>
+         * 
          * <strong>example:</strong>
          * <p>2018-08-25 12:00:00</p>
          */
@@ -96,6 +111,8 @@ public class DescribeInternetDropTrafficTrendResponseBody extends TeaModel {
         public String dataTime;
 
         /**
+         * <p>The ratio of dropped sessions to total sessions for this data point.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -103,6 +120,8 @@ public class DescribeInternetDropTrafficTrendResponseBody extends TeaModel {
         public String dropRatio;
 
         /**
+         * <p>The number of dropped sessions for the corresponding data point in the previous cycle.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -110,6 +129,8 @@ public class DescribeInternetDropTrafficTrendResponseBody extends TeaModel {
         public Long dropRing;
 
         /**
+         * <p>The drop ratio for the corresponding data point in the previous cycle.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -117,6 +138,8 @@ public class DescribeInternetDropTrafficTrendResponseBody extends TeaModel {
         public String dropRingRatio;
 
         /**
+         * <p>The number of dropped sessions.</p>
+         * 
          * <strong>example:</strong>
          * <p>12</p>
          */
@@ -124,6 +147,8 @@ public class DescribeInternetDropTrafficTrendResponseBody extends TeaModel {
         public Long dropSession;
 
         /**
+         * <p>The number of sessions dropped by the intrusion prevention system (IPS).</p>
+         * 
          * <strong>example:</strong>
          * <p>5</p>
          */
@@ -131,6 +156,8 @@ public class DescribeInternetDropTrafficTrendResponseBody extends TeaModel {
         public Long ipsDrop;
 
         /**
+         * <p>The corresponding time point in the previous cycle. The time is in the <code>YYYY-MM-DD HH:mm:ss</code> format.</p>
+         * 
          * <strong>example:</strong>
          * <p>2018-08-25 12:00:00</p>
          */
@@ -138,6 +165,8 @@ public class DescribeInternetDropTrafficTrendResponseBody extends TeaModel {
         public String ringDataTime;
 
         /**
+         * <p>The timestamp for the corresponding data point in the previous cycle. This value is a Unix timestamp that represents the number of seconds that have elapsed since 00:00:00 UTC on January 1, 1970.</p>
+         * 
          * <strong>example:</strong>
          * <p>1724982259</p>
          */
@@ -145,6 +174,8 @@ public class DescribeInternetDropTrafficTrendResponseBody extends TeaModel {
         public Long ringTime;
 
         /**
+         * <p>The timestamp.</p>
+         * 
          * <strong>example:</strong>
          * <p>1659405600</p>
          */
@@ -152,6 +183,8 @@ public class DescribeInternetDropTrafficTrendResponseBody extends TeaModel {
         public Long time;
 
         /**
+         * <p>The total number of sessions.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeNatFirewallAclGroupListRequest extends TeaModel {
     /**
+     * <p>The language of the request and response.</p>
+     * 
      * <strong>example:</strong>
      * <p>zh</p>
      */

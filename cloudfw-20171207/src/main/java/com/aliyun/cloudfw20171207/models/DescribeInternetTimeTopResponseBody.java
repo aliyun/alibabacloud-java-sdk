@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class DescribeInternetTimeTopResponseBody extends TeaModel {
     /**
+     * <p>The number of entries returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>19</p>
      */
     @NameInMap("DataCount")
     public Integer dataCount;
 
+    /**
+     * <p>The list of data entries.</p>
+     */
     @NameInMap("DataList")
     public java.util.List<DescribeInternetTimeTopResponseBodyDataList> dataList;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>7F2D5C04-731F-50B0-ADE1-01637B3C****</p>
      */
@@ -22,6 +29,8 @@ public class DescribeInternetTimeTopResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The timestamp of the traffic data. Unit: seconds.</p>
+     * 
      * <strong>example:</strong>
      * <p>1734399660</p>
      */
@@ -67,6 +76,8 @@ public class DescribeInternetTimeTopResponseBody extends TeaModel {
 
     public static class DescribeInternetTimeTopResponseBodyDataList extends TeaModel {
         /**
+         * <p>The public IP address.</p>
+         * 
          * <strong>example:</strong>
          * <p>183.60.164.XXX</p>
          */
@@ -74,6 +85,8 @@ public class DescribeInternetTimeTopResponseBody extends TeaModel {
         public String IP;
 
         /**
+         * <p>The inbound bandwidth. Unit: bit/s.</p>
+         * 
          * <strong>example:</strong>
          * <p>187</p>
          */
@@ -81,6 +94,8 @@ public class DescribeInternetTimeTopResponseBody extends TeaModel {
         public Long inBps;
 
         /**
+         * <p>The inbound packet forwarding rate. Unit: pps.</p>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */
@@ -88,6 +103,8 @@ public class DescribeInternetTimeTopResponseBody extends TeaModel {
         public Long inPps;
 
         /**
+         * <p>The ID of the NAT gateway.</p>
+         * 
          * <strong>example:</strong>
          * <p>ngw-wz98eedr5l5hkb8****e7</p>
          */
@@ -95,6 +112,8 @@ public class DescribeInternetTimeTopResponseBody extends TeaModel {
         public String natGatewayId;
 
         /**
+         * <p>The name of the NAT gateway.</p>
+         * 
          * <strong>example:</strong>
          * <p>ngw-test</p>
          */
@@ -102,6 +121,8 @@ public class DescribeInternetTimeTopResponseBody extends TeaModel {
         public String natGatewayName;
 
         /**
+         * <p>The public IP address of the NAT gateway.</p>
+         * 
          * <strong>example:</strong>
          * <p>47.97.66.XXX</p>
          */
@@ -109,6 +130,8 @@ public class DescribeInternetTimeTopResponseBody extends TeaModel {
         public String natIP;
 
         /**
+         * <p>The number of new connections.</p>
+         * 
          * <strong>example:</strong>
          * <p>27</p>
          */
@@ -116,6 +139,8 @@ public class DescribeInternetTimeTopResponseBody extends TeaModel {
         public Long newConn;
 
         /**
+         * <p>The outbound traffic. Unit: bit/s.</p>
+         * 
          * <strong>example:</strong>
          * <p>45</p>
          */
@@ -123,6 +148,8 @@ public class DescribeInternetTimeTopResponseBody extends TeaModel {
         public Long outBps;
 
         /**
+         * <p>The outbound packet forwarding rate. Unit: pps.</p>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */
@@ -130,6 +157,8 @@ public class DescribeInternetTimeTopResponseBody extends TeaModel {
         public Long outPps;
 
         /**
+         * <p>The private IP address.</p>
+         * 
          * <strong>example:</strong>
          * <p>10.21.186.XXX</p>
          */
@@ -137,6 +166,8 @@ public class DescribeInternetTimeTopResponseBody extends TeaModel {
         public String privateIP;
 
         /**
+         * <p>The region ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-shenzhen</p>
          */
@@ -144,6 +175,8 @@ public class DescribeInternetTimeTopResponseBody extends TeaModel {
         public String regionNo;
 
         /**
+         * <p>The ID of the asset instance.</p>
+         * 
          * <strong>example:</strong>
          * <p>lb-bp14ue2rgktunncq****</p>
          */
@@ -151,6 +184,8 @@ public class DescribeInternetTimeTopResponseBody extends TeaModel {
         public String resourceInstanceId;
 
         /**
+         * <p>The name of the asset.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -158,6 +193,8 @@ public class DescribeInternetTimeTopResponseBody extends TeaModel {
         public String resourceInstanceName;
 
         /**
+         * <p>The type of the public IP address.</p>
+         * 
          * <strong>example:</strong>
          * <p>EcsPublicIP</p>
          */
@@ -165,6 +202,8 @@ public class DescribeInternetTimeTopResponseBody extends TeaModel {
         public String resourceType;
 
         /**
+         * <p>The number of sessions.</p>
+         * 
          * <strong>example:</strong>
          * <p>27</p>
          */
@@ -172,6 +211,8 @@ public class DescribeInternetTimeTopResponseBody extends TeaModel {
         public Long sessionCount;
 
         /**
+         * <p>The total bandwidth. Unit: bit/s.</p>
+         * 
          * <strong>example:</strong>
          * <p>232</p>
          */
@@ -179,6 +220,8 @@ public class DescribeInternetTimeTopResponseBody extends TeaModel {
         public Long totalBps;
 
         /**
+         * <p>The total number of packets.</p>
+         * 
          * <strong>example:</strong>
          * <p>88</p>
          */
@@ -186,6 +229,8 @@ public class DescribeInternetTimeTopResponseBody extends TeaModel {
         public Long totalPps;
 
         /**
+         * <p>The ID of the virtual private cloud (VPC) instance.</p>
+         * 
          * <strong>example:</strong>
          * <p>vpc-wz9o0uzfjuj81fx7m****</p>
          */

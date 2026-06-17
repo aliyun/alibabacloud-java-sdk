@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class AddDomainResolveRealtimeTaskRequest extends TeaModel {
     /**
+     * <p>The domain name.</p>
+     * 
      * <strong>example:</strong>
      * <p>example.com</p>
      */
@@ -12,6 +14,8 @@ public class AddDomainResolveRealtimeTaskRequest extends TeaModel {
     public String domainName;
 
     /**
+     * <p>The type of the Cloud Firewall.</p>
+     * 
      * <strong>example:</strong>
      * <p>internet</p>
      */
@@ -19,6 +23,8 @@ public class AddDomainResolveRealtimeTaskRequest extends TeaModel {
     public String firewallType;
 
     /**
+     * <p>The region ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-shanghai</p>
      */

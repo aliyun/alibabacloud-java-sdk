@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeNetworkTrafficTopRatioRequest extends TeaModel {
     /**
+     * <p>The application name.</p>
+     * 
      * <strong>example:</strong>
      * <p>HTTP</p>
      */
@@ -12,6 +14,8 @@ public class DescribeNetworkTrafficTopRatioRequest extends TeaModel {
     public String appName;
 
     /**
+     * <p>The IP address of the asset.</p>
+     * 
      * <strong>example:</strong>
      * <p>192.0.XX.XX</p>
      */
@@ -19,6 +23,8 @@ public class DescribeNetworkTrafficTopRatioRequest extends TeaModel {
     public String assetIP;
 
     /**
+     * <p>The region where the asset resides.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-beijing</p>
      */
@@ -26,6 +32,7 @@ public class DescribeNetworkTrafficTopRatioRequest extends TeaModel {
     public String assetRegion;
 
     /**
+     * <p>The data type.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -35,6 +42,8 @@ public class DescribeNetworkTrafficTopRatioRequest extends TeaModel {
     public String dataType;
 
     /**
+     * <p>The traffic direction.</p>
+     * 
      * <strong>example:</strong>
      * <p>in</p>
      */
@@ -42,6 +51,8 @@ public class DescribeNetworkTrafficTopRatioRequest extends TeaModel {
     public String direction;
 
     /**
+     * <p>The destination IP address.</p>
+     * 
      * <strong>example:</strong>
      * <p>39.144.124.XXX</p>
      */
@@ -49,6 +60,8 @@ public class DescribeNetworkTrafficTopRatioRequest extends TeaModel {
     public String dstIP;
 
     /**
+     * <p>The destination port.</p>
+     * 
      * <strong>example:</strong>
      * <p>8080</p>
      */
@@ -56,6 +69,7 @@ public class DescribeNetworkTrafficTopRatioRequest extends TeaModel {
     public String dstPort;
 
     /**
+     * <p>The end of the time range to query. The value is a UNIX timestamp in seconds.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -65,26 +79,44 @@ public class DescribeNetworkTrafficTopRatioRequest extends TeaModel {
     public String endTime;
 
     /**
+     * <p>The IP address property.</p>
+     * 
      * <strong>example:</strong>
      * <p>proxy</p>
      */
     @NameInMap("IpProperty")
     public String ipProperty;
 
+    /**
+     * <p>The Internet Service Provider (ISP).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>telecom</p>
+     */
     @NameInMap("Isp")
     public String isp;
 
     /**
+     * <p>The language of the response.</p>
+     * 
      * <strong>example:</strong>
      * <p>zh</p>
      */
     @NameInMap("Lang")
     public String lang;
 
+    /**
+     * <p>The area.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Hangzhou City</p>
+     */
     @NameInMap("Location")
     public String location;
 
     /**
+     * <p>The action triggered by the rule.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -92,6 +124,8 @@ public class DescribeNetworkTrafficTopRatioRequest extends TeaModel {
     public String ruleResult;
 
     /**
+     * <p>The sorting method.</p>
+     * 
      * <strong>example:</strong>
      * <p>in_bytes</p>
      */
@@ -99,6 +133,7 @@ public class DescribeNetworkTrafficTopRatioRequest extends TeaModel {
     public String sort;
 
     /**
+     * <p>The source identifier.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -108,6 +143,8 @@ public class DescribeNetworkTrafficTopRatioRequest extends TeaModel {
     public String sourceCode;
 
     /**
+     * <p>The source IP address of the visitor.</p>
+     * 
      * <strong>example:</strong>
      * <p>60.12.220.XXX</p>
      */
@@ -115,6 +152,8 @@ public class DescribeNetworkTrafficTopRatioRequest extends TeaModel {
     public String sourceIp;
 
     /**
+     * <p>The source IP address.</p>
+     * 
      * <strong>example:</strong>
      * <p>172.16.169.XXX</p>
      */
@@ -122,6 +161,7 @@ public class DescribeNetworkTrafficTopRatioRequest extends TeaModel {
     public String srcIP;
 
     /**
+     * <p>The beginning of the time range to query. The value is a UNIX timestamp in seconds.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

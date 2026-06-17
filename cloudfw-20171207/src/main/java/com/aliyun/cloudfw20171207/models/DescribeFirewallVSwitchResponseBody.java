@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeFirewallVSwitchResponseBody extends TeaModel {
     /**
+     * <p>The ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>A1562A68-99FA-5D6B-BD5B-2F959F25****</p>
      */
@@ -12,12 +14,17 @@ public class DescribeFirewallVSwitchResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total number of entries.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
+    /**
+     * <p>The list of vSwitches.</p>
+     */
     @NameInMap("VswitchList")
     public java.util.List<DescribeFirewallVSwitchResponseBodyVswitchList> vswitchList;
 
@@ -52,6 +59,8 @@ public class DescribeFirewallVSwitchResponseBody extends TeaModel {
 
     public static class DescribeFirewallVSwitchResponseBodyVswitchListFirewallList extends TeaModel {
         /**
+         * <p>The instance ID of the firewall.</p>
+         * 
          * <strong>example:</strong>
          * <p>vfw-tr-37145c8f5ede45e9****</p>
          */
@@ -59,6 +68,8 @@ public class DescribeFirewallVSwitchResponseBody extends TeaModel {
         public String firewallId;
 
         /**
+         * <p>The name of the Cloud Firewall.</p>
+         * 
          * <strong>example:</strong>
          * <p>test-Firewall</p>
          */
@@ -90,6 +101,8 @@ public class DescribeFirewallVSwitchResponseBody extends TeaModel {
 
     public static class DescribeFirewallVSwitchResponseBodyVswitchList extends TeaModel {
         /**
+         * <p>The number of available IP addresses.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -97,6 +110,8 @@ public class DescribeFirewallVSwitchResponseBody extends TeaModel {
         public String availableIpCount;
 
         /**
+         * <p>The IPv4 CIDR block.</p>
+         * 
          * <strong>example:</strong>
          * <p>192.168.0.XX/16</p>
          */
@@ -104,16 +119,23 @@ public class DescribeFirewallVSwitchResponseBody extends TeaModel {
         public String cidrBlock;
 
         /**
+         * <p>The number of intrusion prevention events.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
         @NameInMap("FirewallCount")
         public String firewallCount;
 
+        /**
+         * <p>The list of firewalls.</p>
+         */
         @NameInMap("FirewallList")
         public java.util.List<DescribeFirewallVSwitchResponseBodyVswitchListFirewallList> firewallList;
 
         /**
+         * <p>The UID of the member account.</p>
+         * 
          * <strong>example:</strong>
          * <p>184480249330****</p>
          */
@@ -121,6 +143,8 @@ public class DescribeFirewallVSwitchResponseBody extends TeaModel {
         public String memberUid;
 
         /**
+         * <p>The region ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-shanghai</p>
          */
@@ -128,6 +152,8 @@ public class DescribeFirewallVSwitchResponseBody extends TeaModel {
         public String regionNo;
 
         /**
+         * <p>The ID of the VPC instance.</p>
+         * 
          * <strong>example:</strong>
          * <p>vpc-2zeez7gymz5r4pi****am</p>
          */
@@ -135,6 +161,8 @@ public class DescribeFirewallVSwitchResponseBody extends TeaModel {
         public String vpcId;
 
         /**
+         * <p>The ID of the vSwitch.</p>
+         * 
          * <strong>example:</strong>
          * <p>vsw-bp10qla9mgi42eo****</p>
          */
@@ -142,6 +170,8 @@ public class DescribeFirewallVSwitchResponseBody extends TeaModel {
         public String vswitchId;
 
         /**
+         * <p>The name of the vSwitch.</p>
+         * 
          * <strong>example:</strong>
          * <p>vsw-test</p>
          */
@@ -149,6 +179,8 @@ public class DescribeFirewallVSwitchResponseBody extends TeaModel {
         public String vswitchName;
 
         /**
+         * <p>The zone ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-shanghai-b</p>
          */

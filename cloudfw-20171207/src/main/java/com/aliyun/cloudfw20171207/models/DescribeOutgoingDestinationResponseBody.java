@@ -4,10 +4,15 @@ package com.aliyun.cloudfw20171207.models;
 import com.aliyun.tea.*;
 
 public class DescribeOutgoingDestinationResponseBody extends TeaModel {
+    /**
+     * <p>The information about the destination addresses.</p>
+     */
     @NameInMap("DstList")
     public java.util.List<DescribeOutgoingDestinationResponseBodyDstList> dstList;
 
     /**
+     * <p>The ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>A2845BA9-1642-5B27-9F04-8014DD94****</p>
      */
@@ -15,6 +20,8 @@ public class DescribeOutgoingDestinationResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total number of entries.</p>
+     * 
      * <strong>example:</strong>
      * <p>42</p>
      */
@@ -52,6 +59,8 @@ public class DescribeOutgoingDestinationResponseBody extends TeaModel {
 
     public static class DescribeOutgoingDestinationResponseBodyDstListTagList extends TeaModel {
         /**
+         * <p>The risk assessment level.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -59,6 +68,8 @@ public class DescribeOutgoingDestinationResponseBody extends TeaModel {
         public Integer riskLevel;
 
         /**
+         * <p>The tag description.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -66,6 +77,8 @@ public class DescribeOutgoingDestinationResponseBody extends TeaModel {
         public String tagDescribe;
 
         /**
+         * <p>The tag ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>FirstFlow</p>
          */
@@ -73,6 +86,8 @@ public class DescribeOutgoingDestinationResponseBody extends TeaModel {
         public String tagId;
 
         /**
+         * <p>The tag name.</p>
+         * 
          * <strong>example:</strong>
          * <p>verify</p>
          */
@@ -120,6 +135,8 @@ public class DescribeOutgoingDestinationResponseBody extends TeaModel {
 
     public static class DescribeOutgoingDestinationResponseBodyDstList extends TeaModel {
         /**
+         * <p>The recommended Access Control List (ACL) details.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -127,6 +144,8 @@ public class DescribeOutgoingDestinationResponseBody extends TeaModel {
         public String aclRecommendDetail;
 
         /**
+         * <p>The policy status.</p>
+         * 
          * <strong>example:</strong>
          * <p>Normal</p>
          */
@@ -134,6 +153,8 @@ public class DescribeOutgoingDestinationResponseBody extends TeaModel {
         public String aclStatus;
 
         /**
+         * <p>The business to which the domain name belongs.</p>
+         * 
          * <strong>example:</strong>
          * <p>example.com</p>
          */
@@ -141,6 +162,8 @@ public class DescribeOutgoingDestinationResponseBody extends TeaModel {
         public String business;
 
         /**
+         * <p>The category ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>AliYun</p>
          */
@@ -148,6 +171,8 @@ public class DescribeOutgoingDestinationResponseBody extends TeaModel {
         public String categoryId;
 
         /**
+         * <p>The category name of the service.</p>
+         * 
          * <strong>example:</strong>
          * <p>categor_test</p>
          */
@@ -155,6 +180,8 @@ public class DescribeOutgoingDestinationResponseBody extends TeaModel {
         public String categoryName;
 
         /**
+         * <p>The destination domain name.</p>
+         * 
          * <strong>example:</strong>
          * <p>example.com</p>
          */
@@ -162,6 +189,8 @@ public class DescribeOutgoingDestinationResponseBody extends TeaModel {
         public String dstDomain;
 
         /**
+         * <p>The destination IP address.</p>
+         * 
          * <strong>example:</strong>
          * <p>101.6.15.XXX</p>
          */
@@ -169,6 +198,8 @@ public class DescribeOutgoingDestinationResponseBody extends TeaModel {
         public String dstIP;
 
         /**
+         * <p>The destination type.</p>
+         * 
          * <strong>example:</strong>
          * <p>domain</p>
          */
@@ -176,6 +207,8 @@ public class DescribeOutgoingDestinationResponseBody extends TeaModel {
         public String dstType;
 
         /**
+         * <p>The group name.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -183,6 +216,8 @@ public class DescribeOutgoingDestinationResponseBody extends TeaModel {
         public String groupName;
 
         /**
+         * <p>Indicates whether a recommended ACL exists.</p>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
@@ -190,6 +225,8 @@ public class DescribeOutgoingDestinationResponseBody extends TeaModel {
         public Boolean hasAclRecommend;
 
         /**
+         * <p>The inbound traffic. Unit: bytes.</p>
+         * 
          * <strong>example:</strong>
          * <p>0.0</p>
          */
@@ -197,6 +234,8 @@ public class DescribeOutgoingDestinationResponseBody extends TeaModel {
         public Long inBytes;
 
         /**
+         * <p>Indicates whether the destination is manually marked as normal.</p>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
@@ -204,6 +243,8 @@ public class DescribeOutgoingDestinationResponseBody extends TeaModel {
         public Boolean isMarkNormal;
 
         /**
+         * <p>The outbound traffic. Unit: bytes.</p>
+         * 
          * <strong>example:</strong>
          * <p>0.0</p>
          */
@@ -211,12 +252,17 @@ public class DescribeOutgoingDestinationResponseBody extends TeaModel {
         public Long outBytes;
 
         /**
+         * <p>The number of sessions.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
         @NameInMap("SessionCount")
         public Long sessionCount;
 
+        /**
+         * <p>The list of tags.</p>
+         */
         @NameInMap("TagList")
         public java.util.List<DescribeOutgoingDestinationResponseBodyDstListTagList> tagList;
 

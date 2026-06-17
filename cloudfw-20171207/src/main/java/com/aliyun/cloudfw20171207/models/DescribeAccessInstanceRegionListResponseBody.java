@@ -4,10 +4,15 @@ package com.aliyun.cloudfw20171207.models;
 import com.aliyun.tea.*;
 
 public class DescribeAccessInstanceRegionListResponseBody extends TeaModel {
+    /**
+     * <p>The list of regions that support the specified type of synchronization node.</p>
+     */
     @NameInMap("RegionNoList")
     public java.util.List<String> regionNoList;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>B2841452-CB8D-4F7D-B247-38E1CF7334F8</p>
      */

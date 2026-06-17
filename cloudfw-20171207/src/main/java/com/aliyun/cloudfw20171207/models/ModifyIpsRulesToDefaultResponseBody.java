@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ModifyIpsRulesToDefaultResponseBody extends TeaModel {
     /**
+     * <p>The ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>B713361D-62E2-5FF0-9D29-BBFAAF40****</p>
      */

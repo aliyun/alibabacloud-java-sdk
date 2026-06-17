@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeTrafficLogRequest extends TeaModel {
     /**
+     * <p>The ID of the pre-matched ACL rule.</p>
+     * 
      * <strong>example:</strong>
      * <p>00000000-0000-0000-0000-000000000000</p>
      */
@@ -12,6 +14,8 @@ public class DescribeTrafficLogRequest extends TeaModel {
     public String aclPreRuleId;
 
     /**
+     * <p>The pre-matching status of the ACL.</p>
+     * 
      * <strong>example:</strong>
      * <p>normal</p>
      */
@@ -19,6 +23,8 @@ public class DescribeTrafficLogRequest extends TeaModel {
     public String aclPreState;
 
     /**
+     * <p>The status of deep packet inspection.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -26,6 +32,8 @@ public class DescribeTrafficLogRequest extends TeaModel {
     public String appDpiState;
 
     /**
+     * <p>The application ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>7</p>
      */
@@ -33,6 +41,8 @@ public class DescribeTrafficLogRequest extends TeaModel {
     public String appId;
 
     /**
+     * <p>The region ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
      */
@@ -40,6 +50,8 @@ public class DescribeTrafficLogRequest extends TeaModel {
     public String assetRegion;
 
     /**
+     * <p>The attack type.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -47,6 +59,8 @@ public class DescribeTrafficLogRequest extends TeaModel {
     public String attackType;
 
     /**
+     * <p>The page number of the query.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -54,6 +68,8 @@ public class DescribeTrafficLogRequest extends TeaModel {
     public String currentPage;
 
     /**
+     * <p>The direction.</p>
+     * 
      * <strong>example:</strong>
      * <p>out</p>
      */
@@ -61,6 +77,8 @@ public class DescribeTrafficLogRequest extends TeaModel {
     public String direction;
 
     /**
+     * <p>The domain name.</p>
+     * 
      * <strong>example:</strong>
      * <p>example.com</p>
      */
@@ -68,6 +86,8 @@ public class DescribeTrafficLogRequest extends TeaModel {
     public String domainName;
 
     /**
+     * <p>The URL in the flow log.</p>
+     * 
      * <strong>example:</strong>
      * <p>example.com</p>
      */
@@ -75,6 +95,8 @@ public class DescribeTrafficLogRequest extends TeaModel {
     public String domainUrl;
 
     /**
+     * <p>The destination IP address.</p>
+     * 
      * <strong>example:</strong>
      * <p>182.92.206.XXX</p>
      */
@@ -82,6 +104,8 @@ public class DescribeTrafficLogRequest extends TeaModel {
     public String dstIP;
 
     /**
+     * <p>The destination port.</p>
+     * 
      * <strong>example:</strong>
      * <p>9876</p>
      */
@@ -89,6 +113,8 @@ public class DescribeTrafficLogRequest extends TeaModel {
     public String dstPort;
 
     /**
+     * <p>The destination VPC ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>vpc-wz95m1aq9b0h****vk1yb</p>
      */
@@ -96,6 +122,8 @@ public class DescribeTrafficLogRequest extends TeaModel {
     public String dstVpcId;
 
     /**
+     * <p>The region of the destination VPC asset.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-shenzhen</p>
      */
@@ -103,6 +131,7 @@ public class DescribeTrafficLogRequest extends TeaModel {
     public String dstVpcRegionNo;
 
     /**
+     * <p>The end time. This value is a UNIX timestamp. Unit: seconds.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -112,6 +141,8 @@ public class DescribeTrafficLogRequest extends TeaModel {
     public String endTime;
 
     /**
+     * <p>The firewall type.</p>
+     * 
      * <strong>example:</strong>
      * <p>VpcFirewall</p>
      */
@@ -119,6 +150,8 @@ public class DescribeTrafficLogRequest extends TeaModel {
     public String firewallType;
 
     /**
+     * <p>The flow log type.</p>
+     * 
      * <strong>example:</strong>
      * <p>All</p>
      */
@@ -126,6 +159,8 @@ public class DescribeTrafficLogRequest extends TeaModel {
     public String flowType;
 
     /**
+     * <p>The protocol type.</p>
+     * 
      * <strong>example:</strong>
      * <p>icmp</p>
      */
@@ -133,26 +168,50 @@ public class DescribeTrafficLogRequest extends TeaModel {
     public String ipProtocol;
 
     /**
+     * <p>The IP version.</p>
+     * 
      * <strong>example:</strong>
      * <p>4</p>
      */
     @NameInMap("IpVersion")
     public String ipVersion;
 
+    /**
+     * <p>The Internet Service Provider (ISP).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>telecom</p>
+     */
     @NameInMap("Isp")
     public String isp;
 
     /**
+     * <p>The language of the response. Valid values:</p>
+     * <ul>
+     * <li><p><strong>zh</strong> (default): Chinese</p>
+     * </li>
+     * <li><p><strong>en</strong>: English</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>zh</p>
      */
     @NameInMap("Lang")
     public String lang;
 
+    /**
+     * <p>The region of the source or destination IP address.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Hangzhou</p>
+     */
     @NameInMap("Location")
     public String location;
 
     /**
+     * <p>The UID of the member account.</p>
+     * 
      * <strong>example:</strong>
      * <p>128599825273****</p>
      */
@@ -160,6 +219,8 @@ public class DescribeTrafficLogRequest extends TeaModel {
     public Long memberUid;
 
     /**
+     * <p>The ID of the NAT firewall.</p>
+     * 
      * <strong>example:</strong>
      * <p>vfw-tr-7a9c8901ed394****</p>
      */
@@ -167,6 +228,8 @@ public class DescribeTrafficLogRequest extends TeaModel {
     public String natFirewallId;
 
     /**
+     * <p>The ID of the NAT Gateway.</p>
+     * 
      * <strong>example:</strong>
      * <p>ngw-2zew6yn017hhzbm****</p>
      */
@@ -174,6 +237,8 @@ public class DescribeTrafficLogRequest extends TeaModel {
     public String natGatewayId;
 
     /**
+     * <p>The page number to query. The maximum value is 20.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -181,6 +246,8 @@ public class DescribeTrafficLogRequest extends TeaModel {
     public String pageSize;
 
     /**
+     * <p>The rule ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>8b115ae3-da64-4b80-81c1-1cd2dd42****</p>
      */
@@ -188,6 +255,8 @@ public class DescribeTrafficLogRequest extends TeaModel {
     public String ruleId;
 
     /**
+     * <p>The action of the rule.</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
@@ -195,6 +264,8 @@ public class DescribeTrafficLogRequest extends TeaModel {
     public String ruleResult;
 
     /**
+     * <p>The source of the rule.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -202,6 +273,16 @@ public class DescribeTrafficLogRequest extends TeaModel {
     public String ruleSource;
 
     /**
+     * <p>The module that takes effect in the end.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
+    @NameInMap("RuleSourceFinal")
+    public String ruleSourceFinal;
+
+    /**
+     * <p>The traceability code.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -211,6 +292,8 @@ public class DescribeTrafficLogRequest extends TeaModel {
     public String sourceCode;
 
     /**
+     * <p>The source IP address.</p>
+     * 
      * <strong>example:</strong>
      * <p>139.217.234.XXX</p>
      */
@@ -218,6 +301,8 @@ public class DescribeTrafficLogRequest extends TeaModel {
     public String sourceIp;
 
     /**
+     * <p>The source IP address.</p>
+     * 
      * <strong>example:</strong>
      * <p>10.68.60.XXX</p>
      */
@@ -225,6 +310,8 @@ public class DescribeTrafficLogRequest extends TeaModel {
     public String srcIP;
 
     /**
+     * <p>The source port.</p>
+     * 
      * <strong>example:</strong>
      * <p>8082</p>
      */
@@ -232,6 +319,8 @@ public class DescribeTrafficLogRequest extends TeaModel {
     public String srcPort;
 
     /**
+     * <p>The private source IP address.</p>
+     * 
      * <strong>example:</strong>
      * <p>10.100.134.XX</p>
      */
@@ -239,6 +328,8 @@ public class DescribeTrafficLogRequest extends TeaModel {
     public String srcPrivateIP;
 
     /**
+     * <p>The source VPC ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>vpc-wz9309pkwe06lv****tk4</p>
      */
@@ -246,6 +337,8 @@ public class DescribeTrafficLogRequest extends TeaModel {
     public String srcVpcId;
 
     /**
+     * <p>The region of the source VPC asset.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-beijing</p>
      */
@@ -253,6 +346,7 @@ public class DescribeTrafficLogRequest extends TeaModel {
     public String srcVpcRegionNo;
 
     /**
+     * <p>The start time. This value is a UNIX timestamp. Unit: seconds. You can query data within the last 7 days. The time range for a single query cannot exceed one day.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -262,6 +356,8 @@ public class DescribeTrafficLogRequest extends TeaModel {
     public String startTime;
 
     /**
+     * <p>The ID of the TLS inspection scope.</p>
+     * 
      * <strong>example:</strong>
      * <p>tis-98fd64c5****</p>
      */
@@ -269,6 +365,8 @@ public class DescribeTrafficLogRequest extends TeaModel {
     public String tlsScopeId;
 
     /**
+     * <p>The instance ID of the VPC border firewall.</p>
+     * 
      * <strong>example:</strong>
      * <p>vfw-a42bbb7b887148c9****</p>
      */
@@ -276,6 +374,8 @@ public class DescribeTrafficLogRequest extends TeaModel {
     public String vpcFirewallId;
 
     /**
+     * <p>The vulnerability level.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -517,6 +617,14 @@ public class DescribeTrafficLogRequest extends TeaModel {
     }
     public String getRuleSource() {
         return this.ruleSource;
+    }
+
+    public DescribeTrafficLogRequest setRuleSourceFinal(String ruleSourceFinal) {
+        this.ruleSourceFinal = ruleSourceFinal;
+        return this;
+    }
+    public String getRuleSourceFinal() {
+        return this.ruleSourceFinal;
     }
 
     public DescribeTrafficLogRequest setSourceCode(String sourceCode) {

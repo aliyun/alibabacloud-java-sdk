@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ModifyIpsRulesToDefaultRequest extends TeaModel {
     /**
+     * <p>The application that is affected by the attack.</p>
+     * 
      * <strong>example:</strong>
      * <p>PHP</p>
      */
@@ -12,6 +14,14 @@ public class ModifyIpsRulesToDefaultRequest extends TeaModel {
     public String attackApp;
 
     /**
+     * <p>The type of the Cloud Firewall. Valid values:</p>
+     * <ul>
+     * <li><p><strong>VpcFirewall</strong>: VPC firewall.</p>
+     * </li>
+     * <li><p><strong>InternetFirewall</strong> (default): Internet firewall.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>InternetFirewall</p>
      */
@@ -19,6 +29,14 @@ public class ModifyIpsRulesToDefaultRequest extends TeaModel {
     public String firewallType;
 
     /**
+     * <p>The language of the content. Valid values:</p>
+     * <ul>
+     * <li><p><strong>zh</strong> (default): Chinese.</p>
+     * </li>
+     * <li><p><strong>en</strong>: English.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>zh</p>
      */
@@ -26,6 +44,13 @@ public class ModifyIpsRulesToDefaultRequest extends TeaModel {
     public String lang;
 
     /**
+     * <p>The type of the rule. Valid values:</p>
+     * <ul>
+     * <li><p><strong>basicRule</strong></p>
+     * </li>
+     * <li><p><strong>customize</strong></p>
+     * </li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -35,6 +60,8 @@ public class ModifyIpsRulesToDefaultRequest extends TeaModel {
     public String ruleType;
 
     /**
+     * <p>The list of rules.</p>
+     * 
      * <strong>example:</strong>
      * <p>[
      *   &quot;uuid_1&quot;,
@@ -45,6 +72,8 @@ public class ModifyIpsRulesToDefaultRequest extends TeaModel {
     public String rules;
 
     /**
+     * <p>The source IP address of the visitor.</p>
+     * 
      * <strong>example:</strong>
      * <p>140.205.118.XXX</p>
      */

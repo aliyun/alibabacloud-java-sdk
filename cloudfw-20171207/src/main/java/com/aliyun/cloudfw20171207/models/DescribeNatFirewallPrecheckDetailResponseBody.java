@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class DescribeNatFirewallPrecheckDetailResponseBody extends TeaModel {
     /**
+     * <p>Indicates whether a task exists.</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
     @NameInMap("IsFound")
     public Boolean isFound;
 
+    /**
+     * <p>The details of the precheck.</p>
+     */
     @NameInMap("PrecheckDetail")
     public DescribeNatFirewallPrecheckDetailResponseBodyPrecheckDetail precheckDetail;
 
     /**
+     * <p>The ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>99A65AA0-C5B5-5092-BFCF-8111B436****</p>
      */
@@ -51,10 +58,18 @@ public class DescribeNatFirewallPrecheckDetailResponseBody extends TeaModel {
     }
 
     public static class DescribeNatFirewallPrecheckDetailResponseBodyPrecheckDetailPrecheckEntityGroupsPrecheckEntities extends TeaModel {
+        /**
+         * <p>The information about the failed precheck item.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>VPC Firewall Quota Full</p>
+         */
         @NameInMap("Info")
         public String info;
 
         /**
+         * <p>The name of the precheck item.</p>
+         * 
          * <strong>example:</strong>
          * <p>Precheck test</p>
          */
@@ -62,12 +77,28 @@ public class DescribeNatFirewallPrecheckDetailResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>The status of each precheck item. Valid values:</p>
+         * <ul>
+         * <li><p><strong>running</strong>: The precheck is in progress.</p>
+         * </li>
+         * <li><p><strong>passed</strong>: The precheck is passed.</p>
+         * </li>
+         * <li><p><strong>failed</strong>: The precheck failed.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>passed</p>
          */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The suggested solution.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The VPC firewall quota is full. We recommend that you increase the firewall quota</p>
+         */
         @NameInMap("Suggestion")
         public String suggestion;
 
@@ -112,6 +143,8 @@ public class DescribeNatFirewallPrecheckDetailResponseBody extends TeaModel {
 
     public static class DescribeNatFirewallPrecheckDetailResponseBodyPrecheckDetailPrecheckEntityGroups extends TeaModel {
         /**
+         * <p>The number of failed precheck items.</p>
+         * 
          * <strong>example:</strong>
          * <p>9</p>
          */
@@ -119,16 +152,31 @@ public class DescribeNatFirewallPrecheckDetailResponseBody extends TeaModel {
         public Integer failedCount;
 
         /**
+         * <p>The name of the precheck instance.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The execution status of each precheck item.</p>
+         */
         @NameInMap("PrecheckEntities")
         public java.util.List<DescribeNatFirewallPrecheckDetailResponseBodyPrecheckDetailPrecheckEntityGroupsPrecheckEntities> precheckEntities;
 
         /**
+         * <p>The status of the precheck. Valid values:</p>
+         * <ul>
+         * <li><p><strong>running</strong></p>
+         * </li>
+         * <li><p><strong>passed</strong></p>
+         * </li>
+         * <li><p><strong>failed</strong></p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>running</p>
          */
@@ -176,6 +224,8 @@ public class DescribeNatFirewallPrecheckDetailResponseBody extends TeaModel {
 
     public static class DescribeNatFirewallPrecheckDetailResponseBodyPrecheckDetail extends TeaModel {
         /**
+         * <p>The ID of the firewall instance.</p>
+         * 
          * <strong>example:</strong>
          * <p>vfw-tr-7a9c8901ed394****</p>
          */
@@ -183,16 +233,31 @@ public class DescribeNatFirewallPrecheckDetailResponseBody extends TeaModel {
         public String firewallId;
 
         /**
+         * <p>The ID of the network instance.</p>
+         * 
          * <strong>example:</strong>
          * <p>vpc-m5emh0w6v2e15****</p>
          */
         @NameInMap("NetworkInstanceId")
         public String networkInstanceId;
 
+        /**
+         * <p>The list of precheck item groups.</p>
+         */
         @NameInMap("PrecheckEntityGroups")
         public java.util.List<DescribeNatFirewallPrecheckDetailResponseBodyPrecheckDetailPrecheckEntityGroups> precheckEntityGroups;
 
         /**
+         * <p>The status of the precheck. Valid values:</p>
+         * <ul>
+         * <li><p><strong>running</strong>: The precheck is in progress.</p>
+         * </li>
+         * <li><p><strong>passed</strong>: The precheck is passed.</p>
+         * </li>
+         * <li><p><strong>failed</strong>: The precheck failed.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>failed</p>
          */
@@ -200,6 +265,8 @@ public class DescribeNatFirewallPrecheckDetailResponseBody extends TeaModel {
         public String precheckStatus;
 
         /**
+         * <p>The timestamp of the precheck.</p>
+         * 
          * <strong>example:</strong>
          * <p>1715136000</p>
          */
@@ -207,6 +274,8 @@ public class DescribeNatFirewallPrecheckDetailResponseBody extends TeaModel {
         public String precheckTimestamp;
 
         /**
+         * <p>The region ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-shenzhen</p>
          */

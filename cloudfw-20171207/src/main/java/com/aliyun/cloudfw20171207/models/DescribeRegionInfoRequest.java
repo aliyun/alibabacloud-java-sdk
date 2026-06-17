@@ -5,6 +5,14 @@ import com.aliyun.tea.*;
 
 public class DescribeRegionInfoRequest extends TeaModel {
     /**
+     * <p>The language of the request and response. Valid values:</p>
+     * <ul>
+     * <li><p><strong>zh</strong> (default): Chinese.</p>
+     * </li>
+     * <li><p><strong>en</strong>: English.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>zh</p>
      */
@@ -12,6 +20,7 @@ public class DescribeRegionInfoRequest extends TeaModel {
     public String lang;
 
     /**
+     * <p>The source tracking code.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,6 +30,8 @@ public class DescribeRegionInfoRequest extends TeaModel {
     public String sourceCode;
 
     /**
+     * <p>The source IP address of the visitor.</p>
+     * 
      * <strong>example:</strong>
      * <p>59.82.59.XX</p>
      */

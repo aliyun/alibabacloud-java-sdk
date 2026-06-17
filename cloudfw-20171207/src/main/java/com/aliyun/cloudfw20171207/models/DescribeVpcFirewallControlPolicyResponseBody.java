@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeVpcFirewallControlPolicyResponseBody extends TeaModel {
     /**
-     * <p>The details of the access control policies.</p>
+     * <p>The VPC firewall access control policies.</p>
      */
     @NameInMap("Policys")
     public java.util.List<DescribeVpcFirewallControlPolicyResponseBodyPolicys> policys;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>CBF1E9B7-D6A0-4E9E-AD3E-2B47E6C2837D</p>
@@ -20,7 +20,7 @@ public class DescribeVpcFirewallControlPolicyResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of access control policies returned.</p>
+     * <p>The total number of VPC firewall access control policies.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -59,11 +59,14 @@ public class DescribeVpcFirewallControlPolicyResponseBody extends TeaModel {
 
     public static class DescribeVpcFirewallControlPolicyResponseBodyPolicys extends TeaModel {
         /**
-         * <p>The action that Cloud Firewall performs on the traffic. Valid values:</p>
+         * <p>The action to perform on traffic that matches the access control policy. Valid values:</p>
          * <ul>
-         * <li><strong>accept</strong>: allows the traffic.</li>
-         * <li><strong>drop</strong>: denies the traffic.</li>
-         * <li><strong>log</strong>: monitors the traffic.</li>
+         * <li><p><strong>accept</strong>: allows the traffic.</p>
+         * </li>
+         * <li><p><strong>drop</strong>: denies the traffic.</p>
+         * </li>
+         * <li><p><strong>log</strong>: logs the traffic.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -73,7 +76,7 @@ public class DescribeVpcFirewallControlPolicyResponseBody extends TeaModel {
         public String aclAction;
 
         /**
-         * <p>The UUID of the access control policy.</p>
+         * <p>The unique identifier of the access control policy.</p>
          * 
          * <strong>example:</strong>
          * <p>4037fbf7-3e39-4634-92a4-d0155247****</p>
@@ -82,7 +85,7 @@ public class DescribeVpcFirewallControlPolicyResponseBody extends TeaModel {
         public String aclUuid;
 
         /**
-         * <p>The application ID in the access control policy.</p>
+         * <p>The ID of the application.</p>
          * 
          * <strong>example:</strong>
          * <p>10**</p>
@@ -91,22 +94,36 @@ public class DescribeVpcFirewallControlPolicyResponseBody extends TeaModel {
         public String applicationId;
 
         /**
-         * <p>The application types supported by the access control policy. We recommend that you specify ApplicationNameList. Valid values:</p>
+         * <p>The application type. We recommend that you use <code>ApplicationNameList</code> instead. Valid values:</p>
          * <ul>
-         * <li><strong>HTTP</strong></li>
-         * <li><strong>HTTPS</strong></li>
-         * <li><strong>MySQL</strong></li>
-         * <li><strong>SMTP</strong></li>
-         * <li><strong>SMTPS</strong></li>
-         * <li><strong>RDP</strong></li>
-         * <li><strong>VNC</strong></li>
-         * <li><strong>SSH</strong></li>
-         * <li><strong>Redis</strong></li>
-         * <li><strong>MQTT</strong></li>
-         * <li><strong>MongoDB</strong></li>
-         * <li><strong>Memcache</strong></li>
-         * <li><strong>SSL</strong></li>
-         * <li><strong>ANY</strong>: all application types</li>
+         * <li><p><strong>HTTP</strong></p>
+         * </li>
+         * <li><p><strong>HTTPS</strong></p>
+         * </li>
+         * <li><p><strong>MySQL</strong></p>
+         * </li>
+         * <li><p><strong>SMTP</strong></p>
+         * </li>
+         * <li><p><strong>SMTPS</strong></p>
+         * </li>
+         * <li><p><strong>RDP</strong></p>
+         * </li>
+         * <li><p><strong>VNC</strong></p>
+         * </li>
+         * <li><p><strong>SSH</strong></p>
+         * </li>
+         * <li><p><strong>Redis</strong></p>
+         * </li>
+         * <li><p><strong>MQTT</strong></p>
+         * </li>
+         * <li><p><strong>MongoDB</strong></p>
+         * </li>
+         * <li><p><strong>Memcache</strong></p>
+         * </li>
+         * <li><p><strong>SSL</strong></p>
+         * </li>
+         * <li><p><strong>ANY</strong> (all application types)</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -116,13 +133,13 @@ public class DescribeVpcFirewallControlPolicyResponseBody extends TeaModel {
         public String applicationName;
 
         /**
-         * <p>The application types supported by the access control policy.</p>
+         * <p>The list of application names.</p>
          */
         @NameInMap("ApplicationNameList")
         public java.util.List<String> applicationNameList;
 
         /**
-         * <p>The time when the access control policy was created. The value is a UNIX timestamp. Unit: seconds.</p>
+         * <p>The UNIX timestamp, in seconds, of when the policy was created.</p>
          * 
          * <strong>example:</strong>
          * <p>1761062400</p>
@@ -131,7 +148,7 @@ public class DescribeVpcFirewallControlPolicyResponseBody extends TeaModel {
         public Long createTime;
 
         /**
-         * <p>The description of the access control policy.</p>
+         * <p>The policy description.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -140,7 +157,7 @@ public class DescribeVpcFirewallControlPolicyResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The destination port in the access control policy.</p>
+         * <p>The destination port.</p>
          * 
          * <strong>example:</strong>
          * <p>80</p>
@@ -149,7 +166,7 @@ public class DescribeVpcFirewallControlPolicyResponseBody extends TeaModel {
         public String destPort;
 
         /**
-         * <p>The name of the destination port address book in the access control policy.</p>
+         * <p>The name of the destination port address book.</p>
          * 
          * <strong>example:</strong>
          * <p>my_port_group</p>
@@ -158,16 +175,18 @@ public class DescribeVpcFirewallControlPolicyResponseBody extends TeaModel {
         public String destPortGroup;
 
         /**
-         * <p>The ports in the destination port address book of the access control policy.</p>
+         * <p>The ports in the destination port address book.</p>
          */
         @NameInMap("DestPortGroupPorts")
         public java.util.List<String> destPortGroupPorts;
 
         /**
-         * <p>The type of the destination port in the access control policy. Valid values:</p>
+         * <p>The type of the destination port. Valid values:</p>
          * <ul>
-         * <li><strong>port</strong>: port</li>
-         * <li><strong>group</strong>: port address book</li>
+         * <li><p><strong>port</strong>: a single port</p>
+         * </li>
+         * <li><p><strong>group</strong>: a port address book</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -177,11 +196,14 @@ public class DescribeVpcFirewallControlPolicyResponseBody extends TeaModel {
         public String destPortType;
 
         /**
-         * <p>The destination address in the access control policy. Valid values:</p>
+         * <p>The destination address for the access control policy. The value depends on <code>DestinationType</code>.</p>
          * <ul>
-         * <li>If <strong>DestinationType</strong> is set to <code>net</code>, the value of this parameter is a CIDR block.</li>
-         * <li>If <strong>DestinationType</strong> is set to <code>domain</code>, the value of this parameter is a domain name.</li>
-         * <li>If <strong>DestinationType</strong> is set to <code>group</code>, the value of this parameter is an address book name.</li>
+         * <li><p>If <code>DestinationType</code> is <code>net</code>, the value is a destination CIDR block.</p>
+         * </li>
+         * <li><p>If <code>DestinationType</code> is <code>domain</code>, the value is a destination domain name.</p>
+         * </li>
+         * <li><p>If <code>DestinationType</code> is <code>group</code>, the value is the name of a destination address book.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -191,16 +213,18 @@ public class DescribeVpcFirewallControlPolicyResponseBody extends TeaModel {
         public String destination;
 
         /**
-         * <p>The CIDR blocks in the destination address book of the access control policy.</p>
+         * <p>The CIDR blocks in the destination address book.</p>
          */
         @NameInMap("DestinationGroupCidrs")
         public java.util.List<String> destinationGroupCidrs;
 
         /**
-         * <p>The type of the destination address book in the access control policy. Valid values:</p>
+         * <p>The type of the destination address book. Valid values:</p>
          * <ul>
-         * <li><strong>ip</strong>: an address book that includes one or more CIDR blocks</li>
-         * <li><strong>domain</strong>: an address book that includes one or more domain names</li>
+         * <li><p><strong>ip</strong>: an address book of IP addresses or CIDR blocks.</p>
+         * </li>
+         * <li><p><strong>domain</strong>: an address book of domain names.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -210,11 +234,14 @@ public class DescribeVpcFirewallControlPolicyResponseBody extends TeaModel {
         public String destinationGroupType;
 
         /**
-         * <p>The type of the destination address in the access control policy. Valid values:</p>
+         * <p>The type of the destination address. Valid values:</p>
          * <ul>
-         * <li><strong>net</strong>: CIDR block</li>
-         * <li><strong>group</strong>: address book</li>
-         * <li><strong>domain</strong>: domain name</li>
+         * <li><p><strong>net</strong>: a destination CIDR block</p>
+         * </li>
+         * <li><p><strong>group</strong>: a destination address book</p>
+         * </li>
+         * <li><p><strong>domain</strong>: a destination domain name</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -224,11 +251,14 @@ public class DescribeVpcFirewallControlPolicyResponseBody extends TeaModel {
         public String destinationType;
 
         /**
-         * <p>The domain name resolution method of the access control policy. By default, an access control policy is enabled after the policy is created. Valid values:</p>
+         * <p>The domain name resolution mode. Valid values:</p>
          * <ul>
-         * <li><strong>FQDN</strong>: fully qualified domain name (FQDN)-based resolution</li>
-         * <li><strong>DNS</strong>: DNS-based dynamic resolution</li>
-         * <li><strong>FQDN_AND_DNS</strong>: FQDN and DNS-based dynamic resolution</li>
+         * <li><p><strong>FQDN</strong>: FQDN-based resolution</p>
+         * </li>
+         * <li><p><strong>DNS</strong>: DNS-based dynamic resolution</p>
+         * </li>
+         * <li><p><strong>FQDN_AND_DNS</strong>: FQDN-based and DNS-based dynamic resolution</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -238,9 +268,9 @@ public class DescribeVpcFirewallControlPolicyResponseBody extends TeaModel {
         public String domainResolveType;
 
         /**
-         * <p>The time when the access control policy stops taking effect. The value is a UNIX timestamp. Unit: seconds. The value must be on the hour or on the half hour, and at least 30 minutes later than the value of StartTime.</p>
+         * <p>The UNIX timestamp, in seconds, for the end of the policy\&quot;s effective period. The time must be on the hour or half-hour and at least 30 minutes after the start time.</p>
          * <blockquote>
-         * <p> If RepeatType is set to Permanent, EndTime is left empty. If RepeatType is set to None, Daily, Weekly, or Monthly, EndTime must be specified.</p>
+         * <p>This parameter is not used if <code>RepeatType</code> is <code>Permanent</code>. It is required for <code>None</code>, <code>Daily</code>, <code>Weekly</code>, or <code>Monthly</code> recurrence.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -250,7 +280,7 @@ public class DescribeVpcFirewallControlPolicyResponseBody extends TeaModel {
         public Long endTime;
 
         /**
-         * <p>The time when the access control policy was last hit. The value is a UNIX timestamp. Unit: seconds.</p>
+         * <p>The UNIX timestamp, in seconds, of the last policy hit.</p>
          * 
          * <strong>example:</strong>
          * <p>1579261141</p>
@@ -259,7 +289,7 @@ public class DescribeVpcFirewallControlPolicyResponseBody extends TeaModel {
         public Long hitLastTime;
 
         /**
-         * <p>The number of hits for the access control policy.</p>
+         * <p>The number of policy hits.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -268,7 +298,7 @@ public class DescribeVpcFirewallControlPolicyResponseBody extends TeaModel {
         public Long hitTimes;
 
         /**
-         * <p>The UID of the member that is managed by your Alibaba Cloud account.</p>
+         * <p>The UID of the member account.</p>
          * 
          * <strong>example:</strong>
          * <p>258039427902****</p>
@@ -277,7 +307,7 @@ public class DescribeVpcFirewallControlPolicyResponseBody extends TeaModel {
         public String memberUid;
 
         /**
-         * <p>The time when the access control policy was modified. The value is a UNIX timestamp. Unit: seconds.</p>
+         * <p>The UNIX timestamp, in seconds, of when the policy was last modified.</p>
          * 
          * <strong>example:</strong>
          * <p>1761062400</p>
@@ -286,8 +316,7 @@ public class DescribeVpcFirewallControlPolicyResponseBody extends TeaModel {
         public Long modifyTime;
 
         /**
-         * <p>The priority of the access control policy.</p>
-         * <p>The priority value starts from 1. A smaller priority value indicates a higher priority.</p>
+         * <p>The priority of the access control policy, starting from 1. A smaller value indicates a higher priority.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -296,12 +325,16 @@ public class DescribeVpcFirewallControlPolicyResponseBody extends TeaModel {
         public Integer order;
 
         /**
-         * <p>The protocol type in the access control policy. Valid values:</p>
+         * <p>The protocol type. Valid values:</p>
          * <ul>
-         * <li><strong>TCP</strong></li>
-         * <li><strong>UDP</strong></li>
-         * <li><strong>ICMP</strong></li>
-         * <li><strong>ANY</strong>: all protocol types</li>
+         * <li><p><strong>TCP</strong></p>
+         * </li>
+         * <li><p><strong>UDP</strong></p>
+         * </li>
+         * <li><p><strong>ICMP</strong></p>
+         * </li>
+         * <li><p><strong>ANY</strong> (all protocol types)</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -311,10 +344,12 @@ public class DescribeVpcFirewallControlPolicyResponseBody extends TeaModel {
         public String proto;
 
         /**
-         * <p>Indicates whether the access control policy is enabled. By default, an access control policy is enabled after it is created. Valid values:</p>
+         * <p>The enabled status of the access control policy. A policy is enabled by default after it is created. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong></li>
-         * <li><strong>false</strong></li>
+         * <li><p><strong>true</strong>: The policy is enabled.</p>
+         * </li>
+         * <li><p><strong>false</strong>: The policy is disabled.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -324,28 +359,30 @@ public class DescribeVpcFirewallControlPolicyResponseBody extends TeaModel {
         public String release;
 
         /**
-         * <p>The days of a week or of a month on which the access control policy takes effect.</p>
+         * <p>The days of the week or month on which the policy recurs.</p>
          * <ul>
-         * <li>If RepeatType is set to <code>Permanent</code>, <code>None</code>, or <code>Daily</code>, RepeatDays is left empty. Example: [].</li>
-         * <li>If RepeatType is set to Weekly, RepeatDays must be specified. Example: [0, 6].</li>
+         * <li><p>If <code>RepeatType</code> is set to <code>Permanent</code>, <code>None</code>, or <code>Daily</code>, this parameter is empty. Example: <code>[]</code></p>
+         * </li>
+         * <li><p>If <code>RepeatType</code> is set to <code>Weekly</code>, this parameter is required. Example: <code>[0, 6]</code></p>
+         * </li>
          * </ul>
          * <blockquote>
-         * <p> If RepeatType is set to Weekly, the fields in the value of RepeatDays cannot be repeated.</p>
+         * <p>If <code>RepeatType</code> is set to <code>Weekly</code>, do not specify duplicate values for this parameter.</p>
          * </blockquote>
          * <ul>
-         * <li>If RepeatType is set to <code>Monthly</code>, RepeatDays must be specified. Example: [1, 31].</li>
+         * <li>If <code>RepeatType</code> is set to <code>Monthly</code>, this parameter is required. Example: <code>[1, 31]</code></li>
          * </ul>
          * <blockquote>
-         * <p> If RepeatType is set to Monthly, the fields in the value of RepeatDays cannot be repeated.</p>
+         * <p>If <code>RepeatType</code> is set to <code>Monthly</code>, do not specify duplicate values for this parameter.</p>
          * </blockquote>
          */
         @NameInMap("RepeatDays")
         public java.util.List<Long> repeatDays;
 
         /**
-         * <p>The point in time when the recurrence ends. Example: 23:30. The value must be on the hour or on the half hour, and at least 30 minutes later than the value of RepeatStartTime.</p>
+         * <p>The recurrence end time. The time is in the <code>HH:mm</code> 24-hour format, such as <code>23:30</code>.</p>
          * <blockquote>
-         * <p> If RepeatType is set to Permanent or None, RepeatEndTime is left empty. If RepeatType is set to Daily, Weekly, or Monthly, RepeatEndTime must be specified.</p>
+         * <p>This parameter is not used if <code>RepeatType</code> is <code>Permanent</code> or <code>None</code>. It is required for <code>Daily</code>, <code>Weekly</code>, or <code>Monthly</code> recurrence.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -355,9 +392,9 @@ public class DescribeVpcFirewallControlPolicyResponseBody extends TeaModel {
         public String repeatEndTime;
 
         /**
-         * <p>The point in time when the recurrence starts. Example: 08:00. The value must be on the hour or on the half hour, and at least 30 minutes earlier than the value of RepeatEndTime.</p>
+         * <p>The recurrence start time. The time is in the <code>HH:mm</code> 24-hour format, such as <code>08:00</code>.</p>
          * <blockquote>
-         * <p> If RepeatType is set to Permanent or None, RepeatStartTime is left empty. If RepeatType is set to Daily, Weekly, or Monthly, this parameter must be specified.</p>
+         * <p>This parameter is not used if <code>RepeatType</code> is <code>Permanent</code> or <code>None</code>. It is required for <code>Daily</code>, <code>Weekly</code>, or <code>Monthly</code> recurrence.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -367,13 +404,18 @@ public class DescribeVpcFirewallControlPolicyResponseBody extends TeaModel {
         public String repeatStartTime;
 
         /**
-         * <p>The recurrence type for the access control policy to take effect. Valid values:</p>
+         * <p>The recurrence type for the policy\&quot;s effective period. Valid values:</p>
          * <ul>
-         * <li><strong>Permanent</strong> (default): The policy always takes effect.</li>
-         * <li><strong>None</strong>: The policy takes effect for only once.</li>
-         * <li><strong>Daily</strong>: The policy takes effect on a daily basis.</li>
-         * <li><strong>Weekly</strong>: The policy takes effect on a weekly basis.</li>
-         * <li><strong>Monthly</strong>: The policy takes effect on a monthly basis.</li>
+         * <li><p><strong>Permanent</strong> (default): The policy is always active.</p>
+         * </li>
+         * <li><p><strong>None</strong>: The policy applies only once.</p>
+         * </li>
+         * <li><p><strong>Daily</strong>: The policy recurs daily.</p>
+         * </li>
+         * <li><p><strong>Weekly</strong>: The policy recurs weekly.</p>
+         * </li>
+         * <li><p><strong>Monthly</strong>: The policy recurs monthly.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -383,10 +425,12 @@ public class DescribeVpcFirewallControlPolicyResponseBody extends TeaModel {
         public String repeatType;
 
         /**
-         * <p>The source address in the access control policy. Valid values:</p>
+         * <p>The source address for the access control policy. The value depends on <code>SourceType</code>.</p>
          * <ul>
-         * <li>If <strong>SourceType</strong> is set to <code>net</code>, the value of this parameter is a CIDR block.</li>
-         * <li>If <strong>SourceType</strong> is set to <code>group</code>, the value of this parameter is an address book name.</li>
+         * <li><p>If <code>SourceType</code> is <code>net</code>, the value is a source CIDR block.</p>
+         * </li>
+         * <li><p>If <code>SourceType</code> is <code>group</code>, the value is the name of a source address book.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -396,13 +440,13 @@ public class DescribeVpcFirewallControlPolicyResponseBody extends TeaModel {
         public String source;
 
         /**
-         * <p>The CIDR blocks in the source address book of the access control policy.</p>
+         * <p>The CIDR blocks in the source address book.</p>
          */
         @NameInMap("SourceGroupCidrs")
         public java.util.List<String> sourceGroupCidrs;
 
         /**
-         * <p>The type of the source address book in the access control policy. The value is fixed as <strong>ip</strong>. The value indicates an address book that includes one or more CIDR blocks.</p>
+         * <p>The type of the source address book. The value is always <strong>ip</strong>, which indicates an address book that contains IP addresses or CIDR blocks.</p>
          * 
          * <strong>example:</strong>
          * <p>ip</p>
@@ -411,10 +455,12 @@ public class DescribeVpcFirewallControlPolicyResponseBody extends TeaModel {
         public String sourceGroupType;
 
         /**
-         * <p>The type of the source address in the access control policy. Valid values:</p>
+         * <p>The type of the source address. Valid values:</p>
          * <ul>
-         * <li><strong>net</strong>: CIDR block</li>
-         * <li><strong>group</strong>: address book</li>
+         * <li><p><strong>net</strong>: a source CIDR block</p>
+         * </li>
+         * <li><p><strong>group</strong>: a source address book</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -424,18 +470,18 @@ public class DescribeVpcFirewallControlPolicyResponseBody extends TeaModel {
         public String sourceType;
 
         /**
-         * <p>The total quota consumed by the returned access control policies, which is the sum of the quota consumed by each policy. The quota that is consumed by an access control policy is calculated by using the following formula: Quota that is consumed by an access control policy = Number of source addresses × Number of destination addresses (number of CIDR blocks or domain names) × Number of applications × Number of port ranges.</p>
+         * <p>The number of rule capacity units that the access control policy consumes. This is calculated as: Number of source addresses × Number of destination addresses × Number of applications × Number of port ranges.</p>
          * 
          * <strong>example:</strong>
-         * <p>10,000</p>
+         * <p>10000</p>
          */
         @NameInMap("SpreadCnt")
         public Long spreadCnt;
 
         /**
-         * <p>The time when the access control policy starts to take effect. The value is a UNIX timestamp. Unit: seconds. The value must be on the hour or on the half hour, and at least 30 minutes earlier than the value of EndTime.</p>
+         * <p>The UNIX timestamp, in seconds, for the start of the policy\&quot;s effective period. The time must be on the hour or half-hour and at least 30 minutes before the end time.</p>
          * <blockquote>
-         * <p> If RepeatType is set to Permanent, StartTime is left empty. If RepeatType is set to None, Daily, Weekly, or Monthly, StartTime must be specified.</p>
+         * <p>This parameter is not used if <code>RepeatType</code> is <code>Permanent</code>. It is required for <code>None</code>, <code>Daily</code>, <code>Weekly</code>, or <code>Monthly</code> recurrence.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

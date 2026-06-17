@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateIpsPrivateAssocRequest extends TeaModel {
     /**
+     * <p>The language of the request and response messages.</p>
+     * 
      * <strong>example:</strong>
      * <p>zh</p>
      */
@@ -12,6 +14,8 @@ public class CreateIpsPrivateAssocRequest extends TeaModel {
     public String lang;
 
     /**
+     * <p>The instance ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>ngw-c5vhmjdfp5t****</p>
      */

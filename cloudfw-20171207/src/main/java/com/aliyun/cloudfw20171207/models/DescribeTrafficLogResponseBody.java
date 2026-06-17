@@ -4,13 +4,21 @@ package com.aliyun.cloudfw20171207.models;
 import com.aliyun.tea.*;
 
 public class DescribeTrafficLogResponseBody extends TeaModel {
+    /**
+     * <p>The data list.</p>
+     */
     @NameInMap("DataList")
     public java.util.List<DescribeTrafficLogResponseBodyDataList> dataList;
 
+    /**
+     * <p>The paging information.</p>
+     */
     @NameInMap("PageInfo")
     public DescribeTrafficLogResponseBodyPageInfo pageInfo;
 
     /**
+     * <p>The ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>633D92D1-768A-547F-8ADC-2870CF0A99F6</p>
      */
@@ -48,6 +56,8 @@ public class DescribeTrafficLogResponseBody extends TeaModel {
 
     public static class DescribeTrafficLogResponseBodyDataListDstVpc extends TeaModel {
         /**
+         * <p>The region ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
          */
@@ -55,6 +65,8 @@ public class DescribeTrafficLogResponseBody extends TeaModel {
         public String regionNo;
 
         /**
+         * <p>The VPC instance ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>vpc-8vba1c1em97h0ji71b****</p>
          */
@@ -62,6 +74,8 @@ public class DescribeTrafficLogResponseBody extends TeaModel {
         public String vpcId;
 
         /**
+         * <p>The instance name of the VPC.</p>
+         * 
          * <strong>example:</strong>
          * <p>yi-vpc</p>
          */
@@ -101,6 +115,8 @@ public class DescribeTrafficLogResponseBody extends TeaModel {
 
     public static class DescribeTrafficLogResponseBodyDataListRules extends TeaModel {
         /**
+         * <p>The rule ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>17</p>
          */
@@ -108,11 +124,22 @@ public class DescribeTrafficLogResponseBody extends TeaModel {
         public String ruleId;
 
         /**
+         * <p>The rule name.</p>
+         * 
          * <strong>example:</strong>
          * <p>sharepoint</p>
          */
         @NameInMap("RuleName")
         public String ruleName;
+
+        /**
+         * <p>The source of the rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
+         */
+        @NameInMap("RuleSource")
+        public String ruleSource;
 
         public static DescribeTrafficLogResponseBodyDataListRules build(java.util.Map<String, ?> map) throws Exception {
             DescribeTrafficLogResponseBodyDataListRules self = new DescribeTrafficLogResponseBodyDataListRules();
@@ -135,10 +162,20 @@ public class DescribeTrafficLogResponseBody extends TeaModel {
             return this.ruleName;
         }
 
+        public DescribeTrafficLogResponseBodyDataListRules setRuleSource(String ruleSource) {
+            this.ruleSource = ruleSource;
+            return this;
+        }
+        public String getRuleSource() {
+            return this.ruleSource;
+        }
+
     }
 
     public static class DescribeTrafficLogResponseBodyDataListSrcVpc extends TeaModel {
         /**
+         * <p>The region ID of the source VPC.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-beijing</p>
          */
@@ -146,6 +183,8 @@ public class DescribeTrafficLogResponseBody extends TeaModel {
         public String regionNo;
 
         /**
+         * <p>The instance ID of the source VPC.</p>
+         * 
          * <strong>example:</strong>
          * <p>vpc-8vba1c1em97h0ji71****</p>
          */
@@ -153,6 +192,8 @@ public class DescribeTrafficLogResponseBody extends TeaModel {
         public String vpcId;
 
         /**
+         * <p>The instance name of the source VPC.</p>
+         * 
          * <strong>example:</strong>
          * <p>yi-vpc</p>
          */
@@ -192,6 +233,8 @@ public class DescribeTrafficLogResponseBody extends TeaModel {
 
     public static class DescribeTrafficLogResponseBodyDataList extends TeaModel {
         /**
+         * <p>The ID of the pre-matched ACL policy. If you leave this parameter empty, all policies are matched.</p>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */
@@ -199,6 +242,8 @@ public class DescribeTrafficLogResponseBody extends TeaModel {
         public String aclPreRuleId;
 
         /**
+         * <p>The name of the pre-matched ACL policy.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -206,6 +251,11 @@ public class DescribeTrafficLogResponseBody extends TeaModel {
         public String aclPreRuleName;
 
         /**
+         * <p>The pre-matching status of the ACL. Valid values:</p>
+         * <p><strong>app_unknown</strong>: The application is not detected.</p>
+         * <p><strong>domain_unknown</strong>: The domain name is not detected.</p>
+         * <p><strong>normal</strong>: Normal.</p>
+         * 
          * <strong>example:</strong>
          * <p>normal</p>
          */
@@ -213,6 +263,16 @@ public class DescribeTrafficLogResponseBody extends TeaModel {
         public String aclPreState;
 
         /**
+         * <p>The API status. Valid values:</p>
+         * <p><strong>none</strong>: Initial state.</p>
+         * <p><strong>policy_discard</strong>: The connection failed to be established and was blocked by a user-defined ACL or threat intelligence.</p>
+         * <p><strong>tcp_not_establish</strong>: TCP connection failed.</p>
+         * <p><strong>no_payload</strong>: The connection is established, but deep packet inspection has analyzed zero payloads.</p>
+         * <p><strong>analysing</strong>: Detecting.</p>
+         * <p><strong>unknown_loose</strong>: Loose mode. Detection failed. The system continues to detect.</p>
+         * <p><strong>unknown_strict</strong>: Strict mode. Detection failed.</p>
+         * <p><strong>success</strong>: Detection successful.</p>
+         * 
          * <strong>example:</strong>
          * <p>success</p>
          */
@@ -220,6 +280,8 @@ public class DescribeTrafficLogResponseBody extends TeaModel {
         public String appDpiState;
 
         /**
+         * <p>The application ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>6</p>
          */
@@ -227,6 +289,8 @@ public class DescribeTrafficLogResponseBody extends TeaModel {
         public Integer appId;
 
         /**
+         * <p>The application name.</p>
+         * 
          * <strong>example:</strong>
          * <p>HTTP</p>
          */
@@ -234,6 +298,8 @@ public class DescribeTrafficLogResponseBody extends TeaModel {
         public String appName;
 
         /**
+         * <p>The name of the attacked application.</p>
+         * 
          * <strong>example:</strong>
          * <p>WebLogic</p>
          */
@@ -241,6 +307,8 @@ public class DescribeTrafficLogResponseBody extends TeaModel {
         public String attackApp;
 
         /**
+         * <p>The attack type of the intrusion prevention event.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -248,6 +316,8 @@ public class DescribeTrafficLogResponseBody extends TeaModel {
         public Integer attackType;
 
         /**
+         * <p>The city ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>FI</p>
          */
@@ -255,6 +325,8 @@ public class DescribeTrafficLogResponseBody extends TeaModel {
         public String cityId;
 
         /**
+         * <p>The reason for closing.</p>
+         * 
          * <strong>example:</strong>
          * <p>tcp_fin</p>
          */
@@ -262,6 +334,8 @@ public class DescribeTrafficLogResponseBody extends TeaModel {
         public String closeReason;
 
         /**
+         * <p>The ID of the Alibaba Cloud service instance.</p>
+         * 
          * <strong>example:</strong>
          * <p>ngw-*</p>
          */
@@ -269,6 +343,8 @@ public class DescribeTrafficLogResponseBody extends TeaModel {
         public String cloudInstanceId;
 
         /**
+         * <p>The country ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>US</p>
          */
@@ -276,6 +352,14 @@ public class DescribeTrafficLogResponseBody extends TeaModel {
         public String countryId;
 
         /**
+         * <p>The traffic direction. Valid values:</p>
+         * <ul>
+         * <li><p><strong>in</strong>: inbound traffic.</p>
+         * </li>
+         * <li><p><strong>out</strong>: outbound traffic.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>in</p>
          */
@@ -283,6 +367,8 @@ public class DescribeTrafficLogResponseBody extends TeaModel {
         public String direction;
 
         /**
+         * <p>The domain name.</p>
+         * 
          * <strong>example:</strong>
          * <p>aliyun.com</p>
          */
@@ -290,6 +376,8 @@ public class DescribeTrafficLogResponseBody extends TeaModel {
         public String domainName;
 
         /**
+         * <p>The URL in the flow log.</p>
+         * 
          * <strong>example:</strong>
          * <p>xxx.com</p>
          */
@@ -297,6 +385,8 @@ public class DescribeTrafficLogResponseBody extends TeaModel {
         public String domainUrl;
 
         /**
+         * <p>The destination IP address found. This indicates that the intrusion prevention event includes this destination IP address.</p>
+         * 
          * <strong>example:</strong>
          * <p>2.2.2.2</p>
          */
@@ -304,26 +394,41 @@ public class DescribeTrafficLogResponseBody extends TeaModel {
         public String dstIP;
 
         /**
+         * <p>The destination port.</p>
+         * 
          * <strong>example:</strong>
          * <p>80</p>
          */
         @NameInMap("DstPort")
         public Integer dstPort;
 
+        /**
+         * <p>The list of destination VPC information.</p>
+         */
         @NameInMap("DstVpc")
         public DescribeTrafficLogResponseBodyDataListDstVpc dstVpc;
 
         /**
+         * <p>The end time of the data. This value is a UNIX timestamp. Unit: seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>1751423363</p>
          */
         @NameInMap("EndTime")
         public Long endTime;
 
+        /**
+         * <p>Other extension data.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>None</p>
+         */
         @NameInMap("Ext")
         public String ext;
 
         /**
+         * <p>The inbound traffic.</p>
+         * 
          * <strong>example:</strong>
          * <p>125</p>
          */
@@ -331,6 +436,8 @@ public class DescribeTrafficLogResponseBody extends TeaModel {
         public String inBytes;
 
         /**
+         * <p>The number of inbound messages.</p>
+         * 
          * <strong>example:</strong>
          * <p>12</p>
          */
@@ -338,6 +445,8 @@ public class DescribeTrafficLogResponseBody extends TeaModel {
         public String inPackets;
 
         /**
+         * <p>The protocol type.</p>
+         * 
          * <strong>example:</strong>
          * <p>tcp</p>
          */
@@ -345,6 +454,8 @@ public class DescribeTrafficLogResponseBody extends TeaModel {
         public String ipProtocol;
 
         /**
+         * <p>The ISP.</p>
+         * 
          * <strong>example:</strong>
          * <p>FOP Dmytro Nedilskyi</p>
          */
@@ -352,16 +463,26 @@ public class DescribeTrafficLogResponseBody extends TeaModel {
         public String isp;
 
         /**
+         * <p>The ISP ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>50075069</p>
          */
         @NameInMap("IspId")
         public String ispId;
 
+        /**
+         * <p>The region of the source or destination IP address.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Hangzhou</p>
+         */
         @NameInMap("Location")
         public String location;
 
         /**
+         * <p>The UID of the Cloud Firewall member account.</p>
+         * 
          * <strong>example:</strong>
          * <p>14151892****7022</p>
          */
@@ -369,6 +490,8 @@ public class DescribeTrafficLogResponseBody extends TeaModel {
         public String memberUid;
 
         /**
+         * <p>The outbound traffic.</p>
+         * 
          * <strong>example:</strong>
          * <p>230</p>
          */
@@ -376,6 +499,8 @@ public class DescribeTrafficLogResponseBody extends TeaModel {
         public String outBytes;
 
         /**
+         * <p>The number of outbound messages.</p>
+         * 
          * <strong>example:</strong>
          * <p>11</p>
          */
@@ -383,6 +508,8 @@ public class DescribeTrafficLogResponseBody extends TeaModel {
         public String outPackets;
 
         /**
+         * <p>The number of bytes in the packet.</p>
+         * 
          * <strong>example:</strong>
          * <p>355</p>
          */
@@ -390,6 +517,8 @@ public class DescribeTrafficLogResponseBody extends TeaModel {
         public Long packetBytes;
 
         /**
+         * <p>The number of traffic packets.</p>
+         * 
          * <strong>example:</strong>
          * <p>23</p>
          */
@@ -397,6 +526,8 @@ public class DescribeTrafficLogResponseBody extends TeaModel {
         public Long packetCount;
 
         /**
+         * <p>The private IP address.</p>
+         * 
          * <strong>example:</strong>
          * <p>172.21.234.XXX</p>
          */
@@ -404,6 +535,8 @@ public class DescribeTrafficLogResponseBody extends TeaModel {
         public String privateIp;
 
         /**
+         * <p>The private port.</p>
+         * 
          * <strong>example:</strong>
          * <p>80</p>
          */
@@ -411,6 +544,8 @@ public class DescribeTrafficLogResponseBody extends TeaModel {
         public Integer privatePort;
 
         /**
+         * <p>The region ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
          */
@@ -418,6 +553,8 @@ public class DescribeTrafficLogResponseBody extends TeaModel {
         public String regionId;
 
         /**
+         * <p>The ID of the matched rule.</p>
+         * 
          * <strong>example:</strong>
          * <p>00000000-0000-0000-0000-000000000000</p>
          */
@@ -425,6 +562,8 @@ public class DescribeTrafficLogResponseBody extends TeaModel {
         public String ruleId;
 
         /**
+         * <p>The rule name.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -432,6 +571,16 @@ public class DescribeTrafficLogResponseBody extends TeaModel {
         public String ruleName;
 
         /**
+         * <p>The final result of the traffic. Valid values:</p>
+         * <ul>
+         * <li><p><strong>pass</strong>: The traffic is allowed.</p>
+         * </li>
+         * <li><p><strong>alert</strong>: An alert is generated.</p>
+         * </li>
+         * <li><p><strong>drop</strong>: The traffic is dropped.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>pass</p>
          */
@@ -439,16 +588,35 @@ public class DescribeTrafficLogResponseBody extends TeaModel {
         public Integer ruleResult;
 
         /**
+         * <p>The source of the detection rule that is matched. Valid values:</p>
+         * <ul>
+         * <li><p><strong>0</strong>: None.</p>
+         * </li>
+         * <li><p><strong>1</strong>: Basic protection.</p>
+         * </li>
+         * <li><p><strong>2</strong>: Virtual patching.</p>
+         * </li>
+         * <li><p><strong>3</strong>: Access control.</p>
+         * </li>
+         * <li><p><strong>4</strong>: Threat intelligence.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
         @NameInMap("RuleSource")
         public String ruleSource;
 
+        /**
+         * <p>The list of rules.</p>
+         */
         @NameInMap("Rules")
         public java.util.List<DescribeTrafficLogResponseBodyDataListRules> rules;
 
         /**
+         * <p>The source IP address.</p>
+         * 
          * <strong>example:</strong>
          * <p>1.1.1.1</p>
          */
@@ -456,6 +624,8 @@ public class DescribeTrafficLogResponseBody extends TeaModel {
         public String srcIP;
 
         /**
+         * <p>The port of the data source.</p>
+         * 
          * <strong>example:</strong>
          * <p>20206</p>
          */
@@ -463,16 +633,23 @@ public class DescribeTrafficLogResponseBody extends TeaModel {
         public Integer srcPort;
 
         /**
+         * <p>The private source IP address.</p>
+         * 
          * <strong>example:</strong>
          * <p>172.16.101.7</p>
          */
         @NameInMap("SrcPrivateIP")
         public String srcPrivateIP;
 
+        /**
+         * <p>The source VPC information.</p>
+         */
         @NameInMap("SrcVpc")
         public DescribeTrafficLogResponseBodyDataListSrcVpc srcVpc;
 
         /**
+         * <p>The start time of the data. This value is a UNIX timestamp. Unit: seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>1751423362</p>
          */
@@ -480,6 +657,8 @@ public class DescribeTrafficLogResponseBody extends TeaModel {
         public Long startTime;
 
         /**
+         * <p>The ID of the rule that is matched by the TLS inspection.</p>
+         * 
          * <strong>example:</strong>
          * <p>tir-xxx</p>
          */
@@ -487,6 +666,8 @@ public class DescribeTrafficLogResponseBody extends TeaModel {
         public String tlsRuleId;
 
         /**
+         * <p>The name of the rule that is matched by the TLS inspection.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -494,6 +675,8 @@ public class DescribeTrafficLogResponseBody extends TeaModel {
         public String tlsRuleName;
 
         /**
+         * <p>The ID of the TLS inspection scope.</p>
+         * 
          * <strong>example:</strong>
          * <p>tls-xxx</p>
          */
@@ -501,6 +684,8 @@ public class DescribeTrafficLogResponseBody extends TeaModel {
         public String tlsScopeId;
 
         /**
+         * <p>The instance ID of the VPC border firewall.</p>
+         * 
          * <strong>example:</strong>
          * <p>vfw-4045ca7***</p>
          */
@@ -508,6 +693,8 @@ public class DescribeTrafficLogResponseBody extends TeaModel {
         public String vpcFirewallId;
 
         /**
+         * <p>The vulnerability level.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -915,6 +1102,8 @@ public class DescribeTrafficLogResponseBody extends TeaModel {
 
     public static class DescribeTrafficLogResponseBodyPageInfo extends TeaModel {
         /**
+         * <p>The current page number.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -922,6 +1111,8 @@ public class DescribeTrafficLogResponseBody extends TeaModel {
         public Integer currentPage;
 
         /**
+         * <p>The number of entries returned per page.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -929,6 +1120,8 @@ public class DescribeTrafficLogResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
+         * <p>The total number of entries.</p>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */

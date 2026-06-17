@@ -4,10 +4,15 @@ package com.aliyun.cloudfw20171207.models;
 import com.aliyun.tea.*;
 
 public class DescribeNetworkInstanceRelationListResponseBody extends TeaModel {
+    /**
+     * <p>The information about the network instances.</p>
+     */
     @NameInMap("NetworkInstanceList")
     public java.util.List<DescribeNetworkInstanceRelationListResponseBodyNetworkInstanceList> networkInstanceList;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>284FF89D-4F70-546F-8EF6-77E0A530****</p>
      */
@@ -15,6 +20,8 @@ public class DescribeNetworkInstanceRelationListResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total number of entries.</p>
+     * 
      * <strong>example:</strong>
      * <p>12</p>
      */
@@ -51,18 +58,54 @@ public class DescribeNetworkInstanceRelationListResponseBody extends TeaModel {
     }
 
     public static class DescribeNetworkInstanceRelationListResponseBodyNetworkInstanceListAssociatedCen extends TeaModel {
+        /**
+         * <p>The ID of the network instance connection.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tr-attach-b92yqn***</p>
+         */
         @NameInMap("AttachmentId")
         public String attachmentId;
 
+        /**
+         * <p>The name of the network instance connection.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>att-test1</p>
+         */
         @NameInMap("AttachmentName")
         public String attachmentName;
 
+        /**
+         * <p>The ID of the CEN instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cen-sdij1***</p>
+         */
         @NameInMap("CenId")
         public String cenId;
 
+        /**
+         * <p>The name of the CEN instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
+         */
         @NameInMap("CenName")
         public String cenName;
 
+        /**
+         * <p>The type of the transit router. Valid values:</p>
+         * <ul>
+         * <li><p><strong>Basic</strong>: Basic Edition transit router.</p>
+         * </li>
+         * <li><p><strong>Enterprise</strong>: Enterprise Edition transit router.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Enterprise</p>
+         */
         @NameInMap("TransitRouterType")
         public String transitRouterType;
 
@@ -114,18 +157,54 @@ public class DescribeNetworkInstanceRelationListResponseBody extends TeaModel {
     }
 
     public static class DescribeNetworkInstanceRelationListResponseBodyNetworkInstanceListPeerNetworkInstanceListAssociatedCen extends TeaModel {
+        /**
+         * <p>The ID of the network instance connection.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tr-attach-b9dyqn***</p>
+         */
         @NameInMap("AttachmentId")
         public String attachmentId;
 
+        /**
+         * <p>The name of the network instance connection.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>att-test2</p>
+         */
         @NameInMap("AttachmentName")
         public String attachmentName;
 
+        /**
+         * <p>The ID of the CEN instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cen-sdij1***</p>
+         */
         @NameInMap("CenId")
         public String cenId;
 
+        /**
+         * <p>The name of the CEN instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
+         */
         @NameInMap("CenName")
         public String cenName;
 
+        /**
+         * <p>The version of the transit router. Valid values:</p>
+         * <ul>
+         * <li><p><strong>Basic</strong>: Basic Edition transit router.</p>
+         * </li>
+         * <li><p><strong>Enterprise</strong>: Enterprise Edition transit router.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Enterprise</p>
+         */
         @NameInMap("TransitRouterType")
         public String transitRouterType;
 
@@ -177,10 +256,15 @@ public class DescribeNetworkInstanceRelationListResponseBody extends TeaModel {
     }
 
     public static class DescribeNetworkInstanceRelationListResponseBodyNetworkInstanceListPeerNetworkInstanceList extends TeaModel {
+        /**
+         * <p>The associated CEN instance.</p>
+         */
         @NameInMap("AssociatedCen")
         public java.util.List<DescribeNetworkInstanceRelationListResponseBodyNetworkInstanceListPeerNetworkInstanceListAssociatedCen> associatedCen;
 
         /**
+         * <p>The ID of the network instance.</p>
+         * 
          * <strong>example:</strong>
          * <p>vpc-dsf232d****</p>
          */
@@ -188,6 +272,8 @@ public class DescribeNetworkInstanceRelationListResponseBody extends TeaModel {
         public String networkInstanceId;
 
         /**
+         * <p>The name of the network instance.</p>
+         * 
          * <strong>example:</strong>
          * <p>vpc-test</p>
          */
@@ -195,6 +281,8 @@ public class DescribeNetworkInstanceRelationListResponseBody extends TeaModel {
         public String networkInstanceName;
 
         /**
+         * <p>The type of the network instance.</p>
+         * 
          * <strong>example:</strong>
          * <p>vpc</p>
          */
@@ -202,6 +290,8 @@ public class DescribeNetworkInstanceRelationListResponseBody extends TeaModel {
         public String networkInstanceType;
 
         /**
+         * <p>The region.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-shenzhen</p>
          */
@@ -256,10 +346,15 @@ public class DescribeNetworkInstanceRelationListResponseBody extends TeaModel {
     }
 
     public static class DescribeNetworkInstanceRelationListResponseBodyNetworkInstanceList extends TeaModel {
+        /**
+         * <p>The associated CEN instance.</p>
+         */
         @NameInMap("AssociatedCen")
         public java.util.List<DescribeNetworkInstanceRelationListResponseBodyNetworkInstanceListAssociatedCen> associatedCen;
 
         /**
+         * <p>The connection type.</p>
+         * 
          * <strong>example:</strong>
          * <p>cen</p>
          */
@@ -267,6 +362,8 @@ public class DescribeNetworkInstanceRelationListResponseBody extends TeaModel {
         public String connectType;
 
         /**
+         * <p>The ID of the network instance.</p>
+         * 
          * <strong>example:</strong>
          * <p>vpc-2vcwfqbrh4kr****</p>
          */
@@ -274,6 +371,8 @@ public class DescribeNetworkInstanceRelationListResponseBody extends TeaModel {
         public String networkInstanceId;
 
         /**
+         * <p>The name of the network instance.</p>
+         * 
          * <strong>example:</strong>
          * <p>vpc-test</p>
          */
@@ -281,16 +380,23 @@ public class DescribeNetworkInstanceRelationListResponseBody extends TeaModel {
         public String networkInstanceName;
 
         /**
+         * <p>The type of the network instance.</p>
+         * 
          * <strong>example:</strong>
          * <p>VPC</p>
          */
         @NameInMap("NetworkInstanceType")
         public String networkInstanceType;
 
+        /**
+         * <p>The list of peer network instances.</p>
+         */
         @NameInMap("PeerNetworkInstanceList")
         public java.util.List<DescribeNetworkInstanceRelationListResponseBodyNetworkInstanceListPeerNetworkInstanceList> peerNetworkInstanceList;
 
         /**
+         * <p>The region ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-shanghai</p>
          */

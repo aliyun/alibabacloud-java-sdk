@@ -5,11 +5,14 @@ import com.aliyun.tea.*;
 
 public class ModifyNatFirewallControlPolicyRequest extends TeaModel {
     /**
-     * <p>The action that Cloud Firewall performs on the traffic. Valid values:</p>
+     * <p>The action that you want to perform on traffic. Valid values:</p>
      * <ul>
-     * <li><strong>accept</strong>: allows the traffic.</li>
-     * <li><strong>drop</strong>: denies the traffic.</li>
-     * <li><strong>log</strong>: monitors the traffic.</li>
+     * <li><p><strong>accept</strong>: allows the traffic.</p>
+     * </li>
+     * <li><p><strong>drop</strong>: denies the traffic.</p>
+     * </li>
+     * <li><p><strong>log</strong>: monitors the traffic.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -20,17 +23,17 @@ public class ModifyNatFirewallControlPolicyRequest extends TeaModel {
 
     /**
      * <p>The UUID of the access control policy.</p>
-     * <p>To modify the configurations of an access control policy, you must provide the UUID of the policy. You can call the DescribeNatFirewallControlPolicy operation to query the UUIDs of access control policies.</p>
+     * <p>To modify an access control policy, you must provide the UUID of the policy. You can call the DescribeNatFirewallControlPolicy operation to query the UUIDs of access control policies.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>61ab1c02-926a-4d1b-9ef7-595eed8c4226</p>
+     * <p>63ab1c02-926a-4d1b-9ef7-*****</p>
      */
     @NameInMap("AclUuid")
     public String aclUuid;
 
     /**
-     * <p>The name of the application.</p>
+     * <p>The application names.</p>
      */
     @NameInMap("ApplicationNameList")
     public java.util.List<String> applicationNameList;
@@ -42,7 +45,7 @@ public class ModifyNatFirewallControlPolicyRequest extends TeaModel {
      * </blockquote>
      * 
      * <strong>example:</strong>
-     * <p>test</p>
+     * <p>test description</p>
      */
     @NameInMap("Description")
     public String description;
@@ -50,7 +53,7 @@ public class ModifyNatFirewallControlPolicyRequest extends TeaModel {
     /**
      * <p>The destination port in the access control policy.</p>
      * <blockquote>
-     * <p>If <strong>DestPortType</strong> is set to <code>port</code>, you must specify this parameter.</p>
+     * <p>This parameter is required when you set <strong>DestPortType</strong> to <code>port</code>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -71,8 +74,10 @@ public class ModifyNatFirewallControlPolicyRequest extends TeaModel {
     /**
      * <p>The type of the destination port in the access control policy. Valid values:</p>
      * <ul>
-     * <li><strong>port</strong>: port</li>
-     * <li><strong>group</strong>: port address book</li>
+     * <li><p><strong>port</strong>: port</p>
+     * </li>
+     * <li><p><strong>group</strong>: port address book</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -84,10 +89,14 @@ public class ModifyNatFirewallControlPolicyRequest extends TeaModel {
     /**
      * <p>The destination address in the access control policy.</p>
      * <ul>
-     * <li>If <strong>DestinationType</strong> is set to net, the value of <strong>Destination</strong> is a CIDR block. Example: 1.2.3.4/24</li>
-     * <li>If <strong>DestinationType</strong> is set to group, the value of <strong>Destination</strong> is an address book. Example: db_group</li>
-     * <li>If <strong>DestinationType</strong> is set to domain, the value of <strong>Destination</strong> is a domain name. Example: \*.aliyuncs.com</li>
-     * <li>If <strong>DestinationType</strong> is set to location, the value of <strong>Destination</strong> is a location. For more information about the location codes, see the &quot;AddControlPolicy&quot; topic. Example: [&quot;BJ11&quot;, &quot;ZB&quot;]</li>
+     * <li><p>If <strong>DestinationType</strong> is <code>net</code>, specify a destination CIDR block. Example: <code>1.2.3.4/24</code>.</p>
+     * </li>
+     * <li><p>If <strong>DestinationType</strong> is <code>group</code>, specify a destination address book. Example: <code>db_group</code>.</p>
+     * </li>
+     * <li><p>If <strong>DestinationType</strong> is <code>domain</code>, specify a destination domain name. Example: <code>*.aliyuncs.com</code>.</p>
+     * </li>
+     * <li><p>If <strong>DestinationType</strong> is <code>location</code>, specify a destination location. For more information about location codes, see AddIpamPoolCidr. Example: <code>[&quot;BJ11&quot;, &quot;ZB&quot;]</code>.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -99,10 +108,14 @@ public class ModifyNatFirewallControlPolicyRequest extends TeaModel {
     /**
      * <p>The type of the destination address in the access control policy. Valid values:</p>
      * <ul>
-     * <li><strong>net</strong>: CIDR block</li>
-     * <li><strong>group</strong>: address book</li>
-     * <li><strong>domain</strong>: domain name</li>
-     * <li><strong>location</strong>: destination location</li>
+     * <li><p><strong>net</strong>: destination CIDR block</p>
+     * </li>
+     * <li><p><strong>group</strong>: destination address book</p>
+     * </li>
+     * <li><p><strong>domain</strong>: destination domain name</p>
+     * </li>
+     * <li><p><strong>location</strong>: destination location</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -112,9 +125,9 @@ public class ModifyNatFirewallControlPolicyRequest extends TeaModel {
     public String destinationType;
 
     /**
-     * <p>The direction of the traffic to which the access control policy applies. Valid value:</p>
+     * <p>The direction of the traffic to which the access control policy applies. Valid values:</p>
      * <ul>
-     * <li><strong>out</strong>: outbound.</li>
+     * <li><strong>out</strong>: outbound traffic</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -124,12 +137,18 @@ public class ModifyNatFirewallControlPolicyRequest extends TeaModel {
     public String direction;
 
     /**
-     * <p>The domain name resolution method of the access control policy. Valid values:</p>
+     * <p>The DNS resolution method of the domain name. Valid values:</p>
      * <ul>
-     * <li><strong>0</strong>: Fully qualified domain name (FQDN)-based resolution</li>
-     * <li><strong>1</strong>: Domain Name System (DNS)-based dynamic resolution</li>
-     * <li><strong>2</strong>: FQDN and DNS-based dynamic resolution</li>
+     * <li><p><strong>0</strong>: FQDN</p>
+     * </li>
+     * <li><p><strong>1</strong>: dynamic DNS</p>
+     * </li>
+     * <li><p><strong>2</strong>: FQDN and dynamic DNS</p>
+     * </li>
      * </ul>
+     * <blockquote>
+     * <p>If the domain name is resolved in FQDN mode, you can select only the TCP protocol. The supported applications are HTTP, HTTPS, SMTP, SMTPS, SSL, IMAPS, and POPS.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>0</p>
@@ -138,9 +157,9 @@ public class ModifyNatFirewallControlPolicyRequest extends TeaModel {
     public String domainResolveType;
 
     /**
-     * <p>The time when the access control policy stops taking effect. The value is a UNIX timestamp. Unit: seconds. The value must be on the hour or on the half hour, and at least 30 minutes later than the value of StartTime.</p>
+     * <p>The end time of the effective period for the access control policy. The time is a Unix timestamp. The time must be on the hour or half-hour and be at least 30 minutes after the start time.</p>
      * <blockquote>
-     * <p> If RepeatType is set to Permanent, EndTime is left empty. If RepeatType is set to None, Daily, Weekly, or Monthly, EndTime must be specified.</p>
+     * <p>If <code>RepeatType</code> is Permanent, <code>EndTime</code> is empty. If <code>RepeatType</code> is None, Daily, Weekly, or Monthly, <code>EndTime</code> is required.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -150,10 +169,12 @@ public class ModifyNatFirewallControlPolicyRequest extends TeaModel {
     public Long endTime;
 
     /**
-     * <p>The language of the content within the request and the response. Valid values:</p>
+     * <p>The language of the request and response. Valid values:</p>
      * <ul>
-     * <li><strong>zh</strong>: Chinese (default)</li>
-     * <li><strong>en</strong>: English</li>
+     * <li><p><strong>zh</strong> (default): Chinese</p>
+     * </li>
+     * <li><p><strong>en</strong>: English</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -175,16 +196,20 @@ public class ModifyNatFirewallControlPolicyRequest extends TeaModel {
     /**
      * <p>The protocol type in the access control policy. Valid values:</p>
      * <ul>
-     * <li><strong>ANY</strong></li>
-     * <li><strong>TCP</strong></li>
-     * <li><strong>UDP</strong></li>
-     * <li><strong>ICMP</strong></li>
+     * <li><p><strong>ANY</strong></p>
+     * </li>
+     * <li><p><strong>TCP</strong></p>
+     * </li>
+     * <li><p><strong>UDP</strong></p>
+     * </li>
+     * <li><p><strong>ICMP</strong></p>
+     * </li>
      * </ul>
      * <blockquote>
-     * <p> The value <strong>ANY</strong> indicates all types of applications.</p>
+     * <p><strong>ANY</strong> indicates that the policy applies to all protocol types.</p>
      * </blockquote>
      * <blockquote>
-     * <p> If the destination address type is a threat intelligence address book of the domain name type or a cloud service address book, you can set Proto to TCP. If you set Proto to TCP, you can set application types to HTTP, HTTPS, SMTP, SMTPS, and SSL.</p>
+     * <p>If the destination is a domain name-based address book that contains a threat intelligence address book or a cloud service address book, you can select TCP. If you select TCP, you can select HTTP, HTTPS, SMTP, SMTPS, or SSL.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -196,8 +221,10 @@ public class ModifyNatFirewallControlPolicyRequest extends TeaModel {
     /**
      * <p>The status of the access control policy. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: enabled</li>
-     * <li><strong>false</strong>: disabled</li>
+     * <li><p><strong>true</strong>: enabled</p>
+     * </li>
+     * <li><p><strong>false</strong>: disabled</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -207,28 +234,30 @@ public class ModifyNatFirewallControlPolicyRequest extends TeaModel {
     public String release;
 
     /**
-     * <p>The days of a week or of a month on which the access control policy takes effect.</p>
+     * <p>The days of a week or a month on which the policy recurs.</p>
      * <ul>
-     * <li>If RepeatType is set to <code>Permanent</code>, <code>None</code>, or <code>Daily</code>, RepeatDays is left empty. Example: [].</li>
-     * <li>If RepeatType is set to Weekly, RepeatDays must be specified. Example: [0, 6].</li>
+     * <li><p>If you set <strong>RepeatType</strong> to <code>Permanent</code>, <code>None</code>, or <code>Daily</code>, leave this parameter empty. Example: [].</p>
+     * </li>
+     * <li><p>If you set <strong>RepeatType</strong> to <code>Weekly</code>, this parameter is required. Example: [0, 6].</p>
+     * </li>
      * </ul>
      * <blockquote>
-     * <p> If RepeatType is set to Weekly, the fields in the value of RepeatDays cannot be repeated.</p>
+     * <p>When RepeatType is set to Weekly, RepeatDays does not allow duplicates.</p>
      * </blockquote>
      * <ul>
-     * <li>If RepeatType is set to <code>Monthly</code>, RepeatDays must be specified. Example: [1, 31].</li>
+     * <li>When RepeatType is <code>Monthly</code>, RepeatDays cannot be empty. For example: [1, 31]</li>
      * </ul>
      * <blockquote>
-     * <p> If RepeatType is set to Monthly, the fields in the value of RepeatDays cannot be repeated.</p>
+     * <p>When RepeatType is set to Monthly, RepeatDays cannot contain duplicate values.</p>
      * </blockquote>
      */
     @NameInMap("RepeatDays")
     public java.util.List<Long> repeatDays;
 
     /**
-     * <p>The point in time when the recurrence ends. Example: 23:30. The value must be on the hour or on the half hour, and at least 30 minutes later than the value of RepeatStartTime.</p>
+     * <p>The end time of the policy\&quot;s recurrence period. The time must be in the 24-hour HH:mm format, such as 23:30, be on the hour or half-hour, and be at least half an hour later than the recurrence start time.</p>
      * <blockquote>
-     * <p> If RepeatType is set to Permanent or None, RepeatEndTime is left empty. If RepeatType is set to Daily, Weekly, or Monthly, RepeatEndTime must be specified.</p>
+     * <p>When RepeatType is Permanent or None, RepeatEndTime is empty. When RepeatType is Daily, Weekly, or Monthly, you must set RepeatEndTime to specify the end time for the repetition.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -238,9 +267,9 @@ public class ModifyNatFirewallControlPolicyRequest extends TeaModel {
     public String repeatEndTime;
 
     /**
-     * <p>The point in time when the recurrence starts. Example: 08:00. The value must be on the hour or on the half hour, and at least 30 minutes earlier than the value of RepeatEndTime.</p>
+     * <p>The start time of the repeat cycle. Use the 24-hour HH:mm format, such as 08:00. The time must be on the hour or half-hour and at least 30 minutes before the repeat end time.</p>
      * <blockquote>
-     * <p> If RepeatType is set to Permanent or None, RepeatStartTime is left empty. If RepeatType is set to Daily, Weekly, or Monthly, this parameter must be specified.</p>
+     * <p>This parameter is not used if <code>RepeatType</code> is set to <code>Permanent</code> or <code>None</code>. This parameter is required if <code>RepeatType</code> is set to <code>Daily</code>, <code>Weekly</code>, or <code>Monthly</code>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -250,13 +279,18 @@ public class ModifyNatFirewallControlPolicyRequest extends TeaModel {
     public String repeatStartTime;
 
     /**
-     * <p>The recurrence type for the access control policy to take effect. Valid values:</p>
+     * <p>The recurrence type for the policy to take effect. Valid values:</p>
      * <ul>
-     * <li><strong>Permanent</strong> (default): The policy always takes effect.</li>
-     * <li><strong>None</strong>: The policy takes effect for only once.</li>
-     * <li><strong>Daily</strong>: The policy takes effect on a daily basis.</li>
-     * <li><strong>Weekly</strong>: The policy takes effect on a weekly basis.</li>
-     * <li><strong>Monthly</strong>: The policy takes effect on a monthly basis.</li>
+     * <li><p><strong>Permanent</strong> (default): The policy is always in effect.</p>
+     * </li>
+     * <li><p><strong>None</strong>: The policy takes effect for a specified period of time.</p>
+     * </li>
+     * <li><p><strong>Daily</strong>: The policy takes effect daily.</p>
+     * </li>
+     * <li><p><strong>Weekly</strong>: The policy takes effect weekly.</p>
+     * </li>
+     * <li><p><strong>Monthly</strong>: The policy takes effect monthly.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -268,12 +302,14 @@ public class ModifyNatFirewallControlPolicyRequest extends TeaModel {
     /**
      * <p>The source address in the access control policy. Valid values:</p>
      * <ul>
-     * <li>If <strong>SourceType</strong> is set to <code>net</code>, the value of this parameter is a CIDR block. Example: 10.2.XX.XX/24.</li>
-     * <li>If <strong>SourceType</strong> is set to <code>group</code>, the value of this parameter is an address book name. Example: db_group.</li>
+     * <li><p>When <strong>SourceType</strong> is <code>net</code>, Source is the source CIDR address, for example, 10.2.XX.XX/24.</p>
+     * </li>
+     * <li><p>If <strong>SourceType</strong> is <code>group</code>, specify a source address book. Example: <code>db_group</code>.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
-     * <p>192.168.0.25/32</p>
+     * <p>10.2.XX.XX/24</p>
      */
     @NameInMap("Source")
     public String source;
@@ -281,8 +317,10 @@ public class ModifyNatFirewallControlPolicyRequest extends TeaModel {
     /**
      * <p>The type of the source address in the access control policy. Valid values:</p>
      * <ul>
-     * <li><strong>net</strong>: CIDR block</li>
-     * <li><strong>group</strong>: address book</li>
+     * <li><p><strong>net</strong>: source CIDR block</p>
+     * </li>
+     * <li><p><strong>group</strong>: source address book</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -292,9 +330,9 @@ public class ModifyNatFirewallControlPolicyRequest extends TeaModel {
     public String sourceType;
 
     /**
-     * <p>The time when the access control policy starts to take effect. The value is a UNIX timestamp. Unit: seconds. The value must be on the hour or on the half hour, and at least 30 minutes earlier than the value of EndTime.</p>
+     * <p>The start time of the effective period for the access control policy is specified in the Unix timestamp format. It must be on the hour or half-hour and at least half an hour earlier than the end time.</p>
      * <blockquote>
-     * <p> If RepeatType is set to Permanent, StartTime is left empty. If RepeatType is set to None, Daily, Weekly, or Monthly, StartTime must be specified.</p>
+     * <p>When RepeatType is Permanent, StartTime is empty. When RepeatType is None, Daily, Weekly, or Monthly, StartTime is required.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

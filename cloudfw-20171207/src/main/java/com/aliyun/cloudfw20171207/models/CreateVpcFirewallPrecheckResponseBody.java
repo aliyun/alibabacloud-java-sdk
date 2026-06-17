@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateVpcFirewallPrecheckResponseBody extends TeaModel {
     /**
+     * <p>The ID of the precheck task.</p>
+     * 
      * <strong>example:</strong>
      * <p>4197</p>
      */
@@ -12,6 +14,8 @@ public class CreateVpcFirewallPrecheckResponseBody extends TeaModel {
     public String precheckId;
 
     /**
+     * <p>The ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>C5BE1AA4-934A-5085-89CC-9AD1CAC3****</p>
      */

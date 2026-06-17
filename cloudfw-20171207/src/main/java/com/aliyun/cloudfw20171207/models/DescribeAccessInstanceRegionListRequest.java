@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeAccessInstanceRegionListRequest extends TeaModel {
     /**
+     * <p>The status of the synchronization node.</p>
+     * 
      * <strong>example:</strong>
      * <p>ready</p>
      */
@@ -12,6 +14,14 @@ public class DescribeAccessInstanceRegionListRequest extends TeaModel {
     public String accessInstanceStatus;
 
     /**
+     * <p>The type of the synchronization node. Valid values:</p>
+     * <ul>
+     * <li><p><strong>PrivateDns</strong>: private DNS.</p>
+     * </li>
+     * <li><p><strong>AckClusterConnector</strong>: ACK cluster connector.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>AckClusterConnector</p>
      */

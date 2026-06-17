@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeInternetTrafficTopRequest extends TeaModel {
     /**
+     * <p>The type of traffic data.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,8 @@ public class DescribeInternetTrafficTopRequest extends TeaModel {
     public String dataType;
 
     /**
+     * <p>The traffic direction.</p>
+     * 
      * <strong>example:</strong>
      * <p>in</p>
      */
@@ -21,6 +24,7 @@ public class DescribeInternetTrafficTopRequest extends TeaModel {
     public String direction;
 
     /**
+     * <p>The end time. The value is a UNIX timestamp. Unit: seconds.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -30,6 +34,8 @@ public class DescribeInternetTrafficTopRequest extends TeaModel {
     public String endTime;
 
     /**
+     * <p>The language of the response.</p>
+     * 
      * <strong>example:</strong>
      * <p>zh</p>
      */
@@ -37,6 +43,8 @@ public class DescribeInternetTrafficTopRequest extends TeaModel {
     public String lang;
 
     /**
+     * <p>The maximum number of top entries to return. The default value is 50. Valid values: 1 to 50.</p>
+     * 
      * <strong>example:</strong>
      * <p>50</p>
      */
@@ -44,6 +52,8 @@ public class DescribeInternetTrafficTopRequest extends TeaModel {
     public String limit;
 
     /**
+     * <p>The action of the rule.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -51,6 +61,8 @@ public class DescribeInternetTrafficTopRequest extends TeaModel {
     public String ruleResult;
 
     /**
+     * <p>The source of the rule.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -58,6 +70,8 @@ public class DescribeInternetTrafficTopRequest extends TeaModel {
     public String ruleSource;
 
     /**
+     * <p>The name of the country to display.</p>
+     * 
      * <strong>example:</strong>
      * <p>China</p>
      */
@@ -65,6 +79,8 @@ public class DescribeInternetTrafficTopRequest extends TeaModel {
     public String showCountryName;
 
     /**
+     * <p>The sorting method.</p>
+     * 
      * <strong>example:</strong>
      * <p>in_bytes</p>
      */
@@ -72,6 +88,7 @@ public class DescribeInternetTrafficTopRequest extends TeaModel {
     public String sort;
 
     /**
+     * <p>The tracing code for the source.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -81,6 +98,8 @@ public class DescribeInternetTrafficTopRequest extends TeaModel {
     public String sourceCode;
 
     /**
+     * <p>The source IP address.</p>
+     * 
      * <strong>example:</strong>
      * <p>117.82.14.XXX</p>
      */
@@ -88,6 +107,7 @@ public class DescribeInternetTrafficTopRequest extends TeaModel {
     public String sourceIp;
 
     /**
+     * <p>The start time. The value is a UNIX timestamp. Unit: seconds.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

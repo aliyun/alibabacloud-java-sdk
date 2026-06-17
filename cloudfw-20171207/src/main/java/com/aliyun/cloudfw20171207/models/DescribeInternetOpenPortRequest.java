@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeInternetOpenPortRequest extends TeaModel {
     /**
+     * <p>The page number for a paged query.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -12,6 +14,8 @@ public class DescribeInternetOpenPortRequest extends TeaModel {
     public String currentPage;
 
     /**
+     * <p>The end of the time range to query. The value is a UNIX timestamp. Unit: seconds.</p>
+     * 
      * <strong>example:</strong>
      * <p>1748358644</p>
      */
@@ -19,6 +23,8 @@ public class DescribeInternetOpenPortRequest extends TeaModel {
     public String endTime;
 
     /**
+     * <p>The language of the content.</p>
+     * 
      * <strong>example:</strong>
      * <p>zh</p>
      */
@@ -26,6 +32,8 @@ public class DescribeInternetOpenPortRequest extends TeaModel {
     public String lang;
 
     /**
+     * <p>The number of entries per page for a paged query.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -33,6 +41,8 @@ public class DescribeInternetOpenPortRequest extends TeaModel {
     public String pageSize;
 
     /**
+     * <p>The port number.</p>
+     * 
      * <strong>example:</strong>
      * <p>80</p>
      */
@@ -40,6 +50,8 @@ public class DescribeInternetOpenPortRequest extends TeaModel {
     public String port;
 
     /**
+     * <p>The risk level.</p>
+     * 
      * <strong>example:</strong>
      * <p>3</p>
      */
@@ -47,6 +59,8 @@ public class DescribeInternetOpenPortRequest extends TeaModel {
     public String riskLevel;
 
     /**
+     * <p>The name of the application. This is an exact match. If you do not specify this parameter, all applications are queried.</p>
+     * 
      * <strong>example:</strong>
      * <p>SMB</p>
      */
@@ -54,6 +68,8 @@ public class DescribeInternetOpenPortRequest extends TeaModel {
     public String serviceName;
 
     /**
+     * <p>The name of the application. This is a fuzzy match. If you do not specify this parameter, all applications are queried.</p>
+     * 
      * <strong>example:</strong>
      * <p>SMB</p>
      */
@@ -61,6 +77,8 @@ public class DescribeInternetOpenPortRequest extends TeaModel {
     public String serviceNameFuzzy;
 
     /**
+     * <p>The source IP address.</p>
+     * 
      * <strong>example:</strong>
      * <p>114.242.33.XXX</p>
      */
@@ -68,6 +86,8 @@ public class DescribeInternetOpenPortRequest extends TeaModel {
     public String sourceIp;
 
     /**
+     * <p>The start of the time range to query. The value is a UNIX timestamp. Unit: seconds.</p>
+     * 
      * <strong>example:</strong>
      * <p>1735264800</p>
      */
@@ -75,6 +95,8 @@ public class DescribeInternetOpenPortRequest extends TeaModel {
     public String startTime;
 
     /**
+     * <p>The recommended policy level.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */

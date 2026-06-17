@@ -4,10 +4,15 @@ package com.aliyun.cloudfw20171207.models;
 import com.aliyun.tea.*;
 
 public class DescribeOutgoingRiskTrendResponseBody extends TeaModel {
+    /**
+     * <p>The list of returned data.</p>
+     */
     @NameInMap("DataList")
     public java.util.List<DescribeOutgoingRiskTrendResponseBodyDataList> dataList;
 
     /**
+     * <p>The time interval.</p>
+     * 
      * <strong>example:</strong>
      * <p>60</p>
      */
@@ -15,6 +20,8 @@ public class DescribeOutgoingRiskTrendResponseBody extends TeaModel {
     public Integer interval;
 
     /**
+     * <p>The ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>1CA8D98E-A71B-5856-A658-3E8B3152E****</p>
      */
@@ -22,6 +29,8 @@ public class DescribeOutgoingRiskTrendResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total number of threat domain names.</p>
+     * 
      * <strong>example:</strong>
      * <p>7</p>
      */
@@ -29,6 +38,8 @@ public class DescribeOutgoingRiskTrendResponseBody extends TeaModel {
     public Integer totalRiskDomain;
 
     /**
+     * <p>The total number of threat IP addresses.</p>
+     * 
      * <strong>example:</strong>
      * <p>6</p>
      */
@@ -82,6 +93,8 @@ public class DescribeOutgoingRiskTrendResponseBody extends TeaModel {
 
     public static class DescribeOutgoingRiskTrendResponseBodyDataList extends TeaModel {
         /**
+         * <p>The number of threat domain names.</p>
+         * 
          * <strong>example:</strong>
          * <p>20</p>
          */
@@ -89,6 +102,8 @@ public class DescribeOutgoingRiskTrendResponseBody extends TeaModel {
         public Integer riskDomain;
 
         /**
+         * <p>The number of threat IP addresses.</p>
+         * 
          * <strong>example:</strong>
          * <p>5</p>
          */
@@ -96,6 +111,8 @@ public class DescribeOutgoingRiskTrendResponseBody extends TeaModel {
         public Integer riskIp;
 
         /**
+         * <p>The timestamp.</p>
+         * 
          * <strong>example:</strong>
          * <p>1659405600</p>
          */

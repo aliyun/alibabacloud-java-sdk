@@ -15,10 +15,10 @@ public class CreateDownloadTaskResponseBody extends TeaModel {
 
     /**
      * <p>The status of the task. Valid values:</p>
-     * <p>finish: The task finished. You can query the task to obtain the download link of the file.</p>
-     * <p>start: The task start.</p>
-     * <p>error: An error occurred.</p>
-     * <p>expire: The task file is invalid and cannot be downloaded.</p>
+     * <p>finish: The task is complete. You can query the task to get the file download link.</p>
+     * <p>start: The task has started.</p>
+     * <p>error: The task failed.</p>
+     * <p>expire: The task expired. The task file is invalid and cannot be downloaded.</p>
      * 
      * <strong>example:</strong>
      * <p>start</p>
@@ -39,7 +39,7 @@ public class CreateDownloadTaskResponseBody extends TeaModel {
      * <p>The name of the file download task.</p>
      * 
      * <strong>example:</strong>
-     * <p>Internet Boundary Firewall Assets - IPv4</p>
+     * <p>test-IPv4</p>
      */
     @NameInMap("TaskName")
     public String taskName;

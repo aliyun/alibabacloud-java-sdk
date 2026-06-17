@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class DescribeNatFirewallPolicyPriorUsedRequest extends TeaModel {
     /**
-     * <p>The direction of the traffic to which the access control policy applies.</p>
-     * <p>Valid values:</p>
+     * <p>The traffic direction of the access control policy.</p>
+     * <p>Valid value:</p>
      * <ul>
-     * <li><strong>out</strong>: outbound traffic</li>
+     * <li><strong>out</strong>: outbound traffic.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -19,9 +19,9 @@ public class DescribeNatFirewallPolicyPriorUsedRequest extends TeaModel {
     public String direction;
 
     /**
-     * <p>The IP version supported by the access control policy. Valid values:</p>
+     * <p>The IP version. Valid value:</p>
      * <ul>
-     * <li><strong>4</strong>: IPv4 (default)</li>
+     * <li><strong>4</strong> (default): IPv4</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -31,10 +31,12 @@ public class DescribeNatFirewallPolicyPriorUsedRequest extends TeaModel {
     public String ipVersion;
 
     /**
-     * <p>The language of the content within the request and the response. Valid values:</p>
+     * <p>The language of the request and response. Valid values:</p>
      * <ul>
-     * <li><strong>zh</strong>: Chinese (default)</li>
-     * <li><strong>en</strong>: English</li>
+     * <li><p><strong>zh</strong> (default): Chinese.</p>
+     * </li>
+     * <li><p><strong>en</strong>: English.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -44,7 +46,7 @@ public class DescribeNatFirewallPolicyPriorUsedRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The ID of the NAT gateway.</p>
+     * <p>The ID of the NAT Gateway.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

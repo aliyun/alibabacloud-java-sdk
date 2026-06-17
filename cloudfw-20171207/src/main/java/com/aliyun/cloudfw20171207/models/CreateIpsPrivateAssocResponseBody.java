@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateIpsPrivateAssocResponseBody extends TeaModel {
     /**
+     * <p>The ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>99A65AA0-C5B5-5092-BFCF-8111B436****</p>
      */

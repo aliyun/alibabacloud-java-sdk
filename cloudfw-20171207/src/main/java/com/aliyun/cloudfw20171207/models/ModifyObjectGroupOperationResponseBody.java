@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyObjectGroupOperationResponseBody extends TeaModel {
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>CB32593D************775F41D6ED84</p>

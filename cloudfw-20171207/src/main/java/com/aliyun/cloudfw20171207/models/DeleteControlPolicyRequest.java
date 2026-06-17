@@ -5,8 +5,8 @@ import com.aliyun.tea.*;
 
 public class DeleteControlPolicyRequest extends TeaModel {
     /**
-     * <p>The UUID of the access control policy.</p>
-     * <p>To delete an access control policy, you must specify the UUID of the policy. You can call the <a href="https://help.aliyun.com/document_detail/138866.html">DescribeControlPolicy</a> operation to query the UUID.</p>
+     * <p>The unique ID of the access control policy.</p>
+     * <p>To delete an access control policy, you must provide its ID. Call the <a href="https://help.aliyun.com/document_detail/138866.html">DescribeControlPolicy</a> operation to obtain the ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -16,11 +16,13 @@ public class DeleteControlPolicyRequest extends TeaModel {
     public String aclUuid;
 
     /**
-     * <p>The direction of the traffic to which the access control policy applies.</p>
+     * <p>The traffic direction that the access control policy controls.</p>
      * <p>Valid values:</p>
      * <ul>
-     * <li><strong>in</strong>: inbound.</li>
-     * <li><strong>out</strong>: outbound.</li>
+     * <li><p><strong>in</strong>: inbound traffic.</p>
+     * </li>
+     * <li><p><strong>out</strong>: outbound traffic.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -30,11 +32,13 @@ public class DeleteControlPolicyRequest extends TeaModel {
     public String direction;
 
     /**
-     * <p>The language of the content within the request and response.</p>
+     * <p>The language of the request and response.</p>
      * <p>Valid values:</p>
      * <ul>
-     * <li><strong>zh</strong> (default)</li>
-     * <li><strong>en</strong></li>
+     * <li><p><strong>zh</strong> (default): Chinese</p>
+     * </li>
+     * <li><p><strong>en</strong>: English</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

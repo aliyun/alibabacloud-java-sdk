@@ -4,10 +4,15 @@ package com.aliyun.cloudfw20171207.models;
 import com.aliyun.tea.*;
 
 public class DescribeVpcFirewallCenSummaryListResponseBody extends TeaModel {
+    /**
+     * <p>The list of CEN instances.</p>
+     */
     @NameInMap("CenList")
     public java.util.List<DescribeVpcFirewallCenSummaryListResponseBodyCenList> cenList;
 
     /**
+     * <p>The ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>432D6CCA-5186-5B91-A2B8-10C8994B****</p>
      */
@@ -15,6 +20,8 @@ public class DescribeVpcFirewallCenSummaryListResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total number of entries returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>5</p>
      */
@@ -52,6 +59,8 @@ public class DescribeVpcFirewallCenSummaryListResponseBody extends TeaModel {
 
     public static class DescribeVpcFirewallCenSummaryListResponseBodyCenList extends TeaModel {
         /**
+         * <p>The ID of the CEN instance.</p>
+         * 
          * <strong>example:</strong>
          * <p>cen-maqfw3abcmjy56****</p>
          */
@@ -59,12 +68,17 @@ public class DescribeVpcFirewallCenSummaryListResponseBody extends TeaModel {
         public String cenId;
 
         /**
+         * <p>The name of the CEN instance.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
         @NameInMap("CenName")
         public String cenName;
 
+        /**
+         * <p>The list of region IDs for the VPC border firewall.</p>
+         */
         @NameInMap("RegionNoList")
         public java.util.List<String> regionNoList;
 

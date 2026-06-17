@@ -5,16 +5,16 @@ import com.aliyun.tea.*;
 
 public class DeleteNatFirewallControlPolicyBatchRequest extends TeaModel {
     /**
-     * <p>The UUIDs of access control policies.</p>
+     * <p>A list of access control list (ACL) UUIDs.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("AclUuidList")
     public java.util.List<String> aclUuidList;
 
     /**
-     * <p>The direction of the traffic to which the access control policy applies. Valid values:</p>
+     * <p>The traffic direction for the access control policy. Valid value:</p>
      * <ul>
-     * <li><strong>out</strong>: outbound traffic</li>
+     * <li><strong>out</strong>: outbound traffic.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -24,10 +24,12 @@ public class DeleteNatFirewallControlPolicyBatchRequest extends TeaModel {
     public String direction;
 
     /**
-     * <p>The language of the content within the request and response. Valid values:</p>
+     * <p>The language of the request and response. Valid values:</p>
      * <ul>
-     * <li><strong>zh</strong> (default): Chinese</li>
-     * <li><strong>en</strong>: English</li>
+     * <li><p><strong>zh</strong> (default): Chinese</p>
+     * </li>
+     * <li><p><strong>en</strong>: English</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -37,7 +39,7 @@ public class DeleteNatFirewallControlPolicyBatchRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The ID of the NAT gateway.</p>
+     * <p>The ID of the NAT Gateway.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

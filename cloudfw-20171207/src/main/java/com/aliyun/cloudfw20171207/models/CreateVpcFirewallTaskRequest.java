@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateVpcFirewallTaskRequest extends TeaModel {
     /**
+     * <p>The content of the task.</p>
+     * 
      * <strong>example:</strong>
      * <p>test</p>
      */
@@ -12,6 +14,14 @@ public class CreateVpcFirewallTaskRequest extends TeaModel {
     public String content;
 
     /**
+     * <p>The language of the response message. Valid values:</p>
+     * <ul>
+     * <li><p><strong>zh</strong> (default): Chinese</p>
+     * </li>
+     * <li><p><strong>en</strong>: English</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>zh</p>
      */
@@ -19,6 +29,8 @@ public class CreateVpcFirewallTaskRequest extends TeaModel {
     public String lang;
 
     /**
+     * <p>The priority of the rule.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -26,6 +38,7 @@ public class CreateVpcFirewallTaskRequest extends TeaModel {
     public String priority;
 
     /**
+     * <p>The name of the task.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

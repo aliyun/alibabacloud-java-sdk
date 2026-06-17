@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeAccessInstanceZoneListRequest extends TeaModel {
     /**
+     * <p>The type of the access instance.</p>
+     * 
      * <strong>example:</strong>
      * <p>AckClusterConnector</p>
      */
@@ -12,6 +14,8 @@ public class DescribeAccessInstanceZoneListRequest extends TeaModel {
     public String accessInstanceType;
 
     /**
+     * <p>The language of the response.</p>
+     * 
      * <strong>example:</strong>
      * <p>zh</p>
      */
@@ -19,6 +23,8 @@ public class DescribeAccessInstanceZoneListRequest extends TeaModel {
     public String lang;
 
     /**
+     * <p>The region of the access instance.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
      */

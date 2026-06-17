@@ -4,10 +4,15 @@ package com.aliyun.cloudfw20171207.models;
 import com.aliyun.tea.*;
 
 public class DescribeConfiguredDomainNamesResponseBody extends TeaModel {
+    /**
+     * <p>The list of domain names.</p>
+     */
     @NameInMap("DomainNames")
     public java.util.List<DescribeConfiguredDomainNamesResponseBodyDomainNames> domainNames;
 
     /**
+     * <p>The application module.</p>
+     * 
      * <strong>example:</strong>
      * <p>sg_server</p>
      */
@@ -15,6 +20,8 @@ public class DescribeConfiguredDomainNamesResponseBody extends TeaModel {
     public String module;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>09A2D6F1-EA1B-56D9-977D-74878405****</p>
      */
@@ -22,6 +29,8 @@ public class DescribeConfiguredDomainNamesResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total number of entries.</p>
+     * 
      * <strong>example:</strong>
      * <p>16</p>
      */
@@ -67,6 +76,8 @@ public class DescribeConfiguredDomainNamesResponseBody extends TeaModel {
 
     public static class DescribeConfiguredDomainNamesResponseBodyDomainNames extends TeaModel {
         /**
+         * <p>The comment.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -74,6 +85,8 @@ public class DescribeConfiguredDomainNamesResponseBody extends TeaModel {
         public String comment;
 
         /**
+         * <p>The domain name.</p>
+         * 
          * <strong>example:</strong>
          * <p>example.com</p>
          */
@@ -81,6 +94,8 @@ public class DescribeConfiguredDomainNamesResponseBody extends TeaModel {
         public String domainName;
 
         /**
+         * <p>Indicates whether the domain name is malicious. Valid values: <code>0</code> (not malicious) and <code>1</code> (malicious).</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -88,6 +103,8 @@ public class DescribeConfiguredDomainNamesResponseBody extends TeaModel {
         public Boolean isMalicious;
 
         /**
+         * <p>The time of the operation, specified as a Unix timestamp in seconds. Example: <code>1672502400</code>.</p>
+         * 
          * <strong>example:</strong>
          * <p>1534408189</p>
          */

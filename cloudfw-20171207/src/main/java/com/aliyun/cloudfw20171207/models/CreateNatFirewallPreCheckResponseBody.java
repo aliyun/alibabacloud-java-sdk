@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateNatFirewallPreCheckResponseBody extends TeaModel {
     /**
+     * <p>The ID of the precheck.</p>
+     * 
      * <strong>example:</strong>
      * <p>2122</p>
      */
@@ -12,6 +14,8 @@ public class CreateNatFirewallPreCheckResponseBody extends TeaModel {
     public String preCheckId;
 
     /**
+     * <p>The ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>A426611F-04FA-5205-8D04-4F6DCF09****</p>
      */

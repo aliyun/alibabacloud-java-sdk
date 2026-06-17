@@ -14,7 +14,7 @@ public class DescribeInvadeEventListRequest extends TeaModel {
     public String assetsIP;
 
     /**
-     * <p>The ID of the instance.</p>
+     * <p>The ID of the affected instance.</p>
      * 
      * <strong>example:</strong>
      * <p>ins_1321_asedb_****</p>
@@ -23,7 +23,7 @@ public class DescribeInvadeEventListRequest extends TeaModel {
     public String assetsInstanceId;
 
     /**
-     * <p>The name of the instance.</p>
+     * <p>The name of the affected instance.</p>
      * 
      * <strong>example:</strong>
      * <p>ECS_test</p>
@@ -33,7 +33,7 @@ public class DescribeInvadeEventListRequest extends TeaModel {
 
     /**
      * <p>The number of the page to return.</p>
-     * <p>Default value: 1.</p>
+     * <p>Default: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -42,7 +42,7 @@ public class DescribeInvadeEventListRequest extends TeaModel {
     public String currentPage;
 
     /**
-     * <p>The end of the time range to query. The value is a UNIX timestamp. Unit: seconds. If you do not specify this parameter, the query ends at the current time.</p>
+     * <p>The end of the time range to query. This must be a UNIX timestamp in seconds. If you omit this parameter, the query defaults to the current time.</p>
      * 
      * <strong>example:</strong>
      * <p>1656837360</p>
@@ -51,7 +51,7 @@ public class DescribeInvadeEventListRequest extends TeaModel {
     public String endTime;
 
     /**
-     * <p>The ID of the breach awareness event.</p>
+     * <p>A unique identifier for the breach awareness event.</p>
      * 
      * <strong>example:</strong>
      * <p>69d189e2-ec17-4676-a2fe-02969234****</p>
@@ -69,7 +69,7 @@ public class DescribeInvadeEventListRequest extends TeaModel {
     public String eventName;
 
     /**
-     * <p>The UUID of the breach awareness event.</p>
+     * <p>The universally unique identifier (UUID) of the breach awareness event.</p>
      * 
      * <strong>example:</strong>
      * <p>fadd-dfdd-****</p>
@@ -78,10 +78,12 @@ public class DescribeInvadeEventListRequest extends TeaModel {
     public String eventUuid;
 
     /**
-     * <p>Specifies whether the breach awareness event is ignored. Valid values:</p>
+     * <p>Specifies whether to query for ignored breach awareness events. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: The breach awareness event is ignored.</li>
-     * <li><strong>false</strong>: The breach awareness event is not ignored.</li>
+     * <li><p><strong>true</strong>: Ignored.</p>
+     * </li>
+     * <li><p><strong>false</strong>: Not ignored.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -91,10 +93,12 @@ public class DescribeInvadeEventListRequest extends TeaModel {
     public String isIgnore;
 
     /**
-     * <p>The language of the content within the response. Valid values:</p>
+     * <p>The language of the response. Valid values:</p>
      * <ul>
-     * <li><strong>zh</strong>: Chinese (default)</li>
-     * <li><strong>en</strong>: English</li>
+     * <li><p><strong>zh</strong> (default): Chinese.</p>
+     * </li>
+     * <li><p><strong>en</strong>: English.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -104,7 +108,7 @@ public class DescribeInvadeEventListRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The ID of the member.</p>
+     * <p>The UID of the member account.</p>
      * 
      * <strong>example:</strong>
      * <p>135809047715****</p>
@@ -113,8 +117,8 @@ public class DescribeInvadeEventListRequest extends TeaModel {
     public Long memberUid;
 
     /**
-     * <p>The number of entries to return on each page.</p>
-     * <p>Default value: 6. Maximum value: 10.</p>
+     * <p>The number of entries to return per page.</p>
+     * <p>Default: 6. Maximum: 10.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -123,19 +127,22 @@ public class DescribeInvadeEventListRequest extends TeaModel {
     public String pageSize;
 
     /**
-     * <p>The handling status of breach awareness events.</p>
+     * <p>An array of processing statuses to filter events by. Only events with a status specified in this array are returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1358090477156271</p>
      */
     @NameInMap("ProcessStatusList")
     public java.util.List<Integer> processStatusList;
 
     /**
-     * <p>The risk levels.</p>
+     * <p>An array of risk levels to filter events by. Only events with a risk level specified in this array are returned.</p>
      */
     @NameInMap("RiskLevel")
     public java.util.List<Integer> riskLevel;
 
     /**
-     * <p>The source IP address of the request.</p>
+     * <p>The source IP address that initiated the event.</p>
      * 
      * <strong>example:</strong>
      * <p>192.0.XX.XX</p>
@@ -145,7 +152,7 @@ public class DescribeInvadeEventListRequest extends TeaModel {
     public String sourceIp;
 
     /**
-     * <p>The beginning of the time range to query. The value is a UNIX timestamp. Unit: seconds. If you do not specify this parameter, the query starts from 30 days before the current time.</p>
+     * <p>The start of the time range to query. This must be a UNIX timestamp in seconds. If you omit this parameter, the query defaults to the last 30 days.</p>
      * 
      * <strong>example:</strong>
      * <p>1656750960</p>

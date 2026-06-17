@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ModifyUserIPSWhitelistRequest extends TeaModel {
     /**
+     * <p>The traffic direction for the Internet Border.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -12,6 +14,8 @@ public class ModifyUserIPSWhitelistRequest extends TeaModel {
     public Long direction;
 
     /**
+     * <p>The IP version.</p>
+     * 
      * <strong>example:</strong>
      * <p>ipv4</p>
      */
@@ -19,6 +23,8 @@ public class ModifyUserIPSWhitelistRequest extends TeaModel {
     public String ipVersion;
 
     /**
+     * <p>The language.</p>
+     * 
      * <strong>example:</strong>
      * <p>zh</p>
      */
@@ -26,6 +32,8 @@ public class ModifyUserIPSWhitelistRequest extends TeaModel {
     public String lang;
 
     /**
+     * <p>The type of address in the Internet Border whitelist.</p>
+     * 
      * <strong>example:</strong>
      * <p>2</p>
      */
@@ -33,6 +41,14 @@ public class ModifyUserIPSWhitelistRequest extends TeaModel {
     public Long listType;
 
     /**
+     * <p>The value of the Internet Border whitelist.</p>
+     * <ul>
+     * <li><p>If ListType is set to <code>Custom</code>: the name of the address book.</p>
+     * </li>
+     * <li><p>If ListType is set to <code>Address book</code>: the IPv4 address.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>115.236.36.114/32</p>
      */
@@ -40,6 +56,8 @@ public class ModifyUserIPSWhitelistRequest extends TeaModel {
     public String listValue;
 
     /**
+     * <p>The source IP address of the visitor.</p>
+     * 
      * <strong>example:</strong>
      * <p>47.100.XX.XX</p>
      */
@@ -47,6 +65,8 @@ public class ModifyUserIPSWhitelistRequest extends TeaModel {
     public String sourceIp;
 
     /**
+     * <p>The type of source or destination for which the Internet Border whitelist takes effect.</p>
+     * 
      * <strong>example:</strong>
      * <p>2</p>
      */

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeTrFirewallsV2RouteListResponseBody extends TeaModel {
     /**
-     * <p>The route tables of Cloud Firewall.</p>
+     * <p>The list of route tables for the VPC firewall.</p>
      */
     @NameInMap("FirewallRouteDetailList")
     public java.util.List<DescribeTrFirewallsV2RouteListResponseBodyFirewallRouteDetailList> firewallRouteDetailList;
@@ -42,7 +42,7 @@ public class DescribeTrFirewallsV2RouteListResponseBody extends TeaModel {
 
     public static class DescribeTrFirewallsV2RouteListResponseBodyFirewallRouteDetailList extends TeaModel {
         /**
-         * <p>The destination address of the route.</p>
+         * <p>The destination CIDR block of the route.</p>
          * 
          * <strong>example:</strong>
          * <p>192.168.10.0/25</p>
@@ -60,7 +60,7 @@ public class DescribeTrFirewallsV2RouteListResponseBody extends TeaModel {
         public String trFirewallRouteNexthop;
 
         /**
-         * <p>The ID of the routing policy.</p>
+         * <p>The ID of the firewall routing policy.</p>
          * 
          * <strong>example:</strong>
          * <p>policy-04ecbbc6720d4f90****</p>
@@ -69,7 +69,7 @@ public class DescribeTrFirewallsV2RouteListResponseBody extends TeaModel {
         public String trFirewallRoutePolicyId;
 
         /**
-         * <p>The ID of the route table to which the route entry belongs.</p>
+         * <p>The ID of the route table to which the route belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>vtb-2zeockxxxorv0mnhz****</p>

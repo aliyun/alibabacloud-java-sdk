@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteAclBackupDataRequest extends TeaModel {
     /**
+     * <p>The time of the backup, specified as a UNIX timestamp (the number of seconds that have elapsed since 00:00:00 UTC on January 1, 1970).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,14 @@ public class DeleteAclBackupDataRequest extends TeaModel {
     public String backUpTime;
 
     /**
+     * <p>The language of the request and response. Valid values:</p>
+     * <ul>
+     * <li><p><strong>zh</strong> (default): Chinese.</p>
+     * </li>
+     * <li><p><strong>en</strong>: English.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>zh</p>
      */
@@ -21,6 +30,8 @@ public class DeleteAclBackupDataRequest extends TeaModel {
     public String lang;
 
     /**
+     * <p>The source IP address.</p>
+     * 
      * <strong>example:</strong>
      * <p>192.0.XX.XX</p>
      */

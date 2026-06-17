@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpdateAclCheckDetailStatusRequest extends TeaModel {
     /**
+     * <p>The language of the response. Valid values:</p>
+     * 
      * <strong>example:</strong>
      * <p>zh</p>
      */
@@ -12,6 +14,7 @@ public class UpdateAclCheckDetailStatusRequest extends TeaModel {
     public String lang;
 
     /**
+     * <p>The new status of the ACL policy. Valid values:</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,6 +24,7 @@ public class UpdateAclCheckDetailStatusRequest extends TeaModel {
     public String status;
 
     /**
+     * <p>The ID of the ACL check task.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -30,6 +34,7 @@ public class UpdateAclCheckDetailStatusRequest extends TeaModel {
     public String taskId;
 
     /**
+     * <p>The unique ID of the ACL policy whose status you want to update.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

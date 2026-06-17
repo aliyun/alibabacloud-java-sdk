@@ -4,10 +4,15 @@ package com.aliyun.cloudfw20171207.models;
 import com.aliyun.tea.*;
 
 public class DescribeRiskEventTopAttackAppResponseBody extends TeaModel {
+    /**
+     * <p>The list of attacked applications.</p>
+     */
     @NameInMap("AttackApps")
     public java.util.List<DescribeRiskEventTopAttackAppResponseBodyAttackApps> attackApps;
 
     /**
+     * <p>The ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>C9DDAD29-C6B3-5997-B757-FFB3F1C3****</p>
      */
@@ -37,6 +42,8 @@ public class DescribeRiskEventTopAttackAppResponseBody extends TeaModel {
 
     public static class DescribeRiskEventTopAttackAppResponseBodyAttackApps extends TeaModel {
         /**
+         * <p>The name of the application.</p>
+         * 
          * <strong>example:</strong>
          * <p>live</p>
          */
@@ -44,6 +51,8 @@ public class DescribeRiskEventTopAttackAppResponseBody extends TeaModel {
         public String app;
 
         /**
+         * <p>The number of attacks.</p>
+         * 
          * <strong>example:</strong>
          * <p>20</p>
          */
@@ -51,6 +60,8 @@ public class DescribeRiskEventTopAttackAppResponseBody extends TeaModel {
         public Integer attackCnt;
 
         /**
+         * <p>The number of intercepted attacks.</p>
+         * 
          * <strong>example:</strong>
          * <p>15</p>
          */

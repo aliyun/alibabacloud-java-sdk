@@ -4,10 +4,21 @@ package com.aliyun.cloudfw20171207.models;
 import com.aliyun.tea.*;
 
 public class EnableSdlProtectedAssetRequest extends TeaModel {
+    /**
+     * <p>The list of IP assets.</p>
+     */
     @NameInMap("IpList")
     public java.util.List<String> ipList;
 
     /**
+     * <p>The language of the request and response. Valid values:</p>
+     * <ul>
+     * <li><p><strong>zh</strong> (default): Chinese</p>
+     * </li>
+     * <li><p><strong>en</strong>: English</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>zh</p>
      */

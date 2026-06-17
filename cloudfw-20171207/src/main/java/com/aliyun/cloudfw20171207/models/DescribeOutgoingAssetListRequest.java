@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeOutgoingAssetListRequest extends TeaModel {
     /**
+     * <p>The region ID of the asset.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-beijing</p>
      */
@@ -12,6 +14,8 @@ public class DescribeOutgoingAssetListRequest extends TeaModel {
     public String assetsRegion;
 
     /**
+     * <p>The page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -19,6 +23,7 @@ public class DescribeOutgoingAssetListRequest extends TeaModel {
     public String currentPage;
 
     /**
+     * <p>The end of the time range to query. The value is a UNIX timestamp. Unit: seconds.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -28,6 +33,8 @@ public class DescribeOutgoingAssetListRequest extends TeaModel {
     public String endTime;
 
     /**
+     * <p>The follow status.</p>
+     * 
      * <strong>example:</strong>
      * <p>subscribe</p>
      */
@@ -35,6 +42,8 @@ public class DescribeOutgoingAssetListRequest extends TeaModel {
     public String groupName;
 
     /**
+     * <p>Queries outbound connections routed from a private network through a NAT gateway.</p>
+     * 
      * <strong>example:</strong>
      * <p>NatPrivate</p>
      */
@@ -42,6 +51,8 @@ public class DescribeOutgoingAssetListRequest extends TeaModel {
     public String IPType;
 
     /**
+     * <p>The language of the content.</p>
+     * 
      * <strong>example:</strong>
      * <p>zh</p>
      */
@@ -49,6 +60,8 @@ public class DescribeOutgoingAssetListRequest extends TeaModel {
     public String lang;
 
     /**
+     * <p>The ID of the NAT Gateway.</p>
+     * 
      * <strong>example:</strong>
      * <p>ngw-bp123456g******</p>
      */
@@ -56,6 +69,8 @@ public class DescribeOutgoingAssetListRequest extends TeaModel {
     public String natGatewayId;
 
     /**
+     * <p>The name of the NAT Gateway.</p>
+     * 
      * <strong>example:</strong>
      * <p>ngw-test</p>
      */
@@ -63,6 +78,8 @@ public class DescribeOutgoingAssetListRequest extends TeaModel {
     public String natGatewayName;
 
     /**
+     * <p>The sorting order.</p>
+     * 
      * <strong>example:</strong>
      * <p>desc</p>
      */
@@ -70,6 +87,8 @@ public class DescribeOutgoingAssetListRequest extends TeaModel {
     public String order;
 
     /**
+     * <p>The number of entries to return on each page.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -77,6 +96,8 @@ public class DescribeOutgoingAssetListRequest extends TeaModel {
     public String pageSize;
 
     /**
+     * <p>The private IP address.</p>
+     * 
      * <strong>example:</strong>
      * <p>10.200.33.XXX</p>
      */
@@ -84,6 +105,8 @@ public class DescribeOutgoingAssetListRequest extends TeaModel {
     public String privateIP;
 
     /**
+     * <p>The public IP address.</p>
+     * 
      * <strong>example:</strong>
      * <p>47.116.70.XXX</p>
      */
@@ -91,6 +114,8 @@ public class DescribeOutgoingAssetListRequest extends TeaModel {
     public String publicIP;
 
     /**
+     * <p>The type of the public IP address of the asset.</p>
+     * 
      * <strong>example:</strong>
      * <p>NatEIP</p>
      */
@@ -98,6 +123,8 @@ public class DescribeOutgoingAssetListRequest extends TeaModel {
     public String resourceType;
 
     /**
+     * <p>The security risk.</p>
+     * 
      * <strong>example:</strong>
      * <p>risk</p>
      */
@@ -105,6 +132,8 @@ public class DescribeOutgoingAssetListRequest extends TeaModel {
     public String securityRisk;
 
     /**
+     * <p>The sorting basis.</p>
+     * 
      * <strong>example:</strong>
      * <p>InBytes</p>
      */
@@ -112,6 +141,7 @@ public class DescribeOutgoingAssetListRequest extends TeaModel {
     public String sort;
 
     /**
+     * <p>The start of the time range to query. The value is a UNIX timestamp. Unit: seconds.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

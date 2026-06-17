@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeDomainResolveResponseBody extends TeaModel {
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>CBF1E9B7-D6A0-4E9E-AD3E-2B47E6C2837D</p>
@@ -14,7 +14,7 @@ public class DescribeDomainResolveResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The details about the DNS record of the domain name.</p>
+     * <p>The result of the domain name resolution.</p>
      */
     @NameInMap("ResolveResult")
     public DescribeDomainResolveResponseBodyResolveResult resolveResult;
@@ -42,7 +42,7 @@ public class DescribeDomainResolveResponseBody extends TeaModel {
 
     public static class DescribeDomainResolveResponseBodyResolveResult extends TeaModel {
         /**
-         * <p>The IP address to which the domain name is resolved. Multiple IP addresses are separated by commas (,).</p>
+         * <p>The resolution result of the domain name. Multiple IP addresses are separated by commas (,).</p>
          * 
          * <strong>example:</strong>
          * <p>11.1.X.X,12.1.X.X</p>
@@ -51,7 +51,7 @@ public class DescribeDomainResolveResponseBody extends TeaModel {
         public String ipAddrs;
 
         /**
-         * <p>The time when the domain name was resolved. The value of this parameter is a timestamp. Unit: seconds.</p>
+         * <p>The timestamp of the resolution. Unit: seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1579091739</p>

@@ -5,18 +5,39 @@ import com.aliyun.tea.*;
 
 public class CreatePrivateDnsEndpointRequest extends TeaModel {
     /**
+     * <p>The name of the private instance.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
      */
     @NameInMap("AccessInstanceName")
     public String accessInstanceName;
 
     /**
+     * <p>The type of the Cloud Firewall. Valid values:</p>
+     * <ul>
+     * <li><p><strong>internet</strong></p>
+     * </li>
+     * <li><p><strong>vpc</strong></p>
+     * </li>
+     * <li><p><strong>nat</strong></p>
+     * </li>
+     * </ul>
      * <p>This parameter is required.</p>
      */
     @NameInMap("FirewallType")
     public java.util.List<String> firewallType;
 
     /**
+     * <p>The IP protocol. Valid values:</p>
+     * <ul>
+     * <li><p><strong>TCP</strong></p>
+     * </li>
+     * <li><p><strong>UDP</strong></p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>UDP</p>
      */
@@ -24,6 +45,8 @@ public class CreatePrivateDnsEndpointRequest extends TeaModel {
     public String ipProtocol;
 
     /**
+     * <p>The UID of the member account.</p>
+     * 
      * <strong>example:</strong>
      * <p>258039427902****</p>
      */
@@ -31,6 +54,8 @@ public class CreatePrivateDnsEndpointRequest extends TeaModel {
     public Long memberUid;
 
     /**
+     * <p>The port number.</p>
+     * 
      * <strong>example:</strong>
      * <p>80</p>
      */
@@ -38,6 +63,8 @@ public class CreatePrivateDnsEndpointRequest extends TeaModel {
     public Integer port;
 
     /**
+     * <p>The primary DNS server.</p>
+     * 
      * <strong>example:</strong>
      * <p>1.1.1.1</p>
      */
@@ -45,6 +72,8 @@ public class CreatePrivateDnsEndpointRequest extends TeaModel {
     public String primaryDns;
 
     /**
+     * <p>The ID of the primary vSwitch.</p>
+     * 
      * <strong>example:</strong>
      * <p>vsw-uf6b0dkyryer8******</p>
      */
@@ -52,6 +81,8 @@ public class CreatePrivateDnsEndpointRequest extends TeaModel {
     public String primaryVSwitchId;
 
     /**
+     * <p>The IP address of the primary vSwitch.</p>
+     * 
      * <strong>example:</strong>
      * <p>10.1.1.1</p>
      */
@@ -59,6 +90,13 @@ public class CreatePrivateDnsEndpointRequest extends TeaModel {
     public String primaryVSwitchIp;
 
     /**
+     * <p>The type of the private DNS. Valid values:</p>
+     * <ul>
+     * <li><p><strong>PrivateZone</strong></p>
+     * </li>
+     * <li><p><strong>Custom</strong> (default)</p>
+     * </li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -68,6 +106,7 @@ public class CreatePrivateDnsEndpointRequest extends TeaModel {
     public String privateDnsType;
 
     /**
+     * <p>The region ID of the instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -77,6 +116,8 @@ public class CreatePrivateDnsEndpointRequest extends TeaModel {
     public String regionNo;
 
     /**
+     * <p>The standby DNS server.</p>
+     * 
      * <strong>example:</strong>
      * <p>1.1.1.2</p>
      */
@@ -84,6 +125,8 @@ public class CreatePrivateDnsEndpointRequest extends TeaModel {
     public String standbyDns;
 
     /**
+     * <p>The ID of the standby vSwitch.</p>
+     * 
      * <strong>example:</strong>
      * <p>vsw-8vb6jk75wfcwn******</p>
      */
@@ -91,6 +134,8 @@ public class CreatePrivateDnsEndpointRequest extends TeaModel {
     public String standbyVSwitchId;
 
     /**
+     * <p>The IP address of the standby vSwitch.</p>
+     * 
      * <strong>example:</strong>
      * <p>10.2.2.2</p>
      */
@@ -98,6 +143,7 @@ public class CreatePrivateDnsEndpointRequest extends TeaModel {
     public String standbyVSwitchIp;
 
     /**
+     * <p>The ID of the VPC instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

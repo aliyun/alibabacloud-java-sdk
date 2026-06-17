@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeOutgoingDestinationCategoryResponseBody extends TeaModel {
     /**
+     * <p>The ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>C1ED80BC-FFC8-57DB-8151-705DC31****</p>
      */
@@ -12,12 +14,17 @@ public class DescribeOutgoingDestinationCategoryResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total number of entries.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
+    /**
+     * <p>The list of outbound connection categories.</p>
+     */
     @NameInMap("TypeList")
     public java.util.List<DescribeOutgoingDestinationCategoryResponseBodyTypeList> typeList;
 
@@ -51,20 +58,36 @@ public class DescribeOutgoingDestinationCategoryResponseBody extends TeaModel {
     }
 
     public static class DescribeOutgoingDestinationCategoryResponseBodyTypeListCategoryList extends TeaModel {
+        /**
+         * <p>The description of the outbound connection category.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AliYun</p>
+         */
         @NameInMap("CategoryDescribe")
         public String categoryDescribe;
 
         /**
+         * <p>The ID of the outbound connection category.</p>
+         * 
          * <strong>example:</strong>
-         * <p>AliYun</p>
+         * <p>123</p>
          */
         @NameInMap("CategoryId")
         public String categoryId;
 
+        /**
+         * <p>The name of the outbound connection category.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AliYun</p>
+         */
         @NameInMap("CategoryName")
         public String categoryName;
 
         /**
+         * <p>The classification ID of the outbound connection category.</p>
+         * 
          * <strong>example:</strong>
          * <p>Trusted</p>
          */
@@ -111,19 +134,36 @@ public class DescribeOutgoingDestinationCategoryResponseBody extends TeaModel {
     }
 
     public static class DescribeOutgoingDestinationCategoryResponseBodyTypeList extends TeaModel {
+        /**
+         * <p>The list of outbound connection categories.</p>
+         */
         @NameInMap("CategoryList")
         public java.util.List<DescribeOutgoingDestinationCategoryResponseBodyTypeListCategoryList> categoryList;
 
+        /**
+         * <p>The description of the fixed category.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AliYun</p>
+         */
         @NameInMap("TypeDescribe")
         public String typeDescribe;
 
         /**
+         * <p>The fixed category ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>All</p>
          */
         @NameInMap("TypeId")
         public String typeId;
 
+        /**
+         * <p>The name of the fixed category.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AliYun</p>
+         */
         @NameInMap("TypeName")
         public String typeName;
 

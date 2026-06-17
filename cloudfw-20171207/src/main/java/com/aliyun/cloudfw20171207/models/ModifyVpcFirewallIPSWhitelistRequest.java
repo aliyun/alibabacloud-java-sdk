@@ -5,10 +5,12 @@ import com.aliyun.tea.*;
 
 public class ModifyVpcFirewallIPSWhitelistRequest extends TeaModel {
     /**
-     * <p>The language of the content within the request and response. Valid values:</p>
+     * <p>The language of the request and response. Valid values:</p>
      * <ul>
-     * <li><strong>zh</strong> (default): Chinese</li>
-     * <li><strong>en</strong>: English</li>
+     * <li><p><strong>zh</strong> (default): Chinese</p>
+     * </li>
+     * <li><p><strong>en</strong>: English</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -20,8 +22,10 @@ public class ModifyVpcFirewallIPSWhitelistRequest extends TeaModel {
     /**
      * <p>The type of the list. Valid values:</p>
      * <ul>
-     * <li><strong>1</strong>: user-defined</li>
-     * <li><strong>2</strong>: address book</li>
+     * <li><p><strong>1</strong>: user-defined</p>
+     * </li>
+     * <li><p><strong>2</strong>: address book</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -32,7 +36,7 @@ public class ModifyVpcFirewallIPSWhitelistRequest extends TeaModel {
     public Long listType;
 
     /**
-     * <p>The entry in the list.</p>
+     * <p>The value that corresponds to the list type.</p>
      * 
      * <strong>example:</strong>
      * <p>10.130.0.0/20,10.130.17.11/32</p>
@@ -41,7 +45,7 @@ public class ModifyVpcFirewallIPSWhitelistRequest extends TeaModel {
     public String listValue;
 
     /**
-     * <p>The UID of the member that is managed by your Alibaba Cloud account.</p>
+     * <p>The UID of the member account.</p>
      * 
      * <strong>example:</strong>
      * <p>1415189284827022</p>
@@ -62,8 +66,10 @@ public class ModifyVpcFirewallIPSWhitelistRequest extends TeaModel {
     /**
      * <p>The type of the whitelist. Valid values:</p>
      * <ul>
-     * <li><strong>1</strong>: destination</li>
-     * <li><strong>2</strong>: source</li>
+     * <li><p><strong>1</strong>: destination</p>
+     * </li>
+     * <li><p><strong>2</strong>: source</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

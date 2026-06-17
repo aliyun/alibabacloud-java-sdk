@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeInvadeEventDetailResponseBody extends TeaModel {
     /**
+     * <p>The instance ID of the asset.</p>
+     * 
      * <strong>example:</strong>
      * <p>i-8vb2nmm070m****</p>
      */
@@ -12,6 +14,8 @@ public class DescribeInvadeEventDetailResponseBody extends TeaModel {
     public String assetsInstanceId;
 
     /**
+     * <p>The name of the asset.</p>
+     * 
      * <strong>example:</strong>
      * <p>ECS_test</p>
      */
@@ -19,6 +23,8 @@ public class DescribeInvadeEventDetailResponseBody extends TeaModel {
     public String assetsInstanceName;
 
     /**
+     * <p>The description of the event.</p>
+     * 
      * <strong>example:</strong>
      * <p>test</p>
      */
@@ -26,6 +32,8 @@ public class DescribeInvadeEventDetailResponseBody extends TeaModel {
     public String eventDesc;
 
     /**
+     * <p>The details of the event.</p>
+     * 
      * <strong>example:</strong>
      * <p>test</p>
      */
@@ -33,6 +41,8 @@ public class DescribeInvadeEventDetailResponseBody extends TeaModel {
     public String eventDetail;
 
     /**
+     * <p>The key of the event.</p>
+     * 
      * <strong>example:</strong>
      * <p>C&amp;CActivity</p>
      */
@@ -40,6 +50,8 @@ public class DescribeInvadeEventDetailResponseBody extends TeaModel {
     public String eventKey;
 
     /**
+     * <p>The name of the event.</p>
+     * 
      * <strong>example:</strong>
      * <p>event_test</p>
      */
@@ -47,6 +59,8 @@ public class DescribeInvadeEventDetailResponseBody extends TeaModel {
     public String eventName;
 
     /**
+     * <p>The UUID of the threat detection event.</p>
+     * 
      * <strong>example:</strong>
      * <p>aa6e786c-5034-457a-8e05-1c63fab****</p>
      */
@@ -54,6 +68,8 @@ public class DescribeInvadeEventDetailResponseBody extends TeaModel {
     public String eventUuid;
 
     /**
+     * <p>The time when the event first occurred. This value is a UNIX timestamp. Unit: seconds.</p>
+     * 
      * <strong>example:</strong>
      * <p>1735006706</p>
      */
@@ -61,6 +77,8 @@ public class DescribeInvadeEventDetailResponseBody extends TeaModel {
     public Integer firstTime;
 
     /**
+     * <p>Indicates whether the event is ignored.</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -68,16 +86,23 @@ public class DescribeInvadeEventDetailResponseBody extends TeaModel {
     public Boolean isIgnore;
 
     /**
+     * <p>The time when the event last occurred. This value is a UNIX timestamp. Unit: seconds.</p>
+     * 
      * <strong>example:</strong>
      * <p>1740104108</p>
      */
     @NameInMap("LastTime")
     public Integer lastTime;
 
+    /**
+     * <p>The list of remediation operations.</p>
+     */
     @NameInMap("OperationList")
     public java.util.List<DescribeInvadeEventDetailResponseBodyOperationList> operationList;
 
     /**
+     * <p>The private IP address.</p>
+     * 
      * <strong>example:</strong>
      * <p>10.21.186.XXX</p>
      */
@@ -85,6 +110,8 @@ public class DescribeInvadeEventDetailResponseBody extends TeaModel {
     public String privateIP;
 
     /**
+     * <p>The handling status of the event.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -92,6 +119,8 @@ public class DescribeInvadeEventDetailResponseBody extends TeaModel {
     public Integer processStatus;
 
     /**
+     * <p>The public IP address.</p>
+     * 
      * <strong>example:</strong>
      * <p>106.15.185.XXX</p>
      */
@@ -99,6 +128,8 @@ public class DescribeInvadeEventDetailResponseBody extends TeaModel {
     public String publicIP;
 
     /**
+     * <p>The reference information.</p>
+     * 
      * <strong>example:</strong>
      * <p>test</p>
      */
@@ -106,6 +137,8 @@ public class DescribeInvadeEventDetailResponseBody extends TeaModel {
     public String reference;
 
     /**
+     * <p>The region ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
      */
@@ -113,6 +146,8 @@ public class DescribeInvadeEventDetailResponseBody extends TeaModel {
     public String regionNo;
 
     /**
+     * <p>The ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>8022D695-4A35-50BC-8697-EA9C233A****</p>
      */
@@ -120,12 +155,17 @@ public class DescribeInvadeEventDetailResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The risk level of the event.</p>
+     * 
      * <strong>example:</strong>
      * <p>2</p>
      */
     @NameInMap("RiskLevel")
     public Integer riskLevel;
 
+    /**
+     * <p>The list of unhandled operations.</p>
+     */
     @NameInMap("UnhandleOperationList")
     public java.util.List<DescribeInvadeEventDetailResponseBodyUnhandleOperationList> unhandleOperationList;
 
@@ -288,6 +328,8 @@ public class DescribeInvadeEventDetailResponseBody extends TeaModel {
 
     public static class DescribeInvadeEventDetailResponseBodyOperationList extends TeaModel {
         /**
+         * <p>The parameters for the operation.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -295,6 +337,8 @@ public class DescribeInvadeEventDetailResponseBody extends TeaModel {
         public String args;
 
         /**
+         * <p>The operation.</p>
+         * 
          * <strong>example:</strong>
          * <p>RunMode</p>
          */
@@ -326,6 +370,8 @@ public class DescribeInvadeEventDetailResponseBody extends TeaModel {
 
     public static class DescribeInvadeEventDetailResponseBodyUnhandleOperationList extends TeaModel {
         /**
+         * <p>The parameters for the operation.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -333,6 +379,8 @@ public class DescribeInvadeEventDetailResponseBody extends TeaModel {
         public String args;
 
         /**
+         * <p>The operation.</p>
+         * 
          * <strong>example:</strong>
          * <p>RunMode</p>
          */

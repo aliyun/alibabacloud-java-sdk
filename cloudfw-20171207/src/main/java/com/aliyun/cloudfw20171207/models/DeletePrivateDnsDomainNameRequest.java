@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeletePrivateDnsDomainNameRequest extends TeaModel {
     /**
+     * <p>The ID of the instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,12 +15,14 @@ public class DeletePrivateDnsDomainNameRequest extends TeaModel {
     public String accessInstanceId;
 
     /**
+     * <p>The list of domain names.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("DomainNameList")
     public java.util.List<String> domainNameList;
 
     /**
+     * <p>The region ID of the instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

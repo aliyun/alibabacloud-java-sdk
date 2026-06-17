@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribePrivateDnsStatisticsRequest extends TeaModel {
     /**
+     * <p>The end of the domain name creation time. The value is a UNIX timestamp.</p>
+     * 
      * <strong>example:</strong>
      * <p>1726305596</p>
      */
@@ -12,6 +14,8 @@ public class DescribePrivateDnsStatisticsRequest extends TeaModel {
     public Long domainNameCreatedEndTime;
 
     /**
+     * <p>The start of the domain name creation time. The value is a UNIX timestamp.</p>
+     * 
      * <strong>example:</strong>
      * <p>1725864531</p>
      */

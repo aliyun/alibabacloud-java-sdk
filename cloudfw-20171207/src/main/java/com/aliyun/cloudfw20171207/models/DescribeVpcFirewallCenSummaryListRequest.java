@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeVpcFirewallCenSummaryListRequest extends TeaModel {
     /**
+     * <p>The page number for a paged query. The default value is 1.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -12,6 +14,14 @@ public class DescribeVpcFirewallCenSummaryListRequest extends TeaModel {
     public String currentPage;
 
     /**
+     * <p>The language of the content. Valid values:</p>
+     * <ul>
+     * <li><p><strong>zh</strong> (default): Chinese.</p>
+     * </li>
+     * <li><p><strong>en</strong>: English.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>zh</p>
      */
@@ -19,6 +29,8 @@ public class DescribeVpcFirewallCenSummaryListRequest extends TeaModel {
     public String lang;
 
     /**
+     * <p>The UID of the member account.</p>
+     * 
      * <strong>example:</strong>
      * <p>135809047715****</p>
      */
@@ -26,6 +38,8 @@ public class DescribeVpcFirewallCenSummaryListRequest extends TeaModel {
     public String memberUid;
 
     /**
+     * <p>The number of entries to return on each page.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -33,6 +47,10 @@ public class DescribeVpcFirewallCenSummaryListRequest extends TeaModel {
     public String pageSize;
 
     /**
+     * <p>The type of the CEN transit router. Valid values:</p>
+     * <p><strong>Basic</strong>: Basic Edition</p>
+     * <p><strong>Enterprise</strong>: Enterprise Edition</p>
+     * 
      * <strong>example:</strong>
      * <p>Basic</p>
      */

@@ -4,10 +4,15 @@ package com.aliyun.cloudfw20171207.models;
 import com.aliyun.tea.*;
 
 public class DescribeVpcFirewallDomainListResponseBody extends TeaModel {
+    /**
+     * <p>The list of returned data.</p>
+     */
     @NameInMap("DataList")
     public java.util.List<DescribeVpcFirewallDomainListResponseBodyDataList> dataList;
 
     /**
+     * <p>The ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>133173B9-8010-5DF5-8B93-********</p>
      */
@@ -15,6 +20,8 @@ public class DescribeVpcFirewallDomainListResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total number of entries returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>132</p>
      */
@@ -51,10 +58,15 @@ public class DescribeVpcFirewallDomainListResponseBody extends TeaModel {
     }
 
     public static class DescribeVpcFirewallDomainListResponseBodyDataList extends TeaModel {
+        /**
+         * <p>The list of application layer protocols.</p>
+         */
         @NameInMap("ApplicationNameList")
         public java.util.List<String> applicationNameList;
 
         /**
+         * <p>The business to which the domain name belongs.</p>
+         * 
          * <strong>example:</strong>
          * <p>Google</p>
          */
@@ -62,6 +74,8 @@ public class DescribeVpcFirewallDomainListResponseBody extends TeaModel {
         public String business;
 
         /**
+         * <p>The domain name.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="http://www.a.com">www.a.com</a></p>
          */
@@ -69,6 +83,8 @@ public class DescribeVpcFirewallDomainListResponseBody extends TeaModel {
         public String domain;
 
         /**
+         * <p>The organization to which the domain name belongs.</p>
+         * 
          * <strong>example:</strong>
          * <p>Google</p>
          */
@@ -76,6 +92,8 @@ public class DescribeVpcFirewallDomainListResponseBody extends TeaModel {
         public String groupName;
 
         /**
+         * <p>The volume of request traffic to the domain name. Unit: bytes.</p>
+         * 
          * <strong>example:</strong>
          * <p>3214</p>
          */
@@ -83,6 +101,8 @@ public class DescribeVpcFirewallDomainListResponseBody extends TeaModel {
         public Long requestBytes;
 
         /**
+         * <p>The volume of response traffic. Unit: bytes.</p>
+         * 
          * <strong>example:</strong>
          * <p>4582</p>
          */
@@ -90,6 +110,8 @@ public class DescribeVpcFirewallDomainListResponseBody extends TeaModel {
         public Long responseBytes;
 
         /**
+         * <p>The number of sessions.</p>
+         * 
          * <strong>example:</strong>
          * <p>12</p>
          */
@@ -97,6 +119,8 @@ public class DescribeVpcFirewallDomainListResponseBody extends TeaModel {
         public Long sessionCount;
 
         /**
+         * <p>The number of source IP addresses that are used to access the domain name.</p>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */
@@ -104,6 +128,8 @@ public class DescribeVpcFirewallDomainListResponseBody extends TeaModel {
         public Long srcIpCount;
 
         /**
+         * <p>The number of source VPCs that are used to access the domain name.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -111,6 +137,8 @@ public class DescribeVpcFirewallDomainListResponseBody extends TeaModel {
         public Long srcVpcCount;
 
         /**
+         * <p>The total traffic volume. Unit: bytes.</p>
+         * 
          * <strong>example:</strong>
          * <p>8111126106</p>
          */

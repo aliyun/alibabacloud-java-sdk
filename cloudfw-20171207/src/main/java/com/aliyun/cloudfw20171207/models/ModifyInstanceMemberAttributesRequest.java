@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyInstanceMemberAttributesRequest extends TeaModel {
     /**
-     * <p>The members that to be modified.</p>
+     * <p>The member accounts in Cloud Firewall.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Members")
@@ -26,7 +26,7 @@ public class ModifyInstanceMemberAttributesRequest extends TeaModel {
 
     public static class ModifyInstanceMemberAttributesRequestMembers extends TeaModel {
         /**
-         * <p>The remarks of the member in Cloud Firewall.</p>
+         * <p>The description of the member account.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -36,7 +36,7 @@ public class ModifyInstanceMemberAttributesRequest extends TeaModel {
         public String memberDesc;
 
         /**
-         * <p>The UID of the member in Cloud Firewall.</p>
+         * <p>The UID of the member account.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

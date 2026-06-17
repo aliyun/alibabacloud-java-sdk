@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeAccessInstanceVSwitchListResponseBody extends TeaModel {
     /**
+     * <p>The page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -12,6 +14,8 @@ public class DescribeAccessInstanceVSwitchListResponseBody extends TeaModel {
     public Integer pageNo;
 
     /**
+     * <p>The number of entries per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -19,6 +23,8 @@ public class DescribeAccessInstanceVSwitchListResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>450D47F5-956E-543E-8502-2F71C8C54E72</p>
      */
@@ -26,12 +32,17 @@ public class DescribeAccessInstanceVSwitchListResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total number of entries.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
     @NameInMap("TotalCount")
     public Long totalCount;
 
+    /**
+     * <p>The list of zones.</p>
+     */
     @NameInMap("Zones")
     public java.util.List<DescribeAccessInstanceVSwitchListResponseBodyZones> zones;
 
@@ -82,6 +93,8 @@ public class DescribeAccessInstanceVSwitchListResponseBody extends TeaModel {
 
     public static class DescribeAccessInstanceVSwitchListResponseBodyZonesVSwitchList extends TeaModel {
         /**
+         * <p>The number of available IP addresses in the vSwitch.</p>
+         * 
          * <strong>example:</strong>
          * <p>254</p>
          */
@@ -89,6 +102,8 @@ public class DescribeAccessInstanceVSwitchListResponseBody extends TeaModel {
         public Long availableIpAddressCount;
 
         /**
+         * <p>The IPv4 CIDR block of the vSwitch.</p>
+         * 
          * <strong>example:</strong>
          * <p>192.168.0.0/16</p>
          */
@@ -96,6 +111,8 @@ public class DescribeAccessInstanceVSwitchListResponseBody extends TeaModel {
         public String cidrBlock;
 
         /**
+         * <p>Indicates whether the vSwitch is in a VPC that is managed by Cloud Firewall.</p>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
@@ -103,6 +120,8 @@ public class DescribeAccessInstanceVSwitchListResponseBody extends TeaModel {
         public Boolean firewallVSwitch;
 
         /**
+         * <p>The ID of the vSwitch.</p>
+         * 
          * <strong>example:</strong>
          * <p>vsw-qzeaol304m***</p>
          */
@@ -110,6 +129,8 @@ public class DescribeAccessInstanceVSwitchListResponseBody extends TeaModel {
         public String vSwitchId;
 
         /**
+         * <p>The name of the vSwitch.</p>
+         * 
          * <strong>example:</strong>
          * <p>ManagedVSW</p>
          */
@@ -117,6 +138,8 @@ public class DescribeAccessInstanceVSwitchListResponseBody extends TeaModel {
         public String vSwitchName;
 
         /**
+         * <p>The ID of the VPC to which the vSwitch belongs.</p>
+         * 
          * <strong>example:</strong>
          * <p>vpc-uf6b5lyul0x******</p>
          */
@@ -179,10 +202,15 @@ public class DescribeAccessInstanceVSwitchListResponseBody extends TeaModel {
     }
 
     public static class DescribeAccessInstanceVSwitchListResponseBodyZones extends TeaModel {
+        /**
+         * <p>The list of vSwitches.</p>
+         */
         @NameInMap("VSwitchList")
         public java.util.List<DescribeAccessInstanceVSwitchListResponseBodyZonesVSwitchList> vSwitchList;
 
         /**
+         * <p>The zone ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-hangzhou-i</p>
          */

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ModifyPrivateDnsEndpointResponseBody extends TeaModel {
     /**
+     * <p>The ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>6B780BD6-282C-51A9-A8E6-59F636BAFA54</p>
      */

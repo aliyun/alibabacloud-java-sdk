@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeSdlEventSdListRequest extends TeaModel {
     /**
+     * <p>The number of the page to return.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -12,6 +14,8 @@ public class DescribeSdlEventSdListRequest extends TeaModel {
     public Integer currentPage;
 
     /**
+     * <p>The destination IP address.</p>
+     * 
      * <strong>example:</strong>
      * <p>47.100.102.XXX</p>
      */
@@ -19,6 +23,8 @@ public class DescribeSdlEventSdListRequest extends TeaModel {
     public String dstIp;
 
     /**
+     * <p>The end time. The value is a UNIX timestamp in seconds.</p>
+     * 
      * <strong>example:</strong>
      * <p>1761185080</p>
      */
@@ -26,6 +32,8 @@ public class DescribeSdlEventSdListRequest extends TeaModel {
     public Long endTime;
 
     /**
+     * <p>The language of the response.</p>
+     * 
      * <strong>example:</strong>
      * <p>zh</p>
      */
@@ -33,6 +41,8 @@ public class DescribeSdlEventSdListRequest extends TeaModel {
     public String lang;
 
     /**
+     * <p>The number of the page to return.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -40,6 +50,8 @@ public class DescribeSdlEventSdListRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The source IP address.</p>
+     * 
      * <strong>example:</strong>
      * <p>172.16.0.XXX</p>
      */
@@ -47,6 +59,8 @@ public class DescribeSdlEventSdListRequest extends TeaModel {
     public String srcIp;
 
     /**
+     * <p>The start time. The value is a UNIX timestamp in seconds.</p>
+     * 
      * <strong>example:</strong>
      * <p>1656664560</p>
      */
@@ -54,6 +68,8 @@ public class DescribeSdlEventSdListRequest extends TeaModel {
     public Long startTime;
 
     /**
+     * <p>The unique ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>aa58cdf6-6cf8-493c-912d-97619a24****</p>
      */

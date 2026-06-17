@@ -15,10 +15,12 @@ public class DescribeUserAssetIPTrafficInfoRequest extends TeaModel {
     public String assetIP;
 
     /**
-     * <p>The language of the content within the response. Valid values:</p>
+     * <p>The language of the response. Valid values:</p>
      * <ul>
-     * <li><strong>zh</strong> (default): Chinese</li>
-     * <li><strong>en</strong>: English</li>
+     * <li><p><strong>zh</strong>: Chinese (default).</p>
+     * </li>
+     * <li><p><strong>en</strong>: English.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -28,7 +30,7 @@ public class DescribeUserAssetIPTrafficInfoRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The time range to query. The value is a UNIX timestamp. Unit: seconds.</p>
+     * <p>The time of the traffic query, specified as a UNIX timestamp in seconds.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

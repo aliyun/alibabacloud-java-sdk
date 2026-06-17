@@ -4,13 +4,21 @@ package com.aliyun.cloudfw20171207.models;
 import com.aliyun.tea.*;
 
 public class DescribeInternetOpenServiceResponseBody extends TeaModel {
+    /**
+     * <p>The list of data.</p>
+     */
     @NameInMap("DataList")
     public java.util.List<DescribeInternetOpenServiceResponseBodyDataList> dataList;
 
+    /**
+     * <p>The paging information.</p>
+     */
     @NameInMap("PageInfo")
     public DescribeInternetOpenServiceResponseBodyPageInfo pageInfo;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>99A65AA0-C5B5-5092-BFCF-8111B436****</p>
      */
@@ -48,6 +56,8 @@ public class DescribeInternetOpenServiceResponseBody extends TeaModel {
 
     public static class DescribeInternetOpenServiceResponseBodyDataList extends TeaModel {
         /**
+         * <p>The number of details.</p>
+         * 
          * <strong>example:</strong>
          * <p>5</p>
          */
@@ -55,6 +65,8 @@ public class DescribeInternetOpenServiceResponseBody extends TeaModel {
         public Integer detailNum;
 
         /**
+         * <p>The inbound traffic.</p>
+         * 
          * <strong>example:</strong>
          * <p>447458.0</p>
          */
@@ -62,16 +74,23 @@ public class DescribeInternetOpenServiceResponseBody extends TeaModel {
         public Long inBytes;
 
         /**
+         * <p>The outbound traffic.</p>
+         * 
          * <strong>example:</strong>
          * <p>1123</p>
          */
         @NameInMap("OutBytes")
         public Long outBytes;
 
+        /**
+         * <p>The list of open ports.</p>
+         */
         @NameInMap("PortList")
         public java.util.List<String> portList;
 
         /**
+         * <p>The security threat.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -79,6 +98,8 @@ public class DescribeInternetOpenServiceResponseBody extends TeaModel {
         public String probRisk;
 
         /**
+         * <p>The description of the security threat.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -86,6 +107,8 @@ public class DescribeInternetOpenServiceResponseBody extends TeaModel {
         public String probRiskDesc;
 
         /**
+         * <p>The protocol type.</p>
+         * 
          * <strong>example:</strong>
          * <p>tcp</p>
          */
@@ -93,6 +116,8 @@ public class DescribeInternetOpenServiceResponseBody extends TeaModel {
         public String protocol;
 
         /**
+         * <p>The number of exposed public IP addresses.</p>
+         * 
          * <strong>example:</strong>
          * <p>3</p>
          */
@@ -100,6 +125,8 @@ public class DescribeInternetOpenServiceResponseBody extends TeaModel {
         public Integer publicIpNum;
 
         /**
+         * <p>The risk level.</p>
+         * 
          * <strong>example:</strong>
          * <p>3</p>
          */
@@ -107,6 +134,8 @@ public class DescribeInternetOpenServiceResponseBody extends TeaModel {
         public Integer riskLevel;
 
         /**
+         * <p>The description of the risk.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -114,6 +143,8 @@ public class DescribeInternetOpenServiceResponseBody extends TeaModel {
         public String riskReason;
 
         /**
+         * <p>The application name.</p>
+         * 
          * <strong>example:</strong>
          * <p>SMB</p>
          */
@@ -121,6 +152,8 @@ public class DescribeInternetOpenServiceResponseBody extends TeaModel {
         public Integer serviceName;
 
         /**
+         * <p>The recommended policy level.</p>
+         * 
          * <strong>example:</strong>
          * <p>20</p>
          */
@@ -128,6 +161,8 @@ public class DescribeInternetOpenServiceResponseBody extends TeaModel {
         public Integer suggestLevel;
 
         /**
+         * <p>The total traffic.</p>
+         * 
          * <strong>example:</strong>
          * <p>621404</p>
          */
@@ -135,6 +170,8 @@ public class DescribeInternetOpenServiceResponseBody extends TeaModel {
         public Long totalBytes;
 
         /**
+         * <p>The traffic percentage over the last 24 hours.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -142,6 +179,8 @@ public class DescribeInternetOpenServiceResponseBody extends TeaModel {
         public String trafficPercent1Day;
 
         /**
+         * <p>The traffic percentage over the last 30 days.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -149,12 +188,17 @@ public class DescribeInternetOpenServiceResponseBody extends TeaModel {
         public String trafficPercent30Day;
 
         /**
+         * <p>The traffic percentage over the last 7 days.</p>
+         * 
          * <strong>example:</strong>
          * <p>77</p>
          */
         @NameInMap("TrafficPercent7Day")
         public String trafficPercent7Day;
 
+        /**
+         * <p>The reason why the protocol is not identified if the detected protocol is \<code>Unknown\\</code>.</p>
+         */
         @NameInMap("UnknownReason")
         public java.util.List<String> unknownReason;
 
@@ -303,6 +347,8 @@ public class DescribeInternetOpenServiceResponseBody extends TeaModel {
 
     public static class DescribeInternetOpenServiceResponseBodyPageInfo extends TeaModel {
         /**
+         * <p>The page number.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -310,6 +356,8 @@ public class DescribeInternetOpenServiceResponseBody extends TeaModel {
         public Integer currentPage;
 
         /**
+         * <p>The number of entries per page.</p>
+         * 
          * <strong>example:</strong>
          * <p>20</p>
          */
@@ -317,6 +365,8 @@ public class DescribeInternetOpenServiceResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
+         * <p>The total number of entries.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */

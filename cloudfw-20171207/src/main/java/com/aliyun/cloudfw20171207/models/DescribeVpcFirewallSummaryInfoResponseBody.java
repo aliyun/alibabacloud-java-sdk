@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeVpcFirewallSummaryInfoResponseBody extends TeaModel {
     /**
+     * <p>The remaining quota for VPC firewalls.</p>
+     * 
      * <strong>example:</strong>
      * <p>4</p>
      */
@@ -12,6 +14,8 @@ public class DescribeVpcFirewallSummaryInfoResponseBody extends TeaModel {
     public Integer availableVpcFirewallQuota;
 
     /**
+     * <p>The number of VPCs connected using Cloud Enterprise Network (CEN) and Express Connect.</p>
+     * 
      * <strong>example:</strong>
      * <p>7</p>
      */
@@ -19,6 +23,8 @@ public class DescribeVpcFirewallSummaryInfoResponseBody extends TeaModel {
     public Integer cenExpressConnectVpcCount;
 
     /**
+     * <p>The number of CEN VPCs.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -26,6 +32,8 @@ public class DescribeVpcFirewallSummaryInfoResponseBody extends TeaModel {
     public Integer cenFirewallVpcCount;
 
     /**
+     * <p>The number of VPCs on the CEN transit router.</p>
+     * 
      * <strong>example:</strong>
      * <p>13</p>
      */
@@ -33,6 +41,8 @@ public class DescribeVpcFirewallSummaryInfoResponseBody extends TeaModel {
     public Integer cenTrVpcCount;
 
     /**
+     * <p>The number of configured CEN firewalls that are disabled.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -40,6 +50,8 @@ public class DescribeVpcFirewallSummaryInfoResponseBody extends TeaModel {
     public Integer closedCenFirewallCount;
 
     /**
+     * <p>The number of configured Express Connect firewalls that are disabled.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -47,6 +59,8 @@ public class DescribeVpcFirewallSummaryInfoResponseBody extends TeaModel {
     public Integer closedExpressConnectFirewallCount;
 
     /**
+     * <p>The number of configured VPC firewalls that are disabled.</p>
+     * 
      * <strong>example:</strong>
      * <p>5</p>
      */
@@ -54,6 +68,8 @@ public class DescribeVpcFirewallSummaryInfoResponseBody extends TeaModel {
     public Integer closedVpcFirewallCount;
 
     /**
+     * <p>The number of configured CEN firewall instances of the Basic Edition.</p>
+     * 
      * <strong>example:</strong>
      * <p>5</p>
      */
@@ -61,6 +77,8 @@ public class DescribeVpcFirewallSummaryInfoResponseBody extends TeaModel {
     public Integer configuredCenFirewallCount;
 
     /**
+     * <p>The number of regions where CEN firewalls are configured.</p>
+     * 
      * <strong>example:</strong>
      * <p>2</p>
      */
@@ -68,6 +86,8 @@ public class DescribeVpcFirewallSummaryInfoResponseBody extends TeaModel {
     public Integer configuredCenFirewallRegionCount;
 
     /**
+     * <p>The number of VPCs for which CEN firewalls are configured.</p>
+     * 
      * <strong>example:</strong>
      * <p>18</p>
      */
@@ -75,6 +95,8 @@ public class DescribeVpcFirewallSummaryInfoResponseBody extends TeaModel {
     public Integer configuredCenFirewallVpcCount;
 
     /**
+     * <p>The number of configured CEN transit router firewall instances.</p>
+     * 
      * <strong>example:</strong>
      * <p>2</p>
      */
@@ -82,6 +104,8 @@ public class DescribeVpcFirewallSummaryInfoResponseBody extends TeaModel {
     public Integer configuredCenTrFirewallCount;
 
     /**
+     * <p>The number of configured Express Connect circuits.</p>
+     * 
      * <strong>example:</strong>
      * <p>2</p>
      */
@@ -89,6 +113,8 @@ public class DescribeVpcFirewallSummaryInfoResponseBody extends TeaModel {
     public Integer configuredExpressConnectFirewallCount;
 
     /**
+     * <p>The number of VPCs for which Express Connect firewalls are configured.</p>
+     * 
      * <strong>example:</strong>
      * <p>2</p>
      */
@@ -96,6 +122,8 @@ public class DescribeVpcFirewallSummaryInfoResponseBody extends TeaModel {
     public Integer configuredExpressConnectVpcCount;
 
     /**
+     * <p>The number of configured VPC firewalls.</p>
+     * 
      * <strong>example:</strong>
      * <p>5</p>
      */
@@ -103,6 +131,8 @@ public class DescribeVpcFirewallSummaryInfoResponseBody extends TeaModel {
     public Integer configuredVpcFirewallCount;
 
     /**
+     * <p>The number of VPCs for which VPC firewalls are configured.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -110,6 +140,8 @@ public class DescribeVpcFirewallSummaryInfoResponseBody extends TeaModel {
     public Integer configuredVpcFirewallVpcCount;
 
     /**
+     * <p>The number of Express Connect VPCs.</p>
+     * 
      * <strong>example:</strong>
      * <p>2</p>
      */
@@ -117,6 +149,8 @@ public class DescribeVpcFirewallSummaryInfoResponseBody extends TeaModel {
     public Integer expressConnectVpcCount;
 
     /**
+     * <p>The number of CEN firewalls that are not configured.</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
@@ -124,6 +158,8 @@ public class DescribeVpcFirewallSummaryInfoResponseBody extends TeaModel {
     public Integer notConfiguredCenFirewallCount;
 
     /**
+     * <p>The number of CEN transit router firewall instances that are not configured.</p>
+     * 
      * <strong>example:</strong>
      * <p>6</p>
      */
@@ -131,6 +167,8 @@ public class DescribeVpcFirewallSummaryInfoResponseBody extends TeaModel {
     public Integer notConfiguredCenTrFirewallCount;
 
     /**
+     * <p>The number of Express Connect firewalls that are not configured.</p>
+     * 
      * <strong>example:</strong>
      * <p>7</p>
      */
@@ -138,6 +176,8 @@ public class DescribeVpcFirewallSummaryInfoResponseBody extends TeaModel {
     public Integer notConfiguredExpressConnectFirewallCount;
 
     /**
+     * <p>The number of VPC firewalls that are not configured.</p>
+     * 
      * <strong>example:</strong>
      * <p>12</p>
      */
@@ -145,6 +185,8 @@ public class DescribeVpcFirewallSummaryInfoResponseBody extends TeaModel {
     public Integer notConfiguredVpcFirewallCount;
 
     /**
+     * <p>The number of VPCs that are connected using CEN and Express Connect and have the firewall enabled.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -152,6 +194,8 @@ public class DescribeVpcFirewallSummaryInfoResponseBody extends TeaModel {
     public Integer openedCenExpressConnectVpcCount;
 
     /**
+     * <p>The number of enabled CEN firewalls.</p>
+     * 
      * <strong>example:</strong>
      * <p>4</p>
      */
@@ -159,6 +203,8 @@ public class DescribeVpcFirewallSummaryInfoResponseBody extends TeaModel {
     public Integer openedCenFirewallCount;
 
     /**
+     * <p>The number of VPCs protected by CEN firewalls.</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
@@ -166,6 +212,8 @@ public class DescribeVpcFirewallSummaryInfoResponseBody extends TeaModel {
     public Integer openedCenFirewallVpcCount;
 
     /**
+     * <p>The number of VPCs protected by the CEN transit router firewall.</p>
+     * 
      * <strong>example:</strong>
      * <p>4</p>
      */
@@ -173,6 +221,8 @@ public class DescribeVpcFirewallSummaryInfoResponseBody extends TeaModel {
     public Integer openedCenTrFirewallVpcCount;
 
     /**
+     * <p>The number of enabled CEN Express Connect Routers (ECRs).</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
@@ -180,6 +230,8 @@ public class DescribeVpcFirewallSummaryInfoResponseBody extends TeaModel {
     public Integer openedEcrCount;
 
     /**
+     * <p>The number of enabled Express Connect firewalls.</p>
+     * 
      * <strong>example:</strong>
      * <p>15</p>
      */
@@ -187,6 +239,8 @@ public class DescribeVpcFirewallSummaryInfoResponseBody extends TeaModel {
     public Integer openedExpressConnectFirewallCount;
 
     /**
+     * <p>The number of VPCs protected by Express Connect firewalls.</p>
+     * 
      * <strong>example:</strong>
      * <p>2</p>
      */
@@ -194,6 +248,8 @@ public class DescribeVpcFirewallSummaryInfoResponseBody extends TeaModel {
     public Integer openedExpressConnectVpcCount;
 
     /**
+     * <p>The number of inter-region connections protected by the CEN transit router firewall.</p>
+     * 
      * <strong>example:</strong>
      * <p>3</p>
      */
@@ -201,6 +257,8 @@ public class DescribeVpcFirewallSummaryInfoResponseBody extends TeaModel {
     public Integer openedPeerTrCount;
 
     /**
+     * <p>The number of Virtual Border Routers (VBRs) protected by the CEN transit router firewall.</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
@@ -208,6 +266,8 @@ public class DescribeVpcFirewallSummaryInfoResponseBody extends TeaModel {
     public Integer openedVbrCount;
 
     /**
+     * <p>The number of protected VPCs.</p>
+     * 
      * <strong>example:</strong>
      * <p>17</p>
      */
@@ -215,6 +275,8 @@ public class DescribeVpcFirewallSummaryInfoResponseBody extends TeaModel {
     public Integer openedVpcCount;
 
     /**
+     * <p>The number of enabled VPC firewalls.</p>
+     * 
      * <strong>example:</strong>
      * <p>9</p>
      */
@@ -222,6 +284,8 @@ public class DescribeVpcFirewallSummaryInfoResponseBody extends TeaModel {
     public Integer openedVpcFirewallCount;
 
     /**
+     * <p>The number of VPN gateways protected by the CEN transit router firewall.</p>
+     * 
      * <strong>example:</strong>
      * <p>6</p>
      */
@@ -229,6 +293,8 @@ public class DescribeVpcFirewallSummaryInfoResponseBody extends TeaModel {
     public Integer openedVpnCount;
 
     /**
+     * <p>The ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>8AABEF64-7ABF-52CB-BA6C-0598E3DB****</p>
      */
@@ -236,6 +302,8 @@ public class DescribeVpcFirewallSummaryInfoResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The number of ECRs.</p>
+     * 
      * <strong>example:</strong>
      * <p>2</p>
      */
@@ -243,6 +311,8 @@ public class DescribeVpcFirewallSummaryInfoResponseBody extends TeaModel {
     public Integer totalEcrCount;
 
     /**
+     * <p>The number of inter-region connections on the CEN transit router.</p>
+     * 
      * <strong>example:</strong>
      * <p>6</p>
      */
@@ -250,6 +320,8 @@ public class DescribeVpcFirewallSummaryInfoResponseBody extends TeaModel {
     public Integer totalPeerTrCount;
 
     /**
+     * <p>The number of VBRs on the CEN transit router.</p>
+     * 
      * <strong>example:</strong>
      * <p>5</p>
      */
@@ -257,6 +329,8 @@ public class DescribeVpcFirewallSummaryInfoResponseBody extends TeaModel {
     public Integer totalVbrCount;
 
     /**
+     * <p>The number of interconnected VPCs.</p>
+     * 
      * <strong>example:</strong>
      * <p>2</p>
      */
@@ -264,6 +338,8 @@ public class DescribeVpcFirewallSummaryInfoResponseBody extends TeaModel {
     public Integer totalVpcCount;
 
     /**
+     * <p>The total quota for VPC firewalls.</p>
+     * 
      * <strong>example:</strong>
      * <p>5</p>
      */
@@ -271,6 +347,8 @@ public class DescribeVpcFirewallSummaryInfoResponseBody extends TeaModel {
     public Integer totalVpcFirewallQuota;
 
     /**
+     * <p>The number of VPN gateways on the CEN transit router.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */

@@ -4,10 +4,15 @@ package com.aliyun.cloudfw20171207.models;
 import com.aliyun.tea.*;
 
 public class DescribeThreatIntelligenceSwitchResponseBody extends TeaModel {
+    /**
+     * <p>The list of threat intelligence categories.</p>
+     */
     @NameInMap("CategoryList")
     public java.util.List<DescribeThreatIntelligenceSwitchResponseBodyCategoryList> categoryList;
 
     /**
+     * <p>The ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>6B8E0379-2629-59A1-B811-96F3E****</p>
      */
@@ -15,6 +20,8 @@ public class DescribeThreatIntelligenceSwitchResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total number of entries.</p>
+     * 
      * <strong>example:</strong>
      * <p>24</p>
      */
@@ -52,26 +59,46 @@ public class DescribeThreatIntelligenceSwitchResponseBody extends TeaModel {
 
     public static class DescribeThreatIntelligenceSwitchResponseBodyCategoryList extends TeaModel {
         /**
+         * <p>The action of the rule. Valid values:</p>
+         * <p><strong>alert</strong>: Monitor.</p>
+         * <p><strong>drop</strong>: Block.</p>
+         * 
          * <strong>example:</strong>
          * <p>alert</p>
          */
         @NameInMap("Action")
         public String action;
 
+        /**
+         * <p>The description of the category.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Tor Export Malicious IP</p>
+         */
         @NameInMap("CategoryDescribe")
         public String categoryDescribe;
 
         /**
+         * <p>The ID of the threat intelligence category.</p>
+         * 
          * <strong>example:</strong>
          * <p>3000037</p>
          */
         @NameInMap("CategoryId")
         public String categoryId;
 
+        /**
+         * <p>The name of the category.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Tor Export Malicious IP</p>
+         */
         @NameInMap("CategoryName")
         public String categoryName;
 
         /**
+         * <p>The ID of the parent threat intelligence category.</p>
+         * 
          * <strong>example:</strong>
          * <p>123</p>
          */
@@ -79,6 +106,10 @@ public class DescribeThreatIntelligenceSwitchResponseBody extends TeaModel {
         public String categoryParentId;
 
         /**
+         * <p>The status of the switch. Valid values:</p>
+         * <p><strong>1</strong>: enabled.</p>
+         * <p><strong>0</strong>: disabled.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */

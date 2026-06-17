@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeRiskEventTopAttackTypeRequest extends TeaModel {
     /**
+     * <p>The edition of Cloud Firewall.</p>
+     * 
      * <strong>example:</strong>
      * <p>2</p>
      */
@@ -12,6 +14,7 @@ public class DescribeRiskEventTopAttackTypeRequest extends TeaModel {
     public String buyVersion;
 
     /**
+     * <p>The traffic direction.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,6 +24,7 @@ public class DescribeRiskEventTopAttackTypeRequest extends TeaModel {
     public String direction;
 
     /**
+     * <p>The end of the time range for the query. The value must be a Unix timestamp in seconds.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -30,6 +34,8 @@ public class DescribeRiskEventTopAttackTypeRequest extends TeaModel {
     public String endTime;
 
     /**
+     * <p>The language of the request and response.</p>
+     * 
      * <strong>example:</strong>
      * <p>zh</p>
      */
@@ -37,6 +43,8 @@ public class DescribeRiskEventTopAttackTypeRequest extends TeaModel {
     public String lang;
 
     /**
+     * <p>The source IP address.</p>
+     * 
      * <strong>example:</strong>
      * <p>140.210.153.XXX</p>
      */
@@ -44,6 +52,7 @@ public class DescribeRiskEventTopAttackTypeRequest extends TeaModel {
     public String sourceIp;
 
     /**
+     * <p>The start of the time range for the query. The value must be a Unix timestamp in seconds.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

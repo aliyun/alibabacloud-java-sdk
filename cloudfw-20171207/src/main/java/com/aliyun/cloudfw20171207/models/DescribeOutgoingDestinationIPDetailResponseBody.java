@@ -4,16 +4,33 @@ package com.aliyun.cloudfw20171207.models;
 import com.aliyun.tea.*;
 
 public class DescribeOutgoingDestinationIPDetailResponseBody extends TeaModel {
+    /**
+     * <p>The list of assets.</p>
+     */
     @NameInMap("AssetList")
     public java.util.List<DescribeOutgoingDestinationIPDetailResponseBodyAssetList> assetList;
 
+    /**
+     * <p>The ISP of the destination IP address.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>telecom</p>
+     */
     @NameInMap("IspName")
     public String ispName;
 
+    /**
+     * <p>The name of the region.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Hangzhou</p>
+     */
     @NameInMap("LocationName")
     public String locationName;
 
     /**
+     * <p>The ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>F0F82705-CFC7-5F83-86C8-A063892F****</p>
      */
@@ -21,6 +38,8 @@ public class DescribeOutgoingDestinationIPDetailResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total number of entries returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>25</p>
      */
@@ -74,6 +93,8 @@ public class DescribeOutgoingDestinationIPDetailResponseBody extends TeaModel {
 
     public static class DescribeOutgoingDestinationIPDetailResponseBodyAssetListTagList extends TeaModel {
         /**
+         * <p>The classification ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -81,6 +102,8 @@ public class DescribeOutgoingDestinationIPDetailResponseBody extends TeaModel {
         public String classId;
 
         /**
+         * <p>The risk level.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -88,6 +111,8 @@ public class DescribeOutgoingDestinationIPDetailResponseBody extends TeaModel {
         public Integer riskLevel;
 
         /**
+         * <p>The description of the tag.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -95,6 +120,8 @@ public class DescribeOutgoingDestinationIPDetailResponseBody extends TeaModel {
         public String tagDescribe;
 
         /**
+         * <p>The ID of the tag.</p>
+         * 
          * <strong>example:</strong>
          * <p>FirstFlow</p>
          */
@@ -102,6 +129,8 @@ public class DescribeOutgoingDestinationIPDetailResponseBody extends TeaModel {
         public String tagId;
 
         /**
+         * <p>The name of the tag.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -157,6 +186,8 @@ public class DescribeOutgoingDestinationIPDetailResponseBody extends TeaModel {
 
     public static class DescribeOutgoingDestinationIPDetailResponseBodyAssetList extends TeaModel {
         /**
+         * <p>The status of the access control policy.</p>
+         * 
          * <strong>example:</strong>
          * <p>FullCoverage</p>
          */
@@ -164,6 +195,8 @@ public class DescribeOutgoingDestinationIPDetailResponseBody extends TeaModel {
         public String aclCoverage;
 
         /**
+         * <p>The time of the first access. This is a UNIX timestamp. Unit: seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>1744682438</p>
          */
@@ -171,26 +204,44 @@ public class DescribeOutgoingDestinationIPDetailResponseBody extends TeaModel {
         public Integer firstTime;
 
         /**
+         * <p>The inbound traffic. Unit: bytes.</p>
+         * 
          * <strong>example:</strong>
          * <p>0.0</p>
          */
         @NameInMap("InBytes")
         public Long inBytes;
 
+        /**
+         * <p>The ISP of the destination IP address.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>telecom</p>
+         */
         @NameInMap("IspName")
         public String ispName;
 
         /**
+         * <p>The time of the last access. This is a UNIX timestamp. Unit: seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>1739326614</p>
          */
         @NameInMap("LastTime")
         public Integer lastTime;
 
+        /**
+         * <p>The name of the region where the destination IP address is located.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Hangzhou</p>
+         */
         @NameInMap("LocationName")
         public String locationName;
 
         /**
+         * <p>The ID of the NAT Gateway.</p>
+         * 
          * <strong>example:</strong>
          * <p>ngw-bp1utx6wj4x9qu9tl****</p>
          */
@@ -198,6 +249,8 @@ public class DescribeOutgoingDestinationIPDetailResponseBody extends TeaModel {
         public String natGatewayId;
 
         /**
+         * <p>The name of the NAT Gateway.</p>
+         * 
          * <strong>example:</strong>
          * <p>ngw-test</p>
          */
@@ -205,6 +258,8 @@ public class DescribeOutgoingDestinationIPDetailResponseBody extends TeaModel {
         public String natGatewayName;
 
         /**
+         * <p>The outbound traffic. Unit: bytes.</p>
+         * 
          * <strong>example:</strong>
          * <p>0.0</p>
          */
@@ -212,6 +267,8 @@ public class DescribeOutgoingDestinationIPDetailResponseBody extends TeaModel {
         public Long outBytes;
 
         /**
+         * <p>The private IP address.</p>
+         * 
          * <strong>example:</strong>
          * <p>10.21.242XXX</p>
          */
@@ -219,6 +276,8 @@ public class DescribeOutgoingDestinationIPDetailResponseBody extends TeaModel {
         public String privateIP;
 
         /**
+         * <p>The public IP address.</p>
+         * 
          * <strong>example:</strong>
          * <p>47.96.181.XXX</p>
          */
@@ -226,6 +285,8 @@ public class DescribeOutgoingDestinationIPDetailResponseBody extends TeaModel {
         public String publicIP;
 
         /**
+         * <p>The region ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-shanghai</p>
          */
@@ -233,6 +294,8 @@ public class DescribeOutgoingDestinationIPDetailResponseBody extends TeaModel {
         public String regionNo;
 
         /**
+         * <p>The instance ID of the cloud product.</p>
+         * 
          * <strong>example:</strong>
          * <p>i-uf63wjhyoohc1g4z****</p>
          */
@@ -240,6 +303,8 @@ public class DescribeOutgoingDestinationIPDetailResponseBody extends TeaModel {
         public String resourceInstanceId;
 
         /**
+         * <p>The name of the asset instance.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -247,6 +312,8 @@ public class DescribeOutgoingDestinationIPDetailResponseBody extends TeaModel {
         public String resourceInstanceName;
 
         /**
+         * <p>The type of the public IP address of the asset.</p>
+         * 
          * <strong>example:</strong>
          * <p>EcsPublicIP</p>
          */
@@ -254,6 +321,8 @@ public class DescribeOutgoingDestinationIPDetailResponseBody extends TeaModel {
         public String resourceType;
 
         /**
+         * <p>The rule ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>08a58465-ff4d-4c47-8782-eb008301****</p>
          */
@@ -261,6 +330,8 @@ public class DescribeOutgoingDestinationIPDetailResponseBody extends TeaModel {
         public String ruleId;
 
         /**
+         * <p>The rule name.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -268,16 +339,23 @@ public class DescribeOutgoingDestinationIPDetailResponseBody extends TeaModel {
         public String ruleName;
 
         /**
+         * <p>The number of sessions.</p>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */
         @NameInMap("SessionCount")
         public Long sessionCount;
 
+        /**
+         * <p>The list of tags.</p>
+         */
         @NameInMap("TagList")
         public java.util.List<DescribeOutgoingDestinationIPDetailResponseBodyAssetListTagList> tagList;
 
         /**
+         * <p>The total traffic.</p>
+         * 
          * <strong>example:</strong>
          * <p>458681</p>
          */
@@ -285,6 +363,8 @@ public class DescribeOutgoingDestinationIPDetailResponseBody extends TeaModel {
         public String totalBytes;
 
         /**
+         * <p>The ID of the VPC instance.</p>
+         * 
          * <strong>example:</strong>
          * <p>vpc-9dp16jgwgyvn****</p>
          */

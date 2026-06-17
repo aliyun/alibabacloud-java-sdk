@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeAccessInstanceVpcListRequest extends TeaModel {
     /**
+     * <p>The UID of the Alibaba Cloud account that owns the resource.</p>
+     * 
      * <strong>example:</strong>
      * <p>135809047715****</p>
      */
@@ -12,6 +14,8 @@ public class DescribeAccessInstanceVpcListRequest extends TeaModel {
     public Long memberUid;
 
     /**
+     * <p>The page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -19,6 +23,8 @@ public class DescribeAccessInstanceVpcListRequest extends TeaModel {
     public Integer pageNo;
 
     /**
+     * <p>The number of entries per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -26,6 +32,7 @@ public class DescribeAccessInstanceVpcListRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -35,6 +42,8 @@ public class DescribeAccessInstanceVpcListRequest extends TeaModel {
     public String regionNo;
 
     /**
+     * <p>The ID of the VPC instance.</p>
+     * 
      * <strong>example:</strong>
      * <p>vpc-j6cvhdscntzuvr0x****</p>
      */

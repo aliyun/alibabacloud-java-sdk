@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeFirewallVswitchResourcesRequest extends TeaModel {
     /**
+     * <p>The type of the Cloud Firewall.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,8 @@ public class DescribeFirewallVswitchResourcesRequest extends TeaModel {
     public String firewallType;
 
     /**
+     * <p>The language of the response message.</p>
+     * 
      * <strong>example:</strong>
      * <p>zh</p>
      */
@@ -21,6 +24,7 @@ public class DescribeFirewallVswitchResourcesRequest extends TeaModel {
     public String lang;
 
     /**
+     * <p>The region.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -30,6 +34,7 @@ public class DescribeFirewallVswitchResourcesRequest extends TeaModel {
     public String regionNo;
 
     /**
+     * <p>The ID of the VPC instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

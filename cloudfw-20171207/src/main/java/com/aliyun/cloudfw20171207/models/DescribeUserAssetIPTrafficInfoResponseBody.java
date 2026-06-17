@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeUserAssetIPTrafficInfoResponseBody extends TeaModel {
     /**
-     * <p>The end of the time range to query. The value is a UNIX timestamp. Unit: seconds.</p>
+     * <p>The end time of the query, as a UNIX timestamp in seconds.</p>
      * 
      * <strong>example:</strong>
      * <p>1656923760</p>
@@ -14,7 +14,7 @@ public class DescribeUserAssetIPTrafficInfoResponseBody extends TeaModel {
     public Long endTime;
 
     /**
-     * <p>The network throughput, which indicates the inbound traffic rate. Unit: bit/s.</p>
+     * <p>The inbound network throughput, in bits per second (bps).</p>
      * 
      * <strong>example:</strong>
      * <p>4520</p>
@@ -23,7 +23,7 @@ public class DescribeUserAssetIPTrafficInfoResponseBody extends TeaModel {
     public Long inBps;
 
     /**
-     * <p>The inbound network throughput, which indicates the number of packets that are sent inbound per second. Unit: packets per second (pps).</p>
+     * <p>The inbound packet rate, in packets per second (pps).</p>
      * 
      * <strong>example:</strong>
      * <p>233</p>
@@ -32,7 +32,7 @@ public class DescribeUserAssetIPTrafficInfoResponseBody extends TeaModel {
     public Long inPps;
 
     /**
-     * <p>The new connection creation rate.</p>
+     * <p>The number of new connections.</p>
      * 
      * <strong>example:</strong>
      * <p>43</p>
@@ -41,7 +41,7 @@ public class DescribeUserAssetIPTrafficInfoResponseBody extends TeaModel {
     public Long newConn;
 
     /**
-     * <p>The network throughput, which indicates the outbound traffic rate. Unit: bit/s.</p>
+     * <p>The outbound network throughput, in bits per second (bps).</p>
      * 
      * <strong>example:</strong>
      * <p>4180</p>
@@ -50,7 +50,7 @@ public class DescribeUserAssetIPTrafficInfoResponseBody extends TeaModel {
     public Long outBps;
 
     /**
-     * <p>The outbound network throughput, which indicates the number of packets that are sent outbound per second. Unit: pps.</p>
+     * <p>The outbound packet rate, in packets per second (pps).</p>
      * 
      * <strong>example:</strong>
      * <p>224</p>
@@ -68,7 +68,7 @@ public class DescribeUserAssetIPTrafficInfoResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The number of requests.</p>
+     * <p>The number of sessions.</p>
      * 
      * <strong>example:</strong>
      * <p>50</p>
@@ -77,7 +77,7 @@ public class DescribeUserAssetIPTrafficInfoResponseBody extends TeaModel {
     public Long sessionCount;
 
     /**
-     * <p>The beginning of the time range to query. The value is a UNIX timestamp. Unit: seconds.</p>
+     * <p>The start time of the query, as a UNIX timestamp in seconds.</p>
      * 
      * <strong>example:</strong>
      * <p>1656837360</p>

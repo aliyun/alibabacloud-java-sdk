@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ResetRuleHitCountResponseBody extends TeaModel {
     /**
+     * <p>The application module.</p>
+     * 
      * <strong>example:</strong>
      * <p>sg_server</p>
      */
@@ -12,6 +14,8 @@ public class ResetRuleHitCountResponseBody extends TeaModel {
     public String module;
 
     /**
+     * <p>The ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>706B2093-CBA0-51B2-BEBF-58903FC6****</p>
      */

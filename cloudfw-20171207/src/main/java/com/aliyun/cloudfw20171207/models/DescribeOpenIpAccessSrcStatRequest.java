@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeOpenIpAccessSrcStatRequest extends TeaModel {
     /**
+     * <p>The page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -12,6 +14,8 @@ public class DescribeOpenIpAccessSrcStatRequest extends TeaModel {
     public String currentPage;
 
     /**
+     * <p>The destination IP address.</p>
+     * 
      * <strong>example:</strong>
      * <p>47.100.102.XXX</p>
      */
@@ -19,6 +23,8 @@ public class DescribeOpenIpAccessSrcStatRequest extends TeaModel {
     public String dstIp;
 
     /**
+     * <p>The language of the response.</p>
+     * 
      * <strong>example:</strong>
      * <p>zh</p>
      */
@@ -26,6 +32,8 @@ public class DescribeOpenIpAccessSrcStatRequest extends TeaModel {
     public String lang;
 
     /**
+     * <p>The number of the page to return.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -33,6 +41,8 @@ public class DescribeOpenIpAccessSrcStatRequest extends TeaModel {
     public String pageSize;
 
     /**
+     * <p>The source IP address of the visitor.</p>
+     * 
      * <strong>example:</strong>
      * <p>47.100.XX.XX</p>
      */

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeOutgoingDestinationRequest extends TeaModel {
     /**
+     * <p>The policy coverage status.</p>
+     * 
      * <strong>example:</strong>
      * <p>FullCoverage</p>
      */
@@ -12,6 +14,8 @@ public class DescribeOutgoingDestinationRequest extends TeaModel {
     public String aclCoverage;
 
     /**
+     * <p>The application name.</p>
+     * 
      * <strong>example:</strong>
      * <p>HTTP</p>
      */
@@ -19,6 +23,8 @@ public class DescribeOutgoingDestinationRequest extends TeaModel {
     public String applicationName;
 
     /**
+     * <p>The category ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>AliYun</p>
      */
@@ -26,6 +32,8 @@ public class DescribeOutgoingDestinationRequest extends TeaModel {
     public String categoryId;
 
     /**
+     * <p>The number of the page to return.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -33,6 +41,8 @@ public class DescribeOutgoingDestinationRequest extends TeaModel {
     public String currentPage;
 
     /**
+     * <p>The destination IP address.</p>
+     * 
      * <strong>example:</strong>
      * <p>47.100.111XXX</p>
      */
@@ -40,6 +50,7 @@ public class DescribeOutgoingDestinationRequest extends TeaModel {
     public String dstIP;
 
     /**
+     * <p>The end of the time range to query. The value is a UNIX timestamp. Unit: seconds.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -49,6 +60,8 @@ public class DescribeOutgoingDestinationRequest extends TeaModel {
     public String endTime;
 
     /**
+     * <p>Specifies whether to count only the traffic to AI services. The default value is false.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -56,6 +69,8 @@ public class DescribeOutgoingDestinationRequest extends TeaModel {
     public String isAITraffic;
 
     /**
+     * <p>The language of the response message.</p>
+     * 
      * <strong>example:</strong>
      * <p>zh</p>
      */
@@ -63,6 +78,8 @@ public class DescribeOutgoingDestinationRequest extends TeaModel {
     public String lang;
 
     /**
+     * <p>The sorting order.</p>
+     * 
      * <strong>example:</strong>
      * <p>desc</p>
      */
@@ -70,6 +87,8 @@ public class DescribeOutgoingDestinationRequest extends TeaModel {
     public String order;
 
     /**
+     * <p>The number of the page to return.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -77,6 +96,8 @@ public class DescribeOutgoingDestinationRequest extends TeaModel {
     public String pageSize;
 
     /**
+     * <p>The port number.</p>
+     * 
      * <strong>example:</strong>
      * <p>3306</p>
      */
@@ -84,6 +105,8 @@ public class DescribeOutgoingDestinationRequest extends TeaModel {
     public String port;
 
     /**
+     * <p>The private IP address.</p>
+     * 
      * <strong>example:</strong>
      * <p>10.111.53XXX</p>
      */
@@ -91,6 +114,8 @@ public class DescribeOutgoingDestinationRequest extends TeaModel {
     public String privateIP;
 
     /**
+     * <p>The public IP address.</p>
+     * 
      * <strong>example:</strong>
      * <p>47.96.74.XXX</p>
      */
@@ -98,6 +123,8 @@ public class DescribeOutgoingDestinationRequest extends TeaModel {
     public String publicIP;
 
     /**
+     * <p>The security policy for the outbound connection.</p>
+     * 
      * <strong>example:</strong>
      * <p>pass</p>
      */
@@ -105,6 +132,8 @@ public class DescribeOutgoingDestinationRequest extends TeaModel {
     public String securitySuggest;
 
     /**
+     * <p>The field to use for sorting.</p>
+     * 
      * <strong>example:</strong>
      * <p>InBytes</p>
      */
@@ -112,6 +141,8 @@ public class DescribeOutgoingDestinationRequest extends TeaModel {
     public String sort;
 
     /**
+     * <p>The source IP address of the visitor.</p>
+     * 
      * <strong>example:</strong>
      * <p>106.3.198.XXX</p>
      */
@@ -119,6 +150,7 @@ public class DescribeOutgoingDestinationRequest extends TeaModel {
     public String sourceIp;
 
     /**
+     * <p>The start of the time range to query. The value is a UNIX timestamp. Unit: seconds.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -128,6 +160,8 @@ public class DescribeOutgoingDestinationRequest extends TeaModel {
     public String startTime;
 
     /**
+     * <p>The tag ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>FirstFlow</p>
      */

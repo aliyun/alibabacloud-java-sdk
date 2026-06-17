@@ -4,10 +4,15 @@ package com.aliyun.cloudfw20171207.models;
 import com.aliyun.tea.*;
 
 public class DescribeLogStoreInfoResponseBody extends TeaModel {
+    /**
+     * <p>The information list.</p>
+     */
     @NameInMap("InfoList")
     public java.util.List<DescribeLogStoreInfoResponseBodyInfoList> infoList;
 
     /**
+     * <p>The number of times the log storage mode can be changed.</p>
+     * 
      * <strong>example:</strong>
      * <p>2</p>
      */
@@ -15,7 +20,7 @@ public class DescribeLogStoreInfoResponseBody extends TeaModel {
     public Integer logModifyQuota;
 
     /**
-     * <p>The name of the SLS LogStore in the log service.</p>
+     * <p>The name of the SLS Logstore.</p>
      * 
      * <strong>example:</strong>
      * <p>xxx-logstore</p>
@@ -24,6 +29,8 @@ public class DescribeLogStoreInfoResponseBody extends TeaModel {
     public String logStoreName;
 
     /**
+     * <p>The log version. 1: indicates one Logstore. 2: indicates two Logstores.</p>
+     * 
      * <strong>example:</strong>
      * <p>2</p>
      */
@@ -31,7 +38,7 @@ public class DescribeLogStoreInfoResponseBody extends TeaModel {
     public Integer logVersion;
 
     /**
-     * <p>The Project name of the log service.</p>
+     * <p>The name of the Simple Log Service project.</p>
      * 
      * <strong>example:</strong>
      * <p>project-xxx-cn-hangzhou</p>
@@ -40,7 +47,7 @@ public class DescribeLogStoreInfoResponseBody extends TeaModel {
     public String projectName;
 
     /**
-     * <p>Available log storage capacity. Unit: Byte.</p>
+     * <p>The available log storage capacity, in bytes.</p>
      * 
      * <strong>example:</strong>
      * <p>50000000</p>
@@ -49,7 +56,7 @@ public class DescribeLogStoreInfoResponseBody extends TeaModel {
     public Long quota;
 
     /**
-     * <p>The region ID for log delivery.</p>
+     * <p>The ID of the region where logs are delivered.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-shanghai</p>
@@ -58,7 +65,7 @@ public class DescribeLogStoreInfoResponseBody extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of this request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>C6C3B72B********E95FB0A161</p>
@@ -67,13 +74,17 @@ public class DescribeLogStoreInfoResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The task ID.</p>
+     * 
      * <strong>example:</strong>
-     * <p>用户进行日志修改所产生的任务id。</p>
+     * <p>132</p>
      */
     @NameInMap("TaskId")
     public String taskId;
 
     /**
+     * <p>The total purchased log storage capacity, in bytes.</p>
+     * 
      * <strong>example:</strong>
      * <p>50000000</p>
      */
@@ -81,7 +92,7 @@ public class DescribeLogStoreInfoResponseBody extends TeaModel {
     public Long totalQuota;
 
     /**
-     * <p>Log storage duration. Unit: days.</p>
+     * <p>The storage duration of logs, in days.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -90,9 +101,9 @@ public class DescribeLogStoreInfoResponseBody extends TeaModel {
     public Integer ttl;
 
     /**
-     * <p>Used storage capacity. Unit: Byte.</p>
+     * <p>The used storage capacity, in bytes.</p>
      * <blockquote>
-     * <p>The statistics of the log service have a delay of approximately two hours.</p>
+     * <p>Statistics from Simple Log Service may be delayed by up to two hours.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -204,6 +215,8 @@ public class DescribeLogStoreInfoResponseBody extends TeaModel {
 
     public static class DescribeLogStoreInfoResponseBodyInfoList extends TeaModel {
         /**
+         * <p>The name of the SLS Logstore.</p>
+         * 
          * <strong>example:</strong>
          * <p>xxx-logstore</p>
          */
@@ -211,6 +224,8 @@ public class DescribeLogStoreInfoResponseBody extends TeaModel {
         public String logStoreName;
 
         /**
+         * <p>The maximum number of shards supported for scaling.</p>
+         * 
          * <strong>example:</strong>
          * <p>4</p>
          */
@@ -218,6 +233,8 @@ public class DescribeLogStoreInfoResponseBody extends TeaModel {
         public Integer maxSplitShard;
 
         /**
+         * <p>The name of the Simple Log Service project.</p>
+         * 
          * <strong>example:</strong>
          * <p>cloudfirewall-project-14151892848****-cn-hangzhou</p>
          */
@@ -225,6 +242,8 @@ public class DescribeLogStoreInfoResponseBody extends TeaModel {
         public String projectName;
 
         /**
+         * <p>The storage capacity threshold, in bytes.</p>
+         * 
          * <strong>example:</strong>
          * <p>50000000</p>
          */
@@ -232,6 +251,8 @@ public class DescribeLogStoreInfoResponseBody extends TeaModel {
         public Long quota;
 
         /**
+         * <p>The region ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-qingdao</p>
          */
@@ -239,6 +260,8 @@ public class DescribeLogStoreInfoResponseBody extends TeaModel {
         public String regionId;
 
         /**
+         * <p>The number of shards in use.</p>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */
@@ -246,6 +269,8 @@ public class DescribeLogStoreInfoResponseBody extends TeaModel {
         public Integer shard;
 
         /**
+         * <p>The location of the Logstore. Valid values: \<code>cn\\</code> for the Chinese mainland and \<code>intl\\</code> for regions outside the Chinese mainland.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn</p>
          */
@@ -253,6 +278,8 @@ public class DescribeLogStoreInfoResponseBody extends TeaModel {
         public String site;
 
         /**
+         * <p>The storage duration of logs, in days.</p>
+         * 
          * <strong>example:</strong>
          * <p>180</p>
          */
@@ -260,6 +287,8 @@ public class DescribeLogStoreInfoResponseBody extends TeaModel {
         public Integer ttl;
 
         /**
+         * <p>The amount of stored logs, in bytes.</p>
+         * 
          * <strong>example:</strong>
          * <p>21852955752</p>
          */

@@ -4,6 +4,9 @@ package com.aliyun.cloudfw20171207.models;
 import com.aliyun.tea.*;
 
 public class ModifyThreatIntelligenceSwitchRequest extends TeaModel {
+    /**
+     * <p>The list of threat intelligence categories.</p>
+     */
     @NameInMap("CategoryList")
     public java.util.List<ModifyThreatIntelligenceSwitchRequestCategoryList> categoryList;
 
@@ -22,6 +25,14 @@ public class ModifyThreatIntelligenceSwitchRequest extends TeaModel {
 
     public static class ModifyThreatIntelligenceSwitchRequestCategoryList extends TeaModel {
         /**
+         * <p>The action of the rule. Valid values:</p>
+         * <ul>
+         * <li><p><strong>alert</strong>: observation</p>
+         * </li>
+         * <li><p><strong>drop</strong>: block</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>alert</p>
          */
@@ -29,6 +40,8 @@ public class ModifyThreatIntelligenceSwitchRequest extends TeaModel {
         public String action;
 
         /**
+         * <p>The ID of the threat intelligence category.</p>
+         * 
          * <strong>example:</strong>
          * <p>IpOutThreatTorExit</p>
          */
@@ -36,6 +49,14 @@ public class ModifyThreatIntelligenceSwitchRequest extends TeaModel {
         public String categoryId;
 
         /**
+         * <p>The status of the switch. Valid values:</p>
+         * <ul>
+         * <li><p><strong>1</strong>: enabled</p>
+         * </li>
+         * <li><p><strong>0</strong>: disabled</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */

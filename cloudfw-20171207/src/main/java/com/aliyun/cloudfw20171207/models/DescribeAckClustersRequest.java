@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeAckClustersRequest extends TeaModel {
     /**
+     * <p>The ID of the ACK cluster.</p>
+     * 
      * <strong>example:</strong>
      * <p>cb0f5640b1b2d404cad6ba21509d7847b</p>
      */
@@ -12,6 +14,8 @@ public class DescribeAckClustersRequest extends TeaModel {
     public String clusterId;
 
     /**
+     * <p>The name of the ACK cluster.</p>
+     * 
      * <strong>example:</strong>
      * <p>ack-cluster-name</p>
      */
@@ -19,6 +23,8 @@ public class DescribeAckClustersRequest extends TeaModel {
     public String clusterName;
 
     /**
+     * <p>The specification of the ACK cluster.</p>
+     * 
      * <strong>example:</strong>
      * <p>ack.pro.small</p>
      */
@@ -26,6 +32,8 @@ public class DescribeAckClustersRequest extends TeaModel {
     public String clusterSpec;
 
     /**
+     * <p>The status of the ACK cluster connector.</p>
+     * 
      * <strong>example:</strong>
      * <p>ready</p>
      */
@@ -33,6 +41,8 @@ public class DescribeAckClustersRequest extends TeaModel {
     public String connectorStatus;
 
     /**
+     * <p>The Alibaba Cloud UID of the account to which the ACK cluster resources belong.</p>
+     * 
      * <strong>example:</strong>
      * <p>135809047715****</p>
      */
@@ -40,6 +50,7 @@ public class DescribeAckClustersRequest extends TeaModel {
     public String memberUid;
 
     /**
+     * <p>The page number.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -49,6 +60,7 @@ public class DescribeAckClustersRequest extends TeaModel {
     public String pageNo;
 
     /**
+     * <p>The number of entries per page.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -58,6 +70,7 @@ public class DescribeAckClustersRequest extends TeaModel {
     public String pageSize;
 
     /**
+     * <p>The region ID of the ACK cluster.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

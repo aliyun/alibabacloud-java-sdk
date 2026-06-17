@@ -5,10 +5,12 @@ import com.aliyun.tea.*;
 
 public class DescribeVpcListLiteRequest extends TeaModel {
     /**
-     * <p>The language of the content within the request and response. Valid values:</p>
+     * <p>The language of the request and response. Valid values:</p>
      * <ul>
-     * <li><strong>zh</strong> (default): Chinese</li>
-     * <li><strong>en</strong>: English</li>
+     * <li><p><strong>zh</strong> (default): Chinese.</p>
+     * </li>
+     * <li><p><strong>en</strong>: English.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,9 +20,9 @@ public class DescribeVpcListLiteRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The region ID of the VPC.</p>
+     * <p>The ID of the region where the VPC resides.</p>
      * <blockquote>
-     * <p> For more information about Cloud Firewall supported regions, see <a href="https://help.aliyun.com/document_detail/195657.html">Supported regions</a>.</p>
+     * <p>For more information about the regions that Cloud Firewall supports, see <a href="https://help.aliyun.com/document_detail/195657.html">Supported regions</a>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -30,7 +32,7 @@ public class DescribeVpcListLiteRequest extends TeaModel {
     public String regionNo;
 
     /**
-     * <p>The source IP address of the request.</p>
+     * <p>The source IP address of the requester.</p>
      * 
      * <strong>example:</strong>
      * <p>58.34.174.194</p>
@@ -39,7 +41,7 @@ public class DescribeVpcListLiteRequest extends TeaModel {
     public String sourceIp;
 
     /**
-     * <p>The ID of the VPC.</p>
+     * <p>The instance ID of the VPC.</p>
      * 
      * <strong>example:</strong>
      * <p>vpc-8vbwbo90rq0anm6t****</p>
@@ -48,7 +50,7 @@ public class DescribeVpcListLiteRequest extends TeaModel {
     public String vpcId;
 
     /**
-     * <p>The name of the VPC.</p>
+     * <p>The instance name of the VPC.</p>
      * 
      * <strong>example:</strong>
      * <p>vpc-shanghai</p>

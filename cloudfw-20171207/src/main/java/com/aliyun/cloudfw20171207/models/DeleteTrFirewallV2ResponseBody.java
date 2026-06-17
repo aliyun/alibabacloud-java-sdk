@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteTrFirewallV2ResponseBody extends TeaModel {
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>A774E66E-B170-59FC-9AAF-3068B15E991F</p>

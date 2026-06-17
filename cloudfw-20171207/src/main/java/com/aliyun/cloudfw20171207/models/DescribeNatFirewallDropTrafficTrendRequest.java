@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeNatFirewallDropTrafficTrendRequest extends TeaModel {
     /**
+     * <p>The end of the time range to query. The value is a UNIX timestamp. Unit: seconds.</p>
+     * 
      * <strong>example:</strong>
      * <p>1758334822</p>
      */
@@ -12,6 +14,8 @@ public class DescribeNatFirewallDropTrafficTrendRequest extends TeaModel {
     public Long endTime;
 
     /**
+     * <p>The source IP address.</p>
+     * 
      * <strong>example:</strong>
      * <p>122.190.56.XXX</p>
      */
@@ -19,6 +23,8 @@ public class DescribeNatFirewallDropTrafficTrendRequest extends TeaModel {
     public String sourceIp;
 
     /**
+     * <p>The start of the time range to query. The value is a UNIX timestamp. Unit: seconds.</p>
+     * 
      * <strong>example:</strong>
      * <p>1740968766</p>
      */

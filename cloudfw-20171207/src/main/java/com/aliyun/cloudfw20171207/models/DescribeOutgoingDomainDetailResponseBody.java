@@ -4,13 +4,21 @@ package com.aliyun.cloudfw20171207.models;
 import com.aliyun.tea.*;
 
 public class DescribeOutgoingDomainDetailResponseBody extends TeaModel {
+    /**
+     * <p>The list of application names.</p>
+     */
     @NameInMap("ApplicationNameList")
     public java.util.List<String> applicationNameList;
 
+    /**
+     * <p>The list of assets.</p>
+     */
     @NameInMap("AssetList")
     public java.util.List<DescribeOutgoingDomainDetailResponseBodyAssetList> assetList;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>98AF5888-9606-59CF-888F-032A9ED0****</p>
      */
@@ -18,6 +26,8 @@ public class DescribeOutgoingDomainDetailResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total number of entries.</p>
+     * 
      * <strong>example:</strong>
      * <p>8</p>
      */
@@ -63,6 +73,8 @@ public class DescribeOutgoingDomainDetailResponseBody extends TeaModel {
 
     public static class DescribeOutgoingDomainDetailResponseBodyAssetListTagList extends TeaModel {
         /**
+         * <p>The risk classification ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>3</p>
          */
@@ -70,6 +82,8 @@ public class DescribeOutgoingDomainDetailResponseBody extends TeaModel {
         public String classId;
 
         /**
+         * <p>The risk level.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -77,6 +91,8 @@ public class DescribeOutgoingDomainDetailResponseBody extends TeaModel {
         public Integer riskLevel;
 
         /**
+         * <p>The tag description.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -84,6 +100,8 @@ public class DescribeOutgoingDomainDetailResponseBody extends TeaModel {
         public String tagDescribe;
 
         /**
+         * <p>The tag ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>FirstFlow</p>
          */
@@ -91,6 +109,8 @@ public class DescribeOutgoingDomainDetailResponseBody extends TeaModel {
         public String tagId;
 
         /**
+         * <p>The tag name.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -146,6 +166,8 @@ public class DescribeOutgoingDomainDetailResponseBody extends TeaModel {
 
     public static class DescribeOutgoingDomainDetailResponseBodyAssetList extends TeaModel {
         /**
+         * <p>The policy coverage status.</p>
+         * 
          * <strong>example:</strong>
          * <p>FullCoverage</p>
          */
@@ -153,6 +175,8 @@ public class DescribeOutgoingDomainDetailResponseBody extends TeaModel {
         public String aclCoverage;
 
         /**
+         * <p>The domain name.</p>
+         * 
          * <strong>example:</strong>
          * <p>example.com</p>
          */
@@ -160,6 +184,8 @@ public class DescribeOutgoingDomainDetailResponseBody extends TeaModel {
         public String domain;
 
         /**
+         * <p>The first access time, as a Unix timestamp in seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>1738548990</p>
          */
@@ -167,6 +193,8 @@ public class DescribeOutgoingDomainDetailResponseBody extends TeaModel {
         public Integer firstTime;
 
         /**
+         * <p>The inbound traffic (response traffic), in bytes.</p>
+         * 
          * <strong>example:</strong>
          * <p>244438.0</p>
          */
@@ -174,6 +202,8 @@ public class DescribeOutgoingDomainDetailResponseBody extends TeaModel {
         public Long inBytes;
 
         /**
+         * <p>The IPS hit count.</p>
+         * 
          * <strong>example:</strong>
          * <p>32</p>
          */
@@ -181,6 +211,8 @@ public class DescribeOutgoingDomainDetailResponseBody extends TeaModel {
         public Long ipsHitCnt;
 
         /**
+         * <p>The last access time, as a Unix timestamp in seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>1739326614</p>
          */
@@ -188,6 +220,8 @@ public class DescribeOutgoingDomainDetailResponseBody extends TeaModel {
         public Integer lastTime;
 
         /**
+         * <p>The NAT Gateway ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>ngw-bp1utx6wj4x9qu9tl****</p>
          */
@@ -195,6 +229,8 @@ public class DescribeOutgoingDomainDetailResponseBody extends TeaModel {
         public String natGatewayId;
 
         /**
+         * <p>The NAT Gateway name.</p>
+         * 
          * <strong>example:</strong>
          * <p>ngw-test</p>
          */
@@ -202,6 +238,8 @@ public class DescribeOutgoingDomainDetailResponseBody extends TeaModel {
         public String natGatewayName;
 
         /**
+         * <p>The outbound traffic (request traffic), in bytes.</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */
@@ -209,6 +247,8 @@ public class DescribeOutgoingDomainDetailResponseBody extends TeaModel {
         public Long outBytes;
 
         /**
+         * <p>The private IP address.</p>
+         * 
          * <strong>example:</strong>
          * <p>10.21.242XXX</p>
          */
@@ -216,6 +256,8 @@ public class DescribeOutgoingDomainDetailResponseBody extends TeaModel {
         public String privateIP;
 
         /**
+         * <p>The public IP address.</p>
+         * 
          * <strong>example:</strong>
          * <p>47.96.181.XXX</p>
          */
@@ -223,6 +265,8 @@ public class DescribeOutgoingDomainDetailResponseBody extends TeaModel {
         public String publicIP;
 
         /**
+         * <p>The region ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-beijing</p>
          */
@@ -230,6 +274,8 @@ public class DescribeOutgoingDomainDetailResponseBody extends TeaModel {
         public String regionNo;
 
         /**
+         * <p>The asset instance ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>i-uf63wjhyoohc1g4z****</p>
          */
@@ -237,6 +283,8 @@ public class DescribeOutgoingDomainDetailResponseBody extends TeaModel {
         public String resourceInstanceId;
 
         /**
+         * <p>The asset instance name.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -244,6 +292,8 @@ public class DescribeOutgoingDomainDetailResponseBody extends TeaModel {
         public String resourceInstanceName;
 
         /**
+         * <p>The type of the asset\&quot;s public IP address.</p>
+         * 
          * <strong>example:</strong>
          * <p>NatEIP</p>
          */
@@ -251,6 +301,8 @@ public class DescribeOutgoingDomainDetailResponseBody extends TeaModel {
         public String resourceType;
 
         /**
+         * <p>The ACL rule ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>08a58465-ff4d-4c47-8782-eb008301****</p>
          */
@@ -258,6 +310,8 @@ public class DescribeOutgoingDomainDetailResponseBody extends TeaModel {
         public String ruleId;
 
         /**
+         * <p>The rule name.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -265,16 +319,23 @@ public class DescribeOutgoingDomainDetailResponseBody extends TeaModel {
         public String ruleName;
 
         /**
+         * <p>The session count.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
         @NameInMap("SessionCount")
         public Long sessionCount;
 
+        /**
+         * <p>The list of tags.</p>
+         */
         @NameInMap("TagList")
         public java.util.List<DescribeOutgoingDomainDetailResponseBodyAssetListTagList> tagList;
 
         /**
+         * <p>The total traffic, in bytes.</p>
+         * 
          * <strong>example:</strong>
          * <p>321120825843</p>
          */
@@ -282,6 +343,8 @@ public class DescribeOutgoingDomainDetailResponseBody extends TeaModel {
         public String totalBytes;
 
         /**
+         * <p>The VPC ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>vpc-9dp16jgwgyvn****</p>
          */

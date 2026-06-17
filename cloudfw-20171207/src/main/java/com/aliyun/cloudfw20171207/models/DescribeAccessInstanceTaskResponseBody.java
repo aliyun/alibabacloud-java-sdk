@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeAccessInstanceTaskResponseBody extends TeaModel {
     /**
+     * <p>Indicates whether the task exists.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -12,6 +14,8 @@ public class DescribeAccessInstanceTaskResponseBody extends TeaModel {
     public Boolean isFound;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>15FCCC52-1E23-57AE-B5EF-3E00A3******</p>
      */
@@ -19,6 +23,8 @@ public class DescribeAccessInstanceTaskResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The time when the task was completed.</p>
+     * 
      * <strong>example:</strong>
      * <p>17151381075</p>
      */
@@ -26,16 +32,26 @@ public class DescribeAccessInstanceTaskResponseBody extends TeaModel {
     public Long taskFinishTimestamp;
 
     /**
+     * <p>The task ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>3c9d576f-fce0-4caa-9116-15033509bdb6</p>
      */
     @NameInMap("TaskId")
     public String taskId;
 
+    /**
+     * <p>The task name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Create an ACK cluster connector</p>
+     */
     @NameInMap("TaskName")
     public String taskName;
 
     /**
+     * <p>The time when the task was created.</p>
+     * 
      * <strong>example:</strong>
      * <p>17151361285</p>
      */
@@ -43,12 +59,17 @@ public class DescribeAccessInstanceTaskResponseBody extends TeaModel {
     public Long taskStartTimestamp;
 
     /**
+     * <p>The task status.</p>
+     * 
      * <strong>example:</strong>
      * <p>running</p>
      */
     @NameInMap("TaskStatus")
     public String taskStatus;
 
+    /**
+     * <p>The steps of the task.</p>
+     */
     @NameInMap("TaskSteps")
     public java.util.List<DescribeAccessInstanceTaskResponseBodyTaskSteps> taskSteps;
 
@@ -122,10 +143,18 @@ public class DescribeAccessInstanceTaskResponseBody extends TeaModel {
     }
 
     public static class DescribeAccessInstanceTaskResponseBodyTaskSteps extends TeaModel {
+        /**
+         * <p>The name of the step.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Obtain ACK cluster information</p>
+         */
         @NameInMap("StepName")
         public String stepName;
 
         /**
+         * <p>The progress of the step.</p>
+         * 
          * <strong>example:</strong>
          * <p>100%</p>
          */
@@ -133,6 +162,8 @@ public class DescribeAccessInstanceTaskResponseBody extends TeaModel {
         public String stepProgress;
 
         /**
+         * <p>The status of the step.</p>
+         * 
          * <strong>example:</strong>
          * <p>finished</p>
          */

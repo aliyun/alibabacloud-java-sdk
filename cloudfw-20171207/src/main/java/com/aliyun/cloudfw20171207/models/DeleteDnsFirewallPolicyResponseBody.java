@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DeleteDnsFirewallPolicyResponseBody extends TeaModel {
     /**
+     * <p>The ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>32314C1E-82CF-582C-853A-B1773F******</p>
      */

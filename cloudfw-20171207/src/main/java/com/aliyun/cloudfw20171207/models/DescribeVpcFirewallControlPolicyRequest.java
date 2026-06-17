@@ -5,14 +5,17 @@ import com.aliyun.tea.*;
 
 public class DescribeVpcFirewallControlPolicyRequest extends TeaModel {
     /**
-     * <p>The action that Cloud Firewall performs on the traffic. Valid values:</p>
+     * <p>The action that is performed on traffic. Valid values:</p>
      * <ul>
-     * <li><strong>accept</strong>: allows the traffic.</li>
-     * <li><strong>drop</strong>: blocks the traffic.</li>
-     * <li><strong>log</strong>: monitors the traffic.</li>
+     * <li><p><strong>accept</strong>: allows the traffic.</p>
+     * </li>
+     * <li><p><strong>drop</strong>: denies the traffic.</p>
+     * </li>
+     * <li><p><strong>log</strong>: monitors the traffic.</p>
+     * </li>
      * </ul>
      * <blockquote>
-     * <p>If you do not specify this parameter, access control policies are queried based on all actions.</p>
+     * <p>If you do not set this parameter, policies of all actions are queried.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -31,7 +34,7 @@ public class DescribeVpcFirewallControlPolicyRequest extends TeaModel {
     public String aclUuid;
 
     /**
-     * <p>The number of the page to return.</p>
+     * <p>The page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -51,7 +54,7 @@ public class DescribeVpcFirewallControlPolicyRequest extends TeaModel {
     /**
      * <p>The destination address in the access control policy. Fuzzy match is supported.</p>
      * <blockquote>
-     * <p>The value of this parameter can be a CIDR block or an address book name.</p>
+     * <p>The value can be a CIDR block, a domain name, or an address book.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -61,11 +64,13 @@ public class DescribeVpcFirewallControlPolicyRequest extends TeaModel {
     public String destination;
 
     /**
-     * <p>The language of the content within the request and response.</p>
+     * <p>The language of the request and response.</p>
      * <p>Valid values:</p>
      * <ul>
-     * <li><strong>zh</strong>: Chinese (default)</li>
-     * <li><strong>en</strong>: English</li>
+     * <li><p><strong>zh</strong> (default): Chinese</p>
+     * </li>
+     * <li><p><strong>en</strong>: English</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -84,7 +89,7 @@ public class DescribeVpcFirewallControlPolicyRequest extends TeaModel {
     public String memberUid;
 
     /**
-     * <p>The number of entries to return on each page.</p>
+     * <p>The number of entries per page.</p>
      * <p>Maximum value: 50.</p>
      * 
      * <strong>example:</strong>
@@ -96,13 +101,17 @@ public class DescribeVpcFirewallControlPolicyRequest extends TeaModel {
     /**
      * <p>The protocol type in the access control policy. Valid values:</p>
      * <ul>
-     * <li><strong>TCP</strong></li>
-     * <li><strong>UDP</strong></li>
-     * <li><strong>ICMP</strong></li>
-     * <li><strong>ANY</strong>: all protocol types</li>
+     * <li><p><strong>TCP</strong></p>
+     * </li>
+     * <li><p><strong>UDP</strong></p>
+     * </li>
+     * <li><p><strong>ICMP</strong></p>
+     * </li>
+     * <li><p><strong>ANY</strong>: all protocols</p>
+     * </li>
      * </ul>
      * <blockquote>
-     * <p>If you do not specify this parameter, access control policies of all protocol types are queried.</p>
+     * <p>If you do not set this parameter, policies of all protocols are queried.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -114,8 +123,10 @@ public class DescribeVpcFirewallControlPolicyRequest extends TeaModel {
     /**
      * <p>The status of the access control policy. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: enabled</li>
-     * <li><strong>false</strong>: disabled</li>
+     * <li><p><strong>true</strong>: enabled</p>
+     * </li>
+     * <li><p><strong>false</strong>: disabled</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -125,13 +136,18 @@ public class DescribeVpcFirewallControlPolicyRequest extends TeaModel {
     public String release;
 
     /**
-     * <p>The recurrence type for the access control policy to take effect. Valid values:</p>
+     * <p>The recurrence type of the access control policy. Valid values:</p>
      * <ul>
-     * <li><strong>Permanent</strong> (default): The policy always takes effect.</li>
-     * <li><strong>None</strong>: The policy takes effect for only once.</li>
-     * <li><strong>Daily</strong>: The policy takes effect on a daily basis.</li>
-     * <li><strong>Weekly</strong>: The policy takes effect on a weekly basis.</li>
-     * <li><strong>Monthly</strong>: The policy takes effect on a monthly basis.</li>
+     * <li><p><strong>Permanent</strong> (default): The policy is always in effect.</p>
+     * </li>
+     * <li><p><strong>None</strong>: The policy is a one-time policy.</p>
+     * </li>
+     * <li><p><strong>Daily</strong>: The policy recurs daily.</p>
+     * </li>
+     * <li><p><strong>Weekly</strong>: The policy recurs weekly.</p>
+     * </li>
+     * <li><p><strong>Monthly</strong>: The policy recurs monthly.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -143,7 +159,7 @@ public class DescribeVpcFirewallControlPolicyRequest extends TeaModel {
     /**
      * <p>The source address in the access control policy. Fuzzy match is supported.</p>
      * <blockquote>
-     * <p>The value of this parameter can be a CIDR block or an address book name.</p>
+     * <p>The value can be a CIDR block or an address book.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -153,13 +169,15 @@ public class DescribeVpcFirewallControlPolicyRequest extends TeaModel {
     public String source;
 
     /**
-     * <p>The instance ID of the VPC firewall. Valid values:</p>
+     * <p>The instance ID of the VPC boundary firewall. You can specify one of the following IDs:</p>
      * <ul>
-     * <li>If the VPC firewall protects the traffic between two VPCs that are connected by using a CEN instance, the value of this parameter must be the ID of the CEN instance.</li>
-     * <li>If the VPC firewall protects the traffic between two VPCs that are connected by using an Express Connect circuit, the value of this parameter must be the instance ID of the VPC firewall.</li>
+     * <li><p>The ID of a Cloud Enterprise Network (CEN) instance if the firewall protects traffic between two VPCs connected via the CEN instance.</p>
+     * </li>
+     * <li><p>The instance ID of the VPC boundary firewall if the firewall protects traffic between two VPCs connected via an Express Connect circuit.</p>
+     * </li>
      * </ul>
      * <blockquote>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/159760.html">DescribeVpcFirewallAclGroupList</a> operation to query the ID.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/159760.html">DescribeVpcFirewallList</a> operation to obtain the ID.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 

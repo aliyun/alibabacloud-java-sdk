@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpdateSecurityProxyResponseBody extends TeaModel {
     /**
+     * <p>The application module.</p>
+     * 
      * <strong>example:</strong>
      * <p>ips_server</p>
      */
@@ -12,6 +14,8 @@ public class UpdateSecurityProxyResponseBody extends TeaModel {
     public String module;
 
     /**
+     * <p>The ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>9E2CCAB4-E789-5BC9-88DC-5CE0358E****</p>
      */

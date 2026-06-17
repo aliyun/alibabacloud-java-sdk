@@ -5,19 +5,20 @@ import com.aliyun.tea.*;
 
 public class ModifyNatFirewallControlPolicyPositionRequest extends TeaModel {
     /**
-     * <p>The UUID of the access control policy.</p>
+     * <p>The unique ID of the access control policy.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>66961eea-e659-4225-84c9-9b6da76ec401</p>
+     * <p>66461eea-e659-4225-84c9-*****</p>
      */
     @NameInMap("AclUuid")
     public String aclUuid;
 
     /**
-     * <p>The direction of the traffic to which the access control policy applies.</p>
+     * <p>The traffic direction of the access control policy.</p>
+     * <p>Valid value:</p>
      * <ul>
-     * <li>Set the value to <strong>out</strong>.</li>
+     * <li><strong>out</strong>: outbound traffic.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -27,10 +28,12 @@ public class ModifyNatFirewallControlPolicyPositionRequest extends TeaModel {
     public String direction;
 
     /**
-     * <p>The language of the content within the response. Valid values:</p>
+     * <p>The language of the response message. Valid values:</p>
      * <ul>
-     * <li><strong>zh</strong>: Chinese (default)</li>
-     * <li><strong>en</strong>: English</li>
+     * <li><p><strong>zh</strong> (default): Chinese</p>
+     * </li>
+     * <li><p><strong>en</strong>: English</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -40,7 +43,7 @@ public class ModifyNatFirewallControlPolicyPositionRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The ID of the NAT gateway.</p>
+     * <p>The ID of the NAT Gateway.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -50,11 +53,12 @@ public class ModifyNatFirewallControlPolicyPositionRequest extends TeaModel {
     public String natGatewayId;
 
     /**
-     * <p>The new priority of the IPv4 access control policy. You must specify a numeric value for this parameter. The value 1 indicates the highest priority. A larger value indicates a lower priority.</p>
+     * <p>The new priority for the IPv4 access control policy of the NAT firewall.
+     * Priorities are represented by numbers. A smaller number indicates a higher priority. The value 1 indicates the highest priority.</p>
      * <blockquote>
-     * <p>Make sure that the value of this parameter is within the priority range of existing IPv4 access control policies. Otherwise, an error occurs when you call this operation.</p>
+     * <p>The new priority must be within the range of existing priorities for IPv4 policies of the NAT firewall. Otherwise, the call fails.</p>
      * </blockquote>
-     * <p>Before you call this operation, we recommend that you call the DescribeNatFirewallPolicyPriorUsed operation to query the priority range of the IPv4 access control policies in the specified traffic direction.</p>
+     * <p>Before calling this operation, call the DescribeNatFirewallPolicyPriorUsed operation to query the priority range of existing IPv4 policies for the specified traffic direction of the NAT firewall.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

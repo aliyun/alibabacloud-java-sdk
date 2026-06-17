@@ -4,10 +4,15 @@ package com.aliyun.cloudfw20171207.models;
 import com.aliyun.tea.*;
 
 public class DescribeRiskEventTopAttackAppRequest extends TeaModel {
+    /**
+     * <p>The list of attacked applications.</p>
+     */
     @NameInMap("AttackApp")
     public java.util.List<String> attackApp;
 
     /**
+     * <p>The type of attack.</p>
+     * 
      * <strong>example:</strong>
      * <p>3</p>
      */
@@ -15,6 +20,8 @@ public class DescribeRiskEventTopAttackAppRequest extends TeaModel {
     public String attackType;
 
     /**
+     * <p>The purchased edition.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -22,6 +29,7 @@ public class DescribeRiskEventTopAttackAppRequest extends TeaModel {
     public String buyVersion;
 
     /**
+     * <p>The end time of the query. The value is a UNIX timestamp in seconds.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -31,6 +39,8 @@ public class DescribeRiskEventTopAttackAppRequest extends TeaModel {
     public String endTime;
 
     /**
+     * <p>The language of the response.</p>
+     * 
      * <strong>example:</strong>
      * <p>zh</p>
      */
@@ -38,6 +48,8 @@ public class DescribeRiskEventTopAttackAppRequest extends TeaModel {
     public String lang;
 
     /**
+     * <p>The source IP address of the visitor.</p>
+     * 
      * <strong>example:</strong>
      * <p>182.150.22.XXX</p>
      */
@@ -45,6 +57,7 @@ public class DescribeRiskEventTopAttackAppRequest extends TeaModel {
     public String sourceIp;
 
     /**
+     * <p>The start time of the query. The value is a UNIX timestamp in seconds.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateVpcFirewallTaskResponseBody extends TeaModel {
     /**
+     * <p>The application module.</p>
+     * 
      * <strong>example:</strong>
      * <p>ips_server</p>
      */
@@ -12,6 +14,8 @@ public class CreateVpcFirewallTaskResponseBody extends TeaModel {
     public String module;
 
     /**
+     * <p>The ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>53252B14-BF7C-5A2D-9750-56F827EB****</p>
      */

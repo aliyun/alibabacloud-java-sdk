@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateInstanceSyncTaskRequest extends TeaModel {
     /**
+     * <p>The language type.</p>
+     * 
      * <strong>example:</strong>
      * <p>zh</p>
      */
@@ -12,6 +14,8 @@ public class CreateInstanceSyncTaskRequest extends TeaModel {
     public String lang;
 
     /**
+     * <p>The source IP address of the visitor.</p>
+     * 
      * <strong>example:</strong>
      * <p>60.182.79.XXX</p>
      */

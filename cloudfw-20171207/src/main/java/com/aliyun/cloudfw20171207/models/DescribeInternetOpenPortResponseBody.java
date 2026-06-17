@@ -4,13 +4,21 @@ package com.aliyun.cloudfw20171207.models;
 import com.aliyun.tea.*;
 
 public class DescribeInternetOpenPortResponseBody extends TeaModel {
+    /**
+     * <p>The list of returned data.</p>
+     */
     @NameInMap("DataList")
     public java.util.List<DescribeInternetOpenPortResponseBodyDataList> dataList;
 
+    /**
+     * <p>The pagination information.</p>
+     */
     @NameInMap("PageInfo")
     public DescribeInternetOpenPortResponseBodyPageInfo pageInfo;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>F3637663-991B-547F-9163-1A5AC367****</p>
      */
@@ -48,6 +56,8 @@ public class DescribeInternetOpenPortResponseBody extends TeaModel {
 
     public static class DescribeInternetOpenPortResponseBodyDataList extends TeaModel {
         /**
+         * <p>The number of details.</p>
+         * 
          * <strong>example:</strong>
          * <p>5</p>
          */
@@ -55,6 +65,8 @@ public class DescribeInternetOpenPortResponseBody extends TeaModel {
         public Integer detailNum;
 
         /**
+         * <p>The inbound traffic.</p>
+         * 
          * <strong>example:</strong>
          * <p>1456536639.0</p>
          */
@@ -62,6 +74,8 @@ public class DescribeInternetOpenPortResponseBody extends TeaModel {
         public Long inBytes;
 
         /**
+         * <p>The outbound traffic.</p>
+         * 
          * <strong>example:</strong>
          * <p>117200.0</p>
          */
@@ -69,6 +83,8 @@ public class DescribeInternetOpenPortResponseBody extends TeaModel {
         public Long outBytes;
 
         /**
+         * <p>The open port.</p>
+         * 
          * <strong>example:</strong>
          * <p>80</p>
          */
@@ -76,6 +92,8 @@ public class DescribeInternetOpenPortResponseBody extends TeaModel {
         public Integer port;
 
         /**
+         * <p>The security threat.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -83,6 +101,8 @@ public class DescribeInternetOpenPortResponseBody extends TeaModel {
         public String probRisk;
 
         /**
+         * <p>The description of the security threat.</p>
+         * 
          * <strong>example:</strong>
          * <p>desc</p>
          */
@@ -90,6 +110,8 @@ public class DescribeInternetOpenPortResponseBody extends TeaModel {
         public String probRiskDesc;
 
         /**
+         * <p>The protocol.</p>
+         * 
          * <strong>example:</strong>
          * <p>tcp</p>
          */
@@ -97,6 +119,8 @@ public class DescribeInternetOpenPortResponseBody extends TeaModel {
         public String protocol;
 
         /**
+         * <p>The number of public IP addresses that have the port open.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -104,6 +128,8 @@ public class DescribeInternetOpenPortResponseBody extends TeaModel {
         public Integer publicIpNum;
 
         /**
+         * <p>The risk level.</p>
+         * 
          * <strong>example:</strong>
          * <p>3</p>
          */
@@ -111,16 +137,23 @@ public class DescribeInternetOpenPortResponseBody extends TeaModel {
         public Integer riskLevel;
 
         /**
+         * <p>The description of the risk.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
         @NameInMap("RiskReason")
         public String riskReason;
 
+        /**
+         * <p>The list of applications.</p>
+         */
         @NameInMap("ServiceNameList")
         public java.util.List<String> serviceNameList;
 
         /**
+         * <p>The recommended policy level.</p>
+         * 
          * <strong>example:</strong>
          * <p>20</p>
          */
@@ -128,6 +161,8 @@ public class DescribeInternetOpenPortResponseBody extends TeaModel {
         public Integer suggestLevel;
 
         /**
+         * <p>The total traffic. Unit: bytes.</p>
+         * 
          * <strong>example:</strong>
          * <p>621404</p>
          */
@@ -135,6 +170,8 @@ public class DescribeInternetOpenPortResponseBody extends TeaModel {
         public Long totalBytes;
 
         /**
+         * <p>The percentage of traffic in the last 24 hours. Valid values: <strong>1</strong> to <strong>100</strong>.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -142,6 +179,8 @@ public class DescribeInternetOpenPortResponseBody extends TeaModel {
         public String trafficPercent1Day;
 
         /**
+         * <p>The percentage of traffic in the last 30 days.</p>
+         * 
          * <strong>example:</strong>
          * <p>48</p>
          */
@@ -149,12 +188,17 @@ public class DescribeInternetOpenPortResponseBody extends TeaModel {
         public String trafficPercent30Day;
 
         /**
+         * <p>The percentage of traffic in the last 7 days.</p>
+         * 
          * <strong>example:</strong>
          * <p>30</p>
          */
         @NameInMap("TrafficPercent7Day")
         public String trafficPercent7Day;
 
+        /**
+         * <p>The reason why the protocol is not identified when the protocol is detected as Unknown.</p>
+         */
         @NameInMap("UnknownReason")
         public java.util.List<String> unknownReason;
 
@@ -303,6 +347,8 @@ public class DescribeInternetOpenPortResponseBody extends TeaModel {
 
     public static class DescribeInternetOpenPortResponseBodyPageInfo extends TeaModel {
         /**
+         * <p>The current page number.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -310,6 +356,8 @@ public class DescribeInternetOpenPortResponseBody extends TeaModel {
         public Integer currentPage;
 
         /**
+         * <p>The number of entries per page.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -317,6 +365,8 @@ public class DescribeInternetOpenPortResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
+         * <p>The total number of entries.</p>
+         * 
          * <strong>example:</strong>
          * <p>39</p>
          */

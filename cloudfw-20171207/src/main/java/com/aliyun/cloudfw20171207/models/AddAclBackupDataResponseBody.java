@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class AddAclBackupDataResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>244EA37C-D2AB-54A7-B6E3-7ED0E9A1****</p>
      */

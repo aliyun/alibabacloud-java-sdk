@@ -5,26 +5,28 @@ import com.aliyun.tea.*;
 
 public class ModifyTrFirewallV2RoutePolicyScopeRequest extends TeaModel {
     /**
-     * <p>The secondary traffic redirection instances.</p>
+     * <p>The destination instances.</p>
      */
     @NameInMap("DestCandidateList")
     public java.util.List<ModifyTrFirewallV2RoutePolicyScopeRequestDestCandidateList> destCandidateList;
 
     /**
-     * <p>The instance ID of the virtual private cloud (VPC) firewall.</p>
+     * <p>The ID of the TR firewall instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>vfw-tr-6520de0253bc4669bbd9</p>
+     * <p>vfw-tr-6520de0253bc4669****</p>
      */
     @NameInMap("FirewallId")
     public String firewallId;
 
     /**
-     * <p>The language of the content within the response. Valid values:</p>
+     * <p>The language of the response. Valid values:</p>
      * <ul>
-     * <li><strong>zh</strong> (default): Chinese</li>
-     * <li><strong>en</strong>: English</li>
+     * <li><p><strong>zh</strong> (default): Chinese</p>
+     * </li>
+     * <li><p><strong>en</strong>: English</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -34,10 +36,12 @@ public class ModifyTrFirewallV2RoutePolicyScopeRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>Specifies whether to restore the traffic redirection configurations. Valid values:</p>
+     * <p>Specifies whether to restore the traffic redirection configuration. Valid values:</p>
      * <ul>
-     * <li>true: roll back</li>
-     * <li>false: withdraw</li>
+     * <li><p>true: Rolls back the routes.</p>
+     * </li>
+     * <li><p>false: Revokes the routes.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -47,7 +51,7 @@ public class ModifyTrFirewallV2RoutePolicyScopeRequest extends TeaModel {
     public String shouldRecover;
 
     /**
-     * <p>The primary traffic redirection instances.</p>
+     * <p>The source instances.</p>
      */
     @NameInMap("SrcCandidateList")
     public java.util.List<ModifyTrFirewallV2RoutePolicyScopeRequestSrcCandidateList> srcCandidateList;
@@ -57,7 +61,7 @@ public class ModifyTrFirewallV2RoutePolicyScopeRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>policy-4d724d0139df48f18091</p>
+     * <p>policy-4d724d0139df48f1****</p>
      */
     @NameInMap("TrFirewallRoutePolicyId")
     public String trFirewallRoutePolicyId;
@@ -117,16 +121,16 @@ public class ModifyTrFirewallV2RoutePolicyScopeRequest extends TeaModel {
 
     public static class ModifyTrFirewallV2RoutePolicyScopeRequestDestCandidateList extends TeaModel {
         /**
-         * <p>The ID of the traffic redirection instance.</p>
+         * <p>The ID of the instance.</p>
          * 
          * <strong>example:</strong>
-         * <p>vpc-2ze9epancaw8t4shajuzi</p>
+         * <p>vpc-2ze9epancaw8t4uzi****</p>
          */
         @NameInMap("CandidateId")
         public String candidateId;
 
         /**
-         * <p>The type of the traffic redirection instance.</p>
+         * <p>The type of the instance.</p>
          * 
          * <strong>example:</strong>
          * <p>VPC</p>
@@ -159,16 +163,16 @@ public class ModifyTrFirewallV2RoutePolicyScopeRequest extends TeaModel {
 
     public static class ModifyTrFirewallV2RoutePolicyScopeRequestSrcCandidateList extends TeaModel {
         /**
-         * <p>The ID of the traffic redirection instance.</p>
+         * <p>The ID of the instance.</p>
          * 
          * <strong>example:</strong>
-         * <p>vpc-2ze9epancaw8t4shajuzi</p>
+         * <p>vpc-2ze9epancaw8t4sha****</p>
          */
         @NameInMap("CandidateId")
         public String candidateId;
 
         /**
-         * <p>The type of the traffic redirection instance.</p>
+         * <p>The type of the instance.</p>
          * 
          * <strong>example:</strong>
          * <p>VPC</p>

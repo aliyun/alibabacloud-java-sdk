@@ -5,6 +5,14 @@ import com.aliyun.tea.*;
 
 public class CreateNatFirewallPreCheckRequest extends TeaModel {
     /**
+     * <p>The language of the response message. Valid values:</p>
+     * <ul>
+     * <li><p><strong>zh</strong> (default): Chinese</p>
+     * </li>
+     * <li><p><strong>en</strong>: English</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>zh</p>
      */
@@ -12,6 +20,7 @@ public class CreateNatFirewallPreCheckRequest extends TeaModel {
     public String lang;
 
     /**
+     * <p>The ID of the NAT Gateway.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,6 +30,10 @@ public class CreateNatFirewallPreCheckRequest extends TeaModel {
     public String natGatewayId;
 
     /**
+     * <p>The region ID of the NAT Gateway.</p>
+     * <blockquote>
+     * <p>For more information about the regions where Cloud Firewall is available, see <a href="https://help.aliyun.com/document_detail/195657.html">Supported regions</a>.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -30,6 +43,7 @@ public class CreateNatFirewallPreCheckRequest extends TeaModel {
     public String regionNo;
 
     /**
+     * <p>The ID of the VPC instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

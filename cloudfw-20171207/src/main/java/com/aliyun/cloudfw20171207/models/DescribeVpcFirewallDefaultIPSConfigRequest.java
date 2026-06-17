@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeVpcFirewallDefaultIPSConfigRequest extends TeaModel {
     /**
-     * <p>The UID of the member that is managed by your Alibaba Cloud account.</p>
+     * <p>The UID of the member account.</p>
      * 
      * <strong>example:</strong>
      * <p>258039427902****</p>
@@ -16,13 +16,15 @@ public class DescribeVpcFirewallDefaultIPSConfigRequest extends TeaModel {
     /**
      * <p>The instance ID of the VPC firewall. Valid values:</p>
      * <ul>
-     * <li>If the VPC firewall protects mutual access traffic between a VPC and a specified network instance that is attached to a Cloud Enterprise Network (CEN) instance, the value of this parameter is the ID of the CEN instance. The network instance can be a VPC, a virtual border router (VBR), or a Cloud Connect Network (CCN) instance. You can call the <a href="https://help.aliyun.com/document_detail/345777.html">DescribeVpcFirewallCenList</a> operation to query the IDs of CEN instances.</li>
-     * <li>If the VPC firewall protects traffic between two VPCs that are connected by using an Express Connect circuit, the value of this parameter is the instance ID of the VPC firewall. You can call the <a href="https://help.aliyun.com/document_detail/342932.html">DescribeVpcFirewallList</a> operation to query the instance IDs of VPC firewalls.</li>
+     * <li><p>If the VPC firewall protects a network instance in a Cloud Enterprise Network (CEN) instance, set this parameter to the ID of the CEN instance. To query the ID of a CEN instance of Basic Edition, call the <a href="https://help.aliyun.com/document_detail/345777.html">DescribeVpcFirewallCenList</a> operation. To query the ID of a CEN instance of Enterprise Edition, call the <a href="https://help.aliyun.com/document_detail/2384695.html">DescribeTrFirewallsV2List</a> operation.</p>
+     * </li>
+     * <li><p>If the VPC firewall protects traffic between two VPCs connected by an Express Connect circuit, set this parameter to the ID of the VPC firewall instance. To query the ID of the VPC firewall instance, call the <a href="https://help.aliyun.com/document_detail/342932.html">DescribeVpcFirewallList</a> operation.</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>vfw-m5e7dbc4y****</p>
+     * <p>cen-****</p>
      */
     @NameInMap("VpcFirewallId")
     public String vpcFirewallId;

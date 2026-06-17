@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeVpcFirewallManualVSwitchListResponseBody extends TeaModel {
     /**
+     * <p>The ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>6EED3674-74E7-54DC-8FD4-6A374133****</p>
      */
@@ -12,12 +14,17 @@ public class DescribeVpcFirewallManualVSwitchListResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total number of entries returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>3</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
+    /**
+     * <p>The list of vSwitches.</p>
+     */
     @NameInMap("VSwitchList")
     public java.util.List<DescribeVpcFirewallManualVSwitchListResponseBodyVSwitchList> vSwitchList;
 
@@ -52,6 +59,11 @@ public class DescribeVpcFirewallManualVSwitchListResponseBody extends TeaModel {
 
     public static class DescribeVpcFirewallManualVSwitchListResponseBodyVSwitchList extends TeaModel {
         /**
+         * <p>The UID of the Alibaba Cloud account.</p>
+         * <blockquote>
+         * <p>The root account of the Cloud Firewall member account.</p>
+         * </blockquote>
+         * 
          * <strong>example:</strong>
          * <p>122167357026****</p>
          */
@@ -59,6 +71,8 @@ public class DescribeVpcFirewallManualVSwitchListResponseBody extends TeaModel {
         public Long aliUid;
 
         /**
+         * <p>The number of available IP addresses in the vSwitch.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -66,6 +80,8 @@ public class DescribeVpcFirewallManualVSwitchListResponseBody extends TeaModel {
         public Long availableIpAddressCount;
 
         /**
+         * <p>The IPv4 CIDR block.</p>
+         * 
          * <strong>example:</strong>
          * <p>10.0.31.0/24</p>
          */
@@ -73,6 +89,8 @@ public class DescribeVpcFirewallManualVSwitchListResponseBody extends TeaModel {
         public String cidrBlock;
 
         /**
+         * <p>The ID of the owner.</p>
+         * 
          * <strong>example:</strong>
          * <p>137578716100****</p>
          */
@@ -80,6 +98,8 @@ public class DescribeVpcFirewallManualVSwitchListResponseBody extends TeaModel {
         public Long ownerId;
 
         /**
+         * <p>The region ID of the instance.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-beijing</p>
          */
@@ -87,6 +107,8 @@ public class DescribeVpcFirewallManualVSwitchListResponseBody extends TeaModel {
         public String regionNo;
 
         /**
+         * <p>The ID of the associated route table.</p>
+         * 
          * <strong>example:</strong>
          * <p>vtb-2zet3gyk01o07so****</p>
          */
@@ -94,6 +116,8 @@ public class DescribeVpcFirewallManualVSwitchListResponseBody extends TeaModel {
         public String routeTableId;
 
         /**
+         * <p>The status.</p>
+         * 
          * <strong>example:</strong>
          * <p>Available</p>
          */
@@ -101,6 +125,8 @@ public class DescribeVpcFirewallManualVSwitchListResponseBody extends TeaModel {
         public String status;
 
         /**
+         * <p>The ID of the vSwitch.</p>
+         * 
          * <strong>example:</strong>
          * <p>vsw-bp10d0kcp907721z****</p>
          */
@@ -108,6 +134,8 @@ public class DescribeVpcFirewallManualVSwitchListResponseBody extends TeaModel {
         public String vSwitchId;
 
         /**
+         * <p>The name of the vSwitch.</p>
+         * 
          * <strong>example:</strong>
          * <p>vsw-test</p>
          */
@@ -115,6 +143,8 @@ public class DescribeVpcFirewallManualVSwitchListResponseBody extends TeaModel {
         public String vSwitchName;
 
         /**
+         * <p>The ID of the VPC instance.</p>
+         * 
          * <strong>example:</strong>
          * <p>vpc-uf62kq7c364sil2z2****</p>
          */
@@ -122,6 +152,8 @@ public class DescribeVpcFirewallManualVSwitchListResponseBody extends TeaModel {
         public String vpcId;
 
         /**
+         * <p>The zone ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-hangzhou-a</p>
          */

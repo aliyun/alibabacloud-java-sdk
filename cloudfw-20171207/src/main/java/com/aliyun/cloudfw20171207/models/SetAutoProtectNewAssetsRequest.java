@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class SetAutoProtectNewAssetsRequest extends TeaModel {
     /**
+     * <p>Specifies whether to enable automatic traffic redirection. Valid values:</p>
+     * <p><strong>true****false</strong></p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +16,8 @@ public class SetAutoProtectNewAssetsRequest extends TeaModel {
     public Boolean autoProtect;
 
     /**
+     * <p>The language. Valid values are zh (Chinese) and <strong>en</strong> (English). The default value is <strong>zh</strong>.</p>
+     * 
      * <strong>example:</strong>
      * <p>zh</p>
      */
@@ -21,6 +25,8 @@ public class SetAutoProtectNewAssetsRequest extends TeaModel {
     public String lang;
 
     /**
+     * <p>The source IP address of the visitor.</p>
+     * 
      * <strong>example:</strong>
      * <p>60.182.79.XXX</p>
      */

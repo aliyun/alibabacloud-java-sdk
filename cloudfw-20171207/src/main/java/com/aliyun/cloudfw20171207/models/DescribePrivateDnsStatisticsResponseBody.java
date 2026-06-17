@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribePrivateDnsStatisticsResponseBody extends TeaModel {
     /**
+     * <p>The number of private DNS instances in an abnormal state.</p>
+     * 
      * <strong>example:</strong>
      * <p>12</p>
      */
@@ -12,6 +14,8 @@ public class DescribePrivateDnsStatisticsResponseBody extends TeaModel {
     public Long abnormalPrivateDnsCount;
 
     /**
+     * <p>The number of created private DNS instances.</p>
+     * 
      * <strong>example:</strong>
      * <p>6</p>
      */
@@ -19,6 +23,8 @@ public class DescribePrivateDnsStatisticsResponseBody extends TeaModel {
     public Long createdPrivateDnsCount;
 
     /**
+     * <p>The total number of configured domain names.</p>
+     * 
      * <strong>example:</strong>
      * <p>5</p>
      */
@@ -26,6 +32,8 @@ public class DescribePrivateDnsStatisticsResponseBody extends TeaModel {
     public Long domainNameTotalCount;
 
     /**
+     * <p>The number of configured domain names that were created within the specified time range.</p>
+     * 
      * <strong>example:</strong>
      * <p>2</p>
      */
@@ -33,16 +41,23 @@ public class DescribePrivateDnsStatisticsResponseBody extends TeaModel {
     public Long newDomainNameTotalCount;
 
     /**
+     * <p>The number of private DNS instances in a normal state.</p>
+     * 
      * <strong>example:</strong>
      * <p>21</p>
      */
     @NameInMap("NormalPrivateDnsCount")
     public Long normalPrivateDnsCount;
 
+    /**
+     * <p>A list of DNS regions.</p>
+     */
     @NameInMap("PrivateDnsRegionList")
     public java.util.List<DescribePrivateDnsStatisticsResponseBodyPrivateDnsRegionList> privateDnsRegionList;
 
     /**
+     * <p>The ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>5716ED52-1B82-5DE1-8695-EFEC453D****</p>
      */
@@ -112,6 +127,8 @@ public class DescribePrivateDnsStatisticsResponseBody extends TeaModel {
 
     public static class DescribePrivateDnsStatisticsResponseBodyPrivateDnsRegionList extends TeaModel {
         /**
+         * <p>The number of configured domain names for private DNS in the region.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -119,6 +136,8 @@ public class DescribePrivateDnsStatisticsResponseBody extends TeaModel {
         public Long domainNameCount;
 
         /**
+         * <p>The number of configured domain names that were created in the region within the specified time range.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -126,6 +145,8 @@ public class DescribePrivateDnsStatisticsResponseBody extends TeaModel {
         public Long newDomainNameCount;
 
         /**
+         * <p>The number of private DNS instances in the region.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -133,6 +154,8 @@ public class DescribePrivateDnsStatisticsResponseBody extends TeaModel {
         public Long privateDnsCount;
 
         /**
+         * <p>The region.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
          */

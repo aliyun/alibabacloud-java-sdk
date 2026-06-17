@@ -4,10 +4,15 @@ package com.aliyun.cloudfw20171207.models;
 import com.aliyun.tea.*;
 
 public class DescribeAckClusterPodLabelsResponseBody extends TeaModel {
+    /**
+     * <p>A list of ACK labels.</p>
+     */
     @NameInMap("AckLabels")
     public java.util.List<DescribeAckClusterPodLabelsResponseBodyAckLabels> ackLabels;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>6169C0A4-B91A-5D48-AE4D-B9432D15****</p>
      */
@@ -37,6 +42,8 @@ public class DescribeAckClusterPodLabelsResponseBody extends TeaModel {
 
     public static class DescribeAckClusterPodLabelsResponseBodyAckLabels extends TeaModel {
         /**
+         * <p>The tag key.</p>
+         * 
          * <strong>example:</strong>
          * <p>app</p>
          */
@@ -44,6 +51,8 @@ public class DescribeAckClusterPodLabelsResponseBody extends TeaModel {
         public String key;
 
         /**
+         * <p>The tag value.</p>
+         * 
          * <strong>example:</strong>
          * <p>storage-operator</p>
          */

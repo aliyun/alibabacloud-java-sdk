@@ -5,8 +5,8 @@ import com.aliyun.tea.*;
 
 public class ModifyVpcFirewallControlPolicyPositionRequest extends TeaModel {
     /**
-     * <p>The UUID of the access control policy.</p>
-     * <p>If you want to modify the configurations of an access control policy, you must provide the UUID of the policy. You can call the <a href="https://help.aliyun.com/document_detail/159758.html">DescribeVpcFirewallControlPolicy</a> operation to query the UUID.</p>
+     * <p>The unique ID of the access control policy.</p>
+     * <p>To modify an access control policy, provide the unique ID of the policy. Call the <a href="https://help.aliyun.com/document_detail/159758.html">DescribeVpcFirewallControlPolicy</a> operation to obtain the ID.</p>
      * 
      * <strong>example:</strong>
      * <p>2746d9ff-5d7c-449d-a2a9-ccaa15fe****</p>
@@ -15,11 +15,13 @@ public class ModifyVpcFirewallControlPolicyPositionRequest extends TeaModel {
     public String aclUuid;
 
     /**
-     * <p>The language of the content within the request and the response.</p>
+     * <p>The language of the request and response.</p>
      * <p>Valid values:</p>
      * <ul>
-     * <li><strong>zh</strong>: Chinese (default)</li>
-     * <li><strong>en</strong>: English</li>
+     * <li><p><strong>zh</strong> (Default): Chinese</p>
+     * </li>
+     * <li><p><strong>en</strong>: English</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -31,7 +33,7 @@ public class ModifyVpcFirewallControlPolicyPositionRequest extends TeaModel {
     /**
      * <p>The new priority of the access control policy.</p>
      * <blockquote>
-     * <p> For more information about the valid values of the new priority, see <a href="https://help.aliyun.com/document_detail/474145.html">DescribeVpcFirewallPolicyPriorUsed</a>.</p>
+     * <p>For more information about the valid range of priorities, see <a href="https://help.aliyun.com/document_detail/474145.html">DescribePolicyPriorities</a>.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -44,7 +46,7 @@ public class ModifyVpcFirewallControlPolicyPositionRequest extends TeaModel {
     /**
      * <p>The original priority of the access control policy.</p>
      * <blockquote>
-     * <p>This parameter is not recommended. We recommend that you use the AclUuid parameter to specify the policy that you want to modify.</p>
+     * <p>This parameter is deprecated. Use the AclUuid parameter to specify the policy to modify.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -54,13 +56,13 @@ public class ModifyVpcFirewallControlPolicyPositionRequest extends TeaModel {
     public String oldOrder;
 
     /**
-     * <p>The ID of the group to which the access control policy belongs. You can call the <a href="https://help.aliyun.com/document_detail/159760.html">DescribeVpcFirewallAclGroupList</a> operation to query the ID.</p>
+     * <p>The ID of the policy group for the VPC firewall. You can call the <a href="https://help.aliyun.com/document_detail/159760.html">DescribeVpcFirewallAclGroupList</a> operation to obtain the ID.</p>
      * <p>Valid values:</p>
      * <ul>
-     * <li><p>If the VPC firewall is used to protect a CEN instance, the value of this parameter must be the ID of the CEN instance.</p>
+     * <li><p>If the VPC firewall protects a Cloud Enterprise Network (CEN) instance, the ID of the policy group is the ID of the CEN instance.</p>
      * <p>Example: cen-ervw0g12b5jbw\<em>\</em>\<em>\</em></p>
      * </li>
-     * <li><p>If the VPC firewall is used to protect an Express Connect circuit, the value of this parameter must be the instance ID of the VPC firewall.</p>
+     * <li><p>If the VPC firewall protects an Express Connect circuit, the ID of the policy group is the ID of the VPC firewall instance.</p>
      * <p>Example: vfw-a42bbb7b887148c9\<em>\</em>\<em>\</em></p>
      * </li>
      * </ul>

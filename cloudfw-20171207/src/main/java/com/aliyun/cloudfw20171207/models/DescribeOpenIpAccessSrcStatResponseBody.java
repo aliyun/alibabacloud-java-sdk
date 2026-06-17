@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class DescribeOpenIpAccessSrcStatResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>0DC783F1-B3A7-578D-8A63-*****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The list of statistics.</p>
+     */
     @NameInMap("StatList")
     public java.util.List<DescribeOpenIpAccessSrcStatResponseBodyStatList> statList;
 
     /**
+     * <p>The total number of entries.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -52,6 +59,8 @@ public class DescribeOpenIpAccessSrcStatResponseBody extends TeaModel {
 
     public static class DescribeOpenIpAccessSrcStatResponseBodyStatList extends TeaModel {
         /**
+         * <p>The number of abnormal source IP addresses.</p>
+         * 
          * <strong>example:</strong>
          * <p>12</p>
          */
@@ -59,6 +68,8 @@ public class DescribeOpenIpAccessSrcStatResponseBody extends TeaModel {
         public Long abnormalSrcIp;
 
         /**
+         * <p>The application type.</p>
+         * 
          * <strong>example:</strong>
          * <p>HTTP</p>
          */
@@ -66,6 +77,8 @@ public class DescribeOpenIpAccessSrcStatResponseBody extends TeaModel {
         public String app;
 
         /**
+         * <p>The number of normal source IP addresses.</p>
+         * 
          * <strong>example:</strong>
          * <p>21</p>
          */
@@ -73,6 +86,8 @@ public class DescribeOpenIpAccessSrcStatResponseBody extends TeaModel {
         public Long normalSrcIp;
 
         /**
+         * <p>The port number.</p>
+         * 
          * <strong>example:</strong>
          * <p>6163</p>
          */

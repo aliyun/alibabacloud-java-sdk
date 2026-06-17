@@ -14,7 +14,7 @@ public class DescribeTrFirewallV2RoutePolicyListRequest extends TeaModel {
     public Integer currentPage;
 
     /**
-     * <p>The instance ID of the VPC firewall.</p>
+     * <p>The ID of the VPC firewall instance.</p>
      * 
      * <strong>example:</strong>
      * <p>vfw-tr-d5ba592ac6c84aff****</p>
@@ -23,10 +23,12 @@ public class DescribeTrFirewallV2RoutePolicyListRequest extends TeaModel {
     public String firewallId;
 
     /**
-     * <p>The language of the content within the response. Valid values:</p>
+     * <p>The language of the response message. Valid values:</p>
      * <ul>
-     * <li><strong>zh</strong>: Chinese (default)</li>
-     * <li><strong>en</strong>: English</li>
+     * <li><p><strong>zh</strong> (default): Chinese</p>
+     * </li>
+     * <li><p><strong>en</strong>: English</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -36,7 +38,7 @@ public class DescribeTrFirewallV2RoutePolicyListRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The number of entries per page. Default value: 10.</p>
+     * <p>The number of entries to return on each page. Default value: 10.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -45,7 +47,7 @@ public class DescribeTrFirewallV2RoutePolicyListRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The ID of the routing policy.</p>
+     * <p>The ID of the firewall routing policy.</p>
      * 
      * <strong>example:</strong>
      * <p>policy-7b66257c14e141fb****</p>

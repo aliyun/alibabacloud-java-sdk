@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteDnsFirewallPolicyRequest extends TeaModel {
     /**
+     * <p>The unique ID of the access control policy.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,8 @@ public class DeleteDnsFirewallPolicyRequest extends TeaModel {
     public String aclUuid;
 
     /**
+     * <p>The language of the request and response. Valid values: <strong>zh</strong> for Chinese and <strong>en</strong> for English.</p>
+     * 
      * <strong>example:</strong>
      * <p>zh</p>
      */
@@ -21,6 +24,8 @@ public class DeleteDnsFirewallPolicyRequest extends TeaModel {
     public String lang;
 
     /**
+     * <p>The source IP address of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>140.210.39.***</p>
      */

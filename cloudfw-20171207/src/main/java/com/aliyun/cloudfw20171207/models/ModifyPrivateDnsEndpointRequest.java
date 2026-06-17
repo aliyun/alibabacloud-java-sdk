@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyPrivateDnsEndpointRequest extends TeaModel {
     /**
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,12 +15,18 @@ public class ModifyPrivateDnsEndpointRequest extends TeaModel {
     public String accessInstanceId;
 
     /**
+     * <p>The name of the private instance.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Test</p>
      */
     @NameInMap("AccessInstanceName")
     public String accessInstanceName;
 
     /**
+     * <p>The primary DNS server.</p>
+     * 
      * <strong>example:</strong>
      * <p>1.1.1.1</p>
      */
@@ -27,6 +34,13 @@ public class ModifyPrivateDnsEndpointRequest extends TeaModel {
     public String primaryDns;
 
     /**
+     * <p>The private DNS type. Valid values:</p>
+     * <ul>
+     * <li><p><strong>PrivateZone</strong></p>
+     * </li>
+     * <li><p><strong>Custom</strong></p>
+     * </li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -36,6 +50,7 @@ public class ModifyPrivateDnsEndpointRequest extends TeaModel {
     public String privateDnsType;
 
     /**
+     * <p>The region ID of the instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -45,6 +60,8 @@ public class ModifyPrivateDnsEndpointRequest extends TeaModel {
     public String regionNo;
 
     /**
+     * <p>The secondary DNS server.</p>
+     * 
      * <strong>example:</strong>
      * <p>1.1.1.2</p>
      */

@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyUserSlsLogStorageTimeRequest extends TeaModel {
     /**
+     * <p>The ID of the instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,8 @@ public class ModifyUserSlsLogStorageTimeRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>The log version.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -21,6 +24,8 @@ public class ModifyUserSlsLogStorageTimeRequest extends TeaModel {
     public Integer logVersion;
 
     /**
+     * <p>The region ID of Log Service (SLS).</p>
+     * 
      * <strong>example:</strong>
      * <p>ap-southeast-1</p>
      */
@@ -28,6 +33,7 @@ public class ModifyUserSlsLogStorageTimeRequest extends TeaModel {
     public String slsRegionId;
 
     /**
+     * <p>The retention period, in days.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

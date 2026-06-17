@@ -4,10 +4,15 @@ package com.aliyun.cloudfw20171207.models;
 import com.aliyun.tea.*;
 
 public class DescribePageDocumentsResponseBody extends TeaModel {
+    /**
+     * <p>The list of documents.</p>
+     */
     @NameInMap("Docs")
     public java.util.List<DescribePageDocumentsResponseBodyDocs> docs;
 
     /**
+     * <p>The URL of the image.</p>
+     * 
      * <strong>example:</strong>
      * <p><a href="https://img.alicdn.com/tfs/TB1E4FCAuT2gK0jSZFvXXXnFXXa-3399-662.png">https://img.alicdn.com/tfs/TB1E4FCAuT2gK0jSZFvXXXnFXXa-3399-662.png</a></p>
      */
@@ -15,16 +20,23 @@ public class DescribePageDocumentsResponseBody extends TeaModel {
     public String imageUrl;
 
     /**
+     * <p>The application module.</p>
+     * 
      * <strong>example:</strong>
      * <p>sg_server</p>
      */
     @NameInMap("Module")
     public String module;
 
+    /**
+     * <p>Additional information.</p>
+     */
     @NameInMap("More")
     public DescribePageDocumentsResponseBodyMore more;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>7C81E1AD-08C0-5E09-853B-FDC77B90****</p>
      */
@@ -78,6 +90,8 @@ public class DescribePageDocumentsResponseBody extends TeaModel {
 
     public static class DescribePageDocumentsResponseBodyDocs extends TeaModel {
         /**
+         * <p>The title.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -85,6 +99,8 @@ public class DescribePageDocumentsResponseBody extends TeaModel {
         public String title;
 
         /**
+         * <p>The URL of the document.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="https://notify-center-test.ybaobx.com/webhook/arms">https://notify-center-test.ybaobx.com/webhook/arms</a></p>
          */
@@ -116,6 +132,8 @@ public class DescribePageDocumentsResponseBody extends TeaModel {
 
     public static class DescribePageDocumentsResponseBodyMore extends TeaModel {
         /**
+         * <p>The title.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -123,6 +141,8 @@ public class DescribePageDocumentsResponseBody extends TeaModel {
         public String title;
 
         /**
+         * <p>The URL of the document.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="https://zjysfy.womanhospital.cn/pub/hos/0/noneBackGround.png">https://zjysfy.womanhospital.cn/pub/hos/0/noneBackGround.png</a></p>
          */

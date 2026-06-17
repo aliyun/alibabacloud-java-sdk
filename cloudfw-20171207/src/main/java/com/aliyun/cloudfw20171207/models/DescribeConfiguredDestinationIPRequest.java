@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeConfiguredDestinationIPRequest extends TeaModel {
     /**
+     * <p>The page number of the returned page.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -12,16 +14,26 @@ public class DescribeConfiguredDestinationIPRequest extends TeaModel {
     public String currentPage;
 
     /**
+     * <p>The destination IP address.</p>
+     * 
      * <strong>example:</strong>
      * <p>1.1.1.1</p>
      */
     @NameInMap("DestinationIP")
     public String destinationIP;
 
+    /**
+     * <p>The destination ISP.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>telecom</p>
+     */
     @NameInMap("DestinationISP")
     public String destinationISP;
 
     /**
+     * <p>The destination region.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-shenzhen</p>
      */
@@ -29,6 +41,7 @@ public class DescribeConfiguredDestinationIPRequest extends TeaModel {
     public String destinationRegion;
 
     /**
+     * <p>The traffic direction.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -38,6 +51,7 @@ public class DescribeConfiguredDestinationIPRequest extends TeaModel {
     public String direction;
 
     /**
+     * <p>The group name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -47,6 +61,8 @@ public class DescribeConfiguredDestinationIPRequest extends TeaModel {
     public String groupName;
 
     /**
+     * <p>The language of the response.</p>
+     * 
      * <strong>example:</strong>
      * <p>zh</p>
      */
@@ -54,6 +70,8 @@ public class DescribeConfiguredDestinationIPRequest extends TeaModel {
     public String lang;
 
     /**
+     * <p>The number of entries to return on each page.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -61,6 +79,7 @@ public class DescribeConfiguredDestinationIPRequest extends TeaModel {
     public String pageSize;
 
     /**
+     * <p>The trace code.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -70,6 +89,8 @@ public class DescribeConfiguredDestinationIPRequest extends TeaModel {
     public String sourceCode;
 
     /**
+     * <p>The source IP address of the visitor.</p>
+     * 
      * <strong>example:</strong>
      * <p>123.113.99.XXX</p>
      */

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeInternetDropTrafficTrendRequest extends TeaModel {
     /**
+     * <p>The traffic direction.</p>
+     * 
      * <strong>example:</strong>
      * <p>out</p>
      */
@@ -12,6 +14,7 @@ public class DescribeInternetDropTrafficTrendRequest extends TeaModel {
     public String direction;
 
     /**
+     * <p>The end time of the query, specified as a timestamp in seconds.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,6 +24,8 @@ public class DescribeInternetDropTrafficTrendRequest extends TeaModel {
     public String endTime;
 
     /**
+     * <p>The language of the response.</p>
+     * 
      * <strong>example:</strong>
      * <p>zh</p>
      */
@@ -28,6 +33,7 @@ public class DescribeInternetDropTrafficTrendRequest extends TeaModel {
     public String lang;
 
     /**
+     * <p>The traceability code.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -37,6 +43,8 @@ public class DescribeInternetDropTrafficTrendRequest extends TeaModel {
     public String sourceCode;
 
     /**
+     * <p>The source IP address.</p>
+     * 
      * <strong>example:</strong>
      * <p>120.136.21.XXX</p>
      */
@@ -44,6 +52,7 @@ public class DescribeInternetDropTrafficTrendRequest extends TeaModel {
     public String sourceIp;
 
     /**
+     * <p>The start time, specified as a timestamp in seconds.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

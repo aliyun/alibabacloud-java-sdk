@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class DescribeRiskEventTopAttackTypeResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>BECDBF66-91DA-5B40-8B05-0D26541A****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>A list of the top attack types.</p>
+     */
     @NameInMap("TopAttackTypeList")
     public java.util.List<DescribeRiskEventTopAttackTypeResponseBodyTopAttackTypeList> topAttackTypeList;
 
     /**
+     * <p>The total number of attacks.</p>
+     * 
      * <strong>example:</strong>
      * <p>47</p>
      */
@@ -22,6 +29,8 @@ public class DescribeRiskEventTopAttackTypeResponseBody extends TeaModel {
     public Long totalAttackCnt;
 
     /**
+     * <p>The total number of protection triggers.</p>
+     * 
      * <strong>example:</strong>
      * <p>65</p>
      */
@@ -67,6 +76,8 @@ public class DescribeRiskEventTopAttackTypeResponseBody extends TeaModel {
 
     public static class DescribeRiskEventTopAttackTypeResponseBodyTopAttackTypeList extends TeaModel {
         /**
+         * <p>The number of attacks.</p>
+         * 
          * <strong>example:</strong>
          * <p>38</p>
          */
@@ -74,6 +85,39 @@ public class DescribeRiskEventTopAttackTypeResponseBody extends TeaModel {
         public Long attackCnt;
 
         /**
+         * <p>The attack type of the intrusion prevention event. Valid values:</p>
+         * <ul>
+         * <li><p><strong>1</strong>: abnormal connection</p>
+         * </li>
+         * <li><p><strong>2</strong>: command execution</p>
+         * </li>
+         * <li><p><strong>3</strong>: brute-force attack</p>
+         * </li>
+         * <li><p><strong>4</strong>: scan</p>
+         * </li>
+         * <li><p><strong>5</strong>: other</p>
+         * </li>
+         * <li><p><strong>6</strong>: information leakage</p>
+         * </li>
+         * <li><p><strong>7</strong>: DoS attack</p>
+         * </li>
+         * <li><p><strong>8</strong>: overflow attack</p>
+         * </li>
+         * <li><p><strong>9</strong>: web attack</p>
+         * </li>
+         * <li><p><strong>10</strong>: trojan and backdoor</p>
+         * </li>
+         * <li><p><strong>11</strong>: virus and worm</p>
+         * </li>
+         * <li><p><strong>12</strong>: cryptomining</p>
+         * </li>
+         * <li><p><strong>13</strong>: reverse shell</p>
+         * </li>
+         * </ul>
+         * <blockquote>
+         * <p>By default, this API queries for all attack types.</p>
+         * </blockquote>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */
@@ -81,6 +125,8 @@ public class DescribeRiskEventTopAttackTypeResponseBody extends TeaModel {
         public Long attackType;
 
         /**
+         * <p>The number of protection triggers.</p>
+         * 
          * <strong>example:</strong>
          * <p>42</p>
          */

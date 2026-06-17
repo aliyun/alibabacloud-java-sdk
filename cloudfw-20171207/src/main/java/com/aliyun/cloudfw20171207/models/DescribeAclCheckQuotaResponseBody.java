@@ -4,10 +4,15 @@ package com.aliyun.cloudfw20171207.models;
 import com.aliyun.tea.*;
 
 public class DescribeAclCheckQuotaResponseBody extends TeaModel {
+    /**
+     * <p>The quota.</p>
+     */
     @NameInMap("Quota")
     public DescribeAclCheckQuotaResponseBodyQuota quota;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>7D5483BF-2262-586D-8706-BDDB8B42****</p>
      */
@@ -37,6 +42,8 @@ public class DescribeAclCheckQuotaResponseBody extends TeaModel {
 
     public static class DescribeAclCheckQuotaResponseBodyQuota extends TeaModel {
         /**
+         * <p>The available quota.</p>
+         * 
          * <strong>example:</strong>
          * <p>500</p>
          */
@@ -44,6 +51,8 @@ public class DescribeAclCheckQuotaResponseBody extends TeaModel {
         public Long availableQuota;
 
         /**
+         * <p>The consumed quota.</p>
+         * 
          * <strong>example:</strong>
          * <p>1500</p>
          */
@@ -51,6 +60,8 @@ public class DescribeAclCheckQuotaResponseBody extends TeaModel {
         public Long consumedQuota;
 
         /**
+         * <p>The total quota.</p>
+         * 
          * <strong>example:</strong>
          * <p>2000</p>
          */
@@ -58,6 +69,8 @@ public class DescribeAclCheckQuotaResponseBody extends TeaModel {
         public Long totalQuota;
 
         /**
+         * <p>The time when the quota was last updated. This value is a UNIX timestamp. Unit: seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>1724982259</p>
          */

@@ -5,6 +5,14 @@ import com.aliyun.tea.*;
 
 public class DescribeAclWhitelistRequest extends TeaModel {
     /**
+     * <p>The language of the response message. Valid values:</p>
+     * <ul>
+     * <li><p><strong>zh</strong> (default): Chinese</p>
+     * </li>
+     * <li><p><strong>en</strong>: English</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>zh</p>
      */
@@ -12,6 +20,8 @@ public class DescribeAclWhitelistRequest extends TeaModel {
     public String lang;
 
     /**
+     * <p>The source IP address of the visitor.</p>
+     * 
      * <strong>example:</strong>
      * <p>101.36.65.XX</p>
      */

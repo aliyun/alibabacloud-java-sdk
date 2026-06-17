@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateAclCheckRequest extends TeaModel {
     /**
+     * <p>The type of the ACL check.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -13,10 +14,15 @@ public class CreateAclCheckRequest extends TeaModel {
     @NameInMap("AclType")
     public String aclType;
 
+    /**
+     * <p>The list of ACL check names.</p>
+     */
     @NameInMap("CheckNames")
     public java.util.List<String> checkNames;
 
     /**
+     * <p>The language of the request and response.</p>
+     * 
      * <strong>example:</strong>
      * <p>zh</p>
      */

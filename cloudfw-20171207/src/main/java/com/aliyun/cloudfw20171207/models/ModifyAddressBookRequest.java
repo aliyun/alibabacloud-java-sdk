@@ -4,32 +4,43 @@ package com.aliyun.cloudfw20171207.models;
 import com.aliyun.tea.*;
 
 public class ModifyAddressBookRequest extends TeaModel {
+    /**
+     * <p>A list of ACK cluster pod labels.</p>
+     * <blockquote>
+     * <p>Up to 10 labels are allowed.</p>
+     * </blockquote>
+     */
     @NameInMap("AckLabels")
     public java.util.List<ModifyAddressBookRequestAckLabels> ackLabels;
 
+    /**
+     * <p>A list of ACK cluster pod namespaces.</p>
+     * <blockquote>
+     * <p>Up to 10 namespaces are allowed.</p>
+     * </blockquote>
+     */
     @NameInMap("AckNamespaces")
     public java.util.List<String> ackNamespaces;
 
     /**
-     * <p>The addresses in the address book. Separate multiple addresses with commas (,). If you set GroupType to <strong>ip</strong>, <strong>port</strong>, or <strong>domain</strong>, you must specify this parameter.</p>
+     * <p>A list of addresses in the address book. Separate multiple addresses with commas. Within each address element, separate the address and its description with a space. You must specify this parameter when GroupType is <strong>ip</strong>, <strong>port</strong>, or <strong>domain</strong>.</p>
      * <ul>
-     * <li>If you set GroupType to <strong>ip</strong>, you must specify IP addresses for the address book. Example: 1.2.XX.XX/32,1.2.XX.XX/24.</li>
-     * <li>If you set GroupType to <strong>port</strong>, you must specify port numbers or port ranges for the address book. Example: 80/80,100/200.</li>
-     * <li>If you set GroupType to <strong>domain</strong>, you must specify domain names for the address book. Example: demo1.aliyun.com,demo2.aliyun.com.</li>
+     * <li><p>When GroupType is <strong>ip</strong>, specify IP addresses. Example: 1.2.XX.XX/32 development CIDR block, 10.0.0.X/24,1.2.XX.XX/24 test CIDR block.</p>
+     * </li>
+     * <li><p>When GroupType is <strong>port</strong>, specify ports or port ranges. Example: 80/80 HTTP port, 100/200,3306 database port.</p>
+     * </li>
+     * <li><p>When GroupType is <strong>domain</strong>, specify domain names. Example: demo1.aliyun.com test domain, demo2.aliyun.com,www\.aliyun.com Alibaba Cloud official website.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
-     * <p>192.0.XX.XX/32, 192.0.XX.XX/24</p>
+     * <p>192.0.XX.XX/32 ,192.0.XX.XX/24</p>
      */
     @NameInMap("AddressList")
     public String addressList;
 
     /**
-     * <p>Specifies whether to automatically add public IP addresses of Elastic Compute Service (ECS) instances to the address book if the instances match the specified tags. Valid values:</p>
-     * <ul>
-     * <li><strong>1</strong>: yes</li>
-     * <li><strong>0</strong>: no</li>
-     * </ul>
+     * <p>Specifies whether to automatically add public IP addresses of new ECS instances that match the specified tags to the address book.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -58,9 +69,9 @@ public class ModifyAddressBookRequest extends TeaModel {
     public String groupName;
 
     /**
-     * <p>The ID of the address book.</p>
+     * <p>The unique ID of the address book.</p>
      * <blockquote>
-     * <p> To modify the address book, you must provide the ID of the address book. You can call the <a href="https://help.aliyun.com/document_detail/138869.html">DescribeAddressBook</a> operation to query the ID.</p>
+     * <p>Obtain this value from <a href="~~DescribeAddressBook~~">DescribeAddressBook</a>.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -71,11 +82,7 @@ public class ModifyAddressBookRequest extends TeaModel {
     public String groupUuid;
 
     /**
-     * <p>The language of the content within the request and response. Valid values:</p>
-     * <ul>
-     * <li><strong>zh</strong>: Chinese (default)</li>
-     * <li><strong>en</strong>: English</li>
-     * </ul>
+     * <p>The language type.</p>
      * 
      * <strong>example:</strong>
      * <p>zh</p>
@@ -84,15 +91,12 @@ public class ModifyAddressBookRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>Modification mode with the following values:</p>
-     * <ul>
-     * <li><strong>Cover</strong>: Use the value of the AddressList parameter to overwrite the original address book.</li>
-     * <li><strong>Append</strong>: After the original address book, append addresses using the value of the AddressList parameter.</li>
-     * <li><strong>Delete</strong>: Delete addresses using the value of the AddressList parameter from the address book.</li>
-     * </ul>
+     * <p>The modification mode.</p>
      * <blockquote>
-     * <p>When GroupType is <strong>ip</strong>, <strong>ipv6</strong>, <strong>port</strong>, or <strong>domain</strong>, if this parameter is not configured, the default is to use the <strong>Cover</strong> method to modify the address book.
-     * Notice: When GroupType is <strong>tag</strong>, this parameter must be empty.</notice></p>
+     * <p>When GroupType is <strong>ip</strong>, <strong>ipv6</strong>, <strong>port</strong>, or <strong>domain</strong>, the default mode is <strong>Cover</strong> if this parameter is not specified.</p>
+     * <blockquote>
+     * <p>Notice: When GroupType is <strong>tag</strong>, this parameter must be empty.</p>
+     * </blockquote>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -102,7 +106,7 @@ public class ModifyAddressBookRequest extends TeaModel {
     public String modifyMode;
 
     /**
-     * <p>The source IP address of the request.</p>
+     * <p>The source IP address of the requester.</p>
      * 
      * <strong>example:</strong>
      * <p>192.0.XX.XX</p>
@@ -112,17 +116,13 @@ public class ModifyAddressBookRequest extends TeaModel {
     public String sourceIp;
 
     /**
-     * <p>The ECS tags that you want to match.</p>
+     * <p>A list of ECS tags.</p>
      */
     @NameInMap("TagList")
     public java.util.List<ModifyAddressBookRequestTagList> tagList;
 
     /**
-     * <p>The logical relationship among ECS tags. Valid values:</p>
-     * <ul>
-     * <li><strong>and</strong>: Only the public IP addresses of ECS instances that match all the specified tags can be added to the address book.</li>
-     * <li><strong>or</strong>: The public IP addresses of ECS instances that match one of the specified tags can be added to the address book.</li>
-     * </ul>
+     * <p>The relationship between multiple ECS tags.</p>
      * 
      * <strong>example:</strong>
      * <p>and</p>
@@ -234,6 +234,8 @@ public class ModifyAddressBookRequest extends TeaModel {
 
     public static class ModifyAddressBookRequestAckLabels extends TeaModel {
         /**
+         * <p>The key of the ACK cluster pod label.</p>
+         * 
          * <strong>example:</strong>
          * <p>app</p>
          */
@@ -241,6 +243,8 @@ public class ModifyAddressBookRequest extends TeaModel {
         public String key;
 
         /**
+         * <p>The value of the ACK cluster pod label.</p>
+         * 
          * <strong>example:</strong>
          * <p>storage-operator</p>
          */
@@ -272,7 +276,7 @@ public class ModifyAddressBookRequest extends TeaModel {
 
     public static class ModifyAddressBookRequestTagList extends TeaModel {
         /**
-         * <p>The key of ECS tag N that you want to match.</p>
+         * <p>The tag key of the ECS instance.</p>
          * 
          * <strong>example:</strong>
          * <p>TXY</p>
@@ -281,7 +285,7 @@ public class ModifyAddressBookRequest extends TeaModel {
         public String tagKey;
 
         /**
-         * <p>The value of ECS tag N that you want to match.</p>
+         * <p>The tag value of the ECS instance.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>

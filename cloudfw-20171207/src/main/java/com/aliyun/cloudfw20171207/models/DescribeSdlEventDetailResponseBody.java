@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class DescribeSdlEventDetailResponseBody extends TeaModel {
     /**
+     * <p>The ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>D19D8F70-D64B-5A95-905A-6073BF4A****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The list of events.</p>
+     */
     @NameInMap("SdlEventDetailList")
     public java.util.List<DescribeSdlEventDetailResponseBodySdlEventDetailList> sdlEventDetailList;
 
     /**
+     * <p>The total number of entries.</p>
+     * 
      * <strong>example:</strong>
      * <p>8</p>
      */
@@ -52,6 +59,8 @@ public class DescribeSdlEventDetailResponseBody extends TeaModel {
 
     public static class DescribeSdlEventDetailResponseBodySdlEventDetailList extends TeaModel {
         /**
+         * <p>The name of the event.</p>
+         * 
          * <strong>example:</strong>
          * <p>event-test</p>
          */
@@ -59,6 +68,8 @@ public class DescribeSdlEventDetailResponseBody extends TeaModel {
         public String eventName;
 
         /**
+         * <p>The amount of sensitive data.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -66,16 +77,26 @@ public class DescribeSdlEventDetailResponseBody extends TeaModel {
         public Long sensitiveDataCnt;
 
         /**
+         * <p>The sensitivity level.</p>
+         * 
          * <strong>example:</strong>
          * <p>S3</p>
          */
         @NameInMap("SensitiveLevel")
         public String sensitiveLevel;
 
+        /**
+         * <p>The type of sensitive data.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Identity Card</p>
+         */
         @NameInMap("SensitiveType")
         public String sensitiveType;
 
         /**
+         * <p>The time when the event occurred.</p>
+         * 
          * <strong>example:</strong>
          * <p>1753928907</p>
          */

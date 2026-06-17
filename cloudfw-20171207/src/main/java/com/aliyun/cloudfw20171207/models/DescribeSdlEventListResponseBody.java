@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class DescribeSdlEventListResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>F06DE24D-6EB9-5F55-B588-7BB946DF****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>An array of data leakage events.</p>
+     */
     @NameInMap("SdlEventDetailList")
     public java.util.List<DescribeSdlEventListResponseBodySdlEventDetailList> sdlEventDetailList;
 
     /**
+     * <p>The total number of entries.</p>
+     * 
      * <strong>example:</strong>
      * <p>6</p>
      */
@@ -52,6 +59,8 @@ public class DescribeSdlEventListResponseBody extends TeaModel {
 
     public static class DescribeSdlEventListResponseBodySdlEventDetailList extends TeaModel {
         /**
+         * <p>The asset name.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -59,6 +68,8 @@ public class DescribeSdlEventListResponseBody extends TeaModel {
         public String assetName;
 
         /**
+         * <p>The private IP address of the asset.</p>
+         * 
          * <strong>example:</strong>
          * <p>47.100.102.XXX</p>
          */
@@ -66,6 +77,8 @@ public class DescribeSdlEventListResponseBody extends TeaModel {
         public String assetPrivateIp;
 
         /**
+         * <p>The asset type.</p>
+         * 
          * <strong>example:</strong>
          * <p>EIP</p>
          */
@@ -73,6 +86,16 @@ public class DescribeSdlEventListResponseBody extends TeaModel {
         public String assetType;
 
         /**
+         * <p>The intelligence tag category. Valid values:</p>
+         * <ul>
+         * <li><p><strong>Suspicious</strong>: suspicious</p>
+         * </li>
+         * <li><p><strong>Malicious</strong>: malicious</p>
+         * </li>
+         * <li><p><strong>Trusted</strong>: trusted</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Trusted</p>
          */
@@ -80,6 +103,8 @@ public class DescribeSdlEventListResponseBody extends TeaModel {
         public String categoryClassId;
 
         /**
+         * <p>The category name.</p>
+         * 
          * <strong>example:</strong>
          * <p>Trusted</p>
          */
@@ -87,6 +112,8 @@ public class DescribeSdlEventListResponseBody extends TeaModel {
         public String categoryName;
 
         /**
+         * <p>The city ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>000</p>
          */
@@ -94,6 +121,8 @@ public class DescribeSdlEventListResponseBody extends TeaModel {
         public String cityId;
 
         /**
+         * <p>The country ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn</p>
          */
@@ -101,6 +130,8 @@ public class DescribeSdlEventListResponseBody extends TeaModel {
         public String countryId;
 
         /**
+         * <p>The destination IP address.</p>
+         * 
          * <strong>example:</strong>
          * <p>106.14.74.XXX</p>
          */
@@ -108,6 +139,8 @@ public class DescribeSdlEventListResponseBody extends TeaModel {
         public String dstIp;
 
         /**
+         * <p>The destination port.</p>
+         * 
          * <strong>example:</strong>
          * <p>22</p>
          */
@@ -115,6 +148,8 @@ public class DescribeSdlEventListResponseBody extends TeaModel {
         public String dstPortList;
 
         /**
+         * <p>The number of events.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -122,16 +157,26 @@ public class DescribeSdlEventListResponseBody extends TeaModel {
         public Long eventCnt;
 
         /**
+         * <p>The event\&quot;s risk level.</p>
+         * 
          * <strong>example:</strong>
          * <p>high</p>
          */
         @NameInMap("EventLevel")
         public String eventLevel;
 
+        /**
+         * <p>The event name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Sensitive ID card data leakage</p>
+         */
         @NameInMap("EventName")
         public String eventName;
 
         /**
+         * <p>The first time the event occurred, as a Unix timestamp in seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>1735697768</p>
          */
@@ -139,16 +184,26 @@ public class DescribeSdlEventListResponseBody extends TeaModel {
         public Long firstTime;
 
         /**
+         * <p>The last time the event occurred, as a Unix timestamp in seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>1738636157</p>
          */
         @NameInMap("LastTime")
         public Long lastTime;
 
+        /**
+         * <p>The location of the destination IP address.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Yuhang District, Hangzhou City, Zhejiang Province</p>
+         */
         @NameInMap("LocationName")
         public String locationName;
 
         /**
+         * <p>The payload of the intrusion prevention event.</p>
+         * 
          * <strong>example:</strong>
          * <p>3082002f02010004067075626c6963a082002002044c33a756020100020100308200103082000c06082b060102010105000500</p>
          */
@@ -156,6 +211,8 @@ public class DescribeSdlEventListResponseBody extends TeaModel {
         public String payload;
 
         /**
+         * <p>The protocol.</p>
+         * 
          * <strong>example:</strong>
          * <p>TCP</p>
          */
@@ -163,6 +220,8 @@ public class DescribeSdlEventListResponseBody extends TeaModel {
         public String protoList;
 
         /**
+         * <p>The region ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
          */
@@ -170,6 +229,8 @@ public class DescribeSdlEventListResponseBody extends TeaModel {
         public String regionId;
 
         /**
+         * <p>The resource ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>ce347a98f41e849188aa51c56b02a****</p>
          */
@@ -177,6 +238,8 @@ public class DescribeSdlEventListResponseBody extends TeaModel {
         public String resourceId;
 
         /**
+         * <p>The resource type.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -184,26 +247,41 @@ public class DescribeSdlEventListResponseBody extends TeaModel {
         public Integer resourceIdType;
 
         /**
+         * <p>The number of sensitive data items.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
         @NameInMap("SensitiveDataCnt")
         public Long sensitiveDataCnt;
 
+        /**
+         * <p>An array of sensitive data.</p>
+         */
         @NameInMap("SensitiveDataList")
         public java.util.List<String> sensitiveDataList;
 
         /**
+         * <p>The sensitive data level.</p>
+         * 
          * <strong>example:</strong>
          * <p>S3</p>
          */
         @NameInMap("SensitiveLevel")
         public String sensitiveLevel;
 
+        /**
+         * <p>The sensitive data type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Identity Card</p>
+         */
         @NameInMap("SensitiveType")
         public String sensitiveType;
 
         /**
+         * <p>The source IP address.</p>
+         * 
          * <strong>example:</strong>
          * <p>104.28.226.XX</p>
          */
@@ -211,6 +289,8 @@ public class DescribeSdlEventListResponseBody extends TeaModel {
         public String srcIp;
 
         /**
+         * <p>The source port.</p>
+         * 
          * <strong>example:</strong>
          * <p>443</p>
          */
@@ -218,6 +298,8 @@ public class DescribeSdlEventListResponseBody extends TeaModel {
         public String srcPortList;
 
         /**
+         * <p>The traffic volume in bytes.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -225,6 +307,8 @@ public class DescribeSdlEventListResponseBody extends TeaModel {
         public Long trafficBytes;
 
         /**
+         * <p>The unique identifier for the event.</p>
+         * 
          * <strong>example:</strong>
          * <p>b91035dc-8be4-411d-bec5-e6320af9****</p>
          */

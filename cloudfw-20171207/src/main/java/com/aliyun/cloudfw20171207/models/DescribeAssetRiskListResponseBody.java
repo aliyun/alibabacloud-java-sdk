@@ -71,8 +71,10 @@ public class DescribeAssetRiskListResponseBody extends TeaModel {
          * <p>The IP version of the asset that is protected by Cloud Firewall.</p>
          * <p>Valid values:</p>
          * <ul>
-         * <li><strong>4</strong>: IPv4</li>
-         * <li><strong>6</strong>: IPv6</li>
+         * <li><p><strong>4</strong>: IPv4 address</p>
+         * </li>
+         * <li><p><strong>6</strong>: IPv6 address</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -93,9 +95,12 @@ public class DescribeAssetRiskListResponseBody extends TeaModel {
         /**
          * <p>The risk level. Valid values:</p>
          * <ul>
-         * <li><strong>low</strong></li>
-         * <li><strong>middle</strong></li>
-         * <li><strong>high</strong></li>
+         * <li><p><strong>low</strong>: low risk</p>
+         * </li>
+         * <li><p><strong>middle</strong>: medium risk</p>
+         * </li>
+         * <li><p><strong>high</strong>: high risk</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

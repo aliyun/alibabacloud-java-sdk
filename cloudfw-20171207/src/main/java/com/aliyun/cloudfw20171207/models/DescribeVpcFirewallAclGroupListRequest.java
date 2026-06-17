@@ -14,11 +14,12 @@ public class DescribeVpcFirewallAclGroupListRequest extends TeaModel {
     public String currentPage;
 
     /**
-     * <p>Specifies whether VPC firewalls are configured. Valid values:</p>
+     * <p>The configuration status of the VPC boundary firewall. Valid values:</p>
      * <ul>
-     * <li><strong>notconfigured</strong>: VPC firewalls are not configured.</li>
-     * <li><strong>configured</strong>: VPC firewalls are configured.</li>
-     * <li>If you do not specify this parameter, the access control policies of all VPC firewalls are queried.</li>
+     * <li><p><strong>configured</strong>: The VPC boundary firewall is configured.</p>
+     * </li>
+     * <li><p>If you omit this parameter, the operation queries the access control policies for all VPC boundary firewalls.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -28,7 +29,7 @@ public class DescribeVpcFirewallAclGroupListRequest extends TeaModel {
     public String firewallConfigureStatus;
 
     /**
-     * <p>The instance ID of the VPC firewall.</p>
+     * <p>The instance ID of the VPC boundary firewall.</p>
      * 
      * <strong>example:</strong>
      * <p>vfw-tr-5b202e7f0be64611****</p>
@@ -37,10 +38,12 @@ public class DescribeVpcFirewallAclGroupListRequest extends TeaModel {
     public String firewallId;
 
     /**
-     * <p>The language of the content within the response. Valid values:</p>
+     * <p>The language of the response. Valid values:</p>
      * <ul>
-     * <li><strong>zh</strong>: Chinese (default)</li>
-     * <li><strong>en</strong>: English</li>
+     * <li><p><strong>zh</strong> (default): Chinese</p>
+     * </li>
+     * <li><p><strong>en</strong>: English</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -50,7 +53,7 @@ public class DescribeVpcFirewallAclGroupListRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The number of entries to return on each page. Maximum value: 50.</p>
+     * <p>The number of entries to return on each page. The maximum value is 50.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>

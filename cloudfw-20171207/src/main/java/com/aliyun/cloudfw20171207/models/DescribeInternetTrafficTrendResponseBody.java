@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeInternetTrafficTrendResponseBody extends TeaModel {
     /**
-     * <p>The average inbound network throughput, which indicates the average number of bits that are sent inbound per second. Unit: bit/s.</p>
+     * <p>The average inbound network throughput. Unit: bps.</p>
      * 
      * <strong>example:</strong>
      * <p>6114152</p>
@@ -14,7 +14,7 @@ public class DescribeInternetTrafficTrendResponseBody extends TeaModel {
     public Long avgInBps;
 
     /**
-     * <p>The average outbound network throughput, which indicates the average number of bits that are sent outbound per second. Unit: bit/s.</p>
+     * <p>The average outbound network throughput. Unit: bps.</p>
      * 
      * <strong>example:</strong>
      * <p>70148993</p>
@@ -32,7 +32,7 @@ public class DescribeInternetTrafficTrendResponseBody extends TeaModel {
     public Long avgSession;
 
     /**
-     * <p>The total average inbound and outbound network throughput, which indicates the average number of bits that are sent inbound and outbound per second. Unit: bit/s.</p>
+     * <p>The average total network throughput for inbound and outbound traffic. Unit: bps.</p>
      * 
      * <strong>example:</strong>
      * <p>2306</p>
@@ -41,13 +41,13 @@ public class DescribeInternetTrafficTrendResponseBody extends TeaModel {
     public Long avgTotalBps;
 
     /**
-     * <p>The statistics on traffic.</p>
+     * <p>A list of traffic statistics.</p>
      */
     @NameInMap("DataList")
     public java.util.List<DescribeInternetTrafficTrendResponseBodyDataList> dataList;
 
     /**
-     * <p>The timestamp generated when the bandwidth reaches the peak value. The value is a UNIX timestamp. Unit: seconds.</p>
+     * <p>The UNIX timestamp when the peak bandwidth was reached. Unit: seconds.</p>
      * 
      * <strong>example:</strong>
      * <p>1672736400</p>
@@ -56,7 +56,7 @@ public class DescribeInternetTrafficTrendResponseBody extends TeaModel {
     public Long maxBandwidthTime;
 
     /**
-     * <p>The maximum volume of excess traffic allowed per day.</p>
+     * <p>The peak daily excess traffic.</p>
      * 
      * <strong>example:</strong>
      * <p>873</p>
@@ -65,7 +65,7 @@ public class DescribeInternetTrafficTrendResponseBody extends TeaModel {
     public Long maxDayExceedBytes;
 
     /**
-     * <p>The maximum inbound network throughput, which indicates the maximum number of bits that are sent inbound per second. Unit: bit/s.</p>
+     * <p>The peak inbound network throughput. Unit: bps.</p>
      * 
      * <strong>example:</strong>
      * <p>10275643</p>
@@ -74,7 +74,7 @@ public class DescribeInternetTrafficTrendResponseBody extends TeaModel {
     public Long maxInBps;
 
     /**
-     * <p>The maximum outbound network throughput, which indicates the maximum number of bits that are sent outbound per second. Unit: bit/s.</p>
+     * <p>The peak outbound network throughput. Unit: bps.</p>
      * 
      * <strong>example:</strong>
      * <p>395188</p>
@@ -83,7 +83,7 @@ public class DescribeInternetTrafficTrendResponseBody extends TeaModel {
     public Long maxOutBps;
 
     /**
-     * <p>The number of requests during the peak hour of the network throughout.</p>
+     * <p>The peak number of requests.</p>
      * 
      * <strong>example:</strong>
      * <p>931641</p>
@@ -92,7 +92,7 @@ public class DescribeInternetTrafficTrendResponseBody extends TeaModel {
     public Long maxSession;
 
     /**
-     * <p>The total maximum inbound and outbound network throughput, which indicates the maximum number of bits that are sent inbound and outbound per second. Unit: bit/s.</p>
+     * <p>The peak total network throughput for inbound and outbound traffic. Unit: bps.</p>
      * 
      * <strong>example:</strong>
      * <p>89783147</p>
@@ -101,7 +101,7 @@ public class DescribeInternetTrafficTrendResponseBody extends TeaModel {
     public Long maxTotalBps;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>C7E837BE-0379-565E-B7B4-DE595C8D337C</p>
@@ -110,7 +110,7 @@ public class DescribeInternetTrafficTrendResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total inbound and outbound network throughput, which indicates the total number of bytes that are sent inbound and outbound. Unit: bytes.</p>
+     * <p>The total inbound and outbound traffic. Unit: bytes.</p>
      * 
      * <strong>example:</strong>
      * <p>963227674958</p>
@@ -119,7 +119,7 @@ public class DescribeInternetTrafficTrendResponseBody extends TeaModel {
     public Long totalBytes;
 
     /**
-     * <p>The total volume of excess traffic.</p>
+     * <p>The total excess traffic.</p>
      * 
      * <strong>example:</strong>
      * <p>4243873</p>
@@ -128,7 +128,7 @@ public class DescribeInternetTrafficTrendResponseBody extends TeaModel {
     public Long totalExceedBytes;
 
     /**
-     * <p>The inbound network throughput, which indicates the total number of bytes that are sent inbound. Unit: bytes.</p>
+     * <p>The total inbound traffic. Unit: bytes.</p>
      * 
      * <strong>example:</strong>
      * <p>41536824243873</p>
@@ -137,7 +137,7 @@ public class DescribeInternetTrafficTrendResponseBody extends TeaModel {
     public Long totalInBytes;
 
     /**
-     * <p>The outbound network throughput, which indicates the total number of bytes that are sent outbound. Unit: bytes.</p>
+     * <p>The total outbound traffic. Unit: bytes.</p>
      * 
      * <strong>example:</strong>
      * <p>2660894567178</p>
@@ -297,7 +297,7 @@ public class DescribeInternetTrafficTrendResponseBody extends TeaModel {
 
     public static class DescribeInternetTrafficTrendResponseBodyDataList extends TeaModel {
         /**
-         * <p>The inbound network throughput, which indicates the number of bits that are sent inbound per second. Unit: bit/s.</p>
+         * <p>The inbound network throughput. Unit: bps.</p>
          * 
          * <strong>example:</strong>
          * <p>187</p>
@@ -306,7 +306,7 @@ public class DescribeInternetTrafficTrendResponseBody extends TeaModel {
         public Long inBps;
 
         /**
-         * <p>The inbound network throughput, which indicates the total number of bytes that are sent inbound. Unit: bytes.</p>
+         * <p>The inbound traffic. Unit: bytes.</p>
          * 
          * <strong>example:</strong>
          * <p>235</p>
@@ -315,7 +315,7 @@ public class DescribeInternetTrafficTrendResponseBody extends TeaModel {
         public Long inBytes;
 
         /**
-         * <p>The inbound network throughput, which indicates the number of packets that are sent inbound per second. Unit: packets per second (pps).</p>
+         * <p>The inbound packet rate. Unit: pps.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -333,7 +333,7 @@ public class DescribeInternetTrafficTrendResponseBody extends TeaModel {
         public Long newConn;
 
         /**
-         * <p>The outbound network throughput, which indicates the number of bits that are sent outbound per second. Unit: bit/s.</p>
+         * <p>The outbound network throughput. Unit: bps.</p>
          * 
          * <strong>example:</strong>
          * <p>45</p>
@@ -342,7 +342,7 @@ public class DescribeInternetTrafficTrendResponseBody extends TeaModel {
         public Long outBps;
 
         /**
-         * <p>The outbound network throughput, which indicates the total number of bytes that are sent outbound. Unit: bytes.</p>
+         * <p>The outbound traffic. Unit: bytes.</p>
          * 
          * <strong>example:</strong>
          * <p>1123</p>
@@ -351,7 +351,7 @@ public class DescribeInternetTrafficTrendResponseBody extends TeaModel {
         public Long outBytes;
 
         /**
-         * <p>The outbound network throughput, which indicates the number of packets that are sent outbound per second. Unit: pps.</p>
+         * <p>The outbound packet rate. Unit: pps.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -369,8 +369,8 @@ public class DescribeInternetTrafficTrendResponseBody extends TeaModel {
         public Long sessionCount;
 
         /**
-         * <p>The time when traffic is generated. The value is a UNIX timestamp. Unit: seconds.</p>
-         * <p>If processing is not complete at this point in time, -1 is returned for all other fields.</p>
+         * <p>The time when the traffic was recorded. This value is a UNIX timestamp in seconds.</p>
+         * <p>If data for this time point has not been processed, the values of other fields are -1.</p>
          * 
          * <strong>example:</strong>
          * <p>1659405600</p>
@@ -379,10 +379,10 @@ public class DescribeInternetTrafficTrendResponseBody extends TeaModel {
         public Integer time;
 
         /**
-         * <p>The total outbound and inbound network throughput, which indicates the total number of bits that are sent inbound and outbound per second. Unit: bit/s.</p>
+         * <p>The total inbound and outbound network throughput. Unit: bps.</p>
          * 
          * <strong>example:</strong>
-         * <p>323</p>
+         * <p>232</p>
          */
         @NameInMap("TotalBps")
         public Long totalBps;

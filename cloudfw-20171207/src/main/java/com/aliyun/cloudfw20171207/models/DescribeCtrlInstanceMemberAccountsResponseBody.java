@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeCtrlInstanceMemberAccountsResponseBody extends TeaModel {
     /**
+     * <p>The number of Cloud Firewall member accounts.</p>
+     * 
      * <strong>example:</strong>
      * <p>3</p>
      */
@@ -12,6 +14,8 @@ public class DescribeCtrlInstanceMemberAccountsResponseBody extends TeaModel {
     public Long instanceMemberCount;
 
     /**
+     * <p>The maximum number of member accounts supported by Cloud Firewall.</p>
+     * 
      * <strong>example:</strong>
      * <p>1000</p>
      */
@@ -19,6 +23,8 @@ public class DescribeCtrlInstanceMemberAccountsResponseBody extends TeaModel {
     public Long maxInstanceMemberNum;
 
     /**
+     * <p>The ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>9CC69FDA-69F6-585B-9262-A306F425****</p>
      */

@@ -5,6 +5,14 @@ import com.aliyun.tea.*;
 
 public class DescribeSecurityModeRequest extends TeaModel {
     /**
+     * <p>The language of the response. Valid values:</p>
+     * <ul>
+     * <li><p><strong>zh</strong> (default): Chinese.</p>
+     * </li>
+     * <li><p><strong>en</strong>: English.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>zh</p>
      */
@@ -12,6 +20,8 @@ public class DescribeSecurityModeRequest extends TeaModel {
     public String lang;
 
     /**
+     * <p>The source IP address of the visitor.</p>
+     * 
      * <strong>example:</strong>
      * <p>218.108.54.XX</p>
      */

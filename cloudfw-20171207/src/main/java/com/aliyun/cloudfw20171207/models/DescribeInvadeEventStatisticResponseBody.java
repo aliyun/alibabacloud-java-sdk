@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeInvadeEventStatisticResponseBody extends TeaModel {
     /**
+     * <p>The number of open high-risk vulnerabilities.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -12,6 +14,8 @@ public class DescribeInvadeEventStatisticResponseBody extends TeaModel {
     public Integer highOpenEventCnt;
 
     /**
+     * <p>The number of open low-risk vulnerabilities.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -19,6 +23,8 @@ public class DescribeInvadeEventStatisticResponseBody extends TeaModel {
     public Integer lowOpenEventCnt;
 
     /**
+     * <p>The number of open medium-risk vulnerabilities.</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
@@ -26,6 +32,8 @@ public class DescribeInvadeEventStatisticResponseBody extends TeaModel {
     public Integer middleOpenEventCnt;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>1530A01A-6901-5B72-AB88-28B6E96B****</p>
      */
@@ -33,6 +41,8 @@ public class DescribeInvadeEventStatisticResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total number of open vulnerabilities.</p>
+     * 
      * <strong>example:</strong>
      * <p>2</p>
      */

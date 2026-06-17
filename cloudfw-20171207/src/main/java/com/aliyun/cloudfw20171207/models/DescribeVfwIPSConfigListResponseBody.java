@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeVfwIPSConfigListResponseBody extends TeaModel {
     /**
+     * <p>The page number of the returned page.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -12,6 +14,8 @@ public class DescribeVfwIPSConfigListResponseBody extends TeaModel {
     public Integer pageNo;
 
     /**
+     * <p>The number of entries on each page.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -19,6 +23,8 @@ public class DescribeVfwIPSConfigListResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>15FCCC52-1E23-57AE-B5EF-3E00A3******</p>
      */
@@ -26,12 +32,17 @@ public class DescribeVfwIPSConfigListResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total number of entries returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>2</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
+    /**
+     * <p>The list of configurations.</p>
+     */
     @NameInMap("VfwIpsSwitchConfigList")
     public java.util.List<DescribeVfwIPSConfigListResponseBodyVfwIpsSwitchConfigList> vfwIpsSwitchConfigList;
 
@@ -82,6 +93,8 @@ public class DescribeVfwIPSConfigListResponseBody extends TeaModel {
 
     public static class DescribeVfwIPSConfigListResponseBodyVfwIpsSwitchConfigList extends TeaModel {
         /**
+         * <p>The status of the basic policies.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -89,6 +102,8 @@ public class DescribeVfwIPSConfigListResponseBody extends TeaModel {
         public Integer basicRules;
 
         /**
+         * <p>The UID of the member account.</p>
+         * 
          * <strong>example:</strong>
          * <p>134646920647****</p>
          */
@@ -96,6 +111,8 @@ public class DescribeVfwIPSConfigListResponseBody extends TeaModel {
         public String memberUid;
 
         /**
+         * <p>The status of the virtual patching policies.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -103,6 +120,8 @@ public class DescribeVfwIPSConfigListResponseBody extends TeaModel {
         public Integer patchRules;
 
         /**
+         * <p>The policy for the block mode.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -110,6 +129,8 @@ public class DescribeVfwIPSConfigListResponseBody extends TeaModel {
         public Integer ruleClass;
 
         /**
+         * <p>The protection mode.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -117,16 +138,23 @@ public class DescribeVfwIPSConfigListResponseBody extends TeaModel {
         public Integer runMode;
 
         /**
+         * <p>The instance ID of the VPC firewall.</p>
+         * 
          * <strong>example:</strong>
          * <p>cen-h678sl4wv3yd5v****</p>
          */
         @NameInMap("VpcFirewallId")
         public String vpcFirewallId;
 
+        /**
+         * <p>The list of instance IDs of the VPC firewalls.</p>
+         */
         @NameInMap("VpcFirewallIdList")
         public java.util.List<String> vpcFirewallIdList;
 
         /**
+         * <p>The instance name of the VPC firewall.</p>
+         * 
          * <strong>example:</strong>
          * <p>vpc-test</p>
          */

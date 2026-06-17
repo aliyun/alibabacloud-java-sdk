@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class BatchDeleteVpcFirewallControlPolicyRequest extends TeaModel {
     /**
-     * <p>The UUIDs of access control policies.</p>
+     * <p>The list of UUIDs of the access control policies.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("AclUuidList")

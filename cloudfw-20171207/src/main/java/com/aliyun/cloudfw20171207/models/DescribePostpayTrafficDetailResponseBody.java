@@ -14,7 +14,7 @@ public class DescribePostpayTrafficDetailResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of entries returned.</p>
+     * <p>The total number of traffic statistics entries.</p>
      * 
      * <strong>example:</strong>
      * <p>132</p>
@@ -23,7 +23,7 @@ public class DescribePostpayTrafficDetailResponseBody extends TeaModel {
     public Integer totalCount;
 
     /**
-     * <p>The statistics on traffic.</p>
+     * <p>The list of traffic statistics.</p>
      */
     @NameInMap("TrafficList")
     public java.util.List<DescribePostpayTrafficDetailResponseBodyTrafficList> trafficList;
@@ -59,7 +59,7 @@ public class DescribePostpayTrafficDetailResponseBody extends TeaModel {
 
     public static class DescribePostpayTrafficDetailResponseBodyTrafficList extends TeaModel {
         /**
-         * <p>The inbound network throughput, which indicates the total number of bytes that are received Unit: bytes.</p>
+         * <p>The inbound network throughput, in bytes.</p>
          * 
          * <strong>example:</strong>
          * <p>1115096939</p>
@@ -68,7 +68,7 @@ public class DescribePostpayTrafficDetailResponseBody extends TeaModel {
         public Long inBytes;
 
         /**
-         * <p>The instance ID of the asset.</p>
+         * <p>The ID of the asset instance.</p>
          * 
          * <strong>example:</strong>
          * <p>i-8vb2d7c9mtn0bo9qcraq</p>
@@ -77,7 +77,7 @@ public class DescribePostpayTrafficDetailResponseBody extends TeaModel {
         public String instanceId;
 
         /**
-         * <p>The asset type. This value takes effect only for the Internet firewall.</p>
+         * <p>The asset type. This value is valid only for the Internet border.</p>
          * 
          * <strong>example:</strong>
          * <p>EcsPublicIP</p>
@@ -86,7 +86,7 @@ public class DescribePostpayTrafficDetailResponseBody extends TeaModel {
         public String instanceType;
 
         /**
-         * <p>The outbound network throughput, which indicates the total number of bytes that are sent. Unit: bytes.</p>
+         * <p>The outbound network throughput, in bytes.</p>
          * 
          * <strong>example:</strong>
          * <p>100000000</p>
@@ -95,7 +95,7 @@ public class DescribePostpayTrafficDetailResponseBody extends TeaModel {
         public Long outBytes;
 
         /**
-         * <p>Protection duration. Unit: hours.</p>
+         * <p>The protection duration, in hours.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -104,7 +104,7 @@ public class DescribePostpayTrafficDetailResponseBody extends TeaModel {
         public Long protectionDuration;
 
         /**
-         * <p>The region ID.</p>
+         * <p>The ID of the region.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-beijing</p>
@@ -113,7 +113,7 @@ public class DescribePostpayTrafficDetailResponseBody extends TeaModel {
         public String regionNo;
 
         /**
-         * <p>The resource ID. The resource ID for the Internet firewall is the public IP address that is protected the Internet firewall, and the resource ID for a NAT firewall is the instance ID of the NAT firewall.</p>
+         * <p>The ID of the resource. For Internet border traffic, this is the public IP address of the asset. For NAT border traffic, this is the instance ID of the firewall.</p>
          * 
          * <strong>example:</strong>
          * <p>39.106.146.214</p>
@@ -122,7 +122,7 @@ public class DescribePostpayTrafficDetailResponseBody extends TeaModel {
         public String resourceId;
 
         /**
-         * <p>The total inbound and outbound network throughput, which indicates the total number of bytes that are received and sent. Unit: bytes.</p>
+         * <p>The total network throughput for both inbound and outbound traffic, in bytes.</p>
          * 
          * <strong>example:</strong>
          * <p>1215096939</p>
@@ -131,7 +131,7 @@ public class DescribePostpayTrafficDetailResponseBody extends TeaModel {
         public Long totalBytes;
 
         /**
-         * <p>The date on which the statistics are collected.</p>
+         * <p>The date of the traffic statistics.</p>
          * 
          * <strong>example:</strong>
          * <p>20231001</p>
@@ -140,11 +140,14 @@ public class DescribePostpayTrafficDetailResponseBody extends TeaModel {
         public String trafficDay;
 
         /**
-         * <p>The traffic type. Valid values:</p>
+         * <p>The type of the firewall border for which traffic is queried. Valid values:</p>
          * <ul>
-         * <li><strong>EIP_TRAFFIC</strong>: traffic for the Internet firewall</li>
-         * <li><strong>NatGateway_TRAFFIC</strong>: traffic for NAT firewalls</li>
-         * <li><strong>VPC_TRAFFIC</strong>: traffic for VPC firewalls</li>
+         * <li><p><strong>EIP_TRAFFIC</strong>: traffic on the Internet border.</p>
+         * </li>
+         * <li><p><strong>NatGateway_TRAFFIC</strong>: traffic on the NAT border.</p>
+         * </li>
+         * <li><p><strong>VPC_TRAFFIC</strong>: traffic on the VPC border.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

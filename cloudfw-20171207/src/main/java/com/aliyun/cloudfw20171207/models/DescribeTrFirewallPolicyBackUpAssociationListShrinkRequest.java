@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeTrFirewallPolicyBackUpAssociationListShrinkRequest extends TeaModel {
     /**
-     * <p>The traffic redirection instances.</p>
+     * <p>The list of traffic redirection instances.</p>
      */
     @NameInMap("CandidateList")
     public String candidateListShrink;
 
     /**
-     * <p>The instance ID of the VPC firewall.</p>
+     * <p>The instance ID of the VPC firewall for a transit router.</p>
      * 
      * <strong>example:</strong>
      * <p>vfw-tr-8b268ce1b26e4c68****</p>
@@ -20,10 +20,12 @@ public class DescribeTrFirewallPolicyBackUpAssociationListShrinkRequest extends 
     public String firewallId;
 
     /**
-     * <p>The language of the content within the response. Valid values:</p>
+     * <p>The language of the response. Valid values:</p>
      * <ul>
-     * <li><strong>zh</strong> (default): Chinese</li>
-     * <li><strong>en</strong>: English</li>
+     * <li><p><strong>zh</strong> (default): Chinese</p>
+     * </li>
+     * <li><p><strong>en</strong>: English</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -33,7 +35,7 @@ public class DescribeTrFirewallPolicyBackUpAssociationListShrinkRequest extends 
     public String lang;
 
     /**
-     * <p>The ID of the routing policy.</p>
+     * <p>The ID of the firewall routing policy.</p>
      * 
      * <strong>example:</strong>
      * <p>policy-5dcafb12ff794a56****</p>

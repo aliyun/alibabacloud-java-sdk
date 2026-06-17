@@ -5,8 +5,8 @@ import com.aliyun.tea.*;
 
 public class DeleteNatFirewallControlPolicyRequest extends TeaModel {
     /**
-     * <p>The UUID of the access control policy.</p>
-     * <p>To delete an access control policy, you must provide the ID of the policy. You can call the DescribeNatFirewallControlPolicy operation to query the UUIDs of access control policies.</p>
+     * <p>The unique ID of the access control policy.</p>
+     * <p>To delete an access control policy, provide its unique ID. You can call the DescribeNatFirewallControlPolicy operation to obtain the ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -16,10 +16,10 @@ public class DeleteNatFirewallControlPolicyRequest extends TeaModel {
     public String aclUuid;
 
     /**
-     * <p>The direction of the traffic to which the access control policy applies.</p>
-     * <p>Valid values:</p>
+     * <p>The traffic direction that the access control policy manages.</p>
+     * <p>Valid value:</p>
      * <ul>
-     * <li><strong>out</strong>: outbound traffic</li>
+     * <li><strong>out</strong>: outbound traffic.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -30,10 +30,12 @@ public class DeleteNatFirewallControlPolicyRequest extends TeaModel {
     public String direction;
 
     /**
-     * <p>The language of the content within the response. Valid values:</p>
+     * <p>The language of the response. Valid values:</p>
      * <ul>
-     * <li><strong>zh</strong>: Chinese (default)</li>
-     * <li><strong>en</strong>: English</li>
+     * <li><p><strong>zh</strong> (default): Chinese</p>
+     * </li>
+     * <li><p><strong>en</strong>: English</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -43,7 +45,7 @@ public class DeleteNatFirewallControlPolicyRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The ID of the NAT gateway.</p>
+     * <p>The ID of the NAT Gateway.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

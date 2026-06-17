@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeVpcFirewallAssetListRequest extends TeaModel {
     /**
+     * <p>The application name.</p>
+     * 
      * <strong>example:</strong>
      * <p>test</p>
      */
@@ -12,6 +14,8 @@ public class DescribeVpcFirewallAssetListRequest extends TeaModel {
     public String appName;
 
     /**
+     * <p>The IP address of the asset.</p>
+     * 
      * <strong>example:</strong>
      * <p>192.0.XX.XX</p>
      */
@@ -19,6 +23,8 @@ public class DescribeVpcFirewallAssetListRequest extends TeaModel {
     public String assetIP;
 
     /**
+     * <p>The page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -26,6 +32,8 @@ public class DescribeVpcFirewallAssetListRequest extends TeaModel {
     public String currentPage;
 
     /**
+     * <p>The traffic direction.</p>
+     * 
      * <strong>example:</strong>
      * <p>in</p>
      */
@@ -33,6 +41,8 @@ public class DescribeVpcFirewallAssetListRequest extends TeaModel {
     public String direction;
 
     /**
+     * <p>The ID of the ECS instance.</p>
+     * 
      * <strong>example:</strong>
      * <p>i-hp3ez3rs9bxwt034****</p>
      */
@@ -40,6 +50,8 @@ public class DescribeVpcFirewallAssetListRequest extends TeaModel {
     public String ecsInstanceId;
 
     /**
+     * <p>The name of the asset instance.</p>
+     * 
      * <strong>example:</strong>
      * <p>test-ecs</p>
      */
@@ -47,6 +59,7 @@ public class DescribeVpcFirewallAssetListRequest extends TeaModel {
     public String ecsInstanceName;
 
     /**
+     * <p>The end time. The value is a UNIX timestamp. Unit: seconds.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -56,6 +69,8 @@ public class DescribeVpcFirewallAssetListRequest extends TeaModel {
     public String endTime;
 
     /**
+     * <p>The protocol type.</p>
+     * 
      * <strong>example:</strong>
      * <p>tcp</p>
      */
@@ -63,6 +78,8 @@ public class DescribeVpcFirewallAssetListRequest extends TeaModel {
     public String IPProtocol;
 
     /**
+     * <p>Specifies whether to count only the traffic to AI services.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -70,6 +87,8 @@ public class DescribeVpcFirewallAssetListRequest extends TeaModel {
     public String isAITraffic;
 
     /**
+     * <p>The language of the request and response.</p>
+     * 
      * <strong>example:</strong>
      * <p>zh</p>
      */
@@ -77,6 +96,8 @@ public class DescribeVpcFirewallAssetListRequest extends TeaModel {
     public String lang;
 
     /**
+     * <p>The sort order.</p>
+     * 
      * <strong>example:</strong>
      * <p>desc</p>
      */
@@ -84,6 +105,8 @@ public class DescribeVpcFirewallAssetListRequest extends TeaModel {
     public String order;
 
     /**
+     * <p>The page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -91,6 +114,8 @@ public class DescribeVpcFirewallAssetListRequest extends TeaModel {
     public String pageSize;
 
     /**
+     * <p>The ID of the peer VPC instance.</p>
+     * 
      * <strong>example:</strong>
      * <p>vpc-90rq0anm6t8vbwbo****</p>
      */
@@ -98,6 +123,8 @@ public class DescribeVpcFirewallAssetListRequest extends TeaModel {
     public String peerVpcId;
 
     /**
+     * <p>The port number.</p>
+     * 
      * <strong>example:</strong>
      * <p>5234</p>
      */
@@ -105,6 +132,8 @@ public class DescribeVpcFirewallAssetListRequest extends TeaModel {
     public String port;
 
     /**
+     * <p>The threat level.</p>
+     * 
      * <strong>example:</strong>
      * <p>3</p>
      */
@@ -112,6 +141,8 @@ public class DescribeVpcFirewallAssetListRequest extends TeaModel {
     public String riskLevel;
 
     /**
+     * <p>The sorting method.</p>
+     * 
      * <strong>example:</strong>
      * <p>SessionCount</p>
      */
@@ -119,6 +150,7 @@ public class DescribeVpcFirewallAssetListRequest extends TeaModel {
     public String sort;
 
     /**
+     * <p>The start time. The value is a UNIX timestamp. Unit: seconds.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -128,6 +160,7 @@ public class DescribeVpcFirewallAssetListRequest extends TeaModel {
     public String startTime;
 
     /**
+     * <p>The ID of the VPC instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeVpcFirewallZoneRequest extends TeaModel {
     /**
+     * <p>The ID of the CEN instance.</p>
+     * 
      * <strong>example:</strong>
      * <p>cen-4xbjup276au29r****</p>
      */
@@ -12,6 +14,8 @@ public class DescribeVpcFirewallZoneRequest extends TeaModel {
     public String cenId;
 
     /**
+     * <p>The environment.</p>
+     * 
      * <strong>example:</strong>
      * <p>TransitRouter</p>
      */
@@ -19,6 +23,8 @@ public class DescribeVpcFirewallZoneRequest extends TeaModel {
     public String environment;
 
     /**
+     * <p>The language of the response.</p>
+     * 
      * <strong>example:</strong>
      * <p>zh</p>
      */
@@ -26,6 +32,8 @@ public class DescribeVpcFirewallZoneRequest extends TeaModel {
     public String lang;
 
     /**
+     * <p>The UID of the Cloud Firewall member account.</p>
+     * 
      * <strong>example:</strong>
      * <p>135809047715****</p>
      */
@@ -33,6 +41,8 @@ public class DescribeVpcFirewallZoneRequest extends TeaModel {
     public String memberUid;
 
     /**
+     * <p>The region ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-beijing</p>
      */
@@ -40,6 +50,8 @@ public class DescribeVpcFirewallZoneRequest extends TeaModel {
     public String regionNo;
 
     /**
+     * <p>The source IP address of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>222.212.86.7XXX</p>
      */
@@ -47,6 +59,8 @@ public class DescribeVpcFirewallZoneRequest extends TeaModel {
     public String sourceIp;
 
     /**
+     * <p>The ID of the TransitRouter instance.</p>
+     * 
      * <strong>example:</strong>
      * <p>tr-m5etmb2q7e0mxcur****</p>
      */

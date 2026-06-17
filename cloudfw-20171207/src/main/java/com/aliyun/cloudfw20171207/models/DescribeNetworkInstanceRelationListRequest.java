@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeNetworkInstanceRelationListRequest extends TeaModel {
     /**
+     * <p>The connection type.</p>
+     * 
      * <strong>example:</strong>
      * <p>cen</p>
      */
@@ -12,6 +14,8 @@ public class DescribeNetworkInstanceRelationListRequest extends TeaModel {
     public String connectType;
 
     /**
+     * <p>The configuration status of Cloud Firewall.</p>
+     * 
      * <strong>example:</strong>
      * <p>notconfigured</p>
      */
@@ -19,15 +23,29 @@ public class DescribeNetworkInstanceRelationListRequest extends TeaModel {
     public String firewallConfigureStatus;
 
     /**
+     * <p>The language of the response.</p>
+     * 
      * <strong>example:</strong>
      * <p>zh</p>
      */
     @NameInMap("Lang")
     public String lang;
 
+    /**
+     * <p>The ID of the local network instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vpc-2vcwkr****</p>
+     */
     @NameInMap("NetworkInstanceId")
     public String networkInstanceId;
 
+    /**
+     * <p>The ID of the peer network instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vpc-dsf232d****</p>
+     */
     @NameInMap("PeerNetworkInstanceId")
     public String peerNetworkInstanceId;
 

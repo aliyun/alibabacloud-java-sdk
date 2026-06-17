@@ -14,7 +14,7 @@ public class DescribeTrFirewallsV2ListRequest extends TeaModel {
     public String cenId;
 
     /**
-     * <p>The page number. Default value: <strong>1</strong>.</p>
+     * <p>The page number for a paged query. Default value: <strong>1</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -32,10 +32,10 @@ public class DescribeTrFirewallsV2ListRequest extends TeaModel {
     public String firewallId;
 
     /**
-     * <p>The name of the VPC firewall.</p>
+     * <p>The instance name of the VPC firewall.</p>
      * 
      * <strong>example:</strong>
-     * <p>test</p>
+     * <p>vpc-firewall-test</p>
      */
     @NameInMap("FirewallName")
     public String firewallName;
@@ -43,16 +43,23 @@ public class DescribeTrFirewallsV2ListRequest extends TeaModel {
     /**
      * <p>The status of the VPC firewall. Valid values:</p>
      * <ul>
-     * <li><strong>opened</strong>: The VPC firewall is enabled.</li>
-     * <li><strong>closed</strong>: The VPC firewall is disabled.</li>
-     * <li><strong>notconfigured</strong>: The VPC firewall is not created.</li>
-     * <li><strong>configured</strong>: The VPC firewall is created but is not enabled.</li>
-     * <li><strong>creating</strong>: The VPC firewall is being created.</li>
-     * <li><strong>opening</strong>: The VPC firewall is being enabled.</li>
-     * <li><strong>deleting</strong>: The VPC firewall is being deleted.</li>
+     * <li><p><strong>opened</strong>: Enabled</p>
+     * </li>
+     * <li><p><strong>closed</strong>: Disabled</p>
+     * </li>
+     * <li><p><strong>notconfigured</strong>: The VPC firewall is not configured.</p>
+     * </li>
+     * <li><p><strong>configured</strong>: The VPC firewall is configured.</p>
+     * </li>
+     * <li><p><strong>creating</strong>: The VPC firewall is being created.</p>
+     * </li>
+     * <li><p><strong>opening</strong>: The VPC firewall is being enabled.</p>
+     * </li>
+     * <li><p><strong>deleting</strong>: The VPC firewall is being deleted.</p>
+     * </li>
      * </ul>
      * <blockquote>
-     * <p> If you do not specify this parameter, VPC firewalls in all states are queried.</p>
+     * <p>If you do not specify this parameter, VPC firewalls in all states are queried.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -62,10 +69,12 @@ public class DescribeTrFirewallsV2ListRequest extends TeaModel {
     public String firewallSwitchStatus;
 
     /**
-     * <p>The language of the content within the response. Valid values:</p>
+     * <p>The language of the response message. Valid values:</p>
      * <ul>
-     * <li><strong>zh</strong>: Chinese (default)</li>
-     * <li><strong>en</strong>: English</li>
+     * <li><p><strong>zh</strong> (default): Chinese</p>
+     * </li>
+     * <li><p><strong>en</strong>: English</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -78,7 +87,7 @@ public class DescribeTrFirewallsV2ListRequest extends TeaModel {
     public String ownerId;
 
     /**
-     * <p>The number of entries per page. Default value: 10.</p>
+     * <p>The maximum number of entries to return on each page in a paged query. Default value: 10.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -87,7 +96,7 @@ public class DescribeTrFirewallsV2ListRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The region ID of the transit router.</p>
+     * <p>The region ID of the transit router instance.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -96,13 +105,15 @@ public class DescribeTrFirewallsV2ListRequest extends TeaModel {
     public String regionNo;
 
     /**
-     * <p>The routing mode of the VPC firewall. Valid values:</p>
+     * <p>The routing mode. Valid values:</p>
      * <ul>
-     * <li><strong>managed</strong>: automatic mode</li>
-     * <li><strong>manual</strong>: manual mode</li>
+     * <li><p><strong>managed</strong>: automatic mode.</p>
+     * </li>
+     * <li><p><strong>manual</strong>: manual mode.</p>
+     * </li>
      * </ul>
      * <blockquote>
-     * <p> If you do not specify this parameter, VPC firewalls in all routing modes are queried.</p>
+     * <p>If you do not specify this parameter, VPC firewalls in all routing modes are queried.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -112,7 +123,7 @@ public class DescribeTrFirewallsV2ListRequest extends TeaModel {
     public String routeMode;
 
     /**
-     * <p>The ID of the transit router.</p>
+     * <p>The instance ID of the transit router.</p>
      * 
      * <strong>example:</strong>
      * <p>tr-uf6egtvyaedvt20xl****</p>

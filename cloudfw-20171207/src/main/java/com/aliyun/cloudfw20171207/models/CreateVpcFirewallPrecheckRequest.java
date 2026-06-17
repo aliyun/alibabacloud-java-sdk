@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateVpcFirewallPrecheckRequest extends TeaModel {
     /**
+     * <p>The ID of the Cloud Enterprise Network (CEN) instance.</p>
+     * 
      * <strong>example:</strong>
      * <p>cen-iv8m2lj2fqg1xt****</p>
      */
@@ -12,6 +14,14 @@ public class CreateVpcFirewallPrecheckRequest extends TeaModel {
     public String cenId;
 
     /**
+     * <p>The language of the request and response. Valid values:</p>
+     * <ul>
+     * <li><p><strong>zh</strong> (default): Chinese.</p>
+     * </li>
+     * <li><p><strong>en</strong>: English.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>zh</p>
      */
@@ -19,6 +29,8 @@ public class CreateVpcFirewallPrecheckRequest extends TeaModel {
     public String lang;
 
     /**
+     * <p>The UID of the member account of Cloud Firewall.</p>
+     * 
      * <strong>example:</strong>
      * <p>128599825273****</p>
      */
@@ -26,6 +38,16 @@ public class CreateVpcFirewallPrecheckRequest extends TeaModel {
     public String memberUid;
 
     /**
+     * <p>The type of the network instance. Valid values:</p>
+     * <ul>
+     * <li><p><strong>cen_firewall</strong></p>
+     * </li>
+     * <li><p><strong>cen_tr_firewall</strong></p>
+     * </li>
+     * <li><p><strong>ec_firewall</strong></p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>cen_tr_firewall</p>
      */
@@ -33,6 +55,8 @@ public class CreateVpcFirewallPrecheckRequest extends TeaModel {
     public String networkInstanceType;
 
     /**
+     * <p>The region.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-chengdu</p>
      */
@@ -40,6 +64,8 @@ public class CreateVpcFirewallPrecheckRequest extends TeaModel {
     public String region;
 
     /**
+     * <p>The ID of the transit router instance.</p>
+     * 
      * <strong>example:</strong>
      * <p>tr-t4n16htuv1jalj9cq****</p>
      */
@@ -47,6 +73,8 @@ public class CreateVpcFirewallPrecheckRequest extends TeaModel {
     public String transitRouterId;
 
     /**
+     * <p>The ID of the VPC instance.</p>
+     * 
      * <strong>example:</strong>
      * <p>vpc-bp132e2wpu9o6qth****</p>
      */

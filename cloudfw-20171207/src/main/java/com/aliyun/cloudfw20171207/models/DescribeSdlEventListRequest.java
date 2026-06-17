@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeSdlEventListRequest extends TeaModel {
     /**
+     * <p>The page number of the returned page.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -12,6 +14,8 @@ public class DescribeSdlEventListRequest extends TeaModel {
     public Integer currentPage;
 
     /**
+     * <p>The destination IP address.</p>
+     * 
      * <strong>example:</strong>
      * <p>47.100.102.XXX</p>
      */
@@ -19,6 +23,8 @@ public class DescribeSdlEventListRequest extends TeaModel {
     public String dstIp;
 
     /**
+     * <p>The end of the time range to query. This value is a UNIX timestamp representing seconds.</p>
+     * 
      * <strong>example:</strong>
      * <p>1756433077</p>
      */
@@ -26,16 +32,26 @@ public class DescribeSdlEventListRequest extends TeaModel {
     public Long endTime;
 
     /**
+     * <p>The language of the response.</p>
+     * 
      * <strong>example:</strong>
      * <p>zh</p>
      */
     @NameInMap("Lang")
     public String lang;
 
+    /**
+     * <p>The region.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Zhangjiakou</p>
+     */
     @NameInMap("Location")
     public String location;
 
     /**
+     * <p>Specifies whether to return only events detected by AI.</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
@@ -43,6 +59,8 @@ public class DescribeSdlEventListRequest extends TeaModel {
     public Integer onlyAiEvt;
 
     /**
+     * <p>The sort order. Valid values: <code>asc</code> (ascending) and <code>desc</code> (descending).</p>
+     * 
      * <strong>example:</strong>
      * <p>desc</p>
      */
@@ -50,6 +68,8 @@ public class DescribeSdlEventListRequest extends TeaModel {
     public String order;
 
     /**
+     * <p>The number of entries per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -57,6 +77,8 @@ public class DescribeSdlEventListRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The sensitivity level of the data in the event.</p>
+     * 
      * <strong>example:</strong>
      * <p>S3</p>
      */
@@ -64,6 +86,8 @@ public class DescribeSdlEventListRequest extends TeaModel {
     public String sensitiveLevel;
 
     /**
+     * <p>The field to sort by.</p>
+     * 
      * <strong>example:</strong>
      * <p>TotalBytes</p>
      */
@@ -71,6 +95,8 @@ public class DescribeSdlEventListRequest extends TeaModel {
     public String sort;
 
     /**
+     * <p>The source IP address.</p>
+     * 
      * <strong>example:</strong>
      * <p>172.16.0.XXX</p>
      */
@@ -78,6 +104,8 @@ public class DescribeSdlEventListRequest extends TeaModel {
     public String srcIp;
 
     /**
+     * <p>The start of the time range to query. This value is a UNIX timestamp representing seconds.</p>
+     * 
      * <strong>example:</strong>
      * <p>1759198702</p>
      */
@@ -85,6 +113,8 @@ public class DescribeSdlEventListRequest extends TeaModel {
     public Long startTime;
 
     /**
+     * <p>The unique ID of the event.</p>
+     * 
      * <strong>example:</strong>
      * <p>aa58cdf6-6cf8-493c-912d-97619a24****</p>
      */

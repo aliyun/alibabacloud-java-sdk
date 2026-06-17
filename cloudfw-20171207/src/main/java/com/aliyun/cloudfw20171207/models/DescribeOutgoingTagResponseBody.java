@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class DescribeOutgoingTagResponseBody extends TeaModel {
     /**
+     * <p>The ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>B532203E-813B-5BEB-B75B-315E1D08****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The list of tags.</p>
+     */
     @NameInMap("TagList")
     public java.util.List<DescribeOutgoingTagResponseBodyTagList> tagList;
 
     /**
+     * <p>The total number of entries.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -52,6 +59,16 @@ public class DescribeOutgoingTagResponseBody extends TeaModel {
 
     public static class DescribeOutgoingTagResponseBodyTagList extends TeaModel {
         /**
+         * <p>The classification. Valid values:</p>
+         * <ul>
+         * <li><p><strong>Suspicious</strong>: suspicious.</p>
+         * </li>
+         * <li><p><strong>Malicious</strong>: malicious.</p>
+         * </li>
+         * <li><p><strong>Trusted</strong>: trusted.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Trusted</p>
          */
@@ -59,6 +76,18 @@ public class DescribeOutgoingTagResponseBody extends TeaModel {
         public String classId;
 
         /**
+         * <p>The risk assessment level. Valid values:</p>
+         * <ul>
+         * <li><p><strong>0</strong>: no threat.</p>
+         * </li>
+         * <li><p><strong>1</strong>: low threat.</p>
+         * </li>
+         * <li><p><strong>2</strong>: medium threat.</p>
+         * </li>
+         * <li><p><strong>3</strong>: high threat.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -66,6 +95,8 @@ public class DescribeOutgoingTagResponseBody extends TeaModel {
         public Integer riskLevel;
 
         /**
+         * <p>The description of the tag.</p>
+         * 
          * <strong>example:</strong>
          * <p>test describe</p>
          */
@@ -73,6 +104,8 @@ public class DescribeOutgoingTagResponseBody extends TeaModel {
         public String tagDescribe;
 
         /**
+         * <p>The ID of the tag.</p>
+         * 
          * <strong>example:</strong>
          * <p>tag-6833388d18cc****</p>
          */
@@ -80,6 +113,8 @@ public class DescribeOutgoingTagResponseBody extends TeaModel {
         public String tagId;
 
         /**
+         * <p>The name of the tag.</p>
+         * 
          * <strong>example:</strong>
          * <p>test tag</p>
          */

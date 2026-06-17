@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribePrivateDnsDomainNameListRequest extends TeaModel {
     /**
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,8 @@ public class DescribePrivateDnsDomainNameListRequest extends TeaModel {
     public String accessInstanceId;
 
     /**
+     * <p>The domain name.</p>
+     * 
      * <strong>example:</strong>
      * <p>example.com</p>
      */
@@ -21,6 +24,8 @@ public class DescribePrivateDnsDomainNameListRequest extends TeaModel {
     public String domainName;
 
     /**
+     * <p>The page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -28,6 +33,8 @@ public class DescribePrivateDnsDomainNameListRequest extends TeaModel {
     public Integer pageNo;
 
     /**
+     * <p>The number of the page to return.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -35,6 +42,7 @@ public class DescribePrivateDnsDomainNameListRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

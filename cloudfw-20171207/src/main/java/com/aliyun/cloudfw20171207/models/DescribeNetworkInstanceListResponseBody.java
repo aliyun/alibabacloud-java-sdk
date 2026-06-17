@@ -4,10 +4,15 @@ package com.aliyun.cloudfw20171207.models;
 import com.aliyun.tea.*;
 
 public class DescribeNetworkInstanceListResponseBody extends TeaModel {
+    /**
+     * <p>The details of the network instances.</p>
+     */
     @NameInMap("NetworkInstanceList")
     public java.util.List<DescribeNetworkInstanceListResponseBodyNetworkInstanceList> networkInstanceList;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>D2373503-3921-59F2-93A6-3DA7FB7****</p>
      */
@@ -15,6 +20,8 @@ public class DescribeNetworkInstanceListResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total number of entries.</p>
+     * 
      * <strong>example:</strong>
      * <p>21</p>
      */
@@ -52,6 +59,8 @@ public class DescribeNetworkInstanceListResponseBody extends TeaModel {
 
     public static class DescribeNetworkInstanceListResponseBodyNetworkInstanceList extends TeaModel {
         /**
+         * <p>The ID of the network instance.</p>
+         * 
          * <strong>example:</strong>
          * <p>vpc-m5ewlqkuf7or****</p>
          */
@@ -59,6 +68,8 @@ public class DescribeNetworkInstanceListResponseBody extends TeaModel {
         public String networkInstanceId;
 
         /**
+         * <p>The name of the network instance.</p>
+         * 
          * <strong>example:</strong>
          * <p>vpc-test</p>
          */
@@ -66,6 +77,8 @@ public class DescribeNetworkInstanceListResponseBody extends TeaModel {
         public String networkInstanceName;
 
         /**
+         * <p>The type of the network instance.</p>
+         * 
          * <strong>example:</strong>
          * <p>vpc</p>
          */
@@ -73,6 +86,8 @@ public class DescribeNetworkInstanceListResponseBody extends TeaModel {
         public String networkInstanceType;
 
         /**
+         * <p>The region ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-shanghai</p>
          */

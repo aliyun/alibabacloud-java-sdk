@@ -4,10 +4,15 @@ package com.aliyun.cloudfw20171207.models;
 import com.aliyun.tea.*;
 
 public class ListTlsInspectCACertificatesResponseBody extends TeaModel {
+    /**
+     * <p>The list of certificates.</p>
+     */
     @NameInMap("Certificates")
     public java.util.List<ListTlsInspectCACertificatesResponseBodyCertificates> certificates;
 
     /**
+     * <p>The ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>CBF1E9B7-D6A0-4E9E-AD3E-******837D</p>
      */
@@ -15,6 +20,8 @@ public class ListTlsInspectCACertificatesResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total number of entries.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -52,6 +59,16 @@ public class ListTlsInspectCACertificatesResponseBody extends TeaModel {
 
     public static class ListTlsInspectCACertificatesResponseBodyCertificates extends TeaModel {
         /**
+         * <p>The encryption algorithm of the CA certificate. Valid values:</p>
+         * <ul>
+         * <li><p><strong>RSA</strong>: the RSA algorithm.</p>
+         * </li>
+         * <li><p><strong>ECC</strong>: the ECC algorithm.</p>
+         * </li>
+         * <li><p><strong>SM2</strong>: the SM2 algorithm.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>RSA</p>
          */
@@ -59,6 +76,8 @@ public class ListTlsInspectCACertificatesResponseBody extends TeaModel {
         public String algorithm;
 
         /**
+         * <p>The alias of the certificate.</p>
+         * 
          * <strong>example:</strong>
          * <p>rsa_ml_***_root</p>
          */
@@ -66,6 +85,8 @@ public class ListTlsInspectCACertificatesResponseBody extends TeaModel {
         public String aliasName;
 
         /**
+         * <p>The ID of the CA certificate.</p>
+         * 
          * <strong>example:</strong>
          * <p>2732BB48-2969-5716-B5D9-******CA85</p>
          */
@@ -73,6 +94,14 @@ public class ListTlsInspectCACertificatesResponseBody extends TeaModel {
         public String caCertId;
 
         /**
+         * <p>The type of the CA certificate. Valid values:</p>
+         * <ul>
+         * <li><p><strong>ROOT</strong>: a root CA certificate.</p>
+         * </li>
+         * <li><p><strong>SUB_ROOT</strong>: a subordinate CA certificate.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>ROOT</p>
          */
@@ -80,6 +109,8 @@ public class ListTlsInspectCACertificatesResponseBody extends TeaModel {
         public String caCertType;
 
         /**
+         * <p>The expiration timestamp.</p>
+         * 
          * <strong>example:</strong>
          * <p>1934***149</p>
          */
@@ -87,6 +118,8 @@ public class ListTlsInspectCACertificatesResponseBody extends TeaModel {
         public Long expirationTime;
 
         /**
+         * <p>The key length of the CA certificate.</p>
+         * 
          * <strong>example:</strong>
          * <p>2048</p>
          */
@@ -94,6 +127,8 @@ public class ListTlsInspectCACertificatesResponseBody extends TeaModel {
         public Integer keySize;
 
         /**
+         * <p>The ID of the parent CA certificate.</p>
+         * 
          * <strong>example:</strong>
          * <p>340BB48-2969-5716-B5D9-****ACA85</p>
          */
@@ -101,6 +136,8 @@ public class ListTlsInspectCACertificatesResponseBody extends TeaModel {
         public String parentCaCertId;
 
         /**
+         * <p>The signature algorithm of the CA certificate.</p>
+         * 
          * <strong>example:</strong>
          * <p>SHA256WITHRSA</p>
          */
@@ -108,6 +145,14 @@ public class ListTlsInspectCACertificatesResponseBody extends TeaModel {
         public String signAlgorithm;
 
         /**
+         * <p>The status of the certificate. Valid values:</p>
+         * <ul>
+         * <li><p><strong>ISSUE</strong>: enabled.</p>
+         * </li>
+         * <li><p><strong>REVOKE</strong>: revoked.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>ISSUE</p>
          */

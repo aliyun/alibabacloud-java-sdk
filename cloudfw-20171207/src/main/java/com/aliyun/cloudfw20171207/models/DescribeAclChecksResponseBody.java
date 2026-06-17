@@ -4,10 +4,15 @@ package com.aliyun.cloudfw20171207.models;
 import com.aliyun.tea.*;
 
 public class DescribeAclChecksResponseBody extends TeaModel {
+    /**
+     * <p>The list of ACL check records.</p>
+     */
     @NameInMap("CheckRecords")
     public DescribeAclChecksResponseBodyCheckRecords checkRecords;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>9AABB1B7-C81F-5158-9EF9-B2DD5D3D****</p>
      */
@@ -37,6 +42,8 @@ public class DescribeAclChecksResponseBody extends TeaModel {
 
     public static class DescribeAclChecksResponseBodyCheckRecordsRecords extends TeaModel {
         /**
+         * <p>The number of pending ACL check tasks.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -44,6 +51,8 @@ public class DescribeAclChecksResponseBody extends TeaModel {
         public Long aclPendingCount;
 
         /**
+         * <p>The total number of ACL checks.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -51,6 +60,8 @@ public class DescribeAclChecksResponseBody extends TeaModel {
         public Long aclTotalCount;
 
         /**
+         * <p>The name of the ACL check.</p>
+         * 
          * <strong>example:</strong>
          * <p>AddressBookDomainValid</p>
          */
@@ -58,6 +69,8 @@ public class DescribeAclChecksResponseBody extends TeaModel {
         public String checkName;
 
         /**
+         * <p>The status of the ACL check item.</p>
+         * 
          * <strong>example:</strong>
          * <p>Checked</p>
          */
@@ -65,6 +78,8 @@ public class DescribeAclChecksResponseBody extends TeaModel {
         public String checkStatus;
 
         /**
+         * <p>The type of ACL check.</p>
+         * 
          * <strong>example:</strong>
          * <p>AddressBookGather</p>
          */
@@ -72,6 +87,8 @@ public class DescribeAclChecksResponseBody extends TeaModel {
         public String checkType;
 
         /**
+         * <p>The UNIX timestamp of the last check, in seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>1724982259</p>
          */
@@ -79,6 +96,8 @@ public class DescribeAclChecksResponseBody extends TeaModel {
         public String lastCheckTime;
 
         /**
+         * <p>The risk level.</p>
+         * 
          * <strong>example:</strong>
          * <p>Medium</p>
          */
@@ -86,6 +105,8 @@ public class DescribeAclChecksResponseBody extends TeaModel {
         public String level;
 
         /**
+         * <p>The ID of the ACL check task.</p>
+         * 
          * <strong>example:</strong>
          * <p>task-c92d4544ef7b6a42</p>
          */
@@ -165,12 +186,17 @@ public class DescribeAclChecksResponseBody extends TeaModel {
 
     public static class DescribeAclChecksResponseBodyCheckRecords extends TeaModel {
         /**
+         * <p>The type of ACL check.</p>
+         * 
          * <strong>example:</strong>
          * <p>Internet</p>
          */
         @NameInMap("AclType")
         public String aclType;
 
+        /**
+         * <p>The list of ACL check records.</p>
+         */
         @NameInMap("Records")
         public java.util.List<DescribeAclChecksResponseBodyCheckRecordsRecords> records;
 

@@ -4,10 +4,15 @@ package com.aliyun.cloudfw20171207.models;
 import com.aliyun.tea.*;
 
 public class DescribeIspInfoResponseBody extends TeaModel {
+    /**
+     * <p>The list of ISPs.</p>
+     */
     @NameInMap("DataList")
     public java.util.List<DescribeIspInfoResponseBodyDataList> dataList;
 
     /**
+     * <p>The ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>F0F82705-CFC7-5F83-86C8-A063892F****</p>
      */
@@ -15,6 +20,8 @@ public class DescribeIspInfoResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total number of entries.</p>
+     * 
      * <strong>example:</strong>
      * <p>5</p>
      */
@@ -52,12 +59,20 @@ public class DescribeIspInfoResponseBody extends TeaModel {
 
     public static class DescribeIspInfoResponseBodyDataList extends TeaModel {
         /**
+         * <p>The ID of the ISP.</p>
+         * 
          * <strong>example:</strong>
          * <p>isp-dhyw2lxfpc****</p>
          */
         @NameInMap("IspId")
         public Integer ispId;
 
+        /**
+         * <p>The name of the ISP.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>telecom</p>
+         */
         @NameInMap("IspName")
         public String ispName;
 

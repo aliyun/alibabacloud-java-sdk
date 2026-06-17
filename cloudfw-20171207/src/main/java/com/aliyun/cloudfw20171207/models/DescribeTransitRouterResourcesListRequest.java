@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeTransitRouterResourcesListRequest extends TeaModel {
     /**
+     * <p>The ID of the Cloud Enterprise Network (CEN) instance.</p>
+     * 
      * <strong>example:</strong>
      * <p>cen-djz1i6p8shzioz****</p>
      */
@@ -12,6 +14,8 @@ public class DescribeTransitRouterResourcesListRequest extends TeaModel {
     public String cenId;
 
     /**
+     * <p>The instance ID of the border firewall.</p>
+     * 
      * <strong>example:</strong>
      * <p>vfw-tr-741de4c8956341****</p>
      */
@@ -19,6 +23,8 @@ public class DescribeTransitRouterResourcesListRequest extends TeaModel {
     public String firewallId;
 
     /**
+     * <p>The language of the request and response.</p>
+     * 
      * <strong>example:</strong>
      * <p>zh</p>
      */
@@ -26,6 +32,8 @@ public class DescribeTransitRouterResourcesListRequest extends TeaModel {
     public String lang;
 
     /**
+     * <p>The region ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-shenzhen</p>
      */
@@ -33,6 +41,8 @@ public class DescribeTransitRouterResourcesListRequest extends TeaModel {
     public String regionNo;
 
     /**
+     * <p>The asset type.</p>
+     * 
      * <strong>example:</strong>
      * <p>TR</p>
      */
@@ -40,6 +50,8 @@ public class DescribeTransitRouterResourcesListRequest extends TeaModel {
     public String resourceType;
 
     /**
+     * <p>The ID of the TransitRouter.</p>
+     * 
      * <strong>example:</strong>
      * <p>tr-2zefgvkcl2qcexbb7****</p>
      */
@@ -47,6 +59,8 @@ public class DescribeTransitRouterResourcesListRequest extends TeaModel {
     public String transitRouterId;
 
     /**
+     * <p>The ID of the VPC instance.</p>
+     * 
      * <strong>example:</strong>
      * <p>vpc-wz9lllsbftdm0svpj****</p>
      */

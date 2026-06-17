@@ -5,6 +5,14 @@ import com.aliyun.tea.*;
 
 public class UpdateSecurityProxyRequest extends TeaModel {
     /**
+     * <p>The language of the response. Valid values:</p>
+     * <ul>
+     * <li><p><strong>zh</strong> (default): Chinese.</p>
+     * </li>
+     * <li><p><strong>en</strong>: English.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>zh</p>
      */
@@ -12,6 +20,7 @@ public class UpdateSecurityProxyRequest extends TeaModel {
     public String lang;
 
     /**
+     * <p>The ID of the NAT firewall.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,6 +30,7 @@ public class UpdateSecurityProxyRequest extends TeaModel {
     public String proxyId;
 
     /**
+     * <p>The name of the NAT firewall. The name must be 4 to 50 characters long. It can contain letters, digits, Chinese characters, and underscores (<em>). The name cannot start with an underscore (</em>).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -30,6 +40,14 @@ public class UpdateSecurityProxyRequest extends TeaModel {
     public String proxyName;
 
     /**
+     * <p>Specifies whether to enable strict mode. Valid values:</p>
+     * <ul>
+     * <li><p>1: strict mode</p>
+     * </li>
+     * <li><p>0: loose mode</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */

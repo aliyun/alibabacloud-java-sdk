@@ -17,7 +17,7 @@ public class CreateTrFirewallV2Request extends TeaModel {
      * <p>The description of the firewall.</p>
      * 
      * <strong>example:</strong>
-     * <p>vfw-sz</p>
+     * <p>vpc-firewall-description</p>
      */
     @NameInMap("FirewallDescription")
     public String firewallDescription;
@@ -26,13 +26,13 @@ public class CreateTrFirewallV2Request extends TeaModel {
      * <p>The name of the firewall.</p>
      * 
      * <strong>example:</strong>
-     * <p>cfw_test2</p>
+     * <p>vpc-firewall-test</p>
      */
     @NameInMap("FirewallName")
     public String firewallName;
 
     /**
-     * <p>The subnet CIDR block of the VPC in which the ENI of the firewall is stored in automatic mode.</p>
+     * <p>The CIDR block of the vSwitch in the firewall VPC that hosts the firewall\&quot;s elastic network interface (ENI). This parameter applies only in automatic mode.</p>
      * 
      * <strong>example:</strong>
      * <p>10.0.1.0/24</p>
@@ -41,7 +41,7 @@ public class CreateTrFirewallV2Request extends TeaModel {
     public String firewallSubnetCidr;
 
     /**
-     * <p>The CIDR block that is allocated to the VPC created for the VPC firewall in automatic mode.</p>
+     * <p>The CIDR block of the firewall VPC in automatic mode.</p>
      * 
      * <strong>example:</strong>
      * <p>10.0.0.0/16</p>
@@ -50,7 +50,7 @@ public class CreateTrFirewallV2Request extends TeaModel {
     public String firewallVpcCidr;
 
     /**
-     * <p>The ID of the VPC in which the ENI associated with the VPC firewall is created in manual mode.</p>
+     * <p>The ID of the VPC where the firewall ENI is created. This parameter applies only in manual mode.</p>
      * 
      * <strong>example:</strong>
      * <p>vpc-wz9r5qvryn0lg3atb****</p>
@@ -59,7 +59,7 @@ public class CreateTrFirewallV2Request extends TeaModel {
     public String firewallVpcId;
 
     /**
-     * <p>The ID of the vSwitch that is used to create the ENI in manual mode.</p>
+     * <p>The ID of the vSwitch where the firewall ENI is created. This parameter applies only in manual mode.</p>
      * 
      * <strong>example:</strong>
      * <p>vsw-uf6ydz3vqj77mr5l6****</p>
@@ -68,10 +68,12 @@ public class CreateTrFirewallV2Request extends TeaModel {
     public String firewallVswitchId;
 
     /**
-     * <p>The language of the content within the response. Valid values:</p>
+     * <p>The language of the response message. Valid values:</p>
      * <ul>
-     * <li><strong>zh</strong>: Chinese (default)</li>
-     * <li><strong>en</strong>: English</li>
+     * <li><p><strong>zh</strong> (default): Chinese</p>
+     * </li>
+     * <li><p><strong>en</strong>: English</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -81,7 +83,7 @@ public class CreateTrFirewallV2Request extends TeaModel {
     public String lang;
 
     /**
-     * <p>The region ID of the route router.</p>
+     * <p>The region ID of the transit router instance.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -90,10 +92,12 @@ public class CreateTrFirewallV2Request extends TeaModel {
     public String regionNo;
 
     /**
-     * <p>The routing mode of the VPC firewall. Valid values:</p>
+     * <p>The routing mode. Valid values:</p>
      * <ul>
-     * <li><strong>managed</strong>: automatic mode</li>
-     * <li><strong>manual</strong>: manual mode</li>
+     * <li><p><strong>managed</strong>: automatic mode</p>
+     * </li>
+     * <li><p><strong>manual</strong>: manual mode</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -103,7 +107,7 @@ public class CreateTrFirewallV2Request extends TeaModel {
     public String routeMode;
 
     /**
-     * <p>The primary subnet CIDR block that the VPC uses to connect to the transit router in automatic mode.</p>
+     * <p>The CIDR block of the primary vSwitch used to connect to the transit router. This parameter applies only in automatic mode.</p>
      * 
      * <strong>example:</strong>
      * <p>10.0.3.0/24</p>
@@ -121,7 +125,7 @@ public class CreateTrFirewallV2Request extends TeaModel {
     public String trAttachmentMasterZone;
 
     /**
-     * <p>The secondary subnet CIDR block that the VPC uses to connect to the transit router in automatic mode.</p>
+     * <p>The CIDR block of the secondary vSwitch used to connect to the transit router. This parameter applies only in automatic mode.</p>
      * 
      * <strong>example:</strong>
      * <p>10.0.0.16/28</p>
@@ -139,7 +143,7 @@ public class CreateTrFirewallV2Request extends TeaModel {
     public String trAttachmentSlaveZone;
 
     /**
-     * <p>The ID of the transit router.</p>
+     * <p>The ID of the transit router instance.</p>
      * 
      * <strong>example:</strong>
      * <p>tr-m5etmb2q7e0mxcur****</p>

@@ -17,7 +17,7 @@ public class ModifyTrFirewallV2RoutePolicyScopeResponseBody extends TeaModel {
      * <p>The ID of the routing policy.</p>
      * 
      * <strong>example:</strong>
-     * <p>policy-4d724d0139df48f18091</p>
+     * <p>policy-4d724d0139df48f1****</p>
      */
     @NameInMap("TrFirewallRoutePolicyId")
     public String trFirewallRoutePolicyId;

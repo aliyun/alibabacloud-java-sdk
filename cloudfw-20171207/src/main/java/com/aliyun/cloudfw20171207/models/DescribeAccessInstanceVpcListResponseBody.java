@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeAccessInstanceVpcListResponseBody extends TeaModel {
     /**
+     * <p>The page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -12,6 +14,8 @@ public class DescribeAccessInstanceVpcListResponseBody extends TeaModel {
     public Integer pageNo;
 
     /**
+     * <p>The number of entries per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -19,6 +23,8 @@ public class DescribeAccessInstanceVpcListResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>450D47F5-956E-543E-8502-2F71C8C54E72</p>
      */
@@ -26,12 +32,17 @@ public class DescribeAccessInstanceVpcListResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total number of entries.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
     @NameInMap("TotalCount")
     public Long totalCount;
 
+    /**
+     * <p>The list of VPCs.</p>
+     */
     @NameInMap("VpcList")
     public java.util.List<DescribeAccessInstanceVpcListResponseBodyVpcList> vpcList;
 
@@ -82,6 +93,8 @@ public class DescribeAccessInstanceVpcListResponseBody extends TeaModel {
 
     public static class DescribeAccessInstanceVpcListResponseBodyVpcList extends TeaModel {
         /**
+         * <p>Indicates whether the VPC is managed by Cloud Firewall.</p>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
@@ -89,6 +102,8 @@ public class DescribeAccessInstanceVpcListResponseBody extends TeaModel {
         public Boolean firewallVpc;
 
         /**
+         * <p>The ID of the VPC instance.</p>
+         * 
          * <strong>example:</strong>
          * <p>vpc-2ze1t4irqj0fljlbb****</p>
          */
@@ -96,6 +111,8 @@ public class DescribeAccessInstanceVpcListResponseBody extends TeaModel {
         public String vpcId;
 
         /**
+         * <p>The name of the VPC instance.</p>
+         * 
          * <strong>example:</strong>
          * <p>Cloud_Firewall_VPC</p>
          */

@@ -4,10 +4,15 @@ package com.aliyun.cloudfw20171207.models;
 import com.aliyun.tea.*;
 
 public class DescribeSecurityProxyResponseBody extends TeaModel {
+    /**
+     * <p>The list of NAT firewalls.</p>
+     */
     @NameInMap("ProxyList")
     public java.util.List<DescribeSecurityProxyResponseBodyProxyList> proxyList;
 
     /**
+     * <p>The ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>F0F82705-CFC7-5F83-86C8-A063892F****</p>
      */
@@ -15,6 +20,8 @@ public class DescribeSecurityProxyResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total number of entries.</p>
+     * 
      * <strong>example:</strong>
      * <p>5</p>
      */
@@ -52,6 +59,8 @@ public class DescribeSecurityProxyResponseBody extends TeaModel {
 
     public static class DescribeSecurityProxyResponseBodyProxyList extends TeaModel {
         /**
+         * <p>The IPv4 CIDR block of the VPC.</p>
+         * 
          * <strong>example:</strong>
          * <p>192.168.0.0/16</p>
          */
@@ -59,6 +68,8 @@ public class DescribeSecurityProxyResponseBody extends TeaModel {
         public String cidrBlock;
 
         /**
+         * <p>The details of the exception.</p>
+         * 
          * <strong>example:</strong>
          * <p>“”</p>
          */
@@ -66,6 +77,8 @@ public class DescribeSecurityProxyResponseBody extends TeaModel {
         public String detail;
 
         /**
+         * <p>The UID of the Cloud Firewall member account.</p>
+         * 
          * <strong>example:</strong>
          * <p>1797733170015112</p>
          */
@@ -73,6 +86,8 @@ public class DescribeSecurityProxyResponseBody extends TeaModel {
         public String memberUid;
 
         /**
+         * <p>The ID of the NAT Gateway.</p>
+         * 
          * <strong>example:</strong>
          * <p>ngw-2zex8sf4s5vus8rq3rjqo</p>
          */
@@ -80,6 +95,8 @@ public class DescribeSecurityProxyResponseBody extends TeaModel {
         public String natGatewayId;
 
         /**
+         * <p>The name of the NAT Gateway.</p>
+         * 
          * <strong>example:</strong>
          * <p>ecs-slb-eip-waf</p>
          */
@@ -87,6 +104,8 @@ public class DescribeSecurityProxyResponseBody extends TeaModel {
         public String natGatewayName;
 
         /**
+         * <p>The ID of the NAT firewall.</p>
+         * 
          * <strong>example:</strong>
          * <p>proxy-nat4921f192b6cf438d93f8</p>
          */
@@ -94,6 +113,8 @@ public class DescribeSecurityProxyResponseBody extends TeaModel {
         public String proxyId;
 
         /**
+         * <p>The name of the NAT firewall.</p>
+         * 
          * <strong>example:</strong>
          * <p>nat-idmp-fir</p>
          */
@@ -101,16 +122,39 @@ public class DescribeSecurityProxyResponseBody extends TeaModel {
         public String proxyName;
 
         /**
+         * <p>The region ID of the VPC.</p>
+         * 
          * <strong>example:</strong>
          * <p>ap-southeast-1</p>
          */
         @NameInMap("RegionNo")
         public String regionNo;
 
+        /**
+         * <p>The list of SNAT IP addresses.</p>
+         */
         @NameInMap("SnatIpList")
         public java.util.List<String> snatIpList;
 
         /**
+         * <p>The status of the Cloud Firewall. Valid values:</p>
+         * <ul>
+         * <li><p><strong>configuring</strong>: The firewall is being created.</p>
+         * </li>
+         * <li><p><strong>deleting</strong>: The firewall is being deleted.</p>
+         * </li>
+         * <li><p><strong>normal</strong>: The firewall is running.</p>
+         * </li>
+         * <li><p><strong>abnormal</strong>: The firewall is not running as expected.</p>
+         * </li>
+         * <li><p><strong>opening</strong>: The firewall is being enabled.</p>
+         * </li>
+         * <li><p><strong>closing</strong>: The firewall is being disabled.</p>
+         * </li>
+         * <li><p><strong>closed</strong>: The firewall is disabled.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>normal</p>
          */
@@ -118,6 +162,8 @@ public class DescribeSecurityProxyResponseBody extends TeaModel {
         public String status;
 
         /**
+         * <p>Indicates whether the strict mode is enabled. 1: The strict mode is enabled. 0: The strict mode is disabled.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -125,6 +171,8 @@ public class DescribeSecurityProxyResponseBody extends TeaModel {
         public Integer strictMode;
 
         /**
+         * <p>The ID of the vSwitch to which the Cloud Firewall instance belongs.</p>
+         * 
          * <strong>example:</strong>
          * <p>vsw-5gu2qqfmjmwl8ktzgfekl</p>
          */
@@ -132,6 +180,8 @@ public class DescribeSecurityProxyResponseBody extends TeaModel {
         public String vSwitchId;
 
         /**
+         * <p>The ID of the VPC instance.</p>
+         * 
          * <strong>example:</strong>
          * <p>vpc-wz9xn35tq33hunzvpu0se</p>
          */
@@ -139,6 +189,8 @@ public class DescribeSecurityProxyResponseBody extends TeaModel {
         public String vpcId;
 
         /**
+         * <p>The instance name of the VPC.</p>
+         * 
          * <strong>example:</strong>
          * <p>vpc-bp1kw9igsq0yyzeanqamx</p>
          */

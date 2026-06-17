@@ -5,26 +5,41 @@ import com.aliyun.tea.*;
 
 public class DescribeOutgoingDestinationIPRequest extends TeaModel {
     /**
-     * <p>The application type in the access control policy. Valid values:</p>
+     * <p>The application type supported by the access control policy.</p>
      * <ul>
-     * <li><strong>FTP</strong></li>
-     * <li><strong>HTTP</strong></li>
-     * <li><strong>HTTPS</strong></li>
-     * <li><strong>Memcache</strong></li>
-     * <li><strong>MongoDB</strong></li>
-     * <li><strong>MQTT</strong></li>
-     * <li><strong>MySQL</strong></li>
-     * <li><strong>RDP</strong></li>
-     * <li><strong>Redis</strong></li>
-     * <li><strong>SMTP</strong></li>
-     * <li><strong>SMTPS</strong></li>
-     * <li><strong>SSH</strong></li>
-     * <li><strong>SSL_No_Cert</strong></li>
-     * <li><strong>SSL</strong></li>
-     * <li><strong>VNC</strong></li>
+     * <li><p><strong>FTP</strong></p>
+     * </li>
+     * <li><p><strong>HTTP</strong></p>
+     * </li>
+     * <li><p><strong>HTTPS</strong></p>
+     * </li>
+     * <li><p><strong>Memcache</strong></p>
+     * </li>
+     * <li><p><strong>MongoDB</strong></p>
+     * </li>
+     * <li><p><strong>MQTT</strong></p>
+     * </li>
+     * <li><p><strong>MySQL</strong></p>
+     * </li>
+     * <li><p><strong>RDP</strong></p>
+     * </li>
+     * <li><p><strong>Redis</strong></p>
+     * </li>
+     * <li><p><strong>SMTP</strong></p>
+     * </li>
+     * <li><p><strong>SMTPS</strong></p>
+     * </li>
+     * <li><p><strong>SSH</strong></p>
+     * </li>
+     * <li><p><strong>SSL_No_Cert</strong></p>
+     * </li>
+     * <li><p><strong>SSL</strong></p>
+     * </li>
+     * <li><p><strong>VNC</strong></p>
+     * </li>
      * </ul>
      * <blockquote>
-     * <p> The value of this parameter depends on the value of Proto. If you set Proto to TCP, you can set ApplicationNameList to any valid value. If you specify both ApplicationNameList and ApplicationName, only the value of ApplicationNameList is used.</p>
+     * <p>The supported application types depend on the protocol type specified in the Proto parameter. If Proto is set to TCP, all application types listed above are supported. If both ApplicationName and ApplicationNameList are specified, the value of ApplicationNameList takes precedence.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -34,13 +49,18 @@ public class DescribeOutgoingDestinationIPRequest extends TeaModel {
     public String applicationName;
 
     /**
-     * <p>The ID of the service to which the destination IP address belongs. This parameter is left empty by default. Valid values:</p>
+     * <p>The ID of the service category. Valid values:</p>
      * <ul>
-     * <li><strong>All</strong>: all services</li>
-     * <li><strong>RiskDomain</strong>: risky domain names</li>
-     * <li><strong>RiskIP</strong>: risky IP addresses</li>
-     * <li><strong>AliYun</strong>: Alibaba Cloud services</li>
-     * <li><strong>NotAliYun</strong>: third-party services</li>
+     * <li><p><strong>All</strong>: all categories</p>
+     * </li>
+     * <li><p><strong>RiskDomain</strong>: risk domains</p>
+     * </li>
+     * <li><p><strong>RiskIP</strong>: risk IPs</p>
+     * </li>
+     * <li><p><strong>AliYun</strong>: Alibaba Cloud services</p>
+     * </li>
+     * <li><p><strong>NotAliYun</strong>: services other than Alibaba Cloud services</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -50,7 +70,7 @@ public class DescribeOutgoingDestinationIPRequest extends TeaModel {
     public String categoryId;
 
     /**
-     * <p>The number of the page to return.</p>
+     * <p>The page number to return.</p>
      * <p>Default value: 1.</p>
      * 
      * <strong>example:</strong>
@@ -60,7 +80,7 @@ public class DescribeOutgoingDestinationIPRequest extends TeaModel {
     public String currentPage;
 
     /**
-     * <p>The destination IP address in the outbound connection that is initiated to access a domain name.</p>
+     * <p>The destination IP address of the outbound connection.</p>
      * 
      * <strong>example:</strong>
      * <p>10.0.XX.XX</p>
@@ -69,7 +89,7 @@ public class DescribeOutgoingDestinationIPRequest extends TeaModel {
     public String dstIP;
 
     /**
-     * <p>The end of the time range to query. The value is a UNIX timestamp. Unit: seconds.</p>
+     * <p>The end of the time range to query. The value is a timestamp in seconds.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -79,10 +99,12 @@ public class DescribeOutgoingDestinationIPRequest extends TeaModel {
     public String endTime;
 
     /**
-     * <p>The language of the content within the response. Valid values:</p>
+     * <p>The language of the response. Valid values:</p>
      * <ul>
-     * <li><strong>zh</strong> (default)</li>
-     * <li><strong>en</strong></li>
+     * <li><p><strong>zh</strong> (default): Chinese.</p>
+     * </li>
+     * <li><p><strong>en</strong>: English.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -92,10 +114,12 @@ public class DescribeOutgoingDestinationIPRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The method that you want to use to sort the query results. Valid values:</p>
+     * <p>The sort order. Valid values:</p>
      * <ul>
-     * <li><strong>asc</strong></li>
-     * <li><strong>desc</strong> (default)</li>
+     * <li><p><strong>asc</strong>: ascending order.</p>
+     * </li>
+     * <li><p><strong>desc</strong> (default): descending order.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -133,7 +157,7 @@ public class DescribeOutgoingDestinationIPRequest extends TeaModel {
     public String privateIP;
 
     /**
-     * <p>The public IP address of the Elastic Compute Service (ECS) instance that initiates the outbound connection.</p>
+     * <p>The public IP address of the ECS instance that initiates the outbound connection.</p>
      * 
      * <strong>example:</strong>
      * <p>192.0.XX.XX</p>
@@ -142,10 +166,12 @@ public class DescribeOutgoingDestinationIPRequest extends TeaModel {
     public String publicIP;
 
     /**
-     * <p>The field based on which you want to sort the query results. Valid values:</p>
+     * <p>The field by which to sort the results. Valid values:</p>
      * <ul>
-     * <li><strong>SessionCount</strong> (default): the number of requests.</li>
-     * <li><strong>TotalBytes</strong>: the total volume of traffic.</li>
+     * <li><p><strong>SessionCount</strong> (default): request count.</p>
+     * </li>
+     * <li><p><strong>TotalBytes</strong>: total traffic.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -155,7 +181,7 @@ public class DescribeOutgoingDestinationIPRequest extends TeaModel {
     public String sort;
 
     /**
-     * <p>The beginning of the time range to query. The value is a UNIX timestamp. Unit: seconds.</p>
+     * <p>The start of the time range to query. The value is a timestamp in seconds.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -165,45 +191,82 @@ public class DescribeOutgoingDestinationIPRequest extends TeaModel {
     public String startTime;
 
     /**
-     * <p>The ID of the tag. Valid values:</p>
+     * <p>The ID of the threat intelligence tag. Valid values:</p>
      * <ul>
-     * <li><strong>AliYun</strong>: Alibaba Cloud service</li>
-     * <li><strong>RiskDomain</strong>: risky domain name</li>
-     * <li><strong>RiskIP</strong>: risky IP address</li>
-     * <li><strong>TrustedDomain</strong>: trusted website</li>
-     * <li><strong>AliPay</strong>: Alipay</li>
-     * <li><strong>DingDing</strong>: DingTalk</li>
-     * <li><strong>WeChat</strong>: WeChat</li>
-     * <li><strong>QQ</strong>: Tencent QQ</li>
-     * <li><strong>SecurityService</strong>: security service</li>
-     * <li><strong>Microsoft</strong>: Microsoft</li>
-     * <li><strong>Amazon</strong>: Amazon Web Services (AWS)</li>
-     * <li><strong>Pan</strong>: cloud disk</li>
-     * <li><strong>Map</strong>: map</li>
-     * <li><strong>Code</strong>: code hosting</li>
-     * <li><strong>SystemService</strong>: system service</li>
-     * <li><strong>Taobao</strong>: Taobao</li>
-     * <li><strong>Google</strong>: Google</li>
-     * <li><strong>ThirdPartyService</strong>: third-party service</li>
-     * <li><strong>FirstFlow</strong>: the first time</li>
-     * <li><strong>Downloader</strong>: malicious download</li>
-     * <li><strong>Alexa Top1M</strong>: popular website</li>
-     * <li><strong>Miner</strong>: mining pool</li>
-     * <li><strong>Intelligence</strong>: threat intelligence</li>
-     * <li><strong>DDoS</strong>: DDoS trojan</li>
-     * <li><strong>Ransomware</strong>: ransomware</li>
-     * <li><strong>Spyware</strong>: spyware</li>
-     * <li><strong>Rogue</strong>: rogue software</li>
-     * <li><strong>Botnet</strong>: botnet</li>
-     * <li><strong>Suspicious</strong>: suspicious website</li>
-     * <li><strong>C\&amp;C</strong>: command and control (C\&amp;C)</li>
-     * <li><strong>Gang</strong>: gang</li>
-     * <li><strong>CVE</strong>: Common Vulnerabilities and Exposures (CVE)</li>
-     * <li><strong>Backdoor</strong>: webshell</li>
-     * <li><strong>Phishing</strong>: phishing website</li>
-     * <li><strong>APT</strong>: advanced persistent threat (APT) attack</li>
-     * <li><strong>Supply Chain Attack</strong>: supply chain attack</li>
-     * <li><strong>Malicious software</strong>: malware</li>
+     * <li><p><strong>AliYun</strong>: Alibaba Cloud service</p>
+     * </li>
+     * <li><p><strong>RiskDomain</strong>: risk domain</p>
+     * </li>
+     * <li><p><strong>RiskIP</strong>: risk IP</p>
+     * </li>
+     * <li><p><strong>TrustedDomain</strong>: trusted website</p>
+     * </li>
+     * <li><p><strong>AliPay</strong>: Alipay</p>
+     * </li>
+     * <li><p><strong>DingDing</strong>: DingTalk</p>
+     * </li>
+     * <li><p><strong>WeChat</strong>: WeChat</p>
+     * </li>
+     * <li><p><strong>QQ</strong>: Tencent QQ</p>
+     * </li>
+     * <li><p><strong>SecurityService</strong>: security service</p>
+     * </li>
+     * <li><p><strong>Microsoft</strong>: Microsoft</p>
+     * </li>
+     * <li><p><strong>Amazon</strong>: Amazon</p>
+     * </li>
+     * <li><p><strong>Pan</strong>: cloud drive</p>
+     * </li>
+     * <li><p><strong>Map</strong>: map</p>
+     * </li>
+     * <li><p><strong>Code</strong>: code hosting</p>
+     * </li>
+     * <li><p><strong>SystemService</strong>: system service</p>
+     * </li>
+     * <li><p><strong>Taobao</strong>: Taobao</p>
+     * </li>
+     * <li><p><strong>Google</strong>: Google</p>
+     * </li>
+     * <li><p><strong>ThirdPartyService</strong>: third-party service</p>
+     * </li>
+     * <li><p><strong>FirstFlow</strong>: first access</p>
+     * </li>
+     * <li><p><strong>Downloader</strong>: malicious downloader</p>
+     * </li>
+     * <li><p><strong>Alexa Top1M</strong>: popular website</p>
+     * </li>
+     * <li><p><strong>Miner</strong>: mining pool</p>
+     * </li>
+     * <li><p><strong>Intelligence</strong>: threat intelligence</p>
+     * </li>
+     * <li><p><strong>DDoS</strong>: DDoS trojan</p>
+     * </li>
+     * <li><p><strong>Ransomware</strong>: ransomware</p>
+     * </li>
+     * <li><p><strong>Spyware</strong>: spyware</p>
+     * </li>
+     * <li><p><strong>Rogue</strong>: rogue software</p>
+     * </li>
+     * <li><p><strong>Botnet</strong>: botnet</p>
+     * </li>
+     * <li><p><strong>Suspicious</strong>: suspicious website</p>
+     * </li>
+     * <li><p><strong>C\&amp;C</strong>: command and control (C\&amp;C)</p>
+     * </li>
+     * <li><p><strong>Gang</strong>: threat actor group</p>
+     * </li>
+     * <li><p><strong>CVE</strong>: CVE</p>
+     * </li>
+     * <li><p><strong>Backdoor</strong>: backdoor</p>
+     * </li>
+     * <li><p><strong>Phishing</strong>: phishing website</p>
+     * </li>
+     * <li><p><strong>APT</strong>: APT attack</p>
+     * </li>
+     * <li><p><strong>Supply Chain Attack</strong>: supply chain attack</p>
+     * </li>
+     * <li><p><strong>Malicious software</strong>: malware</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

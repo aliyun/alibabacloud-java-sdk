@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeCreatedNatFirewallRequest extends TeaModel {
     /**
+     * <p>The language of the request and response.</p>
+     * 
      * <strong>example:</strong>
      * <p>zh</p>
      */
@@ -12,6 +14,8 @@ public class DescribeCreatedNatFirewallRequest extends TeaModel {
     public String lang;
 
     /**
+     * <p>The source IP address of the requester.</p>
+     * 
      * <strong>example:</strong>
      * <p>121.225.255.XXX</p>
      */

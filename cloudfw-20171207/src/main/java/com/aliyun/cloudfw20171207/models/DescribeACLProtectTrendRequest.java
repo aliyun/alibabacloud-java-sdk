@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeACLProtectTrendRequest extends TeaModel {
     /**
-     * <p>The end of the time range to query. The value is a UNIX timestamp that is accurate to seconds.</p>
+     * <p>The end of the time range to query. The value is a timestamp in seconds.</p>
      * 
      * <strong>example:</strong>
      * <p>1670397599</p>
@@ -14,10 +14,48 @@ public class DescribeACLProtectTrendRequest extends TeaModel {
     public String endTime;
 
     /**
-     * <p>The language of the content within the request and the response. Valid values:</p>
+     * <p>The type of the firewall. Valid values:</p>
      * <ul>
-     * <li><strong>zh</strong> (default): Chinese</li>
-     * <li><strong>en</strong>: English</li>
+     * <li><p><strong>internet</strong> (default): internet firewall</p>
+     * </li>
+     * <li><p><strong>vpc</strong>: VPC firewall</p>
+     * </li>
+     * <li><p><strong>nat</strong>: NAT firewall</p>
+     * </li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>vpc</p>
+     */
+    @NameInMap("FirewallType")
+    public String firewallType;
+
+    /**
+     * <p>The time granularity for aggregating trend data, in seconds. Valid values:</p>
+     * <ul>
+     * <li><p><strong>60</strong>: 1 minute</p>
+     * </li>
+     * <li><p><strong>1800</strong>: 30 minutes</p>
+     * </li>
+     * <li><p><strong>3600</strong>: 1 hour</p>
+     * </li>
+     * <li><p><strong>86400</strong> (default): 1 day</p>
+     * </li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>60</p>
+     */
+    @NameInMap("Interval")
+    public Long interval;
+
+    /**
+     * <p>The language of the request and response. Valid values:</p>
+     * <ul>
+     * <li><p><strong>zh</strong> (default): Chinese.</p>
+     * </li>
+     * <li><p><strong>en</strong>: English.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -36,7 +74,7 @@ public class DescribeACLProtectTrendRequest extends TeaModel {
     public String sourceIp;
 
     /**
-     * <p>The beginning of the time range to query. The value is a UNIX timestamp that is accurate to seconds.</p>
+     * <p>The beginning of the time range to query. The value is a timestamp in seconds.</p>
      * 
      * <strong>example:</strong>
      * <p>1677050306</p>
@@ -55,6 +93,22 @@ public class DescribeACLProtectTrendRequest extends TeaModel {
     }
     public String getEndTime() {
         return this.endTime;
+    }
+
+    public DescribeACLProtectTrendRequest setFirewallType(String firewallType) {
+        this.firewallType = firewallType;
+        return this;
+    }
+    public String getFirewallType() {
+        return this.firewallType;
+    }
+
+    public DescribeACLProtectTrendRequest setInterval(Long interval) {
+        this.interval = interval;
+        return this;
+    }
+    public Long getInterval() {
+        return this.interval;
     }
 
     public DescribeACLProtectTrendRequest setLang(String lang) {

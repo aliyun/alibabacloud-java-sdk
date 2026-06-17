@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdatePostpayUserNatStatusRequest extends TeaModel {
     /**
-     * <p>The instance ID of Cloud Firewall.</p>
+     * <p>The ID of the Cloud Firewall instance.</p>
      * 
      * <strong>example:</strong>
      * <p>cfw_elasticity_public_cn-************</p>
@@ -14,10 +14,12 @@ public class UpdatePostpayUserNatStatusRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The language of the content within the response. Valid values:</p>
+     * <p>The language of the response message. Valid values:</p>
      * <ul>
-     * <li><strong>zh</strong> (default)</li>
-     * <li><strong>en</strong></li>
+     * <li><p><strong>zh</strong> (default): Chinese</p>
+     * </li>
+     * <li><p><strong>en</strong>: English</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -27,9 +29,9 @@ public class UpdatePostpayUserNatStatusRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The operation type.</p>
+     * <p>The type of operation. Valid value:</p>
      * <ul>
-     * <li>Set the value to open.</li>
+     * <li>open: Enables the NAT border firewall.</li>
      * </ul>
      * 
      * <strong>example:</strong>

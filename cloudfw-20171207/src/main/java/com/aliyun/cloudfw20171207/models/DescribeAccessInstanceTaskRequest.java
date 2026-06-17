@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeAccessInstanceTaskRequest extends TeaModel {
     /**
+     * <p>The ID of the synchronization node.</p>
+     * 
      * <strong>example:</strong>
      * <p>pdi-3bc2f91695ee48bd9377</p>
      */
@@ -12,6 +14,8 @@ public class DescribeAccessInstanceTaskRequest extends TeaModel {
     public String accessInstanceId;
 
     /**
+     * <p>The type of the synchronization node.</p>
+     * 
      * <strong>example:</strong>
      * <p>AckClusterConnector</p>
      */
@@ -19,6 +23,8 @@ public class DescribeAccessInstanceTaskRequest extends TeaModel {
     public String accessInstanceType;
 
     /**
+     * <p>The language of the response messages.</p>
+     * 
      * <strong>example:</strong>
      * <p>zh</p>
      */
@@ -26,6 +32,8 @@ public class DescribeAccessInstanceTaskRequest extends TeaModel {
     public String lang;
 
     /**
+     * <p>The region ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-beijing</p>
      */
@@ -33,6 +41,8 @@ public class DescribeAccessInstanceTaskRequest extends TeaModel {
     public String regionNo;
 
     /**
+     * <p>The task ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>task-c92d4544ef7b6a42</p>
      */

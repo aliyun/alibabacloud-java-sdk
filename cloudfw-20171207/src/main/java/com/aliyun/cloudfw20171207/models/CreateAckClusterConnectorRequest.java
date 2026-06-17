@@ -5,6 +5,10 @@ import com.aliyun.tea.*;
 
 public class CreateAckClusterConnectorRequest extends TeaModel {
     /**
+     * <p>The ID of the ACK cluster.</p>
+     * <ul>
+     * <li>Call the <a href="~~DescribeAckClusters~~">DescribeAckClusters</a> operation to query the list of ACK clusters.</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +18,7 @@ public class CreateAckClusterConnectorRequest extends TeaModel {
     public String clusterId;
 
     /**
+     * <p>The name of the ACK cluster connector. The name must be 1 to 64 characters in length and can contain Chinese characters, letters, digits, periods (.), underscores (_), and hyphens (-).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +28,8 @@ public class CreateAckClusterConnectorRequest extends TeaModel {
     public String connectorName;
 
     /**
+     * <p>The Alibaba Cloud UID of the account to which the ACK cluster belongs.</p>
+     * 
      * <strong>example:</strong>
      * <p>135809047715****</p>
      */
@@ -30,6 +37,10 @@ public class CreateAckClusterConnectorRequest extends TeaModel {
     public String memberUid;
 
     /**
+     * <p>The ID of the primary vSwitch for the ACK cluster connector.</p>
+     * <ul>
+     * <li>Call the <a href="~~DescribeAccessInstanceVSwitchList~~">DescribeAccessInstanceVSwitchList</a> operation to query the list of vSwitches for synchronization nodes.</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -39,6 +50,8 @@ public class CreateAckClusterConnectorRequest extends TeaModel {
     public String primaryVswitchId;
 
     /**
+     * <p>The IP address of the primary vSwitch for the ACK cluster connector.</p>
+     * 
      * <strong>example:</strong>
      * <p>10.100.1.1</p>
      */
@@ -46,6 +59,13 @@ public class CreateAckClusterConnectorRequest extends TeaModel {
     public String primaryVswitchIp;
 
     /**
+     * <p>The region ID of the ACK cluster connector.</p>
+     * <ul>
+     * <li>Call the <a href="~~DescribeAccessInstanceRegionList~~">DescribeAccessInstanceRegionList</a> operation to query the list of regions for synchronization nodes.</li>
+     * </ul>
+     * <blockquote>
+     * <p>For more information about the regions that Cloud Firewall supports for ACK cluster connectors, see <a href="https://help.aliyun.com/document_detail/2865120.html">ACK cluster synchronization nodes</a>.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -55,6 +75,11 @@ public class CreateAckClusterConnectorRequest extends TeaModel {
     public String regionNo;
 
     /**
+     * <p>The ID of the standby vSwitch for the ACK cluster connector.</p>
+     * <ul>
+     * <li>Call the <a href="~~DescribeAccessInstanceVSwitchList~~">DescribeAccessInstanceVSwitchList</a> operation to query the list of vSwitches for synchronization nodes.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>vsw-2ze2gtlfozrab01cfo****</p>
      */
@@ -62,6 +87,8 @@ public class CreateAckClusterConnectorRequest extends TeaModel {
     public String standbyVswitchId;
 
     /**
+     * <p>The IP address of the standby vSwitch for the ACK cluster connector.</p>
+     * 
      * <strong>example:</strong>
      * <p>10.100.2.1</p>
      */
@@ -69,6 +96,7 @@ public class CreateAckClusterConnectorRequest extends TeaModel {
     public String standbyVswitchIp;
 
     /**
+     * <p>The synchronization interval for the ACK cluster connector. Valid values: 2 to 60. Unit: seconds.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribePostpayEnabledProtectionResponseBody extends TeaModel {
     /**
+     * <p>The number of days that protection has been disabled.</p>
+     * 
      * <strong>example:</strong>
      * <p>6</p>
      */
@@ -12,6 +14,8 @@ public class DescribePostpayEnabledProtectionResponseBody extends TeaModel {
     public Long disabledDays;
 
     /**
+     * <p>The type of asset for which protection is disabled.</p>
+     * 
      * <strong>example:</strong>
      * <p>nat</p>
      */
@@ -19,6 +23,8 @@ public class DescribePostpayEnabledProtectionResponseBody extends TeaModel {
     public String disabledType;
 
     /**
+     * <p>Indicates whether the protection feature is enabled.</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -26,6 +32,8 @@ public class DescribePostpayEnabledProtectionResponseBody extends TeaModel {
     public Boolean isEnabledProtection;
 
     /**
+     * <p>Indicates whether the protection feature is activated but currently disabled.</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -33,6 +41,8 @@ public class DescribePostpayEnabledProtectionResponseBody extends TeaModel {
     public Boolean isOpenButDisabled;
 
     /**
+     * <p>The ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>95CA5E2B-E5FB-5838-BC50-6A2C763C****</p>
      */

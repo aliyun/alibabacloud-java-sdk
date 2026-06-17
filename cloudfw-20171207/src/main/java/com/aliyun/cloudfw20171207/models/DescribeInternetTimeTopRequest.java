@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeInternetTimeTopRequest extends TeaModel {
     /**
+     * <p>The direction of the traffic.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,8 @@ public class DescribeInternetTimeTopRequest extends TeaModel {
     public String direction;
 
     /**
+     * <p>The end of the query time range, specified as a Unix timestamp in seconds.</p>
+     * 
      * <strong>example:</strong>
      * <p>1733796528</p>
      */
@@ -21,6 +24,8 @@ public class DescribeInternetTimeTopRequest extends TeaModel {
     public String endTime;
 
     /**
+     * <p>The network type of the IP address.</p>
+     * 
      * <strong>example:</strong>
      * <p>Public</p>
      */
@@ -28,6 +33,8 @@ public class DescribeInternetTimeTopRequest extends TeaModel {
     public String IPType;
 
     /**
+     * <p>The time interval in seconds.</p>
+     * 
      * <strong>example:</strong>
      * <p>60</p>
      */
@@ -35,6 +42,8 @@ public class DescribeInternetTimeTopRequest extends TeaModel {
     public Long interval;
 
     /**
+     * <p>The language of the response.</p>
+     * 
      * <strong>example:</strong>
      * <p>zh</p>
      */
@@ -42,6 +51,8 @@ public class DescribeInternetTimeTopRequest extends TeaModel {
     public String lang;
 
     /**
+     * <p>The maximum number of entries to return. The value must be between 1 and 50. Default value: 50.</p>
+     * 
      * <strong>example:</strong>
      * <p>5</p>
      */
@@ -49,6 +60,8 @@ public class DescribeInternetTimeTopRequest extends TeaModel {
     public String limit;
 
     /**
+     * <p>The NAT public IP address. If omitted, traffic data for all assets is returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>47.97.66.XXX</p>
      */
@@ -56,6 +69,8 @@ public class DescribeInternetTimeTopRequest extends TeaModel {
     public String natIP;
 
     /**
+     * <p>The sort order.</p>
+     * 
      * <strong>example:</strong>
      * <p>desc</p>
      */
@@ -63,6 +78,8 @@ public class DescribeInternetTimeTopRequest extends TeaModel {
     public String order;
 
     /**
+     * <p>The metric by which to sort the results.</p>
+     * 
      * <strong>example:</strong>
      * <p>in_bps</p>
      */
@@ -70,6 +87,7 @@ public class DescribeInternetTimeTopRequest extends TeaModel {
     public String sort;
 
     /**
+     * <p>The identifier for the trace source.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -79,6 +97,8 @@ public class DescribeInternetTimeTopRequest extends TeaModel {
     public String sourceCode;
 
     /**
+     * <p>The source IP address.</p>
+     * 
      * <strong>example:</strong>
      * <p>60.179.179.XXX</p>
      */
@@ -86,6 +106,8 @@ public class DescribeInternetTimeTopRequest extends TeaModel {
     public String sourceIp;
 
     /**
+     * <p>The source IP address.</p>
+     * 
      * <strong>example:</strong>
      * <p>8.153.18.XX</p>
      */
@@ -93,6 +115,8 @@ public class DescribeInternetTimeTopRequest extends TeaModel {
     public String srcIP;
 
     /**
+     * <p>The start of the query time range, specified as a Unix timestamp in seconds.</p>
+     * 
      * <strong>example:</strong>
      * <p>1749434787</p>
      */
@@ -100,6 +124,8 @@ public class DescribeInternetTimeTopRequest extends TeaModel {
     public String startTime;
 
     /**
+     * <p>The traffic timestamp to query, specified as a Unix timestamp in seconds.</p>
+     * 
      * <strong>example:</strong>
      * <p>1745222880</p>
      */
@@ -107,6 +133,8 @@ public class DescribeInternetTimeTopRequest extends TeaModel {
     public String trafficTime;
 
     /**
+     * <p>The traffic type.</p>
+     * 
      * <strong>example:</strong>
      * <p>EIP_TRAFFIC</p>
      */

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class SetAutoProtectNewAssetsResponseBody extends TeaModel {
     /**
+     * <p>The firewall module.</p>
+     * 
      * <strong>example:</strong>
      * <p>api_server</p>
      */
@@ -12,6 +14,8 @@ public class SetAutoProtectNewAssetsResponseBody extends TeaModel {
     public String module;
 
     /**
+     * <p>The ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>F0F82705-CFC7-5F83-86C8-A063892F****</p>
      */

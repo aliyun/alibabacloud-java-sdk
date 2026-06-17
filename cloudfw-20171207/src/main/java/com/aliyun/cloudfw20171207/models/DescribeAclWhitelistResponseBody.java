@@ -5,6 +5,14 @@ import com.aliyun.tea.*;
 
 public class DescribeAclWhitelistResponseBody extends TeaModel {
     /**
+     * <p>Indicates whether the whitelist is enabled. Valid values:</p>
+     * <ul>
+     * <li><p><strong>true</strong>: enabled</p>
+     * </li>
+     * <li><p><strong>false</strong>: disabled</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -12,6 +20,14 @@ public class DescribeAclWhitelistResponseBody extends TeaModel {
     public Boolean domainGroupUseDns;
 
     /**
+     * <p>Indicates whether DNS is supported for domain names in NAT scenarios. Valid values:</p>
+     * <ul>
+     * <li><p><strong>true</strong>: supported</p>
+     * </li>
+     * <li><p><strong>false</strong>: not supported</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -19,6 +35,8 @@ public class DescribeAclWhitelistResponseBody extends TeaModel {
     public Boolean natDomainGroupUseDns;
 
     /**
+     * <p>The ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>7D45133B-DBC0-506B-9DF9-AB0735D3****</p>
      */
@@ -26,6 +44,14 @@ public class DescribeAclWhitelistResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the message type is supported. Valid values:</p>
+     * <ul>
+     * <li><p><strong>true</strong>: supported</p>
+     * </li>
+     * <li><p><strong>false</strong>: not supported</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -33,6 +59,14 @@ public class DescribeAclWhitelistResponseBody extends TeaModel {
     public Boolean supportMessageType;
 
     /**
+     * <p>Indicates whether DNS is supported for domain names in VPC scenarios. Valid values:</p>
+     * <ul>
+     * <li><p><strong>true</strong>: supported</p>
+     * </li>
+     * <li><p><strong>false</strong>: not supported</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */

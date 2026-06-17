@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeInternetOpenStatisticResponseBody extends TeaModel {
     /**
+     * <p>The total number of public IP addresses exposed to the Internet.</p>
+     * 
      * <strong>example:</strong>
      * <p>9</p>
      */
@@ -12,6 +14,8 @@ public class DescribeInternetOpenStatisticResponseBody extends TeaModel {
     public Integer internetIpNum;
 
     /**
+     * <p>The total number of ports exposed to the Internet.</p>
+     * 
      * <strong>example:</strong>
      * <p>38</p>
      */
@@ -19,6 +23,8 @@ public class DescribeInternetOpenStatisticResponseBody extends TeaModel {
     public Integer internetPortNum;
 
     /**
+     * <p>The number of risky public IP addresses exposed to the Internet.</p>
+     * 
      * <strong>example:</strong>
      * <p>8</p>
      */
@@ -26,6 +32,8 @@ public class DescribeInternetOpenStatisticResponseBody extends TeaModel {
     public Integer internetRiskIpNum;
 
     /**
+     * <p>The number of risky ports.</p>
+     * 
      * <strong>example:</strong>
      * <p>5</p>
      */
@@ -33,6 +41,8 @@ public class DescribeInternetOpenStatisticResponseBody extends TeaModel {
     public Integer internetRiskPortNum;
 
     /**
+     * <p>The number of risky applications.</p>
+     * 
      * <strong>example:</strong>
      * <p>3</p>
      */
@@ -40,6 +50,8 @@ public class DescribeInternetOpenStatisticResponseBody extends TeaModel {
     public Integer internetRiskServiceNum;
 
     /**
+     * <p>The total number of applications exposed to the Internet.</p>
+     * 
      * <strong>example:</strong>
      * <p>15</p>
      */
@@ -47,6 +59,8 @@ public class DescribeInternetOpenStatisticResponseBody extends TeaModel {
     public Integer internetServiceNum;
 
     /**
+     * <p>The number of public IP addresses of Server Load Balancer (SLB) instances.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -54,6 +68,8 @@ public class DescribeInternetOpenStatisticResponseBody extends TeaModel {
     public Integer internetSlbIpNum;
 
     /**
+     * <p>The number of public ports of SLB instances.</p>
+     * 
      * <strong>example:</strong>
      * <p>16</p>
      */
@@ -61,6 +77,8 @@ public class DescribeInternetOpenStatisticResponseBody extends TeaModel {
     public Integer internetSlbIpPortNum;
 
     /**
+     * <p>The number of ports that are not protected by an access control list (ACL).</p>
+     * 
      * <strong>example:</strong>
      * <p>6</p>
      */
@@ -68,6 +86,8 @@ public class DescribeInternetOpenStatisticResponseBody extends TeaModel {
     public Integer internetUnprotectedPortNum;
 
     /**
+     * <p>The ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>6AB7822C-0D73-5D1D-81FD-45D4FB7C****</p>
      */

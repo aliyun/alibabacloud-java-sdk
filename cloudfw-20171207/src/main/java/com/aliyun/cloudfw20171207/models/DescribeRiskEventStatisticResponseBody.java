@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeRiskEventStatisticResponseBody extends TeaModel {
     /**
+     * <p>The number of attacked applications.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -12,6 +14,8 @@ public class DescribeRiskEventStatisticResponseBody extends TeaModel {
     public Integer attackAppCnt;
 
     /**
+     * <p>The attack count.</p>
+     * 
      * <strong>example:</strong>
      * <p>5</p>
      */
@@ -19,6 +23,8 @@ public class DescribeRiskEventStatisticResponseBody extends TeaModel {
     public Integer attackCnt;
 
     /**
+     * <p>The number of attacked assets.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -26,6 +32,8 @@ public class DescribeRiskEventStatisticResponseBody extends TeaModel {
     public Integer attackIpCnt;
 
     /**
+     * <p>The drop count.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -33,6 +41,8 @@ public class DescribeRiskEventStatisticResponseBody extends TeaModel {
     public Integer dropCnt;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>F93A490D-9E92-5AA4-BA79-600FFC09****</p>
      */

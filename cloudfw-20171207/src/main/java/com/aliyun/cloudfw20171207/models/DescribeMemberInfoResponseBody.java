@@ -4,10 +4,18 @@ package com.aliyun.cloudfw20171207.models;
 import com.aliyun.tea.*;
 
 public class DescribeMemberInfoResponseBody extends TeaModel {
+    /**
+     * <p>The name of the Alibaba Cloud account.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>tianzhuang</p>
+     */
     @NameInMap("AdminName")
     public String adminName;
 
     /**
+     * <p>The UID of the Alibaba Cloud account.</p>
+     * 
      * <strong>example:</strong>
      * <p>164705101205****</p>
      */
@@ -15,6 +23,8 @@ public class DescribeMemberInfoResponseBody extends TeaModel {
     public String adminUid;
 
     /**
+     * <p>Indicates whether the account is a member account.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -22,6 +32,8 @@ public class DescribeMemberInfoResponseBody extends TeaModel {
     public Boolean isMember;
 
     /**
+     * <p>The UID of the member account.</p>
+     * 
      * <strong>example:</strong>
      * <p>128720273643****</p>
      */
@@ -29,6 +41,8 @@ public class DescribeMemberInfoResponseBody extends TeaModel {
     public String memberUid;
 
     /**
+     * <p>The ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>F2665618-3C41-51A4-8DAF-586FB68****</p>
      */

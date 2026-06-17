@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeSecurityProxyResourcesRequest extends TeaModel {
     /**
+     * <p>The language of the response.</p>
+     * 
      * <strong>example:</strong>
      * <p>zh</p>
      */
@@ -12,6 +14,8 @@ public class DescribeSecurityProxyResourcesRequest extends TeaModel {
     public String lang;
 
     /**
+     * <p>The UID of the member account.</p>
+     * 
      * <strong>example:</strong>
      * <p>136481150091****</p>
      */
@@ -19,6 +23,8 @@ public class DescribeSecurityProxyResourcesRequest extends TeaModel {
     public Long memberUid;
 
     /**
+     * <p>The ID of the NAT Gateway.</p>
+     * 
      * <strong>example:</strong>
      * <p>ngw-uf6y16l23fm8hq0****</p>
      */

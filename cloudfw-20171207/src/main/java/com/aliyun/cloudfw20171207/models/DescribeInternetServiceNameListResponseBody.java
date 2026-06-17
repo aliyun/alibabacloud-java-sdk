@@ -5,12 +5,17 @@ import com.aliyun.tea.*;
 
 public class DescribeInternetServiceNameListResponseBody extends TeaModel {
     /**
+     * <p>The ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>91B01BCD-DFB0-5CA8-9191-5B38C62****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>A list of application names.</p>
+     */
     @NameInMap("ServiceNameList")
     public java.util.List<String> serviceNameList;
 

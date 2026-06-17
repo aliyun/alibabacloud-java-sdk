@@ -5,16 +5,18 @@ import com.aliyun.tea.*;
 
 public class ModifyPolicyAdvancedConfigRequest extends TeaModel {
     /**
-     * <p>The IP addresses. The versions of the IP addresses must be the same. You can specify a maximum of 100 IP addresses.</p>
+     * <p>A list of IP addresses. The IP addresses must use the same protocol version. You can specify up to 100 IP addresses.</p>
      */
     @NameInMap("Eips")
     public java.util.List<String> eips;
 
     /**
-     * <p>Specifies whether to enable the strict mode for the access control policy. Valid values:</p>
+     * <p>Specifies whether to enable or disable the strict mode for access control policies. Valid values:</p>
      * <ul>
-     * <li><strong>on</strong>: enables the strict mode.</li>
-     * <li><strong>off</strong>: disables the strict mode.</li>
+     * <li><p><strong>on</strong>: Enables strict mode.</p>
+     * </li>
+     * <li><p><strong>off</strong>: Disables strict mode.</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -25,10 +27,12 @@ public class ModifyPolicyAdvancedConfigRequest extends TeaModel {
     public String internetSwitch;
 
     /**
-     * <p>The natural language of the request and response. Valid values:</p>
+     * <p>The language of the request and response. Valid values:</p>
      * <ul>
-     * <li><strong>zh</strong>: Chinese (default)</li>
-     * <li><strong>en</strong>: English</li>
+     * <li><p><strong>zh</strong> (default): Chinese</p>
+     * </li>
+     * <li><p><strong>en</strong>: English</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -38,7 +42,7 @@ public class ModifyPolicyAdvancedConfigRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The source IP address of the request.</p>
+     * <p>The source IP address of the visitor.</p>
      * 
      * <strong>example:</strong>
      * <p>192.0.XX.XX</p>

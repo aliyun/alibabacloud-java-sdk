@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeRiskSecurityGroupDetailResponseBody extends TeaModel {
     /**
+     * <p>The page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -12,6 +14,8 @@ public class DescribeRiskSecurityGroupDetailResponseBody extends TeaModel {
     public Integer pageNo;
 
     /**
+     * <p>The number of entries per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -19,16 +23,23 @@ public class DescribeRiskSecurityGroupDetailResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>33C94306-2064-5A06-9645-01419967****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The details of the risk security group.</p>
+     */
     @NameInMap("RiskSgDetail")
     public java.util.List<DescribeRiskSecurityGroupDetailResponseBodyRiskSgDetail> riskSgDetail;
 
     /**
+     * <p>The total number of entries.</p>
+     * 
      * <strong>example:</strong>
      * <p>5</p>
      */
@@ -82,6 +93,8 @@ public class DescribeRiskSecurityGroupDetailResponseBody extends TeaModel {
 
     public static class DescribeRiskSecurityGroupDetailResponseBodyRiskSgDetailEcsInfo extends TeaModel {
         /**
+         * <p>The ID of the ECS instance.</p>
+         * 
          * <strong>example:</strong>
          * <p>i-bp1gra23yai47d8e****</p>
          */
@@ -89,6 +102,8 @@ public class DescribeRiskSecurityGroupDetailResponseBody extends TeaModel {
         public String ecsInstanceId;
 
         /**
+         * <p>The name of the ECS instance.</p>
+         * 
          * <strong>example:</strong>
          * <p>tyf_test</p>
          */
@@ -96,6 +111,8 @@ public class DescribeRiskSecurityGroupDetailResponseBody extends TeaModel {
         public String ecsInstanceName;
 
         /**
+         * <p>The private IP address of the ECS instance.</p>
+         * 
          * <strong>example:</strong>
          * <p>172.24.121.XXX</p>
          */
@@ -103,6 +120,8 @@ public class DescribeRiskSecurityGroupDetailResponseBody extends TeaModel {
         public String privateIp;
 
         /**
+         * <p>The public IP address of the ECS instance.</p>
+         * 
          * <strong>example:</strong>
          * <p>47.107.141.XXX</p>
          */
@@ -150,6 +169,8 @@ public class DescribeRiskSecurityGroupDetailResponseBody extends TeaModel {
 
     public static class DescribeRiskSecurityGroupDetailResponseBodyRiskSgDetailRuleInfo extends TeaModel {
         /**
+         * <p>The description of the rule.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -157,6 +178,8 @@ public class DescribeRiskSecurityGroupDetailResponseBody extends TeaModel {
         public String description;
 
         /**
+         * <p>The risk level of the rule.</p>
+         * 
          * <strong>example:</strong>
          * <p>high</p>
          */
@@ -164,6 +187,8 @@ public class DescribeRiskSecurityGroupDetailResponseBody extends TeaModel {
         public String riskLevel;
 
         /**
+         * <p>The name of the rule.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -171,6 +196,8 @@ public class DescribeRiskSecurityGroupDetailResponseBody extends TeaModel {
         public String ruleName;
 
         /**
+         * <p>The status of the rule.</p>
+         * 
          * <strong>example:</strong>
          * <p>enable</p>
          */
@@ -178,6 +205,8 @@ public class DescribeRiskSecurityGroupDetailResponseBody extends TeaModel {
         public String ruleStatus;
 
         /**
+         * <p>The UUID of the rule.</p>
+         * 
          * <strong>example:</strong>
          * <p>4c1e72c9-6690-408b-9048-065f0f10****</p>
          */
@@ -185,6 +214,8 @@ public class DescribeRiskSecurityGroupDetailResponseBody extends TeaModel {
         public String ruleUuid;
 
         /**
+         * <p>The optimization suggestion.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -248,16 +279,23 @@ public class DescribeRiskSecurityGroupDetailResponseBody extends TeaModel {
 
     public static class DescribeRiskSecurityGroupDetailResponseBodyRiskSgDetail extends TeaModel {
         /**
+         * <p>The number of associated ECS instances.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
         @NameInMap("EcsCount")
         public Integer ecsCount;
 
+        /**
+         * <p>The ECS information.</p>
+         */
         @NameInMap("EcsInfo")
         public java.util.List<DescribeRiskSecurityGroupDetailResponseBodyRiskSgDetailEcsInfo> ecsInfo;
 
         /**
+         * <p>The ID of the security group instance.</p>
+         * 
          * <strong>example:</strong>
          * <p>sg-2vc0p803vgxumn6r****</p>
          */
@@ -265,6 +303,8 @@ public class DescribeRiskSecurityGroupDetailResponseBody extends TeaModel {
         public String instanceId;
 
         /**
+         * <p>The instance name.</p>
+         * 
          * <strong>example:</strong>
          * <p>test-instance-name</p>
          */
@@ -272,6 +312,8 @@ public class DescribeRiskSecurityGroupDetailResponseBody extends TeaModel {
         public String instanceName;
 
         /**
+         * <p>The region ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-shanghai</p>
          */
@@ -279,16 +321,23 @@ public class DescribeRiskSecurityGroupDetailResponseBody extends TeaModel {
         public String regionNo;
 
         /**
+         * <p>The risk level of the rule.</p>
+         * 
          * <strong>example:</strong>
          * <p>high</p>
          */
         @NameInMap("RiskLevel")
         public String riskLevel;
 
+        /**
+         * <p>The information about the risk security group rule.</p>
+         */
         @NameInMap("RuleInfo")
         public java.util.List<DescribeRiskSecurityGroupDetailResponseBodyRiskSgDetailRuleInfo> ruleInfo;
 
         /**
+         * <p>The ID of the VPC instance.</p>
+         * 
          * <strong>example:</strong>
          * <p>vpc-8vbuzirdl3w1r7exw****</p>
          */

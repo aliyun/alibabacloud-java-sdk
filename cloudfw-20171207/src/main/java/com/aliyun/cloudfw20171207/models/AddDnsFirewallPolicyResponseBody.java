@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class AddDnsFirewallPolicyResponseBody extends TeaModel {
     /**
+     * <p>The ID of the access control list.</p>
+     * 
      * <strong>example:</strong>
      * <p>f88dae6f-XXX-XXX-613de9ab2be8</p>
      */
@@ -12,6 +14,8 @@ public class AddDnsFirewallPolicyResponseBody extends TeaModel {
     public String aclUuid;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>71209DFE-XXX-XXX-52B4A4E9DA3B</p>
      */

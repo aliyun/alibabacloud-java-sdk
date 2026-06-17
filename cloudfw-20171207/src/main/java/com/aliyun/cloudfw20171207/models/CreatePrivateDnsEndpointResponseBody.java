@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreatePrivateDnsEndpointResponseBody extends TeaModel {
     /**
+     * <p>The ID of the instance.</p>
+     * 
      * <strong>example:</strong>
      * <p>pd-12345</p>
      */
@@ -12,7 +14,7 @@ public class CreatePrivateDnsEndpointResponseBody extends TeaModel {
     public String accessInstanceId;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>850A84D6************00090125EEB1</p>
@@ -21,6 +23,8 @@ public class CreatePrivateDnsEndpointResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The unique ID of the task.</p>
+     * 
      * <strong>example:</strong>
      * <p>132</p>
      */

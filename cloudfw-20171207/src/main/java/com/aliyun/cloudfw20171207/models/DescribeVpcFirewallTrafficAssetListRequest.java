@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeVpcFirewallTrafficAssetListRequest extends TeaModel {
     /**
+     * <p>The current page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -12,6 +14,8 @@ public class DescribeVpcFirewallTrafficAssetListRequest extends TeaModel {
     public String currentPage;
 
     /**
+     * <p>The domain name.</p>
+     * 
      * <strong>example:</strong>
      * <p>www.****.com</p>
      */
@@ -19,6 +23,7 @@ public class DescribeVpcFirewallTrafficAssetListRequest extends TeaModel {
     public String domain;
 
     /**
+     * <p>The end time. The value is a Unix timestamp that is accurate to the second.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -28,6 +33,8 @@ public class DescribeVpcFirewallTrafficAssetListRequest extends TeaModel {
     public String endTime;
 
     /**
+     * <p>The IP address of the asset.</p>
+     * 
      * <strong>example:</strong>
      * <p>47.92.x.x</p>
      */
@@ -35,6 +42,8 @@ public class DescribeVpcFirewallTrafficAssetListRequest extends TeaModel {
     public String IP;
 
     /**
+     * <p>Specifies whether to count only the traffic that is used to access AI services.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -42,6 +51,14 @@ public class DescribeVpcFirewallTrafficAssetListRequest extends TeaModel {
     public String isAITraffic;
 
     /**
+     * <p>The language of the content within the request and response. Valid values:</p>
+     * <ul>
+     * <li><p><strong>zh</strong> (default): Chinese</p>
+     * </li>
+     * <li><p><strong>en</strong>: English</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>zh</p>
      */
@@ -49,6 +66,12 @@ public class DescribeVpcFirewallTrafficAssetListRequest extends TeaModel {
     public String lang;
 
     /**
+     * <p>The field to sort by.</p>
+     * <p>Default value: TotalBytes.</p>
+     * <p>Valid values:</p>
+     * <p>TotalBytes: Sorts by total traffic.</p>
+     * <p>SessionCount: Sorts by the number of sessions.</p>
+     * 
      * <strong>example:</strong>
      * <p>SessionCount</p>
      */
@@ -56,6 +79,8 @@ public class DescribeVpcFirewallTrafficAssetListRequest extends TeaModel {
     public String order;
 
     /**
+     * <p>The number of entries to return on each page.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -63,6 +88,8 @@ public class DescribeVpcFirewallTrafficAssetListRequest extends TeaModel {
     public String pageSize;
 
     /**
+     * <p>The sort order. Valid values: \<code>asc\\</code>, \<code>desc\\</code>.</p>
+     * 
      * <strong>example:</strong>
      * <p>desc</p>
      */
@@ -70,6 +97,7 @@ public class DescribeVpcFirewallTrafficAssetListRequest extends TeaModel {
     public String sort;
 
     /**
+     * <p>The start time. The value is a Unix timestamp that is accurate to the second.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -79,6 +107,8 @@ public class DescribeVpcFirewallTrafficAssetListRequest extends TeaModel {
     public String startTime;
 
     /**
+     * <p>The VPC where the asset resides.</p>
+     * 
      * <strong>example:</strong>
      * <p>vpc-m5ewlqkuf7orclr1****</p>
      */

@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class DescribeInternetTrafficTopResponseBody extends TeaModel {
     /**
+     * <p>The number of traffic data entries.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
     @NameInMap("DataCount")
     public Integer dataCount;
 
+    /**
+     * <p>The list of traffic data.</p>
+     */
     @NameInMap("DataList")
     public java.util.List<DescribeInternetTrafficTopResponseBodyDataList> dataList;
 
     /**
+     * <p>The type of traffic data.</p>
+     * 
      * <strong>example:</strong>
      * <p>in_src_ip</p>
      */
@@ -22,6 +29,8 @@ public class DescribeInternetTrafficTopResponseBody extends TeaModel {
     public String dataType;
 
     /**
+     * <p>The ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>15FCCC52-1E23-57AE-B5EF-3E00A3******</p>
      */
@@ -67,6 +76,8 @@ public class DescribeInternetTrafficTopResponseBody extends TeaModel {
 
     public static class DescribeInternetTrafficTopResponseBodyDataList extends TeaModel {
         /**
+         * <p>The name of the country.</p>
+         * 
          * <strong>example:</strong>
          * <p>US</p>
          */
@@ -74,6 +85,8 @@ public class DescribeInternetTrafficTopResponseBody extends TeaModel {
         public String dataName;
 
         /**
+         * <p>The inbound traffic percentage.</p>
+         * 
          * <strong>example:</strong>
          * <p>47.12</p>
          */
@@ -81,16 +94,23 @@ public class DescribeInternetTrafficTopResponseBody extends TeaModel {
         public String dataValue;
 
         /**
+         * <p>Indicates whether the data is subscribed.</p>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
         @NameInMap("IsSubscribed")
         public Boolean isSubscribed;
 
+        /**
+         * <p>The list of labels.</p>
+         */
         @NameInMap("LabelList")
         public java.util.List<String> labelList;
 
         /**
+         * <p>The number of sessions.</p>
+         * 
          * <strong>example:</strong>
          * <p>27</p>
          */
@@ -98,6 +118,8 @@ public class DescribeInternetTrafficTopResponseBody extends TeaModel {
         public Long sessionCount;
 
         /**
+         * <p>The total traffic. Unit: bytes.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */

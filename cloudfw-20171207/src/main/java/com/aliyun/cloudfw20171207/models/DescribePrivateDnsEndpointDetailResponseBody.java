@@ -5,16 +5,26 @@ import com.aliyun.tea.*;
 
 public class DescribePrivateDnsEndpointDetailResponseBody extends TeaModel {
     /**
+     * <p>The instance ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>pd-12345</p>
      */
     @NameInMap("AccessInstanceId")
     public String accessInstanceId;
 
+    /**
+     * <p>The name of the access instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
+     */
     @NameInMap("AccessInstanceName")
     public String accessInstanceName;
 
     /**
+     * <p>The UID of the Alibaba Cloud account.</p>
+     * 
      * <strong>example:</strong>
      * <p>119898001566xxxx</p>
      */
@@ -22,16 +32,31 @@ public class DescribePrivateDnsEndpointDetailResponseBody extends TeaModel {
     public Long aliUid;
 
     /**
+     * <p>The endpoint ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>ep-1nmi412c28c374****</p>
      */
     @NameInMap("EndpointId")
     public String endpointId;
 
+    /**
+     * <p>The type of the Cloud Firewall. Valid values:</p>
+     * <ul>
+     * <li><p><strong>internet</strong></p>
+     * </li>
+     * <li><p><strong>vpc</strong></p>
+     * </li>
+     * <li><p><strong>nat</strong></p>
+     * </li>
+     * </ul>
+     */
     @NameInMap("FirewallType")
     public java.util.List<String> firewallType;
 
     /**
+     * <p>The time when the endpoint was created. This is a UNIX timestamp in seconds.</p>
+     * 
      * <strong>example:</strong>
      * <p>1715075765</p>
      */
@@ -39,6 +64,14 @@ public class DescribePrivateDnsEndpointDetailResponseBody extends TeaModel {
     public Long gmtCreate;
 
     /**
+     * <p>The IP protocol. Valid values:</p>
+     * <ul>
+     * <li><p><strong>TCP</strong></p>
+     * </li>
+     * <li><p><strong>UDP</strong></p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>tcp</p>
      */
@@ -46,6 +79,8 @@ public class DescribePrivateDnsEndpointDetailResponseBody extends TeaModel {
     public String ipProtocol;
 
     /**
+     * <p>The UID of the member account.</p>
+     * 
      * <strong>example:</strong>
      * <p>258039427902****</p>
      */
@@ -53,6 +88,8 @@ public class DescribePrivateDnsEndpointDetailResponseBody extends TeaModel {
     public Long memberUid;
 
     /**
+     * <p>The port number.</p>
+     * 
      * <strong>example:</strong>
      * <p>80</p>
      */
@@ -60,6 +97,8 @@ public class DescribePrivateDnsEndpointDetailResponseBody extends TeaModel {
     public Integer port;
 
     /**
+     * <p>The primary DNS server.</p>
+     * 
      * <strong>example:</strong>
      * <p>1.1.1.1</p>
      */
@@ -67,6 +106,8 @@ public class DescribePrivateDnsEndpointDetailResponseBody extends TeaModel {
     public String primaryDns;
 
     /**
+     * <p>The ID of the primary vSwitch.</p>
+     * 
      * <strong>example:</strong>
      * <p>vsw-8vbno9zxz8j9qiot****</p>
      */
@@ -74,6 +115,8 @@ public class DescribePrivateDnsEndpointDetailResponseBody extends TeaModel {
     public String primaryVSwitchId;
 
     /**
+     * <p>The IP address of the primary vSwitch.</p>
+     * 
      * <strong>example:</strong>
      * <p>10.1.1.1</p>
      */
@@ -81,6 +124,8 @@ public class DescribePrivateDnsEndpointDetailResponseBody extends TeaModel {
     public String primaryVSwitchIp;
 
     /**
+     * <p>The zone of the primary vSwitch.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-shenzhen-d</p>
      */
@@ -88,6 +133,14 @@ public class DescribePrivateDnsEndpointDetailResponseBody extends TeaModel {
     public String primaryZoneId;
 
     /**
+     * <p>The type of the private DNS. Valid values:</p>
+     * <ul>
+     * <li><p><strong>PrivateZone</strong></p>
+     * </li>
+     * <li><p><strong>Custom</strong> (Default)</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>Custom</p>
      */
@@ -95,6 +148,8 @@ public class DescribePrivateDnsEndpointDetailResponseBody extends TeaModel {
     public String privateDnsType;
 
     /**
+     * <p>The ID of the region where the instance is located.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
      */
@@ -102,6 +157,8 @@ public class DescribePrivateDnsEndpointDetailResponseBody extends TeaModel {
     public String regionNo;
 
     /**
+     * <p>The ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>4E7F94C7-781F-5192-86CF-DB0850****</p>
      */
@@ -109,6 +166,8 @@ public class DescribePrivateDnsEndpointDetailResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The standby DNS server.</p>
+     * 
      * <strong>example:</strong>
      * <p>1.1.1.2</p>
      */
@@ -116,6 +175,8 @@ public class DescribePrivateDnsEndpointDetailResponseBody extends TeaModel {
     public String standbyDns;
 
     /**
+     * <p>The ID of the standby vSwitch.</p>
+     * 
      * <strong>example:</strong>
      * <p>vsw-8vb6jk75wfcwnuq****</p>
      */
@@ -123,6 +184,8 @@ public class DescribePrivateDnsEndpointDetailResponseBody extends TeaModel {
     public String standbyVSwitchId;
 
     /**
+     * <p>The IP address of the standby vSwitch.</p>
+     * 
      * <strong>example:</strong>
      * <p>10.1.1.2</p>
      */
@@ -130,6 +193,8 @@ public class DescribePrivateDnsEndpointDetailResponseBody extends TeaModel {
     public String standbyVSwitchIp;
 
     /**
+     * <p>The zone of the standby vSwitch.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-shenzhen-e</p>
      */
@@ -137,6 +202,18 @@ public class DescribePrivateDnsEndpointDetailResponseBody extends TeaModel {
     public String standbyZoneId;
 
     /**
+     * <p>The instance status. Valid values:</p>
+     * <ul>
+     * <li><p><strong>creating</strong>: Creating.</p>
+     * </li>
+     * <li><p><strong>deleting</strong>: Deleting.</p>
+     * </li>
+     * <li><p><strong>normal</strong>: Normal.</p>
+     * </li>
+     * <li><p><strong>updating</strong>: Updating.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>normal</p>
      */
@@ -144,6 +221,8 @@ public class DescribePrivateDnsEndpointDetailResponseBody extends TeaModel {
     public String status;
 
     /**
+     * <p>The ID of the task.</p>
+     * 
      * <strong>example:</strong>
      * <p>132</p>
      */
@@ -151,6 +230,8 @@ public class DescribePrivateDnsEndpointDetailResponseBody extends TeaModel {
     public String taskId;
 
     /**
+     * <p>The ID of the VPC.</p>
+     * 
      * <strong>example:</strong>
      * <p>vpc-uf6b5lyul0x******</p>
      */

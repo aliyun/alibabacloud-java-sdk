@@ -5,15 +5,15 @@ import com.aliyun.tea.*;
 
 public class DescribeAssetRiskListRequest extends TeaModel {
     /**
-     * <p>The IP addresses to query. Separate the IP addresses with commas (,). You can specify up to 20 IP addresses at a time.</p>
+     * <p>The IP addresses to query. Separate multiple IP addresses with commas (,). You can query a maximum of 20 IP addresses at a time.</p>
      * <blockquote>
-     * </blockquote>
      * <ul>
-     * <li><p>Example IPv4 address: 47.97.XX.XX.</p>
+     * <li><p>Example of an IPv4 address: 47.97.XX.XX.</p>
      * </li>
-     * <li><p>Example IPv6 address: 2001:db8:ffff:ffff:ffff:XXXX:ffff.</p>
+     * <li><p>Example of an IPv6 address: 2001:db8:ffff:ffff:ffff:XXXX:ffff.</p>
      * </li>
      * </ul>
+     * </blockquote>
      */
     @NameInMap("IpAddrList")
     public java.util.List<String> ipAddrList;
@@ -22,8 +22,10 @@ public class DescribeAssetRiskListRequest extends TeaModel {
      * <p>The IP version of the asset that is protected by Cloud Firewall.</p>
      * <p>Valid values:</p>
      * <ul>
-     * <li><strong>4</strong> (default): IPv4</li>
-     * <li><strong>6</strong>: IPv6</li>
+     * <li><p><strong>4</strong> (default): IPv4</p>
+     * </li>
+     * <li><p><strong>6</strong>: IPv6</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -34,10 +36,12 @@ public class DescribeAssetRiskListRequest extends TeaModel {
     public Integer ipVersion;
 
     /**
-     * <p>The language of the content within the response. Valid values:</p>
+     * <p>The language of the response message. Valid values:</p>
      * <ul>
-     * <li><strong>zh</strong> (default): Chinese</li>
-     * <li><strong>en</strong>: English</li>
+     * <li><p><strong>zh</strong> (default): Chinese</p>
+     * </li>
+     * <li><p><strong>en</strong>: English</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -47,7 +51,7 @@ public class DescribeAssetRiskListRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The source IP address of the request.</p>
+     * <p>The source IP address of the visitor.</p>
      * 
      * <strong>example:</strong>
      * <p>47.100.XX.XX</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeAddressBookRequest extends TeaModel {
     /**
-     * <p>The port that is included in the address book. This parameter takes effect only when the <strong>GroupType</strong> parameter is set to <strong>port</strong>.</p>
+     * <p>Filters the query to return only address books that contain the specified port. This parameter is valid only when <strong>GroupType</strong> is set to <strong>port</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>80</p>
@@ -14,8 +14,8 @@ public class DescribeAddressBookRequest extends TeaModel {
     public String containPort;
 
     /**
-     * <p>The page number.</p>
-     * <p>Pages start from page 1. Default value: 1.</p>
+     * <p>The page number for a paginated query.</p>
+     * <p>Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -24,19 +24,10 @@ public class DescribeAddressBookRequest extends TeaModel {
     public String currentPage;
 
     /**
-     * <p>The type of the address book. Valid values:</p>
-     * <ul>
-     * <li><strong>ip</strong>: IP address book</li>
-     * <li><strong>domain</strong>: domain address book</li>
-     * <li><strong>port</strong>: port address book</li>
-     * <li><strong>tag</strong>: Elastic Compute Service (ECS) tag-based address book</li>
-     * <li><strong>allCloud</strong>: cloud service address book</li>
-     * <li><strong>threat</strong>: threat intelligence address book</li>
-     * <li><strong>ipv6</strong>: IPv6 address book<blockquote>
-     * <p> If you do not specify a type, the domain address books and ECS tag-based address books are queried.</p>
+     * <p>The type of the address book.</p>
+     * <blockquote>
+     * <p>If this parameter is not specified, the query returns both IPv4 and ECS tag address books.</p>
      * </blockquote>
-     * </li>
-     * </ul>
      * 
      * <strong>example:</strong>
      * <p>ip</p>
@@ -44,15 +35,17 @@ public class DescribeAddressBookRequest extends TeaModel {
     @NameInMap("GroupType")
     public String groupType;
 
+    /**
+     * <p>The unique identifier of the address book.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>f04ac7ce-628b-4cb7-be61-310222b7****</p>
+     */
     @NameInMap("GroupUuid")
     public String groupUuid;
 
     /**
-     * <p>The language of the content within the request. Valid values:</p>
-     * <ul>
-     * <li><strong>zh</strong> (default): Chinese</li>
-     * <li><strong>en</strong>: English</li>
-     * </ul>
+     * <p>The language of the content in the response.</p>
      * 
      * <strong>example:</strong>
      * <p>zh</p>
@@ -61,7 +54,7 @@ public class DescribeAddressBookRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The number of entries per page.</p>
+     * <p>The number of address books per page.</p>
      * <p>Default value: 10. Maximum value: 50.</p>
      * 
      * <strong>example:</strong>
@@ -71,7 +64,7 @@ public class DescribeAddressBookRequest extends TeaModel {
     public String pageSize;
 
     /**
-     * <p>The query condition that is used to search for the address book.</p>
+     * <p>The search keyword for address books.</p>
      * 
      * <strong>example:</strong>
      * <p>192.0.XX.XX</p>

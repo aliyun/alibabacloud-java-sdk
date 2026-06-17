@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeFirewallTaskRequest extends TeaModel {
     /**
+     * <p>The ID of the VPC instance.</p>
+     * 
      * <strong>example:</strong>
      * <p>vfw-tr-cd6000c588214403****</p>
      */
@@ -12,6 +14,14 @@ public class DescribeFirewallTaskRequest extends TeaModel {
     public String childInstanceId;
 
     /**
+     * <p>The language of the response. Valid values:</p>
+     * <ul>
+     * <li><p><strong>zh</strong> (default): Chinese</p>
+     * </li>
+     * <li><p><strong>en</strong>: English</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>zh</p>
      */
@@ -19,6 +29,8 @@ public class DescribeFirewallTaskRequest extends TeaModel {
     public String lang;
 
     /**
+     * <p>The task ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>199431783</p>
      */
@@ -26,6 +38,14 @@ public class DescribeFirewallTaskRequest extends TeaModel {
     public String taskId;
 
     /**
+     * <p>The type of the task. Valid values:</p>
+     * <ul>
+     * <li><p><strong>NAT</strong>: NAT border task</p>
+     * </li>
+     * <li><p><strong>VPC</strong>: VPC border task</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>VPC</p>
      */

@@ -4,10 +4,15 @@ package com.aliyun.cloudfw20171207.models;
 import com.aliyun.tea.*;
 
 public class DescribeVpcFirewallAssetListResponseBody extends TeaModel {
+    /**
+     * <p>The data returned.</p>
+     */
     @NameInMap("DataList")
     public java.util.List<DescribeVpcFirewallAssetListResponseBodyDataList> dataList;
 
     /**
+     * <p>The ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>924A6CCC-4EAD-5554-8AD0-45F5ED56****</p>
      */
@@ -15,6 +20,8 @@ public class DescribeVpcFirewallAssetListResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total number of entries returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>30</p>
      */
@@ -52,6 +59,8 @@ public class DescribeVpcFirewallAssetListResponseBody extends TeaModel {
 
     public static class DescribeVpcFirewallAssetListResponseBodyDataList extends TeaModel {
         /**
+         * <p>The IP address of the asset.</p>
+         * 
          * <strong>example:</strong>
          * <p>192.0.XX.XX</p>
          */
@@ -59,6 +68,8 @@ public class DescribeVpcFirewallAssetListResponseBody extends TeaModel {
         public String assetIP;
 
         /**
+         * <p>The ID of the asset instance.</p>
+         * 
          * <strong>example:</strong>
          * <p>i-hp3ez3rs9bxwt034****</p>
          */
@@ -66,6 +77,8 @@ public class DescribeVpcFirewallAssetListResponseBody extends TeaModel {
         public String assetInstanceId;
 
         /**
+         * <p>The name of the asset instance.</p>
+         * 
          * <strong>example:</strong>
          * <p>ecs-test</p>
          */
@@ -73,6 +86,8 @@ public class DescribeVpcFirewallAssetListResponseBody extends TeaModel {
         public String assetInstanceName;
 
         /**
+         * <p>The inbound traffic. Unit: bytes.</p>
+         * 
          * <strong>example:</strong>
          * <p>0.0</p>
          */
@@ -80,6 +95,8 @@ public class DescribeVpcFirewallAssetListResponseBody extends TeaModel {
         public Long inBytes;
 
         /**
+         * <p>The number of intrusion prevention system (IPS) hits.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -87,16 +104,23 @@ public class DescribeVpcFirewallAssetListResponseBody extends TeaModel {
         public Long ipsHitCnt;
 
         /**
+         * <p>The outbound traffic. Unit: bytes.</p>
+         * 
          * <strong>example:</strong>
          * <p>0.0</p>
          */
         @NameInMap("OutBytes")
         public Long outBytes;
 
+        /**
+         * <p>The list of ports.</p>
+         */
         @NameInMap("PortList")
         public java.util.List<String> portList;
 
         /**
+         * <p>The region.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-beijing</p>
          */
@@ -104,6 +128,8 @@ public class DescribeVpcFirewallAssetListResponseBody extends TeaModel {
         public String regionNo;
 
         /**
+         * <p>The threat level.</p>
+         * 
          * <strong>example:</strong>
          * <p>3</p>
          */
@@ -111,6 +137,8 @@ public class DescribeVpcFirewallAssetListResponseBody extends TeaModel {
         public Integer riskLevel;
 
         /**
+         * <p>The reason for the threat.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -118,6 +146,8 @@ public class DescribeVpcFirewallAssetListResponseBody extends TeaModel {
         public String riskReason;
 
         /**
+         * <p>The total number of sessions.</p>
+         * 
          * <strong>example:</strong>
          * <p>27</p>
          */
@@ -125,6 +155,8 @@ public class DescribeVpcFirewallAssetListResponseBody extends TeaModel {
         public Long sessionCount;
 
         /**
+         * <p>The total traffic. Unit: bytes.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */

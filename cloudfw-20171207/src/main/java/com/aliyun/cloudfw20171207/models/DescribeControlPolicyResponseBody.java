@@ -38,7 +38,7 @@ public class DescribeControlPolicyResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of the returned access control policies.</p>
+     * <p>The total number of access control policies.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>
@@ -95,9 +95,12 @@ public class DescribeControlPolicyResponseBody extends TeaModel {
         /**
          * <p>The action that Cloud Firewall performs on the traffic. Valid values:</p>
          * <ul>
-         * <li><strong>accept</strong>: allows the traffic.</li>
-         * <li><strong>drop</strong>: denies the traffic.</li>
-         * <li><strong>log</strong>: monitors the traffic.</li>
+         * <li><p><strong>accept</strong>: Allow</p>
+         * </li>
+         * <li><p><strong>drop</strong>: Deny</p>
+         * </li>
+         * <li><p><strong>log</strong>: Monitor</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -107,7 +110,7 @@ public class DescribeControlPolicyResponseBody extends TeaModel {
         public String aclAction;
 
         /**
-         * <p>The UUID of the access control policy.</p>
+         * <p>The unique ID of the access control policy.</p>
          * 
          * <strong>example:</strong>
          * <p>00281255-d220-4db1-8f4f-c4df221a****</p>
@@ -116,7 +119,7 @@ public class DescribeControlPolicyResponseBody extends TeaModel {
         public String aclUuid;
 
         /**
-         * <p>The application ID in the access control policy.</p>
+         * <p>The application ID for the traffic in the access control policy.</p>
          * 
          * <strong>example:</strong>
          * <p>10***</p>
@@ -125,23 +128,38 @@ public class DescribeControlPolicyResponseBody extends TeaModel {
         public String applicationId;
 
         /**
-         * <p>The application type supported by the access control policy. We recommend that you specify ApplicationNameList. Valid values:</p>
+         * <p>The application type supported by the access control policy. Use \<code>ApplicationNameList\\</code> instead. Valid values:</p>
          * <ul>
-         * <li><strong>FTP</strong></li>
-         * <li><strong>HTTP</strong></li>
-         * <li><strong>HTTPS</strong></li>
-         * <li><strong>Memcache</strong></li>
-         * <li><strong>MongoDB</strong></li>
-         * <li><strong>MQTT</strong></li>
-         * <li><strong>MySQL</strong></li>
-         * <li><strong>RDP</strong></li>
-         * <li><strong>Redis</strong></li>
-         * <li><strong>SMTP</strong></li>
-         * <li><strong>SMTPS</strong></li>
-         * <li><strong>SSH</strong></li>
-         * <li><strong>SSL</strong></li>
-         * <li><strong>VNC</strong></li>
-         * <li><strong>ANY</strong>: all types of applications</li>
+         * <li><p><strong>FTP</strong></p>
+         * </li>
+         * <li><p><strong>HTTP</strong></p>
+         * </li>
+         * <li><p><strong>HTTPS</strong></p>
+         * </li>
+         * <li><p><strong>Memcache</strong></p>
+         * </li>
+         * <li><p><strong>MongoDB</strong></p>
+         * </li>
+         * <li><p><strong>MQTT</strong></p>
+         * </li>
+         * <li><p><strong>MySQL</strong></p>
+         * </li>
+         * <li><p><strong>RDP</strong></p>
+         * </li>
+         * <li><p><strong>Redis</strong></p>
+         * </li>
+         * <li><p><strong>SMTP</strong></p>
+         * </li>
+         * <li><p><strong>SMTPS</strong></p>
+         * </li>
+         * <li><p><strong>SSH</strong></p>
+         * </li>
+         * <li><p><strong>SSL</strong></p>
+         * </li>
+         * <li><p><strong>VNC</strong></p>
+         * </li>
+         * <li><p><strong>ANY</strong> (all application types)</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -151,13 +169,13 @@ public class DescribeControlPolicyResponseBody extends TeaModel {
         public String applicationName;
 
         /**
-         * <p>The application names.</p>
+         * <p>The list of application names.</p>
          */
         @NameInMap("ApplicationNameList")
         public java.util.List<String> applicationNameList;
 
         /**
-         * <p>The time when the access control policy was created.</p>
+         * <p>The time when the policy was created. The value is a UNIX timestamp. Unit: seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1761062400</p>
@@ -175,7 +193,7 @@ public class DescribeControlPolicyResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The destination port in the access control policy.</p>
+         * <p>The destination port for the traffic in the access control policy.</p>
          * 
          * <strong>example:</strong>
          * <p>80</p>
@@ -184,7 +202,7 @@ public class DescribeControlPolicyResponseBody extends TeaModel {
         public String destPort;
 
         /**
-         * <p>The name of the destination port address book in the access control policy.</p>
+         * <p>The name of the destination port address book for the traffic in the access control policy.</p>
          * 
          * <strong>example:</strong>
          * <p>my_port_group</p>
@@ -193,16 +211,18 @@ public class DescribeControlPolicyResponseBody extends TeaModel {
         public String destPortGroup;
 
         /**
-         * <p>The ports in the destination port address book.</p>
+         * <p>The list of ports in the destination port address book.</p>
          */
         @NameInMap("DestPortGroupPorts")
         public java.util.List<String> destPortGroupPorts;
 
         /**
-         * <p>The type of the destination port in the access control policy. Valid values:</p>
+         * <p>The destination port type for the traffic in the access control policy. Valid values:</p>
          * <ul>
-         * <li><strong>port</strong>: port</li>
-         * <li><strong>group</strong>: port address book</li>
+         * <li><p><strong>port</strong>: port</p>
+         * </li>
+         * <li><p><strong>group</strong>: port address book</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -212,12 +232,16 @@ public class DescribeControlPolicyResponseBody extends TeaModel {
         public String destPortType;
 
         /**
-         * <p>The destination address in the access control policy. The value of this parameter varies based on the value of DestinationType.</p>
+         * <p>The destination address in the access control policy. The value of this parameter varies based on the value of the \<code>DestinationType\\</code> parameter. Valid values:</p>
          * <ul>
-         * <li>If the value of <strong>DestinationType</strong> is <strong>net</strong>, the value of Destination is a CIDR block. Example: 192.0.XX.XX/24.</li>
-         * <li>If the value of <strong>DestinationType</strong> is <strong>domain</strong>, the value of Destination is a domain name. Example: aliyuncs.com.</li>
-         * <li>If the value of <strong>DestinationType</strong> is <strong>group</strong>, the value of Destination is the name of an address book. Example: db_group.</li>
-         * <li>If the value of <strong>DestinationType</strong> is <strong>location</strong>, the value of Destination is the name of a location. For more information about location codes, see AddControlPolicy. Example: [&quot;BJ11&quot;, &quot;ZB&quot;].</li>
+         * <li><p>If <strong>DestinationType</strong> is <strong>net</strong>, the destination address is a CIDR block. Example: 192.0.XX.XX/24.</p>
+         * </li>
+         * <li><p>If <strong>DestinationType</strong> is <strong>domain</strong>, the destination address is a domain name. Example: aliyuncs.com.</p>
+         * </li>
+         * <li><p>If <strong>DestinationType</strong> is <strong>group</strong>, the destination address is the name of an address book. Example: db_group.</p>
+         * </li>
+         * <li><p>If <strong>DestinationType</strong> is <strong>location</strong>, the destination address is a region name. For more information about region codes, see AddControlPolicy. Example: [&quot;BJ11&quot;, &quot;ZB&quot;].</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -227,7 +251,7 @@ public class DescribeControlPolicyResponseBody extends TeaModel {
         public String destination;
 
         /**
-         * <p>The CIDR blocks in the destination address book.</p>
+         * <p>The list of CIDR blocks in the destination address book of the access control policy.</p>
          */
         @NameInMap("DestinationGroupCidrs")
         public java.util.List<String> destinationGroupCidrs;
@@ -235,11 +259,16 @@ public class DescribeControlPolicyResponseBody extends TeaModel {
         /**
          * <p>The type of the destination address book in the access control policy. Valid values:</p>
          * <ul>
-         * <li><strong>ip</strong>: an address book that includes one or more IP addresses</li>
-         * <li><strong>tag</strong>: an ECS tag-based address book that includes the IP addresses of the ECS instances with one or more specific tags</li>
-         * <li><strong>domain</strong>: an address book that includes one or more domain names</li>
-         * <li><strong>threat</strong>: an address book that includes one or more malicious IP addresses or domain names</li>
-         * <li><strong>backsrc</strong>: an address book that includes one or more back-to-origin addresses of Anti-DDoS Pro or Anti-DDoS Premium instances or WAF instances</li>
+         * <li><p><strong>ip</strong>: An IP address book that contains one or more CIDR blocks.</p>
+         * </li>
+         * <li><p><strong>tag</strong>: An ECS tag-based address book that contains the IP addresses of the ECS instances with one or more tags.</p>
+         * </li>
+         * <li><p><strong>domain</strong>: A domain name address book that contains one or more domain names.</p>
+         * </li>
+         * <li><p><strong>threat</strong>: A threat intelligence address book that contains one or more malicious IP addresses or domain names.</p>
+         * </li>
+         * <li><p><strong>backsrc</strong>: An origin URL address book that contains the origin URLs of one or more Anti-DDoS or WAF instances.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -249,12 +278,16 @@ public class DescribeControlPolicyResponseBody extends TeaModel {
         public String destinationGroupType;
 
         /**
-         * <p>The type of the destination address in the access control policy. Valid values:</p>
+         * <p>The destination address type in the access control policy. Valid values:</p>
          * <ul>
-         * <li><strong>net</strong>: CIDR block</li>
-         * <li><strong>group</strong>: address book</li>
-         * <li><strong>domain</strong>: domain name</li>
-         * <li><strong>location</strong>: location</li>
+         * <li><p><strong>net</strong>: destination CIDR block</p>
+         * </li>
+         * <li><p><strong>group</strong>: destination address book</p>
+         * </li>
+         * <li><p><strong>domain</strong>: destination domain name</p>
+         * </li>
+         * <li><p><strong>location</strong>: destination region</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -264,10 +297,12 @@ public class DescribeControlPolicyResponseBody extends TeaModel {
         public String destinationType;
 
         /**
-         * <p>The direction of the traffic to which the access control policy applies. Valid values:</p>
+         * <p>The traffic direction of the access control policy. Valid values:</p>
          * <ul>
-         * <li><strong>in</strong>: inbound traffic</li>
-         * <li><strong>out</strong>: outbound traffic</li>
+         * <li><p><strong>in</strong>: inbound traffic</p>
+         * </li>
+         * <li><p><strong>out</strong>: outbound traffic</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -277,7 +312,7 @@ public class DescribeControlPolicyResponseBody extends TeaModel {
         public String direction;
 
         /**
-         * <p>The DNS resolution results.</p>
+         * <p>The result of the DNS resolution.</p>
          * 
          * <strong>example:</strong>
          * <p>192.0.XX.XX,192.0.XX.XX</p>
@@ -287,7 +322,7 @@ public class DescribeControlPolicyResponseBody extends TeaModel {
         public String dnsResult;
 
         /**
-         * <p>The time when the Domain Name System (DNS) resolution was performed. The value is a timestamp. Unit: seconds.</p>
+         * <p>The timestamp of the DNS resolution. The value is a UNIX timestamp. Unit: seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1579261141</p>
@@ -296,11 +331,14 @@ public class DescribeControlPolicyResponseBody extends TeaModel {
         public Long dnsResultTime;
 
         /**
-         * <p>The domain name resolution method of the access control policy. By default, an access control policy is enabled after the policy is created. Valid values:</p>
+         * <p>The domain name resolution method of the access control policy. Valid values:</p>
          * <ul>
-         * <li><strong>FQDN</strong>: fully qualified domain name (FQDN)-based resolution</li>
-         * <li><strong>DNS</strong>: DNS-based dynamic resolution</li>
-         * <li><strong>FQDN_AND_DNS</strong>: FQDN and DNS-based dynamic resolution</li>
+         * <li><p><strong>FQDN</strong>: FQDN-based</p>
+         * </li>
+         * <li><p><strong>DNS</strong>: DNS-based dynamic resolution</p>
+         * </li>
+         * <li><p><strong>FQDN_AND_DNS</strong>: FQDN- and DNS-based dynamic resolution</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -310,9 +348,9 @@ public class DescribeControlPolicyResponseBody extends TeaModel {
         public String domainResolveType;
 
         /**
-         * <p>The time when the access control policy stops taking effect. The value is a timestamp. Unit: seconds. The end time must be on the hour or on the half hour, and at least 30 minutes later than the start time.</p>
+         * <p>The end time of the policy validity period for the access control policy. The value is a UNIX timestamp. The time must be on the hour or half-hour, and at least 30 minutes later than the start time.</p>
          * <blockquote>
-         * <p> If RepeatType is set to Permanent, this parameter is left empty. If RepeatType is set to None, Daily, Weekly, or Monthly, this parameter must be specified.</p>
+         * <p>If \<code>RepeatType\\</code> is \<code>Permanent\\</code>, \<code>EndTime\\</code> is empty. If \<code>RepeatType\\</code> is \<code>None\\</code>, \<code>Daily\\</code>, \<code>Weekly\\</code>, or \<code>Monthly\\</code>, this parameter is required.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -322,7 +360,7 @@ public class DescribeControlPolicyResponseBody extends TeaModel {
         public Long endTime;
 
         /**
-         * <p>The time when the access control policy was last hit. The value is a timestamp. Unit: seconds.</p>
+         * <p>The timestamp of the last hit. The value is a UNIX timestamp. Unit: seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1579261141</p>
@@ -340,10 +378,12 @@ public class DescribeControlPolicyResponseBody extends TeaModel {
         public Long hitTimes;
 
         /**
-         * <p>The IP version used in the access control policy. Valid values:</p>
+         * <p>The IP version supported. Valid values:</p>
          * <ul>
-         * <li><strong>4</strong>: IPv4</li>
-         * <li><strong>6</strong>: IPv6</li>
+         * <li><p><strong>4</strong>: IPv4 address</p>
+         * </li>
+         * <li><p><strong>6</strong>: IPv6 address</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -353,7 +393,7 @@ public class DescribeControlPolicyResponseBody extends TeaModel {
         public Integer ipVersion;
 
         /**
-         * <p>The time when the access control policy was modified.</p>
+         * <p>The time when the policy was last modified. The value is a UNIX timestamp. Unit: seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1761062400</p>
@@ -363,7 +403,7 @@ public class DescribeControlPolicyResponseBody extends TeaModel {
 
         /**
          * <p>The priority of the access control policy.</p>
-         * <p>The priority value starts from 1. A smaller priority value indicates a higher priority.</p>
+         * <p>The priority value starts from 1 and increases sequentially. A smaller value indicates a higher priority.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -372,12 +412,16 @@ public class DescribeControlPolicyResponseBody extends TeaModel {
         public Integer order;
 
         /**
-         * <p>The protocol type in the access control policy. Valid values:</p>
+         * <p>The protocol type of the traffic in the access control policy. Valid values:</p>
          * <ul>
-         * <li><strong>ANY</strong></li>
-         * <li><strong>TCP</strong></li>
-         * <li><strong>UDP</strong></li>
-         * <li><strong>ICMP</strong></li>
+         * <li><p><strong>ANY</strong></p>
+         * </li>
+         * <li><p><strong>TCP</strong></p>
+         * </li>
+         * <li><p><strong>UDP</strong></p>
+         * </li>
+         * <li><p><strong>ICMP</strong></p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -387,10 +431,12 @@ public class DescribeControlPolicyResponseBody extends TeaModel {
         public String proto;
 
         /**
-         * <p>The status of the access control policy. By default, an access control policy is enabled after it is created. Valid values:</p>
+         * <p>The status of the access control policy. The policy is enabled by default after it is created. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: enabled</li>
-         * <li><strong>false</strong>: disabled</li>
+         * <li><p><strong>true</strong>: The access control policy is enabled.</p>
+         * </li>
+         * <li><p><strong>false</strong>: The access control policy is disabled.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -400,28 +446,34 @@ public class DescribeControlPolicyResponseBody extends TeaModel {
         public String release;
 
         /**
-         * <p>The days of a week or of a month on which the access control policy takes effect.</p>
+         * <p>The collection of recurring dates for the policy validity period of the access control policy.</p>
          * <ul>
-         * <li>If RepeatType is set to <code>Permanent</code>, <code>None</code>, or <code>Daily</code>, this parameter is left empty. Example: [].</li>
-         * <li>If RepeatType is set to Weekly, this parameter must be specified. Example: [0, 6].</li>
+         * <li><p>If \<code>RepeatType\\</code> is \<code>Permanent\\</code>, \<code>None\\</code>, or \<code>Daily\\</code>, \<code>RepeatDays\\</code> is an empty collection.
+         * Example: []</p>
+         * </li>
+         * <li><p>If \<code>RepeatType\\</code> is \<code>Weekly\\</code>, \<code>RepeatDays\\</code> cannot be empty.
+         * Example: [0, 6]</p>
+         * </li>
          * </ul>
          * <blockquote>
-         * <p> If RepeatType is set to Weekly, the fields in the value of RepeatDays cannot be repeated.</p>
+         * <p>If \<code>RepeatType\\</code> is set to \<code>Weekly\\</code>, \<code>RepeatDays\\</code> cannot contain duplicate values.</p>
          * </blockquote>
          * <ul>
-         * <li>If RepeatType is set to <code>Monthly</code>, this parameter must be specified. Example: [1, 31].</li>
+         * <li>If \<code>RepeatType\\</code> is \<code>Monthly\\</code>, \<code>RepeatDays\\</code> cannot be empty.
+         * Example: [1, 31]</li>
          * </ul>
          * <blockquote>
-         * <p> If RepeatType is set to Monthly, the fields in the value of RepeatDays cannot be repeated.</p>
+         * <p>If \<code>RepeatType\\</code> is set to \<code>Monthly\\</code>, \<code>RepeatDays\\</code> cannot contain duplicate values.</p>
          * </blockquote>
          */
         @NameInMap("RepeatDays")
         public java.util.List<Long> repeatDays;
 
         /**
-         * <p>The point in time when the recurrence ends. Example: 23:30. The value must be on the hour or on the half hour, and at least 30 minutes later than the start time.</p>
+         * <p>The recurring end time for the policy validity period of the access control policy. Example: \<code>23:30\\</code>. The time must be on the hour or half-hour, and at least 30 minutes later than the recurring start time.</p>
          * <blockquote>
-         * <p> If RepeatType is set to Permanent or None, this parameter is left empty. If RepeatType is set to Daily, Weekly, or Monthly, this parameter must be specified.</p>
+         * <p>If \<code>RepeatType\\</code> is \<code>Permanent\\</code> or \<code>None\\</code>, \<code>RepeatEndTime\\</code> is empty. If \<code>RepeatType\\</code> is \<code>Daily\\</code>, \<code>Weekly\\</code>, or \<code>Monthly\\</code>, this parameter is required.
+         * The time is in the HH:mm format (24-hour). Examples: \<code>08:00\\</code> and \<code>23:30\\</code>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -431,9 +483,10 @@ public class DescribeControlPolicyResponseBody extends TeaModel {
         public String repeatEndTime;
 
         /**
-         * <p>The point in time when the recurrence starts. Example: 08:00. The value must be on the hour or on the half hour, and at least 30 minutes earlier than the end time.</p>
+         * <p>The recurring start time for the policy validity period of the access control policy. Example: \<code>08:00\\</code>. The time must be on the hour or half-hour, and at least 30 minutes earlier than the recurring end time.</p>
          * <blockquote>
-         * <p> If RepeatType is set to Permanent or None, this parameter is left empty. If RepeatType is set to Daily, Weekly, or Monthly, this parameter must be specified.</p>
+         * <p>If \<code>RepeatType\\</code> is \<code>Permanent\\</code> or \<code>None\\</code>, \<code>RepeatStartTime\\</code> is empty. If \<code>RepeatType\\</code> is \<code>Daily\\</code>, \<code>Weekly\\</code>, or \<code>Monthly\\</code>, this parameter is required.
+         * The time is in the HH:mm format (24-hour). Examples: \<code>08:00\\</code> and \<code>23:30\\</code>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -443,13 +496,18 @@ public class DescribeControlPolicyResponseBody extends TeaModel {
         public String repeatStartTime;
 
         /**
-         * <p>The recurrence type based on which the access control policy takes effect. Valid values:</p>
+         * <p>The recurrence type for the policy validity period of the access control policy. Valid values:</p>
          * <ul>
-         * <li><strong>Permanent</strong> (default): The policy always takes effect.</li>
-         * <li><strong>None</strong>: The policy takes effect for only once.</li>
-         * <li><strong>Daily</strong>: The policy takes effect on a daily basis.</li>
-         * <li><strong>Weekly</strong>: The policy takes effect on a weekly basis.</li>
-         * <li><strong>Monthly</strong>: The policy takes effect on a monthly basis.</li>
+         * <li><p><strong>Permanent</strong> (default): Always</p>
+         * </li>
+         * <li><p><strong>None</strong>: One-time</p>
+         * </li>
+         * <li><p><strong>Daily</strong>: Daily</p>
+         * </li>
+         * <li><p><strong>Weekly</strong>: Weekly</p>
+         * </li>
+         * <li><p><strong>Monthly</strong>: Monthly</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -461,9 +519,12 @@ public class DescribeControlPolicyResponseBody extends TeaModel {
         /**
          * <p>The source address in the access control policy. Valid values:</p>
          * <ul>
-         * <li>If <strong>SourceType</strong> is set to <code>net</code>, the value of Source is a CIDR block. Example: 192.0.XX.XX/24.</li>
-         * <li>If <strong>SourceType</strong> is set to <code>group</code>, the value of Source is the name of an address book. Example: db_group.</li>
-         * <li>If <strong>SourceType</strong> is set to <code>location</code>, the value of Source is a location. For more information about location codes, see <a href="https://help.aliyun.com/document_detail/138867.html">AddControlPolicy</a>. Example: [&quot;BJ11&quot;, &quot;ZB&quot;].</li>
+         * <li><p>If <strong>SourceType</strong> is <code>net</code>, the source address is a CIDR block. Example: 192.0.XX.XX/24.</p>
+         * </li>
+         * <li><p>If <strong>SourceType</strong> is <code>group</code>, the source address is the name of a source address book. Example: db_group.</p>
+         * </li>
+         * <li><p>If <strong>SourceType</strong> is <code>location</code>, the source address is a region. For more information about region codes, see <a href="https://help.aliyun.com/document_detail/138867.html">AddControlPolicy</a>. Example: [&quot;BJ11&quot;, &quot;ZB&quot;].</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -473,7 +534,7 @@ public class DescribeControlPolicyResponseBody extends TeaModel {
         public String source;
 
         /**
-         * <p>The CIDR blocks in the source address book.</p>
+         * <p>The list of CIDR blocks in the source address book of the access control policy.</p>
          */
         @NameInMap("SourceGroupCidrs")
         public java.util.List<String> sourceGroupCidrs;
@@ -481,11 +542,16 @@ public class DescribeControlPolicyResponseBody extends TeaModel {
         /**
          * <p>The type of the source address book in the access control policy. Valid values:</p>
          * <ul>
-         * <li><strong>ip</strong>: an address book that includes one or more IP addresses</li>
-         * <li><strong>tag</strong>: an Elastic Compute Service (ECS) tag-based address book that includes the IP addresses of the ECS instances with one or more specific tags</li>
-         * <li><strong>domain</strong>: an address book that includes one or more domain names</li>
-         * <li><strong>threat</strong>: an address book that includes one or more malicious IP addresses or domain names</li>
-         * <li><strong>backsrc</strong>: an address book that includes one or more back-to-origin addresses of Anti-DDoS Pro or Anti-DDoS Premium instances or Web Application Firewall (WAF) instances</li>
+         * <li><p><strong>ip</strong>: An IP address book that contains one or more CIDR blocks.</p>
+         * </li>
+         * <li><p><strong>tag</strong>: An ECS tag-based address book that contains the IP addresses of the ECS instances with one or more tags.</p>
+         * </li>
+         * <li><p><strong>domain</strong>: A domain name address book that contains one or more domain names.</p>
+         * </li>
+         * <li><p><strong>threat</strong>: A threat intelligence address book that contains one or more malicious IP addresses or domain names.</p>
+         * </li>
+         * <li><p><strong>backsrc</strong>: An origin URL address book that contains the origin URLs of one or more Anti-DDoS or WAF instances.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -495,11 +561,14 @@ public class DescribeControlPolicyResponseBody extends TeaModel {
         public String sourceGroupType;
 
         /**
-         * <p>The type of the source address in the access control policy. Valid values:</p>
+         * <p>The source address type in the access control policy. Valid values:</p>
          * <ul>
-         * <li><strong>net</strong>: CIDR block</li>
-         * <li><strong>group</strong>: address book</li>
-         * <li><strong>location</strong>: location</li>
+         * <li><p><strong>net</strong>: source CIDR block</p>
+         * </li>
+         * <li><p><strong>group</strong>: source address book</p>
+         * </li>
+         * <li><p><strong>location</strong>: source region</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -509,18 +578,19 @@ public class DescribeControlPolicyResponseBody extends TeaModel {
         public String sourceType;
 
         /**
-         * <p>The total quota consumed by the returned access control policies, which is the sum of the quota consumed by each policy. The quota that is consumed by an access control policy is calculated by using the following formula: Quota that is consumed by an access control policy = Number of source addresses (number of CIDR blocks or regions) × Number of destination addresses (number of CIDR blocks, regions, or domain names) × Number of port ranges × Number of applications.</p>
+         * <p>The number of specification entries that the access control policy consumes. This is the sum of entries consumed by each policy.
+         * The number of entries for a single policy is calculated as: Number of source addresses (CIDR blocks or regions) × Number of destination addresses (CIDR blocks, regions, or domain names) × Number of port ranges × Number of applications.</p>
          * 
          * <strong>example:</strong>
-         * <p>10,000</p>
+         * <p>10000</p>
          */
         @NameInMap("SpreadCnt")
         public Integer spreadCnt;
 
         /**
-         * <p>The time when the access control policy starts to take effect. The value is a timestamp. Unit: seconds. The start time must be on the hour or on the half hour, and at least 30 minutes earlier than the end time.</p>
+         * <p>The start time of the policy validity period for the access control policy. The value is a UNIX timestamp. The time must be on the hour or half-hour, and at least 30 minutes earlier than the end time.</p>
          * <blockquote>
-         * <p> If RepeatType is set to Permanent, this parameter is left empty. If RepeatType is set to None, Daily, Weekly, or Monthly, this parameter must be specified.</p>
+         * <p>If \<code>RepeatType\\</code> is \<code>Permanent\\</code>, \<code>StartTime\\</code> is empty. If \<code>RepeatType\\</code> is \<code>None\\</code>, \<code>Daily\\</code>, \<code>Weekly\\</code>, or \<code>Monthly\\</code>, this parameter is required.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

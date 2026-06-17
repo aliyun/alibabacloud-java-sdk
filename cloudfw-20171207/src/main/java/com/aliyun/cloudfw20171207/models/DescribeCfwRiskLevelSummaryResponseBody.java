@@ -14,7 +14,7 @@ public class DescribeCfwRiskLevelSummaryResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The list of risks.</p>
+     * <p>The list of threats.</p>
      */
     @NameInMap("RiskList")
     public java.util.List<DescribeCfwRiskLevelSummaryResponseBodyRiskList> riskList;
@@ -42,9 +42,9 @@ public class DescribeCfwRiskLevelSummaryResponseBody extends TeaModel {
 
     public static class DescribeCfwRiskLevelSummaryResponseBodyRiskList extends TeaModel {
         /**
-         * <p>The risk levels. Valid values:</p>
+         * <p>The threat level. Valid value:</p>
          * <ul>
-         * <li><strong>medium</strong></li>
+         * <li><strong>medium</strong>: medium</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -54,7 +54,7 @@ public class DescribeCfwRiskLevelSummaryResponseBody extends TeaModel {
         public String level;
 
         /**
-         * <p>The number of at-risk Elastic Compute Service (ECS) instances.</p>
+         * <p>The number of ECS instances at risk.</p>
          * 
          * <strong>example:</strong>
          * <p>50</p>

@@ -4,10 +4,15 @@ package com.aliyun.cloudfw20171207.models;
 import com.aliyun.tea.*;
 
 public class DescribeVpcFirewallDropTrafficTrendResponseBody extends TeaModel {
+    /**
+     * <p>The list of returned data.</p>
+     */
     @NameInMap("DataList")
     public java.util.List<DescribeVpcFirewallDropTrafficTrendResponseBodyDataList> dataList;
 
     /**
+     * <p>The maximum number of blocked connections.</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
@@ -15,6 +20,8 @@ public class DescribeVpcFirewallDropTrafficTrendResponseBody extends TeaModel {
     public Long dropSessionMax;
 
     /**
+     * <p>The ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>C87C1797-02E6-5EEB-A943-4416207D****</p>
      */
@@ -52,6 +59,8 @@ public class DescribeVpcFirewallDropTrafficTrendResponseBody extends TeaModel {
 
     public static class DescribeVpcFirewallDropTrafficTrendResponseBodyDataList extends TeaModel {
         /**
+         * <p>The number of sessions blocked by the access control list (ACL).</p>
+         * 
          * <strong>example:</strong>
          * <p>12</p>
          */
@@ -59,6 +68,8 @@ public class DescribeVpcFirewallDropTrafficTrendResponseBody extends TeaModel {
         public Long aclDrop;
 
         /**
+         * <p>The data timestamp. The value is a string in the YYYY-MM-DD HH:mm:ss format.</p>
+         * 
          * <strong>example:</strong>
          * <p>2018-08-25 12:00:00</p>
          */
@@ -66,6 +77,8 @@ public class DescribeVpcFirewallDropTrafficTrendResponseBody extends TeaModel {
         public String dataTime;
 
         /**
+         * <p>The number of blocked sessions.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -73,6 +86,8 @@ public class DescribeVpcFirewallDropTrafficTrendResponseBody extends TeaModel {
         public Long dropSession;
 
         /**
+         * <p>The number of sessions blocked by the intrusion prevention system (IPS).</p>
+         * 
          * <strong>example:</strong>
          * <p>5</p>
          */
@@ -80,6 +95,8 @@ public class DescribeVpcFirewallDropTrafficTrendResponseBody extends TeaModel {
         public Long ipsDrop;
 
         /**
+         * <p>The data timestamp. This value is a UNIX timestamp. Unit: seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>1659405600</p>
          */
@@ -87,6 +104,8 @@ public class DescribeVpcFirewallDropTrafficTrendResponseBody extends TeaModel {
         public Long time;
 
         /**
+         * <p>The total number of sessions.</p>
+         * 
          * <strong>example:</strong>
          * <p>153188</p>
          */

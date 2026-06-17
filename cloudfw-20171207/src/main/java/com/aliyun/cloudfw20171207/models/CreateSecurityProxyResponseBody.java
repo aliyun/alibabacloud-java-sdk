@@ -8,16 +8,16 @@ public class CreateSecurityProxyResponseBody extends TeaModel {
      * <p>The ID of the NAT firewall.</p>
      * 
      * <strong>example:</strong>
-     * <p>proxy-nat97ac4d7cc3834a5daf40</p>
+     * <p>proxy-nat97a******</p>
      */
     @NameInMap("ProxyId")
     public String proxyId;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
-     * <p>15FCCC52-1E23-57AE-B5EF-3E00A3DC3CAB</p>
+     * <p>15FCCC52-1E23-57AE-B5EF-3E00A3******</p>
      */
     @NameInMap("RequestId")
     public String requestId;

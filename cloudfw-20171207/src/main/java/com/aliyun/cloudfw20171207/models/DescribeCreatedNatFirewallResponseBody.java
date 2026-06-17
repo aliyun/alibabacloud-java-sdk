@@ -4,10 +4,15 @@ package com.aliyun.cloudfw20171207.models;
 import com.aliyun.tea.*;
 
 public class DescribeCreatedNatFirewallResponseBody extends TeaModel {
+    /**
+     * <p>A list of the created NAT firewalls.</p>
+     */
     @NameInMap("CreatedNatFirewalls")
     public java.util.List<DescribeCreatedNatFirewallResponseBodyCreatedNatFirewalls> createdNatFirewalls;
 
     /**
+     * <p>The ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>072B5287-8A85-529E-BD47-F8AC2DB1****</p>
      */
@@ -37,6 +42,8 @@ public class DescribeCreatedNatFirewallResponseBody extends TeaModel {
 
     public static class DescribeCreatedNatFirewallResponseBodyCreatedNatFirewalls extends TeaModel {
         /**
+         * <p>The ID of the NAT firewall.</p>
+         * 
          * <strong>example:</strong>
          * <p>cfw-adk2ad45sf4t8****</p>
          */
@@ -44,6 +51,8 @@ public class DescribeCreatedNatFirewallResponseBody extends TeaModel {
         public String natFirewallId;
 
         /**
+         * <p>The ID of the NAT Gateway.</p>
+         * 
          * <strong>example:</strong>
          * <p>ngw-uf6i0zkjtz4t2sttf****</p>
          */
@@ -51,6 +60,8 @@ public class DescribeCreatedNatFirewallResponseBody extends TeaModel {
         public String natGatewayId;
 
         /**
+         * <p>The name of the NAT Gateway.</p>
+         * 
          * <strong>example:</strong>
          * <p>ngw-text</p>
          */

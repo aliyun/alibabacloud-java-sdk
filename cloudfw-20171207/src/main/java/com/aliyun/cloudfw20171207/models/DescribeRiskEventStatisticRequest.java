@@ -4,10 +4,46 @@ package com.aliyun.cloudfw20171207.models;
 import com.aliyun.tea.*;
 
 public class DescribeRiskEventStatisticRequest extends TeaModel {
+    /**
+     * <p>The attacked application.</p>
+     */
     @NameInMap("AttackApp")
     public java.util.List<String> attackApp;
 
     /**
+     * <p>The attack type of the intrusion prevention event. Valid values:</p>
+     * <ul>
+     * <li><p><strong>1</strong>: anomalous connection</p>
+     * </li>
+     * <li><p><strong>2</strong>: command execution</p>
+     * </li>
+     * <li><p><strong>3</strong>: brute-force attack</p>
+     * </li>
+     * <li><p><strong>4</strong>: scanning</p>
+     * </li>
+     * <li><p><strong>5</strong>: other</p>
+     * </li>
+     * <li><p><strong>6</strong>: information leakage</p>
+     * </li>
+     * <li><p><strong>7</strong>: DoS attack</p>
+     * </li>
+     * <li><p><strong>8</strong>: overflow attack</p>
+     * </li>
+     * <li><p><strong>9</strong>: web attack</p>
+     * </li>
+     * <li><p><strong>10</strong>: trojan backdoor</p>
+     * </li>
+     * <li><p><strong>11</strong>: virus and worm</p>
+     * </li>
+     * <li><p><strong>12</strong>: mining</p>
+     * </li>
+     * <li><p><strong>13</strong>: reverse shell</p>
+     * </li>
+     * </ul>
+     * <blockquote>
+     * <p>If you do not specify this parameter, all attack types are queried.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -15,6 +51,8 @@ public class DescribeRiskEventStatisticRequest extends TeaModel {
     public String attackType;
 
     /**
+     * <p>The edition of Cloud Firewall.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -22,6 +60,7 @@ public class DescribeRiskEventStatisticRequest extends TeaModel {
     public String buyVersion;
 
     /**
+     * <p>The end time. The value is a UNIX timestamp. Unit: seconds.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -31,6 +70,8 @@ public class DescribeRiskEventStatisticRequest extends TeaModel {
     public String endTime;
 
     /**
+     * <p>The language of the response.</p>
+     * 
      * <strong>example:</strong>
      * <p>zh</p>
      */
@@ -38,6 +79,8 @@ public class DescribeRiskEventStatisticRequest extends TeaModel {
     public String lang;
 
     /**
+     * <p>The source IP address of the visitor.</p>
+     * 
      * <strong>example:</strong>
      * <p>218.76.30.XXX</p>
      */
@@ -45,6 +88,7 @@ public class DescribeRiskEventStatisticRequest extends TeaModel {
     public String sourceIp;
 
     /**
+     * <p>The start time. The value is a UNIX timestamp. Unit: seconds.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeAckClusterConnectorsRequest extends TeaModel {
     /**
+     * <p>The ID of the ACK cluster.</p>
+     * 
      * <strong>example:</strong>
      * <p>0E0C30C977463****</p>
      */
@@ -12,6 +14,8 @@ public class DescribeAckClusterConnectorsRequest extends TeaModel {
     public String clusterId;
 
     /**
+     * <p>The name of the ACK cluster connector.</p>
+     * 
      * <strong>example:</strong>
      * <p>test</p>
      */
@@ -19,6 +23,8 @@ public class DescribeAckClusterConnectorsRequest extends TeaModel {
     public String connectorName;
 
     /**
+     * <p>The language type for displaying the error reason for the ACK cluster connector\&quot;s health status.</p>
+     * 
      * <strong>example:</strong>
      * <p>zh</p>
      */
@@ -26,6 +32,8 @@ public class DescribeAckClusterConnectorsRequest extends TeaModel {
     public String lang;
 
     /**
+     * <p>The Alibaba Cloud UID to which the ACK cluster resource belongs.</p>
+     * 
      * <strong>example:</strong>
      * <p>135809047715****</p>
      */
@@ -33,6 +41,7 @@ public class DescribeAckClusterConnectorsRequest extends TeaModel {
     public String memberUid;
 
     /**
+     * <p>The page number.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -42,6 +51,7 @@ public class DescribeAckClusterConnectorsRequest extends TeaModel {
     public String pageNo;
 
     /**
+     * <p>The number of entries per page.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -51,6 +61,14 @@ public class DescribeAckClusterConnectorsRequest extends TeaModel {
     public String pageSize;
 
     /**
+     * <p>The region ID of the ACK cluster connector. Source of values:</p>
+     * <ul>
+     * <li><a href="~~DescribeAccessInstanceRegionList~~">DescribeAccessInstanceRegionList</a>: Query the list of synchronization node regions.</li>
+     * </ul>
+     * <blockquote>
+     * <p>For more information about the regions supported by Cloud Firewall for ACK cluster connectors, see <a href="https://help.aliyun.com/document_detail/2865120.html">ACK Cluster Synchronization Nodes</a>.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>cn-shenzhen</p>
      */
@@ -58,6 +76,8 @@ public class DescribeAckClusterConnectorsRequest extends TeaModel {
     public String regionNo;
 
     /**
+     * <p>The VPC instance ID to which the ACK cluster belongs.</p>
+     * 
      * <strong>example:</strong>
      * <p>vpc-uf6b5lyul0x******</p>
      */

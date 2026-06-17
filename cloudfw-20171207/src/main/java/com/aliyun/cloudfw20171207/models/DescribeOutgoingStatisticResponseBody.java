@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeOutgoingStatisticResponseBody extends TeaModel {
     /**
+     * <p>The number of assets that are ignored.</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
@@ -12,6 +14,8 @@ public class DescribeOutgoingStatisticResponseBody extends TeaModel {
     public Integer ignoreAssetCount;
 
     /**
+     * <p>The number of domain names that are ignored.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -19,6 +23,8 @@ public class DescribeOutgoingStatisticResponseBody extends TeaModel {
     public Integer ignoreDomainCount;
 
     /**
+     * <p>The number of destination IP addresses that are ignored.</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
@@ -26,6 +32,8 @@ public class DescribeOutgoingStatisticResponseBody extends TeaModel {
     public Integer ignoreDstIPCount;
 
     /**
+     * <p>The number of risky assets with outbound connections over a private network.</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
@@ -33,6 +41,8 @@ public class DescribeOutgoingStatisticResponseBody extends TeaModel {
     public Long privateRiskAssetCount;
 
     /**
+     * <p>The number of assets with outbound connections over a private network.</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
@@ -40,6 +50,8 @@ public class DescribeOutgoingStatisticResponseBody extends TeaModel {
     public Long privateTotalAssetCount;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>E2BD70F4-48BF-5EFD-B103-F0763E27*****</p>
      */
@@ -47,6 +59,8 @@ public class DescribeOutgoingStatisticResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The number of risky assets.</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
@@ -54,6 +68,8 @@ public class DescribeOutgoingStatisticResponseBody extends TeaModel {
     public Integer riskAssetCount;
 
     /**
+     * <p>The number of risky domain names for outbound connections.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -61,6 +77,8 @@ public class DescribeOutgoingStatisticResponseBody extends TeaModel {
     public Integer riskDomainCount;
 
     /**
+     * <p>The number of risky destination IP addresses for outbound connections.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -68,6 +86,8 @@ public class DescribeOutgoingStatisticResponseBody extends TeaModel {
     public Integer riskDstIPCount;
 
     /**
+     * <p>The number of assets that you follow.</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
@@ -75,6 +95,8 @@ public class DescribeOutgoingStatisticResponseBody extends TeaModel {
     public Integer subscribeAssetCount;
 
     /**
+     * <p>The number of domain names that you follow.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -82,6 +104,8 @@ public class DescribeOutgoingStatisticResponseBody extends TeaModel {
     public Integer subscribeDomainCount;
 
     /**
+     * <p>The number of destination IP addresses that you follow.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -89,6 +113,8 @@ public class DescribeOutgoingStatisticResponseBody extends TeaModel {
     public Integer subscribeDstIPCount;
 
     /**
+     * <p>The total number of assets that have outbound connections.</p>
+     * 
      * <strong>example:</strong>
      * <p>13</p>
      */
@@ -96,6 +122,8 @@ public class DescribeOutgoingStatisticResponseBody extends TeaModel {
     public Integer totalAssetCount;
 
     /**
+     * <p>The total number of outbound domain names.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -103,6 +131,8 @@ public class DescribeOutgoingStatisticResponseBody extends TeaModel {
     public Integer totalDomainCount;
 
     /**
+     * <p>The total number of destination IP addresses for outbound connections.</p>
+     * 
      * <strong>example:</strong>
      * <p>107</p>
      */
@@ -110,6 +140,8 @@ public class DescribeOutgoingStatisticResponseBody extends TeaModel {
     public Integer totalDstIPCount;
 
     /**
+     * <p>The number of outbound connection protocols.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -117,6 +149,8 @@ public class DescribeOutgoingStatisticResponseBody extends TeaModel {
     public Integer totalProtocolCount;
 
     /**
+     * <p>The number of domain names that are not covered by a policy.</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
@@ -124,6 +158,8 @@ public class DescribeOutgoingStatisticResponseBody extends TeaModel {
     public Integer uncoveredAclDomain;
 
     /**
+     * <p>The number of destination IP addresses that are not covered by a policy.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -131,6 +167,8 @@ public class DescribeOutgoingStatisticResponseBody extends TeaModel {
     public Integer uncoveredAclDstIP;
 
     /**
+     * <p>The percentage of traffic from unidentified protocols.</p>
+     * 
      * <strong>example:</strong>
      * <p>20.13</p>
      */

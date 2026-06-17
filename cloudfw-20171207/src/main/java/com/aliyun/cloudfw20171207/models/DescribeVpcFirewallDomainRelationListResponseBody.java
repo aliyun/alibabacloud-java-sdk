@@ -4,13 +4,21 @@ package com.aliyun.cloudfw20171207.models;
 import com.aliyun.tea.*;
 
 public class DescribeVpcFirewallDomainRelationListResponseBody extends TeaModel {
+    /**
+     * <p>The list of data entries.</p>
+     */
     @NameInMap("DataList")
     public java.util.List<DescribeVpcFirewallDomainRelationListResponseBodyDataList> dataList;
 
+    /**
+     * <p>A list of destination VPCs.</p>
+     */
     @NameInMap("DstVpcList")
     public java.util.List<DescribeVpcFirewallDomainRelationListResponseBodyDstVpcList> dstVpcList;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>C5DDD596-1191-5F36-A504-8733045A****</p>
      */
@@ -18,6 +26,8 @@ public class DescribeVpcFirewallDomainRelationListResponseBody extends TeaModel 
     public String requestId;
 
     /**
+     * <p>The total number of entries.</p>
+     * 
      * <strong>example:</strong>
      * <p>132</p>
      */
@@ -63,6 +73,8 @@ public class DescribeVpcFirewallDomainRelationListResponseBody extends TeaModel 
 
     public static class DescribeVpcFirewallDomainRelationListResponseBodyDataList extends TeaModel {
         /**
+         * <p>The business category of the website.</p>
+         * 
          * <strong>example:</strong>
          * <p>Google</p>
          */
@@ -70,6 +82,8 @@ public class DescribeVpcFirewallDomainRelationListResponseBody extends TeaModel 
         public String business;
 
         /**
+         * <p>The domain name.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="http://www.example.com">www.example.com</a></p>
          */
@@ -77,6 +91,8 @@ public class DescribeVpcFirewallDomainRelationListResponseBody extends TeaModel 
         public String domain;
 
         /**
+         * <p>The destination IP address.</p>
+         * 
          * <strong>example:</strong>
          * <p>192.0.XX.XX</p>
          */
@@ -84,6 +100,8 @@ public class DescribeVpcFirewallDomainRelationListResponseBody extends TeaModel 
         public String dstIP;
 
         /**
+         * <p>The ID of the destination region.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-beijing</p>
          */
@@ -91,6 +109,8 @@ public class DescribeVpcFirewallDomainRelationListResponseBody extends TeaModel 
         public String dstRegionId;
 
         /**
+         * <p>The ID of the destination VPC.</p>
+         * 
          * <strong>example:</strong>
          * <p>vpc-bp10w5nb30r4jzfyc****</p>
          */
@@ -98,6 +118,8 @@ public class DescribeVpcFirewallDomainRelationListResponseBody extends TeaModel 
         public String dstVpcId;
 
         /**
+         * <p>The name of the destination VPC.</p>
+         * 
          * <strong>example:</strong>
          * <p>vpc-****</p>
          */
@@ -105,6 +127,8 @@ public class DescribeVpcFirewallDomainRelationListResponseBody extends TeaModel 
         public String dstVpcName;
 
         /**
+         * <p>The Unix timestamp for the first access, in seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>1767147003</p>
          */
@@ -112,6 +136,8 @@ public class DescribeVpcFirewallDomainRelationListResponseBody extends TeaModel 
         public Long firstTime;
 
         /**
+         * <p>The name of the organization.</p>
+         * 
          * <strong>example:</strong>
          * <p>Google</p>
          */
@@ -119,6 +145,8 @@ public class DescribeVpcFirewallDomainRelationListResponseBody extends TeaModel 
         public String groupName;
 
         /**
+         * <p>The IPS hit count.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -126,6 +154,8 @@ public class DescribeVpcFirewallDomainRelationListResponseBody extends TeaModel 
         public Long ipsHitCnt;
 
         /**
+         * <p>The Unix timestamp for the last access, in seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>1767147003</p>
          */
@@ -133,6 +163,8 @@ public class DescribeVpcFirewallDomainRelationListResponseBody extends TeaModel 
         public Long lastTime;
 
         /**
+         * <p>The request traffic, in bytes.</p>
+         * 
          * <strong>example:</strong>
          * <p>10000</p>
          */
@@ -140,6 +172,8 @@ public class DescribeVpcFirewallDomainRelationListResponseBody extends TeaModel 
         public Long requestBytes;
 
         /**
+         * <p>The response traffic, in bytes.</p>
+         * 
          * <strong>example:</strong>
          * <p>10000</p>
          */
@@ -147,6 +181,8 @@ public class DescribeVpcFirewallDomainRelationListResponseBody extends TeaModel 
         public Long responseBytes;
 
         /**
+         * <p>The total number of sessions.</p>
+         * 
          * <strong>example:</strong>
          * <p>27</p>
          */
@@ -154,6 +190,8 @@ public class DescribeVpcFirewallDomainRelationListResponseBody extends TeaModel 
         public Long sessionCount;
 
         /**
+         * <p>The source IP address.</p>
+         * 
          * <strong>example:</strong>
          * <p>192.0.XX.XX</p>
          */
@@ -161,6 +199,8 @@ public class DescribeVpcFirewallDomainRelationListResponseBody extends TeaModel 
         public String srcIP;
 
         /**
+         * <p>The ID of the source region.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
          */
@@ -168,6 +208,8 @@ public class DescribeVpcFirewallDomainRelationListResponseBody extends TeaModel 
         public String srcRegionId;
 
         /**
+         * <p>The ID of the source VPC.</p>
+         * 
          * <strong>example:</strong>
          * <p>vpc-t4nlt09olhpazpoeg****</p>
          */
@@ -175,6 +217,8 @@ public class DescribeVpcFirewallDomainRelationListResponseBody extends TeaModel 
         public String srcVpcId;
 
         /**
+         * <p>The name of the source VPC.</p>
+         * 
          * <strong>example:</strong>
          * <p>vpc-****</p>
          */
@@ -182,6 +226,8 @@ public class DescribeVpcFirewallDomainRelationListResponseBody extends TeaModel 
         public String srcVpcName;
 
         /**
+         * <p>The total traffic, in bytes.</p>
+         * 
          * <strong>example:</strong>
          * <p>16287823</p>
          */
@@ -341,6 +387,8 @@ public class DescribeVpcFirewallDomainRelationListResponseBody extends TeaModel 
 
     public static class DescribeVpcFirewallDomainRelationListResponseBodyDstVpcList extends TeaModel {
         /**
+         * <p>The ID of the destination VPC.</p>
+         * 
          * <strong>example:</strong>
          * <p>vpc-bp10w5nb30r4jzfyc****</p>
          */
@@ -348,6 +396,8 @@ public class DescribeVpcFirewallDomainRelationListResponseBody extends TeaModel 
         public String vpcId;
 
         /**
+         * <p>The name of the destination VPC.</p>
+         * 
          * <strong>example:</strong>
          * <p>vpc-****</p>
          */

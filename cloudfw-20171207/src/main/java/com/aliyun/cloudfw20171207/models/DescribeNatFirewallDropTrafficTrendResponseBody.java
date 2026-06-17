@@ -4,10 +4,15 @@ package com.aliyun.cloudfw20171207.models;
 import com.aliyun.tea.*;
 
 public class DescribeNatFirewallDropTrafficTrendResponseBody extends TeaModel {
+    /**
+     * <p>The list of data for the Overview page.</p>
+     */
     @NameInMap("DataList")
     public java.util.List<DescribeNatFirewallDropTrafficTrendResponseBodyDataList> dataList;
 
     /**
+     * <p>The peak number of dropped sessions for the specified period.</p>
+     * 
      * <strong>example:</strong>
      * <p>62436</p>
      */
@@ -15,6 +20,8 @@ public class DescribeNatFirewallDropTrafficTrendResponseBody extends TeaModel {
     public Long dropSessionMax;
 
     /**
+     * <p>The timestamp that corresponds to the peak number of dropped sessions. The value is a UNIX timestamp. Unit: seconds.</p>
+     * 
      * <strong>example:</strong>
      * <p>1525662720</p>
      */
@@ -22,6 +29,8 @@ public class DescribeNatFirewallDropTrafficTrendResponseBody extends TeaModel {
     public String dropSessionMaxTime;
 
     /**
+     * <p>The ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>F0F82705-CFC7-5F83-86C8-A063892F****</p>
      */
@@ -67,6 +76,8 @@ public class DescribeNatFirewallDropTrafficTrendResponseBody extends TeaModel {
 
     public static class DescribeNatFirewallDropTrafficTrendResponseBodyDataList extends TeaModel {
         /**
+         * <p>The number of blocked sessions.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -74,6 +85,8 @@ public class DescribeNatFirewallDropTrafficTrendResponseBody extends TeaModel {
         public Long dropSession;
 
         /**
+         * <p>The data timestamp. The value is a UNIX timestamp. Unit: seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>1659405600</p>
          */
@@ -81,6 +94,8 @@ public class DescribeNatFirewallDropTrafficTrendResponseBody extends TeaModel {
         public Long time;
 
         /**
+         * <p>The total number of requests.</p>
+         * 
          * <strong>example:</strong>
          * <p>153188</p>
          */

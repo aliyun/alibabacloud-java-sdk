@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class DeleteSecurityProxyResponseBody extends TeaModel {
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
-     * <p>7447795A-39AB-52CB-8F92-128DF4898F36</p>
+     * <p>7447795A-39AB-52CB-8F92-128DF******</p>
      */
     @NameInMap("RequestId")
     public String requestId;

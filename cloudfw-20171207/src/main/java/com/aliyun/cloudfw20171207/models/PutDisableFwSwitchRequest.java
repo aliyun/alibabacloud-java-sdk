@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class PutDisableFwSwitchRequest extends TeaModel {
     /**
+     * <p>The IP version.</p>
+     * 
      * <strong>example:</strong>
      * <p>4</p>
      */
@@ -14,7 +16,7 @@ public class PutDisableFwSwitchRequest extends TeaModel {
     /**
      * <p>The IP addresses.</p>
      * <blockquote>
-     * <p> You must specify at least one of the IpaddrList, RegionList, and ResourceTypeList parameters.</p>
+     * <p>You must specify a value for at least one of the following parameters: <code>IpaddrList</code>, <code>RegionList</code>, and <code>ResourceTypeList</code>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -24,10 +26,12 @@ public class PutDisableFwSwitchRequest extends TeaModel {
     public java.util.List<String> ipaddrList;
 
     /**
-     * <p>The language of the content within the response. Valid values:</p>
+     * <p>The language of the response. Valid values:</p>
      * <ul>
-     * <li><strong>zh</strong>: Chinese (default)</li>
-     * <li><strong>en</strong>: English</li>
+     * <li><p><strong>zh</strong> (default): Chinese</p>
+     * </li>
+     * <li><p><strong>en</strong>: English</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -37,6 +41,8 @@ public class PutDisableFwSwitchRequest extends TeaModel {
     public String lang;
 
     /**
+     * <p>The unique identifier of the member.</p>
+     * 
      * <strong>example:</strong>
      * <p>1234</p>
      */
@@ -46,7 +52,7 @@ public class PutDisableFwSwitchRequest extends TeaModel {
     /**
      * <p>The regions.</p>
      * <blockquote>
-     * <p> You must specify at least one of the IpaddrList, RegionList, and ResourceTypeList parameters.</p>
+     * <p>You must specify a value for at least one of the following parameters: <code>IpaddrList</code>, <code>RegionList</code>, and <code>ResourceTypeList</code>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -56,9 +62,49 @@ public class PutDisableFwSwitchRequest extends TeaModel {
     public java.util.List<String> regionList;
 
     /**
-     * <p>The types of the assets.</p>
+     * <p>The asset types. Valid values:</p>
+     * <ul>
+     * <li><p><strong>BastionHostEgressIP</strong>: The egress IP address of a bastion host.</p>
+     * </li>
+     * <li><p><strong>BastionHostIngressIP</strong>: The ingress IP address of a bastion host.</p>
+     * </li>
+     * <li><p><strong>EcsEIP</strong>: The Elastic IP Address (EIP) of an ECS instance.</p>
+     * </li>
+     * <li><p><strong>EcsPublicIP</strong>: The public IP address of an ECS instance.</p>
+     * </li>
+     * <li><p><strong>EIP</strong>: An Elastic IP Address (EIP).</p>
+     * </li>
+     * <li><p><strong>EniEIP</strong>: The EIP of an elastic network interface (ENI).</p>
+     * </li>
+     * <li><p><strong>NatEIP</strong>: The EIP of a NAT Gateway instance.</p>
+     * </li>
+     * <li><p><strong>SlbEIP</strong>: The EIP of a Server Load Balancer (SLB) or Classic Load Balancer (CLB) instance.</p>
+     * </li>
+     * <li><p><strong>SlbPublicIP</strong>: The public IP address of an SLB or CLB instance.</p>
+     * </li>
+     * <li><p><strong>NatPublicIP</strong>: The public IP address of a NAT Gateway instance.</p>
+     * </li>
+     * <li><p><strong>HAVIP</strong>: A High-availability Virtual IP (HAVIP).</p>
+     * </li>
+     * <li><p><strong>NlbEIP</strong>: The EIP of a Network Load Balancer (NLB) instance.</p>
+     * </li>
+     * <li><p><strong>ApiGatewayEIP</strong>: The public IP address of an API Gateway instance.</p>
+     * </li>
+     * <li><p><strong>AlbEIP</strong>: The EIP of an Application Load Balancer (ALB) instance.</p>
+     * </li>
+     * <li><p><strong>AiGatewayEIP</strong>: The public IP address of an AI Gateway instance.</p>
+     * </li>
+     * <li><p><strong>GaEIP</strong>: The EIP of a Global Accelerator (GA) instance.</p>
+     * </li>
+     * <li><p><strong>SwasEIP</strong>: The public IP address of a Simple Application Server instance.</p>
+     * </li>
+     * <li><p><strong>EcdEIP</strong>: The public IP address of an Elastic Desktop Service (ECD) instance.</p>
+     * </li>
+     * <li><p><strong>BastionHostIP</strong>: The IP address of a bastion host.</p>
+     * </li>
+     * </ul>
      * <blockquote>
-     * <p>You must specify at least one of the IpaddrList, RegionList, and ResourceTypeList parameters.</p>
+     * <p>You must specify a value for at least one of the following parameters: <code>IpaddrList</code>, <code>RegionList</code>, and <code>ResourceTypeList</code>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

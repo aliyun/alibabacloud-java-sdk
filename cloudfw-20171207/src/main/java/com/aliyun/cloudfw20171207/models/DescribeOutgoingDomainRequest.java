@@ -5,13 +5,18 @@ import com.aliyun.tea.*;
 
 public class DescribeOutgoingDomainRequest extends TeaModel {
     /**
-     * <p>The type of the service. This parameter is empty by default. Valid values:</p>
+     * <p>The asset category. If you leave this parameter empty, assets in all categories are queried. Valid values:</p>
      * <ul>
-     * <li><strong>All</strong>: all services</li>
-     * <li><strong>RiskDomain</strong>: risky domain names</li>
-     * <li><strong>RiskIP</strong>: risky IP addresses</li>
-     * <li><strong>AliYun</strong>: Alibaba Cloud services</li>
-     * <li><strong>NotAliYun</strong>: third-party services</li>
+     * <li><p><strong>All</strong>: all categories</p>
+     * </li>
+     * <li><p><strong>RiskDomain</strong>: risky domain names</p>
+     * </li>
+     * <li><p><strong>RiskIP</strong>: risky IP addresses</p>
+     * </li>
+     * <li><p><strong>AliYun</strong>: Alibaba Cloud services</p>
+     * </li>
+     * <li><p><strong>NotAliYun</strong>: third-party services</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -21,7 +26,7 @@ public class DescribeOutgoingDomainRequest extends TeaModel {
     public String categoryId;
 
     /**
-     * <p>The number of the page to return.</p>
+     * <p>The page number to return.</p>
      * <p>Default value: 1.</p>
      * 
      * <strong>example:</strong>
@@ -31,10 +36,12 @@ public class DescribeOutgoingDomainRequest extends TeaModel {
     public String currentPage;
 
     /**
-     * <p>The source of traffic for statistics. Valid values:</p>
+     * <p>The source of traffic statistics. The default value is \<code>internet\\</code>, which indicates Internet Firewall. Valid values:</p>
      * <ul>
-     * <li><strong>internet</strong> (default): the Internet firewall.</li>
-     * <li><strong>nat</strong>: NAT firewalls.</li>
+     * <li><p><strong>internet</strong>: Internet Firewall</p>
+     * </li>
+     * <li><p><strong>nat</strong>: NAT Firewall</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -44,7 +51,7 @@ public class DescribeOutgoingDomainRequest extends TeaModel {
     public String dataType;
 
     /**
-     * <p>The domain name in outbound connections.</p>
+     * <p>The outbound domain name.</p>
      * 
      * <strong>example:</strong>
      * <p><a href="http://www.aliyundoc.com">www.aliyundoc.com</a></p>
@@ -53,7 +60,7 @@ public class DescribeOutgoingDomainRequest extends TeaModel {
     public String domain;
 
     /**
-     * <p>The end of the time range to query. The value is a UNIX timestamp. Unit: seconds.</p>
+     * <p>The end of the time range to query. This is a UNIX timestamp. Unit: seconds.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -63,10 +70,12 @@ public class DescribeOutgoingDomainRequest extends TeaModel {
     public String endTime;
 
     /**
-     * <p>Specifies whether to collect statistics only on AI service access traffic. Valid values:</p>
+     * <p>Specifies whether to count only traffic from accessing AI services. The default value is \<code>false\\</code>. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong></li>
-     * <li><strong>false</strong> (default)</li>
+     * <li><p><strong>true</strong>: yes</p>
+     * </li>
+     * <li><p><strong>false</strong>: no</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -76,10 +85,12 @@ public class DescribeOutgoingDomainRequest extends TeaModel {
     public String isAITraffic;
 
     /**
-     * <p>The language of the content within the request. Valid values:</p>
+     * <p>The language of the request and response. Valid values:</p>
      * <ul>
-     * <li><strong>zh</strong>: Chinese (default)</li>
-     * <li><strong>en</strong>: English</li>
+     * <li><p><strong>zh</strong> (default): Chinese</p>
+     * </li>
+     * <li><p><strong>en</strong>: English</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -89,10 +100,12 @@ public class DescribeOutgoingDomainRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The method that you want to use to sort the query results. Valid values:</p>
+     * <p>The sorting order. Valid values:</p>
      * <ul>
-     * <li><strong>asc</strong></li>
-     * <li><strong>desc</strong> (default)</li>
+     * <li><p><strong>asc</strong>: ascending</p>
+     * </li>
+     * <li><p><strong>desc</strong> (default): descending</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -112,7 +125,7 @@ public class DescribeOutgoingDomainRequest extends TeaModel {
     public String pageSize;
 
     /**
-     * <p>The public IP address of the Elastic Compute Service (ECS) instance that initiates outbound connections.</p>
+     * <p>The public IP address of the Elastic Compute Service (ECS) instance that initiates the outbound connections.</p>
      * 
      * <strong>example:</strong>
      * <p>192.0.XX.XX</p>
@@ -121,10 +134,12 @@ public class DescribeOutgoingDomainRequest extends TeaModel {
     public String publicIP;
 
     /**
-     * <p>The field based on which you want to sort the query results. Valid values:</p>
+     * <p>The field to sort by. Valid values:</p>
      * <ul>
-     * <li><strong>SessionCount</strong> (default): the number of requests.</li>
-     * <li><strong>TotalBytes</strong>: the total volume of traffic.</li>
+     * <li><p><strong>SessionCount</strong> (default): the number of requests</p>
+     * </li>
+     * <li><p><strong>TotalBytes</strong>: the total traffic</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -134,7 +149,7 @@ public class DescribeOutgoingDomainRequest extends TeaModel {
     public String sort;
 
     /**
-     * <p>The beginning of the time range to query. The value is a UNIX timestamp. Unit: seconds.</p>
+     * <p>The beginning of the time range to query. This is a UNIX timestamp. Unit: seconds.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -144,45 +159,82 @@ public class DescribeOutgoingDomainRequest extends TeaModel {
     public String startTime;
 
     /**
-     * <p>The ID of the tag. Valid values:</p>
+     * <p>The ID of the intelligence tag. Valid values:</p>
      * <ul>
-     * <li><strong>AliYun</strong>: Alibaba Cloud service</li>
-     * <li><strong>RiskDomain</strong>: risky domain name</li>
-     * <li><strong>RiskIP</strong>: risky IP address</li>
-     * <li><strong>TrustedDomain</strong>: trusted website</li>
-     * <li><strong>AliPay</strong>: Alipay</li>
-     * <li><strong>DingDing</strong>: DingTalk</li>
-     * <li><strong>WeChat</strong>: WeChat</li>
-     * <li><strong>QQ</strong>: Tencent QQ</li>
-     * <li><strong>SecurityService</strong>: security service</li>
-     * <li><strong>Microsoft</strong>: Microsoft</li>
-     * <li><strong>Amazon</strong>: Amazon Web Services (AWS)</li>
-     * <li><strong>Pan</strong>: cloud disk</li>
-     * <li><strong>Map</strong>: map</li>
-     * <li><strong>Code</strong>: code hosting</li>
-     * <li><strong>SystemService</strong>: system service</li>
-     * <li><strong>Taobao</strong>: Taobao</li>
-     * <li><strong>Google</strong>: Google</li>
-     * <li><strong>ThirdPartyService</strong>: third-party service</li>
-     * <li><strong>FirstFlow</strong>: the first time when an outbound connection is initiated</li>
-     * <li><strong>Downloader</strong>: malicious download</li>
-     * <li><strong>Alexa Top1M</strong>: popular website</li>
-     * <li><strong>Miner</strong>: mining pool</li>
-     * <li><strong>Intelligence</strong>: threat intelligence</li>
-     * <li><strong>DDoS</strong>: DDoS trojan</li>
-     * <li><strong>Ransomware</strong>: ransomware</li>
-     * <li><strong>Spyware</strong>: spyware</li>
-     * <li><strong>Rogue</strong>: rogue software</li>
-     * <li><strong>Botnet</strong>: botnet</li>
-     * <li><strong>Suspicious</strong>: suspicious website</li>
-     * <li><strong>C\&amp;C</strong>: command and control (C\&amp;C)</li>
-     * <li><strong>Gang</strong>: gang</li>
-     * <li><strong>CVE</strong>: Common Vulnerabilities and Exposures (CVE)</li>
-     * <li><strong>Backdoor</strong>: webshell</li>
-     * <li><strong>Phishing</strong>: phishing website</li>
-     * <li><strong>APT</strong>: advanced persistent threat (APT) attack</li>
-     * <li><strong>Supply Chain Attack</strong>: supply chain attack</li>
-     * <li><strong>Malicious software</strong>: malware</li>
+     * <li><p><strong>AliYun</strong>: Alibaba Cloud service</p>
+     * </li>
+     * <li><p><strong>RiskDomain</strong>: Risky domain name</p>
+     * </li>
+     * <li><p><strong>RiskIP</strong>: Risky IP address</p>
+     * </li>
+     * <li><p><strong>TrustedDomain</strong>: Trusted website</p>
+     * </li>
+     * <li><p><strong>AliPay</strong>: Alipay</p>
+     * </li>
+     * <li><p><strong>DingDing</strong>: DingTalk</p>
+     * </li>
+     * <li><p><strong>WeChat</strong>: WeChat</p>
+     * </li>
+     * <li><p><strong>QQ</strong>: Tencent QQ</p>
+     * </li>
+     * <li><p><strong>SecurityService</strong>: Security service</p>
+     * </li>
+     * <li><p><strong>Microsoft</strong>: Microsoft</p>
+     * </li>
+     * <li><p><strong>Amazon</strong>: Amazon</p>
+     * </li>
+     * <li><p><strong>Pan</strong>: Cloud storage service</p>
+     * </li>
+     * <li><p><strong>Map</strong>: Map service</p>
+     * </li>
+     * <li><p><strong>Code</strong>: Code hosting service</p>
+     * </li>
+     * <li><p><strong>SystemService</strong>: System service</p>
+     * </li>
+     * <li><p><strong>Taobao</strong>: Taobao</p>
+     * </li>
+     * <li><p><strong>Google</strong>: Google</p>
+     * </li>
+     * <li><p><strong>ThirdPartyService</strong>: Third-party service</p>
+     * </li>
+     * <li><p><strong>FirstFlow</strong>: First-time access</p>
+     * </li>
+     * <li><p><strong>Downloader</strong>: Malicious downloader</p>
+     * </li>
+     * <li><p><strong>Alexa Top 1M</strong>: Popular website</p>
+     * </li>
+     * <li><p><strong>Miner</strong>: Mining pool</p>
+     * </li>
+     * <li><p><strong>Intelligence</strong>: Threat intelligence</p>
+     * </li>
+     * <li><p><strong>DDoS</strong>: DDoS trojan</p>
+     * </li>
+     * <li><p><strong>Ransomware</strong>: Ransomware</p>
+     * </li>
+     * <li><p><strong>Spyware</strong>: Spyware</p>
+     * </li>
+     * <li><p><strong>Rogue</strong>: Rogue software</p>
+     * </li>
+     * <li><p><strong>Botnet</strong>: Botnet</p>
+     * </li>
+     * <li><p><strong>Suspicious</strong>: Suspicious website</p>
+     * </li>
+     * <li><p><strong>C\&amp;C</strong>: Command and control (C\&amp;C)</p>
+     * </li>
+     * <li><p><strong>Gang</strong>: Gang-related activity</p>
+     * </li>
+     * <li><p><strong>CVE</strong>: CVE vulnerability</p>
+     * </li>
+     * <li><p><strong>Backdoor</strong>: Backdoor</p>
+     * </li>
+     * <li><p><strong>Phishing</strong>: Phishing website</p>
+     * </li>
+     * <li><p><strong>APT</strong>: Advanced Persistent Threat (APT) attack</p>
+     * </li>
+     * <li><p><strong>Supply Chain Attack</strong>: Supply chain attack</p>
+     * </li>
+     * <li><p><strong>Malware</strong>: Malicious software</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

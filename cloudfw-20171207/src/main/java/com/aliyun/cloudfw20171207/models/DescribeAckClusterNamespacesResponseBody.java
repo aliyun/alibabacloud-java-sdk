@@ -4,10 +4,15 @@ package com.aliyun.cloudfw20171207.models;
 import com.aliyun.tea.*;
 
 public class DescribeAckClusterNamespacesResponseBody extends TeaModel {
+    /**
+     * <p>The list of ACK cluster namespaces.</p>
+     */
     @NameInMap("AckNamespaces")
     public java.util.List<String> ackNamespaces;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>133173B9-8010-5DF5-8B93-********</p>
      */

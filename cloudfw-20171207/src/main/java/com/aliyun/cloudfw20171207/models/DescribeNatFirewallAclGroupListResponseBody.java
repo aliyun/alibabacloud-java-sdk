@@ -4,10 +4,15 @@ package com.aliyun.cloudfw20171207.models;
 import com.aliyun.tea.*;
 
 public class DescribeNatFirewallAclGroupListResponseBody extends TeaModel {
+    /**
+     * <p>The list of NAT firewalls.</p>
+     */
     @NameInMap("NatFirewalls")
     public java.util.List<DescribeNatFirewallAclGroupListResponseBodyNatFirewalls> natFirewalls;
 
     /**
+     * <p>The ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>F06DE24D-6EB9-5F55-B588-7BB946DF****</p>
      */
@@ -37,6 +42,8 @@ public class DescribeNatFirewallAclGroupListResponseBody extends TeaModel {
 
     public static class DescribeNatFirewallAclGroupListResponseBodyNatFirewalls extends TeaModel {
         /**
+         * <p>The number of policies in the access control policy group of the NAT firewall.</p>
+         * 
          * <strong>example:</strong>
          * <p>32</p>
          */
@@ -44,6 +51,8 @@ public class DescribeNatFirewallAclGroupListResponseBody extends TeaModel {
         public Integer aclRuleCount;
 
         /**
+         * <p>Indicates whether the NAT firewall is the default one.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -51,6 +60,8 @@ public class DescribeNatFirewallAclGroupListResponseBody extends TeaModel {
         public Boolean isDefault;
 
         /**
+         * <p>The ID of the NAT Gateway.</p>
+         * 
          * <strong>example:</strong>
          * <p>ngw-2zed6z6qkd7ogc****</p>
          */
@@ -58,6 +69,8 @@ public class DescribeNatFirewallAclGroupListResponseBody extends TeaModel {
         public String natGatewayId;
 
         /**
+         * <p>The name of the NAT Gateway.</p>
+         * 
          * <strong>example:</strong>
          * <p>ngw-test</p>
          */
@@ -65,6 +78,8 @@ public class DescribeNatFirewallAclGroupListResponseBody extends TeaModel {
         public String natGatewayName;
 
         /**
+         * <p>The region ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-beijing</p>
          */

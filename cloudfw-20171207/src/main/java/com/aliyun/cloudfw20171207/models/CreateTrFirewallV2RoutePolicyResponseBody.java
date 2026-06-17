@@ -14,7 +14,7 @@ public class CreateTrFirewallV2RoutePolicyResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The ID of the routing policy.</p>
+     * <p>The ID of the routing policy for the VPC firewall.</p>
      * 
      * <strong>example:</strong>
      * <p>policy-8ebed27e13e14ce2****</p>

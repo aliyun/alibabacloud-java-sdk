@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeNatAclPageStatusResponseBody extends TeaModel {
     /**
-     * <p>Extra error information.</p>
+     * <p>The details of the exception.</p>
      * 
      * <strong>example:</strong>
      * <p>proxy_not_exist</p>
@@ -14,7 +14,7 @@ public class DescribeNatAclPageStatusResponseBody extends TeaModel {
     public String detail;
 
     /**
-     * <p>Indicates whether pagination for access control policies for NAT firewalls is supported.</p>
+     * <p>Indicates whether a separate page is supported for NAT ACL.</p>
      * 
      * <strong>example:</strong>
      * <p>True</p>

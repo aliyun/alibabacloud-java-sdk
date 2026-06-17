@@ -4,13 +4,21 @@ package com.aliyun.cloudfw20171207.models;
 import com.aliyun.tea.*;
 
 public class DescribeInternetOpenDetailResponseBody extends TeaModel {
+    /**
+     * <p>The list of returned data.</p>
+     */
     @NameInMap("DataList")
     public java.util.List<DescribeInternetOpenDetailResponseBodyDataList> dataList;
 
+    /**
+     * <p>The pagination information.</p>
+     */
     @NameInMap("PageInfo")
     public DescribeInternetOpenDetailResponseBodyPageInfo pageInfo;
 
     /**
+     * <p>The ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>3495E758-BB4B-5F5C-8AE0-897489F****</p>
      */
@@ -48,6 +56,8 @@ public class DescribeInternetOpenDetailResponseBody extends TeaModel {
 
     public static class DescribeInternetOpenDetailResponseBodyDataList extends TeaModel {
         /**
+         * <p>The ID of the asset instance.</p>
+         * 
          * <strong>example:</strong>
          * <p>i-bp1ix9w22kv6aew9****</p>
          */
@@ -55,6 +65,8 @@ public class DescribeInternetOpenDetailResponseBody extends TeaModel {
         public String assetsInstanceId;
 
         /**
+         * <p>The instance name.</p>
+         * 
          * <strong>example:</strong>
          * <p>launch-advisor-2023****</p>
          */
@@ -62,6 +74,8 @@ public class DescribeInternetOpenDetailResponseBody extends TeaModel {
         public String assetsName;
 
         /**
+         * <p>The asset type of the instance.</p>
+         * 
          * <strong>example:</strong>
          * <p>EcsEIP</p>
          */
@@ -69,6 +83,8 @@ public class DescribeInternetOpenDetailResponseBody extends TeaModel {
         public String assetsType;
 
         /**
+         * <p>The ID of the details.</p>
+         * 
          * <strong>example:</strong>
          * <p>1123</p>
          */
@@ -76,6 +92,8 @@ public class DescribeInternetOpenDetailResponseBody extends TeaModel {
         public String id;
 
         /**
+         * <p>The inbound traffic. Unit: bytes.</p>
+         * 
          * <strong>example:</strong>
          * <p>0.0</p>
          */
@@ -83,6 +101,8 @@ public class DescribeInternetOpenDetailResponseBody extends TeaModel {
         public Long inBytes;
 
         /**
+         * <p>The outbound traffic. Unit: bytes.</p>
+         * 
          * <strong>example:</strong>
          * <p>0.0</p>
          */
@@ -90,6 +110,8 @@ public class DescribeInternetOpenDetailResponseBody extends TeaModel {
         public Long outBytes;
 
         /**
+         * <p>The port that is exposed to the Internet.</p>
+         * 
          * <strong>example:</strong>
          * <p>3389</p>
          */
@@ -97,6 +119,8 @@ public class DescribeInternetOpenDetailResponseBody extends TeaModel {
         public Integer port;
 
         /**
+         * <p>The security threat.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -104,6 +128,8 @@ public class DescribeInternetOpenDetailResponseBody extends TeaModel {
         public String probRisk;
 
         /**
+         * <p>The description of the security threat.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -111,6 +137,8 @@ public class DescribeInternetOpenDetailResponseBody extends TeaModel {
         public String probRiskDesc;
 
         /**
+         * <p>The protocol type.</p>
+         * 
          * <strong>example:</strong>
          * <p>tcp</p>
          */
@@ -118,6 +146,8 @@ public class DescribeInternetOpenDetailResponseBody extends TeaModel {
         public String protocol;
 
         /**
+         * <p>The public IP address.</p>
+         * 
          * <strong>example:</strong>
          * <p>39.101.167.XX</p>
          */
@@ -125,6 +155,8 @@ public class DescribeInternetOpenDetailResponseBody extends TeaModel {
         public String publicIp;
 
         /**
+         * <p>The region ID of the instance.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-shenzhen</p>
          */
@@ -132,6 +164,8 @@ public class DescribeInternetOpenDetailResponseBody extends TeaModel {
         public String regionNo;
 
         /**
+         * <p>The risk level.</p>
+         * 
          * <strong>example:</strong>
          * <p>3</p>
          */
@@ -139,6 +173,8 @@ public class DescribeInternetOpenDetailResponseBody extends TeaModel {
         public Integer riskLevel;
 
         /**
+         * <p>The cause of the risk.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -146,6 +182,8 @@ public class DescribeInternetOpenDetailResponseBody extends TeaModel {
         public String riskReason;
 
         /**
+         * <p>The application name.</p>
+         * 
          * <strong>example:</strong>
          * <p>Redis</p>
          */
@@ -153,6 +191,8 @@ public class DescribeInternetOpenDetailResponseBody extends TeaModel {
         public String serviceName;
 
         /**
+         * <p>The recommended policy level.</p>
+         * 
          * <strong>example:</strong>
          * <p>20</p>
          */
@@ -160,6 +200,8 @@ public class DescribeInternetOpenDetailResponseBody extends TeaModel {
         public Integer suggestLevel;
 
         /**
+         * <p>The total traffic.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -167,6 +209,8 @@ public class DescribeInternetOpenDetailResponseBody extends TeaModel {
         public Long totalBytes;
 
         /**
+         * <p>The percentage of traffic in the last 24 hours.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -174,6 +218,8 @@ public class DescribeInternetOpenDetailResponseBody extends TeaModel {
         public String trafficPercent1Day;
 
         /**
+         * <p>The percentage of traffic in the last 30 days.</p>
+         * 
          * <strong>example:</strong>
          * <p>48</p>
          */
@@ -181,12 +227,17 @@ public class DescribeInternetOpenDetailResponseBody extends TeaModel {
         public String trafficPercent30Day;
 
         /**
+         * <p>The percentage of traffic in the last 7 days.</p>
+         * 
          * <strong>example:</strong>
          * <p>30</p>
          */
         @NameInMap("TrafficPercent7Day")
         public String trafficPercent7Day;
 
+        /**
+         * <p>The reason why the protocol is not detected when the protocol is identified as Unknown.</p>
+         */
         @NameInMap("UnknownReason")
         public java.util.List<String> unknownReason;
 
@@ -367,6 +418,8 @@ public class DescribeInternetOpenDetailResponseBody extends TeaModel {
 
     public static class DescribeInternetOpenDetailResponseBodyPageInfo extends TeaModel {
         /**
+         * <p>The page number of the returned page.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -374,6 +427,8 @@ public class DescribeInternetOpenDetailResponseBody extends TeaModel {
         public Integer currentPage;
 
         /**
+         * <p>The number of entries returned per page.</p>
+         * 
          * <strong>example:</strong>
          * <p>50</p>
          */
@@ -381,6 +436,8 @@ public class DescribeInternetOpenDetailResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
+         * <p>The total number of entries returned.</p>
+         * 
          * <strong>example:</strong>
          * <p>5</p>
          */

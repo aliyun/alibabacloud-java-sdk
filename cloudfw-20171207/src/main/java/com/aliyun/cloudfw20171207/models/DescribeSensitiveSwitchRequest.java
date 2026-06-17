@@ -4,10 +4,18 @@ package com.aliyun.cloudfw20171207.models;
 import com.aliyun.tea.*;
 
 public class DescribeSensitiveSwitchRequest extends TeaModel {
+    /**
+     * <p>The name of the category.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Identity card</p>
+     */
     @NameInMap("CategoryName")
     public String categoryName;
 
     /**
+     * <p>The number of the page to return.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -15,6 +23,8 @@ public class DescribeSensitiveSwitchRequest extends TeaModel {
     public Integer currentPage;
 
     /**
+     * <p>The language of the request and response.</p>
+     * 
      * <strong>example:</strong>
      * <p>zh</p>
      */
@@ -22,6 +32,8 @@ public class DescribeSensitiveSwitchRequest extends TeaModel {
     public String lang;
 
     /**
+     * <p>The number of the page to return.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -29,6 +41,8 @@ public class DescribeSensitiveSwitchRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The parent class.</p>
+     * 
      * <strong>example:</strong>
      * <p>universal_industry_template</p>
      */
@@ -36,6 +50,8 @@ public class DescribeSensitiveSwitchRequest extends TeaModel {
     public String parentCategory;
 
     /**
+     * <p>The type of the sensitive credential.</p>
+     * 
      * <strong>example:</strong>
      * <p>id_card</p>
      */
@@ -43,6 +59,8 @@ public class DescribeSensitiveSwitchRequest extends TeaModel {
     public String sensitiveCategory;
 
     /**
+     * <p>The sensitivity level.</p>
+     * 
      * <strong>example:</strong>
      * <p>S3</p>
      */
@@ -50,6 +68,8 @@ public class DescribeSensitiveSwitchRequest extends TeaModel {
     public String sensitiveLevel;
 
     /**
+     * <p>The status of the sensitive data detection switch.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */

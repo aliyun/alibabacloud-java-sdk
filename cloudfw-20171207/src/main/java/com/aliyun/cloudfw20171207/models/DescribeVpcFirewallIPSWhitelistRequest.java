@@ -5,11 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeVpcFirewallIPSWhitelistRequest extends TeaModel {
     /**
-     * <p>The language of the content within the request and response.</p>
+     * <p>The language of the request and response messages.</p>
      * <p>Valid values:</p>
      * <ul>
-     * <li><strong>zh</strong> (default): Chinese</li>
-     * <li><strong>en</strong>: English</li>
+     * <li><p><strong>zh</strong> (default): Chinese</p>
+     * </li>
+     * <li><p><strong>en</strong>: English</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -19,20 +21,26 @@ public class DescribeVpcFirewallIPSWhitelistRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The UID of the member in Cloud Firewall.</p>
+     * <p>The UID of the Cloud Firewall member account.</p>
      * 
      * <strong>example:</strong>
-     * <p>1766185894104675</p>
+     * <p>176618****104675</p>
      */
     @NameInMap("MemberUid")
     public Long memberUid;
 
     /**
-     * <p>The instance ID of the VPC firewall.</p>
+     * <p>The instance ID of the VPC firewall. Valid values:</p>
+     * <ul>
+     * <li><p>If the VPC firewall protects a network instance in a Cloud Enterprise Network (CEN) instance, set the value to the ID of the CEN instance. For a CEN instance of Basic Edition, you can call the <a href="https://help.aliyun.com/document_detail/345777.html">DescribeVpcFirewallCenList</a> operation to query the instance ID. For a CEN instance of Enterprise Edition, you can call the <a href="https://help.aliyun.com/document_detail/2384695.html">DescribeTrFirewallsV2List</a> operation to query the instance ID.</p>
+     * </li>
+     * <li><p>If the VPC firewall protects traffic between two VPCs that are connected by an Express Connect circuit, set the value to the instance ID of the VPC firewall. You can call the <a href="https://help.aliyun.com/document_detail/342932.html">DescribeVpcFirewallList</a> operation to query the instance ID of the VPC firewall.</p>
+     * </li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>vfw-3547deab1c9b4190a53f</p>
+     * <p>cen-***</p>
      */
     @NameInMap("VpcFirewallId")
     public String vpcFirewallId;

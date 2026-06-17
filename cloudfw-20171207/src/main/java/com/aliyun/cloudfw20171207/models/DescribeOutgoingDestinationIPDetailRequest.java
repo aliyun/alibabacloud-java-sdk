@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeOutgoingDestinationIPDetailRequest extends TeaModel {
     /**
+     * <p>The status of the access control policy.</p>
+     * 
      * <strong>example:</strong>
      * <p>FullCoverage</p>
      */
@@ -12,6 +14,8 @@ public class DescribeOutgoingDestinationIPDetailRequest extends TeaModel {
     public String aclCoverage;
 
     /**
+     * <p>The number of the page to return.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -19,6 +23,7 @@ public class DescribeOutgoingDestinationIPDetailRequest extends TeaModel {
     public String currentPage;
 
     /**
+     * <p>The destination IP address.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -28,6 +33,7 @@ public class DescribeOutgoingDestinationIPDetailRequest extends TeaModel {
     public String dstIP;
 
     /**
+     * <p>The end of the time range to query. This is a UNIX timestamp. Unit: seconds.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -37,6 +43,8 @@ public class DescribeOutgoingDestinationIPDetailRequest extends TeaModel {
     public String endTime;
 
     /**
+     * <p>Describes the outbound connections from a private network through a NAT gateway.</p>
+     * 
      * <strong>example:</strong>
      * <p>NatPrivate</p>
      */
@@ -44,6 +52,8 @@ public class DescribeOutgoingDestinationIPDetailRequest extends TeaModel {
     public String IPType;
 
     /**
+     * <p>The language of the response message.</p>
+     * 
      * <strong>example:</strong>
      * <p>zh</p>
      */
@@ -51,6 +61,8 @@ public class DescribeOutgoingDestinationIPDetailRequest extends TeaModel {
     public String lang;
 
     /**
+     * <p>The ID of the NAT Gateway.</p>
+     * 
      * <strong>example:</strong>
      * <p>ngw-2zed6z6qkd7ogc****</p>
      */
@@ -58,6 +70,8 @@ public class DescribeOutgoingDestinationIPDetailRequest extends TeaModel {
     public String natGatewayId;
 
     /**
+     * <p>The sort order.</p>
+     * 
      * <strong>example:</strong>
      * <p>desc</p>
      */
@@ -65,6 +79,8 @@ public class DescribeOutgoingDestinationIPDetailRequest extends TeaModel {
     public String order;
 
     /**
+     * <p>The number of the page to return.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -72,6 +88,8 @@ public class DescribeOutgoingDestinationIPDetailRequest extends TeaModel {
     public String pageSize;
 
     /**
+     * <p>The private IP address.</p>
+     * 
      * <strong>example:</strong>
      * <p>10.210.0.XXX</p>
      */
@@ -79,6 +97,8 @@ public class DescribeOutgoingDestinationIPDetailRequest extends TeaModel {
     public String privateIP;
 
     /**
+     * <p>The public IP address.</p>
+     * 
      * <strong>example:</strong>
      * <p>192.0.XX.XX</p>
      */
@@ -86,6 +106,8 @@ public class DescribeOutgoingDestinationIPDetailRequest extends TeaModel {
     public String publicIP;
 
     /**
+     * <p>The field to use for sorting.</p>
+     * 
      * <strong>example:</strong>
      * <p>InBytes</p>
      */
@@ -93,6 +115,8 @@ public class DescribeOutgoingDestinationIPDetailRequest extends TeaModel {
     public String sort;
 
     /**
+     * <p>The source IP address of the visitor.</p>
+     * 
      * <strong>example:</strong>
      * <p>1.202.193.XXX</p>
      */
@@ -100,6 +124,7 @@ public class DescribeOutgoingDestinationIPDetailRequest extends TeaModel {
     public String sourceIp;
 
     /**
+     * <p>The start of the time range to query. This is a UNIX timestamp. Unit: seconds.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -109,6 +134,8 @@ public class DescribeOutgoingDestinationIPDetailRequest extends TeaModel {
     public String startTime;
 
     /**
+     * <p>The ID of the tag.</p>
+     * 
      * <strong>example:</strong>
      * <p>FirstFlow</p>
      */

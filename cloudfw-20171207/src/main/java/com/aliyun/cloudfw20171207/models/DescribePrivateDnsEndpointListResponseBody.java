@@ -4,10 +4,15 @@ package com.aliyun.cloudfw20171207.models;
 import com.aliyun.tea.*;
 
 public class DescribePrivateDnsEndpointListResponseBody extends TeaModel {
+    /**
+     * <p>A list of private instances.</p>
+     */
     @NameInMap("AccessInstanceList")
     public java.util.List<DescribePrivateDnsEndpointListResponseBodyAccessInstanceList> accessInstanceList;
 
     /**
+     * <p>The page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -15,6 +20,8 @@ public class DescribePrivateDnsEndpointListResponseBody extends TeaModel {
     public Integer pageNo;
 
     /**
+     * <p>The number of entries to return on each page.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -22,6 +29,8 @@ public class DescribePrivateDnsEndpointListResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>850A84D6-0DE4-4797-A1E8-00090****</p>
      */
@@ -29,6 +38,8 @@ public class DescribePrivateDnsEndpointListResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total number of entries.</p>
+     * 
      * <strong>example:</strong>
      * <p>3</p>
      */
@@ -82,6 +93,8 @@ public class DescribePrivateDnsEndpointListResponseBody extends TeaModel {
 
     public static class DescribePrivateDnsEndpointListResponseBodyAccessInstanceList extends TeaModel {
         /**
+         * <p>The ID of the instance.</p>
+         * 
          * <strong>example:</strong>
          * <p>123</p>
          */
@@ -89,6 +102,8 @@ public class DescribePrivateDnsEndpointListResponseBody extends TeaModel {
         public String accessInstanceId;
 
         /**
+         * <p>The name of the private instance.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -96,6 +111,8 @@ public class DescribePrivateDnsEndpointListResponseBody extends TeaModel {
         public String accessInstanceName;
 
         /**
+         * <p>The UID of the Alibaba Cloud account that owns the Cloud Firewall.</p>
+         * 
          * <strong>example:</strong>
          * <p>1379490574415****</p>
          */
@@ -103,16 +120,31 @@ public class DescribePrivateDnsEndpointListResponseBody extends TeaModel {
         public Long aliUid;
 
         /**
+         * <p>The number of domain names.</p>
+         * 
          * <strong>example:</strong>
          * <p>3</p>
          */
         @NameInMap("DomainNameCount")
         public Long domainNameCount;
 
+        /**
+         * <p>The type of Cloud Firewall. Valid values:</p>
+         * <ul>
+         * <li><p><strong>internet</strong></p>
+         * </li>
+         * <li><p><strong>vpc</strong></p>
+         * </li>
+         * <li><p><strong>nat</strong></p>
+         * </li>
+         * </ul>
+         */
         @NameInMap("FirewallType")
         public java.util.List<String> firewallType;
 
         /**
+         * <p>The time when the instance was created. The value is a UNIX timestamp measured in seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>1715075765</p>
          */
@@ -120,6 +152,14 @@ public class DescribePrivateDnsEndpointListResponseBody extends TeaModel {
         public Long gmtCreate;
 
         /**
+         * <p>The IP protocol. Valid values:</p>
+         * <ul>
+         * <li><p><strong>TCP</strong></p>
+         * </li>
+         * <li><p><strong>UDP</strong></p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>tcp</p>
          */
@@ -127,6 +167,8 @@ public class DescribePrivateDnsEndpointListResponseBody extends TeaModel {
         public Integer ipProtocol;
 
         /**
+         * <p>The UID of the Cloud Firewall member account.</p>
+         * 
          * <strong>example:</strong>
          * <p>1844802493****</p>
          */
@@ -134,6 +176,8 @@ public class DescribePrivateDnsEndpointListResponseBody extends TeaModel {
         public Long memberUid;
 
         /**
+         * <p>The port number.</p>
+         * 
          * <strong>example:</strong>
          * <p>443</p>
          */
@@ -141,6 +185,8 @@ public class DescribePrivateDnsEndpointListResponseBody extends TeaModel {
         public Integer port;
 
         /**
+         * <p>The primary DNS server.</p>
+         * 
          * <strong>example:</strong>
          * <p>1.1.1.1</p>
          */
@@ -148,6 +194,14 @@ public class DescribePrivateDnsEndpointListResponseBody extends TeaModel {
         public String primaryDns;
 
         /**
+         * <p>The type of private DNS. Valid values:</p>
+         * <ul>
+         * <li><p><strong>PrivateZone</strong></p>
+         * </li>
+         * <li><p><strong>Custom</strong> (default)</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Custom</p>
          */
@@ -155,6 +209,8 @@ public class DescribePrivateDnsEndpointListResponseBody extends TeaModel {
         public String privateDnsType;
 
         /**
+         * <p>The ID of the region where the instance resides.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
          */
@@ -162,6 +218,8 @@ public class DescribePrivateDnsEndpointListResponseBody extends TeaModel {
         public String regionNo;
 
         /**
+         * <p>The standby DNS server.</p>
+         * 
          * <strong>example:</strong>
          * <p>1.1.1.2</p>
          */
@@ -169,6 +227,20 @@ public class DescribePrivateDnsEndpointListResponseBody extends TeaModel {
         public String standbyDns;
 
         /**
+         * <p>The status of the instance. Valid values:</p>
+         * <ul>
+         * <li><p><strong>creating</strong>: The instance is being created.</p>
+         * </li>
+         * <li><p><strong>deleting</strong>: The instance is being deleted.</p>
+         * </li>
+         * <li><p><strong>normal</strong>: The instance is running as expected.</p>
+         * </li>
+         * <li><p><strong>updating</strong>: The instance is being updated.</p>
+         * </li>
+         * <li><p><strong>abnormal</strong>: The instance is in an abnormal state.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>normal</p>
          */
@@ -176,6 +248,8 @@ public class DescribePrivateDnsEndpointListResponseBody extends TeaModel {
         public Integer status;
 
         /**
+         * <p>The unique ID of the task.</p>
+         * 
          * <strong>example:</strong>
          * <p>123</p>
          */
@@ -183,6 +257,8 @@ public class DescribePrivateDnsEndpointListResponseBody extends TeaModel {
         public String taskId;
 
         /**
+         * <p>The ID of the VPC.</p>
+         * 
          * <strong>example:</strong>
          * <p>vpc-2zelphbaourpun****</p>
          */

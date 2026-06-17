@@ -5,12 +5,17 @@ import com.aliyun.tea.*;
 
 public class DescribeTransitRouterResourcesListResponseBody extends TeaModel {
     /**
+     * <p>The ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>A61A2516-0A22-5B3F-986B-3D4BF2A****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The list of Transit Router resources.</p>
+     */
     @NameInMap("TransitRouterAttachedResources")
     public java.util.List<DescribeTransitRouterResourcesListResponseBodyTransitRouterAttachedResources> transitRouterAttachedResources;
 
@@ -37,6 +42,8 @@ public class DescribeTransitRouterResourcesListResponseBody extends TeaModel {
 
     public static class DescribeTransitRouterResourcesListResponseBodyTransitRouterAttachedResources extends TeaModel {
         /**
+         * <p>The instance ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>eas-r-8k1a6jjofkp0cq****</p>
          */
@@ -44,6 +51,8 @@ public class DescribeTransitRouterResourcesListResponseBody extends TeaModel {
         public String resourceId;
 
         /**
+         * <p>The instance name.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -51,6 +60,8 @@ public class DescribeTransitRouterResourcesListResponseBody extends TeaModel {
         public String resourceName;
 
         /**
+         * <p>The asset type.</p>
+         * 
          * <strong>example:</strong>
          * <p>VPC</p>
          */

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ClearLogStoreStorageResponseBody extends TeaModel {
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -12,6 +14,8 @@ public class ClearLogStoreStorageResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>21C27710-2DB1-5F2A-8588-72D0541B****</p>
      */
@@ -19,6 +23,8 @@ public class ClearLogStoreStorageResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

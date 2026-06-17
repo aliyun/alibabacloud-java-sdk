@@ -4,10 +4,15 @@ package com.aliyun.cloudfw20171207.models;
 import com.aliyun.tea.*;
 
 public class DescribeUnprotectedPortTrendResponseBody extends TeaModel {
+    /**
+     * <p>The list of data.</p>
+     */
     @NameInMap("DataList")
     public java.util.List<DescribeUnprotectedPortTrendResponseBodyDataList> dataList;
 
     /**
+     * <p>The time interval.</p>
+     * 
      * <strong>example:</strong>
      * <p>60</p>
      */
@@ -15,6 +20,8 @@ public class DescribeUnprotectedPortTrendResponseBody extends TeaModel {
     public Integer interval;
 
     /**
+     * <p>The ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>E599A84E-CD22-5E42-A2A9-01A254AC****</p>
      */
@@ -52,6 +59,8 @@ public class DescribeUnprotectedPortTrendResponseBody extends TeaModel {
 
     public static class DescribeUnprotectedPortTrendResponseBodyDataList extends TeaModel {
         /**
+         * <p>The number of blocks.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -59,6 +68,8 @@ public class DescribeUnprotectedPortTrendResponseBody extends TeaModel {
         public Integer count;
 
         /**
+         * <p>The timestamp.</p>
+         * 
          * <strong>example:</strong>
          * <p>1659405600</p>
          */

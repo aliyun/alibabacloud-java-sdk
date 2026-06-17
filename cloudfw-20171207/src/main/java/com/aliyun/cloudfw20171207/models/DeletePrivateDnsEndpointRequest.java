@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeletePrivateDnsEndpointRequest extends TeaModel {
     /**
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class DeletePrivateDnsEndpointRequest extends TeaModel {
     public String accessInstanceId;
 
     /**
+     * <p>The region ID of the instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

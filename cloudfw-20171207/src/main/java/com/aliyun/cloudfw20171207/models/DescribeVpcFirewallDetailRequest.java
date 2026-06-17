@@ -5,10 +5,12 @@ import com.aliyun.tea.*;
 
 public class DescribeVpcFirewallDetailRequest extends TeaModel {
     /**
-     * <p>The natural language of the request and response. Valid values:</p>
+     * <p>The language of the request and response. Valid values:</p>
      * <ul>
-     * <li><strong>zh</strong>: Chinese (default)</li>
-     * <li><strong>en</strong>: English</li>
+     * <li><p><strong>zh</strong> (default): Chinese.</p>
+     * </li>
+     * <li><p><strong>en</strong>: English.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,7 +20,7 @@ public class DescribeVpcFirewallDetailRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The ID of the local VPC.</p>
+     * <p>The instance ID of the local VPC.</p>
      * 
      * <strong>example:</strong>
      * <p>vpc-8vbwbo90rq0anm6t****</p>
@@ -27,7 +29,7 @@ public class DescribeVpcFirewallDetailRequest extends TeaModel {
     public String localVpcId;
 
     /**
-     * <p>The ID of the peer VPC.</p>
+     * <p>The instance ID of the peer VPC.</p>
      * 
      * <strong>example:</strong>
      * <p>vpc-90rq0anm6t8vbwbo****</p>
@@ -38,7 +40,7 @@ public class DescribeVpcFirewallDetailRequest extends TeaModel {
     /**
      * <p>The instance ID of the VPC firewall.</p>
      * <blockquote>
-     * <p> You can call the <a href="https://help.aliyun.com/document_detail/342932.html">DescribeVpcFirewallList</a> operation to query the instance IDs of VPC firewalls.</p>
+     * <p>Call the <a href="https://help.aliyun.com/document_detail/342932.html">DescribeVpcFirewallList</a> operation to query the instance ID of the VPC firewall.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 

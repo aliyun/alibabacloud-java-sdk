@@ -4,13 +4,21 @@ package com.aliyun.cloudfw20171207.models;
 import com.aliyun.tea.*;
 
 public class DescribeInvadeEventNameListResponseBody extends TeaModel {
+    /**
+     * <p>A list of anomalous activity names.</p>
+     */
     @NameInMap("EventNameList")
     public java.util.List<DescribeInvadeEventNameListResponseBodyEventNameList> eventNameList;
 
+    /**
+     * <p>A list of vulnerability names.</p>
+     */
     @NameInMap("NameList")
     public java.util.List<String> nameList;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>6ABAA264-E7B5-5D66-8FC3-9253100****</p>
      */
@@ -48,12 +56,20 @@ public class DescribeInvadeEventNameListResponseBody extends TeaModel {
 
     public static class DescribeInvadeEventNameListResponseBodyEventNameList extends TeaModel {
         /**
+         * <p>The unique identifier of the vulnerability event.</p>
+         * 
          * <strong>example:</strong>
          * <p>CActivity</p>
          */
         @NameInMap("EventKey")
         public String eventKey;
 
+        /**
+         * <p>The name of the vulnerability event.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Suspicious central control communication</p>
+         */
         @NameInMap("EventName")
         public String eventName;
 

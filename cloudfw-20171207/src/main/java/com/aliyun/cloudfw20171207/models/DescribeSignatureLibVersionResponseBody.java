@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeSignatureLibVersionResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>9C50C2A9-4BBB-5504-8ADA-C41A79B8C946</p>
@@ -59,29 +59,7 @@ public class DescribeSignatureLibVersionResponseBody extends TeaModel {
 
     public static class DescribeSignatureLibVersionResponseBodyVersion extends TeaModel {
         /**
-         * <p>The type.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li><p>ips</p>
-         * <!-- -->
-         * 
-         * <p>:</p>
-         * <!-- -->
-         * 
-         * <p>Basic Rules and Virtual Patching</p>
-         * <!-- -->
-         * 
-         * <p>.</p>
-         * </li>
-         * <li><p>intelligence</p>
-         * <!-- -->
-         * 
-         * <p>:</p>
-         * <!-- -->
-         * 
-         * <p>Threat Intelligence</p>
-         * <!-- --></li>
-         * </ul>
+         * <p>The type of the signature library.</p>
          * 
          * <strong>example:</strong>
          * <p>ips</p>
@@ -90,7 +68,7 @@ public class DescribeSignatureLibVersionResponseBody extends TeaModel {
         public String type;
 
         /**
-         * <p>Update time.</p>
+         * <p>The time when the signature library was updated. This value is a Unix timestamp in seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1741067915</p>
@@ -99,7 +77,7 @@ public class DescribeSignatureLibVersionResponseBody extends TeaModel {
         public Long updateTime;
 
         /**
-         * <p>The version number.</p>
+         * <p>The version number of the signature library.</p>
          * 
          * <strong>example:</strong>
          * <p>IPS-2307-02</p>

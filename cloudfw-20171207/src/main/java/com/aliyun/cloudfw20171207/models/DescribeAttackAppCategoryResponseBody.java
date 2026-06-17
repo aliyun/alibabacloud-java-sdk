@@ -4,10 +4,15 @@ package com.aliyun.cloudfw20171207.models;
 import com.aliyun.tea.*;
 
 public class DescribeAttackAppCategoryResponseBody extends TeaModel {
+    /**
+     * <p>A list of attack application categories.</p>
+     */
     @NameInMap("AppCategories")
     public java.util.List<DescribeAttackAppCategoryResponseBodyAppCategories> appCategories;
 
     /**
+     * <p>The ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>B14757D0-4640-4B44-AC67-7F558FE****</p>
      */
@@ -36,10 +41,15 @@ public class DescribeAttackAppCategoryResponseBody extends TeaModel {
     }
 
     public static class DescribeAttackAppCategoryResponseBodyAppCategories extends TeaModel {
+        /**
+         * <p>A list of attack applications.</p>
+         */
         @NameInMap("AttackApps")
         public java.util.List<String> attackApps;
 
         /**
+         * <p>The name of the attack application category.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */

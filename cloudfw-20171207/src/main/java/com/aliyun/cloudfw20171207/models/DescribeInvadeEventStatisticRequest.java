@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeInvadeEventStatisticRequest extends TeaModel {
     /**
+     * <p>The end time. This is a UNIX timestamp that is accurate to the second.</p>
+     * 
      * <strong>example:</strong>
      * <p>1774713600</p>
      */
@@ -12,6 +14,8 @@ public class DescribeInvadeEventStatisticRequest extends TeaModel {
     public String endTime;
 
     /**
+     * <p>The language of the response.</p>
+     * 
      * <strong>example:</strong>
      * <p>zh</p>
      */
@@ -19,6 +23,8 @@ public class DescribeInvadeEventStatisticRequest extends TeaModel {
     public String lang;
 
     /**
+     * <p>The source IP address of the visitor.</p>
+     * 
      * <strong>example:</strong>
      * <p>52.130.200.XXX</p>
      */
@@ -26,6 +32,8 @@ public class DescribeInvadeEventStatisticRequest extends TeaModel {
     public String sourceIp;
 
     /**
+     * <p>The start time. This is a UNIX timestamp that is accurate to the second.</p>
+     * 
      * <strong>example:</strong>
      * <p>1746151757</p>
      */

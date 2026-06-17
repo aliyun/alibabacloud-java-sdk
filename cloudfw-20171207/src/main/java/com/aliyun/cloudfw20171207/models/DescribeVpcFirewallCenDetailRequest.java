@@ -5,10 +5,12 @@ import com.aliyun.tea.*;
 
 public class DescribeVpcFirewallCenDetailRequest extends TeaModel {
     /**
-     * <p>The language of the content within the request and response. Valid values:</p>
+     * <p>The language of the request and response. Valid values:</p>
      * <ul>
-     * <li><strong>zh</strong>: Chinese (default)</li>
-     * <li><strong>en</strong>: English</li>
+     * <li><p><strong>zh</strong> (default): Chinese.</p>
+     * </li>
+     * <li><p><strong>en</strong>: English.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,7 +20,7 @@ public class DescribeVpcFirewallCenDetailRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The ID of the VPC for which the VPC firewall is created.</p>
+     * <p>The ID of the VPC instance for which the VPC firewall is created.</p>
      * 
      * <strong>example:</strong>
      * <p>vpc-2zefk9fbn8j7v585g****</p>

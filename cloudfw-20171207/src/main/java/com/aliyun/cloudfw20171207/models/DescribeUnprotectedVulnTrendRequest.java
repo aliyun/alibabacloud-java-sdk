@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeUnprotectedVulnTrendRequest extends TeaModel {
     /**
+     * <p>The end time. Use a UNIX timestamp in seconds.</p>
+     * 
      * <strong>example:</strong>
      * <p>1754878752</p>
      */
@@ -12,6 +14,14 @@ public class DescribeUnprotectedVulnTrendRequest extends TeaModel {
     public String endTime;
 
     /**
+     * <p>The language of the response. Valid values:</p>
+     * <ul>
+     * <li><p><strong>zh</strong> (default): Chinese</p>
+     * </li>
+     * <li><p><strong>en</strong>: English</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>zh</p>
      */
@@ -19,6 +29,8 @@ public class DescribeUnprotectedVulnTrendRequest extends TeaModel {
     public String lang;
 
     /**
+     * <p>The source IP address of the visitor.</p>
+     * 
      * <strong>example:</strong>
      * <p>112.15.190.XX</p>
      */
@@ -26,6 +38,8 @@ public class DescribeUnprotectedVulnTrendRequest extends TeaModel {
     public String sourceIp;
 
     /**
+     * <p>The start time. Use a UNIX timestamp in seconds.</p>
+     * 
      * <strong>example:</strong>
      * <p>1740623016</p>
      */

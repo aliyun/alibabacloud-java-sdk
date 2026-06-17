@@ -8,9 +8,12 @@ public class DescribeNatFirewallControlPolicyRequest extends TeaModel {
      * <p>The action that Cloud Firewall performs on the traffic.</p>
      * <p>Valid values:</p>
      * <ul>
-     * <li><strong>accept</strong>: allows the traffic.</li>
-     * <li><strong>drop</strong>: denies the traffic.</li>
-     * <li><strong>log</strong>: monitors the traffic.</li>
+     * <li><p><strong>accept</strong>: Allow</p>
+     * </li>
+     * <li><p><strong>drop</strong>: Deny</p>
+     * </li>
+     * <li><p><strong>log</strong>: Monitor</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -20,16 +23,16 @@ public class DescribeNatFirewallControlPolicyRequest extends TeaModel {
     public String aclAction;
 
     /**
-     * <p>The UUID of the access control policy.</p>
+     * <p>The unique ID of the access control policy.</p>
      * 
      * <strong>example:</strong>
-     * <p>303f0697-2a21-4e43-b142-4a77adf7b358</p>
+     * <p>323f0697-2a21-4e43-b142-*****</p>
      */
     @NameInMap("AclUuid")
     public String aclUuid;
 
     /**
-     * <p>The page number.</p>
+     * <p>The page number of the current page for a paged query.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -38,27 +41,31 @@ public class DescribeNatFirewallControlPolicyRequest extends TeaModel {
     public String currentPage;
 
     /**
-     * <p>The description of the access control policy. Fuzzy match is supported.</p>
+     * <p>The description of the access control policy. Fuzzy queries are supported.</p>
      * <blockquote>
-     * <p>If you do not specify this parameter, the descriptions of all policies are queried.</p>
+     * <p>If you do not set this parameter, the descriptions of all policies are queried.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
-     * <p>test</p>
+     * <p>test-description</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
-     * <p>The destination address in the access control policy. Fuzzy match is supported. The value of this parameter varies based on the value of the DestinationType parameter.</p>
+     * <p>The destination address in the access control policy. Fuzzy queries are supported. The value of this parameter varies based on the value of the DestinationType parameter.</p>
      * <ul>
-     * <li>If DestinationType is set to <code>net</code>, the value of Destination must be a CIDR block. Example: 10.0.3.0/24.</li>
-     * <li>If DestinationType is set to <code>domain</code>, the value of Destination must be a domain name. Example: aliyun.</li>
-     * <li>If DestinationType is set to <code>group</code>, the value of Destination must be the name of an address book. Example: db_group.</li>
-     * <li>If DestinationType is set to <code>location</code>, the value of Destination is a location. For more information about location codes, see <a href="https://help.aliyun.com/document_detail/474128.html">AddControlPolicy</a>. Example: [&quot;BJ11&quot;, &quot;ZB&quot;].</li>
+     * <li><p>If DestinationType is set to <code>net</code>, the value of this parameter is a CIDR block. Example: 10.0.3.0/24.</p>
+     * </li>
+     * <li><p>If DestinationType is set to <code>domain</code>, the value of this parameter is a domain name. Example: aliyun.</p>
+     * </li>
+     * <li><p>If DestinationType is set to <code>group</code>, the value of this parameter is the name of an address book. Example: db_group.</p>
+     * </li>
+     * <li><p>If DestinationType is set to <code>location</code>, the value of this parameter is a region name. For more information, see <a href="https://help.aliyun.com/document_detail/474128.html">AddControlPolicy</a>. Example: [&quot;BJ11&quot;, &quot;ZB&quot;].</p>
+     * </li>
      * </ul>
      * <blockquote>
-     * <p>If you do not specify this parameter, all types of destination addresses are queried.</p>
+     * <p>If you do not set this parameter, all types of destination addresses are queried.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -68,7 +75,7 @@ public class DescribeNatFirewallControlPolicyRequest extends TeaModel {
     public String destination;
 
     /**
-     * <p>The direction of the traffic to which the access control policy applies. Valid values:</p>
+     * <p>The traffic direction of the access control policy. Valid values:</p>
      * <ul>
      * <li><strong>out</strong>: outbound traffic</li>
      * </ul>
@@ -81,10 +88,12 @@ public class DescribeNatFirewallControlPolicyRequest extends TeaModel {
     public String direction;
 
     /**
-     * <p>The language of the content within the response. Valid values:</p>
+     * <p>The language of the response. Valid values:</p>
      * <ul>
-     * <li><strong>zh</strong>: Chinese (default)</li>
-     * <li><strong>en</strong>: English</li>
+     * <li><p><strong>zh</strong> (default): Chinese</p>
+     * </li>
+     * <li><p><strong>en</strong>: English</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -94,7 +103,7 @@ public class DescribeNatFirewallControlPolicyRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The ID of the NAT gateway.</p>
+     * <p>The ID of the NAT Gateway.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -104,7 +113,7 @@ public class DescribeNatFirewallControlPolicyRequest extends TeaModel {
     public String natGatewayId;
 
     /**
-     * <p>The number of entries per page. Default value: 10.</p>
+     * <p>The maximum number of entries to return on each page for a paged query. The default value is 10.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -113,15 +122,19 @@ public class DescribeNatFirewallControlPolicyRequest extends TeaModel {
     public String pageSize;
 
     /**
-     * <p>The type of the protocol in the access control policy. Valid values:</p>
+     * <p>The protocol type of the traffic in the access control policy. Valid values:</p>
      * <ul>
-     * <li><strong>TCP</strong></li>
-     * <li><strong>UDP</strong></li>
-     * <li><strong>ICMP</strong></li>
-     * <li><strong>ANY</strong>: all types of protocols</li>
+     * <li><p><strong>TCP</strong></p>
+     * </li>
+     * <li><p><strong>UDP</strong></p>
+     * </li>
+     * <li><p><strong>ICMP</strong></p>
+     * </li>
+     * <li><p><strong>ANY</strong> (all protocol types)</p>
+     * </li>
      * </ul>
      * <blockquote>
-     * <p>If you do not specify this parameter, access control policies of all protocol types are queried.</p>
+     * <p>If you do not set this parameter, all protocol types are queried.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -131,10 +144,12 @@ public class DescribeNatFirewallControlPolicyRequest extends TeaModel {
     public String proto;
 
     /**
-     * <p>Specifies whether the access control policy is enabled. By default, an access control policy is enabled after it is created. Valid values:</p>
+     * <p>The status of the access control policy. By default, an access control policy is enabled after it is created. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong></li>
-     * <li><strong>false</strong></li>
+     * <li><p><strong>true</strong>: enabled</p>
+     * </li>
+     * <li><p><strong>false</strong>: disabled</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -144,13 +159,18 @@ public class DescribeNatFirewallControlPolicyRequest extends TeaModel {
     public String release;
 
     /**
-     * <p>The recurrence type for the access control policy to take effect. Valid values:</p>
+     * <p>The recurrence type for the policy validity period. Valid values:</p>
      * <ul>
-     * <li><strong>Permanent</strong> (default): The policy always takes effect.</li>
-     * <li><strong>None</strong>: The policy takes effect only once.</li>
-     * <li><strong>Daily</strong>: The policy takes effect on a daily basis.</li>
-     * <li><strong>Weekly</strong>: The policy takes effect on a weekly basis.</li>
-     * <li><strong>Monthly</strong>: The policy takes effect on a monthly basis.</li>
+     * <li><p><strong>Permanent</strong> (default): always</p>
+     * </li>
+     * <li><p><strong>None</strong>: one-time</p>
+     * </li>
+     * <li><p><strong>Daily</strong>: daily</p>
+     * </li>
+     * <li><p><strong>Weekly</strong>: weekly</p>
+     * </li>
+     * <li><p><strong>Monthly</strong>: monthly</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -160,14 +180,17 @@ public class DescribeNatFirewallControlPolicyRequest extends TeaModel {
     public String repeatType;
 
     /**
-     * <p>The source address in the access control policy. Fuzzy match is supported. The value of this parameter varies based on the value of the SourceType parameter.</p>
+     * <p>The source address in the access control policy. Fuzzy queries are supported. The value of this parameter varies based on the value of the SourceType parameter.</p>
      * <ul>
-     * <li>If SourceType is set to <code>net</code>, the value of Source must be a CIDR block. Example: 192.0.XX.XX/24.</li>
-     * <li>If SourceType is set to <code>group</code>, the value of Source must be the name of an address book. Example: db_group. If the db_group address book does not contain addresses, all source addresses are queried.</li>
-     * <li>If SourceType is set to <code>location</code>, the value of Source must be a location. Example: beijing.</li>
+     * <li><p>If SourceType is set to <code>net</code>, the value of this parameter is a CIDR block. Example: 192.0.XX.XX/24.</p>
+     * </li>
+     * <li><p>If SourceType is set to <code>group</code>, the value of this parameter is the name of an address book. Example: db_group. If you leave this parameter empty, all source addresses are queried.</p>
+     * </li>
+     * <li><p>If SourceType is set to <code>location</code>, the value of this parameter is a source region. Example: Beijing or beijing. You can use either Chinese or English to specify the region.</p>
+     * </li>
      * </ul>
      * <blockquote>
-     * <p>If you do not specify this parameter, all types of source addresses are queried.</p>
+     * <p>If you do not set this parameter, all types of source addresses are queried.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

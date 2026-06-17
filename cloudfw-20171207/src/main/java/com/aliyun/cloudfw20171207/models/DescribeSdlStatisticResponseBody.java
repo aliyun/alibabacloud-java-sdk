@@ -5,12 +5,17 @@ import com.aliyun.tea.*;
 
 public class DescribeSdlStatisticResponseBody extends TeaModel {
     /**
+     * <p>The ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>337A4DBA-8A01-5E9C-99CA-84293E13****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The details of the sensitive data.</p>
+     */
     @NameInMap("SdlStatisticResp")
     public DescribeSdlStatisticResponseBodySdlStatisticResp sdlStatisticResp;
 
@@ -37,6 +42,8 @@ public class DescribeSdlStatisticResponseBody extends TeaModel {
 
     public static class DescribeSdlStatisticResponseBodySdlStatisticRespSdlAssetTopList extends TeaModel {
         /**
+         * <p>The asset type.</p>
+         * 
          * <strong>example:</strong>
          * <p>EIP</p>
          */
@@ -44,6 +51,8 @@ public class DescribeSdlStatisticResponseBody extends TeaModel {
         public String assetType;
 
         /**
+         * <p>The public IP address.</p>
+         * 
          * <strong>example:</strong>
          * <p>116.62.66.XXX</p>
          */
@@ -51,6 +60,8 @@ public class DescribeSdlStatisticResponseBody extends TeaModel {
         public String publicIp;
 
         /**
+         * <p>The amount of traffic in bytes.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -90,6 +101,8 @@ public class DescribeSdlStatisticResponseBody extends TeaModel {
 
     public static class DescribeSdlStatisticResponseBodySdlStatisticRespSdlDstTopList extends TeaModel {
         /**
+         * <p>The public IP address.</p>
+         * 
          * <strong>example:</strong>
          * <p>47.101.68.XXX</p>
          */
@@ -97,6 +110,8 @@ public class DescribeSdlStatisticResponseBody extends TeaModel {
         public String publicIp;
 
         /**
+         * <p>The amount of traffic in bytes.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -128,12 +143,20 @@ public class DescribeSdlStatisticResponseBody extends TeaModel {
 
     public static class DescribeSdlStatisticResponseBodySdlStatisticRespSdlEventTypeCountList extends TeaModel {
         /**
+         * <p>The total number of entries.</p>
+         * 
          * <strong>example:</strong>
          * <p>9</p>
          */
         @NameInMap("Count")
         public String count;
 
+        /**
+         * <p>The event type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>id_card</p>
+         */
         @NameInMap("EventType")
         public String eventType;
 
@@ -161,12 +184,21 @@ public class DescribeSdlStatisticResponseBody extends TeaModel {
     }
 
     public static class DescribeSdlStatisticResponseBodySdlStatisticResp extends TeaModel {
+        /**
+         * <p>A ranked list of sensitive data assets.</p>
+         */
         @NameInMap("SdlAssetTopList")
         public java.util.List<DescribeSdlStatisticResponseBodySdlStatisticRespSdlAssetTopList> sdlAssetTopList;
 
+        /**
+         * <p>A ranked list of sensitive data destinations.</p>
+         */
         @NameInMap("SdlDstTopList")
         public java.util.List<DescribeSdlStatisticResponseBodySdlStatisticRespSdlDstTopList> sdlDstTopList;
 
+        /**
+         * <p>A list of counts for each sensitive data event type.</p>
+         */
         @NameInMap("SdlEventTypeCountList")
         public java.util.List<DescribeSdlStatisticResponseBodySdlStatisticRespSdlEventTypeCountList> sdlEventTypeCountList;
 

@@ -4,10 +4,15 @@ package com.aliyun.cloudfw20171207.models;
 import com.aliyun.tea.*;
 
 public class DescribeOutgoingAssetListResponseBody extends TeaModel {
+    /**
+     * <p>The list of assets.</p>
+     */
     @NameInMap("AssetList")
     public java.util.List<DescribeOutgoingAssetListResponseBodyAssetList> assetList;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>7A515672-FAAE-584F-B51C-B2586E****</p>
      */
@@ -15,6 +20,8 @@ public class DescribeOutgoingAssetListResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total number of entries.</p>
+     * 
      * <strong>example:</strong>
      * <p>2</p>
      */
@@ -52,6 +59,8 @@ public class DescribeOutgoingAssetListResponseBody extends TeaModel {
 
     public static class DescribeOutgoingAssetListResponseBodyAssetList extends TeaModel {
         /**
+         * <p>The ID of the asset instance.</p>
+         * 
          * <strong>example:</strong>
          * <p>i-8vbcmllue4d94nto****</p>
          */
@@ -59,6 +68,8 @@ public class DescribeOutgoingAssetListResponseBody extends TeaModel {
         public String assetInstanceId;
 
         /**
+         * <p>The name of the asset instance.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -66,6 +77,8 @@ public class DescribeOutgoingAssetListResponseBody extends TeaModel {
         public String assetInstanceName;
 
         /**
+         * <p>The region ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
          */
@@ -73,6 +86,8 @@ public class DescribeOutgoingAssetListResponseBody extends TeaModel {
         public String assetsRegion;
 
         /**
+         * <p>The follow status.</p>
+         * 
          * <strong>example:</strong>
          * <p>subscribe</p>
          */
@@ -80,6 +95,8 @@ public class DescribeOutgoingAssetListResponseBody extends TeaModel {
         public String groupName;
 
         /**
+         * <p>The inbound traffic, which is the response traffic. Unit: bytes.</p>
+         * 
          * <strong>example:</strong>
          * <p>244438.0</p>
          */
@@ -87,6 +104,8 @@ public class DescribeOutgoingAssetListResponseBody extends TeaModel {
         public Long inBytes;
 
         /**
+         * <p>The number of IPS hits.</p>
+         * 
          * <strong>example:</strong>
          * <p>12</p>
          */
@@ -94,6 +113,8 @@ public class DescribeOutgoingAssetListResponseBody extends TeaModel {
         public Long ipsHitCnt;
 
         /**
+         * <p>The ID of the NAT Gateway.</p>
+         * 
          * <strong>example:</strong>
          * <p>ngw-bp1utx6wj4x9qu9tl****</p>
          */
@@ -101,6 +122,8 @@ public class DescribeOutgoingAssetListResponseBody extends TeaModel {
         public String natGatewayId;
 
         /**
+         * <p>The name of the NAT Gateway.</p>
+         * 
          * <strong>example:</strong>
          * <p>ngw-test</p>
          */
@@ -108,6 +131,8 @@ public class DescribeOutgoingAssetListResponseBody extends TeaModel {
         public String natGatewayName;
 
         /**
+         * <p>The outbound traffic, which is the request traffic. Unit: bytes.</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */
@@ -115,6 +140,8 @@ public class DescribeOutgoingAssetListResponseBody extends TeaModel {
         public Long outBytes;
 
         /**
+         * <p>The number of outbound domains.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -122,6 +149,8 @@ public class DescribeOutgoingAssetListResponseBody extends TeaModel {
         public Long outgoingDomainCnt;
 
         /**
+         * <p>The number of outbound destination IP addresses.</p>
+         * 
          * <strong>example:</strong>
          * <p>12</p>
          */
@@ -129,16 +158,23 @@ public class DescribeOutgoingAssetListResponseBody extends TeaModel {
         public Long outgoingDstIPCnt;
 
         /**
+         * <p>The private IP address.</p>
+         * 
          * <strong>example:</strong>
          * <p>10.21.242XXX</p>
          */
         @NameInMap("PrivateIP")
         public String privateIP;
 
+        /**
+         * <p>The list of private IP addresses.</p>
+         */
         @NameInMap("PrivateIPList")
         public java.util.List<String> privateIPList;
 
         /**
+         * <p>The public IP address.</p>
+         * 
          * <strong>example:</strong>
          * <p>47.96.181.XXX</p>
          */
@@ -146,6 +182,8 @@ public class DescribeOutgoingAssetListResponseBody extends TeaModel {
         public String publicIP;
 
         /**
+         * <p>The type of the public IP address of the asset.</p>
+         * 
          * <strong>example:</strong>
          * <p>EcsPublicIP</p>
          */
@@ -153,6 +191,8 @@ public class DescribeOutgoingAssetListResponseBody extends TeaModel {
         public String resourceType;
 
         /**
+         * <p>The security risk.</p>
+         * 
          * <strong>example:</strong>
          * <p>risk</p>
          */
@@ -160,6 +200,8 @@ public class DescribeOutgoingAssetListResponseBody extends TeaModel {
         public String securityRisk;
 
         /**
+         * <p>The number of sessions.</p>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */
@@ -167,6 +209,8 @@ public class DescribeOutgoingAssetListResponseBody extends TeaModel {
         public Long sessionCount;
 
         /**
+         * <p>The total traffic.</p>
+         * 
          * <strong>example:</strong>
          * <p>12498767</p>
          */

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeDnsFirewallPolicyResponseBody extends TeaModel {
     /**
+     * <p>The page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -12,16 +14,23 @@ public class DescribeDnsFirewallPolicyResponseBody extends TeaModel {
     public String pageNo;
 
     /**
+     * <p>The number of entries per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
     @NameInMap("PageSize")
     public String pageSize;
 
+    /**
+     * <p>The DNS firewall access control policies.</p>
+     */
     @NameInMap("Policys")
     public java.util.List<DescribeDnsFirewallPolicyResponseBodyPolicys> policys;
 
     /**
+     * <p>The ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>0A4ACDE9-9F9F-56C1-B3B7-60971BA1****</p>
      */
@@ -29,6 +38,8 @@ public class DescribeDnsFirewallPolicyResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total number of entries.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -82,6 +93,16 @@ public class DescribeDnsFirewallPolicyResponseBody extends TeaModel {
 
     public static class DescribeDnsFirewallPolicyResponseBodyPolicys extends TeaModel {
         /**
+         * <p>The action that is performed on traffic that matches the access control policy. Valid values:</p>
+         * <ul>
+         * <li><p><strong>accept</strong>: allows the traffic.</p>
+         * </li>
+         * <li><p><strong>drop</strong>: denies the traffic.</p>
+         * </li>
+         * <li><p><strong>log</strong>: monitors the traffic.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>accept</p>
          */
@@ -89,6 +110,8 @@ public class DescribeDnsFirewallPolicyResponseBody extends TeaModel {
         public String aclAction;
 
         /**
+         * <p>The unique ID of the access control policy.</p>
+         * 
          * <strong>example:</strong>
          * <p>01281255-d220-4db1-8f4f-c4df221a****</p>
          */
@@ -96,6 +119,8 @@ public class DescribeDnsFirewallPolicyResponseBody extends TeaModel {
         public String aclUuid;
 
         /**
+         * <p>The description of the access control policy.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -103,16 +128,37 @@ public class DescribeDnsFirewallPolicyResponseBody extends TeaModel {
         public String description;
 
         /**
+         * <p>The destination address in the access control policy. Valid values:</p>
+         * <ul>
+         * <li><p>If <strong>DestinationType</strong> is <code>net</code>, the value of this parameter is a destination CIDR block.</p>
+         * </li>
+         * <li><p>If <strong>DestinationType</strong> is <code>domain</code>, the value of this parameter is a destination domain.</p>
+         * </li>
+         * <li><p>If <strong>DestinationType</strong> is <code>group</code>, the value of this parameter is the name of a destination address book.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>x.x.x.x/32</p>
          */
         @NameInMap("Destination")
         public String destination;
 
+        /**
+         * <p>The destination addresses in the address book.</p>
+         */
         @NameInMap("DestinationAddrs")
         public java.util.List<String> destinationAddrs;
 
         /**
+         * <p>The type of the destination address book in the access control policy. Valid values:</p>
+         * <ul>
+         * <li><p><strong>ip</strong>: an IP address book</p>
+         * </li>
+         * <li><p><strong>domain</strong>: a domain address book</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>ip</p>
          */
@@ -120,6 +166,18 @@ public class DescribeDnsFirewallPolicyResponseBody extends TeaModel {
         public String destinationGroupType;
 
         /**
+         * <p>The type of the destination address in the access control policy. Valid values:</p>
+         * <ul>
+         * <li><p><strong>net</strong>: destination CIDR block</p>
+         * </li>
+         * <li><p><strong>group</strong>: destination address book</p>
+         * </li>
+         * <li><p><strong>domain</strong>: destination domain</p>
+         * </li>
+         * <li><p><strong>location</strong>: destination location</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>net</p>
          */
@@ -127,6 +185,14 @@ public class DescribeDnsFirewallPolicyResponseBody extends TeaModel {
         public String destinationType;
 
         /**
+         * <p>The direction of the traffic to which the access control policy applies. Valid values:</p>
+         * <ul>
+         * <li><p><strong>in</strong>: inbound traffic</p>
+         * </li>
+         * <li><p><strong>out</strong>: outbound traffic</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>in</p>
          */
@@ -134,6 +200,8 @@ public class DescribeDnsFirewallPolicyResponseBody extends TeaModel {
         public String direction;
 
         /**
+         * <p>The last time the policy was hit. The value is a UNIX timestamp. Unit: seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>1579261141</p>
          */
@@ -141,6 +209,8 @@ public class DescribeDnsFirewallPolicyResponseBody extends TeaModel {
         public Long hitLastTime;
 
         /**
+         * <p>The number of hits for the access control policy.</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */
@@ -148,6 +218,14 @@ public class DescribeDnsFirewallPolicyResponseBody extends TeaModel {
         public Long hitTimes;
 
         /**
+         * <p>The IP version supported by the access control policy. Valid values:</p>
+         * <ul>
+         * <li><p><strong>4</strong>: IPv4</p>
+         * </li>
+         * <li><p><strong>6</strong>: IPv6</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>6</p>
          */
@@ -155,6 +233,8 @@ public class DescribeDnsFirewallPolicyResponseBody extends TeaModel {
         public Integer ipVersion;
 
         /**
+         * <p>The priority of the access control policy. A smaller value indicates a higher priority.</p>
+         * 
          * <strong>example:</strong>
          * <p>110</p>
          */
@@ -162,6 +242,14 @@ public class DescribeDnsFirewallPolicyResponseBody extends TeaModel {
         public Integer priority;
 
         /**
+         * <p>Indicates whether the access control policy is enabled. After a policy is created, it is enabled by default. Valid values:</p>
+         * <ul>
+         * <li><p><strong>true</strong>: enabled</p>
+         * </li>
+         * <li><p><strong>false</strong>: disabled</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -169,16 +257,43 @@ public class DescribeDnsFirewallPolicyResponseBody extends TeaModel {
         public String release;
 
         /**
+         * <p>The source address in the access control policy. Valid values:</p>
+         * <ul>
+         * <li><p>If <strong>SourceType</strong> is <code>net</code>, the value of this parameter is a source CIDR block. Example: 192.0.XX.XX/24.</p>
+         * </li>
+         * <li><p>If <strong>SourceType</strong> is <code>group</code>, the value of this parameter is the name of a source address book. Example: db_group.</p>
+         * </li>
+         * <li><p>If <strong>SourceType</strong> is <code>location</code>, the value of this parameter is a location. For more information about the valid values of this parameter, see <a href="https://help.aliyun.com/document_detail/138867.html">AddControlPolicy</a>. Example: [&quot;BJ11&quot;, &quot;ZB&quot;].</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>192.0.XX.XX/24</p>
          */
         @NameInMap("Source")
         public String source;
 
+        /**
+         * <p>The source addresses.</p>
+         */
         @NameInMap("SourceAddrs")
         public java.util.List<String> sourceAddrs;
 
         /**
+         * <p>The type of the source address book in the access control policy. Valid values:</p>
+         * <ul>
+         * <li><p><strong>ip</strong>: an IP address book</p>
+         * </li>
+         * <li><p><strong>tag</strong>: a tag address book</p>
+         * </li>
+         * <li><p><strong>domain</strong>: a domain address book</p>
+         * </li>
+         * <li><p><strong>threat</strong>: a threat intelligence address book</p>
+         * </li>
+         * <li><p><strong>backsrc</strong>: a back-to-origin address book</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>ip</p>
          */
@@ -186,6 +301,14 @@ public class DescribeDnsFirewallPolicyResponseBody extends TeaModel {
         public String sourceGroupType;
 
         /**
+         * <p>The type of the source address in the access control policy. Valid values:</p>
+         * <ul>
+         * <li><p><strong>net</strong>: a source CIDR block</p>
+         * </li>
+         * <li><p><strong>group</strong>: a source address book</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>net</p>
          */

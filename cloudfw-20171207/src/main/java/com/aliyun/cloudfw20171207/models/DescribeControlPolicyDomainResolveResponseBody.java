@@ -5,12 +5,17 @@ import com.aliyun.tea.*;
 
 public class DescribeControlPolicyDomainResolveResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>F0F82705-CFC7-5F83-86C8-A063892F****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The domain resolution results.</p>
+     */
     @NameInMap("ResolveResult")
     public java.util.List<DescribeControlPolicyDomainResolveResponseBodyResolveResult> resolveResult;
 
@@ -37,16 +42,23 @@ public class DescribeControlPolicyDomainResolveResponseBody extends TeaModel {
 
     public static class DescribeControlPolicyDomainResolveResponseBodyResolveResult extends TeaModel {
         /**
+         * <p>The domain name.</p>
+         * 
          * <strong>example:</strong>
          * <p>example.com</p>
          */
         @NameInMap("Domain")
         public String domain;
 
+        /**
+         * <p>The list of ip addresses.</p>
+         */
         @NameInMap("IpAddrList")
         public java.util.List<String> ipAddrList;
 
         /**
+         * <p>The supported ip version.</p>
+         * 
          * <strong>example:</strong>
          * <p>4</p>
          */
@@ -54,6 +66,8 @@ public class DescribeControlPolicyDomainResolveResponseBody extends TeaModel {
         public Integer ipVersion;
 
         /**
+         * <p>The update time, provided as a unix timestamp in seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>1579091739</p>
          */

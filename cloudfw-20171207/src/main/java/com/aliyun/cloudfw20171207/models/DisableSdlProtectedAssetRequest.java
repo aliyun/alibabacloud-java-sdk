@@ -4,10 +4,15 @@ package com.aliyun.cloudfw20171207.models;
 import com.aliyun.tea.*;
 
 public class DisableSdlProtectedAssetRequest extends TeaModel {
+    /**
+     * <p>The list of IP assets.</p>
+     */
     @NameInMap("IpList")
     public java.util.List<String> ipList;
 
     /**
+     * <p>The language of the response message.</p>
+     * 
      * <strong>example:</strong>
      * <p>zh</p>
      */

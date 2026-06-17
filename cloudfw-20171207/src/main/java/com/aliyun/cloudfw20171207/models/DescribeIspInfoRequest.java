@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeIspInfoRequest extends TeaModel {
     /**
+     * <p>The language of the response message.</p>
+     * 
      * <strong>example:</strong>
      * <p>zh</p>
      */
@@ -12,6 +14,7 @@ public class DescribeIspInfoRequest extends TeaModel {
     public String lang;
 
     /**
+     * <p>The source tracking code.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,6 +24,8 @@ public class DescribeIspInfoRequest extends TeaModel {
     public String sourceCode;
 
     /**
+     * <p>The source IP address of the visitor.</p>
+     * 
      * <strong>example:</strong>
      * <p>39.91.37.XXX</p>
      */

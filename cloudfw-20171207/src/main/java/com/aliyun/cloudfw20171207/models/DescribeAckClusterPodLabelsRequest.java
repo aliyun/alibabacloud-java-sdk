@@ -5,6 +5,10 @@ import com.aliyun.tea.*;
 
 public class DescribeAckClusterPodLabelsRequest extends TeaModel {
     /**
+     * <p>The ID of the ACK cluster connector. You can obtain the ID by calling the following operation:</p>
+     * <ul>
+     * <li><a href="~~DescribeAckClusterConnectors~~">DescribeAckClusterConnectors</a>: queries a list of ACK cluster connectors.</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

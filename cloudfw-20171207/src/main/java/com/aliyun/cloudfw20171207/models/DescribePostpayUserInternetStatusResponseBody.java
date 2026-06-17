@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribePostpayUserInternetStatusResponseBody extends TeaModel {
     /**
-     * <p>Id of the request</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>0DC783F1-B3A7-578D-8A63-*****</p>
@@ -14,11 +14,14 @@ public class DescribePostpayUserInternetStatusResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The status of the Internet Firewall feature. Valid values:</p>
+     * <p>The status of the Internet Border firewall. Valid values:</p>
      * <ul>
-     * <li><strong>open</strong>: enabled</li>
-     * <li><strong>init</strong>: being enabled</li>
-     * <li><strong>closed</strong>: disabled</li>
+     * <li><p><strong>open</strong>: The firewall is enabled.</p>
+     * </li>
+     * <li><p><strong>init</strong>: The firewall is being enabled.</p>
+     * </li>
+     * <li><p><strong>closed</strong>: The firewall is disabled.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -28,7 +31,7 @@ public class DescribePostpayUserInternetStatusResponseBody extends TeaModel {
     public String status;
 
     /**
-     * <p>The number of days during which no asset is added to the Internet Firewall feature for protection. This parameter is valid only when the value of Status is open.</p>
+     * <p>The number of days that the firewall was disabled. This parameter is returned only if the value of the Status parameter is open.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>

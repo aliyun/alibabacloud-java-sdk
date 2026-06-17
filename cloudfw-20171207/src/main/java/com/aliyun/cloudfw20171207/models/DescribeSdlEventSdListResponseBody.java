@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class DescribeSdlEventSdListResponseBody extends TeaModel {
     /**
+     * <p>The ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>15FCCC52-1E23-57AE-B5EF-3E00A3******</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>A list of sensitive data from the data breach.</p>
+     */
     @NameInMap("SdlEventSensitiveDataList")
     public java.util.List<DescribeSdlEventSdListResponseBodySdlEventSensitiveDataList> sdlEventSensitiveDataList;
 
     /**
+     * <p>The total number of entries.</p>
+     * 
      * <strong>example:</strong>
      * <p>6</p>
      */
@@ -52,6 +59,8 @@ public class DescribeSdlEventSdListResponseBody extends TeaModel {
 
     public static class DescribeSdlEventSdListResponseBodySdlEventSensitiveDataList extends TeaModel {
         /**
+         * <p>The sensitive data.</p>
+         * 
          * <strong>example:</strong>
          * <p>sk-N***************************SxiJ</p>
          */
@@ -59,6 +68,8 @@ public class DescribeSdlEventSdListResponseBody extends TeaModel {
         public String sensitiveData;
 
         /**
+         * <p>The number of times the sensitive data appears.</p>
+         * 
          * <strong>example:</strong>
          * <p>6</p>
          */
@@ -66,16 +77,26 @@ public class DescribeSdlEventSdListResponseBody extends TeaModel {
         public Long sensitiveDataCnt;
 
         /**
+         * <p>The sensitivity level of the data.</p>
+         * 
          * <strong>example:</strong>
          * <p>S3</p>
          */
         @NameInMap("SensitiveLevel")
         public String sensitiveLevel;
 
+        /**
+         * <p>The type of sensitive data.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>id_card</p>
+         */
         @NameInMap("SensitiveType")
         public String sensitiveType;
 
         /**
+         * <p>The source IP address.</p>
+         * 
          * <strong>example:</strong>
          * <p>172.23.191.XXX</p>
          */
@@ -83,6 +104,8 @@ public class DescribeSdlEventSdListResponseBody extends TeaModel {
         public String srcIp;
 
         /**
+         * <p>The start time. The value is a UNIX timestamp in seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>1753928907</p>
          */

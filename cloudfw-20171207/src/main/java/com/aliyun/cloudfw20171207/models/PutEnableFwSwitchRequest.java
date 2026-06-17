@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class PutEnableFwSwitchRequest extends TeaModel {
     /**
+     * <p>The IP version.</p>
+     * 
      * <strong>example:</strong>
      * <p>4</p>
      */
@@ -12,9 +14,9 @@ public class PutEnableFwSwitchRequest extends TeaModel {
     public String ipVersion;
 
     /**
-     * <p>The IP addresses.</p>
+     * <p>The list of IP addresses.</p>
      * <blockquote>
-     * <p>You must specify at least one of the IpaddrList, RegionList, and ResourceTypeList parameters.</p>
+     * <p>You must specify at least one of the <code>IpaddrList</code>, <code>RegionList</code>, and <code>ResourceTypeList</code> parameters.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -24,10 +26,12 @@ public class PutEnableFwSwitchRequest extends TeaModel {
     public java.util.List<String> ipaddrList;
 
     /**
-     * <p>The language of the content within the response.</p>
+     * <p>The language of the response. Valid values:</p>
      * <ul>
-     * <li><strong>zh</strong>: Chinese</li>
-     * <li><strong>en</strong>: English</li>
+     * <li><p><strong>zh</strong>: Chinese</p>
+     * </li>
+     * <li><p><strong>en</strong>: English</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -37,6 +41,8 @@ public class PutEnableFwSwitchRequest extends TeaModel {
     public String lang;
 
     /**
+     * <p>The UID of the member.</p>
+     * 
      * <strong>example:</strong>
      * <p>1234</p>
      */
@@ -44,9 +50,9 @@ public class PutEnableFwSwitchRequest extends TeaModel {
     public String memberUid;
 
     /**
-     * <p>The regions.</p>
+     * <p>The list of regions.</p>
      * <blockquote>
-     * <p>You must specify at least one of the IpaddrList, RegionList, and ResourceTypeList parameters.</p>
+     * <p>You must specify at least one of the <code>IpaddrList</code>, <code>RegionList</code>, and <code>ResourceTypeList</code> parameters.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -56,23 +62,50 @@ public class PutEnableFwSwitchRequest extends TeaModel {
     public java.util.List<String> regionList;
 
     /**
-     * <p>The types of the assets.</p>
+     * <p>The list of asset types.</p>
      * <p>Valid values:</p>
      * <ul>
-     * <li>BastionHostIP: the egress IP address of a bastion host</li>
-     * <li>BastionHostIngressIP: the ingress IP address of a bastion host</li>
-     * <li>EcsEIP: the elastic IP address (EIP) of an Elastic Compute Service (ECS) instance</li>
-     * <li>EcsPublicIP: the public IP address of an ECS instance</li>
-     * <li>EIP: the EIP</li>
-     * <li>EniEIP: the EIP of an elastic network interface (ENI)</li>
-     * <li>NatEIP: the EIP of a NAT gateway</li>
-     * <li>SlbEIP: the EIP of a Server Load Balancer (SLB) instance</li>
-     * <li>SlbPublicIP: the public IP address of an SLB instance</li>
-     * <li>NatPublicIP: the public IP address of a NAT gateway</li>
-     * <li>HAVIP: the high-availability virtual IP address (HAVIP)</li>
+     * <li><p><strong>BastionHostEgressIP</strong>: the egress IP address of a bastion host.</p>
+     * </li>
+     * <li><p><strong>BastionHostIngressIP</strong>: the ingress IP address of a bastion host.</p>
+     * </li>
+     * <li><p><strong>EcsEIP</strong>: the EIP of an ECS instance.</p>
+     * </li>
+     * <li><p><strong>EcsPublicIP</strong>: the public IP address of an ECS instance.</p>
+     * </li>
+     * <li><p><strong>EIP</strong>: an EIP.</p>
+     * </li>
+     * <li><p><strong>EniEIP</strong>: the EIP of an ENI.</p>
+     * </li>
+     * <li><p><strong>NatEIP</strong>: the EIP of a NAT gateway.</p>
+     * </li>
+     * <li><p><strong>SlbEIP</strong>: the EIP of an SLB instance or a CLB instance.</p>
+     * </li>
+     * <li><p><strong>SlbPublicIP</strong>: the public IP address of an SLB instance or a CLB instance.</p>
+     * </li>
+     * <li><p><strong>NatPublicIP</strong>: the public IP address of a NAT gateway.</p>
+     * </li>
+     * <li><p><strong>HAVIP</strong>: an HAVIP.</p>
+     * </li>
+     * <li><p><strong>NlbEIP</strong>: the EIP of an NLB instance.</p>
+     * </li>
+     * <li><p><strong>ApiGatewayEIP</strong>: the public IP address of an API gateway.</p>
+     * </li>
+     * <li><p><strong>AlbEIP</strong>: the EIP of an ALB instance.</p>
+     * </li>
+     * <li><p><strong>AiGatewayEIP</strong>: the public IP address of an AI gateway.</p>
+     * </li>
+     * <li><p><strong>GaEIP</strong>: the EIP of a GA instance.</p>
+     * </li>
+     * <li><p><strong>SwasEIP</strong>: the public IP address of a Simple Application Server instance.</p>
+     * </li>
+     * <li><p><strong>EcdEIP</strong>: the public IP address of an Elastic Desktop Service instance.</p>
+     * </li>
+     * <li><p><strong>BastionHostIP</strong>: the IP address of a bastion host.</p>
+     * </li>
      * </ul>
      * <blockquote>
-     * <p>You must specify at least one of the IpaddrList, RegionList, and ResourceTypeList parameters.</p>
+     * <p>You must specify at least one of the <code>IpaddrList</code>, <code>RegionList</code>, and <code>ResourceTypeList</code> parameters.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -85,7 +118,7 @@ public class PutEnableFwSwitchRequest extends TeaModel {
      * <p>The source IP address of the request.</p>
      * 
      * <strong>example:</strong>
-     * <p>192.0.X.X</p>
+     * <p>192.0.XX.XX</p>
      */
     @NameInMap("SourceIp")
     @Deprecated

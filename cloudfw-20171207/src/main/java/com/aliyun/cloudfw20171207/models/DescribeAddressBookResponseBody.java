@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeAddressBookResponseBody extends TeaModel {
     /**
-     * <p>The information about the address book.</p>
+     * <p>A list of address books.</p>
      */
     @NameInMap("Acls")
     public java.util.List<DescribeAddressBookResponseBodyAcls> acls;
 
     /**
-     * <p>The page number.</p>
+     * <p>The current page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -20,7 +20,7 @@ public class DescribeAddressBookResponseBody extends TeaModel {
     public String pageNo;
 
     /**
-     * <p>The number of entries per page.</p>
+     * <p>The number of address books returned per page.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -38,7 +38,7 @@ public class DescribeAddressBookResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of the returned address books.</p>
+     * <p>The total number of address books.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>
@@ -93,6 +93,8 @@ public class DescribeAddressBookResponseBody extends TeaModel {
 
     public static class DescribeAddressBookResponseBodyAclsAckLabels extends TeaModel {
         /**
+         * <p>The key of the ACK pod label.</p>
+         * 
          * <strong>example:</strong>
          * <p>app</p>
          */
@@ -100,6 +102,8 @@ public class DescribeAddressBookResponseBody extends TeaModel {
         public String key;
 
         /**
+         * <p>The value of the ACK pod label.</p>
+         * 
          * <strong>example:</strong>
          * <p>storage-operator</p>
          */
@@ -131,7 +135,7 @@ public class DescribeAddressBookResponseBody extends TeaModel {
 
     public static class DescribeAddressBookResponseBodyAclsAddresses extends TeaModel {
         /**
-         * <p>Address information in the address book.</p>
+         * <p>The IP address or CIDR block.</p>
          * 
          * <strong>example:</strong>
          * <p>192.168.0.1/32</p>
@@ -140,10 +144,10 @@ public class DescribeAddressBookResponseBody extends TeaModel {
         public String address;
 
         /**
-         * <p>Single address description.</p>
+         * <p>The note for the address.</p>
          * 
          * <strong>example:</strong>
-         * <p>description</p>
+         * <p>Single Address Description</p>
          */
         @NameInMap("Note")
         public String note;
@@ -173,7 +177,7 @@ public class DescribeAddressBookResponseBody extends TeaModel {
 
     public static class DescribeAddressBookResponseBodyAclsTagList extends TeaModel {
         /**
-         * <p>The key of the ECS tag.</p>
+         * <p>The key of the tag.</p>
          * 
          * <strong>example:</strong>
          * <p>company</p>
@@ -182,10 +186,10 @@ public class DescribeAddressBookResponseBody extends TeaModel {
         public String tagKey;
 
         /**
-         * <p>The value of the ECS tag.</p>
+         * <p>The value of the tag.</p>
          * 
          * <strong>example:</strong>
-         * <p>admin</p>
+         * <p>ALL VALUE</p>
          */
         @NameInMap("TagValue")
         public String tagValue;
@@ -215,27 +219,37 @@ public class DescribeAddressBookResponseBody extends TeaModel {
 
     public static class DescribeAddressBookResponseBodyAcls extends TeaModel {
         /**
+         * <p>The ID of the ACK cluster connector.</p>
+         * 
          * <strong>example:</strong>
-         * <p>ac-7c1bad6c3cc84c33baab1</p>
+         * <p>ac-7c1bad6c3cc84c33baab</p>
          */
         @NameInMap("AckClusterConnectorId")
         public String ackClusterConnectorId;
 
         /**
+         * <p>The name of the ACK cluster connector.</p>
+         * 
          * <strong>example:</strong>
-         * <p>ACK集群连接器</p>
+         * <p>ack-cluster-connector-name</p>
          */
         @NameInMap("AckClusterConnectorName")
         public String ackClusterConnectorName;
 
+        /**
+         * <p>A list of ACK pod labels.</p>
+         */
         @NameInMap("AckLabels")
         public java.util.List<DescribeAddressBookResponseBodyAclsAckLabels> ackLabels;
 
+        /**
+         * <p>A list of ACK namespaces.</p>
+         */
         @NameInMap("AckNamespaces")
         public java.util.List<String> ackNamespaces;
 
         /**
-         * <p>The addresses in the address book.</p>
+         * <p>A list of CIDR blocks in the address book.</p>
          */
         @NameInMap("AddressList")
         public java.util.List<String> addressList;
@@ -250,17 +264,13 @@ public class DescribeAddressBookResponseBody extends TeaModel {
         public Integer addressListCount;
 
         /**
-         * <p>A list of addresses in the address book, each with a single address description.</p>
+         * <p>A list of addresses, each with a description.</p>
          */
         @NameInMap("Addresses")
         public java.util.List<DescribeAddressBookResponseBodyAclsAddresses> addresses;
 
         /**
-         * <p>Indicates whether the public IP addresses of ECS instances are automatically added to the address book if the instances match the specified tags. The setting takes effect on both newly purchased ECS instances whose tag settings are complete and ECS instances whose tag settings are modified. Valid values:</p>
-         * <ul>
-         * <li><strong>1</strong>: yes</li>
-         * <li><strong>0</strong>: no</li>
-         * </ul>
+         * <p>Indicates whether to automatically add the public IPs of tagged ECS instances to the address book. This applies to newly purchased instances and existing instances whose tags are modified to match.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -272,7 +282,7 @@ public class DescribeAddressBookResponseBody extends TeaModel {
          * <p>The description of the address book.</p>
          * 
          * <strong>example:</strong>
-         * <p>my address book</p>
+         * <p>DEMO</p>
          */
         @NameInMap("Description")
         public String description;
@@ -288,14 +298,6 @@ public class DescribeAddressBookResponseBody extends TeaModel {
 
         /**
          * <p>The type of the address book. Valid values:</p>
-         * <ul>
-         * <li><strong>ip</strong>: IP address book</li>
-         * <li><strong>domain</strong>: domain address book</li>
-         * <li><strong>port</strong>: port address book</li>
-         * <li><strong>tag</strong>: ECS tag-based address book</li>
-         * <li><strong>allCloud</strong>: cloud service address book</li>
-         * <li><strong>threat</strong>: threat intelligence address book</li>
-         * </ul>
          * 
          * <strong>example:</strong>
          * <p>ip</p>
@@ -313,7 +315,7 @@ public class DescribeAddressBookResponseBody extends TeaModel {
         public String groupUuid;
 
         /**
-         * <p>The number of times that the address book is referenced.</p>
+         * <p>The number of times the address book is referenced.</p>
          * 
          * <strong>example:</strong>
          * <p>3</p>
@@ -322,6 +324,8 @@ public class DescribeAddressBookResponseBody extends TeaModel {
         public Integer referenceCount;
 
         /**
+         * <p>The region where the ACK cluster connector is deployed. This parameter is returned only when the GroupType parameter is &quot;ack&quot;.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-beijing</p>
          */
@@ -329,17 +333,13 @@ public class DescribeAddressBookResponseBody extends TeaModel {
         public String regionNo;
 
         /**
-         * <p>The details about the ECS tags that can be automatically added to the address book.</p>
+         * <p>A list of ECS tags.</p>
          */
         @NameInMap("TagList")
         public java.util.List<DescribeAddressBookResponseBodyAclsTagList> tagList;
 
         /**
-         * <p>The logical relationship among ECS tags. Valid values:</p>
-         * <ul>
-         * <li><strong>and</strong>: Only the public IP addresses of ECS instances that match all the specified tags can be added to the address book.</li>
-         * <li><strong>or</strong>: The public IP addresses of ECS instances that match any of the specified tags can be added to the address book.</li>
-         * </ul>
+         * <p>The logical relationship among multiple ECS tags. Valid values:</p>
          * 
          * <strong>example:</strong>
          * <p>and</p>

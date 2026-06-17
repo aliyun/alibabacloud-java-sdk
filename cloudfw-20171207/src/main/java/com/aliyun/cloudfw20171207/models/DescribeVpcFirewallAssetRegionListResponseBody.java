@@ -4,10 +4,15 @@ package com.aliyun.cloudfw20171207.models;
 import com.aliyun.tea.*;
 
 public class DescribeVpcFirewallAssetRegionListResponseBody extends TeaModel {
+    /**
+     * <p>A list of regions.</p>
+     */
     @NameInMap("RegionNoList")
     public java.util.List<String> regionNoList;
 
     /**
+     * <p>The ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>00933CCB-65A4-5E51-B180-3D154281****</p>
      */

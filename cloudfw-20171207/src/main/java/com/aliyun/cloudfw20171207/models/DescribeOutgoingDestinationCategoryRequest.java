@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeOutgoingDestinationCategoryRequest extends TeaModel {
     /**
+     * <p>The category ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>All</p>
      */
@@ -12,6 +14,8 @@ public class DescribeOutgoingDestinationCategoryRequest extends TeaModel {
     public String categoryId;
 
     /**
+     * <p>The destination type.</p>
+     * 
      * <strong>example:</strong>
      * <p>domain</p>
      */
@@ -19,6 +23,7 @@ public class DescribeOutgoingDestinationCategoryRequest extends TeaModel {
     public String dstType;
 
     /**
+     * <p>The end time of the query. This is a UNIX timestamp. Unit: seconds.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -28,6 +33,8 @@ public class DescribeOutgoingDestinationCategoryRequest extends TeaModel {
     public String endTime;
 
     /**
+     * <p>The language of the response message.</p>
+     * 
      * <strong>example:</strong>
      * <p>zh</p>
      */
@@ -35,6 +42,8 @@ public class DescribeOutgoingDestinationCategoryRequest extends TeaModel {
     public String lang;
 
     /**
+     * <p>The source IP address of the visitor.</p>
+     * 
      * <strong>example:</strong>
      * <p>59.82.45.XXX</p>
      */
@@ -42,6 +51,7 @@ public class DescribeOutgoingDestinationCategoryRequest extends TeaModel {
     public String sourceIp;
 
     /**
+     * <p>The start time of the query. This is a UNIX timestamp. Unit: seconds.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -51,6 +61,8 @@ public class DescribeOutgoingDestinationCategoryRequest extends TeaModel {
     public String startTime;
 
     /**
+     * <p>The fixed category ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>All</p>
      */

@@ -4,10 +4,15 @@ package com.aliyun.cloudfw20171207.models;
 import com.aliyun.tea.*;
 
 public class DescribeRiskEventTopAttackAssetResponseBody extends TeaModel {
+    /**
+     * <p>The statistics of the assets.</p>
+     */
     @NameInMap("Assets")
     public java.util.List<DescribeRiskEventTopAttackAssetResponseBodyAssets> assets;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>B9BF7C33-9A23-5096-8568-A3DACAF0****</p>
      */
@@ -37,6 +42,8 @@ public class DescribeRiskEventTopAttackAssetResponseBody extends TeaModel {
 
     public static class DescribeRiskEventTopAttackAssetResponseBodyAssets extends TeaModel {
         /**
+         * <p>The number of attacks.</p>
+         * 
          * <strong>example:</strong>
          * <p>12</p>
          */
@@ -44,6 +51,8 @@ public class DescribeRiskEventTopAttackAssetResponseBody extends TeaModel {
         public Integer attackCnt;
 
         /**
+         * <p>The number of dropped attempts.</p>
+         * 
          * <strong>example:</strong>
          * <p>8</p>
          */
@@ -51,6 +60,8 @@ public class DescribeRiskEventTopAttackAssetResponseBody extends TeaModel {
         public Integer dropCnt;
 
         /**
+         * <p>The IP address.</p>
+         * 
          * <strong>example:</strong>
          * <p>10.3.54.XXX</p>
          */
@@ -58,6 +69,8 @@ public class DescribeRiskEventTopAttackAssetResponseBody extends TeaModel {
         public String ip;
 
         /**
+         * <p>The region ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-chengdu</p>
          */
@@ -65,6 +78,8 @@ public class DescribeRiskEventTopAttackAssetResponseBody extends TeaModel {
         public String regionNo;
 
         /**
+         * <p>The ID of the asset instance.</p>
+         * 
          * <strong>example:</strong>
          * <p>i-8vbdrjrxzt78****</p>
          */
@@ -72,6 +87,8 @@ public class DescribeRiskEventTopAttackAssetResponseBody extends TeaModel {
         public String resourceInstanceId;
 
         /**
+         * <p>The name of the resource instance.</p>
+         * 
          * <strong>example:</strong>
          * <p>test_resource</p>
          */
@@ -79,6 +96,8 @@ public class DescribeRiskEventTopAttackAssetResponseBody extends TeaModel {
         public String resourceInstanceName;
 
         /**
+         * <p>The type of the resource instance.</p>
+         * 
          * <strong>example:</strong>
          * <p>EcsPublicIP</p>
          */

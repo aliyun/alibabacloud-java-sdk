@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DeletePrivateDnsDomainNameResponseBody extends TeaModel {
     /**
+     * <p>The ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>850A84D6-0DE4-4797-A1E8-0009012****</p>
      */

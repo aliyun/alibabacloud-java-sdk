@@ -4,13 +4,21 @@ package com.aliyun.cloudfw20171207.models;
 import com.aliyun.tea.*;
 
 public class DescribeInternetSlbResponseBody extends TeaModel {
+    /**
+     * <p>The list of data.</p>
+     */
     @NameInMap("DataList")
     public java.util.List<DescribeInternetSlbResponseBodyDataList> dataList;
 
+    /**
+     * <p>The pagination information.</p>
+     */
     @NameInMap("PageInfo")
     public DescribeInternetSlbResponseBodyPageInfo pageInfo;
 
     /**
+     * <p>The ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>135BF83A-0416-5A11-96BB-FA7604D4****</p>
      */
@@ -48,6 +56,8 @@ public class DescribeInternetSlbResponseBody extends TeaModel {
 
     public static class DescribeInternetSlbResponseBodyDataList extends TeaModel {
         /**
+         * <p>The access control ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>acl-uf66n6l9mf3fgq8xs****</p>
          */
@@ -55,6 +65,8 @@ public class DescribeInternetSlbResponseBody extends TeaModel {
         public String aclId;
 
         /**
+         * <p>The status of access control.</p>
+         * 
          * <strong>example:</strong>
          * <p>on</p>
          */
@@ -62,6 +74,8 @@ public class DescribeInternetSlbResponseBody extends TeaModel {
         public String aclStatus;
 
         /**
+         * <p>The access control type.</p>
+         * 
          * <strong>example:</strong>
          * <p>white</p>
          */
@@ -69,6 +83,8 @@ public class DescribeInternetSlbResponseBody extends TeaModel {
         public String aclType;
 
         /**
+         * <p>The health check status.</p>
+         * 
          * <strong>example:</strong>
          * <p>normal</p>
          */
@@ -76,6 +92,8 @@ public class DescribeInternetSlbResponseBody extends TeaModel {
         public String healthStatus;
 
         /**
+         * <p>The ID of the SLB instance.</p>
+         * 
          * <strong>example:</strong>
          * <p>lb-2ze8v2x5kd9qyvp2****</p>
          */
@@ -83,6 +101,8 @@ public class DescribeInternetSlbResponseBody extends TeaModel {
         public String instanceId;
 
         /**
+         * <p>The name of the SLB instance.</p>
+         * 
          * <strong>example:</strong>
          * <p>buyerpro1</p>
          */
@@ -90,6 +110,8 @@ public class DescribeInternetSlbResponseBody extends TeaModel {
         public String instanceName;
 
         /**
+         * <p>The protocol type.</p>
+         * 
          * <strong>example:</strong>
          * <p>tcp</p>
          */
@@ -97,6 +119,8 @@ public class DescribeInternetSlbResponseBody extends TeaModel {
         public String ipProtocol;
 
         /**
+         * <p>The port number.</p>
+         * 
          * <strong>example:</strong>
          * <p>1883</p>
          */
@@ -104,6 +128,8 @@ public class DescribeInternetSlbResponseBody extends TeaModel {
         public Integer port;
 
         /**
+         * <p>The public IP address.</p>
+         * 
          * <strong>example:</strong>
          * <p>39.108.57.XXX</p>
          */
@@ -111,12 +137,17 @@ public class DescribeInternetSlbResponseBody extends TeaModel {
         public String publicIp;
 
         /**
+         * <p>The region.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-shanghai</p>
          */
         @NameInMap("RegionNo")
         public String regionNo;
 
+        /**
+         * <p>The list of tags.</p>
+         */
         @NameInMap("Tags")
         public java.util.List<String> tags;
 
@@ -217,6 +248,8 @@ public class DescribeInternetSlbResponseBody extends TeaModel {
 
     public static class DescribeInternetSlbResponseBodyPageInfo extends TeaModel {
         /**
+         * <p>The page number of the returned page.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -224,6 +257,8 @@ public class DescribeInternetSlbResponseBody extends TeaModel {
         public Integer currentPage;
 
         /**
+         * <p>The number of entries returned on the current page.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -231,6 +266,8 @@ public class DescribeInternetSlbResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
+         * <p>The total number of entries.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */

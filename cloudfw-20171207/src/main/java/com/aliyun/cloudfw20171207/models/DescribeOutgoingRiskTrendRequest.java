@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeOutgoingRiskTrendRequest extends TeaModel {
     /**
+     * <p>The end of the time range to query. Use a UNIX timestamp in seconds.</p>
+     * 
      * <strong>example:</strong>
      * <p>1755051062</p>
      */
@@ -12,6 +14,8 @@ public class DescribeOutgoingRiskTrendRequest extends TeaModel {
     public String endTime;
 
     /**
+     * <p>The language of the response message.</p>
+     * 
      * <strong>example:</strong>
      * <p>zh</p>
      */
@@ -19,6 +23,8 @@ public class DescribeOutgoingRiskTrendRequest extends TeaModel {
     public String lang;
 
     /**
+     * <p>The source IP address.</p>
+     * 
      * <strong>example:</strong>
      * <p>219.145.94.XXX</p>
      */
@@ -26,6 +32,8 @@ public class DescribeOutgoingRiskTrendRequest extends TeaModel {
     public String sourceIp;
 
     /**
+     * <p>The start of the time range to query. Use a UNIX timestamp in seconds.</p>
+     * 
      * <strong>example:</strong>
      * <p>1733882648</p>
      */

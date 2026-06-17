@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeUnprotectedVulnTrendResponseBody extends TeaModel {
     /**
+     * <p>The number of protected vulnerabilities.</p>
+     * 
      * <strong>example:</strong>
      * <p>7</p>
      */
@@ -12,16 +14,23 @@ public class DescribeUnprotectedVulnTrendResponseBody extends TeaModel {
     public Integer curProtectedCnt;
 
     /**
+     * <p>The number of unprotected vulnerabilities.</p>
+     * 
      * <strong>example:</strong>
      * <p>8</p>
      */
     @NameInMap("CurUnprotectedCnt")
     public Integer curUnprotectedCnt;
 
+    /**
+     * <p>The list of returned data.</p>
+     */
     @NameInMap("DataList")
     public java.util.List<DescribeUnprotectedVulnTrendResponseBodyDataList> dataList;
 
     /**
+     * <p>The end time. The value is a UNIX timestamp in seconds.</p>
+     * 
      * <strong>example:</strong>
      * <p>1731551104</p>
      */
@@ -29,6 +38,8 @@ public class DescribeUnprotectedVulnTrendResponseBody extends TeaModel {
     public Long endTime;
 
     /**
+     * <p>The time interval.</p>
+     * 
      * <strong>example:</strong>
      * <p>60</p>
      */
@@ -36,6 +47,8 @@ public class DescribeUnprotectedVulnTrendResponseBody extends TeaModel {
     public Integer interval;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>05BEF2B5-EAAA-509D-9824-E3C7DC17****</p>
      */
@@ -43,6 +56,8 @@ public class DescribeUnprotectedVulnTrendResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The start time. The value is a UNIX timestamp in seconds.</p>
+     * 
      * <strong>example:</strong>
      * <p>1749434787</p>
      */
@@ -112,6 +127,8 @@ public class DescribeUnprotectedVulnTrendResponseBody extends TeaModel {
 
     public static class DescribeUnprotectedVulnTrendResponseBodyDataList extends TeaModel {
         /**
+         * <p>The number of protected vulnerabilities.</p>
+         * 
          * <strong>example:</strong>
          * <p>3</p>
          */
@@ -119,6 +136,8 @@ public class DescribeUnprotectedVulnTrendResponseBody extends TeaModel {
         public Integer protectedVulnCnt;
 
         /**
+         * <p>The timestamp of the vulnerability scan.</p>
+         * 
          * <strong>example:</strong>
          * <p>1525833105</p>
          */
@@ -126,6 +145,8 @@ public class DescribeUnprotectedVulnTrendResponseBody extends TeaModel {
         public Long time;
 
         /**
+         * <p>The number of unprotected vulnerabilities.</p>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */

@@ -14,7 +14,7 @@ public class DescribePostpayTrafficTotalResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of assets protected all types of firewalls.</p>
+     * <p>The total number of assets that are protected by border firewalls.</p>
      * 
      * <strong>example:</strong>
      * <p>132</p>
@@ -23,7 +23,7 @@ public class DescribePostpayTrafficTotalResponseBody extends TeaModel {
     public Long totalAssets;
 
     /**
-     * <p>The volume of burstable protected traffic for which fees are generated. Unit: bytes.</p>
+     * <p>For the subscription edition, this is the total billed elastic traffic after deductions are applied. Unit: bytes.</p>
      * 
      * <strong>example:</strong>
      * <p>2320274874426</p>
@@ -32,7 +32,7 @@ public class DescribePostpayTrafficTotalResponseBody extends TeaModel {
     public Long totalBillTraffic;
 
     /**
-     * <p>The total number of assets protected by the Internet firewall.</p>
+     * <p>The total number of assets that are protected by Internet Border firewalls.</p>
      * 
      * <strong>example:</strong>
      * <p>128</p>
@@ -41,7 +41,7 @@ public class DescribePostpayTrafficTotalResponseBody extends TeaModel {
     public Long totalInternetAssets;
 
     /**
-     * <p>The total traffic for the Internet firewall. If you use Cloud Firewall that uses the subscription billing method, this parameter indicates the total volume of burstable protected traffic on the Internet boundary. Unit: bytes.</p>
+     * <p>The total traffic of the Internet Border. For the subscription edition, this is the total elastic traffic of the Internet Border. Unit: bytes.</p>
      * 
      * <strong>example:</strong>
      * <p>2320274874426</p>
@@ -50,7 +50,7 @@ public class DescribePostpayTrafficTotalResponseBody extends TeaModel {
     public Long totalInternetTraffic;
 
     /**
-     * <p>The total number of assets protected by NAT firewalls.</p>
+     * <p>The total number of assets that are protected by NAT border firewalls.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -59,7 +59,7 @@ public class DescribePostpayTrafficTotalResponseBody extends TeaModel {
     public Long totalNatAssets;
 
     /**
-     * <p>The total traffic for NAT firewalls. If you use Cloud Firewall that uses the subscription billing method, this parameter indicates the total volume of burstable protected traffic on the NAT boundary. Unit: bytes.</p>
+     * <p>The total traffic of the NAT border. For the subscription edition, this is the total elastic traffic of the NAT border. Unit: bytes.</p>
      * 
      * <strong>example:</strong>
      * <p>560646279</p>
@@ -68,16 +68,16 @@ public class DescribePostpayTrafficTotalResponseBody extends TeaModel {
     public Long totalNatTraffic;
 
     /**
-     * <p>Data Leak Detection Total Fee Flow.</p>
+     * <p>The total billed traffic for data leakage detection.</p>
      * 
      * <strong>example:</strong>
-     * <p>22879916142</p>
+     * <p>0</p>
      */
     @NameInMap("TotalSdlBillTraffic")
     public Long totalSdlBillTraffic;
 
     /**
-     * <p>Data Leak Detection Total free usage traffic.</p>
+     * <p>The total free traffic for data leakage detection.</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>
@@ -86,7 +86,7 @@ public class DescribePostpayTrafficTotalResponseBody extends TeaModel {
     public Long totalSdlFreeTraffic;
 
     /**
-     * <p>The total volume of traffic. If you use Cloud Firewall that uses the subscription billing method, this parameter indicates the total volume of burstable protected traffic. Unit: bytes.</p>
+     * <p>The total traffic. For the subscription edition, this is the total elastic traffic. Unit: bytes.</p>
      * 
      * <strong>example:</strong>
      * <p>2320274874426</p>
@@ -95,7 +95,7 @@ public class DescribePostpayTrafficTotalResponseBody extends TeaModel {
     public Long totalTraffic;
 
     /**
-     * <p>The total number of assets protected by virtual private cloud (VPC) firewalls.</p>
+     * <p>The total number of assets that are protected by VPC border firewalls.</p>
      * 
      * <strong>example:</strong>
      * <p>3</p>
@@ -104,7 +104,7 @@ public class DescribePostpayTrafficTotalResponseBody extends TeaModel {
     public Long totalVpcAssets;
 
     /**
-     * <p>The total traffic for VPC firewalls. If you use Cloud Firewall that uses the subscription billing method, this parameter indicates the total volume of burstable protected traffic on the VPC boundary. Unit: bytes.</p>
+     * <p>The total traffic of the VPC border. For the subscription edition, this is the total elastic traffic of the VPC border. Unit: bytes.</p>
      * 
      * <strong>example:</strong>
      * <p>2320274874426</p>

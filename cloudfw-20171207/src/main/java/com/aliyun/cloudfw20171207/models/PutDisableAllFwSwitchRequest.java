@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class PutDisableAllFwSwitchRequest extends TeaModel {
     /**
-     * <p>The instance ID of your Cloud Firewall.</p>
+     * <p>The ID of the Cloud Firewall instance.</p>
      * 
      * <strong>example:</strong>
      * <p>i-2ze8v2x5kd9qyvp2****</p>
@@ -14,10 +14,12 @@ public class PutDisableAllFwSwitchRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The language of the content within the request and response. Valid values: Valid values:</p>
+     * <p>The language of the request and response. Valid values:</p>
      * <ul>
-     * <li><strong>zh</strong> (default): Chinese</li>
-     * <li><strong>en</strong>: English</li>
+     * <li><p><strong>zh</strong> (default): Chinese</p>
+     * </li>
+     * <li><p><strong>en</strong>: English</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -27,7 +29,7 @@ public class PutDisableAllFwSwitchRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The source IP address of the request.</p>
+     * <p>The source IP address of the visitor.</p>
      * 
      * <strong>example:</strong>
      * <p>192.0.XX.XX</p>

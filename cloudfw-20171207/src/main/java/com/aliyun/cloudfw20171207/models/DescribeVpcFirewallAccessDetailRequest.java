@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeVpcFirewallAccessDetailRequest extends TeaModel {
     /**
+     * <p>The IP address of the local asset.</p>
+     * 
      * <strong>example:</strong>
      * <p>192.0.XX.XX</p>
      */
@@ -12,6 +14,8 @@ public class DescribeVpcFirewallAccessDetailRequest extends TeaModel {
     public String assetIP;
 
     /**
+     * <p>The page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -19,6 +23,17 @@ public class DescribeVpcFirewallAccessDetailRequest extends TeaModel {
     public String currentPage;
 
     /**
+     * <p>The traffic direction. Valid values:</p>
+     * <ul>
+     * <li><p><strong>in</strong>: inbound</p>
+     * </li>
+     * <li><p><strong>out</strong>: outbound</p>
+     * </li>
+     * </ul>
+     * <blockquote>
+     * <p>If you do not specify this parameter, traffic in all directions is queried.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>in</p>
      */
@@ -26,6 +41,7 @@ public class DescribeVpcFirewallAccessDetailRequest extends TeaModel {
     public String direction;
 
     /**
+     * <p>The end of the time range to query. This value is a UNIX timestamp that is accurate to the second.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -35,6 +51,14 @@ public class DescribeVpcFirewallAccessDetailRequest extends TeaModel {
     public String endTime;
 
     /**
+     * <p>The protocol type. Valid values:</p>
+     * <ul>
+     * <li><p><strong>tcp</strong>: TCP</p>
+     * </li>
+     * <li><p><strong>udp</strong>: UDP</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>tcp</p>
      */
@@ -42,6 +66,14 @@ public class DescribeVpcFirewallAccessDetailRequest extends TeaModel {
     public String IPProtocol;
 
     /**
+     * <p>The language of the response. Valid values:</p>
+     * <ul>
+     * <li><p><strong>zh</strong> (default): Chinese</p>
+     * </li>
+     * <li><p><strong>en</strong>: English</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>zh</p>
      */
@@ -49,6 +81,14 @@ public class DescribeVpcFirewallAccessDetailRequest extends TeaModel {
     public String lang;
 
     /**
+     * <p>The sort order. Valid values:</p>
+     * <ul>
+     * <li><p><strong>asc</strong>: ascending</p>
+     * </li>
+     * <li><p><strong>desc</strong> (default): descending</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>desc</p>
      */
@@ -56,6 +96,8 @@ public class DescribeVpcFirewallAccessDetailRequest extends TeaModel {
     public String order;
 
     /**
+     * <p>The number of entries per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -63,6 +105,8 @@ public class DescribeVpcFirewallAccessDetailRequest extends TeaModel {
     public String pageSize;
 
     /**
+     * <p>The IP address of the peer asset.</p>
+     * 
      * <strong>example:</strong>
      * <p>10.125.1.XX</p>
      */
@@ -70,6 +114,8 @@ public class DescribeVpcFirewallAccessDetailRequest extends TeaModel {
     public String peerAssetIP;
 
     /**
+     * <p>The instance ID of the peer asset.</p>
+     * 
      * <strong>example:</strong>
      * <p>i-123451</p>
      */
@@ -77,6 +123,8 @@ public class DescribeVpcFirewallAccessDetailRequest extends TeaModel {
     public String peerAssetInstanceId;
 
     /**
+     * <p>The instance name of the peer asset.</p>
+     * 
      * <strong>example:</strong>
      * <p>ecs22</p>
      */
@@ -84,6 +132,8 @@ public class DescribeVpcFirewallAccessDetailRequest extends TeaModel {
     public String peerAssetInstanceName;
 
     /**
+     * <p>The ID of the peer VPC.</p>
+     * 
      * <strong>example:</strong>
      * <p>vpc-90rq0anm6t8vbwbo****</p>
      */
@@ -91,6 +141,8 @@ public class DescribeVpcFirewallAccessDetailRequest extends TeaModel {
     public String peerVpcId;
 
     /**
+     * <p>The port number.</p>
+     * 
      * <strong>example:</strong>
      * <p>80</p>
      */
@@ -98,6 +150,8 @@ public class DescribeVpcFirewallAccessDetailRequest extends TeaModel {
     public String port;
 
     /**
+     * <p>The risk level.</p>
+     * 
      * <strong>example:</strong>
      * <p>3</p>
      */
@@ -105,6 +159,22 @@ public class DescribeVpcFirewallAccessDetailRequest extends TeaModel {
     public String riskLevel;
 
     /**
+     * <p>The sorting criterion. Valid values are:</p>
+     * <ul>
+     * <li><p><strong>InBytes</strong></p>
+     * </li>
+     * <li><p><strong>OutBytes</strong></p>
+     * </li>
+     * <li><p><strong>TotalBytes</strong></p>
+     * </li>
+     * <li><p><strong>InPackets</strong></p>
+     * </li>
+     * <li><p><strong>OutPackets</strong></p>
+     * </li>
+     * <li><p><strong>SessionCount</strong></p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>InBytes</p>
      */
@@ -112,6 +182,7 @@ public class DescribeVpcFirewallAccessDetailRequest extends TeaModel {
     public String sort;
 
     /**
+     * <p>The start of the time range to query. This value is a UNIX timestamp that is accurate to the second.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -121,6 +192,7 @@ public class DescribeVpcFirewallAccessDetailRequest extends TeaModel {
     public String startTime;
 
     /**
+     * <p>The ID of the VPC.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

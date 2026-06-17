@@ -5,41 +5,57 @@ import com.aliyun.tea.*;
 
 public class AddAddressBookRequest extends TeaModel {
     /**
+     * <p>The ID of the ACK cluster connector. You can obtain this value from the following operation:</p>
+     * <ul>
+     * <li><a href="~~DescribeAckClusterConnectors~~">DescribeAckClusterConnectors</a>: Queries a list of ACK cluster connectors.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>ac-7c1bad6c3cc84c33baab1</p>
      */
     @NameInMap("AckClusterConnectorId")
     public String ackClusterConnectorId;
 
+    /**
+     * <p>The list of ACK cluster pod labels.</p>
+     * <blockquote>
+     * <p>You can specify a maximum of 10 labels.</p>
+     * </blockquote>
+     */
     @NameInMap("AckLabels")
     public java.util.List<AddAddressBookRequestAckLabels> ackLabels;
 
+    /**
+     * <p>The list of ACK cluster pod namespaces.</p>
+     * <blockquote>
+     * <p>You can specify a maximum of 10 namespaces.</p>
+     * </blockquote>
+     */
     @NameInMap("AckNamespaces")
     public java.util.List<String> ackNamespaces;
 
     /**
-     * <p>The addresses that you want to add to the address book. Separate multiple addresses with commas (,).</p>
+     * <p>The list of addresses in the address book. Separate multiple addresses with commas (,). For each address, separate the address and its description with a space.</p>
      * <blockquote>
-     * <p> If you set GroupType to <code>ip</code>, <code>port</code> or <code>domain</code>, you must specify AddressList.</p>
+     * <p>This parameter is required when GroupType is set to <code>ip</code>, <code>port</code>, or <code>domain</code>.</p>
      * </blockquote>
      * <ul>
-     * <li>If you set GroupType to <code>ip</code>, you must add IP addresses to the address book. Example: 192.0.XX.XX/32,192.0.XX.XX/24.</li>
-     * <li>If you set GroupType to <code>port</code>, you must add port numbers or port ranges to the address book. Example: 80,100/200.</li>
-     * <li>If you set GroupType to <code>domain</code>, you must add domain names to the address book. Example: example.com,aliyundoc.com.</li>
+     * <li><p>If you set GroupType to <code>ip</code>, enter IP addresses in the list. Example: 192.0.XX.XX/32 development segment,10.0.0.X/24,192.0.XX.XX/24 test segment.</p>
+     * </li>
+     * <li><p>If you set GroupType to <code>port</code>, enter ports or port ranges in the list. Example: 80 HTTP port,100/200,3306 database port.</p>
+     * </li>
+     * <li><p>If you set GroupType to <code>domain</code>, enter domain names in the list. Example: example.com test domain name,aliyundoc.com,www\.aliyun.com Alibaba Cloud official website.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
-     * <p>192.0.XX.XX/32, 192.0.XX.XX/24</p>
+     * <p>192.0.XX.XX/32 ,192.0.XX.XX/24</p>
      */
     @NameInMap("AddressList")
     public String addressList;
 
     /**
-     * <p>Specifies whether to automatically add public IP addresses of ECS instances to the address book if the instances match the specified tags. Valid values:</p>
-     * <ul>
-     * <li><strong>1</strong>: yes</li>
-     * <li><strong>0</strong> (default): no</li>
-     * </ul>
+     * <p>Specifies whether to automatically add the public IP addresses of ECS instances that match the specified tags to the address book.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -68,13 +84,7 @@ public class AddAddressBookRequest extends TeaModel {
     public String groupName;
 
     /**
-     * <p>The type of the address book. Valid values:</p>
-     * <ul>
-     * <li><strong>ip</strong>: IP address book</li>
-     * <li><strong>domain</strong>: domain address book</li>
-     * <li><strong>port</strong>: port address book</li>
-     * <li><strong>tag</strong>: ECS tag-based address book</li>
-     * </ul>
+     * <p>The type of the address book.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -84,11 +94,7 @@ public class AddAddressBookRequest extends TeaModel {
     public String groupType;
 
     /**
-     * <p>The language of the content within the response. Valid values:</p>
-     * <ul>
-     * <li><strong>zh</strong> (default): Chinese</li>
-     * <li><strong>en</strong>: English</li>
-     * </ul>
+     * <p>The language of the address book description.</p>
      * 
      * <strong>example:</strong>
      * <p>zh</p>
@@ -97,7 +103,7 @@ public class AddAddressBookRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The source IP address of the request.</p>
+     * <p>The source IP address of the visitor.</p>
      * 
      * <strong>example:</strong>
      * <p>192.0.XX.XX</p>
@@ -107,17 +113,13 @@ public class AddAddressBookRequest extends TeaModel {
     public String sourceIp;
 
     /**
-     * <p>The ECS tags that you want to match.</p>
+     * <p>The list of ECS tags.</p>
      */
     @NameInMap("TagList")
     public java.util.List<AddAddressBookRequestTagList> tagList;
 
     /**
-     * <p>The logical relation among the ECS tags that you want to match. Valid values:</p>
-     * <ul>
-     * <li><strong>and</strong> (default): Only the public IP addresses of ECS instances that match all the specified tags can be added to the address book.</li>
-     * <li><strong>or</strong>: The public IP addresses of ECS instances that match one of the specified tags can be added to the address book.</li>
-     * </ul>
+     * <p>The logical relationship between multiple ECS tags.</p>
      * 
      * <strong>example:</strong>
      * <p>and</p>
@@ -229,6 +231,8 @@ public class AddAddressBookRequest extends TeaModel {
 
     public static class AddAddressBookRequestAckLabels extends TeaModel {
         /**
+         * <p>The key of the ACK cluster pod label.</p>
+         * 
          * <strong>example:</strong>
          * <p>app</p>
          */
@@ -236,6 +240,8 @@ public class AddAddressBookRequest extends TeaModel {
         public String key;
 
         /**
+         * <p>The value of the ACK cluster pod label.</p>
+         * 
          * <strong>example:</strong>
          * <p>storage-operator</p>
          */

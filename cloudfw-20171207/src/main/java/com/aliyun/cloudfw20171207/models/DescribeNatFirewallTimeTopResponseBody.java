@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class DescribeNatFirewallTimeTopResponseBody extends TeaModel {
     /**
+     * <p>The number of results.</p>
+     * 
      * <strong>example:</strong>
      * <p>2</p>
      */
     @NameInMap("DataCount")
     public Long dataCount;
 
+    /**
+     * <p>The list of data.</p>
+     */
     @NameInMap("DataList")
     public java.util.List<DescribeNatFirewallTimeTopResponseBodyDataList> dataList;
 
     /**
+     * <p>The ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>C5DDD596-1191-5F36-A504-8733045A****</p>
      */
@@ -22,6 +29,8 @@ public class DescribeNatFirewallTimeTopResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The point in time when the traffic data was collected. This is a UNIX timestamp. Unit: seconds.</p>
+     * 
      * <strong>example:</strong>
      * <p>1656923760</p>
      */
@@ -67,6 +76,8 @@ public class DescribeNatFirewallTimeTopResponseBody extends TeaModel {
 
     public static class DescribeNatFirewallTimeTopResponseBodyDataList extends TeaModel {
         /**
+         * <p>The inbound bandwidth. Unit: bps.</p>
+         * 
          * <strong>example:</strong>
          * <p>187</p>
          */
@@ -74,6 +85,8 @@ public class DescribeNatFirewallTimeTopResponseBody extends TeaModel {
         public Long inBps;
 
         /**
+         * <p>The IP address.</p>
+         * 
          * <strong>example:</strong>
          * <p>10.66.231.XXX</p>
          */
@@ -81,6 +94,8 @@ public class DescribeNatFirewallTimeTopResponseBody extends TeaModel {
         public String ip;
 
         /**
+         * <p>The ID of the NAT firewall.</p>
+         * 
          * <strong>example:</strong>
          * <p>vfw-tr-7a9c8901ed394****</p>
          */
@@ -88,6 +103,8 @@ public class DescribeNatFirewallTimeTopResponseBody extends TeaModel {
         public String natFirewallId;
 
         /**
+         * <p>The name of the NAT firewall.</p>
+         * 
          * <strong>example:</strong>
          * <p>vfw-test</p>
          */
@@ -95,6 +112,8 @@ public class DescribeNatFirewallTimeTopResponseBody extends TeaModel {
         public String natFirewallName;
 
         /**
+         * <p>The ID of the NAT Gateway.</p>
+         * 
          * <strong>example:</strong>
          * <p>ngw-uf6pnry5vpawb****</p>
          */
@@ -102,6 +121,8 @@ public class DescribeNatFirewallTimeTopResponseBody extends TeaModel {
         public String natGatewayId;
 
         /**
+         * <p>The name of the NAT Gateway.</p>
+         * 
          * <strong>example:</strong>
          * <p>ngw-test</p>
          */
@@ -109,6 +130,8 @@ public class DescribeNatFirewallTimeTopResponseBody extends TeaModel {
         public String natGatewayName;
 
         /**
+         * <p>The number of new connections.</p>
+         * 
          * <strong>example:</strong>
          * <p>27</p>
          */
@@ -116,6 +139,8 @@ public class DescribeNatFirewallTimeTopResponseBody extends TeaModel {
         public String newConn;
 
         /**
+         * <p>The outbound bandwidth. Unit: bps.</p>
+         * 
          * <strong>example:</strong>
          * <p>45</p>
          */
@@ -123,6 +148,8 @@ public class DescribeNatFirewallTimeTopResponseBody extends TeaModel {
         public Long outBps;
 
         /**
+         * <p>The region.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-qingdao</p>
          */
@@ -130,6 +157,8 @@ public class DescribeNatFirewallTimeTopResponseBody extends TeaModel {
         public String regionNo;
 
         /**
+         * <p>The ID of the asset instance.</p>
+         * 
          * <strong>example:</strong>
          * <p>i-bp130nn8h6157dir****</p>
          */
@@ -137,6 +166,8 @@ public class DescribeNatFirewallTimeTopResponseBody extends TeaModel {
         public String resourceInstanceId;
 
         /**
+         * <p>The name of the asset instance.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -144,6 +175,8 @@ public class DescribeNatFirewallTimeTopResponseBody extends TeaModel {
         public String resourceInstanceName;
 
         /**
+         * <p>The total number of sessions.</p>
+         * 
          * <strong>example:</strong>
          * <p>27</p>
          */
@@ -151,6 +184,8 @@ public class DescribeNatFirewallTimeTopResponseBody extends TeaModel {
         public String sessionCount;
 
         /**
+         * <p>The total bandwidth. Unit: bps.</p>
+         * 
          * <strong>example:</strong>
          * <p>232</p>
          */

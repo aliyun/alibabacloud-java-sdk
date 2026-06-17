@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ModifyVpcFirewallAclEngineModeRequest extends TeaModel {
     /**
+     * <p>The UID of the Cloud Firewall member account.</p>
+     * 
      * <strong>example:</strong>
      * <p>258039427902****</p>
      */
@@ -12,6 +14,13 @@ public class ModifyVpcFirewallAclEngineModeRequest extends TeaModel {
     public String memberUid;
 
     /**
+     * <p>Specifies whether to enable strict mode.</p>
+     * <ul>
+     * <li><p>1: strict mode</p>
+     * </li>
+     * <li><p>0: loose mode</p>
+     * </li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,6 +30,7 @@ public class ModifyVpcFirewallAclEngineModeRequest extends TeaModel {
     public String strictMode;
 
     /**
+     * <p>The instance ID of the VPC border firewall.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

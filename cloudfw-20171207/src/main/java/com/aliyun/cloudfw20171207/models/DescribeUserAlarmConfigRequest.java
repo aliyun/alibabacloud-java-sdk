@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeUserAlarmConfigRequest extends TeaModel {
     /**
+     * <p>The language of the response. Valid values: zh and en. Default value: zh.</p>
+     * 
      * <strong>example:</strong>
      * <p>zh</p>
      */
@@ -12,6 +14,8 @@ public class DescribeUserAlarmConfigRequest extends TeaModel {
     public String lang;
 
     /**
+     * <p>The source IP address of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>59.82.135.XXX</p>
      */

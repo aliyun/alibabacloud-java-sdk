@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ResetRuleHitCountRequest extends TeaModel {
     /**
+     * <p>The unique ID of the access control policy.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,14 @@ public class ResetRuleHitCountRequest extends TeaModel {
     public String aclUuid;
 
     /**
+     * <p>The language of the response. Valid values:</p>
+     * <ul>
+     * <li><p><strong>zh</strong>: Chinese (default)</p>
+     * </li>
+     * <li><p><strong>en</strong>: English</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>zh</p>
      */
@@ -21,6 +30,8 @@ public class ResetRuleHitCountRequest extends TeaModel {
     public String lang;
 
     /**
+     * <p>The source IP address of the requester.</p>
+     * 
      * <strong>example:</strong>
      * <p>112.64.126.XXX</p>
      */

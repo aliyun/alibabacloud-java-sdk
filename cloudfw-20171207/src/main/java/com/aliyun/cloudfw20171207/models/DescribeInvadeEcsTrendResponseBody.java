@@ -4,10 +4,15 @@ package com.aliyun.cloudfw20171207.models;
 import com.aliyun.tea.*;
 
 public class DescribeInvadeEcsTrendResponseBody extends TeaModel {
+    /**
+     * <p>The data list.</p>
+     */
     @NameInMap("DataList")
     public java.util.List<DescribeInvadeEcsTrendResponseBodyDataList> dataList;
 
     /**
+     * <p>The end of the time range. This is a UNIX timestamp. Unit: seconds.</p>
+     * 
      * <strong>example:</strong>
      * <p>1736820365</p>
      */
@@ -15,6 +20,8 @@ public class DescribeInvadeEcsTrendResponseBody extends TeaModel {
     public Long endTime;
 
     /**
+     * <p>The time interval.</p>
+     * 
      * <strong>example:</strong>
      * <p>60</p>
      */
@@ -22,6 +29,8 @@ public class DescribeInvadeEcsTrendResponseBody extends TeaModel {
     public Integer interval;
 
     /**
+     * <p>The total number of compromised hosts.</p>
+     * 
      * <strong>example:</strong>
      * <p>2</p>
      */
@@ -29,6 +38,8 @@ public class DescribeInvadeEcsTrendResponseBody extends TeaModel {
     public Integer invadeEcsCount;
 
     /**
+     * <p>The ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>F90E816D-BEE7-5BD6-95ED-474F54****</p>
      */
@@ -36,6 +47,8 @@ public class DescribeInvadeEcsTrendResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The start of the time range. This is a UNIX timestamp. Unit: seconds.</p>
+     * 
      * <strong>example:</strong>
      * <p>1742177725</p>
      */
@@ -97,6 +110,8 @@ public class DescribeInvadeEcsTrendResponseBody extends TeaModel {
 
     public static class DescribeInvadeEcsTrendResponseBodyDataList extends TeaModel {
         /**
+         * <p>The number of ECS instances.</p>
+         * 
          * <strong>example:</strong>
          * <p>27</p>
          */
@@ -104,6 +119,8 @@ public class DescribeInvadeEcsTrendResponseBody extends TeaModel {
         public Integer ecsCount;
 
         /**
+         * <p>The timestamp.</p>
+         * 
          * <strong>example:</strong>
          * <p>1659405600</p>
          */

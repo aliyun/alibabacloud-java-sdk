@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class DescribeNetworkTrafficTopRatioResponseBody extends TeaModel {
     /**
+     * <p>The number of results returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
     @NameInMap("DataCount")
     public Integer dataCount;
 
+    /**
+     * <p>The list of data values.</p>
+     */
     @NameInMap("DataList")
     public java.util.List<DescribeNetworkTrafficTopRatioResponseBodyDataList> dataList;
 
     /**
+     * <p>The data type.</p>
+     * 
      * <strong>example:</strong>
      * <p>in_src_ip</p>
      */
@@ -22,6 +29,8 @@ public class DescribeNetworkTrafficTopRatioResponseBody extends TeaModel {
     public String dataType;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>C05D58A1-28A9-563A-BB59-5F7D1867****</p>
      */
@@ -67,6 +76,8 @@ public class DescribeNetworkTrafficTopRatioResponseBody extends TeaModel {
 
     public static class DescribeNetworkTrafficTopRatioResponseBodyDataList extends TeaModel {
         /**
+         * <p>The data name.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -74,6 +85,8 @@ public class DescribeNetworkTrafficTopRatioResponseBody extends TeaModel {
         public String dataName;
 
         /**
+         * <p>The ratio.</p>
+         * 
          * <strong>example:</strong>
          * <p>12</p>
          */

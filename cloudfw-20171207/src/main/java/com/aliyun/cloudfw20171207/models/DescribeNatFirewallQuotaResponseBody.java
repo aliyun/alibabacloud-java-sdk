@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeNatFirewallQuotaResponseBody extends TeaModel {
     /**
+     * <p>The number of nodes that are in an abnormal state.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -12,6 +14,8 @@ public class DescribeNatFirewallQuotaResponseBody extends TeaModel {
     public Long exceptionCount;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>F98BAA59-5863-5B61-8FD4-C5E96813****</p>
      */
@@ -19,6 +23,8 @@ public class DescribeNatFirewallQuotaResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total number of quotas.</p>
+     * 
      * <strong>example:</strong>
      * <p>6</p>
      */
@@ -26,6 +32,8 @@ public class DescribeNatFirewallQuotaResponseBody extends TeaModel {
     public Long totalCount;
 
     /**
+     * <p>The number of unprotected assets.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -33,6 +41,8 @@ public class DescribeNatFirewallQuotaResponseBody extends TeaModel {
     public Long unprotectedCount;
 
     /**
+     * <p>The number of used quotas.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */

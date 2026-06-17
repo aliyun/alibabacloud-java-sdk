@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdatePostpayUserNatStatusResponseBody extends TeaModel {
     /**
-     * <p>Id of the request</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>850A84D6-0DE4-4797-A1E8-00090******</p>

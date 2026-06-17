@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class DescribeVpcFirewallDomainRelationListRequest extends TeaModel {
     /**
+     * <p>The number of the page to return.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
     @NameInMap("CurrentPage")
     public String currentPage;
 
+    /**
+     * <p>The list of domain names.</p>
+     */
     @NameInMap("DomainList")
     public java.util.List<String> domainList;
 
     /**
+     * <p>The destination IP address to query.</p>
+     * 
      * <strong>example:</strong>
      * <p>34.136.111.XXX</p>
      */
@@ -22,6 +29,8 @@ public class DescribeVpcFirewallDomainRelationListRequest extends TeaModel {
     public String dstIP;
 
     /**
+     * <p>The ID of the destination VPC.</p>
+     * 
      * <strong>example:</strong>
      * <p>vpc-bp10w5nb30r4jzfyc****</p>
      */
@@ -29,6 +38,7 @@ public class DescribeVpcFirewallDomainRelationListRequest extends TeaModel {
     public String dstVpcId;
 
     /**
+     * <p>The end of the time range to query. The value is a UNIX timestamp. Unit: seconds.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -38,6 +48,14 @@ public class DescribeVpcFirewallDomainRelationListRequest extends TeaModel {
     public String endTime;
 
     /**
+     * <p>The language of the response. Valid values:</p>
+     * <ul>
+     * <li><p><strong>zh</strong> (default): Chinese</p>
+     * </li>
+     * <li><p><strong>en</strong>: English</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>zh</p>
      */
@@ -45,6 +63,8 @@ public class DescribeVpcFirewallDomainRelationListRequest extends TeaModel {
     public String lang;
 
     /**
+     * <p>The order in which to sort the queried entries. Valid values:</p>
+     * 
      * <strong>example:</strong>
      * <p>desc</p>
      */
@@ -52,6 +72,8 @@ public class DescribeVpcFirewallDomainRelationListRequest extends TeaModel {
     public String order;
 
     /**
+     * <p>The number of entries to return on each page.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -59,6 +81,12 @@ public class DescribeVpcFirewallDomainRelationListRequest extends TeaModel {
     public String pageSize;
 
     /**
+     * <p>The field by which to sort the queried entries. Valid values:</p>
+     * <p>Default value: TotalBytes.</p>
+     * <p>Valid values:</p>
+     * <p>TotalBytes: Order by total traffic.</p>
+     * <p>SessionCount: Order by session count.</p>
+     * 
      * <strong>example:</strong>
      * <p>TotalBytes</p>
      */
@@ -66,6 +94,8 @@ public class DescribeVpcFirewallDomainRelationListRequest extends TeaModel {
     public String sort;
 
     /**
+     * <p>The source IP address to query.</p>
+     * 
      * <strong>example:</strong>
      * <p>47.92.x.x</p>
      */
@@ -73,6 +103,8 @@ public class DescribeVpcFirewallDomainRelationListRequest extends TeaModel {
     public String srcIP;
 
     /**
+     * <p>The ID of the source VPC.</p>
+     * 
      * <strong>example:</strong>
      * <p>vpc-t4nlt09olhpazpoeg****</p>
      */
@@ -80,6 +112,7 @@ public class DescribeVpcFirewallDomainRelationListRequest extends TeaModel {
     public String srcVpcId;
 
     /**
+     * <p>The beginning of the time range to query. The value is a UNIX timestamp. Unit: seconds.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

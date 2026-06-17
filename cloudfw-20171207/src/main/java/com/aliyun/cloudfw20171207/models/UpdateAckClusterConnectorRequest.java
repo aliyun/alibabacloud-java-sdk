@@ -5,6 +5,10 @@ import com.aliyun.tea.*;
 
 public class UpdateAckClusterConnectorRequest extends TeaModel {
     /**
+     * <p>The ID of the ACK cluster connector. You can call the <a href="~~DescribeAckClusterConnectors~~">DescribeAckClusterConnectors</a> operation to query the list of ACK cluster connectors.</p>
+     * <ul>
+     * <li><a href="~~DescribeAckClusterConnectors~~">DescribeAckClusterConnectors</a>: Queries a list of ACK cluster connectors.</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +18,8 @@ public class UpdateAckClusterConnectorRequest extends TeaModel {
     public String connectorId;
 
     /**
+     * <p>The name of the ACK cluster connector. The name must be 1 to 64 characters in length and can contain Chinese characters, letters, digits, periods (.), underscores (_), and hyphens (-).</p>
+     * 
      * <strong>example:</strong>
      * <p>ack-cluster-connector-name</p>
      */
@@ -21,6 +27,8 @@ public class UpdateAckClusterConnectorRequest extends TeaModel {
     public String connectorName;
 
     /**
+     * <p>The synchronization interval for the ACK cluster connector. Valid values: 2 to 60. Unit: seconds.</p>
+     * 
      * <strong>example:</strong>
      * <p>30</p>
      */

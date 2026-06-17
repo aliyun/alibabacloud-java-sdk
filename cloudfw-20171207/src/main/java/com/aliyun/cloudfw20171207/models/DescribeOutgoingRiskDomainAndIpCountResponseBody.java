@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeOutgoingRiskDomainAndIpCountResponseBody extends TeaModel {
     /**
+     * <p>The ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>EE258AC0-6EDD-5929-AB47-165E9B54****</p>
      */
@@ -12,6 +14,8 @@ public class DescribeOutgoingRiskDomainAndIpCountResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The number of risk domain names.</p>
+     * 
      * <strong>example:</strong>
      * <p>6</p>
      */
@@ -19,6 +23,8 @@ public class DescribeOutgoingRiskDomainAndIpCountResponseBody extends TeaModel {
     public Long riskDomainCount;
 
     /**
+     * <p>The number of risk IP addresses.</p>
+     * 
      * <strong>example:</strong>
      * <p>47</p>
      */
@@ -26,6 +32,8 @@ public class DescribeOutgoingRiskDomainAndIpCountResponseBody extends TeaModel {
     public Long riskIpCount;
 
     /**
+     * <p>The total number of entries.</p>
+     * 
      * <strong>example:</strong>
      * <p>6</p>
      */

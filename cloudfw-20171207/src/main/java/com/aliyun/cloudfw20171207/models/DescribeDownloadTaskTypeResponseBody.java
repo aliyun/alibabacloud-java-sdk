@@ -14,13 +14,13 @@ public class DescribeDownloadTaskTypeResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The task types.</p>
+     * <p>The list of task types.</p>
      */
     @NameInMap("TaskTypeArray")
     public java.util.List<DescribeDownloadTaskTypeResponseBodyTaskTypeArray> taskTypeArray;
 
     /**
-     * <p>The total number of entries returned.</p>
+     * <p>The total number of entries.</p>
      * 
      * <strong>example:</strong>
      * <p>3</p>
@@ -62,7 +62,7 @@ public class DescribeDownloadTaskTypeResponseBody extends TeaModel {
          * <p>The name of the task type.</p>
          * 
          * <strong>example:</strong>
-         * <p>Internet Boundary Firewall Assets</p>
+         * <p>Internet Border Firewall Assets</p>
          */
         @NameInMap("TaskName")
         public String taskName;

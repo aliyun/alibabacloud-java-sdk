@@ -4,16 +4,24 @@ package com.aliyun.cloudfw20171207.models;
 import com.aliyun.tea.*;
 
 public class DescribeUserIPSWhitelistResponseBody extends TeaModel {
+    /**
+     * <p>The list of IPv6 whitelists for the IPS on the Internet Border.</p>
+     */
     @NameInMap("Ipv6Whitelists")
     public java.util.List<DescribeUserIPSWhitelistResponseBodyIpv6Whitelists> ipv6Whitelists;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>04F788A5-6A47-5EA9-AC30-CA4DB98AD520</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The list of IPv4 whitelists for the IPS on the Internet Border.</p>
+     */
     @NameInMap("Whitelists")
     public java.util.List<DescribeUserIPSWhitelistResponseBodyWhitelists> whitelists;
 
@@ -48,6 +56,8 @@ public class DescribeUserIPSWhitelistResponseBody extends TeaModel {
 
     public static class DescribeUserIPSWhitelistResponseBodyIpv6Whitelists extends TeaModel {
         /**
+         * <p>The direction of IPv6 traffic on the Internet Border.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -55,6 +65,8 @@ public class DescribeUserIPSWhitelistResponseBody extends TeaModel {
         public Long direction;
 
         /**
+         * <p>The type of address in the IPv6 whitelist for the Internet.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -62,16 +74,29 @@ public class DescribeUserIPSWhitelistResponseBody extends TeaModel {
         public Long listType;
 
         /**
+         * <p>The value of the IPv6 whitelist on the Internet Border.</p>
+         * <ul>
+         * <li><p>If the whitelist type is <code>custom input</code>: the name of the address book.</p>
+         * </li>
+         * <li><p>If the whitelist type is <code>address book reference</code>: an IPv6 address.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>2408:400a:81a:7900:a77d:ea36:fcbf:de40/128</p>
          */
         @NameInMap("ListValue")
         public String listValue;
 
+        /**
+         * <p>The list of IPv6 whitelists for the Internet.</p>
+         */
         @NameInMap("WhiteListValue")
         public java.util.List<String> whiteListValue;
 
         /**
+         * <p>The type of source or destination for which the IPv6 whitelist on the Internet Border takes effect.</p>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */
@@ -127,6 +152,8 @@ public class DescribeUserIPSWhitelistResponseBody extends TeaModel {
 
     public static class DescribeUserIPSWhitelistResponseBodyWhitelists extends TeaModel {
         /**
+         * <p>The direction of IPv4 traffic on the Internet Border.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -134,6 +161,8 @@ public class DescribeUserIPSWhitelistResponseBody extends TeaModel {
         public Long direction;
 
         /**
+         * <p>The type of address in the IPv4 whitelist for the Internet.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -141,16 +170,29 @@ public class DescribeUserIPSWhitelistResponseBody extends TeaModel {
         public Long listType;
 
         /**
+         * <p>The value of the IPv4 whitelist on the Internet Border.</p>
+         * <ul>
+         * <li><p>If the whitelist type is <code>custom input</code>: the name of the address book.</p>
+         * </li>
+         * <li><p>If the whitelist type is <code>address book reference</code>: an IPv4 address.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>10.10.200.4/32,10.10.200.25/32</p>
          */
         @NameInMap("ListValue")
         public String listValue;
 
+        /**
+         * <p>The list of IPv4 whitelists for the Internet.</p>
+         */
         @NameInMap("WhiteListValue")
         public java.util.List<String> whiteListValue;
 
         /**
+         * <p>The type of source or destination for which the IPv4 whitelist on the Internet Border takes effect.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */

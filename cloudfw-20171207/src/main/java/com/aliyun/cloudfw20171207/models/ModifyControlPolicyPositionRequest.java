@@ -5,10 +5,12 @@ import com.aliyun.tea.*;
 
 public class ModifyControlPolicyPositionRequest extends TeaModel {
     /**
-     * <p>The direction of the traffic to which the IPv4 access control policy applies. Valid values:</p>
+     * <p>The traffic direction of the IPv4 access control policy for the Internet firewall. Valid values:</p>
      * <ul>
-     * <li>in: inbound traffic</li>
-     * <li>out: outbound traffic</li>
+     * <li><p>in: inbound traffic.</p>
+     * </li>
+     * <li><p>out: outbound traffic.</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -19,10 +21,12 @@ public class ModifyControlPolicyPositionRequest extends TeaModel {
     public String direction;
 
     /**
-     * <p>The language of the content within the response. Valid values:</p>
+     * <p>The language of the response message. Valid values:</p>
      * <ul>
-     * <li>zh: Chinese (default)</li>
-     * <li>en: English</li>
+     * <li><p>zh (default): Chinese.</p>
+     * </li>
+     * <li><p>en: English.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -32,9 +36,9 @@ public class ModifyControlPolicyPositionRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The new priority of the IPv4 access control policy. You must specify a numeric value for this parameter. The value 1 indicates the highest priority. A larger value indicates a lower priority.</p>
+     * <p>The new priority for the IPv4 access control policy of the Internet firewall. The priority is a number. A smaller number indicates a higher priority. The value 1 indicates the highest priority.</p>
      * <blockquote>
-     * <p> The new priority cannot exceed the priority range of the IPv4 access control policy. Otherwise, an error occurs when you call this operation. Before you call this operation, we recommend that you use the <a href="https://help.aliyun.com/document_detail/138862.html">DescribePolicyPriorUsed</a> operation to query the priority range of the IPv4 access control policy in the specified direction.</p>
+     * <p>The new priority value cannot be outside the range of existing priorities for IPv4 policies. Otherwise, the API call fails. Before you call this operation, call <a href="https://help.aliyun.com/document_detail/138862.html">DescribePolicyPriorUsed</a> to query the priority range of IPv4 policies for a specific traffic direction.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -45,7 +49,7 @@ public class ModifyControlPolicyPositionRequest extends TeaModel {
     public String newOrder;
 
     /**
-     * <p>The original priority of the IPv4 access control policy.</p>
+     * <p>The current priority of the IPv4 access control policy that you want to modify.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -55,7 +59,7 @@ public class ModifyControlPolicyPositionRequest extends TeaModel {
     public String oldOrder;
 
     /**
-     * <p>The source IP address of the request.</p>
+     * <p>The source IP address of the visitor.</p>
      * 
      * <strong>example:</strong>
      * <p>192.0.XX.XX</p>

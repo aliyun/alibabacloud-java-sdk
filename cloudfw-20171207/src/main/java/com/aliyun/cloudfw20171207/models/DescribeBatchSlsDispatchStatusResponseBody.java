@@ -4,13 +4,21 @@ package com.aliyun.cloudfw20171207.models;
 import com.aliyun.tea.*;
 
 public class DescribeBatchSlsDispatchStatusResponseBody extends TeaModel {
+    /**
+     * <p>A list of detailed information about the Logstores.</p>
+     */
     @NameInMap("InfoList")
     public java.util.List<DescribeBatchSlsDispatchStatusResponseBodyInfoList> infoList;
 
+    /**
+     * <p>A list of Simple Log Service projects.</p>
+     */
     @NameInMap("ItemList")
     public java.util.List<DescribeBatchSlsDispatchStatusResponseBodyItemList> itemList;
 
     /**
+     * <p>The log version. A value of 1 indicates that there is one Logstore. A value of 2 indicates that there are two Logstores.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -18,6 +26,8 @@ public class DescribeBatchSlsDispatchStatusResponseBody extends TeaModel {
     public String logVersion;
 
     /**
+     * <p>The name of the Logstore in Simple Log Service.</p>
+     * 
      * <strong>example:</strong>
      * <p>rs-stats</p>
      */
@@ -25,6 +35,8 @@ public class DescribeBatchSlsDispatchStatusResponseBody extends TeaModel {
     public String logstoreName;
 
     /**
+     * <p>The name of the project in Simple Log Service.</p>
+     * 
      * <strong>example:</strong>
      * <p>cloudfirewallnew-project-199053910542****-cn-hangzhou</p>
      */
@@ -32,6 +44,8 @@ public class DescribeBatchSlsDispatchStatusResponseBody extends TeaModel {
     public String projectName;
 
     /**
+     * <p>The ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>7036EBAB-F85F-5AAE-976F-C75AEE59****</p>
      */
@@ -93,6 +107,8 @@ public class DescribeBatchSlsDispatchStatusResponseBody extends TeaModel {
 
     public static class DescribeBatchSlsDispatchStatusResponseBodyInfoListItemList extends TeaModel {
         /**
+         * <p>The configuration status.</p>
+         * 
          * <strong>example:</strong>
          * <p>success_finished</p>
          */
@@ -100,13 +116,22 @@ public class DescribeBatchSlsDispatchStatusResponseBody extends TeaModel {
         public String configStatus;
 
         /**
+         * <p>The name of the delivery type.</p>
+         * 
          * <strong>example:</strong>
-         * <p>互联网流量日志、VPC流量日志、NAT流量日志</p>
+         * <p>internet-traffic-log</p>
          */
         @NameInMap("DispatchName")
         public String dispatchName;
 
         /**
+         * <p>The key for the log categorization. Valid values:</p>
+         * <p><strong>internet_log</strong></p>
+         * <p><strong>vpc_firewall_log</strong></p>
+         * <p><strong>nat_firewall_log</strong></p>
+         * <p><strong>ipv6_firewall_log</strong></p>
+         * <p><strong>dns_firewall_log</strong></p>
+         * 
          * <strong>example:</strong>
          * <p>ipv6_firewall_log</p>
          */
@@ -114,16 +139,23 @@ public class DescribeBatchSlsDispatchStatusResponseBody extends TeaModel {
         public String dispatchValue;
 
         /**
+         * <p>Indicates whether this delivery type is enabled.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
         @NameInMap("Enable")
         public Boolean enable;
 
+        /**
+         * <p>The detailed delivery configurations for the Internet and VPCs.</p>
+         */
         @NameInMap("FilterKeys")
         public java.util.List<String> filterKeys;
 
         /**
+         * <p>The value is fixed to log_type. You can ignore this parameter.</p>
+         * 
          * <strong>example:</strong>
          * <p>log_type</p>
          */
@@ -186,10 +218,15 @@ public class DescribeBatchSlsDispatchStatusResponseBody extends TeaModel {
     }
 
     public static class DescribeBatchSlsDispatchStatusResponseBodyInfoList extends TeaModel {
+        /**
+         * <p>The details of the log delivery configuration.</p>
+         */
         @NameInMap("ItemList")
         public java.util.List<DescribeBatchSlsDispatchStatusResponseBodyInfoListItemList> itemList;
 
         /**
+         * <p>The name of the Logstore in Simple Log Service.</p>
+         * 
          * <strong>example:</strong>
          * <p>cloudfirewall-logstore</p>
          */
@@ -197,6 +234,8 @@ public class DescribeBatchSlsDispatchStatusResponseBody extends TeaModel {
         public String logstoreName;
 
         /**
+         * <p>The name of the project in Simple Log Service.</p>
+         * 
          * <strong>example:</strong>
          * <p>cloudfirewall-project-1204872307283650-cn-hangzhou</p>
          */
@@ -204,6 +243,8 @@ public class DescribeBatchSlsDispatchStatusResponseBody extends TeaModel {
         public String projectName;
 
         /**
+         * <p>\<code>cn\\</code> indicates the Chinese mainland. \<code>intl\\</code> indicates regions outside the Chinese mainland. \<code>global\\</code> indicates global.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn</p>
          */
@@ -251,6 +292,8 @@ public class DescribeBatchSlsDispatchStatusResponseBody extends TeaModel {
 
     public static class DescribeBatchSlsDispatchStatusResponseBodyItemList extends TeaModel {
         /**
+         * <p>The status of the delivery configuration.</p>
+         * 
          * <strong>example:</strong>
          * <p>success_finished</p>
          */
@@ -258,13 +301,17 @@ public class DescribeBatchSlsDispatchStatusResponseBody extends TeaModel {
         public String configStatus;
 
         /**
+         * <p>The name of the log delivery.</p>
+         * 
          * <strong>example:</strong>
-         * <p>互联网流量日志、VPC流量日志、NAT流量日志</p>
+         * <p>internet-traffic-log</p>
          */
         @NameInMap("DispatchName")
         public String dispatchName;
 
         /**
+         * <p>The value of the log to be delivered.</p>
+         * 
          * <strong>example:</strong>
          * <p>internet_log</p>
          */
@@ -272,16 +319,23 @@ public class DescribeBatchSlsDispatchStatusResponseBody extends TeaModel {
         public String dispatchValue;
 
         /**
+         * <p>The delivery status.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
         @NameInMap("Enable")
         public Boolean enable;
 
+        /**
+         * <p>The supported filter conditions.</p>
+         */
         @NameInMap("FilterKeys")
         public java.util.List<String> filterKeys;
 
         /**
+         * <p>The name of the search type.</p>
+         * 
          * <strong>example:</strong>
          * <p>log_type</p>
          */

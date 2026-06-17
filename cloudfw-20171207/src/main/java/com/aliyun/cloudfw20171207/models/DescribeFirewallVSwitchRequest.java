@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeFirewallVSwitchRequest extends TeaModel {
     /**
+     * <p>The instance ID of the VPC border firewall.</p>
+     * 
      * <strong>example:</strong>
      * <p>vfw-tr-5b202e7f0be64611****</p>
      */
@@ -12,6 +14,8 @@ public class DescribeFirewallVSwitchRequest extends TeaModel {
     public String firewallId;
 
     /**
+     * <p>The language of the response. Valid values:</p>
+     * 
      * <strong>example:</strong>
      * <p>zh</p>
      */
@@ -19,6 +23,8 @@ public class DescribeFirewallVSwitchRequest extends TeaModel {
     public String lang;
 
     /**
+     * <p>The UID of the member account.</p>
+     * 
      * <strong>example:</strong>
      * <p>102910763545****</p>
      */
@@ -26,6 +32,8 @@ public class DescribeFirewallVSwitchRequest extends TeaModel {
     public String memberUid;
 
     /**
+     * <p>The page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -33,6 +41,8 @@ public class DescribeFirewallVSwitchRequest extends TeaModel {
     public String pageNo;
 
     /**
+     * <p>The number of the page to return.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -40,6 +50,8 @@ public class DescribeFirewallVSwitchRequest extends TeaModel {
     public String pageSize;
 
     /**
+     * <p>The region ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-beijing</p>
      */
@@ -47,6 +59,8 @@ public class DescribeFirewallVSwitchRequest extends TeaModel {
     public String regionNo;
 
     /**
+     * <p>The ID of the VPC instance.</p>
+     * 
      * <strong>example:</strong>
      * <p>vpc-uf6b5lyul0x******</p>
      */
@@ -54,6 +68,8 @@ public class DescribeFirewallVSwitchRequest extends TeaModel {
     public String vpcId;
 
     /**
+     * <p>The ID of the vSwitch.</p>
+     * 
      * <strong>example:</strong>
      * <p>vsw-bp1sqg9w******</p>
      */

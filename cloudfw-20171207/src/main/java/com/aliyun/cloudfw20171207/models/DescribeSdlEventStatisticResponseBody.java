@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeSdlEventStatisticResponseBody extends TeaModel {
     /**
+     * <p>The number of AI-related leak threats.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -12,6 +14,8 @@ public class DescribeSdlEventStatisticResponseBody extends TeaModel {
     public Long aiSensitiveDataCount;
 
     /**
+     * <p>The total number of assets.</p>
+     * 
      * <strong>example:</strong>
      * <p>32</p>
      */
@@ -19,6 +23,8 @@ public class DescribeSdlEventStatisticResponseBody extends TeaModel {
     public Long assetCount;
 
     /**
+     * <p>The ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>C5DDD596-1191-5F36-A504-8733045A****</p>
      */
@@ -26,6 +32,8 @@ public class DescribeSdlEventStatisticResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The number of sensitive data leak events.</p>
+     * 
      * <strong>example:</strong>
      * <p>2</p>
      */
@@ -33,6 +41,8 @@ public class DescribeSdlEventStatisticResponseBody extends TeaModel {
     public Long sensitiveDataCount;
 
     /**
+     * <p>The total number of entries.</p>
+     * 
      * <strong>example:</strong>
      * <p>2</p>
      */
@@ -40,6 +50,8 @@ public class DescribeSdlEventStatisticResponseBody extends TeaModel {
     public Long totalCount;
 
     /**
+     * <p>The total traffic. Unit: bytes.</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */

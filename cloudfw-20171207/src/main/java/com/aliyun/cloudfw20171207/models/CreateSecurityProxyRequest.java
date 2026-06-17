@@ -5,10 +5,12 @@ import com.aliyun.tea.*;
 
 public class CreateSecurityProxyRequest extends TeaModel {
     /**
-     * <p>The status of the NAT firewall. Valid values:</p>
+     * <p>The security protection switch. Valid values:</p>
      * <ul>
-     * <li><strong>open</strong>: enabled</li>
-     * <li><strong>close</strong>: disabled</li>
+     * <li><p><strong>open</strong>: on</p>
+     * </li>
+     * <li><p><strong>close</strong>: off</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,10 +20,12 @@ public class CreateSecurityProxyRequest extends TeaModel {
     public String firewallSwitch;
 
     /**
-     * <p>The language of the content within the response. Valid values:</p>
+     * <p>The language of the response. Valid values:</p>
      * <ul>
-     * <li><strong>zh</strong> (default): Chinese</li>
-     * <li><strong>en</strong>: English</li>
+     * <li><p><strong>zh</strong> (default): Chinese</p>
+     * </li>
+     * <li><p><strong>en</strong>: English</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -31,36 +35,36 @@ public class CreateSecurityProxyRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The ID of the NAT gateway.</p>
+     * <p>The ID of the NAT Gateway.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>ngw-bp1okz6k7s4n4mnk5f1g3</p>
+     * <p>ngw-bp1okz6k7******</p>
      */
     @NameInMap("NatGatewayId")
     public String natGatewayId;
 
     /**
-     * <p>The routes to be switched to the NAT gateway.</p>
+     * <p>The list of routes of the NAT Gateway that you want to switch.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("NatRouteEntryList")
     public java.util.List<CreateSecurityProxyRequestNatRouteEntryList> natRouteEntryList;
 
     /**
-     * <p>The name of the NAT firewall. The name must be 4 to 50 characters in length, and can contain letters, digits, and underscores (_). However, it cannot start with an underscore.</p>
+     * <p>The name of the NAT firewall. The name must be 4 to 50 characters in length. It can contain letters, digits, Chinese characters, and underscores (<em>). The name cannot start with an underscore (</em>).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>nat-idmp-fir</p>
+     * <p>nat-firewall</p>
      */
     @NameInMap("ProxyName")
     public String proxyName;
 
     /**
-     * <p>The region ID of the virtual private cloud (VPC).</p>
+     * <p>The region ID of the VPC.</p>
      * <blockquote>
-     * <p> For more information about Cloud Firewall supported regions, see <a href="https://help.aliyun.com/document_detail/195657.html">Supported regions</a>.</p>
+     * <p>For more information about the regions where Cloud Firewall is available, see <a href="https://help.aliyun.com/document_detail/195657.html">Supported regions</a>.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -71,10 +75,12 @@ public class CreateSecurityProxyRequest extends TeaModel {
     public String regionNo;
 
     /**
-     * <p>Specifies whether to enable the strict mode. Valid values:</p>
+     * <p>Specifies whether to enable strict mode.</p>
      * <ul>
-     * <li>1: yes</li>
-     * <li>0: no</li>
+     * <li><p>1: enables strict mode</p>
+     * </li>
+     * <li><p>0: disables strict mode</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -84,20 +90,22 @@ public class CreateSecurityProxyRequest extends TeaModel {
     public Integer strictMode;
 
     /**
-     * <p>The ID of the VPC.</p>
+     * <p>The ID of the VPC instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>vpc-uf6b5lyul0xfgv74i01ph</p>
+     * <p>vpc-uf6b5lyul0x******</p>
      */
     @NameInMap("VpcId")
     public String vpcId;
 
     /**
-     * <p>The mode of the vSwitch that you want to use. Valid values:</p>
+     * <p>Specifies whether to use the automatic vSwitch selection feature. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: automatic</li>
-     * <li><strong>false</strong>: manual</li>
+     * <li><p><strong>true</strong>: automatic mode</p>
+     * </li>
+     * <li><p><strong>false</strong>: manual mode</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -107,7 +115,7 @@ public class CreateSecurityProxyRequest extends TeaModel {
     public String vswitchAuto;
 
     /**
-     * <p>The CIDR block of the vSwitch.</p>
+     * <p>The CIDR block of the vSwitch. This parameter is required if you use the automatic vSwitch selection feature.</p>
      * 
      * <strong>example:</strong>
      * <p>0.0.0.0/0</p>
@@ -116,10 +124,10 @@ public class CreateSecurityProxyRequest extends TeaModel {
     public String vswitchCidr;
 
     /**
-     * <p>The ID of the vSwitch. This parameter is required if you set the VswitchAuto parameter to true.</p>
+     * <p>The ID of the vSwitch. This parameter is required if you use the manual vSwitch selection feature.</p>
      * 
      * <strong>example:</strong>
-     * <p>vsw-bp1sqg9wms9w9y1uxcs1x</p>
+     * <p>vsw-bp1sqg9w******</p>
      */
     @NameInMap("VswitchId")
     public String vswitchId;
@@ -229,11 +237,11 @@ public class CreateSecurityProxyRequest extends TeaModel {
         public String destinationCidr;
 
         /**
-         * <p>The next hop of the original NAT gateway.</p>
+         * <p>The next hop of the original NAT Gateway.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>ngw-bp1okz6k7s4n4mnk5f1g3</p>
+         * <p>ngw-bp1okz6******</p>
          */
         @NameInMap("NextHopId")
         public String nextHopId;
@@ -249,11 +257,11 @@ public class CreateSecurityProxyRequest extends TeaModel {
         public String nextHopType;
 
         /**
-         * <p>The route table to which the default route of the NAT gateway belongs.</p>
+         * <p>The route table that contains the default route of the NAT Gateway.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>vtb-2ze13wrgz7wsu9yiqeffg</p>
+         * <p>vtb-2ze1******</p>
          */
         @NameInMap("RouteTableId")
         public String routeTableId;

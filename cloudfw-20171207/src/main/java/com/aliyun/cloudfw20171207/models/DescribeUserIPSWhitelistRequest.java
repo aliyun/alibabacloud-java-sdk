@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeUserIPSWhitelistRequest extends TeaModel {
     /**
+     * <p>The language.</p>
+     * 
      * <strong>example:</strong>
      * <p>zh</p>
      */
@@ -12,6 +14,8 @@ public class DescribeUserIPSWhitelistRequest extends TeaModel {
     public String lang;
 
     /**
+     * <p>The source IP address of the visitor.</p>
+     * 
      * <strong>example:</strong>
      * <p>47.100.XX.XX</p>
      */

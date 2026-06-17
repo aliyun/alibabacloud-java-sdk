@@ -5,10 +5,12 @@ import com.aliyun.tea.*;
 
 public class ModifyVpcFirewallSwitchStatusRequest extends TeaModel {
     /**
-     * <p>Specifies whether to enable the VPC firewall. Valid values:</p>
+     * <p>The status of the VPC firewall. Valid values:</p>
      * <ul>
-     * <li><strong>open</strong>: yes</li>
-     * <li><strong>close</strong>: no</li>
+     * <li><p><strong>open</strong>: enabled.</p>
+     * </li>
+     * <li><p><strong>close</strong>: disabled.</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -19,10 +21,12 @@ public class ModifyVpcFirewallSwitchStatusRequest extends TeaModel {
     public String firewallSwitch;
 
     /**
-     * <p>The language of the content within the request and response. Valid values:</p>
+     * <p>The language of the request and response. Valid values:</p>
      * <ul>
-     * <li><strong>zh</strong>: Chinese (default)</li>
-     * <li><strong>en</strong>: English</li>
+     * <li><p><strong>zh</strong> (default): Chinese.</p>
+     * </li>
+     * <li><p><strong>en</strong>: English.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -32,7 +36,7 @@ public class ModifyVpcFirewallSwitchStatusRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The UID of the member that is managed by your Alibaba Cloud account.</p>
+     * <p>The UID of the member account.</p>
      * 
      * <strong>example:</strong>
      * <p>258039427902****</p>
@@ -43,7 +47,7 @@ public class ModifyVpcFirewallSwitchStatusRequest extends TeaModel {
     /**
      * <p>The instance ID of the VPC firewall.</p>
      * <blockquote>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/342932.html">DescribeVpcFirewallList</a> operation to query the instance IDs of VPC firewalls.</p>
+     * <p>Call the <a href="https://help.aliyun.com/document_detail/342932.html">DescribeVpcFirewallList</a> API call to query the instance ID of the VPC firewall.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 

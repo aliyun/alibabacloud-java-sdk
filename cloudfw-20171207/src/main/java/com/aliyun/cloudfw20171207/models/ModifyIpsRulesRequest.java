@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ModifyIpsRulesRequest extends TeaModel {
     /**
+     * <p>The type of the Cloud Firewall.</p>
+     * 
      * <strong>example:</strong>
      * <p>VpcFirewall</p>
      */
@@ -12,6 +14,8 @@ public class ModifyIpsRulesRequest extends TeaModel {
     public String firewallType;
 
     /**
+     * <p>The language of the request and response.</p>
+     * 
      * <strong>example:</strong>
      * <p>zh</p>
      */
@@ -19,6 +23,7 @@ public class ModifyIpsRulesRequest extends TeaModel {
     public String lang;
 
     /**
+     * <p>The action of the rule.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -28,6 +33,7 @@ public class ModifyIpsRulesRequest extends TeaModel {
     public String ruleAction;
 
     /**
+     * <p>The type of the rule.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -37,6 +43,7 @@ public class ModifyIpsRulesRequest extends TeaModel {
     public String ruleType;
 
     /**
+     * <p>The list of rules.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -46,6 +53,8 @@ public class ModifyIpsRulesRequest extends TeaModel {
     public String rules;
 
     /**
+     * <p>The source IP address of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>218.1.147.XXX</p>
      */

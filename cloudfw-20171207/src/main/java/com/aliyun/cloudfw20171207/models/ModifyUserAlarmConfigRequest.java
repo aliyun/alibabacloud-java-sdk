@@ -5,32 +5,42 @@ import com.aliyun.tea.*;
 
 public class ModifyUserAlarmConfigRequest extends TeaModel {
     /**
+     * <p>Alert configuration.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("AlarmConfig")
     public java.util.List<ModifyUserAlarmConfigRequestAlarmConfig> alarmConfig;
 
     /**
+     * <p>Language for message notifications.</p>
+     * 
      * <strong>example:</strong>
      * <p>zh</p>
      */
     @NameInMap("AlarmLang")
     public String alarmLang;
 
+    /**
+     * <p>Contact configuration.</p>
+     * 
+     * <strong>if can be null:</strong>
+     * <p>false</p>
+     */
     @NameInMap("ContactConfig")
     public java.util.List<ModifyUserAlarmConfigRequestContactConfig> contactConfig;
 
     /**
+     * <p>Language used for requests and responses.</p>
+     * 
      * <strong>example:</strong>
      * <p>zh</p>
      */
     @NameInMap("Lang")
     public String lang;
 
-    @NameInMap("NotifyConfig")
-    public java.util.List<ModifyUserAlarmConfigRequestNotifyConfig> notifyConfig;
-
     /**
+     * <p>Source IP address of the requester.</p>
+     * 
      * <strong>example:</strong>
      * <p>117.129.64.XXX</p>
      */
@@ -38,6 +48,8 @@ public class ModifyUserAlarmConfigRequest extends TeaModel {
     public String sourceIp;
 
     /**
+     * <p>Use default contact method.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -81,14 +93,6 @@ public class ModifyUserAlarmConfigRequest extends TeaModel {
         return this.lang;
     }
 
-    public ModifyUserAlarmConfigRequest setNotifyConfig(java.util.List<ModifyUserAlarmConfigRequestNotifyConfig> notifyConfig) {
-        this.notifyConfig = notifyConfig;
-        return this;
-    }
-    public java.util.List<ModifyUserAlarmConfigRequestNotifyConfig> getNotifyConfig() {
-        return this.notifyConfig;
-    }
-
     public ModifyUserAlarmConfigRequest setSourceIp(String sourceIp) {
         this.sourceIp = sourceIp;
         return this;
@@ -107,6 +111,8 @@ public class ModifyUserAlarmConfigRequest extends TeaModel {
 
     public static class ModifyUserAlarmConfigRequestAlarmConfig extends TeaModel {
         /**
+         * <p>Hour for alert notifications.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -114,6 +120,8 @@ public class ModifyUserAlarmConfigRequest extends TeaModel {
         public String alarmHour;
 
         /**
+         * <p>Notification method.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -121,6 +129,8 @@ public class ModifyUserAlarmConfigRequest extends TeaModel {
         public String alarmNotify;
 
         /**
+         * <p>Alert period.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -128,6 +138,8 @@ public class ModifyUserAlarmConfigRequest extends TeaModel {
         public String alarmPeriod;
 
         /**
+         * <p>Alarm metric.</p>
+         * 
          * <strong>example:</strong>
          * <p>bandwidth</p>
          */
@@ -135,6 +147,8 @@ public class ModifyUserAlarmConfigRequest extends TeaModel {
         public String alarmType;
 
         /**
+         * <p>Alert notification message.</p>
+         * 
          * <strong>example:</strong>
          * <p>on</p>
          */
@@ -142,6 +156,8 @@ public class ModifyUserAlarmConfigRequest extends TeaModel {
         public String alarmValue;
 
         /**
+         * <p>Day of the week for alert notifications.</p>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */
@@ -205,6 +221,8 @@ public class ModifyUserAlarmConfigRequest extends TeaModel {
 
     public static class ModifyUserAlarmConfigRequestContactConfig extends TeaModel {
         /**
+         * <p>Mailbox.</p>
+         * 
          * <strong>example:</strong>
          * <p>91632****@qq.com</p>
          */
@@ -212,6 +230,8 @@ public class ModifyUserAlarmConfigRequest extends TeaModel {
         public String email;
 
         /**
+         * <p>Mobile number.</p>
+         * 
          * <strong>example:</strong>
          * <p>1351234****</p>
          */
@@ -219,6 +239,8 @@ public class ModifyUserAlarmConfigRequest extends TeaModel {
         public String mobilePhone;
 
         /**
+         * <p>Alert notification recipient.</p>
+         * 
          * <strong>example:</strong>
          * <p>Ben</p>
          */
@@ -226,11 +248,13 @@ public class ModifyUserAlarmConfigRequest extends TeaModel {
         public String name;
 
         /**
+         * <p>Alert status.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
         @NameInMap("Status")
-        public String status;
+        public Integer status;
 
         public static ModifyUserAlarmConfigRequestContactConfig build(java.util.Map<String, ?> map) throws Exception {
             ModifyUserAlarmConfigRequestContactConfig self = new ModifyUserAlarmConfigRequestContactConfig();
@@ -261,50 +285,12 @@ public class ModifyUserAlarmConfigRequest extends TeaModel {
             return this.name;
         }
 
-        public ModifyUserAlarmConfigRequestContactConfig setStatus(String status) {
+        public ModifyUserAlarmConfigRequestContactConfig setStatus(Integer status) {
             this.status = status;
             return this;
         }
-        public String getStatus() {
+        public Integer getStatus() {
             return this.status;
-        }
-
-    }
-
-    public static class ModifyUserAlarmConfigRequestNotifyConfig extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>mail</p>
-         */
-        @NameInMap("NotifyType")
-        public String notifyType;
-
-        /**
-         * <strong>example:</strong>
-         * <p>1351234****</p>
-         */
-        @NameInMap("NotifyValue")
-        public String notifyValue;
-
-        public static ModifyUserAlarmConfigRequestNotifyConfig build(java.util.Map<String, ?> map) throws Exception {
-            ModifyUserAlarmConfigRequestNotifyConfig self = new ModifyUserAlarmConfigRequestNotifyConfig();
-            return TeaModel.build(map, self);
-        }
-
-        public ModifyUserAlarmConfigRequestNotifyConfig setNotifyType(String notifyType) {
-            this.notifyType = notifyType;
-            return this;
-        }
-        public String getNotifyType() {
-            return this.notifyType;
-        }
-
-        public ModifyUserAlarmConfigRequestNotifyConfig setNotifyValue(String notifyValue) {
-            this.notifyValue = notifyValue;
-            return this;
-        }
-        public String getNotifyValue() {
-            return this.notifyValue;
         }
 
     }

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeInternetServiceNameListRequest extends TeaModel {
     /**
+     * <p>The language of the response.</p>
+     * 
      * <strong>example:</strong>
      * <p>zh</p>
      */
@@ -12,6 +14,8 @@ public class DescribeInternetServiceNameListRequest extends TeaModel {
     public String lang;
 
     /**
+     * <p>The source IP address of the visitor.</p>
+     * 
      * <strong>example:</strong>
      * <p>140.240.17.XXX</p>
      */

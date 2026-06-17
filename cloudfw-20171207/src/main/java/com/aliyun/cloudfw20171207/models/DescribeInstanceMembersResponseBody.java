@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeInstanceMembersResponseBody extends TeaModel {
     /**
-     * <p>The information about the member.</p>
+     * <p>The information about the Cloud Firewall member accounts.</p>
      */
     @NameInMap("Members")
     public java.util.List<DescribeInstanceMembersResponseBodyMembers> members;
@@ -17,7 +17,7 @@ public class DescribeInstanceMembersResponseBody extends TeaModel {
     public DescribeInstanceMembersResponseBodyPageInfo pageInfo;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>A531AE1A-FBA2-48B6-BAB8-84D02BD409EE</p>
@@ -56,7 +56,7 @@ public class DescribeInstanceMembersResponseBody extends TeaModel {
 
     public static class DescribeInstanceMembersResponseBodyMembers extends TeaModel {
         /**
-         * <p>The time when the member was added to Cloud Firewall. The value is a timestamp. Unit: seconds.</p>
+         * <p>The time when the member account was added to Cloud Firewall. This value is a UNIX timestamp. Unit: seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1615189819</p>
@@ -65,7 +65,7 @@ public class DescribeInstanceMembersResponseBody extends TeaModel {
         public Integer createTime;
 
         /**
-         * <p>The remarks of the member.</p>
+         * <p>The description of the Cloud Firewall member account.</p>
          * 
          * <strong>example:</strong>
          * <p>renewal</p>
@@ -74,7 +74,7 @@ public class DescribeInstanceMembersResponseBody extends TeaModel {
         public String memberDesc;
 
         /**
-         * <p>The name of the member.</p>
+         * <p>The name of the Cloud Firewall member account.</p>
          * 
          * <strong>example:</strong>
          * <p>cloudfirewall_2</p>
@@ -83,10 +83,12 @@ public class DescribeInstanceMembersResponseBody extends TeaModel {
         public String memberDisplayName;
 
         /**
-         * <p>The status of the member. Valid values:</p>
+         * <p>The status of the Cloud Firewall member account. Valid values:</p>
          * <ul>
-         * <li><strong>normal</strong></li>
-         * <li><strong>deleting</strong></li>
+         * <li><p><strong>normal</strong>: Normal</p>
+         * </li>
+         * <li><p><strong>deleting</strong>: Deleting</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -96,7 +98,7 @@ public class DescribeInstanceMembersResponseBody extends TeaModel {
         public String memberStatus;
 
         /**
-         * <p>The UID of the member.</p>
+         * <p>The UID of the Cloud Firewall member account.</p>
          * 
          * <strong>example:</strong>
          * <p>258039427902****</p>
@@ -105,7 +107,7 @@ public class DescribeInstanceMembersResponseBody extends TeaModel {
         public Long memberUid;
 
         /**
-         * <p>The time when the member was last modified. The value is a timestamp. Unit: seconds.</p>
+         * <p>The time when the member account was last modified. This value is a UNIX timestamp. Unit: seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1615189819</p>
@@ -170,7 +172,7 @@ public class DescribeInstanceMembersResponseBody extends TeaModel {
 
     public static class DescribeInstanceMembersResponseBodyPageInfo extends TeaModel {
         /**
-         * <p>The page number.</p>
+         * <p>The page number of the returned page.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -179,7 +181,7 @@ public class DescribeInstanceMembersResponseBody extends TeaModel {
         public Integer currentPage;
 
         /**
-         * <p>The number of entries per page.</p>
+         * <p>The number of entries returned per page.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -188,7 +190,7 @@ public class DescribeInstanceMembersResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
-         * <p>The total number of the members.</p>
+         * <p>The total number of Cloud Firewall member accounts.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>

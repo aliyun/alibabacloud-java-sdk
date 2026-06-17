@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeVpcFirewallDropTrafficTrendRequest extends TeaModel {
     /**
+     * <p>The end of the time range to query. This value is a UNIX timestamp. Unit: seconds.</p>
+     * 
      * <strong>example:</strong>
      * <p>1747792853</p>
      */
@@ -12,6 +14,14 @@ public class DescribeVpcFirewallDropTrafficTrendRequest extends TeaModel {
     public Long endTime;
 
     /**
+     * <p>The sort order. Valid values:</p>
+     * <ul>
+     * <li><p><strong>asc</strong>: ascending order.</p>
+     * </li>
+     * <li><p><strong>desc</strong>: descending order. This is the default value.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>desc</p>
      */
@@ -19,6 +29,8 @@ public class DescribeVpcFirewallDropTrafficTrendRequest extends TeaModel {
     public String order;
 
     /**
+     * <p>The sorting criterion.</p>
+     * 
      * <strong>example:</strong>
      * <p>LastTime</p>
      */
@@ -26,6 +38,8 @@ public class DescribeVpcFirewallDropTrafficTrendRequest extends TeaModel {
     public String sort;
 
     /**
+     * <p>The source IP address of the visitor.</p>
+     * 
      * <strong>example:</strong>
      * <p>183.237.161.XXX</p>
      */
@@ -33,6 +47,8 @@ public class DescribeVpcFirewallDropTrafficTrendRequest extends TeaModel {
     public String sourceIp;
 
     /**
+     * <p>The start of the time range to query. This value is a UNIX timestamp. Unit: seconds.</p>
+     * 
      * <strong>example:</strong>
      * <p>1656664560</p>
      */
@@ -40,6 +56,8 @@ public class DescribeVpcFirewallDropTrafficTrendRequest extends TeaModel {
     public Long startTime;
 
     /**
+     * <p>The time point of the traffic. This value is a UNIX timestamp. Unit: seconds.</p>
+     * 
      * <strong>example:</strong>
      * <p>1739337840</p>
      */

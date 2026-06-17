@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeVpcFirewallPrecheckDetailRequest extends TeaModel {
     /**
+     * <p>The ID of the CEN instance.</p>
+     * 
      * <strong>example:</strong>
      * <p>cen-hxsqf2bv6di1a****</p>
      */
@@ -12,6 +14,14 @@ public class DescribeVpcFirewallPrecheckDetailRequest extends TeaModel {
     public String cenId;
 
     /**
+     * <p>The language of the response. Valid values:</p>
+     * <ul>
+     * <li><p><strong>zh</strong> (default): Chinese.</p>
+     * </li>
+     * <li><p><strong>en</strong>: English.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>zh</p>
      */
@@ -19,6 +29,8 @@ public class DescribeVpcFirewallPrecheckDetailRequest extends TeaModel {
     public String lang;
 
     /**
+     * <p>The UID of the member account in Cloud Firewall.</p>
+     * 
      * <strong>example:</strong>
      * <p>134388541648****</p>
      */
@@ -26,6 +38,14 @@ public class DescribeVpcFirewallPrecheckDetailRequest extends TeaModel {
     public String memberUid;
 
     /**
+     * <p>The type of the network instance. Valid values:</p>
+     * <ul>
+     * <li><p><strong>cen_firewall</strong>: a firewall for a CEN instance (Basic Edition)</p>
+     * </li>
+     * <li><p><strong>cen_tr_firewall</strong>: a firewall for a CEN instance with a transit router</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>cen_firewall</p>
      */
@@ -33,6 +53,8 @@ public class DescribeVpcFirewallPrecheckDetailRequest extends TeaModel {
     public String networkInstanceType;
 
     /**
+     * <p>The region ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
      */
@@ -40,6 +62,8 @@ public class DescribeVpcFirewallPrecheckDetailRequest extends TeaModel {
     public String region;
 
     /**
+     * <p>The ID of the transit router instance.</p>
+     * 
      * <strong>example:</strong>
      * <p>tr-2vcn4u2g86tm72****</p>
      */
@@ -47,6 +71,8 @@ public class DescribeVpcFirewallPrecheckDetailRequest extends TeaModel {
     public String transitRouterId;
 
     /**
+     * <p>The ID of the VPC.</p>
+     * 
      * <strong>example:</strong>
      * <p>vpc-2zev8s8rxao33xt****</p>
      */

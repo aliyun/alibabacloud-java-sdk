@@ -4,10 +4,15 @@ package com.aliyun.cloudfw20171207.models;
 import com.aliyun.tea.*;
 
 public class DescribeConfiguredDestinationIPResponseBody extends TeaModel {
+    /**
+     * <p>The list of destinations.</p>
+     */
     @NameInMap("Destinations")
     public java.util.List<DescribeConfiguredDestinationIPResponseBodyDestinations> destinations;
 
     /**
+     * <p>The page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -15,6 +20,8 @@ public class DescribeConfiguredDestinationIPResponseBody extends TeaModel {
     public Integer pageNo;
 
     /**
+     * <p>The number of entries per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -22,6 +29,8 @@ public class DescribeConfiguredDestinationIPResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>F0AE91F8-E6C5-50D4-983F-FC53672****</p>
      */
@@ -29,6 +38,8 @@ public class DescribeConfiguredDestinationIPResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total number of entries.</p>
+     * 
      * <strong>example:</strong>
      * <p>32</p>
      */
@@ -81,20 +92,36 @@ public class DescribeConfiguredDestinationIPResponseBody extends TeaModel {
     }
 
     public static class DescribeConfiguredDestinationIPResponseBodyDestinations extends TeaModel {
+        /**
+         * <p>The remarks.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
+         */
         @NameInMap("Comment")
         public String comment;
 
         /**
+         * <p>The destination IP address.</p>
+         * 
          * <strong>example:</strong>
          * <p>1.1.1.1</p>
          */
         @NameInMap("DestinationIP")
         public String destinationIP;
 
+        /**
+         * <p>The ISP of the destination.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>telecom</p>
+         */
         @NameInMap("DestinationISP")
         public String destinationISP;
 
         /**
+         * <p>The destination region.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-shenzhen</p>
          */
@@ -102,6 +129,8 @@ public class DescribeConfiguredDestinationIPResponseBody extends TeaModel {
         public String destinationRegion;
 
         /**
+         * <p>The time of the operation. The value is a UNIX timestamp. Unit: seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>1534408189</p>
          */

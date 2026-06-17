@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeControlPolicyDomainResolveRequest extends TeaModel {
     /**
+     * <p>The domain name.</p>
+     * 
      * <strong>example:</strong>
      * <p>example.com</p>
      */
@@ -12,6 +14,8 @@ public class DescribeControlPolicyDomainResolveRequest extends TeaModel {
     public String domain;
 
     /**
+     * <p>The type of the Cloud Firewall instance.</p>
+     * 
      * <strong>example:</strong>
      * <p>internet</p>
      */
@@ -19,6 +23,8 @@ public class DescribeControlPolicyDomainResolveRequest extends TeaModel {
     public String firewallType;
 
     /**
+     * <p>The supported ip version.</p>
+     * 
      * <strong>example:</strong>
      * <p>4</p>
      */
@@ -26,6 +32,8 @@ public class DescribeControlPolicyDomainResolveRequest extends TeaModel {
     public Integer ipVersion;
 
     /**
+     * <p>The language of the request and response.</p>
+     * 
      * <strong>example:</strong>
      * <p>zh</p>
      */
@@ -33,6 +41,8 @@ public class DescribeControlPolicyDomainResolveRequest extends TeaModel {
     public String lang;
 
     /**
+     * <p>The region ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-beijing</p>
      */

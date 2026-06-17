@@ -4,26 +4,36 @@ package com.aliyun.cloudfw20171207.models;
 import com.aliyun.tea.*;
 
 public class DescribeUserAlarmConfigResponseBody extends TeaModel {
+    /**
+     * <p>The alarm configuration.</p>
+     */
     @NameInMap("AlarmConfig")
     public java.util.List<DescribeUserAlarmConfigResponseBodyAlarmConfig> alarmConfig;
 
     /**
+     * <p>The language of the alarm notifications.</p>
+     * 
      * <strong>example:</strong>
      * <p>zh</p>
      */
     @NameInMap("AlarmLang")
     public String alarmLang;
 
+    /**
+     * <p>The contact information.</p>
+     */
     @NameInMap("ContactConfig")
     public java.util.List<DescribeUserAlarmConfigResponseBodyContactConfig> contactConfig;
 
+    /**
+     * <p>Information about the default alarm contact.</p>
+     */
     @NameInMap("DefaultContact")
     public DescribeUserAlarmConfigResponseBodyDefaultContact defaultContact;
 
-    @NameInMap("NotifyConfig")
-    public java.util.List<DescribeUserAlarmConfigResponseBodyNotifyConfig> notifyConfig;
-
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>9D250177-4F11-58B8-9AFE-A4624FF1****</p>
      */
@@ -67,14 +77,6 @@ public class DescribeUserAlarmConfigResponseBody extends TeaModel {
         return this.defaultContact;
     }
 
-    public DescribeUserAlarmConfigResponseBody setNotifyConfig(java.util.List<DescribeUserAlarmConfigResponseBodyNotifyConfig> notifyConfig) {
-        this.notifyConfig = notifyConfig;
-        return this;
-    }
-    public java.util.List<DescribeUserAlarmConfigResponseBodyNotifyConfig> getNotifyConfig() {
-        return this.notifyConfig;
-    }
-
     public DescribeUserAlarmConfigResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
@@ -85,6 +87,8 @@ public class DescribeUserAlarmConfigResponseBody extends TeaModel {
 
     public static class DescribeUserAlarmConfigResponseBodyAlarmConfig extends TeaModel {
         /**
+         * <p>The alarm threshold.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -92,6 +96,8 @@ public class DescribeUserAlarmConfigResponseBody extends TeaModel {
         public Integer alarmHour;
 
         /**
+         * <p>The notification method.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -99,6 +105,8 @@ public class DescribeUserAlarmConfigResponseBody extends TeaModel {
         public Integer alarmNotify;
 
         /**
+         * <p>The alarm period.</p>
+         * 
          * <strong>example:</strong>
          * <p>30</p>
          */
@@ -106,6 +114,8 @@ public class DescribeUserAlarmConfigResponseBody extends TeaModel {
         public Integer alarmPeriod;
 
         /**
+         * <p>The alarm type.</p>
+         * 
          * <strong>example:</strong>
          * <p>bandwidth</p>
          */
@@ -113,6 +123,8 @@ public class DescribeUserAlarmConfigResponseBody extends TeaModel {
         public String alarmType;
 
         /**
+         * <p>The value that triggers the alarm.</p>
+         * 
          * <strong>example:</strong>
          * <p>80</p>
          */
@@ -120,6 +132,8 @@ public class DescribeUserAlarmConfigResponseBody extends TeaModel {
         public String alarmValue;
 
         /**
+         * <p>The alarm retry count.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -183,16 +197,26 @@ public class DescribeUserAlarmConfigResponseBody extends TeaModel {
 
     public static class DescribeUserAlarmConfigResponseBodyContactConfig extends TeaModel {
         /**
+         * <p>The email address.</p>
+         * 
          * <strong>example:</strong>
          * <p>1530811****@qq.com</p>
          */
         @NameInMap("Email")
         public String email;
 
+        /**
+         * <p>The mobile number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>zhangsan</p>
+         */
         @NameInMap("MobilePhone")
         public String mobilePhone;
 
         /**
+         * <p>The contact name.</p>
+         * 
          * <strong>example:</strong>
          * <p>1531123****</p>
          */
@@ -200,6 +224,8 @@ public class DescribeUserAlarmConfigResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>The status of the contact. Valid values: <strong>0</strong> (Disabled) and <strong>1</strong> (Enabled).</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -247,6 +273,8 @@ public class DescribeUserAlarmConfigResponseBody extends TeaModel {
 
     public static class DescribeUserAlarmConfigResponseBodyDefaultContact extends TeaModel {
         /**
+         * <p>The email address of the default contact.</p>
+         * 
          * <strong>example:</strong>
          * <p>1530811****@qq.com</p>
          */
@@ -254,16 +282,26 @@ public class DescribeUserAlarmConfigResponseBody extends TeaModel {
         public String email;
 
         /**
+         * <p>The mobile number of the default contact.</p>
+         * 
          * <strong>example:</strong>
          * <p>1531123****</p>
          */
         @NameInMap("MobilePhone")
         public String mobilePhone;
 
+        /**
+         * <p>The name of the default contact.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>zhangsan</p>
+         */
         @NameInMap("Name")
         public String name;
 
         /**
+         * <p>The status. Valid values: <strong>normal</strong> (Normal) and <strong>disable</strong> (Disabled).</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -305,44 +343,6 @@ public class DescribeUserAlarmConfigResponseBody extends TeaModel {
         }
         public String getStatus() {
             return this.status;
-        }
-
-    }
-
-    public static class DescribeUserAlarmConfigResponseBodyNotifyConfig extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>mail</p>
-         */
-        @NameInMap("NotifyType")
-        public String notifyType;
-
-        /**
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
-        @NameInMap("NotifyValue")
-        public String notifyValue;
-
-        public static DescribeUserAlarmConfigResponseBodyNotifyConfig build(java.util.Map<String, ?> map) throws Exception {
-            DescribeUserAlarmConfigResponseBodyNotifyConfig self = new DescribeUserAlarmConfigResponseBodyNotifyConfig();
-            return TeaModel.build(map, self);
-        }
-
-        public DescribeUserAlarmConfigResponseBodyNotifyConfig setNotifyType(String notifyType) {
-            this.notifyType = notifyType;
-            return this;
-        }
-        public String getNotifyType() {
-            return this.notifyType;
-        }
-
-        public DescribeUserAlarmConfigResponseBodyNotifyConfig setNotifyValue(String notifyValue) {
-            this.notifyValue = notifyValue;
-            return this;
-        }
-        public String getNotifyValue() {
-            return this.notifyValue;
         }
 
     }

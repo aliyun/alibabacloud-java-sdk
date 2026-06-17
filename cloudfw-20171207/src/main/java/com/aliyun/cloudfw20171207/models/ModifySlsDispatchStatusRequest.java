@@ -5,6 +5,13 @@ import com.aliyun.tea.*;
 
 public class ModifySlsDispatchStatusRequest extends TeaModel {
     /**
+     * <p>The key for the log category. Valid values:</p>
+     * <p><strong>internet_log</strong></p>
+     * <p><strong>vpc_firewall_log</strong></p>
+     * <p><strong>nat_firewall_log</strong></p>
+     * <p><strong>ipv6_firewall_log</strong></p>
+     * <p><strong>dns_firewall_log</strong>.</p>
+     * 
      * <strong>example:</strong>
      * <p>internet_log</p>
      */
@@ -12,6 +19,8 @@ public class ModifySlsDispatchStatusRequest extends TeaModel {
     public String dispatchValue;
 
     /**
+     * <p>Specifies whether to deliver logs. A value of \<code>true\\</code> enables delivery, and \<code>false\\</code> disables it.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -19,6 +28,11 @@ public class ModifySlsDispatchStatusRequest extends TeaModel {
     public Boolean enableStatus;
 
     /**
+     * <p>The supported filter conditions. Valid values:</p>
+     * <p><strong>attack</strong></p>
+     * <p><strong>acl</strong></p>
+     * <p><strong>other</strong>.</p>
+     * 
      * <strong>example:</strong>
      * <p>attack,acl</p>
      */
@@ -26,6 +40,8 @@ public class ModifySlsDispatchStatusRequest extends TeaModel {
     public String filterKeys;
 
     /**
+     * <p>The region.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-shanghai</p>
      */
@@ -33,6 +49,8 @@ public class ModifySlsDispatchStatusRequest extends TeaModel {
     public String newRegionId;
 
     /**
+     * <p>The site to modify. If the log version is 1, leave this parameter empty or set it to \<code>global\\</code>. If the log version is 2, set this parameter to \<code>cn\\</code> or \<code>intl\\</code>.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn</p>
      */

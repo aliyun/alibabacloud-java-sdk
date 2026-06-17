@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeInvadeEventDetailRequest extends TeaModel {
     /**
+     * <p>The ID of the asset.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class DescribeInvadeEventDetailRequest extends TeaModel {
     public String assetsInstanceId;
 
     /**
+     * <p>The UUID of the threat detection event.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,8 @@ public class DescribeInvadeEventDetailRequest extends TeaModel {
     public String eventUuid;
 
     /**
+     * <p>The language of the content within the response.</p>
+     * 
      * <strong>example:</strong>
      * <p>zh</p>
      */
@@ -30,6 +34,8 @@ public class DescribeInvadeEventDetailRequest extends TeaModel {
     public String lang;
 
     /**
+     * <p>The public IP address.</p>
+     * 
      * <strong>example:</strong>
      * <p>182.92.103.XXX</p>
      */
@@ -37,6 +43,8 @@ public class DescribeInvadeEventDetailRequest extends TeaModel {
     public String publicIP;
 
     /**
+     * <p>The source IP address of the visitor.</p>
+     * 
      * <strong>example:</strong>
      * <p>218.76.30.XXX</p>
      */

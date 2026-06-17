@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ModifySlsDispatchStatusResponseBody extends TeaModel {
     /**
+     * <p>The ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>CE901E31-4AE9-579D-AC37-D2F1BB43****</p>
      */

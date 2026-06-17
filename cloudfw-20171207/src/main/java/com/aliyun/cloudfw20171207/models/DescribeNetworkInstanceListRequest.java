@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeNetworkInstanceListRequest extends TeaModel {
     /**
+     * <p>The ID of the CEN instance.</p>
+     * 
      * <strong>example:</strong>
      * <p>cen-x5jayxou71ad73****</p>
      */
@@ -12,6 +14,8 @@ public class DescribeNetworkInstanceListRequest extends TeaModel {
     public String cenId;
 
     /**
+     * <p>The type of connection.</p>
+     * 
      * <strong>example:</strong>
      * <p>expressconnect</p>
      */
@@ -19,6 +23,8 @@ public class DescribeNetworkInstanceListRequest extends TeaModel {
     public String connectType;
 
     /**
+     * <p>The language of the response.</p>
+     * 
      * <strong>example:</strong>
      * <p>zh</p>
      */
