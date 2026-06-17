@@ -8,7 +8,7 @@ public class DescribeActiveSQLRecordsResponseBody extends TeaModel {
      * <p>The instance ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>gp-bp***************</p>
+     * <p>gp-bp12ga6v69h86****</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
@@ -98,7 +98,7 @@ public class DescribeActiveSQLRecordsResponseBody extends TeaModel {
          * <p>The execution duration of the query. Unit: seconds.</p>
          * 
          * <strong>example:</strong>
-         * <p>60s</p>
+         * <p>60</p>
          */
         @NameInMap("QueryDuration")
         public String queryDuration;

@@ -33,7 +33,7 @@ public class DescribeDBInstanceIPArrayListRequest extends TeaModel {
      * <p>The ID of the resource group to which the instance belongs. For information about how to obtain the ID of a resource group, see <a href="https://help.aliyun.com/document_detail/151181.html">View basic information of a resource group</a>.</p>
      * 
      * <strong>example:</strong>
-     * <p>rg-bp67acfmxazb4p****</p>
+     * <p>null</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;

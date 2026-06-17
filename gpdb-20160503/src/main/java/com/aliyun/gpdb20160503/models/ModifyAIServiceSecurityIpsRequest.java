@@ -5,6 +5,10 @@ import com.aliyun.tea.*;
 
 public class ModifyAIServiceSecurityIpsRequest extends TeaModel {
     /**
+     * <p>The ID of the instance.</p>
+     * <blockquote>
+     * <p>To view details of all instances in a destination region, including their IDs, call the <a href="https://help.aliyun.com/document_detail/196830.html">DescribeDBInstances</a> operation.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +18,13 @@ public class ModifyAIServiceSecurityIpsRequest extends TeaModel {
     public String DBInstanceId;
 
     /**
+     * <p>A comma-separated list of IP addresses or CIDR blocks in the IP address whitelist group. You can specify up to 1000 entries. To block all external IP addresses, set this parameter to 127.0.0.1. Valid formats include the following:</p>
+     * <ul>
+     * <li><p>10.23.12.24 (an IPv4 address)</p>
+     * </li>
+     * <li><p>10.23.12.24/24 (a CIDR block. The number after the slash indicates the prefix length and must be between 1 and 32.)</p>
+     * </li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +34,7 @@ public class ModifyAIServiceSecurityIpsRequest extends TeaModel {
     public String securityIPList;
 
     /**
+     * <p>The ID of the service.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -32,6 +44,7 @@ public class ModifyAIServiceSecurityIpsRequest extends TeaModel {
     public String serviceId;
 
     /**
+     * <p>The service type. Only drama is supported.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

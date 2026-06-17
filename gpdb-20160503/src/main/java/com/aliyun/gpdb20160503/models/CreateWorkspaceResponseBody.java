@@ -1,0 +1,46 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.gpdb20160503.models;
+
+import com.aliyun.tea.*;
+
+public class CreateWorkspaceResponseBody extends TeaModel {
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ABB39CC3-4488-4857-905D-2E4A051D0521</p>
+     */
+    @NameInMap("RequestId")
+    public String requestId;
+
+    /**
+     * <p>The workspace ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ws-*****</p>
+     */
+    @NameInMap("WorkspaceId")
+    public String workspaceId;
+
+    public static CreateWorkspaceResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        CreateWorkspaceResponseBody self = new CreateWorkspaceResponseBody();
+        return TeaModel.build(map, self);
+    }
+
+    public CreateWorkspaceResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public CreateWorkspaceResponseBody setWorkspaceId(String workspaceId) {
+        this.workspaceId = workspaceId;
+        return this;
+    }
+    public String getWorkspaceId() {
+        return this.workspaceId;
+    }
+
+}

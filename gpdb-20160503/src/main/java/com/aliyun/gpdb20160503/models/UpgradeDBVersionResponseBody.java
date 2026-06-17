@@ -8,7 +8,7 @@ public class UpgradeDBVersionResponseBody extends TeaModel {
      * <p>This parameter is no longer returned.</p>
      * 
      * <strong>example:</strong>
-     * <p>gp-wz9kmr708m155j***</p>
+     * <p>null</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;

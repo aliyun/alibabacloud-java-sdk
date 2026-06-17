@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListSupabaseProjectTagsResponseBody extends TeaModel {
     /**
+     * <p>The pagination token for the next page of results. This parameter is not returned if no more results are available.</p>
+     * 
      * <strong>example:</strong>
      * <p>caeba0bbb2be03f84eb48b699f0a4883</p>
      */
@@ -12,7 +14,7 @@ public class ListSupabaseProjectTagsResponseBody extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>34b32a0a-08ef-4a87-b6be-cdd9f56fc3ad</p>
@@ -20,6 +22,9 @@ public class ListSupabaseProjectTagsResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>A list of tagged resources.</p>
+     */
     @NameInMap("TagResources")
     public java.util.List<ListSupabaseProjectTagsResponseBodyTagResources> tagResources;
 
@@ -54,6 +59,8 @@ public class ListSupabaseProjectTagsResponseBody extends TeaModel {
 
     public static class ListSupabaseProjectTagsResponseBodyTagResources extends TeaModel {
         /**
+         * <p>The instance ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>spb-xxxxxxxxxx</p>
          */
@@ -61,6 +68,8 @@ public class ListSupabaseProjectTagsResponseBody extends TeaModel {
         public String resourceId;
 
         /**
+         * <p>The resource type.</p>
+         * 
          * <strong>example:</strong>
          * <p>instance</p>
          */
@@ -68,6 +77,8 @@ public class ListSupabaseProjectTagsResponseBody extends TeaModel {
         public String resourceType;
 
         /**
+         * <p>The tag key.</p>
+         * 
          * <strong>example:</strong>
          * <p>TestKey</p>
          */
@@ -75,6 +86,8 @@ public class ListSupabaseProjectTagsResponseBody extends TeaModel {
         public String tagKey;
 
         /**
+         * <p>The tag value.</p>
+         * 
          * <strong>example:</strong>
          * <p>TestValue</p>
          */

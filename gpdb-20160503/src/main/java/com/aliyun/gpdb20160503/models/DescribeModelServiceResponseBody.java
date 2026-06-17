@@ -48,6 +48,9 @@ public class DescribeModelServiceResponseBody extends TeaModel {
 
     /**
      * <p>Model parameters.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Not yet available.</p>
      */
     @NameInMap("ModelParams")
     public java.util.Map<String, ?> modelParams;

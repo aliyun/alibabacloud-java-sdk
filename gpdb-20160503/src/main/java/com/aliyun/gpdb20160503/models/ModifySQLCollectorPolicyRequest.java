@@ -9,7 +9,7 @@ public class ModifySQLCollectorPolicyRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>gp-xxxxxxxx</p>
+     * <p>gp-bp12ga6v69h86****</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;

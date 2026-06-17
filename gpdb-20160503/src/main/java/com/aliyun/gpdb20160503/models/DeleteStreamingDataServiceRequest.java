@@ -15,6 +15,8 @@ public class DeleteStreamingDataServiceRequest extends TeaModel {
     public String DBInstanceId;
 
     /**
+     * <p>The region ID of the instance.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-beijing</p>
      */

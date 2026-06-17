@@ -21,7 +21,7 @@ public class DescribeDBVersionInfosRequest extends TeaModel {
      * <p>The minor version number that does not include the prefix.</p>
      * 
      * <strong>example:</strong>
-     * <p>6.3.10.20</p>
+     * <p>6.3.10.20。</p>
      */
     @NameInMap("DBVersion")
     public String DBVersion;

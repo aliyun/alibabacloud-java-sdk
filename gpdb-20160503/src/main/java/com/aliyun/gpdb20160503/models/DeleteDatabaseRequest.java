@@ -12,7 +12,7 @@ public class DeleteDatabaseRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>gp-xxxxxxxxxxx</p>
+     * <p>gp-bp12ga6v69h86****</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;

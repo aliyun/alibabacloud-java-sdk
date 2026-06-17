@@ -138,7 +138,7 @@ public class ListExternalDataSourcesResponseBody extends TeaModel {
          * <p>The type of the data source.</p>
          * 
          * <strong>example:</strong>
-         * <p>HDFS</p>
+         * <p>hdfs</p>
          */
         @NameInMap("DataSourceType")
         public String dataSourceType;

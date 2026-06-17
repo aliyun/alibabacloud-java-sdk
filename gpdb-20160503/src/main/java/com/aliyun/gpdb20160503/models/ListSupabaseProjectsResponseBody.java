@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListSupabaseProjectsResponseBody extends TeaModel {
     /**
-     * <p>A list of objects, where each object represents a Supabase instance.</p>
+     * <p>A list of instance details.</p>
      */
     @NameInMap("Items")
     public java.util.List<ListSupabaseProjectsResponseBodyItems> items;
 
     /**
-     * <p>The maximum amount of data to read this time. Default value: 10.</p>
+     * <p>The maximum number of entries returned per page.</p>
      * 
      * <strong>example:</strong>
      * <p>50</p>
@@ -20,7 +20,7 @@ public class ListSupabaseProjectsResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The pagination token to use in the next request to get the next page. If this field is empty, there are no more results.</p>
+     * <p>A pagination token for retrieving the next page of results. If this parameter is not returned, it indicates that all results have been displayed.</p>
      * 
      * <strong>example:</strong>
      * <p>caeba0bbb2be03f84eb48b699f0a****</p>
@@ -29,7 +29,7 @@ public class ListSupabaseProjectsResponseBody extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The page number of the returned page.</p>
+     * <p>The page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -38,7 +38,7 @@ public class ListSupabaseProjectsResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page.</p>
+     * <p>The number of entries on the current page.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -47,7 +47,7 @@ public class ListSupabaseProjectsResponseBody extends TeaModel {
     public Integer pageRecordCount;
 
     /**
-     * <p>The unique ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>ABB39CC3-4488-4857-905D-2E4A051D****</p>
@@ -56,7 +56,7 @@ public class ListSupabaseProjectsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of log entries returned.</p>
+     * <p>The total number of entries.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>
@@ -127,6 +127,15 @@ public class ListSupabaseProjectsResponseBody extends TeaModel {
 
     public static class ListSupabaseProjectsResponseBodyItems extends TeaModel {
         /**
+         * <p>Indicates if the <strong>auto start and stop</strong> feature is enabled.
+         * Valid values:</p>
+         * <ul>
+         * <li><p><code>true</code>: The feature is enabled. The Supabase instance automatically pauses and resumes based on traffic.</p>
+         * </li>
+         * <li><p><code>false</code>: The auto start and stop feature is disabled.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
@@ -134,7 +143,7 @@ public class ListSupabaseProjectsResponseBody extends TeaModel {
         public String autoScale;
 
         /**
-         * <p>The creation time.</p>
+         * <p>The time when the resource was created.</p>
          * 
          * <strong>example:</strong>
          * <p>2021-10-09T04:54:08Z</p>
@@ -143,7 +152,7 @@ public class ListSupabaseProjectsResponseBody extends TeaModel {
         public String createTime;
 
         /**
-         * <p>Supabase Dashboard password (not used).</p>
+         * <p>The password for the Supabase dashboard. This parameter is reserved.</p>
          * 
          * <strong>example:</strong>
          * <p>xxpassword</p>
@@ -152,7 +161,7 @@ public class ListSupabaseProjectsResponseBody extends TeaModel {
         public String dashboardPassword;
 
         /**
-         * <p>Supabase Dashboard user name (not used).</p>
+         * <p>The username for the Supabase dashboard. This parameter is reserved.</p>
          * 
          * <strong>example:</strong>
          * <p>null</p>
@@ -161,7 +170,7 @@ public class ListSupabaseProjectsResponseBody extends TeaModel {
         public String dashboardUserName;
 
         /**
-         * <p>The ESSD performance level.</p>
+         * <p>The disk performance level.</p>
          * 
          * <strong>example:</strong>
          * <p>PL0</p>
@@ -170,7 +179,7 @@ public class ListSupabaseProjectsResponseBody extends TeaModel {
         public String diskPerformanceLevel;
 
         /**
-         * <p>The database engine type.</p>
+         * <p>The database engine.</p>
          * 
          * <strong>example:</strong>
          * <p>gpdb</p>
@@ -179,7 +188,7 @@ public class ListSupabaseProjectsResponseBody extends TeaModel {
         public String engine;
 
         /**
-         * <p>The database engine version.</p>
+         * <p>The engine version.</p>
          * 
          * <strong>example:</strong>
          * <p>6.0</p>
@@ -188,6 +197,8 @@ public class ListSupabaseProjectsResponseBody extends TeaModel {
         public String engineVersion;
 
         /**
+         * <p>The expiration time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2026-04-27T16:00:00Z</p>
          */
@@ -195,11 +206,14 @@ public class ListSupabaseProjectsResponseBody extends TeaModel {
         public String expireTime;
 
         /**
-         * <p>The billing method of the instance. Valid values:</p>
+         * <p>The billing method. Valid values:</p>
          * <ul>
-         * <li><strong>Postpaid</strong>: pay-as-you-go</li>
-         * <li><strong>Prepaid</strong>: subscription.</li>
-         * <li><strong>Free</strong>: Free.</li>
+         * <li><p><strong>Postpaid</strong>: pay-as-you-go.</p>
+         * </li>
+         * <li><p><strong>Prepaid</strong>: subscription.</p>
+         * </li>
+         * <li><p><strong>Free</strong>: The instance is free of charge.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -209,7 +223,7 @@ public class ListSupabaseProjectsResponseBody extends TeaModel {
         public String payType;
 
         /**
-         * <p>The private (VPC) connection URL for the Supabase Dashboard.</p>
+         * <p>The private endpoint for the Supabase dashboard.</p>
          * 
          * <strong>example:</strong>
          * <p>192.168.0.1</p>
@@ -217,11 +231,17 @@ public class ListSupabaseProjectsResponseBody extends TeaModel {
         @NameInMap("PrivateConnectUrl")
         public String privateConnectUrl;
 
+        /**
+         * <p>The detailed description of the Supabase project.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>for-test-project</p>
+         */
         @NameInMap("ProjectDescription")
         public String projectDescription;
 
         /**
-         * <p>The Supabase project ID.</p>
+         * <p>The ID of the Supabase instance.</p>
          * 
          * <strong>example:</strong>
          * <p>sbp-12***</p>
@@ -239,7 +259,7 @@ public class ListSupabaseProjectsResponseBody extends TeaModel {
         public String projectName;
 
         /**
-         * <p>The type of the Supabase instance.</p>
+         * <p>The Supabase instance specification.</p>
          * 
          * <strong>example:</strong>
          * <p>1C1G</p>
@@ -248,7 +268,7 @@ public class ListSupabaseProjectsResponseBody extends TeaModel {
         public String projectSpec;
 
         /**
-         * <p>The public connection URL for the Supabase Dashboard.</p>
+         * <p>The public endpoint for the Supabase dashboard.</p>
          * 
          * <strong>example:</strong>
          * <p>10.154.11.10</p>
@@ -266,11 +286,14 @@ public class ListSupabaseProjectsResponseBody extends TeaModel {
         public String regionId;
 
         /**
-         * <p>A comma-separated list of IP addresses and CIDR blocks allowed to connect. Valid values:</p>
+         * <p>The IP whitelist. IP addresses are separated by commas. The following formats are supported:</p>
          * <ul>
-         * <li>0.0.0.0/0</li>
-         * <li>10.23.12.24(IP)</li>
-         * <li>10.23.12.24/24. This is a CIDR block. The value<code>/24</code>indicates that the prefix of the CIDR block is 24-bit long. You can replace 24 with a value in the range of<code>[1,32]</code>.</li>
+         * <li><p>0.0.0.0/0</p>
+         * </li>
+         * <li><p>10.23.12.24 (IP)</p>
+         * </li>
+         * <li><p>10.23.12.24/24 (a Classless Inter-Domain Routing (CIDR) block; the prefix length, which is the number after the <code>/</code>, must be an integer from 1 to 32.)</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -280,7 +303,7 @@ public class ListSupabaseProjectsResponseBody extends TeaModel {
         public String securityIPList;
 
         /**
-         * <p>The status of the Supabase instance.</p>
+         * <p>The status of the instance.</p>
          * 
          * <strong>example:</strong>
          * <p>running</p>
@@ -289,7 +312,7 @@ public class ListSupabaseProjectsResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The storage capacity of the instance. Unit: GB.</p>
+         * <p>The storage size in GB.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -298,7 +321,7 @@ public class ListSupabaseProjectsResponseBody extends TeaModel {
         public Long storageSize;
 
         /**
-         * <p>The vSwitch ID of the instance.</p>
+         * <p>The vSwitch ID.</p>
          * 
          * <strong>example:</strong>
          * <p>vsw-bp1cpq8mr64paltkb****</p>

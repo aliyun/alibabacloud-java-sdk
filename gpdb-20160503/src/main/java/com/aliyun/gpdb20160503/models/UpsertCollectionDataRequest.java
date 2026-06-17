@@ -21,7 +21,7 @@ public class UpsertCollectionDataRequest extends TeaModel {
      * </blockquote>
      * 
      * <strong>example:</strong>
-     * <p>gp-xxxxxxxxx</p>
+     * <p>gp-bp152460513z****</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
@@ -195,7 +195,7 @@ public class UpsertCollectionDataRequest extends TeaModel {
          * </blockquote>
          * 
          * <strong>example:</strong>
-         * <p>doca-1234</p>
+         * <p>854c6949-411c-4b47-aec4-e324735f9574</p>
          */
         @NameInMap("Id")
         public String id;

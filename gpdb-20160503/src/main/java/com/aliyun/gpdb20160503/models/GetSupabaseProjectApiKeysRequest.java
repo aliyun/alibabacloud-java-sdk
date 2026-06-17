@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetSupabaseProjectApiKeysRequest extends TeaModel {
     /**
-     * <p>The Supabase project ID.</p>
+     * <p>The Supabase instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -17,7 +17,7 @@ public class GetSupabaseProjectApiKeysRequest extends TeaModel {
     /**
      * <p>The region ID.</p>
      * <blockquote>
-     * <p> You can call the <a href="https://help.aliyun.com/document_detail/86912.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/86912.html">DescribeRegions</a> operation to view the available region IDs.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

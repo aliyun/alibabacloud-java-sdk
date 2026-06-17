@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetSupabaseProjectApiKeysResponseBody extends TeaModel {
     /**
-     * <p>The queried API keys.</p>
+     * <p>A list of API keys.</p>
      */
     @NameInMap("ApiKeys")
     public java.util.List<GetSupabaseProjectApiKeysResponseBodyApiKeys> apiKeys;
@@ -42,7 +42,7 @@ public class GetSupabaseProjectApiKeysResponseBody extends TeaModel {
 
     public static class GetSupabaseProjectApiKeysResponseBodyApiKeys extends TeaModel {
         /**
-         * <p>The queried API key.</p>
+         * <p>The value of the API key.</p>
          * 
          * <strong>example:</strong>
          * <p>Tmz2Z59caMDeq/Xi9vuc****</p>
@@ -51,7 +51,7 @@ public class GetSupabaseProjectApiKeysResponseBody extends TeaModel {
         public String apiKey;
 
         /**
-         * <p>The name of the API key, including the Anon key and the service role key.</p>
+         * <p>The name of the API key, such as anon key, service role key, or JWT secret.</p>
          * 
          * <strong>example:</strong>
          * <p>anon key</p>

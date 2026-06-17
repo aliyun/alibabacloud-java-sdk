@@ -25,7 +25,7 @@ public class DeleteVectorIndexRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>gp-xxxxxxxxx</p>
+     * <p>gp-bp152460513z****</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;

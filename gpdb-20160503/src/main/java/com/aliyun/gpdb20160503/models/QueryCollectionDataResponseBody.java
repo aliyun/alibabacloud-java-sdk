@@ -4,11 +4,14 @@ package com.aliyun.gpdb20160503.models;
 import com.aliyun.tea.*;
 
 public class QueryCollectionDataResponseBody extends TeaModel {
+    /**
+     * <p>The matched results.</p>
+     */
     @NameInMap("Matches")
     public QueryCollectionDataResponseBodyMatches matches;
 
     /**
-     * <p>Detailed information when the request fails.</p>
+     * <p>Details about the error, returned if the request fails.</p>
      * 
      * <strong>example:</strong>
      * <p>0.1234</p>
@@ -17,7 +20,7 @@ public class QueryCollectionDataResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Request ID.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>ABB39CC3-4488-4857-905D-2E4A051D0521</p>
@@ -26,10 +29,12 @@ public class QueryCollectionDataResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Status, with the following values:</p>
+     * <p>The status of the request. Valid values:</p>
      * <ul>
-     * <li><strong>success</strong>: Success.</li>
-     * <li><strong>fail</strong>: Failure.</li>
+     * <li><p><strong>success</strong>: The request was successful.</p>
+     * </li>
+     * <li><p><strong>fail</strong>: The request failed.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -39,7 +44,7 @@ public class QueryCollectionDataResponseBody extends TeaModel {
     public String status;
 
     /**
-     * <p>Only returned when the Offset is not 0, this value represents the total number of hits for the search criteria.</p>
+     * <p>The total number of hits for the search. This parameter is returned only when the Offset parameter in the request is not 0.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>

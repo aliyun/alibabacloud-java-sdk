@@ -9,7 +9,7 @@ public class DescribeRebalanceStatusRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>gp-xxxxxxxxx</p>
+     * <p>gp-uf671c65jhszj****</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;

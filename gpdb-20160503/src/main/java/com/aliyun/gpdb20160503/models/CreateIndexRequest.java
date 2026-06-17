@@ -39,6 +39,9 @@ public class CreateIndexRequest extends TeaModel {
      * <li><p>gin: To create a GIN index, set the fastUpdate parameter to true or false. Default value: true.</p>
      * </li>
      * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;b-tree&quot;:{&quot;fillFactor&quot;:90}} or {&quot;gin&quot;:{&quot;fastUpdate&quot;:false}}</p>
      */
     @NameInMap("IndexConfig")
     public String indexConfig;

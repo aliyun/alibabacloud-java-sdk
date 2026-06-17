@@ -15,7 +15,7 @@ public class DescribeDBInstanceNetInfoResponseBody extends TeaModel {
      * </ul>
      * 
      * <strong>example:</strong>
-     * <p>Classic</p>
+     * <p>VPC</p>
      */
     @NameInMap("InstanceNetworkType")
     public String instanceNetworkType;

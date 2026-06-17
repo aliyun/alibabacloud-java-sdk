@@ -45,7 +45,7 @@ public class CreateJDBCDataSourceRequest extends TeaModel {
      * <p>The JDBC connection string.</p>
      * 
      * <strong>example:</strong>
-     * <p>xxxxxx</p>
+     * <p>jdbc:mysql://rm-xxx.mysql.rds.aliyuncs.com:3306/testadmin</p>
      */
     @NameInMap("JDBCConnectionString")
     public String JDBCConnectionString;
@@ -54,7 +54,7 @@ public class CreateJDBCDataSourceRequest extends TeaModel {
      * <p>The password of the database account.</p>
      * 
      * <strong>example:</strong>
-     * <p>xxxxxx</p>
+     * <p>testpasswd</p>
      */
     @NameInMap("JDBCPassword")
     public String JDBCPassword;
@@ -63,7 +63,7 @@ public class CreateJDBCDataSourceRequest extends TeaModel {
      * <p>The name of the database account.</p>
      * 
      * <strong>example:</strong>
-     * <p>xxxxxx</p>
+     * <p>testuser</p>
      */
     @NameInMap("JDBCUserName")
     public String JDBCUserName;

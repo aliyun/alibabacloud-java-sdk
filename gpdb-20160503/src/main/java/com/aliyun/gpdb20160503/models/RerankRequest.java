@@ -19,6 +19,9 @@ public class RerankRequest extends TeaModel {
 
     /**
      * <p>List of documents to be re-ordered.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ADBPG is an Alibaba Cloud OLAP database.</p>
      */
     @NameInMap("Documents")
     public java.util.List<String> documents;

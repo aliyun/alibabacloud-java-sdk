@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetSupabaseProjectRequest extends TeaModel {
     /**
-     * <p>The ID of the Supabase instance. You can obtain the ID on the Supabase page in the console.</p>
+     * <p>The Supabase instance ID. You can find this ID on the Supabase page in the console.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,9 +15,9 @@ public class GetSupabaseProjectRequest extends TeaModel {
     public String projectId;
 
     /**
-     * <p>The region ID of the cluster.</p>
+     * <p>The region ID.</p>
      * <blockquote>
-     * <p> You can call the <a href="https://help.aliyun.com/document_detail/86912.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/86912.html">DescribeRegions</a> operation to view the available region IDs.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

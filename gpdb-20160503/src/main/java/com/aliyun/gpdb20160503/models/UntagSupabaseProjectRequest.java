@@ -5,6 +5,15 @@ import com.aliyun.tea.*;
 
 public class UntagSupabaseProjectRequest extends TeaModel {
     /**
+     * <p>Specifies whether to remove all tags from the instance. This parameter takes effect only when <code>TagKey.N</code> is not specified. Valid values:</p>
+     * <ul>
+     * <li><p>true</p>
+     * </li>
+     * <li><p>false</p>
+     * </li>
+     * </ul>
+     * <p>Default value: false</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -12,22 +21,38 @@ public class UntagSupabaseProjectRequest extends TeaModel {
     public Boolean all;
 
     /**
+     * <p>The region ID of the instance.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The instance IDs. You can specify up to 50 instance IDs.</p>
+     */
     @NameInMap("ResourceId")
     public java.util.List<String> resourceId;
 
     /**
+     * <p>The resource type. Valid values:</p>
+     * <ul>
+     * <li><p><code>instance</code>: a reserved mode instance.</p>
+     * </li>
+     * <li><p><code>ALIYUN::GPDB::INSTANCE</code>: an elastic mode instance.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>instance</p>
      */
     @NameInMap("ResourceType")
     public String resourceType;
 
+    /**
+     * <p>The keys of the tags that you want to remove. You can specify up to 20 tag keys.</p>
+     */
     @NameInMap("TagKey")
     public java.util.List<String> tagKey;
 

@@ -5,12 +5,17 @@ import com.aliyun.tea.*;
 
 public class DeleteChunksShrinkRequest extends TeaModel {
     /**
+     * <p>A list of chunk IDs.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("ChunkIds")
     public String chunkIdsShrink;
 
     /**
+     * <p>The name of the document collection.</p>
+     * <blockquote>
+     * <p>You create this document collection by calling the <a href="https://help.aliyun.com/document_detail/2618448.html">CreateDocumentCollection</a> operation. To view existing document collections, call the <a href="https://help.aliyun.com/document_detail/2618452.html">ListDocumentCollections</a> operation.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -20,6 +25,10 @@ public class DeleteChunksShrinkRequest extends TeaModel {
     public String collection;
 
     /**
+     * <p>The instance ID.</p>
+     * <blockquote>
+     * <p>Call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to view details for all AnalyticDB for PostgreSQL instances in a specific region, including their instance IDs.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -29,6 +38,11 @@ public class DeleteChunksShrinkRequest extends TeaModel {
     public String DBInstanceId;
 
     /**
+     * <p>The name of the namespace. The default value is public.</p>
+     * <blockquote>
+     * <p>Call the <a href="https://help.aliyun.com/document_detail/2401502.html">ListNamespaces</a> operation to view a list of namespaces.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>mynamespace</p>
      */
@@ -36,6 +50,10 @@ public class DeleteChunksShrinkRequest extends TeaModel {
     public String namespace;
 
     /**
+     * <p>The password for the namespace.</p>
+     * <blockquote>
+     * <p>This password is set when you call the <a href="https://help.aliyun.com/document_detail/2401495.html">CreateNamespace</a> operation.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -45,6 +63,7 @@ public class DeleteChunksShrinkRequest extends TeaModel {
     public String namespacePassword;
 
     /**
+     * <p>The region ID of the instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

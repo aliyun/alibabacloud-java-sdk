@@ -39,7 +39,7 @@ public class CreateDBResourceGroupRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>{&quot;CpuRateLimit&quot;:&quot;10&quot;,&quot;MemoryLimit&quot;:&quot;12&quot;,&quot;MemorySharedQuota&quot;:&quot;20&quot;,&quot;MemorySpillRatio&quot;:&quot;75&quot;,&quot;Concurrency&quot;:&quot;3&quot;}</p>
+     * <p>{&quot;CpuRateLimit&quot;:10,&quot;MemoryLimit&quot;:12,&quot;MemorySharedQuota&quot;:20,&quot;MemorySpillRatio&quot;:75,&quot;Concurrency&quot;:3}</p>
      */
     @NameInMap("ResourceGroupConfig")
     public String resourceGroupConfig;

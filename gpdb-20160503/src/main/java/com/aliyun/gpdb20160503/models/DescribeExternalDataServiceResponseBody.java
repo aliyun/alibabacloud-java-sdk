@@ -35,7 +35,7 @@ public class DescribeExternalDataServiceResponseBody extends TeaModel {
      * <p>The description of the service.</p>
      * 
      * <strong>example:</strong>
-     * <p>test-adbpgss</p>
+     * <p>pxf test</p>
      */
     @NameInMap("ServiceDescription")
     public String serviceDescription;
@@ -53,7 +53,7 @@ public class DescribeExternalDataServiceResponseBody extends TeaModel {
      * <p>The name of the service.</p>
      * 
      * <strong>example:</strong>
-     * <p>test-adbpgss</p>
+     * <p>test-pxf</p>
      */
     @NameInMap("ServiceName")
     public String serviceName;
@@ -62,7 +62,7 @@ public class DescribeExternalDataServiceResponseBody extends TeaModel {
      * <p>The specifications of the service. Unit: compute units (CUs).</p>
      * 
      * <strong>example:</strong>
-     * <p>2</p>
+     * <p>8</p>
      */
     @NameInMap("ServiceSpec")
     public String serviceSpec;

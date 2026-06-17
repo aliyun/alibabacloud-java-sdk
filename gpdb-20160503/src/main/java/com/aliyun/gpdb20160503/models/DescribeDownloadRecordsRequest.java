@@ -7,7 +7,7 @@ public class DescribeDownloadRecordsRequest extends TeaModel {
     /**
      * <p>The instance ID.</p>
      * <blockquote>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query the information about all AnalyticDB for PostgreSQL instances within a region, including instance IDs.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query the details of all AnalyticDB for PostgreSQL instances in a specific region, including instance IDs.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -17,6 +17,18 @@ public class DescribeDownloadRecordsRequest extends TeaModel {
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
+    /**
+     * <p>The download task type. Valid values:</p>
+     * <ul>
+     * <li><p><code>SQL_DIAGNOSE</code>: SQL diagnosis.</p>
+     * </li>
+     * <li><p><code>SLOW_SQL</code>: slow SQL query.</p>
+     * </li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>SLOW_SQL</p>
+     */
     @NameInMap("DownloadTaskType")
     public String downloadTaskType;
 

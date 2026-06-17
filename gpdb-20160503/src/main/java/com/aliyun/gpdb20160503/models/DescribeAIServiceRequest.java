@@ -5,6 +5,10 @@ import com.aliyun.tea.*;
 
 public class DescribeAIServiceRequest extends TeaModel {
     /**
+     * <p>The ID of the instance.</p>
+     * <blockquote>
+     * <p>To view details of all instances in a region, including their IDs, call the <a href="https://help.aliyun.com/document_detail/196830.html">DescribeDBInstances</a> operation.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +18,7 @@ public class DescribeAIServiceRequest extends TeaModel {
     public String DBInstanceId;
 
     /**
+     * <p>The ID of the service.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +28,7 @@ public class DescribeAIServiceRequest extends TeaModel {
     public String serviceId;
 
     /**
+     * <p>The type of service. Only drama is supported.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

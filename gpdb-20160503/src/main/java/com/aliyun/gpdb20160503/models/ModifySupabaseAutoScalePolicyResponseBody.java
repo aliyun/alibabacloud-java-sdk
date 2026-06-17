@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ModifySupabaseAutoScalePolicyResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>07F6177E-6DE4-408A-BB4F-0723301340F3</p>
      */

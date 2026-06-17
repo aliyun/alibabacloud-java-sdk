@@ -226,7 +226,7 @@ public class DescribeSQLLogsV2ResponseBody extends TeaModel {
          * <p>The ID of the session.</p>
          * 
          * <strong>example:</strong>
-         * <p>efc33bd7-f1dc-4b24-b4fb-ab0d5329b7bb</p>
+         * <p>3a74656836ec5255a4793def0a447b02</p>
          */
         @NameInMap("SessionId")
         public String sessionId;

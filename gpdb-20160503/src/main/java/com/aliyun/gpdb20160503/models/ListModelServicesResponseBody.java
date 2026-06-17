@@ -136,6 +136,9 @@ public class ListModelServicesResponseBody extends TeaModel {
 
         /**
          * <p>Model service parameters (not available).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Not yet available.</p>
          */
         @NameInMap("ModelParams")
         public java.util.Map<String, String> modelParams;

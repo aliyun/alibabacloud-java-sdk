@@ -55,7 +55,7 @@ public class DescribeSQLLogsV2Request extends TeaModel {
      * </ul>
      * 
      * <strong>example:</strong>
-     * <p>success</p>
+     * <p>1</p>
      */
     @NameInMap("ExecuteState")
     public String executeState;
@@ -114,7 +114,7 @@ public class DescribeSQLLogsV2Request extends TeaModel {
      * <p>The number of entries to return on each page.</p>
      * 
      * <strong>example:</strong>
-     * <p>10</p>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public String pageNumber;
@@ -123,7 +123,7 @@ public class DescribeSQLLogsV2Request extends TeaModel {
      * <p>The number of the page to return. The maximum value is 200.</p>
      * 
      * <strong>example:</strong>
-     * <p>1</p>
+     * <p>30</p>
      */
     @NameInMap("PageSize")
     public String pageSize;
@@ -154,7 +154,7 @@ public class DescribeSQLLogsV2Request extends TeaModel {
      * <p>The ID of the resource group to which the instance belongs.</p>
      * 
      * <strong>example:</strong>
-     * <p>rg-bp67acfmxazb4p****</p>
+     * <p>null</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;

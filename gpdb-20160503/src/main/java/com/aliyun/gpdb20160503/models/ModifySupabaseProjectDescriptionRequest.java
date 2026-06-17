@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ModifySupabaseProjectDescriptionRequest extends TeaModel {
     /**
+     * <p>The detailed description of the Supabase project.</p>
+     * 
      * <strong>example:</strong>
      * <p>for-test-project</p>
      */
@@ -12,6 +14,8 @@ public class ModifySupabaseProjectDescriptionRequest extends TeaModel {
     public String projectDescription;
 
     /**
+     * <p>The Supabase instance ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>sbp-twmoe9bakow</p>
      */
@@ -19,6 +23,8 @@ public class ModifySupabaseProjectDescriptionRequest extends TeaModel {
     public String projectId;
 
     /**
+     * <p>The region ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
      */

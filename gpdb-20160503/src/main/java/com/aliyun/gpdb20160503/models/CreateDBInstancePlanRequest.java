@@ -51,7 +51,7 @@ public class CreateDBInstancePlanRequest extends TeaModel {
      * </ul>
      * 
      * <strong>example:</strong>
-     * <p>2023-04-17T23:00Z</p>
+     * <p>2023-04-17T23:00:00Z</p>
      */
     @NameInMap("PlanEndDate")
     public String planEndDate;
@@ -92,7 +92,7 @@ public class CreateDBInstancePlanRequest extends TeaModel {
      * </ul>
      * 
      * <strong>example:</strong>
-     * <p>2022-04-17T23:00Z</p>
+     * <p>2022-04-17T23:00:00Z</p>
      */
     @NameInMap("PlanStartDate")
     public String planStartDate;

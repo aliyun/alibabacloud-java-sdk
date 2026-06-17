@@ -12,7 +12,7 @@ public class ReleaseInstancePublicConnectionRequest extends TeaModel {
      * </ul>
      * 
      * <strong>example:</strong>
-     * <p>Intranet</p>
+     * <p>primary</p>
      */
     @NameInMap("AddressType")
     public String addressType;

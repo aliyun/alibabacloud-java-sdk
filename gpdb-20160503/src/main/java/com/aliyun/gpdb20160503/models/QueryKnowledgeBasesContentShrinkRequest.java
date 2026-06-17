@@ -5,16 +5,19 @@ import com.aliyun.tea.*;
 
 public class QueryKnowledgeBasesContentShrinkRequest extends TeaModel {
     /**
-     * <p>The text content for retrieval.</p>
+     * <p>The text content to search for.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>What is ADBPG?</p>
      */
     @NameInMap("Content")
     public String content;
 
     /**
-     * <p>The cluster ID.</p>
+     * <p>The instance ID.</p>
      * <blockquote>
-     * <p> You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query the information about all AnalyticDB for PostgreSQL instances within a region, including instance IDs.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to view the details of all AnalyticDB for PostgreSQL instances in a specific region, including their instance IDs.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -25,10 +28,12 @@ public class QueryKnowledgeBasesContentShrinkRequest extends TeaModel {
     public String DBInstanceId;
 
     /**
-     * <p>The method used to merge multiple knowledge bases. Default value: RRF. Valid values:</p>
+     * <p>The method for merging results from multiple knowledge bases. The default value is <code>RRF</code>. Valid values:</p>
      * <ul>
-     * <li>RRF</li>
-     * <li>Weight</li>
+     * <li><p>RRF</p>
+     * </li>
+     * <li><p>Weight</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -38,7 +43,7 @@ public class QueryKnowledgeBasesContentShrinkRequest extends TeaModel {
     public String mergeMethod;
 
     /**
-     * <p>The parameters of the merge method for each SourceCollection.</p>
+     * <p>The arguments for the specified <code>MergeMethod</code>.</p>
      */
     @NameInMap("MergeMethodArgs")
     public String mergeMethodArgsShrink;
@@ -47,7 +52,7 @@ public class QueryKnowledgeBasesContentShrinkRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID.</p>
+     * <p>The region ID of the instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -57,15 +62,15 @@ public class QueryKnowledgeBasesContentShrinkRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The rerank factor. If you specify this parameter, the vector retrieval results are reranked once more. Valid values: 1\&lt;RerankFactor&lt;=5.</p>
+     * <p>The reranking factor. If specified, the system reranks the final merged results. Valid values: 1 &lt; RerankFactor &lt;= 5.</p>
      * <blockquote>
-     * </blockquote>
      * <ul>
-     * <li><p>If the document is segmented into sparse parts, reranking is inefficient.</p>
+     * <li><p>Sparse document chunking reduces reranking efficiency.</p>
      * </li>
-     * <li><p>We recommend that the number of reranked results (the ceiling of TopK × RerankFactor) not exceed 50.</p>
+     * <li><p>We recommend that the number of items to rerank (TopK × Factor, rounded up) does not exceed 50.</p>
      * </li>
      * </ul>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>2</p>
@@ -73,18 +78,21 @@ public class QueryKnowledgeBasesContentShrinkRequest extends TeaModel {
     @NameInMap("RerankFactor")
     public Double rerankFactor;
 
+    /**
+     * <p>Parameters for the rerank model applied to the final merged results.</p>
+     */
     @NameInMap("RerankModel")
     public String rerankModelShrink;
 
     /**
-     * <p>The information about collections to retrieve from.</p>
+     * <p>The source collections to search.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("SourceCollection")
     public String sourceCollectionShrink;
 
     /**
-     * <p>Set the number of top results to be returned after merging results from multiple path retrieval.</p>
+     * <p>The number of top results to return after the results from all recall paths are merged.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>

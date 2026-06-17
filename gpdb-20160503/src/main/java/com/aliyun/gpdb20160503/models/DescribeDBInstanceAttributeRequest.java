@@ -7,7 +7,7 @@ public class DescribeDBInstanceAttributeRequest extends TeaModel {
     /**
      * <p>Instance ID.</p>
      * <blockquote>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> interface to view the instance IDs of all AnalyticDB for PostgreSQL instances in the target region.</p>
+     * <p>You can invoke the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> API to view the instance IDs of all AnalyticDB for PostgreSQL instances in the destination region.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -21,7 +21,7 @@ public class DescribeDBInstanceAttributeRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>This parameter is deprecated and should not be passed.</p>
+     * <p>This parameter is deprecated and does not need to be specified.</p>
      * 
      * <strong>example:</strong>
      * <p>null</p>

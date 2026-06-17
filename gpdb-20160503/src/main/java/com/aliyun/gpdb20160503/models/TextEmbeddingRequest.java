@@ -30,6 +30,9 @@ public class TextEmbeddingRequest extends TeaModel {
 
     /**
      * <p>A list of text content to be embedded. The list length must not exceed 100.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>What is ADBPG?</p>
      */
     @NameInMap("Input")
     public java.util.List<String> input;
@@ -46,7 +49,7 @@ public class TextEmbeddingRequest extends TeaModel {
      * </ul>
      * 
      * <strong>example:</strong>
-     * <p>text-embedding-v2</p>
+     * <p>text-embedding-v3</p>
      */
     @NameInMap("Model")
     public String model;

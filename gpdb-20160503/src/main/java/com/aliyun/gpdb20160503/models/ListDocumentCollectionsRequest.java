@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class ListDocumentCollectionsRequest extends TeaModel {
     /**
-     * <p>The instance ID.</p>
+     * <p>The ID of the instance.</p>
      * <blockquote>
-     * <p> You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query the information about all AnalyticDB for PostgreSQL instances within a region, including instance IDs.</p>
+     * <p>To view details of all AnalyticDB for PostgreSQL instances in a region, including their IDs, call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -18,9 +18,9 @@ public class ListDocumentCollectionsRequest extends TeaModel {
     public String DBInstanceId;
 
     /**
-     * <p>The name of the namespace. Default value: public.</p>
+     * <p>The namespace. Default value: public.</p>
      * <blockquote>
-     * <p> You can call the CreateNamespace operation to create a namespace and call the ListNamespaces operation to query a list of namespaces.</p>
+     * <p>To create a namespace, call the <a href="https://help.aliyun.com/document_detail/2401495.html">CreateNamespace</a> operation. To list namespaces, call the <a href="https://help.aliyun.com/document_detail/2401502.html">ListNamespaces</a> operation.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -30,9 +30,9 @@ public class ListDocumentCollectionsRequest extends TeaModel {
     public String namespace;
 
     /**
-     * <p>The password of the namespace.</p>
+     * <p>The password for the namespace.</p>
      * <blockquote>
-     * <p> This value is specified when you call the CreateNamespace operation.</p>
+     * <p>You set this password when you call the <a href="https://help.aliyun.com/document_detail/2401495.html">CreateNamespace</a> operation.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -46,7 +46,7 @@ public class ListDocumentCollectionsRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID of the instance.</p>
+     * <p>The ID of the region where the instance resides.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

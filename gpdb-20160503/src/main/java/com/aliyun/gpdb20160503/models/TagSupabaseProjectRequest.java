@@ -5,22 +5,32 @@ import com.aliyun.tea.*;
 
 public class TagSupabaseProjectRequest extends TeaModel {
     /**
+     * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/86912.html">DescribeRegions</a> operation to query available region IDs.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The IDs of the instances. You can specify up to 50 instance IDs.</p>
+     */
     @NameInMap("ResourceId")
     public java.util.List<String> resourceId;
 
     /**
+     * <p>The resource type. Set this parameter to <code>instance</code>.</p>
+     * 
      * <strong>example:</strong>
      * <p>instance</p>
      */
     @NameInMap("ResourceType")
     public String resourceType;
 
+    /**
+     * <p>The tags to add. You can specify up to 20 tags.</p>
+     */
     @NameInMap("Tag")
     public java.util.List<TagSupabaseProjectRequestTag> tag;
 
@@ -63,6 +73,8 @@ public class TagSupabaseProjectRequest extends TeaModel {
 
     public static class TagSupabaseProjectRequestTag extends TeaModel {
         /**
+         * <p>The tag key. The key cannot be empty and can be up to 64 characters long. It cannot start with <code>aliyun</code> or <code>acs:</code>, or contain <code>http://</code> or <code>https://</code>.</p>
+         * 
          * <strong>example:</strong>
          * <p>test-key</p>
          */
@@ -70,6 +82,8 @@ public class TagSupabaseProjectRequest extends TeaModel {
         public String key;
 
         /**
+         * <p>The tag value. The value can be empty or up to 128 characters long. It cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * 
          * <strong>example:</strong>
          * <p>test-value</p>
          */

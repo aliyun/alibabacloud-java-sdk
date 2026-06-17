@@ -36,6 +36,9 @@ public class EnableCollectionGraphRAGShrinkRequest extends TeaModel {
      * <p>If the knowledge graph construction is enabled, this parameter is required.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Location</p>
      */
     @NameInMap("EntityTypes")
     public String entityTypesShrink;
@@ -147,6 +150,9 @@ public class EnableCollectionGraphRAGShrinkRequest extends TeaModel {
      * <p>If the knowledge graph construction is enabled, this parameter is required.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Occurred</p>
      */
     @NameInMap("RelationshipTypes")
     public String relationshipTypesShrink;

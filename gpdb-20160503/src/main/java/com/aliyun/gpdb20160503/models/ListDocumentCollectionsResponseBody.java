@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListDocumentCollectionsResponseBody extends TeaModel {
     /**
-     * <p>The total number of entries returned.</p>
+     * <p>The total number of items.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -17,7 +17,7 @@ public class ListDocumentCollectionsResponseBody extends TeaModel {
     public ListDocumentCollectionsResponseBodyItems items;
 
     /**
-     * <p>The returned message.</p>
+     * <p>The response message.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -26,7 +26,7 @@ public class ListDocumentCollectionsResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>ABB39CC3-4488-4857-905D-2E4A051D0521</p>
@@ -35,10 +35,12 @@ public class ListDocumentCollectionsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <p>The creation status. Valid values:</p>
      * <ul>
-     * <li><strong>success</strong></li>
-     * <li><strong>fail</strong></li>
+     * <li><p><strong>success</strong>: The operation succeeded.</p>
+     * </li>
+     * <li><p><strong>fail</strong>: The operation failed.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

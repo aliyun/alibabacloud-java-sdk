@@ -100,7 +100,7 @@ public class CreateStreamingJobRequest extends TeaModel {
      * <p>Kafka group name</p>
      * 
      * <strong>example:</strong>
-     * <p>group_name.</p>
+     * <p>group_name。</p>
      */
     @NameInMap("GroupName")
     public String groupName;

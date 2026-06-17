@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UntagSupabaseProjectResponseBody extends TeaModel {
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>34b32a0a-08ef-4a87-b6be-cdd9f56fc3ad</p>

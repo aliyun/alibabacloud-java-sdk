@@ -8,7 +8,7 @@ public class DescribeCollectionResponseBody extends TeaModel {
      * <p>The instance ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>gp-xxxxxxxxx</p>
+     * <p>gp-bp152460513z****</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
@@ -35,7 +35,7 @@ public class DescribeCollectionResponseBody extends TeaModel {
      * <p>The returned message.</p>
      * 
      * <strong>example:</strong>
-     * <p>Successful</p>
+     * <p>success</p>
      */
     @NameInMap("Message")
     public String message;

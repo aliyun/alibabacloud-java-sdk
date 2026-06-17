@@ -8,6 +8,8 @@ public class ListChunksResponseBody extends TeaModel {
     public ListChunksResponseBodyChunks chunks;
 
     /**
+     * <p>The current page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -15,6 +17,8 @@ public class ListChunksResponseBody extends TeaModel {
     public Long pageNumber;
 
     /**
+     * <p>The number of records on the current page.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -22,6 +26,8 @@ public class ListChunksResponseBody extends TeaModel {
     public Long pageRecordCount;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>34b32a0a-08ef-4a87-b6be-cdd9f56fc3ad</p>
      */
@@ -29,6 +35,8 @@ public class ListChunksResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total number of records.</p>
+     * 
      * <strong>example:</strong>
      * <p>30</p>
      */

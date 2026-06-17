@@ -36,7 +36,7 @@ public class DescribeDBInstanceDiagnosisSummaryRequest extends TeaModel {
      * <p>Default value: <strong>20</strong>.</p>
      * 
      * <strong>example:</strong>
-     * <p>20</p>
+     * <p>30</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;

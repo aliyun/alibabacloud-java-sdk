@@ -35,6 +35,12 @@ public class ExecuteStatementRequest extends TeaModel {
     @NameInMap("Parameters")
     public java.util.List<?> parameters;
 
+    /**
+     * <p>Parameters for the vector dataset.  </p>
+     * <blockquote>
+     * <p>When WorkspaceId is not empty, you must also pass this parameter.</p>
+     * </blockquote>
+     */
     @NameInMap("RagWorkspaceCollection")
     public ExecuteStatementRequestRagWorkspaceCollection ragWorkspaceCollection;
 
@@ -98,6 +104,12 @@ public class ExecuteStatementRequest extends TeaModel {
     @NameInMap("StatementName")
     public String statementName;
 
+    /**
+     * <p>The ID of a workspace composed of multiple database instances. This parameter and DBInstanceId cannot both be empty. If both are specified, this parameter takes precedence.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>gp-ws-*****</p>
+     */
     @NameInMap("WorkspaceId")
     public String workspaceId;
 
@@ -203,9 +215,27 @@ public class ExecuteStatementRequest extends TeaModel {
     }
 
     public static class ExecuteStatementRequestRagWorkspaceCollection extends TeaModel {
+        /**
+         * <p>Collection name.  </p>
+         * <blockquote>
+         * <p>You can view the list by using the <a href="https://help.aliyun.com/document_detail/2401503.html">ListCollections</a> API.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>mycollection</p>
+         */
         @NameInMap("Collection")
         public String collection;
 
+        /**
+         * <p>Namespace.  </p>
+         * <blockquote>
+         * <p>You can view the list by using the <a href="https://help.aliyun.com/document_detail/2401502.html">ListNamespaces</a> API.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>mynamespace</p>
+         */
         @NameInMap("Namespace")
         public String namespace;
 

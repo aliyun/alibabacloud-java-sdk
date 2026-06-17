@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateModelServiceResponseBody extends TeaModel {
     /**
-     * <p>The model service ID.</p>
+     * <p>The ID of the model service.</p>
      * 
      * <strong>example:</strong>
      * <p>ms-xxxxxxxxx</p>
@@ -14,7 +14,7 @@ public class CreateModelServiceResponseBody extends TeaModel {
     public String modelServiceId;
 
     /**
-     * <p>The unique ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>ABB39CC3-4488-4857-905D-2E4A051D0521</p>

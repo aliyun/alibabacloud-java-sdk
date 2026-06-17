@@ -5,6 +5,10 @@ import com.aliyun.tea.*;
 
 public class ListAIServicesRequest extends TeaModel {
     /**
+     * <p>The ID of the AnalyticDB for PostgreSQL instance.</p>
+     * <blockquote>
+     * <p>To view details of all AnalyticDB for PostgreSQL instances in a region, including their instance IDs, call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +18,8 @@ public class ListAIServicesRequest extends TeaModel {
     public String DBInstanceId;
 
     /**
+     * <p>The page number of the returned page.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -21,6 +27,17 @@ public class ListAIServicesRequest extends TeaModel {
     public String pageNumber;
 
     /**
+     * <p>The number of entries to return on each page. Valid values:</p>
+     * <ul>
+     * <li><p>20</p>
+     * </li>
+     * <li><p>50</p>
+     * </li>
+     * <li><p>100</p>
+     * </li>
+     * </ul>
+     * <p>Default value: 20.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -28,6 +45,7 @@ public class ListAIServicesRequest extends TeaModel {
     public String pageSize;
 
     /**
+     * <p>The type of the AI service. Valid value: drama.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

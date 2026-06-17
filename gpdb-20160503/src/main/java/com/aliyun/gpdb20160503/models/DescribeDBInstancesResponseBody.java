@@ -4,6 +4,9 @@ package com.aliyun.gpdb20160503.models;
 import com.aliyun.tea.*;
 
 public class DescribeDBInstancesResponseBody extends TeaModel {
+    /**
+     * <p>A collection of instances.</p>
+     */
     @NameInMap("Items")
     public DescribeDBInstancesResponseBodyItems items;
 
@@ -17,7 +20,7 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page.</p>
+     * <p>The number of entries returned on the current page.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -35,7 +38,7 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of entries returned.</p>
+     * <p>The total number of entries.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>

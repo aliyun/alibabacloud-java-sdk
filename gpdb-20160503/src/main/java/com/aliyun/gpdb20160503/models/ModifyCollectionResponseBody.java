@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyCollectionResponseBody extends TeaModel {
     /**
-     * <p>The returned message.</p>
+     * <p>The response message.</p>
      * 
      * <strong>example:</strong>
      * <p>Successful</p>
@@ -14,15 +14,15 @@ public class ModifyCollectionResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The metadata of the vector data, which is a JSON string in the MAP format. The key specifies the field name, and the value specifies the data type.</p>
+     * <p>The metadata schema of the collection, returned as a JSON string. This string represents a map where keys are field names and values are their data types.</p>
      * <blockquote>
-     * </blockquote>
      * <ul>
-     * <li><p>For information about the supported data types, see <a href="https://help.aliyun.com/document_detail/424383.html">Data types</a>.</p>
+     * <li><p>See <a href="https://help.aliyun.com/document_detail/424383.html">Data types</a> for the list of supported data types.</p>
      * </li>
-     * <li><p>The money data type is not supported.</p>
+     * <li><p>The \&quot;money\&quot; data type is not supported.</p>
      * </li>
      * </ul>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>{&quot;title&quot;:&quot;text&quot;,&quot;content&quot;:&quot;text&quot;,&quot;response&quot;:&quot;int&quot;}</p>
@@ -40,10 +40,12 @@ public class ModifyCollectionResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <p>The status of the API request. Valid values:</p>
      * <ul>
-     * <li><strong>false</strong></li>
-     * <li><strong>true</strong></li>
+     * <li><p><strong>Other values</strong>: The request failed.</p>
+     * </li>
+     * <li><p><strong>success</strong>: The request was successful.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

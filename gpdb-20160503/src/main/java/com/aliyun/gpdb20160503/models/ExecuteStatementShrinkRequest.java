@@ -35,6 +35,12 @@ public class ExecuteStatementShrinkRequest extends TeaModel {
     @NameInMap("Parameters")
     public String parametersShrink;
 
+    /**
+     * <p>Parameters for the vector dataset.  </p>
+     * <blockquote>
+     * <p>When WorkspaceId is not empty, you must also pass this parameter.</p>
+     * </blockquote>
+     */
     @NameInMap("RagWorkspaceCollection")
     public String ragWorkspaceCollectionShrink;
 
@@ -98,6 +104,12 @@ public class ExecuteStatementShrinkRequest extends TeaModel {
     @NameInMap("StatementName")
     public String statementName;
 
+    /**
+     * <p>The ID of a workspace composed of multiple database instances. This parameter and DBInstanceId cannot both be empty. If both are specified, this parameter takes precedence.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>gp-ws-*****</p>
+     */
     @NameInMap("WorkspaceId")
     public String workspaceId;
 

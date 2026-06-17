@@ -8,7 +8,7 @@ public class DeleteVectorIndexResponseBody extends TeaModel {
      * <p>The returned message.</p>
      * 
      * <strong>example:</strong>
-     * <p>Successful</p>
+     * <p>success</p>
      */
     @NameInMap("Message")
     public String message;

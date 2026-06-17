@@ -57,7 +57,7 @@ public class DescribeSQLLogCountRequest extends TeaModel {
      * </ul>
      * 
      * <strong>example:</strong>
-     * <p>success</p>
+     * <p>1</p>
      */
     @NameInMap("ExecuteState")
     public String executeState;

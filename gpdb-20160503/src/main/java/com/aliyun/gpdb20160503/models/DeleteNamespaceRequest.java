@@ -11,7 +11,7 @@ public class DeleteNamespaceRequest extends TeaModel {
      * </blockquote>
      * 
      * <strong>example:</strong>
-     * <p>gp-xxxxxxxxx</p>
+     * <p>gp-bp152460513z7****</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;

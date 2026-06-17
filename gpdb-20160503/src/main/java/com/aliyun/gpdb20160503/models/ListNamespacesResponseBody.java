@@ -17,7 +17,7 @@ public class ListNamespacesResponseBody extends TeaModel {
      * <p>The instance ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>gp-xxxxxxxxx</p>
+     * <p>gp-bp152460513z****</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;

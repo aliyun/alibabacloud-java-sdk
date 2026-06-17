@@ -89,7 +89,7 @@ public class DescribeParametersResponseBody extends TeaModel {
          * <p>The description of the configuration parameter.</p>
          * 
          * <strong>example:</strong>
-         * <p>Sets the maximum allowed duration of any statement, A value of 0 turns off the timeout.</p>
+         * <p>Sets the maximum allowed duration of any statement，A value of 0 turns off the timeout.</p>
          */
         @NameInMap("ParameterDescription")
         public String parameterDescription;

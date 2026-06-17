@@ -24,7 +24,7 @@ public class DescribeDBInstanceNetInfoRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>gp-xxxxxxxxxx</p>
+     * <p>gp-0xin9q82c33xc****</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;

@@ -51,7 +51,7 @@ public class ModifyBackupPolicyRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>Tuesday, Thursday, Saturday</p>
+     * <p>Tuesday,Thursday,Saturday</p>
      */
     @NameInMap("PreferredBackupPeriod")
     public String preferredBackupPeriod;

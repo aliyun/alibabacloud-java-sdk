@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListAINodePoolsResponseBody extends TeaModel {
     /**
-     * <p>Details of the AI node resource pool.</p>
+     * <p>The details of the AINode resource pools.</p>
      */
     @NameInMap("AINodePoolInfos")
     public java.util.List<ListAINodePoolsResponseBodyAINodePoolInfos> AINodePoolInfos;
@@ -42,7 +42,7 @@ public class ListAINodePoolsResponseBody extends TeaModel {
 
     public static class ListAINodePoolsResponseBodyAINodePoolInfosAINodeInfos extends TeaModel {
         /**
-         * <p>The binding type of the AI node.</p>
+         * <p>The type of the bound object.</p>
          * 
          * <strong>example:</strong>
          * <p>model_serving</p>
@@ -51,11 +51,16 @@ public class ListAINodePoolsResponseBody extends TeaModel {
         public String bindObject;
 
         /**
-         * <p>The status of the AI node.</p>
+         * <p>The binding status.</p>
          * <ul>
-         * <li>unbound: The node is not bound.</li>
-         * <li>bound: The node is bound.</li>
+         * <li><p><code>unbound</code>: The node is not bound.</p>
+         * </li>
+         * <li><p><code>bound</code>: The node is bound.</p>
+         * </li>
          * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>bound</p>
          */
         @NameInMap("BindStatus")
         public String bindStatus;
@@ -79,7 +84,7 @@ public class ListAINodePoolsResponseBody extends TeaModel {
         public String namespace;
 
         /**
-         * <p>The name of the AI node.</p>
+         * <p>The name of the AINode.</p>
          * 
          * <strong>example:</strong>
          * <p>ai-xxxxxxxxx</p>
@@ -88,7 +93,7 @@ public class ListAINodePoolsResponseBody extends TeaModel {
         public String nodeName;
 
         /**
-         * <p>The AI node specifications. The list of supported specifications is shown below.</p>
+         * <p>The AINode specification. The following specifications are supported:</p>
          * <pre><code>ADB.AIMedium.1
          * ADB.AILarge.1
          * ADB.AIStandard.2
@@ -133,6 +138,12 @@ public class ListAINodePoolsResponseBody extends TeaModel {
         @NameInMap("UpdateTime")
         public String updateTime;
 
+        /**
+         * <p>The zone ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-j</p>
+         */
         @NameInMap("ZoneId")
         public String zoneId;
 
@@ -209,13 +220,13 @@ public class ListAINodePoolsResponseBody extends TeaModel {
 
     public static class ListAINodePoolsResponseBodyAINodePoolInfos extends TeaModel {
         /**
-         * <p>AI node details.</p>
+         * <p>The details of AINodes.</p>
          */
         @NameInMap("AINodeInfos")
         public java.util.List<ListAINodePoolsResponseBodyAINodePoolInfosAINodeInfos> AINodeInfos;
 
         /**
-         * <p>The ID of the resource pool to which the AI node belongs.</p>
+         * <p>The ID of the AINode resource pool.</p>
          * 
          * <strong>example:</strong>
          * <p>aipool-xxxxxxxxx</p>

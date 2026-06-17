@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeDownloadRecordsResponseBody extends TeaModel {
     /**
-     * <p>The URL that is used to download the file.</p>
+     * <p>An array of download records.</p>
      */
     @NameInMap("Records")
     public java.util.List<DescribeDownloadRecordsResponseBodyRecords> records;
@@ -51,7 +51,7 @@ public class DescribeDownloadRecordsResponseBody extends TeaModel {
         public Long downloadId;
 
         /**
-         * <p>The URL that can be used to download the file.</p>
+         * <p>The download URL.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://perth-download-task.oss-cn-beijing.aliyuncs.com/">https://perth-download-task.oss-cn-beijing.aliyuncs.com/</a>*****</p>
@@ -60,7 +60,7 @@ public class DescribeDownloadRecordsResponseBody extends TeaModel {
         public String downloadUrl;
 
         /**
-         * <p>The error message returned.</p>
+         * <p>The error message.</p>
          * 
          * <strong>example:</strong>
          * <p>Error message</p>
@@ -69,7 +69,7 @@ public class DescribeDownloadRecordsResponseBody extends TeaModel {
         public String exceptionMsg;
 
         /**
-         * <p>The name of the file.</p>
+         * <p>The file name.</p>
          * 
          * <strong>example:</strong>
          * <p>20220509113448-20220509173448.csv</p>
@@ -78,11 +78,14 @@ public class DescribeDownloadRecordsResponseBody extends TeaModel {
         public String fileName;
 
         /**
-         * <p>The state of the upload task. After you call the DownloadDiagnosisRecords operation, query diagnostic information is first uploaded to Object Storage Service (OSS). After the upload task is complete, the query diagnostic information can be downloaded. Valid values:</p>
+         * <p>The status of the task that uploads the query diagnostic information file to Object Storage Service (OSS). You can download the file after the upload is complete. Valid values:</p>
          * <ul>
-         * <li><strong>running</strong>: uploading</li>
-         * <li><strong>finished</strong>: uploaded</li>
-         * <li><strong>failed</strong>: failed</li>
+         * <li><p><strong>running</strong>: The file is being uploaded.</p>
+         * </li>
+         * <li><p><strong>finished</strong>: The file upload is complete.</p>
+         * </li>
+         * <li><p><strong>failed</strong>: The file upload failed.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

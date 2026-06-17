@@ -17,7 +17,7 @@ public class DescribeUserEncryptionKeyListRequest extends TeaModel {
      * <p>The number of KMS keys to return on each page. Default value: 10.</p>
      * 
      * <strong>example:</strong>
-     * <p>10</p>
+     * <p>30</p>
      */
     @NameInMap("PageSize")
     public String pageSize;
@@ -27,7 +27,7 @@ public class DescribeUserEncryptionKeyListRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>ap-southeast-1</p>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;

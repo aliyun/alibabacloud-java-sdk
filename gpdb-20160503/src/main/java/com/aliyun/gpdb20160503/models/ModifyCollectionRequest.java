@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class ModifyCollectionRequest extends TeaModel {
     /**
-     * <p>The name of the collection.</p>
+     * <p>The collection name.</p>
      * <blockquote>
-     * <p> You can call the <a href="https://help.aliyun.com/document_detail/2401503.html">ListCollections</a> operation to query a list of collections.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/2401503.html">ListCollections</a> operation to list all collections.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -20,7 +20,7 @@ public class ModifyCollectionRequest extends TeaModel {
     /**
      * <p>The instance ID.</p>
      * <blockquote>
-     * <p> You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query the information about all AnalyticDB for PostgreSQL instances within a region, including instance IDs.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query details for all AnalyticDB for PostgreSQL instances in a region, including their instance IDs.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -30,25 +30,28 @@ public class ModifyCollectionRequest extends TeaModel {
     public String DBInstanceId;
 
     /**
-     * <p>The metadata of the addition or modification operation, which is in the JSON string format.</p>
-     * <p>You can specify this parameter to add a metadata definition, or rename an existing metadata definition and perform implicit type conversion.</p>
-     * <p>If you specify <code>operations[*].operator = add</code> to add a metadata definition, <code>operations[*].newMetaName</code> specifies the name of the metadata definition, and <code>operations[*].newMetaType</code> specifies the data type of the metadata definition.</p>
-     * <p>If you specify <code>operations[*].operator = replace</code> to modify an existing metadata definition, <code>operations[*].oldMetaName</code> specifies the current name of the metadata definition, <code>operations[*].newMetaName</code> specifies the new name of the metadata definition, and <code>operations[*].newMetaType</code> specifies the new data type of the metadata definition. If you only want to rename the metadata definition, you do not need to specify the <code>operations[*].newMetaType</code> field. If you only want to perform implicit type conversion, you do not need to specify the <code>operations[*].newMetaName</code> field.</p>
+     * <p>A JSON string that specifies the operations to add or modify metadata fields. For the required format, see the example.</p>
+     * <p>Use this parameter to add new metadata fields, rename existing metadata fields, or perform implicit data type conversion on existing fields.</p>
+     * <p>Details:</p>
+     * <p>To add a new metadata field, set <code>operations[*].operator = add</code>. Then, use <code>operations[*].newMetaName</code> to specify the field\&quot;s name, <code>operations[*].newMetaType</code> for its data type, and <code>operations[*].fullTextRetrieval</code> to enable full-text retrieval for it.</p>
+     * <p>To modify an existing metadata field, set <code>operations[*].operator = replace</code>. You must specify the current field name in <code>operations[*].oldMetaName</code>. To rename the field, provide the new name in <code>operations[*].newMetaName</code>. To change its data type, provide the new type in <code>operations[*].newMetaType</code>.</p>
      * <blockquote>
-     * </blockquote>
      * <ul>
-     * <li><p>For information about the supported data types, see <a href="https://help.aliyun.com/document_detail/424383.html">Data types</a>.</p>
+     * <li><p>For a list of supported data types, see <a href="https://help.aliyun.com/document_detail/424383.html">Data types</a>. The money data type is not supported.</p>
      * </li>
-     * <li><p>The money data type is not supported.</p>
+     * <li><p>Full-text retrieval can be enabled for a field only during an <code>add</code> operation, not a <code>replace</code> operation.</p>
      * </li>
      * </ul>
-     * <p>**</p>
-     * <p><strong>Warning</strong>Reserved fields such as id, vector, to_tsvector, and source cannot be used.</p>
+     * </blockquote>
+     * <blockquote>
+     * <p>Warning: </p>
+     * </blockquote>
+     * <p>The field names <code>id</code>, <code>vector</code>, <code>to_tsvector</code>, and <code>source</code> are reserved.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>{&quot;operations&quot;:[
-     * {&quot;operator&quot;:&quot;add&quot;,&quot;newMetaType&quot;:&quot;int&quot;,&quot;newMetaName&quot;:&quot;ext1&quot;},
+     * {&quot;operator&quot;:&quot;add&quot;,&quot;newMetaType&quot;:&quot;int&quot;,&quot;newMetaName&quot;:&quot;ext1&quot;,&quot;fullTextRetrieval&quot;:true},
      * {&quot;operator&quot;:&quot;replace&quot;,&quot;oldMetaName&quot;:&quot;ext2&quot;,&quot;newMetaName&quot;:&quot;ext3&quot;},
      * {&quot;operator&quot;:&quot;replace&quot;,&quot;newMetaType&quot;:&quot;bigint&quot;,&quot;oldMetaName&quot;:&quot;ext4&quot;},
      * {&quot;operator&quot;:&quot;replace&quot;,&quot;newMetaType&quot;:&quot;int&quot;,&quot;oldMetaName&quot;:&quot;ext5&quot;,&quot;newMetaName&quot;:&quot;ext6&quot;}
@@ -58,9 +61,9 @@ public class ModifyCollectionRequest extends TeaModel {
     public String metadata;
 
     /**
-     * <p>The name of the namespace. Default value: public.</p>
+     * <p>The namespace. The default value is <code>public</code>.</p>
      * <blockquote>
-     * <p> You can call the CreateNamespace operation to create a namespace and call the ListNamespaces operation to query a list of namespaces.</p>
+     * <p>You can call the CreateNamespace operation to create a namespace and the ListNamespaces operation to list existing namespaces.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -70,7 +73,7 @@ public class ModifyCollectionRequest extends TeaModel {
     public String namespace;
 
     /**
-     * <p>The password of the namespace.</p>
+     * <p>The password for the namespace.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -93,7 +96,7 @@ public class ModifyCollectionRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of the workspace that consists of multiple AnalyticDB for PostgreSQL instances. You must specify one of the WorkspaceId and DBInstanceId parameters. If you specify both parameters, the WorkspaceId parameter takes precedence.</p>
+     * <p>The ID of the workspace that contains multiple database instances. You must specify either this parameter or <code>DBInstanceId</code>. If you specify both, this parameter takes precedence.</p>
      * 
      * <strong>example:</strong>
      * <p>gp-ws-*****</p>

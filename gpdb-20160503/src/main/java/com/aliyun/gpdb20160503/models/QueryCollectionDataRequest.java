@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class QueryCollectionDataRequest extends TeaModel {
     /**
-     * <p>Collection name.</p>
+     * <p>The name of the collection.</p>
      * <blockquote>
-     * <p>You can use the <a href="https://help.aliyun.com/document_detail/2401503.html">ListCollections</a> API to view the list.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/2401503.html">ListCollections</a> operation to list available collections.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -18,9 +18,9 @@ public class QueryCollectionDataRequest extends TeaModel {
     public String collection;
 
     /**
-     * <p>Content for full-text search. When this value is empty, only vector search is used; when it is not empty, both vector and full-text search are used.</p>
+     * <p>The content for full-text search. If this parameter is omitted, only vector search is performed. If this parameter is specified, the system performs a hybrid search of vector search and full-text search.</p>
      * <blockquote>
-     * <p>The Vector parameter cannot be empty at the same time.</p>
+     * <p>You must specify one of the Content and Vector parameters.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -30,9 +30,9 @@ public class QueryCollectionDataRequest extends TeaModel {
     public String content;
 
     /**
-     * <p>Instance ID.</p>
+     * <p>The ID of the instance.</p>
      * <blockquote>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> API to view details of all AnalyticDB PostgreSQL instances in the target region, including the instance ID.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query details for all AnalyticDB for PostgreSQL instances in a region, including their instance IDs.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -42,26 +42,29 @@ public class QueryCollectionDataRequest extends TeaModel {
     public String DBInstanceId;
 
     /**
-     * <p>Filter conditions for the data to be queried, in SQL WHERE format. It is an expression that returns a boolean value (true or false). Conditions can be simple comparison operators such as equal (=), not equal (&lt;&gt; or !=), greater than (&gt;), less than (&lt;), greater than or equal to (&gt;=), less than or equal to (&lt;=), or more complex expressions combined with logical operators (AND, OR, NOT), as well as conditions using keywords like IN, BETWEEN, and LIKE.</p>
+     * <p>The filter conditions for data retrieval. It is in the format of a WHERE clause in SQL. This expression returns a boolean value, which can be a simple comparison operator, such as <code>=</code>, <code>&lt;&gt;</code>, <code>!=</code>, <code>&gt;</code>, <code>&lt;</code>, <code>&gt;=</code>, and <code>&lt;=</code>, or a more complex expression combined with logical operators, such as <code>AND</code>, <code>OR</code>, and <code>NOT</code>, and keywords such as <code>IN</code>, <code>BETWEEN</code>, and <code>LIKE</code>.</p>
      * <blockquote>
      * <ul>
-     * <li>For detailed syntax, refer to: <a href="https://www.postgresqltutorial.com/postgresql-tutorial/postgresql-where/">https://www.postgresqltutorial.com/postgresql-tutorial/postgresql-where/</a></li>
+     * <li>For more information about the syntax, see <a href="https://www.postgresqltutorial.com/postgresql-tutorial/postgresql-where/">PostgreSQL WHERE</a>.</li>
      * </ul>
      * </blockquote>
      * 
      * <strong>example:</strong>
-     * <p>response &gt; 200</p>
+     * <p>pipeline_id=\&quot;1yhpmo0rbn\&quot; AND (spu=\&quot;10025667796135\&quot; AND dept_id=\&quot;226\&quot;)</p>
      */
     @NameInMap("Filter")
     public String filter;
 
     /**
-     * <p>Dual-path recall algorithm, default is empty (i.e., directly compare and sort the scores of vectors and full-text).</p>
-     * <p>Available values:</p>
+     * <p>The hybrid search algorithm. If this parameter is empty, the system ranks results by directly comparing the scores from the vector search and the full-text search.</p>
+     * <p>Valid values:</p>
      * <ul>
-     * <li>RRF: Reciprocal rank fusion, with a parameter k controlling the fusion effect. See HybridSearchArgs configuration for details;</li>
-     * <li>Weight: Weighted sorting, using a parameter alpha to control the score ratio of vectors and full-text, then sorting. See HybridSearchArgs configuration for details;</li>
-     * <li>Cascaded: Perform full-text search first, then vector search based on the full-text results;</li>
+     * <li><p><code>RRF</code>: Reciprocal Rank Fusion. This algorithm has a parameter k to control the fusion effect. For more information, see the description of the <code>HybridSearchArgs</code> parameter.</p>
+     * </li>
+     * <li><p><code>Weight</code>: weighted sort. This algorithm uses a parameter alpha to control the score ratio of vector search and full-text search, and then sorts the results. For more information about the parameter, see the <code>HybridSearchArgs</code> parameter.</p>
+     * </li>
+     * <li><p><code>Cascaded</code>: performs a full-text search, and then performs a vector search on the search results.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -71,12 +74,10 @@ public class QueryCollectionDataRequest extends TeaModel {
     public String hybridSearch;
 
     /**
-     * <p>The parameters of the two-way retrieval algorithm. The following parameters are supported:</p>
+     * <p>The parameters for the hybrid search algorithm. The following algorithms are supported: RRF and Weight.</p>
      * <ul>
-     * <li>When HybridSearch is set to RRF, the scores are calculated by using the <code>1/(k+rank_i)</code> formula. The constant k is a positive integer that is greater than 1.</li>
+     * <li>For RRF, specify the constant k in the scoring algorithm <code>1/(k+rank_i)</code>. The value must be a positive integer greater than 1. The format is as follows:</li>
      * </ul>
-     * <!---->
-     * 
      * <pre><code>{ 
      *    &quot;RRF&quot;: {
      *     &quot;k&quot;: 60
@@ -84,10 +85,8 @@ public class QueryCollectionDataRequest extends TeaModel {
      * }
      * </code></pre>
      * <ul>
-     * <li>When HybridSearch is set to Weight, the scores are calculated by using the <code>alpha * vector_score + (1-alpha) * text_score</code> formula. The alpha parameter specifies the proportion of the vector search score and the full-text search score and ranges from 0 to 1. A value of 0 specifies full-text search and a value of 1 specifies vector search.</li>
+     * <li>For Weight, in the formula <code>alpha * vector_score + (1-alpha) * text_score</code>, the alpha parameter indicates the score ratio of the vector search to the full-text search. The value ranges from 0 to 1. 0 indicates that only the full-text search is used, and 1 indicates that only the vector search is used.</li>
      * </ul>
-     * <!---->
-     * 
      * <pre><code>{ 
      *    &quot;Weight&quot;: {
      *     &quot;alpha&quot;: 0.5
@@ -99,7 +98,7 @@ public class QueryCollectionDataRequest extends TeaModel {
     public java.util.Map<String, java.util.Map<String, ?>> hybridSearchArgs;
 
     /**
-     * <p>Defaults to empty, indicating the metadata fields to return. Multiple fields should be separated by commas.</p>
+     * <p>This parameter is left empty by default. It specifies the metadata fields to be returned. You can specify multiple fields and separate them with commas (,).</p>
      * 
      * <strong>example:</strong>
      * <p>title,content</p>
@@ -107,14 +106,28 @@ public class QueryCollectionDataRequest extends TeaModel {
     @NameInMap("IncludeMetadataFields")
     public String includeMetadataFields;
 
+    /**
+     * <p>Specifies whether to return sparse vector data. Valid values:</p>
+     * <ul>
+     * <li><p><strong>true</strong>: returns sparse vector data.</p>
+     * </li>
+     * <li><p><strong>false</strong>: does not return sparse vector data.</p>
+     * </li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("IncludeSparseValues")
     public Boolean includeSparseValues;
 
     /**
-     * <p>Whether to return vector data. Value descriptions:</p>
+     * <p>Specifies whether to return dense vector data. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: Return vector data.</li>
-     * <li><strong>false</strong>: Do not return vector data, used for full-text search scenarios.</li>
+     * <li><p><strong>true</strong>: returns dense vector data.</p>
+     * </li>
+     * <li><p><strong>false</strong>: does not return dense vector data.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -124,14 +137,17 @@ public class QueryCollectionDataRequest extends TeaModel {
     public Boolean includeValues;
 
     /**
-     * <p>Similarity algorithm used during retrieval. Value descriptions:</p>
+     * <p>The similarity algorithm for search. Valid values:</p>
      * <ul>
-     * <li><strong>l2</strong>: Euclidean distance.</li>
-     * <li><strong>ip</strong>: Inner product (dot product) distance.</li>
-     * <li><strong>cosine</strong>: Cosine similarity.</li>
+     * <li><p><strong>l2</strong>: the Euclidean distance.</p>
+     * </li>
+     * <li><p><strong>ip</strong>: the dot product distance.</p>
+     * </li>
+     * <li><p><strong>cosine</strong>: the cosine similarity.</p>
+     * </li>
      * </ul>
      * <blockquote>
-     * <p>If this value is empty, the algorithm specified during index creation is used.</p>
+     * <p>If this parameter is not specified, the algorithm specified when the index is created is used.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -141,9 +157,9 @@ public class QueryCollectionDataRequest extends TeaModel {
     public String metrics;
 
     /**
-     * <p>Namespace.</p>
+     * <p>The name of the namespace.</p>
      * <blockquote>
-     * <p>You can use the <a href="https://help.aliyun.com/document_detail/2401502.html">ListNamespaces</a> API to view the list.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/2401502.html">ListNamespaces</a> operation to list available namespaces.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -153,7 +169,7 @@ public class QueryCollectionDataRequest extends TeaModel {
     public String namespace;
 
     /**
-     * <p>Password for the namespace.</p>
+     * <p>The password for the namespace.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -163,12 +179,15 @@ public class QueryCollectionDataRequest extends TeaModel {
     public String namespacePassword;
 
     /**
-     * <p>Defaults to empty, indicating the starting point for pagination queries. Does not support hybrid search scenarios.</p>
-     * <p>The value must be &gt;= 0. When this value is not empty, it will return <code>Total</code>, which indicates the total number of hits. This parameter works with <code>TopK</code>. For example, to paginate 20 and retrieve chunks with <code>chunk_id</code> from 0 to 44, you need to make three requests:</p>
+     * <p>This parameter is left empty by default. It specifies the start position of a paged query. This parameter is not supported in hybrid search.</p>
+     * <p>The value must be greater than or equal to 0. When this parameter is not empty, Total in the response indicates the total number of hits. This parameter is used with TopK. For example, if you want to retrieve chunks 0 to 44 with a page size of 20, you must send three requests:</p>
      * <ul>
-     * <li><code>Offset=0, TopK=20</code> returns <code>chunk_id</code> 0~19</li>
-     * <li><code>Offset=20, TopK=20</code> returns <code>chunk_id</code> 20~39</li>
-     * <li><code>Offset=30, TopK=20</code> returns <code>chunk_id</code> 40~44</li>
+     * <li><p><code>Offset=0, TopK=20</code> returns chunks 0 to 19.</p>
+     * </li>
+     * <li><p><code>Offset=20, TopK=20</code> returns chunks 20 to 39.</p>
+     * </li>
+     * <li><p><code>Offset=40, TopK=20</code> returns chunks 40 to 44.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -178,12 +197,15 @@ public class QueryCollectionDataRequest extends TeaModel {
     public Integer offset;
 
     /**
-     * <p>Defaults to empty, indicating the field for sorting. Does not support hybrid search scenarios.</p>
-     * <p>The field must belong to metadata or be a default field in the table, such as <code>id</code>. The supported formats are:</p>
+     * <p>This parameter is left empty by default. It specifies the field based on which to sort the results. This parameter is not supported in hybrid search.</p>
+     * <p>The field must be a metadata field or a default field in the table, such as <code>id</code>. The following formats are supported:</p>
      * <ul>
-     * <li>A single field, e.g., <code>chunk_id</code>;</li>
-     * <li>Multiple fields, separated by commas, e.g., <code>block_id, chunk_id</code>;</li>
-     * <li>Supports reverse order, e.g., <code>block_id DESC, chunk_id DESC</code>;</li>
+     * <li><p>A single field, such as <code>chunk_id</code>.</p>
+     * </li>
+     * <li><p>Multiple fields separated by commas (,), such as <code>block_id, chunk_id</code>.</p>
+     * </li>
+     * <li><p>Descending order, such as <code>block_id DESC, chunk_id DESC</code>.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -196,7 +218,7 @@ public class QueryCollectionDataRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>Region ID where the instance is located.</p>
+     * <p>The region ID of the instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -206,19 +228,22 @@ public class QueryCollectionDataRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>Uses another relational table to filter vector data (similar to a Join function).</p>
+     * <p>Uses another relational table to filter vector data, which is similar to the JOIN operation.</p>
      * <blockquote>
-     * <p>Data from the relational table can be returned by setting the <code>IncludeMetadataFields</code> parameter. For example, <code>rds_table_name.id</code> indicates returning the <code>id</code> field from the relational table.</p>
+     * <p>The data of the relational table can be returned by setting the IncludeMetadataFields parameter. For example, <code>rds_table_name.id</code> indicates that the id field of the relational table is returned.</p>
      * </blockquote>
      */
     @NameInMap("RelationalTableFilter")
     public QueryCollectionDataRequestRelationalTableFilter relationalTableFilter;
 
+    /**
+     * <p>The sparse vector data.</p>
+     */
     @NameInMap("SparseVector")
     public QueryCollectionDataRequestSparseVector sparseVector;
 
     /**
-     * <p>Set the number of top results to return.</p>
+     * <p>Specifies the number of top results to return.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -228,16 +253,21 @@ public class QueryCollectionDataRequest extends TeaModel {
     public Long topK;
 
     /**
-     * <p>Vector data, with the same dimension as specified in the <a href="https://help.aliyun.com/document_detail/2401497.html">CreateCollection</a> API.</p>
+     * <p>The vector data. The length of the vector data must be the same as that specified in the <a href="https://help.aliyun.com/document_detail/2401497.html">CreateCollection</a> operation.</p>
      * <blockquote>
-     * <p>When the vector is empty, only full-text search results are returned.</p>
+     * <ul>
+     * <li><p>If <code>SparseVector</code> is empty, only the dense vector search results are returned.</p>
+     * </li>
+     * <li><p>If both <code>Vector</code> and <code>SparseVector</code> are empty, only the full-text search results are returned.</p>
+     * </li>
+     * </ul>
      * </blockquote>
      */
     @NameInMap("Vector")
     public java.util.List<Double> vector;
 
     /**
-     * <p>The ID of the Workspace composed of multiple database instances. This parameter and <code>DBInstanceId</code> cannot both be empty. If both are specified, this parameter takes precedence.</p>
+     * <p>The ID of the workspace that consists of multiple database instances. You must specify this parameter or the DBInstanceId parameter. If both this parameter and DBInstanceId are specified, this parameter is used.</p>
      * 
      * <strong>example:</strong>
      * <p>gp-ws-*****</p>
@@ -420,7 +450,7 @@ public class QueryCollectionDataRequest extends TeaModel {
 
     public static class QueryCollectionDataRequestRelationalTableFilter extends TeaModel {
         /**
-         * <p>The Metadata field of the vector collection, used to associate with the fields in the vector table.</p>
+         * <p>The metadata field of the vector collection, which is used to associate with the fields of the vector table.</p>
          * 
          * <strong>example:</strong>
          * <p>doc_id</p>
@@ -429,7 +459,7 @@ public class QueryCollectionDataRequest extends TeaModel {
         public String collectionMetadataField;
 
         /**
-         * <p>The filtering condition for the relational table.</p>
+         * <p>The filter conditions for the relational table.</p>
          * 
          * <strong>example:</strong>
          * <p>tags @&gt; ARRAY[\&quot;art\&quot;]</p>
@@ -438,7 +468,7 @@ public class QueryCollectionDataRequest extends TeaModel {
         public String condition;
 
         /**
-         * <p>The field in the relational table, used to associate with the Metadata field of the vector collection.</p>
+         * <p>The field of the relational table, which is used to associate with the metadata field of the vector collection.</p>
          * 
          * <strong>example:</strong>
          * <p>id</p>
@@ -495,9 +525,18 @@ public class QueryCollectionDataRequest extends TeaModel {
     }
 
     public static class QueryCollectionDataRequestSparseVector extends TeaModel {
+        /**
+         * <p>The array of indexes.</p>
+         * <blockquote>
+         * <p>The number of elements in the array cannot exceed 4,000.</p>
+         * </blockquote>
+         */
         @NameInMap("Indices")
         public java.util.List<Long> indices;
 
+        /**
+         * <p>The array of sparse vectors.</p>
+         */
         @NameInMap("Values")
         public java.util.List<Double> values;
 

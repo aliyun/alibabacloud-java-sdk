@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class ChatWithKnowledgeBaseRequest extends TeaModel {
     /**
-     * <p>The cluster ID.</p>
+     * <p>The instance ID.</p>
      * <blockquote>
-     * <p> You can call the <a href="https://help.aliyun.com/document_detail/196830.html">DescribeDBInstances</a> operation to query the information about all AnalyticDB for PostgreSQL instances within a region, including instance IDs.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/196830.html">DescribeDBInstances</a> operation to view the details of all instances in a target region, including their instance IDs.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -18,7 +18,7 @@ public class ChatWithKnowledgeBaseRequest extends TeaModel {
     public String DBInstanceId;
 
     /**
-     * <p>Whether to return the retrieved result. Default value: false.</p>
+     * <p>Whether to include the raw retrieval results from the knowledge base in the response. Default: <code>false</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -27,13 +27,13 @@ public class ChatWithKnowledgeBaseRequest extends TeaModel {
     public Boolean includeKnowledgeBaseResults;
 
     /**
-     * <p>The knowledge retrieval parameter object. If you do not specify this parameter, only chat mode is enabled.</p>
+     * <p>Parameters for knowledge retrieval. If omitted, the operation performs a standard chat without retrieving from a knowledge base.</p>
      */
     @NameInMap("KnowledgeParams")
     public ChatWithKnowledgeBaseRequestKnowledgeParams knowledgeParams;
 
     /**
-     * <p>The Large Language Model (LLM) invocation parameter object.</p>
+     * <p>The parameters for calling the large language model (LLM).</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("ModelParams")
@@ -43,13 +43,16 @@ public class ChatWithKnowledgeBaseRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The system prompt template, which should include {{ text_chunks }},{{ user_system_prompt }},{{ graph_entities },{{ graph_relations }}. If any of these placeholders are not specified, the corresponding section should have no effect.</p>
+     * <p>A custom system prompt template. If specified, it overrides the default prompt. The template must include the {{ text_chunks }}, {{ user_system_prompt }}, {{ graph_entities }}, and {{ graph_relations }} placeholders.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>&quot;参考以下知识回答问题:{{ text_chunks }}&quot;</p>
      */
     @NameInMap("PromptParams")
     public String promptParams;
 
     /**
-     * <p>实例所在的地域ID</p>
+     * <p>The region ID of the instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -121,7 +124,7 @@ public class ChatWithKnowledgeBaseRequest extends TeaModel {
 
     public static class ChatWithKnowledgeBaseRequestKnowledgeParamsMergeMethodArgsRrf extends TeaModel {
         /**
-         * <p>The smoothing constant k in the formula to calculate the score: 1/(k + rank_i). It must be a positive integer greater than 1.</p>
+         * <p>The constant <code>k</code> in the reciprocal rank fusion formula <code>1/(k + rank_i)</code>. The value must be a positive integer greater than 1.</p>
          * 
          * <strong>example:</strong>
          * <p>60</p>
@@ -146,7 +149,7 @@ public class ChatWithKnowledgeBaseRequest extends TeaModel {
 
     public static class ChatWithKnowledgeBaseRequestKnowledgeParamsMergeMethodArgsWeight extends TeaModel {
         /**
-         * <p>An array of weights for each SourceCollection.</p>
+         * <p>An array of weights corresponding to each collection specified in <code>SourceCollection</code>.</p>
          */
         @NameInMap("Weights")
         public java.util.List<Double> weights;
@@ -168,13 +171,13 @@ public class ChatWithKnowledgeBaseRequest extends TeaModel {
 
     public static class ChatWithKnowledgeBaseRequestKnowledgeParamsMergeMethodArgs extends TeaModel {
         /**
-         * <p>The parameter that can be configured when the MergeMethod parameter is set to RRF.</p>
+         * <p>Parameters to use when <code>MergeMethod</code> is set to <code>RRF</code>.</p>
          */
         @NameInMap("Rrf")
         public ChatWithKnowledgeBaseRequestKnowledgeParamsMergeMethodArgsRrf rrf;
 
         /**
-         * <p>The parameter that you can configure when you set the MergeMethod parameter to Weight.</p>
+         * <p>Parameters to use when <code>MergeMethod</code> is set to <code>Weight</code>.</p>
          */
         @NameInMap("Weight")
         public ChatWithKnowledgeBaseRequestKnowledgeParamsMergeMethodArgsWeight weight;
@@ -204,6 +207,8 @@ public class ChatWithKnowledgeBaseRequest extends TeaModel {
 
     public static class ChatWithKnowledgeBaseRequestKnowledgeParamsRerankModel extends TeaModel {
         /**
+         * <p>The instruction or prompt for the reranking model.</p>
+         * 
          * <strong>example:</strong>
          * <p>Given a web search query, retrieve relevant passages that answer the query</p>
          */
@@ -211,6 +216,8 @@ public class ChatWithKnowledgeBaseRequest extends TeaModel {
         public String instruct;
 
         /**
+         * <p>The name of the reranking model.</p>
+         * 
          * <strong>example:</strong>
          * <p>qwen3-rerank</p>
          */
@@ -242,7 +249,7 @@ public class ChatWithKnowledgeBaseRequest extends TeaModel {
 
     public static class ChatWithKnowledgeBaseRequestKnowledgeParamsSourceCollectionQueryParamsGraphSearchArgs extends TeaModel {
         /**
-         * <p>Returns the top number of entities and relationship edges. Default value: 60.</p>
+         * <p>The maximum number of entities and relationship edges to return from the knowledge graph search. Default: 60.</p>
          * 
          * <strong>example:</strong>
          * <p>60</p>
@@ -267,6 +274,8 @@ public class ChatWithKnowledgeBaseRequest extends TeaModel {
 
     public static class ChatWithKnowledgeBaseRequestKnowledgeParamsSourceCollectionQueryParamsRerankModel extends TeaModel {
         /**
+         * <p>The instruction or prompt for the reranking model.</p>
+         * 
          * <strong>example:</strong>
          * <p>Given a web search query, retrieve relevant passages that answer the query</p>
          */
@@ -274,6 +283,8 @@ public class ChatWithKnowledgeBaseRequest extends TeaModel {
         public String instruct;
 
         /**
+         * <p>The name of the reranking model.</p>
+         * 
          * <strong>example:</strong>
          * <p>qwen3-rerank</p>
          */
@@ -305,7 +316,7 @@ public class ChatWithKnowledgeBaseRequest extends TeaModel {
 
     public static class ChatWithKnowledgeBaseRequestKnowledgeParamsSourceCollectionQueryParams extends TeaModel {
         /**
-         * <p>The condition that is used to filter the data to be updated. Specify this parameter in a format that is the same as the WHERE clause.</p>
+         * <p>A filter to apply to the search, specified as a SQL <code>WHERE</code> clause.</p>
          * 
          * <strong>example:</strong>
          * <p>id = \&quot;llm-t87l87fxuhn56woc_8anu8j2d3f_file_e74635e2cc314e838543e724f6b3b1f2_10658020\&quot;</p>
@@ -314,7 +325,7 @@ public class ChatWithKnowledgeBaseRequest extends TeaModel {
         public String filter;
 
         /**
-         * <p>Whether to enable knowledge graph enhancement. Default value: false.</p>
+         * <p>Whether to enhance the search with a knowledge graph. Default: <code>false</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -323,18 +334,21 @@ public class ChatWithKnowledgeBaseRequest extends TeaModel {
         public Boolean graphEnhance;
 
         /**
-         * <p>Returns the top number of entities and relationship edges. Default value: 60.</p>
+         * <p>Parameters for the knowledge graph search, used when <code>GraphEnhance</code> is <code>true</code>.</p>
          */
         @NameInMap("GraphSearchArgs")
         public ChatWithKnowledgeBaseRequestKnowledgeParamsSourceCollectionQueryParamsGraphSearchArgs graphSearchArgs;
 
         /**
-         * <p>The dual-path retrieval algorithm. This parameter is empty by default, which specifies that scores of vector retrieval and full-text retrieval are directly compared and sorted together.</p>
+         * <p>The multi-channel recall algorithm. If omitted, the system directly compares and sorts scores from dense vector retrieval and full-text search.</p>
          * <p>Valid values:</p>
          * <ul>
-         * <li>RRF: The reciprocal rank fusion (RRF) algorithm uses a constant k to control the fusion effect. For more information, see the description of the HybridSearchArgs parameter.</li>
-         * <li>Weight: This algorithm uses the alpha parameter to specify the proportion of the vector search score and the full-text search score and then sorts by weight. For more information, see the description of the HybridSearchArgs parameter.</li>
-         * <li>Cascaded: This algorithm performs first full-text retrieval and then vector retrieval.</li>
+         * <li><p><code>RRF</code>: Uses reciprocal rank fusion. The fusion effect is controlled by the <code>k</code> parameter in <code>HybridSearchArgs</code>.</p>
+         * </li>
+         * <li><p><code>Weight</code>: Uses weighted sorting. The weights for vector retrieval and full-text search scores are controlled by parameters in <code>HybridSearchArgs</code>.</p>
+         * </li>
+         * <li><p><code>Cascaded</code>: Performs a full-text search first, followed by a vector retrieval on the results.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -344,27 +358,52 @@ public class ChatWithKnowledgeBaseRequest extends TeaModel {
         public String hybridSearch;
 
         /**
-         * <p>The parameters of the dual-path retrieval algorithm. RRF and Weight are supported at this time:</p>
+         * <p>Parameters for the multi-channel recall algorithm. <code>RRF</code> and <code>Weight</code> are supported. The <code>HybridPathsSetting</code> parameter can specify the recall channels: <code>dense</code> (dense vector), <code>sparse</code> (sparse vector), and <code>fulltext</code> (full-text search). If this parameter is empty, <code>dense</code> and <code>fulltext</code> are used by default.</p>
          * <ul>
-         * <li>RRF: Specifies the smoothing constant k in the formula to calculate the score: <code>1/(k + rank_i)</code>. The k constant must be a positive integer greater than 1. The format:</li>
+         * <li><code>RRF</code>: Specifies the constant <code>k</code> in the formula <code>1/(k+rank_i)</code>. The value must be a positive integer greater than 1. Format:</li>
          * </ul>
-         * <!---->
-         * 
-         * <pre><code>{ 
-         *    &quot;RRF&quot;: {
+         * <pre><code>{
+         *   &quot;HybridPathsSetting&quot;: {
+         *     &quot;paths&quot;: &quot;dense,fulltext&quot;
+         *   },
+         *   &quot;RRF&quot;: {
          *     &quot;k&quot;: 60
-         *    }
+         *   }
          * }
          * </code></pre>
          * <ul>
-         * <li>Weight: The score is computed as <code>alpha * vector_score + (1 - alpha) * text_score</code>. The parameter alpha controls the weighting between vector search and full-text search scores, with a valid range of [0, 1]. 0 specifies only full-text search score. 1 specifies only vector search score.</li>
+         * <li><p><code>Weight</code>:</p>
+         * <ul>
+         * <li><p>Two-channel recall (if <code>HybridPathsSetting</code> is not specified, only <code>alpha</code> is required):</p>
+         * <ul>
+         * <li>Formula: <code>alpha * dense_score + (1-alpha) * fulltext_score</code>. The <code>alpha</code> parameter represents the weight of the dense vector score relative to the full-text search score. The value must be in the range [0, 1]. A value of 0 uses only full-text search. A value of 1 uses only dense vector retrieval.</li>
          * </ul>
-         * <!---->
-         * 
+         * </li>
+         * </ul>
+         * </li>
+         * </ul>
          * <pre><code>{ 
          *    &quot;Weight&quot;: {
          *     &quot;alpha&quot;: 0.5
          *    }
+         * }
+         * </code></pre>
+         * <ul>
+         * <li><p>Three-channel recall:</p>
+         * <ul>
+         * <li>Formula: <code>normalized_dense * dense_score + normalized_sparse * sparse_score + normalized_fulltext * fulltext_score</code>. The <code>dense</code>, <code>sparse</code>, and <code>fulltext</code> parameters represent the weights for each channel and must be greater than or equal to 0. The system automatically normalizes these weights (for example, <code>normalized_x = x / (dense + sparse + fulltext)</code>).</li>
+         * </ul>
+         * </li>
+         * </ul>
+         * <pre><code>{
+         *   &quot;HybridPathsSetting&quot;: {
+         *      &quot;paths&quot;: &quot;dense,sparse,fulltext&quot;
+         *    },
+         *   &quot;Weight&quot;: {
+         *     &quot;dense&quot;: 0.5,
+         *     &quot;sparse&quot;: 0.3,
+         *     &quot;fulltext&quot;: 0.2
+         *   }
          * }
          * </code></pre>
          */
@@ -372,11 +411,14 @@ public class ChatWithKnowledgeBaseRequest extends TeaModel {
         public java.util.Map<String, ?> hybridSearchArgs;
 
         /**
-         * <p>The method that is used to create vector indexes. Valid values:</p>
+         * <p>The distance metric used for vector indexing. Valid values:</p>
          * <ul>
-         * <li>l2: Euclidean distance.</li>
-         * <li>ip: Inner product distance.</li>
-         * <li>cosine: Cosine similarity.</li>
+         * <li><p><code>l2</code>: euclidean distance.</p>
+         * </li>
+         * <li><p><code>ip</code>: Inner product (dot product) distance.</p>
+         * </li>
+         * <li><p><code>cosine</code>: cosine similarity.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -386,29 +428,29 @@ public class ChatWithKnowledgeBaseRequest extends TeaModel {
         public String metrics;
 
         /**
-         * <p>The retrieval window. If you specify this parameter, the context of the retrieved result is added in the output. Format: List\&lt;A, B&gt;. Valid values: -10&lt;=A&lt;=0 and 0&lt;=B&lt;=10.</p>
+         * <p>The recall window. If specified, expands the context around retrieved text chunks. Must be an array of two integers, <code>[A, B]</code>, where <code>A</code> is the number of preceding chunks to include (from -10 to 0) and <code>B</code> is the number of following chunks (from 0 to 10).</p>
          * <blockquote>
-         * </blockquote>
          * <ul>
-         * <li><p>We recommend that you specify this parameter if the source document is segmented into large numbers of pieces, which may result in loss of contextual information during retrieval.</p>
+         * <li><p>We recommend that you use this parameter when document chunks are highly fragmented and retrieval might result in a loss of context.</p>
          * </li>
-         * <li><p>Perform re-ranking before windowing.</p>
+         * <li><p>Reranking is performed before windowing is applied.</p>
          * </li>
          * </ul>
+         * </blockquote>
          */
         @NameInMap("RecallWindow")
         public java.util.List<Long> recallWindow;
 
         /**
-         * <p>The rerank factor. If you specify this parameter, the search result is reranked once again. Valid values: 1\&lt;RerankFactor&lt;=5.</p>
+         * <p>The reranking factor for this collection, which overrides the top-level <code>RerankFactor</code>. If specified, it reranks the initial retrieval results to improve relevance. Valid range: (1, 5].</p>
          * <blockquote>
-         * </blockquote>
          * <ul>
-         * <li><p>If the document is segmented into sparse parts, reranking is inefficient.</p>
+         * <li><p>Reranking may be less efficient if document chunks are sparse.</p>
          * </li>
-         * <li><p>We recommend that the number of reranked results (the ceiling of TopK × RerankFactor) not exceed 50.</p>
+         * <li><p>We recommend that the number of items to rerank, calculated as <code>Ceiling(TopK * RerankFactor)</code>, does not exceed 50.</p>
          * </li>
          * </ul>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>1.5</p>
@@ -416,11 +458,14 @@ public class ChatWithKnowledgeBaseRequest extends TeaModel {
         @NameInMap("RerankFactor")
         public Double rerankFactor;
 
+        /**
+         * <p>The model to use for reranking.</p>
+         */
         @NameInMap("RerankModel")
         public ChatWithKnowledgeBaseRequestKnowledgeParamsSourceCollectionQueryParamsRerankModel rerankModel;
 
         /**
-         * <p>The number of top results.</p>
+         * <p>The number of top results to return from this collection before merging.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -429,7 +474,7 @@ public class ChatWithKnowledgeBaseRequest extends TeaModel {
         public Long topK;
 
         /**
-         * <p>Specifies whether to use full-text retrieval (dual-path retrieval). The default value is false, which means only vector retrieval is used.</p>
+         * <p>Whether to enable full-text search in addition to vector retrieval. Default: <code>false</code> (uses only vector retrieval).</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -534,7 +579,7 @@ public class ChatWithKnowledgeBaseRequest extends TeaModel {
 
     public static class ChatWithKnowledgeBaseRequestKnowledgeParamsSourceCollection extends TeaModel {
         /**
-         * <p>The name of the collection to be recalled.</p>
+         * <p>The name of the collection to query.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -544,9 +589,9 @@ public class ChatWithKnowledgeBaseRequest extends TeaModel {
         public String collection;
 
         /**
-         * <p>The name of the namespace. Default value: public.</p>
+         * <p>The namespace where the collection resides. Default: <code>public</code>.</p>
          * <blockquote>
-         * <p> You can call the <a href="https://help.aliyun.com/document_detail/2401495.html">CreateNamespace</a> operation to create a namespace and call the <a href="https://help.aliyun.com/document_detail/2401502.html">ListNamespaces</a> operation to query a list of namespaces.</p>
+         * <p>You can create a namespace by calling the <a href="https://help.aliyun.com/document_detail/2401495.html">CreateNamespace</a> operation and view existing namespaces by calling the <a href="https://help.aliyun.com/document_detail/2401502.html">ListNamespaces</a> operation.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -556,9 +601,9 @@ public class ChatWithKnowledgeBaseRequest extends TeaModel {
         public String namespace;
 
         /**
-         * <p>The password of the namespace.</p>
+         * <p>The password for the specified namespace.</p>
          * <blockquote>
-         * <p> The value of this parameter is specified when you call the CreateNamespace operation.</p>
+         * <p>This password is set when you call the <code>CreateNamespace</code> operation.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -569,7 +614,7 @@ public class ChatWithKnowledgeBaseRequest extends TeaModel {
         public String namespacePassword;
 
         /**
-         * <p>Parameters related to the knowledge base retrieval.</p>
+         * <p>Retrieval parameters for this knowledge base collection.</p>
          */
         @NameInMap("QueryParams")
         public ChatWithKnowledgeBaseRequestKnowledgeParamsSourceCollectionQueryParams queryParams;
@@ -615,10 +660,12 @@ public class ChatWithKnowledgeBaseRequest extends TeaModel {
 
     public static class ChatWithKnowledgeBaseRequestKnowledgeParams extends TeaModel {
         /**
-         * <p>The method used to merge multiple knowledge bases. Default value: RRF. Optional:</p>
+         * <p>The method for merging results from multiple knowledge bases. Default: <code>RRF</code>. Valid values:</p>
          * <ul>
-         * <li>RRF</li>
-         * <li>Weight</li>
+         * <li><p><code>RRF</code></p>
+         * </li>
+         * <li><p><code>Weight</code></p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -628,21 +675,21 @@ public class ChatWithKnowledgeBaseRequest extends TeaModel {
         public String mergeMethod;
 
         /**
-         * <p>Parameters for multi-knowledge-base fusion.</p>
+         * <p>The parameters for the merge method.</p>
          */
         @NameInMap("MergeMethodArgs")
         public ChatWithKnowledgeBaseRequestKnowledgeParamsMergeMethodArgs mergeMethodArgs;
 
         /**
-         * <p>The rerank factor. If you specify this parameter, the search result is reranked once again. Valid values: 1\&lt;RerankFactor&lt;=5.</p>
+         * <p>The reranking factor. Specify this to rerank the initial vector retrieval results for improved relevance. Valid range: (1, 5].</p>
          * <blockquote>
-         * </blockquote>
          * <ul>
-         * <li><p>If the document is segmented into sparse parts, reranking is inefficient.</p>
+         * <li><p>Reranking may be less efficient if document chunks are sparse.</p>
          * </li>
-         * <li><p>We recommend that the number of reranked results (the ceiling of TopK × RerankFactor) not exceed 50.</p>
+         * <li><p>We recommend that the number of items to rerank, calculated as <code>Ceiling(TopK * RerankFactor)</code>, does not exceed 50.</p>
          * </li>
          * </ul>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>1.0001</p>
@@ -650,18 +697,21 @@ public class ChatWithKnowledgeBaseRequest extends TeaModel {
         @NameInMap("RerankFactor")
         public Double rerankFactor;
 
+        /**
+         * <p>The model to use for reranking.</p>
+         */
         @NameInMap("RerankModel")
         public ChatWithKnowledgeBaseRequestKnowledgeParamsRerankModel rerankModel;
 
         /**
-         * <p>Knowledge base.</p>
+         * <p>An array of knowledge base collections to query.</p>
          * <p>This parameter is required.</p>
          */
         @NameInMap("SourceCollection")
         public java.util.List<ChatWithKnowledgeBaseRequestKnowledgeParamsSourceCollection> sourceCollection;
 
         /**
-         * <p>Specifies the number of top results to return after merging retrieved results from multiple vector collections.</p>
+         * <p>The number of top results to return after the results from multiple vector collection recalls are merged.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -726,18 +776,24 @@ public class ChatWithKnowledgeBaseRequest extends TeaModel {
 
     public static class ChatWithKnowledgeBaseRequestModelParamsMessages extends TeaModel {
         /**
-         * <p>The message content.</p>
+         * <p>The content of the message.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>You are a helpful assistant.</p>
          */
         @NameInMap("Content")
         public String content;
 
         /**
-         * <p>The message role. Valid values:</p>
+         * <p>The role of the message author. Valid values:</p>
          * <ul>
-         * <li>system</li>
-         * <li>user</li>
-         * <li>assistant</li>
+         * <li><p><code>system</code></p>
+         * </li>
+         * <li><p><code>user</code></p>
+         * </li>
+         * <li><p><code>assistant</code></p>
+         * </li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -772,13 +828,16 @@ public class ChatWithKnowledgeBaseRequest extends TeaModel {
 
     public static class ChatWithKnowledgeBaseRequestModelParamsToolsFunction extends TeaModel {
         /**
-         * <p>The description of the function.</p>
+         * <p>The description of the function tool.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>获取天气。</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
-         * <p>The name of the function.</p>
+         * <p>The name of the function tool.</p>
          * 
          * <strong>example:</strong>
          * <p>get_weather</p>
@@ -787,7 +846,7 @@ public class ChatWithKnowledgeBaseRequest extends TeaModel {
         public String name;
 
         /**
-         * <p>JSON Schema for function parameters.</p>
+         * <p>The JSON schema of the function parameters.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;type&quot;: &quot;object&quot;, ...}</p>
@@ -828,7 +887,7 @@ public class ChatWithKnowledgeBaseRequest extends TeaModel {
 
     public static class ChatWithKnowledgeBaseRequestModelParamsTools extends TeaModel {
         /**
-         * <p>The information about a function.</p>
+         * <p>The function information.</p>
          */
         @NameInMap("Function")
         public ChatWithKnowledgeBaseRequestModelParamsToolsFunction function;
@@ -850,7 +909,7 @@ public class ChatWithKnowledgeBaseRequest extends TeaModel {
 
     public static class ChatWithKnowledgeBaseRequestModelParams extends TeaModel {
         /**
-         * <p>Maximum number of tokens to generate.</p>
+         * <p>The maximum number of tokens to generate.</p>
          * 
          * <strong>example:</strong>
          * <p>8192</p>
@@ -859,14 +918,14 @@ public class ChatWithKnowledgeBaseRequest extends TeaModel {
         public Long maxTokens;
 
         /**
-         * <p>Message list.</p>
+         * <p>The list of messages that form the conversation history.</p>
          * <p>This parameter is required.</p>
          */
         @NameInMap("Messages")
         public java.util.List<ChatWithKnowledgeBaseRequestModelParamsMessages> messages;
 
         /**
-         * <p>The model name. See <a href="https://help.aliyun.com/zh/model-studio/compatibility-of-openai-with-dashscope?spm=a2c4g.11186623.help-menu-2400256.d_2_10_0.45b5516eZIciC8%5C&scm=20140722.H_2833609._.OR_help-T_cn~zh-V_1#eadfc13038jd5">Model Studio Document</a> for the available models.</p>
+         * <p>The name of the large language model to use. For a list of available models, see the <a href="https://help.aliyun.com/zh/model-studio/compatibility-of-openai-with-dashscope?spm=a2c4g.11186623.help-menu-2400256.d_2_10_0.45b5516eZIciC8%5C&scm=20140722.H_2833609._.OR_help-T_cn~zh-V_1#eadfc13038jd5">Model Studio documentation</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -885,7 +944,7 @@ public class ChatWithKnowledgeBaseRequest extends TeaModel {
         public Long n;
 
         /**
-         * <p>Presence penalty coefficient (-2.0 to 2.0).</p>
+         * <p>The presence penalty. Valid range: [-2.0, 2.0].</p>
          * 
          * <strong>example:</strong>
          * <p>1.0</p>
@@ -903,13 +962,13 @@ public class ChatWithKnowledgeBaseRequest extends TeaModel {
         public Long seed;
 
         /**
-         * <p>Stop words.</p>
+         * <p>A list of stop words.</p>
          */
         @NameInMap("Stop")
         public java.util.List<String> stop;
 
         /**
-         * <p>Sampling temperature (0~2).</p>
+         * <p>The sampling temperature. Valid range: (0, 2.0].</p>
          * 
          * <strong>example:</strong>
          * <p>0.6</p>
@@ -918,13 +977,13 @@ public class ChatWithKnowledgeBaseRequest extends TeaModel {
         public Double temperature;
 
         /**
-         * <p>Tools</p>
+         * <p>The list of tools.</p>
          */
         @NameInMap("Tools")
         public java.util.List<ChatWithKnowledgeBaseRequestModelParamsTools> tools;
 
         /**
-         * <p>Top-p (nucleus) sampling threshold (0–1).</p>
+         * <p>The probability threshold for nucleus sampling. Valid range: (0, 1.0).</p>
          * 
          * <strong>example:</strong>
          * <p>0.9</p>

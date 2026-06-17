@@ -4,13 +4,16 @@ package com.aliyun.gpdb20160503.models;
 import com.aliyun.tea.*;
 
 public class CreateDBInstanceRequest extends TeaModel {
+    /**
+     * <p>The AI node specifications.</p>
+     */
     @NameInMap("AINodeSpecInfos")
     public java.util.List<CreateDBInstanceRequestAINodeSpecInfos> AINodeSpecInfos;
 
     /**
-     * <p>Backup set ID.</p>
+     * <p>The ID of the backup set.</p>
      * <blockquote>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/210093.html">DescribeDataBackups</a> interface to view the backup set IDs of all backup sets under the target instance.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/210093.html">DescribeDataBackups</a> operation to query the backup set IDs for the source instance.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -19,11 +22,17 @@ public class CreateDBInstanceRequest extends TeaModel {
     @NameInMap("BackupId")
     public String backupId;
 
+    /**
+     * <p>The cache size for a serverless instance, in GB.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>800</p>
+     */
     @NameInMap("CacheStorageSize")
     public String cacheStorageSize;
 
     /**
-     * <p>Idempotence check. For more information, see <a href="https://help.aliyun.com/document_detail/327176.html">How to Ensure Idempotence</a>.</p>
+     * <p>A client token used to ensure the idempotence of the request. For more information, see <a href="https://help.aliyun.com/document_detail/327176.html">How to ensure idempotence</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>0c593ea1-3bea-11e9-b96b-88**********</p>
@@ -32,13 +41,15 @@ public class CreateDBInstanceRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>Whether to load sample datasets after the instance is created. The values are as follows:</p>
+     * <p>Specifies whether to load a sample dataset after the instance is created. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: Load sample datasets.</li>
-     * <li><strong>false</strong>: Do not load sample datasets.</li>
+     * <li><p><strong>true</strong>: A sample dataset is loaded.</p>
+     * </li>
+     * <li><p><strong>false</strong>: A sample dataset is not loaded.</p>
+     * </li>
      * </ul>
      * <blockquote>
-     * <p>If this parameter is not specified, it defaults to not loading sample datasets.</p>
+     * <p>If this parameter is not specified, a sample dataset is not loaded.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -48,13 +59,15 @@ public class CreateDBInstanceRequest extends TeaModel {
     public Boolean createSampleData;
 
     /**
-     * <p>Instance series. The value description is as follows:</p>
+     * <p>The instance edition. Valid values:</p>
      * <ul>
-     * <li><strong>HighAvailability</strong>: High availability version.</li>
-     * <li><strong>Basic</strong>: Basic version.</li>
+     * <li><p><strong>HighAvailability</strong>: High-availability Edition</p>
+     * </li>
+     * <li><p><strong>Basic</strong>: Basic Edition</p>
+     * </li>
      * </ul>
      * <blockquote>
-     * <p>This parameter is required when creating an instance in the storage elastic mode.</p>
+     * <p>This parameter is required for instances in elastic storage mode.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -64,9 +77,9 @@ public class CreateDBInstanceRequest extends TeaModel {
     public String DBInstanceCategory;
 
     /**
-     * <p>Instance type. For more details, see the supplementary description of the DBInstanceClass parameter.</p>
+     * <p>The instance type. For more information, see the description of the <code>DBInstanceClass</code> parameter.</p>
      * <blockquote>
-     * <p>This parameter is required when creating a reserved storage mode instance.</p>
+     * <p>This parameter is required for instances in reserved storage mode.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -76,7 +89,7 @@ public class CreateDBInstanceRequest extends TeaModel {
     public String DBInstanceClass;
 
     /**
-     * <p>Instance description.</p>
+     * <p>The instance description.</p>
      * 
      * <strong>example:</strong>
      * <p>test</p>
@@ -85,9 +98,9 @@ public class CreateDBInstanceRequest extends TeaModel {
     public String DBInstanceDescription;
 
     /**
-     * <p>Number of compute groups. The values are: 2, 4, 8, 12, 16, 24, 32, 64, 96, 128.</p>
+     * <p>The number of compute groups. Valid values: 2, 4, 8, 12, 16, 24, 32, 64, 96, and 128.</p>
      * <blockquote>
-     * <p>This parameter is required when creating a reserved storage mode instance.</p>
+     * <p>This parameter is required for instances in reserved storage mode.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -97,11 +110,14 @@ public class CreateDBInstanceRequest extends TeaModel {
     public String DBInstanceGroupCount;
 
     /**
-     * <p>Instance resource type. The value description is as follows:</p>
+     * <p>The instance resource mode. Valid values:</p>
      * <ul>
-     * <li><strong>StorageElastic</strong>: Storage elastic mode.</li>
-     * <li><strong>Serverless</strong>: Serverless mode.</li>
-     * <li><strong>Classic</strong>: Storage reserved mode.</li>
+     * <li><p><strong>StorageElastic</strong>: elastic storage mode</p>
+     * </li>
+     * <li><p><strong>Serverless</strong>: serverless mode</p>
+     * </li>
+     * <li><p><strong>Classic</strong>: reserved storage mode</p>
+     * </li>
      * </ul>
      * <blockquote>
      * <p>This parameter is required.</p>
@@ -115,15 +131,19 @@ public class CreateDBInstanceRequest extends TeaModel {
     public String DBInstanceMode;
 
     /**
-     * <p>Deployment mode. The values are as follows:</p>
+     * <p>The deployment mode. Valid values:</p>
      * <ul>
-     * <li>multiple: Multi-zone deployment.</li>
-     * <li>single: Single-zone deployment.</li>
+     * <li><p>multiple: multi-AZ deployment.</p>
+     * </li>
+     * <li><p>single: single-AZ deployment.</p>
+     * </li>
      * </ul>
      * <blockquote>
      * <ul>
-     * <li>If this parameter is not specified, the default value is single-zone deployment.</li>
-     * <li>Currently, only single-zone deployment is supported.</li>
+     * <li><p>If this parameter is not specified, the default value is single.</p>
+     * </li>
+     * <li><p>Defaults to <code>single</code> (single-AZ deployment), which is the only mode currently supported.</p>
+     * </li>
      * </ul>
      * </blockquote>
      * 
@@ -136,8 +156,10 @@ public class CreateDBInstanceRequest extends TeaModel {
     /**
      * <p>Specifies whether to enable SSL encryption. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong></li>
-     * <li><strong>false</strong> (default)</li>
+     * <li><p><strong>true</strong>: SSL encryption is enabled.</p>
+     * </li>
+     * <li><p><strong>false</strong> (default): SSL encryption is disabled.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -147,9 +169,9 @@ public class CreateDBInstanceRequest extends TeaModel {
     public Boolean enableSSL;
 
     /**
-     * <p>Key ID.</p>
+     * <p>The ID of the encryption key.</p>
      * <blockquote>
-     * <p>If the value of the <strong>EncryptionType</strong> parameter is <strong>CloudDisk</strong>, you need to specify the encryption key ID within the same region through this parameter; otherwise, it should be empty.</p>
+     * <p>If <code>EncryptionType</code> is set to <code>CloudDisk</code>, you must specify the ID of an encryption key in the same region. Otherwise, leave this parameter empty.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -159,13 +181,15 @@ public class CreateDBInstanceRequest extends TeaModel {
     public String encryptionKey;
 
     /**
-     * <p>Encryption type. The value description is as follows:</p>
+     * <p>The encryption type. Valid values:</p>
      * <ul>
-     * <li><strong>NULL</strong>: No encryption (default).</li>
-     * <li><strong>CloudDisk</strong>: Enable cloud disk encryption and specify the key through the <strong>EncryptionKey</strong> parameter.</li>
+     * <li><p><strong>NULL</strong>: disables encryption. This is the default value.</p>
+     * </li>
+     * <li><p><strong>CloudDisk</strong>: Enables cloud disk encryption. If you select this option, you must also specify a value for <code>EncryptionKey</code>.</p>
+     * </li>
      * </ul>
      * <blockquote>
-     * <p>Once cloud disk encryption is enabled, it cannot be disabled.</p>
+     * <p>After cloud disk encryption is enabled, it cannot be disabled.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -175,7 +199,7 @@ public class CreateDBInstanceRequest extends TeaModel {
     public String encryptionType;
 
     /**
-     * <p>Database engine, with the value <strong>gpdb</strong>.</p>
+     * <p>The database engine. Set the value to <strong>gpdb</strong>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -185,10 +209,12 @@ public class CreateDBInstanceRequest extends TeaModel {
     public String engine;
 
     /**
-     * <p>Engine version. The values are as follows:</p>
+     * <p>The database engine version. Valid values:</p>
      * <ul>
-     * <li><strong>6.0</strong>: Version 6.0.</li>
-     * <li><strong>7.0</strong>: Version 7.0.</li>
+     * <li><p><strong>6.0</strong></p>
+     * </li>
+     * <li><p><strong>7.0</strong></p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -199,9 +225,9 @@ public class CreateDBInstanceRequest extends TeaModel {
     public String engineVersion;
 
     /**
-     * <p>The idle release wait time. When the duration without business traffic reaches the specified time, the instance will enter the idle state. The unit is seconds, with a minimum value of 60, and the default value is 600.</p>
+     * <p>The period of inactivity, in seconds, after which the instance is considered idle. Minimum value: 60. Default value: 600.</p>
      * <blockquote>
-     * <p>This parameter is required only for Serverless auto-scheduling mode instances.</p>
+     * <p>This parameter is required only for serverless instances that use auto-scheduling.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -211,11 +237,13 @@ public class CreateDBInstanceRequest extends TeaModel {
     public Integer idleTime;
 
     /**
-     * <p>Instance network type, with the value <strong>VPC</strong>.</p>
+     * <p>The instance network type. Set the value to <strong>VPC</strong>.</p>
      * <blockquote>
      * <ul>
-     * <li>Only VPC networks are supported in public cloud.</li>
-     * <li>If not specified, it defaults to VPC type.</li>
+     * <li><p>Only VPCs are supported.</p>
+     * </li>
+     * <li><p>If this parameter is not specified, VPC is used by default.</p>
+     * </li>
      * </ul>
      * </blockquote>
      * 
@@ -226,27 +254,36 @@ public class CreateDBInstanceRequest extends TeaModel {
     public String instanceNetworkType;
 
     /**
-     * <p>Compute node specifications.</p>
-     * <p>For high-availability versions of the elastic storage mode, the values are as follows:</p>
+     * <p>The instance type for the compute nodes.</p>
+     * <p>Valid values for a High-availability Edition instance in elastic storage mode:</p>
      * <ul>
-     * <li><strong>2C16G</strong></li>
-     * <li><strong>4C32G</strong></li>
-     * <li><strong>16C128G</strong></li>
+     * <li><p><strong>2C16G</strong></p>
+     * </li>
+     * <li><p><strong>4C32G</strong></p>
+     * </li>
+     * <li><p><strong>16C128G</strong></p>
+     * </li>
      * </ul>
-     * <p>For basic versions of the elastic storage mode, the values are as follows:</p>
+     * <p>Valid values for a Basic Edition instance in elastic storage mode:</p>
      * <ul>
-     * <li><strong>2C8G</strong></li>
-     * <li><strong>4C16G</strong></li>
-     * <li><strong>8C32G</strong></li>
-     * <li><strong>16C64G</strong></li>
+     * <li><p><strong>2C8G</strong></p>
+     * </li>
+     * <li><p><strong>4C16G</strong></p>
+     * </li>
+     * <li><p><strong>8C32G</strong></p>
+     * </li>
+     * <li><p><strong>16C64G</strong></p>
+     * </li>
      * </ul>
-     * <p>For Serverless mode, the values are as follows:</p>
+     * <p>Valid values for a serverless instance:</p>
      * <ul>
-     * <li><strong>4C16G</strong></li>
-     * <li><strong>8C32G</strong></li>
+     * <li><p><strong>4C16G</strong></p>
+     * </li>
+     * <li><p><strong>8C32G</strong></p>
+     * </li>
      * </ul>
      * <blockquote>
-     * <p>This parameter is required when creating an elastic storage mode instance or a Serverless mode instance.</p>
+     * <p>This parameter is required for instances in elastic storage mode or serverless mode.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -256,13 +293,17 @@ public class CreateDBInstanceRequest extends TeaModel {
     public String instanceSpec;
 
     /**
-     * <p>This parameter must be specified if you want to change coordinator nodes to AI coordinator nodes.</p>
+     * <p>Use this parameter to configure the coordinator node as a MasterAI node.</p>
      * <blockquote>
      * <ul>
-     * <li>You cannot specify the MasterAISpec and MasterCU parameters at the same time.</li>
-     * <li>You can change coordinator nodes to AI coordinator nodes only in specific regions and zones.</li>
-     * <li>Only AnalyticDB for PostgreSQL V7.0 instances of Basic Edition support AI coordinator nodes.</li>
-     * <li>You can view the valid values of this parameter on the configuration change page of coordinator nodes.</li>
+     * <li><p>This parameter and <code>MasterCU</code> are mutually exclusive.</p>
+     * </li>
+     * <li><p>This feature is available only in some regions and zones.</p>
+     * </li>
+     * <li><p>MasterAI nodes are supported only for AnalyticDB for PostgreSQL V7.0 Basic Edition instances.</p>
+     * </li>
+     * <li><p>For a list of all possible values, see the coordinator node specification change page in the console.</p>
+     * </li>
      * </ul>
      * </blockquote>
      * 
@@ -273,17 +314,22 @@ public class CreateDBInstanceRequest extends TeaModel {
     public String masterAISpec;
 
     /**
-     * <p>Master resources, with the following values: </p>
+     * <p>The resources for the coordinator node. Valid values:</p>
      * <ul>
-     * <li>2 CU </li>
-     * <li>4 CU </li>
-     * <li>8 CU </li>
-     * <li>16 CU </li>
-     * <li>32 CU <blockquote>
-     * <p>Master resources above 8 CU will incur charges.</p>
-     * </blockquote>
+     * <li><p>2 CU</p>
+     * </li>
+     * <li><p>4 CU</p>
+     * </li>
+     * <li><p>8 CU</p>
+     * </li>
+     * <li><p>16 CU</p>
+     * </li>
+     * <li><p>32 CU</p>
      * </li>
      * </ul>
+     * <blockquote>
+     * <p>You are charged for coordinator node resources of 8 CUs or more.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>8 CU</p>
@@ -292,7 +338,7 @@ public class CreateDBInstanceRequest extends TeaModel {
     public Integer masterCU;
 
     /**
-     * <p>This parameter is deprecated and should not be passed.</p>
+     * <p>This parameter is deprecated.</p>
      * 
      * <strong>example:</strong>
      * <p>null</p>
@@ -304,19 +350,21 @@ public class CreateDBInstanceRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The billing method of the instance. Valid values:</p>
+     * <p>The billing method for the instance. Valid values:</p>
      * <ul>
-     * <li><strong>Postpaid</strong>: pay-as-you-go.</li>
-     * <li><strong>Prepaid</strong>: subscription.</li>
+     * <li><p><strong>Postpaid</strong>: pay-as-you-go.</p>
+     * </li>
+     * <li><p><strong>Prepaid</strong>: subscription.</p>
+     * </li>
      * </ul>
      * <blockquote>
-     * </blockquote>
      * <ul>
-     * <li><p>If you do not specify this parameter, Postpaid is used.</p>
+     * <li><p>If this parameter is not specified, the default billing method is pay-as-you-go.</p>
      * </li>
-     * <li><p>You can obtain more cost savings if you create a subscription instance for one year or longer. We recommend that you select the billing method that best suits your needs.</p>
+     * <li><p>Discounts are available for subscriptions of one year or longer. Select a billing method based on your business needs.</p>
      * </li>
      * </ul>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>Prepaid</p>
@@ -325,13 +373,15 @@ public class CreateDBInstanceRequest extends TeaModel {
     public String payType;
 
     /**
-     * <p>Unit of the duration for which resources are purchased. The values are as follows:</p>
+     * <p>The unit of the subscription duration. Valid values:</p>
      * <ul>
-     * <li><strong>Month</strong>: Month</li>
-     * <li><strong>Year</strong>: Year</li>
+     * <li><p><strong>Month</strong></p>
+     * </li>
+     * <li><p><strong>Year</strong></p>
+     * </li>
      * </ul>
      * <blockquote>
-     * <p>This parameter is required when creating a subscription-billed instance.</p>
+     * <p>This parameter is required for subscription instances.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -341,7 +391,7 @@ public class CreateDBInstanceRequest extends TeaModel {
     public String period;
 
     /**
-     * <p>This parameter is deprecated and should not be passed.</p>
+     * <p>This parameter is deprecated.</p>
      * 
      * <strong>example:</strong>
      * <p>null</p>
@@ -350,13 +400,15 @@ public class CreateDBInstanceRequest extends TeaModel {
     public String privateIpAddress;
 
     /**
-     * <p>Product type. The values are as follows:</p>
+     * <p>The product type. Valid values:</p>
      * <ul>
-     * <li><strong>standard</strong>: Standard Edition.</li>
-     * <li><strong>cost-effective</strong>: Cost-Effective Edition.</li>
+     * <li><p><strong>standard</strong>: Standard Edition.</p>
+     * </li>
+     * <li><p><strong>cost-effective</strong>: Cost-effective Edition.</p>
+     * </li>
      * </ul>
      * <blockquote>
-     * <p>If this parameter is not specified, the default value is Standard Edition.</p>
+     * <p>If this parameter is not specified, the default value is standard.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -366,9 +418,9 @@ public class CreateDBInstanceRequest extends TeaModel {
     public String prodType;
 
     /**
-     * <p>Region ID.</p>
+     * <p>The ID of the region for the instance.</p>
      * <blockquote>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/86912.html">DescribeRegions</a> interface to view available region IDs.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/86912.html">DescribeRegions</a> operation to query the IDs of available regions.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -379,7 +431,7 @@ public class CreateDBInstanceRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of the enterprise resource group where the instance is located.</p>
+     * <p>The ID of the resource group for the instance.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-bp67acfmxazb4p****</p>
@@ -388,8 +440,8 @@ public class CreateDBInstanceRequest extends TeaModel {
     public String resourceGroupId;
 
     /**
-     * <p>The IP address whitelist of the instance.</p>
-     * <p>A value of 127.0.0.1 denies access from any external IP address. You can call the <a href="https://help.aliyun.com/document_detail/86928.html">ModifySecurityIps</a> operation to modify the IP address whitelist after you create an instance.</p>
+     * <p>The IP address whitelist for the instance.</p>
+     * <p>A value of 127.0.0.1 blocks all external access. After you create the instance, you can call the <a href="https://help.aliyun.com/document_detail/86928.html">ModifySecurityIps</a> operation to modify the IP address whitelist.</p>
      * 
      * <strong>example:</strong>
      * <p>127.0.0.1</p>
@@ -398,20 +450,23 @@ public class CreateDBInstanceRequest extends TeaModel {
     public String securityIPList;
 
     /**
-     * <p>The performance level of ESSDs. Valid values:</p>
+     * <p>The performance level of the ESSDs. Valid values:</p>
      * <ul>
-     * <li><strong>pl0</strong></li>
-     * <li><strong>pl1</strong></li>
-     * <li><strong>pl2</strong></li>
+     * <li><p><strong>pl0</strong>: PL0</p>
+     * </li>
+     * <li><p><strong>pl1</strong>: PL1</p>
+     * </li>
+     * <li><p><strong>pl2</strong>: PL2</p>
+     * </li>
      * </ul>
      * <blockquote>
-     * </blockquote>
      * <ul>
-     * <li><p>This parameter takes effect only when SegStorageType is set to cloud_essd.</p>
+     * <li><p>This parameter applies only if the segment node storage type is ESSD.</p>
      * </li>
-     * <li><p>If you do not specify this parameter, pl1 is used.</p>
+     * <li><p>If this parameter is not specified, pl1 is used by default.</p>
      * </li>
      * </ul>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>pl1</p>
@@ -420,14 +475,17 @@ public class CreateDBInstanceRequest extends TeaModel {
     public String segDiskPerformanceLevel;
 
     /**
-     * <p>The number of compute nodes. The value description is as follows:</p>
+     * <p>The number of compute nodes. Valid values:</p>
      * <ul>
-     * <li>For the high-availability version of the storage elastic mode, the value range is 4 to 512, and the value must be a multiple of 4.</li>
-     * <li>For the basic version of the storage elastic mode, the value range is 2 to 512, and the value must be a multiple of 2.</li>
-     * <li>For the Serverless mode, the value range is 2 to 512, and the value must be a multiple of 2.</li>
+     * <li><p>For a High-availability Edition instance in elastic storage mode, the value must be a multiple of 4, from 4 to 512.</p>
+     * </li>
+     * <li><p>For a Basic Edition instance in elastic storage mode, the value must be a multiple of 2, from 2 to 512.</p>
+     * </li>
+     * <li><p>For a serverless instance, the value must be a multiple of 2, from 2 to 512.</p>
+     * </li>
      * </ul>
      * <blockquote>
-     * <p>This parameter is required when creating instances in the storage elastic mode or Serverless mode.</p>
+     * <p>This parameter is required for instances in elastic storage mode or serverless mode.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -437,9 +495,9 @@ public class CreateDBInstanceRequest extends TeaModel {
     public String segNodeNum;
 
     /**
-     * <p>Disk storage type, currently only ESSD cloud disks are supported, with the value <strong>cloud_essd</strong>.</p>
+     * <p>The storage type for the segment nodes. Only ESSDs are supported. Set the value to <strong>cloud_essd</strong>.</p>
      * <blockquote>
-     * <p>This parameter is required when creating an elastic storage mode instance.</p>
+     * <p>This parameter is required for instances in elastic storage mode.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -449,13 +507,20 @@ public class CreateDBInstanceRequest extends TeaModel {
     public String segStorageType;
 
     /**
-     * <p>The mode of the Serverless instance. The values are as follows:</p>
+     * <p>The mode of the serverless instance. Valid values:</p>
      * <ul>
-     * <li><strong>Manual</strong>: Manual scheduling (default).</li>
-     * <li><strong>Auto</strong>: Auto scheduling.</li>
+     * <li><p><strong>Manual</strong>: manual scheduling. This is the default value.</p>
+     * </li>
+     * <li><p><strong>Auto</strong>: auto-scheduling.</p>
+     * </li>
      * </ul>
      * <blockquote>
-     * <p>This parameter is required only for Serverless mode instances.</p>
+     * <ul>
+     * <li><p>This parameter is required only for instances in serverless mode.</p>
+     * </li>
+     * <li><p>Auto-scheduling for AnalyticDB for PostgreSQL instances in serverless mode is in preview. To use this feature, <a href="https://smartservice.console.aliyun.com/service/create-ticket?product=rds">submit a ticket</a> to be added to the whitelist.</p>
+     * </li>
+     * </ul>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -465,9 +530,9 @@ public class CreateDBInstanceRequest extends TeaModel {
     public String serverlessMode;
 
     /**
-     * <p>The threshold for computing resources. The value range is 8 to 32, with a step of 8, and the unit is ACU. The default value is 32.</p>
+     * <p>The threshold for computing resources, in AnalyticDB Compute Units (ACUs). The value must be a multiple of 8, ranging from 8 to 32. The default value is 32.</p>
      * <blockquote>
-     * <p>This parameter is required only for Serverless auto-scheduling mode instances.</p>
+     * <p>This parameter is required only for serverless instances that use auto-scheduling.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -477,9 +542,9 @@ public class CreateDBInstanceRequest extends TeaModel {
     public Integer serverlessResource;
 
     /**
-     * <p>ID of the source instance to be cloned.</p>
+     * <p>The ID of the source instance to be cloned.</p>
      * <blockquote>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> interface to view details of all AnalyticDB for PostgreSQL instances in the target region, including the instance ID.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query the details of all AnalyticDB for PostgreSQL instances in the destination region, including instance IDs.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -489,11 +554,13 @@ public class CreateDBInstanceRequest extends TeaModel {
     public String srcDbInstanceName;
 
     /**
-     * <p>VSwitch ID of the standby zone.</p>
+     * <p>The ID of the vSwitch in the standby zone.</p>
      * <blockquote>
      * <ul>
-     * <li>This parameter is required for multi-zone deployment.</li>
-     * <li>The VSwitch ID of the standby zone must be in the same zone as the StandbyZoneId.</li>
+     * <li><p>This parameter is required only for a multi-AZ deployment.</p>
+     * </li>
+     * <li><p>The vSwitch must be in the standby zone specified in <code>StandbyZoneId</code>.</p>
+     * </li>
      * </ul>
      * </blockquote>
      * 
@@ -504,12 +571,15 @@ public class CreateDBInstanceRequest extends TeaModel {
     public String standbyVSwitchId;
 
     /**
-     * <p>ID of the standby zone.</p>
+     * <p>The ID of the standby zone.</p>
      * <blockquote>
      * <ul>
-     * <li>This parameter is required for multi-zone deployment.</li>
-     * <li>You can call the <a href="https://help.aliyun.com/document_detail/86912.html">DescribeRegions</a> interface to view available zone IDs.</li>
-     * <li>The ID of the standby zone must be different from the ID of the primary zone.</li>
+     * <li><p>This parameter is required only for a multi-AZ deployment.</p>
+     * </li>
+     * <li><p>You can call the <a href="https://help.aliyun.com/document_detail/86912.html">DescribeRegions</a> operation to query the IDs of available zones.</p>
+     * </li>
+     * <li><p>The standby zone must be different from the primary zone.</p>
+     * </li>
      * </ul>
      * </blockquote>
      * 
@@ -520,9 +590,9 @@ public class CreateDBInstanceRequest extends TeaModel {
     public String standbyZoneId;
 
     /**
-     * <p>The size of the storage space, in GB, with a value range of &lt;props=&quot;china&quot;&gt;50<del>8000&lt;props=&quot;intl&quot;&gt;50</del>6000.</p>
+     * <p>The storage capacity for the instance, in GB. Valid values: &lt;props=&quot;china&quot;&gt;50 to 8000&lt;props=&quot;intl&quot;&gt;50 to 6000.</p>
      * <blockquote>
-     * <p>This parameter is required when creating an instance in the storage elastic mode.</p>
+     * <p>This parameter is required for instances in elastic storage mode.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -532,7 +602,7 @@ public class CreateDBInstanceRequest extends TeaModel {
     public Long storageSize;
 
     /**
-     * <p>This parameter is deprecated and should not be passed.</p>
+     * <p>This parameter is deprecated.</p>
      * 
      * <strong>example:</strong>
      * <p>null</p>
@@ -541,19 +611,21 @@ public class CreateDBInstanceRequest extends TeaModel {
     public String storageType;
 
     /**
-     * <p>The Nth tag. The value of N ranges from 1 to 20.</p>
+     * <p>The tags to add to the instance. You can add up to 20 tags.</p>
      */
     @NameInMap("Tag")
     public java.util.List<CreateDBInstanceRequestTag> tag;
 
     /**
-     * <p>Duration for which resources are purchased. The values are as follows:</p>
+     * <p>The subscription duration. Valid values:</p>
      * <ul>
-     * <li>When <strong>Period</strong> is <strong>Month</strong>, the value ranges from 1 to 9.</li>
-     * <li>When <strong>Period</strong> is <strong>Year</strong>, the value ranges from 1 to 3.</li>
+     * <li><p>If <strong>Period</strong> is <strong>Month</strong>, the value can be an integer from 1 to 9.</p>
+     * </li>
+     * <li><p>If <strong>Period</strong> is <strong>Year</strong>, the value can be an integer from 1 to 3.</p>
+     * </li>
      * </ul>
      * <blockquote>
-     * <p>This parameter is required when creating a subscription-billed instance.</p>
+     * <p>This parameter is required for subscription instances.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -563,11 +635,13 @@ public class CreateDBInstanceRequest extends TeaModel {
     public String usedTime;
 
     /**
-     * <p>VPC ID.</p>
+     * <p>The VPC ID.</p>
      * <blockquote>
      * <ul>
-     * <li><strong>VPCId</strong> is required.</li>
-     * <li>The region of the <strong>VPC</strong> must be consistent with <strong>RegionId</strong>.</li>
+     * <li><p>This parameter is required.</p>
+     * </li>
+     * <li><p>The VPC must be in the region specified by <code>RegionId</code>.</p>
+     * </li>
      * </ul>
      * </blockquote>
      * 
@@ -578,11 +652,13 @@ public class CreateDBInstanceRequest extends TeaModel {
     public String VPCId;
 
     /**
-     * <p>vSwitch ID.</p>
+     * <p>The vSwitch ID.</p>
      * <blockquote>
      * <ul>
-     * <li><strong>vSwitchId</strong> is required.</li>
-     * <li>The availability zone of the <strong>vSwitch</strong> must be consistent with <strong>ZoneId</strong>.</li>
+     * <li><p>This parameter is required.</p>
+     * </li>
+     * <li><p>The vSwitch must be in the zone specified by <code>ZoneId</code>.</p>
+     * </li>
      * </ul>
      * </blockquote>
      * 
@@ -593,15 +669,19 @@ public class CreateDBInstanceRequest extends TeaModel {
     public String vSwitchId;
 
     /**
-     * <p>Whether to enable vector engine optimization. The value description is as follows:</p>
+     * <p>Specifies whether to enable vector engine optimization. Valid values:</p>
      * <ul>
-     * <li><strong>enabled</strong>: Enable vector engine optimization.</li>
-     * <li><strong>disabled</strong> (default): Do not enable vector engine optimization.</li>
+     * <li><p><strong>enabled</strong>: enables vector engine optimization.</p>
+     * </li>
+     * <li><p><strong>disabled</strong> (default): disables vector engine optimization.</p>
+     * </li>
      * </ul>
      * <blockquote>
      * <ul>
-     * <li>For mainstream analysis scenarios, data warehouse scenarios, and real-time data warehouse scenarios, it is recommended to <strong>not enable</strong> vector engine optimization.</li>
-     * <li>For users using the vector analysis engine for AIGC, vector retrieval, and other scenarios, it is recommended to <strong>enable</strong> vector engine optimization.</li>
+     * <li><p>For mainstream analytics, data warehousing, and real-time data warehousing scenarios, we recommend that you <strong>disable</strong> vector engine optimization.</p>
+     * </li>
+     * <li><p>For AIGC and vector search scenarios, we recommend that you <strong>enable</strong> vector engine optimization.</p>
+     * </li>
      * </ul>
      * </blockquote>
      * 
@@ -612,9 +692,9 @@ public class CreateDBInstanceRequest extends TeaModel {
     public String vectorConfigurationStatus;
 
     /**
-     * <p>Zone ID.</p>
+     * <p>The ID of the zone for the instance.</p>
      * <blockquote>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/86912.html">DescribeRegions</a> interface to view available zone IDs.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/86912.html">DescribeRegions</a> operation to query the IDs of available zones.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -998,9 +1078,21 @@ public class CreateDBInstanceRequest extends TeaModel {
     }
 
     public static class CreateDBInstanceRequestAINodeSpecInfos extends TeaModel {
+        /**
+         * <p>The number of AI nodes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("AINodeNum")
         public String AINodeNum;
 
+        /**
+         * <p>The specifications of the AI nodes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ADB.AIMedium.2</p>
+         */
         @NameInMap("AINodeSpec")
         public String AINodeSpec;
 
@@ -1029,11 +1121,14 @@ public class CreateDBInstanceRequest extends TeaModel {
 
     public static class CreateDBInstanceRequestTag extends TeaModel {
         /**
-         * <p>Tag key. The restrictions are as follows:</p>
+         * <p>The tag key. The following limits apply:</p>
          * <ul>
-         * <li>It cannot be an empty string.</li>
-         * <li>It supports up to 128 characters.</li>
-         * <li>It cannot start with <code>aliyun</code> or <code>acs:</code>, and it cannot contain <code>http://</code> or <code>https://</code>.</li>
+         * <li><p>The tag key cannot be empty.</p>
+         * </li>
+         * <li><p>The tag key can be up to 128 characters in length.</p>
+         * </li>
+         * <li><p>The tag key cannot start with <code>aliyun</code> or <code>acs:</code> and cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1043,11 +1138,14 @@ public class CreateDBInstanceRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>Tag value. The restrictions are as follows:</p>
+         * <p>The tag value. The following limits apply:</p>
          * <ul>
-         * <li>It can be an empty string.</li>
-         * <li>It supports up to 128 characters.</li>
-         * <li>It cannot start with <code>acs:</code>, and it cannot contain <code>http://</code> or <code>https://</code>.</li>
+         * <li><p>The tag value can be empty.</p>
+         * </li>
+         * <li><p>The tag value can be up to 128 characters in length.</p>
+         * </li>
+         * <li><p>The tag value cannot start with <code>acs:</code> and cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

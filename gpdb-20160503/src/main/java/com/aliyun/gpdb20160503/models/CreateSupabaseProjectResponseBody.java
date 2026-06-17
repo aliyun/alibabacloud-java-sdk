@@ -4,11 +4,17 @@ package com.aliyun.gpdb20160503.models;
 import com.aliyun.tea.*;
 
 public class CreateSupabaseProjectResponseBody extends TeaModel {
+    /**
+     * <p>The order ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>278880417310796</p>
+     */
     @NameInMap("OrderId")
     public String orderId;
 
     /**
-     * <p>The Supabase project ID.</p>
+     * <p>The Supabase instance ID.</p>
      * 
      * <strong>example:</strong>
      * <p>sbp-180****</p>

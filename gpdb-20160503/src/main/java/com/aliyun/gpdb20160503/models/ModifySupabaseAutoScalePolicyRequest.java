@@ -5,6 +5,13 @@ import com.aliyun.tea.*;
 
 public class ModifySupabaseAutoScalePolicyRequest extends TeaModel {
     /**
+     * <p>Specifies whether to enable auto-scaling. Valid values:</p>
+     * <ul>
+     * <li><p><code>true</code>: Enables auto-scaling. The Supabase instance automatically pauses and resumes based on traffic.</p>
+     * </li>
+     * <li><p><code>false</code>: Disables auto-scaling.</p>
+     * </li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +21,7 @@ public class ModifySupabaseAutoScalePolicyRequest extends TeaModel {
     public Boolean autoScale;
 
     /**
+     * <p>The ID of the Supabase project. To obtain the workspace ID, log in to the console and go to the Supabase page.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +31,8 @@ public class ModifySupabaseAutoScalePolicyRequest extends TeaModel {
     public String projectId;
 
     /**
+     * <p>The region ID of the instance.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-beijing</p>
      */

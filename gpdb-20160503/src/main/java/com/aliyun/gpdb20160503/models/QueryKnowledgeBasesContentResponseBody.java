@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class QueryKnowledgeBasesContentResponseBody extends TeaModel {
     /**
-     * <p>The number of tokens that are used during vectorization.</p>
+     * <p>The number of tokens used for vectorization.</p>
      * <blockquote>
-     * <p> A token is the minimum unit for segmenting text. A token can be a word, phrase, punctuation, or character.</p>
+     * <p>A token is the smallest unit of processed text, such as a word, phrase, punctuation mark, or character.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -16,14 +16,20 @@ public class QueryKnowledgeBasesContentResponseBody extends TeaModel {
     @NameInMap("EmbeddingTokens")
     public String embeddingTokens;
 
+    /**
+     * <p>The extracted entities.</p>
+     */
     @NameInMap("Entities")
     public QueryKnowledgeBasesContentResponseBodyEntities entities;
 
+    /**
+     * <p>The matched data.</p>
+     */
     @NameInMap("Matches")
     public QueryKnowledgeBasesContentResponseBodyMatches matches;
 
     /**
-     * <p>The returned information.</p>
+     * <p>The response message.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -31,11 +37,14 @@ public class QueryKnowledgeBasesContentResponseBody extends TeaModel {
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The extracted relationships.</p>
+     */
     @NameInMap("Relations")
     public QueryKnowledgeBasesContentResponseBodyRelations relations;
 
     /**
-     * <p>The unique ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>ABB39CC3-4488-4857-905D-2E4A051D0521</p>
@@ -44,10 +53,12 @@ public class QueryKnowledgeBasesContentResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The status of the operation. Valid values:</p>
+     * <p>The status of the request. Valid values:</p>
      * <ul>
-     * <li><strong>success</strong>.</li>
-     * <li><strong>fail</strong>.</li>
+     * <li><p><strong>success</strong>: The request succeeded.</p>
+     * </li>
+     * <li><p><strong>fail</strong>: The request failed.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -57,7 +68,7 @@ public class QueryKnowledgeBasesContentResponseBody extends TeaModel {
     public String status;
 
     /**
-     * <p>The total number of tokens that are consumed by this query.</p>
+     * <p>The resource usage for the query.</p>
      */
     @NameInMap("Usage")
     public QueryKnowledgeBasesContentResponseBodyUsage usage;
@@ -423,9 +434,9 @@ public class QueryKnowledgeBasesContentResponseBody extends TeaModel {
 
     public static class QueryKnowledgeBasesContentResponseBodyUsage extends TeaModel {
         /**
-         * <p>The number of entries that are used during vectorization.</p>
+         * <p>The number of entries used for vectorization.</p>
          * <blockquote>
-         * <p> An entry refers to a single unit of vectorization processing. Processing one text input counts as 1 entry, while processing one image counts as 2 entries.</p>
+         * <p>An entry is a unit of processing for vectorization. For example, vectorizing a piece of text counts as one entry, and vectorizing an image counts as two entries.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -435,9 +446,9 @@ public class QueryKnowledgeBasesContentResponseBody extends TeaModel {
         public String embeddingEntries;
 
         /**
-         * <p>The number of tokens that are used for vectorization.</p>
+         * <p>The number of tokens used for vectorization.</p>
          * <blockquote>
-         * <p> A token is the minimum unit for splitting text. A token can be a word, phrase, punctuation, or character.</p>
+         * <p>A token is the smallest unit of processed text, such as a word, phrase, punctuation mark, or character.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

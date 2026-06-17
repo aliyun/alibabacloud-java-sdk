@@ -12,7 +12,7 @@ public class DescribeModifyParameterLogRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>gp-xxxxxx</p>
+     * <p>gp-9dpm71ov2wxxq****</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
@@ -21,7 +21,7 @@ public class DescribeModifyParameterLogRequest extends TeaModel {
      * <p>The end of the time range to query. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-ddTHH:mmZ</em> format. The time must be in UTC. The end time must be later than the start time.</p>
      * 
      * <strong>example:</strong>
-     * <p>2020-05-05T11:22:22Z</p>
+     * <p>2023-01-03T20:00:00Z</p>
      */
     @NameInMap("EndTime")
     public String endTime;
@@ -30,7 +30,7 @@ public class DescribeModifyParameterLogRequest extends TeaModel {
      * <p>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-ddTHH:mmZ</em> format. The time must be in UTC.</p>
      * 
      * <strong>example:</strong>
-     * <p>2020-02-02T11:22:22Z</p>
+     * <p>2023-01-03T16:00:00Z</p>
      */
     @NameInMap("StartTime")
     public String startTime;

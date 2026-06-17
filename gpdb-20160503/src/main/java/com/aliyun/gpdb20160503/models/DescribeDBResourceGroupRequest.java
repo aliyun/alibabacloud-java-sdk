@@ -7,7 +7,7 @@ public class DescribeDBResourceGroupRequest extends TeaModel {
     /**
      * <p>The instance ID.</p>
      * <blockquote>
-     * <p> You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query the information about all AnalyticDB for PostgreSQL instances within a region, including instance IDs.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query the instance IDs of all AnalyticDB for PostgreSQL instances in a specified region.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -23,7 +23,7 @@ public class DescribeDBResourceGroupRequest extends TeaModel {
     /**
      * <p>The name of the resource group.</p>
      * <blockquote>
-     * <p> If you specify this parameter, the information about the specified resource group is returned. If you do not specify this parameter, the information about all resource groups is returned.</p>
+     * <p>If this parameter is omitted, details for all resource groups are returned. Otherwise, only details for the specified resource group are returned.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

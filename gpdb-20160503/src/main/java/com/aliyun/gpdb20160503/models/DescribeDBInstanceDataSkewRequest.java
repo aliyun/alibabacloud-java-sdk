@@ -30,7 +30,7 @@ public class DescribeDBInstanceDataSkewRequest extends TeaModel {
      * <p>order by condition</p>
      * 
      * <strong>example:</strong>
-     * <p>{Field: TableSkew, Type: Desc}</p>
+     * <p>{Field: TableSize, Type: Desc}</p>
      */
     @NameInMap("OrderBy")
     public String orderBy;
@@ -54,7 +54,7 @@ public class DescribeDBInstanceDataSkewRequest extends TeaModel {
      * <p>Default value: <strong>30</strong>.</p>
      * 
      * <strong>example:</strong>
-     * <p>20</p>
+     * <p>30</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;

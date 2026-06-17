@@ -30,7 +30,7 @@ public class DescribeDBInstanceIndexUsageRequest extends TeaModel {
      * <p>order by search condition</p>
      * 
      * <strong>example:</strong>
-     * <p>{Field: TableName, Type: Desc}</p>
+     * <p>{Field: SchemaName, Type: Desc}</p>
      */
     @NameInMap("OrderBy")
     public String orderBy;
@@ -54,7 +54,7 @@ public class DescribeDBInstanceIndexUsageRequest extends TeaModel {
      * <p>Default value: <strong>30</strong>.</p>
      * 
      * <strong>example:</strong>
-     * <p>20</p>
+     * <p>30</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
