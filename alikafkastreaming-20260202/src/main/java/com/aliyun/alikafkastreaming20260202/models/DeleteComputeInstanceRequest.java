@@ -16,6 +16,9 @@ public class DeleteComputeInstanceRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    @NameInMap("ResourceType")
+    public String resourceType;
+
     public static DeleteComputeInstanceRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteComputeInstanceRequest self = new DeleteComputeInstanceRequest();
         return TeaModel.build(map, self);
@@ -35,6 +38,14 @@ public class DeleteComputeInstanceRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public DeleteComputeInstanceRequest setResourceType(String resourceType) {
+        this.resourceType = resourceType;
+        return this;
+    }
+    public String getResourceType() {
+        return this.resourceType;
     }
 
 }
