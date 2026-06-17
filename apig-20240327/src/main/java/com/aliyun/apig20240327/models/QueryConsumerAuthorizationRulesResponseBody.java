@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class QueryConsumerAuthorizationRulesResponseBody extends TeaModel {
     /**
-     * <p>The status code.</p>
+     * <p>The response status code.</p>
      * 
      * <strong>example:</strong>
      * <p>Ok</p>
@@ -14,13 +14,13 @@ public class QueryConsumerAuthorizationRulesResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The response payload.</p>
+     * <p>The response data.</p>
      */
     @NameInMap("data")
     public QueryConsumerAuthorizationRulesResponseBodyData data;
 
     /**
-     * <p>The returned message.</p>
+     * <p>The response message.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -29,7 +29,7 @@ public class QueryConsumerAuthorizationRulesResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The request ID.</p>
+     * <p>Id of the request</p>
      * 
      * <strong>example:</strong>
      * <p>A60EE5CA-1294-532A-9775-8D2FD1C6EFBF</p>
@@ -76,13 +76,13 @@ public class QueryConsumerAuthorizationRulesResponseBody extends TeaModel {
 
     public static class QueryConsumerAuthorizationRulesResponseBodyDataItemsResourceInfo extends TeaModel {
         /**
-         * <p>The operation information.</p>
+         * <p>接口信息。</p>
          */
         @NameInMap("operationInfo")
         public HttpApiOperationInfo operationInfo;
 
         /**
-         * <p>The route.</p>
+         * <p>路由规则。</p>
          */
         @NameInMap("route")
         public HttpRoute route;
@@ -112,13 +112,13 @@ public class QueryConsumerAuthorizationRulesResponseBody extends TeaModel {
 
     public static class QueryConsumerAuthorizationRulesResponseBodyDataItems extends TeaModel {
         /**
-         * <p>The API details.</p>
+         * <p>API信息详情。</p>
          */
         @NameInMap("apiInfo")
         public HttpApiApiInfo apiInfo;
 
         /**
-         * <p>The rule ID.</p>
+         * <p>消费者授权规则ID。</p>
          * 
          * <strong>example:</strong>
          * <p>car-csgeka5lhtggrjcprok0</p>
@@ -127,7 +127,7 @@ public class QueryConsumerAuthorizationRulesResponseBody extends TeaModel {
         public String consumerAuthorizationRuleId;
 
         /**
-         * <p>The consumer ID.</p>
+         * <p>消费者ID。</p>
          * 
          * <strong>example:</strong>
          * <p>cs-csheiftlhtgmp0j0hp4g</p>
@@ -136,13 +136,13 @@ public class QueryConsumerAuthorizationRulesResponseBody extends TeaModel {
         public String consumerId;
 
         /**
-         * <p>The consumer information.</p>
+         * <p>消费者信息详情。</p>
          */
         @NameInMap("consumerInfo")
         public ConsumerInfo consumerInfo;
 
         /**
-         * <p>The creation timestamp. Unit: milliseconds.</p>
+         * <p>创建时间戳。单位: 毫秒。</p>
          * 
          * <strong>example:</strong>
          * <p>1719386834548</p>
@@ -151,7 +151,7 @@ public class QueryConsumerAuthorizationRulesResponseBody extends TeaModel {
         public Long createTimestamp;
 
         /**
-         * <p>The deployment status of the API in the current environment.</p>
+         * <p>API在当前环境的发布状态</p>
          * 
          * <strong>example:</strong>
          * <p>{}</p>
@@ -160,13 +160,13 @@ public class QueryConsumerAuthorizationRulesResponseBody extends TeaModel {
         public String deployStatus;
 
         /**
-         * <p>The environment information.</p>
+         * <p>环境信息。</p>
          */
         @NameInMap("environmentInfo")
         public EnvironmentInfo environmentInfo;
 
         /**
-         * <p>The expiry mode. Valid values: LongTerm and ShortTerm.</p>
+         * <p>失效模式。LongTerm、ShortTerm，二选一。</p>
          * 
          * <strong>example:</strong>
          * <p>ShortTerm</p>
@@ -175,7 +175,7 @@ public class QueryConsumerAuthorizationRulesResponseBody extends TeaModel {
         public String expireMode;
 
         /**
-         * <p>The rule status.</p>
+         * <p>失效状态。</p>
          * 
          * <strong>example:</strong>
          * <p>InEffect</p>
@@ -184,7 +184,7 @@ public class QueryConsumerAuthorizationRulesResponseBody extends TeaModel {
         public String expireStatus;
 
         /**
-         * <p>The time when the rule expires.</p>
+         * <p>到期时间。</p>
          * 
          * <strong>example:</strong>
          * <p>172086834548</p>
@@ -193,13 +193,13 @@ public class QueryConsumerAuthorizationRulesResponseBody extends TeaModel {
         public Long expireTimestamp;
 
         /**
-         * <p>The instance information.</p>
+         * <p>网关信息。</p>
          */
         @NameInMap("gatewayInfo")
         public GatewayInfo gatewayInfo;
 
         /**
-         * <p>The resource IDs.</p>
+         * <p>资源ID。</p>
          * 
          * <strong>example:</strong>
          * <p>2351944</p>
@@ -208,13 +208,13 @@ public class QueryConsumerAuthorizationRulesResponseBody extends TeaModel {
         public String resourceId;
 
         /**
-         * <p>The resource information.</p>
+         * <p>资源信息详情。</p>
          */
         @NameInMap("resourceInfo")
         public QueryConsumerAuthorizationRulesResponseBodyDataItemsResourceInfo resourceInfo;
 
         /**
-         * <p>The resource type.</p>
+         * <p>资源类型。</p>
          * 
          * <strong>example:</strong>
          * <p>HttpApiRoute</p>
@@ -223,7 +223,7 @@ public class QueryConsumerAuthorizationRulesResponseBody extends TeaModel {
         public String resourceType;
 
         /**
-         * <p>The update timestamp. Unit: milliseconds.</p>
+         * <p>更新时间戳。单位: 毫秒。</p>
          * 
          * <strong>example:</strong>
          * <p>1719386834548</p>
@@ -360,13 +360,13 @@ public class QueryConsumerAuthorizationRulesResponseBody extends TeaModel {
 
     public static class QueryConsumerAuthorizationRulesResponseBodyData extends TeaModel {
         /**
-         * <p>The rules.</p>
+         * <p>消费者规则列表。</p>
          */
         @NameInMap("items")
         public java.util.List<QueryConsumerAuthorizationRulesResponseBodyDataItems> items;
 
         /**
-         * <p>The page number of the returned page.</p>
+         * <p>The page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -375,7 +375,7 @@ public class QueryConsumerAuthorizationRulesResponseBody extends TeaModel {
         public Integer pageNumber;
 
         /**
-         * <p>The number of entries per page.</p>
+         * <p>The page size.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -384,7 +384,7 @@ public class QueryConsumerAuthorizationRulesResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
-         * <p>The total number of entries returned.</p>
+         * <p>The total number of entries.</p>
          * 
          * <strong>example:</strong>
          * <p>6</p>

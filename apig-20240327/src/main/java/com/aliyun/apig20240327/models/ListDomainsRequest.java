@@ -5,7 +5,14 @@ import com.aliyun.tea.*;
 
 public class ListDomainsRequest extends TeaModel {
     /**
-     * <p>The instance ID.</p>
+     * <strong>example:</strong>
+     * <p>Serverless</p>
+     */
+    @NameInMap("domainScope")
+    public String domainScope;
+
+    /**
+     * <p>The gateway ID.</p>
      * 
      * <strong>example:</strong>
      * <p>gw-xxxxxx</p>
@@ -14,7 +21,7 @@ public class ListDomainsRequest extends TeaModel {
     public String gatewayId;
 
     /**
-     * <p>The gateway type to filter. Valid values: <strong>AI</strong> and <strong>API</strong>.</p>
+     * <p>The gateway type used for filtering. Valid values: <strong>AI</strong> and <strong>API</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>API</p>
@@ -23,7 +30,7 @@ public class ListDomainsRequest extends TeaModel {
     public String gatewayType;
 
     /**
-     * <p>The domain name keyword for fuzzy search.</p>
+     * <p>The domain name. Fuzzy match is supported.</p>
      * 
      * <strong>example:</strong>
      * <p>test</p>
@@ -32,7 +39,7 @@ public class ListDomainsRequest extends TeaModel {
     public String nameLike;
 
     /**
-     * <p>The page number of the page to return. Default value: 1.</p>
+     * <p>The page number. Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -50,7 +57,7 @@ public class ListDomainsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The ID of the resource group.</p>
+     * <p>The resource group ID.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-aek27lpqyiie6qy</p>
@@ -61,6 +68,14 @@ public class ListDomainsRequest extends TeaModel {
     public static ListDomainsRequest build(java.util.Map<String, ?> map) throws Exception {
         ListDomainsRequest self = new ListDomainsRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ListDomainsRequest setDomainScope(String domainScope) {
+        this.domainScope = domainScope;
+        return this;
+    }
+    public String getDomainScope() {
+        return this.domainScope;
     }
 
     public ListDomainsRequest setGatewayId(String gatewayId) {

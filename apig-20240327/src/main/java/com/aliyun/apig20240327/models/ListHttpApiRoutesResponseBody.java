@@ -76,13 +76,13 @@ public class ListHttpApiRoutesResponseBody extends TeaModel {
 
     public static class ListHttpApiRoutesResponseBodyData extends TeaModel {
         /**
-         * <p>An array of route objects.</p>
+         * <p>路由列表。</p>
          */
         @NameInMap("items")
         public java.util.List<HttpRoute> items;
 
         /**
-         * <p>The current page number.</p>
+         * <p>The page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -91,7 +91,7 @@ public class ListHttpApiRoutesResponseBody extends TeaModel {
         public Integer pageNumber;
 
         /**
-         * <p>The number of entries returned per page.</p>
+         * <p>The number of entries per page.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -100,7 +100,7 @@ public class ListHttpApiRoutesResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
-         * <p>The total number of available entries.</p>
+         * <p>The total number of entries.</p>
          * 
          * <strong>example:</strong>
          * <p>9</p>

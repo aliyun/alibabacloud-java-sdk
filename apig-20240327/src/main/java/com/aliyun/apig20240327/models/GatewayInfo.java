@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GatewayInfo extends TeaModel {
     /**
-     * <p>The instance engine version.</p>
+     * <p>The gateway DPI engine database engine version.</p>
      * 
      * <strong>example:</strong>
      * <p>2.0.7</p>
@@ -14,7 +14,14 @@ public class GatewayInfo extends TeaModel {
     public String engineVersion;
 
     /**
-     * <p>The instance ID.</p>
+     * <strong>example:</strong>
+     * <p>MultiTenantServerless</p>
+     */
+    @NameInMap("gatewayEdition")
+    public String gatewayEdition;
+
+    /**
+     * <p>The gateway ID.</p>
      * 
      * <strong>example:</strong>
      * <p>gw-cq7og15lhtgi6qasrj60</p>
@@ -23,7 +30,7 @@ public class GatewayInfo extends TeaModel {
     public String gatewayId;
 
     /**
-     * <p>The instance name.</p>
+     * <p>The gateway name.</p>
      * 
      * <strong>example:</strong>
      * <p>apitest-gw</p>
@@ -32,7 +39,7 @@ public class GatewayInfo extends TeaModel {
     public String name;
 
     /**
-     * <p>The virtual private cloud (VPC) information.</p>
+     * <p>The VPC information.</p>
      */
     @NameInMap("vpcInfo")
     public GatewayInfoVpcInfo vpcInfo;
@@ -48,6 +55,14 @@ public class GatewayInfo extends TeaModel {
     }
     public String getEngineVersion() {
         return this.engineVersion;
+    }
+
+    public GatewayInfo setGatewayEdition(String gatewayEdition) {
+        this.gatewayEdition = gatewayEdition;
+        return this;
+    }
+    public String getGatewayEdition() {
+        return this.gatewayEdition;
     }
 
     public GatewayInfo setGatewayId(String gatewayId) {

@@ -273,6 +273,13 @@ public class HttpRoute extends TeaModel {
 
     public static class HttpRouteEnvironmentInfoGatewayInfo extends TeaModel {
         /**
+         * <strong>example:</strong>
+         * <p>MultiTenantServerless</p>
+         */
+        @NameInMap("gatewayEdition")
+        public String gatewayEdition;
+
+        /**
          * <p>The gateway ID</p>
          * 
          * <strong>example:</strong>
@@ -293,6 +300,14 @@ public class HttpRoute extends TeaModel {
         public static HttpRouteEnvironmentInfoGatewayInfo build(java.util.Map<String, ?> map) throws Exception {
             HttpRouteEnvironmentInfoGatewayInfo self = new HttpRouteEnvironmentInfoGatewayInfo();
             return TeaModel.build(map, self);
+        }
+
+        public HttpRouteEnvironmentInfoGatewayInfo setGatewayEdition(String gatewayEdition) {
+            this.gatewayEdition = gatewayEdition;
+            return this;
+        }
+        public String getGatewayEdition() {
+            return this.gatewayEdition;
         }
 
         public HttpRouteEnvironmentInfoGatewayInfo setGatewayId(String gatewayId) {

@@ -11,7 +11,7 @@ public class GetConsumerAuthorizationRuleResponseBody extends TeaModel {
     public HttpApiApiInfo apiInfo;
 
     /**
-     * <p>Filters the list of operations by a specific consumer authorization rule ID. Only authorized operations are returned in the response.</p>
+     * <p>The consumer authorization rule ID used to filter the API list. The API list in the response contains only authorized APIs.</p>
      * 
      * <strong>example:</strong>
      * <p>car-ctgdn8em1hko5krqq03g</p>
@@ -38,7 +38,7 @@ public class GetConsumerAuthorizationRuleResponseBody extends TeaModel {
     public Long createTimestamp;
 
     /**
-     * <p>The publishing status of the API in the current environment.</p>
+     * <p>The publish status of the API in the current environment.</p>
      * 
      * <strong>example:</strong>
      * <p>&quot;&quot;</p>
@@ -47,13 +47,17 @@ public class GetConsumerAuthorizationRuleResponseBody extends TeaModel {
     public String deployStatus;
 
     /**
-     * <p>The environment information.</p>
+     * <p>The environment context.</p>
      */
     @NameInMap("environmentInfo")
     public EnvironmentInfo environmentInfo;
 
     /**
-     * <p>The expiry mode. Valid values: LongTerm and ShortTerm.</p>
+     * <p>The expiration mode. Valid values:</p>
+     * <ul>
+     * <li>LongTerm</li>
+     * <li>ShortTerm.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>LongTerm</p>
@@ -62,7 +66,7 @@ public class GetConsumerAuthorizationRuleResponseBody extends TeaModel {
     public String expireMode;
 
     /**
-     * <p>The rule status.</p>
+     * <p>The expiration status.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -86,7 +90,7 @@ public class GetConsumerAuthorizationRuleResponseBody extends TeaModel {
     public GatewayInfo gatewayInfo;
 
     /**
-     * <p>The request ID.</p>
+     * <p>Id of the request</p>
      * 
      * <strong>example:</strong>
      * <p>53102737-1E4E-5A8B-8E0A-4184B0959B84</p>

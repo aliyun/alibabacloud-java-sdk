@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListDomainsResponseBody extends TeaModel {
     /**
-     * <p>The status code returned.</p>
+     * <p>The response code.</p>
      * 
      * <strong>example:</strong>
      * <p>Ok</p>
@@ -14,13 +14,13 @@ public class ListDomainsResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>Response parameters.</p>
+     * <p>The response data.</p>
      */
     @NameInMap("data")
     public ListDomainsResponseBodyData data;
 
     /**
-     * <p>The message returned.</p>
+     * <p>The response description.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -29,7 +29,7 @@ public class ListDomainsResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The request ID, which is used to trace the API call link.</p>
+     * <p>The request ID, which is used to trace the API call chain.</p>
      * 
      * <strong>example:</strong>
      * <p>C61E30D3-579A-5B43-994E-31E02EDC9129</p>
@@ -76,13 +76,13 @@ public class ListDomainsResponseBody extends TeaModel {
 
     public static class ListDomainsResponseBodyData extends TeaModel {
         /**
-         * <p>The list of domain information.</p>
+         * <p>域名信息列表。</p>
          */
         @NameInMap("items")
         public java.util.List<DomainInfo> items;
 
         /**
-         * <p>The page number of the returned page.</p>
+         * <p>The page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -100,7 +100,7 @@ public class ListDomainsResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
-         * <p>The total number of entries returned.</p>
+         * <p>The total number of entries.</p>
          * 
          * <strong>example:</strong>
          * <p>9</p>

@@ -298,6 +298,13 @@ public class HttpApiApiInfo extends TeaModel {
 
     public static class HttpApiApiInfoEnvironmentsGatewayInfo extends TeaModel {
         /**
+         * <strong>example:</strong>
+         * <p>MultiTenantServerless</p>
+         */
+        @NameInMap("gatewayEdition")
+        public String gatewayEdition;
+
+        /**
          * <p>The instance ID.</p>
          * 
          * <strong>example:</strong>
@@ -318,6 +325,14 @@ public class HttpApiApiInfo extends TeaModel {
         public static HttpApiApiInfoEnvironmentsGatewayInfo build(java.util.Map<String, ?> map) throws Exception {
             HttpApiApiInfoEnvironmentsGatewayInfo self = new HttpApiApiInfoEnvironmentsGatewayInfo();
             return TeaModel.build(map, self);
+        }
+
+        public HttpApiApiInfoEnvironmentsGatewayInfo setGatewayEdition(String gatewayEdition) {
+            this.gatewayEdition = gatewayEdition;
+            return this;
+        }
+        public String getGatewayEdition() {
+            return this.gatewayEdition;
         }
 
         public HttpApiApiInfoEnvironmentsGatewayInfo setGatewayId(String gatewayId) {

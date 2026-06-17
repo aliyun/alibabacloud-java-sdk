@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListConsumerAuthorizationRulesResponseBody extends TeaModel {
     /**
-     * <p>The status code.</p>
+     * <p>The response status code.</p>
      * 
      * <strong>example:</strong>
      * <p>Ok</p>
@@ -76,13 +76,13 @@ public class ListConsumerAuthorizationRulesResponseBody extends TeaModel {
 
     public static class ListConsumerAuthorizationRulesResponseBodyDataItems extends TeaModel {
         /**
-         * <p>The API information.</p>
+         * <p>API信息。</p>
          */
         @NameInMap("apiInfo")
         public HttpApiApiInfo apiInfo;
 
         /**
-         * <p>The ID of the consumer authorization rule.</p>
+         * <p>消费者授权规则ID。</p>
          * 
          * <strong>example:</strong>
          * <p>car-csgeka5lhtggrjcprok0</p>
@@ -91,7 +91,7 @@ public class ListConsumerAuthorizationRulesResponseBody extends TeaModel {
         public String consumerAuthorizationRuleId;
 
         /**
-         * <p>The consumer ID.</p>
+         * <p>消费者ID。</p>
          * 
          * <strong>example:</strong>
          * <p>cs-csheiftlhtgmp0j0hp4g</p>
@@ -100,7 +100,7 @@ public class ListConsumerAuthorizationRulesResponseBody extends TeaModel {
         public String consumerId;
 
         /**
-         * <p>The creation timestamp.</p>
+         * <p>创建时间戳。</p>
          * 
          * <strong>example:</strong>
          * <p>1719386834548</p>
@@ -109,7 +109,7 @@ public class ListConsumerAuthorizationRulesResponseBody extends TeaModel {
         public Long createTimestamp;
 
         /**
-         * <p>The deployment status of the API in the current environment.</p>
+         * <p>API在当前环境的发布状态</p>
          * 
          * <strong>example:</strong>
          * <p>{}</p>
@@ -118,13 +118,13 @@ public class ListConsumerAuthorizationRulesResponseBody extends TeaModel {
         public String deployStatus;
 
         /**
-         * <p>The environment information.</p>
+         * <p>环境信息。</p>
          */
         @NameInMap("environmentInfo")
         public EnvironmentInfo environmentInfo;
 
         /**
-         * <p>The expiry mode. Valid values: LongTerm and ShortTerm.</p>
+         * <p>失效模式。LongTerm、ShortTerm，二选一。</p>
          * 
          * <strong>example:</strong>
          * <p>ShortTerm</p>
@@ -133,7 +133,7 @@ public class ListConsumerAuthorizationRulesResponseBody extends TeaModel {
         public String expireMode;
 
         /**
-         * <p>The rule status.</p>
+         * <p>失效状态。</p>
          * 
          * <strong>example:</strong>
          * <p>InEffect</p>
@@ -142,7 +142,7 @@ public class ListConsumerAuthorizationRulesResponseBody extends TeaModel {
         public String expireStatus;
 
         /**
-         * <p>The time when the rule expires.</p>
+         * <p>到期时间。</p>
          * 
          * <strong>example:</strong>
          * <p>172086834548</p>
@@ -151,13 +151,13 @@ public class ListConsumerAuthorizationRulesResponseBody extends TeaModel {
         public Long expireTimestamp;
 
         /**
-         * <p>The gateway information.</p>
+         * <p>网关信息。</p>
          */
         @NameInMap("gatewayInfo")
         public GatewayInfo gatewayInfo;
 
         /**
-         * <p>The resource ID.</p>
+         * <p>资源ID。</p>
          * 
          * <strong>example:</strong>
          * <p>2351944</p>
@@ -166,7 +166,7 @@ public class ListConsumerAuthorizationRulesResponseBody extends TeaModel {
         public String resourceId;
 
         /**
-         * <p>The resource type.</p>
+         * <p>资源类型。</p>
          * 
          * <strong>example:</strong>
          * <p>HttpApiRoute</p>
@@ -175,7 +175,7 @@ public class ListConsumerAuthorizationRulesResponseBody extends TeaModel {
         public String resourceType;
 
         /**
-         * <p>The update timestamp. Unit: milliseconds.</p>
+         * <p>更新时间戳。单位: 毫秒。</p>
          * 
          * <strong>example:</strong>
          * <p>1721116090326</p>
@@ -296,7 +296,7 @@ public class ListConsumerAuthorizationRulesResponseBody extends TeaModel {
 
     public static class ListConsumerAuthorizationRulesResponseBodyData extends TeaModel {
         /**
-         * <p>The list of consumer authorization information.</p>
+         * <p>消费者授权信息列表。</p>
          */
         @NameInMap("items")
         public java.util.List<ListConsumerAuthorizationRulesResponseBodyDataItems> items;
@@ -311,7 +311,7 @@ public class ListConsumerAuthorizationRulesResponseBody extends TeaModel {
         public Integer pageNumber;
 
         /**
-         * <p>The number of entries per page.</p>
+         * <p>The page size.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -320,7 +320,7 @@ public class ListConsumerAuthorizationRulesResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
-         * <p>The total number.</p>
+         * <p>The total number of entries.</p>
          * 
          * <strong>example:</strong>
          * <p>9</p>

@@ -12,7 +12,7 @@ public class ListHttpApiRoutesRequest extends TeaModel {
     public String backendServiceName;
 
     /**
-     * <p>Filters the results, returning only routes authorized by the specified consumer authorization rule.</p>
+     * <p>The consumer authorization rule ID. If specified, the response includes only routes that are authorized by the specified rule.</p>
      * 
      * <strong>example:</strong>
      * <p>cas-xxx</p>
@@ -30,7 +30,7 @@ public class ListHttpApiRoutesRequest extends TeaModel {
     public String deployStatuses;
 
     /**
-     * <p>Filters routes by the specified domain ID.</p>
+     * <p>The domain name ID used to filter routes.</p>
      * 
      * <strong>example:</strong>
      * <p>d-xxx</p>
@@ -48,7 +48,7 @@ public class ListHttpApiRoutesRequest extends TeaModel {
     public String environmentId;
 
     /**
-     * <p>Set to <code>true</code> if the query is for a deployment scenario.</p>
+     * <p>Specifies whether the query is for a deployment scenario.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -66,7 +66,7 @@ public class ListHttpApiRoutesRequest extends TeaModel {
     public String gatewayId;
 
     /**
-     * <p>The route name. This parameter requires an exact match.</p>
+     * <p>The route name.</p>
      * 
      * <strong>example:</strong>
      * <p>itemcenter-gateway</p>
@@ -75,7 +75,7 @@ public class ListHttpApiRoutesRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>Filters the results by route name using a fuzzy search.</p>
+     * <p>The route name for fuzzy match.</p>
      * 
      * <strong>example:</strong>
      * <p>item</p>
@@ -84,7 +84,7 @@ public class ListHttpApiRoutesRequest extends TeaModel {
     public String nameLike;
 
     /**
-     * <p>The page number, starting from 1. Defaults to 1 if unspecified.</p>
+     * <p>The page number. Pages start from 1. Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -93,7 +93,7 @@ public class ListHttpApiRoutesRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The page size. Valid values are 1 to 100. Defaults to 10 if unspecified.</p>
+     * <p>The number of entries per page. Valid values: 1 to 100. Default value: 10.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -102,7 +102,7 @@ public class ListHttpApiRoutesRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>Filters the results by route path using a fuzzy search.</p>
+     * <p>The route path for fuzzy match.</p>
      * 
      * <strong>example:</strong>
      * <p>/v1</p>
@@ -111,7 +111,7 @@ public class ListHttpApiRoutesRequest extends TeaModel {
     public String pathLike;
 
     /**
-     * <p>Set to <code>true</code> to include the consumer authorization policy in the response.</p>
+     * <p>Specifies whether to include consumer authorization information in the response.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -120,7 +120,7 @@ public class ListHttpApiRoutesRequest extends TeaModel {
     public Boolean withAuthPolicyInfo;
 
     /**
-     * <p>The consumer ID. If specified, the response includes the consumer\&quot;s associated authorization rules for each route.</p>
+     * <p>The consumer ID. If specified, the response includes the authorization rule list for the specified consumer in each route.</p>
      * 
      * <strong>example:</strong>
      * <p>cs-xxx</p>
@@ -129,7 +129,7 @@ public class ListHttpApiRoutesRequest extends TeaModel {
     public String withConsumerInfoById;
 
     /**
-     * <p>The plugin ID. If specified, the response includes the attachment information for this plugin for each route.</p>
+     * <p>The plug-in ID. If specified, the response includes the attachment information of the specified plug-in for each route.</p>
      * 
      * <strong>example:</strong>
      * <p>pl-xxx</p>

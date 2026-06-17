@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetEnvironmentResponseBody extends TeaModel {
     /**
-     * <p>The response message returned.</p>
+     * <p>The response code.</p>
      * 
      * <strong>example:</strong>
      * <p>Ok</p>
@@ -14,13 +14,13 @@ public class GetEnvironmentResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The environment ID.</p>
+     * <p>The response data.</p>
      */
     @NameInMap("data")
     public GetEnvironmentResponseBodyData data;
 
     /**
-     * <p>The response data.</p>
+     * <p>The response message.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -29,7 +29,7 @@ public class GetEnvironmentResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The status code returned.</p>
+     * <p>The request ID, which is used to trace the API call chain.</p>
      * 
      * <strong>example:</strong>
      * <p>3F8EE674-BB08-5E92-BE6F-E4756A748B0F</p>
@@ -76,7 +76,7 @@ public class GetEnvironmentResponseBody extends TeaModel {
 
     public static class GetEnvironmentResponseBodyDataStatisticsInfo extends TeaModel {
         /**
-         * <p>4</p>
+         * <p>The online resource count.</p>
          */
         @NameInMap("resourceStatistics")
         public java.util.List<ResourceStatistic> resourceStatistics;
@@ -115,7 +115,7 @@ public class GetEnvironmentResponseBody extends TeaModel {
 
     public static class GetEnvironmentResponseBodyData extends TeaModel {
         /**
-         * <p>Test environment</p>
+         * <p>The environment alias.</p>
          * 
          * <strong>example:</strong>
          * <p>测试环境</p>
@@ -124,7 +124,7 @@ public class GetEnvironmentResponseBody extends TeaModel {
         public String alias;
 
         /**
-         * <p>The update timestamp.</p>
+         * <p>The creation timestamp.</p>
          * 
          * <strong>example:</strong>
          * <p>1719386834548</p>
@@ -133,7 +133,7 @@ public class GetEnvironmentResponseBody extends TeaModel {
         public Long createTimestamp;
 
         /**
-         * <p>The creation timestamp.</p>
+         * <p>Indicates whether this is the default environment.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -142,7 +142,7 @@ public class GetEnvironmentResponseBody extends TeaModel {
         public Boolean _default;
 
         /**
-         * <p>Testing environment for xx project of xxx</p>
+         * <p>The environment description.</p>
          * 
          * <strong>example:</strong>
          * <p>这是xxx的xx项目测试环境</p>
@@ -151,7 +151,7 @@ public class GetEnvironmentResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The environment name.</p>
+         * <p>The environment ID.</p>
          * 
          * <strong>example:</strong>
          * <p>env-cq7l5s5lhtgi6qasrdc0</p>
@@ -160,13 +160,13 @@ public class GetEnvironmentResponseBody extends TeaModel {
         public String environmentId;
 
         /**
-         * <p>The subdomains.</p>
+         * <p>The gateway information.</p>
          */
         @NameInMap("gatewayInfo")
         public GatewayInfo gatewayInfo;
 
         /**
-         * <p>The environment alias.</p>
+         * <p>The environment name.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -175,7 +175,7 @@ public class GetEnvironmentResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>rg-aekzzzntl5njbpi</p>
+         * <p>The resource group ID.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-aekz4us4iruleja</p>
@@ -184,19 +184,19 @@ public class GetEnvironmentResponseBody extends TeaModel {
         public String resourceGroupId;
 
         /**
-         * <p>The information about online resources.</p>
+         * <p>The online resource information.</p>
          */
         @NameInMap("statisticsInfo")
         public GetEnvironmentResponseBodyDataStatisticsInfo statisticsInfo;
 
         /**
-         * <p>The subdomain information.</p>
+         * <p>The list of subdomains.</p>
          */
         @NameInMap("subDomainInfos")
         public java.util.List<SubDomainInfo> subDomainInfos;
 
         /**
-         * <p>The resource group ID.</p>
+         * <p>The update timestamp.</p>
          * 
          * <strong>example:</strong>
          * <p>1719386834548</p>

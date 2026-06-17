@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetDomainResponseBody extends TeaModel {
     /**
-     * <p>The status code returned.</p>
+     * <p>The response code.</p>
      * 
      * <strong>example:</strong>
      * <p>Ok</p>
@@ -20,7 +20,7 @@ public class GetDomainResponseBody extends TeaModel {
     public GetDomainResponseBodyData data;
 
     /**
-     * <p>The response message returned.</p>
+     * <p>The response message.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -29,7 +29,7 @@ public class GetDomainResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The request ID, which is used to trace the API call link.</p>
+     * <p>The request ID, which is used to trace the API call chain.</p>
      * 
      * <strong>example:</strong>
      * <p>3ACFC7A7-45A9-58CF-B2D5-765B60254695</p>
@@ -82,7 +82,7 @@ public class GetDomainResponseBody extends TeaModel {
         public java.util.List<ResourceStatistic> resourceStatistics;
 
         /**
-         * <p>The total number of resources.</p>
+         * <p>The total count.</p>
          * 
          * <strong>example:</strong>
          * <p>30</p>
@@ -115,7 +115,7 @@ public class GetDomainResponseBody extends TeaModel {
 
     public static class GetDomainResponseBodyData extends TeaModel {
         /**
-         * <p>The encryption algorithm.</p>
+         * <p>The encryption algorithm name.</p>
          * 
          * <strong>example:</strong>
          * <p>RSA</p>
@@ -124,7 +124,7 @@ public class GetDomainResponseBody extends TeaModel {
         public String algorithm;
 
         /**
-         * <p>The CA certificate ID.</p>
+         * <p>The CA certificate identifier.</p>
          * 
          * <strong>example:</strong>
          * <p>8237***-cn-hangzhou</p>
@@ -133,7 +133,7 @@ public class GetDomainResponseBody extends TeaModel {
         public String caCertIdentifier;
 
         /**
-         * <p>The certificate ID.</p>
+         * <p>The certificate identifier.</p>
          * 
          * <strong>example:</strong>
          * <p>2382***-cn-hangzhou</p>
@@ -167,12 +167,7 @@ public class GetDomainResponseBody extends TeaModel {
         public String clientCACert;
 
         /**
-         * <p>The creation source.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>Console</li>
-         * <li>Ingress</li>
-         * </ul>
+         * <p>The source from which the domain name was created.</p>
          * 
          * <strong>example:</strong>
          * <p>Console</p>
@@ -190,7 +185,7 @@ public class GetDomainResponseBody extends TeaModel {
         public Long createTimestamp;
 
         /**
-         * <p>Indicates whether the domain name is the default domain name.</p>
+         * <p>Indicates whether this is the default domain name.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -199,7 +194,7 @@ public class GetDomainResponseBody extends TeaModel {
         public Boolean _default;
 
         /**
-         * <p>The ID of the domain name.</p>
+         * <p>The domain name ID.</p>
          * 
          * <strong>example:</strong>
          * <p>d-cq1m3utlhtgvgkv7sitg</p>
@@ -208,7 +203,14 @@ public class GetDomainResponseBody extends TeaModel {
         public String domainId;
 
         /**
-         * <p>Indicates whether forcible HTTPS redirection is enabled.</p>
+         * <strong>example:</strong>
+         * <p>Serverless</p>
+         */
+        @NameInMap("domainScope")
+        public String domainScope;
+
+        /**
+         * <p>Specifies whether to enable forced HTTPS redirect when the HTTPS protocol type is configured.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -217,13 +219,7 @@ public class GetDomainResponseBody extends TeaModel {
         public Boolean forceHttps;
 
         /**
-         * <p>The HTTP/2 configuration.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>GlobalConfig</li>
-         * <li>Close</li>
-         * <li>Open</li>
-         * </ul>
+         * <p>The HTTP/2 setting.</p>
          * 
          * <strong>example:</strong>
          * <p>Open</p>
@@ -232,7 +228,7 @@ public class GetDomainResponseBody extends TeaModel {
         public String http2Option;
 
         /**
-         * <p>The certificate issuer.</p>
+         * <p>The certification authority.</p>
          * 
          * <strong>example:</strong>
          * <p>Alibaba</p>
@@ -241,12 +237,7 @@ public class GetDomainResponseBody extends TeaModel {
         public String issuer;
 
         /**
-         * <p>Indicates whether mutual authentication is enabled.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>false</li>
-         * <li>true</li>
-         * </ul>
+         * <p>Indicates whether mutual TLS (mTLS) authentication is enabled.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -264,7 +255,7 @@ public class GetDomainResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The expiration time of the certificate.</p>
+         * <p>The certificate expiration time.</p>
          * 
          * <strong>example:</strong>
          * <p>1719386834548</p>
@@ -273,7 +264,7 @@ public class GetDomainResponseBody extends TeaModel {
         public Long notAfterTimstamp;
 
         /**
-         * <p>The time when the certificate started to take effect.</p>
+         * <p>The certificate effective period.</p>
          * 
          * <strong>example:</strong>
          * <p>1719386834548</p>
@@ -282,10 +273,10 @@ public class GetDomainResponseBody extends TeaModel {
         public Long notBeforeTimestamp;
 
         /**
-         * <p>The supported protocol. Valid values:</p>
+         * <p>The protocol type supported by the domain name. Valid values:</p>
          * <ul>
-         * <li>HTTP: Only HTTP is supported.</li>
-         * <li>HTTPS: Only HTTPS is supported.</li>
+         * <li>HTTP: only HTTP is supported.</li>
+         * <li>HTTPS: only HTTPS is supported.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -304,7 +295,7 @@ public class GetDomainResponseBody extends TeaModel {
         public String resourceGroupId;
 
         /**
-         * <p>All domain names that are bound to the certificate.</p>
+         * <p>All domain names bound to the certificate.</p>
          * 
          * <strong>example:</strong>
          * <p>aliyun.com</p>
@@ -313,7 +304,7 @@ public class GetDomainResponseBody extends TeaModel {
         public String sans;
 
         /**
-         * <p>The information about online resources.</p>
+         * <p>The online resource information.</p>
          */
         @NameInMap("statisticsInfo")
         public GetDomainResponseBodyDataStatisticsInfo statisticsInfo;
@@ -325,7 +316,7 @@ public class GetDomainResponseBody extends TeaModel {
         public TlsCipherSuitesConfig tlsCipherSuitesConfig;
 
         /**
-         * <p>The maximum version of the TLS protocol. Up to TLS 1.3 is supported.</p>
+         * <p>The maximum TLS protocol version. TLS 1.3 is the maximum supported version.</p>
          * 
          * <strong>example:</strong>
          * <p>TLS 1.3</p>
@@ -334,7 +325,7 @@ public class GetDomainResponseBody extends TeaModel {
         public String tlsMax;
 
         /**
-         * <p>The minimum version of the TLS protocol. Down to TLS 1.0 is supported.</p>
+         * <p>The minimum TLS protocol version. TLS 1.0 is the minimum supported version.</p>
          * 
          * <strong>example:</strong>
          * <p>TLS 1.0</p>
@@ -426,6 +417,14 @@ public class GetDomainResponseBody extends TeaModel {
         }
         public String getDomainId() {
             return this.domainId;
+        }
+
+        public GetDomainResponseBodyData setDomainScope(String domainScope) {
+            this.domainScope = domainScope;
+            return this;
+        }
+        public String getDomainScope() {
+            return this.domainScope;
         }
 
         public GetDomainResponseBodyData setForceHttps(Boolean forceHttps) {

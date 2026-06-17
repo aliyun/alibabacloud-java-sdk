@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListEnvironmentsResponseBody extends TeaModel {
     /**
-     * <p>Response code.</p>
+     * <p>The response code.</p>
      * 
      * <strong>example:</strong>
      * <p>Ok</p>
@@ -14,13 +14,13 @@ public class ListEnvironmentsResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>Paged query environment list response.</p>
+     * <p>The paged query response for the environment list.</p>
      */
     @NameInMap("data")
     public ListEnvironmentsResponseBodyData data;
 
     /**
-     * <p>Response message.</p>
+     * <p>The response message.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -29,7 +29,7 @@ public class ListEnvironmentsResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Request ID, used for tracing the call chain.</p>
+     * <p>The request ID, which is used to trace the call chain.</p>
      * 
      * <strong>example:</strong>
      * <p>CE857A85-251D-5018-8103-A38957D71E20</p>
@@ -76,13 +76,13 @@ public class ListEnvironmentsResponseBody extends TeaModel {
 
     public static class ListEnvironmentsResponseBodyData extends TeaModel {
         /**
-         * <p>List of environment information.</p>
+         * <p>环境信息列表。</p>
          */
         @NameInMap("items")
         public java.util.List<EnvironmentInfo> items;
 
         /**
-         * <p>Page number.</p>
+         * <p>The page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -91,7 +91,7 @@ public class ListEnvironmentsResponseBody extends TeaModel {
         public Integer pageNumber;
 
         /**
-         * <p>Number of items per page.</p>
+         * <p>The number of entries per page.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -100,7 +100,7 @@ public class ListEnvironmentsResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
-         * <p>Total number of items.</p>
+         * <p>The total number of entries.</p>
          * 
          * <strong>example:</strong>
          * <p>25</p>

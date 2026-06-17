@@ -41,7 +41,7 @@ public class QueryConsumerAuthorizationRulesRequest extends TeaModel {
     public String environmentId;
 
     /**
-     * <p>Specifies whether to group the results by API.</p>
+     * <p>Specifies whether to group results by API.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -50,7 +50,7 @@ public class QueryConsumerAuthorizationRulesRequest extends TeaModel {
     public Boolean groupByApi;
 
     /**
-     * <p>The number of the page to return.</p>
+     * <p>The page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -59,7 +59,7 @@ public class QueryConsumerAuthorizationRulesRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page.</p>
+     * <p>The page size.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -95,7 +95,7 @@ public class QueryConsumerAuthorizationRulesRequest extends TeaModel {
     public String resourceType;
 
     /**
-     * <p>The resource types.</p>
+     * <p>The service source type.</p>
      * 
      * <strong>example:</strong>
      * <p>K8S</p>

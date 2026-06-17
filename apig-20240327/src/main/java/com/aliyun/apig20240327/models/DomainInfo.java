@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DomainInfo extends TeaModel {
     /**
-     * <p>The certificate identifier.</p>
+     * <p>The China Security certificate identity.</p>
      * 
      * <strong>example:</strong>
      * <p>235556-cn-hangzhou</p>
@@ -27,12 +27,7 @@ public class DomainInfo extends TeaModel {
     public String clientCACert;
 
     /**
-     * <p>The creation source of the domain name.</p>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li>Console</li>
-     * <li>Ingress</li>
-     * </ul>
+     * <p>The source from which the domain name was created.</p>
      * 
      * <strong>example:</strong>
      * <p>Console</p>
@@ -58,8 +53,11 @@ public class DomainInfo extends TeaModel {
     @NameInMap("domainId")
     public String domainId;
 
+    @NameInMap("domainScope")
+    public String domainScope;
+
     /**
-     * <p>Specifies whether to enable forcible HTTPS redirection when HTTPS is used as the protocol.</p>
+     * <p>Specifies whether to enable forced HTTPS redirect when the HTTPS protocol type is configured.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -68,7 +66,7 @@ public class DomainInfo extends TeaModel {
     public Boolean forceHttps;
 
     /**
-     * <p>Specifies whether to enable mutual authentication.</p>
+     * <p>Specifies whether to enable mTLS mutual authentication.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -86,10 +84,10 @@ public class DomainInfo extends TeaModel {
     public String name;
 
     /**
-     * <p>The supported protocol. Valid values:</p>
+     * <p>The protocol type supported by the domain name. Valid values:</p>
      * <ul>
-     * <li>HTTP</li>
-     * <li>HTTPS</li>
+     * <li>HTTP: Only HTTP is supported.</li>
+     * <li>HTTPS: Only HTTPS is supported.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -109,11 +107,6 @@ public class DomainInfo extends TeaModel {
 
     /**
      * <p>The domain name status.</p>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li>UnPublished</li>
-     * <li>Published</li>
-     * </ul>
      * 
      * <strong>example:</strong>
      * <p>Published</p>
@@ -173,6 +166,14 @@ public class DomainInfo extends TeaModel {
     }
     public String getDomainId() {
         return this.domainId;
+    }
+
+    public DomainInfo setDomainScope(String domainScope) {
+        this.domainScope = domainScope;
+        return this;
+    }
+    public String getDomainScope() {
+        return this.domainScope;
     }
 
     public DomainInfo setForceHttps(Boolean forceHttps) {
