@@ -4,10 +4,14 @@ package com.aliyun.polardb20170801.models;
 import com.aliyun.tea.*;
 
 public class DeletePolarFsPathMappingRequest extends TeaModel {
+    /**
+     * <p>The list of bucket-path mappings to delete.</p>
+     */
     @NameInMap("CustomBucketPathList")
     public java.util.List<DeletePolarFsPathMappingRequestCustomBucketPathList> customBucketPathList;
 
     /**
+     * <p>The ID of the cluster.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -17,6 +21,7 @@ public class DeletePolarFsPathMappingRequest extends TeaModel {
     public String DBClusterId;
 
     /**
+     * <p>The ID of the PolarFS instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -56,6 +61,8 @@ public class DeletePolarFsPathMappingRequest extends TeaModel {
 
     public static class DeletePolarFsPathMappingRequestCustomBucketPathList extends TeaModel {
         /**
+         * <p>The name of the bucket.</p>
+         * 
          * <strong>example:</strong>
          * <p>Bucket</p>
          */
@@ -63,6 +70,8 @@ public class DeletePolarFsPathMappingRequest extends TeaModel {
         public String bucket;
 
         /**
+         * <p>The path in the bucket.</p>
+         * 
          * <strong>example:</strong>
          * <p>/data</p>
          */

@@ -10,9 +10,14 @@ public class DescribeLogBackupPolicyResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the log backup feature is enabled. Valid values:</p>
      * <ul>
-     * <li>0: The log backup feature is disabled.</li>
-     * <li>1: The log backup feature is enabled. By default, the log backup feature is enabled and cannot be disabled.</li>
+     * <li><p>0: The feature is disabled.</p>
+     * </li>
+     * <li><p>1: The feature is enabled. By default, the log backup feature is enabled and cannot be disabled.</p>
+     * </li>
      * </ul>
+     * <blockquote>
+     * <p>If the advanced backup feature is enabled, this parameter is not recommended. Use the AdvancedLogPolicies parameter instead.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -21,7 +26,10 @@ public class DescribeLogBackupPolicyResponseBody extends TeaModel {
     public Integer enableBackupLog;
 
     /**
-     * <p>The region in which you want to store cross-region log backups. For more information about regions that support the cross-region backup feature, see <a href="https://help.aliyun.com/document_detail/72672.html">Overview</a>.</p>
+     * <p>The region in which the cross-region log backup is stored. For information about the regions that support cross-region backup, see <a href="https://help.aliyun.com/document_detail/72672.html">Overview</a>.</p>
+     * <blockquote>
+     * <p>If the advanced backup feature is enabled, this parameter is not recommended. Use the AdvancedLogPolicies parameter instead.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>cn-beijing</p>
@@ -30,14 +38,26 @@ public class DescribeLogBackupPolicyResponseBody extends TeaModel {
     public String logBackupAnotherRegionRegion;
 
     /**
-     * <p>The retention period of cross-region log backups. Valid values:</p>
+     * <p>The retention period of the cross-region log backup. Valid values:</p>
      * <ul>
-     * <li><strong>0</strong>: The cross-region backup feature is disabled.</li>
-     * <li><strong>30 to 7300</strong>: Cross-region log backups are retained for 30 to 7,300 days.</li>
-     * <li><strong>-1</strong>: The log backups are permanently retained.</li>
+     * <li><p><strong>0</strong>: The cross-region log backup feature is disabled.</p>
+     * </li>
+     * <li><p><strong>30 to 7300</strong>: The cross-region log backup is retained for 30 to 7300 days.</p>
+     * </li>
+     * <li><p><strong>-1</strong>: The cross-region log backups are retained permanently.</p>
+     * </li>
      * </ul>
      * <blockquote>
-     * <p> When you create a cluster, the default value of this parameter is <strong>0</strong>.</p>
+     * <ul>
+     * <li><ul>
+     * <li>When you create a cluster, the default value is <strong>0</strong>. This value indicates that the cross-region log backup feature is disabled.</li>
+     * </ul>
+     * </li>
+     * <li><ul>
+     * <li>If the advanced backup feature is enabled, this parameter is not recommended. Use the AdvancedLogPolicies parameter instead.</li>
+     * </ul>
+     * </li>
+     * </ul>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -47,11 +67,18 @@ public class DescribeLogBackupPolicyResponseBody extends TeaModel {
     public String logBackupAnotherRegionRetentionPeriod;
 
     /**
-     * <p>The retention period of the log backups. Valid values:</p>
+     * <p>The retention period of the log backup. Valid values:</p>
      * <ul>
-     * <li>3 to 7300: The log backups are retained for 3 to 7,300 days.</li>
-     * <li>\-1: The log backups are permanently retained.</li>
+     * <li><p>3 to 7300: The log backup is retained for 3 to 7300 days.</p>
+     * </li>
+     * <li><p>-1: The log backups are retained permanently.</p>
+     * </li>
      * </ul>
+     * <blockquote>
+     * <ul>
+     * <li>If the advanced backup feature is enabled, this parameter is not recommended. Use the AdvancedLogPolicies parameter instead.</li>
+     * </ul>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>7</p>

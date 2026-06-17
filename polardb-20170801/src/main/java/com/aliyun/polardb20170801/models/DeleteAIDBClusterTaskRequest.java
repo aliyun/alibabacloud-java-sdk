@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DeleteAIDBClusterTaskRequest extends TeaModel {
     /**
+     * <p>The task ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>pm-2ze9***</p>
      */
@@ -18,6 +20,8 @@ public class DeleteAIDBClusterTaskRequest extends TeaModel {
     public Long ownerId;
 
     /**
+     * <p>The region ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-beijing</p>
      */
@@ -25,6 +29,8 @@ public class DeleteAIDBClusterTaskRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The ID of the PolarDB database instance for the AI model service.</p>
+     * 
      * <strong>example:</strong>
      * <p>pc-2zejpr***</p>
      */

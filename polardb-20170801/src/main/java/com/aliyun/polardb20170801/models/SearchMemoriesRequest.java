@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class SearchMemoriesRequest extends TeaModel {
     /**
+     * <p>The application ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,8 @@ public class SearchMemoriesRequest extends TeaModel {
     public String applicationId;
 
     /**
+     * <p>The start time for filtering memories by creation time. Must be in UTC and ISO 8601 format.</p>
+     * 
      * <strong>example:</strong>
      * <p>yyyy-MM-ddTHH:mm:ssZ</p>
      */
@@ -21,6 +24,8 @@ public class SearchMemoriesRequest extends TeaModel {
     public String createTimeBegin;
 
     /**
+     * <p>The end time for filtering memories by creation time. Must be in UTC and ISO 8601 format.</p>
+     * 
      * <strong>example:</strong>
      * <p>yyyy-MM-ddTHH:mm:ssZ</p>
      */
@@ -28,6 +33,8 @@ public class SearchMemoriesRequest extends TeaModel {
     public String createTimeEnd;
 
     /**
+     * <p>The agent ID associated with the memory.</p>
+     * 
      * <strong>example:</strong>
      * <p>agent1</p>
      */
@@ -35,6 +42,7 @@ public class SearchMemoriesRequest extends TeaModel {
     public String memoryAgentId;
 
     /**
+     * <p>The user ID associated with the memory.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -44,6 +52,7 @@ public class SearchMemoriesRequest extends TeaModel {
     public String memoryUserId;
 
     /**
+     * <p>The search query.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -53,6 +62,8 @@ public class SearchMemoriesRequest extends TeaModel {
     public String query;
 
     /**
+     * <p>The maximum number of results to return.</p>
+     * 
      * <strong>example:</strong>
      * <p>3</p>
      */

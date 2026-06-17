@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeAITaskStatusResponseBody extends TeaModel {
     /**
-     * <p>The name of the database account that is used to connect to the AI nodes in the cluster.</p>
+     * <p>The most recently configured account name.</p>
      * 
      * <strong>example:</strong>
      * <p>testacc</p>
@@ -34,8 +34,10 @@ public class DescribeAITaskStatusResponseBody extends TeaModel {
     /**
      * <p>The status of the PolarDB for AI feature. Valid values:</p>
      * <ul>
-     * <li><strong>1</strong>: enabled.</li>
-     * <li><strong>2</strong>: disabled.</li>
+     * <li><p><strong>1</strong>: Enabled</p>
+     * </li>
+     * <li><p><strong>2</strong>: Disabled</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -45,10 +47,10 @@ public class DescribeAITaskStatusResponseBody extends TeaModel {
     public String status;
 
     /**
-     * <p>The description of the status of the PolarDB for AI feature.</p>
+     * <p>A description of the feature status.</p>
      * 
      * <strong>example:</strong>
-     * <p>Closed State</p>
+     * <p>关闭状态</p>
      */
     @NameInMap("StatusName")
     public String statusName;

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribePolarFsQuotaResponseBody extends TeaModel {
     /**
+     * <p>The page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -12,6 +14,8 @@ public class DescribePolarFsQuotaResponseBody extends TeaModel {
     public String pageNumber;
 
     /**
+     * <p>The number of entries returned on the current page.</p>
+     * 
      * <strong>example:</strong>
      * <p>5</p>
      */
@@ -19,6 +23,8 @@ public class DescribePolarFsQuotaResponseBody extends TeaModel {
     public String pageRecordCount;
 
     /**
+     * <p>The number of entries per page. Valid values: 5 to 50. Default value: 10.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -26,6 +32,8 @@ public class DescribePolarFsQuotaResponseBody extends TeaModel {
     public String pageSize;
 
     /**
+     * <p>The path of the directory.</p>
+     * 
      * <strong>example:</strong>
      * <p>/data</p>
      */
@@ -33,20 +41,28 @@ public class DescribePolarFsQuotaResponseBody extends TeaModel {
     public String path;
 
     /**
+     * <p>The PolarFS instance ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>pfs-2ze0i74ka607*****</p>
      */
     @NameInMap("PolarFsInstanceId")
     public String polarFsInstanceId;
 
+    /**
+     * <p>The details of the rules.</p>
+     */
     @NameInMap("PolicyItems")
     public java.util.List<DescribePolarFsQuotaResponseBodyPolicyItems> policyItems;
 
+    /**
+     * <p>The quota information.</p>
+     */
     @NameInMap("QuotaItems")
     public java.util.List<DescribePolarFsQuotaResponseBodyQuotaItems> quotaItems;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>2FED790E-FB61-4721-8C1C-07C627******</p>
@@ -55,6 +71,8 @@ public class DescribePolarFsQuotaResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total number of entries returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>5</p>
      */
@@ -140,6 +158,8 @@ public class DescribePolarFsQuotaResponseBody extends TeaModel {
 
     public static class DescribePolarFsQuotaResponseBodyPolicyItems extends TeaModel {
         /**
+         * <p>The TTL of the access time. Unit: seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>7200</p>
          */
@@ -147,6 +167,8 @@ public class DescribePolarFsQuotaResponseBody extends TeaModel {
         public Long accessTTL;
 
         /**
+         * <p>The TTL of the change time. Unit: seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>7200</p>
          */
@@ -154,6 +176,8 @@ public class DescribePolarFsQuotaResponseBody extends TeaModel {
         public Long changeTTL;
 
         /**
+         * <p>The rule description.</p>
+         * 
          * <strong>example:</strong>
          * <p>NULL</p>
          */
@@ -161,6 +185,14 @@ public class DescribePolarFsQuotaResponseBody extends TeaModel {
         public String description;
 
         /**
+         * <p>Indicates whether the rule is enabled. Valid values:</p>
+         * <ul>
+         * <li><p><strong>true</strong>: The rule takes effect immediately for new events. This is the default value.</p>
+         * </li>
+         * <li><p><strong>false</strong>: The rule does not take effect for new events.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
@@ -168,6 +200,11 @@ public class DescribePolarFsQuotaResponseBody extends TeaModel {
         public Boolean enabled;
 
         /**
+         * <p>The glob pattern of paths to exclude.</p>
+         * <ul>
+         * <li>The pattern must start with <code>/</code> and supports glob syntax, including <code>*</code>, <code>?</code>, and <code>**</code>.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>NULL</p>
          */
@@ -175,6 +212,8 @@ public class DescribePolarFsQuotaResponseBody extends TeaModel {
         public String exclude;
 
         /**
+         * <p>The maximum number of files in the directory.</p>
+         * 
          * <strong>example:</strong>
          * <p>77</p>
          */
@@ -182,6 +221,8 @@ public class DescribePolarFsQuotaResponseBody extends TeaModel {
         public Long fileCountLimit;
 
         /**
+         * <p>The rule ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>73</p>
          */
@@ -189,6 +230,11 @@ public class DescribePolarFsQuotaResponseBody extends TeaModel {
         public Long id;
 
         /**
+         * <p>The glob pattern for paths to include.</p>
+         * <ul>
+         * <li>The pattern must start with <code>/</code> and supports glob syntax, including <code>*</code>, <code>?</code>, and <code>**</code>.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>/a*</p>
          */
@@ -196,6 +242,8 @@ public class DescribePolarFsQuotaResponseBody extends TeaModel {
         public String include;
 
         /**
+         * <p>The rule name.</p>
+         * 
          * <strong>example:</strong>
          * <p>xxxxx</p>
          */
@@ -203,6 +251,8 @@ public class DescribePolarFsQuotaResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>The priority of the quota rule.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -210,6 +260,11 @@ public class DescribePolarFsQuotaResponseBody extends TeaModel {
         public Integer priority;
 
         /**
+         * <p>The maximum total size of files in the directory. Unit: GB.</p>
+         * <ul>
+         * <li>The value must be greater than or equal to 1.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -313,6 +368,8 @@ public class DescribePolarFsQuotaResponseBody extends TeaModel {
 
     public static class DescribePolarFsQuotaResponseBodyQuotaItems extends TeaModel {
         /**
+         * <p>The capacity. Unit: bytes.</p>
+         * 
          * <strong>example:</strong>
          * <p>1073741824</p>
          */
@@ -320,6 +377,8 @@ public class DescribePolarFsQuotaResponseBody extends TeaModel {
         public Long capacity;
 
         /**
+         * <p>The total number of inodes.</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */
@@ -327,6 +386,8 @@ public class DescribePolarFsQuotaResponseBody extends TeaModel {
         public Long inodes;
 
         /**
+         * <p>The directory path.</p>
+         * 
          * <strong>example:</strong>
          * <p>/data</p>
          */
@@ -334,6 +395,8 @@ public class DescribePolarFsQuotaResponseBody extends TeaModel {
         public String path;
 
         /**
+         * <p>The used capacity. Unit: bytes.</p>
+         * 
          * <strong>example:</strong>
          * <p>104857600</p>
          */
@@ -341,6 +404,8 @@ public class DescribePolarFsQuotaResponseBody extends TeaModel {
         public Long usedCapacity;
 
         /**
+         * <p>The number of used inodes.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */

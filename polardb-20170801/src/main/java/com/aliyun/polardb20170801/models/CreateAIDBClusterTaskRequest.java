@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateAIDBClusterTaskRequest extends TeaModel {
     /**
+     * <p>The cluster ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,8 @@ public class CreateAIDBClusterTaskRequest extends TeaModel {
     public String DBClusterId;
 
     /**
+     * <p>The instance type.</p>
+     * 
      * <strong>example:</strong>
      * <p>polar.pg.g6.4xlarge.guh</p>
      */
@@ -21,6 +24,8 @@ public class CreateAIDBClusterTaskRequest extends TeaModel {
     public String DBInstanceClass;
 
     /**
+     * <p>The ID of the training dataset. This parameter is required for fine-tuning.</p>
+     * 
      * <strong>example:</strong>
      * <p>pds-2zetrain***</p>
      */
@@ -28,6 +33,8 @@ public class CreateAIDBClusterTaskRequest extends TeaModel {
     public String datasetPath;
 
     /**
+     * <p>The ID of the validation dataset. This parameter is required for evaluation.</p>
+     * 
      * <strong>example:</strong>
      * <p>pds-2zetrain***</p>
      */
@@ -35,6 +42,10 @@ public class CreateAIDBClusterTaskRequest extends TeaModel {
     public String evalDatasetPath;
 
     /**
+     * <p>The type of model service. Valid values:</p>
+     * <ul>
+     * <li><strong>aitrain</strong>: For model operator tuning.</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -44,6 +55,13 @@ public class CreateAIDBClusterTaskRequest extends TeaModel {
     public String kubeType;
 
     /**
+     * <p>The model name.</p>
+     * <ul>
+     * <li><p>For a <strong>preset model</strong>, specify the model name.</p>
+     * </li>
+     * <li><p>For a <strong>custom model</strong>, specify the path to the model. This option is for models trained in a cold storage edition instance.</p>
+     * </li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -53,6 +71,13 @@ public class CreateAIDBClusterTaskRequest extends TeaModel {
     public String modelName;
 
     /**
+     * <p>The model source. Valid values:</p>
+     * <ul>
+     * <li><p><strong>public</strong>: A preset model.</p>
+     * </li>
+     * <li><p><strong>custom</strong>: A custom model.</p>
+     * </li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -62,6 +87,8 @@ public class CreateAIDBClusterTaskRequest extends TeaModel {
     public String modelSource;
 
     /**
+     * <p>The type of the custom model.</p>
+     * 
      * <strong>example:</strong>
      * <p>qwen3</p>
      */
@@ -75,6 +102,8 @@ public class CreateAIDBClusterTaskRequest extends TeaModel {
     public Long ownerId;
 
     /**
+     * <p>The region ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-beijing</p>
      */
@@ -88,6 +117,7 @@ public class CreateAIDBClusterTaskRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
+     * <p>The runtime parameters, specified as a JSON string.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -97,6 +127,8 @@ public class CreateAIDBClusterTaskRequest extends TeaModel {
     public String runningParameter;
 
     /**
+     * <p>The security group ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>sg-bp**************</p>
      */
@@ -104,6 +136,8 @@ public class CreateAIDBClusterTaskRequest extends TeaModel {
     public String securityGroupId;
 
     /**
+     * <p>The name of the task.</p>
+     * 
      * <strong>example:</strong>
      * <p>xxxx</p>
      */
@@ -111,6 +145,8 @@ public class CreateAIDBClusterTaskRequest extends TeaModel {
     public String taskName;
 
     /**
+     * <p>The VPC ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>vpc-*******************</p>
      */
@@ -118,6 +154,8 @@ public class CreateAIDBClusterTaskRequest extends TeaModel {
     public String VPCId;
 
     /**
+     * <p>The vSwitch ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>vsw-*********************</p>
      */
@@ -125,6 +163,8 @@ public class CreateAIDBClusterTaskRequest extends TeaModel {
     public String vSwitchId;
 
     /**
+     * <p>The zone ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou-k</p>
      */

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DeleteAIDBClusterDatasetResponseBody extends TeaModel {
     /**
+     * <p>The ID of the Data Service instance.</p>
+     * 
      * <strong>example:</strong>
      * <p>pcs-2zeei***</p>
      */
@@ -12,6 +14,8 @@ public class DeleteAIDBClusterDatasetResponseBody extends TeaModel {
     public String dataServiceId;
 
     /**
+     * <p>The dataset ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>pds-xxxxxxxxxxxxxxxx</p>
      */
@@ -19,7 +23,7 @@ public class DeleteAIDBClusterDatasetResponseBody extends TeaModel {
     public String datasetId;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>CD35F3-F3-44CA-AFFF-BAF869******</p>

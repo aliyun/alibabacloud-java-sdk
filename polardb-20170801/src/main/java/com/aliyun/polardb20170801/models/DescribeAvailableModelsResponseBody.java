@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeAvailableModelsResponseBody extends TeaModel {
     /**
+     * <p>The database engine.</p>
+     * 
      * <strong>example:</strong>
      * <p>polardb_ai</p>
      */
@@ -12,17 +14,22 @@ public class DescribeAvailableModelsResponseBody extends TeaModel {
     public String engine;
 
     /**
+     * <p>The engine version.</p>
+     * 
      * <strong>example:</strong>
      * <p>3.0</p>
      */
     @NameInMap("EngineVersion")
     public String engineVersion;
 
+    /**
+     * <p>The list of models.</p>
+     */
     @NameInMap("Items")
     public java.util.List<DescribeAvailableModelsResponseBodyItems> items;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>3AA69096-757C-4647-B36C-29EBC2******</p>
@@ -69,6 +76,8 @@ public class DescribeAvailableModelsResponseBody extends TeaModel {
 
     public static class DescribeAvailableModelsResponseBodyItemsGpuRequired extends TeaModel {
         /**
+         * <p>The minimum number of GPUs required.</p>
+         * 
          * <strong>example:</strong>
          * <p>xx</p>
          */
@@ -76,6 +85,8 @@ public class DescribeAvailableModelsResponseBody extends TeaModel {
         public String gpuMinCount;
 
         /**
+         * <p>The GPU model.</p>
+         * 
          * <strong>example:</strong>
          * <p>xxx</p>
          */
@@ -106,10 +117,15 @@ public class DescribeAvailableModelsResponseBody extends TeaModel {
     }
 
     public static class DescribeAvailableModelsResponseBodyItems extends TeaModel {
+        /**
+         * <p>The required GPU configurations.</p>
+         */
         @NameInMap("GpuRequired")
         public java.util.List<DescribeAvailableModelsResponseBodyItemsGpuRequired> gpuRequired;
 
         /**
+         * <p>The minimum number of CPU cores required.</p>
+         * 
          * <strong>example:</strong>
          * <p>8</p>
          */
@@ -117,6 +133,8 @@ public class DescribeAvailableModelsResponseBody extends TeaModel {
         public Long minimumCpu;
 
         /**
+         * <p>The minimum memory required, in MiB.</p>
+         * 
          * <strong>example:</strong>
          * <p>16384</p>
          */
@@ -124,6 +142,8 @@ public class DescribeAvailableModelsResponseBody extends TeaModel {
         public Long minimumMemory;
 
         /**
+         * <p>The model name.</p>
+         * 
          * <strong>example:</strong>
          * <p>Qwen3-32B-GPTQ-Int4</p>
          */
@@ -131,12 +151,17 @@ public class DescribeAvailableModelsResponseBody extends TeaModel {
         public String modelName;
 
         /**
+         * <p>The model series.</p>
+         * 
          * <strong>example:</strong>
          * <p>BERT</p>
          */
         @NameInMap("ModelSeries")
         public String modelSeries;
 
+        /**
+         * <p>The supported GPU models.</p>
+         */
         @NameInMap("SupportedGpuModels")
         public java.util.List<String> supportedGpuModels;
 

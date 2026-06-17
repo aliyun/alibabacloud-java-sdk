@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeGlobalSecurityIPGroupResponseBody extends TeaModel {
     /**
-     * <p>The details of the global IP whitelist template.</p>
+     * <p>The information about the global IP allowlist template.</p>
      */
     @NameInMap("GlobalSecurityIPGroup")
     public java.util.List<DescribeGlobalSecurityIPGroupResponseBodyGlobalSecurityIPGroup> globalSecurityIPGroup;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>9B7BFB11-C077-4FE3-B051-F69CEB******</p>
@@ -42,15 +42,15 @@ public class DescribeGlobalSecurityIPGroupResponseBody extends TeaModel {
 
     public static class DescribeGlobalSecurityIPGroupResponseBodyGlobalSecurityIPGroup extends TeaModel {
         /**
-         * <p>The details of the clusters that are associated with the global IP address whitelist template.</p>
+         * <p>The list of clusters associated with the IP allowlist template.</p>
          */
         @NameInMap("DBInstances")
         public java.util.List<String> DBInstances;
 
         /**
-         * <p>The IP address in the global IP whitelist template.</p>
+         * <p>The IP addresses in the allowlist template.</p>
          * <blockquote>
-         * <p> Separate multiple IP addresses with commas (,). You can add up to 1,000 IP addresses or CIDR blocks to all IP whitelists.</p>
+         * <p>Separate multiple IP addresses with commas (,). You can add up to 1,000 IP addresses or CIDR blocks to all IP allowlists in total.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -60,11 +60,14 @@ public class DescribeGlobalSecurityIPGroupResponseBody extends TeaModel {
         public String GIpList;
 
         /**
-         * <p>The name of the global IP whitelist template. The name must meet the following requirements:</p>
+         * <p>The name of the IP allowlist template. The name of the IP allowlist template must meet the following requirements:</p>
          * <ul>
-         * <li>The name can contain lowercase letters, digits, and underscores (_).</li>
-         * <li>The name must start with a letter and end with a letter or a digit.</li>
-         * <li>The name must be 2 to 120 characters in length.</li>
+         * <li><p>The name can contain lowercase letters, digits, and underscores (_).</p>
+         * </li>
+         * <li><p>The name must start with a letter and end with a letter or a digit.</p>
+         * </li>
+         * <li><p>The name must be 2 to 120 characters in length.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -74,7 +77,7 @@ public class DescribeGlobalSecurityIPGroupResponseBody extends TeaModel {
         public String globalIgName;
 
         /**
-         * <p>The ID of the global IP whitelist template.</p>
+         * <p>The ID of the IP allowlist template.</p>
          * 
          * <strong>example:</strong>
          * <p>g-zsldxfiwjmti0kcm****</p>
@@ -83,7 +86,7 @@ public class DescribeGlobalSecurityIPGroupResponseBody extends TeaModel {
         public String globalSecurityGroupId;
 
         /**
-         * <p>The ID of the region.</p>
+         * <p>The region ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>

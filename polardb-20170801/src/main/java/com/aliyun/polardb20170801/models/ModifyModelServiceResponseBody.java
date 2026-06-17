@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ModifyModelServiceResponseBody extends TeaModel {
     /**
+     * <p>The ID of the model service.</p>
+     * 
      * <strong>example:</strong>
      * <p>ms-xxxxxx</p>
      */
@@ -12,7 +14,7 @@ public class ModifyModelServiceResponseBody extends TeaModel {
     public String modelServiceId;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>6A2EE5B4-CC9F-46E1-A747-E43BC9******</p>
@@ -21,6 +23,8 @@ public class ModifyModelServiceResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The status of the model service.</p>
+     * 
      * <strong>example:</strong>
      * <p>Enable</p>
      */

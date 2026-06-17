@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeGlobalSecurityIPGroupRequest extends TeaModel {
     /**
-     * <p>The ID of the IP whitelist template.</p>
+     * <p>The ID of the IP allowlist template.</p>
      * 
      * <strong>example:</strong>
      * <p>g-zsldxfiwjmti0kcm****</p>
@@ -20,7 +20,7 @@ public class DescribeGlobalSecurityIPGroupRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID of the IP whitelist template.</p>
+     * <p>The region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -4,18 +4,33 @@ package com.aliyun.polardb20170801.models;
 import com.aliyun.tea.*;
 
 public class DescribeExtensionsResponseBody extends TeaModel {
+    /**
+     * <p>The extensions that are installed in the specified database.</p>
+     */
     @NameInMap("InstalledExtensions")
     public java.util.List<DescribeExtensionsResponseBodyInstalledExtensions> installedExtensions;
 
+    /**
+     * <p>The overview of the extension.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>测试建单，请忽略</p>
+     */
     @NameInMap("Overview")
     public String overview;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>309073D4-9C99-511C-AF84-0C67A6F52E67</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The extensions that are not installed in the specified database.</p>
+     */
     @NameInMap("UninstalledExtensions")
     public java.util.List<DescribeExtensionsResponseBodyUninstalledExtensions> uninstalledExtensions;
 
@@ -58,6 +73,8 @@ public class DescribeExtensionsResponseBody extends TeaModel {
 
     public static class DescribeExtensionsResponseBodyInstalledExtensions extends TeaModel {
         /**
+         * <p>The extension type.</p>
+         * 
          * <strong>example:</strong>
          * <p>geography_space, self_develop</p>
          */
@@ -65,6 +82,8 @@ public class DescribeExtensionsResponseBody extends TeaModel {
         public String category;
 
         /**
+         * <p>The description of the extension.</p>
+         * 
          * <strong>example:</strong>
          * <p>OK</p>
          */
@@ -72,6 +91,8 @@ public class DescribeExtensionsResponseBody extends TeaModel {
         public String comment;
 
         /**
+         * <p>The default version of the extension.</p>
+         * 
          * <strong>example:</strong>
          * <p>7.7</p>
          */
@@ -79,6 +100,8 @@ public class DescribeExtensionsResponseBody extends TeaModel {
         public String defaultVersion;
 
         /**
+         * <p>The currently installed version of the extension.</p>
+         * 
          * <strong>example:</strong>
          * <p>7.7</p>
          */
@@ -86,6 +109,8 @@ public class DescribeExtensionsResponseBody extends TeaModel {
         public String installedVersion;
 
         /**
+         * <p>The extension name.</p>
+         * 
          * <strong>example:</strong>
          * <p>jueming</p>
          */
@@ -93,6 +118,8 @@ public class DescribeExtensionsResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>The owner of the extension.</p>
+         * 
          * <strong>example:</strong>
          * <p>alton</p>
          */
@@ -100,6 +127,8 @@ public class DescribeExtensionsResponseBody extends TeaModel {
         public String owner;
 
         /**
+         * <p>The priority of the extension.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -107,6 +136,8 @@ public class DescribeExtensionsResponseBody extends TeaModel {
         public String priority;
 
         /**
+         * <p>The extensions on which this extension depends.</p>
+         * 
          * <strong>example:</strong>
          * <p>ganos_networking</p>
          */
@@ -114,6 +145,8 @@ public class DescribeExtensionsResponseBody extends TeaModel {
         public String requires;
 
         /**
+         * <p>Specifies whether to restart the application. \<code>true\\</code>: The application is restarted. \<code>false\\</code>: The application is not restarted.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -201,6 +234,8 @@ public class DescribeExtensionsResponseBody extends TeaModel {
 
     public static class DescribeExtensionsResponseBodyUninstalledExtensions extends TeaModel {
         /**
+         * <p>The extension type.</p>
+         * 
          * <strong>example:</strong>
          * <p>geography_space, self_develop</p>
          */
@@ -208,6 +243,8 @@ public class DescribeExtensionsResponseBody extends TeaModel {
         public String category;
 
         /**
+         * <p>The purpose of the extension.</p>
+         * 
          * <strong>example:</strong>
          * <p>OK</p>
          */
@@ -215,6 +252,8 @@ public class DescribeExtensionsResponseBody extends TeaModel {
         public String comment;
 
         /**
+         * <p>The default version of the extension.</p>
+         * 
          * <strong>example:</strong>
          * <p>7.7</p>
          */
@@ -222,6 +261,8 @@ public class DescribeExtensionsResponseBody extends TeaModel {
         public String defaultVersion;
 
         /**
+         * <p>The currently installed version of the extension.</p>
+         * 
          * <strong>example:</strong>
          * <p>7.7</p>
          */
@@ -229,6 +270,8 @@ public class DescribeExtensionsResponseBody extends TeaModel {
         public String installedVersion;
 
         /**
+         * <p>The extension name.</p>
+         * 
          * <strong>example:</strong>
          * <p>jueming</p>
          */
@@ -236,6 +279,8 @@ public class DescribeExtensionsResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>The owner of the extension.</p>
+         * 
          * <strong>example:</strong>
          * <p>alton</p>
          */
@@ -243,6 +288,8 @@ public class DescribeExtensionsResponseBody extends TeaModel {
         public String owner;
 
         /**
+         * <p>The priority of the extension.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -250,6 +297,8 @@ public class DescribeExtensionsResponseBody extends TeaModel {
         public String priority;
 
         /**
+         * <p>The extensions on which this extension depends.</p>
+         * 
          * <strong>example:</strong>
          * <p>ganos_networking</p>
          */
@@ -257,6 +306,8 @@ public class DescribeExtensionsResponseBody extends TeaModel {
         public String requires;
 
         /**
+         * <p>Specifies whether to restart the application. \<code>true\\</code>: The application is restarted. \<code>false\\</code>: The application is not restarted.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */

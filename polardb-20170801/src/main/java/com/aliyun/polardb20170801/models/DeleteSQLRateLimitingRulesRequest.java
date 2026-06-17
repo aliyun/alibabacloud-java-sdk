@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteSQLRateLimitingRulesRequest extends TeaModel {
     /**
+     * <p>The cluster ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -26,6 +27,10 @@ public class DeleteSQLRateLimitingRulesRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
+     * <p>The names of the SQL throttling rules to delete. To delete multiple rules in a batch, separate the rule names with commas (,).</p>
+     * <blockquote>
+     * <p>Call the <a href="https://help.aliyun.com/document_detail/212573.html">DescribeSQLRateLimitingRules</a> operation to view the details of all SQL throttling rules for the target cluster, including their names.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

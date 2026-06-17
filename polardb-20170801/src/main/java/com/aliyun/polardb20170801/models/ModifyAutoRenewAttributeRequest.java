@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ModifyAutoRenewAttributeRequest extends TeaModel {
     /**
+     * <p>The cloud provider of the cluster.</p>
+     * 
      * <strong>example:</strong>
      * <p>ENS</p>
      */
@@ -12,7 +14,7 @@ public class ModifyAutoRenewAttributeRequest extends TeaModel {
     public String cloudProvider;
 
     /**
-     * <p>The cluster ID. If you need to specify multiple cluster IDs, separate the cluster IDs with commas (,).</p>
+     * <p>The ID of the database cluster.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -22,10 +24,12 @@ public class ModifyAutoRenewAttributeRequest extends TeaModel {
     public String DBClusterIds;
 
     /**
-     * <p>The automatic renewal period.</p>
+     * <p>The auto-renewal period. Valid values:</p>
      * <ul>
-     * <li>Valid values when you set the <strong>PeriodUnit</strong> parameter to <strong>Month</strong>: <code>1, 2, 3, 6, and 12</code>.</li>
-     * <li>Valid values when you set the <strong>PeriodUnit</strong> parameter to <strong>Year</strong>: <code>1, 2, and 3</code>.</li>
+     * <li><p>When <strong>PeriodUnit</strong> is <strong>Month</strong>, the valid values are <code>[1,2,3,6,12]</code>.</p>
+     * </li>
+     * <li><p>When <strong>PeriodUnit</strong> is <strong>Year</strong>, the valid values are <code>[1-3]</code>.</p>
+     * </li>
      * </ul>
      * <p>Default value: <strong>1</strong>.</p>
      * 
@@ -42,10 +46,12 @@ public class ModifyAutoRenewAttributeRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The unit of the renewal period. Valid values:</p>
+     * <p>The unit of the auto-renewal period. Valid values:</p>
      * <ul>
-     * <li><strong>Year</strong></li>
-     * <li><strong>Month</strong></li>
+     * <li><p><strong>Year</strong></p>
+     * </li>
+     * <li><p><strong>Month</strong></p>
+     * </li>
      * </ul>
      * <p>Default value: <strong>Month</strong>.</p>
      * 
@@ -56,10 +62,9 @@ public class ModifyAutoRenewAttributeRequest extends TeaModel {
     public String periodUnit;
 
     /**
-     * <p>The ID of the region. The region ID can be up to 50 characters in length.
-     * cn-hangzhou</p>
+     * <p>The region ID. The ID can be up to 50 characters in length.</p>
      * <blockquote>
-     * <p> You can call the <a href="https://help.aliyun.com/document_detail/98041.html">DescribeRegions</a> operation to query the available regions.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/2319134.html">DescribeRegions</a> operation to query available regions.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -70,15 +75,18 @@ public class ModifyAutoRenewAttributeRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The auto-renewal status of the cluster. Valid values:</p>
+     * <p>The auto-renewal status. Valid values:</p>
      * <ul>
-     * <li><strong>AutoRenewal:</strong> The cluster is automatically renewed.</li>
-     * <li><strong>Normal</strong>: The cluster is manually renewed.</li>
-     * <li><strong>NotRenewal:</strong> The cluster is not renewed after expiration.</li>
+     * <li><p><strong>AutoRenewal</strong>: Enables auto-renewal.</p>
+     * </li>
+     * <li><p><strong>Normal</strong>: Enables manual renewal.</p>
+     * </li>
+     * <li><p><strong>NotRenewal</strong>: Disables renewal.</p>
+     * </li>
      * </ul>
      * <p>Default value: <strong>AutoRenewal</strong>.</p>
      * <blockquote>
-     * <p> If you set this parameter to <strong>NotRenewal</strong>, the system sends a notification that indicates the cluster is not renewed three days before the cluster expires. After the cluster expires, the system no longer sends a notification.</p>
+     * <p>When you set this parameter to <strong>NotRenewal</strong>, the system stops sending expiration reminders and sends only a non-renewal notification three days before the expiration date.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -88,7 +96,7 @@ public class ModifyAutoRenewAttributeRequest extends TeaModel {
     public String renewalStatus;
 
     /**
-     * <p>The ID of the resource group.</p>
+     * <p>The resource group ID.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-************</p>

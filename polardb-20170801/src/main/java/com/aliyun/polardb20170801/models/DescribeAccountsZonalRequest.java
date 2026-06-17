@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeAccountsZonalRequest extends TeaModel {
     /**
+     * <p>The account name.</p>
+     * 
      * <strong>example:</strong>
      * <p>test_acc</p>
      */
@@ -12,6 +14,7 @@ public class DescribeAccountsZonalRequest extends TeaModel {
     public String accountName;
 
     /**
+     * <p>The cluster ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,6 +24,8 @@ public class DescribeAccountsZonalRequest extends TeaModel {
     public String DBClusterId;
 
     /**
+     * <p>The maximum number of entries to return in a single request.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -28,6 +33,8 @@ public class DescribeAccountsZonalRequest extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>The token to retrieve the next page of results. You do not need to specify this parameter for the first request. In a subsequent request, set this parameter to the NextToken value returned in the previous response.</p>
+     * 
      * <strong>example:</strong>
      * <p>212db86sca4384811e0b5e8707e******</p>
      */
@@ -35,6 +42,11 @@ public class DescribeAccountsZonalRequest extends TeaModel {
     public String nextToken;
 
     /**
+     * <p>The node type. This parameter is required when you query the accounts of a PolarDB Search node.</p>
+     * <ul>
+     * <li>Search</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>Search</p>
      */
@@ -48,6 +60,8 @@ public class DescribeAccountsZonalRequest extends TeaModel {
     public Long ownerId;
 
     /**
+     * <p>The page number. The value must be an integer that is greater than 0. The default value is 1.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -55,6 +69,17 @@ public class DescribeAccountsZonalRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries to return on each page. Valid values:</p>
+     * <ul>
+     * <li><p>30</p>
+     * </li>
+     * <li><p>50</p>
+     * </li>
+     * <li><p>100</p>
+     * </li>
+     * </ul>
+     * <p>The default value is 30.</p>
+     * 
      * <strong>example:</strong>
      * <p>30</p>
      */

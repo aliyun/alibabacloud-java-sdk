@@ -5,11 +5,13 @@ import com.aliyun.tea.*;
 
 public class ModifyDBClusterAccessWhitelistRequest extends TeaModel {
     /**
-     * <p>The attributes of the IP whitelist group. Set this parameter to <strong>hidden</strong> to hide the IP whitelist group in the console.</p>
+     * <p>The attribute of the IP address whitelist group. If you set this parameter to \<code>hidden\\</code>, the whitelist group is not visible in the console.</p>
      * <blockquote>
      * <ul>
-     * <li>The IP whitelist group that has appeared in the console cannot be hidden.</li>
-     * <li>This parameter can be specified only when the <strong>WhiteListType</strong> parameter is set to <strong>IP</strong>.</li>
+     * <li><p>You cannot hide an IP address whitelist group that is already visible in the console.</p>
+     * </li>
+     * <li><p>This parameter is available only when <strong>WhiteListType</strong> is set to <strong>IP</strong>.</p>
+     * </li>
      * </ul>
      * </blockquote>
      * 
@@ -20,20 +22,23 @@ public class ModifyDBClusterAccessWhitelistRequest extends TeaModel {
     public String DBClusterIPArrayAttribute;
 
     /**
-     * <p>The name of the IP whitelist group. The group name must be 2 to 120 characters in length and consists of lowercase letters and digits. It must start with a letter, and end with a letter or a digit.</p>
+     * <p>The name of the IP address whitelist group. The name must be 2 to 120 characters in length. It must consist of lowercase letters and digits. The name must start with a letter and end with a letter or a digit.</p>
      * <ul>
-     * <li>If the specified whitelist group name does not exist, the whitelist group is created.</li>
-     * <li>If the specified whitelist group name exists, the whitelist group is modified.</li>
-     * <li>If you do not specify this parameter, the default group is modified.</li>
+     * <li><p>If the specified whitelist group name does not exist, a new whitelist group is created.</p>
+     * </li>
+     * <li><p>If the specified whitelist group name already exists, the whitelist group is modified.</p>
+     * </li>
+     * <li><p>If you do not specify this parameter, the \<code>default\\</code> group is modified.</p>
+     * </li>
      * </ul>
      * <blockquote>
-     * </blockquote>
      * <ul>
-     * <li><p>You can create a maximum of 50 IP whitelist groups for a cluster.</p>
+     * <li><p>A cluster can have up to 50 IP address whitelist groups.</p>
      * </li>
-     * <li><p>This parameter can be specified only when the <strong>WhiteListType</strong> parameter is set to <strong>IP</strong>.</p>
+     * <li><p>This parameter is available only when <strong>WhiteListType</strong> is set to <strong>IP</strong>.</p>
      * </li>
      * </ul>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>default</p>
@@ -52,14 +57,17 @@ public class ModifyDBClusterAccessWhitelistRequest extends TeaModel {
     public String DBClusterId;
 
     /**
-     * <p>The method used to modify the IP whitelist. Valid values:</p>
+     * <p>The method used to modify the IP address whitelist. Valid values:</p>
      * <ul>
-     * <li><strong>Cover</strong> (default): overwrites the original IP whitelist.</li>
-     * <li><strong>Append</strong>: appends IP addresses to the original whitelist.</li>
-     * <li><strong>Delete</strong>: deletes IP addresses.</li>
+     * <li><p><strong>Cover</strong>: Overwrites the original IP address whitelist. This is the default value.</p>
+     * </li>
+     * <li><p><strong>Append</strong>: Appends IP addresses to the whitelist.</p>
+     * </li>
+     * <li><p><strong>Delete</strong>: Deletes IP addresses from the whitelist.</p>
+     * </li>
      * </ul>
      * <blockquote>
-     * <p> This parameter can be specified only when the <strong>WhiteListType</strong> parameter is set to <strong>IP</strong>.</p>
+     * <p>This parameter is available only when <strong>WhiteListType</strong> is set to <strong>IP</strong>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -81,11 +89,13 @@ public class ModifyDBClusterAccessWhitelistRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The ID of the security group. Separate multiple security groups with commas (,).</p>
+     * <p>The security group ID. Separate multiple security group IDs with commas (,).</p>
      * <blockquote>
      * <ul>
-     * <li>You can add a maximum of three security groups to a cluster.</li>
-     * <li>This parameter can be specified only when the <strong>WhiteListType</strong> parameter is set to <strong>SecurityGroup</strong>.</li>
+     * <li><p>A cluster can be associated with up to three security groups.</p>
+     * </li>
+     * <li><p>This parameter is available only when <strong>WhiteListType</strong> is set to <strong>SecurityGroup</strong>.</p>
+     * </li>
      * </ul>
      * </blockquote>
      * 
@@ -96,13 +106,15 @@ public class ModifyDBClusterAccessWhitelistRequest extends TeaModel {
     public String securityGroupIds;
 
     /**
-     * <p>The IP addresses or Classless Inter-Domain Routing (CIDR) blocks in the IP whitelist group. You can add 1,000 IP addresses or CIDR blocks to all the IP whitelist groups. Separate multiple IP addresses with commas (,). The following two formats are supported:</p>
+     * <p>The IP addresses or CIDR blocks in the IP address whitelist group. All IP address whitelist groups can contain a total of 1,000 IP addresses or CIDR blocks. Separate multiple IP addresses with commas (,). The following formats are supported:</p>
      * <ul>
-     * <li>IP addresses. Example: 10.23.12.24.</li>
-     * <li>CIDR blocks. Example: 10.23.12.24/24. 24 indicates the length of the prefix of the CIDR block. The length is the range of 1 to 32.</li>
+     * <li><p>IP address format. For example: 10.23.12.24.</p>
+     * </li>
+     * <li><p>CIDR format. For example: 10.23.12.24/24. The number 24 indicates the prefix length of the IP address. The prefix length can range from 1 to 32.</p>
+     * </li>
      * </ul>
      * <blockquote>
-     * <p> This parameter can be specified only when the <strong>WhiteListType</strong> parameter is set to <strong>IP</strong>.</p>
+     * <p>This parameter is available only when <strong>WhiteListType</strong> is set to <strong>IP</strong>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -114,10 +126,12 @@ public class ModifyDBClusterAccessWhitelistRequest extends TeaModel {
     /**
      * <p>The type of the whitelist. Valid values:</p>
      * <ul>
-     * <li><strong>IP</strong>: IP whitelist group.</li>
-     * <li><strong>SecurityGroup</strong>: security group.</li>
+     * <li><p><strong>IP</strong>: IP address whitelist group.</p>
+     * </li>
+     * <li><p><strong>SecurityGroup</strong>: Security group.</p>
+     * </li>
      * </ul>
-     * <p>Default value: <strong>IP</strong>.</p>
+     * <p>The default value is <strong>IP</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>IP</p>

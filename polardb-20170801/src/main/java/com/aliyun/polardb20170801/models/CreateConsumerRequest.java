@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateConsumerRequest extends TeaModel {
     /**
+     * <p>The consumer group name.</p>
+     * 
      * <strong>example:</strong>
      * <p>cg-p3gk2oh55c**</p>
      */
@@ -12,6 +14,7 @@ public class CreateConsumerRequest extends TeaModel {
     public String consumerGroupName;
 
     /**
+     * <p>The gateway instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,6 +24,8 @@ public class CreateConsumerRequest extends TeaModel {
     public String gwClusterId;
 
     /**
+     * <p>The key type. The only supported value is ApiKey.</p>
+     * 
      * <strong>example:</strong>
      * <p>ApiKey</p>
      */
@@ -28,6 +33,7 @@ public class CreateConsumerRequest extends TeaModel {
     public String keyType;
 
     /**
+     * <p>The user name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -37,12 +43,20 @@ public class CreateConsumerRequest extends TeaModel {
     public String name;
 
     /**
+     * <p>The user nickname.</p>
+     * 
      * <strong>example:</strong>
      * <p>test</p>
      */
     @NameInMap("NickName")
     public String nickName;
 
+    /**
+     * <p>The region ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-beijing</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

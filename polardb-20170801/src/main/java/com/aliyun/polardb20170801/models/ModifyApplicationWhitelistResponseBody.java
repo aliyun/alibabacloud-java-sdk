@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ModifyApplicationWhitelistResponseBody extends TeaModel {
     /**
+     * <p>The application ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>pa-**************</p>
      */
@@ -12,6 +14,8 @@ public class ModifyApplicationWhitelistResponseBody extends TeaModel {
     public String applicationId;
 
     /**
+     * <p>The ID of the application subcomponent.</p>
+     * 
      * <strong>example:</strong>
      * <p>pac-**************</p>
      */
@@ -19,6 +23,8 @@ public class ModifyApplicationWhitelistResponseBody extends TeaModel {
     public String componentId;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>3E5CD764-FCCA-5C9C-838E-20E0DE84B2AF</p>
      */

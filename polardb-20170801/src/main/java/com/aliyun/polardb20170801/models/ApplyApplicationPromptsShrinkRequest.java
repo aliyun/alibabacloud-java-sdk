@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ApplyApplicationPromptsShrinkRequest extends TeaModel {
     /**
+     * <p>The ID of the application.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,8 @@ public class ApplyApplicationPromptsShrinkRequest extends TeaModel {
     public String applicationId;
 
     /**
+     * <p>An array of prompt IDs to disable.</p>
+     * 
      * <strong>example:</strong>
      * <p>papt-************</p>
      */
@@ -21,6 +24,8 @@ public class ApplyApplicationPromptsShrinkRequest extends TeaModel {
     public String disabledPromptIdsShrink;
 
     /**
+     * <p>An array of prompt IDs to enable.</p>
+     * 
      * <strong>example:</strong>
      * <p>papt-************</p>
      */

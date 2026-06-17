@@ -5,11 +5,14 @@ import com.aliyun.tea.*;
 
 public class DeleteDBClusterRequest extends TeaModel {
     /**
-     * <p>The retention policy applied to the backup sets when the cluster is released. Valid values:</p>
+     * <p>The retention policy for backup sets when the cluster is deleted. Valid values:</p>
      * <ul>
-     * <li><strong>ALL</strong>: permanently retains all backup sets.</li>
-     * <li><strong>LATEST</strong>: permanently retains the most recent backup set that is automatically created before the cluster is released.</li>
-     * <li><strong>NONE</strong>: does not retain backup sets.</li>
+     * <li><p><strong>ALL</strong>: permanently retains all backup sets.</p>
+     * </li>
+     * <li><p><strong>LATEST</strong>: permanently retains the last backup set. The system automatically creates a new backup before the cluster is deleted.</p>
+     * </li>
+     * <li><p><strong>NONE</strong>: does not retain any backup sets after the cluster is deleted.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,6 +21,12 @@ public class DeleteDBClusterRequest extends TeaModel {
     @NameInMap("BackupRetentionPolicyOnClusterDeletion")
     public String backupRetentionPolicyOnClusterDeletion;
 
+    /**
+     * <p>The cloud service provider of the instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ENS</p>
+     */
     @NameInMap("CloudProvider")
     public String cloudProvider;
 

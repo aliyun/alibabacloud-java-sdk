@@ -8,7 +8,7 @@ public class CreateStoragePlanRequest extends TeaModel {
     public Boolean autoUseCoupon;
 
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value. Make sure that the value is unique among different requests. The token can only contain ASCII characters and cannot exceed 64 characters in length.</p>
+     * <p>A client token to ensure the idempotence of the request. Generate this token on your client. The token must be unique across different requests. It is case-sensitive and can contain up to 64 ASCII characters.</p>
      * 
      * <strong>example:</strong>
      * <p>6000170000591aed949d0f5********************</p>
@@ -25,8 +25,10 @@ public class CreateStoragePlanRequest extends TeaModel {
     /**
      * <p>The unit of the subscription duration for the storage plan. Valid values:</p>
      * <ul>
-     * <li><strong>Month</strong></li>
-     * <li><strong>Year</strong></li>
+     * <li><p><strong>Month</strong></p>
+     * </li>
+     * <li><p><strong>Year</strong></p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -50,7 +52,7 @@ public class CreateStoragePlanRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The capacity of the storage plan. Unit: GB. Valid values: 50, 100, 200, 300, 500, 1000, 2000, 3000, 5000, 10000, 15000, 20000, 25000, 30000, 50000, 100000, and 200000</p>
+     * <p>The capacity of the storage plan, in GB. Valid values: 50, 100, 200, 300, 500, 1,000, 2,000, 3,000, 5,000, 10,000, 15,000, 20,000, 25,000, 30,000, 50,000, 100,000, and 200,000.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -62,8 +64,10 @@ public class CreateStoragePlanRequest extends TeaModel {
     /**
      * <p>The type of the storage plan. Valid values:</p>
      * <ul>
-     * <li><strong>Mainland</strong>: The storage plan is used inside the Chinese mainland.</li>
-     * <li><strong>Overseas</strong>: The storage plan is used outside the Chinese mainland.</li>
+     * <li><p><strong>Mainland</strong>: For use in the Chinese mainland.</p>
+     * </li>
+     * <li><p><strong>Overseas</strong>: For use in China (Hong Kong) and regions outside China.</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -76,8 +80,10 @@ public class CreateStoragePlanRequest extends TeaModel {
     /**
      * <p>The subscription duration of the storage plan.</p>
      * <ul>
-     * <li>If <strong>Period</strong> is set to <strong>Month</strong>, the value ranges from 1 to 9.</li>
-     * <li>If <strong>Period</strong> is set to <strong>Year</strong>, the value can be 1, 2, 3, or 5.</li>
+     * <li><p>If <strong>Period</strong> is set to <strong>Month</strong>, the value ranges from 1 to 9.</p>
+     * </li>
+     * <li><p>If <strong>Period</strong> is set to <strong>Year</strong>, the valid values are 1, 2, 3, and 5.</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

@@ -4,10 +4,15 @@ package com.aliyun.polardb20170801.models;
 import com.aliyun.tea.*;
 
 public class DescribeCostRulesResponseBody extends TeaModel {
+    /**
+     * <p>A list of cost rules.</p>
+     */
     @NameInMap("Items")
     public java.util.List<DescribeCostRulesResponseBodyItems> items;
 
     /**
+     * <p>The page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -15,6 +20,8 @@ public class DescribeCostRulesResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of records on the current page.</p>
+     * 
      * <strong>example:</strong>
      * <p>30</p>
      */
@@ -22,6 +29,8 @@ public class DescribeCostRulesResponseBody extends TeaModel {
     public Integer pageRecordCount;
 
     /**
+     * <p>The number of entries returned per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>30</p>
      */
@@ -29,7 +38,7 @@ public class DescribeCostRulesResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>24A1990B-4F6E-482B-B8CB-75C612******</p>
@@ -38,6 +47,8 @@ public class DescribeCostRulesResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total number of records.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -99,6 +110,8 @@ public class DescribeCostRulesResponseBody extends TeaModel {
 
     public static class DescribeCostRulesResponseBodyItems extends TeaModel {
         /**
+         * <p>The cost in points per one million cached tokens.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -106,6 +119,8 @@ public class DescribeCostRulesResponseBody extends TeaModel {
         public String cacheCostPointsPerMillion;
 
         /**
+         * <p>The cost rule ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>924d450014e64e88ac6e8486f8e990**</p>
          */
@@ -113,6 +128,8 @@ public class DescribeCostRulesResponseBody extends TeaModel {
         public String costRuleId;
 
         /**
+         * <p>The time when the cost rule was created.</p>
+         * 
          * <strong>example:</strong>
          * <p>2026-01-04T16:09:29+08:00</p>
          */
@@ -120,6 +137,8 @@ public class DescribeCostRulesResponseBody extends TeaModel {
         public String gmtCreated;
 
         /**
+         * <p>The time when the cost rule was last updated.</p>
+         * 
          * <strong>example:</strong>
          * <p>2024-10-16 16:46:20</p>
          */
@@ -127,6 +146,8 @@ public class DescribeCostRulesResponseBody extends TeaModel {
         public String gmtModified;
 
         /**
+         * <p>The gateway instance ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>pg-xxxxxxxxxx</p>
          */
@@ -134,6 +155,8 @@ public class DescribeCostRulesResponseBody extends TeaModel {
         public String gwClusterId;
 
         /**
+         * <p>The cost in points per one million input tokens.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -141,6 +164,8 @@ public class DescribeCostRulesResponseBody extends TeaModel {
         public String inputCostPointsPerMillion;
 
         /**
+         * <p>The model name.</p>
+         * 
          * <strong>example:</strong>
          * <p>gpt-4</p>
          */
@@ -148,6 +173,8 @@ public class DescribeCostRulesResponseBody extends TeaModel {
         public String model;
 
         /**
+         * <p>The model service ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>ms-xxxxxxxxx</p>
          */
@@ -155,6 +182,8 @@ public class DescribeCostRulesResponseBody extends TeaModel {
         public String modelServiceId;
 
         /**
+         * <p>The cost in points per one million output tokens.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */

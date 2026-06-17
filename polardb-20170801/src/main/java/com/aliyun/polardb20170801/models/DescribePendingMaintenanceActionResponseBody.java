@@ -113,9 +113,12 @@ public class DescribePendingMaintenanceActionResponseBody extends TeaModel {
         /**
          * <p>The type of the database engine. Valid values:</p>
          * <ul>
-         * <li><strong>MySQL</strong></li>
-         * <li><strong>PostgreSQL</strong></li>
-         * <li><strong>Oracle</strong></li>
+         * <li><p><strong>MySQL</strong></p>
+         * </li>
+         * <li><p><strong>PostgreSQL</strong></p>
+         * </li>
+         * <li><p><strong>Oracle</strong></p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -129,15 +132,20 @@ public class DescribePendingMaintenanceActionResponseBody extends TeaModel {
          * <ul>
          * <li><p>Valid values for the MySQL database engine:</p>
          * <ul>
-         * <li><strong>5.6</strong></li>
-         * <li><strong>5.7</strong></li>
-         * <li><strong>8.0</strong></li>
+         * <li><p><strong>5.6</strong></p>
+         * </li>
+         * <li><p><strong>5.7</strong></p>
+         * </li>
+         * <li><p><strong>8.0</strong></p>
+         * </li>
          * </ul>
          * </li>
          * <li><p>Valid values for the PostgreSQL database engine:</p>
          * <ul>
-         * <li><strong>11</strong></li>
-         * <li><strong>14</strong></li>
+         * <li><p><strong>11</strong></p>
+         * </li>
+         * <li><p><strong>14</strong></p>
+         * </li>
          * </ul>
          * </li>
          * <li><p>Valid value for the Oracle database engine: <strong>11</strong></p>
@@ -198,8 +206,10 @@ public class DescribePendingMaintenanceActionResponseBody extends TeaModel {
         /**
          * <p>The execution result of the task. Valid values:</p>
          * <ul>
-         * <li><strong>manualCancel</strong>: The task is manually canceled.</li>
-         * <li><strong>paramCheckNotPass</strong>: The task fails to pass the parameter check.</li>
+         * <li><p><strong>manualCancel</strong>: The task is manually canceled.</p>
+         * </li>
+         * <li><p><strong>paramCheckNotPass</strong>: The task fails to pass the parameter check.</p>
+         * </li>
          * </ul>
          * <blockquote>
          * <p>This parameter is returned only when the value of the <code>Status</code> parameter is <strong>6</strong> or <strong>7</strong>. The value 6 indicates that the task is completed but fails to be executed. The value 7 indicates that the task is canceled.</p>
@@ -225,16 +235,22 @@ public class DescribePendingMaintenanceActionResponseBody extends TeaModel {
          * <ul>
          * <li><p>If you set the <code>IsHistory</code> parameter to <strong>0</strong>, the status of the pending task is returned. Valid values:</p>
          * <ul>
-         * <li><strong>2</strong>: The start time of the task is to be specified.</li>
-         * <li><strong>3</strong>: The task is pending.</li>
-         * <li><strong>4</strong>: The task is running. In this case, you cannot modify the execution time.</li>
+         * <li><p><strong>2</strong>: The start time of the task is to be specified.</p>
+         * </li>
+         * <li><p><strong>3</strong>: The task is pending.</p>
+         * </li>
+         * <li><p><strong>4</strong>: The task is running. In this case, you cannot modify the execution time.</p>
+         * </li>
          * </ul>
          * </li>
          * <li><p>If you set the <code>IsHistory</code> parameter to <strong>1</strong>, the details of the historical tasks are returned. Valid values:</p>
          * <ul>
-         * <li><strong>5</strong>: The task is completed and executed.</li>
-         * <li><strong>6</strong>: The task is completed but fails to be executed.</li>
-         * <li><strong>7</strong>: The task is canceled.</li>
+         * <li><p><strong>5</strong>: The task is completed and executed.</p>
+         * </li>
+         * <li><p><strong>6</strong>: The task is completed but fails to be executed.</p>
+         * </li>
+         * <li><p><strong>7</strong>: The task is canceled.</p>
+         * </li>
          * </ul>
          * </li>
          * </ul>

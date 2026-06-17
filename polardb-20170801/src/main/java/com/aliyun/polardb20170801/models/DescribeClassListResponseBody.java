@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeClassListResponseBody extends TeaModel {
     /**
-     * <p>The cluster specifications.</p>
+     * <p>The list of cluster specifications.</p>
      */
     @NameInMap("Items")
     public java.util.List<DescribeClassListResponseBodyItems> items;
 
     /**
-     * <p>The region ID of the cluster.</p>
+     * <p>The region ID.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -20,7 +20,7 @@ public class DescribeClassListResponseBody extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>69A85BAF-1089-4CDF-A82F-0A140F******</p>
@@ -59,7 +59,7 @@ public class DescribeClassListResponseBody extends TeaModel {
 
     public static class DescribeClassListResponseBodyItems extends TeaModel {
         /**
-         * <p>The specifications of the cluster.</p>
+         * <p>The cluster specifications.</p>
          * 
          * <strong>example:</strong>
          * <p>polar.mysql.x4.medium</p>
@@ -68,12 +68,16 @@ public class DescribeClassListResponseBody extends TeaModel {
         public String classCode;
 
         /**
-         * <p>The instance family of the cluster. Valid values:</p>
+         * <p>The family of the cluster specifications. Valid values:</p>
          * <ul>
-         * <li>Exclusive package: dedicated</li>
-         * <li>Exclusive physical machine: dedicated host</li>
-         * <li>Beginner: starter</li>
-         * <li>Historical specifications: historical</li>
+         * <li><p>Exclusive package</p>
+         * </li>
+         * <li><p>Exclusive physical machine</p>
+         * </li>
+         * <li><p>Beginner</p>
+         * </li>
+         * <li><p>Historical specifications</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -83,7 +87,7 @@ public class DescribeClassListResponseBody extends TeaModel {
         public String classGroup;
 
         /**
-         * <p>The specification type of the cluster.</p>
+         * <p>The specification type.</p>
          * 
          * <strong>example:</strong>
          * <p>enterprise</p>
@@ -92,7 +96,7 @@ public class DescribeClassListResponseBody extends TeaModel {
         public String classTypeLevel;
 
         /**
-         * <p>The number of vCPU cores. Unit: cores.</p>
+         * <p>The number of CPU cores. Unit: cores.</p>
          * 
          * <strong>example:</strong>
          * <p>8</p>
@@ -101,7 +105,7 @@ public class DescribeClassListResponseBody extends TeaModel {
         public String cpu;
 
         /**
-         * <p>The maximum ESSD storage capacity. Unit: TB.</p>
+         * <p>The maximum storage capacity of an ESSD. Unit: TB.</p>
          * 
          * <strong>example:</strong>
          * <p>64</p>
@@ -110,7 +114,7 @@ public class DescribeClassListResponseBody extends TeaModel {
         public String essdMaxStorageCapacity;
 
         /**
-         * <p>The maximum number of concurrent connections in the cluster.</p>
+         * <p>The maximum number of concurrent connections to the cluster.</p>
          * 
          * <strong>example:</strong>
          * <p>8000</p>
@@ -119,7 +123,7 @@ public class DescribeClassListResponseBody extends TeaModel {
         public String maxConnections;
 
         /**
-         * <p>The maximum IOPS. Unit: operations per second.</p>
+         * <p>The maximum IOPS. Unit: IOPS.</p>
          * 
          * <strong>example:</strong>
          * <p>32000</p>
@@ -137,7 +141,7 @@ public class DescribeClassListResponseBody extends TeaModel {
         public String maxStorageCapacity;
 
         /**
-         * <p>The memory size. Unit: GB.</p>
+         * <p>The memory capacity. Unit: GB.</p>
          * 
          * <strong>example:</strong>
          * <p>32</p>
@@ -146,7 +150,7 @@ public class DescribeClassListResponseBody extends TeaModel {
         public String memoryClass;
 
         /**
-         * <p>The maximum IOPS of an enhanced SSD (ESSD) of performance level 1 (PL1). Unit: operations per second.</p>
+         * <p>The maximum IOPS of an Enhanced SSD (ESSD) at performance level 1 (PL1). Unit: IOPS.</p>
          * 
          * <strong>example:</strong>
          * <p>50000</p>
@@ -155,7 +159,7 @@ public class DescribeClassListResponseBody extends TeaModel {
         public String pl1MaxIOPS;
 
         /**
-         * <p>The maximum IOPS of an ESSD of performance level 2 (PL2). Unit: operations per second.</p>
+         * <p>The maximum IOPS of an ESSD at PL2. Unit: IOPS.</p>
          * 
          * <strong>example:</strong>
          * <p>100000</p>
@@ -164,7 +168,7 @@ public class DescribeClassListResponseBody extends TeaModel {
         public String pl2MaxIOPS;
 
         /**
-         * <p>The maximum IOPS of an ESSD of performance level 3 (PL3). Unit: operations per second.</p>
+         * <p>The maximum IOPS of an ESSD at PL3. Unit: IOPS.</p>
          * 
          * <strong>example:</strong>
          * <p>1000000</p>
@@ -173,7 +177,7 @@ public class DescribeClassListResponseBody extends TeaModel {
         public String pl3MaxIOPS;
 
         /**
-         * <p>The maximum PSL4/PSL5 storage capacity. Unit: TB.</p>
+         * <p>The maximum storage capacity of PSL4/PSL5. Unit: TB.</p>
          * 
          * <strong>example:</strong>
          * <p>500</p>
@@ -182,7 +186,7 @@ public class DescribeClassListResponseBody extends TeaModel {
         public String polarStoreMaxStorageCapacity;
 
         /**
-         * <p>The maximum Input/output operations per second (IOPS) for PolarStore Level 4 (PSL4). Unit: operations per second.</p>
+         * <p>The maximum input/output operations per second (IOPS) of PSL4. Unit: IOPS.</p>
          * 
          * <strong>example:</strong>
          * <p>48000</p>
@@ -191,7 +195,7 @@ public class DescribeClassListResponseBody extends TeaModel {
         public String psl4MaxIOPS;
 
         /**
-         * <p>The maximum IOPS for PolarStore Level 5 (PSL5). Unit: operations per second.</p>
+         * <p>The maximum IOPS of PSL5. Unit: IOPS.</p>
          * 
          * <strong>example:</strong>
          * <p>96000</p>
@@ -201,11 +205,14 @@ public class DescribeClassListResponseBody extends TeaModel {
 
         /**
          * <p>The additional price.</p>
-         * <p>Unit: cents (USD).</p>
+         * <p>&lt;props=&quot;china&quot;&gt;Unit: cents (CNY).
+         * &lt;props=&quot;intl&quot;&gt;Unit: cents (USD).</p>
          * <blockquote>
          * <ul>
-         * <li>If you set MasterHa to cluster or single, the value of ReferenceExtPrice is the same as the value of ReferencePrice.</li>
-         * <li>If you set MasterHa to cluster or single, the value of ReferenceExtPrice is the price of the single-node cluster.</li>
+         * <li><p>If you set the MasterHa parameter to cluster or single, the value of this parameter is the same as the value of the ReferencePrice parameter.</p>
+         * </li>
+         * <li><p>If you set the MasterHa parameter to cluster or single, the price for a single-node commodity is returned.</p>
+         * </li>
          * </ul>
          * </blockquote>
          * 
@@ -217,11 +224,14 @@ public class DescribeClassListResponseBody extends TeaModel {
 
         /**
          * <p>The price.</p>
-         * <p>Unit: cents (USD).</p>
+         * <p>&lt;props=&quot;china&quot;&gt;Unit: cents (CNY).
+         * &lt;props=&quot;intl&quot;&gt;Unit: cents (USD).</p>
          * <blockquote>
          * <ul>
-         * <li>If you set CommodityCode to a commodity that uses the pay-as-you-go billing method, ReferencePrice indicates the hourly fee that you need to pay.</li>
-         * <li>If you set CommodityCode to a commodity that uses the subscription billing method, ReferencePrice indicates the monthly fee that you need to pay.</li>
+         * <li><p>If you set the CommodityCode parameter to a pay-as-you-go commodity code, the hourly price is returned.</p>
+         * </li>
+         * <li><p>If you set the CommodityCode parameter to a subscription commodity code, the monthly price is returned.</p>
+         * </li>
          * </ul>
          * </blockquote>
          * 

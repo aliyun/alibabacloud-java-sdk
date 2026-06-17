@@ -5,6 +5,14 @@ import com.aliyun.tea.*;
 
 public class DescribeCrossCloudRegionRequest extends TeaModel {
     /**
+     * <p>The cloud service provider. Valid values:</p>
+     * <ul>
+     * <li><p>HuaweiCloud</p>
+     * </li>
+     * <li><p>Azure</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>HuaweiCloud</p>
      */
@@ -12,6 +20,8 @@ public class DescribeCrossCloudRegionRequest extends TeaModel {
     public String cloudProvider;
 
     /**
+     * <p>The ID of the third-party cloud region.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-east-3</p>
      */
@@ -19,6 +29,16 @@ public class DescribeCrossCloudRegionRequest extends TeaModel {
     public String crossCloudRegionId;
 
     /**
+     * <p>The database engine type. Valid values:</p>
+     * <ul>
+     * <li><p>MySQL</p>
+     * </li>
+     * <li><p>PostgreSQL</p>
+     * </li>
+     * <li><p>Oracle</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>MySQL</p>
      */

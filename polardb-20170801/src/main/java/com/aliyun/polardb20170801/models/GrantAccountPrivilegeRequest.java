@@ -17,11 +17,16 @@ public class GrantAccountPrivilegeRequest extends TeaModel {
     /**
      * <p>The permissions that are granted to the account. Valid values:</p>
      * <ul>
-     * <li><strong>ReadWrite</strong>: read and write permissions</li>
-     * <li><strong>ReadOnly</strong>: read-only permissions</li>
-     * <li><strong>DMLOnly</strong>: The account is granted the permissions to execute only DML statements on the database.</li>
-     * <li><strong>DDLOnly</strong>: The account is granted the permissions to execute only DDL statements on the database.</li>
-     * <li><strong>ReadIndex</strong>: The account has the read and index permissions on the database.</li>
+     * <li><p><strong>ReadWrite</strong>: read and write permissions</p>
+     * </li>
+     * <li><p><strong>ReadOnly</strong>: read-only permissions</p>
+     * </li>
+     * <li><p><strong>DMLOnly</strong>: The account is granted the permissions to execute only DML statements on the database.</p>
+     * </li>
+     * <li><p><strong>DDLOnly</strong>: The account is granted the permissions to execute only DDL statements on the database.</p>
+     * </li>
+     * <li><p><strong>ReadIndex</strong>: The account has the read and index permissions on the database.</p>
+     * </li>
      * </ul>
      * <blockquote>
      * <p>The number of <strong>AccountPrivilege</strong> values must be the consistent with the number of <strong>DBName</strong> values. Each account permission must correspond to a database name in sequence. For example, you can set <strong>DBName</strong> to <code>testdb_1,testdb_2</code> and set <strong>AccountPrivilege</strong> to <code>ReadWrite,ReadOnly</code>. In this case, the specified standard account is granted the <strong>read and write</strong> permissions on the <strong>testdb_1</strong> database and the <strong>read</strong> permission on the <strong>testdb_2</strong> database.</p>

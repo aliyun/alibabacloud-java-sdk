@@ -5,6 +5,10 @@ import com.aliyun.tea.*;
 
 public class EnableDBClusterDynamoDBRequest extends TeaModel {
     /**
+     * <p>The ID of the cluster.</p>
+     * <blockquote>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/98094.html">DescribeDBClusters</a> operation to list all clusters in the destination region, including their IDs.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

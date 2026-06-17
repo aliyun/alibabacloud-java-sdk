@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeUserEncryptionKeyListResponseBody extends TeaModel {
     /**
-     * <p>The ID of the cluster.</p>
+     * <p>The cluster ID.</p>
      * 
      * <strong>example:</strong>
      * <p>pc-************</p>
@@ -14,12 +14,14 @@ public class DescribeUserEncryptionKeyListResponseBody extends TeaModel {
     public String DBClusterId;
 
     /**
-     * <p>Cluster key list.</p>
+     * <p>The list of cluster keys.</p>
      */
     @NameInMap("KeyList")
     public java.util.List<String> keyList;
 
     /**
+     * <p>The page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -27,6 +29,8 @@ public class DescribeUserEncryptionKeyListResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries on the current page.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -34,6 +38,8 @@ public class DescribeUserEncryptionKeyListResponseBody extends TeaModel {
     public Integer pageRecordCount;
 
     /**
+     * <p>The number of entries per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>30</p>
      */
@@ -41,7 +47,7 @@ public class DescribeUserEncryptionKeyListResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>A7E6A8FD-C50B-46B2-BA85-D8B8D3******</p>
@@ -50,6 +56,8 @@ public class DescribeUserEncryptionKeyListResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total number of entries.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */

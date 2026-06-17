@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeDatabasesZonalRequest extends TeaModel {
     /**
+     * <p>The cluster ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,8 @@ public class DescribeDatabasesZonalRequest extends TeaModel {
     public String DBClusterId;
 
     /**
+     * <p>The database name.</p>
+     * 
      * <strong>example:</strong>
      * <p>test_db</p>
      */
@@ -21,6 +24,8 @@ public class DescribeDatabasesZonalRequest extends TeaModel {
     public String DBName;
 
     /**
+     * <p>The maximum number of entries to return for the current request.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -28,6 +33,8 @@ public class DescribeDatabasesZonalRequest extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>The query token. This is the NextToken value from the previous API call. If there are no more results, do not specify this parameter.</p>
+     * 
      * <strong>example:</strong>
      * <p>212db86sca4384811e0b5e8707e******</p>
      */
@@ -41,6 +48,8 @@ public class DescribeDatabasesZonalRequest extends TeaModel {
     public Long ownerId;
 
     /**
+     * <p>The page number. The value must be an integer that is greater than 0 and does not exceed the maximum value of the Integer data type. The default value is 1.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -48,6 +57,17 @@ public class DescribeDatabasesZonalRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries to return on each page. Valid values:</p>
+     * <ul>
+     * <li><p>30</p>
+     * </li>
+     * <li><p>50</p>
+     * </li>
+     * <li><p>100</p>
+     * </li>
+     * </ul>
+     * <p>The default value is 30.</p>
+     * 
      * <strong>example:</strong>
      * <p>30</p>
      */

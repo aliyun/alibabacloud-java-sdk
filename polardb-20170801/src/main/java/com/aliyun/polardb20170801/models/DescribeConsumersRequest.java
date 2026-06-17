@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeConsumersRequest extends TeaModel {
     /**
+     * <p>The consumer group ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>cg-xxxxxxxx</p>
      */
@@ -12,6 +14,8 @@ public class DescribeConsumersRequest extends TeaModel {
     public String consumerGroupId;
 
     /**
+     * <p>The consumer ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>c-mqveroemc***</p>
      */
@@ -19,6 +23,7 @@ public class DescribeConsumersRequest extends TeaModel {
     public String consumerId;
 
     /**
+     * <p>The gateway instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -28,6 +33,8 @@ public class DescribeConsumersRequest extends TeaModel {
     public String gwClusterId;
 
     /**
+     * <p>The page number. The default value is 1.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -35,12 +42,28 @@ public class DescribeConsumersRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries to return on each page. Valid values are:</p>
+     * <ul>
+     * <li><p><strong>30</strong></p>
+     * </li>
+     * <li><p><strong>50</strong></p>
+     * </li>
+     * <li><p><strong>100</strong>. The default is <strong>30</strong>.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>30</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The region ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-beijing</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

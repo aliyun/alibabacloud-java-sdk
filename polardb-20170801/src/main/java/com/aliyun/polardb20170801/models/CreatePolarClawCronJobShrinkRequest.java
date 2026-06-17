@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreatePolarClawCronJobShrinkRequest extends TeaModel {
     /**
+     * <p>The ID of the agent that executes the task.</p>
+     * 
      * <strong>example:</strong>
      * <p>main</p>
      */
@@ -12,6 +14,7 @@ public class CreatePolarClawCronJobShrinkRequest extends TeaModel {
     public String agentId;
 
     /**
+     * <p>The application ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,6 +24,8 @@ public class CreatePolarClawCronJobShrinkRequest extends TeaModel {
     public String applicationId;
 
     /**
+     * <p>Specifies whether to automatically delete the job after its first execution. This is useful for one-time tasks. Default: <code>false</code>.</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -28,6 +33,8 @@ public class CreatePolarClawCronJobShrinkRequest extends TeaModel {
     public Boolean deleteAfterRun;
 
     /**
+     * <p>The configuration for delivering task execution results.</p>
+     * 
      * <strong>example:</strong>
      * <p>{&quot;Mode&quot;:&quot;announce&quot;,&quot;Channel&quot;:&quot;telegram&quot;}</p>
      */
@@ -35,6 +42,8 @@ public class CreatePolarClawCronJobShrinkRequest extends TeaModel {
     public String deliveryShrink;
 
     /**
+     * <p>A description of the task.</p>
+     * 
      * <strong>example:</strong>
      * <p>Daily report generation</p>
      */
@@ -42,6 +51,8 @@ public class CreatePolarClawCronJobShrinkRequest extends TeaModel {
     public String description;
 
     /**
+     * <p>Specifies whether the cron job is enabled. Default: <code>true</code>.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -49,6 +60,8 @@ public class CreatePolarClawCronJobShrinkRequest extends TeaModel {
     public Boolean enabled;
 
     /**
+     * <p>The failure alert configuration.</p>
+     * 
      * <strong>example:</strong>
      * <p>{&quot;After&quot;:3,&quot;Channel&quot;:&quot;telegram&quot;}</p>
      */
@@ -56,6 +69,7 @@ public class CreatePolarClawCronJobShrinkRequest extends TeaModel {
     public String failureAlertShrink;
 
     /**
+     * <p>The unique name of the task.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -65,6 +79,7 @@ public class CreatePolarClawCronJobShrinkRequest extends TeaModel {
     public String name;
 
     /**
+     * <p>The execution payload configuration.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -74,6 +89,8 @@ public class CreatePolarClawCronJobShrinkRequest extends TeaModel {
     public String payloadShrink;
 
     /**
+     * <p>Specifies whether to restart the gateway upon job creation. Default: <code>true</code>.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -81,6 +98,8 @@ public class CreatePolarClawCronJobShrinkRequest extends TeaModel {
     public Boolean restart;
 
     /**
+     * <p>Specifies whether to run the job once immediately upon creation. Default: <code>false</code>.</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -88,6 +107,7 @@ public class CreatePolarClawCronJobShrinkRequest extends TeaModel {
     public Boolean runImmediately;
 
     /**
+     * <p>The schedule configuration.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -97,6 +117,8 @@ public class CreatePolarClawCronJobShrinkRequest extends TeaModel {
     public String scheduleShrink;
 
     /**
+     * <p>The session routing key, which determines the conversation session for the task.</p>
+     * 
      * <strong>example:</strong>
      * <p>agent:main:feishu:direct:***</p>
      */
@@ -104,6 +126,7 @@ public class CreatePolarClawCronJobShrinkRequest extends TeaModel {
     public String sessionKey;
 
     /**
+     * <p>The session target. Valid values are <code>main</code>, <code>isolated</code>, and <code>current</code>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -113,6 +136,7 @@ public class CreatePolarClawCronJobShrinkRequest extends TeaModel {
     public String sessionTarget;
 
     /**
+     * <p>The wake mode for the agent. Valid values are <code>now</code> and <code>next-heartbeat</code>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

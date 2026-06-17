@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdatePolarClawAgentShrinkRequest extends TeaModel {
     /**
+     * <p>The ID of the agent to update.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class UpdatePolarClawAgentShrinkRequest extends TeaModel {
     public String agentId;
 
     /**
+     * <p>The application ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,8 @@ public class UpdatePolarClawAgentShrinkRequest extends TeaModel {
     public String applicationId;
 
     /**
+     * <p>The new avatar for the agent.</p>
+     * 
      * <strong>example:</strong>
      * <p>test</p>
      */
@@ -30,6 +34,8 @@ public class UpdatePolarClawAgentShrinkRequest extends TeaModel {
     public String avatar;
 
     /**
+     * <p>The file list to update.</p>
+     * 
      * <strong>example:</strong>
      * <p>[{&quot;FileName&quot;:&quot;SOUL.md&quot;,&quot;FileContent&quot;:&quot;You are a helpful assistant.&quot;}]</p>
      */
@@ -37,6 +43,8 @@ public class UpdatePolarClawAgentShrinkRequest extends TeaModel {
     public String filesShrink;
 
     /**
+     * <p>The model to override the agent\&quot;s default setting.</p>
+     * 
      * <strong>example:</strong>
      * <p>claude-sonnet-4-5</p>
      */
@@ -44,6 +52,8 @@ public class UpdatePolarClawAgentShrinkRequest extends TeaModel {
     public String model;
 
     /**
+     * <p>The new display name for the agent.</p>
+     * 
      * <strong>example:</strong>
      * <p>Work Bot</p>
      */
@@ -51,6 +61,8 @@ public class UpdatePolarClawAgentShrinkRequest extends TeaModel {
     public String name;
 
     /**
+     * <p>Specifies whether to restart the gateway after the update. The default value is true.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -58,6 +70,8 @@ public class UpdatePolarClawAgentShrinkRequest extends TeaModel {
     public Boolean restart;
 
     /**
+     * <p>The new path for the agent\&quot;s workspace.</p>
+     * 
      * <strong>example:</strong>
      * <p>/home/node/.openclaw/workspace-work-v2</p>
      */

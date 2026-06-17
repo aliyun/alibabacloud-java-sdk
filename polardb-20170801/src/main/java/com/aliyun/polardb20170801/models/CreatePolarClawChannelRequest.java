@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreatePolarClawChannelRequest extends TeaModel {
     /**
+     * <p>The application ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,8 @@ public class CreatePolarClawChannelRequest extends TeaModel {
     public String applicationId;
 
     /**
+     * <p>The channel configuration.</p>
+     * 
      * <strong>example:</strong>
      * <p>{
      *     &quot;enabled&quot;: true,
@@ -27,6 +30,7 @@ public class CreatePolarClawChannelRequest extends TeaModel {
     public java.util.Map<String, ?> channelConfig;
 
     /**
+     * <p>The channel\&quot;s unique identifier.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -36,6 +40,7 @@ public class CreatePolarClawChannelRequest extends TeaModel {
     public String channelId;
 
     /**
+     * <p>The name and version of the npm package for the channel plugin.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -45,6 +50,7 @@ public class CreatePolarClawChannelRequest extends TeaModel {
     public String npmPackage;
 
     /**
+     * <p>The channel plugin\&quot;s name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -54,6 +60,8 @@ public class CreatePolarClawChannelRequest extends TeaModel {
     public String pluginId;
 
     /**
+     * <p>Indicates whether to restart the gateway after the channel is created. Default: <code>true</code>.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

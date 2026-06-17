@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeAvailableModelsRequest extends TeaModel {
     /**
-     * <p>aideploy</p>
+     * <p>The service type. The value must be set to <code>aideploy</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>aideploy</p>
@@ -14,6 +14,8 @@ public class DescribeAvailableModelsRequest extends TeaModel {
     public String kubeType;
 
     /**
+     * <p>The region ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-beijing</p>
      */

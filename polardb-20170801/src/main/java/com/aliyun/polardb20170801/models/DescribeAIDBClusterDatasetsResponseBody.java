@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeAIDBClusterDatasetsResponseBody extends TeaModel {
     /**
+     * <p>The continuation token from the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>EFSDF-DF-***</p>
      */
@@ -12,6 +14,8 @@ public class DescribeAIDBClusterDatasetsResponseBody extends TeaModel {
     public String continuationToken;
 
     /**
+     * <p>The data service ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>pcs-2zeei***</p>
      */
@@ -19,6 +23,8 @@ public class DescribeAIDBClusterDatasetsResponseBody extends TeaModel {
     public String dataServiceId;
 
     /**
+     * <p>The dataset ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>pds-2ze88***</p>
      */
@@ -26,6 +32,16 @@ public class DescribeAIDBClusterDatasetsResponseBody extends TeaModel {
     public String datasetId;
 
     /**
+     * <p>The training mode. Valid values:</p>
+     * <ul>
+     * <li><p><strong>sft</strong>: Supervised Fine-Tuning (SFT).</p>
+     * </li>
+     * <li><p><strong>grpo</strong>: Reinforcement Learning (RL).</p>
+     * </li>
+     * <li><p><strong>text</strong>: Text generation.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>stf</p>
      */
@@ -33,16 +49,29 @@ public class DescribeAIDBClusterDatasetsResponseBody extends TeaModel {
     public String datasetMode;
 
     /**
+     * <p>The dataset type. Valid values:</p>
+     * <ul>
+     * <li><p><strong>train</strong>: The training set.</p>
+     * </li>
+     * <li><p><strong>eval</strong>: The evaluation set.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>train</p>
      */
     @NameInMap("DatasetType")
     public String datasetType;
 
+    /**
+     * <p>An array of dataset objects.</p>
+     */
     @NameInMap("Datasets")
     public java.util.List<DescribeAIDBClusterDatasetsResponseBodyDatasets> datasets;
 
     /**
+     * <p>The total number of files in the dataset.</p>
+     * 
      * <strong>example:</strong>
      * <p>6</p>
      */
@@ -50,6 +79,14 @@ public class DescribeAIDBClusterDatasetsResponseBody extends TeaModel {
     public String fileCount;
 
     /**
+     * <p>Indicates if more datasets are available. Valid values:</p>
+     * <ul>
+     * <li><p><strong>true</strong>: More datasets are available.</p>
+     * </li>
+     * <li><p><strong>false</strong>: All datasets have been listed.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -57,6 +94,8 @@ public class DescribeAIDBClusterDatasetsResponseBody extends TeaModel {
     public Boolean isTruncated;
 
     /**
+     * <p>The token for retrieving the next page of results. This parameter is returned only if <code>IsTruncated</code> is <code>true</code>.</p>
+     * 
      * <strong>example:</strong>
      * <p>EFSDF-DF-***</p>
      */
@@ -64,6 +103,8 @@ public class DescribeAIDBClusterDatasetsResponseBody extends TeaModel {
     public String nextContinuationToken;
 
     /**
+     * <p>The page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -71,6 +112,8 @@ public class DescribeAIDBClusterDatasetsResponseBody extends TeaModel {
     public String pageNumber;
 
     /**
+     * <p>The page size.</p>
+     * 
      * <strong>example:</strong>
      * <p>30</p>
      */
@@ -78,6 +121,8 @@ public class DescribeAIDBClusterDatasetsResponseBody extends TeaModel {
     public String pageSize;
 
     /**
+     * <p>The relative DB cluster ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>pc-2ze88***</p>
      */
@@ -85,7 +130,7 @@ public class DescribeAIDBClusterDatasetsResponseBody extends TeaModel {
     public String relativeDBClusterId;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>2921D843-433A-5FB3-A03B-4EC093B219F8</p>
@@ -94,6 +139,8 @@ public class DescribeAIDBClusterDatasetsResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total count of datasets.</p>
+     * 
      * <strong>example:</strong>
      * <p>6</p>
      */
@@ -101,6 +148,8 @@ public class DescribeAIDBClusterDatasetsResponseBody extends TeaModel {
     public String totalCount;
 
     /**
+     * <p>The total number of records.</p>
+     * 
      * <strong>example:</strong>
      * <p>6</p>
      */
@@ -234,6 +283,8 @@ public class DescribeAIDBClusterDatasetsResponseBody extends TeaModel {
 
     public static class DescribeAIDBClusterDatasetsResponseBodyDatasets extends TeaModel {
         /**
+         * <p>The bucket name.</p>
+         * 
          * <strong>example:</strong>
          * <p>pcs-2ze22***-q7***</p>
          */
@@ -241,6 +292,8 @@ public class DescribeAIDBClusterDatasetsResponseBody extends TeaModel {
         public String bucketName;
 
         /**
+         * <p>The file size in bytes.</p>
+         * 
          * <strong>example:</strong>
          * <p>2845904</p>
          */
@@ -248,6 +301,8 @@ public class DescribeAIDBClusterDatasetsResponseBody extends TeaModel {
         public String capacity;
 
         /**
+         * <p>The time the file was created, in UTC and formatted as ISO 8601.</p>
+         * 
          * <strong>example:</strong>
          * <p>2025-11-06T06:50:43Z</p>
          */
@@ -255,6 +310,8 @@ public class DescribeAIDBClusterDatasetsResponseBody extends TeaModel {
         public String creationTime;
 
         /**
+         * <p>The dataset ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>pds-2ze88***</p>
          */
@@ -262,6 +319,14 @@ public class DescribeAIDBClusterDatasetsResponseBody extends TeaModel {
         public String datasetId;
 
         /**
+         * <p>The dataset type. Valid values:</p>
+         * <ul>
+         * <li><p><strong>train</strong>: The training set.</p>
+         * </li>
+         * <li><p><strong>eval</strong>: The evaluation set.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>train</p>
          */
@@ -269,6 +334,8 @@ public class DescribeAIDBClusterDatasetsResponseBody extends TeaModel {
         public String datasetType;
 
         /**
+         * <p>The file name.</p>
+         * 
          * <strong>example:</strong>
          * <p>train-***.json</p>
          */
@@ -276,6 +343,8 @@ public class DescribeAIDBClusterDatasetsResponseBody extends TeaModel {
         public String fileName;
 
         /**
+         * <p>The time the file was last modified, in UTC and formatted as ISO 8601.</p>
+         * 
          * <strong>example:</strong>
          * <p>2025-11-06T06:50:43Z</p>
          */
@@ -283,6 +352,8 @@ public class DescribeAIDBClusterDatasetsResponseBody extends TeaModel {
         public String lastModified;
 
         /**
+         * <p>The file path.</p>
+         * 
          * <strong>example:</strong>
          * <p>polardb_ai/datasets/train/sft/dataset01/train-***.json</p>
          */
@@ -290,6 +361,11 @@ public class DescribeAIDBClusterDatasetsResponseBody extends TeaModel {
         public String path;
 
         /**
+         * <p>The storage type. The only valid value is:</p>
+         * <ul>
+         * <li><strong>Standard</strong>.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Standard</p>
          */
@@ -297,6 +373,16 @@ public class DescribeAIDBClusterDatasetsResponseBody extends TeaModel {
         public String storageType;
 
         /**
+         * <p>The training mode. Valid values:</p>
+         * <ul>
+         * <li><p><strong>sft</strong>: Supervised Fine-Tuning (SFT).</p>
+         * </li>
+         * <li><p><strong>grpo</strong>: Reinforcement Learning (RL).</p>
+         * </li>
+         * <li><p><strong>text</strong>: Text generation.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>stf</p>
          */

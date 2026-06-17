@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class RemoveDBClusterFromGDNRequest extends TeaModel {
     /**
-     * <p>The ID of the cluster in the GDN.</p>
+     * <p>The ID of the secondary cluster that you want to remove from the GDN.</p>
      * <blockquote>
-     * <p> You can call the <a href="https://help.aliyun.com/document_detail/264580.html">DescribeGlobalDatabaseNetwork</a> operation to view the ID of the cluster in the GDN.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/264580.html">DescribeGlobalDatabaseNetwork</a> operation to query the IDs of clusters in the GDN.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -17,6 +17,12 @@ public class RemoveDBClusterFromGDNRequest extends TeaModel {
     @NameInMap("DBClusterId")
     public String DBClusterId;
 
+    /**
+     * <p>Specifies whether to forcibly remove the cluster.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("Force")
     public Boolean force;
 
@@ -45,6 +51,12 @@ public class RemoveDBClusterFromGDNRequest extends TeaModel {
     @NameInMap("SecurityToken")
     public String securityToken;
 
+    /**
+     * <p>The ID of the target cluster.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>pc-wz9fb5nn44u1d****</p>
+     */
     @NameInMap("TargetDBClusterId")
     public String targetDBClusterId;
 

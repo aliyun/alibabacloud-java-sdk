@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeVSwitchesResponseBody extends TeaModel {
     /**
-     * <p>The page number.</p>
+     * <p>The current page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -14,7 +14,7 @@ public class DescribeVSwitchesResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page.</p>
+     * <p>The number of entries on the current page.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -32,7 +32,7 @@ public class DescribeVSwitchesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The number of returned entries.</p>
+     * <p>The number of entries in the list.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -41,7 +41,7 @@ public class DescribeVSwitchesResponseBody extends TeaModel {
     public Integer totalCount;
 
     /**
-     * <p>The vSwitches.</p>
+     * <p>The list of vSwitches.</p>
      */
     @NameInMap("VSwitchs")
     public java.util.List<DescribeVSwitchesResponseBodyVSwitchs> vSwitchs;
@@ -122,8 +122,10 @@ public class DescribeVSwitchesResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the vSwitch is the default vSwitch. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong></li>
-         * <li><strong>false</strong></li>
+         * <li><p><strong>true</strong>: The vSwitch is the default vSwitch.</p>
+         * </li>
+         * <li><p><strong>false</strong>: The vSwitch is not the default vSwitch.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -133,7 +135,7 @@ public class DescribeVSwitchesResponseBody extends TeaModel {
         public Boolean isDefault;
 
         /**
-         * <p>The zone to which the NAT gateway belongs.</p>
+         * <p>The zone where the NAT Gateway is located.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou-b</p>
@@ -144,8 +146,10 @@ public class DescribeVSwitchesResponseBody extends TeaModel {
         /**
          * <p>The status of the vSwitch. Valid values:</p>
          * <ul>
-         * <li><strong>Pending</strong>: The vSwitch is being configured.</li>
-         * <li><strong>Available</strong>: The vSwitch is available.</li>
+         * <li><p><strong>Pending</strong>: The vSwitch is being configured.</p>
+         * </li>
+         * <li><p><strong>Available</strong>: The vSwitch is active.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -155,7 +159,7 @@ public class DescribeVSwitchesResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The vSwitch ID.</p>
+         * <p>The ID of the vSwitch.</p>
          * 
          * <strong>example:</strong>
          * <p>vsw-25bcdxs7pv1****</p>

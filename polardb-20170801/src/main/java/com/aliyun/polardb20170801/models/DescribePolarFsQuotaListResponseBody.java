@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribePolarFsQuotaListResponseBody extends TeaModel {
     /**
+     * <p>The page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -12,6 +14,8 @@ public class DescribePolarFsQuotaListResponseBody extends TeaModel {
     public String pageNumber;
 
     /**
+     * <p>The number of records on the current page.</p>
+     * 
      * <strong>example:</strong>
      * <p>30</p>
      */
@@ -19,6 +23,9 @@ public class DescribePolarFsQuotaListResponseBody extends TeaModel {
     public String pageRecordCount;
 
     /**
+     * <p>The number of records per page. Valid values: <strong>30</strong>, <strong>50</strong>, and <strong>100</strong>.</p>
+     * <p>Default value: <strong>30</strong>.</p>
+     * 
      * <strong>example:</strong>
      * <p>30</p>
      */
@@ -26,17 +33,22 @@ public class DescribePolarFsQuotaListResponseBody extends TeaModel {
     public String pageSize;
 
     /**
+     * <p>The PolarFS instance ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>pfs-test****</p>
      */
     @NameInMap("PolarFsInstanceId")
     public String polarFsInstanceId;
 
+    /**
+     * <p>A list of directory quotas.</p>
+     */
     @NameInMap("QuotaItems")
     public java.util.List<DescribePolarFsQuotaListResponseBodyQuotaItems> quotaItems;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>EBEAA83D-1734-42E3-85E3-E25F6E******</p>
@@ -45,6 +57,8 @@ public class DescribePolarFsQuotaListResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total number of records.</p>
+     * 
      * <strong>example:</strong>
      * <p>2</p>
      */
@@ -114,6 +128,8 @@ public class DescribePolarFsQuotaListResponseBody extends TeaModel {
 
     public static class DescribePolarFsQuotaListResponseBodyQuotaItems extends TeaModel {
         /**
+         * <p>The capacity in bytes.</p>
+         * 
          * <strong>example:</strong>
          * <p>1073741824</p>
          */
@@ -121,7 +137,7 @@ public class DescribePolarFsQuotaListResponseBody extends TeaModel {
         public Long capacity;
 
         /**
-         * <p>Inodes</p>
+         * <p>The inode quota.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -130,6 +146,8 @@ public class DescribePolarFsQuotaListResponseBody extends TeaModel {
         public Long inodes;
 
         /**
+         * <p>The directory path.</p>
+         * 
          * <strong>example:</strong>
          * <p>/test</p>
          */
@@ -137,6 +155,8 @@ public class DescribePolarFsQuotaListResponseBody extends TeaModel {
         public String path;
 
         /**
+         * <p>The used capacity in bytes.</p>
+         * 
          * <strong>example:</strong>
          * <p>104857600</p>
          */
@@ -144,6 +164,8 @@ public class DescribePolarFsQuotaListResponseBody extends TeaModel {
         public Long usedCapacity;
 
         /**
+         * <p>The number of inodes in use.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */

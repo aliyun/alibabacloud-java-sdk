@@ -8,7 +8,7 @@ public class ModifyDBClusterArchRequest extends TeaModel {
     public Boolean autoUseCoupon;
 
     /**
-     * <p>The ID of the cluster.</p>
+     * <p>The cluster ID.</p>
      * 
      * <strong>example:</strong>
      * <p>pc-****************</p>
@@ -17,10 +17,12 @@ public class ModifyDBClusterArchRequest extends TeaModel {
     public String DBClusterId;
 
     /**
-     * <p>Specifies whether to enable the hot standby storage cluster feature. Valid values:</p>
+     * <p>Specifies whether to enable a hot standby cluster. Valid values:</p>
      * <ul>
-     * <li><strong>on</strong>: enables hot standby storage cluster.</li>
-     * <li><strong>equal</strong>: Enable a peer-to-peer cluster.</li>
+     * <li><p><strong>on</strong>: Enables a hot standby cluster.</p>
+     * </li>
+     * <li><p><strong>equal</strong>: Enables a peer cluster.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -39,7 +41,7 @@ public class ModifyDBClusterArchRequest extends TeaModel {
     /**
      * <p>The region ID.</p>
      * <blockquote>
-     * <p> You can call the <a href="https://help.aliyun.com/document_detail/98041.html">DescribeRegions</a> operation to query information about regions.</p>
+     * <p>For more information, see <a href="https://help.aliyun.com/document_detail/98041.html">DescribeRegions</a>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -49,12 +51,12 @@ public class ModifyDBClusterArchRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The zone of the hot standby storage cluster. Valid values:</p>
+     * <p>The zone for the hot standby storage cluster. Valid values:</p>
      * <ul>
-     * <li><strong>auto</strong> (default): The zone is automatically selected.</li>
+     * <li><strong>auto</strong> (default): The system automatically selects a zone.</li>
      * </ul>
      * <blockquote>
-     * <p> You can use the default value when HotStandbyCluster is set to on. If HotStandbyCluster is set to equal, specify the zone of the hot standby storage cluster. You can call the <a href="https://help.aliyun.com/document_detail/98041.html">DescribeZones</a> operation to query information about zones.</p>
+     * <p>The default value is valid only when \<code>HotStandbyCluster\\</code> is set to \<code>on\\</code>. A specific zone is required when \<code>HotStandbyCluster\\</code> is set to \<code>equal\\</code>. For more information about zones, see <a href="https://help.aliyun.com/document_detail/98041.html">DescribeZones</a>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

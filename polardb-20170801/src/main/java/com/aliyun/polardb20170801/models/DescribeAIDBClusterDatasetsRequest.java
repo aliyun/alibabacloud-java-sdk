@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeAIDBClusterDatasetsRequest extends TeaModel {
     /**
+     * <p>The token used to retrieve the next page of results. This value is obtained from the response of a previous request. For the first request, leave this parameter empty.</p>
+     * 
      * <strong>example:</strong>
      * <p>EFSDF-DF-***</p>
      */
@@ -12,6 +14,8 @@ public class DescribeAIDBClusterDatasetsRequest extends TeaModel {
     public String continuationToken;
 
     /**
+     * <p>The ID of the PolarDB cluster for AI model services.</p>
+     * 
      * <strong>example:</strong>
      * <p>pc-2ze88***</p>
      */
@@ -19,6 +23,8 @@ public class DescribeAIDBClusterDatasetsRequest extends TeaModel {
     public String DBClusterId;
 
     /**
+     * <p>The dataset ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>pds-2ze88***</p>
      */
@@ -26,6 +32,14 @@ public class DescribeAIDBClusterDatasetsRequest extends TeaModel {
     public String datasetId;
 
     /**
+     * <p>The type of the dataset. Valid values:</p>
+     * <ul>
+     * <li><p><strong>train</strong>: The training set.</p>
+     * </li>
+     * <li><p><strong>eval</strong>: The evaluation set.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>train</p>
      */
@@ -39,6 +53,8 @@ public class DescribeAIDBClusterDatasetsRequest extends TeaModel {
     public Long ownerId;
 
     /**
+     * <p>The page number to return. Default value: 1.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -46,6 +62,9 @@ public class DescribeAIDBClusterDatasetsRequest extends TeaModel {
     public String pageNumber;
 
     /**
+     * <p>The number of entries to return on each page. Valid values: <strong>30</strong>, <strong>50</strong>, and <strong>100</strong>.</p>
+     * <p>Default value: <strong>30</strong>.</p>
+     * 
      * <strong>example:</strong>
      * <p>30</p>
      */
@@ -53,6 +72,8 @@ public class DescribeAIDBClusterDatasetsRequest extends TeaModel {
     public String pageSize;
 
     /**
+     * <p>The region ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-beijing</p>
      */
@@ -66,6 +87,16 @@ public class DescribeAIDBClusterDatasetsRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
+     * <p>The training mode. Valid values:</p>
+     * <ul>
+     * <li><p><strong>sft</strong>: supervised fine-tuning.</p>
+     * </li>
+     * <li><p><strong>grpo</strong>: reinforcement learning.</p>
+     * </li>
+     * <li><p><strong>text</strong>: text generation.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>grpo</p>
      */

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeDBClustersZonalRequest extends TeaModel {
     /**
+     * <p>The cloud service provider.</p>
+     * 
      * <strong>example:</strong>
      * <p>AlibabaCloud</p>
      */
@@ -12,6 +14,8 @@ public class DescribeDBClustersZonalRequest extends TeaModel {
     public String cloudProvider;
 
     /**
+     * <p>The database endpoint.</p>
+     * 
      * <strong>example:</strong>
      * <p>********.rwlb.polardb-pg-public.rds.aliyuncs.com</p>
      */
@@ -19,6 +23,8 @@ public class DescribeDBClustersZonalRequest extends TeaModel {
     public String connectionString;
 
     /**
+     * <p>The description of the cluster. Fuzzy search is supported.</p>
+     * 
      * <strong>example:</strong>
      * <p>pc-****************</p>
      */
@@ -26,6 +32,8 @@ public class DescribeDBClustersZonalRequest extends TeaModel {
     public String DBClusterDescription;
 
     /**
+     * <p>The cluster ID. To specify multiple cluster IDs, separate them with commas (,).</p>
+     * 
      * <strong>example:</strong>
      * <p>pc-****************</p>
      */
@@ -33,6 +41,8 @@ public class DescribeDBClustersZonalRequest extends TeaModel {
     public String DBClusterIds;
 
     /**
+     * <p>The status of the cluster.</p>
+     * 
      * <strong>example:</strong>
      * <p>Running</p>
      */
@@ -40,6 +50,8 @@ public class DescribeDBClustersZonalRequest extends TeaModel {
     public String DBClusterStatus;
 
     /**
+     * <p>The node ID. You can specify multiple node IDs. Separate them with commas (,).</p>
+     * 
      * <strong>example:</strong>
      * <p>pi-***************</p>
      */
@@ -47,6 +59,16 @@ public class DescribeDBClustersZonalRequest extends TeaModel {
     public String DBNodeIds;
 
     /**
+     * <p>The database type. Valid values:</p>
+     * <ul>
+     * <li><p>MySQL</p>
+     * </li>
+     * <li><p>PostgreSQL</p>
+     * </li>
+     * <li><p>Oracle</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>MySQL</p>
      */
@@ -54,6 +76,8 @@ public class DescribeDBClustersZonalRequest extends TeaModel {
     public String DBType;
 
     /**
+     * <p>The database version.</p>
+     * 
      * <strong>example:</strong>
      * <p>5.6</p>
      */
@@ -61,6 +85,8 @@ public class DescribeDBClustersZonalRequest extends TeaModel {
     public String DBVersion;
 
     /**
+     * <p>The query mode. Set the value to \<code>Simple\\</code>. In this mode, only the basic metadata of the clusters is returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>Simple</p>
      */
@@ -68,6 +94,14 @@ public class DescribeDBClustersZonalRequest extends TeaModel {
     public String describeType;
 
     /**
+     * <p>Specifies whether the cluster has expired. Valid values:</p>
+     * <ul>
+     * <li><p>true</p>
+     * </li>
+     * <li><p>false</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -75,6 +109,8 @@ public class DescribeDBClustersZonalRequest extends TeaModel {
     public String expired;
 
     /**
+     * <p>The maximum number of entries to return for the current request. Default value: 10.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -82,6 +118,8 @@ public class DescribeDBClustersZonalRequest extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>A token used to retrieve the next page of results. Set this parameter to the \<code>NextToken\\</code> value returned from the previous API call. You do not need to specify this parameter for the first call.</p>
+     * 
      * <strong>example:</strong>
      * <p>212db86sca4384811e0b5e8707e******</p>
      */
@@ -95,6 +133,8 @@ public class DescribeDBClustersZonalRequest extends TeaModel {
     public Long ownerId;
 
     /**
+     * <p>The page number. The value must be an integer that is greater than 0 and does not exceed the maximum value of the Integer data type. Default value: 1.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -102,6 +142,9 @@ public class DescribeDBClustersZonalRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries to return on each page. Valid values: 30, 50, and 100.</p>
+     * <p>Default value: 30.</p>
+     * 
      * <strong>example:</strong>
      * <p>30</p>
      */
@@ -109,6 +152,14 @@ public class DescribeDBClustersZonalRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The billing method. Valid values:</p>
+     * <ul>
+     * <li><p>Postpaid: pay-as-you-go</p>
+     * </li>
+     * <li><p>Prepaid: subscription</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>Postpaid</p>
      */
@@ -116,6 +167,8 @@ public class DescribeDBClustersZonalRequest extends TeaModel {
     public String payType;
 
     /**
+     * <p>Filters for clusters created in the last N days. Valid values: 0 to 15.</p>
+     * 
      * <strong>example:</strong>
      * <p>7</p>
      */
@@ -123,6 +176,8 @@ public class DescribeDBClustersZonalRequest extends TeaModel {
     public Integer recentCreationInterval;
 
     /**
+     * <p>Filters for clusters that expire in N days. Valid values: 0 to 15.</p>
+     * 
      * <strong>example:</strong>
      * <p>6</p>
      */
@@ -130,6 +185,7 @@ public class DescribeDBClustersZonalRequest extends TeaModel {
     public Integer recentExpirationInterval;
 
     /**
+     * <p>The region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -139,6 +195,8 @@ public class DescribeDBClustersZonalRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The resource group ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>rg-**********</p>
      */
@@ -151,6 +209,9 @@ public class DescribeDBClustersZonalRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The list of tags.</p>
+     */
     @NameInMap("Tag")
     public java.util.List<DescribeDBClustersZonalRequestTag> tag;
 
@@ -353,6 +414,8 @@ public class DescribeDBClustersZonalRequest extends TeaModel {
 
     public static class DescribeDBClustersZonalRequestTag extends TeaModel {
         /**
+         * <p>The key of tag \<code>n\\</code>. You can filter clusters by specifying up to 20 tags. The \<code>n\\</code> must be a unique and consecutive integer that starts from 1. \<code>Tag.n.Key\\</code> corresponds to \<code>Tag.n.Value\\</code>.</p>
+         * 
          * <strong>example:</strong>
          * <p>MySQL</p>
          */
@@ -360,6 +423,8 @@ public class DescribeDBClustersZonalRequest extends TeaModel {
         public String key;
 
         /**
+         * <p>The value of the tag key.</p>
+         * 
          * <strong>example:</strong>
          * <p>5.6</p>
          */

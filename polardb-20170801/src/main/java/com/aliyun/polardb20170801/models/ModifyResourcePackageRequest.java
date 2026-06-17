@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ModifyResourcePackageRequest extends TeaModel {
     /**
+     * <p>Indicates whether to enable automatic quotas.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -12,6 +14,7 @@ public class ModifyResourcePackageRequest extends TeaModel {
     public Boolean autoQuota;
 
     /**
+     * <p>The ID of the cross-cloud resource plan.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

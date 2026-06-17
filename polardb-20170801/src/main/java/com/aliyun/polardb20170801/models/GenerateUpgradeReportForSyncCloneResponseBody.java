@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GenerateUpgradeReportForSyncCloneResponseBody extends TeaModel {
     /**
-     * <p>Id of the request</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>CDB3258F-B5DE-43C4-8935-CBA0CA******</p>
@@ -14,6 +14,8 @@ public class GenerateUpgradeReportForSyncCloneResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The ID of the source instance.</p>
+     * 
      * <strong>example:</strong>
      * <p>pc-k2j96w169uhu868l8</p>
      */
@@ -21,6 +23,8 @@ public class GenerateUpgradeReportForSyncCloneResponseBody extends TeaModel {
     public String sourceDBClusterId;
 
     /**
+     * <p>The ID of the asynchronous task.</p>
+     * 
      * <strong>example:</strong>
      * <p>2312111</p>
      */

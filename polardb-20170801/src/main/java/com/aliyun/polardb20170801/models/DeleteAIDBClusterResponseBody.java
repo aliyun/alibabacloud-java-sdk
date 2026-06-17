@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DeleteAIDBClusterResponseBody extends TeaModel {
     /**
+     * <p>The ID of the AI cluster.</p>
+     * 
      * <strong>example:</strong>
      * <p>pc-*****************</p>
      */
@@ -12,7 +14,7 @@ public class DeleteAIDBClusterResponseBody extends TeaModel {
     public String DBClusterId;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>3F9E6A3B-C13E-4064-A010-18582A******</p>

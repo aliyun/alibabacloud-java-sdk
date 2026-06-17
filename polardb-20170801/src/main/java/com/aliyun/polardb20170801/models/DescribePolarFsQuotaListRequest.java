@@ -5,19 +5,30 @@ import com.aliyun.tea.*;
 
 public class DescribePolarFsQuotaListRequest extends TeaModel {
     /**
+     * <p>The cluster ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>pc-************</p>
      */
     @NameInMap("DBClusterId")
     public String DBClusterId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <strong>example:</strong>
+     * <p>30</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
+     * <p>The PolarFS instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -27,6 +38,8 @@ public class DescribePolarFsQuotaListRequest extends TeaModel {
     public String polarFsInstanceId;
 
     /**
+     * <p>The quota mode.</p>
+     * 
      * <strong>example:</strong>
      * <p>quotaPolicy</p>
      */
@@ -34,6 +47,8 @@ public class DescribePolarFsQuotaListRequest extends TeaModel {
     public String quotaMode;
 
     /**
+     * <p>The region ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-beijing</p>
      */

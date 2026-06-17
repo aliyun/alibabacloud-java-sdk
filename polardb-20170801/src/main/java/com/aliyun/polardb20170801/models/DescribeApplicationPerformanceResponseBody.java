@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeApplicationPerformanceResponseBody extends TeaModel {
     /**
+     * <p>The application cluster ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>pa-**************</p>
      */
@@ -12,6 +14,8 @@ public class DescribeApplicationPerformanceResponseBody extends TeaModel {
     public String applicationId;
 
     /**
+     * <p>The application type.</p>
+     * 
      * <strong>example:</strong>
      * <p>supabase</p>
      */
@@ -19,16 +23,23 @@ public class DescribeApplicationPerformanceResponseBody extends TeaModel {
     public String applicationType;
 
     /**
+     * <p>The end time of the query. The time is in UTC and follows the <code>yyyy-MM-ddTHH:mm:ssZ</code> format.</p>
+     * 
      * <strong>example:</strong>
      * <p>2025-05-23T02:21:00Z</p>
      */
     @NameInMap("EndTime")
     public String endTime;
 
+    /**
+     * <p>The performance metrics.</p>
+     */
     @NameInMap("PerformanceKeys")
     public DescribeApplicationPerformanceResponseBodyPerformanceKeys performanceKeys;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>CDB3258F-B5DE-43C4-8935-CBA0CA******</p>
      */
@@ -36,6 +47,8 @@ public class DescribeApplicationPerformanceResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The start time of the query. The time is in UTC and follows the <code>yyyy-MM-ddTHH:mm:ssZ</code> format.</p>
+     * 
      * <strong>example:</strong>
      * <p>2022-11-15T16:00Z</p>
      */

@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DisablePolarClawChannelRequest extends TeaModel {
     /**
+     * <p>The application ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class DisablePolarClawChannelRequest extends TeaModel {
     public String applicationId;
 
     /**
+     * <p>The unique ID of the channel.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,8 @@ public class DisablePolarClawChannelRequest extends TeaModel {
     public String channelId;
 
     /**
+     * <p>Specifies whether to restart the gateway after the channel is disabled. Defaults to true.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

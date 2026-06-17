@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class RevokeAccountPrivilegeZonalResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>F9F1CB1A-B1D5-4EF5-A53A-************</p>
      */

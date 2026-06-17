@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribePolarAgentSessionStatusRequest extends TeaModel {
     /**
+     * <p>The ID of the session. This ID is used to identify a visitor\&quot;s session and maintain context information.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,8 @@ public class DescribePolarAgentSessionStatusRequest extends TeaModel {
     public String sessionId;
 
     /**
+     * <p>The source of the product. Set the value to polardb-console.</p>
+     * 
      * <strong>example:</strong>
      * <p>polardb-console</p>
      */

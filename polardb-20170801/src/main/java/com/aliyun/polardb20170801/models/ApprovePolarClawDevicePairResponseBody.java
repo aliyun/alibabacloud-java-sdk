@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ApprovePolarClawDevicePairResponseBody extends TeaModel {
     /**
+     * <p>The application ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>pa-********************</p>
      */
@@ -12,16 +14,23 @@ public class ApprovePolarClawDevicePairResponseBody extends TeaModel {
     public String applicationId;
 
     /**
+     * <p>The response status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <p>The paired device information.</p>
+     */
     @NameInMap("Device")
     public ApprovePolarClawDevicePairResponseBodyDevice device;
 
     /**
+     * <p>The response message.</p>
+     * 
      * <strong>example:</strong>
      * <p>successful</p>
      */
@@ -29,6 +38,8 @@ public class ApprovePolarClawDevicePairResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The pairing request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>req-abc-123</p>
      */
@@ -36,7 +47,7 @@ public class ApprovePolarClawDevicePairResponseBody extends TeaModel {
     public String pairRequestId;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>25C70FF3-D49B-594D-BECE-0DE2BA1D8BBB</p>
@@ -99,6 +110,8 @@ public class ApprovePolarClawDevicePairResponseBody extends TeaModel {
 
     public static class ApprovePolarClawDevicePairResponseBodyDevice extends TeaModel {
         /**
+         * <p>The creation time of the device pairing, in Unix milliseconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>1778662316663</p>
          */
@@ -106,6 +119,8 @@ public class ApprovePolarClawDevicePairResponseBody extends TeaModel {
         public Long createdAtMs;
 
         /**
+         * <p>The device family.</p>
+         * 
          * <strong>example:</strong>
          * <p>server</p>
          */
@@ -113,6 +128,8 @@ public class ApprovePolarClawDevicePairResponseBody extends TeaModel {
         public String deviceFamily;
 
         /**
+         * <p>The unique ID of the device.</p>
+         * 
          * <strong>example:</strong>
          * <p>device-l7rdl36iz6op66zf</p>
          */
@@ -120,6 +137,8 @@ public class ApprovePolarClawDevicePairResponseBody extends TeaModel {
         public String deviceId;
 
         /**
+         * <p>The display name of the device.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -127,6 +146,8 @@ public class ApprovePolarClawDevicePairResponseBody extends TeaModel {
         public String displayName;
 
         /**
+         * <p>The operating system of the device.</p>
+         * 
          * <strong>example:</strong>
          * <p>linux</p>
          */
@@ -134,12 +155,17 @@ public class ApprovePolarClawDevicePairResponseBody extends TeaModel {
         public String platform;
 
         /**
+         * <p>The role of the device.</p>
+         * 
          * <strong>example:</strong>
          * <p>operator</p>
          */
         @NameInMap("Role")
         public String role;
 
+        /**
+         * <p>A list of permission scopes.</p>
+         */
         @NameInMap("Scopes")
         public java.util.List<String> scopes;
 

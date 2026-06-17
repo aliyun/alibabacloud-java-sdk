@@ -33,7 +33,7 @@ public class DescribeDatabasesRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The page number. The value must be a positive integer that does not exceed the maximum value of the INTEGER data type. Default value: <strong>1</strong>.</p>
+     * <p>The number of the page to return. The value must be an integer that is greater than 0 and does not exceed the maximum value of an integer. Default value: <strong>1</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -42,11 +42,14 @@ public class DescribeDatabasesRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page. Valid values:</p>
+     * <p>The number of entries to return on each page. Valid values:</p>
      * <ul>
-     * <li><strong>30</strong></li>
-     * <li><strong>50</strong></li>
-     * <li><strong>100</strong></li>
+     * <li><p><strong>30</strong></p>
+     * </li>
+     * <li><p><strong>50</strong></p>
+     * </li>
+     * <li><p><strong>100</strong></p>
+     * </li>
      * </ul>
      * <p>Default value: <strong>30</strong>.</p>
      * 

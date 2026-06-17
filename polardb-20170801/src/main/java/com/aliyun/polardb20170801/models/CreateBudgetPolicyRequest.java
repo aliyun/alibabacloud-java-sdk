@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateBudgetPolicyRequest extends TeaModel {
     /**
+     * <p>The alert threshold, as a percentage. Valid values: 0 to 100.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -12,6 +14,8 @@ public class CreateBudgetPolicyRequest extends TeaModel {
     public String alertThresholdPct;
 
     /**
+     * <p>The ID of the dimension object. This parameter is required if <code>BudgetType</code> is set to <code>ConsumerTotal</code> or <code>ConsumerGroupTotal</code>.</p>
+     * 
      * <strong>example:</strong>
      * <p>mi-xxxxx</p>
      */
@@ -19,6 +23,7 @@ public class CreateBudgetPolicyRequest extends TeaModel {
     public String budgetDimensionRefId;
 
     /**
+     * <p>The number of budget points.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -28,6 +33,15 @@ public class CreateBudgetPolicyRequest extends TeaModel {
     public String budgetPoints;
 
     /**
+     * <p>The budget type. Valid values:</p>
+     * <ul>
+     * <li><p><code>GlobalTotal</code>: global total budget</p>
+     * </li>
+     * <li><p><code>ConsumerTotal</code>: consumer total budget</p>
+     * </li>
+     * <li><p><code>ConsumerGroupTotal</code>: consumer group total budget</p>
+     * </li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -37,6 +51,7 @@ public class CreateBudgetPolicyRequest extends TeaModel {
     public String budgetType;
 
     /**
+     * <p>The gateway cluster ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -45,10 +60,17 @@ public class CreateBudgetPolicyRequest extends TeaModel {
     @NameInMap("GwClusterId")
     public String gwClusterId;
 
+    /**
+     * <p>The region ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-beijing</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
+     * <p>The day of the month on which the budget resets. Valid values: 1 to 28.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

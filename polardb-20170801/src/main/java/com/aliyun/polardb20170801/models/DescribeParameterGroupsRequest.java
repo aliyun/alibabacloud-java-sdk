@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeParameterGroupsRequest extends TeaModel {
     /**
-     * <p>The type of the database engine. Only <strong>MySQL</strong> is supported.</p>
+     * <p>The database engine type. Only <strong>MySQL</strong> is supported.</p>
      * 
      * <strong>example:</strong>
      * <p>MySQL</p>
@@ -16,9 +16,12 @@ public class DescribeParameterGroupsRequest extends TeaModel {
     /**
      * <p>The version of the database engine. Valid values:</p>
      * <ul>
-     * <li><strong>5.6</strong></li>
-     * <li><strong>5.7</strong></li>
-     * <li><strong>8.0</strong></li>
+     * <li><p><strong>5.6</strong></p>
+     * </li>
+     * <li><p><strong>5.7</strong></p>
+     * </li>
+     * <li><p><strong>8.0</strong></p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -34,9 +37,9 @@ public class DescribeParameterGroupsRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID of the cluster.</p>
+     * <p>The ID of the region.</p>
      * <blockquote>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/98041.html">DescribeRegions</a> operation to query all regions that are available for your account, such as the region ID.</p>
+     * <p>Call the <a href="https://help.aliyun.com/document_detail/98041.html">DescribeRegions</a> operation to query the information about all available regions of your account, including the region IDs.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -47,7 +50,7 @@ public class DescribeParameterGroupsRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of the resource group to which the virtual node belongs.</p>
+     * <p>The ID of the resource group.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-************</p>

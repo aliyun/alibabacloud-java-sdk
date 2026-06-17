@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateCronJobPolicyServerlessResponseBody extends TeaModel {
     /**
+     * <p>The action of the scheduled task. The value is fixed as <code>ModifyDBClusterServerlessConf</code>.</p>
+     * 
      * <strong>example:</strong>
      * <p>ModifyDBClusterServerlessConf</p>
      */
@@ -12,6 +14,8 @@ public class CreateCronJobPolicyServerlessResponseBody extends TeaModel {
     public String action;
 
     /**
+     * <p>The Cron expression.</p>
+     * 
      * <strong>example:</strong>
      * <p>0 0 8 * * ?</p>
      */
@@ -19,6 +23,8 @@ public class CreateCronJobPolicyServerlessResponseBody extends TeaModel {
     public String cronExpression;
 
     /**
+     * <p>The cluster ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>pc-****************</p>
      */
@@ -26,6 +32,8 @@ public class CreateCronJobPolicyServerlessResponseBody extends TeaModel {
     public String DBClusterId;
 
     /**
+     * <p>The end time of the task. The time is in the <code>yyyy-MM-ddTHH:mm:ssZ</code> format and in UTC.</p>
+     * 
      * <strong>example:</strong>
      * <p>2021-04-07T04:00Z</p>
      */
@@ -33,6 +41,8 @@ public class CreateCronJobPolicyServerlessResponseBody extends TeaModel {
     public String endTime;
 
     /**
+     * <p>The ID of the scheduled task.</p>
+     * 
      * <strong>example:</strong>
      * <p>1fa3c0e7-b568-4f41-b703-463c96a91bd8</p>
      */
@@ -40,6 +50,8 @@ public class CreateCronJobPolicyServerlessResponseBody extends TeaModel {
     public String jobId;
 
     /**
+     * <p>The region ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
      */
@@ -47,7 +59,7 @@ public class CreateCronJobPolicyServerlessResponseBody extends TeaModel {
     public String regionId;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>45D24263-7E3A-4140-9472-************</p>
@@ -56,6 +68,8 @@ public class CreateCronJobPolicyServerlessResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The start time of the task. The time is in the <code>yyyy-MM-ddTHH:mm:ssZ</code> format and in UTC.</p>
+     * 
      * <strong>example:</strong>
      * <p>2020-05-01T00:00Z</p>
      */
@@ -63,6 +77,14 @@ public class CreateCronJobPolicyServerlessResponseBody extends TeaModel {
     public String startTime;
 
     /**
+     * <p>The status of the task. Valid values:</p>
+     * <ul>
+     * <li><p><code>working</code>: The scheduled task is running.</p>
+     * </li>
+     * <li><p><code>finish</code>: The scheduled task is complete.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>working</p>
      */

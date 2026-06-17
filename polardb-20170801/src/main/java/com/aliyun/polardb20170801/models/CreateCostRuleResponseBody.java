@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateCostRuleResponseBody extends TeaModel {
     /**
+     * <p>The cost rule ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>924d450014e64e88ac6e8486f8e990**</p>
      */
@@ -12,7 +14,7 @@ public class CreateCostRuleResponseBody extends TeaModel {
     public String costRuleId;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>580EF224-9647-59E7-9950-D9EBFD6A2921</p>

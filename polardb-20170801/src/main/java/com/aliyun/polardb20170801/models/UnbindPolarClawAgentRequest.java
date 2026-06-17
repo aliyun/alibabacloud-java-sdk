@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class UnbindPolarClawAgentRequest extends TeaModel {
     /**
+     * <p>The agent ID to unbind.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class UnbindPolarClawAgentRequest extends TeaModel {
     public String agentId;
 
     /**
+     * <p>The application ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,7 @@ public class UnbindPolarClawAgentRequest extends TeaModel {
     public String applicationId;
 
     /**
+     * <p>The channel plugin ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -32,6 +35,8 @@ public class UnbindPolarClawAgentRequest extends TeaModel {
     public String channel;
 
     /**
+     * <p>The channel account ID. Omit this parameter to remove all bindings for the specified agent ID and channel plugin ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>default</p>
      */

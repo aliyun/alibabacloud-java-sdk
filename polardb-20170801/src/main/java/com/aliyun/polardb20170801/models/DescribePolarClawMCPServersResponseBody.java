@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribePolarClawMCPServersResponseBody extends TeaModel {
     /**
+     * <p>The application ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>pa-**************</p>
      */
@@ -12,6 +14,8 @@ public class DescribePolarClawMCPServersResponseBody extends TeaModel {
     public String applicationId;
 
     /**
+     * <p>The status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -19,6 +23,8 @@ public class DescribePolarClawMCPServersResponseBody extends TeaModel {
     public Integer code;
 
     /**
+     * <p>The message returned for the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>successful</p>
      */
@@ -26,6 +32,8 @@ public class DescribePolarClawMCPServersResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>2281C6C9-CBAB-1AFD-8400-670750CF6025_2212</p>
      */
@@ -33,6 +41,8 @@ public class DescribePolarClawMCPServersResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The configurations of the MCP servers.</p>
+     * 
      * <strong>example:</strong>
      * <p>{
      *     &quot;dev-mcp-server&quot;: &quot;{\&quot;args\&quot;:[\&quot;-y\&quot;,\&quot;@polarclaw/mcp-dev\&quot;],\&quot;command\&quot;:\&quot;node\&quot;}&quot;

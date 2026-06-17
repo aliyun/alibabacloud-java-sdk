@@ -4,10 +4,15 @@ package com.aliyun.polardb20170801.models;
 import com.aliyun.tea.*;
 
 public class DescribeBudgetPoliciesResponseBody extends TeaModel {
+    /**
+     * <p>A list of budget policies.</p>
+     */
     @NameInMap("Items")
     public java.util.List<DescribeBudgetPoliciesResponseBodyItems> items;
 
     /**
+     * <p>The page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -15,6 +20,8 @@ public class DescribeBudgetPoliciesResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of records on the current page.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -22,6 +29,9 @@ public class DescribeBudgetPoliciesResponseBody extends TeaModel {
     public Integer pageRecordCount;
 
     /**
+     * <p>The number of records to return on each page. Valid values: <strong>30</strong>, <strong>50</strong>, and <strong>100</strong>.</p>
+     * <p>Default value: <strong>30</strong>.</p>
+     * 
      * <strong>example:</strong>
      * <p>30</p>
      */
@@ -29,7 +39,7 @@ public class DescribeBudgetPoliciesResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>24A1990B-4F6E-482B-B8CB-75C612******</p>
@@ -38,6 +48,8 @@ public class DescribeBudgetPoliciesResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total number of records.</p>
+     * 
      * <strong>example:</strong>
      * <p>2</p>
      */
@@ -99,16 +111,26 @@ public class DescribeBudgetPoliciesResponseBody extends TeaModel {
 
     public static class DescribeBudgetPoliciesResponseBodyItems extends TeaModel {
         /**
+         * <p>The alert threshold, as a percentage (0 to 100).</p>
+         * 
          * <strong>example:</strong>
          * <p>80</p>
          */
         @NameInMap("AlertThresholdPct")
         public String alertThresholdPct;
 
+        /**
+         * <p>Indicates whether the alert threshold was triggered.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("AlertTriggered")
         public Boolean alertTriggered;
 
         /**
+         * <p>The ID of the dimension object. This parameter is required when <code>BudgetDimensionType</code> is set to <code>ConsumerGroup</code> or <code>Consumer</code>.</p>
+         * 
          * <strong>example:</strong>
          * <p>cg-p3gk2oh55c**</p>
          */
@@ -116,6 +138,14 @@ public class DescribeBudgetPoliciesResponseBody extends TeaModel {
         public String budgetDimensionRefId;
 
         /**
+         * <p>The dimension of the budget policy. Valid values:</p>
+         * <ul>
+         * <li><p><strong>ConsumerGroup</strong>: consumer group</p>
+         * </li>
+         * <li><p><strong>Consumer</strong>: consumer</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>ConsumerGroup</p>
          */
@@ -123,6 +153,8 @@ public class DescribeBudgetPoliciesResponseBody extends TeaModel {
         public String budgetDimensionType;
 
         /**
+         * <p>The number of budget points.</p>
+         * 
          * <strong>example:</strong>
          * <p>10000</p>
          */
@@ -130,6 +162,8 @@ public class DescribeBudgetPoliciesResponseBody extends TeaModel {
         public String budgetPoints;
 
         /**
+         * <p>The budget policy ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>023aacc1effc4b56bb154bfbec6ba9**</p>
          */
@@ -137,16 +171,34 @@ public class DescribeBudgetPoliciesResponseBody extends TeaModel {
         public String budgetPolicyId;
 
         /**
+         * <p>The budget type. Valid values:</p>
+         * <ul>
+         * <li><p><strong>GlobalTotal</strong>: Global budget</p>
+         * </li>
+         * <li><p><strong>ConsumerTotal</strong>: Consumer budget</p>
+         * </li>
+         * <li><p><strong>ConsumerGroupTotal</strong>: Consumer group budget</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>GlobalTotal</p>
          */
         @NameInMap("BudgetType")
         public String budgetType;
 
+        /**
+         * <p>Indicates whether the budget was exceeded.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("Exceeded")
         public String exceeded;
 
         /**
+         * <p>The time when the policy was created.</p>
+         * 
          * <strong>example:</strong>
          * <p>2025-03-19T14:13:53+08:00</p>
          */
@@ -154,6 +206,8 @@ public class DescribeBudgetPoliciesResponseBody extends TeaModel {
         public String gmtCreated;
 
         /**
+         * <p>The time when the policy was last modified.</p>
+         * 
          * <strong>example:</strong>
          * <p>2025-04-08T10:43:28+08:00</p>
          */
@@ -161,6 +215,8 @@ public class DescribeBudgetPoliciesResponseBody extends TeaModel {
         public String gmtModified;
 
         /**
+         * <p>The gateway cluster ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>pg-xxxxxxxx</p>
          */
@@ -168,6 +224,8 @@ public class DescribeBudgetPoliciesResponseBody extends TeaModel {
         public String gwClusterId;
 
         /**
+         * <p>The day of the month (1 to 28) on which the budget is reset.</p>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */
@@ -175,12 +233,26 @@ public class DescribeBudgetPoliciesResponseBody extends TeaModel {
         public String resetDayOfMonth;
 
         /**
+         * <p>The status of the policy. Valid values:</p>
+         * <ul>
+         * <li><p><strong>Enabled</strong>: enabled</p>
+         * </li>
+         * <li><p><strong>Disabled</strong>: disabled</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Enabled</p>
          */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The number of used points.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("UsedPoints")
         public Integer usedPoints;
 

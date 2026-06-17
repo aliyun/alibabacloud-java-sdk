@@ -27,7 +27,7 @@ public class DescribeDBProxyPerformanceRequest extends TeaModel {
      * <p>The ID of the node in the cluster. This parameter can be used to query the performance metrics of PolarProxy on different nodes. The following metrics are supported: PolarProxy_DBConns, PolarProxy_DBQps, and PolarProxy_DBActionOps.</p>
      * 
      * <strong>example:</strong>
-     * <p>pi-******************</p>
+     * <p>pi-****************</p>
      */
     @NameInMap("DBNodeId")
     public String DBNodeId;

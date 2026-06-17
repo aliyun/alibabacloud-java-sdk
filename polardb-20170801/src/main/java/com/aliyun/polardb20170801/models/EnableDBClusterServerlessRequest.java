@@ -14,11 +14,32 @@ public class EnableDBClusterServerlessRequest extends TeaModel {
     @NameInMap("DBClusterId")
     public String DBClusterId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
+    @NameInMap("FromTimeService")
+    public Boolean fromTimeService;
+
     @NameInMap("OwnerAccount")
     public String ownerAccount;
 
     @NameInMap("OwnerId")
     public Long ownerId;
+
+    /**
+     * <strong>example:</strong>
+     * <p>2022-04-28T14:30:00Z</p>
+     */
+    @NameInMap("PlannedEndTime")
+    public String plannedEndTime;
+
+    /**
+     * <strong>example:</strong>
+     * <p>2022-04-28T14:00:00Z</p>
+     */
+    @NameInMap("PlannedStartTime")
+    public String plannedStartTime;
 
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
@@ -27,7 +48,7 @@ public class EnableDBClusterServerlessRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The maximum number of stable AP read-only nodes. Valid values: 0 to 7.</p>
+     * <p>The maximum number of steady-state AP read-only nodes. Valid values: 0 to 7.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -36,7 +57,7 @@ public class EnableDBClusterServerlessRequest extends TeaModel {
     public String scaleApRoNumMax;
 
     /**
-     * <p>The minimum number of stable AP read-only nodes. Valid values: 0 to 7.</p>
+     * <p>The minimum number of steady-state AP read-only nodes. Valid values: 0 to 7.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -45,7 +66,7 @@ public class EnableDBClusterServerlessRequest extends TeaModel {
     public String scaleApRoNumMin;
 
     /**
-     * <p>The maximum number of PCUs per node for scaling. Valid values: 1 to 8 PCUs.</p>
+     * <p>The maximum scaling limit per node. Valid values: 0 PCU to 16 PCU.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>
@@ -54,7 +75,7 @@ public class EnableDBClusterServerlessRequest extends TeaModel {
     public String scaleMax;
 
     /**
-     * <p>The minimum number of PolarDB capacity units (PCUs) per node for scaling. Valid values: 1 to 8 PCUs.</p>
+     * <p>The minimum scaling limit per node. Valid values: 0 PCU to 16 PCU.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -63,7 +84,7 @@ public class EnableDBClusterServerlessRequest extends TeaModel {
     public String scaleMin;
 
     /**
-     * <p>The maximum number of read-only nodes for scaling. Valid values: 0 to 7.</p>
+     * <p>The maximum number of read-only nodes for scaling. Valid values: 0 to 15.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>
@@ -72,7 +93,7 @@ public class EnableDBClusterServerlessRequest extends TeaModel {
     public String scaleRoNumMax;
 
     /**
-     * <p>The minimum number of read-only nodes for scaling. Valid values: 0 to 7.</p>
+     * <p>The minimum number of read-only nodes for scaling. Valid values: 0 to 15.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -93,6 +114,14 @@ public class EnableDBClusterServerlessRequest extends TeaModel {
         return this.DBClusterId;
     }
 
+    public EnableDBClusterServerlessRequest setFromTimeService(Boolean fromTimeService) {
+        this.fromTimeService = fromTimeService;
+        return this;
+    }
+    public Boolean getFromTimeService() {
+        return this.fromTimeService;
+    }
+
     public EnableDBClusterServerlessRequest setOwnerAccount(String ownerAccount) {
         this.ownerAccount = ownerAccount;
         return this;
@@ -107,6 +136,22 @@ public class EnableDBClusterServerlessRequest extends TeaModel {
     }
     public Long getOwnerId() {
         return this.ownerId;
+    }
+
+    public EnableDBClusterServerlessRequest setPlannedEndTime(String plannedEndTime) {
+        this.plannedEndTime = plannedEndTime;
+        return this;
+    }
+    public String getPlannedEndTime() {
+        return this.plannedEndTime;
+    }
+
+    public EnableDBClusterServerlessRequest setPlannedStartTime(String plannedStartTime) {
+        this.plannedStartTime = plannedStartTime;
+        return this;
+    }
+    public String getPlannedStartTime() {
+        return this.plannedStartTime;
     }
 
     public EnableDBClusterServerlessRequest setResourceOwnerAccount(String resourceOwnerAccount) {

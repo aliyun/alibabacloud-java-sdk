@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteFirewallRulesRequest extends TeaModel {
     /**
+     * <p>The cluster ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -26,6 +27,10 @@ public class DeleteFirewallRulesRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
+     * <p>The names of the firewall rules to delete. You can specify multiple rule names. Separate the names with commas (,).</p>
+     * <blockquote>
+     * <p>Call the <a href="https://help.aliyun.com/document_detail/212573.html">DescribeFirewallRules</a> operation to query the details of all firewall rules for the cluster, including the rule names.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

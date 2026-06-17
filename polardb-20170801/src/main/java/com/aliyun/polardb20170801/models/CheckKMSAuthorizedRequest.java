@@ -7,7 +7,7 @@ public class CheckKMSAuthorizedRequest extends TeaModel {
     /**
      * <p>The cluster ID.</p>
      * <blockquote>
-     * <p> You can call the <a href="https://help.aliyun.com/document_detail/98094.html">DescribeDBClusters</a> operation to query the information of all clusters that are deployed in a specific region, such as the cluster IDs.</p>
+     * <p>Call the <a href="https://help.aliyun.com/document_detail/2319131.html">DescribeDBClusters</a> operation to query information about all clusters in the destination region, including cluster IDs.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -24,9 +24,9 @@ public class CheckKMSAuthorizedRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The ID of the region.</p>
+     * <p>The region ID.</p>
      * <blockquote>
-     * <p> You can call the <a href="https://help.aliyun.com/document_detail/98041.html">DescribeRegions</a> operation to query all regions that are available for your account, such as the region IDs.</p>
+     * <p>Call the <a href="https://help.aliyun.com/document_detail/2319134.html">DescribeRegions</a> operation to query information about the available regions of the destination account, including region IDs.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -42,7 +42,7 @@ public class CheckKMSAuthorizedRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The region in which the TDE key resides.</p>
+     * <p>The region where the transparent data encryption (TDE) key is located.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-beijing</p>

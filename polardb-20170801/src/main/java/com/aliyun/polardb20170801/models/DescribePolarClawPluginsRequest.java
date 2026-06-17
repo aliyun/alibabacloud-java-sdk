@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribePolarClawPluginsRequest extends TeaModel {
     /**
+     * <p>The application ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -13,6 +14,9 @@ public class DescribePolarClawPluginsRequest extends TeaModel {
     @NameInMap("ApplicationId")
     public String applicationId;
 
+    /**
+     * <p>A list of plugin IDs. If omitted, all plugins are returned.</p>
+     */
     @NameInMap("PluginList")
     public java.util.List<String> pluginList;
 

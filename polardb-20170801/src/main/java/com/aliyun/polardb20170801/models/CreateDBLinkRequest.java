@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateDBLinkRequest extends TeaModel {
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that it is unique among different requests. The token can only contain ASCII characters and cannot exceed 64 characters in length. The token is case-sensitive.</p>
+     * <p>A client token that is used to ensure the idempotence of the request. The client generates the token, but you must make sure that the token is unique among different requests. The token is case-sensitive and must not exceed 64 ASCII characters in length.</p>
      * 
      * <strong>example:</strong>
      * <p>6000170000591aed949d0f54a343f1a4233c1e7d1c5c******</p>
@@ -14,9 +14,9 @@ public class CreateDBLinkRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The ID of the source cluster that the database link connects.</p>
+     * <p>The ID of the source cluster for the DBLink.</p>
      * <blockquote>
-     * <p> You can call the <a href="https://help.aliyun.com/document_detail/173433.html">DescribeDBClusters</a> operation to query PolarDB clusters.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/173433.html">DescribeDBClusters</a> operation to query the list of PolarDB clusters.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -27,11 +27,14 @@ public class CreateDBLinkRequest extends TeaModel {
     public String DBClusterId;
 
     /**
-     * <p>The name of the database link.</p>
+     * <p>The name of the DBLink.</p>
      * <ul>
-     * <li>The name must contain lowercase letters and can also contain digits and underscores (_).</li>
-     * <li>The name must start with a letter and end with a letter or digit.</li>
-     * <li>The name must be 1 to 64 characters in length.</li>
+     * <li><p>It must contain lowercase letters, and can also contain digits and underscores (_).</p>
+     * </li>
+     * <li><p>It must start with a letter and end with a letter or a digit.</p>
+     * </li>
+     * <li><p>It must be no more than 64 characters in length.</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -48,9 +51,9 @@ public class CreateDBLinkRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The ID of the region.</p>
+     * <p>The region ID.</p>
      * <blockquote>
-     * <p> You can call the <a href="https://help.aliyun.com/document_detail/98041.html">DescribeRegions</a> operation to query information about regions.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/98041.html">DescribeRegions</a> operation to query the details of regions.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -77,7 +80,7 @@ public class CreateDBLinkRequest extends TeaModel {
     /**
      * <p>The name of the source database.</p>
      * <blockquote>
-     * <p> You can call the <a href="https://help.aliyun.com/document_detail/173558.html">DescribeDatabases</a> operation to query information about databases in a PolarDB cluster.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/173558.html">DescribeDatabases</a> operation to query information about databases in a PolarDB cluster.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -90,7 +93,7 @@ public class CreateDBLinkRequest extends TeaModel {
     /**
      * <p>The account of the destination database.</p>
      * <blockquote>
-     * <p> You can call the <a href="https://help.aliyun.com/document_detail/173549.html">DescribeAccounts</a> operation to query the account of a PolarDB cluster.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/173549.html">DescribeAccounts</a> operation to query the database accounts of a PolarDB cluster.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -101,11 +104,13 @@ public class CreateDBLinkRequest extends TeaModel {
     public String targetDBAccount;
 
     /**
-     * <p>The ID of the destination cluster that the database link connects.</p>
+     * <p>The ID of the destination cluster for the DBLink.</p>
      * <blockquote>
      * <ul>
-     * <li>If the destination cluster is a user-created Oracle database on an ECS instance, set the value to <code>null</code>.</li>
-     * <li>You can call the <a href="https://help.aliyun.com/document_detail/173433.html">DescribeDBClusters</a> operation to query PolarDB clusters.</li>
+     * <li><p>If the destination is a self-managed Oracle database that runs on an ECS instance, set this parameter to <code>null</code>.</p>
+     * </li>
+     * <li><p>You can call the <a href="https://help.aliyun.com/document_detail/173433.html">DescribeDBClusters</a> operation to query the list of PolarDB clusters.</p>
+     * </li>
      * </ul>
      * </blockquote>
      * 
@@ -118,7 +123,7 @@ public class CreateDBLinkRequest extends TeaModel {
     /**
      * <p>The name of the destination database.</p>
      * <blockquote>
-     * <p> You can call the <a href="https://help.aliyun.com/document_detail/173558.html">DescribeDatabases</a> operation to query information about databases in a PolarDB cluster.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/173558.html">DescribeDatabases</a> operation to query information about databases in a PolarDB cluster.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -129,7 +134,7 @@ public class CreateDBLinkRequest extends TeaModel {
     public String targetDBName;
 
     /**
-     * <p>The account password of the destination database.</p>
+     * <p>The password for the destination database account.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -139,7 +144,7 @@ public class CreateDBLinkRequest extends TeaModel {
     public String targetDBPasswd;
 
     /**
-     * <p>The IP address of the user-created Oracle database on an ECS instance.</p>
+     * <p>The IP address of the self-managed Oracle database that runs on an ECS instance.</p>
      * 
      * <strong>example:</strong>
      * <p>192.<strong>.</strong>.46</p>
@@ -148,7 +153,7 @@ public class CreateDBLinkRequest extends TeaModel {
     public String targetIp;
 
     /**
-     * <p>The port number of the user-created Oracle database on an ECS instance.</p>
+     * <p>The port number of the self-managed Oracle database that runs on an ECS instance.</p>
      * 
      * <strong>example:</strong>
      * <p>1521</p>
@@ -159,7 +164,7 @@ public class CreateDBLinkRequest extends TeaModel {
     /**
      * <p>The ID of the virtual private cloud (VPC).</p>
      * <blockquote>
-     * <p> You can call the <a href="https://help.aliyun.com/document_detail/35739.html">DescribeVpcs</a> operation to query information about VPCs.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/35739.html">DescribeVpcs</a> operation to query the details of VPCs.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

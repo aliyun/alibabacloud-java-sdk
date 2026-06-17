@@ -5,12 +5,17 @@ import com.aliyun.tea.*;
 
 public class SearchMemoriesResponseBody extends TeaModel {
     /**
+     * <p>The unique request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>3E5CD764-FCCA-5C9C-838E-20E0DE84B2AF</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>An array of search results.</p>
+     */
     @NameInMap("Results")
     public java.util.List<SearchMemoriesResponseBodyResults> results;
 
@@ -37,6 +42,8 @@ public class SearchMemoriesResponseBody extends TeaModel {
 
     public static class SearchMemoriesResponseBodyResults extends TeaModel {
         /**
+         * <p>The creation time of the memory.</p>
+         * 
          * <strong>example:</strong>
          * <p>2025-09-26T08:25:44Z</p>
          */
@@ -44,6 +51,8 @@ public class SearchMemoriesResponseBody extends TeaModel {
         public String createTime;
 
         /**
+         * <p>The unique ID of the memory.</p>
+         * 
          * <strong>example:</strong>
          * <p>423</p>
          */
@@ -51,6 +60,8 @@ public class SearchMemoriesResponseBody extends TeaModel {
         public String id;
 
         /**
+         * <p>The content of the memory.</p>
+         * 
          * <strong>example:</strong>
          * <p>xxx</p>
          */
@@ -58,6 +69,8 @@ public class SearchMemoriesResponseBody extends TeaModel {
         public String memory;
 
         /**
+         * <p>The agent ID that owns the memory.</p>
+         * 
          * <strong>example:</strong>
          * <p>agent1</p>
          */
@@ -65,16 +78,26 @@ public class SearchMemoriesResponseBody extends TeaModel {
         public String memoryAgentId;
 
         /**
+         * <p>The user ID that owns the memory.</p>
+         * 
          * <strong>example:</strong>
          * <p>user1</p>
          */
         @NameInMap("MemoryUserId")
         public String memoryUserId;
 
+        /**
+         * <p>Additional metadata associated with the memory.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{\&quot;tags\&quot;:\&quot;Issue_date_2023-11-30,VD_现行有效\&quot;}</p>
+         */
         @NameInMap("Metadata")
         public String metadata;
 
         /**
+         * <p>The relevance score of the result.</p>
+         * 
          * <strong>example:</strong>
          * <p>12</p>
          */
@@ -82,6 +105,8 @@ public class SearchMemoriesResponseBody extends TeaModel {
         public String score;
 
         /**
+         * <p>The update time of the memory.</p>
+         * 
          * <strong>example:</strong>
          * <p>2025-10-16T02:27:33Z</p>
          */

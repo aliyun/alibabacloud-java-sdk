@@ -7,8 +7,10 @@ public class ModifyDBClusterAuditLogCollectorRequest extends TeaModel {
     /**
      * <p>Specifies whether to enable or disable SQL collector. Valid values:</p>
      * <ul>
-     * <li>Enable</li>
-     * <li>Disable</li>
+     * <li><p>Enable</p>
+     * </li>
+     * <li><p>Disable</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

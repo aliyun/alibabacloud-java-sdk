@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeDBClustersRequest extends TeaModel {
     /**
-     * <p>The endpoint of the cluster.</p>
+     * <p>The database endpoint.</p>
      * 
      * <strong>example:</strong>
      * <p>********.rwlb.polardb-pg-public.rds.aliyuncs.com</p>
@@ -14,7 +14,7 @@ public class DescribeDBClustersRequest extends TeaModel {
     public String connectionString;
 
     /**
-     * <p>The description of the cluster. Fuzzy match is supported.</p>
+     * <p>The cluster description. Fuzzy search is supported.</p>
      * 
      * <strong>example:</strong>
      * <p>pc-****************</p>
@@ -23,7 +23,7 @@ public class DescribeDBClustersRequest extends TeaModel {
     public String DBClusterDescription;
 
     /**
-     * <p>The ID of the cluster. Separate multiple cluster IDs with commas (,).</p>
+     * <p>The IDs of one or more clusters. Separate multiple IDs with a comma.</p>
      * 
      * <strong>example:</strong>
      * <p>pc-****************</p>
@@ -32,7 +32,7 @@ public class DescribeDBClustersRequest extends TeaModel {
     public String DBClusterIds;
 
     /**
-     * <p>The state of the cluster that you want to query. For information about valid values, see <a href="https://help.aliyun.com/document_detail/99286.html">Cluster states</a>.</p>
+     * <p>The cluster status. For more information, see <a href="https://help.aliyun.com/document_detail/99286.html">Cluster state table</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>Running</p>
@@ -41,7 +41,7 @@ public class DescribeDBClustersRequest extends TeaModel {
     public String DBClusterStatus;
 
     /**
-     * <p>The ID of the node. You can specify multiple node IDs. Separate multiple node IDs with commas (,).</p>
+     * <p>The IDs of one or more nodes. Separate multiple IDs with a comma.</p>
      * 
      * <strong>example:</strong>
      * <p>pi-***************</p>
@@ -50,11 +50,14 @@ public class DescribeDBClustersRequest extends TeaModel {
     public String DBNodeIds;
 
     /**
-     * <p>The database engine that the cluster runs. Valid values:</p>
+     * <p>The database engine. Valid values:</p>
      * <ul>
-     * <li><strong>MySQL</strong></li>
-     * <li><strong>PostgreSQL</strong></li>
-     * <li><strong>Oracle</strong></li>
+     * <li><p><strong>MySQL</strong></p>
+     * </li>
+     * <li><p><strong>PostgreSQL</strong></p>
+     * </li>
+     * <li><p><strong>Oracle</strong></p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -64,7 +67,7 @@ public class DescribeDBClustersRequest extends TeaModel {
     public String DBType;
 
     /**
-     * <p>The database engine version of the cluster.</p>
+     * <p>The database version.</p>
      * 
      * <strong>example:</strong>
      * <p>5.6</p>
@@ -73,9 +76,9 @@ public class DescribeDBClustersRequest extends TeaModel {
     public String DBVersion;
 
     /**
-     * <p>The query mode of the list. The value Simple indicates that the simple mode is used. In this mode, only the basic metadata information of the cluster is returned.</p>
+     * <p>The query mode. Set the value to Simple to return only the basic metadata of clusters.</p>
      * <blockquote>
-     * <p>If you do not specify this parameter, the detailed mode is used by default. Detailed information about the cluster is returned.</p>
+     * <p>If you do not specify this parameter, the operation returns detailed information about the clusters.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -87,8 +90,10 @@ public class DescribeDBClustersRequest extends TeaModel {
     /**
      * <p>Specifies whether the cluster has expired. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong></li>
-     * <li><strong>false</strong></li>
+     * <li><p><strong>true</strong></p>
+     * </li>
+     * <li><p><strong>false</strong></p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -104,7 +109,7 @@ public class DescribeDBClustersRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The page number. The value must be a positive integer that does not exceed the maximum value of the INTEGER data type. Default value: <strong>1</strong>.</p>
+     * <p>The page number. The value must be an integer that is greater than 0. Default value: <strong>1</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -113,7 +118,7 @@ public class DescribeDBClustersRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page. Valid values: <strong>30</strong>, <strong>50</strong>, and <strong>100</strong>.</p>
+     * <p>The number of entries to return on each page. Valid values: <strong>30</strong>, <strong>50</strong>, and <strong>100</strong>.</p>
      * <p>Default value: <strong>30</strong>.</p>
      * 
      * <strong>example:</strong>
@@ -125,8 +130,10 @@ public class DescribeDBClustersRequest extends TeaModel {
     /**
      * <p>The billing method. Valid values:</p>
      * <ul>
-     * <li><strong>Postpaid</strong>: pay-as-you-go</li>
-     * <li><strong>Prepaid</strong>: subscription</li>
+     * <li><p><strong>Postpaid</strong>: pay-as-you-go</p>
+     * </li>
+     * <li><p><strong>Prepaid</strong>: subscription</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -136,7 +143,7 @@ public class DescribeDBClustersRequest extends TeaModel {
     public String payType;
 
     /**
-     * <p>Filters clusters created in the last N days. Valid values: 0 to 15.</p>
+     * <p>Filters the query to return only clusters created within the specified number of days. Valid values: 0 to 15.</p>
      * 
      * <strong>example:</strong>
      * <p>7</p>
@@ -145,7 +152,7 @@ public class DescribeDBClustersRequest extends TeaModel {
     public Integer recentCreationInterval;
 
     /**
-     * <p>Filters clusters that expire after N days. Valid values: 0 to 15.</p>
+     * <p>Filters the query to return only clusters that will expire within the specified number of days. Valid values: 0 to 15.</p>
      * 
      * <strong>example:</strong>
      * <p>6</p>
@@ -154,7 +161,7 @@ public class DescribeDBClustersRequest extends TeaModel {
     public Integer recentExpirationInterval;
 
     /**
-     * <p>The region ID of the cluster.</p>
+     * <p>The region ID.</p>
      * <blockquote>
      * <p>You can call the <a href="https://help.aliyun.com/document_detail/98041.html">DescribeRegions</a> operation to query the available regions.</p>
      * </blockquote>
@@ -167,7 +174,7 @@ public class DescribeDBClustersRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of the resource group.</p>
+     * <p>The resource group ID.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-**********</p>
@@ -182,7 +189,7 @@ public class DescribeDBClustersRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The tags of the cluster.</p>
+     * <p>The tags used to filter clusters.</p>
      */
     @NameInMap("Tag")
     public java.util.List<DescribeDBClustersRequestTag> tag;
@@ -362,9 +369,9 @@ public class DescribeDBClustersRequest extends TeaModel {
 
     public static class DescribeDBClustersRequestTag extends TeaModel {
         /**
-         * <p>The key of the tag. You can use tags to filter clusters. You can specify up to 20 tags. N specifies the serial number of each tag. The values that you specify for N must be unique and consecutive integers that start from 1. The value of Tag.N.Key is Tag.N.Value.</p>
+         * <p>The key of a tag used for filtering. You can specify up to 20 tags. The <code>n</code> in <code>Tag.n.Key</code> indicates the tag number and must be a consecutive integer starting from 1.</p>
          * <blockquote>
-         * <p>The tag key can be up to 64 characters in length and cannot start with <code>aliyun</code>, <code>acs:</code>, <code>http://</code>, or <code>https://</code>.</p>
+         * <p>The tag key cannot exceed 128 characters in length and cannot start with <code>aliyun</code>, <code>acs:</code>, <code>http://</code>, or <code>https://</code>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -374,9 +381,9 @@ public class DescribeDBClustersRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The value of the tag.</p>
+         * <p>The tag value.</p>
          * <blockquote>
-         * <p>The tag value can be up to 64 characters in length and cannot start with <code>aliyun</code>, <code>acs:</code>, <code>http://</code>, or <code>https://</code>.</p>
+         * <p>The tag value cannot exceed 128 characters in length and cannot start with <code>aliyun</code>, <code>acs:</code>, <code>http://</code>, or <code>https://</code>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

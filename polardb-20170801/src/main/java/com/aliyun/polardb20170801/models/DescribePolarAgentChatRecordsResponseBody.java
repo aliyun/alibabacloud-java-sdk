@@ -4,10 +4,15 @@ package com.aliyun.polardb20170801.models;
 import com.aliyun.tea.*;
 
 public class DescribePolarAgentChatRecordsResponseBody extends TeaModel {
+    /**
+     * <p>The result set.</p>
+     */
     @NameInMap("Data")
     public java.util.List<DescribePolarAgentChatRecordsResponseBodyData> data;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>A7E6A8FD-C50B-46B2-BA85-D8B8D3******</p>
      */
@@ -37,6 +42,8 @@ public class DescribePolarAgentChatRecordsResponseBody extends TeaModel {
 
     public static class DescribePolarAgentChatRecordsResponseBodyData extends TeaModel {
         /**
+         * <p>The answer.</p>
+         * 
          * <strong>example:</strong>
          * <p>xxx</p>
          */
@@ -44,6 +51,8 @@ public class DescribePolarAgentChatRecordsResponseBody extends TeaModel {
         public String answer;
 
         /**
+         * <p>The feedback type.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -51,6 +60,8 @@ public class DescribePolarAgentChatRecordsResponseBody extends TeaModel {
         public String feedbackType;
 
         /**
+         * <p>The session query. Obtain this value from the response of the API call to start a digital human.</p>
+         * 
          * <strong>example:</strong>
          * <p>xxx</p>
          */
@@ -58,7 +69,7 @@ public class DescribePolarAgentChatRecordsResponseBody extends TeaModel {
         public String query;
 
         /**
-         * <p>Query ID。</p>
+         * <p>The query ID.</p>
          * 
          * <strong>example:</strong>
          * <p>sq202506261002hz8b24fe80067683</p>
@@ -67,6 +78,8 @@ public class DescribePolarAgentChatRecordsResponseBody extends TeaModel {
         public String queryId;
 
         /**
+         * <p>The session ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>44dcdf31-04cd-4a44-9bae-834dd6657e29</p>
          */

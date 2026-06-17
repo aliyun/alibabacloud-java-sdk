@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteModelApiRequest extends TeaModel {
     /**
+     * <p>The gateway instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class DeleteModelApiRequest extends TeaModel {
     public String gwClusterId;
 
     /**
+     * <p>The model API ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -22,6 +24,12 @@ public class DeleteModelApiRequest extends TeaModel {
     @NameInMap("ModelApiId")
     public String modelApiId;
 
+    /**
+     * <p>The region ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-beijing</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

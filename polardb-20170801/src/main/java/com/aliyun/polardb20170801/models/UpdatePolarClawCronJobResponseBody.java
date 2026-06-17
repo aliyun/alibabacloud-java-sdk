@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpdatePolarClawCronJobResponseBody extends TeaModel {
     /**
+     * <p>The application ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>pa-**************</p>
      */
@@ -12,16 +14,23 @@ public class UpdatePolarClawCronJobResponseBody extends TeaModel {
     public String applicationId;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <p>Details of the updated job.</p>
+     */
     @NameInMap("Job")
     public UpdatePolarClawCronJobResponseBodyJob job;
 
     /**
+     * <p>The success message.</p>
+     * 
      * <strong>example:</strong>
      * <p>successful</p>
      */
@@ -29,6 +38,8 @@ public class UpdatePolarClawCronJobResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>Indicates whether the operation was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -36,7 +47,7 @@ public class UpdatePolarClawCronJobResponseBody extends TeaModel {
     public Boolean ok;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>2281C6C9-CBAB-1AFD-8400-670750CF6025_2212</p>
@@ -99,16 +110,23 @@ public class UpdatePolarClawCronJobResponseBody extends TeaModel {
 
     public static class UpdatePolarClawCronJobResponseBodyJobDelivery extends TeaModel {
         /**
+         * <p>The optional channel account ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>default</p>
          */
         @NameInMap("AccountId")
         public String accountId;
 
+        /**
+         * <p>Indicates whether to ignore delivery failures.</p>
+         */
         @NameInMap("BestEffort")
         public Boolean bestEffort;
 
         /**
+         * <p>The delivery channel.</p>
+         * 
          * <strong>example:</strong>
          * <p>telegram</p>
          */
@@ -116,6 +134,8 @@ public class UpdatePolarClawCronJobResponseBody extends TeaModel {
         public String channel;
 
         /**
+         * <p>The delivery mode. Valid values: <code>none</code>, <code>announce</code>, or <code>webhook</code>.</p>
+         * 
          * <strong>example:</strong>
          * <p>announce</p>
          */
@@ -123,6 +143,8 @@ public class UpdatePolarClawCronJobResponseBody extends TeaModel {
         public String mode;
 
         /**
+         * <p>The delivery target. Required and must be a URL if <code>Mode</code> is <code>webhook</code>.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="https://example.com/webhook">https://example.com/webhook</a></p>
          */
@@ -178,6 +200,8 @@ public class UpdatePolarClawCronJobResponseBody extends TeaModel {
 
     public static class UpdatePolarClawCronJobResponseBodyJobPayload extends TeaModel {
         /**
+         * <p>Indicates whether to ignore delivery failures.</p>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
@@ -185,6 +209,8 @@ public class UpdatePolarClawCronJobResponseBody extends TeaModel {
         public Boolean bestEffortDeliver;
 
         /**
+         * <p>The optional delivery channel ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>telegram</p>
          */
@@ -192,6 +218,8 @@ public class UpdatePolarClawCronJobResponseBody extends TeaModel {
         public String channel;
 
         /**
+         * <p>Indicates whether to deliver the output to a channel.</p>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
@@ -199,6 +227,8 @@ public class UpdatePolarClawCronJobResponseBody extends TeaModel {
         public Boolean deliver;
 
         /**
+         * <p>The payload type. Valid values: <code>agentTurn</code> (Agent conversation) or <code>systemEvent</code> (system event).</p>
+         * 
          * <strong>example:</strong>
          * <p>agentTurn</p>
          */
@@ -206,6 +236,8 @@ public class UpdatePolarClawCronJobResponseBody extends TeaModel {
         public String kind;
 
         /**
+         * <p>Indicates whether to use a lightweight context.</p>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
@@ -213,6 +245,8 @@ public class UpdatePolarClawCronJobResponseBody extends TeaModel {
         public Boolean lightContext;
 
         /**
+         * <p>The Agent conversation prompt.</p>
+         * 
          * <strong>example:</strong>
          * <p>Generate the daily report.</p>
          */
@@ -220,6 +254,8 @@ public class UpdatePolarClawCronJobResponseBody extends TeaModel {
         public String message;
 
         /**
+         * <p>The model override.</p>
+         * 
          * <strong>example:</strong>
          * <p>anthropic/sonnet-4.6</p>
          */
@@ -227,6 +263,8 @@ public class UpdatePolarClawCronJobResponseBody extends TeaModel {
         public String model;
 
         /**
+         * <p>The system event text.</p>
+         * 
          * <strong>example:</strong>
          * <p>Generate the daily report.</p>
          */
@@ -234,6 +272,8 @@ public class UpdatePolarClawCronJobResponseBody extends TeaModel {
         public String text;
 
         /**
+         * <p>The optional execution timeout in seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -241,6 +281,8 @@ public class UpdatePolarClawCronJobResponseBody extends TeaModel {
         public Integer timeoutSeconds;
 
         /**
+         * <p>The optional delivery target.</p>
+         * 
          * <strong>example:</strong>
          * <p>team</p>
          */
@@ -336,6 +378,8 @@ public class UpdatePolarClawCronJobResponseBody extends TeaModel {
 
     public static class UpdatePolarClawCronJobResponseBodyJobRunsUsage extends TeaModel {
         /**
+         * <p>The number of input tokens.</p>
+         * 
          * <strong>example:</strong>
          * <p>30250</p>
          */
@@ -343,6 +387,8 @@ public class UpdatePolarClawCronJobResponseBody extends TeaModel {
         public Integer inputTokens;
 
         /**
+         * <p>The number of output tokens.</p>
+         * 
          * <strong>example:</strong>
          * <p>30250</p>
          */
@@ -350,6 +396,8 @@ public class UpdatePolarClawCronJobResponseBody extends TeaModel {
         public Integer outputTokens;
 
         /**
+         * <p>The total number of tokens.</p>
+         * 
          * <strong>example:</strong>
          * <p>60500</p>
          */
@@ -389,6 +437,8 @@ public class UpdatePolarClawCronJobResponseBody extends TeaModel {
 
     public static class UpdatePolarClawCronJobResponseBodyJobRuns extends TeaModel {
         /**
+         * <p>The action performed. Valid values: <code>finished</code>, <code>error</code>, or <code>skipped</code>.</p>
+         * 
          * <strong>example:</strong>
          * <p>finished</p>
          */
@@ -396,6 +446,8 @@ public class UpdatePolarClawCronJobResponseBody extends TeaModel {
         public String action;
 
         /**
+         * <p>Indicates whether the result was delivered.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -403,6 +455,8 @@ public class UpdatePolarClawCronJobResponseBody extends TeaModel {
         public Boolean delivered;
 
         /**
+         * <p>The delivery status.</p>
+         * 
          * <strong>example:</strong>
          * <p>delivered</p>
          */
@@ -410,6 +464,8 @@ public class UpdatePolarClawCronJobResponseBody extends TeaModel {
         public String deliveryStatus;
 
         /**
+         * <p>The execution duration, in milliseconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>27586</p>
          */
@@ -417,6 +473,8 @@ public class UpdatePolarClawCronJobResponseBody extends TeaModel {
         public Long durationMs;
 
         /**
+         * <p>The associated job ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>0ee00f56-f467-4d41-858c-ca4ede2c770e</p>
          */
@@ -424,6 +482,8 @@ public class UpdatePolarClawCronJobResponseBody extends TeaModel {
         public String jobId;
 
         /**
+         * <p>The job name.</p>
+         * 
          * <strong>example:</strong>
          * <p>daily-report</p>
          */
@@ -431,6 +491,8 @@ public class UpdatePolarClawCronJobResponseBody extends TeaModel {
         public String jobName;
 
         /**
+         * <p>The model used for the run.</p>
+         * 
          * <strong>example:</strong>
          * <p>anthropic/sonnet-4.6</p>
          */
@@ -438,6 +500,8 @@ public class UpdatePolarClawCronJobResponseBody extends TeaModel {
         public String model;
 
         /**
+         * <p>The timestamp of the next scheduled run, in milliseconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>1777424400000</p>
          */
@@ -445,6 +509,8 @@ public class UpdatePolarClawCronJobResponseBody extends TeaModel {
         public Long nextRunAtMs;
 
         /**
+         * <p>The model provider.</p>
+         * 
          * <strong>example:</strong>
          * <p>anthropic</p>
          */
@@ -452,6 +518,8 @@ public class UpdatePolarClawCronJobResponseBody extends TeaModel {
         public String provider;
 
         /**
+         * <p>The actual execution timestamp, in milliseconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>1777370544931</p>
          */
@@ -459,6 +527,8 @@ public class UpdatePolarClawCronJobResponseBody extends TeaModel {
         public Long runAtMs;
 
         /**
+         * <p>The associated session ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>abc123</p>
          */
@@ -466,6 +536,8 @@ public class UpdatePolarClawCronJobResponseBody extends TeaModel {
         public String sessionId;
 
         /**
+         * <p>The status of the run. Valid values: <code>ok</code>, <code>error</code>, or <code>skipped</code>.</p>
+         * 
          * <strong>example:</strong>
          * <p>ok</p>
          */
@@ -473,6 +545,8 @@ public class UpdatePolarClawCronJobResponseBody extends TeaModel {
         public String status;
 
         /**
+         * <p>The run summary text.</p>
+         * 
          * <strong>example:</strong>
          * <p>Report generated successfully.</p>
          */
@@ -480,12 +554,17 @@ public class UpdatePolarClawCronJobResponseBody extends TeaModel {
         public String summary;
 
         /**
+         * <p>The run timestamp, in milliseconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>1777370572518</p>
          */
         @NameInMap("Ts")
         public Long ts;
 
+        /**
+         * <p>Optional token usage details.</p>
+         */
         @NameInMap("Usage")
         public UpdatePolarClawCronJobResponseBodyJobRunsUsage usage;
 
@@ -618,6 +697,8 @@ public class UpdatePolarClawCronJobResponseBody extends TeaModel {
 
     public static class UpdatePolarClawCronJobResponseBodyJobSchedule extends TeaModel {
         /**
+         * <p>The base timestamp for interval alignment, in milliseconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>1777370572518</p>
          */
@@ -625,6 +706,8 @@ public class UpdatePolarClawCronJobResponseBody extends TeaModel {
         public Long anchorMs;
 
         /**
+         * <p>The ISO 8601 timestamp. Required if <code>Kind</code> is <code>at</code>.</p>
+         * 
          * <strong>example:</strong>
          * <p>2026-04-10T09:00:00+08:00</p>
          */
@@ -632,6 +715,8 @@ public class UpdatePolarClawCronJobResponseBody extends TeaModel {
         public String at;
 
         /**
+         * <p>The interval in milliseconds. Required if <code>Kind</code> is <code>every</code>.</p>
+         * 
          * <strong>example:</strong>
          * <p>100000</p>
          */
@@ -639,6 +724,8 @@ public class UpdatePolarClawCronJobResponseBody extends TeaModel {
         public Long everyMs;
 
         /**
+         * <p>The cron expression. Required if <code>Kind</code> is <code>cron</code>.</p>
+         * 
          * <strong>example:</strong>
          * <p>0 9 * * *</p>
          */
@@ -646,6 +733,8 @@ public class UpdatePolarClawCronJobResponseBody extends TeaModel {
         public String expr;
 
         /**
+         * <p>The schedule type. Valid values: <code>cron</code> (cron expression), <code>every</code> (fixed interval), or <code>at</code> (one-time).</p>
+         * 
          * <strong>example:</strong>
          * <p>cron</p>
          */
@@ -653,6 +742,8 @@ public class UpdatePolarClawCronJobResponseBody extends TeaModel {
         public String kind;
 
         /**
+         * <p>The IANA time zone, such as <code>Asia/Shanghai</code>.</p>
+         * 
          * <strong>example:</strong>
          * <p>Asia/Shanghai</p>
          */
@@ -716,6 +807,8 @@ public class UpdatePolarClawCronJobResponseBody extends TeaModel {
 
     public static class UpdatePolarClawCronJobResponseBodyJobState extends TeaModel {
         /**
+         * <p><strong>The number of consecutive failures.</strong></p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -723,6 +816,8 @@ public class UpdatePolarClawCronJobResponseBody extends TeaModel {
         public Integer consecutiveErrors;
 
         /**
+         * <p><strong>The optional timestamp of the last run, in milliseconds.</strong></p>
+         * 
          * <strong>example:</strong>
          * <p>1777370544931</p>
          */
@@ -730,6 +825,8 @@ public class UpdatePolarClawCronJobResponseBody extends TeaModel {
         public Long lastRunAtMs;
 
         /**
+         * <p><strong>The optional status of the last run.</strong></p>
+         * 
          * <strong>example:</strong>
          * <p>ok</p>
          */
@@ -737,6 +834,8 @@ public class UpdatePolarClawCronJobResponseBody extends TeaModel {
         public String lastRunStatus;
 
         /**
+         * <p><strong>The timestamp for the next run, in milliseconds.</strong></p>
+         * 
          * <strong>example:</strong>
          * <p>1777424400000</p>
          */
@@ -784,6 +883,8 @@ public class UpdatePolarClawCronJobResponseBody extends TeaModel {
 
     public static class UpdatePolarClawCronJobResponseBodyJob extends TeaModel {
         /**
+         * <p>The optional ID of the Agent that runs the job.</p>
+         * 
          * <strong>example:</strong>
          * <p>work</p>
          */
@@ -791,6 +892,8 @@ public class UpdatePolarClawCronJobResponseBody extends TeaModel {
         public String agentId;
 
         /**
+         * <p>The creation timestamp, in milliseconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>1777368967284</p>
          */
@@ -798,16 +901,23 @@ public class UpdatePolarClawCronJobResponseBody extends TeaModel {
         public Long createdAtMs;
 
         /**
+         * <p>Indicates whether the job is deleted after its first run.</p>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
         @NameInMap("DeleteAfterRun")
         public Boolean deleteAfterRun;
 
+        /**
+         * <p>The optional result delivery configuration.</p>
+         */
         @NameInMap("Delivery")
         public UpdatePolarClawCronJobResponseBodyJobDelivery delivery;
 
         /**
+         * <p>The optional job description.</p>
+         * 
          * <strong>example:</strong>
          * <p>Daily report generation</p>
          */
@@ -815,6 +925,8 @@ public class UpdatePolarClawCronJobResponseBody extends TeaModel {
         public String description;
 
         /**
+         * <p>Indicates whether the job is enabled.</p>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
@@ -822,6 +934,8 @@ public class UpdatePolarClawCronJobResponseBody extends TeaModel {
         public Boolean enabled;
 
         /**
+         * <p>The job ID (UUID).</p>
+         * 
          * <strong>example:</strong>
          * <p>0ee00f56-f467-4d41-858c-ca4ede2c770e</p>
          */
@@ -829,22 +943,35 @@ public class UpdatePolarClawCronJobResponseBody extends TeaModel {
         public String id;
 
         /**
+         * <p>The job name.</p>
+         * 
          * <strong>example:</strong>
          * <p>daily-report</p>
          */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The execution payload configuration.</p>
+         */
         @NameInMap("Payload")
         public UpdatePolarClawCronJobResponseBodyJobPayload payload;
 
+        /**
+         * <p><strong>The run history. Returned only if <code>IncludeRuns</code> is <code>true</code>.</strong></p>
+         */
         @NameInMap("Runs")
         public java.util.List<UpdatePolarClawCronJobResponseBodyJobRuns> runs;
 
+        /**
+         * <p>The schedule configuration.</p>
+         */
         @NameInMap("Schedule")
         public UpdatePolarClawCronJobResponseBodyJobSchedule schedule;
 
         /**
+         * <p>The optional session routing key.</p>
+         * 
          * <strong>example:</strong>
          * <p>abc123</p>
          */
@@ -852,16 +979,23 @@ public class UpdatePolarClawCronJobResponseBody extends TeaModel {
         public String sessionKey;
 
         /**
+         * <p>The session target. Valid values: <code>main</code>, <code>isolated</code>, or <code>current</code>.</p>
+         * 
          * <strong>example:</strong>
          * <p>main</p>
          */
         @NameInMap("SessionTarget")
         public String sessionTarget;
 
+        /**
+         * <p><strong>The running state of the job.</strong></p>
+         */
         @NameInMap("State")
         public UpdatePolarClawCronJobResponseBodyJobState state;
 
         /**
+         * <p>The last update timestamp, in milliseconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>1777370572517</p>
          */
@@ -869,6 +1003,8 @@ public class UpdatePolarClawCronJobResponseBody extends TeaModel {
         public Long updatedAtMs;
 
         /**
+         * <p>The wake mode. Valid values: <code>now</code> or <code>next-heartbeat</code>.</p>
+         * 
          * <strong>example:</strong>
          * <p>now</p>
          */

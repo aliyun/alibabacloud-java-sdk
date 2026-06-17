@@ -8,7 +8,7 @@ public class DescribeDBClustersWithBackupsResponseBody extends TeaModel {
     public DescribeDBClustersWithBackupsResponseBodyItems items;
 
     /**
-     * <p>The total number of returned pages.</p>
+     * <p>The page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -17,7 +17,7 @@ public class DescribeDBClustersWithBackupsResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of clusters returned per page.</p>
+     * <p>The number of clusters on the current page.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -26,7 +26,7 @@ public class DescribeDBClustersWithBackupsResponseBody extends TeaModel {
     public Integer pageRecordCount;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>F8529AA2-522F-4B30-B80B-8F7D39******</p>
@@ -35,7 +35,7 @@ public class DescribeDBClustersWithBackupsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of returned entries.</p>
+     * <p>The total number of entries returned.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>

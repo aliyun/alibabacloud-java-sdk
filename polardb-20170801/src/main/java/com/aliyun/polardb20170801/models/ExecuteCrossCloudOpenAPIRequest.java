@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ExecuteCrossCloudOpenAPIRequest extends TeaModel {
     /**
+     * <p>The information required to call the cross-cloud OpenAPI.</p>
+     * 
      * <strong>example:</strong>
      * <p>{&quot;Action&quot;:&quot;DescribeDBClusters&quot;}</p>
      */

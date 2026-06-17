@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeScheduleTasksRequest extends TeaModel {
     /**
-     * <p>The description of the cluster.</p>
+     * <p>The cluster description.</p>
      * 
      * <strong>example:</strong>
      * <p>testdb</p>
@@ -16,13 +16,13 @@ public class DescribeScheduleTasksRequest extends TeaModel {
     /**
      * <p>The cluster ID.</p>
      * <blockquote>
-     * </blockquote>
      * <ul>
-     * <li><p>You can call the <a href="https://help.aliyun.com/document_detail/98094.html">DescribeDBClusters</a> operation to query the information of all PolarDB clusters that are deployed in a specific region, such as the cluster IDs.</p>
+     * <li><p>You can call the <a href="https://help.aliyun.com/document_detail/98094.html">DescribeDBClusters</a> operation to query the details of all clusters in a specific region, including cluster IDs.</p>
      * </li>
-     * <li><p>If you do not specify this parameter, all scheduled tasks on your clusters are queried.</p>
+     * <li><p>If this parameter is omitted, scheduled tasks for all clusters in your account are queried.</p>
      * </li>
      * </ul>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>pc-**************</p>
@@ -31,9 +31,9 @@ public class DescribeScheduleTasksRequest extends TeaModel {
     public String DBClusterId;
 
     /**
-     * <p>The ID of the order.</p>
+     * <p>The order ID.</p>
      * <blockquote>
-     * <p> The order ID can contain only digits.</p>
+     * <p>The order ID can contain only digits.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -49,7 +49,7 @@ public class DescribeScheduleTasksRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The page number of the page to return. Set this parameter to an integer that is greater than 0. Default value: <strong>1</strong>.</p>
+     * <p>The number of the page to return. The value must be an integer that is greater than 0. Default value: <strong>1</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -58,7 +58,7 @@ public class DescribeScheduleTasksRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return on each page. Valid values: <strong>30</strong>, <strong>50</strong>, and <strong>100</strong>. Default value: 30.</p>
+     * <p>The number of entries to return on each page. Valid values: <strong>30</strong> (default), <strong>50</strong>, and <strong>100</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>30</p>
@@ -67,7 +67,7 @@ public class DescribeScheduleTasksRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The latest start time of the task that you specified when you created the scheduled task. The time is displayed in UTC.</p>
+     * <p>The latest start time of the task. The time is in UTC. If the task does not start by this time, it expires.</p>
      * 
      * <strong>example:</strong>
      * <p>2021-01-28T12:30Z</p>
@@ -76,7 +76,7 @@ public class DescribeScheduleTasksRequest extends TeaModel {
     public String plannedEndTime;
 
     /**
-     * <p>The earliest start time of the task that you specified when you created the scheduled task. The time is displayed in UTC.</p>
+     * <p>The earliest start time of the task. The time is in UTC.</p>
      * 
      * <strong>example:</strong>
      * <p>2021-01-28T12:00Z</p>
@@ -85,15 +85,15 @@ public class DescribeScheduleTasksRequest extends TeaModel {
     public String plannedStartTime;
 
     /**
-     * <p>The ID of the region.</p>
+     * <p>The region ID.</p>
      * <blockquote>
-     * </blockquote>
      * <ul>
-     * <li><p>You can call the <a href="https://help.aliyun.com/document_detail/98041.html">DescribeRegions</a> operation to query the region information of all clusters in a specific account.</p>
+     * <li><p>You can call the <a href="https://help.aliyun.com/document_detail/98041.html">DescribeRegions</a> operation to query the available regions.</p>
      * </li>
-     * <li><p>If you do not specify this parameter, scheduled tasks on your clusters that are deployed in all regions are queried.</p>
+     * <li><p>If this parameter is omitted, scheduled tasks in all regions in your account are queried.</p>
      * </li>
      * </ul>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -102,7 +102,7 @@ public class DescribeScheduleTasksRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of the resource group.</p>
+     * <p>The resource group ID.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-************</p>
@@ -117,18 +117,25 @@ public class DescribeScheduleTasksRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The state of the tasks that you want to query. Valid values:</p>
+     * <p>The task status. Valid values:</p>
      * <ul>
-     * <li><strong>pending</strong>: The tasks are pending execution.</li>
-     * <li><strong>executing</strong>: The tasks are being executed.</li>
-     * <li><strong>failure</strong>: The tasks failed and need to be run again.</li>
-     * <li><strong>finish</strong>: The tasks are complete.</li>
-     * <li><strong>cancel</strong>: The tasks are canceled.</li>
-     * <li><strong>expired</strong>: The tasks are expired. The tasks are not started within the time periods that are specified to start the tasks.</li>
-     * <li><strong>rollback</strong>: The tasks are being rolled back.</li>
+     * <li><p><strong>pending</strong>: The task is waiting to be executed.</p>
+     * </li>
+     * <li><p><strong>executing</strong>: The task is being executed.</p>
+     * </li>
+     * <li><p><strong>failure</strong>: The task failed and is waiting for a retry.</p>
+     * </li>
+     * <li><p><strong>finish</strong>: The task is complete.</p>
+     * </li>
+     * <li><p><strong>cancel</strong>: The task is canceled.</p>
+     * </li>
+     * <li><p><strong>expired</strong>: The task has expired because it did not start within the scheduled time window.</p>
+     * </li>
+     * <li><p><strong>rollback</strong>: The task is being rolled back.</p>
+     * </li>
      * </ul>
      * <blockquote>
-     * <p> If you do not specify this parameter, all scheduled tasks in all states are queried.</p>
+     * <p>If this parameter is omitted, scheduled tasks in all states are queried.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -138,21 +145,25 @@ public class DescribeScheduleTasksRequest extends TeaModel {
     public String status;
 
     /**
-     * <p>The type of scheduled tasks that you want to query. Valid values:</p>
+     * <p>The action of the scheduled task. Valid values:</p>
      * <ul>
-     * <li><strong>CreateDBNodes</strong></li>
-     * <li><strong>ModifyDBNodeClass</strong></li>
-     * <li><strong>UpgradeDBClusterVersion</strong></li>
-     * <li><strong>ModifyDBClusterPrimaryZone</strong></li>
+     * <li><p><strong>CreateDBNodes</strong></p>
+     * </li>
+     * <li><p><strong>ModifyDBNodeClass</strong></p>
+     * </li>
+     * <li><p><strong>UpgradeDBClusterVersion</strong></p>
+     * </li>
+     * <li><p><strong>ModifyDBClusterPrimaryZone</strong></p>
+     * </li>
      * </ul>
      * <blockquote>
-     * </blockquote>
      * <ul>
-     * <li><p>If you specify the <code>PlannedStartTime</code> parameter when you call the four preceding operations, the details of each task are returned. Otherwise, an empty string is returned for the <code>TimerInfos</code> parameter.</p>
+     * <li><p>Task details are returned only if you specify the <code>PlannedStartTime</code> parameter when you call one of the preceding API operations. Otherwise, the <code>TimerInfos</code> field in the response is empty.</p>
      * </li>
-     * <li><p>If you do not specify this parameter, all types of scheduled tasks on you clusters are queried.</p>
+     * <li><p>If this parameter is omitted, scheduled tasks of all types are queried.</p>
      * </li>
      * </ul>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>CreateDBNodes</p>

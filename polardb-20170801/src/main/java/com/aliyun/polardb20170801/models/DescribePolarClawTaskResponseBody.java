@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribePolarClawTaskResponseBody extends TeaModel {
     /**
+     * <p>The application ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>pa-**************</p>
      */
@@ -12,6 +14,8 @@ public class DescribePolarClawTaskResponseBody extends TeaModel {
     public String applicationId;
 
     /**
+     * <p>The status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -19,6 +23,8 @@ public class DescribePolarClawTaskResponseBody extends TeaModel {
     public Integer code;
 
     /**
+     * <p>The response message.</p>
+     * 
      * <strong>example:</strong>
      * <p>successful</p>
      */
@@ -26,7 +32,7 @@ public class DescribePolarClawTaskResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>C890995A-CF06-4F4D-8DB8-DD26C2******</p>
@@ -34,6 +40,9 @@ public class DescribePolarClawTaskResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The task object.</p>
+     */
     @NameInMap("Task")
     public DescribePolarClawTaskResponseBodyTask task;
 
@@ -84,6 +93,8 @@ public class DescribePolarClawTaskResponseBody extends TeaModel {
 
     public static class DescribePolarClawTaskResponseBodyTaskError extends TeaModel {
         /**
+         * <p>The error code.</p>
+         * 
          * <strong>example:</strong>
          * <p>INVALID_REQUEST</p>
          */
@@ -91,6 +102,8 @@ public class DescribePolarClawTaskResponseBody extends TeaModel {
         public String code;
 
         /**
+         * <p>The error message.</p>
+         * 
          * <strong>example:</strong>
          * <p>channelId format invalid</p>
          */
@@ -122,16 +135,23 @@ public class DescribePolarClawTaskResponseBody extends TeaModel {
 
     public static class DescribePolarClawTaskResponseBodyTask extends TeaModel {
         /**
+         * <p>The timestamp when the task was created, in milliseconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>1778564698304</p>
          */
         @NameInMap("CreatedAtMs")
         public Long createdAtMs;
 
+        /**
+         * <p>The error object. This parameter is returned only if the task fails.</p>
+         */
         @NameInMap("Error")
         public DescribePolarClawTaskResponseBodyTaskError error;
 
         /**
+         * <p>The operation name.</p>
+         * 
          * <strong>example:</strong>
          * <p>LoginPolarClawChannel</p>
          */
@@ -139,6 +159,8 @@ public class DescribePolarClawTaskResponseBody extends TeaModel {
         public String operation;
 
         /**
+         * <p>The task result object. This parameter is returned only if the task succeeds. The content of this object varies by operation.</p>
+         * 
          * <strong>example:</strong>
          * <p>{}</p>
          */
@@ -146,6 +168,8 @@ public class DescribePolarClawTaskResponseBody extends TeaModel {
         public java.util.Map<String, ?> result;
 
         /**
+         * <p>The task state. Valid values: pending, running, succeeded, and failed.</p>
+         * 
          * <strong>example:</strong>
          * <p>running</p>
          */
@@ -153,6 +177,8 @@ public class DescribePolarClawTaskResponseBody extends TeaModel {
         public String state;
 
         /**
+         * <p>The task ID, which is a universally unique identifier (UUID).</p>
+         * 
          * <strong>example:</strong>
          * <p>5956e600-ce6e-4d11-9648-939ef3286e94</p>
          */
@@ -160,6 +186,8 @@ public class DescribePolarClawTaskResponseBody extends TeaModel {
         public String taskId;
 
         /**
+         * <p>The timestamp when the task was last updated, in milliseconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>1778564750541</p>
          */

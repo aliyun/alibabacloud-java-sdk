@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DeleteAIDBClusterDatasetRequest extends TeaModel {
     /**
+     * <p>The cluster ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>pc-**************</p>
      */
@@ -12,6 +14,7 @@ public class DeleteAIDBClusterDatasetRequest extends TeaModel {
     public String DBClusterId;
 
     /**
+     * <p>The dataset ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -27,6 +30,8 @@ public class DeleteAIDBClusterDatasetRequest extends TeaModel {
     public Long ownerId;
 
     /**
+     * <p>The region ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-beijing</p>
      */

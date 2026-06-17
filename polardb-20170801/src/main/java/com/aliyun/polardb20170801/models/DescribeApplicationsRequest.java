@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeApplicationsRequest extends TeaModel {
     /**
+     * <p>A list of application IDs. If specified, this operation returns information only about the specified applications.</p>
+     * 
      * <strong>example:</strong>
      * <p>pa-**************</p>
      */
@@ -15,6 +17,8 @@ public class DescribeApplicationsRequest extends TeaModel {
     public String applicationTypes;
 
     /**
+     * <p>The ID of the PolarDB instance. If specified, this operation returns information only about applications associated with this instance.</p>
+     * 
      * <strong>example:</strong>
      * <p>pc-**************</p>
      */
@@ -22,6 +26,8 @@ public class DescribeApplicationsRequest extends TeaModel {
     public String DBClusterId;
 
     /**
+     * <p>The page number. Default value: 1.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -29,6 +35,17 @@ public class DescribeApplicationsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries to return on each page. Valid values:</p>
+     * <ul>
+     * <li><p><strong>30</strong></p>
+     * </li>
+     * <li><p><strong>50</strong></p>
+     * </li>
+     * <li><p><strong>100</strong></p>
+     * </li>
+     * </ul>
+     * <p>Default value: <strong>30</strong>.</p>
+     * 
      * <strong>example:</strong>
      * <p>30</p>
      */
@@ -36,6 +53,7 @@ public class DescribeApplicationsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The ID of the region.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -44,6 +62,9 @@ public class DescribeApplicationsRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>A list of tags. A tag is a key-value pair.</p>
+     */
     @NameInMap("Tag")
     public java.util.List<DescribeApplicationsRequestTag> tag;
 
@@ -110,6 +131,8 @@ public class DescribeApplicationsRequest extends TeaModel {
 
     public static class DescribeApplicationsRequestTag extends TeaModel {
         /**
+         * <p>The key of the tag.</p>
+         * 
          * <strong>example:</strong>
          * <p>testKey</p>
          */
@@ -117,6 +140,8 @@ public class DescribeApplicationsRequest extends TeaModel {
         public String key;
 
         /**
+         * <p>The value of the tag.</p>
+         * 
          * <strong>example:</strong>
          * <p>testValue</p>
          */

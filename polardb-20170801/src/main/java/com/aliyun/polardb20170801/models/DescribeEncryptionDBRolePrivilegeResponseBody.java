@@ -5,16 +5,26 @@ import com.aliyun.tea.*;
 
 public class DescribeEncryptionDBRolePrivilegeResponseBody extends TeaModel {
     /**
+     * <p>The cluster ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>pc-****************</p>
      */
     @NameInMap("DBClusterId")
     public String DBClusterId;
 
+    /**
+     * <p>The result set.</p>
+     */
     @NameInMap("Data")
     public DescribeEncryptionDBRolePrivilegeResponseBodyData data;
 
     /**
+     * <p>The response message.</p>
+     * <blockquote>
+     * <p>If the request is successful, \<code>Successful\\</code> is returned. If the request fails, an error message, such as an error code, is returned.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>Successful</p>
      */
@@ -22,7 +32,7 @@ public class DescribeEncryptionDBRolePrivilegeResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>D0CEC6AC-7760-409A-A0D5-E6CD86******</p>
@@ -31,6 +41,14 @@ public class DescribeEncryptionDBRolePrivilegeResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <ul>
+     * <li><p><strong>true</strong>: The request was successful.</p>
+     * </li>
+     * <li><p><strong>false</strong>: The request failed.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -84,6 +102,8 @@ public class DescribeEncryptionDBRolePrivilegeResponseBody extends TeaModel {
 
     public static class DescribeEncryptionDBRolePrivilegeResponseBodyDataRolePrivilegeList extends TeaModel {
         /**
+         * <p>The regular users.</p>
+         * 
          * <strong>example:</strong>
          * <p>[alton01]</p>
          */
@@ -91,6 +111,8 @@ public class DescribeEncryptionDBRolePrivilegeResponseBody extends TeaModel {
         public String encryption;
 
         /**
+         * <p>Other users.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -98,6 +120,8 @@ public class DescribeEncryptionDBRolePrivilegeResponseBody extends TeaModel {
         public String negation;
 
         /**
+         * <p>The privileged users.</p>
+         * 
          * <strong>example:</strong>
          * <p>[alton]</p>
          */
@@ -105,6 +129,8 @@ public class DescribeEncryptionDBRolePrivilegeResponseBody extends TeaModel {
         public String notEncryption;
 
         /**
+         * <p>The name of the role permission.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -151,6 +177,9 @@ public class DescribeEncryptionDBRolePrivilegeResponseBody extends TeaModel {
     }
 
     public static class DescribeEncryptionDBRolePrivilegeResponseBodyData extends TeaModel {
+        /**
+         * <p>A list of role access policies.</p>
+         */
         @NameInMap("RolePrivilegeList")
         public java.util.List<DescribeEncryptionDBRolePrivilegeResponseBodyDataRolePrivilegeList> rolePrivilegeList;
 

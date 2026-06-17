@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ModifyEncryptionDBSecretResponseBody extends TeaModel {
     /**
+     * <p>The cluster ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>pc-***************</p>
      */
@@ -12,6 +14,11 @@ public class ModifyEncryptionDBSecretResponseBody extends TeaModel {
     public String DBClusterId;
 
     /**
+     * <p>The returned message.</p>
+     * <blockquote>
+     * <p>If the request is successful, \<code>Successful\\</code> is returned. If the request fails, an error message is returned, such as an error code.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>Successful</p>
      */
@@ -19,7 +26,7 @@ public class ModifyEncryptionDBSecretResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>4CE6DF97-AEA4-484F-906F-C407EE******</p>
@@ -28,6 +35,14 @@ public class ModifyEncryptionDBSecretResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <ul>
+     * <li><p><strong>true</strong></p>
+     * </li>
+     * <li><p><strong>false</strong></p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

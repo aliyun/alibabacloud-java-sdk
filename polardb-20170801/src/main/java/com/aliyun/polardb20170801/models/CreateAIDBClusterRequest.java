@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateAIDBClusterRequest extends TeaModel {
     /**
+     * <p>Specifies whether the cluster is managed by an ACK cluster.</p>
+     * 
      * <strong>example:</strong>
      * <p>yes</p>
      */
@@ -12,6 +14,18 @@ public class CreateAIDBClusterRequest extends TeaModel {
     public String ackAdmin;
 
     /**
+     * <p>Specifies whether to enable auto-renewal. Valid values:</p>
+     * <ul>
+     * <li><p><strong>true</strong>: Auto-renewal is enabled.</p>
+     * </li>
+     * <li><p><strong>false</strong>: Auto-renewal is disabled.</p>
+     * </li>
+     * </ul>
+     * <p>Default value: <strong>false</strong>.</p>
+     * <blockquote>
+     * <p>This parameter takes effect only when <strong>PayType</strong> is set to <strong>Prepaid</strong>.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -19,16 +33,23 @@ public class CreateAIDBClusterRequest extends TeaModel {
     public String autoRenew;
 
     /**
+     * <p>Specifies whether to automatically use a coupon. Valid values:</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
     @NameInMap("AutoUseCoupon")
     public Boolean autoUseCoupon;
 
+    /**
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
+     * <p>The description of the cluster. You can use the description to perform a fuzzy search.</p>
+     * 
      * <strong>example:</strong>
      * <p>test</p>
      */
@@ -36,6 +57,8 @@ public class CreateAIDBClusterRequest extends TeaModel {
     public String DBClusterDescription;
 
     /**
+     * <p>The ID of the PolarDB cluster that the application depends on.</p>
+     * 
      * <strong>example:</strong>
      * <p>pc-******************</p>
      */
@@ -43,6 +66,7 @@ public class CreateAIDBClusterRequest extends TeaModel {
     public String DBClusterId;
 
     /**
+     * <p>The node specification.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -52,6 +76,8 @@ public class CreateAIDBClusterRequest extends TeaModel {
     public String DBNodeClass;
 
     /**
+     * <p>The extension.</p>
+     * 
      * <strong>example:</strong>
      * <p>maas</p>
      */
@@ -59,6 +85,8 @@ public class CreateAIDBClusterRequest extends TeaModel {
     public String extension;
 
     /**
+     * <p>The inference engine.</p>
+     * 
      * <strong>example:</strong>
      * <p>sglang</p>
      */
@@ -66,6 +94,8 @@ public class CreateAIDBClusterRequest extends TeaModel {
     public String inferenceEngine;
 
     /**
+     * <p>The Container Service for Kubernetes (ACK) cluster ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>xxxxxxxxxxxxxxxxxxxxxxx</p>
      */
@@ -73,6 +103,8 @@ public class CreateAIDBClusterRequest extends TeaModel {
     public String kubeClusterId;
 
     /**
+     * <p>The Kubernetes configuration.</p>
+     * 
      * <strong>example:</strong>
      * <p>xxx</p>
      */
@@ -80,6 +112,8 @@ public class CreateAIDBClusterRequest extends TeaModel {
     public String kubeConfig;
 
     /**
+     * <p>The management mode of the Kubernetes cluster.</p>
+     * 
      * <strong>example:</strong>
      * <p>self_k8s</p>
      */
@@ -87,7 +121,7 @@ public class CreateAIDBClusterRequest extends TeaModel {
     public String kubeManagement;
 
     /**
-     * <p>aideploy</p>
+     * <p>The type of the Kubernetes deployment.</p>
      * 
      * <strong>example:</strong>
      * <p>aideploy</p>
@@ -96,6 +130,8 @@ public class CreateAIDBClusterRequest extends TeaModel {
     public String kubeType;
 
     /**
+     * <p>The Kubernetes configuration.</p>
+     * 
      * <strong>example:</strong>
      * <p>xxx</p>
      */
@@ -103,6 +139,8 @@ public class CreateAIDBClusterRequest extends TeaModel {
     public String kubernetesConfig;
 
     /**
+     * <p>The management mode.</p>
+     * 
      * <strong>example:</strong>
      * <p>ack</p>
      */
@@ -113,8 +151,8 @@ public class CreateAIDBClusterRequest extends TeaModel {
      * <strong>example:</strong>
      * <p>Qwen3-30B-A3B</p>
      */
-    @NameInMap("ModeName")
-    public String modeName;
+    @NameInMap("ModelName")
+    public String modelName;
 
     @NameInMap("OwnerAccount")
     public String ownerAccount;
@@ -123,6 +161,8 @@ public class CreateAIDBClusterRequest extends TeaModel {
     public Long ownerId;
 
     /**
+     * <p>The password.</p>
+     * 
      * <strong>example:</strong>
      * <p>xxx</p>
      */
@@ -130,6 +170,13 @@ public class CreateAIDBClusterRequest extends TeaModel {
     public String password;
 
     /**
+     * <p>The billing method. Valid values:</p>
+     * <ul>
+     * <li><p><strong>Postpaid</strong>: pay-as-you-go.</p>
+     * </li>
+     * <li><p><strong>Prepaid</strong>: subscription.</p>
+     * </li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -139,6 +186,14 @@ public class CreateAIDBClusterRequest extends TeaModel {
     public String payType;
 
     /**
+     * <p>The unit of the subscription duration. This parameter is required if <strong>PayType</strong> is set to <strong>Prepaid</strong>. Valid values:</p>
+     * <ul>
+     * <li><p><strong>Year</strong></p>
+     * </li>
+     * <li><p><strong>Month</strong></p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>5</p>
      */
@@ -146,6 +201,14 @@ public class CreateAIDBClusterRequest extends TeaModel {
     public String period;
 
     /**
+     * <p>The coupon code. If you do not specify this parameter, the default coupon is used.</p>
+     * <ul>
+     * <li><p>true (default): Use a coupon.</p>
+     * </li>
+     * <li><p>false: Do not use a coupon.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>727xxxxxx934</p>
      */
@@ -153,6 +216,7 @@ public class CreateAIDBClusterRequest extends TeaModel {
     public String promotionCode;
 
     /**
+     * <p>The region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -168,6 +232,8 @@ public class CreateAIDBClusterRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
+     * <p>The security group ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>sg-bp**************</p>
      */
@@ -175,6 +241,8 @@ public class CreateAIDBClusterRequest extends TeaModel {
     public String securityGroupId;
 
     /**
+     * <p>The storage space. Unit: GB.</p>
+     * 
      * <strong>example:</strong>
      * <p>1024</p>
      */
@@ -182,16 +250,29 @@ public class CreateAIDBClusterRequest extends TeaModel {
     public Integer storageSpace;
 
     /**
+     * <p>The storage type.</p>
+     * 
      * <strong>example:</strong>
      * <p>essdpl0</p>
      */
     @NameInMap("StorageType")
     public String storageType;
 
+    /**
+     * <p>The billing intervals for the pay-as-you-go cluster.</p>
+     */
     @NameInMap("TimeSlices")
     public java.util.List<CreateAIDBClusterRequestTimeSlices> timeSlices;
 
     /**
+     * <p>The subscription duration. This parameter is required if <strong>PayType</strong> is set to <strong>Prepaid</strong>.</p>
+     * <ul>
+     * <li><p>If <strong>Period</strong> is set to <strong>Month</strong>, the value of <strong>UsedTime</strong> must be an integer from <code>[1-9]</code>.</p>
+     * </li>
+     * <li><p>If <strong>Period</strong> is set to <strong>Year</strong>, the value of <strong>UsedTime</strong> must be an integer from <code>[1-3]</code>.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -199,6 +280,7 @@ public class CreateAIDBClusterRequest extends TeaModel {
     public String usedTime;
 
     /**
+     * <p>The virtual private cloud (VPC) ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -208,6 +290,7 @@ public class CreateAIDBClusterRequest extends TeaModel {
     public String VPCId;
 
     /**
+     * <p>The vSwitch ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -217,6 +300,8 @@ public class CreateAIDBClusterRequest extends TeaModel {
     public String vSwitchId;
 
     /**
+     * <p>The availability zone ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-beijing-i</p>
      */
@@ -348,12 +433,12 @@ public class CreateAIDBClusterRequest extends TeaModel {
         return this.managementMode;
     }
 
-    public CreateAIDBClusterRequest setModeName(String modeName) {
-        this.modeName = modeName;
+    public CreateAIDBClusterRequest setModelName(String modelName) {
+        this.modelName = modelName;
         return this;
     }
-    public String getModeName() {
-        return this.modeName;
+    public String getModelName() {
+        return this.modelName;
     }
 
     public CreateAIDBClusterRequest setOwnerAccount(String ownerAccount) {
@@ -494,6 +579,8 @@ public class CreateAIDBClusterRequest extends TeaModel {
 
     public static class CreateAIDBClusterRequestTimeSlices extends TeaModel {
         /**
+         * <p>The start time of the billing interval. The time is in the YYYY-MM-DDThh:mm:ssZ format. The time is displayed in UTC.</p>
+         * 
          * <strong>example:</strong>
          * <p>1758729600</p>
          */
@@ -501,6 +588,8 @@ public class CreateAIDBClusterRequest extends TeaModel {
         public Long beginTime;
 
         /**
+         * <p>The end time of the billing interval, which must be later than the start time. The time is in the YYYY-MM-DDThh:mm:ssZ format. The time is displayed in UTC.</p>
+         * 
          * <strong>example:</strong>
          * <p>1758733200</p>
          */

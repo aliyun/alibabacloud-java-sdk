@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class CreateAINodesResponseBody extends TeaModel {
     /**
+     * <p>The cluster ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>pm-xxxxxx</p>
      */
     @NameInMap("DBClusterId")
     public String DBClusterId;
 
+    /**
+     * <p>The IDs of the created DB nodes.</p>
+     */
     @NameInMap("DBNodeIds")
     public java.util.List<String> DBNodeIds;
 
     /**
+     * <p>The ID of the order.</p>
+     * 
      * <strong>example:</strong>
      * <p>2148126708*****</p>
      */
@@ -22,6 +29,8 @@ public class CreateAINodesResponseBody extends TeaModel {
     public String orderId;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>D0CEC6AC-7760-409A-A0D5-E6CD86******</p>
      */

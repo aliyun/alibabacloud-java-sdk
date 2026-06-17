@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeSlowLogsResponseBody extends TeaModel {
     /**
-     * <p>The ID of cluster.</p>
+     * <p>The cluster ID.</p>
      * 
      * <strong>example:</strong>
      * <p>pc-****************</p>
@@ -14,7 +14,7 @@ public class DescribeSlowLogsResponseBody extends TeaModel {
     public String DBClusterId;
 
     /**
-     * <p>The end date of the query.</p>
+     * <p>The end time of the query.</p>
      * 
      * <strong>example:</strong>
      * <p>2021-05-30Z</p>
@@ -23,7 +23,7 @@ public class DescribeSlowLogsResponseBody extends TeaModel {
     public String endTime;
 
     /**
-     * <p>The type of the database engine.</p>
+     * <p>The database engine.</p>
      * 
      * <strong>example:</strong>
      * <p>polardb_mysql</p>
@@ -35,7 +35,7 @@ public class DescribeSlowLogsResponseBody extends TeaModel {
     public DescribeSlowLogsResponseBodyItems items;
 
     /**
-     * <p>The number of the returned page.</p>
+     * <p>The page number.</p>
      * 
      * <strong>example:</strong>
      * <p>3</p>
@@ -44,7 +44,7 @@ public class DescribeSlowLogsResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of SQL statements that are returned on the current page.</p>
+     * <p>The number of SQL statements on the current page.</p>
      * 
      * <strong>example:</strong>
      * <p>6</p>
@@ -53,7 +53,7 @@ public class DescribeSlowLogsResponseBody extends TeaModel {
     public Integer pageRecordCount;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>2553A660-E4EB-4AF4-A402-8AFF70A49143</p>
@@ -62,7 +62,7 @@ public class DescribeSlowLogsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The start date of the query.</p>
+     * <p>The start time of the query.</p>
      * 
      * <strong>example:</strong>
      * <p>2021-05-01Z</p>
@@ -71,7 +71,7 @@ public class DescribeSlowLogsResponseBody extends TeaModel {
     public String startTime;
 
     /**
-     * <p>The total number of returned entries.</p>
+     * <p>The total number of records.</p>
      * 
      * <strong>example:</strong>
      * <p>5</p>

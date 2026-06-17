@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpgradePolarClawChannelRequest extends TeaModel {
     /**
+     * <p>The application ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,8 @@ public class UpgradePolarClawChannelRequest extends TeaModel {
     public String applicationId;
 
     /**
+     * <p>The channel configuration object.</p>
+     * 
      * <strong>example:</strong>
      * <p>{
      *     &quot;enabled&quot;: true,
@@ -28,6 +31,7 @@ public class UpgradePolarClawChannelRequest extends TeaModel {
     public java.util.Map<String, ?> channelConfig;
 
     /**
+     * <p>The channel ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -37,6 +41,8 @@ public class UpgradePolarClawChannelRequest extends TeaModel {
     public String channelId;
 
     /**
+     * <p>The npm package name of the channel plugin, including the version number.</p>
+     * 
      * <strong>example:</strong>
      * <p>@larksuite/<a href="mailto:openclaw-feishu@2026.4.7">openclaw-feishu@2026.4.7</a></p>
      */
@@ -44,6 +50,8 @@ public class UpgradePolarClawChannelRequest extends TeaModel {
     public String npmPackage;
 
     /**
+     * <p>The ID of the channel plugin.</p>
+     * 
      * <strong>example:</strong>
      * <p>openclaw-feishu</p>
      */
@@ -51,6 +59,8 @@ public class UpgradePolarClawChannelRequest extends TeaModel {
     public String pluginId;
 
     /**
+     * <p>Specifies whether to restart the gateway after the upgrade. The default value is <code>true</code>.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

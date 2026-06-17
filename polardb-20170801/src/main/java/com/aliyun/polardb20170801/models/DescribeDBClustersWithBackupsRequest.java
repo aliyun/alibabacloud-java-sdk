@@ -5,10 +5,12 @@ import com.aliyun.tea.*;
 
 public class DescribeDBClustersWithBackupsRequest extends TeaModel {
     /**
-     * <p>The name of the cluster. The name must meet the following requirements:</p>
+     * <p>The cluster name. The cluster name must meet the following requirements:</p>
      * <ul>
-     * <li>It cannot start with <code>http://</code> or <code>https://</code>.</li>
-     * <li>It must be 2 to 256 characters in length.</li>
+     * <li><p>It cannot start with <code>http://</code> or <code>https://</code>.</p>
+     * </li>
+     * <li><p>It must be 2 to 256 characters in length.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,7 +20,7 @@ public class DescribeDBClustersWithBackupsRequest extends TeaModel {
     public String DBClusterDescription;
 
     /**
-     * <p>The ID of the cluster. If you need to specify multiple cluster IDs, separate the cluster IDs with commas (,).</p>
+     * <p>The ID of the cluster. You can specify multiple cluster IDs. Separate the IDs with a comma (,).</p>
      * 
      * <strong>example:</strong>
      * <p>pc-**************</p>
@@ -27,11 +29,14 @@ public class DescribeDBClustersWithBackupsRequest extends TeaModel {
     public String DBClusterIds;
 
     /**
-     * <p>The type of the database engine. Valid values:</p>
+     * <p>The database engine type. Valid values:</p>
      * <ul>
-     * <li><strong>MySQL</strong></li>
-     * <li><strong>PostgreSQL</strong></li>
-     * <li><strong>Oracle</strong></li>
+     * <li><p><strong>MySQL</strong></p>
+     * </li>
+     * <li><p><strong>PostgreSQL</strong></p>
+     * </li>
+     * <li><p><strong>Oracle</strong></p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -41,22 +46,33 @@ public class DescribeDBClustersWithBackupsRequest extends TeaModel {
     public String DBType;
 
     /**
-     * <p>The version of the database engine.</p>
+     * <p>The database engine version.</p>
      * <ul>
-     * <li><p>Valid values for the MySQL database engine:</p>
+     * <li><p>Valid values for MySQL:</p>
      * <ul>
-     * <li><strong>5.6</strong></li>
-     * <li><strong>5.7</strong></li>
-     * <li><strong>8.0</strong></li>
+     * <li><p><strong>5.6</strong></p>
+     * </li>
+     * <li><p><strong>5.7</strong></p>
+     * </li>
+     * <li><p><strong>8.0</strong></p>
+     * </li>
      * </ul>
      * </li>
-     * <li><p>Valid values for the PostgreSQL database engine:</p>
+     * <li><p>Valid values for PostgreSQL:</p>
      * <ul>
-     * <li><strong>11</strong></li>
-     * <li><strong>14</strong></li>
+     * <li><p><strong>11</strong></p>
+     * </li>
+     * <li><p><strong>14</strong></p>
+     * </li>
      * </ul>
      * </li>
-     * <li><p>Valid value for the Oracle database engine: <strong>11</strong></p>
+     * <li><p>Valid values for Oracle:</p>
+     * <ul>
+     * <li><p><strong>11</strong></p>
+     * </li>
+     * <li><p><strong>14</strong></p>
+     * </li>
+     * </ul>
      * </li>
      * </ul>
      * 
@@ -69,8 +85,10 @@ public class DescribeDBClustersWithBackupsRequest extends TeaModel {
     /**
      * <p>Specifies whether the cluster is deleted. Valid values:</p>
      * <ul>
-     * <li><strong>0</strong>: not deleted</li>
-     * <li><strong>1</strong>: deleted</li>
+     * <li><p><strong>0</strong>: The cluster is not deleted.</p>
+     * </li>
+     * <li><p><strong>1</strong>: The cluster is deleted.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -86,7 +104,7 @@ public class DescribeDBClustersWithBackupsRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The number of the page to return. The value must be a positive integer that does not exceed the maximum value of the INTEGER data type. Default value: <strong>1</strong>.</p>
+     * <p>The page number. The value must be an integer that is greater than 0 and does not exceed the maximum value of the Integer data type. Default value: <strong>1</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -95,11 +113,14 @@ public class DescribeDBClustersWithBackupsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page. Valid values:</p>
+     * <p>The number of records on each page. Valid values:</p>
      * <ul>
-     * <li><strong>30</strong></li>
-     * <li><strong>50</strong></li>
-     * <li><strong>100</strong></li>
+     * <li><p><strong>30</strong></p>
+     * </li>
+     * <li><p><strong>50</strong></p>
+     * </li>
+     * <li><p><strong>100</strong></p>
+     * </li>
      * </ul>
      * <p>Default value: 30.</p>
      * 
@@ -110,9 +131,9 @@ public class DescribeDBClustersWithBackupsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The region ID of the cluster.</p>
+     * <p>The region ID.</p>
      * <blockquote>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/98041.html">DescribeRegions</a> operation to query information about regions.</p>
+     * <p>Call the <a href="https://help.aliyun.com/document_detail/98041.html">DescribeRegions</a> operation to view details about regions.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -123,7 +144,7 @@ public class DescribeDBClustersWithBackupsRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of the resource group.</p>
+     * <p>The resource group ID.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-************</p>

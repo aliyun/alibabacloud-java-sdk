@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeAIDBClusterTaskLogFilesRequest extends TeaModel {
     /**
+     * <p>The ID of the model operator instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class DescribeAIDBClusterTaskLogFilesRequest extends TeaModel {
     public String DBClusterId;
 
     /**
+     * <p>The end of the time range to query. The time is in the <code>yyyy-MM-ddTHH:mm:ssZ</code> format and is displayed in UTC.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,10 @@ public class DescribeAIDBClusterTaskLogFilesRequest extends TeaModel {
     public String endTime;
 
     /**
+     * <p>The log type. Set the value to:</p>
+     * <ul>
+     * <li><strong>sls</strong></li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -32,6 +38,8 @@ public class DescribeAIDBClusterTaskLogFilesRequest extends TeaModel {
     public String logType;
 
     /**
+     * <p>The page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -39,6 +47,9 @@ public class DescribeAIDBClusterTaskLogFilesRequest extends TeaModel {
     public Long pageNumber;
 
     /**
+     * <p>The number of records to return on each page. Valid values: <strong>30</strong>, <strong>50</strong>, and <strong>100</strong>.</p>
+     * <p>The default value is <strong>100</strong>.</p>
+     * 
      * <strong>example:</strong>
      * <p>100</p>
      */
@@ -46,6 +57,8 @@ public class DescribeAIDBClusterTaskLogFilesRequest extends TeaModel {
     public Long pageSize;
 
     /**
+     * <p>The ID of the PolarDB cluster.</p>
+     * 
      * <strong>example:</strong>
      * <p>pc-bp10ze***</p>
      */
@@ -53,6 +66,8 @@ public class DescribeAIDBClusterTaskLogFilesRequest extends TeaModel {
     public String relativeDBClusterId;
 
     /**
+     * <p>Specifies whether to return the results in reverse order. The default value is <em>false</em>.</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -60,6 +75,7 @@ public class DescribeAIDBClusterTaskLogFilesRequest extends TeaModel {
     public Boolean reverse;
 
     /**
+     * <p>The start of the time range to query. The time is in the <code>yyyy-MM-ddTHH:mm:ssZ</code> format and is displayed in UTC.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

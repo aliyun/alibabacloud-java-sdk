@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyAIDBClusterDescriptionRequest extends TeaModel {
     /**
+     * <p>The cluster description.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class ModifyAIDBClusterDescriptionRequest extends TeaModel {
     public String DBClusterDescription;
 
     /**
+     * <p>The cluster ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

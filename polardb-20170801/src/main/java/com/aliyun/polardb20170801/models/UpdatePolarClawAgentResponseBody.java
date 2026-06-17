@@ -4,11 +4,14 @@ package com.aliyun.polardb20170801.models;
 import com.aliyun.tea.*;
 
 public class UpdatePolarClawAgentResponseBody extends TeaModel {
+    /**
+     * <p>The details of the updated agent.</p>
+     */
     @NameInMap("Agent")
     public UpdatePolarClawAgentResponseBodyAgent agent;
 
     /**
-     * <p>Agent ID</p>
+     * <p>The agent ID.</p>
      * 
      * <strong>example:</strong>
      * <p>main</p>
@@ -17,6 +20,8 @@ public class UpdatePolarClawAgentResponseBody extends TeaModel {
     public String agentId;
 
     /**
+     * <p>The application ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>pa-**************</p>
      */
@@ -24,6 +29,8 @@ public class UpdatePolarClawAgentResponseBody extends TeaModel {
     public String applicationId;
 
     /**
+     * <p>The response status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -31,6 +38,8 @@ public class UpdatePolarClawAgentResponseBody extends TeaModel {
     public Integer code;
 
     /**
+     * <p>The response message.</p>
+     * 
      * <strong>example:</strong>
      * <p>successful</p>
      */
@@ -38,7 +47,7 @@ public class UpdatePolarClawAgentResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>CDB3258F-B5DE-43C4-8935-CBA0CA******</p>
@@ -101,6 +110,8 @@ public class UpdatePolarClawAgentResponseBody extends TeaModel {
 
     public static class UpdatePolarClawAgentResponseBodyAgentIdentity extends TeaModel {
         /**
+         * <p>The path or content of the avatar.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -108,6 +119,8 @@ public class UpdatePolarClawAgentResponseBody extends TeaModel {
         public String avatar;
 
         /**
+         * <p>The avatar URL.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -115,6 +128,8 @@ public class UpdatePolarClawAgentResponseBody extends TeaModel {
         public String avatarUrl;
 
         /**
+         * <p>The identity\&quot;s Emoji identifier. This can be a Unicode code point, such as U+1F99E, or the Emoji character itself.</p>
+         * 
          * <strong>example:</strong>
          * <p>U+1F99E</p>
          */
@@ -122,6 +137,8 @@ public class UpdatePolarClawAgentResponseBody extends TeaModel {
         public String emoji;
 
         /**
+         * <p>The name of the identity.</p>
+         * 
          * <strong>example:</strong>
          * <p>PolarClaw</p>
          */
@@ -129,6 +146,8 @@ public class UpdatePolarClawAgentResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>The theme of the identity.</p>
+         * 
          * <strong>example:</strong>
          * <p>soul lobster</p>
          */
@@ -184,7 +203,7 @@ public class UpdatePolarClawAgentResponseBody extends TeaModel {
 
     public static class UpdatePolarClawAgentResponseBodyAgent extends TeaModel {
         /**
-         * <p>Agent ID</p>
+         * <p>The agent ID.</p>
          * 
          * <strong>example:</strong>
          * <p>main</p>
@@ -192,10 +211,15 @@ public class UpdatePolarClawAgentResponseBody extends TeaModel {
         @NameInMap("Id")
         public String id;
 
+        /**
+         * <p>The identity information of the agent.</p>
+         */
         @NameInMap("Identity")
         public UpdatePolarClawAgentResponseBodyAgentIdentity identity;
 
         /**
+         * <p>The display name of the agent.</p>
+         * 
          * <strong>example:</strong>
          * <p>PolarClaw</p>
          */
@@ -203,6 +227,8 @@ public class UpdatePolarClawAgentResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>The workspace path.</p>
+         * 
          * <strong>example:</strong>
          * <p>/home/node/.openclaw/workspace-work-v2</p>
          */

@@ -7,8 +7,10 @@ public class DescribePendingMaintenanceActionRequest extends TeaModel {
     /**
      * <p>Specifies whether to return the historical tasks. Valid values:</p>
      * <ul>
-     * <li><strong>0</strong>: returns the current task.</li>
-     * <li><strong>1</strong>: returns the historical tasks.</li>
+     * <li><p><strong>0</strong>: returns the current task.</p>
+     * </li>
+     * <li><p><strong>1</strong>: returns the historical tasks.</p>
+     * </li>
      * </ul>
      * <p>Default value: <strong>0</strong>.</p>
      * 
@@ -47,8 +49,10 @@ public class DescribePendingMaintenanceActionRequest extends TeaModel {
      * <p>The region ID of the pending event. You can call the <a href="https://help.aliyun.com/document_detail/98041.html">DescribeRegions</a> operation to query the regions and zones that are supported by PolarDB.</p>
      * <blockquote>
      * <ul>
-     * <li>You can set this parameter to <strong>all</strong> to view all pending events within your account.</li>
-     * <li>If you set <code>Region</code> to <strong>all</strong>, you must set <code>TaskType</code> to <strong>all</strong>.</li>
+     * <li><p>You can set this parameter to <strong>all</strong> to view all pending events within your account.</p>
+     * </li>
+     * <li><p>If you set <code>Region</code> to <strong>all</strong>, you must set <code>TaskType</code> to <strong>all</strong>.</p>
+     * </li>
      * </ul>
      * </blockquote>
      * <p>This parameter is required.</p>
@@ -80,11 +84,16 @@ public class DescribePendingMaintenanceActionRequest extends TeaModel {
     /**
      * <p>The task type of pending events. Valid values:</p>
      * <ul>
-     * <li><strong>DatabaseSoftwareUpgrading</strong>: database software upgrades</li>
-     * <li><strong>DatabaseHardwareMaintenance</strong>: hardware maintenance and upgrades</li>
-     * <li><strong>DatabaseStorageUpgrading</strong>: database storage upgrades</li>
-     * <li><strong>DatabaseProxyUpgrading</strong>: minor version upgrades of the proxy</li>
-     * <li><strong>all</strong>: queries the details of the pending events of all preceding types.</li>
+     * <li><p><strong>DatabaseSoftwareUpgrading</strong>: database software upgrades</p>
+     * </li>
+     * <li><p><strong>DatabaseHardwareMaintenance</strong>: hardware maintenance and upgrades</p>
+     * </li>
+     * <li><p><strong>DatabaseStorageUpgrading</strong>: database storage upgrades</p>
+     * </li>
+     * <li><p><strong>DatabaseProxyUpgrading</strong>: minor version upgrades of the proxy</p>
+     * </li>
+     * <li><p><strong>all</strong>: returns pending events of all preceding types.</p>
+     * </li>
      * </ul>
      * <blockquote>
      * <p>If the <code>Region</code> parameter is set to <strong>all</strong>, the <code>TaskType</code> parameter must be set to <strong>all</strong>.</p>

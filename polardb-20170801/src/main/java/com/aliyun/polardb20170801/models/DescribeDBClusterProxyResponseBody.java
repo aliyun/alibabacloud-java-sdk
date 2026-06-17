@@ -4,10 +4,15 @@ package com.aliyun.polardb20170801.models;
 import com.aliyun.tea.*;
 
 public class DescribeDBClusterProxyResponseBody extends TeaModel {
+    /**
+     * <p>A list of network instances loaded by the Cloud Enterprise Network (CEN) instance.</p>
+     */
     @NameInMap("ChildInstances")
     public java.util.List<DescribeDBClusterProxyResponseBodyChildInstances> childInstances;
 
     /**
+     * <p>The proxy cluster ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>pe-xxxxxxxxx</p>
      */
@@ -15,6 +20,8 @@ public class DescribeDBClusterProxyResponseBody extends TeaModel {
     public String DBProxyClusterId;
 
     /**
+     * <p>The number of proxy nodes.</p>
+     * 
      * <strong>example:</strong>
      * <p>2</p>
      */
@@ -22,6 +29,8 @@ public class DescribeDBClusterProxyResponseBody extends TeaModel {
     public Long DBProxyClusterNum;
 
     /**
+     * <p>The status of the proxy cluster.</p>
+     * 
      * <strong>example:</strong>
      * <p>ClassChanging</p>
      */
@@ -29,6 +38,8 @@ public class DescribeDBClusterProxyResponseBody extends TeaModel {
     public String DBProxyClusterStatus;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>30E11ED2-C922-5B96-BCC6-11EE8C484AC6</p>
      */
@@ -82,6 +93,16 @@ public class DescribeDBClusterProxyResponseBody extends TeaModel {
 
     public static class DescribeDBClusterProxyResponseBodyChildInstances extends TeaModel {
         /**
+         * <p>The node specifications. For more information, see the following documents:</p>
+         * <ul>
+         * <li><p>PolarDB for MySQL: <a href="https://help.aliyun.com/document_detail/102542.html">Compute node specifications</a>.</p>
+         * </li>
+         * <li><p>PolarDB for Oracle: <a href="https://help.aliyun.com/document_detail/207921.html">Compute node specifications</a>.</p>
+         * </li>
+         * <li><p>PolarDB for PostgreSQL: <a href="https://help.aliyun.com/document_detail/209380.html">Compute node specifications</a>.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>polar.mysql.g4.medium</p>
          */
@@ -89,6 +110,8 @@ public class DescribeDBClusterProxyResponseBody extends TeaModel {
         public String DBNodeClass;
 
         /**
+         * <p>The private IP address of the database cluster node.</p>
+         * 
          * <strong>example:</strong>
          * <p>10.*.*10</p>
          */
@@ -96,6 +119,8 @@ public class DescribeDBClusterProxyResponseBody extends TeaModel {
         public String DBNodeIP;
 
         /**
+         * <p>The ID of the database cluster node.</p>
+         * 
          * <strong>example:</strong>
          * <p>pi-wz97h479y364g9du7</p>
          */
@@ -103,6 +128,8 @@ public class DescribeDBClusterProxyResponseBody extends TeaModel {
         public String DBNodeId;
 
         /**
+         * <p>The port of the database cluster node.</p>
+         * 
          * <strong>example:</strong>
          * <p>2450</p>
          */
@@ -110,6 +137,36 @@ public class DescribeDBClusterProxyResponseBody extends TeaModel {
         public String DBNodePort;
 
         /**
+         * <p>The status of the node. Valid values:</p>
+         * <ul>
+         * <li><p><strong>Creating</strong>: The node is being created.</p>
+         * </li>
+         * <li><p><strong>Running</strong>: The node is running.</p>
+         * </li>
+         * <li><p><strong>Deleting</strong>: The node is being deleted.</p>
+         * </li>
+         * <li><p><strong>Rebooting</strong>: The node is being restarted.</p>
+         * </li>
+         * <li><p><strong>DBNodeCreating</strong>: A node is being added.</p>
+         * </li>
+         * <li><p><strong>DBNodeDeleting</strong>: A node is being deleted.</p>
+         * </li>
+         * <li><p><strong>ClassChanging</strong>: The node specifications are being changed.</p>
+         * </li>
+         * <li><p><strong>NetAddressCreating</strong>: A network connection is being created.</p>
+         * </li>
+         * <li><p><strong>NetAddressDeleting</strong>: A network connection is being deleted.</p>
+         * </li>
+         * <li><p><strong>NetAddressModifying</strong>: A network connection is being modified.</p>
+         * </li>
+         * <li><p><strong>MinorVersionUpgrading</strong>: The minor version is being upgraded.</p>
+         * </li>
+         * <li><p><strong>Maintaining</strong>: The instance is being maintained.</p>
+         * </li>
+         * <li><p><strong>Switching</strong>: A switchover is in progress.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Running</p>
          */
@@ -117,6 +174,8 @@ public class DescribeDBClusterProxyResponseBody extends TeaModel {
         public String DBNodeStatus;
 
         /**
+         * <p>The hostname.</p>
+         * 
          * <strong>example:</strong>
          * <p>sh-lsf01-144-37</p>
          */

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class RemovePolarClawDevicePairResponseBody extends TeaModel {
     /**
+     * <p>The application ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>pa-**************</p>
      */
@@ -12,6 +14,8 @@ public class RemovePolarClawDevicePairResponseBody extends TeaModel {
     public String applicationId;
 
     /**
+     * <p>The response status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -19,6 +23,8 @@ public class RemovePolarClawDevicePairResponseBody extends TeaModel {
     public Integer code;
 
     /**
+     * <p>The device ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>device-mac-789</p>
      */
@@ -26,6 +32,8 @@ public class RemovePolarClawDevicePairResponseBody extends TeaModel {
     public String deviceId;
 
     /**
+     * <p>The response message.</p>
+     * 
      * <strong>example:</strong>
      * <p>successful</p>
      */
@@ -33,7 +41,7 @@ public class RemovePolarClawDevicePairResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>580EF224-9647-59E7-9950-D9EBFD6A2921</p>

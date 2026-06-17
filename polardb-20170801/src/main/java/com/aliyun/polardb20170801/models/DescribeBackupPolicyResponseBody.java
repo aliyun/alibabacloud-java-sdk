@@ -7,21 +7,46 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
     @NameInMap("AdvancedDataPolicies")
     public DescribeBackupPolicyResponseBodyAdvancedDataPolicies advancedDataPolicies;
 
+    /**
+     * <p>The advanced backup policy option. Valid values:</p>
+     * <ul>
+     * <li><p><strong>enable</strong>: Advanced backup is enabled.</p>
+     * </li>
+     * <li><p><strong>disable</strong>: Advanced backup is disabled. You can enable it.</p>
+     * </li>
+     * <li><p><strong>notSupport</strong>: Advanced backup is not supported.</p>
+     * </li>
+     * </ul>
+     * <blockquote>
+     * <ul>
+     * <li>This parameter is not supported by PolarDB for PostgreSQL (compatible with Oracle) and PolarDB for PostgreSQL.</li>
+     * </ul>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>disable</p>
+     */
     @NameInMap("AdvancedPolicyOption")
     public String advancedPolicyOption;
 
     /**
-     * <p>The backup frequency. Default value: Normal. Valid values:</p>
+     * <p>The backup frequency. Valid values:</p>
      * <ul>
-     * <li><strong>Normal</strong>: standard backup. The system backs up data once a day.</li>
-     * <li><strong>2/24H</strong>: enhanced backup. The system backs up data every 2 hours.</li>
-     * <li><strong>3/24H</strong>: enhanced backup. The system backs up data every 3 hours.</li>
-     * <li><strong>4/24H</strong>: enhanced backup. The system backs up data every 4 hours.</li>
+     * <li><p><strong>Normal</strong> (Default): Standard backup. A backup is performed once a day.</p>
+     * </li>
+     * <li><p><strong>2/24H</strong>: Enhanced backup. A backup is performed every 2 hours.</p>
+     * </li>
+     * <li><p><strong>3/24H</strong>: Enhanced backup. A backup is performed every 3 hours.</p>
+     * </li>
+     * <li><p><strong>4/24H</strong>: Enhanced backup. A backup is performed every 4 hours.</p>
+     * </li>
      * </ul>
      * <blockquote>
      * <ul>
-     * <li>If enhanced backup is enabled, all backups are retained for 24 hours. Backups are automatically deleted when the retention period ends. However, the system permanently retains the first backup that is created after 00:00 every day.</li>
-     * <li>If enhanced backup is enabled, <strong>PreferredBackupPeriod</strong> is automatically set to all days in a week (from Monday to Sunday).</li>
+     * <li><p>If you enable enhanced backup, all backups that are completed within 24 hours are retained. For backups that are completed more than 24 hours ago, the system retains only the first backup that is completed after 00:00 every day. Other backups are deleted.</p>
+     * </li>
+     * <li><p>If you enable enhanced backup, the <strong>PreferredBackupPeriod</strong> parameter is automatically set to all days of the week (Monday to Sunday).</p>
+     * </li>
      * </ul>
      * </blockquote>
      * 
@@ -31,15 +56,35 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
     @NameInMap("BackupFrequency")
     public String backupFrequency;
 
+    /**
+     * <p>The level of the backup policy. Valid values:</p>
+     * <ul>
+     * <li><p><strong>Normal</strong>: standard backup</p>
+     * </li>
+     * <li><p><strong>Advanced</strong>: advanced backup</p>
+     * </li>
+     * </ul>
+     * <blockquote>
+     * <ul>
+     * <li>This parameter is not supported by PolarDB for PostgreSQL (compatible with Oracle) and PolarDB for PostgreSQL.</li>
+     * </ul>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>Normal</p>
+     */
     @NameInMap("BackupPolicyLevel")
     public String backupPolicyLevel;
 
     /**
-     * <p>Indicates whether backups are retained when you delete a cluster. Valid values:</p>
+     * <p>The policy to retain backups when you delete a cluster:</p>
      * <ul>
-     * <li><strong>ALL</strong>: permanently retains all backups.</li>
-     * <li><strong>LATEST</strong>: permanently retains the most recent backup.</li>
-     * <li><strong>NONE</strong>: does not retain backups.</li>
+     * <li><p><strong>ALL</strong>: Retains all backups permanently.</p>
+     * </li>
+     * <li><p><strong>LATEST</strong>: Retains the last backup permanently.</p>
+     * </li>
+     * <li><p><strong>NONE</strong> (Default): Does not retain backup sets.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -49,17 +94,31 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
     public String backupRetentionPolicyOnClusterDeletion;
 
     /**
-     * <p>The backup frequency of level-1 backups. Default value: Normal. Valid values:</p>
+     * <p>The backup frequency. Valid values:</p>
      * <ul>
-     * <li><strong>Normal</strong>: standard backup. The system backs up data once a day.</li>
-     * <li><strong>2/24H</strong>: frequent backup. The system backs up data every 2 hours.</li>
-     * <li><strong>3/24H</strong>: frequent backup. The system backs up data every 3 hours.</li>
-     * <li><strong>4/24H</strong>: frequent backup. The system backs up data every 4 hours.</li>
+     * <li><p><strong>Normal</strong> (Default): Standard backup. A backup is performed once a day.</p>
+     * </li>
+     * <li><p><strong>2/24H</strong>: High-frequency backup. A backup is performed every 2 hours.</p>
+     * </li>
+     * <li><p><strong>3/24H</strong>: High-frequency backup. A backup is performed every 3 hours.</p>
+     * </li>
+     * <li><p><strong>4/24H</strong>: High-frequency backup. A backup is performed every 4 hours.</p>
+     * </li>
      * </ul>
      * <blockquote>
      * <ul>
-     * <li>This parameter is not supported for PolarDB for PostgreSQL (Compatible with Oracle) clusters or PolarDB for PostgreSQL clusters.</li>
-     * <li>This parameter is unavailable if the region where your PolarDB for MySQL cluster is deployed does not support the cross-region backup feature. For information about regions that support the cross-region backup feature, see <a href="https://help.aliyun.com/document_detail/72672.html">Overview</a>.</li>
+     * <li><ul>
+     * <li>This parameter is not supported by PolarDB for PostgreSQL (compatible with Oracle) and PolarDB for PostgreSQL.</li>
+     * </ul>
+     * </li>
+     * <li><ul>
+     * <li>This parameter is not supported if the cross-region backup feature is unavailable in the region where your PolarDB for MySQL cluster resides. For more information about the regions that support cross-region backup, see <a href="https://help.aliyun.com/document_detail/72672.html">Overview</a>.</li>
+     * </ul>
+     * </li>
+     * <li><ul>
+     * <li>This parameter is not recommended if the advanced backup feature is enabled. Use the AdvancedDataPolicies parameter instead.</li>
+     * </ul>
+     * </li>
      * </ul>
      * </blockquote>
      * 
@@ -70,21 +129,41 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
     public String dataLevel1BackupFrequency;
 
     /**
-     * <p>The backup cycle of level-1 backups. Valid values:</p>
+     * <p>The cycle of a level-1 backup. Valid values:</p>
      * <ul>
-     * <li><strong>Monday</strong></li>
-     * <li><strong>Tuesday</strong></li>
-     * <li><strong>Wednesday</strong></li>
-     * <li><strong>Thursday</strong></li>
-     * <li><strong>Friday</strong></li>
-     * <li><strong>Saturday</strong></li>
-     * <li><strong>Sunday</strong></li>
+     * <li><p><strong>Monday</strong></p>
+     * </li>
+     * <li><p><strong>Tuesday</strong></p>
+     * </li>
+     * <li><p><strong>Wednesday</strong></p>
+     * </li>
+     * <li><p><strong>Thursday</strong></p>
+     * </li>
+     * <li><p><strong>Friday</strong></p>
+     * </li>
+     * <li><p><strong>Saturday</strong></p>
+     * </li>
+     * <li><p><strong>Sunday</strong></p>
+     * </li>
      * </ul>
      * <blockquote>
      * <ul>
-     * <li>You need to specify at least two values. Separate multiple values with commas (,).</li>
-     * <li>This parameter is not supported for PolarDB for PostgreSQL (Compatible with Oracle) clusters or PolarDB for PostgreSQL clusters.</li>
-     * <li>This parameter is unavailable if the region where your PolarDB for MySQL cluster is deployed does not support the cross-region backup feature. For information about regions that support the cross-region backup feature, see <a href="https://help.aliyun.com/document_detail/72672.html">Overview</a>.</li>
+     * <li><ul>
+     * <li>Select at least two days. Separate multiple values with commas (,).</li>
+     * </ul>
+     * </li>
+     * <li><ul>
+     * <li>This parameter is not supported by PolarDB for PostgreSQL (compatible with Oracle) and PolarDB for PostgreSQL.</li>
+     * </ul>
+     * </li>
+     * <li><ul>
+     * <li>This parameter is not supported if the cross-region backup feature is unavailable in the region where your PolarDB for MySQL cluster resides. For more information about the regions that support cross-region backup, see <a href="https://help.aliyun.com/document_detail/72672.html">Overview</a>.</li>
+     * </ul>
+     * </li>
+     * <li><ul>
+     * <li>This parameter is not recommended if the advanced backup feature is enabled. Use the AdvancedDataPolicies parameter instead.</li>
+     * </ul>
+     * </li>
      * </ul>
      * </blockquote>
      * 
@@ -95,7 +174,10 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
     public String dataLevel1BackupPeriod;
 
     /**
-     * <p>The retention period of level-1 backups. Valid values: 3 to 14. Unit: day.</p>
+     * <p>The retention period of level-1 backups. Valid values: 3 to 14. Unit: days.</p>
+     * <blockquote>
+     * <p>This parameter is not recommended if the advanced backup feature is enabled. Use the AdvancedDataPolicies parameter instead.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>7</p>
@@ -104,11 +186,13 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
     public String dataLevel1BackupRetentionPeriod;
 
     /**
-     * <p>The period of time during which automatic backup is performed. The value must be in the <code>hh:mmZ-hh:mmZ</code> format. The time must be in UTC. The start time and the end time must be on the hour and must have an interval of 1 hour. Example: <code>14:00Z-15:00Z</code>.</p>
+     * <p>The time range when an automatic backup is performed. The time is in the <code>hh:mmZ-hh:mmZ</code> format and is displayed in UTC. The specified time range must be a 1-hour interval on the hour, such as <code>14:00Z-15:00Z</code>.</p>
      * <blockquote>
      * <ul>
-     * <li>This parameter is not supported for PolarDB for PostgreSQL (Compatible with Oracle) clusters or PolarDB for PostgreSQL clusters.</li>
-     * <li>This parameter is unavailable if the region where your PolarDB for MySQL cluster is deployed does not support the cross-region backup feature. For information about regions that support the cross-region backup feature, see <a href="https://help.aliyun.com/document_detail/72672.html">Overview</a>.</li>
+     * <li><p>This parameter is not supported by PolarDB for PostgreSQL (compatible with Oracle) and PolarDB for PostgreSQL.</p>
+     * </li>
+     * <li><p>This parameter is not supported if the cross-region backup feature is unavailable in the region where your PolarDB for MySQL cluster resides. For more information about the regions that support cross-region backup, see <a href="https://help.aliyun.com/document_detail/72672.html">Overview</a>.</p>
+     * </li>
      * </ul>
      * </blockquote>
      * 
@@ -119,7 +203,10 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
     public String dataLevel1BackupTime;
 
     /**
-     * <p>The region where the cross-region level-2 backup is stored. For information about regions that support the cross-region backup feature, see <a href="https://help.aliyun.com/document_detail/72672.html">Overview</a>.</p>
+     * <p>The destination region of the cross-region level-2 backup. For more information about the regions that support cross-region backup, see <a href="https://help.aliyun.com/document_detail/72672.html">Overview</a>.</p>
+     * <blockquote>
+     * <p>This parameter is not recommended if the advanced backup feature is enabled. Use the AdvancedDataPolicies parameter instead.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -130,12 +217,24 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
     /**
      * <p>The retention period of cross-region level-2 backups. Valid values:</p>
      * <ul>
-     * <li><strong>0</strong>: The cross-region level-2 backup feature is disabled.</li>
-     * <li><strong>30 to 7300</strong>: Cross-region level-2 backups are retained for 30 to 7,300 days.</li>
-     * <li><strong>1</strong>: Cross-region level-2 backups are retained for a long period of time.</li>
+     * <li><p><strong>0</strong>: The level-2 backup feature is disabled.</p>
+     * </li>
+     * <li><p><strong>30 to 7300</strong>: The retention period of level-2 backups in days.</p>
+     * </li>
+     * <li><p><strong>-1</strong>: The level-2 backups are permanently retained.</p>
+     * </li>
      * </ul>
      * <blockquote>
-     * <p> The default value of the parameter is <strong>0</strong>.</p>
+     * <ul>
+     * <li><ul>
+     * <li>When you create a cluster, the default value is <strong>0</strong>. This means the cross-region backup feature for level-2 backups is disabled.</li>
+     * </ul>
+     * </li>
+     * <li><ul>
+     * <li>This parameter is not recommended if the advanced backup feature is enabled. Use the AdvancedDataPolicies parameter instead.</li>
+     * </ul>
+     * </li>
+     * </ul>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -145,21 +244,41 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
     public String dataLevel2BackupAnotherRegionRetentionPeriod;
 
     /**
-     * <p>The backup cycle of level-2 backups. Valid values:</p>
+     * <p>The cycle of a level-2 backup. Valid values:</p>
      * <ul>
-     * <li><strong>Monday</strong></li>
-     * <li><strong>Tuesday</strong></li>
-     * <li><strong>Wednesday</strong></li>
-     * <li><strong>Thursday</strong></li>
-     * <li><strong>Friday</strong></li>
-     * <li><strong>Saturday</strong></li>
-     * <li><strong>Sunday</strong></li>
+     * <li><p><strong>Monday</strong></p>
+     * </li>
+     * <li><p><strong>Tuesday</strong></p>
+     * </li>
+     * <li><p><strong>Wednesday</strong></p>
+     * </li>
+     * <li><p><strong>Thursday</strong></p>
+     * </li>
+     * <li><p><strong>Friday</strong></p>
+     * </li>
+     * <li><p><strong>Saturday</strong></p>
+     * </li>
+     * <li><p><strong>Sunday</strong></p>
+     * </li>
      * </ul>
      * <blockquote>
      * <ul>
-     * <li>You need to specify at least two values. Separate multiple values with commas (,).</li>
-     * <li>This parameter is not supported for PolarDB for PostgreSQL (Compatible with Oracle) clusters or PolarDB for PostgreSQL clusters.</li>
-     * <li>This parameter is unavailable if the region where your PolarDB for MySQL cluster is deployed does not support the cross-region backup feature. For information about regions that support the cross-region backup feature, see <a href="https://help.aliyun.com/document_detail/72672.html">Overview</a>.</li>
+     * <li><ul>
+     * <li>Select at least two days. Separate multiple values with commas (,).</li>
+     * </ul>
+     * </li>
+     * <li><ul>
+     * <li>This parameter is not supported by PolarDB for PostgreSQL (compatible with Oracle) and PolarDB for PostgreSQL.</li>
+     * </ul>
+     * </li>
+     * <li><ul>
+     * <li>This parameter is not supported if the cross-region backup feature is unavailable in the region where your PolarDB for MySQL cluster resides. For more information about the regions that support cross-region backup, see <a href="https://help.aliyun.com/document_detail/72672.html">Overview</a>.</li>
+     * </ul>
+     * </li>
+     * <li><ul>
+     * <li>This parameter is not recommended if the advanced backup feature is enabled. Use the AdvancedDataPolicies parameter instead.</li>
+     * </ul>
+     * </li>
      * </ul>
      * </blockquote>
      * 
@@ -172,12 +291,24 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
     /**
      * <p>The retention period of level-2 backups. Valid values:</p>
      * <ul>
-     * <li>0: The level-2 backup feature is disabled.</li>
-     * <li>30 to 7300: Level-2 backups are retained for 30 to 7,300 days.</li>
-     * <li>\-1: Level-2 backups are retained for a long period of time.</li>
+     * <li><p>0: The level-2 backup feature is disabled.</p>
+     * </li>
+     * <li><p>30 to 7300: The retention period of level-2 backups in days.</p>
+     * </li>
+     * <li><p>-1: The level-2 backups are permanently retained.</p>
+     * </li>
      * </ul>
      * <blockquote>
-     * <p> The default value of this parameter is <strong>0</strong>.</p>
+     * <ul>
+     * <li><ul>
+     * <li>When you create a cluster, the default value is <strong>0</strong>. This means the level-2 backup feature is disabled.</li>
+     * </ul>
+     * </li>
+     * <li><ul>
+     * <li>This parameter is not recommended if the advanced backup feature is enabled. Use the AdvancedDataPolicies parameter instead.</li>
+     * </ul>
+     * </li>
+     * </ul>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -189,14 +320,24 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
     /**
      * <p>The backup cycle. Valid values:</p>
      * <ul>
-     * <li>Monday</li>
-     * <li>Tuesday</li>
-     * <li>Wednesday</li>
-     * <li>Thursday</li>
-     * <li>Friday</li>
-     * <li>Saturday</li>
-     * <li>Sunday</li>
+     * <li><p>Monday</p>
+     * </li>
+     * <li><p>Tuesday</p>
+     * </li>
+     * <li><p>Wednesday</p>
+     * </li>
+     * <li><p>Thursday</p>
+     * </li>
+     * <li><p>Friday</p>
+     * </li>
+     * <li><p>Saturday</p>
+     * </li>
+     * <li><p>Sunday</p>
+     * </li>
      * </ul>
+     * <blockquote>
+     * <p>This parameter is not recommended if the advanced backup feature is enabled. Use the AdvancedDataPolicies parameter instead.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>Monday,Tuesday,Wednesday,Thursday,Friday,Saturday,Sunday</p>
@@ -205,7 +346,7 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
     public String preferredBackupPeriod;
 
     /**
-     * <p>The time period when automatic backups are performed. The format is <code>HH:mmZ-HH:mmZ</code>. The time is displayed in UTC.</p>
+     * <p>The time range when an automatic backup is performed. The time is in the <code>HH:mmZ-HH:mmZ</code> format. The time is displayed in UTC.</p>
      * 
      * <strong>example:</strong>
      * <p>07:00Z-08:00Z</p>
@@ -214,7 +355,7 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
     public String preferredBackupTime;
 
     /**
-     * <p>The time when the next automatic backup will be performed. The format is <code>YYYY-MM-DDThh:mmZ</code>. The time is displayed in UTC.</p>
+     * <p>The time of the next backup. The time is in the <code>YYYY-MM-DDThh:mmZ</code> format. The time is displayed in UTC.</p>
      * 
      * <strong>example:</strong>
      * <p>2020-11-16T07:30Z</p>
@@ -223,7 +364,7 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
     public String preferredNextBackupTime;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>EADFCE0F-9FB5-4685-B395-1440B******</p>

@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class RestoreTableRequest extends TeaModel {
     /**
-     * <p>The ID of the backup set.</p>
+     * <p>The backup set ID.</p>
      * <blockquote>
-     * <p> You must specify this parameter if you need to restore a database or a table by using a backup set. You can call the <a href="https://help.aliyun.com/document_detail/98102.html">DescribeBackups</a> operation to query the ID of the backup set.</p>
+     * <p>This parameter is required if you want to restore databases and tables from a backup set. Call the <a href="https://help.aliyun.com/document_detail/98102.html">DescribeBackups</a> operation to query backup set IDs.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -19,7 +19,7 @@ public class RestoreTableRequest extends TeaModel {
     /**
      * <p>The cluster ID.</p>
      * <blockquote>
-     * <p> You can call the <a href="https://help.aliyun.com/document_detail/98094.html">DescribeDBClusters</a> operation to query the details of all clusters within your account.</p>
+     * <p>Call the <a href="https://help.aliyun.com/document_detail/98094.html">DescribeDBClusters</a> operation to query the details of all clusters in your account.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -42,15 +42,15 @@ public class RestoreTableRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The point in time for the restoration. Specify the time in the ISO 8601 standard in the YYYY-MM-DDThh:mmZ format. The time must be in UTC.</p>
+     * <p>The point in time to which you want to restore data. Specify the time in the YYYY-MM-DDThh:mmZ format. The time must be in Coordinated Universal Time (UTC).</p>
      * <blockquote>
-     * </blockquote>
      * <ul>
-     * <li><p>You must specify this parameter if you need to restore the database or the table to a point in time.</p>
+     * <li><p>This parameter is required if you want to restore data to a specific point in time.</p>
      * </li>
-     * <li><p>You can restore your cluster to a particular time only over the past seven days.</p>
+     * <li><p>Data can be restored to any point in time within the last seven days.</p>
      * </li>
      * </ul>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>2020-10-04T01:40:00Z</p>
@@ -62,9 +62,10 @@ public class RestoreTableRequest extends TeaModel {
     public String securityToken;
 
     /**
-     * <p>The JSON string that contains the information of the database and the table that you want to restore. All values of the database and table information are of the string type. Example: <code>[ { &quot;tables&quot;:[ { &quot;name&quot;:&quot;testtb&quot;, &quot;type&quot;:&quot;table&quot;, &quot;newname&quot;:&quot;testtb_restore&quot; } ], &quot;name&quot;:&quot;testdb&quot;, &quot;type&quot;:&quot;db&quot;, &quot;newname&quot;:&quot;testdb_restore&quot; } ]</code>.</p>
+     * <p>A JSON string that specifies the destination databases and tables to restore. All values in the JSON string must be strings.
+     * For example: <code>[ { &quot;tables&quot;:[ { &quot;name&quot;:&quot;testtb&quot;, &quot;type&quot;:&quot;table&quot;, &quot;newname&quot;:&quot;testtb_restore&quot; } ], &quot;name&quot;:&quot;testdb&quot;, &quot;type&quot;:&quot;db&quot;, &quot;newname&quot;:&quot;testdb_restore&quot; } ]</code>.</p>
      * <blockquote>
-     * <p> You can call the <a href="https://help.aliyun.com/document_detail/194770.html">DescribeMetaList</a> operation to query the names and details of databases and tables that can be restored and enter their information into the corresponding locations in the preceding example.</p>
+     * <p>Call the <a href="https://help.aliyun.com/document_detail/194770.html">DescribeMetaList</a> operation to query the names of the databases and tables that can be restored. Then, enter the information into the example format.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 

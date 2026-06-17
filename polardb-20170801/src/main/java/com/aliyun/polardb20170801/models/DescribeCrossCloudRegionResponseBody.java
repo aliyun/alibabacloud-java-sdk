@@ -4,10 +4,15 @@ package com.aliyun.polardb20170801.models;
 import com.aliyun.tea.*;
 
 public class DescribeCrossCloudRegionResponseBody extends TeaModel {
+    /**
+     * <p>The information about the cross-cloud regions.</p>
+     */
     @NameInMap("CrossCloudRegionList")
     public java.util.List<DescribeCrossCloudRegionResponseBodyCrossCloudRegionList> crossCloudRegionList;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>E56531A4-E552-40BA-9C58-137B80******</p>
      */
@@ -37,6 +42,8 @@ public class DescribeCrossCloudRegionResponseBody extends TeaModel {
 
     public static class DescribeCrossCloudRegionResponseBodyCrossCloudRegionListCrossCloudZoneList extends TeaModel {
         /**
+         * <p>The ID of the third-party cloud zone.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-east-3-1</p>
          */
@@ -44,6 +51,8 @@ public class DescribeCrossCloudRegionResponseBody extends TeaModel {
         public String crossCloudZoneId;
 
         /**
+         * <p>The name of the third-party cloud zone.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-east-3-1</p>
          */
@@ -75,6 +84,8 @@ public class DescribeCrossCloudRegionResponseBody extends TeaModel {
 
     public static class DescribeCrossCloudRegionResponseBodyCrossCloudRegionList extends TeaModel {
         /**
+         * <p>The ID of the third-party cloud region.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-east-3</p>
          */
@@ -82,16 +93,23 @@ public class DescribeCrossCloudRegionResponseBody extends TeaModel {
         public String crossCloudRegionId;
 
         /**
+         * <p>The name of the third-party cloud region.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-east-3</p>
          */
         @NameInMap("CrossCloudRegionName")
         public String crossCloudRegionName;
 
+        /**
+         * <p>A list of third-party cloud zones.</p>
+         */
         @NameInMap("CrossCloudZoneList")
         public java.util.List<DescribeCrossCloudRegionResponseBodyCrossCloudRegionListCrossCloudZoneList> crossCloudZoneList;
 
         /**
+         * <p>The resource pool ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>pj-87681rbcef6******</p>
          */

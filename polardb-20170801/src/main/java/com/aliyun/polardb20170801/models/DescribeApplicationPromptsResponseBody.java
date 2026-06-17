@@ -4,10 +4,15 @@ package com.aliyun.polardb20170801.models;
 import com.aliyun.tea.*;
 
 public class DescribeApplicationPromptsResponseBody extends TeaModel {
+    /**
+     * <p>A list of Application Prompts.</p>
+     */
     @NameInMap("Items")
     public java.util.List<DescribeApplicationPromptsResponseBodyItems> items;
 
     /**
+     * <p>The page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -15,6 +20,8 @@ public class DescribeApplicationPromptsResponseBody extends TeaModel {
     public String pageNumber;
 
     /**
+     * <p>The number of entries on the current page.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -22,6 +29,8 @@ public class DescribeApplicationPromptsResponseBody extends TeaModel {
     public String pageRecordCount;
 
     /**
+     * <p>The Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>6BD9CDE4-5E7B-4BF3-9BB8-83C73E******</p>
      */
@@ -29,6 +38,8 @@ public class DescribeApplicationPromptsResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total number of matching entries.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -82,6 +93,8 @@ public class DescribeApplicationPromptsResponseBody extends TeaModel {
 
     public static class DescribeApplicationPromptsResponseBodyItems extends TeaModel {
         /**
+         * <p>Specifies whether the Prompt is enabled. A value of 1 indicates enabled, and 0 indicates disabled.</p>
+         * 
          * <strong>example:</strong>
          * <p>prompt if enabled</p>
          */
@@ -89,6 +102,8 @@ public class DescribeApplicationPromptsResponseBody extends TeaModel {
         public Integer promptEnabled;
 
         /**
+         * <p>The Prompt ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>papt-58z96zl691otf356o4</p>
          */
@@ -96,6 +111,8 @@ public class DescribeApplicationPromptsResponseBody extends TeaModel {
         public String promptId;
 
         /**
+         * <p>The Prompt Name.</p>
+         * 
          * <strong>example:</strong>
          * <p>prompt name</p>
          */
@@ -103,6 +120,8 @@ public class DescribeApplicationPromptsResponseBody extends TeaModel {
         public String promptName;
 
         /**
+         * <p>The Prompt Type.</p>
+         * 
          * <strong>example:</strong>
          * <p>DELETE_RELATIONS_SYSTEM_PROMPT</p>
          */
@@ -110,6 +129,8 @@ public class DescribeApplicationPromptsResponseBody extends TeaModel {
         public String promptType;
 
         /**
+         * <p>The Prompt Value.</p>
+         * 
          * <strong>example:</strong>
          * <p>prompt value</p>
          */

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ManuallyStartDBClusterRequest extends TeaModel {
     /**
-     * <p>The cluster ID.</p>
+     * <p>The ID of the cluster.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,9 +21,9 @@ public class ManuallyStartDBClusterRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID of the cluster.</p>
+     * <p>The ID of the region.</p>
      * <blockquote>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/98041.html">DescribeRegions</a> operation to query available regions.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/98041.html">DescribeRegions</a> operation to query the most recent region list.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

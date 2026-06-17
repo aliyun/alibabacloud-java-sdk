@@ -5,6 +5,15 @@ import com.aliyun.tea.*;
 
 public class DescribeUpgradeReportRequest extends TeaModel {
     /**
+     * <p>The product series. Valid values:</p>
+     * <ul>
+     * <li><p><strong>Normal</strong>: Cluster Edition (default)</p>
+     * </li>
+     * <li><p><strong>SENormal</strong>: Standard Edition</p>
+     * </li>
+     * </ul>
+     * <p>For more information, see <a href="https://help.aliyun.com/document_detail/183258.html">Product series</a>.</p>
+     * 
      * <strong>example:</strong>
      * <p>Normal</p>
      */
@@ -12,6 +21,14 @@ public class DescribeUpgradeReportRequest extends TeaModel {
     public String creationCategory;
 
     /**
+     * <p>The database type. Valid values:</p>
+     * <ul>
+     * <li><p><strong>MySQL</strong></p>
+     * </li>
+     * <li><p><strong>Oracle</strong></p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>MySQL</p>
      */
@@ -19,6 +36,8 @@ public class DescribeUpgradeReportRequest extends TeaModel {
     public String DBType;
 
     /**
+     * <p>The compatible database version.</p>
+     * 
      * <strong>example:</strong>
      * <p>8.0</p>
      */
@@ -32,6 +51,8 @@ public class DescribeUpgradeReportRequest extends TeaModel {
     public Long ownerId;
 
     /**
+     * <p>The page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -39,6 +60,8 @@ public class DescribeUpgradeReportRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>30</p>
      */
@@ -46,6 +69,11 @@ public class DescribeUpgradeReportRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The ID of the region.</p>
+     * <blockquote>
+     * <p>For more information, see <a href="https://help.aliyun.com/document_detail/98041.html">DescribeRegions</a>.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
      */
@@ -59,6 +87,8 @@ public class DescribeUpgradeReportRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
+     * <p>The ID of the source instance.</p>
+     * 
      * <strong>example:</strong>
      * <p>rm-2zen5pe5vi56447d0</p>
      */
@@ -66,6 +96,8 @@ public class DescribeUpgradeReportRequest extends TeaModel {
     public String sourceDBClusterId;
 
     /**
+     * <p>The task status.</p>
+     * 
      * <strong>example:</strong>
      * <p>Running</p>
      */
@@ -73,6 +105,8 @@ public class DescribeUpgradeReportRequest extends TeaModel {
     public String status;
 
     /**
+     * <p>The task ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>2321321</p>
      */
@@ -80,6 +114,8 @@ public class DescribeUpgradeReportRequest extends TeaModel {
     public String taskId;
 
     /**
+     * <p>A special metric. This parameter is supported only for instances that use the Tair architecture.</p>
+     * 
      * <strong>example:</strong>
      * <p>orca</p>
      */

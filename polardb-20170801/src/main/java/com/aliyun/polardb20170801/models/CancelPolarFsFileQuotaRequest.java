@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CancelPolarFsFileQuotaRequest extends TeaModel {
     /**
+     * <p>The ID of the PolarDB cluster that the application depends on.</p>
+     * 
      * <strong>example:</strong>
      * <p>pc-**************</p>
      */
@@ -12,6 +14,7 @@ public class CancelPolarFsFileQuotaRequest extends TeaModel {
     public String DBClusterId;
 
     /**
+     * <p>The file paths. Separate multiple paths with a comma (<code>,</code>).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,6 +24,7 @@ public class CancelPolarFsFileQuotaRequest extends TeaModel {
     public String filePathIds;
 
     /**
+     * <p>The ID of the Polarlakebase instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

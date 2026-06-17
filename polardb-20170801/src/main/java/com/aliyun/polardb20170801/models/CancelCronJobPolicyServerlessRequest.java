@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CancelCronJobPolicyServerlessRequest extends TeaModel {
     /**
+     * <p>The cluster ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>pc-*************</p>
      */
@@ -12,6 +14,8 @@ public class CancelCronJobPolicyServerlessRequest extends TeaModel {
     public String DBClusterId;
 
     /**
+     * <p>The scheduled task ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>b3e7b3d3-027d-4fcc-9f92-5c5f2363e141</p>
      */
@@ -25,6 +29,8 @@ public class CancelCronJobPolicyServerlessRequest extends TeaModel {
     public Long ownerId;
 
     /**
+     * <p>The region ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-beijing</p>
      */

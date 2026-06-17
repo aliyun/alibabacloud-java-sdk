@@ -8,7 +8,7 @@ public class TempModifyDBNodeRequest extends TeaModel {
     public Boolean autoUseCoupon;
 
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value. Make sure that the value is unique among different requests. The token can only contain ASCII characters and cannot exceed 64 characters in length.</p>
+     * <p>A client token to ensure the idempotence of the request. Generate a unique token for each request. The token is case-sensitive and can be up to 64 ASCII characters in length.</p>
      * 
      * <strong>example:</strong>
      * <p>6000170000591aed949d0f5********************</p>
@@ -27,14 +27,14 @@ public class TempModifyDBNodeRequest extends TeaModel {
     public String DBClusterId;
 
     /**
-     * <p>The information about the scaled/added node.</p>
+     * <p>The information about the nodes to upgrade or add.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("DBNode")
     public java.util.List<TempModifyDBNodeRequestDBNode> DBNode;
 
     /**
-     * <p>The type of configuration change. Set the value to <strong>TempUpgrade</strong>.</p>
+     * <p>The modification type. The value is fixed to <strong>TempUpgrade</strong>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -46,7 +46,10 @@ public class TempModifyDBNodeRequest extends TeaModel {
     /**
      * <p>The operation type. Valid values:</p>
      * <ul>
-     * <li><strong>Modify</strong>: temporarily upgrades the configuration of the cluster.</li>
+     * <li><p><strong>Modify</strong>: temporary upgrade</p>
+     * </li>
+     * <li><p><strong>Add</strong>: temporarily add a node</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -76,9 +79,9 @@ public class TempModifyDBNodeRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The rollback time of the configuration for the temporary upgrade. Specify the time in the ISO 8601 standard in the YYYY-MM-DD hh:mm:ss format.</p>
+     * <p>The time to revert the temporary upgrade. The format is YYYY-MM-DD hh:mm:ss.</p>
      * <blockquote>
-     * <p> The rollback time cannot be 1 hour earlier than the current time and cannot be later than one day before the time when the cluster expires.</p>
+     * <p>The revert time must be at least 1 hour later than the current time. It must also be at least 1 day before the cluster expires.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -191,15 +194,15 @@ public class TempModifyDBNodeRequest extends TeaModel {
 
     public static class TempModifyDBNodeRequestDBNode extends TeaModel {
         /**
-         * <p>The specifications of the scaled/added node.</p>
+         * <p>The specifications of the node to upgrade or add.</p>
          * <blockquote>
-         * </blockquote>
          * <ul>
-         * <li><p>The specification of the new node must be consistent with the specifications of the original nodes.</p>
+         * <li><p>When you add a node, the node specifications must be the same as the specifications of the existing nodes.</p>
          * </li>
-         * <li><p>You can call the <a href="https://help.aliyun.com/document_detail/98094.html">DescribeDBClusters</a> operation to view the specifications of the original nodes.</p>
+         * <li><p>For more information about the specifications of existing cluster nodes, see <a href="https://help.aliyun.com/document_detail/98094.html">DescribeDBClusters</a>.</p>
          * </li>
          * </ul>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>polar.mysql.x4.medium</p>
@@ -208,7 +211,7 @@ public class TempModifyDBNodeRequest extends TeaModel {
         public String targetClass;
 
         /**
-         * <p>The ID of the zone in which the added node is deployed. It must be the same zone as the original nodes.</p>
+         * <p>The zone for the new node. The zone must be the same as the zone of the existing nodes.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou-i</p>

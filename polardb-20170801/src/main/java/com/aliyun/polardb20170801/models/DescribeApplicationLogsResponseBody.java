@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class DescribeApplicationLogsResponseBody extends TeaModel {
     /**
+     * <p>The application ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>pa-**************</p>
      */
     @NameInMap("ApplicationId")
     public String applicationId;
 
+    /**
+     * <p>A container for the log data.</p>
+     */
     @NameInMap("Items")
     public DescribeApplicationLogsResponseBodyItems items;
 
     /**
+     * <p>The page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -22,6 +29,8 @@ public class DescribeApplicationLogsResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of records on the current page.</p>
+     * 
      * <strong>example:</strong>
      * <p>6</p>
      */
@@ -29,6 +38,8 @@ public class DescribeApplicationLogsResponseBody extends TeaModel {
     public Integer pageRecordCount;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>CED079B7-A408-41A1-BFF1-EC608E******</p>
      */
@@ -36,6 +47,8 @@ public class DescribeApplicationLogsResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total number of records.</p>
+     * 
      * <strong>example:</strong>
      * <p>9</p>
      */

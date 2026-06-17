@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class RestartDBNodeRequest extends TeaModel {
     /**
-     * <p>The ID of the node.</p>
+     * <p>The ID of the cluster node.</p>
      * <blockquote>
-     * <p> You can call the <a href="https://help.aliyun.com/document_detail/185342.html">DescribeDBClusters</a> operation to query the details of all clusters that belong to your Alibaba Cloud account, such as cluster IDs.</p>
+     * <p>Call the <a href="https://help.aliyun.com/document_detail/185342.html">DescribeDBClusters</a> operation to query the details of all clusters under your account, including node IDs.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -17,6 +17,18 @@ public class RestartDBNodeRequest extends TeaModel {
     @NameInMap("DBNodeId")
     public String DBNodeId;
 
+    /**
+     * <p>Specifies whether to restart the node immediately or at a scheduled time. Valid values:</p>
+     * <ul>
+     * <li><p><strong>false</strong> (default): The node is restarted at a scheduled time.</p>
+     * </li>
+     * <li><p><strong>true</strong>: The node is restarted immediately.</p>
+     * </li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("FromTimeService")
     public String fromTimeService;
 
@@ -26,12 +38,49 @@ public class RestartDBNodeRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The latest time to start the scheduled task. The time must be in the <code>YYYY-MM-DDThh:mm:ssZ</code> format and in UTC.</p>
+     * <blockquote>
+     * <ul>
+     * <li><p>The latest time must be at least 30 minutes later than the earliest time.</p>
+     * </li>
+     * <li><p>If PlannedStartTime is specified but this parameter is not, the latest start time of the task is PlannedStartTime plus 30 minutes by default. For example, if PlannedStartTime is set to <code>2021-01-14T09:00:00Z</code> and this parameter is empty, the task starts no later than <code>2021-01-14T09:30:00Z</code>.</p>
+     * </li>
+     * </ul>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>2021-01-14T09:30:00Z</p>
+     */
     @NameInMap("PlannedEndTime")
     public String plannedEndTime;
 
+    /**
+     * <p>The earliest time to start the scheduled node restart. The task is executed within a specified time window. The time must be in the <code>YYYY-MM-DDThh:mm:ssZ</code> format and in UTC.</p>
+     * <blockquote>
+     * <ul>
+     * <li><p>The start time can be set to any point in time within the next 72 hours. For example, if the current time is <code>2021-01-14T09:00:00Z</code>, the start time can be set to a value in the range from <code>2021-01-14T09:00:00Z</code> to <code>2021-01-17T09:00:00Z</code>.</p>
+     * </li>
+     * <li><p>If this parameter is empty, the node is restarted immediately.</p>
+     * </li>
+     * </ul>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>2021-01-14T09:00:00Z</p>
+     */
     @NameInMap("PlannedStartTime")
     public String plannedStartTime;
 
+    /**
+     * <p>The region ID.</p>
+     * <blockquote>
+     * <p>Call the <a href="https://help.aliyun.com/document_detail/98041.html">DescribeRegions</a> operation to query the available regions.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

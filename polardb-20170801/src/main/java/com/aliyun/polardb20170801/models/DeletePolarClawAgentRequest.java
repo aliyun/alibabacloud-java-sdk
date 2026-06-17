@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeletePolarClawAgentRequest extends TeaModel {
     /**
+     * <p>The ID of the agent to delete. This parameter cannot be set to <code>main</code>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class DeletePolarClawAgentRequest extends TeaModel {
     public String agentId;
 
     /**
+     * <p>The application ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,8 @@ public class DeletePolarClawAgentRequest extends TeaModel {
     public String applicationId;
 
     /**
+     * <p>Specifies whether to delete the working directory and session files. Default value: <code>true</code>.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

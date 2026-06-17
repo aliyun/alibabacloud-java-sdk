@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class DescribeDBClusterAttributeRequest extends TeaModel {
     /**
-     * <p>Cluster ID.</p>
+     * <p>The cluster ID.</p>
      * <blockquote>
-     * <p>You can view detailed information about all clusters under your account, including the cluster ID, through the <a href="https://help.aliyun.com/document_detail/98094.html">DescribeDBClusters</a> interface.</p>
+     * <p>Call the <a href="https://help.aliyun.com/document_detail/98094.html">DescribeDBClusters</a> operation to query the details of all clusters in your account, including the cluster IDs.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -18,7 +18,7 @@ public class DescribeDBClusterAttributeRequest extends TeaModel {
     public String DBClusterId;
 
     /**
-     * <p>Whether to obtain information about AI-related nodes.</p>
+     * <p>Specifies whether to query information about AI nodes.</p>
      * 
      * <strong>example:</strong>
      * <p>AI</p>

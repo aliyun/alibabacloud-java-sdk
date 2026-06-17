@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeEncryptionDBSecretRequest extends TeaModel {
     /**
+     * <p>The cluster ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>pc-wz9fb5nn44u1d****</p>
      */

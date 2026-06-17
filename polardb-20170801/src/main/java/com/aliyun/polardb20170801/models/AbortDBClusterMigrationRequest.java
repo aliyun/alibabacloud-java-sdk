@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class AbortDBClusterMigrationRequest extends TeaModel {
     /**
+     * <p>The cluster ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -20,6 +21,8 @@ public class AbortDBClusterMigrationRequest extends TeaModel {
     public Long ownerId;
 
     /**
+     * <p>The resource group ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>rg-************</p>
      */

@@ -11,6 +11,7 @@ public class DescribeRdsVpcsRequest extends TeaModel {
     public Long ownerId;
 
     /**
+     * <p>The region ID. &gt; You can call the <a href="https://help.aliyun.com/document_detail/98041.html">DescribeRegions</a> operation to query the available regions.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -20,6 +21,8 @@ public class DescribeRdsVpcsRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The ID of the resource group.</p>
+     * 
      * <strong>example:</strong>
      * <p>rg-************</p>
      */
@@ -36,6 +39,8 @@ public class DescribeRdsVpcsRequest extends TeaModel {
     public String securityToken;
 
     /**
+     * <p>The ID of the zone.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou-k</p>
      */

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class EnablePolarClawCronJobResponseBody extends TeaModel {
     /**
+     * <p><strong>The application ID.</strong></p>
+     * 
      * <strong>example:</strong>
      * <p>pa-**************</p>
      */
@@ -12,6 +14,8 @@ public class EnablePolarClawCronJobResponseBody extends TeaModel {
     public String applicationId;
 
     /**
+     * <p>The response status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -19,6 +23,8 @@ public class EnablePolarClawCronJobResponseBody extends TeaModel {
     public Integer code;
 
     /**
+     * <p>The ID of the enabled job.</p>
+     * 
      * <strong>example:</strong>
      * <p>8006e51c-dab3-4602-bc69-4f728002c6ce</p>
      */
@@ -26,6 +32,8 @@ public class EnablePolarClawCronJobResponseBody extends TeaModel {
     public String jobId;
 
     /**
+     * <p>The response message.</p>
+     * 
      * <strong>example:</strong>
      * <p>successful</p>
      */
@@ -33,6 +41,8 @@ public class EnablePolarClawCronJobResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>Indicates whether the operation was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -40,6 +50,8 @@ public class EnablePolarClawCronJobResponseBody extends TeaModel {
     public Boolean ok;
 
     /**
+     * <p><strong>The request ID.</strong></p>
+     * 
      * <strong>example:</strong>
      * <p>2281C6C9-CBAB-1AFD-8400-670750CF6025_2212</p>
      */

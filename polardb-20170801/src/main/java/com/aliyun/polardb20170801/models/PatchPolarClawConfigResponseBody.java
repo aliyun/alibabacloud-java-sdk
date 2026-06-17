@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class PatchPolarClawConfigResponseBody extends TeaModel {
     /**
+     * <p>The application ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>pa-**************</p>
      */
@@ -12,6 +14,8 @@ public class PatchPolarClawConfigResponseBody extends TeaModel {
     public String applicationId;
 
     /**
+     * <p>The status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -19,6 +23,8 @@ public class PatchPolarClawConfigResponseBody extends TeaModel {
     public Integer code;
 
     /**
+     * <p>The message.</p>
+     * 
      * <strong>example:</strong>
      * <p>successful</p>
      */
@@ -26,17 +32,22 @@ public class PatchPolarClawConfigResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>Indicates whether the operation was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
     @NameInMap("Ok")
     public Boolean ok;
 
+    /**
+     * <p>A list of the top-level configuration keys that were modified.</p>
+     */
     @NameInMap("PatchedKeys")
     public java.util.List<String> patchedKeys;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>3E5CD764-FCCA-5C9C-838E-20E0DE84B2AF</p>
@@ -45,6 +56,8 @@ public class PatchPolarClawConfigResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the gateway was restarted.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

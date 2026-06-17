@@ -4,13 +4,21 @@ package com.aliyun.polardb20170801.models;
 import com.aliyun.tea.*;
 
 public class DescribeApplicationParametersResponseBody extends TeaModel {
+    /**
+     * <p>The details of the parameter template.</p>
+     */
     @NameInMap("ParameterTemplates")
     public DescribeApplicationParametersResponseBodyParameterTemplates parameterTemplates;
 
+    /**
+     * <p>The parameter details.</p>
+     */
     @NameInMap("Parameters")
     public DescribeApplicationParametersResponseBodyParameters parameters;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>3E5CD764-FCCA-5C9C-838E-20E0DE84B2AF</p>
      */
@@ -48,6 +56,8 @@ public class DescribeApplicationParametersResponseBody extends TeaModel {
 
     public static class DescribeApplicationParametersResponseBodyParameterTemplatesComponentParameterTemplatesParameters extends TeaModel {
         /**
+         * <p>The default value of the parameter.</p>
+         * 
          * <strong>example:</strong>
          * <p>default</p>
          */
@@ -55,6 +65,8 @@ public class DescribeApplicationParametersResponseBody extends TeaModel {
         public String _default;
 
         /**
+         * <p>The parameter description.</p>
+         * 
          * <strong>example:</strong>
          * <p>The name of the parameter</p>
          */
@@ -62,6 +74,8 @@ public class DescribeApplicationParametersResponseBody extends TeaModel {
         public String description;
 
         /**
+         * <p>The parameter name.</p>
+         * 
          * <strong>example:</strong>
          * <p>name</p>
          */
@@ -69,6 +83,8 @@ public class DescribeApplicationParametersResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>Indicates whether the application needs to be restarted after you modify the parameter.</p>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
@@ -76,6 +92,8 @@ public class DescribeApplicationParametersResponseBody extends TeaModel {
         public Boolean needRestart;
 
         /**
+         * <p>The regular expression for the parameter.</p>
+         * 
          * <strong>example:</strong>
          * <p>^[a-zA-Z0-9]{1,20}$</p>
          */
@@ -83,6 +101,8 @@ public class DescribeApplicationParametersResponseBody extends TeaModel {
         public String pattern;
 
         /**
+         * <p>Indicates whether the parameter is read-only.</p>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
@@ -90,6 +110,8 @@ public class DescribeApplicationParametersResponseBody extends TeaModel {
         public Boolean readOnly;
 
         /**
+         * <p>The parameter type.</p>
+         * 
          * <strong>example:</strong>
          * <p>string</p>
          */
@@ -161,6 +183,8 @@ public class DescribeApplicationParametersResponseBody extends TeaModel {
 
     public static class DescribeApplicationParametersResponseBodyParameterTemplatesComponentParameterTemplates extends TeaModel {
         /**
+         * <p>The subcomponent ID or application ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>pac-**************</p>
          */
@@ -168,12 +192,17 @@ public class DescribeApplicationParametersResponseBody extends TeaModel {
         public String componentId;
 
         /**
+         * <p>The type of the subcomponent.</p>
+         * 
          * <strong>example:</strong>
          * <p>supabase</p>
          */
         @NameInMap("ComponentType")
         public String componentType;
 
+        /**
+         * <p>A list of parameter template details.</p>
+         */
         @NameInMap("Parameters")
         public java.util.List<DescribeApplicationParametersResponseBodyParameterTemplatesComponentParameterTemplatesParameters> parameters;
 
@@ -209,6 +238,9 @@ public class DescribeApplicationParametersResponseBody extends TeaModel {
     }
 
     public static class DescribeApplicationParametersResponseBodyParameterTemplates extends TeaModel {
+        /**
+         * <p>A list of subcomponents that contain lists of parameter template details.</p>
+         */
         @NameInMap("ComponentParameterTemplates")
         public java.util.List<DescribeApplicationParametersResponseBodyParameterTemplatesComponentParameterTemplates> componentParameterTemplates;
 
@@ -229,6 +261,8 @@ public class DescribeApplicationParametersResponseBody extends TeaModel {
 
     public static class DescribeApplicationParametersResponseBodyParametersComponentParametersParameters extends TeaModel {
         /**
+         * <p>The default value of the parameter.</p>
+         * 
          * <strong>example:</strong>
          * <p>default value</p>
          */
@@ -236,6 +270,8 @@ public class DescribeApplicationParametersResponseBody extends TeaModel {
         public String _default;
 
         /**
+         * <p>The parameter description.</p>
+         * 
          * <strong>example:</strong>
          * <p>The name of the parameter</p>
          */
@@ -243,6 +279,8 @@ public class DescribeApplicationParametersResponseBody extends TeaModel {
         public String description;
 
         /**
+         * <p>The parameter name.</p>
+         * 
          * <strong>example:</strong>
          * <p>name</p>
          */
@@ -250,6 +288,8 @@ public class DescribeApplicationParametersResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>Indicates whether the application needs to be restarted after you modify the parameter.</p>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
@@ -257,6 +297,8 @@ public class DescribeApplicationParametersResponseBody extends TeaModel {
         public Boolean needRestart;
 
         /**
+         * <p>The regular expression for the parameter.</p>
+         * 
          * <strong>example:</strong>
          * <p>^[a-zA-Z0-9]{1,20}$</p>
          */
@@ -264,6 +306,8 @@ public class DescribeApplicationParametersResponseBody extends TeaModel {
         public String pattern;
 
         /**
+         * <p>Indicates whether the parameter is read-only.</p>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
@@ -271,6 +315,8 @@ public class DescribeApplicationParametersResponseBody extends TeaModel {
         public Boolean readOnly;
 
         /**
+         * <p>The status.</p>
+         * 
          * <strong>example:</strong>
          * <p>Applied</p>
          */
@@ -278,6 +324,8 @@ public class DescribeApplicationParametersResponseBody extends TeaModel {
         public String status;
 
         /**
+         * <p>The parameter type.</p>
+         * 
          * <strong>example:</strong>
          * <p>string</p>
          */
@@ -285,6 +333,8 @@ public class DescribeApplicationParametersResponseBody extends TeaModel {
         public String type;
 
         /**
+         * <p>The current value of the parameter.</p>
+         * 
          * <strong>example:</strong>
          * <p>value</p>
          */
@@ -372,6 +422,8 @@ public class DescribeApplicationParametersResponseBody extends TeaModel {
 
     public static class DescribeApplicationParametersResponseBodyParametersComponentParameters extends TeaModel {
         /**
+         * <p>The subcomponent ID or application ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>pac-**************</p>
          */
@@ -379,12 +431,17 @@ public class DescribeApplicationParametersResponseBody extends TeaModel {
         public String componentId;
 
         /**
+         * <p>The type of the subcomponent.</p>
+         * 
          * <strong>example:</strong>
          * <p>supabase</p>
          */
         @NameInMap("ComponentType")
         public String componentType;
 
+        /**
+         * <p>A list of parameter details.</p>
+         */
         @NameInMap("Parameters")
         public java.util.List<DescribeApplicationParametersResponseBodyParametersComponentParametersParameters> parameters;
 
@@ -420,6 +477,9 @@ public class DescribeApplicationParametersResponseBody extends TeaModel {
     }
 
     public static class DescribeApplicationParametersResponseBodyParameters extends TeaModel {
+        /**
+         * <p>A list of subcomponents that contain lists of parameter details.</p>
+         */
         @NameInMap("ComponentParameters")
         public java.util.List<DescribeApplicationParametersResponseBodyParametersComponentParameters> componentParameters;
 

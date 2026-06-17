@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeBatchTaskRequest extends TeaModel {
     /**
+     * <p>The ID of the batch task.</p>
+     * 
      * <strong>example:</strong>
      * <p>pcb-xxx</p>
      */

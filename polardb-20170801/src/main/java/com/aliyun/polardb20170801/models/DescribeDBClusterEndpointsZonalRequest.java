@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeDBClusterEndpointsZonalRequest extends TeaModel {
     /**
+     * <p>The cluster ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,8 @@ public class DescribeDBClusterEndpointsZonalRequest extends TeaModel {
     public String DBClusterId;
 
     /**
+     * <p>The cluster endpoint ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>pe-*************</p>
      */
@@ -21,6 +24,8 @@ public class DescribeDBClusterEndpointsZonalRequest extends TeaModel {
     public String DBEndpointId;
 
     /**
+     * <p>Specifies whether to return information about AI nodes.</p>
+     * 
      * <strong>example:</strong>
      * <p>AI</p>
      */

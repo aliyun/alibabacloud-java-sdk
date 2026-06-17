@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateModelApiResponseBody extends TeaModel {
     /**
+     * <p>The invocation endpoint.</p>
+     * 
      * <strong>example:</strong>
      * <p>xxx</p>
      */
@@ -12,6 +14,8 @@ public class CreateModelApiResponseBody extends TeaModel {
     public String invokeEndpoint;
 
     /**
+     * <p>The model API ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>mi-xxxxxx</p>
      */
@@ -19,7 +23,7 @@ public class CreateModelApiResponseBody extends TeaModel {
     public String modelApiId;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>6BD9CDE4-5E7B-4BF3-9BB8-83C73E******</p>
@@ -28,6 +32,8 @@ public class CreateModelApiResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The model API status.</p>
+     * 
      * <strong>example:</strong>
      * <p>Enable</p>
      */

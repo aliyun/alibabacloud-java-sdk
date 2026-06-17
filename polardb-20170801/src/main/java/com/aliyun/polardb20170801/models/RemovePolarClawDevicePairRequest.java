@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class RemovePolarClawDevicePairRequest extends TeaModel {
     /**
+     * <p>The application ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class RemovePolarClawDevicePairRequest extends TeaModel {
     public String applicationId;
 
     /**
+     * <p>The device ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

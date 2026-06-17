@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribePolarFsObjectsRequest extends TeaModel {
     /**
+     * <p>The absolute path of the directory.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class DescribePolarFsObjectsRequest extends TeaModel {
     public String path;
 
     /**
+     * <p>The PolarFs instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

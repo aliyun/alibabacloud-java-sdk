@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DeleteEncryptionDBRolePrivilegeResponseBody extends TeaModel {
     /**
+     * <p>The cluster ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>pc-**************</p>
      */
@@ -12,6 +14,11 @@ public class DeleteEncryptionDBRolePrivilegeResponseBody extends TeaModel {
     public String DBClusterId;
 
     /**
+     * <p>The message returned for the request.</p>
+     * <blockquote>
+     * <p>If the request is successful, <code>Successful</code> is returned. If the request fails, an error message is returned, such as an error code.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>Successful</p>
      */
@@ -19,7 +26,7 @@ public class DeleteEncryptionDBRolePrivilegeResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>24A1990B-4F6E-482B-B8CB-75C612******</p>
@@ -28,6 +35,14 @@ public class DeleteEncryptionDBRolePrivilegeResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <ul>
+     * <li><p><strong>true</strong>: The request was successful.</p>
+     * </li>
+     * <li><p><strong>false</strong>: The request failed.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

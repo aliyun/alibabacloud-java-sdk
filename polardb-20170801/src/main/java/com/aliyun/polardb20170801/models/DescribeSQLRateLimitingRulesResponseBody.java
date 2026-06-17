@@ -4,10 +4,15 @@ package com.aliyun.polardb20170801.models;
 import com.aliyun.tea.*;
 
 public class DescribeSQLRateLimitingRulesResponseBody extends TeaModel {
+    /**
+     * <p>The result set.</p>
+     */
     @NameInMap("Data")
     public DescribeSQLRateLimitingRulesResponseBodyData data;
 
     /**
+     * <p>The maximum number of entries returned for the current request. Default value: 10.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -15,6 +20,11 @@ public class DescribeSQLRateLimitingRulesResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>The response message.</p>
+     * <blockquote>
+     * <p>If the request is successful, \<code>Successful\\</code> is returned. If the request fails, an error message is returned.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>Successful</p>
      */
@@ -22,7 +32,7 @@ public class DescribeSQLRateLimitingRulesResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>nextToken</p>
+     * <p>The token for the next page of results.</p>
      * 
      * <strong>example:</strong>
      * <p>AAAAARbaCuN6hiD08qrLdwJ9Fh0vHYf39hc0J5qELgsazkBk</p>
@@ -31,7 +41,7 @@ public class DescribeSQLRateLimitingRulesResponseBody extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>22C0ACF0-DD29-4B67-9190-B7A48C******</p>
@@ -85,6 +95,9 @@ public class DescribeSQLRateLimitingRulesResponseBody extends TeaModel {
     }
 
     public static class DescribeSQLRateLimitingRulesResponseBodyData extends TeaModel {
+        /**
+         * <p>The list of rules.</p>
+         */
         @NameInMap("RuleList")
         public java.util.List<String> ruleList;
 

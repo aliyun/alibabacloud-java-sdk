@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeModifyParameterLogResponseBody extends TeaModel {
     /**
+     * <p>The cluster engine.</p>
+     * 
      * <strong>example:</strong>
      * <p>polardb_mysql</p>
      */
@@ -12,17 +14,22 @@ public class DescribeModifyParameterLogResponseBody extends TeaModel {
     public String engine;
 
     /**
+     * <p>The engine version.</p>
+     * 
      * <strong>example:</strong>
      * <p>8.0</p>
      */
     @NameInMap("EngineVersion")
     public String engineVersion;
 
+    /**
+     * <p>The list of parameter modification history.</p>
+     */
     @NameInMap("Items")
     public java.util.List<DescribeModifyParameterLogResponseBodyItems> items;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>CD35F3-F3-44CA-AFFF-BAF869******</p>
@@ -69,6 +76,8 @@ public class DescribeModifyParameterLogResponseBody extends TeaModel {
 
     public static class DescribeModifyParameterLogResponseBodyItems extends TeaModel {
         /**
+         * <p>The time when the parameter was last modified.</p>
+         * 
          * <strong>example:</strong>
          * <p>2024-10-29T09:31:37Z</p>
          */
@@ -76,6 +85,8 @@ public class DescribeModifyParameterLogResponseBody extends TeaModel {
         public String modifyTime;
 
         /**
+         * <p>The parameter value after the modification.</p>
+         * 
          * <strong>example:</strong>
          * <p>test01</p>
          */
@@ -83,6 +94,8 @@ public class DescribeModifyParameterLogResponseBody extends TeaModel {
         public String newParameterValue;
 
         /**
+         * <p>The parameter value before the modification.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -90,6 +103,8 @@ public class DescribeModifyParameterLogResponseBody extends TeaModel {
         public String oldParameterValue;
 
         /**
+         * <p>The parameter name.</p>
+         * 
          * <strong>example:</strong>
          * <p>hz</p>
          */
@@ -97,6 +112,8 @@ public class DescribeModifyParameterLogResponseBody extends TeaModel {
         public String parameterName;
 
         /**
+         * <p>Indicates whether the modification was applied successfully.</p>
+         * 
          * <strong>example:</strong>
          * <p>True</p>
          */

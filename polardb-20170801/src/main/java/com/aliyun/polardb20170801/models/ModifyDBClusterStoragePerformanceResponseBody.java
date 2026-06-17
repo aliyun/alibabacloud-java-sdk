@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ModifyDBClusterStoragePerformanceResponseBody extends TeaModel {
     /**
+     * <p>The cluster ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>pc-************</p>
      */
@@ -12,6 +14,8 @@ public class ModifyDBClusterStoragePerformanceResponseBody extends TeaModel {
     public String DBClusterId;
 
     /**
+     * <p>The ID of the order.</p>
+     * 
      * <strong>example:</strong>
      * <p>2035629******</p>
      */
@@ -19,6 +23,8 @@ public class ModifyDBClusterStoragePerformanceResponseBody extends TeaModel {
     public String orderId;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>E56531A4-E552-40BA-9C58-137B80******</p>
      */

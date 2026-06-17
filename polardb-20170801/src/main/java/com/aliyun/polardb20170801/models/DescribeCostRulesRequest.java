@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeCostRulesRequest extends TeaModel {
     /**
+     * <p>The gateway instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,8 @@ public class DescribeCostRulesRequest extends TeaModel {
     public String gwClusterId;
 
     /**
+     * <p>The model name, such as <code>gpt-4</code> or <code>qwen-turbo</code>.</p>
+     * 
      * <strong>example:</strong>
      * <p>qwen3-max</p>
      */
@@ -21,6 +24,8 @@ public class DescribeCostRulesRequest extends TeaModel {
     public String modelName;
 
     /**
+     * <p>The model service ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>ms-xxxxxx</p>
      */
@@ -28,6 +33,8 @@ public class DescribeCostRulesRequest extends TeaModel {
     public String modelServiceId;
 
     /**
+     * <p>The page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -35,12 +42,29 @@ public class DescribeCostRulesRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries per page. Valid values:</p>
+     * <ul>
+     * <li><p><strong>30</strong></p>
+     * </li>
+     * <li><p><strong>50</strong></p>
+     * </li>
+     * <li><p><strong>100</strong></p>
+     * </li>
+     * </ul>
+     * <p>Default value: 30.</p>
+     * 
      * <strong>example:</strong>
      * <p>30</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The region ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-beijing</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

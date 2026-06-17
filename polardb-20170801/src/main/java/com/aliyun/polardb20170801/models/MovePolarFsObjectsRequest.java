@@ -4,10 +4,15 @@ package com.aliyun.polardb20170801.models;
 import com.aliyun.tea.*;
 
 public class MovePolarFsObjectsRequest extends TeaModel {
+    /**
+     * <p>A list of files to move or rename.</p>
+     */
     @NameInMap("ObjectsToMove")
     public java.util.List<MovePolarFsObjectsRequestObjectsToMove> objectsToMove;
 
     /**
+     * <p>The PolarFs instance ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>pfs-test*****</p>
      */
@@ -37,6 +42,8 @@ public class MovePolarFsObjectsRequest extends TeaModel {
 
     public static class MovePolarFsObjectsRequestObjectsToMove extends TeaModel {
         /**
+         * <p>The destination path.</p>
+         * 
          * <strong>example:</strong>
          * <p>/test1</p>
          */
@@ -44,6 +51,8 @@ public class MovePolarFsObjectsRequest extends TeaModel {
         public String destinationPath;
 
         /**
+         * <p>The source path.</p>
+         * 
          * <strong>example:</strong>
          * <p>/test</p>
          */

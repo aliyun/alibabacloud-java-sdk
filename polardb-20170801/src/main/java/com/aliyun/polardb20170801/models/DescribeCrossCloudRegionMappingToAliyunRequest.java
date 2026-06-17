@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeCrossCloudRegionMappingToAliyunRequest extends TeaModel {
     /**
+     * <p>The region ID of Alibaba Cloud.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-beijing</p>
      */
@@ -12,6 +14,14 @@ public class DescribeCrossCloudRegionMappingToAliyunRequest extends TeaModel {
     public String aliyunRegionId;
 
     /**
+     * <p>The cloud provider. Valid values:</p>
+     * <ul>
+     * <li><p>HuaweiCloud</p>
+     * </li>
+     * <li><p>Azure</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>HuaweiCloud</p>
      */
@@ -19,6 +29,8 @@ public class DescribeCrossCloudRegionMappingToAliyunRequest extends TeaModel {
     public String cloudProvider;
 
     /**
+     * <p>The region ID of the third-party cloud.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-east-3</p>
      */

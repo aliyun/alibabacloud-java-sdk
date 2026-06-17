@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ClonePolarFsBasicSnapshotResponseBody extends TeaModel {
     /**
+     * <p>The cluster ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>pc-bp150t3****</p>
      */
@@ -12,6 +14,8 @@ public class ClonePolarFsBasicSnapshotResponseBody extends TeaModel {
     public String DBClusterId;
 
     /**
+     * <p>The ID of the Polarlakebase instance.</p>
+     * 
      * <strong>example:</strong>
      * <p>pfs-2ze0i7*****</p>
      */
@@ -19,7 +23,7 @@ public class ClonePolarFsBasicSnapshotResponseBody extends TeaModel {
     public String polarFsInstanceId;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>CED079B7-A408-41A1-BFF1-EC608E******</p>
@@ -28,6 +32,8 @@ public class ClonePolarFsBasicSnapshotResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The source path of the file resource.</p>
+     * 
      * <strong>example:</strong>
      * <p>/test</p>
      */
@@ -35,6 +41,8 @@ public class ClonePolarFsBasicSnapshotResponseBody extends TeaModel {
     public String sourcePath;
 
     /**
+     * <p>The destination path.</p>
+     * 
      * <strong>example:</strong>
      * <p>/testclone</p>
      */

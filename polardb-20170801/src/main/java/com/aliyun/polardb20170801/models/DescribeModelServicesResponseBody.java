@@ -4,10 +4,15 @@ package com.aliyun.polardb20170801.models;
 import com.aliyun.tea.*;
 
 public class DescribeModelServicesResponseBody extends TeaModel {
+    /**
+     * <p>The details of the model services.</p>
+     */
     @NameInMap("Items")
     public java.util.List<DescribeModelServicesResponseBodyItems> items;
 
     /**
+     * <p>The page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -15,6 +20,8 @@ public class DescribeModelServicesResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of records on the current page.</p>
+     * 
      * <strong>example:</strong>
      * <p>30</p>
      */
@@ -22,6 +29,17 @@ public class DescribeModelServicesResponseBody extends TeaModel {
     public Integer pageRecordCount;
 
     /**
+     * <p>The number of records to return on each page. Valid values:</p>
+     * <ul>
+     * <li><p><strong>30</strong></p>
+     * </li>
+     * <li><p><strong>50</strong></p>
+     * </li>
+     * <li><p><strong>100</strong></p>
+     * </li>
+     * </ul>
+     * <p>Default value: <strong>30</strong>.</p>
+     * 
      * <strong>example:</strong>
      * <p>30</p>
      */
@@ -29,7 +47,7 @@ public class DescribeModelServicesResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>24A1990B-4F6E-482B-B8CB-75C612******</p>
@@ -38,6 +56,8 @@ public class DescribeModelServicesResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total number of records.</p>
+     * 
      * <strong>example:</strong>
      * <p>2</p>
      */
@@ -99,6 +119,8 @@ public class DescribeModelServicesResponseBody extends TeaModel {
 
     public static class DescribeModelServicesResponseBodyItems extends TeaModel {
         /**
+         * <p>The API key for the model service.</p>
+         * 
          * <strong>example:</strong>
          * <p>xxxx</p>
          */
@@ -106,6 +128,8 @@ public class DescribeModelServicesResponseBody extends TeaModel {
         public String apiKey;
 
         /**
+         * <p>The base URL of the upstream service.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="https://xxxxxx">https://xxxxxx</a></p>
          */
@@ -113,6 +137,8 @@ public class DescribeModelServicesResponseBody extends TeaModel {
         public String baseUrl;
 
         /**
+         * <p>The time when the model service was created.</p>
+         * 
          * <strong>example:</strong>
          * <p>2026-03-31T14:40:48Z</p>
          */
@@ -120,6 +146,8 @@ public class DescribeModelServicesResponseBody extends TeaModel {
         public String gmtCreated;
 
         /**
+         * <p>The cost in points per million input tokens.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -127,6 +155,8 @@ public class DescribeModelServicesResponseBody extends TeaModel {
         public String inputCostPointsPerMillion;
 
         /**
+         * <p>The model category.</p>
+         * 
          * <strong>example:</strong>
          * <p>text</p>
          */
@@ -134,6 +164,8 @@ public class DescribeModelServicesResponseBody extends TeaModel {
         public String modelCategory;
 
         /**
+         * <p>The model service ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>ms-xxxxxx</p>
          */
@@ -141,6 +173,8 @@ public class DescribeModelServicesResponseBody extends TeaModel {
         public String modelServiceId;
 
         /**
+         * <p>The model service name.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -148,6 +182,8 @@ public class DescribeModelServicesResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>The cost in points per million output tokens.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -155,6 +191,18 @@ public class DescribeModelServicesResponseBody extends TeaModel {
         public String outputCostPointsPerMillion;
 
         /**
+         * <p>The protocol. Valid values:</p>
+         * <ul>
+         * <li><p><strong>OpenAI</strong></p>
+         * </li>
+         * <li><p><strong>Anthropic</strong></p>
+         * </li>
+         * <li><p><strong>bailian</strong>: Alibaba Cloud Model Studio.</p>
+         * </li>
+         * <li><p><strong>vLLM</strong></p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>openai</p>
          */
@@ -162,6 +210,8 @@ public class DescribeModelServicesResponseBody extends TeaModel {
         public String protocol;
 
         /**
+         * <p>The cost in points per request.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -169,12 +219,20 @@ public class DescribeModelServicesResponseBody extends TeaModel {
         public String requestCostPoints;
 
         /**
+         * <p>The status of the model service.</p>
+         * 
          * <strong>example:</strong>
          * <p>Enable</p>
          */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The vendor of the model service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>bailian</p>
+         */
         @NameInMap("Vendor")
         public String vendor;
 

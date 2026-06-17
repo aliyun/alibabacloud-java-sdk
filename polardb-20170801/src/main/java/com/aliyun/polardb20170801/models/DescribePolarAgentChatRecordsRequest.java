@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribePolarAgentChatRecordsRequest extends TeaModel {
     /**
+     * <p>The session ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,8 @@ public class DescribePolarAgentChatRecordsRequest extends TeaModel {
     public String sessionId;
 
     /**
+     * <p>The product source. Valid value: polardb-console.</p>
+     * 
      * <strong>example:</strong>
      * <p>polardb-console</p>
      */

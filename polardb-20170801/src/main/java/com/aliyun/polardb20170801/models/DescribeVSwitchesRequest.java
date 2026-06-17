@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class DescribeVSwitchesRequest extends TeaModel {
     /**
-     * <p>The dedicated cluster ID.</p>
+     * <p>The ID of the dedicated cluster.</p>
      * <blockquote>
-     * <p> You must specify at least one of the <strong>VpcId</strong> and <strong>DedicatedHostGroupId</strong> parameters.</p>
+     * <p>Specify at least one of the <strong>VpcId</strong> and <strong>DedicatedHostGroupId</strong> parameters.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -23,7 +23,7 @@ public class DescribeVSwitchesRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The page number of the page to return. Default value: 1.</p>
+     * <p>The page number of the list. The default value is 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -32,7 +32,7 @@ public class DescribeVSwitchesRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return on each page. Maximum value: 50. The default value is 50.</p>
+     * <p>The number of entries to return on each page for a paged query. The maximum value is 50. The default value is 50.</p>
      * 
      * <strong>example:</strong>
      * <p>50</p>
@@ -41,7 +41,7 @@ public class DescribeVSwitchesRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The ID of the region where the vSwitch is deployed.</p>
+     * <p>The region ID of the vSwitch.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -68,9 +68,9 @@ public class DescribeVSwitchesRequest extends TeaModel {
     public String securityToken;
 
     /**
-     * <p>The ID of the virtual private type (VPC) to which the vSwitch belongs.</p>
+     * <p>The ID of the virtual private cloud (VPC) to which the vSwitch belongs.</p>
      * <blockquote>
-     * <p> You must specify at least one of the <strong>VpcId</strong> and <strong>DedicatedHostGroupId</strong> parameters.</p>
+     * <p>Specify at least one of the <strong>VpcId</strong> and <strong>DedicatedHostGroupId</strong> parameters.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -80,7 +80,7 @@ public class DescribeVSwitchesRequest extends TeaModel {
     public String vpcId;
 
     /**
-     * <p>The ID of the zone to which the vSwitch belongs.</p>
+     * <p>The zone ID of the vSwitch.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou-d</p>

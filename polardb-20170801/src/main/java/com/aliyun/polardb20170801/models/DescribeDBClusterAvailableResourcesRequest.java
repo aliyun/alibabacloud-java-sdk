@@ -16,9 +16,12 @@ public class DescribeDBClusterAvailableResourcesRequest extends TeaModel {
     /**
      * <p>The type of the database engine. Valid values:</p>
      * <ul>
-     * <li><strong>MySQL</strong></li>
-     * <li><strong>PostgreSQL</strong></li>
-     * <li><strong>Oracle</strong></li>
+     * <li><p><strong>MySQL</strong></p>
+     * </li>
+     * <li><p><strong>PostgreSQL</strong></p>
+     * </li>
+     * <li><p><strong>Oracle</strong></p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -28,20 +31,32 @@ public class DescribeDBClusterAvailableResourcesRequest extends TeaModel {
     public String DBType;
 
     /**
-     * <p>The version of the database engine. Valid values for the MySQL database engine:</p>
+     * <p>The version of the database engine.
+     * Valid values for MySQL:</p>
      * <ul>
-     * <li><strong>5.6</strong></li>
-     * <li><strong>5.7</strong></li>
-     * <li><strong>8.0</strong></li>
+     * <li><p><strong>5.6</strong></p>
+     * </li>
+     * <li><p><strong>5.7</strong></p>
+     * </li>
+     * <li><p><strong>8.0</strong></p>
+     * </li>
      * </ul>
-     * <p>Valid values for the PostgreSQL database engine:</p>
+     * <p>Valid values for PostgreSQL:</p>
      * <ul>
-     * <li><strong>11</strong></li>
-     * <li><strong>14</strong></li>
+     * <li><p><strong>11</strong></p>
+     * </li>
+     * <li><p><strong>14</strong></p>
+     * </li>
      * </ul>
-     * <p>Valid value for the Oracle database engine: <strong>11</strong></p>
+     * <p>Valid values for Oracle:</p>
+     * <ul>
+     * <li><p><strong>11</strong></p>
+     * </li>
+     * <li><p><strong>14</strong></p>
+     * </li>
+     * </ul>
      * <blockquote>
-     * <p>This parameter is required when you specify the <strong>DBType</strong> parameter.</p>
+     * <p>This parameter is required when the <strong>DBType</strong> parameter is specified.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -57,10 +72,12 @@ public class DescribeDBClusterAvailableResourcesRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The billing method of the cluster. Valid values:</p>
+     * <p>The billing method. Valid values:</p>
      * <ul>
-     * <li><strong>Postpaid</strong>: pay-as-you-go</li>
-     * <li><strong>Prepaid</strong>: subscription</li>
+     * <li><p><strong>Postpaid</strong>: pay-as-you-go (also known as postpaid or hourly billing).</p>
+     * </li>
+     * <li><p><strong>Prepaid</strong>: subscription (also known as prepaid).</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -71,7 +88,7 @@ public class DescribeDBClusterAvailableResourcesRequest extends TeaModel {
     public String payType;
 
     /**
-     * <p>The region ID of the cluster. Default value: <strong>cn-hangzhou</strong>.</p>
+     * <p>The region ID. The default value is <strong>cn-hangzhou</strong>.</p>
      * <blockquote>
      * <p>You can call the <a href="https://help.aliyun.com/document_detail/98041.html">DescribeRegions</a> operation to query the available regions.</p>
      * </blockquote>
@@ -89,7 +106,7 @@ public class DescribeDBClusterAvailableResourcesRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The zone ID of the cluster.</p>
+     * <p>The zone ID.</p>
      * <blockquote>
      * <p>You can call the <a href="https://help.aliyun.com/document_detail/98041.html">DescribeRegions</a> operation to query the available zones.</p>
      * </blockquote>

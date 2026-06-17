@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpdateExtensionsRequest extends TeaModel {
     /**
+     * <p>A client token used to ensure the idempotence of the request. The client generates this value. Make sure that the value is unique for each request. The token is case-sensitive and cannot exceed 64 ASCII characters.</p>
+     * 
      * <strong>example:</strong>
      * <p>6000170000591aed949d0f5********************</p>
      */
@@ -12,6 +14,7 @@ public class UpdateExtensionsRequest extends TeaModel {
     public String clientToken;
 
     /**
+     * <p>The name of the source instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,6 +24,7 @@ public class UpdateExtensionsRequest extends TeaModel {
     public String DBClusterId;
 
     /**
+     * <p>The name of the database.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -30,6 +34,7 @@ public class UpdateExtensionsRequest extends TeaModel {
     public String DBNames;
 
     /**
+     * <p>The extensions to update. Separate multiple extensions with commas (,).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -53,6 +58,8 @@ public class UpdateExtensionsRequest extends TeaModel {
     public Long ownerId;
 
     /**
+     * <p>The region ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
      */
@@ -60,6 +67,8 @@ public class UpdateExtensionsRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The ID of the resource group.</p>
+     * 
      * <strong>example:</strong>
      * <p>rg-**********</p>
      */
@@ -88,6 +97,8 @@ public class UpdateExtensionsRequest extends TeaModel {
     public String version;
 
     /**
+     * <p>The ID of the virtual private cloud (VPC) where the endpoint is located.</p>
+     * 
      * <strong>example:</strong>
      * <p>vpc-bp1qpo0kug3a20qqe****</p>
      */

@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class AttachApplicationPolarFSRequest extends TeaModel {
     /**
+     * <p>Application ID</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,8 @@ public class AttachApplicationPolarFSRequest extends TeaModel {
     public String applicationId;
 
     /**
+     * <p>AccessKey ID of the Alibaba Cloud account or RAM user. Ensure that you granted permissions to this account or user when you created the PolarLakeBase instance.</p>
+     * 
      * <strong>example:</strong>
      * <p>LT**********************</p>
      */
@@ -21,6 +24,8 @@ public class AttachApplicationPolarFSRequest extends TeaModel {
     public String polarFSAccessKeyId;
 
     /**
+     * <p>AccessKey secret of the Alibaba Cloud account or RAM user</p>
+     * 
      * <strong>example:</strong>
      * <p>H3****************************</p>
      */
@@ -28,6 +33,11 @@ public class AttachApplicationPolarFSRequest extends TeaModel {
     public String polarFSAccessKeySecret;
 
     /**
+     * <p>PolarLakeBase cold-storage instance ID</p>
+     * <p>Only the following applications support cold-storage instances:</p>
+     * <ul>
+     * <li>Supabase</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

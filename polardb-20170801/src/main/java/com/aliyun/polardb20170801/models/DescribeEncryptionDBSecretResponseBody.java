@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeEncryptionDBSecretResponseBody extends TeaModel {
     /**
+     * <p>The cluster ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>pc-*************</p>
      */
@@ -12,6 +14,8 @@ public class DescribeEncryptionDBSecretResponseBody extends TeaModel {
     public String DBClusterId;
 
     /**
+     * <p>The region where the encryption key is located.</p>
+     * 
      * <strong>example:</strong>
      * <p>Enabled</p>
      */
@@ -19,6 +23,9 @@ public class DescribeEncryptionDBSecretResponseBody extends TeaModel {
     public String encryptionDBRegion;
 
     /**
+     * <p>Indicates whether encryption is enabled. Valid values:</p>
+     * <p>Enabled: Encryption is enabled. Disabled: Encryption is disabled.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-beijing</p>
      */
@@ -26,6 +33,8 @@ public class DescribeEncryptionDBSecretResponseBody extends TeaModel {
     public String encryptionDBStatus;
 
     /**
+     * <p>The custom key ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>2a4f4ac2-<strong><strong>-</strong></strong>-<strong><strong>-</strong></strong>********</p>
      */
@@ -33,6 +42,14 @@ public class DescribeEncryptionDBSecretResponseBody extends TeaModel {
     public String encryptionKey;
 
     /**
+     * <p>The status of the key. Valid values:</p>
+     * <ul>
+     * <li><p><strong>Enabled</strong></p>
+     * </li>
+     * <li><p><strong>Disabled</strong></p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>Disabled</p>
      */
@@ -40,7 +57,7 @@ public class DescribeEncryptionDBSecretResponseBody extends TeaModel {
     public String encryptionKeyStatus;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>944CED46-A6F7-40C6-B6DC-C6E5CC******</p>

@@ -20,9 +20,12 @@ public class ResetAccountRequest extends TeaModel {
     /**
      * <p>The password of the account. The password must meet the following requirements:</p>
      * <ul>
-     * <li>It must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters.</li>
-     * <li>The password must be 8 to 32 characters in length.</li>
-     * <li>Special characters include <code>! @ # $ % ^ &amp; * ( ) _ + - =</code></li>
+     * <li><p>It must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters.</p>
+     * </li>
+     * <li><p>The password must be 8 to 32 characters in length.</p>
+     * </li>
+     * <li><p>Special characters include <code>! @ # $ % ^ &amp; * ( ) _ + - =</code></p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

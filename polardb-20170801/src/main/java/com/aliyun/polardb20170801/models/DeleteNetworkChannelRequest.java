@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteNetworkChannelRequest extends TeaModel {
     /**
+     * <p>The name of the channel.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,8 @@ public class DeleteNetworkChannelRequest extends TeaModel {
     public String channelName;
 
     /**
+     * <p>A client token that ensures request idempotence. The client generates this token. It must be unique across requests. The token is case-sensitive and can contain up to 64 ASCII characters.</p>
+     * 
      * <strong>example:</strong>
      * <p>6000170000591aed949d0f54a343f1a4233c1e7d1c5c******</p>
      */
@@ -21,6 +24,7 @@ public class DeleteNetworkChannelRequest extends TeaModel {
     public String clientToken;
 
     /**
+     * <p>The name of the target instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -36,6 +40,8 @@ public class DeleteNetworkChannelRequest extends TeaModel {
     public Long ownerId;
 
     /**
+     * <p>The region ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
      */
@@ -43,6 +49,8 @@ public class DeleteNetworkChannelRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The ID of the resource group.</p>
+     * 
      * <strong>example:</strong>
      * <p>rg-************</p>
      */
@@ -56,6 +64,8 @@ public class DeleteNetworkChannelRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
+     * <p>The ID of the virtual private cloud (VPC) where the endpoint is located.</p>
+     * 
      * <strong>example:</strong>
      * <p>vpc-bp1qpo0kug3a20qqe****</p>
      */

@@ -7,10 +7,12 @@ public class CloseDBClusterMigrationRequest extends TeaModel {
     /**
      * <p>Specifies whether to continue to enable binary logging. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: continues to enable binary logging.</li>
-     * <li><strong>false</strong>: disables binary logging.</li>
+     * <li><p><strong>True</strong>: continues to enable binary logging.</p>
+     * </li>
+     * <li><p><strong>False</strong>: disables binary logging.</p>
+     * </li>
      * </ul>
-     * <p>Default value: <strong>true</strong>.</p>
+     * <p>Default value: <strong>True</strong>.</p>
      * <blockquote>
      * <p>If binary logging is disabled, your PolarDB cluster is restarted.</p>
      * </blockquote>

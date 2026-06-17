@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class EnableDBClusterOrcaResponseBody extends TeaModel {
     /**
+     * <p>The cluster ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>pc-***************</p>
      */
@@ -12,7 +14,7 @@ public class EnableDBClusterOrcaResponseBody extends TeaModel {
     public String DBClusterId;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>24A1990B-4F6E-482B-B8CB-75C612******</p>

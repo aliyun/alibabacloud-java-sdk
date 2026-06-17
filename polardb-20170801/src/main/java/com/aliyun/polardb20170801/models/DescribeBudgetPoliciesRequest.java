@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeBudgetPoliciesRequest extends TeaModel {
     /**
+     * <p>The ID of the consumer group or user. This parameter is required if BudgetDimensionType is set to ConsumerGroup or Consumer.</p>
+     * 
      * <strong>example:</strong>
      * <p>cg-p3gk2oh55c**</p>
      */
@@ -12,6 +14,14 @@ public class DescribeBudgetPoliciesRequest extends TeaModel {
     public String budgetDimensionRefId;
 
     /**
+     * <p>The policy type. Valid values:</p>
+     * <ul>
+     * <li><p><strong>ConsumerGroup</strong>: The policy applies to a consumer group.</p>
+     * </li>
+     * <li><p><strong>Consumer</strong>: The policy applies to a user.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>ConsumerGroup</p>
      */
@@ -19,6 +29,8 @@ public class DescribeBudgetPoliciesRequest extends TeaModel {
     public String budgetDimensionType;
 
     /**
+     * <p>The budget policy ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>023aacc1effc4b56bb154bfbec6baxxx</p>
      */
@@ -26,6 +38,7 @@ public class DescribeBudgetPoliciesRequest extends TeaModel {
     public String budgetPolicyId;
 
     /**
+     * <p>The gateway instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -35,6 +48,8 @@ public class DescribeBudgetPoliciesRequest extends TeaModel {
     public String gwClusterId;
 
     /**
+     * <p>The page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -42,16 +57,41 @@ public class DescribeBudgetPoliciesRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries per page. Valid values:</p>
+     * <ul>
+     * <li><p><strong>30</strong></p>
+     * </li>
+     * <li><p><strong>50</strong></p>
+     * </li>
+     * <li><p><strong>100</strong></p>
+     * </li>
+     * </ul>
+     * <p>The default value is <strong>30</strong>.</p>
+     * 
      * <strong>example:</strong>
      * <p>30</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The region ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-beijing</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
+     * <p>The policy status. Valid values:</p>
+     * <ul>
+     * <li><p><strong>Enabled</strong></p>
+     * </li>
+     * <li><p><strong>Disabled</strong></p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>Enabled</p>
      */

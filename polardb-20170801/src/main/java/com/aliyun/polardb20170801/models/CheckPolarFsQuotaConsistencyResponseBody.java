@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class CheckPolarFsQuotaConsistencyResponseBody extends TeaModel {
     /**
+     * <p>The ID of the PolarFS instance.</p>
+     * 
      * <strong>example:</strong>
      * <p>pfs-2ze0i74ka607*****</p>
      */
     @NameInMap("PolarFsInstanceId")
     public String polarFsInstanceId;
 
+    /**
+     * <p>An object that contains details about the quota.</p>
+     */
     @NameInMap("QuotaItem")
     public CheckPolarFsQuotaConsistencyResponseBodyQuotaItem quotaItem;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>E56531A4-E552-40BA-9C58-137B80******</p>
      */
@@ -52,6 +59,8 @@ public class CheckPolarFsQuotaConsistencyResponseBody extends TeaModel {
 
     public static class CheckPolarFsQuotaConsistencyResponseBodyQuotaItem extends TeaModel {
         /**
+         * <p>The storage capacity quota.</p>
+         * 
          * <strong>example:</strong>
          * <p>104857600</p>
          */
@@ -59,7 +68,7 @@ public class CheckPolarFsQuotaConsistencyResponseBody extends TeaModel {
         public Long capacity;
 
         /**
-         * <p>Inodes</p>
+         * <p>The inode quota.</p>
          * 
          * <strong>example:</strong>
          * <p>50000</p>
@@ -68,6 +77,8 @@ public class CheckPolarFsQuotaConsistencyResponseBody extends TeaModel {
         public Long inodes;
 
         /**
+         * <p>The directory path.</p>
+         * 
          * <strong>example:</strong>
          * <p>/zookeepertest718</p>
          */
@@ -75,6 +86,8 @@ public class CheckPolarFsQuotaConsistencyResponseBody extends TeaModel {
         public String path;
 
         /**
+         * <p>The used capacity, in bytes.</p>
+         * 
          * <strong>example:</strong>
          * <p>104857600</p>
          */
@@ -82,6 +95,8 @@ public class CheckPolarFsQuotaConsistencyResponseBody extends TeaModel {
         public Long usedCapacity;
 
         /**
+         * <p>The number of used inodes.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */

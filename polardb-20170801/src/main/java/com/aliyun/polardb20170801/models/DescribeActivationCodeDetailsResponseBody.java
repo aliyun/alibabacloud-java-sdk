@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeActivationCodeDetailsResponseBody extends TeaModel {
     /**
-     * <p>The time when the activation code takes effect.</p>
+     * <p>The effective time.</p>
      * 
      * <strong>example:</strong>
      * <p>2024-10-16 16:46:20</p>
@@ -14,7 +14,7 @@ public class DescribeActivationCodeDetailsResponseBody extends TeaModel {
     public String activateAt;
 
     /**
-     * <p>The activation code in the base64 format. The activation code is decoded and stored into a file named license.lic. PolarDB can access and read the license.lic file upon startup to validate the license or perform related operations.</p>
+     * <p>The content of the activation code. Decode the Base64 content and save it to the license.lic file for PolarDB to read during startup.</p>
      * 
      * <strong>example:</strong>
      * <p>AAEAA******AAA=</p>
@@ -32,7 +32,7 @@ public class DescribeActivationCodeDetailsResponseBody extends TeaModel {
     public String description;
 
     /**
-     * <p>The time when the activation code expires.</p>
+     * <p>The expiration time.</p>
      * 
      * <strong>example:</strong>
      * <p>2054-10-09 16:46:20</p>
@@ -86,7 +86,7 @@ public class DescribeActivationCodeDetailsResponseBody extends TeaModel {
     public String name;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>F2A9EFA7-915F-4572-8299-85A307******</p>
@@ -95,7 +95,7 @@ public class DescribeActivationCodeDetailsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The system identifier of the database.</p>
+     * <p>The unique identifier of the database.</p>
      * 
      * <strong>example:</strong>
      * <p>1234567890123456</p>

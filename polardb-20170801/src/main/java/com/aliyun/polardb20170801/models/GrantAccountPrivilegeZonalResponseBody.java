@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GrantAccountPrivilegeZonalResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>CD35F3-F3-44CA-AFFF-BAF869******</p>
      */

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeAIDBClusterTasksRequest extends TeaModel {
     /**
+     * <p>The model operator type.</p>
+     * 
      * <strong>example:</strong>
      * <p>aitrain</p>
      */
@@ -18,6 +20,8 @@ public class DescribeAIDBClusterTasksRequest extends TeaModel {
     public Long ownerId;
 
     /**
+     * <p>The region ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
      */
@@ -25,6 +29,8 @@ public class DescribeAIDBClusterTasksRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The ID of the PolarDB instance.</p>
+     * 
      * <strong>example:</strong>
      * <p>pc-2ze88***</p>
      */

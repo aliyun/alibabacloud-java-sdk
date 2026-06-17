@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeVSwitchListResponseBody extends TeaModel {
     /**
+     * <p>The page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -12,6 +14,17 @@ public class DescribeVSwitchListResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries per page. Valid values:</p>
+     * <ul>
+     * <li><p><strong>30</strong></p>
+     * </li>
+     * <li><p><strong>50</strong></p>
+     * </li>
+     * <li><p><strong>100</strong></p>
+     * </li>
+     * </ul>
+     * <p>Default value: 30.</p>
+     * 
      * <strong>example:</strong>
      * <p>30</p>
      */
@@ -19,6 +32,8 @@ public class DescribeVSwitchListResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>6A2EE5B4-CC9F-46E1-A747-E43BC9******</p>
      */
@@ -26,12 +41,17 @@ public class DescribeVSwitchListResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total number of entries.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
+    /**
+     * <p>A list of vSwitches.</p>
+     */
     @NameInMap("VSwitchs")
     public java.util.List<DescribeVSwitchListResponseBodyVSwitchs> vSwitchs;
 
@@ -82,6 +102,8 @@ public class DescribeVSwitchListResponseBody extends TeaModel {
 
     public static class DescribeVSwitchListResponseBodyVSwitchs extends TeaModel {
         /**
+         * <p>The number of available IP addresses in the vSwitch.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -89,6 +111,8 @@ public class DescribeVSwitchListResponseBody extends TeaModel {
         public Long availableIpAddressCount;
 
         /**
+         * <p>The vSwitch CIDR block.</p>
+         * 
          * <strong>example:</strong>
          * <p>172.16.0.0/24</p>
          */
@@ -96,6 +120,8 @@ public class DescribeVSwitchListResponseBody extends TeaModel {
         public String cidrBlock;
 
         /**
+         * <p>The description of the vSwitch.</p>
+         * 
          * <strong>example:</strong>
          * <p>vSwitchDescription</p>
          */
@@ -103,6 +129,14 @@ public class DescribeVSwitchListResponseBody extends TeaModel {
         public String description;
 
         /**
+         * <p>Indicates whether the vSwitch is the default vSwitch. Valid values:</p>
+         * <ul>
+         * <li><p><strong>true</strong>: The vSwitch is the default vSwitch.</p>
+         * </li>
+         * <li><p><strong>false</strong>: The vSwitch is not the default vSwitch.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -110,6 +144,8 @@ public class DescribeVSwitchListResponseBody extends TeaModel {
         public Boolean isDefault;
 
         /**
+         * <p>The ID of the zone where the vSwitch resides.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-hangzhou-b</p>
          */
@@ -117,6 +153,8 @@ public class DescribeVSwitchListResponseBody extends TeaModel {
         public String izNo;
 
         /**
+         * <p>The ID of the Alibaba Cloud account that owns the resource.</p>
+         * 
          * <strong>example:</strong>
          * <p>177563751276****</p>
          */
@@ -124,6 +162,8 @@ public class DescribeVSwitchListResponseBody extends TeaModel {
         public String ownerId;
 
         /**
+         * <p>The ID of the resource group.</p>
+         * 
          * <strong>example:</strong>
          * <p>rg-************</p>
          */
@@ -131,6 +171,8 @@ public class DescribeVSwitchListResponseBody extends TeaModel {
         public String resourceGroupId;
 
         /**
+         * <p>The sharing type.</p>
+         * 
          * <strong>example:</strong>
          * <p>Public</p>
          */
@@ -138,6 +180,14 @@ public class DescribeVSwitchListResponseBody extends TeaModel {
         public String shareType;
 
         /**
+         * <p>The status of the vSwitch. Valid values:</p>
+         * <ul>
+         * <li><p><strong>Pending</strong>: The vSwitch is being configured.</p>
+         * </li>
+         * <li><p><strong>Available</strong>: The vSwitch is available.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Available</p>
          */
@@ -145,6 +195,8 @@ public class DescribeVSwitchListResponseBody extends TeaModel {
         public String status;
 
         /**
+         * <p>The ID of the vSwitch.</p>
+         * 
          * <strong>example:</strong>
          * <p>vsw-25bcdxs7pv1****</p>
          */
@@ -152,6 +204,8 @@ public class DescribeVSwitchListResponseBody extends TeaModel {
         public String vSwitchId;
 
         /**
+         * <p>The name of the vSwitch.</p>
+         * 
          * <strong>example:</strong>
          * <p>vSwitch</p>
          */
@@ -159,6 +213,8 @@ public class DescribeVSwitchListResponseBody extends TeaModel {
         public String vSwitchName;
 
         /**
+         * <p>The ID of the VPC.</p>
+         * 
          * <strong>example:</strong>
          * <p>vpc-bp1vbkkyt7apvy4j*****</p>
          */

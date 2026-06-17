@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpdatePolarClawCronJobShrinkRequest extends TeaModel {
     /**
+     * <p>The ID of the Agent that runs the task.</p>
+     * 
      * <strong>example:</strong>
      * <p>work</p>
      */
@@ -12,6 +14,7 @@ public class UpdatePolarClawCronJobShrinkRequest extends TeaModel {
     public String agentId;
 
     /**
+     * <p>The application ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,6 +24,8 @@ public class UpdatePolarClawCronJobShrinkRequest extends TeaModel {
     public String applicationId;
 
     /**
+     * <p>Specifies whether to delete the task after its first execution.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -28,6 +33,8 @@ public class UpdatePolarClawCronJobShrinkRequest extends TeaModel {
     public Boolean deleteAfterRun;
 
     /**
+     * <p>The result delivery configuration.</p>
+     * 
      * <strong>example:</strong>
      * <p>{&quot;Mode&quot;:&quot;announce&quot;,&quot;Channel&quot;:&quot;telegram&quot;}</p>
      */
@@ -35,6 +42,8 @@ public class UpdatePolarClawCronJobShrinkRequest extends TeaModel {
     public String deliveryShrink;
 
     /**
+     * <p>The new description for the task.</p>
+     * 
      * <strong>example:</strong>
      * <p>Daily report generation</p>
      */
@@ -42,6 +51,8 @@ public class UpdatePolarClawCronJobShrinkRequest extends TeaModel {
     public String description;
 
     /**
+     * <p>Specifies whether the task is enabled.</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -49,6 +60,8 @@ public class UpdatePolarClawCronJobShrinkRequest extends TeaModel {
     public Boolean enabled;
 
     /**
+     * <p>The configuration for failure alerts. Set this to <code>false</code> to disable alerts.</p>
+     * 
      * <strong>example:</strong>
      * <p>{&quot;After&quot;:3,&quot;Channel&quot;:&quot;telegram&quot;}</p>
      */
@@ -56,6 +69,7 @@ public class UpdatePolarClawCronJobShrinkRequest extends TeaModel {
     public String failureAlertShrink;
 
     /**
+     * <p>The ID of the scheduled task to update.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -65,6 +79,8 @@ public class UpdatePolarClawCronJobShrinkRequest extends TeaModel {
     public String jobId;
 
     /**
+     * <p>The new name for the task.</p>
+     * 
      * <strong>example:</strong>
      * <p>afternoon-report</p>
      */
@@ -72,6 +88,8 @@ public class UpdatePolarClawCronJobShrinkRequest extends TeaModel {
     public String name;
 
     /**
+     * <p>The new payload configuration.</p>
+     * 
      * <strong>example:</strong>
      * <p>{&quot;Kind&quot;:&quot;agentTurn&quot;,&quot;Message&quot;:&quot;Updated: Generate afternoon report.&quot;}</p>
      */
@@ -79,6 +97,8 @@ public class UpdatePolarClawCronJobShrinkRequest extends TeaModel {
     public String payloadShrink;
 
     /**
+     * <p>Specifies whether to restart the gateway after the update. Default value: <code>true</code>.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -86,6 +106,8 @@ public class UpdatePolarClawCronJobShrinkRequest extends TeaModel {
     public Boolean restart;
 
     /**
+     * <p>The scheduling configuration.</p>
+     * 
      * <strong>example:</strong>
      * <p>{&quot;Kind&quot;:&quot;cron&quot;,&quot;Expr&quot;:&quot;0 12 * * *&quot;,&quot;Tz&quot;:&quot;America/New_York&quot;}</p>
      */
@@ -93,6 +115,8 @@ public class UpdatePolarClawCronJobShrinkRequest extends TeaModel {
     public String scheduleShrink;
 
     /**
+     * <p>The session routing key.</p>
+     * 
      * <strong>example:</strong>
      * <p>agent:main:feishu:direct:***</p>
      */
@@ -100,6 +124,8 @@ public class UpdatePolarClawCronJobShrinkRequest extends TeaModel {
     public String sessionKey;
 
     /**
+     * <p>The new session target.</p>
+     * 
      * <strong>example:</strong>
      * <p>isolated</p>
      */
@@ -107,6 +133,8 @@ public class UpdatePolarClawCronJobShrinkRequest extends TeaModel {
     public String sessionTarget;
 
     /**
+     * <p>The new wake mode.</p>
+     * 
      * <strong>example:</strong>
      * <p>now</p>
      */

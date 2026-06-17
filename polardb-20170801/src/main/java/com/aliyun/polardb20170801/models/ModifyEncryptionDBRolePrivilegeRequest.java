@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyEncryptionDBRolePrivilegeRequest extends TeaModel {
     /**
+     * <p>The cluster ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -26,6 +27,8 @@ public class ModifyEncryptionDBRolePrivilegeRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
+     * <p>The role access policy.</p>
+     * 
      * <strong>example:</strong>
      * <p>{&quot;notEncryption&quot;:[&quot;alton&quot;],&quot;encryption&quot;:[&quot;alton01&quot;]}</p>
      */
@@ -33,6 +36,8 @@ public class ModifyEncryptionDBRolePrivilegeRequest extends TeaModel {
     public String rolePrivilegeConfig;
 
     /**
+     * <p>The role permission name.</p>
+     * 
      * <strong>example:</strong>
      * <p>test</p>
      */

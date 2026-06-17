@@ -14,7 +14,7 @@ public class DescribeActivationCodeDetailsRequest extends TeaModel {
     public Integer activationCodeId;
 
     /**
-     * <p>The Alibaba Cloud order ID (including the virtual order ID).</p>
+     * <p>The Alibaba Cloud order ID, including virtual orders.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

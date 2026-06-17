@@ -5,11 +5,14 @@ import com.aliyun.tea.*;
 
 public class ModifyDBEndpointAddressRequest extends TeaModel {
     /**
-     * <p>The prefix of the new endpoint. The prefix must meet the following requirements:</p>
+     * <p>The new connection string prefix. The prefix must meet the following requirements:</p>
      * <ul>
-     * <li>It can contain lowercase letters, digits, and hyphens (-).</li>
-     * <li>It must start with a letter and end with a digit or a letter.</li>
-     * <li>It must be 6 to 30 characters in length.</li>
+     * <li><p>It can contain only lowercase letters, digits, and hyphens (-).</p>
+     * </li>
+     * <li><p>It must start with a letter and end with a letter or a digit.</p>
+     * </li>
+     * <li><p>It must be 6 to 30 characters in length.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -19,9 +22,9 @@ public class ModifyDBEndpointAddressRequest extends TeaModel {
     public String connectionStringPrefix;
 
     /**
-     * <p>The ID of cluster.</p>
+     * <p>The cluster ID.</p>
      * <blockquote>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/98094.html">DescribeDBClusters</a> operation to query the details of the clusters that belong to your Alibaba Cloud account, such as cluster IDs.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/98094.html">DescribeDBClusters</a> operation to query the details of all clusters in your account, including cluster IDs.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -32,9 +35,9 @@ public class ModifyDBEndpointAddressRequest extends TeaModel {
     public String DBClusterId;
 
     /**
-     * <p>The ID of the endpoint.</p>
+     * <p>The ID of the connection address.</p>
      * <blockquote>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/98205.html">DescribeDBClusterEndpoints</a> operation to query endpoint IDs.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/98205.html">DescribeDBClusterEndpoints</a> operation to query the ID of a connection address.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -44,11 +47,19 @@ public class ModifyDBEndpointAddressRequest extends TeaModel {
     public String DBEndpointId;
 
     /**
-     * <p>The network type of the endpoint. Valid values:</p>
+     * <p>The network type of the connection address. Valid values:</p>
      * <ul>
-     * <li><strong>Public</strong></li>
-     * <li><strong>Private</strong></li>
+     * <li><p><strong>Public</strong>: public network</p>
+     * </li>
+     * <li><p><strong>Private</strong>: private network</p>
+     * </li>
      * </ul>
+     * <p>&lt;props=&quot;china&quot;&gt;</p>
+     * <ul>
+     * <li><strong>Inner</strong>: classic network</li>
+     * </ul>
+     * <p>&lt;props=&quot;china&quot;&gt;</p>
+     * <p>Only PolarDB for MySQL clusters support the classic network type.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -64,9 +75,11 @@ public class ModifyDBEndpointAddressRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The port number. Valid values: 3000 to 5999.</p>
+     * <p>The port number. The valid range is 3000 to 5999.</p>
      * <blockquote>
-     * <p>This parameter is valid only for PolarDB for MySQL clusters. If you leave this parameter empty, the default port 3306 is used.</p>
+     * <ul>
+     * <li>This parameter is supported only for PolarDB for MySQL clusters. If you do not specify this parameter, the port defaults to 3306.</li>
+     * </ul>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -78,14 +91,19 @@ public class ModifyDBEndpointAddressRequest extends TeaModel {
     /**
      * <p>The prefix of the private domain name. The prefix must meet the following requirements:</p>
      * <ul>
-     * <li>The prefix can contain lowercase letters, digits, and hyphens (-).</li>
-     * <li>The prefix must start with a letter and end with a digit or a letter.</li>
-     * <li>The prefix must be 6 to 30 characters in length.</li>
+     * <li><p>It can contain only lowercase letters, digits, and hyphens (-).</p>
+     * </li>
+     * <li><p>It must start with a letter and end with a letter or a digit.</p>
+     * </li>
+     * <li><p>It must be 6 to 30 characters in length.</p>
+     * </li>
      * </ul>
      * <blockquote>
      * <ul>
-     * <li>You can bind each internal endpoint of PolarDB to a private domain name. The private domain name takes effect only in the specified virtual private clouds (VPCs) in the current region. Private domain names are managed by using PrivateZone. You can use the CNAME record of PrivateZone to map domain names to PolarDB. You are charged a small fee for this feature. For more information, see <a href="https://help.aliyun.com/document_detail/71338.html">Pricing</a>.</li>
-     * <li>This parameter takes effect only if you set <strong>NetType</strong> to Private.</li>
+     * <li><p>You can bind a private domain name to each private endpoint of a PolarDB cluster. This domain name is effective only in the specified VPC within the current region. The private domain name is managed by PrivateZone and is mapped to the built-in private endpoint of the cluster through a CNAME record. This feature incurs a small fee. For more information, see <a href="https://help.aliyun.com/document_detail/71338.html">Pricing</a>.</p>
+     * </li>
+     * <li><p>This parameter is valid only when <strong>NetType is set to Private</strong>.</p>
+     * </li>
      * </ul>
      * </blockquote>
      * 
@@ -96,9 +114,9 @@ public class ModifyDBEndpointAddressRequest extends TeaModel {
     public String privateZoneAddressPrefix;
 
     /**
-     * <p>The name of the private zone.</p>
+     * <p>The private zone name.</p>
      * <blockquote>
-     * <p>This parameter takes effect only when <strong>NetType</strong> is set to Private.</p>
+     * <p>This parameter is valid only when <strong>NetType is set to Private</strong>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

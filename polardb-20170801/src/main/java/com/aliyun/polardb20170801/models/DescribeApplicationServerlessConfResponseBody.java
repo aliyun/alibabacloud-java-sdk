@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeApplicationServerlessConfResponseBody extends TeaModel {
     /**
+     * <p>The application ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>pa-**************</p>
      */
@@ -12,12 +14,17 @@ public class DescribeApplicationServerlessConfResponseBody extends TeaModel {
     public String applicationId;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>CDB3258F-B5DE-43C4-8935-CBA0CA******</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The list of serverless configurations.</p>
+     */
     @NameInMap("ServerlessConfItems")
     public java.util.List<DescribeApplicationServerlessConfResponseBodyServerlessConfItems> serverlessConfItems;
 
@@ -52,6 +59,15 @@ public class DescribeApplicationServerlessConfResponseBody extends TeaModel {
 
     public static class DescribeApplicationServerlessConfResponseBodyServerlessConfItems extends TeaModel {
         /**
+         * <p>The type of the application sub-component.</p>
+         * <p>For Supabase, valid values are:</p>
+         * <ul>
+         * <li><p>gateway</p>
+         * </li>
+         * <li><p>backend</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>gateway</p>
          */
@@ -59,6 +75,8 @@ public class DescribeApplicationServerlessConfResponseBody extends TeaModel {
         public String componentType;
 
         /**
+         * <p>The maximum scaling capacity for a single node. Valid values: 0 PCU to 16 PCU.</p>
+         * 
          * <strong>example:</strong>
          * <p>16</p>
          */
@@ -66,6 +84,8 @@ public class DescribeApplicationServerlessConfResponseBody extends TeaModel {
         public String scaleMax;
 
         /**
+         * <p>The minimum scaling capacity for a single node, measured in PolarDB Capacity Units (PCU). Valid values: 0 PCU to 16 PCU.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */

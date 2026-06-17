@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListTagResourcesForRegionRequest extends TeaModel {
     /**
+     * <p>The token that is used to retrieve the next page of results. Optional for the first request. If the query does not return all results, the response contains a token. You can use this token in the next request to continue the query.</p>
+     * 
      * <strong>example:</strong>
      * <p>212db86sca4384811e0b5e8707e******</p>
      */
@@ -18,6 +20,7 @@ public class ListTagResourcesForRegionRequest extends TeaModel {
     public Long ownerId;
 
     /**
+     * <p>The region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -33,8 +36,16 @@ public class ListTagResourcesForRegionRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
+     * <p>The resource type. Valid values:</p>
+     * <ul>
+     * <li><p>cluster: cluster instance</p>
+     * </li>
+     * <li><p>aicluster: AI cluster instance</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
-     * <p>aicluster</p>
+     * <p>cluster</p>
      */
     @NameInMap("ResourceType")
     public String resourceType;

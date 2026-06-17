@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateApplicationShrinkRequest extends TeaModel {
     /**
+     * <p>The ID of an existing model operator instance to associate. This parameter is effective only when ApplicationType is set to polarclaw.</p>
+     * 
      * <strong>example:</strong>
      * <p>pm-xxxxxx</p>
      */
@@ -12,6 +14,15 @@ public class CreateApplicationShrinkRequest extends TeaModel {
     public String AIDBClusterId;
 
     /**
+     * <p>The type of the application. Valid values:</p>
+     * <ul>
+     * <li><p>supabase: Creates a managed Supabase application.</p>
+     * </li>
+     * <li><p>raycluster: Creates a managed Ray Cluster application.</p>
+     * </li>
+     * <li><p>polarclaw: Creates a managed PolarClaw application.</p>
+     * </li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,6 +32,10 @@ public class CreateApplicationShrinkRequest extends TeaModel {
     public String applicationType;
 
     /**
+     * <p>The CPU architecture. Valid value:</p>
+     * <ul>
+     * <li>x86</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -30,6 +45,8 @@ public class CreateApplicationShrinkRequest extends TeaModel {
     public String architecture;
 
     /**
+     * <p>The authentication service provider.</p>
+     * 
      * <strong>example:</strong>
      * <p>feishu</p>
      */
@@ -37,32 +54,71 @@ public class CreateApplicationShrinkRequest extends TeaModel {
     public String authProvider;
 
     /**
+     * <p>The configuration of the authentication provider.</p>
+     * 
      * <strong>example:</strong>
      * <p>xxx</p>
      */
     @NameInMap("AuthProviderConfig")
     public String authProviderConfig;
 
+    /**
+     * <p>Specifies whether to automatically create and bind an Elastic IP Address (EIP).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>qwen3-max</p>
+     */
     @NameInMap("AutoAllocatePublicEip")
     public Boolean autoAllocatePublicEip;
 
+    /**
+     * <p>Specifies whether to automatically create a PolarFS cold storage instance. Valid values:</p>
+     * <ul>
+     * <li><p>false (default): Does not automatically create the instance.</p>
+     * </li>
+     * <li><p>true: Automatically creates the instance.</p>
+     * </li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("AutoCreatePolarFs")
     public Boolean autoCreatePolarFs;
 
     /**
+     * <p>Specifies whether to enable auto-renewal.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
     @NameInMap("AutoRenew")
     public Boolean autoRenew;
 
+    /**
+     * <p>Specifies whether to automatically use a coupon. Valid values:</p>
+     * <ul>
+     * <li><p>true (default): Uses a coupon.</p>
+     * </li>
+     * <li><p>false: Does not use a coupon.</p>
+     * </li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("AutoUseCoupon")
     public Boolean autoUseCoupon;
 
+    /**
+     * <p>A list of custom child components for the application.</p>
+     */
     @NameInMap("Components")
     public String componentsShrink;
 
     /**
+     * <p>The ID of the PolarDB instance that the application depends on.</p>
+     * 
      * <strong>example:</strong>
      * <p>pc-**************</p>
      */
@@ -70,6 +126,8 @@ public class CreateApplicationShrinkRequest extends TeaModel {
     public String DBClusterId;
 
     /**
+     * <p>The description of the application.</p>
+     * 
      * <strong>example:</strong>
      * <p>myapp</p>
      */
@@ -77,22 +135,35 @@ public class CreateApplicationShrinkRequest extends TeaModel {
     public String description;
 
     /**
+     * <p>The default value is <code>false</code>. If you set this parameter to <code>true</code>, the system only checks the parameters and resources without creating the actual resources.</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
     @NameInMap("DryRun")
     public Boolean dryRun;
 
+    /**
+     * <p>A list of custom server-side endpoints. By default, a VPC Endpoint is created.</p>
+     */
     @NameInMap("Endpoints")
     public String endpointsShrink;
 
+    /**
+     * <p>This parameter is required for knowledge applications.</p>
+     */
     @NameInMap("KnowledgeApplicationSpec")
     public String knowledgeApplicationSpecShrink;
 
+    /**
+     * <p>This parameter is required for mem0 applications.</p>
+     */
     @NameInMap("MemApplicationSpec")
     public String memApplicationSpecShrink;
 
     /**
+     * <p>The model API. This parameter is effective only when ApplicationType is set to polarclaw.</p>
+     * 
      * <strong>example:</strong>
      * <p>openai-completions</p>
      */
@@ -100,6 +171,8 @@ public class CreateApplicationShrinkRequest extends TeaModel {
     public String modelApi;
 
     /**
+     * <p>The API key for the model. This parameter is effective only when ApplicationType is set to polarclaw.</p>
+     * 
      * <strong>example:</strong>
      * <p>sk-xxxxxx</p>
      */
@@ -107,6 +180,8 @@ public class CreateApplicationShrinkRequest extends TeaModel {
     public String modelApiKey;
 
     /**
+     * <p>The URL of the model. This parameter is effective only when ApplicationType is set to polarclaw.</p>
+     * 
      * <strong>example:</strong>
      * <p><a href="https://dashscope.aliyuncs.com/compatible-mode/v1">https://dashscope.aliyuncs.com/compatible-mode/v1</a></p>
      */
@@ -114,6 +189,16 @@ public class CreateApplicationShrinkRequest extends TeaModel {
     public String modelBaseUrl;
 
     /**
+     * <p>The source of the model. Valid values:</p>
+     * <ul>
+     * <li><p>bailian: Alibaba Cloud Model Studio model.</p>
+     * </li>
+     * <li><p>custom: A custom model.</p>
+     * </li>
+     * <li><p>maas: PolarDB model operator.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>bailian</p>
      */
@@ -121,16 +206,23 @@ public class CreateApplicationShrinkRequest extends TeaModel {
     public String modelFrom;
 
     /**
+     * <p>The name of the model. This parameter is effective only when ApplicationType is set to polarclaw.</p>
+     * 
      * <strong>example:</strong>
      * <p>qwen3-max</p>
      */
     @NameInMap("ModelName")
     public String modelName;
 
+    /**
+     * <p>A list of parameters.</p>
+     */
     @NameInMap("Parameters")
     public String parametersShrink;
 
     /**
+     * <p>The billing method.</p>
+     * 
      * <strong>example:</strong>
      * <p>Postpaid</p>
      */
@@ -138,6 +230,8 @@ public class CreateApplicationShrinkRequest extends TeaModel {
     public String payType;
 
     /**
+     * <p>The subscription period type.</p>
+     * 
      * <strong>example:</strong>
      * <p>Year</p>
      */
@@ -145,6 +239,15 @@ public class CreateApplicationShrinkRequest extends TeaModel {
     public String period;
 
     /**
+     * <p>The ID of the PolarFileSystem (PolarFS) cold storage or high-performance instance. This parameter is empty by default. If you specify this parameter, the corresponding storage is mounted to the application.</p>
+     * <p>This feature is currently supported only by the following applications:</p>
+     * <ul>
+     * <li><p>supabase</p>
+     * </li>
+     * <li><p>raycluster</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>pcs-********************</p>
      */
@@ -152,6 +255,8 @@ public class CreateApplicationShrinkRequest extends TeaModel {
     public String polarFSInstanceId;
 
     /**
+     * <p>The coupon code. If you do not specify this parameter, the default coupon is used.</p>
+     * 
      * <strong>example:</strong>
      * <p>727xxxxxx934</p>
      */
@@ -159,6 +264,8 @@ public class CreateApplicationShrinkRequest extends TeaModel {
     public String promotionCode;
 
     /**
+     * <p>The region. The default value is the region of the instance.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-beijing</p>
      */
@@ -166,31 +273,68 @@ public class CreateApplicationShrinkRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The ID of the resource group.</p>
+     * 
      * <strong>example:</strong>
      * <p>rg-********************</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
+    /**
+     * <p>The ID of the security group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>sg-********************</p>
+     */
     @NameInMap("SecurityGroupId")
     public String securityGroupId;
 
+    /**
+     * <p>The name of the IP address whitelist group. The default value is <code>default</code>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>default</p>
+     */
     @NameInMap("SecurityIPArrayName")
     public String securityIPArrayName;
 
+    /**
+     * <p>The IP address whitelist. If you do not specify this parameter, the default value <code>127.0.0.1</code> is used.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>127.0.0.1,172.17.0.0/24</p>
+     */
     @NameInMap("SecurityIPList")
     public String securityIPList;
 
+    /**
+     * <p>The type of the IP address.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ipv4</p>
+     */
     @NameInMap("SecurityIPType")
     public String securityIPType;
 
+    /**
+     * <p>The ID of the skill template.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>xxx</p>
+     */
     @NameInMap("SkillTemplateId")
     public String skillTemplateId;
 
+    /**
+     * <p>The tag.</p>
+     */
     @NameInMap("Tag")
     public java.util.List<CreateApplicationShrinkRequestTag> tag;
 
     /**
+     * <p>The target version.</p>
+     * 
      * <strong>example:</strong>
      * <p>latest</p>
      */
@@ -198,6 +342,8 @@ public class CreateApplicationShrinkRequest extends TeaModel {
     public String targetVersion;
 
     /**
+     * <p>The subscription duration.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -205,16 +351,26 @@ public class CreateApplicationShrinkRequest extends TeaModel {
     public String usedTime;
 
     /**
+     * <p>The vSwitch. The default value is the current vSwitch in the primary zone of the instance.</p>
+     * 
      * <strong>example:</strong>
      * <p>vsw-*********************</p>
      */
     @NameInMap("VSwitchId")
     public String vSwitchId;
 
+    /**
+     * <p>The ID of the Virtual Private Cloud (VPC).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vpc-********************</p>
+     */
     @NameInMap("VpcId")
     public String vpcId;
 
     /**
+     * <p>The zone. The default value is the primary zone of the instance.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-beijing-k</p>
      */
@@ -540,6 +696,8 @@ public class CreateApplicationShrinkRequest extends TeaModel {
 
     public static class CreateApplicationShrinkRequestTag extends TeaModel {
         /**
+         * <p>The key of the tag.</p>
+         * 
          * <strong>example:</strong>
          * <p>testKey</p>
          */
@@ -547,6 +705,8 @@ public class CreateApplicationShrinkRequest extends TeaModel {
         public String key;
 
         /**
+         * <p>The value of the tag.</p>
+         * 
          * <strong>example:</strong>
          * <p>testValue</p>
          */

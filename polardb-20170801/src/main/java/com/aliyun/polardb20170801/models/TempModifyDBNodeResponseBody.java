@@ -14,13 +14,13 @@ public class TempModifyDBNodeResponseBody extends TeaModel {
     public String DBClusterId;
 
     /**
-     * <p>The details of the nodes.</p>
+     * <p>The list of nodes.</p>
      */
     @NameInMap("DBNodeIds")
     public java.util.List<String> DBNodeIds;
 
     /**
-     * <p>The ID of the order.</p>
+     * <p>The order ID.</p>
      * 
      * <strong>example:</strong>
      * <p>2035638*******</p>

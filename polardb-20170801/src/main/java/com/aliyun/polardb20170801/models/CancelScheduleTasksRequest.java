@@ -7,7 +7,7 @@ public class CancelScheduleTasksRequest extends TeaModel {
     /**
      * <p>The cluster ID.</p>
      * <blockquote>
-     * <p> You can call the <a href="https://help.aliyun.com/document_detail/98094.html">DescribeDBClusters</a> operation to query the information of all clusters that are deployed in a specified region, such as the cluster IDs.</p>
+     * <p>Call the <a href="https://help.aliyun.com/document_detail/98094.html">DescribeDBClusters</a> operation to view information about all clusters in the destination region, including cluster IDs.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -24,7 +24,7 @@ public class CancelScheduleTasksRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The ID of the resource group.</p>
+     * <p>The resource group ID.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-************</p>
@@ -39,11 +39,13 @@ public class CancelScheduleTasksRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The ID of the scheduled task that you want to cancel.</p>
+     * <p>The ID of the scheduled task to cancel.</p>
      * <blockquote>
      * <ul>
-     * <li>You can call the <a href="https://help.aliyun.com/document_detail/199648.html">DescribeScheduleTasks</a> operation to query the details of all scheduled tasks that belong to the current account, such as the task IDs.</li>
-     * <li>You can cancel only the tasks whose status is <code>pending</code>.``</li>
+     * <li><p>Call the <a href="https://help.aliyun.com/document_detail/199648.html">DescribeScheduleTasks</a> operation to view information about all scheduled tasks for your account, including task IDs.</p>
+     * </li>
+     * <li><p>You can cancel only tasks that are in the pending state. The <code>Status</code> parameter for these tasks returns <code>pending</code>.</p>
+     * </li>
      * </ul>
      * </blockquote>
      * <p>This parameter is required.</p>

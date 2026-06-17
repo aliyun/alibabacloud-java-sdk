@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListPolarClawDevicePairsResponseBody extends TeaModel {
     /**
+     * <p>The application ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>pa-**************</p>
      */
@@ -12,6 +14,8 @@ public class ListPolarClawDevicePairsResponseBody extends TeaModel {
     public String applicationId;
 
     /**
+     * <p>The status code of the response.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -19,20 +23,28 @@ public class ListPolarClawDevicePairsResponseBody extends TeaModel {
     public Integer code;
 
     /**
+     * <p>The response message.</p>
+     * 
      * <strong>example:</strong>
      * <p>successful</p>
      */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>A list of paired devices.</p>
+     */
     @NameInMap("Paired")
     public java.util.List<ListPolarClawDevicePairsResponseBodyPaired> paired;
 
+    /**
+     * <p>A list of pending pairing requests.</p>
+     */
     @NameInMap("Pending")
     public java.util.List<ListPolarClawDevicePairsResponseBodyPending> pending;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>A7E6A8FD-C50B-46B2-BA85-D8B8D3******</p>
@@ -95,6 +107,8 @@ public class ListPolarClawDevicePairsResponseBody extends TeaModel {
 
     public static class ListPolarClawDevicePairsResponseBodyPaired extends TeaModel {
         /**
+         * <p>The client ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>cli</p>
          */
@@ -102,6 +116,8 @@ public class ListPolarClawDevicePairsResponseBody extends TeaModel {
         public String clientId;
 
         /**
+         * <p>The client mode.</p>
+         * 
          * <strong>example:</strong>
          * <p>cli</p>
          */
@@ -109,6 +125,8 @@ public class ListPolarClawDevicePairsResponseBody extends TeaModel {
         public String clientMode;
 
         /**
+         * <p>The time when the device pairing was created, in Unix milliseconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>1778659807727</p>
          */
@@ -116,6 +134,8 @@ public class ListPolarClawDevicePairsResponseBody extends TeaModel {
         public Long createdAtMs;
 
         /**
+         * <p>The device family.</p>
+         * 
          * <strong>example:</strong>
          * <p>empty</p>
          */
@@ -123,6 +143,8 @@ public class ListPolarClawDevicePairsResponseBody extends TeaModel {
         public String deviceFamily;
 
         /**
+         * <p>The unique device ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>f92620d6bea04f65d48cf603c57b367c97e837c1ab9f6d78f741f477e99d857c</p>
          */
@@ -130,6 +152,8 @@ public class ListPolarClawDevicePairsResponseBody extends TeaModel {
         public String deviceId;
 
         /**
+         * <p>The display name of the device.</p>
+         * 
          * <strong>example:</strong>
          * <p>empty</p>
          */
@@ -137,6 +161,8 @@ public class ListPolarClawDevicePairsResponseBody extends TeaModel {
         public String displayName;
 
         /**
+         * <p>The time when the device was last active, in Unix milliseconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>1778659807727</p>
          */
@@ -144,6 +170,8 @@ public class ListPolarClawDevicePairsResponseBody extends TeaModel {
         public Long lastSeenAtMs;
 
         /**
+         * <p>The operating system.</p>
+         * 
          * <strong>example:</strong>
          * <p>linux</p>
          */
@@ -151,12 +179,17 @@ public class ListPolarClawDevicePairsResponseBody extends TeaModel {
         public String platform;
 
         /**
+         * <p>The device role.</p>
+         * 
          * <strong>example:</strong>
          * <p>operator</p>
          */
         @NameInMap("Role")
         public String role;
 
+        /**
+         * <p>The list of permission scopes.</p>
+         */
         @NameInMap("Scopes")
         public java.util.List<String> scopes;
 
@@ -249,6 +282,8 @@ public class ListPolarClawDevicePairsResponseBody extends TeaModel {
 
     public static class ListPolarClawDevicePairsResponseBodyPending extends TeaModel {
         /**
+         * <p>The client ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>cli</p>
          */
@@ -256,6 +291,8 @@ public class ListPolarClawDevicePairsResponseBody extends TeaModel {
         public String clientId;
 
         /**
+         * <p>The client mode.</p>
+         * 
          * <strong>example:</strong>
          * <p>cli</p>
          */
@@ -263,6 +300,8 @@ public class ListPolarClawDevicePairsResponseBody extends TeaModel {
         public String clientMode;
 
         /**
+         * <p>The device family.</p>
+         * 
          * <strong>example:</strong>
          * <p>server</p>
          */
@@ -270,6 +309,8 @@ public class ListPolarClawDevicePairsResponseBody extends TeaModel {
         public String deviceFamily;
 
         /**
+         * <p>The unique device ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>device-784x37k0vko734fk</p>
          */
@@ -277,6 +318,8 @@ public class ListPolarClawDevicePairsResponseBody extends TeaModel {
         public String deviceId;
 
         /**
+         * <p>The display name of the device.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -284,6 +327,8 @@ public class ListPolarClawDevicePairsResponseBody extends TeaModel {
         public String displayName;
 
         /**
+         * <p>Whether the request is to repair an existing pairing.</p>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
@@ -291,6 +336,8 @@ public class ListPolarClawDevicePairsResponseBody extends TeaModel {
         public Boolean isRepair;
 
         /**
+         * <p>The pairing request ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>test-1778647932986</p>
          */
@@ -298,6 +345,8 @@ public class ListPolarClawDevicePairsResponseBody extends TeaModel {
         public String pairRequestId;
 
         /**
+         * <p>The operating system.</p>
+         * 
          * <strong>example:</strong>
          * <p>linux</p>
          */
@@ -305,6 +354,8 @@ public class ListPolarClawDevicePairsResponseBody extends TeaModel {
         public String platform;
 
         /**
+         * <p>The Ed25519 public key.</p>
+         * 
          * <strong>example:</strong>
          * <p>test-pubkey-base64url</p>
          */
@@ -312,6 +363,8 @@ public class ListPolarClawDevicePairsResponseBody extends TeaModel {
         public String publicKey;
 
         /**
+         * <p>The requester\&quot;s remote IP address.</p>
+         * 
          * <strong>example:</strong>
          * <p>127.0.0.1</p>
          */
@@ -319,19 +372,29 @@ public class ListPolarClawDevicePairsResponseBody extends TeaModel {
         public String remoteIp;
 
         /**
+         * <p>The device role.</p>
+         * 
          * <strong>example:</strong>
          * <p>operator</p>
          */
         @NameInMap("Role")
         public String role;
 
+        /**
+         * <p>The list of roles.</p>
+         */
         @NameInMap("Roles")
         public java.util.List<String> roles;
 
+        /**
+         * <p>The list of permission scopes.</p>
+         */
         @NameInMap("Scopes")
         public java.util.List<String> scopes;
 
         /**
+         * <p>Whether this is a silent pairing.</p>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
@@ -339,6 +402,8 @@ public class ListPolarClawDevicePairsResponseBody extends TeaModel {
         public Boolean silent;
 
         /**
+         * <p>The timestamp of the pairing request, in Unix milliseconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>1778660347550</p>
          */

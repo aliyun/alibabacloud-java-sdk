@@ -7,8 +7,10 @@ public class DescribeDBClusterAuditLogCollectorResponseBody extends TeaModel {
     /**
      * <p>The status of SQL collector. Valid values:</p>
      * <ul>
-     * <li>Enable</li>
-     * <li>Disabled</li>
+     * <li><p>Enable</p>
+     * </li>
+     * <li><p>Disabled</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

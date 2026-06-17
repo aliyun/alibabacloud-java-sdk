@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateDatabaseZonalResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>93E98F25-BE02-40DA-83E3-F77F8D******</p>
      */

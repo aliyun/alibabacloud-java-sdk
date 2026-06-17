@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeDBClusterSSLResponseBody extends TeaModel {
     /**
-     * <p>The list of SSL connections.</p>
+     * <p>A list of SSL connection information.</p>
      */
     @NameInMap("Items")
     public java.util.List<DescribeDBClusterSSLResponseBodyItems> items;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>C890995A-CF06-4F4D-8DB8-DD26C2******</p>
@@ -22,11 +22,13 @@ public class DescribeDBClusterSSLResponseBody extends TeaModel {
     /**
      * <p>Indicates whether automatic rotation of SSL certificates is enabled. Valid values:</p>
      * <ul>
-     * <li><strong>Enable</strong>: The feature is enabled.</li>
-     * <li><strong>Disable</strong>: The feature is disabled.</li>
+     * <li><p><strong>Enable</strong>: enabled</p>
+     * </li>
+     * <li><p><strong>Disable</strong>: disabled</p>
+     * </li>
      * </ul>
      * <blockquote>
-     * <p>This parameter is valid only for a PolarDB for MySQL cluster.</p>
+     * <p>This parameter is supported only for PolarDB for MySQL.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -66,7 +68,7 @@ public class DescribeDBClusterSSLResponseBody extends TeaModel {
 
     public static class DescribeDBClusterSSLResponseBodyItems extends TeaModel {
         /**
-         * <p>The ID of the endpoint.</p>
+         * <p>The cluster endpoint ID.</p>
          * 
          * <strong>example:</strong>
          * <p>pe-************</p>
@@ -75,6 +77,17 @@ public class DescribeDBClusterSSLResponseBody extends TeaModel {
         public String DBEndpointId;
 
         /**
+         * <p>Indicates whether automatic rotation of SSL certificates is enabled. Valid values:</p>
+         * <ul>
+         * <li><p><strong>Enable</strong>: enabled</p>
+         * </li>
+         * <li><p><strong>Disable</strong>: disabled</p>
+         * </li>
+         * </ul>
+         * <blockquote>
+         * <p>This parameter is supported only when the database engine is compatible with PostgreSQL or Oracle syntax.</p>
+         * </blockquote>
+         * 
          * <strong>example:</strong>
          * <p>Enable</p>
          */
@@ -82,7 +95,7 @@ public class DescribeDBClusterSSLResponseBody extends TeaModel {
         public String SSLAutoRotate;
 
         /**
-         * <p>The SSL connection string.</p>
+         * <p>The SSL connection endpoint.</p>
          * 
          * <strong>example:</strong>
          * <p>pc-************.mysql.polardb.rds.aliyuncs.com</p>
@@ -93,8 +106,10 @@ public class DescribeDBClusterSSLResponseBody extends TeaModel {
         /**
          * <p>Indicates whether SSL encryption is enabled. Valid values:</p>
          * <ul>
-         * <li><strong>Enabled</strong>: SSL is enabled.</li>
-         * <li><strong>Disable</strong>: SSL is disabled.</li>
+         * <li><p><strong>Enabled</strong>: enabled.</p>
+         * </li>
+         * <li><p><strong>Disabled</strong>: disabled.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -104,7 +119,7 @@ public class DescribeDBClusterSSLResponseBody extends TeaModel {
         public String SSLEnabled;
 
         /**
-         * <p>The time when the server certificate expires. The time is in the <code>yyyy-MM-ddTHH:mm:ssZ</code> format. The time is displayed in UTC.</p>
+         * <p>The certificate validity period. Format: <code>yyyy-MM-ddTHH:mm:ssZ</code> (UTC time).</p>
          * 
          * <strong>example:</strong>
          * <p>2021-11-13T07:14:22Z</p>

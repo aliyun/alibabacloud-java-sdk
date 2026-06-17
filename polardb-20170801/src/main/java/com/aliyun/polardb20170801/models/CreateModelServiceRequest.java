@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateModelServiceRequest extends TeaModel {
     /**
+     * <p>The API key for the model service.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class CreateModelServiceRequest extends TeaModel {
     public String apiKey;
 
     /**
+     * <p>The URL of the upstream service.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,7 @@ public class CreateModelServiceRequest extends TeaModel {
     public String baseUrl;
 
     /**
+     * <p>The gateway instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -32,6 +35,8 @@ public class CreateModelServiceRequest extends TeaModel {
     public String gwClusterId;
 
     /**
+     * <p>The billing cost for input, measured in points per one million tokens.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -39,6 +44,7 @@ public class CreateModelServiceRequest extends TeaModel {
     public String inputCostPointsPerMillion;
 
     /**
+     * <p>The model category.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -48,6 +54,7 @@ public class CreateModelServiceRequest extends TeaModel {
     public String modelCategory;
 
     /**
+     * <p>The model service name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -57,6 +64,8 @@ public class CreateModelServiceRequest extends TeaModel {
     public String name;
 
     /**
+     * <p>The billing cost for output, measured in points per one million tokens.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -64,6 +73,7 @@ public class CreateModelServiceRequest extends TeaModel {
     public String outputCostPointsPerMillion;
 
     /**
+     * <p>The protocol type.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -72,10 +82,18 @@ public class CreateModelServiceRequest extends TeaModel {
     @NameInMap("Protocol")
     public String protocol;
 
+    /**
+     * <p>The region ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-beijing</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
+     * <p>The billing cost per request, measured in points.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -83,7 +101,11 @@ public class CreateModelServiceRequest extends TeaModel {
     public String requestCostPoints;
 
     /**
+     * <p>The model service provider. The example value <code>bailian</code> is a pinyin-based identifier that corresponds to the product name Model Studio.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>bailian</p>
      */
     @NameInMap("Vendor")
     public String vendor;

@@ -4,10 +4,15 @@ package com.aliyun.polardb20170801.models;
 import com.aliyun.tea.*;
 
 public class DescribeCrossCloudLevelsResponseBody extends TeaModel {
+    /**
+     * <p>The list of supported cross-cloud specifications.</p>
+     */
     @NameInMap("CrossCloudLevelList")
     public java.util.List<DescribeCrossCloudLevelsResponseBodyCrossCloudLevelList> crossCloudLevelList;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>E56531A4-E552-40BA-9C58-137B80******</p>
      */
@@ -37,6 +42,8 @@ public class DescribeCrossCloudLevelsResponseBody extends TeaModel {
 
     public static class DescribeCrossCloudLevelsResponseBodyCrossCloudLevelList extends TeaModel {
         /**
+         * <p>The database engine type.</p>
+         * 
          * <strong>example:</strong>
          * <p>MySQL</p>
          */
@@ -44,12 +51,20 @@ public class DescribeCrossCloudLevelsResponseBody extends TeaModel {
         public String DBType;
 
         /**
+         * <p>The specification code.</p>
+         * 
          * <strong>example:</strong>
          * <p>polar.mysql.g4.medium.c</p>
          */
         @NameInMap("LevelCode")
         public String levelCode;
 
+        /**
+         * <p>The CPU and memory.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2 core 8 GB</p>
+         */
         @NameInMap("LevelName")
         public String levelName;
 

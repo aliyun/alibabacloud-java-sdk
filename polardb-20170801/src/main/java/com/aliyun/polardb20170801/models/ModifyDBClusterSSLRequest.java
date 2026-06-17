@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyDBClusterSSLRequest extends TeaModel {
     /**
-     * <p>The ID of the cluster.</p>
+     * <p>The cluster ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -17,7 +17,6 @@ public class ModifyDBClusterSSLRequest extends TeaModel {
     /**
      * <p>The ID of the endpoint.</p>
      * <blockquote>
-     * </blockquote>
      * <ul>
      * <li><p>This parameter is required for PolarDB for MySQL clusters.</p>
      * </li>
@@ -26,6 +25,7 @@ public class ModifyDBClusterSSLRequest extends TeaModel {
      * <li><p>You can call the <a href="https://help.aliyun.com/document_detail/2319159.html">DescribeDBClusterSSL</a> operation to view the details of the endpoint.</p>
      * </li>
      * </ul>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>pe-******************</p>
@@ -34,20 +34,23 @@ public class ModifyDBClusterSSLRequest extends TeaModel {
     public String DBEndpointId;
 
     /**
-     * <p>The network type supported by the endpoint that is specified by <strong>DBEndpointId</strong>. Valid values:</p>
+     * <p>The network type of the endpoint. The value must be the same as the network type of the endpoint specified by the <strong>DBEndpointId</strong> parameter. Valid values:</p>
      * <ul>
-     * <li><strong>Public</strong></li>
-     * <li><strong>Private</strong></li>
-     * <li><strong>Inner</strong></li>
+     * <li><p><strong>Public</strong></p>
+     * </li>
+     * <li><p><strong>Private</strong></p>
+     * </li>
+     * <li><p><strong>Inner</strong></p>
+     * </li>
      * </ul>
      * <blockquote>
-     * </blockquote>
      * <ul>
-     * <li><p>This parameter is required for a PolarDB for MySQL cluster.</p>
+     * <li><p>This parameter is required for PolarDB for MySQL clusters.</p>
      * </li>
-     * <li><p>This parameter is not required for a PolarDB for Oracle or PolarDB for PostgreSQL cluster. By default, SSL encryption is enabled for all endpoints.</p>
+     * <li><p>This parameter is not required for PolarDB for PostgreSQL or PolarDB for PostgreSQL (Compatible with Oracle) clusters. By default, SSL encryption is enabled for all endpoints of the clusters.</p>
      * </li>
      * </ul>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>Public</p>
@@ -70,8 +73,10 @@ public class ModifyDBClusterSSLRequest extends TeaModel {
     /**
      * <p>Specifies whether automatic rotation of SSL certificates is enabled.</p>
      * <ul>
-     * <li><strong>Enable</strong>: The feature is enabled.</li>
-     * <li><strong>Disable</strong>: The feature is disabled.</li>
+     * <li><p><strong>Enable</strong></p>
+     * </li>
+     * <li><p><strong>Disable</strong></p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -83,12 +88,15 @@ public class ModifyDBClusterSSLRequest extends TeaModel {
     /**
      * <p>The SSL encryption status. Valid values:</p>
      * <ul>
-     * <li><strong>Disable</strong>: SSL encryption is disabled.</li>
-     * <li><strong>Enable</strong>: SSL encryption is enabled.</li>
-     * <li><strong>Update</strong>: The SSL certificate is updated.</li>
+     * <li><p><strong>Disabled</strong></p>
+     * </li>
+     * <li><p><strong>Enabled</strong></p>
+     * </li>
+     * <li><p><strong>Update</strong>: The SSL certificate is updated.</p>
+     * </li>
      * </ul>
      * <blockquote>
-     * <p>After you enable SSL encryption or update the SSL certificate, you must download and configure the certificate. For more information, see <a href="https://help.aliyun.com/document_detail/153182.html">Configure SSL encryption</a>.</p>
+     * <p>After you enable SSL encryption or update the SSL certificate, you must download and configure the certificate. See <a href="https://help.aliyun.com/document_detail/153182.html">Configure SSL encryption</a>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

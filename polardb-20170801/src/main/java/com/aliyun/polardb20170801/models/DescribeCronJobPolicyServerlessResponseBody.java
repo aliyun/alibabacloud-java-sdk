@@ -4,10 +4,15 @@ package com.aliyun.polardb20170801.models;
 import com.aliyun.tea.*;
 
 public class DescribeCronJobPolicyServerlessResponseBody extends TeaModel {
+    /**
+     * <p>The list of tasks.</p>
+     */
     @NameInMap("Items")
     public java.util.List<DescribeCronJobPolicyServerlessResponseBodyItems> items;
 
     /**
+     * <p>The page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -15,6 +20,17 @@ public class DescribeCronJobPolicyServerlessResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of records on each page. Valid values:</p>
+     * <ul>
+     * <li><p><strong>30</strong></p>
+     * </li>
+     * <li><p><strong>50</strong></p>
+     * </li>
+     * <li><p><strong>100</strong></p>
+     * </li>
+     * </ul>
+     * <p>Default value: <strong>30</strong>.</p>
+     * 
      * <strong>example:</strong>
      * <p>30</p>
      */
@@ -22,7 +38,7 @@ public class DescribeCronJobPolicyServerlessResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>9B7BFB11-C077-4FE3-B051-F69CEB******</p>
@@ -31,6 +47,8 @@ public class DescribeCronJobPolicyServerlessResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total number of records.</p>
+     * 
      * <strong>example:</strong>
      * <p>5</p>
      */
@@ -84,6 +102,8 @@ public class DescribeCronJobPolicyServerlessResponseBody extends TeaModel {
 
     public static class DescribeCronJobPolicyServerlessResponseBodyItems extends TeaModel {
         /**
+         * <p>A system parameter. Set the value to <strong>ModifyDBClusterServerlessConf</strong>.</p>
+         * 
          * <strong>example:</strong>
          * <p>ModifyDBClusterServerlessConf</p>
          */
@@ -91,6 +111,14 @@ public class DescribeCronJobPolicyServerlessResponseBody extends TeaModel {
         public String action;
 
         /**
+         * <p>Specifies whether to enable No-activity Suspension. Valid values:</p>
+         * <ul>
+         * <li><p><strong>true</strong>: enabled</p>
+         * </li>
+         * <li><p><strong>false</strong>: disabled (default)</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -98,6 +126,8 @@ public class DescribeCronJobPolicyServerlessResponseBody extends TeaModel {
         public String allowShutDown;
 
         /**
+         * <p>The Cron expression for the scheduled task.</p>
+         * 
          * <strong>example:</strong>
          * <p>0 0 8 * * ?</p>
          */
@@ -105,6 +135,8 @@ public class DescribeCronJobPolicyServerlessResponseBody extends TeaModel {
         public String cronExpression;
 
         /**
+         * <p>The cluster ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>pc-*****************</p>
          */
@@ -112,6 +144,8 @@ public class DescribeCronJobPolicyServerlessResponseBody extends TeaModel {
         public String DBClusterId;
 
         /**
+         * <p>The end time of the task. The time is in the yyyy-MM-ddTHH:mm:ssZ format and in UTC.</p>
+         * 
          * <strong>example:</strong>
          * <p>2024-12-04T02:25:00Z</p>
          */
@@ -119,6 +153,8 @@ public class DescribeCronJobPolicyServerlessResponseBody extends TeaModel {
         public String endTime;
 
         /**
+         * <p>The ID of the scheduled task.</p>
+         * 
          * <strong>example:</strong>
          * <p>12eee3eb-60bd-40ac-a403-218e02eb99c7</p>
          */
@@ -126,6 +162,8 @@ public class DescribeCronJobPolicyServerlessResponseBody extends TeaModel {
         public String jobId;
 
         /**
+         * <p>The order ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>254752088000354</p>
          */
@@ -133,6 +171,8 @@ public class DescribeCronJobPolicyServerlessResponseBody extends TeaModel {
         public String orderId;
 
         /**
+         * <p>The region ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
          */
@@ -140,6 +180,8 @@ public class DescribeCronJobPolicyServerlessResponseBody extends TeaModel {
         public String regionId;
 
         /**
+         * <p>The maximum number of read-only IMCI nodes. Valid values: 1 to 15.</p>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */
@@ -147,6 +189,8 @@ public class DescribeCronJobPolicyServerlessResponseBody extends TeaModel {
         public String scaleApRoNumMax;
 
         /**
+         * <p>The minimum number of read-only IMCI nodes. Valid values: 0 to 15.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -154,6 +198,8 @@ public class DescribeCronJobPolicyServerlessResponseBody extends TeaModel {
         public String scaleApRoNumMin;
 
         /**
+         * <p>The maximum capacity. The value must be from 1 to 32. Unit: PCU.</p>
+         * 
          * <strong>example:</strong>
          * <p>9</p>
          */
@@ -161,6 +207,8 @@ public class DescribeCronJobPolicyServerlessResponseBody extends TeaModel {
         public String scaleMax;
 
         /**
+         * <p>The minimum capacity. The value must be from 0.25 to 32 and less than or equal to the maximum capacity. Unit: PolarDB Capacity Unit (PCU).</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -168,6 +216,8 @@ public class DescribeCronJobPolicyServerlessResponseBody extends TeaModel {
         public String scaleMin;
 
         /**
+         * <p>The maximum number of read-only nodes. The value must be greater than or equal to the minimum value. Valid values: 0 to 15.</p>
+         * 
          * <strong>example:</strong>
          * <p>3</p>
          */
@@ -175,6 +225,8 @@ public class DescribeCronJobPolicyServerlessResponseBody extends TeaModel {
         public String scaleRoNumMax;
 
         /**
+         * <p>The minimum number of read-only nodes. Valid values: 0 to 15.</p>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */
@@ -182,6 +234,8 @@ public class DescribeCronJobPolicyServerlessResponseBody extends TeaModel {
         public String scaleRoNumMin;
 
         /**
+         * <p>The detection period for No-activity Suspension. The value must be a multiple of 5. Valid values: 5 to 1440. Unit: minutes.</p>
+         * 
          * <strong>example:</strong>
          * <p>1200</p>
          */
@@ -189,6 +243,8 @@ public class DescribeCronJobPolicyServerlessResponseBody extends TeaModel {
         public String secondsUntilAutoPause;
 
         /**
+         * <p>The CPU utilization threshold for scaling up. Valid values: 40 to 100. Unit: %.</p>
+         * 
          * <strong>example:</strong>
          * <p>70</p>
          */
@@ -196,6 +252,8 @@ public class DescribeCronJobPolicyServerlessResponseBody extends TeaModel {
         public String serverlessRuleCpuEnlargeThreshold;
 
         /**
+         * <p>The CPU utilization threshold for scaling down. Valid values: 10 to 100. Unit: %. The difference between the scale-up threshold and the scale-down threshold must be 30 or greater.</p>
+         * 
          * <strong>example:</strong>
          * <p>40</p>
          */
@@ -203,6 +261,14 @@ public class DescribeCronJobPolicyServerlessResponseBody extends TeaModel {
         public String serverlessRuleCpuShrinkThreshold;
 
         /**
+         * <p>The elasticity sensitivity. Valid values:</p>
+         * <ul>
+         * <li><p>normal: standard</p>
+         * </li>
+         * <li><p>flexible: sensitive</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>normal</p>
          */
@@ -210,6 +276,8 @@ public class DescribeCronJobPolicyServerlessResponseBody extends TeaModel {
         public String serverlessRuleMode;
 
         /**
+         * <p>The start time of the task. The time is in the <code>yyyy-MM-ddTHH:mmZ</code> format and in UTC.</p>
+         * 
          * <strong>example:</strong>
          * <p>2020-06-09T18:00:00Z</p>
          */
@@ -217,6 +285,14 @@ public class DescribeCronJobPolicyServerlessResponseBody extends TeaModel {
         public String startTime;
 
         /**
+         * <p>The status of the task. Valid values:</p>
+         * <ul>
+         * <li><p><strong>working</strong>: The scheduled task is running.</p>
+         * </li>
+         * <li><p><strong>finish</strong>: The scheduled task is complete.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>3</p>
          */

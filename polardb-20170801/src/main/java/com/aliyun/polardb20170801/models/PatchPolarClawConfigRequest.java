@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class PatchPolarClawConfigRequest extends TeaModel {
     /**
+     * <p>The application ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,8 @@ public class PatchPolarClawConfigRequest extends TeaModel {
     public String applicationId;
 
     /**
+     * <p>A JSON merge-patch object.</p>
+     * 
      * <strong>example:</strong>
      * <p>{
      *     &quot;tools&quot;: {
@@ -29,6 +32,8 @@ public class PatchPolarClawConfigRequest extends TeaModel {
     public java.util.Map<String, ?> configPatch;
 
     /**
+     * <p>Specifies whether to restart the gateway after applying the patch. The default is <code>true</code>.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

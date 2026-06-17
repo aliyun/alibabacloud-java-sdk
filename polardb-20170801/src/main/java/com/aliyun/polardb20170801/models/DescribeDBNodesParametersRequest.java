@@ -15,7 +15,7 @@ public class DescribeDBNodesParametersRequest extends TeaModel {
     public String DBClusterId;
 
     /**
-     * <p>The node ID. You can specify multiple node IDs. Separate multiple node IDs with commas (,).</p>
+     * <p>The ID of the node. You can specify multiple node IDs. Separate the IDs with a comma (,).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

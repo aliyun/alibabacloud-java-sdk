@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ResetGlobalDatabaseNetworkResponseBody extends TeaModel {
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>67F2E75F-AE67-4FB2-821F-A81237EACD15</p>

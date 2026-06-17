@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeModelServicesRequest extends TeaModel {
     /**
+     * <p>The ID of the gateway instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,8 @@ public class DescribeModelServicesRequest extends TeaModel {
     public String gwClusterId;
 
     /**
+     * <p>The model category.</p>
+     * 
      * <strong>example:</strong>
      * <p>text</p>
      */
@@ -21,6 +24,8 @@ public class DescribeModelServicesRequest extends TeaModel {
     public String modelCategory;
 
     /**
+     * <p>The IDs of the model services. Separate multiple IDs with a comma (,).</p>
+     * 
      * <strong>example:</strong>
      * <p>ms-xxx,ms-xxxx</p>
      */
@@ -28,6 +33,8 @@ public class DescribeModelServicesRequest extends TeaModel {
     public String modelServiceIds;
 
     /**
+     * <p>The name of the model service.</p>
+     * 
      * <strong>example:</strong>
      * <p>testName</p>
      */
@@ -35,6 +42,8 @@ public class DescribeModelServicesRequest extends TeaModel {
     public String name;
 
     /**
+     * <p>The page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -42,6 +51,8 @@ public class DescribeModelServicesRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>30</p>
      */
@@ -49,16 +60,36 @@ public class DescribeModelServicesRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The protocol type. Valid values:</p>
+     * <ul>
+     * <li><p><strong>openai</strong></p>
+     * </li>
+     * <li><p><strong>anthropic</strong></p>
+     * </li>
+     * <li><p><strong>bailian</strong>: Models from Model Studio.</p>
+     * </li>
+     * <li><p><strong>vllm</strong></p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>openai</p>
      */
     @NameInMap("Protocol")
     public String protocol;
 
+    /**
+     * <p>The ID of the region.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-beijing</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
+     * <p>The status of the model service.</p>
+     * 
      * <strong>example:</strong>
      * <p>Enable</p>
      */

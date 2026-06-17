@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeBatchTasksResponseBody extends TeaModel {
     /**
+     * <p>The page number of the returned results.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -12,6 +14,8 @@ public class DescribeBatchTasksResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries returned per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>30</p>
      */
@@ -19,7 +23,7 @@ public class DescribeBatchTasksResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>925B84D9-CA72-432C-95CF-738C22******</p>
@@ -27,10 +31,15 @@ public class DescribeBatchTasksResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The task list.</p>
+     */
     @NameInMap("TaskList")
     public java.util.List<DescribeBatchTasksResponseBodyTaskList> taskList;
 
     /**
+     * <p>The total number of tasks that match the query, ignoring pagination.</p>
+     * 
      * <strong>example:</strong>
      * <p>6</p>
      */
@@ -84,6 +93,8 @@ public class DescribeBatchTasksResponseBody extends TeaModel {
 
     public static class DescribeBatchTasksResponseBodyTaskList extends TeaModel {
         /**
+         * <p>The batch ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>pcb-xxx</p>
          */
@@ -91,6 +102,8 @@ public class DescribeBatchTasksResponseBody extends TeaModel {
         public String batchId;
 
         /**
+         * <p>The task status.</p>
+         * 
          * <strong>example:</strong>
          * <p>RUNNING</p>
          */
@@ -98,6 +111,8 @@ public class DescribeBatchTasksResponseBody extends TeaModel {
         public String status;
 
         /**
+         * <p>The number of successfully completed subtasks in the batch.</p>
+         * 
          * <strong>example:</strong>
          * <p>4</p>
          */
@@ -105,6 +120,8 @@ public class DescribeBatchTasksResponseBody extends TeaModel {
         public Integer successCount;
 
         /**
+         * <p>The task start time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2026-04-06 20:51:44</p>
          */
@@ -112,6 +129,8 @@ public class DescribeBatchTasksResponseBody extends TeaModel {
         public String taskBegin;
 
         /**
+         * <p>The task end time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2026-04-06 22:43:26</p>
          */
@@ -119,6 +138,8 @@ public class DescribeBatchTasksResponseBody extends TeaModel {
         public String taskEnd;
 
         /**
+         * <p>The task name.</p>
+         * 
          * <strong>example:</strong>
          * <p>batch_task_test</p>
          */
@@ -126,6 +147,8 @@ public class DescribeBatchTasksResponseBody extends TeaModel {
         public String taskName;
 
         /**
+         * <p>The task type.</p>
+         * 
          * <strong>example:</strong>
          * <p>polarclaw_install_skills</p>
          */
@@ -133,6 +156,8 @@ public class DescribeBatchTasksResponseBody extends TeaModel {
         public String taskType;
 
         /**
+         * <p>The total number of subtasks in the batch.</p>
+         * 
          * <strong>example:</strong>
          * <p>8</p>
          */

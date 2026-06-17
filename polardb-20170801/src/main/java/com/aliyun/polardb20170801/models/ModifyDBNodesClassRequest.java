@@ -4,11 +4,20 @@ package com.aliyun.polardb20170801.models;
 import com.aliyun.tea.*;
 
 public class ModifyDBNodesClassRequest extends TeaModel {
+    /**
+     * <p>Specifies whether to automatically apply a coupon. Valid values:</p>
+     * <ul>
+     * <li><p>true (Default): A coupon is automatically applied.</p>
+     * </li>
+     * <li><p>false: A coupon is not applied.</p>
+     * </li>
+     * </ul>
+     */
     @NameInMap("AutoUseCoupon")
     public Boolean autoUseCoupon;
 
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that it is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. The token is case-sensitive.</p>
+     * <p>A client-generated token to ensure request idempotence. This token must be unique for each request and must be a case-sensitive string of up to 64 ASCII characters.</p>
      * 
      * <strong>example:</strong>
      * <p>6000170000591aed949d0f54a343f1a4233c1e7d1c5c******</p>
@@ -17,6 +26,8 @@ public class ModifyDBNodesClassRequest extends TeaModel {
     public String clientToken;
 
     /**
+     * <p>The cloud provider of the instance.</p>
+     * 
      * <strong>example:</strong>
      * <p>ENS</p>
      */
@@ -34,17 +45,19 @@ public class ModifyDBNodesClassRequest extends TeaModel {
     public String DBClusterId;
 
     /**
-     * <p>The details of the nodes.</p>
+     * <p>The list of cluster nodes.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("DBNode")
     public java.util.List<ModifyDBNodesClassRequestDBNode> DBNode;
 
     /**
-     * <p>The type of the configuration change. Valid values:</p>
+     * <p>The modification type. Valid values:</p>
      * <ul>
-     * <li><strong>Upgrade</strong></li>
-     * <li><strong>Downgrade</strong></li>
+     * <li><p><strong>Upgrade</strong>: Upgrades the specifications.</p>
+     * </li>
+     * <li><p><strong>Downgrade</strong>: Downgrades the specifications.</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -61,11 +74,13 @@ public class ModifyDBNodesClassRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The latest start time to upgrade the specifications within the scheduled time period. Specify the time in the ISO 8601 standard in the <code>YYYY-MM-DDThh:mm:ssZ</code> format. The time must be in UTC.</p>
+     * <p>The latest time to begin the scheduled task. Specify the time in UTC using the <code>YYYY-MM-DDThh:mm:ssZ</code> format.</p>
      * <blockquote>
      * <ul>
-     * <li>The value of this parameter must be at least 30 minutes later than the value of PlannedStartTime.</li>
-     * <li>By default, if you specify <code>PlannedStartTime</code> but do not specify PlannedEndTime, the latest start time of the task is set to <code>Value of PlannedEndTime + 30 minutes</code>. For example, if you set <code>PlannedStartTime</code> to <code>2021-01-14T09:00:00Z</code> and you do not specify PlannedEndTime, the latest start time of the task is <code>2021-01-14T09:30:00Z</code>.</li>
+     * <li><p>The latest start time must be at least 30 minutes later than the earliest start time.</p>
+     * </li>
+     * <li><p>If you specify <code>PlannedStartTime</code> but not this parameter, the task starts within 30 minutes of the <code>PlannedStartTime</code>. For example, if you set <code>PlannedStartTime</code> to <code>2021-01-14T09:00:00Z</code> and leave this parameter empty, the task will start by <code>2021-01-14T09:30:00Z</code>.</p>
+     * </li>
      * </ul>
      * </blockquote>
      * 
@@ -75,16 +90,25 @@ public class ModifyDBNodesClassRequest extends TeaModel {
     @NameInMap("PlannedEndTime")
     public String plannedEndTime;
 
+    /**
+     * <p>The planned time for the transient disconnection.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2021-01-14T09:30:00Z</p>
+     */
     @NameInMap("PlannedFlashingOffTime")
     public String plannedFlashingOffTime;
 
     /**
-     * <p>The earliest start time to upgrade the specifications within the scheduled time period. Specify the time in the ISO 8601 standard in the <code>YYYY-MM-DDThh:mm:ssZ</code> format. The time must be in UTC.</p>
+     * <p>The earliest time to begin the scheduled upgrade of the node specifications. Specify the time in UTC using the <code>YYYY-MM-DDThh:mm:ssZ</code> format.</p>
      * <blockquote>
      * <ul>
-     * <li>This parameter takes effect only when <code>ModifyType</code> is set to <code>Upgrade</code>.</li>
-     * <li>The earliest start time of the task can be a point in time within the next 24 hours. For example, if the current time is <code>2021-01-14T09:00:00Z</code>, you can specify a point in the time that ranges from <code>2021-01-14T09:00:00Z</code> to <code>2021-01-15T09:00:00Z</code>.</li>
-     * <li>If this parameter is left empty, the upgrade task is immediately performed.</li>
+     * <li><p>This parameter takes effect only when <code>ModifyType</code> is set to <code>Upgrade</code>.</p>
+     * </li>
+     * <li><p>The specified time must be within the next 24 hours.</p>
+     * </li>
+     * <li><p>If this parameter is not specified, the upgrade task runs immediately.</p>
+     * </li>
      * </ul>
      * </blockquote>
      * 
@@ -95,6 +119,8 @@ public class ModifyDBNodesClassRequest extends TeaModel {
     public String plannedStartTime;
 
     /**
+     * <p>The coupon code. If you do not specify this parameter, a default coupon is applied.</p>
+     * 
      * <strong>example:</strong>
      * <p>727xxxxxx934</p>
      */
@@ -108,10 +134,12 @@ public class ModifyDBNodesClassRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The category of the cluster. Valid values:</p>
+     * <p>The sub-category of the cluster. Valid values:</p>
      * <ul>
-     * <li><strong>normal_exclusive</strong>: dedicated</li>
-     * <li><strong>normal_general</strong>: genera-purpose</li>
+     * <li><p><strong>normal_exclusive</strong>: dedicated specifications</p>
+     * </li>
+     * <li><p><strong>normal_general</strong>: general-purpose specifications</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -247,9 +275,9 @@ public class ModifyDBNodesClassRequest extends TeaModel {
 
     public static class ModifyDBNodesClassRequestDBNode extends TeaModel {
         /**
-         * <p>The ID of the node.</p>
+         * <p>The ID of the cluster node.</p>
          * <blockquote>
-         * <p> If you specify this parameter, DBNode.N.TargetClass is required. N is an integer that starts from 1. The maximum value of N is calculated by using the following formula:16 - The number of current nodes.</p>
+         * <p>If you specify this parameter, you must also specify DBNode.N.TargetClass. N represents the index of the node in the request, starting from 1.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -259,9 +287,9 @@ public class ModifyDBNodesClassRequest extends TeaModel {
         public String DBNodeId;
 
         /**
-         * <p>The specifications of the node that you want to change. For more information, see <a href="https://help.aliyun.com/document_detail/102542.html">Specifications of compute nodes</a>.</p>
+         * <p>The target specifications of the node. For more information about node specifications, see <a href="https://help.aliyun.com/document_detail/102542.html">compute node specifications</a>.</p>
          * <blockquote>
-         * <p> If you specify this parameter, DBNode.N.DBNodeId is required. N is an integer that starts from 1. The maximum value of N is calculated by using the following formula:16 - The number of current nodes.</p>
+         * <p>If you specify this parameter, you must also specify DBNode.N.DBNodeId. N represents the index of the node in the request, starting from 1.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

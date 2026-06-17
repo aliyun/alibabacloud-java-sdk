@@ -4,7 +4,12 @@ package com.aliyun.polardb20170801.models;
 import com.aliyun.tea.*;
 
 public class DescribeBatchTaskResponseBody extends TeaModel {
+    @NameInMap("ApplicationType")
+    public String applicationType;
+
     /**
+     * <p>The ID of the batch task.</p>
+     * 
      * <strong>example:</strong>
      * <p>pcb-xxx</p>
      */
@@ -12,7 +17,7 @@ public class DescribeBatchTaskResponseBody extends TeaModel {
     public String batchId;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>25C70FF3-D49B-594D-BECE-0DE2BA1D8BBB</p>
@@ -21,16 +26,23 @@ public class DescribeBatchTaskResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The task status.</p>
+     * 
      * <strong>example:</strong>
      * <p>RUNNING</p>
      */
     @NameInMap("Status")
     public String status;
 
+    /**
+     * <p>A list of subtasks.</p>
+     */
     @NameInMap("SubTasks")
     public java.util.List<DescribeBatchTaskResponseBodySubTasks> subTasks;
 
     /**
+     * <p>The number of successful subtasks.</p>
+     * 
      * <strong>example:</strong>
      * <p>8</p>
      */
@@ -38,6 +50,8 @@ public class DescribeBatchTaskResponseBody extends TeaModel {
     public Integer successCount;
 
     /**
+     * <p>The time when the task started.</p>
+     * 
      * <strong>example:</strong>
      * <p>2026/05/28T16:38:20Z</p>
      */
@@ -45,6 +59,8 @@ public class DescribeBatchTaskResponseBody extends TeaModel {
     public String taskBegin;
 
     /**
+     * <p>The time when the task ended.</p>
+     * 
      * <strong>example:</strong>
      * <p>2026/05/28T15:23:47Z</p>
      */
@@ -52,6 +68,8 @@ public class DescribeBatchTaskResponseBody extends TeaModel {
     public String taskEnd;
 
     /**
+     * <p>The name of the task.</p>
+     * 
      * <strong>example:</strong>
      * <p>batch_task_test</p>
      */
@@ -59,6 +77,8 @@ public class DescribeBatchTaskResponseBody extends TeaModel {
     public String taskName;
 
     /**
+     * <p>The type of the task.</p>
+     * 
      * <strong>example:</strong>
      * <p>polarclaw_install_skills</p>
      */
@@ -66,6 +86,8 @@ public class DescribeBatchTaskResponseBody extends TeaModel {
     public String taskType;
 
     /**
+     * <p>The total number of subtasks.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -75,6 +97,14 @@ public class DescribeBatchTaskResponseBody extends TeaModel {
     public static DescribeBatchTaskResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeBatchTaskResponseBody self = new DescribeBatchTaskResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeBatchTaskResponseBody setApplicationType(String applicationType) {
+        this.applicationType = applicationType;
+        return this;
+    }
+    public String getApplicationType() {
+        return this.applicationType;
     }
 
     public DescribeBatchTaskResponseBody setBatchId(String batchId) {
@@ -159,6 +189,8 @@ public class DescribeBatchTaskResponseBody extends TeaModel {
 
     public static class DescribeBatchTaskResponseBodySubTasks extends TeaModel {
         /**
+         * <p>The error message.</p>
+         * 
          * <strong>example:</strong>
          * <p>aliuid:1422133474238823 assumeOssRole not exist,serviceName:aliyunesarealtimelogpushossrole</p>
          */
@@ -166,6 +198,8 @@ public class DescribeBatchTaskResponseBody extends TeaModel {
         public String errorMsg;
 
         /**
+         * <p>The instance ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>pc-pz5f6mvi1p84t35d7</p>
          */
@@ -173,6 +207,8 @@ public class DescribeBatchTaskResponseBody extends TeaModel {
         public String instanceId;
 
         /**
+         * <p>The status of the subtask.</p>
+         * 
          * <strong>example:</strong>
          * <p>COMPLETED</p>
          */
@@ -180,6 +216,8 @@ public class DescribeBatchTaskResponseBody extends TeaModel {
         public String status;
 
         /**
+         * <p>The time when the subtask started.</p>
+         * 
          * <strong>example:</strong>
          * <p>2026/05/28T17:38:20Z</p>
          */
@@ -187,6 +225,8 @@ public class DescribeBatchTaskResponseBody extends TeaModel {
         public String taskBegin;
 
         /**
+         * <p>The time when the subtask ended.</p>
+         * 
          * <strong>example:</strong>
          * <p>2026/05/28T20:38:20Z</p>
          */
@@ -194,6 +234,8 @@ public class DescribeBatchTaskResponseBody extends TeaModel {
         public String taskEnd;
 
         /**
+         * <p>The ID of the subtask.</p>
+         * 
          * <strong>example:</strong>
          * <p>629271331</p>
          */

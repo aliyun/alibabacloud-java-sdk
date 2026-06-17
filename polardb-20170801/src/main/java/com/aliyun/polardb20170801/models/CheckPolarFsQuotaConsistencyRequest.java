@@ -5,6 +5,14 @@ import com.aliyun.tea.*;
 
 public class CheckPolarFsQuotaConsistencyRequest extends TeaModel {
     /**
+     * <p>Specifies whether to repair an inconsistent quota. Valid values:</p>
+     * <ul>
+     * <li><p>false</p>
+     * </li>
+     * <li><p>true</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -12,6 +20,14 @@ public class CheckPolarFsQuotaConsistencyRequest extends TeaModel {
     public Boolean enableRepair;
 
     /**
+     * <p>Specifies whether to calculate the total usage of the directory in strict mode. Valid values:</p>
+     * <ul>
+     * <li><p>false</p>
+     * </li>
+     * <li><p>true</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -19,6 +35,8 @@ public class CheckPolarFsQuotaConsistencyRequest extends TeaModel {
     public Boolean enableStrictCalculate;
 
     /**
+     * <p>The directory path.</p>
+     * 
      * <strong>example:</strong>
      * <p>/test</p>
      */
@@ -26,6 +44,7 @@ public class CheckPolarFsQuotaConsistencyRequest extends TeaModel {
     public String path;
 
     /**
+     * <p>The ID of the PolarFS instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

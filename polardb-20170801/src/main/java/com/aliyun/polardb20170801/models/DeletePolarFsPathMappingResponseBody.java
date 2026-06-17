@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeletePolarFsPathMappingResponseBody extends TeaModel {
     /**
-     * <p>Id of the request</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>7E2FE3BB-C677-5FF9-9FC5-9CF364BD6BE5</p>

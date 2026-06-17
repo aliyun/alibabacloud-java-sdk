@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeLocalAvailableRecoveryTimeResponseBody extends TeaModel {
     /**
+     * <p>The cluster ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>pc-2ze3ngi149b313***</p>
      */
@@ -12,6 +14,11 @@ public class DescribeLocalAvailableRecoveryTimeResponseBody extends TeaModel {
     public String DBClusterId;
 
     /**
+     * <p>The start of the time range available for recovery.</p>
+     * <blockquote>
+     * <p>This is calculated based on level-1 backups and does not include level-2 backups.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>2025-09-10T14:19:48Z</p>
      */
@@ -19,6 +26,11 @@ public class DescribeLocalAvailableRecoveryTimeResponseBody extends TeaModel {
     public String recoveryBeginTime;
 
     /**
+     * <p>The end of the time range available for recovery.</p>
+     * <blockquote>
+     * <p>This is calculated based on level-1 backups and does not include level-2 backups.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>2025-09-17T08:56:45Z</p>
      */
@@ -26,6 +38,8 @@ public class DescribeLocalAvailableRecoveryTimeResponseBody extends TeaModel {
     public String recoveryEndTime;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>4EA0E6F8-BDB2-17B2-9567-591F6B3D7***</p>
      */

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class SetPolarFsFileQuotaRequest extends TeaModel {
     /**
+     * <p>The cluster ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>pc-**************</p>
      */
@@ -12,12 +14,14 @@ public class SetPolarFsFileQuotaRequest extends TeaModel {
     public String DBClusterId;
 
     /**
+     * <p>An array of objects defining the file quota rules for specific directories.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("FilePathQuotas")
     public java.util.List<SetPolarFsFileQuotaRequestFilePathQuotas> filePathQuotas;
 
     /**
+     * <p>The ID of the PolarFS instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -57,6 +61,8 @@ public class SetPolarFsFileQuotaRequest extends TeaModel {
 
     public static class SetPolarFsFileQuotaRequestFilePathQuotas extends TeaModel {
         /**
+         * <p>The capacity quota in GB.</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */
@@ -64,6 +70,8 @@ public class SetPolarFsFileQuotaRequest extends TeaModel {
         public Long capacity;
 
         /**
+         * <p>The absolute path of the directory.</p>
+         * 
          * <strong>example:</strong>
          * <p>/a/project</p>
          */
@@ -71,6 +79,8 @@ public class SetPolarFsFileQuotaRequest extends TeaModel {
         public String filePathId;
 
         /**
+         * <p>The inode quota.</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */
@@ -78,6 +88,8 @@ public class SetPolarFsFileQuotaRequest extends TeaModel {
         public Long inodes;
 
         /**
+         * <p>The maximum depth of subdirectories to traverse under the path specified by <code>FilePathId</code>. A value of 1 traverses only the first level of subdirectories. A value of 0 traverses to the deepest level.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -85,6 +97,8 @@ public class SetPolarFsFileQuotaRequest extends TeaModel {
         public Integer maxDepth;
 
         /**
+         * <p>A list of file quota rule IDs, separated by a comma (<code>,</code>).</p>
+         * 
          * <strong>example:</strong>
          * <p>1,2</p>
          */
@@ -92,6 +106,14 @@ public class SetPolarFsFileQuotaRequest extends TeaModel {
         public String quotaIds;
 
         /**
+         * <p>Specifies how to apply the rule to existing files. Valid values:</p>
+         * <ul>
+         * <li><p><strong>missing</strong>: Applies the rule only if one does not already exist. (Default)</p>
+         * </li>
+         * <li><p><strong>all</strong>: Applies the rule to all files.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>missing</p>
          */

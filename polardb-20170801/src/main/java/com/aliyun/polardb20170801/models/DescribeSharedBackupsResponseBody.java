@@ -4,10 +4,15 @@ package com.aliyun.polardb20170801.models;
 import com.aliyun.tea.*;
 
 public class DescribeSharedBackupsResponseBody extends TeaModel {
+    /**
+     * <p>A list of shared backup sets.</p>
+     */
     @NameInMap("Items")
     public java.util.List<DescribeSharedBackupsResponseBodyItems> items;
 
     /**
+     * <p>The page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -15,6 +20,8 @@ public class DescribeSharedBackupsResponseBody extends TeaModel {
     public String pageNumber;
 
     /**
+     * <p>The number of entries on the current page.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -22,6 +29,8 @@ public class DescribeSharedBackupsResponseBody extends TeaModel {
     public String pageRecordCount;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>3E5CD764-FCCA-5C9C-838E-20E0DE84B2AF</p>
      */
@@ -29,6 +38,8 @@ public class DescribeSharedBackupsResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total record count.</p>
+     * 
      * <strong>example:</strong>
      * <p>16</p>
      */
@@ -82,6 +93,8 @@ public class DescribeSharedBackupsResponseBody extends TeaModel {
 
     public static class DescribeSharedBackupsResponseBodyItems extends TeaModel {
         /**
+         * <p>The end time of the backup, in UTC.</p>
+         * 
          * <strong>example:</strong>
          * <p>2020-05-12T03:25:55Z</p>
          */
@@ -89,6 +102,8 @@ public class DescribeSharedBackupsResponseBody extends TeaModel {
         public String backupEndTime;
 
         /**
+         * <p>The backup set ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>111111111</p>
          */
@@ -96,6 +111,8 @@ public class DescribeSharedBackupsResponseBody extends TeaModel {
         public String backupId;
 
         /**
+         * <p>The backup method. Only snapshot backup is supported. The value is fixed to <strong>Snapshot</strong>.</p>
+         * 
          * <strong>example:</strong>
          * <p>Snapshot</p>
          */
@@ -103,6 +120,14 @@ public class DescribeSharedBackupsResponseBody extends TeaModel {
         public String backupMethod;
 
         /**
+         * <p>The backup mode. Valid values:</p>
+         * <ul>
+         * <li><p><strong>Automated</strong>: automated backup</p>
+         * </li>
+         * <li><p><strong>Manual</strong>: manual backup</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Manual</p>
          */
@@ -110,6 +135,8 @@ public class DescribeSharedBackupsResponseBody extends TeaModel {
         public String backupMode;
 
         /**
+         * <p>The size of the backup set, in bytes.</p>
+         * 
          * <strong>example:</strong>
          * <p>4639948800</p>
          */
@@ -117,6 +144,8 @@ public class DescribeSharedBackupsResponseBody extends TeaModel {
         public String backupSetSize;
 
         /**
+         * <p>The start time of the backup, in UTC.</p>
+         * 
          * <strong>example:</strong>
          * <p>2020-11-15T07:30:05Z</p>
          */
@@ -124,6 +153,14 @@ public class DescribeSharedBackupsResponseBody extends TeaModel {
         public String backupStartTime;
 
         /**
+         * <p>The backup status. Valid values:</p>
+         * <ul>
+         * <li><p><strong>Success</strong>: The backup is complete.</p>
+         * </li>
+         * <li><p><strong>Failed</strong>: The backup failed.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Success</p>
          */
@@ -131,6 +168,8 @@ public class DescribeSharedBackupsResponseBody extends TeaModel {
         public String backupStatus;
 
         /**
+         * <p>The backup type. Only full backups are supported. The value is fixed to <strong>FullBackup</strong>.</p>
+         * 
          * <strong>example:</strong>
          * <p>FullBackup</p>
          */
@@ -138,6 +177,14 @@ public class DescribeSharedBackupsResponseBody extends TeaModel {
         public String backupType;
 
         /**
+         * <p>The backup level. Valid values:</p>
+         * <ul>
+         * <li><p><strong>Level-1</strong>: Level-1 backup.</p>
+         * </li>
+         * <li><p><strong>Level-2</strong>: Level-2 backup.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Level-2</p>
          */
@@ -145,6 +192,8 @@ public class DescribeSharedBackupsResponseBody extends TeaModel {
         public String backupsLevel;
 
         /**
+         * <p>The UNIX timestamp of the consistent snapshot, in seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>1589253947</p>
          */
@@ -152,6 +201,8 @@ public class DescribeSharedBackupsResponseBody extends TeaModel {
         public String consistentTime;
 
         /**
+         * <p>The cluster ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>pc-****************</p>
          */
@@ -159,6 +210,8 @@ public class DescribeSharedBackupsResponseBody extends TeaModel {
         public String DBClusterId;
 
         /**
+         * <p>The database engine type.</p>
+         * 
          * <strong>example:</strong>
          * <p>MySQL</p>
          */
@@ -166,6 +219,8 @@ public class DescribeSharedBackupsResponseBody extends TeaModel {
         public String DBType;
 
         /**
+         * <p>The database engine version.</p>
+         * 
          * <strong>example:</strong>
          * <p>5.6</p>
          */
@@ -173,6 +228,14 @@ public class DescribeSharedBackupsResponseBody extends TeaModel {
         public String DBVersion;
 
         /**
+         * <p>The billing method. Valid values:</p>
+         * <ul>
+         * <li><p><strong>Postpaid</strong>: pay-as-you-go.</p>
+         * </li>
+         * <li><p><strong>Prepaid</strong>: prepaid (subscription)</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Postpaid</p>
          */
@@ -180,6 +243,8 @@ public class DescribeSharedBackupsResponseBody extends TeaModel {
         public String payType;
 
         /**
+         * <p>The region ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-hongzhou</p>
          */
@@ -187,6 +252,8 @@ public class DescribeSharedBackupsResponseBody extends TeaModel {
         public String regionId;
 
         /**
+         * <p>The Serverless type. A value of <strong>AgileServerless</strong> indicates a Serverless cluster, while an empty value indicates a standard cluster.</p>
+         * 
          * <strong>example:</strong>
          * <p>AgileServerless</p>
          */
@@ -194,6 +261,8 @@ public class DescribeSharedBackupsResponseBody extends TeaModel {
         public String serverlessType;
 
         /**
+         * <p>The share type.</p>
+         * 
          * <strong>example:</strong>
          * <p>ShareIncoming</p>
          */
@@ -201,6 +270,8 @@ public class DescribeSharedBackupsResponseBody extends TeaModel {
         public String shareType;
 
         /**
+         * <p>The UID of the account that shared the backup set.</p>
+         * 
          * <strong>example:</strong>
          * <p>170*************</p>
          */

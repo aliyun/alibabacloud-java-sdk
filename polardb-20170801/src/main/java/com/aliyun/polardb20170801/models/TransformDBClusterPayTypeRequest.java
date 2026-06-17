@@ -8,7 +8,7 @@ public class TransformDBClusterPayTypeRequest extends TeaModel {
     public Boolean autoUseCoupon;
 
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value. Make sure that the value is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+     * <p>A client token to ensure the idempotence of the request. The client generates the token, but you must make sure that the token is unique among different requests. The token is case-sensitive and can be up to 64 ASCII characters in length.</p>
      * 
      * <strong>example:</strong>
      * <p>6000170000591aed949d0f5********************</p>
@@ -17,7 +17,7 @@ public class TransformDBClusterPayTypeRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The cluster ID.</p>
+     * <p>The ID of the PolarDB cluster.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -33,10 +33,12 @@ public class TransformDBClusterPayTypeRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The billing method of the cluster. Valid values:</p>
+     * <p>The billing method of the instance. Valid values:</p>
      * <ul>
-     * <li><strong>Postpaid</strong>: pay-as-you-go.</li>
-     * <li><strong>Prepaid</strong>: subscription.</li>
+     * <li><p><strong>Postpaid</strong>: pay-as-you-go</p>
+     * </li>
+     * <li><p><strong>Prepaid</strong>: subscription</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -47,13 +49,15 @@ public class TransformDBClusterPayTypeRequest extends TeaModel {
     public String payType;
 
     /**
-     * <p>The renewal cycle of the cluster. Valid values:</p>
+     * <p>The unit of the subscription duration. Valid values:</p>
      * <ul>
-     * <li><strong>Year</strong></li>
-     * <li><strong>Month</strong></li>
+     * <li><p><strong>Year</strong></p>
+     * </li>
+     * <li><p><strong>Month</strong></p>
+     * </li>
      * </ul>
      * <blockquote>
-     * <p> This parameter is required if you set the <strong>PayType</strong> parameter to <strong>Prepaid</strong>.</p>
+     * <p>This parameter is required when you set <strong>PayType</strong> to <strong>Prepaid</strong>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -70,7 +74,7 @@ public class TransformDBClusterPayTypeRequest extends TeaModel {
     public String promotionCode;
 
     /**
-     * <p>The ID of the region.</p>
+     * <p>The region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -95,13 +99,15 @@ public class TransformDBClusterPayTypeRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The subscription duration of the cluster. Valid values:</p>
+     * <p>The subscription duration. Valid values:</p>
      * <ul>
-     * <li>If the <strong>Period</strong> parameter is set to <strong>Year</strong>, the <strong>UsedTime</strong> parameter can be set to 1, 2, or 3.</li>
-     * <li>If the <strong>Period</strong> parameter is set to <strong>Month</strong>, the <strong>UsedTime</strong> parameter can be set to 1, 2, 3, 4, 5, 6, 7, 8, or 9.</li>
+     * <li><p>If you set <strong>Period</strong> to <strong>Year</strong>, the value of <strong>UsedTime</strong> can be 1, 2, or 3.</p>
+     * </li>
+     * <li><p>If you set <strong>Period</strong> to <strong>Month</strong>, the value of <strong>UsedTime</strong> can be an integer from 1 to 9.</p>
+     * </li>
      * </ul>
      * <blockquote>
-     * <p> This parameter is required if you set the <strong>PayType</strong> parameter to <strong>Prepaid</strong>.</p>
+     * <p>This parameter is required when you set <strong>PayType</strong> to <strong>Prepaid</strong>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

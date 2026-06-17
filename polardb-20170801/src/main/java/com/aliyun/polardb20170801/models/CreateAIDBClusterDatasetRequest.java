@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateAIDBClusterDatasetRequest extends TeaModel {
     /**
+     * <p>The ID of the PolarDB database cluster.</p>
+     * 
      * <strong>example:</strong>
      * <p>pc-2ze88***</p>
      */
@@ -12,6 +14,8 @@ public class CreateAIDBClusterDatasetRequest extends TeaModel {
     public String DBClusterId;
 
     /**
+     * <p>The dataset name.</p>
+     * 
      * <strong>example:</strong>
      * <p>dataset01</p>
      */
@@ -19,6 +23,14 @@ public class CreateAIDBClusterDatasetRequest extends TeaModel {
     public String datasetName;
 
     /**
+     * <p>The type of the dataset. Valid values:</p>
+     * <ul>
+     * <li><p><strong>train</strong>: training set</p>
+     * </li>
+     * <li><p><strong>eval</strong>: evaluation set</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>train</p>
      */
@@ -26,6 +38,11 @@ public class CreateAIDBClusterDatasetRequest extends TeaModel {
     public String datasetType;
 
     /**
+     * <p>The import method. Valid values:</p>
+     * <ul>
+     * <li><strong>LocalImport</strong>: local import</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>LocalImport</p>
      */
@@ -39,6 +56,8 @@ public class CreateAIDBClusterDatasetRequest extends TeaModel {
     public Long ownerId;
 
     /**
+     * <p>The region ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-beijing</p>
      */
@@ -52,6 +71,16 @@ public class CreateAIDBClusterDatasetRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
+     * <p>The training mode for the dataset. The dataset format depends on the mode. Valid values:</p>
+     * <ul>
+     * <li><p><strong>sft</strong>: supervised fine-tuning. For training sets only.</p>
+     * </li>
+     * <li><p><strong>grpo</strong>: reinforcement learning optimization. For training sets only.</p>
+     * </li>
+     * <li><p><strong>text</strong>: text generation. For validation sets only.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>sft</p>
      */

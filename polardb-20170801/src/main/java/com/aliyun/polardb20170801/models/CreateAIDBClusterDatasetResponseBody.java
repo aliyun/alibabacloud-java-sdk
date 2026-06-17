@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateAIDBClusterDatasetResponseBody extends TeaModel {
     /**
+     * <p>The ID of the PolarDB database cluster.</p>
+     * 
      * <strong>example:</strong>
      * <p>pc-****************</p>
      */
@@ -12,6 +14,8 @@ public class CreateAIDBClusterDatasetResponseBody extends TeaModel {
     public String DBClusterId;
 
     /**
+     * <p>The dataset management service ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>pcs-2zeei***</p>
      */
@@ -19,6 +23,8 @@ public class CreateAIDBClusterDatasetResponseBody extends TeaModel {
     public String dataServiceId;
 
     /**
+     * <p>The dataset ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>pds-2ze88***</p>
      */
@@ -26,6 +32,8 @@ public class CreateAIDBClusterDatasetResponseBody extends TeaModel {
     public String datasetId;
 
     /**
+     * <p>The dataset name.</p>
+     * 
      * <strong>example:</strong>
      * <p>dataset01</p>
      */
@@ -33,6 +41,8 @@ public class CreateAIDBClusterDatasetResponseBody extends TeaModel {
     public String datasetName;
 
     /**
+     * <p>The path to the dataset.</p>
+     * 
      * <strong>example:</strong>
      * <p>polardb_ai/datasets/train/sft/dataset01</p>
      */
@@ -40,7 +50,7 @@ public class CreateAIDBClusterDatasetResponseBody extends TeaModel {
     public String path;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>CD35F3-F3-44CA-AFFF-BAF869******</p>

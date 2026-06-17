@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ModifyCostRuleRequest extends TeaModel {
     /**
+     * <p>The cost in points per million cache tokens. Default value: 0.</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
@@ -12,6 +14,7 @@ public class ModifyCostRuleRequest extends TeaModel {
     public String cacheCostPointsPerMillion;
 
     /**
+     * <p>The cost rule ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,6 +24,7 @@ public class ModifyCostRuleRequest extends TeaModel {
     public String costRuleId;
 
     /**
+     * <p>The gateway instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -30,6 +34,8 @@ public class ModifyCostRuleRequest extends TeaModel {
     public String gwClusterId;
 
     /**
+     * <p>The cost in points per million input tokens. Default value: 0.</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
@@ -37,6 +43,7 @@ public class ModifyCostRuleRequest extends TeaModel {
     public String inputCostPointsPerMillion;
 
     /**
+     * <p>The model name, such as gpt-4 or qwen-turbo.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -46,6 +53,7 @@ public class ModifyCostRuleRequest extends TeaModel {
     public String modelName;
 
     /**
+     * <p>The model service ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -55,12 +63,20 @@ public class ModifyCostRuleRequest extends TeaModel {
     public String modelServiceId;
 
     /**
+     * <p>The cost in points per million output tokens. Default value: 0.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
     @NameInMap("OutputCostPointsPerMillion")
     public String outputCostPointsPerMillion;
 
+    /**
+     * <p>The region ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-beijing</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

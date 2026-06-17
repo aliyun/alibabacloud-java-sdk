@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class EnablePolarClawPluginRequest extends TeaModel {
     /**
+     * <p>The ID of the application.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class EnablePolarClawPluginRequest extends TeaModel {
     public String applicationId;
 
     /**
+     * <p>The ID of the plugin to enable.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,8 @@ public class EnablePolarClawPluginRequest extends TeaModel {
     public String pluginId;
 
     /**
+     * <p>Indicates whether to restart the gateway after the plugin is enabled. Default value: <code>true</code>.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

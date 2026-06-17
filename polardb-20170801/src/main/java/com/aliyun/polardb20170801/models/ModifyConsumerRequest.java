@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ModifyConsumerRequest extends TeaModel {
     /**
+     * <p>The name of the consumer group.</p>
+     * 
      * <strong>example:</strong>
      * <p>cg-xxxxxx</p>
      */
@@ -12,6 +14,7 @@ public class ModifyConsumerRequest extends TeaModel {
     public String consumerGroupName;
 
     /**
+     * <p>The ID of the consumer.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,6 +24,7 @@ public class ModifyConsumerRequest extends TeaModel {
     public String consumerId;
 
     /**
+     * <p>The ID of the gateway instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -30,6 +34,8 @@ public class ModifyConsumerRequest extends TeaModel {
     public String gwClusterId;
 
     /**
+     * <p>Indicates if the consumer is in the default group. Valid values: 0 (No) and 1 (Yes).</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
@@ -37,6 +43,7 @@ public class ModifyConsumerRequest extends TeaModel {
     public String isDefault;
 
     /**
+     * <p>The new name for the consumer.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -45,6 +52,12 @@ public class ModifyConsumerRequest extends TeaModel {
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <p>The ID of the region.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-beijing</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

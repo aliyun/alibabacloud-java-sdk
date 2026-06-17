@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeZonesRequest extends TeaModel {
     /**
+     * <p>The database engine.</p>
+     * 
      * <strong>example:</strong>
      * <p>POLARDB</p>
      */
@@ -12,6 +14,8 @@ public class DescribeZonesRequest extends TeaModel {
     public String engine;
 
     /**
+     * <p>The engine extension.</p>
+     * 
      * <strong>example:</strong>
      * <p>local</p>
      */
@@ -19,6 +23,11 @@ public class DescribeZonesRequest extends TeaModel {
     public String extra;
 
     /**
+     * <p>The region ID.</p>
+     * <blockquote>
+     * <p>Call the <a href="https://help.aliyun.com/document_detail/98041.html">DescribeRegions</a> operation to view information about all available regions for your account, including region IDs.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>cn-zhangjiakou</p>
      */

@@ -4,10 +4,15 @@ package com.aliyun.polardb20170801.models;
 import com.aliyun.tea.*;
 
 public class DescribeGlobalDataNetworkListResponseBody extends TeaModel {
+    /**
+     * <p>The details of the Global Data Networks (GDNs).</p>
+     */
     @NameInMap("Items")
     public DescribeGlobalDataNetworkListResponseBodyItems items;
 
     /**
+     * <p>The page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -15,6 +20,8 @@ public class DescribeGlobalDataNetworkListResponseBody extends TeaModel {
     public String pageNumber;
 
     /**
+     * <p>The number of records on the current page.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -22,6 +29,8 @@ public class DescribeGlobalDataNetworkListResponseBody extends TeaModel {
     public String pageRecordCount;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>CD35F3-F3-44CA-AFFF-BAF869******</p>
      */
@@ -29,6 +38,8 @@ public class DescribeGlobalDataNetworkListResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total number of records.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -82,6 +93,8 @@ public class DescribeGlobalDataNetworkListResponseBody extends TeaModel {
 
     public static class DescribeGlobalDataNetworkListResponseBodyItemsNetworksChannels extends TeaModel {
         /**
+         * <p>The ID of the synchronization channel.</p>
+         * 
          * <strong>example:</strong>
          * <p>gdc-xxx</p>
          */
@@ -89,6 +102,38 @@ public class DescribeGlobalDataNetworkListResponseBody extends TeaModel {
         public String channelId;
 
         /**
+         * <p>The status of the synchronization channel. Valid values:</p>
+         * <ul>
+         * <li><p><strong>Creating</strong>: The channel is being created.</p>
+         * </li>
+         * <li><p><strong>Running</strong>: The channel is running.</p>
+         * </li>
+         * <li><p><strong>Syncing</strong>: The channel is synchronizing data.</p>
+         * </li>
+         * <li><p><strong>SyncFinished</strong>: Data synchronization is complete.</p>
+         * </li>
+         * <li><p><strong>SyncFailed</strong>: Data synchronization failed.</p>
+         * </li>
+         * <li><p><strong>SyncPartialFailed</strong>: Data synchronization partially failed.</p>
+         * </li>
+         * <li><p><strong>Stopped</strong>: The channel is stopped.</p>
+         * </li>
+         * <li><p><strong>Maintaining</strong>: The channel is under maintenance.</p>
+         * </li>
+         * <li><p><strong>Restarting</strong>: The channel is restarting.</p>
+         * </li>
+         * <li><p><strong>Locking</strong>: The channel is being locked.</p>
+         * </li>
+         * <li><p><strong>Locked</strong>: The channel is locked.</p>
+         * </li>
+         * <li><p><strong>Unlocking</strong>: The channel is being unlocked.</p>
+         * </li>
+         * <li><p><strong>Deleting</strong>: The channel is being deleted.</p>
+         * </li>
+         * <li><p><strong>Deleted</strong>: The channel is deleted.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Syncing</p>
          */
@@ -96,6 +141,8 @@ public class DescribeGlobalDataNetworkListResponseBody extends TeaModel {
         public String channelStatus;
 
         /**
+         * <p>Indicates whether the source path is frozen during data transmission.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -103,6 +150,11 @@ public class DescribeGlobalDataNetworkListResponseBody extends TeaModel {
         public Boolean freezeSourceDuringSync;
 
         /**
+         * <p>The synchronization progress.</p>
+         * <blockquote>
+         * <p>The value is a percentage that is accurate to two decimal places.</p>
+         * </blockquote>
+         * 
          * <strong>example:</strong>
          * <p>11.45%</p>
          */
@@ -150,6 +202,8 @@ public class DescribeGlobalDataNetworkListResponseBody extends TeaModel {
 
     public static class DescribeGlobalDataNetworkListResponseBodyItemsNetworksNetworkTopologyDestinations extends TeaModel {
         /**
+         * <p>The destination path.</p>
+         * 
          * <strong>example:</strong>
          * <p>/</p>
          */
@@ -157,6 +211,8 @@ public class DescribeGlobalDataNetworkListResponseBody extends TeaModel {
         public String destinationFileSystemPath;
 
         /**
+         * <p>Destination PolarDB instance</p>
+         * 
          * <strong>example:</strong>
          * <p>pfs-xxx</p>
          */
@@ -164,6 +220,8 @@ public class DescribeGlobalDataNetworkListResponseBody extends TeaModel {
         public String destinationId;
 
         /**
+         * <p>The region of the destination.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-beijing</p>
          */
@@ -171,6 +229,14 @@ public class DescribeGlobalDataNetworkListResponseBody extends TeaModel {
         public String destinationRegion;
 
         /**
+         * <p>The type of the destination. Valid values:</p>
+         * <ul>
+         * <li><p><strong>pfs</strong>: Polarlakebase High-performance Edition.</p>
+         * </li>
+         * <li><p><strong>pcs</strong>: Polarlakebase Cold Storage Edition.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>pfs</p>
          */
@@ -218,6 +284,8 @@ public class DescribeGlobalDataNetworkListResponseBody extends TeaModel {
 
     public static class DescribeGlobalDataNetworkListResponseBodyItemsNetworksNetworkTopologySources extends TeaModel {
         /**
+         * <p>The source path.</p>
+         * 
          * <strong>example:</strong>
          * <p>/</p>
          */
@@ -225,13 +293,17 @@ public class DescribeGlobalDataNetworkListResponseBody extends TeaModel {
         public String sourceFileSystemPath;
 
         /**
+         * <p>The ID of the source Polarlakebase instance.</p>
+         * 
          * <strong>example:</strong>
-         * <p>oss-xxx</p>
+         * <p>pcs-xxx</p>
          */
         @NameInMap("SourceId")
         public String sourceId;
 
         /**
+         * <p>The region of the source.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-wulanchabu</p>
          */
@@ -239,8 +311,16 @@ public class DescribeGlobalDataNetworkListResponseBody extends TeaModel {
         public String sourceRegion;
 
         /**
+         * <p>The type of the source. Valid values:</p>
+         * <ul>
+         * <li><p><strong>pfs</strong>: Polarlakebase High-performance Edition.</p>
+         * </li>
+         * <li><p><strong>pcs</strong>: Polarlakebase Cold Storage Edition.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
-         * <p>oss</p>
+         * <p>pcs</p>
          */
         @NameInMap("SourceType")
         public String sourceType;
@@ -285,9 +365,15 @@ public class DescribeGlobalDataNetworkListResponseBody extends TeaModel {
     }
 
     public static class DescribeGlobalDataNetworkListResponseBodyItemsNetworksNetworkTopology extends TeaModel {
+        /**
+         * <p>The synchronization destinations.</p>
+         */
         @NameInMap("Destinations")
         public java.util.List<DescribeGlobalDataNetworkListResponseBodyItemsNetworksNetworkTopologyDestinations> destinations;
 
+        /**
+         * <p>The synchronization sources.</p>
+         */
         @NameInMap("Sources")
         public java.util.List<DescribeGlobalDataNetworkListResponseBodyItemsNetworksNetworkTopologySources> sources;
 
@@ -315,10 +401,15 @@ public class DescribeGlobalDataNetworkListResponseBody extends TeaModel {
     }
 
     public static class DescribeGlobalDataNetworkListResponseBodyItemsNetworks extends TeaModel {
+        /**
+         * <p>The synchronization channels.</p>
+         */
         @NameInMap("Channels")
         public java.util.List<DescribeGlobalDataNetworkListResponseBodyItemsNetworksChannels> channels;
 
         /**
+         * <p>The time when the GDN was created.</p>
+         * 
          * <strong>example:</strong>
          * <p>2025-03-25T09:37:10Z</p>
          */
@@ -326,6 +417,8 @@ public class DescribeGlobalDataNetworkListResponseBody extends TeaModel {
         public String createTime;
 
         /**
+         * <p>The description of the GDN.</p>
+         * 
          * <strong>example:</strong>
          * <p>mygdn</p>
          */
@@ -333,7 +426,7 @@ public class DescribeGlobalDataNetworkListResponseBody extends TeaModel {
         public String networkDescription;
 
         /**
-         * <p>GDN ID</p>
+         * <p>The ID of the GDN.</p>
          * 
          * <strong>example:</strong>
          * <p>gdn-xxx</p>
@@ -342,12 +435,47 @@ public class DescribeGlobalDataNetworkListResponseBody extends TeaModel {
         public String networkId;
 
         /**
+         * <p>The status of the GDN. Valid values:</p>
+         * <ul>
+         * <li><p><strong>Creating</strong>: The GDN is being created.</p>
+         * </li>
+         * <li><p><strong>Running</strong>: The GDN is running.</p>
+         * </li>
+         * <li><p><strong>Syncing</strong>: The GDN is synchronizing data.</p>
+         * </li>
+         * <li><p><strong>SyncFinished</strong>: Data synchronization is complete.</p>
+         * </li>
+         * <li><p><strong>SyncFailed</strong>: Data synchronization failed.</p>
+         * </li>
+         * <li><p><strong>SyncPartialFailed</strong>: Data synchronization partially failed.</p>
+         * </li>
+         * <li><p><strong>Stopped</strong>: The GDN is stopped.</p>
+         * </li>
+         * <li><p><strong>Maintaining</strong>: The GDN is under maintenance.</p>
+         * </li>
+         * <li><p><strong>Restarting</strong>: The GDN is restarting.</p>
+         * </li>
+         * <li><p><strong>Locking</strong>: The GDN is being locked.</p>
+         * </li>
+         * <li><p><strong>Locked</strong>: The GDN is locked.</p>
+         * </li>
+         * <li><p><strong>Unlocking</strong>: The GDN is being unlocked.</p>
+         * </li>
+         * <li><p><strong>Deleting</strong>: The GDN is being deleted.</p>
+         * </li>
+         * <li><p><strong>Deleted</strong>: The GDN is deleted.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Running</p>
          */
         @NameInMap("NetworkStatus")
         public String networkStatus;
 
+        /**
+         * <p>The network topology of the GDN.</p>
+         */
         @NameInMap("NetworkTopology")
         public DescribeGlobalDataNetworkListResponseBodyItemsNetworksNetworkTopology networkTopology;
 
@@ -407,6 +535,9 @@ public class DescribeGlobalDataNetworkListResponseBody extends TeaModel {
     }
 
     public static class DescribeGlobalDataNetworkListResponseBodyItems extends TeaModel {
+        /**
+         * <p>The list of GDN networks.</p>
+         */
         @NameInMap("Networks")
         public java.util.List<DescribeGlobalDataNetworkListResponseBodyItemsNetworks> networks;
 

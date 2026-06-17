@@ -15,7 +15,7 @@ public class DescribeDBClusterPerformanceRequest extends TeaModel {
     public String DBClusterId;
 
     /**
-     * <p>The end of the time range to query. Specify the time in the ISO 8601 standard in the <code>yyyy-MM-ddTHH:mmZ</code> format. The time must be in UTC.</p>
+     * <p>The end of the time range to query. Specify the time in the <code>yyyy-MM-ddTHH:mmZ</code> format. The time must be in UTC.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,7 +25,23 @@ public class DescribeDBClusterPerformanceRequest extends TeaModel {
     public String endTime;
 
     /**
-     * <p>The interval at which performance data is collected. Valid values: 5, 30, 60, 600, 1800, 3600, 86400, in seconds.</p>
+     * <p>The granularity of the performance data. Valid values:</p>
+     * <ul>
+     * <li><p>5</p>
+     * </li>
+     * <li><p>30</p>
+     * </li>
+     * <li><p>60</p>
+     * </li>
+     * <li><p>600</p>
+     * </li>
+     * <li><p>1800</p>
+     * </li>
+     * <li><p>3600</p>
+     * </li>
+     * <li><p>86400</p>
+     * </li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>60</p>
@@ -36,7 +52,7 @@ public class DescribeDBClusterPerformanceRequest extends TeaModel {
     /**
      * <p>The performance metrics that you want to query. Separate multiple metrics with commas (,). For more information, see <a href="https://help.aliyun.com/document_detail/141787.html">Performance parameters</a>.</p>
      * <blockquote>
-     * <p> You can specify a maximum of five performance metrics.</p>
+     * <p>Specify up to five performance metrics.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -47,7 +63,7 @@ public class DescribeDBClusterPerformanceRequest extends TeaModel {
     public String key;
 
     /**
-     * <p>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the <code>yyyy-MM-ddTHH:mmZ</code> format. The time must be in UTC.</p>
+     * <p>The beginning of the time range to query. Specify the time in the <code>yyyy-MM-ddTHH:mmZ</code> format. The time must be in UTC.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

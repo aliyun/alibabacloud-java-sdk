@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpgradeDBClusterVersionZonalResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>CAE6755F-B79A-4861-B227-801FE8******</p>
      */

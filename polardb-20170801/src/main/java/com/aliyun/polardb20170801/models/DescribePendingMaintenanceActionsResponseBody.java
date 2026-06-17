@@ -51,12 +51,16 @@ public class DescribePendingMaintenanceActionsResponseBody extends TeaModel {
         public Integer count;
 
         /**
-         * <p>The task type of pending events. Valid values:</p>
+         * <p>The task type of the pending event. Valid values:</p>
          * <ul>
-         * <li><strong>DatabaseSoftwareUpgrading</strong>: database software upgrades</li>
-         * <li><strong>DatabaseHardwareMaintenance</strong>: hardware maintenance and upgrades</li>
-         * <li><strong>DatabaseStorageUpgrading</strong>: database storage upgrades</li>
-         * <li><strong>DatabaseProxyUpgrading</strong>: minor version upgrades of the proxy</li>
+         * <li><p><strong>DatabaseSoftwareUpgrading</strong>: database software upgrade</p>
+         * </li>
+         * <li><p><strong>DatabaseHardwareMaintenance</strong>: hardware maintenance and upgrade</p>
+         * </li>
+         * <li><p><strong>DatabaseStorageUpgrading</strong>: database storage upgrade</p>
+         * </li>
+         * <li><p><strong>DatabaseProxyUpgrading</strong>: proxy minor version upgrade</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

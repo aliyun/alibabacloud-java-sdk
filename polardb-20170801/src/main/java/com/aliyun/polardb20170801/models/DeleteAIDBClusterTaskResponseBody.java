@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DeleteAIDBClusterTaskResponseBody extends TeaModel {
     /**
+     * <p>The task ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>pm-2ze9***</p>
      */
@@ -12,6 +14,8 @@ public class DeleteAIDBClusterTaskResponseBody extends TeaModel {
     public String DBClusterId;
 
     /**
+     * <p>The ID of the PolarDB database instance for the AI model service.</p>
+     * 
      * <strong>example:</strong>
      * <p>pc-2zejpr***</p>
      */
@@ -19,7 +23,7 @@ public class DeleteAIDBClusterTaskResponseBody extends TeaModel {
     public String relativeDBClusterId;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>E56531A4-E552-40BA-9C58-137B80******</p>

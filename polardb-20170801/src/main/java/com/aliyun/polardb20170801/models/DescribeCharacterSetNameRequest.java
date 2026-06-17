@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class DescribeCharacterSetNameRequest extends TeaModel {
     /**
-     * <p>The ID of the cluster.</p>
+     * <p>The cluster ID.</p>
      * <blockquote>
-     * <p>You can only query character sets that PolarDB for MySQL clusters support. If you enter the ID of a PolarDB for PostgreSQL or PolarDB for Oracle cluster, the returned value of the <code>CharacterSetNameItems</code> parameter is an empty string.</p>
+     * <p>This operation supports only PolarDB for MySQL clusters. If you specify the cluster ID of a PolarDB for PostgreSQL or PolarDB for PostgreSQL (Oracle Compatible) cluster, <code>CharacterSetNameItems</code> will be empty in the response.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -23,7 +23,7 @@ public class DescribeCharacterSetNameRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID of the cluster.</p>
+     * <p>The region ID.</p>
      * <blockquote>
      * <p>You can call the <a href="https://help.aliyun.com/document_detail/98041.html">DescribeRegions</a> operation to query available regions.</p>
      * </blockquote>

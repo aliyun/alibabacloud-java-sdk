@@ -11,6 +11,8 @@ public class DescribeVpcsRequest extends TeaModel {
     public Long ownerId;
 
     /**
+     * <p>The page number. The value must be an integer that is greater than 0 and does not exceed the maximum value of the integer data type. Default value: <strong>1</strong>.</p>
+     * 
      * <strong>example:</strong>
      * <p>3</p>
      */
@@ -18,6 +20,17 @@ public class DescribeVpcsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries per page. Valid values:</p>
+     * <ul>
+     * <li><p><strong>30</strong></p>
+     * </li>
+     * <li><p><strong>50</strong></p>
+     * </li>
+     * <li><p><strong>100</strong></p>
+     * </li>
+     * </ul>
+     * <p>Default value: <strong>30</strong>.</p>
+     * 
      * <strong>example:</strong>
      * <p>30</p>
      */
@@ -25,6 +38,8 @@ public class DescribeVpcsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The name of the cloud product.</p>
+     * 
      * <strong>example:</strong>
      * <p>VPN</p>
      */
@@ -32,6 +47,8 @@ public class DescribeVpcsRequest extends TeaModel {
     public String product;
 
     /**
+     * <p>The ID of the resource group to which the VPC belongs.</p>
+     * 
      * <strong>example:</strong>
      * <p>rg-acfmzh544n3j3bi</p>
      */
@@ -48,6 +65,11 @@ public class DescribeVpcsRequest extends TeaModel {
     public String securityToken;
 
     /**
+     * <p>The ID of the VPC.</p>
+     * <blockquote>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/35739.html">DescribeVpcs</a> operation to query the details of VPCs.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>vpc-*************</p>
      */
@@ -55,6 +77,11 @@ public class DescribeVpcsRequest extends TeaModel {
     public String vpcId;
 
     /**
+     * <p>The ID of the zone.</p>
+     * <blockquote>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/98041.html">DescribeRegions</a> operation to query zones.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou-i</p>
      */

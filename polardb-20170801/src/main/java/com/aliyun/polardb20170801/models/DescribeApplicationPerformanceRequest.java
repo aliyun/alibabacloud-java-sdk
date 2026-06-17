@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeApplicationPerformanceRequest extends TeaModel {
     /**
+     * <p>The ID of the application cluster.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,8 @@ public class DescribeApplicationPerformanceRequest extends TeaModel {
     public String applicationId;
 
     /**
+     * <p>The ID of the consumer.</p>
+     * 
      * <strong>example:</strong>
      * <p>c-xxxxxxx</p>
      */
@@ -21,6 +24,8 @@ public class DescribeApplicationPerformanceRequest extends TeaModel {
     public String consumer;
 
     /**
+     * <p>The ID of the consumer group.</p>
+     * 
      * <strong>example:</strong>
      * <p>cg-xxxxxx</p>
      */
@@ -28,6 +33,7 @@ public class DescribeApplicationPerformanceRequest extends TeaModel {
     public String consumerGroup;
 
     /**
+     * <p>The end time for the query. Specify the time in UTC in the <code>yyyy-MM-ddTHH:mmZ</code> format.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -37,6 +43,24 @@ public class DescribeApplicationPerformanceRequest extends TeaModel {
     public String endTime;
 
     /**
+     * <p>The granularity of the performance data, in seconds. Valid values:</p>
+     * <ul>
+     * <li><p>5</p>
+     * </li>
+     * <li><p>30</p>
+     * </li>
+     * <li><p>60</p>
+     * </li>
+     * <li><p>600</p>
+     * </li>
+     * <li><p>1800</p>
+     * </li>
+     * <li><p>3600</p>
+     * </li>
+     * <li><p>86400</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>5</p>
      */
@@ -44,6 +68,7 @@ public class DescribeApplicationPerformanceRequest extends TeaModel {
     public String interval;
 
     /**
+     * <p>The performance metrics to query. Separate multiple metrics with commas (,).<br>You can specify up to five performance metrics.<br></p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -53,6 +78,8 @@ public class DescribeApplicationPerformanceRequest extends TeaModel {
     public String key;
 
     /**
+     * <p>The ID of the model service.</p>
+     * 
      * <strong>example:</strong>
      * <p>ms-xxxxxx</p>
      */
@@ -60,6 +87,7 @@ public class DescribeApplicationPerformanceRequest extends TeaModel {
     public String modelService;
 
     /**
+     * <p>The start time for the query. Specify the time in UTC in the <code>yyyy-MM-ddTHH:mmZ</code> format.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

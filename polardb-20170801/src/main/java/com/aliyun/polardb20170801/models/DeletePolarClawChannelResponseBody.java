@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DeletePolarClawChannelResponseBody extends TeaModel {
     /**
+     * <p><strong>The application ID.</strong></p>
+     * 
      * <strong>example:</strong>
      * <p>pa-**************</p>
      */
@@ -12,6 +14,8 @@ public class DeletePolarClawChannelResponseBody extends TeaModel {
     public String applicationId;
 
     /**
+     * <p>The ID of the deleted channel.</p>
+     * 
      * <strong>example:</strong>
      * <p>feishu</p>
      */
@@ -19,6 +23,8 @@ public class DeletePolarClawChannelResponseBody extends TeaModel {
     public String channelId;
 
     /**
+     * <p>The response status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -26,6 +32,8 @@ public class DeletePolarClawChannelResponseBody extends TeaModel {
     public Integer code;
 
     /**
+     * <p>The returned message.</p>
+     * 
      * <strong>example:</strong>
      * <p>successful</p>
      */
@@ -33,6 +41,8 @@ public class DeletePolarClawChannelResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -40,6 +50,8 @@ public class DeletePolarClawChannelResponseBody extends TeaModel {
     public Boolean ok;
 
     /**
+     * <p>The ID of the uninstalled plugin.</p>
+     * 
      * <strong>example:</strong>
      * <p>openclaw-lark</p>
      */
@@ -47,6 +59,8 @@ public class DeletePolarClawChannelResponseBody extends TeaModel {
     public String pluginId;
 
     /**
+     * <p>Indicates whether the channel plugin was uninstalled.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -54,6 +68,8 @@ public class DeletePolarClawChannelResponseBody extends TeaModel {
     public Boolean pluginUninstalled;
 
     /**
+     * <p><strong>The request ID.</strong></p>
+     * 
      * <strong>example:</strong>
      * <p>2281C6C9-CBAB-1AFD-8400-670750CF6025_2212</p>
      */
@@ -61,6 +77,8 @@ public class DeletePolarClawChannelResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the gateway was restarted.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

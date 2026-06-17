@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreatePolarFsObjectResponseBody extends TeaModel {
     /**
+     * <p>The absolute path of the created directory.</p>
+     * 
      * <strong>example:</strong>
      * <p>/test</p>
      */
@@ -12,6 +14,8 @@ public class CreatePolarFsObjectResponseBody extends TeaModel {
     public String path;
 
     /**
+     * <p>The PolarFS instance id.</p>
+     * 
      * <strong>example:</strong>
      * <p>pfs-test****</p>
      */
@@ -19,7 +23,7 @@ public class CreatePolarFsObjectResponseBody extends TeaModel {
     public String polarFsInstanceId;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request id.</p>
      * 
      * <strong>example:</strong>
      * <p>C890995A-CF06-4F4D-8DB8-DD26C2******</p>

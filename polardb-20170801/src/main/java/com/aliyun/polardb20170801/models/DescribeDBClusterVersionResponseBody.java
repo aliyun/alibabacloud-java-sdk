@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeDBClusterVersionResponseBody extends TeaModel {
     /**
-     * <p>The ID of cluster.</p>
+     * <p>The cluster ID.</p>
      * 
      * <strong>example:</strong>
      * <p>pc-****************</p>
@@ -14,7 +14,14 @@ public class DescribeDBClusterVersionResponseBody extends TeaModel {
     public String DBClusterId;
 
     /**
-     * <p>The latest version of the database engine.</p>
+     * <strong>example:</strong>
+     * <p>2.0.16.13.14.0</p>
+     */
+    @NameInMap("DBLatestStableVersion")
+    public String DBLatestStableVersion;
+
+    /**
+     * <p>The latest version of the database kernel.</p>
      * 
      * <strong>example:</strong>
      * <p>8.0.1.1.16</p>
@@ -25,13 +32,18 @@ public class DescribeDBClusterVersionResponseBody extends TeaModel {
     /**
      * <p>The minor version of the database engine.</p>
      * <ul>
-     * <li>If DBVersion is 8.0, the valid values of this parameter are:<ul>
-     * <li>8.0.2</li>
-     * <li>8.0.1</li>
+     * <li><p>If <code>DBVersion</code> is <strong>8.0</strong>, valid values are:</p>
+     * <ul>
+     * <li><p><strong>8.0.2</strong></p>
+     * </li>
+     * <li><p><strong>8.0.1</strong></p>
+     * </li>
      * </ul>
      * </li>
-     * <li>If DBVersion is 5.7, set the value of this parameter to 5.7.28.</li>
-     * <li>If DBVersion is 5.6, the value of this parameter is 5.6.16.</li>
+     * <li><p>If <code>DBVersion</code> is <strong>5.7</strong>, the value is <strong>5.7.28</strong>.</p>
+     * </li>
+     * <li><p>If <code>DBVersion</code> is <strong>5.6</strong>, the value is <strong>5.6.16</strong>.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -43,7 +55,7 @@ public class DescribeDBClusterVersionResponseBody extends TeaModel {
     /**
      * <p>The revision version of the database engine.</p>
      * <blockquote>
-     * <p>For a cluster of the PolarDB for MySQL 5.6, the DBRevisionVersion parameter returns the revision version information only if the Revision Version is released later than August 31, 2020. Otherwise, this parameter returns an empty value.</p>
+     * <p>For a PolarDB for MySQL 5.6 cluster, this parameter is returned only when the release date of the revision version is later than 20200831. Otherwise, this parameter is empty. For more information about the kernel version of a PolarDB for MySQL cluster, see <a href="https://help.aliyun.com/document_detail/423884.html">Kernel release notes</a>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -53,17 +65,20 @@ public class DescribeDBClusterVersionResponseBody extends TeaModel {
     public String DBRevisionVersion;
 
     /**
-     * <p>The versions to which the cluster can be upgraded.</p>
+     * <p>A list of upgradable versions.</p>
      */
     @NameInMap("DBRevisionVersionList")
     public java.util.List<DescribeDBClusterVersionResponseBodyDBRevisionVersionList> DBRevisionVersionList;
 
     /**
-     * <p>The version of the database engine. Valid values:</p>
+     * <p>The major version of the database engine. Valid values:</p>
      * <ul>
-     * <li>5.6</li>
-     * <li>5.7</li>
-     * <li>8.0</li>
+     * <li><p><strong>8.0</strong></p>
+     * </li>
+     * <li><p><strong>5.7</strong></p>
+     * </li>
+     * <li><p><strong>5.6</strong></p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -73,14 +88,19 @@ public class DescribeDBClusterVersionResponseBody extends TeaModel {
     public String DBVersion;
 
     /**
-     * <p>The status of the minor version. Valid values:</p>
+     * <p>The status of the current minor version of the database. Valid values:</p>
      * <ul>
-     * <li><strong>Stable</strong>: The minor version is stable.</li>
-     * <li><strong>Old</strong>: The minor version is outdated. We recommend that you upgrade the cluster to the latest version.</li>
-     * <li><strong>HighRisk</strong>: The minor version has critical defects. We recommend that you immediately update the cluster to the latest minor version.</li>
+     * <li><p><strong>Stable</strong>: The current version is stable.</p>
+     * </li>
+     * <li><p><strong>Old</strong>: The current version is outdated. Upgrade to the latest version.</p>
+     * </li>
+     * <li><p><strong>HighRisk</strong>: The current version has critical bugs. Upgrade to the latest version immediately.</p>
+     * </li>
+     * <li><p><strong>Beta</strong>: The current version is a beta version.</p>
+     * </li>
      * </ul>
      * <blockquote>
-     * <p> For more information about how to update the minor version, see <a href="https://help.aliyun.com/document_detail/158572.html">Minor version update</a>.</p>
+     * <p>For more information about how to upgrade the minor version of a database, see <a href="https://help.aliyun.com/document_detail/158572.html">Upgrade versions</a>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -90,10 +110,19 @@ public class DescribeDBClusterVersionResponseBody extends TeaModel {
     public String DBVersionStatus;
 
     /**
-     * <p>Indicates whether the kernel is of the latest version. Valid values:</p>
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
+    @NameInMap("IsLatestStableVersion")
+    public String isLatestStableVersion;
+
+    /**
+     * <p>Indicates whether the current database kernel version is the latest version. Valid values:</p>
      * <ul>
-     * <li>true</li>
-     * <li>false</li>
+     * <li><p><strong>true</strong></p>
+     * </li>
+     * <li><p><strong>false</strong></p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -103,10 +132,12 @@ public class DescribeDBClusterVersionResponseBody extends TeaModel {
     public String isLatestVersion;
 
     /**
-     * <p>Indicates whether PolarProxy uses the latest version. Valid values:</p>
+     * <p>Indicates whether the current database proxy version is the latest version. Valid values:</p>
      * <ul>
-     * <li>true</li>
-     * <li>false</li>
+     * <li><p><strong>true</strong></p>
+     * </li>
+     * <li><p><strong>false</strong></p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -116,7 +147,7 @@ public class DescribeDBClusterVersionResponseBody extends TeaModel {
     public String isProxyLatestVersion;
 
     /**
-     * <p>The latest version of PolarProxy.</p>
+     * <p>The latest version of the database proxy.</p>
      * 
      * <strong>example:</strong>
      * <p>2.4.17</p>
@@ -125,7 +156,7 @@ public class DescribeDBClusterVersionResponseBody extends TeaModel {
     public String proxyLatestVersion;
 
     /**
-     * <p>The revision version of the database engine.</p>
+     * <p>The version of the database proxy.</p>
      * 
      * <strong>example:</strong>
      * <p>2.4.15</p>
@@ -134,25 +165,36 @@ public class DescribeDBClusterVersionResponseBody extends TeaModel {
     public String proxyRevisionVersion;
 
     /**
-     * <p>The release status of the PolarProxy version. Valid values:</p>
+     * <p>A list of upgradable proxy versions.</p>
      * <ul>
-     * <li><strong>Stable</strong>: The PolarProxy revision version is stable.</li>
-     * <li><strong>Old</strong>: The PolarProxy revision version is outdated. We recommend that you do not update the PolarProxy to this revision version.</li>
-     * <li><strong>HighRisk</strong>: The PolarProxy revision version has critical defects. We recommend that you do not update the PolarProxy to this revision version.</li>
-     * <li><strong>Beta</strong>: The PolarProxy revision version is a Beta version.</li>
+     * <li><p><strong>Stable</strong>: The current version is stable.</p>
+     * </li>
+     * <li><p><strong>Old</strong>: This version is outdated and not recommended for upgrades.</p>
+     * </li>
+     * <li><p><strong>HighRisk</strong>: This version has critical bugs and is not recommended for upgrades.</p>
+     * </li>
+     * <li><p><strong>Beta</strong>: This is a beta version.</p>
+     * </li>
      * </ul>
      */
     @NameInMap("ProxyRevisionVersionList")
     public java.util.List<DescribeDBClusterVersionResponseBodyProxyRevisionVersionList> proxyRevisionVersionList;
 
     /**
-     * <p>The status of PolarProxy. Valid values:</p>
+     * <p>The status of the database proxy version. Valid values:</p>
      * <ul>
-     * <li>Stable: The minor version is stable.</li>
-     * <li>Old: The minor version is outdated. We recommend that you upgrade the cluster to the latest version.</li>
-     * <li>HighRisk: The minor version has critical defects. We recommend that you immediately upgrade the cluster to the latest version.</li>
-     * <li>Beta: The minor version is a beta version.</li>
+     * <li><p><strong>Stable</strong>: The current version is stable.</p>
+     * </li>
+     * <li><p><strong>Old</strong>: The current version is outdated. Upgrade to the latest version.</p>
+     * </li>
+     * <li><p><strong>HighRisk</strong>: The current version has critical bugs. Upgrade to the latest version immediately.</p>
+     * </li>
+     * <li><p><strong>Beta</strong>: The current version is a beta version.</p>
+     * </li>
      * </ul>
+     * <blockquote>
+     * <p>For more information about how to upgrade the database proxy version, see <a href="https://help.aliyun.com/document_detail/158572.html">Upgrade versions</a>.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>Stable</p>
@@ -161,7 +203,7 @@ public class DescribeDBClusterVersionResponseBody extends TeaModel {
     public String proxyVersionStatus;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>47921222-0D37-4133-8C0D-017DC3******</p>
@@ -180,6 +222,14 @@ public class DescribeDBClusterVersionResponseBody extends TeaModel {
     }
     public String getDBClusterId() {
         return this.DBClusterId;
+    }
+
+    public DescribeDBClusterVersionResponseBody setDBLatestStableVersion(String DBLatestStableVersion) {
+        this.DBLatestStableVersion = DBLatestStableVersion;
+        return this;
+    }
+    public String getDBLatestStableVersion() {
+        return this.DBLatestStableVersion;
     }
 
     public DescribeDBClusterVersionResponseBody setDBLatestVersion(String DBLatestVersion) {
@@ -228,6 +278,14 @@ public class DescribeDBClusterVersionResponseBody extends TeaModel {
     }
     public String getDBVersionStatus() {
         return this.DBVersionStatus;
+    }
+
+    public DescribeDBClusterVersionResponseBody setIsLatestStableVersion(String isLatestStableVersion) {
+        this.isLatestStableVersion = isLatestStableVersion;
+        return this;
+    }
+    public String getIsLatestStableVersion() {
+        return this.isLatestStableVersion;
     }
 
     public DescribeDBClusterVersionResponseBody setIsLatestVersion(String isLatestVersion) {
@@ -288,7 +346,7 @@ public class DescribeDBClusterVersionResponseBody extends TeaModel {
 
     public static class DescribeDBClusterVersionResponseBodyDBRevisionVersionList extends TeaModel {
         /**
-         * <p>The release notes for the database engine revision version.</p>
+         * <p>The release notes of the version.</p>
          * 
          * <strong>example:</strong>
          * <p>ReleaseNote</p>
@@ -297,12 +355,16 @@ public class DescribeDBClusterVersionResponseBody extends TeaModel {
         public String releaseNote;
 
         /**
-         * <p>The release status of the database engine revision version. Valid values:</p>
+         * <p>The release status of the database version. Valid values:</p>
          * <ul>
-         * <li><strong>Stable</strong>: The database engine revision version is stable.</li>
-         * <li><strong>Old</strong>: The database engine revision version is outdated. We recommend that you do not update the database engine to this revision version.</li>
-         * <li><strong>HighRisk</strong>: The database engine revision version has critical defects. We recommend that you do not update the database engine to this revision version.</li>
-         * <li><strong>Beta</strong>: The database engine revision version is a Beta version.</li>
+         * <li><p><strong>Stable</strong>: The current version is stable.</p>
+         * </li>
+         * <li><p><strong>Old</strong>: The current version is outdated. Do not upgrade to this version.</p>
+         * </li>
+         * <li><p><strong>HighRisk</strong>: The current version has critical bugs. Do not upgrade to this version.</p>
+         * </li>
+         * <li><p><strong>Beta</strong>: The current version is a beta version.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -312,7 +374,7 @@ public class DescribeDBClusterVersionResponseBody extends TeaModel {
         public String releaseType;
 
         /**
-         * <p>The code of the database engine revision version. You can use the code to specify the database engine revision version.</p>
+         * <p>The revision version code of the database engine. You can use this code to specify the target version for an upgrade.</p>
          * 
          * <strong>example:</strong>
          * <p>20230707</p>
@@ -321,7 +383,7 @@ public class DescribeDBClusterVersionResponseBody extends TeaModel {
         public String revisionVersionCode;
 
         /**
-         * <p>The database engine revision version number.</p>
+         * <p>The revision version of the database engine.</p>
          * 
          * <strong>example:</strong>
          * <p>8.0.1.1.35.1</p>
@@ -370,7 +432,7 @@ public class DescribeDBClusterVersionResponseBody extends TeaModel {
 
     public static class DescribeDBClusterVersionResponseBodyProxyRevisionVersionList extends TeaModel {
         /**
-         * <p>The release notes for the PolarProxy revision version.</p>
+         * <p>The release notes of the version.</p>
          * 
          * <strong>example:</strong>
          * <p>ReleaseNote</p>
@@ -381,8 +443,10 @@ public class DescribeDBClusterVersionResponseBody extends TeaModel {
         /**
          * <p>The release type. Valid values:</p>
          * <ul>
-         * <li><strong>LTS</strong>: a long-term version</li>
-         * <li><strong>BETA</strong>: a preview version</li>
+         * <li><p><strong>LTS</strong>: long-term support version.</p>
+         * </li>
+         * <li><p><strong>BETA</strong>: preview version.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -392,7 +456,7 @@ public class DescribeDBClusterVersionResponseBody extends TeaModel {
         public String releaseType;
 
         /**
-         * <p>The PolarProxy revision version code. You can use this code to specify the PolarProxy revision version.</p>
+         * <p>The revision version code of the database proxy engine. You can use this code to specify the target version for an upgrade.</p>
          * 
          * <strong>example:</strong>
          * <p>20230707</p>
@@ -401,7 +465,7 @@ public class DescribeDBClusterVersionResponseBody extends TeaModel {
         public String revisionVersionCode;
 
         /**
-         * <p>The PolarProxy revision version number.</p>
+         * <p>The revision version of the database proxy engine.</p>
          * 
          * <strong>example:</strong>
          * <p>2.8.24</p>

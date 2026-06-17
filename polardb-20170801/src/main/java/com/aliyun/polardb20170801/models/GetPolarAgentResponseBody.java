@@ -13,10 +13,15 @@ public class GetPolarAgentResponseBody extends TeaModel {
     @NameInMap("Content")
     public String content;
 
+    /**
+     * <p>Indicates whether FunctionCall is supported.</p>
+     */
     @NameInMap("FunctionCall")
     public java.util.List<GetPolarAgentResponseBodyFunctionCall> functionCall;
 
     /**
+     * <p>The cloud product type.</p>
+     * 
      * <strong>example:</strong>
      * <p>polardb</p>
      */
@@ -24,6 +29,8 @@ public class GetPolarAgentResponseBody extends TeaModel {
     public String product;
 
     /**
+     * <p>The ID of the user query pipeline task.</p>
+     * 
      * <strong>example:</strong>
      * <p>2548026401648157601743560466154</p>
      */
@@ -31,6 +38,8 @@ public class GetPolarAgentResponseBody extends TeaModel {
     public String queryId;
 
     /**
+     * <p>The model\&quot;s reasoning content.</p>
+     * 
      * <strong>example:</strong>
      * <p>xxxx</p>
      */
@@ -38,6 +47,8 @@ public class GetPolarAgentResponseBody extends TeaModel {
     public String reasoningContent;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>34458CD3-33E0-4624-BFEF-840C15******</p>
      */
@@ -45,12 +56,17 @@ public class GetPolarAgentResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The session ID for code execution.</p>
+     * 
      * <strong>example:</strong>
      * <p>40315d708f0806903b08813bf4c9db2e</p>
      */
     @NameInMap("SessionId")
     public String sessionId;
 
+    /**
+     * <p>Indicates whether UiFunctionCall is supported.</p>
+     */
     @NameInMap("UiFunctionCall")
     public java.util.List<GetPolarAgentResponseBodyUiFunctionCall> uiFunctionCall;
 
@@ -125,6 +141,8 @@ public class GetPolarAgentResponseBody extends TeaModel {
 
     public static class GetPolarAgentResponseBodyFunctionCall extends TeaModel {
         /**
+         * <p>The operation-related output result.</p>
+         * 
          * <strong>example:</strong>
          * <p>---narguments:n  parameters: []n</p>
          */
@@ -132,6 +150,8 @@ public class GetPolarAgentResponseBody extends TeaModel {
         public String arguments;
 
         /**
+         * <p>The quota ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>393</p>
          */
@@ -139,6 +159,8 @@ public class GetPolarAgentResponseBody extends TeaModel {
         public String id;
 
         /**
+         * <p>The rule name.</p>
+         * 
          * <strong>example:</strong>
          * <p>rule04</p>
          */
@@ -146,6 +168,8 @@ public class GetPolarAgentResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>The status.</p>
+         * 
          * <strong>example:</strong>
          * <p>xxx</p>
          */
@@ -202,6 +226,8 @@ public class GetPolarAgentResponseBody extends TeaModel {
         public String argsText;
 
         /**
+         * <p>The tool command that is invoked.</p>
+         * 
          * <strong>example:</strong>
          * <p>xxx</p>
          */

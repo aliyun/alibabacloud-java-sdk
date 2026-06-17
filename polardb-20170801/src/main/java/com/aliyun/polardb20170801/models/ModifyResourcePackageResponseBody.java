@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ModifyResourcePackageResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>E56531A4-E552-40BA-9C58-137B80******</p>
      */

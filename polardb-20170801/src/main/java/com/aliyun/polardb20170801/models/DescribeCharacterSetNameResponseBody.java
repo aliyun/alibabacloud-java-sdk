@@ -8,7 +8,7 @@ public class DescribeCharacterSetNameResponseBody extends TeaModel {
     public DescribeCharacterSetNameResponseBodyCharacterSetNameItems characterSetNameItems;
 
     /**
-     * <p>The type of the database engine.</p>
+     * <p>The cluster engine.</p>
      * 
      * <strong>example:</strong>
      * <p>POLARDB</p>
@@ -17,7 +17,7 @@ public class DescribeCharacterSetNameResponseBody extends TeaModel {
     public String engine;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>34458CD3-33E0-4624-BFEF-840C15******</p>

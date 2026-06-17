@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ManuallyStartDBClusterResponseBody extends TeaModel {
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>73A85BAF-1039-4CDE-A83F-1A140F******</p>

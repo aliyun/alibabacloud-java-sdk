@@ -5,6 +5,15 @@ import com.aliyun.tea.*;
 
 public class GenerateUpgradeReportForSyncCloneRequest extends TeaModel {
     /**
+     * <p>The product series. Valid values:</p>
+     * <ul>
+     * <li><p><strong>Normal</strong>: Cluster Edition (default)</p>
+     * </li>
+     * <li><p><strong>SENormal</strong>: Standard Edition</p>
+     * </li>
+     * </ul>
+     * <p>See <a href="https://help.aliyun.com/document_detail/183258.html">Product series</a>.</p>
+     * 
      * <strong>example:</strong>
      * <p>Normal</p>
      */
@@ -12,6 +21,14 @@ public class GenerateUpgradeReportForSyncCloneRequest extends TeaModel {
     public String creationCategory;
 
     /**
+     * <p>The creation method. Valid values:</p>
+     * <ul>
+     * <li><p><strong>MigrationFromRDS</strong>: Migrate data from an existing RDS instance to a new PolarDB cluster. The created PolarDB cluster is in read-only mode and has binary logging enabled by default. For operations in the console, see <a href="https://help.aliyun.com/document_detail/121582.html">Upgrade an ApsaraDB RDS for MySQL instance to PolarDB for MySQL</a>.</p>
+     * </li>
+     * <li><p><strong>UpgradeFromPolarDB</strong>: Upgrade and migrate data from a PolarDB cluster. See <a href="https://help.aliyun.com/document_detail/459712.html">Upgrade the major version</a>.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>MigrationFromRDS</p>
      */
@@ -19,6 +36,11 @@ public class GenerateUpgradeReportForSyncCloneRequest extends TeaModel {
     public String creationOption;
 
     /**
+     * <p>The name of the database. You can specify only one database name.</p>
+     * <blockquote>
+     * <p>This parameter is supported only for PolarDB for PostgreSQL (Oracle Compatible) clusters.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>testDB</p>
      */
@@ -26,6 +48,14 @@ public class GenerateUpgradeReportForSyncCloneRequest extends TeaModel {
     public String DBName;
 
     /**
+     * <p>The type of the database engine. Valid values:</p>
+     * <ul>
+     * <li><p><strong>MySQL</strong></p>
+     * </li>
+     * <li><p><strong>Oracle</strong></p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>PostgreSQL</p>
      */
@@ -33,6 +63,22 @@ public class GenerateUpgradeReportForSyncCloneRequest extends TeaModel {
     public String DBType;
 
     /**
+     * <p>The version of the destination database engine.</p>
+     * <ul>
+     * <li><p>Valid values for MySQL:</p>
+     * <ul>
+     * <li><p><strong>5.6</strong></p>
+     * </li>
+     * <li><p><strong>5.7</strong></p>
+     * </li>
+     * <li><p><strong>8.0</strong></p>
+     * </li>
+     * </ul>
+     * </li>
+     * <li><p>Valid value for Oracle: <strong>14</strong>.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>5.6</p>
      */
@@ -46,6 +92,8 @@ public class GenerateUpgradeReportForSyncCloneRequest extends TeaModel {
     public Long ownerId;
 
     /**
+     * <p>The region ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
      */
@@ -53,6 +101,8 @@ public class GenerateUpgradeReportForSyncCloneRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>A reserved parameter in the JSON string format.</p>
+     * 
      * <strong>example:</strong>
      * <p>{\&quot;targetTableMode\&quot;:2}</p>
      */
@@ -66,6 +116,8 @@ public class GenerateUpgradeReportForSyncCloneRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
+     * <p>The ID of the source instance.</p>
+     * 
      * <strong>example:</strong>
      * <p>pc-k2j96w169uhu868l8</p>
      */

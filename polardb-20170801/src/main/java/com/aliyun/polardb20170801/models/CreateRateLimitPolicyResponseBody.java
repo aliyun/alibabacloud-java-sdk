@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateRateLimitPolicyResponseBody extends TeaModel {
     /**
+     * <p>The gateway instance ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>pg-xxxxxxxx</p>
      */
@@ -12,6 +14,8 @@ public class CreateRateLimitPolicyResponseBody extends TeaModel {
     public String gwClusterId;
 
     /**
+     * <p>The policy ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>02eccf7c61cf4d05a543075ee907f3**</p>
      */
@@ -19,7 +23,7 @@ public class CreateRateLimitPolicyResponseBody extends TeaModel {
     public String policyId;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>CDB3258F-B5DE-43C4-8935-CBA0CA******</p>

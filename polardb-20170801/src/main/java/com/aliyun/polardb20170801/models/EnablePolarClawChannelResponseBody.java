@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class EnablePolarClawChannelResponseBody extends TeaModel {
     /**
+     * <p>The ID of the application.</p>
+     * 
      * <strong>example:</strong>
      * <p>pa-**************</p>
      */
@@ -12,6 +14,8 @@ public class EnablePolarClawChannelResponseBody extends TeaModel {
     public String applicationId;
 
     /**
+     * <p>The ID of the enabled channel.</p>
+     * 
      * <strong>example:</strong>
      * <p>feishu</p>
      */
@@ -19,6 +23,8 @@ public class EnablePolarClawChannelResponseBody extends TeaModel {
     public String channelId;
 
     /**
+     * <p>The response status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -26,6 +32,8 @@ public class EnablePolarClawChannelResponseBody extends TeaModel {
     public Integer code;
 
     /**
+     * <p>The message returned in the response.</p>
+     * 
      * <strong>example:</strong>
      * <p>successful</p>
      */
@@ -33,6 +41,8 @@ public class EnablePolarClawChannelResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>Indicates whether the operation was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -40,7 +50,7 @@ public class EnablePolarClawChannelResponseBody extends TeaModel {
     public Boolean ok;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>3E5CD764-FCCA-5C9C-838E-20E0DE84B2AF</p>
@@ -49,6 +59,8 @@ public class EnablePolarClawChannelResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the gateway was restarted.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

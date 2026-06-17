@@ -12,7 +12,7 @@ public class ModifyDBNodeHotReplicaModeRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>pc-2vc327c2a14a3u858</p>
+     * <p>pc-*****************</p>
      */
     @NameInMap("DBClusterId")
     public String DBClusterId;
@@ -22,7 +22,7 @@ public class ModifyDBNodeHotReplicaModeRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>pi-2ze28275h9x5r4wt1</p>
+     * <p>pi-*****************</p>
      */
     @NameInMap("DBNodeId")
     public String DBNodeId;

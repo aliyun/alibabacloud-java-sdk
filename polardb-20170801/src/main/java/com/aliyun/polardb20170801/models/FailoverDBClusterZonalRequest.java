@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class FailoverDBClusterZonalRequest extends TeaModel {
     /**
+     * <p>A client token to ensure the idempotence of the request. The client generates this token. It must be unique across requests. The token is case-sensitive and cannot exceed 64 ASCII characters.</p>
+     * 
      * <strong>example:</strong>
      * <p>6000170000591aed949d0f54a343f1a4233c1e7d1c5******</p>
      */
@@ -12,6 +14,7 @@ public class FailoverDBClusterZonalRequest extends TeaModel {
     public String clientToken;
 
     /**
+     * <p>The cluster ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -33,6 +36,14 @@ public class FailoverDBClusterZonalRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
+     * <p>Specifies whether to fail back to the original primary zone after a failover. Valid values:</p>
+     * <ul>
+     * <li><p>true: Yes.</p>
+     * </li>
+     * <li><p>false: No.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -40,6 +51,8 @@ public class FailoverDBClusterZonalRequest extends TeaModel {
     public Boolean rollBackForDisaster;
 
     /**
+     * <p>The ID of the node to promote to the primary node. If you do not specify this parameter, the system automatically selects a node. Call the DescribeDBClusters operation to query node information, such as node IDs.</p>
+     * 
      * <strong>example:</strong>
      * <p>pi-***********</p>
      */
@@ -47,6 +60,14 @@ public class FailoverDBClusterZonalRequest extends TeaModel {
     public String targetDBNodeId;
 
     /**
+     * <p>The type of failover. Valid values:</p>
+     * <ul>
+     * <li><p>Primary: A primary/secondary failover within the primary zone.</p>
+     * </li>
+     * <li><p>Standby: A switch to the hot standby storage cluster.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>Primary</p>
      */

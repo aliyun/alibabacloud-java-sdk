@@ -11,7 +11,7 @@ public class ModifyDBNodeHotReplicaModeResponseBody extends TeaModel {
      * </blockquote>
      * 
      * <strong>example:</strong>
-     * <p>pc-2vc327c2a14a3u858</p>
+     * <p>pc-*****************</p>
      */
     @NameInMap("DBClusterId")
     public String DBClusterId;
@@ -29,7 +29,7 @@ public class ModifyDBNodeHotReplicaModeResponseBody extends TeaModel {
      * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
-     * <p>9F4DDFBF-205C-5A3E-8DC2-C60F3E3FDC38</p>
+     * <p>9F4DDFBF-205C-5A3E-8DC2-C6**********</p>
      */
     @NameInMap("RequestId")
     public String requestId;

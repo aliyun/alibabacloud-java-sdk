@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateActivationCodeRequest extends TeaModel {
     /**
-     * <p>The Alibaba Cloud order ID (including the virtual order ID).</p>
+     * <p>The Alibaba Cloud order ID. This includes virtual orders.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -34,7 +34,7 @@ public class CreateActivationCodeRequest extends TeaModel {
     public String macAddress;
 
     /**
-     * <p>The name of the activation code. The name can contain only letters, digits, underscores (_), and hyphens (-). The activation code file downloaded from the console is named based on this name.</p>
+     * <p>The name of the activation code. It can contain only letters, digits, underscores (_), and hyphens (-). This name is used as the filename when you download the activation code from the console.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -56,7 +56,7 @@ public class CreateActivationCodeRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The system identifier of the database. This parameter is required if you set AllowEmptySystemIdentifier to false.</p>
+     * <p>The unique identifier of the database. This parameter is required if \<code>AllowEmptySystemIdentifier\\</code> for the order is set to \<code>false\\</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>1234567890123456</p>

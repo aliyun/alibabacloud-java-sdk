@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class AttachApplicationPolarFSResponseBody extends TeaModel {
     /**
+     * <p>Application ID</p>
+     * 
      * <strong>example:</strong>
      * <p>pa-**************</p>
      */
@@ -12,7 +14,7 @@ public class AttachApplicationPolarFSResponseBody extends TeaModel {
     public String applicationId;
 
     /**
-     * <p>PolarFS ID</p>
+     * <p>PolarLakeBase instance ID</p>
      * 
      * <strong>example:</strong>
      * <p>pcs-**************</p>
@@ -21,6 +23,8 @@ public class AttachApplicationPolarFSResponseBody extends TeaModel {
     public String polarFSInstanceId;
 
     /**
+     * <p>Request ID</p>
+     * 
      * <strong>example:</strong>
      * <p>3E5CD764-FCCA-5C9C-838E-20E0DE84B2AF</p>
      */

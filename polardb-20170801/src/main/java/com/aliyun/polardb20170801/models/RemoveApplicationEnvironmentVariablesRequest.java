@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class RemoveApplicationEnvironmentVariablesRequest extends TeaModel {
     /**
+     * <p>The application ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,8 @@ public class RemoveApplicationEnvironmentVariablesRequest extends TeaModel {
     public String applicationId;
 
     /**
+     * <p>Specifies whether to restart the gateway after removing the variables. The default is <code>true</code>.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -21,6 +24,7 @@ public class RemoveApplicationEnvironmentVariablesRequest extends TeaModel {
     public Boolean restart;
 
     /**
+     * <p>A list of the environment variable names to remove.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("VariableNames")

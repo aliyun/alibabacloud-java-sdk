@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeTasksResponseBody extends TeaModel {
     /**
-     * <p>The ID of the cluster for which the task was created.</p>
+     * <p>The ID of the cluster to which the task belongs.</p>
      * 
      * <strong>example:</strong>
      * <p>pc-***************</p>
@@ -14,7 +14,7 @@ public class DescribeTasksResponseBody extends TeaModel {
     public String DBClusterId;
 
     /**
-     * <p>The end time of the query.</p>
+     * <p>The end of the time range to query.</p>
      * 
      * <strong>example:</strong>
      * <p>2020-12-02T03:00Z</p>
@@ -23,7 +23,7 @@ public class DescribeTasksResponseBody extends TeaModel {
     public String endTime;
 
     /**
-     * <p>The page number of the page returned.</p>
+     * <p>The page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -32,7 +32,7 @@ public class DescribeTasksResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries returned per page.</p>
+     * <p>The number of entries returned on the current page.</p>
      * 
      * <strong>example:</strong>
      * <p>30</p>
@@ -50,7 +50,7 @@ public class DescribeTasksResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The start time of the query.</p>
+     * <p>The beginning of the time range to query.</p>
      * 
      * <strong>example:</strong>
      * <p>2020-11-30T00:00Z</p>

@@ -4,11 +4,14 @@ package com.aliyun.polardb20170801.models;
 import com.aliyun.tea.*;
 
 public class CreatePolarClawAgentResponseBody extends TeaModel {
+    /**
+     * <p>Details of the new agent.</p>
+     */
     @NameInMap("Agent")
     public CreatePolarClawAgentResponseBodyAgent agent;
 
     /**
-     * <p>Agent ID</p>
+     * <p>The agent ID.</p>
      * 
      * <strong>example:</strong>
      * <p>work</p>
@@ -17,6 +20,8 @@ public class CreatePolarClawAgentResponseBody extends TeaModel {
     public String agentId;
 
     /**
+     * <p>The application ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>pa-**************</p>
      */
@@ -24,6 +29,8 @@ public class CreatePolarClawAgentResponseBody extends TeaModel {
     public String applicationId;
 
     /**
+     * <p>The status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -31,6 +38,8 @@ public class CreatePolarClawAgentResponseBody extends TeaModel {
     public Integer code;
 
     /**
+     * <p>The response message.</p>
+     * 
      * <strong>example:</strong>
      * <p>successful</p>
      */
@@ -38,6 +47,8 @@ public class CreatePolarClawAgentResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The display name of the agent.</p>
+     * 
      * <strong>example:</strong>
      * <p>work</p>
      */
@@ -45,6 +56,8 @@ public class CreatePolarClawAgentResponseBody extends TeaModel {
     public String name;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>3E5CD764-FCCA-5C9C-838E-20E0DE84B2AF</p>
      */
@@ -52,6 +65,8 @@ public class CreatePolarClawAgentResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The workspace path.</p>
+     * 
      * <strong>example:</strong>
      * <p>/home/node/.openclaw/workspace-work</p>
      */
@@ -129,6 +144,8 @@ public class CreatePolarClawAgentResponseBody extends TeaModel {
 
     public static class CreatePolarClawAgentResponseBodyAgentIdentity extends TeaModel {
         /**
+         * <p>The avatar\&quot;s path or content.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -136,6 +153,8 @@ public class CreatePolarClawAgentResponseBody extends TeaModel {
         public String avatar;
 
         /**
+         * <p>The avatar URL.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -143,6 +162,8 @@ public class CreatePolarClawAgentResponseBody extends TeaModel {
         public String avatarUrl;
 
         /**
+         * <p>The emoji identifier.</p>
+         * 
          * <strong>example:</strong>
          * <p>U+1F99E</p>
          */
@@ -150,6 +171,8 @@ public class CreatePolarClawAgentResponseBody extends TeaModel {
         public String emoji;
 
         /**
+         * <p>The identity name.</p>
+         * 
          * <strong>example:</strong>
          * <p>work</p>
          */
@@ -157,6 +180,8 @@ public class CreatePolarClawAgentResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>The theme.</p>
+         * 
          * <strong>example:</strong>
          * <p>work</p>
          */
@@ -212,7 +237,7 @@ public class CreatePolarClawAgentResponseBody extends TeaModel {
 
     public static class CreatePolarClawAgentResponseBodyAgent extends TeaModel {
         /**
-         * <p>Agent ID</p>
+         * <p>The agent ID.</p>
          * 
          * <strong>example:</strong>
          * <p>work</p>
@@ -220,10 +245,15 @@ public class CreatePolarClawAgentResponseBody extends TeaModel {
         @NameInMap("Id")
         public String id;
 
+        /**
+         * <p>The agent\&quot;s identity.</p>
+         */
         @NameInMap("Identity")
         public CreatePolarClawAgentResponseBodyAgentIdentity identity;
 
         /**
+         * <p>The display name of the agent.</p>
+         * 
          * <strong>example:</strong>
          * <p>work</p>
          */
@@ -231,6 +261,8 @@ public class CreatePolarClawAgentResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>The workspace path.</p>
+         * 
          * <strong>example:</strong>
          * <p>/home/node/.openclaw/workspace-work</p>
          */

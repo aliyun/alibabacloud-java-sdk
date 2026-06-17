@@ -4,15 +4,21 @@ package com.aliyun.polardb20170801.models;
 import com.aliyun.tea.*;
 
 public class DescribeDBClusterServerlessConfResponseBody extends TeaModel {
+    /**
+     * <p>The maximum capacity, in PCUs, for a cluster in agile mode. In agile mode, the cluster consists of only serverless nodes.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>32</p>
+     */
     @NameInMap("AgileScaleMax")
     public String agileScaleMax;
 
     /**
-     * <p>Whether to enable idle shutdown. Values:</p>
+     * <p>Indicates whether the no-activity suspension feature is enabled. Valid values:</p>
      * <ul>
-     * <li><p><strong>true</strong>: Enable</p>
+     * <li><p><strong>true</strong>: Enabled</p>
      * </li>
-     * <li><p><strong>false</strong>: Disable (default)</p>
+     * <li><p><strong>false</strong>: Disabled (Default)</p>
      * </li>
      * </ul>
      * 
@@ -23,7 +29,7 @@ public class DescribeDBClusterServerlessConfResponseBody extends TeaModel {
     public String allowShutDown;
 
     /**
-     * <p>Serverless cluster ID.</p>
+     * <p>The ID of the serverless cluster.</p>
      * 
      * <strong>example:</strong>
      * <p>pc-bp10gr51qasnl****</p>
@@ -32,7 +38,7 @@ public class DescribeDBClusterServerlessConfResponseBody extends TeaModel {
     public String DBClusterId;
 
     /**
-     * <p>Request ID.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>5E71541A-6007-4DCC-A38A-F872C31FEB45</p>
@@ -59,7 +65,7 @@ public class DescribeDBClusterServerlessConfResponseBody extends TeaModel {
     public String scaleApRoNumMin;
 
     /**
-     * <p>Maximum scaling limit for a single node. Range: 1 PCU~32 PCU.</p>
+     * <p>The maximum compute capacity of a single node in PCUs. Valid values: 1 to 32.</p>
      * 
      * <strong>example:</strong>
      * <p>3</p>
@@ -68,7 +74,7 @@ public class DescribeDBClusterServerlessConfResponseBody extends TeaModel {
     public String scaleMax;
 
     /**
-     * <p>Minimum scaling limit for a single node. Range: 1 PCU~31 PCU.</p>
+     * <p>The minimum compute capacity of a single node in PolarDB Capacity Units (PCUs). Valid values: 1 to 31.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -77,7 +83,7 @@ public class DescribeDBClusterServerlessConfResponseBody extends TeaModel {
     public String scaleMin;
 
     /**
-     * <p>Maximum scaling limit for the number of read-only nodes. Range: 0~15.</p>
+     * <p>The maximum number of read-only nodes for scaling. Valid values: 0 to 15.</p>
      * 
      * <strong>example:</strong>
      * <p>4</p>
@@ -86,7 +92,7 @@ public class DescribeDBClusterServerlessConfResponseBody extends TeaModel {
     public String scaleRoNumMax;
 
     /**
-     * <p>Minimum scaling limit for the number of read-only nodes. Range: 0~15.</p>
+     * <p>The minimum number of read-only nodes for scaling. Valid values: 0 to 15.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>
@@ -95,7 +101,7 @@ public class DescribeDBClusterServerlessConfResponseBody extends TeaModel {
     public String scaleRoNumMin;
 
     /**
-     * <p>Detection duration for idle shutdown. Range: 300~86,400. Unit: seconds. The detection duration must be a multiple of 300 seconds.</p>
+     * <p>The detection period for no-activity suspension, in seconds. The value must be an integer from 300 to 86,400 and must be a multiple of 300.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -104,7 +110,7 @@ public class DescribeDBClusterServerlessConfResponseBody extends TeaModel {
     public String secondsUntilAutoPause;
 
     /**
-     * <p>CPU upscale threshold.</p>
+     * <p>The CPU scale-up threshold.</p>
      * 
      * <strong>example:</strong>
      * <p>60</p>
@@ -113,7 +119,7 @@ public class DescribeDBClusterServerlessConfResponseBody extends TeaModel {
     public String serverlessRuleCpuEnlargeThreshold;
 
     /**
-     * <p>CPU downscale threshold.</p>
+     * <p>The CPU scale-down threshold.</p>
      * 
      * <strong>example:</strong>
      * <p>30</p>
@@ -122,11 +128,11 @@ public class DescribeDBClusterServerlessConfResponseBody extends TeaModel {
     public String serverlessRuleCpuShrinkThreshold;
 
     /**
-     * <p>Elasticity sensitivity. Values:</p>
+     * <p>The elasticity sensitivity. Valid values:</p>
      * <ul>
      * <li><p>normal: Standard</p>
      * </li>
-     * <li><p>flexible: Sensitive</p>
+     * <li><p>flexible: Flexible</p>
      * </li>
      * </ul>
      * 
@@ -137,7 +143,7 @@ public class DescribeDBClusterServerlessConfResponseBody extends TeaModel {
     public String serverlessRuleMode;
 
     /**
-     * <p>Whether steady state is enabled. Values:</p>
+     * <p>Indicates whether the steady-state mode is enabled. Valid values:</p>
      * <p>1: Enabled</p>
      * <p>0: Disabled</p>
      * 
@@ -147,6 +153,12 @@ public class DescribeDBClusterServerlessConfResponseBody extends TeaModel {
     @NameInMap("Switchs")
     public String switchs;
 
+    /**
+     * <p>The maximum capacity, in PCUs, for a cluster in steady-state mode. Steady-state mode adds serverless capabilities to nodes that have fixed specifications.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>16</p>
+     */
     @NameInMap("TraditionalScaleMaxThreshold")
     public String traditionalScaleMaxThreshold;
 

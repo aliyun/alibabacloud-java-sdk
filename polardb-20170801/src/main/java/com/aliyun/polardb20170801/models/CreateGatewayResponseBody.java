@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateGatewayResponseBody extends TeaModel {
     /**
+     * <p>The gateway instance ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>pg-2ze2079ueg20****</p>
      */
@@ -12,6 +14,8 @@ public class CreateGatewayResponseBody extends TeaModel {
     public String gwClusterId;
 
     /**
+     * <p>The order ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>2035629******</p>
      */
@@ -19,7 +23,7 @@ public class CreateGatewayResponseBody extends TeaModel {
     public String orderId;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>F9F1CB1A-B1D5-4EF5-A53A-************</p>

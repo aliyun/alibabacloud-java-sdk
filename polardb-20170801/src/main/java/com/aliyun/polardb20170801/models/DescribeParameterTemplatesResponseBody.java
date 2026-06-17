@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeParameterTemplatesResponseBody extends TeaModel {
     /**
-     * <p>The type of the database engine.</p>
+     * <p>The database engine type.</p>
      * 
      * <strong>example:</strong>
      * <p>MySQL</p>
@@ -14,7 +14,7 @@ public class DescribeParameterTemplatesResponseBody extends TeaModel {
     public String DBType;
 
     /**
-     * <p>The version of the database engine.</p>
+     * <p>The database engine version.</p>
      * 
      * <strong>example:</strong>
      * <p>5.7</p>
@@ -23,7 +23,7 @@ public class DescribeParameterTemplatesResponseBody extends TeaModel {
     public String DBVersion;
 
     /**
-     * <p>The database engine of the cluster.</p>
+     * <p>The database engine.</p>
      * 
      * <strong>example:</strong>
      * <p>POLARDB</p>

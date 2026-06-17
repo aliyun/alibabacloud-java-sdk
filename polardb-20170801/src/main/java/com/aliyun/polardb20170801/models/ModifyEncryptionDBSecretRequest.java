@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyEncryptionDBSecretRequest extends TeaModel {
     /**
+     * <p>The cluster ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,14 @@ public class ModifyEncryptionDBSecretRequest extends TeaModel {
     public String DBClusterId;
 
     /**
+     * <p>The status of the key. Valid values:</p>
+     * <ul>
+     * <li><p><strong>Enabled</strong></p>
+     * </li>
+     * <li><p><strong>Disabled</strong></p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>Enabled</p>
      */
@@ -21,6 +30,8 @@ public class ModifyEncryptionDBSecretRequest extends TeaModel {
     public String encryptionDBStatus;
 
     /**
+     * <p>The key ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>749c1df7-<strong><strong>-</strong></strong>-<strong><strong>-</strong></strong>*****</p>
      */
@@ -40,6 +51,8 @@ public class ModifyEncryptionDBSecretRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
+     * <p>The Global Resource Descriptor (GRD) of the role. For more information, see <a href="https://help.aliyun.com/document_detail/93689.html">Overview of RAM roles</a>.</p>
+     * 
      * <strong>example:</strong>
      * <p>acs:ram::1406926*****:role/aliyunrdsinstanceencryptiondefaultrole</p>
      */

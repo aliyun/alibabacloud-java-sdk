@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpgradePolarClawSkillsResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>45D24263-7E3A-4140-9472-************</p>
      */
@@ -12,6 +14,8 @@ public class UpgradePolarClawSkillsResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The task ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>32077061</p>
      */

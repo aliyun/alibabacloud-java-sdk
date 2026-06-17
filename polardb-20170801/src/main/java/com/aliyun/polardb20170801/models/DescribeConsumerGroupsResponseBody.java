@@ -4,10 +4,15 @@ package com.aliyun.polardb20170801.models;
 import com.aliyun.tea.*;
 
 public class DescribeConsumerGroupsResponseBody extends TeaModel {
+    /**
+     * <p>A list of consumer groups.</p>
+     */
     @NameInMap("Items")
     public java.util.List<DescribeConsumerGroupsResponseBodyItems> items;
 
     /**
+     * <p>The page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -15,6 +20,8 @@ public class DescribeConsumerGroupsResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of records on the current page.</p>
+     * 
      * <strong>example:</strong>
      * <p>30</p>
      */
@@ -22,6 +29,8 @@ public class DescribeConsumerGroupsResponseBody extends TeaModel {
     public Integer pageRecordCount;
 
     /**
+     * <p>The number of records returned per page. Valid values: 30, 50, and 100. Default value: 30.</p>
+     * 
      * <strong>example:</strong>
      * <p>30</p>
      */
@@ -29,7 +38,7 @@ public class DescribeConsumerGroupsResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>24A1990B-4F6E-482B-B8CB-75C612******</p>
@@ -38,6 +47,8 @@ public class DescribeConsumerGroupsResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total number of records.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -99,6 +110,8 @@ public class DescribeConsumerGroupsResponseBody extends TeaModel {
 
     public static class DescribeConsumerGroupsResponseBodyItems extends TeaModel {
         /**
+         * <p>The list of supported models.</p>
+         * 
          * <strong>example:</strong>
          * <p>&quot;[]&quot;</p>
          */
@@ -106,6 +119,8 @@ public class DescribeConsumerGroupsResponseBody extends TeaModel {
         public String allowedModels;
 
         /**
+         * <p>The ID of the consumer group.</p>
+         * 
          * <strong>example:</strong>
          * <p>cg-xxxxxxxx</p>
          */
@@ -113,6 +128,8 @@ public class DescribeConsumerGroupsResponseBody extends TeaModel {
         public String consumerGroupId;
 
         /**
+         * <p>The name of the consumer group.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -120,6 +137,8 @@ public class DescribeConsumerGroupsResponseBody extends TeaModel {
         public String consumerGroupName;
 
         /**
+         * <p>The creation time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2026-01-28T09:56:03+08:00</p>
          */
@@ -127,6 +146,8 @@ public class DescribeConsumerGroupsResponseBody extends TeaModel {
         public String gmtCreated;
 
         /**
+         * <p>The update time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2026-01-04T16:09:29+08:00</p>
          */
@@ -134,6 +155,14 @@ public class DescribeConsumerGroupsResponseBody extends TeaModel {
         public String gmtModified;
 
         /**
+         * <p>Indicates whether the consumer group is the default group. Valid values:</p>
+         * <ul>
+         * <li><p><strong>0</strong>: No</p>
+         * </li>
+         * <li><p><strong>1</strong>: Yes</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -141,6 +170,8 @@ public class DescribeConsumerGroupsResponseBody extends TeaModel {
         public String isDefault;
 
         /**
+         * <p>The nickname of the consumer group.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */

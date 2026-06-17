@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListPolarClawBindingsRequest extends TeaModel {
     /**
+     * <p>A list of agent IDs to filter the bindings.</p>
+     * 
      * <strong>example:</strong>
      * <p>work,research</p>
      */
@@ -12,6 +14,7 @@ public class ListPolarClawBindingsRequest extends TeaModel {
     public java.util.List<String> agentList;
 
     /**
+     * <p>The application ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -4,10 +4,14 @@ package com.aliyun.polardb20170801.models;
 import com.aliyun.tea.*;
 
 public class AddPolarFsPathMappingRequest extends TeaModel {
+    /**
+     * <p>A list of objects, each containing a bucket and its corresponding path.</p>
+     */
     @NameInMap("CustomBucketPathList")
     public java.util.List<AddPolarFsPathMappingRequestCustomBucketPathList> customBucketPathList;
 
     /**
+     * <p>The ID of the cluster.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -17,6 +21,7 @@ public class AddPolarFsPathMappingRequest extends TeaModel {
     public String DBClusterId;
 
     /**
+     * <p>The ID of the PolarFS instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -56,6 +61,8 @@ public class AddPolarFsPathMappingRequest extends TeaModel {
 
     public static class AddPolarFsPathMappingRequestCustomBucketPathList extends TeaModel {
         /**
+         * <p>The name of the bucket.</p>
+         * 
          * <strong>example:</strong>
          * <p>Bucket1</p>
          */
@@ -63,6 +70,8 @@ public class AddPolarFsPathMappingRequest extends TeaModel {
         public String bucket;
 
         /**
+         * <p>The custom storage path.</p>
+         * 
          * <strong>example:</strong>
          * <p>/data1</p>
          */

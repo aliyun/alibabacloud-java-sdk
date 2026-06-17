@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ModifyDBDescriptionZonalRequest extends TeaModel {
     /**
+     * <p>A client token to ensure the idempotence of the request. The client generates this token. It must be unique across requests, case-sensitive, and up to 64 ASCII characters in length.</p>
+     * 
      * <strong>example:</strong>
      * <p>6000170000591aed949d0f54a343f1a4233c1e7d1c5******</p>
      */
@@ -12,6 +14,7 @@ public class ModifyDBDescriptionZonalRequest extends TeaModel {
     public String clientToken;
 
     /**
+     * <p>The cluster ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,6 +24,13 @@ public class ModifyDBDescriptionZonalRequest extends TeaModel {
     public String DBClusterId;
 
     /**
+     * <p>The description of the database. The description must meet the following requirements:</p>
+     * <ul>
+     * <li><p>It cannot start with <code>http://</code> or <code>https://</code>.</p>
+     * </li>
+     * <li><p>It must be 2 to 256 characters in length.</p>
+     * </li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -30,6 +40,7 @@ public class ModifyDBDescriptionZonalRequest extends TeaModel {
     public String DBDescription;
 
     /**
+     * <p>The database name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

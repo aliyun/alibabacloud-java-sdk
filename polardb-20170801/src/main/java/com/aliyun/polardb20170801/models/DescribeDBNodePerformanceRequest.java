@@ -14,7 +14,7 @@ public class DescribeDBNodePerformanceRequest extends TeaModel {
     public String DBClusterId;
 
     /**
-     * <p>The ID of the cluster node.</p>
+     * <p>The ID of the node in the PolarDB cluster.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -24,7 +24,7 @@ public class DescribeDBNodePerformanceRequest extends TeaModel {
     public String DBNodeId;
 
     /**
-     * <p>The end of the time range to query. Specify the time in the ISO 8601 standard in the <code>yyyy-MM-ddTHH:mmZ</code> format. The time must be in UTC.</p>
+     * <p>The end of the time range to query. Specify the time in the <code>yyyy-MM-ddTHH:mmZ</code> format. The time must be in UTC.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -34,15 +34,22 @@ public class DescribeDBNodePerformanceRequest extends TeaModel {
     public String endTime;
 
     /**
-     * <p>The interval at which performance data is collected. Valid values:</p>
+     * <p>The granularity of the performance data. Valid values:</p>
      * <ul>
-     * <li>5</li>
-     * <li>30</li>
-     * <li>60</li>
-     * <li>600</li>
-     * <li>1800</li>
-     * <li>3600</li>
-     * <li>86400</li>
+     * <li><p>5</p>
+     * </li>
+     * <li><p>30</p>
+     * </li>
+     * <li><p>60</p>
+     * </li>
+     * <li><p>600</p>
+     * </li>
+     * <li><p>1800</p>
+     * </li>
+     * <li><p>3600</p>
+     * </li>
+     * <li><p>86400</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -52,9 +59,14 @@ public class DescribeDBNodePerformanceRequest extends TeaModel {
     public String interval;
 
     /**
-     * <p>The performance metrics that you want to query. Separate multiple metrics with commas (,). For more information, see <a href="https://help.aliyun.com/document_detail/141787.html">Performance parameters</a>.</p>
+     * <p>The performance metrics to query. Separate multiple metrics with commas (,). For more information, see <a href="https://help.aliyun.com/document_detail/141787.html">Performance metrics</a>.</p>
      * <blockquote>
-     * <p> You can specify a maximum of five performance metrics.</p>
+     * <ul>
+     * <li><p>You can query a maximum of five performance metrics.</p>
+     * </li>
+     * <li><p>If your cluster has Serverless enabled for fixed specifications, querying PolarDBCPU or PolarDBMemory alone ignores the Interval parameter and returns performance metrics per second. To get data at your specified Interval, query multiple metrics.</p>
+     * </li>
+     * </ul>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -65,7 +77,7 @@ public class DescribeDBNodePerformanceRequest extends TeaModel {
     public String key;
 
     /**
-     * <p>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the <code>yyyy-MM-ddTHH:mmZ</code> format. The time must be in UTC.</p>
+     * <p>The beginning of the time range to query. Specify the time in the <code>yyyy-MM-ddTHH:mmZ</code> format. The time must be in Coordinated Universal Time (UTC).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -75,10 +87,10 @@ public class DescribeDBNodePerformanceRequest extends TeaModel {
     public String startTime;
 
     /**
-     * <p>The special metric. Set the value to tair, which indicates the PolarTair architecture.</p>
+     * <p>A special metric. Currently, only orca is supported.</p>
      * 
      * <strong>example:</strong>
-     * <p>tair</p>
+     * <p>orca</p>
      */
     @NameInMap("Type")
     public String type;

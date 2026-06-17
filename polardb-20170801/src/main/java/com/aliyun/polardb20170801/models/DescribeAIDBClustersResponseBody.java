@@ -4,10 +4,15 @@ package com.aliyun.polardb20170801.models;
 import com.aliyun.tea.*;
 
 public class DescribeAIDBClustersResponseBody extends TeaModel {
+    /**
+     * <p>The details of the AI clusters.</p>
+     */
     @NameInMap("Items")
     public DescribeAIDBClustersResponseBodyItems items;
 
     /**
+     * <p>The page number. Default value: 1.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -15,6 +20,8 @@ public class DescribeAIDBClustersResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries on the current page.</p>
+     * 
      * <strong>example:</strong>
      * <p>7</p>
      */
@@ -22,7 +29,7 @@ public class DescribeAIDBClustersResponseBody extends TeaModel {
     public Integer pageRecordCount;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>9D6CE7C6-1C52-5BF6-B3D7-10977D44542C</p>
@@ -31,6 +38,8 @@ public class DescribeAIDBClustersResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total number of entries.</p>
+     * 
      * <strong>example:</strong>
      * <p>5</p>
      */

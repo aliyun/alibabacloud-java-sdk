@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class AddPolarFsQuotaRequest extends TeaModel {
     /**
+     * <p>The ID of the PolarDB instance on which the application depends.</p>
+     * 
      * <strong>example:</strong>
      * <p>pc-**************</p>
      */
@@ -12,6 +14,7 @@ public class AddPolarFsQuotaRequest extends TeaModel {
     public String DBClusterId;
 
     /**
+     * <p>The ID of the Polarlakebase instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,6 +24,7 @@ public class AddPolarFsQuotaRequest extends TeaModel {
     public String polarFsInstanceId;
 
     /**
+     * <p>The details of the quota rules.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Quotas")
@@ -57,6 +61,8 @@ public class AddPolarFsQuotaRequest extends TeaModel {
 
     public static class AddPolarFsQuotaRequestQuotas extends TeaModel {
         /**
+         * <p>The time to live (TTL) for the access time. Unit: seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>7200</p>
          */
@@ -64,6 +70,8 @@ public class AddPolarFsQuotaRequest extends TeaModel {
         public Long accessTTL;
 
         /**
+         * <p>The TTL for the change time. Unit: seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>7200</p>
          */
@@ -71,6 +79,8 @@ public class AddPolarFsQuotaRequest extends TeaModel {
         public Long changeTTL;
 
         /**
+         * <p>The description of the resource quota.</p>
+         * 
          * <strong>example:</strong>
          * <p>quota_policy</p>
          */
@@ -78,6 +88,14 @@ public class AddPolarFsQuotaRequest extends TeaModel {
         public String description;
 
         /**
+         * <p>Specifies whether to enable the rule. Valid values:</p>
+         * <ul>
+         * <li><p><strong>True</strong>: The rule immediately applies to new items. This is the default value.</p>
+         * </li>
+         * <li><p><strong>False</strong>: The rule does not apply to new items.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>True</p>
          */
@@ -85,6 +103,11 @@ public class AddPolarFsQuotaRequest extends TeaModel {
         public Boolean enabled;
 
         /**
+         * <p>The rule to exclude specific paths from matching.</p>
+         * <ul>
+         * <li>A path pattern that starts with a forward slash (/). Supports glob syntax, including <code>*</code>, <code>?</code>, and <code>**</code>.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>/a/<em>project</em></p>
          */
@@ -92,6 +115,8 @@ public class AddPolarFsQuotaRequest extends TeaModel {
         public String exclude;
 
         /**
+         * <p>The limit on the number of files for a user in the directory.</p>
+         * 
          * <strong>example:</strong>
          * <p>222</p>
          */
@@ -99,6 +124,10 @@ public class AddPolarFsQuotaRequest extends TeaModel {
         public Long fileCountLimit;
 
         /**
+         * <p>The wildcard pattern to match paths.</p>
+         * <ul>
+         * <li>A path pattern that starts with a forward slash (/). Supports glob syntax, including <code>*</code>, <code>?</code>, and <code>**</code>.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -108,6 +137,7 @@ public class AddPolarFsQuotaRequest extends TeaModel {
         public String include;
 
         /**
+         * <p>The name of the rule.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -117,6 +147,8 @@ public class AddPolarFsQuotaRequest extends TeaModel {
         public String name;
 
         /**
+         * <p>The priority of the quota rule.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -124,6 +156,11 @@ public class AddPolarFsQuotaRequest extends TeaModel {
         public Integer priority;
 
         /**
+         * <p>The total size limit for files in the directory. Unit: GB.</p>
+         * <ul>
+         * <li>Note: The value must be at least 1 GB.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */

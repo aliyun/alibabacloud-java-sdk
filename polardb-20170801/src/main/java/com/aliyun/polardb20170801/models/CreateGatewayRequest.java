@@ -5,6 +5,18 @@ import com.aliyun.tea.*;
 
 public class CreateGatewayRequest extends TeaModel {
     /**
+     * <p>Specifies whether to enable auto-renewal. Valid values:</p>
+     * <ul>
+     * <li><p><strong>true</strong>: enables auto-renewal.</p>
+     * </li>
+     * <li><p><strong>false</strong>: disables auto-renewal.</p>
+     * </li>
+     * </ul>
+     * <p>Default value: <strong>false</strong>.</p>
+     * <blockquote>
+     * <p>This parameter applies only when <strong>PayType</strong> is set to <strong>Prepaid</strong>.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -12,6 +24,8 @@ public class CreateGatewayRequest extends TeaModel {
     public Boolean autoRenew;
 
     /**
+     * <p>The cluster specification.</p>
+     * 
      * <strong>example:</strong>
      * <p>polar.app.g2.medium</p>
      */
@@ -19,6 +33,14 @@ public class CreateGatewayRequest extends TeaModel {
     public String DBClusterClass;
 
     /**
+     * <p>The database engine type. Valid values:</p>
+     * <ul>
+     * <li><p>MySQL</p>
+     * </li>
+     * <li><p>PostgreSQL</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>MySQL</p>
      */
@@ -26,6 +48,13 @@ public class CreateGatewayRequest extends TeaModel {
     public String DBType;
 
     /**
+     * <p>The billing method. Valid values:</p>
+     * <ul>
+     * <li><p><strong>Postpaid</strong>: pay-as-you-go</p>
+     * </li>
+     * <li><p><strong>Prepaid</strong>: subscription</p>
+     * </li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -35,6 +64,14 @@ public class CreateGatewayRequest extends TeaModel {
     public String payType;
 
     /**
+     * <p>The unit of the subscription duration. This parameter is required when <strong>PayType</strong> is set to <strong>Prepaid</strong>.</p>
+     * <ul>
+     * <li><p><strong>Year</strong>: The subscription duration is measured in years.</p>
+     * </li>
+     * <li><p><strong>Month</strong>: The subscription duration is measured in months.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>Month</p>
      */
@@ -42,6 +79,7 @@ public class CreateGatewayRequest extends TeaModel {
     public String period;
 
     /**
+     * <p>The region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -51,6 +89,8 @@ public class CreateGatewayRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The security group ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>sg-bp**************</p>
      */
@@ -58,6 +98,14 @@ public class CreateGatewayRequest extends TeaModel {
     public String securityGroupId;
 
     /**
+     * <p>The subscription duration. This parameter is required when <strong>PayType</strong> is set to <strong>Prepaid</strong>.</p>
+     * <ul>
+     * <li><p>If <strong>Period</strong> is set to <strong>Month</strong>, the value must be an integer from <code>1</code> to <code>9</code>.</p>
+     * </li>
+     * <li><p>If <strong>Period</strong> is set to <strong>Year</strong>, the value must be an integer from <code>1</code> to <code>3</code>.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>3</p>
      */
@@ -65,6 +113,7 @@ public class CreateGatewayRequest extends TeaModel {
     public String usedTime;
 
     /**
+     * <p>The ID of the virtual private cloud (VPC).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -74,6 +123,7 @@ public class CreateGatewayRequest extends TeaModel {
     public String VPCId;
 
     /**
+     * <p>The vSwitch ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -83,6 +133,8 @@ public class CreateGatewayRequest extends TeaModel {
     public String vSwitchId;
 
     /**
+     * <p>The availability zone ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-beijing-l</p>
      */

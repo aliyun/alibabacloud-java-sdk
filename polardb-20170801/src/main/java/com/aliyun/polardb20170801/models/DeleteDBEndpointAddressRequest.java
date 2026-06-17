@@ -7,7 +7,7 @@ public class DeleteDBEndpointAddressRequest extends TeaModel {
     /**
      * <p>The ID of the cluster.</p>
      * <blockquote>
-     * <p> You can call the <a href="https://help.aliyun.com/document_detail/98094.html">DescribeDBClusters</a> operation to query the details of all clusters that belong to your account, such as the cluster ID.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/98094.html">DescribeDBClusters</a> operation to query the details of all clusters that belong to your account, such as the cluster ID.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -20,7 +20,7 @@ public class DeleteDBEndpointAddressRequest extends TeaModel {
     /**
      * <p>The ID of the endpoint.</p>
      * <blockquote>
-     * <p> You can call the <a href="https://help.aliyun.com/document_detail/98205.html">DescribeDBClusterEndpoints</a> operation to query the endpoints of a specified PolarDB cluster.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/98205.html">DescribeDBClusterEndpoints</a> operation to query the endpoints of a specified PolarDB cluster.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

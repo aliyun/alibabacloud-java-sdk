@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class CheckAccountNameZonalRequest extends TeaModel {
     /**
+     * <p>The account name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class CheckAccountNameZonalRequest extends TeaModel {
     public String accountName;
 
     /**
+     * <p>The cluster ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

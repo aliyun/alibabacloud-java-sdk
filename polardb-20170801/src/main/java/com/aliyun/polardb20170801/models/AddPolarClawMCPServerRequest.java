@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class AddPolarClawMCPServerRequest extends TeaModel {
     /**
+     * <p>The application ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,8 @@ public class AddPolarClawMCPServerRequest extends TeaModel {
     public String applicationId;
 
     /**
+     * <p>The configuration object for the MCP server.</p>
+     * 
      * <strong>example:</strong>
      * <p>{
      *     &quot;command&quot;: &quot;node&quot;,
@@ -27,6 +30,7 @@ public class AddPolarClawMCPServerRequest extends TeaModel {
     public java.util.Map<String, ?> serverConfig;
 
     /**
+     * <p>The unique identifier for the MCP server.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

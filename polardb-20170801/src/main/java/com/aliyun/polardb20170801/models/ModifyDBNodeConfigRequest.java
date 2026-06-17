@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyDBNodeConfigRequest extends TeaModel {
     /**
+     * <p>The name of the node configuration.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class ModifyDBNodeConfigRequest extends TeaModel {
     public String configName;
 
     /**
+     * <p>The configuration of the node.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,10 @@ public class ModifyDBNodeConfigRequest extends TeaModel {
     public String configValue;
 
     /**
+     * <p>The cluster ID.</p>
+     * <blockquote>
+     * <p>Call the <a href="https://help.aliyun.com/document_detail/98094.html">DescribeDBClusters</a> operation to query the details of all clusters in your account, including the cluster ID.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -32,6 +38,10 @@ public class ModifyDBNodeConfigRequest extends TeaModel {
     public String DBClusterId;
 
     /**
+     * <p>The ID of the cluster node.</p>
+     * <blockquote>
+     * <p>Call the <a href="https://help.aliyun.com/document_detail/185342.html">DescribeDBClusters</a> operation to query the details of all clusters in your account, including the node ID.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

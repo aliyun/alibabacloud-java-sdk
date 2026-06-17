@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetPolarAgentRequest extends TeaModel {
     /**
+     * <p>Additional information, as a JSON string.</p>
+     * 
      * <strong>example:</strong>
      * <p>{}</p>
      */
@@ -12,6 +14,7 @@ public class GetPolarAgentRequest extends TeaModel {
     public String extraInfo;
 
     /**
+     * <p>The session query. Get this value from the return value of the &quot;Start a digital human&quot; API.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,6 +24,8 @@ public class GetPolarAgentRequest extends TeaModel {
     public String query;
 
     /**
+     * <p>The session ID. Get this value from the return value of the &quot;Start a digital human&quot; API.</p>
+     * 
      * <strong>example:</strong>
      * <p>c4d242f3-c909-4846-91d9-f84c238a9820</p>
      */
@@ -28,6 +33,8 @@ public class GetPolarAgentRequest extends TeaModel {
     public String sessionId;
 
     /**
+     * <p>The product type source. Valid value: polardb-console.</p>
+     * 
      * <strong>example:</strong>
      * <p>polardb-console</p>
      */

@@ -7,11 +7,13 @@ public class DescribeDBClusterTDEResponseBody extends TeaModel {
     /**
      * <p>Indicates whether automatic key rotation is allowed. Valid values:</p>
      * <ul>
-     * <li><strong>Enabled</strong>: Automatic key rotation is allowed.</li>
-     * <li><strong>Disabled</strong>: Automatic key rotation is not allowed.</li>
+     * <li><p><strong>Enabled</strong>: Automatic key rotation is allowed.</p>
+     * </li>
+     * <li><p><strong>Disabled</strong>: Automatic key rotation is not allowed.</p>
+     * </li>
      * </ul>
      * <blockquote>
-     * <p> This parameter is returned only for a PolarDB for PostgreSQL or PolarDB for PostgreSQL (Compatible with Oracle) cluster.</p>
+     * <p>This parameter is returned only when the database engine is compatible with PostgreSQL or Oracle syntax.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -21,7 +23,7 @@ public class DescribeDBClusterTDEResponseBody extends TeaModel {
     public String automaticRotation;
 
     /**
-     * <p>The ID of the cluster.</p>
+     * <p>The unique ID of the cluster.</p>
      * 
      * <strong>example:</strong>
      * <p>pc-***************</p>
@@ -30,13 +32,15 @@ public class DescribeDBClusterTDEResponseBody extends TeaModel {
     public String DBClusterId;
 
     /**
-     * <p>Indicates whether automatic encryption is enabled for new tables. Valid values:</p>
+     * <p>Indicates whether automatic encryption is enabled for all newly created tables. Valid values:</p>
      * <ul>
-     * <li><strong>ON</strong></li>
-     * <li><strong>OFF</strong></li>
+     * <li><p><strong>ON</strong>: Automatic encryption is enabled.</p>
+     * </li>
+     * <li><p><strong>OFF</strong>: Automatic encryption is disabled.</p>
+     * </li>
      * </ul>
      * <blockquote>
-     * <p> This parameter is returned only for a PolarDB for MySQL cluster.</p>
+     * <p>This parameter is returned only when the database engine is compatible with MySQL.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -55,6 +59,14 @@ public class DescribeDBClusterTDEResponseBody extends TeaModel {
     public String encryptionKey;
 
     /**
+     * <p>The status of the key. Valid values:</p>
+     * <ul>
+     * <li><p><strong>Enabled</strong>: The key is enabled.</p>
+     * </li>
+     * <li><p><strong>Disabled</strong>: The key is disabled.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>Enabled</p>
      */
@@ -62,7 +74,7 @@ public class DescribeDBClusterTDEResponseBody extends TeaModel {
     public String encryptionKeyStatus;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The unique ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>E37D1508-EC3B-4E06-A24A-C7AC31******</p>
@@ -71,10 +83,10 @@ public class DescribeDBClusterTDEResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The automatic key rotation period configured in Key Management Service (KMS). If no automatic key rotation period is configured, 0s is returned. Unit: seconds.</p>
-     * <p>For example, if the rotation period is set to 7 days, 604800s is returned.</p>
+     * <p>The automatic key rotation interval configured in KMS. If no automatic key rotation interval is set, 0 s is returned. Unit: s.</p>
+     * <p>For example, if the rotation interval is 7 days, 604800 s is returned.</p>
      * <blockquote>
-     * <p> This parameter is returned only for a PolarDB for PostgreSQL or PolarDB for PostgreSQL (Compatible with Oracle) cluster whose AutomaticRotation parameter is set to Enabled.</p>
+     * <p>This parameter is returned only when the database engine is compatible with PostgreSQL or Oracle syntax, and the value of <code>AutomaticRotation</code> is <code>Enabled</code>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -84,7 +96,7 @@ public class DescribeDBClusterTDEResponseBody extends TeaModel {
     public String rotationInterval;
 
     /**
-     * <p>The region where the TDE key resides.</p>
+     * <p>The region where the TDE key is located.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-beijing</p>
@@ -95,8 +107,10 @@ public class DescribeDBClusterTDEResponseBody extends TeaModel {
     /**
      * <p>Indicates whether TDE encryption is enabled. Valid values:</p>
      * <ul>
-     * <li><strong>Enabled</strong></li>
-     * <li><strong>Disabled</strong></li>
+     * <li><p><strong>Enabled</strong>: TDE encryption is enabled.</p>
+     * </li>
+     * <li><p><strong>Disabled</strong>: TDE encryption is disabled.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

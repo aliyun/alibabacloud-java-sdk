@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class AddPolarFsQuotaResponseBody extends TeaModel {
     /**
+     * <p>The ID of the Polarlakebase instance.</p>
+     * 
      * <strong>example:</strong>
      * <p>pfs-2ze0i74ka607*****</p>
      */
@@ -12,7 +14,7 @@ public class AddPolarFsQuotaResponseBody extends TeaModel {
     public String polarFsInstanceId;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>7F2007D3-7E74-4ECB-89A8-BF130D******</p>

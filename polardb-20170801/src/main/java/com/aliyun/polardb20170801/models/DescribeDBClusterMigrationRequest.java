@@ -5,12 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeDBClusterMigrationRequest extends TeaModel {
     /**
-     * <p>The network type of the endpoint. Valid values:</p>
-     * <ul>
-     * <li><strong>Public</strong>: the public endpoint</li>
-     * <li><strong>Private</strong>: the internal endpoint (VPC)</li>
-     * <li><strong>Inner</strong>: the internal endpoint (classic network)</li>
-     * </ul>
+     * <p>The cluster ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -7,9 +7,12 @@ public class DescribeDBInitializeVariableResponseBody extends TeaModel {
     /**
      * <p>The database type. Valid values:</p>
      * <ul>
-     * <li>Oracle</li>
-     * <li>PostgreSQL</li>
-     * <li>MySQL</li>
+     * <li><p>Oracle</p>
+     * </li>
+     * <li><p>PostgreSQL</p>
+     * </li>
+     * <li><p>MySQL</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -19,7 +22,7 @@ public class DescribeDBInitializeVariableResponseBody extends TeaModel {
     public String DBType;
 
     /**
-     * <p>The version of the database engine.</p>
+     * <p>The database version.</p>
      * 
      * <strong>example:</strong>
      * <p>11</p>
@@ -28,7 +31,7 @@ public class DescribeDBInitializeVariableResponseBody extends TeaModel {
     public String DBVersion;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>475F58B7-F394-4394-AA6E-4F1CBA******</p>

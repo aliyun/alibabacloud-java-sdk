@@ -5,12 +5,20 @@ import com.aliyun.tea.*;
 
 public class CreateAINodesRequest extends TeaModel {
     /**
+     * <p>The cluster ID.</p>
+     * <blockquote>
+     * <p>Call the <a href="https://api.aliyun.com/api/polardb/2017-08-01/DescribeAIDBClusters">DescribeAIDBClusters</a> operation to query information about all clusters in your account, including cluster IDs.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>pm-xxxxxx</p>
      */
     @NameInMap("DBClusterId")
     public String DBClusterId;
 
+    /**
+     * <p>The information about the nodes to add.</p>
+     */
     @NameInMap("DBNodes")
     public java.util.List<CreateAINodesRequestDBNodes> DBNodes;
 
@@ -37,6 +45,8 @@ public class CreateAINodesRequest extends TeaModel {
 
     public static class CreateAINodesRequestDBNodes extends TeaModel {
         /**
+         * <p>The node specifications.</p>
+         * 
          * <strong>example:</strong>
          * <p>polar.mysql.g4.xlarge.gu10</p>
          */

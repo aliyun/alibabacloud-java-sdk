@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class DescribeDBInitializeVariableRequest extends TeaModel {
     /**
-     * <p>The ID of cluster.</p>
+     * <p>The cluster ID.</p>
      * <blockquote>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/98094.html">DescribeDBClusters</a> operation to query information about all clusters that are deployed in a specified region, such as the cluster ID.</p>
+     * <p>Call the <a href="https://help.aliyun.com/document_detail/98094.html">DescribeDBClusters</a> operation to view information about all clusters in the destination region, including cluster IDs.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 

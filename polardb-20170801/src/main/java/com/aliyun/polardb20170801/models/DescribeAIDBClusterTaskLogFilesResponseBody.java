@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class DescribeAIDBClusterTaskLogFilesResponseBody extends TeaModel {
     /**
+     * <p>The end of the time range to query.</p>
+     * 
      * <strong>example:</strong>
      * <p>2026-01-15T15:00:00Z</p>
      */
     @NameInMap("EndTime")
     public String endTime;
 
+    /**
+     * <p>The list of logs.</p>
+     */
     @NameInMap("Items")
     public DescribeAIDBClusterTaskLogFilesResponseBodyItems items;
 
     /**
+     * <p>The page number of the returned page. The default value is 1.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -22,6 +29,8 @@ public class DescribeAIDBClusterTaskLogFilesResponseBody extends TeaModel {
     public Long pageNumber;
 
     /**
+     * <p>The total number of entries that meet the query conditions. This parameter is optional and may not be returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>7</p>
      */
@@ -29,6 +38,8 @@ public class DescribeAIDBClusterTaskLogFilesResponseBody extends TeaModel {
     public Integer pageRecordCount;
 
     /**
+     * <p>The maximum number of records returned for the current request.</p>
+     * 
      * <strong>example:</strong>
      * <p>30</p>
      */
@@ -36,7 +47,7 @@ public class DescribeAIDBClusterTaskLogFilesResponseBody extends TeaModel {
     public Long pageSize;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>7E2FE3BB-C677-5FF9-9FC5-9CF364BD6BE5</p>
@@ -45,6 +56,8 @@ public class DescribeAIDBClusterTaskLogFilesResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The start of the time range to query. The time is in the <code>yyyy-MM-ddTHH:mm:ssZ</code> format and is displayed in UTC.</p>
+     * 
      * <strong>example:</strong>
      * <p>2026-01-15T14:00:00Z</p>
      */
@@ -114,6 +127,8 @@ public class DescribeAIDBClusterTaskLogFilesResponseBody extends TeaModel {
 
     public static class DescribeAIDBClusterTaskLogFilesResponseBodyItemsSlsLogItems extends TeaModel {
         /**
+         * <p>The time when the log was recorded.</p>
+         * 
          * <strong>example:</strong>
          * <p>2026-01-15T14:13:50.830295892Z</p>
          */
@@ -121,6 +136,8 @@ public class DescribeAIDBClusterTaskLogFilesResponseBody extends TeaModel {
         public String logTime;
 
         /**
+         * <p>The log message.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -128,6 +145,8 @@ public class DescribeAIDBClusterTaskLogFilesResponseBody extends TeaModel {
         public String message;
 
         /**
+         * <p>The specific point in time when the metric was recorded. The value is a UNIX timestamp. Unit: seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>1765677660</p>
          */
@@ -166,6 +185,9 @@ public class DescribeAIDBClusterTaskLogFilesResponseBody extends TeaModel {
     }
 
     public static class DescribeAIDBClusterTaskLogFilesResponseBodyItems extends TeaModel {
+        /**
+         * <p>The SLS log information.</p>
+         */
         @NameInMap("SlsLogItems")
         public java.util.List<DescribeAIDBClusterTaskLogFilesResponseBodyItemsSlsLogItems> slsLogItems;
 

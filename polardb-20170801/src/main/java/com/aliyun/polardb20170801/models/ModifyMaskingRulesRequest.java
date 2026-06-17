@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class ModifyMaskingRulesRequest extends TeaModel {
     /**
-     * <p>The ID of the cluster.</p>
+     * <p>The cluster ID.</p>
      * <blockquote>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/98094.html">DescribeDBClusters</a> operation to query the details of the clusters that belong to your Alibaba Cloud account, such as cluster IDs.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/98094.html">DescribeDBClusters</a> operation to query the details of all clusters in your account, including cluster IDs.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -17,17 +17,28 @@ public class ModifyMaskingRulesRequest extends TeaModel {
     @NameInMap("DBClusterId")
     public String DBClusterId;
 
+    /**
+     * <p>The default algorithm.</p>
+     * <blockquote>
+     * <p>You must specify either MaskingAlgo or DefaultAIgo.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>aes-128-gcm</p>
+     */
     @NameInMap("DefaultAlgo")
     public String defaultAlgo;
 
     /**
-     * <p>Specifies whether to enable the specified masking rule. Valid values:</p>
+     * <p>Enables or disables the specified data masking rules. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong></li>
-     * <li><strong>false</strong></li>
+     * <li><p><strong>true</strong>: enables the specified rules.</p>
+     * </li>
+     * <li><p><strong>false</strong>: disables the specified rules.</p>
+     * </li>
      * </ul>
      * <blockquote>
-     * <p>This parameter is valid only when the <code>RuleNameList</code> parameter is specfied.</p>
+     * <p>This parameter applies only when the <code>RuleNameList</code> parameter is specified.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -36,32 +47,56 @@ public class ModifyMaskingRulesRequest extends TeaModel {
     @NameInMap("Enable")
     public String enable;
 
+    /**
+     * <p>The type of rule to modify. Valid values:</p>
+     * <p>v1: Modifies a data masking rule.
+     * v2: Modifies an encryption rule.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>v1</p>
+     */
     @NameInMap("InterfaceVersion")
     public String interfaceVersion;
 
+    /**
+     * <p>The masking algorithm. Specify one or more algorithms and their parameters. Format: <code>[{ &quot;name&quot;: &quot;algorithm_name&quot;, &quot;params&quot;: {&quot;key&quot;: &quot;value&quot;} }]</code></p>
+     * 
+     * <strong>example:</strong>
+     * <p>[{
+     * &quot;name&quot;: &quot;aes-128-gcm&quot;
+     * }]</p>
+     */
     @NameInMap("MaskingAlgo")
     public String maskingAlgo;
 
     /**
-     * <p>The parameter that is used to specify the masking rule that you want to modify and the value in the JSON format. All parameter values are of the string type. Example: <code>{&quot;auto&quot;: {&quot;databases&quot;: [&quot;db1&quot;], &quot;tables&quot;: [&quot;tb1&quot;], &quot;columns&quot;: [&quot;c1,c2&quot;] }, &quot;description&quot;: &quot;This rule will be applied to the columns c1 and c2 in table t1&quot;, &quot;enabled&quot;: true, &quot;applies_to&quot;: [&quot;user&quot;]}</code>. Where,</p>
+     * <p>A JSON string that specifies the rule configuration. Example: <code>{&quot;auto&quot;: {&quot;databases&quot;: [&quot;db1&quot;], &quot;tables&quot;: [&quot;tb1&quot;], &quot;columns&quot;: [&quot;c1,c2&quot;] }, &quot;description&quot;: &quot;This rule will be applied to the columns c1 and c2 in table t1&quot;, &quot;enabled&quot;: true, &quot;applies_to&quot;: [&quot;user&quot;]}</code>. The JSON string includes the following fields:</p>
      * <ul>
-     * <li><code>&quot;auto&quot;</code>: specifies that the dynamic masking algorithm is supported. This parameter is required.</li>
-     * <li><code>&quot;databases&quot;</code>: Optional. The names of databases to which the masking rule is applied. Separate the names with commas (,). If you leave this parameter empty, the masking rule applies to all databases in the cluster.</li>
-     * <li><code>&quot;tables&quot;</code>: Optional. The names of tables to which the masking rule is applied. Separate the names with commas (,). If you leave this parameter empty, the rule applies to all tables in the cluster.</li>
-     * <li><code>&quot;columns&quot;</code>: Required. The names of fields to which the masking rule is applied. Separate the names with commas (,).</li>
-     * <li><code>&quot;description&quot;</code>: Optional. The description of the masking rule. The description is up to 64 characters in length.</li>
-     * <li><code>&quot;enabled&quot;</code>: Required. Specifies whether to enable the masking rule. Valid values: <strong>true</strong> (enable) and <strong>false</strong> (disable).</li>
-     * <li><code>&quot;applies_to&quot;</code>: The names of database accounts to which the masking rule is applied. Separate the names with commas (,).</li>
-     * <li><code>&quot;exempted&quot;</code>: The names of database accounts to which the masking rule is not applied. Separate the names with commas (,).</li>
+     * <li><p><code>&quot;auto&quot;</code>: Required. The object that contains the configuration for the dynamic data masking algorithm.</p>
+     * </li>
+     * <li><p><code>&quot;databases&quot;</code>: Optional. The databases to which the rule applies. Separate multiple database names with a comma (,). If this parameter is omitted, the rule applies to all databases in the cluster.</p>
+     * </li>
+     * <li><p><code>&quot;tables&quot;</code>: Optional. The tables to which the rule applies. Separate multiple table names with a comma (,). If this parameter is omitted, the rule applies to all tables in the cluster.</p>
+     * </li>
+     * <li><p><code>&quot;columns&quot;</code>: Required. The columns to which the rule applies. Separate multiple column names with a comma (,).</p>
+     * </li>
+     * <li><p><code>&quot;description&quot;</code>: Optional. The rule description, up to 64 characters in length.</p>
+     * </li>
+     * <li><p><code>&quot;enabled&quot;</code>: Required. Specifies whether the data masking rule is enabled. Valid values: <strong>true</strong> (enabled) and <strong>false</strong> (disabled).</p>
+     * </li>
+     * <li><p><code>&quot;applies_to&quot;</code>: The database accounts to which the rule applies. Separate multiple account names with a comma (,).</p>
+     * </li>
+     * <li><p><code>&quot;exempted&quot;</code>: The database accounts that are exempt from the rule. Separate multiple account names with a comma (,).</p>
+     * </li>
      * </ul>
      * <blockquote>
-     * </blockquote>
      * <ul>
-     * <li><p>If you specify <code>RuleName</code>, <code>RuleConfig</code> parameter is required.</p>
+     * <li><p>If you specify the <code>RuleName</code> parameter, you must also specify the <code>RuleConfig</code> parameter.</p>
      * </li>
-     * <li><p>You need to select either <code>&quot;applies_to&quot;</code> or <code>&quot;exempted&quot;</code>.</p>
+     * <li><p>You must specify either <code>&quot;applies_to&quot;</code> or <code>&quot;exempted&quot;</code>.</p>
      * </li>
      * </ul>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>{&quot;auto&quot;: {&quot;databases&quot;: [&quot;db1&quot;], &quot;tables&quot;: [&quot;tb1&quot;], &quot;columns&quot;: [&quot;c1,c2&quot;] }, &quot;description&quot;: &quot;This rule will be applied to the columns c1 and c2 in table t1&quot;, &quot;enabled&quot;: true, &quot;applies_to&quot;: [&quot;user&quot;]}</p>
@@ -72,13 +107,13 @@ public class ModifyMaskingRulesRequest extends TeaModel {
     /**
      * <p>The name of the data masking rule. You can specify only one rule name at a time.</p>
      * <blockquote>
-     * </blockquote>
      * <ul>
-     * <li><p>You can call the <a href="https://help.aliyun.com/document_detail/212573.html">DescribeMaskingRules</a> operation to query the details of all masking rules for a specified cluster, such as the names of the masking rules.</p>
+     * <li><p>You can call the <a href="https://help.aliyun.com/document_detail/212573.html">DescribeMaskingRules</a> operation to query the details of all data masking rules in the target cluster, including rule names.</p>
      * </li>
-     * <li><p>If the rule name does not exist in the cluster, the system automatically creates a masking rule based on the name and the value of <code>RuleConfig</code>.</p>
+     * <li><p>If a rule with the specified name does not exist, the system creates a new one based on the provided <code>RuleConfig</code>.</p>
      * </li>
      * </ul>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>testrule</p>
@@ -87,7 +122,7 @@ public class ModifyMaskingRulesRequest extends TeaModel {
     public String ruleName;
 
     /**
-     * <p>The list of masking rule names. You can specify one or more masking rules at a time. Separate the masking rule names with commas (,).</p>
+     * <p>A comma-separated list of data masking rule names.</p>
      * <blockquote>
      * <p>You must specify either the <code>RuleName</code> or <code>RuleNameList</code> parameter.</p>
      * </blockquote>
@@ -99,10 +134,12 @@ public class ModifyMaskingRulesRequest extends TeaModel {
     public String ruleNameList;
 
     /**
-     * <p>The version of the masking rule. Default value: v1. Valid values:</p>
+     * <p>The version of the data masking rule. Valid values:</p>
      * <ul>
-     * <li>v1</li>
-     * <li>v2</li>
+     * <li><p>v1 (default)</p>
+     * </li>
+     * <li><p>v2</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

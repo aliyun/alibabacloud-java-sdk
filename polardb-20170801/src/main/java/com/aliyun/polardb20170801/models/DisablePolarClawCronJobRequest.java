@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DisablePolarClawCronJobRequest extends TeaModel {
     /**
+     * <p>The ID of the application.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class DisablePolarClawCronJobRequest extends TeaModel {
     public String applicationId;
 
     /**
+     * <p>The ID of the cron job to disable.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,8 @@ public class DisablePolarClawCronJobRequest extends TeaModel {
     public String jobId;
 
     /**
+     * <p>Specifies whether to restart the gateway after the job is disabled. The default value is <code>true</code>.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

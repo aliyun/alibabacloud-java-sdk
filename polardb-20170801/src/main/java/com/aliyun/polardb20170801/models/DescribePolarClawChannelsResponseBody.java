@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class DescribePolarClawChannelsResponseBody extends TeaModel {
     /**
+     * <p>The application ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>pa-**************</p>
      */
     @NameInMap("ApplicationId")
     public String applicationId;
 
+    /**
+     * <p>A list of PolarClaw channel objects.</p>
+     */
     @NameInMap("Channels")
     public java.util.List<DescribePolarClawChannelsResponseBodyChannels> channels;
 
     /**
+     * <p>The returned status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -22,6 +29,8 @@ public class DescribePolarClawChannelsResponseBody extends TeaModel {
     public Integer code;
 
     /**
+     * <p>The response message. A value of <code>successful</code> indicates that the request succeeded.</p>
+     * 
      * <strong>example:</strong>
      * <p>successful</p>
      */
@@ -29,6 +38,8 @@ public class DescribePolarClawChannelsResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>2281C6C9-CBAB-1AFD-8400-670750CF6025_2212</p>
      */
@@ -82,6 +93,8 @@ public class DescribePolarClawChannelsResponseBody extends TeaModel {
 
     public static class DescribePolarClawChannelsResponseBodyChannelsAccounts extends TeaModel {
         /**
+         * <p>The account ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>default</p>
          */
@@ -89,6 +102,8 @@ public class DescribePolarClawChannelsResponseBody extends TeaModel {
         public String accountId;
 
         /**
+         * <p>Indicates whether the account is configured.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -96,6 +111,8 @@ public class DescribePolarClawChannelsResponseBody extends TeaModel {
         public Boolean configured;
 
         /**
+         * <p>Indicates whether the account is connected.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -103,16 +120,23 @@ public class DescribePolarClawChannelsResponseBody extends TeaModel {
         public Boolean connected;
 
         /**
+         * <p>Indicates whether the account is enabled.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
         @NameInMap("Enabled")
         public Boolean enabled;
 
+        /**
+         * <p>A list of issues related to the account.</p>
+         */
         @NameInMap("Issues")
         public java.util.List<String> issues;
 
         /**
+         * <p>The timestamp (in milliseconds) of the last inbound message.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -120,6 +144,8 @@ public class DescribePolarClawChannelsResponseBody extends TeaModel {
         public Long lastInboundAt;
 
         /**
+         * <p>The timestamp (in milliseconds) of the last outbound message.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -190,10 +216,15 @@ public class DescribePolarClawChannelsResponseBody extends TeaModel {
     }
 
     public static class DescribePolarClawChannelsResponseBodyChannels extends TeaModel {
+        /**
+         * <p>A list of account objects for the channel.</p>
+         */
         @NameInMap("Accounts")
         public java.util.List<DescribePolarClawChannelsResponseBodyChannelsAccounts> accounts;
 
         /**
+         * <p>The channel ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>feishu</p>
          */
@@ -201,6 +232,8 @@ public class DescribePolarClawChannelsResponseBody extends TeaModel {
         public String channelId;
 
         /**
+         * <p>Indicates whether the channel is configured.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -208,6 +241,8 @@ public class DescribePolarClawChannelsResponseBody extends TeaModel {
         public Boolean configured;
 
         /**
+         * <p>The default account ID for the channel.</p>
+         * 
          * <strong>example:</strong>
          * <p>default</p>
          */
@@ -215,6 +250,8 @@ public class DescribePolarClawChannelsResponseBody extends TeaModel {
         public String defaultAccountId;
 
         /**
+         * <p>Indicates whether the channel is enabled.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */

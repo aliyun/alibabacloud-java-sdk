@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DeletePolarClawAgentResponseBody extends TeaModel {
     /**
+     * <p>The ID of the deleted agent.</p>
+     * 
      * <strong>example:</strong>
      * <p>work</p>
      */
@@ -12,6 +14,8 @@ public class DeletePolarClawAgentResponseBody extends TeaModel {
     public String agentId;
 
     /**
+     * <p>The application ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>pa-**************</p>
      */
@@ -19,6 +23,8 @@ public class DeletePolarClawAgentResponseBody extends TeaModel {
     public String applicationId;
 
     /**
+     * <p>The status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -26,6 +32,8 @@ public class DeletePolarClawAgentResponseBody extends TeaModel {
     public Integer code;
 
     /**
+     * <p>The response message.</p>
+     * 
      * <strong>example:</strong>
      * <p>successful</p>
      */
@@ -33,6 +41,8 @@ public class DeletePolarClawAgentResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The number of automatically removed bindings.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -40,6 +50,8 @@ public class DeletePolarClawAgentResponseBody extends TeaModel {
     public Integer removedBindings;
 
     /**
+     * <p><strong>The request ID.</strong></p>
+     * 
      * <strong>example:</strong>
      * <p>2281C6C9-CBAB-1AFD-8400-670750CF6025_2212</p>
      */

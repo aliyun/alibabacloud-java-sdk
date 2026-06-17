@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribePolarSQLCollectorPolicyResponseBody extends TeaModel {
     /**
-     * <p>The IDs of the clusters.</p>
+     * <p>The ID of the cluster.</p>
      * 
      * <strong>example:</strong>
      * <p>pc-bp1s826a1up******</p>
@@ -25,8 +25,10 @@ public class DescribePolarSQLCollectorPolicyResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the SQL Explorer feature is enabled. Valid values:</p>
      * <ul>
-     * <li><strong>Enable</strong></li>
-     * <li><strong>Disabled</strong></li>
+     * <li><p><strong>Enable</strong>: The feature is enabled.</p>
+     * </li>
+     * <li><p><strong>Disabled</strong>: The feature is disabled.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

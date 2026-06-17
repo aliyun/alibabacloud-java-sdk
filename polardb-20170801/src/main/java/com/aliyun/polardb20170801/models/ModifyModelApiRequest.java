@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyModelApiRequest extends TeaModel {
     /**
+     * <p>The gateway instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class ModifyModelApiRequest extends TeaModel {
     public String gwClusterId;
 
     /**
+     * <p>The model API ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,15 @@ public class ModifyModelApiRequest extends TeaModel {
     public String modelApiId;
 
     /**
+     * <p>The model category. Valid values:</p>
+     * <ul>
+     * <li><p><code>text</code></p>
+     * </li>
+     * <li><p><code>embedding</code></p>
+     * </li>
+     * <li><p><code>rerank</code></p>
+     * </li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -32,6 +43,7 @@ public class ModifyModelApiRequest extends TeaModel {
     public String modelCategory;
 
     /**
+     * <p>The API path prefix.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -41,6 +53,17 @@ public class ModifyModelApiRequest extends TeaModel {
     public String pathPrefix;
 
     /**
+     * <p>The protocol. Valid values:</p>
+     * <ul>
+     * <li><p><code>openai</code></p>
+     * </li>
+     * <li><p><code>anthropic</code></p>
+     * </li>
+     * <li><p><code>Model Studio</code></p>
+     * </li>
+     * <li><p><code>vllm</code></p>
+     * </li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -50,6 +73,8 @@ public class ModifyModelApiRequest extends TeaModel {
     public String protocol;
 
     /**
+     * <p>The number of input units.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -57,16 +82,25 @@ public class ModifyModelApiRequest extends TeaModel {
     public String recordInput;
 
     /**
+     * <p>The number of output units.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
     @NameInMap("RecordOutput")
     public String recordOutput;
 
+    /**
+     * <p>The region ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-beijing</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
+     * <p>A JSON array of routing rules, provided as a string.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

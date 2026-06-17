@@ -17,8 +17,10 @@ public class OpenAITaskRequest extends TeaModel {
     /**
      * <p>The node type. Valid values:</p>
      * <ul>
-     * <li><strong>DLNode</strong>: This node is an AI node.</li>
-     * <li><strong>SearchNode</strong>: This node is a node for which the PolarDB for AI feature is enabled.</li>
+     * <li><p><strong>DLNode</strong>: AI node.</p>
+     * </li>
+     * <li><p><strong>SearchNode</strong>: search AI node.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -34,7 +36,7 @@ public class OpenAITaskRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The password used to access the database for which you want to enable the PolarDB for AI feature.</p>
+     * <p>The password of the database account.</p>
      * 
      * <strong>example:</strong>
      * <p>testPassword</p>
@@ -43,7 +45,7 @@ public class OpenAITaskRequest extends TeaModel {
     public String password;
 
     /**
-     * <p>The ID of the region.</p>
+     * <p>The region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -53,7 +55,7 @@ public class OpenAITaskRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of the resource group.</p>
+     * <p>The resource group ID.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-************</p>
@@ -68,7 +70,7 @@ public class OpenAITaskRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The username used to access the database for which you want to enable the PolarDB for AI feature.</p>
+     * <p>The database account on which to enable the PolarDB for AI feature.</p>
      * 
      * <strong>example:</strong>
      * <p>testAccountName</p>

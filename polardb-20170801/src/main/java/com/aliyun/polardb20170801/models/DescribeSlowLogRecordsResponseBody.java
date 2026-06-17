@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeSlowLogRecordsResponseBody extends TeaModel {
     /**
-     * <p>Cluster ID.</p>
+     * <p>The cluster ID.</p>
      * 
      * <strong>example:</strong>
      * <p>pc-*****************</p>
@@ -14,7 +14,7 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
     public String DBClusterId;
 
     /**
-     * <p>Database engine.</p>
+     * <p>The database engine.</p>
      * 
      * <strong>example:</strong>
      * <p>polardb_mysql</p>
@@ -26,7 +26,7 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
     public DescribeSlowLogRecordsResponseBodyItems items;
 
     /**
-     * <p>Page number.</p>
+     * <p>The page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -35,7 +35,7 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>Number of records on this page.</p>
+     * <p>The number of records on the current page.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -44,7 +44,7 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
     public Integer pageRecordCount;
 
     /**
-     * <p>Request ID.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>A7E6A8FD-C50B-46B2-BA85-D8B8D3******</p>
@@ -53,7 +53,7 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Total number of SQL statements.</p>
+     * <p>The total number of records.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>

@@ -4,10 +4,15 @@ package com.aliyun.polardb20170801.models;
 import com.aliyun.tea.*;
 
 public class DescribeConsumersResponseBody extends TeaModel {
+    /**
+     * <p>A list of consumers.</p>
+     */
     @NameInMap("Items")
     public java.util.List<DescribeConsumersResponseBodyItems> items;
 
     /**
+     * <p>The page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -15,6 +20,8 @@ public class DescribeConsumersResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries returned on the current page.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -22,6 +29,8 @@ public class DescribeConsumersResponseBody extends TeaModel {
     public Integer pageRecordCount;
 
     /**
+     * <p>The page size. Valid values: 30, 50, and 100. The default value is 30.</p>
+     * 
      * <strong>example:</strong>
      * <p>30</p>
      */
@@ -29,7 +38,7 @@ public class DescribeConsumersResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>24A1990B-4F6E-482B-B8CB-75C612******</p>
@@ -38,6 +47,8 @@ public class DescribeConsumersResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total number of records.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -99,6 +110,8 @@ public class DescribeConsumersResponseBody extends TeaModel {
 
     public static class DescribeConsumersResponseBodyItems extends TeaModel {
         /**
+         * <p>The models that the consumer is allowed to access, specified as a JSON array in string format.</p>
+         * 
          * <strong>example:</strong>
          * <p>&quot;[]&quot;</p>
          */
@@ -106,6 +119,8 @@ public class DescribeConsumersResponseBody extends TeaModel {
         public String allowedModels;
 
         /**
+         * <p>The full API key. This value is returned only by this operation.</p>
+         * 
          * <strong>example:</strong>
          * <p>xxxxxxxx</p>
          */
@@ -113,6 +128,8 @@ public class DescribeConsumersResponseBody extends TeaModel {
         public String apiKey;
 
         /**
+         * <p>The consumer group ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>cg-xxxxxx</p>
          */
@@ -120,6 +137,8 @@ public class DescribeConsumersResponseBody extends TeaModel {
         public String consumerGroupId;
 
         /**
+         * <p>The consumer group name.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -127,6 +146,8 @@ public class DescribeConsumersResponseBody extends TeaModel {
         public String consumerGroupName;
 
         /**
+         * <p>The consumer ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>c-mqveroemc***</p>
          */
@@ -134,6 +155,8 @@ public class DescribeConsumersResponseBody extends TeaModel {
         public String consumerId;
 
         /**
+         * <p>The time when the consumer was created.</p>
+         * 
          * <strong>example:</strong>
          * <p>2026-01-28T09:56:03+08:00</p>
          */
@@ -141,25 +164,53 @@ public class DescribeConsumersResponseBody extends TeaModel {
         public String gmtCreated;
 
         /**
+         * <p>The time when the consumer was last modified.</p>
+         * 
          * <strong>example:</strong>
          * <p>2026-01-04T16:09:29+08:00</p>
          */
         @NameInMap("GmtModified")
         public String gmtModified;
 
+        /**
+         * <p>The total usage.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000</p>
+         */
         @NameInMap("LifetimeCostCount")
         public Long lifetimeCostCount;
 
+        /**
+         * <p>The total number of tokens consumed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("LifetimeTokenCount")
         public Long lifetimeTokenCount;
 
+        /**
+         * <p>The month-to-date usage.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("MtdCostCount")
         public Long mtdCostCount;
 
+        /**
+         * <p>The number of tokens consumed month-to-date.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10000</p>
+         */
         @NameInMap("MtdTokenCount")
         public Long mtdTokenCount;
 
         /**
+         * <p>The consumer name.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -167,6 +218,8 @@ public class DescribeConsumersResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>The consumer nickname.</p>
+         * 
          * <strong>example:</strong>
          * <p>yonghu</p>
          */

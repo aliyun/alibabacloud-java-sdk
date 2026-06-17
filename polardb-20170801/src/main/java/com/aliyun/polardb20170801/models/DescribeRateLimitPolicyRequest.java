@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeRateLimitPolicyRequest extends TeaModel {
     /**
+     * <p>The ID of the gateway instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,8 @@ public class DescribeRateLimitPolicyRequest extends TeaModel {
     public String gwClusterId;
 
     /**
+     * <p>The page number to return. The default value is 1.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -21,6 +24,16 @@ public class DescribeRateLimitPolicyRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries per page. Valid values:</p>
+     * <ul>
+     * <li><p><strong>30</strong></p>
+     * </li>
+     * <li><p><strong>50</strong></p>
+     * </li>
+     * <li><p><strong>100</strong>. The default value is <strong>30</strong>.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>30</p>
      */
@@ -28,16 +41,26 @@ public class DescribeRateLimitPolicyRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The ID of the rate limit policy.</p>
+     * 
      * <strong>example:</strong>
      * <p>02eccf7c61cf4d05a543075ee907f3**</p>
      */
     @NameInMap("PolicyId")
     public String policyId;
 
+    /**
+     * <p>The region ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-beijing</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
+     * <p>The ID of the target resource, which can be a consumer group or a consumer, depending on the <code>ScopeType</code> value.</p>
+     * 
      * <strong>example:</strong>
      * <p>cg-xxxxxxxx</p>
      */
@@ -45,6 +68,14 @@ public class DescribeRateLimitPolicyRequest extends TeaModel {
     public String scopeRefId;
 
     /**
+     * <p>The scope of the rate limit policy. Valid values:</p>
+     * <ul>
+     * <li><p><strong>ConsumerGroup</strong>: The policy applies to a consumer group.</p>
+     * </li>
+     * <li><p><strong>Consumer</strong>: The policy applies to a specific consumer.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>ConsumerGroup</p>
      */

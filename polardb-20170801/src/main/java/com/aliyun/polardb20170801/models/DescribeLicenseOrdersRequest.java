@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeLicenseOrdersRequest extends TeaModel {
     /**
-     * <p>The ID of the Alibaba Cloud order. The value can be the ID of a virtual order.</p>
+     * <p>The Alibaba Cloud order ID. This can be a virtual order ID.</p>
      * 
      * <strong>example:</strong>
      * <p>239618016570503</p>
@@ -20,13 +20,18 @@ public class DescribeLicenseOrdersRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The plan type. Valid values:</p>
+     * <p>The package type. Valid values:</p>
      * <ul>
-     * <li>single_node_subscribe: Single-node Edition (Subscription).</li>
-     * <li>single_node_long_term: Single-node Edition (Long-term).</li>
-     * <li>primary_backup_subscribe: HA Edition (Subscription).</li>
-     * <li>primary_backup_long_term: HA Edition (Long-term).</li>
-     * <li>pre_generation_long_term: Pre-generated (Long-term).</li>
+     * <li><p>single_node_subscribe: single node (subscription)</p>
+     * </li>
+     * <li><p>single_node_long_term: single node (long-term)</p>
+     * </li>
+     * <li><p>primary_backup_subscribe: primary/standby (subscription)</p>
+     * </li>
+     * <li><p>primary_backup_long_term: primary/standby (long-term)</p>
+     * </li>
+     * <li><p>pre_generation_long_term: pre-generated (long-term)</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -36,7 +41,7 @@ public class DescribeLicenseOrdersRequest extends TeaModel {
     public String packageType;
 
     /**
-     * <p>The page number.</p>
+     * <p>The page number to query.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -45,7 +50,7 @@ public class DescribeLicenseOrdersRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page.</p>
+     * <p>The number of records to return on each page.</p>
      * 
      * <strong>example:</strong>
      * <p>30</p>
@@ -54,7 +59,7 @@ public class DescribeLicenseOrdersRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The purchase channel. Valid values: aliyun_market and aliyun_public. aliyun_market specifies Alibaba Cloud Marketplace. aliyun_public specifies the PolarDB buy page.</p>
+     * <p>The purchase channel. Valid values: \<code>aliyun_market\\</code> (Alibaba Cloud Marketplace) and \<code>aliyun_public\\</code> (standard purchase page).</p>
      * 
      * <strong>example:</strong>
      * <p>aliyun_market</p>

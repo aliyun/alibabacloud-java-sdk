@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeGlobalDatabaseNetworksResponseBody extends TeaModel {
     /**
-     * <p>Details about the GDNs.</p>
+     * <p>A list of GDNs.</p>
      */
     @NameInMap("Items")
     public java.util.List<DescribeGlobalDatabaseNetworksResponseBodyItems> items;
@@ -29,7 +29,7 @@ public class DescribeGlobalDatabaseNetworksResponseBody extends TeaModel {
     public Integer pageRecordCount;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>69A85BAF-1089-4CDF-A82F-0A140F******</p>
@@ -38,7 +38,7 @@ public class DescribeGlobalDatabaseNetworksResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of returned entries.</p>
+     * <p>The total number of records.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -93,7 +93,7 @@ public class DescribeGlobalDatabaseNetworksResponseBody extends TeaModel {
 
     public static class DescribeGlobalDatabaseNetworksResponseBodyItemsDBClusters extends TeaModel {
         /**
-         * <p>The ID of the cluster.</p>
+         * <p>The cluster ID.</p>
          * 
          * <strong>example:</strong>
          * <p>pc-****************</p>
@@ -102,7 +102,7 @@ public class DescribeGlobalDatabaseNetworksResponseBody extends TeaModel {
         public String DBClusterId;
 
         /**
-         * <p>The region ID of the cluster.</p>
+         * <p>The region ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -113,11 +113,13 @@ public class DescribeGlobalDatabaseNetworksResponseBody extends TeaModel {
         /**
          * <p>The role of the cluster. Valid values:</p>
          * <ul>
-         * <li><strong>Primary</strong>: the primary cluster</li>
-         * <li><strong>standby</strong>: the secondary cluster</li>
+         * <li><p><strong>primary</strong>: The primary cluster.</p>
+         * </li>
+         * <li><p><strong>standby</strong>: The standby cluster.</p>
+         * </li>
          * </ul>
          * <blockquote>
-         * <p>A GDN consists of one primary cluster and up to four secondary clusters. For more information, see <a href="https://help.aliyun.com/document_detail/160381.html">GDN</a>.</p>
+         * <p>A GDN consists of one primary cluster and up to four standby clusters. For more information, see <a href="https://help.aliyun.com/document_detail/160381.html">Global Database Network</a>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -158,6 +160,12 @@ public class DescribeGlobalDatabaseNetworksResponseBody extends TeaModel {
     }
 
     public static class DescribeGlobalDatabaseNetworksResponseBodyItemsLabels extends TeaModel {
+        /**
+         * <p>The GDN version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2.0</p>
+         */
         @NameInMap("GDNVersion")
         public String GDNVersion;
 
@@ -178,7 +186,7 @@ public class DescribeGlobalDatabaseNetworksResponseBody extends TeaModel {
 
     public static class DescribeGlobalDatabaseNetworksResponseBodyItems extends TeaModel {
         /**
-         * <p>The time when the GDN was created. The time is in the <code>YYYY-MM-DDThh:mm:ssZ</code> format. The time is displayed in UTC.</p>
+         * <p>The time at which the GDN was created, in UTC. The format is <code>YYYY-MM-DDTHH:mm:ssZ</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>2020-03-23T05:46:54Z</p>
@@ -187,13 +195,13 @@ public class DescribeGlobalDatabaseNetworksResponseBody extends TeaModel {
         public String createTime;
 
         /**
-         * <p>Details about clusters in the GDN.</p>
+         * <p>A list of clusters in the GDN.</p>
          */
         @NameInMap("DBClusters")
         public java.util.List<DescribeGlobalDatabaseNetworksResponseBodyItemsDBClusters> DBClusters;
 
         /**
-         * <p>The type of the database engine. Only <strong>MySQL</strong> is supported.</p>
+         * <p>The database engine type. Only <strong>MySQL</strong> is supported.</p>
          * 
          * <strong>example:</strong>
          * <p>MySQL</p>
@@ -202,7 +210,7 @@ public class DescribeGlobalDatabaseNetworksResponseBody extends TeaModel {
         public String DBType;
 
         /**
-         * <p>The version of the database engine. Only the <strong>8.0</strong> version is supported.</p>
+         * <p>The database engine version. Only version <strong>8.0</strong> is supported.</p>
          * 
          * <strong>example:</strong>
          * <p>8.0</p>
@@ -211,12 +219,16 @@ public class DescribeGlobalDatabaseNetworksResponseBody extends TeaModel {
         public String DBVersion;
 
         /**
-         * <p>The description of the GDN. The description must meet the following requirements:</p>
+         * <p>The GDN description. Requirements:</p>
          * <ul>
-         * <li>It cannot start with <code>http://</code> or <code>https://</code>.</li>
-         * <li>It must start with a letter.</li>
-         * <li>It can contain letters, digits, underscores (_), and hyphens (-).</li>
-         * <li>It must be 2 to 126 characters in length.</li>
+         * <li><p>Cannot start with http\:// or https\://.</p>
+         * </li>
+         * <li><p>Must start with a letter or a Chinese character.</p>
+         * </li>
+         * <li><p>Can contain letters, Chinese characters, digits, underscores (_), or hyphens (-).</p>
+         * </li>
+         * <li><p>Must be 2 to 126 characters long.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -226,7 +238,7 @@ public class DescribeGlobalDatabaseNetworksResponseBody extends TeaModel {
         public String GDNDescription;
 
         /**
-         * <p>The ID of the GDN.</p>
+         * <p>The GDN ID.</p>
          * 
          * <strong>example:</strong>
          * <p>gdn-****************</p>
@@ -237,11 +249,16 @@ public class DescribeGlobalDatabaseNetworksResponseBody extends TeaModel {
         /**
          * <p>The status of the GDN. Valid values:</p>
          * <ul>
-         * <li><strong>Creating</strong>: The GDN is being created.</li>
-         * <li><strong>active</strong>: The GDN is running.</li>
-         * <li><strong>deleting</strong>: The GDN is being deleted.</li>
-         * <li><strong>locked</strong>: The GDN is locked. If the GDN is locked, you cannot perform operations on clusters in the GDN.</li>
-         * <li><strong>removing_member</strong>: The secondary cluster is being removed from the GDN.</li>
+         * <li><p><strong>creating</strong>: The GDN is being created.</p>
+         * </li>
+         * <li><p><strong>active</strong>: The GDN is running.</p>
+         * </li>
+         * <li><p><strong>deleting</strong>: The GDN is being deleted.</p>
+         * </li>
+         * <li><p><strong>locked</strong>: The GDN is locked. This status prevents any operations on clusters in the GDN.</p>
+         * </li>
+         * <li><p><strong>removing_member</strong>: A standby cluster is being removed from the GDN.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -250,6 +267,9 @@ public class DescribeGlobalDatabaseNetworksResponseBody extends TeaModel {
         @NameInMap("GDNStatus")
         public String GDNStatus;
 
+        /**
+         * <p>The tags applied to the GDN.</p>
+         */
         @NameInMap("Labels")
         public DescribeGlobalDatabaseNetworksResponseBodyItemsLabels labels;
 

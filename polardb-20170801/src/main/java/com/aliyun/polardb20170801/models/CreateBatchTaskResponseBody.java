@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateBatchTaskResponseBody extends TeaModel {
     /**
+     * <p>The release batch ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>pcb-xxx</p>
      */
@@ -12,6 +14,8 @@ public class CreateBatchTaskResponseBody extends TeaModel {
     public String batchId;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>C61892A4-0850-4516-9E26-44D96C1782DE</p>
      */

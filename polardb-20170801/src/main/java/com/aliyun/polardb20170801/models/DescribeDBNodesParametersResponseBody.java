@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeDBNodesParametersResponseBody extends TeaModel {
     /**
-     * <p>The IDs of the nodes.</p>
+     * <p>The list of node IDs.</p>
      */
     @NameInMap("DBNodeIds")
     public java.util.List<DescribeDBNodesParametersResponseBodyDBNodeIds> DBNodeIds;
 
     /**
-     * <p>The type of the database engine. Set the value to <strong>MySQL</strong>.</p>
+     * <p>The type of the database. The value is fixed as <strong>MySQL</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>MySQL</p>
@@ -20,11 +20,14 @@ public class DescribeDBNodesParametersResponseBody extends TeaModel {
     public String DBType;
 
     /**
-     * <p>The version of the MySQL database engine. Valid values:</p>
+     * <p>The version of the MySQL database. Valid values:</p>
      * <ul>
-     * <li><strong>5.6</strong></li>
-     * <li><strong>5.7</strong></li>
-     * <li><strong>8.0</strong></li>
+     * <li><p><strong>5.6</strong></p>
+     * </li>
+     * <li><p><strong>5.7</strong></p>
+     * </li>
+     * <li><p><strong>8.0</strong></p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -34,7 +37,7 @@ public class DescribeDBNodesParametersResponseBody extends TeaModel {
     public String DBVersion;
 
     /**
-     * <p>The cluster engine.</p>
+     * <p>The database engine of the cluster.</p>
      * 
      * <strong>example:</strong>
      * <p>POLARDB</p>
@@ -43,7 +46,7 @@ public class DescribeDBNodesParametersResponseBody extends TeaModel {
     public String engine;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>9B7BFB11-C077-4FE3-B051-F69CEB******</p>
@@ -107,11 +110,14 @@ public class DescribeDBNodesParametersResponseBody extends TeaModel {
         public String checkingCode;
 
         /**
-         * <p>The data type of the parameter value. Valid values:</p>
+         * <p>The data type of the parameter. Valid values:</p>
          * <ul>
-         * <li><strong>INT</strong></li>
-         * <li><strong>STRING</strong></li>
-         * <li><strong>B</strong></li>
+         * <li><p><strong>INT</strong>: Integer</p>
+         * </li>
+         * <li><p><strong>STRING</strong>: String</p>
+         * </li>
+         * <li><p><strong>B</strong>: Byte</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -130,7 +136,7 @@ public class DescribeDBNodesParametersResponseBody extends TeaModel {
         public String defaultParameterValue;
 
         /**
-         * <p>A divisor of the parameter. For a parameter of the integer or byte type, the valid values must be a multiple of Factor unless you set Factor to 0.</p>
+         * <p>The divisor. For integer and byte type parameters, the parameter value must be a multiple of this factor. The factor cannot be 0.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -139,10 +145,12 @@ public class DescribeDBNodesParametersResponseBody extends TeaModel {
         public String factor;
 
         /**
-         * <p>Indicates whether a cluster restart is required to allow the parameter modification to take effect. Valid values:</p>
+         * <p>Indicates whether a restart is required for the parameter modification to take effect. Valid values:</p>
          * <ul>
-         * <li><strong>false</strong></li>
-         * <li><strong>true</strong></li>
+         * <li><p><strong>false</strong>: No</p>
+         * </li>
+         * <li><p><strong>true</strong>: Yes</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -154,8 +162,10 @@ public class DescribeDBNodesParametersResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the parameter can be modified. Valid values:</p>
          * <ul>
-         * <li><strong>false</strong></li>
-         * <li><strong>true</strong></li>
+         * <li><p><strong>false</strong>: No</p>
+         * </li>
+         * <li><p><strong>true</strong>: Yes</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -167,8 +177,10 @@ public class DescribeDBNodesParametersResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the parameter is a global parameter. Valid values:</p>
          * <ul>
-         * <li><strong>0</strong>: yes. The modified parameter value is synchronized to other nodes.</li>
-         * <li><strong>1</strong>: no. You can customize the nodes to which the modified parameter value can be synchronized to.</li>
+         * <li><p><strong>0</strong>: The parameter is a global parameter. Modifications to the parameter are applied to other nodes by default and cannot be canceled.</p>
+         * </li>
+         * <li><p><strong>1</strong>: The parameter is not a global parameter. You can specify the nodes to which you want to apply the parameter modifications.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -178,7 +190,7 @@ public class DescribeDBNodesParametersResponseBody extends TeaModel {
         public String isNodeAvailable;
 
         /**
-         * <p>The dependencies of the parameter.</p>
+         * <p>The dependency of the parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>utf8</p>
@@ -207,8 +219,10 @@ public class DescribeDBNodesParametersResponseBody extends TeaModel {
         /**
          * <p>The status of the parameter. Valid values:</p>
          * <ul>
-         * <li><strong>normal</strong></li>
-         * <li><strong>modifying</strong></li>
+         * <li><p><strong>normal</strong>: Normal</p>
+         * </li>
+         * <li><p><strong>modifying</strong>: Modifying</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -340,7 +354,7 @@ public class DescribeDBNodesParametersResponseBody extends TeaModel {
         public String DBNodeId;
 
         /**
-         * <p>The parameters of the current node.</p>
+         * <p>The list of parameters that are running on the node.</p>
          */
         @NameInMap("RunningParameters")
         public java.util.List<DescribeDBNodesParametersResponseBodyDBNodeIdsRunningParameters> runningParameters;

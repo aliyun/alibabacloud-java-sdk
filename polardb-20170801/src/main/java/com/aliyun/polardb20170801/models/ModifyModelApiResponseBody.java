@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ModifyModelApiResponseBody extends TeaModel {
     /**
+     * <p>The model API ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>mi-xxxxx</p>
      */
@@ -12,7 +14,7 @@ public class ModifyModelApiResponseBody extends TeaModel {
     public String modelApiId;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>925B84D9-CA72-432C-95CF-738C22******</p>

@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateApplicationPromptRequest extends TeaModel {
     /**
+     * <p>The ID of the Application.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class CreateApplicationPromptRequest extends TeaModel {
     public String applicationId;
 
     /**
+     * <p>The name of the Prompt.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,7 @@ public class CreateApplicationPromptRequest extends TeaModel {
     public String promptName;
 
     /**
+     * <p>The type of the Prompt.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -41,6 +44,7 @@ public class CreateApplicationPromptRequest extends TeaModel {
     public String promptType;
 
     /**
+     * <p>The content of the Prompt.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

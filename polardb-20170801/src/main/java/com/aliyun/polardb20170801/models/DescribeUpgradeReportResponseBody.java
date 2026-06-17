@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeUpgradeReportResponseBody extends TeaModel {
     /**
+     * <p>The details.</p>
+     * 
      * <strong>example:</strong>
      * <p>[]</p>
      */
@@ -12,16 +14,32 @@ public class DescribeUpgradeReportResponseBody extends TeaModel {
     public String details;
 
     /**
+     * <p>The database type of the destination instance. Valid values:</p>
+     * <ul>
+     * <li><p><strong>MySQL</strong></p>
+     * </li>
+     * <li><p><strong>Oracle</strong></p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>MySQL</p>
      */
     @NameInMap("DstDBType")
     public String dstDBType;
 
+    /**
+     * <p>The list of Oracle compatibility evaluation details.</p>
+     * <blockquote>
+     * <p>This parameter is supported only for <strong>Oracle</strong> instances.</p>
+     * </blockquote>
+     */
     @NameInMap("Items")
     public java.util.List<DescribeUpgradeReportResponseBodyItems> items;
 
     /**
+     * <p>The number of entries in the list of Oracle compatibility evaluation details.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -29,7 +47,7 @@ public class DescribeUpgradeReportResponseBody extends TeaModel {
     public Long itemsSize;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>2FED790E-FB61-4721-8C1C-07C627******</p>
@@ -38,6 +56,8 @@ public class DescribeUpgradeReportResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The ID of the source instance.</p>
+     * 
      * <strong>example:</strong>
      * <p>rm-2zen5pe5vi56447d0</p>
      */
@@ -45,6 +65,14 @@ public class DescribeUpgradeReportResponseBody extends TeaModel {
     public String sourceDBClusterId;
 
     /**
+     * <p>The database type of the source instance. Valid values:</p>
+     * <ul>
+     * <li><p><strong>MySQL</strong></p>
+     * </li>
+     * <li><p><strong>Oracle</strong></p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>MySQL</p>
      */
@@ -52,6 +80,14 @@ public class DescribeUpgradeReportResponseBody extends TeaModel {
     public String srcDBType;
 
     /**
+     * <p>The deletion status of the source instance. Valid values:</p>
+     * <ul>
+     * <li><p><strong>0</strong>: Not deleted.</p>
+     * </li>
+     * <li><p><strong>1</strong>: Deleted.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -59,6 +95,8 @@ public class DescribeUpgradeReportResponseBody extends TeaModel {
     public String srcDeleted;
 
     /**
+     * <p>The total number of entries returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>137</p>
      */
@@ -66,12 +104,17 @@ public class DescribeUpgradeReportResponseBody extends TeaModel {
     public Long totalSize;
 
     /**
+     * <p>A special metric. This parameter is supported only for instances that use the Tair architecture.</p>
+     * 
      * <strong>example:</strong>
      * <p>tair</p>
      */
     @NameInMap("Type")
     public String type;
 
+    /**
+     * <p>The list of evaluation reports.</p>
+     */
     @NameInMap("UpgradeReportList")
     public java.util.List<DescribeUpgradeReportResponseBodyUpgradeReportList> upgradeReportList;
 
@@ -170,6 +213,8 @@ public class DescribeUpgradeReportResponseBody extends TeaModel {
 
     public static class DescribeUpgradeReportResponseBodyItems extends TeaModel {
         /**
+         * <p>The Data Definition Language (DDL) statements for object synchronization.</p>
+         * 
          * <strong>example:</strong>
          * <p>CREATE XXXX</p>
          */
@@ -177,6 +222,8 @@ public class DescribeUpgradeReportResponseBody extends TeaModel {
         public String DDL;
 
         /**
+         * <p>The name of the evaluation object.</p>
+         * 
          * <strong>example:</strong>
          * <p>testName</p>
          */
@@ -184,6 +231,8 @@ public class DescribeUpgradeReportResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>The schema of the evaluation object.</p>
+         * 
          * <strong>example:</strong>
          * <p>ny_openapi</p>
          */
@@ -191,6 +240,14 @@ public class DescribeUpgradeReportResponseBody extends TeaModel {
         public String schema;
 
         /**
+         * <p>The result of the compatibility evaluation. Valid values:</p>
+         * <ul>
+         * <li><p><strong>0</strong>: Failed.</p>
+         * </li>
+         * <li><p><strong>1</strong>: Succeeded.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -198,6 +255,8 @@ public class DescribeUpgradeReportResponseBody extends TeaModel {
         public String status;
 
         /**
+         * <p>The type of the evaluation object.</p>
+         * 
          * <strong>example:</strong>
          * <p>orca</p>
          */
@@ -253,6 +312,8 @@ public class DescribeUpgradeReportResponseBody extends TeaModel {
 
     public static class DescribeUpgradeReportResponseBodyUpgradeReportList extends TeaModel {
         /**
+         * <p>The check time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2024-03-15T06:48:44Z</p>
          */
@@ -260,6 +321,8 @@ public class DescribeUpgradeReportResponseBody extends TeaModel {
         public String checkTime;
 
         /**
+         * <p>The version of the destination instance.</p>
+         * 
          * <strong>example:</strong>
          * <p>8.0</p>
          */
@@ -267,6 +330,8 @@ public class DescribeUpgradeReportResponseBody extends TeaModel {
         public String dstVersion;
 
         /**
+         * <p>The effective time of the evaluation.</p>
+         * 
          * <strong>example:</strong>
          * <p>2024-03-08T06:48:44Z</p>
          */
@@ -274,6 +339,8 @@ public class DescribeUpgradeReportResponseBody extends TeaModel {
         public String effectiveTime;
 
         /**
+         * <p>The end time of the evaluation.</p>
+         * 
          * <strong>example:</strong>
          * <p>2024-03-08T06:48:44Z</p>
          */
@@ -281,6 +348,8 @@ public class DescribeUpgradeReportResponseBody extends TeaModel {
         public String endTime;
 
         /**
+         * <p>The status of the evaluation task.</p>
+         * 
          * <strong>example:</strong>
          * <p>running</p>
          */
@@ -288,6 +357,8 @@ public class DescribeUpgradeReportResponseBody extends TeaModel {
         public String result;
 
         /**
+         * <p>The name of the source instance.</p>
+         * 
          * <strong>example:</strong>
          * <p>pc-2ze54671qoz830za9</p>
          */
@@ -295,6 +366,8 @@ public class DescribeUpgradeReportResponseBody extends TeaModel {
         public String srcInsName;
 
         /**
+         * <p>The version of the source instance.</p>
+         * 
          * <strong>example:</strong>
          * <p>5.7</p>
          */
@@ -302,6 +375,8 @@ public class DescribeUpgradeReportResponseBody extends TeaModel {
         public String srcVersion;
 
         /**
+         * <p>The start time of the evaluation.</p>
+         * 
          * <strong>example:</strong>
          * <p>2025-07-05T01:56:00Z</p>
          */
@@ -309,6 +384,8 @@ public class DescribeUpgradeReportResponseBody extends TeaModel {
         public String startTime;
 
         /**
+         * <p>The task ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>275948</p>
          */
@@ -316,6 +393,8 @@ public class DescribeUpgradeReportResponseBody extends TeaModel {
         public String taskId;
 
         /**
+         * <p>The upgrade mode.</p>
+         * 
          * <strong>example:</strong>
          * <p>rds2polar_pengine_with_dts</p>
          */

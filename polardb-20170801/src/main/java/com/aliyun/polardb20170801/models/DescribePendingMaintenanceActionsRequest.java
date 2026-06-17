@@ -5,10 +5,12 @@ import com.aliyun.tea.*;
 
 public class DescribePendingMaintenanceActionsRequest extends TeaModel {
     /**
-     * <p>Specifies whether to return the historical tasks. Valid values:</p>
+     * <p>Specifies whether to return historical tasks. Valid values:</p>
      * <ul>
-     * <li><strong>0</strong>: returns the current task.</li>
-     * <li><strong>1</strong>: returns the historical tasks.</li>
+     * <li><p><strong>0</strong>: returns current tasks.</p>
+     * </li>
+     * <li><p><strong>1</strong>: returns historical tasks.</p>
+     * </li>
      * </ul>
      * <p>Default value: <strong>0</strong>.</p>
      * 
@@ -25,7 +27,7 @@ public class DescribePendingMaintenanceActionsRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The ID of the region.</p>
+     * <p>The region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -35,7 +37,7 @@ public class DescribePendingMaintenanceActionsRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of the resource group.</p>
+     * <p>The resource group ID.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-************</p>

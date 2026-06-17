@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class LoginPolarClawChannelRequest extends TeaModel {
     /**
+     * <p>The application ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class LoginPolarClawChannelRequest extends TeaModel {
     public String applicationId;
 
     /**
+     * <p>The ID of the PolarClaw channel to log into.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

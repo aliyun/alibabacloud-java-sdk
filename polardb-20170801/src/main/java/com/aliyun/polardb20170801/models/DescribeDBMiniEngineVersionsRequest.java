@@ -5,6 +5,14 @@ import com.aliyun.tea.*;
 
 public class DescribeDBMiniEngineVersionsRequest extends TeaModel {
     /**
+     * <p>The CPU architecture. Valid values:</p>
+     * <ul>
+     * <li><p><strong>X86</strong></p>
+     * </li>
+     * <li><p><strong>ARM</strong></p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>X86</p>
      */
@@ -12,6 +20,15 @@ public class DescribeDBMiniEngineVersionsRequest extends TeaModel {
     public String architecture;
 
     /**
+     * <p>The product series. Valid values:</p>
+     * <ul>
+     * <li><p><strong>Normal</strong>: Cluster Edition (default)</p>
+     * </li>
+     * <li><p><strong>SENormal</strong>: Standard Edition</p>
+     * </li>
+     * </ul>
+     * <p>For more information about product series, see <a href="https://help.aliyun.com/document_detail/183258.html">Product series</a>.</p>
+     * 
      * <strong>example:</strong>
      * <p>Normal</p>
      */
@@ -19,6 +36,22 @@ public class DescribeDBMiniEngineVersionsRequest extends TeaModel {
     public String creationCategory;
 
     /**
+     * <p>The minor version of the database engine.</p>
+     * <ul>
+     * <li><p>If <code>DBVersion</code> is set to <strong>8.0</strong>, valid values are:</p>
+     * <ul>
+     * <li><p><strong>8.0.2</strong></p>
+     * </li>
+     * <li><p><strong>8.0.1</strong></p>
+     * </li>
+     * </ul>
+     * </li>
+     * <li><p>If <code>DBVersion</code> is set to <strong>5.7</strong>, the valid value is <strong>5.7.28</strong>.</p>
+     * </li>
+     * <li><p>If <code>DBVersion</code> is set to <strong>5.6</strong>, the valid value is <strong>5.6.16</strong>.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>8.0.1</p>
      */
@@ -26,6 +59,10 @@ public class DescribeDBMiniEngineVersionsRequest extends TeaModel {
     public String DBMinorVersion;
 
     /**
+     * <p>The database type. The only valid value is <strong>MySQL</strong>.</p>
+     * <ul>
+     * <li><strong>MySQL</strong>.</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -35,6 +72,15 @@ public class DescribeDBMiniEngineVersionsRequest extends TeaModel {
     public String DBType;
 
     /**
+     * <p>The major version of the database engine. Valid values:</p>
+     * <ul>
+     * <li><p><strong>8.0</strong></p>
+     * </li>
+     * <li><p><strong>5.7</strong></p>
+     * </li>
+     * <li><p><strong>5.6</strong></p>
+     * </li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -44,6 +90,7 @@ public class DescribeDBMiniEngineVersionsRequest extends TeaModel {
     public String DBVersion;
 
     /**
+     * <p>The region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -53,6 +100,8 @@ public class DescribeDBMiniEngineVersionsRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The zone.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou-g</p>
      */

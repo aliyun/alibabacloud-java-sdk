@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ClonePolarFsBasicSnapshotRequest extends TeaModel {
     /**
+     * <p>The ID of the database cluster.</p>
+     * 
      * <strong>example:</strong>
      * <p>pc-**************</p>
      */
@@ -12,6 +14,8 @@ public class ClonePolarFsBasicSnapshotRequest extends TeaModel {
     public String DBClusterId;
 
     /**
+     * <p>The ID of the Polarlakebase instance.</p>
+     * 
      * <strong>example:</strong>
      * <p>pfs-test*****</p>
      */
@@ -19,6 +23,8 @@ public class ClonePolarFsBasicSnapshotRequest extends TeaModel {
     public String polarFsInstanceId;
 
     /**
+     * <p>The source path of the file resource. This parameter is empty if the type is local.</p>
+     * 
      * <strong>example:</strong>
      * <p>/test</p>
      */
@@ -26,6 +32,8 @@ public class ClonePolarFsBasicSnapshotRequest extends TeaModel {
     public String sourcePath;
 
     /**
+     * <p>The destination path.</p>
+     * 
      * <strong>example:</strong>
      * <p>/testclone</p>
      */

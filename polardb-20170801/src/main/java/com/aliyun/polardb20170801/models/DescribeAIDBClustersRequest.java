@@ -5,6 +5,16 @@ import com.aliyun.tea.*;
 
 public class DescribeAIDBClustersRequest extends TeaModel {
     /**
+     * <p>The node type. To specify multiple types, separate them with a comma. Valid values:</p>
+     * <ul>
+     * <li><p><strong>vnode</strong>: a node managed by Kubernetes</p>
+     * </li>
+     * <li><p><strong>container</strong>: a container that you can log on to</p>
+     * </li>
+     * <li><p><strong>maas</strong>: model service</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>vnode,container</p>
      */
@@ -12,6 +22,8 @@ public class DescribeAIDBClustersRequest extends TeaModel {
     public String aiNodeType;
 
     /**
+     * <p>The cluster description. Fuzzy search is supported.</p>
+     * 
      * <strong>example:</strong>
      * <p>pc-****************</p>
      */
@@ -19,6 +31,8 @@ public class DescribeAIDBClustersRequest extends TeaModel {
     public String DBClusterDescription;
 
     /**
+     * <p>The cluster ID. To specify multiple clusters, separate their IDs with a comma.</p>
+     * 
      * <strong>example:</strong>
      * <p>pc-***************</p>
      */
@@ -26,6 +40,35 @@ public class DescribeAIDBClustersRequest extends TeaModel {
     public String DBClusterIds;
 
     /**
+     * <p>The cluster status. Valid values:</p>
+     * <ul>
+     * <li><p><strong>Creating</strong>: The cluster is being created.</p>
+     * </li>
+     * <li><p><strong>Running</strong>: The cluster is running.</p>
+     * </li>
+     * <li><p><strong>Deleting</strong>: The cluster is being released.</p>
+     * </li>
+     * <li><p><strong>Rebooting</strong>: The cluster is restarting.</p>
+     * </li>
+     * <li><p><strong>DBNodeCreating</strong>: A node is being added.</p>
+     * </li>
+     * <li><p><strong>DBNodeDeleting</strong>: A node is being deleted.</p>
+     * </li>
+     * <li><p><strong>ClassChanging</strong>: The node specifications are being changed.</p>
+     * </li>
+     * <li><p><strong>NetAddressCreating</strong>: A network connection is being created.</p>
+     * </li>
+     * <li><p><strong>NetAddressDeleting</strong>: A network connection is being deleted.</p>
+     * </li>
+     * <li><p><strong>NetAddressModifying</strong>: A network connection is being modified.</p>
+     * </li>
+     * <li><p><strong>Deleted</strong>: The cluster is released.</p>
+     * </li>
+     * </ul>
+     * <ul>
+     * <li><strong>ClassChanged</strong>: Resources are being reclaimed after the upgrade or downgrade.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>Running</p>
      */
@@ -39,6 +82,8 @@ public class DescribeAIDBClustersRequest extends TeaModel {
     public Long ownerId;
 
     /**
+     * <p>The page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -46,6 +91,9 @@ public class DescribeAIDBClustersRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries per page. Valid values: <strong>30</strong>, <strong>50</strong>, and <strong>100</strong>.</p>
+     * <p>Default value: <strong>30</strong>.</p>
+     * 
      * <strong>example:</strong>
      * <p>30</p>
      */
@@ -53,6 +101,14 @@ public class DescribeAIDBClustersRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The billing method. Valid values:</p>
+     * <ul>
+     * <li><p><strong>Postpaid</strong>: pay-as-you-go</p>
+     * </li>
+     * <li><p><strong>Prepaid</strong>: subscription</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>Prepaid</p>
      */
@@ -60,6 +116,7 @@ public class DescribeAIDBClustersRequest extends TeaModel {
     public String payType;
 
     /**
+     * <p>The region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -74,6 +131,9 @@ public class DescribeAIDBClustersRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>A list of tags.</p>
+     */
     @NameInMap("Tag")
     public java.util.List<DescribeAIDBClustersRequestTag> tag;
 
@@ -187,9 +247,21 @@ public class DescribeAIDBClustersRequest extends TeaModel {
     }
 
     public static class DescribeAIDBClustersRequestTag extends TeaModel {
+        /**
+         * <p>The tag key. Use this parameter with <code>Tag.n.Value</code> to filter clusters by tag. You can specify up to 20 tag pairs. The index n must be a unique, consecutive integer starting from 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testKey</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The tag value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testValueData</p>
+         */
         @NameInMap("Value")
         public String value;
 

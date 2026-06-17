@@ -7,7 +7,7 @@ public class DescribePolarSQLCollectorPolicyRequest extends TeaModel {
     /**
      * <p>The ID of the cluster.</p>
      * <blockquote>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/98094.html">DescribeDBClusters</a> operation to query the details of all the clusters for your account, such as the cluster ID.</p>
+     * <p>Call the <a href="https://help.aliyun.com/document_detail/98094.html">DescribeDBClusters</a> operation to query the details of all clusters in your account. The details include the cluster ID.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 

@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateNetworkChannelRequest extends TeaModel {
     /**
+     * <p>The name of the network channel. The name must consist of lowercase letters, digits, and underscores (_). It must start and end with a letter or a digit. The name can be up to 64 characters long.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,8 @@ public class CreateNetworkChannelRequest extends TeaModel {
     public String channelName;
 
     /**
+     * <p>A client token that ensures the request is idempotent. The client generates this token. The token must be unique for each request. It is case-sensitive and can be up to 64 ASCII characters long.</p>
+     * 
      * <strong>example:</strong>
      * <p>6000170000591aed949d0f5********************</p>
      */
@@ -21,6 +24,7 @@ public class CreateNetworkChannelRequest extends TeaModel {
     public String clientToken;
 
     /**
+     * <p>The name of the source instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -30,6 +34,8 @@ public class CreateNetworkChannelRequest extends TeaModel {
     public String DBClusterId;
 
     /**
+     * <p>The notes.</p>
+     * 
      * <strong>example:</strong>
      * <p>test</p>
      */
@@ -43,6 +49,8 @@ public class CreateNetworkChannelRequest extends TeaModel {
     public Long ownerId;
 
     /**
+     * <p>The region ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-beijing</p>
      */
@@ -50,6 +58,8 @@ public class CreateNetworkChannelRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The ID of the resource group.</p>
+     * 
      * <strong>example:</strong>
      * <p>rg-re*********</p>
      */
@@ -63,6 +73,8 @@ public class CreateNetworkChannelRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
+     * <p>The name of the destination instance.</p>
+     * 
      * <strong>example:</strong>
      * <p>pc-*****************</p>
      */
@@ -70,6 +82,8 @@ public class CreateNetworkChannelRequest extends TeaModel {
     public String targetDBClusterId;
 
     /**
+     * <p>The IP address of the destination instance.</p>
+     * 
      * <strong>example:</strong>
      * <p>192.<strong>.</strong>.46</p>
      */
@@ -77,6 +91,8 @@ public class CreateNetworkChannelRequest extends TeaModel {
     public String targetIp;
 
     /**
+     * <p>The port of the destination instance.</p>
+     * 
      * <strong>example:</strong>
      * <p>9032</p>
      */
@@ -84,6 +100,8 @@ public class CreateNetworkChannelRequest extends TeaModel {
     public String targetPort;
 
     /**
+     * <p>The ID of the virtual private cloud (VPC) where the endpoint is located.</p>
+     * 
      * <strong>example:</strong>
      * <p>vpc-25cdvfeq58pl****</p>
      */

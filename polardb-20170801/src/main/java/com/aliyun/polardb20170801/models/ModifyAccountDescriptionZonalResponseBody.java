@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ModifyAccountDescriptionZonalResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>EB07CFF0-D8A4-5C76-AED7-D00E26FC2***</p>
      */

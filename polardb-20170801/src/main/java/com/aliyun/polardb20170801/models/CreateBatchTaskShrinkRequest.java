@@ -4,13 +4,19 @@ package com.aliyun.polardb20170801.models;
 import com.aliyun.tea.*;
 
 public class CreateBatchTaskShrinkRequest extends TeaModel {
+    @NameInMap("ApplicationType")
+    public String applicationType;
+
     /**
+     * <p>The instance IDs.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("InstanceIds")
     public String instanceIdsShrink;
 
     /**
+     * <p>The task parameters.</p>
+     * 
      * <strong>example:</strong>
      * <p>[{&quot;skillName&quot;:&quot;github&quot;,&quot;version&quot;:&quot;1.0.0&quot;},{&quot;skillName&quot;:&quot;skill-vetter&quot;,&quot;version&quot;:&quot;1.0.1&quot;}]</p>
      */
@@ -18,6 +24,10 @@ public class CreateBatchTaskShrinkRequest extends TeaModel {
     public String param;
 
     /**
+     * <p>The region ID.</p>
+     * <blockquote>
+     * <p>Call the <a href="https://help.aliyun.com/document_detail/98041.html">DescribeRegions</a> operation to query the regions of all clusters in your account.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -27,6 +37,7 @@ public class CreateBatchTaskShrinkRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The name of the batch task.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -36,6 +47,7 @@ public class CreateBatchTaskShrinkRequest extends TeaModel {
     public String taskName;
 
     /**
+     * <p>The task type.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -47,6 +59,14 @@ public class CreateBatchTaskShrinkRequest extends TeaModel {
     public static CreateBatchTaskShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateBatchTaskShrinkRequest self = new CreateBatchTaskShrinkRequest();
         return TeaModel.build(map, self);
+    }
+
+    public CreateBatchTaskShrinkRequest setApplicationType(String applicationType) {
+        this.applicationType = applicationType;
+        return this;
+    }
+    public String getApplicationType() {
+        return this.applicationType;
     }
 
     public CreateBatchTaskShrinkRequest setInstanceIdsShrink(String instanceIdsShrink) {

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class RemovePolarClawMCPServerResponseBody extends TeaModel {
     /**
+     * <p>The application ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>pa-**************</p>
      */
@@ -12,6 +14,8 @@ public class RemovePolarClawMCPServerResponseBody extends TeaModel {
     public String applicationId;
 
     /**
+     * <p>The status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -19,6 +23,8 @@ public class RemovePolarClawMCPServerResponseBody extends TeaModel {
     public Integer code;
 
     /**
+     * <p>The response message.</p>
+     * 
      * <strong>example:</strong>
      * <p>successful</p>
      */
@@ -26,6 +32,8 @@ public class RemovePolarClawMCPServerResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>Indicates whether the request was successful. A value of <code>true</code> indicates success.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -33,7 +41,7 @@ public class RemovePolarClawMCPServerResponseBody extends TeaModel {
     public Boolean ok;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>E56531A4-E552-40BA-9C58-137B80******</p>
@@ -42,6 +50,8 @@ public class RemovePolarClawMCPServerResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The ID of the deleted MCP server.</p>
+     * 
      * <strong>example:</strong>
      * <p>test-v1</p>
      */

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateDBNodesResponseBody extends TeaModel {
     /**
-     * <p>The ID of the cluster.</p>
+     * <p>The database cluster ID.</p>
      * 
      * <strong>example:</strong>
      * <p>pc-***************</p>
@@ -17,7 +17,7 @@ public class CreateDBNodesResponseBody extends TeaModel {
     public CreateDBNodesResponseBodyDBNodeIds DBNodeIds;
 
     /**
-     * <p>The ID of the order.</p>
+     * <p>The order ID.</p>
      * 
      * <strong>example:</strong>
      * <p>2148126708*****</p>
@@ -26,7 +26,7 @@ public class CreateDBNodesResponseBody extends TeaModel {
     public String orderId;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>E053E730-5755-4AA9-AA9D-A47867******</p>

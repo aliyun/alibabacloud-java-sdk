@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class EnableDBClusterServerlessResponseBody extends TeaModel {
     /**
-     * <p>The ID of the serverless cluster.</p>
+     * <p>The serverless cluster ID.</p>
      * 
      * <strong>example:</strong>
      * <p>pc-bp10gr51qasnl****</p>

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateAIDBClusterTaskResponseBody extends TeaModel {
     /**
+     * <p>The ID of the model operator instance.</p>
+     * 
      * <strong>example:</strong>
      * <p>pm-2zo88***</p>
      */
@@ -12,6 +14,8 @@ public class CreateAIDBClusterTaskResponseBody extends TeaModel {
     public String DBClusterId;
 
     /**
+     * <p>The order ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>2035638*******</p>
      */
@@ -19,7 +23,7 @@ public class CreateAIDBClusterTaskResponseBody extends TeaModel {
     public String orderId;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>CED079B7-A408-41A1-BFF1-EC608E******</p>

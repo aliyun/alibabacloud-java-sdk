@@ -21,7 +21,7 @@ public class CloseAITaskRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID of the cluster.</p>
+     * <p>The ID of the region.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

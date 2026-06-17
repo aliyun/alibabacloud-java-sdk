@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribePolarFsAttributeResponseBody extends TeaModel {
     /**
+     * <p>The acceleration type.</p>
+     * 
      * <strong>example:</strong>
      * <p>alluxio</p>
      */
@@ -12,6 +14,8 @@ public class DescribePolarFsAttributeResponseBody extends TeaModel {
     public String accelerateType;
 
     /**
+     * <p>The capacity of the acceleration cache in GB.</p>
+     * 
      * <strong>example:</strong>
      * <p>1000</p>
      */
@@ -19,6 +23,14 @@ public class DescribePolarFsAttributeResponseBody extends TeaModel {
     public Double acceleratedStorageSpace;
 
     /**
+     * <p>Indicates whether the acceleration cache is enabled. Valid values:</p>
+     * <ul>
+     * <li><p><strong>ON</strong>: Enabled</p>
+     * </li>
+     * <li><p><strong>OFF</strong>: Disabled</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>ON</p>
      */
@@ -26,6 +38,8 @@ public class DescribePolarFsAttributeResponseBody extends TeaModel {
     public String acceleratingEnable;
 
     /**
+     * <p>The bandwidth in MB/s.</p>
+     * 
      * <strong>example:</strong>
      * <p>100</p>
      */
@@ -33,26 +47,52 @@ public class DescribePolarFsAttributeResponseBody extends TeaModel {
     public Double bandwidth;
 
     /**
+     * <p>The baseline bandwidth in MB/s per TiB.</p>
+     * 
      * <strong>example:</strong>
      * <p>100</p>
      */
     @NameInMap("BandwidthBaseLine")
     public Double bandwidthBaseLine;
 
+    /**
+     * <p>The bucket ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>xxx</p>
+     */
     @NameInMap("BucketId")
     public String bucketId;
 
     /**
+     * <p>The edition of the PolarFS instance. Valid values:</p>
+     * <ul>
+     * <li><p><strong>high_performance</strong>: High-performance Edition</p>
+     * </li>
+     * <li><p><strong>basic</strong>: Basic Edition</p>
+     * </li>
+     * <li><p><strong>cold</strong>: Cold Storage Edition</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>high_performance</p>
      */
     @NameInMap("Category")
     public String category;
 
+    /**
+     * <p>The download path for the client.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>oss://*</p>
+     */
     @NameInMap("ClientDownloadPath")
     public String clientDownloadPath;
 
     /**
+     * <p>The creation time.</p>
+     * 
      * <strong>example:</strong>
      * <p>2021-08-02T05:57:10Z</p>
      */
@@ -60,16 +100,29 @@ public class DescribePolarFsAttributeResponseBody extends TeaModel {
     public String createTime;
 
     /**
+     * <p>The custom bucket path.</p>
+     * 
      * <strong>example:</strong>
      * <p>xxxxxx-%d.oss-cn-beijing-internal.aliyuncs.com</p>
      */
     @NameInMap("CustomBucketPath")
     public String customBucketPath;
 
+    /**
+     * <p>A list of custom storage paths.</p>
+     */
     @NameInMap("CustomBucketPathList")
     public java.util.List<DescribePolarFsAttributeResponseBodyCustomBucketPathList> customBucketPathList;
 
     /**
+     * <p>The database engine type. Valid values:</p>
+     * <ul>
+     * <li><p><strong>MySQL</strong></p>
+     * </li>
+     * <li><p><strong>PostgreSQL</strong></p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>MySQL</p>
      */
@@ -77,6 +130,11 @@ public class DescribePolarFsAttributeResponseBody extends TeaModel {
     public String DBType;
 
     /**
+     * <p>The expiration time of the cluster.</p>
+     * <blockquote>
+     * <p>This parameter is returned only for <strong>Prepaid</strong> (subscription) clusters. It is empty for <strong>Postpaid</strong> (pay-as-you-go) clusters.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>2025-10-10T16:00:00Z</p>
      */
@@ -84,32 +142,76 @@ public class DescribePolarFsAttributeResponseBody extends TeaModel {
     public String expireTime;
 
     /**
+     * <p>Indicates whether the cluster has expired.</p>
+     * <blockquote>
+     * <p>This parameter is returned only for <strong>Prepaid</strong> (subscription) clusters.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
     @NameInMap("Expired")
     public String expired;
 
+    /**
+     * <p>The file system ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>xxx</p>
+     */
     @NameInMap("FileSystemId")
     public String fileSystemId;
 
     /**
+     * <p>The lock mode. Valid values:</p>
+     * <ul>
+     * <li><p><strong>Unlock</strong>: The cluster is not locked.</p>
+     * </li>
+     * <li><p><strong>ManualLock</strong>: The cluster is manually locked.</p>
+     * </li>
+     * <li><p><strong>LockByExpiration</strong>: The cluster is automatically locked after it expires.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>Unlock</p>
      */
     @NameInMap("LockMode")
     public String lockMode;
 
+    /**
+     * <p>The encrypted metadata address for the FUSE mount.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>e6cc1d2e2a6fa292038d999fda6501*****</p>
+     */
     @NameInMap("MetaUrl")
     public String metaUrl;
 
+    /**
+     * <p>The minor version of the instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>v1.3.0-v1.1.1</p>
+     */
     @NameInMap("MinorVersion")
     public String minorVersion;
 
+    /**
+     * <p>The mount configuration.</p>
+     */
     @NameInMap("MountInfo")
     public DescribePolarFsAttributeResponseBodyMountInfo mountInfo;
 
     /**
+     * <p>The billing method. Valid values:</p>
+     * <ul>
+     * <li><p><strong>Postpaid</strong>: pay-as-you-go.</p>
+     * </li>
+     * <li><p><strong>Prepaid</strong>: subscription.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>Prepaid</p>
      */
@@ -117,6 +219,8 @@ public class DescribePolarFsAttributeResponseBody extends TeaModel {
     public String payType;
 
     /**
+     * <p>The description of the PolarFS instance.</p>
+     * 
      * <strong>example:</strong>
      * <p>pfs-xxx</p>
      */
@@ -124,6 +228,8 @@ public class DescribePolarFsAttributeResponseBody extends TeaModel {
     public String polarFsInstanceDescription;
 
     /**
+     * <p>The ID of the PolarFS instance.</p>
+     * 
      * <strong>example:</strong>
      * <p>pfs-2ze0i74ka607*****</p>
      */
@@ -131,6 +237,8 @@ public class DescribePolarFsAttributeResponseBody extends TeaModel {
     public String polarFsInstanceId;
 
     /**
+     * <p>The status of the PolarFS instance.</p>
+     * 
      * <strong>example:</strong>
      * <p>Running</p>
      */
@@ -138,6 +246,14 @@ public class DescribePolarFsAttributeResponseBody extends TeaModel {
     public String polarFsStatus;
 
     /**
+     * <p>The version of PolarFS. Valid values:</p>
+     * <ul>
+     * <li><p><strong>PolarFS 2.0</strong></p>
+     * </li>
+     * <li><p><strong>PolarFS 1.0</strong></p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>PolarFS 2.0</p>
      */
@@ -145,6 +261,8 @@ public class DescribePolarFsAttributeResponseBody extends TeaModel {
     public String polarFsType;
 
     /**
+     * <p>The version of the PolarFS instance.</p>
+     * 
      * <strong>example:</strong>
      * <p>1.0.1-1.0.3</p>
      */
@@ -152,6 +270,8 @@ public class DescribePolarFsAttributeResponseBody extends TeaModel {
     public String polarFsVersion;
 
     /**
+     * <p>The region ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-beijing</p>
      */
@@ -159,17 +279,25 @@ public class DescribePolarFsAttributeResponseBody extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The ID of the associated PolarDB cluster.</p>
+     * 
      * <strong>example:</strong>
      * <p>pc-2zejpr41d9xk3uk34</p>
      */
     @NameInMap("RelativeDbClusterId")
     public String relativeDbClusterId;
 
+    /**
+     * <p>The ID of the associated PolarFS instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>pfs-**********</p>
+     */
     @NameInMap("RelativePfsClusterId")
     public String relativePfsClusterId;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>3F9E6A3B-C13E-4064-A010-18582A******</p>
@@ -178,6 +306,8 @@ public class DescribePolarFsAttributeResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The ID of the managed security group.</p>
+     * 
      * <strong>example:</strong>
      * <p>sg-bp**************</p>
      */
@@ -185,6 +315,8 @@ public class DescribePolarFsAttributeResponseBody extends TeaModel {
     public String securityGroupId;
 
     /**
+     * <p>The storage capacity in GB.</p>
+     * 
      * <strong>example:</strong>
      * <p>1000</p>
      */
@@ -192,6 +324,18 @@ public class DescribePolarFsAttributeResponseBody extends TeaModel {
     public Double storageSpace;
 
     /**
+     * <p>The storage class for the High-performance Edition. Valid values:</p>
+     * <ul>
+     * <li><p><strong>ESSDPL1</strong></p>
+     * </li>
+     * <li><p><strong>ESSDPL0</strong></p>
+     * </li>
+     * </ul>
+     * <p>The storage class for the Basic Edition. Valid values:</p>
+     * <ul>
+     * <li><strong>city_redundancy</strong>: zone-redundant storage</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>essdpl1</p>
      */
@@ -199,6 +343,8 @@ public class DescribePolarFsAttributeResponseBody extends TeaModel {
     public String storageType;
 
     /**
+     * <p>The amount of used storage in bytes.</p>
+     * 
      * <strong>example:</strong>
      * <p>3012558848</p>
      */
@@ -206,6 +352,8 @@ public class DescribePolarFsAttributeResponseBody extends TeaModel {
     public Double storageUsed;
 
     /**
+     * <p>The ID of the VPC.</p>
+     * 
      * <strong>example:</strong>
      * <p>vpc-**********</p>
      */
@@ -213,6 +361,8 @@ public class DescribePolarFsAttributeResponseBody extends TeaModel {
     public String VPCId;
 
     /**
+     * <p>The VSwitch ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>vsw-**************</p>
      */
@@ -220,6 +370,8 @@ public class DescribePolarFsAttributeResponseBody extends TeaModel {
     public String vSwitchId;
 
     /**
+     * <p>The ID of the zone where the vSwitch is located.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-beijing-k</p>
      */
@@ -521,6 +673,8 @@ public class DescribePolarFsAttributeResponseBody extends TeaModel {
 
     public static class DescribePolarFsAttributeResponseBodyCustomBucketPathList extends TeaModel {
         /**
+         * <p>The endpoint of the custom storage bucket.</p>
+         * 
          * <strong>example:</strong>
          * <p>pfs-xxx.oss-[regionId]-internal.aliyuncs.com</p>
          */
@@ -528,6 +682,8 @@ public class DescribePolarFsAttributeResponseBody extends TeaModel {
         public String bucket;
 
         /**
+         * <p>The path in the custom storage bucket.</p>
+         * 
          * <strong>example:</strong>
          * <p>/data</p>
          */
@@ -559,6 +715,8 @@ public class DescribePolarFsAttributeResponseBody extends TeaModel {
 
     public static class DescribePolarFsAttributeResponseBodyMountInfo extends TeaModel {
         /**
+         * <p>The cluster management address.</p>
+         * 
          * <strong>example:</strong>
          * <p>TCP://<strong>.</strong>.<strong>.</strong>:3000,TCP://<strong>.</strong>.<strong>.</strong>:3000,TCP://<strong>.</strong>.<strong>.</strong>:3000</p>
          */
@@ -566,6 +724,8 @@ public class DescribePolarFsAttributeResponseBody extends TeaModel {
         public String polarDbProxy;
 
         /**
+         * <p>The file system name.</p>
+         * 
          * <strong>example:</strong>
          * <p>pfs-**********</p>
          */
@@ -573,6 +733,8 @@ public class DescribePolarFsAttributeResponseBody extends TeaModel {
         public String polarFsCluster;
 
         /**
+         * <p>The token value.</p>
+         * 
          * <strong>example:</strong>
          * <p>a734298c391cb9ebd05e2ee85feb624</p>
          */

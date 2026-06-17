@@ -17,7 +17,7 @@ public class DescribeBackupsResponseBody extends TeaModel {
     public String pageNumber;
 
     /**
-     * <p>The number of entries per page.</p>
+     * <p>The number of records on the current page.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -26,7 +26,7 @@ public class DescribeBackupsResponseBody extends TeaModel {
     public String pageRecordCount;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>24A1990B-4F6E-482B-B8CB-75C612******</p>
@@ -35,6 +35,18 @@ public class DescribeBackupsResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total size of level-2 backups in the specified region, in bytes.</p>
+     * <blockquote>
+     * <ul>
+     * <li><p>Supported only for storage classes PSL4 and PSL5.</p>
+     * </li>
+     * <li><p>Supported only for clusters with the level-2 backup feature enabled.</p>
+     * </li>
+     * <li><p>If this field is not returned, the level-2 backup size is 0.</p>
+     * </li>
+     * </ul>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>4639948800</p>
      */
@@ -42,7 +54,7 @@ public class DescribeBackupsResponseBody extends TeaModel {
     public String totalLevel2BackupSize;
 
     /**
-     * <p>The total number of returned entries.</p>
+     * <p>The total number of records.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -145,6 +157,9 @@ public class DescribeBackupsResponseBody extends TeaModel {
 
         @NameInMap("IsAvail")
         public String isAvail;
+
+        @NameInMap("TableRestoreMetaStatus")
+        public String tableRestoreMetaStatus;
 
         public static DescribeBackupsResponseBodyItemsBackup build(java.util.Map<String, ?> map) throws Exception {
             DescribeBackupsResponseBodyItemsBackup self = new DescribeBackupsResponseBodyItemsBackup();
@@ -261,6 +276,14 @@ public class DescribeBackupsResponseBody extends TeaModel {
         }
         public String getIsAvail() {
             return this.isAvail;
+        }
+
+        public DescribeBackupsResponseBodyItemsBackup setTableRestoreMetaStatus(String tableRestoreMetaStatus) {
+            this.tableRestoreMetaStatus = tableRestoreMetaStatus;
+            return this;
+        }
+        public String getTableRestoreMetaStatus() {
+            return this.tableRestoreMetaStatus;
         }
 
     }

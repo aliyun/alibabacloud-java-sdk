@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeDBClusterEncryptionKeyRequest extends TeaModel {
     /**
+     * <p>A client token to ensure the idempotence of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>6000170000591aed949d0f******************</p>
      */
@@ -12,6 +14,11 @@ public class DescribeDBClusterEncryptionKeyRequest extends TeaModel {
     public String clientToken;
 
     /**
+     * <p>The cluster ID.</p>
+     * <blockquote>
+     * <p>Call the <a href="https://help.aliyun.com/document_detail/98094.html">DescribeDBClusters</a>Operation to query the details of all clusters in your account, including cluster IDs.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>pc-***</p>
      */

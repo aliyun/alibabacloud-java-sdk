@@ -11,7 +11,7 @@ public class TagResourcesRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID of the cluster.</p>
+     * <p>The region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,7 +21,7 @@ public class TagResourcesRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The cluster ID.</p>
+     * <p>The ID of the target cluster.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -37,7 +37,7 @@ public class TagResourcesRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The type of the resource. Set the value to <strong>cluster</strong>.</p>
+     * <p>The resource type. Set the value to <strong>cluster</strong>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -47,7 +47,7 @@ public class TagResourcesRequest extends TeaModel {
     public String resourceType;
 
     /**
-     * <p>The tags.</p>
+     * <p>The list of tags.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Tag")
@@ -124,9 +124,9 @@ public class TagResourcesRequest extends TeaModel {
 
     public static class TagResourcesRequestTag extends TeaModel {
         /**
-         * <p>The key of the tag that you want to create for the cluster. To create multiple tags for a cluster at a time, click <strong>Add</strong> to add tag keys.</p>
+         * <p>The tag key. To add multiple tags to the cluster at once, click <strong>Add</strong> to specify multiple tag keys.</p>
          * <blockquote>
-         * <p> You can create up to 20 tags for a cluster at a time. The value of <code>Tag.N.Key</code> is paired with the value of <code>Tag.N.Value</code>.</p>
+         * <p>You can add a maximum of 20 tag pairs at a time. <code>Tag.n.Key</code> corresponds to <code>Tag.n.Value</code>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -136,9 +136,9 @@ public class TagResourcesRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The value of the tag that you want to create for the cluster. To create multiple tags for a cluster at a time, click <strong>Add</strong> to add tag values.</p>
+         * <p>The tag value. To add multiple tags to the cluster at once, click <strong>Add</strong> to specify multiple tag values.</p>
          * <blockquote>
-         * <p> You can create up to 20 tags for a cluster at a time. The value of <code>Tag.N.Key</code> is paired with the value of <code>Tag.N.Value</code>.</p>
+         * <p>You can add a maximum of 20 tag pairs at a time. <code>Tag.n.Value</code> corresponds to <code>Tag.n.Key</code>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

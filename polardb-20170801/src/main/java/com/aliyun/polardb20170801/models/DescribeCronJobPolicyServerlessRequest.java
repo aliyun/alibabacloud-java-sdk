@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeCronJobPolicyServerlessRequest extends TeaModel {
     /**
+     * <p>The ID of the serverless cluster.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,8 @@ public class DescribeCronJobPolicyServerlessRequest extends TeaModel {
     public String DBClusterId;
 
     /**
+     * <p>The ID of the scheduled task.</p>
+     * 
      * <strong>example:</strong>
      * <p>8006e51c-dab3-4602-bc69-4f728002c6ce</p>
      */
@@ -27,6 +30,8 @@ public class DescribeCronJobPolicyServerlessRequest extends TeaModel {
     public Long ownerId;
 
     /**
+     * <p>The page number. Default value: 1.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -34,6 +39,17 @@ public class DescribeCronJobPolicyServerlessRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of records to return on each page. Valid values:</p>
+     * <ul>
+     * <li><p><strong>30</strong></p>
+     * </li>
+     * <li><p><strong>50</strong></p>
+     * </li>
+     * <li><p><strong>100</strong></p>
+     * </li>
+     * </ul>
+     * <p>Default value: <strong>30</strong>.</p>
+     * 
      * <strong>example:</strong>
      * <p>30</p>
      */
@@ -41,6 +57,7 @@ public class DescribeCronJobPolicyServerlessRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

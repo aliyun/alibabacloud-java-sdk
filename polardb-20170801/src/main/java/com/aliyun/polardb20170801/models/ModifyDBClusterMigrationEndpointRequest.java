@@ -5,6 +5,10 @@ import com.aliyun.tea.*;
 
 public class ModifyDBClusterMigrationEndpointRequest extends TeaModel {
     /**
+     * <p>The ID of the cluster.</p>
+     * <blockquote>
+     * <p>Call the <a href="https://help.aliyun.com/document_detail/173433.html">DescribeDBClusters</a> operation to view information about all clusters in the destination region, including the cluster ID.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +18,10 @@ public class ModifyDBClusterMigrationEndpointRequest extends TeaModel {
     public String DBClusterId;
 
     /**
+     * <p>The parameters for modifying the DTS task.</p>
+     * <p><strong>dtsJobId</strong>: The ID of the DTS task.</p>
+     * <p>endpoint: The endpoint to switch. Set the value to src for the source endpoint or <strong>dst</strong> for the destination endpoint.</p>
+     * <p><strong>endpointInstanceId</strong>: The ID of the cloud instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

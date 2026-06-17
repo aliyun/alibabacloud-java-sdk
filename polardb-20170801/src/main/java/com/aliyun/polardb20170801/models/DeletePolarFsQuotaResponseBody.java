@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DeletePolarFsQuotaResponseBody extends TeaModel {
     /**
+     * <p>The ID of the Polarlakebase instance.</p>
+     * 
      * <strong>example:</strong>
      * <p>pfs-2ze0i74ka607*****</p>
      */

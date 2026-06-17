@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateApplicationEndpointAddressRequest extends TeaModel {
     /**
+     * <p>The application ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class CreateApplicationEndpointAddressRequest extends TeaModel {
     public String applicationId;
 
     /**
+     * <p>The service endpoint ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,7 @@ public class CreateApplicationEndpointAddressRequest extends TeaModel {
     public String endpointId;
 
     /**
+     * <p>The network type of the new connection address. The value must be <code>Public</code>, which indicates an Internet address.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

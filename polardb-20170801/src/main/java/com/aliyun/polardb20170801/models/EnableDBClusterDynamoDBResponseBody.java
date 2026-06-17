@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class EnableDBClusterDynamoDBResponseBody extends TeaModel {
     /**
-     * <p>Id of the request</p>
+     * <p>The ID of the request</p>
      * 
      * <strong>example:</strong>
      * <p>CD3FA5F3-FAF3-44CA-AFFF-BAF869******</p>

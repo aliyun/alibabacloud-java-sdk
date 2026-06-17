@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class UntagResourcesRequest extends TeaModel {
     /**
-     * <p>Specifies whether to detach all tags from the cluster. Valid values: <strong>true</strong> and <strong>false</strong>. Default value: <strong>false</strong>.</p>
+     * <p>Specifies whether to detach all tags. Valid values: <strong>true</strong> and <strong>false</strong>. Default value: <strong>false</strong>.</p>
      * <blockquote>
-     * <p> This parameter takes effect only if <code>TagKey.n</code> is empty.</p>
+     * <p>This parameter takes effect only when the <code>TagKey.n</code> parameter is empty.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -23,9 +23,9 @@ public class UntagResourcesRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The ID of the region.</p>
+     * <p>The region ID.</p>
      * <blockquote>
-     * <p> You can call the <a href="https://help.aliyun.com/document_detail/98041.html">DescribeRegions</a> operation to query the available regions.</p>
+     * <p>Call the <a href="https://help.aliyun.com/document_detail/98041.html">DescribeRegions</a> operation to view available regions.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -36,7 +36,7 @@ public class UntagResourcesRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The IDs of the clusters.</p>
+     * <p>The ID of the target cluster.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -52,7 +52,7 @@ public class UntagResourcesRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The type of the resource. Set the value to <strong>cluster</strong>.</p>
+     * <p>The resource type. Set the value to <strong>cluster</strong>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -62,7 +62,7 @@ public class UntagResourcesRequest extends TeaModel {
     public String resourceType;
 
     /**
-     * <p>The keys of the tags.</p>
+     * <p>The tag key.</p>
      * 
      * <strong>example:</strong>
      * <p>type</p>

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class RemoveApplicationEnvironmentVariablesResponseBody extends TeaModel {
     /**
+     * <p>The application ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>pa-**************</p>
      */
@@ -12,6 +14,8 @@ public class RemoveApplicationEnvironmentVariablesResponseBody extends TeaModel 
     public String applicationId;
 
     /**
+     * <p>The response status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -19,6 +23,8 @@ public class RemoveApplicationEnvironmentVariablesResponseBody extends TeaModel 
     public Integer code;
 
     /**
+     * <p>The response message.</p>
+     * 
      * <strong>example:</strong>
      * <p>successful</p>
      */
@@ -26,6 +32,8 @@ public class RemoveApplicationEnvironmentVariablesResponseBody extends TeaModel 
     public String message;
 
     /**
+     * <p>Indicates whether the operation was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -33,6 +41,8 @@ public class RemoveApplicationEnvironmentVariablesResponseBody extends TeaModel 
     public Boolean ok;
 
     /**
+     * <p>The number of variables removed.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -40,7 +50,7 @@ public class RemoveApplicationEnvironmentVariablesResponseBody extends TeaModel 
     public Integer removedCount;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>CDB3258F-B5DE-43C4-8935-CBA0CA******</p>
@@ -49,6 +59,8 @@ public class RemoveApplicationEnvironmentVariablesResponseBody extends TeaModel 
     public String requestId;
 
     /**
+     * <p>Indicates whether the gateway was restarted.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -56,6 +68,8 @@ public class RemoveApplicationEnvironmentVariablesResponseBody extends TeaModel 
     public Boolean restarted;
 
     /**
+     * <p>The total number of application environment variables remaining.</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */

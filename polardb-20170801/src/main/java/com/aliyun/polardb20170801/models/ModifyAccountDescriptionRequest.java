@@ -7,8 +7,10 @@ public class ModifyAccountDescriptionRequest extends TeaModel {
     /**
      * <p>The description of the account. The description must meet the following requirements:</p>
      * <ul>
-     * <li>The description cannot start with <code>http://</code> or <code>https://</code>.</li>
-     * <li>The description must be 2 to 256 characters in length.</li>
+     * <li><p>It cannot start with <code>http://</code> or <code>https://</code>.</p>
+     * </li>
+     * <li><p>It must be 2 to 256 characters in length.</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -19,7 +21,7 @@ public class ModifyAccountDescriptionRequest extends TeaModel {
     public String accountDescription;
 
     /**
-     * <p>The name of the account.</p>
+     * <p>The account name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -29,7 +31,7 @@ public class ModifyAccountDescriptionRequest extends TeaModel {
     public String accountName;
 
     /**
-     * <p>The ID of the cluster.</p>
+     * <p>The cluster ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

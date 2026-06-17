@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyDBNodeSccModeRequest extends TeaModel {
     /**
+     * <p>The cluster ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class ModifyDBNodeSccModeRequest extends TeaModel {
     public String DBClusterId;
 
     /**
+     * <p>The node ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -35,7 +37,7 @@ public class ModifyDBNodeSccModeRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>SCC</p>
+     * <p>The SCC mode to set for the node.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

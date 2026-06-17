@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeApplicationParametersShrinkRequest extends TeaModel {
     /**
+     * <p>The application ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -13,6 +14,9 @@ public class DescribeApplicationParametersShrinkRequest extends TeaModel {
     @NameInMap("ApplicationId")
     public String applicationId;
 
+    /**
+     * <p>A list of subcomponent IDs. If you specify this parameter, the operation returns the parameters and parameter templates for only these components.</p>
+     */
     @NameInMap("ComponentIdList")
     public String componentIdListShrink;
 

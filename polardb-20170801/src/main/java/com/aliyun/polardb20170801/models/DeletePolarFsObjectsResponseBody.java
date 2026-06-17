@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DeletePolarFsObjectsResponseBody extends TeaModel {
     /**
+     * <p>The PolarLakebase instance ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>pfs-2ze0i7*****</p>
      */
@@ -12,7 +14,7 @@ public class DeletePolarFsObjectsResponseBody extends TeaModel {
     public String polarFsInstanceId;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>C890995A-CF06-4F4D-8DB8-DD26C2******</p>

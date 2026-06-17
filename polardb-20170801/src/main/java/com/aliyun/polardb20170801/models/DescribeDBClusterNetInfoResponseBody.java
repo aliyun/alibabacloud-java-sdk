@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeDBClusterNetInfoResponseBody extends TeaModel {
     /**
+     * <p>The network type of the cluster. The value is fixed as <strong>VPC</strong>.</p>
+     * 
      * <strong>example:</strong>
      * <p>VPC</p>
      */
@@ -18,6 +20,8 @@ public class DescribeDBClusterNetInfoResponseBody extends TeaModel {
     public DescribeDBClusterNetInfoResponseBodyDBNodeNetInfos DBNodeNetInfos;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>72D99256-ACF1-5F86-831F-8CB53E9C23ED</p>
      */

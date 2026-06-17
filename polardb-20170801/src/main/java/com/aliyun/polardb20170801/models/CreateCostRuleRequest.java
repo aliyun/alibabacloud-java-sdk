@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateCostRuleRequest extends TeaModel {
     /**
+     * <p>The number of cost points per million cache tokens. The default value is 0.</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
@@ -12,6 +14,7 @@ public class CreateCostRuleRequest extends TeaModel {
     public String cacheCostPointsPerMillion;
 
     /**
+     * <p>The gateway instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,6 +24,8 @@ public class CreateCostRuleRequest extends TeaModel {
     public String gwClusterId;
 
     /**
+     * <p>The number of cost points per million input tokens. The default value is 0.</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
@@ -28,6 +33,7 @@ public class CreateCostRuleRequest extends TeaModel {
     public String inputCostPointsPerMillion;
 
     /**
+     * <p>The name of the model, such as <code>gpt-4</code> or <code>qwen-turbo</code>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -37,6 +43,7 @@ public class CreateCostRuleRequest extends TeaModel {
     public String modelName;
 
     /**
+     * <p>The model service ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -46,12 +53,20 @@ public class CreateCostRuleRequest extends TeaModel {
     public String modelServiceId;
 
     /**
+     * <p>The number of cost points per million output tokens. The default value is 0.</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
     @NameInMap("OutputCostPointsPerMillion")
     public String outputCostPointsPerMillion;
 
+    /**
+     * <p>The region ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-beijing</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

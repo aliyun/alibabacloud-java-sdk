@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ModifyApplicationServerlessConfResponseBody extends TeaModel {
     /**
+     * <p>The application ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>pa-**************</p>
      */
@@ -12,6 +14,8 @@ public class ModifyApplicationServerlessConfResponseBody extends TeaModel {
     public String applicationId;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>D0CEC6AC-7760-409A-A0D5-E6CD86******</p>
      */

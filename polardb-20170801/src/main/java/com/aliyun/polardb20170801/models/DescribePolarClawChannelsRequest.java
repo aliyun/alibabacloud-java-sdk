@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribePolarClawChannelsRequest extends TeaModel {
     /**
+     * <p>The application ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,8 @@ public class DescribePolarClawChannelsRequest extends TeaModel {
     public String applicationId;
 
     /**
+     * <p>The channel IDs to query. Leave this parameter empty to return all channels.</p>
+     * 
      * <strong>example:</strong>
      * <p>feishu,telegram</p>
      */

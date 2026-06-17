@@ -5,11 +5,14 @@ import com.aliyun.tea.*;
 
 public class CreateDBEndpointAddressRequest extends TeaModel {
     /**
-     * <p>The prefix of the new endpoint. The prefix of the endpoint must meet the following requirements:</p>
+     * <p>The prefix of the new endpoint. The prefix must meet the following requirements:</p>
      * <ul>
-     * <li>The prefix can contain lowercase letters, digits, and hyphens (-).</li>
-     * <li>The prefix must start with a letter and end with a digit or a letter.</li>
-     * <li>The prefix must be 6 to 40 characters in length.</li>
+     * <li><p>Consist of lowercase letters, digits, and hyphens (-).</p>
+     * </li>
+     * <li><p>Start with a letter and end with a digit or a letter.</p>
+     * </li>
+     * <li><p>Be 6 to 40 characters in length.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -19,7 +22,7 @@ public class CreateDBEndpointAddressRequest extends TeaModel {
     public String connectionStringPrefix;
 
     /**
-     * <p>The ID of the cluster.</p>
+     * <p>The cluster ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -29,9 +32,9 @@ public class CreateDBEndpointAddressRequest extends TeaModel {
     public String DBClusterId;
 
     /**
-     * <p>The ID of the endpoint.</p>
+     * <p>The endpoint ID.</p>
      * <blockquote>
-     * <p> You can call the <a href="https://help.aliyun.com/document_detail/98205.html">DescribeDBClusterEndpoints</a> operation to query endpoint details.</p>
+     * <p>For more information, see <a href="https://help.aliyun.com/document_detail/98205.html">DescribeDBClusterEndpoints</a>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -41,7 +44,7 @@ public class CreateDBEndpointAddressRequest extends TeaModel {
     public String DBEndpointId;
 
     /**
-     * <p>The network type of the endpoint. Set the value to <strong>Public</strong>.</p>
+     * <p>The network type of the new endpoint. Set the value to <strong>Public</strong>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -81,7 +84,7 @@ public class CreateDBEndpointAddressRequest extends TeaModel {
     public String VPCId;
 
     /**
-     * <p>The details of the zones.</p>
+     * <p>The zone information.</p>
      */
     @NameInMap("ZoneInfo")
     public java.util.List<CreateDBEndpointAddressRequestZoneInfo> zoneInfo;
@@ -181,7 +184,7 @@ public class CreateDBEndpointAddressRequest extends TeaModel {
 
     public static class CreateDBEndpointAddressRequestZoneInfo extends TeaModel {
         /**
-         * <p>The ID of the vSwitch.</p>
+         * <p>The virtual switch ID.</p>
          * 
          * <strong>example:</strong>
          * <p>vsw-**********</p>
@@ -190,7 +193,7 @@ public class CreateDBEndpointAddressRequest extends TeaModel {
         public String vSwitchId;
 
         /**
-         * <p>The ID of the zone.</p>
+         * <p>The zone ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou-b</p>

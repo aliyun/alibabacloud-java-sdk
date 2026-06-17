@@ -4,10 +4,15 @@ package com.aliyun.polardb20170801.models;
 import com.aliyun.tea.*;
 
 public class DescribeHistoryTasksResponseBody extends TeaModel {
+    /**
+     * <p>The list of tasks.</p>
+     */
     @NameInMap("Items")
     public java.util.List<DescribeHistoryTasksResponseBodyItems> items;
 
     /**
+     * <p>The page number of the query result.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -15,6 +20,8 @@ public class DescribeHistoryTasksResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of records per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -22,6 +29,8 @@ public class DescribeHistoryTasksResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The unique ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>F90D7C14-2D1C-5B88-9CD1-23AB2CF89***</p>
      */
@@ -29,6 +38,8 @@ public class DescribeHistoryTasksResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total number of tasks that meet the conditions, regardless of paging factors.</p>
+     * 
      * <strong>example:</strong>
      * <p>2</p>
      */
@@ -82,6 +93,11 @@ public class DescribeHistoryTasksResponseBody extends TeaModel {
 
     public static class DescribeHistoryTasksResponseBodyItems extends TeaModel {
         /**
+         * <p>The allowed operation information.</p>
+         * <blockquote>
+         * <p>This feature is not supported yet.</p>
+         * </blockquote>
+         * 
          * <strong>example:</strong>
          * <p>{}</p>
          */
@@ -89,6 +105,14 @@ public class DescribeHistoryTasksResponseBody extends TeaModel {
         public String actionInfo;
 
         /**
+         * <p>The request source. Valid values:</p>
+         * <ul>
+         * <li><p><strong>System</strong>: system</p>
+         * </li>
+         * <li><p><strong>User</strong>: user</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>User</p>
          */
@@ -96,6 +120,8 @@ public class DescribeHistoryTasksResponseBody extends TeaModel {
         public String callerSource;
 
         /**
+         * <p>The ID of the requesting user. If <code>CallerSource</code> is <code>User</code>, this is the user\&quot;s UID.</p>
+         * 
          * <strong>example:</strong>
          * <p>1816563541899***</p>
          */
@@ -103,6 +129,8 @@ public class DescribeHistoryTasksResponseBody extends TeaModel {
         public String callerUid;
 
         /**
+         * <p>The name of the current step being executed. If this parameter is empty, the task has not started.</p>
+         * 
          * <strong>example:</strong>
          * <p>finish_task</p>
          */
@@ -110,6 +138,8 @@ public class DescribeHistoryTasksResponseBody extends TeaModel {
         public String currentStepName;
 
         /**
+         * <p>The database type.</p>
+         * 
          * <strong>example:</strong>
          * <p>polardb_mysql</p>
          */
@@ -117,6 +147,8 @@ public class DescribeHistoryTasksResponseBody extends TeaModel {
         public String dbType;
 
         /**
+         * <p>The end time of the task.</p>
+         * 
          * <strong>example:</strong>
          * <p>2025-03-03T07:30:57Z</p>
          */
@@ -124,6 +156,8 @@ public class DescribeHistoryTasksResponseBody extends TeaModel {
         public String endTime;
 
         /**
+         * <p>The resource ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>pc-2zed3m89cw***</p>
          */
@@ -131,6 +165,8 @@ public class DescribeHistoryTasksResponseBody extends TeaModel {
         public String instanceId;
 
         /**
+         * <p>The resource name.</p>
+         * 
          * <strong>example:</strong>
          * <p>pc-2zed3m89cw***</p>
          */
@@ -138,6 +174,8 @@ public class DescribeHistoryTasksResponseBody extends TeaModel {
         public String instanceName;
 
         /**
+         * <p>The resource type.</p>
+         * 
          * <strong>example:</strong>
          * <p>Instance</p>
          */
@@ -145,6 +183,8 @@ public class DescribeHistoryTasksResponseBody extends TeaModel {
         public String instanceType;
 
         /**
+         * <p>The product.</p>
+         * 
          * <strong>example:</strong>
          * <p>polardb</p>
          */
@@ -152,6 +192,8 @@ public class DescribeHistoryTasksResponseBody extends TeaModel {
         public String product;
 
         /**
+         * <p>The completion progress of the task, from 0.0 to 100.0.</p>
+         * 
          * <strong>example:</strong>
          * <p>100.0</p>
          */
@@ -159,6 +201,8 @@ public class DescribeHistoryTasksResponseBody extends TeaModel {
         public Float progress;
 
         /**
+         * <p>The reason for initiating the current task.</p>
+         * 
          * <strong>example:</strong>
          * <p>&quot;&quot;</p>
          */
@@ -166,6 +210,8 @@ public class DescribeHistoryTasksResponseBody extends TeaModel {
         public String reasonCode;
 
         /**
+         * <p>The region ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-beijing</p>
          */
@@ -173,6 +219,11 @@ public class DescribeHistoryTasksResponseBody extends TeaModel {
         public String regionId;
 
         /**
+         * <p>The estimated remaining execution time, in seconds (s).</p>
+         * <blockquote>
+         * <p>This value is for reference only. The actual execution time prevails.</p>
+         * </blockquote>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -180,6 +231,8 @@ public class DescribeHistoryTasksResponseBody extends TeaModel {
         public Integer remainTime;
 
         /**
+         * <p>The start time of the task.</p>
+         * 
          * <strong>example:</strong>
          * <p>2025-03-03T07:25:16Z</p>
          */
@@ -187,6 +240,24 @@ public class DescribeHistoryTasksResponseBody extends TeaModel {
         public String startTime;
 
         /**
+         * <p>The final status of the task.</p>
+         * <ul>
+         * <li><p>Scheduled: waiting for execution</p>
+         * </li>
+         * <li><p>Running: executing</p>
+         * </li>
+         * <li><p>Succeed: executed successfully</p>
+         * </li>
+         * <li><p>Failed: execution failed</p>
+         * </li>
+         * <li><p>Cancelling: stopping</p>
+         * </li>
+         * <li><p>Canceled: stopped</p>
+         * </li>
+         * <li><p>Waiting: waiting for preset time</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Succeed</p>
          */
@@ -194,6 +265,8 @@ public class DescribeHistoryTasksResponseBody extends TeaModel {
         public String status;
 
         /**
+         * <p>The task details.</p>
+         * 
          * <strong>example:</strong>
          * <p>{\&quot;steps\&quot;:[{\&quot;step_name\&quot;:\&quot;init_task\&quot;},{\&quot;step_name\&quot;:\&quot;exec_task\&quot;},{\&quot;step_name\&quot;:\&quot;finish_task\&quot;}]}</p>
          */
@@ -201,6 +274,8 @@ public class DescribeHistoryTasksResponseBody extends TeaModel {
         public String taskDetail;
 
         /**
+         * <p>The task ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>t-0mqt8qhnw04ipz0***</p>
          */
@@ -208,6 +283,8 @@ public class DescribeHistoryTasksResponseBody extends TeaModel {
         public String taskId;
 
         /**
+         * <p>The task type.</p>
+         * 
          * <strong>example:</strong>
          * <p>ChangeVariable</p>
          */
@@ -215,6 +292,8 @@ public class DescribeHistoryTasksResponseBody extends TeaModel {
         public String taskType;
 
         /**
+         * <p>The UID of the account that owns the resource.</p>
+         * 
          * <strong>example:</strong>
          * <p>1816563541899***</p>
          */

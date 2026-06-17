@@ -17,11 +17,11 @@ public class EnableFirewallRulesRequest extends TeaModel {
     /**
      * <p>Specifies whether to enable or disable the specified firewall rules. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: enables the specified firewall rules.</li>
-     * <li><strong>false</strong>: disables the specified firewall rules.</li>
+     * <li><strong>true</strong>: Enable.</li>
+     * <li><strong>false</strong>: Disable.</li>
      * </ul>
      * <blockquote>
-     * <p>This parameter is valid only when you specify the <strong>RuleNameList</strong> parameter.</p>
+     * <p>This parameter takes effect only when a value is specified for the <strong>RuleNameList</strong> parameter.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -43,9 +43,9 @@ public class EnableFirewallRulesRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The name of the firewall rule that you want to enable for the cluster. You can specify multiple firewall rules at a time. Separate multiple rules with commas (,).</p>
+     * <p>A comma-separated list of the firewall rule names to enable or disable.</p>
      * <blockquote>
-     * <p>You can call the <strong>DescribeFirewallRules</strong> operation to query the details of all firewall rules that are applicable to a cluster, such as rule names.</p>
+     * <p>You can find rule names under <strong>Security Management****SQL Firewall</strong> tab of the cluster.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 

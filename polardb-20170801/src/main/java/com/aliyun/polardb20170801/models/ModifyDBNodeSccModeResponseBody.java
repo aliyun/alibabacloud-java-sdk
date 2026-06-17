@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ModifyDBNodeSccModeResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>E2FDB684-751D-424D-98B9-704BEA******</p>
      */

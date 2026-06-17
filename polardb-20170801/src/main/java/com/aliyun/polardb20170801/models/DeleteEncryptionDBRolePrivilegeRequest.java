@@ -5,6 +5,10 @@ import com.aliyun.tea.*;
 
 public class DeleteEncryptionDBRolePrivilegeRequest extends TeaModel {
     /**
+     * <p>The cluster ID.</p>
+     * <blockquote>
+     * <p>Call the <a href="https://help.aliyun.com/document_detail/98094.html">DescribeDBClusters</a> operation to query the details of all clusters in your account, such as the cluster ID.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -26,6 +30,8 @@ public class DeleteEncryptionDBRolePrivilegeRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
+     * <p>The name of the role permission.</p>
+     * 
      * <strong>example:</strong>
      * <p>test</p>
      */

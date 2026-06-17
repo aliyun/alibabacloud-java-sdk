@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyApplicationServerlessConfRequest extends TeaModel {
     /**
+     * <p>The application ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class ModifyApplicationServerlessConfRequest extends TeaModel {
     public String applicationId;
 
     /**
+     * <p>The list of Serverless configurations.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("ServerlessConfList")
@@ -42,6 +44,15 @@ public class ModifyApplicationServerlessConfRequest extends TeaModel {
 
     public static class ModifyApplicationServerlessConfRequestServerlessConfList extends TeaModel {
         /**
+         * <p>The type of the application sub-component.</p>
+         * <p>For Supabase, valid values are:</p>
+         * <ul>
+         * <li><p>gateway</p>
+         * </li>
+         * <li><p>backend</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>gateway</p>
          */
@@ -49,6 +60,8 @@ public class ModifyApplicationServerlessConfRequest extends TeaModel {
         public String componentType;
 
         /**
+         * <p>The maximum number of PCUs for a single node. Valid values: 0 to 16.</p>
+         * 
          * <strong>example:</strong>
          * <p>16</p>
          */
@@ -56,6 +69,8 @@ public class ModifyApplicationServerlessConfRequest extends TeaModel {
         public String scaleMax;
 
         /**
+         * <p>The minimum number of PolarDB Capacity Units (PCUs) for a single node. Valid values: 0 to 16.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */

@@ -15,7 +15,7 @@ public class ModifyDBNodesParametersRequest extends TeaModel {
     public String DBClusterId;
 
     /**
-     * <p>The ID of the node. You can specify multiple node IDs. Separate multiple node IDs with commas (,).</p>
+     * <p>The IDs of the nodes. To specify multiple node IDs, separate the IDs with a comma (,).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,7 +25,7 @@ public class ModifyDBNodesParametersRequest extends TeaModel {
     public String DBNodeIds;
 
     /**
-     * <p>Specifies whether to immediately run the task to modify parameters and restart the cluster. Valid values: false: runs the task on schedule. true: runs the task immediately. Default value: false.</p>
+     * <p>Specifies whether to apply the parameter modifications and restart the node. Valid values: \<code>false\\</code> (default): Schedules the task. \<code>true\\</code>: Executes the task immediately.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -40,7 +40,7 @@ public class ModifyDBNodesParametersRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The ID of the parameter template that is used for the cluster.</p>
+     * <p>The ID of the parameter template.</p>
      * 
      * <strong>example:</strong>
      * <p>pcpg-**************</p>
@@ -49,7 +49,7 @@ public class ModifyDBNodesParametersRequest extends TeaModel {
     public String parameterGroupId;
 
     /**
-     * <p>The JSON string that specifies the parameter and its value.</p>
+     * <p>A JSON string that contains the parameters and their values.</p>
      * 
      * <strong>example:</strong>
      * <p>{&quot;wait_timeout&quot;:&quot;86&quot;,&quot;innodb_old_blocks_time&quot;:&quot;10&quot;}</p>
@@ -58,7 +58,7 @@ public class ModifyDBNodesParametersRequest extends TeaModel {
     public String parameters;
 
     /**
-     * <p>The latest start time to run the task. Specify the time in the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time must be in UTC.</p>
+     * <p>The latest time to start the scheduled task. The time must be in the \<code>YYYY-MM-DDThh:mm:ssZ\\</code> format and in UTC.</p>
      * 
      * <strong>example:</strong>
      * <p>2022-04-28T14:30:00Z</p>
@@ -67,7 +67,7 @@ public class ModifyDBNodesParametersRequest extends TeaModel {
     public String plannedEndTime;
 
     /**
-     * <p>The earliest start time to run the task to upgrade the kernel version of the cluster. The task runs within a specified period of time. Specify the time in the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time must be in UTC.</p>
+     * <p>The earliest time to start the scheduled task. The time must be in the \<code>YYYY-MM-DDThh:mm:ssZ\\</code> format and in UTC.</p>
      * 
      * <strong>example:</strong>
      * <p>2022-04-28T14:00:00Z</p>

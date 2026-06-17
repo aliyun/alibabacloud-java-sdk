@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class DescribeGlobalDatabaseNetworksRequest extends TeaModel {
     /**
-     * <p>The ID of the cluster.</p>
+     * <p>The cluster ID.</p>
      * <blockquote>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/98094.html">DescribeDBClusters</a> operation to query information about all clusters that are deployed in a specified region, such as the cluster ID.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/98094.html">DescribeDBClusters</a> operation to find the IDs of all clusters in a region.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -17,7 +17,7 @@ public class DescribeGlobalDatabaseNetworksRequest extends TeaModel {
     public String DBClusterId;
 
     /**
-     * <p>Specify the region in which you want to query GDNs. You can create secondary clusters for the GDNs.</p>
+     * <p>Returns only GDNs that support creating a secondary cluster in the specified region.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-beijing</p>
@@ -28,10 +28,14 @@ public class DescribeGlobalDatabaseNetworksRequest extends TeaModel {
     /**
      * <p>The description of the GDN. The description must meet the following requirements:</p>
      * <ul>
-     * <li>It cannot start with <code>http://</code> or <code>https://</code>.</li>
-     * <li>It must start with a letter.</li>
-     * <li>It can contain letters, digits, underscores (_), and hyphens (-).</li>
-     * <li>It must be 2 to 126 characters in length.</li>
+     * <li><p>It cannot start with <code>http://</code> or <code>https://</code>.</p>
+     * </li>
+     * <li><p>It must start with a letter or a Chinese character.</p>
+     * </li>
+     * <li><p>It can contain letters, Chinese characters, digits, underscores (_), and hyphens (-).</p>
+     * </li>
+     * <li><p>It must be 2 to 126 characters in length.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -41,7 +45,7 @@ public class DescribeGlobalDatabaseNetworksRequest extends TeaModel {
     public String GDNDescription;
 
     /**
-     * <p>The ID of the GDN.</p>
+     * <p>The GDN ID.</p>
      * 
      * <strong>example:</strong>
      * <p>gdn-****************</p>
@@ -56,7 +60,7 @@ public class DescribeGlobalDatabaseNetworksRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The number of the page to return. Default value: 1. The value must be an integer that is greater than 0.</p>
+     * <p>The page number. The value must be greater than 0. Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -65,11 +69,14 @@ public class DescribeGlobalDatabaseNetworksRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page. Default value: 30. Valid values:</p>
+     * <p>The number of entries to return on each page. Default value: 30. Valid values:</p>
      * <ul>
-     * <li>30</li>
-     * <li>50</li>
-     * <li>100</li>
+     * <li><p>30</p>
+     * </li>
+     * <li><p>50</p>
+     * </li>
+     * <li><p>100</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -79,7 +86,7 @@ public class DescribeGlobalDatabaseNetworksRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The ID of the resource group.</p>
+     * <p>The resource group ID.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-************</p>

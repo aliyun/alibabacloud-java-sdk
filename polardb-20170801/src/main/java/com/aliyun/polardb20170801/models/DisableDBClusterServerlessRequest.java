@@ -14,11 +14,32 @@ public class DisableDBClusterServerlessRequest extends TeaModel {
     @NameInMap("DBClusterId")
     public String DBClusterId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
+    @NameInMap("FromTimeService")
+    public Boolean fromTimeService;
+
     @NameInMap("OwnerAccount")
     public String ownerAccount;
 
     @NameInMap("OwnerId")
     public Long ownerId;
+
+    /**
+     * <strong>example:</strong>
+     * <p>2022-04-28T14:30:00Z</p>
+     */
+    @NameInMap("PlannedEndTime")
+    public String plannedEndTime;
+
+    /**
+     * <strong>example:</strong>
+     * <p>2022-04-28T14:00:00Z</p>
+     */
+    @NameInMap("PlannedStartTime")
+    public String plannedStartTime;
 
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
@@ -39,6 +60,14 @@ public class DisableDBClusterServerlessRequest extends TeaModel {
         return this.DBClusterId;
     }
 
+    public DisableDBClusterServerlessRequest setFromTimeService(Boolean fromTimeService) {
+        this.fromTimeService = fromTimeService;
+        return this;
+    }
+    public Boolean getFromTimeService() {
+        return this.fromTimeService;
+    }
+
     public DisableDBClusterServerlessRequest setOwnerAccount(String ownerAccount) {
         this.ownerAccount = ownerAccount;
         return this;
@@ -53,6 +82,22 @@ public class DisableDBClusterServerlessRequest extends TeaModel {
     }
     public Long getOwnerId() {
         return this.ownerId;
+    }
+
+    public DisableDBClusterServerlessRequest setPlannedEndTime(String plannedEndTime) {
+        this.plannedEndTime = plannedEndTime;
+        return this;
+    }
+    public String getPlannedEndTime() {
+        return this.plannedEndTime;
+    }
+
+    public DisableDBClusterServerlessRequest setPlannedStartTime(String plannedStartTime) {
+        this.plannedStartTime = plannedStartTime;
+        return this;
+    }
+    public String getPlannedStartTime() {
+        return this.plannedStartTime;
     }
 
     public DisableDBClusterServerlessRequest setResourceOwnerAccount(String resourceOwnerAccount) {

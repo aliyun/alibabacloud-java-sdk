@@ -5,7 +5,10 @@ import com.aliyun.tea.*;
 
 public class DescribeDBClusterVersionRequest extends TeaModel {
     /**
-     * <p>The ID of the cluster.</p>
+     * <p>The cluster ID.</p>
+     * <blockquote>
+     * <p>Call the <a href="https://help.aliyun.com/document_detail/98094.html">DescribeDBClusters</a> operation to view details of all clusters in your account, such as cluster IDs.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,10 +18,12 @@ public class DescribeDBClusterVersionRequest extends TeaModel {
     public String DBClusterId;
 
     /**
-     * <p>Specifies whether to query the information about the latest versions or the versions to which the cluster can be updated. Valid values:</p>
+     * <p>Specifies whether to return information about the latest version or a list of upgradable versions. Valid values:</p>
      * <ul>
-     * <li>LATEST_VERSION: the information about the latest versions.</li>
-     * <li>AVAILABLE_VERSION: the information about the versions to which the cluster can be updated.</li>
+     * <li><p>LATEST_VERSION: Queries information about the latest version.</p>
+     * </li>
+     * <li><p>AVAILABLE_VERSION: Queries a list of upgradable versions.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

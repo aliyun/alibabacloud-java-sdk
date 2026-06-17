@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeBackupsRequest extends TeaModel {
     /**
-     * <p>The ID of the backup set.</p>
+     * <p>The backup ID.</p>
      * 
      * <strong>example:</strong>
      * <p>11111111</p>
@@ -16,8 +16,10 @@ public class DescribeBackupsRequest extends TeaModel {
     /**
      * <p>The backup mode. Valid values:</p>
      * <ul>
-     * <li><strong>Automated</strong></li>
-     * <li><strong>Manual</strong></li>
+     * <li><p><strong>Automated</strong>: System automatic backup.</p>
+     * </li>
+     * <li><p><strong>Manual</strong>: Manual backup.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -27,9 +29,9 @@ public class DescribeBackupsRequest extends TeaModel {
     public String backupMode;
 
     /**
-     * <p>The region where the cross-region data backup file of the instance is stored.</p>
+     * <p>The destination region for cross-region backup.</p>
      * <blockquote>
-     * <p>This parameter is valid only for PolarDB for MySQL clusters.</p>
+     * <p>This parameter is supported only for PolarDB for MySQL.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -39,10 +41,12 @@ public class DescribeBackupsRequest extends TeaModel {
     public String backupRegion;
 
     /**
-     * <p>The status of the backup set. Valid values:</p>
+     * <p>The backup status. Valid values:</p>
      * <ul>
-     * <li><strong>Success</strong></li>
-     * <li><strong>Failed</strong></li>
+     * <li><p><strong>Success</strong>: The backup is complete.</p>
+     * </li>
+     * <li><p><strong>Failed</strong>: The backup failed.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -52,7 +56,7 @@ public class DescribeBackupsRequest extends TeaModel {
     public String backupStatus;
 
     /**
-     * <p>The ID of the cluster.</p>
+     * <p>The cluster ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -62,7 +66,7 @@ public class DescribeBackupsRequest extends TeaModel {
     public String DBClusterId;
 
     /**
-     * <p>The end of the time range to query. Specify the time in the <code>YYYY-MM-DDThh:mmZ</code> format. The time must be in UTC. The end time must be later than the start time.</p>
+     * <p>The end time of the query. The end time must be later than the start time. Specify the time in <code>YYYY-MM-DDThh:mmZ</code> format (UTC time).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -78,7 +82,7 @@ public class DescribeBackupsRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The page number. The value must be a positive integer that does not exceed the maximum value of the INTEGER data type. Default value: <strong>1</strong>.</p>
+     * <p>The page number. The value must be an integer greater than 0 and no greater than the maximum value of the Integer type. Default value: <strong>1</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -87,11 +91,14 @@ public class DescribeBackupsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return on each page. Valid values:</p>
+     * <p>The number of entries per page. Valid values:</p>
      * <ul>
-     * <li><strong>30</strong></li>
-     * <li><strong>50</strong></li>
-     * <li><strong>100</strong></li>
+     * <li><p><strong>30</strong></p>
+     * </li>
+     * <li><p><strong>50</strong></p>
+     * </li>
+     * <li><p><strong>100</strong></p>
+     * </li>
      * </ul>
      * <p>Default value: <strong>30</strong>.</p>
      * 
@@ -108,7 +115,7 @@ public class DescribeBackupsRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The beginning of the time range to query. Specify the time in the <code>yyyy-MM-ddTHH:mmZ</code> format. The time must be in UTC.</p>
+     * <p>The start time of the query. Specify the time in <code>YYYY-MM-DDThh:mmZ</code> format (UTC time).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -5,6 +5,14 @@ import com.aliyun.tea.*;
 
 public class CreateAccountZonalRequest extends TeaModel {
     /**
+     * <p>The description of the account. The description must meet the following requirements:</p>
+     * <ul>
+     * <li><p>Cannot start with <code>http://</code> or <code>https://</code>.</p>
+     * </li>
+     * <li><p>Be 2 to 256 characters in length.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>testdes</p>
      */
@@ -12,6 +20,17 @@ public class CreateAccountZonalRequest extends TeaModel {
     public String accountDescription;
 
     /**
+     * <p>The account name. The name must meet the following requirements:</p>
+     * <ul>
+     * <li><p>Start with a lowercase letter and end with a letter or a digit.</p>
+     * </li>
+     * <li><p>Contain only lowercase letters, digits, and underscores (_).</p>
+     * </li>
+     * <li><p>Be 2 to 16 characters in length.</p>
+     * </li>
+     * <li><p>Cannot be a reserved username, such as root or admin.</p>
+     * </li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,6 +40,15 @@ public class CreateAccountZonalRequest extends TeaModel {
     public String accountName;
 
     /**
+     * <p>The account password. The password must meet the following requirements:</p>
+     * <ul>
+     * <li><p>Contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters.</p>
+     * </li>
+     * <li><p>Be 8 to 32 characters in length.</p>
+     * </li>
+     * <li><p>Special characters are <code>!@#$%^&amp;*()_+-=</code>.</p>
+     * </li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -30,6 +58,20 @@ public class CreateAccountZonalRequest extends TeaModel {
     public String accountPassword;
 
     /**
+     * <p>The permissions of the account. Valid values:</p>
+     * <ul>
+     * <li><p>ReadWrite: read and write permissions.</p>
+     * </li>
+     * <li><p>ReadOnly: read-only permissions.</p>
+     * </li>
+     * <li><p>DMLOnly: DML permissions only.</p>
+     * </li>
+     * <li><p>DDLOnly: DDL permissions only.</p>
+     * </li>
+     * <li><p>ReadIndex: read and index permissions.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>ReadWrite</p>
      */
@@ -37,6 +79,14 @@ public class CreateAccountZonalRequest extends TeaModel {
     public String accountPrivilege;
 
     /**
+     * <p>The account type. Valid values:</p>
+     * <ul>
+     * <li><p>Normal: a standard account.</p>
+     * </li>
+     * <li><p>Super: a privileged account.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>Normal</p>
      */
@@ -44,6 +94,8 @@ public class CreateAccountZonalRequest extends TeaModel {
     public String accountType;
 
     /**
+     * <p>A client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token is case-sensitive and can contain a maximum of 64 ASCII characters.</p>
+     * 
      * <strong>example:</strong>
      * <p>6000170000591aed949d0f54a343f1a4233c1e7d1c5c******</p>
      */
@@ -51,6 +103,7 @@ public class CreateAccountZonalRequest extends TeaModel {
     public String clientToken;
 
     /**
+     * <p>The cluster ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -60,6 +113,8 @@ public class CreateAccountZonalRequest extends TeaModel {
     public String DBClusterId;
 
     /**
+     * <p>The name of the database that the destination account can access. You can specify multiple database names. Separate them with commas (,).</p>
+     * 
      * <strong>example:</strong>
      * <p>testdb</p>
      */
@@ -67,6 +122,8 @@ public class CreateAccountZonalRequest extends TeaModel {
     public String DBName;
 
     /**
+     * <p>The node type.</p>
+     * 
      * <strong>example:</strong>
      * <p>Normal</p>
      */
@@ -80,6 +137,14 @@ public class CreateAccountZonalRequest extends TeaModel {
     public Long ownerId;
 
     /**
+     * <p>Specifies whether to grant permissions on all current and future databases in the cluster. Valid values:</p>
+     * <ul>
+     * <li><p>0 or empty: Does not grant permissions.</p>
+     * </li>
+     * <li><p>1: Grants permissions.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */

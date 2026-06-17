@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpgradePolarClawPluginResponseBody extends TeaModel {
     /**
+     * <p>The application ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>pa-**************</p>
      */
@@ -12,6 +14,8 @@ public class UpgradePolarClawPluginResponseBody extends TeaModel {
     public String applicationId;
 
     /**
+     * <p>The response status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -19,6 +23,8 @@ public class UpgradePolarClawPluginResponseBody extends TeaModel {
     public Integer code;
 
     /**
+     * <p>The response message.</p>
+     * 
      * <strong>example:</strong>
      * <p>successful</p>
      */
@@ -26,6 +32,8 @@ public class UpgradePolarClawPluginResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The name of the newly installed npm package.</p>
+     * 
      * <strong>example:</strong>
      * <p>@larksuite/<a href="mailto:openclaw-lark@2026.4.7">openclaw-lark@2026.4.7</a></p>
      */
@@ -33,6 +41,8 @@ public class UpgradePolarClawPluginResponseBody extends TeaModel {
     public String npmPackage;
 
     /**
+     * <p>Indicates whether the operation was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -40,6 +50,8 @@ public class UpgradePolarClawPluginResponseBody extends TeaModel {
     public Boolean ok;
 
     /**
+     * <p>The ID of the upgraded plugin.</p>
+     * 
      * <strong>example:</strong>
      * <p>openclaw-lark</p>
      */
@@ -47,7 +59,7 @@ public class UpgradePolarClawPluginResponseBody extends TeaModel {
     public String pluginId;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>7E2FE3BB-C677-5FF9-9FC5-9CF364BD6BE5</p>
@@ -56,6 +68,8 @@ public class UpgradePolarClawPluginResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the gateway restarted.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

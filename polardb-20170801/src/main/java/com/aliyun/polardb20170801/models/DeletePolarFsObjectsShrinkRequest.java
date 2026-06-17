@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DeletePolarFsObjectsShrinkRequest extends TeaModel {
     /**
+     * <p>The cluster ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>pc-***</p>
      */
@@ -12,12 +14,14 @@ public class DeletePolarFsObjectsShrinkRequest extends TeaModel {
     public String DBClusterId;
 
     /**
+     * <p>The list of objects to delete.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("ObjectsToDelete")
     public String objectsToDeleteShrink;
 
     /**
+     * <p>The PolarLakebase instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

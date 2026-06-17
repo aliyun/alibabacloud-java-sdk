@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ModifyEncryptionDBRolePrivilegeResponseBody extends TeaModel {
     /**
+     * <p>The cluster ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>pc-******************</p>
      */
@@ -12,7 +14,7 @@ public class ModifyEncryptionDBRolePrivilegeResponseBody extends TeaModel {
     public String DBClusterId;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>925B84D9-CA72-432C-95CF-738C22******</p>

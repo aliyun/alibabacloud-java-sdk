@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribePolarClawMCPServersRequest extends TeaModel {
     /**
+     * <p>The application ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -13,6 +14,9 @@ public class DescribePolarClawMCPServersRequest extends TeaModel {
     @NameInMap("ApplicationId")
     public String applicationId;
 
+    /**
+     * <p>A list of MCP server names. If this parameter is empty, the configurations of all MCP servers are returned.</p>
+     */
     @NameInMap("ServerList")
     public java.util.List<String> serverList;
 

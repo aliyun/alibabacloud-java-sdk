@@ -4,10 +4,15 @@ package com.aliyun.polardb20170801.models;
 import com.aliyun.tea.*;
 
 public class DescribePolarClawAgentsResponseBody extends TeaModel {
+    /**
+     * <p>The list of agents.</p>
+     */
     @NameInMap("Agents")
     public java.util.List<DescribePolarClawAgentsResponseBodyAgents> agents;
 
     /**
+     * <p>The application ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>pa-**************</p>
      */
@@ -15,6 +20,8 @@ public class DescribePolarClawAgentsResponseBody extends TeaModel {
     public String applicationId;
 
     /**
+     * <p>The status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -22,6 +29,8 @@ public class DescribePolarClawAgentsResponseBody extends TeaModel {
     public Integer code;
 
     /**
+     * <p>The default agent ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>main</p>
      */
@@ -29,6 +38,8 @@ public class DescribePolarClawAgentsResponseBody extends TeaModel {
     public String defaultId;
 
     /**
+     * <p>The main agent key name.</p>
+     * 
      * <strong>example:</strong>
      * <p>main</p>
      */
@@ -36,6 +47,8 @@ public class DescribePolarClawAgentsResponseBody extends TeaModel {
     public String mainKey;
 
     /**
+     * <p>The message.</p>
+     * 
      * <strong>example:</strong>
      * <p>successful</p>
      */
@@ -43,7 +56,7 @@ public class DescribePolarClawAgentsResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>24A1990B-4F6E-482B-B8CB-75C612******</p>
@@ -52,6 +65,8 @@ public class DescribePolarClawAgentsResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The routing scope.</p>
+     * 
      * <strong>example:</strong>
      * <p>per-sender</p>
      */
@@ -129,6 +144,8 @@ public class DescribePolarClawAgentsResponseBody extends TeaModel {
 
     public static class DescribePolarClawAgentsResponseBodyAgentsIdentity extends TeaModel {
         /**
+         * <p>The path or content of the avatar.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -136,6 +153,8 @@ public class DescribePolarClawAgentsResponseBody extends TeaModel {
         public String avatar;
 
         /**
+         * <p>The avatar URL.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -143,6 +162,8 @@ public class DescribePolarClawAgentsResponseBody extends TeaModel {
         public String avatarUrl;
 
         /**
+         * <p>The emoji for the identity. This can be a Unicode code point (e.g., <code>U+1F99E</code>) or an emoji character.</p>
+         * 
          * <strong>example:</strong>
          * <p>U+1F99E</p>
          */
@@ -150,6 +171,8 @@ public class DescribePolarClawAgentsResponseBody extends TeaModel {
         public String emoji;
 
         /**
+         * <p>The identity name.</p>
+         * 
          * <strong>example:</strong>
          * <p>PolarClaw</p>
          */
@@ -157,6 +180,8 @@ public class DescribePolarClawAgentsResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>The identity theme.</p>
+         * 
          * <strong>example:</strong>
          * <p>space lobster</p>
          */
@@ -212,7 +237,7 @@ public class DescribePolarClawAgentsResponseBody extends TeaModel {
 
     public static class DescribePolarClawAgentsResponseBodyAgents extends TeaModel {
         /**
-         * <p>Agent ID</p>
+         * <p>The agent ID.</p>
          * 
          * <strong>example:</strong>
          * <p>main</p>
@@ -220,10 +245,15 @@ public class DescribePolarClawAgentsResponseBody extends TeaModel {
         @NameInMap("Id")
         public String id;
 
+        /**
+         * <p>The agent\&quot;s identity.</p>
+         */
         @NameInMap("Identity")
         public DescribePolarClawAgentsResponseBodyAgentsIdentity identity;
 
         /**
+         * <p>The agent display name.</p>
+         * 
          * <strong>example:</strong>
          * <p>main</p>
          */

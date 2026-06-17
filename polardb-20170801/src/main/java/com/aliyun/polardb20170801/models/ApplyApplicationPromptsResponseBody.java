@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ApplyApplicationPromptsResponseBody extends TeaModel {
     /**
+     * <p>The ID of the application.</p>
+     * 
      * <strong>example:</strong>
      * <p>pa-**************</p>
      */
@@ -12,7 +14,7 @@ public class ApplyApplicationPromptsResponseBody extends TeaModel {
     public String applicationId;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>CDB3258F-B5DE-43C4-8935-CBA0CA******</p>

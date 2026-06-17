@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class ModifyMaskingRulesResponseBody extends TeaModel {
     /**
-     * <p>The message that is returned for the request.</p>
+     * <p>The response message.</p>
      * <blockquote>
-     * <p>If the request is successful, Successful is returned. If the request fails, an error message such as an error code is returned.</p>
+     * <p>If the request is successful, <code>Successful</code> is returned. If the request fails, an error message is returned.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -17,7 +17,7 @@ public class ModifyMaskingRulesResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>99B355CE-526C-478B-B730-AD9D7C******</p>
@@ -26,10 +26,12 @@ public class ModifyMaskingRulesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request is successful. Valid value:</p>
+     * <p>Indicates whether the request was successful. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>:</li>
-     * <li><strong>false</strong></li>
+     * <li><p><strong>true</strong></p>
+     * </li>
+     * <li><p><strong>false</strong></p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

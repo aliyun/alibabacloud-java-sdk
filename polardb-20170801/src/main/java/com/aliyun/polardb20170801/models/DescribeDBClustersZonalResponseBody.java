@@ -4,10 +4,15 @@ package com.aliyun.polardb20170801.models;
 import com.aliyun.tea.*;
 
 public class DescribeDBClustersZonalResponseBody extends TeaModel {
+    /**
+     * <p>The list of clusters.</p>
+     */
     @NameInMap("Items")
     public java.util.List<DescribeDBClustersZonalResponseBodyItems> items;
 
     /**
+     * <p>The maximum number of entries returned for the current request. Default value: 10.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -15,6 +20,8 @@ public class DescribeDBClustersZonalResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>The token to retrieve the next page of results. If more results are available, this parameter is returned. To retrieve the next page, include this token in your next request. If all results have been returned, this parameter is not returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>212db86sca4384811e0b5e8707e******</p>
      */
@@ -22,6 +29,8 @@ public class DescribeDBClustersZonalResponseBody extends TeaModel {
     public String nextToken;
 
     /**
+     * <p>The page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>12</p>
      */
@@ -29,6 +38,8 @@ public class DescribeDBClustersZonalResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of clusters on the current page.</p>
+     * 
      * <strong>example:</strong>
      * <p>5</p>
      */
@@ -36,6 +47,8 @@ public class DescribeDBClustersZonalResponseBody extends TeaModel {
     public Integer pageRecordCount;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>9B7BFB11-C077-4FE3-B051-F69CEB******</p>
      */
@@ -43,6 +56,8 @@ public class DescribeDBClustersZonalResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total number of records.</p>
+     * 
      * <strong>example:</strong>
      * <p>16</p>
      */
@@ -112,6 +127,8 @@ public class DescribeDBClustersZonalResponseBody extends TeaModel {
 
     public static class DescribeDBClustersZonalResponseBodyItemsTags extends TeaModel {
         /**
+         * <p>The tag key.</p>
+         * 
          * <strong>example:</strong>
          * <p>MySQL</p>
          */
@@ -119,6 +136,8 @@ public class DescribeDBClustersZonalResponseBody extends TeaModel {
         public String key;
 
         /**
+         * <p>The tag value.</p>
+         * 
          * <strong>example:</strong>
          * <p>5.6</p>
          */
@@ -150,6 +169,14 @@ public class DescribeDBClustersZonalResponseBody extends TeaModel {
 
     public static class DescribeDBClustersZonalResponseBodyItems extends TeaModel {
         /**
+         * <p>The AI node type. Valid values:</p>
+         * <ul>
+         * <li><p>SearchNode: search node</p>
+         * </li>
+         * <li><p>DLNode: AI node</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>SearchNode</p>
          */
@@ -157,6 +184,18 @@ public class DescribeDBClustersZonalResponseBody extends TeaModel {
         public String aiType;
 
         /**
+         * <p>The Cluster Edition. The following editions are supported:</p>
+         * <ul>
+         * <li><p>Normal: Cluster Edition</p>
+         * </li>
+         * <li><p>Basic: single node</p>
+         * </li>
+         * <li><p>Archive: X-Engine</p>
+         * </li>
+         * <li><p>NormalMultimaster: Multi-master Cluster (Database/Table)</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Normal</p>
          */
@@ -164,6 +203,8 @@ public class DescribeDBClustersZonalResponseBody extends TeaModel {
         public String category;
 
         /**
+         * <p>The ID of the central control region.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-beijing</p>
          */
@@ -171,6 +212,8 @@ public class DescribeDBClustersZonalResponseBody extends TeaModel {
         public String centralControlRegionId;
 
         /**
+         * <p>The cloud service provider.</p>
+         * 
          * <strong>example:</strong>
          * <p>ENS</p>
          */
@@ -178,6 +221,8 @@ public class DescribeDBClustersZonalResponseBody extends TeaModel {
         public String cloudProvider;
 
         /**
+         * <p>The number of CPU cores.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -185,6 +230,8 @@ public class DescribeDBClustersZonalResponseBody extends TeaModel {
         public String cpuCores;
 
         /**
+         * <p>The creation time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2020-08-14T05:58:42Z</p>
          */
@@ -192,6 +239,8 @@ public class DescribeDBClustersZonalResponseBody extends TeaModel {
         public String createTime;
 
         /**
+         * <p>The description of the cluster.</p>
+         * 
          * <strong>example:</strong>
          * <p>GDN-1</p>
          */
@@ -199,6 +248,8 @@ public class DescribeDBClustersZonalResponseBody extends TeaModel {
         public String DBClusterDescription;
 
         /**
+         * <p>The cluster ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>pc-****************</p>
          */
@@ -206,6 +257,8 @@ public class DescribeDBClustersZonalResponseBody extends TeaModel {
         public String DBClusterId;
 
         /**
+         * <p>The status of the cluster.</p>
+         * 
          * <strong>example:</strong>
          * <p>Running</p>
          */
@@ -213,6 +266,8 @@ public class DescribeDBClustersZonalResponseBody extends TeaModel {
         public String DBClusterStatus;
 
         /**
+         * <p>The node specifications.</p>
+         * 
          * <strong>example:</strong>
          * <p>polar.mysql.g1.tiny.c</p>
          */
@@ -220,6 +275,8 @@ public class DescribeDBClustersZonalResponseBody extends TeaModel {
         public String DBNodeClass;
 
         /**
+         * <p>The number of nodes.</p>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */
@@ -227,6 +284,8 @@ public class DescribeDBClustersZonalResponseBody extends TeaModel {
         public Integer DBNodeNumber;
 
         /**
+         * <p>The database type.</p>
+         * 
          * <strong>example:</strong>
          * <p>MySQL</p>
          */
@@ -234,6 +293,8 @@ public class DescribeDBClustersZonalResponseBody extends TeaModel {
         public String DBType;
 
         /**
+         * <p>The database version.</p>
+         * 
          * <strong>example:</strong>
          * <p>5.6</p>
          */
@@ -241,6 +302,8 @@ public class DescribeDBClustersZonalResponseBody extends TeaModel {
         public String DBVersion;
 
         /**
+         * <p>The ENS region ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>sg-singapore-9</p>
          */
@@ -248,6 +311,11 @@ public class DescribeDBClustersZonalResponseBody extends TeaModel {
         public String ENSRegionId;
 
         /**
+         * <p>The expiration time of the cluster.</p>
+         * <blockquote>
+         * <p>This parameter is returned only for <strong>Prepaid</strong> (subscription) clusters. For <strong>Postpaid</strong> (pay-as-you-go) clusters, this parameter is empty.</p>
+         * </blockquote>
+         * 
          * <strong>example:</strong>
          * <p>2022-09-14T16:00:00Z</p>
          */
@@ -255,6 +323,14 @@ public class DescribeDBClustersZonalResponseBody extends TeaModel {
         public String expireTime;
 
         /**
+         * <p>Indicates whether the cluster has expired. Valid values:</p>
+         * <ul>
+         * <li><p>true</p>
+         * </li>
+         * <li><p>false</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
@@ -262,6 +338,16 @@ public class DescribeDBClustersZonalResponseBody extends TeaModel {
         public String expired;
 
         /**
+         * <p>The lock state of the cluster. Valid values:</p>
+         * <ul>
+         * <li><p>Unlock: Normal.</p>
+         * </li>
+         * <li><p>ManualLock: The cluster is manually locked.</p>
+         * </li>
+         * <li><p>LockByExpiration: The cluster is automatically locked upon expiration.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Unlock</p>
          */
@@ -269,6 +355,14 @@ public class DescribeDBClustersZonalResponseBody extends TeaModel {
         public String lockMode;
 
         /**
+         * <p>The billing method. Valid values:</p>
+         * <ul>
+         * <li><p>Postpaid: pay-as-you-go.</p>
+         * </li>
+         * <li><p>Prepaid: subscription.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Prepaid</p>
          */
@@ -276,6 +370,8 @@ public class DescribeDBClustersZonalResponseBody extends TeaModel {
         public String payType;
 
         /**
+         * <p>The Serverless type. \<code>**AgileServerless**\\</code> indicates that the cluster is a Serverless cluster. An empty value indicates that the cluster is a common cluster.</p>
+         * 
          * <strong>example:</strong>
          * <p>AgileServerless</p>
          */
@@ -283,6 +379,8 @@ public class DescribeDBClustersZonalResponseBody extends TeaModel {
         public String serverlessType;
 
         /**
+         * <p>The storage capacity of the instance.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -290,6 +388,20 @@ public class DescribeDBClustersZonalResponseBody extends TeaModel {
         public Long storageSpace;
 
         /**
+         * <p>The storage class of the Standard Edition cluster. Valid values:</p>
+         * <ul>
+         * <li><p>essdpl0</p>
+         * </li>
+         * <li><p>essdpl1</p>
+         * </li>
+         * <li><p>essdpl2</p>
+         * </li>
+         * <li><p>essdpl3</p>
+         * </li>
+         * <li><p>essdautopl</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>essdautopl</p>
          */
@@ -297,6 +409,8 @@ public class DescribeDBClustersZonalResponseBody extends TeaModel {
         public String storageType;
 
         /**
+         * <p>The used storage space of the cluster. Unit: bytes.</p>
+         * 
          * <strong>example:</strong>
          * <p>3009413120</p>
          */
@@ -304,6 +418,14 @@ public class DescribeDBClustersZonalResponseBody extends TeaModel {
         public Long storageUsed;
 
         /**
+         * <p>Indicates whether strong consistency is enabled for data across multiple zones. Valid values:</p>
+         * <ul>
+         * <li><p><strong>ON</strong>: Strong consistency is enabled. This applies to Standard Edition clusters that are deployed in three zones.</p>
+         * </li>
+         * <li><p><strong>OFF</strong>: Strong consistency is not enabled.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>ON</p>
          */
@@ -311,16 +433,29 @@ public class DescribeDBClustersZonalResponseBody extends TeaModel {
         public String strictConsistency;
 
         /**
+         * <p>The specification type of the compute node. Valid values:</p>
+         * <ul>
+         * <li><p><strong>Exclusive</strong>: Dedicated</p>
+         * </li>
+         * <li><p><strong>General</strong>: General-purpose</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Exclusive</p>
          */
         @NameInMap("SubCategory")
         public String subCategory;
 
+        /**
+         * <p>The list of tags.</p>
+         */
         @NameInMap("Tags")
         public java.util.List<DescribeDBClustersZonalResponseBodyItemsTags> tags;
 
         /**
+         * <p>The ID of the virtual private cloud (VPC).</p>
+         * 
          * <strong>example:</strong>
          * <p>vpc-****************</p>
          */
@@ -328,6 +463,8 @@ public class DescribeDBClustersZonalResponseBody extends TeaModel {
         public String vpcId;
 
         /**
+         * <p>The virtual switch ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>vsw-***************</p>
          */
@@ -335,6 +472,8 @@ public class DescribeDBClustersZonalResponseBody extends TeaModel {
         public String vswitchId;
 
         /**
+         * <p>The zone ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-hangzhou-i</p>
          */

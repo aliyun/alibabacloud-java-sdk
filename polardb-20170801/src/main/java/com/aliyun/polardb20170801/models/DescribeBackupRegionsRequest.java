@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeBackupRegionsRequest extends TeaModel {
     /**
+     * <p>The cluster ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>pc-uf64u64fln9039***</p>
      */

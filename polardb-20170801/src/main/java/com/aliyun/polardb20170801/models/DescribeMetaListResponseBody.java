@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeMetaListResponseBody extends TeaModel {
     /**
-     * <p>The ID of the cluster.</p>
+     * <p>The cluster ID.</p>
      * 
      * <strong>example:</strong>
      * <p>pc-bp1s826a1up******</p>
@@ -14,13 +14,13 @@ public class DescribeMetaListResponseBody extends TeaModel {
     public String DBClusterId;
 
     /**
-     * <p>The details of databases and tables that can be restored.</p>
+     * <p>The details of recoverable databases and tables.</p>
      */
     @NameInMap("Items")
     public java.util.List<DescribeMetaListResponseBodyItems> items;
 
     /**
-     * <p>The number of the returned page.</p>
+     * <p>The page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -29,7 +29,7 @@ public class DescribeMetaListResponseBody extends TeaModel {
     public String pageNumber;
 
     /**
-     * <p>The number of entries returned per page.</p>
+     * <p>The number of records on the current page.</p>
      * 
      * <strong>example:</strong>
      * <p>30</p>
@@ -38,7 +38,7 @@ public class DescribeMetaListResponseBody extends TeaModel {
     public String pageSize;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>AA815DE7-B576-4B22-B33C-3FB31A******</p>
@@ -47,7 +47,7 @@ public class DescribeMetaListResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of returned pages.</p>
+     * <p>The total number of pages.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -56,7 +56,7 @@ public class DescribeMetaListResponseBody extends TeaModel {
     public String totalPageCount;
 
     /**
-     * <p>The total number of entries.</p>
+     * <p>The total number of records.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>
@@ -127,7 +127,7 @@ public class DescribeMetaListResponseBody extends TeaModel {
 
     public static class DescribeMetaListResponseBodyItems extends TeaModel {
         /**
-         * <p>The name of the database that can be restored.</p>
+         * <p>The name of the database that can be recovered.</p>
          * 
          * <strong>example:</strong>
          * <p>test_db</p>
@@ -135,11 +135,14 @@ public class DescribeMetaListResponseBody extends TeaModel {
         @NameInMap("Database")
         public String database;
 
+        /**
+         * <p>The size of the database or table, in bytes.</p>
+         */
         @NameInMap("Size")
         public java.util.List<Long> size;
 
         /**
-         * <p>The name of the table that can be restored.</p>
+         * <p>The names of the tables that can be recovered.</p>
          */
         @NameInMap("Tables")
         public java.util.List<String> tables;

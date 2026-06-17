@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeDBClusterParametersResponseBody extends TeaModel {
     /**
-     * <p>The ID of the cluster.</p>
+     * <p>The cluster ID.</p>
      * 
      * <strong>example:</strong>
      * <p>pc-bp1s826a1up******</p>
@@ -14,11 +14,14 @@ public class DescribeDBClusterParametersResponseBody extends TeaModel {
     public String DBClusterId;
 
     /**
-     * <p>The database engine that the clusters runs. Valid values:</p>
+     * <p>The database type. Valid values:</p>
      * <ul>
-     * <li><strong>MySQL</strong></li>
-     * <li><strong>PostgreSQL</strong></li>
-     * <li><strong>Oracle</strong></li>
+     * <li><p><strong>MySQL</strong></p>
+     * </li>
+     * <li><p><strong>PostgreSQL</strong></p>
+     * </li>
+     * <li><p><strong>Oracle</strong></p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -28,20 +31,29 @@ public class DescribeDBClusterParametersResponseBody extends TeaModel {
     public String DBType;
 
     /**
-     * <p>The version of the database engine. </p>
+     * <p>The database engine version.
+     * Valid values for MySQL:</p>
      * <ul>
-     * <li>Valid values for the MySQL database engine:   <ul>
-     * <li><strong>5.6</strong></li>
-     * <li><strong>5.7</strong></li>
-     * <li><strong>8.0</strong></li>
-     * </ul>
+     * <li><p><strong>5.6</strong></p>
      * </li>
-     * <li>Valid value for the PostgreSQL database engine:    <ul>
-     * <li><strong>11</strong></li>
-     * <li><strong>14</strong></li>
-     * </ul>
+     * <li><p><strong>5.7</strong></p>
      * </li>
-     * <li>Valid value for the Oracle database engine:  <strong>11</strong></li>
+     * <li><p><strong>8.0</strong></p>
+     * </li>
+     * </ul>
+     * <p>Valid values for PostgreSQL:</p>
+     * <ul>
+     * <li><p><strong>11</strong></p>
+     * </li>
+     * <li><p><strong>14</strong></p>
+     * </li>
+     * </ul>
+     * <p>Valid values for Oracle:</p>
+     * <ul>
+     * <li><p><strong>11</strong></p>
+     * </li>
+     * <li><p><strong>14</strong></p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -51,7 +63,7 @@ public class DescribeDBClusterParametersResponseBody extends TeaModel {
     public String DBVersion;
 
     /**
-     * <p>The cluster engine.</p>
+     * <p>The engine.</p>
      * 
      * <strong>example:</strong>
      * <p>POLARDB</p>
@@ -72,7 +84,7 @@ public class DescribeDBClusterParametersResponseBody extends TeaModel {
     public DescribeDBClusterParametersResponseBodyParameters parameters;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>EBEAA83D-1734-42E3-85E3-E25F6E******</p>

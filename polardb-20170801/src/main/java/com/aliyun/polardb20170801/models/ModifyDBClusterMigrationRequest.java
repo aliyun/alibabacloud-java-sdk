@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class ModifyDBClusterMigrationRequest extends TeaModel {
     /**
-     * <p>The endpoints to be switched. The endpoints are in the JSON format.</p>
+     * <p>The specific endpoints to be switched. The value is a JSON string that specifies the endpoints to be swapped.</p>
      * <blockquote>
-     * <p>This parameter is valid when the SwapConnectionString parameter is set to true.</p>
+     * <p>This parameter is valid only when SwapConnectionString is set to true.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -17,7 +17,7 @@ public class ModifyDBClusterMigrationRequest extends TeaModel {
     public String connectionStrings;
 
     /**
-     * <p>The ID of cluster.</p>
+     * <p>The ID of the PolarDB cluster.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -27,10 +27,12 @@ public class ModifyDBClusterMigrationRequest extends TeaModel {
     public String DBClusterId;
 
     /**
-     * <p>The ID of the new instance or new cluster. Valid values:</p>
+     * <p>The ID of the new instance or cluster. Valid values:</p>
      * <ul>
-     * <li>To perform a data migration, enter the ID of the PolarDB cluster.</li>
-     * <li>To perform a migration rollback, enter the ID of the ApsaraDB for RDS instance.</li>
+     * <li><p>Before the switch, enter the PolarDB cluster ID to perform a switch.</p>
+     * </li>
+     * <li><p>After the switch, enter the RDS instance ID to perform a rollback.</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -56,7 +58,7 @@ public class ModifyDBClusterMigrationRequest extends TeaModel {
     public String securityToken;
 
     /**
-     * <p>The ID of the source ApsaraDB RDS instance.</p>
+     * <p>The ID of the source RDS instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -66,10 +68,12 @@ public class ModifyDBClusterMigrationRequest extends TeaModel {
     public String sourceRDSDBInstanceId;
 
     /**
-     * <p>Specifies whether to switch the endpoints. Valid values:</p>
+     * <p>Specifies whether to switch the endpoint. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: switches the endpoints. If you select this option, you do not need the change the endpoint in your applications.</li>
-     * <li><strong>false</strong>: does not switch the endpoints. If you select this option, you must specify the endpoint of the PolarDB cluster in your applications.</li>
+     * <li><p><strong>true</strong>: Switches the endpoint. The application can connect to the database without changing its connection configuration.</p>
+     * </li>
+     * <li><p><strong>false</strong>: Does not switch the endpoint. The application must be changed to use the new PolarDB endpoint.</p>
+     * </li>
      * </ul>
      * <p>Default value: <strong>false</strong>.</p>
      * 

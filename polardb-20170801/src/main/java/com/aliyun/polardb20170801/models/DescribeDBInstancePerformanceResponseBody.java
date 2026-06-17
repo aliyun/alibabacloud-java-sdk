@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeDBInstancePerformanceResponseBody extends TeaModel {
     /**
+     * <p>The node ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>pi-*************</p>
      */
@@ -12,6 +14,16 @@ public class DescribeDBInstancePerformanceResponseBody extends TeaModel {
     public String DBInstanceId;
 
     /**
+     * <p>The database engine type. Valid values:</p>
+     * <ul>
+     * <li><p><strong>MySQL</strong></p>
+     * </li>
+     * <li><p><strong>PostgreSQL</strong></p>
+     * </li>
+     * <li><p><strong>Oracle</strong></p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>MySQL</p>
      */
@@ -19,6 +31,16 @@ public class DescribeDBInstancePerformanceResponseBody extends TeaModel {
     public String DBType;
 
     /**
+     * <p>The MySQL version number. Valid values:</p>
+     * <ul>
+     * <li><p><strong>5.6</strong></p>
+     * </li>
+     * <li><p><strong>5.7</strong></p>
+     * </li>
+     * <li><p><strong>8.0</strong></p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>5.6</p>
      */
@@ -26,6 +48,8 @@ public class DescribeDBInstancePerformanceResponseBody extends TeaModel {
     public String DBVersion;
 
     /**
+     * <p>The end time of the query. The time is in the <code>yyyy-MM-ddTHH:mmZ</code> format in UTC.</p>
+     * 
      * <strong>example:</strong>
      * <p>2020-09-23T01:01Z</p>
      */
@@ -33,6 +57,8 @@ public class DescribeDBInstancePerformanceResponseBody extends TeaModel {
     public String endTime;
 
     /**
+     * <p>The database engine type.</p>
+     * 
      * <strong>example:</strong>
      * <p>POLARDB</p>
      */
@@ -43,6 +69,8 @@ public class DescribeDBInstancePerformanceResponseBody extends TeaModel {
     public DescribeDBInstancePerformanceResponseBodyPerformanceKeys performanceKeys;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>F2A9EFA7-915F-4572-8299-85A307******</p>
      */
@@ -50,6 +78,8 @@ public class DescribeDBInstancePerformanceResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The start time of the query. The time is in the <code>yyyy-MM-ddTHH:mmZ</code> format in UTC.</p>
+     * 
      * <strong>example:</strong>
      * <p>2020-09-23T01:01Z</p>
      */

@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class ListPolarClawBindingsResponseBody extends TeaModel {
     /**
+     * <p>The application ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>pa-**************</p>
      */
     @NameInMap("ApplicationId")
     public String applicationId;
 
+    /**
+     * <p>The list of bindings.</p>
+     */
     @NameInMap("Bindings")
     public java.util.List<ListPolarClawBindingsResponseBodyBindings> bindings;
 
     /**
+     * <p>The status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -22,6 +29,8 @@ public class ListPolarClawBindingsResponseBody extends TeaModel {
     public Integer code;
 
     /**
+     * <p>The response message.</p>
+     * 
      * <strong>example:</strong>
      * <p>successful</p>
      */
@@ -29,7 +38,7 @@ public class ListPolarClawBindingsResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>7F2007D3-7E74-4ECB-89A8-BF130D******</p>
@@ -84,7 +93,7 @@ public class ListPolarClawBindingsResponseBody extends TeaModel {
 
     public static class ListPolarClawBindingsResponseBodyBindings extends TeaModel {
         /**
-         * <p>Agent ID</p>
+         * <p>The agent ID.</p>
          * 
          * <strong>example:</strong>
          * <p>work</p>
@@ -93,7 +102,7 @@ public class ListPolarClawBindingsResponseBody extends TeaModel {
         public String agentId;
 
         /**
-         * <p>Channel ID</p>
+         * <p>The channel ID.</p>
          * 
          * <strong>example:</strong>
          * <p>feishu</p>
@@ -102,7 +111,7 @@ public class ListPolarClawBindingsResponseBody extends TeaModel {
         public String channel;
 
         /**
-         * <p>Account ID</p>
+         * <p>The account ID.</p>
          * 
          * <strong>example:</strong>
          * <p>default</p>

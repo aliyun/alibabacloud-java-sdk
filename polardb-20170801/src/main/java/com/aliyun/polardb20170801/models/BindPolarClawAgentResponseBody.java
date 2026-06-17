@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class BindPolarClawAgentResponseBody extends TeaModel {
     /**
-     * <p>Agent ID</p>
+     * <p>The agent ID.</p>
      * 
      * <strong>example:</strong>
      * <p>work</p>
@@ -14,17 +14,22 @@ public class BindPolarClawAgentResponseBody extends TeaModel {
     public String agentId;
 
     /**
+     * <p>The application ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>pa-********************</p>
      */
     @NameInMap("ApplicationId")
     public String applicationId;
 
+    /**
+     * <p>Details of the newly created binding.</p>
+     */
     @NameInMap("Binding")
     public BindPolarClawAgentResponseBodyBinding binding;
 
     /**
-     * <p>200</p>
+     * <p>The HTTP status code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -33,7 +38,7 @@ public class BindPolarClawAgentResponseBody extends TeaModel {
     public Integer code;
 
     /**
-     * <p>successful</p>
+     * <p>A message that indicates the request result.</p>
      * 
      * <strong>example:</strong>
      * <p>successful</p>
@@ -42,6 +47,8 @@ public class BindPolarClawAgentResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>2281C6C9-CBAB-1AFD-8400-670750CF6025_2212</p>
      */
@@ -49,6 +56,8 @@ public class BindPolarClawAgentResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total number of global bindings after the operation.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -118,6 +127,8 @@ public class BindPolarClawAgentResponseBody extends TeaModel {
 
     public static class BindPolarClawAgentResponseBodyBinding extends TeaModel {
         /**
+         * <p>The account ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>default</p>
          */
@@ -125,7 +136,7 @@ public class BindPolarClawAgentResponseBody extends TeaModel {
         public String accountId;
 
         /**
-         * <p>Agent ID</p>
+         * <p>The agent ID.</p>
          * 
          * <strong>example:</strong>
          * <p>work</p>
@@ -134,6 +145,8 @@ public class BindPolarClawAgentResponseBody extends TeaModel {
         public String agentId;
 
         /**
+         * <p>The channel ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>feishu</p>
          */

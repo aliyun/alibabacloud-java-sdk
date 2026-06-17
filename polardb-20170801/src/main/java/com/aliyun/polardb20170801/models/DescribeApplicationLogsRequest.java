@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeApplicationLogsRequest extends TeaModel {
     /**
+     * <p>The application ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -13,13 +14,26 @@ public class DescribeApplicationLogsRequest extends TeaModel {
     @NameInMap("ApplicationId")
     public String applicationId;
 
+    /**
+     * <p>The component instance ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>pac-xxx</p>
+     */
     @NameInMap("ComponentName")
     public String componentName;
 
+    /**
+     * <p>The container name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>analytics</p>
+     */
     @NameInMap("ContainerName")
     public String containerName;
 
     /**
+     * <p>The end time for the query. Specify the time in <code>YYYY-MM-DDTHH:mmZ</code> format (UTC).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -29,6 +43,8 @@ public class DescribeApplicationLogsRequest extends TeaModel {
     public String endTime;
 
     /**
+     * <p>The keyword to search for. This parameter applies only to polarclaw instances.</p>
+     * 
      * <strong>example:</strong>
      * <p>Config</p>
      */
@@ -36,6 +52,8 @@ public class DescribeApplicationLogsRequest extends TeaModel {
     public String keyword;
 
     /**
+     * <p>The log level. This parameter applies only to polarclaw instances.</p>
+     * 
      * <strong>example:</strong>
      * <p>WARN</p>
      */
@@ -49,6 +67,8 @@ public class DescribeApplicationLogsRequest extends TeaModel {
     public Long ownerId;
 
     /**
+     * <p>The page number to return. The default value is 1.</p>
+     * 
      * <strong>example:</strong>
      * <p>3</p>
      */
@@ -56,6 +76,8 @@ public class DescribeApplicationLogsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries to return on each page. Default value: <strong>30</strong>. Valid values: 30 to 100.</p>
+     * 
      * <strong>example:</strong>
      * <p>100</p>
      */
@@ -63,6 +85,7 @@ public class DescribeApplicationLogsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -75,6 +98,7 @@ public class DescribeApplicationLogsRequest extends TeaModel {
     public String resourceOwnerAccount;
 
     /**
+     * <p>The start time for the query. Specify the time in <code>YYYY-MM-DDTHH:mmZ</code> format (UTC).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -84,6 +108,8 @@ public class DescribeApplicationLogsRequest extends TeaModel {
     public String startTime;
 
     /**
+     * <p>The log type. This parameter applies only to polarclaw instances. Currently, only <code>gateway</code> is supported.</p>
+     * 
      * <strong>example:</strong>
      * <p>gateway</p>
      */

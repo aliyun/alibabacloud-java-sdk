@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeDBClusterPerformanceResponseBody extends TeaModel {
     /**
-     * <p>The cluster ID.</p>
+     * <p>The database cluster ID.</p>
      * 
      * <strong>example:</strong>
      * <p>pc-*****************</p>
@@ -14,7 +14,7 @@ public class DescribeDBClusterPerformanceResponseBody extends TeaModel {
     public String DBClusterId;
 
     /**
-     * <p>The type of the database engine.</p>
+     * <p>The compatible database type.</p>
      * 
      * <strong>example:</strong>
      * <p>MySQL</p>
@@ -23,7 +23,7 @@ public class DescribeDBClusterPerformanceResponseBody extends TeaModel {
     public String DBType;
 
     /**
-     * <p>The version of the database engine.</p>
+     * <p>The compatible database version.</p>
      * 
      * <strong>example:</strong>
      * <p>8.0</p>
@@ -32,7 +32,7 @@ public class DescribeDBClusterPerformanceResponseBody extends TeaModel {
     public String DBVersion;
 
     /**
-     * <p>The end time of the query. The time follows the ISO 8601 standard in the <code>yyyy-MM-ddTHH:mm:ssZ</code> format. The time is displayed in UTC.</p>
+     * <p>The end of the time range. The time is in the <code>yyyy-MM-ddTHH:mm:ssZ</code> format and is displayed in UTC.</p>
      * 
      * <strong>example:</strong>
      * <p>2020-09-23T01:01:00Z</p>
@@ -53,7 +53,7 @@ public class DescribeDBClusterPerformanceResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The start time of the query. The time follows the ISO 8601 standard in the <code>yyyy-MM-ddTHH:mm:ssZ</code> format. The time is displayed in UTC.</p>
+     * <p>The beginning of the time range. The time is in the <code>yyyy-MM-ddTHH:mm:ssZ</code> format and is displayed in UTC.</p>
      * 
      * <strong>example:</strong>
      * <p>2020-09-23T01:00:00Z</p>

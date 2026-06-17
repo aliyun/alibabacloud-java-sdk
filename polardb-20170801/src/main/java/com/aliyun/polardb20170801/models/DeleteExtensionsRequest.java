@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DeleteExtensionsRequest extends TeaModel {
     /**
+     * <p>A client-generated token to ensure that the request is idempotent. The token must be unique for each request. It is case-sensitive and can contain a maximum of 64 ASCII characters.</p>
+     * 
      * <strong>example:</strong>
      * <p>6000170000591aed949d0f54a343f1a4233c1e7d1c5c******</p>
      */
@@ -12,6 +14,7 @@ public class DeleteExtensionsRequest extends TeaModel {
     public String clientToken;
 
     /**
+     * <p>The ID of the cluster.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,6 +24,7 @@ public class DeleteExtensionsRequest extends TeaModel {
     public String DBClusterId;
 
     /**
+     * <p>The name of the database.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -30,6 +34,7 @@ public class DeleteExtensionsRequest extends TeaModel {
     public String DBNames;
 
     /**
+     * <p>The extensions to uninstall. Separate multiple extension names with a comma (,).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -53,6 +58,8 @@ public class DeleteExtensionsRequest extends TeaModel {
     public Long ownerId;
 
     /**
+     * <p>The ID of the region.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-beijing</p>
      */
@@ -60,6 +67,8 @@ public class DeleteExtensionsRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The ID of the resource group.</p>
+     * 
      * <strong>example:</strong>
      * <p>rg-************</p>
      */
@@ -81,6 +90,8 @@ public class DeleteExtensionsRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
+     * <p>The ID of the virtual private cloud (VPC) where the endpoint is located.</p>
+     * 
      * <strong>example:</strong>
      * <p>vpc-25cdvfeq58pl****</p>
      */

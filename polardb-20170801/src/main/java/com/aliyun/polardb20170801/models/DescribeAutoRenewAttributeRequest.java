@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeAutoRenewAttributeRequest extends TeaModel {
     /**
+     * <p>The cloud provider of the instance.</p>
+     * 
      * <strong>example:</strong>
      * <p>ENS</p>
      */
@@ -12,7 +14,7 @@ public class DescribeAutoRenewAttributeRequest extends TeaModel {
     public String cloudProvider;
 
     /**
-     * <p>The ID of the cluster. If you need to specify multiple cluster IDs, separate the cluster IDs with commas (,).</p>
+     * <p>The ID of the cluster. You can specify multiple cluster IDs, separated by commas (,).</p>
      * 
      * <strong>example:</strong>
      * <p>pc-****************</p>
@@ -27,7 +29,7 @@ public class DescribeAutoRenewAttributeRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The page number. The value must be an integer that is greater than 0. Default value: 1.</p>
+     * <p>The page number. The value must be an integer that is greater than 0 and does not exceed the maximum value of the integer data type. Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -36,7 +38,7 @@ public class DescribeAutoRenewAttributeRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page. Valid values: 30, 50, and 100. Default value: 30.</p>
+     * <p>The number of entries to return on each page. Valid values: 30, 50, and 100. Default value: 30.</p>
      * 
      * <strong>example:</strong>
      * <p>30</p>
@@ -45,9 +47,9 @@ public class DescribeAutoRenewAttributeRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The ID of the region.</p>
+     * <p>The region ID.</p>
      * <blockquote>
-     * <p> You can call the <a href="https://help.aliyun.com/document_detail/98041.html">DescribeRegions</a> operation to query the region ID details.</p>
+     * <p>For more information, see <a href="https://help.aliyun.com/document_detail/98041.html">DescribeRegions</a>.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 

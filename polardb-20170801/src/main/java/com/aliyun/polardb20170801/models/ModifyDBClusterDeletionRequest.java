@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class ModifyDBClusterDeletionRequest extends TeaModel {
     /**
-     * <p>The cluster ID.</p>
+     * <p>The ID of the target cluster.</p>
      * <blockquote>
-     * <p> You can call the <a href="https://help.aliyun.com/document_detail/98094.html">DescribeDBClusters</a> operation to.obtain the cluster ID.</p>
+     * <p>Call the <a href="https://help.aliyun.com/document_detail/98094.html">DescribeDBClusters</a> operation to find the cluster ID.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -24,10 +24,12 @@ public class ModifyDBClusterDeletionRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>Specifies whether to enable the cluster lock feature. Default value: false. Valid values:</p>
+     * <p>Specifies whether to enable or disable the cluster lock. The default value is false. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: enables the cluster lock feature. If you enable the cluster lock feature, you cannot directly release the cluster. You must disable the cluster lock feature before you can release the cluster.</li>
-     * <li><strong>false</strong>: disables the cluster lock feature.</li>
+     * <li><p><strong>true</strong>: Enables the cluster lock. When this feature is enabled, the cluster cannot be released. To release the cluster, first disable the cluster lock.</p>
+     * </li>
+     * <li><p><strong>false</strong>: Disables the cluster lock.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

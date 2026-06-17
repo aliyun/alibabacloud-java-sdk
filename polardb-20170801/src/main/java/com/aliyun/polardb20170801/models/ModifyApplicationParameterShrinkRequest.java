@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyApplicationParameterShrinkRequest extends TeaModel {
     /**
+     * <p>The application ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,8 @@ public class ModifyApplicationParameterShrinkRequest extends TeaModel {
     public String applicationId;
 
     /**
+     * <p>The parameter name.</p>
+     * 
      * <strong>example:</strong>
      * <p>name</p>
      */
@@ -21,12 +24,17 @@ public class ModifyApplicationParameterShrinkRequest extends TeaModel {
     public String parameterName;
 
     /**
+     * <p>The parameter value.</p>
+     * 
      * <strong>example:</strong>
      * <p>value</p>
      */
     @NameInMap("ParameterValue")
     public String parameterValue;
 
+    /**
+     * <p>The list of parameter names and values for modifying multiple parameters.</p>
+     */
     @NameInMap("Parameters")
     public String parametersShrink;
 

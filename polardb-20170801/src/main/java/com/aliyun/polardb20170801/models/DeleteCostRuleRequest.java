@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteCostRuleRequest extends TeaModel {
     /**
+     * <p>The ID of the cost rule.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class DeleteCostRuleRequest extends TeaModel {
     public String costRuleId;
 
     /**
+     * <p>The ID of the gateway instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -22,6 +24,12 @@ public class DeleteCostRuleRequest extends TeaModel {
     @NameInMap("GwClusterId")
     public String gwClusterId;
 
+    /**
+     * <p>The ID of the region.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-beijing</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

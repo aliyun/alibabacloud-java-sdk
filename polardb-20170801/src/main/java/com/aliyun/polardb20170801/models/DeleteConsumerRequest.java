@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteConsumerRequest extends TeaModel {
     /**
+     * <p>The consumer ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class DeleteConsumerRequest extends TeaModel {
     public String consumerId;
 
     /**
+     * <p>The gateway instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -22,6 +24,12 @@ public class DeleteConsumerRequest extends TeaModel {
     @NameInMap("GwClusterId")
     public String gwClusterId;
 
+    /**
+     * <p>The region ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-beijing</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

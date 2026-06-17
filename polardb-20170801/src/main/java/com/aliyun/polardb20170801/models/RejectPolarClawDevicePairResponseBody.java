@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class RejectPolarClawDevicePairResponseBody extends TeaModel {
     /**
+     * <p>The application ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>pa-**************</p>
      */
@@ -12,6 +14,8 @@ public class RejectPolarClawDevicePairResponseBody extends TeaModel {
     public String applicationId;
 
     /**
+     * <p>The response status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -19,6 +23,8 @@ public class RejectPolarClawDevicePairResponseBody extends TeaModel {
     public Integer code;
 
     /**
+     * <p>The unique device ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>device-784x37k0vko734fk</p>
      */
@@ -26,6 +32,8 @@ public class RejectPolarClawDevicePairResponseBody extends TeaModel {
     public String deviceId;
 
     /**
+     * <p>The returned message.</p>
+     * 
      * <strong>example:</strong>
      * <p>successful</p>
      */
@@ -33,6 +41,8 @@ public class RejectPolarClawDevicePairResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The pairing request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>req-abc-123</p>
      */
@@ -40,7 +50,7 @@ public class RejectPolarClawDevicePairResponseBody extends TeaModel {
     public String pairRequestId;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>CD35F3-F3-44CA-AFFF-BAF869******</p>

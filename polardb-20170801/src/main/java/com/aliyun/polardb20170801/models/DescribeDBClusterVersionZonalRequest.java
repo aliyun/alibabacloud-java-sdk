@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeDBClusterVersionZonalRequest extends TeaModel {
     /**
+     * <p>The cluster ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,14 @@ public class DescribeDBClusterVersionZonalRequest extends TeaModel {
     public String DBClusterId;
 
     /**
+     * <p>Specifies whether to return information about the latest version or a list of upgradable versions. Valid values:</p>
+     * <ul>
+     * <li><p>LATEST_VERSION: Queries information about the latest version.</p>
+     * </li>
+     * <li><p>AVAILABLE_VERSION: Queries the list of upgradable versions.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>LATEST_VERSION</p>
      */

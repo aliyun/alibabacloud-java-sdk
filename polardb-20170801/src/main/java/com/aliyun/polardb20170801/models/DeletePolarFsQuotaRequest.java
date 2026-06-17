@@ -5,6 +5,11 @@ import com.aliyun.tea.*;
 
 public class DeletePolarFsQuotaRequest extends TeaModel {
     /**
+     * <p>The cluster ID.</p>
+     * <blockquote>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/98094.html">DescribeDBClusters</a> operation to view the details of all clusters under your account, including the cluster ID.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>pc-************</p>
      */
@@ -12,6 +17,7 @@ public class DeletePolarFsQuotaRequest extends TeaModel {
     public String DBClusterId;
 
     /**
+     * <p>The ID of the Polarlakebase instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,6 +27,7 @@ public class DeletePolarFsQuotaRequest extends TeaModel {
     public String polarFsInstanceId;
 
     /**
+     * <p>The details of the quota rules.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Quotas")
@@ -57,6 +64,7 @@ public class DeletePolarFsQuotaRequest extends TeaModel {
 
     public static class DeletePolarFsQuotaRequestQuotas extends TeaModel {
         /**
+         * <p>The ID of the quota.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -66,6 +74,7 @@ public class DeletePolarFsQuotaRequest extends TeaModel {
         public String id;
 
         /**
+         * <p>The name of the quota.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

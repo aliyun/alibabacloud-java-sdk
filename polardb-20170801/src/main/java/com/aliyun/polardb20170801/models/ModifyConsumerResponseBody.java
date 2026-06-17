@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ModifyConsumerResponseBody extends TeaModel {
     /**
+     * <p>The ID of the consumer.</p>
+     * 
      * <strong>example:</strong>
      * <p>c-mqveroemc***</p>
      */
@@ -12,7 +14,7 @@ public class ModifyConsumerResponseBody extends TeaModel {
     public String consumerId;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>6BD9CDE4-5E7B-4BF3-9BB8-83C73E******</p>

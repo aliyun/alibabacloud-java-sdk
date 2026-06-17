@@ -4,10 +4,15 @@ package com.aliyun.polardb20170801.models;
 import com.aliyun.tea.*;
 
 public class DescribeDBClusterEncryptionKeyResponseBody extends TeaModel {
+    /**
+     * <p>The list of keys.</p>
+     */
     @NameInMap("EncryptionKeyList")
     public java.util.List<DescribeDBClusterEncryptionKeyResponseBodyEncryptionKeyList> encryptionKeyList;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>137ECCC0-920E-5B3B-9F8E-B81632108BBE</p>
      */
@@ -37,6 +42,8 @@ public class DescribeDBClusterEncryptionKeyResponseBody extends TeaModel {
 
     public static class DescribeDBClusterEncryptionKeyResponseBodyEncryptionKeyList extends TeaModel {
         /**
+         * <p>The alias of the key.</p>
+         * 
          * <strong>example:</strong>
          * <p>alias/your_default_key</p>
          */
@@ -44,6 +51,8 @@ public class DescribeDBClusterEncryptionKeyResponseBody extends TeaModel {
         public String aliasName;
 
         /**
+         * <p>The UID of the Alibaba Cloud account that created the key.</p>
+         * 
          * <strong>example:</strong>
          * <p>1****1</p>
          */
@@ -51,6 +60,11 @@ public class DescribeDBClusterEncryptionKeyResponseBody extends TeaModel {
         public String creator;
 
         /**
+         * <p>The scheduled time to delete the key. The format is yyyy-MM-ddTHH:mm:ssZ (UTC).</p>
+         * <ul>
+         * <li>This field is empty if the key is not scheduled for deletion.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>2026-05-08T08:14:16Z</p>
          */
@@ -58,6 +72,8 @@ public class DescribeDBClusterEncryptionKeyResponseBody extends TeaModel {
         public String deleteDate;
 
         /**
+         * <p>The description of the key.</p>
+         * 
          * <strong>example:</strong>
          * <p>Description of the key</p>
          */
@@ -65,6 +81,8 @@ public class DescribeDBClusterEncryptionKeyResponseBody extends TeaModel {
         public String description;
 
         /**
+         * <p>The key ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>51858179-afb3-4369-8329-*********</p>
          */
@@ -72,6 +90,14 @@ public class DescribeDBClusterEncryptionKeyResponseBody extends TeaModel {
         public String encryptionKey;
 
         /**
+         * <p>The status of the key. Valid values:</p>
+         * <ul>
+         * <li><p>Enabled: The key is enabled.</p>
+         * </li>
+         * <li><p>Disabled: The key is not enabled.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Enabled</p>
          */
@@ -79,6 +105,14 @@ public class DescribeDBClusterEncryptionKeyResponseBody extends TeaModel {
         public String encryptionKeyStatus;
 
         /**
+         * <p>The type of the key. Valid values:</p>
+         * <ul>
+         * <li><p>CMK: customer master key</p>
+         * </li>
+         * <li><p>ServiceKey: service key</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>ServiceKey</p>
          */
@@ -86,6 +120,8 @@ public class DescribeDBClusterEncryptionKeyResponseBody extends TeaModel {
         public String keyType;
 
         /**
+         * <p>The purpose of the key.</p>
+         * 
          * <strong>example:</strong>
          * <p>ENCRYPT/DECRYPT</p>
          */
@@ -93,6 +129,8 @@ public class DescribeDBClusterEncryptionKeyResponseBody extends TeaModel {
         public String keyUsage;
 
         /**
+         * <p>The expiration time of the key. The format is yyyy-MM-ddTHH:mm:ssZ (UTC).</p>
+         * 
          * <strong>example:</strong>
          * <p>2025-10-18T08:14:16Z</p>
          */
@@ -100,6 +138,8 @@ public class DescribeDBClusterEncryptionKeyResponseBody extends TeaModel {
         public String materialExpireTime;
 
         /**
+         * <p>The source of the key.</p>
+         * 
          * <strong>example:</strong>
          * <p>Aliyun_KMS</p>
          */
@@ -107,6 +147,14 @@ public class DescribeDBClusterEncryptionKeyResponseBody extends TeaModel {
         public String origin;
 
         /**
+         * <p>The service that uses the key. Valid values:</p>
+         * <ul>
+         * <li><p>TDE: transparent data encryption (TDE).</p>
+         * </li>
+         * <li><p>DiskEncryption: disk encryption.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>DiskEncryption</p>
          */

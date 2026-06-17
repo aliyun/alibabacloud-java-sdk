@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ResetConsumerApiKeyResponseBody extends TeaModel {
     /**
+     * <p>The complete api key, which is returned only in this response.</p>
+     * 
      * <strong>example:</strong>
      * <p>xxx</p>
      */
@@ -12,6 +14,8 @@ public class ResetConsumerApiKeyResponseBody extends TeaModel {
     public String apiKey;
 
     /**
+     * <p>The user ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>c-mqveroemc***</p>
      */
@@ -19,7 +23,7 @@ public class ResetConsumerApiKeyResponseBody extends TeaModel {
     public String consumerId;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>3AA69096-757C-4647-B36C-29EBC2******</p>

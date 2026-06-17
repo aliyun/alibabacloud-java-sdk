@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreatePolarClawChannelResponseBody extends TeaModel {
     /**
+     * <p><strong>The application ID.</strong></p>
+     * 
      * <strong>example:</strong>
      * <p>pa-**************</p>
      */
@@ -12,6 +14,8 @@ public class CreatePolarClawChannelResponseBody extends TeaModel {
     public String applicationId;
 
     /**
+     * <p>The ID of the channel that was created.</p>
+     * 
      * <strong>example:</strong>
      * <p>feishu</p>
      */
@@ -19,6 +23,8 @@ public class CreatePolarClawChannelResponseBody extends TeaModel {
     public String channelId;
 
     /**
+     * <p>The response status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -26,6 +32,8 @@ public class CreatePolarClawChannelResponseBody extends TeaModel {
     public Integer code;
 
     /**
+     * <p>The response message.</p>
+     * 
      * <strong>example:</strong>
      * <p>successful</p>
      */
@@ -33,6 +41,8 @@ public class CreatePolarClawChannelResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The name of the installed npm package.</p>
+     * 
      * <strong>example:</strong>
      * <p>@larksuite/<a href="mailto:openclaw-lark@2026.4.7">openclaw-lark@2026.4.7</a></p>
      */
@@ -40,6 +50,8 @@ public class CreatePolarClawChannelResponseBody extends TeaModel {
     public String npmPackage;
 
     /**
+     * <p>Indicates whether the operation was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -47,6 +59,8 @@ public class CreatePolarClawChannelResponseBody extends TeaModel {
     public Boolean ok;
 
     /**
+     * <p><strong>The plugin ID.</strong></p>
+     * 
      * <strong>example:</strong>
      * <p>openclaw-lark</p>
      */
@@ -54,6 +68,8 @@ public class CreatePolarClawChannelResponseBody extends TeaModel {
     public String pluginId;
 
     /**
+     * <p>Indicates whether a new plugin was installed.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -61,6 +77,8 @@ public class CreatePolarClawChannelResponseBody extends TeaModel {
     public Boolean pluginInstalled;
 
     /**
+     * <p><strong>The request ID.</strong></p>
+     * 
      * <strong>example:</strong>
      * <p>2281C6C9-CBAB-1AFD-8400-670750CF6025_2212</p>
      */
@@ -68,6 +86,8 @@ public class CreatePolarClawChannelResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the gateway was restarted.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

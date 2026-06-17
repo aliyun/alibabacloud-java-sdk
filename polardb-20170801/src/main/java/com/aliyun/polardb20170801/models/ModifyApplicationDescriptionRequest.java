@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyApplicationDescriptionRequest extends TeaModel {
     /**
+     * <p>The ID of the application.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class ModifyApplicationDescriptionRequest extends TeaModel {
     public String applicationId;
 
     /**
+     * <p>The description of the application.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

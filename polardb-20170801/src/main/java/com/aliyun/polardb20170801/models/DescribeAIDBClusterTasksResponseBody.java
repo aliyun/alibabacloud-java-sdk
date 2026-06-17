@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeAIDBClusterTasksResponseBody extends TeaModel {
     /**
+     * <p>The engine.</p>
+     * 
      * <strong>example:</strong>
      * <p>polardb_ai</p>
      */
@@ -12,16 +14,23 @@ public class DescribeAIDBClusterTasksResponseBody extends TeaModel {
     public String engine;
 
     /**
+     * <p>The engine version.</p>
+     * 
      * <strong>example:</strong>
      * <p>3.1</p>
      */
     @NameInMap("EngineVersion")
     public String engineVersion;
 
+    /**
+     * <p>A list of model operators.</p>
+     */
     @NameInMap("Items")
     public java.util.List<DescribeAIDBClusterTasksResponseBodyItems> items;
 
     /**
+     * <p>The PolarDB cluster ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>pc-2ze***</p>
      */
@@ -29,7 +38,7 @@ public class DescribeAIDBClusterTasksResponseBody extends TeaModel {
     public String relativeDBClusterId;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>925B84D9-CA72-432C-95CF-738C22******</p>
@@ -38,6 +47,8 @@ public class DescribeAIDBClusterTasksResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The task type.</p>
+     * 
      * <strong>example:</strong>
      * <p>train</p>
      */
@@ -99,6 +110,8 @@ public class DescribeAIDBClusterTasksResponseBody extends TeaModel {
 
     public static class DescribeAIDBClusterTasksResponseBodyItems extends TeaModel {
         /**
+         * <p>The completion time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2020-06-09T18:00:00Z</p>
          */
@@ -106,6 +119,8 @@ public class DescribeAIDBClusterTasksResponseBody extends TeaModel {
         public String completedTime;
 
         /**
+         * <p>The creation time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2025-03-25T09:37:10Z</p>
          */
@@ -113,6 +128,8 @@ public class DescribeAIDBClusterTasksResponseBody extends TeaModel {
         public String creationTime;
 
         /**
+         * <p>The node description.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -120,6 +137,8 @@ public class DescribeAIDBClusterTasksResponseBody extends TeaModel {
         public String DBNodeDescription;
 
         /**
+         * <p>The model operator instance ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>pm-2ze***</p>
          */
@@ -127,6 +146,8 @@ public class DescribeAIDBClusterTasksResponseBody extends TeaModel {
         public String DBNodeId;
 
         /**
+         * <p>The instance status. This parameter is not always returned.</p>
+         * 
          * <strong>example:</strong>
          * <p>RUNNING</p>
          */
@@ -134,6 +155,8 @@ public class DescribeAIDBClusterTasksResponseBody extends TeaModel {
         public String DBNodeStatus;
 
         /**
+         * <p>The description of the instance status.</p>
+         * 
          * <strong>example:</strong>
          * <p>RUNNING</p>
          */
@@ -141,6 +164,8 @@ public class DescribeAIDBClusterTasksResponseBody extends TeaModel {
         public String DBNodeStatusDesc;
 
         /**
+         * <p>The availability zone.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-beijing-i</p>
          */
@@ -148,6 +173,8 @@ public class DescribeAIDBClusterTasksResponseBody extends TeaModel {
         public String dataZoneId;
 
         /**
+         * <p>The engine.</p>
+         * 
          * <strong>example:</strong>
          * <p>polardb_ai</p>
          */
@@ -155,6 +182,8 @@ public class DescribeAIDBClusterTasksResponseBody extends TeaModel {
         public String engine;
 
         /**
+         * <p>The engine version.</p>
+         * 
          * <strong>example:</strong>
          * <p>3.1</p>
          */
@@ -162,6 +191,8 @@ public class DescribeAIDBClusterTasksResponseBody extends TeaModel {
         public String engineVersion;
 
         /**
+         * <p>The model name.</p>
+         * 
          * <strong>example:</strong>
          * <hr>
          */
@@ -169,6 +200,8 @@ public class DescribeAIDBClusterTasksResponseBody extends TeaModel {
         public String modelName;
 
         /**
+         * <p>The model path.</p>
+         * 
          * <strong>example:</strong>
          * <hr>
          */
@@ -176,6 +209,8 @@ public class DescribeAIDBClusterTasksResponseBody extends TeaModel {
         public String modelPath;
 
         /**
+         * <p>The model source.</p>
+         * 
          * <strong>example:</strong>
          * <p>public</p>
          */
@@ -183,6 +218,8 @@ public class DescribeAIDBClusterTasksResponseBody extends TeaModel {
         public String modelSource;
 
         /**
+         * <p>The runtime parameters.</p>
+         * 
          * <strong>example:</strong>
          * <p>xxx</p>
          */
@@ -190,6 +227,8 @@ public class DescribeAIDBClusterTasksResponseBody extends TeaModel {
         public String runningTimes;
 
         /**
+         * <p>The start time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2020-06-09T18:00:00Z</p>
          */
@@ -197,6 +236,8 @@ public class DescribeAIDBClusterTasksResponseBody extends TeaModel {
         public String startTime;
 
         /**
+         * <p>The training mode.</p>
+         * 
          * <strong>example:</strong>
          * <p>sft</p>
          */
@@ -204,6 +245,8 @@ public class DescribeAIDBClusterTasksResponseBody extends TeaModel {
         public String trainMode;
 
         /**
+         * <p>The training type.</p>
+         * 
          * <strong>example:</strong>
          * <p>lora</p>
          */

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeAIDBClusterPerformanceResponseBody extends TeaModel {
     /**
+     * <p>The API key for the model service.</p>
+     * 
      * <strong>example:</strong>
      * <p>xxx</p>
      */
@@ -12,6 +14,8 @@ public class DescribeAIDBClusterPerformanceResponseBody extends TeaModel {
     public String apiKey;
 
     /**
+     * <p>The ID of the database cluster.</p>
+     * 
      * <strong>example:</strong>
      * <p>pc-a************</p>
      */
@@ -19,6 +23,8 @@ public class DescribeAIDBClusterPerformanceResponseBody extends TeaModel {
     public String DBClusterId;
 
     /**
+     * <p>The type of the database engine. Only <strong>polardb_ai</strong> is supported.</p>
+     * 
      * <strong>example:</strong>
      * <p>polardb_ai</p>
      */
@@ -26,6 +32,9 @@ public class DescribeAIDBClusterPerformanceResponseBody extends TeaModel {
     public String DBType;
 
     /**
+     * <p>The version number of the database AI engine.</p>
+     * <p>Example: 3.0</p>
+     * 
      * <strong>example:</strong>
      * <p>3.0</p>
      */
@@ -33,6 +42,8 @@ public class DescribeAIDBClusterPerformanceResponseBody extends TeaModel {
     public String DBVersion;
 
     /**
+     * <p>The end of the time range that was queried. The time is in the <code>YYYY-MM-DDThh:mmZ</code> format and is in UTC.</p>
+     * 
      * <strong>example:</strong>
      * <p>2022-11-16T16:00Z</p>
      */
@@ -40,16 +51,27 @@ public class DescribeAIDBClusterPerformanceResponseBody extends TeaModel {
     public String endTime;
 
     /**
+     * <p>The time granularity of the performance data. Valid values:</p>
+     * <ul>
+     * <li>60</li>
+     * <li>3600</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>60</p>
      */
     @NameInMap("Interval")
     public String interval;
 
+    /**
+     * <p>The details of the instance performance parameters.</p>
+     */
     @NameInMap("PerformanceKeys")
     public java.util.List<DescribeAIDBClusterPerformanceResponseBodyPerformanceKeys> performanceKeys;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>D0CEC6AC-7760-409A-A0D5-E6CD86******</p>
      */
@@ -57,6 +79,8 @@ public class DescribeAIDBClusterPerformanceResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The beginning of the time range that was queried. The time is in the <code>yyyy-MM-ddTHH:mm:ssZ</code> format and is in UTC.</p>
+     * 
      * <strong>example:</strong>
      * <p>2022-11-15T16:00Z</p>
      */
@@ -142,6 +166,8 @@ public class DescribeAIDBClusterPerformanceResponseBody extends TeaModel {
 
     public static class DescribeAIDBClusterPerformanceResponseBodyPerformanceKeysPoints extends TeaModel {
         /**
+         * <p>The UNIX timestamp that indicates when the metric was collected. Unit: milliseconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>1724206183</p>
          */
@@ -149,6 +175,8 @@ public class DescribeAIDBClusterPerformanceResponseBody extends TeaModel {
         public Long timestamp;
 
         /**
+         * <p>The value of the metric.</p>
+         * 
          * <strong>example:</strong>
          * <p>42.38</p>
          */
@@ -180,6 +208,8 @@ public class DescribeAIDBClusterPerformanceResponseBody extends TeaModel {
 
     public static class DescribeAIDBClusterPerformanceResponseBodyPerformanceKeys extends TeaModel {
         /**
+         * <p>The ID of the cluster node.</p>
+         * 
          * <strong>example:</strong>
          * <p>pi-*************</p>
          */
@@ -187,6 +217,8 @@ public class DescribeAIDBClusterPerformanceResponseBody extends TeaModel {
         public String DBNodeId;
 
         /**
+         * <p>The performance metric.</p>
+         * 
          * <strong>example:</strong>
          * <p>PolarDBAIModelCall</p>
          */
@@ -194,12 +226,17 @@ public class DescribeAIDBClusterPerformanceResponseBody extends TeaModel {
         public String measurement;
 
         /**
+         * <p>The name of the specific performance metric.</p>
+         * 
          * <strong>example:</strong>
          * <p>model_input_amount</p>
          */
         @NameInMap("MetricName")
         public String metricName;
 
+        /**
+         * <p>The array of performance data.</p>
+         */
         @NameInMap("Points")
         public java.util.List<DescribeAIDBClusterPerformanceResponseBodyPerformanceKeysPoints> points;
 

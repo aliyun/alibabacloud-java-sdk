@@ -8,13 +8,15 @@ public class ModifyDBClusterStoragePerformanceRequest extends TeaModel {
     public Boolean autoUseCoupon;
 
     /**
-     * <p>Specifies whether to enable the I/O Burst feature for the ESSD AutoPL disk. Valid value:</p>
+     * <p>Specifies if the I/O performance burst feature is enabled for an ESSD AutoPL disk. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong></li>
-     * <li><strong>false</strong> (default)</li>
+     * <li><p><strong>true</strong>: Enabled</p>
+     * </li>
+     * <li><p><strong>false</strong>: Disabled (Default)</p>
+     * </li>
      * </ul>
      * <blockquote>
-     * <p> This parameter is available only when the StorageType parameter is set to ESSDAUTOPL.</p>
+     * <p>This parameter applies only when StorageType is set to ESSDAUTOPL.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -24,6 +26,8 @@ public class ModifyDBClusterStoragePerformanceRequest extends TeaModel {
     public String burstingEnabled;
 
     /**
+     * <p>A client-generated token that ensures request idempotence. The token must be unique for each request. It is case-sensitive and can be up to 64 ASCII characters long.</p>
+     * 
      * <strong>example:</strong>
      * <p>6000170000591aed949d0f******************</p>
      */
@@ -31,6 +35,7 @@ public class ModifyDBClusterStoragePerformanceRequest extends TeaModel {
     public String clientToken;
 
     /**
+     * <p>The cluster ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -40,6 +45,14 @@ public class ModifyDBClusterStoragePerformanceRequest extends TeaModel {
     public String DBClusterId;
 
     /**
+     * <p>The modification type. Valid values:</p>
+     * <ul>
+     * <li><p><strong>Upgrade</strong>: Upgrades the storage performance.</p>
+     * </li>
+     * <li><p><strong>Downgrade</strong>: Downgrades the storage performance.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>Upgrade</p>
      */
@@ -54,6 +67,15 @@ public class ModifyDBClusterStoragePerformanceRequest extends TeaModel {
     public String promotionCode;
 
     /**
+     * <p>&lt;props=&quot;china&quot;&gt;</p>
+     * <p>Valid values: 0 to min{50,000, 1000 \* capacity - baseline performance}.</p>
+     * <p>&lt;props=&quot;china&quot;&gt;</p>
+     * <p>Baseline performance = min{1,800 + 50 \* capacity, 50,000}.</p>
+     * <p>&lt;props=&quot;china&quot;&gt;</p>
+     * <blockquote>
+     * <p>This parameter applies only when StorageType is set to ESSDAUTOPL.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>2500</p>
      */
@@ -64,6 +86,27 @@ public class ModifyDBClusterStoragePerformanceRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
+     * <p>The target storage type. Valid values for Enterprise Edition:</p>
+     * <ul>
+     * <li><p><strong>PSL5</strong></p>
+     * </li>
+     * <li><p><strong>PSL4</strong></p>
+     * </li>
+     * </ul>
+     * <p>Valid values for Standard Edition:</p>
+     * <ul>
+     * <li><p><strong>ESSDPL0</strong></p>
+     * </li>
+     * <li><p><strong>ESSDPL1</strong></p>
+     * </li>
+     * <li><p><strong>ESSDPL2</strong></p>
+     * </li>
+     * <li><p><strong>ESSDPL3</strong></p>
+     * </li>
+     * <li><p><strong>ESSDAUTOPL</strong></p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>ESSDAUTOPL</p>
      */

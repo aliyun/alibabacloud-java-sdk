@@ -4,10 +4,17 @@ package com.aliyun.polardb20170801.models;
 import com.aliyun.tea.*;
 
 public class CreateModelApiRequest extends TeaModel {
+    /**
+     * <p>The model to which requests are forcibly routed.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>xxx</p>
+     */
     @NameInMap("ForceModel")
     public String forceModel;
 
     /**
+     * <p>The gateway instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -17,6 +24,15 @@ public class CreateModelApiRequest extends TeaModel {
     public String gwClusterId;
 
     /**
+     * <p>The model API category. Valid values:</p>
+     * <ul>
+     * <li><p><strong>text</strong></p>
+     * </li>
+     * <li><p><strong>embedding</strong></p>
+     * </li>
+     * <li><p><strong>rerank</strong></p>
+     * </li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -26,6 +42,7 @@ public class CreateModelApiRequest extends TeaModel {
     public String modelCategory;
 
     /**
+     * <p>The model API name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -35,6 +52,7 @@ public class CreateModelApiRequest extends TeaModel {
     public String name;
 
     /**
+     * <p>The path prefix.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -44,6 +62,17 @@ public class CreateModelApiRequest extends TeaModel {
     public String pathPrefix;
 
     /**
+     * <p>The model API protocol. Valid values:</p>
+     * <ul>
+     * <li><p><strong>OpenAI</strong></p>
+     * </li>
+     * <li><p><strong>Anthropic</strong></p>
+     * </li>
+     * <li><p><strong>Model Studio</strong></p>
+     * </li>
+     * <li><p><strong>vLLM</strong></p>
+     * </li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -53,6 +82,8 @@ public class CreateModelApiRequest extends TeaModel {
     public String protocol;
 
     /**
+     * <p>Specifies whether to record input for billing.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -60,16 +91,25 @@ public class CreateModelApiRequest extends TeaModel {
     public String recordInput;
 
     /**
+     * <p>Specifies whether to record output for billing.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
     @NameInMap("RecordOutput")
     public String recordOutput;
 
+    /**
+     * <p>The region ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-beijing</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
+     * <p>A list of routing rules, provided as a JSON array string.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class InstallPolarClawPluginRequest extends TeaModel {
     /**
+     * <p>The application ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class InstallPolarClawPluginRequest extends TeaModel {
     public String applicationId;
 
     /**
+     * <p>The npm package name, including the version number.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,7 @@ public class InstallPolarClawPluginRequest extends TeaModel {
     public String npmPackage;
 
     /**
+     * <p>The plugin ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -32,6 +35,8 @@ public class InstallPolarClawPluginRequest extends TeaModel {
     public String pluginId;
 
     /**
+     * <p>Specifies whether to restart the gateway after installation. Defaults to true.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

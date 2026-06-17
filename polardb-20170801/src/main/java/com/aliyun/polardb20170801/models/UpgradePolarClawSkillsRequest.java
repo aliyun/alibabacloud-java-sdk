@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpgradePolarClawSkillsRequest extends TeaModel {
     /**
+     * <p>The application ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,11 @@ public class UpgradePolarClawSkillsRequest extends TeaModel {
     public String applicationId;
 
     /**
+     * <p>The application type.</p>
+     * <blockquote>
+     * <p>You can omit this parameter when you first call this operation.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>polarclaw</p>
      */
@@ -21,12 +27,23 @@ public class UpgradePolarClawSkillsRequest extends TeaModel {
     public String applicationType;
 
     /**
+     * <p>The region ID.</p>
+     * <blockquote>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/98041.html">DescribeRegions</a> operation to query the regions of all clusters in your account.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The upgrade method.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Manual</p>
+     */
     @NameInMap("UpgradeMethod")
     public String upgradeMethod;
 

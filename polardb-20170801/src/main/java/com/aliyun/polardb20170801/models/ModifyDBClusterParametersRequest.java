@@ -8,9 +8,9 @@ public class ModifyDBClusterParametersRequest extends TeaModel {
     public Boolean clearBinlog;
 
     /**
-     * <p>The ID of the cluster.</p>
+     * <p>The cluster ID.</p>
      * <blockquote>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/98094.html">DescribeDBClusters</a> operation to query information about all clusters that are deployed in a specified region, such as the cluster ID.</p>
+     * <p>Call the <a href="https://help.aliyun.com/document_detail/98094.html">DescribeDBClusters</a> operation to view information about all clusters in the destination region, including cluster IDs.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -21,10 +21,12 @@ public class ModifyDBClusterParametersRequest extends TeaModel {
     public String DBClusterId;
 
     /**
-     * <p>Specifies an immediate or scheduled task to modify parameters and restart the cluster. Valid values:</p>
+     * <p>Specifies whether to immediately modify the parameters and restart the cluster. Valid values:</p>
      * <ul>
-     * <li>false: scheduled task</li>
-     * <li>true: immediate task</li>
+     * <li><p>false (default): The modification is scheduled.</p>
+     * </li>
+     * <li><p>true: The modification is performed immediately.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -42,15 +44,15 @@ public class ModifyDBClusterParametersRequest extends TeaModel {
     /**
      * <p>The ID of the parameter template.</p>
      * <blockquote>
-     * </blockquote>
      * <ul>
-     * <li><p>You can call the <a href="https://help.aliyun.com/document_detail/207178.html">DescribeParameterGroups</a> operation to query the parameter template ID.</p>
+     * <li><p>Call the <a href="https://help.aliyun.com/document_detail/207178.html">DescribeParameterGroups</a> operation to view the ID of the parameter template.</p>
      * </li>
      * <li><p>You must specify this parameter or the <code>Parameters</code> parameter.</p>
      * </li>
-     * <li><p>This parameter is valid only for a PolarDB for MySQL cluster.</p>
+     * <li><p>This parameter is supported only by PolarDB for MySQL.</p>
      * </li>
      * </ul>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>pcpg-**************</p>
@@ -59,17 +61,17 @@ public class ModifyDBClusterParametersRequest extends TeaModel {
     public String parameterGroupId;
 
     /**
-     * <p>The JSON string that consists of parameters and values. The parameter values are strings, for example, <code>{&quot;wait_timeout&quot;:&quot;86&quot;,&quot;innodb_old_blocks_time&quot;:&quot;10&quot;}</code>.</p>
+     * <p>A JSON string that consists of parameters and their values. The parameter values must be strings. For example: <code>{&quot;wait_timeout&quot;:&quot;86&quot;,&quot;innodb_old_blocks_time&quot;:&quot;10&quot;}</code>.</p>
      * <blockquote>
-     * </blockquote>
      * <ul>
-     * <li><p>You can call the <a href="https://help.aliyun.com/document_detail/98122.html">DescribeDBClusterParameters</a> operation to query the parameters of the PolarDB cluster.</p>
+     * <li><p>Call the <a href="https://help.aliyun.com/document_detail/98122.html">DescribeDBClusterParameters</a> operation to view the parameters of a PolarDB cluster.</p>
      * </li>
-     * <li><p>This parameter is required for a PolarDB for Oracle or PolarDB for PostgreSQL cluster.</p>
+     * <li><p>This parameter is required if the destination cluster is a PolarDB for PostgreSQL or PolarDB for PostgreSQL (Oracle compatible) cluster.</p>
      * </li>
-     * <li><p>For PolarDB for MySQL clusters, you must specify this parameter or the <code>ParameterGroupId</code> parameter.</p>
+     * <li><p>If the destination cluster is a PolarDB for MySQL cluster, you must specify this parameter or the <code>ParameterGroupId</code> parameter.</p>
      * </li>
      * </ul>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>{&quot;wait_timeout&quot;:&quot;86&quot;,&quot;innodb_old_blocks_time&quot;:&quot;10&quot;}</p>
@@ -78,15 +80,15 @@ public class ModifyDBClusterParametersRequest extends TeaModel {
     public String parameters;
 
     /**
-     * <p>The latest start time to run the task. Specify the time in the <code>YYYY-MM-DDThh:mm:ssZ</code> format. The time must be in UTC.</p>
+     * <p>The latest time to start the scheduled task. Specify the time in the <code>YYYY-MM-DDThh:mm:ssZ</code> format. The time must be in UTC.</p>
      * <blockquote>
-     * </blockquote>
      * <ul>
-     * <li><p>The value of this parameter must be at least 30 minutes later than the value of the PlannedStartTime parameter.</p>
+     * <li><p>The latest start time must be at least 30 minutes later than the earliest start time.</p>
      * </li>
-     * <li><p>By default, if you specify the <code>PlannedStartTime</code> parameter but do not specify the PlannedEndTime parameter, the latest start time of the task is set to a value that is calculated by using the following formula: <code>Value of the PlannedEndTime parameter + 30 minutes</code>. For example, if you set the <code>PlannedStartTime</code> parameter to <code>2021-01-14T09:00:00Z</code> and you do not specify the PlannedEndTime parameter, the latest start time of the task is set to <code>2021-01-14T09:30:00Z</code>.</p>
+     * <li><p>If you specify <code>PlannedStartTime</code> but not this parameter, the latest time to start the task is <code>PlannedStartTime + 30 minutes</code> by default. For example, if you set <code>PlannedStartTime</code> to <code>2021-01-14T09:00:00Z</code> and leave this parameter empty, the task starts no later than <code>2021-01-14T09:30:00Z</code>.</p>
      * </li>
      * </ul>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>2022-04-28T14:30:00Z</p>
@@ -95,15 +97,15 @@ public class ModifyDBClusterParametersRequest extends TeaModel {
     public String plannedEndTime;
 
     /**
-     * <p>The earliest time to upgrade the specifications within the scheduled time period. Specify the time in the <code>YYYY-MM-DDThh:mm:ssZ</code> format. The time must be in UTC.</p>
+     * <p>The earliest time to start the scheduled task. Specify the time in the <code>YYYY-MM-DDThh:mm:ssZ</code> format. The time must be in UTC.</p>
      * <blockquote>
-     * </blockquote>
      * <ul>
-     * <li><p>The earliest start time of the task can be a point in time within the next 24 hours. For example, if the current time is <code>2021-01-14T09:00:00Z</code>, you can specify a point in the time range from <code>2021-01-14T09:00:00Z</code> to <code>2021-01-15T09:00:00Z</code>.</p>
+     * <li><p>The start time can be any point in time within the next 24 hours. For example, if the current time is <code>2021-01-14T09:00:00Z</code>, you can set the start time to a value in the range of <code>2021-01-14T09:00:00Z</code> to <code>2021-01-15T09:00:00Z</code>.</p>
      * </li>
-     * <li><p>If this parameter is empty, the upgrade task is immediately performed.</p>
+     * <li><p>If you leave this parameter empty, the task is executed immediately.</p>
      * </li>
      * </ul>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>2022-04-28T14:00:00Z</p>

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpdateApplicationEnvironmentVariablesResponseBody extends TeaModel {
     /**
+     * <p>The application ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>pa-**************</p>
      */
@@ -12,6 +14,8 @@ public class UpdateApplicationEnvironmentVariablesResponseBody extends TeaModel 
     public String applicationId;
 
     /**
+     * <p>The response status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -19,6 +23,8 @@ public class UpdateApplicationEnvironmentVariablesResponseBody extends TeaModel 
     public Integer code;
 
     /**
+     * <p>The response message.</p>
+     * 
      * <strong>example:</strong>
      * <p>successful</p>
      */
@@ -26,6 +32,8 @@ public class UpdateApplicationEnvironmentVariablesResponseBody extends TeaModel 
     public String message;
 
     /**
+     * <p>Indicates whether the operation succeeded.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -33,7 +41,7 @@ public class UpdateApplicationEnvironmentVariablesResponseBody extends TeaModel 
     public Boolean ok;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>6A2EE5B4-CC9F-46E1-A747-E43BC9******</p>
@@ -42,6 +50,8 @@ public class UpdateApplicationEnvironmentVariablesResponseBody extends TeaModel 
     public String requestId;
 
     /**
+     * <p>Indicates whether the gateway was restarted.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -49,12 +59,17 @@ public class UpdateApplicationEnvironmentVariablesResponseBody extends TeaModel 
     public Boolean restarted;
 
     /**
+     * <p>The total number of environment variables for the application after the update.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
     @NameInMap("TotalVariables")
     public Integer totalVariables;
 
+    /**
+     * <p>A list of the environment variable names that were added or updated.</p>
+     */
     @NameInMap("UpdatedKeys")
     public java.util.List<String> updatedKeys;
 

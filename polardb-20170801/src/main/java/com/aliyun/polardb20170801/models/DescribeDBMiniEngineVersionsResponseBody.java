@@ -4,11 +4,14 @@ package com.aliyun.polardb20170801.models;
 import com.aliyun.tea.*;
 
 public class DescribeDBMiniEngineVersionsResponseBody extends TeaModel {
+    /**
+     * <p>A list of information about the versions available for an upgrade.</p>
+     */
     @NameInMap("DBRevisionVersionList")
     public java.util.List<DescribeDBMiniEngineVersionsResponseBodyDBRevisionVersionList> DBRevisionVersionList;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>2921D843-433A-5FB3-A03B-4EC093B219F8</p>
@@ -39,6 +42,8 @@ public class DescribeDBMiniEngineVersionsResponseBody extends TeaModel {
 
     public static class DescribeDBMiniEngineVersionsResponseBodyDBRevisionVersionList extends TeaModel {
         /**
+         * <p>The release notes of the version.</p>
+         * 
          * <strong>example:</strong>
          * <p>ReleaseNote</p>
          */
@@ -46,6 +51,18 @@ public class DescribeDBMiniEngineVersionsResponseBody extends TeaModel {
         public String releaseNote;
 
         /**
+         * <p>The release state of the database version. Valid values:</p>
+         * <ul>
+         * <li><p><strong>Stable</strong>: The version is stable.</p>
+         * </li>
+         * <li><p><strong>Old</strong>: The version is outdated. Upgrading to this version is not recommended.</p>
+         * </li>
+         * <li><p><strong>HighRisk</strong>: The version has a critical bug. Upgrading to this version is not recommended.</p>
+         * </li>
+         * <li><p><strong>Beta</strong>: The version is a beta version.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Stable</p>
          */
@@ -53,6 +70,8 @@ public class DescribeDBMiniEngineVersionsResponseBody extends TeaModel {
         public String releaseType;
 
         /**
+         * <p>The code of the database engine revision version. Use this code to specify the target version for an upgrade.</p>
+         * 
          * <strong>example:</strong>
          * <p>20230707</p>
          */
@@ -60,6 +79,8 @@ public class DescribeDBMiniEngineVersionsResponseBody extends TeaModel {
         public String revisionVersionCode;
 
         /**
+         * <p>The number of the database engine revision version.</p>
+         * 
          * <strong>example:</strong>
          * <p>8.0.1.1.35.1</p>
          */

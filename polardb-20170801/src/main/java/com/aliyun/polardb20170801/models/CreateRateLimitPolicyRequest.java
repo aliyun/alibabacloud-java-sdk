@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateRateLimitPolicyRequest extends TeaModel {
     /**
+     * <p>The gateway instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class CreateRateLimitPolicyRequest extends TeaModel {
     public String gwClusterId;
 
     /**
+     * <p>The maximum number of requests per minute.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,7 @@ public class CreateRateLimitPolicyRequest extends TeaModel {
     public String rateLimitRpm;
 
     /**
+     * <p>The maximum number of tokens per minute.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -31,10 +34,17 @@ public class CreateRateLimitPolicyRequest extends TeaModel {
     @NameInMap("RateLimitTpm")
     public String rateLimitTpm;
 
+    /**
+     * <p>The ID of the region.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-beijing</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
+     * <p>The ID of the consumer group or consumer.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -44,6 +54,13 @@ public class CreateRateLimitPolicyRequest extends TeaModel {
     public String scopeRefId;
 
     /**
+     * <p>The rate limiting dimension. Valid values:</p>
+     * <ul>
+     * <li><p><strong>ConsumerGroup</strong>: Consumer group</p>
+     * </li>
+     * <li><p><strong>Consumer</strong>: Consumer</p>
+     * </li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

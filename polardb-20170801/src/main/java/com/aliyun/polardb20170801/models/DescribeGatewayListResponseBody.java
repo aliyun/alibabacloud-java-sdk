@@ -4,10 +4,15 @@ package com.aliyun.polardb20170801.models;
 import com.aliyun.tea.*;
 
 public class DescribeGatewayListResponseBody extends TeaModel {
+    /**
+     * <p>A list of gateway instances.</p>
+     */
     @NameInMap("Items")
     public java.util.List<DescribeGatewayListResponseBodyItems> items;
 
     /**
+     * <p>The page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -15,6 +20,8 @@ public class DescribeGatewayListResponseBody extends TeaModel {
     public String pageNumber;
 
     /**
+     * <p>The number of entries returned on the current page.</p>
+     * 
      * <strong>example:</strong>
      * <p>30</p>
      */
@@ -22,6 +29,17 @@ public class DescribeGatewayListResponseBody extends TeaModel {
     public String pageRecordCount;
 
     /**
+     * <p>The number of entries per page.</p>
+     * <ul>
+     * <li><p><strong>30</strong></p>
+     * </li>
+     * <li><p><strong>50</strong></p>
+     * </li>
+     * <li><p><strong>100</strong></p>
+     * </li>
+     * </ul>
+     * <p>Default value: 30.</p>
+     * 
      * <strong>example:</strong>
      * <p>30</p>
      */
@@ -29,7 +47,7 @@ public class DescribeGatewayListResponseBody extends TeaModel {
     public String pageSize;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>CED079B7-A408-41A1-BFF1-EC608E******</p>
@@ -38,6 +56,8 @@ public class DescribeGatewayListResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total number of entries.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -99,6 +119,8 @@ public class DescribeGatewayListResponseBody extends TeaModel {
 
     public static class DescribeGatewayListResponseBodyItems extends TeaModel {
         /**
+         * <p>The time when the gateway instance was created.</p>
+         * 
          * <strong>example:</strong>
          * <p>2020-08-14T05:58:42Z</p>
          */
@@ -106,19 +128,47 @@ public class DescribeGatewayListResponseBody extends TeaModel {
         public String createTime;
 
         /**
+         * <p>The database type.</p>
+         * 
          * <strong>example:</strong>
          * <p>polardb_mysql</p>
          */
         @NameInMap("DbType")
         public String dbType;
 
+        /**
+         * <p>The expiration time of the gateway instance.</p>
+         * <ul>
+         * <li><p>For subscription instances, this parameter indicates the expiration time.</p>
+         * </li>
+         * <li><p>This parameter is empty for pay-as-you-go instances.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>2028-09-01T16:00:00Z</p>
+         */
         @NameInMap("ExpireTime")
         public String expireTime;
 
+        /**
+         * <p>Indicates whether the gateway instance has expired. Valid values:</p>
+         * <ul>
+         * <li><p><strong>true</strong></p>
+         * </li>
+         * <li><p><strong>false</strong></p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("Expired")
         public Boolean expired;
 
         /**
+         * <p>The gateway instance ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>pg-xxxxxxx</p>
          */
@@ -126,6 +176,8 @@ public class DescribeGatewayListResponseBody extends TeaModel {
         public String gwClusterId;
 
         /**
+         * <p>The description of the gateway instance.</p>
+         * 
          * <strong>example:</strong>
          * <p>pg-xxxxxx</p>
          */
@@ -133,6 +185,8 @@ public class DescribeGatewayListResponseBody extends TeaModel {
         public String gwDescription;
 
         /**
+         * <p>The time when the gateway instance was last modified.</p>
+         * 
          * <strong>example:</strong>
          * <p>2024-10-29T09:31:37Z</p>
          */
@@ -140,6 +194,14 @@ public class DescribeGatewayListResponseBody extends TeaModel {
         public String modifyTime;
 
         /**
+         * <p>The billing method. Valid values:</p>
+         * <ul>
+         * <li><p><strong>Postpaid</strong>: pay-as-you-go</p>
+         * </li>
+         * <li><p><strong>Prepaid</strong>: subscription</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Postpaid</p>
          */
@@ -147,6 +209,8 @@ public class DescribeGatewayListResponseBody extends TeaModel {
         public String payType;
 
         /**
+         * <p>The region ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-beijing</p>
          */
@@ -154,6 +218,14 @@ public class DescribeGatewayListResponseBody extends TeaModel {
         public String regionId;
 
         /**
+         * <p>The status of the gateway instance. Valid values:</p>
+         * <ul>
+         * <li><p><strong>CREATE</strong>: creating</p>
+         * </li>
+         * <li><p><strong>ACTIVATION</strong>: running</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>ACTIVATION</p>
          */
@@ -161,6 +233,8 @@ public class DescribeGatewayListResponseBody extends TeaModel {
         public String status;
 
         /**
+         * <p>The vSwitch ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>vsw-wz9u0v2yuskt1gth3uuju</p>
          */
@@ -168,6 +242,8 @@ public class DescribeGatewayListResponseBody extends TeaModel {
         public String vSwitchId;
 
         /**
+         * <p>The ID of the virtual private cloud (VPC).</p>
+         * 
          * <strong>example:</strong>
          * <p>vpc-****************</p>
          */

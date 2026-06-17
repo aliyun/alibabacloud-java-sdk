@@ -4,11 +4,14 @@ package com.aliyun.polardb20170801.models;
 import com.aliyun.tea.*;
 
 public class DescribeDBClustersResponseBody extends TeaModel {
+    /**
+     * <p>The details of the clusters.</p>
+     */
     @NameInMap("Items")
     public DescribeDBClustersResponseBodyItems items;
 
     /**
-     * <p>The number of the page to return.</p>
+     * <p>The page number.</p>
      * 
      * <strong>example:</strong>
      * <p>12</p>
@@ -17,7 +20,7 @@ public class DescribeDBClustersResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of clusters returned per page.</p>
+     * <p>The number of clusters returned on the current page.</p>
      * 
      * <strong>example:</strong>
      * <p>5</p>
@@ -26,7 +29,7 @@ public class DescribeDBClustersResponseBody extends TeaModel {
     public Integer pageRecordCount;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>9B7BFB11-C077-4FE3-B051-F69CEB******</p>
@@ -35,7 +38,7 @@ public class DescribeDBClustersResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of returned entries.</p>
+     * <p>The total number of records.</p>
      * 
      * <strong>example:</strong>
      * <p>16</p>

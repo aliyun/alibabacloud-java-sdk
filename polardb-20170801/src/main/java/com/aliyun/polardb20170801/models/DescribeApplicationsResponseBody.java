@@ -4,10 +4,15 @@ package com.aliyun.polardb20170801.models;
 import com.aliyun.tea.*;
 
 public class DescribeApplicationsResponseBody extends TeaModel {
+    /**
+     * <p>Contains the returned applications.</p>
+     */
     @NameInMap("Items")
     public DescribeApplicationsResponseBodyItems items;
 
     /**
+     * <p>The page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -15,6 +20,8 @@ public class DescribeApplicationsResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of records on the current page.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -22,6 +29,8 @@ public class DescribeApplicationsResponseBody extends TeaModel {
     public Integer pageRecordCount;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>3E5CD764-FCCA-5C9C-838E-20E0DE84B2AF</p>
      */
@@ -29,6 +38,8 @@ public class DescribeApplicationsResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total record count.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */

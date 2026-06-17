@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class MovePolarFsObjectsResponseBody extends TeaModel {
     /**
+     * <p>The PolarFs instance ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>pfs-2ze0i74ka607*****</p>
      */
@@ -12,7 +14,7 @@ public class MovePolarFsObjectsResponseBody extends TeaModel {
     public String polarFsInstanceId;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>6BD9CDE4-5E7B-4BF3-9BB8-83C73E******</p>

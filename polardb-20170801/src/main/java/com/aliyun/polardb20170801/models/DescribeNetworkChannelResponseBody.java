@@ -4,11 +4,14 @@ package com.aliyun.polardb20170801.models;
 import com.aliyun.tea.*;
 
 public class DescribeNetworkChannelResponseBody extends TeaModel {
+    /**
+     * <p>A list of network channels.</p>
+     */
     @NameInMap("ChannelInfos")
     public java.util.List<DescribeNetworkChannelResponseBodyChannelInfos> channelInfos;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>925B84D9-CA72-432C-95CF-738C22******</p>
@@ -39,6 +42,8 @@ public class DescribeNetworkChannelResponseBody extends TeaModel {
 
     public static class DescribeNetworkChannelResponseBodyChannelInfos extends TeaModel {
         /**
+         * <p>The channel name.</p>
+         * 
          * <strong>example:</strong>
          * <p>ch4</p>
          */
@@ -46,6 +51,8 @@ public class DescribeNetworkChannelResponseBody extends TeaModel {
         public String channelName;
 
         /**
+         * <p>The ID of the source cluster.</p>
+         * 
          * <strong>example:</strong>
          * <p>pc-*************</p>
          */
@@ -53,6 +60,8 @@ public class DescribeNetworkChannelResponseBody extends TeaModel {
         public String DBClusterId;
 
         /**
+         * <p>The notes about the channel.</p>
+         * 
          * <strong>example:</strong>
          * <p>test update</p>
          */
@@ -60,6 +69,8 @@ public class DescribeNetworkChannelResponseBody extends TeaModel {
         public String notes;
 
         /**
+         * <p>The region ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
          */
@@ -67,6 +78,8 @@ public class DescribeNetworkChannelResponseBody extends TeaModel {
         public String regionId;
 
         /**
+         * <p>The ID of the target cluster.</p>
+         * 
          * <strong>example:</strong>
          * <p>pc-*************</p>
          */
@@ -74,6 +87,8 @@ public class DescribeNetworkChannelResponseBody extends TeaModel {
         public String targetDBClusterId;
 
         /**
+         * <p>The IP address of the target cluster.</p>
+         * 
          * <strong>example:</strong>
          * <p>33.<em>.</em>.240</p>
          */
@@ -81,6 +96,8 @@ public class DescribeNetworkChannelResponseBody extends TeaModel {
         public String targetIp;
 
         /**
+         * <p>The port of the target cluster.</p>
+         * 
          * <strong>example:</strong>
          * <p>3389</p>
          */
@@ -88,6 +105,8 @@ public class DescribeNetworkChannelResponseBody extends TeaModel {
         public String targetPort;
 
         /**
+         * <p>The type of the target cluster.</p>
+         * 
          * <strong>example:</strong>
          * <p>polardb_for_postgresql</p>
          */
@@ -95,6 +114,8 @@ public class DescribeNetworkChannelResponseBody extends TeaModel {
         public String targetType;
 
         /**
+         * <p>The ID of the VPC that contains the endpoint.</p>
+         * 
          * <strong>example:</strong>
          * <p>vpc-2ze13g2c6j7j2jl*******</p>
          */

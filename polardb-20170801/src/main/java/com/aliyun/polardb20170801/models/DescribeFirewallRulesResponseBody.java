@@ -5,16 +5,26 @@ import com.aliyun.tea.*;
 
 public class DescribeFirewallRulesResponseBody extends TeaModel {
     /**
+     * <p>The cluster ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>pc-*****************</p>
      */
     @NameInMap("DBClusterId")
     public String DBClusterId;
 
+    /**
+     * <p>The result set.</p>
+     */
     @NameInMap("Data")
     public DescribeFirewallRulesResponseBodyData data;
 
     /**
+     * <p>The response message.</p>
+     * <blockquote>
+     * <p>If the request is successful, <strong>Successful</strong> is returned. If the request fails, an error message is returned, such as an error code.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>Message</p>
      */
@@ -22,7 +32,7 @@ public class DescribeFirewallRulesResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>84D7DCD2-54F7-5BD2-B055-F5DE9D2B5264</p>
@@ -31,6 +41,14 @@ public class DescribeFirewallRulesResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <ul>
+     * <li><p><strong>true</strong>: The request was successful.</p>
+     * </li>
+     * <li><p><strong>false</strong>: The request failed.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -83,6 +101,9 @@ public class DescribeFirewallRulesResponseBody extends TeaModel {
     }
 
     public static class DescribeFirewallRulesResponseBodyData extends TeaModel {
+        /**
+         * <p>The list of firewall rules.</p>
+         */
         @NameInMap("RuleList")
         public java.util.List<String> ruleList;
 

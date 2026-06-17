@@ -4,10 +4,15 @@ package com.aliyun.polardb20170801.models;
 import com.aliyun.tea.*;
 
 public class DescribeCrossCloudRegionMappingToAliyunResponseBody extends TeaModel {
+    /**
+     * <p>The list of cross-cloud region mappings.</p>
+     */
     @NameInMap("CrossCloudRegionMappingList")
     public java.util.List<DescribeCrossCloudRegionMappingToAliyunResponseBodyCrossCloudRegionMappingList> crossCloudRegionMappingList;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>E56531A4-E552-40BA-9C58-137B80******</p>
      */
@@ -37,6 +42,8 @@ public class DescribeCrossCloudRegionMappingToAliyunResponseBody extends TeaMode
 
     public static class DescribeCrossCloudRegionMappingToAliyunResponseBodyCrossCloudRegionMappingList extends TeaModel {
         /**
+         * <p>The region ID of Alibaba Cloud.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-beijing</p>
          */
@@ -44,6 +51,8 @@ public class DescribeCrossCloudRegionMappingToAliyunResponseBody extends TeaMode
         public String aliyunRegionId;
 
         /**
+         * <p>The cloud provider.</p>
+         * 
          * <strong>example:</strong>
          * <p>HuaweiCloud</p>
          */
@@ -51,6 +60,8 @@ public class DescribeCrossCloudRegionMappingToAliyunResponseBody extends TeaMode
         public String cloudProvider;
 
         /**
+         * <p>The region ID of the third-party cloud.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-east-3</p>
          */

@@ -5,12 +5,17 @@ import com.aliyun.tea.*;
 
 public class DescribeResourcePackagesResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>E56531A4-E552-40BA-9C58-137B80******</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>A list of cross-cloud resource plans.</p>
+     */
     @NameInMap("ResourcePackageList")
     public java.util.List<DescribeResourcePackagesResponseBodyResourcePackageList> resourcePackageList;
 
@@ -37,6 +42,8 @@ public class DescribeResourcePackagesResponseBody extends TeaModel {
 
     public static class DescribeResourcePackagesResponseBodyResourcePackageListResourcePackageQuotaList extends TeaModel {
         /**
+         * <p>The capacity allocated to the resource pool.</p>
+         * 
          * <strong>example:</strong>
          * <p>6</p>
          */
@@ -44,6 +51,8 @@ public class DescribeResourcePackagesResponseBody extends TeaModel {
         public Long allocatedCapacity;
 
         /**
+         * <p>The ID of the resource pool.</p>
+         * 
          * <strong>example:</strong>
          * <p>pj-87681rbcef6******</p>
          */
@@ -51,6 +60,8 @@ public class DescribeResourcePackagesResponseBody extends TeaModel {
         public String projectId;
 
         /**
+         * <p>The used capacity of the resource pool.</p>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */
@@ -90,6 +101,8 @@ public class DescribeResourcePackagesResponseBody extends TeaModel {
 
     public static class DescribeResourcePackagesResponseBodyResourcePackageListTags extends TeaModel {
         /**
+         * <p>The tag key.</p>
+         * 
          * <strong>example:</strong>
          * <p>Key</p>
          */
@@ -97,6 +110,8 @@ public class DescribeResourcePackagesResponseBody extends TeaModel {
         public String key;
 
         /**
+         * <p>The tag value.</p>
+         * 
          * <strong>example:</strong>
          * <p>Value</p>
          */
@@ -128,6 +143,8 @@ public class DescribeResourcePackagesResponseBody extends TeaModel {
 
     public static class DescribeResourcePackagesResponseBodyResourcePackageList extends TeaModel {
         /**
+         * <p>Indicates whether automatic quota allocation is enabled.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -135,6 +152,8 @@ public class DescribeResourcePackagesResponseBody extends TeaModel {
         public Boolean autoQuota;
 
         /**
+         * <p>The time when the resource plan was created.</p>
+         * 
          * <strong>example:</strong>
          * <p>1744621511000</p>
          */
@@ -142,6 +161,8 @@ public class DescribeResourcePackagesResponseBody extends TeaModel {
         public Long createTime;
 
         /**
+         * <p>The time when the resource plan expires.</p>
+         * 
          * <strong>example:</strong>
          * <p>1747238400000</p>
          */
@@ -149,16 +170,23 @@ public class DescribeResourcePackagesResponseBody extends TeaModel {
         public Long expireTime;
 
         /**
+         * <p>The ID of the cross-cloud resource plan.</p>
+         * 
          * <strong>example:</strong>
          * <p>pm-bp11b0i9389******</p>
          */
         @NameInMap("ResourcePackageId")
         public String resourcePackageId;
 
+        /**
+         * <p>The quota allocation details.</p>
+         */
         @NameInMap("ResourcePackageQuotaList")
         public java.util.List<DescribeResourcePackagesResponseBodyResourcePackageListResourcePackageQuotaList> resourcePackageQuotaList;
 
         /**
+         * <p>The type of the cross-cloud resource plan.</p>
+         * 
          * <strong>example:</strong>
          * <p>MySQL</p>
          */
@@ -166,16 +194,29 @@ public class DescribeResourcePackagesResponseBody extends TeaModel {
         public String resourcePackageType;
 
         /**
+         * <p>The status of the cross-cloud resource plan. Valid values:</p>
+         * <ul>
+         * <li><p>Normal: Normal.</p>
+         * </li>
+         * <li><p>Maintaining: Under maintenance.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Normal</p>
          */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The list of tags.</p>
+         */
         @NameInMap("Tags")
         public java.util.List<DescribeResourcePackagesResponseBodyResourcePackageListTags> tags;
 
         /**
+         * <p>The total capacity.</p>
+         * 
          * <strong>example:</strong>
          * <p>8</p>
          */
@@ -183,6 +224,8 @@ public class DescribeResourcePackagesResponseBody extends TeaModel {
         public Long totalCapacity;
 
         /**
+         * <p>The used capacity.</p>
+         * 
          * <strong>example:</strong>
          * <p>4</p>
          */
