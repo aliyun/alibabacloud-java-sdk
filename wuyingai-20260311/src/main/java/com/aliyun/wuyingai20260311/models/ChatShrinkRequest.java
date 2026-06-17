@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ChatShrinkRequest extends TeaModel {
     /**
+     * <p>Bearer + JWT returned by GetAccessToken. URL-encode the entire string and pass it as a query parameter.</p>
+     * 
      * <strong>example:</strong>
      * <p>Bearer%20eyJhb****...****k</p>
      */
@@ -12,6 +14,8 @@ public class ChatShrinkRequest extends TeaModel {
     public String authorization;
 
     /**
+     * <p>The user ID from the external system.</p>
+     * 
      * <strong>example:</strong>
      * <p>test-user</p>
      */
@@ -19,13 +23,23 @@ public class ChatShrinkRequest extends TeaModel {
     public String externalUserId;
 
     /**
+     * <p>The message list (JSON string), sorted in chronological order.</p>
+     * 
      * <strong>example:</strong>
      * <p>[{&quot;Role&quot;:&quot;user&quot;,&quot;Content&quot;:[{&quot;Type&quot;:&quot;text&quot;,&quot;Text&quot;:&quot;你好&quot;}]}]</p>
      */
     @NameInMap("Input")
     public String inputShrink;
 
+    @NameInMap("Model")
+    public String model;
+
+    @NameInMap("Resume")
+    public Boolean resume;
+
     /**
+     * <p>The routing key that specifies the backend instance to process the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>&quot;&quot;</p>
      */
@@ -33,6 +47,8 @@ public class ChatShrinkRequest extends TeaModel {
     public String routingKey;
 
     /**
+     * <p>The session ID for multi-turn conversation context persistence.</p>
+     * 
      * <strong>example:</strong>
      * <p>test-session-001</p>
      */
@@ -40,6 +56,8 @@ public class ChatShrinkRequest extends TeaModel {
     public String sessionId;
 
     /**
+     * <p>The additional settings. Contains the output file mode control parameter OutputFileMode (string, valid values: url or base64. Defaults to base64 for legacy compatibility. We recommend url).</p>
+     * 
      * <strong>example:</strong>
      * <p>{&quot;OutputFileMode&quot;: &quot;url&quot;}</p>
      */
@@ -47,6 +65,8 @@ public class ChatShrinkRequest extends TeaModel {
     public String settingsShrink;
 
     /**
+     * <p>The streaming output control options. Contains IncludeReasoning (boolean, default true, specifies whether to include the model thinking process) and IncludeToolCalls (boolean, default true, specifies whether to include tool invocation details). If not specified or set to a null object, the behavior is consistent with the legacy version.</p>
+     * 
      * <strong>example:</strong>
      * <p>{&quot;IncludeReasoning&quot;: false, &quot;IncludeToolCalls&quot;: false}</p>
      */
@@ -54,6 +74,8 @@ public class ChatShrinkRequest extends TeaModel {
     public String streamOptionsShrink;
 
     /**
+     * <p>The agent template ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>template-abc123</p>
      */
@@ -87,6 +109,22 @@ public class ChatShrinkRequest extends TeaModel {
     }
     public String getInputShrink() {
         return this.inputShrink;
+    }
+
+    public ChatShrinkRequest setModel(String model) {
+        this.model = model;
+        return this;
+    }
+    public String getModel() {
+        return this.model;
+    }
+
+    public ChatShrinkRequest setResume(Boolean resume) {
+        this.resume = resume;
+        return this;
+    }
+    public Boolean getResume() {
+        return this.resume;
     }
 
     public ChatShrinkRequest setRoutingKey(String routingKey) {

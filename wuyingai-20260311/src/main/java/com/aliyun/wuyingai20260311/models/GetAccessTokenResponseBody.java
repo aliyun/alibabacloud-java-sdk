@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetAccessTokenResponseBody extends TeaModel {
     /**
+     * <p>The details of the authentication failure.</p>
+     * 
      * <strong>example:</strong>
      * <p>null</p>
      */
@@ -12,6 +14,8 @@ public class GetAccessTokenResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
+     * <p>The JWT used as the Authorization query parameter for the Chat operation. The token is valid for a limited period of time.</p>
+     * 
      * <strong>example:</strong>
      * <p>&quot;eyJhbGc****.eyJ********.****TCk&quot;</p>
      */
@@ -19,6 +23,8 @@ public class GetAccessTokenResponseBody extends TeaModel {
     public String accessToken;
 
     /**
+     * <p>The business status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>&quot;200&quot;</p>
      */
@@ -26,6 +32,8 @@ public class GetAccessTokenResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -33,6 +41,8 @@ public class GetAccessTokenResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The error details. This parameter is returned only when the request fails.</p>
+     * 
      * <strong>example:</strong>
      * <p>null</p>
      */
@@ -40,6 +50,8 @@ public class GetAccessTokenResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID, in UUID format. The first and last characters are retained for illustration purposes.</p>
+     * 
      * <strong>example:</strong>
      * <p>&quot;EA12****-<strong><strong>-</strong></strong>-****-****E5C&quot;</p>
      */
@@ -47,6 +59,8 @@ public class GetAccessTokenResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

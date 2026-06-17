@@ -8,7 +8,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public Client(com.aliyun.teaopenapi.models.Config config) throws Exception {
         super(config);
-        this._endpointRule = "";
+        this._endpointRule = "regional";
         this.checkConfig(config);
         this._endpoint = this.getEndpoint("wuyingai", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
     }
@@ -27,8 +27,21 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p><em>Features</em>*</p>
+     * <ul>
+     * <li>Real-time streaming response that reduces time to first token.</li>
+     * <li>Supports multimodal input (text, images, and files).</li>
+     * <li>Session persistence for multi-turn conversations.</li>
+     * <li>Event-driven architecture for precise message status control.
+     * <strong>Request information</strong></li>
+     * <li><strong>Request method</strong>: <code>POST</code></li>
+     * <li><strong>Content-Type</strong>: <code>application/json</code></li>
+     * <li><strong>Response Content-Type</strong>: <code>text/event-stream</code>.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>与 JVS Crew 进行流式对话，采用 Server-Sent Events (SSE) 协议实时推送对话内容。</p>
+     * <p>Conducts a streaming conversation with JVS Crew, using the Server-Sent Events (SSE) protocol to push conversation content in real time.</p>
      * 
      * @param tmpReq ChatRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -68,6 +81,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("Input", request.inputShrink);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.model)) {
+            body.put("Model", request.model);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resume)) {
+            body.put("Resume", request.resume);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.routingKey)) {
             body.put("RoutingKey", request.routingKey);
         }
@@ -103,8 +124,21 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p><em>Features</em>*</p>
+     * <ul>
+     * <li>Real-time streaming response that reduces time to first token.</li>
+     * <li>Supports multimodal input (text, images, and files).</li>
+     * <li>Session persistence for multi-turn conversations.</li>
+     * <li>Event-driven architecture for precise message status control.
+     * <strong>Request information</strong></li>
+     * <li><strong>Request method</strong>: <code>POST</code></li>
+     * <li><strong>Content-Type</strong>: <code>application/json</code></li>
+     * <li><strong>Response Content-Type</strong>: <code>text/event-stream</code>.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>与 JVS Crew 进行流式对话，采用 Server-Sent Events (SSE) 协议实时推送对话内容。</p>
+     * <p>Conducts a streaming conversation with JVS Crew, using the Server-Sent Events (SSE) protocol to push conversation content in real time.</p>
      * 
      * @param request ChatRequest
      * @return ChatResponse
@@ -115,8 +149,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p><em>Token format</em>*: The AccessToken is a <strong>JWT</strong> consisting of <strong>Header.Payload.Signature</strong> segments, each Base64URL-encoded and concatenated with <code>.</code> into a single line. The examples in the following table are masked for illustration purposes. The actual RequestId and JWT segments are longer.
+     * <strong>Token validity</strong>: The AccessToken <strong>is valid for a limited period of time</strong>. After it expires, call this operation again to obtain a new token.
+     * <strong>Authentication method</strong>: POP V1 signature (AK/SK)
+     * <strong>Action</strong>: <code>GetAccessToken</code>.</p>
+     * 
      * <b>summary</b> : 
-     * <p>获取用户进行对话所需的访问令牌（AccessToken），用于后续调用 Chat 接口进行身份验证。</p>
+     * <p>Obtains an access token (AccessToken) for user conversations, which is used to authenticate when invoking the Chat operation.</p>
      * 
      * @param request GetAccessTokenRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -151,8 +191,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p><em>Token format</em>*: The AccessToken is a <strong>JWT</strong> consisting of <strong>Header.Payload.Signature</strong> segments, each Base64URL-encoded and concatenated with <code>.</code> into a single line. The examples in the following table are masked for illustration purposes. The actual RequestId and JWT segments are longer.
+     * <strong>Token validity</strong>: The AccessToken <strong>is valid for a limited period of time</strong>. After it expires, call this operation again to obtain a new token.
+     * <strong>Authentication method</strong>: POP V1 signature (AK/SK)
+     * <strong>Action</strong>: <code>GetAccessToken</code>.</p>
+     * 
      * <b>summary</b> : 
-     * <p>获取用户进行对话所需的访问令牌（AccessToken），用于后续调用 Chat 接口进行身份验证。</p>
+     * <p>Obtains an access token (AccessToken) for user conversations, which is used to authenticate when invoking the Chat operation.</p>
      * 
      * @param request GetAccessTokenRequest
      * @return GetAccessTokenResponse

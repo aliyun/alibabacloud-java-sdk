@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetAccessTokenRequest extends TeaModel {
     /**
+     * <p>The unique identifier of the user in the external system.</p>
+     * 
      * <strong>example:</strong>
      * <p>&quot;user-38764&quot;</p>
      */
@@ -12,6 +14,8 @@ public class GetAccessTokenRequest extends TeaModel {
     public String externalUserId;
 
     /**
+     * <p>The ID of the agent template.</p>
+     * 
      * <strong>example:</strong>
      * <p>1600112233445566</p>
      */

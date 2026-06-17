@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ChatRequest extends TeaModel {
     /**
+     * <p>Bearer + JWT returned by GetAccessToken. URL-encode the entire string and pass it as a query parameter.</p>
+     * 
      * <strong>example:</strong>
      * <p>Bearer%20eyJhb****...****k</p>
      */
@@ -12,6 +14,8 @@ public class ChatRequest extends TeaModel {
     public String authorization;
 
     /**
+     * <p>The user ID from the external system.</p>
+     * 
      * <strong>example:</strong>
      * <p>test-user</p>
      */
@@ -19,13 +23,23 @@ public class ChatRequest extends TeaModel {
     public String externalUserId;
 
     /**
+     * <p>The message list (JSON string), sorted in chronological order.</p>
+     * 
      * <strong>example:</strong>
      * <p>[{&quot;Role&quot;:&quot;user&quot;,&quot;Content&quot;:[{&quot;Type&quot;:&quot;text&quot;,&quot;Text&quot;:&quot;你好&quot;}]}]</p>
      */
     @NameInMap("Input")
     public java.util.List<ChatRequestInput> input;
 
+    @NameInMap("Model")
+    public String model;
+
+    @NameInMap("Resume")
+    public Boolean resume;
+
     /**
+     * <p>The routing key that specifies the backend instance to process the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>&quot;&quot;</p>
      */
@@ -33,6 +47,8 @@ public class ChatRequest extends TeaModel {
     public String routingKey;
 
     /**
+     * <p>The session ID for multi-turn conversation context persistence.</p>
+     * 
      * <strong>example:</strong>
      * <p>test-session-001</p>
      */
@@ -40,6 +56,8 @@ public class ChatRequest extends TeaModel {
     public String sessionId;
 
     /**
+     * <p>The additional settings. Contains the output file mode control parameter OutputFileMode (string, valid values: url or base64. Defaults to base64 for legacy compatibility. We recommend url).</p>
+     * 
      * <strong>example:</strong>
      * <p>{&quot;OutputFileMode&quot;: &quot;url&quot;}</p>
      */
@@ -47,6 +65,8 @@ public class ChatRequest extends TeaModel {
     public ChatRequestSettings settings;
 
     /**
+     * <p>The streaming output control options. Contains IncludeReasoning (boolean, default true, specifies whether to include the model thinking process) and IncludeToolCalls (boolean, default true, specifies whether to include tool invocation details). If not specified or set to a null object, the behavior is consistent with the legacy version.</p>
+     * 
      * <strong>example:</strong>
      * <p>{&quot;IncludeReasoning&quot;: false, &quot;IncludeToolCalls&quot;: false}</p>
      */
@@ -54,6 +74,8 @@ public class ChatRequest extends TeaModel {
     public ChatRequestStreamOptions streamOptions;
 
     /**
+     * <p>The agent template ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>template-abc123</p>
      */
@@ -87,6 +109,22 @@ public class ChatRequest extends TeaModel {
     }
     public java.util.List<ChatRequestInput> getInput() {
         return this.input;
+    }
+
+    public ChatRequest setModel(String model) {
+        this.model = model;
+        return this;
+    }
+    public String getModel() {
+        return this.model;
+    }
+
+    public ChatRequest setResume(Boolean resume) {
+        this.resume = resume;
+        return this;
+    }
+    public Boolean getResume() {
+        return this.resume;
     }
 
     public ChatRequest setRoutingKey(String routingKey) {
@@ -138,6 +176,8 @@ public class ChatRequest extends TeaModel {
         public String fileName;
 
         /**
+         * <p>The file path or URL (Type=file).</p>
+         * 
          * <strong>example:</strong>
          * <p>/workspace/report.pdf</p>
          */
@@ -145,6 +185,8 @@ public class ChatRequest extends TeaModel {
         public String fileUrl;
 
         /**
+         * <p>The image URL or Base64-encoded string (Type=image).</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="https://example.com/img.jpg">https://example.com/img.jpg</a></p>
          */
@@ -152,6 +194,8 @@ public class ChatRequest extends TeaModel {
         public String imageUrl;
 
         /**
+         * <p>The text content (Type=text).</p>
+         * 
          * <strong>example:</strong>
          * <p>帮我分析这张图片</p>
          */
@@ -159,6 +203,8 @@ public class ChatRequest extends TeaModel {
         public String text;
 
         /**
+         * <p>The content type.</p>
+         * 
          * <strong>example:</strong>
          * <p>text</p>
          */
@@ -213,10 +259,15 @@ public class ChatRequest extends TeaModel {
     }
 
     public static class ChatRequestInput extends TeaModel {
+        /**
+         * <p>The content block list.</p>
+         */
         @NameInMap("Content")
         public java.util.List<ChatRequestInputContent> content;
 
         /**
+         * <p>The message role.</p>
+         * 
          * <strong>example:</strong>
          * <p>user</p>
          */
@@ -248,6 +299,8 @@ public class ChatRequest extends TeaModel {
 
     public static class ChatRequestSettings extends TeaModel {
         /**
+         * <p>Controls the file output mode. Valid values: url or base64. If this parameter is not specified, base64 is used by default for legacy compatibility.</p>
+         * 
          * <strong>example:</strong>
          * <p>base64</p>
          */
@@ -271,6 +324,8 @@ public class ChatRequest extends TeaModel {
 
     public static class ChatRequestStreamOptions extends TeaModel {
         /**
+         * <p>Specifies whether to include the model thinking process. When set to false, the SSE stream does not include messages with Type=&quot;reasoning&quot; or their content events.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -278,6 +333,8 @@ public class ChatRequest extends TeaModel {
         public Boolean includeReasoning;
 
         /**
+         * <p>Specifies whether to include tool invocation details. When set to false, the SSE stream does not include messages of type plugin_call, plugin_call_output, mcp_call, or mcp_call_output, or their content events.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
