@@ -7,7 +7,7 @@ public class DescribeCustomEventCountResponseBody extends TeaModel {
     /**
      * <p>The status code.</p>
      * <blockquote>
-     * <p> The status code 200 indicates that the request was successful.</p>
+     * <p>The status code 200 indicates that the request was successful.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

@@ -14,11 +14,11 @@ public class DescribeAlertLogListRequest extends TeaModel {
     public String contactGroup;
 
     /**
-     * <p>The end timestamp of the alert logs to be queried.</p>
+     * <p>The end of the time range to query the alert history.</p>
      * <p>Unit: milliseconds.</p>
-     * <p>You can query only the alert logs within the last year. If the query time is longer than one year, the return value of the <code>AlertLogList</code> parameter is empty.</p>
+     * <p>You can query only the alert history within the last year. If the query time range exceeds one year, the return value of the <code>AlertLogList</code> parameter is empty.</p>
      * <blockquote>
-     * <p> The time period between the start time specified by <code>StartTime</code> and end time specified by <code>EndTime</code> must be less than or equal to 15 days. You must specify StartTime and EndTime at the same time, or leave StartTime and EndTime empty at the same time. If you do not specify this parameter, the alert logs within the last 15 minutes are queried by default.</p>
+     * <p>The interval between the start time (<code>StartTime</code>) and end time (<code>EndTime</code>) must be less than or equal to 15 days. Both parameters must be specified or unspecified at the same time. If they are not specified, the alert history within the last 15 minutes is queried by default.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -28,10 +28,12 @@ public class DescribeAlertLogListRequest extends TeaModel {
     public Long endTime;
 
     /**
-     * <p>The type of the alert event. Valid values:</p>
+     * <p>The alert type. Valid values:</p>
      * <ul>
-     * <li>TRIGGERED: The alert is triggered.</li>
-     * <li>RESOLVED: The alert is resolved.</li>
+     * <li><p>TRIGGERED: The alert is triggered.</p>
+     * </li>
+     * <li><p>RESOLVED: The alert is cleared.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -41,13 +43,13 @@ public class DescribeAlertLogListRequest extends TeaModel {
     public String eventType;
 
     /**
-     * <p>The dimensions based on which data is aggregated. This parameter is equivalent to the GROUP BY clause in SQL. Valid values:</p>
+     * <p>The spatial dimension by which the data is aggregated, which is equivalent to Group By in SQL. Valid values:</p>
      * <ul>
      * <li><code>product</code>: aggregates data by cloud service.</li>
      * <li><code>level</code>: aggregates data by alert level.</li>
      * <li><code>groupId</code>: aggregates data by application group.</li>
      * <li><code>contactGroup</code>: aggregates data by alert contact group.</li>
-     * <li><code>product,metricName</code>: aggregates data both by cloud service and by metric.</li>
+     * <li><code>product,metricName</code>: aggregates data by cloud service and metric.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -66,7 +68,7 @@ public class DescribeAlertLogListRequest extends TeaModel {
     public String groupId;
 
     /**
-     * <p>The statistical period of alert logs. Unit: minutes.</p>
+     * <p>The interval at which logs are obtained. Unit: minutes.</p>
      * 
      * <strong>example:</strong>
      * <p>360</p>
@@ -75,11 +77,15 @@ public class DescribeAlertLogListRequest extends TeaModel {
     public String lastMin;
 
     /**
-     * <p>The severity level and notification methods of the alert. Valid values:</p>
-     * <ul>
-     * <li>P4: Alert notifications are sent by using emails and DingTalk chatbots.</li>
-     * <li>OK: No alert is generated.</li>
-     * </ul>
+     * <p>The alert level and notification methods. Valid values:</p>
+     * <p>&lt;props=&quot;china&quot;&gt;- P2: phone calls, text messages, emails, and DingTalk chatbots.</p>
+     * <p>&lt;props=&quot;china&quot;&gt;- P3: text messages, emails, and DingTalk chatbots.</p>
+     * <p>&lt;props=&quot;china&quot;&gt;- P4: emails and DingTalk chatbots.</p>
+     * <p>&lt;props=&quot;china&quot;&gt;- OK: no alerts.</p>
+     * <p>&lt;props=&quot;intl&quot;&gt;- P4: emails and DingTalk chatbots.</p>
+     * <p>&lt;props=&quot;intl&quot;&gt;- OK: no alerts.</p>
+     * <p>&lt;props=&quot;partner&quot;&gt;- P4: emails and DingTalk chatbots.</p>
+     * <p>&lt;props=&quot;partner&quot;&gt;- OK: no alerts.</p>
      * 
      * <strong>example:</strong>
      * <p>P4</p>
@@ -88,9 +94,9 @@ public class DescribeAlertLogListRequest extends TeaModel {
     public String level;
 
     /**
-     * <p>The metric name.</p>
+     * <p>The name of the metric.</p>
      * <blockquote>
-     * <p>For more information about the metrics of different cloud services, see <a href="https://help.aliyun.com/document_detail/163515.html">Appendix 1: Metrics</a>.</p>
+     * <p>For more information about the metrics of cloud services, see <a href="https://help.aliyun.com/document_detail/163515.html">Metrics</a>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -102,7 +108,7 @@ public class DescribeAlertLogListRequest extends TeaModel {
     /**
      * <p>The namespace of the cloud service.</p>
      * <blockquote>
-     * <p> For information about how to query the namespace of a cloud service, see <a href="https://help.aliyun.com/document_detail/163515.html">Appendix 1: Metrics</a>.</p>
+     * <p>For more information about the namespaces of cloud services, see <a href="https://help.aliyun.com/document_detail/163515.html">Metrics</a>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -132,8 +138,8 @@ public class DescribeAlertLogListRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The abbreviation of the service name.</p>
-     * <p>For information about how to obtain the abbreviation of a cloud service name, see <a href="https://help.aliyun.com/document_detail/114930.html">DescribeProductsOfActiveMetricRule</a>.</p>
+     * <p>The abbreviation of the cloud service name.</p>
+     * <p>For more information about how to obtain the abbreviation of a cloud service name, see <a href="https://help.aliyun.com/document_detail/114930.html">DescribeProductsOfActiveMetricRule</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>ECS</p>
@@ -146,7 +152,7 @@ public class DescribeAlertLogListRequest extends TeaModel {
 
     /**
      * <p>The ID of the alert rule.</p>
-     * <p>For information about how to obtain the ID of an alert rule, see <a href="https://help.aliyun.com/document_detail/114941.html">DescribeMetricRuleList</a>.</p>
+     * <p>For more information about how to query the ID of an alert rule, see <a href="https://help.aliyun.com/document_detail/114941.html">DescribeMetricRuleList</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>bc369e8_30f87e517ed2fc****</p>
@@ -164,7 +170,7 @@ public class DescribeAlertLogListRequest extends TeaModel {
     public String ruleName;
 
     /**
-     * <p>The search keyword that is used to query alert logs.</p>
+     * <p>The keyword used to query the alert history.</p>
      * 
      * <strong>example:</strong>
      * <p>alert</p>
@@ -173,15 +179,17 @@ public class DescribeAlertLogListRequest extends TeaModel {
     public String searchKey;
 
     /**
-     * <p>The status of the alert. Valid values:</p>
+     * <p>The alert status. Valid values:</p>
      * <ul>
-     * <li>0: The alert is triggered or cleared.</li>
-     * <li>1: The alert is ineffective.</li>
-     * <li>2: The alert is muted.</li>
-     * <li>3: The host is restarting.</li>
-     * <li>4: No alert notification is sent.</li>
+     * <li>0: An alert is triggered or cleared.</li>
+     * <li>1: The current time is not within the effective period of the alert.</li>
+     * <li>2: The current time is within the channel silence period.</li>
+     * <li>3: The host is being restarted.</li>
+     * <li>4: No alerts are sent.</li>
      * </ul>
-     * <p>If the value of the SendStatus parameter is 0, the value P4 of the Level parameter indicates a triggered alert and the value OK indicates a cleared alert.</p>
+     * <p>&lt;props=&quot;china&quot;&gt;When the alert status is 0, an alert is triggered if Level is set to P2, P3, or P4; the alert is cleared if Level is set to OK.
+     * &lt;props=&quot;intl&quot;&gt;When the alert status is 0, an alert is triggered if Level is set to P4; the alert is cleared if Level is set to OK.
+     * &lt;props=&quot;partner&quot;&gt;When the alert status is 0, an alert is triggered if Level is set to P4; the alert is cleared if Level is set to OK.</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>
@@ -190,7 +198,7 @@ public class DescribeAlertLogListRequest extends TeaModel {
     public String sendStatus;
 
     /**
-     * <p>The type of the alert rule. Valid value: METRIC. This value indicates an alert rule for time series metrics.</p>
+     * <p>The type of the alert rule. Valid value: METRIC, which indicates a time series metric alert rule.</p>
      * 
      * <strong>example:</strong>
      * <p>METRIC</p>
@@ -199,11 +207,11 @@ public class DescribeAlertLogListRequest extends TeaModel {
     public String sourceType;
 
     /**
-     * <p>The start timestamp of the alert logs to be queried.</p>
+     * <p>The beginning of the time range to query the alert history.</p>
      * <p>Unit: milliseconds.</p>
-     * <p>You can query only the alert logs within the last year. If the query time is longer than one year, the return value of the <code>AlertLogList</code> parameter is empty.</p>
+     * <p>You can query only the alert history within the last year. If the query time range exceeds one year, the return value of the <code>AlertLogList</code> parameter is empty.</p>
      * <blockquote>
-     * <p> The time period between the start time specified by <code>StartTime</code> and the end time specified by <code>EndTime</code> must be less than or equal to 15 days. You must specify StartTime and EndTime at the same time, or leave StartTime and EndTime empty at the same time. If you do not specify this parameter, the alert logs within the last 15 minutes are queried by default.</p>
+     * <p>The interval between the start time (<code>StartTime</code>) and end time (<code>EndTime</code>) must be less than or equal to 15 days. Both parameters must be specified or unspecified at the same time. If they are not specified, the alert history within the last 15 minutes is queried by default.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

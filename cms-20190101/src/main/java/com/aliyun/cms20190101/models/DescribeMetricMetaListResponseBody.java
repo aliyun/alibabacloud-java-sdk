@@ -7,7 +7,7 @@ public class DescribeMetricMetaListResponseBody extends TeaModel {
     /**
      * <p>The response code.</p>
      * <blockquote>
-     * <p> The status code 200 indicates that the request was successful.</p>
+     * <p>The status code 200 indicates that the request was successful.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -29,7 +29,7 @@ public class DescribeMetricMetaListResponseBody extends TeaModel {
      * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>0CCE0AF0-053C-4B13-A583-DC9A85785D49</p>
+     * <p>CDE9EAFF-D54E-4024-BBFC-B0AAC883143B</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,8 +40,10 @@ public class DescribeMetricMetaListResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
      * <ul>
-     * <li>true</li>
-     * <li>false</li>
+     * <li><p>true</p>
+     * </li>
+     * <li><p>false</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -54,7 +56,7 @@ public class DescribeMetricMetaListResponseBody extends TeaModel {
      * <p>The total number of entries returned.</p>
      * 
      * <strong>example:</strong>
-     * <p>12</p>
+     * <p>10</p>
      */
     @NameInMap("TotalCount")
     public String totalCount;

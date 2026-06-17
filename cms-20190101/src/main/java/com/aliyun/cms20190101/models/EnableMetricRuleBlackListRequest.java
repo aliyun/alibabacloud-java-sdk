@@ -21,8 +21,10 @@ public class EnableMetricRuleBlackListRequest extends TeaModel {
     /**
      * <p>Specifies whether to enable the blacklist policy. Valid values:</p>
      * <ul>
-     * <li>true: The blacklist policy is enabled.</li>
-     * <li>false (default): The blacklist policy is disabled.</li>
+     * <li><p>true: The blacklist policy is enabled.</p>
+     * </li>
+     * <li><p>false (default): The blacklist policy is disabled.</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

@@ -7,7 +7,7 @@ public class DeleteEventRuleTargetsResponseBody extends TeaModel {
     /**
      * <p>The response code.</p>
      * <blockquote>
-     * <p> The status code 200 indicates that the request was successful.</p>
+     * <p>The status code 200 indicates that the request was successful.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -20,7 +20,7 @@ public class DeleteEventRuleTargetsResponseBody extends TeaModel {
      * <p>The returned message.</p>
      * 
      * <strong>example:</strong>
-     * <p>Success</p>
+     * <p>successfull</p>
      */
     @NameInMap("Message")
     public String message;
@@ -29,7 +29,7 @@ public class DeleteEventRuleTargetsResponseBody extends TeaModel {
      * <p>The request ID. You can use the request ID to query logs and troubleshoot issues.</p>
      * 
      * <strong>example:</strong>
-     * <p>7ADD7EFB-7555-4EC1-A3D9-F9955C189CCF</p>
+     * <p>142989D9-CC52-54D0-928D-2C9B1D9F051C</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -37,8 +37,10 @@ public class DeleteEventRuleTargetsResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
      * <ul>
-     * <li><code>true</code></li>
-     * <li><code>false</code></li>
+     * <li><p><code>true</code></p>
+     * </li>
+     * <li><p><code>false</code></p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

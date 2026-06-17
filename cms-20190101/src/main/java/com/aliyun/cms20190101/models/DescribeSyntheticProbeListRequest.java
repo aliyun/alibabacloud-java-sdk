@@ -4,10 +4,18 @@ package com.aliyun.cms20190101.models;
 import com.aliyun.tea.*;
 
 public class DescribeSyntheticProbeListRequest extends TeaModel {
+    /**
+     * <p>The name or ID of the city where the carrier detection point is located.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Beijing</p>
+     */
     @NameInMap("City")
     public String city;
 
     /**
+     * <p>Specifies whether to return only detection points in data centers.</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -15,6 +23,8 @@ public class DescribeSyntheticProbeListRequest extends TeaModel {
     public Boolean idcProbe;
 
     /**
+     * <p>Specifies whether to return only IPv4 detection points.</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -22,16 +32,26 @@ public class DescribeSyntheticProbeListRequest extends TeaModel {
     public Boolean ipv4;
 
     /**
+     * <p>Specifies whether to return only IPv6 detection points.</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
     @NameInMap("Ipv6")
     public Boolean ipv6;
 
+    /**
+     * <p>The name or ID of the carrier.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>China Unicom</p>
+     */
     @NameInMap("Isp")
     public String isp;
 
     /**
+     * <p>Specifies whether to return only last-mile detection points.</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -39,6 +59,8 @@ public class DescribeSyntheticProbeListRequest extends TeaModel {
     public Boolean lmProbe;
 
     /**
+     * <p>Specifies whether to return only mobile detection points.</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -49,6 +71,14 @@ public class DescribeSyntheticProbeListRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>Specifies whether to return all detection points. Valid values:</p>
+     * <ul>
+     * <li><p>false (default): Returns the detection points that are available to you.</p>
+     * </li>
+     * <li><p>true: Returns all detection points.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

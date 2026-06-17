@@ -9,7 +9,7 @@ public class DescribeMetricRuleTargetsRequest extends TeaModel {
 
     /**
      * <p>The ID of the alert rule.</p>
-     * <p>For information about how to obtain the ID of an alert rule, see <a href="https://help.aliyun.com/document_detail/114941.html">DescribeMetricRuleList</a>.</p>
+     * <p>For information about how to obtain the alert rule ID, see <a href="https://help.aliyun.com/document_detail/114941.html">DescribeMetricRuleList</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

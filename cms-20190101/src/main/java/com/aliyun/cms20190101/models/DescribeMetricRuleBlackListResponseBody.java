@@ -5,7 +5,10 @@ import com.aliyun.tea.*;
 
 public class DescribeMetricRuleBlackListResponseBody extends TeaModel {
     /**
-     * <p>The categories of the Alibaba Cloud service. For example, ApsaraDB for Redis includes the following categories: ApsaraDB for Redis (standard architecture), ApsaraDB for Redis (cluster architecture), and ApsaraDB for Redis (read/write splitting architecture). In this case, the valid values of this parameter for ApsaraDB for Redis include <code>kvstore_standard</code>, <code>kvstore_sharding</code>, and <code>kvstore_splitrw</code>.</p>
+     * <p>The status code.</p>
+     * <blockquote>
+     * <p>A value of 200 indicates that the request was successful.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,7 +17,7 @@ public class DescribeMetricRuleBlackListResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The queried blacklist policies.</p>
+     * <p>The blacklist policies.</p>
      */
     @NameInMap("DescribeMetricRuleBlackList")
     public java.util.List<DescribeMetricRuleBlackListResponseBodyDescribeMetricRuleBlackList> describeMetricRuleBlackList;
@@ -29,7 +32,7 @@ public class DescribeMetricRuleBlackListResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The namespace of the cloud service.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>D63E76CB-29AA-5B9F-88CE-400A6F28D428</p>
@@ -38,8 +41,13 @@ public class DescribeMetricRuleBlackListResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The namespace of the cloud service.</p>
-     * <p>For more information about the namespaces of different cloud services, see <a href="https://help.aliyun.com/document_detail/163515.html">Appendix 1: Metrics</a>.</p>
+     * <p>Indicates whether the operation was successful. Valid values:</p>
+     * <ul>
+     * <li><p>true: The operation was successful.</p>
+     * </li>
+     * <li><p>false: The operation failed.</p>
+     * </li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -48,8 +56,7 @@ public class DescribeMetricRuleBlackListResponseBody extends TeaModel {
     public Boolean success;
 
     /**
-     * <p>The timestamp when the blacklist policy was created.</p>
-     * <p>Unit: milliseconds.</p>
+     * <p>The total number of blacklist policies.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -112,7 +119,7 @@ public class DescribeMetricRuleBlackListResponseBody extends TeaModel {
 
     public static class DescribeMetricRuleBlackListResponseBodyDescribeMetricRuleBlackListMetrics extends TeaModel {
         /**
-         * <p>The metric name.</p>
+         * <p>The name of the metric.</p>
          * 
          * <strong>example:</strong>
          * <p>disk_utilization</p>
@@ -121,7 +128,7 @@ public class DescribeMetricRuleBlackListResponseBody extends TeaModel {
         public String metricName;
 
         /**
-         * <p>The extended dimension of the instance. For example, <code>{&quot;device&quot;:&quot;C:&quot;}</code> specifies that the blacklist policy is applied to all C disks of the specified Elastic Compute Service (ECS) instance.</p>
+         * <p>The extended dimension of the instance. For example, <code>{&quot;device&quot;:&quot;C:&quot;}</code> means that the blacklist policy is applied to all C drives of an Elastic Compute Service (ECS) instance.</p>
          * 
          * <strong>example:</strong>
          * <p>[{&quot;device&quot;:&quot;C:&quot;}]</p>
@@ -154,7 +161,7 @@ public class DescribeMetricRuleBlackListResponseBody extends TeaModel {
 
     public static class DescribeMetricRuleBlackListResponseBodyDescribeMetricRuleBlackList extends TeaModel {
         /**
-         * <p>The category of the cloud service. For example, ApsaraDB for Redis includes the following categories: ApsaraDB for Redis (standard architecture), ApsaraDB for Redis (cluster architecture), and ApsaraDB for Redis (read/write splitting architecture). In this case, the valid values of this parameter for ApsaraDB for Redis include <code>kvstore_standard</code>, <code>kvstore_sharding</code>, and <code>kvstore_splitrw</code>.</p>
+         * <p>The category of the Alibaba Cloud service. For example, Redis has different editions, such as <code>kvstore_standard</code> (Standard Edition), <code>kvstore_sharding</code> (Cluster Edition), and <code>kvstore_splitrw</code> (Read/write Splitting Edition).</p>
          * 
          * <strong>example:</strong>
          * <p>ecs</p>
@@ -163,7 +170,7 @@ public class DescribeMetricRuleBlackListResponseBody extends TeaModel {
         public String category;
 
         /**
-         * <p>The timestamp when the blacklist policy was created.</p>
+         * <p>The timestamp that indicates when the blacklist policy was created.</p>
          * <p>Unit: milliseconds.</p>
          * 
          * <strong>example:</strong>
@@ -173,7 +180,7 @@ public class DescribeMetricRuleBlackListResponseBody extends TeaModel {
         public String createTime;
 
         /**
-         * <p>The time range within which the blacklist policy is effective.</p>
+         * <p>The time range during which the blacklist policy is effective.</p>
          * 
          * <strong>example:</strong>
          * <p>00:00-23:59</p>
@@ -182,8 +189,8 @@ public class DescribeMetricRuleBlackListResponseBody extends TeaModel {
         public String effectiveTime;
 
         /**
-         * <p>The timestamp when the blacklist policy started to take effect.</p>
-         * <p>Unit: milliseconds.</p>
+         * <p>The timestamp that indicates when the alert blacklist policy is no longer in effect.</p>
+         * <p>The timestamp is measured in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1640608200000</p>
@@ -192,8 +199,8 @@ public class DescribeMetricRuleBlackListResponseBody extends TeaModel {
         public Long enableEndTime;
 
         /**
-         * <p>The timestamp when the blacklist policy expired.</p>
-         * <p>Unit: milliseconds.</p>
+         * <p>The time when the alert blacklist policy expires.</p>
+         * <p>This is a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1640237400000</p>
@@ -211,7 +218,7 @@ public class DescribeMetricRuleBlackListResponseBody extends TeaModel {
         public String id;
 
         /**
-         * <p>The IDs of the instances that belong to the specified cloud service.</p>
+         * <p>The instances of the Alibaba Cloud service in the blacklist policy.</p>
          */
         @NameInMap("Instances")
         public java.util.List<String> instances;
@@ -219,8 +226,10 @@ public class DescribeMetricRuleBlackListResponseBody extends TeaModel {
         /**
          * <p>The status of the blacklist policy. Valid values:</p>
          * <ul>
-         * <li>true: The blacklist policy is enabled.</li>
-         * <li>false: The blacklist policy is disabled.</li>
+         * <li><p>true: enabled.</p>
+         * </li>
+         * <li><p>false: disabled.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -245,7 +254,7 @@ public class DescribeMetricRuleBlackListResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The namespace of the cloud service.</p>
+         * <p>The namespace of the Alibaba Cloud service.</p>
          * 
          * <strong>example:</strong>
          * <p>acs_ecs_dashboard</p>
@@ -254,10 +263,12 @@ public class DescribeMetricRuleBlackListResponseBody extends TeaModel {
         public String namespace;
 
         /**
-         * <p>The effective scope of the blacklist policy. Valid values:</p>
+         * <p>The scope of the blacklist policy. Valid values:</p>
          * <ul>
-         * <li>USER: The blacklist policy takes effect only within the current Alibaba Cloud account.</li>
-         * <li>GROUP: The blacklist policy takes effect only within the specified application group.</li>
+         * <li><p>USER: The blacklist policy takes effect only for the current Alibaba Cloud account.</p>
+         * </li>
+         * <li><p>GROUP: The blacklist policy takes effect for the specified application groups.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -273,7 +284,7 @@ public class DescribeMetricRuleBlackListResponseBody extends TeaModel {
         public java.util.List<String> scopeValue;
 
         /**
-         * <p>The timestamp when the blacklist policy was modified.</p>
+         * <p>The timestamp that indicates when the blacklist policy was modified.</p>
          * <p>Unit: milliseconds.</p>
          * 
          * <strong>example:</strong>

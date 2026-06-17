@@ -7,8 +7,10 @@ public class DescribeMetricRuleTemplateListRequest extends TeaModel {
     /**
      * <p>Specifies whether to display the history of applying the alert templates to application groups. Valid values:</p>
      * <ul>
-     * <li>true</li>
-     * <li>false (default)</li>
+     * <li><p>true</p>
+     * </li>
+     * <li><p>false (default)</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -38,8 +40,10 @@ public class DescribeMetricRuleTemplateListRequest extends TeaModel {
     /**
      * <p>The sorting order. Valid values:</p>
      * <ul>
-     * <li>true (default): ascending order</li>
-     * <li>false: descending order</li>
+     * <li><p>true (default): ascending order</p>
+     * </li>
+     * <li><p>false: descending order</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -51,8 +55,10 @@ public class DescribeMetricRuleTemplateListRequest extends TeaModel {
     /**
      * <p>The sorting basis. Valid values:</p>
      * <ul>
-     * <li>gmtMotified: sorts alert templates by modification time</li>
-     * <li>gmtCreate (default): sorts alert templates by creation time</li>
+     * <li><p>gmtMotified: sorts alert templates by modification time</p>
+     * </li>
+     * <li><p>gmtCreate (default): sorts alert templates by creation time</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

@@ -28,13 +28,13 @@ public class PutContactRequest extends TeaModel {
     public String describe;
 
     /**
-     * <p>The language in which the alert information is displayed. Valid values:</p>
+     * <p>The language in which alert notifications are sent. Valid values:</p>
      * <ul>
-     * <li>zh-cn: simplified Chinese</li>
-     * <li>en: English</li>
+     * <li>zh-cn: simplified Chinese.</li>
+     * <li>en: English.</li>
      * </ul>
      * <blockquote>
-     * <p> If you do not specify this parameter, CloudMonitor identifies the language of the alert information based on the region of your Alibaba Cloud account.</p>
+     * <p>If this parameter is not specified, the language is automatically determined based on the region of the account.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -82,8 +82,10 @@ public class PutContactRequest extends TeaModel {
 
     public static class PutContactRequestChannels extends TeaModel {
         /**
-         * <p>The TradeManager ID of the alert contact.</p>
-         * <p>Specify at least one of the following alert notification methods: email address and DingTalk chatbot.</p>
+         * <p>旺旺联系人。</p>
+         * <p>&lt;props=&quot;china&quot;&gt;手机号码、邮箱、钉钉机器人和旺旺最少添加一种联系方式。
+         * &lt;props=&quot;intl&quot;&gt;邮箱和钉钉机器人最少添加一种联系方式。
+         * &lt;props=&quot;partner&quot;&gt;邮箱和钉钉机器人最少添加一种联系方式。</p>
          * 
          * <strong>example:</strong>
          * <p>Jim</p>
@@ -92,8 +94,10 @@ public class PutContactRequest extends TeaModel {
         public String aliIM;
 
         /**
-         * <p>The webhook URL of the DingTalk chatbot.</p>
-         * <p>Specify at least one of the following alert notification methods: email address and DingTalk chatbot.</p>
+         * <p>钉钉机器人。</p>
+         * <p>&lt;props=&quot;china&quot;&gt;手机号码、邮箱、钉钉机器人和旺旺最少添加一种联系方式。
+         * &lt;props=&quot;intl&quot;&gt;邮箱和钉钉机器人最少添加一种联系方式。
+         * &lt;props=&quot;partner&quot;&gt;邮箱和钉钉机器人最少添加一种联系方式。</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://oapi.dingtalk.com/robot/send?access_token=7d49515e8ebf21106a80a9cc4bb3d247771305d52fb15d6201234565">https://oapi.dingtalk.com/robot/send?access_token=7d49515e8ebf21106a80a9cc4bb3d247771305d52fb15d6201234565</a>****</p>
@@ -102,8 +106,10 @@ public class PutContactRequest extends TeaModel {
         public String dingWebHook;
 
         /**
-         * <p>The email address. After you add or modify an email address, the recipient receives an email that contains an activation link. The system adds the recipient to the list of alert contacts only after the recipient activates the email address.</p>
-         * <p>Specify at least one of the following alert notification methods: email address and DingTalk chatbot.</p>
+         * <p>Email地址。Email会收到一个激活链接， 激活之后您才会被加入到联系人中。</p>
+         * <p>&lt;props=&quot;china&quot;&gt;手机号码、邮箱、钉钉机器人和旺旺最少添加一种联系方式。
+         * &lt;props=&quot;intl&quot;&gt;邮箱和钉钉机器人最少添加一种联系方式。
+         * &lt;props=&quot;partner&quot;&gt;邮箱和钉钉机器人最少添加一种联系方式。</p>
          * 
          * <strong>example:</strong>
          * <p><a href="mailto:test@aliyun.com">test@aliyun.com</a></p>
@@ -112,8 +118,10 @@ public class PutContactRequest extends TeaModel {
         public String mail;
 
         /**
-         * <p>The phone number of the alert contact. After you add or modify a phone number, the recipient receives a text message that contains an activation link. The system adds the recipient to the list of alert contacts only after the recipient activates the phone number.</p>
-         * <p>Specify at least one of the following alert notification methods: email address and DingTalk chatbot.</p>
+         * <p>手机号码。手机号码会收到一个激活链接， 激活之后您才会被加入到联系人中。</p>
+         * <p>&lt;props=&quot;china&quot;&gt;手机号码、邮箱、钉钉机器人和旺旺最少添加一种联系方式。
+         * &lt;props=&quot;intl&quot;&gt;邮箱和钉钉机器人最少添加一种联系方式。
+         * &lt;props=&quot;partner&quot;&gt;邮箱和钉钉机器人最少添加一种联系方式。</p>
          * 
          * <strong>example:</strong>
          * <p>1333333****</p>

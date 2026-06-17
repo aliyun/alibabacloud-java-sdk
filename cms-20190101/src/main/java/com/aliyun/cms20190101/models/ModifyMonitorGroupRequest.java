@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyMonitorGroupRequest extends TeaModel {
     /**
-     * <p>The alert groups that can receive alert notifications for the application group.</p>
+     * <p>The alert contact group.</p>
      * 
      * <strong>example:</strong>
      * <p>alarm_ecs_group</p>

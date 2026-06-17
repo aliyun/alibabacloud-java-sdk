@@ -71,7 +71,7 @@ public class PutCustomEventRequest extends TeaModel {
          * <p>Format: <code>yyyyMMddTHHmmss.SSSZ</code>.</p>
          * <p>Valid values of N: 1 to 50.</p>
          * <blockquote>
-         * <p> You can also specify a UNIX timestamp. Example: 1552199984000. Unit: milliseconds.</p>
+         * <p>You can also specify a UNIX timestamp. Example: 1552199984000. Unit: milliseconds.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeSystemEventCountRequest extends TeaModel {
     /**
-     * <p>The end of the time range to query. Unit: milliseconds.</p>
+     * <p>The timestamp of the end time for the event query. Unit: milliseconds.</p>
      * 
      * <strong>example:</strong>
      * <p>1635993921000</p>
@@ -14,8 +14,8 @@ public class DescribeSystemEventCountRequest extends TeaModel {
     public String endTime;
 
     /**
-     * <p>The type of the system event.</p>
-     * <p>You can call the DescribeSystemEventMetaList operation to obtain the value of the response parameter <code>EventType</code>. The value of the EventType parameter indicates the types of system events that occurred for all cloud services in your Alibaba Cloud account. For more information, see <a href="https://help.aliyun.com/document_detail/114972.html">DescribeSystemEventMetaList</a>.</p>
+     * <p>The event type.</p>
+     * <p>Call the DescribeSystemEventMetaList operation to obtain the value of the <code>EventType</code> response parameter, which provides the event types for all Alibaba Cloud services under the current Alibaba Cloud account. For more information, see <a href="https://help.aliyun.com/document_detail/114972.html">DescribeSystemEventMetaList</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>StatusNotification</p>
@@ -24,7 +24,7 @@ public class DescribeSystemEventCountRequest extends TeaModel {
     public String eventType;
 
     /**
-     * <p>The ID of the application group.</p>
+     * <p>The application group ID.</p>
      * 
      * <strong>example:</strong>
      * <p>17285****</p>
@@ -33,13 +33,16 @@ public class DescribeSystemEventCountRequest extends TeaModel {
     public String groupId;
 
     /**
-     * <p>The level of the system event. Valid values:</p>
+     * <p>The event level. Valid values:</p>
      * <ul>
-     * <li>Critical</li>
-     * <li>Warn</li>
-     * <li>Info</li>
+     * <li><p>Critical: critical.</p>
+     * </li>
+     * <li><p>Warn: warning.</p>
+     * </li>
+     * <li><p>Info: information.</p>
+     * </li>
      * </ul>
-     * <p>You can call the DescribeSystemEventMetaList operation to obtain the value of the response parameter <code>Level</code>. The value of the Level parameter indicates the levels of system events that occurred for all cloud services in your Alibaba Cloud account. For more information, see <a href="https://help.aliyun.com/document_detail/114972.html">DescribeSystemEventMetaList</a>.</p>
+     * <p>Call the DescribeSystemEventMetaList operation to obtain the value of the <code>Level</code> response parameter, which provides the event levels for all Alibaba Cloud services under the current Alibaba Cloud account. For more information, see <a href="https://help.aliyun.com/document_detail/114972.html">DescribeSystemEventMetaList</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>Info</p>
@@ -48,8 +51,8 @@ public class DescribeSystemEventCountRequest extends TeaModel {
     public String level;
 
     /**
-     * <p>The name of the system event.</p>
-     * <p>You can call the DescribeSystemEventMetaList operation to obtain the value of the response parameter <code>Name</code>. The value of the Name parameter indicates the names of system events that occurred for all cloud services in your Alibaba Cloud account. For more information, see <a href="https://help.aliyun.com/document_detail/114972.html">DescribeSystemEventMetaList</a>.</p>
+     * <p>The event name.</p>
+     * <p>Call the DescribeSystemEventMetaList operation to obtain the value of the <code>Name</code> response parameter, which provides the event names for all Alibaba Cloud services under the current Alibaba Cloud account. For more information, see <a href="https://help.aliyun.com/document_detail/114972.html">DescribeSystemEventMetaList</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>Instance:StateChange</p>
@@ -58,8 +61,8 @@ public class DescribeSystemEventCountRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The name of the cloud service.</p>
-     * <p>You can call the DescribeSystemEventMetaList operation to obtain the value of the response parameter <code>Product</code>. The value of the Product parameter indicates the names of all cloud services in which the system events of your Alibaba Cloud account occurred. For more information, see <a href="https://help.aliyun.com/document_detail/114972.html">DescribeSystemEventMetaList</a>.</p>
+     * <p>The name of the Alibaba Cloud service.</p>
+     * <p>Call the DescribeSystemEventMetaList operation to obtain the value of the <code>Product</code> response parameter, which provides the Alibaba Cloud service names for all events under the current Alibaba Cloud account. For more information, see <a href="https://help.aliyun.com/document_detail/114972.html">DescribeSystemEventMetaList</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>ECS</p>
@@ -71,10 +74,12 @@ public class DescribeSystemEventCountRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The keywords that are used to search for the system event. Valid values:</p>
+     * <p>The keywords contained in the event content for searching. Valid values:</p>
      * <ul>
-     * <li>If you want to search for the system event whose content contains a and b, set the value to <code>a and b</code>.</li>
-     * <li>If you want to search for the system event whose content contains a or b, set the value to <code>a or b</code>.</li>
+     * <li><p>To search for event content that contains both a and b, search for <code>a and b</code>.</p>
+     * </li>
+     * <li><p>To search for event content that contains either a or b, search for <code>a or b</code>.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -84,7 +89,7 @@ public class DescribeSystemEventCountRequest extends TeaModel {
     public String searchKeywords;
 
     /**
-     * <p>The beginning of the time range to query. Unit: milliseconds.</p>
+     * <p>The timestamp of the start time for the event query. Unit: milliseconds.</p>
      * 
      * <strong>example:</strong>
      * <p>1635993541000</p>
@@ -93,8 +98,8 @@ public class DescribeSystemEventCountRequest extends TeaModel {
     public String startTime;
 
     /**
-     * <p>The status of the system event.</p>
-     * <p>You can call the DescribeSystemEventMetaList operation to obtain the value of the response parameter <code>Status</code>. The value of the Status parameter indicates the status of system events that occurred for all cloud services in your Alibaba Cloud account. For more information, see <a href="https://help.aliyun.com/document_detail/114972.html">DescribeSystemEventMetaList</a>.</p>
+     * <p>The event status.</p>
+     * <p>Call the DescribeSystemEventMetaList operation to obtain the value of the <code>Status</code> response parameter, which provides the event statuses for all Alibaba Cloud services under the current Alibaba Cloud account. For more information, see <a href="https://help.aliyun.com/document_detail/114972.html">DescribeSystemEventMetaList</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>Normal</p>

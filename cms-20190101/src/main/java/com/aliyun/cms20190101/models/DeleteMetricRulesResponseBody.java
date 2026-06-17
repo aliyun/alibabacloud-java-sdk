@@ -5,10 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteMetricRulesResponseBody extends TeaModel {
     /**
-     * <p>The status code.</p>
-     * <blockquote>
-     * <p> The status code 200 indicates a success.</p>
-     * </blockquote>
+     * <p>The status code. A value of 200 indicates that the request was successful.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -20,16 +17,16 @@ public class DeleteMetricRulesResponseBody extends TeaModel {
      * <p>The returned message.</p>
      * 
      * <strong>example:</strong>
-     * <p>The specified resource is not found.</p>
+     * <p>success</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The ID of the request. Alibaba Cloud generates a unique ID for each request. Use this ID to troubleshoot issues.</p>
      * 
      * <strong>example:</strong>
-     * <p>E5599964-8D0D-40DC-8E90-27A619384B81</p>
+     * <p>09B3A484-1A2B-5743-BB6B-D796416F2677</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -37,8 +34,10 @@ public class DeleteMetricRulesResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the operation was successful. Valid values:</p>
      * <ul>
-     * <li>true: successful.</li>
-     * <li>false: failed.</li>
+     * <li><p>true: The operation was successful.</p>
+     * </li>
+     * <li><p>false: The operation failed.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

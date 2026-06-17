@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class CreateSiteMonitorResponseBody extends TeaModel {
     /**
-     * <p>The HTTP status code.</p>
+     * <p>The status code of the operation.</p>
      * <blockquote>
-     * <p>The status code 200 indicates that the request was successful.</p>
+     * <p>A value of \<code>200\\</code> indicates success.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -20,13 +20,13 @@ public class CreateSiteMonitorResponseBody extends TeaModel {
     public CreateSiteMonitorResponseBodyCreateResultList createResultList;
 
     /**
-     * <p>The result of the site monitoring task.</p>
+     * <p>The results of the monitoring task.</p>
      */
     @NameInMap("Data")
     public CreateSiteMonitorResponseBodyData data;
 
     /**
-     * <p>The returned message.</p>
+     * <p>The message returned for the request.</p>
      * 
      * <strong>example:</strong>
      * <p>Successful</p>
@@ -35,7 +35,7 @@ public class CreateSiteMonitorResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>68192f5d-0d45-4b98-9724-892813f86c71</p>
@@ -46,8 +46,10 @@ public class CreateSiteMonitorResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
      * <ul>
-     * <li>true</li>
-     * <li>false</li>
+     * <li><p>true: The request was successful.</p>
+     * </li>
+     * <li><p>false: The request failed.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

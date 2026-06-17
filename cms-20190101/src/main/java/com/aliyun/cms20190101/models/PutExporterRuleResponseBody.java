@@ -7,7 +7,7 @@ public class PutExporterRuleResponseBody extends TeaModel {
     /**
      * <p>The HTTP status code.</p>
      * <blockquote>
-     * <p>The status code 200 indicates that the request was successful.</p>
+     * <p>200 indicates success.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -17,10 +17,10 @@ public class PutExporterRuleResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The returned message. If the request was successful, &quot;successful&quot; is returned. If the request failed, an error message is returned.</p>
+     * <p>The returned message.</p>
      * 
      * <strong>example:</strong>
-     * <p>success</p>
+     * <p>The specified resource is not found.</p>
      */
     @NameInMap("Message")
     public String message;
@@ -35,10 +35,12 @@ public class PutExporterRuleResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <p>Indicates whether the operation was successful. Valid values:</p>
      * <ul>
-     * <li>true</li>
-     * <li>false</li>
+     * <li><p>true: The operation was successful.</p>
+     * </li>
+     * <li><p>false: The operation failed.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

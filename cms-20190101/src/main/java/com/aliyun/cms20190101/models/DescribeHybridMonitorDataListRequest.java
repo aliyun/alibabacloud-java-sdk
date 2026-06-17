@@ -39,7 +39,7 @@ public class DescribeHybridMonitorDataListRequest extends TeaModel {
     /**
      * <p>The metric name.</p>
      * <blockquote>
-     * <p> PromQL statements are supported.</p>
+     * <p>PromQL statements are supported.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 

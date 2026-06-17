@@ -9,7 +9,7 @@ public class DeleteContactGroupRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>contact_group_2019_templatedfkXQ</p>
+     * <p>My alert group</p>
      */
     @NameInMap("ContactGroupName")
     public String contactGroupName;

@@ -5,11 +5,8 @@ import com.aliyun.tea.*;
 
 public class EnableHostAvailabilityRequest extends TeaModel {
     /**
-     * <p>The ID of the availability monitoring task. Valid values of N: 1 to 20.</p>
+     * <p>The ID of the availability monitoring task.</p>
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>123456</p>
      */
     @NameInMap("Id")
     public java.util.List<Long> id;

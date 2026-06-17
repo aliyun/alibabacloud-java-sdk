@@ -17,7 +17,7 @@ public class DeleteCustomMetricRequest extends TeaModel {
     /**
      * <p>The MD5 value of the HTTP request body. The MD5 value is a 128-bit hash value used to verify the uniqueness of the reported monitoring data.</p>
      * <blockquote>
-     * <p> <code>Md5</code> is returned when you query the reported monitoring data of a metric.</p>
+     * <p><code>Md5</code> is returned when you query the reported monitoring data of a metric.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -42,7 +42,7 @@ public class DeleteCustomMetricRequest extends TeaModel {
     /**
      * <p>The ID of the request for reporting monitoring data.</p>
      * <blockquote>
-     * <p> <code>UUID</code> is returned when you query the reported monitoring data of a metric. We recommend that you specify the <code>Md5</code> parameter.</p>
+     * <p><code>UUID</code> is returned when you query the reported monitoring data of a metric. We recommend that you specify the <code>Md5</code> parameter.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

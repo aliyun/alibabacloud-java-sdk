@@ -5,12 +5,11 @@ import com.aliyun.tea.*;
 
 public class DescribeLogMonitorAttributeRequest extends TeaModel {
     /**
-     * <p>The metric name. Exact match is supported.</p>
-     * <p>For more information, see <a href="https://help.aliyun.com/document_detail/163515.html">Appendix 1: Metrics</a>.</p>
+     * <p>The name of the metric.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>cpu_total</p>
+     * <p>cpu_total_******</p>
      */
     @NameInMap("MetricName")
     public String metricName;

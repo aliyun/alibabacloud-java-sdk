@@ -7,7 +7,7 @@ public class PutLogMonitorResponseBody extends TeaModel {
     /**
      * <p>The HTTP status code.</p>
      * <blockquote>
-     * <p> The status code 200 indicates that the request was successful.</p>
+     * <p>200 indicates success.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -26,10 +26,12 @@ public class PutLogMonitorResponseBody extends TeaModel {
     public String logId;
 
     /**
-     * <p>The returned message.</p>
+     * <p>The returned message. Results:</p>
      * <ul>
-     * <li>If the request was successful, <code>successful</code> is returned.</li>
-     * <li>If the request failed, an error message is returned. Example: <code>alias of aggreate must be set value.</code></li>
+     * <li><p>If the operation is successful, <code>successful</code> is returned.</p>
+     * </li>
+     * <li><p>If the operation fails, an error message is returned, such as <code>alias of aggreate must be set value.</code>.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -48,10 +50,12 @@ public class PutLogMonitorResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <p>Indicates whether the operation is successful. Valid values:</p>
      * <ul>
-     * <li>true</li>
-     * <li>false</li>
+     * <li><p>true: The operation is successful.</p>
+     * </li>
+     * <li><p>false: The operation failed.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

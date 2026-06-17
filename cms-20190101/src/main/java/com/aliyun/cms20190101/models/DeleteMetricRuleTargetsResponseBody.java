@@ -6,7 +6,7 @@ import com.aliyun.tea.*;
 public class DeleteMetricRuleTargetsResponseBody extends TeaModel {
     /**
      * <p>The HTTP status code.</p>
-     * <p>**</p>
+     * <p>\<em>\</em></p>
      * <p><strong>Description</strong> The status code 200 indicates that the request was successful.</p>
      * 
      * <strong>example:</strong>
@@ -42,8 +42,10 @@ public class DeleteMetricRuleTargetsResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
      * <ul>
-     * <li>true</li>
-     * <li>false</li>
+     * <li><p>true</p>
+     * </li>
+     * <li><p>false</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

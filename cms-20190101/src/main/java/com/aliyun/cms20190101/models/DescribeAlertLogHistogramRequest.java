@@ -34,8 +34,10 @@ public class DescribeAlertLogHistogramRequest extends TeaModel {
     /**
      * <p>The type of the alert event. Valid values:</p>
      * <ul>
-     * <li>TRIGGERED: The alert is triggered.</li>
-     * <li>RESOLVED: The alert is resolved.</li>
+     * <li><p>TRIGGERED: The alert is triggered.</p>
+     * </li>
+     * <li><p>RESOLVED: The alert is resolved.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -47,11 +49,16 @@ public class DescribeAlertLogHistogramRequest extends TeaModel {
     /**
      * <p>The dimensions based on which data is aggregated. This parameter is equivalent to the GROUP BY clause in SQL. Valid values:</p>
      * <ul>
-     * <li><code>product</code>: aggregates data by cloud service.</li>
-     * <li><code>level</code>: aggregates data by alert level.</li>
-     * <li><code>groupId</code>: aggregates data by application group.</li>
-     * <li><code>contactGroup</code>: aggregates data by alert contact group.</li>
-     * <li><code>product,metricName</code>: aggregates data both by cloud service and by metric.</li>
+     * <li><p><code>product</code>: aggregates data by cloud service.</p>
+     * </li>
+     * <li><p><code>level</code>: aggregates data by alert level.</p>
+     * </li>
+     * <li><p><code>groupId</code>: aggregates data by application group.</p>
+     * </li>
+     * <li><p><code>contactGroup</code>: aggregates data by alert contact group.</p>
+     * </li>
+     * <li><p><code>product,metricName</code>: aggregates data both by cloud service and by metric.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -81,8 +88,10 @@ public class DescribeAlertLogHistogramRequest extends TeaModel {
     /**
      * <p>The severity level and notification methods of the alert. Valid values:</p>
      * <ul>
-     * <li>P4: Alert notifications are sent by using emails and DingTalk chatbots.</li>
-     * <li>OK: No alert is generated.</li>
+     * <li><p>P4: Alert notifications are sent by using emails and DingTalk chatbots.</p>
+     * </li>
+     * <li><p>OK: No alert is generated.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -94,7 +103,7 @@ public class DescribeAlertLogHistogramRequest extends TeaModel {
     /**
      * <p>The metric name.</p>
      * <blockquote>
-     * <p> For more information about the metrics of different cloud services, see <a href="https://help.aliyun.com/document_detail/163515.html">Appendix 1: Metrics</a>.</p>
+     * <p>For more information about the metrics of different cloud services, see <a href="https://help.aliyun.com/document_detail/163515.html">Appendix 1: Metrics</a>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -106,7 +115,7 @@ public class DescribeAlertLogHistogramRequest extends TeaModel {
     /**
      * <p>The namespace of the Alibaba Cloud service.</p>
      * <blockquote>
-     * <p> For more information about the namespaces of different cloud services, see <a href="https://help.aliyun.com/document_detail/163515.html">Appendix 1: Metrics</a>.</p>
+     * <p>For more information about the namespaces of different cloud services, see <a href="https://help.aliyun.com/document_detail/163515.html">Appendix 1: Metrics</a>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -178,11 +187,16 @@ public class DescribeAlertLogHistogramRequest extends TeaModel {
     /**
      * <p>The alert status. Valid values:</p>
      * <ul>
-     * <li>0: The alert is triggered or cleared.</li>
-     * <li>1: The alert is ineffective.</li>
-     * <li>2: The alert is muted and not triggered in a specified period.</li>
-     * <li>3: The host is restarting.</li>
-     * <li>4: No alert notification is sent.</li>
+     * <li><p>0: The alert is triggered or cleared.</p>
+     * </li>
+     * <li><p>1: The alert is ineffective.</p>
+     * </li>
+     * <li><p>2: The alert is muted and not triggered in a specified period.</p>
+     * </li>
+     * <li><p>3: The host is restarting.</p>
+     * </li>
+     * <li><p>4: No alert notification is sent.</p>
+     * </li>
      * </ul>
      * <p>If the value of the SendStatus parameter is 0, the value P4 of the Level parameter indicates a triggered alert and the value OK indicates a cleared alert.</p>
      * 
@@ -196,7 +210,7 @@ public class DescribeAlertLogHistogramRequest extends TeaModel {
      * <p>This parameter is deprecated.</p>
      * 
      * <strong>example:</strong>
-     * <p>None</p>
+     * <p>无</p>
      */
     @NameInMap("SourceType")
     public String sourceType;

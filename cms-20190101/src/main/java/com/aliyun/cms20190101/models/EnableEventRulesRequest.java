@@ -8,6 +8,7 @@ public class EnableEventRulesRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The names of the event rules to enable.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

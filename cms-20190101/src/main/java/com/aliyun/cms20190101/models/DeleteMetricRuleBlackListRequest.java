@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class DeleteMetricRuleBlackListRequest extends TeaModel {
     /**
-     * <p>The IDs of the blacklist policies. Separate multiple IDs with commas (,). You can specify up to 50 IDs.</p>
-     * <p>For more information about how to obtain the ID of a blacklist policy, see <a href="https://help.aliyun.com/document_detail/457257.html">DescribeMetricRuleBlackList</a>.</p>
+     * <p>The ID of the alert blacklist policy. Separate multiple IDs with commas (,). You can specify up to 50 IDs.</p>
+     * <p>For information about how to obtain the ID of an alert blacklist policy, see <a href="https://help.aliyun.com/document_detail/457257.html">DescribeMetricRuleBlackList</a>.</p>
      * <blockquote>
-     * <p> You can also set this parameter to a JSON array. Example: <code>[&quot;a9ad2ac2-3ed9-11ed-b878-0242ac12****&quot;,&quot;5cb8a9a4-198f-4651-a353-f8b28788****&quot;]</code>.</p>
+     * <p>This parameter also supports JSON Array format, for example: <code>[&quot;a9ad2ac2-3ed9-11ed-b878-0242ac12****&quot;,&quot;5cb8a9a4-198f-4651-a353-f8b28788****&quot;]</code>.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 

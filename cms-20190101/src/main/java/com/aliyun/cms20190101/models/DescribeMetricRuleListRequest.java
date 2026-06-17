@@ -5,11 +5,11 @@ import com.aliyun.tea.*;
 
 public class DescribeMetricRuleListRequest extends TeaModel {
     /**
-     * <p>The status of the alert rule. Valid values:</p>
+     * <p>The state of the alert rule. Valid values:</p>
      * <ul>
-     * <li>OK: The alert rule has no active alerts.</li>
-     * <li>ALARM: The alert rule has active alerts.</li>
-     * <li>INSUFFICIENT_DATA: No data is available.</li>
+     * <li>OK: Normal.</li>
+     * <li>ALARM: Alert.</li>
+     * <li>INSUFFICIENT_DATA: No data.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -20,7 +20,7 @@ public class DescribeMetricRuleListRequest extends TeaModel {
 
     /**
      * <p>The monitoring dimensions of the specified resource.</p>
-     * <p>Set the value to a collection of <code>key:value</code> pairs. Example: <code>{&quot;userId&quot;:&quot;120886317861****&quot;}</code> or <code>{&quot;instanceId&quot;:&quot;i-2ze2d6j5uhg20x47****&quot;}</code>.</p>
+     * <p>Format: a collection of <code>key:value</code> pairs. Example: <code>{&quot;userId&quot;:&quot;120886317861****&quot;}</code> and <code>{&quot;instanceId&quot;:&quot;i-2ze2d6j5uhg20x47****&quot;}</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>{&quot;instanceId&quot;:&quot;i-2ze2d6j5uhg20x47****&quot;}</p>
@@ -29,10 +29,10 @@ public class DescribeMetricRuleListRequest extends TeaModel {
     public String dimensions;
 
     /**
-     * <p>Specifies whether to query enabled or disabled alert rules. Valid values:</p>
+     * <p>The enabled state of the alert rule. Valid values:</p>
      * <ul>
-     * <li>true: queries enabled alert rules.</li>
-     * <li>false: queries disabled alert rules.</li>
+     * <li>true: enabled.</li>
+     * <li>false: disabled.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -43,7 +43,7 @@ public class DescribeMetricRuleListRequest extends TeaModel {
 
     /**
      * <p>The ID of the application group.</p>
-     * <p>For information about how to obtain the ID of an application group, see <a href="https://help.aliyun.com/document_detail/115032.html">DescribeMonitorGroups</a>.</p>
+     * <p>For information about how to obtain the application group ID, see <a href="https://help.aliyun.com/document_detail/115032.html">DescribeMonitorGroups</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>7301****</p>
@@ -52,8 +52,9 @@ public class DescribeMetricRuleListRequest extends TeaModel {
     public String groupId;
 
     /**
-     * <p>The name of the metric.</p>
-     * <p>For information about how to obtain the name of a metric, see <a href="https://help.aliyun.com/document_detail/98846.html">DescribeMetricMetaList</a> or <a href="https://help.aliyun.com/document_detail/163515.html">Appendix 1: Metrics</a>.</p>
+     * <p>The metric name.</p>
+     * <p>For information about how to obtain metric names, see <a href="https://help.aliyun.com/document_detail/98846.html">DescribeMetricMetaList</a> or <a href="https://help.aliyun.com/document_detail/163515.html">cloud service monitoring metrics</a>.</p>
+     * <p>Note: For composite metrics, you can retrieve results only by the first metric.</p>
      * 
      * <strong>example:</strong>
      * <p>cpu_total</p>
@@ -62,8 +63,8 @@ public class DescribeMetricRuleListRequest extends TeaModel {
     public String metricName;
 
     /**
-     * <p>The namespace of the cloud service.</p>
-     * <p>For information about how to obtain the namespace of a cloud service, see <a href="https://help.aliyun.com/document_detail/98846.html">DescribeMetricMetaList</a> or <a href="https://help.aliyun.com/document_detail/163515.html">Appendix 1: Metrics</a>.</p>
+     * <p>The namespace of the Alibaba Cloud service.</p>
+     * <p>For information about how to obtain the namespace of an Alibaba Cloud service, see <a href="https://help.aliyun.com/document_detail/98846.html">DescribeMetricMetaList</a> or <a href="https://help.aliyun.com/document_detail/163515.html">cloud service monitoring metrics</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>acs_ecs_dashboard</p>
@@ -72,7 +73,7 @@ public class DescribeMetricRuleListRequest extends TeaModel {
     public String namespace;
 
     /**
-     * <p>The page number of the page to return.</p>
+     * <p>The page number.</p>
      * <p>Minimum value: 1. Default value: 1.</p>
      * 
      * <strong>example:</strong>
@@ -82,7 +83,7 @@ public class DescribeMetricRuleListRequest extends TeaModel {
     public Integer page;
 
     /**
-     * <p>The number of entries to return on each page.</p>
+     * <p>The number of entries per page.</p>
      * <p>Minimum value: 1. Default value: 10.</p>
      * 
      * <strong>example:</strong>
@@ -95,7 +96,7 @@ public class DescribeMetricRuleListRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of the alert rule. You can specify up to 20 IDs at a time. Separate multiple IDs with commas (,).</p>
+     * <p>The IDs of the alert rules. Separate multiple IDs with commas (,). You can query up to 20 alert rules at a time.</p>
      * 
      * <strong>example:</strong>
      * <p>applyTemplate344cfd42-0f32-4fd6-805a-88d7908a****</p>

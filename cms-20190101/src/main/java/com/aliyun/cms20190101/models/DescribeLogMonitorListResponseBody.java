@@ -7,7 +7,7 @@ public class DescribeLogMonitorListResponseBody extends TeaModel {
     /**
      * <p>The status code.</p>
      * <blockquote>
-     * <p> The status code 200 indicates that the request was successful.</p>
+     * <p>The status code 200 indicates that the request was successful.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -61,8 +61,10 @@ public class DescribeLogMonitorListResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
      * <ul>
-     * <li>true</li>
-     * <li>false</li>
+     * <li><p>true</p>
+     * </li>
+     * <li><p>false</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -162,12 +164,18 @@ public class DescribeLogMonitorListResponseBody extends TeaModel {
         /**
          * <p>The method that is used to match the field value. Valid values:</p>
          * <ul>
-         * <li>contain: contains</li>
-         * <li>notContain: does not contain</li>
-         * <li><code>&gt;</code>: greater than</li>
-         * <li><code>&lt;</code>: less than</li>
-         * <li><code>&gt;=</code>: greater than or equal to</li>
-         * <li><code>&lt;=</code>: less than or equal to</li>
+         * <li><p>contain: contains</p>
+         * </li>
+         * <li><p>notContain: does not contain</p>
+         * </li>
+         * <li><p><code>&gt;</code>: greater than</p>
+         * </li>
+         * <li><p><code>&lt;</code>: less than</p>
+         * </li>
+         * <li><p><code>&gt;=</code>: greater than or equal to</p>
+         * </li>
+         * <li><p><code>&lt;=</code>: less than or equal to</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -290,8 +298,10 @@ public class DescribeLogMonitorListResponseBody extends TeaModel {
         /**
          * <p>The logical operator that is used between log filter conditions. The ValueFilter and ValueFilterRelation parameters are used in pair. Valid values:</p>
          * <ul>
-         * <li>and</li>
-         * <li>or</li>
+         * <li><p>and</p>
+         * </li>
+         * <li><p>or</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

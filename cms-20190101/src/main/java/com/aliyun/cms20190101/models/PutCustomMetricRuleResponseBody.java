@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class PutCustomMetricRuleResponseBody extends TeaModel {
     /**
-     * <p>The status code.</p>
+     * <p>状态码。</p>
      * <blockquote>
-     * <p> The status code 200 indicates that the request was successful.</p>
+     * <p>200表示成功。</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -17,7 +17,7 @@ public class PutCustomMetricRuleResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The returned message. If the request was successful, the return value is null. If the request failed, an error message is returned.</p>
+     * <p>返回信息。接口调用成功时，返回为空；接口调用失败时，返回失败原因。</p>
      * 
      * <strong>example:</strong>
      * <p>ComparisonOperator is mandatory for this action.</p>
@@ -26,7 +26,7 @@ public class PutCustomMetricRuleResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The request ID.</p>
+     * <p>请求ID。</p>
      * 
      * <strong>example:</strong>
      * <p>65D50468-ECEF-48F1-A6E1-D952E89D9432</p>
@@ -35,10 +35,12 @@ public class PutCustomMetricRuleResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <p>操作是否成功。取值：</p>
      * <ul>
-     * <li>true</li>
-     * <li>false</li>
+     * <li><p>true：成功。</p>
+     * </li>
+     * <li><p>false：失败。</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

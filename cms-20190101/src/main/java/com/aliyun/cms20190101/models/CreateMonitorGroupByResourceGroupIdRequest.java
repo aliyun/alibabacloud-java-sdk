@@ -18,8 +18,10 @@ public class CreateMonitorGroupByResourceGroupIdRequest extends TeaModel {
     /**
      * <p>Specifies whether the CloudMonitor agent is automatically installed for the application group. CloudMonitor determines whether to automatically install the CloudMonitor agent for the hosts in an application group based on the value of this parameter. Valid values:</p>
      * <ul>
-     * <li>true: The CloudMonitor agent is automatically installed.</li>
-     * <li>false (default): The CloudMonitor agent is not automatically installed.</li>
+     * <li><p>true: The CloudMonitor agent is automatically installed.</p>
+     * </li>
+     * <li><p>false (default): The CloudMonitor agent is not automatically installed.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -31,8 +33,10 @@ public class CreateMonitorGroupByResourceGroupIdRequest extends TeaModel {
     /**
      * <p>Specifies whether the application group automatically subscribes to event notifications. If events whose severity level is critical or warning occur on resources in an application group, CloudMonitor sends alert notifications. Valid values:</p>
      * <ul>
-     * <li>true: The application group automatically subscribes to event notifications.</li>
-     * <li>false (default): The application group does not automatically subscribe to event notifications.</li>
+     * <li><p>true: The application group automatically subscribes to event notifications.</p>
+     * </li>
+     * <li><p>false (default): The application group does not automatically subscribe to event notifications.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

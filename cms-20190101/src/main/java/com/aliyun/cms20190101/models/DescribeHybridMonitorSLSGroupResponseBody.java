@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class DescribeHybridMonitorSLSGroupResponseBody extends TeaModel {
     /**
-     * <p>The HTTP status code.</p>
+     * <p>The status code.</p>
      * <blockquote>
-     * <p>The status code 200 indicates that the request was successful.</p>
+     * <p>A value of 200 indicates success.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -17,7 +17,7 @@ public class DescribeHybridMonitorSLSGroupResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The queried Logstore groups.</p>
+     * <p>The list of Logstore groups.</p>
      */
     @NameInMap("List")
     public java.util.List<DescribeHybridMonitorSLSGroupResponseBodyList> list;
@@ -59,17 +59,20 @@ public class DescribeHybridMonitorSLSGroupResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <p>Indicates whether the operation was successful. Valid values:</p>
      * <ul>
-     * <li>true</li>
-     * <li>false</li>
+     * <li>true: Successful.</li>
+     * <li>false: Failed.</li>
      * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public String success;
 
     /**
-     * <p>The total number of entries returned.</p>
+     * <p>The total number of entries.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>
@@ -166,7 +169,7 @@ public class DescribeHybridMonitorSLSGroupResponseBody extends TeaModel {
         public String SLSProject;
 
         /**
-         * <p>The region ID.</p>
+         * <p>The region.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -176,7 +179,9 @@ public class DescribeHybridMonitorSLSGroupResponseBody extends TeaModel {
 
         /**
          * <p>The member ID.</p>
-         * <p><strong>Description</strong> This parameter is returned when you call the operation by using an administrative account.</p>
+         * <blockquote>
+         * <p>This parameter is returned only when you call this operation by using a management account.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>120886317861****</p>
@@ -225,7 +230,7 @@ public class DescribeHybridMonitorSLSGroupResponseBody extends TeaModel {
 
     public static class DescribeHybridMonitorSLSGroupResponseBodyList extends TeaModel {
         /**
-         * <p>The time when the Logstore group was created.</p>
+         * <p>The timestamp when the Logstore group was created.</p>
          * <p>Unit: milliseconds.</p>
          * 
          * <strong>example:</strong>
@@ -235,13 +240,16 @@ public class DescribeHybridMonitorSLSGroupResponseBody extends TeaModel {
         public String createTime;
 
         /**
-         * <p>The configurations of the Logstore group.</p>
+         * <p>The configuration information of the Logstore group.</p>
          */
         @NameInMap("SLSGroupConfig")
         public java.util.List<DescribeHybridMonitorSLSGroupResponseBodyListSLSGroupConfig> SLSGroupConfig;
 
         /**
          * <p>The description of the Logstore group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Logstore group of Alibaba Cloud products.</p>
          */
         @NameInMap("SLSGroupDescription")
         public String SLSGroupDescription;
@@ -256,7 +264,7 @@ public class DescribeHybridMonitorSLSGroupResponseBody extends TeaModel {
         public String SLSGroupName;
 
         /**
-         * <p>The time when the Logstore group was modified.</p>
+         * <p>The timestamp when the Logstore group was last modified.</p>
          * <p>Unit: milliseconds.</p>
          * 
          * <strong>example:</strong>

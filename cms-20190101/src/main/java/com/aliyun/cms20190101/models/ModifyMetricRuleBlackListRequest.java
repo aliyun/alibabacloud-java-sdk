@@ -21,8 +21,10 @@ public class ModifyMetricRuleBlackListRequest extends TeaModel {
      * </li>
      * <li><p>If you configure this parameter, the blacklist policy is effective only within the specified time range. Examples:</p>
      * <ul>
-     * <li><code>03:00-04:59</code>: The blacklist policy is effective from 03:00 to 05:00 local time. 05:00 local time is excluded.</li>
-     * <li><code>03:00-04:59 UTC+0700</code>: The blacklist policy is effective from 03:00 to 05:00 (UTC+7). 05:00 (UTC+7) is excluded.</li>
+     * <li><p><code>03:00-04:59</code>: The blacklist policy is effective from 03:00 to 05:00 local time. 05:00 local time is excluded.</p>
+     * </li>
+     * <li><p><code>03:00-04:59 UTC+0700</code>: The blacklist policy is effective from 03:00 to 05:00 (UTC+7). 05:00 (UTC+7) is excluded.</p>
+     * </li>
      * </ul>
      * </li>
      * </ul>
@@ -74,8 +76,10 @@ public class ModifyMetricRuleBlackListRequest extends TeaModel {
     /**
      * <p>The metrics of the instance.</p>
      * <ul>
-     * <li>If you do not configure this parameter, the blacklist policy applies to all metrics of the specified cloud service.</li>
-     * <li>If you configure this parameter, the blacklist policy applies only to the current metric.</li>
+     * <li><p>If you do not configure this parameter, the blacklist policy applies to all metrics of the specified cloud service.</p>
+     * </li>
+     * <li><p>If you configure this parameter, the blacklist policy applies only to the current metric.</p>
+     * </li>
      * </ul>
      */
     @NameInMap("Metrics")
@@ -108,8 +112,10 @@ public class ModifyMetricRuleBlackListRequest extends TeaModel {
     /**
      * <p>The effective scope of the blacklist policy. Valid values:</p>
      * <ul>
-     * <li>USER: The blacklist policy takes effect only within the current Alibaba Cloud account.</li>
-     * <li>GROUP (default): The blacklist policy takes effect only within the specified application group. For information about how to obtain the ID of an application group, see <a href="https://help.aliyun.com/document_detail/115032.html">DescribeMonitorGroups</a>.</li>
+     * <li><p>USER: The blacklist policy takes effect only within the current Alibaba Cloud account.</p>
+     * </li>
+     * <li><p>GROUP (default): The blacklist policy takes effect only within the specified application group. For information about how to obtain the ID of an application group, see <a href="https://help.aliyun.com/document_detail/115032.html">DescribeMonitorGroups</a>.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -121,7 +127,7 @@ public class ModifyMetricRuleBlackListRequest extends TeaModel {
     /**
      * <p>The IDs of the application groups.</p>
      * <blockquote>
-     * <p> This parameter is required only when <code>ScopeType</code> is set to <code>GROUP</code>.</p>
+     * <p>This parameter is required only when <code>ScopeType</code> is set to <code>GROUP</code>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

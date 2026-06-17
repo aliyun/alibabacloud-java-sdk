@@ -8,7 +8,7 @@ public class DeleteExporterRuleRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The name of the data export rule.</p>
+     * <p>The name of the export rules.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

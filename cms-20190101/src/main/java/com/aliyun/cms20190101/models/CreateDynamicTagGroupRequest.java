@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateDynamicTagGroupRequest extends TeaModel {
     /**
+     * <p>The alert contact groups. The value of N can be from 1 to 100. Alert notifications for the application group are sent to the alert contacts in these alert contact groups.</p>
+     * <p>An alert contact group can contain one or more alert contacts. For more information about how to create alert contacts and alert contact groups, see <a href="https://help.aliyun.com/document_detail/114923.html">PutContact</a> and <a href="https://help.aliyun.com/document_detail/114929.html">PutContactGroup</a>. For more information about how to obtain alert contact groups, see <a href="https://help.aliyun.com/document_detail/114922.html">DescribeContactGroupList</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,10 +16,12 @@ public class CreateDynamicTagGroupRequest extends TeaModel {
     public java.util.List<String> contactGroupList;
 
     /**
-     * <p>Specifies whether the CloudMonitor agent is automatically installed for the application group. CloudMonitor determines whether to automatically install the CloudMonitor agent for the hosts in an application group based on the value of this parameter. Valid values:</p>
+     * <p>Specifies whether to automatically install the CloudMonitor agent for the application group. CloudMonitor automatically installs the agent on the hosts in the application group. Valid values:</p>
      * <ul>
-     * <li>true: The CloudMonitor agent is automatically installed.</li>
-     * <li>false (default value): The CloudMonitor agent is not automatically installed.</li>
+     * <li><p>true: enabled.</p>
+     * </li>
+     * <li><p>false (default): disabled.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -27,10 +31,12 @@ public class CreateDynamicTagGroupRequest extends TeaModel {
     public Boolean enableInstallAgent;
 
     /**
-     * <p>Specifies whether the application group automatically subscribes to event notifications. If events whose severity level is critical or warning occur on resources in an application group, CloudMonitor sends alert notifications. Valid values:</p>
+     * <p>Specifies whether to automatically subscribe to event notifications for the application group. When a critical or warning event occurs on a resource in the application group, CloudMonitor sends an alert notification. Valid values:</p>
      * <ul>
-     * <li>true: The application group automatically subscribes to event notifications.</li>
-     * <li>false (default value): The application group does not automatically subscribe to event notifications.</li>
+     * <li><p>true: enabled.</p>
+     * </li>
+     * <li><p>false (default): disabled.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -40,17 +46,19 @@ public class CreateDynamicTagGroupRequest extends TeaModel {
     public Boolean enableSubscribeEvent;
 
     /**
-     * <p>The conditional expressions used to create an application group based on the tag.</p>
+     * <p>The match expressions that are used to create an application group from tags.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("MatchExpress")
     public java.util.List<CreateDynamicTagGroupRequestMatchExpress> matchExpress;
 
     /**
-     * <p>The relationship between the conditional expressions for the tag values of the cloud resources. Valid values:</p>
+     * <p>The relationship between the conditional expressions for the tag values. Valid values:</p>
      * <ul>
-     * <li>and (default)</li>
-     * <li>or</li>
+     * <li><p>and (default)</p>
+     * </li>
+     * <li><p>or</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -63,8 +71,8 @@ public class CreateDynamicTagGroupRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The tag keys of the cloud resources.</p>
-     * <p>For more information about how to obtain tag keys, see <a href="https://help.aliyun.com/document_detail/145558.html">DescribeTagKeyList</a>.</p>
+     * <p>The tag key of the resource.</p>
+     * <p>For more information about how to query the tag keys of resources, see <a href="https://help.aliyun.com/document_detail/145558.html">DescribeTagKeyList</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -74,7 +82,7 @@ public class CreateDynamicTagGroupRequest extends TeaModel {
     public String tagKey;
 
     /**
-     * <p>The ID of the region to which the tags belong.</p>
+     * <p>The ID of the region to which the tag belongs.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -83,6 +91,9 @@ public class CreateDynamicTagGroupRequest extends TeaModel {
     public String tagRegionId;
 
     /**
+     * <p>The ID of the alert template.</p>
+     * <p>For more information about how to query the IDs of alert templates, see <a href="https://help.aliyun.com/document_detail/114982.html">DescribeMetricRuleTemplateList</a>.</p>
+     * 
      * <strong>example:</strong>
      * <p>85****</p>
      */
@@ -168,7 +179,7 @@ public class CreateDynamicTagGroupRequest extends TeaModel {
 
     public static class CreateDynamicTagGroupRequestMatchExpress extends TeaModel {
         /**
-         * <p>The keys of the tags that are used to create the application group. If a specified key is attached to multiple resources, the resources that have the same key-value pair are added to the same group.</p>
+         * <p>The key of the tag that is used to create the group. If multiple resources have this tag key, the resources that meet the filter conditions are added to the same group based on the same key-value pair.</p>
          * 
          * <strong>example:</strong>
          * <p>appname</p>
@@ -177,9 +188,9 @@ public class CreateDynamicTagGroupRequest extends TeaModel {
         public String tagName;
 
         /**
-         * <p>The tag values of the cloud resources. Set the value of N to 1.</p>
+         * <p>The value of the resource tag. The value of N is 1.</p>
          * <blockquote>
-         * <p> If you set the <code>MatchExpress.N.TagValueMatchFunction</code> parameter, you must also set the <code>MatchExpress.N.TagValue</code> parameter.</p>
+         * <p>You must specify both the <code>MatchExpress.N.TagValueMatchFunction</code> and <code>MatchExpress.N.TagValue</code> parameters.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -189,17 +200,23 @@ public class CreateDynamicTagGroupRequest extends TeaModel {
         public String tagValue;
 
         /**
-         * <p>The method that is used to match the tag values of the cloud resources. Set the value of N to 1. Valid values:</p>
+         * <p>The method that is used to match the values of resource tags. The value of N is 1. Valid values:</p>
          * <ul>
-         * <li>contains: contains</li>
-         * <li>startWith: starts with a prefix</li>
-         * <li>endWith: ends with a suffix</li>
-         * <li>notContains: does not contain</li>
-         * <li>equals: equals</li>
-         * <li>all: matches all</li>
+         * <li><p>contains: includes.</p>
+         * </li>
+         * <li><p>startWith: prefix.</p>
+         * </li>
+         * <li><p>endWith: suffix.</p>
+         * </li>
+         * <li><p>notContains: does not include.</p>
+         * </li>
+         * <li><p>equals: equals.</p>
+         * </li>
+         * <li><p>all: all.</p>
+         * </li>
          * </ul>
          * <blockquote>
-         * <p> If you set the <code>MatchExpress.N.TagValueMatchFunction</code> parameter, you must also set the <code>MatchExpress.N.TagValue</code> parameter.</p>
+         * <p>You must specify both the <code>MatchExpress.N.TagValueMatchFunction</code> and <code>MatchExpress.N.TagValue</code> parameters.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class DeleteExporterOutputResponseBody extends TeaModel {
     /**
-     * <p>The HTTP status code.</p>
+     * <p>The status code.</p>
      * <blockquote>
-     * <p>The status code 200 indicates that the request was successful. Other status codes indicate that the request failed.</p>
+     * <p>A status code of 200 indicates success. Other values indicate failure.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -35,10 +35,10 @@ public class DeleteExporterOutputResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <p>Indicates whether the request was successful. Valid values:  </p>
      * <ul>
-     * <li><code>true</code></li>
-     * <li><code>false</code></li>
+     * <li><code>true</code>: success</li>
+     * <li><code>false</code>: failure</li>
      * </ul>
      * 
      * <strong>example:</strong>

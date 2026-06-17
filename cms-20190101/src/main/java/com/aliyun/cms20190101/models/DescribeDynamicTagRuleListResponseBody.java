@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class DescribeDynamicTagRuleListResponseBody extends TeaModel {
     /**
-     * <p>The HTTP status code.</p>
+     * <p>The status code.</p>
      * <blockquote>
-     * <p> The status code 200 indicates that the call was successful.</p>
+     * <p>A status code of 200 indicates that the operation was successful.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -26,7 +26,7 @@ public class DescribeDynamicTagRuleListResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The page number of the returned page.</p>
+     * <p>The page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -44,7 +44,7 @@ public class DescribeDynamicTagRuleListResponseBody extends TeaModel {
     public String pageSize;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>0D50523D-8D59-4A61-B58E-E2286ECFB3A9</p>
@@ -53,10 +53,12 @@ public class DescribeDynamicTagRuleListResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the call was successful. Valid values:</p>
+     * <p>Indicates whether the operation was successful. Valid values:</p>
      * <ul>
-     * <li>true: The call was successful.</li>
-     * <li>false: The call failed.</li>
+     * <li><p>true: The operation was successful.</p>
+     * </li>
+     * <li><p>false: The operation failed.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -69,7 +71,7 @@ public class DescribeDynamicTagRuleListResponseBody extends TeaModel {
     public DescribeDynamicTagRuleListResponseBodyTagGroupList tagGroupList;
 
     /**
-     * <p>The total number of returned entries.</p>
+     * <p>The total number of entries in the tag list.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>

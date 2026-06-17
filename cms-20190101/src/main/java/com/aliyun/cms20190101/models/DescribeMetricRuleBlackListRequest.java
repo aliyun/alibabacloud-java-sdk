@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeMetricRuleBlackListRequest extends TeaModel {
     /**
-     * <p>The ID of the blacklist policy.</p>
+     * <p>The category of the Alibaba Cloud service. For example, Redis has different editions, such as <code>kvstore_standard</code> (Standard Edition), <code>kvstore_sharding</code> (Cluster Edition), and <code>kvstore_splitrw</code> (Read/write Splitting Edition).</p>
      * 
      * <strong>example:</strong>
      * <p>ecs</p>
@@ -13,12 +13,15 @@ public class DescribeMetricRuleBlackListRequest extends TeaModel {
     @NameInMap("Category")
     public String category;
 
+    /**
+     * <p>The IDs of the blacklist policies.</p>
+     */
     @NameInMap("Ids")
     public java.util.List<String> ids;
 
     /**
-     * <p>The IDs of the instances in the blacklist policy.</p>
-     * <p>Valid values of N: 0 to 10.</p>
+     * <p>The IDs of instances in the blacklist policy.</p>
+     * <p>The value of N can be an integer from 0 to 10.</p>
      */
     @NameInMap("InstanceIds")
     public java.util.List<String> instanceIds;
@@ -26,8 +29,10 @@ public class DescribeMetricRuleBlackListRequest extends TeaModel {
     /**
      * <p>The status of the blacklist policy. Valid values:</p>
      * <ul>
-     * <li>true: The blacklist policy is enabled.</li>
-     * <li>false: The blacklist policy is disabled.</li>
+     * <li><p>true: enabled.</p>
+     * </li>
+     * <li><p>false: disabled.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -38,7 +43,7 @@ public class DescribeMetricRuleBlackListRequest extends TeaModel {
 
     /**
      * <p>The name of the blacklist policy.</p>
-     * <p>This parameter supports fuzzy match.</p>
+     * <p>Fuzzy queries are supported.</p>
      * 
      * <strong>example:</strong>
      * <p>Blacklist-01</p>
@@ -47,8 +52,8 @@ public class DescribeMetricRuleBlackListRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The timestamp when the blacklist policy expired.</p>
-     * <p>Unit: milliseconds.</p>
+     * <p>The namespace of the Alibaba Cloud service.</p>
+     * <p>For more information, see <a href="https://help.aliyun.com/document_detail/163515.html">Metrics</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>acs_ecs_dashboard</p>
@@ -57,10 +62,13 @@ public class DescribeMetricRuleBlackListRequest extends TeaModel {
     public String namespace;
 
     /**
-     * <p>The HTTP status code.</p>
-     * <blockquote>
-     * <p> The status code 200 indicates that the call was successful.</p>
-     * </blockquote>
+     * <p>The order in which to sort the results by time. Valid values:</p>
+     * <ul>
+     * <li><p>DESC (default): descending order.</p>
+     * </li>
+     * <li><p>ASC: ascending order.</p>
+     * </li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>DESC</p>
@@ -69,7 +77,8 @@ public class DescribeMetricRuleBlackListRequest extends TeaModel {
     public Integer order;
 
     /**
-     * <p>The name of the metric.</p>
+     * <p>The page number.</p>
+     * <p>Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -78,7 +87,8 @@ public class DescribeMetricRuleBlackListRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The categories of the Alibaba Cloud service. For example, ApsaraDB for Redis includes the following categories: ApsaraDB for Redis (standard architecture), ApsaraDB for Redis (cluster architecture), and ApsaraDB for Redis (read/write splitting architecture). In this case, the valid values of this parameter for ApsaraDB for Redis include <code>kvstore_standard</code>, <code>kvstore_sharding</code>, and <code>kvstore_splitrw</code>.</p>
+     * <p>The number of entries to return on each page.</p>
+     * <p>Default value: 10.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>
@@ -90,10 +100,12 @@ public class DescribeMetricRuleBlackListRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The effective scope of the blacklist policy. Valid values:</p>
+     * <p>The scope of the blacklist policy. Valid values:</p>
      * <ul>
-     * <li>USER: The blacklist policy takes effect only within the current Alibaba Cloud account.</li>
-     * <li>GROUP: The blacklist policy takes effect only within the specified application group.</li>
+     * <li><p>USER: The blacklist policy takes effect only for the current Alibaba Cloud account.</p>
+     * </li>
+     * <li><p>GROUP: The blacklist policy takes effect for the specified application groups.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

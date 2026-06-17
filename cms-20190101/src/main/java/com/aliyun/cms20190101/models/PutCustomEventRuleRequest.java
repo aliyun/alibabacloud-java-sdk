@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class PutCustomEventRuleRequest extends TeaModel {
     /**
-     * <p>The alert contact group that receives alert notifications. Separate multiple contact groups with commas (,).</p>
+     * <p>The alert contact group. Separate multiple contact groups with commas (,).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class PutCustomEventRuleRequest extends TeaModel {
     public String contactGroups;
 
     /**
-     * <p>The time period during which the alert rule is effective. Valid values: 00:00 to 23:59.</p>
+     * <p>The time period during which the alert rule is effective. Valid values: 00:00-23:59.</p>
      * 
      * <strong>example:</strong>
      * <p>00:00-23:59</p>
@@ -24,13 +24,16 @@ public class PutCustomEventRuleRequest extends TeaModel {
     public String effectiveInterval;
 
     /**
-     * <p>The subject of the alert notification email.</p>
+     * <p>The subject of the alert email.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ECS instance</p>
      */
     @NameInMap("EmailSubject")
     public String emailSubject;
 
     /**
-     * <p>The name of the custom event. For more information about how to obtain the event name, see <a href="https://help.aliyun.com/document_detail/115262.html">DescribeCustomEventAttribute</a>.</p>
+     * <p>The name of the custom event. For information about how to obtain the name, see <a href="https://help.aliyun.com/document_detail/115262.html">DescribeCustomEventAttribute</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -40,9 +43,9 @@ public class PutCustomEventRuleRequest extends TeaModel {
     public String eventName;
 
     /**
-     * <p>The ID of the application group. For more information about how to obtain the group ID, see <a href="https://help.aliyun.com/document_detail/115262.html">DescribeCustomEventAttribute</a>.</p>
+     * <p>The ID of the application group. For information about how to obtain the ID, see <a href="https://help.aliyun.com/document_detail/115262.html">DescribeCustomEventAttribute</a>.</p>
      * <blockquote>
-     * <p> The value 0 indicates that the reported custom event does not belong to any application Group.</p>
+     * <p>A value of 0 indicates that the reported custom event does not belong to any application group.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -53,11 +56,11 @@ public class PutCustomEventRuleRequest extends TeaModel {
     public String groupId;
 
     /**
-     * <p>The level of the alert. Valid values:</p>
+     * <p>The alert level. Valid values:</p>
      * <ul>
-     * <li>CRITICAL: critical issue</li>
-     * <li>WARN: warning</li>
-     * <li>INFO: information</li>
+     * <li>CRITICAL</li>
+     * <li>WARN</li>
+     * <li>INFO</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -68,7 +71,7 @@ public class PutCustomEventRuleRequest extends TeaModel {
     public String level;
 
     /**
-     * <p>The cycle that is used to aggregate monitoring data of the custom event. Unit: seconds. Set the value to an integral multiple of 60. Default value: 300.</p>
+     * <p>The aggregation period of the monitoring data for the custom event. Unit: seconds. The value must be 60 or a multiple of 60. Default value: 300.</p>
      * 
      * <strong>example:</strong>
      * <p>60</p>
@@ -79,7 +82,7 @@ public class PutCustomEventRuleRequest extends TeaModel {
     /**
      * <p>The ID of the alert rule.</p>
      * <blockquote>
-     * <p> You can specify an existing ID to modify the corresponding alert rule or specify a new ID to create an alert rule.</p>
+     * <p>If the alert rule ID already exists, the alert rule is modified. If the alert rule ID does not exist, an alert rule is created.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -110,7 +113,7 @@ public class PutCustomEventRuleRequest extends TeaModel {
     public String threshold;
 
     /**
-     * <p>The callback URL to which a POST request is sent when an alert is triggered based on the alert rule.</p>
+     * <p>The callback URL to which a POST request is sent when an alert is triggered.</p>
      * 
      * <strong>example:</strong>
      * <p><a href="https://www.aliyun.com">https://www.aliyun.com</a></p>

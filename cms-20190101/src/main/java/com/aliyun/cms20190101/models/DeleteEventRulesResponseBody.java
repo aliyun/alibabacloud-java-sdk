@@ -5,10 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteEventRulesResponseBody extends TeaModel {
     /**
-     * <p>The status code.</p>
-     * <blockquote>
-     * <p> The status code 200 indicates that the request was successful.</p>
-     * </blockquote>
+     * <p>The status code. A value of 200 indicates that the request was successful.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -26,16 +23,22 @@ public class DeleteEventRulesResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request. You can use this ID to query logs.</p>
      * 
      * <strong>example:</strong>
-     * <p>E5A72B5B-4F44-438C-B68A-147FD5DC53A8</p>
+     * <p>45231A42-5A09-5AFF-953C-A5B3D4ED8925</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful. Valid values: true and false.</p>
+     * <p>Indicates whether the operation was successful. Valid values:</p>
+     * <ul>
+     * <li><p>true: The operation was successful.</p>
+     * </li>
+     * <li><p>false: The operation failed.</p>
+     * </li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>true</p>

@@ -7,7 +7,7 @@ public class DescribeMetricRuleTemplateAttributeResponseBody extends TeaModel {
     /**
      * <p>The HTTP status code.</p>
      * <blockquote>
-     * <p> The status code 200 indicates that the request was successful.</p>
+     * <p>The value 200 indicates success.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -17,7 +17,7 @@ public class DescribeMetricRuleTemplateAttributeResponseBody extends TeaModel {
     public Integer code;
 
     /**
-     * <p>The error message returned.</p>
+     * <p>The error message.</p>
      * 
      * <strong>example:</strong>
      * <p>The specified resource is not found.</p>
@@ -41,10 +41,12 @@ public class DescribeMetricRuleTemplateAttributeResponseBody extends TeaModel {
     public DescribeMetricRuleTemplateAttributeResponseBodyResource resource;
 
     /**
-     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <p>Indicates whether the operation was successful. Valid values:</p>
      * <ul>
-     * <li>true</li>
-     * <li>false</li>
+     * <li><p>true: The operation was successful.</p>
+     * </li>
+     * <li><p>false: The operation failed.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -487,6 +489,9 @@ public class DescribeMetricRuleTemplateAttributeResponseBody extends TeaModel {
 
         /**
          * <p>The description of the alert template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ECS template</p>
          */
         @NameInMap("Description")
         public String description;

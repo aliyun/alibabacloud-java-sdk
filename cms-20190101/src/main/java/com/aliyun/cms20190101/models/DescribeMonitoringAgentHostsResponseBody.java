@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class DescribeMonitoringAgentHostsResponseBody extends TeaModel {
     /**
-     * <p>The HTTP status code.</p>
+     * <p>The status code.</p>
      * <blockquote>
-     * <p>The status code 200 indicates that the call is successful.</p>
+     * <p>A status code of 200 indicates a successful response.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -29,7 +29,7 @@ public class DescribeMonitoringAgentHostsResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The page number of the returned page.</p>
+     * <p>The page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -38,7 +38,7 @@ public class DescribeMonitoringAgentHostsResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries returned per page.</p>
+     * <p>The number of entries per page.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -47,7 +47,7 @@ public class DescribeMonitoringAgentHostsResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The total number of returned pages.</p>
+     * <p>The number of pages.</p>
      * 
      * <strong>example:</strong>
      * <p>50</p>
@@ -56,7 +56,7 @@ public class DescribeMonitoringAgentHostsResponseBody extends TeaModel {
     public Integer pageTotal;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>63EEBB2A-9E51-41E4-9E83-5DE7F3B292E0</p>
@@ -65,10 +65,12 @@ public class DescribeMonitoringAgentHostsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the call is successful. Valid values:</p>
+     * <p>Indicates whether the operation was successful. Valid values:</p>
      * <ul>
-     * <li>true: The call is successful.</li>
-     * <li>false: The call fails.</li>
+     * <li><p>true: The operation was successful.</p>
+     * </li>
+     * <li><p>false: The operation failed.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -78,7 +80,7 @@ public class DescribeMonitoringAgentHostsResponseBody extends TeaModel {
     public Boolean success;
 
     /**
-     * <p>The total number of returned entries.</p>
+     * <p>The total number of entries.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>

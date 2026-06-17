@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class DescribeEventRuleTargetListResponseBody extends TeaModel {
     /**
-     * <p>The HTTP status code.</p>
+     * <p>The status code.</p>
      * <blockquote>
-     * <p> The status code 200 indicates that the call was successful.</p>
+     * <p>A value of 200 indicates success.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -38,7 +38,7 @@ public class DescribeEventRuleTargetListResponseBody extends TeaModel {
     public DescribeEventRuleTargetListResponseBodyOpenApiParameters openApiParameters;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>87170bc7-e28a-4c93-b9bf-90a1dbe84736</p>

@@ -35,9 +35,12 @@ public class DescribeCustomEventHistogramRequest extends TeaModel {
     /**
      * <p>The severity level of the event. Valid values:</p>
      * <ul>
-     * <li>CRITICAL</li>
-     * <li>WARN</li>
-     * <li>INFO</li>
+     * <li><p>CRITICAL</p>
+     * </li>
+     * <li><p>WARN</p>
+     * </li>
+     * <li><p>INFO</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -61,8 +64,10 @@ public class DescribeCustomEventHistogramRequest extends TeaModel {
     /**
      * <p>The keywords that are used to search for the event.</p>
      * <ul>
-     * <li>If you need to query the custom event whose content contains a and b, set the value to &quot;a and b&quot;.</li>
-     * <li>If you need to query the custom event whose content contains a or b, set the value to &quot;a or b&quot;.</li>
+     * <li><p>If you need to query the custom event whose content contains a and b, set the value to &quot;a and b&quot;.</p>
+     * </li>
+     * <li><p>If you need to query the custom event whose content contains a or b, set the value to &quot;a or b&quot;.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

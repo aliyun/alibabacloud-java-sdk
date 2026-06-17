@@ -7,7 +7,7 @@ public class DeleteMonitorGroupInstancesRequest extends TeaModel {
     /**
      * <p>The abbreviation of the cloud service name.</p>
      * <blockquote>
-     * <p> For more information about how to obtain the abbreviation of a cloud service name, see <code>metricCategory</code> in the response parameter <code>Labels</code> of the <a href="https://help.aliyun.com/document_detail/114916.html">DescribeProjectMeta</a> operation.</p>
+     * <p>For more information about how to obtain the abbreviation of a cloud service name, see <code>metricCategory</code> in the response parameter <code>Labels</code> of the <a href="https://help.aliyun.com/document_detail/114916.html">DescribeProjectMeta</a> operation.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 

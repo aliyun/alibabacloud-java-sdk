@@ -868,9 +868,12 @@ public class DescribeMonitorResourceQuotaAttributeResponseBody extends TeaModel 
         /**
          * <p>The current edition of CloudMonitor. Valid values:</p>
          * <ul>
-         * <li>free: Free Edition</li>
-         * <li>pro: Pro Edition</li>
-         * <li>cms_post: pay-as-you-go</li>
+         * <li><p>free: Free Edition</p>
+         * </li>
+         * <li><p>pro: Pro Edition</p>
+         * </li>
+         * <li><p>cms_post: pay-as-you-go</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

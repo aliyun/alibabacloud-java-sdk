@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class PutExporterOutputResponseBody extends TeaModel {
     /**
-     * <p>The HTTP status code.</p>
+     * <p>The status code.</p>
      * <blockquote>
-     * <p>The status code 200 indicates that the request was successful.</p>
+     * <p>The value 200 indicates that the call is successful.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -35,7 +35,7 @@ public class PutExporterOutputResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful. true: The request was successful. false: The request failed.</p>
+     * <p>Indicates whether the call was successful. The value true indicates that the call was successful. The value false indicates that the call failed.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class RemoveTagsRequest extends TeaModel {
     /**
-     * <p>The IDs of the application groups.</p>
+     * <p>The ID of the application group.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -18,7 +18,7 @@ public class RemoveTagsRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The tags.</p>
+     * <p>The list of tags.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Tag")
@@ -57,7 +57,7 @@ public class RemoveTagsRequest extends TeaModel {
         /**
          * <p>The tag key.</p>
          * <blockquote>
-         * <p>The tag key (<code>Tag.N.Key</code>) and tag value (<code>Tag.N.Value</code>) must be specified at the same time.</p>
+         * <p>You must specify both the tag key (<code>Tag.N.Key</code>) and the tag value (<code>Tag.N.Value</code>).</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -70,7 +70,7 @@ public class RemoveTagsRequest extends TeaModel {
         /**
          * <p>The tag value.</p>
          * <blockquote>
-         * <p>The tag key (<code>Tag.N.Key</code>) and tag value (<code>Tag.N.Value</code>) must be specified at the same time.</p>
+         * <p>You must specify both the tag key (<code>Tag.N.Key</code>) and the tag value (<code>Tag.N.Value</code>).</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 

@@ -7,7 +7,7 @@ public class DescribeSystemEventHistogramResponseBody extends TeaModel {
     /**
      * <p>The response code.</p>
      * <blockquote>
-     * <p> The status code 200 indicates that the request was successful.</p>
+     * <p>The status code 200 indicates that the request was successful.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

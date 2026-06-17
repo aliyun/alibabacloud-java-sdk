@@ -8,7 +8,7 @@ public class DeleteMetricRuleTemplateRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of the alert template.</p>
+     * <p>The ID of the alert rule template.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

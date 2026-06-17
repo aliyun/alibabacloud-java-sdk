@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class DisableSiteMonitorsResponseBody extends TeaModel {
     /**
-     * <p>The responses code.</p>
+     * <p>The status code.</p>
      * <blockquote>
-     * <p> The status code 200 indicates that the request was successful.</p>
+     * <p>The value 200 indicates success.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -17,7 +17,7 @@ public class DisableSiteMonitorsResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The number of detection points that are affected by the site monitoring tasks.</p>
+     * <p>The number of detection point records affected by the site monitoring task.</p>
      */
     @NameInMap("Data")
     public DisableSiteMonitorsResponseBodyData data;
@@ -41,10 +41,12 @@ public class DisableSiteMonitorsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <p>Indicates whether the operation was successful. Valid values:</p>
      * <ul>
-     * <li>true</li>
-     * <li>false</li>
+     * <li><p>true: The operation was successful.</p>
+     * </li>
+     * <li><p>false: The operation failed.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -100,7 +102,7 @@ public class DisableSiteMonitorsResponseBody extends TeaModel {
 
     public static class DisableSiteMonitorsResponseBodyData extends TeaModel {
         /**
-         * <p>The number of detection points.</p>
+         * <p>The number of detection point records.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>

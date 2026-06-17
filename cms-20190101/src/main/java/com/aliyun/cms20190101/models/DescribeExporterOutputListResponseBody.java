@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class DescribeExporterOutputListResponseBody extends TeaModel {
     /**
-     * <p>The HTTP status code.</p>
+     * <p>The status code.</p>
      * <blockquote>
-     * <p>The status code 200 indicates that the request was successful. Other status codes indicate that the request failed.</p>
+     * <p>The status code 200 indicates that the call was successful. Other status codes indicate that the call failed.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -20,7 +20,7 @@ public class DescribeExporterOutputListResponseBody extends TeaModel {
     public DescribeExporterOutputListResponseBodyDatapoints datapoints;
 
     /**
-     * <p>The returned message.</p>
+     * <p>The error message.</p>
      * 
      * <strong>example:</strong>
      * <p>sucess</p>
@@ -29,7 +29,7 @@ public class DescribeExporterOutputListResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The page number of the returned page.</p>
+     * <p>The current page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -47,10 +47,10 @@ public class DescribeExporterOutputListResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <p>Indicates whether the call was successful. Valid values:  </p>
      * <ul>
-     * <li><code>true</code></li>
-     * <li><code>false</code></li>
+     * <li><code>true</code>: successful</li>
+     * <li><code>false</code>: failed</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -60,7 +60,7 @@ public class DescribeExporterOutputListResponseBody extends TeaModel {
     public Boolean success;
 
     /**
-     * <p>The total number of returned entries.</p>
+     * <p>The total number of records.</p>
      * 
      * <strong>example:</strong>
      * <p>25</p>

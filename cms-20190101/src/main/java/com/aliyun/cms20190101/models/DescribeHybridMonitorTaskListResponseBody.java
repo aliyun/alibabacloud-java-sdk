@@ -19,8 +19,10 @@ public class DescribeHybridMonitorTaskListResponseBody extends TeaModel {
     /**
      * <p>The returned message.</p>
      * <ul>
-     * <li>If the request was successful, the value <code>successful</code> is returned.</li>
-     * <li>If the request failed, an error message is returned.</li>
+     * <li><p>If the request was successful, the value <code>successful</code> is returned.</p>
+     * </li>
+     * <li><p>If the request failed, an error message is returned.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -59,8 +61,10 @@ public class DescribeHybridMonitorTaskListResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
      * <ul>
-     * <li>true</li>
-     * <li>false</li>
+     * <li><p>true</p>
+     * </li>
+     * <li><p>false</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -199,12 +203,18 @@ public class DescribeHybridMonitorTaskListResponseBody extends TeaModel {
         /**
          * <p>The method that is used to match the instance name. Valid values:</p>
          * <ul>
-         * <li>startWith: starts with a prefix</li>
-         * <li>endWith: ends with a suffix</li>
-         * <li>all: matches all</li>
-         * <li>equals: equals</li>
-         * <li>contains: contains</li>
-         * <li>notContains: does not contain</li>
+         * <li><p>startWith: starts with a prefix</p>
+         * </li>
+         * <li><p>endWith: ends with a suffix</p>
+         * </li>
+         * <li><p>all: matches all</p>
+         * </li>
+         * <li><p>equals: equals</p>
+         * </li>
+         * <li><p>contains: contains</p>
+         * </li>
+         * <li><p>notContains: does not contain</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -308,14 +318,22 @@ public class DescribeHybridMonitorTaskListResponseBody extends TeaModel {
         /**
          * <p>The method that is used to filter logs imported from Log Service. Valid values:</p>
          * <ul>
-         * <li><code>contain</code>: contains</li>
-         * <li><code>notContain</code>: does not contain</li>
-         * <li><code>&gt;</code>: greater than</li>
-         * <li><code>&lt;</code>: less than</li>
-         * <li><code>=</code>: equal to</li>
-         * <li><code>! =</code>: not equal to</li>
-         * <li><code>&gt;=</code>: greater than or equal to</li>
-         * <li><code>&lt;=</code>: less than or equal to</li>
+         * <li><p><code>contain</code>: contains</p>
+         * </li>
+         * <li><p><code>notContain</code>: does not contain</p>
+         * </li>
+         * <li><p><code>&gt;</code>: greater than</p>
+         * </li>
+         * <li><p><code>&lt;</code>: less than</p>
+         * </li>
+         * <li><p><code>=</code>: equal to</p>
+         * </li>
+         * <li><p><code>! =</code>: not equal to</p>
+         * </li>
+         * <li><p><code>&gt;=</code>: greater than or equal to</p>
+         * </li>
+         * <li><p><code>&lt;=</code>: less than or equal to</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -383,8 +401,10 @@ public class DescribeHybridMonitorTaskListResponseBody extends TeaModel {
         /**
          * <p>The relationship between multiple filter conditions. Valid values:</p>
          * <ul>
-         * <li>and (default): Logs are processed only if all filter conditions are met.</li>
-         * <li>or: Logs are processed if one of the filter conditions is met.</li>
+         * <li><p>and (default): Logs are processed only if all filter conditions are met.</p>
+         * </li>
+         * <li><p>or: Logs are processed if one of the filter conditions is met.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -471,17 +491,28 @@ public class DescribeHybridMonitorTaskListResponseBody extends TeaModel {
         /**
          * <p>The function that is used to aggregate log data within a statistical period. Valid values:</p>
          * <ul>
-         * <li>count: counts the number.</li>
-         * <li>sum: calculates the total value.</li>
-         * <li>avg: calculates the average value.</li>
-         * <li>max: calculates the maximum value.</li>
-         * <li>min: calculates the minimum value.</li>
-         * <li>value: collects samples within the statistical period.</li>
-         * <li>countps: calculates the average number of the specified field per second by using the following formula: Counted number of the specified field/Total number of seconds within the statistical period.</li>
-         * <li>sumps: calculates the average number of the specified field per second by using the following formula: Total value of the specified field/Total number of seconds within the statistical period.</li>
-         * <li>distinct: counts the number of logs where the specified field appears within the statistical period.</li>
-         * <li>distribution: counts the number of logs that meet a specified condition within the statistical period.</li>
-         * <li>percentile: sorts the values of the specified field in ascending order, and then returns the value that is at the specified percentile within the statistical period. Example: P50.</li>
+         * <li><p>count: counts the number.</p>
+         * </li>
+         * <li><p>sum: calculates the total value.</p>
+         * </li>
+         * <li><p>avg: calculates the average value.</p>
+         * </li>
+         * <li><p>max: calculates the maximum value.</p>
+         * </li>
+         * <li><p>min: calculates the minimum value.</p>
+         * </li>
+         * <li><p>value: collects samples within the statistical period.</p>
+         * </li>
+         * <li><p>countps: calculates the average number of the specified field per second by using the following formula: Counted number of the specified field/Total number of seconds within the statistical period.</p>
+         * </li>
+         * <li><p>sumps: calculates the average number of the specified field per second by using the following formula: Total value of the specified field/Total number of seconds within the statistical period.</p>
+         * </li>
+         * <li><p>distinct: counts the number of logs where the specified field appears within the statistical period.</p>
+         * </li>
+         * <li><p>distribution: counts the number of logs that meet a specified condition within the statistical period.</p>
+         * </li>
+         * <li><p>percentile: sorts the values of the specified field in ascending order, and then returns the value that is at the specified percentile within the statistical period. Example: P50.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -493,8 +524,10 @@ public class DescribeHybridMonitorTaskListResponseBody extends TeaModel {
         /**
          * <p>The value of the function that is used to aggregate logs imported from Log Service.</p>
          * <ul>
-         * <li>If the <code>Function</code> parameter is set to <code>distribution</code>, this parameter indicates the lower limit of the statistical interval. For example, 200 indicates that the number of HTTP requests whose status code is 2XX is calculated.</li>
-         * <li>If the <code>Function</code> parameter is set to <code>percentile</code>, this parameter specifies the percentile at which the expected value is. For example, 0.5 specifies P50.</li>
+         * <li><p>If the <code>Function</code> parameter is set to <code>distribution</code>, this parameter indicates the lower limit of the statistical interval. For example, 200 indicates that the number of HTTP requests whose status code is 2XX is calculated.</p>
+         * </li>
+         * <li><p>If the <code>Function</code> parameter is set to <code>percentile</code>, this parameter specifies the percentile at which the expected value is. For example, 0.5 specifies P50.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -645,9 +678,12 @@ public class DescribeHybridMonitorTaskListResponseBody extends TeaModel {
         /**
          * <p>The interval at which the CloudMonitor agent collects host monitoring data. Valid values:</p>
          * <ul>
-         * <li>15</li>
-         * <li>30</li>
-         * <li>60</li>
+         * <li><p>15</p>
+         * </li>
+         * <li><p>30</p>
+         * </li>
+         * <li><p>60</p>
+         * </li>
          * </ul>
          * <p>Unit: seconds.</p>
          * 
@@ -687,10 +723,14 @@ public class DescribeHybridMonitorTaskListResponseBody extends TeaModel {
         /**
          * <p>The timeout period during which the CloudMonitor agent collects host monitoring data. Valid values:</p>
          * <ul>
-         * <li>0</li>
-         * <li>15</li>
-         * <li>30</li>
-         * <li>60</li>
+         * <li><p>0</p>
+         * </li>
+         * <li><p>15</p>
+         * </li>
+         * <li><p>30</p>
+         * </li>
+         * <li><p>60</p>
+         * </li>
          * </ul>
          * <p>Unit: seconds.</p>
          * 
@@ -789,8 +829,10 @@ public class DescribeHybridMonitorTaskListResponseBody extends TeaModel {
         /**
          * <p>The relationship between the conditions that are used to filter metric import tasks. Valid values:</p>
          * <ul>
-         * <li>or</li>
-         * <li>and</li>
+         * <li><p>or</p>
+         * </li>
+         * <li><p>and</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -811,8 +853,10 @@ public class DescribeHybridMonitorTaskListResponseBody extends TeaModel {
         /**
          * <p>The network type of the host. Valid values:</p>
          * <ul>
-         * <li><code>vpc</code></li>
-         * <li><code>Internet</code></li>
+         * <li><p><code>vpc</code></p>
+         * </li>
+         * <li><p><code>Internet</code></p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -872,8 +916,10 @@ public class DescribeHybridMonitorTaskListResponseBody extends TeaModel {
         /**
          * <p>The type of the metric import task. Valid values:</p>
          * <ul>
-         * <li>aliyun_fc: metric import tasks for Alibaba Cloud services</li>
-         * <li>aliyun_sls: metrics for logs imported from Log Service</li>
+         * <li><p>aliyun_fc: metric import tasks for Alibaba Cloud services</p>
+         * </li>
+         * <li><p>aliyun_sls: metrics for logs imported from Log Service</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -894,8 +940,10 @@ public class DescribeHybridMonitorTaskListResponseBody extends TeaModel {
         /**
          * <p>The configuration file of the Alibaba Cloud service that you want to monitor by using Hybrid Cloud Monitoring.</p>
          * <ul>
-         * <li>namespace: the namespace of the Alibaba Cloud service.</li>
-         * <li>metric_list: the metrics of the Alibaba Cloud service.</li>
+         * <li><p>namespace: the namespace of the Alibaba Cloud service.</p>
+         * </li>
+         * <li><p>metric_list: the metrics of the Alibaba Cloud service.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

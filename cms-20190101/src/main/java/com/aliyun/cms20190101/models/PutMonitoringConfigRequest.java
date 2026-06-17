@@ -16,8 +16,10 @@ public class PutMonitoringConfigRequest extends TeaModel {
     /**
      * <p>Specifies whether to automatically install the CloudMonitor agent on new ECS instances. Valid values:</p>
      * <ul>
-     * <li>true (default): The CloudMonitor agent is automatically installed on new ECS instances.</li>
-     * <li>false: The CloudMonitor agent is not automatically installed on new ECS instances.</li>
+     * <li><p>true (default): The CloudMonitor agent is automatically installed on new ECS instances.</p>
+     * </li>
+     * <li><p>false: The CloudMonitor agent is not automatically installed on new ECS instances.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

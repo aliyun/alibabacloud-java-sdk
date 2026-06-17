@@ -17,6 +17,9 @@ public class ModifyHybridMonitorSLSGroupRequest extends TeaModel {
 
     /**
      * <p>The description of the Logstore group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Logstore group of Alibaba Cloud products.</p>
      */
     @NameInMap("SLSGroupDescription")
     public String SLSGroupDescription;
@@ -82,7 +85,7 @@ public class ModifyHybridMonitorSLSGroupRequest extends TeaModel {
         public String SLSLogstore;
 
         /**
-         * <p>The Simple Log Service project.</p>
+         * <p>The log project.</p>
          * <p>Valid values of N: 1 to 25.</p>
          * <p>This parameter is required.</p>
          * 
@@ -93,7 +96,7 @@ public class ModifyHybridMonitorSLSGroupRequest extends TeaModel {
         public String SLSProject;
 
         /**
-         * <p>The region ID.</p>
+         * <p>The region.</p>
          * <p>Valid values of N: 1 to 25.</p>
          * <p>This parameter is required.</p>
          * 
@@ -106,9 +109,9 @@ public class ModifyHybridMonitorSLSGroupRequest extends TeaModel {
         /**
          * <p>The member ID.</p>
          * <p>Valid values of N: 1 to 25.</p>
-         * <p>If you call this operation by using the management account of a resource directory, you can connect the Alibaba Cloud services that are activated for all members in the resource directory to Hybrid Cloud Monitoring. You can use the resource directory to monitor Alibaba Cloud services across enterprise accounts.</p>
+         * <p>When you invoke this operation by using a management account, you can associate the Alibaba Cloud services of any member in the resource folder with Hybrid Cloud Monitoring through cloud native mode. You can use the resource folder to monitor the Alibaba Cloud services of multiple accounts.</p>
          * <blockquote>
-         * <p>If a member uses CloudMonitor for the first time, you must make sure that the service-linked role AliyunServiceRoleForCloudMonitor is attached to the member. For more information, see <a href="https://help.aliyun.com/document_detail/170423.html">Manage the service-linked role for CloudMonitor</a>.</p>
+         * <p>If a member uses CloudMonitor for the first time, make sure that the member has completed authorization for the CloudMonitor service-linked role (AliyunServiceRoleForCloudMonitor). For more information, see <a href="https://help.aliyun.com/document_detail/170423.html">CloudMonitor service-linked role</a>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

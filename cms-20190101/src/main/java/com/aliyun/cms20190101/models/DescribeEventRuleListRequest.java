@@ -16,8 +16,10 @@ public class DescribeEventRuleListRequest extends TeaModel {
     /**
      * <p>Specifies whether to enable the event-triggered alert rule. Valid values:</p>
      * <ul>
-     * <li>true (default)</li>
-     * <li>false</li>
+     * <li><p>true (default)</p>
+     * </li>
+     * <li><p>false</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

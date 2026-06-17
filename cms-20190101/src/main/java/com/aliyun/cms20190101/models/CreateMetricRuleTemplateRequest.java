@@ -73,21 +73,32 @@ public class CreateMetricRuleTemplateRequest extends TeaModel {
         /**
          * <p>The operator that is used to compare the metric value with the threshold for Critical-level alerts. Valid values:</p>
          * <ul>
-         * <li>GreaterThanOrEqualToThreshold: greater than or equal to the threshold</li>
-         * <li>GreaterThanThreshold: greater than the threshold</li>
-         * <li>LessThanOrEqualToThreshold: less than or equal to the threshold</li>
-         * <li>LessThanThreshold: less than the threshold</li>
-         * <li>NotEqualToThreshold: not equal to the threshold</li>
-         * <li>GreaterThanYesterday: greater than the metric value at the same time yesterday</li>
-         * <li>LessThanYesterday: less than the metric value at the same time yesterday</li>
-         * <li>GreaterThanLastWeek: greater than the metric value at the same time last week</li>
-         * <li>LessThanLastWeek: less than the metric value at the same time last week</li>
-         * <li>GreaterThanLastPeriod: greater than the metric value in the last monitoring cycle</li>
-         * <li>LessThanLastPeriod: less than the metric value in the previous monitoring cycle</li>
+         * <li><p>GreaterThanOrEqualToThreshold: greater than or equal to the threshold</p>
+         * </li>
+         * <li><p>GreaterThanThreshold: greater than the threshold</p>
+         * </li>
+         * <li><p>LessThanOrEqualToThreshold: less than or equal to the threshold</p>
+         * </li>
+         * <li><p>LessThanThreshold: less than the threshold</p>
+         * </li>
+         * <li><p>NotEqualToThreshold: not equal to the threshold</p>
+         * </li>
+         * <li><p>GreaterThanYesterday: greater than the metric value at the same time yesterday</p>
+         * </li>
+         * <li><p>LessThanYesterday: less than the metric value at the same time yesterday</p>
+         * </li>
+         * <li><p>GreaterThanLastWeek: greater than the metric value at the same time last week</p>
+         * </li>
+         * <li><p>LessThanLastWeek: less than the metric value at the same time last week</p>
+         * </li>
+         * <li><p>GreaterThanLastPeriod: greater than the metric value in the last monitoring cycle</p>
+         * </li>
+         * <li><p>LessThanLastPeriod: less than the metric value in the previous monitoring cycle</p>
+         * </li>
          * </ul>
          * <p>Valid values of N: 1 to 200.</p>
          * <blockquote>
-         * <p> You must select at least one of the Critical, Warn, and Info alert levels and specify the Statistics, ComparisonOperator, Threshold, and Times parameters for each alert level.</p>
+         * <p>You must select at least one of the Critical, Warn, and Info alert levels and specify the Statistics, ComparisonOperator, Threshold, and Times parameters for each alert level.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -104,7 +115,7 @@ public class CreateMetricRuleTemplateRequest extends TeaModel {
          * <p>Valid values of N: 1 to 200.</p>
          * <p>The value of this parameter is determined by the <code>Statistics</code> column corresponding to the <code>MetricName</code> parameter of the specified cloud service. The value of this parameter can be Maximum, Minimum, or Average. For more information about how to obtain the value of this parameter, see <a href="https://help.aliyun.com/document_detail/163515.html">Appendix 1: Metrics</a>.</p>
          * <blockquote>
-         * <p> You must select at least one of the Critical, Warn, and Info alert levels and specify the Statistics, ComparisonOperator, Threshold, and Times parameters for each alert level.</p>
+         * <p>You must select at least one of the Critical, Warn, and Info alert levels and specify the Statistics, ComparisonOperator, Threshold, and Times parameters for each alert level.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -117,7 +128,7 @@ public class CreateMetricRuleTemplateRequest extends TeaModel {
          * <p>The threshold for Critical-level alerts.</p>
          * <p>Valid values of N: 1 to 200.</p>
          * <blockquote>
-         * <p> You must select at least one of the Critical, Warn, and Info alert levels and specify the Statistics, ComparisonOperator, Threshold, and Times parameters for each alert level.</p>
+         * <p>You must select at least one of the Critical, Warn, and Info alert levels and specify the Statistics, ComparisonOperator, Threshold, and Times parameters for each alert level.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -130,11 +141,11 @@ public class CreateMetricRuleTemplateRequest extends TeaModel {
          * <p>The consecutive number of times for which the metric value meets the alert condition before a Critical-level alert is triggered.</p>
          * <p>Valid values of N: 1 to 200.</p>
          * <blockquote>
-         * <p> You must select at least one of the Critical, Warn, and Info alert levels and specify the Statistics, ComparisonOperator, Threshold, and Times parameters for each alert level.</p>
+         * <p>You must select at least one of the Critical, Warn, and Info alert levels and specify the Statistics, ComparisonOperator, Threshold, and Times parameters for each alert level.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
-         * <p>2</p>
+         * <p>3</p>
          */
         @NameInMap("Times")
         public Integer times;
@@ -190,21 +201,32 @@ public class CreateMetricRuleTemplateRequest extends TeaModel {
         /**
          * <p>The operator that is used to compare the metric value with the threshold for Info-level alerts. Valid values:</p>
          * <ul>
-         * <li>GreaterThanOrEqualToThreshold: greater than or equal to the threshold</li>
-         * <li>GreaterThanThreshold: greater than the threshold</li>
-         * <li>LessThanOrEqualToThreshold: less than or equal to the threshold</li>
-         * <li>LessThanThreshold: less than the threshold</li>
-         * <li>NotEqualToThreshold: not equal to the threshold</li>
-         * <li>GreaterThanYesterday: greater than the metric value at the same time yesterday</li>
-         * <li>LessThanYesterday: less than the metric value at the same time yesterday</li>
-         * <li>GreaterThanLastWeek: greater than the metric value at the same time last week</li>
-         * <li>LessThanLastWeek: less than the metric value at the same time last week</li>
-         * <li>GreaterThanLastPeriod: greater than the metric value in the last monitoring cycle</li>
-         * <li>LessThanLastPeriod: less than the metric value in the previous monitoring cycle</li>
+         * <li><p>GreaterThanOrEqualToThreshold: greater than or equal to the threshold</p>
+         * </li>
+         * <li><p>GreaterThanThreshold: greater than the threshold</p>
+         * </li>
+         * <li><p>LessThanOrEqualToThreshold: less than or equal to the threshold</p>
+         * </li>
+         * <li><p>LessThanThreshold: less than the threshold</p>
+         * </li>
+         * <li><p>NotEqualToThreshold: not equal to the threshold</p>
+         * </li>
+         * <li><p>GreaterThanYesterday: greater than the metric value at the same time yesterday</p>
+         * </li>
+         * <li><p>LessThanYesterday: less than the metric value at the same time yesterday</p>
+         * </li>
+         * <li><p>GreaterThanLastWeek: greater than the metric value at the same time last week</p>
+         * </li>
+         * <li><p>LessThanLastWeek: less than the metric value at the same time last week</p>
+         * </li>
+         * <li><p>GreaterThanLastPeriod: greater than the metric value in the last monitoring cycle</p>
+         * </li>
+         * <li><p>LessThanLastPeriod: less than the metric value in the previous monitoring cycle</p>
+         * </li>
          * </ul>
          * <p>Valid values of N: 1 to 200.</p>
          * <blockquote>
-         * <p> You must select at least one of the Critical, Warn, and Info alert levels and specify the Statistics, ComparisonOperator, Threshold, and Times parameters for each alert level.</p>
+         * <p>You must select at least one of the Critical, Warn, and Info alert levels and specify the Statistics, ComparisonOperator, Threshold, and Times parameters for each alert level.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -221,7 +243,7 @@ public class CreateMetricRuleTemplateRequest extends TeaModel {
          * <p>Valid values of N: 1 to 200.</p>
          * <p>The value of this parameter is determined by the <code>Statistics</code> column corresponding to the <code>MetricName</code> parameter of the specified cloud service. The value of this parameter can be Maximum, Minimum, or Average. For more information about how to obtain the value of this parameter, see <a href="https://help.aliyun.com/document_detail/163515.html">Appendix 1: Metrics</a>.</p>
          * <blockquote>
-         * <p> You must select at least one of the Critical, Warn, and Info alert levels and specify the Statistics, ComparisonOperator, Threshold, and Times parameters for each alert level.</p>
+         * <p>You must select at least one of the Critical, Warn, and Info alert levels and specify the Statistics, ComparisonOperator, Threshold, and Times parameters for each alert level.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -234,7 +256,7 @@ public class CreateMetricRuleTemplateRequest extends TeaModel {
          * <p>The threshold for Info-level alerts.</p>
          * <p>Valid values of N: 1 to 200.</p>
          * <blockquote>
-         * <p> You must select at least one of the Critical, Warn, and Info alert levels and specify the Statistics, ComparisonOperator, Threshold, and Times parameters for each alert level.</p>
+         * <p>You must select at least one of the Critical, Warn, and Info alert levels and specify the Statistics, ComparisonOperator, Threshold, and Times parameters for each alert level.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -247,7 +269,7 @@ public class CreateMetricRuleTemplateRequest extends TeaModel {
          * <p>The consecutive number of times for which the metric value meets the alert condition before an Info-level alert is triggered.</p>
          * <p>Valid values of N: 1 to 200.</p>
          * <blockquote>
-         * <p> You must select at least one of the Critical, Warn, and Info alert levels and specify the Statistics, ComparisonOperator, Threshold, and Times parameters for each alert level.</p>
+         * <p>You must select at least one of the Critical, Warn, and Info alert levels and specify the Statistics, ComparisonOperator, Threshold, and Times parameters for each alert level.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -307,21 +329,32 @@ public class CreateMetricRuleTemplateRequest extends TeaModel {
         /**
          * <p>The operator that is used to compare the metric value with the threshold for Warn-level alerts. Valid values:</p>
          * <ul>
-         * <li>GreaterThanOrEqualToThreshold: greater than or equal to the threshold</li>
-         * <li>GreaterThanThreshold: greater than the threshold</li>
-         * <li>LessThanOrEqualToThreshold: less than or equal to the threshold</li>
-         * <li>LessThanThreshold: less than the threshold</li>
-         * <li>NotEqualToThreshold: not equal to the threshold</li>
-         * <li>GreaterThanYesterday: greater than the metric value at the same time yesterday</li>
-         * <li>LessThanYesterday: less than the metric value at the same time yesterday</li>
-         * <li>GreaterThanLastWeek: greater than the metric value at the same time last week</li>
-         * <li>LessThanLastWeek: less than the metric value at the same time last week</li>
-         * <li>GreaterThanLastPeriod: greater than the metric value in the last monitoring cycle</li>
-         * <li>LessThanLastPeriod: less than the metric value in the previous monitoring cycle</li>
+         * <li><p>GreaterThanOrEqualToThreshold: greater than or equal to the threshold</p>
+         * </li>
+         * <li><p>GreaterThanThreshold: greater than the threshold</p>
+         * </li>
+         * <li><p>LessThanOrEqualToThreshold: less than or equal to the threshold</p>
+         * </li>
+         * <li><p>LessThanThreshold: less than the threshold</p>
+         * </li>
+         * <li><p>NotEqualToThreshold: not equal to the threshold</p>
+         * </li>
+         * <li><p>GreaterThanYesterday: greater than the metric value at the same time yesterday</p>
+         * </li>
+         * <li><p>LessThanYesterday: less than the metric value at the same time yesterday</p>
+         * </li>
+         * <li><p>GreaterThanLastWeek: greater than the metric value at the same time last week</p>
+         * </li>
+         * <li><p>LessThanLastWeek: less than the metric value at the same time last week</p>
+         * </li>
+         * <li><p>GreaterThanLastPeriod: greater than the metric value in the last monitoring cycle</p>
+         * </li>
+         * <li><p>LessThanLastPeriod: less than the metric value in the previous monitoring cycle</p>
+         * </li>
          * </ul>
          * <p>Valid values of N: 1 to 200.</p>
          * <blockquote>
-         * <p> You must select at least one of the Critical, Warn, and Info alert levels and specify the Statistics, ComparisonOperator, Threshold, and Times parameters for each alert level.</p>
+         * <p>You must select at least one of the Critical, Warn, and Info alert levels and specify the Statistics, ComparisonOperator, Threshold, and Times parameters for each alert level.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -338,7 +371,7 @@ public class CreateMetricRuleTemplateRequest extends TeaModel {
          * <p>Valid values of N: 1 to 200.</p>
          * <p>The value of this parameter is determined by the <code>Statistics</code> column corresponding to the <code>MetricName</code> parameter of the specified cloud service. The value of this parameter can be Maximum, Minimum, or Average. For more information about how to obtain the value of this parameter, see <a href="https://help.aliyun.com/document_detail/163515.html">Appendix 1: Metrics</a>.</p>
          * <blockquote>
-         * <p> You must select at least one of the Critical, Warn, and Info alert levels and specify the Statistics, ComparisonOperator, Threshold, and Times parameters for each alert level.</p>
+         * <p>You must select at least one of the Critical, Warn, and Info alert levels and specify the Statistics, ComparisonOperator, Threshold, and Times parameters for each alert level.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -351,7 +384,7 @@ public class CreateMetricRuleTemplateRequest extends TeaModel {
          * <p>The threshold for Warn-level alerts.</p>
          * <p>Valid values of N: 1 to 200.</p>
          * <blockquote>
-         * <p> You must select at least one of the Critical, Warn, and Info alert levels and specify the Statistics, ComparisonOperator, Threshold, and Times parameters for each alert level.</p>
+         * <p>You must select at least one of the Critical, Warn, and Info alert levels and specify the Statistics, ComparisonOperator, Threshold, and Times parameters for each alert level.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -364,7 +397,7 @@ public class CreateMetricRuleTemplateRequest extends TeaModel {
          * <p>The consecutive number of times for which the metric value meets the alert condition before a Warn-level alert is triggered.</p>
          * <p>Valid values of N: 1 to 200.</p>
          * <blockquote>
-         * <p> You must select at least one of the Critical, Warn, and Info alert levels and specify the Statistics, ComparisonOperator, Threshold, and Times parameters for each alert level.</p>
+         * <p>You must select at least one of the Critical, Warn, and Info alert levels and specify the Statistics, ComparisonOperator, Threshold, and Times parameters for each alert level.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -528,7 +561,7 @@ public class CreateMetricRuleTemplateRequest extends TeaModel {
          * <p>Valid values of N: 1 to 200.</p>
          * <p>For example, an alert template is applied to an application group, this parameter is set to <code>{&quot;disk&quot;:&quot;/&quot;}</code>, and the MetricName parameter is set to <code>DiskUtilization</code>. In this case, the generated alert rule is applied to the root disk partition (<code>&quot;/&quot;</code>) of all instances in the application group to which the alert template is applied.</p>
          * <blockquote>
-         * <p> For more information about the values of extended fields, see <a href="https://help.aliyun.com/document_detail/114979.html">DescribeMetricRuleTemplateAttribute</a>.</p>
+         * <p>For more information about the values of extended fields, see <a href="https://help.aliyun.com/document_detail/114979.html">DescribeMetricRuleTemplateAttribute</a>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

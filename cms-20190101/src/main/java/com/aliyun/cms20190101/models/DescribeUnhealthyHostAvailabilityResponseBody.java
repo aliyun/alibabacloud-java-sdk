@@ -7,7 +7,7 @@ public class DescribeUnhealthyHostAvailabilityResponseBody extends TeaModel {
     /**
      * <p>The status code.</p>
      * <blockquote>
-     * <p> The status code 200 indicates that the request was successful.</p>
+     * <p>A value of 200 indicates that the request was successful.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -35,11 +35,7 @@ public class DescribeUnhealthyHostAvailabilityResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful. Valid values:</p>
-     * <ul>
-     * <li>true</li>
-     * <li>false</li>
-     * </ul>
+     * <p>Indicates whether the operation was successful. Valid values: -true: The operation was successful. -false: The operation failed.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>

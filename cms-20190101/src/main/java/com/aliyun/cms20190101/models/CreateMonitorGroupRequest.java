@@ -7,7 +7,7 @@ public class CreateMonitorGroupRequest extends TeaModel {
     /**
      * <p>The alert contact group. The alert notifications of the application group are sent to the alert contacts that belong to the alert contact group.</p>
      * <blockquote>
-     * <p> An alert contact group can contain one or more alert contacts. For information about how to create alert contacts and alert contact groups, see <a href="~~PutContact~~">PutContact</a> and <a href="~~PutContactGroup~~">PutContactGroup</a>.</p>
+     * <p>An alert contact group can contain one or more alert contacts. For information about how to create alert contacts and alert contact groups, see <a href="~~PutContact~~">PutContact</a> and <a href="~~PutContactGroup~~">PutContactGroup</a>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

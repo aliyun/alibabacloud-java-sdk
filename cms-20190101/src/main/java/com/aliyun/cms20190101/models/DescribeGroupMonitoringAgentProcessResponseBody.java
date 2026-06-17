@@ -7,7 +7,7 @@ public class DescribeGroupMonitoringAgentProcessResponseBody extends TeaModel {
     /**
      * <p>The HTTP status codes.</p>
      * <blockquote>
-     * <p> The status code 200 indicates that the request was successful.</p>
+     * <p>The status code 200 indicates that the request was successful.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

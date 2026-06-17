@@ -7,7 +7,7 @@ public class DeleteMonitorGroupResponseBody extends TeaModel {
     /**
      * <p>The HTTP status code.</p>
      * <blockquote>
-     * <p> The status code 200 indicates that the call was successful.</p>
+     * <p>The status code 200 indicates that the call was successful.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

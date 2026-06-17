@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeSiteMonitorListRequest extends TeaModel {
     /**
-     * <p>Task network type. Valid values:</p>
+     * <p>The type of detection points used by the task. Valid values:</p>
      * <ul>
-     * <li><p>PC: Cable Network</p>
+     * <li><p>PC: PC-based detection points.</p>
      * </li>
-     * <li><p>MOBILE: Mobile Cellular Network</p>
+     * <li><p>MOBILE: mobile-based detection points.</p>
      * </li>
-     * <li><p>FC: Alibaba Cloud VPC Network</p>
+     * <li><p>FC: internal detection points.</p>
      * </li>
      * </ul>
      * 
@@ -22,9 +22,9 @@ public class DescribeSiteMonitorListRequest extends TeaModel {
     public String agentGroup;
 
     /**
-     * <p>The keyword to be matched.</p>
+     * <p>The keyword used to search for site monitoring tasks.</p>
      * <blockquote>
-     * <p> You can search for tasks by name or address. Fuzzy search is supported.</p>
+     * <p>Fuzzy match is supported based on the task name or task address.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -66,8 +66,10 @@ public class DescribeSiteMonitorListRequest extends TeaModel {
     /**
      * <p>The task status. Valid values:</p>
      * <ul>
-     * <li>1: The task is enabled.</li>
-     * <li>2: The task is disabled.</li>
+     * <li><p>1: Normal.</p>
+     * </li>
+     * <li><p>2: Disabled.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -77,7 +79,7 @@ public class DescribeSiteMonitorListRequest extends TeaModel {
     public String taskState;
 
     /**
-     * <p>The protocol that is used by the site monitoring task. Valid values: HTTP, PING, TCP, UDP, DNS, SMTP, POP3, and FTP.</p>
+     * <p>The type of the site monitoring task. CloudMonitor supports the following types: HTTP, PING, TCP, UDP, DNS, SMTP, POP3, and FTP.</p>
      * 
      * <strong>example:</strong>
      * <p>HTTP</p>

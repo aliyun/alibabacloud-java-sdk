@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DisableHostAvailabilityRequest extends TeaModel {
     /**
-     * <p>The ID of the availability monitoring task. Valid values of N: 1 to 20.</p>
+     * <p>The IDs of the availability monitoring jobs.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -5,25 +5,25 @@ import com.aliyun.tea.*;
 
 public class PutEventRuleTargetsRequest extends TeaModel {
     /**
-     * <p>The information about the alert contact groups that receive alert notifications.</p>
+     * <p>The alert contact group notification method.</p>
      */
     @NameInMap("ContactParameters")
     public java.util.List<PutEventRuleTargetsRequestContactParameters> contactParameters;
 
     /**
-     * <p>The information about the recipients in Function Compute.</p>
+     * <p>The Function Compute notification method.</p>
      */
     @NameInMap("FcParameters")
     public java.util.List<PutEventRuleTargetsRequestFcParameters> fcParameters;
 
     /**
-     * <p>The notifications of Simple Message Queue (formerly MNS) (SMQ).</p>
+     * <p>The Simple Message Queue (formerly MNS) notification method.</p>
      */
     @NameInMap("MnsParameters")
     public java.util.List<PutEventRuleTargetsRequestMnsParameters> mnsParameters;
 
     /**
-     * <p>The parameters of API callback notification.</p>
+     * <p>The list of API callback notification parameters.</p>
      */
     @NameInMap("OpenApiParameters")
     public java.util.List<PutEventRuleTargetsRequestOpenApiParameters> openApiParameters;
@@ -42,13 +42,13 @@ public class PutEventRuleTargetsRequest extends TeaModel {
     public String ruleName;
 
     /**
-     * <p>The information about the recipients in Simple Log Service.</p>
+     * <p>The Simple Log Service notification method.</p>
      */
     @NameInMap("SlsParameters")
     public java.util.List<PutEventRuleTargetsRequestSlsParameters> slsParameters;
 
     /**
-     * <p>The information about the callback URLs that are used to receive alert notifications.</p>
+     * <p>The URL callback notification method.</p>
      */
     @NameInMap("WebhookParameters")
     public java.util.List<PutEventRuleTargetsRequestWebhookParameters> webhookParameters;
@@ -125,12 +125,15 @@ public class PutEventRuleTargetsRequest extends TeaModel {
     public static class PutEventRuleTargetsRequestContactParameters extends TeaModel {
         /**
          * <p>The name of the alert contact group. Valid values of N: 1 to 5.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Default alert contact group</p>
          */
         @NameInMap("ContactGroupName")
         public String contactGroupName;
 
         /**
-         * <p>The ID of the recipient that receives alert notifications. Valid values of N: 1 to 5.</p>
+         * <p>The unique identifier of the rule target. Valid values of N: 1 to 5.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -139,11 +142,15 @@ public class PutEventRuleTargetsRequest extends TeaModel {
         public String id;
 
         /**
-         * <p>The alert notification methods. Valid values of N: 1 to 5. Valid values:</p>
-         * <p>4: Alert notifications are sent by using DingTalk and emails.</p>
+         * <p>The alert notification level. Valid values of N: 1 to 5. Valid values:</p>
+         * <p>&lt;props=&quot;china&quot;&gt;- 2: phone call, text message, DingTalk, and email</p>
+         * <p>&lt;props=&quot;china&quot;&gt;- 3: text message, DingTalk, and email</p>
+         * <p>&lt;props=&quot;china&quot;&gt;- 4: DingTalk and email</p>
+         * <p>&lt;props=&quot;intl&quot;&gt;4: DingTalk and email</p>
+         * <p>&lt;props=&quot;partner&quot;&gt;4: DingTalk and email.</p>
          * 
          * <strong>example:</strong>
-         * <p>3</p>
+         * <p>4</p>
          */
         @NameInMap("Level")
         public String level;
@@ -190,7 +197,7 @@ public class PutEventRuleTargetsRequest extends TeaModel {
         public String functionName;
 
         /**
-         * <p>The ID of the recipient that receives alert notifications. Valid values of N: 1 to 5.</p>
+         * <p>The unique identifier of the rule target. Valid values of N: 1 to 5.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -199,7 +206,7 @@ public class PutEventRuleTargetsRequest extends TeaModel {
         public String id;
 
         /**
-         * <p>The region where Function Compute is deployed. Valid values of N: 1 to 5.</p>
+         * <p>The region where the Function Compute service resides. Valid values of N: 1 to 5.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -208,7 +215,7 @@ public class PutEventRuleTargetsRequest extends TeaModel {
         public String region;
 
         /**
-         * <p>The name of the Function Compute service. Valid values of N: 1 to 5.</p>
+         * <p>The service name of the Function Compute service. Valid values of N: 1 to 5.</p>
          * 
          * <strong>example:</strong>
          * <p>fc-test</p>
@@ -257,7 +264,7 @@ public class PutEventRuleTargetsRequest extends TeaModel {
 
     public static class PutEventRuleTargetsRequestMnsParameters extends TeaModel {
         /**
-         * <p>The ID of the recipient that receives alert notifications. Valid values of N: 1 to 5.</p>
+         * <p>The unique identifier of the rule target. Valid values of N: 1 to 5.</p>
          * 
          * <strong>example:</strong>
          * <p>3</p>
@@ -266,7 +273,7 @@ public class PutEventRuleTargetsRequest extends TeaModel {
         public String id;
 
         /**
-         * <p>The name of the SMQ queue. Valid values of N: 1 to 5.</p>
+         * <p>The name of the queue. Valid values of N: 1 to 5.</p>
          * 
          * <strong>example:</strong>
          * <p>queue1</p>
@@ -275,7 +282,7 @@ public class PutEventRuleTargetsRequest extends TeaModel {
         public String queue;
 
         /**
-         * <p>The region for SMQ. Valid values of N: 1 to 5.</p>
+         * <p>The region where Simple Message Queue (formerly MNS) resides. Valid values of N: 1 to 5.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -284,7 +291,7 @@ public class PutEventRuleTargetsRequest extends TeaModel {
         public String region;
 
         /**
-         * <p>The SMQ topic.</p>
+         * <p>The topic of Simple Message Queue (formerly MNS).</p>
          * 
          * <strong>example:</strong>
          * <p>topic_sample</p>
@@ -342,20 +349,21 @@ public class PutEventRuleTargetsRequest extends TeaModel {
         public String action;
 
         /**
-         * <p>The Alibaba Cloud Resource Name (ARN) of the resource. Valid values of N: 1 to 5. Format: <code>arn:acs:${Service}:${Region}:${Account}:${ResourceType}/${ResourceId}</code>. Fields:</p>
+         * <p>The Alibaba Cloud Resource Name (ARN) of the resource. Valid values of N: 1 to 5.
+         * Format: <code>arn:acs:${Service}:${Region}:${Account}:${ResourceType}/${ResourceId}</code>. The fields are described as follows:</p>
          * <ul>
-         * <li>Service: the code of a cloud service</li>
-         * <li>Region: the region ID</li>
-         * <li>Account: the ID of an Alibaba Cloud account</li>
-         * <li>ResourceType: the resource type</li>
-         * <li>ResourceId: the resource ID</li>
+         * <li>Service: the Alibaba Cloud service.</li>
+         * <li>Region: the region ID.</li>
+         * <li>Account: the Alibaba Cloud account ID.</li>
+         * <li>ResourceType: the resource type.</li>
+         * <li>ResourceId: the resource ID.</li>
          * </ul>
          */
         @NameInMap("Arn")
         public String arn;
 
         /**
-         * <p>The ID of the recipient that receives alert notifications sent by an API callback.</p>
+         * <p>The unique identifier of the API callback notification method.</p>
          * 
          * <strong>example:</strong>
          * <p>3</p>
@@ -364,7 +372,7 @@ public class PutEventRuleTargetsRequest extends TeaModel {
         public String id;
 
         /**
-         * <p>The parameters of the alert callback. Specify the parameters in the JSON format.</p>
+         * <p>The JSON-formatted parameters of the alert callback.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;customField1&quot;:&quot;value1&quot;,&quot;customField2&quot;:&quot;$.name&quot;}</p>
@@ -373,7 +381,7 @@ public class PutEventRuleTargetsRequest extends TeaModel {
         public String jsonParams;
 
         /**
-         * <p>The ID of the cloud service to which the API operation belongs.</p>
+         * <p>The ID of the Alibaba Cloud service to which the API belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>log</p>
@@ -391,7 +399,7 @@ public class PutEventRuleTargetsRequest extends TeaModel {
         public String region;
 
         /**
-         * <p>The name of the role.</p>
+         * <p>The role name.</p>
          * 
          * <strong>example:</strong>
          * <p>MyRole</p>
@@ -400,7 +408,7 @@ public class PutEventRuleTargetsRequest extends TeaModel {
         public String role;
 
         /**
-         * <p>The version of the API.</p>
+         * <p>The API version.</p>
          * 
          * <strong>example:</strong>
          * <p>2019-01-01</p>
@@ -481,7 +489,7 @@ public class PutEventRuleTargetsRequest extends TeaModel {
 
     public static class PutEventRuleTargetsRequestSlsParameters extends TeaModel {
         /**
-         * <p>The ID of the recipient that receives alert notifications. Valid values of N: 1 to 5.</p>
+         * <p>The unique identifier of the rule target. Valid values of N: 1 to 5.</p>
          * 
          * <strong>example:</strong>
          * <p>5</p>
@@ -490,7 +498,7 @@ public class PutEventRuleTargetsRequest extends TeaModel {
         public String id;
 
         /**
-         * <p>The name of the Simple Log Service Logstore. Valid values of N: 1 to 5.</p>
+         * <p>The Logstore of Simple Log Service. Valid values of N: 1 to 5.</p>
          * 
          * <strong>example:</strong>
          * <p>testlogstore</p>
@@ -499,7 +507,7 @@ public class PutEventRuleTargetsRequest extends TeaModel {
         public String logStore;
 
         /**
-         * <p>The name of the Simple Log Service project. Valid values of N: 1 to 5.</p>
+         * <p>The project of Simple Log Service. Valid values of N: 1 to 5.</p>
          * 
          * <strong>example:</strong>
          * <p>testproject</p>
@@ -508,7 +516,7 @@ public class PutEventRuleTargetsRequest extends TeaModel {
         public String project;
 
         /**
-         * <p>The region where Simple Log Service is deployed. Valid values of N: 1 to 5.</p>
+         * <p>The region where Simple Log Service resides. Valid values of N: 1 to 5.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -557,7 +565,7 @@ public class PutEventRuleTargetsRequest extends TeaModel {
 
     public static class PutEventRuleTargetsRequestWebhookParameters extends TeaModel {
         /**
-         * <p>The ID of the recipient that receives alert notifications. Valid values of N: 1 to 5.</p>
+         * <p>The unique identifier of the rule target. Valid values of N: 1 to 5.</p>
          * 
          * <strong>example:</strong>
          * <p>4</p>
@@ -566,8 +574,8 @@ public class PutEventRuleTargetsRequest extends TeaModel {
         public String id;
 
         /**
-         * <p>The HTTP request method. Valid values of N: 1 to 5.</p>
-         * <p>Valid values: GET and POST.</p>
+         * <p>The request method of the HTTP callback. Valid values of N: 1 to 5.</p>
+         * <p>Only GET and POST are supported.</p>
          * 
          * <strong>example:</strong>
          * <p>GET</p>
@@ -576,11 +584,11 @@ public class PutEventRuleTargetsRequest extends TeaModel {
         public String method;
 
         /**
-         * <p>The name of the protocol. Valid values of N: 1 to 5. Valid values:</p>
+         * <p>The protocol name. Valid values of N: 1 to 5. Valid values:</p>
          * <ul>
          * <li>http</li>
          * <li>telnet</li>
-         * <li>ping</li>
+         * <li>ping.</li>
          * </ul>
          * 
          * <strong>example:</strong>

@@ -5,11 +5,11 @@ import com.aliyun.tea.*;
 
 public class PutExporterOutputRequest extends TeaModel {
     /**
-     * <p>The configuration set for exporting monitoring data. It is a JSON object string. The string must include the following fields:</p>
+     * <p>The configuration of the data export. The value is a JSONObject string that must contain the following fields:</p>
      * <ul>
-     * <li>endpoint: the endpoint of Log Service.</li>
-     * <li>project: the Log Service project to which monitoring data is exported.</li>
-     * <li>logstore: the Log Service Logstore to which the monitoring data is exported.</li>
+     * <li>endpoint: the domain name that corresponds to the data of Log Service (SLS).</li>
+     * <li>project: the project.</li>
+     * <li>logstore: the Logstore.</li>
      * <li>ak: the AccessKey ID.</li>
      * <li>as: the AccessKey secret.</li>
      * </ul>
@@ -22,16 +22,16 @@ public class PutExporterOutputRequest extends TeaModel {
     public String configJson;
 
     /**
-     * <p>The description of the configuration set.</p>
+     * <p>The description of the configuration.</p>
      * 
      * <strong>example:</strong>
-     * <p>Export CPU metrics</p>
+     * <p>CPU metric export</p>
      */
     @NameInMap("Desc")
     public String desc;
 
     /**
-     * <p>The name of the configuration set.</p>
+     * <p>The name of the configuration.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -41,7 +41,7 @@ public class PutExporterOutputRequest extends TeaModel {
     public String destName;
 
     /**
-     * <p>The service to which the monitoring data is exported.</p>
+     * <p>The product to which the data is exported.</p>
      * 
      * <strong>example:</strong>
      * <p>sls</p>

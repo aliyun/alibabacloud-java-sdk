@@ -5,14 +5,14 @@ import com.aliyun.tea.*;
 
 public class DescribeMetricListRequest extends TeaModel {
     /**
-     * <p>The dimensions that specify the resources whose monitoring data you want to query.</p>
-     * <p>Set the value to a collection of key-value pairs. A typical key-value pair is <code>instanceId:i-2ze2d6j5uhg20x47****</code>.</p>
+     * <p>The dimensions that specify the resources to be monitored.</p>
+     * <p>Format: a collection of key-value pairs, such as <code>{&quot;userId&quot;:&quot;120886317861****&quot;}</code> and <code>{&quot;instanceId&quot;:&quot;i-2ze2d6j5uhg20x47****&quot;}</code>.</p>
      * <blockquote>
-     * <p> You can query a maximum of 50 instances in a single request.</p>
+     * <p>A single request can be used to query a maximum of 50 instances.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
-     * <p>[{&quot;instanceId&quot;: &quot;i-abcdefgh12****&quot;}]</p>
+     * <p>[{&quot;instanceId&quot;:&quot;i-2ze2d6j5uhg20x47****&quot;}]</p>
      */
     @NameInMap("Dimensions")
     public String dimensions;
@@ -20,9 +20,14 @@ public class DescribeMetricListRequest extends TeaModel {
     /**
      * <p>The end of the time range to query. The following formats are supported:</p>
      * <ul>
-     * <li>UNIX timestamp: the number of milliseconds that have elapsed since 00:00:00 Thursday, January 1, 1970</li>
-     * <li>UTC time: the UTC time that follows the YYYY-MM-DDThh:mm:ssZ format</li>
+     * <li><p>UNIX timestamp: the number of milliseconds that have elapsed since 00:00:00 UTC on January 1, 1970.</p>
+     * </li>
+     * <li><p>Format: YYYY-MM-DD hh:mm:ss.</p>
+     * </li>
      * </ul>
+     * <blockquote>
+     * <p>The interval between \<code>StartTime\\</code> and \<code>EndTime\\</code> must be less than or equal to 31 days.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>2019-01-30 00:10:00</p>
@@ -31,9 +36,9 @@ public class DescribeMetricListRequest extends TeaModel {
     public String endTime;
 
     /**
-     * <p>The expression that is used to compute the query results in real time.</p>
+     * <p>The expression that is used for real-time computing based on the query results.</p>
      * <blockquote>
-     * <p> Only the groupby expression is supported. This expression is similar to the GROUP BY statement that is used in databases.</p>
+     * <p>Only the groupby expression is supported. This expression is similar to the GROUP BY statement in databases.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -43,9 +48,9 @@ public class DescribeMetricListRequest extends TeaModel {
     public String express;
 
     /**
-     * <p>The number of entries to return on each page.</p>
+     * <p>The number of entries to return on each page for a paged query.</p>
      * <blockquote>
-     * <p> The maximum value of the Length parameter in a request is 1440.</p>
+     * <p>The maximum value of \<code>Length\\</code> in a single request is 1440.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -56,7 +61,7 @@ public class DescribeMetricListRequest extends TeaModel {
 
     /**
      * <p>The name of the metric.</p>
-     * <p>For more information about metric names, see <a href="https://help.aliyun.com/document_detail/163515.html">Appendix 1: Metrics</a>.</p>
+     * <p>For more information, see <a href="https://help.aliyun.com/document_detail/163515.html">Metrics</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -66,8 +71,8 @@ public class DescribeMetricListRequest extends TeaModel {
     public String metricName;
 
     /**
-     * <p>The namespace of the cloud service. Format: acs_service name.</p>
-     * <p>For more information about the namespaces of cloud services, see <a href="https://help.aliyun.com/document_detail/163515.html">Appendix 1: Metrics</a>.</p>
+     * <p>The namespace of the cloud service.</p>
+     * <p>For more information, see <a href="https://help.aliyun.com/document_detail/163515.html">Metrics</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -77,9 +82,9 @@ public class DescribeMetricListRequest extends TeaModel {
     public String namespace;
 
     /**
-     * <p>The paging token.</p>
+     * <p>The pagination cursor.</p>
      * <blockquote>
-     * <p> If this parameter is not specified, the data on the first page is returned. A return value other than Null of this parameter indicates that not all entries have been returned. You can use this value as an input parameter to obtain entries on the next page. The value Null indicates that all query results have been returned.</p>
+     * <p>If you do not set this parameter, the first page of data is returned. If a value is returned for this parameter, it indicates that more data is available. To retrieve the next page, use the returned value as the \<code>NextToken\\</code> in your next request. A null value indicates that all data has been retrieved.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -89,12 +94,17 @@ public class DescribeMetricListRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The interval at which the monitoring data is queried.</p>
-     * <p>Valid values: 60, 300, and 900.</p>
+     * <p>The statistical period of the monitoring data.</p>
+     * <p>Valid values: 15, 60, 900, and 3600.</p>
      * <p>Unit: seconds.</p>
      * <blockquote>
-     * <p> Configure this parameter based on your business scenario.</p>
+     * <ul>
+     * <li>If you do not set this parameter, the reporting period that was specified when the metric was registered is used.</li>
+     * </ul>
      * </blockquote>
+     * <ul>
+     * <li>The statistical period of each metric (<code>MetricName</code>) of a cloud service is different. For more information, see <a href="https://help.aliyun.com/document_detail/163515.html">Metrics</a>.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>60</p>
@@ -108,12 +118,19 @@ public class DescribeMetricListRequest extends TeaModel {
     /**
      * <p>The beginning of the time range to query. The following formats are supported:</p>
      * <ul>
-     * <li>UNIX timestamp: the number of milliseconds that have elapsed since 00:00:00 Thursday, January 1, 1970</li>
-     * <li>UTC time: the UTC time that follows the YYYY-MM-DDThh:mm:ssZ format</li>
+     * <li><p>UNIX timestamp: the number of milliseconds that have elapsed since 00:00:00 UTC on January 1, 1970.</p>
+     * </li>
+     * <li><p>Format: YYYY-MM-DD hh:mm:ss.</p>
+     * </li>
      * </ul>
      * <blockquote>
-     * <p> The specified period includes the end time and excludes the start time. The start time must be earlier than the end time.</p>
+     * <ul>
+     * <li>The time range is a left-open and right-closed interval. The value of \<code>StartTime\\</code> must be earlier than the value of \<code>EndTime\\</code>.</li>
+     * </ul>
      * </blockquote>
+     * <ul>
+     * <li>The interval between \<code>StartTime\\</code> and \<code>EndTime\\</code> must be less than or equal to 31 days.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>2019-01-30 00:00:00</p>

@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class AddTagsRequest extends TeaModel {
     /**
-     * <p>The ID of the application group.</p>
-     * <p>Valid values of N: 1 to 20.</p>
-     * <p>For information about how to query the IDs of application groups, see <a href="https://help.aliyun.com/document_detail/2513168.html">DescribeMonitorGroups</a>.</p>
+     * <p>The IDs of the application groups.</p>
+     * <p>The value of N can be from 1 to 20.</p>
+     * <p>For information about how to obtain application group IDs, see <a href="https://help.aliyun.com/document_detail/2513168.html">DescribeMonitorGroups</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -20,7 +20,7 @@ public class AddTagsRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The tags.</p>
+     * <p>A list of tags.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Tag")
@@ -58,10 +58,10 @@ public class AddTagsRequest extends TeaModel {
     public static class AddTagsRequestTag extends TeaModel {
         /**
          * <p>The tag key.</p>
-         * <p>Valid values of N: 1 to 3. A tag key can be 1 to 64 characters in length.</p>
-         * <p>You can create a tag key or specify an existing tag key. For more information about how to obtain a tag key, see <a href="https://help.aliyun.com/document_detail/2513189.html">DescribeTagKeyList</a>.</p>
+         * <p>The value of N can be from 1 to 3. The tag key must be 1 to 64 characters in length.</p>
+         * <p>Enter a new tag key or use an existing tag key from Cloud Monitor. For information about how to obtain tag keys, see <a href="https://help.aliyun.com/document_detail/2513189.html">DescribeTagKeyList</a>.</p>
          * <blockquote>
-         * <p> The tag key cannot start with <code>aliyun</code> or <code>acs:</code>. The tag key (<code>Tag.N.Key</code>) and tag value (<code>Tag.N.Value</code>) must be specified at the same time.</p>
+         * <p>The tag key cannot start with <code>aliyun</code> or <code>acs:</code>. The <code>Tag.N.Key</code> and <code>Tag.N.Value</code> parameters must be specified together.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -73,10 +73,10 @@ public class AddTagsRequest extends TeaModel {
 
         /**
          * <p>The tag value.</p>
-         * <p>Valid values of N: 1 to 3. A tag value can be 1 to 64 characters in length.</p>
-         * <p>You can create a tag value or specify an existing tag value. For more information about how to obtain a tag value, see <a href="https://help.aliyun.com/document_detail/2513188.html">DescribeTagValueList</a>.</p>
+         * <p>The value of N can be from 1 to 3. The tag value must be 1 to 64 characters in length.</p>
+         * <p>Enter a new tag value or use an existing tag value from Cloud Monitor. For information about how to obtain tag values, see <a href="https://help.aliyun.com/document_detail/2513188.html">DescribeTagValueList</a>.</p>
          * <blockquote>
-         * <p> The tag value cannot start with <code>aliyun</code> or <code>acs:</code>. The tag key (<code>Tag.N.Key</code>) and tag value (<code>Tag.N.Value</code>) must be specified at the same time.</p>
+         * <p>The tag value cannot start with <code>aliyun</code> or <code>acs:</code>. The <code>Tag.N.Key</code> and <code>Tag.N.Value</code> parameters must be specified together.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 

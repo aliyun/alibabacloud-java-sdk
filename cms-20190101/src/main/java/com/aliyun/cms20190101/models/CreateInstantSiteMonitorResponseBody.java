@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class CreateInstantSiteMonitorResponseBody extends TeaModel {
     /**
-     * <p>The error code.</p>
+     * <p>The status code.</p>
      * <blockquote>
-     * <p>The status code 200 indicates that the call was successful.</p>
+     * <p>A value of 200 indicates that the call is successful.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -17,7 +17,7 @@ public class CreateInstantSiteMonitorResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The results for creating the instant test task.</p>
+     * <p>The results of the one-time detection task.</p>
      */
     @NameInMap("CreateResultList")
     public java.util.List<CreateInstantSiteMonitorResponseBodyCreateResultList> createResultList;
@@ -32,7 +32,7 @@ public class CreateInstantSiteMonitorResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>68192f5d-0d45-4b98-9724-892813f86c71</p>
@@ -41,10 +41,12 @@ public class CreateInstantSiteMonitorResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <p>Indicates whether the operation was successful. Valid values:</p>
      * <ul>
-     * <li>true: The request was successful.</li>
-     * <li>false: The request failed.</li>
+     * <li><p>true: The operation was successful.</p>
+     * </li>
+     * <li><p>false: The operation failed.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -100,7 +102,7 @@ public class CreateInstantSiteMonitorResponseBody extends TeaModel {
 
     public static class CreateInstantSiteMonitorResponseBodyCreateResultList extends TeaModel {
         /**
-         * <p>The ID of the instant test task.</p>
+         * <p>The ID of the detection task.</p>
          * 
          * <strong>example:</strong>
          * <p>2c8dbdf9-a3ab-46a1-85a4-f094965e****</p>
@@ -109,7 +111,7 @@ public class CreateInstantSiteMonitorResponseBody extends TeaModel {
         public String taskId;
 
         /**
-         * <p>The name of the instant test task.</p>
+         * <p>The name of the detection task.</p>
          * 
          * <strong>example:</strong>
          * <p>task1</p>

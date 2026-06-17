@@ -8,12 +8,18 @@ public class DescribeMetricMetaListRequest extends TeaModel {
      * <p>The tags for filtering metrics. Specify a JSON string.</p>
      * <p>Format: <code>[{&quot;name&quot;:&quot;tag key&quot;,&quot;value&quot;:&quot;tag value&quot;},{&quot;name&quot;:&quot;tag key&quot;,&quot;value&quot;:&quot;tag value&quot;}] </code>. The following tags are available:</p>
      * <ul>
-     * <li>metricCategory: the category of the metric.</li>
-     * <li>alertEnable: specifies whether to report alerts for the metric.</li>
-     * <li>alertUnit: the unit of the metric in the alerts.</li>
-     * <li>unitFactor: the factor for metric unit conversion.</li>
-     * <li>minAlertPeriod: the minimum interval at which the alert is reported.</li>
-     * <li>productCategory: the category of the service.</li>
+     * <li><p>metricCategory: the category of the metric.</p>
+     * </li>
+     * <li><p>alertEnable: specifies whether to report alerts for the metric.</p>
+     * </li>
+     * <li><p>alertUnit: the unit of the metric in the alerts.</p>
+     * </li>
+     * <li><p>unitFactor: the factor for metric unit conversion.</p>
+     * </li>
+     * <li><p>minAlertPeriod: the minimum interval at which the alert is reported.</p>
+     * </li>
+     * <li><p>productCategory: the category of the service.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

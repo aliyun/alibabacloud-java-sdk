@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class DescribeSiteMonitorAttributeRequest extends TeaModel {
     /**
-     * <p>Specifies whether to return the information of the alert rules that are configured for the site monitoring task. Valid values:</p>
+     * <p>Specifies whether the returned task details include alert rules.</p>
      * <ul>
-     * <li>true: The system returns the information of the alert rules that are configured for the site monitoring task.</li>
-     * <li>false (default): The system does not return the information of the alert rules that are configured for the site monitoring task.</li>
+     * <li>true: Alert rules are returned.</li>
+     * <li>false (default): Alert rules are not returned.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -21,7 +21,7 @@ public class DescribeSiteMonitorAttributeRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of the site monitoring task.</p>
+     * <p>The ID of the monitoring task.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

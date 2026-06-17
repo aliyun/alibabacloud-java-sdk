@@ -29,7 +29,7 @@ public class CreateGroupMonitoringAgentProcessResponseBody extends TeaModel {
      * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>3F6150F9-45C7-43F9-9578-A58B2E726C90</p>
+     * <p>718FEA81-64C3-4F23-8F90-0531F7489FC1</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -43,8 +43,10 @@ public class CreateGroupMonitoringAgentProcessResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the call is successful. Valid values:</p>
      * <ul>
-     * <li>true: The call is successful.</li>
-     * <li>false: The call fails.</li>
+     * <li><p>true: The call is successful.</p>
+     * </li>
+     * <li><p>false: The call fails.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

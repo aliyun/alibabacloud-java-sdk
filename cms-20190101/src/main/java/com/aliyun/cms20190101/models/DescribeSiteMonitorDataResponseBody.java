@@ -7,7 +7,7 @@ public class DescribeSiteMonitorDataResponseBody extends TeaModel {
     /**
      * <p>The responses code.</p>
      * <blockquote>
-     * <p> The status code 200 indicates that the request was successful.</p>
+     * <p>The status code 200 indicates that the request was successful.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

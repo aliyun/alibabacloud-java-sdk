@@ -5,8 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateMonitorGroupNotifyPolicyRequest extends TeaModel {
     /**
-     * <p>The end time of the validity period for the policy.</p>
-     * <p>This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+     * <p>The end timestamp for pausing notifications.</p>
+     * <p>The value is a UNIX timestamp, which represents the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -16,7 +16,7 @@ public class CreateMonitorGroupNotifyPolicyRequest extends TeaModel {
     public Long endTime;
 
     /**
-     * <p>The ID of the application group.</p>
+     * <p>The application group ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -26,7 +26,7 @@ public class CreateMonitorGroupNotifyPolicyRequest extends TeaModel {
     public String groupId;
 
     /**
-     * <p>The policy type. Valid value: PauseNotify.</p>
+     * <p>The type of the pause notification. Currently, only PauseNotify is supported.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -39,8 +39,8 @@ public class CreateMonitorGroupNotifyPolicyRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The start time of the validity period for the policy.</p>
-     * <p>This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+     * <p>The start timestamp for pausing notifications.</p>
+     * <p>The value is a UNIX timestamp, which represents the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

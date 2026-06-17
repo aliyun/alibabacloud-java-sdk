@@ -17,7 +17,7 @@ public class DeleteMonitoringAgentProcessRequest extends TeaModel {
     /**
      * <p>The process ID.</p>
      * <blockquote>
-     * <p>You must configure either <code>ProcessId</code> or <code>ProcessName</code>.</p>
+     * <p>You must specify either ProcessId or ProcessName.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -29,7 +29,7 @@ public class DeleteMonitoringAgentProcessRequest extends TeaModel {
     /**
      * <p>The process name.</p>
      * <blockquote>
-     * <p>You must configure either <code>ProcessId</code> or <code>ProcessName</code>.</p>
+     * <p>You must specify either ProcessId or ProcessName.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

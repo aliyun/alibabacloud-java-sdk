@@ -5,10 +5,12 @@ import com.aliyun.tea.*;
 
 public class DescribeMonitoringAgentHostsRequest extends TeaModel {
     /**
-     * <p>Specifies whether to query Elastic Compute Service (ECS) instances that are provided by Alibaba Cloud or to query hosts that are not provided by Alibaba Cloud. Valid values:</p>
+     * <p>Specifies whether to filter for Alibaba Cloud Elastic Compute Service (ECS) instances. Valid values:</p>
      * <ul>
-     * <li>true (default value): queries all the ECS instances that are provided by Alibaba Cloud.</li>
-     * <li>false: queries all the hosts that are not provided by Alibaba Cloud.</li>
+     * <li><p>true (default): Returns only ECS instances.</p>
+     * </li>
+     * <li><p>false: Returns only hosts that are not ECS instances.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,7 +20,7 @@ public class DescribeMonitoringAgentHostsRequest extends TeaModel {
     public Boolean aliyunHost;
 
     /**
-     * <p>The name of the host.</p>
+     * <p>The hostname.</p>
      * 
      * <strong>example:</strong>
      * <p>hostNam1</p>
@@ -27,7 +29,7 @@ public class DescribeMonitoringAgentHostsRequest extends TeaModel {
     public String hostName;
 
     /**
-     * <p>The ID of the instance.</p>
+     * <p>The instance ID.</p>
      * 
      * <strong>example:</strong>
      * <p>i-a3d1q1pm2f9yr29e****</p>
@@ -36,7 +38,7 @@ public class DescribeMonitoringAgentHostsRequest extends TeaModel {
     public String instanceIds;
 
     /**
-     * <p>The region ID of the instance.</p>
+     * <p>The region where the instance resides.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -45,7 +47,7 @@ public class DescribeMonitoringAgentHostsRequest extends TeaModel {
     public String instanceRegionId;
 
     /**
-     * <p>The keyword that is used in fuzzy match.</p>
+     * <p>The keyword for a fuzzy search.</p>
      * 
      * <strong>example:</strong>
      * <p>host1</p>
@@ -54,7 +56,7 @@ public class DescribeMonitoringAgentHostsRequest extends TeaModel {
     public String keyWord;
 
     /**
-     * <p>The number of the page to return.</p>
+     * <p>The page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -65,13 +67,17 @@ public class DescribeMonitoringAgentHostsRequest extends TeaModel {
     /**
      * <p>The number of entries to return on each page. Valid values:</p>
      * <ul>
-     * <li>10</li>
-     * <li>20</li>
-     * <li>50</li>
-     * <li>100</li>
+     * <li><p>10</p>
+     * </li>
+     * <li><p>20</p>
+     * </li>
+     * <li><p>50</p>
+     * </li>
+     * <li><p>100</p>
+     * </li>
      * </ul>
      * <blockquote>
-     * <p>Although Alibaba Cloud does not limit the maximum value of this parameter, we recommend that you do not set it to an excessively large value. If you set it to an excessively large value, a timeout error may occur.</p>
+     * <p>Alibaba Cloud does not limit the maximum value of this parameter. However, setting this parameter to a large value may cause a timeout.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -85,9 +91,9 @@ public class DescribeMonitoringAgentHostsRequest extends TeaModel {
 
     /**
      * <p>The serial number of the host.</p>
-     * <p>After the CloudMonitor agent is installed on a host, a globally unique serial number is generated. A host that is not provided by Alibaba Cloud has a serial number instead of an instance ID.</p>
+     * <p>A globally unique serial number is generated after the CloudMonitor agent is successfully installed on a host. Hosts that are not Alibaba Cloud instances do not have an instance ID, but have a serial number.</p>
      * <blockquote>
-     * <p>This parameter can be used to accurately search for a monitored host.</p>
+     * <p>Use this parameter to find a specific monitored host.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -97,10 +103,12 @@ public class DescribeMonitoringAgentHostsRequest extends TeaModel {
     public String serialNumbers;
 
     /**
-     * <p>The status of the hosts that you want to query. Valid values:</p>
+     * <p>The status of the host. Valid values:</p>
      * <ul>
-     * <li>Running: queries the hosts that are running.</li>
-     * <li>Stopped: queries the hosts that are stopped, are not installed, or fail to be installed.</li>
+     * <li><p>Running: The host is running.</p>
+     * </li>
+     * <li><p>Stopped: The host is stopped, the agent is not installed, or the agent installation failed.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -112,10 +120,14 @@ public class DescribeMonitoringAgentHostsRequest extends TeaModel {
     /**
      * <p>The status of SysOM. Valid values:</p>
      * <ul>
-     * <li>installing: SysOM is being installed.</li>
-     * <li>running: SysOM is running.</li>
-     * <li>stopped: SysOM is stopped.</li>
-     * <li>uninstalling: SysOM is being uninstalled.</li>
+     * <li><p>installing: SysOM is being enabled.</p>
+     * </li>
+     * <li><p>running: SysOM is running.</p>
+     * </li>
+     * <li><p>stopped: SysOM is stopped.</p>
+     * </li>
+     * <li><p>uninstalling: SysOM is being disabled.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

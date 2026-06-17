@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class PutEventRuleTargetsResponseBody extends TeaModel {
     /**
-     * <p>The HTTP status code.</p>
+     * <p>The status code.</p>
      * <blockquote>
-     * <p> The status code 200 indicates that the request was successful.</p>
+     * <p>The value 200 indicates success.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -26,7 +26,7 @@ public class PutEventRuleTargetsResponseBody extends TeaModel {
     public PutEventRuleTargetsResponseBodyFailedMnsParameters failedMnsParameters;
 
     /**
-     * <p>The number of resources that failed to be created or modified.</p>
+     * <p>The number of failed parameters.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>
@@ -53,7 +53,7 @@ public class PutEventRuleTargetsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful. Valid values: true and false.</p>
+     * <p>Indicates whether the operation was successful. The value true indicates success. The value false indicates failure.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>

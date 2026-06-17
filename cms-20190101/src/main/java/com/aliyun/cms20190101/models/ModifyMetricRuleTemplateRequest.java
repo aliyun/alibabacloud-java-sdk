@@ -24,7 +24,7 @@ public class ModifyMetricRuleTemplateRequest extends TeaModel {
      * <p>For information about how to obtain the name of an alert template, see <a href="https://help.aliyun.com/document_detail/114982.html">DescribeMetricRuleTemplateList</a>.</p>
      * 
      * <strong>example:</strong>
-     * <p>test123</p>
+     * <p>Template_123</p>
      */
     @NameInMap("Name")
     public String name;
@@ -38,7 +38,7 @@ public class ModifyMetricRuleTemplateRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>0</p>
+     * <p>1</p>
      */
     @NameInMap("RestVersion")
     public Long restVersion;
@@ -111,17 +111,28 @@ public class ModifyMetricRuleTemplateRequest extends TeaModel {
         /**
          * <p>The operator that is used to compare the metric value with the threshold for Critical-level alerts. Valid values:</p>
          * <ul>
-         * <li>GreaterThanOrEqualToThreshold: greater than or equal to the threshold</li>
-         * <li>GreaterThanThreshold: greater than the threshold</li>
-         * <li>LessThanOrEqualToThreshold: less than or equal to the threshold</li>
-         * <li>LessThanThreshold: less than the threshold</li>
-         * <li>NotEqualToThreshold: not equal to the threshold</li>
-         * <li>GreaterThanYesterday: greater than the metric value at the same time yesterday</li>
-         * <li>LessThanYesterday: less than the metric value at the same time yesterday</li>
-         * <li>GreaterThanLastWeek: greater than the metric value at the same time last week</li>
-         * <li>LessThanLastWeek: less than the metric value at the same time last week</li>
-         * <li>GreaterThanLastPeriod: greater than the metric value in the last monitoring cycle</li>
-         * <li>LessThanLastPeriod: less than the metric value in the last monitoring cycle</li>
+         * <li><p>GreaterThanOrEqualToThreshold: greater than or equal to the threshold</p>
+         * </li>
+         * <li><p>GreaterThanThreshold: greater than the threshold</p>
+         * </li>
+         * <li><p>LessThanOrEqualToThreshold: less than or equal to the threshold</p>
+         * </li>
+         * <li><p>LessThanThreshold: less than the threshold</p>
+         * </li>
+         * <li><p>NotEqualToThreshold: not equal to the threshold</p>
+         * </li>
+         * <li><p>GreaterThanYesterday: greater than the metric value at the same time yesterday</p>
+         * </li>
+         * <li><p>LessThanYesterday: less than the metric value at the same time yesterday</p>
+         * </li>
+         * <li><p>GreaterThanLastWeek: greater than the metric value at the same time last week</p>
+         * </li>
+         * <li><p>LessThanLastWeek: less than the metric value at the same time last week</p>
+         * </li>
+         * <li><p>GreaterThanLastPeriod: greater than the metric value in the last monitoring cycle</p>
+         * </li>
+         * <li><p>LessThanLastPeriod: less than the metric value in the last monitoring cycle</p>
+         * </li>
          * </ul>
          * <p>Valid values of N: 1 to 200.</p>
          * <blockquote>
@@ -228,17 +239,28 @@ public class ModifyMetricRuleTemplateRequest extends TeaModel {
         /**
          * <p>The operator that is used to compare the metric value with the threshold for Info-level alerts. Valid values:</p>
          * <ul>
-         * <li>GreaterThanOrEqualToThreshold: greater than or equal to the threshold</li>
-         * <li>GreaterThanThreshold: greater than the threshold</li>
-         * <li>LessThanOrEqualToThreshold: less than or equal to the threshold</li>
-         * <li>LessThanThreshold: less than the threshold</li>
-         * <li>NotEqualToThreshold: not equal to the threshold</li>
-         * <li>GreaterThanYesterday: greater than the metric value at the same time yesterday</li>
-         * <li>LessThanYesterday: less than the metric value at the same time yesterday</li>
-         * <li>GreaterThanLastWeek: greater than the metric value at the same time last week</li>
-         * <li>LessThanLastWeek: less than the metric value at the same time last week</li>
-         * <li>GreaterThanLastPeriod: greater than the metric value in the last monitoring cycle</li>
-         * <li>LessThanLastPeriod: less than the metric value in the last monitoring cycle</li>
+         * <li><p>GreaterThanOrEqualToThreshold: greater than or equal to the threshold</p>
+         * </li>
+         * <li><p>GreaterThanThreshold: greater than the threshold</p>
+         * </li>
+         * <li><p>LessThanOrEqualToThreshold: less than or equal to the threshold</p>
+         * </li>
+         * <li><p>LessThanThreshold: less than the threshold</p>
+         * </li>
+         * <li><p>NotEqualToThreshold: not equal to the threshold</p>
+         * </li>
+         * <li><p>GreaterThanYesterday: greater than the metric value at the same time yesterday</p>
+         * </li>
+         * <li><p>LessThanYesterday: less than the metric value at the same time yesterday</p>
+         * </li>
+         * <li><p>GreaterThanLastWeek: greater than the metric value at the same time last week</p>
+         * </li>
+         * <li><p>LessThanLastWeek: less than the metric value at the same time last week</p>
+         * </li>
+         * <li><p>GreaterThanLastPeriod: greater than the metric value in the last monitoring cycle</p>
+         * </li>
+         * <li><p>LessThanLastPeriod: less than the metric value in the last monitoring cycle</p>
+         * </li>
          * </ul>
          * <p>Valid values of N: 1 to 200.</p>
          * <blockquote>
@@ -345,17 +367,28 @@ public class ModifyMetricRuleTemplateRequest extends TeaModel {
         /**
          * <p>The operator that is used to compare the metric value with the threshold for Warn-level alerts. Valid values:</p>
          * <ul>
-         * <li>GreaterThanOrEqualToThreshold: greater than or equal to the threshold</li>
-         * <li>GreaterThanThreshold: greater than the threshold</li>
-         * <li>LessThanOrEqualToThreshold: less than or equal to the threshold</li>
-         * <li>LessThanThreshold: less than the threshold</li>
-         * <li>NotEqualToThreshold: not equal to the threshold</li>
-         * <li>GreaterThanYesterday: greater than the metric value at the same time yesterday</li>
-         * <li>LessThanYesterday: less than the metric value at the same time yesterday</li>
-         * <li>GreaterThanLastWeek: greater than the metric value at the same time last week</li>
-         * <li>LessThanLastWeek: less than the metric value at the same time last week</li>
-         * <li>GreaterThanLastPeriod: greater than the metric value in the last monitoring cycle</li>
-         * <li>LessThanLastPeriod: less than the metric value in the last monitoring cycle</li>
+         * <li><p>GreaterThanOrEqualToThreshold: greater than or equal to the threshold</p>
+         * </li>
+         * <li><p>GreaterThanThreshold: greater than the threshold</p>
+         * </li>
+         * <li><p>LessThanOrEqualToThreshold: less than or equal to the threshold</p>
+         * </li>
+         * <li><p>LessThanThreshold: less than the threshold</p>
+         * </li>
+         * <li><p>NotEqualToThreshold: not equal to the threshold</p>
+         * </li>
+         * <li><p>GreaterThanYesterday: greater than the metric value at the same time yesterday</p>
+         * </li>
+         * <li><p>LessThanYesterday: less than the metric value at the same time yesterday</p>
+         * </li>
+         * <li><p>GreaterThanLastWeek: greater than the metric value at the same time last week</p>
+         * </li>
+         * <li><p>LessThanLastWeek: less than the metric value at the same time last week</p>
+         * </li>
+         * <li><p>GreaterThanLastPeriod: greater than the metric value in the last monitoring cycle</p>
+         * </li>
+         * <li><p>LessThanLastPeriod: less than the metric value in the last monitoring cycle</p>
+         * </li>
          * </ul>
          * <p>Valid values of N: 1 to 200.</p>
          * <blockquote>
@@ -554,7 +587,7 @@ public class ModifyMetricRuleTemplateRequest extends TeaModel {
          * <p>Valid values of N: 1 to 200.</p>
          * 
          * <strong>example:</strong>
-         * <p>rule1</p>
+         * <p>Rule_123</p>
          */
         @NameInMap("RuleName")
         public String ruleName;
@@ -579,7 +612,7 @@ public class ModifyMetricRuleTemplateRequest extends TeaModel {
          * <p>The callback URL must be accessible over the Internet. CloudMonitor pushes an alert notification to the specified callback URL by sending an HTTP POST request. Only the HTTP protocol is supported.</p>
          * 
          * <strong>example:</strong>
-         * <p><a href="https://apiwebhook.hipac.cn/api/v1/alarm/aly/eregfeeferrtbnmkdszp">https://apiwebhook.hipac.cn/api/v1/alarm/aly/eregfeeferrtbnmkdszp</a></p>
+         * <p><a href="http://www.aliyun.com">http://www.aliyun.com</a></p>
          */
         @NameInMap("Webhook")
         public String webhook;

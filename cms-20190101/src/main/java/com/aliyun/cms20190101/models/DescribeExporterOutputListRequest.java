@@ -14,7 +14,7 @@ public class DescribeExporterOutputListRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page. Default value: 10.</p>
+     * <p>The number of records per page. Default value: 10.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeUnhealthyHostAvailabilityRequest extends TeaModel {
     /**
-     * <p>The ID of the availability monitoring task. Valid values of N: 1 to 20.</p>
+     * <p>The task ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

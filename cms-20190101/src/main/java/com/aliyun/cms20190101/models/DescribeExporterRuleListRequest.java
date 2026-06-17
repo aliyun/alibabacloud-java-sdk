@@ -14,10 +14,10 @@ public class DescribeExporterRuleListRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page. Default value: 1000.</p>
+     * <p>The number of entries per page.</p>
      * 
      * <strong>example:</strong>
-     * <p>1000</p>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;

@@ -5,9 +5,10 @@ import com.aliyun.tea.*;
 
 public class DescribeSiteMonitorLogResponseBody extends TeaModel {
     /**
-     * <p>The HTTP status code.</p>
-     * <p>**</p>
-     * <p><strong>Description</strong> The status code 200 indicates that the request was successful.</p>
+     * <p>The status code.</p>
+     * <blockquote>
+     * <p>A status code of 200 indicates that the operation was successful.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -16,10 +17,10 @@ public class DescribeSiteMonitorLogResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The logs of the instant test tasks.</p>
+     * <p>The detection logs of the one-time detection task.</p>
      * 
      * <strong>example:</strong>
-     * <p>[{\\&quot;redirectCount\\&quot;:0.0,\\&quot;SSLConnectTime\\&quot;:0.0,\\&quot;pingDetail\\&quot;:\\&quot;\\&quot;,\\&quot;HTTPConnectTime\\&quot;:0.0,\\&quot;isp\\&quot;:\\&quot;465\\&quot;,\\&quot;errorCode\\&quot;:611,\\&quot;ispCN\\&quot;:\\&quot;Alibaba\\&quot;,\\&quot;resolution\\&quot;:\\&quot;\\&quot;,\\&quot;areaEN\\&quot;:\\&quot;HuaBei\\&quot;,\\&quot;taskEndTimestamp\\&quot;:1638422475687,\\&quot;targetIspEN\\&quot;:\\&quot;\\&quot;,\\&quot;TotalTime\\&quot;:1.0,\\&quot;taskStartTimestamp\\&quot;:1638422474389,\\&quot;countryCN\\&quot;:\\&quot;China\\&quot;,\\&quot;provinceEN\\&quot;:\\&quot;Beijing\\&quot;,\\&quot;countryEN\\&quot;:\\&quot;China\\&quot;,\\&quot;targetCityEN\\&quot;:\\&quot;\\&quot;,\\&quot;curlConnectTime\\&quot;:0.0,\\&quot;ips\\&quot;:\\&quot;\\&quot;,\\&quot;route\\&quot;:\\&quot;\\&quot;,\\&quot;tcpConnectTime\\&quot;:0.0,\\&quot;cityEN\\&quot;:\\&quot;Beijing\\&quot;,\\&quot;HTTPDownloadSpeed\\&quot;:0.0,\\&quot;HTTPDownloadTime\\&quot;:0.0,\\&quot;HTTPResponseCode\\&quot;:0.0,\\&quot;areaCN\\&quot;:\\&quot;North China\\&quot;,\\&quot;city\\&quot;:\\&quot;546\\&quot;,\\&quot;expection\\&quot;:\\&quot;\\&quot;,\\&quot;suorceIp\\&quot;:\\&quot;192.168.XX.XX \\&quot;,\\&quot;ispEN\\&quot;:\\&quot;Alibaba\\&quot;,\\&quot;HTTPDNSTime\\&quot;:1.0,\\&quot;targetIsp\\&quot;:\\&quot;\\&quot;,\\&quot;curlStarttransferTime\\&quot;:0.0,\\&quot;provinceCN\\&quot;:\\&quot;Beijing\\&quot;,\\&quot;timestamp\\&quot;:1638422474000,\\&quot;redirectTime\\&quot;:0.0,\\&quot;targetCity\\&quot;:\\&quot;\\&quot;, \\&quot;expect\\&quot;:\\&quot;\\&quot;,\\&quot;HTTPDownloadSize\\&quot;:0.0,\\&quot;localDns\\&quot;:\\&quot;192.168.XX.XX\\&quot;,\\&quot;cityCN\\&quot;:\\&quot;Beijing\\&quot;,\\&quot;taskId\\&quot;:\\&quot;afa5c3ce-f944-4363-9edb-ce919a29\<em>\</em>\<em>\</em>\\&quot;}]</p>
+     * <p>[{\&quot;redirectCount\&quot;:0.0,\&quot;SSLConnectTime\&quot;:0.0,\&quot;pingDetail\&quot;:\&quot;\&quot;,\&quot;HTTPConnectTime\&quot;:0.0,\&quot;isp\&quot;:\&quot;465\&quot;,\&quot;errorCode\&quot;:611,\&quot;ispCN\&quot;:\&quot;阿里巴巴\&quot;,\&quot;resolution\&quot;:\&quot;\&quot;,\&quot;areaEN\&quot;:\&quot;HuaBei\&quot;,\&quot;taskEndTimestamp\&quot;:1638422475687,\&quot;targetIspEN\&quot;:\&quot;\&quot;,\&quot;TotalTime\&quot;:1.0,\&quot;taskStartTimestamp\&quot;:1638422474389,\&quot;countryCN\&quot;:\&quot;中国\&quot;,\&quot;provinceEN\&quot;:\&quot;Beijing\&quot;,\&quot;countryEN\&quot;:\&quot;China\&quot;,\&quot;targetCityEN\&quot;:\&quot;\&quot;,\&quot;curlConnectTime\&quot;:0.0,\&quot;ips\&quot;:\&quot;\&quot;,\&quot;route\&quot;:\&quot;\&quot;,\&quot;tcpConnectTime\&quot;:0.0,\&quot;cityEN\&quot;:\&quot;Beijing\&quot;,\&quot;HTTPDownloadSpeed\&quot;:0.0,\&quot;HTTPDownloadTime\&quot;:0.0,\&quot;HTTPResponseCode\&quot;:0.0,\&quot;areaCN\&quot;:\&quot;华北\&quot;,\&quot;city\&quot;:\&quot;546\&quot;,\&quot;expection\&quot;:\&quot;\&quot;,\&quot;suorceIp\&quot;:\&quot;192.168.XX.XX \&quot;,\&quot;ispEN\&quot;:\&quot;Alibaba\&quot;,\&quot;HTTPDNSTime\&quot;:1.0,\&quot;targetIsp\&quot;:\&quot;\&quot;,\&quot;curlStarttransferTime\&quot;:0.0,\&quot;provinceCN\&quot;:\&quot;北京市\&quot;,\&quot;timestamp\&quot;:1638422474000,\&quot;redirectTime\&quot;:0.0,\&quot;targetCity\&quot;:\&quot;\&quot;, \&quot;expect\&quot;:\&quot;\&quot;,\&quot;HTTPDownloadSize\&quot;:0.0,\&quot;localDns\&quot;:\&quot;192.168.XX.XX\&quot;,\&quot;cityCN\&quot;:\&quot;北京市\&quot;,\&quot;taskId\&quot;:\&quot;afa5c3ce-f944-4363-9edb-ce919a29****\&quot;}]</p>
      */
     @NameInMap("Data")
     public String data;
@@ -34,7 +35,7 @@ public class DescribeSiteMonitorLogResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>A pagination token. It can be used in the next request to retrieve a new page of results.</p>
+     * <p>The token that is used to query the next page.</p>
      * 
      * <strong>example:</strong>
      * <p>IWBjqMYSy0is7zSMGu16****</p>
@@ -52,10 +53,12 @@ public class DescribeSiteMonitorLogResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <p>Indicates whether the operation was successful. Valid values:</p>
      * <ul>
-     * <li>true</li>
-     * <li>false</li>
+     * <li><p>true: The operation was successful.</p>
+     * </li>
+     * <li><p>false: The operation failed.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

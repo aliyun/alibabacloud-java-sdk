@@ -15,7 +15,7 @@ public class DeleteGroupMonitoringAgentProcessRequest extends TeaModel {
     public String groupId;
 
     /**
-     * <p>The ID of the process monitoring task.</p>
+     * <p>The ID of the group process.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

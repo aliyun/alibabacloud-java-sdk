@@ -8,11 +8,11 @@ public class DescribeMetricLastRequest extends TeaModel {
      * <p>The monitoring dimensions of the specified resource.</p>
      * <p>Set the value to a collection of <code>key:value</code> pairs. Example: <code>{&quot;userId&quot;:&quot;120886317861****&quot;}</code> or <code>{&quot;instanceId&quot;:&quot;i-2ze2d6j5uhg20x47****&quot;}</code>.</p>
      * <blockquote>
-     * <p> You can query a maximum of 50 instances in each request.</p>
+     * <p>You can query a maximum of 50 instances in each request.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
-     * <p>[{&quot;instanceId&quot;:&quot;i-abcdefgh12****&quot;}]</p>
+     * <p>[{&quot;instanceId&quot;:&quot;i-2ze2d6j5uhg20x47****&quot;}]</p>
      */
     @NameInMap("Dimensions")
     public String dimensions;
@@ -20,9 +20,12 @@ public class DescribeMetricLastRequest extends TeaModel {
     /**
      * <p>The end of the time range to query monitoring data.</p>
      * <ul>
-     * <li>For second-level data, the start time is obtained by comparing the time that is specified by the StartTime parameter and 20 minutes earlier of the time that is specified by the EndTime parameter. The earlier one of the compared points in time is used as the start time.</li>
-     * <li>For minute-level data, the start time is obtained by comparing the time that is specified by the StartTime parameter and 2 hours earlier of the time that is specified by the EndTime parameter. The earlier one of the compared points in time is used as the start time.</li>
-     * <li>For hour-level data, the start time is obtained by comparing the time that is specified by the StartTime parameter and two days earlier of the time that is specified by the EndTime parameter. The earlier one of the compared points in time is used as the start time.</li>
+     * <li><p>For second-level data, the start time is obtained by comparing the time that is specified by the StartTime parameter and 20 minutes earlier of the time that is specified by the EndTime parameter. The earlier one of the compared points in time is used as the start time.</p>
+     * </li>
+     * <li><p>For minute-level data, the start time is obtained by comparing the time that is specified by the StartTime parameter and 2 hours earlier of the time that is specified by the EndTime parameter. The earlier one of the compared points in time is used as the start time.</p>
+     * </li>
+     * <li><p>For hour-level data, the start time is obtained by comparing the time that is specified by the StartTime parameter and two days earlier of the time that is specified by the EndTime parameter. The earlier one of the compared points in time is used as the start time.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -44,7 +47,7 @@ public class DescribeMetricLastRequest extends TeaModel {
      * <p>The number of entries per page.</p>
      * <p>Default value: 1000. This value indicates that a maximum of 1,000 entries of monitoring data can be returned on each page.</p>
      * <blockquote>
-     * <p> The maximum value of the Length parameter for each request is 1440.</p>
+     * <p>The maximum value of the Length parameter for each request is 1440.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -78,8 +81,10 @@ public class DescribeMetricLastRequest extends TeaModel {
     /**
      * <p>The pagination token.</p>
      * <ul>
-     * <li>If the number of results exceeds the maximum number of entries allowed on a single page, a pagination token is returned.</li>
-     * <li>This token can be used as an input parameter to obtain the next page of results. If all results are obtained, no token is returned.</li>
+     * <li><p>If the number of results exceeds the maximum number of entries allowed on a single page, a pagination token is returned.</p>
+     * </li>
+     * <li><p>This token can be used as an input parameter to obtain the next page of results. If all results are obtained, no token is returned.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

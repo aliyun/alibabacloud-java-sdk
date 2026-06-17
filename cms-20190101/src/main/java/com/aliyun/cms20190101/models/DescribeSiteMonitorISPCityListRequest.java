@@ -5,10 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeSiteMonitorISPCityListRequest extends TeaModel {
     /**
-     * <p>The name or ID of the city.</p>
+     * <p>The name or ID of the city where the carrier detection point resides.</p>
      * <blockquote>
-     * <p>City names support fuzzy match.</p>
+     * <p>Fuzzy match is supported for city names.</p>
      * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>Guiyang</p>
      */
     @NameInMap("City")
     public String city;
@@ -16,8 +19,8 @@ public class DescribeSiteMonitorISPCityListRequest extends TeaModel {
     /**
      * <p>Specifies whether to query IPv4 probes. Valid values:</p>
      * <ul>
-     * <li>true (default): IPv4 probes are queried.</li>
-     * <li>false: IPv4 probes are not queried.</li>
+     * <li>true (default): Queries IPv4 probes.</li>
+     * <li>false: Does not query IPv4 probes.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -29,8 +32,8 @@ public class DescribeSiteMonitorISPCityListRequest extends TeaModel {
     /**
      * <p>Specifies whether to query IPv6 probes. Valid values:</p>
      * <ul>
-     * <li>true (default): IPv6 probes are queried.</li>
-     * <li>false: IPv6 probes are not queried.</li>
+     * <li>true (default): Queries IPv6 probes.</li>
+     * <li>false: Does not query IPv6 probes.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -40,10 +43,13 @@ public class DescribeSiteMonitorISPCityListRequest extends TeaModel {
     public Boolean IPV6;
 
     /**
-     * <p>The name or ID of the carrier.</p>
+     * <p>The name or ID of the carrier detection point.</p>
      * <blockquote>
-     * <p>Carrier names support fuzzy match.</p>
+     * <p>Fuzzy match is supported for carrier names.</p>
      * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>China Unicom</p>
      */
     @NameInMap("Isp")
     public String isp;
@@ -54,8 +60,8 @@ public class DescribeSiteMonitorISPCityListRequest extends TeaModel {
     /**
      * <p>Specifies whether to return all detection points. Valid values:</p>
      * <ul>
-     * <li>true (default): returns all detection points.</li>
-     * <li>false: returns only available detection points.</li>
+     * <li>true (default): Returns all detection points.</li>
+     * <li>false: Returns only available detection points.</li>
      * </ul>
      * 
      * <strong>example:</strong>

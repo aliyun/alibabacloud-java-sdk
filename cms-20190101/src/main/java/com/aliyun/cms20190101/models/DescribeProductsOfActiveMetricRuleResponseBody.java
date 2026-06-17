@@ -10,7 +10,7 @@ public class DescribeProductsOfActiveMetricRuleResponseBody extends TeaModel {
     /**
      * <p>The HTTP status code.</p>
      * <blockquote>
-     * <p> The status code 200 indicates that the request was successful.</p>
+     * <p>The status code 200 indicates that the request was successful.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -22,17 +22,28 @@ public class DescribeProductsOfActiveMetricRuleResponseBody extends TeaModel {
     /**
      * <p>The information about the services for which the initiative alert feature is enabled. Services are separated with commas (,). Valid values:</p>
      * <ul>
-     * <li>ECS: Elastic Compute Service (ECS)</li>
-     * <li>rds: ApsaraDB RDS</li>
-     * <li>slb: Server Load Balancer (SLB)</li>
-     * <li>redis_standard: Redis Open-Source Edition (standard architecture)</li>
-     * <li>redis_sharding: Redis Open-Source Edition (cluster architecture)</li>
-     * <li>redis_splitrw: Redis Open-Source Edition (read/write splitting architecture)</li>
-     * <li>mongodb: ApsaraDB for MongoDB of the replica set architecture</li>
-     * <li>mongodb_sharding: ApsaraDB for MongoDB of the sharded cluster architecture</li>
-     * <li>hbase: ApsaraDB for HBase</li>
-     * <li>elasticsearch: Elasticsearch</li>
-     * <li>opensearch: OpenSearch</li>
+     * <li><p>ECS: Elastic Compute Service (ECS)</p>
+     * </li>
+     * <li><p>rds: ApsaraDB RDS</p>
+     * </li>
+     * <li><p>slb: Server Load Balancer (SLB)</p>
+     * </li>
+     * <li><p>redis_standard: Redis Open-Source Edition (standard architecture)</p>
+     * </li>
+     * <li><p>redis_sharding: Redis Open-Source Edition (cluster architecture)</p>
+     * </li>
+     * <li><p>redis_splitrw: Redis Open-Source Edition (read/write splitting architecture)</p>
+     * </li>
+     * <li><p>mongodb: ApsaraDB for MongoDB of the replica set architecture</p>
+     * </li>
+     * <li><p>mongodb_sharding: ApsaraDB for MongoDB of the sharded cluster architecture</p>
+     * </li>
+     * <li><p>hbase: ApsaraDB for HBase</p>
+     * </li>
+     * <li><p>elasticsearch: Elasticsearch</p>
+     * </li>
+     * <li><p>opensearch: OpenSearch</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -62,8 +73,10 @@ public class DescribeProductsOfActiveMetricRuleResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
      * <ul>
-     * <li>true: The request was successful.</li>
-     * <li>false: The request failed.</li>
+     * <li><p>true: The request was successful.</p>
+     * </li>
+     * <li><p>false: The request failed.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

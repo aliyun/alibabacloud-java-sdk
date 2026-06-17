@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteEventRulesRequest extends TeaModel {
     /**
-     * <p>The name of the alert rule. Valid values of N: 1 to 20.</p>
+     * <p>The names of the event-triggered alert rules to delete.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

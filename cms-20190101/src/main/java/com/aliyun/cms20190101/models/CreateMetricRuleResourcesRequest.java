@@ -5,10 +5,12 @@ import com.aliyun.tea.*;
 
 public class CreateMetricRuleResourcesRequest extends TeaModel {
     /**
-     * <p>Specifies whether to overwrite existing resources. Valid values:</p>
+     * <p>Specifies whether to overwrite. Valid values:</p>
      * <ul>
-     * <li>true: The resources submitted this time overwrite the previously associated resources.</li>
-     * <li>false: The resources submitted this time do not overwrite the previously associated resources. The associated resources after submission include the previously associated resources and the resources submitted this time.</li>
+     * <li><p>true: overwrites. The resources submitted this time overwrite the previously associated resources. That is, full modification is performed.</p>
+     * </li>
+     * <li><p>false: does not overwrite. The resources submitted this time do not overwrite the previously associated resources (the associated resources are the historical associated resources plus the resources submitted this time). That is, incremental modification is performed.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,9 +20,9 @@ public class CreateMetricRuleResourcesRequest extends TeaModel {
     public String overwrite;
 
     /**
-     * <p>The resources that are associated with the alert rule. Set the value to a JSON array.</p>
+     * <p>The associated resources. The value is in the JSON array format.</p>
      * <blockquote>
-     * <p> You can add up to 100 resources each time. An alert rule can be associated with up to 3,000 resources.</p>
+     * <p>A maximum of 100 resource instances can be added at a time, and an alert rule can be associated with a maximum of 3,000 instances.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 

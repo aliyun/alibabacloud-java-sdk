@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateInstantSiteMonitorRequest extends TeaModel {
     /**
-     * <p>The URL or IP address that you want to test.</p>
+     * <p>The URL or IP address of the detection task.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,15 +14,22 @@ public class CreateInstantSiteMonitorRequest extends TeaModel {
     @NameInMap("Address")
     public String address;
 
+    /**
+     * <p>The type of the detection points. Valid values: PC and MOBILE. PC indicates detection points on PCs. MOBILE indicates detection points on mobile devices. Default value: PC.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>PC</p>
+     */
     @NameInMap("AgentGroup")
     public String agentGroup;
 
     /**
-     * <p>The detection points. If you leave this parameter empty, the system randomly selects three detection points.</p>
-     * <p>The value is a <code>JSON array</code>. Example: {&quot;city&quot;:&quot;546&quot;,&quot;isp&quot;:&quot;465&quot;},{&quot;city&quot;:&quot;572&quot;,&quot;isp&quot;:&quot;465&quot;},{&quot;city&quot;:&quot;738&quot;,&quot;isp&quot;:&quot;465&quot;}. The values of the city field indicate Beijing, Hangzhou, and Qingdao.</p>
-     * <p>For information about how to obtain detection points, see <a href="https://help.aliyun.com/document_detail/115045.html">DescribeSiteMonitorISPCityList</a>.</p>
+     * <p>The detection points. If you do not specify this parameter, the system randomly selects three detection points.</p>
+     * <p>The value must be a JSON array. Example: <code>[{&quot;city&quot;:&quot;546&quot;,&quot;isp&quot;:&quot;465&quot;, &quot;type&quot;:&quot;IDC&quot;},{&quot;city&quot;:&quot;572&quot;,&quot;isp&quot;:&quot;465&quot;, &quot;type&quot;:&quot;LASTMILE&quot;},{&quot;city&quot;:&quot;738&quot;,&quot;isp&quot;:&quot;465&quot;}]</code>. These values correspond to Beijing, Hangzhou, and Qingdao.</p>
+     * <p>The type parameter specifies the type of the detection point. If AgentGroup is set to PC, valid values for type are IDC and LASTMILE. IDC indicates that the detection point is deployed in a data center. LASTMILE indicates that the detection point is deployed on the PC of a netizen that is connected to the last mile of an ISP network. The type parameter is optional. The default value is IDC. You do not need to specify this parameter if AgentGroup is set to MOBILE.</p>
+     * <p>For more information about how to obtain detection points, see <a href="https://help.aliyun.com/document_detail/115045.html">DescribeSiteMonitorISPCityList</a>.</p>
      * <blockquote>
-     * <p>You must specify one of the <code>IspCities</code> and <code>RandomIspCity</code> parameters.</p>
+     * <p>You must specify either <code>IspCities</code> or <code>RandomIspCity</code>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -32,7 +39,7 @@ public class CreateInstantSiteMonitorRequest extends TeaModel {
     public String ispCities;
 
     /**
-     * <p>The extended options of the protocol that is used by the instant test task. The options vary based on the protocol.</p>
+     * <p>The extended options for the protocol type of the detection task. The extended options vary based on the protocol type.</p>
      * 
      * <strong>example:</strong>
      * <p>{&quot;time_out&quot;:5000}</p>
@@ -43,10 +50,10 @@ public class CreateInstantSiteMonitorRequest extends TeaModel {
     /**
      * <p>The number of detection points.</p>
      * <blockquote>
-     * </blockquote>
      * <ul>
-     * <li>You must specify one of the <code>IspCities</code> and <code>RandomIspCity</code> parameters. If you specify the <code>RandomIspCity</code> parameter, the <code>IspCities</code> parameter automatically becomes invalid.</li>
+     * <li>You must specify either <code>IspCities</code> or <code>RandomIspCity</code>. If you specify <code>RandomIspCity</code>, <code>IspCities</code> is ignored.</li>
      * </ul>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -58,8 +65,13 @@ public class CreateInstantSiteMonitorRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The name of the instant test task.</p>
-     * <p>The name must be 4 to 100 characters in length, and can contain letters, digits, and underscores (_).</p>
+     * <p>The name of the detection task.</p>
+     * <p>&lt;props=&quot;china&quot;&gt;</p>
+     * <p>The name must be 4 to 100 characters in length and can contain letters, digits, and underscores (_).</p>
+     * <p>&lt;props=&quot;intl&quot;&gt;</p>
+     * <p>The name must be 4 to 100 characters in length and can contain letters, digits, and underscores (_).</p>
+     * <p>&lt;props=&quot;partner&quot;&gt;</p>
+     * <p>The name must be 4 to 100 characters in length and can contain letters, digits, and underscores (_).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -69,7 +81,7 @@ public class CreateInstantSiteMonitorRequest extends TeaModel {
     public String taskName;
 
     /**
-     * <p>The type of the instant test task. Valid values: HTTP, PING, TCP, UDP, and DNS.</p>
+     * <p>The type of the detection task. Valid values: HTTP, PING, TCP, UDP, and DNS.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -5,14 +5,17 @@ import com.aliyun.tea.*;
 
 public class CreateHybridMonitorNamespaceRequest extends TeaModel {
     /**
-     * <p>The description of the namespace.</p>
+     * <p>The description of the metric repository.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Alibaba Cloud product metric repository.</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
-     * <p>The name of the namespace.</p>
-     * <p>The name can contain lowercase letters, digits, and hyphens (-).</p>
+     * <p>The name of the metric repository.</p>
+     * <p>Format: consists of lowercase letters, digits, and hyphens (-).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -22,7 +25,7 @@ public class CreateHybridMonitorNamespaceRequest extends TeaModel {
     public String namespace;
 
     /**
-     * <p>The region where the metric data is stored.</p>
+     * <p>The region in which monitoring data is stored.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -31,17 +34,16 @@ public class CreateHybridMonitorNamespaceRequest extends TeaModel {
     public String namespaceRegion;
 
     /**
-     * <p>The storage scheme of metric data. Valid values:</p>
+     * <p>The storage solution for monitoring data. Valid values:</p>
      * <ul>
-     * <li>m_prom_user: The metric data is stored in Simple Log Service.</li>
-     * <li>m_prom_pool: The metric data is stored in the private storage space provided by CloudMonitor.</li>
+     * <li>aliyun_prometheus: monitoring data is stored in Managed Service for Prometheus.</li>
      * </ul>
      * <blockquote>
-     * <p> For more information about the storage schemes of metric data, see <a href="https://help.aliyun.com/document_detail/2594921.html">Data storage schemes for Hybrid Cloud Monitoring</a>.</p>
+     * <p>For more information about storage solutions for monitoring data, see <a href="https://help.aliyun.com/document_detail/2594921.html">Storage solutions for Hybrid Cloud Monitoring data</a>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
-     * <p>m_prometheus</p>
+     * <p>aliyun_prometheus</p>
      */
     @NameInMap("NamespaceType")
     public String namespaceType;
@@ -50,16 +52,16 @@ public class CreateHybridMonitorNamespaceRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The data retention period. Valid values:</p>
+     * <p>The data storage duration. Valid values:</p>
      * <ul>
-     * <li>cms.s1.large (Retention Period 15 Days)</li>
-     * <li>cms.s1.xlarge (Retention Period 32 Days)</li>
-     * <li>cms.s1.2xlarge (Retention Period 63 Days)</li>
-     * <li>cms.s1.3xlarge (Retention Period 93 Days) (default)</li>
-     * <li>cms.s1.6xlarge (Retention Period 185 Days)</li>
-     * <li>cms.s1.12xlarge (Retention Period 367 Days)</li>
+     * <li>cms.s1.large: storage duration of 15 days.</li>
+     * <li>cms.s1.xlarge: storage duration of 32 days.</li>
+     * <li>cms.s1.2xlarge: storage duration of 63 days.</li>
+     * <li>cms.s1.3xlarge (default): storage duration of 93 days.</li>
+     * <li>cms.s1.6xlarge: storage duration of 185 days.</li>
+     * <li>cms.s1.12xlarge: storage duration of 376 days.</li>
      * </ul>
-     * <p>For information about the pricing for different retention periods, see the <strong>Pricing</strong> section in <a href="https://help.aliyun.com/document_detail/223532.html">Billing of the dashboard feature</a>.</p>
+     * <p>For the pricing of different storage duration specifications, see the <strong>Pricing</strong> section in <a href="https://help.aliyun.com/document_detail/223532.html">monitoring dashboard</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>cms.s1.3xlarge</p>

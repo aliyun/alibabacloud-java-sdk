@@ -6,9 +6,13 @@ import com.aliyun.tea.*;
 public class DescribeContactListRequest extends TeaModel {
     /**
      * <p>The alert notification method. Valid values:</p>
+     * <p>&lt;props=&quot;china&quot;&gt;- SMS: text message.</p>
+     * <p>&lt;props=&quot;china&quot;&gt;- AliIM: TradeManager.</p>
      * <ul>
-     * <li>Mail: emails</li>
-     * <li>DingWebHook: DingTalk chatbots</li>
+     * <li><p>Mail: email.</p>
+     * </li>
+     * <li><p>DingWebHook: DingTalk chatbot.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,9 +22,9 @@ public class DescribeContactListRequest extends TeaModel {
     public String chanelType;
 
     /**
-     * <p>The value specified for the alert notification method.</p>
+     * <p>The value of the alert notification method.</p>
      * <blockquote>
-     * <p> This parameter is required only if you set the <code>ChanelType</code> parameter to <code>Mail</code>.</p>
+     * <p>This parameter is required only when <code>ChanelType</code> is set to <code>Mail</code>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -39,7 +43,7 @@ public class DescribeContactListRequest extends TeaModel {
     public String contactName;
 
     /**
-     * <p>The page number.</p>
+     * <p>The current page number.</p>
      * <p>Default value: 1.</p>
      * 
      * <strong>example:</strong>

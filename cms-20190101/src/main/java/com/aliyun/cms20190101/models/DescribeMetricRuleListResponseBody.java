@@ -8,9 +8,9 @@ public class DescribeMetricRuleListResponseBody extends TeaModel {
     public DescribeMetricRuleListResponseBodyAlarms alarms;
 
     /**
-     * <p>The HTTP status code.</p>
+     * <p>The status code.</p>
      * <blockquote>
-     * <p> The status code 200 indicates that the call is successful.</p>
+     * <p>A value of 200 indicates success.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -29,7 +29,7 @@ public class DescribeMetricRuleListResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>386C6712-335F-5054-930A-CC92B851ECBA</p>
@@ -38,10 +38,12 @@ public class DescribeMetricRuleListResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the call is successful. Valid values:</p>
+     * <p>Indicates whether the operation was successful. Valid values:</p>
      * <ul>
-     * <li>true: The call is successful.</li>
-     * <li>false: The call fails.</li>
+     * <li><p>true: The operation was successful.</p>
+     * </li>
+     * <li><p>false: The operation failed.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -51,7 +53,7 @@ public class DescribeMetricRuleListResponseBody extends TeaModel {
     public Boolean success;
 
     /**
-     * <p>The total number of returned entries.</p>
+     * <p>The total number of records.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -707,6 +709,15 @@ public class DescribeMetricRuleListResponseBody extends TeaModel {
         @NameInMap("RuleName")
         public String ruleName;
 
+        /**
+         * <p>是否关闭恢复告警。取值：true（是）、false（否）。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
+        @NameInMap("SendOK")
+        public Boolean sendOK;
+
         @NameInMap("SilenceTime")
         public Integer silenceTime;
 
@@ -903,6 +914,14 @@ public class DescribeMetricRuleListResponseBody extends TeaModel {
         }
         public String getRuleName() {
             return this.ruleName;
+        }
+
+        public DescribeMetricRuleListResponseBodyAlarmsAlarm setSendOK(Boolean sendOK) {
+            this.sendOK = sendOK;
+            return this;
+        }
+        public Boolean getSendOK() {
+            return this.sendOK;
         }
 
         public DescribeMetricRuleListResponseBodyAlarmsAlarm setSilenceTime(Integer silenceTime) {

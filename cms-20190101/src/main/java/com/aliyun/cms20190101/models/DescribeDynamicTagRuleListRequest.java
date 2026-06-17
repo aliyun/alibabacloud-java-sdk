@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeDynamicTagRuleListRequest extends TeaModel {
     /**
-     * <p>The ID of the tag rule.</p>
+     * <p>The ID of the dynamic tag rule.</p>
      * 
      * <strong>example:</strong>
      * <p>004155fa-15ba-466d-b61a-***********</p>
@@ -14,8 +14,8 @@ public class DescribeDynamicTagRuleListRequest extends TeaModel {
     public String dynamicTagRuleId;
 
     /**
-     * <p>The number of the page to return.</p>
-     * <p>Pages start from page 1. Default value: 1.</p>
+     * <p>The page number.</p>
+     * <p>Start value: 1. Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -25,7 +25,7 @@ public class DescribeDynamicTagRuleListRequest extends TeaModel {
 
     /**
      * <p>The number of entries to return on each page.</p>
-     * <p>Minimum value: 1. Default value: 30.</p>
+     * <p>Start value: 1. Default value: 30.</p>
      * 
      * <strong>example:</strong>
      * <p>30</p>
@@ -44,7 +44,7 @@ public class DescribeDynamicTagRuleListRequest extends TeaModel {
     public String tagKey;
 
     /**
-     * <p>The ID of the region to which the tags belong.</p>
+     * <p>The region ID of the tag.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -54,7 +54,7 @@ public class DescribeDynamicTagRuleListRequest extends TeaModel {
 
     /**
      * <p>The tag value.</p>
-     * <p>For more information about how to obtain a tag value, see <a href="https://help.aliyun.com/document_detail/145557.html">DescribeTagKeyList</a>.</p>
+     * <p>For more information about how to obtain a tag value, see <a href="https://help.aliyun.com/document_detail/145557.html">DescribeTagValueList</a>.</p>
      * 
      * <strong>example:</strong>
      * <ul>

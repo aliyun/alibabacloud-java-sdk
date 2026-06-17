@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class DescribeTagKeyListResponseBody extends TeaModel {
     /**
-     * <p>The status code.</p>
+     * <p>状态码。</p>
      * <blockquote>
-     * <p> The status code 200 indicates that the request was successful.</p>
+     * <p>200表示成功。</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -17,7 +17,7 @@ public class DescribeTagKeyListResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The error message.</p>
+     * <p>错误信息。</p>
      * 
      * <strong>example:</strong>
      * <p>Specified parameter PageSize is not valid.</p>
@@ -26,7 +26,7 @@ public class DescribeTagKeyListResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The request ID.</p>
+     * <p>请求ID。</p>
      * 
      * <strong>example:</strong>
      * <p>B04B8CF3-4489-432D-83BA-6F128E5F2293</p>
@@ -35,11 +35,7 @@ public class DescribeTagKeyListResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful. Valid values:</p>
-     * <ul>
-     * <li>true</li>
-     * <li>false</li>
-     * </ul>
+     * <p>用于标识本次调用是否成功</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>

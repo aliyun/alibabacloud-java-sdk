@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class CreateMetricRuleResourcesResponseBody extends TeaModel {
     /**
-     * <p>The response code.</p>
+     * <p>The status code.</p>
      * <blockquote>
-     * <p> The status code 200 indicates that the request was successful.</p>
+     * <p>The value 200 indicates success.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -35,7 +35,7 @@ public class CreateMetricRuleResourcesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful. Valid values: true: The request was successful. false: The request failed.</p>
+     * <p>Indicates whether the operation was successful. The value true indicates success, and the value false indicates failure.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>

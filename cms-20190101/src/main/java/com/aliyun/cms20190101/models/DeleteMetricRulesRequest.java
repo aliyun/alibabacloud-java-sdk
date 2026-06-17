@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteMetricRulesRequest extends TeaModel {
     /**
+     * <p>The IDs of the alert rules to delete.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

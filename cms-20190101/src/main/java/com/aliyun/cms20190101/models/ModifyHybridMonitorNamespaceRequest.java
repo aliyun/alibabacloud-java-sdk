@@ -5,15 +5,18 @@ import com.aliyun.tea.*;
 
 public class ModifyHybridMonitorNamespaceRequest extends TeaModel {
     /**
-     * <p>The description of the namespace.</p>
+     * <p>The description of the metric store.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Alibaba Cloud product metric repository.</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
-     * <p>The name of the namespace.</p>
-     * <p>The name can contain letters, digits, and hyphens (-).</p>
-     * <p>For information about how to obtain the name of a namespace, see <a href="https://help.aliyun.com/document_detail/428880.html">DescribeHybridMonitorNamespaceList</a>.</p>
+     * <p>The name of the metric store.</p>
+     * <p>Format: consists of uppercase letters, lowercase letters, digits, and hyphens (-).</p>
+     * <p>For information about how to obtain the name of a metric store, see <a href="https://help.aliyun.com/document_detail/428880.html">DescribeHybridMonitorNamespaceList</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -26,16 +29,16 @@ public class ModifyHybridMonitorNamespaceRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The data retention period. Valid values:</p>
+     * <p>The data storage duration. Valid values:</p>
      * <ul>
-     * <li>cms.s1.large: Data is stored for 15 days.</li>
-     * <li>cms.s1.xlarge: Data is stored for 32 days.</li>
-     * <li>cms.s1.2xlarge: Data is stored for 63 days.</li>
-     * <li>cms.s1.3xlarge: Data is stored for 93 days.</li>
-     * <li>cms.s1.6xlarge: Data is stored for 185 days.</li>
-     * <li>cms.s1.12xlarge: Data is stored for 376 days.</li>
+     * <li>cms.s1.large: 15 days.</li>
+     * <li>cms.s1.xlarge: 32 days.</li>
+     * <li>cms.s1.2xlarge: 63 days.</li>
+     * <li>cms.s1.3xlarge: 93 days.</li>
+     * <li>cms.s1.6xlarge: 185 days.</li>
+     * <li>cms.s1.12xlarge: 376 days.</li>
      * </ul>
-     * <p>For information about the pricing for different retention periods, see the <strong>Pricing</strong> section in <a href="https://help.aliyun.com/document_detail/223532.html">Billing of the dashboard feature</a>.</p>
+     * <p>For the prices of different storage duration specifications, see the <strong>Pricing</strong> section in <a href="https://help.aliyun.com/document_detail/223532.html">Dashboard</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>cms.s1.2xlarge</p>

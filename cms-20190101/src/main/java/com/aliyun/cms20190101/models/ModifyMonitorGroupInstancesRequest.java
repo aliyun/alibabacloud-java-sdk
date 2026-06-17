@@ -15,6 +15,7 @@ public class ModifyMonitorGroupInstancesRequest extends TeaModel {
     public Long groupId;
 
     /**
+     * <p>The list of instances. You can specify up to 2,000 instances.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Instances")
@@ -54,78 +55,75 @@ public class ModifyMonitorGroupInstancesRequest extends TeaModel {
 
     public static class ModifyMonitorGroupInstancesRequestInstances extends TeaModel {
         /**
-         * <p>The abbreviation of the name of the service to which the instances to be added to the application group belong. Valid values:</p>
+         * <p>The cloud service to which the resource instance belongs. The following cloud services are supported:</p>
          * <ul>
-         * <li><p>ECS: Elastic Compute Service (ECS) instances provided by Alibaba Cloud and hosts not provided by Alibaba Cloud</p>
+         * <li><p>ECS (including Alibaba Cloud and third-party hosts)</p>
          * </li>
-         * <li><p>RDS: ApsaraDB for RDS</p>
+         * <li><p>ApsaraDB RDS</p>
          * </li>
-         * <li><p>ADS: AnalyticDB</p>
+         * <li><p>AnalyticDB</p>
          * </li>
-         * <li><p>SLB: Server Load Balancer (SLB)</p>
+         * <li><p>SLB</p>
          * </li>
-         * <li><p>VPC: Virtual Private Cloud (VPC)</p>
+         * <li><p>VPC (Elastic IP)</p>
          * </li>
-         * <li><p>APIGATEWAY: API Gateway</p>
+         * <li><p>API Gateway</p>
          * </li>
-         * <li><p>CDN: Alibaba Cloud Content Delivery Network (CDN)</p>
+         * <li><p>Alibaba Cloud CDN</p>
          * </li>
-         * <li><p>CS: Container Service for Swarm</p>
+         * <li><p>Container Service for Swarm</p>
          * </li>
-         * <li><p>DCDN: Dynamic Route for CDN</p>
+         * <li><p>DCDN</p>
          * </li>
-         * <li><p>DDoS: Anti-DDoS Pro</p>
+         * <li><p>Anti-DDoS</p>
          * </li>
-         * <li><p>EIP: Elastic IP Address (EIP)</p>
+         * <li><p>EIP</p>
          * </li>
-         * <li><p>ELASTICSEARCH: Elasticsearch</p>
+         * <li><p>Elasticsearch</p>
          * </li>
-         * <li><p>EMR: E-MapReduce</p>
+         * <li><p>E-MapReduce</p>
          * </li>
-         * <li><p>ESS: Auto Scaling</p>
+         * <li><p>Auto Scaling</p>
          * </li>
-         * <li><p>HBASE: ApsaraDB for Hbase</p>
+         * <li><p>ApsaraDB for HBase</p>
          * </li>
-         * <li><p>IOT_EDGE: IoT Edge</p>
+         * <li><p>IoT Edge</p>
          * </li>
-         * <li><p>K8S_POD: pods in Container Service for Kubernetes</p>
+         * <li><p>Kubernetes pod</p>
          * </li>
-         * <li><p>KVSTORE_SHARDING: ApsaraDB for Redis of the cluster architecture</p>
+         * <li><p>ApsaraDB for Redis (sharded cluster)</p>
          * </li>
-         * <li><p>KVSTORE_SPLITRW: ApsaraDB for Redis of the read/write splitting architecture</p>
+         * <li><p>ApsaraDB for Redis (read/write splitting)</p>
          * </li>
-         * <li><p>KVSTORE_STANDARD: ApsaraDB for Redis of the standard architecture</p>
+         * <li><p>ApsaraDB for Redis (Standard Edition)</p>
          * </li>
-         * <li><p>MEMCACHE: ApsaraDB for Memcache</p>
+         * <li><p>ApsaraDB for Memcache</p>
          * </li>
-         * <li><p>MNS: Message Service (MNS)</p>
+         * <li><p>MNS</p>
          * </li>
-         * <li><p>MONGODB: ApsaraDB for MongoDB of the replica set architecture</p>
+         * <li><p>ApsaraDB for MongoDB (replica set)</p>
          * </li>
-         * <li><p>MONGODB_CLUSTER: ApsaraDB for MongoDB of the cluster architecture</p>
+         * <li><p>ApsaraDB for MongoDB (sharded cluster)</p>
          * </li>
-         * <li><p>MONGODB_SHARDING: ApsaraDB for MongoDB of the sharded cluster architecture</p>
+         * <li><p>ApsaraDB for MongoDB (sharded cluster)</p>
          * </li>
-         * <li><p>MQ_TOPIC: MNS topics</p>
+         * <li><p>MNS topic</p>
          * </li>
-         * <li><p>OCS: ApsaraDB for Memcache of earlier versions</p>
+         * <li><p>OCS (ApsaraDB for Memcache of earlier versions)</p>
          * </li>
-         * <li><p>OPENSEARCH: Open Search</p>
+         * <li><p>OpenSearch</p>
          * </li>
-         * <li><p>OSS: Object Storage Service (OSS)</p>
+         * <li><p>OSS</p>
          * </li>
-         * <li><p>POLARDB: PolarDB</p>
+         * <li><p>PolarDB</p>
          * </li>
-         * <li><p>PETADATA: HybridDB for MySQL</p>
+         * <li><p>HybridDB for MySQL</p>
          * </li>
-         * <li><p>SCDN: Secure Content Delivery Network (SCDN)</p>
+         * <li><p>Internet Shared Bandwidth</p>
          * </li>
-         * <li><p>SHAREBANDWIDTHPACKAGES: EIP Bandwidth Plan</p>
+         * <li><p>SLS</p>
          * </li>
-         * <li><p>SLS: Log Service</p>
-         * </li>
-         * <li><p>VPN: VPN Gateway</p>
-         * <p>Valid values of N: 1 to 2000.</p>
+         * <li><p>VPN Gateway</p>
          * </li>
          * </ul>
          * <p>This parameter is required.</p>
@@ -137,7 +135,7 @@ public class ModifyMonitorGroupInstancesRequest extends TeaModel {
         public String category;
 
         /**
-         * <p>The ID of the instance. Valid values of N: 1 to 2000.</p>
+         * <p>The ID of the resource instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -147,7 +145,7 @@ public class ModifyMonitorGroupInstancesRequest extends TeaModel {
         public String instanceId;
 
         /**
-         * <p>The name of the instance. Valid values of N: 1 to 2000.</p>
+         * <p>The name of the instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -157,7 +155,7 @@ public class ModifyMonitorGroupInstancesRequest extends TeaModel {
         public String instanceName;
 
         /**
-         * <p>The ID of the region where the instance resides. Valid values of N: 1 to 2000.</p>
+         * <p>The region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

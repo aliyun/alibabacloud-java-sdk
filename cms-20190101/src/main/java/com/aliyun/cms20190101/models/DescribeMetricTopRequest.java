@@ -8,11 +8,11 @@ public class DescribeMetricTopRequest extends TeaModel {
      * <p>The monitoring dimensions of the specified resource.</p>
      * <p>Set the value to a collection of <code>key:value</code> pairs. Example: <code>{&quot;userId&quot;:&quot;120886317861****&quot;}</code> or <code>{&quot;instanceId&quot;:&quot;i-2ze2d6j5uhg20x47****&quot;}</code>.</p>
      * <blockquote>
-     * <p> You can query a maximum of 50 instances in each request.</p>
+     * <p>You can query a maximum of 50 instances in each request.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
-     * <p>[{&quot;instanceId&quot;: &quot;i-abcdefgh12****&quot;}]</p>
+     * <p>[{&quot;instanceId&quot;: &quot;i-2ze2d6j5uhg20x47****&quot;}]</p>
      */
     @NameInMap("Dimensions")
     public String dimensions;
@@ -20,23 +20,28 @@ public class DescribeMetricTopRequest extends TeaModel {
     /**
      * <p>The end of the time range to query monitoring data.</p>
      * <ul>
-     * <li><p>If the <code>StartTime</code> and <code>EndTime</code> parameters are not specified, the monitoring data of the last statistical period is queried.``</p>
+     * <li><p>If the <code>StartTime</code> and <code>EndTime</code> parameters are not specified, the monitoring data of the last statistical period is queried.\<code>\\</code></p>
      * </li>
-     * <li><p>If the <code>StartTime</code> and <code>EndTime</code> parameters are specified, the monitoring data of the last statistical period in the specified time range is queried.````</p>
+     * <li><p>If the <code>StartTime</code> and <code>EndTime</code> parameters are specified, the monitoring data of the last statistical period in the specified time range is queried.\<code>\\</code>\<code>\\</code></p>
      * <ul>
-     * <li>If you set the <code>Period</code> parameter to 15, the specified time range must be less than or equal to 20 minutes. For example, if you set the StartTime parameter to 2021-05-08 08:10:00 and the EndTime parameter to 2021-05-08 08:30:00, the monitoring data of the last 15 seconds in the time range is queried.</li>
-     * <li>If you set the <code>Period</code> parameter to 60 or 900, the specified time range must be less than or equal to 2 hours. For example, if you set the Period parameter to 60, the StartTime parameter to 2021-05-08 08:00:00, and the EndTime parameter to 2021-05-08 10:00:00, the monitoring data of the last 60 seconds in the time range is queried.</li>
-     * <li>If you set the <code>Period</code> parameter to 3600, the specified time range must be less than or equal to two days. For example, if you set the StartTime parameter to 2021-05-08 08:00:00 and the EndTime parameter to 2021-05-10 08:00:00, the monitoring data of the last 3,600 seconds in the time range is queried.</li>
+     * <li><p>If you set the <code>Period</code> parameter to 15, the specified time range must be less than or equal to 20 minutes. For example, if you set the StartTime parameter to 2021-05-08 08:10:00 and the EndTime parameter to 2021-05-08 08:30:00, the monitoring data of the last 15 seconds in the time range is queried.</p>
+     * </li>
+     * <li><p>If you set the <code>Period</code> parameter to 60 or 900, the specified time range must be less than or equal to 2 hours. For example, if you set the Period parameter to 60, the StartTime parameter to 2021-05-08 08:00:00, and the EndTime parameter to 2021-05-08 10:00:00, the monitoring data of the last 60 seconds in the time range is queried.</p>
+     * </li>
+     * <li><p>If you set the <code>Period</code> parameter to 3600, the specified time range must be less than or equal to two days. For example, if you set the StartTime parameter to 2021-05-08 08:00:00 and the EndTime parameter to 2021-05-10 08:00:00, the monitoring data of the last 3,600 seconds in the time range is queried.</p>
+     * </li>
      * </ul>
      * </li>
      * </ul>
      * <p>The following formats are supported:</p>
      * <ul>
-     * <li>UNIX timestamp: the number of milliseconds that have elapsed since 00:00:00 Thursday, January 1, 1970</li>
-     * <li>Time format: YYYY-MM-DDThh:mm:ssZ</li>
+     * <li><p>UNIX timestamp: the number of milliseconds that have elapsed since 00:00:00 Thursday, January 1, 1970</p>
+     * </li>
+     * <li><p>Time format: YYYY-MM-DDThh:mm:ssZ</p>
+     * </li>
      * </ul>
      * <blockquote>
-     * <p> We recommend that you use UNIX timestamps to prevent time zone-related issues.</p>
+     * <p>We recommend that you use UNIX timestamps to prevent time zone-related issues.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -48,7 +53,7 @@ public class DescribeMetricTopRequest extends TeaModel {
     /**
      * <p>The expression that is used to compute the query results in real time.</p>
      * <blockquote>
-     * <p> Only the <code>groupby</code> expression is supported. This expression is similar to the GROUP BY statement used in databases.</p>
+     * <p>Only the <code>groupby</code> expression is supported. This expression is similar to the GROUP BY statement used in databases.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -61,7 +66,7 @@ public class DescribeMetricTopRequest extends TeaModel {
      * <p>The number of entries per page.</p>
      * <p>Default value: 10.</p>
      * <blockquote>
-     * <p> The maximum value of the Length parameter in a request is 1440.</p>
+     * <p>The maximum value of the Length parameter in a request is 1440.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -95,12 +100,14 @@ public class DescribeMetricTopRequest extends TeaModel {
     /**
      * <p>The order in which data is sorted. Valid values:</p>
      * <ul>
-     * <li>True: sorts data in ascending order.</li>
-     * <li>False (default): sorts data in descending order.</li>
+     * <li><p>True: sorts data in ascending order.</p>
+     * </li>
+     * <li><p>False (default): sorts data in descending order.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
-     * <p>False</p>
+     * <p>false</p>
      */
     @NameInMap("OrderDesc")
     public String orderDesc;
@@ -108,9 +115,12 @@ public class DescribeMetricTopRequest extends TeaModel {
     /**
      * <p>The field based on which data is sorted. Valid values:</p>
      * <ul>
-     * <li>Average</li>
-     * <li>Minimum</li>
-     * <li>Maximum</li>
+     * <li><p>Average</p>
+     * </li>
+     * <li><p>Minimum</p>
+     * </li>
+     * <li><p>Maximum</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -145,20 +155,25 @@ public class DescribeMetricTopRequest extends TeaModel {
     /**
      * <p>The start of the time range to query monitoring data.</p>
      * <ul>
-     * <li><p>If the <code>StartTime</code> and <code>EndTime</code> parameters are not specified, the monitoring data of the last statistical period is queried.``</p>
+     * <li><p>If the <code>StartTime</code> and <code>EndTime</code> parameters are not specified, the monitoring data of the last statistical period is queried.\<code>\\</code></p>
      * </li>
-     * <li><p>If the <code>StartTime</code> and <code>EndTime</code> parameters are specified, the monitoring data of the last statistical period in the specified time range is queried.````</p>
+     * <li><p>If the <code>StartTime</code> and <code>EndTime</code> parameters are specified, the monitoring data of the last statistical period in the specified time range is queried.\<code>\\</code>\<code>\\</code></p>
      * <ul>
-     * <li>If you set the <code>Period</code> parameter to 15, the specified time range must be less than or equal to 20 minutes. For example, if you set the StartTime parameter to 2021-05-08 08:10:00 and the EndTime parameter to 2021-05-08 08:30:00, the monitoring data of the last 15 seconds in the time range is queried.</li>
-     * <li>If you set the <code>Period</code> parameter to 60 or 900, the specified time range must be less than or equal to 2 hours. For example, if you set the Period parameter to 60, the StartTime parameter to 2021-05-08 08:00:00, and the EndTime parameter to 2021-05-08 10:00:00, the monitoring data of the last 60 seconds in the time range is queried.</li>
-     * <li>If you set the <code>Period</code> parameter to 3600, the specified time range must be less than or equal to two days. For example, if you set the StartTime parameter to 2021-05-08 08:00:00 and the EndTime parameter to 2021-05-10 08:00:00, the monitoring data of the last 3,600 seconds in the time range is queried.</li>
+     * <li><p>If you set the <code>Period</code> parameter to 15, the specified time range must be less than or equal to 20 minutes. For example, if you set the StartTime parameter to 2021-05-08 08:10:00 and the EndTime parameter to 2021-05-08 08:30:00, the monitoring data of the last 15 seconds in the time range is queried.</p>
+     * </li>
+     * <li><p>If you set the <code>Period</code> parameter to 60 or 900, the specified time range must be less than or equal to 2 hours. For example, if you set the Period parameter to 60, the StartTime parameter to 2021-05-08 08:00:00, and the EndTime parameter to 2021-05-08 10:00:00, the monitoring data of the last 60 seconds in the time range is queried.</p>
+     * </li>
+     * <li><p>If you set the <code>Period</code> parameter to 3600, the specified time range must be less than or equal to two days. For example, if you set the StartTime parameter to 2021-05-08 08:00:00 and the EndTime parameter to 2021-05-10 08:00:00, the monitoring data of the last 3,600 seconds in the time range is queried.</p>
+     * </li>
      * </ul>
      * </li>
      * </ul>
      * <p>The following formats are supported:</p>
      * <ul>
-     * <li>UNIX timestamp: the number of milliseconds that have elapsed since 00:00:00 Thursday, January 1, 1970</li>
-     * <li>Time format: YYYY-MM-DDThh:mm:ssZ</li>
+     * <li><p>UNIX timestamp: the number of milliseconds that have elapsed since 00:00:00 Thursday, January 1, 1970</p>
+     * </li>
+     * <li><p>Time format: YYYY-MM-DDThh:mm:ssZ</p>
+     * </li>
      * </ul>
      * <blockquote>
      * </blockquote>

@@ -7,7 +7,7 @@ public class SendDryRunSystemEventRequest extends TeaModel {
     /**
      * <p>The content of the system event.</p>
      * <blockquote>
-     * <p> The value of this parameter is a JSON object. We recommend that you include the <code>product</code>, <code>resourceId</code>, and <code>regionId</code> fields in the JSON object.</p>
+     * <p>The value of this parameter is a JSON object. We recommend that you include the <code>product</code>, <code>resourceId</code>, and <code>regionId</code> fields in the JSON object.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -19,7 +19,7 @@ public class SendDryRunSystemEventRequest extends TeaModel {
     /**
      * <p>The name of the system event.</p>
      * <blockquote>
-     * <p> For more information, see <a href="https://help.aliyun.com/document_detail/114972.html">DescribeSystemEventMetaList</a>.</p>
+     * <p>For more information, see <a href="https://help.aliyun.com/document_detail/114972.html">DescribeSystemEventMetaList</a>.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -41,7 +41,7 @@ public class SendDryRunSystemEventRequest extends TeaModel {
     /**
      * <p>The name of the cloud service.</p>
      * <blockquote>
-     * <p> For information about the Alibaba Cloud services that are supported by CloudMonitor, see <a href="https://help.aliyun.com/document_detail/167388.html">Supported cloud services and their system events</a>.</p>
+     * <p>For information about the Alibaba Cloud services that are supported by CloudMonitor, see <a href="https://help.aliyun.com/document_detail/167388.html">Supported cloud services and their system events</a>.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 

@@ -17,8 +17,10 @@ public class DescribeHybridMonitorTaskListRequest extends TeaModel {
     /**
      * <p>Specifies whether the returned result includes metric import tasks for Alibaba Cloud services. Valid values:</p>
      * <ul>
-     * <li>true (default): The returned result includes metric import tasks for Alibaba Cloud services.</li>
-     * <li>false: The returned result excludes metric import tasks for Alibaba Cloud services.</li>
+     * <li><p>true (default): The returned result includes metric import tasks for Alibaba Cloud services.</p>
+     * </li>
+     * <li><p>false: The returned result excludes metric import tasks for Alibaba Cloud services.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -93,8 +95,10 @@ public class DescribeHybridMonitorTaskListRequest extends TeaModel {
     /**
      * <p>The type of the metric import task. Valid values:</p>
      * <ul>
-     * <li>aliyun_fc: metric import tasks for Alibaba Cloud services</li>
-     * <li>aliyun_sls: metrics for logs imported from Log Service</li>
+     * <li><p>aliyun_fc: metric import tasks for Alibaba Cloud services</p>
+     * </li>
+     * <li><p>aliyun_sls: metrics for logs imported from Log Service</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class DescribeMetricListResponseBody extends TeaModel {
     /**
-     * <p>The HTTP status code.</p>
+     * <p>The status code.</p>
      * <blockquote>
-     * <p> The status code 200 indicates that the call was successful.</p>
+     * <p>A value of 200 indicates that the call was successful.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -17,7 +17,7 @@ public class DescribeMetricListResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The monitoring data.</p>
+     * <p>The list of monitoring data.</p>
      * 
      * <strong>example:</strong>
      * <p>[{&quot;timestamp&quot;:1548777660000,&quot;userId&quot;:&quot;120886317861****&quot;,&quot;instanceId&quot;:&quot;i-abc&quot;,&quot;Minimum&quot;:9.92,&quot;Average&quot;:9.92,&quot;Maximum&quot;:9.92}]</p>
@@ -35,7 +35,7 @@ public class DescribeMetricListResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The paging token.</p>
+     * <p>The pagination cursor.</p>
      * 
      * <strong>example:</strong>
      * <p>15761441850009dd70bb64cff1f0fff6d0b08ffff073be5fb1e785e2b020f7fed9b5e137bd810a6d6cff5ae****</p>
@@ -44,7 +44,7 @@ public class DescribeMetricListResponseBody extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The interval at which the monitoring data is queried. Unit: seconds. Valid values: 60, 300, and 900.</p>
+     * <p>The statistical period. Unit: seconds. Valid values: 60, 300, and 900.</p>
      * 
      * <strong>example:</strong>
      * <p>60</p>
@@ -53,7 +53,7 @@ public class DescribeMetricListResponseBody extends TeaModel {
     public String period;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>3121AE7D-4AFF-4C25-8F1D-C8226EBB1F42</p>
@@ -62,10 +62,12 @@ public class DescribeMetricListResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the call was successful. Valid values:</p>
+     * <p>Indicates whether the operation was successful. Valid values:</p>
      * <ul>
-     * <li>true: The call was successful.</li>
-     * <li>false: The call failed.</li>
+     * <li><p>true: The operation was successful.</p>
+     * </li>
+     * <li><p>false: The operation failed.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

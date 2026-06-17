@@ -7,7 +7,7 @@ public class PutMetricRuleTargetsResponseBody extends TeaModel {
     /**
      * <p>The HTTP status code.</p>
      * <blockquote>
-     * <p> The status code 200 indicates that the request was successful.</p>
+     * <p>The value 200 indicates success.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -17,13 +17,13 @@ public class PutMetricRuleTargetsResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The failed data.</p>
+     * <p>The list of failures.</p>
      */
     @NameInMap("FailData")
     public PutMetricRuleTargetsResponseBodyFailData failData;
 
     /**
-     * <p>The error message returned.</p>
+     * <p>The error message.</p>
      * 
      * <strong>example:</strong>
      * <p>The request processing has failed due to some unknown error.</p>
@@ -41,10 +41,12 @@ public class PutMetricRuleTargetsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <p>Indicates whether the operation was successful. Valid values:</p>
      * <ul>
-     * <li>true: The request was successful.</li>
-     * <li>false: The request failed.</li>
+     * <li><p>true: successful.</p>
+     * </li>
+     * <li><p>false: failed.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

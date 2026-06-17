@@ -7,7 +7,7 @@ public class DescribeProjectMetaResponseBody extends TeaModel {
     /**
      * <p>The status code.</p>
      * <blockquote>
-     * <p>The status code 200 indicates that the request was successful.</p>
+     * <p>The value 200 indicates success.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -56,7 +56,7 @@ public class DescribeProjectMetaResponseBody extends TeaModel {
     public DescribeProjectMetaResponseBodyResources resources;
 
     /**
-     * <p>Indicates whether the request was successful. Valid values: true: The request was successful. false: The request failed.</p>
+     * <p>Indicates whether the operation was successful. Valid values: true and false. The value true indicates success, and the value false indicates failure.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -65,7 +65,7 @@ public class DescribeProjectMetaResponseBody extends TeaModel {
     public Boolean success;
 
     /**
-     * <p>The total number of entries returned.</p>
+     * <p>The total number of entries.</p>
      * 
      * <strong>example:</strong>
      * <p>12</p>

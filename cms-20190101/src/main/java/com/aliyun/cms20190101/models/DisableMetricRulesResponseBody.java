@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class DisableMetricRulesResponseBody extends TeaModel {
     /**
-     * <p>The responses code.</p>
+     * <p>The status code.</p>
      * <blockquote>
-     * <p> The status code 200 indicates that the request was successful.</p>
+     * <p>A value of 200 indicates that the request was successful.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -20,7 +20,7 @@ public class DisableMetricRulesResponseBody extends TeaModel {
      * <p>The error message.</p>
      * 
      * <strong>example:</strong>
-     * <p>RuleId is mandatory for this action.</p>
+     * <p>The specified resource is not found.</p>
      */
     @NameInMap("Message")
     public String message;
@@ -35,11 +35,7 @@ public class DisableMetricRulesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful. Valid values:</p>
-     * <ul>
-     * <li>true</li>
-     * <li>false</li>
-     * </ul>
+     * <p>Indicates whether the operation was successful. A value of \<code>true\\</code> indicates success and a value of \<code>false\\</code> indicates failure.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>

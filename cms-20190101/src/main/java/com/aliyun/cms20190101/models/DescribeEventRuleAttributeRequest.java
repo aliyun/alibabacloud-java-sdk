@@ -19,10 +19,10 @@ public class DescribeEventRuleAttributeRequest extends TeaModel {
     public String ruleName;
 
     /**
-     * <p>The mute period during which new alert notifications are not sent even if the trigger conditions are met.</p>
-     * <p>Unit: seconds. Default value: 86400, which indicates one day.</p>
+     * <p>The mute period.</p>
+     * <p>Unit: seconds. Default value: 86400 (1 day).</p>
      * <blockquote>
-     * <p> Only one alert notification is sent during each mute period even if the metric value exceeds the alert threshold several times.</p>
+     * <p>When monitoring data continuously exceeds the alert rule threshold, only one alert notification is sent within each mute period.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

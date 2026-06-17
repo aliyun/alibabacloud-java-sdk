@@ -7,7 +7,7 @@ public class DescribeMetricDataResponseBody extends TeaModel {
     /**
      * <p>The HTTP status code.</p>
      * <blockquote>
-     * <p> The status code 200 indicates that the request was successful.</p>
+     * <p>The status code 200 indicates that the request was successful.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -19,10 +19,14 @@ public class DescribeMetricDataResponseBody extends TeaModel {
     /**
      * <p>The monitoring data. The value includes the following fields:</p>
      * <ul>
-     * <li><code>timestamp</code>: the time when the alert was triggered.</li>
-     * <li><code>userId</code>: the ID of the user for which the alert was triggered.</li>
-     * <li><code>instanceId</code>: the ID of the instance for which the alert was triggered.</li>
-     * <li><code>Minimum</code>, <code>Average</code>, and <code>Maximum</code>: the aggregation methods.</li>
+     * <li><p><code>timestamp</code>: the time when the alert was triggered.</p>
+     * </li>
+     * <li><p><code>userId</code>: the ID of the user for which the alert was triggered.</p>
+     * </li>
+     * <li><p><code>instanceId</code>: the ID of the instance for which the alert was triggered.</p>
+     * </li>
+     * <li><p><code>Minimum</code>, <code>Average</code>, and <code>Maximum</code>: the aggregation methods.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

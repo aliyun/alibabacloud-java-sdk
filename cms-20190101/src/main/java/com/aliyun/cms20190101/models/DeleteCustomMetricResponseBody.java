@@ -7,7 +7,7 @@ public class DeleteCustomMetricResponseBody extends TeaModel {
     /**
      * <p>The HTTP status code.</p>
      * <blockquote>
-     * <p> The status code 200 indicates that the call is successful.</p>
+     * <p>The status code 200 indicates that the call is successful.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

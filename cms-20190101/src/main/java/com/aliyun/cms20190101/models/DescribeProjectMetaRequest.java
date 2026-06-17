@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class DescribeProjectMetaRequest extends TeaModel {
     /**
-     * <p>The tags. Tags are used to filter services.</p>
-     * <p>You can filter services only by the tag whose <code>name</code> is <code>product</code>. Example: {&quot;name&quot;:&quot;product&quot;,&quot;value&quot;:&quot;ECS&quot;}.</p>
+     * <p>The tags. Tags are used to filter alerts, and each alert can be marked with special tags.</p>
+     * <p>Currently, only filtering by product is supported. That is, the <code>name</code> is <code>product</code>. For example: {&quot;name&quot;:&quot;product&quot;,&quot;value&quot;:&quot;ECS&quot;}.</p>
      * <blockquote>
-     * <p>We recommend that you do not use the special tags in the CloudMonitor console.</p>
+     * <p>We do not recommend that you use the special tags for the CloudMonitor console in Alibaba Cloud.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -33,7 +33,7 @@ public class DescribeProjectMetaRequest extends TeaModel {
      * <p>Valid values: 1 to 10000.</p>
      * <p>Default value: 30.</p>
      * <blockquote>
-     * <p>The value of this parameter is not limited. You can view a large number of entries per page.</p>
+     * <p>Currently, Alibaba Cloud does not impose a limit on this parameter. If you need to obtain all results, set the page size to a large value.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

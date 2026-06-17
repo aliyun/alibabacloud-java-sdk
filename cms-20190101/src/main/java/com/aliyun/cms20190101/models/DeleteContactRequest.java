@@ -9,7 +9,7 @@ public class DeleteContactRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>test-01</p>
+     * <p>John Doe</p>
      */
     @NameInMap("ContactName")
     public String contactName;

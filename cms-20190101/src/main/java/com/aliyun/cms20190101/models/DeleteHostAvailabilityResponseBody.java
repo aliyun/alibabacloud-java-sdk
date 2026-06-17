@@ -7,7 +7,7 @@ public class DeleteHostAvailabilityResponseBody extends TeaModel {
     /**
      * <p>The status code.</p>
      * <blockquote>
-     * <p> The status code 200 indicates that the request was successful.</p>
+     * <p>A status code of 200 indicates that the request was successful.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -20,7 +20,7 @@ public class DeleteHostAvailabilityResponseBody extends TeaModel {
      * <p>The returned message.</p>
      * 
      * <strong>example:</strong>
-     * <p>success</p>
+     * <p>The specified resource is not found.</p>
      */
     @NameInMap("Message")
     public String message;
@@ -35,7 +35,7 @@ public class DeleteHostAvailabilityResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful. Valid values: true and false.</p>
+     * <p>Indicates whether the operation was successful. \<code>true\\</code>: The operation was successful. \<code>false\\</code>: The operation failed.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>

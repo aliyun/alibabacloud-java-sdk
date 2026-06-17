@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class PutCustomEventRuleResponseBody extends TeaModel {
     /**
-     * <p>The HTTP status code.</p>
+     * <p>The status code.</p>
      * <blockquote>
-     * <p> The value 200 indicates that the call was successful.</p>
+     * <p>The value 200 indicates that the call was successful.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -37,8 +37,10 @@ public class PutCustomEventRuleResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the call was successful. Valid values:</p>
      * <ul>
-     * <li>true: The call was successful.</li>
-     * <li>false: The call failed.</li>
+     * <li><p>true: The call was successful.</p>
+     * </li>
+     * <li><p>false: The call failed.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

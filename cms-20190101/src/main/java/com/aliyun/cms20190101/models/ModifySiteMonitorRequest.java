@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifySiteMonitorRequest extends TeaModel {
     /**
-     * <p>The URL or IP address that is monitored by the task.</p>
+     * <p>The URL or IP address of the monitoring task.</p>
      * 
      * <strong>example:</strong>
      * <p><a href="http://www.aliyun.com">http://www.aliyun.com</a></p>
@@ -14,7 +14,7 @@ public class ModifySiteMonitorRequest extends TeaModel {
     public String address;
 
     /**
-     * <p>The ID of the alert rule. You can call the DescribeMetricRuleList operation to query the IDs of existing alert rules in CloudMonitor. For more information, see <a href="https://help.aliyun.com/document_detail/114941.html">DescribeMetricRuleList</a>.</p>
+     * <p>The ID of the alert rule. The ID of an existing alert rule in CloudMonitor. You can call the DescribeMetricRuleList operation to query alert rule IDs. For more information, see <a href="https://help.aliyun.com/document_detail/114941.html">DescribeMetricRuleList</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>49f7c317-7645-4cc9-94fd-ea42e122****</p>
@@ -23,7 +23,7 @@ public class ModifySiteMonitorRequest extends TeaModel {
     public String alertIds;
 
     /**
-     * <p>The custom detection period. You can only select a time period from Monday to Sunday for detection.</p>
+     * <p>The custom monitoring schedule. You can select a specific time period from Monday to Sunday for monitoring.</p>
      * 
      * <strong>example:</strong>
      * <p>{&quot;start_hour&quot;:0,&quot;end_hour&quot;:24, &quot;days&quot;:[0], &quot;time_zone&quot;:&quot;Local&quot;}</p>
@@ -32,7 +32,7 @@ public class ModifySiteMonitorRequest extends TeaModel {
     public String customSchedule;
 
     /**
-     * <p>The interval at which detection requests are sent. Valid values: 1, 5, and 15. Unit: minutes. Default value: 1.</p>
+     * <p>The monitoring frequency. Valid values: 1, 5, and 15. Unit: minutes. Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -41,8 +41,8 @@ public class ModifySiteMonitorRequest extends TeaModel {
     public String interval;
 
     /**
-     * <p>The unit of the metric.</p>
-     * <p>Unit: milliseconds.</p>
+     * <p>The unit of the monitoring metrics.</p>
+     * <p>Unit: milliseconds (ms).</p>
      * 
      * <strong>example:</strong>
      * <p>ms</p>
@@ -51,9 +51,9 @@ public class ModifySiteMonitorRequest extends TeaModel {
     public String intervalUnit;
 
     /**
-     * <p>The information of the detection points. The value is a JSON array. Example: <code>[{&quot;city&quot;:&quot;546&quot;,&quot;isp&quot;:&quot;465&quot;},{&quot;city&quot;:&quot;572&quot;,&quot;isp&quot;:&quot;465&quot;},{&quot;city&quot;:&quot;738&quot;,&quot;isp&quot;:&quot;465&quot;}]</code>. The values of the <code>city</code> field indicate Beijing, Hangzhou, and Qingdao.</p>
+     * <p>The detection point information. The value is in JSONArray format, for example: <code>[{&quot;city&quot;:&quot;546&quot;,&quot;isp&quot;:&quot;465&quot;},{&quot;city&quot;:&quot;572&quot;,&quot;isp&quot;:&quot;465&quot;},{&quot;city&quot;:&quot;738&quot;,&quot;isp&quot;:&quot;465&quot;}]</code>, where <code>city</code> corresponds to Beijing, Hangzhou, and Qingdao respectively.</p>
      * <blockquote>
-     * <p>You can call the DescribeSiteMonitorISPCityList operation to query the detection points. For more information, see <a href="https://help.aliyun.com/document_detail/115045.html">DescribeSiteMonitorISPCityList</a>. If you leave this parameter empty, the system randomly selects three detection points.</p>
+     * <p>You can call the DescribeSiteMonitorISPCityList operation to query detection point information. For more information, see <a href="https://help.aliyun.com/document_detail/115045.html">DescribeSiteMonitorISPCityList</a>. If this parameter is left empty, the system randomly selects three detection points.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -63,7 +63,7 @@ public class ModifySiteMonitorRequest extends TeaModel {
     public String ispCities;
 
     /**
-     * <p>The extended options of the protocol that is used by the site monitoring task. The options vary based on the protocol.</p>
+     * <p>The advanced extended options for the protocol type of the monitoring task. Different protocol types correspond to different extended options.</p>
      * 
      * <strong>example:</strong>
      * <p>{&quot;time_out&quot;:5000}</p>
@@ -75,7 +75,7 @@ public class ModifySiteMonitorRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of the site monitoring task.</p>
+     * <p>The ID of the monitoring task.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -85,7 +85,7 @@ public class ModifySiteMonitorRequest extends TeaModel {
     public String taskId;
 
     /**
-     * <p>The name of the site monitoring task. The name must be 4 to 100 characters in length, and can contain letters, digits, and underscores (_).</p>
+     * <p>The name of the monitoring task. The name must be 4 to 100 characters in length and can contain letters, digits, underscores (_), and Chinese characters.</p>
      * 
      * <strong>example:</strong>
      * <p>HanZhou_ECS2</p>

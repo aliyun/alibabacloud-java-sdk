@@ -7,8 +7,10 @@ public class DescribeAlertHistoryListRequest extends TeaModel {
     /**
      * <p>The order of alerts. Valid values:</p>
      * <ul>
-     * <li>true (default value): reverse chronological order</li>
-     * <li>false: chronological order</li>
+     * <li><p>true (default value): reverse chronological order</p>
+     * </li>
+     * <li><p>false: chronological order</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -113,8 +115,10 @@ public class DescribeAlertHistoryListRequest extends TeaModel {
     /**
      * <p>The status of the alert. Valid values:</p>
      * <ul>
-     * <li>ALARM (default value): Alerts are triggered.</li>
-     * <li>OK: No alerts are triggered.</li>
+     * <li><p>ALARM (default value): Alerts are triggered.</p>
+     * </li>
+     * <li><p>OK: No alerts are triggered.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -126,9 +130,12 @@ public class DescribeAlertHistoryListRequest extends TeaModel {
     /**
      * <p>Specifies whether alerts are muted. Valid values:</p>
      * <ul>
-     * <li>2 (default value): Alerts are muted and are not triggered within the mute period, even if the condition specified in the alert rule is met.</li>
-     * <li>0: Alerts are triggered or cleared.</li>
-     * <li>1: The alert rule is ineffective.</li>
+     * <li><p>2 (default value): Alerts are muted and are not triggered within the mute period, even if the condition specified in the alert rule is met.</p>
+     * </li>
+     * <li><p>0: Alerts are triggered or cleared.</p>
+     * </li>
+     * <li><p>1: The alert rule is ineffective.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyGroupMonitoringAgentProcessRequest extends TeaModel {
     /**
-     * <p>The alert rule configurations.</p>
+     * <p>The configurations of the alert rule.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("AlertConfig")
@@ -22,7 +22,7 @@ public class ModifyGroupMonitoringAgentProcessRequest extends TeaModel {
     public String groupId;
 
     /**
-     * <p>The ID of the process monitoring task.</p>
+     * <p>The ID of the process monitoring job for the application group.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -32,12 +32,7 @@ public class ModifyGroupMonitoringAgentProcessRequest extends TeaModel {
     public String id;
 
     /**
-     * <p>The logical operator used between conditional expressions that are used to match instances. Valid values:</p>
-     * <ul>
-     * <li>all</li>
-     * <li>and</li>
-     * <li>or</li>
-     * </ul>
+     * <p>This parameter is deprecated. You can ignore it.</p>
      * 
      * <strong>example:</strong>
      * <p>and</p>
@@ -96,20 +91,29 @@ public class ModifyGroupMonitoringAgentProcessRequest extends TeaModel {
     public static class ModifyGroupMonitoringAgentProcessRequestAlertConfigTargetList extends TeaModel {
         /**
          * <p>The Alibaba Cloud Resource Name (ARN) of the resource.</p>
-         * <p>For information about how to obtain the ARN of a resource, see <a href="https://help.aliyun.com/document_detail/121592.html">DescribeMetricRuleTargets</a>.</p>
-         * <p>Format: <code>acs:{Service name abbreviation}:{regionId}:{userId}:/{Resource type}/{Resource name}/message</code>. Example: <code>acs:mns:cn-hangzhou:120886317861****:/queues/test123/message</code>. Fields:</p>
+         * <p>For more information, see <a href="https://help.aliyun.com/document_detail/121592.html">DescribeMetricRuleTargets</a>.</p>
+         * <p>The ARN of a resource is in the following format: <code>acs:{product-abbreviation}:{regionId}:{userId}:/{resource-type}/{resource-name}/message</code>. For example: <code>acs:mns:cn-hangzhou:120886317861****:/queues/test123/message</code>. The parameters are described as follows:</p>
          * <ul>
-         * <li>{Service name abbreviation}: the abbreviation of the service name. Valid value: mns.</li>
-         * <li>{userId}: the ID of the Alibaba Cloud account.</li>
-         * <li>{regionId}: the region ID of the message queue or topic.</li>
-         * <li>{Resource type}: the type of the resource for which alerts are triggered. Valid values: <ul>
-         * <li><strong>queues</strong> </li>
-         * <li><strong>topics</strong></li>
+         * <li><p>{product-abbreviation}: Currently, only Simple Message Queue (formerly MNS) is supported.</p>
+         * </li>
+         * <li><p>{userId}: The ID of your Alibaba Cloud account.</p>
+         * </li>
+         * <li><p>{regionId}: The region where the Simple Message Queue (formerly MNS) queue or subject is located.</p>
+         * </li>
+         * <li><p>{resource-type}: The type of the resource that receives alerts. Valid values:</p>
+         * <ul>
+         * <li><p><strong>queues</strong>: a queue.</p>
+         * </li>
+         * <li><p><strong>topics</strong>: a subject.</p>
+         * </li>
          * </ul>
          * </li>
-         * <li>{Resourcename}: the name of the resource. <ul>
-         * <li>If the resource type is set to <strong>queues</strong>, the resource name is the name of the message queue. </li>
-         * <li>If the resource type is set to <strong>topics</strong>, the resource name is the name of the topic.`</li>
+         * <li><p>{resource-name}: The name of the resource.</p>
+         * <ul>
+         * <li><p>If the resource type is <strong>queues</strong>, the resource name is the queue name.</p>
+         * </li>
+         * <li><p>If the resource type is <strong>topics</strong>, the resource name is the subject name.</p>
+         * </li>
          * </ul>
          * </li>
          * </ul>
@@ -121,8 +125,8 @@ public class ModifyGroupMonitoringAgentProcessRequest extends TeaModel {
         public String arn;
 
         /**
-         * <p>The ID of the resource for which alerts are triggered.</p>
-         * <p>For information about how to obtain the ID of a resource for which alerts are triggered, see <a href="https://help.aliyun.com/document_detail/121592.html">DescribeMetricRuleTargets</a>.</p>
+         * <p>The ID of the alert-triggered target.</p>
+         * <p>For more information, see <a href="https://help.aliyun.com/document_detail/121592.html">DescribeMetricRuleTargets</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -131,7 +135,7 @@ public class ModifyGroupMonitoringAgentProcessRequest extends TeaModel {
         public String id;
 
         /**
-         * <p>The parameters of the alert callback. The parameters are in the JSON format.</p>
+         * <p>The JSON-formatted parameters for the alert callback.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;customField1&quot;:&quot;value1&quot;,&quot;customField2&quot;:&quot;$.name&quot;}</p>
@@ -140,11 +144,14 @@ public class ModifyGroupMonitoringAgentProcessRequest extends TeaModel {
         public String jsonParams;
 
         /**
-         * <p>The level of the alert. Valid values:</p>
+         * <p>The alert level. Valid values:</p>
          * <ul>
-         * <li>INFO: information</li>
-         * <li>WARN: warning</li>
-         * <li>CRITICAL: critical</li>
+         * <li><p>INFO: information</p>
+         * </li>
+         * <li><p>WARN: warning</p>
+         * </li>
+         * <li><p>CRITICAL: critical</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -194,19 +201,30 @@ public class ModifyGroupMonitoringAgentProcessRequest extends TeaModel {
 
     public static class ModifyGroupMonitoringAgentProcessRequestAlertConfig extends TeaModel {
         /**
-         * <p>The comparison operator that is used to compare the metric value with the threshold. Valid values of N: 1 to 200. Valid values:</p>
+         * <p>The comparison operator for the threshold of the Critical alert level. The value of N can be 1 to 200. Valid values:</p>
          * <ul>
-         * <li>GreaterThanOrEqualToThreshold: greater than or equal to the threshold</li>
-         * <li>GreaterThanThreshold: greater than the threshold</li>
-         * <li>LessThanOrEqualToThreshold: less than or equal to the threshold</li>
-         * <li>LessThanThreshold: less than the threshold.</li>
-         * <li>NotEqualToThreshold: not equal to the threshold</li>
-         * <li>GreaterThanYesterday: greater than the metric value at the same time yesterday.</li>
-         * <li>LessThanYesterday: less than the metric value at the same time yesterday</li>
-         * <li>GreaterThanLastWeek: greater than the metric value at the same time last week</li>
-         * <li>LessThanLastWeek: less than the metric value at the same time last week</li>
-         * <li>GreaterThanLastPeriod: greater than the metric value in the last monitoring cycle</li>
-         * <li>LessThanLastPeriod: less than the metric value in the last monitoring cycle</li>
+         * <li><p>GreaterThanOrEqualToThreshold: greater than or equal to</p>
+         * </li>
+         * <li><p>GreaterThanThreshold: greater than</p>
+         * </li>
+         * <li><p>LessThanOrEqualToThreshold: less than or equal to</p>
+         * </li>
+         * <li><p>LessThanThreshold: less than</p>
+         * </li>
+         * <li><p>NotEqualToThreshold: not equal to</p>
+         * </li>
+         * <li><p>GreaterThanYesterday: greater than the value at the same time yesterday</p>
+         * </li>
+         * <li><p>LessThanYesterday: less than the value at the same time yesterday</p>
+         * </li>
+         * <li><p>GreaterThanLastWeek: greater than the value at the same time last week</p>
+         * </li>
+         * <li><p>LessThanLastWeek: less than the value at the same time last week</p>
+         * </li>
+         * <li><p>GreaterThanLastPeriod: greater than the value in the last monitoring cycle</p>
+         * </li>
+         * <li><p>LessThanLastPeriod: less than the value in the last monitoring cycle</p>
+         * </li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -217,7 +235,7 @@ public class ModifyGroupMonitoringAgentProcessRequest extends TeaModel {
         public String comparisonOperator;
 
         /**
-         * <p>The time period during which the alert rule is effective. Valid values of N: 1 to 200.</p>
+         * <p>The time period when the alert rule is effective. The value of N can be 1 to 200.</p>
          * 
          * <strong>example:</strong>
          * <p>00:00-22:59</p>
@@ -226,11 +244,14 @@ public class ModifyGroupMonitoringAgentProcessRequest extends TeaModel {
         public String effectiveInterval;
 
         /**
-         * <p>The level of the alert. Valid values of N: 1 to 200. Valid values:</p>
+         * <p>The alert level. The value of N can be 1 to 200. Valid values:</p>
          * <ul>
-         * <li>critical (default value): critical</li>
-         * <li>warn: warning</li>
-         * <li>info: information</li>
+         * <li><p>critical (default): critical</p>
+         * </li>
+         * <li><p>warn: warning</p>
+         * </li>
+         * <li><p>info: information</p>
+         * </li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -241,19 +262,19 @@ public class ModifyGroupMonitoringAgentProcessRequest extends TeaModel {
         public String escalationsLevel;
 
         /**
-         * <p>The time period during which the alert rule is ineffective. Valid values of N: 1 to 200.</p>
+         * <p>This parameter is deprecated. You can ignore it.</p>
          * 
          * <strong>example:</strong>
-         * <p>23:00-23:59</p>
+         * <p>00:00-05:30</p>
          */
         @NameInMap("NoEffectiveInterval")
         public String noEffectiveInterval;
 
         /**
-         * <p>The mute period during which new alerts are not sent even if the trigger conditions are met. Valid values of N: 1 to 200.</p>
-         * <p>Unit: seconds. Minimum value: 3600, which is equivalent to one hour. Default value: 86400, which is equivalent to one day.</p>
+         * <p>The mute period. The value of N can be 1 to 200.</p>
+         * <p>Unit: seconds. Minimum value: 3600. Default value: 86400.</p>
          * <blockquote>
-         * <p> Only one alert notification is sent during a mute period even if the metric value exceeds the alert threshold during consecutive checks.</p>
+         * <p>If monitoring data continuously exceeds the alert threshold, an alert notification is sent only once during each mute period.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -263,9 +284,9 @@ public class ModifyGroupMonitoringAgentProcessRequest extends TeaModel {
         public String silenceTime;
 
         /**
-         * <p>The statistical aggregation method that is used to calculate the metric values. Valid values of N: 1 to 200.</p>
+         * <p>The statistical method for alerts. The value of N can be 1 to 200.</p>
          * <blockquote>
-         * <p> Set the value to Average.</p>
+         * <p>Only Average is supported.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -275,13 +296,13 @@ public class ModifyGroupMonitoringAgentProcessRequest extends TeaModel {
         public String statistics;
 
         /**
-         * <p>The alert trigger.</p>
+         * <p>None.</p>
          */
         @NameInMap("TargetList")
         public java.util.List<ModifyGroupMonitoringAgentProcessRequestAlertConfigTargetList> targetList;
 
         /**
-         * <p>The alert threshold. Valid values of N: 1 to 200.</p>
+         * <p>The alert threshold. The value of N can be 1 to 200.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -291,9 +312,9 @@ public class ModifyGroupMonitoringAgentProcessRequest extends TeaModel {
         public String threshold;
 
         /**
-         * <p>The number of times for which the threshold can be consecutively exceeded. Valid values of N: 1 to 200. Default value: 3.</p>
+         * <p>The number of consecutive times that the alert level is reached. The value of N can be 1 to 200. Default value: 3.</p>
          * <blockquote>
-         * <p> A metric triggers an alert only after the metric value reaches the threshold consecutively for the specified times.</p>
+         * <p>An alert is triggered only when the alert level is reached the specified number of consecutive times and the threshold is met.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -304,7 +325,7 @@ public class ModifyGroupMonitoringAgentProcessRequest extends TeaModel {
         public String times;
 
         /**
-         * <p>The callback URL to which a POST request is sent when an alert is triggered based on the alert rule. Valid values of N: 1 to 200.</p>
+         * <p>The callback URL. A POST request is sent to this URL when an alert is triggered. The value of N can be 1 to 200.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="http://www.aliyun.com">http://www.aliyun.com</a></p>

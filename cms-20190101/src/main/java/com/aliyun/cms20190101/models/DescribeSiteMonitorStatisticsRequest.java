@@ -5,11 +5,11 @@ import com.aliyun.tea.*;
 
 public class DescribeSiteMonitorStatisticsRequest extends TeaModel {
     /**
-     * <p>The metric name. Valid values:</p>
+     * <p>The name of the metric. Valid values:</p>
      * <ul>
-     * <li>Availability</li>
-     * <li>ErrorRate</li>
-     * <li>ResponseTime</li>
+     * <li>Availability: the availability.</li>
+     * <li>ErrorRate: the error rate.</li>
+     * <li>ResponseTime: the response time.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -24,7 +24,7 @@ public class DescribeSiteMonitorStatisticsRequest extends TeaModel {
 
     /**
      * <p>The beginning of the time range to query.</p>
-     * <p>Unit: milliseconds. The default value is 1 hour ahead of the current time.</p>
+     * <p>Unit: milliseconds. Default value: 1 hour before the current time.</p>
      * 
      * <strong>example:</strong>
      * <p>1576142850527</p>
@@ -34,7 +34,7 @@ public class DescribeSiteMonitorStatisticsRequest extends TeaModel {
 
     /**
      * <p>The ID of the site monitoring task.</p>
-     * <p>For more information about how to obtain the ID of a site monitoring task, see <a href="https://help.aliyun.com/document_detail/115052.html">DescribeSiteMonitorList</a>.</p>
+     * <p>For information about how to obtain the ID of a site monitoring task, see <a href="https://help.aliyun.com/document_detail/115052.html">DescribeSiteMonitorList</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -45,7 +45,7 @@ public class DescribeSiteMonitorStatisticsRequest extends TeaModel {
 
     /**
      * <p>The statistical period.</p>
-     * <p>Unit: minutes. Default value: 1440 (one day). Maximum value: 43200 (30 days).</p>
+     * <p>Unit: minutes. Default value: 1440 (1 day). Maximum value: 43200 (30 days).</p>
      * 
      * <strong>example:</strong>
      * <p>1440</p>

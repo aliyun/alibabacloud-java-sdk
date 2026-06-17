@@ -65,8 +65,10 @@ public class DescribeCustomEventAttributeRequest extends TeaModel {
     /**
      * <p>The keywords that are used to search for the event.</p>
      * <ul>
-     * <li>If you need to query the custom event whose content contains a and b, set the value to a and b.</li>
-     * <li>If you need to query the custom event whose content contains a or b, set the value to a or b.</li>
+     * <li><p>If you need to query the custom event whose content contains a and b, set the value to a and b.</p>
+     * </li>
+     * <li><p>If you need to query the custom event whose content contains a or b, set the value to a or b.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

@@ -9,7 +9,7 @@ public class PutMetricRuleTargetsRequest extends TeaModel {
 
     /**
      * <p>The ID of the alert rule.</p>
-     * <p>For information about how to obtain the ID of an alert rule, see <a href="https://help.aliyun.com/document_detail/114941.html">DescribeMetricRuleList</a>.</p>
+     * <p>For information about how to obtain the alert rule ID, see <a href="https://help.aliyun.com/document_detail/114941.html">DescribeMetricRuleList</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -56,33 +56,33 @@ public class PutMetricRuleTargetsRequest extends TeaModel {
 
     public static class PutMetricRuleTargetsRequestTargets extends TeaModel {
         /**
-         * <p>The Alibaba Cloud Resource Name (ARN) of the resource. Simple Message Queue (formerly MNS) (SMQ), Auto Scaling, Simple Log Service, and Function Compute are supported.</p>
-         * <p>The following part describes the ARN of SMQ and the parameters in the ARN:</p>
-         * <p><code>acs:mns:{regionId}:{userId}:/{Resource type}/{Resource name}/message</code>.</p>
+         * <p>The Alibaba Cloud Resource Name (ARN) of the resource. Simple Message Queue (formerly MNS), elastic scaling (ESS), Simple Log Service (SLS), and Function Compute (FC) are supported.</p>
+         * <p>The following section describes the ARN parameter metric description for Simple Message Queue (formerly MNS):</p>
+         * <p><code>acs:mns:{regionId}:{userId}:/{Resource type}/{Resource name}/message</code></p>
          * <ul>
-         * <li><p>{regionId}: the region ID of the SMQ queue or topic.</p>
+         * <li><p>{regionId}: the region where the MSMQ or topic of Simple Message Queue (formerly MNS) resides.</p>
          * </li>
-         * <li><p>{userId}: the ID of the Alibaba Cloud account that owns the resource.</p>
+         * <li><p>{userId}: the Alibaba Cloud account that owns the resource.</p>
          * </li>
-         * <li><p>{Resource type}: the type of the resource for which alerts are triggered. Valid values:</p>
+         * <li><p>{Resource type}: the type of the resource that accepts alert notifications. Valid values:</p>
          * <ul>
-         * <li><strong>queues</strong></li>
-         * <li><strong>topics</strong></li>
+         * <li><strong>queues</strong>: queue.</li>
+         * <li><strong>topics</strong>: topic.</li>
          * </ul>
          * </li>
-         * <li><p>{Resource name}: the resource name.</p>
+         * <li><p>{Resource name}: the name of the resource.</p>
          * <ul>
          * <li>If the resource type is <strong>queues</strong>, the resource name is the queue name.</li>
          * <li>If the resource type is <strong>topics</strong>, the resource name is the topic name.</li>
          * </ul>
          * </li>
          * </ul>
-         * <p>ARN of Auto Scaling:</p>
+         * <p>ARN for elastic scaling:</p>
          * <p>acs:ess:{regionId}:{userId}:scalingGroupId/{Scaling group ID}:scalingRuleId/{Scaling rule ID}</p>
-         * <p>ARN of Simple Log Service:</p>
+         * <p>ARN for Simple Log Service:</p>
          * <p>acs:log:{regionId}:{userId}:project/{Project name}/logstore/{Logstore name}</p>
-         * <p>ARN of Function Compute:</p>
-         * <p>acs:fc:{regionId}:{userId}:services/{Service name}/functions/{Function name}</p>
+         * <p>ARN for Function Compute:</p>
+         * <p>acs:fc:{regionId}:{userId}:services/{Service name}/functions/{Function name}.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -92,8 +92,8 @@ public class PutMetricRuleTargetsRequest extends TeaModel {
         public String arn;
 
         /**
-         * <p>The ID of the resource for which alerts are triggered.</p>
-         * <p>For more information about how to obtain the ID of the resource for which alerts are triggered, see <a href="https://help.aliyun.com/document_detail/121592.html">DescribeMetricRuleTargets</a>.</p>
+         * <p>The ID of the alert trigger target.</p>
+         * <p>For information about how to obtain the alert trigger target ID, see <a href="https://help.aliyun.com/document_detail/121592.html">DescribeMetricRuleTargets</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -103,7 +103,7 @@ public class PutMetricRuleTargetsRequest extends TeaModel {
         public String id;
 
         /**
-         * <p>The parameters of the alert callback. The parameters are in the JSON format.</p>
+         * <p>The JSON-formatted parameters of the alert callback.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;customField1&quot;:&quot;value1&quot;,&quot;customField2&quot;:&quot;$.name&quot;}</p>
@@ -114,9 +114,9 @@ public class PutMetricRuleTargetsRequest extends TeaModel {
         /**
          * <p>The alert level. Valid values:</p>
          * <ul>
-         * <li>INFO</li>
-         * <li>WARN</li>
-         * <li>CRITICAL</li>
+         * <li>INFO: information.</li>
+         * <li>WARN: warning.</li>
+         * <li>CRITICAL: critical.</li>
          * </ul>
          * 
          * <strong>example:</strong>

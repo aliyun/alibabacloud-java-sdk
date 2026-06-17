@@ -5,10 +5,12 @@ import com.aliyun.tea.*;
 
 public class InstallMonitoringAgentRequest extends TeaModel {
     /**
-     * <p>Specifies whether to install the CloudMonitor agent. Valid values:</p>
+     * <p>Specifies whether to forcibly install the CloudMonitor agent. Valid values:</p>
      * <ul>
-     * <li>true (default value): yes</li>
-     * <li>false: no</li>
+     * <li><p>true (default): Forcibly installs the agent.</p>
+     * </li>
+     * <li><p>false: Does not forcibly install the agent.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,14 +20,17 @@ public class InstallMonitoringAgentRequest extends TeaModel {
     public Boolean force;
 
     /**
-     * <p>Specifies whether to install the CloudMonitor agent on all ECS instances that belong to the current Alibaba Cloud account. Valid values:</p>
+     * <p>The installation command. This command installs the CloudMonitor agent on all Alibaba Cloud hosts that belong to your Alibaba Cloud account. Valid values:</p>
      * <ul>
-     * <li><code>onlyInstallNotHasAgent</code>: installs the latest version of the CloudMonitor agent only on ECS instances on which the agent is not installed.</li>
-     * <li><code>onlyUpgradeAgent</code>: upgrades the CloudMonitor agent to the latest version only for ECS instances on which an earlier version of the agent is installed.</li>
-     * <li><code>installAndUpgrade</code>: installs the latest version of the CloudMonitor agent on ECS instances on which the agent is not installed, and upgrades the CloudMonitor agent to the latest version for ECS instances on which an earlier version of the agent is installed.</li>
+     * <li><p><code>onlyInstallNotHasAgent</code>: Installs the latest version of the CloudMonitor agent only on Alibaba Cloud hosts where the agent is not installed.</p>
+     * </li>
+     * <li><p><code>onlyUpgradeAgent</code>: Upgrades the CloudMonitor agent only on Alibaba Cloud hosts where an earlier version of the agent is installed.</p>
+     * </li>
+     * <li><p><code>installAndUpgrade</code>: Installs the latest version of the CloudMonitor agent on Alibaba Cloud hosts where the agent is not installed, and upgrades the agent on Alibaba Cloud hosts where an earlier version of the agent is installed.</p>
+     * </li>
      * </ul>
      * <blockquote>
-     * <p> If you set the InstallCommand parameter, the <code>InstanceIds</code> parameter does not take effect.</p>
+     * <p>If you set this parameter, the <code>InstanceIds</code> parameter is invalid.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -35,6 +40,12 @@ public class InstallMonitoringAgentRequest extends TeaModel {
     public String installCommand;
 
     /**
+     * <p>The IDs of the Alibaba Cloud hosts.</p>
+     * <p>You can specify from 1 to 10 instance IDs.</p>
+     * <blockquote>
+     * <p>You must specify either <code>InstallCommand</code> or <code>InstanceIds</code>.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>i-m5e0k0bexac8tykr****</p>
      */

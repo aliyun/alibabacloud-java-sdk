@@ -8,7 +8,7 @@ public class DisableMetricRulesRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of the alert rule. Valid values of N: 1 to 20.</p>
+     * <p>The IDs of the alert rules.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

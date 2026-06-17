@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeSyntheticProbeListResponseBody extends TeaModel {
     /**
+     * <p>The status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -12,12 +14,14 @@ public class DescribeSyntheticProbeListResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The queried detection points.</p>
+     * <p>The list of detection points.</p>
      */
     @NameInMap("IspCityList")
     public java.util.List<DescribeSyntheticProbeListResponseBodyIspCityList> ispCityList;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>The specified resource is not found.</p>
      */
@@ -25,6 +29,8 @@ public class DescribeSyntheticProbeListResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>87170bc7-e28a-4c93-b9bf-90a1dbe84736</p>
      */
@@ -32,6 +38,8 @@ public class DescribeSyntheticProbeListResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the operation was successful. Valid values: true: The operation was successful. false: The operation failed.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -84,10 +92,18 @@ public class DescribeSyntheticProbeListResponseBody extends TeaModel {
     }
 
     public static class DescribeSyntheticProbeListResponseBodyIspCityList extends TeaModel {
+        /**
+         * <p>The name of the area in Chinese.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>华北</p>
+         */
         @NameInMap("AreaCn")
         public String areaCn;
 
         /**
+         * <p>The name of the area in English.</p>
+         * 
          * <strong>example:</strong>
          * <p>Huabei</p>
          */
@@ -95,16 +111,26 @@ public class DescribeSyntheticProbeListResponseBody extends TeaModel {
         public String areaEn;
 
         /**
+         * <p>The city ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>738</p>
          */
         @NameInMap("City")
         public String city;
 
+        /**
+         * <p>The name of the city in Chinese.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>北京</p>
+         */
         @NameInMap("CityCn")
         public String cityCn;
 
         /**
+         * <p>The name of the city in English.</p>
+         * 
          * <strong>example:</strong>
          * <p>Beijing</p>
          */
@@ -112,16 +138,26 @@ public class DescribeSyntheticProbeListResponseBody extends TeaModel {
         public String cityEn;
 
         /**
+         * <p>The country code.</p>
+         * 
          * <strong>example:</strong>
          * <p>629</p>
          */
         @NameInMap("Country")
         public String country;
 
+        /**
+         * <p>The name of the country in Chinese.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>中国</p>
+         */
         @NameInMap("CountryCn")
         public String countryCn;
 
         /**
+         * <p>The name of the country or region in English.</p>
+         * 
          * <strong>example:</strong>
          * <p>China</p>
          */
@@ -129,6 +165,8 @@ public class DescribeSyntheticProbeListResponseBody extends TeaModel {
         public String countryEn;
 
         /**
+         * <p>The number of IPv4 detection points in data centers.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -136,7 +174,7 @@ public class DescribeSyntheticProbeListResponseBody extends TeaModel {
         public Integer idcV4ProbeCount;
 
         /**
-         * <p>The number of IPv6 nodes in data centers.</p>
+         * <p>The number of IDC IPv6 nodes.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -145,22 +183,32 @@ public class DescribeSyntheticProbeListResponseBody extends TeaModel {
         public Integer idcV6ProbeCount;
 
         /**
-         * <p>The IP addresses of the monitored nodes.</p>
+         * <p>The list of node IP addresses.</p>
          */
         @NameInMap("IpPool")
         public java.util.List<String> ipPool;
 
         /**
+         * <p>The carrier ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>232</p>
          */
         @NameInMap("Isp")
         public String isp;
 
+        /**
+         * <p>The name of the carrier in Chinese.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>联通</p>
+         */
         @NameInMap("IspCn")
         public String ispCn;
 
         /**
+         * <p>The name of the carrier in English.</p>
+         * 
          * <strong>example:</strong>
          * <p>China-Unicom</p>
          */
@@ -168,6 +216,8 @@ public class DescribeSyntheticProbeListResponseBody extends TeaModel {
         public String ispEn;
 
         /**
+         * <p>The number of last-mile detection points.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -175,6 +225,8 @@ public class DescribeSyntheticProbeListResponseBody extends TeaModel {
         public Integer lmProbeCount;
 
         /**
+         * <p>The number of mobile detection points.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -182,16 +234,26 @@ public class DescribeSyntheticProbeListResponseBody extends TeaModel {
         public Integer mbProbeCount;
 
         /**
+         * <p>The province code.</p>
+         * 
          * <strong>example:</strong>
          * <p>264</p>
          */
         @NameInMap("Region")
         public String region;
 
+        /**
+         * <p>The name of the province in Chinese.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>江西省</p>
+         */
         @NameInMap("RegionCn")
         public String regionCn;
 
         /**
+         * <p>The name of the province in English.</p>
+         * 
          * <strong>example:</strong>
          * <p>Jiangxi</p>
          */
