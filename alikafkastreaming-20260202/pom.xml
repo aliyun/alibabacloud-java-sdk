@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>alikafkastreaming20260202</artifactId>
-  <version>1.0.1</version>
+  <version>1.1.0</version>
   <packaging>jar</packaging>
   <name>alikafkastreaming20260202</name>
   <description>Alibaba Cloud AlikafkaStreaming (20260202) SDK for Java
