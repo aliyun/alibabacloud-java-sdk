@@ -461,7 +461,7 @@ public class GetEdgeContainerAppVersionResponseBody extends TeaModel {
          * <p>The command that is run before the container is started. Format: <code>{&quot;exec&quot;:{&quot;command&quot;:[&quot;cat&quot;,&quot;/etc/group&quot;\\]}}</code>. If you want to cancel this configuration, set the parameter value to <code>&quot;&quot;</code> or <code>{}</code>. If you do not specify this parameter, this configuration is ignored.</p>
          * 
          * <strong>example:</strong>
-         * <p>{\&quot;exec\&quot;:{\&quot;command\&quot;:[\&quot;touch\&quot;,\&quot;/home/admin/checkpoststartV1\&quot;]}}</p>
+         * <p>sh poststart.sh &quot;echo hello world&quot;</p>
          */
         @NameInMap("PostStart")
         public String postStart;
@@ -501,6 +501,9 @@ public class GetEdgeContainerAppVersionResponseBody extends TeaModel {
 
         /**
          * <p>The storage capacity of the container. Valid values: 0.5G, 10G, 20G, and 30G.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.5G, 标识存储空间，取值范围（0.5G | 10G | 20G | 30G）</p>
          */
         @NameInMap("Storage")
         public String storage;
@@ -680,9 +683,12 @@ public class GetEdgeContainerAppVersionResponseBody extends TeaModel {
         /**
          * <p>The status of the current version. Valid values:</p>
          * <ul>
-         * <li>created: The version is created.</li>
-         * <li>failed: The version failed to be created.</li>
-         * <li>creating: The version is being created.</li>
+         * <li><p>created: The version is created.</p>
+         * </li>
+         * <li><p>failed: The version failed to be created.</p>
+         * </li>
+         * <li><p>creating: The version is being created.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

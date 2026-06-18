@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UploadOriginCaCertificateRequest extends TeaModel {
     /**
-     * <p>The certificate content.</p>
+     * <p>The content of the CA certificate.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class UploadOriginCaCertificateRequest extends TeaModel {
     public String certificate;
 
     /**
-     * <p>The certificate name.</p>
+     * <p>The name of the certificate.</p>
      * 
      * <strong>example:</strong>
      * <p>example</p>
@@ -24,7 +24,7 @@ public class UploadOriginCaCertificateRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The website ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation.</p>
+     * <p>The site ID. You can call the <a href="~~ListSites~~">ListSites</a> operation to get this ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

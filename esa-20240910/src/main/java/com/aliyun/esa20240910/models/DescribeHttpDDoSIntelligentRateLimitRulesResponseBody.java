@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeHttpDDoSIntelligentRateLimitRulesResponseBody extends TeaModel {
     /**
+     * <p>The current page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -12,6 +14,8 @@ public class DescribeHttpDDoSIntelligentRateLimitRulesResponseBody extends TeaMo
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -19,7 +23,7 @@ public class DescribeHttpDDoSIntelligentRateLimitRulesResponseBody extends TeaMo
     public Integer pageSize;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>36af3fcc-43d0-441c-86b1-428951dc8225</p>
@@ -27,10 +31,15 @@ public class DescribeHttpDDoSIntelligentRateLimitRulesResponseBody extends TeaMo
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The list of rules.</p>
+     */
     @NameInMap("RuleInfos")
     public java.util.List<DescribeHttpDDoSIntelligentRateLimitRulesResponseBodyRuleInfos> ruleInfos;
 
     /**
+     * <p>The total number of rules.</p>
+     * 
      * <strong>example:</strong>
      * <p>100</p>
      */
@@ -84,6 +93,8 @@ public class DescribeHttpDDoSIntelligentRateLimitRulesResponseBody extends TeaMo
 
     public static class DescribeHttpDDoSIntelligentRateLimitRulesResponseBodyRuleInfos extends TeaModel {
         /**
+         * <p>The action to perform.</p>
+         * 
          * <strong>example:</strong>
          * <p>js</p>
          */
@@ -91,6 +102,8 @@ public class DescribeHttpDDoSIntelligentRateLimitRulesResponseBody extends TeaMo
         public String action;
 
         /**
+         * <p>The conditions that trigger the rule.</p>
+         * 
          * <strong>example:</strong>
          * <p>{&quot;$and&quot;:[{&quot;key&quot;:&quot;URI&quot;,&quot;opValue&quot;:&quot;prefix-match&quot;,&quot;values&quot;:&quot;/&quot;}]}</p>
          */
@@ -98,6 +111,8 @@ public class DescribeHttpDDoSIntelligentRateLimitRulesResponseBody extends TeaMo
         public String condition;
 
         /**
+         * <p>The ID of the protection rule for log records.</p>
+         * 
          * <strong>example:</strong>
          * <p>100030</p>
          */
@@ -105,6 +120,8 @@ public class DescribeHttpDDoSIntelligentRateLimitRulesResponseBody extends TeaMo
         public Long logRuleId;
 
         /**
+         * <p>The duration of the penalty in seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>86400</p>
          */
@@ -112,6 +129,8 @@ public class DescribeHttpDDoSIntelligentRateLimitRulesResponseBody extends TeaMo
         public Long punishTime;
 
         /**
+         * <p>The frequency information.</p>
+         * 
          * <strong>example:</strong>
          * <p>{&quot;threshold&quot;:2000,&quot;interval&quot;:5,&quot;target&quot;:&quot;ip&quot;,&quot;ttl&quot;:600}</p>
          */
@@ -119,6 +138,8 @@ public class DescribeHttpDDoSIntelligentRateLimitRulesResponseBody extends TeaMo
         public String rateLimit;
 
         /**
+         * <p>The name of the record.</p>
+         * 
          * <strong>example:</strong>
          * <p>test.example.com</p>
          */
@@ -126,6 +147,8 @@ public class DescribeHttpDDoSIntelligentRateLimitRulesResponseBody extends TeaMo
         public String recordName;
 
         /**
+         * <p>The ID of the rule.</p>
+         * 
          * <strong>example:</strong>
          * <p>20110849</p>
          */
@@ -133,6 +156,8 @@ public class DescribeHttpDDoSIntelligentRateLimitRulesResponseBody extends TeaMo
         public Long ruleId;
 
         /**
+         * <p>The name of the rule.</p>
+         * 
          * <strong>example:</strong>
          * <p>inner_cc_client_ip_ratelimit</p>
          */
@@ -140,6 +165,8 @@ public class DescribeHttpDDoSIntelligentRateLimitRulesResponseBody extends TeaMo
         public String ruleName;
 
         /**
+         * <p>The statistics.</p>
+         * 
          * <strong>example:</strong>
          * <p>{&quot;field&quot;:&quot;ip&quot;,&quot;mode&quot;:&quot;count&quot;}</p>
          */

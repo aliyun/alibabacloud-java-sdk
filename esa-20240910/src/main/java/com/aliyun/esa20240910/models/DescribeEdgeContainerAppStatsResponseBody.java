@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeEdgeContainerAppStatsResponseBody extends TeaModel {
     /**
-     * <p>Average CPU limit ratio</p>
+     * <p>The average CPU usage as a percentage of the limit.</p>
      * 
      * <strong>example:</strong>
      * <p>0.1</p>
@@ -14,7 +14,7 @@ public class DescribeEdgeContainerAppStatsResponseBody extends TeaModel {
     public Double cpuUsageSecondsQuotaRateAvg;
 
     /**
-     * <p>Average number of CPU cores</p>
+     * <p>Average CPU core usage, in seconds.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>
@@ -23,7 +23,7 @@ public class DescribeEdgeContainerAppStatsResponseBody extends TeaModel {
     public Double cpuUsageSecondsTotalAvg;
 
     /**
-     * <p>Average read IO</p>
+     * <p>The average read IO.</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>
@@ -32,7 +32,7 @@ public class DescribeEdgeContainerAppStatsResponseBody extends TeaModel {
     public Double fsReadsBytesAvgAvg;
 
     /**
-     * <p>Average write IO</p>
+     * <p>The average write IO.</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>
@@ -41,7 +41,7 @@ public class DescribeEdgeContainerAppStatsResponseBody extends TeaModel {
     public Double fsWritesBytesAvgAvg;
 
     /**
-     * <p>Average memory usage</p>
+     * <p>The average memory usage.</p>
      * 
      * <strong>example:</strong>
      * <p>0.1</p>
@@ -50,7 +50,7 @@ public class DescribeEdgeContainerAppStatsResponseBody extends TeaModel {
     public Double memoryRssAvg;
 
     /**
-     * <p>Average memory limit proportion</p>
+     * <p>The average memory usage as a percentage of the limit.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -59,7 +59,7 @@ public class DescribeEdgeContainerAppStatsResponseBody extends TeaModel {
     public Double memoryRssQuotaRateAvg;
 
     /**
-     * <p>Average PodReady rate</p>
+     * <p>The average pod ready rate.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>
@@ -67,6 +67,9 @@ public class DescribeEdgeContainerAppStatsResponseBody extends TeaModel {
     @NameInMap("PodReadyRateAvg")
     public Double podReadyRateAvg;
 
+    /**
+     * <p>The time and value of each data point for the chart.</p>
+     */
     @NameInMap("Points")
     public java.util.List<DescribeEdgeContainerAppStatsResponseBodyPoints> points;
 
@@ -158,6 +161,8 @@ public class DescribeEdgeContainerAppStatsResponseBody extends TeaModel {
 
     public static class DescribeEdgeContainerAppStatsResponseBodyPoints extends TeaModel {
         /**
+         * <p>The CPU usage as a percentage of the limit.</p>
+         * 
          * <strong>example:</strong>
          * <p>0.1</p>
          */
@@ -165,6 +170,8 @@ public class DescribeEdgeContainerAppStatsResponseBody extends TeaModel {
         public Double containerCpuUsageSecondsQuotaRate;
 
         /**
+         * <p>The number of CPU cores.</p>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */
@@ -172,6 +179,8 @@ public class DescribeEdgeContainerAppStatsResponseBody extends TeaModel {
         public Double containerCpuUsageSecondsTotal;
 
         /**
+         * <p>The read IO.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -179,6 +188,8 @@ public class DescribeEdgeContainerAppStatsResponseBody extends TeaModel {
         public Double containerFsReadsBytesAvg;
 
         /**
+         * <p>The write IO.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -186,6 +197,8 @@ public class DescribeEdgeContainerAppStatsResponseBody extends TeaModel {
         public Double containerFsWritesBytesAvg;
 
         /**
+         * <p>The memory usage.</p>
+         * 
          * <strong>example:</strong>
          * <p>0.1</p>
          */
@@ -193,6 +206,8 @@ public class DescribeEdgeContainerAppStatsResponseBody extends TeaModel {
         public Double containerMemoryRss;
 
         /**
+         * <p>The memory usage as a percentage of the limit.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -200,6 +215,8 @@ public class DescribeEdgeContainerAppStatsResponseBody extends TeaModel {
         public Double containerMemoryRssQuotaRate;
 
         /**
+         * <p>The pod ready rate.</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */
@@ -207,6 +224,8 @@ public class DescribeEdgeContainerAppStatsResponseBody extends TeaModel {
         public Double podReadyRate;
 
         /**
+         * <p>The time of the data point. The format is yyyy-MM-ddTHH:mm:ssZ in UTC.</p>
+         * 
          * <strong>example:</strong>
          * <p>2024-01-18T15:04:05Z</p>
          */

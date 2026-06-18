@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteCustomHostnameRequest extends TeaModel {
     /**
+     * <p>The ID of the custom hostname. To obtain this ID, call the <a href="https://help.aliyun.com/document_detail/3018667.html">ListCustomHostnames</a> operation.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

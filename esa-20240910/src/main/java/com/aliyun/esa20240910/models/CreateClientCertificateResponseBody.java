@@ -53,7 +53,7 @@ public class CreateClientCertificateResponseBody extends TeaModel {
      * <p>The CA that issued the certificate.</p>
      * 
      * <strong>example:</strong>
-     * <p>DCDN CA</p>
+     * <p>ESA CA</p>
      */
     @NameInMap("Issuer")
     public String issuer;

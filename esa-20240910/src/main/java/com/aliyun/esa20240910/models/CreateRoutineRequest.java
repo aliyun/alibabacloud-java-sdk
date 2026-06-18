@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateRoutineRequest extends TeaModel {
     /**
-     * <p>The routine description.</p>
+     * <p>The description of the Edge Routine.</p>
      * 
      * <strong>example:</strong>
      * <p>the description of this routine</p>
@@ -13,11 +13,17 @@ public class CreateRoutineRequest extends TeaModel {
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <p>Specifies whether the Edge Routine contains asset files.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("HasAssets")
     public Boolean hasAssets;
 
     /**
-     * <p>The routine name, which must be unique in the same account.</p>
+     * <p>The name of the Edge Routine. The name must be unique within the same account.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

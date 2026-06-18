@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class QuotaPageContentTypesValue extends TeaModel {
     /**
-     * <p>The switch for the Content-Type type in custom response pages.</p>
+     * <p>Whether the Content-Type is enabled.</p>
      */
     @NameInMap("Enable")
     public Boolean enable;
 
     /**
-     * <p>The content length quota for the Content-Type in custom response pages.</p>
+     * <p>The maximum content length for this Content-Type.</p>
      */
     @NameInMap("ContentLength")
     public WafQuotaInteger contentLength;

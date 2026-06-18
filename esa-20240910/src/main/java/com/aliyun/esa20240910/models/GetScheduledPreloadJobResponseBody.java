@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetScheduledPreloadJobResponseBody extends TeaModel {
     /**
-     * <p>The ID of the Alibaba Cloud account.</p>
+     * <p>The Alibaba Cloud account ID.</p>
      * 
      * <strong>example:</strong>
      * <p>15685865xxx14622</p>
@@ -14,7 +14,7 @@ public class GetScheduledPreloadJobResponseBody extends TeaModel {
     public String aliUid;
 
     /**
-     * <p>The time when the task was created.</p>
+     * <p>The creation time of the task.</p>
      * 
      * <strong>example:</strong>
      * <p>2024-06-02T02:23:26Z</p>
@@ -23,7 +23,7 @@ public class GetScheduledPreloadJobResponseBody extends TeaModel {
     public String createdAt;
 
     /**
-     * <p>The domain names to be prefetched.</p>
+     * <p>The list of domain names to preload.</p>
      * 
      * <strong>example:</strong>
      * <p>testurl.com</p>
@@ -32,7 +32,7 @@ public class GetScheduledPreloadJobResponseBody extends TeaModel {
     public String domains;
 
     /**
-     * <p>The error message that is returned.</p>
+     * <p>The error message.</p>
      * 
      * <strong>example:</strong>
      * <p>invalid domain:test.com</p>
@@ -41,7 +41,7 @@ public class GetScheduledPreloadJobResponseBody extends TeaModel {
     public String errorInfo;
 
     /**
-     * <p>The URL of the OSS object that stores a list of URLs that failed the conditional check for prefetching.</p>
+     * <p>The URL of the OSS file that contains the URLs that failed to preload.</p>
      * 
      * <strong>example:</strong>
      * <p><a href="https://xxxobject.oss-cn-reginon.aliyuncs.com/9d91_xxxxxxxxxxx_158bb6e0f97c477791209bb46bd599f7">https://xxxobject.oss-cn-reginon.aliyuncs.com/9d91_xxxxxxxxxxx_158bb6e0f97c477791209bb46bd599f7</a></p>
@@ -50,7 +50,7 @@ public class GetScheduledPreloadJobResponseBody extends TeaModel {
     public String failedFileOss;
 
     /**
-     * <p>The ID of the URL list file, which can be used during downloads.</p>
+     * <p>The ID of the file that contains the list of URLs. You can use this ID to download the file.</p>
      * 
      * <strong>example:</strong>
      * <p>665d3b48621bccf3fe29e1a7</p>
@@ -59,7 +59,7 @@ public class GetScheduledPreloadJobResponseBody extends TeaModel {
     public String fileId;
 
     /**
-     * <p>The ID of the prefetch task.</p>
+     * <p>The task ID.</p>
      * 
      * <strong>example:</strong>
      * <p>665d3af3621bccf3fe29e1a4</p>
@@ -68,7 +68,7 @@ public class GetScheduledPreloadJobResponseBody extends TeaModel {
     public String id;
 
     /**
-     * <p>The method to submit the URLs to be prefetched.</p>
+     * <p>The method used to submit the URLs.</p>
      * 
      * <strong>example:</strong>
      * <p>oss</p>
@@ -95,7 +95,7 @@ public class GetScheduledPreloadJobResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The website ID.</p>
+     * <p>The site ID.</p>
      * 
      * <strong>example:</strong>
      * <p>190007158391808</p>
@@ -104,7 +104,7 @@ public class GetScheduledPreloadJobResponseBody extends TeaModel {
     public Long siteId;
 
     /**
-     * <p>The number of submitted prefetch tasks.</p>
+     * <p>The number of URLs submitted for the preload task.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -113,7 +113,7 @@ public class GetScheduledPreloadJobResponseBody extends TeaModel {
     public Integer taskSubmitted;
 
     /**
-     * <p>The task type. Valid values: refresh and preload.</p>
+     * <p>The task type. Valid values are <code>preload</code> and <code>refresh</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>preload</p>
@@ -122,7 +122,7 @@ public class GetScheduledPreloadJobResponseBody extends TeaModel {
     public String taskType;
 
     /**
-     * <p>The total number of URLs.</p>
+     * <p>The total number of URLs in the task.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>

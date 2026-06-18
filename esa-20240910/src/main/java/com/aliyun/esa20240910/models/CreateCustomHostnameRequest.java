@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateCustomHostnameRequest extends TeaModel {
     /**
-     * <p>云盾证书ID，使用云盾证书时必填</p>
+     * <p>The ID of the CAS certificate. This parameter is required if <code>CertType</code> is set to <code>cas</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>30000478</p>
@@ -14,7 +14,13 @@ public class CreateCustomHostnameRequest extends TeaModel {
     public Long casId;
 
     /**
-     * <p>云盾证书所在地域，使用云盾证书时必填</p>
+     * <p>The region of the CAS certificate. This parameter is required if <code>CertType</code> is set to <code>cas</code>.</p>
+     * <ul>
+     * <li><p>For accounts on the China site, set this parameter to <code>cn-hangzhou</code>.</p>
+     * </li>
+     * <li><p>For accounts on the International site, set this parameter to <code>ap-southeast-1</code>.</p>
+     * </li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -23,7 +29,15 @@ public class CreateCustomHostnameRequest extends TeaModel {
     public String casRegion;
 
     /**
-     * <p>证书类型，SSL 开启时必填</p>
+     * <p>The certificate type. This parameter is required if <code>SslFlag</code> is set to <code>on</code>. Valid values:</p>
+     * <ul>
+     * <li><p><strong>free</strong>: A free certificate.</p>
+     * </li>
+     * <li><p><strong>upload</strong>: A user-uploaded certificate.</p>
+     * </li>
+     * <li><p><strong>cas</strong>: A CAS certificate.</p>
+     * </li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>free</p>
@@ -32,7 +46,7 @@ public class CreateCustomHostnameRequest extends TeaModel {
     public String certType;
 
     /**
-     * <p>证书公钥，使用上传证书时必填</p>
+     * <p>The content of the certificate. This parameter is required if <code>CertType</code> is set to <code>upload</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>-----BEGIN CERTIFICATE-----</p>
@@ -41,7 +55,7 @@ public class CreateCustomHostnameRequest extends TeaModel {
     public String certificate;
 
     /**
-     * <p>自定义主机名</p>
+     * <p>The custom hostname.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -51,7 +65,7 @@ public class CreateCustomHostnameRequest extends TeaModel {
     public String hostname;
 
     /**
-     * <p>证书私钥，使用上传证书时必填</p>
+     * <p>The private key of the certificate. This parameter is required if <code>CertType</code> is set to <code>upload</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>-----BEGIN PRIVATE KEY-----</p>
@@ -60,7 +74,7 @@ public class CreateCustomHostnameRequest extends TeaModel {
     public String privateKey;
 
     /**
-     * <p>绑定的源站记录ID</p>
+     * <p>The ID of the record to bind. Call the <a href="https://help.aliyun.com/document_detail/2850265.html">ListRecords</a> operation to get this ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -70,7 +84,7 @@ public class CreateCustomHostnameRequest extends TeaModel {
     public Long recordId;
 
     /**
-     * <p>关联站点ID</p>
+     * <p>The site ID. Call the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation to get this ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -80,7 +94,13 @@ public class CreateCustomHostnameRequest extends TeaModel {
     public Long siteId;
 
     /**
-     * <p>SSL开关</p>
+     * <p>Specifies whether to enable SSL. Valid values:</p>
+     * <ul>
+     * <li><p><strong>on</strong>: Enable SSL.</p>
+     * </li>
+     * <li><p><strong>off</strong>: Disable SSL.</p>
+     * </li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListSiteOriginClientCertificatesResponseBody extends TeaModel {
     /**
-     * <p>The page number.</p>
+     * <p>The page number. The default value is 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -32,13 +32,13 @@ public class ListSiteOriginClientCertificatesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Details of the certificates.</p>
+     * <p>The list of certificate information.</p>
      */
     @NameInMap("Result")
     public java.util.List<ListSiteOriginClientCertificatesResponseBodyResult> result;
 
     /**
-     * <p>Site ID, which can be obtained by calling the <a href="~~ListSites~~">ListSites</a> interface.</p>
+     * <p>The site ID.</p>
      * 
      * <strong>example:</strong>
      * <p>123456789****</p>
@@ -47,7 +47,7 @@ public class ListSiteOriginClientCertificatesResponseBody extends TeaModel {
     public Long siteId;
 
     /**
-     * <p>The website name.</p>
+     * <p>The site name.</p>
      * 
      * <strong>example:</strong>
      * <p>example.com</p>
@@ -56,7 +56,7 @@ public class ListSiteOriginClientCertificatesResponseBody extends TeaModel {
     public String siteName;
 
     /**
-     * <p>The total number of certificate.</p>
+     * <p>The total number of real-time log projects.</p>
      * 
      * <strong>example:</strong>
      * <p>90</p>
@@ -127,7 +127,7 @@ public class ListSiteOriginClientCertificatesResponseBody extends TeaModel {
 
     public static class ListSiteOriginClientCertificatesResponseBodyResult extends TeaModel {
         /**
-         * <p>The Common Name of the certificate.</p>
+         * <p>The common name of the certificate.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="http://www.example.com">www.example.com</a></p>
@@ -154,7 +154,7 @@ public class ListSiteOriginClientCertificatesResponseBody extends TeaModel {
         public String fingerprintSha256;
 
         /**
-         * <p>The certificate ID on ESA.</p>
+         * <p>The certificate ID.</p>
          * 
          * <strong>example:</strong>
          * <p>babaabcd****</p>
@@ -163,7 +163,7 @@ public class ListSiteOriginClientCertificatesResponseBody extends TeaModel {
         public String id;
 
         /**
-         * <p>The certificate authority (CA) that issued the certificate.</p>
+         * <p>The certification authority.</p>
          * 
          * <strong>example:</strong>
          * <p>DigiCert</p>
@@ -181,7 +181,7 @@ public class ListSiteOriginClientCertificatesResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The time when the certificate expires.</p>
+         * <p>The end time of the certificate validity period.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-03-31 02:08:00</p>
@@ -190,7 +190,7 @@ public class ListSiteOriginClientCertificatesResponseBody extends TeaModel {
         public String notAfter;
 
         /**
-         * <p>The time when the certificate takes effect.</p>
+         * <p>The start time of the certificate validity period.</p>
          * 
          * <strong>example:</strong>
          * <p>2023-03-31 02:08:00</p>
@@ -199,7 +199,7 @@ public class ListSiteOriginClientCertificatesResponseBody extends TeaModel {
         public String notBefore;
 
         /**
-         * <p>The public key algorithm of the certificate.</p>
+         * <p>The public-key algorithm of the certificate.</p>
          * 
          * <strong>example:</strong>
          * <p>RSA</p>
@@ -208,7 +208,7 @@ public class ListSiteOriginClientCertificatesResponseBody extends TeaModel {
         public String pubkeyAlgorithm;
 
         /**
-         * <p>The Subject Alternative Name (SAN) of the certificate.</p>
+         * <p>The subject alternative name (SAN) of the certificate.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="http://www.example.com,*.example.com">www.example.com,*.example.com</a></p>
@@ -217,7 +217,7 @@ public class ListSiteOriginClientCertificatesResponseBody extends TeaModel {
         public String SAN;
 
         /**
-         * <p>The serial number of the certificate.</p>
+         * <p>The certificate serial number.</p>
          * 
          * <strong>example:</strong>
          * <p>babaded901474b9693acf530e0fb1d**</p>
@@ -253,7 +253,7 @@ public class ListSiteOriginClientCertificatesResponseBody extends TeaModel {
         public String type;
 
         /**
-         * <p>The time when the certificate was updated.</p>
+         * <p>The time when the certificate was last updated.</p>
          * 
          * <strong>example:</strong>
          * <p>2022-09-22 05:33:13</p>

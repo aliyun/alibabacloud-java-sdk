@@ -19,7 +19,7 @@ public class GetImageTransformResponseBody extends TeaModel {
     public String autoWebp;
 
     /**
-     * <p>Configuration ID.</p>
+     * <p>The config ID.</p>
      * 
      * <strong>example:</strong>
      * <p>352816096987136</p>
@@ -28,10 +28,12 @@ public class GetImageTransformResponseBody extends TeaModel {
     public Long configId;
 
     /**
-     * <p>Configuration type. Possible values:</p>
+     * <p>The configuration type. Valid values:</p>
      * <ul>
-     * <li>global: Global configuration;</li>
-     * <li>rule: Rule-based configuration;</li>
+     * <li><p>global: The global configuration.</p>
+     * </li>
+     * <li><p>rule: A rule configuration.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -41,10 +43,12 @@ public class GetImageTransformResponseBody extends TeaModel {
     public String configType;
 
     /**
-     * <p>Whether to enable image transformation. Possible values:</p>
+     * <p>Indicates whether image transformation is enabled. Valid values:</p>
      * <ul>
-     * <li>on: Enabled.</li>
-     * <li>off: Disabled.</li>
+     * <li><p>on: Enabled.</p>
+     * </li>
+     * <li><p>off: Disabled.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -54,7 +58,7 @@ public class GetImageTransformResponseBody extends TeaModel {
     public String enable;
 
     /**
-     * <p>Request ID.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>CB1A380B-09F0-41BB-280B-72F8FD6DA2FE</p>
@@ -63,10 +67,12 @@ public class GetImageTransformResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Rule content, using conditional expressions to match user requests. This parameter is not required when adding a global configuration. There are two usage scenarios:</p>
+     * <p>The conditional expression of the rule, used to match user requests. This parameter is relevant only for a rule configuration.</p>
      * <ul>
-     * <li>Match all incoming requests: Set the value to true</li>
-     * <li>Match specific requests: Set the value to a custom expression, for example: (http.host eq \&quot;video.example.com\&quot;)</li>
+     * <li><p>A value of true matches all incoming requests.</p>
+     * </li>
+     * <li><p>A custom expression, such as (http.host eq &quot;video.example.com&quot;), matches specific requests.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -76,10 +82,12 @@ public class GetImageTransformResponseBody extends TeaModel {
     public String rule;
 
     /**
-     * <p>Rule switch. This parameter is not required when adding a global configuration. Possible values:</p>
+     * <p>The status of the rule. This parameter is relevant only for a rule configuration. Valid values:</p>
      * <ul>
-     * <li>on: Enabled.</li>
-     * <li>off: Disabled.</li>
+     * <li><p>on: Enabled.</p>
+     * </li>
+     * <li><p>off: Disabled.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -89,7 +97,7 @@ public class GetImageTransformResponseBody extends TeaModel {
     public String ruleEnable;
 
     /**
-     * <p>Rule name. This parameter does not need to be set when adding global configuration.</p>
+     * <p>The rule name. This parameter is relevant only for a rule configuration.</p>
      * 
      * <strong>example:</strong>
      * <p>test</p>
@@ -98,7 +106,7 @@ public class GetImageTransformResponseBody extends TeaModel {
     public String ruleName;
 
     /**
-     * <p>Rule execution order. The smaller the value, the higher the priority.</p>
+     * <p>The execution sequence of the rule. A smaller value indicates a higher execution priority.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>
@@ -107,7 +115,7 @@ public class GetImageTransformResponseBody extends TeaModel {
     public Integer sequence;
 
     /**
-     * <p>The version number of the site configuration. For sites with version management enabled, this parameter can specify the effective version of the site, defaulting to version 0.</p>
+     * <p>The version number of the site configuration. For a site that has configuration versioning enabled, this value indicates the version to which the configuration applies. The default value is 0.</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>

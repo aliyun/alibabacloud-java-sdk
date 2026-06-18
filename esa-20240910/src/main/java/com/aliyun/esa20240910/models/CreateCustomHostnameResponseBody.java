@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateCustomHostnameResponseBody extends TeaModel {
     /**
+     * <p>The custom hostname.</p>
+     * 
      * <strong>example:</strong>
      * <p>custom.site.com</p>
      */
@@ -12,6 +14,8 @@ public class CreateCustomHostnameResponseBody extends TeaModel {
     public String hostname;
 
     /**
+     * <p>The ID of the custom hostname.</p>
+     * 
      * <strong>example:</strong>
      * <p>1234567890123</p>
      */
@@ -19,6 +23,8 @@ public class CreateCustomHostnameResponseBody extends TeaModel {
     public Long hostnameId;
 
     /**
+     * <p>The unique identifier for the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>0AEDAF20-4DDF-4165-8750-47FF9C1929C9</p>
      */

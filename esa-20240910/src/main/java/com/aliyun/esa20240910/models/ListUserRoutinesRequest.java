@@ -8,7 +8,7 @@ public class ListUserRoutinesRequest extends TeaModel {
      * <p>The page number of the returned page. Default value: 1. Valid values: 1 to 10.</p>
      * 
      * <strong>example:</strong>
-     * <p>ListUserRoutines</p>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Long pageNumber;

@@ -5,6 +5,16 @@ import com.aliyun.tea.*;
 
 public class GetAutomaticFrequencyControlConfigResponseBody extends TeaModel {
     /**
+     * <p>The action to perform. Valid values:</p>
+     * <ul>
+     * <li><p><strong>observe</strong>: Monitors requests.</p>
+     * </li>
+     * <li><p><strong>deny</strong>: Denies requests.</p>
+     * </li>
+     * <li><p><strong>js</strong>: Issues a JavaScript challenge.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>js</p>
      */
@@ -12,6 +22,14 @@ public class GetAutomaticFrequencyControlConfigResponseBody extends TeaModel {
     public String actionType;
 
     /**
+     * <p>Indicates whether automatic frequency control is enabled. Valid values:</p>
+     * <ul>
+     * <li><p><strong>on</strong>: Enabled.</p>
+     * </li>
+     * <li><p><strong>off</strong>: Disabled.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>on</p>
      */
@@ -19,6 +37,8 @@ public class GetAutomaticFrequencyControlConfigResponseBody extends TeaModel {
     public String enable;
 
     /**
+     * <p>The statistics collection interval.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -26,6 +46,16 @@ public class GetAutomaticFrequencyControlConfigResponseBody extends TeaModel {
     public Integer interval;
 
     /**
+     * <p>The protection level. Valid values:</p>
+     * <ul>
+     * <li><p><strong>loose</strong>: Loose.</p>
+     * </li>
+     * <li><p><strong>normal</strong>: Normal.</p>
+     * </li>
+     * <li><p><strong>strict</strong>: Strict.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>normal</p>
      */
@@ -33,6 +63,8 @@ public class GetAutomaticFrequencyControlConfigResponseBody extends TeaModel {
     public String level;
 
     /**
+     * <p>The duration of the penalty, in seconds.</p>
+     * 
      * <strong>example:</strong>
      * <p>20000000</p>
      */
@@ -40,6 +72,8 @@ public class GetAutomaticFrequencyControlConfigResponseBody extends TeaModel {
     public Integer punishTime;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>04F0F334-1335-436C-A1D7-6C044FE73368</p>
      */
@@ -47,6 +81,8 @@ public class GetAutomaticFrequencyControlConfigResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The rule ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>11957665</p>
      */
@@ -54,6 +90,8 @@ public class GetAutomaticFrequencyControlConfigResponseBody extends TeaModel {
     public Long ruleId;
 
     /**
+     * <p>The threshold that triggers the action.</p>
+     * 
      * <strong>example:</strong>
      * <p>100</p>
      */

@@ -16,8 +16,10 @@ public class ListHttpsBasicConfigurationsRequest extends TeaModel {
     /**
      * <p>Configuration type, which can be used to query global or rule configurations. Value range:</p>
      * <ul>
-     * <li>global: Query global configuration.</li>
-     * <li>rule: Query rule configuration.</li>
+     * <li><p>global: Query global configuration.</p>
+     * </li>
+     * <li><p>rule: Query rule configuration.</p>
+     * </li>
      * </ul>
      * <p>This parameter is optional. If not provided, it does not distinguish between global and rule configurations.</p>
      * 

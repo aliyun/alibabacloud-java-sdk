@@ -11,7 +11,7 @@ public class ListWafUsageOfRulesResponseBody extends TeaModel {
     public Long instanceUsage;
 
     /**
-     * <p>Request ID.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>36af3fcc-43d0-441c-86b1-428951dc8225</p>
@@ -20,7 +20,7 @@ public class ListWafUsageOfRulesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>List of site usage.</p>
+     * <p>A list of sites and their respective WAF rule usage.</p>
      */
     @NameInMap("Sites")
     public java.util.List<ListWafUsageOfRulesResponseBodySites> sites;
@@ -64,7 +64,7 @@ public class ListWafUsageOfRulesResponseBody extends TeaModel {
 
     public static class ListWafUsageOfRulesResponseBodySites extends TeaModel {
         /**
-         * <p>Site ID.</p>
+         * <p>The site ID.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -73,7 +73,7 @@ public class ListWafUsageOfRulesResponseBody extends TeaModel {
         public Long id;
 
         /**
-         * <p>Site name.</p>
+         * <p>The site name.</p>
          * 
          * <strong>example:</strong>
          * <p>example.com</p>
@@ -82,7 +82,7 @@ public class ListWafUsageOfRulesResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>Usage of WAF rules/WAF rule sets.</p>
+         * <p>The number of WAF rules or rule sets used by the site.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>

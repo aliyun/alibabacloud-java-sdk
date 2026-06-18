@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateWafRulesetResponseBody extends TeaModel {
     /**
-     * <p>Ruleset ID.</p>
+     * <p>The ruleset ID.</p>
      * 
      * <strong>example:</strong>
      * <p>10000001</p>
@@ -14,7 +14,7 @@ public class CreateWafRulesetResponseBody extends TeaModel {
     public Long id;
 
     /**
-     * <p>Request ID.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>36af3fcc-43d0-441c-86b1-428951dc8225</p>

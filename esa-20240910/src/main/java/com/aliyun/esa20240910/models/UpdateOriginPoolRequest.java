@@ -5,10 +5,12 @@ import com.aliyun.tea.*;
 
 public class UpdateOriginPoolRequest extends TeaModel {
     /**
-     * <p>Whether the origin pool is enabled:</p>
+     * <p>Specifies whether to enable the origin pool:</p>
      * <ul>
-     * <li>true: Enabled;</li>
-     * <li>false: Disabled.</li>
+     * <li><p>true: Enables the origin pool.</p>
+     * </li>
+     * <li><p>false: Disables the origin pool.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,7 +20,7 @@ public class UpdateOriginPoolRequest extends TeaModel {
     public Boolean enabled;
 
     /**
-     * <p>The ID of the origin pool, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2863947.html">ListOriginPools</a> interface.</p>
+     * <p>The origin pool ID. Get this ID by calling the <a href="~~ListOriginPools~~">ListOriginPools</a> operation.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -28,13 +30,13 @@ public class UpdateOriginPoolRequest extends TeaModel {
     public Long id;
 
     /**
-     * <p>Information about the origins added to the origin pool. Multiple origins are passed as an array.</p>
+     * <p>An array of origin configurations.</p>
      */
     @NameInMap("Origins")
     public java.util.List<UpdateOriginPoolRequestOrigins> origins;
 
     /**
-     * <p>The site ID, which can be obtained by calling the <a href="~~ListSites~~">ListSites</a> interface.</p>
+     * <p>The site ID. Get this ID by calling the <a href="~~ListSites~~">ListSites</a> operation.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -82,7 +84,7 @@ public class UpdateOriginPoolRequest extends TeaModel {
 
     public static class UpdateOriginPoolRequestOriginsAuthConf extends TeaModel {
         /**
-         * <p>The AccessKey required for private authentication.</p>
+         * <p>The access key for private authentication. Required for private origins.</p>
          * 
          * <strong>example:</strong>
          * <p>yourAccessKeyID</p>
@@ -91,12 +93,16 @@ public class UpdateOriginPoolRequest extends TeaModel {
         public String accessKey;
 
         /**
-         * <p>The type of authentication.</p>
+         * <p>The authentication type. Valid values:</p>
          * <ul>
-         * <li>public: Public read/write, used when the origin is OSS or S3 and is set to public read/write;</li>
-         * <li>private_same_account: Private same account, used when the origin is OSS and the authentication type is private within the same account;</li>
-         * <li>private_cross_account: Private cross-account, used when the origin is OSS and the authentication type is private across accounts;</li>
-         * <li>private: Used when the origin is S3 and the authentication type is private.</li>
+         * <li><p>public: For public OSS or S3 origins.</p>
+         * </li>
+         * <li><p>private_same_account: For private OSS origins in the same account.</p>
+         * </li>
+         * <li><p>private_cross_account: For private OSS origins that use cross-account authentication.</p>
+         * </li>
+         * <li><p>private: For private S3 origins.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -106,7 +112,7 @@ public class UpdateOriginPoolRequest extends TeaModel {
         public String authType;
 
         /**
-         * <p>The region of the origin required when the origin is AWS S3.</p>
+         * <p>The region of the origin. This parameter is required if the origin type is S3.</p>
          * 
          * <strong>example:</strong>
          * <p>us-east-1</p>
@@ -115,7 +121,7 @@ public class UpdateOriginPoolRequest extends TeaModel {
         public String region;
 
         /**
-         * <p>The SecretKey required for private authentication.</p>
+         * <p>The secret key for private authentication. Required for private origins.</p>
          * 
          * <strong>example:</strong>
          * <p>yourAccessKeySecret</p>
@@ -124,7 +130,7 @@ public class UpdateOriginPoolRequest extends TeaModel {
         public String secretKey;
 
         /**
-         * <p>The signature version required when the origin is AWS S3.</p>
+         * <p>The signature version. This parameter is required if the origin type is S3.</p>
          * 
          * <strong>example:</strong>
          * <p>v2</p>
@@ -181,7 +187,7 @@ public class UpdateOriginPoolRequest extends TeaModel {
 
     public static class UpdateOriginPoolRequestOrigins extends TeaModel {
         /**
-         * <p>The address of the origin, e.g., <a href="http://www.example.com">www.example.com</a>.</p>
+         * <p>The origin\&quot;s domain name or IP address.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="http://www.example.com">www.example.com</a></p>
@@ -190,16 +196,18 @@ public class UpdateOriginPoolRequest extends TeaModel {
         public String address;
 
         /**
-         * <p>Authentication information. When the origin is OSS or S3 and requires authentication, you need to pass the related configuration information for authentication.</p>
+         * <p>The authentication configuration. Required for private OSS or S3 origins.</p>
          */
         @NameInMap("AuthConf")
         public UpdateOriginPoolRequestOriginsAuthConf authConf;
 
         /**
-         * <p>Whether the origin is enabled:</p>
+         * <p>Specifies whether to enable the origin:</p>
          * <ul>
-         * <li>true: Enabled;</li>
-         * <li>false: Disabled.</li>
+         * <li><p>true: Enables the origin.</p>
+         * </li>
+         * <li><p>false: Disables the origin.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -209,7 +217,7 @@ public class UpdateOriginPoolRequest extends TeaModel {
         public Boolean enabled;
 
         /**
-         * <p>The request header to be included when fetching from the origin, supporting only Host.</p>
+         * <p>The request header to add to back-to-origin requests. Only the Host header is supported.</p>
          * 
          * <strong>example:</strong>
          * <p>{
@@ -221,11 +229,27 @@ public class UpdateOriginPoolRequest extends TeaModel {
         @NameInMap("Header")
         public Object header;
 
+        /**
+         * <p>The IP version policy for back-to-origin requests. Valid values:</p>
+         * <ul>
+         * <li><p>round_robin: (Default) Randomly selects an IPv4 or IPv6 origin.</p>
+         * </li>
+         * <li><p>ipv4_first: Prioritizes IPv4 origins.</p>
+         * </li>
+         * <li><p>ipv6_first: Prioritizes IPv6 origins.</p>
+         * </li>
+         * <li><p>follow: Uses the same IP version as the client request.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>round_robin</p>
+         */
         @NameInMap("IpVersionPolicy")
         public String ipVersionPolicy;
 
         /**
-         * <p>The name of the origin, which must be unique under one origin pool.</p>
+         * <p>The name of the origin. The name must be unique within the origin pool.</p>
          * 
          * <strong>example:</strong>
          * <p>origin1</p>
@@ -234,11 +258,14 @@ public class UpdateOriginPoolRequest extends TeaModel {
         public String name;
 
         /**
-         * <p>The type of the origin:</p>
+         * <p>The origin type. Valid values:</p>
          * <ul>
-         * <li>ip_domain: IP or domain type origin;</li>
-         * <li>OSS: OSS address origin;</li>
-         * <li>S3: AWS S3 origin.</li>
+         * <li><p>ip_domain: An IP address or a domain name.</p>
+         * </li>
+         * <li><p>OSS: An OSS origin.</p>
+         * </li>
+         * <li><p>S3: An AWS S3 origin.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -248,7 +275,7 @@ public class UpdateOriginPoolRequest extends TeaModel {
         public String type;
 
         /**
-         * <p>The weight, an integer between 0 and 100.</p>
+         * <p>The weight of the origin. The value must be an integer from 0 to 100.</p>
          * 
          * <strong>example:</strong>
          * <p>50</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteUserWafRulesetResponseBody extends TeaModel {
     /**
-     * <p>Request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>xxxx-xxxx-xxxx-xxxx</p>

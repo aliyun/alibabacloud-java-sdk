@@ -5,10 +5,12 @@ import com.aliyun.tea.*;
 
 public class CreateRedirectRuleRequest extends TeaModel {
     /**
-     * <p>Preserve query string. Value range:</p>
+     * <p>Specifies whether to preserve the query string from the original request. Valid values:</p>
      * <ul>
-     * <li>on: Enabled.</li>
-     * <li>off: Disabled.</li>
+     * <li><p><code>on</code>: Preserves the query string.</p>
+     * </li>
+     * <li><p><code>off</code>: Discards the query string.</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -19,10 +21,12 @@ public class CreateRedirectRuleRequest extends TeaModel {
     public String reserveQueryString;
 
     /**
-     * <p>Rule content, using conditional expressions to match user requests. This parameter is not required when adding a global configuration. There are two usage scenarios:</p>
+     * <p>The rule content, which is a conditional expression used to match user requests. Do not set this parameter when adding a global configuration. The following use cases are supported:</p>
      * <ul>
-     * <li>To match all incoming requests: Set the value to true</li>
-     * <li>To match specific requests: Set the value to a custom expression, e.g., (http.host eq \&quot;video.example.com\&quot;)</li>
+     * <li><p>To match all incoming requests, set the value to <code>true</code>.</p>
+     * </li>
+     * <li><p>To match specific requests, set the value to a custom expression, such as <code>(http.host eq &quot;video.example.com&quot;)</code>.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -32,10 +36,12 @@ public class CreateRedirectRuleRequest extends TeaModel {
     public String rule;
 
     /**
-     * <p>Rule switch. This parameter is not required when adding a global configuration. Value range:</p>
+     * <p>Specifies whether to enable the rule. Do not set this parameter when adding a global configuration. Valid values:</p>
      * <ul>
-     * <li>on: Enabled.</li>
-     * <li>off: Disabled.</li>
+     * <li><p><code>on</code>: The rule is enabled.</p>
+     * </li>
+     * <li><p><code>off</code>: The rule is disabled.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -45,7 +51,7 @@ public class CreateRedirectRuleRequest extends TeaModel {
     public String ruleEnable;
 
     /**
-     * <p>Rule name. This parameter is not required when adding a global configuration.</p>
+     * <p>The rule name. Do not set this parameter when adding a global configuration.</p>
      * 
      * <strong>example:</strong>
      * <p>rule_example</p>
@@ -53,11 +59,17 @@ public class CreateRedirectRuleRequest extends TeaModel {
     @NameInMap("RuleName")
     public String ruleName;
 
+    /**
+     * <p>The execution priority of the rule. A smaller value indicates a higher priority.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("Sequence")
     public Integer sequence;
 
     /**
-     * <p>Site ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> interface.</p>
+     * <p>The site ID. To get this value, call the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -67,7 +79,7 @@ public class CreateRedirectRuleRequest extends TeaModel {
     public Long siteId;
 
     /**
-     * <p>Version number of the site configuration. For sites with version management enabled, you can use this parameter to specify the version of the site for which the configuration will take effect. The default is version 0.</p>
+     * <p>For sites with configuration version management enabled, specify the version to which this configuration applies.</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>
@@ -76,13 +88,18 @@ public class CreateRedirectRuleRequest extends TeaModel {
     public Integer siteVersion;
 
     /**
-     * <p>Response status code used by the node to respond to the client with the redirect address. Value range:</p>
+     * <p>The status code that the edge node returns to the client for the redirect. Valid values:</p>
      * <ul>
-     * <li>301</li>
-     * <li>302</li>
-     * <li>303</li>
-     * <li>307</li>
-     * <li>308</li>
+     * <li><p>301</p>
+     * </li>
+     * <li><p>302</p>
+     * </li>
+     * <li><p>303</p>
+     * </li>
+     * <li><p>307</p>
+     * </li>
+     * <li><p>308</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -93,7 +110,7 @@ public class CreateRedirectRuleRequest extends TeaModel {
     public String statusCode;
 
     /**
-     * <p>Target URL after redirection.</p>
+     * <p>The target URL for the redirect.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -103,10 +120,12 @@ public class CreateRedirectRuleRequest extends TeaModel {
     public String targetUrl;
 
     /**
-     * <p>Redirect type. Value range:</p>
+     * <p>The redirect type. Valid values:</p>
      * <ul>
-     * <li>static: Static mode.</li>
-     * <li>dynamic: Dynamic mode.</li>
+     * <li><p><code>static</code>: Static mode.</p>
+     * </li>
+     * <li><p><code>dynamic</code>: Dynamic mode.</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreatePageResponseBody extends TeaModel {
     /**
-     * <p>The ID of the custom error page.<a href="~~2850223~~"></a></p>
+     * <p>The ID of the custom error page. Obtain this ID by calling the <a href="https://help.aliyun.com/document_detail/2850223.html">ListPages</a> API.</p>
      * 
      * <strong>example:</strong>
      * <p>50000001</p>

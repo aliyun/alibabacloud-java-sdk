@@ -13,12 +13,15 @@ public class CommitRoutineStagingCodeRequest extends TeaModel {
     @NameInMap("CodeDescription")
     public String codeDescription;
 
+    @NameInMap("DeployEnv")
+    public String deployEnv;
+
     /**
-     * <p>The routine name.</p>
+     * <p>The name of the edge function (Routine).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>CommitRoutineStagingCode</p>
+     * <p>test-routine1</p>
      */
     @NameInMap("Name")
     public String name;
@@ -34,6 +37,14 @@ public class CommitRoutineStagingCodeRequest extends TeaModel {
     }
     public String getCodeDescription() {
         return this.codeDescription;
+    }
+
+    public CommitRoutineStagingCodeRequest setDeployEnv(String deployEnv) {
+        this.deployEnv = deployEnv;
+        return this;
+    }
+    public String getDeployEnv() {
+        return this.deployEnv;
     }
 
     public CommitRoutineStagingCodeRequest setName(String name) {

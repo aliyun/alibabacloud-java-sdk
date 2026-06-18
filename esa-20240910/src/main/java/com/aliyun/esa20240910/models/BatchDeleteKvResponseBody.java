@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class BatchDeleteKvResponseBody extends TeaModel {
     /**
-     * <p>The keys that failed to be deleted.</p>
+     * <p>List of keys that failed to delete.</p>
      */
     @NameInMap("FailKeys")
     public java.util.List<String> failKeys;
 
     /**
-     * <p>The request ID.</p>
+     * <p>ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>EEEBE525-F576-1196-8DAF-2D70CA3F4D2F</p>
@@ -20,7 +20,7 @@ public class BatchDeleteKvResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The keys that are deleted.</p>
+     * <p>List of keys that deleted successfully.</p>
      */
     @NameInMap("SuccessKeys")
     public java.util.List<String> successKeys;

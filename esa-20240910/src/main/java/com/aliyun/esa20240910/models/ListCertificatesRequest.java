@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListCertificatesRequest extends TeaModel {
     /**
-     * <p>The keyword that is used for the search.</p>
+     * <p>The search keyword.</p>
      * 
      * <strong>example:</strong>
      * <p>example</p>
@@ -14,7 +14,7 @@ public class ListCertificatesRequest extends TeaModel {
     public String keyword;
 
     /**
-     * <p>The page number.</p>
+     * <p>The page number to return.</p>
      * 
      * <strong>example:</strong>
      * <p>3</p>
@@ -23,7 +23,7 @@ public class ListCertificatesRequest extends TeaModel {
     public Long pageNumber;
 
     /**
-     * <p>The number of entries per page.</p>
+     * <p>The number of entries to return on each page.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -32,7 +32,7 @@ public class ListCertificatesRequest extends TeaModel {
     public Long pageSize;
 
     /**
-     * <p>The website ID, which can be obtained by calling the <a href="~~ListSites~~">ListSites</a> operation.</p>
+     * <p>The site ID. To get this ID, call the <a href="~~ListSites~~">ListSites</a> API.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

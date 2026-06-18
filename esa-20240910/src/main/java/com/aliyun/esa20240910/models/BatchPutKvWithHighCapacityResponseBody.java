@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class BatchPutKvWithHighCapacityResponseBody extends TeaModel {
     /**
-     * <p>The keys that failed to be written.</p>
+     * <p>The keys that could not be written.</p>
      */
     @NameInMap("FailKeys")
     public java.util.List<String> failKeys;
@@ -20,7 +20,7 @@ public class BatchPutKvWithHighCapacityResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The keys that were written.</p>
+     * <p>The keys that were successfully written.</p>
      */
     @NameInMap("SuccessKeys")
     public java.util.List<String> successKeys;

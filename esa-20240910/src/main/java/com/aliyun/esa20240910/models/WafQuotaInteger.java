@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class WafQuotaInteger extends TeaModel {
     /**
-     * <p>Is equal to</p>
+     * <p>等于。</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -14,7 +14,7 @@ public class WafQuotaInteger extends TeaModel {
     public Integer equal;
 
     /**
-     * <p>Is greater than</p>
+     * <p>大于。</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -23,7 +23,7 @@ public class WafQuotaInteger extends TeaModel {
     public Integer greaterThan;
 
     /**
-     * <p>Is greater than or equal to</p>
+     * <p>大于等于。</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -32,7 +32,7 @@ public class WafQuotaInteger extends TeaModel {
     public Integer greaterThanOrEqual;
 
     /**
-     * <p>Is less than</p>
+     * <p>小于。</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -41,7 +41,7 @@ public class WafQuotaInteger extends TeaModel {
     public Integer lessThan;
 
     /**
-     * <p>Is less than or equal to</p>
+     * <p>小于等于。</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>

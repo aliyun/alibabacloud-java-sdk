@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListCertificatesByRecordRequest extends TeaModel {
     /**
-     * <p>Specifies whether to return the certificate details. 0 indicates that the certificate details are not returned. 1 indicates that the certificate details are returned.</p>
+     * <p>Specifies whether to return certificate details. A value of <code>1</code> includes certificate details, whereas a value of <code>0</code> excludes them.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -24,7 +24,7 @@ public class ListCertificatesByRecordRequest extends TeaModel {
     public String recordName;
 
     /**
-     * <p>The website ID, which can be obtained by calling the <a href="~~ListSites~~">ListSites</a> operation.</p>
+     * <p>The site ID. To obtain this ID, call the <a href="~~ListSites~~">ListSites</a> operation.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -34,7 +34,7 @@ public class ListCertificatesByRecordRequest extends TeaModel {
     public Long siteId;
 
     /**
-     * <p>Specifies whether to return only valid certificates. 0 indicates that all matched certificates are returned. 1 indicates that only valid certificates are returned.</p>
+     * <p>Specifies whether to return only valid certificates. A value of <code>1</code> returns only valid certificates, whereas <code>0</code> returns all matching certificates.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateCompressionRuleResponseBody extends TeaModel {
     /**
-     * <p>Configuration ID.</p>
+     * <p>The unique ID of the configuration.</p>
      * 
      * <strong>example:</strong>
      * <p>35281609698****</p>
@@ -14,7 +14,7 @@ public class CreateCompressionRuleResponseBody extends TeaModel {
     public Long configId;
 
     /**
-     * <p>Request ID.</p>
+     * <p>The unique ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>C370DAF1-C838-4288-A1A0-9A87633D248E</p>

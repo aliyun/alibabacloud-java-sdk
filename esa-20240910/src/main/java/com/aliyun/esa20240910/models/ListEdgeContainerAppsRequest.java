@@ -66,7 +66,7 @@ public class ListEdgeContainerAppsRequest extends TeaModel {
      * </ul>
      * 
      * <strong>example:</strong>
-     * <p>Appid</p>
+     * <p>AppId</p>
      */
     @NameInMap("SearchType")
     public String searchType;

@@ -5,10 +5,12 @@ import com.aliyun.tea.*;
 
 public class ListUserRatePlanInstancesRequest extends TeaModel {
     /**
-     * <p>Specifies whether to query only the plans that have remaining quota for associating websites. Valid values:</p>
+     * <p>Specifies whether to filter for rate plan instances that have a remaining site quota. Valid values:</p>
      * <ul>
-     * <li>true: queries only the plans that have remaining quota for associating websites.</li>
-     * <li>false: queries all plans in your account.</li>
+     * <li><p><strong>true</strong>: Returns only rate plan instances that have a remaining site quota.</p>
+     * </li>
+     * <li><p><strong>false</strong>: Returns all rate plan instances for the user.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,7 +20,7 @@ public class ListUserRatePlanInstancesRequest extends TeaModel {
     public String checkRemainingSiteQuota;
 
     /**
-     * <p>The plan ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation.</p>
+     * <p>The ID of the rate plan instance to query.</p>
      * 
      * <strong>example:</strong>
      * <p>sp-xcdn-96wblslz****</p>
@@ -27,7 +29,7 @@ public class ListUserRatePlanInstancesRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The page number. Valid values: <strong>1</strong> to <strong>100000</strong>. Default value: <strong>1</strong>.</p>
+     * <p>The page number. The default value is <strong>1</strong>. The value must be in the range of <strong>1 to 100,000</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -36,7 +38,7 @@ public class ListUserRatePlanInstancesRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page.</p>
+     * <p>The number of entries to return on each page.</p>
      * 
      * <strong>example:</strong>
      * <p>500</p>
@@ -54,10 +56,12 @@ public class ListUserRatePlanInstancesRequest extends TeaModel {
     public Integer remainingExpireDays;
 
     /**
-     * <p>The sorting field. By default, the queried plans are sorted by purchase time. Valid values:</p>
+     * <p>The sort field. By default, results are sorted by creation time. Valid values:</p>
      * <ul>
-     * <li>CreateTime: the time when the plans were purchased.</li>
-     * <li>ExpireTime: the time when the plans expire.</li>
+     * <li><p><strong>CreateTime</strong>: Sorts by creation time.</p>
+     * </li>
+     * <li><p><strong>ExpireTime</strong>: Sorts by expiration time.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -67,10 +71,12 @@ public class ListUserRatePlanInstancesRequest extends TeaModel {
     public String sortBy;
 
     /**
-     * <p>The order in which you want to sort the query results. Default value: desc. Valid values:</p>
+     * <p>The sort order. The default is descending. Valid values:</p>
      * <ul>
-     * <li>asc: in ascending order.</li>
-     * <li>desc: in descending order.</li>
+     * <li><p><strong>asc</strong>: Sorts in ascending order.</p>
+     * </li>
+     * <li><p><strong>desc</strong>: Sorts in descending order.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -80,12 +86,16 @@ public class ListUserRatePlanInstancesRequest extends TeaModel {
     public String sortOrder;
 
     /**
-     * <p>The plan status. Valid values:</p>
+     * <p>The status of the rate plan instance. Valid values:</p>
      * <ul>
-     * <li>online: The plan is in service.</li>
-     * <li>offline: The plan has expired within an allowable period. In this state, the plan is unavailable.</li>
-     * <li>disable: The plan is released.</li>
-     * <li>overdue: The plan is stopped due to overdue payments.</li>
+     * <li><p><strong>online</strong>: The instance is in service.</p>
+     * </li>
+     * <li><p><strong>offline</strong>: The instance has expired and is unavailable.</p>
+     * </li>
+     * <li><p><strong>disable</strong>: The instance is released.</p>
+     * </li>
+     * <li><p><strong>overdue</strong>: The instance is overdue.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

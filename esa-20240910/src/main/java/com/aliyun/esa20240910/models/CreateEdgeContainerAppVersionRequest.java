@@ -15,8 +15,7 @@ public class CreateEdgeContainerAppVersionRequest extends TeaModel {
     public String appId;
 
     /**
-     * <p>The container group to be deployed for this version, which contains information about images.\
-     * The image data contains the image address, startup command, parameters, environment variables, and probe rules. You can specify one or more images. The parameter value is a JSON string.</p>
+     * <p>The container group to be deployed for this version, which contains information about images.<br> The image data contains the image address, startup command, parameters, environment variables, and probe rules. You can specify one or more images. The parameter value is a JSON string.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -536,6 +535,9 @@ public class CreateEdgeContainerAppVersionRequest extends TeaModel {
         /**
          * <p>The content of the container health probe.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>For details, see the definition of readiness probes in Kubernetes.</p>
          */
         @NameInMap("ProbeContent")
         public CreateEdgeContainerAppVersionRequestContainersProbeContent probeContent;
@@ -543,9 +545,12 @@ public class CreateEdgeContainerAppVersionRequest extends TeaModel {
         /**
          * <p>The type of the probe. Valid values:</p>
          * <ul>
-         * <li>exec: the command type.</li>
-         * <li>tcpSocket: the TCP probe type.</li>
-         * <li>httpGet: the HTTP access type.</li>
+         * <li><p>exec: the command type.</p>
+         * </li>
+         * <li><p>tcpSocket: the TCP probe type.</p>
+         * </li>
+         * <li><p>httpGet: the HTTP access type.</p>
+         * </li>
          * </ul>
          * <p>This parameter is required.</p>
          * 

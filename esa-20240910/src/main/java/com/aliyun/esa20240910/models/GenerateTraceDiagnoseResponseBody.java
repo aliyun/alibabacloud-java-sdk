@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GenerateTraceDiagnoseResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>64D28B53-5902-409B-94F6-FD46680144FE</p>
      */
@@ -12,13 +14,18 @@ public class GenerateTraceDiagnoseResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>A diagnostic message.</p>
+     * 
      * <strong>example:</strong>
-     * <p><a href="http://cdn.dns-detect.alicdn.com/diagnose/?id=xxxxxxx">http://cdn.dns-detect.alicdn.com/diagnose/?id=xxxxxxx</a></p>
+     * <p>Origin IP x.x.x.x: Test URL returned HTTP 404 (non-2xx status).
+     * Origin IP x.x.x.x: DNS A record does not point to an ESA service IP.</p>
      */
     @NameInMap("Tip")
     public String tip;
 
     /**
+     * <p>The generated diagnostic link.</p>
+     * 
      * <strong>example:</strong>
      * <p><a href="http://cdn.dns-detect.alicdn.com/diagnose_v2?id=5d97ac9b&token=WFji65gy2mGNM11bD929%2BCMoyI6mbk2deRR9hOC6INH%2FoYbccQZQcvEn4wc%2FDPHlTshxRSAa5HokX%2BabItBpJ0FdnteROssomXqgIdjHpM46L%2BbaIeweZfsWG6QnbXT5n7O5APMyc%2Fe8d1o9PwwB429Ccks1FU1AfjNZfvBcLeo%3D">http://cdn.dns-detect.alicdn.com/diagnose_v2?id=5d97ac9b&amp;token=WFji65gy2mGNM11bD929%2BCMoyI6mbk2deRR9hOC6INH%2FoYbccQZQcvEn4wc%2FDPHlTshxRSAa5HokX%2BabItBpJ0FdnteROssomXqgIdjHpM46L%2BbaIeweZfsWG6QnbXT5n7O5APMyc%2Fe8d1o9PwwB429Ccks1FU1AfjNZfvBcLeo%3D</a></p>
      */

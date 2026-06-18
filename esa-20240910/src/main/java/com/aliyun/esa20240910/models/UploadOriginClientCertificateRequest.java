@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UploadOriginClientCertificateRequest extends TeaModel {
     /**
-     * <p>The certificate content.</p>
+     * <p>The content of the certificate in PEM format.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -24,7 +24,7 @@ public class UploadOriginClientCertificateRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The private key of the certificate.</p>
+     * <p>The private key for the certificate in PEM format.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -34,7 +34,7 @@ public class UploadOriginClientCertificateRequest extends TeaModel {
     public String privateKey;
 
     /**
-     * <p>The website ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation.</p>
+     * <p>The site ID. To get this ID, call the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> API.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

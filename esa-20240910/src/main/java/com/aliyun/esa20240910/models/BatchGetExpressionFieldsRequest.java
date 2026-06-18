@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class BatchGetExpressionFieldsRequest extends TeaModel {
     /**
-     * <p>List of expressions.</p>
+     * <p>A list of expression objects to process.</p>
      * 
      * <strong>example:</strong>
      * <p>http_bot</p>
@@ -20,7 +20,7 @@ public class BatchGetExpressionFieldsRequest extends TeaModel {
     public String kind;
 
     /**
-     * <p>WAF Phase</p>
+     * <p>The WAF phase.</p>
      * 
      * <strong>example:</strong>
      * <p>http_bot</p>
@@ -32,7 +32,7 @@ public class BatchGetExpressionFieldsRequest extends TeaModel {
     public String planNameEn;
 
     /**
-     * <p>Site ID</p>
+     * <p>The ID of the site.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -95,7 +95,7 @@ public class BatchGetExpressionFieldsRequest extends TeaModel {
 
     public static class BatchGetExpressionFieldsRequestExpressions extends TeaModel {
         /**
-         * <p>Content of the expression.</p>
+         * <p>The content of the expression.</p>
          * 
          * <strong>example:</strong>
          * <p>ip.src eq 1.1.1.1</p>
@@ -104,7 +104,7 @@ public class BatchGetExpressionFieldsRequest extends TeaModel {
         public String expression;
 
         /**
-         * <p>The sequence number of the expression.</p>
+         * <p>The ID of the expression. This ID is used to associate an expression in the request with its corresponding result in the response.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>

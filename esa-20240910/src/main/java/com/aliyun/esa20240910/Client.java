@@ -14,7 +14,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public Client(com.aliyun.teaopenapi.models.Config config) throws Exception {
         super(config);
-        this._endpointRule = "";
+        this._endpointRule = "regional";
+        this._endpointMap = TeaConverter.buildMap(
+            new TeaPair("cn-hangzhou", "esa.cn-hangzhou.aliyuncs.com"),
+            new TeaPair("ap-southeast-1", "esa.ap-southeast-1.aliyuncs.com")
+        );
         this.checkConfig(config);
         this._endpoint = this.getEndpoint("esa", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
     }
@@ -217,7 +221,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Applies for a free SSL certificate.</p>
+     * <p>Applies for a free certificate.</p>
      * 
      * @param request ApplyCertificateRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -257,7 +261,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Applies for a free SSL certificate.</p>
+     * <p>Applies for a free certificate.</p>
      * 
      * @param request ApplyCertificateRequest
      * @return ApplyCertificateResponse
@@ -269,7 +273,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>为自定义主机名申请一个免费证书，适用于申请失败、证书即将过期、证书已过期场景</p>
+     * <p>Requests a new free certificate for a Software as a Service (SaaS) domain name. Call this operation only if the previous certificate request failed, or the current certificate is about to expire or has expired.</p>
      * 
      * @param request ApplyCustomHostnameCertificateRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -301,7 +305,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>为自定义主机名申请一个免费证书，适用于申请失败、证书即将过期、证书已过期场景</p>
+     * <p>Requests a new free certificate for a Software as a Service (SaaS) domain name. Call this operation only if the previous certificate request failed, or the current certificate is about to expire or has expired.</p>
      * 
      * @param request ApplyCustomHostnameCertificateRequest
      * @return ApplyCustomHostnameCertificateResponse
@@ -313,11 +317,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation allows you to create or update multiple DNS records at a time. It is suitable for managing a large number of DNS configurations. Supported record types include but are not limited to A/AAAA, CNAME, NS, MX, TXT, CAA, SRV, and URI. The operation allows you to configure the priority, flag, tag, and weight for DNS records. In addition, for specific types of records, such as CERT, SSHFP, SMIMEA, and TLSA, advanced settings such as certificate information and encryption algorithms are also supported.
-     * Successful and failed records along with error messages are listed in the response.</p>
+     * <p>This API lets you create or update multiple DNS records in a single request, ideal for managing large-scale DNS configurations. It supports various record types, including A/AAAA, CNAME, NS, MX, TXT, CAA, SRV, and URI, and provides detailed settings such as priority, flag, tag, and weight. For specific record types like CERT, SSHFP, SMIMEA, and TLSA, the API supports advanced settings, including certificate information and encryption algorithm.
+     * The response separates successful and failed operations, allowing you to identify which records failed and why.</p>
      * 
      * <b>summary</b> : 
-     * <p>Adds DNS records of different record types at a time..</p>
+     * <p>Add multiple types of DNS records in batches.</p>
      * 
      * @param tmpReq BatchCreateRecordsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -359,11 +363,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation allows you to create or update multiple DNS records at a time. It is suitable for managing a large number of DNS configurations. Supported record types include but are not limited to A/AAAA, CNAME, NS, MX, TXT, CAA, SRV, and URI. The operation allows you to configure the priority, flag, tag, and weight for DNS records. In addition, for specific types of records, such as CERT, SSHFP, SMIMEA, and TLSA, advanced settings such as certificate information and encryption algorithms are also supported.
-     * Successful and failed records along with error messages are listed in the response.</p>
+     * <p>This API lets you create or update multiple DNS records in a single request, ideal for managing large-scale DNS configurations. It supports various record types, including A/AAAA, CNAME, NS, MX, TXT, CAA, SRV, and URI, and provides detailed settings such as priority, flag, tag, and weight. For specific record types like CERT, SSHFP, SMIMEA, and TLSA, the API supports advanced settings, including certificate information and encryption algorithm.
+     * The response separates successful and failed operations, allowing you to identify which records failed and why.</p>
      * 
      * <b>summary</b> : 
-     * <p>Adds DNS records of different record types at a time..</p>
+     * <p>Add multiple types of DNS records in batches.</p>
      * 
      * @param request BatchCreateRecordsRequest
      * @return BatchCreateRecordsResponse
@@ -375,7 +379,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Batch Create WAF Rules</p>
+     * <p>This operation creates multiple WAF rules and configures their shared settings in a single request.</p>
      * 
      * @param tmpReq BatchCreateWafRulesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -439,7 +443,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Batch Create WAF Rules</p>
+     * <p>This operation creates multiple WAF rules and configures their shared settings in a single request.</p>
      * 
      * @param request BatchCreateWafRulesRequest
      * @return BatchCreateWafRulesResponse
@@ -451,7 +455,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes key-value pairs from a namespace at a time based on keys.</p>
+     * <p>Delete key-value pairs in bulk from a specified namespace.</p>
      * 
      * @param tmpReq BatchDeleteKvRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -495,7 +499,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes key-value pairs from a namespace at a time based on keys.</p>
+     * <p>Delete key-value pairs in bulk from a specified namespace.</p>
      * 
      * @param request BatchDeleteKvRequest
      * @return BatchDeleteKvResponse
@@ -507,44 +511,45 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation allows you to upload a larger request body than by using <a href="https://help.aliyun.com/document_detail/2850204.html">BatchDeleteKv</a>. For small request bodies, we recommend that you use <a href="https://help.aliyun.com/document_detail/2850204.html">BatchDeleteKv</a> to minimize the server processing time. This operation must be called by using SDKs. The following sample code uses the Golang SDK and BatchDeleteKvWithHighCapacityAdvance to call the operation.
-     *     func TestBatchDeleteWithHighCapacity() error {
-     *         // Initialize the configurations.
-     *         cfg := new(openapi.Config)
-     *         cfg.SetAccessKeyId(&quot;xxxxxxxxx&quot;)
-     *         cfg.SetAccessKeySecret(&quot;xxxxxxxxxx&quot;)
-     *         cli, err := NewClient(cfg)
-     *         if err != nil {
-     *             return err
-     *         }
-     *         runtime := &amp;util.RuntimeOptions{}
-     *         // Construct a request for deleting key-value pairs at a time.
-     *         namespace := &quot;test_batch_put&quot;
-     *         rawReq := BatchDeleteKvRequest{
-     *             Namespace: &amp;namespace,
-     *         }
-     *         for i := 0; i &lt; 10000; i++ {
-     *             key := fmt.Sprintf(&quot;test_key_%d&quot;, i)
-     *             rawReq.Keys = append(rawReq.Keys, &amp;key)
-     *         }
-     *         payload, err := json.Marshal(rawReq)
-     *         if err != nil {
-     *             return err
-     *         }
-     *         // If the payload is greater than 2 MB, call the BatchDeleteKvWithHighCapacity operation for deletion.
-     *         reqHighCapacity := BatchDeleteKvWithHighCapacityAdvanceRequest{
-     *             Namespace: &amp;namespace,
-     *             UrlObject: bytes.NewReader(payload),
-     *         }
-     *         resp, err := cli.BatchDeleteKvWithHighCapacityAdvance(&amp;reqHighCapacity, runtime)
-     *         if err != nil {
-     *             return err
-     *         }
-     *         return nil
-     *     }</p>
+     * <p>This operation has the same functionality as <a href="https://help.aliyun.com/document_detail/2850204.html">BatchDeleteKv</a>, but allows a larger request body. When the request body is small, we recommend that you directly use the <a href="https://help.aliyun.com/document_detail/2850204.html">BatchDeleteKv</a> operation to reduce server-side processing time. This operation must be called by using an SDK. Take the Golang SDK as an example. You need to use the BatchDeleteKvWithHighCapacityAdvance function to call it.</p>
+     * <pre><code>func TestBatchDeleteWithHighCapacity() error {
+     *     // Initialize configuration
+     *     cfg := new(openapi.Config)
+     *     cfg.SetAccessKeyId(&quot;xxxxxxxxx&quot;)
+     *     cfg.SetAccessKeySecret(&quot;xxxxxxxxxx&quot;)
+     *     cli, err := NewClient(cfg)
+     *     if err != nil {
+     *         return err
+     *     }
+     *     runtime := &amp;util.RuntimeOptions{}
+     *     // Construct the request for the key-value pairs to be batch deleted
+     *     namespace := &quot;test_batch_put&quot;
+     *     rawReq := BatchDeleteKvRequest{
+     *         Namespace: &amp;namespace,
+     *     }
+     *     for i := 0; i &lt; 10000; i++ {
+     *         key := fmt.Sprintf(&quot;test_key_%d&quot;, i)
+     *         rawReq.Keys = append(rawReq.Keys, &amp;key)
+     *     }
+     *     payload, err := json.Marshal(rawReq)
+     *     if err != nil {
+     *         return err
+     *     }
+     *     // If the payload is larger than 2 MB, call the high-capacity operation to perform deletion
+     *     reqHighCapacity := BatchDeleteKvWithHighCapacityAdvanceRequest{
+     *         Namespace: &amp;namespace,
+     *         UrlObject: bytes.NewReader(payload),
+     *     }
+     *     resp, err := cli.BatchDeleteKvWithHighCapacityAdvance(&amp;reqHighCapacity, runtime)
+     *     if err != nil {
+     *         return err
+     *     }
+     *     return nil
+     * }
+     * </code></pre>
      * 
      * <b>summary</b> : 
-     * <p>Deletes multiple key-value pairs from a namespace at a time based on specified keys. The request body can be up to 100 MB.</p>
+     * <p>Batch deletes key-value pairs in the specified KV namespace based on a specified list of key names. The maximum request body size allowed is 100 MB.</p>
      * 
      * @param request BatchDeleteKvWithHighCapacityRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -580,44 +585,45 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation allows you to upload a larger request body than by using <a href="https://help.aliyun.com/document_detail/2850204.html">BatchDeleteKv</a>. For small request bodies, we recommend that you use <a href="https://help.aliyun.com/document_detail/2850204.html">BatchDeleteKv</a> to minimize the server processing time. This operation must be called by using SDKs. The following sample code uses the Golang SDK and BatchDeleteKvWithHighCapacityAdvance to call the operation.
-     *     func TestBatchDeleteWithHighCapacity() error {
-     *         // Initialize the configurations.
-     *         cfg := new(openapi.Config)
-     *         cfg.SetAccessKeyId(&quot;xxxxxxxxx&quot;)
-     *         cfg.SetAccessKeySecret(&quot;xxxxxxxxxx&quot;)
-     *         cli, err := NewClient(cfg)
-     *         if err != nil {
-     *             return err
-     *         }
-     *         runtime := &amp;util.RuntimeOptions{}
-     *         // Construct a request for deleting key-value pairs at a time.
-     *         namespace := &quot;test_batch_put&quot;
-     *         rawReq := BatchDeleteKvRequest{
-     *             Namespace: &amp;namespace,
-     *         }
-     *         for i := 0; i &lt; 10000; i++ {
-     *             key := fmt.Sprintf(&quot;test_key_%d&quot;, i)
-     *             rawReq.Keys = append(rawReq.Keys, &amp;key)
-     *         }
-     *         payload, err := json.Marshal(rawReq)
-     *         if err != nil {
-     *             return err
-     *         }
-     *         // If the payload is greater than 2 MB, call the BatchDeleteKvWithHighCapacity operation for deletion.
-     *         reqHighCapacity := BatchDeleteKvWithHighCapacityAdvanceRequest{
-     *             Namespace: &amp;namespace,
-     *             UrlObject: bytes.NewReader(payload),
-     *         }
-     *         resp, err := cli.BatchDeleteKvWithHighCapacityAdvance(&amp;reqHighCapacity, runtime)
-     *         if err != nil {
-     *             return err
-     *         }
-     *         return nil
-     *     }</p>
+     * <p>This operation has the same functionality as <a href="https://help.aliyun.com/document_detail/2850204.html">BatchDeleteKv</a>, but allows a larger request body. When the request body is small, we recommend that you directly use the <a href="https://help.aliyun.com/document_detail/2850204.html">BatchDeleteKv</a> operation to reduce server-side processing time. This operation must be called by using an SDK. Take the Golang SDK as an example. You need to use the BatchDeleteKvWithHighCapacityAdvance function to call it.</p>
+     * <pre><code>func TestBatchDeleteWithHighCapacity() error {
+     *     // Initialize configuration
+     *     cfg := new(openapi.Config)
+     *     cfg.SetAccessKeyId(&quot;xxxxxxxxx&quot;)
+     *     cfg.SetAccessKeySecret(&quot;xxxxxxxxxx&quot;)
+     *     cli, err := NewClient(cfg)
+     *     if err != nil {
+     *         return err
+     *     }
+     *     runtime := &amp;util.RuntimeOptions{}
+     *     // Construct the request for the key-value pairs to be batch deleted
+     *     namespace := &quot;test_batch_put&quot;
+     *     rawReq := BatchDeleteKvRequest{
+     *         Namespace: &amp;namespace,
+     *     }
+     *     for i := 0; i &lt; 10000; i++ {
+     *         key := fmt.Sprintf(&quot;test_key_%d&quot;, i)
+     *         rawReq.Keys = append(rawReq.Keys, &amp;key)
+     *     }
+     *     payload, err := json.Marshal(rawReq)
+     *     if err != nil {
+     *         return err
+     *     }
+     *     // If the payload is larger than 2 MB, call the high-capacity operation to perform deletion
+     *     reqHighCapacity := BatchDeleteKvWithHighCapacityAdvanceRequest{
+     *         Namespace: &amp;namespace,
+     *         UrlObject: bytes.NewReader(payload),
+     *     }
+     *     resp, err := cli.BatchDeleteKvWithHighCapacityAdvance(&amp;reqHighCapacity, runtime)
+     *     if err != nil {
+     *         return err
+     *     }
+     *     return nil
+     * }
+     * </code></pre>
      * 
      * <b>summary</b> : 
-     * <p>Deletes multiple key-value pairs from a namespace at a time based on specified keys. The request body can be up to 100 MB.</p>
+     * <p>Batch deletes key-value pairs in the specified KV namespace based on a specified list of key names. The maximum request body size allowed is 100 MB.</p>
      * 
      * @param request BatchDeleteKvWithHighCapacityRequest
      * @return BatchDeleteKvWithHighCapacityResponse
@@ -717,7 +723,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Batch Get Expression Matches</p>
+     * <p>Retrieves match fields for a batch of expressions.</p>
      * 
      * @param tmpReq BatchGetExpressionFieldsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -777,7 +783,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Batch Get Expression Matches</p>
+     * <p>Retrieves match fields for a batch of expressions.</p>
      * 
      * @param request BatchGetExpressionFieldsRequest
      * @return BatchGetExpressionFieldsResponse
@@ -789,7 +795,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Configures key-value pairs for a namespace at a time based on specified keys.</p>
+     * <p>Sets multiple key-value pairs in a specified namespace.</p>
      * 
      * @param tmpReq BatchPutKvRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -833,7 +839,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Configures key-value pairs for a namespace at a time based on specified keys.</p>
+     * <p>Sets multiple key-value pairs in a specified namespace.</p>
      * 
      * @param request BatchPutKvRequest
      * @return BatchPutKvResponse
@@ -845,52 +851,53 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation allows you to upload a larger request body than by using <a href="https://help.aliyun.com/document_detail/2850203.html">BatchPutKv</a>. For small request bodies, we recommend that you use <a href="https://help.aliyun.com/document_detail/2850203.html">BatchPutKv</a> to minimize the server processing time. This operation must be called by using SDKs. The following sample code uses the Golang SDK and BatchPutKvWithHighCapacityAdvance to call the operation.
-     *     func TestBatchPutKvWithHighCapacity() error {
-     *         // Initialize the configurations.
-     *         cfg := new(openapi.Config)
-     *         cfg.SetAccessKeyId(&quot;xxxxxxxxx&quot;)
-     *         cfg.SetAccessKeySecret(&quot;xxxxxxxxxx&quot;)
-     *         cli, err := NewClient(cfg)
-     *         if err != nil {
-     *             return err
+     * <p>This API is similar to the <a href="https://help.aliyun.com/document_detail/2850203.html">BatchPutKv</a> API but supports a larger request body. For smaller request bodies, use the <a href="https://help.aliyun.com/document_detail/2850203.html">BatchPutKv</a> API for faster server-side processing. You must use an SDK to call this API. For example, if you use the Go SDK, you must call the BatchPutKvWithHighCapacityAdvance function.</p>
+     * <pre><code>func TestBatchPutKvWithHighCapacity() error {
+     *     // Initialize the configuration.
+     *     cfg := new(openapi.Config)
+     *     cfg.SetAccessKeyId(&quot;xxxxxxxxx&quot;)
+     *     cfg.SetAccessKeySecret(&quot;xxxxxxxxxx&quot;)
+     *     cli, err := NewClient(cfg)
+     *     if err != nil {
+     *         return err
+     *     }
+     *     runtime := &amp;util.RuntimeOptions{}
+     *     // Construct the request for batch-uploading key-value pairs.
+     *     namespace := &quot;test_batch_put&quot;
+     *     numKv := 10000
+     *     kvList := make([]*BatchPutKvRequestKvList, numKv)
+     *     test_value := strings.Repeat(&quot;a&quot;, 10*1024)
+     *     for i := 0; i &lt; numKv; i++ {
+     *         key := fmt.Sprintf(&quot;test_key_%d&quot;, i)
+     *         value := test_value
+     *         kvList[i] = &amp;BatchPutKvRequestKvList{
+     *             Key:   &amp;key,
+     *             Value: &amp;value,
      *         }
-     *         runtime := &amp;util.RuntimeOptions{}
-     *         // Construct a request for uploading key-value pairs at a time.
-     *         namespace := &quot;test_batch_put&quot;
-     *         numKv := 10000
-     *         kvList := make([]<em>BatchPutKvRequestKvList, numKv)
-     *         test_value := strings.Repeat(&quot;a&quot;, 10</em>1024)
-     *         for i := 0; i &lt; numKv; i++ {
-     *             key := fmt.Sprintf(&quot;test_key_%d&quot;, i)
-     *             value := test_value
-     *             kvList[i] = &amp;BatchPutKvRequestKvList{
-     *                 Key:   &amp;key,
-     *                 Value: &amp;value,
-     *             }
-     *         }
-     *         rawReq := BatchPutKvRequest{
-     *             Namespace: &amp;namespace,
-     *             KvList:    kvList,
-     *         }
-     *         payload, err := json.Marshal(rawReq)
-     *         if err != nil {
-     *             return err
-     *         }
-     *         // If the payload is greater than 2 MB, call the BatchPutKvWithHighCapacity operation for upload.
-     *         reqHighCapacity := BatchPutKvWithHighCapacityAdvanceRequest{
-     *             Namespace: &amp;namespace,
-     *             UrlObject: bytes.NewReader(payload),
-     *         }
-     *         resp, err := cli.BatchPutKvWithHighCapacityAdvance(&amp;reqHighCapacity, runtime)
-     *         if err != nil {
-     *             return err
-     *         }
-     *         return nil
-     *     }</p>
+     *     }
+     *     rawReq := BatchPutKvRequest{
+     *         Namespace: &amp;namespace,
+     *         KvList:    kvList,
+     *     }
+     *     payload, err := json.Marshal(rawReq)
+     *     if err != nil {
+     *         return err
+     *     }
+     *     // If the payload is larger than 2 MB, call the high-capacity API to upload it.
+     *     reqHighCapacity := BatchPutKvWithHighCapacityAdvanceRequest{
+     *         Namespace: &amp;namespace,
+     *         UrlObject: bytes.NewReader(payload),
+     *     }
+     *     resp, err := cli.BatchPutKvWithHighCapacityAdvance(&amp;reqHighCapacity, runtime)
+     *     if err != nil {
+     *         return err
+     *     }
+     *     return nil
+     * }
+     * </code></pre>
      * 
      * <b>summary</b> : 
-     * <p>Configures key-value pairs for a namespace at a time based on specified keys. The request body can be up to 100 MB.</p>
+     * <p>Writes key-value pairs in a batch to a specified namespace. This API supports a request body of up to 100 MB.</p>
      * 
      * @param request BatchPutKvWithHighCapacityRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -926,52 +933,53 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation allows you to upload a larger request body than by using <a href="https://help.aliyun.com/document_detail/2850203.html">BatchPutKv</a>. For small request bodies, we recommend that you use <a href="https://help.aliyun.com/document_detail/2850203.html">BatchPutKv</a> to minimize the server processing time. This operation must be called by using SDKs. The following sample code uses the Golang SDK and BatchPutKvWithHighCapacityAdvance to call the operation.
-     *     func TestBatchPutKvWithHighCapacity() error {
-     *         // Initialize the configurations.
-     *         cfg := new(openapi.Config)
-     *         cfg.SetAccessKeyId(&quot;xxxxxxxxx&quot;)
-     *         cfg.SetAccessKeySecret(&quot;xxxxxxxxxx&quot;)
-     *         cli, err := NewClient(cfg)
-     *         if err != nil {
-     *             return err
+     * <p>This API is similar to the <a href="https://help.aliyun.com/document_detail/2850203.html">BatchPutKv</a> API but supports a larger request body. For smaller request bodies, use the <a href="https://help.aliyun.com/document_detail/2850203.html">BatchPutKv</a> API for faster server-side processing. You must use an SDK to call this API. For example, if you use the Go SDK, you must call the BatchPutKvWithHighCapacityAdvance function.</p>
+     * <pre><code>func TestBatchPutKvWithHighCapacity() error {
+     *     // Initialize the configuration.
+     *     cfg := new(openapi.Config)
+     *     cfg.SetAccessKeyId(&quot;xxxxxxxxx&quot;)
+     *     cfg.SetAccessKeySecret(&quot;xxxxxxxxxx&quot;)
+     *     cli, err := NewClient(cfg)
+     *     if err != nil {
+     *         return err
+     *     }
+     *     runtime := &amp;util.RuntimeOptions{}
+     *     // Construct the request for batch-uploading key-value pairs.
+     *     namespace := &quot;test_batch_put&quot;
+     *     numKv := 10000
+     *     kvList := make([]*BatchPutKvRequestKvList, numKv)
+     *     test_value := strings.Repeat(&quot;a&quot;, 10*1024)
+     *     for i := 0; i &lt; numKv; i++ {
+     *         key := fmt.Sprintf(&quot;test_key_%d&quot;, i)
+     *         value := test_value
+     *         kvList[i] = &amp;BatchPutKvRequestKvList{
+     *             Key:   &amp;key,
+     *             Value: &amp;value,
      *         }
-     *         runtime := &amp;util.RuntimeOptions{}
-     *         // Construct a request for uploading key-value pairs at a time.
-     *         namespace := &quot;test_batch_put&quot;
-     *         numKv := 10000
-     *         kvList := make([]<em>BatchPutKvRequestKvList, numKv)
-     *         test_value := strings.Repeat(&quot;a&quot;, 10</em>1024)
-     *         for i := 0; i &lt; numKv; i++ {
-     *             key := fmt.Sprintf(&quot;test_key_%d&quot;, i)
-     *             value := test_value
-     *             kvList[i] = &amp;BatchPutKvRequestKvList{
-     *                 Key:   &amp;key,
-     *                 Value: &amp;value,
-     *             }
-     *         }
-     *         rawReq := BatchPutKvRequest{
-     *             Namespace: &amp;namespace,
-     *             KvList:    kvList,
-     *         }
-     *         payload, err := json.Marshal(rawReq)
-     *         if err != nil {
-     *             return err
-     *         }
-     *         // If the payload is greater than 2 MB, call the BatchPutKvWithHighCapacity operation for upload.
-     *         reqHighCapacity := BatchPutKvWithHighCapacityAdvanceRequest{
-     *             Namespace: &amp;namespace,
-     *             UrlObject: bytes.NewReader(payload),
-     *         }
-     *         resp, err := cli.BatchPutKvWithHighCapacityAdvance(&amp;reqHighCapacity, runtime)
-     *         if err != nil {
-     *             return err
-     *         }
-     *         return nil
-     *     }</p>
+     *     }
+     *     rawReq := BatchPutKvRequest{
+     *         Namespace: &amp;namespace,
+     *         KvList:    kvList,
+     *     }
+     *     payload, err := json.Marshal(rawReq)
+     *     if err != nil {
+     *         return err
+     *     }
+     *     // If the payload is larger than 2 MB, call the high-capacity API to upload it.
+     *     reqHighCapacity := BatchPutKvWithHighCapacityAdvanceRequest{
+     *         Namespace: &amp;namespace,
+     *         UrlObject: bytes.NewReader(payload),
+     *     }
+     *     resp, err := cli.BatchPutKvWithHighCapacityAdvance(&amp;reqHighCapacity, runtime)
+     *     if err != nil {
+     *         return err
+     *     }
+     *     return nil
+     * }
+     * </code></pre>
      * 
      * <b>summary</b> : 
-     * <p>Configures key-value pairs for a namespace at a time based on specified keys. The request body can be up to 100 MB.</p>
+     * <p>Writes key-value pairs in a batch to a specified namespace. This API supports a request body of up to 100 MB.</p>
      * 
      * @param request BatchPutKvWithHighCapacityRequest
      * @return BatchPutKvWithHighCapacityResponse
@@ -1071,7 +1079,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies multiple rules in a specific Web Application Firewall (WAF) ruleset at a time.</p>
+     * <p>Updates the configurations of multiple rules in a specified WAF ruleset.</p>
      * 
      * @param tmpReq BatchUpdateWafRulesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1135,7 +1143,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies multiple rules in a specific Web Application Firewall (WAF) ruleset at a time.</p>
+     * <p>Updates the configurations of multiple rules in a specified WAF ruleset.</p>
      * 
      * @param request BatchUpdateWafRulesRequest
      * @return BatchUpdateWafRulesResponse
@@ -1147,7 +1155,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Blocks URLs.</p>
+     * <p>Blocks access to specified URLs.</p>
      * 
      * @param tmpReq BlockObjectRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1197,7 +1205,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Blocks URLs.</p>
+     * <p>Blocks access to specified URLs.</p>
      * 
      * @param request BlockObjectRequest
      * @return BlockObjectResponse
@@ -1366,7 +1374,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Commits the unstable code in the staging environment to generate an official code version.</p>
+     * <p>Submits the test (unstable) version code of an edge function (Routine) and generates a formal version.</p>
      * 
      * @param request CommitRoutineStagingCodeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1377,6 +1385,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.codeDescription)) {
             body.put("CodeDescription", request.codeDescription);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.deployEnv)) {
+            body.put("DeployEnv", request.deployEnv);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.name)) {
@@ -1402,7 +1414,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Commits the unstable code in the staging environment to generate an official code version.</p>
+     * <p>Submits the test (unstable) version code of an edge function (Routine) and generates a formal version.</p>
      * 
      * @param request CommitRoutineStagingCodeRequest
      * @return CommitRoutineStagingCodeResponse
@@ -1414,7 +1426,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Create a new site cache configuration</p>
+     * <p>Create a Site Cache Configuration.</p>
      * 
      * @param request CreateCacheRuleRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1558,7 +1570,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Create a new site cache configuration</p>
+     * <p>Create a Site Cache Configuration.</p>
      * 
      * @param request CreateCacheRuleRequest
      * @return CreateCacheRuleResponse
@@ -1628,7 +1640,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Add a compression rule</p>
+     * <p>Add a compression rule for a site.</p>
      * 
      * @param request CreateCompressionRuleRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1692,7 +1704,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Add a compression rule</p>
+     * <p>Add a compression rule for a site.</p>
      * 
      * @param request CreateCompressionRuleRequest
      * @return CreateCompressionRuleResponse
@@ -1703,8 +1715,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li>If you set the acceleration region to <strong>Chinese mainland only</strong> or <strong>global</strong>, your site must have an ICP filing.</li>
+     * <li>Each user can call this operation up to 100 times per hour.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>创建自定义主机名</p>
+     * <p>Creates a custom hostname for a site.</p>
      * 
      * @param request CreateCustomHostnameRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1767,8 +1785,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li>If you set the acceleration region to <strong>Chinese mainland only</strong> or <strong>global</strong>, your site must have an ICP filing.</li>
+     * <li>Each user can call this operation up to 100 times per hour.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>创建自定义主机名</p>
+     * <p>Creates a custom hostname for a site.</p>
      * 
      * @param request CreateCustomHostnameRequest
      * @return CreateCustomHostnameResponse
@@ -1780,7 +1804,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Add configurations for modifying the response code.</p>
+     * <p>Add a custom response code configuration for a site.</p>
      * 
      * @param request CreateCustomResponseCodeRuleRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1840,7 +1864,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Add configurations for modifying the response code.</p>
+     * <p>Add a custom response code configuration for a site.</p>
      * 
      * @param request CreateCustomResponseCodeRuleRequest
      * @return CreateCustomResponseCodeRuleResponse
@@ -1852,7 +1876,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates an account-level custom scenario policy. You can execute a policy after you associate the policy with a website.</p>
+     * <p>Creates a user-level custom scene policy. After you associate the policy with one or more sites, the policy applies to those sites.</p>
      * 
      * @param request CreateCustomScenePolicyRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1904,7 +1928,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates an account-level custom scenario policy. You can execute a policy after you associate the policy with a website.</p>
+     * <p>Creates a user-level custom scene policy. After you associate the policy with one or more sites, the policy applies to those sites.</p>
      * 
      * @param request CreateCustomScenePolicyRequest
      * @return CreateCustomScenePolicyResponse
@@ -2182,7 +2206,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Adds the configuration of modifying HTTP request headers for a website.</p>
+     * <p>Adds a configuration for modifying a site\&quot;s HTTP inbound request headers.</p>
      * 
      * @param tmpReq CreateHttpIncomingRequestHeaderModificationRuleRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2244,7 +2268,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Adds the configuration of modifying HTTP request headers for a website.</p>
+     * <p>Adds a configuration for modifying a site\&quot;s HTTP inbound request headers.</p>
      * 
      * @param request CreateHttpIncomingRequestHeaderModificationRuleRequest
      * @return CreateHttpIncomingRequestHeaderModificationRuleResponse
@@ -2256,7 +2280,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Adds the configuration of modifying HTTP response headers for a website.</p>
+     * <p>Creates a configuration to modify HTTP inbound response headers for a site.</p>
      * 
      * @param tmpReq CreateHttpIncomingResponseHeaderModificationRuleRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2318,7 +2342,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Adds the configuration of modifying HTTP response headers for a website.</p>
+     * <p>Creates a configuration to modify HTTP inbound response headers for a site.</p>
      * 
      * @param request CreateHttpIncomingResponseHeaderModificationRuleRequest
      * @return CreateHttpIncomingResponseHeaderModificationRuleResponse
@@ -2330,7 +2354,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Add HTTP Request Header Rule</p>
+     * <p>Adds a Configuration for modifying a Site\&quot;s HTTP Request Headers.</p>
      * 
      * @param tmpReq CreateHttpRequestHeaderModificationRuleRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2392,7 +2416,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Add HTTP Request Header Rule</p>
+     * <p>Adds a Configuration for modifying a Site\&quot;s HTTP Request Headers.</p>
      * 
      * @param request CreateHttpRequestHeaderModificationRuleRequest
      * @return CreateHttpRequestHeaderModificationRuleResponse
@@ -2404,7 +2428,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Add HTTP Response Header Rule</p>
+     * <p>Creates a rule to modify HTTP response headers.</p>
      * 
      * @param tmpReq CreateHttpResponseHeaderModificationRuleRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2466,7 +2490,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Add HTTP Response Header Rule</p>
+     * <p>Creates a rule to modify HTTP response headers.</p>
      * 
      * @param request CreateHttpResponseHeaderModificationRuleRequest
      * @return CreateHttpResponseHeaderModificationRuleResponse
@@ -2478,7 +2502,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Create a new site HTTPS application configuration</p>
+     * <p>Adds an HTTPS application configuration to a site.</p>
      * 
      * @param request CreateHttpsApplicationConfigurationRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2582,7 +2606,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Create a new site HTTPS application configuration</p>
+     * <p>Adds an HTTPS application configuration to a site.</p>
      * 
      * @param request CreateHttpsApplicationConfigurationRequest
      * @return CreateHttpsApplicationConfigurationResponse
@@ -2593,8 +2617,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>A site supports only one global configuration (without Rule-related parameters). To exceed this limit, you must provide the RuleName, Rule, and RuleEnable parameters to create a rule-based configuration.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Create a new site HTTPS basic configuration</p>
+     * <p>Create HTTPS basic configuration for a site.</p>
      * 
      * @param request CreateHttpsBasicConfigurationRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2681,8 +2708,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>A site supports only one global configuration (without Rule-related parameters). To exceed this limit, you must provide the RuleName, Rule, and RuleEnable parameters to create a rule-based configuration.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Create a new site HTTPS basic configuration</p>
+     * <p>Create HTTPS basic configuration for a site.</p>
      * 
      * @param request CreateHttpsBasicConfigurationRequest
      * @return CreateHttpsBasicConfigurationResponse
@@ -2694,7 +2724,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Add Site Image Transformation Configuration</p>
+     * <p>Creates an image transformation configuration for a site.</p>
      * 
      * @param request CreateImageTransformRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2758,7 +2788,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Add Site Image Transformation Configuration</p>
+     * <p>Creates an image transformation configuration for a site.</p>
      * 
      * @param request CreateImageTransformRequest
      * @return CreateImageTransformResponse
@@ -2770,7 +2800,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Create a namespace in your Alibaba Cloud account.</p>
+     * <p>Creates a KV namespace in the current account.</p>
      * 
      * @param request CreateKvNamespaceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2806,7 +2836,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Create a namespace in your Alibaba Cloud account.</p>
+     * <p>Creates a KV namespace in the current account.</p>
      * 
      * @param request CreateKvNamespaceRequest
      * @return CreateKvNamespaceResponse
@@ -2880,10 +2910,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Through this API, users can configure load balancing services according to their business needs, including but not limited to adaptive routing, weighted round-robin, rule matching, health checks, and more, to achieve effective traffic management and optimization.</p>
+     * <p>Use this API to configure Server Load Balancer features for effective traffic management and optimization, such as adaptive routing, weighted round-robin, rule matching, and health checks.</p>
      * 
      * <b>summary</b> : 
-     * <p>Add a New Load Balancer</p>
+     * <p>Creates a new Server Load Balancer instance with advanced features, including custom routing, session persistence, and health check configuration.</p>
      * 
      * @param tmpReq CreateLoadBalancerRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2993,10 +3023,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Through this API, users can configure load balancing services according to their business needs, including but not limited to adaptive routing, weighted round-robin, rule matching, health checks, and more, to achieve effective traffic management and optimization.</p>
+     * <p>Use this API to configure Server Load Balancer features for effective traffic management and optimization, such as adaptive routing, weighted round-robin, rule matching, and health checks.</p>
      * 
      * <b>summary</b> : 
-     * <p>Add a New Load Balancer</p>
+     * <p>Creates a new Server Load Balancer instance with advanced features, including custom routing, session persistence, and health check configuration.</p>
      * 
      * @param request CreateLoadBalancerRequest
      * @return CreateLoadBalancerResponse
@@ -3007,8 +3037,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>The site plan must be Standard Edition or higher to use the WebSocket feature. When calling this API, you must provide at least one feature configuration parameter. Providing only SiteId returns an error.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Create a new site network optimization configuration</p>
+     * <p>Adds a network optimization configuration for a site.</p>
      * 
      * @param request CreateNetworkOptimizationRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3079,8 +3112,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>The site plan must be Standard Edition or higher to use the WebSocket feature. When calling this API, you must provide at least one feature configuration parameter. Providing only SiteId returns an error.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Create a new site network optimization configuration</p>
+     * <p>Adds a network optimization configuration for a site.</p>
      * 
      * @param request CreateNetworkOptimizationRequest
      * @return CreateNetworkOptimizationResponse
@@ -3092,10 +3128,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Multiple origins can be added under the origin address, supporting domain names, IPs, OSS, S3, and other types of origins. It supports authentication for OSS and S3 type origins.</p>
+     * <p>You can add multiple origins to an origin pool, such as a domain name, IP, OSS, or S3. Back-to-origin authentication is available for OSS and S3 origins.</p>
      * 
      * <b>summary</b> : 
-     * <p>Add a new origin address pool</p>
+     * <p>Creates an origin pool for a site. You can then use the origin pool with a Server Load Balancer or for direct back-to-origin requests.</p>
      * 
      * @param tmpReq CreateOriginPoolRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3145,10 +3181,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Multiple origins can be added under the origin address, supporting domain names, IPs, OSS, S3, and other types of origins. It supports authentication for OSS and S3 type origins.</p>
+     * <p>You can add multiple origins to an origin pool, such as a domain name, IP, OSS, or S3. Back-to-origin authentication is available for OSS and S3 origins.</p>
      * 
      * <b>summary</b> : 
-     * <p>Add a new origin address pool</p>
+     * <p>Creates an origin pool for a site. You can then use the origin pool with a Server Load Balancer or for direct back-to-origin requests.</p>
      * 
      * @param request CreateOriginPoolRequest
      * @return CreateOriginPoolResponse
@@ -3208,7 +3244,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Create a new origin rule configuration for the site</p>
+     * <p>Create a Back-to-Origin Rule for a Site.</p>
      * 
      * @param request CreateOriginRuleRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3324,7 +3360,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Create a new origin rule configuration for the site</p>
+     * <p>Create a Back-to-Origin Rule for a Site.</p>
      * 
      * @param request CreateOriginRuleRequest
      * @return CreateOriginRuleResponse
@@ -3336,7 +3372,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a custom error page, which is displayed when a request is blocked by Web Application Firewall (WAF). You can configure the HTML content, page type, and description, and submit the Base64-encoded page content.</p>
+     * <p>Creates a custom error page. This page appears when the web application firewall (WAF) blocks a user request. You can configure the page\&quot;s HTML content, content type, and description, and submit the page content using BASE64 encoding.</p>
      * 
      * @param tmpReq CreatePageRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3390,7 +3426,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a custom error page, which is displayed when a request is blocked by Web Application Firewall (WAF). You can configure the HTML content, page type, and description, and submit the Base64-encoded page content.</p>
+     * <p>Creates a custom error page. This page appears when the web application firewall (WAF) blocks a user request. You can configure the page\&quot;s HTML content, content type, and description, and submit the page content using BASE64 encoding.</p>
      * 
      * @param request CreatePageRequest
      * @return CreatePageResponse
@@ -3439,6 +3475,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.hostPolicy)) {
             query.put("HostPolicy", request.hostPolicy);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.httpPorts)) {
+            query.put("HttpPorts", request.httpPorts);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.httpsPorts)) {
+            query.put("HttpsPorts", request.httpsPorts);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.proxied)) {
@@ -3496,7 +3540,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Add a Redirect Rule</p>
+     * <p>Configure site redirection.</p>
      * 
      * @param request CreateRedirectRuleRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3564,7 +3608,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Add a Redirect Rule</p>
+     * <p>Configure site redirection.</p>
      * 
      * @param request CreateRedirectRuleRequest
      * @return CreateRedirectRuleResponse
@@ -3576,7 +3620,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Add Rewrite URL Rule</p>
+     * <p>Adds a URL rewrite configuration to a site.</p>
      * 
      * @param request CreateRewriteUrlRuleRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3644,7 +3688,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Add Rewrite URL Rule</p>
+     * <p>Adds a URL rewrite configuration to a site.</p>
      * 
      * @param request CreateRewriteUrlRuleRequest
      * @return CreateRewriteUrlRuleResponse
@@ -3656,7 +3700,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a routine.</p>
+     * <p>Creates an Edge Routine.</p>
      * 
      * @param request CreateRoutineRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3696,7 +3740,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a routine.</p>
+     * <p>Creates an Edge Routine.</p>
      * 
      * @param request CreateRoutineRequest
      * @return CreateRoutineResponse
@@ -3708,10 +3752,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2><a href="#"></a>Request description</h2>
+     * <h2>Request description</h2>
      * <ul>
-     * <li>When you create a version for deployment, you can set the environment name <code>Env</code> parameter only to the test environment <code>staging</code> or the production environment <code>production</code>.</li>
-     * <li><code>CodeVersions</code> parameter supports up to two versions of a phased release, and the sum of the proportions of these versions must be equal to 100%.</li>
+     * <li>When creating a routine code version deployment, the environment name <code>Env</code> supports only the staging environment <code>staging</code> or the production environment <code>production</code>.</li>
+     * <li>The <code>CodeVersions</code> parameter supports canary release of up to two versions, and the sum of the traffic percentages for these versions must equal 100%.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -3765,10 +3809,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2><a href="#"></a>Request description</h2>
+     * <h2>Request description</h2>
      * <ul>
-     * <li>When you create a version for deployment, you can set the environment name <code>Env</code> parameter only to the test environment <code>staging</code> or the production environment <code>production</code>.</li>
-     * <li><code>CodeVersions</code> parameter supports up to two versions of a phased release, and the sum of the proportions of these versions must be equal to 100%.</li>
+     * <li>When creating a routine code version deployment, the environment name <code>Env</code> supports only the staging environment <code>staging</code> or the production environment <code>production</code>.</li>
+     * <li>The <code>CodeVersions</code> parameter supports canary release of up to two versions, and the sum of the traffic percentages for these versions must equal 100%.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -3784,7 +3828,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Adds a record to map a domain that is associated with a routine. This record is used to trigger the associated routine code.</p>
+     * <p>Adds a new record to a site that triggers a specified edge function Routine.</p>
      * 
      * @param request CreateRoutineRelatedRecordRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3824,7 +3868,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Adds a record to map a domain that is associated with a routine. This record is used to trigger the associated routine code.</p>
+     * <p>Adds a new record to a site that triggers a specified edge function Routine.</p>
      * 
      * @param request CreateRoutineRelatedRecordRequest
      * @return CreateRoutineRelatedRecordResponse
@@ -3836,7 +3880,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Adds edge function routing configurations.</p>
+     * <p>Create an edge function route configuration.</p>
      * 
      * @param request CreateRoutineRouteRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3900,7 +3944,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Adds edge function routing configurations.</p>
+     * <p>Create an edge function route configuration.</p>
      * 
      * @param request CreateRoutineRouteRequest
      * @return CreateRoutineRouteResponse
@@ -3937,6 +3981,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.confOptionsShrink)) {
             body.put("ConfOptions", request.confOptionsShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.deployEnv)) {
+            body.put("DeployEnv", request.deployEnv);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.extraInfo)) {
@@ -3978,7 +4026,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates scheduled prefetch plans.</p>
+     * <p>Plan to batch add scheduled prefetch tasks.</p>
      * 
      * @param tmpReq CreateScheduledPreloadExecutionsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4022,7 +4070,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates scheduled prefetch plans.</p>
+     * <p>Plan to batch add scheduled prefetch tasks.</p>
      * 
      * @param request CreateScheduledPreloadExecutionsRequest
      * @return CreateScheduledPreloadExecutionsResponse
@@ -4034,7 +4082,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Adds a scheduled prefetch task.</p>
+     * <p>Create a scheduled prefetch task.</p>
      * 
      * @param request CreateScheduledPreloadJobRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4082,7 +4130,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Adds a scheduled prefetch task.</p>
+     * <p>Create a scheduled prefetch task.</p>
      * 
      * @param request CreateScheduledPreloadJobRequest
      * @return CreateScheduledPreloadJobResponse
@@ -4094,13 +4142,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  Make sure that you have an available plan before you add a website.</p>
      * <ul>
-     * <li>Make sure that your website domain name has an ICP filing if the location you want to specify covers the Chinese mainland.</li>
+     * <li>You must have an active plan instance to create a site.</li>
+     * <li>If the selected acceleration region includes the Chinese mainland, your domain must have a valid ICP filing.</li>
+     * <li>This operation is rate-limited to 100 calls per user per hour.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Adds a website.</p>
+     * <p>Creates a new site.</p>
      * 
      * @param request CreateSiteRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4148,13 +4197,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  Make sure that you have an available plan before you add a website.</p>
      * <ul>
-     * <li>Make sure that your website domain name has an ICP filing if the location you want to specify covers the Chinese mainland.</li>
+     * <li>You must have an active plan instance to create a site.</li>
+     * <li>If the selected acceleration region includes the Chinese mainland, your domain must have a valid ICP filing.</li>
+     * <li>This operation is rate-limited to 100 calls per user per hour.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Adds a website.</p>
+     * <p>Creates a new site.</p>
      * 
      * @param request CreateSiteRequest
      * @return CreateSiteResponse
@@ -4250,7 +4300,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a real-time log delivery task.</p>
+     * <p>Create a real-time log shipping task.</p>
      * 
      * @param tmpReq CreateSiteDeliveryTaskRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4352,7 +4402,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a real-time log delivery task.</p>
+     * <p>Create a real-time log shipping task.</p>
      * 
      * @param request CreateSiteDeliveryTaskRequest
      * @return CreateSiteDeliveryTaskResponse
@@ -4397,7 +4447,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Create Transport Layer Application</p>
+     * <p>Creating a layer 4 acceleration application.</p>
      * 
      * @param tmpReq CreateTransportLayerApplicationRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4463,7 +4513,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Create Transport Layer Application</p>
+     * <p>Creating a layer 4 acceleration application.</p>
      * 
      * @param request CreateTransportLayerApplicationRequest
      * @return CreateTransportLayerApplicationResponse
@@ -4527,22 +4577,22 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This API operation allows you to deliver logs to destinations such as Simple Log Service (SLS), HTTP servers, Object Storage Service (OSS), Amazon Simple Storage Service (S3), and Kafka. You can specify the task name, log fields to deliver, data center, discard rate, delivery type, and delivery details.</p>
+     * <p>Use this API to create a delivery task for specific log data. It supports multiple delivery destinations, including SLS, HTTP services, Alibaba Cloud OSS, S3-compatible storage, and Kafka message queues. You can set a custom task name, select log fields, specify a data center, set the discard rate, choose a delivery type, and configure delivery details for the selected type.</p>
      * <ul>
-     * <li><strong>Field filtering</strong>: Use the <code>FieldName</code> parameter to specify log fields to deliver.</li>
-     * <li><strong>Filtering rules</strong>: Use the <code>FilterRules</code> parameter to pre-process and filter log data.</li>
-     * <li><strong>Diverse delivery destinations</strong>: Logs can be delivered to different destinations. Configuration parameters vary with delivery destinations.</li>
+     * <li><strong>Field Filtering</strong>: Use <code>FieldName</code> to specify the log fields to deliver.</li>
+     * <li><strong>Filter Rules</strong>: Use <code>FilterRules</code> to filter log data before delivery.</li>
+     * <li><strong>Supported delivery destinations</strong>: Deliver logs to various destinations, including SLS, HTTP(S), Alibaba Cloud OSS, S3-compatible storage, and Kafka. Each method has specific configuration parameters.</li>
      * </ul>
-     * <h2><a href="#"></a>Precautions</h2>
+     * <h2>Notes</h2>
      * <ul>
-     * <li>Make sure that you have sufficient permissions to perform delivery tasks.</li>
-     * <li>If you enable encryption or authentication, properly configure corresponding parameters.</li>
-     * <li>Verify the syntax of <code>FilterRules</code> to make sure that filtering logic works as expected.</li>
-     * <li>Specify advanced settings such as the number of retries and timeout period based on your needs to have optimal delivery efficiency and stability.</li>
+     * <li>Ensure that your AccessKey and SecretKey have the required permissions for the delivery operation.</li>
+     * <li>If a delivery method requires encryption or authentication, configure its security parameters accordingly.</li>
+     * <li>Verify that the <code>FilterRules</code> syntax is correct.</li>
+     * <li>Adjust advanced parameters, such as the number of retries and timeout, to optimize delivery efficiency and stability.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Creates a log delivery task to ship logs to the specified destination.</p>
+     * <p>Creates a custom log shipping task to SLS, HTTP, OSS, S3, or Kafka.</p>
      * 
      * @param tmpReq CreateUserDeliveryTaskRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4644,22 +4694,22 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This API operation allows you to deliver logs to destinations such as Simple Log Service (SLS), HTTP servers, Object Storage Service (OSS), Amazon Simple Storage Service (S3), and Kafka. You can specify the task name, log fields to deliver, data center, discard rate, delivery type, and delivery details.</p>
+     * <p>Use this API to create a delivery task for specific log data. It supports multiple delivery destinations, including SLS, HTTP services, Alibaba Cloud OSS, S3-compatible storage, and Kafka message queues. You can set a custom task name, select log fields, specify a data center, set the discard rate, choose a delivery type, and configure delivery details for the selected type.</p>
      * <ul>
-     * <li><strong>Field filtering</strong>: Use the <code>FieldName</code> parameter to specify log fields to deliver.</li>
-     * <li><strong>Filtering rules</strong>: Use the <code>FilterRules</code> parameter to pre-process and filter log data.</li>
-     * <li><strong>Diverse delivery destinations</strong>: Logs can be delivered to different destinations. Configuration parameters vary with delivery destinations.</li>
+     * <li><strong>Field Filtering</strong>: Use <code>FieldName</code> to specify the log fields to deliver.</li>
+     * <li><strong>Filter Rules</strong>: Use <code>FilterRules</code> to filter log data before delivery.</li>
+     * <li><strong>Supported delivery destinations</strong>: Deliver logs to various destinations, including SLS, HTTP(S), Alibaba Cloud OSS, S3-compatible storage, and Kafka. Each method has specific configuration parameters.</li>
      * </ul>
-     * <h2><a href="#"></a>Precautions</h2>
+     * <h2>Notes</h2>
      * <ul>
-     * <li>Make sure that you have sufficient permissions to perform delivery tasks.</li>
-     * <li>If you enable encryption or authentication, properly configure corresponding parameters.</li>
-     * <li>Verify the syntax of <code>FilterRules</code> to make sure that filtering logic works as expected.</li>
-     * <li>Specify advanced settings such as the number of retries and timeout period based on your needs to have optimal delivery efficiency and stability.</li>
+     * <li>Ensure that your AccessKey and SecretKey have the required permissions for the delivery operation.</li>
+     * <li>If a delivery method requires encryption or authentication, configure its security parameters accordingly.</li>
+     * <li>Verify that the <code>FilterRules</code> syntax is correct.</li>
+     * <li>Adjust advanced parameters, such as the number of retries and timeout, to optimize delivery efficiency and stability.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Creates a log delivery task to ship logs to the specified destination.</p>
+     * <p>Creates a custom log shipping task to SLS, HTTP, OSS, S3, or Kafka.</p>
      * 
      * @param request CreateUserDeliveryTaskRequest
      * @return CreateUserDeliveryTaskResponse
@@ -4671,20 +4721,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>请求说明</h2>
+     * <h2>Description</h2>
      * <ul>
-     * <li>本API允许用户为指定实例创建新的WAF（Web Application Firewall）规则集。</li>
-     * <li><code>InstanceId</code> 是必需参数，指定了要为其创建规则集的具体实例。</li>
-     * <li><code>Phase</code> 参数定义了规则集的应用阶段，例如自定义规则、频次控制等。</li>
-     * <li><code>Name</code> 和 <code>Expression</code> 是必填项，分别代表规则集的名字和具体的匹配表达式。</li>
-     * <li>可选参数 <code>Description</code> 提供了对规则集功能或用途的文字描述。</li>
-     * <li><code>Status</code> 控制着规则集是否立即生效 (<code>on</code>) 或者处于关闭状态 (<code>off</code>)。</li>
-     * <li>通过 <code>Rules</code> 参数可以进一步配置更详细的规则列表，每个规则都包含名称、位置、表达式及动作等属性。</li>
-     * <li>成功响应将返回新创建规则集的唯一标识符 <code>Id</code> 以及所有关联规则的ID列表 <code>RuleIds</code>。</li>
+     * <li>You can use this API to create a Web Application Firewall (WAF) ruleset for a specific instance.</li>
+     * <li>The required <code>InstanceId</code> parameter specifies the instance for which to create the ruleset.</li>
+     * <li>The <code>Phase</code> parameter defines the execution phase of the ruleset, such as a custom rule or rate limiting.</li>
+     * <li>The required <code>Name</code> and <code>Expression</code> parameters specify the ruleset\&quot;s name and match expression.</li>
+     * <li>The optional <code>Description</code> parameter describes the purpose of the ruleset.</li>
+     * <li>The <code>Status</code> parameter controls whether the ruleset is immediately enabled (<code>on</code>) or disabled (<code>off</code>).</li>
+     * <li>Use the <code>Rules</code> parameter to configure a detailed rule list. Each rule includes properties such as name, position, expression, and action.</li>
+     * <li>A successful response returns the unique ID of the new ruleset in <code>Id</code> and a list of associated rule IDs in <code>RuleIds</code>.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>用于创建实例级别的Web应用防火墙规则集，支持多种类型的防护规则。</p>
+     * <p>Creates an instance-level Web Application Firewall (WAF) ruleset that supports various types of protection rules.</p>
      * 
      * @param tmpReq CreateUserWafRulesetRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4756,20 +4806,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>请求说明</h2>
+     * <h2>Description</h2>
      * <ul>
-     * <li>本API允许用户为指定实例创建新的WAF（Web Application Firewall）规则集。</li>
-     * <li><code>InstanceId</code> 是必需参数，指定了要为其创建规则集的具体实例。</li>
-     * <li><code>Phase</code> 参数定义了规则集的应用阶段，例如自定义规则、频次控制等。</li>
-     * <li><code>Name</code> 和 <code>Expression</code> 是必填项，分别代表规则集的名字和具体的匹配表达式。</li>
-     * <li>可选参数 <code>Description</code> 提供了对规则集功能或用途的文字描述。</li>
-     * <li><code>Status</code> 控制着规则集是否立即生效 (<code>on</code>) 或者处于关闭状态 (<code>off</code>)。</li>
-     * <li>通过 <code>Rules</code> 参数可以进一步配置更详细的规则列表，每个规则都包含名称、位置、表达式及动作等属性。</li>
-     * <li>成功响应将返回新创建规则集的唯一标识符 <code>Id</code> 以及所有关联规则的ID列表 <code>RuleIds</code>。</li>
+     * <li>You can use this API to create a Web Application Firewall (WAF) ruleset for a specific instance.</li>
+     * <li>The required <code>InstanceId</code> parameter specifies the instance for which to create the ruleset.</li>
+     * <li>The <code>Phase</code> parameter defines the execution phase of the ruleset, such as a custom rule or rate limiting.</li>
+     * <li>The required <code>Name</code> and <code>Expression</code> parameters specify the ruleset\&quot;s name and match expression.</li>
+     * <li>The optional <code>Description</code> parameter describes the purpose of the ruleset.</li>
+     * <li>The <code>Status</code> parameter controls whether the ruleset is immediately enabled (<code>on</code>) or disabled (<code>off</code>).</li>
+     * <li>Use the <code>Rules</code> parameter to configure a detailed rule list. Each rule includes properties such as name, position, expression, and action.</li>
+     * <li>A successful response returns the unique ID of the new ruleset in <code>Id</code> and a list of associated rule IDs in <code>RuleIds</code>.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>用于创建实例级别的Web应用防火墙规则集，支持多种类型的防护规则。</p>
+     * <p>Creates an instance-level Web Application Firewall (WAF) ruleset that supports various types of protection rules.</p>
      * 
      * @param request CreateUserWafRulesetRequest
      * @return CreateUserWafRulesetResponse
@@ -4869,7 +4919,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Create WAF Rule</p>
+     * <p>Creates a new rule in the Web Application Firewall (WAF). Use this operation to fine-tune firewall behavior and improve the security of your site or application.</p>
      * 
      * @param tmpReq CreateWafRuleRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4925,7 +4975,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Create WAF Rule</p>
+     * <p>Creates a new rule in the Web Application Firewall (WAF). Use this operation to fine-tune firewall behavior and improve the security of your site or application.</p>
      * 
      * @param request CreateWafRuleRequest
      * @return CreateWafRuleResponse
@@ -4937,7 +4987,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Create WAF Ruleset</p>
+     * <p>Creates a WAF ruleset.</p>
      * 
      * @param request CreateWafRulesetRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4983,7 +5033,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Create WAF Ruleset</p>
+     * <p>Creates a WAF ruleset.</p>
      * 
      * @param request CreateWafRulesetRequest
      * @return CreateWafRulesetResponse
@@ -4995,7 +5045,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a waiting room for a website.</p>
+     * <p>Create a site waiting room.</p>
      * 
      * @param tmpReq CreateWaitingRoomRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5097,7 +5147,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a waiting room for a website.</p>
+     * <p>Create a site waiting room.</p>
      * 
      * @param request CreateWaitingRoomRequest
      * @return CreateWaitingRoomResponse
@@ -5108,8 +5158,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Your site plan must be Advanced Edition or higher to use this feature. The number of configurations for this feature cannot exceed the quota included in your site plan.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Creates a waiting room event.</p>
+     * <p>Creates a waiting room event with options for queuing method and type.</p>
      * 
      * @param request CreateWaitingRoomEventRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5216,8 +5269,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Your site plan must be Advanced Edition or higher to use this feature. The number of configurations for this feature cannot exceed the quota included in your site plan.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Creates a waiting room event.</p>
+     * <p>Creates a waiting room event with options for queuing method and type.</p>
      * 
      * @param request CreateWaitingRoomEventRequest
      * @return CreateWaitingRoomEventResponse
@@ -5229,7 +5285,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Create Waiting Room Rule</p>
+     * <p>Creates a waiting room bypass rule.</p>
      * 
      * @param request CreateWaitingRoomRuleRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5277,7 +5333,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Create Waiting Room Rule</p>
+     * <p>Creates a waiting room bypass rule.</p>
      * 
      * @param request CreateWaitingRoomRuleRequest
      * @return CreateWaitingRoomRuleResponse
@@ -5289,10 +5345,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can disable version management only when the default environment and version 0 exist.</p>
+     * <p>Version management must be enabled through the ActivateVersionManagement operation (the site VersionManagement status is true). Version management can be disabled only when only version 0 and the default environment exist.</p>
      * 
      * <b>summary</b> : 
-     * <p>Disables version management for a website.</p>
+     * <p>Disables the version management feature for a site.</p>
      * 
      * @param request DeactivateVersionManagementRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5324,10 +5380,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can disable version management only when the default environment and version 0 exist.</p>
+     * <p>Version management must be enabled through the ActivateVersionManagement operation (the site VersionManagement status is true). Version management can be disabled only when only version 0 and the default environment exist.</p>
      * 
      * <b>summary</b> : 
-     * <p>Disables version management for a website.</p>
+     * <p>Disables the version management feature for a site.</p>
      * 
      * @param request DeactivateVersionManagementRequest
      * @return DeactivateVersionManagementResponse
@@ -5555,7 +5611,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除自定义主机名</p>
+     * <p>Deletes a custom domain name from a Software as a Service (SaaS) site based on its HostnameId.</p>
      * 
      * @param request DeleteCustomHostnameRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5587,7 +5643,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除自定义主机名</p>
+     * <p>Deletes a custom domain name from a Software as a Service (SaaS) site based on its HostnameId.</p>
      * 
      * @param request DeleteCustomHostnameRequest
      * @return DeleteCustomHostnameResponse
@@ -5599,7 +5655,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes the configuration of response code modification for a website.</p>
+     * <p>Deletes a custom response code configuration for a site.</p>
      * 
      * @param request DeleteCustomResponseCodeRuleRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5635,7 +5691,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes the configuration of response code modification for a website.</p>
+     * <p>Deletes a custom response code configuration for a site.</p>
      * 
      * @param request DeleteCustomResponseCodeRuleRequest
      * @return DeleteCustomResponseCodeRuleResponse
@@ -5691,7 +5747,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes a containerized application.</p>
+     * <p>Deletes an edge container application that is no longer needed by application ID.</p>
      * 
      * @param request DeleteEdgeContainerAppRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5723,7 +5779,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes a containerized application.</p>
+     * <p>Deletes an edge container application that is no longer needed by application ID.</p>
      * 
      * @param request DeleteEdgeContainerAppRequest
      * @return DeleteEdgeContainerAppResponse
@@ -5735,7 +5791,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Delete the image secret of an edge container application</p>
+     * <p>Deletes the image secret for an edge containerized application.</p>
      * 
      * @param request DeleteEdgeContainerAppImageSecretRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5771,7 +5827,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Delete the image secret of an edge container application</p>
+     * <p>Deletes the image secret for an edge containerized application.</p>
      * 
      * @param request DeleteEdgeContainerAppImageSecretRequest
      * @return DeleteEdgeContainerAppImageSecretResponse
@@ -5883,7 +5939,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Delete rules for deep learning and protection distribution</p>
+     * <p>Deletes a rule created by Deep Learning and Protection.</p>
      * 
      * @param request DeleteHttpDDoSIntelligentRuleRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5923,7 +5979,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Delete rules for deep learning and protection distribution</p>
+     * <p>Deletes a rule created by Deep Learning and Protection.</p>
      * 
      * @param request DeleteHttpDDoSIntelligentRuleRequest
      * @return DeleteHttpDDoSIntelligentRuleResponse
@@ -6271,7 +6327,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除一个keyless server配置</p>
+     * <p>Deletes a keyless server configuration.</p>
      * 
      * @param request DeleteKeylessServerRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6307,7 +6363,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除一个keyless server配置</p>
+     * <p>Deletes a keyless server configuration.</p>
      * 
      * @param request DeleteKeylessServerRequest
      * @return DeleteKeylessServerResponse
@@ -6319,7 +6375,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes a key-value pair from a namespace.</p>
+     * <p>Delete a specific key-value pair from a namespace.</p>
      * 
      * @param request DeleteKvRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6347,7 +6403,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes a key-value pair from a namespace.</p>
+     * <p>Delete a specific key-value pair from a namespace.</p>
      * 
      * @param request DeleteKvRequest
      * @return DeleteKvResponse
@@ -6359,7 +6415,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes a namespace from an Alibaba Cloud account.</p>
+     * <p>Deletes a namespace from your account.</p>
      * 
      * @param request DeleteKvNamespaceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6391,7 +6447,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes a namespace from an Alibaba Cloud account.</p>
+     * <p>Deletes a namespace from your account.</p>
      * 
      * @param request DeleteKvNamespaceRequest
      * @return DeleteKvNamespaceResponse
@@ -6549,7 +6605,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除源服务器CA证书</p>
+     * <p>Deletes an origin CA certificate.</p>
      * 
      * @param request DeleteOriginCaCertificateRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6577,7 +6633,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除源服务器CA证书</p>
+     * <p>Deletes an origin CA certificate.</p>
      * 
      * @param request DeleteOriginCaCertificateRequest
      * @return DeleteOriginCaCertificateResponse
@@ -6589,7 +6645,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除域名回源客户端证书</p>
+     * <p>Deletes an origin client certificate for a specific site.</p>
      * 
      * @param request DeleteOriginClientCertificateRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6617,7 +6673,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除域名回源客户端证书</p>
+     * <p>Deletes an origin client certificate for a specific site.</p>
      * 
      * @param request DeleteOriginClientCertificateRequest
      * @return DeleteOriginClientCertificateResponse
@@ -6677,7 +6733,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Disables origin protection.</p>
+     * <p>Disable origin protection.</p>
      * 
      * @param request DeleteOriginProtectionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6709,7 +6765,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Disables origin protection.</p>
+     * <p>Disable origin protection.</p>
      * 
      * @param request DeleteOriginProtectionRequest
      * @return DeleteOriginProtectionResponse
@@ -6813,7 +6869,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes a DNS record of a website based on the specified RecordId.</p>
+     * <p>Deletes a DNS record based on its RecordId.</p>
      * 
      * @param request DeleteRecordRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6849,7 +6905,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes a DNS record of a website based on the specified RecordId.</p>
+     * <p>Deletes a DNS record based on its RecordId.</p>
      * 
      * @param request DeleteRecordRequest
      * @return DeleteRecordResponse
@@ -7155,7 +7211,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes a scheduled prefetch plan based on the plan ID.</p>
+     * <p>Deletes a single scheduled preload plan.</p>
      * 
      * @param request DeleteScheduledPreloadExecutionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7187,7 +7243,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes a scheduled prefetch plan based on the plan ID.</p>
+     * <p>Deletes a single scheduled preload plan.</p>
      * 
      * @param request DeleteScheduledPreloadExecutionRequest
      * @return DeleteScheduledPreloadExecutionResponse
@@ -7199,7 +7255,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes a specified scheduled prefetch task based on the task ID.</p>
+     * <p>Deletes a specified scheduled preload job.</p>
      * 
      * @param request DeleteScheduledPreloadJobRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7231,7 +7287,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes a specified scheduled prefetch task based on the task ID.</p>
+     * <p>Deletes a specified scheduled preload job.</p>
      * 
      * @param request DeleteScheduledPreloadJobRequest
      * @return DeleteScheduledPreloadJobResponse
@@ -7243,7 +7299,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes a website based on the specified website ID.</p>
+     * <p>Deletes a site by site ID.</p>
      * 
      * @param request DeleteSiteRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7279,7 +7335,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes a website based on the specified website ID.</p>
+     * <p>Deletes a site by site ID.</p>
      * 
      * @param request DeleteSiteRequest
      * @return DeleteSiteResponse
@@ -7339,7 +7395,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除站点回源客户端证书</p>
+     * <p>Deletes a site-level origin client certificate.</p>
      * 
      * @param request DeleteSiteOriginClientCertificateRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7367,7 +7423,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除站点回源客户端证书</p>
+     * <p>Deletes a site-level origin client certificate.</p>
      * 
      * @param request DeleteSiteOriginClientCertificateRequest
      * @return DeleteSiteOriginClientCertificateResponse
@@ -7535,13 +7591,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Request Description</h2>
+     * <h2>Request description</h2>
      * <ul>
-     * <li><code>InstanceId</code> and <code>Id</code> are required parameters, specifying the WAF instance ID to be operated on and the specific ruleset ID, respectively.</li>
+     * <li>The <code>InstanceId</code> and <code>Id</code> parameters are required. These parameters specify the ID of the WAF instance and the ID of the ruleset to delete.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Used for deleting an instance-level Web Application Firewall (WAF) ruleset.</p>
+     * <p>Deletes a WAF ruleset from a specified instance.</p>
      * 
      * @param request DeleteUserWafRulesetRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7579,13 +7635,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Request Description</h2>
+     * <h2>Request description</h2>
      * <ul>
-     * <li><code>InstanceId</code> and <code>Id</code> are required parameters, specifying the WAF instance ID to be operated on and the specific ruleset ID, respectively.</li>
+     * <li>The <code>InstanceId</code> and <code>Id</code> parameters are required. These parameters specify the ID of the WAF instance and the ID of the ruleset to delete.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Used for deleting an instance-level Web Application Firewall (WAF) ruleset.</p>
+     * <p>Deletes a WAF ruleset from a specified instance.</p>
      * 
      * @param request DeleteUserWafRulesetRequest
      * @return DeleteUserWafRulesetResponse
@@ -7645,7 +7701,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Delete WAF Rule</p>
+     * <p>Deletes a specified rule in Web Application Firewall (WAF). This operation also deletes the configurations and conditions associated with the rule.</p>
      * 
      * @param request DeleteWafRuleRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7687,7 +7743,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Delete WAF Rule</p>
+     * <p>Deletes a specified rule in Web Application Firewall (WAF). This operation also deletes the configurations and conditions associated with the rule.</p>
      * 
      * @param request DeleteWafRuleRequest
      * @return DeleteWafRuleResponse
@@ -7699,7 +7755,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Delete WAF Ruleset</p>
+     * <p>Deletes a specified Web Application Firewall (WAF) ruleset.</p>
      * 
      * @param request DeleteWafRulesetRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7741,7 +7797,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Delete WAF Ruleset</p>
+     * <p>Deletes a specified Web Application Firewall (WAF) ruleset.</p>
      * 
      * @param request DeleteWafRulesetRequest
      * @return DeleteWafRulesetResponse
@@ -7897,7 +7953,151 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the configurations of a scenario-specific policy.</p>
+     * <p>Queries the price of a bot instance.</p>
+     * 
+     * @param request DescribeBotPriceRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeBotPriceResponse
+     */
+    public DescribeBotPriceResponse describeBotPriceWithOptions(DescribeBotPriceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.botInstanceLevel)) {
+            query.put("BotInstanceLevel", request.botInstanceLevel);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeBotPrice"),
+            new TeaPair("version", "2024-09-10"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeBotPriceResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the price of a bot instance.</p>
+     * 
+     * @param request DescribeBotPriceRequest
+     * @return DescribeBotPriceResponse
+     */
+    public DescribeBotPriceResponse describeBotPrice(DescribeBotPriceRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeBotPriceWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Invokes DescribeCacheReservePrice to query the query cache reserve instance price.</p>
+     * 
+     * @param request DescribeCacheReservePriceRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeCacheReservePriceResponse
+     */
+    public DescribeCacheReservePriceResponse describeCacheReservePriceWithOptions(DescribeCacheReservePriceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.crRegion)) {
+            query.put("CrRegion", request.crRegion);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.period)) {
+            query.put("Period", request.period);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.quotaGb)) {
+            query.put("QuotaGb", request.quotaGb);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeCacheReservePrice"),
+            new TeaPair("version", "2024-09-10"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeCacheReservePriceResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Invokes DescribeCacheReservePrice to query the query cache reserve instance price.</p>
+     * 
+     * @param request DescribeCacheReservePriceRequest
+     * @return DescribeCacheReservePriceResponse
+     */
+    public DescribeCacheReservePriceResponse describeCacheReservePrice(DescribeCacheReservePriceRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeCacheReservePriceWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the price for a configuration change of a cache reserve instance.</p>
+     * 
+     * @param request DescribeCacheReservePriceGapRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeCacheReservePriceGapResponse
+     */
+    public DescribeCacheReservePriceGapResponse describeCacheReservePriceGapWithOptions(DescribeCacheReservePriceGapRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.targetQuotaGb)) {
+            query.put("TargetQuotaGb", request.targetQuotaGb);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeCacheReservePriceGap"),
+            new TeaPair("version", "2024-09-10"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeCacheReservePriceGapResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the price for a configuration change of a cache reserve instance.</p>
+     * 
+     * @param request DescribeCacheReservePriceGapRequest
+     * @return DescribeCacheReservePriceGapResponse
+     */
+    public DescribeCacheReservePriceGapResponse describeCacheReservePriceGap(DescribeCacheReservePriceGapRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeCacheReservePriceGapWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Retrieves the configurations of custom scene policies.</p>
      * 
      * @param request DescribeCustomScenePoliciesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7937,7 +8137,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the configurations of a scenario-specific policy.</p>
+     * <p>Retrieves the configurations of custom scene policies.</p>
      * 
      * @param request DescribeCustomScenePoliciesRequest
      * @return DescribeCustomScenePoliciesResponse
@@ -7949,7 +8149,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries DDoS attack events.</p>
+     * <p>Gets a list of DDoS attack events.</p>
      * 
      * @param request DescribeDDoSAllEventListRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8001,7 +8201,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries DDoS attack events.</p>
+     * <p>Gets a list of DDoS attack events.</p>
      * 
      * @param request DescribeDDoSAllEventListRequest
      * @return DescribeDDoSAllEventListResponse
@@ -8113,7 +8313,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询当前实例设置的Ddos最大防护弹性值</p>
+     * <p>Queries the maximum burst bandwidth for a DDoS instance in mainland China.</p>
      * 
      * @param request DescribeDdosMaxBurstGbpsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8141,7 +8341,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询当前实例设置的Ddos最大防护弹性值</p>
+     * <p>Queries the maximum burst bandwidth for a DDoS instance in mainland China.</p>
      * 
      * @param request DescribeDdosMaxBurstGbpsRequest
      * @return DescribeDdosMaxBurstGbpsResponse
@@ -8153,7 +8353,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Provides monitoring data for metrics of ESA edge containers.</p>
+     * <p>Retrieves monitoring data for metrics of Edge Service Agent (ESA) edge containers.</p>
      * 
      * @param request DescribeEdgeContainerAppStatsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8181,7 +8381,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Provides monitoring data for metrics of ESA edge containers.</p>
+     * <p>Retrieves monitoring data for metrics of Edge Service Agent (ESA) edge containers.</p>
      * 
      * @param request DescribeEdgeContainerAppStatsRequest
      * @return DescribeEdgeContainerAppStatsResponse
@@ -8193,7 +8393,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the configuration of smart HTTP DDoS protection for a website.</p>
+     * <p>Retrieves the HTTP DDoS intelligent protection configuration, including the protection mode and protection level.</p>
      * 
      * @param request DescribeHttpDDoSAttackIntelligentProtectionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8225,7 +8425,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the configuration of smart HTTP DDoS protection for a website.</p>
+     * <p>Retrieves the HTTP DDoS intelligent protection configuration, including the protection mode and protection level.</p>
      * 
      * @param request DescribeHttpDDoSAttackIntelligentProtectionRequest
      * @return DescribeHttpDDoSAttackIntelligentProtectionResponse
@@ -8281,7 +8481,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询HTTP DDoS攻击防护规则</p>
+     * <p>Queries HTTP DDoS attack protection rules.</p>
      * 
      * @param request DescribeHttpDDoSAttackRulesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8321,7 +8521,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询HTTP DDoS攻击防护规则</p>
+     * <p>Queries HTTP DDoS attack protection rules.</p>
      * 
      * @param request DescribeHttpDDoSAttackRulesRequest
      * @return DescribeHttpDDoSAttackRulesResponse
@@ -8333,7 +8533,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询深度学习和防护下发的精准访问控制规则</p>
+     * <p>Describes the accurate access control rules created by Deep Learning and Protection.</p>
      * 
      * @param request DescribeHttpDDoSIntelligentAclRulesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8377,7 +8577,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询深度学习和防护下发的精准访问控制规则</p>
+     * <p>Describes the accurate access control rules created by Deep Learning and Protection.</p>
      * 
      * @param request DescribeHttpDDoSIntelligentAclRulesRequest
      * @return DescribeHttpDDoSIntelligentAclRulesResponse
@@ -8389,7 +8589,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询深度学习和防护下发的频率控制规则</p>
+     * <p>Queries the frequency control rules generated by Deep Learning and Protection.</p>
      * 
      * @param request DescribeHttpDDoSIntelligentRateLimitRulesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8433,7 +8633,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询深度学习和防护下发的频率控制规则</p>
+     * <p>Queries the frequency control rules generated by Deep Learning and Protection.</p>
      * 
      * @param request DescribeHttpDDoSIntelligentRateLimitRulesRequest
      * @return DescribeHttpDDoSIntelligentRateLimitRulesResponse
@@ -8445,7 +8645,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries whether Edge KV is activated in your Alibaba Cloud account.</p>
+     * <p>Queries the status of an account in the KV service.</p>
      * 
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeKvAccountStatusResponse
@@ -8468,7 +8668,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries whether Edge KV is activated in your Alibaba Cloud account.</p>
+     * <p>Queries the status of an account in the KV service.</p>
      * @return DescribeKvAccountStatusResponse
      */
     public DescribeKvAccountStatusResponse describeKvAccountStatus() throws Exception {
@@ -8478,7 +8678,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the details of prefetch tasks by time, task status, or prefetch URL.</p>
+     * <p>Queries prefetch tasks by time, task status, or prefetch URL.</p>
      * 
      * @param request DescribePreloadTasksRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8506,7 +8706,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the details of prefetch tasks by time, task status, or prefetch URL.</p>
+     * <p>Queries prefetch tasks by time, task status, or prefetch URL.</p>
      * 
      * @param request DescribePreloadTasksRequest
      * @return DescribePreloadTasksResponse
@@ -8518,7 +8718,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the details of purge tasks.</p>
+     * <p>Queries purge tasks.</p>
      * 
      * @param request DescribePurgeTasksRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8546,7 +8746,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the details of purge tasks.</p>
+     * <p>Queries purge tasks.</p>
      * 
      * @param request DescribePurgeTasksRequest
      * @return DescribePurgeTasksResponse
@@ -8607,8 +8807,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>The purchase period is measured in months.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Queries the prices, types, and status of plans.</p>
+     * <p>Queries the price of a plan, including its type and status.</p>
      * 
      * @param request DescribeRatePlanPriceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8647,8 +8850,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>The purchase period is measured in months.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Queries the prices, types, and status of plans.</p>
+     * <p>Queries the price of a plan, including its type and status.</p>
      * 
      * @param request DescribeRatePlanPriceRequest
      * @return DescribeRatePlanPriceResponse
@@ -8660,11 +8866,73 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  If you do not specify StartTime or EndTime, the log data generated in the last 24 hours is queried. If you specify StartTime and EndTime, the log data generated within the specified time range is queried.</p>
+     * <p>The plan name and plan code can be obtained from the DescribeRatePlanPrice operation.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the price difference for a plan specification change by calling DescribeRatePlanPriceGap.</p>
+     * 
+     * @param request DescribeRatePlanPriceGapRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeRatePlanPriceGapResponse
+     */
+    public DescribeRatePlanPriceGapResponse describeRatePlanPriceGapWithOptions(DescribeRatePlanPriceGapRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.orderType)) {
+            query.put("OrderType", request.orderType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.targetPlanCode)) {
+            query.put("TargetPlanCode", request.targetPlanCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.targetPlanName)) {
+            query.put("TargetPlanName", request.targetPlanName);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeRatePlanPriceGap"),
+            new TeaPair("version", "2024-09-10"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeRatePlanPriceGapResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>The plan name and plan code can be obtained from the DescribeRatePlanPrice operation.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the price difference for a plan specification change by calling DescribeRatePlanPriceGap.</p>
+     * 
+     * @param request DescribeRatePlanPriceGapRequest
+     * @return DescribeRatePlanPriceGapResponse
+     */
+    public DescribeRatePlanPriceGapResponse describeRatePlanPriceGap(DescribeRatePlanPriceGapRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeRatePlanPriceGapWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
      * <ul>
-     * <li>The log data is collected every hour.</li>
-     * <li>You can call this operation up to 50 times per second per account.</li>
-     * <li>You can query only logs in the last month. The time range cannot exceed 31 days.</li>
+     * <li>If you do not specify StartTime and EndTime, log data from the last 24 hours is returned by default. If you specify StartTime and EndTime, log data for the specified time range is returned.</li>
+     * <li>The time granularity for data queries is one hour.</li>
+     * <li>The maximum number of calls per user: 50 calls per second.</li>
+     * <li>Only log records from the last month can be queried (the time span between the start time and the current time cannot exceed 31 days).</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -8716,11 +8984,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  If you do not specify StartTime or EndTime, the log data generated in the last 24 hours is queried. If you specify StartTime and EndTime, the log data generated within the specified time range is queried.</p>
      * <ul>
-     * <li>The log data is collected every hour.</li>
-     * <li>You can call this operation up to 50 times per second per account.</li>
-     * <li>You can query only logs in the last month. The time range cannot exceed 31 days.</li>
+     * <li>If you do not specify StartTime and EndTime, log data from the last 24 hours is returned by default. If you specify StartTime and EndTime, log data for the specified time range is returned.</li>
+     * <li>The time granularity for data queries is one hour.</li>
+     * <li>The maximum number of calls per user: 50 calls per second.</li>
+     * <li>Only log records from the last month can be queried (the time span between the start time and the current time cannot exceed 31 days).</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -8830,7 +9098,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  If you do not specify the StartTime or EndTime parameter, the request returns the data collected in the previous 24 hours. If you specify both parameters, the request returns the data collected within the specified time range.</p>
+     * <ul>
+     * <li>If you do not specify StartTime and EndTime, data from the last 24 hours is returned. If you specify StartTime and EndTime, data for the specified time range is returned.</li>
+     * <li>Due to a large number of visits during the queried time range, the data analytics results may be sampled.</li>
+     * </ul>
      * 
      * <b>summary</b> : 
      * <p>Queries the top-ranking records in a traffic analytics report by website or Alibaba Cloud account.</p>
@@ -8891,7 +9162,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  If you do not specify the StartTime or EndTime parameter, the request returns the data collected in the previous 24 hours. If you specify both parameters, the request returns the data collected within the specified time range.</p>
+     * <ul>
+     * <li>If you do not specify StartTime and EndTime, data from the last 24 hours is returned. If you specify StartTime and EndTime, data for the specified time range is returned.</li>
+     * <li>Due to a large number of visits during the queried time range, the data analytics results may be sampled.</li>
+     * </ul>
      * 
      * <b>summary</b> : 
      * <p>Queries the top-ranking records in a traffic analytics report by website or Alibaba Cloud account.</p>
@@ -8905,8 +9179,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <blockquote>
+     * <p>Notice: Please ensure that the Layer 4 acceleration service is activated before using this API.1. Call GenerateTraceDiagnose to obtain the diagnostic link. 2. Open the link in a browser to complete client-side diagnosis. 3. Call ListTraceTasks to obtain TaskId/TraceId. 4. Call this API to get the report.</p>
+     * </blockquote>
+     * 
      * <b>summary</b> : 
-     * <p>边缘容器的监控</p>
+     * <p>Get diagnostic report details. 1. Call GenerateTraceDiagnose to obtain the diagnostic link. 2. Open the link in a browser to complete client-side diagnosis. 3. Call ListTraceTasks to obtain TaskId/TraceId. 4. Call this API to get the report.</p>
      * 
      * @param request DescribeTraceDiagnoseReportRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8941,8 +9220,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <blockquote>
+     * <p>Notice: Please ensure that the Layer 4 acceleration service is activated before using this API.1. Call GenerateTraceDiagnose to obtain the diagnostic link. 2. Open the link in a browser to complete client-side diagnosis. 3. Call ListTraceTasks to obtain TaskId/TraceId. 4. Call this API to get the report.</p>
+     * </blockquote>
+     * 
      * <b>summary</b> : 
-     * <p>边缘容器的监控</p>
+     * <p>Get diagnostic report details. 1. Call GenerateTraceDiagnose to obtain the diagnostic link. 2. Open the link in a browser to complete client-side diagnosis. 3. Call ListTraceTasks to obtain TaskId/TraceId. 4. Call this API to get the report.</p>
      * 
      * @param request DescribeTraceDiagnoseReportRequest
      * @return DescribeTraceDiagnoseReportResponse
@@ -8953,9 +9237,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <p>If you do not specify the StartTime or EndTime parameter, this operation returns the data collected within the last 24 hours. If you specify both parameters, this operation returns the data collected within the specified time range.</p>
-     * 
      * <b>summary</b> : 
      * <p>Queries the page monitoring data.</p>
      * 
@@ -9008,9 +9289,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <p>If you do not specify the StartTime or EndTime parameter, this operation returns the data collected within the last 24 hours. If you specify both parameters, this operation returns the data collected within the specified time range.</p>
-     * 
      * <b>summary</b> : 
      * <p>Queries the page monitoring data.</p>
      * 
@@ -9212,7 +9490,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>边缘容器的监控</p>
+     * <p>Generates a diagnosis link.</p>
      * 
      * @param request GenerateTraceDiagnoseRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9221,6 +9499,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GenerateTraceDiagnoseResponse generateTraceDiagnoseWithOptions(GenerateTraceDiagnoseRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.source)) {
+            query.put("Source", request.source);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.url)) {
             query.put("Url", request.url);
         }
@@ -9244,7 +9526,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>边缘容器的监控</p>
+     * <p>Generates a diagnosis link.</p>
      * 
      * @param request GenerateTraceDiagnoseRequest
      * @return GenerateTraceDiagnoseResponse
@@ -9256,7 +9538,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the usage of the upload file quota for API security schema verification.</p>
+     * <p>Retrieves usage information for an API schema validation plan.</p>
      * 
      * @param request GetApiSchemaUsageRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9292,7 +9574,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the usage of the upload file quota for API security schema verification.</p>
+     * <p>Retrieves usage information for an API schema validation plan.</p>
      * 
      * @param request GetApiSchemaUsageRequest
      * @return GetApiSchemaUsageResponse
@@ -9304,7 +9586,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询站点智能限频阈值</p>
+     * <p>Queries the automatic frequency control configuration for a site.</p>
      * 
      * @param request GetAutomaticFrequencyControlConfigRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9340,7 +9622,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询站点智能限频阈值</p>
+     * <p>Queries the automatic frequency control configuration for a site.</p>
      * 
      * @param request GetAutomaticFrequencyControlConfigRequest
      * @return GetAutomaticFrequencyControlConfigResponse
@@ -9385,7 +9667,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query a single cache configuration</p>
+     * <p>Retrieves a single cache configuration.</p>
      * 
      * @param request GetCacheRuleRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9413,7 +9695,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query a single cache configuration</p>
+     * <p>Retrieves a single cache configuration.</p>
      * 
      * @param request GetCacheRuleRequest
      * @return GetCacheRuleResponse
@@ -9465,7 +9747,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieve the certificate, private key, and certificate information</p>
+     * <p>Retrieves a specified certificate for a site.</p>
      * 
      * @param request GetCertificateRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9501,7 +9783,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieve the certificate, private key, and certificate information</p>
+     * <p>Retrieves a specified certificate for a site.</p>
      * 
      * @param request GetCertificateRequest
      * @return GetCertificateResponse
@@ -9513,7 +9795,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query certificate quota and usage</p>
+     * <p>Queries the quota and usage of free certificates.</p>
      * 
      * @param request GetCertificateQuotaRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9541,7 +9823,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query certificate quota and usage</p>
+     * <p>Queries the quota and usage of free certificates.</p>
      * 
      * @param request GetCertificateQuotaRequest
      * @return GetCertificateQuotaResponse
@@ -9553,7 +9835,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a client CA certificate.</p>
+     * <p>Gets the specified client CA certificate.</p>
      * 
      * @param request GetClientCaCertificateRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9581,7 +9863,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a client CA certificate.</p>
+     * <p>Gets the specified client CA certificate.</p>
      * 
      * @param request GetClientCaCertificateRequest
      * @return GetClientCaCertificateResponse
@@ -9593,7 +9875,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取客户端CA证书绑定的域名列表</p>
+     * <p>Retrieves the list of hostnames bound to a specified client CA certificate. If no certificate is specified, this operation returns the list of hostnames bound to the ESA CA certificate.</p>
      * 
      * @param request GetClientCaCertificateHostnamesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9629,7 +9911,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取客户端CA证书绑定的域名列表</p>
+     * <p>Retrieves the list of hostnames bound to a specified client CA certificate. If no certificate is specified, this operation returns the list of hostnames bound to the ESA CA certificate.</p>
      * 
      * @param request GetClientCaCertificateHostnamesRequest
      * @return GetClientCaCertificateHostnamesResponse
@@ -9641,7 +9923,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries information about a client certificate.</p>
+     * <p>Retrieves the details of a specified client certificate.</p>
      * 
      * @param request GetClientCertificateRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9669,7 +9951,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries information about a client certificate.</p>
+     * <p>Retrieves the details of a specified client certificate.</p>
      * 
      * @param request GetClientCertificateRequest
      * @return GetClientCertificateResponse
@@ -9681,7 +9963,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries domain names associated with a client CA certificate. If no certificate is specified, domain names associated with an Edge Security Acceleration(ESA)-managed CA certificate are returned.</p>
+     * <p>Retrieves the list of hostnames bound to a specified client CA certificate. If you do not specify a certificate, the operation returns the list of hostnames for the ESA CA certificate.</p>
      * 
      * @param request GetClientCertificateHostnamesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9709,7 +9991,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries domain names associated with a client CA certificate. If no certificate is specified, domain names associated with an Edge Security Acceleration(ESA)-managed CA certificate are returned.</p>
+     * <p>Retrieves the list of hostnames bound to a specified client CA certificate. If you do not specify a certificate, the operation returns the list of hostnames for the ESA CA certificate.</p>
      * 
      * @param request GetClientCertificateHostnamesRequest
      * @return GetClientCertificateHostnamesResponse
@@ -9841,7 +10123,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询单个自定义主机名的信息</p>
+     * <p>Retrieves the detailed configuration of a single SaaS domain name, including the domain verification TXT name, domain verification TXT content, and certificate expiration time (when SSL is enabled).</p>
      * 
      * @param request GetCustomHostnameRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9873,7 +10155,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询单个自定义主机名的信息</p>
+     * <p>Retrieves the detailed configuration of a single SaaS domain name, including the domain verification TXT name, domain verification TXT content, and certificate expiration time (when SSL is enabled).</p>
      * 
      * @param request GetCustomHostnameRequest
      * @return GetCustomHostnameResponse
@@ -9885,7 +10167,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询修改响应码规则详情</p>
+     * <p>Retrieve details about a site\&quot;s custom response code configuration.</p>
      * 
      * @param request GetCustomResponseCodeRuleRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9921,7 +10203,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询修改响应码规则详情</p>
+     * <p>Retrieve details about a site\&quot;s custom response code configuration.</p>
      * 
      * @param request GetCustomResponseCodeRuleRequest
      * @return GetCustomResponseCodeRuleResponse
@@ -9969,6 +10251,50 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GetDevelopmentModeResponse getDevelopmentMode(GetDevelopmentModeRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getDevelopmentModeWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>GetEdgeImage</p>
+     * 
+     * @param request GetEdgeContainerRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetEdgeContainerResponse
+     */
+    public GetEdgeContainerResponse getEdgeContainerWithOptions(GetEdgeContainerRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.securityToken)) {
+            query.put("SecurityToken", request.securityToken);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetEdgeContainer"),
+            new TeaPair("version", "2024-09-10"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetEdgeContainerResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>GetEdgeImage</p>
+     * 
+     * @param request GetEdgeContainerRequest
+     * @return GetEdgeContainerResponse
+     */
+    public GetEdgeContainerResponse getEdgeContainer(GetEdgeContainerRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getEdgeContainerWithOptions(request, runtime);
     }
 
     /**
@@ -10057,7 +10383,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取边缘容器应用的资源容量</p>
+     * <p>Queries the resource capacity of a containerized application at the edge.</p>
      * 
      * @param request GetEdgeContainerAppResourceCapacityRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -10089,7 +10415,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取边缘容器应用的资源容量</p>
+     * <p>Queries the resource capacity of a containerized application at the edge.</p>
      * 
      * @param request GetEdgeContainerAppResourceCapacityRequest
      * @return GetEdgeContainerAppResourceCapacityResponse
@@ -10481,6 +10807,46 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>Downloads a failed file.</p>
+     * 
+     * @param request GetFailFileRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetFailFileResponse
+     */
+    public GetFailFileResponse getFailFileWithOptions(GetFailFileRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetFailFile"),
+            new TeaPair("version", "2024-09-10"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetFailFileResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Downloads a failed file.</p>
+     * 
+     * @param request GetFailFileRequest
+     * @return GetFailFileResponse
+     */
+    public GetFailFileResponse getFailFile(GetFailFileRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getFailFileWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Queries the configuration details of an HTTP request header modification rule for a website.</p>
      * 
      * @param request GetHttpIncomingRequestHeaderModificationRuleRequest
@@ -10561,7 +10927,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query HTTP Request Header Rule Details</p>
+     * <p>Retrieves the details of an HTTP request header modification rule for a site.</p>
      * 
      * @param request GetHttpRequestHeaderModificationRuleRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -10589,7 +10955,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query HTTP Request Header Rule Details</p>
+     * <p>Retrieves the details of an HTTP request header modification rule for a site.</p>
      * 
      * @param request GetHttpRequestHeaderModificationRuleRequest
      * @return GetHttpRequestHeaderModificationRuleResponse
@@ -10601,7 +10967,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query HTTP Response Header Rules</p>
+     * <p>Queries the details of an HTTP response header modification rule for a site.</p>
      * 
      * @param request GetHttpResponseHeaderModificationRuleRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -10629,7 +10995,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query HTTP Response Header Rules</p>
+     * <p>Queries the details of an HTTP response header modification rule for a site.</p>
      * 
      * @param request GetHttpResponseHeaderModificationRuleRequest
      * @return GetHttpResponseHeaderModificationRuleResponse
@@ -10641,7 +11007,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query a Single HTTPS Application Configuration</p>
+     * <p>Retrieves a single HTTPS application configuration.</p>
      * 
      * @param request GetHttpsApplicationConfigurationRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -10669,7 +11035,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query a Single HTTPS Application Configuration</p>
+     * <p>Retrieves a single HTTPS application configuration.</p>
      * 
      * @param request GetHttpsApplicationConfigurationRequest
      * @return GetHttpsApplicationConfigurationResponse
@@ -10721,7 +11087,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the IPv6 configuration of a website.</p>
+     * <p>Queries the IPv6 configuration for a site.</p>
      * 
      * @param request GetIPv6Request
      * @param runtime runtime options for this request RuntimeOptions
@@ -10749,7 +11115,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the IPv6 configuration of a website.</p>
+     * <p>Queries the IPv6 configuration for a site.</p>
      * 
      * @param request GetIPv6Request
      * @return GetIPv6Response
@@ -10761,7 +11127,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query Single Site Image Transformation Configuration</p>
+     * <p>Retrieves a specific image transformation configuration for a site.</p>
      * 
      * @param request GetImageTransformRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -10789,7 +11155,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query Single Site Image Transformation Configuration</p>
+     * <p>Retrieves a specific image transformation configuration for a site.</p>
      * 
      * @param request GetImageTransformRequest
      * @return GetImageTransformResponse
@@ -10801,7 +11167,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取一个keyless server配置</p>
+     * <p>Retrieves the configuration of a keyless server.</p>
      * 
      * @param request GetKeylessServerRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -10837,7 +11203,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取一个keyless server配置</p>
+     * <p>Retrieves the configuration of a keyless server.</p>
      * 
      * @param request GetKeylessServerRequest
      * @return GetKeylessServerResponse
@@ -10849,7 +11215,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the value of a key in a key-value pair.</p>
+     * <p>Retrieves the value of a specified key.</p>
      * 
      * @param request GetKvRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -10877,7 +11243,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the value of a key in a key-value pair.</p>
+     * <p>Retrieves the value of a specified key.</p>
      * 
      * @param request GetKvRequest
      * @return GetKvResponse
@@ -10889,7 +11255,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the Edge KV usage in your Alibaba Cloud account, including the information about all namespaces.</p>
+     * <p>Retrieves usage information for an account in the KV service, including a list of all namespaces.</p>
      * 
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetKvAccountResponse
@@ -10912,7 +11278,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the Edge KV usage in your Alibaba Cloud account, including the information about all namespaces.</p>
+     * <p>Retrieves usage information for an account in the KV service, including a list of all namespaces.</p>
      * @return GetKvAccountResponse
      */
     public GetKvAccountResponse getKvAccount() throws Exception {
@@ -10970,7 +11336,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the information about a namespace in your Alibaba Cloud account.</p>
+     * <p>Retrieves information about a specific namespace.</p>
      * 
      * @param request GetKvNamespaceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -10998,7 +11364,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the information about a namespace in your Alibaba Cloud account.</p>
+     * <p>Retrieves information about a specific namespace.</p>
      * 
      * @param request GetKvNamespaceRequest
      * @return GetKvNamespaceResponse
@@ -11010,7 +11376,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the details of a custom list, such as the name, description, type, and content.</p>
+     * <p>Queries a custom list, such as the name, description, type, and content.</p>
      * 
      * @param request GetListRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -11042,7 +11408,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the details of a custom list, such as the name, description, type, and content.</p>
+     * <p>Queries a custom list, such as the name, description, type, and content.</p>
      * 
      * @param request GetListRequest
      * @return GetListResponse
@@ -11054,10 +11420,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This API allows users to query the configuration details of a specific load balancer by providing necessary authentication information and resource identifiers, including but not limited to name, session persistence strategy, routing policy, etc.</p>
+     * <p>Use this API to query the configuration details of a load balancer, such as its name, session persistence policy, and routing policy, by providing its resource identifier and authentication information.</p>
      * 
      * <b>summary</b> : 
-     * <p>Query a Specific Load Balancer</p>
+     * <p>Retrieves the details of a load balancer by its site ID and load balancer ID.</p>
      * 
      * @param request GetLoadBalancerRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -11085,10 +11451,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This API allows users to query the configuration details of a specific load balancer by providing necessary authentication information and resource identifiers, including but not limited to name, session persistence strategy, routing policy, etc.</p>
+     * <p>Use this API to query the configuration details of a load balancer, such as its name, session persistence policy, and routing policy, by providing its resource identifier and authentication information.</p>
      * 
      * <b>summary</b> : 
-     * <p>Query a Specific Load Balancer</p>
+     * <p>Retrieves the details of a load balancer by its site ID and load balancer ID.</p>
      * 
      * @param request GetLoadBalancerRequest
      * @return GetLoadBalancerResponse
@@ -11100,7 +11466,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query Managed Transform Configuration</p>
+     * <p>Retrieves the managed transform configuration for a site.</p>
      * 
      * @param request GetManagedTransformRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -11128,7 +11494,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query Managed Transform Configuration</p>
+     * <p>Retrieves the managed transform configuration for a site.</p>
      * 
      * @param request GetManagedTransformRequest
      * @return GetManagedTransformResponse
@@ -11180,7 +11546,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取源服务器CA证书信息</p>
+     * <p>Get the CA certificate of the source server.</p>
      * 
      * @param request GetOriginCaCertificateRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -11208,7 +11574,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取源服务器CA证书信息</p>
+     * <p>Get the CA certificate of the source server.</p>
      * 
      * @param request GetOriginCaCertificateRequest
      * @return GetOriginCaCertificateResponse
@@ -11220,7 +11586,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取域名回源客户端证书信息</p>
+     * <p>Retrieves origin-pull client certificate information for a domain.</p>
      * 
      * @param request GetOriginClientCertificateRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -11248,7 +11614,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取域名回源客户端证书信息</p>
+     * <p>Retrieves origin-pull client certificate information for a domain.</p>
      * 
      * @param request GetOriginClientCertificateRequest
      * @return GetOriginClientCertificateResponse
@@ -11260,7 +11626,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取域名回源客户端证书绑定的域名列表</p>
+     * <p>Retrieves the hostnames associated with a specific origin client certificate.</p>
      * 
      * @param request GetOriginClientCertificateHostnamesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -11288,7 +11654,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取域名回源客户端证书绑定的域名列表</p>
+     * <p>Retrieves the hostnames associated with a specific origin client certificate.</p>
      * 
      * @param request GetOriginClientCertificateHostnamesRequest
      * @return GetOriginClientCertificateHostnamesResponse
@@ -11300,7 +11666,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query a specific origin pool</p>
+     * <p>Retrieves a specific source address pool by its source address pool ID.</p>
      * 
      * @param request GetOriginPoolRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -11328,7 +11694,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query a specific origin pool</p>
+     * <p>Retrieves a specific source address pool by its source address pool ID.</p>
      * 
      * @param request GetOriginPoolRequest
      * @return GetOriginPoolResponse
@@ -11340,7 +11706,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the origin protection configurations of a website, including the origin protection, IP convergence, and the status and details of the IP whitelist for origin protection. The details includes the IP whitelist used by the website, the latest IP whitelist, and the differences between them.</p>
+     * <p>This operation queries the origin protection settings for a site. These settings include the origin protection switch, the back-to-origin convergence switch, and whether the back-to-origin IP address whitelist requires an update. The response also includes details about the whitelist, such as the current list, the latest list, and the differences between them.</p>
      * 
      * @param request GetOriginProtectionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -11368,7 +11734,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the origin protection configurations of a website, including the origin protection, IP convergence, and the status and details of the IP whitelist for origin protection. The details includes the IP whitelist used by the website, the latest IP whitelist, and the differences between them.</p>
+     * <p>This operation queries the origin protection settings for a site. These settings include the origin protection switch, the back-to-origin convergence switch, and whether the back-to-origin IP address whitelist requires an update. The response also includes details about the whitelist, such as the current list, the latest list, and the differences between them.</p>
      * 
      * @param request GetOriginProtectionRequest
      * @return GetOriginProtectionResponse
@@ -11420,7 +11786,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the details of a custom error page based on the error page ID.</p>
+     * <p>Gets the details of a custom response page by its ID.</p>
      * 
      * @param request GetPageRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -11452,7 +11818,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the details of a custom error page based on the error page ID.</p>
+     * <p>Gets the details of a custom response page by its ID.</p>
      * 
      * @param request GetPageRequest
      * @return GetPageResponse
@@ -11464,7 +11830,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询数据质量采集配置</p>
+     * <p>Retrieves the Collection Configuration for Data Quality.</p>
      * 
      * @param request GetPerformanceDataCollectionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -11496,7 +11862,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询数据质量采集配置</p>
+     * <p>Retrieves the Collection Configuration for Data Quality.</p>
      * 
      * @param request GetPerformanceDataCollectionRequest
      * @return GetPerformanceDataCollectionResponse
@@ -11508,7 +11874,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the quotas and quota usage for different cache purge options.</p>
+     * <p>Retrieves the total and used quota for different purge types.</p>
      * 
      * @param request GetPurgeQuotaRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -11544,7 +11910,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the quotas and quota usage for different cache purge options.</p>
+     * <p>Retrieves the total and used quota for different purge types.</p>
      * 
      * @param request GetPurgeQuotaRequest
      * @return GetPurgeQuotaResponse
@@ -11596,7 +11962,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the configuration of a single DNS record, such as the record value, priority, and origin authentication setting (exclusive to CNAME records).</p>
+     * <p>Retrieves the detailed configuration of a single DNS record, including record value, priority, and back-to-source authentication configuration (for CNAME records only).</p>
      * 
      * @param request GetRecordRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -11624,7 +11990,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the configuration of a single DNS record, such as the record value, priority, and origin authentication setting (exclusive to CNAME records).</p>
+     * <p>Retrieves the detailed configuration of a single DNS record, including record value, priority, and back-to-source authentication configuration (for CNAME records only).</p>
      * 
      * @param request GetRecordRequest
      * @return GetRecordResponse
@@ -11716,7 +12082,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the configurations of a routine, including the code versions and the configurations of the environments, associated domain names, and associated routes.</p>
+     * <p>Retrieves the configuration of an edge function Routine, including its code versions, environments, and associated domain names and routes.</p>
      * 
      * @param request GetRoutineRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -11748,7 +12114,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the configurations of a routine, including the code versions and the configurations of the environments, associated domain names, and associated routes.</p>
+     * <p>Retrieves the configuration of an edge function Routine, including its code versions, environments, and associated domain names and routes.</p>
      * 
      * @param request GetRoutineRequest
      * @return GetRoutineResponse
@@ -11804,7 +12170,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries information about a code version of a routine.</p>
+     * <p>Queries a code version of a routine.</p>
      * 
      * @param request GetRoutineCodeVersionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -11840,7 +12206,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries information about a code version of a routine.</p>
+     * <p>Queries a code version of a routine.</p>
      * 
      * @param request GetRoutineCodeVersionRequest
      * @return GetRoutineCodeVersionResponse
@@ -11852,7 +12218,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the route configurations of a single edge function.</p>
+     * <p>Retrieves a specific edge function route configuration.</p>
      * 
      * @param request GetRoutineRouteRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -11888,7 +12254,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the route configurations of a single edge function.</p>
+     * <p>Retrieves a specific edge function route configuration.</p>
      * 
      * @param request GetRoutineRouteRequest
      * @return GetRoutineRouteResponse
@@ -11960,7 +12326,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the IP addresses of staging environments for Edge Routine.</p>
+     * <p>查询边缘函数测试环境IP</p>
      * 
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetRoutineStagingEnvIpResponse
@@ -11983,7 +12349,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the IP addresses of staging environments for Edge Routine.</p>
+     * <p>查询边缘函数测试环境IP</p>
      * @return GetRoutineStagingEnvIpResponse
      */
     public GetRoutineStagingEnvIpResponse getRoutineStagingEnvIp() throws Exception {
@@ -11993,7 +12359,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the Edge Routine information in your Alibaba Cloud account, including the associated subdomain and created routines.</p>
+     * <p>查询用户的Routine列表</p>
      * 
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetRoutineUserInfoResponse
@@ -12016,7 +12382,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the Edge Routine information in your Alibaba Cloud account, including the associated subdomain and created routines.</p>
+     * <p>查询用户的Routine列表</p>
      * @return GetRoutineUserInfoResponse
      */
     public GetRoutineUserInfoResponse getRoutineUserInfo() throws Exception {
@@ -12026,7 +12392,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a specified scheduled prefetch task based on the task ID.</p>
+     * <p>Queries a single scheduled preload job by its task ID.</p>
      * 
      * @param request GetScheduledPreloadJobRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -12054,7 +12420,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a specified scheduled prefetch task based on the task ID.</p>
+     * <p>Queries a single scheduled preload job by its task ID.</p>
      * 
      * @param request GetScheduledPreloadJobRequest
      * @return GetScheduledPreloadJobResponse
@@ -12106,7 +12472,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries information about a website based on the website ID.</p>
+     * <p>Retrieves the details of a site by its ID.</p>
      * 
      * @param request GetSiteRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -12134,7 +12500,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries information about a website based on the website ID.</p>
+     * <p>Retrieves the details of a site by its ID.</p>
      * 
      * @param request GetSiteRequest
      * @return GetSiteResponse
@@ -12240,7 +12606,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a real-time log delivery task.</p>
+     * <p>Retrieves the details of a real-time log delivery task.</p>
      * 
      * @param request GetSiteDeliveryTaskRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -12268,7 +12634,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a real-time log delivery task.</p>
+     * <p>Retrieves the details of a real-time log delivery task.</p>
      * 
      * @param request GetSiteDeliveryTaskRequest
      * @return GetSiteDeliveryTaskResponse
@@ -12280,10 +12646,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can call this operation to query the remaining quota for delivering a specific category of real-time logs in a website within an Alibaba Cloud account. This is essential for monitoring and managing your log delivery capacity to ensure that logs can be delivered to the destination and prevent data loss or latency caused by insufficient quota.
+     * <p>Use this operation to query the remaining quota for delivering a specific category of real-time logs in a website within an Alibaba Cloud account. This is essential for monitoring and managing your log delivery capacity to ensure that logs can be delivered to the destination and prevent data loss or latency caused by insufficient quota.
      * <strong>Take note of the following parameters:</strong></p>
      * <ul>
-     * <li>``</li>
+     * <li>\<code>\\</code></li>
      * <li><code>BusinessType</code> is required. You must specify a log category to obtain the corresponding quota information.</li>
      * <li><code>SiteId</code> specifies the ID of a website, which must be a valid integer that corresponds to a website that you configured on Alibaba Cloud.
      * <strong>Response:</strong></li>
@@ -12319,10 +12685,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can call this operation to query the remaining quota for delivering a specific category of real-time logs in a website within an Alibaba Cloud account. This is essential for monitoring and managing your log delivery capacity to ensure that logs can be delivered to the destination and prevent data loss or latency caused by insufficient quota.
+     * <p>Use this operation to query the remaining quota for delivering a specific category of real-time logs in a website within an Alibaba Cloud account. This is essential for monitoring and managing your log delivery capacity to ensure that logs can be delivered to the destination and prevent data loss or latency caused by insufficient quota.
      * <strong>Take note of the following parameters:</strong></p>
      * <ul>
-     * <li>``</li>
+     * <li>\<code>\\</code></li>
      * <li><code>BusinessType</code> is required. You must specify a log category to obtain the corresponding quota information.</li>
      * <li><code>SiteId</code> specifies the ID of a website, which must be a valid integer that corresponds to a website that you configured on Alibaba Cloud.
      * <strong>Response:</strong></li>
@@ -12382,7 +12748,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取站点回源客户端证书信息</p>
+     * <p>Retrieves origin-pull client certificate information at the site level.</p>
      * 
      * @param request GetSiteOriginClientCertificateRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -12410,7 +12776,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取站点回源客户端证书信息</p>
+     * <p>Retrieves origin-pull client certificate information at the site level.</p>
      * 
      * @param request GetSiteOriginClientCertificateRequest
      * @return GetSiteOriginClientCertificateResponse
@@ -12421,8 +12787,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This API applies only to sites that use NS mode.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Queries the ESA proxy configuration of a website.</p>
+     * <p>Queries the site pause configuration.</p>
      * 
      * @param request GetSitePauseRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -12449,8 +12818,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This API applies only to sites that use NS mode.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Queries the ESA proxy configuration of a website.</p>
+     * <p>Queries the site pause configuration.</p>
      * 
      * @param request GetSitePauseRequest
      * @return GetSitePauseResponse
@@ -12554,7 +12926,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query details of the transport layer application</p>
+     * <p>Gets the details of a layer 4 application.</p>
      * 
      * @param request GetTransportLayerApplicationRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -12582,7 +12954,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query details of the transport layer application</p>
+     * <p>Gets the details of a layer 4 application.</p>
      * 
      * @param request GetTransportLayerApplicationRequest
      * @return GetTransportLayerApplicationResponse
@@ -12634,14 +13006,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  This API operation queries the details of a delivery task, including the task name, discard rate, region, log category, status, delivery destination, configuration, and filtering rules.****</p>
      * <ul>
-     * <li>You can call this operation to query detailed information about a log delivery task to analyze log processing efficiency or troubleshoot delivery problems.****</li>
-     * <li>****````</li>
+     * <li><strong>Function</strong>: This operation retrieves detailed delivery information for a specific task of an Alibaba Cloud user, including the task name, discard rate, region, business type, status, delivery type, delivery configuration, and filter rules.</li>
+     * <li><strong>Use case</strong>: Use this operation to review the log processing and delivery configuration for a specific task. This helps you analyze processing efficiency or troubleshoot issues.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries the information about a log delivery task by account.</p>
+     * <p>Queries the delivery configuration and status of a task for a specific user.</p>
      * 
      * @param request GetUserDeliveryTaskRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -12669,14 +13040,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  This API operation queries the details of a delivery task, including the task name, discard rate, region, log category, status, delivery destination, configuration, and filtering rules.****</p>
      * <ul>
-     * <li>You can call this operation to query detailed information about a log delivery task to analyze log processing efficiency or troubleshoot delivery problems.****</li>
-     * <li>****````</li>
+     * <li><strong>Function</strong>: This operation retrieves detailed delivery information for a specific task of an Alibaba Cloud user, including the task name, discard rate, region, business type, status, delivery type, delivery configuration, and filter rules.</li>
+     * <li><strong>Use case</strong>: Use this operation to review the log processing and delivery configuration for a specific task. This helps you analyze processing efficiency or troubleshoot issues.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries the information about a log delivery task by account.</p>
+     * <p>Queries the delivery configuration and status of a task for a specific user.</p>
      * 
      * @param request GetUserDeliveryTaskRequest
      * @return GetUserDeliveryTaskResponse
@@ -12733,8 +13103,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Request</h2>
+     * <p><code>GetUserWafRuleset</code> retrieves the details of a specific Web Application Firewall (WAF) ruleset, identified by its instance ID and ruleset ID. The response includes details such as the ruleset\&quot;s location, name, description, status, and its rules. Specify all required parameters correctly to prevent request failures.</p>
+     * 
      * <b>summary</b> : 
-     * <p>用于获取实例级别的Web应用防火墙规则集详情</p>
+     * <p>This API retrieves the details of the WAF rule set for a specified instance.</p>
      * 
      * @param request GetUserWafRulesetRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -12769,8 +13143,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Request</h2>
+     * <p><code>GetUserWafRuleset</code> retrieves the details of a specific Web Application Firewall (WAF) ruleset, identified by its instance ID and ruleset ID. The response includes details such as the ruleset\&quot;s location, name, description, status, and its rules. Specify all required parameters correctly to prevent request failures.</p>
+     * 
      * <b>summary</b> : 
-     * <p>用于获取实例级别的Web应用防火墙规则集详情</p>
+     * <p>This API retrieves the details of the WAF rule set for a specified instance.</p>
      * 
      * @param request GetUserWafRulesetRequest
      * @return GetUserWafRulesetResponse
@@ -12863,7 +13241,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the conditions for matching incoming requests that are configured in a WAF rule category for a website. These conditions define how WAF detects and processes different types of requests.</p>
+     * <p>Retrieves matching engine information for a site at a given WAF phase, which defines how the WAF detects and handles various network requests.</p>
      * 
      * @param request GetWafFilterRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -12907,7 +13285,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the conditions for matching incoming requests that are configured in a WAF rule category for a website. These conditions define how WAF detects and processes different types of requests.</p>
+     * <p>Retrieves matching engine information for a site at a given WAF phase, which defines how the WAF detects and handles various network requests.</p>
      * 
      * @param request GetWafFilterRequest
      * @return GetWafFilterResponse
@@ -12919,7 +13297,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Get WAF Quota Details</p>
+     * <p>Web Application Firewall (WAF) quotas define the maximum number of resources a customer can use, including managed rule groups, custom lists, custom response pages, and scenario-based protection rules.</p>
      * 
      * @param request GetWafQuotaRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -12951,7 +13329,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Get WAF Quota Details</p>
+     * <p>Web Application Firewall (WAF) quotas define the maximum number of resources a customer can use, including managed rule groups, custom lists, custom response pages, and scenario-based protection rules.</p>
      * 
      * @param request GetWafQuotaRequest
      * @return GetWafQuotaResponse
@@ -12963,7 +13341,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Get Details of a Single WAF Rule</p>
+     * <p>Retrieves the details of a specific WAF rule, including its configuration and status.</p>
      * 
      * @param request GetWafRuleRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -12999,7 +13377,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Get Details of a Single WAF Rule</p>
+     * <p>Retrieves the details of a specific WAF rule, including its configuration and status.</p>
      * 
      * @param request GetWafRuleRequest
      * @return GetWafRuleResponse
@@ -13011,7 +13389,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Get WAF Ruleset Details</p>
+     * <p>Retrieves the details of a specified WAF ruleset, including its configuration and status.</p>
      * 
      * @param request GetWafRulesetRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -13051,7 +13429,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Get WAF Ruleset Details</p>
+     * <p>Retrieves the details of a specified WAF ruleset, including its configuration and status.</p>
      * 
      * @param request GetWafRulesetRequest
      * @return GetWafRulesetResponse
@@ -13063,7 +13441,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query Cache Reserve Instance List</p>
+     * <p>Queries the cache reserve instances for your account.</p>
      * 
      * @param request ListCacheReserveInstancesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -13091,7 +13469,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query Cache Reserve Instance List</p>
+     * <p>Queries the cache reserve instances for your account.</p>
      * 
      * @param request ListCacheReserveInstancesRequest
      * @return ListCacheReserveInstancesResponse
@@ -13103,7 +13481,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query multiple cache configurations</p>
+     * <p>Lists cache configurations.</p>
      * 
      * @param request ListCacheRulesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -13131,7 +13509,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query multiple cache configurations</p>
+     * <p>Lists cache configurations.</p>
      * 
      * @param request ListCacheRulesRequest
      * @return ListCacheRulesResponse
@@ -13143,7 +13521,63 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Lists certificates of a website.</p>
+     * <p>查询证书列表，支持翻页</p>
+     * 
+     * @param request ListCasCertificatesRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListCasCertificatesResponse
+     */
+    public ListCasCertificatesResponse listCasCertificatesWithOptions(ListCasCertificatesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            query.put("PageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.searchKeyword)) {
+            query.put("SearchKeyword", request.searchKeyword);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.securityToken)) {
+            query.put("SecurityToken", request.securityToken);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListCasCertificates"),
+            new TeaPair("version", "2024-09-10"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListCasCertificatesResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询证书列表，支持翻页</p>
+     * 
+     * @param request ListCasCertificatesRequest
+     * @return ListCasCertificatesResponse
+     */
+    public ListCasCertificatesResponse listCasCertificates(ListCasCertificatesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listCasCertificatesWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Lists the certificates for a given site.</p>
      * 
      * @param request ListCertificatesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -13191,7 +13625,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Lists certificates of a website.</p>
+     * <p>Lists the certificates for a given site.</p>
      * 
      * @param request ListCertificatesRequest
      * @return ListCertificatesResponse
@@ -13203,7 +13637,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Lists certificates that match specified records for a website. You can specify multiple records at a time.</p>
+     * <p>Retrieves site certificates for multiple matching records.</p>
      * 
      * @param request ListCertificatesByRecordRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -13247,7 +13681,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Lists certificates that match specified records for a website. You can specify multiple records at a time.</p>
+     * <p>Retrieves site certificates for multiple matching records.</p>
      * 
      * @param request ListCertificatesByRecordRequest
      * @return ListCertificatesByRecordResponse
@@ -13299,7 +13733,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of client certificate authority (CA) certificates for a website.</p>
+     * <p>Retrieves the client CA certificates for a specified site.</p>
      * 
      * @param request ListClientCaCertificatesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -13327,7 +13761,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of client certificate authority (CA) certificates for a website.</p>
+     * <p>Retrieves the client CA certificates for a specified site.</p>
      * 
      * @param request ListClientCaCertificatesRequest
      * @return ListClientCaCertificatesResponse
@@ -13339,7 +13773,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries client certificates configured for a website.</p>
+     * <p>Retrieves a list of client certificates for a specified site.</p>
      * 
      * @param request ListClientCertificatesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -13367,7 +13801,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries client certificates configured for a website.</p>
+     * <p>Retrieves a list of client certificates for a specified site.</p>
      * 
      * @param request ListClientCertificatesRequest
      * @return ListClientCertificatesResponse
@@ -13419,7 +13853,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询站点下的自定义主机名列表</p>
+     * <p>Queries the list of SaaS domain names under a site, including the ID, status, and domain name verification information of each SaaS domain name. You can filter results by SaaS domain name, site ID, or associated record ID.</p>
      * 
      * @param request ListCustomHostnamesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -13475,7 +13909,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询站点下的自定义主机名列表</p>
+     * <p>Queries the list of SaaS domain names under a site, including the ID, status, and domain name verification information of each SaaS domain name. You can filter results by SaaS domain name, site ID, or associated record ID.</p>
      * 
      * @param request ListCustomHostnamesRequest
      * @return ListCustomHostnamesResponse
@@ -13487,7 +13921,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the configuration list of an HTTP response header modification rule for a website.</p>
+     * <p>List the custom response code configurations for the site.</p>
      * 
      * @param request ListCustomResponseCodeRulesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -13543,7 +13977,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the configuration list of an HTTP response header modification rule for a website.</p>
+     * <p>List the custom response code configurations for the site.</p>
      * 
      * @param request ListCustomResponseCodeRulesRequest
      * @return ListCustomResponseCodeRulesResponse
@@ -13555,7 +13989,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询DDoS安全实例列表</p>
+     * <p>Retrieves a list of purchased DDoS protection instances.</p>
      * 
      * @param request ListDDoSInstancesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -13611,7 +14045,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询DDoS安全实例列表</p>
+     * <p>Retrieves a list of purchased DDoS protection instances.</p>
      * 
      * @param request ListDDoSInstancesRequest
      * @return ListDDoSInstancesResponse
@@ -13623,7 +14057,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This interface is used to check whether the vs_addr parameter in the vipInfo collection is vip.</p>
+     * <p>Checks whether vs_addr values in the vipInfo collection are VIPs.</p>
      * 
      * <b>summary</b> : 
      * <p>Batch query whether the IP address is included in the ESA resolution result.</p>
@@ -13654,7 +14088,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This interface is used to check whether the vs_addr parameter in the vipInfo collection is vip.</p>
+     * <p>Checks whether vs_addr values in the vipInfo collection are VIPs.</p>
      * 
      * <b>summary</b> : 
      * <p>Batch query whether the IP address is included in the ESA resolution result.</p>
@@ -13931,7 +14365,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p> You can call this operation 100 times per second.</p>
+     * <p>Each account can call this operation up to 100 times per second.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
@@ -13964,7 +14398,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p> You can call this operation 100 times per second.</p>
+     * <p>Each account can call this operation up to 100 times per second.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
@@ -14060,7 +14494,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>List of HTTP Request Header Rules</p>
+     * <p>Lists the HTTP request header configurations.</p>
      * 
      * @param request ListHttpRequestHeaderModificationRulesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -14088,7 +14522,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>List of HTTP Request Header Rules</p>
+     * <p>Lists the HTTP request header configurations.</p>
      * 
      * @param request ListHttpRequestHeaderModificationRulesRequest
      * @return ListHttpRequestHeaderModificationRulesResponse
@@ -14100,7 +14534,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>List of HTTP Response Header Rules</p>
+     * <p>Gets the HTTP response header configurations for a site.</p>
      * 
      * @param request ListHttpResponseHeaderModificationRulesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -14128,7 +14562,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>List of HTTP Response Header Rules</p>
+     * <p>Gets the HTTP response header configurations for a site.</p>
      * 
      * @param request ListHttpResponseHeaderModificationRulesRequest
      * @return ListHttpResponseHeaderModificationRulesResponse
@@ -14140,7 +14574,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query multiple HTTPS application configurations</p>
+     * <p>Queries multiple HTTPS application configurations.</p>
      * 
      * @param request ListHttpsApplicationConfigurationsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -14168,7 +14602,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query multiple HTTPS application configurations</p>
+     * <p>Queries multiple HTTPS application configurations.</p>
      * 
      * @param request ListHttpsApplicationConfigurationsRequest
      * @return ListHttpsApplicationConfigurationsResponse
@@ -14220,7 +14654,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query Multiple Site Image Transformation Configurations</p>
+     * <p>Retrieves site image conversion configurations.</p>
      * 
      * @param request ListImageTransformsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -14248,7 +14682,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query Multiple Site Image Transformation Configurations</p>
+     * <p>Retrieves site image conversion configurations.</p>
      * 
      * @param request ListImageTransformsRequest
      * @return ListImageTransformsResponse
@@ -14340,7 +14774,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取站点下keyless server列表</p>
+     * <p>Retrieves keyless server configurations for a site.</p>
      * 
      * @param request ListKeylessServersRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -14380,7 +14814,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取站点下keyless server列表</p>
+     * <p>Retrieves keyless server configurations for a site.</p>
      * 
      * @param request ListKeylessServersRequest
      * @return ListKeylessServersResponse
@@ -14392,7 +14826,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Lists all key-value pairs in a namespace in your Alibaba Cloud account.</p>
+     * <p>Lists all key-value pairs in a specified namespace.</p>
      * 
      * @param request ListKvsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -14420,7 +14854,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Lists all key-value pairs in a namespace in your Alibaba Cloud account.</p>
+     * <p>Lists all key-value pairs in a specified namespace.</p>
      * 
      * @param request ListKvsRequest
      * @return ListKvsResponse
@@ -14432,7 +14866,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries all custom lists and their details in an Alibaba Cloud account. You can specify query arguments to filter the results and display the returned lists by page.</p>
+     * <p>Lists all custom lists and their details for an account. Use query parameters to filter the results and pagination to navigate the list collection.</p>
      * 
      * @param tmpReq ListListsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -14478,7 +14912,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries all custom lists and their details in an Alibaba Cloud account. You can specify query arguments to filter the results and display the returned lists by page.</p>
+     * <p>Lists all custom lists and their details for an account. Use query parameters to filter the results and pagination to navigate the list collection.</p>
      * 
      * @param request ListListsRequest
      * @return ListListsResponse
@@ -14594,7 +15028,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query the list of load balancers</p>
+     * <p>Retrieves a paged list of load balancers in a specific site, returning their details. You can filter the list by load balancer name.</p>
      * 
      * @param request ListLoadBalancersRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -14622,7 +15056,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query the list of load balancers</p>
+     * <p>Retrieves a paged list of load balancers in a specific site, returning their details. You can filter the list by load balancer name.</p>
      * 
      * @param request ListLoadBalancersRequest
      * @return ListLoadBalancersResponse
@@ -14722,7 +15156,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询源服务器CA证书列表</p>
+     * <p>Retrieves the CA certificates for the source server.</p>
      * 
      * @param request ListOriginCaCertificatesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -14750,7 +15184,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询源服务器CA证书列表</p>
+     * <p>Retrieves the CA certificates for the source server.</p>
      * 
      * @param request ListOriginCaCertificatesRequest
      * @return ListOriginCaCertificatesResponse
@@ -14762,7 +15196,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询域名回源客户端证书列表</p>
+     * <p>Lists back-to-source client certificates for a domain name.</p>
      * 
      * @param request ListOriginClientCertificatesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -14790,7 +15224,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询域名回源客户端证书列表</p>
+     * <p>Lists back-to-source client certificates for a domain name.</p>
      * 
      * @param request ListOriginClientCertificatesRequest
      * @return ListOriginClientCertificatesResponse
@@ -14802,7 +15236,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>List Origin Pools</p>
+     * <p>Lists all origin pools within a site. Supports pagination and searching by origin pool name (exact or fuzzy).</p>
      * 
      * @param request ListOriginPoolsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -14830,7 +15264,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>List Origin Pools</p>
+     * <p>Lists all origin pools within a site. Supports pagination and searching by origin pool name (exact or fuzzy).</p>
      * 
      * @param request ListOriginPoolsRequest
      * @return ListOriginPoolsResponse
@@ -14842,7 +15276,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query multiple origin rule configurations</p>
+     * <p>Lists multiple back-to-origin rules.</p>
      * 
      * @param request ListOriginRulesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -14870,7 +15304,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query multiple origin rule configurations</p>
+     * <p>Lists multiple back-to-origin rules.</p>
      * 
      * @param request ListOriginRulesRequest
      * @return ListOriginRulesResponse
@@ -14882,7 +15316,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Lists all custom error pages that you created. You can define the page number and the number of entries per page to display the response.</p>
+     * <p>Retrieves a list of your custom response pages. This operation supports pagination, allowing you to control the results by specifying a page number and a page size.</p>
      * 
      * @param tmpReq ListPagesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -14928,7 +15362,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Lists all custom error pages that you created. You can define the page number and the number of entries per page to display the response.</p>
+     * <p>Retrieves a list of your custom response pages. This operation supports pagination, allowing you to control the results by specifying a page number and a page size.</p>
      * 
      * @param request ListPagesRequest
      * @return ListPagesResponse
@@ -14939,8 +15373,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This API retrieves a list of pay-as-you-go plan instances from a user account and supports filtering and sorting by various criteria.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Queries pay-as-you-go instances.</p>
+     * <p>List of post-paid plan instances.</p>
      * 
      * @param request ListPostpaidRatePlanInstancesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -14967,8 +15404,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This API retrieves a list of pay-as-you-go plan instances from a user account and supports filtering and sorting by various criteria.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Queries pay-as-you-go instances.</p>
+     * <p>List of post-paid plan instances.</p>
      * 
      * @param request ListPostpaidRatePlanInstancesRequest
      * @return ListPostpaidRatePlanInstancesResponse
@@ -14980,10 +15420,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>The DNS records related to Edge Container, Edge Routine, and TCP/UDP proxy are not returned in this operation.</p>
+     * <p>This API does not return DNS records for edge containers, edge functions, and layer 4 acceleration.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries a list of Domain Name System (DNS) records of a website, including the record value, priority, and authentication configurations. Supports filtering by specifying parameters such as RecordName and RecordMatchType.</p>
+     * <p>Lists a site\&quot;s DNS records, including their record value, priority, and authentication configuration. Allows filtering by record name and record type.</p>
      * 
      * @param request ListRecordsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -15011,10 +15451,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>The DNS records related to Edge Container, Edge Routine, and TCP/UDP proxy are not returned in this operation.</p>
+     * <p>This API does not return DNS records for edge containers, edge functions, and layer 4 acceleration.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries a list of Domain Name System (DNS) records of a website, including the record value, priority, and authentication configurations. Supports filtering by specifying parameters such as RecordName and RecordMatchType.</p>
+     * <p>Lists a site\&quot;s DNS records, including their record value, priority, and authentication configuration. Allows filtering by record name and record type.</p>
      * 
      * @param request ListRecordsRequest
      * @return ListRecordsResponse
@@ -15106,7 +15546,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Lists the regions to which Edge Routine code can be released for canary deployment.</p>
+     * <p>查询Routine灰度环境列表</p>
      * 
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListRoutineCanaryAreasResponse
@@ -15129,7 +15569,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Lists the regions to which Edge Routine code can be released for canary deployment.</p>
+     * <p>查询Routine灰度环境列表</p>
      * @return ListRoutineCanaryAreasResponse
      */
     public ListRoutineCanaryAreasResponse listRoutineCanaryAreas() throws Exception {
@@ -15139,12 +15579,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Call this operation to query the code versions of a specific function. Paged query and fuzzy search are supported. You can configure <code>Name</code> to specify the name of a function.
-     * Specify <code>PageNumber</code> and <code>PageSize</code> to control the number of entries returned in a request, and use <code>SearchKeyWord</code> to specify a keyword for fuzzy search.
-     * The response includes the number, description, and creation time of each code version.</p>
+     * <p>Queries the code version list of a specified Edge Routine program. This operation supports paged query and fuzzy search. You can set the Name parameter to specify the Edge Routine program name, use PageNumber and PageSize for paging control, and use SearchKeyWord for fuzzy match on code version descriptions.
+     * The response includes details of each code version, such as the revision number, description, and creation time.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the code versions of a function (routine) by page.</p>
+     * <p>Performs a paged query to retrieve the code version information of a specified Edge Routine program.</p>
      * 
      * @param request ListRoutineCodeVersionsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -15188,12 +15627,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Call this operation to query the code versions of a specific function. Paged query and fuzzy search are supported. You can configure <code>Name</code> to specify the name of a function.
-     * Specify <code>PageNumber</code> and <code>PageSize</code> to control the number of entries returned in a request, and use <code>SearchKeyWord</code> to specify a keyword for fuzzy search.
-     * The response includes the number, description, and creation time of each code version.</p>
+     * <p>Queries the code version list of a specified Edge Routine program. This operation supports paged query and fuzzy search. You can set the Name parameter to specify the Edge Routine program name, use PageNumber and PageSize for paging control, and use SearchKeyWord for fuzzy match on code version descriptions.
+     * The response includes details of each code version, such as the revision number, description, and creation time.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the code versions of a function (routine) by page.</p>
+     * <p>Performs a paged query to retrieve the code version information of a specified Edge Routine program.</p>
      * 
      * @param request ListRoutineCodeVersionsRequest
      * @return ListRoutineCodeVersionsResponse
@@ -15205,7 +15643,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can call this operation to query the routes associated with a function. You can specify paged query parameters to obtain the specified number of routes or specify a keyword for fuzzy search to filter specific routes.</p>
+     * <p>Queries the list of related records for a specified edge routine. You can use pagination parameters to retrieve partial results, or use fuzzy keywords to filter specific record entries.</p>
      * 
      * <b>summary</b> : 
      * <p>The records associated with the function.</p>
@@ -15252,7 +15690,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can call this operation to query the routes associated with a function. You can specify paged query parameters to obtain the specified number of routes or specify a keyword for fuzzy search to filter specific routes.</p>
+     * <p>Queries the list of related records for a specified edge routine. You can use pagination parameters to retrieve partial results, or use fuzzy keywords to filter specific record entries.</p>
      * 
      * <b>summary</b> : 
      * <p>The records associated with the function.</p>
@@ -15267,7 +15705,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the routes of an edge function.</p>
+     * <p>Lists the function routes of a specified edge program.</p>
      * 
      * @param request ListRoutineRoutesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -15307,7 +15745,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the routes of an edge function.</p>
+     * <p>Lists the function routes of a specified edge program.</p>
      * 
      * @param request ListRoutineRoutesRequest
      * @return ListRoutineRoutesResponse
@@ -15319,7 +15757,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Lists the plans in a scheduled prefetch task by task ID.</p>
+     * <p>Lists execution plans for a scheduled preload task.</p>
      * 
      * @param request ListScheduledPreloadExecutionsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -15347,7 +15785,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Lists the plans in a scheduled prefetch task by task ID.</p>
+     * <p>Lists execution plans for a scheduled preload task.</p>
      * 
      * @param request ListScheduledPreloadExecutionsRequest
      * @return ListScheduledPreloadExecutionsResponse
@@ -15359,7 +15797,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the scheduled prefetch tasks for a website.</p>
+     * <p>Lists scheduled prefetch jobs for a site.</p>
      * 
      * @param request ListScheduledPreloadJobsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -15387,7 +15825,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the scheduled prefetch tasks for a website.</p>
+     * <p>Lists scheduled prefetch jobs for a site.</p>
      * 
      * @param request ListScheduledPreloadJobsRequest
      * @return ListScheduledPreloadJobsResponse
@@ -15439,7 +15877,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询站点回源客户端证书列表</p>
+     * <p>Lists the back-to-origin client certificates for a site.</p>
      * 
      * @param request ListSiteOriginClientCertificatesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -15467,7 +15905,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询站点回源客户端证书列表</p>
+     * <p>Lists the back-to-origin client certificates for a site.</p>
      * 
      * @param request ListSiteOriginClientCertificatesRequest
      * @return ListSiteOriginClientCertificatesResponse
@@ -15479,7 +15917,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the edge function routes for a website.</p>
+     * <p>Retrieves the function routes for a site.</p>
      * 
      * @param request ListSiteRoutesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -15531,7 +15969,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the edge function routes for a website.</p>
+     * <p>Retrieves the function routes for a site.</p>
      * 
      * @param request ListSiteRoutesRequest
      * @return ListSiteRoutesResponse
@@ -15543,7 +15981,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the information about websites in your account, such as the name, status, and configuration of each website.</p>
+     * <p>Lists the current user\&quot;s sites, including their name, status, and configuration.</p>
      * 
      * @param tmpReq ListSitesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -15577,7 +16015,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the information about websites in your account, such as the name, status, and configuration of each website.</p>
+     * <p>Lists the current user\&quot;s sites, including their name, status, and configuration.</p>
      * 
      * @param request ListSitesRequest
      * @return ListSitesResponse
@@ -15589,7 +16027,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries tags based on the region ID and resource type.</p>
+     * <p>Queries tags by region ID and resource type.</p>
      * 
      * @param request ListTagResourcesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -15645,7 +16083,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries tags based on the region ID and resource type.</p>
+     * <p>Queries tags by region ID and resource type.</p>
      * 
      * @param request ListTagResourcesRequest
      * @return ListTagResourcesResponse
@@ -15657,7 +16095,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>边缘容器的监控</p>
+     * <p>Retrieves a list of diagnostic tasks.</p>
      * 
      * @param request ListTraceTasksRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -15721,7 +16159,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>边缘容器的监控</p>
+     * <p>Retrieves a list of diagnostic tasks.</p>
      * 
      * @param request ListTraceTasksRequest
      * @return ListTraceTasksResponse
@@ -15733,7 +16171,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>List of Transport Layer Applications</p>
+     * <p>Lists the layer 4 applications associated with the site.</p>
      * 
      * @param request ListTransportLayerApplicationsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -15761,7 +16199,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>List of Transport Layer Applications</p>
+     * <p>Lists the layer 4 applications associated with the site.</p>
      * 
      * @param request ListTransportLayerApplicationsRequest
      * @return ListTransportLayerApplicationsResponse
@@ -15909,7 +16347,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the plans that you purchased and the details of the plans.</p>
+     * <p>Retrieves a user\&quot;s purchased package instances and their details.</p>
      * 
      * @param request ListUserRatePlanInstancesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -15937,7 +16375,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the plans that you purchased and the details of the plans.</p>
+     * <p>Retrieves a user\&quot;s purchased package instances and their details.</p>
      * 
      * @param request ListUserRatePlanInstancesRequest
      * @return ListUserRatePlanInstancesResponse
@@ -15949,10 +16387,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can call this operation to perform a paged query to query all functions created in your account, the maximum number of functions supported by the billing plan that you use, and the number of functions already created. You can specify <code>PageNumber</code> and <code>PageSize</code> to control the number of entries to be returned in the response and specify <code>SearchKeyWord</code> to perform a fuzzy search to filter specific routine names.</p>
+     * <p>Returns a paginated list of all edge functions (routines) in your account, along with the routine quota and usage for your current plan. You can use <code>PageNumber</code> and <code>PageSize</code> to control pagination, and <code>SearchKeyWord</code> to filter routines by name.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the functions created in your account and the maximum number of functions supported by your plan. You can call this operation to perform a paged query.</p>
+     * <p>Queries the functions created in your account and the maximum number of functions supported by your plan.</p>
      * 
      * @param request ListUserRoutinesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -15992,10 +16430,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can call this operation to perform a paged query to query all functions created in your account, the maximum number of functions supported by the billing plan that you use, and the number of functions already created. You can specify <code>PageNumber</code> and <code>PageSize</code> to control the number of entries to be returned in the response and specify <code>SearchKeyWord</code> to perform a fuzzy search to filter specific routine names.</p>
+     * <p>Returns a paginated list of all edge functions (routines) in your account, along with the routine quota and usage for your current plan. You can use <code>PageNumber</code> and <code>PageSize</code> to control pagination, and <code>SearchKeyWord</code> to filter routines by name.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the functions created in your account and the maximum number of functions supported by your plan. You can call this operation to perform a paged query.</p>
+     * <p>Queries the functions created in your account and the maximum number of functions supported by your plan.</p>
      * 
      * @param request ListUserRoutinesRequest
      * @return ListUserRoutinesResponse
@@ -16006,8 +16444,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Request</h2>
+     * <ul>
+     * <li><code>InstanceId</code> is a required parameter that specifies the WAF instance to query.</li>
+     * <li>The <code>Phase</code> parameter filters rule sets by WAF processing phase, such as custom rules and rate limiting rules.</li>
+     * <li>Use <code>NameLike</code> in <code>QueryArgs</code> to perform a fuzzy search on rule set names.</li>
+     * <li>The <code>PageNumber</code> and <code>PageSize</code> parameters control pagination and default to 1 and 20, respectively.</li>
+     * <li>The response includes the request ID, current plan usage, the total record count, and a list of rule set details.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>用于列举实例级别的Web应用防火墙规则集。</p>
+     * <p>Retrieves WAF rule sets for a specified instance, allowing filtering by phase, name, and other criteria.</p>
      * 
      * @param tmpReq ListUserWafRulesetsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -16060,8 +16508,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Request</h2>
+     * <ul>
+     * <li><code>InstanceId</code> is a required parameter that specifies the WAF instance to query.</li>
+     * <li>The <code>Phase</code> parameter filters rule sets by WAF processing phase, such as custom rules and rate limiting rules.</li>
+     * <li>Use <code>NameLike</code> in <code>QueryArgs</code> to perform a fuzzy search on rule set names.</li>
+     * <li>The <code>PageNumber</code> and <code>PageSize</code> parameters control pagination and default to 1 and 20, respectively.</li>
+     * <li>The response includes the request ID, current plan usage, the total record count, and a list of rule set details.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>用于列举实例级别的Web应用防火墙规则集。</p>
+     * <p>Retrieves WAF rule sets for a specified instance, allowing filtering by phase, name, and other criteria.</p>
      * 
      * @param request ListUserWafRulesetsRequest
      * @return ListUserWafRulesetsResponse
@@ -16141,7 +16599,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>List WAF Managed Rules</p>
+     * <p>Retrieves a list of WAF managed rules, optionally filtered by specific criteria. The response is paginated.</p>
      * 
      * @param tmpReq ListWafManagedRulesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -16219,7 +16677,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>List WAF Managed Rules</p>
+     * <p>Retrieves a list of WAF managed rules, optionally filtered by specific criteria. The response is paginated.</p>
      * 
      * @param request ListWafManagedRulesRequest
      * @return ListWafManagedRulesResponse
@@ -16279,7 +16737,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>List WAF Rules</p>
+     * <p>This API retrieves a paginated list of detailed WAF rules, which can be filtered by specific conditions.</p>
      * 
      * @param tmpReq ListWafRulesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -16341,7 +16799,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>List WAF Rules</p>
+     * <p>This API retrieves a paginated list of detailed WAF rules, which can be filtered by specific conditions.</p>
      * 
      * @param request ListWafRulesRequest
      * @return ListWafRulesResponse
@@ -16353,7 +16811,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>List WAF Rule Sets</p>
+     * <p>Retrieves a paginated list of rule sets in the current WAF runtime phase, returning their basic information and status.</p>
      * 
      * @param tmpReq ListWafRulesetsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -16411,7 +16869,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>List WAF Rule Sets</p>
+     * <p>Retrieves a paginated list of rule sets in the current WAF runtime phase, returning their basic information and status.</p>
      * 
      * @param request ListWafRulesetsRequest
      * @return ListWafRulesetsResponse
@@ -16423,7 +16881,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>List WAF Template Rules</p>
+     * <p>Lists the template rules in WAF. These rules are typically predefined rulesets for quickly enabling protection against common attack types.</p>
      * 
      * @param tmpReq ListWafTemplateRulesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -16473,7 +16931,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>List WAF Template Rules</p>
+     * <p>Lists the template rules in WAF. These rules are typically predefined rulesets for quickly enabling protection against common attack types.</p>
      * 
      * @param request ListWafTemplateRulesRequest
      * @return ListWafTemplateRulesResponse
@@ -16485,7 +16943,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>List WAF Rule Usage</p>
+     * <p>Lists the usage of WAF rules.</p>
      * 
      * @param request ListWafUsageOfRulesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -16525,7 +16983,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>List WAF Rule Usage</p>
+     * <p>Lists the usage of WAF rules.</p>
      * 
      * @param request ListWafUsageOfRulesRequest
      * @return ListWafUsageOfRulesResponse
@@ -16537,10 +16995,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can call this operation to query details of all waiting room events related to a waiting room in a website.</p>
+     * <p>Use this operation to query details of all waiting room events related to a waiting room in a website.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the information about waiting room events for a waiting room.</p>
+     * <p>Queries waiting room events for a waiting room.</p>
      * 
      * @param request ListWaitingRoomEventsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -16568,10 +17026,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can call this operation to query details of all waiting room events related to a waiting room in a website.</p>
+     * <p>Use this operation to query details of all waiting room events related to a waiting room in a website.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the information about waiting room events for a waiting room.</p>
+     * <p>Queries waiting room events for a waiting room.</p>
      * 
      * @param request ListWaitingRoomEventsRequest
      * @return ListWaitingRoomEventsResponse
@@ -16629,10 +17087,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can call this operation to query detailed configurations about all waiting rooms in a website, including the status, name, and queuing rules of each waiting room.</p>
+     * <p>Use this operation to query detailed configurations about all waiting rooms in a website, including the status, name, and queuing rules of each waiting room.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the information about all waiting rooms in a website.</p>
+     * <p>Queries all waiting rooms in a website.</p>
      * 
      * @param request ListWaitingRoomsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -16660,10 +17118,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can call this operation to query detailed configurations about all waiting rooms in a website, including the status, name, and queuing rules of each waiting room.</p>
+     * <p>Use this operation to query detailed configurations about all waiting rooms in a website, including the status, name, and queuing rules of each waiting room.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the information about all waiting rooms in a website.</p>
+     * <p>Queries all waiting rooms in a website.</p>
      * 
      * @param request ListWaitingRoomsRequest
      * @return ListWaitingRoomsResponse
@@ -16781,7 +17239,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Releases a specific version of a containerized application. You can call this operation to iterate an application.</p>
+     * <p>Releases a specific version of a containerized application.</p>
      * 
      * @param tmpReq PublishEdgeContainerAppVersionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -16853,7 +17311,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Releases a specific version of a containerized application. You can call this operation to iterate an application.</p>
+     * <p>Releases a specific version of a containerized application.</p>
      * 
      * @param request PublishEdgeContainerAppVersionRequest
      * @return PublishEdgeContainerAppVersionResponse
@@ -16865,7 +17323,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Releases a code version of a routine to the staging, canary, or production environment. You can specify the regions where the canary environment is deployed to release your code.</p>
+     * <p>发布Routine某版本代码</p>
      * 
      * @param request PublishRoutineCodeVersionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -16905,7 +17363,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Releases a code version of a routine to the staging, canary, or production environment. You can specify the regions where the canary environment is deployed to release your code.</p>
+     * <p>发布Routine某版本代码</p>
      * 
      * @param request PublishRoutineCodeVersionRequest
      * @return PublishRoutineCodeVersionResponse
@@ -16982,12 +17440,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ol>
-     * <li>The package name and code can be obtained from the DescribeRatePlanPrice interface.</li>
-     * <li>If the acceleration area is not overseas, the site must have successfully completed the filing process.</li>
+     * <li>Obtain the plan name and plan code by calling the DescribeRatePlanPrice operation.</li>
+     * <li>If the acceleration region is not set to overseas, the site must have a valid China Internet Content Provider (ICP) filing.</li>
      * </ol>
      * 
      * <b>summary</b> : 
-     * <p>Purchase New Package</p>
+     * <p>Purchases a plan by calling PurchaseRatePlan.</p>
      * 
      * @param request PurchaseRatePlanRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -17060,12 +17518,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ol>
-     * <li>The package name and code can be obtained from the DescribeRatePlanPrice interface.</li>
-     * <li>If the acceleration area is not overseas, the site must have successfully completed the filing process.</li>
+     * <li>Obtain the plan name and plan code by calling the DescribeRatePlanPrice operation.</li>
+     * <li>If the acceleration region is not set to overseas, the site must have a valid China Internet Content Provider (ICP) filing.</li>
      * </ol>
      * 
      * <b>summary</b> : 
-     * <p>Purchase New Package</p>
+     * <p>Purchases a plan by calling PurchaseRatePlan.</p>
      * 
      * @param request PurchaseRatePlanRequest
      * @return PurchaseRatePlanResponse
@@ -17143,7 +17601,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Configures a key-value pair for a namespace. The request body can be up to 2 MB.</p>
+     * <p>Creates or updates a single key-value pair in a namespace. The maximum size of a request is 2 MB.</p>
      * 
      * @param request PutKvRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -17197,7 +17655,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Configures a key-value pair for a namespace. The request body can be up to 2 MB.</p>
+     * <p>Creates or updates a single key-value pair in a namespace. The maximum size of a request is 2 MB.</p>
      * 
      * @param request PutKvRequest
      * @return PutKvResponse
@@ -17209,45 +17667,46 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation allows you to upload a larger request body than by using <a href="~~PutKv~~">PutKv</a>. For small request bodies, we recommend that you use <a href="~~PutKv~~">PutKv</a> to minimize the server processing time. This operation must be called by using SDKs. The following sample code uses the Golang SDK and PutKvWithHighCapacityAdvance to call the operation.
-     *     func TestPutKvWithHighCapacity() {
-     *         // Initialize the configurations.
-     *         cfg := new(openapi.Config)
-     *         cfg.SetAccessKeyId(&quot;xxxxxxxxx&quot;)
-     *         cfg.SetAccessKeySecret(&quot;xxxxxxxxxx&quot;)
-     *         cli, err := NewClient(cfg)
-     *         if err != nil {
-     *             return err
-     *         }
-     *         runtime := &amp;util.RuntimeOptions{}
-     *         // Construct a request for uploading key-value pairs.
-     *         namespace := &quot;test-put-kv&quot;
-     *         key := &quot;test_PutKvWithHighCapacity_0&quot;
-     *         value := strings.Repeat(&quot;t&quot;, 10<em>1024</em>1024)
-     *         rawReq := &amp;PutKvRequest{
-     *             Namespace: &amp;namespace,
-     *             Key:       &amp;key,
-     *             Value:     &amp;value,
-     *         }
-     *         payload, err := json.Marshal(rawReq)
-     *         if err != nil {
-     *             return err
-     *         }
-     *         // If the payload is greater than 2 MB, call the PutKvWithHighCapacity operation for upload.
-     *         reqHighCapacity := &amp;PutKvWithHighCapacityAdvanceRequest{
-     *             Namespace: &amp;namespace,
-     *             Key:       &amp;key,
-     *             UrlObject: bytes.NewReader([]byte(payload)),
-     *         }
-     *         resp, err := cli.PutKvWithHighCapacityAdvance(reqHighCapacity, runtime)
-     *         if err != nil {
-     *             return err
-     *         }
-     *         return nil
-     *     }</p>
+     * <p>This interface provides the same functionality as <a href="~~PutKv~~">PutKv</a>, but supports larger request bodies. If your request body is small, use the <a href="~~PutKv~~">PutKv</a> interface instead to reduce server-side processing time. Call this interface using an SDK. For example, with the Go SDK, call the PutKvWithHighCapacityAdvance function.</p>
+     * <pre><code>func TestPutKvWithHighCapacity() {
+     *     // Configure initialization
+     *     cfg := new(openapi.Config)
+     *     cfg.SetAccessKeyId(&quot;xxxxxxxxx&quot;)
+     *     cfg.SetAccessKeySecret(&quot;xxxxxxxxxx&quot;)
+     *     cli, err := NewClient(cfg)
+     *     if err != nil {
+     *         return err
+     *     }
+     *     runtime := &amp;util.RuntimeOptions{}
+     *     // Construct the key-value pair request to be uploaded
+     *     namespace := &quot;test-put-kv&quot;
+     *     key := &quot;test_PutKvWithHighCapacity_0&quot;
+     *     value := strings.Repeat(&quot;t&quot;, 10*1024*1024)
+     *     rawReq := &amp;PutKvRequest{
+     *         Namespace: &amp;namespace,
+     *         Key:       &amp;key,
+     *         Value:     &amp;value,
+     *     }
+     *     payload, err := json.Marshal(rawReq)
+     *     if err != nil {
+     *         return err
+     *     }
+     *     // If the payload is larger than 2 MB, call the high-capacity interface to upload
+     *     reqHighCapacity := &amp;PutKvWithHighCapacityAdvanceRequest{
+     *         Namespace: &amp;namespace,
+     *         Key:       &amp;key,
+     *         UrlObject: bytes.NewReader([]byte(payload)),
+     *     }
+     *     resp, err := cli.PutKvWithHighCapacityAdvance(reqHighCapacity, runtime)
+     *     if err != nil {
+     *         return err
+     *     }
+     *     return nil
+     * }
+     * </code></pre>
      * 
      * <b>summary</b> : 
-     * <p>Configures a large key-value pair for a namespace. The request body can be up to 25 MB.</p>
+     * <p>Set a single high-capacity key-value pair in a KV namespace. This operation supports values up to 25 MB.</p>
      * 
      * @param request PutKvWithHighCapacityRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -17287,45 +17746,46 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation allows you to upload a larger request body than by using <a href="~~PutKv~~">PutKv</a>. For small request bodies, we recommend that you use <a href="~~PutKv~~">PutKv</a> to minimize the server processing time. This operation must be called by using SDKs. The following sample code uses the Golang SDK and PutKvWithHighCapacityAdvance to call the operation.
-     *     func TestPutKvWithHighCapacity() {
-     *         // Initialize the configurations.
-     *         cfg := new(openapi.Config)
-     *         cfg.SetAccessKeyId(&quot;xxxxxxxxx&quot;)
-     *         cfg.SetAccessKeySecret(&quot;xxxxxxxxxx&quot;)
-     *         cli, err := NewClient(cfg)
-     *         if err != nil {
-     *             return err
-     *         }
-     *         runtime := &amp;util.RuntimeOptions{}
-     *         // Construct a request for uploading key-value pairs.
-     *         namespace := &quot;test-put-kv&quot;
-     *         key := &quot;test_PutKvWithHighCapacity_0&quot;
-     *         value := strings.Repeat(&quot;t&quot;, 10<em>1024</em>1024)
-     *         rawReq := &amp;PutKvRequest{
-     *             Namespace: &amp;namespace,
-     *             Key:       &amp;key,
-     *             Value:     &amp;value,
-     *         }
-     *         payload, err := json.Marshal(rawReq)
-     *         if err != nil {
-     *             return err
-     *         }
-     *         // If the payload is greater than 2 MB, call the PutKvWithHighCapacity operation for upload.
-     *         reqHighCapacity := &amp;PutKvWithHighCapacityAdvanceRequest{
-     *             Namespace: &amp;namespace,
-     *             Key:       &amp;key,
-     *             UrlObject: bytes.NewReader([]byte(payload)),
-     *         }
-     *         resp, err := cli.PutKvWithHighCapacityAdvance(reqHighCapacity, runtime)
-     *         if err != nil {
-     *             return err
-     *         }
-     *         return nil
-     *     }</p>
+     * <p>This interface provides the same functionality as <a href="~~PutKv~~">PutKv</a>, but supports larger request bodies. If your request body is small, use the <a href="~~PutKv~~">PutKv</a> interface instead to reduce server-side processing time. Call this interface using an SDK. For example, with the Go SDK, call the PutKvWithHighCapacityAdvance function.</p>
+     * <pre><code>func TestPutKvWithHighCapacity() {
+     *     // Configure initialization
+     *     cfg := new(openapi.Config)
+     *     cfg.SetAccessKeyId(&quot;xxxxxxxxx&quot;)
+     *     cfg.SetAccessKeySecret(&quot;xxxxxxxxxx&quot;)
+     *     cli, err := NewClient(cfg)
+     *     if err != nil {
+     *         return err
+     *     }
+     *     runtime := &amp;util.RuntimeOptions{}
+     *     // Construct the key-value pair request to be uploaded
+     *     namespace := &quot;test-put-kv&quot;
+     *     key := &quot;test_PutKvWithHighCapacity_0&quot;
+     *     value := strings.Repeat(&quot;t&quot;, 10*1024*1024)
+     *     rawReq := &amp;PutKvRequest{
+     *         Namespace: &amp;namespace,
+     *         Key:       &amp;key,
+     *         Value:     &amp;value,
+     *     }
+     *     payload, err := json.Marshal(rawReq)
+     *     if err != nil {
+     *         return err
+     *     }
+     *     // If the payload is larger than 2 MB, call the high-capacity interface to upload
+     *     reqHighCapacity := &amp;PutKvWithHighCapacityAdvanceRequest{
+     *         Namespace: &amp;namespace,
+     *         Key:       &amp;key,
+     *         UrlObject: bytes.NewReader([]byte(payload)),
+     *     }
+     *     resp, err := cli.PutKvWithHighCapacityAdvance(reqHighCapacity, runtime)
+     *     if err != nil {
+     *         return err
+     *     }
+     *     return nil
+     * }
+     * </code></pre>
      * 
      * <b>summary</b> : 
-     * <p>Configures a large key-value pair for a namespace. The request body can be up to 25 MB.</p>
+     * <p>Set a single high-capacity key-value pair in a KV namespace. This operation supports values up to 25 MB.</p>
      * 
      * @param request PutKvWithHighCapacityRequest
      * @return PutKvWithHighCapacityResponse
@@ -17469,7 +17929,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>预约释放安全实例</p>
+     * <p>Schedules the release of a security instance.</p>
      * 
      * @param request ReleaseInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -17501,7 +17961,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>预约释放安全实例</p>
+     * <p>Schedules the release of a security instance.</p>
      * 
      * @param request ReleaseInstanceRequest
      * @return ReleaseInstanceResponse
@@ -17513,7 +17973,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Resets the progress of a scheduled prefetch task and starts the prefetch from the beginning.</p>
+     * <p>Resets the progress of a scheduled prefetch task and restarts the prefetch from the beginning.
+     * Prerequisites: You must first create a scheduled prefetch task by calling CreateScheduledPreloadJob to obtain a valid task ID, and then pass the ID to this operation to reset the task.</p>
      * 
      * @param request ResetScheduledPreloadJobRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -17545,7 +18006,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Resets the progress of a scheduled prefetch task and starts the prefetch from the beginning.</p>
+     * <p>Resets the progress of a scheduled prefetch task and restarts the prefetch from the beginning.
+     * Prerequisites: You must first create a scheduled prefetch task by calling CreateScheduledPreloadJob to obtain a valid task ID, and then pass the ID to this operation to reset the task.</p>
      * 
      * @param request ResetScheduledPreloadJobRequest
      * @return ResetScheduledPreloadJobResponse
@@ -17597,7 +18059,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Rolls back a version of a containerized application.</p>
+     * <p>Rolls back an edge container application to a specified version. Use this API to quickly recover from a failed deployment and minimize service disruption.</p>
      * 
      * @param request RollbackEdgeContainerAppVersionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -17647,7 +18109,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Rolls back a version of a containerized application.</p>
+     * <p>Rolls back an edge container application to a specified version. Use this API to quickly recover from a failed deployment and minimize service disruption.</p>
      * 
      * @param request RollbackEdgeContainerAppVersionRequest
      * @return RollbackEdgeContainerAppVersionResponse
@@ -17659,7 +18121,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>设置站点智能限频阈值</p>
+     * <p>Configures the automatic frequency control threshold for a site.</p>
      * 
      * @param request SetAutomaticFrequencyControlConfigRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -17707,7 +18169,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>设置站点智能限频阈值</p>
+     * <p>Configures the automatic frequency control threshold for a site.</p>
      * 
      * @param request SetAutomaticFrequencyControlConfigRequest
      * @return SetAutomaticFrequencyControlConfigResponse
@@ -17719,7 +18181,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Configures whether to enable certificates and update certificate information for a website.</p>
+     * <p>Configures whether to enable the certificate feature for a site and updates certificate information.</p>
      * 
      * @param request SetCertificateRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -17789,7 +18251,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Configures whether to enable certificates and update certificate information for a website.</p>
+     * <p>Configures whether to enable the certificate feature for a site and updates certificate information.</p>
      * 
      * @param request SetCertificateRequest
      * @return SetCertificateResponse
@@ -17801,7 +18263,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>为客户端CA证书绑定域名</p>
+     * <p>Binds hostnames to a specified client CA certificate. If you do not specify a certificate, the hostnames are bound to the ESA CA certificate.</p>
      * 
      * @param tmpReq SetClientCaCertificateHostnamesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -17849,7 +18311,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>为客户端CA证书绑定域名</p>
+     * <p>Binds hostnames to a specified client CA certificate. If you do not specify a certificate, the hostnames are bound to the ESA CA certificate.</p>
      * 
      * @param request SetClientCaCertificateHostnamesRequest
      * @return SetClientCaCertificateHostnamesResponse
@@ -17861,7 +18323,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Associates domain names with a client CA certificate. If no certificate is specified, domain names are associated with an Edge Security Acceleration (ESA)-managed CA certificate.</p>
+     * <p>Binds one or more hostnames to a specified client CA certificate. If you do not specify a certificate, the hostnames are bound to the ESA CA certificate.</p>
      * 
      * @param tmpReq SetClientCertificateHostnamesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -17909,7 +18371,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Associates domain names with a client CA certificate. If no certificate is specified, domain names are associated with an Edge Security Acceleration (ESA)-managed CA certificate.</p>
+     * <p>Binds one or more hostnames to a specified client CA certificate. If you do not specify a certificate, the hostnames are bound to the ESA CA certificate.</p>
      * 
      * @param request SetClientCertificateHostnamesRequest
      * @return SetClientCertificateHostnamesResponse
@@ -17921,7 +18383,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>设置Ddos实例的最大防护弹性值</p>
+     * <p>Sets the maximum burstable protection bandwidth for a DDoS instance in mainland China.</p>
      * 
      * @param request SetDdosMaxBurstGbpsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -17957,7 +18419,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>设置Ddos实例的最大防护弹性值</p>
+     * <p>Sets the maximum burstable protection bandwidth for a DDoS instance in mainland China.</p>
      * 
      * @param request SetDdosMaxBurstGbpsRequest
      * @return SetDdosMaxBurstGbpsResponse
@@ -17969,7 +18431,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Configures smart HTTP DDoS protection.</p>
+     * <p>This operation configures the intelligent HTTP DDoS protection settings for a site.</p>
      * 
      * @param request SetHttpDDoSAttackIntelligentProtectionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -18009,7 +18471,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Configures smart HTTP DDoS protection.</p>
+     * <p>This operation configures the intelligent HTTP DDoS protection settings for a site.</p>
      * 
      * @param request SetHttpDDoSAttackIntelligentProtectionRequest
      * @return SetHttpDDoSAttackIntelligentProtectionResponse
@@ -18173,7 +18635,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建/更新一个keyless server</p>
+     * <p>Creates or updates a keyless server configuration.</p>
      * 
      * @param request SetKeylessServerRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -18239,7 +18701,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建/更新一个keyless server</p>
+     * <p>Creates or updates a keyless server configuration.</p>
      * 
      * @param request SetKeylessServerRequest
      * @return SetKeylessServerResponse
@@ -18251,7 +18713,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>为域名回源客户端证书绑定域名</p>
+     * <p>Associates specified hostnames with an origin client certificate.</p>
      * 
      * @param tmpReq SetOriginClientCertificateHostnamesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -18297,7 +18759,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>为域名回源客户端证书绑定域名</p>
+     * <p>Associates specified hostnames with an origin client certificate.</p>
      * 
      * @param request SetOriginClientCertificateHostnamesRequest
      * @return SetOriginClientCertificateHostnamesResponse
@@ -18309,7 +18771,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Starts a scheduled prefetch plan based on the plan ID.</p>
+     * <p>Start a scheduled prefetch using a prefetch plan ID.</p>
      * 
      * @param request StartScheduledPreloadExecutionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -18341,7 +18803,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Starts a scheduled prefetch plan based on the plan ID.</p>
+     * <p>Start a scheduled prefetch using a prefetch plan ID.</p>
      * 
      * @param request StartScheduledPreloadExecutionRequest
      * @return StartScheduledPreloadExecutionResponse
@@ -18353,7 +18815,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Stops a scheduled prefetch plan based on the plan ID.</p>
+     * <p>Stops a single scheduled prefetch plan by prefetch plan ID.
+     * Prerequisites: (1) This operation takes effect only when the execution plan is in the running state. Execution plans in the waiting or failed state cannot be stopped. (2) Whether an execution plan can reach the running state depends on whether the site to which it belongs has passed the access verification (site Status=active).</p>
      * 
      * @param request StopScheduledPreloadExecutionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -18385,7 +18848,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Stops a scheduled prefetch plan based on the plan ID.</p>
+     * <p>Stops a single scheduled prefetch plan by prefetch plan ID.
+     * Prerequisites: (1) This operation takes effect only when the execution plan is in the running state. Execution plans in the waiting or failed state cannot be stopped. (2) Whether an execution plan can reach the running state depends on whether the site to which it belongs has passed the access verification (site Status=active).</p>
      * 
      * @param request StopScheduledPreloadExecutionRequest
      * @return StopScheduledPreloadExecutionResponse
@@ -18393,6 +18857,46 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public StopScheduledPreloadExecutionResponse stopScheduledPreloadExecution(StopScheduledPreloadExecutionRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.stopScheduledPreloadExecutionWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Submits a purge or prefetch task after a file that contains resources to be purged or prefetched is uploaded.</p>
+     * 
+     * @param request SubmitUploadTaskRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return SubmitUploadTaskResponse
+     */
+    public SubmitUploadTaskResponse submitUploadTaskWithOptions(SubmitUploadTaskRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "SubmitUploadTask"),
+            new TeaPair("version", "2024-09-10"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new SubmitUploadTaskResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Submits a purge or prefetch task after a file that contains resources to be purged or prefetched is uploaded.</p>
+     * 
+     * @param request SubmitUploadTaskRequest
+     * @return SubmitUploadTaskResponse
+     */
+    public SubmitUploadTaskResponse submitUploadTask(SubmitUploadTaskRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.submitUploadTaskWithOptions(request, runtime);
     }
 
     /**
@@ -18581,7 +19085,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modify cache configuration</p>
+     * <p>Modify the cache configuration.</p>
      * 
      * @param request UpdateCacheRuleRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -18725,7 +19229,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modify cache configuration</p>
+     * <p>Modify the cache configuration.</p>
      * 
      * @param request UpdateCacheRuleRequest
      * @return UpdateCacheRuleResponse
@@ -18737,7 +19241,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the cache tag configuration of your website. You can call this operation when you need to specify tags in the Cache-Tag response header to use the purge by cache tag feature.</p>
+     * <p>Modifies the cache tag configuration of your website.</p>
      * 
      * @param request UpdateCacheTagRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -18781,7 +19285,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the cache tag configuration of your website. You can call this operation when you need to specify tags in the Cache-Tag response header to use the purge by cache tag feature.</p>
+     * <p>Modifies the cache tag configuration of your website.</p>
      * 
      * @param request UpdateCacheTagRequest
      * @return UpdateCacheTagResponse
@@ -18841,7 +19345,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modify compression rule</p>
+     * <p>Modifies the compression rule configuration for a site.</p>
      * 
      * @param request UpdateCompressionRuleRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -18905,7 +19409,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modify compression rule</p>
+     * <p>Modifies the compression rule configuration for a site.</p>
      * 
      * @param request UpdateCompressionRuleRequest
      * @return UpdateCompressionRuleResponse
@@ -18965,7 +19469,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新自定义主机名</p>
+     * <p>Updates the parameters of a Software as a Service (SaaS) domain name, such as the attached record ID and the certificate type.</p>
      * 
      * @param request UpdateCustomHostnameRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -19025,7 +19529,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新自定义主机名</p>
+     * <p>Updates the parameters of a Software as a Service (SaaS) domain name, such as the attached record ID and the certificate type.</p>
      * 
      * @param request UpdateCustomHostnameRequest
      * @return UpdateCustomHostnameResponse
@@ -19037,7 +19541,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modify the response code configurations for a website.</p>
+     * <p>Modify the response code configuration for a site.</p>
      * 
      * @param request UpdateCustomResponseCodeRuleRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -19097,7 +19601,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modify the response code configurations for a website.</p>
+     * <p>Modify the response code configuration for a site.</p>
      * 
      * @param request UpdateCustomResponseCodeRuleRequest
      * @return UpdateCustomResponseCodeRuleResponse
@@ -19109,7 +19613,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the configurations of a custom scenario-specific policy.</p>
+     * <p>Updates a specified custom scene policy.</p>
      * 
      * @param request UpdateCustomScenePolicyRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -19165,7 +19669,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the configurations of a custom scenario-specific policy.</p>
+     * <p>Updates a specified custom scene policy.</p>
      * 
      * @param request UpdateCustomScenePolicyRequest
      * @return UpdateCustomScenePolicyResponse
@@ -19343,7 +19847,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates the HTTP incoming request header modification rule.</p>
+     * <p>Configure inbound HTTP request headers.</p>
      * 
      * @param tmpReq UpdateHttpIncomingRequestHeaderModificationRuleRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -19405,7 +19909,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates the HTTP incoming request header modification rule.</p>
+     * <p>Configure inbound HTTP request headers.</p>
      * 
      * @param request UpdateHttpIncomingRequestHeaderModificationRuleRequest
      * @return UpdateHttpIncomingRequestHeaderModificationRuleResponse
@@ -19417,7 +19921,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates the configuration of modifying HTTP response headers for a website.</p>
+     * <p>Update a Site\&quot;s HTTP Inbound Response Header configuration.</p>
      * 
      * @param tmpReq UpdateHttpIncomingResponseHeaderModificationRuleRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -19479,7 +19983,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates the configuration of modifying HTTP response headers for a website.</p>
+     * <p>Update a Site\&quot;s HTTP Inbound Response Header configuration.</p>
      * 
      * @param request UpdateHttpIncomingResponseHeaderModificationRuleRequest
      * @return UpdateHttpIncomingResponseHeaderModificationRuleResponse
@@ -19491,7 +19995,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modify HTTP Request Header Rules</p>
+     * <p>Modify the HTTP request header rule.</p>
      * 
      * @param tmpReq UpdateHttpRequestHeaderModificationRuleRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -19553,7 +20057,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modify HTTP Request Header Rules</p>
+     * <p>Modify the HTTP request header rule.</p>
      * 
      * @param request UpdateHttpRequestHeaderModificationRuleRequest
      * @return UpdateHttpRequestHeaderModificationRuleResponse
@@ -19565,7 +20069,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modify HTTP response header rules</p>
+     * <p>Updates a site\&quot;s HTTP response header configuration.</p>
      * 
      * @param tmpReq UpdateHttpResponseHeaderModificationRuleRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -19627,7 +20131,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modify HTTP response header rules</p>
+     * <p>Updates a site\&quot;s HTTP response header configuration.</p>
      * 
      * @param request UpdateHttpResponseHeaderModificationRuleRequest
      * @return UpdateHttpResponseHeaderModificationRuleResponse
@@ -19639,7 +20143,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modify HTTPS Application Configuration</p>
+     * <p>Update the HTTPS Application Configuration.</p>
      * 
      * @param request UpdateHttpsApplicationConfigurationRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -19743,7 +20247,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modify HTTPS Application Configuration</p>
+     * <p>Update the HTTPS Application Configuration.</p>
      * 
      * @param request UpdateHttpsApplicationConfigurationRequest
      * @return UpdateHttpsApplicationConfigurationResponse
@@ -19755,7 +20259,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modify HTTPS Basic Configuration</p>
+     * <p>Modify Basic HTTPS Configuration.</p>
      * 
      * @param request UpdateHttpsBasicConfigurationRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -19847,7 +20351,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modify HTTPS Basic Configuration</p>
+     * <p>Modify Basic HTTPS Configuration.</p>
      * 
      * @param request UpdateHttpsBasicConfigurationRequest
      * @return UpdateHttpsBasicConfigurationResponse
@@ -19859,7 +20363,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the IPv6 configuration of a website.</p>
+     * <p>Modify the site\&quot;s IPv6 configuration.</p>
      * 
      * @param request UpdateIPv6Request
      * @param runtime runtime options for this request RuntimeOptions
@@ -19899,7 +20403,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the IPv6 configuration of a website.</p>
+     * <p>Modify the site\&quot;s IPv6 configuration.</p>
      * 
      * @param request UpdateIPv6Request
      * @return UpdateIPv6Response
@@ -19911,7 +20415,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modify Site Image Transformation Configuration</p>
+     * <p>Modify the site\&quot;s image conversion configuration.</p>
      * 
      * @param request UpdateImageTransformRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -19975,7 +20479,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modify Site Image Transformation Configuration</p>
+     * <p>Modify the site\&quot;s image conversion configuration.</p>
      * 
      * @param request UpdateImageTransformRequest
      * @return UpdateImageTransformResponse
@@ -20049,10 +20553,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Through this interface, you can modify multiple configurations of the load balancer, including but not limited to the name of the load balancer, whether to enable acceleration, session persistence strategy, and various advanced settings related to traffic routing.&gt;Notice: Changes to certain parameters may affect the stability of existing services, please operate with caution.</p>
+     * <p>This operation modifies multiple configurations for a load balancer, including its name, acceleration status, session persistence policy, and advanced traffic routing settings.&gt;Notice: Changes to certain parameters might affect the stability of existing services. Proceed with caution.</p>
      * 
      * <b>summary</b> : 
-     * <p>Modify Load Balancer</p>
+     * <p>To modify an existing load balancer, you must specify its load balancer ID.</p>
      * 
      * @param tmpReq UpdateLoadBalancerRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -20162,10 +20666,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Through this interface, you can modify multiple configurations of the load balancer, including but not limited to the name of the load balancer, whether to enable acceleration, session persistence strategy, and various advanced settings related to traffic routing.&gt;Notice: Changes to certain parameters may affect the stability of existing services, please operate with caution.</p>
+     * <p>This operation modifies multiple configurations for a load balancer, including its name, acceleration status, session persistence policy, and advanced traffic routing settings.&gt;Notice: Changes to certain parameters might affect the stability of existing services. Proceed with caution.</p>
      * 
      * <b>summary</b> : 
-     * <p>Modify Load Balancer</p>
+     * <p>To modify an existing load balancer, you must specify its load balancer ID.</p>
      * 
      * @param request UpdateLoadBalancerRequest
      * @return UpdateLoadBalancerResponse
@@ -20177,7 +20681,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the configuration of managed transforms for your website.</p>
+     * <p>Modify the site hosting transformation configuration.</p>
      * 
      * @param request UpdateManagedTransformRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -20225,7 +20729,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the configuration of managed transforms for your website.</p>
+     * <p>Modify the site hosting transformation configuration.</p>
      * 
      * @param request UpdateManagedTransformRequest
      * @return UpdateManagedTransformResponse
@@ -20237,7 +20741,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modify network optimization configuration</p>
+     * <p>Updates a network optimization configuration.</p>
      * 
      * @param request UpdateNetworkOptimizationRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -20309,7 +20813,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modify network optimization configuration</p>
+     * <p>Updates a network optimization configuration.</p>
      * 
      * @param request UpdateNetworkOptimizationRequest
      * @return UpdateNetworkOptimizationResponse
@@ -20321,7 +20825,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modify the Monitor</p>
+     * <p>Modifies a source address pool, identified by its source address pool ID.</p>
      * 
      * @param tmpReq UpdateOriginPoolRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -20371,7 +20875,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modify the Monitor</p>
+     * <p>Modifies a source address pool, identified by its source address pool ID.</p>
      * 
      * @param request UpdateOriginPoolRequest
      * @return UpdateOriginPoolResponse
@@ -20383,7 +20887,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Enables or disables IP convergence.</p>
+     * <p>Modify the origin protection feature to enable or disable origin fetch convergence.</p>
      * 
      * @param request UpdateOriginProtectionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -20423,7 +20927,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Enables or disables IP convergence.</p>
+     * <p>Modify the origin protection feature to enable or disable origin fetch convergence.</p>
      * 
      * @param request UpdateOriginProtectionRequest
      * @return UpdateOriginProtectionResponse
@@ -20435,7 +20939,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates the IP whitelist for origin protection used by a website to the latest version.</p>
+     * <p>Confirm that you want to update the site’s origin IP whitelist to the latest version.</p>
      * 
      * @param request UpdateOriginProtectionIpWhiteListRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -20467,7 +20971,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates the IP whitelist for origin protection used by a website to the latest version.</p>
+     * <p>Confirm that you want to update the site’s origin IP whitelist to the latest version.</p>
      * 
      * @param request UpdateOriginProtectionIpWhiteListRequest
      * @return UpdateOriginProtectionIpWhiteListResponse
@@ -20479,7 +20983,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modify Origin Rule Configuration for Site</p>
+     * <p>Updates a site\&quot;s origin fetch rules.</p>
      * 
      * @param request UpdateOriginRuleRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -20595,7 +21099,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modify Origin Rule Configuration for Site</p>
+     * <p>Updates a site\&quot;s origin fetch rules.</p>
      * 
      * @param request UpdateOriginRuleRequest
      * @return UpdateOriginRuleResponse
@@ -20607,7 +21111,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the configurations of a custom error page, such as the name, description, content type, and content of the page.</p>
+     * <p>Updates a user-created custom response page. Use this API to modify the page name, description, content type, and content.</p>
      * 
      * @param tmpReq UpdatePageRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -20665,7 +21169,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the configurations of a custom error page, such as the name, description, content type, and content of the page.</p>
+     * <p>Updates a user-created custom response page. Use this API to modify the page name, description, content type, and content.</p>
      * 
      * @param request UpdatePageRequest
      * @return UpdatePageResponse
@@ -20677,7 +21181,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改网页数据质量采集配置</p>
+     * <p>Updates the Performance Data Collection configuration for a Site.</p>
      * 
      * @param request UpdatePerformanceDataCollectionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -20713,7 +21217,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改网页数据质量采集配置</p>
+     * <p>Updates the Performance Data Collection configuration for a Site.</p>
      * 
      * @param request UpdatePerformanceDataCollectionRequest
      * @return UpdatePerformanceDataCollectionResponse
@@ -20725,7 +21229,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Plan Adjustment</p>
+     * <p>Modifies the specifications of a plan by calling UpdateRatePlanSpec.</p>
      * 
      * @param request UpdateRatePlanSpecRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -20777,7 +21281,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Plan Adjustment</p>
+     * <p>Modifies the specifications of a plan by calling UpdateRatePlanSpec.</p>
      * 
      * @param request UpdateRatePlanSpecRequest
      * @return UpdateRatePlanSpecResponse
@@ -20789,18 +21293,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation allows you to update multiple types of DNS records, including but not limited to A/AAAA, CNAME, NS, MX, TXT, CAA, SRV, and URI. You can modify the record content by providing the necessary fields such as Value, Priority, and Flag. For origins added in CNAME records such as OSS and S3, the API enables you to configure authentication details to ensure secure access.</p>
-     * <h3><a href="#"></a>Usage notes</h3>
+     * <p>This API lets you update various DNS records, including A/AAAA, CNAME, NS, MX, TXT, CAA, SRV, and URI. To modify a record, provide its corresponding fields, such as value, priority, and flag. For CNAME origins requiring authentication, such as OSS or S3, the API also lets you configure origin authentication information to secure access.</p>
+     * <h3>Notes</h3>
      * <ul>
-     * <li>The record value (Value) must match the record type. For example, the CNAME record should correspond to the target domain name.</li>
-     * <li>You must specify a priority (Priority) for some record types, such as MX and SRV.</li>
-     * <li>You must specify specific fields such as Flag and Tag for CAA records.</li>
-     * <li>When you update security records such as CERT and SSHFP, you must accurately set fields such as Type and Algorithm.</li>
-     * <li>If your origin type is OSS or S3, configure the authentication details in AuthConf based on the permissions.</li>
+     * <li>The value must match the record type. For example, a CNAME record must point to a target domain.</li>
+     * <li>Some record types, such as MX and SRV, require a priority.</li>
+     * <li>CAA records require specific fields, such as Flag and Tag.</li>
+     * <li>When updating security records such as CERT and SSHFP, correctly set the Type and Algorithm fields.</li>
+     * <li>When using OSS or S3 as an origin, configure the authentication details in AuthConf according to your permission settings.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Updates multiple types of DNS records and origin authentication configurations.</p>
+     * <p>Updates DNS records, supporting multiple record types and origin server authentication.</p>
      * 
      * @param tmpReq UpdateRecordRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -20837,6 +21341,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.hostPolicy)) {
             query.put("HostPolicy", request.hostPolicy);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.httpPorts)) {
+            query.put("HttpPorts", request.httpPorts);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.httpsPorts)) {
+            query.put("HttpsPorts", request.httpsPorts);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.proxied)) {
@@ -20878,18 +21390,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation allows you to update multiple types of DNS records, including but not limited to A/AAAA, CNAME, NS, MX, TXT, CAA, SRV, and URI. You can modify the record content by providing the necessary fields such as Value, Priority, and Flag. For origins added in CNAME records such as OSS and S3, the API enables you to configure authentication details to ensure secure access.</p>
-     * <h3><a href="#"></a>Usage notes</h3>
+     * <p>This API lets you update various DNS records, including A/AAAA, CNAME, NS, MX, TXT, CAA, SRV, and URI. To modify a record, provide its corresponding fields, such as value, priority, and flag. For CNAME origins requiring authentication, such as OSS or S3, the API also lets you configure origin authentication information to secure access.</p>
+     * <h3>Notes</h3>
      * <ul>
-     * <li>The record value (Value) must match the record type. For example, the CNAME record should correspond to the target domain name.</li>
-     * <li>You must specify a priority (Priority) for some record types, such as MX and SRV.</li>
-     * <li>You must specify specific fields such as Flag and Tag for CAA records.</li>
-     * <li>When you update security records such as CERT and SSHFP, you must accurately set fields such as Type and Algorithm.</li>
-     * <li>If your origin type is OSS or S3, configure the authentication details in AuthConf based on the permissions.</li>
+     * <li>The value must match the record type. For example, a CNAME record must point to a target domain.</li>
+     * <li>Some record types, such as MX and SRV, require a priority.</li>
+     * <li>CAA records require specific fields, such as Flag and Tag.</li>
+     * <li>When updating security records such as CERT and SSHFP, correctly set the Type and Algorithm fields.</li>
+     * <li>When using OSS or S3 as an origin, configure the authentication details in AuthConf according to your permission settings.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Updates multiple types of DNS records and origin authentication configurations.</p>
+     * <p>Updates DNS records, supporting multiple record types and origin server authentication.</p>
      * 
      * @param request UpdateRecordRequest
      * @return UpdateRecordResponse
@@ -20901,7 +21413,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Update Redirect Rule</p>
+     * <p>Updates the redirection configuration of a site.</p>
      * 
      * @param request UpdateRedirectRuleRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -20969,7 +21481,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Update Redirect Rule</p>
+     * <p>Updates the redirection configuration of a site.</p>
      * 
      * @param request UpdateRedirectRuleRequest
      * @return UpdateRedirectRuleResponse
@@ -20981,7 +21493,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modify Rewrite URL Rule</p>
+     * <p>Update a Site\&quot;s URL Rewrite Configuration</p>
      * 
      * @param request UpdateRewriteUrlRuleRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -21049,7 +21561,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modify Rewrite URL Rule</p>
+     * <p>Update a Site\&quot;s URL Rewrite Configuration</p>
      * 
      * @param request UpdateRewriteUrlRuleRequest
      * @return UpdateRewriteUrlRuleResponse
@@ -21109,7 +21621,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the route configuration of an edge function.</p>
+     * <p>Modify the routing configuration for the edge function.</p>
      * 
      * @param request UpdateRoutineRouteRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -21177,7 +21689,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the route configuration of an edge function.</p>
+     * <p>Modify the routing configuration for the edge function.</p>
      * 
      * @param request UpdateRoutineRouteRequest
      * @return UpdateRoutineRouteResponse
@@ -21189,7 +21701,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates a scheduled prefetch plan based on the plan ID.</p>
+     * <p>Updates a scheduled preload task based on the preload plan ID.</p>
      * 
      * @param request UpdateScheduledPreloadExecutionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -21239,7 +21751,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates a scheduled prefetch plan based on the plan ID.</p>
+     * <p>Updates a scheduled preload task based on the preload plan ID.</p>
      * 
      * @param request UpdateScheduledPreloadExecutionRequest
      * @return UpdateScheduledPreloadExecutionResponse
@@ -21361,7 +21873,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the service location for a single website. This updates the acceleration configuration of the website to adapt to changes in traffic distribution, and improve user experience in specific regions.</p>
+     * <p>Modify a site\&quot;s acceleration area. Update its acceleration configuration to adapt to traffic changes or improve user access in specific regions.</p>
      * 
      * @param request UpdateSiteCoverageRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -21397,7 +21909,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the service location for a single website. This updates the acceleration configuration of the website to adapt to changes in traffic distribution, and improve user experience in specific regions.</p>
+     * <p>Modify a site\&quot;s acceleration area. Update its acceleration configuration to adapt to traffic changes or improve user access in specific regions.</p>
      * 
      * @param request UpdateSiteCoverageRequest
      * @return UpdateSiteCoverageResponse
@@ -21479,7 +21991,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies a real-time log delivery task.</p>
+     * <p>Updates a site delivery task.</p>
      * 
      * @param request UpdateSiteDeliveryTaskRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -21531,7 +22043,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies a real-time log delivery task.</p>
+     * <p>Updates a site delivery task.</p>
      * 
      * @param request UpdateSiteDeliveryTaskRequest
      * @return UpdateSiteDeliveryTaskResponse
@@ -21630,8 +22142,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This API can only be called for sites configured in NS mode.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Modifies the ESA proxy configuration of a website.</p>
+     * <p>Change the site\&quot;s pause settings.</p>
      * 
      * @param request UpdateSitePauseRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -21666,8 +22181,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This API can only be called for sites configured in NS mode.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Modifies the ESA proxy configuration of a website.</p>
+     * <p>Change the site\&quot;s pause settings.</p>
      * 
      * @param request UpdateSitePauseRequest
      * @return UpdateSitePauseResponse
@@ -21727,7 +22245,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the tiered cache configuration of your website.</p>
+     * <p>Updates the tiered cache configuration for a site.</p>
      * 
      * @param request UpdateTieredCacheRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -21763,7 +22281,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the tiered cache configuration of your website.</p>
+     * <p>Updates the tiered cache configuration for a site.</p>
      * 
      * @param request UpdateTieredCacheRequest
      * @return UpdateTieredCacheResponse
@@ -21775,7 +22293,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modify Transport Layer Application</p>
+     * <p>Modify Layer 4 application configurations, such as forwarding rules, for the specified site.</p>
      * 
      * @param tmpReq UpdateTransportLayerApplicationRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -21841,7 +22359,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modify Transport Layer Application</p>
+     * <p>Modify Layer 4 application configurations, such as forwarding rules, for the specified site.</p>
      * 
      * @param request UpdateTransportLayerApplicationRequest
      * @return UpdateTransportLayerApplicationResponse
@@ -21905,7 +22423,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the configurations of a delivery task, including the task name, log field, log category, and discard rate.</p>
+     * <p>Updates a delivery task configuration. You can modify the task name, selected fields, real-time log type, and discard rate.</p>
      * 
      * @param request UpdateUserDeliveryTaskRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -21957,7 +22475,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the configurations of a delivery task, including the task name, log field, log category, and discard rate.</p>
+     * <p>Updates a delivery task configuration. You can modify the task name, selected fields, real-time log type, and discard rate.</p>
      * 
      * @param request UpdateUserDeliveryTaskRequest
      * @return UpdateUserDeliveryTaskResponse
@@ -21970,7 +22488,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <h2><a href="#"></a></h2>
-     * <p>You can call this operation to enable or disable a delivery task by using TaskName and Method. The response includes the most recent status and operation result details of the task.</p>
+     * <p>Use this operation to enable or disable a delivery task by using TaskName and Method. The response includes the most recent status and operation result details of the task.</p>
      * 
      * <b>summary</b> : 
      * <p>Changes the status of a delivery task in your Alibaba Cloud account.</p>
@@ -22002,7 +22520,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <h2><a href="#"></a></h2>
-     * <p>You can call this operation to enable or disable a delivery task by using TaskName and Method. The response includes the most recent status and operation result details of the task.</p>
+     * <p>Use this operation to enable or disable a delivery task by using TaskName and Method. The response includes the most recent status and operation result details of the task.</p>
      * 
      * <b>summary</b> : 
      * <p>Changes the status of a delivery task in your Alibaba Cloud account.</p>
@@ -22017,20 +22535,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>请求说明</h2>
+     * <h2>Request description</h2>
      * <ul>
-     * <li>本API允许用户为指定实例创建新的WAF（Web Application Firewall）规则集。</li>
-     * <li><code>InstanceId</code> 是必需参数，指定了要为其创建规则集的具体实例。</li>
-     * <li><code>Phase</code> 参数定义了规则集的应用阶段，例如自定义规则、频次控制等。</li>
-     * <li><code>Name</code> 和 <code>Expression</code> 是必填项，分别代表规则集的名字和具体的匹配表达式。</li>
-     * <li>可选参数 <code>Description</code> 提供了对规则集功能或用途的文字描述。</li>
-     * <li><code>Status</code> 控制着规则集是否立即生效 (<code>on</code>) 或者处于关闭状态 (<code>off</code>)。</li>
-     * <li>通过 <code>Rules</code> 参数可以进一步配置更详细的规则列表，每个规则都包含名称、位置、表达式及动作等属性。</li>
-     * <li>成功响应将返回新创建规则集的唯一标识符 <code>Id</code> 以及所有关联规则的ID列表 <code>RuleIds</code>。</li>
+     * <li>This operation updates an existing WAF ruleset. You can modify the position, name, description, status, and expression of the ruleset.</li>
+     * <li>Include only the parameters that you want to modify. Omit parameters that you do not want to change.</li>
+     * <li>Note: Before you call this operation, ensure that the <code>InstanceId</code> and <code>Id</code> values are correct. Otherwise, the request may fail.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>用于更新实例级别的Web应用防火墙规则集，支持多种类型的防护规则。</p>
+     * <p>Modifies the WAF ruleset configuration for a specified instance, including its position, name, and other properties.</p>
      * 
      * @param tmpReq UpdateUserWafRulesetRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -22106,20 +22619,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>请求说明</h2>
+     * <h2>Request description</h2>
      * <ul>
-     * <li>本API允许用户为指定实例创建新的WAF（Web Application Firewall）规则集。</li>
-     * <li><code>InstanceId</code> 是必需参数，指定了要为其创建规则集的具体实例。</li>
-     * <li><code>Phase</code> 参数定义了规则集的应用阶段，例如自定义规则、频次控制等。</li>
-     * <li><code>Name</code> 和 <code>Expression</code> 是必填项，分别代表规则集的名字和具体的匹配表达式。</li>
-     * <li>可选参数 <code>Description</code> 提供了对规则集功能或用途的文字描述。</li>
-     * <li><code>Status</code> 控制着规则集是否立即生效 (<code>on</code>) 或者处于关闭状态 (<code>off</code>)。</li>
-     * <li>通过 <code>Rules</code> 参数可以进一步配置更详细的规则列表，每个规则都包含名称、位置、表达式及动作等属性。</li>
-     * <li>成功响应将返回新创建规则集的唯一标识符 <code>Id</code> 以及所有关联规则的ID列表 <code>RuleIds</code>。</li>
+     * <li>This operation updates an existing WAF ruleset. You can modify the position, name, description, status, and expression of the ruleset.</li>
+     * <li>Include only the parameters that you want to modify. Omit parameters that you do not want to change.</li>
+     * <li>Note: Before you call this operation, ensure that the <code>InstanceId</code> and <code>Id</code> values are correct. Otherwise, the request may fail.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>用于更新实例级别的Web应用防火墙规则集，支持多种类型的防护规则。</p>
+     * <p>Modifies the WAF ruleset configuration for a specified instance, including its position, name, and other properties.</p>
      * 
      * @param request UpdateUserWafRulesetRequest
      * @return UpdateUserWafRulesetResponse
@@ -22219,7 +22727,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Update WAF Rule Page</p>
+     * <p>Updates a web application firewall (WAF) rule. Use this operation to modify the rule\&quot;s configuration and status.</p>
      * 
      * @param tmpReq UpdateWafRuleRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -22279,7 +22787,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Update WAF Rule Page</p>
+     * <p>Updates a web application firewall (WAF) rule. Use this operation to modify the rule\&quot;s configuration and status.</p>
      * 
      * @param request UpdateWafRuleRequest
      * @return UpdateWafRuleResponse
@@ -22291,7 +22799,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Update WAF Ruleset</p>
+     * <p>Updates a WAF ruleset based on its ID.</p>
      * 
      * @param request UpdateWafRulesetRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -22337,7 +22845,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Update WAF Ruleset</p>
+     * <p>Updates a WAF ruleset based on its ID.</p>
      * 
      * @param request UpdateWafRulesetRequest
      * @return UpdateWafRulesetResponse
@@ -22349,7 +22857,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the configurations of a waiting room.</p>
+     * <p>Updates a waiting room.</p>
      * 
      * @param tmpReq UpdateWaitingRoomRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -22455,7 +22963,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the configurations of a waiting room.</p>
+     * <p>Updates a waiting room.</p>
      * 
      * @param request UpdateWaitingRoomRequest
      * @return UpdateWaitingRoomResponse
@@ -22467,7 +22975,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the configurations of a waiting room event.</p>
+     * <p>Updates a waiting room event.</p>
      * 
      * @param request UpdateWaitingRoomEventRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -22575,7 +23083,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the configurations of a waiting room event.</p>
+     * <p>Updates a waiting room event.</p>
      * 
      * @param request UpdateWaitingRoomEventRequest
      * @return UpdateWaitingRoomEventResponse
@@ -22864,8 +23372,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You can add multiple origins to a site. Edge Security Acceleration (ESA) supports various origin types, including domain names, IP addresses, OSS, and S3. Origin authentication is supported for OSS or S3 origins.</p>
+     * 
      * <b>summary</b> : 
-     * <p>上传源服务器CA证书</p>
+     * <p>Uploads an origin server CA certificate.</p>
      * 
      * @param request UploadOriginCaCertificateRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -22904,8 +23415,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You can add multiple origins to a site. Edge Security Acceleration (ESA) supports various origin types, including domain names, IP addresses, OSS, and S3. Origin authentication is supported for OSS or S3 origins.</p>
+     * 
      * <b>summary</b> : 
-     * <p>上传源服务器CA证书</p>
+     * <p>Uploads an origin server CA certificate.</p>
      * 
      * @param request UploadOriginCaCertificateRequest
      * @return UploadOriginCaCertificateResponse
@@ -22917,7 +23431,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>上传域名回源客户端证书</p>
+     * <p>Uploads an origin client certificate for a site.</p>
      * 
      * @param request UploadOriginClientCertificateRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -22963,7 +23477,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>上传域名回源客户端证书</p>
+     * <p>Uploads an origin client certificate for a site.</p>
      * 
      * @param request UploadOriginClientCertificateRequest
      * @return UploadOriginClientCertificateResponse
@@ -23033,7 +23547,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>验证自定义主机名</p>
+     * <p>Verifies the ownership of a Software as a Service (SaaS) domain name. After a domain name is verified, the site is automatically activated.</p>
      * 
      * @param request VerifyCustomHostnameRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -23065,7 +23579,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>验证自定义主机名</p>
+     * <p>Verifies the ownership of a Software as a Service (SaaS) domain name. After a domain name is verified, the site is automatically activated.</p>
      * 
      * @param request VerifyCustomHostnameRequest
      * @return VerifyCustomHostnameResponse

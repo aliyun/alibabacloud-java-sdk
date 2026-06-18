@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetCertificateResponseBody extends TeaModel {
     /**
-     * <p>Certificate content.</p>
+     * <p>The certificate content in PEM format.</p>
      * 
      * <strong>example:</strong>
      * <p>-----BEGIN CERTIFICATE-----</p>
@@ -14,7 +14,7 @@ public class GetCertificateResponseBody extends TeaModel {
     public String certificate;
 
     /**
-     * <p>Request ID.</p>
+     * <p>The unique ID for the request.</p>
      * 
      * <strong>example:</strong>
      * <p>04F0F334-1335-436C-A1D7-6C044FE73368</p>
@@ -23,13 +23,13 @@ public class GetCertificateResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The certificate information.</p>
+     * <p>Detailed certificate information.</p>
      */
     @NameInMap("Result")
     public GetCertificateResponseBodyResult result;
 
     /**
-     * <p>Site ID.</p>
+     * <p>The site ID.</p>
      * 
      * <strong>example:</strong>
      * <p>1234567890123</p>
@@ -38,7 +38,7 @@ public class GetCertificateResponseBody extends TeaModel {
     public Long siteId;
 
     /**
-     * <p>Site name.</p>
+     * <p>The site name.</p>
      * 
      * <strong>example:</strong>
      * <p>example.com</p>
@@ -47,7 +47,7 @@ public class GetCertificateResponseBody extends TeaModel {
     public String siteName;
 
     /**
-     * <p>Certificate status.</p>
+     * <p>The certificate status.</p>
      * 
      * <strong>example:</strong>
      * <p>OK</p>
@@ -119,7 +119,7 @@ public class GetCertificateResponseBody extends TeaModel {
         public String id;
 
         /**
-         * <p>The DCV name. It is a TXT record name if Type is DNS or URL if Type is HTTP.</p>
+         * <p>The DCV name. For DNS, this is the TXT record name. For HTTP, this is the URL.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="http://www.example.com/.well-known/acme-challenge/pH20CqwS5L3ZnvkhI436DCzadKFuG7QcUcvB_4KsAow">http://www.example.com/.well-known/acme-challenge/pH20CqwS5L3ZnvkhI436DCzadKFuG7QcUcvB_4KsAow</a></p>
@@ -128,7 +128,7 @@ public class GetCertificateResponseBody extends TeaModel {
         public String key;
 
         /**
-         * <p>The verification status.</p>
+         * <p>The status of the DCV check.</p>
          * 
          * <strong>example:</strong>
          * <p>pending</p>
@@ -137,7 +137,7 @@ public class GetCertificateResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The DCV type. Valid values: DNS and HTTP.</p>
+         * <p>The DCV type. Valid values: <code>DNS</code> and <code>HTTP</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>HTTP</p>
@@ -146,7 +146,7 @@ public class GetCertificateResponseBody extends TeaModel {
         public String type;
 
         /**
-         * <p>The DCV content.</p>
+         * <p>The value required for the DCV check. For a DNS check, this is the TXT record value. For an HTTP check, this is the content of the validation file.</p>
          * 
          * <strong>example:</strong>
          * <p>pH20CqwS5L3ZnvkhI436DCzadKFuG7QcUcvB_4KsAow.KfzYo4LH3EgOt7a73G-RqZkbR0eYtLfEUmtmqGmr4FQ</p>
@@ -203,7 +203,7 @@ public class GetCertificateResponseBody extends TeaModel {
 
     public static class GetCertificateResponseBodyResult extends TeaModel {
         /**
-         * <p>The error code returned for certificate application.</p>
+         * <p>The error code for the certificate application process.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -212,7 +212,7 @@ public class GetCertificateResponseBody extends TeaModel {
         public Long applyCode;
 
         /**
-         * <p>The error message returned for certificate application.</p>
+         * <p>The error message for the certificate application process.</p>
          * 
          * <strong>example:</strong>
          * <p>canceled</p>
@@ -221,7 +221,7 @@ public class GetCertificateResponseBody extends TeaModel {
         public String applyMessage;
 
         /**
-         * <p>Cloud certificate ID.</p>
+         * <p>The ID of the CAS certificate.</p>
          * 
          * <strong>example:</strong>
          * <p>30000478</p>
@@ -230,7 +230,7 @@ public class GetCertificateResponseBody extends TeaModel {
         public String casId;
 
         /**
-         * <p>Common Name (CN) field of the certificate.</p>
+         * <p>The Common Name (CN) field of the certificate.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="http://www.example.com">www.example.com</a></p>
@@ -239,7 +239,7 @@ public class GetCertificateResponseBody extends TeaModel {
         public String commonName;
 
         /**
-         * <p>Creation time.</p>
+         * <p>The time when the certificate record was created.</p>
          * 
          * <strong>example:</strong>
          * <p>2020-05-12 02:00:53</p>
@@ -254,7 +254,7 @@ public class GetCertificateResponseBody extends TeaModel {
         public java.util.List<GetCertificateResponseBodyResultDCV> DCV;
 
         /**
-         * <p>SHA256 fingerprint of the certificate.</p>
+         * <p>The SHA-256 fingerprint of the certificate.</p>
          * 
          * <strong>example:</strong>
          * <p>1dc5fc9af4eead2570c70d94b416130baeb6d4429b51fd3557379588456aca66</p>
@@ -263,7 +263,7 @@ public class GetCertificateResponseBody extends TeaModel {
         public String fingerprintSha256;
 
         /**
-         * <p>Certificate ID.</p>
+         * <p>The certificate ID.</p>
          * 
          * <strong>example:</strong>
          * <p>babaded901474b9693acf530e0fb1d95</p>
@@ -272,7 +272,7 @@ public class GetCertificateResponseBody extends TeaModel {
         public String id;
 
         /**
-         * <p>Certificate issuer.</p>
+         * <p>The certificate issuer.</p>
          * 
          * <strong>example:</strong>
          * <p>DigiCert</p>
@@ -281,7 +281,7 @@ public class GetCertificateResponseBody extends TeaModel {
         public String issuer;
 
         /**
-         * <p>Certificate issuing authority.</p>
+         * <p>The issuer\&quot;s Common Name (CN).</p>
          * 
          * <strong>example:</strong>
          * <p>DigiCert Global Root CA</p>
@@ -289,11 +289,17 @@ public class GetCertificateResponseBody extends TeaModel {
         @NameInMap("IssuerCN")
         public String issuerCN;
 
+        /**
+         * <p>The Keyless server ID. This parameter is returned only when the value of <code>Type</code> is <code>keyless</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>baba39055622c008b90285a8838e****</p>
+         */
         @NameInMap("KeyServerId")
         public String keyServerId;
 
         /**
-         * <p>Certificate name.</p>
+         * <p>The certificate name.</p>
          * 
          * <strong>example:</strong>
          * <p>yourCertName</p>
@@ -302,7 +308,7 @@ public class GetCertificateResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>End time of the certificate validity period.</p>
+         * <p>The end of the certificate\&quot;s validity period.</p>
          * 
          * <strong>example:</strong>
          * <p>2023-11-26T16:00:00Z</p>
@@ -311,7 +317,7 @@ public class GetCertificateResponseBody extends TeaModel {
         public String notAfter;
 
         /**
-         * <p>Start time of the certificate validity period.</p>
+         * <p>The start of the certificate\&quot;s validity period.</p>
          * 
          * <strong>example:</strong>
          * <p>2023-11-26T16:00:00Z</p>
@@ -320,7 +326,7 @@ public class GetCertificateResponseBody extends TeaModel {
         public String notBefore;
 
         /**
-         * <p>Certificate public key algorithm.</p>
+         * <p>The algorithm of the certificate\&quot;s public key.</p>
          * 
          * <strong>example:</strong>
          * <p>ECDSA</p>
@@ -329,7 +335,7 @@ public class GetCertificateResponseBody extends TeaModel {
         public String pubAlg;
 
         /**
-         * <p>Region.</p>
+         * <p>The region where the certificate is stored.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -338,7 +344,7 @@ public class GetCertificateResponseBody extends TeaModel {
         public String region;
 
         /**
-         * <p>Subject Alternative Name (SAN) of the certificate.</p>
+         * <p>The Subject Alternative Name (SAN) field, which specifies the host names covered by the certificate.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="http://www.example.com,*.example.com">www.example.com,*.example.com</a></p>
@@ -347,7 +353,7 @@ public class GetCertificateResponseBody extends TeaModel {
         public String SAN;
 
         /**
-         * <p>Serial number of the certificate.</p>
+         * <p>The unique serial number assigned to the certificate by the issuer.</p>
          * 
          * <strong>example:</strong>
          * <p>babaded901474b9693acf530e0fb1daa</p>
@@ -356,7 +362,7 @@ public class GetCertificateResponseBody extends TeaModel {
         public String serialNumber;
 
         /**
-         * <p>Certificate signature algorithm.</p>
+         * <p>The algorithm used to sign the certificate.</p>
          * 
          * <strong>example:</strong>
          * <p>ECDSA-SHA1</p>
@@ -365,7 +371,7 @@ public class GetCertificateResponseBody extends TeaModel {
         public String sigAlg;
 
         /**
-         * <p>Certificate status.</p>
+         * <p>The certificate status.</p>
          * 
          * <strong>example:</strong>
          * <p>OK</p>
@@ -374,7 +380,7 @@ public class GetCertificateResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>Certificate type.</p>
+         * <p>The certificate type.</p>
          * 
          * <strong>example:</strong>
          * <p>free</p>
@@ -383,7 +389,7 @@ public class GetCertificateResponseBody extends TeaModel {
         public String type;
 
         /**
-         * <p>Update time.</p>
+         * <p>The time when the certificate record was last updated.</p>
          * 
          * <strong>example:</strong>
          * <p>2022-09-22 05:33:13</p>

@@ -5,12 +5,16 @@ import com.aliyun.tea.*;
 
 public class GetSiteDeliveryTaskResponseBody extends TeaModel {
     /**
-     * <p>The log category. Valid values:</p>
+     * <p>The type of real-time log for Dynamic Route for CDN (DCDN). Valid values:</p>
      * <ul>
-     * <li>dcdn_log_access_l1 (default): access logs.</li>
-     * <li>dcdn_log_er: Edge Routine logs.</li>
-     * <li>dcdn_log_waf: firewall logs.</li>
-     * <li>dcdn_log_ipa: TCP/UDP proxy logs.</li>
+     * <li><p><strong>dcdn_log_access_l1</strong> (default): access log.</p>
+     * </li>
+     * <li><p><strong>dcdn_log_er</strong>: edge function log.</p>
+     * </li>
+     * <li><p><strong>dcdn_log_waf</strong>: WAF log.</p>
+     * </li>
+     * <li><p><strong>dcdn_log_ipa</strong>: layer 4 acceleration log.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -21,10 +25,12 @@ public class GetSiteDeliveryTaskResponseBody extends TeaModel {
 
     /**
      * <p>The data center. Valid values:</p>
-     * <ol>
-     * <li>cn: the Chinese mainland.</li>
-     * <li>sg: outside the Chinese mainland.</li>
-     * </ol>
+     * <ul>
+     * <li><p><strong>cn</strong>: Chinese mainland.</p>
+     * </li>
+     * <li><p><strong>sg</strong>: Global (excluding Chinese mainland). Note that the value for this region is &quot;sg&quot;.</p>
+     * </li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>cn</p>
@@ -33,15 +39,21 @@ public class GetSiteDeliveryTaskResponseBody extends TeaModel {
     public String dataCenter;
 
     /**
-     * <p>The destination of the delivery. Valid values:</p>
-     * <ol>
-     * <li>sls: Alibaba Cloud Simple Log Service (SLS).</li>
-     * <li>http: HTTP server.</li>
-     * <li>aws3: Amazon Simple Storage Service (S3).</li>
-     * <li>oss: Alibaba Cloud Object Storage Service (OSS).</li>
-     * <li>kafka: Kafka.</li>
-     * <li>aws3cmpt: S3-compatible storage service.</li>
-     * </ol>
+     * <p>The delivery type. Valid values:</p>
+     * <ul>
+     * <li><p><strong>sls</strong>: Log Service.</p>
+     * </li>
+     * <li><p><strong>http</strong>: HTTP service.</p>
+     * </li>
+     * <li><p><strong>aws3</strong>: Amazon S3.</p>
+     * </li>
+     * <li><p><strong>oss</strong>: Object Storage Service.</p>
+     * </li>
+     * <li><p><strong>kafka</strong>: Kafka service.</p>
+     * </li>
+     * <li><p><strong>aws3cmpt</strong>: Amazon S3-compatible service.</p>
+     * </li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>sls</p>
@@ -59,7 +71,7 @@ public class GetSiteDeliveryTaskResponseBody extends TeaModel {
     public Float discardRate;
 
     /**
-     * <p>The log fields.</p>
+     * <p>A comma-separated list of log fields to deliver.</p>
      * 
      * <strong>example:</strong>
      * <p>Client,UserAgent</p>
@@ -68,7 +80,7 @@ public class GetSiteDeliveryTaskResponseBody extends TeaModel {
     public String fieldList;
 
     /**
-     * <p>The filtering rules.</p>
+     * <p>The filter rules.</p>
      * 
      * <strong>example:</strong>
      * <p>[]</p>
@@ -101,7 +113,7 @@ public class GetSiteDeliveryTaskResponseBody extends TeaModel {
     public Object sinkConfig;
 
     /**
-     * <p>The website ID.</p>
+     * <p>The site ID.</p>
      * 
      * <strong>example:</strong>
      * <p>123456****</p>
@@ -110,7 +122,7 @@ public class GetSiteDeliveryTaskResponseBody extends TeaModel {
     public Long siteId;
 
     /**
-     * <p>The website name.</p>
+     * <p>The site name.</p>
      * 
      * <strong>example:</strong>
      * <p>test.***.com</p>
@@ -119,10 +131,12 @@ public class GetSiteDeliveryTaskResponseBody extends TeaModel {
     public String siteName;
 
     /**
-     * <p>The status of the delivery task.</p>
+     * <p>The status of the task. Valid values:</p>
      * <ul>
-     * <li><strong>online</strong></li>
-     * <li><strong>offline</strong></li>
+     * <li><p><strong>online</strong>: The task is delivering logs.</p>
+     * </li>
+     * <li><p><strong>offline</strong>: The task is paused.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -132,7 +146,7 @@ public class GetSiteDeliveryTaskResponseBody extends TeaModel {
     public String status;
 
     /**
-     * <p>The name of the delivery task.</p>
+     * <p>The task name.</p>
      * 
      * <strong>example:</strong>
      * <p>cdn-test-task</p>

@@ -4,11 +4,14 @@ package com.aliyun.esa20240910.models;
 import com.aliyun.tea.*;
 
 public class DescribeRatePlanPriceResponseBody extends TeaModel {
+    /**
+     * <p>The pricing information.</p>
+     */
     @NameInMap("PriceModel")
     public DescribeRatePlanPriceResponseBodyPriceModel priceModel;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>50423A7F-A83D-1E24-B80E-86DD25790759</p>

@@ -13,6 +13,9 @@ public class CreateRoutineWithAssetsCodeVersionShrinkRequest extends TeaModel {
     @NameInMap("ConfOptions")
     public String confOptionsShrink;
 
+    @NameInMap("DeployEnv")
+    public String deployEnv;
+
     @NameInMap("ExtraInfo")
     public String extraInfo;
 
@@ -49,6 +52,14 @@ public class CreateRoutineWithAssetsCodeVersionShrinkRequest extends TeaModel {
     }
     public String getConfOptionsShrink() {
         return this.confOptionsShrink;
+    }
+
+    public CreateRoutineWithAssetsCodeVersionShrinkRequest setDeployEnv(String deployEnv) {
+        this.deployEnv = deployEnv;
+        return this;
+    }
+    public String getDeployEnv() {
+        return this.deployEnv;
     }
 
     public CreateRoutineWithAssetsCodeVersionShrinkRequest setExtraInfo(String extraInfo) {

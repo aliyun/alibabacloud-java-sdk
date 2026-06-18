@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeHttpDDoSAttackRulesResponseBody extends TeaModel {
     /**
+     * <p>The current page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -12,6 +14,8 @@ public class DescribeHttpDDoSAttackRulesResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -19,7 +23,7 @@ public class DescribeHttpDDoSAttackRulesResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>D4030CD2-0D9D-5E92-B358-421AE58307C6</p>
@@ -27,10 +31,15 @@ public class DescribeHttpDDoSAttackRulesResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>A list of rule details.</p>
+     */
     @NameInMap("RuleInfos")
     public java.util.List<DescribeHttpDDoSAttackRulesResponseBodyRuleInfos> ruleInfos;
 
     /**
+     * <p>The total number of entries.</p>
+     * 
      * <strong>example:</strong>
      * <p>100</p>
      */
@@ -84,6 +93,8 @@ public class DescribeHttpDDoSAttackRulesResponseBody extends TeaModel {
 
     public static class DescribeHttpDDoSAttackRulesResponseBodyRuleInfos extends TeaModel {
         /**
+         * <p>The action to perform.</p>
+         * 
          * <strong>example:</strong>
          * <p>deny</p>
          */
@@ -91,6 +102,8 @@ public class DescribeHttpDDoSAttackRulesResponseBody extends TeaModel {
         public String action;
 
         /**
+         * <p>The default action.</p>
+         * 
          * <strong>example:</strong>
          * <p>deny</p>
          */
@@ -98,6 +111,8 @@ public class DescribeHttpDDoSAttackRulesResponseBody extends TeaModel {
         public String defaultAction;
 
         /**
+         * <p>The ID of the protection rule used for log records.</p>
+         * 
          * <strong>example:</strong>
          * <p>100010</p>
          */
@@ -105,6 +120,8 @@ public class DescribeHttpDDoSAttackRulesResponseBody extends TeaModel {
         public Integer logRuleId;
 
         /**
+         * <p>The description of the rule.</p>
+         * 
          * <strong>example:</strong>
          * <p>The HTTP request\&quot;s Accept header contains invalid features#1</p>
          */
@@ -112,6 +129,8 @@ public class DescribeHttpDDoSAttackRulesResponseBody extends TeaModel {
         public String ruleDesc;
 
         /**
+         * <p>The ID of the HTTP DDoS protection rule.</p>
+         * 
          * <strong>example:</strong>
          * <p>20203578</p>
          */
@@ -119,6 +138,8 @@ public class DescribeHttpDDoSAttackRulesResponseBody extends TeaModel {
         public Integer ruleId;
 
         /**
+         * <p>The short name of the rule.</p>
+         * 
          * <strong>example:</strong>
          * <p>global_01_s</p>
          */
@@ -126,6 +147,8 @@ public class DescribeHttpDDoSAttackRulesResponseBody extends TeaModel {
         public String ruleIdInfo;
 
         /**
+         * <p>The name of the rule.</p>
+         * 
          * <strong>example:</strong>
          * <p>Illegal request。</p>
          */
@@ -133,6 +156,14 @@ public class DescribeHttpDDoSAttackRulesResponseBody extends TeaModel {
         public String ruleName;
 
         /**
+         * <p>The status of the rule. Valid values:</p>
+         * <ul>
+         * <li><p><strong>on</strong>: The rule is enabled.</p>
+         * </li>
+         * <li><p><strong>off</strong>: The rule is disabled.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>on</p>
          */

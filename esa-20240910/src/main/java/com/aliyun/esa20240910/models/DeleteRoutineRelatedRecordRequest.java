@@ -9,7 +9,7 @@ public class DeleteRoutineRelatedRecordRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>DeleteRoutineRelatedRecord</p>
+     * <p>test-xxx</p>
      */
     @NameInMap("Name")
     public String name;

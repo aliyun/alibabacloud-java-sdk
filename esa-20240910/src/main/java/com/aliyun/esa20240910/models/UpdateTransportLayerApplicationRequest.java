@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateTransportLayerApplicationRequest extends TeaModel {
     /**
-     * <p>Transport layer application ID, which can be obtained by calling the <a href="~~ListTransportLayerApplications~~">ListTransportLayerApplications</a> interface.</p>
+     * <p>The transport layer application ID. You can obtain this ID by calling the <a href="~~ListTransportLayerApplications~~">ListTransportLayerApplications</a> operation.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,10 +15,12 @@ public class UpdateTransportLayerApplicationRequest extends TeaModel {
     public Long applicationId;
 
     /**
-     * <p>Whether to enable China mainland network access optimization, default is disabled. Value range:</p>
+     * <p>Specifies whether to enable cross-border optimization for network access from the Chinese mainland. This feature is disabled by default. Valid values:</p>
      * <ul>
-     * <li>on: Enabled.</li>
-     * <li>off: Disabled.</li>
+     * <li><p>on: Enables the feature.</p>
+     * </li>
+     * <li><p>off: Disables the feature.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -28,10 +30,12 @@ public class UpdateTransportLayerApplicationRequest extends TeaModel {
     public String crossBorderOptimization;
 
     /**
-     * <p>IP access rule switch. When enabled, the IP access rules in WAF will take effect on the transport layer application.</p>
+     * <p>Specifies whether to enable IP access rules. If enabled, the IP access rules in WAF apply to the transport layer application. Valid values:</p>
      * <ul>
-     * <li>on: Enabled.</li>
-     * <li>off: Disabled.</li>
+     * <li><p>on: Enables the feature.</p>
+     * </li>
+     * <li><p>off: Disables the feature.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -41,7 +45,7 @@ public class UpdateTransportLayerApplicationRequest extends TeaModel {
     public String ipAccessRule;
 
     /**
-     * <p>IPv6 switch.</p>
+     * <p>Specifies whether to enable IPv6. Valid values: <code>on</code> and <code>off</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>on</p>
@@ -53,13 +57,13 @@ public class UpdateTransportLayerApplicationRequest extends TeaModel {
     public String keepAliveProtection;
 
     /**
-     * <p>Forwarding rule list. Details of each rule. Except for the comment, all other parameters are required.</p>
+     * <p>A list of forwarding rules. For each rule, all parameters are required except for <code>Comment</code>.</p>
      */
     @NameInMap("Rules")
     public java.util.List<UpdateTransportLayerApplicationRequestRules> rules;
 
     /**
-     * <p>Site ID, which can be obtained by calling the <a href="~~ListSites~~">ListSites</a> interface.</p>
+     * <p>The site ID. You can obtain this ID by calling the <a href="~~ListSites~~">ListSites</a> operation.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -142,12 +146,16 @@ public class UpdateTransportLayerApplicationRequest extends TeaModel {
 
     public static class UpdateTransportLayerApplicationRequestRules extends TeaModel {
         /**
-         * <p>Client IP pass-through protocol, supports:</p>
+         * <p>Specifies the protocol for client IP pass-through. Valid values:</p>
          * <ul>
-         * <li><strong>off</strong>: No pass-through.</li>
-         * <li><strong>PPv1</strong>: PROXY Protocol v1, supports client IP pass-through for TCP protocol.</li>
-         * <li><strong>PPv2</strong>: PROXY Protocol v2, supports client IP pass-through for TCP and UDP protocols.</li>
-         * <li><strong>SPP</strong>: Simple Proxy Protocol, supports client IP pass-through for UDP protocol.</li>
+         * <li><p><strong>off</strong>: Disables client IP pass-through.</p>
+         * </li>
+         * <li><p><strong>PPv1</strong>: PROXY Protocol v1. Supports client IP pass-through for the TCP protocol.</p>
+         * </li>
+         * <li><p><strong>PPv2</strong>: PROXY Protocol v2. Supports client IP pass-through for both TCP and UDP protocols.</p>
+         * </li>
+         * <li><p><strong>SPP</strong>: Simple Proxy Protocol. Supports client IP pass-through for the UDP protocol.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -157,7 +165,7 @@ public class UpdateTransportLayerApplicationRequest extends TeaModel {
         public String clientIPPassThroughMode;
 
         /**
-         * <p>Comment information for the rule.</p>
+         * <p>An optional comment for the forwarding rule.</p>
          * 
          * <strong>example:</strong>
          * <p>123</p>
@@ -166,12 +174,16 @@ public class UpdateTransportLayerApplicationRequest extends TeaModel {
         public String comment;
 
         /**
-         * <p>Edge port. Supports:</p>
+         * <p>The edge port. The following formats are supported:</p>
          * <ul>
-         * <li>A single port, e.g., 80.</li>
-         * <li>Port range, e.g., 81-85, representing ports 81, 82, 83, 84, 85.</li>
-         * <li>Combination of ports and port ranges, separated by commas, e.g., 80,81-85,90, representing ports 80, 81, 82, 83, 84, 85, 90.</li>
-         * <li>Edge ports within a single rule and between multiple rules must not overlap.</li>
+         * <li><p>A single port, for example, <code>80</code>.</p>
+         * </li>
+         * <li><p>A port range, for example, <code>81-85</code>. This range includes ports 81, 82, 83, 84, and 85.</p>
+         * </li>
+         * <li><p>A combination of ports and port ranges separated by commas, for example, <code>80,81-85,90</code>. This includes ports 80, 81, 82, 83, 84, 85, and 90.</p>
+         * </li>
+         * <li><p>Edge ports cannot overlap within a single rule or across multiple rules.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -181,10 +193,12 @@ public class UpdateTransportLayerApplicationRequest extends TeaModel {
         public String edgePort;
 
         /**
-         * <p>Forwarding rule protocol, supports:</p>
+         * <p>The forwarding protocol. Valid values:</p>
          * <ul>
-         * <li>TCP: TCP protocol.</li>
-         * <li>UDP: UDP protocol.</li>
+         * <li><p>TCP: Transmission Control Protocol.</p>
+         * </li>
+         * <li><p>UDP: User Datagram Protocol.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -194,7 +208,7 @@ public class UpdateTransportLayerApplicationRequest extends TeaModel {
         public String protocol;
 
         /**
-         * <p>Specific value of the source.</p>
+         * <p>The source, which must correspond to the specified <code>SourceType</code>. For example, if <code>SourceType</code> is <code>ip</code>, this parameter must be an IP address.</p>
          * 
          * <strong>example:</strong>
          * <p>1.1.1.1</p>
@@ -203,10 +217,12 @@ public class UpdateTransportLayerApplicationRequest extends TeaModel {
         public String source;
 
         /**
-         * <p>Source port. Supports:</p>
+         * <p>The source port. The following formats are supported:</p>
          * <ul>
-         * <li>A single port, when the source port is a single port, any valid edge port combination is supported.</li>
-         * <li>Port range, only when the edge port is a port range, the source port can be set as a port range, and the size of the range must match that of the edge port. For example, if the edge port is 90-93, the source port cannot be set to 81-85 because the source port range is 5 and the edge port range is 3, which do not match.</li>
+         * <li><p>A single port. When a single source port is used, any valid format can be used for the edge port.</p>
+         * </li>
+         * <li><p>A port range. You can specify a port range for the source port only if the edge port is also a port range, and their sizes must match. For example, if <code>EdgePort</code> is <code>90-93</code>, you cannot set <code>SourcePort</code> to <code>81-85</code> because their sizes (4 and 5 ports, respectively) do not match.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -216,12 +232,16 @@ public class UpdateTransportLayerApplicationRequest extends TeaModel {
         public String sourcePort;
 
         /**
-         * <p>Source type, supports:</p>
+         * <p>The type of the source. Valid values:</p>
          * <ul>
-         * <li><strong>ip</strong>: IP address.</li>
-         * <li><strong>domain</strong>: Domain name.</li>
-         * <li><strong>OP</strong>: Origin pool.</li>
-         * <li><strong>LB</strong>: Load balancer.</li>
+         * <li><p><strong>ip</strong>: An IP address.</p>
+         * </li>
+         * <li><p><strong>domain</strong>: A domain name.</p>
+         * </li>
+         * <li><p><strong>OP</strong>: An origin pool.</p>
+         * </li>
+         * <li><p><strong>LB</strong>: A load balancer.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

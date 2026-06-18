@@ -45,8 +45,10 @@ public class ListESAIPInfoResponseBody extends TeaModel {
         /**
          * <p>Whether the IP address in the parameter belongs to ESA POPs.</p>
          * <ul>
-         * <li><strong>true</strong></li>
-         * <li><strong>false</strong></li>
+         * <li><p><strong>true</strong></p>
+         * </li>
+         * <li><p><strong>false</strong></p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

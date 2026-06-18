@@ -5,10 +5,12 @@ import com.aliyun.tea.*;
 
 public class CreateTransportLayerApplicationShrinkRequest extends TeaModel {
     /**
-     * <p>Whether to enable China mainland network access optimization, default is disabled. Value range:</p>
+     * <p>Enables or disables network optimization for access from the Chinese mainland. This feature is disabled by default. Valid values:</p>
      * <ul>
-     * <li>on: Enabled.</li>
-     * <li>off: Disabled.</li>
+     * <li><p><code>on</code>: Enables the optimization.</p>
+     * </li>
+     * <li><p><code>off</code>: Disables the optimization.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,10 +20,12 @@ public class CreateTransportLayerApplicationShrinkRequest extends TeaModel {
     public String crossBorderOptimization;
 
     /**
-     * <p>IP access rule switch. When enabled, the WAF\&quot;s IP access rules apply to the transport layer application.</p>
+     * <p>Applies IP access rules from Web Application Firewall (WAF) to this Transport Layer Application. Valid values:</p>
      * <ul>
-     * <li>on: Enabled.</li>
-     * <li>off: Disabled.</li>
+     * <li><p><code>on</code>: Enables the feature.</p>
+     * </li>
+     * <li><p><code>off</code>: Disables the feature.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -31,7 +35,7 @@ public class CreateTransportLayerApplicationShrinkRequest extends TeaModel {
     public String ipAccessRule;
 
     /**
-     * <p>IPv6 switch.</p>
+     * <p>Enables or disables IPv6 support.</p>
      * 
      * <strong>example:</strong>
      * <p>off</p>
@@ -39,11 +43,14 @@ public class CreateTransportLayerApplicationShrinkRequest extends TeaModel {
     @NameInMap("Ipv6")
     public String ipv6;
 
+    /**
+     * <p>Enables or disables keep-alive protection.</p>
+     */
     @NameInMap("KeepAliveProtection")
     public String keepAliveProtection;
 
     /**
-     * <p>Domain name of the transport layer application.</p>
+     * <p>The domain name of the Transport Layer Application.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -53,14 +60,14 @@ public class CreateTransportLayerApplicationShrinkRequest extends TeaModel {
     public String recordName;
 
     /**
-     * <p>List of forwarding rules.</p>
+     * <p>The list of forwarding rules.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Rules")
     public String rulesShrink;
 
     /**
-     * <p>Site ID, which can be obtained by calling the <a href="~~ListSites~~">ListSites</a> interface.</p>
+     * <p>The site ID. You can call the <a href="~~ListSites~~">ListSites</a> operation to obtain the site ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

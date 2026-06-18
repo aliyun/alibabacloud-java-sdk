@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListTraceTasksRequest extends TeaModel {
     /**
+     * <p>The client IP address.</p>
+     * 
      * <strong>example:</strong>
      * <p>60.xx.xxx.38</p>
      */
@@ -12,6 +14,8 @@ public class ListTraceTasksRequest extends TeaModel {
     public String clientIp;
 
     /**
+     * <p>The diagnose ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>f2xxx5</p>
      */
@@ -19,6 +23,8 @@ public class ListTraceTasksRequest extends TeaModel {
     public String diagnoseId;
 
     /**
+     * <p>The domain name to diagnose.</p>
+     * 
      * <strong>example:</strong>
      * <p><a href="http://www.example.com">http://www.example.com</a></p>
      */
@@ -26,13 +32,17 @@ public class ListTraceTasksRequest extends TeaModel {
     public String domainName;
 
     /**
+     * <p>The end time. Time zone: UTC/GMT.</p>
+     * 
      * <strong>example:</strong>
-     * <p>1644467126</p>
+     * <p>2006-01-02T15:04:05Z</p>
      */
     @NameInMap("EndTime")
     public String endTime;
 
     /**
+     * <p>The page number. Default value: 1.</p>
+     * 
      * <strong>example:</strong>
      * <p>2</p>
      */
@@ -40,6 +50,8 @@ public class ListTraceTasksRequest extends TeaModel {
     public Long pageNumber;
 
     /**
+     * <p>The page size. Valid values: any integer from 1 to 1000.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -47,13 +59,17 @@ public class ListTraceTasksRequest extends TeaModel {
     public Long pageSize;
 
     /**
+     * <p>The start time. Time zone: UTC/GMT.</p>
+     * 
      * <strong>example:</strong>
-     * <p>1644467126</p>
+     * <p>2006-01-02T15:04:05Z</p>
      */
     @NameInMap("StartTime")
     public String startTime;
 
     /**
+     * <p>The diagnostic task ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>xxxxxxxxxx-x-x-xxxxxxxxxxxxxxxxx</p>
      */
@@ -61,6 +77,8 @@ public class ListTraceTasksRequest extends TeaModel {
     public String taskId;
 
     /**
+     * <p>The diagnostic trace ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>000000xxxxxxxxxxxxxxxxxxxxxx33427e</p>
      */

@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListImageTransformsResponseBody extends TeaModel {
     /**
-     * <p>Configuration list.</p>
+     * <p>A list of configurations.</p>
      */
     @NameInMap("Configs")
     public java.util.List<ListImageTransformsResponseBodyConfigs> configs;
 
     /**
-     * <p>Current page number.</p>
+     * <p>The current page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -20,7 +20,7 @@ public class ListImageTransformsResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>Page size. Range: <strong>1~500</strong>, default is <strong>500</strong>.</p>
+     * <p>The number of entries per page, ranging from <strong>1 to 500</strong>. The default is <strong>500</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -29,7 +29,7 @@ public class ListImageTransformsResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>Request ID.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>CB1A380B-09F0-41BB-A198-72F8FD6DA2FE</p>
@@ -38,7 +38,7 @@ public class ListImageTransformsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Total number of records.</p>
+     * <p>The total number of entries.</p>
      * 
      * <strong>example:</strong>
      * <p>16</p>
@@ -47,7 +47,7 @@ public class ListImageTransformsResponseBody extends TeaModel {
     public Integer totalCount;
 
     /**
-     * <p>Total number of pages.</p>
+     * <p>The total number of pages.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>
@@ -124,7 +124,7 @@ public class ListImageTransformsResponseBody extends TeaModel {
         public String autoWebp;
 
         /**
-         * <p>Configuration ID.</p>
+         * <p>The ID of the configuration.</p>
          * 
          * <strong>example:</strong>
          * <p>395386449776640</p>
@@ -133,10 +133,12 @@ public class ListImageTransformsResponseBody extends TeaModel {
         public Long configId;
 
         /**
-         * <p>Configuration type. Possible values:</p>
+         * <p>The type of the configuration. Valid values:</p>
          * <ul>
-         * <li>global: Global configuration;</li>
-         * <li>rule: Rule configuration;</li>
+         * <li><p><code>global</code>: A global configuration.</p>
+         * </li>
+         * <li><p><code>rule</code>: A rule-based configuration.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -146,10 +148,12 @@ public class ListImageTransformsResponseBody extends TeaModel {
         public String configType;
 
         /**
-         * <p>Switch. Possible values:</p>
+         * <p>Indicates whether the configuration is enabled. Valid values:</p>
          * <ul>
-         * <li><strong>on</strong>: Enabled.</li>
-         * <li><strong>off</strong>: Disabled.</li>
+         * <li><p><strong>on</strong>: Enabled.</p>
+         * </li>
+         * <li><p><strong>off</strong>: Disabled.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -159,10 +163,12 @@ public class ListImageTransformsResponseBody extends TeaModel {
         public String enable;
 
         /**
-         * <p>Rule content, using conditional expressions to match user requests. This parameter is not required when adding a global configuration. There are two usage scenarios:</p>
+         * <p>The conditional expression that defines the rule used to match user requests. This parameter is not applicable to global configurations.</p>
          * <ul>
-         * <li>Match all incoming requests: Set the value to true</li>
-         * <li>Match specific requests: Set the value to a custom expression, for example: (http.host eq \&quot;video.example.com\&quot;)</li>
+         * <li><p>A value of <code>true</code> matches all incoming requests.</p>
+         * </li>
+         * <li><p>A custom expression, such as <code>(http.host eq &quot;video.example.com&quot;)</code>, matches specific requests.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -172,10 +178,12 @@ public class ListImageTransformsResponseBody extends TeaModel {
         public String rule;
 
         /**
-         * <p>Rule switch. This parameter is not required when adding a global configuration. Possible values:</p>
+         * <p>Indicates whether the rule is enabled. This parameter is not applicable to global configurations. Valid values:</p>
          * <ul>
-         * <li>on: Enabled.</li>
-         * <li>off: Disabled.</li>
+         * <li><p><strong>on</strong>: Enabled.</p>
+         * </li>
+         * <li><p><strong>off</strong>: Disabled.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -185,7 +193,7 @@ public class ListImageTransformsResponseBody extends TeaModel {
         public String ruleEnable;
 
         /**
-         * <p>Rule name. This parameter is not required when adding a global configuration.</p>
+         * <p>The name of the rule. This parameter is not applicable to global configurations.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -194,7 +202,7 @@ public class ListImageTransformsResponseBody extends TeaModel {
         public String ruleName;
 
         /**
-         * <p>Rule execution order. The smaller the value, the higher the priority.</p>
+         * <p>The execution order of the rule. A smaller value indicates a higher priority.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -203,7 +211,7 @@ public class ListImageTransformsResponseBody extends TeaModel {
         public Integer sequence;
 
         /**
-         * <p>Site configuration version number. For sites with version management enabled, you can use this parameter to specify the site version for which the configuration takes effect. The default value is version 0.</p>
+         * <p>The version of the site configuration. For a site with version management enabled, this parameter specifies the site version to which the configuration applies. The default is 0.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>

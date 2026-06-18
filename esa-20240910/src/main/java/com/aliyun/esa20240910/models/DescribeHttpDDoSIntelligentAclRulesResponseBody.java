@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeHttpDDoSIntelligentAclRulesResponseBody extends TeaModel {
     /**
+     * <p>The current page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -12,6 +14,8 @@ public class DescribeHttpDDoSIntelligentAclRulesResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -27,10 +31,15 @@ public class DescribeHttpDDoSIntelligentAclRulesResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The list of rules.</p>
+     */
     @NameInMap("RuleInfos")
     public java.util.List<DescribeHttpDDoSIntelligentAclRulesResponseBodyRuleInfos> ruleInfos;
 
     /**
+     * <p>The total number of rules.</p>
+     * 
      * <strong>example:</strong>
      * <p>100</p>
      */
@@ -84,6 +93,8 @@ public class DescribeHttpDDoSIntelligentAclRulesResponseBody extends TeaModel {
 
     public static class DescribeHttpDDoSIntelligentAclRulesResponseBodyRuleInfos extends TeaModel {
         /**
+         * <p>The protection action.</p>
+         * 
          * <strong>example:</strong>
          * <p>deny</p>
          */
@@ -91,6 +102,8 @@ public class DescribeHttpDDoSIntelligentAclRulesResponseBody extends TeaModel {
         public String action;
 
         /**
+         * <p>The rule trigger condition.</p>
+         * 
          * <strong>example:</strong>
          * <p>{&quot;$and&quot;:[{&quot;key&quot;:&quot;URI&quot;,&quot;opValue&quot;:&quot;prefix-match&quot;,&quot;values&quot;:&quot;/&quot;}]}</p>
          */
@@ -98,6 +111,8 @@ public class DescribeHttpDDoSIntelligentAclRulesResponseBody extends TeaModel {
         public String condition;
 
         /**
+         * <p>The ID of the protection rule for log records.</p>
+         * 
          * <strong>example:</strong>
          * <p>1000030</p>
          */
@@ -105,6 +120,8 @@ public class DescribeHttpDDoSIntelligentAclRulesResponseBody extends TeaModel {
         public Long logRuleId;
 
         /**
+         * <p>The action duration. Unit: seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>1800</p>
          */
@@ -112,6 +129,8 @@ public class DescribeHttpDDoSIntelligentAclRulesResponseBody extends TeaModel {
         public Long punishTime;
 
         /**
+         * <p>The record name.</p>
+         * 
          * <strong>example:</strong>
          * <p>test.example.com</p>
          */
@@ -119,6 +138,8 @@ public class DescribeHttpDDoSIntelligentAclRulesResponseBody extends TeaModel {
         public String recordName;
 
         /**
+         * <p>The rule ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>20569929</p>
          */
@@ -126,6 +147,8 @@ public class DescribeHttpDDoSIntelligentAclRulesResponseBody extends TeaModel {
         public Long ruleId;
 
         /**
+         * <p>The rule name.</p>
+         * 
          * <strong>example:</strong>
          * <p>smart_cc_***</p>
          */

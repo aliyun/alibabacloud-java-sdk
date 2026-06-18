@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class SetKeylessServerResponseBody extends TeaModel {
     /**
-     * <p>Keyless server ID。</p>
+     * <p>The keyless server ID.</p>
      * 
      * <strong>example:</strong>
      * <p>babaabcd****</p>
@@ -14,6 +14,8 @@ public class SetKeylessServerResponseBody extends TeaModel {
     public String id;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>34DCBC8A-<strong><strong>-</strong></strong>-****-6DAA11D7DDBD</p>
      */
@@ -21,6 +23,8 @@ public class SetKeylessServerResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The site ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>123456****</p>
      */
@@ -28,6 +32,8 @@ public class SetKeylessServerResponseBody extends TeaModel {
     public Long siteId;
 
     /**
+     * <p>The site name.</p>
+     * 
      * <strong>example:</strong>
      * <p>example.com</p>
      */

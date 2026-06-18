@@ -8,7 +8,7 @@ public class SetCertificateResponseBody extends TeaModel {
      * <p>The certificate ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>babaffe176ae44e2ad16d3e309b9e506</p>
+     * <p>babae7c40fef412d887688b91c9e****</p>
      */
     @NameInMap("Id")
     public String id;

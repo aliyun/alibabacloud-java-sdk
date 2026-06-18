@@ -5,12 +5,15 @@ import com.aliyun.tea.*;
 
 public class SetClientCaCertificateHostnamesRequest extends TeaModel {
     /**
+     * <p>A list of hostnames.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Hostnames")
     public java.util.List<String> hostnames;
 
     /**
+     * <p>The client CA certificate ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>babaabcd****</p>
      */
@@ -18,6 +21,7 @@ public class SetClientCaCertificateHostnamesRequest extends TeaModel {
     public String id;
 
     /**
+     * <p>The site ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

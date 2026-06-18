@@ -4,13 +4,21 @@ package com.aliyun.esa20240910.models;
 import com.aliyun.tea.*;
 
 public class WafRuleMatch extends TeaModel {
+    /**
+     * <p>值大小写不敏感。</p>
+     */
     @NameInMap("ConvertToLower")
     public Boolean convertToLower;
 
+    /**
+     * <p>逻辑列表。</p>
+     */
     @NameInMap("Criteria")
     public java.util.List<WafRuleMatch> criteria;
 
     /**
+     * <p>逻辑关系。</p>
+     * 
      * <strong>example:</strong>
      * <p>and</p>
      */
@@ -18,6 +26,8 @@ public class WafRuleMatch extends TeaModel {
     public String logic;
 
     /**
+     * <p>匹配符。</p>
+     * 
      * <strong>example:</strong>
      * <p>eq</p>
      */
@@ -25,6 +35,8 @@ public class WafRuleMatch extends TeaModel {
     public String matchOperator;
 
     /**
+     * <p>匹配域。</p>
+     * 
      * <strong>example:</strong>
      * <p>ip.src</p>
      */
@@ -32,12 +44,17 @@ public class WafRuleMatch extends TeaModel {
     public String matchType;
 
     /**
+     * <p>匹配值。</p>
+     * 
      * <strong>example:</strong>
      * <p>1.1.1.1</p>
      */
     @NameInMap("MatchValue")
     public Object matchValue;
 
+    /**
+     * <p>匹配结果取反。</p>
+     */
     @NameInMap("Negate")
     public Boolean negate;
 

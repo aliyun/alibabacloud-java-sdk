@@ -5,16 +5,30 @@ import com.aliyun.tea.*;
 
 public class BatchCreateWafRulesShrinkRequest extends TeaModel {
     /**
-     * <p>A list of configurations for each rule, specifying detailed configurations for each rule.</p>
+     * <p>An array of rule configurations. Each object defines the settings for a single rule.</p>
      */
     @NameInMap("Configs")
     public String configsShrink;
 
     /**
-     * <p>WAF rule type, with values:</p>
+     * <p>The WAF phase in which the rules are executed.</p>
      * <ul>
-     * <li><strong>http_anti_scan</strong>: Scan protection.</li>
-     * <li><strong>http_bot</strong>: Bots.</li>
+     * <li><p><code>http_whitelist</code>: whitelist rule</p>
+     * </li>
+     * <li><p><code>http_custom</code>: custom rule</p>
+     * </li>
+     * <li><p><code>http_managed</code>: managed rule</p>
+     * </li>
+     * <li><p><code>http_anti_scan</code>: scan protection rule</p>
+     * </li>
+     * <li><p><code>http_ratelimit</code>: rate limit rule</p>
+     * </li>
+     * <li><p><code>ip_access_rule</code>: IP access rule</p>
+     * </li>
+     * <li><p><code>http_bot</code>: bot control rule</p>
+     * </li>
+     * <li><p><code>http_security_level_rule</code>: security rule</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -24,7 +38,7 @@ public class BatchCreateWafRulesShrinkRequest extends TeaModel {
     public String phase;
 
     /**
-     * <p>Ruleset ID.</p>
+     * <p>The ID of the WAF ruleset. You can call the <a href="https://help.aliyun.com/document_detail/2878359.html">ListWafRulesets</a> operation to obtain this ID.</p>
      * 
      * <strong>example:</strong>
      * <p>10000001</p>
@@ -33,13 +47,13 @@ public class BatchCreateWafRulesShrinkRequest extends TeaModel {
     public Long rulesetId;
 
     /**
-     * <p>Shared configuration for multiple rules, specifying common attributes of multiple rules.</p>
+     * <p>The shared configuration object that specifies common properties for all rules created in the batch.</p>
      */
     @NameInMap("Shared")
     public String sharedShrink;
 
     /**
-     * <p>Site ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> interface.</p>
+     * <p>The ID of the site. You can call the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation to obtain this ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -49,7 +63,7 @@ public class BatchCreateWafRulesShrinkRequest extends TeaModel {
     public Long siteId;
 
     /**
-     * <p>Site version.</p>
+     * <p>For sites with version management enabled, use this parameter to specify which site version the configuration applies to. The default value is 0.</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>

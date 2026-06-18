@@ -8,7 +8,7 @@ public class ListWafUsageOfRulesRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>Name of the WAF operation phase.</p>
+     * <p>The name of the WAF execution phase.</p>
      * 
      * <strong>example:</strong>
      * <p>http_custom</p>
@@ -17,7 +17,7 @@ public class ListWafUsageOfRulesRequest extends TeaModel {
     public String phase;
 
     /**
-     * <p>Site ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> interface.</p>
+     * <p>The site ID. To get this ID, call the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>

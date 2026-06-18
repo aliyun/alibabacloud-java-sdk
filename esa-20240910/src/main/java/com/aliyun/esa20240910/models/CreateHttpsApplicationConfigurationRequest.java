@@ -5,10 +5,12 @@ import com.aliyun.tea.*;
 
 public class CreateHttpsApplicationConfigurationRequest extends TeaModel {
     /**
-     * <p>Alt-Svc feature switch, default is disabled. Possible values:</p>
+     * <p>Specifies whether to enable the Alt-Svc header. Disabled by default. Valid values:</p>
      * <ul>
-     * <li>on: Enabled.</li>
-     * <li>off: Disabled.</li>
+     * <li><p><code>on</code>: Enabled.</p>
+     * </li>
+     * <li><p><code>off</code>: Disabled.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,10 +20,12 @@ public class CreateHttpsApplicationConfigurationRequest extends TeaModel {
     public String altSvc;
 
     /**
-     * <p>Whether the Alt-Svc header includes the clear parameter, default is disabled. Possible values:</p>
+     * <p>Specifies whether to include the <code>clear</code> parameter in the Alt-Svc header. Disabled by default. Valid values:</p>
      * <ul>
-     * <li>on: Enabled.</li>
-     * <li>off: Disabled.</li>
+     * <li><p><code>on</code>: The parameter is included.</p>
+     * </li>
+     * <li><p><code>off</code>: The parameter is not included.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -31,7 +35,7 @@ public class CreateHttpsApplicationConfigurationRequest extends TeaModel {
     public String altSvcClear;
 
     /**
-     * <p>Alt-Svc validity period in seconds, default is 86400 seconds.</p>
+     * <p>The Max Age for the Alt-Svc header, in seconds. The default is 86400.</p>
      * 
      * <strong>example:</strong>
      * <p>86400</p>
@@ -40,10 +44,12 @@ public class CreateHttpsApplicationConfigurationRequest extends TeaModel {
     public String altSvcMa;
 
     /**
-     * <p>Whether the Alt-Svc header includes the persist parameter, default is disabled. Possible values:</p>
+     * <p>Specifies whether to include the <code>persist</code> parameter in the Alt-Svc header. Disabled by default. Valid values:</p>
      * <ul>
-     * <li>on: Enabled.</li>
-     * <li>off: Disabled.</li>
+     * <li><p><code>on</code>: The parameter is included.</p>
+     * </li>
+     * <li><p><code>off</code>: The parameter is not included.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -53,10 +59,12 @@ public class CreateHttpsApplicationConfigurationRequest extends TeaModel {
     public String altSvcPersist;
 
     /**
-     * <p>Whether to enable HSTS, default is disabled. Possible values:</p>
+     * <p>Specifies whether to enable HTTP Strict Transport Security (HSTS). Disabled by default. Valid values:</p>
      * <ul>
-     * <li>on: Enabled.</li>
-     * <li>off: Disabled.</li>
+     * <li><p><code>on</code>: Enabled.</p>
+     * </li>
+     * <li><p><code>off</code>: Disabled.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -66,10 +74,12 @@ public class CreateHttpsApplicationConfigurationRequest extends TeaModel {
     public String hsts;
 
     /**
-     * <p>Whether to include subdomains in HSTS, default is disabled. Possible values:</p>
+     * <p>Specifies whether to include the <code>includeSubDomains</code> directive in the HSTS header. Disabled by default. Valid values:</p>
      * <ul>
-     * <li>on: Enabled.</li>
-     * <li>off: Disabled.</li>
+     * <li><p><code>on</code>: The directive is included.</p>
+     * </li>
+     * <li><p><code>off</code>: The directive is not included.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -79,7 +89,7 @@ public class CreateHttpsApplicationConfigurationRequest extends TeaModel {
     public String hstsIncludeSubdomains;
 
     /**
-     * <p>HSTS expiration time in seconds.</p>
+     * <p>The value of the <code>max-age</code> directive for the HSTS header, in seconds.</p>
      * 
      * <strong>example:</strong>
      * <p>3600</p>
@@ -88,10 +98,12 @@ public class CreateHttpsApplicationConfigurationRequest extends TeaModel {
     public String hstsMaxAge;
 
     /**
-     * <p>Whether to enable HSTS preload, default is disabled. Possible values:</p>
+     * <p>Specifies whether to enable HSTS Preload by including the <code>preload</code> directive in the HSTS header. Disabled by default. Valid values:</p>
      * <ul>
-     * <li>on: Enabled.</li>
-     * <li>off: Disabled.</li>
+     * <li><p><code>on</code>: The directive is included.</p>
+     * </li>
+     * <li><p><code>off</code>: The directive is not included.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -101,10 +113,12 @@ public class CreateHttpsApplicationConfigurationRequest extends TeaModel {
     public String hstsPreload;
 
     /**
-     * <p>Whether to enable forced HTTPS, default is disabled. Possible values:</p>
+     * <p>Specifies whether to enable Force HTTPS. Disabled by default. Valid values:</p>
      * <ul>
-     * <li>on: Enabled.</li>
-     * <li>off: Disabled.</li>
+     * <li><p><code>on</code>: Enabled.</p>
+     * </li>
+     * <li><p><code>off</code>: Disabled.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -114,12 +128,16 @@ public class CreateHttpsApplicationConfigurationRequest extends TeaModel {
     public String httpsForce;
 
     /**
-     * <p>Forced HTTPS redirect status code. Possible values:</p>
+     * <p>The Redirection Status Code to use when Force HTTPS is enabled. Valid values:</p>
      * <ul>
-     * <li>301</li>
-     * <li>302</li>
-     * <li>307</li>
-     * <li>308</li>
+     * <li><p><code>301</code></p>
+     * </li>
+     * <li><p><code>302</code></p>
+     * </li>
+     * <li><p><code>307</code></p>
+     * </li>
+     * <li><p><code>308</code></p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -128,20 +146,52 @@ public class CreateHttpsApplicationConfigurationRequest extends TeaModel {
     @NameInMap("HttpsForceCode")
     public String httpsForceCode;
 
+    /**
+     * <p>Specifies whether to reject TLS Handshake Requests that do not include an SNI. Disabled by default. Valid values:</p>
+     * <ul>
+     * <li><p><code>on</code>: Rejects requests without an SNI.</p>
+     * </li>
+     * <li><p><code>off</code>: Allows requests without an SNI.</p>
+     * </li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>on</p>
+     */
     @NameInMap("HttpsNoSniDeny")
     public String httpsNoSniDeny;
 
+    /**
+     * <p>Specifies whether to enable Server Name Indication (SNI) verification. Disabled by default. Valid values:</p>
+     * <ul>
+     * <li><p><code>on</code>: Enabled.</p>
+     * </li>
+     * <li><p><code>off</code>: Disabled.</p>
+     * </li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>on</p>
+     */
     @NameInMap("HttpsSniVerify")
     public String httpsSniVerify;
 
+    /**
+     * <p>Specifies the allowlist of SNI values. Separate multiple values with a space.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>abc edf</p>
+     */
     @NameInMap("HttpsSniWhitelist")
     public String httpsSniWhitelist;
 
     /**
-     * <p>Rule content, using conditional expressions to match user requests. This parameter is not required when adding a global configuration. There are two usage scenarios:</p>
+     * <p>The content of the Rule, which is a Conditional Expression that matches user Requests. This parameter is optional when adding a Global Configuration. Supported use cases include:</p>
      * <ul>
-     * <li>Match all incoming requests: Set the value to true</li>
-     * <li>Match specific requests: Set the value to a custom expression, for example: (http.host eq \&quot;video.example.com\&quot;)</li>
+     * <li><p>To match all incoming requests, set the value to <code>true</code>.</p>
+     * </li>
+     * <li><p>To match specific requests, use a custom expression. For example: <code>(http.host eq &quot;video.example.com&quot;)</code>.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -151,10 +201,12 @@ public class CreateHttpsApplicationConfigurationRequest extends TeaModel {
     public String rule;
 
     /**
-     * <p>Rule switch. This parameter is not required when adding a global configuration. Possible values:</p>
+     * <p>Specifies whether to enable the rule. This parameter is optional when adding a Global Configuration. Valid values:</p>
      * <ul>
-     * <li>on: Enabled.</li>
-     * <li>off: Disabled.</li>
+     * <li><p><code>on</code>: The rule is enabled.</p>
+     * </li>
+     * <li><p><code>off</code>: The rule is disabled.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -164,7 +216,7 @@ public class CreateHttpsApplicationConfigurationRequest extends TeaModel {
     public String ruleEnable;
 
     /**
-     * <p>Rule name. This parameter is not required when adding a global configuration.</p>
+     * <p>The name of the Rule. This parameter is optional when adding a Global Configuration.</p>
      * 
      * <strong>example:</strong>
      * <p>rule_example</p>
@@ -172,11 +224,17 @@ public class CreateHttpsApplicationConfigurationRequest extends TeaModel {
     @NameInMap("RuleName")
     public String ruleName;
 
+    /**
+     * <p>The execution order of the rule. A lower value indicates a higher priority.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("Sequence")
     public Integer sequence;
 
     /**
-     * <p>Site ID, which can be obtained by calling the <a href="~~ListSites~~">ListSites</a> interface.</p>
+     * <p>The ID of the Site. You can get this ID by calling the <a href="~~ListSites~~">ListSites</a> API.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -186,7 +244,7 @@ public class CreateHttpsApplicationConfigurationRequest extends TeaModel {
     public Long siteId;
 
     /**
-     * <p>Version number of the site configuration. For sites with version management enabled, this parameter can specify the version to which the configuration applies, defaulting to version 0.</p>
+     * <p>The Site\&quot;s configuration Version. For Sites with version management enabled, this parameter specifies the Version to which the configuration applies. The default is 0.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>

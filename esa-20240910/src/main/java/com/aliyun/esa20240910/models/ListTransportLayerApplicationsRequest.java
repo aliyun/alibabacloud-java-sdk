@@ -5,12 +5,16 @@ import com.aliyun.tea.*;
 
 public class ListTransportLayerApplicationsRequest extends TeaModel {
     /**
-     * <p>Query type for the transport layer application host record, supporting the following 4 types, with exact query as the default.</p>
+     * <p>The match type for the host record of the Layer 4 application. The default is an exact search. Valid values:</p>
      * <ul>
-     * <li>fuzzy: Fuzzy query.</li>
-     * <li>exact: Exact query.</li>
-     * <li>prefix: Prefix match query.</li>
-     * <li>suffix: Suffix match query.</li>
+     * <li><p>fuzzy: fuzzy search.</p>
+     * </li>
+     * <li><p>exact: exact search.</p>
+     * </li>
+     * <li><p>prefix: prefix search.</p>
+     * </li>
+     * <li><p>suffix: suffix search.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -20,7 +24,7 @@ public class ListTransportLayerApplicationsRequest extends TeaModel {
     public String matchType;
 
     /**
-     * <p>Page number set for pagination. Starting value: 1. Default value: 1.</p>
+     * <p>The page number. The minimum value is 1. The default value is 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -29,7 +33,7 @@ public class ListTransportLayerApplicationsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>Page size. The maximum value is 500.</p>
+     * <p>The number of entries to return on each page. The maximum value is 500.</p>
      * 
      * <strong>example:</strong>
      * <p>500</p>
@@ -38,7 +42,7 @@ public class ListTransportLayerApplicationsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>Host record of the transport layer application.</p>
+     * <p>The host record of the Layer 4 application.</p>
      * 
      * <strong>example:</strong>
      * <p><a href="http://www.example.com">www.example.com</a></p>
@@ -47,7 +51,7 @@ public class ListTransportLayerApplicationsRequest extends TeaModel {
     public String recordName;
 
     /**
-     * <p>Site ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> API.</p>
+     * <p>The site ID. Call the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation to obtain it.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

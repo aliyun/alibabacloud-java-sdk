@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class BatchGetExpressionFieldsResponseBody extends TeaModel {
     /**
-     * <p>List of match fields.</p>
+     * <p>A list of objects, each containing the match fields for a corresponding expression.</p>
      */
     @NameInMap("Fields")
     public java.util.List<BatchGetExpressionFieldsResponseBodyFields> fields;
 
     /**
-     * <p>Request ID.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>36af3fcc-43d0-441c-86b1-428951dc8225</p>
@@ -42,13 +42,13 @@ public class BatchGetExpressionFieldsResponseBody extends TeaModel {
 
     public static class BatchGetExpressionFieldsResponseBodyFields extends TeaModel {
         /**
-         * <p>List of match fields for a single expression.</p>
+         * <p>A list of match fields for the expression.</p>
          */
         @NameInMap("Fields")
         public java.util.List<String> fields;
 
         /**
-         * <p>ID of the expression, corresponding to the ID in the input parameters.</p>
+         * <p>The ID of the expression. This value corresponds to the <code>Id</code> of an expression in the request.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>

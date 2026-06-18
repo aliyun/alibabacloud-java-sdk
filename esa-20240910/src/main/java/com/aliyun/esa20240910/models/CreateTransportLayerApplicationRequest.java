@@ -5,10 +5,12 @@ import com.aliyun.tea.*;
 
 public class CreateTransportLayerApplicationRequest extends TeaModel {
     /**
-     * <p>Whether to enable China mainland network access optimization, default is disabled. Value range:</p>
+     * <p>Enables or disables network optimization for access from the Chinese mainland. This feature is disabled by default. Valid values:</p>
      * <ul>
-     * <li>on: Enabled.</li>
-     * <li>off: Disabled.</li>
+     * <li><p><code>on</code>: Enables the optimization.</p>
+     * </li>
+     * <li><p><code>off</code>: Disables the optimization.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,10 +20,12 @@ public class CreateTransportLayerApplicationRequest extends TeaModel {
     public String crossBorderOptimization;
 
     /**
-     * <p>IP access rule switch. When enabled, the WAF\&quot;s IP access rules apply to the transport layer application.</p>
+     * <p>Applies IP access rules from Web Application Firewall (WAF) to this Transport Layer Application. Valid values:</p>
      * <ul>
-     * <li>on: Enabled.</li>
-     * <li>off: Disabled.</li>
+     * <li><p><code>on</code>: Enables the feature.</p>
+     * </li>
+     * <li><p><code>off</code>: Disables the feature.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -31,7 +35,7 @@ public class CreateTransportLayerApplicationRequest extends TeaModel {
     public String ipAccessRule;
 
     /**
-     * <p>IPv6 switch.</p>
+     * <p>Enables or disables IPv6 support.</p>
      * 
      * <strong>example:</strong>
      * <p>off</p>
@@ -39,11 +43,14 @@ public class CreateTransportLayerApplicationRequest extends TeaModel {
     @NameInMap("Ipv6")
     public String ipv6;
 
+    /**
+     * <p>Enables or disables keep-alive protection.</p>
+     */
     @NameInMap("KeepAliveProtection")
     public String keepAliveProtection;
 
     /**
-     * <p>Domain name of the transport layer application.</p>
+     * <p>The domain name of the Transport Layer Application.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -53,14 +60,14 @@ public class CreateTransportLayerApplicationRequest extends TeaModel {
     public String recordName;
 
     /**
-     * <p>List of forwarding rules.</p>
+     * <p>The list of forwarding rules.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Rules")
     public java.util.List<CreateTransportLayerApplicationRequestRules> rules;
 
     /**
-     * <p>Site ID, which can be obtained by calling the <a href="~~ListSites~~">ListSites</a> interface.</p>
+     * <p>The site ID. You can call the <a href="~~ListSites~~">ListSites</a> operation to obtain the site ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -143,12 +150,16 @@ public class CreateTransportLayerApplicationRequest extends TeaModel {
 
     public static class CreateTransportLayerApplicationRequestRules extends TeaModel {
         /**
-         * <p>Client IP pass-through protocol, supporting:</p>
+         * <p>The client IP passthrough protocol. Valid values:</p>
          * <ul>
-         * <li><strong>off</strong>: No pass-through.</li>
-         * <li><strong>PPv1</strong>: PROXY Protocol v1, supports client IP pass-through for TCP protocol.</li>
-         * <li><strong>PPv2</strong>: PROXY Protocol v2, supports client IP pass-through for TCP and UDP protocols.</li>
-         * <li><strong>SPP</strong>: Simple Proxy Protocol, supports client IP pass-through for UDP protocol.</li>
+         * <li><p><strong>off</strong>: Disables client IP passthrough.</p>
+         * </li>
+         * <li><p><strong>PPv1</strong>: PROXY Protocol v1. Preserves the client IP address for TCP connections.</p>
+         * </li>
+         * <li><p><strong>PPv2</strong>: PROXY Protocol v2. Preserves the client IP address for TCP and UDP connections.</p>
+         * </li>
+         * <li><p><strong>SPP</strong>: Simple Proxy Protocol. Preserves the client IP address for UDP connections.</p>
+         * </li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -159,22 +170,25 @@ public class CreateTransportLayerApplicationRequest extends TeaModel {
         public String clientIPPassThroughMode;
 
         /**
-         * <p>Comment information for the rule (optional).</p>
+         * <p>An optional comment for the rule.</p>
          * 
          * <strong>example:</strong>
-         * <p>test</p>
+         * <p>Test</p>
          */
         @NameInMap("Comment")
         public String comment;
 
         /**
-         * <p>Edge port. Supports:</p>
+         * <p>The edge port. Supported formats:</p>
          * <ul>
-         * <li>A single port, such as 80.</li>
-         * <li>Port range, such as 81-85, representing ports 81, 82, 83, 84, and 85.</li>
-         * <li>Combination of ports and port ranges, separated by commas, such as 80,81-85,90, representing ports 80, 81, 82, 83, 84, 85, and 90.</li>
+         * <li><p>A single port, for example, <code>80</code>.</p>
+         * </li>
+         * <li><p>A port range, for example, <code>81-85</code>, which includes ports 81, 82, 83, 84, and 85.</p>
+         * </li>
+         * <li><p>A combination of ports and port ranges separated by commas, for example, <code>80,81-85,90</code>, which includes ports 80, 81, 82, 83, 84, 85, and 90.</p>
+         * </li>
          * </ul>
-         * <p>Edge ports within a single rule and between multiple rules must not overlap.</p>
+         * <p>Edge ports cannot overlap within a single rule or across multiple rules.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -184,10 +198,12 @@ public class CreateTransportLayerApplicationRequest extends TeaModel {
         public String edgePort;
 
         /**
-         * <p>Forwarding rule protocol, with values:</p>
+         * <p>The forwarding protocol. Valid values:</p>
          * <ul>
-         * <li>TCP: TCP protocol.</li>
-         * <li>UDP: UDP protocol.</li>
+         * <li><p><code>TCP</code>: The TCP protocol.</p>
+         * </li>
+         * <li><p><code>UDP</code>: The UDP protocol.</p>
+         * </li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -198,7 +214,7 @@ public class CreateTransportLayerApplicationRequest extends TeaModel {
         public String protocol;
 
         /**
-         * <p>Specific value of the origin, which needs to match the origin type.</p>
+         * <p>The origin address. The value must match the specified <code>SourceType</code>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -208,10 +224,12 @@ public class CreateTransportLayerApplicationRequest extends TeaModel {
         public String source;
 
         /**
-         * <p>Origin port. Supports:</p>
+         * <p>The origin port. Supported formats:</p>
          * <ul>
-         * <li>A single port, when the origin port is a single port, any valid combination of edge ports is supported.</li>
-         * <li>Port range, only when the edge port is a port range, the origin port can be set to a port range, and the size of the range must match that of the edge port. For example, if the edge port is 90-93, the origin port cannot be set to 81-85 because the origin port range is 5 and the edge port range is 3, which do not match.</li>
+         * <li><p>A single port, which supports any valid combination of edge ports.</p>
+         * </li>
+         * <li><p>A port range. You can specify a port range only if the edge port is also a port range. The origin and edge port ranges must be the same size. For example, if the edge port range is <code>90-93</code> (4 ports), the origin port range cannot be <code>81-85</code> (5 ports).</p>
+         * </li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -222,12 +240,16 @@ public class CreateTransportLayerApplicationRequest extends TeaModel {
         public String sourcePort;
 
         /**
-         * <p>Origin type, supporting:</p>
+         * <p>The origin type. Valid values:</p>
          * <ul>
-         * <li><strong>ip</strong>: IP address.</li>
-         * <li><strong>domain</strong>: Domain name.</li>
-         * <li><strong>OP</strong>: Origin pool.</li>
-         * <li><strong>LB</strong>: Load balancer.</li>
+         * <li><p><strong>ip</strong>: An IP address.</p>
+         * </li>
+         * <li><p><strong>domain</strong>: A domain name.</p>
+         * </li>
+         * <li><p><strong>OP</strong>: An origin pool.</p>
+         * </li>
+         * <li><p><strong>LB</strong>: A load balancer.</p>
+         * </li>
          * </ul>
          * <p>This parameter is required.</p>
          * 

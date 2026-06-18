@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetKeylessServerRequest extends TeaModel {
     /**
-     * <p>Keyless server ID。</p>
+     * <p>The keyless server ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,6 +15,7 @@ public class GetKeylessServerRequest extends TeaModel {
     public String id;
 
     /**
+     * <p>The site ID. To obtain this ID, call the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

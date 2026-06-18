@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class UpdateWafRuleShrinkRequest extends TeaModel {
     /**
-     * <p>Rule configuration.</p>
+     * <p>The configuration of the rule.</p>
      */
     @NameInMap("Config")
     public String configShrink;
 
     /**
-     * <p>WAF rule ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2878257.html">ListWafRules</a> interface.</p>
+     * <p>The ID of the WAF rule. To obtain the rule ID, call the <a href="https://help.aliyun.com/document_detail/2878257.html">ListWafRules</a> operation.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,7 +21,7 @@ public class UpdateWafRuleShrinkRequest extends TeaModel {
     public Long id;
 
     /**
-     * <p>The position of the rule in the rule set.</p>
+     * <p>The position of the rule within the rule set.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -30,7 +30,7 @@ public class UpdateWafRuleShrinkRequest extends TeaModel {
     public Long position;
 
     /**
-     * <p>Site ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> interface.</p>
+     * <p>The ID of the site. To obtain the site ID, call the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -40,7 +40,7 @@ public class UpdateWafRuleShrinkRequest extends TeaModel {
     public Long siteId;
 
     /**
-     * <p>Site version.</p>
+     * <p>The version number of the site configuration. For sites with configuration version management enabled, use this parameter to specify the effective configuration version. The default is version 0.</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>
@@ -49,7 +49,7 @@ public class UpdateWafRuleShrinkRequest extends TeaModel {
     public Integer siteVersion;
 
     /**
-     * <p>Rule status.</p>
+     * <p>The status of the rule.</p>
      * 
      * <strong>example:</strong>
      * <p>on</p>

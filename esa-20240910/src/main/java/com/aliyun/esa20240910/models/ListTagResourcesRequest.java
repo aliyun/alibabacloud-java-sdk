@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListTagResourcesRequest extends TeaModel {
     /**
-     * <p>The maximum number of tags to return.</p>
+     * <p>The maximum number of entries to return.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -14,9 +14,9 @@ public class ListTagResourcesRequest extends TeaModel {
     public Integer maxItem;
 
     /**
-     * <p>The pagination token that is used in the next request to retrieve a new page of results.</p>
+     * <p>The token for the next query to return more results.</p>
      * <blockquote>
-     * <p> This parameter is not required for the first request. If not all results are returned in one query, you can specify the token that is obtained from the previous query as the value of <strong>NextToken</strong>.</p>
+     * <p>You do not need to specify this parameter for the first query. If a query does not return all results, pass the <strong>NextToken</strong> value returned from the previous query to continue the query.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -26,7 +26,11 @@ public class ListTagResourcesRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The ID of the region where the resources reside.</p>
+     * <p>The region ID. Valid values:</p>
+     * <ul>
+     * <li>Alibaba Cloud China Website (<a href="http://www.aliyun.com">www.aliyun.com</a>): cn-hangzhou</li>
+     * <li>Alibaba Cloud International Website (<a href="http://www.alibabacloud.com">www.alibabacloud.com</a>): ap-southeast-1.</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -36,13 +40,17 @@ public class ListTagResourcesRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The website ID.</p>
+     * <p>The resource ID. Enter a site ID or a DNS record ID. You must specify at least one of ResourceId and Tag.</p>
      */
     @NameInMap("ResourceId")
     public java.util.List<String> resourceId;
 
     /**
-     * <p>The resource type.</p>
+     * <p>The resource type. Valid values:</p>
+     * <ul>
+     * <li>site: site</li>
+     * <li>record: DNS record.</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -55,7 +63,7 @@ public class ListTagResourcesRequest extends TeaModel {
     public String securityToken;
 
     /**
-     * <p>A list of tags. You can enter up to 20 tags.</p>
+     * <p>The list of tags. You can specify up to 20 tags. You must specify at least one of ResourceId and Tag.</p>
      */
     @NameInMap("Tag")
     public java.util.List<ListTagResourcesRequestTag> tag;

@@ -5,8 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpdateCustomScenePolicyRequest extends TeaModel {
     /**
-     * <p>The time when the policy expires.</p>
-     * <p>Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+     * <p>The end time of the policy.</p>
+     * <p>The time must be in UTC and in the ISO 8601 format: yyyy-MM-ddTHH:mm:ssZ.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -16,7 +16,7 @@ public class UpdateCustomScenePolicyRequest extends TeaModel {
     public String endTime;
 
     /**
-     * <p>The policy name.</p>
+     * <p>The name of the policy.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -26,16 +26,19 @@ public class UpdateCustomScenePolicyRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The IDs of the websites that you want to associate with the policy. Separate multiple IDs with commas (,).</p>
+     * <p>The site IDs to associate with the policy. Use a comma (,) to separate multiple IDs.</p>
+     * <blockquote>
+     * <p>This parameter is deprecated. We recommend using the <code>SiteIds</code> parameter instead. If the <code>SiteIds</code> parameter is specified, the <code>Objects</code> parameter is ignored. You must specify a value for either the <code>Objects</code> or <code>SiteIds</code> parameter.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
-     * <p>123456****</p>
+     * <p>123456****,123457****</p>
      */
     @NameInMap("Objects")
     public String objects;
 
     /**
-     * <p>The policy ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850508.html">DescribeCustomScenePolicies</a> operation.</p>
+     * <p>To obtain the policy ID, call the <a href="https://help.aliyun.com/document_detail/2850508.html">DescribeCustomScenePolicies</a> operation.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -44,12 +47,18 @@ public class UpdateCustomScenePolicyRequest extends TeaModel {
     @NameInMap("PolicyId")
     public Long policyId;
 
+    /**
+     * <p>The site IDs to associate with the policy. Use a comma (,) to separate multiple IDs.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123456****,123457****</p>
+     */
     @NameInMap("SiteIds")
     public String siteIds;
 
     /**
-     * <p>The time when the policy takes effect.</p>
-     * <p>Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+     * <p>The start time of the policy.</p>
+     * <p>The time must be in UTC and in the ISO 8601 format: yyyy-MM-ddTHH:mm:ssZ.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -59,9 +68,9 @@ public class UpdateCustomScenePolicyRequest extends TeaModel {
     public String startTime;
 
     /**
-     * <p>The name of the policy template. Valid value:</p>
+     * <p>The name of the template. Valid value:</p>
      * <ul>
-     * <li><strong>promotion</strong>: major events.</li>
+     * <li><strong>promotion</strong>: major promotion</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

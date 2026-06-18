@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ApplyCertificateRequest extends TeaModel {
     /**
-     * <p>List of domains, separated by commas.</p>
+     * <p>A comma-separated list of domain names.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class ApplyCertificateRequest extends TeaModel {
     public String domains;
 
     /**
-     * <p>Site ID.</p>
+     * <p>The site ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,7 +25,7 @@ public class ApplyCertificateRequest extends TeaModel {
     public Long siteId;
 
     /**
-     * <p>The certificate type. Valid values: lets_encrypt, digicert_single, and digicert_wildcard.</p>
+     * <p>The certificate type. Valid values: <code>lets_encrypt</code> for a Let\&quot;s Encrypt certificate, <code>digicert_single</code> for a Digicert single-domain certificate, and <code>digicert_wildcard</code> for a Digicert wildcard certificate.</p>
      * 
      * <strong>example:</strong>
      * <p>lets_encrypt</p>

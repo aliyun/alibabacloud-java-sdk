@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateRedirectRuleResponseBody extends TeaModel {
     /**
-     * <p>Request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>CB1A380B-09F0-41BB-A198-72F8FD6DA2FE</p>

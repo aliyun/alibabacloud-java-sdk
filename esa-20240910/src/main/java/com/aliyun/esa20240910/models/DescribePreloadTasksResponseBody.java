@@ -113,9 +113,12 @@ public class DescribePreloadTasksResponseBody extends TeaModel {
         /**
          * <p>The error message returned upon a prefetch task failure. Valid values:</p>
          * <ul>
-         * <li><strong>Internal Error</strong></li>
-         * <li><strong>Origin Timeout</strong></li>
-         * <li><strong>Origin Return StatusCode 5XX</strong></li>
+         * <li><p><strong>Internal Error</strong></p>
+         * </li>
+         * <li><p><strong>Origin Timeout</strong></p>
+         * </li>
+         * <li><p><strong>Origin Return StatusCode 5XX</strong></p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -136,9 +139,12 @@ public class DescribePreloadTasksResponseBody extends TeaModel {
         /**
          * <p>The task status.</p>
          * <ul>
-         * <li><strong>Complete</strong>: The task is complete.</li>
-         * <li><strong>Refreshing</strong>: The task is in progress.</li>
-         * <li><strong>Failed</strong>: The task failed.</li>
+         * <li><p><strong>Complete</strong>: The task is complete.</p>
+         * </li>
+         * <li><p><strong>Refreshing</strong>: The task is in progress.</p>
+         * </li>
+         * <li><p><strong>Failed</strong>: The task failed.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateNetworkOptimizationRequest extends TeaModel {
     /**
-     * <p>Configuration ID.</p>
+     * <p>The configuration ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,10 +15,12 @@ public class UpdateNetworkOptimizationRequest extends TeaModel {
     public Long configId;
 
     /**
-     * <p>Whether to enable GRPC, default is disabled. Possible values:</p>
+     * <p>Controls whether gRPC is enabled. This feature is disabled by default. Valid values:</p>
      * <ul>
-     * <li>on: Enable</li>
-     * <li>off: Disable</li>
+     * <li><p>on: gRPC is enabled.</p>
+     * </li>
+     * <li><p>off: gRPC is disabled.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -28,10 +30,12 @@ public class UpdateNetworkOptimizationRequest extends TeaModel {
     public String grpc;
 
     /**
-     * <p>Whether to enable HTTP2 origin, default is disabled. Possible values:</p>
+     * <p>Controls whether HTTP/2 to origin is enabled. This feature is disabled by default. Valid values:</p>
      * <ul>
-     * <li>on: Enable</li>
-     * <li>off: Disable</li>
+     * <li><p>on: HTTP/2 to origin is enabled.</p>
+     * </li>
+     * <li><p>off: HTTP/2 to origin is disabled.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -41,10 +45,12 @@ public class UpdateNetworkOptimizationRequest extends TeaModel {
     public String http2Origin;
 
     /**
-     * <p>Rule content, using conditional expressions to match user requests. This parameter is not required when adding a global configuration. There are two usage scenarios:</p>
+     * <p>The conditional expression used to match requests. This parameter is optional for global configurations.</p>
      * <ul>
-     * <li>Match all incoming requests: Set the value to true</li>
-     * <li>Match specific requests: Set the value to a custom expression, for example: (http.host eq \&quot;video.example.com\&quot;)</li>
+     * <li><p>To match all incoming requests, set the value to true.</p>
+     * </li>
+     * <li><p>To match specific requests, set the value to a custom expression, for example, (http.host eq &quot;video.example.com&quot;).</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -54,10 +60,12 @@ public class UpdateNetworkOptimizationRequest extends TeaModel {
     public String rule;
 
     /**
-     * <p>Rule switch. This parameter is not required when adding a global configuration. Possible values:</p>
+     * <p>Controls whether the rule is enabled. This parameter is optional for global configurations. Valid values:</p>
      * <ul>
-     * <li>on: Enable.</li>
-     * <li>off: Disable.</li>
+     * <li><p>on: The rule is enabled.</p>
+     * </li>
+     * <li><p>off: The rule is disabled.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -67,7 +75,7 @@ public class UpdateNetworkOptimizationRequest extends TeaModel {
     public String ruleEnable;
 
     /**
-     * <p>Rule name. This parameter is not required when adding a global configuration.</p>
+     * <p>The rule name. This parameter is optional for global configurations.</p>
      * 
      * <strong>example:</strong>
      * <p>rule_example</p>
@@ -75,11 +83,17 @@ public class UpdateNetworkOptimizationRequest extends TeaModel {
     @NameInMap("RuleName")
     public String ruleName;
 
+    /**
+     * <p>The rule execution order. Smaller values have higher priority.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("Sequence")
     public Integer sequence;
 
     /**
-     * <p>Site ID, which can be obtained by calling the <a href="~~ListSites~~">ListSites</a> API.</p>
+     * <p>The site ID. Call the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation to obtain this ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -89,10 +103,12 @@ public class UpdateNetworkOptimizationRequest extends TeaModel {
     public Long siteId;
 
     /**
-     * <p>Whether to enable the smart routing service, default is disabled. Possible values:</p>
+     * <p>Controls whether smart routing is enabled. This feature is disabled by default. Valid values:</p>
      * <ul>
-     * <li>on: Enable</li>
-     * <li>off: Disable</li>
+     * <li><p>on: Smart routing is enabled.</p>
+     * </li>
+     * <li><p>off: Smart routing is disabled.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -102,7 +118,7 @@ public class UpdateNetworkOptimizationRequest extends TeaModel {
     public String smartRouting;
 
     /**
-     * <p>Maximum upload file size, in MB, with a range of 100 to 500.</p>
+     * <p>The maximum upload file size, in MB. The value must be an integer from 100 to 500.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>
@@ -111,10 +127,12 @@ public class UpdateNetworkOptimizationRequest extends TeaModel {
     public String uploadMaxFilesize;
 
     /**
-     * <p>Whether to enable Websocket, default is enabled. Possible values:</p>
+     * <p>Controls whether WebSocket is enabled. This feature is enabled by default. Valid values:</p>
      * <ul>
-     * <li>on: Enable</li>
-     * <li>off: Disable</li>
+     * <li><p>on: WebSocket is enabled.</p>
+     * </li>
+     * <li><p>off: WebSocket is disabled.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

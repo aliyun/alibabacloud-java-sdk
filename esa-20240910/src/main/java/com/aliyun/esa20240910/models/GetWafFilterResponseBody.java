@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetWafFilterResponseBody extends TeaModel {
     /**
-     * <p>The returned match conditions.</p>
+     * <p>The returned matching engine configuration.</p>
      */
     @NameInMap("Filter")
     public GetWafFilterResponseBodyFilter filter;
@@ -42,7 +42,7 @@ public class GetWafFilterResponseBody extends TeaModel {
 
     public static class GetWafFilterResponseBodyFilterFieldsLogicsValidator extends TeaModel {
         /**
-         * <p>The error message when the validation fails.</p>
+         * <p>The error message returned when validation fails.</p>
          * 
          * <strong>example:</strong>
          * <p>Enter a valid expression</p>
@@ -51,13 +51,13 @@ public class GetWafFilterResponseBody extends TeaModel {
         public String errMsg;
 
         /**
-         * <p>The length of the value.</p>
+         * <p>The length limit for the value.</p>
          */
         @NameInMap("Length")
         public WafQuotaInteger length;
 
         /**
-         * <p>The regular expression pattern of the value, which is used to validate strings.</p>
+         * <p>The regular expression pattern for the value.</p>
          * 
          * <strong>example:</strong>
          * <p>^example$</p>
@@ -66,7 +66,7 @@ public class GetWafFilterResponseBody extends TeaModel {
         public String pattern;
 
         /**
-         * <p>The range of the value, which is used to validate numbers.</p>
+         * <p>The value range for numeric validation.</p>
          */
         @NameInMap("Range")
         public WafQuotaInteger range;
@@ -112,7 +112,7 @@ public class GetWafFilterResponseBody extends TeaModel {
 
     public static class GetWafFilterResponseBodyFilterFieldsLogics extends TeaModel {
         /**
-         * <p>A custom attribute. For example, this parameter can specify whether the value is case-sensitive.</p>
+         * <p>Configurable attributes, such as case sensitivity.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -120,16 +120,26 @@ public class GetWafFilterResponseBody extends TeaModel {
         @NameInMap("Attributes")
         public Integer attributes;
 
+        /**
+         * <p>Indicates whether the current plan supports this operator.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("Enable")
         public Boolean enable;
 
         /**
-         * <p>The type of the value input box. Valid values:</p>
+         * <p>The input type for the value. Valid values:</p>
          * <ul>
-         * <li>select:single</li>
-         * <li>select:multi</li>
-         * <li>input:single</li>
-         * <li>input:multi</li>
+         * <li><p><code>select:single</code>: A single-select input.</p>
+         * </li>
+         * <li><p><code>select:multi</code>: A multi-select input.</p>
+         * </li>
+         * <li><p><code>input:single</code>: A single-value text input.</p>
+         * </li>
+         * <li><p><code>input:multi</code>: A multi-value text input.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -138,17 +148,23 @@ public class GetWafFilterResponseBody extends TeaModel {
         @NameInMap("Kind")
         public String kind;
 
+        /**
+         * <p>The minimum plan that supports this operator, provided the current plan does not.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>high</p>
+         */
         @NameInMap("MinPlan")
         public String minPlan;
 
         /**
-         * <p>Indicates whether the match result is inverted.</p>
+         * <p>Indicates whether to negate the match result.</p>
          */
         @NameInMap("Negative")
         public Boolean negative;
 
         /**
-         * <p>The displayed matching characters.</p>
+         * <p>The label for the operator.</p>
          * 
          * <strong>example:</strong>
          * <p>Does not equal</p>
@@ -157,7 +173,7 @@ public class GetWafFilterResponseBody extends TeaModel {
         public String operator;
 
         /**
-         * <p>The matching characters in the system.</p>
+         * <p>The internal identifier for the operator.</p>
          * 
          * <strong>example:</strong>
          * <p>eq</p>
@@ -166,7 +182,7 @@ public class GetWafFilterResponseBody extends TeaModel {
         public String symbol;
 
         /**
-         * <p>The tip on how to enter a valid value that is required by the rules.</p>
+         * <p>A hint for entering a valid value.</p>
          * 
          * <strong>example:</strong>
          * <p>e.g. image/jpeg</p>
@@ -177,10 +193,14 @@ public class GetWafFilterResponseBody extends TeaModel {
         /**
          * <p>The type of the value. Valid values:</p>
          * <ul>
-         * <li>integer</li>
-         * <li>integer_slice</li>
-         * <li>string</li>
-         * <li>string_slice</li>
+         * <li><p><code>integer</code>: An integer.</p>
+         * </li>
+         * <li><p><code>integer_slice</code>: An integer array.</p>
+         * </li>
+         * <li><p><code>string</code>: A string.</p>
+         * </li>
+         * <li><p><code>string_slice</code>: A string array.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -190,7 +210,7 @@ public class GetWafFilterResponseBody extends TeaModel {
         public String type;
 
         /**
-         * <p>The validator, which defines the validation rules for a value.</p>
+         * <p>The validator, which defines validation rules for the value.</p>
          */
         @NameInMap("Validator")
         public GetWafFilterResponseBodyFilterFieldsLogicsValidator validator;
@@ -284,7 +304,7 @@ public class GetWafFilterResponseBody extends TeaModel {
 
     public static class GetWafFilterResponseBodyFilterFieldsSelectorData extends TeaModel {
         /**
-         * <p>The label of the data.</p>
+         * <p>The label for the data option.</p>
          * 
          * <strong>example:</strong>
          * <p>China</p>
@@ -293,7 +313,7 @@ public class GetWafFilterResponseBody extends TeaModel {
         public String label;
 
         /**
-         * <p>The value of the data.</p>
+         * <p>The value of the data option.</p>
          * 
          * <strong>example:</strong>
          * <p>CN</p>
@@ -326,13 +346,13 @@ public class GetWafFilterResponseBody extends TeaModel {
 
     public static class GetWafFilterResponseBodyFilterFieldsSelector extends TeaModel {
         /**
-         * <p>The data. This parameter is available only when the value of the Kind parameter is data.</p>
+         * <p>A list of data options available when the selector <code>Kind</code> is <code>data</code>.</p>
          */
         @NameInMap("Data")
         public java.util.List<GetWafFilterResponseBodyFilterFieldsSelectorData> data;
 
         /**
-         * <p>The type of selector. Valid values: data and others.</p>
+         * <p>The selector type, which indicates whether it targets data items or other entities.</p>
          * 
          * <strong>example:</strong>
          * <p>data</p>
@@ -364,11 +384,17 @@ public class GetWafFilterResponseBody extends TeaModel {
     }
 
     public static class GetWafFilterResponseBodyFilterFields extends TeaModel {
+        /**
+         * <p>Indicates whether the current plan supports this match object.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("Enable")
         public Boolean enable;
 
         /**
-         * <p>The field for matched objects in the system.</p>
+         * <p>The internal key for the match object.</p>
          * 
          * <strong>example:</strong>
          * <p>http.request.headers</p>
@@ -377,7 +403,7 @@ public class GetWafFilterResponseBody extends TeaModel {
         public String key;
 
         /**
-         * <p>The label of the matched object.</p>
+         * <p>The label for the match object.</p>
          * 
          * <strong>example:</strong>
          * <p>Header</p>
@@ -386,22 +412,28 @@ public class GetWafFilterResponseBody extends TeaModel {
         public String label;
 
         /**
-         * <p>The logical conditions.</p>
+         * <p>A list of logical operators that define the matching conditions.</p>
          */
         @NameInMap("Logics")
         public java.util.List<GetWafFilterResponseBodyFilterFieldsLogics> logics;
 
+        /**
+         * <p>The minimum plan that supports this match object, provided the current plan does not.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>high</p>
+         */
         @NameInMap("MinPlan")
         public String minPlan;
 
         /**
-         * <p>The selector, which defines how to select a matched object.</p>
+         * <p>The selector, which defines how to select the match object.</p>
          */
         @NameInMap("Selector")
         public GetWafFilterResponseBodyFilterFieldsSelector selector;
 
         /**
-         * <p>Indicates whether the matched object contains a subfield.</p>
+         * <p>Indicates whether the match object includes subfields.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -410,7 +442,7 @@ public class GetWafFilterResponseBody extends TeaModel {
         public Boolean sub;
 
         /**
-         * <p>The tip on how to enter a subfield.</p>
+         * <p>A hint for entering the subfield value.</p>
          * 
          * <strong>example:</strong>
          * <p>e.g. Content-Type</p>
@@ -491,13 +523,13 @@ public class GetWafFilterResponseBody extends TeaModel {
 
     public static class GetWafFilterResponseBodyFilter extends TeaModel {
         /**
-         * <p>The matched objects and related properties.</p>
+         * <p>A list of match objects and their properties.</p>
          */
         @NameInMap("Fields")
         public java.util.List<GetWafFilterResponseBodyFilterFields> fields;
 
         /**
-         * <p>The WAF rule category.</p>
+         * <p>The phase at which the WAF processes requests.</p>
          * 
          * <strong>example:</strong>
          * <p>http_bot</p>
@@ -506,7 +538,7 @@ public class GetWafFilterResponseBody extends TeaModel {
         public String phase;
 
         /**
-         * <p>The condition for matching incoming requests.</p>
+         * <p>The target of the matching engine.</p>
          * 
          * <strong>example:</strong>
          * <p>characteristics</p>

@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListCacheReserveInstancesResponseBody extends TeaModel {
     /**
-     * <p>The cache reserve instances.</p>
+     * <p>A list of cache reserve instances.</p>
      */
     @NameInMap("InstanceInfo")
     public java.util.List<ListCacheReserveInstancesResponseBodyInstanceInfo> instanceInfo;
 
     /**
-     * <p>Page number. Default value: <strong>1</strong>.</p>
+     * <p>The page number of the returned data.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -20,7 +20,7 @@ public class ListCacheReserveInstancesResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>Page size, default <strong>500</strong>, range: <strong>1~500</strong>.</p>
+     * <p>The number of entries returned per page.</p>
      * 
      * <strong>example:</strong>
      * <p>500</p>
@@ -29,7 +29,7 @@ public class ListCacheReserveInstancesResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>Request ID.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>65C66B7B-671A-8297-9187-2R5477247B76</p>
@@ -38,7 +38,7 @@ public class ListCacheReserveInstancesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Total count.</p>
+     * <p>The total number of entries.</p>
      * 
      * <strong>example:</strong>
      * <p>16</p>
@@ -47,7 +47,7 @@ public class ListCacheReserveInstancesResponseBody extends TeaModel {
     public Integer totalCount;
 
     /**
-     * <p>Total pages.</p>
+     * <p>The total number of pages.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -110,7 +110,7 @@ public class ListCacheReserveInstancesResponseBody extends TeaModel {
 
     public static class ListCacheReserveInstancesResponseBodyInstanceInfo extends TeaModel {
         /**
-         * <p>Cache reserve capacity. Unit: GB.</p>
+         * <p>The cache reserve capacity, in GB.</p>
          * 
          * <strong>example:</strong>
          * <p>512000</p>
@@ -119,7 +119,7 @@ public class ListCacheReserveInstancesResponseBody extends TeaModel {
         public Long cacheReserveCapacity;
 
         /**
-         * <p>Cache reserve usage region.</p>
+         * <p>The region where the cache reserve instance is used.</p>
          * 
          * <strong>example:</strong>
          * <p>HK</p>
@@ -131,7 +131,7 @@ public class ListCacheReserveInstancesResponseBody extends TeaModel {
         public String chargeType;
 
         /**
-         * <p>Instance purchase time.</p>
+         * <p>The time when the instance was created.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-04-12T05:41:51Z</p>
@@ -140,7 +140,7 @@ public class ListCacheReserveInstancesResponseBody extends TeaModel {
         public String createTime;
 
         /**
-         * <p>Duration of the instance purchase, unit: months.</p>
+         * <p>The purchase duration of the instance, in months.</p>
          * 
          * <strong>example:</strong>
          * <p>3</p>
@@ -149,7 +149,7 @@ public class ListCacheReserveInstancesResponseBody extends TeaModel {
         public Integer duration;
 
         /**
-         * <p>Instance expiration time.</p>
+         * <p>The expiration time of the instance.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-10-05T16:00:00Z</p>
@@ -158,7 +158,7 @@ public class ListCacheReserveInstancesResponseBody extends TeaModel {
         public String expireTime;
 
         /**
-         * <p>Instance ID.</p>
+         * <p>The instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>sp-xcdn-96wblslz****</p>
@@ -167,12 +167,16 @@ public class ListCacheReserveInstancesResponseBody extends TeaModel {
         public String instanceId;
 
         /**
-         * <p>The status of the cache reserve instance. Valid values:</p>
+         * <p>The status of the instance. Valid values:</p>
          * <ul>
-         * <li><strong>online</strong>: The instance is in service.</li>
-         * <li><strong>offline</strong>: The instance has expired within an allowable period. In this state, it is unavailable.</li>
-         * <li><strong>disable</strong>: The instance has been released.</li>
-         * <li><strong>overdue</strong>: The instance has been stopped due to overdue payments.</li>
+         * <li><p><strong>online</strong>: The instance is running normally.</p>
+         * </li>
+         * <li><p><strong>offline</strong>: The instance has expired and is unavailable but remains within the grace period.</p>
+         * </li>
+         * <li><p><strong>disable</strong>: The instance is disabled.</p>
+         * </li>
+         * <li><p><strong>overdue</strong>: The instance is suspended due to an overdue payment.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateImageTransformResponseBody extends TeaModel {
     /**
-     * <p>Request ID.</p>
+     * <p>The unique ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>04F0F334-1335-436C-A1D7-6C044FE73368</p>

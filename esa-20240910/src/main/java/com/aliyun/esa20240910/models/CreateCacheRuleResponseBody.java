@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateCacheRuleResponseBody extends TeaModel {
     /**
-     * <p>Configuration ID.</p>
+     * <p>The ID of the configuration.</p>
      * 
      * <strong>example:</strong>
      * <p>352816096987136</p>
@@ -14,7 +14,7 @@ public class CreateCacheRuleResponseBody extends TeaModel {
     public Long configId;
 
     /**
-     * <p>Request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>04F0F334-1335-436C-A1D7-6C044FE73368</p>

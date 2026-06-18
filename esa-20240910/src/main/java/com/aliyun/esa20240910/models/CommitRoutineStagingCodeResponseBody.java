@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CommitRoutineStagingCodeResponseBody extends TeaModel {
     /**
-     * <p>The version number of the newly generated code.</p>
+     * <p>The newly generated code version number.</p>
      * 
      * <strong>example:</strong>
      * <p>1710120201067203242</p>

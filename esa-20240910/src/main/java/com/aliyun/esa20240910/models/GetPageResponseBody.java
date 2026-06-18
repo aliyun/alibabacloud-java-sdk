@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetPageResponseBody extends TeaModel {
     /**
-     * <p>The Base64-encoded content of the error page. The content type is specified by the Content-Type field.</p>
+     * <p>The Base64-encoded content of the custom response page.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class GetPageResponseBody extends TeaModel {
     public String content;
 
     /**
-     * <p>The Content-Type field in the HTTP header.</p>
+     * <p>The value for the page\&quot;s Content-Type HTTP header.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,7 +25,7 @@ public class GetPageResponseBody extends TeaModel {
     public String contentType;
 
     /**
-     * <p>The description of the custom error page.</p>
+     * <p>The description of the custom response page.</p>
      * 
      * <strong>example:</strong>
      * <p>a custom deny page</p>
@@ -34,7 +34,7 @@ public class GetPageResponseBody extends TeaModel {
     public String description;
 
     /**
-     * <p>The ID of the custom error page.<a href="~~2850223~~"></a></p>
+     * <p>The ID of the custom response page.</p>
      * 
      * <strong>example:</strong>
      * <p>50000001</p>
@@ -70,11 +70,14 @@ public class GetPageResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The sites to which the page is applied.</p>
+     */
     @NameInMap("SiteIds")
     public java.util.List<Long> siteIds;
 
     /**
-     * <p>The time when the custom error page was last modified.</p>
+     * <p>The time the custom response page was last modified.</p>
      * 
      * <strong>example:</strong>
      * <p>2024-01-01T00:00:00Z</p>

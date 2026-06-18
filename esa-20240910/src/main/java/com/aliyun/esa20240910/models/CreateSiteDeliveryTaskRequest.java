@@ -5,12 +5,16 @@ import com.aliyun.tea.*;
 
 public class CreateSiteDeliveryTaskRequest extends TeaModel {
     /**
-     * <p>The log category. Valid values:</p>
+     * <p>The business type. Valid values:</p>
      * <ul>
-     * <li><strong>dcdn_log_access_l1</strong> (default): access logs.</li>
-     * <li><strong>dcdn_log_er</strong>: Edge Routine logs.</li>
-     * <li><strong>dcdn_log_waf</strong>: firewall logs.</li>
-     * <li><strong>dcdn_log_ipa</strong>: TCP/UDP proxy logs.</li>
+     * <li><p><strong>dcdn_log_access_l1</strong> (default): access log.</p>
+     * </li>
+     * <li><p><strong>dcdn_log_er</strong>: edge function log.</p>
+     * </li>
+     * <li><p><strong>dcdn_log_waf</strong>: WAF protection log.</p>
+     * </li>
+     * <li><p><strong>dcdn_log_ipa</strong>: Layer-4 acceleration log.</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -23,8 +27,10 @@ public class CreateSiteDeliveryTaskRequest extends TeaModel {
     /**
      * <p>The data center. Valid values:</p>
      * <ul>
-     * <li>cn: the Chinese mainland.</li>
-     * <li>oversea: outside the Chinese mainland.</li>
+     * <li><p><strong>cn</strong>: Chinese mainland.</p>
+     * </li>
+     * <li><p><strong>oversea</strong>: regions outside the Chinese mainland.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -34,14 +40,20 @@ public class CreateSiteDeliveryTaskRequest extends TeaModel {
     public String dataCenter;
 
     /**
-     * <p>The destination of the delivery. Valid values:</p>
+     * <p>The type of the delivery destination. Valid values:</p>
      * <ul>
-     * <li>sls: Alibaba Cloud Simple Log Service (SLS).</li>
-     * <li>http: HTTP server.</li>
-     * <li>aws3: Amazon Simple Storage Service (S3).</li>
-     * <li>oss: Alibaba Cloud Object Storage Service (OSS).</li>
-     * <li>kafka: Kafka.</li>
-     * <li>aws3cmpt: S3-compatible storage service.</li>
+     * <li><p><strong>sls</strong>: Log Service.</p>
+     * </li>
+     * <li><p><strong>http</strong>: an HTTP service.</p>
+     * </li>
+     * <li><p><strong>aws3</strong>: Amazon S3.</p>
+     * </li>
+     * <li><p><strong>oss</strong>: Object Storage Service.</p>
+     * </li>
+     * <li><p><strong>kafka</strong>: a Kafka service.</p>
+     * </li>
+     * <li><p><strong>aws3cmpt</strong>: an Amazon S3-compatible service.</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -52,7 +64,7 @@ public class CreateSiteDeliveryTaskRequest extends TeaModel {
     public String deliveryType;
 
     /**
-     * <p>The discard rate. Default value: 0.</p>
+     * <p>The discard rate. If you do not specify this parameter, the default value 0 is used.</p>
      * 
      * <strong>example:</strong>
      * <p>0.0</p>
@@ -61,7 +73,7 @@ public class CreateSiteDeliveryTaskRequest extends TeaModel {
     public Float discardRate;
 
     /**
-     * <p>The log fields, which are separated by commas (,).</p>
+     * <p>The log fields for delivery. Separate multiple fields with a comma (,).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -74,31 +86,31 @@ public class CreateSiteDeliveryTaskRequest extends TeaModel {
     public String filterVer;
 
     /**
-     * <p>The configurations for delivery to an HTTP server.</p>
+     * <p>The parameters for delivering logs to an HTTP server.</p>
      */
     @NameInMap("HttpDelivery")
     public CreateSiteDeliveryTaskRequestHttpDelivery httpDelivery;
 
     /**
-     * <p>The configurations for delivery to Kafka.</p>
+     * <p>The parameters for delivering logs to a Kafka cluster.</p>
      */
     @NameInMap("KafkaDelivery")
     public CreateSiteDeliveryTaskRequestKafkaDelivery kafkaDelivery;
 
     /**
-     * <p>The configurations for delivery to OSS.</p>
+     * <p>The parameters for delivering logs to Object Storage Service (OSS).</p>
      */
     @NameInMap("OssDelivery")
     public CreateSiteDeliveryTaskRequestOssDelivery ossDelivery;
 
     /**
-     * <p>The configurations for delivery to Amazon S3 or an S3-compatible service.</p>
+     * <p>The parameters for delivering logs to an Amazon S3 bucket or an S3-compatible service.</p>
      */
     @NameInMap("S3Delivery")
     public CreateSiteDeliveryTaskRequestS3Delivery s3Delivery;
 
     /**
-     * <p>The website ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation.</p>
+     * <p>The ID of the site. You can call the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation to obtain the ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -108,13 +120,13 @@ public class CreateSiteDeliveryTaskRequest extends TeaModel {
     public Long siteId;
 
     /**
-     * <p>The configurations for delivery to SLS.</p>
+     * <p>The parameters for delivering logs to Log Service.</p>
      */
     @NameInMap("SlsDelivery")
     public CreateSiteDeliveryTaskRequestSlsDelivery slsDelivery;
 
     /**
-     * <p>The name of the delivery task.</p>
+     * <p>The task name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -234,9 +246,9 @@ public class CreateSiteDeliveryTaskRequest extends TeaModel {
 
     public static class CreateSiteDeliveryTaskRequestHttpDeliveryStandardAuthParam extends TeaModel {
         /**
-         * <p>The validity period of the signature.</p>
+         * <p>The encryption timeout period.</p>
          * <blockquote>
-         * <p> The value must be greater than 0. We recommend that you specify a value that is greater than 300.</p>
+         * <p>The value must be greater than 0. We recommend that you set the value to 300 or greater.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -255,7 +267,7 @@ public class CreateSiteDeliveryTaskRequest extends TeaModel {
         public String privateKey;
 
         /**
-         * <p>The URI path for server authentication.</p>
+         * <p>The URI path for standard authentication.</p>
          * 
          * <strong>example:</strong>
          * <p>v1/log/upload</p>
@@ -296,7 +308,7 @@ public class CreateSiteDeliveryTaskRequest extends TeaModel {
 
     public static class CreateSiteDeliveryTaskRequestHttpDelivery extends TeaModel {
         /**
-         * <p>The compression method. By default, data is not compressed.</p>
+         * <p>The compression method. By default, logs are delivered uncompressed.</p>
          * 
          * <strong>example:</strong>
          * <p>gzip</p>
@@ -305,7 +317,7 @@ public class CreateSiteDeliveryTaskRequest extends TeaModel {
         public String compress;
 
         /**
-         * <p>The address of the HTTP server.</p>
+         * <p>The URL of the destination HTTP server.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="http://xxx.aliyun.com/v1/log/upload">http://xxx.aliyun.com/v1/log/upload</a></p>
@@ -314,7 +326,7 @@ public class CreateSiteDeliveryTaskRequest extends TeaModel {
         public String destUrl;
 
         /**
-         * <p>The custom headers.</p>
+         * <p>The custom HTTP request headers.</p>
          */
         @NameInMap("HeaderParam")
         public java.util.Map<String, HttpDeliveryHeaderParamValue> headerParam;
@@ -323,7 +335,7 @@ public class CreateSiteDeliveryTaskRequest extends TeaModel {
         public Boolean lastLogSplit;
 
         /**
-         * <p>The prefix of the log delivery package.</p>
+         * <p>The prefix of the delivered log package.</p>
          * 
          * <strong>example:</strong>
          * <p>cdnVersion:1.0</p>
@@ -332,7 +344,7 @@ public class CreateSiteDeliveryTaskRequest extends TeaModel {
         public String logBodyPrefix;
 
         /**
-         * <p>The suffix of the log delivery package.</p>
+         * <p>The suffix of the delivered log package.</p>
          * 
          * <strong>example:</strong>
          * <p>cdnVersion:1.0</p>
@@ -347,7 +359,7 @@ public class CreateSiteDeliveryTaskRequest extends TeaModel {
         public String logSplitWords;
 
         /**
-         * <p>The maximum size of data for each delivery. Unit: MB.</p>
+         * <p>The maximum size of a delivery, in MB.</p>
          * 
          * <strong>example:</strong>
          * <p>5</p>
@@ -356,7 +368,7 @@ public class CreateSiteDeliveryTaskRequest extends TeaModel {
         public Long maxBatchMB;
 
         /**
-         * <p>The maximum number of entries for each delivery.</p>
+         * <p>The maximum number of log entries per delivery.</p>
          * 
          * <strong>example:</strong>
          * <p>1000</p>
@@ -380,7 +392,7 @@ public class CreateSiteDeliveryTaskRequest extends TeaModel {
         public java.util.Map<String, HttpDeliveryQueryParamValue> queryParam;
 
         /**
-         * <p>Specifies whether to use server authentication.</p>
+         * <p>Specifies whether to use standard authentication.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -389,13 +401,13 @@ public class CreateSiteDeliveryTaskRequest extends TeaModel {
         public Boolean standardAuthOn;
 
         /**
-         * <p>The authentication configurations.</p>
+         * <p>The standard authentication parameters.</p>
          */
         @NameInMap("StandardAuthParam")
         public CreateSiteDeliveryTaskRequestHttpDeliveryStandardAuthParam standardAuthParam;
 
         /**
-         * <p>The timeout period. Unit: seconds.</p>
+         * <p>The timeout period, in seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -541,7 +553,7 @@ public class CreateSiteDeliveryTaskRequest extends TeaModel {
         public String balancer;
 
         /**
-         * <p>The brokers.</p>
+         * <p>The array of servers.</p>
          */
         @NameInMap("Brokers")
         public java.util.List<String> brokers;
@@ -550,7 +562,7 @@ public class CreateSiteDeliveryTaskRequest extends TeaModel {
          * <p>The compression method.</p>
          * 
          * <strong>example:</strong>
-         * <p>gzip</p>
+         * <p>lz4</p>
          */
         @NameInMap("Compress")
         public String compress;
@@ -565,7 +577,7 @@ public class CreateSiteDeliveryTaskRequest extends TeaModel {
         public String machanismType;
 
         /**
-         * <p>The password.</p>
+         * <p>The password for encryption.</p>
          * 
          * <strong>example:</strong>
          * <hr>
@@ -574,7 +586,7 @@ public class CreateSiteDeliveryTaskRequest extends TeaModel {
         public String password;
 
         /**
-         * <p>The topic.</p>
+         * <p>The Kafka topic.</p>
          * 
          * <strong>example:</strong>
          * <p>dqc_test2</p>
@@ -583,7 +595,7 @@ public class CreateSiteDeliveryTaskRequest extends TeaModel {
         public String topic;
 
         /**
-         * <p>Specifies whether to enable authentication.</p>
+         * <p>Specifies whether to enable user authentication.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -673,7 +685,7 @@ public class CreateSiteDeliveryTaskRequest extends TeaModel {
 
     public static class CreateSiteDeliveryTaskRequestOssDelivery extends TeaModel {
         /**
-         * <p>The ID of your Alibaba Cloud account.</p>
+         * <p>The Alibaba Cloud account ID.</p>
          * 
          * <strong>example:</strong>
          * <p>1234***</p>
@@ -682,7 +694,7 @@ public class CreateSiteDeliveryTaskRequest extends TeaModel {
         public String aliuid;
 
         /**
-         * <p>The name of the OSS bucket.</p>
+         * <p>The bucket name.</p>
          * 
          * <strong>example:</strong>
          * <p>test_rlog</p>
@@ -691,19 +703,19 @@ public class CreateSiteDeliveryTaskRequest extends TeaModel {
         public String bucketName;
 
         /**
-         * <p>The prefix of the path in which you want to store logs.</p>
+         * <p>The prefix of the object key when logs are stored in the OSS bucket.</p>
          * 
          * <strong>example:</strong>
-         * <p>logriver-test/log</p>
+         * <p>test/</p>
          */
         @NameInMap("PrefixPath")
         public String prefixPath;
 
         /**
-         * <p>The region in which the bucket is located.</p>
+         * <p>The region of the OSS bucket.</p>
          * 
          * <strong>example:</strong>
-         * <p>cn-beijing</p>
+         * <p>cn-shanghai</p>
          */
         @NameInMap("Region")
         public String region;
@@ -749,7 +761,7 @@ public class CreateSiteDeliveryTaskRequest extends TeaModel {
 
     public static class CreateSiteDeliveryTaskRequestS3Delivery extends TeaModel {
         /**
-         * <p>The access key ID of your Amazon S3 account.</p>
+         * <p>The AccessKey ID of the Alibaba Cloud account or RAM user.</p>
          * 
          * <strong>example:</strong>
          * <p>yourAccessKeyID</p>
@@ -758,7 +770,7 @@ public class CreateSiteDeliveryTaskRequest extends TeaModel {
         public String accessKey;
 
         /**
-         * <p>The directory in the bucket.</p>
+         * <p>The bucket path.</p>
          * 
          * <strong>example:</strong>
          * <p>logriver-test/log</p>
@@ -767,7 +779,10 @@ public class CreateSiteDeliveryTaskRequest extends TeaModel {
         public String bucketPath;
 
         /**
-         * <p>The endpoint. This parameter is required when the S3Cmpt parameter is set to true.</p>
+         * <p>The endpoint of the server. This parameter is required when S3Cmpt is set to true.</p>
+         * <blockquote>
+         * <p>For S3-compatible services, you must configure DNS resolution for a domain name that is spliced by the bucket and endpoint. For example, if Endpoint is set to example.com and Bucket is set to demo, the actual delivery address is demo.example.com.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p><a href="https://s3.oss-cn-hangzhou.aliyuncs.com">https://s3.oss-cn-hangzhou.aliyuncs.com</a></p>
@@ -776,7 +791,7 @@ public class CreateSiteDeliveryTaskRequest extends TeaModel {
         public String endpoint;
 
         /**
-         * <p>The prefix of the path in which you want to store logs.</p>
+         * <p>The storage path prefix.</p>
          * 
          * <strong>example:</strong>
          * <p>logriver-test/log</p>
@@ -785,7 +800,7 @@ public class CreateSiteDeliveryTaskRequest extends TeaModel {
         public String prefixPath;
 
         /**
-         * <p>The region ID of the service.</p>
+         * <p>The region where the service is located.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-beijing</p>
@@ -794,7 +809,7 @@ public class CreateSiteDeliveryTaskRequest extends TeaModel {
         public String region;
 
         /**
-         * <p>Specifies whether the service is compatible with Amazon S3.</p>
+         * <p>Specifies whether the service is S3-compatible.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -803,7 +818,7 @@ public class CreateSiteDeliveryTaskRequest extends TeaModel {
         public Boolean s3Cmpt;
 
         /**
-         * <p>The secret access key of your Amazon S3 account.</p>
+         * <p>The AccessKey secret of the S3 account.</p>
          * 
          * <strong>example:</strong>
          * <p>LDSIKh***</p>
@@ -898,7 +913,7 @@ public class CreateSiteDeliveryTaskRequest extends TeaModel {
 
     public static class CreateSiteDeliveryTaskRequestSlsDelivery extends TeaModel {
         /**
-         * <p>The name of the Logstore.</p>
+         * <p>The name of the Logstore in Log Service.</p>
          * 
          * <strong>example:</strong>
          * <p>accesslog-test</p>
@@ -907,7 +922,7 @@ public class CreateSiteDeliveryTaskRequest extends TeaModel {
         public String SLSLogStore;
 
         /**
-         * <p>The name of the SLS project.</p>
+         * <p>The name of the Log Service project.</p>
          * 
          * <strong>example:</strong>
          * <p>dcdn-test20240417</p>
@@ -916,7 +931,7 @@ public class CreateSiteDeliveryTaskRequest extends TeaModel {
         public String SLSProject;
 
         /**
-         * <p>The region in which the SLS project resides.</p>
+         * <p>The region of the Log Service project.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>

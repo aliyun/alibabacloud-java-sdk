@@ -16,7 +16,7 @@ public class DescribePurgeTasksRequest extends TeaModel {
     /**
      * <p>The end time. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
      * <blockquote>
-     * <p> The end time must be later than the start time.</p>
+     * <p>The end time must be later than the start time.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -64,9 +64,12 @@ public class DescribePurgeTasksRequest extends TeaModel {
     /**
      * <p>The task status. Valid values:</p>
      * <ul>
-     * <li><strong>Complete</strong>: The task is complete.</li>
-     * <li><strong>Refreshing</strong>: The task is in progress.</li>
-     * <li><strong>Failed</strong>: The task failed.</li>
+     * <li><p><strong>Complete</strong>: The task is complete.</p>
+     * </li>
+     * <li><p><strong>Refreshing</strong>: The task is in progress.</p>
+     * </li>
+     * <li><p><strong>Failed</strong>: The task failed.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -78,12 +81,18 @@ public class DescribePurgeTasksRequest extends TeaModel {
     /**
      * <p>The task type. Valid values:</p>
      * <ul>
-     * <li><strong>file</strong> (default): purges the cache by file.</li>
-     * <li><strong>cachetag</strong>: purges the cache by cache tag.</li>
-     * <li><strong>directory</strong>: purges the cache by directory.</li>
-     * <li><strong>ignoreParams</strong>: purges the cache by URL with specified parameters ignored.</li>
-     * <li><strong>hostname</strong>: purges the cache by hostname.</li>
-     * <li><strong>purgeall</strong>: purges all cache.</li>
+     * <li><p><strong>file</strong> (default): purges the cache by file.</p>
+     * </li>
+     * <li><p><strong>cachetag</strong>: purges the cache by cache tag.</p>
+     * </li>
+     * <li><p><strong>directory</strong>: purges the cache by directory.</p>
+     * </li>
+     * <li><p><strong>ignoreParams</strong>: purges the cache by URL with specified parameters ignored.</p>
+     * </li>
+     * <li><p><strong>hostname</strong>: purges the cache by hostname.</p>
+     * </li>
+     * <li><p><strong>purgeall</strong>: purges all cache.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

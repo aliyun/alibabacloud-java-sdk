@@ -12,10 +12,12 @@ public class UpdateOriginProtectionRequest extends TeaModel {
     public String autoConfirmIPList;
 
     /**
-     * <p>The IP convergence status.</p>
+     * <p>The origin fetch convergence switch.</p>
      * <ul>
-     * <li>on</li>
-     * <li>off</li>
+     * <li><p>on: Enable origin fetch convergence.</p>
+     * </li>
+     * <li><p>off: Disable origin fetch convergence.</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -26,7 +28,7 @@ public class UpdateOriginProtectionRequest extends TeaModel {
     public String originConverge;
 
     /**
-     * <p>The website ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation.</p>
+     * <p>The site ID. Call the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> API to get it.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

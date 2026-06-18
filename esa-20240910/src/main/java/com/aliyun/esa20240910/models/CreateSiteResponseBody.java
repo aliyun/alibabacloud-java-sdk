@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateSiteResponseBody extends TeaModel {
     /**
-     * <p>The nameservers assigned by ESA. The values are separated by commas (,). This parameter is returned if you set AccessType to NS. In this case, you must change the nameservers of your domain to the assigned ones. Then, you can verify the domain ownership and activate your website.</p>
+     * <p>A comma-separated list of name servers assigned to the site. This parameter is returned only if the site uses NS-based access. To activate the site, you must change your domain\&quot;s DNS servers to these name servers. This verifies your ownership of the site and activates it.</p>
      * 
      * <strong>example:</strong>
      * <p>ns1.example.com,ns2.example.com</p>
@@ -23,7 +23,7 @@ public class CreateSiteResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The website ID.</p>
+     * <p>The ID of the site.</p>
      * 
      * <strong>example:</strong>
      * <p>1234567890123</p>
@@ -32,7 +32,7 @@ public class CreateSiteResponseBody extends TeaModel {
     public Long siteId;
 
     /**
-     * <p>The verification code for the website. If you set AccessType to CNAME, you need to add a TXT record whose hostname is <strong>_esaauth.[websiteDomainName]</strong> and record value is the value of VerifyCode to the DNS records of your domain. ****Then, you can verify the domain ownership and activate your website.</p>
+     * <p>The verification code for the site. This parameter is returned only if the site uses CNAME-based access. To activate the site, you must add a TXT record to your domain\&quot;s DNS settings. Set the record\&quot;s host to <strong>_esaauth.[your_site_name]</strong> and its value to this <strong>verification code</strong>. This verifies your ownership of the site and activates it.</p>
      * 
      * <strong>example:</strong>
      * <p>verify_aah9dioasmov****</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateTransportLayerApplicationShrinkRequest extends TeaModel {
     /**
-     * <p>Transport layer application ID, which can be obtained by calling the <a href="~~ListTransportLayerApplications~~">ListTransportLayerApplications</a> interface.</p>
+     * <p>The transport layer application ID. You can obtain this ID by calling the <a href="~~ListTransportLayerApplications~~">ListTransportLayerApplications</a> operation.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,10 +15,12 @@ public class UpdateTransportLayerApplicationShrinkRequest extends TeaModel {
     public Long applicationId;
 
     /**
-     * <p>Whether to enable China mainland network access optimization, default is disabled. Value range:</p>
+     * <p>Specifies whether to enable cross-border optimization for network access from the Chinese mainland. This feature is disabled by default. Valid values:</p>
      * <ul>
-     * <li>on: Enabled.</li>
-     * <li>off: Disabled.</li>
+     * <li><p>on: Enables the feature.</p>
+     * </li>
+     * <li><p>off: Disables the feature.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -28,10 +30,12 @@ public class UpdateTransportLayerApplicationShrinkRequest extends TeaModel {
     public String crossBorderOptimization;
 
     /**
-     * <p>IP access rule switch. When enabled, the IP access rules in WAF will take effect on the transport layer application.</p>
+     * <p>Specifies whether to enable IP access rules. If enabled, the IP access rules in WAF apply to the transport layer application. Valid values:</p>
      * <ul>
-     * <li>on: Enabled.</li>
-     * <li>off: Disabled.</li>
+     * <li><p>on: Enables the feature.</p>
+     * </li>
+     * <li><p>off: Disables the feature.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -41,7 +45,7 @@ public class UpdateTransportLayerApplicationShrinkRequest extends TeaModel {
     public String ipAccessRule;
 
     /**
-     * <p>IPv6 switch.</p>
+     * <p>Specifies whether to enable IPv6. Valid values: <code>on</code> and <code>off</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>on</p>
@@ -53,13 +57,13 @@ public class UpdateTransportLayerApplicationShrinkRequest extends TeaModel {
     public String keepAliveProtection;
 
     /**
-     * <p>Forwarding rule list. Details of each rule. Except for the comment, all other parameters are required.</p>
+     * <p>A list of forwarding rules. For each rule, all parameters are required except for <code>Comment</code>.</p>
      */
     @NameInMap("Rules")
     public String rulesShrink;
 
     /**
-     * <p>Site ID, which can be obtained by calling the <a href="~~ListSites~~">ListSites</a> interface.</p>
+     * <p>The site ID. You can obtain this ID by calling the <a href="~~ListSites~~">ListSites</a> operation.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

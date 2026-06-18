@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeKvAccountStatusResponseBody extends TeaModel {
     /**
-     * <p>The request ID.</p>
+     * <p>Request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>EEEBE525-F576-1196-8DAF-2D70CA3F4D2F</p>
@@ -14,10 +14,12 @@ public class DescribeKvAccountStatusResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether Edge KV is activated for the Alibaba Cloud account.</p>
+     * <p>Account status.</p>
      * <ul>
-     * <li><strong>online</strong></li>
-     * <li><strong>offline</strong></li>
+     * <li><p><strong>online</strong>: Enabled.</p>
+     * </li>
+     * <li><p><strong>offline</strong>: Disabled.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

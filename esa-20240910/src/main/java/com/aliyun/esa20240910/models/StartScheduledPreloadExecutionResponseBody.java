@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class StartScheduledPreloadExecutionResponseBody extends TeaModel {
     /**
-     * <p>The ID of the Alibaba Cloud account.</p>
+     * <p>Alibaba Cloud account ID.</p>
      * 
      * <strong>example:</strong>
      * <p>15685865xxx14622</p>
@@ -14,7 +14,7 @@ public class StartScheduledPreloadExecutionResponseBody extends TeaModel {
     public String aliUid;
 
     /**
-     * <p>The end time of the prefetch plan.</p>
+     * <p>End time of the scheduled prefetch plan.</p>
      * 
      * <strong>example:</strong>
      * <p>2024-05-31T18:10:48.849+08:00</p>
@@ -23,7 +23,7 @@ public class StartScheduledPreloadExecutionResponseBody extends TeaModel {
     public String endTime;
 
     /**
-     * <p>The ID of the prefetch plan.</p>
+     * <p>Prefetch plan ID.</p>
      * 
      * <strong>example:</strong>
      * <p>665d3b48621bccf3fe29e1a7</p>
@@ -32,7 +32,7 @@ public class StartScheduledPreloadExecutionResponseBody extends TeaModel {
     public String id;
 
     /**
-     * <p>The time interval between each batch execution. Unit: seconds.</p>
+     * <p>Time interval between batches of scheduled prefetches, in seconds.</p>
      * 
      * <strong>example:</strong>
      * <p>60</p>
@@ -41,7 +41,7 @@ public class StartScheduledPreloadExecutionResponseBody extends TeaModel {
     public Integer interval;
 
     /**
-     * <p>The ID of the prefetch task.</p>
+     * <p>Prefetch task ID.</p>
      * 
      * <strong>example:</strong>
      * <p>665d3af3621bccf3fe29e1a4</p>
@@ -50,7 +50,7 @@ public class StartScheduledPreloadExecutionResponseBody extends TeaModel {
     public String jobId;
 
     /**
-     * <p>The request ID.</p>
+     * <p>Request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>65C66B7B-671A-8297-9187-2R5477247B76</p>
@@ -59,7 +59,7 @@ public class StartScheduledPreloadExecutionResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The number of URLs prefetched in each batch.</p>
+     * <p>Number of URLs per batch of scheduled prefetches.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -68,7 +68,7 @@ public class StartScheduledPreloadExecutionResponseBody extends TeaModel {
     public Integer sliceLen;
 
     /**
-     * <p>The start time of the prefetch plan.</p>
+     * <p>Start time of the scheduled prefetch plan.</p>
      * 
      * <strong>example:</strong>
      * <p>2024-05-31T17:10:48.849+08:00</p>
@@ -77,13 +77,18 @@ public class StartScheduledPreloadExecutionResponseBody extends TeaModel {
     public String startTime;
 
     /**
-     * <p>The status of the prefetch plan. Valid values:</p>
+     * <p>Status of the scheduled prefetch plan. Valid values:</p>
      * <ul>
-     * <li><strong>waiting</strong></li>
-     * <li><strong>running</strong></li>
-     * <li><strong>finished</strong></li>
-     * <li><strong>failed</strong></li>
-     * <li><strong>stopped</strong></li>
+     * <li><p><strong>waiting</strong>: Waiting to run.</p>
+     * </li>
+     * <li><p><strong>running</strong>: Running.</p>
+     * </li>
+     * <li><p><strong>finished</strong>: Completed.</p>
+     * </li>
+     * <li><p><strong>failed</strong>: Failed.</p>
+     * </li>
+     * <li><p><strong>stopped</strong>: Paused.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

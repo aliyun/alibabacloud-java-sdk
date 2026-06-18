@@ -14,7 +14,7 @@ public class ListSitesResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of websites per page.</p>
+     * <p>The number of sites to return on each page.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -32,13 +32,13 @@ public class ListSitesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The queried websites.</p>
+     * <p>A list of sites.</p>
      */
     @NameInMap("Sites")
     public java.util.List<ListSitesResponseBodySites> sites;
 
     /**
-     * <p>The total number of websites.</p>
+     * <p>The total count of sites.</p>
      * 
      * <strong>example:</strong>
      * <p>40</p>
@@ -93,10 +93,12 @@ public class ListSitesResponseBody extends TeaModel {
 
     public static class ListSitesResponseBodySites extends TeaModel {
         /**
-         * <p>The DNS setup for the website. Valid values:</p>
+         * <p>The access type. Valid values:</p>
          * <ul>
-         * <li><strong>NS</strong></li>
-         * <li><strong>CNAME</strong></li>
+         * <li><p><strong>NS</strong>: The site connects via NS.</p>
+         * </li>
+         * <li><p><strong>CNAME</strong>: The site connects via a CNAME record.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -106,7 +108,7 @@ public class ListSitesResponseBody extends TeaModel {
         public String accessType;
 
         /**
-         * <p>The CNAME of the website domain. If you use CNAME setup when you add your website to ESA, the value is the CNAME that you configured then.</p>
+         * <p>The CNAME suffix for the site. This suffix is required for CNAME record configuration.</p>
          * 
          * <strong>example:</strong>
          * <p>example.cname.com</p>
@@ -115,11 +117,14 @@ public class ListSitesResponseBody extends TeaModel {
         public String cnameZone;
 
         /**
-         * <p>The service location for the website. Valid values:</p>
+         * <p>The acceleration region. Valid values:</p>
          * <ul>
-         * <li><strong>domestic</strong>: the Chinese mainland</li>
-         * <li><strong>global</strong>: global</li>
-         * <li><strong>overseas</strong>: outside the Chinese mainland</li>
+         * <li><p><strong>domestic</strong>: Chinese mainland only.</p>
+         * </li>
+         * <li><p><strong>global</strong>: Global.</p>
+         * </li>
+         * <li><p><strong>overseas</strong>: Global (excluding Chinese mainland).</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -129,7 +134,7 @@ public class ListSitesResponseBody extends TeaModel {
         public String coverage;
 
         /**
-         * <p>The time when the website was added. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+         * <p>The time (UTC) when the site was created, in <code>yyyy-MM-ddTHH:mm:ssZ</code> format.</p>
          * 
          * <strong>example:</strong>
          * <p>2023-12-24T02:01:11Z</p>
@@ -138,7 +143,7 @@ public class ListSitesResponseBody extends TeaModel {
         public String createTime;
 
         /**
-         * <p>The ID of the plan associated with the website.</p>
+         * <p>The ID of the plan instance associated with the site.</p>
          * 
          * <strong>example:</strong>
          * <p>onBvtlmIyeXLbiDw81F9</p>
@@ -147,7 +152,7 @@ public class ListSitesResponseBody extends TeaModel {
         public String instanceId;
 
         /**
-         * <p>The nameservers assigned to the website domain, which are separated by commas (,).</p>
+         * <p>The list of name servers (NS) assigned to the site. Multiple name servers are separated by commas.</p>
          * 
          * <strong>example:</strong>
          * <p>male1-1.ialicdn.com,female1-1.ialicdn.com</p>
@@ -155,11 +160,29 @@ public class ListSitesResponseBody extends TeaModel {
         @NameInMap("NameServerList")
         public String nameServerList;
 
+        /**
+         * <p>The reason the site was disabled. Valid values:</p>
+         * <ul>
+         * <li><p><strong>expiration_ arrears</strong>: The plan has expired or payment is overdue.</p>
+         * </li>
+         * <li><p><strong>internally_disabled</strong>: Disabled by the system.</p>
+         * </li>
+         * <li><p><strong>missing_icp</strong>: The domain name is missing an ICP filing.</p>
+         * </li>
+         * <li><p><strong>content_violation</strong>: The site content violates regulations.</p>
+         * </li>
+         * <li><p><strong>proactively_disabled</strong>: The user disabled the site, or a usage cap was reached.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>expiration_ arrears</p>
+         */
         @NameInMap("OfflineReason")
         public String offlineReason;
 
         /**
-         * <p>The plan name.</p>
+         * <p>The name of the plan.</p>
          * 
          * <strong>example:</strong>
          * <p>plan-168656498****</p>
@@ -168,7 +191,7 @@ public class ListSitesResponseBody extends TeaModel {
         public String planName;
 
         /**
-         * <p>The plan associated with the website.</p>
+         * <p>The name of the plan specification.</p>
          * 
          * <strong>example:</strong>
          * <p>normal</p>
@@ -186,7 +209,7 @@ public class ListSitesResponseBody extends TeaModel {
         public String resourceGroupId;
 
         /**
-         * <p>The website ID.</p>
+         * <p>The ID of the site.</p>
          * 
          * <strong>example:</strong>
          * <p>123456789****</p>
@@ -195,7 +218,7 @@ public class ListSitesResponseBody extends TeaModel {
         public Long siteId;
 
         /**
-         * <p>The website name.</p>
+         * <p>The domain name.</p>
          * 
          * <strong>example:</strong>
          * <p>example.com</p>
@@ -204,12 +227,16 @@ public class ListSitesResponseBody extends TeaModel {
         public String siteName;
 
         /**
-         * <p>The website status. Valid values:</p>
+         * <p>The status. Valid values:</p>
          * <ul>
-         * <li><strong>pending</strong>: The website is to be configured.</li>
-         * <li><strong>active</strong>: The website is active.</li>
-         * <li><strong>offline</strong>: The website is suspended.</li>
-         * <li><strong>moved</strong>: The website has been added and verified by another Alibaba Cloud account.</li>
+         * <li><p><strong>pending</strong>: The site is awaiting configuration.</p>
+         * </li>
+         * <li><p><strong>active</strong>: The site is active.</p>
+         * </li>
+         * <li><p><strong>offline</strong>: The site is offline.</p>
+         * </li>
+         * <li><p><strong>moved</strong>: The site has moved to another instance.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -219,7 +246,7 @@ public class ListSitesResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The tags of the website.</p>
+         * <p>The tags associated with the site.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;tag1&quot;:&quot;value1&quot;}</p>
@@ -228,7 +255,7 @@ public class ListSitesResponseBody extends TeaModel {
         public java.util.Map<String, ?> tags;
 
         /**
-         * <p>The time when the website was updated. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+         * <p>The time (UTC) when the site was last updated, in <code>yyyy-MM-ddTHH:mm:ssZ</code> format.</p>
          * 
          * <strong>example:</strong>
          * <p>2023-12-24T02:01:11Z</p>
@@ -237,7 +264,7 @@ public class ListSitesResponseBody extends TeaModel {
         public String updateTime;
 
         /**
-         * <p>The code that is used to verify the website domain ownership. As part of the verification TXT record, this parameter is returned for websites that use CNAME setup.</p>
+         * <p>The TXT verification code for site ownership. For sites that connect via CNAME, you must configure this code.</p>
          * 
          * <strong>example:</strong>
          * <p>verify_d516cb3740f81f0cef77d162edd1****</p>
@@ -246,7 +273,7 @@ public class ListSitesResponseBody extends TeaModel {
         public String verifyCode;
 
         /**
-         * <p>The website visit time is represented in the ISO 8601 date format using UTC time, formatted as yyyy-MM-ddTHH:mm:ssZ.</p>
+         * <p>The time (UTC) when the site was last accessed, in <code>yyyy-MM-ddTHH:mm:ssZ</code> format.</p>
          * 
          * <strong>example:</strong>
          * <p>2023-12-24T02:01:11Z</p>

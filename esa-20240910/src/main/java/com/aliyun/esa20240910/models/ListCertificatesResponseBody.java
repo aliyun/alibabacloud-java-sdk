@@ -14,7 +14,7 @@ public class ListCertificatesResponseBody extends TeaModel {
     public Long pageNumber;
 
     /**
-     * <p>The number of entries per page.</p>
+     * <p>The number of entries to return on each page.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -32,13 +32,13 @@ public class ListCertificatesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The queried certificates.</p>
+     * <p>A list of certificate details.</p>
      */
     @NameInMap("Result")
     public java.util.List<ListCertificatesResponseBodyResult> result;
 
     /**
-     * <p>The website ID.</p>
+     * <p>The ID of the site.</p>
      * 
      * <strong>example:</strong>
      * <p>1234567890123</p>
@@ -47,7 +47,7 @@ public class ListCertificatesResponseBody extends TeaModel {
     public Long siteId;
 
     /**
-     * <p>The website name.</p>
+     * <p>The name of the site.</p>
      * 
      * <strong>example:</strong>
      * <p>example.com</p>
@@ -56,7 +56,7 @@ public class ListCertificatesResponseBody extends TeaModel {
     public String siteName;
 
     /**
-     * <p>The total number of entries returned.</p>
+     * <p>The total number of entries.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -127,7 +127,7 @@ public class ListCertificatesResponseBody extends TeaModel {
 
     public static class ListCertificatesResponseBodyResultDCV extends TeaModel {
         /**
-         * <p>The DCV ID.</p>
+         * <p>The ID of the DCV record.</p>
          * 
          * <strong>example:</strong>
          * <p>bababf7cdd1546a2ad04c0def1f4****</p>
@@ -136,7 +136,7 @@ public class ListCertificatesResponseBody extends TeaModel {
         public String id;
 
         /**
-         * <p>The DCV name. It is a TXT record name if Type is DNS or URL if Type is HTTP.</p>
+         * <p>The DCV key. For the <code>DNS</code> method, this is the name of the TXT record. For the <code>HTTP</code> method, this is the URL.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="http://www.example.com/.well-known/acme-challenge/pH20CqwS5L3ZnvkhI436DCzadKFuG7QcUcvB_4KsAow">http://www.example.com/.well-known/acme-challenge/pH20CqwS5L3ZnvkhI436DCzadKFuG7QcUcvB_4KsAow</a></p>
@@ -145,7 +145,7 @@ public class ListCertificatesResponseBody extends TeaModel {
         public String key;
 
         /**
-         * <p>The verification status.</p>
+         * <p>The validation status.</p>
          * 
          * <strong>example:</strong>
          * <p>pending</p>
@@ -154,7 +154,7 @@ public class ListCertificatesResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The DCV type. Valid values: DNS and HTTP.</p>
+         * <p>The DCV method. Valid values: <code>DNS</code> and <code>HTTP</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>HTTP</p>
@@ -163,7 +163,7 @@ public class ListCertificatesResponseBody extends TeaModel {
         public String type;
 
         /**
-         * <p>The DCV content.</p>
+         * <p>The DCV value.</p>
          * 
          * <strong>example:</strong>
          * <p>pH20CqwS5L3ZnvkhI436DCzadKFuG7QcUcvB_4KsAow.KfzYo4LH3EgOt7a73G-RqZkbR0eYtLfEUmtmqGmr4FQ</p>
@@ -220,7 +220,7 @@ public class ListCertificatesResponseBody extends TeaModel {
 
     public static class ListCertificatesResponseBodyResult extends TeaModel {
         /**
-         * <p>The error code returned for certificate application.</p>
+         * <p>The error code returned when a certificate application fails.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -229,7 +229,7 @@ public class ListCertificatesResponseBody extends TeaModel {
         public Long applyCode;
 
         /**
-         * <p>The error message returned for certificate application.</p>
+         * <p>The error message returned when a certificate application fails.</p>
          * 
          * <strong>example:</strong>
          * <p>canceled</p>
@@ -238,7 +238,7 @@ public class ListCertificatesResponseBody extends TeaModel {
         public String applyMessage;
 
         /**
-         * <p>The certificate ID on Certificate Management Service.</p>
+         * <p>The ID of the cloud certificate.</p>
          * 
          * <strong>example:</strong>
          * <p>30000569</p>
@@ -247,7 +247,7 @@ public class ListCertificatesResponseBody extends TeaModel {
         public String casId;
 
         /**
-         * <p>The Common Name of the certificate.</p>
+         * <p>The common name of the certificate.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="http://www.example.com">www.example.com</a></p>
@@ -265,7 +265,7 @@ public class ListCertificatesResponseBody extends TeaModel {
         public String createTime;
 
         /**
-         * <p>The Domain Control Validation (DCV) information.</p>
+         * <p>The domain control validation (DCV) information.</p>
          */
         @NameInMap("DCV")
         public java.util.List<ListCertificatesResponseBodyResultDCV> DCV;
@@ -280,7 +280,7 @@ public class ListCertificatesResponseBody extends TeaModel {
         public String fingerprintSha256;
 
         /**
-         * <p>The certificate ID on ESA.</p>
+         * <p>The ID of the certificate.</p>
          * 
          * <strong>example:</strong>
          * <p>baba39055622c008b90285a8838e****</p>
@@ -289,7 +289,7 @@ public class ListCertificatesResponseBody extends TeaModel {
         public String id;
 
         /**
-         * <p>The certificate authority (CA) that issued the certificate.</p>
+         * <p>The issuer of the certificate.</p>
          * 
          * <strong>example:</strong>
          * <p>GlobalSign nv-sa</p>
@@ -298,7 +298,7 @@ public class ListCertificatesResponseBody extends TeaModel {
         public String issuer;
 
         /**
-         * <p>The Common Name of the certificate issuer.</p>
+         * <p>The common name of the certificate issuer.</p>
          * 
          * <strong>example:</strong>
          * <p>GlobalSign Organization Validation CA - SHA256 - G3</p>
@@ -306,11 +306,17 @@ public class ListCertificatesResponseBody extends TeaModel {
         @NameInMap("IssuerCN")
         public String issuerCN;
 
+        /**
+         * <p>The ID of the keyless server. This parameter is valid only when <code>Type</code> is set to <code>keyless</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>baba39055622c008b90285a8838e****</p>
+         */
         @NameInMap("KeyServerId")
         public String keyServerId;
 
         /**
-         * <p>The certificate name.</p>
+         * <p>The name of the certificate.</p>
          * 
          * <strong>example:</strong>
          * <p>yourCertName</p>
@@ -328,7 +334,7 @@ public class ListCertificatesResponseBody extends TeaModel {
         public String notAfter;
 
         /**
-         * <p>The time when the certificate takes effect.</p>
+         * <p>The time when the certificate becomes valid.</p>
          * 
          * <strong>example:</strong>
          * <p>2023-03-31 02:08:00</p>
@@ -346,7 +352,7 @@ public class ListCertificatesResponseBody extends TeaModel {
         public String pubAlg;
 
         /**
-         * <p>The region where the certificate is stored.</p>
+         * <p>The region.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -355,7 +361,7 @@ public class ListCertificatesResponseBody extends TeaModel {
         public String region;
 
         /**
-         * <p>The Subject Alternative Name (SAN) of the certificate.</p>
+         * <p>The subject alternative name (SAN) of the certificate.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="http://www.example.com,*.example.com">www.example.com,*.example.com</a></p>
@@ -382,15 +388,22 @@ public class ListCertificatesResponseBody extends TeaModel {
         public String sigAlg;
 
         /**
-         * <p>The certificate status.</p>
+         * <p>The status of the certificate. Valid values:</p>
          * <ul>
-         * <li>OK</li>
-         * <li>Expired</li>
-         * <li>Expiring</li>
-         * <li>Issued</li>
-         * <li>Applying</li>
-         * <li>ApplyFailed</li>
-         * <li>Canceled</li>
+         * <li><p><code>OK</code>: The certificate is valid.</p>
+         * </li>
+         * <li><p><code>Expired</code>: The certificate has expired.</p>
+         * </li>
+         * <li><p><code>Expiring</code>: The certificate is due to expire within 30 days.</p>
+         * </li>
+         * <li><p><code>Issued</code>: The free certificate has been issued.</p>
+         * </li>
+         * <li><p><code>Applying</code>: The free certificate application is in progress.</p>
+         * </li>
+         * <li><p><code>ApplyFailed</code>: The free certificate application has failed.</p>
+         * </li>
+         * <li><p><code>Canceled</code>: The free certificate application has been canceled.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -400,11 +413,16 @@ public class ListCertificatesResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The certificate type.</p>
+         * <p>The type of the certificate. Valid values:</p>
          * <ul>
-         * <li>cas: certificate that is purchased by using Certificate Management Service</li>
-         * <li>upload: custom certificate that you upload</li>
-         * <li>free: free certificate</li>
+         * <li><p><code>cas</code>: An Alibaba Cloud certificate.</p>
+         * </li>
+         * <li><p><code>upload</code>: A user-uploaded certificate.</p>
+         * </li>
+         * <li><p><code>free</code>: A free certificate.</p>
+         * </li>
+         * <li><p><code>keyless</code>: A keyless certificate.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -414,7 +432,7 @@ public class ListCertificatesResponseBody extends TeaModel {
         public String type;
 
         /**
-         * <p>The time when the certificate was updated.</p>
+         * <p>The time when the certificate was last updated.</p>
          * 
          * <strong>example:</strong>
          * <p>2023-04-20 06:18:42</p>

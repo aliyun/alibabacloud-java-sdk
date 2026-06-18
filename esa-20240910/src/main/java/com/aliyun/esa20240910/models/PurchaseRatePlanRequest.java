@@ -4,11 +4,18 @@ package com.aliyun.esa20240910.models;
 import com.aliyun.tea.*;
 
 public class PurchaseRatePlanRequest extends TeaModel {
+    /**
+     * <p>The number of plans to purchase.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("Amount")
     public Integer amount;
 
     /**
-     * <p>Specifies whether to enable auto payment.</p>
+     * <p>Specifies whether to enable automatic payment.
+     * Set this parameter to true when you directly call this operation.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -17,10 +24,10 @@ public class PurchaseRatePlanRequest extends TeaModel {
     public Boolean autoPay;
 
     /**
-     * <p>Auto-renewal:</p>
+     * <p>Specifies whether to enable auto-renewal. Valid values:</p>
      * <ul>
-     * <li>true: Enable auto-renewal.</li>
-     * <li>false: Disable auto-renewal.</li>
+     * <li>true: Auto-renewal is enabled.</li>
+     * <li>false: Auto-renewal is disabled.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -29,6 +36,12 @@ public class PurchaseRatePlanRequest extends TeaModel {
     @NameInMap("AutoRenew")
     public Boolean autoRenew;
 
+    /**
+     * <p>The channel field.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>xxxWodkxxx</p>
+     */
     @NameInMap("Channel")
     public String channel;
 
@@ -36,7 +49,8 @@ public class PurchaseRatePlanRequest extends TeaModel {
      * <p>The billing method. Valid values:</p>
      * <ul>
      * <li>PREPAY: subscription.</li>
-     * <li>POSTPAY: pay-as-you-go.</li>
+     * <li>POSTPAY: pay-as-you-go.
+     * Set this parameter to PREPAY when you directly call this operation.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -46,11 +60,11 @@ public class PurchaseRatePlanRequest extends TeaModel {
     public String chargeType;
 
     /**
-     * <p>The service location. Valid values:</p>
+     * <p>The acceleration region. Valid values:</p>
      * <ul>
-     * <li>domestic: the Chinese mainland.</li>
+     * <li>domestic: the Chinese mainland only.</li>
      * <li>global: global.</li>
-     * <li>overseas: outside the Chinese mainland.</li>
+     * <li>overseas: global (excluding the Chinese mainland).</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -60,7 +74,8 @@ public class PurchaseRatePlanRequest extends TeaModel {
     public String coverage;
 
     /**
-     * <p>Subscription period (in months).</p>
+     * <p>The purchase period, in months.
+     * This parameter is required when you directly call this operation.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -69,16 +84,45 @@ public class PurchaseRatePlanRequest extends TeaModel {
     public Integer period;
 
     /**
-     * <p>Package code.</p>
+     * <p>The plan code.</p>
+     * <p>China site</p>
+     * <ul>
+     * <li>Free Edition: entranceplan</li>
+     * <li>Basic: basicplan</li>
+     * <li>Standard: standardplan</li>
+     * <li>Premium: advancedplan</li>
+     * </ul>
+     * <p>International site</p>
+     * <ul>
+     * <li>Entrance: entranceplan</li>
+     * <li>Pro: standardplan</li>
+     * <li>Premium: advancedpla.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
-     * <p>entranceplan</p>
+     * <p>basicplan</p>
      */
     @NameInMap("PlanCode")
     public String planCode;
 
     /**
-     * <p>Package name.</p>
+     * <p>The plan name.</p>
+     * <p>China site</p>
+     * <ul>
+     * <li>Free Edition: entranceplan</li>
+     * <li>Basic: basic</li>
+     * <li>Standard: medium</li>
+     * <li>Premium: high</li>
+     * </ul>
+     * <p>International site</p>
+     * <ul>
+     * <li>Entrance: entranceplan_intl</li>
+     * <li>Pro: basicplan_intl</li>
+     * <li>Premium: vipplan_intl</li>
+     * </ul>
+     * <blockquote>
+     * <p>Note: For Enterprise Edition plans, the plan name is provided after backend configuration.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>basic</p>
@@ -87,7 +131,7 @@ public class PurchaseRatePlanRequest extends TeaModel {
     public String planName;
 
     /**
-     * <p>Site name.</p>
+     * <p>The site name.</p>
      * 
      * <strong>example:</strong>
      * <p>test.com</p>
@@ -96,10 +140,10 @@ public class PurchaseRatePlanRequest extends TeaModel {
     public String siteName;
 
     /**
-     * <p>The DNS setup option for the website. Valid values:</p>
+     * <p>The site access type. Valid values:</p>
      * <ul>
-     * <li>NS</li>
-     * <li>CNAME</li>
+     * <li>NS: NS access.</li>
+     * <li>CNAME: CNAME access.</li>
      * </ul>
      * 
      * <strong>example:</strong>

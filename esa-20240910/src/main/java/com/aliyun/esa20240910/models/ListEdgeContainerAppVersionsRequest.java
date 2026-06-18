@@ -36,7 +36,7 @@ public class ListEdgeContainerAppVersionsRequest extends TeaModel {
      * </ul>
      * 
      * <strong>example:</strong>
-     * <p>DESC</p>
+     * <p>Desc</p>
      */
     @NameInMap("OrderType")
     public String orderType;

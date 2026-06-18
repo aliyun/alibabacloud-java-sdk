@@ -22,6 +22,9 @@ public class ListPagesRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The query filters, specified as a JSON object.</p>
+     */
     @NameInMap("QueryArgs")
     public ListPagesRequestQueryArgs queryArgs;
 
@@ -56,12 +59,20 @@ public class ListPagesRequest extends TeaModel {
 
     public static class ListPagesRequestQueryArgs extends TeaModel {
         /**
+         * <p>Filters the custom response pages by content type.</p>
+         * 
          * <strong>example:</strong>
          * <p>application/json</p>
          */
         @NameInMap("ContentType")
         public String contentType;
 
+        /**
+         * <p>A keyword for a fuzzy search on the name or description of custom response pages.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example</p>
+         */
         @NameInMap("NameDescriptionLike")
         public String nameDescriptionLike;
 

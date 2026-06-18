@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateWafRulesetRequest extends TeaModel {
     /**
-     * <p>Ruleset name.</p>
+     * <p>The name of the WAF ruleset.</p>
      * 
      * <strong>example:</strong>
      * <p>example</p>
@@ -14,7 +14,25 @@ public class CreateWafRulesetRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>WAF operation phase.</p>
+     * <p>The WAF rule execution phase. Valid values:</p>
+     * <ul>
+     * <li><p>http_whitelist</p>
+     * </li>
+     * <li><p>http_custom</p>
+     * </li>
+     * <li><p>http_managed</p>
+     * </li>
+     * <li><p>http_anti_scan</p>
+     * </li>
+     * <li><p>http_ratelimit</p>
+     * </li>
+     * <li><p>ip_access_rule</p>
+     * </li>
+     * <li><p>http_bot</p>
+     * </li>
+     * <li><p>http_security_level_rule</p>
+     * </li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -24,7 +42,7 @@ public class CreateWafRulesetRequest extends TeaModel {
     public String phase;
 
     /**
-     * <p>Site ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> interface.</p>
+     * <p>The site ID. To get this ID, call the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -34,7 +52,7 @@ public class CreateWafRulesetRequest extends TeaModel {
     public Long siteId;
 
     /**
-     * <p>Site version.</p>
+     * <p>The site configuration version. This parameter applies only if versioning is enabled for the site. The default is 0.</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>

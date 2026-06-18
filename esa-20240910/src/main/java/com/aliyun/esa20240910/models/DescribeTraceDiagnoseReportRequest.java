@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeTraceDiagnoseReportRequest extends TeaModel {
     /**
+     * <p>Diagnostic task ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>xxxxxxxxx-x-x-xxxxxxxxxxxxxxx</p>
      */
@@ -12,6 +14,8 @@ public class DescribeTraceDiagnoseReportRequest extends TeaModel {
     public String taskId;
 
     /**
+     * <p>Diagnostic trace ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>0000xxxxxxxxxxxxxxxxxxxxxx75e</p>
      */

@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class ListTraceTasksResponseBody extends TeaModel {
     /**
+     * <p>The number of pages.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
     @NameInMap("Count")
     public Long count;
 
+    /**
+     * <p>The returned list information.</p>
+     */
     @NameInMap("List")
     public java.util.List<ListTraceTasksResponseBodyList> list;
 
     /**
+     * <p>The page number, starting from 1.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -22,6 +29,8 @@ public class ListTraceTasksResponseBody extends TeaModel {
     public Long pageNumber;
 
     /**
+     * <p>The page size. Valid values: any integer from 1 to 1000.</p>
+     * 
      * <strong>example:</strong>
      * <p>6</p>
      */
@@ -29,6 +38,8 @@ public class ListTraceTasksResponseBody extends TeaModel {
     public Long pageSize;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>4E09C5D7-E1CF-4CAA-A45E-8727F4C8FD70</p>
      */
@@ -82,6 +93,8 @@ public class ListTraceTasksResponseBody extends TeaModel {
 
     public static class ListTraceTasksResponseBodyList extends TeaModel {
         /**
+         * <p>The Alibaba Cloud account ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>1077********7468</p>
          */
@@ -89,6 +102,8 @@ public class ListTraceTasksResponseBody extends TeaModel {
         public String aliuid;
 
         /**
+         * <p>The IP address of the local DNS server.</p>
+         * 
          * <strong>example:</strong>
          * <p>xx.xx.xx.xx</p>
          */
@@ -96,6 +111,8 @@ public class ListTraceTasksResponseBody extends TeaModel {
         public String clientAddr;
 
         /**
+         * <p>The client IP address.</p>
+         * 
          * <strong>example:</strong>
          * <p>xx.xx.xx.xx</p>
          */
@@ -103,6 +120,8 @@ public class ListTraceTasksResponseBody extends TeaModel {
         public String clientIp;
 
         /**
+         * <p>The time when the report was created. Format: yyyy-MM-dd HH:mm:ss. Time zone: UTC+8.</p>
+         * 
          * <strong>example:</strong>
          * <p>2022-12-10 15:11:47</p>
          */
@@ -110,6 +129,8 @@ public class ListTraceTasksResponseBody extends TeaModel {
         public String createTime;
 
         /**
+         * <p>The diagnose ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>f2a18ad5</p>
          */
@@ -117,6 +138,8 @@ public class ListTraceTasksResponseBody extends TeaModel {
         public String diagnoseId;
 
         /**
+         * <p>The diagnostic URL.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="http://cdn.dns-detect.alicdn.com/diagnose/xxxxxx">http://cdn.dns-detect.alicdn.com/diagnose/xxxxxx</a></p>
          */
@@ -124,6 +147,8 @@ public class ListTraceTasksResponseBody extends TeaModel {
         public String diagnoseUrl;
 
         /**
+         * <p>The domain name to diagnose.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="http://www.example.com">http://www.example.com</a></p>
          */
@@ -131,6 +156,8 @@ public class ListTraceTasksResponseBody extends TeaModel {
         public String domain;
 
         /**
+         * <p>The expiration time. The value is a UNIX timestamp. Unit: seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>1669285111</p>
          */
@@ -138,6 +165,8 @@ public class ListTraceTasksResponseBody extends TeaModel {
         public Long expireTime;
 
         /**
+         * <p>The remaining number of available diagnostic attempts.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -145,6 +174,15 @@ public class ListTraceTasksResponseBody extends TeaModel {
         public Long remainDiagnoseTimes;
 
         /**
+         * <p>The report generation status. Valid values:</p>
+         * <ul>
+         * <li>0: Succeeded.</li>
+         * <li>1: Failed.</li>
+         * <li>2: Timed out.</li>
+         * <li>3: Running.</li>
+         * <li>4: Waiting.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -152,6 +190,12 @@ public class ListTraceTasksResponseBody extends TeaModel {
         public String state;
 
         /**
+         * <p>The status of the diagnostic URL. Valid values:</p>
+         * <ul>
+         * <li>1: active</li>
+         * <li>0: expired.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -159,6 +203,8 @@ public class ListTraceTasksResponseBody extends TeaModel {
         public Long status;
 
         /**
+         * <p>The task ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>000000xxxxxxxxxxxxxxxxxxxxxxxxxxxx475e</p>
          */
@@ -166,6 +212,8 @@ public class ListTraceTasksResponseBody extends TeaModel {
         public String taskId;
 
         /**
+         * <p>The time consumed to generate the report.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -173,6 +221,8 @@ public class ListTraceTasksResponseBody extends TeaModel {
         public Long timeConsuming;
 
         /**
+         * <p>The diagnostic trace ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>000000xxxxxxxxxxxxxxxxxxxxxx25941e</p>
          */

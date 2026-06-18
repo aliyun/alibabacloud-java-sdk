@@ -29,7 +29,7 @@ public class GetOriginCaCertificateResponseBody extends TeaModel {
     public GetOriginCaCertificateResponseBodyResult result;
 
     /**
-     * <p>The website ID.</p>
+     * <p>The site ID.</p>
      * 
      * <strong>example:</strong>
      * <p>123456789****</p>
@@ -38,7 +38,7 @@ public class GetOriginCaCertificateResponseBody extends TeaModel {
     public Long siteId;
 
     /**
-     * <p>The website name.</p>
+     * <p>The site name.</p>
      * 
      * <strong>example:</strong>
      * <p>example.com</p>
@@ -47,7 +47,7 @@ public class GetOriginCaCertificateResponseBody extends TeaModel {
     public String siteName;
 
     /**
-     * <p>The status of the certificate.</p>
+     * <p>The certificate status.</p>
      * 
      * <strong>example:</strong>
      * <p>OK</p>
@@ -110,7 +110,7 @@ public class GetOriginCaCertificateResponseBody extends TeaModel {
 
     public static class GetOriginCaCertificateResponseBodyResult extends TeaModel {
         /**
-         * <p>The Common Name of the certificate.</p>
+         * <p>The common name.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="http://www.example.com">www.example.com</a></p>
@@ -146,7 +146,7 @@ public class GetOriginCaCertificateResponseBody extends TeaModel {
         public String id;
 
         /**
-         * <p>The certificate authority (CA) that issued the certificate.</p>
+         * <p>The issuer of the certificate.</p>
          * 
          * <strong>example:</strong>
          * <p>GlobalSign nv-sa</p>
@@ -173,7 +173,7 @@ public class GetOriginCaCertificateResponseBody extends TeaModel {
         public String notAfter;
 
         /**
-         * <p>The time when the certificate takes effect.</p>
+         * <p>The time when the certificate becomes valid.</p>
          * 
          * <strong>example:</strong>
          * <p>2023-03-31 02:08:00</p>
@@ -182,7 +182,7 @@ public class GetOriginCaCertificateResponseBody extends TeaModel {
         public String notBefore;
 
         /**
-         * <p>The public-key algorithm of the certificate.</p>
+         * <p>The algorithm used for the certificate\&quot;s public key.</p>
          * 
          * <strong>example:</strong>
          * <p>RSA</p>
@@ -191,7 +191,7 @@ public class GetOriginCaCertificateResponseBody extends TeaModel {
         public String pubkeyAlgorithm;
 
         /**
-         * <p>The Subject Alternative Name (SAN) of the certificate.</p>
+         * <p>The Subject Alternative Name (SAN), which lists the host names protected by the certificate.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="http://www.example.com,*.example.com">www.example.com,*.example.com</a></p>
@@ -209,7 +209,7 @@ public class GetOriginCaCertificateResponseBody extends TeaModel {
         public String serialNumber;
 
         /**
-         * <p>The signature algorithm of the certificate.</p>
+         * <p>The algorithm used to sign the certificate.</p>
          * 
          * <strong>example:</strong>
          * <p>SHA256-RSA</p>
@@ -218,7 +218,7 @@ public class GetOriginCaCertificateResponseBody extends TeaModel {
         public String signatureAlgorithm;
 
         /**
-         * <p>The status of the certificate.</p>
+         * <p>The certificate status.</p>
          * 
          * <strong>example:</strong>
          * <p>OK</p>
@@ -236,7 +236,7 @@ public class GetOriginCaCertificateResponseBody extends TeaModel {
         public String type;
 
         /**
-         * <p>The time when the certificate was updated.</p>
+         * <p>The time when the certificate was last updated.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-03-05 18:24:04</p>

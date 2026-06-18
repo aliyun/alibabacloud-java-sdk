@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteUserWafRulesetRequest extends TeaModel {
     /**
-     * <p>WAF ruleset ID.</p>
+     * <p>The ID of the WAF ruleset.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class DeleteUserWafRulesetRequest extends TeaModel {
     public Long id;
 
     /**
-     * <p>Instance ID.</p>
+     * <p>The ID of the instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

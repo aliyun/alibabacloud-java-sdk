@@ -8,7 +8,7 @@ public class UpdateWaitingRoomEventRequest extends TeaModel {
      * <p>The content of the custom waiting room page. You must specify this parameter if you set WaitingRoomType to custom. The content must be Base64-encoded.</p>
      * 
      * <strong>example:</strong>
-     * <p>html-yets-maqi1111</p>
+     * <p>SGVsbG8gd29ybGQ=</p>
      */
     @NameInMap("CustomPageHtml")
     public String customPageHtml;
@@ -25,8 +25,10 @@ public class UpdateWaitingRoomEventRequest extends TeaModel {
     /**
      * <p>Specifies whether to disable session renewal. Valid values:</p>
      * <ul>
-     * <li>on</li>
-     * <li>off</li>
+     * <li><p>on</p>
+     * </li>
+     * <li><p>off</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -38,8 +40,10 @@ public class UpdateWaitingRoomEventRequest extends TeaModel {
     /**
      * <p>Specifies whether to enable the waiting room event. Valid values:</p>
      * <ul>
-     * <li><code>on</code></li>
-     * <li><code>off</code></li>
+     * <li><p><code>on</code></p>
+     * </li>
+     * <li><p><code>off</code></p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -60,8 +64,10 @@ public class UpdateWaitingRoomEventRequest extends TeaModel {
     /**
      * <p>Specifies whether to enable JSON response. Valid values:</p>
      * <ul>
-     * <li>on</li>
-     * <li>off</li>
+     * <li><p>on</p>
+     * </li>
+     * <li><p>off</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -73,9 +79,12 @@ public class UpdateWaitingRoomEventRequest extends TeaModel {
     /**
      * <p>The default language. Valid values:</p>
      * <ul>
-     * <li><code>enus</code>: English.</li>
-     * <li><code>zhcn</code>: Simplified Chinese.</li>
-     * <li><code>zhhk</code>: Traditional Chinese.</li>
+     * <li><p><code>enus</code>: English.</p>
+     * </li>
+     * <li><p><code>zhcn</code>: Simplified Chinese.</p>
+     * </li>
+     * <li><p><code>zhhk</code>: Traditional Chinese.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -86,6 +95,9 @@ public class UpdateWaitingRoomEventRequest extends TeaModel {
 
     /**
      * <p>The name of the waiting room event.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Test event 2</p>
      */
     @NameInMap("Name")
     public String name;
@@ -102,8 +114,10 @@ public class UpdateWaitingRoomEventRequest extends TeaModel {
     /**
      * <p>Specifies whether to enable pre-queuing.</p>
      * <ul>
-     * <li>on</li>
-     * <li>off</li>
+     * <li><p>on</p>
+     * </li>
+     * <li><p>off</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -124,10 +138,14 @@ public class UpdateWaitingRoomEventRequest extends TeaModel {
     /**
      * <p>The queuing method. Valid values:</p>
      * <ul>
-     * <li>random: Users gain access to the origin randomly, regardless of the arrival time.</li>
-     * <li>fifo: Users gain access to the origin in order of arrival.</li>
-     * <li>passthrough: Users pass through the waiting room and go straight to the origin.</li>
-     * <li>reject-all: All requests are blocked from accessing the origin.</li>
+     * <li><p>random: Users gain access to the origin randomly, regardless of the arrival time.</p>
+     * </li>
+     * <li><p>fifo: Users gain access to the origin in order of arrival.</p>
+     * </li>
+     * <li><p>passthrough: Users pass through the waiting room and go straight to the origin.</p>
+     * </li>
+     * <li><p>reject-all: All requests are blocked from accessing the origin.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -139,9 +157,12 @@ public class UpdateWaitingRoomEventRequest extends TeaModel {
     /**
      * <p>The HTTP status code to return while a user is in the queue. Valid values:</p>
      * <ul>
-     * <li>200</li>
-     * <li>202</li>
-     * <li>429</li>
+     * <li><p>200</p>
+     * </li>
+     * <li><p>202</p>
+     * </li>
+     * <li><p>429</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -153,8 +174,10 @@ public class UpdateWaitingRoomEventRequest extends TeaModel {
     /**
      * <p>Specifies whether to enable random queuing.</p>
      * <ul>
-     * <li>on</li>
-     * <li>off</li>
+     * <li><p>on</p>
+     * </li>
+     * <li><p>off</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -213,8 +236,10 @@ public class UpdateWaitingRoomEventRequest extends TeaModel {
     /**
      * <p>The type of the waiting room. Valid values:</p>
      * <ul>
-     * <li>default</li>
-     * <li>custom</li>
+     * <li><p>default</p>
+     * </li>
+     * <li><p>custom</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

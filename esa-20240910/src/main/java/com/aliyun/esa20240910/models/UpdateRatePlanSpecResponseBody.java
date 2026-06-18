@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpdateRatePlanSpecResponseBody extends TeaModel {
     /**
+     * <p>The instance ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>xcdn-as23ds***</p>
      */
@@ -12,6 +14,8 @@ public class UpdateRatePlanSpecResponseBody extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>The order ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>2223332122***</p>
      */
@@ -19,7 +23,7 @@ public class UpdateRatePlanSpecResponseBody extends TeaModel {
     public String orderId;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>30423A7F-A83D-1E24-B80E-86DD25790758</p>

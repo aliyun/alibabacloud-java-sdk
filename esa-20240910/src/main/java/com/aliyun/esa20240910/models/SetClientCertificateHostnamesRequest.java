@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class SetClientCertificateHostnamesRequest extends TeaModel {
     /**
-     * <p>The domain names to associate.</p>
+     * <p>The hostnames to bind.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Hostnames")
@@ -15,17 +15,17 @@ public class SetClientCertificateHostnamesRequest extends TeaModel {
      * <p>The ID of the client CA certificate.</p>
      * 
      * <strong>example:</strong>
-     * <p>babab9db65ee5efcca9f3d41d4b50d66</p>
+     * <p>babab9db65ee5efcca9f3d41d4b50d**</p>
      */
     @NameInMap("Id")
     public String id;
 
     /**
-     * <p>The website ID.</p>
+     * <p>The ID of the site.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>1234567890123</p>
+     * <p>123456789****</p>
      */
     @NameInMap("SiteId")
     public Long siteId;

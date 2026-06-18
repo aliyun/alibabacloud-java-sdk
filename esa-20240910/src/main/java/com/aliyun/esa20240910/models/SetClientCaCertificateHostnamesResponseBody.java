@@ -4,10 +4,15 @@ package com.aliyun.esa20240910.models;
 import com.aliyun.tea.*;
 
 public class SetClientCaCertificateHostnamesResponseBody extends TeaModel {
+    /**
+     * <p>A list of bound hostnames.</p>
+     */
     @NameInMap("Hostnames")
     public java.util.List<String> hostnames;
 
     /**
+     * <p>The client CA certificate ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>babaabcd****</p>
      */
@@ -15,6 +20,8 @@ public class SetClientCaCertificateHostnamesResponseBody extends TeaModel {
     public String id;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>34DCBC8A-<strong><strong>-</strong></strong>-****-6DAA11D7DDBD</p>
      */
@@ -22,6 +29,8 @@ public class SetClientCaCertificateHostnamesResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The site ID. You can obtain the ID by calling the <a href="~~ListSites~~">ListSites</a> API.</p>
+     * 
      * <strong>example:</strong>
      * <p>123456****</p>
      */
@@ -29,6 +38,8 @@ public class SetClientCaCertificateHostnamesResponseBody extends TeaModel {
     public Long siteId;
 
     /**
+     * <p>The site name.</p>
+     * 
      * <strong>example:</strong>
      * <p>example.com</p>
      */

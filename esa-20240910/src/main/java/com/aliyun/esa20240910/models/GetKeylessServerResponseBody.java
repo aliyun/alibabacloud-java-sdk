@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetKeylessServerResponseBody extends TeaModel {
     /**
+     * <p>The CA certificate used to verify the server certificate of the keyless server. This parameter applies only when Verify is set to true.</p>
+     * 
      * <strong>example:</strong>
      * <p>-----BEGIN CERTIFICATE-----****</p>
      */
@@ -12,6 +14,8 @@ public class GetKeylessServerResponseBody extends TeaModel {
     public String caCertificate;
 
     /**
+     * <p>The client certificate. Must be provided as a pair with the client private key.</p>
+     * 
      * <strong>example:</strong>
      * <p>-----BEGIN CERTIFICATE-----****</p>
      */
@@ -19,6 +23,8 @@ public class GetKeylessServerResponseBody extends TeaModel {
     public String clientCertificate;
 
     /**
+     * <p>The client private key. Must be provided as a pair with the client certificate.</p>
+     * 
      * <strong>example:</strong>
      * <p>-----BEGIN RSA PRIVATE KEY-----****</p>
      */
@@ -26,6 +32,8 @@ public class GetKeylessServerResponseBody extends TeaModel {
     public String clientPrivateKey;
 
     /**
+     * <p>The creation time.</p>
+     * 
      * <strong>example:</strong>
      * <p>2024-03-11T01:23:21Z</p>
      */
@@ -33,6 +41,8 @@ public class GetKeylessServerResponseBody extends TeaModel {
     public String createTime;
 
     /**
+     * <p>The hostname of the keyless server.</p>
+     * 
      * <strong>example:</strong>
      * <p>example.com</p>
      */
@@ -40,7 +50,7 @@ public class GetKeylessServerResponseBody extends TeaModel {
     public String host;
 
     /**
-     * <p>Keyless server ID。</p>
+     * <p>The keyless server ID.</p>
      * 
      * <strong>example:</strong>
      * <p>baba39055622c008b90285a8838e****</p>
@@ -49,6 +59,8 @@ public class GetKeylessServerResponseBody extends TeaModel {
     public String id;
 
     /**
+     * <p>The keyless server name.</p>
+     * 
      * <strong>example:</strong>
      * <p>example</p>
      */
@@ -56,6 +68,8 @@ public class GetKeylessServerResponseBody extends TeaModel {
     public String name;
 
     /**
+     * <p>The port of the keyless server. Valid values: <strong>1</strong> to <strong>65535</strong>.</p>
+     * 
      * <strong>example:</strong>
      * <p>443</p>
      */
@@ -63,6 +77,8 @@ public class GetKeylessServerResponseBody extends TeaModel {
     public Long port;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>3558df77-8a7a-4060-a900-2d794940****</p>
      */
@@ -70,6 +86,8 @@ public class GetKeylessServerResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The site ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>123456****</p>
      */
@@ -77,6 +95,8 @@ public class GetKeylessServerResponseBody extends TeaModel {
     public Long siteId;
 
     /**
+     * <p>The site name.</p>
+     * 
      * <strong>example:</strong>
      * <p>example.com</p>
      */
@@ -84,6 +104,8 @@ public class GetKeylessServerResponseBody extends TeaModel {
     public String siteName;
 
     /**
+     * <p>The update time.</p>
+     * 
      * <strong>example:</strong>
      * <p>2025-03-13T02:13:28Z</p>
      */
@@ -91,6 +113,8 @@ public class GetKeylessServerResponseBody extends TeaModel {
     public String updateTime;
 
     /**
+     * <p>Indicates whether to verify the server certificate of the keyless server. The default value is false.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

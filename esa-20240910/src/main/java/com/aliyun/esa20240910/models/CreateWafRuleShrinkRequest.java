@@ -5,13 +5,31 @@ import com.aliyun.tea.*;
 
 public class CreateWafRuleShrinkRequest extends TeaModel {
     /**
-     * <p>Rule configuration, specifying the detailed configuration for creating a rule.</p>
+     * <p>The detailed configuration of the WAF rule.</p>
      */
     @NameInMap("Config")
     public String configShrink;
 
     /**
-     * <p>WAF operation phase.</p>
+     * <p>The phase in which the WAF rule runs.</p>
+     * <ul>
+     * <li><p><code>http_whitelist</code>: whitelist rule</p>
+     * </li>
+     * <li><p><code>http_custom</code>: custom rule</p>
+     * </li>
+     * <li><p><code>http_managed</code>: managed rule</p>
+     * </li>
+     * <li><p><code>http_anti_scan</code>: anti-scan rule</p>
+     * </li>
+     * <li><p><code>http_ratelimit</code>: rate limit rule</p>
+     * </li>
+     * <li><p><code>ip_access_rule</code>: IP access rule</p>
+     * </li>
+     * <li><p><code>http_bot</code>: Advanced Mode Bots</p>
+     * </li>
+     * <li><p><code>http_security_level_rule</code>: Security Rule</p>
+     * </li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,7 +39,7 @@ public class CreateWafRuleShrinkRequest extends TeaModel {
     public String phase;
 
     /**
-     * <p>Ruleset ID.</p>
+     * <p>The ID of the WAF ruleset. You can obtain this ID by calling the <a href="https://help.aliyun.com/document_detail/2878359.html">ListWafRulesets</a> operation.</p>
      * 
      * <strong>example:</strong>
      * <p>10000001</p>
@@ -30,7 +48,7 @@ public class CreateWafRuleShrinkRequest extends TeaModel {
     public Long rulesetId;
 
     /**
-     * <p>Site ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> interface.</p>
+     * <p>The ID of the site. You can obtain this ID by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -40,7 +58,7 @@ public class CreateWafRuleShrinkRequest extends TeaModel {
     public Long siteId;
 
     /**
-     * <p>Site version.</p>
+     * <p>If version management is enabled for the site, use this parameter to specify the version to which the configuration applies. The default is 0.</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>

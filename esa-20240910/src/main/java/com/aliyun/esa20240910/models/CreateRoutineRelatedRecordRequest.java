@@ -5,11 +5,11 @@ import com.aliyun.tea.*;
 
 public class CreateRoutineRelatedRecordRequest extends TeaModel {
     /**
-     * <p>The routine name.</p>
+     * <p>The name of the edge function Routine.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>CreateRoutineRelatedRecord</p>
+     * <p>test-routine1</p>
      */
     @NameInMap("Name")
     public String name;
@@ -25,7 +25,7 @@ public class CreateRoutineRelatedRecordRequest extends TeaModel {
     public String recordName;
 
     /**
-     * <p>The website ID.</p>
+     * <p>The site ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

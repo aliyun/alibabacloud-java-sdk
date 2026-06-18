@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class DescribeDDoSAllEventListRequest extends TeaModel {
     /**
-     * <p>The end of the time range to query.</p>
-     * <p>Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC. The maximum time range is 31 days.</p>
-     * <p>If you do not configure this parameter, the current time is used as the end of the time range to query.</p>
+     * <p>The end time of the query.</p>
+     * <p>The time must be in ISO 8601 format and in UTC. Format: <code>yyyy-MM-ddTHH:mm:ssZ</code>. The time range between <code>StartTime</code> and <code>EndTime</code> cannot exceed 31 days.</p>
+     * <p>If this parameter is not specified, it defaults to the current time.</p>
      * 
      * <strong>example:</strong>
      * <p>2023-02-22T15:59:59Z</p>
@@ -16,13 +16,16 @@ public class DescribeDDoSAllEventListRequest extends TeaModel {
     public String endTime;
 
     /**
-     * <p>The type of DDoS attacks to query. Valid values:</p>
+     * <p>The type of DDoS attack events to query. Valid values:</p>
      * <ul>
-     * <li><strong>web-cc</strong>: web resource exhaustion attacks.</li>
-     * <li><strong>cc</strong>: connection flood attacks.</li>
-     * <li><strong>traffic</strong>: volumetric attacks.</li>
+     * <li><p><strong>web-cc</strong>: A web resource exhaustion attack.</p>
+     * </li>
+     * <li><p><strong>cc</strong>: A connection-based attack.</p>
+     * </li>
+     * <li><p><strong>traffic</strong>: A traffic-based attack.</p>
+     * </li>
      * </ul>
-     * <p>Default value: web-cc.</p>
+     * <p>If you do not specify this parameter, the operation queries <code>web-cc</code> events by default.</p>
      * 
      * <strong>example:</strong>
      * <p>web-cc</p>
@@ -31,7 +34,7 @@ public class DescribeDDoSAllEventListRequest extends TeaModel {
     public String eventType;
 
     /**
-     * <p>The page number. Valid values: <strong>1</strong> to <strong>100000</strong>.</p>
+     * <p>The page number to return. Valid range: <strong>1</strong> to <strong>100000</strong>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -41,7 +44,7 @@ public class DescribeDDoSAllEventListRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page. Default value: <strong>10</strong>. Valid values: 5, 10, and 20.</p>
+     * <p>The number of entries per page. Default value: <strong>10</strong>. Valid values: <strong>5</strong>, <strong>10</strong>, and <strong>20</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -50,7 +53,7 @@ public class DescribeDDoSAllEventListRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The website ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation.</p>
+     * <p>The ID of the site. You can obtain this ID by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -60,8 +63,8 @@ public class DescribeDDoSAllEventListRequest extends TeaModel {
     public Long siteId;
 
     /**
-     * <p>The beginning of the time range to query.</p>
-     * <p>Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+     * <p>The start time of the query.</p>
+     * <p>The time must be in ISO 8601 format and in UTC. Format: <code>yyyy-MM-ddTHH:mm:ssZ</code>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

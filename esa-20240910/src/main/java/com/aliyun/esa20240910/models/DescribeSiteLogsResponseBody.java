@@ -62,7 +62,7 @@ public class DescribeSiteLogsResponseBody extends TeaModel {
         /**
          * <p>The log path.</p>
          * <blockquote>
-         * <p> Take note of the Expires field (expiration timestamp) in this parameter. If the log download URL expires, you must reobtain the URL.</p>
+         * <p>Take note of the Expires field (expiration timestamp) in this parameter. If the log download URL expires, you must reobtain the URL.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

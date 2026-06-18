@@ -25,10 +25,12 @@ public class CreateCustomResponseCodeRuleRequest extends TeaModel {
     public String returnCode;
 
     /**
-     * <p>The content of the rule. A conditional expression is used to match a user request. You do not need to set this parameter when you add global configuration. Use cases:</p>
+     * <p>Rule content. Use a conditional expression to match user requests. Do not set this parameter when adding a global configuration. There are two scenarios:</p>
      * <ul>
-     * <li>true: Match all incoming requests.</li>
-     * <li>Set the value to a custom expression, for example: (http.host eq &quot;video.example.com&quot;): Match the specified request.</li>
+     * <li><p>Match all incoming requests: Set the value to true.</p>
+     * </li>
+     * <li><p>Match specific requests: Set the value to a custom expression, such as: (http.host eq &quot;video.example.com&quot;).</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -38,10 +40,12 @@ public class CreateCustomResponseCodeRuleRequest extends TeaModel {
     public String rule;
 
     /**
-     * <p>Specifies whether to enable the rule. Valid values: You do not need to set this parameter when you add global configuration. Valid values:</p>
+     * <p>Rule switch. Do not set this parameter when adding a global configuration. Valid values:</p>
      * <ul>
-     * <li>on</li>
-     * <li>off</li>
+     * <li><p>on: Enable.</p>
+     * </li>
+     * <li><p>off: Disable.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -51,7 +55,7 @@ public class CreateCustomResponseCodeRuleRequest extends TeaModel {
     public String ruleEnable;
 
     /**
-     * <p>The rule name. You do not need to set this parameter when you add global configuration.</p>
+     * <p>Rule name. Do not set this parameter when adding a global configuration.</p>
      * 
      * <strong>example:</strong>
      * <p>rule_example</p>
@@ -60,7 +64,7 @@ public class CreateCustomResponseCodeRuleRequest extends TeaModel {
     public String ruleName;
 
     /**
-     * <p>The order in which the rule is executed. A smaller value gives priority to the rule.</p>
+     * <p>Rule execution order. A smaller value indicates higher priority.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -69,7 +73,7 @@ public class CreateCustomResponseCodeRuleRequest extends TeaModel {
     public Integer sequence;
 
     /**
-     * <p>The website ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation.</p>
+     * <p>Site ID. Call the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> API to get it.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -79,7 +83,7 @@ public class CreateCustomResponseCodeRuleRequest extends TeaModel {
     public Long siteId;
 
     /**
-     * <p>The version number of the website configurations. You can use this parameter to specify a version of your website to apply the feature settings. By default, version 0 is used.</p>
+     * <p>Site configuration version number. For sites with version management enabled, use this parameter to specify the site version where the configuration takes effect. The default is version 0.</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>

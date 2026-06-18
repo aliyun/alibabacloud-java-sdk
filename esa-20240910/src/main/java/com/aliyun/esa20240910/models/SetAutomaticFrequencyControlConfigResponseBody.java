@@ -5,6 +5,16 @@ import com.aliyun.tea.*;
 
 public class SetAutomaticFrequencyControlConfigResponseBody extends TeaModel {
     /**
+     * <p>The action taken on requests that trigger the control. Valid values:</p>
+     * <ul>
+     * <li><p><strong>observe</strong>: Requests are monitored.</p>
+     * </li>
+     * <li><p><strong>deny</strong>: Requests are blocked.</p>
+     * </li>
+     * <li><p><strong>js</strong>: JS challenges are issued.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>js</p>
      */
@@ -12,6 +22,14 @@ public class SetAutomaticFrequencyControlConfigResponseBody extends TeaModel {
     public String actionType;
 
     /**
+     * <p>Indicates whether automatic frequency control is enabled. Valid values:</p>
+     * <ul>
+     * <li><p><strong>on</strong>: Enabled.</p>
+     * </li>
+     * <li><p><strong>off</strong>: Disabled.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>on</p>
      */
@@ -19,6 +37,16 @@ public class SetAutomaticFrequencyControlConfigResponseBody extends TeaModel {
     public String enable;
 
     /**
+     * <p>The protection level. Valid values:</p>
+     * <ul>
+     * <li><p><strong>loose</strong>: Loose protection.</p>
+     * </li>
+     * <li><p><strong>normal</strong>: Normal protection.</p>
+     * </li>
+     * <li><p><strong>strict</strong>: Strict protection.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>normal</p>
      */
@@ -26,7 +54,7 @@ public class SetAutomaticFrequencyControlConfigResponseBody extends TeaModel {
     public String level;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>F32C57AA-7BF8-49AE-A2CC-9F42390F5A19</p>

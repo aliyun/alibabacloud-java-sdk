@@ -5,10 +5,12 @@ import com.aliyun.tea.*;
 
 public class CreateSiteRequest extends TeaModel {
     /**
-     * <p>The DNS setup. Valid values:</p>
+     * <p>The access type for the site. Valid values:</p>
      * <ul>
-     * <li><strong>NS</strong></li>
-     * <li><strong>CNAME</strong></li>
+     * <li><p><strong>NS</strong>: NS-based access.</p>
+     * </li>
+     * <li><p><strong>CNAME</strong>: CNAME-based access.</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -19,11 +21,14 @@ public class CreateSiteRequest extends TeaModel {
     public String accessType;
 
     /**
-     * <p>The service location. Valid values:</p>
+     * <p>The acceleration region. Valid values are:</p>
      * <ul>
-     * <li><strong>domestic</strong>: the Chinese mainland</li>
-     * <li><strong>global</strong>: global</li>
-     * <li><strong>overseas</strong>: outside the Chinese mainland</li>
+     * <li><p><strong>domestic</strong>: Chinese mainland only.</p>
+     * </li>
+     * <li><p><strong>global</strong>: Global.</p>
+     * </li>
+     * <li><p><strong>overseas</strong>: Global (excluding the Chinese mainland).</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -34,7 +39,7 @@ public class CreateSiteRequest extends TeaModel {
     public String coverage;
 
     /**
-     * <p>The instance ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2852398.html">ListUserRatePlanInstances</a> operation. Specify at least one of the instance ID and website ID. If you specify both of them, the instance ID is used.</p>
+     * <p>The ID of the instance. You can obtain the instance ID by calling the <a href="https://help.aliyun.com/document_detail/2852398.html">ListUserRatePlanInstances</a> operation. You must specify either the instance ID or the site ID. If you specify both, the instance ID takes precedence.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -44,7 +49,7 @@ public class CreateSiteRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The ID of the resource group. If you leave this parameter empty, the system uses the default resource group ID.</p>
+     * <p>The ID of the resource group. If you do not specify this parameter, the system automatically uses the ID of the default resource group.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-acfmw4znnok****</p>
@@ -53,11 +58,11 @@ public class CreateSiteRequest extends TeaModel {
     public String resourceGroupId;
 
     /**
-     * <p>The website name.</p>
+     * <p>The name of the site.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>CreateSite</p>
+     * <p>example.com</p>
      */
     @NameInMap("SiteName")
     public String siteName;

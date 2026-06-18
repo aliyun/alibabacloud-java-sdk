@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListSiteOriginClientCertificatesRequest extends TeaModel {
     /**
-     * <p>The page number.</p>
+     * <p>The page number. The default value is <strong>1</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -23,7 +23,7 @@ public class ListSiteOriginClientCertificatesRequest extends TeaModel {
     public Long pageSize;
 
     /**
-     * <p>The website ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation.</p>
+     * <p>The site ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

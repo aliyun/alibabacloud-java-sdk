@@ -7,10 +7,14 @@ public class GetSiteLogDeliveryQuotaResponseBody extends TeaModel {
     /**
      * <p>The log category. Valid values:</p>
      * <ol>
-     * <li>dcdn_log_access_l1 (default): access logs.</li>
-     * <li>dcdn_log_er: Edge Routine logs.</li>
-     * <li>dcdn_log_waf: firewall logs.</li>
-     * <li>dcdn_log_ipa: TCP/UDP proxy logs.</li>
+     * <li><p>dcdn_log_access_l1 (default): access logs.</p>
+     * </li>
+     * <li><p>dcdn_log_er: Edge Routine logs.</p>
+     * </li>
+     * <li><p>dcdn_log_waf: firewall logs.</p>
+     * </li>
+     * <li><p>dcdn_log_ipa: TCP/UDP proxy logs.</p>
+     * </li>
      * </ol>
      * 
      * <strong>example:</strong>

@@ -337,7 +337,7 @@ public class ListEdgeContainerAppVersionsResponseBody extends TeaModel {
          * <p>If you want to cancel this configuration, set the parameter value to <code>&quot;&quot;</code> or <code>{}</code>. If you do not specify this parameter, this configuration is ignored.</p>
          * 
          * <strong>example:</strong>
-         * <p>{\&quot;exec\&quot;:{\&quot;command\&quot;:[\&quot;bash\&quot;,\&quot;-c\&quot;,\&quot;cd /home/admin/</p>
+         * <p>sh poststart.sh &quot;echo hello world&quot;</p>
          */
         @NameInMap("PostStart")
         public String postStart;
@@ -346,7 +346,7 @@ public class ListEdgeContainerAppVersionsResponseBody extends TeaModel {
          * <p>The command that is run before the container is stopped.</p>
          * 
          * <strong>example:</strong>
-         * <p>sh stop.sh</p>
+         * <p>sh prestop.sh &quot;echo hello world&quot;</p>
          */
         @NameInMap("PreStop")
         public String preStop;

@@ -14,11 +14,17 @@ public class RollbackEdgeContainerAppVersionRequest extends TeaModel {
     @NameInMap("AppId")
     public String appId;
 
+    /**
+     * <p>The deployment percentage for the target version after the rollback. Valid values: <strong>1 to 100</strong>. Default value: <strong>0</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>50</p>
+     */
     @NameInMap("Percentage")
     public Integer percentage;
 
     /**
-     * <p>The remarks.</p>
+     * <p>Additional information about the rollback.</p>
      * 
      * <strong>example:</strong>
      * <p>test rollback app</p>
@@ -26,11 +32,17 @@ public class RollbackEdgeContainerAppVersionRequest extends TeaModel {
     @NameInMap("Remarks")
     public String remarks;
 
+    /**
+     * <p>Specifies whether to use percentage rollback.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("UsedPercent")
     public Boolean usedPercent;
 
     /**
-     * <p>The ID of version that you want to roll back.</p>
+     * <p>The ID of the version to roll back to.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

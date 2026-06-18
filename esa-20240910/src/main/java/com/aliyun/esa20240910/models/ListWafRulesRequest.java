@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListWafRulesRequest extends TeaModel {
     /**
-     * <p>Query page number, used for pagination.</p>
+     * <p>The number of the page to return.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -14,7 +14,7 @@ public class ListWafRulesRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>Query page size, used for pagination.</p>
+     * <p>The number of items to return per page.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -23,10 +23,24 @@ public class ListWafRulesRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>WAF rule type. Values:</p>
+     * <p>The WAF rule execution phase. Valid values are:</p>
      * <ul>
-     * <li>http_anti_scan: Scan protection</li>
-     * <li>http_bot: Bots</li>
+     * <li><p><code>http_whitelist</code>: whitelist rule</p>
+     * </li>
+     * <li><p><code>http_custom</code>: custom rule</p>
+     * </li>
+     * <li><p><code>http_managed</code>: managed rule</p>
+     * </li>
+     * <li><p><code>http_anti_scan</code>: scan protection rule</p>
+     * </li>
+     * <li><p><code>http_ratelimit</code>: rate limiting rule</p>
+     * </li>
+     * <li><p><code>ip_access_rule</code>: IP access rule</p>
+     * </li>
+     * <li><p><code>http_bot</code>: Advanced bots</p>
+     * </li>
+     * <li><p><code>http_security_level_rule</code>: security rule</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -37,7 +51,7 @@ public class ListWafRulesRequest extends TeaModel {
     public String phase;
 
     /**
-     * <p>Query filter conditions.</p>
+     * <p>Query filters.</p>
      * 
      * <strong>example:</strong>
      * <p>http_custom</p>
@@ -45,11 +59,17 @@ public class ListWafRulesRequest extends TeaModel {
     @NameInMap("QueryArgs")
     public ListWafRulesRequestQueryArgs queryArgs;
 
+    /**
+     * <p>The ID of the WAF ruleset. You can obtain this ID by calling the <a href="https://help.aliyun.com/document_detail/2878359.html">ListWafRulesets</a> operation.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10000001</p>
+     */
     @NameInMap("RulesetId")
     public Long rulesetId;
 
     /**
-     * <p>Site ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> interface.</p>
+     * <p>The site ID. You can obtain this ID by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -59,7 +79,7 @@ public class ListWafRulesRequest extends TeaModel {
     public Long siteId;
 
     /**
-     * <p>Site version.</p>
+     * <p>The site configuration version. For sites with configuration version management enabled, this parameter specifies the version to use. Defaults to 0.</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>
@@ -130,7 +150,7 @@ public class ListWafRulesRequest extends TeaModel {
 
     public static class ListWafRulesRequestQueryArgs extends TeaModel {
         /**
-         * <p>Fuzzy search for values in IP access control.</p>
+         * <p>Performs a partial-match search for a value in an IP access control rule.</p>
          * 
          * <strong>example:</strong>
          * <p>10.0.0.1</p>
@@ -139,7 +159,7 @@ public class ListWafRulesRequest extends TeaModel {
         public String configValueLike;
 
         /**
-         * <p>Whether to reverse the sorting result.</p>
+         * <p>Specifies whether to sort the results in descending order.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -148,7 +168,7 @@ public class ListWafRulesRequest extends TeaModel {
         public Boolean desc;
 
         /**
-         * <p>Exact query for WAF rule ID.</p>
+         * <p>Filters results by the exact WAF rule ID.</p>
          * 
          * <strong>example:</strong>
          * <p>20000001</p>
@@ -157,7 +177,7 @@ public class ListWafRulesRequest extends TeaModel {
         public Long id;
 
         /**
-         * <p>Fuzzy query for WAF rule ID or name.</p>
+         * <p>Performs a partial-match search on the WAF rule ID or name.</p>
          * 
          * <strong>example:</strong>
          * <p>example</p>
@@ -166,7 +186,7 @@ public class ListWafRulesRequest extends TeaModel {
         public String idNameLike;
 
         /**
-         * <p>Fuzzy query for WAF rule name.</p>
+         * <p>Performs a partial-match search on the WAF rule name.</p>
          * 
          * <strong>example:</strong>
          * <p>example</p>
@@ -175,7 +195,7 @@ public class ListWafRulesRequest extends TeaModel {
         public String nameLike;
 
         /**
-         * <p>Sort the returned list by the specified column.</p>
+         * <p>Sorts the results by the specified field.</p>
          * 
          * <strong>example:</strong>
          * <p>position</p>
@@ -184,7 +204,7 @@ public class ListWafRulesRequest extends TeaModel {
         public String orderBy;
 
         /**
-         * <p>Exact query for WAF rule status.</p>
+         * <p>Filters results by the exact WAF rule status.</p>
          * 
          * <strong>example:</strong>
          * <p>on</p>

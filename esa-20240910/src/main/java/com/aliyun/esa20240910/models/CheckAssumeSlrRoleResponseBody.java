@@ -4,26 +4,12 @@ package com.aliyun.esa20240910.models;
 import com.aliyun.tea.*;
 
 public class CheckAssumeSlrRoleResponseBody extends TeaModel {
-    /**
-     * <strong>example:</strong>
-     * <p>aliuid:xxx assumeOssRole not exist,serviceName:realtimelogpush.dcdnservices.aliyuncs.com</p>
-     */
     @NameInMap("ErrorMsg")
     public String errorMsg;
 
-    /**
-     * <strong>example:</strong>
-     * <p>true</p>
-     */
     @NameInMap("IsExist")
     public String isExist;
 
-    /**
-     * <p>Id of the request</p>
-     * 
-     * <strong>example:</strong>
-     * <p>34DCBC8A-<strong><strong>-</strong></strong>-****-6DAA11D7DDBD</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 

@@ -5,11 +5,14 @@ import com.aliyun.tea.*;
 
 public class ListRecordsRequest extends TeaModel {
     /**
-     * <p>The business scenario of the record for acceleration. Valid values:</p>
+     * <p>The business scenario for acceleration. Use this parameter to filter results. Valid values:</p>
      * <ul>
-     * <li><strong>image_video</strong>: video and image.</li>
-     * <li><strong>api</strong>: API.</li>
-     * <li><strong>web</strong>: web page.</li>
+     * <li><p><strong>image_video</strong>: Images and videos.</p>
+     * </li>
+     * <li><p><strong>api</strong>: API.</p>
+     * </li>
+     * <li><p><strong>web</strong>: Web page.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,8 +21,11 @@ public class ListRecordsRequest extends TeaModel {
     @NameInMap("BizName")
     public String bizName;
 
+    @NameInMap("CustomPort")
+    public String customPort;
+
     /**
-     * <p>The page number. Default value: <strong>1</strong>.</p>
+     * <p>The page number. Defaults to <strong>1</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -28,7 +34,7 @@ public class ListRecordsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page. Default value: <strong>500</strong>.</p>
+     * <p>The page size. Defaults to <strong>500</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -37,10 +43,12 @@ public class ListRecordsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>Filters by whether the record is proxied. Valid values:</p>
+     * <p>Filters the results based on whether the record is proxied. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong></li>
-     * <li><strong>false</strong></li>
+     * <li><p><strong>true</strong>: The record is proxied.</p>
+     * </li>
+     * <li><p><strong>false</strong>: The record is not proxied.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -50,12 +58,16 @@ public class ListRecordsRequest extends TeaModel {
     public Boolean proxied;
 
     /**
-     * <p>The match mode to search for the record name. Default value: exact. Valid values:</p>
+     * <p>The match type for the record name search. Defaults to <strong>exact</strong>. Valid values:</p>
      * <ul>
-     * <li><strong>prefix</strong>: match by prefix.</li>
-     * <li><strong>suffix</strong>: match by suffix.</li>
-     * <li><strong>exact</strong>: exact match.</li>
-     * <li><strong>fuzzy</strong>: fuzzy match.</li>
+     * <li><p><strong>prefix</strong>: Prefix match.</p>
+     * </li>
+     * <li><p><strong>suffix</strong>: Suffix match.</p>
+     * </li>
+     * <li><p><strong>exact</strong>: Exact match.</p>
+     * </li>
+     * <li><p><strong>fuzzy</strong>: Fuzzy match.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -65,7 +77,7 @@ public class ListRecordsRequest extends TeaModel {
     public String recordMatchType;
 
     /**
-     * <p>The record name. This parameter specifies a filter condition for the query.</p>
+     * <p>The record name. Use this parameter to filter query results.</p>
      * 
      * <strong>example:</strong>
      * <p><a href="http://www.example.com">www.example.com</a></p>
@@ -74,7 +86,7 @@ public class ListRecordsRequest extends TeaModel {
     public String recordName;
 
     /**
-     * <p>The website ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation.</p>
+     * <p>The site ID. You can get this ID by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -84,13 +96,18 @@ public class ListRecordsRequest extends TeaModel {
     public Long siteId;
 
     /**
-     * <p>The origin type of the record. Only CNAME records can be filtered by using this field. Valid values:</p>
+     * <p>Filters the results by the record\&quot;s origin type. This filter applies only to CNAME records. Valid values:</p>
      * <ul>
-     * <li><strong>OSS</strong>: OSS bucket.</li>
-     * <li><strong>S3</strong>: S3 bucket.</li>
-     * <li><strong>LB</strong>: load balancer.</li>
-     * <li><strong>OP</strong>: origin pool.</li>
-     * <li><strong>Domain</strong>: domain name.</li>
+     * <li><p><strong>OSS</strong>: OSS origin.</p>
+     * </li>
+     * <li><p><strong>S3</strong>: S3 origin.</p>
+     * </li>
+     * <li><p><strong>LB</strong>: Load balancer origin.</p>
+     * </li>
+     * <li><p><strong>OP</strong>: Origin pool.</p>
+     * </li>
+     * <li><p><strong>Domain</strong>: Domain origin.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -100,7 +117,7 @@ public class ListRecordsRequest extends TeaModel {
     public String sourceType;
 
     /**
-     * <p>The DNS record type.</p>
+     * <p>The DNS record type. Use this parameter to filter results.</p>
      * 
      * <strong>example:</strong>
      * <p>CNAME</p>
@@ -119,6 +136,14 @@ public class ListRecordsRequest extends TeaModel {
     }
     public String getBizName() {
         return this.bizName;
+    }
+
+    public ListRecordsRequest setCustomPort(String customPort) {
+        this.customPort = customPort;
+        return this;
+    }
+    public String getCustomPort() {
+        return this.customPort;
     }
 
     public ListRecordsRequest setPageNumber(Integer pageNumber) {

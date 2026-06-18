@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListRecordsResponseBody extends TeaModel {
     /**
-     * <p>The page number returned.</p>
+     * <p>The current page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -14,7 +14,7 @@ public class ListRecordsResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page.</p>
+     * <p>The number of records returned per page.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -23,7 +23,7 @@ public class ListRecordsResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The DNS record information. The format of this field varies based on the record type. For more information, see Add DNS records.</p>
+     * <p>A list of DNS records. For details, see the &lt;props=&quot;china&quot;&gt;<a href="https://help.aliyun.com/document_detail/2708761.html">documentation</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/doc-detail/2708761.html">documentation</a>.</p>
      */
     @NameInMap("Records")
     public java.util.List<ListRecordsResponseBodyRecords> records;
@@ -38,7 +38,7 @@ public class ListRecordsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of records returned.</p>
+     * <p>The total number of records.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -93,7 +93,7 @@ public class ListRecordsResponseBody extends TeaModel {
 
     public static class ListRecordsResponseBodyRecordsAuthConf extends TeaModel {
         /**
-         * <p>The access key of the account to which the origin server belongs. This value is returned when the SourceType is OSS, and AuthType is private_cross_account, or when the SourceType is S3 and AuthType is private.</p>
+         * <p>The AccessKey for the account that owns the origin server. This parameter is required if the origin type is OSS and the authentication type is <code>private_cross_account</code>, or if the origin type is S3 and the authentication type is <code>private</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>u0Nkg5gBK***QF5wvKMM504JUHt</p>
@@ -102,12 +102,16 @@ public class ListRecordsResponseBody extends TeaModel {
         public String accessKey;
 
         /**
-         * <p>The authentication type of the origin server. Different origins support different authentication types. The type of origin refers to the SourceType parameter in this operation. If the type of origin is OSS or S3, the authentication type of the origin must be specified. Valid values:</p>
+         * <p>The origin authentication type. The available authentication types depend on the origin type, which is specified by the <code>RecordSourceType</code> parameter. This parameter is required if the origin type is OSS or S3. Valid values:</p>
          * <ul>
-         * <li><strong>public</strong>: public read. This value is returned when the origin is a public OSS or S3 bucket.</li>
-         * <li><strong>private</strong>: private read. This value is returned when the origin is a private S3 bucket.</li>
-         * <li><strong>private_same_account</strong>: private read under the same account. This value is returned when the origin is a private OSS bucket in your Alibaba Cloud account.</li>
-         * <li><strong>private_cross_account</strong>: private read across accounts. This value is returned when the origin is a private OSS bucket in a different Alibaba Cloud account.</li>
+         * <li><p><strong>public</strong>: Public read. Use this value if the origin type is OSS or S3 and the origin server allows public read access.</p>
+         * </li>
+         * <li><p><strong>private</strong>: Private read. Use this value if the origin type is S3 and the origin server requires private read access.</p>
+         * </li>
+         * <li><p><strong>private_same_account</strong>: Private read within the same account. Use this value if the origin type is OSS, the origin server is in the same Alibaba Cloud account, and requires private read access.</p>
+         * </li>
+         * <li><p><strong>private_cross_account</strong>: Private read across different accounts. Use this value if the origin type is OSS, the origin server is in a different Alibaba Cloud account, and requires private read access.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -117,7 +121,7 @@ public class ListRecordsResponseBody extends TeaModel {
         public String authType;
 
         /**
-         * <p>The region of the origin. This parameter is returned if the origin type is S3. You can get the region information from the official website of Amazon S3.</p>
+         * <p>The region where the origin server is located. This parameter is required if the origin type is S3. For valid region names, refer to the official S3 documentation.</p>
          * 
          * <strong>example:</strong>
          * <p>us-east-1</p>
@@ -126,7 +130,7 @@ public class ListRecordsResponseBody extends TeaModel {
         public String region;
 
         /**
-         * <p>The secret access key of the account to which the origin server belongs. This value is returned when the SourceType is OSS, and AuthType is private_same_account, or when the SourceType is S3 and AuthType is private.</p>
+         * <p>The SecretKey for the account that owns the origin server. This parameter is required if the origin type is OSS and the authentication type is <code>private_cross_account</code>, or if the origin type is S3 and the authentication type is <code>private</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>VIxuvJSA2S03f***kp208dy5w7</p>
@@ -135,12 +139,14 @@ public class ListRecordsResponseBody extends TeaModel {
         public String secretKey;
 
         /**
-         * <p>The version of the signature algorithm. This value is returned when the origin type is S3 and AuthType is private. Valid values:</p>
+         * <p>The signature algorithm version. This parameter is required if the origin type is S3 and the authentication type is <code>private</code>. Valid values:</p>
          * <ul>
-         * <li><strong>v2</strong></li>
-         * <li><strong>v4</strong></li>
+         * <li><p><strong>v2</strong></p>
+         * </li>
+         * <li><p><strong>v4</strong></p>
+         * </li>
          * </ul>
-         * <p>If this parameter is left empty, the default value v4 is used.</p>
+         * <p>The default is <code>v4</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>v4</p>
@@ -197,7 +203,7 @@ public class ListRecordsResponseBody extends TeaModel {
 
     public static class ListRecordsResponseBodyRecordsData extends TeaModel {
         /**
-         * <p>The encryption algorithm used for the record. Valid values: 0 to 255. Exclusive to CERT and SSHFP records.</p>
+         * <p>The encryption algorithm for the record. The value ranges from <strong>0 to 255</strong>. This parameter is valid only for CERT and SSHFP records.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -206,7 +212,7 @@ public class ListRecordsResponseBody extends TeaModel {
         public Integer algorithm;
 
         /**
-         * <p>The public key of the certificate. Exclusive to CERT, SMIMEA, and TLSA records.</p>
+         * <p>The public key certificate. This parameter is valid only for CERT, SMIMEA, and TLSA records.</p>
          * 
          * <strong>example:</strong>
          * <p>dGVzdGFkYWxrcw==</p>
@@ -215,7 +221,7 @@ public class ListRecordsResponseBody extends TeaModel {
         public String certificate;
 
         /**
-         * <p>The public key fingerprint of the record. Exclusive to SSHFP records.</p>
+         * <p>The public key fingerprint. This parameter is valid only for SSHFP records.</p>
          * 
          * <strong>example:</strong>
          * <p>abcdef1234567890</p>
@@ -224,7 +230,7 @@ public class ListRecordsResponseBody extends TeaModel {
         public String fingerprint;
 
         /**
-         * <p>The flag bit of the record. The Flag for a CAA record indicates its priority and how it is processed. Valid values: 0 to 255. Exclusive to CAA records.</p>
+         * <p>The record\&quot;s flag. For a CAA record, the flag determines how a certificate authority (CA) processes the record. The value ranges from <strong>0 to 255</strong>. This parameter applies only to CAA records.</p>
          * 
          * <strong>example:</strong>
          * <p>128</p>
@@ -233,7 +239,7 @@ public class ListRecordsResponseBody extends TeaModel {
         public Integer flag;
 
         /**
-         * <p>The public key identification for the record. Valid values: 0 to 65535. Exclusive to CERT records.</p>
+         * <p>The public key identifier. The value ranges from <strong>0 to 65535</strong>. This parameter is valid only for CERT records.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -242,7 +248,7 @@ public class ListRecordsResponseBody extends TeaModel {
         public Integer keyTag;
 
         /**
-         * <p>The algorithm policy used to match or validate the certificate. Valid values: 0 to 255. Exclusive to SMIMEA and TLSA records.</p>
+         * <p>The algorithm policy for matching or validating certificates. The value ranges from <strong>0 to 255</strong>. This parameter is valid only for SMIMEA and TLSA records.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -251,7 +257,7 @@ public class ListRecordsResponseBody extends TeaModel {
         public Integer matchingType;
 
         /**
-         * <p>The port of the record. Valid values: 0 to 65535. Exclusive to SRV records.</p>
+         * <p>The port number, which must be an integer from <strong>0 to 65535</strong>. This parameter applies only to SRV records.</p>
          * 
          * <strong>example:</strong>
          * <p>80</p>
@@ -260,7 +266,7 @@ public class ListRecordsResponseBody extends TeaModel {
         public Integer port;
 
         /**
-         * <p>The priority of the record. Valid values: 0 to 65535. A smaller value indicates a higher priority. Exclusive to MX, SRV, and URI records.</p>
+         * <p>The priority of the record, which must be an integer from <strong>0 to 65535</strong>. A lower value indicates a higher priority. This parameter applies only to MX, SRV, and URI records.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -269,7 +275,7 @@ public class ListRecordsResponseBody extends TeaModel {
         public Integer priority;
 
         /**
-         * <p>The type of certificate or public key. Valid values: 0 to 255. Exclusive to SMIMEA, and TLSA records.</p>
+         * <p>The type of certificate or public key for the record. The value ranges from <strong>0 to 255</strong>. This parameter is valid only for SMIMEA and TLSA records.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -278,7 +284,7 @@ public class ListRecordsResponseBody extends TeaModel {
         public Integer selector;
 
         /**
-         * <p>The tag of the record. The Tag of a CAA record indicate its specific type and usage. Exclusive to CAA records.</p>
+         * <p>The record\&quot;s tag. For a CAA record, the tag indicates its specific type and purpose. This parameter is valid only for CAA records.</p>
          * 
          * <strong>example:</strong>
          * <p>issue</p>
@@ -290,7 +296,7 @@ public class ListRecordsResponseBody extends TeaModel {
         public java.util.Map<String, ?> tags;
 
         /**
-         * <p>The certificate type of the record (in CERT records), or the public key type (in SSHFP records).</p>
+         * <p>The certificate type for a CERT record, or the public key type for an SSHFP record.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -299,7 +305,7 @@ public class ListRecordsResponseBody extends TeaModel {
         public Integer type;
 
         /**
-         * <p>The usage identifier of the record. Valid values: 0 to 255. Exclusive to SMIMEA, and TLSA records.</p>
+         * <p>The usage identifier. The value ranges from <strong>0 to 255</strong>. This parameter is valid only for SMIMEA and TLSA records.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -308,16 +314,24 @@ public class ListRecordsResponseBody extends TeaModel {
         public Integer usage;
 
         /**
-         * <p>Record value or part of the record content. This value is returned when the record is A/AAAA, CNAME, NS, MX, TXT, CAA, SRV, or URI. It has different meanings based on types of records:</p>
+         * <p>The value of the record. This parameter applies to A/AAAA, CNAME, NS, MX, TXT, CAA, SRV, and URI records. The meaning of this parameter varies based on the record type:</p>
          * <ul>
-         * <li><strong>A/AAAA</strong>: the IP addresses. IP addresses are separated by commas (,). There is at least one IPv4 address.</li>
-         * <li><strong>CNAME</strong>: the pointed/mapped domain name.</li>
-         * <li><strong>NS</strong>: the nameservers for the domain name.</li>
-         * <li><strong>MX</strong>: a valid domain name of the mail server.</li>
-         * <li><strong>TXT</strong>: a valid text string.</li>
-         * <li><strong>CAA</strong>: a valid domain name of the certificate authority.</li>
-         * <li><strong>SRV</strong>: a valid domain name of the target host.</li>
-         * <li><strong>URI</strong>: a valid URI string.</li>
+         * <li><p><strong>A/AAAA</strong>: The target IP address. Use an IPv4 address for an A record and an IPv6 address for an AAAA record.</p>
+         * </li>
+         * <li><p><strong>CNAME</strong>: The target domain name.</p>
+         * </li>
+         * <li><p><strong>NS</strong>: The name server for the specified domain.</p>
+         * </li>
+         * <li><p><strong>MX</strong>: The domain name of the target mail server.</p>
+         * </li>
+         * <li><p><strong>TXT</strong>: A text string.</p>
+         * </li>
+         * <li><p><strong>CAA</strong>: The domain name of the certificate authority.</p>
+         * </li>
+         * <li><p><strong>SRV</strong>: The domain name of the target host.</p>
+         * </li>
+         * <li><p><strong>URI</strong>: A URI string.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -327,7 +341,7 @@ public class ListRecordsResponseBody extends TeaModel {
         public String value;
 
         /**
-         * <p>The weight of the record. Valid values: 0 to 65535. Exclusive to SRV and URI records.</p>
+         * <p>The weight of the record, which must be an integer from <strong>0 to 65535</strong>. This parameter applies only to SRV and URI records.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -464,17 +478,20 @@ public class ListRecordsResponseBody extends TeaModel {
 
     public static class ListRecordsResponseBodyRecords extends TeaModel {
         /**
-         * <p>The origin authentication information of the CNAME record.</p>
+         * <p>The origin authentication settings for the CNAME record.</p>
          */
         @NameInMap("AuthConf")
         public ListRecordsResponseBodyRecordsAuthConf authConf;
 
         /**
-         * <p>The business scenario of the record for acceleration. Valid values:</p>
+         * <p>The business scenario for record acceleration. Valid values:</p>
          * <ul>
-         * <li><strong>image_video</strong>: video and image.</li>
-         * <li><strong>api</strong>: API.</li>
-         * <li><strong>web</strong>: web page.</li>
+         * <li><p><strong>image_video</strong>: Images and videos.</p>
+         * </li>
+         * <li><p><strong>api</strong>: API.</p>
+         * </li>
+         * <li><p><strong>web</strong>: Web page.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -484,7 +501,7 @@ public class ListRecordsResponseBody extends TeaModel {
         public String bizName;
 
         /**
-         * <p>The comments of the record.</p>
+         * <p>The record\&quot;s comment.</p>
          * 
          * <strong>example:</strong>
          * <p>this is a remark.</p>
@@ -493,7 +510,7 @@ public class ListRecordsResponseBody extends TeaModel {
         public String comment;
 
         /**
-         * <p>The time when the record was created. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+         * <p>The UTC time when the record was created, in ISO 8601 format: <code>yyyy-MM-ddTHH:mm:ssZ</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>2023-12-24T02:01:11Z</p>
@@ -501,8 +518,11 @@ public class ListRecordsResponseBody extends TeaModel {
         @NameInMap("CreateTime")
         public String createTime;
 
+        @NameInMap("CustomPort")
+        public String customPort;
+
         /**
-         * <p>The DNS record information. Different types of records contain different information.</p>
+         * <p>The DNS details of the record. The fields in this object vary based on the record type.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;value&quot;:&quot;1.1.1.1&quot;}</p>
@@ -511,10 +531,12 @@ public class ListRecordsResponseBody extends TeaModel {
         public ListRecordsResponseBodyRecordsData data;
 
         /**
-         * <p>The origin host policy. This policy takes effect when the record type is CNAME. Valid values:</p>
+         * <p>The policy for the <code>HOST</code> header in back-to-origin requests. This parameter applies only to CNAME records. Valid values:</p>
          * <ul>
-         * <li>follow_hostname: matches the requested domain name.</li>
-         * <li>follow_origin_domain: matches the origin\&quot;s domain name.</li>
+         * <li><p><strong>follow_hostname</strong>: Uses the <code>HOST</code> header of the incoming request.</p>
+         * </li>
+         * <li><p><strong>follow_origin_domain</strong>: Uses the domain name of the origin server.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -523,11 +545,19 @@ public class ListRecordsResponseBody extends TeaModel {
         @NameInMap("HostPolicy")
         public String hostPolicy;
 
+        @NameInMap("HttpPorts")
+        public String httpPorts;
+
+        @NameInMap("HttpsPorts")
+        public String httpsPorts;
+
         /**
-         * <p>Indicates whether the record is proxied. Valid values:</p>
+         * <p>Indicates whether proxy acceleration is enabled for the record. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong></li>
-         * <li><strong>false</strong></li>
+         * <li><p><strong>true</strong>: Proxy acceleration is enabled.</p>
+         * </li>
+         * <li><p><strong>false</strong>: Proxy acceleration is disabled.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -537,7 +567,7 @@ public class ListRecordsResponseBody extends TeaModel {
         public Boolean proxied;
 
         /**
-         * <p>The CNAME. If you use CNAME setup when you add your website to ESA, the value is the CNAME that you configured then.</p>
+         * <p>The CNAME value assigned to this record. To enable the service, create a CNAME record in your DNS provider\&quot;s settings that points to this value.</p>
          * 
          * <strong>example:</strong>
          * <p>a.example.com.cnamezone.com</p>
@@ -564,15 +594,20 @@ public class ListRecordsResponseBody extends TeaModel {
         public String recordName;
 
         /**
-         * <p>The origin type for the CNAME record. This parameter is returned when you add a CNAME record. Valid values:</p>
+         * <p>The type of origin for the CNAME record. This parameter is required when you add a CNAME record. Valid values:</p>
          * <ul>
-         * <li><strong>OSS</strong>: OSS bucket.</li>
-         * <li><strong>S3</strong>: S3 bucket.</li>
-         * <li><strong>LB</strong>: load balancer.</li>
-         * <li><strong>OP</strong>: origin pool.</li>
-         * <li><strong>Domain</strong>: domain name.</li>
+         * <li><p><strong>OSS</strong>: OSS origin.</p>
+         * </li>
+         * <li><p><strong>S3</strong>: S3 origin.</p>
+         * </li>
+         * <li><p><strong>LB</strong>: Load balancer origin.</p>
+         * </li>
+         * <li><p><strong>OP</strong>: Origin pool.</p>
+         * </li>
+         * <li><p><strong>Domain</strong>: Domain origin.</p>
+         * </li>
          * </ul>
-         * <p>If you do not pass this parameter or if you leave its value empty, Domain is returned by default.</p>
+         * <p>If this parameter is not specified, the default value is <code>Domain</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>OSS</p>
@@ -581,7 +616,7 @@ public class ListRecordsResponseBody extends TeaModel {
         public String recordSourceType;
 
         /**
-         * <p>The DNS type of the record, such as <strong>A/AAAA, CNAME, and TXT</strong>.</p>
+         * <p>The DNS record type, such as <strong>A/AAAA, CNAME, and TXT</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>A/AAAA</p>
@@ -590,7 +625,7 @@ public class ListRecordsResponseBody extends TeaModel {
         public String recordType;
 
         /**
-         * <p>The website ID.</p>
+         * <p>The ID of the site to which the record belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>1234567890123</p>
@@ -599,7 +634,7 @@ public class ListRecordsResponseBody extends TeaModel {
         public Long siteId;
 
         /**
-         * <p>The website name.</p>
+         * <p>The name of the site to which the record belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>example.com</p>
@@ -608,7 +643,7 @@ public class ListRecordsResponseBody extends TeaModel {
         public String siteName;
 
         /**
-         * <p>The TTL of the record. Unit: seconds. If the value is 1, the TTL of the record is determined by the system.</p>
+         * <p>The Time to Live (TTL) for the record, in seconds. A value of 1 indicates that the TTL is automatic.</p>
          * 
          * <strong>example:</strong>
          * <p>30</p>
@@ -617,7 +652,7 @@ public class ListRecordsResponseBody extends TeaModel {
         public Long ttl;
 
         /**
-         * <p>The time when the record was updated. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+         * <p>The UTC time when the record was last updated, in ISO 8601 format: <code>yyyy-MM-ddTHH:mm:ssZ</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>2023-06-07T10:02:59Z</p>
@@ -662,6 +697,14 @@ public class ListRecordsResponseBody extends TeaModel {
             return this.createTime;
         }
 
+        public ListRecordsResponseBodyRecords setCustomPort(String customPort) {
+            this.customPort = customPort;
+            return this;
+        }
+        public String getCustomPort() {
+            return this.customPort;
+        }
+
         public ListRecordsResponseBodyRecords setData(ListRecordsResponseBodyRecordsData data) {
             this.data = data;
             return this;
@@ -676,6 +719,22 @@ public class ListRecordsResponseBody extends TeaModel {
         }
         public String getHostPolicy() {
             return this.hostPolicy;
+        }
+
+        public ListRecordsResponseBodyRecords setHttpPorts(String httpPorts) {
+            this.httpPorts = httpPorts;
+            return this;
+        }
+        public String getHttpPorts() {
+            return this.httpPorts;
+        }
+
+        public ListRecordsResponseBodyRecords setHttpsPorts(String httpsPorts) {
+            this.httpsPorts = httpsPorts;
+            return this;
+        }
+        public String getHttpsPorts() {
+            return this.httpsPorts;
         }
 
         public ListRecordsResponseBodyRecords setProxied(Boolean proxied) {

@@ -14,7 +14,7 @@ public class GetClientCertificateHostnamesRequest extends TeaModel {
     public String id;
 
     /**
-     * <p>The website ID.</p>
+     * <p>The site ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

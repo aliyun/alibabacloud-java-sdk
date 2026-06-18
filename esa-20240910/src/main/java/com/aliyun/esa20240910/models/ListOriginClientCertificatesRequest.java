@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListOriginClientCertificatesRequest extends TeaModel {
     /**
-     * <p>The page number. Pages start from page 1. Default value: 1.</p>
+     * <p>The page number to return. The default value is <strong>1</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -14,7 +14,7 @@ public class ListOriginClientCertificatesRequest extends TeaModel {
     public Long pageNumber;
 
     /**
-     * <p>The number of entries per page.</p>
+     * <p>The number of entries to return on each page.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -23,7 +23,7 @@ public class ListOriginClientCertificatesRequest extends TeaModel {
     public Long pageSize;
 
     /**
-     * <p>Site ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> API.</p>
+     * <p>The ID of the site. You can get this value by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> API.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpdateUserWafRulesetShrinkRequest extends TeaModel {
     /**
+     * <p>The description of the WAF ruleset.</p>
+     * 
      * <strong>example:</strong>
      * <p>example</p>
      */
@@ -12,6 +14,8 @@ public class UpdateUserWafRulesetShrinkRequest extends TeaModel {
     public String description;
 
     /**
+     * <p>The expression of the WAF ruleset.</p>
+     * 
      * <strong>example:</strong>
      * <p>ip.src == 1.1.1.1</p>
      */
@@ -19,6 +23,7 @@ public class UpdateUserWafRulesetShrinkRequest extends TeaModel {
     public String expression;
 
     /**
+     * <p>The WAF ruleset ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -28,6 +33,7 @@ public class UpdateUserWafRulesetShrinkRequest extends TeaModel {
     public Long id;
 
     /**
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -37,6 +43,8 @@ public class UpdateUserWafRulesetShrinkRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>The name of the WAF ruleset.</p>
+     * 
      * <strong>example:</strong>
      * <p>example</p>
      */
@@ -44,6 +52,8 @@ public class UpdateUserWafRulesetShrinkRequest extends TeaModel {
     public String name;
 
     /**
+     * <p>The position of the WAF ruleset.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -51,6 +61,8 @@ public class UpdateUserWafRulesetShrinkRequest extends TeaModel {
     public Long position;
 
     /**
+     * <p>A list of rule configurations in the WAF ruleset.</p>
+     * 
      * <strong>example:</strong>
      * <p>[
      *   {
@@ -63,10 +75,15 @@ public class UpdateUserWafRulesetShrinkRequest extends TeaModel {
     @NameInMap("Rules")
     public String rulesShrink;
 
+    /**
+     * <p>The shared configuration of the WAF ruleset.</p>
+     */
     @NameInMap("Shared")
     public String sharedShrink;
 
     /**
+     * <p>The status of the WAF ruleset.</p>
+     * 
      * <strong>example:</strong>
      * <p>on</p>
      */

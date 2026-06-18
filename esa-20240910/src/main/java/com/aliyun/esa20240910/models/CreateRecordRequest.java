@@ -58,6 +58,12 @@ public class CreateRecordRequest extends TeaModel {
     @NameInMap("HostPolicy")
     public String hostPolicy;
 
+    @NameInMap("HttpPorts")
+    public String httpPorts;
+
+    @NameInMap("HttpsPorts")
+    public String httpsPorts;
+
     /**
      * <p>Specifies whether to proxy the record. Only CNAME and A/AAAA records can be proxied. Valid values:</p>
      * <ul>
@@ -171,6 +177,22 @@ public class CreateRecordRequest extends TeaModel {
     }
     public String getHostPolicy() {
         return this.hostPolicy;
+    }
+
+    public CreateRecordRequest setHttpPorts(String httpPorts) {
+        this.httpPorts = httpPorts;
+        return this;
+    }
+    public String getHttpPorts() {
+        return this.httpPorts;
+    }
+
+    public CreateRecordRequest setHttpsPorts(String httpsPorts) {
+        this.httpsPorts = httpsPorts;
+        return this;
+    }
+    public String getHttpsPorts() {
+        return this.httpsPorts;
     }
 
     public CreateRecordRequest setProxied(Boolean proxied) {

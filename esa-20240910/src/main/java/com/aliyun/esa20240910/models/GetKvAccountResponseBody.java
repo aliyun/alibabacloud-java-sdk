@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetKvAccountResponseBody extends TeaModel {
     /**
-     * <p>The available capacity of all namespaces in the account. Unit: bytes.</p>
+     * <p>The total available capacity of all namespaces for the account, in bytes.</p>
      * 
      * <strong>example:</strong>
      * <p>1073741824</p>
@@ -14,7 +14,7 @@ public class GetKvAccountResponseBody extends TeaModel {
     public Long capacity;
 
     /**
-     * <p>The available capacity of all namespaces in the account.</p>
+     * <p>The total available capacity of all namespaces for the account.</p>
      * 
      * <strong>example:</strong>
      * <p>1 GB</p>
@@ -23,7 +23,7 @@ public class GetKvAccountResponseBody extends TeaModel {
     public String capacityString;
 
     /**
-     * <p>The used capacity of all namespaces in the account. Unit: bytes.</p>
+     * <p>The total used capacity of all namespaces for the account, in bytes.</p>
      * 
      * <strong>example:</strong>
      * <p>10048576</p>
@@ -32,7 +32,7 @@ public class GetKvAccountResponseBody extends TeaModel {
     public Long capacityUsed;
 
     /**
-     * <p>The used capacity of all namespaces in the account.</p>
+     * <p>The total used capacity of all namespaces for the account.</p>
      * 
      * <strong>example:</strong>
      * <p>100 MB</p>
@@ -41,13 +41,13 @@ public class GetKvAccountResponseBody extends TeaModel {
     public String capacityUsedString;
 
     /**
-     * <p>The namespaces in the account.</p>
+     * <p>The list of namespaces for the account.</p>
      */
     @NameInMap("NamespaceList")
     public java.util.List<GetKvAccountResponseBodyNamespaceList> namespaceList;
 
     /**
-     * <p>The maximum number of namespaces that can be created in the account.</p>
+     * <p>The quota on the number of KV storage spaces that you can request for the account.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -56,7 +56,7 @@ public class GetKvAccountResponseBody extends TeaModel {
     public Integer namespaceQuota;
 
     /**
-     * <p>The number of created namespaces that store key-value data in the account.</p>
+     * <p>The number of namespaces created for the account.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -74,10 +74,12 @@ public class GetKvAccountResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether Edge KV is activated for the Alibaba Cloud account.</p>
+     * <p>The status of the account.</p>
      * <ul>
-     * <li><strong>online</strong></li>
-     * <li><strong>offline</strong></li>
+     * <li><p><strong>online</strong>: The account is active.</p>
+     * </li>
+     * <li><p><strong>offline</strong>: The account is shut down.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -165,7 +167,7 @@ public class GetKvAccountResponseBody extends TeaModel {
 
     public static class GetKvAccountResponseBodyNamespaceList extends TeaModel {
         /**
-         * <p>The available capacity of the namespace. Unit: bytes.</p>
+         * <p>The available capacity of the namespace, in bytes.</p>
          * 
          * <strong>example:</strong>
          * <p>1073741824</p>
@@ -183,7 +185,7 @@ public class GetKvAccountResponseBody extends TeaModel {
         public String capacityString;
 
         /**
-         * <p>The used capacity of the namespace. Unit: bytes.</p>
+         * <p>The used capacity of the namespace, in bytes.</p>
          * 
          * <strong>example:</strong>
          * <p>100048576</p>
@@ -230,10 +232,14 @@ public class GetKvAccountResponseBody extends TeaModel {
         /**
          * <p>The status of the namespace. Valid values:</p>
          * <ul>
-         * <li><strong>online</strong>: normal.</li>
-         * <li><strong>delete</strong>: pending deletion.</li>
-         * <li><strong>deleting</strong>: being deleted.</li>
-         * <li><strong>deleted</strong>: deleted.</li>
+         * <li><p><strong>online</strong>: Normal.</p>
+         * </li>
+         * <li><p><strong>delete</strong>: Pending deletion.</p>
+         * </li>
+         * <li><p><strong>deleting</strong>: Being deleted.</p>
+         * </li>
+         * <li><p><strong>deleted</strong>: Deleted.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

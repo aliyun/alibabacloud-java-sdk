@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateRewriteUrlRuleRequest extends TeaModel {
     /**
-     * <p>The query string after rewriting.</p>
+     * <p>The query string after the rewrite.</p>
      * 
      * <strong>example:</strong>
      * <p>example=123</p>
@@ -14,10 +14,12 @@ public class CreateRewriteUrlRuleRequest extends TeaModel {
     public String queryString;
 
     /**
-     * <p>Query string rewrite type. Value range:</p>
+     * <p>The query string rewrite mode. Valid values:</p>
      * <ul>
-     * <li>static: static mode.</li>
-     * <li>dynamic: dynamic mode.</li>
+     * <li><p><code>static</code>: Static mode.</p>
+     * </li>
+     * <li><p><code>dynamic</code>: Dynamic mode.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -30,10 +32,12 @@ public class CreateRewriteUrlRuleRequest extends TeaModel {
     public String rewriteQueryStringType;
 
     /**
-     * <p>URI rewrite type. Value range:</p>
+     * <p>The URI rewrite mode. Valid values:</p>
      * <ul>
-     * <li>static: static mode.</li>
-     * <li>dynamic: dynamic mode.</li>
+     * <li><p><code>static</code>: Static mode.</p>
+     * </li>
+     * <li><p><code>dynamic</code>: Dynamic mode.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -46,10 +50,12 @@ public class CreateRewriteUrlRuleRequest extends TeaModel {
     public String rewriteUriType;
 
     /**
-     * <p>Rule content, using conditional expressions to match user requests. This parameter is not required when adding a global configuration. There are two usage scenarios:</p>
+     * <p>The conditional expression used to match user requests. This parameter is not required when you add a global configuration. Two use cases are supported:</p>
      * <ul>
-     * <li>Match all incoming requests: set the value to true</li>
-     * <li>Match specific requests: set the value to a custom expression, for example: (http.host eq \&quot;video.example.com\&quot;)</li>
+     * <li><p>To match all inbound requests, set the value to <code>true</code>.</p>
+     * </li>
+     * <li><p>To match specific requests, set the value to a custom expression, such as <code>(http.host eq &quot;video.example.com&quot;)</code>.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -59,10 +65,12 @@ public class CreateRewriteUrlRuleRequest extends TeaModel {
     public String rule;
 
     /**
-     * <p>Rule switch. This parameter is not required when adding a global configuration. Value range:</p>
+     * <p>This parameter is not required when you add a global configuration. Valid values:</p>
      * <ul>
-     * <li>on: enable.</li>
-     * <li>off: disable.</li>
+     * <li><p><code>on</code>: Enables the rule.</p>
+     * </li>
+     * <li><p><code>off</code>: Disables the rule.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -72,7 +80,7 @@ public class CreateRewriteUrlRuleRequest extends TeaModel {
     public String ruleEnable;
 
     /**
-     * <p>Rule name. This parameter is not required when adding a global configuration.</p>
+     * <p>The rule name. This parameter is not required when you add a global configuration.</p>
      * 
      * <strong>example:</strong>
      * <p>rule_example</p>
@@ -80,11 +88,17 @@ public class CreateRewriteUrlRuleRequest extends TeaModel {
     @NameInMap("RuleName")
     public String ruleName;
 
+    /**
+     * <p>The execution priority of the rule. A lower value indicates a higher priority.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("Sequence")
     public Integer sequence;
 
     /**
-     * <p>Site ID, which can be obtained by calling the <a href="~~ListSites~~">ListSites</a> interface.</p>
+     * <p>The site ID. Obtain it by calling the <a href="~~ListSites~~">ListSites</a> operation.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -94,7 +108,7 @@ public class CreateRewriteUrlRuleRequest extends TeaModel {
     public Long siteId;
 
     /**
-     * <p>The version number of the site configuration. For sites with version management enabled, you can use this parameter to specify the effective version of the site configuration, defaulting to version 0.</p>
+     * <p>If configuration versioning is enabled for the site, this parameter specifies the target version. The default value is 0.</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>
@@ -103,7 +117,7 @@ public class CreateRewriteUrlRuleRequest extends TeaModel {
     public Integer siteVersion;
 
     /**
-     * <p>The target URI after rewriting.</p>
+     * <p>The target URI after the rewrite.</p>
      * 
      * <strong>example:</strong>
      * <p>/image/example.jpg</p>

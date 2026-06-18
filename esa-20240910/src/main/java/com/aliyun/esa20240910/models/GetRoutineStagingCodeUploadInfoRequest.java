@@ -18,7 +18,7 @@ public class GetRoutineStagingCodeUploadInfoRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>GetRoutineStagingCodeUploadInfo</p>
+     * <p>test-routine1</p>
      */
     @NameInMap("Name")
     public String name;

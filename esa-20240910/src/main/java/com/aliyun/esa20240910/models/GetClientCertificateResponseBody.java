@@ -23,13 +23,13 @@ public class GetClientCertificateResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The certificate information.</p>
+     * <p>Detailed certificate information.</p>
      */
     @NameInMap("Result")
     public GetClientCertificateResponseBodyResult result;
 
     /**
-     * <p>The website ID.</p>
+     * <p>The site ID.</p>
      * 
      * <strong>example:</strong>
      * <p>1234567890123</p>
@@ -38,7 +38,7 @@ public class GetClientCertificateResponseBody extends TeaModel {
     public Long siteId;
 
     /**
-     * <p>The website name.</p>
+     * <p>The site name.</p>
      * 
      * <strong>example:</strong>
      * <p>example.com</p>
@@ -110,7 +110,7 @@ public class GetClientCertificateResponseBody extends TeaModel {
 
     public static class GetClientCertificateResponseBodyResult extends TeaModel {
         /**
-         * <p>The ID of the CA certificate.</p>
+         * <p>The CA certificate ID.</p>
          * 
          * <strong>example:</strong>
          * <p>babab9db65ee5efcca9f3d41d4b50d66</p>
@@ -119,7 +119,7 @@ public class GetClientCertificateResponseBody extends TeaModel {
         public String CACertificateId;
 
         /**
-         * <p>The Common Name of the certificate.</p>
+         * <p>The certificate\&quot;s common name.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="http://www.example.com">www.example.com</a></p>
@@ -128,7 +128,7 @@ public class GetClientCertificateResponseBody extends TeaModel {
         public String commonName;
 
         /**
-         * <p>The time when the certificate was created.</p>
+         * <p>The time the certificate was created.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-06-24 07:48:51</p>
@@ -136,6 +136,9 @@ public class GetClientCertificateResponseBody extends TeaModel {
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <p>The certificate\&quot;s SHA-256 fingerprint.</p>
+         */
         @NameInMap("FingerprintSha256")
         public String fingerprintSha256;
 
@@ -149,7 +152,7 @@ public class GetClientCertificateResponseBody extends TeaModel {
         public String id;
 
         /**
-         * <p>The certificate authority (CA) that issued the certificate.</p>
+         * <p>The certificate\&quot;s issuer.</p>
          * 
          * <strong>example:</strong>
          * <p>GlobalSign nv-sa</p>
@@ -167,7 +170,7 @@ public class GetClientCertificateResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The time when the certificate expires.</p>
+         * <p>The time the certificate expires.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-03-31 02:08:00</p>
@@ -176,7 +179,7 @@ public class GetClientCertificateResponseBody extends TeaModel {
         public String notAfter;
 
         /**
-         * <p>The time when the certificate takes effect.</p>
+         * <p>The time the certificate becomes valid.</p>
          * 
          * <strong>example:</strong>
          * <p>2023-03-31 02:08:00</p>
@@ -185,7 +188,7 @@ public class GetClientCertificateResponseBody extends TeaModel {
         public String notBefore;
 
         /**
-         * <p>The public-key algorithm of the certificate.</p>
+         * <p>The certificate\&quot;s public key algorithm.</p>
          * 
          * <strong>example:</strong>
          * <p>RSA</p>
@@ -194,7 +197,7 @@ public class GetClientCertificateResponseBody extends TeaModel {
         public String pubkeyAlgorithm;
 
         /**
-         * <p>The Subject Alternative Name (SAN) of the certificate.</p>
+         * <p>The certificate\&quot;s subject alternative name.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="http://www.example.com,*.example.com">www.example.com,*.example.com</a></p>
@@ -202,11 +205,14 @@ public class GetClientCertificateResponseBody extends TeaModel {
         @NameInMap("SAN")
         public String SAN;
 
+        /**
+         * <p>The certificate\&quot;s serial number.</p>
+         */
         @NameInMap("SerialNumber")
         public String serialNumber;
 
         /**
-         * <p>The signature algorithm of the certificate.</p>
+         * <p>The certificate\&quot;s signature algorithm.</p>
          * 
          * <strong>example:</strong>
          * <p>SHA256-RSA</p>
@@ -233,7 +239,7 @@ public class GetClientCertificateResponseBody extends TeaModel {
         public String type;
 
         /**
-         * <p>The time when the certificate was updated.</p>
+         * <p>The time the certificate was last updated.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-09-22 05:33:13</p>

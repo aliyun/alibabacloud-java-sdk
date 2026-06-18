@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ApplyCustomHostnameCertificateRequest extends TeaModel {
     /**
+     * <p>The ID of the SaaS domain name. Call the <a href="https://help.aliyun.com/document_detail/3018667.html">ListCustomHostnames</a> operation to obtain the ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

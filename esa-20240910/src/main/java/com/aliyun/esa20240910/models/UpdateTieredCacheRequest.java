@@ -7,10 +7,14 @@ public class UpdateTieredCacheRequest extends TeaModel {
     /**
      * <p>The tiered cache architecture mode. Valid values:</p>
      * <ul>
-     * <li>edge: edge tiered cache.</li>
-     * <li>edge_smart: edge tiered cache + smart tiered cache.</li>
-     * <li>edge_regional: edge tiered cache + regional tiered cache.</li>
-     * <li>edge_regional_smart: edge tiered cache + regional tiered cache + smart tiered cache.</li>
+     * <li><p>edge: The edge cache layer.</p>
+     * </li>
+     * <li><p>edge_smart: The edge cache layer and the intelligent cache layer.</p>
+     * </li>
+     * <li><p>edge_regional: The edge cache layer and the regional cache layer.</p>
+     * </li>
+     * <li><p>edge_regional_smart: The edge cache layer, the regional cache layer, and the intelligent cache layer.</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -21,7 +25,7 @@ public class UpdateTieredCacheRequest extends TeaModel {
     public String cacheArchitectureMode;
 
     /**
-     * <p>The website ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation.</p>
+     * <p>The site ID. You can get this ID by calling <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

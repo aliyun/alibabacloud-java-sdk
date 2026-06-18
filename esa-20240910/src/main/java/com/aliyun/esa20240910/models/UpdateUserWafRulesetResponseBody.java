@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpdateUserWafRulesetResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>xxxx-xxxx-xxxx-xxxx</p>
      */

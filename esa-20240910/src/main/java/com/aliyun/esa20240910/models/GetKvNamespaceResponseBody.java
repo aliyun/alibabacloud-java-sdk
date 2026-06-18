@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetKvNamespaceResponseBody extends TeaModel {
     /**
-     * <p>The available capacity of the namespace. Unit: bytes.</p>
+     * <p>The available capacity of the namespace, in bytes.</p>
      * 
      * <strong>example:</strong>
      * <p>1073741824</p>
@@ -14,7 +14,7 @@ public class GetKvNamespaceResponseBody extends TeaModel {
     public Long capacity;
 
     /**
-     * <p>The available capacity of the namespace.</p>
+     * <p>The available capacity of the namespace, formatted as a human-readable string.</p>
      * 
      * <strong>example:</strong>
      * <p>1 GB</p>
@@ -23,7 +23,7 @@ public class GetKvNamespaceResponseBody extends TeaModel {
     public String capacityString;
 
     /**
-     * <p>The used capacity of the namespace. Unit: bytes.</p>
+     * <p>The used capacity of the namespace, in bytes.</p>
      * 
      * <strong>example:</strong>
      * <p>10048576</p>
@@ -32,7 +32,7 @@ public class GetKvNamespaceResponseBody extends TeaModel {
     public Long capacityUsed;
 
     /**
-     * <p>The used capacity of the namespace.</p>
+     * <p>The used capacity of the namespace, formatted as a human-readable string.</p>
      * 
      * <strong>example:</strong>
      * <p>100 MB</p>
@@ -68,7 +68,7 @@ public class GetKvNamespaceResponseBody extends TeaModel {
     public String namespaceId;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>EEEBE525-F576-1196-8DAF-2D70CA3F4D2F</p>
@@ -79,10 +79,14 @@ public class GetKvNamespaceResponseBody extends TeaModel {
     /**
      * <p>The status of the namespace. Valid values:</p>
      * <ul>
-     * <li><strong>online</strong>: working as expected.</li>
-     * <li><strong>delete</strong>: pending deletion.</li>
-     * <li><strong>deleting</strong>: being deleted.</li>
-     * <li><strong>deleted</strong>: deleted.</li>
+     * <li><p><strong>online</strong>: The namespace is active.</p>
+     * </li>
+     * <li><p><strong>delete</strong>: The namespace is marked for deletion.</p>
+     * </li>
+     * <li><p><strong>deleting</strong>: The namespace is being deleted.</p>
+     * </li>
+     * <li><p><strong>deleted</strong>: The namespace has been deleted.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

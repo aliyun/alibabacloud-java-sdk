@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListImageTransformsRequest extends TeaModel {
     /**
-     * <p>Configuration ID. Can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2869056.html">ListImageTransforms</a> interface.</p>
+     * <p>The configuration ID. Obtain this ID when you create an image transform or from a previous call to this operation.</p>
      * 
      * <strong>example:</strong>
      * <p>352816096987136</p>
@@ -14,12 +14,14 @@ public class ListImageTransformsRequest extends TeaModel {
     public Long configId;
 
     /**
-     * <p>Configuration type, which can be used to query global or rule configurations. Possible values:</p>
+     * <p>The configuration type. You can use this parameter to query for a global configuration or rule configurations. Valid values:</p>
      * <ul>
-     * <li>global: Query global configuration;</li>
-     * <li>rule: Query rule configuration;</li>
+     * <li><p><code>global</code>: Retrieves the global configuration.</p>
+     * </li>
+     * <li><p><code>rule</code>: Retrieves rule configurations.</p>
+     * </li>
      * </ul>
-     * <p>This parameter is optional. If not provided, it will not distinguish between global and rule configurations.</p>
+     * <p>This parameter is optional. If not specified, both global and rule configurations are returned.</p>
      * 
      * <strong>example:</strong>
      * <p>global</p>
@@ -28,7 +30,7 @@ public class ListImageTransformsRequest extends TeaModel {
     public String configType;
 
     /**
-     * <p>Page number. The default value is 1 if not provided.</p>
+     * <p>The page number to return. Default: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -37,7 +39,7 @@ public class ListImageTransformsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>Number of items per page. The maximum value is 500, and the default value is 500 if not provided.</p>
+     * <p>The number of entries to return per page. Maximum: 500. Default: 500.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -46,7 +48,7 @@ public class ListImageTransformsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>Rule name. This parameter is not required when adding a global configuration.</p>
+     * <p>The rule name. This parameter is not required for a global configuration.</p>
      * 
      * <strong>example:</strong>
      * <p>test1</p>
@@ -55,7 +57,7 @@ public class ListImageTransformsRequest extends TeaModel {
     public String ruleName;
 
     /**
-     * <p>Site ID. Can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> interface.</p>
+     * <p>The site ID. Call the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation to obtain this ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -65,7 +67,7 @@ public class ListImageTransformsRequest extends TeaModel {
     public Long siteId;
 
     /**
-     * <p>Site version number. For sites with version management enabled, you can use this parameter to specify the site version for which the configuration takes effect. The default value is version 0.</p>
+     * <p>The site version. If version management is enabled for the site, use this parameter to specify the version to which the configuration applies. Default: 0.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>

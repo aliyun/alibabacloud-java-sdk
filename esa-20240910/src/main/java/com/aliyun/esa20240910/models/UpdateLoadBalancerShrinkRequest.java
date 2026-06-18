@@ -5,19 +5,19 @@ import com.aliyun.tea.*;
 
 public class UpdateLoadBalancerShrinkRequest extends TeaModel {
     /**
-     * <p>Configuration for fallback across pools.</p>
+     * <p>Configures origin-pull behavior across address pools.</p>
      */
     @NameInMap("AdaptiveRouting")
     public String adaptiveRoutingShrink;
 
     /**
-     * <p>List of default pool IDs.</p>
+     * <p>A list of default address pool IDs.</p>
      */
     @NameInMap("DefaultPools")
     public String defaultPoolsShrink;
 
     /**
-     * <p>Detailed description of the load balancer, for easier management and identification.</p>
+     * <p>An optional description of the load balancer for easier identification and management.</p>
      * 
      * <strong>example:</strong>
      * <p>Load balancer description</p>
@@ -26,10 +26,12 @@ public class UpdateLoadBalancerShrinkRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>Whether the load balancer is enabled.</p>
+     * <p>Specifies whether the load balancer is enabled.</p>
      * <ul>
-     * <li>true: Enabled.</li>
-     * <li>false: Not enabled.</li>
+     * <li><p><code>true</code>: The load balancer is enabled.</p>
+     * </li>
+     * <li><p><code>false</code>: The load balancer is disabled.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -39,7 +41,7 @@ public class UpdateLoadBalancerShrinkRequest extends TeaModel {
     public Boolean enabled;
 
     /**
-     * <p>Fallback pool ID, where traffic will be directed when all other pools are unavailable.</p>
+     * <p>The ID of the fallback address pool. Traffic is routed to this pool when all other address pools are unavailable.</p>
      * 
      * <strong>example:</strong>
      * <p>96228666776****</p>
@@ -48,7 +50,7 @@ public class UpdateLoadBalancerShrinkRequest extends TeaModel {
     public Long fallbackPool;
 
     /**
-     * <p>Load balancer ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2868897.html">ListLoadBalancers</a> API.</p>
+     * <p>The ID of the load balancer. You can obtain this ID by calling the <a href="https://help.aliyun.com/document_detail/2868897.html">ListLoadBalancers</a> API operation.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -58,19 +60,19 @@ public class UpdateLoadBalancerShrinkRequest extends TeaModel {
     public Long id;
 
     /**
-     * <p>Monitor configuration for health checks.</p>
+     * <p>The health check monitor configuration.</p>
      */
     @NameInMap("Monitor")
     public String monitorShrink;
 
     /**
-     * <p>Weighted round-robin configuration, used to control the traffic distribution weights among different pools.</p>
+     * <p>The configuration for weighted round-robin. This setting controls the weight of traffic distributed to different address pools.</p>
      */
     @NameInMap("RandomSteering")
     public String randomSteeringShrink;
 
     /**
-     * <p>Address pool corresponding to the primary region.</p>
+     * <p>A map of primary regions to their corresponding address pools.</p>
      * 
      * <strong>example:</strong>
      * <p>{
@@ -87,7 +89,7 @@ public class UpdateLoadBalancerShrinkRequest extends TeaModel {
     public Object regionPools;
 
     /**
-     * <p>Rule configuration list, used to define behavior overrides under specific conditions.</p>
+     * <p>A list of rules that define behavior overrides for specific conditions.</p>
      * 
      * <strong>if can be null:</strong>
      * <p>false</p>
@@ -96,11 +98,14 @@ public class UpdateLoadBalancerShrinkRequest extends TeaModel {
     public String rulesShrink;
 
     /**
-     * <p>Session persistence, with possible values:</p>
+     * <p>The method for session affinity, which ensures that requests from the same client are routed to the same origin server. Valid values:</p>
      * <ul>
-     * <li>off: Not enabled.</li>
-     * <li>ip: Session persistence by IP.</li>
-     * <li>cookie: Session persistence by cookie.</li>
+     * <li><p><code>off</code>: Disables session affinity.</p>
+     * </li>
+     * <li><p><code>ip</code>: Enables session affinity based on the client IP address.</p>
+     * </li>
+     * <li><p><code>cookie</code>: Enables session affinity based on a cookie.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -110,7 +115,7 @@ public class UpdateLoadBalancerShrinkRequest extends TeaModel {
     public String sessionAffinity;
 
     /**
-     * <p>Site ID, which can be obtained by calling the <a href="~~ListSites~~">ListSites</a> interface.</p>
+     * <p>The ID of the Site. You can obtain this ID by calling the <a href="~~ListSites~~">ListSites</a> API operation.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -120,7 +125,7 @@ public class UpdateLoadBalancerShrinkRequest extends TeaModel {
     public Long siteId;
 
     /**
-     * <p>Load balancing policy.</p>
+     * <p>The traffic steering policy, which determines how traffic is distributed among the address pools.</p>
      * 
      * <strong>example:</strong>
      * <p>order</p>
@@ -129,7 +134,7 @@ public class UpdateLoadBalancerShrinkRequest extends TeaModel {
     public String steeringPolicy;
 
     /**
-     * <p>Address pool corresponding to the secondary region. When multiple secondary regions share the same address pool, the regions can be concatenated with commas as the key.</p>
+     * <p>A map of secondary regions to their corresponding address pools. To assign the same address pools to multiple secondary regions, combine their codes into a single, comma-separated key.</p>
      * 
      * <strong>example:</strong>
      * <p>{&quot;AL,MO&quot;: [92298024898****],&quot;CN-SH,CN-SX,CN-SC&quot;:[92304347804****,92843536908****]}</p>
@@ -138,7 +143,7 @@ public class UpdateLoadBalancerShrinkRequest extends TeaModel {
     public Object subRegionPools;
 
     /**
-     * <p>TTL value, the time-to-live for DNS records, with a default of 30 and a range of 10-600.</p>
+     * <p>The Time to Live (TTL) for the DNS record, in seconds. The default is 30. The value must be between 10 and 600, inclusive.</p>
      * 
      * <strong>example:</strong>
      * <p>300</p>

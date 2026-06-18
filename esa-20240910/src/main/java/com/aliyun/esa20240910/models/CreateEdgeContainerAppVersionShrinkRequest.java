@@ -15,8 +15,7 @@ public class CreateEdgeContainerAppVersionShrinkRequest extends TeaModel {
     public String appId;
 
     /**
-     * <p>The container group to be deployed for this version, which contains information about images.\
-     * The image data contains the image address, startup command, parameters, environment variables, and probe rules. You can specify one or more images. The parameter value is a JSON string.</p>
+     * <p>The container group to be deployed for this version, which contains information about images.<br> The image data contains the image address, startup command, parameters, environment variables, and probe rules. You can specify one or more images. The parameter value is a JSON string.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

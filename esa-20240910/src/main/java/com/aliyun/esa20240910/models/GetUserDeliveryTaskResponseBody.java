@@ -5,12 +5,16 @@ import com.aliyun.tea.*;
 
 public class GetUserDeliveryTaskResponseBody extends TeaModel {
     /**
-     * <p>The log category. Valid values:</p>
+     * <p>The business type. Valid values:</p>
      * <ul>
-     * <li><strong>dcdn_log_access_l1</strong> (default): access logs.</li>
-     * <li><strong>dcdn_log_er</strong>: Edge Routine logs.</li>
-     * <li><strong>dcdn_log_waf</strong>: firewall logs.</li>
-     * <li><strong>dcdn_log_ipa</strong>: TCP/UDP proxy logs.</li>
+     * <li><p><strong>dcdn_log_access_l1</strong> (default): access log.</p>
+     * </li>
+     * <li><p><strong>dcdn_log_er</strong>: edge function log.</p>
+     * </li>
+     * <li><p><strong>dcdn_log_waf</strong>: WAF log.</p>
+     * </li>
+     * <li><p><strong>dcdn_log_ipa</strong>: Layer 4 acceleration log.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -22,8 +26,10 @@ public class GetUserDeliveryTaskResponseBody extends TeaModel {
     /**
      * <p>The data center. Valid values:</p>
      * <ul>
-     * <li>cn: the Chinese mainland.</li>
-     * <li>sg: outside the Chinese mainland.</li>
+     * <li><p><strong>cn</strong>: Chinese mainland</p>
+     * </li>
+     * <li><p><strong>sg</strong>: Global (excluding the Chinese mainland)</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -33,14 +39,20 @@ public class GetUserDeliveryTaskResponseBody extends TeaModel {
     public String dataCenter;
 
     /**
-     * <p>The destination of the delivery. Valid values:</p>
+     * <p>The delivery type. Valid values:</p>
      * <ul>
-     * <li>sls: Alibaba Cloud Simple Log Service (SLS).</li>
-     * <li>http: HTTP server.</li>
-     * <li>aws3: Amazon Simple Storage Service (S3).</li>
-     * <li>oss: Alibaba Cloud Object Storage Service (OSS).</li>
-     * <li>kafka: Kafka.</li>
-     * <li>aws3cmpt: S3-compatible storage service.</li>
+     * <li><p><strong>sls</strong>: Log Service</p>
+     * </li>
+     * <li><p><strong>http</strong>: HTTP service</p>
+     * </li>
+     * <li><p><strong>aws3</strong>: Amazon S3</p>
+     * </li>
+     * <li><p><strong>oss</strong>: OSS</p>
+     * </li>
+     * <li><p><strong>kafka</strong>: Kafka service</p>
+     * </li>
+     * <li><p><strong>aws3cmpt</strong>: Amazon S3-compatible service</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -62,7 +74,7 @@ public class GetUserDeliveryTaskResponseBody extends TeaModel {
     public Float discardRate;
 
     /**
-     * <p>The fields.</p>
+     * <p>A comma-separated list of fields.</p>
      * 
      * <strong>example:</strong>
      * <p>ClientRequestID,ClientRequestHost</p>
@@ -71,7 +83,7 @@ public class GetUserDeliveryTaskResponseBody extends TeaModel {
     public String fieldList;
 
     /**
-     * <p>The filtering rules.</p>
+     * <p>The filter rules.</p>
      * 
      * <strong>example:</strong>
      * <p>[{&quot;ClientSSLProtocol&quot;: {&quot;equals&quot;: [&quot;TLSv1.3&quot;]}}]</p>
@@ -104,7 +116,7 @@ public class GetUserDeliveryTaskResponseBody extends TeaModel {
     public Object sinkConfig;
 
     /**
-     * <p>The status of the delivery task.</p>
+     * <p>The task status.</p>
      * 
      * <strong>example:</strong>
      * <p>online</p>
@@ -113,7 +125,7 @@ public class GetUserDeliveryTaskResponseBody extends TeaModel {
     public String status;
 
     /**
-     * <p>The name of the delivery task.</p>
+     * <p>The task name.</p>
      * 
      * <strong>example:</strong>
      * <p>testoss11</p>

@@ -15,7 +15,7 @@ public class DeleteCustomResponseCodeRuleRequest extends TeaModel {
     public Long configId;
 
     /**
-     * <p>The website ID, which can be obtained by calling the <a href="~~ListSites~~">ListSites</a> operation.</p>
+     * <p>The site ID. Obtain this by calling ListSites.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ReleaseInstanceRequest extends TeaModel {
     /**
+     * <p>The ID of the security instance. This must be a DDoS security instance ID in the format of esa-ddos-<em>. You can call the ListDDoSInstances operation to obtain the ID. Site instance IDs in the format of esa-site-</em> are not supported.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

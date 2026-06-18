@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeEdgeContainerAppStatsRequest extends TeaModel {
     /**
+     * <p>Basic information about the application.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,11 @@ public class DescribeEdgeContainerAppStatsRequest extends TeaModel {
     public String app;
 
     /**
+     * <p>The end time to retrieve data. The date must be in ISO 8601 format and use UTC. The format is yyyy-MM-ddTHH:mm:ssZ.</p>
+     * <blockquote>
+     * <p>The end time must be later than the start time.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>2024-09-02T16:04:05Z</p>
      */
@@ -21,6 +27,7 @@ public class DescribeEdgeContainerAppStatsRequest extends TeaModel {
     public String endTime;
 
     /**
+     * <p>The metric fields.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -30,13 +37,17 @@ public class DescribeEdgeContainerAppStatsRequest extends TeaModel {
     public String fields;
 
     /**
+     * <p>The Internet Service Provider (ISP).</p>
+     * 
      * <strong>example:</strong>
-     * <p>telecom,unicom,cmcc</p>
+     * <p>telecom,unicom,mobile</p>
      */
     @NameInMap("Isp")
     public String isp;
 
     /**
+     * <p>The region.</p>
+     * 
      * <strong>example:</strong>
      * <p>huizhou</p>
      */
@@ -44,6 +55,8 @@ public class DescribeEdgeContainerAppStatsRequest extends TeaModel {
     public String locate;
 
     /**
+     * <p>The start time. The date must be in ISO 8601 format and use UTC. The format is yyyy-MM-ddTHH:mm:ssZ.</p>
+     * 
      * <strong>example:</strong>
      * <p>2024-09-02T15:04:05Z</p>
      */
@@ -51,7 +64,7 @@ public class DescribeEdgeContainerAppStatsRequest extends TeaModel {
     public String startTime;
 
     /**
-     * <p>The tenant ID.</p>
+     * <p>The tenant.</p>
      * 
      * <strong>example:</strong>
      * <p>t-xxxx</p>

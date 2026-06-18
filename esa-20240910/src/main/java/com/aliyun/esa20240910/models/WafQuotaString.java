@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class WafQuotaString extends TeaModel {
     /**
+     * <p>正则表达式。</p>
+     * 
      * <strong>example:</strong>
      * <p>^\d+$</p>
      */

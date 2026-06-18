@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateHttpRequestHeaderModificationRuleRequest extends TeaModel {
     /**
-     * <p>Configuration ID. It can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2867483.html">ListHttpRequestHeaderModificationRules</a> API.</p>
+     * <p>The configuration ID. Call the <a href="https://help.aliyun.com/document_detail/2867483.html">ListHttpRequestHeaderModificationRules</a> operation to obtain it.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,16 +15,18 @@ public class UpdateHttpRequestHeaderModificationRuleRequest extends TeaModel {
     public Long configId;
 
     /**
-     * <p>Modify request headers, supporting add, delete, and modify operations.</p>
+     * <p>Specifies the modifications for the request header. Supported operations include <code>add</code>, <code>del</code>, and <code>modify</code>.</p>
      */
     @NameInMap("RequestHeaderModification")
     public java.util.List<UpdateHttpRequestHeaderModificationRuleRequestRequestHeaderModification> requestHeaderModification;
 
     /**
-     * <p>Rule content, using conditional expressions to match user requests. This parameter is not required when adding a global configuration. There are two usage scenarios:</p>
+     * <p>The Conditional Expression used to match User Requests. This parameter is not required for a Global Configuration. Use cases:</p>
      * <ul>
-     * <li>To match all incoming requests: Set the value to true</li>
-     * <li>To match specific requests: Set the value to a custom expression, for example: (http.host eq \&quot;video.example.com\&quot;)</li>
+     * <li><p>To match all incoming requests, set the value to <code>true</code>.</p>
+     * </li>
+     * <li><p>To match specific requests, use a custom expression, for example, <code>(http.host eq &quot;video.example.com&quot;)</code>.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -34,10 +36,12 @@ public class UpdateHttpRequestHeaderModificationRuleRequest extends TeaModel {
     public String rule;
 
     /**
-     * <p>Rule switch. This parameter is not required when adding a global configuration. Possible values:</p>
+     * <p>Specifies whether the Rule is enabled. This parameter is not required for a Global Configuration. Valid values:</p>
      * <ul>
-     * <li>on: Enable.</li>
-     * <li>off: Disable.</li>
+     * <li><p><code>on</code>: Enable</p>
+     * </li>
+     * <li><p><code>off</code>: Disable</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -47,7 +51,7 @@ public class UpdateHttpRequestHeaderModificationRuleRequest extends TeaModel {
     public String ruleEnable;
 
     /**
-     * <p>Rule name. This parameter is not required when adding a global configuration.</p>
+     * <p>The name of the Rule. This parameter is not required for a Global Configuration.</p>
      * 
      * <strong>example:</strong>
      * <p>rule_example</p>
@@ -55,11 +59,17 @@ public class UpdateHttpRequestHeaderModificationRuleRequest extends TeaModel {
     @NameInMap("RuleName")
     public String ruleName;
 
+    /**
+     * <p>The execution priority of the Rule. A smaller value indicates a higher priority.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("Sequence")
     public Integer sequence;
 
     /**
-     * <p>Site ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> API.</p>
+     * <p>The site ID. Call the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation to obtain it.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -131,7 +141,7 @@ public class UpdateHttpRequestHeaderModificationRuleRequest extends TeaModel {
 
     public static class UpdateHttpRequestHeaderModificationRuleRequestRequestHeaderModification extends TeaModel {
         /**
-         * <p>Request header name.</p>
+         * <p>The name of the Request Header.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -141,11 +151,14 @@ public class UpdateHttpRequestHeaderModificationRuleRequest extends TeaModel {
         public String name;
 
         /**
-         * <p>Operation method. Possible values:</p>
+         * <p>The type of Operation to perform. Valid values:</p>
          * <ul>
-         * <li>add: Add.</li>
-         * <li>del: Delete</li>
-         * <li>modify: Modify.</li>
+         * <li><p><code>add</code>: Add</p>
+         * </li>
+         * <li><p><code>del</code>: Delete</p>
+         * </li>
+         * <li><p><code>modify</code>: Modify</p>
+         * </li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -155,11 +168,23 @@ public class UpdateHttpRequestHeaderModificationRuleRequest extends TeaModel {
         @NameInMap("Operation")
         public String operation;
 
+        /**
+         * <p>The type of the header value. Valid values:</p>
+         * <ul>
+         * <li><p><code>static</code>: Static Mode</p>
+         * </li>
+         * <li><p><code>dynamic</code>: Dynamic Mode</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>static</p>
+         */
         @NameInMap("Type")
         public String type;
 
         /**
-         * <p>Request header value.</p>
+         * <p>The value of the Request Header.</p>
          * 
          * <strong>example:</strong>
          * <p>headerValue</p>

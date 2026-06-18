@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetCertificateQuotaResponseBody extends TeaModel {
     /**
-     * <p>Free certificate quota.</p>
+     * <p>The free certificate quota.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -14,7 +14,7 @@ public class GetCertificateQuotaResponseBody extends TeaModel {
     public Long quota;
 
     /**
-     * <p>Usage of free certificate quota.</p>
+     * <p>The number of used free certificates.</p>
      * 
      * <strong>example:</strong>
      * <p>5</p>
@@ -23,7 +23,7 @@ public class GetCertificateQuotaResponseBody extends TeaModel {
     public Long quotaUsage;
 
     /**
-     * <p>Request ID.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>0AEDAF20-4DDF-4165-8750-47FF9C1929C9</p>
@@ -32,7 +32,7 @@ public class GetCertificateQuotaResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Number of sites.</p>
+     * <p>The site count.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>
@@ -41,13 +41,13 @@ public class GetCertificateQuotaResponseBody extends TeaModel {
     public Long siteCount;
 
     /**
-     * <p>List of site usage details.</p>
+     * <p>Details about the certificate usage for each site.</p>
      */
     @NameInMap("SiteUsage")
     public java.util.List<GetCertificateQuotaResponseBodySiteUsage> siteUsage;
 
     /**
-     * <p>Certificate Quota type.</p>
+     * <p>The certificate quota type.</p>
      * 
      * <strong>example:</strong>
      * <p>free</p>
@@ -110,7 +110,7 @@ public class GetCertificateQuotaResponseBody extends TeaModel {
 
     public static class GetCertificateQuotaResponseBodySiteUsage extends TeaModel {
         /**
-         * <p>Site ID.</p>
+         * <p>The site ID.</p>
          * 
          * <strong>example:</strong>
          * <p>165929521496928</p>
@@ -119,7 +119,7 @@ public class GetCertificateQuotaResponseBody extends TeaModel {
         public String siteId;
 
         /**
-         * <p>Site name.</p>
+         * <p>The site name.</p>
          * 
          * <strong>example:</strong>
          * <p>example.com</p>
@@ -128,7 +128,7 @@ public class GetCertificateQuotaResponseBody extends TeaModel {
         public String siteName;
 
         /**
-         * <p>Site usage.</p>
+         * <p>The number of certificates used by the site.</p>
          * 
          * <strong>example:</strong>
          * <p>5</p>

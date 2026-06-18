@@ -5,17 +5,17 @@ import com.aliyun.tea.*;
 
 public class ListRoutineCodeVersionsRequest extends TeaModel {
     /**
-     * <p>The function name.</p>
+     * <p>The name of the Edge Routine program.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>ListRoutineCodeVersions</p>
+     * <p>test</p>
      */
     @NameInMap("Name")
     public String name;
 
     /**
-     * <p>The page number of the returned page. Default value: 1. Valid values: 1 and 2.</p>
+     * <p>The page number. Default value: 1. Maximum value: 2.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -33,7 +33,7 @@ public class ListRoutineCodeVersionsRequest extends TeaModel {
     public Long pageSize;
 
     /**
-     * <p>The keyword used for fuzzy search.</p>
+     * <p>The keyword for fuzzy match.</p>
      * 
      * <strong>example:</strong>
      * <p>hello</p>

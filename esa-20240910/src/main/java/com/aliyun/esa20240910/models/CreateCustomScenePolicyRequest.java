@@ -5,8 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateCustomScenePolicyRequest extends TeaModel {
     /**
-     * <p>The time when the policy expires.</p>
-     * <p>The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+     * <p>The policy end time.</p>
+     * <p>The time must be in UTC and in ISO 8601 format: <code>yyyy-MM-ddTHH:mm:ssZ</code>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -26,20 +26,29 @@ public class CreateCustomScenePolicyRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The IDs of the websites that you want to associate with the policy. Separate multiple IDs with commas (,).</p>
+     * <p>The IDs of the sites to associate with the policy. Separate multiple site IDs with commas.</p>
+     * <blockquote>
+     * <p>This parameter is deprecated. Use <code>SiteIds</code> instead. If <code>SiteIds</code> is specified, the value of this parameter is ignored. To prevent ambiguity, specify a value for either <code>SiteIds</code> or <code>Objects</code>.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
-     * <p>7096621098****</p>
+     * <p>7096621098****,7096621099****</p>
      */
     @NameInMap("Objects")
     public String objects;
 
+    /**
+     * <p>The IDs of the sites to associate with the policy. Separate multiple site IDs with commas.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>7096621098****,7096621099****</p>
+     */
     @NameInMap("SiteIds")
     public String siteIds;
 
     /**
-     * <p>The time when the policy takes effect.</p>
-     * <p>The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+     * <p>The policy start time.</p>
+     * <p>The time must be in UTC and in ISO 8601 format: <code>yyyy-MM-ddTHH:mm:ssZ</code>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -49,9 +58,9 @@ public class CreateCustomScenePolicyRequest extends TeaModel {
     public String startTime;
 
     /**
-     * <p>The name of the policy template. Valid value:</p>
+     * <p>The template name. Valid value:</p>
      * <ul>
-     * <li><strong>promotion</strong>: major events.</li>
+     * <li><strong>promotion</strong>: a policy for major events.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

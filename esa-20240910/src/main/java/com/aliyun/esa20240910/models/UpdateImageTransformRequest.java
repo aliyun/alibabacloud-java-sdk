@@ -19,7 +19,7 @@ public class UpdateImageTransformRequest extends TeaModel {
     public String autoWebp;
 
     /**
-     * <p>Configuration ID. It can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2869056.html">ListImageTransforms</a> interface.</p>
+     * <p>The configuration ID. You can obtain this ID by calling the <a href="https://help.aliyun.com/document_detail/2869056.html">ListImageTransforms</a> operation.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -29,10 +29,12 @@ public class UpdateImageTransformRequest extends TeaModel {
     public Long configId;
 
     /**
-     * <p>Indicates whether to enable image transformation. Possible values:</p>
+     * <p>Specifies whether to enable image transform. Valid values:</p>
      * <ul>
-     * <li>on: Enable.</li>
-     * <li>off: Disable.</li>
+     * <li><p><code>on</code>: Enables image transform.</p>
+     * </li>
+     * <li><p><code>off</code>: Disables image transform.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -42,10 +44,12 @@ public class UpdateImageTransformRequest extends TeaModel {
     public String enable;
 
     /**
-     * <p>Rule content, used to match user requests with conditional expressions. This parameter is not required when adding a global configuration. There are two usage scenarios:</p>
+     * <p>The rule content, which is a conditional expression for matching user requests. This parameter is not required when you configure a global rule. The expression can be used in the following ways:</p>
      * <ul>
-     * <li>To match all incoming requests: Set the value to true.</li>
-     * <li>To match specific requests: Set the value to a custom expression, for example: (http.host eq &quot;video.example.com&quot;)</li>
+     * <li><p>To match all incoming requests, set the value to <code>true</code>.</p>
+     * </li>
+     * <li><p>To match specific requests, set the value to a custom expression, for example, <code>(http.host eq &quot;video.example.com&quot;)</code>.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -55,10 +59,12 @@ public class UpdateImageTransformRequest extends TeaModel {
     public String rule;
 
     /**
-     * <p>Rule switch. This parameter is not required when adding a global configuration. Possible values:</p>
+     * <p>Specifies whether to enable the rule. This parameter is not required when you configure a global rule. Valid values:</p>
      * <ul>
-     * <li>on: Enable.</li>
-     * <li>off: Disable.</li>
+     * <li><p><code>on</code>: Enables the rule.</p>
+     * </li>
+     * <li><p><code>off</code>: Disables the rule.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -68,7 +74,7 @@ public class UpdateImageTransformRequest extends TeaModel {
     public String ruleEnable;
 
     /**
-     * <p>Rule name. This parameter is not required when adding a global configuration.</p>
+     * <p>The rule name. This parameter is not required when you configure a global rule.</p>
      * 
      * <strong>example:</strong>
      * <p>test</p>
@@ -76,11 +82,17 @@ public class UpdateImageTransformRequest extends TeaModel {
     @NameInMap("RuleName")
     public String ruleName;
 
+    /**
+     * <p>The execution priority of the rule. A smaller value indicates a higher priority.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("Sequence")
     public Integer sequence;
 
     /**
-     * <p>Site ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> interface.</p>
+     * <p>The site ID. You can obtain this ID by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

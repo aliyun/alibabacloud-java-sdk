@@ -5,11 +5,11 @@ import com.aliyun.tea.*;
 
 public class GetRoutineRequest extends TeaModel {
     /**
-     * <p>The routine name.</p>
+     * <p>The name of the edge function Routine.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>GetRoutine</p>
+     * <p>test-routine1</p>
      */
     @NameInMap("Name")
     public String name;

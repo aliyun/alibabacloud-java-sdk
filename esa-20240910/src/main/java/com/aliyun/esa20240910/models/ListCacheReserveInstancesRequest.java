@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListCacheReserveInstancesRequest extends TeaModel {
     /**
-     * <p>Instance ID.</p>
+     * <p>The instance ID.</p>
      * 
      * <strong>example:</strong>
      * <p>sp-xcdn-96wblslz****</p>
@@ -14,7 +14,7 @@ public class ListCacheReserveInstancesRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>Page number.</p>
+     * <p>The page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -23,7 +23,7 @@ public class ListCacheReserveInstancesRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>Page size. Range: <strong>1~500</strong>, default is <strong>500</strong>.</p>
+     * <p>The number of entries per page. Valid values: <strong>1 to 500</strong>. The default value is <strong>500</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -32,10 +32,12 @@ public class ListCacheReserveInstancesRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The criterion by which you want to sort the queried instances. Valid values:</p>
+     * <p>The field to sort the results by. Valid values:</p>
      * <ul>
-     * <li><strong>ExpireTime</strong></li>
-     * <li><strong>CreateTime</strong></li>
+     * <li><p><strong>ExpireTime</strong>: Expiration time.</p>
+     * </li>
+     * <li><p><strong>CreateTime</strong>: Creation time.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -45,10 +47,12 @@ public class ListCacheReserveInstancesRequest extends TeaModel {
     public String sortBy;
 
     /**
-     * <p>The order by which you want to sort the queried instances. Valid values:</p>
+     * <p>The sort order. Valid values:</p>
      * <ul>
-     * <li><strong>asc</strong></li>
-     * <li><strong>desc</strong></li>
+     * <li><p><strong>asc</strong>: Ascending order.</p>
+     * </li>
+     * <li><p><strong>desc</strong>: Descending order.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -60,10 +64,14 @@ public class ListCacheReserveInstancesRequest extends TeaModel {
     /**
      * <p>The status of the cache reserve instance. Valid values:</p>
      * <ul>
-     * <li><strong>online</strong>: The instance is in service.</li>
-     * <li><strong>offline</strong>: The instance has expired within an allowable period. In this state, it is unavailable.</li>
-     * <li><strong>disable</strong>: The instance has been released.</li>
-     * <li><strong>overdue</strong>: The instance has been stopped due to overdue payments.</li>
+     * <li><p><strong>online</strong>: The instance is running normally.</p>
+     * </li>
+     * <li><p><strong>offline</strong>: The instance has expired and is unavailable but remains within the grace period.</p>
+     * </li>
+     * <li><p><strong>disable</strong>: The instance is disabled.</p>
+     * </li>
+     * <li><p><strong>overdue</strong>: The instance is suspended due to an overdue payment.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

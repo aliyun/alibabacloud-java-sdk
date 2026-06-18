@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetUserWafRulesetRequest extends TeaModel {
     /**
+     * <p>The ID of the WAF ruleset.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class GetUserWafRulesetRequest extends TeaModel {
     public Long id;
 
     /**
+     * <p>The ID of the WAF instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

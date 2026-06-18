@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListCustomHostnamesRequest extends TeaModel {
     /**
+     * <p>The SaaS domain name.</p>
+     * 
      * <strong>example:</strong>
      * <p>custom.site.com</p>
      */
@@ -12,6 +14,14 @@ public class ListCustomHostnamesRequest extends TeaModel {
     public String hostname;
 
     /**
+     * <p>The search match mode for the SaaS domain name. Default value: exact. Valid values:</p>
+     * <ul>
+     * <li><strong>prefix</strong>: prefix match.</li>
+     * <li><strong>suffix</strong>: suffix match.</li>
+     * <li><strong>exact</strong>: exact match.</li>
+     * <li><strong>fuzzy</strong>: fuzzy match.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>exact</p>
      */
@@ -19,6 +29,8 @@ public class ListCustomHostnamesRequest extends TeaModel {
     public String nameMatchType;
 
     /**
+     * <p>The page number, starting from 1. Default value: 1.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -26,6 +38,8 @@ public class ListCustomHostnamesRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries per page. Default value: 100. Maximum value: 500.</p>
+     * 
      * <strong>example:</strong>
      * <p>100</p>
      */
@@ -33,6 +47,8 @@ public class ListCustomHostnamesRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The associated record ID. You can call the <a href="https://help.aliyun.com/document_detail/2850265.html">ListRecords</a> operation to obtain the record ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>1234567890123</p>
      */
@@ -40,6 +56,7 @@ public class ListCustomHostnamesRequest extends TeaModel {
     public Long recordId;
 
     /**
+     * <p>The site ID. You can call the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation to obtain the site ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -49,6 +66,14 @@ public class ListCustomHostnamesRequest extends TeaModel {
     public Long siteId;
 
     /**
+     * <p>The SaaS domain name status. Valid values:</p>
+     * <ul>
+     * <li><strong>pending</strong>: pending verification.</li>
+     * <li><strong>active</strong>: activated.</li>
+     * <li><strong>conflicted</strong>: occupied.</li>
+     * <li><strong>offline</strong>: offline.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>active</p>
      */

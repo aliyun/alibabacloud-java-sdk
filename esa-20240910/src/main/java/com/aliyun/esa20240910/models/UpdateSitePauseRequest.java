@@ -5,10 +5,12 @@ import com.aliyun.tea.*;
 
 public class UpdateSitePauseRequest extends TeaModel {
     /**
-     * <p>Specifies whether to temporarily pause ESA on the website. If you set this parameter to true, all requests to the domains in your DNS records go directly to your origin server. Valid values:</p>
+     * <p>Indicates whether to pause proxy acceleration for the site. If set to <code>true</code>, DNS queries for the site return the record values directly to the client. Valid values:</p>
      * <ul>
-     * <li>true</li>
-     * <li>false</li>
+     * <li><p>true: Pauses proxy acceleration for the site.</p>
+     * </li>
+     * <li><p>false: Resumes proxy acceleration for the site.</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -19,7 +21,7 @@ public class UpdateSitePauseRequest extends TeaModel {
     public Boolean paused;
 
     /**
-     * <p>The website ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation.</p>
+     * <p>The site ID. To obtain this ID, call the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

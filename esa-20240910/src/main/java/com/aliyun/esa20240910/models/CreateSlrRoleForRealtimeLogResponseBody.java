@@ -4,12 +4,6 @@ package com.aliyun.esa20240910.models;
 import com.aliyun.tea.*;
 
 public class CreateSlrRoleForRealtimeLogResponseBody extends TeaModel {
-    /**
-     * <p>Id of the request</p>
-     * 
-     * <strong>example:</strong>
-     * <p>156A6B-677B1A-4297B7-9187B7-2B44792</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 

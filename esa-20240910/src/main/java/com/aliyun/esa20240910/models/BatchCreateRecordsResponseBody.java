@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class BatchCreateRecordsResponseBody extends TeaModel {
     /**
-     * <p>The records that have been created and failed to be created.</p>
+     * <p>The results of the batch record creation, with details for both successful and failed records.</p>
      */
     @NameInMap("RecordResultList")
     public BatchCreateRecordsResponseBodyRecordResultList recordResultList;
@@ -42,7 +42,7 @@ public class BatchCreateRecordsResponseBody extends TeaModel {
 
     public static class BatchCreateRecordsResponseBodyRecordResultListFailedData extends TeaModel {
         /**
-         * <p>The encryption algorithm used for the record. Valid values: 0 to 255. Applicable to CERT and SSHFP records.</p>
+         * <p>The encryption algorithm used by the record. The value ranges from <strong>0</strong> to <strong>255</strong>. This parameter applies to CERT and SSHFP records.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -51,7 +51,7 @@ public class BatchCreateRecordsResponseBody extends TeaModel {
         public Integer algorithm;
 
         /**
-         * <p>The public key of the certificate. Applicable to CERT, SMIMEA, and TLSA records.</p>
+         * <p>The public key certificate for the record. This parameter applies to CERT, SMIMEA, and TLSA records.</p>
          * 
          * <strong>example:</strong>
          * <p>dGVzdGFkYWxrcw==</p>
@@ -60,7 +60,7 @@ public class BatchCreateRecordsResponseBody extends TeaModel {
         public String certificate;
 
         /**
-         * <p>The public key fingerprint of the record. Applicable to SSHFP records.</p>
+         * <p>The public key fingerprint for the record. This parameter applies to SSHFP records.</p>
          * 
          * <strong>example:</strong>
          * <p>abcdef1234567890</p>
@@ -69,7 +69,7 @@ public class BatchCreateRecordsResponseBody extends TeaModel {
         public String fingerprint;
 
         /**
-         * <p>The flag bit of the record. Indicates its priority and handling method, used in CAA records.</p>
+         * <p>The flag for the record, which indicates its priority and processing method. This parameter applies to CAA records.</p>
          * 
          * <strong>example:</strong>
          * <p>128</p>
@@ -78,7 +78,7 @@ public class BatchCreateRecordsResponseBody extends TeaModel {
         public Integer flag;
 
         /**
-         * <p>The public key identification for the record. Valid values: 0 to 65535. Applicable to CERT records.</p>
+         * <p>The public key identifier for the record. The value ranges from <strong>0</strong> to <strong>65535</strong>. This parameter applies to CERT records.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -87,7 +87,7 @@ public class BatchCreateRecordsResponseBody extends TeaModel {
         public Integer keyTag;
 
         /**
-         * <p>The algorithm policy used to match or validate the certificate. Valid values: 0 to 255. Applicable to SMIMEA and TLSA records.</p>
+         * <p>The algorithm policy used by the record to match or validate certificates. The value ranges from <strong>0</strong> to <strong>255</strong>. This parameter applies to SMIMEA and TLSA records.</p>
          * 
          * <strong>example:</strong>
          * <p>RSA</p>
@@ -96,7 +96,7 @@ public class BatchCreateRecordsResponseBody extends TeaModel {
         public Integer matchingType;
 
         /**
-         * <p>The port number of the record, associated with the SRV record. Exclusive to SRV records.</p>
+         * <p>The port for the record. The value ranges from 0 to 65535. This parameter applies only to SRV records.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -105,7 +105,7 @@ public class BatchCreateRecordsResponseBody extends TeaModel {
         public Integer port;
 
         /**
-         * <p>The priority of the record. Valid values: 0 to 65535. A smaller value indicates a higher priority. Applicable to MX, SRV, and URI records.</p>
+         * <p>The priority of the record. The value ranges from <strong>0</strong> to <strong>65535</strong>. A smaller value indicates a higher priority. This parameter applies to MX, SRV, and URI records.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -114,7 +114,7 @@ public class BatchCreateRecordsResponseBody extends TeaModel {
         public Integer priority;
 
         /**
-         * <p>The type of certificate or public key. Valid values: 0 to 255. Applicable to SMIMEA and TLSA records.</p>
+         * <p>The type of certificate or public key used by the record. The value ranges from <strong>0</strong> to <strong>255</strong>. This parameter applies to SMIMEA and TLSA records.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -123,7 +123,7 @@ public class BatchCreateRecordsResponseBody extends TeaModel {
         public Integer selector;
 
         /**
-         * <p>Indicates its priority and handling method, used in CAA records.</p>
+         * <p>The tag for a CAA record, which specifies its type and purpose, such as <code>issue</code>, <code>issuewild</code>, or <code>iodef</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>issue</p>
@@ -132,7 +132,7 @@ public class BatchCreateRecordsResponseBody extends TeaModel {
         public String tag;
 
         /**
-         * <p>The certificate type of the record (in CERT records), or the public key type (in SSHFP records).</p>
+         * <p>The certificate type for CERT records or the public key type for SSHFP records.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -141,7 +141,7 @@ public class BatchCreateRecordsResponseBody extends TeaModel {
         public Integer type;
 
         /**
-         * <p>The usage identifier of the record. Valid values: 0 to 255. Applicable to SMIMEA and TLSA records.</p>
+         * <p>The usage identifier for the record. The value ranges from <strong>0</strong> to <strong>255</strong>. This parameter applies to SMIMEA and TLSA records.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -150,16 +150,24 @@ public class BatchCreateRecordsResponseBody extends TeaModel {
         public Integer usage;
 
         /**
-         * <p>The record value or part of the record content. This value is returned when the record is A/AAAA, CNAME, NS, MX, TXT, CAA, SRV, or URI. It has different meanings based on types of records:</p>
+         * <p>The record value. This parameter applies to A/AAAA, CNAME, NS, MX, TXT, CAA, SRV, and URI records. The meaning of this parameter varies based on the record type:</p>
          * <ul>
-         * <li><strong>A/AAAA</strong>: the IP addresses. IP addresses are separated by commas (,). There is at least one IPv4 address.</li>
-         * <li><strong>CNAME</strong>: the mapped domain name.</li>
-         * <li><strong>NS</strong>: the nameservers for the domain name.</li>
-         * <li><strong>MX</strong>: a valid domain name of the target mail server.</li>
-         * <li><strong>TXT</strong>: a valid text string.</li>
-         * <li><strong>CAA</strong>: a valid domain name of the certificate authority.</li>
-         * <li><strong>SRV</strong>: a valid domain name of the target host.</li>
-         * <li><strong>URI</strong>: a valid URI string.</li>
+         * <li><p><strong>A/AAAA</strong>: The IP address. To specify multiple addresses, separate them with a comma (,). At least one IPv4 address is required.</p>
+         * </li>
+         * <li><p><strong>CNAME</strong>: The target domain name.</p>
+         * </li>
+         * <li><p><strong>NS</strong>: The name server for the domain.</p>
+         * </li>
+         * <li><p><strong>MX</strong>: The domain name of a valid target mail server.</p>
+         * </li>
+         * <li><p><strong>TXT</strong>: A valid text string.</p>
+         * </li>
+         * <li><p><strong>CAA</strong>: The domain name of a valid certificate authority.</p>
+         * </li>
+         * <li><p><strong>SRV</strong>: The domain name of a valid target host.</p>
+         * </li>
+         * <li><p><strong>URI</strong>: A valid URI string.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -169,7 +177,7 @@ public class BatchCreateRecordsResponseBody extends TeaModel {
         public String value;
 
         /**
-         * <p>The weight of the record. Applicable to SRV and URI records.</p>
+         * <p>The weight of the record. The value ranges from 0 to 65535. This parameter applies to SRV and URI records.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -298,11 +306,14 @@ public class BatchCreateRecordsResponseBody extends TeaModel {
 
     public static class BatchCreateRecordsResponseBodyRecordResultListFailed extends TeaModel {
         /**
-         * <p>The business scenario of the record for acceleration. Valid values:</p>
+         * <p>The acceleration use case for the record. Valid values:</p>
          * <ul>
-         * <li><strong>image_video</strong></li>
-         * <li><strong>api</strong></li>
-         * <li><strong>web</strong></li>
+         * <li><p><strong>image_video</strong>: Images and videos.</p>
+         * </li>
+         * <li><p><strong>api</strong>: APIs.</p>
+         * </li>
+         * <li><p><strong>web</strong>: Web pages.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -312,7 +323,7 @@ public class BatchCreateRecordsResponseBody extends TeaModel {
         public String bizName;
 
         /**
-         * <p>The DNS information about the record, which contains various types of record values and their related attributes.</p>
+         * <p>The DNS information for the record.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;value&quot;:&quot;2.2.2.2&quot;}</p>
@@ -322,15 +333,26 @@ public class BatchCreateRecordsResponseBody extends TeaModel {
 
         /**
          * <p>The result description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>记录的名称非法</p>
          */
         @NameInMap("Description")
         public String description;
 
+        @NameInMap("HttpPorts")
+        public String httpPorts;
+
+        @NameInMap("HttpsPorts")
+        public String httpsPorts;
+
         /**
-         * <p>Indicates whether the record is proxied. Only CNAME and A/AAAA records can be proxied. Valid values:</p>
+         * <p>Specifies whether proxy acceleration is enabled for the record. This option is available only for CNAME, A, and AAAA records. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong></li>
-         * <li><strong>false</strong></li>
+         * <li><p><strong>true</strong>: Proxy acceleration is enabled.</p>
+         * </li>
+         * <li><p><strong>false</strong>: Proxy acceleration is disabled.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -358,7 +380,7 @@ public class BatchCreateRecordsResponseBody extends TeaModel {
         public String recordName;
 
         /**
-         * <p>The DNS type of the record, such as <strong>A/AAAA, CNAME, and TXT</strong>.</p>
+         * <p>The DNS type of the record, such as <strong>A/AAAA</strong>, <strong>CNAME</strong>, or <strong>TXT</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>A/AAAA</p>
@@ -367,13 +389,18 @@ public class BatchCreateRecordsResponseBody extends TeaModel {
         public String recordType;
 
         /**
-         * <p>The origin type of the CNAME record. This field is left empty for other types of records. The type of the origin server. Valid values:</p>
+         * <p>The type of origin for a CNAME record. This parameter is empty for other record types. Valid values:</p>
          * <ul>
-         * <li><strong>OSS</strong>: OSS bucket.</li>
-         * <li><strong>S3</strong>: S3 bucket.</li>
-         * <li><strong>LB</strong>: load balancer.</li>
-         * <li><strong>OP</strong>: origin pool.</li>
-         * <li><strong>Domain</strong>: domain name.</li>
+         * <li><p><strong>OSS</strong>: An OSS origin.</p>
+         * </li>
+         * <li><p><strong>S3</strong>: An S3 origin.</p>
+         * </li>
+         * <li><p><strong>LB</strong>: A load balancer origin.</p>
+         * </li>
+         * <li><p><strong>OP</strong>: An origin pool.</p>
+         * </li>
+         * <li><p><strong>Domain</strong>: A domain name origin.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -383,7 +410,7 @@ public class BatchCreateRecordsResponseBody extends TeaModel {
         public String sourceType;
 
         /**
-         * <p>The TTL of the record. Unit: seconds. If the value is 1, the TTL of the record is determined by the system.</p>
+         * <p>The TTL of the record in seconds. A value of 1 sets the TTL to Automatic.</p>
          * 
          * <strong>example:</strong>
          * <p>60</p>
@@ -418,6 +445,22 @@ public class BatchCreateRecordsResponseBody extends TeaModel {
         }
         public String getDescription() {
             return this.description;
+        }
+
+        public BatchCreateRecordsResponseBodyRecordResultListFailed setHttpPorts(String httpPorts) {
+            this.httpPorts = httpPorts;
+            return this;
+        }
+        public String getHttpPorts() {
+            return this.httpPorts;
+        }
+
+        public BatchCreateRecordsResponseBodyRecordResultListFailed setHttpsPorts(String httpsPorts) {
+            this.httpsPorts = httpsPorts;
+            return this;
+        }
+        public String getHttpsPorts() {
+            return this.httpsPorts;
         }
 
         public BatchCreateRecordsResponseBodyRecordResultListFailed setProxied(Boolean proxied) {
@@ -472,7 +515,7 @@ public class BatchCreateRecordsResponseBody extends TeaModel {
 
     public static class BatchCreateRecordsResponseBodyRecordResultListSuccessData extends TeaModel {
         /**
-         * <p>The encryption algorithm used for the record. Valid values: 0 to 255. Applicable to CERT and SSHFP records.</p>
+         * <p>The encryption algorithm used by the record. The value ranges from <strong>0</strong> to <strong>255</strong>. This parameter applies to CERT and SSHFP records.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -481,7 +524,7 @@ public class BatchCreateRecordsResponseBody extends TeaModel {
         public Integer algorithm;
 
         /**
-         * <p>The public key of the certificate. Applicable to CERT, SMIMEA, and TLSA records.</p>
+         * <p>The public key certificate for the record. This parameter applies to CERT, SMIMEA, and TLSA records.</p>
          * 
          * <strong>example:</strong>
          * <p>dGVzdGFkYWxrcw==</p>
@@ -490,7 +533,7 @@ public class BatchCreateRecordsResponseBody extends TeaModel {
         public String certificate;
 
         /**
-         * <p>The public key fingerprint of the record. Applicable to SSHFP records.</p>
+         * <p>The public key fingerprint for the record. This parameter applies to SSHFP records.</p>
          * 
          * <strong>example:</strong>
          * <p>abcdef1234567890</p>
@@ -499,7 +542,7 @@ public class BatchCreateRecordsResponseBody extends TeaModel {
         public String fingerprint;
 
         /**
-         * <p>The flag bit of the record. Indicates its priority and handling method, used in CAA records.</p>
+         * <p>The flag for the record, which indicates its priority and processing method. This parameter applies to CAA records.</p>
          * 
          * <strong>example:</strong>
          * <p>128</p>
@@ -508,7 +551,7 @@ public class BatchCreateRecordsResponseBody extends TeaModel {
         public Integer flag;
 
         /**
-         * <p>The public key identification for the record. Valid values: 0 to 65535. Applicable to CERT records.</p>
+         * <p>The public key identifier for the record. The value ranges from <strong>0</strong> to <strong>65535</strong>. This parameter applies to CERT records.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -517,7 +560,7 @@ public class BatchCreateRecordsResponseBody extends TeaModel {
         public Integer keyTag;
 
         /**
-         * <p>The algorithm policy used to match or validate the certificate. Valid values: 0 to 255. Applicable to SMIMEA and TLSA records.</p>
+         * <p>The algorithm policy used by the record to match or validate certificates. The value ranges from <strong>0</strong> to <strong>255</strong>. This parameter applies to SMIMEA and TLSA records.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -526,7 +569,7 @@ public class BatchCreateRecordsResponseBody extends TeaModel {
         public Integer matchingType;
 
         /**
-         * <p>The port of the record. Valid values: 0 to 65535. Exclusive to SRV records.</p>
+         * <p>The port for the record. The value ranges from <strong>0</strong> to <strong>65535</strong>. This parameter applies only to SRV records.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -535,7 +578,7 @@ public class BatchCreateRecordsResponseBody extends TeaModel {
         public Integer port;
 
         /**
-         * <p>The priority of the record. Valid values: 0 to 65535. A smaller value indicates a higher priority. Applicable to MX, SRV, and URI records.</p>
+         * <p>The priority of the record. The value ranges from <strong>0</strong> to <strong>65535</strong>. A smaller value indicates a higher priority. This parameter applies to MX, SRV, and URI records.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -544,7 +587,7 @@ public class BatchCreateRecordsResponseBody extends TeaModel {
         public Integer priority;
 
         /**
-         * <p>The type of certificate or public key. Valid values: 0 to 255. Applicable to SMIMEA and TLSA records.</p>
+         * <p>The type of certificate or public key used by the record. The value ranges from <strong>0</strong> to <strong>255</strong>. This parameter applies to SMIMEA and TLSA records.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -553,7 +596,7 @@ public class BatchCreateRecordsResponseBody extends TeaModel {
         public Integer selector;
 
         /**
-         * <p>The label of a CAA record, which indicates its specific type and purpose, such as issue, issuewild, and iodef.</p>
+         * <p>The tag for a CAA record, which specifies its type and purpose, such as <code>issue</code>, <code>issuewild</code>, or <code>iodef</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>issue</p>
@@ -562,7 +605,7 @@ public class BatchCreateRecordsResponseBody extends TeaModel {
         public String tag;
 
         /**
-         * <p>The certificate type of the record (in CERT records), or the public key type (in SSHFP records).</p>
+         * <p>The certificate type for CERT records or the public key type for SSHFP records.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -571,7 +614,7 @@ public class BatchCreateRecordsResponseBody extends TeaModel {
         public Integer type;
 
         /**
-         * <p>The usage identifier of the record. Valid values: 0 to 255. Applicable to SMIMEA and TLSA records.</p>
+         * <p>The usage identifier for the record. The value ranges from <strong>0</strong> to <strong>255</strong>. This parameter applies to SMIMEA and TLSA records.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -580,16 +623,24 @@ public class BatchCreateRecordsResponseBody extends TeaModel {
         public Integer usage;
 
         /**
-         * <p>The record value or part of the record content. This value is returned when the record is A/AAAA, CNAME, NS, MX, TXT, CAA, SRV, or URI. It has different meanings based on types of records:</p>
+         * <p>The record value. This parameter applies to A/AAAA, CNAME, NS, MX, TXT, CAA, SRV, and URI records. The meaning of this parameter varies based on the record type:</p>
          * <ul>
-         * <li><strong>A/AAAA</strong>: the IP addresses. Multiple IPs are separated by commas (,). There is at least one IPv4 address.</li>
-         * <li><strong>CNAME</strong>: the mapped domain name.</li>
-         * <li><strong>NS</strong>: the nameservers for the domain name.</li>
-         * <li><strong>MX</strong>: a valid domain name of the target mail server.</li>
-         * <li><strong>TXT</strong>: a valid text string.</li>
-         * <li><strong>CAA</strong>: a valid domain name of the certificate authority.</li>
-         * <li><strong>SRV</strong>: a valid domain name of the target host.</li>
-         * <li><strong>URI</strong>: a valid URI string.</li>
+         * <li><p><strong>A/AAAA</strong>: The IP address. To specify multiple addresses, separate them with a comma (,). At least one IPv4 address is required.</p>
+         * </li>
+         * <li><p><strong>CNAME</strong>: The target domain name.</p>
+         * </li>
+         * <li><p><strong>NS</strong>: The name server for the domain.</p>
+         * </li>
+         * <li><p><strong>MX</strong>: The domain name of a valid target mail server.</p>
+         * </li>
+         * <li><p><strong>TXT</strong>: A valid text string.</p>
+         * </li>
+         * <li><p><strong>CAA</strong>: The domain name of a valid certificate authority.</p>
+         * </li>
+         * <li><p><strong>SRV</strong>: The domain name of a valid target host.</p>
+         * </li>
+         * <li><p><strong>URI</strong>: A valid URI string.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -599,7 +650,7 @@ public class BatchCreateRecordsResponseBody extends TeaModel {
         public String value;
 
         /**
-         * <p>The weight of the record. Valid values: 0 to 65535. Applicable to SRV and URI records.</p>
+         * <p>The weight of the record. The value ranges from <strong>0</strong> to <strong>65535</strong>. This parameter applies to SRV and URI records.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -728,11 +779,14 @@ public class BatchCreateRecordsResponseBody extends TeaModel {
 
     public static class BatchCreateRecordsResponseBodyRecordResultListSuccess extends TeaModel {
         /**
-         * <p>The business scenario of the record for acceleration. Valid values:</p>
+         * <p>The acceleration use case for the record. Valid values:</p>
          * <ul>
-         * <li><strong>image_video</strong></li>
-         * <li><strong>api</strong></li>
-         * <li><strong>web</strong></li>
+         * <li><p><strong>image_video</strong>: Images and videos.</p>
+         * </li>
+         * <li><p><strong>api</strong>: APIs.</p>
+         * </li>
+         * <li><p><strong>web</strong>: Web pages.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -742,7 +796,7 @@ public class BatchCreateRecordsResponseBody extends TeaModel {
         public String bizName;
 
         /**
-         * <p>The DNS record information.</p>
+         * <p>The DNS information for the record.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;value&quot;:&quot;1.1.1.1&quot;}</p>
@@ -759,11 +813,19 @@ public class BatchCreateRecordsResponseBody extends TeaModel {
         @NameInMap("Description")
         public String description;
 
+        @NameInMap("HttpPorts")
+        public String httpPorts;
+
+        @NameInMap("HttpsPorts")
+        public String httpsPorts;
+
         /**
-         * <p>Indicates whether the record is proxied. Only CNAME and A/AAAA records can be proxied. Valid values:</p>
+         * <p>Specifies whether proxy acceleration is enabled for the record. This option is available only for CNAME, A, and AAAA records. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong></li>
-         * <li><strong>false</strong></li>
+         * <li><p><strong>true</strong>: Proxy acceleration is enabled.</p>
+         * </li>
+         * <li><p><strong>false</strong>: Proxy acceleration is disabled.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -791,7 +853,7 @@ public class BatchCreateRecordsResponseBody extends TeaModel {
         public String recordName;
 
         /**
-         * <p>The DNS type of the record, such as <strong>A/AAAA, CNAME, and TXT</strong>.</p>
+         * <p>The DNS type of the record, such as <strong>A/AAAA</strong>, <strong>CNAME</strong>, or <strong>TXT</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>A/AAAA</p>
@@ -800,13 +862,18 @@ public class BatchCreateRecordsResponseBody extends TeaModel {
         public String recordType;
 
         /**
-         * <p>The origin type of the CNAME record. This field is left empty for other types of records. The type of the origin server. Valid values:</p>
+         * <p>The type of origin for a CNAME record. This parameter is empty for other record types. Valid values:</p>
          * <ul>
-         * <li><strong>OSS</strong>: OSS bucket.</li>
-         * <li><strong>S3</strong>: S3 bucket.</li>
-         * <li><strong>LB</strong>: load balancer.</li>
-         * <li><strong>OP</strong>: origin pool.</li>
-         * <li><strong>Domain</strong>: domain name.</li>
+         * <li><p><strong>OSS</strong>: An OSS origin.</p>
+         * </li>
+         * <li><p><strong>S3</strong>: An S3 origin.</p>
+         * </li>
+         * <li><p><strong>LB</strong>: A load balancer origin.</p>
+         * </li>
+         * <li><p><strong>OP</strong>: An origin pool.</p>
+         * </li>
+         * <li><p><strong>Domain</strong>: A domain name origin.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -816,7 +883,7 @@ public class BatchCreateRecordsResponseBody extends TeaModel {
         public String sourceType;
 
         /**
-         * <p>The TTL of the record. Unit: seconds. If the value is 1, the TTL of the record is determined by the system.</p>
+         * <p>The TTL of the record in seconds. A value of 1 sets the TTL to Automatic.</p>
          * 
          * <strong>example:</strong>
          * <p>60</p>
@@ -851,6 +918,22 @@ public class BatchCreateRecordsResponseBody extends TeaModel {
         }
         public String getDescription() {
             return this.description;
+        }
+
+        public BatchCreateRecordsResponseBodyRecordResultListSuccess setHttpPorts(String httpPorts) {
+            this.httpPorts = httpPorts;
+            return this;
+        }
+        public String getHttpPorts() {
+            return this.httpPorts;
+        }
+
+        public BatchCreateRecordsResponseBodyRecordResultListSuccess setHttpsPorts(String httpsPorts) {
+            this.httpsPorts = httpsPorts;
+            return this;
+        }
+        public String getHttpsPorts() {
+            return this.httpsPorts;
         }
 
         public BatchCreateRecordsResponseBodyRecordResultListSuccess setProxied(Boolean proxied) {
@@ -905,19 +988,19 @@ public class BatchCreateRecordsResponseBody extends TeaModel {
 
     public static class BatchCreateRecordsResponseBodyRecordResultList extends TeaModel {
         /**
-         * <p>The records that failed to be created.</p>
+         * <p>A list of records that failed to be created.</p>
          */
         @NameInMap("Failed")
         public java.util.List<BatchCreateRecordsResponseBodyRecordResultListFailed> failed;
 
         /**
-         * <p>The records that have been created.</p>
+         * <p>A list of successfully created records.</p>
          */
         @NameInMap("Success")
         public java.util.List<BatchCreateRecordsResponseBodyRecordResultListSuccess> success;
 
         /**
-         * <p>The total number of returned records.</p>
+         * <p>The total number of records in the creation operation.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>

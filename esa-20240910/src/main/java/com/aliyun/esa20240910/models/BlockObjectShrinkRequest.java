@@ -12,7 +12,7 @@ public class BlockObjectShrinkRequest extends TeaModel {
     public String contentShrink;
 
     /**
-     * <p>The period of time during which the URL is blocked. Unit: seconds. Specify this parameter if Type is set to block.</p>
+     * <p>The effective period of the block, in seconds. Specify this parameter when Type is set to block.</p>
      * 
      * <strong>example:</strong>
      * <p>864000</p>
@@ -21,11 +21,11 @@ public class BlockObjectShrinkRequest extends TeaModel {
     public Integer maxage;
 
     /**
-     * <p>The website ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation.</p>
+     * <p>The ID of the site. Call the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation to obtain the site ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>BlockObject</p>
+     * <p>123456****</p>
      */
     @NameInMap("SiteId")
     public Long siteId;
@@ -33,8 +33,10 @@ public class BlockObjectShrinkRequest extends TeaModel {
     /**
      * <p>The type. Valid values:</p>
      * <ul>
-     * <li><strong>block</strong></li>
-     * <li><strong>unblock</strong></li>
+     * <li><p><strong>block</strong>: Blocks access.</p>
+     * </li>
+     * <li><p><strong>unblock</strong>: Unblocks access.</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

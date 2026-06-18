@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListWafRulesResponseBody extends TeaModel {
     /**
-     * <p>Number of rules used in this WAF phase for the corresponding instance of the site.</p>
+     * <p>The number of rules used in this WAF phase for the site\&quot;s instance.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -14,7 +14,7 @@ public class ListWafRulesResponseBody extends TeaModel {
     public Long instanceUsage;
 
     /**
-     * <p>Page number.</p>
+     * <p>The page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -23,7 +23,7 @@ public class ListWafRulesResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>Page size.</p>
+     * <p>The number of items per page.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -32,7 +32,7 @@ public class ListWafRulesResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>Request ID.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>36af3fcc-43d0-441c-86b1-428951dc8225</p>
@@ -41,13 +41,13 @@ public class ListWafRulesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Returned list of rules.</p>
+     * <p>An array of rule objects.</p>
      */
     @NameInMap("Rules")
     public java.util.List<ListWafRulesResponseBodyRules> rules;
 
     /**
-     * <p>Site usage.</p>
+     * <p>The number of rules used by the site.</p>
      * 
      * <strong>example:</strong>
      * <p>5</p>
@@ -56,7 +56,7 @@ public class ListWafRulesResponseBody extends TeaModel {
     public Long siteUsage;
 
     /**
-     * <p>Total number of rules after filtering.</p>
+     * <p>The total number of filtered rules.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -127,7 +127,17 @@ public class ListWafRulesResponseBody extends TeaModel {
 
     public static class ListWafRulesResponseBodyRules extends TeaModel {
         /**
-         * <p>The action corresponding to the rule.</p>
+         * <p>The action to take when a rule matches.</p>
+         * <ul>
+         * <li><p><code>deny</code>: Block the request.</p>
+         * </li>
+         * <li><p><code>monitor</code>: Log the request without blocking it.</p>
+         * </li>
+         * <li><p><code>js</code>: Issue a JS challenge.</p>
+         * </li>
+         * <li><p><code>captcha</code>: Issue a CAPTCHA challenge.</p>
+         * </li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>deny</p>
@@ -136,25 +146,25 @@ public class ListWafRulesResponseBody extends TeaModel {
         public String action;
 
         /**
-         * <p>List of statistical objects for frequency control rules.</p>
+         * <p>A list of tracking characteristics for rate limit rules.</p>
          */
         @NameInMap("CharacteristicsFields")
         public java.util.List<String> characteristicsFields;
 
         /**
-         * <p>Rule configuration.</p>
+         * <p>The rule configuration object.</p>
          */
         @NameInMap("Config")
         public WafRuleConfig config;
 
         /**
-         * <p>List of fields for rule matching</p>
+         * <p>An array of match fields for the rule.</p>
          */
         @NameInMap("Fields")
         public java.util.List<String> fields;
 
         /**
-         * <p>Rule ID.</p>
+         * <p>The ID of the rule.</p>
          * 
          * <strong>example:</strong>
          * <p>20000001</p>
@@ -163,7 +173,7 @@ public class ListWafRulesResponseBody extends TeaModel {
         public Long id;
 
         /**
-         * <p>Rule name.</p>
+         * <p>The name of the rule.</p>
          * 
          * <strong>example:</strong>
          * <p>example</p>
@@ -172,7 +182,25 @@ public class ListWafRulesResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>WAF phase.</p>
+         * <p>The WAF rule\&quot;s execution phase.</p>
+         * <ul>
+         * <li><p><code>http_whitelist</code>: Whitelist rule.</p>
+         * </li>
+         * <li><p><code>http_custom</code>: Custom rule.</p>
+         * </li>
+         * <li><p><code>http_managed</code>: Managed rule.</p>
+         * </li>
+         * <li><p><code>http_anti_scan</code>: Scan protection rule.</p>
+         * </li>
+         * <li><p><code>http_ratelimit</code>: Rate limit rule.</p>
+         * </li>
+         * <li><p><code>ip_access_rule</code>: IP access rule.</p>
+         * </li>
+         * <li><p><code>http_bot</code>: Advanced bot management rule.</p>
+         * </li>
+         * <li><p><code>http_security_level_rule</code>: Security level rule.</p>
+         * </li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>http_custom</p>
@@ -181,7 +209,7 @@ public class ListWafRulesResponseBody extends TeaModel {
         public String phase;
 
         /**
-         * <p>Position order of the rule in the corresponding ruleset.</p>
+         * <p>The position of the rule within the ruleset.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -190,7 +218,7 @@ public class ListWafRulesResponseBody extends TeaModel {
         public Long position;
 
         /**
-         * <p>Ruleset ID.</p>
+         * <p>The ID of the ruleset.</p>
          * 
          * <strong>example:</strong>
          * <p>10000001</p>
@@ -199,7 +227,7 @@ public class ListWafRulesResponseBody extends TeaModel {
         public Long rulesetId;
 
         /**
-         * <p>Skip attribute for whitelist rules.</p>
+         * <p>The skip behavior for whitelist rules.</p>
          * 
          * <strong>example:</strong>
          * <p>part</p>
@@ -208,7 +236,7 @@ public class ListWafRulesResponseBody extends TeaModel {
         public String skip;
 
         /**
-         * <p>Rule status.</p>
+         * <p>The status of the rule.</p>
          * 
          * <strong>example:</strong>
          * <p>on</p>
@@ -217,19 +245,19 @@ public class ListWafRulesResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>List of WAF phases to be skipped by whitelist rules.</p>
+         * <p>An array of WAF phases to skip when the whitelist rule matches.</p>
          */
         @NameInMap("Tags")
         public java.util.List<String> tags;
 
         /**
-         * <p>Configuration for the effective time of the rule.</p>
+         * <p>The effective time configuration for the rule.</p>
          */
         @NameInMap("Timer")
         public WafTimer timer;
 
         /**
-         * <p>Rule type.</p>
+         * <p>The type of the rule.</p>
          * 
          * <strong>example:</strong>
          * <p>http_custom</p>
@@ -238,7 +266,7 @@ public class ListWafRulesResponseBody extends TeaModel {
         public String type;
 
         /**
-         * <p>Modification time.</p>
+         * <p>When the rule was last updated.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-01-01T00:00:00Z</p>

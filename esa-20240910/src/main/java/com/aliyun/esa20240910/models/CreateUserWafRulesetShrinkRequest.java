@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateUserWafRulesetShrinkRequest extends TeaModel {
     /**
+     * <p>The description of the WAF ruleset.</p>
+     * 
      * <strong>example:</strong>
      * <p>this is a test ruleset.</p>
      */
@@ -12,6 +14,7 @@ public class CreateUserWafRulesetShrinkRequest extends TeaModel {
     public String description;
 
     /**
+     * <p>The expression for the WAF ruleset.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,6 +24,7 @@ public class CreateUserWafRulesetShrinkRequest extends TeaModel {
     public String expression;
 
     /**
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -30,6 +34,7 @@ public class CreateUserWafRulesetShrinkRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>The name of the WAF ruleset.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -39,6 +44,25 @@ public class CreateUserWafRulesetShrinkRequest extends TeaModel {
     public String name;
 
     /**
+     * <p>The execution phase of the WAF ruleset.</p>
+     * <ul>
+     * <li><p><code>http_whitelist</code>: whitelist rule</p>
+     * </li>
+     * <li><p><code>http_custom</code>: custom rule</p>
+     * </li>
+     * <li><p><code>http_managed</code>: managed rule</p>
+     * </li>
+     * <li><p><code>http_anti_scan</code>: scan protection rule</p>
+     * </li>
+     * <li><p><code>http_ratelimit</code>: rate limiting rule</p>
+     * </li>
+     * <li><p><code>ip_access_rule</code>: IP access rule</p>
+     * </li>
+     * <li><p><code>http_bot</code>: advanced bot</p>
+     * </li>
+     * <li><p><code>http_security_level_rule</code>: security rule</p>
+     * </li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -47,13 +71,20 @@ public class CreateUserWafRulesetShrinkRequest extends TeaModel {
     @NameInMap("Phase")
     public String phase;
 
+    /**
+     * <p>A list of rule configurations within the WAF ruleset.</p>
+     */
     @NameInMap("Rules")
     public String rulesShrink;
 
+    /**
+     * <p>The shared configuration for WAF batch rules.</p>
+     */
     @NameInMap("Shared")
     public String sharedShrink;
 
     /**
+     * <p>The status of the WAF ruleset.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

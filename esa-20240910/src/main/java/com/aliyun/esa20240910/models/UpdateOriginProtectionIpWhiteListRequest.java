@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateOriginProtectionIpWhiteListRequest extends TeaModel {
     /**
-     * <p>The website ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation.</p>
+     * <p>Site ID. Call the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation to get this value.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

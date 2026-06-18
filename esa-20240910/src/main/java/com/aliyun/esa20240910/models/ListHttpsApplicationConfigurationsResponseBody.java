@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListHttpsApplicationConfigurationsResponseBody extends TeaModel {
     /**
-     * <p>Response body configurations.</p>
+     * <p>A list of HTTPS application configurations.</p>
      */
     @NameInMap("Configs")
     public java.util.List<ListHttpsApplicationConfigurationsResponseBodyConfigs> configs;
 
     /**
-     * <p>Current page number.</p>
+     * <p>The current page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -20,7 +20,7 @@ public class ListHttpsApplicationConfigurationsResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>Page size.</p>
+     * <p>The page size.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -29,7 +29,7 @@ public class ListHttpsApplicationConfigurationsResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>Request ID.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>0AEDAF20-4DDF-4165-8750-47FF9C1929C9</p>
@@ -38,7 +38,7 @@ public class ListHttpsApplicationConfigurationsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Total number of records.</p>
+     * <p>The total number of entries.</p>
      * 
      * <strong>example:</strong>
      * <p>16</p>
@@ -47,7 +47,7 @@ public class ListHttpsApplicationConfigurationsResponseBody extends TeaModel {
     public Integer totalCount;
 
     /**
-     * <p>Total number of pages.</p>
+     * <p>The total number of pages.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>
@@ -110,10 +110,12 @@ public class ListHttpsApplicationConfigurationsResponseBody extends TeaModel {
 
     public static class ListHttpsApplicationConfigurationsResponseBodyConfigs extends TeaModel {
         /**
-         * <p>Alt-Svc feature switch, default is off. Value range: </p>
+         * <p>Whether to enable the Alt-Svc feature. Default: <code>off</code>. Valid values:</p>
          * <ul>
-         * <li>on: enabled. </li>
-         * <li>off: disabled.</li>
+         * <li><p><code>on</code>: The Alt-Svc feature is enabled.</p>
+         * </li>
+         * <li><p><code>off</code>: The Alt-Svc feature is disabled.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -123,10 +125,12 @@ public class ListHttpsApplicationConfigurationsResponseBody extends TeaModel {
         public String altSvc;
 
         /**
-         * <p>Whether the Alt-Svc header includes the clear parameter, default is off. Values:</p>
+         * <p>Whether the Alt-Svc header includes the <code>clear</code> parameter. Default: <code>off</code>. Valid values:</p>
          * <ul>
-         * <li>on: Enabled.</li>
-         * <li>off: Disabled.</li>
+         * <li><p><code>on</code>: The <code>clear</code> parameter is included.</p>
+         * </li>
+         * <li><p><code>off</code>: The <code>clear</code> parameter is not included.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -136,7 +140,7 @@ public class ListHttpsApplicationConfigurationsResponseBody extends TeaModel {
         public String altSvcClear;
 
         /**
-         * <p>The validity period of Alt-Svc in seconds, default is 86400 seconds.</p>
+         * <p>The Alt-Svc max-age in seconds. Default: <code>86400</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>86400</p>
@@ -145,10 +149,12 @@ public class ListHttpsApplicationConfigurationsResponseBody extends TeaModel {
         public String altSvcMa;
 
         /**
-         * <p>Whether the Alt-Svc header includes the persist parameter, default is off. Values:</p>
+         * <p>Whether the Alt-Svc header includes the <code>persist</code> parameter. Default: <code>off</code>. Valid values:</p>
          * <ul>
-         * <li>on: Enabled.</li>
-         * <li>off: Disabled.</li>
+         * <li><p><code>on</code>: The <code>persist</code> parameter is included.</p>
+         * </li>
+         * <li><p><code>off</code>: The <code>persist</code> parameter is not included.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -158,7 +164,7 @@ public class ListHttpsApplicationConfigurationsResponseBody extends TeaModel {
         public String altSvcPersist;
 
         /**
-         * <p>Configuration ID.</p>
+         * <p>The configuration ID.</p>
          * 
          * <strong>example:</strong>
          * <p>395386449776640</p>
@@ -167,10 +173,12 @@ public class ListHttpsApplicationConfigurationsResponseBody extends TeaModel {
         public Long configId;
 
         /**
-         * <p>Configuration type, which can be used to query global or rule-based configurations. Possible values:</p>
+         * <p>The type of the configuration. Valid values:</p>
          * <ul>
-         * <li>global: Query global configuration.</li>
-         * <li>rule: Query rule-based configuration.</li>
+         * <li><p><code>global</code>: A global configuration.</p>
+         * </li>
+         * <li><p><code>rule</code>: A rule-based configuration.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -180,10 +188,12 @@ public class ListHttpsApplicationConfigurationsResponseBody extends TeaModel {
         public String configType;
 
         /**
-         * <p>Whether HSTS is enabled, default is off. Value range:</p>
+         * <p>Whether to enable HSTS. Default: <code>off</code>. Valid values:</p>
          * <ul>
-         * <li>on: Enabled.</li>
-         * <li>off: Disabled.</li>
+         * <li><p><code>on</code>: HSTS is enabled.</p>
+         * </li>
+         * <li><p><code>off</code>: HSTS is disabled.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -193,10 +203,12 @@ public class ListHttpsApplicationConfigurationsResponseBody extends TeaModel {
         public String hsts;
 
         /**
-         * <p>Whether to include subdomains in HSTS, default is off. Value range:</p>
+         * <p>Whether the HSTS header includes the <code>includeSubDomains</code> directive. Default: <code>off</code>. Valid values:</p>
          * <ul>
-         * <li>on: Enabled.</li>
-         * <li>off: Disabled.</li>
+         * <li><p><code>on</code>: The <code>includeSubDomains</code> directive is included.</p>
+         * </li>
+         * <li><p><code>off</code>: The <code>includeSubDomains</code> directive is not included.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -206,7 +218,7 @@ public class ListHttpsApplicationConfigurationsResponseBody extends TeaModel {
         public String hstsIncludeSubdomains;
 
         /**
-         * <p>The expiration time of HSTS in seconds.</p>
+         * <p>The HSTS <code>max-age</code>, in seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>3600</p>
@@ -215,10 +227,12 @@ public class ListHttpsApplicationConfigurationsResponseBody extends TeaModel {
         public String hstsMaxAge;
 
         /**
-         * <p>Whether HSTS preloading is enabled, default is off. Value range:</p>
+         * <p>Whether the HSTS header includes the <code>preload</code> directive. Default: <code>off</code>. Valid values:</p>
          * <ul>
-         * <li>on: Enabled.</li>
-         * <li>off: Disabled.</li>
+         * <li><p><code>on</code>: The <code>preload</code> directive is included.</p>
+         * </li>
+         * <li><p><code>off</code>: The <code>preload</code> directive is not included.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -228,10 +242,12 @@ public class ListHttpsApplicationConfigurationsResponseBody extends TeaModel {
         public String hstsPreload;
 
         /**
-         * <p>Whether to enable forced HTTPS, default is disabled. Possible values:</p>
+         * <p>Whether to enable HTTPS redirection. Default: <code>off</code>. Valid values:</p>
          * <ul>
-         * <li>on: Enabled.</li>
-         * <li>off: Disabled.</li>
+         * <li><p><code>on</code>: HTTPS redirection is enabled.</p>
+         * </li>
+         * <li><p><code>off</code>: HTTPS redirection is disabled.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -241,12 +257,16 @@ public class ListHttpsApplicationConfigurationsResponseBody extends TeaModel {
         public String httpsForce;
 
         /**
-         * <p>Forced HTTPS redirect status code. Possible values:</p>
+         * <p>The status code for HTTPS redirection. Valid values:</p>
          * <ul>
-         * <li>301</li>
-         * <li>302</li>
-         * <li>307</li>
-         * <li>308</li>
+         * <li><p><code>301</code></p>
+         * </li>
+         * <li><p><code>302</code></p>
+         * </li>
+         * <li><p><code>307</code></p>
+         * </li>
+         * <li><p><code>308</code></p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -255,20 +275,52 @@ public class ListHttpsApplicationConfigurationsResponseBody extends TeaModel {
         @NameInMap("HttpsForceCode")
         public String httpsForceCode;
 
+        /**
+         * <p>Whether to reject TLS handshake requests that lack an SNI. Default: <code>off</code>. Valid values:</p>
+         * <ul>
+         * <li><p><code>on</code>: Requests that lack an SNI are rejected.</p>
+         * </li>
+         * <li><p><code>off</code>: Requests that lack an SNI are not rejected.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>on</p>
+         */
         @NameInMap("HttpsNoSniDeny")
         public String httpsNoSniDeny;
 
+        /**
+         * <p>Whether to enable SNI verification. Default: <code>off</code>. Valid values:</p>
+         * <ul>
+         * <li><p><code>on</code>: SNI verification is enabled.</p>
+         * </li>
+         * <li><p><code>off</code>: SNI verification is disabled.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>on</p>
+         */
         @NameInMap("HttpsSniVerify")
         public String httpsSniVerify;
 
+        /**
+         * <p>The SNI allowlist. Separate multiple values with a space.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>abc edf</p>
+         */
         @NameInMap("HttpsSniWhitelist")
         public String httpsSniWhitelist;
 
         /**
-         * <p>Rule content, using conditional expressions to match user requests. This parameter is not required when adding a global configuration. There are two usage scenarios:</p>
+         * <p>The content of the rule, a conditional expression that matches user requests. This parameter is not required for a global configuration. The following use cases are supported:</p>
          * <ul>
-         * <li>Match all incoming requests: Set the value to true.</li>
-         * <li>Match specific requests: Set the value to a custom expression, e.g., (http.host eq \&quot;video.example.com\&quot;)</li>
+         * <li><p>To match all incoming requests, set the value to <code>true</code>.</p>
+         * </li>
+         * <li><p>To match specific requests, set the value to a custom expression, such as <code>(http.host eq &quot;video.example.com&quot;)</code>.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -278,10 +330,12 @@ public class ListHttpsApplicationConfigurationsResponseBody extends TeaModel {
         public String rule;
 
         /**
-         * <p>Rule switch. This parameter is not required when adding a global configuration. Possible values:</p>
+         * <p>Whether the rule is enabled. This parameter is not required for a global configuration. Valid values:</p>
          * <ul>
-         * <li>on: Enabled.</li>
-         * <li>off: Disabled.</li>
+         * <li><p><code>on</code>: The rule is enabled.</p>
+         * </li>
+         * <li><p><code>off</code>: The rule is disabled.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -291,7 +345,7 @@ public class ListHttpsApplicationConfigurationsResponseBody extends TeaModel {
         public String ruleEnable;
 
         /**
-         * <p>Rule name. This parameter is not required when adding a global configuration.</p>
+         * <p>The name of the rule. This parameter is not required for a global configuration.</p>
          * 
          * <strong>example:</strong>
          * <p>rule_example</p>
@@ -300,7 +354,7 @@ public class ListHttpsApplicationConfigurationsResponseBody extends TeaModel {
         public String ruleName;
 
         /**
-         * <p>Rule execution order. The smaller the value, the higher the priority.</p>
+         * <p>The execution priority of the rule. A smaller value indicates a higher priority.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -309,7 +363,7 @@ public class ListHttpsApplicationConfigurationsResponseBody extends TeaModel {
         public Integer sequence;
 
         /**
-         * <p>Site configuration version number. For sites with version management enabled, this parameter can specify the site version for which the configuration is effective, default is version 0.</p>
+         * <p>The site configuration version. For sites with version management, this specifies the version to which the configuration applies. Default: <code>0</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>

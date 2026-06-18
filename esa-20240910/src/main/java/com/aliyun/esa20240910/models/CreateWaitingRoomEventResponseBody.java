@@ -13,6 +13,12 @@ public class CreateWaitingRoomEventResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The waiting room event ID. You can call the <a href="https://help.aliyun.com/document_detail/2850279.html">ListWaitingRoomEvents</a> operation to obtain the ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>433277746085888</p>
+     */
     @NameInMap("WaitingRoomEventId")
     public Long waitingRoomEventId;
 

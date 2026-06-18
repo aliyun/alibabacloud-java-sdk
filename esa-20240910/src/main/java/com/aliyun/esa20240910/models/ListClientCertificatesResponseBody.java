@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListClientCertificatesResponseBody extends TeaModel {
     /**
-     * <p>The page number returned.</p>
+     * <p>The page number of the returned entries.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -32,13 +32,13 @@ public class ListClientCertificatesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The client certificates.</p>
+     * <p>The list of client certificates.</p>
      */
     @NameInMap("Result")
     public java.util.List<ListClientCertificatesResponseBodyResult> result;
 
     /**
-     * <p>The website ID.</p>
+     * <p>The site ID.</p>
      * 
      * <strong>example:</strong>
      * <p>1234567890123</p>
@@ -47,7 +47,7 @@ public class ListClientCertificatesResponseBody extends TeaModel {
     public Long siteId;
 
     /**
-     * <p>The website name.</p>
+     * <p>The site name.</p>
      * 
      * <strong>example:</strong>
      * <p>example.com</p>
@@ -127,7 +127,7 @@ public class ListClientCertificatesResponseBody extends TeaModel {
 
     public static class ListClientCertificatesResponseBodyResult extends TeaModel {
         /**
-         * <p>The ID of the CA certificate.</p>
+         * <p>The CA certificate ID.</p>
          * 
          * <strong>example:</strong>
          * <p>baba39055622c008b90285a8838ed09a</p>
@@ -136,7 +136,7 @@ public class ListClientCertificatesResponseBody extends TeaModel {
         public String CACertificateId;
 
         /**
-         * <p>The Common Name of the certificate.</p>
+         * <p>The common name of the certificate.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="http://www.example.com">www.example.com</a></p>
@@ -145,7 +145,7 @@ public class ListClientCertificatesResponseBody extends TeaModel {
         public String commonName;
 
         /**
-         * <p>The time when the certificate was created.</p>
+         * <p>The creation time of the certificate.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-06-24 07:48:51</p>
@@ -153,6 +153,9 @@ public class ListClientCertificatesResponseBody extends TeaModel {
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <p>The SHA-256 fingerprint of the certificate.</p>
+         */
         @NameInMap("FingerprintSha256")
         public String fingerprintSha256;
 
@@ -166,7 +169,7 @@ public class ListClientCertificatesResponseBody extends TeaModel {
         public String id;
 
         /**
-         * <p>The certificate authority (CA) that issued the certificate.</p>
+         * <p>The certificate issuer.</p>
          * 
          * <strong>example:</strong>
          * <p>GlobalSign nv-sa</p>
@@ -193,7 +196,7 @@ public class ListClientCertificatesResponseBody extends TeaModel {
         public String notAfter;
 
         /**
-         * <p>The time when the certificate takes effect.</p>
+         * <p>The time when the certificate becomes valid.</p>
          * 
          * <strong>example:</strong>
          * <p>2023-03-31 02:08:00</p>
@@ -211,7 +214,7 @@ public class ListClientCertificatesResponseBody extends TeaModel {
         public String pubkeyAlgorithm;
 
         /**
-         * <p>The Subject Alternative Name (SAN) of the certificate.</p>
+         * <p>The subject alternative name (SAN) of the certificate.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="http://www.example.com,*.example.com">www.example.com,*.example.com</a></p>
@@ -219,6 +222,9 @@ public class ListClientCertificatesResponseBody extends TeaModel {
         @NameInMap("SAN")
         public String SAN;
 
+        /**
+         * <p>The serial number of the certificate.</p>
+         */
         @NameInMap("SerialNumber")
         public String serialNumber;
 
@@ -250,7 +256,7 @@ public class ListClientCertificatesResponseBody extends TeaModel {
         public String type;
 
         /**
-         * <p>The time when the certificate was updated.</p>
+         * <p>The last update time of the certificate.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-07-20 06:18:42</p>

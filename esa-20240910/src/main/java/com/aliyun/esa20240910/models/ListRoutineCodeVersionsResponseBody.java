@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListRoutineCodeVersionsResponseBody extends TeaModel {
     /**
-     * <p>The code versions of the routine.</p>
+     * <p>The list of Edge Routine code versions.</p>
      */
     @NameInMap("CodeVersions")
     public java.util.List<ListRoutineCodeVersionsResponseBodyCodeVersions> codeVersions;
 
     /**
-     * <p>The page number. Pages start from page 1. Default value: 1.</p>
+     * <p>The current page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -38,7 +38,7 @@ public class ListRoutineCodeVersionsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of code versions returned.</p>
+     * <p>The total number of entries.</p>
      * 
      * <strong>example:</strong>
      * <p>5</p>
@@ -93,7 +93,7 @@ public class ListRoutineCodeVersionsResponseBody extends TeaModel {
 
     public static class ListRoutineCodeVersionsResponseBodyCodeVersionsConfOptions extends TeaModel {
         /**
-         * <p>Code version configuration items NotFoundStrategy.</p>
+         * <p>The NotFoundStrategy configuration item of the code version.</p>
          * 
          * <strong>example:</strong>
          * <p>SinglePageApplication</p>
@@ -118,7 +118,7 @@ public class ListRoutineCodeVersionsResponseBody extends TeaModel {
 
     public static class ListRoutineCodeVersionsResponseBodyCodeVersions extends TeaModel {
         /**
-         * <p>The ID of the code version build.</p>
+         * <p>The build ID of the code version.</p>
          * 
          * <strong>example:</strong>
          * <p>25801233</p>
@@ -136,7 +136,7 @@ public class ListRoutineCodeVersionsResponseBody extends TeaModel {
         public String codeDescription;
 
         /**
-         * <p>The version of the code.</p>
+         * <p>The code version number.</p>
          * 
          * <strong>example:</strong>
          * <p>1723599747213377175</p>
@@ -145,7 +145,7 @@ public class ListRoutineCodeVersionsResponseBody extends TeaModel {
         public String codeVersion;
 
         /**
-         * <p>Code version configuration items.</p>
+         * <p>The configuration items of the code version.</p>
          */
         @NameInMap("ConfOptions")
         public ListRoutineCodeVersionsResponseBodyCodeVersionsConfOptions confOptions;
@@ -160,13 +160,32 @@ public class ListRoutineCodeVersionsResponseBody extends TeaModel {
         public String createTime;
 
         /**
-         * <p>Additional information about the code version.</p>
+         * <p>The deployment environment. Valid values:</p>
+         * <ul>
+         * <li><strong>staging</strong>: staging environment.</li>
+         * <li><strong>production</strong>: production environment.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>staging</p>
+         */
+        @NameInMap("DeployEnv")
+        public String deployEnv;
+
+        /**
+         * <p>The additional information about the code version.</p>
          * 
          * <strong>example:</strong>
          * <p>{\&quot;approver\&quot;:[\&quot;348678\&quot;,\&quot;111133\&quot;,\&quot;411544\&quot;]}</p>
          */
         @NameInMap("ExtraInfo")
         public String extraInfo;
+
+        /**
+         * <p>Indicates whether environment variables exist.</p>
+         */
+        @NameInMap("HasEnvVars")
+        public Boolean hasEnvVars;
 
         /**
          * <p>The status of the code version.</p>
@@ -222,12 +241,28 @@ public class ListRoutineCodeVersionsResponseBody extends TeaModel {
             return this.createTime;
         }
 
+        public ListRoutineCodeVersionsResponseBodyCodeVersions setDeployEnv(String deployEnv) {
+            this.deployEnv = deployEnv;
+            return this;
+        }
+        public String getDeployEnv() {
+            return this.deployEnv;
+        }
+
         public ListRoutineCodeVersionsResponseBodyCodeVersions setExtraInfo(String extraInfo) {
             this.extraInfo = extraInfo;
             return this;
         }
         public String getExtraInfo() {
             return this.extraInfo;
+        }
+
+        public ListRoutineCodeVersionsResponseBodyCodeVersions setHasEnvVars(Boolean hasEnvVars) {
+            this.hasEnvVars = hasEnvVars;
+            return this;
+        }
+        public Boolean getHasEnvVars() {
+            return this.hasEnvVars;
         }
 
         public ListRoutineCodeVersionsResponseBodyCodeVersions setStatus(String status) {

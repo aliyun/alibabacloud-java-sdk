@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdatePageRequest extends TeaModel {
     /**
-     * <p>The Base64-encoded content of the error page. The content type is specified by the Content-Type field.</p>
+     * <p>The Base64-encoded content for the response page, corresponding to the specified <code>ContentType</code>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,10 +15,12 @@ public class UpdatePageRequest extends TeaModel {
     public String content;
 
     /**
-     * <p>The Content-Type field in the HTTP header. Valid values:</p>
+     * <p>The value for the Content-Type HTTP header. Examples:</p>
      * <ul>
-     * <li>text/html</li>
-     * <li>application/json</li>
+     * <li><p>text/html</p>
+     * </li>
+     * <li><p>application/json</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -29,7 +31,7 @@ public class UpdatePageRequest extends TeaModel {
     public String contentType;
 
     /**
-     * <p>The description of the custom error page.</p>
+     * <p>The description of the custom response page.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -39,7 +41,7 @@ public class UpdatePageRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>The ID of the custom error page, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850223.html">ListPages</a> operation.</p>
+     * <p>The ID of the custom response page. Retrieve this ID by calling the <a href="https://help.aliyun.com/document_detail/2850223.html">ListPages</a> API.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -49,7 +51,7 @@ public class UpdatePageRequest extends TeaModel {
     public Long id;
 
     /**
-     * <p>The name of the custom error page.</p>
+     * <p>The name of the custom response page.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -5,10 +5,12 @@ import com.aliyun.tea.*;
 
 public class SetHttpDDoSAttackIntelligentProtectionRequest extends TeaModel {
     /**
-     * <p>The mode of smart HTTP DDoS protection. Valid values:</p>
+     * <p>The mode for the intelligent HTTP DDoS protection feature. Valid values:</p>
      * <ul>
-     * <li><strong>observe</strong>: alert.</li>
-     * <li><strong>defense</strong>: block.</li>
+     * <li><p><strong>observe</strong>: The system generates warnings for attack traffic but does not block it.</p>
+     * </li>
+     * <li><p><strong>defense</strong>: The system blocks detected attack traffic.</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -19,12 +21,16 @@ public class SetHttpDDoSAttackIntelligentProtectionRequest extends TeaModel {
     public String aiMode;
 
     /**
-     * <p>The level of smart HTTP DDoS protection. Valid values:</p>
+     * <p>The sensitivity level for the intelligent HTTP DDoS protection feature. Valid values:</p>
      * <ul>
-     * <li><strong>level0</strong>: very loose.</li>
-     * <li><strong>level30</strong>: loose.</li>
-     * <li><strong>level60</strong>: normal.</li>
-     * <li><strong>level90</strong>: strict.</li>
+     * <li><p><strong>level0</strong>: very loose</p>
+     * </li>
+     * <li><p><strong>level30</strong>: loose</p>
+     * </li>
+     * <li><p><strong>level60</strong>: normal</p>
+     * </li>
+     * <li><p><strong>level90</strong>: strict</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -35,7 +41,7 @@ public class SetHttpDDoSAttackIntelligentProtectionRequest extends TeaModel {
     public String aiTemplate;
 
     /**
-     * <p>The website ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation.</p>
+     * <p>The ID of the site. You can obtain the site ID by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

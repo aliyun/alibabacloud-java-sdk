@@ -7,8 +7,10 @@ public class CreateUserDeliveryTaskResponseBody extends TeaModel {
     /**
      * <p>The data center. Valid values:</p>
      * <ul>
-     * <li>cn: the Chinese mainland.</li>
-     * <li>sg: outside the Chinese mainland.</li>
+     * <li><p><strong>cn</strong>: Chinese mainland.</p>
+     * </li>
+     * <li><p><strong>sg</strong>: Global (excluding Chinese mainland).</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,7 +20,7 @@ public class CreateUserDeliveryTaskResponseBody extends TeaModel {
     public String dataCenter;
 
     /**
-     * <p>The request ID.</p>
+     * <p>A unique identifier for the request.</p>
      * 
      * <strong>example:</strong>
      * <p>2CCD40B1-3F20-5FF0-8A67-E3F34B87744F</p>
@@ -27,7 +29,7 @@ public class CreateUserDeliveryTaskResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The status of the delivery task.</p>
+     * <p>The current status of the task.</p>
      * 
      * <strong>example:</strong>
      * <p>online</p>
@@ -36,7 +38,7 @@ public class CreateUserDeliveryTaskResponseBody extends TeaModel {
     public String status;
 
     /**
-     * <p>The name of the delivery task.</p>
+     * <p>The name of the task.</p>
      * 
      * <strong>example:</strong>
      * <p>er-http</p>

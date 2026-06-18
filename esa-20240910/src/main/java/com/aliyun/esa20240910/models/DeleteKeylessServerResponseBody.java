@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteKeylessServerResponseBody extends TeaModel {
     /**
-     * <p>Keyless server ID。</p>
+     * <p>The keyless server ID.</p>
      * 
      * <strong>example:</strong>
      * <p>baba39055622c008b90285a8838e****</p>
@@ -14,6 +14,8 @@ public class DeleteKeylessServerResponseBody extends TeaModel {
     public String id;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>F61CDR30-E83C-4FDA-BF73-9A94CDD44229</p>
      */
@@ -21,6 +23,8 @@ public class DeleteKeylessServerResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The site ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>123456****</p>
      */
@@ -28,6 +32,8 @@ public class DeleteKeylessServerResponseBody extends TeaModel {
     public Long siteId;
 
     /**
+     * <p>The site name.</p>
+     * 
      * <strong>example:</strong>
      * <p>example.com</p>
      */

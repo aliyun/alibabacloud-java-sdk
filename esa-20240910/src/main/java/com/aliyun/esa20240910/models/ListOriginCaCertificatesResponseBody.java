@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListOriginCaCertificatesResponseBody extends TeaModel {
     /**
-     * <p>Page number, default is 1 if not provided.</p>
+     * <p>The current page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -32,13 +32,13 @@ public class ListOriginCaCertificatesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Details of the certificates.</p>
+     * <p>An array of certificate objects that match the query.</p>
      */
     @NameInMap("Result")
     public java.util.List<ListOriginCaCertificatesResponseBodyResult> result;
 
     /**
-     * <p>The website ID.</p>
+     * <p>The site ID.</p>
      * 
      * <strong>example:</strong>
      * <p>123456789****</p>
@@ -47,7 +47,7 @@ public class ListOriginCaCertificatesResponseBody extends TeaModel {
     public Long siteId;
 
     /**
-     * <p>The website name.</p>
+     * <p>The site name.</p>
      * 
      * <strong>example:</strong>
      * <p>example.com</p>
@@ -56,7 +56,7 @@ public class ListOriginCaCertificatesResponseBody extends TeaModel {
     public String siteName;
 
     /**
-     * <p>The total number of entries.</p>
+     * <p>The total number of certificates that match the query.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -127,7 +127,7 @@ public class ListOriginCaCertificatesResponseBody extends TeaModel {
 
     public static class ListOriginCaCertificatesResponseBodyResult extends TeaModel {
         /**
-         * <p>The Common Name of the certificate.</p>
+         * <p>The common name of the certificate.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="http://www.example.com">www.example.com</a></p>
@@ -163,7 +163,7 @@ public class ListOriginCaCertificatesResponseBody extends TeaModel {
         public String id;
 
         /**
-         * <p>The certificate authority (CA) that issued the certificate.</p>
+         * <p>The issuer of the certificate.</p>
          * 
          * <strong>example:</strong>
          * <p>GlobalSign nv-sa</p>
@@ -181,7 +181,7 @@ public class ListOriginCaCertificatesResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The time when the certificate expires.</p>
+         * <p>The expiration date of the certificate.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-03-31 02:08:00</p>
@@ -190,7 +190,7 @@ public class ListOriginCaCertificatesResponseBody extends TeaModel {
         public String notAfter;
 
         /**
-         * <p>The time when the certificate takes effect.</p>
+         * <p>The validity start date of the certificate.</p>
          * 
          * <strong>example:</strong>
          * <p>2023-11-26T16:00:00Z</p>
@@ -199,7 +199,7 @@ public class ListOriginCaCertificatesResponseBody extends TeaModel {
         public String notBefore;
 
         /**
-         * <p>The public-key algorithm of the certificate.</p>
+         * <p>The public key algorithm of the certificate.</p>
          * 
          * <strong>example:</strong>
          * <p>RSA</p>
@@ -245,9 +245,6 @@ public class ListOriginCaCertificatesResponseBody extends TeaModel {
 
         /**
          * <p>The certificate type.</p>
-         * <ul>
-         * <li>upload: custom certificate that you upload</li>
-         * </ul>
          * 
          * <strong>example:</strong>
          * <p>upload</p>
@@ -256,7 +253,7 @@ public class ListOriginCaCertificatesResponseBody extends TeaModel {
         public String type;
 
         /**
-         * <p>The time when the certificate was updated.</p>
+         * <p>The time when the certificate was last updated.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-07-20 06:18:42</p>

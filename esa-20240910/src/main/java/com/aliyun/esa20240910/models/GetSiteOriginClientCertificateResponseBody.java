@@ -14,7 +14,7 @@ public class GetSiteOriginClientCertificateResponseBody extends TeaModel {
     public String certificate;
 
     /**
-     * <p>Request ID.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>34DCBC8A-<strong><strong>-</strong></strong>-****-6DAA11D7DDBD</p>
@@ -23,13 +23,13 @@ public class GetSiteOriginClientCertificateResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The certificate information.</p>
+     * <p>The certificate details.</p>
      */
     @NameInMap("Result")
     public GetSiteOriginClientCertificateResponseBodyResult result;
 
     /**
-     * <p>The website ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation.</p>
+     * <p>The site ID.</p>
      * 
      * <strong>example:</strong>
      * <p>123456789****</p>
@@ -38,7 +38,7 @@ public class GetSiteOriginClientCertificateResponseBody extends TeaModel {
     public Long siteId;
 
     /**
-     * <p>The website name.</p>
+     * <p>The site name.</p>
      * 
      * <strong>example:</strong>
      * <p>example.com</p>
@@ -47,7 +47,7 @@ public class GetSiteOriginClientCertificateResponseBody extends TeaModel {
     public String siteName;
 
     /**
-     * <p>The status of the certificate.</p>
+     * <p>The certificate status.</p>
      * 
      * <strong>example:</strong>
      * <p>OK</p>
@@ -110,7 +110,7 @@ public class GetSiteOriginClientCertificateResponseBody extends TeaModel {
 
     public static class GetSiteOriginClientCertificateResponseBodyResult extends TeaModel {
         /**
-         * <p>The Common Name of the certificate.</p>
+         * <p>The common name of the certificate.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="http://www.example.com">www.example.com</a></p>
@@ -119,7 +119,7 @@ public class GetSiteOriginClientCertificateResponseBody extends TeaModel {
         public String commonName;
 
         /**
-         * <p>The time when the certificate was created.</p>
+         * <p>The time when the certificate record was created.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-06-24 07:48:51</p>
@@ -146,7 +146,7 @@ public class GetSiteOriginClientCertificateResponseBody extends TeaModel {
         public String id;
 
         /**
-         * <p>The certificate authority (CA) that issued the certificate.</p>
+         * <p>The issuer of the certificate.</p>
          * 
          * <strong>example:</strong>
          * <p>DigiCert</p>
@@ -164,7 +164,7 @@ public class GetSiteOriginClientCertificateResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The time when the certificate expires.</p>
+         * <p>The time after which the certificate is not valid.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-03-31 02:08:00</p>
@@ -173,7 +173,7 @@ public class GetSiteOriginClientCertificateResponseBody extends TeaModel {
         public String notAfter;
 
         /**
-         * <p>The time when the certificate takes effect.</p>
+         * <p>The time before which the certificate is not valid.</p>
          * 
          * <strong>example:</strong>
          * <p>2023-03-31 02:08:00</p>
@@ -182,7 +182,7 @@ public class GetSiteOriginClientCertificateResponseBody extends TeaModel {
         public String notBefore;
 
         /**
-         * <p>The public-key algorithm of the certificate.</p>
+         * <p>The public key algorithm of the certificate.</p>
          * 
          * <strong>example:</strong>
          * <p>RSA</p>
@@ -191,7 +191,7 @@ public class GetSiteOriginClientCertificateResponseBody extends TeaModel {
         public String pubkeyAlgorithm;
 
         /**
-         * <p>The Subject Alternative Name (SAN) of the certificate.</p>
+         * <p>The subject alternative name (SAN) of the certificate.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="http://www.example.com,*.example.com">www.example.com,*.example.com</a></p>
@@ -218,7 +218,7 @@ public class GetSiteOriginClientCertificateResponseBody extends TeaModel {
         public String signatureAlgorithm;
 
         /**
-         * <p>The status of the certificate.</p>
+         * <p>The certificate status.</p>
          * 
          * <strong>example:</strong>
          * <p>OK</p>
@@ -236,7 +236,7 @@ public class GetSiteOriginClientCertificateResponseBody extends TeaModel {
         public String type;
 
         /**
-         * <p>The time when the certificate was updated.</p>
+         * <p>The time when the certificate record was last updated.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-07-20 06:18:42</p>

@@ -61,6 +61,9 @@ public class FieldContentValue extends TeaModel {
 
         /**
          * <p>The description of the field in Chinese.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>客户端的IP地址</p>
          */
         @NameInMap("DescriptionCn")
         public String descriptionCn;

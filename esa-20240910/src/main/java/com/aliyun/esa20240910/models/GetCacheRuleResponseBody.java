@@ -5,20 +5,30 @@ import com.aliyun.tea.*;
 
 public class GetCacheRuleResponseBody extends TeaModel {
     /**
-     * <p>Enable caching on the specified ports. Value range: 8880, 2052, 2082, 2086, 2095, 2053, 2083, 2087, 2096.</p>
+     * <ul>
+     * <li><p>Additional ports on which caching is enabled.</p>
+     * </li>
+     * <li><p>Valid values: <code>8880</code>, <code>2052</code>, <code>2082</code>, <code>2086</code>, <code>2095</code>, <code>2053</code>, <code>2083</code>, <code>2087</code>, <code>2096</code>.</p>
+     * </li>
+     * <li><p>Separate multiple ports with commas.</p>
+     * </li>
+     * </ul>
      * 
      * <strong>example:</strong>
-     * <p>2095</p>
+     * <p>8880,2052,2086</p>
      */
     @NameInMap("AdditionalCacheablePorts")
     public String additionalCacheablePorts;
 
     /**
-     * <p>Browser cache mode. Value range:</p>
+     * <p>The browser cache mode. Valid values:</p>
      * <ul>
-     * <li>no_cache: Do not cache.</li>
-     * <li>follow_origin: Follow origin cache policy.</li>
-     * <li>override_origin: Override origin cache policy.</li>
+     * <li><p><code>no_cache</code>: Does not cache content.</p>
+     * </li>
+     * <li><p><code>follow_origin</code>: Follows the origin cache policy.</p>
+     * </li>
+     * <li><p><code>override_origin</code>: Overrides the origin cache policy.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -28,7 +38,7 @@ public class GetCacheRuleResponseBody extends TeaModel {
     public String browserCacheMode;
 
     /**
-     * <p>Browser cache expiration time, in seconds.</p>
+     * <p>The browser cache TTL, in seconds.</p>
      * 
      * <strong>example:</strong>
      * <p>300</p>
@@ -37,10 +47,12 @@ public class GetCacheRuleResponseBody extends TeaModel {
     public String browserCacheTtl;
 
     /**
-     * <p>Set bypass cache mode. Value range:</p>
+     * <p>Specifies whether to cache requests or bypass the cache. Valid values:</p>
      * <ul>
-     * <li>cache_all: Cache all requests.</li>
-     * <li>bypass_all: Bypass cache for all requests.</li>
+     * <li><p><code>cache_all</code>: Caches all requests.</p>
+     * </li>
+     * <li><p><code>bypass_all</code>: Bypasses the cache for all requests.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -50,10 +62,12 @@ public class GetCacheRuleResponseBody extends TeaModel {
     public String bypassCache;
 
     /**
-     * <p>Cache deception defense. Used to defend against web cache deception attacks. Only the verified cache content will be cached. Value range:</p>
+     * <p>Specifies whether to enable Cache Deception Armor. This feature helps mitigate web cache deception attacks by ensuring that only validated content is cached. Valid values:</p>
      * <ul>
-     * <li>on: Enabled.</li>
-     * <li>off: Disabled.</li>
+     * <li><p><code>on</code>: Enabled.</p>
+     * </li>
+     * <li><p><code>off</code>: Disabled.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -63,10 +77,12 @@ public class GetCacheRuleResponseBody extends TeaModel {
     public String cacheDeceptionArmor;
 
     /**
-     * <p>Cache reserve eligibility. Used to control whether user requests bypass the cache reserve node when returning to the origin. Value range:</p>
+     * <p>The eligibility for cache reserve. This controls whether a request bypasses the cache reserve node during an origin fetch. Valid values:</p>
      * <ul>
-     * <li>bypass_cache_reserve: Requests bypass the cache reserve.</li>
-     * <li>eligible_for_cache_reserve: Eligible for cache reserve.</li>
+     * <li><p><code>bypass_cache_reserve</code>: The request bypasses the cache reserve.</p>
+     * </li>
+     * <li><p><code>eligible_for_cache_reserve</code>: The request is eligible for cache reserve.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -76,25 +92,41 @@ public class GetCacheRuleResponseBody extends TeaModel {
     public String cacheReserveEligibility;
 
     /**
-     * <p>When generating the cache key, check if the cookie exists. If it does, add the cookie name (cookie names are case-insensitive) to the cache key. Supports multiple cookie names, separated by spaces.</p>
+     * <p>Specifies cookies whose presence is checked when generating a cache key. If a specified cookie exists in the request, its name (case-insensitive) is added to the cache key. Separate multiple cookie names with spaces. Cookie names can contain the following characters:</p>
+     * <ul>
+     * <li><p>Symbols: ! # $ % &amp; \&quot; \* + - . ^ _ | \~</p>
+     * </li>
+     * <li><p>Digits: 0-9</p>
+     * </li>
+     * <li><p>Letters: lowercase English letters a-z</p>
+     * </li>
+     * </ul>
      * 
      * <strong>example:</strong>
-     * <p>cookiename</p>
+     * <p>cookiename1 cookiename2</p>
      */
     @NameInMap("CheckPresenceCookie")
     public String checkPresenceCookie;
 
     /**
-     * <p>When generating the cache key, check if the header exists. If it does, add the header name (header names are case-insensitive) to the cache key. Supports multiple header names, separated by spaces.</p>
+     * <p>Specifies headers whose presence is checked when generating a cache key. If a specified header exists in the request, its name (case-insensitive) is added to the cache key. Separate multiple header names with spaces. Header names can contain the following characters:</p>
+     * <ul>
+     * <li><p>Symbols: ! # $ % &amp; \&quot; \* + - . ^ _ | \~</p>
+     * </li>
+     * <li><p>Digits: 0-9</p>
+     * </li>
+     * <li><p>Letters: lowercase English letters a-z</p>
+     * </li>
+     * </ul>
      * 
      * <strong>example:</strong>
-     * <p>headername</p>
+     * <p>headername1 headername2</p>
      */
     @NameInMap("CheckPresenceHeader")
     public String checkPresenceHeader;
 
     /**
-     * <p>Configuration ID.</p>
+     * <p>The configuration ID.</p>
      * 
      * <strong>example:</strong>
      * <p>352816096987136</p>
@@ -103,10 +135,12 @@ public class GetCacheRuleResponseBody extends TeaModel {
     public Long configId;
 
     /**
-     * <p>Configuration type, which can be used to query global or rule configurations. Value range:</p>
+     * <p>Indicates whether the response contains a global or a rule configuration. Valid values:</p>
      * <ul>
-     * <li>global: Query global configuration;</li>
-     * <li>rule: Query rule configuration;</li>
+     * <li><p><code>global</code>: A global configuration.</p>
+     * </li>
+     * <li><p><code>rule</code>: A rule configuration.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -116,12 +150,18 @@ public class GetCacheRuleResponseBody extends TeaModel {
     public String configType;
 
     /**
-     * <p>Edge cache mode. Value range:</p>
+     * <p>The edge cache mode. Valid values:</p>
      * <ul>
-     * <li>follow_origin: Follow origin cache policy (if exists), otherwise use the default cache policy.</li>
-     * <li>no_cache: Do not cache.</li>
-     * <li>override_origin: Override origin cache policy.</li>
-     * <li>follow_origin_bypass: Follow origin cache policy (if exists), otherwise do not cache.</li>
+     * <li><p><code>follow_origin</code>: Uses the origin server\&quot;s cache policy. If none is provided, the default policy applies.</p>
+     * </li>
+     * <li><p><code>no_cache</code>: Does not cache content.</p>
+     * </li>
+     * <li><p><code>override_origin</code>: Overrides the origin cache policy.</p>
+     * </li>
+     * <li><p><code>follow_origin_bypass</code>: Uses the origin server\&quot;s cache policy. If none is provided, content is not cached.</p>
+     * </li>
+     * <li><p><code>follow_origin_override</code>: Uses the origin server\&quot;s cache policy. If none is provided, a custom cache TTL applies.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -131,7 +171,7 @@ public class GetCacheRuleResponseBody extends TeaModel {
     public String edgeCacheMode;
 
     /**
-     * <p>Edge cache expiration time, in seconds.</p>
+     * <p>The edge cache TTL, in seconds.</p>
      * 
      * <strong>example:</strong>
      * <p>300</p>
@@ -140,43 +180,83 @@ public class GetCacheRuleResponseBody extends TeaModel {
     public String edgeCacheTtl;
 
     /**
-     * <p>Status code cache expiration time, in seconds.</p>
+     * <p>The status code cache TTL, in seconds.</p>
+     * <ul>
+     * <li><p>Set the cache TTL for a specific status code. For example, <code>404=10</code> specifies that responses with a 404 status code are cached for 10 seconds.</p>
+     * </li>
+     * <li><p>Set the cache TTL for status code classes, such as 4xx and 5xx. For example, <code>4xx=10</code> specifies that all responses with a 4xx status code are cached for 10 seconds.</p>
+     * </li>
+     * <li><p>Separate multiple entries with commas.</p>
+     * </li>
+     * </ul>
      * 
      * <strong>example:</strong>
-     * <p>300</p>
+     * <p>5xx=0,404=10</p>
      */
     @NameInMap("EdgeStatusCodeCacheTtl")
     public String edgeStatusCodeCacheTtl;
 
     /**
-     * <p>When generating the cache key, include the specified cookie names and their values. Supports multiple values, separated by spaces.</p>
+     * <p>Specifies the cookies to include in the cache key. Both the cookie names (case-insensitive) and their values are added to the key. Separate multiple cookie names with spaces. Cookie names can contain the following characters:</p>
+     * <ul>
+     * <li><p>Symbols: ! # $ % &amp; \&quot; \* + - . ^ _ | \~</p>
+     * </li>
+     * <li><p>Digits: 0-9</p>
+     * </li>
+     * <li><p>Letters: lowercase English letters a-z</p>
+     * </li>
+     * </ul>
      * 
      * <strong>example:</strong>
-     * <p>cookie_exapmle</p>
+     * <p>cookiename1 cookiename2</p>
      */
     @NameInMap("IncludeCookie")
     public String includeCookie;
 
     /**
-     * <p>When generating the cache key, include the specified header names and their values. Supports multiple values, separated by spaces.</p>
+     * <p>Specifies the headers to include in the cache key. Both the header names (case-insensitive) and their values are added to the key. Separate multiple header names with spaces. Header names can contain the following characters:</p>
+     * <ul>
+     * <li><p>Symbols: ! # $ % &amp; \&quot; \* + - . ^ _ | \~</p>
+     * </li>
+     * <li><p>Digits: 0-9</p>
+     * </li>
+     * <li><p>Letters: lowercase English letters a-z</p>
+     * </li>
+     * </ul>
      * 
      * <strong>example:</strong>
-     * <p>example</p>
+     * <p>headername1 headername2</p>
      */
     @NameInMap("IncludeHeader")
     public String includeHeader;
 
     /**
+     * <p>The mode for handling the body content when generating a cache key for POST requests. Valid values:</p>
+     * <ul>
+     * <li><p><code>md5</code>: Calculates the MD5 hash of the body content and adds the hash to the cache key.</p>
+     * </li>
+     * <li><p><code>ignore</code>: Ignores the body content in the cache key.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>ignore</p>
      */
     @NameInMap("PostBodyCacheKey")
     public String postBodyCacheKey;
 
+    /**
+     * <p>The size limit (in KB) of the body content for POST caching. The value is an integer from 1 to 8. A null or empty value defaults to 8 KB.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PostBodySizeLimit")
     public String postBodySizeLimit;
 
     /**
+     * <p>Specifies whether to enable the POST cache feature.</p>
+     * 
      * <strong>example:</strong>
      * <p>on</p>
      */
@@ -184,7 +264,7 @@ public class GetCacheRuleResponseBody extends TeaModel {
     public String postCache;
 
     /**
-     * <p>The query strings to be retained or deleted, supporting multiple values separated by spaces.</p>
+     * <p>Specifies the query strings to include in or exclude from the cache key. Separate multiple query strings with spaces.</p>
      * 
      * <strong>example:</strong>
      * <p>example</p>
@@ -193,12 +273,16 @@ public class GetCacheRuleResponseBody extends TeaModel {
     public String queryString;
 
     /**
-     * <p>The processing mode for query strings when generating cache keys. Value range:</p>
+     * <p>The mode for handling query strings when generating a cache key. Valid values:</p>
      * <ul>
-     * <li>ignore_all: Ignore all.</li>
-     * <li>exclude_query_string: Exclude specified query strings.</li>
-     * <li>reserve_all: Default, reserve all.</li>
-     * <li>include_query_string: Include specified query strings.</li>
+     * <li><p><code>ignore_all</code>: Ignores all query strings.</p>
+     * </li>
+     * <li><p><code>exclude_query_string</code>: Excludes specified query strings.</p>
+     * </li>
+     * <li><p><code>reserve_all</code>: Retains all query strings. This is the default value.</p>
+     * </li>
+     * <li><p><code>include_query_string</code>: Includes specified query strings.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -208,7 +292,7 @@ public class GetCacheRuleResponseBody extends TeaModel {
     public String queryStringMode;
 
     /**
-     * <p>Request ID.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>36af3fcc-43d0-441c-86b1-428951dc8225</p>
@@ -217,10 +301,12 @@ public class GetCacheRuleResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Rule content, using conditional expressions to match user requests. This parameter does not need to be set when adding a global configuration. There are two usage scenarios:</p>
+     * <p>The rule content, which is a conditional expression used to match user requests. This parameter applies only to rule configurations.</p>
      * <ul>
-     * <li>Match all incoming requests: Set the value to true</li>
-     * <li>Match specific requests: Set the value to a custom expression, for example: (http.host eq \&quot;video.example.com\&quot;)</li>
+     * <li><p>To match all incoming requests, use <code>true</code>.</p>
+     * </li>
+     * <li><p>To match specific requests, use a custom expression, such as <code>(http.host eq &quot;video.example.com&quot;)</code>.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -230,10 +316,12 @@ public class GetCacheRuleResponseBody extends TeaModel {
     public String rule;
 
     /**
-     * <p>Rule switch. This parameter does not need to be set when adding a global configuration. Value range:</p>
+     * <p>Specifies whether the rule is enabled. This parameter applies only to rule configurations. Valid values:</p>
      * <ul>
-     * <li>on: Enable.</li>
-     * <li>off: Disable.</li>
+     * <li><p><code>on</code>: Enabled.</p>
+     * </li>
+     * <li><p><code>off</code>: Disabled.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -243,7 +331,7 @@ public class GetCacheRuleResponseBody extends TeaModel {
     public String ruleEnable;
 
     /**
-     * <p>Rule name. This parameter does not need to be set when adding a global configuration.</p>
+     * <p>The name of the rule. This parameter applies only to rule configurations.</p>
      * 
      * <strong>example:</strong>
      * <p>rule_example</p>
@@ -252,7 +340,7 @@ public class GetCacheRuleResponseBody extends TeaModel {
     public String ruleName;
 
     /**
-     * <p>Rule execution order. The smaller the value, the higher the priority.</p>
+     * <p>The rule execution order. A smaller value indicates a higher priority.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -261,10 +349,12 @@ public class GetCacheRuleResponseBody extends TeaModel {
     public Integer sequence;
 
     /**
-     * <p>Serve stale cache. When enabled, the node can still use the cached expired files to respond to user requests even if the origin server is unavailable. Value range:</p>
+     * <p>Specifies whether to serve stale content. If enabled, edge nodes serve stale (expired) content from the cache when the origin server is unavailable. Valid values:</p>
      * <ul>
-     * <li>on: Enabled.</li>
-     * <li>off: Disabled.</li>
+     * <li><p><code>on</code>: Enabled.</p>
+     * </li>
+     * <li><p><code>off</code>: Disabled.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -274,7 +364,7 @@ public class GetCacheRuleResponseBody extends TeaModel {
     public String serveStale;
 
     /**
-     * <p>Version number of the site configuration. For sites with version management enabled, you can use this parameter to specify the effective version of the configuration, defaulting to version 0.</p>
+     * <p>The version number of the site configuration. For sites with version management enabled, this indicates the configuration version. The default is 0.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -283,10 +373,12 @@ public class GetCacheRuleResponseBody extends TeaModel {
     public Integer siteVersion;
 
     /**
-     * <p>Query string sorting. Value range:</p>
+     * <p>Specifies whether to sort query strings before generating the cache key. Valid values:</p>
      * <ul>
-     * <li>on: Enable.</li>
-     * <li>off: Disable.</li>
+     * <li><p><code>on</code>: Enabled.</p>
+     * </li>
+     * <li><p><code>off</code>: Disabled.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -296,10 +388,12 @@ public class GetCacheRuleResponseBody extends TeaModel {
     public String sortQueryStringForCache;
 
     /**
-     * <p>When generating the cache key, include the client device type. Value range:</p>
+     * <p>Specifies whether to include the client\&quot;s device type in the cache key. Valid values:</p>
      * <ul>
-     * <li>on: Enabled.</li>
-     * <li>off: Disabled.</li>
+     * <li><p><code>on</code>: Enabled.</p>
+     * </li>
+     * <li><p><code>off</code>: Disabled.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -309,10 +403,12 @@ public class GetCacheRuleResponseBody extends TeaModel {
     public String userDeviceType;
 
     /**
-     * <p>When generating the cache key, include the client\&quot;s geographic location. Value range:</p>
+     * <p>Specifies whether to include the client\&quot;s geographic location in the cache key. Valid values:</p>
      * <ul>
-     * <li>on: Enabled.</li>
-     * <li>off: Disabled.</li>
+     * <li><p><code>on</code>: Enabled.</p>
+     * </li>
+     * <li><p><code>off</code>: Disabled.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -322,10 +418,12 @@ public class GetCacheRuleResponseBody extends TeaModel {
     public String userGeo;
 
     /**
-     * <p>When generating the cache key, include the client\&quot;s language type. Value range:</p>
+     * <p>Specifies whether to include the client\&quot;s language in the cache key. Valid values:</p>
      * <ul>
-     * <li>on: Enabled.</li>
-     * <li>off: Disabled.</li>
+     * <li><p><code>on</code>: Enabled.</p>
+     * </li>
+     * <li><p><code>off</code>: Disabled.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

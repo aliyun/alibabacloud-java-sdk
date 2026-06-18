@@ -22,6 +22,9 @@ public class ListPagesShrinkRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The query filters, specified as a JSON object.</p>
+     */
     @NameInMap("QueryArgs")
     public String queryArgsShrink;
 

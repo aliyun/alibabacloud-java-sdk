@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListUserWafRulesetsResponseBody extends TeaModel {
     /**
+     * <p>The instance usage.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -12,6 +14,8 @@ public class ListUserWafRulesetsResponseBody extends TeaModel {
     public Long instanceUsage;
 
     /**
+     * <p>The page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -19,6 +23,8 @@ public class ListUserWafRulesetsResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries returned per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -26,7 +32,7 @@ public class ListUserWafRulesetsResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>36af3fcc-43d0-441c-86b1-428951dc8225</p>
@@ -34,10 +40,15 @@ public class ListUserWafRulesetsResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>A list of WAF ruleset objects.</p>
+     */
     @NameInMap("Rulesets")
     public java.util.List<ListUserWafRulesetsResponseBodyRulesets> rulesets;
 
     /**
+     * <p>The total number of records after filtering.</p>
+     * 
      * <strong>example:</strong>
      * <p>5</p>
      */
@@ -99,6 +110,8 @@ public class ListUserWafRulesetsResponseBody extends TeaModel {
 
     public static class ListUserWafRulesetsResponseBodyRulesets extends TeaModel {
         /**
+         * <p>The WAF ruleset description.</p>
+         * 
          * <strong>example:</strong>
          * <p>example</p>
          */
@@ -106,6 +119,8 @@ public class ListUserWafRulesetsResponseBody extends TeaModel {
         public String description;
 
         /**
+         * <p>The WAF ruleset ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>10000001</p>
          */
@@ -113,6 +128,8 @@ public class ListUserWafRulesetsResponseBody extends TeaModel {
         public Long id;
 
         /**
+         * <p>The WAF ruleset name.</p>
+         * 
          * <strong>example:</strong>
          * <p>example</p>
          */
@@ -120,6 +137,26 @@ public class ListUserWafRulesetsResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>The WAF rule execution phase. Possible values:</p>
+         * <ul>
+         * <li><p><code>http_whitelist</code>: Whitelist rule</p>
+         * </li>
+         * <li><p><code>http_custom</code>: Custom rule</p>
+         * </li>
+         * <li><p><code>http_managed</code>: Managed rule</p>
+         * </li>
+         * <li><p><code>http_anti_scan</code>: Scan protection rule</p>
+         * </li>
+         * <li><p><code>http_ratelimit</code>: Rate limit rule</p>
+         * </li>
+         * <li><p><code>ip_access_rule</code>: IP access rule</p>
+         * </li>
+         * <li><p><code>http_bot</code>: Bot rule</p>
+         * </li>
+         * <li><p><code>http_security_level_rule</code>: Security rule</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>http_custom</p>
          */
@@ -127,6 +164,8 @@ public class ListUserWafRulesetsResponseBody extends TeaModel {
         public String phase;
 
         /**
+         * <p>The WAF ruleset position.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -134,6 +173,8 @@ public class ListUserWafRulesetsResponseBody extends TeaModel {
         public Long position;
 
         /**
+         * <p>The WAF ruleset status.</p>
+         * 
          * <strong>example:</strong>
          * <p>on</p>
          */

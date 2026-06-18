@@ -7,11 +7,16 @@ public class CheckSiteNameResponseBody extends TeaModel {
     /**
      * <p>The description of the verification result. Valid values:</p>
      * <ul>
-     * <li><strong>success</strong>: The verification is successful.</li>
-     * <li><strong>Site.AlreadyExist</strong>: The website domain name has already been added.</li>
-     * <li><strong>Site.InvalidName</strong>: Invalid website domain name.</li>
-     * <li><strong>Site.SubSiteUnavailable</strong>: Subdomains are not allowed.</li>
-     * <li><strong>Site.InternalError</strong>: An internal error occurs.</li>
+     * <li><p><strong>success</strong>: The verification is successful.</p>
+     * </li>
+     * <li><p><strong>Site.AlreadyExist</strong>: The website domain name has already been added.</p>
+     * </li>
+     * <li><p><strong>Site.InvalidName</strong>: Invalid website domain name.</p>
+     * </li>
+     * <li><p><strong>Site.SubSiteUnavailable</strong>: Subdomains are not allowed.</p>
+     * </li>
+     * <li><p><strong>Site.InternalError</strong>: An internal error occurs.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -23,8 +28,10 @@ public class CheckSiteNameResponseBody extends TeaModel {
     /**
      * <p>Indicates whether a subdomain is specified. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong></li>
-     * <li><strong>false</strong></li>
+     * <li><p><strong>true</strong></p>
+     * </li>
+     * <li><p><strong>false</strong></p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -35,6 +42,9 @@ public class CheckSiteNameResponseBody extends TeaModel {
 
     /**
      * <p>The verification message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Site name is available.</p>
      */
     @NameInMap("Messeage")
     public String messeage;
@@ -42,8 +52,10 @@ public class CheckSiteNameResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the verification passed.</p>
      * <ul>
-     * <li><strong>true</strong></li>
-     * <li><strong>false</strong></li>
+     * <li><p><strong>true</strong></p>
+     * </li>
+     * <li><p><strong>false</strong></p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

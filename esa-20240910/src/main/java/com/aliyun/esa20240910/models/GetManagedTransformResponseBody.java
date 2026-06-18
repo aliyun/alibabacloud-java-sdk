@@ -5,10 +5,12 @@ import com.aliyun.tea.*;
 
 public class GetManagedTransformResponseBody extends TeaModel {
     /**
-     * <p>Add visitor geolocation header. Value range:</p>
+     * <p>Indicates whether a header that contains the visitor\&quot;s geolocation is added. Valid values:</p>
      * <ul>
-     * <li>on: Enable.</li>
-     * <li>off: Disable.</li>
+     * <li><p>on: Enables this feature.</p>
+     * </li>
+     * <li><p>off: Disables this feature.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,10 +20,12 @@ public class GetManagedTransformResponseBody extends TeaModel {
     public String addClientGeolocationHeader;
 
     /**
-     * <p>Add the &quot;ali-real-client-ip&quot; header containing the real client IP. Value range:</p>
+     * <p>Indicates whether the &quot;ali-real-client-ip&quot; header is added to include the real client IP. Valid values:</p>
      * <ul>
-     * <li>on: Enable.</li>
-     * <li>off: Disable.</li>
+     * <li><p>on: Enables this feature.</p>
+     * </li>
+     * <li><p>off: Disables this feature.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -30,11 +34,17 @@ public class GetManagedTransformResponseBody extends TeaModel {
     @NameInMap("AddRealClientIpHeader")
     public String addRealClientIpHeader;
 
+    /**
+     * <p>The real client IP header name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test-header</p>
+     */
     @NameInMap("RealClientIpHeaderName")
     public String realClientIpHeaderName;
 
     /**
-     * <p>Request ID.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>04F0F334-1335-436C-A1D7-6C044FE73368</p>
@@ -43,7 +53,7 @@ public class GetManagedTransformResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The version number of the site. For sites with version management enabled, this parameter can be used to specify the site version for which the configuration takes effect, defaulting to version 0.</p>
+     * <p>The version of the site for which the configuration is returned.</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>

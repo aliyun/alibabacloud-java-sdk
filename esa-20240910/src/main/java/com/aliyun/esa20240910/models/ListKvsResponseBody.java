@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListKvsResponseBody extends TeaModel {
     /**
-     * <p>The key-value pairs.</p>
+     * <p>The list of key-value pairs returned by this traversal.</p>
      */
     @NameInMap("Keys")
     public java.util.List<ListKvsResponseBodyKeys> keys;
 
     /**
-     * <p>The total number of pages returned.</p>
+     * <p>The total number of pages.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>
@@ -20,7 +20,7 @@ public class ListKvsResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page.</p>
+     * <p>The number of records on each page.</p>
      * 
      * <strong>example:</strong>
      * <p>50</p>
@@ -38,7 +38,7 @@ public class ListKvsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of entries returned.</p>
+     * <p>The total number of records.</p>
      * 
      * <strong>example:</strong>
      * <p>1024</p>
@@ -93,7 +93,7 @@ public class ListKvsResponseBody extends TeaModel {
 
     public static class ListKvsResponseBodyKeys extends TeaModel {
         /**
-         * <p>The key name.</p>
+         * <p>The name of the key.</p>
          * 
          * <strong>example:</strong>
          * <p>Key1</p>

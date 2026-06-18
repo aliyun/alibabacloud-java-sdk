@@ -5,10 +5,12 @@ import com.aliyun.tea.*;
 
 public class GetRoutineRouteResponseBody extends TeaModel {
     /**
-     * <p>Bypass mode. Valid values:</p>
+     * <p>The bypass mode. Valid values:</p>
      * <ul>
-     * <li>on</li>
-     * <li>off</li>
+     * <li><p><code>on</code>: Enabled.</p>
+     * </li>
+     * <li><p><code>off</code>: Disabled.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -27,10 +29,12 @@ public class GetRoutineRouteResponseBody extends TeaModel {
     public Long configId;
 
     /**
-     * <p>The configuration type to query. Valid values:</p>
+     * <p>The configuration type. Valid values:</p>
      * <ul>
-     * <li>global: global configurations.</li>
-     * <li>rule: queries rule configurations.</li>
+     * <li><p><code>global</code>: Queries the global configuration.</p>
+     * </li>
+     * <li><p><code>rule</code>: Queries the rule configuration.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -40,10 +44,12 @@ public class GetRoutineRouteResponseBody extends TeaModel {
     public String configType;
 
     /**
-     * <p>The exception origin fetch switch. After you turn on this switch, if a function exception occurs, such as CPU usage exceeding the upper limit, requests are sent back to the origin. Valid values:</p>
+     * <p>Specifies whether to enable fallback to origin. If this feature is enabled, requests are sent to the origin server when the function encounters an exception, such as exceeding its CPU limit. Valid values:</p>
      * <ul>
-     * <li>on</li>
-     * <li>off</li>
+     * <li><p><code>on</code>: Enabled.</p>
+     * </li>
+     * <li><p><code>off</code>: Disabled.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -53,10 +59,12 @@ public class GetRoutineRouteResponseBody extends TeaModel {
     public String fallback;
 
     /**
-     * <p>The configuration mode. Valid values: Valid values:</p>
+     * <p>The configuration mode. Valid values:</p>
      * <ul>
-     * <li>simple</li>
-     * <li>custom</li>
+     * <li><p><code>simple</code>: simple mode.</p>
+     * </li>
+     * <li><p><code>custom</code>: custom mode.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -75,10 +83,12 @@ public class GetRoutineRouteResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The routing switch. Valid values:</p>
+     * <p>The route status. Valid values:</p>
      * <ul>
-     * <li>on</li>
-     * <li>off</li>
+     * <li><p><code>on</code>: Enabled.</p>
+     * </li>
+     * <li><p><code>off</code>: Disabled.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -97,7 +107,7 @@ public class GetRoutineRouteResponseBody extends TeaModel {
     public String routeName;
 
     /**
-     * <p>The function name.</p>
+     * <p>The name of the edge function routine.</p>
      * 
      * <strong>example:</strong>
      * <p>test-routine1</p>
@@ -106,7 +116,7 @@ public class GetRoutineRouteResponseBody extends TeaModel {
     public String routineName;
 
     /**
-     * <p>The rule content.</p>
+     * <p>The rule expression.</p>
      * 
      * <strong>example:</strong>
      * <p>(http.host eq \&quot;video.example.com\&quot;)</p>
@@ -115,7 +125,7 @@ public class GetRoutineRouteResponseBody extends TeaModel {
     public String rule;
 
     /**
-     * <p>The order in which the rule is executed.</p>
+     * <p>The rule execution order.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -124,7 +134,7 @@ public class GetRoutineRouteResponseBody extends TeaModel {
     public Integer sequence;
 
     /**
-     * <p>The version number of the website.</p>
+     * <p>The version number of the site.</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>

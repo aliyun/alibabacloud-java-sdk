@@ -25,10 +25,14 @@ public class ListEdgeRoutineRecordsRequest extends TeaModel {
     /**
      * <p>The match mode to filter the record names.</p>
      * <ul>
-     * <li><strong>fuzzy</strong>: fuzzy match.</li>
-     * <li><strong>prefix</strong>: match by prefix.</li>
-     * <li><strong>suffix</strong>: match by suffix.</li>
-     * <li><strong>exact</strong> (default): exact match .</li>
+     * <li><p><strong>fuzzy</strong>: fuzzy match.</p>
+     * </li>
+     * <li><p><strong>prefix</strong>: match by prefix.</p>
+     * </li>
+     * <li><p><strong>suffix</strong>: match by suffix.</p>
+     * </li>
+     * <li><p><strong>exact</strong> (default): exact match .</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

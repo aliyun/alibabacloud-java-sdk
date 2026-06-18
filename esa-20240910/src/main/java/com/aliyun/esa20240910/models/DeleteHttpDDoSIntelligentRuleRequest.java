@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteHttpDDoSIntelligentRuleRequest extends TeaModel {
     /**
-     * <p>Record name.</p>
+     * <p>The name of the record.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class DeleteHttpDDoSIntelligentRuleRequest extends TeaModel {
     public String recordName;
 
     /**
-     * <p>Rule ID.</p>
+     * <p>The ID of the rule.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,7 +25,7 @@ public class DeleteHttpDDoSIntelligentRuleRequest extends TeaModel {
     public Long ruleId;
 
     /**
-     * <p>Site ID, which can be obtained by calling the <a href="~~ListSites~~">ListSites</a> interface.</p>
+     * <p>The ID of the site. Call the <a href="~~ListSites~~">ListSites</a> operation to obtain the site ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

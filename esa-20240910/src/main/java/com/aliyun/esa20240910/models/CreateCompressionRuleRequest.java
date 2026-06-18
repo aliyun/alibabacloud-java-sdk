@@ -5,10 +5,12 @@ import com.aliyun.tea.*;
 
 public class CreateCompressionRuleRequest extends TeaModel {
     /**
-     * <p>Brotli compression. Value range:</p>
+     * <p>Specifies whether to enable Brotli compression. Valid values:</p>
      * <ul>
-     * <li>on: Enable.</li>
-     * <li>off: Disable.</li>
+     * <li><p><code>on</code>: Enables Brotli compression.</p>
+     * </li>
+     * <li><p><code>off</code>: Disables Brotli compression.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,10 +20,12 @@ public class CreateCompressionRuleRequest extends TeaModel {
     public String brotli;
 
     /**
-     * <p>Gzip compression. Value range:</p>
+     * <p>Specifies whether to enable Gzip compression. Valid values:</p>
      * <ul>
-     * <li>on: Enable.</li>
-     * <li>off: Disable.</li>
+     * <li><p><code>on</code>: Enables Gzip compression.</p>
+     * </li>
+     * <li><p><code>off</code>: Disables Gzip compression.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -31,10 +35,12 @@ public class CreateCompressionRuleRequest extends TeaModel {
     public String gzip;
 
     /**
-     * <p>Rule content, using conditional expressions to match user requests. This parameter is not required when adding a global configuration. There are two usage scenarios:</p>
+     * <p>The conditional expression used to match user requests. This parameter is not required when adding a global configuration. There are two use cases:</p>
      * <ul>
-     * <li>To match all incoming requests: Set the value to true</li>
-     * <li>To match specific requests: Set the value to a custom expression, for example: (http.host eq \&quot;video.example.com\&quot;)</li>
+     * <li><p>To match all incoming requests, set the value to <code>true</code>.</p>
+     * </li>
+     * <li><p>To match specific requests, set the value to a custom expression, for example, <code>(http.host eq &quot;video.example.com&quot;)</code>.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -44,10 +50,12 @@ public class CreateCompressionRuleRequest extends TeaModel {
     public String rule;
 
     /**
-     * <p>Rule switch. This parameter is not required when adding a global configuration. Value range:</p>
+     * <p>Specifies whether to enable the rule. This parameter is not required when adding a global configuration. Valid values:</p>
      * <ul>
-     * <li>on: Enable.</li>
-     * <li>off: Disable.</li>
+     * <li><p><code>on</code>: Enables the rule.</p>
+     * </li>
+     * <li><p><code>off</code>: Disables the rule.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -57,7 +65,7 @@ public class CreateCompressionRuleRequest extends TeaModel {
     public String ruleEnable;
 
     /**
-     * <p>Rule name. This parameter is not required when adding a global configuration.</p>
+     * <p>The name of the rule. This parameter is not required when adding a global configuration.</p>
      * 
      * <strong>example:</strong>
      * <p>rule_example</p>
@@ -65,11 +73,17 @@ public class CreateCompressionRuleRequest extends TeaModel {
     @NameInMap("RuleName")
     public String ruleName;
 
+    /**
+     * <p>The execution priority of the rule. A smaller value indicates a higher priority.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("Sequence")
     public Integer sequence;
 
     /**
-     * <p>Site ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> interface.</p>
+     * <p>The unique identifier of the site. To obtain this value, call the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> API.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -79,7 +93,7 @@ public class CreateCompressionRuleRequest extends TeaModel {
     public Long siteId;
 
     /**
-     * <p>The version number of the site configuration. For sites with version management enabled, you can use this parameter to specify the effective version of the site configuration, defaulting to version 0.</p>
+     * <p>The version of the site\&quot;s configuration. If versioning is enabled for the site, this parameter specifies the version to modify. Defaults to 0.</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>
@@ -88,10 +102,12 @@ public class CreateCompressionRuleRequest extends TeaModel {
     public Integer siteVersion;
 
     /**
-     * <p>Zstd compression. Value range:</p>
+     * <p>Specifies whether to enable Zstd compression. Valid values:</p>
      * <ul>
-     * <li>on: Enable.</li>
-     * <li>off: Disable.</li>
+     * <li><p><code>on</code>: Enables Zstd compression.</p>
+     * </li>
+     * <li><p><code>off</code>: Disables Zstd compression.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

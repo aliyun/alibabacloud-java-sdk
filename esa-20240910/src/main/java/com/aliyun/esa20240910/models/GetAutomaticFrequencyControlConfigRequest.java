@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetAutomaticFrequencyControlConfigRequest extends TeaModel {
     /**
+     * <p>The ID of the site. Call the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation to obtain this ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,8 @@ public class GetAutomaticFrequencyControlConfigRequest extends TeaModel {
     public Long siteId;
 
     /**
+     * <p>The version of the site. If versioning is enabled, use this parameter to specify the site version. The default value is 0.</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */

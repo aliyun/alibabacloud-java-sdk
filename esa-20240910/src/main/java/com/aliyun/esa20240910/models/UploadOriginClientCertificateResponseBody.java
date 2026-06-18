@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UploadOriginClientCertificateResponseBody extends TeaModel {
     /**
-     * <p>The Common Name of the certificate.</p>
+     * <p>The common name of the certificate.</p>
      * 
      * <strong>example:</strong>
      * <p><a href="http://www.example.com">www.example.com</a></p>
@@ -23,7 +23,7 @@ public class UploadOriginClientCertificateResponseBody extends TeaModel {
     public String fingerprintSha256;
 
     /**
-     * <p>The certificate ID.</p>
+     * <p>The ID of the certificate.</p>
      * 
      * <strong>example:</strong>
      * <p>babaabcd****</p>
@@ -32,7 +32,7 @@ public class UploadOriginClientCertificateResponseBody extends TeaModel {
     public String id;
 
     /**
-     * <p>The CA that issued the certificate.</p>
+     * <p>The issuer of the certificate.</p>
      * 
      * <strong>example:</strong>
      * <p>GlobalSign nv-sa</p>
@@ -41,7 +41,7 @@ public class UploadOriginClientCertificateResponseBody extends TeaModel {
     public String issuer;
 
     /**
-     * <p>The time when the certificate expires.</p>
+     * <p>The end of the certificate\&quot;s validity period (<code>not after</code>). The timestamp is in UTC and formatted in ISO 8601.</p>
      * 
      * <strong>example:</strong>
      * <p>2024-12-01T02:13:07Z</p>
@@ -50,7 +50,7 @@ public class UploadOriginClientCertificateResponseBody extends TeaModel {
     public String notAfter;
 
     /**
-     * <p>The time when the certificate takes effect.</p>
+     * <p>The start of the certificate\&quot;s validity period (<code>not before</code>). The timestamp is in UTC and formatted in ISO 8601.</p>
      * 
      * <strong>example:</strong>
      * <p>2023-12-01T02:13:07Z</p>
@@ -95,7 +95,7 @@ public class UploadOriginClientCertificateResponseBody extends TeaModel {
     public String status;
 
     /**
-     * <p>The validity period of the certificate. Unit: day.</p>
+     * <p>The validity period of the certificate in days.</p>
      * 
      * <strong>example:</strong>
      * <p>365</p>

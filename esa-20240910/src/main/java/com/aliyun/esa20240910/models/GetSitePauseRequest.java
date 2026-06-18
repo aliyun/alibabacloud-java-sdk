@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetSitePauseRequest extends TeaModel {
     /**
-     * <p>The website ID, which can be obtained by calling the <a href="~~ListSites~~">ListSites</a> operation.</p>
+     * <p>The site ID. Call the <a href="~~ListSites~~">ListSites</a> operation to obtain this ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeHttpDDoSIntelligentAclRulesRequest extends TeaModel {
     /**
+     * <p>The current page number.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,8 @@ public class DescribeHttpDDoSIntelligentAclRulesRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -21,6 +24,8 @@ public class DescribeHttpDDoSIntelligentAclRulesRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The rule type.</p>
+     * 
      * <strong>example:</strong>
      * <p>acl</p>
      */
@@ -28,6 +33,7 @@ public class DescribeHttpDDoSIntelligentAclRulesRequest extends TeaModel {
     public String ruleType;
 
     /**
+     * <p>The site ID. To obtain the site ID, call the <a href="~~ListSites~~">ListSites</a> operation.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

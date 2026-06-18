@@ -5,10 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetPerformanceDataCollectionRequest extends TeaModel {
     /**
+     * <p>The Site ID.</p>
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>123456****</p>
      */
     @NameInMap("SiteId")
     public Long siteId;

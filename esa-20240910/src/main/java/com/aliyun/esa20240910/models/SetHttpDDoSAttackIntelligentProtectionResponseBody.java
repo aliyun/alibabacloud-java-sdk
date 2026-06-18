@@ -5,10 +5,12 @@ import com.aliyun.tea.*;
 
 public class SetHttpDDoSAttackIntelligentProtectionResponseBody extends TeaModel {
     /**
-     * <p>The mode of smart HTTP DDoS protection. Valid values:</p>
+     * <p>The protection mode for the intelligent HTTP DDoS protection feature. Valid values:</p>
      * <ul>
-     * <li><strong>observe</strong>: alert.</li>
-     * <li><strong>defense</strong>: block.</li>
+     * <li><p><strong>observe</strong>: The system generates warnings for attack traffic but does not block it.</p>
+     * </li>
+     * <li><p><strong>defense</strong>: The system blocks detected attack traffic.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,12 +20,16 @@ public class SetHttpDDoSAttackIntelligentProtectionResponseBody extends TeaModel
     public String aiMode;
 
     /**
-     * <p>The level of smart HTTP DDoS protection. Valid values:</p>
+     * <p>The sensitivity level for the intelligent HTTP DDoS protection feature. Valid values:</p>
      * <ul>
-     * <li><strong>level0</strong>: very loose.</li>
-     * <li><strong>level30</strong>: loose.</li>
-     * <li><strong>level60</strong>: normal.</li>
-     * <li><strong>level90</strong>: strict.</li>
+     * <li><p><strong>level0</strong>: very loose</p>
+     * </li>
+     * <li><p><strong>level30</strong>: loose</p>
+     * </li>
+     * <li><p><strong>level60</strong>: normal</p>
+     * </li>
+     * <li><p><strong>level90</strong>: strict</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -42,7 +48,7 @@ public class SetHttpDDoSAttackIntelligentProtectionResponseBody extends TeaModel
     public String requestId;
 
     /**
-     * <p>The website ID.</p>
+     * <p>The site ID.</p>
      * 
      * <strong>example:</strong>
      * <p>123456****</p>

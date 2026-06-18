@@ -6,9 +6,6 @@ import com.aliyun.tea.*;
 public class HttpDeliveryQueryParamValue extends TeaModel {
     /**
      * <p>The static variable.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>alicdn</p>
      */
     @NameInMap("StaticValue")
     public String staticValue;

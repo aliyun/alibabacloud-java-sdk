@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetHttpsApplicationConfigurationRequest extends TeaModel {
     /**
-     * <p>ConfigId of the configuration, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2869087.html">listHttpsApplicationConfigurations</a> interface.</p>
+     * <p>The configuration ID. You can obtain this ID by calling the <a href="https://help.aliyun.com/document_detail/2869087.html">listHttpsApplicationConfigurations</a> operation.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class GetHttpsApplicationConfigurationRequest extends TeaModel {
     public Long configId;
 
     /**
-     * <p>Site ID, which can be obtained by calling the <a href="~~ListSites~~">ListSites</a> interface.</p>
+     * <p>The site ID. You can obtain this ID by calling the <a href="~~ListSites~~">ListSites</a> operation.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

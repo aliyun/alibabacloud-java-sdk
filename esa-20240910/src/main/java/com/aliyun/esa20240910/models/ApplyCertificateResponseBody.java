@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ApplyCertificateResponseBody extends TeaModel {
     /**
-     * <p>Request ID.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>156A6B-677B1A-4297B7-9187B7-2B44792</p>
@@ -14,13 +14,13 @@ public class ApplyCertificateResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>List of free certificate application details.</p>
+     * <p>A list of application details for each free certificate.</p>
      */
     @NameInMap("Result")
     public java.util.List<ApplyCertificateResponseBodyResult> result;
 
     /**
-     * <p>Site name.</p>
+     * <p>The site name.</p>
      * 
      * <strong>example:</strong>
      * <p>example.com</p>
@@ -29,7 +29,7 @@ public class ApplyCertificateResponseBody extends TeaModel {
     public String siteName;
 
     /**
-     * <p>Number of certificates applied for, which is the same as the number of input domains.</p>
+     * <p>The total number of certificates requested, which matches the number of domain names provided in the request.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>
@@ -76,7 +76,7 @@ public class ApplyCertificateResponseBody extends TeaModel {
 
     public static class ApplyCertificateResponseBodyResult extends TeaModel {
         /**
-         * <p>Certificate domain.</p>
+         * <p>The certificate domain name.</p>
          * 
          * <strong>example:</strong>
          * <p>*.example.com</p>
@@ -85,7 +85,7 @@ public class ApplyCertificateResponseBody extends TeaModel {
         public String domain;
 
         /**
-         * <p>Certificate ID.</p>
+         * <p>The certificate ID.</p>
          * 
          * <strong>example:</strong>
          * <p>30000478</p>
@@ -94,7 +94,7 @@ public class ApplyCertificateResponseBody extends TeaModel {
         public String id;
 
         /**
-         * <p>Status of the certificate application.</p>
+         * <p>The certificate application status.</p>
          * 
          * <strong>example:</strong>
          * <p>Applying</p>

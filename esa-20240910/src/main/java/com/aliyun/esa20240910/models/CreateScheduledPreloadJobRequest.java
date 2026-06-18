@@ -5,12 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateScheduledPreloadJobRequest extends TeaModel {
     /**
-     * <p>The method to submit URLs to be prefetched.</p>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li><strong>textBox</strong></li>
-     * <li><strong>oss</strong></li>
-     * </ul>
+     * <p>The method for uploading the preload file. Valid values are <code>Textbox</code> and <code>OSS</code>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -20,7 +15,7 @@ public class CreateScheduledPreloadJobRequest extends TeaModel {
     public String insertWay;
 
     /**
-     * <p>The name of the scheduled prefetch task.</p>
+     * <p>The name of the scheduled preload job.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -30,7 +25,7 @@ public class CreateScheduledPreloadJobRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The URL of the OSS object that stores the URLs to be prefetched.</p>
+     * <p>The URL of the OSS file that contains the URLs to preload.</p>
      * 
      * <strong>example:</strong>
      * <p><a href="https://xxxobject.oss-cn-reginon.aliyuncs.com/9d91_xxxxxxxxxxx_158bb6e0f97c477791209bb46bd599f7">https://xxxobject.oss-cn-reginon.aliyuncs.com/9d91_xxxxxxxxxxx_158bb6e0f97c477791209bb46bd599f7</a></p>
@@ -39,7 +34,7 @@ public class CreateScheduledPreloadJobRequest extends TeaModel {
     public String ossUrl;
 
     /**
-     * <p>The website ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation.</p>
+     * <p>The ID of the site. You can get this ID by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> API.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -49,7 +44,7 @@ public class CreateScheduledPreloadJobRequest extends TeaModel {
     public Long siteId;
 
     /**
-     * <p>The URLs to be prefetched. This parameter is required if you set InsertWay to textBox.</p>
+     * <p>The list of URLs to preload. This parameter is used when <code>InsertWay</code> is set to <code>Textbox</code>.</p>
      * 
      * <strong>example:</strong>
      * <p><a href="http://testurl.com/a.txt">http://testurl.com/a.txt</a>

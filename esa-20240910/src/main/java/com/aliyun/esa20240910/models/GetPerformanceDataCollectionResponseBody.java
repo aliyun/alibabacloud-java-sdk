@@ -5,17 +5,13 @@ import com.aliyun.tea.*;
 
 public class GetPerformanceDataCollectionResponseBody extends TeaModel {
     /**
-     * <strong>example:</strong>
-     * <p>on</p>
+     * <p>Indicates whether Data Quality collection is enabled. Valid values: <code>true</code> and <code>false</code>.</p>
      */
     @NameInMap("Enable")
     public String enable;
 
     /**
-     * <p>Id of the request</p>
-     * 
-     * <strong>example:</strong>
-     * <p>F61CDR30-E83C-4FDA-BF73-9A94CDD44229</p>
+     * <p>The unique ID of the request.</p>
      */
     @NameInMap("RequestId")
     public String requestId;

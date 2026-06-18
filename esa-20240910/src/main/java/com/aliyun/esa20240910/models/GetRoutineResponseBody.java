@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetRoutineResponseBody extends TeaModel {
     /**
-     * <p>The time when the routine was created.</p>
+     * <p>The creation time of the edge function Routine.</p>
      * 
      * <strong>example:</strong>
      * <p>2024-03-11T01:23:21Z</p>
@@ -14,7 +14,7 @@ public class GetRoutineResponseBody extends TeaModel {
     public String createTime;
 
     /**
-     * <p>The default record name to access.</p>
+     * <p>The default domain name for accessing the Routine.</p>
      * 
      * <strong>example:</strong>
      * <p>routine1.example.com</p>
@@ -23,7 +23,7 @@ public class GetRoutineResponseBody extends TeaModel {
     public String defaultRelatedRecord;
 
     /**
-     * <p>The description of the routine.</p>
+     * <p>The description of the edge function Routine.</p>
      * 
      * <strong>example:</strong>
      * <p>ZWRpdCByb3V0aW5lIGNvbmZpZyBkZXNjcmlwdGlvbg</p>
@@ -32,11 +32,17 @@ public class GetRoutineResponseBody extends TeaModel {
     public String description;
 
     /**
-     * <p>The information about the environments.</p>
+     * <p>A list of environments.</p>
      */
     @NameInMap("Envs")
     public java.util.List<GetRoutineResponseBodyEnvs> envs;
 
+    /**
+     * <p>Indicates whether the Routine includes Assets.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("HasAssets")
     public Boolean hasAssets;
 
@@ -103,15 +109,39 @@ public class GetRoutineResponseBody extends TeaModel {
     }
 
     public static class GetRoutineResponseBodyEnvsCodeDeployCodeVersions extends TeaModel {
+        /**
+         * <p>The code version ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1746583193971399525</p>
+         */
         @NameInMap("CodeVersion")
         public String codeVersion;
 
+        /**
+         * <p>The creation time of the code version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2025-07-23T09:01:40Z</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <p>The description of the code version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>code version 1.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The percentage of traffic routed to this code version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("Percentage")
         public Long percentage;
 
@@ -155,15 +185,36 @@ public class GetRoutineResponseBody extends TeaModel {
     }
 
     public static class GetRoutineResponseBodyEnvsCodeDeploy extends TeaModel {
+        /**
+         * <p>A list of deployed code versions.</p>
+         */
         @NameInMap("CodeVersions")
         public java.util.List<GetRoutineResponseBodyEnvsCodeDeployCodeVersions> codeVersions;
 
+        /**
+         * <p>The time the deployment was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-05-11T09:21:36Z</p>
+         */
         @NameInMap("CreationTime")
         public String creationTime;
 
+        /**
+         * <p>The deployment ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>589267</p>
+         */
         @NameInMap("DeployId")
         public String deployId;
 
+        /**
+         * <p>The deployment strategy. The default value is <code>percentage</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>percentage</p>
+         */
         @NameInMap("Strategy")
         public String strategy;
 
@@ -207,11 +258,14 @@ public class GetRoutineResponseBody extends TeaModel {
     }
 
     public static class GetRoutineResponseBodyEnvs extends TeaModel {
+        /**
+         * <p>Details of the canary release for a code version.</p>
+         */
         @NameInMap("CodeDeploy")
         public GetRoutineResponseBodyEnvsCodeDeploy codeDeploy;
 
         /**
-         * <p>The environment type.</p>
+         * <p>The environment name.</p>
          * 
          * <strong>example:</strong>
          * <p>production</p>

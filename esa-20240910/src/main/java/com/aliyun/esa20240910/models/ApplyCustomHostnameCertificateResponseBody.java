@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ApplyCustomHostnameCertificateResponseBody extends TeaModel {
     /**
+     * <p>The unique ID of the request. Alibaba Cloud generates this ID for each request.</p>
+     * 
      * <strong>example:</strong>
      * <p>EEEBE525-F576-1196-8DAF-2D70CA3F4D2F</p>
      */

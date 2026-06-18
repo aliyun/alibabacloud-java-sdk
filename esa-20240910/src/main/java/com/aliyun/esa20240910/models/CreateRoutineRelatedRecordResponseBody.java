@@ -4,6 +4,12 @@ package com.aliyun.esa20240910.models;
 import com.aliyun.tea.*;
 
 public class CreateRoutineRelatedRecordResponseBody extends TeaModel {
+    /**
+     * <p>The record ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3227405728754048</p>
+     */
     @NameInMap("RecordId")
     public Long recordId;
 
@@ -17,7 +23,7 @@ public class CreateRoutineRelatedRecordResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the operation is successful.</p>
+     * <p>The status of the operation. A value of <code>OK</code> indicates that the operation was successful.</p>
      * 
      * <strong>example:</strong>
      * <p>OK</p>

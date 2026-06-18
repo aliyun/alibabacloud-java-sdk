@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateRatePlanSpecRequest extends TeaModel {
     /**
-     * <p>Specifies whether to enable auto payment.</p>
+     * <p>Specifies whether to enable automatic payment.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -14,6 +14,12 @@ public class UpdateRatePlanSpecRequest extends TeaModel {
     public Boolean autoPay;
 
     /**
+     * <p>The billing type. Valid values:</p>
+     * <ul>
+     * <li>PREPAY: Subscription.</li>
+     * <li>POSTPAY: Pay-as-you-go.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>PREPAY</p>
      */
@@ -21,6 +27,8 @@ public class UpdateRatePlanSpecRequest extends TeaModel {
     public String chargeType;
 
     /**
+     * <p>The instance ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>xcdn-91fknmb80f0g</p>
      */
@@ -28,10 +36,9 @@ public class UpdateRatePlanSpecRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The specification update type. Valid values:</p>
+     * <p>The type of specification change. Valid values:</p>
      * <ul>
-     * <li>DOWNGRADE</li>
-     * <li>UPGRADE</li>
+     * <li>UPGRADE: Upgrade.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -41,6 +48,21 @@ public class UpdateRatePlanSpecRequest extends TeaModel {
     public String orderType;
 
     /**
+     * <p>The code of the target plan.</p>
+     * <p>Alibaba Cloud China Website (<a href="http://www.aliyun.com">www.aliyun.com</a>)</p>
+     * <ul>
+     * <li>Free Edition: entranceplan</li>
+     * <li>Basic Edition: basicplan</li>
+     * <li>Standard Edition: standardplan</li>
+     * <li>Premium Edition: advancedplan</li>
+     * </ul>
+     * <p>Alibaba Cloud International Website (<a href="http://www.alibabacloud.com">www.alibabacloud.com</a>)</p>
+     * <ul>
+     * <li>Entrance: entranceplan</li>
+     * <li>Pro: standardplan</li>
+     * <li>Premium: advancedpla.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>entranceplan</p>
      */
@@ -48,6 +70,21 @@ public class UpdateRatePlanSpecRequest extends TeaModel {
     public String targetPlanCode;
 
     /**
+     * <p>The name of the target plan.</p>
+     * <p>Alibaba Cloud China Website (<a href="http://www.aliyun.com">www.aliyun.com</a>)</p>
+     * <ul>
+     * <li>Free Edition: entranceplan</li>
+     * <li>Basic Edition: basic</li>
+     * <li>Standard Edition: medium</li>
+     * <li>Premium Edition: high</li>
+     * </ul>
+     * <p>Alibaba Cloud International Website (<a href="http://www.alibabacloud.com">www.alibabacloud.com</a>)</p>
+     * <ul>
+     * <li>Entrance: entranceplan_intl</li>
+     * <li>Pro: basicplan_intl</li>
+     * <li>Premium: vipplan_intl.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>basic</p>
      */

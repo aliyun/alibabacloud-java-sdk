@@ -4,16 +4,30 @@ package com.aliyun.esa20240910.models;
 import com.aliyun.tea.*;
 
 public class DescribeRatePlanPriceRequest extends TeaModel {
+    /**
+     * <p>The number of plans.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("Amount")
     public Integer amount;
 
     /**
+     * <p>The purchase duration, in months.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
     @NameInMap("Period")
     public Integer period;
 
+    /**
+     * <p>The plan name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>basic</p>
+     */
     @NameInMap("PlanName")
     public String planName;
 

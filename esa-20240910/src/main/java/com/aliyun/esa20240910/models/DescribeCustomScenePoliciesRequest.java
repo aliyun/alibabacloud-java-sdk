@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeCustomScenePoliciesRequest extends TeaModel {
     /**
-     * <p>The number of the page to return. Valid values: <strong>1 to 100000</strong>.</p>
+     * <p>The page number. Valid values: <strong>1</strong> to <strong>100000</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -14,7 +14,7 @@ public class DescribeCustomScenePoliciesRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page. Default value: <strong>10</strong>. Valid values: <strong>5</strong>, <strong>10</strong>, or <strong>20</strong>.</p>
+     * <p>The number of entries per page. Default value: <strong>10</strong>. Valid values: <strong>5</strong>, <strong>10</strong>, and <strong>20</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -23,7 +23,7 @@ public class DescribeCustomScenePoliciesRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The rule ID.</p>
+     * <p>The policy ID.</p>
      * 
      * <strong>example:</strong>
      * <p>1234****</p>

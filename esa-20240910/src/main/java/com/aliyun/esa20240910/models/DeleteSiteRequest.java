@@ -8,7 +8,8 @@ public class DeleteSiteRequest extends TeaModel {
     public String securityToken;
 
     /**
-     * <p>The website ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation.</p>
+     * <p>The ID of the site to delete. Call the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation to obtain site IDs.</p>
+     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>1234567890123</p>

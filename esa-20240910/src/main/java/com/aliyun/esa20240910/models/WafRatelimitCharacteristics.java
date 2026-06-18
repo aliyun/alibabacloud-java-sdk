@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class WafRatelimitCharacteristics extends TeaModel {
     /**
-     * <p>The details of logical databases.</p>
+     * <p>A list of match criteria.</p>
      */
     @NameInMap("Criteria")
     public java.util.List<WafRatelimitCharacteristicsCriteria> criteria;
 
     /**
-     * <p>The logical judgment.</p>
+     * <p>The logical relationship between the criteria.</p>
      * 
      * <strong>example:</strong>
      * <p>and</p>
@@ -20,7 +20,7 @@ public class WafRatelimitCharacteristics extends TeaModel {
     public String logic;
 
     /**
-     * <p>The matching type.</p>
+     * <p>The field to match.</p>
      * 
      * <strong>example:</strong>
      * <p>ip.src</p>
@@ -59,7 +59,7 @@ public class WafRatelimitCharacteristics extends TeaModel {
 
     public static class WafRatelimitCharacteristicsCriteriaCriteriaCriteria extends TeaModel {
         /**
-         * <p>The matching type.</p>
+         * <p>The field to match.</p>
          * 
          * <strong>example:</strong>
          * <p>ip.src</p>
@@ -84,13 +84,13 @@ public class WafRatelimitCharacteristics extends TeaModel {
 
     public static class WafRatelimitCharacteristicsCriteriaCriteria extends TeaModel {
         /**
-         * <p>The details of logical databases.</p>
+         * <p>A list of match criteria.</p>
          */
         @NameInMap("Criteria")
         public java.util.List<WafRatelimitCharacteristicsCriteriaCriteriaCriteria> criteria;
 
         /**
-         * <p>The logical judgment.</p>
+         * <p>The logical relationship between the criteria.</p>
          * 
          * <strong>example:</strong>
          * <p>and</p>
@@ -99,7 +99,7 @@ public class WafRatelimitCharacteristics extends TeaModel {
         public String logic;
 
         /**
-         * <p>The matching type.</p>
+         * <p>The field to match.</p>
          * 
          * <strong>example:</strong>
          * <p>ip.src</p>
@@ -140,13 +140,13 @@ public class WafRatelimitCharacteristics extends TeaModel {
 
     public static class WafRatelimitCharacteristicsCriteria extends TeaModel {
         /**
-         * <p>The details of logical databases.</p>
+         * <p>A list of match criteria.</p>
          */
         @NameInMap("Criteria")
         public java.util.List<WafRatelimitCharacteristicsCriteriaCriteria> criteria;
 
         /**
-         * <p>The logical judgment.</p>
+         * <p>The logical relationship between the criteria.</p>
          * 
          * <strong>example:</strong>
          * <p>and</p>
@@ -155,7 +155,7 @@ public class WafRatelimitCharacteristics extends TeaModel {
         public String logic;
 
         /**
-         * <p>The matching type.</p>
+         * <p>The field to match.</p>
          * 
          * <strong>example:</strong>
          * <p>ip.src</p>

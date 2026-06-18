@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeDDoSAllEventListResponseBody extends TeaModel {
     /**
-     * <p>The DDoS attack events.</p>
+     * <p>A list of DDoS attack event details.</p>
      */
     @NameInMap("DataList")
     public java.util.List<DescribeDDoSAllEventListResponseBodyDataList> dataList;
@@ -20,7 +20,7 @@ public class DescribeDDoSAllEventListResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page.</p>
+     * <p>The page size.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -38,7 +38,7 @@ public class DescribeDDoSAllEventListResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The website ID.</p>
+     * <p>The site ID.</p>
      * 
      * <strong>example:</strong>
      * <p>7096621098****</p>
@@ -110,7 +110,7 @@ public class DescribeDDoSAllEventListResponseBody extends TeaModel {
 
     public static class DescribeDDoSAllEventListResponseBodyDataList extends TeaModel {
         /**
-         * <p>The peak of volumetric attacks. Unit: bit/s.</p>
+         * <p>The peak bits per second (Bps) of a volumetric attack.</p>
          * 
          * <strong>example:</strong>
          * <p>800</p>
@@ -118,11 +118,25 @@ public class DescribeDDoSAllEventListResponseBody extends TeaModel {
         @NameInMap("Bps")
         public Long bps;
 
+        /**
+         * <p>The attack region. Valid values:</p>
+         * <ul>
+         * <li><p><strong>domestic</strong>: Chinese mainland.</p>
+         * </li>
+         * <li><p><strong>global</strong>: Global.</p>
+         * </li>
+         * <li><p><strong>overseas</strong>: global (excluding Chinese mainland).</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>domestic</p>
+         */
         @NameInMap("Coverage")
         public String coverage;
 
         /**
-         * <p>The peak of connection flood attacks. Unit: connections per seconds (CPS).</p>
+         * <p>The peak connections per second (Cps) of a connection-based attack.</p>
          * 
          * <strong>example:</strong>
          * <p>50</p>
@@ -131,8 +145,8 @@ public class DescribeDDoSAllEventListResponseBody extends TeaModel {
         public Long cps;
 
         /**
-         * <p>The time when the DDoS attack ends.</p>
-         * <p>The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+         * <p>The end time of the DDoS attack event.</p>
+         * <p>The time is in the <code>yyyy-MM-ddTHH:mm:ssZ</code> format and is in UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>2023-02-12T15:59:59Z</p>
@@ -141,7 +155,7 @@ public class DescribeDDoSAllEventListResponseBody extends TeaModel {
         public String endTime;
 
         /**
-         * <p>The attack event ID.</p>
+         * <p>The event ID.</p>
          * 
          * <strong>example:</strong>
          * <p>web-cc_1</p>
@@ -149,15 +163,32 @@ public class DescribeDDoSAllEventListResponseBody extends TeaModel {
         @NameInMap("EventId")
         public String eventId;
 
+        /**
+         * <p>The event result. Valid values:</p>
+         * <ul>
+         * <li><p><strong>clean</strong>: The attack was successfully cleaned.</p>
+         * </li>
+         * <li><p><strong>ratelimit</strong>: Rate limiting was applied.</p>
+         * </li>
+         * <li><p><strong>blackhole</strong>: Blackhole filtering was triggered.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>clean</p>
+         */
         @NameInMap("EventResult")
         public String eventResult;
 
         /**
-         * <p>The type of DDoS attacks that was queried. Valid values:</p>
+         * <p>The type of the DDoS attack event. Valid values:</p>
          * <ul>
-         * <li><strong>web-cc</strong>: web resource exhaustion attacks.</li>
-         * <li><strong>cc</strong>: connection flood attacks.</li>
-         * <li><strong>traffic</strong>: volumetric attacks.</li>
+         * <li><p><strong>web-cc</strong>: A web resource exhaustion attack.</p>
+         * </li>
+         * <li><p><strong>cc</strong>: A connection-based attack.</p>
+         * </li>
+         * <li><p><strong>traffic</strong>: A volumetric attack.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -167,7 +198,7 @@ public class DescribeDDoSAllEventListResponseBody extends TeaModel {
         public String eventType;
 
         /**
-         * <p>The peak of volumetric attacks. Unit: packets per second (PPS).</p>
+         * <p>The peak packets per second (Pps) of a volumetric attack.</p>
          * 
          * <strong>example:</strong>
          * <p>12000</p>
@@ -176,7 +207,7 @@ public class DescribeDDoSAllEventListResponseBody extends TeaModel {
         public Long pps;
 
         /**
-         * <p>The peak QPS of web resource exhaustion attacks.</p>
+         * <p>The peak queries per second (Qps) of a web resource exhaustion attack.</p>
          * 
          * <strong>example:</strong>
          * <p>7692</p>
@@ -185,8 +216,8 @@ public class DescribeDDoSAllEventListResponseBody extends TeaModel {
         public Long qps;
 
         /**
-         * <p>The time when the DDoS attack starts.</p>
-         * <p>The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+         * <p>The start time of the DDoS attack event.</p>
+         * <p>The time is in the <code>yyyy-MM-ddTHH:mm:ssZ</code> format and is in UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>2023-02-12T15:00:00Z</p>
@@ -204,7 +235,7 @@ public class DescribeDDoSAllEventListResponseBody extends TeaModel {
         public String target;
 
         /**
-         * <p>The ID of the web resource exhaustion attack target.</p>
+         * <p>The ID of the attack target.</p>
          * 
          * <strong>example:</strong>
          * <p>000000000155****</p>

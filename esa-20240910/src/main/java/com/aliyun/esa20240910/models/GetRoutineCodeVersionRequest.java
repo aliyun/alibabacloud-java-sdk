@@ -19,7 +19,7 @@ public class GetRoutineCodeVersionRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>GetRoutineCodeVersion</p>
+     * <p>test-routine1</p>
      */
     @NameInMap("Name")
     public String name;

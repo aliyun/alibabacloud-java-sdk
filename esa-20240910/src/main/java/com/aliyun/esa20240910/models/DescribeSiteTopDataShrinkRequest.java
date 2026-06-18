@@ -8,7 +8,7 @@ public class DescribeSiteTopDataShrinkRequest extends TeaModel {
      * <p>The end of the time range to query.</p>
      * <p>Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
      * <blockquote>
-     * <p> The end time must be later than the start time.</p>
+     * <p>The end time must be later than the start time.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

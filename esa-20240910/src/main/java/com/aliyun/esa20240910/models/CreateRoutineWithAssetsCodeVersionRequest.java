@@ -13,6 +13,9 @@ public class CreateRoutineWithAssetsCodeVersionRequest extends TeaModel {
     @NameInMap("ConfOptions")
     public CreateRoutineWithAssetsCodeVersionRequestConfOptions confOptions;
 
+    @NameInMap("DeployEnv")
+    public String deployEnv;
+
     @NameInMap("ExtraInfo")
     public String extraInfo;
 
@@ -49,6 +52,14 @@ public class CreateRoutineWithAssetsCodeVersionRequest extends TeaModel {
     }
     public CreateRoutineWithAssetsCodeVersionRequestConfOptions getConfOptions() {
         return this.confOptions;
+    }
+
+    public CreateRoutineWithAssetsCodeVersionRequest setDeployEnv(String deployEnv) {
+        this.deployEnv = deployEnv;
+        return this;
+    }
+    public String getDeployEnv() {
+        return this.deployEnv;
     }
 
     public CreateRoutineWithAssetsCodeVersionRequest setExtraInfo(String extraInfo) {

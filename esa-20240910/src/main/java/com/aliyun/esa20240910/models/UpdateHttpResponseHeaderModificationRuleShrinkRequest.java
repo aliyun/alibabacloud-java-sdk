@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateHttpResponseHeaderModificationRuleShrinkRequest extends TeaModel {
     /**
-     * <p>Configuration ID. It can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2867483.html">ListHttpResponseHeaderModificationRules</a> interface.</p>
+     * <p>The ID of the Configuration. You can get this value by calling the <a href="https://help.aliyun.com/document_detail/2867483.html">ListHttpResponseHeaderModificationRules</a> API.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,16 +15,18 @@ public class UpdateHttpResponseHeaderModificationRuleShrinkRequest extends TeaMo
     public Long configId;
 
     /**
-     * <p>Modify response headers, supporting three operation methods: add, delete, and modify.</p>
+     * <p>A list of objects, each defining a modification to a Response Header. Supported operations are <code>add</code>, <code>del</code>, and <code>modify</code>.</p>
      */
     @NameInMap("ResponseHeaderModification")
     public String responseHeaderModificationShrink;
 
     /**
-     * <p>Rule content, using conditional expressions to match user requests. This parameter is not required when adding a global configuration. There are two usage scenarios:</p>
+     * <p>The matching condition for the Rule, written as a Conditional Expression. This parameter is optional for global Configurations. Use cases:</p>
      * <ul>
-     * <li>Match all incoming requests: Set the value to true</li>
-     * <li>Match specific requests: Set the value to a custom expression, for example: (http.host eq \&quot;video.example.com\&quot;)</li>
+     * <li><p>To match all incoming requests, set the value to <code>true</code>.</p>
+     * </li>
+     * <li><p>To match specific requests, set the value to a custom expression, such as <code>(http.host eq &quot;video.example.com&quot;)</code>.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -34,10 +36,12 @@ public class UpdateHttpResponseHeaderModificationRuleShrinkRequest extends TeaMo
     public String rule;
 
     /**
-     * <p>Rule switch. This parameter is not required when adding a global configuration. Value range:</p>
+     * <p>Specifies whether the rule is enabled. This parameter is optional for a global Configuration. Valid values:</p>
      * <ul>
-     * <li>on: Enable.</li>
-     * <li>off: Disable.</li>
+     * <li><p><code>on</code>: Enables the Rule.</p>
+     * </li>
+     * <li><p><code>off</code>: Disables the Rule.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -47,7 +51,7 @@ public class UpdateHttpResponseHeaderModificationRuleShrinkRequest extends TeaMo
     public String ruleEnable;
 
     /**
-     * <p>Rule name. This parameter is not required when adding a global configuration.</p>
+     * <p>The name of the Rule. This parameter is optional for a global Configuration.</p>
      * 
      * <strong>example:</strong>
      * <p>rule_example</p>
@@ -55,11 +59,17 @@ public class UpdateHttpResponseHeaderModificationRuleShrinkRequest extends TeaMo
     @NameInMap("RuleName")
     public String ruleName;
 
+    /**
+     * <p>The execution order for the Rule. A lower value indicates a higher priority.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("Sequence")
     public Integer sequence;
 
     /**
-     * <p>Site ID, which can be obtained by calling the <a href="~~ListSites~~">ListSites</a> interface.</p>
+     * <p>The ID of the Site. You can get this value by calling the <a href="~~ListSites~~">ListSites</a> API.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

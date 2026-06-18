@@ -14,7 +14,7 @@ public class BlockObjectResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The blocking task ID.</p>
+     * <p>The ID of the task. A task ID is returned when you create a block task.</p>
      * 
      * <strong>example:</strong>
      * <p>15940956620</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteSiteOriginClientCertificateRequest extends TeaModel {
     /**
-     * <p>The certificate ID on ESA.</p>
+     * <p>The certificate ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class DeleteSiteOriginClientCertificateRequest extends TeaModel {
     public String id;
 
     /**
-     * <p>The website ID, which can be obtained by calling the <a href="~~ListSites~~">ListSites</a> operation.</p>
+     * <p>The site ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

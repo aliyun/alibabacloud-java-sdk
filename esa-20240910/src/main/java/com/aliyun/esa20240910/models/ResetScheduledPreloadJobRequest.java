@@ -8,7 +8,7 @@ public class ResetScheduledPreloadJobRequest extends TeaModel {
      * <p>The ID of the scheduled prefetch task.</p>
      * 
      * <strong>example:</strong>
-     * <p>ResetScheduledPreloadJob</p>
+     * <p>665d3af3621bccf3fe29e1a4</p>
      */
     @NameInMap("Id")
     public String id;

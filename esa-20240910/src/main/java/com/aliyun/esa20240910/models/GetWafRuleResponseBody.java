@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class GetWafRuleResponseBody extends TeaModel {
     /**
-     * <p>Rule configuration.</p>
+     * <p>The rule configuration.</p>
      */
     @NameInMap("Config")
     public WafRuleConfig config;
 
     /**
-     * <p>The ID of the WAF rule, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2878257.html">ListWafRules</a> interface.</p>
+     * <p>The ID of the WAF rule. You can get this ID by calling the <a href="https://help.aliyun.com/document_detail/2878257.html">ListWafRules</a> operation.</p>
      * 
      * <strong>example:</strong>
      * <p>2000001</p>
@@ -20,7 +20,7 @@ public class GetWafRuleResponseBody extends TeaModel {
     public Long id;
 
     /**
-     * <p>Rule name.</p>
+     * <p>The name of the rule.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -30,7 +30,25 @@ public class GetWafRuleResponseBody extends TeaModel {
     public String name;
 
     /**
-     * <p>WAF operation phase.</p>
+     * <p>The execution phase of the WAF rule.</p>
+     * <ul>
+     * <li><p><code>http_whitelist</code>: A whitelist rule</p>
+     * </li>
+     * <li><p><code>http_custom</code>: A custom rule</p>
+     * </li>
+     * <li><p><code>http_managed</code>: A managed rule</p>
+     * </li>
+     * <li><p><code>http_anti_scan</code>: A scan protection rule</p>
+     * </li>
+     * <li><p><code>http_ratelimit</code>: A rate limiting rule</p>
+     * </li>
+     * <li><p><code>ip_access_rule</code>: An IP access rule</p>
+     * </li>
+     * <li><p><code>http_bot</code>: A bot management rule</p>
+     * </li>
+     * <li><p><code>http_security_level_rule</code>: A security rule</p>
+     * </li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -40,7 +58,7 @@ public class GetWafRuleResponseBody extends TeaModel {
     public String phase;
 
     /**
-     * <p>The position of the rule in the rule set.</p>
+     * <p>The position of the rule in the ruleset.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -49,7 +67,7 @@ public class GetWafRuleResponseBody extends TeaModel {
     public Long position;
 
     /**
-     * <p>Request ID.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>36af3fcc-43d0-441c-86b1-428951dc8225</p>
@@ -57,11 +75,14 @@ public class GetWafRuleResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The ID of the WAF ruleset. You can get this ID by calling the <a href="https://help.aliyun.com/document_detail/2878359.html">ListWafRulesets</a> operation.</p>
+     */
     @NameInMap("RulesetId")
     public Long rulesetId;
 
     /**
-     * <p>Rule status.</p>
+     * <p>The status of the rule.</p>
      * 
      * <strong>example:</strong>
      * <p>on</p>
@@ -70,7 +91,7 @@ public class GetWafRuleResponseBody extends TeaModel {
     public String status;
 
     /**
-     * <p>The last modified time of the rule.</p>
+     * <p>The time the rule was last updated.</p>
      * 
      * <strong>example:</strong>
      * <p>2024-01-01T00:00:00Z</p>

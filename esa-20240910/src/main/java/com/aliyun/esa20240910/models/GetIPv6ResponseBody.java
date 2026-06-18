@@ -5,10 +5,12 @@ import com.aliyun.tea.*;
 
 public class GetIPv6ResponseBody extends TeaModel {
     /**
-     * <p>Indicates whether IPv6 is enabled. Valid values:</p>
+     * <p>Specifies whether IPv6 is enabled. Valid values:</p>
      * <ul>
-     * <li><strong>on</strong></li>
-     * <li><strong>off</strong></li>
+     * <li><p><strong>on</strong>: Enabled.</p>
+     * </li>
+     * <li><p><strong>off</strong>: Disabled.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -17,11 +19,23 @@ public class GetIPv6ResponseBody extends TeaModel {
     @NameInMap("Enable")
     public String enable;
 
+    /**
+     * <p>The region where IPv6 is enabled. The default value is <code>x.x</code>. Valid values:</p>
+     * <ul>
+     * <li><p><code>x.x</code>: Global.</p>
+     * </li>
+     * <li><p><code>cn.cn</code>: Chinese mainland.</p>
+     * </li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>x.x</p>
+     */
     @NameInMap("Region")
     public String region;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>156A6B-677B1A-4297B7-9187B7-2B44792</p>

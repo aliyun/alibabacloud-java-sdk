@@ -5,10 +5,12 @@ import com.aliyun.tea.*;
 
 public class UpdateCompressionRuleRequest extends TeaModel {
     /**
-     * <p>Brotli compression. Value range:</p>
+     * <p>Brotli compression. Valid values:</p>
      * <ul>
-     * <li>on: Enable.</li>
-     * <li>off: Disable.</li>
+     * <li><p>on: Enable.</p>
+     * </li>
+     * <li><p>off: Disable.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,7 +20,7 @@ public class UpdateCompressionRuleRequest extends TeaModel {
     public String brotli;
 
     /**
-     * <p>Configuration ID. It can be obtained by calling the <a href="~~ListCompressionRules~~">ListCompressionRules</a> interface.</p>
+     * <p>Configuration ID. Get this value by calling the <a href="~~ListCompressionRules~~">ListCompressionRules</a> API.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -28,10 +30,12 @@ public class UpdateCompressionRuleRequest extends TeaModel {
     public Long configId;
 
     /**
-     * <p>Gzip compression. Value range:</p>
+     * <p>Gzip compression. Valid values:</p>
      * <ul>
-     * <li>on: Enable.</li>
-     * <li>off: Disable.</li>
+     * <li><p>on: Enable.</p>
+     * </li>
+     * <li><p>off: Disable.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -41,10 +45,12 @@ public class UpdateCompressionRuleRequest extends TeaModel {
     public String gzip;
 
     /**
-     * <p>Rule content, using conditional expressions to match user requests. This parameter is not required when adding a global configuration. There are two usage scenarios:</p>
+     * <p>Rule content, using a conditional expression to match user requests. Do not set this parameter when adding a global configuration. Two scenarios apply:</p>
      * <ul>
-     * <li>To match all incoming requests: Set the value to true</li>
-     * <li>To match specific requests: Set the value to a custom expression, for example: (http.host eq \&quot;video.example.com\&quot;)</li>
+     * <li><p>Match all incoming requests: Set the value to true.</p>
+     * </li>
+     * <li><p>Match specific requests: Set the value to a custom expression, such as: (http.host eq &quot;video.example.com&quot;)</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -54,10 +60,12 @@ public class UpdateCompressionRuleRequest extends TeaModel {
     public String rule;
 
     /**
-     * <p>Rule switch. This parameter is not required when adding a global configuration. Value range:</p>
+     * <p>Rule switch. Do not set this parameter when adding a global configuration. Valid values:</p>
      * <ul>
-     * <li>on: Enable.</li>
-     * <li>off: Disable.</li>
+     * <li><p>on: Enable.</p>
+     * </li>
+     * <li><p>off: Disable.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -67,7 +75,7 @@ public class UpdateCompressionRuleRequest extends TeaModel {
     public String ruleEnable;
 
     /**
-     * <p>Rule name. This parameter is not required when adding a global configuration.</p>
+     * <p>Rule name. Do not set this parameter when adding a global configuration.</p>
      * 
      * <strong>example:</strong>
      * <p>rule_example</p>
@@ -75,11 +83,17 @@ public class UpdateCompressionRuleRequest extends TeaModel {
     @NameInMap("RuleName")
     public String ruleName;
 
+    /**
+     * <p>Rule execution order. Rules with smaller values take precedence.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("Sequence")
     public Integer sequence;
 
     /**
-     * <p>Site ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> interface.</p>
+     * <p>Site ID. Get this value by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> API.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -89,10 +103,12 @@ public class UpdateCompressionRuleRequest extends TeaModel {
     public Long siteId;
 
     /**
-     * <p>Zstd compression. Value range:</p>
+     * <p>Zstd compression. Valid values:</p>
      * <ul>
-     * <li>on: Enable.</li>
-     * <li>off: Disable.</li>
+     * <li><p>on: Enable.</p>
+     * </li>
+     * <li><p>off: Disable.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

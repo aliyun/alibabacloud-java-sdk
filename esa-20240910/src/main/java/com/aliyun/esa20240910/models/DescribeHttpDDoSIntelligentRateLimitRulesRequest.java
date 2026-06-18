@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeHttpDDoSIntelligentRateLimitRulesRequest extends TeaModel {
     /**
+     * <p>The current page number.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,8 @@ public class DescribeHttpDDoSIntelligentRateLimitRulesRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -21,6 +24,8 @@ public class DescribeHttpDDoSIntelligentRateLimitRulesRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The rule type.</p>
+     * 
      * <strong>example:</strong>
      * <p>cc</p>
      */
@@ -28,6 +33,7 @@ public class DescribeHttpDDoSIntelligentRateLimitRulesRequest extends TeaModel {
     public String ruleType;
 
     /**
+     * <p>The site ID. Obtain this by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

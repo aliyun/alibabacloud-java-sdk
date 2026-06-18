@@ -35,8 +35,10 @@ public class PublishEdgeContainerAppVersionShrinkRequest extends TeaModel {
     /**
      * <p>The environment to which you want to release the version. Valid values:</p>
      * <ul>
-     * <li>prod: the production environment.</li>
-     * <li>staging: the staging environment.</li>
+     * <li><p>prod: the production environment.</p>
+     * </li>
+     * <li><p>staging: the staging environment.</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -49,8 +51,10 @@ public class PublishEdgeContainerAppVersionShrinkRequest extends TeaModel {
     /**
      * <p>Specifies how the version is released. Valid values:</p>
      * <ul>
-     * <li>percentage: releases the version by percentage.</li>
-     * <li>region: releases the version by region.</li>
+     * <li><p>percentage: releases the version by percentage.</p>
+     * </li>
+     * <li><p>region: releases the version by region.</p>
+     * </li>
      * </ul>
      * <p>If you do not specify this parameter, the version is released by percentage by default.</p>
      * 

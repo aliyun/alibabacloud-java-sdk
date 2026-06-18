@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateLoadBalancerResponseBody extends TeaModel {
     /**
-     * <p>Request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>EEEBE525-F576-1196-8DAF-2D70CA3F4D2F</p>

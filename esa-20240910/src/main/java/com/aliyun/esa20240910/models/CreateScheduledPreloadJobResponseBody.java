@@ -14,7 +14,7 @@ public class CreateScheduledPreloadJobResponseBody extends TeaModel {
     public String aliUid;
 
     /**
-     * <p>The time when the task was created.</p>
+     * <p>The time the task was created.</p>
      * 
      * <strong>example:</strong>
      * <p>2023-06-05T10:04:20+0800</p>
@@ -23,7 +23,7 @@ public class CreateScheduledPreloadJobResponseBody extends TeaModel {
     public String createdAt;
 
     /**
-     * <p>The domain names to be prefetched.</p>
+     * <p>The list of domains to preload.</p>
      * 
      * <strong>example:</strong>
      * <p>testurl.com</p>
@@ -32,12 +32,16 @@ public class CreateScheduledPreloadJobResponseBody extends TeaModel {
     public String domains;
 
     /**
-     * <p>The error message. Multiple error messages are separated by commas (,). Valid values:</p>
+     * <p>The error message. Multiple error codes are separated by commas.</p>
      * <ul>
-     * <li><strong>InvalidUrl</strong>: The URL format is invalid.</li>
-     * <li><strong>InvalidDomain</strong>: The domain name fails the domain ownership verification.</li>
-     * <li><strong>QuotaExcess</strong>: the quota limit has been reached.</li>
-     * <li><strong>OtherErrors</strong>: other errors.</li>
+     * <li><p><strong>InvalidUrl</strong>: The URL format is invalid.</p>
+     * </li>
+     * <li><p><strong>InvalidDomain</strong>: Domain ownership verification failed.</p>
+     * </li>
+     * <li><p><strong>QuotaExcess</strong>: The quota is exceeded.</p>
+     * </li>
+     * <li><p><strong>OtherErrors</strong>: Other errors.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -47,7 +51,7 @@ public class CreateScheduledPreloadJobResponseBody extends TeaModel {
     public String errorInfo;
 
     /**
-     * <p>The URL of the OSS object that stores a list of URLs that failed the conditional check for prefetching.</p>
+     * <p>The OSS URL for the file that lists the failed URLs.</p>
      * 
      * <strong>example:</strong>
      * <p><a href="https://xxxobject.oss-cn-reginon.aliyuncs.com/9d91_xxxxxxxxxxx_158bb6e0f97c477791209bb46bd599f7">https://xxxobject.oss-cn-reginon.aliyuncs.com/9d91_xxxxxxxxxxx_158bb6e0f97c477791209bb46bd599f7</a></p>
@@ -56,7 +60,7 @@ public class CreateScheduledPreloadJobResponseBody extends TeaModel {
     public String failedFileOss;
 
     /**
-     * <p>The ID of the URL list file, which can be used during downloads.</p>
+     * <p>The ID of the file containing the list of URLs. Use this ID to download the file.</p>
      * 
      * <strong>example:</strong>
      * <p>665d3b48621bccf3fe29e1a7</p>
@@ -65,7 +69,7 @@ public class CreateScheduledPreloadJobResponseBody extends TeaModel {
     public String fileId;
 
     /**
-     * <p>The ID of the scheduled prefetch task.</p>
+     * <p>The task ID.</p>
      * 
      * <strong>example:</strong>
      * <p>665d3af3621bccf3fe29e1a4</p>
@@ -74,7 +78,7 @@ public class CreateScheduledPreloadJobResponseBody extends TeaModel {
     public String id;
 
     /**
-     * <p>The method to submit the URLs to be prefetched.</p>
+     * <p>The URL submission method.</p>
      * 
      * <strong>example:</strong>
      * <p>oss</p>
@@ -101,7 +105,7 @@ public class CreateScheduledPreloadJobResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The website ID.</p>
+     * <p>The site ID.</p>
      * 
      * <strong>example:</strong>
      * <p>190007158391808</p>
@@ -110,7 +114,7 @@ public class CreateScheduledPreloadJobResponseBody extends TeaModel {
     public Long siteId;
 
     /**
-     * <p>The number of submitted prefetch tasks.</p>
+     * <p>The number of tasks submitted. A value of 1 indicates that the task was created.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -119,7 +123,7 @@ public class CreateScheduledPreloadJobResponseBody extends TeaModel {
     public Integer taskSubmitted;
 
     /**
-     * <p>The task type (refresh or preload).</p>
+     * <p>The task type. Valid values are refresh or preload.</p>
      * 
      * <strong>example:</strong>
      * <p>preload</p>
@@ -128,7 +132,7 @@ public class CreateScheduledPreloadJobResponseBody extends TeaModel {
     public String taskType;
 
     /**
-     * <p>The total number of URLs.</p>
+     * <p>The total number of URLs provided in the request.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>
@@ -137,7 +141,7 @@ public class CreateScheduledPreloadJobResponseBody extends TeaModel {
     public Integer urlCount;
 
     /**
-     * <p>The number of submitted URLs.</p>
+     * <p>The number of URLs accepted for preloading.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>

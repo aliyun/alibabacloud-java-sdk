@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreatePageShrinkRequest extends TeaModel {
     /**
-     * <p>The Base64-encoded page content. Example: &quot;PGh0bWw+aGVsbG8gcGFnZTwvaHRtbD4=&quot;, which indicates &quot;hello page&quot;.</p>
+     * <p>The page content, which must be provided in BASE64 encoding. For example, the value PGh0bWw+aGVsbG8gcGFnZTwvaHRtbD4= decodes to \<html>hello page\</html>.</p>
      * 
      * <strong>example:</strong>
      * <p>PGh0bWw+aGVsbG8gcGFnZTwvaHRtbD4=</p>
@@ -14,10 +14,12 @@ public class CreatePageShrinkRequest extends TeaModel {
     public String content;
 
     /**
-     * <p>The Content-Type field in the HTTP header. Valid values:</p>
+     * <p>The <code>Content-Type</code> HTTP header. Examples:</p>
      * <ul>
-     * <li>text/html</li>
-     * <li>application/json</li>
+     * <li><p>text/html</p>
+     * </li>
+     * <li><p>application/json</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

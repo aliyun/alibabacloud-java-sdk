@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListDDoSInstancesRequest extends TeaModel {
     /**
+     * <p>Instance ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>esa-ddos-b1e0l80ugfeo</p>
      */
@@ -12,6 +14,8 @@ public class ListDDoSInstancesRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>Page number. Default: <strong>1</strong>.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -19,6 +23,8 @@ public class ListDDoSInstancesRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>Number of entries per page. Default: 20. Maximum: 500. Valid values: integers from 1 to 500.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -26,6 +32,8 @@ public class ListDDoSInstancesRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>Associated site package instance ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>esa-site-a71k7bw1adf</p>
      */
@@ -33,6 +41,11 @@ public class ListDDoSInstancesRequest extends TeaModel {
     public String siteInstanceId;
 
     /**
+     * <p>Sort field. Default: CreateTime.</p>
+     * <ul>
+     * <li><strong>CreateTime</strong>: Time when the instance was purchased.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>CreateTime</p>
      */
@@ -40,6 +53,14 @@ public class ListDDoSInstancesRequest extends TeaModel {
     public String sortBy;
 
     /**
+     * <p>Sort order:</p>
+     * <ul>
+     * <li><p>asc: ascending.</p>
+     * </li>
+     * <li><p>desc: descending.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>asc</p>
      */
@@ -47,6 +68,8 @@ public class ListDDoSInstancesRequest extends TeaModel {
     public String sortOrder;
 
     /**
+     * <p>Instance status.</p>
+     * 
      * <strong>example:</strong>
      * <p>online</p>
      */

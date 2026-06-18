@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class SetCertificateRequest extends TeaModel {
     /**
-     * <p>The certificate ID on Certificate Management Service.</p>
+     * <p>The cloud certificate ID. This parameter is required when Type is set to cas.</p>
      * 
      * <strong>example:</strong>
      * <p>30000478</p>
@@ -14,7 +14,7 @@ public class SetCertificateRequest extends TeaModel {
     public Long casId;
 
     /**
-     * <p>The certificate content.</p>
+     * <p>The certificate content. This parameter is required when Type is set to upload.</p>
      * 
      * <strong>example:</strong>
      * <p>-----BEGIN CERTIFICATE-----</p>
@@ -23,19 +23,25 @@ public class SetCertificateRequest extends TeaModel {
     public String certificate;
 
     /**
-     * <p>The certificate ID on ESA.</p>
+     * <p>The certificate ID. Certificates of the free type (created by calling the ApplyCertificate operation) are not supported. Certificates of the cas and upload types are supported.</p>
      * 
      * <strong>example:</strong>
-     * <p>30001303</p>
+     * <p>babae7c40fef412d887688b91c9e****</p>
      */
     @NameInMap("Id")
     public String id;
 
+    /**
+     * <p>The keyless server ID. This parameter takes effect only when Type is set to keyless.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1233112****</p>
+     */
     @NameInMap("KeyServerId")
     public String keyServerId;
 
     /**
-     * <p>The certificate name.</p>
+     * <p>The certificate name. This parameter is required when Type is set to upload.</p>
      * 
      * <strong>example:</strong>
      * <p>yourCertName</p>
@@ -44,7 +50,7 @@ public class SetCertificateRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The private key of the certificate.</p>
+     * <p>The certificate private key. This parameter is required when Type is set to upload.</p>
      * 
      * <strong>example:</strong>
      * <p>-----BEGIN PRIVATE KEY-----</p>
@@ -53,7 +59,13 @@ public class SetCertificateRequest extends TeaModel {
     public String privateKey;
 
     /**
-     * <p>The region.</p>
+     * <p>The region. This parameter is required when Type is set to cas. Valid values:</p>
+     * <ul>
+     * <li><p>China site accounts: cn-hangzhou.</p>
+     * </li>
+     * <li><p>International site accounts: ap-southeast-1.</p>
+     * </li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -65,7 +77,7 @@ public class SetCertificateRequest extends TeaModel {
     public String securityToken;
 
     /**
-     * <p>The website ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation.</p>
+     * <p>The site ID. You can call the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation to obtain the site ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -77,8 +89,12 @@ public class SetCertificateRequest extends TeaModel {
     /**
      * <p>The certificate type. Valid values:</p>
      * <ul>
-     * <li>cas: a certificate purchased by using Certificate Management Service.</li>
-     * <li>upload: a custom certificate that you upload.</li>
+     * <li><p><strong>cas</strong>: certificate from SSL Certificates Service.</p>
+     * </li>
+     * <li><p><strong>upload</strong>: custom uploaded certificate.</p>
+     * </li>
+     * <li><p><strong>keyless</strong>: keyless certificate.</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

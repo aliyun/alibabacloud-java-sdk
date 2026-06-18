@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class BatchGetExpressionFieldsShrinkRequest extends TeaModel {
     /**
-     * <p>List of expressions.</p>
+     * <p>A list of expression objects to process.</p>
      * 
      * <strong>example:</strong>
      * <p>http_bot</p>
@@ -20,7 +20,7 @@ public class BatchGetExpressionFieldsShrinkRequest extends TeaModel {
     public String kind;
 
     /**
-     * <p>WAF Phase</p>
+     * <p>The WAF phase.</p>
      * 
      * <strong>example:</strong>
      * <p>http_bot</p>
@@ -32,7 +32,7 @@ public class BatchGetExpressionFieldsShrinkRequest extends TeaModel {
     public String planNameEn;
 
     /**
-     * <p>Site ID</p>
+     * <p>The ID of the site.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>

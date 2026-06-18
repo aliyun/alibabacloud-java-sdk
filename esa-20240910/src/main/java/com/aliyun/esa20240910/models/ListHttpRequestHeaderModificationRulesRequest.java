@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListHttpRequestHeaderModificationRulesRequest extends TeaModel {
     /**
-     * <p>Configuration ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2867483.html">ListHttpRequestHeaderModificationRules</a> API.</p>
+     * <p>The configuration ID. You can get this ID by calling the <a href="https://help.aliyun.com/document_detail/2867483.html">ListHttpRequestHeaderModificationRules</a> operation.</p>
      * 
      * <strong>example:</strong>
      * <p>35281609698****</p>
@@ -14,10 +14,12 @@ public class ListHttpRequestHeaderModificationRulesRequest extends TeaModel {
     public Long configId;
 
     /**
-     * <p>Configuration type, which can be used to query global or rule configurations. Possible values:</p>
+     * <p>The type of configuration to query. Valid values:</p>
      * <ul>
-     * <li>global: Query global configuration;</li>
-     * <li>rule: Query rule configuration;</li>
+     * <li><p><code>global</code>: The global configuration.</p>
+     * </li>
+     * <li><p><code>rule</code>: A rule configuration.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -27,7 +29,7 @@ public class ListHttpRequestHeaderModificationRulesRequest extends TeaModel {
     public String configType;
 
     /**
-     * <p>Page number, defaulting to 1 if not provided.</p>
+     * <p>The page number. If you do not set this parameter, 1 is used.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -36,7 +38,7 @@ public class ListHttpRequestHeaderModificationRulesRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>Number of items per page, with a maximum of 500. Defaults to 500 if not provided.</p>
+     * <p>The number of entries per page. Maximum value: 500. If you do not set this parameter, 500 is used.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -45,7 +47,7 @@ public class ListHttpRequestHeaderModificationRulesRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>Rule name. This parameter is not required when adding a global configuration.</p>
+     * <p>The rule name. You do not need to set this parameter when you add a global configuration.</p>
      * 
      * <strong>example:</strong>
      * <p>rule_example</p>
@@ -54,7 +56,7 @@ public class ListHttpRequestHeaderModificationRulesRequest extends TeaModel {
     public String ruleName;
 
     /**
-     * <p>Site ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> API.</p>
+     * <p>The site ID. You can get this value by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -64,7 +66,7 @@ public class ListHttpRequestHeaderModificationRulesRequest extends TeaModel {
     public Long siteId;
 
     /**
-     * <p>Version number of the site configuration. For sites with version management enabled, you can use this parameter to specify the effective version of the configuration, defaulting to version 0.</p>
+     * <p>The version number of the site configuration. For sites that have configuration version management enabled, you can use this parameter to specify the site version for which the configuration takes effect. The default value is 0.</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>

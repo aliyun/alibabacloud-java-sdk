@@ -5,14 +5,14 @@ import com.aliyun.tea.*;
 
 public class BatchDeleteKvShrinkRequest extends TeaModel {
     /**
-     * <p>The keys that you want to delete. You can delete a maximum of 10,000 key-value pairs at a time.</p>
+     * <p>List of keys to delete in bulk. You can delete up to 10,000 keys.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Keys")
     public String keysShrink;
 
     /**
-     * <p>The name of the namespace that you specify when you call the <a href="https://help.aliyun.com/document_detail/2850317.html">CreateKvNamespace</a> operation.</p>
+     * <p>Name specified when you call <a href="https://help.aliyun.com/document_detail/2850317.html">CreateKvNamespace</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

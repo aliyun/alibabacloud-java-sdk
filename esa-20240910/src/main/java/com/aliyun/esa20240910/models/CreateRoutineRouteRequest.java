@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class CreateRoutineRouteRequest extends TeaModel {
     /**
-     * <p>Bypass mode Valid values:</p>
+     * <p>The bypass mode. Valid values:</p>
      * <ul>
-     * <li>on</li>
-     * <li>off</li>
+     * <li>on: enabled.</li>
+     * <li>off: disabled.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,10 +18,10 @@ public class CreateRoutineRouteRequest extends TeaModel {
     public String bypass;
 
     /**
-     * <p>The exception origin fetch switch. After you turn on this switch, if a function exception occurs, such as CPU usage exceeding the upper limit, requests are sent back to the origin. Valid values:</p>
+     * <p>The fallback-to-origin switch. When enabled, if the function encounters an exception such as CPU usage exceeding the limit, the request is forwarded to the origin server. Valid values:</p>
      * <ul>
-     * <li>on</li>
-     * <li>off</li>
+     * <li>on: enabled.</li>
+     * <li>off: disabled.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -31,10 +31,10 @@ public class CreateRoutineRouteRequest extends TeaModel {
     public String fallback;
 
     /**
-     * <p>The routing switch. Valid values:</p>
+     * <p>The route switch. Valid values:</p>
      * <ul>
-     * <li>on</li>
-     * <li>off</li>
+     * <li>on: enabled.</li>
+     * <li>off: disabled.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -44,7 +44,7 @@ public class CreateRoutineRouteRequest extends TeaModel {
     public String routeEnable;
 
     /**
-     * <p>The name of the route.</p>
+     * <p>The route name.</p>
      * 
      * <strong>example:</strong>
      * <p>test_route</p>
@@ -53,7 +53,7 @@ public class CreateRoutineRouteRequest extends TeaModel {
     public String routeName;
 
     /**
-     * <p>The edge function name.</p>
+     * <p>The name of the edge function routine.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -63,7 +63,7 @@ public class CreateRoutineRouteRequest extends TeaModel {
     public String routineName;
 
     /**
-     * <p>The content of the rule.</p>
+     * <p>The rule content.</p>
      * 
      * <strong>example:</strong>
      * <p>(http.host eq \&quot;video.example.com\&quot;)</p>
@@ -72,7 +72,7 @@ public class CreateRoutineRouteRequest extends TeaModel {
     public String rule;
 
     /**
-     * <p>The order in which the rule is executed.</p>
+     * <p>The rule execution sequence.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -81,7 +81,7 @@ public class CreateRoutineRouteRequest extends TeaModel {
     public Integer sequence;
 
     /**
-     * <p>The website ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation.</p>
+     * <p>The site ID. You can call the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation to obtain the site ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -91,6 +91,8 @@ public class CreateRoutineRouteRequest extends TeaModel {
     public Long siteId;
 
     /**
+     * <p>The edge routine timeout period. Valid values: 5 to 60. Unit: seconds.</p>
+     * 
      * <strong>example:</strong>
      * <p>5</p>
      */

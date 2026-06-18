@@ -14,7 +14,7 @@ public class CreateRoutineResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the operation is successful.</p>
+     * <p>The result of the operation. A value of <code>OK</code> indicates the request succeeded.</p>
      * 
      * <strong>example:</strong>
      * <p>OK</p>

@@ -13,6 +13,12 @@ public class CreateWaitingRoomResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The waiting room ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>8527e8405ac25bfb7fb7ca0d12b0ed83</p>
+     */
     @NameInMap("WaitingRoomId")
     public String waitingRoomId;
 

@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetCustomResponseCodeRuleRequest extends TeaModel {
     /**
+     * <p>Configuration ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class GetCustomResponseCodeRuleRequest extends TeaModel {
     public Long configId;
 
     /**
+     * <p>Site ID. For more information, see <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

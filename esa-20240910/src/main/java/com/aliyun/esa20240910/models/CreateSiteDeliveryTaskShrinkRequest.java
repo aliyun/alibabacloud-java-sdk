@@ -5,12 +5,16 @@ import com.aliyun.tea.*;
 
 public class CreateSiteDeliveryTaskShrinkRequest extends TeaModel {
     /**
-     * <p>The log category. Valid values:</p>
+     * <p>The business type. Valid values:</p>
      * <ul>
-     * <li><strong>dcdn_log_access_l1</strong> (default): access logs.</li>
-     * <li><strong>dcdn_log_er</strong>: Edge Routine logs.</li>
-     * <li><strong>dcdn_log_waf</strong>: firewall logs.</li>
-     * <li><strong>dcdn_log_ipa</strong>: TCP/UDP proxy logs.</li>
+     * <li><p><strong>dcdn_log_access_l1</strong> (default): access log.</p>
+     * </li>
+     * <li><p><strong>dcdn_log_er</strong>: edge function log.</p>
+     * </li>
+     * <li><p><strong>dcdn_log_waf</strong>: WAF protection log.</p>
+     * </li>
+     * <li><p><strong>dcdn_log_ipa</strong>: Layer-4 acceleration log.</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -23,8 +27,10 @@ public class CreateSiteDeliveryTaskShrinkRequest extends TeaModel {
     /**
      * <p>The data center. Valid values:</p>
      * <ul>
-     * <li>cn: the Chinese mainland.</li>
-     * <li>oversea: outside the Chinese mainland.</li>
+     * <li><p><strong>cn</strong>: Chinese mainland.</p>
+     * </li>
+     * <li><p><strong>oversea</strong>: regions outside the Chinese mainland.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -34,14 +40,20 @@ public class CreateSiteDeliveryTaskShrinkRequest extends TeaModel {
     public String dataCenter;
 
     /**
-     * <p>The destination of the delivery. Valid values:</p>
+     * <p>The type of the delivery destination. Valid values:</p>
      * <ul>
-     * <li>sls: Alibaba Cloud Simple Log Service (SLS).</li>
-     * <li>http: HTTP server.</li>
-     * <li>aws3: Amazon Simple Storage Service (S3).</li>
-     * <li>oss: Alibaba Cloud Object Storage Service (OSS).</li>
-     * <li>kafka: Kafka.</li>
-     * <li>aws3cmpt: S3-compatible storage service.</li>
+     * <li><p><strong>sls</strong>: Log Service.</p>
+     * </li>
+     * <li><p><strong>http</strong>: an HTTP service.</p>
+     * </li>
+     * <li><p><strong>aws3</strong>: Amazon S3.</p>
+     * </li>
+     * <li><p><strong>oss</strong>: Object Storage Service.</p>
+     * </li>
+     * <li><p><strong>kafka</strong>: a Kafka service.</p>
+     * </li>
+     * <li><p><strong>aws3cmpt</strong>: an Amazon S3-compatible service.</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -52,7 +64,7 @@ public class CreateSiteDeliveryTaskShrinkRequest extends TeaModel {
     public String deliveryType;
 
     /**
-     * <p>The discard rate. Default value: 0.</p>
+     * <p>The discard rate. If you do not specify this parameter, the default value 0 is used.</p>
      * 
      * <strong>example:</strong>
      * <p>0.0</p>
@@ -61,7 +73,7 @@ public class CreateSiteDeliveryTaskShrinkRequest extends TeaModel {
     public Float discardRate;
 
     /**
-     * <p>The log fields, which are separated by commas (,).</p>
+     * <p>The log fields for delivery. Separate multiple fields with a comma (,).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -74,31 +86,31 @@ public class CreateSiteDeliveryTaskShrinkRequest extends TeaModel {
     public String filterVer;
 
     /**
-     * <p>The configurations for delivery to an HTTP server.</p>
+     * <p>The parameters for delivering logs to an HTTP server.</p>
      */
     @NameInMap("HttpDelivery")
     public String httpDeliveryShrink;
 
     /**
-     * <p>The configurations for delivery to Kafka.</p>
+     * <p>The parameters for delivering logs to a Kafka cluster.</p>
      */
     @NameInMap("KafkaDelivery")
     public String kafkaDeliveryShrink;
 
     /**
-     * <p>The configurations for delivery to OSS.</p>
+     * <p>The parameters for delivering logs to Object Storage Service (OSS).</p>
      */
     @NameInMap("OssDelivery")
     public String ossDeliveryShrink;
 
     /**
-     * <p>The configurations for delivery to Amazon S3 or an S3-compatible service.</p>
+     * <p>The parameters for delivering logs to an Amazon S3 bucket or an S3-compatible service.</p>
      */
     @NameInMap("S3Delivery")
     public String s3DeliveryShrink;
 
     /**
-     * <p>The website ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation.</p>
+     * <p>The ID of the site. You can call the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation to obtain the ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -108,13 +120,13 @@ public class CreateSiteDeliveryTaskShrinkRequest extends TeaModel {
     public Long siteId;
 
     /**
-     * <p>The configurations for delivery to SLS.</p>
+     * <p>The parameters for delivering logs to Log Service.</p>
      */
     @NameInMap("SlsDelivery")
     public String slsDeliveryShrink;
 
     /**
-     * <p>The name of the delivery task.</p>
+     * <p>The task name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

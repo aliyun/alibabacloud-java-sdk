@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListScheduledPreloadJobsRequest extends TeaModel {
     /**
-     * <p>The end time for querying the task creation time range. Specify the timestamp in milliseconds.</p>
+     * <p>End of the time range for querying job creation time, in milliseconds since the UNIX epoch.</p>
      * 
      * <strong>example:</strong>
      * <p>1717225277000</p>
@@ -14,7 +14,7 @@ public class ListScheduledPreloadJobsRequest extends TeaModel {
     public Long endTime;
 
     /**
-     * <p>The page number.</p>
+     * <p>Page number to retrieve.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -23,7 +23,7 @@ public class ListScheduledPreloadJobsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page.</p>
+     * <p>Number of entries per page.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -32,17 +32,17 @@ public class ListScheduledPreloadJobsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The website ID.</p>
+     * <p>Site ID</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>ListScheduledPreloadJobs</p>
+     * <p>190007158391808</p>
      */
     @NameInMap("SiteId")
     public Long siteId;
 
     /**
-     * <p>The beginning of the task creation time range to query. Specify the timestamp in milliseconds.</p>
+     * <p>Start of the time range for querying job creation time, in milliseconds since the UNIX epoch.</p>
      * 
      * <strong>example:</strong>
      * <p>1717225276000</p>

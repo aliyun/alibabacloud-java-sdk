@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateHttpIncomingRequestHeaderModificationRuleRequest extends TeaModel {
     /**
-     * <p>The configuration ID. You can call the ListHttpIncomingRequestHeaderModificationRules operation to query the ID.</p>
+     * <p>The ID of the configuration. To obtain this ID, call the ListHttpIncomingRequestHeaderModificationRules API.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,16 +15,18 @@ public class UpdateHttpIncomingRequestHeaderModificationRuleRequest extends TeaM
     public Long configId;
 
     /**
-     * <p>The configurations of modifying request headers. You can add, delete, or modify a request header.</p>
+     * <p>An array of objects that defines the request header modifications. Supported operations include <code>add</code>, <code>del</code>, and <code>modify</code>.</p>
      */
     @NameInMap("RequestHeaderModification")
     public java.util.List<UpdateHttpIncomingRequestHeaderModificationRuleRequestRequestHeaderModification> requestHeaderModification;
 
     /**
-     * <p>The content of the rule. A conditional expression is used to match a user request. You do not need to set this parameter when you add global configurations. Use cases:</p>
+     * <p>The rule expression, a conditional expression that matches user requests. This parameter is not required for a global configuration. You can use this parameter in two ways:</p>
      * <ul>
-     * <li>true: Match all incoming requests.</li>
-     * <li>Set the value to a custom expression, for example, (http.host eq &quot;video.example.com&quot;): Match the specified request.</li>
+     * <li><p>To match all incoming requests, set this value to <code>true</code>.</p>
+     * </li>
+     * <li><p>To match specific requests, provide a custom expression, such as <code>(http.host eq &quot;video.example.com&quot;)</code>.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -34,10 +36,12 @@ public class UpdateHttpIncomingRequestHeaderModificationRuleRequest extends TeaM
     public String rule;
 
     /**
-     * <p>Specifies whether to enable the rule. Valid values: You do not need to set this parameter when you add global configurations. Valid values:</p>
+     * <p>The status of the rule. This parameter is not required for a global configuration. Valid values:</p>
      * <ul>
-     * <li>on</li>
-     * <li>off</li>
+     * <li><p><code>on</code>: The rule is enabled.</p>
+     * </li>
+     * <li><p><code>off</code>: The rule is disabled.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -47,7 +51,7 @@ public class UpdateHttpIncomingRequestHeaderModificationRuleRequest extends TeaM
     public String ruleEnable;
 
     /**
-     * <p>The rule name. You do not need to set this parameter when you add global configurations.</p>
+     * <p>The name of the rule. This parameter is not required for a global configuration.</p>
      * 
      * <strong>example:</strong>
      * <p>rule_example</p>
@@ -56,7 +60,7 @@ public class UpdateHttpIncomingRequestHeaderModificationRuleRequest extends TeaM
     public String ruleName;
 
     /**
-     * <p>The order in which the rule is executed. A smaller value gives priority to the rule.</p>
+     * <p>Specifies the rule\&quot;s priority. Rules with a lower value are executed first.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -65,7 +69,7 @@ public class UpdateHttpIncomingRequestHeaderModificationRuleRequest extends TeaM
     public Integer sequence;
 
     /**
-     * <p>The website ID, which can be obtained by calling the <a href="~~ListSites~~">ListSites</a> operation.</p>
+     * <p>The ID of the site. To obtain this ID, call the <a href="~~ListSites~~">ListSites</a> API.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -147,11 +151,14 @@ public class UpdateHttpIncomingRequestHeaderModificationRuleRequest extends TeaM
         public String name;
 
         /**
-         * <p>The action. Valid values:</p>
+         * <p>The operation to perform on the request header. Valid values:</p>
          * <ul>
-         * <li>add: adds a response header.</li>
-         * <li>del: deletes a response header.</li>
-         * <li>modify: modifies a response header.</li>
+         * <li><p><code>add</code>: Adds a request header.</p>
+         * </li>
+         * <li><p><code>del</code>: Deletes a request header.</p>
+         * </li>
+         * <li><p><code>modify</code>: Modifies an existing request header.</p>
+         * </li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -162,10 +169,12 @@ public class UpdateHttpIncomingRequestHeaderModificationRuleRequest extends TeaM
         public String operation;
 
         /**
-         * <p>The value type. Valid values:</p>
+         * <p>The type of value. Valid values:</p>
          * <ul>
-         * <li>static</li>
-         * <li>dynamic</li>
+         * <li><p><code>static</code>: The value is a fixed, literal string.</p>
+         * </li>
+         * <li><p><code>dynamic</code>: The value is generated dynamically at runtime.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

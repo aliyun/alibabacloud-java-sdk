@@ -4,20 +4,30 @@ package com.aliyun.esa20240910.models;
 import com.aliyun.tea.*;
 
 public class WafTimer extends TeaModel {
+    /**
+     * <p>生效时间段。</p>
+     */
     @NameInMap("Periods")
     public java.util.List<WafTimerPeriods> periods;
 
     /**
+     * <p>定时类型：永久生效（permanent/&lt;空&gt;）/时间段生效（periods）/weekly（周期生效）。</p>
+     * 
      * <strong>example:</strong>
      * <p>permanent</p>
      */
     @NameInMap("Scopes")
     public String scopes;
 
+    /**
+     * <p>每周生效时间段。</p>
+     */
     @NameInMap("WeeklyPeriods")
     public java.util.List<WafTimerWeeklyPeriods> weeklyPeriods;
 
     /**
+     * <p>时区，不填则默认为UTC+00:00。<br>例：8表示东8区，-8表示西8区<br>范围：-12 - +14。</p>
+     * 
      * <strong>example:</strong>
      * <p>8</p>
      */
@@ -63,6 +73,8 @@ public class WafTimer extends TeaModel {
 
     public static class WafTimerPeriods extends TeaModel {
         /**
+         * <p>结束时间，值为RFC3339格式的UTC时间。</p>
+         * 
          * <strong>example:</strong>
          * <p>2025-01-01T01:00:00Z</p>
          */
@@ -70,6 +82,8 @@ public class WafTimer extends TeaModel {
         public String end;
 
         /**
+         * <p>起始时间，值为RFC3339格式的UTC时间。</p>
+         * 
          * <strong>example:</strong>
          * <p>2025-01-01T00:00:00Z</p>
          */
@@ -101,6 +115,8 @@ public class WafTimer extends TeaModel {
 
     public static class WafTimerWeeklyPeriodsDailyPeriods extends TeaModel {
         /**
+         * <p>结束时间，格式为HH:mm:ss。</p>
+         * 
          * <strong>example:</strong>
          * <p>01:00:00</p>
          */
@@ -108,6 +124,8 @@ public class WafTimer extends TeaModel {
         public String end;
 
         /**
+         * <p>起始时间，格式为HH:mm:ss。</p>
+         * 
          * <strong>example:</strong>
          * <p>00:00:00</p>
          */
@@ -138,10 +156,15 @@ public class WafTimer extends TeaModel {
     }
 
     public static class WafTimerWeeklyPeriods extends TeaModel {
+        /**
+         * <p>该周期内的生效时间。</p>
+         */
         @NameInMap("DailyPeriods")
         public java.util.List<WafTimerWeeklyPeriodsDailyPeriods> dailyPeriods;
 
         /**
+         * <p>周期，多个使用逗号分隔，1-7分别代表周一-周日。<br>例：周一，周三值为&quot;1,3&quot;。</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */

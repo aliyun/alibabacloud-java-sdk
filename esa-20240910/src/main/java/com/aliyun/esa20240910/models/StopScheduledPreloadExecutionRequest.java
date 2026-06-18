@@ -5,11 +5,11 @@ import com.aliyun.tea.*;
 
 public class StopScheduledPreloadExecutionRequest extends TeaModel {
     /**
-     * <p>The ID of the prefetch plan.</p>
+     * <p>The prefetch plan ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>StopScheduledPreloadExecution</p>
+     * <p>66599bd7397885b43804901c</p>
      */
     @NameInMap("Id")
     public String id;

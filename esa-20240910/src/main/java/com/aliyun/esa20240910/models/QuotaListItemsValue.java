@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class QuotaListItemsValue extends TeaModel {
     /**
-     * <p>The switch for the type of item in the custom list.</p>
+     * <p>Whether the item type is enabled.</p>
      */
     @NameInMap("Enable")
     public Boolean enable;
 
     /**
-     * <p>Format restrictions for the type of item in the custom list.</p>
+     * <p>The format constraints for the item type.</p>
      */
     @NameInMap("Value")
     public WafQuotaString value;

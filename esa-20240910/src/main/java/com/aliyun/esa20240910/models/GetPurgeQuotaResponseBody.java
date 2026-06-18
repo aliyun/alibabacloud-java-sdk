@@ -13,6 +13,12 @@ public class GetPurgeQuotaResponseBody extends TeaModel {
     @NameInMap("Quota")
     public String quota;
 
+    /**
+     * <p>The total quota available in a 30-day period. A value of 0 indicates that this quota is not configured.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200000</p>
+     */
     @NameInMap("Quota30Day")
     public String quota30Day;
 
@@ -26,7 +32,7 @@ public class GetPurgeQuotaResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The quota usage.</p>
+     * <p>The used quota.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -34,6 +40,12 @@ public class GetPurgeQuotaResponseBody extends TeaModel {
     @NameInMap("Usage")
     public String usage;
 
+    /**
+     * <p>The quota used within the 30-day period.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
+     */
     @NameInMap("Usage30Day")
     public String usage30Day;
 

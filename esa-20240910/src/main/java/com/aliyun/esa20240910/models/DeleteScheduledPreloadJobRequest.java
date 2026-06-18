@@ -5,11 +5,11 @@ import com.aliyun.tea.*;
 
 public class DeleteScheduledPreloadJobRequest extends TeaModel {
     /**
-     * <p>The ID of the scheduled prefetch task.</p>
+     * <p>The scheduled preload job ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>DeleteScheduledPreloadJob</p>
+     * <p>665d3af3621bccf3fe29e1a4</p>
      */
     @NameInMap("Id")
     public String id;
