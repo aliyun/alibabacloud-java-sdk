@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateTaskResponseBody extends TeaModel {
     /**
+     * <p>Request status code. A return value of &quot;OK&quot; indicates that the request succeeded.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
@@ -12,13 +14,17 @@ public class CreateTaskResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>Unique job ID of the robot outbound calling task.</p>
+     * 
      * <strong>example:</strong>
-     * <p>123456</p>
+     * <p>12****</p>
      */
     @NameInMap("Data")
     public Long data;
 
     /**
+     * <p>Description of the status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
@@ -26,6 +32,8 @@ public class CreateTaskResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>EE338D98-9BD3-4413-B165</p>
      */
@@ -33,6 +41,12 @@ public class CreateTaskResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the API call succeeded.  </p>
+     * <ul>
+     * <li><strong>true</strong>: Succeeded.  </li>
+     * <li><strong>false</strong>: Failed.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

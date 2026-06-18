@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetCallSoundRecordResponseBody extends TeaModel {
     /**
+     * <p>Request status code. A return value of OK indicates that the request succeeded.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
@@ -12,6 +14,8 @@ public class GetCallSoundRecordResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>URL of the call recording file.</p>
+     * 
      * <strong>example:</strong>
      * <p><a href="http://aliccrec-shvpc.oss-cn-shanghai.aliyuncs.com/accrec_tmp/1001067****.wav">http://aliccrec-shvpc.oss-cn-shanghai.aliyuncs.com/accrec_tmp/1001067****.wav</a></p>
      */
@@ -19,6 +23,8 @@ public class GetCallSoundRecordResponseBody extends TeaModel {
     public String data;
 
     /**
+     * <p>Description of the status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
@@ -26,6 +32,8 @@ public class GetCallSoundRecordResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>D9CB3933-9FE3-4870-BA8E-2BEE91B69D23</p>
      */
@@ -33,6 +41,12 @@ public class GetCallSoundRecordResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the API invocation succeeded. Valid values:</p>
+     * <ul>
+     * <li><strong>true</strong>: Succeeded.</li>
+     * <li><strong>false</strong>: Failed.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

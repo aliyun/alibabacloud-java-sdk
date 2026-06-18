@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class GetAiOutboundTaskBizDataResponseBody extends TeaModel {
     /**
+     * <p>The status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The business information associated with this call.</p>
+     */
     @NameInMap("Data")
     public GetAiOutboundTaskBizDataResponseBodyData data;
 
     /**
+     * <p>Description of the status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
@@ -22,6 +29,8 @@ public class GetAiOutboundTaskBizDataResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>EE338D98-9BD3-4413-B165</p>
      */
@@ -29,6 +38,12 @@ public class GetAiOutboundTaskBizDataResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the API call succeeded.</p>
+     * <ul>
+     * <li><strong>true</strong>: Succeeded.</li>
+     * <li><strong>false</strong>: Failed.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -82,6 +97,8 @@ public class GetAiOutboundTaskBizDataResponseBody extends TeaModel {
 
     public static class GetAiOutboundTaskBizDataResponseBodyData extends TeaModel {
         /**
+         * <p>Custom business information.</p>
+         * 
          * <strong>example:</strong>
          * <p>{&quot;customer&quot;:123}</p>
          */
@@ -89,6 +106,8 @@ public class GetAiOutboundTaskBizDataResponseBody extends TeaModel {
         public String bizData;
 
         /**
+         * <p>The Activity ID associated with this outbound call.</p>
+         * 
          * <strong>example:</strong>
          * <p>123</p>
          */
@@ -96,6 +115,8 @@ public class GetAiOutboundTaskBizDataResponseBody extends TeaModel {
         public Long caseId;
 
         /**
+         * <p>The outbound phone number.</p>
+         * 
          * <strong>example:</strong>
          * <p>158****0000</p>
          */
@@ -103,6 +124,8 @@ public class GetAiOutboundTaskBizDataResponseBody extends TeaModel {
         public String phoneNum;
 
         /**
+         * <p>The job ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>123456</p>
          */

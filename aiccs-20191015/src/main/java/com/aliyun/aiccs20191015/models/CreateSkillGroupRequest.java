@@ -5,6 +5,12 @@ import com.aliyun.tea.*;
 
 public class CreateSkillGroupRequest extends TeaModel {
     /**
+     * <p>Channel type of the skill group. Valid values:</p>
+     * <ul>
+     * <li><strong>1</strong>: Hotline.</li>
+     * <li><strong>2</strong>: Online.</li>
+     * <li><strong>3</strong>: Ticket.</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +20,8 @@ public class CreateSkillGroupRequest extends TeaModel {
     public Integer channelType;
 
     /**
+     * <p>Unique ID of the customer request. Used for idempotency validation. You can generate it using UUID.</p>
+     * 
      * <strong>example:</strong>
      * <p>46c1341e-2648-447a-****-70b6a298d94d</p>
      */
@@ -21,19 +29,34 @@ public class CreateSkillGroupRequest extends TeaModel {
     public String clientToken;
 
     /**
+     * <p>Department ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>123</p>
      */
     @NameInMap("DepartmentId")
     public Long departmentId;
 
+    /**
+     * <p>Skill group description.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>在线自动化技能组</p>
+     */
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <p>External display name of the skill group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>在线自动化技能组</p>
+     */
     @NameInMap("DisplayName")
     public String displayName;
 
     /**
+     * <p>Artificial Intelligence Cloud Call Service (AICCS) instance ID.<br>You can obtain it from <strong>Instance Management</strong> in the left-side navigation pane of the <a href="https://aiccs.console.aliyun.com/overview">Artificial Intelligence Cloud Call Service console</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -43,7 +66,11 @@ public class CreateSkillGroupRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>Skill group name.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>在线自动化技能组</p>
      */
     @NameInMap("SkillGroupName")
     public String skillGroupName;

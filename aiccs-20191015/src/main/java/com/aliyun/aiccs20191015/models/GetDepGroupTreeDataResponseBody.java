@@ -5,23 +5,32 @@ import com.aliyun.tea.*;
 
 public class GetDepGroupTreeDataResponseBody extends TeaModel {
     /**
+     * <p>The status code. A value of Success indicates that the request succeeded.</p>
+     * 
      * <strong>example:</strong>
      * <p>Success</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>Department information.</p>
+     */
     @NameInMap("Data")
     public java.util.List<GetDepGroupTreeDataResponseBodyData> data;
 
     /**
+     * <p>Description of the status code.</p>
+     * 
      * <strong>example:</strong>
-     * <p>xxxx</p>
+     * <p>successful</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>EE338D98-9BD3-4413-B165</p>
      */
@@ -29,6 +38,12 @@ public class GetDepGroupTreeDataResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the API call succeeded. Valid values:</p>
+     * <ul>
+     * <li><strong>true</strong>: Succeeded.</li>
+     * <li><strong>false</strong>: Failed.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -81,12 +96,20 @@ public class GetDepGroupTreeDataResponseBody extends TeaModel {
     }
 
     public static class GetDepGroupTreeDataResponseBodyDataGroupDTOS extends TeaModel {
+        /**
+         * <p>The name of the skill group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>自动化技能组</p>
+         */
         @NameInMap("Name")
         public String name;
 
         /**
+         * <p>The skill group ID.</p>
+         * 
          * <strong>example:</strong>
-         * <p>555555</p>
+         * <p>55****</p>
          */
         @NameInMap("SkillGroupId")
         public Long skillGroupId;
@@ -116,15 +139,26 @@ public class GetDepGroupTreeDataResponseBody extends TeaModel {
 
     public static class GetDepGroupTreeDataResponseBodyData extends TeaModel {
         /**
+         * <p>The department ID.</p>
+         * 
          * <strong>example:</strong>
-         * <p>10</p>
+         * <p>10****</p>
          */
         @NameInMap("DepGroupId")
         public String depGroupId;
 
+        /**
+         * <p>The department name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>部门A</p>
+         */
         @NameInMap("DepGroupName")
         public String depGroupName;
 
+        /**
+         * <p>Skill group data.</p>
+         */
         @NameInMap("GroupDTOS")
         public java.util.List<GetDepGroupTreeDataResponseBodyDataGroupDTOS> groupDTOS;
 

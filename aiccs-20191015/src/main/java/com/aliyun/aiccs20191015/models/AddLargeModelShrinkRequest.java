@@ -5,22 +5,22 @@ import com.aliyun.tea.*;
 
 public class AddLargeModelShrinkRequest extends TeaModel {
     /**
-     * <p>授权码</p>
+     * <p>The authorization code.</p>
      * 
      * <strong>example:</strong>
-     * <p>示例值</p>
+     * <p>sk-xxxxxxxxxxx*******xx</p>
      */
     @NameInMap("AuthCode")
     public String authCode;
 
     /**
-     * <p>基础模型</p>
+     * <p>The base model.</p>
      */
     @NameInMap("BaseModel")
     public String baseModelShrink;
 
     /**
-     * <p>模型名称</p>
+     * <p>The model name.</p>
      * 
      * <strong>example:</strong>
      * <p>Test Model Name</p>
@@ -29,10 +29,10 @@ public class AddLargeModelShrinkRequest extends TeaModel {
     public String modelName;
 
     /**
-     * <p>模型地址</p>
+     * <p>The model URL.</p>
      * 
      * <strong>example:</strong>
-     * <p>示例值示例值</p>
+     * <p><a href="https://xxxxxxxxxxx">https://xxxxxxxxxxx</a></p>
      */
     @NameInMap("ModelUrl")
     public String modelUrl;
@@ -47,28 +47,28 @@ public class AddLargeModelShrinkRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>温度</p>
+     * <p>The temperature.</p>
      * 
      * <strong>example:</strong>
-     * <p>16.46</p>
+     * <p>0.1</p>
      */
     @NameInMap("Temperature")
     public Double temperature;
 
     /**
-     * <p>topK</p>
+     * <p>The <code>top-k</code> value.</p>
      * 
      * <strong>example:</strong>
-     * <p>87</p>
+     * <p>1</p>
      */
     @NameInMap("TopK")
     public Long topK;
 
     /**
-     * <p>topP</p>
+     * <p>The <code>top-p</code> value.</p>
      * 
      * <strong>example:</strong>
-     * <p>73.64386</p>
+     * <p>0.1</p>
      */
     @NameInMap("TopP")
     public Double topP;

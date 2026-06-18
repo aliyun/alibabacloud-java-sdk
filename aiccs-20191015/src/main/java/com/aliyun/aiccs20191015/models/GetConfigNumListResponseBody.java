@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class GetConfigNumListResponseBody extends TeaModel {
     /**
+     * <p>The status code. A return value of &quot;Success&quot; indicates that the request succeeded.</p>
+     * 
      * <strong>example:</strong>
      * <p>Success</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The number list.</p>
+     */
     @NameInMap("Data")
     public java.util.List<String> data;
 
     /**
+     * <p>Description of the status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>xxxx</p>
      */
@@ -22,6 +29,8 @@ public class GetConfigNumListResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>EE339D98-9BD3-4413-B165</p>
      */
@@ -29,6 +38,8 @@ public class GetConfigNumListResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the API call succeeded.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

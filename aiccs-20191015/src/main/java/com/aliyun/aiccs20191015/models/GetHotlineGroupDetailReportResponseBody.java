@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class GetHotlineGroupDetailReportResponseBody extends TeaModel {
     /**
+     * <p>Status code. A return value of &quot;Success&quot; indicates that the request succeeded.</p>
+     * 
      * <strong>example:</strong>
      * <p>Success</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>Query result data.</p>
+     */
     @NameInMap("Data")
     public GetHotlineGroupDetailReportResponseBodyData data;
 
     /**
+     * <p>Description of the status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>successful</p>
      */
@@ -22,6 +29,8 @@ public class GetHotlineGroupDetailReportResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>EE338D98-9BD3-4413-B165</p>
      */
@@ -29,6 +38,12 @@ public class GetHotlineGroupDetailReportResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the API was invoked successfully. Valid values:</p>
+     * <ul>
+     * <li><strong>true</strong>: Succeeded.</li>
+     * <li><strong>false</strong>: Failed.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>Public</p>
      */
@@ -82,12 +97,20 @@ public class GetHotlineGroupDetailReportResponseBody extends TeaModel {
 
     public static class GetHotlineGroupDetailReportResponseBodyDataColumns extends TeaModel {
         /**
+         * <p>Metric.</p>
+         * 
          * <strong>example:</strong>
          * <p>skillGroupName</p>
          */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>Metric description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>技能组名称</p>
+         */
         @NameInMap("Title")
         public String title;
 
@@ -115,10 +138,15 @@ public class GetHotlineGroupDetailReportResponseBody extends TeaModel {
     }
 
     public static class GetHotlineGroupDetailReportResponseBodyData extends TeaModel {
+        /**
+         * <p>Description of returned columns.</p>
+         */
         @NameInMap("Columns")
         public java.util.List<GetHotlineGroupDetailReportResponseBodyDataColumns> columns;
 
         /**
+         * <p>Current page.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -126,16 +154,23 @@ public class GetHotlineGroupDetailReportResponseBody extends TeaModel {
         public Integer page;
 
         /**
+         * <p>Number of records per page.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
         @NameInMap("PageSize")
         public Integer pageSize;
 
+        /**
+         * <p>Returned data results.</p>
+         */
         @NameInMap("Rows")
         public java.util.List<java.util.Map<String, ?>> rows;
 
         /**
+         * <p>Total number of records.</p>
+         * 
          * <strong>example:</strong>
          * <p>9</p>
          */

@@ -4,20 +4,30 @@ package com.aliyun.aiccs20191015.models;
 import com.aliyun.tea.*;
 
 public class GetHotlineServiceStatisticsShrinkRequest extends TeaModel {
+    /**
+     * <p>List of agent IDs.</p>
+     */
     @NameInMap("AgentIds")
     public String agentIdsShrink;
 
     /**
+     * <p>Current page. The value must be greater than <strong>0</strong>. Default value: <strong>1</strong>.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
+    /**
+     * <p>List of department IDs.</p>
+     */
     @NameInMap("DepIds")
     public String depIdsShrink;
 
     /**
+     * <p>End Datetime Variable as a UNIX timestamp. Unit: milliseconds.</p>
+     * 
      * <strong>example:</strong>
      * <p>1617761765000</p>
      */
@@ -25,6 +35,12 @@ public class GetHotlineServiceStatisticsShrinkRequest extends TeaModel {
     public Long endDate;
 
     /**
+     * <p>Specifies whether to query by agent group. Valid values:  </p>
+     * <ul>
+     * <li><strong>true</strong>: Yes  </li>
+     * <li><strong>false</strong>: No</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -32,6 +48,12 @@ public class GetHotlineServiceStatisticsShrinkRequest extends TeaModel {
     public Boolean existAgentGrouping;
 
     /**
+     * <p>Specifies whether to query by department group. Valid values:  </p>
+     * <ul>
+     * <li><strong>true</strong>: Yes  </li>
+     * <li><strong>false</strong>: No</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -39,16 +61,26 @@ public class GetHotlineServiceStatisticsShrinkRequest extends TeaModel {
     public Boolean existDepartmentGrouping;
 
     /**
+     * <p>Indicates whether to query by skill group grouping. Valid values:</p>
+     * <ul>
+     * <li><strong>true</strong>: Yes.</li>
+     * <li><strong>false</strong>: No.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
     @NameInMap("ExistSkillGroupGrouping")
     public Boolean existSkillGroupGrouping;
 
+    /**
+     * <p>List of skill group IDs.</p>
+     */
     @NameInMap("GroupIds")
     public String groupIdsShrink;
 
     /**
+     * <p>AICCS instance ID.<br>You can obtain it from <strong>Instance Management</strong> in the left-side navigation pane of the <a href="https://aiccs.console.aliyun.com/overview">Artificial Intelligence Cloud Call Service console</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -58,6 +90,8 @@ public class GetHotlineServiceStatisticsShrinkRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>Page size. The value must be greater than <strong>0</strong>. Default value: <strong>20</strong>.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -65,6 +99,8 @@ public class GetHotlineServiceStatisticsShrinkRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>Start date UNIX timestamp. Unit: milliseconds.</p>
+     * 
      * <strong>example:</strong>
      * <p>1615083365000</p>
      */
@@ -72,6 +108,12 @@ public class GetHotlineServiceStatisticsShrinkRequest extends TeaModel {
     public Long startDate;
 
     /**
+     * <p>Time latitude type for grouped queries. Valid values:  </p>
+     * <ul>
+     * <li><strong>minute</strong>: minute  </li>
+     * <li><strong>hour</strong>: hour</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>minute</p>
      */

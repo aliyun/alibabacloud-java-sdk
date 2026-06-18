@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class GetSeatInformationResponseBody extends TeaModel {
     /**
+     * <p>Status code. A return value of 200 indicates that the request succeeded.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>Data list.</p>
+     */
     @NameInMap("Data")
     public GetSeatInformationResponseBodyData data;
 
     /**
+     * <p>Description of the status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>successful</p>
      */
@@ -22,6 +29,8 @@ public class GetSeatInformationResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>EE338D98-9BD3-4413-B165</p>
      */
@@ -29,6 +38,12 @@ public class GetSeatInformationResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the API invocation succeeded. Valid values:</p>
+     * <ul>
+     * <li><strong>true</strong>: Succeeded.</li>
+     * <li><strong>false</strong>: Failed.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -82,6 +97,8 @@ public class GetSeatInformationResponseBody extends TeaModel {
 
     public static class GetSeatInformationResponseBodyData extends TeaModel {
         /**
+         * <p>Current page number.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -89,16 +106,26 @@ public class GetSeatInformationResponseBody extends TeaModel {
         public Integer pageNum;
 
         /**
+         * <p>Page size.</p>
+         * 
          * <strong>example:</strong>
          * <p>2000</p>
          */
         @NameInMap("PageSize")
         public Integer pageSize;
 
+        /**
+         * <p>The information is a JSON string of the List<Map> type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;tenant_id&quot;: &quot;905&quot;, &quot;tenant_name&quot;: &quot;非单元测试化BU&quot;, &quot;department_id&quot;: &quot;-1&quot;, &quot;svc_avai_capacity&quot;: 7,      &quot;svc_current_capacity&quot;: 0, &quot;department_name&quot;: &quot;-1&quot;,  &quot;svc_online_cnt&quot;: 3, &quot;svc_ask_offline_servicer_num&quot;: 0,      &quot;date_id&quot;: &quot;20210401&quot;,  &quot;svc_max_capacity&quot;: 7, &quot;svc_rest_cnt&quot;: 0, &quot;current_speci_ability_num&quot;: 0, &quot;servicer_rest_cnt&quot;: 122, &quot;max_speci_ability_num&quot;: 3,      &quot;svc_offline_cnt&quot;: 0,  &quot;svc_no_client_cnt&quot;: 3, &quot;svc_ask_rest_servicer_num&quot;: 0}</p>
+         */
         @NameInMap("Rowr")
         public String rowr;
 
         /**
+         * <p>Total number of records.</p>
+         * 
          * <strong>example:</strong>
          * <p>4</p>
          */

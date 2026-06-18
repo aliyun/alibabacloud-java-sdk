@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateThirdSsoAgentRequest extends TeaModel {
     /**
+     * <p>Account ID to synchronize.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class CreateThirdSsoAgentRequest extends TeaModel {
     public String accountId;
 
     /**
+     * <p>Account name to synchronize.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,7 @@ public class CreateThirdSsoAgentRequest extends TeaModel {
     public String accountName;
 
     /**
+     * <p>The client ID issued to the tenant instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -32,16 +35,25 @@ public class CreateThirdSsoAgentRequest extends TeaModel {
     public String clientId;
 
     /**
+     * <p>Unique ID for the customer request. Used for idempotency validation and can be generated using UUID.</p>
+     * 
      * <strong>example:</strong>
      * <p>46c1341e-2648-447a-9b11-70b6a298d94d</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
+    /**
+     * <p>Agent display name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>张三</p>
+     */
     @NameInMap("DisplayName")
     public String displayName;
 
     /**
+     * <p>AICCS instance ID. You can obtain it from the Artificial Intelligence Cloud Call Service console.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -50,9 +62,15 @@ public class CreateThirdSsoAgentRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>List of role IDs.</p>
+     */
     @NameInMap("RoleIds")
     public java.util.List<Long> roleIds;
 
+    /**
+     * <p>List of skill group IDs.</p>
+     */
     @NameInMap("SkillGroupIds")
     public java.util.List<Long> skillGroupIds;
 

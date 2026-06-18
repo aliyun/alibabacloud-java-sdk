@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetRecordUrlRequest extends TeaModel {
     /**
+     * <p>The session ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class GetRecordUrlRequest extends TeaModel {
     public String acid;
 
     /**
+     * <p>The Artificial Intelligence Cloud Call Service (AICCS) instance ID. You can obtain it in the <a href="https://aiccs.console.aliyun.com/overview">Artificial Intelligence Cloud Call Service console</a> &gt; Instance Management.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,12 @@ public class GetRecordUrlRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>The call type. Valid values:</p>
+     * <ul>
+     * <li><strong>DUP_CALL</strong>: Incoming and outgoing calls.</li>
+     * <li><strong>IVR_CALL</strong>: IVR outbound call.</li>
+     * <li><strong>SMART_CALL</strong>: Intelligent outbound call.</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

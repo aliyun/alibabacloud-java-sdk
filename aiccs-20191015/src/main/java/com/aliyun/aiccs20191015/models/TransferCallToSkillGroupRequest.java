@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class TransferCallToSkillGroupRequest extends TeaModel {
     /**
+     * <p>The agent account name, which is the phone number or mailbox entered during account registration. It is unique within the instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,8 @@ public class TransferCallToSkillGroupRequest extends TeaModel {
     public String accountName;
 
     /**
+     * <p>Hotline session ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>7719786</p>
      */
@@ -21,6 +24,8 @@ public class TransferCallToSkillGroupRequest extends TeaModel {
     public String callId;
 
     /**
+     * <p>Unique ID for the customer request. Used for idempotency validation. You can generate it using UUID.</p>
+     * 
      * <strong>example:</strong>
      * <p>46c1341e-2648-447a-9b11-70b6a298d94d</p>
      */
@@ -28,6 +33,8 @@ public class TransferCallToSkillGroupRequest extends TeaModel {
     public String clientToken;
 
     /**
+     * <p>The connId in the WebSocket after an inbound call.</p>
+     * 
      * <strong>example:</strong>
      * <p>7719788</p>
      */
@@ -35,6 +42,8 @@ public class TransferCallToSkillGroupRequest extends TeaModel {
     public String connectionId;
 
     /**
+     * <p>The holdConnId in the WebSocket after an inbound call (required only for two-step transfer).</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
@@ -42,6 +51,8 @@ public class TransferCallToSkillGroupRequest extends TeaModel {
     public String holdConnectionId;
 
     /**
+     * <p>Artificial Intelligence Cloud Call Service (AICCS) instance ID.
+     * You can obtain it from <strong>Instance Management</strong> in the left-side navigation pane of the <a href="https://aiccs.console.aliyun.com/overview">Artificial Intelligence Cloud Call Service console</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -51,6 +62,12 @@ public class TransferCallToSkillGroupRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>Default value: <strong>true</strong>. Valid values:</p>
+     * <ul>
+     * <li><strong>true</strong>: Single-step transfer.</li>
+     * <li><strong>false</strong>: Two-step transfer.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -58,6 +75,8 @@ public class TransferCallToSkillGroupRequest extends TeaModel {
     public Boolean isSingleTransfer;
 
     /**
+     * <p>The jobId in the WebSocket after an inbound call.</p>
+     * 
      * <strong>example:</strong>
      * <p>7719787</p>
      */
@@ -65,6 +84,7 @@ public class TransferCallToSkillGroupRequest extends TeaModel {
     public String jobId;
 
     /**
+     * <p>Skill group ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -74,6 +94,12 @@ public class TransferCallToSkillGroupRequest extends TeaModel {
     public Long skillGroupId;
 
     /**
+     * <p>Default value: <strong>1</strong>. Valid values:</p>
+     * <ul>
+     * <li><strong>1</strong>: Single-step transfer.</li>
+     * <li><strong>2</strong>: Two-step transfer.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */

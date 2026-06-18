@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ImportOneTaskPhoneNumberResponseBody extends TeaModel {
     /**
+     * <p>The detailed reason why the access is denied.</p>
+     * 
      * <strong>example:</strong>
      * <p>None</p>
      */
@@ -12,23 +14,32 @@ public class ImportOneTaskPhoneNumberResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
+     * <p>The status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The returned data.</p>
+     */
     @NameInMap("Data")
     public ImportOneTaskPhoneNumberResponseBodyData data;
 
     /**
+     * <p>The description of the status code.</p>
+     * 
      * <strong>example:</strong>
-     * <p>示例值</p>
+     * <p>成功</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>D6A51251-F7C4-596A-9F45-3C3219A5450D</p>
      */
@@ -36,6 +47,14 @@ public class ImportOneTaskPhoneNumberResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the API call was successful. Valid values:</p>
+     * <ul>
+     * <li><p><strong>true</strong>: The API call was successful.</p>
+     * </li>
+     * <li><p><strong>false</strong>: The API call failed.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -97,6 +116,8 @@ public class ImportOneTaskPhoneNumberResponseBody extends TeaModel {
 
     public static class ImportOneTaskPhoneNumberResponseBodyData extends TeaModel {
         /**
+         * <p>The task detail ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>92304322323*****</p>
          */

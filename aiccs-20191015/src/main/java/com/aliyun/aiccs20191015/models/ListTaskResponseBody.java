@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class ListTaskResponseBody extends TeaModel {
     /**
+     * <p>Request status code. A return value of OK indicates that the request succeeded.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>List of job data.</p>
+     */
     @NameInMap("Data")
     public ListTaskResponseBodyData data;
 
     /**
+     * <p>Description of the status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
@@ -22,6 +29,8 @@ public class ListTaskResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>D9CB3933-9FE3-4870-BA8E-2BEE91B69D23</p>
      */
@@ -29,6 +38,12 @@ public class ListTaskResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the API was invoked successfully. Valid values:</p>
+     * <ul>
+     * <li><strong>true</strong>: Succeeded.</li>
+     * <li><strong>false</strong>: Failed.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -82,6 +97,8 @@ public class ListTaskResponseBody extends TeaModel {
 
     public static class ListTaskResponseBodyDataRecord extends TeaModel {
         /**
+         * <p>Number of completed calls.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -89,6 +106,8 @@ public class ListTaskResponseBody extends TeaModel {
         public Integer completeCount;
 
         /**
+         * <p>Job start time. The value is a UNIX timestamp in milliseconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>1618477232000</p>
          */
@@ -96,6 +115,8 @@ public class ListTaskResponseBody extends TeaModel {
         public String fireTime;
 
         /**
+         * <p>Creation Time of the job. Format: UNIX timestamp in milliseconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>1618477232000</p>
          */
@@ -103,33 +124,53 @@ public class ListTaskResponseBody extends TeaModel {
         public String gmtCreate;
 
         /**
+         * <p>The unique job ID for the robot calling task.</p>
+         * 
          * <strong>example:</strong>
-         * <p>123456</p>
+         * <p>12****</p>
          */
         @NameInMap("Id")
         public Long id;
 
         /**
+         * <p>The ID of the specified robot, which is the script ID.</p>
+         * 
          * <strong>example:</strong>
-         * <p>123456</p>
+         * <p>12****</p>
          */
         @NameInMap("RobotId")
         public Long robotId;
 
+        /**
+         * <p>Robot Name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>机器人</p>
+         */
         @NameInMap("RobotName")
         public String robotName;
 
         /**
+         * <p>Task Status.</p>
+         * 
          * <strong>example:</strong>
          * <p>RELEASE</p>
          */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>Task Name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>测试任务</p>
+         */
         @NameInMap("TaskName")
         public String taskName;
 
         /**
+         * <p>Total number of processed calls.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -217,6 +258,8 @@ public class ListTaskResponseBody extends TeaModel {
 
     public static class ListTaskResponseBodyData extends TeaModel {
         /**
+         * <p>Current page number.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -224,16 +267,23 @@ public class ListTaskResponseBody extends TeaModel {
         public Long pageNo;
 
         /**
+         * <p>Number of entries per page.</p>
+         * 
          * <strong>example:</strong>
          * <p>20</p>
          */
         @NameInMap("PageSize")
         public Long pageSize;
 
+        /**
+         * <p>List of job information.</p>
+         */
         @NameInMap("Record")
         public java.util.List<ListTaskResponseBodyDataRecord> record;
 
         /**
+         * <p>Total number of jobs.</p>
+         * 
          * <strong>example:</strong>
          * <p>50</p>
          */

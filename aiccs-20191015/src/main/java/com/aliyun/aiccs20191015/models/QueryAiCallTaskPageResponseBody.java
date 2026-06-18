@@ -5,30 +5,41 @@ import com.aliyun.tea.*;
 
 public class QueryAiCallTaskPageResponseBody extends TeaModel {
     /**
+     * <p>The detailed reason for the access denial.</p>
+     * 
      * <strong>example:</strong>
-     * <p>Access Denied</p>
+     * <p>None</p>
      */
     @NameInMap("AccessDeniedDetail")
     public String accessDeniedDetail;
 
     /**
+     * <p>The status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The details of the tasks.</p>
+     */
     @NameInMap("Data")
     public QueryAiCallTaskPageResponseBodyData data;
 
     /**
+     * <p>The error message. This parameter is returned only if the call fails.</p>
+     * 
      * <strong>example:</strong>
-     * <p>示例值示例值</p>
+     * <p>参数不合法</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>B99C5955-5664-573D-97BE-A7CC1AFD8401</p>
      */
@@ -36,6 +47,14 @@ public class QueryAiCallTaskPageResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <ul>
+     * <li><p><strong>true</strong>: The request was successful.</p>
+     * </li>
+     * <li><p><strong>false</strong>: The request failed.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -97,15 +116,19 @@ public class QueryAiCallTaskPageResponseBody extends TeaModel {
 
     public static class QueryAiCallTaskPageResponseBodyDataList extends TeaModel {
         /**
+         * <p>The agent ID.</p>
+         * 
          * <strong>example:</strong>
-         * <p>11213132123123*****</p>
+         * <p>1180**************</p>
          */
         @NameInMap("AgentId")
         public String agentId;
 
         /**
+         * <p>The agent name.</p>
+         * 
          * <strong>example:</strong>
-         * <p>示例值示例值</p>
+         * <p>测试智能体</p>
          */
         @NameInMap("AgentName")
         public String agentName;
@@ -125,6 +148,8 @@ public class QueryAiCallTaskPageResponseBody extends TeaModel {
         public String applicationName;
 
         /**
+         * <p>The number of calls in progress.</p>
+         * 
          * <strong>example:</strong>
          * <p>72</p>
          */
@@ -132,6 +157,8 @@ public class QueryAiCallTaskPageResponseBody extends TeaModel {
         public Long callingCount;
 
         /**
+         * <p>The completion rate of the task.</p>
+         * 
          * <strong>example:</strong>
          * <p>70%</p>
          */
@@ -139,6 +166,8 @@ public class QueryAiCallTaskPageResponseBody extends TeaModel {
         public String completeRate;
 
         /**
+         * <p>The number of concurrent tasks.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -146,6 +175,8 @@ public class QueryAiCallTaskPageResponseBody extends TeaModel {
         public Long concurrentCount;
 
         /**
+         * <p>The time when the task was created. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.</p>
+         * 
          * <strong>example:</strong>
          * <p>1748932499000</p>
          */
@@ -153,6 +184,8 @@ public class QueryAiCallTaskPageResponseBody extends TeaModel {
         public Long createTime;
 
         /**
+         * <p>The number of calls made on the current day.</p>
+         * 
          * <strong>example:</strong>
          * <p>22</p>
          */
@@ -160,6 +193,8 @@ public class QueryAiCallTaskPageResponseBody extends TeaModel {
         public Long dayCallCount;
 
         /**
+         * <p>The connection rate of the current day. This is the number of connected calls on the current day divided by the total number of calls on the current day (<code>DayCallCount</code>).</p>
+         * 
          * <strong>example:</strong>
          * <p>74.14%</p>
          */
@@ -167,6 +202,8 @@ public class QueryAiCallTaskPageResponseBody extends TeaModel {
         public String dayConnectRate;
 
         /**
+         * <p>The number of data entries imported on the current day.</p>
+         * 
          * <strong>example:</strong>
          * <p>400</p>
          */
@@ -174,6 +211,8 @@ public class QueryAiCallTaskPageResponseBody extends TeaModel {
         public Long dayImportCount;
 
         /**
+         * <p>The total number of failed tasks.</p>
+         * 
          * <strong>example:</strong>
          * <p>61</p>
          */
@@ -181,6 +220,8 @@ public class QueryAiCallTaskPageResponseBody extends TeaModel {
         public Long failedCount;
 
         /**
+         * <p>The historical connection rate. This is the historical number of connected calls divided by the total number of calls (<code>TotalCallCount</code>).</p>
+         * 
          * <strong>example:</strong>
          * <p>95.89%</p>
          */
@@ -188,6 +229,8 @@ public class QueryAiCallTaskPageResponseBody extends TeaModel {
         public String historyConnectRate;
 
         /**
+         * <p>The time when the task actually starts. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.</p>
+         * 
          * <strong>example:</strong>
          * <p>1748932499000</p>
          */
@@ -195,13 +238,17 @@ public class QueryAiCallTaskPageResponseBody extends TeaModel {
         public Long realStartTime;
 
         /**
+         * <p>The reason why the task failed to start.</p>
+         * 
          * <strong>example:</strong>
-         * <p>示例值示例值</p>
+         * <p>智能体不在线</p>
          */
         @NameInMap("StartFailedReason")
         public String startFailedReason;
 
         /**
+         * <p>The time when the task is scheduled to start. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.</p>
+         * 
          * <strong>example:</strong>
          * <p>1748932499000</p>
          */
@@ -209,6 +256,8 @@ public class QueryAiCallTaskPageResponseBody extends TeaModel {
         public Long startTime;
 
         /**
+         * <p>The status of the task.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -216,6 +265,8 @@ public class QueryAiCallTaskPageResponseBody extends TeaModel {
         public Long status;
 
         /**
+         * <p>The total number of successful tasks.</p>
+         * 
          * <strong>example:</strong>
          * <p>36</p>
          */
@@ -223,20 +274,26 @@ public class QueryAiCallTaskPageResponseBody extends TeaModel {
         public Long succeedCount;
 
         /**
+         * <p>The task ID.</p>
+         * 
          * <strong>example:</strong>
-         * <p>11121221121*****</p>
+         * <p>1187**************</p>
          */
         @NameInMap("TaskId")
         public String taskId;
 
         /**
+         * <p>The task name.</p>
+         * 
          * <strong>example:</strong>
-         * <p>示例值示例值</p>
+         * <p>测试任务</p>
          */
         @NameInMap("TaskName")
         public String taskName;
 
         /**
+         * <p>The total number of calls.</p>
+         * 
          * <strong>example:</strong>
          * <p>58</p>
          */
@@ -244,6 +301,8 @@ public class QueryAiCallTaskPageResponseBody extends TeaModel {
         public Long totalCallCount;
 
         /**
+         * <p>The total number of tasks.</p>
+         * 
          * <strong>example:</strong>
          * <p>71</p>
          */
@@ -434,10 +493,15 @@ public class QueryAiCallTaskPageResponseBody extends TeaModel {
     }
 
     public static class QueryAiCallTaskPageResponseBodyData extends TeaModel {
+        /**
+         * <p>The tasks.</p>
+         */
         @NameInMap("List")
         public java.util.List<QueryAiCallTaskPageResponseBodyDataList> list;
 
         /**
+         * <p>The page number.</p>
+         * 
          * <strong>example:</strong>
          * <p>37</p>
          */
@@ -445,6 +509,8 @@ public class QueryAiCallTaskPageResponseBody extends TeaModel {
         public Long pageNo;
 
         /**
+         * <p>The number of entries per page.</p>
+         * 
          * <strong>example:</strong>
          * <p>74</p>
          */
@@ -452,6 +518,8 @@ public class QueryAiCallTaskPageResponseBody extends TeaModel {
         public Long pageSize;
 
         /**
+         * <p>The total number of entries.</p>
+         * 
          * <strong>example:</strong>
          * <p>72</p>
          */

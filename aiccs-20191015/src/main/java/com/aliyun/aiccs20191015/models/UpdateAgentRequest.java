@@ -5,15 +5,21 @@ import com.aliyun.tea.*;
 
 public class UpdateAgentRequest extends TeaModel {
     /**
+     * <p>The agent account name, which is the phone number or mailbox entered during account registration. It is unique within the instance.  </p>
+     * <blockquote>
+     * <p>Update is not supported.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p><a href="mailto:123@123.com">123@123.com</a></p>
+     * <p><a href="mailto:username@example.com">username@example.com</a></p>
      */
     @NameInMap("AccountName")
     public String accountName;
 
     /**
+     * <p>Unique ID for the customer request. Used for idempotency validation. You can generate it using UUID.</p>
+     * 
      * <strong>example:</strong>
      * <p>46c1341e-2648-447a-9b11-70b6a298d94d</p>
      */
@@ -21,12 +27,17 @@ public class UpdateAgentRequest extends TeaModel {
     public String clientToken;
 
     /**
+     * <p>Agent\&quot;s display name.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>XX测试</p>
      */
     @NameInMap("DisplayName")
     public String displayName;
 
     /**
+     * <p>AICCS instance ID.<br>You can obtain it from <strong>Instance Management</strong> in the left-side navigation pane of the <a href="https://aiccs.console.aliyun.com/overview">Artificial Intelligence Cloud Call Service console</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -35,9 +46,15 @@ public class UpdateAgentRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>Skill groups to which the agent belongs.</p>
+     */
     @NameInMap("SkillGroupId")
     public java.util.List<Long> skillGroupId;
 
+    /**
+     * <p>List of skill groups to which the agent belongs.</p>
+     */
     @NameInMap("SkillGroupIdList")
     public java.util.List<Long> skillGroupIdList;
 

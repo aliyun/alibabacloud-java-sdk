@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class HangupThirdCallResponseBody extends TeaModel {
     /**
+     * <p>Fault encoding</p>
+     * 
      * <strong>example:</strong>
      * <p>Success</p>
      */
@@ -12,6 +14,8 @@ public class HangupThirdCallResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>Fault description</p>
+     * 
      * <strong>example:</strong>
      * <p>xxxx</p>
      */
@@ -19,6 +23,8 @@ public class HangupThirdCallResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>Request ID, used to trail the cause of a fault</p>
+     * 
      * <strong>example:</strong>
      * <p>EE338D98-9BD3-4413-B165</p>
      */
@@ -26,6 +32,8 @@ public class HangupThirdCallResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the API call succeeded</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

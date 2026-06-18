@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class QueryAiCallDetailPageResponseBody extends TeaModel {
     /**
+     * <p>The reason why the access request was denied.</p>
+     * 
      * <strong>example:</strong>
      * <p>None</p>
      */
@@ -12,23 +14,32 @@ public class QueryAiCallDetailPageResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
+     * <p>The status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The returned data.</p>
+     */
     @NameInMap("Data")
     public QueryAiCallDetailPageResponseBodyData data;
 
     /**
+     * <p>A description of the status code.</p>
+     * 
      * <strong>example:</strong>
-     * <p>示例值</p>
+     * <p>成功</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>A57441B2-8EB6-5B93-9F37-0A51B8E2C9F5</p>
      */
@@ -36,6 +47,14 @@ public class QueryAiCallDetailPageResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful. Valid values are:</p>
+     * <ul>
+     * <li><p><strong>true</strong>: The request was successful.</p>
+     * </li>
+     * <li><p><strong>false</strong>: The request failed.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -97,8 +116,10 @@ public class QueryAiCallDetailPageResponseBody extends TeaModel {
 
     public static class QueryAiCallDetailPageResponseBodyDataList extends TeaModel {
         /**
+         * <p>The batch ID.</p>
+         * 
          * <strong>example:</strong>
-         * <p>12121211111*****</p>
+         * <p>1183**************</p>
          */
         @NameInMap("BatchId")
         public String batchId;
@@ -112,7 +133,7 @@ public class QueryAiCallDetailPageResponseBody extends TeaModel {
 
         /**
          * <strong>example:</strong>
-         * <p>示例值</p>
+         * <p>example</p>
          */
         @NameInMap("BranchName")
         public String branchName;
@@ -125,13 +146,17 @@ public class QueryAiCallDetailPageResponseBody extends TeaModel {
         public Long branchVersionId;
 
         /**
+         * <p>The call result.</p>
+         * 
          * <strong>example:</strong>
-         * <p>示例值</p>
+         * <p>用户接通</p>
          */
         @NameInMap("CallResult")
         public String callResult;
 
         /**
+         * <p>The called number.</p>
+         * 
          * <strong>example:</strong>
          * <p>0537101****</p>
          */
@@ -139,6 +164,8 @@ public class QueryAiCallDetailPageResponseBody extends TeaModel {
         public String calledNumber;
 
         /**
+         * <p>The call time, formatted as a timestamp in milliseconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>1748948749000</p>
          */
@@ -146,6 +173,8 @@ public class QueryAiCallDetailPageResponseBody extends TeaModel {
         public Long callingTime;
 
         /**
+         * <p>The conversation duration, in seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */
@@ -153,13 +182,73 @@ public class QueryAiCallDetailPageResponseBody extends TeaModel {
         public Long conversationDuration;
 
         /**
+         * <p>The conversation record, formatted as a chronologically sorted JSON array. Each object has the following structure:</p>
+         * <pre><code class="language-json">[
+         *     {
+         *         &quot;content&quot;:&quot;The content of the message.&quot;,
+         *         &quot;role&quot;:&quot;The role of the speaker.&quot;, // Valid values: user, assistant
+         *     }
+         * ]
+         * </code></pre>
+         * 
          * <strong>example:</strong>
-         * <p>示例值示例值</p>
+         * <p>[
+         *     {
+         *         &quot;content&quot;: &quot;111您好，年龄222，性别男，我这边是<strong>汽车的官方顾问，我们新出了一款车型为</strong>；<strong>已经上市了，售价</strong>万元起，<strong>分钟破*台，您看要不了解一下？&quot;,
+         *         &quot;role&quot;: &quot;assistant&quot;
+         *     },
+         *     {
+         *         &quot;content&quot;: &quot;&lt;客户打断&gt;哎，你是谁？&quot;,
+         *         &quot;role&quot;: &quot;user&quot;,
+         *     },
+         *     {
+         *         &quot;content&quot;: &quot;&lt;客户打断&gt;你再说一遍。&quot;,
+         *         &quot;role&quot;: &quot;user&quot;,
+         *     },
+         *     {
+         *         &quot;content&quot;: &quot;哎，我没听清。&quot;,
+         *         &quot;role&quot;: &quot;user&quot;,
+         *     },
+         *     {
+         *         &quot;content&quot;: &quot;你在说什么？&quot;,
+         *         &quot;role&quot;: &quot;user&quot;,
+         *     },
+         *     {
+         *         &quot;content&quot;: &quot;您好，&quot;,
+         *         &quot;role&quot;: &quot;assistant&quot;,
+         *     },
+         *     {
+         *         &quot;content&quot;: &quot;我是</strong>汽车总部销售服务顾问。&quot;,
+         *         &quot;role&quot;: &quot;assistant&quot;,
+         *     },
+         *     {
+         *         &quot;content&quot;: &quot;我们最近推出了一款新车**，想了解一下您是否对这款车型感兴趣？&quot;,
+         *         &quot;role&quot;: &quot;assistant&quot;,
+         *     },
+         *     {
+         *         &quot;content&quot;: &quot;&lt;客户打断&gt;哎，那我是谁？&quot;,
+         *         &quot;role&quot;: &quot;user&quot;,
+         *     },
+         *     {
+         *         &quot;content&quot;: &quot;你在说什么呢？&quot;,
+         *         &quot;role&quot;: &quot;user&quot;,
+         *     },
+         *     {
+         *         &quot;content&quot;: &quot;抱歉打扰了，111先生。&quot;,
+         *         &quot;role&quot;: &quot;assistant&quot;,
+         *     },
+         *     {
+         *         &quot;content&quot;: &quot;祝您生活愉快！再见！&quot;,
+         *         &quot;role&quot;: &quot;assistant&quot;,
+         *     }
+         * ]</p>
          */
         @NameInMap("ConversationRecord")
         public String conversationRecord;
 
         /**
+         * <p>The conversation turn count.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -167,27 +256,35 @@ public class QueryAiCallDetailPageResponseBody extends TeaModel {
         public Long conversationTurnCount;
 
         /**
+         * <p>The task detail ID.</p>
+         * 
          * <strong>example:</strong>
-         * <p>12121211111*****</p>
+         * <p>9662*************</p>
          */
         @NameInMap("DetailId")
         public String detailId;
 
         /**
+         * <p>The encryption type. Valid values are: 0 (no encryption), 1 (MD5), 2 (SHA256), and 3 (SM3).</p>
+         * 
          * <strong>example:</strong>
-         * <p>21</p>
+         * <p>1</p>
          */
         @NameInMap("EncryptionType")
         public Long encryptionType;
 
         /**
+         * <p>The failure reason. Provided only if the call fails.</p>
+         * 
          * <strong>example:</strong>
-         * <p>示例值示例值示例值</p>
+         * <p>账户停机</p>
          */
         @NameInMap("FailedReason")
         public String failedReason;
 
         /**
+         * <p>The import time, formatted as a timestamp in milliseconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>1748948749000</p>
          */
@@ -195,6 +292,8 @@ public class QueryAiCallDetailPageResponseBody extends TeaModel {
         public Long importedTime;
 
         /**
+         * <p>The major intent.</p>
+         * 
          * <strong>example:</strong>
          * <p>A</p>
          */
@@ -202,8 +301,18 @@ public class QueryAiCallDetailPageResponseBody extends TeaModel {
         public String majorIntent;
 
         /**
+         * <p>A JSON object of key-value pairs for runtime variables.</p>
+         * 
          * <strong>example:</strong>
-         * <p>示例值</p>
+         * <p>{
+         *   &quot;date&quot;: &quot;666&quot;,
+         *   &quot;phoneNumber&quot;: &quot;777&quot;,
+         *   &quot;distance&quot;: &quot;555&quot;,
+         *   &quot;mendian&quot;: &quot;444&quot;,
+         *   &quot;sex&quot;: &quot;男&quot;,
+         *   &quot;name&quot;: &quot;111&quot;,
+         *   &quot;age&quot;: &quot;222&quot;
+         * }</p>
          */
         @NameInMap("Options")
         public String options;
@@ -216,6 +325,8 @@ public class QueryAiCallDetailPageResponseBody extends TeaModel {
         public String outId;
 
         /**
+         * <p>The recording file path. Provided only after the recording file is generated.</p>
+         * 
          * <strong>example:</strong>
          * <p>https://*******</p>
          */
@@ -223,22 +334,41 @@ public class QueryAiCallDetailPageResponseBody extends TeaModel {
         public String recordingFilePath;
 
         /**
+         * <p>The task detail status.</p>
+         * <ul>
+         * <li><p>0: Initializing</p>
+         * </li>
+         * <li><p>1: Waiting to call</p>
+         * </li>
+         * <li><p>2: Waiting to retry</p>
+         * </li>
+         * <li><p>3: Calling</p>
+         * </li>
+         * <li><p>4: Call ended</p>
+         * </li>
+         * <li><p>5: Call failed</p>
+         * </li>
+         * </ul>
+         * <p>Only statuses 4 and 5 are terminal states.</p>
+         * 
          * <strong>example:</strong>
-         * <p>51</p>
+         * <p>4</p>
          */
         @NameInMap("Status")
         public Long status;
 
         /**
+         * <p>The task ID.</p>
+         * 
          * <strong>example:</strong>
-         * <p>12121211111*****</p>
+         * <p>1187**************</p>
          */
         @NameInMap("TaskId")
         public String taskId;
 
         /**
          * <strong>example:</strong>
-         * <p>示例值示例值</p>
+         * <p>example</p>
          */
         @NameInMap("VersionName")
         public String versionName;
@@ -434,10 +564,15 @@ public class QueryAiCallDetailPageResponseBody extends TeaModel {
     }
 
     public static class QueryAiCallDetailPageResponseBodyData extends TeaModel {
+        /**
+         * <p>A list of task details.</p>
+         */
         @NameInMap("List")
         public java.util.List<QueryAiCallDetailPageResponseBodyDataList> list;
 
         /**
+         * <p>The page number.</p>
+         * 
          * <strong>example:</strong>
          * <p>60</p>
          */
@@ -445,6 +580,8 @@ public class QueryAiCallDetailPageResponseBody extends TeaModel {
         public Long pageNo;
 
         /**
+         * <p>The page size.</p>
+         * 
          * <strong>example:</strong>
          * <p>5</p>
          */
@@ -452,6 +589,8 @@ public class QueryAiCallDetailPageResponseBody extends TeaModel {
         public Long pageSize;
 
         /**
+         * <p>The total number of records.</p>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */

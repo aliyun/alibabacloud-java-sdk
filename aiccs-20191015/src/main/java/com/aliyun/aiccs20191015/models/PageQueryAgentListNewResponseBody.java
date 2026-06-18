@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class PageQueryAgentListNewResponseBody extends TeaModel {
     /**
+     * <p>The access denied detail.</p>
+     * 
      * <strong>example:</strong>
      * <p>Access denied due to insufficient permissions</p>
      */
@@ -12,16 +14,23 @@ public class PageQueryAgentListNewResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
+     * <p>The status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The data returned.</p>
+     */
     @NameInMap("Data")
     public PageQueryAgentListNewResponseBodyData data;
 
     /**
+     * <p>The message that describes the status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -29,6 +38,8 @@ public class PageQueryAgentListNewResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>12345678-1234-1234-1234-123456789012</p>
      */
@@ -36,6 +47,14 @@ public class PageQueryAgentListNewResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Specifies whether the request succeeded.</p>
+     * <ul>
+     * <li><p><strong><code>true</code></strong>: The request succeeded.</p>
+     * </li>
+     * <li><p><strong><code>false</code></strong>: The request failed.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -97,6 +116,8 @@ public class PageQueryAgentListNewResponseBody extends TeaModel {
 
     public static class PageQueryAgentListNewResponseBodyDataList extends TeaModel {
         /**
+         * <p>The agent ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>51</p>
          */
@@ -104,6 +125,9 @@ public class PageQueryAgentListNewResponseBody extends TeaModel {
         public Long agentId;
 
         /**
+         * <p>The agent creation mode. Valid values:<br>
+         * <code>0</code>: Prompt mode (<code>PROMPT</code>). <code>1</code>: Conversation flow mode (<code>CONVERSATION</code>).<br></p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -111,13 +135,17 @@ public class PageQueryAgentListNewResponseBody extends TeaModel {
         public Long agentMode;
 
         /**
+         * <p>The agent name.</p>
+         * 
          * <strong>example:</strong>
-         * <p>示例值示例值</p>
+         * <p>智能客服助手</p>
          */
         @NameInMap("AgentName")
         public String agentName;
 
         /**
+         * <p>The application code.</p>
+         * 
          * <strong>example:</strong>
          * <p>aicc_demo_app</p>
          */
@@ -125,6 +153,8 @@ public class PageQueryAgentListNewResponseBody extends TeaModel {
         public String applicationCode;
 
         /**
+         * <p>The creation time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2024-01-20 12:00:00</p>
          */
@@ -132,6 +162,8 @@ public class PageQueryAgentListNewResponseBody extends TeaModel {
         public String createTime;
 
         /**
+         * <p>The deployment branch ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>24</p>
          */
@@ -139,6 +171,8 @@ public class PageQueryAgentListNewResponseBody extends TeaModel {
         public Long deployBranchId;
 
         /**
+         * <p>The effective branch name.</p>
+         * 
          * <strong>example:</strong>
          * <p>master</p>
          */
@@ -146,13 +180,17 @@ public class PageQueryAgentListNewResponseBody extends TeaModel {
         public String deployBranchName;
 
         /**
+         * <p>The agent description.</p>
+         * 
          * <strong>example:</strong>
-         * <p>示例值</p>
+         * <p>智能客服助手，提供自动化的客户服务支持</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
+         * <p>The effective version ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>71</p>
          */
@@ -160,6 +198,8 @@ public class PageQueryAgentListNewResponseBody extends TeaModel {
         public Long effectiveVersionId;
 
         /**
+         * <p>The effective version name.</p>
+         * 
          * <strong>example:</strong>
          * <p>v1.0.0</p>
          */
@@ -167,6 +207,8 @@ public class PageQueryAgentListNewResponseBody extends TeaModel {
         public String effectiveVersionName;
 
         /**
+         * <p>Specifies whether the agent can be used for outbound calls. A value of <code>true</code> means the agent\&quot;s current deployment branch has a published version.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -174,6 +216,8 @@ public class PageQueryAgentListNewResponseBody extends TeaModel {
         public Boolean isAvailable;
 
         /**
+         * <p>The most recent publish time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2024-01-20 12:00:00</p>
          */
@@ -181,6 +225,8 @@ public class PageQueryAgentListNewResponseBody extends TeaModel {
         public String latestPublishTime;
 
         /**
+         * <p>The last modified time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2024-01-15 10:30:00</p>
          */
@@ -188,8 +234,10 @@ public class PageQueryAgentListNewResponseBody extends TeaModel {
         public String modifyTime;
 
         /**
+         * <p>The scene.</p>
+         * 
          * <strong>example:</strong>
-         * <p>示例值示例值</p>
+         * <p>个人线索转化</p>
          */
         @NameInMap("Scene")
         public String scene;
@@ -314,10 +362,15 @@ public class PageQueryAgentListNewResponseBody extends TeaModel {
     }
 
     public static class PageQueryAgentListNewResponseBodyData extends TeaModel {
+        /**
+         * <p>The data list.</p>
+         */
         @NameInMap("List")
         public java.util.List<PageQueryAgentListNewResponseBodyDataList> list;
 
         /**
+         * <p>The current page number.</p>
+         * 
          * <strong>example:</strong>
          * <p>28</p>
          */
@@ -325,6 +378,8 @@ public class PageQueryAgentListNewResponseBody extends TeaModel {
         public Long pageNo;
 
         /**
+         * <p>The page size.</p>
+         * 
          * <strong>example:</strong>
          * <p>41</p>
          */
@@ -332,6 +387,8 @@ public class PageQueryAgentListNewResponseBody extends TeaModel {
         public Long pageSize;
 
         /**
+         * <p>The total count.</p>
+         * 
          * <strong>example:</strong>
          * <p>6</p>
          */

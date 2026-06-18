@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class MakeCallRequest extends TeaModel {
     /**
+     * <p>Called number.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class MakeCallRequest extends TeaModel {
     public String calledNumber;
 
     /**
+     * <p>Calling number.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,7 @@ public class MakeCallRequest extends TeaModel {
     public String callingNumber;
 
     /**
+     * <p>Operation code.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -32,6 +35,8 @@ public class MakeCallRequest extends TeaModel {
     public String commandCode;
 
     /**
+     * <p>Pass-through business information.</p>
+     * 
      * <strong>example:</strong>
      * <p>{&quot;bizId&quot;: 23323}</p>
      */
@@ -39,6 +44,7 @@ public class MakeCallRequest extends TeaModel {
     public String extInfo;
 
     /**
+     * <p>External account ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -48,6 +54,7 @@ public class MakeCallRequest extends TeaModel {
     public String outerAccountId;
 
     /**
+     * <p>External account type.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

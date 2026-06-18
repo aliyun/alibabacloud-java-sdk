@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class GetOutbounNumListResponseBody extends TeaModel {
     /**
+     * <p>Status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>Success</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>Information about the number list.</p>
+     */
     @NameInMap("Data")
     public GetOutbounNumListResponseBodyData data;
 
     /**
+     * <p>HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -22,6 +29,8 @@ public class GetOutbounNumListResponseBody extends TeaModel {
     public Long httpStatusCode;
 
     /**
+     * <p>Description of the status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
@@ -29,6 +38,8 @@ public class GetOutbounNumListResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>EE338D98-9BD3-4413-B165</p>
      */
@@ -36,6 +47,8 @@ public class GetOutbounNumListResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the API call succeeded.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -96,10 +109,22 @@ public class GetOutbounNumListResponseBody extends TeaModel {
     }
 
     public static class GetOutbounNumListResponseBodyDataNum extends TeaModel {
+        /**
+         * <p>Description of the caller number (geographic location information).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>浙江省杭州市</p>
+         */
         @NameInMap("Description")
         public String description;
 
         /**
+         * <p>Caller number type. Valid values:  </p>
+         * <ul>
+         * <li><strong>1</strong>: Number.  </li>
+         * <li><strong>2</strong>: Number group.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -107,6 +132,8 @@ public class GetOutbounNumListResponseBody extends TeaModel {
         public Integer type;
 
         /**
+         * <p>Caller number.</p>
+         * 
          * <strong>example:</strong>
          * <p>07512234****</p>
          */
@@ -146,6 +173,8 @@ public class GetOutbounNumListResponseBody extends TeaModel {
 
     public static class GetOutbounNumListResponseBodyDataNumGroup extends TeaModel {
         /**
+         * <p>Number group description (number group name).</p>
+         * 
          * <strong>example:</strong>
          * <p>Jella</p>
          */
@@ -153,6 +182,12 @@ public class GetOutbounNumListResponseBody extends TeaModel {
         public String description;
 
         /**
+         * <p>Number group type. Valid values:  </p>
+         * <ul>
+         * <li><strong>1</strong>: Number.  </li>
+         * <li><strong>2</strong>: Number group.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */
@@ -160,6 +195,8 @@ public class GetOutbounNumListResponseBody extends TeaModel {
         public Integer type;
 
         /**
+         * <p>Number group ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>7688****</p>
          */
@@ -198,9 +235,15 @@ public class GetOutbounNumListResponseBody extends TeaModel {
     }
 
     public static class GetOutbounNumListResponseBodyData extends TeaModel {
+        /**
+         * <p>Caller number information.</p>
+         */
         @NameInMap("Num")
         public java.util.List<GetOutbounNumListResponseBodyDataNum> num;
 
+        /**
+         * <p>Number group information.</p>
+         */
         @NameInMap("NumGroup")
         public java.util.List<GetOutbounNumListResponseBodyDataNumGroup> numGroup;
 

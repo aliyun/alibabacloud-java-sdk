@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListDialogRequest extends TeaModel {
     /**
+     * <p>The called number. You can view the called number in the <a href="https://aiccs.console.aliyun.com/job/list"><strong>Task Management</strong></a> &gt; <strong>Details</strong> interface or retrieve it by invoking the <a href="https://help.aliyun.com/document_detail/2718009.html">ListTaskDetail</a> API. The <strong>Called</strong> parameter in the API response is the called number.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,10 +24,11 @@ public class ListDialogRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
+     * <p>The unique job ID of the robot outbound call task. You can view it in the <a href="https://aiccs.console.aliyun.com/job/list">Task Management</a> interface or obtain it by invoking the <a href="https://help.aliyun.com/document_detail/223556.html">CreateTask</a> API.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>123456</p>
+     * <p>12****</p>
      */
     @NameInMap("TaskId")
     public Long taskId;

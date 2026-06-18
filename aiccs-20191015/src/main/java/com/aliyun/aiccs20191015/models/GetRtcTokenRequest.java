@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetRtcTokenRequest extends TeaModel {
     /**
+     * <p>The agent account name, which is the phone number or mailbox entered during account registration. It is unique within the instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,8 @@ public class GetRtcTokenRequest extends TeaModel {
     public String accountName;
 
     /**
+     * <p>The instance ID of Artificial Intelligence Cloud Call Service (AICCS).
+     * You can obtain it from <strong>Instance Management</strong> in the left-side navigation pane of the <a href="https://aiccs.console.aliyun.com/overview">Artificial Intelligence Cloud Call Service console</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

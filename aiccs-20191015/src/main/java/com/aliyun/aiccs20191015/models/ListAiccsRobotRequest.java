@@ -13,6 +13,12 @@ public class ListAiccsRobotRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The robot name. You can view the robot name in the <a href="https://aiccs.console.aliyun.com/patter/list">Script Management</a> interface.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>测试机器人</p>
+     */
     @NameInMap("RobotName")
     public String robotName;
 

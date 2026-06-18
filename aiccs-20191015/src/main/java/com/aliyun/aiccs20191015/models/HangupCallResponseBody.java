@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class HangupCallResponseBody extends TeaModel {
     /**
+     * <p>Status code. A return value of Success indicates that the request succeeded.</p>
+     * 
      * <strong>example:</strong>
      * <p>Success</p>
      */
@@ -12,6 +14,8 @@ public class HangupCallResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>Status code description.</p>
+     * 
      * <strong>example:</strong>
      * <p>xxxx</p>
      */
@@ -19,6 +23,8 @@ public class HangupCallResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>EE338D98-9BD3-4413-B165</p>
      */
@@ -26,6 +32,8 @@ public class HangupCallResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the API call succeeded.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

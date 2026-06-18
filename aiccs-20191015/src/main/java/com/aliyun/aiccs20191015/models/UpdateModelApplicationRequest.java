@@ -5,17 +5,17 @@ import com.aliyun.tea.*;
 
 public class UpdateModelApplicationRequest extends TeaModel {
     /**
-     * <p>应用编码</p>
+     * <p>The application code.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>示例值示例值</p>
+     * <p>DKSDLSA</p>
      */
     @NameInMap("ApplicationCode")
     public String applicationCode;
 
     /**
-     * <p>应用并发请求数</p>
+     * <p>The number of concurrent requests for the application.</p>
      * 
      * <strong>example:</strong>
      * <p>12</p>
@@ -24,15 +24,17 @@ public class UpdateModelApplicationRequest extends TeaModel {
     public Long applicationCps;
 
     /**
-     * <p>模型应用名称</p>
+     * <p>The name of the model application.</p>
      * 
      * <strong>example:</strong>
-     * <p>示例值示例值</p>
+     * <p>测试应用</p>
      */
     @NameInMap("ApplicationName")
     public String applicationName;
 
     /**
+     * <p>Specifies whether to hang up the call when a call assistant is detected.</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -40,15 +42,17 @@ public class UpdateModelApplicationRequest extends TeaModel {
     public Boolean callAssistantHangup;
 
     /**
-     * <p>通话助手识别</p>
+     * <p>Specifies whether to enable call assistant recognition.</p>
      * 
      * <strong>example:</strong>
-     * <p>示例值</p>
+     * <p>true</p>
      */
     @NameInMap("CallAssistantRecognize")
     public Boolean callAssistantRecognize;
 
     /**
+     * <p>Specifies whether to trigger the model immediately after the call is connected.</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -56,13 +60,17 @@ public class UpdateModelApplicationRequest extends TeaModel {
     public Boolean callConnectedTriggerModel;
 
     /**
+     * <p>The allowed DTMF digits, specified as a comma-separated string such as <code>1,2,3</code>. You can specify a maximum of 20 digits.</p>
+     * 
      * <strong>example:</strong>
-     * <p>示例值</p>
+     * <p>1</p>
      */
     @NameInMap("DtmfAllowedDigits")
     public String dtmfAllowedDigits;
 
     /**
+     * <p>Specifies whether to automatically validate the DTMF digits.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -70,6 +78,8 @@ public class UpdateModelApplicationRequest extends TeaModel {
     public Boolean dtmfAutoValidateEnable;
 
     /**
+     * <p>The number of DTMF digits to collect. The value must be between 1 and 12.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -77,6 +87,8 @@ public class UpdateModelApplicationRequest extends TeaModel {
     public Long dtmfDigitCount;
 
     /**
+     * <p>The timeout for DTMF input, in seconds. The value must be between 1 and 10.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -84,6 +96,8 @@ public class UpdateModelApplicationRequest extends TeaModel {
     public Long dtmfInputTimeout;
 
     /**
+     * <p>The action to take when the input is outside the allowed range. Valid values: <code>RETURN_MODEL</code> and <code>AUTO_RETRY</code>.</p>
+     * 
      * <strong>example:</strong>
      * <p>RETURN_MODEL</p>
      */
@@ -91,6 +105,8 @@ public class UpdateModelApplicationRequest extends TeaModel {
     public String dtmfOutOfRangeAction;
 
     /**
+     * <p>The number of retry attempts. The value must be between 1 and 3. This parameter is effective only when <code>DtmfOutOfRangeAction</code> is set to <code>AUTO_RETRY</code>.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -98,22 +114,40 @@ public class UpdateModelApplicationRequest extends TeaModel {
     public Long dtmfRetryPlayTimes;
 
     /**
+     * <p>The custom text for the retry prompt. The text can contain a maximum of 50 characters. If this parameter is empty, the system uses the default prompt: &quot;Invalid input. Please try again.&quot;</p>
+     * 
      * <strong>example:</strong>
-     * <p>示例值示例值示例值</p>
+     * <p>测试文本</p>
      */
     @NameInMap("DtmfRetryPromptText")
     public String dtmfRetryPromptText;
 
     /**
-     * <p>场景名称</p>
+     * <strong>example:</strong>
+     * <p>90</p>
+     */
+    @NameInMap("DtmfSendMaxCount")
+    public Long dtmfSendMaxCount;
+
+    /**
+     * <strong>example:</strong>
+     * <p>58</p>
+     */
+    @NameInMap("DtmfSendWaitTimeout")
+    public Long dtmfSendWaitTimeout;
+
+    /**
+     * <p>The scene name.</p>
      * 
      * <strong>example:</strong>
-     * <p>示例值示例值</p>
+     * <p>测试场景</p>
      */
     @NameInMap("DyvmsSceneName")
     public String dyvmsSceneName;
 
     /**
+     * <p>Specifies whether to enable the collection of DTMF signals. The default value is <code>false</code>.</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -122,37 +156,46 @@ public class UpdateModelApplicationRequest extends TeaModel {
 
     /**
      * <strong>example:</strong>
+     * <p>true</p>
+     */
+    @NameInMap("EnableDtmfSend")
+    public Boolean enableDtmfSend;
+
+    /**
+     * <p>Specifies whether to enable the Morse code configuration. The default value is <code>false</code>.</p>
+     * 
+     * <strong>example:</strong>
      * <p>false</p>
      */
     @NameInMap("EnableMorse")
     public Boolean enableMorse;
 
     /**
-     * <p>打断配置</p>
+     * <p>The interruption configuration.</p>
      */
     @NameInMap("InterruptConfig")
     public UpdateModelApplicationRequestInterruptConfig interruptConfig;
 
     /**
-     * <p>模型编码</p>
+     * <p>The model code.</p>
      * 
      * <strong>example:</strong>
-     * <p>示例值示例值示例值</p>
+     * <p>1231</p>
      */
     @NameInMap("ModelCode")
     public String modelCode;
 
     /**
-     * <p>模型版本</p>
+     * <p>The model version.</p>
      * 
      * <strong>example:</strong>
-     * <p>示例值示例值示例值</p>
+     * <p>1</p>
      */
     @NameInMap("ModelVersion")
     public String modelVersion;
 
     /**
-     * <p>第一个静音是否唤起模型</p>
+     * <p>Specifies whether the first mute event triggers the model.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -161,7 +204,7 @@ public class UpdateModelApplicationRequest extends TeaModel {
     public Boolean muteActive;
 
     /**
-     * <p>静音时长</p>
+     * <p>The mute duration.</p>
      * 
      * <strong>example:</strong>
      * <p>85</p>
@@ -170,7 +213,7 @@ public class UpdateModelApplicationRequest extends TeaModel {
     public Long muteDuration;
 
     /**
-     * <p>连续多少个静音事件主动挂机</p>
+     * <p>The number of consecutive mute events that trigger an automatic hang-up.</p>
      * 
      * <strong>example:</strong>
      * <p>70</p>
@@ -178,20 +221,29 @@ public class UpdateModelApplicationRequest extends TeaModel {
     @NameInMap("MuteHangupNum")
     public Long muteHangupNum;
 
+    /**
+     * <p>静音事件推送模式</p>
+     * 
+     * <strong>example:</strong>
+     * <p>FIRST_ONLY</p>
+     */
+    @NameInMap("MutePushMode")
+    public String mutePushMode;
+
     @NameInMap("OwnerId")
     public Long ownerId;
 
     /**
-     * <p>提示词</p>
+     * <p>The prompt.</p>
      * 
      * <strong>example:</strong>
-     * <p>示例值示例值</p>
+     * <p>测试提示词</p>
      */
     @NameInMap("Prompt")
     public String prompt;
 
     /**
-     * <p>资质ID</p>
+     * <p>The qualification ID.</p>
      * 
      * <strong>example:</strong>
      * <p>61</p>
@@ -200,17 +252,19 @@ public class UpdateModelApplicationRequest extends TeaModel {
     public Long qualificationId;
 
     /**
-     * <p>资质名称</p>
+     * <p>The name of the qualification.</p>
      * 
      * <strong>example:</strong>
-     * <p>示例值示例值示例值</p>
+     * <p>测试质检</p>
      */
     @NameInMap("QualificationName")
     public String qualificationName;
 
     /**
+     * <p>The URL of the recording file.</p>
+     * 
      * <strong>example:</strong>
-     * <p>示例值示例值</p>
+     * <p><a href="https://xxxxxxxxxxxxxxx.wav">https://xxxxxxxxxxxxxxx.wav</a></p>
      */
     @NameInMap("RecordingFile")
     public String recordingFile;
@@ -222,7 +276,7 @@ public class UpdateModelApplicationRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>最大通话时长</p>
+     * <p>The session timeout, which is the maximum duration of a call.</p>
      * 
      * <strong>example:</strong>
      * <p>49</p>
@@ -231,25 +285,25 @@ public class UpdateModelApplicationRequest extends TeaModel {
     public Long sessionTimeout;
 
     /**
-     * <p>来源</p>
+     * <p>The value must be <code>USER</code>.</p>
      * 
      * <strong>example:</strong>
-     * <p>示例值示例值</p>
+     * <p>USER</p>
      */
     @NameInMap("Source")
     public String source;
 
     /**
-     * <p>话术内容</p>
+     * <p>The content of the speech.</p>
      * 
      * <strong>example:</strong>
-     * <p>示例值</p>
+     * <p>测试话术</p>
      */
     @NameInMap("SpeechContent")
     public String speechContent;
 
     /**
-     * <p>话束id</p>
+     * <p>The speech ID.</p>
      * 
      * <strong>example:</strong>
      * <p>15</p>
@@ -258,32 +312,35 @@ public class UpdateModelApplicationRequest extends TeaModel {
     public Long speechId;
 
     /**
-     * <p>开场白</p>
+     * <p>The opening statement.</p>
      * 
      * <strong>example:</strong>
-     * <p>示例值示例值</p>
+     * <p>你好，这是个测试开场白</p>
      */
     @NameInMap("StartWord")
     public String startWord;
 
     /**
+     * <p>The type of the opening statement. Valid values:</p>
+     * 
      * <strong>example:</strong>
-     * <p>1</p>
+     * <p>0：文本
+     * 1：录音</p>
      */
     @NameInMap("StartWordType")
     public Long startWordType;
 
     /**
-     * <p>tts配置，包括音色、音量、音速等。</p>
+     * <p>The TTS configuration, such as voice, volume, and speech rate.</p>
      */
     @NameInMap("TtsConfig")
     public UpdateModelApplicationRequestTtsConfig ttsConfig;
 
     /**
-     * <p>用途</p>
+     * <p>The purpose of the application.</p>
      * 
      * <strong>example:</strong>
-     * <p>示例值示例值</p>
+     * <p>测试用途</p>
      */
     @NameInMap("UsageDesc")
     public String usageDesc;
@@ -397,6 +454,22 @@ public class UpdateModelApplicationRequest extends TeaModel {
         return this.dtmfRetryPromptText;
     }
 
+    public UpdateModelApplicationRequest setDtmfSendMaxCount(Long dtmfSendMaxCount) {
+        this.dtmfSendMaxCount = dtmfSendMaxCount;
+        return this;
+    }
+    public Long getDtmfSendMaxCount() {
+        return this.dtmfSendMaxCount;
+    }
+
+    public UpdateModelApplicationRequest setDtmfSendWaitTimeout(Long dtmfSendWaitTimeout) {
+        this.dtmfSendWaitTimeout = dtmfSendWaitTimeout;
+        return this;
+    }
+    public Long getDtmfSendWaitTimeout() {
+        return this.dtmfSendWaitTimeout;
+    }
+
     public UpdateModelApplicationRequest setDyvmsSceneName(String dyvmsSceneName) {
         this.dyvmsSceneName = dyvmsSceneName;
         return this;
@@ -411,6 +484,14 @@ public class UpdateModelApplicationRequest extends TeaModel {
     }
     public Boolean getEnableDtmfReceive() {
         return this.enableDtmfReceive;
+    }
+
+    public UpdateModelApplicationRequest setEnableDtmfSend(Boolean enableDtmfSend) {
+        this.enableDtmfSend = enableDtmfSend;
+        return this;
+    }
+    public Boolean getEnableDtmfSend() {
+        return this.enableDtmfSend;
     }
 
     public UpdateModelApplicationRequest setEnableMorse(Boolean enableMorse) {
@@ -467,6 +548,14 @@ public class UpdateModelApplicationRequest extends TeaModel {
     }
     public Long getMuteHangupNum() {
         return this.muteHangupNum;
+    }
+
+    public UpdateModelApplicationRequest setMutePushMode(String mutePushMode) {
+        this.mutePushMode = mutePushMode;
+        return this;
+    }
+    public String getMutePushMode() {
+        return this.mutePushMode;
     }
 
     public UpdateModelApplicationRequest setOwnerId(Long ownerId) {
@@ -591,6 +680,8 @@ public class UpdateModelApplicationRequest extends TeaModel {
 
     public static class UpdateModelApplicationRequestInterruptConfigAvoidInterruptDTO extends TeaModel {
         /**
+         * <p>The number of consecutive interruptions.</p>
+         * 
          * <strong>example:</strong>
          * <p>3</p>
          */
@@ -598,6 +689,8 @@ public class UpdateModelApplicationRequest extends TeaModel {
         public Long interruptNum;
 
         /**
+         * <p>The interruption protection duration, in seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>16.417547</p>
          */
@@ -629,13 +722,13 @@ public class UpdateModelApplicationRequest extends TeaModel {
 
     public static class UpdateModelApplicationRequestInterruptConfig extends TeaModel {
         /**
-         * <p>防止连续抢话功能配置</p>
+         * <p>The configuration to prevent consecutive barge-ins.</p>
          */
         @NameInMap("AvoidInterruptDTO")
         public UpdateModelApplicationRequestInterruptConfigAvoidInterruptDTO avoidInterruptDTO;
 
         /**
-         * <p>防止连续抢话功能是否开启</p>
+         * <p>Specifies whether to prevent consecutive barge-ins.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -644,6 +737,8 @@ public class UpdateModelApplicationRequest extends TeaModel {
         public Boolean enableAvoidInterrupt;
 
         /**
+         * <p>Specifies whether to enable the backchannel configuration for interruptions.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -651,7 +746,7 @@ public class UpdateModelApplicationRequest extends TeaModel {
         public Boolean enableInterruptBackchannel;
 
         /**
-         * <p>开场白全程不打断</p>
+         * <p>Specifies whether to make the entire opening statement non-interruptible.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -660,13 +755,13 @@ public class UpdateModelApplicationRequest extends TeaModel {
         public Boolean enableStartwordEntireNotInterrupt;
 
         /**
-         * <p>开场白不打断配置是否开启</p>
+         * <p>Specifies whether to make the opening statement non-interruptible.</p>
          */
         @NameInMap("EnableStartwordNotInterrupt")
         public Boolean enableStartwordNotInterrupt;
 
         /**
-         * <p>开场白保护时长</p>
+         * <p>The protection duration for the opening statement, in seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1.4699</p>
@@ -731,6 +826,8 @@ public class UpdateModelApplicationRequest extends TeaModel {
 
     public static class UpdateModelApplicationRequestTtsConfig extends TeaModel {
         /**
+         * <p>Specifies whether to enable background sound.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -738,7 +835,7 @@ public class UpdateModelApplicationRequest extends TeaModel {
         public Boolean backgroundEnabled;
 
         /**
-         * <p>背景音id</p>
+         * <p>The background sound ID.</p>
          * 
          * <strong>example:</strong>
          * <p>111</p>
@@ -747,7 +844,7 @@ public class UpdateModelApplicationRequest extends TeaModel {
         public Long backgroundSound;
 
         /**
-         * <p>背景音音量(id)</p>
+         * <p>The volume of the background sound. Valid values: <code>0</code> (low), <code>1</code> (medium), and <code>2</code> (high).</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -756,6 +853,8 @@ public class UpdateModelApplicationRequest extends TeaModel {
         public Long backgroundVolume;
 
         /**
+         * <p>The account ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>47</p>
          */
@@ -763,6 +862,8 @@ public class UpdateModelApplicationRequest extends TeaModel {
         public Long customerAccountId;
 
         /**
+         * <p>Specifies whether to enable audio mixing.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -770,7 +871,7 @@ public class UpdateModelApplicationRequest extends TeaModel {
         public Boolean mixingEnabled;
 
         /**
-         * <p>混音模版id</p>
+         * <p>The mixing template ID.</p>
          * 
          * <strong>example:</strong>
          * <p>111</p>
@@ -779,14 +880,16 @@ public class UpdateModelApplicationRequest extends TeaModel {
         public Long mixingTemplate;
 
         /**
+         * <p>The resource ID.</p>
+         * 
          * <strong>example:</strong>
-         * <p>示例值示例值</p>
+         * <p>122</p>
          */
         @NameInMap("ResourceId")
         public String resourceId;
 
         /**
-         * <p>TTS 变量播放时的声音速度。取值范围：-200~200，默认值为 0。</p>
+         * <p>The TTS playback speech rate. Valid values range from -200 to 200. The default value is 0.</p>
          * 
          * <strong>example:</strong>
          * <p>7</p>
@@ -795,7 +898,7 @@ public class UpdateModelApplicationRequest extends TeaModel {
         public Long ttsSpeed;
 
         /**
-         * <p>声音风格</p>
+         * <p>The voice style.</p>
          * 
          * <strong>example:</strong>
          * <p>voice</p>
@@ -804,7 +907,7 @@ public class UpdateModelApplicationRequest extends TeaModel {
         public String ttsStyle;
 
         /**
-         * <p>TTS 变量播放的音量。取值范围：0~100，默认值为 0。</p>
+         * <p>The TTS playback volume. Valid values range from 0 to 100. The default value is 0.</p>
          * 
          * <strong>example:</strong>
          * <p>11</p>
@@ -813,19 +916,23 @@ public class UpdateModelApplicationRequest extends TeaModel {
         public Long ttsVolume;
 
         /**
-         * <p>声音编码</p>
+         * <p>The voice code.</p>
          * 
          * <strong>example:</strong>
-         * <p>示例值示例值</p>
+         * <p>12123213123</p>
          */
         @NameInMap("VoiceCode")
         public String voiceCode;
 
         /**
-         * <p>声音类型</p>
+         * <p>The voice type. Valid values:</p>
+         * <pre><code>SYSTEM: System voice.
+         * COSYCLONE: Cloned voice.
+         * BL-CUSTOM: Premium custom-cloned voice.
+         * </code></pre>
          * 
          * <strong>example:</strong>
-         * <p>示例值示例值</p>
+         * <p>SYSTEM</p>
          */
         @NameInMap("VoiceType")
         public String voiceType;

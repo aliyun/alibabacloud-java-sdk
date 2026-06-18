@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class HangupCallRequest extends TeaModel {
     /**
+     * <p>Agent account name (agent logon name).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,8 @@ public class HangupCallRequest extends TeaModel {
     public String accountName;
 
     /**
+     * <p>Hotline session ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>7719786</p>
      */
@@ -21,6 +24,8 @@ public class HangupCallRequest extends TeaModel {
     public String callId;
 
     /**
+     * <p>Unique customer request ID. Used for idempotency validation and can be generated using UUID.</p>
+     * 
      * <strong>example:</strong>
      * <p>46c1341e-2648-447a-9b11-70b6a298d94d</p>
      */
@@ -28,6 +33,8 @@ public class HangupCallRequest extends TeaModel {
     public String clientToken;
 
     /**
+     * <p>The connId from the WebSocket after an inbound call.</p>
+     * 
      * <strong>example:</strong>
      * <p>7719788</p>
      */
@@ -35,6 +42,7 @@ public class HangupCallRequest extends TeaModel {
     public String connectionId;
 
     /**
+     * <p>AICCS instance ID. You can obtain it from the Artificial Intelligence Cloud Call Service console.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -44,6 +52,8 @@ public class HangupCallRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>The jobId from the WebSocket after an inbound call.</p>
+     * 
      * <strong>example:</strong>
      * <p>7719787</p>
      */

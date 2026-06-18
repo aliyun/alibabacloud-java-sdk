@@ -5,12 +5,17 @@ import com.aliyun.tea.*;
 
 public class CancelAiCallDetailsShrinkRequest extends TeaModel {
     /**
+     * <p>The batch ID. This ID is returned when you import callee data. You can find the task batch ID on the <strong>Call Task Management</strong>&gt;<strong>Details</strong>&gt;<strong>Execution Record</strong> page, or use the import batch ID that is returned by the <a href="https://help.aliyun.com/document_detail/2926815.html">ImportTaskNumberDatas</a> API operation. If DetailIdList is specified, this parameter is invalid.</p>
+     * 
      * <strong>example:</strong>
      * <p>4253331213*****</p>
      */
     @NameInMap("BatchId")
     public String batchId;
 
+    /**
+     * <p>A list of detail IDs. If you specify this parameter, <code>BatchId</code> and <code>PhoneNumbers</code> are ignored.</p>
+     */
     @NameInMap("DetailIdList")
     public String detailIdListShrink;
 
@@ -24,6 +29,9 @@ public class CancelAiCallDetailsShrinkRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>A list of phone numbers. This parameter takes effect only when <code>BatchId</code> is also specified.</p>
+     */
     @NameInMap("PhoneNumbers")
     public String phoneNumbersShrink;
 
@@ -34,10 +42,11 @@ public class CancelAiCallDetailsShrinkRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
+     * <p>The task ID. You can view the task ID on the <strong>Call Task Management</strong> page or obtain it by calling the <a href="https://help.aliyun.com/document_detail/2926799.html">QueryAiCallTaskPage</a> operation.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>1223123123****</p>
+     * <p>138************</p>
      */
     @NameInMap("TaskId")
     public String taskId;

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class StartChatWorkResponseBody extends TeaModel {
     /**
+     * <p>Status code. A return value of 200 indicates that the request succeeded.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -12,6 +14,8 @@ public class StartChatWorkResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>A value of <strong>1</strong> indicates that the user has switched to the working status.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -19,6 +23,8 @@ public class StartChatWorkResponseBody extends TeaModel {
     public String data;
 
     /**
+     * <p>HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -26,6 +32,8 @@ public class StartChatWorkResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>Description of the status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>xxxx</p>
      */
@@ -33,6 +41,8 @@ public class StartChatWorkResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>EE338D98-9BD3-4413-B165</p>
      */
@@ -40,6 +50,8 @@ public class StartChatWorkResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the API call succeeded.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

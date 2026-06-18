@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetQualityProjectDetailRequest extends TeaModel {
     /**
+     * <p>The Artificial Intelligence Cloud Call Service (AICCS) instance ID. You can obtain it from the console of Artificial Intelligence Cloud Call Service.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class GetQualityProjectDetailRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>The quality inspection job ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

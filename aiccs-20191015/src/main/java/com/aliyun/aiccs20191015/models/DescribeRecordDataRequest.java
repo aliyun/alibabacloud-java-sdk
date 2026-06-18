@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeRecordDataRequest extends TeaModel {
     /**
+     * <p>AccountId.</p>
+     * 
      * <strong>example:</strong>
      * <p>2235****</p>
      */
@@ -12,6 +14,8 @@ public class DescribeRecordDataRequest extends TeaModel {
     public String accountId;
 
     /**
+     * <p>Account type.</p>
+     * 
      * <strong>example:</strong>
      * <p>BUC_TYPE</p>
      */
@@ -19,6 +23,8 @@ public class DescribeRecordDataRequest extends TeaModel {
     public String accountType;
 
     /**
+     * <p>Session ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>1004849****</p>
      */
@@ -29,6 +35,8 @@ public class DescribeRecordDataRequest extends TeaModel {
     public Long ownerId;
 
     /**
+     * <p>Product name. Default value: <strong>aiccs</strong>.</p>
+     * 
      * <strong>example:</strong>
      * <p>aiccs</p>
      */
@@ -42,6 +50,8 @@ public class DescribeRecordDataRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
+     * <p>Recording desensitization level. Valid values: <strong>1–4</strong>.</p>
+     * 
      * <strong>example:</strong>
      * <p>2</p>
      */

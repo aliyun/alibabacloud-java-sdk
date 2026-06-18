@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpdateModelApplicationResponseBody extends TeaModel {
     /**
+     * <p>The detailed reason for the access denial.</p>
+     * 
      * <strong>example:</strong>
      * <p>None</p>
      */
@@ -12,34 +14,50 @@ public class UpdateModelApplicationResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
+     * <p>The status code. A value of OK indicates that the request was successful.</p>
+     * 
      * <strong>example:</strong>
-     * <p>示例值示例值</p>
+     * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
 
     /**
+     * <p>The data returned by the request.</p>
+     * 
      * <strong>example:</strong>
-     * <p>示例值</p>
+     * <p>DKSDLSA</p>
      */
     @NameInMap("Data")
     public String data;
 
     /**
+     * <p>The response message.</p>
+     * 
      * <strong>example:</strong>
-     * <p>示例值示例值</p>
+     * <p>successful</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
-     * <p>示例值示例值</p>
+     * <p>D9CB3933-9FE3-4870-BA8E-2BEE91B69D23</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <ul>
+     * <li><p><strong>true</strong>: The request was successful.</p>
+     * </li>
+     * <li><p><strong>false</strong>: The request failed.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

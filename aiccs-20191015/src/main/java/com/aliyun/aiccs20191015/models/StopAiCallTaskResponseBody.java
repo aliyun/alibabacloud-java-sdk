@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class StopAiCallTaskResponseBody extends TeaModel {
     /**
+     * <p>The detailed reason for the access denial.</p>
+     * 
      * <strong>example:</strong>
      * <p>None</p>
      */
@@ -12,6 +14,8 @@ public class StopAiCallTaskResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
+     * <p>The request status code. A value of <code>OK</code> indicates that the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
@@ -19,6 +23,14 @@ public class StopAiCallTaskResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>Indicates whether the task was stopped successfully. Valid values:</p>
+     * <ul>
+     * <li><p><strong>true</strong>: The operation was successful.</p>
+     * </li>
+     * <li><p><strong>false</strong>: The operation failed.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -26,13 +38,17 @@ public class StopAiCallTaskResponseBody extends TeaModel {
     public Boolean data;
 
     /**
+     * <p>The description of the status code.</p>
+     * 
      * <strong>example:</strong>
-     * <p>示例值示例值</p>
+     * <p>成功</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>7124F972-BAB8-5D1E-90FC-01CB10713B29</p>
      */
@@ -40,6 +56,14 @@ public class StopAiCallTaskResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the API call was successful. Valid values:</p>
+     * <ul>
+     * <li><p><strong>true</strong>: The call was successful.</p>
+     * </li>
+     * <li><p><strong>false</strong>: The call failed.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

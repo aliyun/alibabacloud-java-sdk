@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class AddModelApplicationResponseBody extends TeaModel {
     /**
+     * <p>The detailed reason for the access denied error.</p>
+     * 
      * <strong>example:</strong>
      * <p>None</p>
      */
@@ -12,34 +14,44 @@ public class AddModelApplicationResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
+     * <p>The status code. A value of OK indicates a successful request.</p>
+     * 
      * <strong>example:</strong>
-     * <p>示例值</p>
+     * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
 
     /**
+     * <p>The returned application code.</p>
+     * 
      * <strong>example:</strong>
-     * <p>示例值示例值示例值</p>
+     * <p>325****2D2</p>
      */
     @NameInMap("Data")
     public String data;
 
     /**
+     * <p>The message that explains the status code.</p>
+     * 
      * <strong>example:</strong>
-     * <p>示例值示例值</p>
+     * <p>OK</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
-     * <p>示例值示例值</p>
+     * <p>8C93B345-F702-5449-BA7E-7D110D4BF798</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
+     * <p>Indicates whether the API call was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

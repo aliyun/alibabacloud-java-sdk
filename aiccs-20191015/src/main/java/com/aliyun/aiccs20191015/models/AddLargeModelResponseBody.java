@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class AddLargeModelResponseBody extends TeaModel {
     /**
+     * <p>The reason for the authentication failure.</p>
+     * 
      * <strong>example:</strong>
      * <p>None</p>
      */
@@ -12,13 +14,17 @@ public class AddLargeModelResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
+     * <p>The status code. A value of <code>OK</code> indicates that the request was successful.</p>
+     * 
      * <strong>example:</strong>
-     * <p>示例值示例值</p>
+     * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
 
     /**
+     * <p>The result of the operation.</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -26,20 +32,32 @@ public class AddLargeModelResponseBody extends TeaModel {
     public Boolean data;
 
     /**
+     * <p>The response message.</p>
+     * 
      * <strong>example:</strong>
-     * <p>示例值示例值</p>
+     * <p>successful</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
-     * <p>示例值示例值</p>
+     * <p>B1B8E483-372F-5AA8-A4B2-CA82EC967B0C</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <ul>
+     * <li><p><strong>true</strong>: The request succeeded.</p>
+     * </li>
+     * <li><p><strong>false</strong>: The request failed.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */

@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteHotlineNumberRequest extends TeaModel {
     /**
+     * <p>The hotline number.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class DeleteHotlineNumberRequest extends TeaModel {
     public String hotlineNumber;
 
     /**
+     * <p>The Artificial Intelligence Cloud Call Service (AICCS) instance ID. You can obtain it from the Artificial Intelligence Cloud Call Service console.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

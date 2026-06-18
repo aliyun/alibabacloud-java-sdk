@@ -5,23 +5,32 @@ import com.aliyun.tea.*;
 
 public class GetAgentServiceStatusResponseBody extends TeaModel {
     /**
+     * <p>Status code. A return value of 200 indicates that the request succeeded.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>Data list.</p>
+     */
     @NameInMap("Data")
     public GetAgentServiceStatusResponseBodyData data;
 
     /**
+     * <p>Status code description.</p>
+     * 
      * <strong>example:</strong>
-     * <p>xxxx</p>
+     * <p>successful</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>EE338D98-9BD3-4413-B165</p>
      */
@@ -29,6 +38,12 @@ public class GetAgentServiceStatusResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the API call succeeded. Valid values:  </p>
+     * <ul>
+     * <li><strong>true</strong>: Succeeded.  </li>
+     * <li><strong>false</strong>: Failed.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -82,6 +97,8 @@ public class GetAgentServiceStatusResponseBody extends TeaModel {
 
     public static class GetAgentServiceStatusResponseBodyData extends TeaModel {
         /**
+         * <p>Current page number.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -89,6 +106,8 @@ public class GetAgentServiceStatusResponseBody extends TeaModel {
         public Long pageNum;
 
         /**
+         * <p>Page size.</p>
+         * 
          * <strong>example:</strong>
          * <p>2000</p>
          */
@@ -96,6 +115,8 @@ public class GetAgentServiceStatusResponseBody extends TeaModel {
         public Long pageSize;
 
         /**
+         * <p>Information provided as a JSON string of type List<Map>.</p>
+         * 
          * <strong>example:</strong>
          * <p>{&quot;online_40s_transfer_ready_cnt&quot;:81,&quot;minute_id&quot;:&quot;-1&quot;,&quot;online_unsatis_cnt&quot;:0,&quot;online_simple_cnt&quot;:0,&quot;average_queue_time&quot;:-1,&quot;service_pickup&quot;:&quot;2086&quot;,&quot;total_waiting_time&quot;:&quot;981&quot;,&quot;online_service_time_len&quot;:58208,&quot;online_direct_give_up_len&quot;:0,&quot;break_ratio&quot;:&quot;2%&quot;}</p>
          */
@@ -103,6 +124,8 @@ public class GetAgentServiceStatusResponseBody extends TeaModel {
         public String rows;
 
         /**
+         * <p>Total number of records.</p>
+         * 
          * <strong>example:</strong>
          * <p>4</p>
          */

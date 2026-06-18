@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class PageQueryAgentListRequest extends TeaModel {
     /**
+     * <p>The unique identifier for the agent.</p>
+     * 
      * <strong>example:</strong>
      * <p>1231*******</p>
      */
@@ -12,8 +14,10 @@ public class PageQueryAgentListRequest extends TeaModel {
     public String agentId;
 
     /**
+     * <p>The name of the agent.</p>
+     * 
      * <strong>example:</strong>
-     * <p>示例值示例值</p>
+     * <p>测试智能体</p>
      */
     @NameInMap("AgentName")
     public String agentName;
@@ -22,6 +26,8 @@ public class PageQueryAgentListRequest extends TeaModel {
     public Long ownerId;
 
     /**
+     * <p>The page number. Pages start from 1. The default value is 1.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -29,6 +35,8 @@ public class PageQueryAgentListRequest extends TeaModel {
     public Long pageNo;
 
     /**
+     * <p>The number of entries to return per page. The default value is 10.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -42,6 +50,8 @@ public class PageQueryAgentListRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
+     * <p>The status of the agent.</p>
+     * 
      * <strong>example:</strong>
      * <p>7</p>
      */

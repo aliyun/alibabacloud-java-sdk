@@ -5,13 +5,49 @@ import com.aliyun.tea.*;
 
 public class QueryAiCallDetailPageShrinkRequest extends TeaModel {
     /**
+     * <p>The batch ID. You can find this ID by clicking Details on the <strong>Call Task Management</strong> page.</p>
+     * 
      * <strong>example:</strong>
-     * <p>1212131231****</p>
+     * <p>1183**************</p>
      */
     @NameInMap("BatchId")
     public String batchId;
 
     /**
+     * <p>The call result. Valid values:</p>
+     * <ul>
+     * <li><p>CALL_FORWARDING: Call Forwarding.</p>
+     * </li>
+     * <li><p>INCOMING_CALL_BARRED: Incoming Call Barred.</p>
+     * </li>
+     * <li><p>CALL_REJECTED: Call Rejected.</p>
+     * </li>
+     * <li><p>ANSWERED: Answered.</p>
+     * </li>
+     * <li><p>USER_BUSY: User Busy.</p>
+     * </li>
+     * <li><p>POWERED_OFF: Powered Off.</p>
+     * </li>
+     * <li><p>NO_USER_RESPONSE: No User Response.</p>
+     * </li>
+     * <li><p>OPERATOR_BLOCK: Operator Block.</p>
+     * </li>
+     * <li><p>OTHERS: Others.</p>
+     * </li>
+     * <li><p>SUSPEND: Suspend.</p>
+     * </li>
+     * <li><p>CANCEL: Canceled by the caller.</p>
+     * </li>
+     * <li><p>INVALID_NUMBER: Invalid Number.</p>
+     * </li>
+     * <li><p>UNAVAILABLE: Unavailable.</p>
+     * </li>
+     * <li><p>NETWORK_BUSY: Network Busy.</p>
+     * </li>
+     * <li><p>NO_ANSWER: No Answer.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>ANSWERED</p>
      */
@@ -19,23 +55,35 @@ public class QueryAiCallDetailPageShrinkRequest extends TeaModel {
     public String callResult;
 
     /**
+     * <p>The called number.</p>
+     * 
      * <strong>example:</strong>
      * <p>053714454****</p>
      */
     @NameInMap("CalledNumber")
     public String calledNumber;
 
+    /**
+     * <p>A list of up to 100 detail IDs.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Sample value Sample value</p>
+     */
     @NameInMap("DetailIds")
     public String detailIdsShrink;
 
     /**
+     * <p>The encryption method. Valid values: 0 (None), 1 (MD5), 2 (SHA256), and 3 (SM3).</p>
+     * 
      * <strong>example:</strong>
-     * <p>73</p>
+     * <p>1</p>
      */
     @NameInMap("EncryptionType")
     public Long encryptionType;
 
     /**
+     * <p>The end of the call time range. This value is a timestamp in milliseconds.</p>
+     * 
      * <strong>example:</strong>
      * <p>1748948749000</p>
      */
@@ -43,6 +91,8 @@ public class QueryAiCallDetailPageShrinkRequest extends TeaModel {
     public Long endCallingTime;
 
     /**
+     * <p>The end of the import time range. This value is a timestamp in milliseconds.</p>
+     * 
      * <strong>example:</strong>
      * <p>1748948749000</p>
      */
@@ -50,6 +100,8 @@ public class QueryAiCallDetailPageShrinkRequest extends TeaModel {
     public Long endImportedTime;
 
     /**
+     * <p>The major intent. You can find this intent by clicking Agent Details on the <a href="https://aiccs.console.aliyun.com/agent/customize">Communication Agent Management</a> page.</p>
+     * 
      * <strong>example:</strong>
      * <p>A</p>
      */
@@ -57,6 +109,8 @@ public class QueryAiCallDetailPageShrinkRequest extends TeaModel {
     public String majorIntent;
 
     /**
+     * <p>The maximum conversation duration, in minutes.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -64,6 +118,8 @@ public class QueryAiCallDetailPageShrinkRequest extends TeaModel {
     public Long maxConversationDuration;
 
     /**
+     * <p>The minimum conversation duration, in minutes.</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
@@ -71,8 +127,10 @@ public class QueryAiCallDetailPageShrinkRequest extends TeaModel {
     public Long minConversationDuration;
 
     /**
+     * <p>A custom ID provided by the caller. This ID is returned in the receipt message for request tracking.</p>
+     * 
      * <strong>example:</strong>
-     * <p>示例值示例值</p>
+     * <p>94ba739b-c01a-ef91-335d-4be006c34899</p>
      */
     @NameInMap("OutId")
     public String outId;
@@ -81,6 +139,8 @@ public class QueryAiCallDetailPageShrinkRequest extends TeaModel {
     public Long ownerId;
 
     /**
+     * <p>The page number. The value must be greater than <strong>0</strong>. The default value is <strong>1</strong>.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -88,6 +148,8 @@ public class QueryAiCallDetailPageShrinkRequest extends TeaModel {
     public Long pageNo;
 
     /**
+     * <p>The number of entries per page. The default value is <strong>10</strong>.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -101,6 +163,8 @@ public class QueryAiCallDetailPageShrinkRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
+     * <p>The start of the call time range. This value is a timestamp in milliseconds.</p>
+     * 
      * <strong>example:</strong>
      * <p>1748948749000</p>
      */
@@ -108,6 +172,8 @@ public class QueryAiCallDetailPageShrinkRequest extends TeaModel {
     public Long startCallingTime;
 
     /**
+     * <p>The start of the import time range. This value is a timestamp in milliseconds.</p>
+     * 
      * <strong>example:</strong>
      * <p>1748948749000</p>
      */
@@ -115,6 +181,15 @@ public class QueryAiCallDetailPageShrinkRequest extends TeaModel {
     public Long startImportedTime;
 
     /**
+     * <p>The task status. Valid values:</p>
+     * <ul>
+     * <li><p>0: Pending.</p>
+     * </li>
+     * <li><p>1: Completed.</p>
+     * </li>
+     * <li><p>2: Failed.</p>
+     * </li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -124,10 +199,11 @@ public class QueryAiCallDetailPageShrinkRequest extends TeaModel {
     public Long status;
 
     /**
+     * <p>The task ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>1212131231****</p>
+     * <p>1187**************</p>
      */
     @NameInMap("TaskId")
     public String taskId;

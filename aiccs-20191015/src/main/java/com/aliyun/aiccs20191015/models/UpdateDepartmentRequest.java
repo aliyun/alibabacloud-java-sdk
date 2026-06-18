@@ -5,21 +5,34 @@ import com.aliyun.tea.*;
 
 public class UpdateDepartmentRequest extends TeaModel {
     /**
+     * <p>The department ID.</p>
+     * <p>You can invoke the <a href="https://help.aliyun.com/document_detail/2717975.html">GetAllDepartment</a> API and view the <strong>DepartmentId</strong> field in the response to obtain the department ID.</p>
+     * <blockquote>
+     * <p>This parameter does not support updates.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>123456</p>
+     * <p>12****</p>
      */
     @NameInMap("DepartmentId")
     public Long departmentId;
 
     /**
+     * <p>The department name.</p>
+     * <blockquote>
+     * <p>This parameter supports updates.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>部门A</p>
      */
     @NameInMap("DepartmentName")
     public String departmentName;
 
     /**
+     * <p>The Artificial Intelligence Cloud Call Service (AICCS) instance ID.<br>You can obtain it from <strong>Instance Management</strong> in the left-side navigation pane of the <a href="https://aiccs.console.aliyun.com/overview">Artificial Intelligence Cloud Call Service console</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

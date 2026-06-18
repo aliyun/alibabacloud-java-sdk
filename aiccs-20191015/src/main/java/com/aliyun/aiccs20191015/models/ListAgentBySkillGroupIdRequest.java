@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListAgentBySkillGroupIdRequest extends TeaModel {
     /**
+     * <p>A unique ID for the Customer request. It is used for idempotency validation and can be generated using a UUID.</p>
+     * 
      * <strong>example:</strong>
      * <p>46c1341e-2648-447a-9b11-70b6a298d94d</p>
      */
@@ -12,6 +14,7 @@ public class ListAgentBySkillGroupIdRequest extends TeaModel {
     public String clientToken;
 
     /**
+     * <p>The Artificial Intelligence Cloud Call Service (AICCS) instance ID.<br>You can obtain it from <strong>Instance Management</strong> in the left-side navigation pane of the <a href="https://aiccs.console.aliyun.com/overview">Artificial Intelligence Cloud Call Service console</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,6 +24,7 @@ public class ListAgentBySkillGroupIdRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>The skill group ID.<br>You can invoke the <a href="https://help.aliyun.com/zh/aiccs/developer-reference/api-aiccs-2019-10-15-queryskillgroups">QuerySkillGroups</a> API and view the <strong>SkillGroupId</strong> in the response parameters to obtain the skill group ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

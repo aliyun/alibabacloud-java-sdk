@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class LlmFullDuplexCallOperateRequest extends TeaModel {
     /**
-     * <p>通话的唯一回执 ID。可通过 llmSmartCallFullDuplex 接口获取。</p>
+     * <p>The unique receipt ID of the call. You can obtain this ID by calling the LlmSmartCallFullDuplex operation.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class LlmFullDuplexCallOperateRequest extends TeaModel {
     public String callId;
 
     /**
-     * <p>动作指令：play / flush / hangup / sendDtmf</p>
+     * <p>The action command: play / flush / hangup / sendDtmf.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,7 +25,7 @@ public class LlmFullDuplexCallOperateRequest extends TeaModel {
     public String command;
 
     /**
-     * <p>扩展参数，JSON 字符串。各 command 参数说明：</p>
+     * <p>The extension parameter, a JSON character string. The metric description for each command:</p>
      * 
      * <strong>example:</strong>
      * <p>示例值示例值</p>

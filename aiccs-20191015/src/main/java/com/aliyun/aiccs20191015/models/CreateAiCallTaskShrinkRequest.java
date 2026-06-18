@@ -5,36 +5,46 @@ import com.aliyun.tea.*;
 
 public class CreateAiCallTaskShrinkRequest extends TeaModel {
     /**
+     * <p>The ID of a published agent.</p>
+     * 
      * <strong>example:</strong>
-     * <p>121223123123****</p>
+     * <p>1180**************</p>
      */
     @NameInMap("AgentId")
     public String agentId;
 
     /**
      * <strong>example:</strong>
-     * <p>示例值示例值</p>
+     * <p>025****C98</p>
      */
     @NameInMap("ApplicationCode")
     public String applicationCode;
 
     /**
+     * <p>The list of callable days.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("CallDay")
     public String callDayShrink;
 
     /**
+     * <p>The retry interval, in minutes. The maximum value is 720.</p>
+     * 
      * <strong>example:</strong>
      * <p>32</p>
      */
     @NameInMap("CallRetryInterval")
     public Long callRetryInterval;
 
+    /**
+     * <p>The failure reasons that trigger a retry.</p>
+     */
     @NameInMap("CallRetryReason")
     public String callRetryReasonShrink;
 
     /**
+     * <p>The number of retries. The maximum value is 3.</p>
+     * 
      * <strong>example:</strong>
      * <p>2</p>
      */
@@ -42,6 +52,7 @@ public class CreateAiCallTaskShrinkRequest extends TeaModel {
     public Long callRetryTimes;
 
     /**
+     * <p>The list of callable time periods.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("CallTime")
@@ -49,19 +60,27 @@ public class CreateAiCallTaskShrinkRequest extends TeaModel {
 
     /**
      * <strong>example:</strong>
-     * <p>示例值示例值</p>
+     * <p>JILIANG_***_***_NET</p>
      */
     @NameInMap("LineEncoding")
     public String lineEncoding;
 
     /**
      * <strong>example:</strong>
-     * <p>示例值示例值</p>
+     * <p>152****3120</p>
      */
     @NameInMap("LinePhoneNum")
     public String linePhoneNum;
 
     /**
+     * <p>Specifies whether to enable retry. Valid values:</p>
+     * <ul>
+     * <li><p><code>true</code>: Enables retry.</p>
+     * </li>
+     * <li><p><code>false</code> (default): Disables retry.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -73,7 +92,7 @@ public class CreateAiCallTaskShrinkRequest extends TeaModel {
 
     /**
      * <strong>example:</strong>
-     * <p>54</p>
+     * <p>0</p>
      */
     @NameInMap("PhoneType")
     public Long phoneType;
@@ -86,12 +105,19 @@ public class CreateAiCallTaskShrinkRequest extends TeaModel {
 
     /**
      * <strong>example:</strong>
-     * <p>92</p>
+     * <p>0</p>
      */
     @NameInMap("Source")
     public Long source;
 
     /**
+     * <p>The startup mode. Valid values:</p>
+     * <ul>
+     * <li><p><code>IMMEDIATE</code>: Starts the task immediately.</p>
+     * </li>
+     * <li><p><code>SCHEDULE</code>: Starts the task at a scheduled time.</p>
+     * </li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -101,6 +127,8 @@ public class CreateAiCallTaskShrinkRequest extends TeaModel {
     public String startType;
 
     /**
+     * <p>The task concurrency. The maximum value is 500.</p>
+     * 
      * <strong>example:</strong>
      * <p>75</p>
      */
@@ -108,15 +136,18 @@ public class CreateAiCallTaskShrinkRequest extends TeaModel {
     public Long taskCps;
 
     /**
+     * <p>The name of the task. It must be unique within an account.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>示例值示例值</p>
+     * <p>测试任务</p>
      */
     @NameInMap("TaskName")
     public String taskName;
 
     /**
+     * <p>The scheduled start time for the task, specified as a timestamp in milliseconds. This parameter is required and applies only when <code>StartType</code> is set to <code>SCHEDULE</code>.</p>
+     * 
      * <strong>example:</strong>
      * <p>12313123133</p>
      */
@@ -124,6 +155,8 @@ public class CreateAiCallTaskShrinkRequest extends TeaModel {
     public Long taskStartTime;
 
     /**
+     * <p>The service instance used for outbound calls.</p>
+     * 
      * <strong>example:</strong>
      * <p>032712122*****</p>
      */

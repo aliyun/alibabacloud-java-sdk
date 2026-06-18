@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetCustomerInfoRequest extends TeaModel {
     /**
+     * <p>AICCS instance ID. You can obtain it from the Artificial Intelligence Cloud Call Service console.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class GetCustomerInfoRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>Membership ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -4,20 +4,30 @@ package com.aliyun.aiccs20191015.models;
 import com.aliyun.tea.*;
 
 public class GetOnlineSeatInformationShrinkRequest extends TeaModel {
+    /**
+     * <p>List of agent IDs.</p>
+     */
     @NameInMap("AgentIds")
     public String agentIdsShrink;
 
     /**
+     * <p>Current page number. The value must be greater than <strong>0</strong>. Default value: <strong>1</strong>.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
+    /**
+     * <p>List of department IDs.</p>
+     */
     @NameInMap("DepIds")
     public String depIdsShrink;
 
     /**
+     * <p>End date UNIX timestamp. Unit: milliseconds.</p>
+     * 
      * <strong>example:</strong>
      * <p>1617761765000</p>
      */
@@ -25,6 +35,7 @@ public class GetOnlineSeatInformationShrinkRequest extends TeaModel {
     public Long endDate;
 
     /**
+     * <p>AICCS instance ID.<br>You can obtain it from <strong>Instance Management</strong> in the left-side navigation pane of the <a href="https://aiccs.console.aliyun.com/overview">Artificial Intelligence Cloud Call Service console</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -34,6 +45,8 @@ public class GetOnlineSeatInformationShrinkRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>Page size. The value must be greater than <strong>0</strong>. Default value: <strong>20</strong>.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -41,6 +54,8 @@ public class GetOnlineSeatInformationShrinkRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>Start date UNIX timestamp. Unit: milliseconds.</p>
+     * 
      * <strong>example:</strong>
      * <p>1615083365000</p>
      */

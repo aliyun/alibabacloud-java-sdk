@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class GetQualityProjectDetailResponseBody extends TeaModel {
     /**
+     * <p>The status code. A return value of 200 indicates that the request succeeded.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>Quality inspection job information.</p>
+     */
     @NameInMap("Data")
     public GetQualityProjectDetailResponseBodyData data;
 
     /**
+     * <p>Status code description.</p>
+     * 
      * <strong>example:</strong>
      * <p>xxxx</p>
      */
@@ -22,6 +29,8 @@ public class GetQualityProjectDetailResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>EE338D98-9BD3-4413-B165</p>
      */
@@ -29,6 +38,8 @@ public class GetQualityProjectDetailResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the API call succeeded.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -82,6 +93,12 @@ public class GetQualityProjectDetailResponseBody extends TeaModel {
 
     public static class GetQualityProjectDetailResponseBodyData extends TeaModel {
         /**
+         * <p>Inspection frequency type. Valid values:</p>
+         * <ul>
+         * <li><strong>1</strong>: Periodic quality inspection</li>
+         * <li><strong>4</strong>: Ad hoc quality inspection</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -89,19 +106,29 @@ public class GetQualityProjectDetailResponseBody extends TeaModel {
         public Integer checkFreqType;
 
         /**
+         * <p>Creation Time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2021-04-07 18:07:18</p>
          */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <p>Quality inspection sampling scope.</p>
+         */
         @NameInMap("DepList")
         public java.util.List<Long> depList;
 
+        /**
+         * <p>Quality inspection sampling scope.</p>
+         */
         @NameInMap("GroupList")
         public java.util.List<Long> groupList;
 
         /**
+         * <p>Quality inspection job ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>15977801</p>
          */
@@ -109,29 +136,51 @@ public class GetQualityProjectDetailResponseBody extends TeaModel {
         public Long id;
 
         /**
+         * <p>Updated At.</p>
+         * 
          * <strong>example:</strong>
          * <p>2021-04-07 18:07:19</p>
          */
         @NameInMap("ModifyTime")
         public String modifyTime;
 
+        /**
+         * <p>Quality inspection job name</p>
+         * 
+         * <strong>example:</strong>
+         * <p>自动化质检任务</p>
+         */
         @NameInMap("ProjectName")
         public String projectName;
 
+        /**
+         * <p>Quality inspection rule IDs.</p>
+         */
         @NameInMap("QualityRuleIds")
         public java.util.List<Long> qualityRuleIds;
 
         /**
+         * <p>Quality inspection type. Fixed value: <strong>1</strong> (Consultation).</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
         @NameInMap("QualityType")
         public Integer qualityType;
 
+        /**
+         * <p>Quality inspection sampling scope.</p>
+         */
         @NameInMap("ServicerList")
         public java.util.List<Long> servicerList;
 
         /**
+         * <p>Quality inspection job status. Valid values:  </p>
+         * <ul>
+         * <li><strong>0</strong>: Start  </li>
+         * <li><strong>1</strong>: Shutdown</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -139,6 +188,8 @@ public class GetQualityProjectDetailResponseBody extends TeaModel {
         public Integer status;
 
         /**
+         * <p>Quality inspection job version number.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */

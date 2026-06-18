@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListTaskDetailRequest extends TeaModel {
     /**
+     * <p>The callee number. You can view the callee number on the <strong>Detail</strong> interface of <a href="https://aiccs.console.aliyun.com/job/list"><strong>Task Management</strong></a>.</p>
+     * 
      * <strong>example:</strong>
      * <p>186****0000</p>
      */
@@ -12,8 +14,10 @@ public class ListTaskDetailRequest extends TeaModel {
     public String called;
 
     /**
+     * <p>The detail ID. You can view the detail ID on the <strong>Detail</strong> interface of <a href="https://aiccs.console.aliyun.com/job/list"><strong>Task Management</strong></a>.</p>
+     * 
      * <strong>example:</strong>
-     * <p>123456</p>
+     * <p>12****</p>
      */
     @NameInMap("Id")
     public Long id;
@@ -22,6 +26,8 @@ public class ListTaskDetailRequest extends TeaModel {
     public Long ownerId;
 
     /**
+     * <p>The current page number. The value must be greater than <strong>0</strong>. Default value: <strong>1</strong>.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -29,6 +35,8 @@ public class ListTaskDetailRequest extends TeaModel {
     public Integer pageNo;
 
     /**
+     * <p>The number of entries per page. The value must be greater than <strong>0</strong>. Default value: <strong>20</strong>.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -42,6 +50,13 @@ public class ListTaskDetailRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
+     * <p>Detail status. Valid values:</p>
+     * <ul>
+     * <li><strong>SUCCESS</strong>: The outbound call succeeded.</li>
+     * <li><strong>FAIL</strong>: The outbound call failed.</li>
+     * <li><strong>INIT</strong>: The outbound call has not been made.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>SUCCESS</p>
      */
@@ -49,17 +64,20 @@ public class ListTaskDetailRequest extends TeaModel {
     public String status;
 
     /**
+     * <p>The call status code. For more information, see <a href="https://help.aliyun.com/document_detail/112804.html">Call Status Codes</a> in Voice Service.</p>
+     * 
      * <strong>example:</strong>
-     * <p>000001</p>
+     * <p>200100</p>
      */
     @NameInMap("StatusCode")
     public String statusCode;
 
     /**
+     * <p>The job ID. You can view the job ID on the <a href="https://aiccs.console.aliyun.com/job/list">Task Management</a> page or obtain it by using the <a href="https://help.aliyun.com/document_detail/2718008.html">ListTask</a> API.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>123456</p>
+     * <p>12****</p>
      */
     @NameInMap("TaskId")
     public Long taskId;

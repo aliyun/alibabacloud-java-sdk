@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetCallDialogContentRequest extends TeaModel {
     /**
+     * <p>The outbound call date, in yyyy-MM-dd format. You can only query data from the last 30 days.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,10 @@ public class GetCallDialogContentRequest extends TeaModel {
     public String callDate;
 
     /**
+     * <p>The unique identifier for a call.</p>
+     * <blockquote>
+     * <p>The LlmSmartCall API returns this ID in the CallId parameter of its response.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

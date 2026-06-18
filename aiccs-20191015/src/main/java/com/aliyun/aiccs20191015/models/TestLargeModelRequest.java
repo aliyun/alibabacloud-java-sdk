@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class TestLargeModelRequest extends TeaModel {
     /**
-     * <p>基础模型</p>
+     * <p>The base models.</p>
      */
     @NameInMap("BaseModel")
     public java.util.List<String> baseModel;
 
     /**
-     * <p>场景ID</p>
+     * <p>The ID of the test scenario.</p>
      * 
      * <strong>example:</strong>
      * <p>1232</p>
@@ -29,10 +29,10 @@ public class TestLargeModelRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>用户对话内容</p>
+     * <p>The user dialog content.</p>
      * 
      * <strong>example:</strong>
-     * <p>示例值示例值示例值</p>
+     * <p>你好。</p>
      */
     @NameInMap("UserDialogContent")
     public String userDialogContent;

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class QueryAiVoiceAgentDetailRequest extends TeaModel {
     /**
+     * <p>The agent ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>123123********</p>
      */

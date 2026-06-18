@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class LlmFullDuplexCallOperateResponseBody extends TeaModel {
     /**
+     * <p>The details about the access denial. This parameter is returned only when RAM authentication fails.</p>
+     * 
      * <strong>example:</strong>
      * <p>None</p>
      */
@@ -12,6 +14,8 @@ public class LlmFullDuplexCallOperateResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
+     * <p>The status code. A value of Success indicates that the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>示例值示例值</p>
      */
@@ -19,6 +23,12 @@ public class LlmFullDuplexCallOperateResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>The result of the command execution. Valid values:</p>
+     * <ul>
+     * <li><strong>true</strong>: The command was executed.</li>
+     * <li><strong>false</strong>: The command failed to be executed.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -26,6 +36,8 @@ public class LlmFullDuplexCallOperateResponseBody extends TeaModel {
     public Boolean data;
 
     /**
+     * <p>The description of the status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>示例值示例值示例值</p>
      */
@@ -33,6 +45,8 @@ public class LlmFullDuplexCallOperateResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>示例值示例值示例值</p>
      */
@@ -40,6 +54,12 @@ public class LlmFullDuplexCallOperateResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the call was successful. Valid values:</p>
+     * <ul>
+     * <li><strong>true</strong>: The call was successful.</li>
+     * <li><strong>false</strong>: The call failed.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */

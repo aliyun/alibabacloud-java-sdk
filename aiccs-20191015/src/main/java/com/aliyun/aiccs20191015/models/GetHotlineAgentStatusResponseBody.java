@@ -5,16 +5,37 @@ import com.aliyun.tea.*;
 
 public class GetHotlineAgentStatusResponseBody extends TeaModel {
     /**
+     * <p>Status code. A value of &quot;Success&quot; indicates that the request succeeded.</p>
+     * 
      * <strong>example:</strong>
      * <p>Success</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>Agent status. Valid values:  </p>
+     * <ul>
+     * <li><strong>Offline</strong>  </li>
+     * <li><strong>Idle</strong>  </li>
+     * <li><strong>Post-processing</strong>  </li>
+     * <li><strong>In Call</strong>  </li>
+     * <li><strong>Break - Rest</strong>  </li>
+     * <li><strong>Break - Meal</strong>  </li>
+     * <li><strong>Break - Meeting</strong>  </li>
+     * <li><strong>Break - Training</strong>  </li>
+     * <li><strong>Break - Coaching</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>通话中</p>
+     */
     @NameInMap("Data")
     public String data;
 
     /**
+     * <p>HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -22,6 +43,8 @@ public class GetHotlineAgentStatusResponseBody extends TeaModel {
     public Long httpStatusCode;
 
     /**
+     * <p>Description of the status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
@@ -29,6 +52,8 @@ public class GetHotlineAgentStatusResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>EE338D98-9BD3-4413-B165</p>
      */
@@ -36,6 +61,12 @@ public class GetHotlineAgentStatusResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the API call succeeded. Valid values:  </p>
+     * <ul>
+     * <li><strong>true</strong>: Succeeded.  </li>
+     * <li><strong>false</strong>: Failed.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

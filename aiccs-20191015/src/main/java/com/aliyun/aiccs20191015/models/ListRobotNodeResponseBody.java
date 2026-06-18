@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class ListRobotNodeResponseBody extends TeaModel {
     /**
+     * <p>Request status code. A return value of OK indicates that the request succeeded.</p>
+     * 
      * <strong>example:</strong>
      * <p>Ok</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>List of robot nodes.</p>
+     */
     @NameInMap("Data")
     public java.util.List<ListRobotNodeResponseBodyData> data;
 
     /**
+     * <p>Description of the status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>Ok</p>
      */
@@ -22,6 +29,8 @@ public class ListRobotNodeResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>D9CB3933-9FE3-4870-BA8E-2BEE91B69D23</p>
      */
@@ -29,6 +38,12 @@ public class ListRobotNodeResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Whether the API invocation succeeded. Valid values:</p>
+     * <ul>
+     * <li><strong>true</strong>: Succeeded.</li>
+     * <li><strong>false</strong>: Failed.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -82,25 +97,51 @@ public class ListRobotNodeResponseBody extends TeaModel {
 
     public static class ListRobotNodeResponseBodyData extends TeaModel {
         /**
+         * <p>Whether it is an output. Valid values:</p>
+         * <ul>
+         * <li><strong>1</strong>: Yes.</li>
+         * <li><strong>0</strong>: No.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
         @NameInMap("IsOutput")
         public Integer isOutput;
 
+        /**
+         * <p>Model name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>模型一</p>
+         */
         @NameInMap("ModelName")
         public String modelName;
 
         /**
+         * <p>Output ID.</p>
+         * 
          * <strong>example:</strong>
-         * <p>123456</p>
+         * <p>12****</p>
          */
         @NameInMap("NodeIdentifier")
         public String nodeIdentifier;
 
+        /**
+         * <p>Node name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>理财</p>
+         */
         @NameInMap("NodeName")
         public String nodeName;
 
+        /**
+         * <p>Flow name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>开场白</p>
+         */
         @NameInMap("ProcessName")
         public String processName;
 

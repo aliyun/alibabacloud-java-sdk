@@ -5,15 +5,18 @@ import com.aliyun.tea.*;
 
 public class SendHotlineHeartBeatRequest extends TeaModel {
     /**
+     * <p>Agent account name, which is the phone number or mailbox specified during account registration. It is unique within the instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p><a href="mailto:123@123.com">123@123.com</a></p>
+     * <p><a href="mailto:username@example.com">username@example.com</a></p>
      */
     @NameInMap("AccountName")
     public String accountName;
 
     /**
+     * <p>Unique ID for the customer request. Used for idempotency validation. You can generate it using UUID.</p>
+     * 
      * <strong>example:</strong>
      * <p>46c1341e-2648-447a-9b11-70b6a298d94d</p>
      */
@@ -21,6 +24,7 @@ public class SendHotlineHeartBeatRequest extends TeaModel {
     public String clientToken;
 
     /**
+     * <p>Artificial Intelligence Cloud Call Service (AICCS) instance ID.<br>You can obtain it in the <b>Instance Management</b> section of the left-side navigation pane in the <a href="https://aiccs.console.aliyun.com/overview">Artificial Intelligence Cloud Call Service console</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -30,6 +34,8 @@ public class SendHotlineHeartBeatRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>Heartbeat signature.  </p>
+     * <p>You can obtain the token by invoking the <a href="https://help.aliyun.com/document_detail/2718045.html">StartHotlineService</a> API.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

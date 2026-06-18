@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteOuterAccountRequest extends TeaModel {
     /**
+     * <p>External Account ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class DeleteOuterAccountRequest extends TeaModel {
     public String outerAccountId;
 
     /**
+     * <p>Type of the external account.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

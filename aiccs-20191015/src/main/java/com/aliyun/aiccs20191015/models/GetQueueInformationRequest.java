@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class GetQueueInformationRequest extends TeaModel {
     /**
+     * <p>The current page. The value must be greater than <strong>0</strong>. Default value: <strong>1</strong>.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
+    /**
+     * <p>List of department IDs.</p>
+     */
     @NameInMap("DepIds")
     public java.util.List<Long> depIds;
 
     /**
+     * <p>End UNIX timestamp. Unit: milliseconds.</p>
+     * 
      * <strong>example:</strong>
      * <p>1617761765000</p>
      */
@@ -22,6 +29,12 @@ public class GetQueueInformationRequest extends TeaModel {
     public Long endDate;
 
     /**
+     * <p>Specifies whether to query by department grouping. Default value: <strong>false</strong>. Valid values:</p>
+     * <ul>
+     * <li><strong>true</strong>: Yes.</li>
+     * <li><strong>false</strong>: No.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -29,16 +42,27 @@ public class GetQueueInformationRequest extends TeaModel {
     public Boolean existDepartmentGrouping;
 
     /**
+     * <p>Specifies whether to query data grouped by skill group. Default value: <strong>false</strong>. Valid values:</p>
+     * <ul>
+     * <li><strong>true</strong>: Yes.</li>
+     * <li><strong>false</strong>: No.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
-     * <p>fasle</p>
+     * <p>false</p>
      */
     @NameInMap("ExistSkillGroupGrouping")
     public Boolean existSkillGroupGrouping;
 
+    /**
+     * <p>The list of skill group IDs.</p>
+     */
     @NameInMap("GroupIds")
     public java.util.List<Long> groupIds;
 
     /**
+     * <p>The Artificial Intelligence Cloud Call Service (AICCS) instance ID.</p>
+     * <p>You can obtain it from <strong>Instance Management</strong> in the left-side navigation pane of the <a href="https://aiccs.console.aliyun.com/overview">Artificial Intelligence Cloud Call Service console</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -48,6 +72,8 @@ public class GetQueueInformationRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>The number of entries per page. The value must be greater than <strong>0</strong>. Default value: <strong>20</strong>.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -55,6 +81,8 @@ public class GetQueueInformationRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The start UNIX timestamp. Unit: milliseconds.</p>
+     * 
      * <strong>example:</strong>
      * <p>1615083365000</p>
      */

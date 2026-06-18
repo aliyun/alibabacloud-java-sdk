@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class GetAiOutboundTaskListResponseBody extends TeaModel {
     /**
+     * <p>Status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>Job list.</p>
+     */
     @NameInMap("Data")
     public GetAiOutboundTaskListResponseBodyData data;
 
     /**
+     * <p>Description of the status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
@@ -22,6 +29,8 @@ public class GetAiOutboundTaskListResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>EE338D98-9BD3-4413-B165</p>
      */
@@ -29,6 +38,12 @@ public class GetAiOutboundTaskListResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the API call succeeded.</p>
+     * <ul>
+     * <li><strong>true</strong>: Succeeded.</li>
+     * <li><strong>false</strong>: Failed.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -82,6 +97,11 @@ public class GetAiOutboundTaskListResponseBody extends TeaModel {
 
     public static class GetAiOutboundTaskListResponseBodyDataList extends TeaModel {
         /**
+         * <p>Concurrent outbound calls.</p>
+         * <blockquote>
+         * <p>Parameter specific to auto dialing.</p>
+         * </blockquote>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -89,16 +109,26 @@ public class GetAiOutboundTaskListResponseBody extends TeaModel {
         public Integer concurrentRate;
 
         /**
+         * <p>The deadline for job creation. UNIX timestamp format, in milliseconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>1615083365000</p>
          */
         @NameInMap("CreateTime")
         public Long createTime;
 
+        /**
+         * <p>Job description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>房产销售</p>
+         */
         @NameInMap("Description")
         public String description;
 
         /**
+         * <p>The number of completed tasks.</p>
+         * 
          * <strong>example:</strong>
          * <p>70</p>
          */
@@ -106,6 +136,8 @@ public class GetAiOutboundTaskListResponseBody extends TeaModel {
         public Integer finishCount;
 
         /**
+         * <p>Job completion rate.</p>
+         * 
          * <strong>example:</strong>
          * <p>0.7</p>
          */
@@ -113,6 +145,8 @@ public class GetAiOutboundTaskListResponseBody extends TeaModel {
         public Float finishRate;
 
         /**
+         * <p>Skill group ID (for predictive dialing) or IVR ID (for auto dialing).</p>
+         * 
          * <strong>example:</strong>
          * <p>2468****</p>
          */
@@ -120,6 +154,8 @@ public class GetAiOutboundTaskListResponseBody extends TeaModel {
         public Long handlerId;
 
         /**
+         * <p>Skill group name or IVR name.</p>
+         * 
          * <strong>example:</strong>
          * <p>热线技能组</p>
          */
@@ -127,13 +163,25 @@ public class GetAiOutboundTaskListResponseBody extends TeaModel {
         public String handlerName;
 
         /**
+         * <p>Job name.</p>
+         * 
          * <strong>example:</strong>
-         * <p>xx外呼任务</p>
+         * <p>xxxx外呼任务</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
+         * <p>Task Status. Valid values:</p>
+         * <ul>
+         * <li><strong>0</strong>: Not started.</li>
+         * <li><strong>1</strong>: In progress.</li>
+         * <li><strong>2</strong>: System paused.</li>
+         * <li><strong>3</strong>: Manually paused.</li>
+         * <li><strong>4</strong>: Completed.</li>
+         * <li><strong>5</strong>: Stopped.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -141,6 +189,8 @@ public class GetAiOutboundTaskListResponseBody extends TeaModel {
         public Integer status;
 
         /**
+         * <p>Task status description.</p>
+         * 
          * <strong>example:</strong>
          * <p>未开始</p>
          */
@@ -148,6 +198,8 @@ public class GetAiOutboundTaskListResponseBody extends TeaModel {
         public String statusDesc;
 
         /**
+         * <p>Job ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>1763****</p>
          */
@@ -155,6 +207,8 @@ public class GetAiOutboundTaskListResponseBody extends TeaModel {
         public Long taskId;
 
         /**
+         * <p>Total number of jobs.</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */
@@ -266,6 +320,8 @@ public class GetAiOutboundTaskListResponseBody extends TeaModel {
 
     public static class GetAiOutboundTaskListResponseBodyData extends TeaModel {
         /**
+         * <p>Current page number.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -273,16 +329,27 @@ public class GetAiOutboundTaskListResponseBody extends TeaModel {
         public Integer currentPage;
 
         /**
+         * <p>Indicates whether there is a next page. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: Yes.</li>
+         * <li><strong>false</strong>: No.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
         @NameInMap("HasNextPage")
         public Boolean hasNextPage;
 
+        /**
+         * <p>Job information.</p>
+         */
         @NameInMap("List")
         public java.util.List<GetAiOutboundTaskListResponseBodyDataList> list;
 
         /**
+         * <p>Page size.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -290,6 +357,8 @@ public class GetAiOutboundTaskListResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
+         * <p>Total number of data entries.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */

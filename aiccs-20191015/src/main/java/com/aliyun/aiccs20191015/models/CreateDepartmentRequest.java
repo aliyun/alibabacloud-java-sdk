@@ -5,12 +5,17 @@ import com.aliyun.tea.*;
 
 public class CreateDepartmentRequest extends TeaModel {
     /**
+     * <p>Department name.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>部门A</p>
      */
     @NameInMap("DepartmentName")
     public String departmentName;
 
     /**
+     * <p>Artificial Intelligence Cloud Call Service (AICCS) instance ID.<br>You can obtain it from <strong>Instance Management</strong> in the left-side navigation pane of the <a href="https://aiccs.console.aliyun.com/overview">Artificial Intelligence Cloud Call Service console</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -5,15 +5,18 @@ import com.aliyun.tea.*;
 
 public class SuspendHotlineServiceRequest extends TeaModel {
     /**
+     * <p>Agent account name, which is the phone number or mailbox entered during account registration. It is unique within the instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p><a href="mailto:123@123.com">123@123.com</a></p>
+     * <p><a href="mailto:username@example.com">username@example.com</a></p>
      */
     @NameInMap("AccountName")
     public String accountName;
 
     /**
+     * <p>Unique ID of the customer request. Used for idempotency validation. You can generate it using UUID.</p>
+     * 
      * <strong>example:</strong>
      * <p>46c1341e-2648-447a-9b11-70b6a298d94d</p>
      */
@@ -21,6 +24,7 @@ public class SuspendHotlineServiceRequest extends TeaModel {
     public String clientToken;
 
     /**
+     * <p>Artificial Intelligence Cloud Call Service (AICCS) instance ID.<br>You can obtain it from <strong>Instance Management</strong> in the left-side navigation pane of the <a href="https://aiccs.console.aliyun.com/overview">Artificial Intelligence Cloud Call Service console</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -30,6 +34,15 @@ public class SuspendHotlineServiceRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>Reason for the short break. Valid values:</p>
+     * <ul>
+     * <li><strong>1</strong>: Short break (default value).</li>
+     * <li><strong>2</strong>: Meal break.</li>
+     * <li><strong>3</strong>: Meeting.</li>
+     * <li><strong>4</strong>: Coaching.</li>
+     * <li><strong>5</strong>: Training.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */

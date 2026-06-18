@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DeleteSkillGroupRequest extends TeaModel {
     /**
+     * <p>External skill group ID</p>
+     * 
      * <strong>example:</strong>
      * <p>123456</p>
      */
@@ -12,6 +14,8 @@ public class DeleteSkillGroupRequest extends TeaModel {
     public String outerGroupId;
 
     /**
+     * <p>External skill group type. Valid enumeration values are: 1: Hotline, 2: Online, 4: Ticket</p>
+     * 
      * <strong>example:</strong>
      * <p>2</p>
      */

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class StartMicroOutboundRequest extends TeaModel {
     /**
+     * <p>Account ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>223457****</p>
      */
@@ -12,6 +14,8 @@ public class StartMicroOutboundRequest extends TeaModel {
     public String accountId;
 
     /**
+     * <p>Account type.</p>
+     * 
      * <strong>example:</strong>
      * <p>BUC_TYPE</p>
      */
@@ -19,6 +23,8 @@ public class StartMicroOutboundRequest extends TeaModel {
     public String accountType;
 
     /**
+     * <p>Custom AppName for the business.</p>
+     * 
      * <strong>example:</strong>
      * <p>aliyun</p>
      */
@@ -26,6 +32,8 @@ public class StartMicroOutboundRequest extends TeaModel {
     public String appName;
 
     /**
+     * <p>Called number.</p>
+     * 
      * <strong>example:</strong>
      * <p>0571456****</p>
      */
@@ -33,6 +41,8 @@ public class StartMicroOutboundRequest extends TeaModel {
     public String calledNumber;
 
     /**
+     * <p>Calling number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1367123****</p>
      */
@@ -40,6 +50,8 @@ public class StartMicroOutboundRequest extends TeaModel {
     public String callingNumber;
 
     /**
+     * <p>Instruction code.</p>
+     * 
      * <strong>example:</strong>
      * <p>outBound_Call</p>
      */
@@ -47,6 +59,8 @@ public class StartMicroOutboundRequest extends TeaModel {
     public String commandCode;
 
     /**
+     * <p>Business information.</p>
+     * 
      * <strong>example:</strong>
      * <p>{&quot;caseId&quot;:23232****}</p>
      */
@@ -57,6 +71,8 @@ public class StartMicroOutboundRequest extends TeaModel {
     public Long ownerId;
 
     /**
+     * <p>Product name. Default value: <strong>aiccs</strong>.</p>
+     * 
      * <strong>example:</strong>
      * <p>aiccs</p>
      */

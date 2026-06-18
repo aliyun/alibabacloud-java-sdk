@@ -5,15 +5,18 @@ import com.aliyun.tea.*;
 
 public class DeleteDepartmentRequest extends TeaModel {
     /**
+     * <p>The department ID.  </p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/2717975.html">GetAllDepartment</a> API and check the <strong>DepartmentId</strong> field in the response to obtain the department ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>123456</p>
+     * <p>12****</p>
      */
     @NameInMap("DepartmentId")
     public Long departmentId;
 
     /**
+     * <p>The AICCS instance ID.<br>You can obtain it from <strong>Instance Management</strong> in the left-side navigation pane of the <a href="https://aiccs.console.aliyun.com/overview">Artificial Intelligence Cloud Call Service console</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

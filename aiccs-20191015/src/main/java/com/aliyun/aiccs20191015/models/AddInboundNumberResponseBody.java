@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class AddInboundNumberResponseBody extends TeaModel {
     /**
+     * <p>Details about why access was denied.</p>
+     * 
      * <strong>example:</strong>
      * <p>None</p>
      */
@@ -12,16 +14,23 @@ public class AddInboundNumberResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
+     * <p>The status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The returned data.</p>
+     */
     @NameInMap("Data")
     public java.util.List<AddInboundNumberResponseBodyData> data;
 
     /**
+     * <p>The status code description.</p>
+     * 
      * <strong>example:</strong>
      * <p>successful</p>
      */
@@ -29,6 +38,8 @@ public class AddInboundNumberResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>D6A51251-F7C4-596A-9F45-3C3219A5450D</p>
      */
@@ -36,6 +47,14 @@ public class AddInboundNumberResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the API call succeeded.</p>
+     * <ul>
+     * <li><p><strong>true</strong>: The call succeeded.</p>
+     * </li>
+     * <li><p><strong>false</strong>: The call failed.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -97,6 +116,8 @@ public class AddInboundNumberResponseBody extends TeaModel {
 
     public static class AddInboundNumberResponseBodyData extends TeaModel {
         /**
+         * <p>The inbound number.</p>
+         * 
          * <strong>example:</strong>
          * <p>234234238**33</p>
          */
@@ -104,13 +125,17 @@ public class AddInboundNumberResponseBody extends TeaModel {
         public String inboundNumber;
 
         /**
+         * <p>The error description.</p>
+         * 
          * <strong>example:</strong>
-         * <p>示例值</p>
+         * <p>号码不合法</p>
          */
         @NameInMap("Message")
         public String message;
 
         /**
+         * <p>Indicates whether the number was added successfully. <code>true</code> indicates success, and <code>false</code> indicates failure.</p>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */

@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class GetSkillGroupLatitudeStateShrinkRequest extends TeaModel {
     /**
+     * <p>Current page. The value must be greater than <strong>0</strong>. Default value: <strong>1</strong>.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
+    /**
+     * <p>List of department IDs.</p>
+     */
     @NameInMap("DepIds")
     public String depIdsShrink;
 
     /**
+     * <p>End datetime UNIX timestamp. Unit: milliseconds.</p>
+     * 
      * <strong>example:</strong>
      * <p>1617761765000</p>
      */
@@ -22,6 +29,12 @@ public class GetSkillGroupLatitudeStateShrinkRequest extends TeaModel {
     public Long endDate;
 
     /**
+     * <p>Indicates whether to group by department. Valid values:  </p>
+     * <ul>
+     * <li><strong>true</strong>: Yes.  </li>
+     * <li><strong>false</strong>: No.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -29,16 +42,26 @@ public class GetSkillGroupLatitudeStateShrinkRequest extends TeaModel {
     public Boolean existDepartmentGrouping;
 
     /**
+     * <p>Specifies whether to group by skill group. Valid values:</p>
+     * <ul>
+     * <li><strong>true</strong>: Yes.</li>
+     * <li><strong>false</strong>: No.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
     @NameInMap("ExistSkillGroupGrouping")
     public Boolean existSkillGroupGrouping;
 
+    /**
+     * <p>A list of skill group IDs.</p>
+     */
     @NameInMap("GroupIds")
     public String groupIdsShrink;
 
     /**
+     * <p>AICCS instance ID.<br>You can obtain it from <strong>Instance Management</strong> in the left-side navigation pane of the <a href="https://aiccs.console.aliyun.com/overview">Artificial Intelligence Cloud Call Service console</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -48,6 +71,8 @@ public class GetSkillGroupLatitudeStateShrinkRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>The page size. The value must be greater than <strong>0</strong>. Default value: <strong>20</strong>.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -55,6 +80,8 @@ public class GetSkillGroupLatitudeStateShrinkRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The start date as a UNIX timestamp. Unit: milliseconds.</p>
+     * 
      * <strong>example:</strong>
      * <p>1615083365000</p>
      */

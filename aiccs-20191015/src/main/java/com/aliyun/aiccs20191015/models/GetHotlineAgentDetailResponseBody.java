@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class GetHotlineAgentDetailResponseBody extends TeaModel {
     /**
+     * <p>Status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>Success</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>Agent service data.</p>
+     */
     @NameInMap("Data")
     public GetHotlineAgentDetailResponseBodyData data;
 
     /**
+     * <p>HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -22,6 +29,8 @@ public class GetHotlineAgentDetailResponseBody extends TeaModel {
     public Long httpStatusCode;
 
     /**
+     * <p>Description of the status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
@@ -29,6 +38,8 @@ public class GetHotlineAgentDetailResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>EE338D98-9BD3-4413-B165</p>
      */
@@ -36,6 +47,12 @@ public class GetHotlineAgentDetailResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the API call succeeded. Valid values:</p>
+     * <ul>
+     * <li><strong>true</strong>: Succeeded.</li>
+     * <li><strong>false</strong>: Failed.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -97,6 +114,8 @@ public class GetHotlineAgentDetailResponseBody extends TeaModel {
 
     public static class GetHotlineAgentDetailResponseBodyData extends TeaModel {
         /**
+         * <p>Agent ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>2235****</p>
          */
@@ -104,6 +123,8 @@ public class GetHotlineAgentDetailResponseBody extends TeaModel {
         public Long agentId;
 
         /**
+         * <p>Agent status. Valid values: <strong>1~6</strong>.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -111,6 +132,15 @@ public class GetHotlineAgentDetailResponseBody extends TeaModel {
         public Integer agentStatus;
 
         /**
+         * <p>Agent status code. Valid values:  </p>
+         * <ul>
+         * <li><strong>AgentCheckout</strong>: Agent logged off.  </li>
+         * <li><strong>AgentReady</strong>: Agent idle.  </li>
+         * <li><strong>AgentBreak</strong>: Agent on break.  </li>
+         * <li><strong>AgentAcw</strong>: Post-processing after a call.  </li>
+         * <li><strong>AgentBusyForCall</strong>: In a call.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>AgentCheckout</p>
          */
@@ -118,6 +148,8 @@ public class GetHotlineAgentDetailResponseBody extends TeaModel {
         public String agentStatusCode;
 
         /**
+         * <p>Indicates whether the agent is assigned. Valid values:<br><strong>false</strong>: Not assigned (no call).<br><strong>true</strong>: Assigned (in a call).</p>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
@@ -125,6 +157,15 @@ public class GetHotlineAgentDetailResponseBody extends TeaModel {
         public Boolean assigned;
 
         /**
+         * <p>Break type. Valid values:  </p>
+         * <ul>
+         * <li><strong>1</strong>: Short break.  </li>
+         * <li><strong>2</strong>: Meal break.  </li>
+         * <li><strong>3</strong>: Meeting.  </li>
+         * <li><strong>4</strong>: Coaching.  </li>
+         * <li><strong>5</strong>: Training.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -132,6 +173,8 @@ public class GetHotlineAgentDetailResponseBody extends TeaModel {
         public Integer restType;
 
         /**
+         * <p>Tenant ID to which the agent belongs, corresponding to the instance ID in the input parameter.</p>
+         * 
          * <strong>example:</strong>
          * <p>ccc_xp_pre-cn-***</p>
          */
@@ -139,6 +182,8 @@ public class GetHotlineAgentDetailResponseBody extends TeaModel {
         public Long tenantId;
 
         /**
+         * <p>Heartbeat signature.</p>
+         * 
          * <strong>example:</strong>
          * <p>dnthF_oinHg7JMJDmKqex3Ux****</p>
          */

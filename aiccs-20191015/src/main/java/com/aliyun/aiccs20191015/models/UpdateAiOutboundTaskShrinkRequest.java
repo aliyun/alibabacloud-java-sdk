@@ -5,16 +5,28 @@ import com.aliyun.tea.*;
 
 public class UpdateAiOutboundTaskShrinkRequest extends TeaModel {
     /**
+     * <p>The concurrent rate for automated outbound calls.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
     @NameInMap("ConcurrentRate")
     public Integer concurrentRate;
 
+    /**
+     * <p>The job description. It can contain 0 to 100 characters.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>房产销售</p>
+     */
     @NameInMap("Description")
     public String description;
 
     /**
+     * <p>The job execution time.</p>
+     * <blockquote>
+     * <p>The end time must be later than the start time.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -24,6 +36,8 @@ public class UpdateAiOutboundTaskShrinkRequest extends TeaModel {
     public String executionTime;
 
     /**
+     * <p>Fixed dialing ratio for predictive outbound calls. Valid values: <strong>≥1</strong>.</p>
+     * 
      * <strong>example:</strong>
      * <p>1.2</p>
      */
@@ -31,6 +45,7 @@ public class UpdateAiOutboundTaskShrinkRequest extends TeaModel {
     public Float forecastCallRate;
 
     /**
+     * <p>The skill group ID (for predictive outbound calls) or IVR ID (for automated outbound calls).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -40,6 +55,7 @@ public class UpdateAiOutboundTaskShrinkRequest extends TeaModel {
     public Long handlerId;
 
     /**
+     * <p>AICCS instance ID.<br>You can obtain it from <strong>Instance Management</strong> in the left-side navigation pane of the <a href="https://aiccs.console.aliyun.com/overview">Artificial Intelligence Cloud Call Service console</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -49,15 +65,21 @@ public class UpdateAiOutboundTaskShrinkRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>Job name. Length: 1 to 15 characters.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>xx外呼任务</p>
+     * <p>xxxx外呼</p>
      */
     @NameInMap("Name")
     public String name;
 
     /**
+     * <p>The policy for handling duplicate callee numbers.</p>
+     * <ul>
+     * <li><strong>0</strong>: Remove duplicates within the job.</li>
+     * <li><strong>1</strong>: Do not remove duplicates within the job.</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -67,15 +89,24 @@ public class UpdateAiOutboundTaskShrinkRequest extends TeaModel {
     public Integer numRepeated;
 
     /**
+     * <p>Outbound caller numbers.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("OutboundNums")
     public String outboundNumsShrink;
 
+    /**
+     * <p>Failed-call retry policy.</p>
+     * <blockquote>
+     * <p>If empty, no retry is performed when an outbound call fails.</p>
+     * </blockquote>
+     */
     @NameInMap("RecallRule")
     public String recallRuleShrink;
 
     /**
+     * <p>The job ID.</p>
+     * <p>You can invoke the <a href="https://help.aliyun.com/document_detail/312260.html">CreateAiOutboundTask</a> API and check the <strong>Data</strong> field in the response, or invoke the <a href="https://help.aliyun.com/document_detail/2718026.html">GetAiOutboundTaskList</a> API and check the <strong>TaskId</strong> field in the response.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

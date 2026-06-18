@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class GetOnlineServiceVolumeResponseBody extends TeaModel {
     /**
+     * <p>Status code. A return value of 200 indicates that the request succeeded.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>Data list.</p>
+     */
     @NameInMap("Data")
     public GetOnlineServiceVolumeResponseBodyData data;
 
     /**
+     * <p>Status code description.</p>
+     * 
      * <strong>example:</strong>
      * <p>successful</p>
      */
@@ -22,6 +29,8 @@ public class GetOnlineServiceVolumeResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>EE338D98-9BD3-4413-B165</p>
      */
@@ -29,6 +38,12 @@ public class GetOnlineServiceVolumeResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the API call succeeded. Valid values:</p>
+     * <ul>
+     * <li><strong>true</strong>: Succeeded.</li>
+     * <li><strong>false</strong>: Failed.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -82,6 +97,8 @@ public class GetOnlineServiceVolumeResponseBody extends TeaModel {
 
     public static class GetOnlineServiceVolumeResponseBodyData extends TeaModel {
         /**
+         * <p>Current page number.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -89,6 +106,8 @@ public class GetOnlineServiceVolumeResponseBody extends TeaModel {
         public Integer pageNum;
 
         /**
+         * <p>Page size.</p>
+         * 
          * <strong>example:</strong>
          * <p>2000</p>
          */
@@ -96,6 +115,8 @@ public class GetOnlineServiceVolumeResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
+         * <p>A JSON string of type List<Map>.</p>
+         * 
          * <strong>example:</strong>
          * <p>{&quot;tenant_id&quot;:&quot;905&quot;,&quot;online_40s_transfer_ready_cnt&quot;:109,&quot;minute_id&quot;:&quot;-1&quot;,&quot;wait_time_len&quot;:1215,&quot;pickup_rate&quot;:&quot;63.09%&quot;,&quot;thirty_seconds_to_pickUp&quot;:&quot;2560&quot;,&quot;date_id&quot;:&quot;-1&quot;,&quot;online_over_out_cnt&quot;:0,&quot;online_20s_transfer_ready_cnt&quot;:109,&quot;thirty_seconds_response_rate&quot;:&quot;63.09%&quot;,&quot;abandonment_rate&quot;:&quot;63.09%&quot;,&quot;service_time_len&quot;:68378,&quot;service_pickup&quot;:&quot;2560&quot;,&quot;hour_id&quot;:&quot;-1&quot;,&quot;online_10s_transfer_ready_cnt&quot;:109}</p>
          */
@@ -103,6 +124,8 @@ public class GetOnlineServiceVolumeResponseBody extends TeaModel {
         public String rows;
 
         /**
+         * <p>Total number of records.</p>
+         * 
          * <strong>example:</strong>
          * <p>4</p>
          */

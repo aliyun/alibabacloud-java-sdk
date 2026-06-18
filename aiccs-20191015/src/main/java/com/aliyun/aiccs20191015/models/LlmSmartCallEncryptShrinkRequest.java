@@ -5,35 +5,40 @@ import com.aliyun.tea.*;
 
 public class LlmSmartCallEncryptShrinkRequest extends TeaModel {
     /**
+     * <p>The application code for the large language model.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>ADDFA32145</p>
+     * <p>AD******45</p>
      */
     @NameInMap("ApplicationCode")
     public String applicationCode;
 
     /**
+     * <p>The caller number.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>ADDFA32145</p>
+     * <p>132******65</p>
      */
     @NameInMap("CallerNumber")
     public String callerNumber;
 
     /**
+     * <p>The encrypted called number.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>140432432432243</p>
+     * <p>140*********243</p>
      */
     @NameInMap("EncryptCalledNumber")
     public String encryptCalledNumber;
 
     /**
+     * <p>A user-defined ID for the outbound call.</p>
+     * 
      * <strong>example:</strong>
-     * <p>dsadsaasfdsad</p>
+     * <p>dsa*******sad</p>
      */
     @NameInMap("OutId")
     public String outId;
@@ -42,8 +47,10 @@ public class LlmSmartCallEncryptShrinkRequest extends TeaModel {
     public Long ownerId;
 
     /**
+     * <p>Parameters for the large language model\&quot;s prompt.</p>
+     * 
      * <strong>example:</strong>
-     * <p>{}</p>
+     * <p>{&quot;prompt&quot;:&quot;推荐一部电影&quot;}</p>
      */
     @NameInMap("PromptParam")
     public String promptParamShrink;
@@ -54,6 +61,12 @@ public class LlmSmartCallEncryptShrinkRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>Parameters for the large language model\&quot;s opening statement.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;name&quot;:&quot;小明&quot;,&quot;address&quot;:&quot;浙江省杭州市&quot;}</p>
+     */
     @NameInMap("StartWordParam")
     public String startWordParamShrink;
 

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetAiOutboundTaskExecDetailRequest extends TeaModel {
     /**
+     * <p>The job batch version.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -12,6 +14,8 @@ public class GetAiOutboundTaskExecDetailRequest extends TeaModel {
     public Integer batchVersion;
 
     /**
+     * <p>Activity ID associated with this outbound call.</p>
+     * 
      * <strong>example:</strong>
      * <p>123456</p>
      */
@@ -19,6 +23,15 @@ public class GetAiOutboundTaskExecDetailRequest extends TeaModel {
     public Long caseId;
 
     /**
+     * <p>Job execution status for a single phone number. Valid values:</p>
+     * <ul>
+     * <li><strong>1</strong>: Pending call.</li>
+     * <li><strong>2</strong>: Calling.</li>
+     * <li><strong>3</strong>: Completed.</li>
+     * <li><strong>4</strong>: Stopped.</li>
+     * <li><strong>5</strong>: Pending retry.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -26,6 +39,8 @@ public class GetAiOutboundTaskExecDetailRequest extends TeaModel {
     public Integer caseStatus;
 
     /**
+     * <p>End time of phone number import. Format: UNIX timestamp in milliseconds.</p>
+     * 
      * <strong>example:</strong>
      * <p>1632290119000</p>
      */
@@ -33,6 +48,8 @@ public class GetAiOutboundTaskExecDetailRequest extends TeaModel {
     public Long createTimeEnd;
 
     /**
+     * <p>Start time of phone number import. Format: UNIX timestamp in milliseconds.</p>
+     * 
      * <strong>example:</strong>
      * <p>1632289999000</p>
      */
@@ -40,6 +57,7 @@ public class GetAiOutboundTaskExecDetailRequest extends TeaModel {
     public Long createTimeStart;
 
     /**
+     * <p>Page size. The value must be greater than <strong>0</strong>. Default Value: <strong>20</strong>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -49,6 +67,8 @@ public class GetAiOutboundTaskExecDetailRequest extends TeaModel {
     public Integer currentPage;
 
     /**
+     * <p>The Artificial Intelligence Cloud Call Service (AICCS) instance ID.</p>
+     * <p>You can obtain it from <strong>Instance Management</strong> in the left-side navigation pane of the <a href="https://aiccs.console.aliyun.com/overview">Artificial Intelligence Cloud Call Service console</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -58,6 +78,7 @@ public class GetAiOutboundTaskExecDetailRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>The number of entries per page. The value must be greater than <strong>0</strong>. Default value: <strong>20</strong>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -67,6 +88,8 @@ public class GetAiOutboundTaskExecDetailRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The outbound phone number.</p>
+     * 
      * <strong>example:</strong>
      * <p>150****000</p>
      */
@@ -74,6 +97,8 @@ public class GetAiOutboundTaskExecDetailRequest extends TeaModel {
     public String phoneNum;
 
     /**
+     * <p>The job ID.</p>
+     * <p>You can invoke the <a href="https://help.aliyun.com/document_detail/312260.html">CreateAiOutboundTask</a> API and check the <strong>Data</strong> field in the response, or invoke the <a href="https://help.aliyun.com/document_detail/2718026.html">GetAiOutboundTaskList</a> API and check the <strong>TaskId</strong> field in the response.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

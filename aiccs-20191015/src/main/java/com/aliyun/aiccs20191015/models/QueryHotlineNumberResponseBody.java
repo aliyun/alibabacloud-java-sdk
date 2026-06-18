@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class QueryHotlineNumberResponseBody extends TeaModel {
     /**
+     * <p>The status code. A value of Success indicates that the request succeeded.</p>
+     * 
      * <strong>example:</strong>
      * <p>Success</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>Hotline number configuration information.</p>
+     */
     @NameInMap("Data")
     public QueryHotlineNumberResponseBodyData data;
 
     /**
+     * <p>Status code description.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
@@ -22,6 +29,8 @@ public class QueryHotlineNumberResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>EE339D98-9BD3-4413-B165</p>
      */
@@ -29,6 +38,12 @@ public class QueryHotlineNumberResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the API call succeeded.</p>
+     * <ul>
+     * <li><strong>true</strong>: Succeeded.</li>
+     * <li><strong>false</strong>: Failed.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -82,12 +97,20 @@ public class QueryHotlineNumberResponseBody extends TeaModel {
 
     public static class QueryHotlineNumberResponseBodyDataHotlineNumListCalloutRangeListGroupDOList extends TeaModel {
         /**
+         * <p>The skill group ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>6083****</p>
          */
         @NameInMap("GroupId")
         public Long groupId;
 
+        /**
+         * <p>The skill group name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>技能组A</p>
+         */
         @NameInMap("GroupName")
         public String groupName;
 
@@ -116,15 +139,26 @@ public class QueryHotlineNumberResponseBody extends TeaModel {
 
     public static class QueryHotlineNumberResponseBodyDataHotlineNumListCalloutRangeList extends TeaModel {
         /**
+         * <p>Department ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>2256****</p>
          */
         @NameInMap("DepartmentId")
         public Long departmentId;
 
+        /**
+         * <p>The department name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>部门A</p>
+         */
         @NameInMap("DepartmentName")
         public String departmentName;
 
+        /**
+         * <p>The skill group list.</p>
+         */
         @NameInMap("GroupDOList")
         public java.util.List<QueryHotlineNumberResponseBodyDataHotlineNumListCalloutRangeListGroupDOList> groupDOList;
 
@@ -161,16 +195,23 @@ public class QueryHotlineNumberResponseBody extends TeaModel {
 
     public static class QueryHotlineNumberResponseBodyDataHotlineNumList extends TeaModel {
         /**
+         * <p>Outbound calls apply to all departments.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
         @NameInMap("CalloutAllDepartment")
         public Boolean calloutAllDepartment;
 
+        /**
+         * <p>List of departments for which outbound calls are effective.</p>
+         */
         @NameInMap("CalloutRangeList")
         public java.util.List<QueryHotlineNumberResponseBodyDataHotlineNumListCalloutRangeList> calloutRangeList;
 
         /**
+         * <p>Number description.</p>
+         * 
          * <strong>example:</strong>
          * <p>测试</p>
          */
@@ -178,6 +219,14 @@ public class QueryHotlineNumberResponseBody extends TeaModel {
         public String description;
 
         /**
+         * <p>Satisfaction status. Valid values:  </p>
+         * <ul>
+         * <li><strong>0</strong>: Neither inbound nor outbound calls are enabled.  </li>
+         * <li><strong>1</strong>: Inbound calls are enabled.  </li>
+         * <li><strong>2</strong>: Outbound calls are enabled.  </li>
+         * <li><strong>3</strong>: Both inbound and outbound calls are enabled.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -185,6 +234,8 @@ public class QueryHotlineNumberResponseBody extends TeaModel {
         public Integer evaluationStatus;
 
         /**
+         * <p>Incoming call flow ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>12</p>
          */
@@ -192,6 +243,8 @@ public class QueryHotlineNumberResponseBody extends TeaModel {
         public Long flowId;
 
         /**
+         * <p>Inbound flow name.</p>
+         * 
          * <strong>example:</strong>
          * <p>测试流程</p>
          */
@@ -199,6 +252,8 @@ public class QueryHotlineNumberResponseBody extends TeaModel {
         public String flowName;
 
         /**
+         * <p>Hotline number.</p>
+         * 
          * <strong>example:</strong>
          * <p>0571****2211</p>
          */
@@ -206,6 +261,8 @@ public class QueryHotlineNumberResponseBody extends TeaModel {
         public String hotlineNumber;
 
         /**
+         * <p>Indicates whether the number is used for inbound calls.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -213,6 +270,8 @@ public class QueryHotlineNumberResponseBody extends TeaModel {
         public Boolean inBoundEnabled;
 
         /**
+         * <p>Number location.</p>
+         * 
          * <strong>example:</strong>
          * <p>浙江杭州</p>
          */
@@ -220,6 +279,8 @@ public class QueryHotlineNumberResponseBody extends TeaModel {
         public String location;
 
         /**
+         * <p>Indicates whether the number is used for outbound calls.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -227,6 +288,8 @@ public class QueryHotlineNumberResponseBody extends TeaModel {
         public Boolean outboundEnabled;
 
         /**
+         * <p>Carrier.</p>
+         * 
          * <strong>example:</strong>
          * <p>电信</p>
          */
@@ -330,16 +393,23 @@ public class QueryHotlineNumberResponseBody extends TeaModel {
 
     public static class QueryHotlineNumberResponseBodyData extends TeaModel {
         /**
+         * <p>Current page.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
         @NameInMap("CurrentPage")
         public Long currentPage;
 
+        /**
+         * <p>Number list.</p>
+         */
         @NameInMap("HotlineNumList")
         public java.util.List<QueryHotlineNumberResponseBodyDataHotlineNumList> hotlineNumList;
 
         /**
+         * <p>Page size.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -347,6 +417,8 @@ public class QueryHotlineNumberResponseBody extends TeaModel {
         public Long pageSize;
 
         /**
+         * <p>Total amount of data.</p>
+         * 
          * <strong>example:</strong>
          * <p>123</p>
          */

@@ -5,8 +5,10 @@ import com.aliyun.tea.*;
 
 public class QueryAiCallTaskPageRequest extends TeaModel {
     /**
+     * <p>The agent name. The system performs a fuzzy search based on this name.</p>
+     * 
      * <strong>example:</strong>
-     * <p>示例值示例值</p>
+     * <p>测试智能体</p>
      */
     @NameInMap("AgentName")
     public String agentName;
@@ -22,6 +24,8 @@ public class QueryAiCallTaskPageRequest extends TeaModel {
     public Long ownerId;
 
     /**
+     * <p>The page number. The value must be greater than <strong>0</strong>. The default value is <strong>1</strong>.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -29,6 +33,8 @@ public class QueryAiCallTaskPageRequest extends TeaModel {
     public Long pageNo;
 
     /**
+     * <p>The number of entries per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -49,6 +55,18 @@ public class QueryAiCallTaskPageRequest extends TeaModel {
     public Long source;
 
     /**
+     * <p>The task status. Valid values:</p>
+     * <ul>
+     * <li><p><strong>INIT</strong>: The task is initialized but has not started.</p>
+     * </li>
+     * <li><p><strong>FAILED</strong>: The task failed to start.</p>
+     * </li>
+     * <li><p><strong>RUNNING</strong>: The task is running.</p>
+     * </li>
+     * <li><p><strong>STOPPED</strong>: The task is stopped.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>INIT</p>
      */
@@ -56,15 +74,19 @@ public class QueryAiCallTaskPageRequest extends TeaModel {
     public String status;
 
     /**
+     * <p>The unique ID of the task.</p>
+     * 
      * <strong>example:</strong>
-     * <p>112212312*****</p>
+     * <p>1187**************</p>
      */
     @NameInMap("TaskId")
     public String taskId;
 
     /**
+     * <p>The task name. The system performs a fuzzy search based on this name.</p>
+     * 
      * <strong>example:</strong>
-     * <p>示例值示例值</p>
+     * <p>测试任务</p>
      */
     @NameInMap("TaskName")
     public String taskName;

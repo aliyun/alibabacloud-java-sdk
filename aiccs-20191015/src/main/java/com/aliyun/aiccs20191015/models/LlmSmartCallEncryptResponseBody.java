@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class LlmSmartCallEncryptResponseBody extends TeaModel {
     /**
+     * <p>Details about the access denied error.</p>
+     * 
      * <strong>example:</strong>
      * <p>None</p>
      */
@@ -12,19 +14,32 @@ public class LlmSmartCallEncryptResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
+     * <p>The request status code. A value of \&quot;ok\&quot; indicates that the request succeeded.</p>
+     * 
      * <strong>example:</strong>
      * <p>ok</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The response data.</p>
+     */
     @NameInMap("Data")
     public LlmSmartCallEncryptResponseBodyData data;
 
+    /**
+     * <p>A description of the status code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>成功</p>
+     */
     @NameInMap("Message")
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>F92F9749-105E-518F-8B08-CF16EF36A0E2</p>
      */
@@ -32,6 +47,14 @@ public class LlmSmartCallEncryptResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the API call was successful. Valid values:</p>
+     * <ul>
+     * <li><p><strong>true</strong>: The API call was successful.</p>
+     * </li>
+     * <li><p><strong>false</strong>: The API call failed.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -93,8 +116,10 @@ public class LlmSmartCallEncryptResponseBody extends TeaModel {
 
     public static class LlmSmartCallEncryptResponseBodyData extends TeaModel {
         /**
+         * <p>The call ID.</p>
+         * 
          * <strong>example:</strong>
-         * <p>149922088206^136666368206</p>
+         * <p>149******206</p>
          */
         @NameInMap("CallId")
         public String callId;

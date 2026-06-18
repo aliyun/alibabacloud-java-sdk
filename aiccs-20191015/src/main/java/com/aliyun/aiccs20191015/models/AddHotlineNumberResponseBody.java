@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class AddHotlineNumberResponseBody extends TeaModel {
     /**
+     * <p>The status code. A value of &quot;Success&quot; indicates that the request succeeded.</p>
+     * 
      * <strong>example:</strong>
      * <p>Success</p>
      */
@@ -12,6 +14,8 @@ public class AddHotlineNumberResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -19,6 +23,8 @@ public class AddHotlineNumberResponseBody extends TeaModel {
     public Long httpStatusCode;
 
     /**
+     * <p>Description of the status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
@@ -26,6 +32,8 @@ public class AddHotlineNumberResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>EE339D98-9BD3-4413-B165</p>
      */
@@ -33,6 +41,8 @@ public class AddHotlineNumberResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the API call succeeded.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

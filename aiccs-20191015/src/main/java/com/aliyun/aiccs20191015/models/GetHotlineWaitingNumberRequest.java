@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetHotlineWaitingNumberRequest extends TeaModel {
     /**
+     * <p>Agent account name (agent logon name)</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,8 @@ public class GetHotlineWaitingNumberRequest extends TeaModel {
     public String accountName;
 
     /**
+     * <p>Unique customer request ID, used for idempotency validation; can be generated using UUID</p>
+     * 
      * <strong>example:</strong>
      * <p>46c1341e-2648-447a-9b11-70b6a298d94d</p>
      */
@@ -21,6 +24,7 @@ public class GetHotlineWaitingNumberRequest extends TeaModel {
     public String clientToken;
 
     /**
+     * <p>AICCS instance ID, visible in the Artificial Intelligence Cloud Call Service console</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

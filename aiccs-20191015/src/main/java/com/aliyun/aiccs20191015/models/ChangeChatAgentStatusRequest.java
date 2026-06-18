@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ChangeChatAgentStatusRequest extends TeaModel {
     /**
+     * <p>Agent account.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,8 @@ public class ChangeChatAgentStatusRequest extends TeaModel {
     public String accountName;
 
     /**
+     * <p>Unique ID for the customer request. Used for idempotency validation. You can generate it using UUID.</p>
+     * 
      * <strong>example:</strong>
      * <p>46c1341e-2648-447a-9b11-70b6a298d94d</p>
      */
@@ -21,6 +24,7 @@ public class ChangeChatAgentStatusRequest extends TeaModel {
     public String clientToken;
 
     /**
+     * <p>Artificial Intelligence Cloud Call Service (AICCS) instance ID. You can obtain it from the Artificial Intelligence Cloud Call Service console.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -30,6 +34,7 @@ public class ChangeChatAgentStatusRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>The target online status to switch to. Currently, only <strong>requestLogout</strong> (request offline) is supported.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

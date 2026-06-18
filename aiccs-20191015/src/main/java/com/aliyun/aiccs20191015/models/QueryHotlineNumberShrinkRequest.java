@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class QueryHotlineNumberShrinkRequest extends TeaModel {
     /**
+     * <p>The current page number. The value must be greater than <strong>0</strong>. Default value: <strong>1</strong>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,16 +15,23 @@ public class QueryHotlineNumberShrinkRequest extends TeaModel {
     public Integer currentPage;
 
     /**
+     * <p>The department ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>2256****</p>
      */
     @NameInMap("DepartmentId")
     public Long departmentId;
 
+    /**
+     * <p>The list of skill groups.</p>
+     */
     @NameInMap("GroupIds")
     public String groupIdsShrink;
 
     /**
+     * <p>The hotline number. Fuzzy query is supported.</p>
+     * 
      * <strong>example:</strong>
      * <p>0571****2211</p>
      */
@@ -31,6 +39,8 @@ public class QueryHotlineNumberShrinkRequest extends TeaModel {
     public String hotlineNumber;
 
     /**
+     * <p>The Artificial Intelligence Cloud Call Service (AICCS) instance ID.
+     * You can obtain it from <strong>Instance Management</strong> in the left-side navigation pane of the <a href="https://aiccs.console.aliyun.com/overview">Artificial Intelligence Cloud Call Service console</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -40,6 +50,7 @@ public class QueryHotlineNumberShrinkRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>The number of entries per page. The value must be greater than <strong>0</strong>. Default value: <strong>20</strong>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class GetSkillGroupAndAgentStatusSummaryShrinkRequest extends TeaModel {
     /**
+     * <p>Current page. The value must be greater than <strong>0</strong>. Default value: <strong>1</strong>.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
+    /**
+     * <p>List of department IDs.</p>
+     */
     @NameInMap("DepIds")
     public String depIdsShrink;
 
     /**
+     * <p>End Datetime Variable as a UNIX timestamp. Unit: milliseconds.</p>
+     * 
      * <strong>example:</strong>
      * <p>1617761765000</p>
      */
@@ -22,6 +29,12 @@ public class GetSkillGroupAndAgentStatusSummaryShrinkRequest extends TeaModel {
     public Long endDate;
 
     /**
+     * <p>Specifies whether to query by department grouping. Default value: <strong>false</strong>. Valid values:  </p>
+     * <ul>
+     * <li><strong>true</strong>: Yes.  </li>
+     * <li><strong>false</strong>: No.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -29,16 +42,26 @@ public class GetSkillGroupAndAgentStatusSummaryShrinkRequest extends TeaModel {
     public Boolean existDepartmentGrouping;
 
     /**
+     * <p>Specifies whether to query by skill group grouping. Default value: <strong>false</strong>. Valid values:</p>
+     * <ul>
+     * <li><strong>true</strong>: Yes.</li>
+     * <li><strong>false</strong>: No.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
     @NameInMap("ExistSkillGroupGrouping")
     public Boolean existSkillGroupGrouping;
 
+    /**
+     * <p>List of skill group IDs.</p>
+     */
     @NameInMap("GroupIds")
     public String groupIdsShrink;
 
     /**
+     * <p>AICCS instance ID.<br>You can obtain it in the <strong>Instance Management</strong> section of the left-side navigation pane in the <a href="https://aiccs.console.aliyun.com/overview">Artificial Intelligence Cloud Call Service console</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -48,6 +71,8 @@ public class GetSkillGroupAndAgentStatusSummaryShrinkRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>Page size. The value must be greater than <strong>0</strong>. Default value: <strong>20</strong>.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -55,6 +80,8 @@ public class GetSkillGroupAndAgentStatusSummaryShrinkRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>Start date UNIX timestamp. Unit: milliseconds.</p>
+     * 
      * <strong>example:</strong>
      * <p>1615083365000</p>
      */

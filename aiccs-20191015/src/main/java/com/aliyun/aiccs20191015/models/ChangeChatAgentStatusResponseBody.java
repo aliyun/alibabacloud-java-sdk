@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ChangeChatAgentStatusResponseBody extends TeaModel {
     /**
+     * <p>Status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>Success</p>
      */
@@ -12,6 +14,12 @@ public class ChangeChatAgentStatusResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>Current agent status. Valid values:</p>
+     * <ul>
+     * <li><strong>0</strong>: Offline</li>
+     * <li><strong>3</strong>: On break</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
@@ -19,6 +27,8 @@ public class ChangeChatAgentStatusResponseBody extends TeaModel {
     public String data;
 
     /**
+     * <p>HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -26,6 +36,8 @@ public class ChangeChatAgentStatusResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>Description of the status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -33,6 +45,8 @@ public class ChangeChatAgentStatusResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>DF6A3FB7-A5AA-43BE-A65B</p>
      */
@@ -40,6 +54,8 @@ public class ChangeChatAgentStatusResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Whether the API call succeeded.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

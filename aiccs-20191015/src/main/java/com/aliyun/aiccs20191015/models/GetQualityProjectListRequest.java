@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetQualityProjectListRequest extends TeaModel {
     /**
+     * <p>Artificial Intelligence Cloud Call Service (AICCS) instance ID. You can obtain it from the Artificial Intelligence Cloud Call Service console.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,8 @@ public class GetQualityProjectListRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>The current page. Default value: <strong>1</strong>.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -21,6 +24,8 @@ public class GetQualityProjectListRequest extends TeaModel {
     public Integer pageNo;
 
     /**
+     * <p>Page size. Default value: <strong>10</strong>.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -28,16 +33,30 @@ public class GetQualityProjectListRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>Quality inspection job ID (supports fuzzy search).</p>
+     * 
      * <strong>example:</strong>
      * <p>15</p>
      */
     @NameInMap("ProjectId")
     public Long projectId;
 
+    /**
+     * <p>Quality inspection job name (supports fuzzy search).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>质检</p>
+     */
     @NameInMap("ProjectName")
     public String projectName;
 
     /**
+     * <p>Quality inspection job status. Valid values:  </p>
+     * <ul>
+     * <li><strong>0</strong>: Start  </li>
+     * <li><strong>1</strong>: Shutdown</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
@@ -45,6 +64,12 @@ public class GetQualityProjectListRequest extends TeaModel {
     public Integer status;
 
     /**
+     * <p>The check frequency type. Valid values:</p>
+     * <ul>
+     * <li><strong>1</strong>: Periodic quality inspection</li>
+     * <li><strong>4</strong>: Temporary quality inspection</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */

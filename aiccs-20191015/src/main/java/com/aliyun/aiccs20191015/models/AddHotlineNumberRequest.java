@@ -5,15 +5,17 @@ import com.aliyun.tea.*;
 
 public class AddHotlineNumberRequest extends TeaModel {
     /**
+     * <p>Description of the number.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>desc</p>
+     * <p>热线号码</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
+     * <p>Indicates whether the number is used for inbound calls.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,7 @@ public class AddHotlineNumberRequest extends TeaModel {
     public Boolean enableInbound;
 
     /**
+     * <p>Whether inbound satisfaction evaluation is enabled.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -32,6 +35,7 @@ public class AddHotlineNumberRequest extends TeaModel {
     public Boolean enableInboundEvaluation;
 
     /**
+     * <p>Whether it is used for outbound calls.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -41,6 +45,7 @@ public class AddHotlineNumberRequest extends TeaModel {
     public Boolean enableOutbound;
 
     /**
+     * <p>Indicates whether outbound call satisfaction evaluation is enabled.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -50,6 +55,14 @@ public class AddHotlineNumberRequest extends TeaModel {
     public Boolean enableOutboundEvaluation;
 
     /**
+     * <p>Satisfaction Level. Valid values:  </p>
+     * <ul>
+     * <li><strong>2</strong>: Two-level (Satisfied, Not satisfied)  </li>
+     * <li><strong>3</strong>: Three-level (Satisfied, Neutral, Not satisfied)  </li>
+     * <li><strong>4</strong>: Four-level (Very satisfied, Satisfied, Neutral, Not satisfied)  </li>
+     * <li><strong>5</strong>: Five-level (Very satisfied, Satisfied, Neutral, Not satisfied, Very poor)</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>2</p>
      */
@@ -57,6 +70,7 @@ public class AddHotlineNumberRequest extends TeaModel {
     public Integer evaluationLevel;
 
     /**
+     * <p>Hotline number.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -66,6 +80,8 @@ public class AddHotlineNumberRequest extends TeaModel {
     public String hotlineNumber;
 
     /**
+     * <p>The IVR flow ID for inbound calls. You can obtain it on the SaaS Workbench &gt; Channel Integration &gt; IVR Flow Management page.</p>
+     * 
      * <strong>example:</strong>
      * <p>123456</p>
      */
@@ -73,6 +89,7 @@ public class AddHotlineNumberRequest extends TeaModel {
     public Long inboundFlowId;
 
     /**
+     * <p>The Artificial Intelligence Cloud Call Service (AICCS) instance ID. You can obtain it in the Intelligent Contact Center console.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -82,6 +99,7 @@ public class AddHotlineNumberRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>Whether outbound calls apply to all departments under the instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -90,6 +108,9 @@ public class AddHotlineNumberRequest extends TeaModel {
     @NameInMap("OutboundAllDepart")
     public Boolean outboundAllDepart;
 
+    /**
+     * <p>Outbound call effective scope.</p>
+     */
     @NameInMap("OutboundRangeList")
     public java.util.List<AddHotlineNumberRequestOutboundRangeList> outboundRangeList;
 
@@ -188,12 +209,20 @@ public class AddHotlineNumberRequest extends TeaModel {
 
     public static class AddHotlineNumberRequestOutboundRangeList extends TeaModel {
         /**
+         * <p>Effective department ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>123456</p>
          */
         @NameInMap("DepartmentId")
         public Long departmentId;
 
+        /**
+         * <p>List of effective skill groups.  </p>
+         * <blockquote>
+         * <p>If the skill group list is empty, the setting applies to the entire department. Otherwise, it applies only to the specified skill groups under the department.</p>
+         * </blockquote>
+         */
         @NameInMap("GroupIdList")
         public java.util.List<Long> groupIdList;
 

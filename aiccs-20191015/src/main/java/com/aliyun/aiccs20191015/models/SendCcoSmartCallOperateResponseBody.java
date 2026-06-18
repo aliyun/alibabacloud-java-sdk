@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class SendCcoSmartCallOperateResponseBody extends TeaModel {
     /**
+     * <p>Request status code. A return value of OK indicates that the request succeeded.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
@@ -12,6 +14,12 @@ public class SendCcoSmartCallOperateResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>Result of the command execution.  </p>
+     * <ul>
+     * <li><strong>true</strong>: The command executed successfully.  </li>
+     * <li><strong>false</strong>: The command execution failed.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -19,6 +27,8 @@ public class SendCcoSmartCallOperateResponseBody extends TeaModel {
     public String data;
 
     /**
+     * <p>Description of the status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
@@ -26,6 +36,8 @@ public class SendCcoSmartCallOperateResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>A90E4451-FED7-49D2-87C8-00700A8C4D0D</p>
      */

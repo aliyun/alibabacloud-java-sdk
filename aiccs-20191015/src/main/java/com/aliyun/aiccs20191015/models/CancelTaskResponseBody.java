@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CancelTaskResponseBody extends TeaModel {
     /**
+     * <p>Request status code. A value of OK indicates that the request succeeded.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
@@ -12,6 +14,12 @@ public class CancelTaskResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>Indicates whether the operation succeeded. Valid values:</p>
+     * <ul>
+     * <li><strong>true</strong>: Succeeded.</li>
+     * <li><strong>false</strong>: Failed.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -19,13 +27,17 @@ public class CancelTaskResponseBody extends TeaModel {
     public Boolean data;
 
     /**
+     * <p>Description of the status code.</p>
+     * 
      * <strong>example:</strong>
-     * <p>Ok</p>
+     * <p>OK</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>D9CB3933-9FE3-4870-BA8E-2BEE91B69D23</p>
      */
@@ -33,6 +45,12 @@ public class CancelTaskResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the API was invoked successfully. Valid values:</p>
+     * <ul>
+     * <li><strong>true</strong>: Succeeded.</li>
+     * <li><strong>false</strong>: Failed.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

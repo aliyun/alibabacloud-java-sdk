@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class AddModelApplicationRequest extends TeaModel {
     /**
-     * <p>应用并发请求数</p>
+     * <p>The number of concurrent requests per second (CPS).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,16 +15,18 @@ public class AddModelApplicationRequest extends TeaModel {
     public Long applicationCps;
 
     /**
-     * <p>模型应用名称</p>
+     * <p>The name of the model application.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>示例值</p>
+     * <p>测试应用</p>
      */
     @NameInMap("ApplicationName")
     public String applicationName;
 
     /**
+     * <p>Specifies whether to push an event notification when a call is connected. The default value is false.</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -32,35 +34,35 @@ public class AddModelApplicationRequest extends TeaModel {
     public Boolean callConnectedTriggerModel;
 
     /**
-     * <p>场景名称</p>
+     * <p>The scene name.</p>
      * 
      * <strong>example:</strong>
-     * <p>示例值示例值</p>
+     * <p>测试场景</p>
      */
     @NameInMap("DyvmsSceneName")
     public String dyvmsSceneName;
 
     /**
-     * <p>模型编码</p>
+     * <p>The model code.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>示例值示例值</p>
+     * <p>1234</p>
      */
     @NameInMap("ModelCode")
     public String modelCode;
 
     /**
-     * <p>模型版本</p>
+     * <p>The model version.</p>
      * 
      * <strong>example:</strong>
-     * <p>示例值示例值</p>
+     * <p>1</p>
      */
     @NameInMap("ModelVersion")
     public String modelVersion;
 
     /**
-     * <p>第一个静音是否唤起模型</p>
+     * <p>Specifies whether the first mute event triggers the model.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -69,7 +71,7 @@ public class AddModelApplicationRequest extends TeaModel {
     public Boolean muteActive;
 
     /**
-     * <p>静音时长</p>
+     * <p>The mute duration.</p>
      * 
      * <strong>example:</strong>
      * <p>70</p>
@@ -78,7 +80,7 @@ public class AddModelApplicationRequest extends TeaModel {
     public Long muteDuration;
 
     /**
-     * <p>连续多少个静音事件主动挂机</p>
+     * <p>The number of consecutive mute events that trigger an automatic hang-up.</p>
      * 
      * <strong>example:</strong>
      * <p>5</p>
@@ -90,16 +92,16 @@ public class AddModelApplicationRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>提示词</p>
+     * <p>The prompt.</p>
      * 
      * <strong>example:</strong>
-     * <p>示例值示例值示例值</p>
+     * <p>测试提示词。</p>
      */
     @NameInMap("Prompt")
     public String prompt;
 
     /**
-     * <p>资质ID</p>
+     * <p>The qualification ID.</p>
      * 
      * <strong>example:</strong>
      * <p>85</p>
@@ -108,17 +110,19 @@ public class AddModelApplicationRequest extends TeaModel {
     public Long qualificationId;
 
     /**
-     * <p>资质名称</p>
+     * <p>The name of the qualification.</p>
      * 
      * <strong>example:</strong>
-     * <p>示例值</p>
+     * <p>测试资质</p>
      */
     @NameInMap("QualificationName")
     public String qualificationName;
 
     /**
+     * <p>The URL of the audio file for the opening line. This parameter is required if <code>StartWordType</code> is set to <code>1</code>.</p>
+     * 
      * <strong>example:</strong>
-     * <p>示例值示例值</p>
+     * <p><a href="https://xxxxxxxx.wav">https://xxxxxxxx.wav</a></p>
      */
     @NameInMap("RecordingFile")
     public String recordingFile;
@@ -130,7 +134,7 @@ public class AddModelApplicationRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>来源</p>
+     * <p>The source. The value must be <code>USER</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>USER</p>
@@ -139,16 +143,16 @@ public class AddModelApplicationRequest extends TeaModel {
     public String source;
 
     /**
-     * <p>话术内容</p>
+     * <p>The speech script content.</p>
      * 
      * <strong>example:</strong>
-     * <p>示例值示例值示例值</p>
+     * <p>测试话术。</p>
      */
     @NameInMap("SpeechContent")
     public String speechContent;
 
     /**
-     * <p>话束id</p>
+     * <p>The speech script ID.</p>
      * 
      * <strong>example:</strong>
      * <p>88</p>
@@ -157,34 +161,37 @@ public class AddModelApplicationRequest extends TeaModel {
     public Long speechId;
 
     /**
-     * <p>开场白</p>
+     * <p>The opening line.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>示例值示例值示例值</p>
+     * <p>你好，这是一句开场白。</p>
      */
     @NameInMap("StartWord")
     public String startWord;
 
     /**
+     * <p>The type of the opening line.</p>
+     * 
      * <strong>example:</strong>
-     * <p>1</p>
+     * <p>0：文本
+     * 1：录音</p>
      */
     @NameInMap("StartWordType")
     public Long startWordType;
 
     /**
-     * <p>tts配置，包括音色、音量、音速等。</p>
+     * <p>The TTS configuration, including voice, volume, speech speed, and more.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("TtsConfig")
     public AddModelApplicationRequestTtsConfig ttsConfig;
 
     /**
-     * <p>用途</p>
+     * <p>The purpose of the application.</p>
      * 
      * <strong>example:</strong>
-     * <p>示例值示例值示例值</p>
+     * <p>测试用途</p>
      */
     @NameInMap("UsageDesc")
     public String usageDesc;
@@ -380,6 +387,8 @@ public class AddModelApplicationRequest extends TeaModel {
 
     public static class AddModelApplicationRequestTtsConfig extends TeaModel {
         /**
+         * <p>Specifies whether to enable background sound.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -387,6 +396,8 @@ public class AddModelApplicationRequest extends TeaModel {
         public Boolean backgroundEnabled;
 
         /**
+         * <p>The background sound ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>111</p>
          */
@@ -394,6 +405,8 @@ public class AddModelApplicationRequest extends TeaModel {
         public Long backgroundSound;
 
         /**
+         * <p>The background sound volume.</p>
+         * 
          * <strong>example:</strong>
          * <p>0：low
          * 1：medium
@@ -403,6 +416,8 @@ public class AddModelApplicationRequest extends TeaModel {
         public Long backgroundVolume;
 
         /**
+         * <p>The account ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>45</p>
          */
@@ -410,6 +425,8 @@ public class AddModelApplicationRequest extends TeaModel {
         public Long customerAccountId;
 
         /**
+         * <p>Specifies whether to enable mixing.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -417,6 +434,8 @@ public class AddModelApplicationRequest extends TeaModel {
         public Boolean mixingEnabled;
 
         /**
+         * <p>The mixing template ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>111</p>
          */
@@ -424,14 +443,16 @@ public class AddModelApplicationRequest extends TeaModel {
         public Long mixingTemplate;
 
         /**
+         * <p>The resource ID.</p>
+         * 
          * <strong>example:</strong>
-         * <p>示例值示例值</p>
+         * <p>example</p>
          */
         @NameInMap("ResourceId")
         public String resourceId;
 
         /**
-         * <p>TTS 变量播放时的声音速度。取值范围：-200~200，默认值为 0。</p>
+         * <p>The speech speed for TTS playback. Valid values: -200–200. The default value is 0.</p>
          * 
          * <strong>example:</strong>
          * <p>13</p>
@@ -440,16 +461,16 @@ public class AddModelApplicationRequest extends TeaModel {
         public Long ttsSpeed;
 
         /**
-         * <p>声音风格</p>
+         * <p>The voice style.</p>
          * 
          * <strong>example:</strong>
-         * <p>示例值示例值示例值</p>
+         * <p>龙小夏</p>
          */
         @NameInMap("TtsStyle")
         public String ttsStyle;
 
         /**
-         * <p>TTS 变量播放的音量。取值范围：0~100，默认值为 0。</p>
+         * <p>The volume for TTS playback. Valid values: 0–100. The default value is 0.</p>
          * 
          * <strong>example:</strong>
          * <p>55</p>
@@ -458,19 +479,23 @@ public class AddModelApplicationRequest extends TeaModel {
         public Long ttsVolume;
 
         /**
-         * <p>音色code</p>
+         * <p>The voice code.</p>
          * 
          * <strong>example:</strong>
-         * <p>示例值示例值示例值</p>
+         * <p>ddddfd</p>
          */
         @NameInMap("VoiceCode")
         public String voiceCode;
 
         /**
-         * <p>声音类型</p>
+         * <p>The voice type.</p>
+         * <pre><code>SYSTEM: System voice
+         * COSYCLONE: Cloned voice
+         * BL-CUSTOM: Premium custom cloned voice
+         * </code></pre>
          * 
          * <strong>example:</strong>
-         * <p>示例值示例值示例值</p>
+         * <p>SYSTEM</p>
          */
         @NameInMap("VoiceType")
         public String voiceType;

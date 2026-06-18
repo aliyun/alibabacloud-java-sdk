@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpdateAiOutboundTaskResponseBody extends TeaModel {
     /**
+     * <p>The status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>ok</p>
      */
@@ -12,6 +14,8 @@ public class UpdateAiOutboundTaskResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>Description of the status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>ok</p>
      */
@@ -19,6 +23,8 @@ public class UpdateAiOutboundTaskResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>EE338D98-9BD3-4413-B165</p>
      */
@@ -26,6 +32,12 @@ public class UpdateAiOutboundTaskResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the API invocation succeeded.</p>
+     * <ul>
+     * <li><strong>true</strong>: Succeeded.</li>
+     * <li><strong>false</strong>: Failed.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

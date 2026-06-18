@@ -5,15 +5,17 @@ import com.aliyun.tea.*;
 
 public class ListRobotCallDialogRequest extends TeaModel {
     /**
+     * <p>Unique call ID. You can invoke the <a href="https://help.aliyun.com/document_detail/2717996.html">RobotCall</a> API and check the <strong>Data</strong> field in the response to obtain it.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>125165515022^11195613****</p>
+     * <p>12516551<strong><strong>^11195613</strong></strong></p>
      */
     @NameInMap("CallId")
     public String callId;
 
     /**
+     * <p>Creation Time. Format: YYYY-MM-DD hh:mm:ss. The time must be precise. You can invoke the <a href="https://help.aliyun.com/document_detail/2717996.html">RobotCall</a> API and view the <strong>date</strong> parameter in the <strong>Response Header</strong> of the response to obtain this value.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class InsertAiOutboundPhoneNumsResponseBody extends TeaModel {
     /**
+     * <p>The status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>Import result.</p>
+     */
     @NameInMap("Data")
     public InsertAiOutboundPhoneNumsResponseBodyData data;
 
     /**
+     * <p>Description of the status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
@@ -22,6 +29,8 @@ public class InsertAiOutboundPhoneNumsResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>D9CB3933-9FE3-4870-BA8E-2BEE91B69D23</p>
      */
@@ -29,6 +38,12 @@ public class InsertAiOutboundPhoneNumsResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the API call succeeded.  </p>
+     * <ul>
+     * <li><strong>true</strong>: Succeeded.  </li>
+     * <li><strong>false</strong>: Failed.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -82,6 +97,8 @@ public class InsertAiOutboundPhoneNumsResponseBody extends TeaModel {
 
     public static class InsertAiOutboundPhoneNumsResponseBodyDataFailInfo extends TeaModel {
         /**
+         * <p>Custom business information.</p>
+         * 
          * <strong>example:</strong>
          * <p>xxxx</p>
          */
@@ -89,6 +106,8 @@ public class InsertAiOutboundPhoneNumsResponseBody extends TeaModel {
         public String bizData;
 
         /**
+         * <p>Description of the failure reason.</p>
+         * 
          * <strong>example:</strong>
          * <p>号码格式异常</p>
          */
@@ -96,6 +115,8 @@ public class InsertAiOutboundPhoneNumsResponseBody extends TeaModel {
         public String msg;
 
         /**
+         * <p>The callee number for outbound calls.</p>
+         * 
          * <strong>example:</strong>
          * <p>150****0000</p>
          */
@@ -134,10 +155,15 @@ public class InsertAiOutboundPhoneNumsResponseBody extends TeaModel {
     }
 
     public static class InsertAiOutboundPhoneNumsResponseBodyData extends TeaModel {
+        /**
+         * <p>Details of failed numbers.</p>
+         */
         @NameInMap("FailInfo")
         public java.util.List<InsertAiOutboundPhoneNumsResponseBodyDataFailInfo> failInfo;
 
         /**
+         * <p>Number of successfully imported entries.</p>
+         * 
          * <strong>example:</strong>
          * <p>7</p>
          */
@@ -145,6 +171,8 @@ public class InsertAiOutboundPhoneNumsResponseBody extends TeaModel {
         public Integer successCount;
 
         /**
+         * <p>Total number of imported entries.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */

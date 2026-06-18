@@ -5,6 +5,11 @@ import com.aliyun.tea.*;
 
 public class LlmSmartCallFullDuplexResponseBody extends TeaModel {
     /**
+     * <p>The call record ID that identifies a call record.</p>
+     * <blockquote>
+     * <p>When you call the LlmSmartCall operation to initiate an LLM-based outbound call, this call record ID (CallId) is returned.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>153955119976^140696759976</p>
      */
@@ -12,6 +17,8 @@ public class LlmSmartCallFullDuplexResponseBody extends TeaModel {
     public String callId;
 
     /**
+     * <p>The error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
@@ -19,6 +26,8 @@ public class LlmSmartCallFullDuplexResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */

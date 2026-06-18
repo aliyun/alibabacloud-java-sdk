@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class AddInboundNumberShrinkRequest extends TeaModel {
     /**
+     * <p>The code of the large model application.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,12 +15,14 @@ public class AddInboundNumberShrinkRequest extends TeaModel {
     public String applicationCode;
 
     /**
+     * <p>A list of inbound numbers.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("InboundNumbers")
     public String inboundNumbersShrink;
 
     /**
+     * <p>The line type. Valid values: <code>1</code> (cloud communication resource) and <code>2</code> (customer-owned line).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -29,6 +32,8 @@ public class AddInboundNumberShrinkRequest extends TeaModel {
     public Long inboundType;
 
     /**
+     * <p>The code for the custom line.</p>
+     * 
      * <strong>example:</strong>
      * <p>JILIANG_*****_TEST_NET</p>
      */

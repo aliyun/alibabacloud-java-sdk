@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetMcuLvsIpRequest extends TeaModel {
     /**
+     * <p>The Artificial Intelligence Cloud Call Service (AICCS) instance ID. You can obtain it from the Intelligent Cloud Call console.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DeleteDepartmentResponseBody extends TeaModel {
     /**
+     * <p>The status code. A value of 200 indicates that the request succeeded.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -12,6 +14,12 @@ public class DeleteDepartmentResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>Indicates whether the operation succeeded. Valid values:</p>
+     * <ul>
+     * <li><strong>true</strong>: Succeeded</li>
+     * <li><strong>false</strong>: Failed.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -19,6 +27,8 @@ public class DeleteDepartmentResponseBody extends TeaModel {
     public Boolean data;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -26,6 +36,8 @@ public class DeleteDepartmentResponseBody extends TeaModel {
     public Long httpStatusCode;
 
     /**
+     * <p>Description of the status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>seccessful</p>
      */
@@ -33,6 +45,8 @@ public class DeleteDepartmentResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>98B032F5-6473-4EAC-8BA8-C28993513A1F</p>
      */
@@ -40,6 +54,12 @@ public class DeleteDepartmentResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the API was invoked successfully. Valid values:</p>
+     * <ul>
+     * <li><strong>true</strong>: Succeeded.</li>
+     * <li><strong>false</strong>: Failed.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

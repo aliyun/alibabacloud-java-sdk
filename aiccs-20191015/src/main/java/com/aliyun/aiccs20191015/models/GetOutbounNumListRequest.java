@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetOutbounNumListRequest extends TeaModel {
     /**
+     * <p>Agent account name (agent logon name).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,8 @@ public class GetOutbounNumListRequest extends TeaModel {
     public String accountName;
 
     /**
+     * <p>Unique ID of the customer request. Used for idempotency validation. You can generate it by using UUID.</p>
+     * 
      * <strong>example:</strong>
      * <p>46c1341e-2648-447a-9b11-70b6a298d****</p>
      */
@@ -21,6 +24,8 @@ public class GetOutbounNumListRequest extends TeaModel {
     public String clientToken;
 
     /**
+     * <p>Instance ID.</p>
+     * <p>You can log on to the <a href="https://aiccs.console.aliyun.com/overview">Artificial Intelligence Cloud Call Service console</a> and view the instance ID in <strong>Instance Management</strong>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

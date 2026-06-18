@@ -5,23 +5,32 @@ import com.aliyun.tea.*;
 
 public class ListSkillGroupResponseBody extends TeaModel {
     /**
+     * <p>Status code. A value of &quot;Success&quot; indicates that the request succeeded.</p>
+     * 
      * <strong>example:</strong>
      * <p>Success</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>Skill group information.</p>
+     */
     @NameInMap("Data")
     public java.util.List<ListSkillGroupResponseBodyData> data;
 
     /**
+     * <p>Description of the status code.</p>
+     * 
      * <strong>example:</strong>
-     * <p>xxxx</p>
+     * <p>successful</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>EE338D98-9BD3-4413-B165</p>
      */
@@ -29,6 +38,12 @@ public class ListSkillGroupResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the API call succeeded. Valid values:</p>
+     * <ul>
+     * <li><strong>true</strong>: Succeeded.</li>
+     * <li><strong>false</strong>: Failed.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -82,22 +97,44 @@ public class ListSkillGroupResponseBody extends TeaModel {
 
     public static class ListSkillGroupResponseBodyData extends TeaModel {
         /**
+         * <p>Channel type of the skill group.</p>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */
         @NameInMap("ChannelType")
         public Integer channelType;
 
+        /**
+         * <p>Skill group description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>自动化技能组</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>Display name of the skill group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>自动化技能组</p>
+         */
         @NameInMap("DisplayName")
         public String displayName;
 
+        /**
+         * <p>Name of the skill group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>自动化技能组</p>
+         */
         @NameInMap("Name")
         public String name;
 
         /**
+         * <p>Skill group ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>123456</p>
          */

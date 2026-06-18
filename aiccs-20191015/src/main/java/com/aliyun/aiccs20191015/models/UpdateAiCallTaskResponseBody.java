@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpdateAiCallTaskResponseBody extends TeaModel {
     /**
+     * <p>The reason why access was denied.</p>
+     * 
      * <strong>example:</strong>
      * <p>None</p>
      */
@@ -12,6 +14,8 @@ public class UpdateAiCallTaskResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
+     * <p>The status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
@@ -19,6 +23,14 @@ public class UpdateAiCallTaskResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>Indicates whether the task was updated successfully. Valid values:</p>
+     * <ul>
+     * <li><p><strong>true</strong>: The update is successful.</p>
+     * </li>
+     * <li><p><strong>false</strong>: The update failed.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -26,13 +38,17 @@ public class UpdateAiCallTaskResponseBody extends TeaModel {
     public Boolean data;
 
     /**
+     * <p>The error message that is returned when an error occurs.</p>
+     * 
      * <strong>example:</strong>
-     * <p>示例值示例值示例值</p>
+     * <p>参数不合法</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>FCD94A7F-316D-54D1-9BFC-814006CB1C34</p>
      */
@@ -40,6 +56,14 @@ public class UpdateAiCallTaskResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the API call was successful. Valid values:</p>
+     * <ul>
+     * <li><p><strong>true</strong>: Successful.</p>
+     * </li>
+     * <li><p><strong>false</strong>: Failed.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */

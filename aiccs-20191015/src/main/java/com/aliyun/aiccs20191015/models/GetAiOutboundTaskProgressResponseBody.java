@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class GetAiOutboundTaskProgressResponseBody extends TeaModel {
     /**
+     * <p>Status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>ok</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>Job progress.</p>
+     */
     @NameInMap("Data")
     public GetAiOutboundTaskProgressResponseBodyData data;
 
     /**
+     * <p>Description of the status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>ok</p>
      */
@@ -22,6 +29,8 @@ public class GetAiOutboundTaskProgressResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>D9CB3933-9FE3-4870-BA8E-2BEE91B69D23</p>
      */
@@ -29,6 +38,12 @@ public class GetAiOutboundTaskProgressResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the API call succeeded.</p>
+     * <ul>
+     * <li><strong>true</strong>: Succeeded.</li>
+     * <li><strong>false</strong>: Failed.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -82,6 +97,11 @@ public class GetAiOutboundTaskProgressResponseBody extends TeaModel {
 
     public static class GetAiOutboundTaskProgressResponseBodyDataCalloutProgress extends TeaModel {
         /**
+         * <p>Call loss count.  </p>
+         * <blockquote>
+         * <p>A parameter specific to predictive outbound calls.</p>
+         * </blockquote>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -89,6 +109,11 @@ public class GetAiOutboundTaskProgressResponseBody extends TeaModel {
         public Integer callLossCount;
 
         /**
+         * <p>Call Loss Rate.  </p>
+         * <blockquote>
+         * <p>A parameter exclusive to predictive outbound calls.</p>
+         * </blockquote>
+         * 
          * <strong>example:</strong>
          * <p>0.01</p>
          */
@@ -96,6 +121,11 @@ public class GetAiOutboundTaskProgressResponseBody extends TeaModel {
         public Float callLossRate;
 
         /**
+         * <p>Number of successful outbound call connections.  </p>
+         * <blockquote>
+         * <p>This parameter is specific to automatic outbound calls.</p>
+         * </blockquote>
+         * 
          * <strong>example:</strong>
          * <p>5</p>
          */
@@ -103,6 +133,11 @@ public class GetAiOutboundTaskProgressResponseBody extends TeaModel {
         public Integer callOutConnectCount;
 
         /**
+         * <p>Outbound Call Connection Rate.  </p>
+         * <blockquote>
+         * <p>A parameter exclusive to automated outbound calls.</p>
+         * </blockquote>
+         * 
          * <strong>example:</strong>
          * <p>0.5</p>
          */
@@ -110,6 +145,8 @@ public class GetAiOutboundTaskProgressResponseBody extends TeaModel {
         public Float callOutConnectRate;
 
         /**
+         * <p>Number of outbound calls.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -117,6 +154,11 @@ public class GetAiOutboundTaskProgressResponseBody extends TeaModel {
         public Integer callOutCount;
 
         /**
+         * <p>Agent Pickup Count.  </p>
+         * <blockquote>
+         * <p>A parameter exclusive to predictive outbound calls.</p>
+         * </blockquote>
+         * 
          * <strong>example:</strong>
          * <p>4</p>
          */
@@ -124,6 +166,11 @@ public class GetAiOutboundTaskProgressResponseBody extends TeaModel {
         public Integer callOutServicerPickupCount;
 
         /**
+         * <p>Agent pickup rate.  </p>
+         * <blockquote>
+         * <p>A parameter specific to predictive outbound calls.</p>
+         * </blockquote>
+         * 
          * <strong>example:</strong>
          * <p>0.4</p>
          */
@@ -131,6 +178,11 @@ public class GetAiOutboundTaskProgressResponseBody extends TeaModel {
         public Float callOutServicerPickupRate;
 
         /**
+         * <p>Customer Pickup Count.  </p>
+         * <blockquote>
+         * <p>A parameter exclusive to predictive outbound calls.</p>
+         * </blockquote>
+         * 
          * <strong>example:</strong>
          * <p>5</p>
          */
@@ -138,6 +190,11 @@ public class GetAiOutboundTaskProgressResponseBody extends TeaModel {
         public Integer callOutUserPickupCount;
 
         /**
+         * <p>Customer Pickup Rate.  </p>
+         * <blockquote>
+         * <p>A parameter exclusive to predictive outbound calls.</p>
+         * </blockquote>
+         * 
          * <strong>example:</strong>
          * <p>0.5</p>
          */
@@ -225,6 +282,8 @@ public class GetAiOutboundTaskProgressResponseBody extends TeaModel {
 
     public static class GetAiOutboundTaskProgressResponseBodyDataTaskProgress extends TeaModel {
         /**
+         * <p>Number of jobs in calling status.</p>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */
@@ -232,6 +291,11 @@ public class GetAiOutboundTaskProgressResponseBody extends TeaModel {
         public Integer callingCount;
 
         /**
+         * <p>Number of connected jobs.</p>
+         * <blockquote>
+         * <p>Parameter specific to auto dialing.</p>
+         * </blockquote>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */
@@ -239,6 +303,11 @@ public class GetAiOutboundTaskProgressResponseBody extends TeaModel {
         public Integer connectCount;
 
         /**
+         * <p>Job connection rate.  </p>
+         * <blockquote>
+         * <p>A parameter specific to automatic outbound calls.</p>
+         * </blockquote>
+         * 
          * <strong>example:</strong>
          * <p>0.2</p>
          */
@@ -246,6 +315,8 @@ public class GetAiOutboundTaskProgressResponseBody extends TeaModel {
         public Float connectRate;
 
         /**
+         * <p>Number of completed jobs.</p>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */
@@ -253,6 +324,8 @@ public class GetAiOutboundTaskProgressResponseBody extends TeaModel {
         public Integer finishCount;
 
         /**
+         * <p>Job completion rate.</p>
+         * 
          * <strong>example:</strong>
          * <p>0.20</p>
          */
@@ -260,6 +333,11 @@ public class GetAiOutboundTaskProgressResponseBody extends TeaModel {
         public Float finishRate;
 
         /**
+         * <p>Number of agent pickups.</p>
+         * <blockquote>
+         * <p>Parameter specific to predictive dialing.</p>
+         * </blockquote>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */
@@ -267,6 +345,11 @@ public class GetAiOutboundTaskProgressResponseBody extends TeaModel {
         public Integer servicerPickupCount;
 
         /**
+         * <p>Agent pickup rate.</p>
+         * <blockquote>
+         * <p>Exclusive parameter for predictive outbound calls.</p>
+         * </blockquote>
+         * 
          * <strong>example:</strong>
          * <p>0.2</p>
          */
@@ -274,6 +357,8 @@ public class GetAiOutboundTaskProgressResponseBody extends TeaModel {
         public Float servicerPickupRate;
 
         /**
+         * <p>Number of stopped jobs.</p>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */
@@ -281,6 +366,8 @@ public class GetAiOutboundTaskProgressResponseBody extends TeaModel {
         public Integer terminateCount;
 
         /**
+         * <p>Total number of jobs.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -288,6 +375,11 @@ public class GetAiOutboundTaskProgressResponseBody extends TeaModel {
         public Integer totalCount;
 
         /**
+         * <p>Number of customer pickups.</p>
+         * <blockquote>
+         * <p>Parameter specific to predictive dialing.</p>
+         * </blockquote>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */
@@ -295,6 +387,11 @@ public class GetAiOutboundTaskProgressResponseBody extends TeaModel {
         public Integer userPickupCount;
 
         /**
+         * <p>Customer pickup rate.</p>
+         * <blockquote>
+         * <p>Exclusive parameter for predictive outbound calls.</p>
+         * </blockquote>
+         * 
          * <strong>example:</strong>
          * <p>0.2</p>
          */
@@ -302,6 +399,8 @@ public class GetAiOutboundTaskProgressResponseBody extends TeaModel {
         public Float userPickupRate;
 
         /**
+         * <p>Number of pending call jobs.</p>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */
@@ -309,6 +408,8 @@ public class GetAiOutboundTaskProgressResponseBody extends TeaModel {
         public Integer waitingCallCount;
 
         /**
+         * <p>Number of jobs pending redial.</p>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */
@@ -427,20 +528,34 @@ public class GetAiOutboundTaskProgressResponseBody extends TeaModel {
     }
 
     public static class GetAiOutboundTaskProgressResponseBodyData extends TeaModel {
+        /**
+         * <p>Progress by outbound call dimension.</p>
+         */
         @NameInMap("CalloutProgress")
         public GetAiOutboundTaskProgressResponseBodyDataCalloutProgress calloutProgress;
 
         /**
+         * <p>The job ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>123456</p>
          */
         @NameInMap("TaskId")
         public Long taskId;
 
+        /**
+         * <p>Job dimension progress.</p>
+         */
         @NameInMap("TaskProgress")
         public GetAiOutboundTaskProgressResponseBodyDataTaskProgress taskProgress;
 
         /**
+         * <p>Task Type. Valid values:  </p>
+         * <ul>
+         * <li><strong>2</strong>: Predictive.  </li>
+         * <li><strong>3</strong>: Automatic.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */

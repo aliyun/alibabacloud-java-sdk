@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class GetSkillGroupStatusTotalResponseBody extends TeaModel {
     /**
+     * <p>Status code. A return value of 200 indicates that the Request succeeded.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>List of data.</p>
+     */
     @NameInMap("Data")
     public GetSkillGroupStatusTotalResponseBodyData data;
 
     /**
+     * <p>Description of the status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>successful</p>
      */
@@ -22,6 +29,8 @@ public class GetSkillGroupStatusTotalResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>EE338D98-9BD3-4413-B165</p>
      */
@@ -29,6 +38,12 @@ public class GetSkillGroupStatusTotalResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the API invoke succeeded. Valid values:</p>
+     * <ul>
+     * <li><strong>true</strong>: Succeeded.</li>
+     * <li><strong>false</strong>: failed.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -82,6 +97,8 @@ public class GetSkillGroupStatusTotalResponseBody extends TeaModel {
 
     public static class GetSkillGroupStatusTotalResponseBodyData extends TeaModel {
         /**
+         * <p>Current page number.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -89,16 +106,26 @@ public class GetSkillGroupStatusTotalResponseBody extends TeaModel {
         public Long pageNum;
 
         /**
+         * <p>Page size.</p>
+         * 
          * <strong>example:</strong>
          * <p>2000</p>
          */
         @NameInMap("PageSize")
         public Long pageSize;
 
+        /**
+         * <p>Information as a JSON string of type List<Map>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;minute_id&quot;:&quot;-1&quot;,&quot;call_out_intervene_servicer_cnt&quot;:26,&quot;call_out_servicer_cnt&quot;:35,&quot;call_out_intervene_60s_cnt&quot;:155,&quot;servicer_real_name&quot;:&quot;--&quot;,&quot;call_in_sep_normal_cnt&quot;:0,&quot;call_out_intervene_30s_cnt&quot;:235,&quot;servicer_id&quot;:&quot;-1&quot;,&quot;tenant_name&quot;:&quot;非单元测试化BU&quot;,&quot;call_out_sep_sat_cnt&quot;:1}</p>
+         */
         @NameInMap("Rows")
         public String rows;
 
         /**
+         * <p>Total number of records.</p>
+         * 
          * <strong>example:</strong>
          * <p>4</p>
          */

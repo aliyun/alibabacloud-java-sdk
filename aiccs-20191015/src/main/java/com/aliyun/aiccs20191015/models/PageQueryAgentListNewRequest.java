@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class PageQueryAgentListNewRequest extends TeaModel {
     /**
-     * <p>Agent ID</p>
+     * <p>The agent ID.</p>
      * 
      * <strong>example:</strong>
      * <p>12345</p>
@@ -14,13 +14,17 @@ public class PageQueryAgentListNewRequest extends TeaModel {
     public String agentId;
 
     /**
+     * <p>The agent name.</p>
+     * 
      * <strong>example:</strong>
-     * <p>示例值示例值</p>
+     * <p>智能客服助手</p>
      */
     @NameInMap("AgentName")
     public String agentName;
 
     /**
+     * <p>Indicates whether the agent is available for outbound calls. The value is <code>true</code> if the agent\&quot;s current deployment branch has a published version.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -28,6 +32,8 @@ public class PageQueryAgentListNewRequest extends TeaModel {
     public Boolean isAvailable;
 
     /**
+     * <p>The page index. This parameter is deprecated. Use <code>PageNo</code> instead.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -35,6 +41,8 @@ public class PageQueryAgentListNewRequest extends TeaModel {
     public Long pageIndex;
 
     /**
+     * <p>The page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -42,6 +50,8 @@ public class PageQueryAgentListNewRequest extends TeaModel {
     public Long pageNo;
 
     /**
+     * <p>The page size.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */

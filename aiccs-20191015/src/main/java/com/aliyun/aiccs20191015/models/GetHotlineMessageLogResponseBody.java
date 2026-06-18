@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class GetHotlineMessageLogResponseBody extends TeaModel {
     /**
+     * <p>Status code. A return value of &quot;Success&quot; indicates that the request succeeded.</p>
+     * 
      * <strong>example:</strong>
      * <p>Success</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>Voice messages.</p>
+     */
     @NameInMap("Data")
     public java.util.List<GetHotlineMessageLogResponseBodyData> data;
 
     /**
+     * <p>Description of the status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>xxxx</p>
      */
@@ -22,6 +29,8 @@ public class GetHotlineMessageLogResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>EE338D98-9BD3-4413-B165</p>
      */
@@ -29,6 +38,8 @@ public class GetHotlineMessageLogResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the API call succeeded.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -82,16 +93,26 @@ public class GetHotlineMessageLogResponseBody extends TeaModel {
 
     public static class GetHotlineMessageLogResponseBodyData extends TeaModel {
         /**
+         * <p>The session ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>100****2077</p>
          */
         @NameInMap("Acid")
         public String acid;
 
+        /**
+         * <p>The session content.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>您好。</p>
+         */
         @NameInMap("Content")
         public String content;
 
         /**
+         * <p>The end time.</p>
+         * 
          * <strong>example:</strong>
          * <p>1623738027480</p>
          */
@@ -99,6 +120,8 @@ public class GetHotlineMessageLogResponseBody extends TeaModel {
         public Long endTime;
 
         /**
+         * <p>The record ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>11deca999****</p>
          */
@@ -106,6 +129,12 @@ public class GetHotlineMessageLogResponseBody extends TeaModel {
         public String mid;
 
         /**
+         * <p>The sender type. Valid values:  </p>
+         * <ul>
+         * <li><strong>1</strong>: Membership  </li>
+         * <li><strong>2</strong>: Agent</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -113,6 +142,8 @@ public class GetHotlineMessageLogResponseBody extends TeaModel {
         public Integer senderType;
 
         /**
+         * <p>The start time.</p>
+         * 
          * <strong>example:</strong>
          * <p>1623738026460</p>
          */

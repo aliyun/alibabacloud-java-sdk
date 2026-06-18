@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class GetHotlineServiceStatisticsResponseBody extends TeaModel {
     /**
+     * <p>Status code. A return value of 200 indicates that the request succeeded.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>Data list.</p>
+     */
     @NameInMap("Data")
     public GetHotlineServiceStatisticsResponseBodyData data;
 
     /**
+     * <p>Status description.</p>
+     * 
      * <strong>example:</strong>
      * <p>message</p>
      */
@@ -22,6 +29,8 @@ public class GetHotlineServiceStatisticsResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>EE338D98-9BD3-4413-B165</p>
      */
@@ -29,6 +38,12 @@ public class GetHotlineServiceStatisticsResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the API invocation succeeded. Valid values:</p>
+     * <ul>
+     * <li><strong>true</strong>: Succeeded.</li>
+     * <li><strong>false</strong>: Failed.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -82,6 +97,8 @@ public class GetHotlineServiceStatisticsResponseBody extends TeaModel {
 
     public static class GetHotlineServiceStatisticsResponseBodyData extends TeaModel {
         /**
+         * <p>Current page number.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -89,16 +106,26 @@ public class GetHotlineServiceStatisticsResponseBody extends TeaModel {
         public Integer pageNum;
 
         /**
+         * <p>Page size.</p>
+         * 
          * <strong>example:</strong>
          * <p>2000</p>
          */
         @NameInMap("PageSize")
         public Integer pageSize;
 
+        /**
+         * <p>A JSON string of type List<Map>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;tenant_id&quot;:&quot;905&quot;,&quot;n_resttype_now&quot;:0,&quot;tenant_name&quot;:&quot;非单元测试化BU&quot;,&quot;n_resttype1_now&quot;:0,&quot;group_name&quot;:&quot;-1&quot;,&quot;department_id&quot;:&quot;-1&quot;,&quot;department_name&quot;:&quot;-1&quot;,&quot;n_resttype98_now&quot;:0,&quot;n_online_now&quot;:0,&quot;date_id&quot;:&quot;20210401&quot;,&quot;n_resttype3_now&quot;:0,&quot;n_resttype5_now&quot;:0,&quot;n_busy_now&quot;:0,&quot;n_resttype2_now&quot;:0,&quot;group_id&quot;:&quot;-1&quot;,&quot;n_idle_now&quot;:0,&quot;n_resttype4_now&quot;:0,&quot;n_ack_now&quot;:0,&quot;n_resttype99_now&quot;:0}</p>
+         */
         @NameInMap("Rows")
         public String rows;
 
         /**
+         * <p>Total number of records.</p>
+         * 
          * <strong>example:</strong>
          * <p>4</p>
          */

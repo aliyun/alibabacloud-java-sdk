@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class ListAiccsRobotResponseBody extends TeaModel {
     /**
+     * <p>Request status code. A return value of OK indicates that the request Succeeded.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>Robot scripts.</p>
+     */
     @NameInMap("Data")
     public java.util.List<ListAiccsRobotResponseBodyData> data;
 
     /**
+     * <p>Description of the status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>successful</p>
      */
@@ -22,6 +29,8 @@ public class ListAiccsRobotResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>D9CB3933-9FE3-4870-BA8E-2BEE91B69D23</p>
      */
@@ -29,6 +38,12 @@ public class ListAiccsRobotResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the API invocation Succeeded. Valid values:</p>
+     * <ul>
+     * <li><strong>true</strong>: Succeeded.</li>
+     * <li><strong>false</strong>: failed.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -81,23 +96,45 @@ public class ListAiccsRobotResponseBody extends TeaModel {
     }
 
     public static class ListAiccsRobotResponseBodyData extends TeaModel {
+        /**
+         * <p>Associated industry.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>房地产</p>
+         */
         @NameInMap("AtProfession")
         public String atProfession;
 
+        /**
+         * <p>Associated business.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>新房销售</p>
+         */
         @NameInMap("AtSence")
         public String atSence;
 
         /**
+         * <p>Robot ID.</p>
+         * 
          * <strong>example:</strong>
-         * <p>123456</p>
+         * <p>12****</p>
          */
         @NameInMap("Id")
         public Long id;
 
+        /**
+         * <p>Robot name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>测试机器人</p>
+         */
         @NameInMap("RobotName")
         public String robotName;
 
         /**
+         * <p>Robot type.</p>
+         * 
          * <strong>example:</strong>
          * <p>CUSTOM</p>
          */

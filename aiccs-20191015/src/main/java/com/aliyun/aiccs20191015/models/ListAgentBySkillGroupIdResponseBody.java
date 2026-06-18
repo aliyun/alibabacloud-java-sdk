@@ -5,23 +5,32 @@ import com.aliyun.tea.*;
 
 public class ListAgentBySkillGroupIdResponseBody extends TeaModel {
     /**
+     * <p>Status code. A return value of &quot;Success&quot; indicates that the request succeeded.</p>
+     * 
      * <strong>example:</strong>
      * <p>Success</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>Agent information.</p>
+     */
     @NameInMap("Data")
     public java.util.List<ListAgentBySkillGroupIdResponseBodyData> data;
 
     /**
+     * <p>Description of the status code.</p>
+     * 
      * <strong>example:</strong>
-     * <p>xxxx</p>
+     * <p>successful</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>EE338D98-9BD3-4413-B165</p>
      */
@@ -29,6 +38,12 @@ public class ListAgentBySkillGroupIdResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the API invocation succeeded. Valid values:</p>
+     * <ul>
+     * <li><strong>true</strong>: Succeeded.</li>
+     * <li><strong>false</strong>: Failed.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -82,6 +97,8 @@ public class ListAgentBySkillGroupIdResponseBody extends TeaModel {
 
     public static class ListAgentBySkillGroupIdResponseBodyData extends TeaModel {
         /**
+         * <p>Account name of the agent, which is the phone number or mailbox entered during account registration. It is unique within the instance.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="mailto:username@example.com">username@example.com</a></p>
          */
@@ -89,16 +106,31 @@ public class ListAgentBySkillGroupIdResponseBody extends TeaModel {
         public String accountName;
 
         /**
+         * <p>Agent ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>666666</p>
          */
         @NameInMap("AgentId")
         public Long agentId;
 
+        /**
+         * <p>Display name of the agent.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>刘测试</p>
+         */
         @NameInMap("DisplayName")
         public String displayName;
 
         /**
+         * <p>Agent status. Only agents with a Normal status can perform Business Activities. Valid values:</p>
+         * <ul>
+         * <li><strong>0</strong>: Normal</li>
+         * <li><strong>1</strong>: Frozen</li>
+         * <li><strong>2</strong>: Deleted</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -106,6 +138,8 @@ public class ListAgentBySkillGroupIdResponseBody extends TeaModel {
         public Integer status;
 
         /**
+         * <p>Tenant ID to which the agent belongs. This corresponds to the instance ID provided in the input parameter.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */

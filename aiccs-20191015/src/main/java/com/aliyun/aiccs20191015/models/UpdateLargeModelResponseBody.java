@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpdateLargeModelResponseBody extends TeaModel {
     /**
+     * <p>Details about an authentication error.</p>
+     * 
      * <strong>example:</strong>
      * <p>Access Denied</p>
      */
@@ -12,13 +14,17 @@ public class UpdateLargeModelResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
+     * <p>The status code returned for the request.</p>
+     * 
      * <strong>example:</strong>
-     * <p>示例值示例值示例值</p>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public String code;
 
     /**
+     * <p>The result of the update operation.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -26,20 +32,26 @@ public class UpdateLargeModelResponseBody extends TeaModel {
     public Boolean data;
 
     /**
+     * <p>The description of the status code.</p>
+     * 
      * <strong>example:</strong>
-     * <p>示例值示例值示例值</p>
+     * <p>example</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
-     * <p>示例值示例值</p>
+     * <p>example</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
+     * <p>Indicates whether the API call was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

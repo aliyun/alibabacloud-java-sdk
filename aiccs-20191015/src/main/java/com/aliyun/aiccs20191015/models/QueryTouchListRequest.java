@@ -4,13 +4,21 @@ package com.aliyun.aiccs20191015.models;
 import com.aliyun.tea.*;
 
 public class QueryTouchListRequest extends TeaModel {
+    /**
+     * <p>List of session IDs for term query.</p>
+     */
     @NameInMap("ChannelId")
     public java.util.List<String> channelId;
 
+    /**
+     * <p>Channel Type.</p>
+     */
     @NameInMap("ChannelType")
     public java.util.List<Integer> channelType;
 
     /**
+     * <p>The right boundary of the time range for session end. The value is a UNIX timestamp in milliseconds.</p>
+     * 
      * <strong>example:</strong>
      * <p>1614600500000</p>
      */
@@ -18,6 +26,8 @@ public class QueryTouchListRequest extends TeaModel {
     public Long closeTimeEnd;
 
     /**
+     * <p>The left boundary of the time range for session end. The value is a UNIX timestamp in milliseconds.</p>
+     * 
      * <strong>example:</strong>
      * <p>1614600400000</p>
      */
@@ -25,22 +35,35 @@ public class QueryTouchListRequest extends TeaModel {
     public Long closeTimeStart;
 
     /**
+     * <p>Current page. The value must be greater than <strong>0</strong>. Default Value: <strong>1</strong>.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
+    /**
+     * <p>Satisfaction level.</p>
+     */
     @NameInMap("EvaluationLevel")
     public java.util.List<Integer> evaluationLevel;
 
+    /**
+     * <p>Satisfaction score.</p>
+     */
     @NameInMap("EvaluationScore")
     public java.util.List<Integer> evaluationScore;
 
+    /**
+     * <p>Evaluation status.</p>
+     */
     @NameInMap("EvaluationStatus")
     public java.util.List<Integer> evaluationStatus;
 
     /**
+     * <p>The right boundary of the time range for session start. The value is a UNIX timestamp in milliseconds.</p>
+     * 
      * <strong>example:</strong>
      * <p>1614599400000</p>
      */
@@ -48,6 +71,8 @@ public class QueryTouchListRequest extends TeaModel {
     public Long firstTimeEnd;
 
     /**
+     * <p>The left boundary of the time range for session start. UNIX timestamp format (unit: ms).</p>
+     * 
      * <strong>example:</strong>
      * <p>1614596400000</p>
      */
@@ -55,6 +80,7 @@ public class QueryTouchListRequest extends TeaModel {
     public Long firstTimeStart;
 
     /**
+     * <p>Artificial Intelligence Cloud Call Service (AICCS) instance ID.<br>You can obtain it from <strong>Instance Management</strong> in the left-side navigation pane of the <a href="https://aiccs.console.aliyun.com/overview">Artificial Intelligence Cloud Call Service console</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -63,31 +89,54 @@ public class QueryTouchListRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>List of membership IDs to query.</p>
+     */
     @NameInMap("MemberId")
     public java.util.List<Long> memberId;
 
+    /**
+     * <p>A list of membership names to query.</p>
+     */
     @NameInMap("MemberName")
     public java.util.List<String> memberName;
 
     /**
+     * <p>Number of entries per page. The value must be greater than <strong>0</strong>. Default value: <strong>20</strong>.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>List of inbound skill group IDs.</p>
+     */
     @NameInMap("QueueId")
     public java.util.List<Long> queueId;
 
+    /**
+     * <p>A list of service agent IDs to query.</p>
+     */
     @NameInMap("ServicerId")
     public java.util.List<Long> servicerId;
 
+    /**
+     * <p>List of service agent names to query.</p>
+     */
     @NameInMap("ServicerName")
     public java.util.List<String> servicerName;
 
+    /**
+     * <p>List of touch IDs for term query.</p>
+     */
     @NameInMap("TouchId")
     public java.util.List<Long> touchId;
 
+    /**
+     * <p>Touch type.</p>
+     */
     @NameInMap("TouchType")
     public java.util.List<Integer> touchType;
 

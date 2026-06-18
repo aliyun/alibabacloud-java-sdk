@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class GetAgentDetailReportResponseBody extends TeaModel {
     /**
+     * <p>Status code. A return value of 200 indicates that the request succeeded.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>List of data.</p>
+     */
     @NameInMap("Data")
     public GetAgentDetailReportResponseBodyData data;
 
     /**
+     * <p>Description of the status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>successful</p>
      */
@@ -22,6 +29,8 @@ public class GetAgentDetailReportResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>EE338D98-9BD3-4413-B165</p>
      */
@@ -29,6 +38,12 @@ public class GetAgentDetailReportResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the API call succeeded. Valid values:</p>
+     * <ul>
+     * <li><strong>true</strong>: Succeeded.</li>
+     * <li><strong>false</strong>: Failed.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -82,6 +97,8 @@ public class GetAgentDetailReportResponseBody extends TeaModel {
 
     public static class GetAgentDetailReportResponseBodyData extends TeaModel {
         /**
+         * <p>Current page number.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -89,6 +106,8 @@ public class GetAgentDetailReportResponseBody extends TeaModel {
         public Long pageNum;
 
         /**
+         * <p>Page size.</p>
+         * 
          * <strong>example:</strong>
          * <p>2000</p>
          */
@@ -96,6 +115,8 @@ public class GetAgentDetailReportResponseBody extends TeaModel {
         public Long pageSize;
 
         /**
+         * <p>A JSON string of type List<Map>.</p>
+         * 
          * <strong>example:</strong>
          * <p>{&quot;t_wait&quot;:379322.0,&quot;hotline_time_outcall_avg&quot;:&quot;32.00&quot;,&quot;n_ringing&quot;:0,&quot;t_outbound_40&quot;:0.0,&quot;hotline_time_incall_avg&quot;:-1,&quot;t_calldialing&quot;:0.0,&quot;n_inbound&quot;:276,&quot;servicer_id&quot;:&quot;-1&quot;,&quot;call_in_sep_sat_cnt&quot;:13,&quot;request_cnt&quot;:231,&quot;n_not_ready_99&quot;:811,&quot;t_work_outbound&quot;:49338.0,&quot;hotline_rate_handle_in_60s&quot;:&quot;96%&quot;,&quot;n_not_ready_login&quot;:811,&quot;t_not_ready_login&quot;:0.0,&quot;n_work_inbound&quot;:176,&quot;}</p>
          */
@@ -103,6 +124,8 @@ public class GetAgentDetailReportResponseBody extends TeaModel {
         public String rows;
 
         /**
+         * <p>Total number of records.</p>
+         * 
          * <strong>example:</strong>
          * <p>4</p>
          */

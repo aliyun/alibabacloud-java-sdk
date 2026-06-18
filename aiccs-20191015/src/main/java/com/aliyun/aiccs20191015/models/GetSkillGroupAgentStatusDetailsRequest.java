@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class GetSkillGroupAgentStatusDetailsRequest extends TeaModel {
     /**
+     * <p>Current page number. The value must be greater than <strong>0</strong>. Default value: <strong>1</strong>.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
+    /**
+     * <p>List of department IDs.</p>
+     */
     @NameInMap("DepIds")
     public java.util.List<Long> depIds;
 
     /**
+     * <p>End Datetime Variable as a UNIX timestamp. Unit: milliseconds.</p>
+     * 
      * <strong>example:</strong>
      * <p>1614824972</p>
      */
@@ -22,6 +29,12 @@ public class GetSkillGroupAgentStatusDetailsRequest extends TeaModel {
     public Long endDate;
 
     /**
+     * <p>Indicates whether to query by department grouping. Default value: <strong>false</strong>. Valid values:  </p>
+     * <ul>
+     * <li><strong>true</strong>: Yes.  </li>
+     * <li><strong>false</strong>: No.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -29,16 +42,26 @@ public class GetSkillGroupAgentStatusDetailsRequest extends TeaModel {
     public Boolean existDepartmentGrouping;
 
     /**
+     * <p>Specifies whether to query by skill group grouping. Default value: <strong>false</strong>. Valid values:</p>
+     * <ul>
+     * <li><strong>true</strong>: Yes.</li>
+     * <li><strong>false</strong>: No.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
     @NameInMap("ExistSkillGroupGrouping")
     public Boolean existSkillGroupGrouping;
 
+    /**
+     * <p>A list of skill group IDs.</p>
+     */
     @NameInMap("GroupIds")
     public java.util.List<Long> groupIds;
 
     /**
+     * <p>AICCS instance ID.<br>You can obtain it from <strong>Instance Management</strong> in the left-side navigation pane of the <a href="https://aiccs.console.aliyun.com/overview">Artificial Intelligence Cloud Call Service console</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -48,6 +71,8 @@ public class GetSkillGroupAgentStatusDetailsRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>The page size. The value must be greater than <strong>0</strong>. Default value: <strong>20</strong>.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -55,6 +80,8 @@ public class GetSkillGroupAgentStatusDetailsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The start date as a UNIX timestamp. Unit: milliseconds.</p>
+     * 
      * <strong>example:</strong>
      * <p>1614824872</p>
      */

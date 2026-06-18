@@ -5,16 +5,25 @@ import com.aliyun.tea.*;
 
 public class AddOuterAccountRequest extends TeaModel {
     /**
+     * <p>Profile picture.</p>
+     * 
      * <strong>example:</strong>
      * <p>http://****</p>
      */
     @NameInMap("Avatar")
     public String avatar;
 
+    /**
+     * <p>Extension field, in JSON string format.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;备注&quot;:&quot;临时技能组&quot;}</p>
+     */
     @NameInMap("Ext")
     public String ext;
 
     /**
+     * <p>External Account ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,10 +32,17 @@ public class AddOuterAccountRequest extends TeaModel {
     @NameInMap("OuterAccountId")
     public String outerAccountId;
 
+    /**
+     * <p>External account name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>测试</p>
+     */
     @NameInMap("OuterAccountName")
     public String outerAccountName;
 
     /**
+     * <p>External account type.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -36,6 +52,8 @@ public class AddOuterAccountRequest extends TeaModel {
     public String outerAccountType;
 
     /**
+     * <p>External department ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>3</p>
      */
@@ -43,6 +61,8 @@ public class AddOuterAccountRequest extends TeaModel {
     public String outerDepartmentId;
 
     /**
+     * <p>External department type: Invalid department type.</p>
+     * 
      * <strong>example:</strong>
      * <p>type_invalid</p>
      */
@@ -50,6 +70,8 @@ public class AddOuterAccountRequest extends TeaModel {
     public String outerDepartmentType;
 
     /**
+     * <p>List of external skill group IDs. Separate multiple IDs with commas (,).</p>
+     * 
      * <strong>example:</strong>
      * <p>[&quot;222&quot;,&quot;333&quot;,&quot;444&quot;]</p>
      */
@@ -57,12 +79,20 @@ public class AddOuterAccountRequest extends TeaModel {
     public String outerGroupIds;
 
     /**
+     * <p>Skill group type.</p>
+     * 
      * <strong>example:</strong>
      * <p>mybank</p>
      */
     @NameInMap("OuterGroupType")
     public String outerGroupType;
 
+    /**
+     * <p>Real name of the account.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>张三</p>
+     */
     @NameInMap("RealName")
     public String realName;
 

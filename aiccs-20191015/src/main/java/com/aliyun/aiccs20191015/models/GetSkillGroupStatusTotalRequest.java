@@ -4,20 +4,30 @@ package com.aliyun.aiccs20191015.models;
 import com.aliyun.tea.*;
 
 public class GetSkillGroupStatusTotalRequest extends TeaModel {
+    /**
+     * <p>List of agent IDs.</p>
+     */
     @NameInMap("AgentIds")
     public java.util.List<Long> agentIds;
 
     /**
+     * <p>Current page number. The value must be greater than <strong>0</strong>. Default value: <strong>1</strong>.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
+    /**
+     * <p>List of department IDs.</p>
+     */
     @NameInMap("DepIds")
     public java.util.List<Long> depIds;
 
     /**
+     * <p>End UNIX timestamp. Unit: milliseconds.</p>
+     * 
      * <strong>example:</strong>
      * <p>1617761765000</p>
      */
@@ -25,6 +35,12 @@ public class GetSkillGroupStatusTotalRequest extends TeaModel {
     public Long endDate;
 
     /**
+     * <p>Whether to query by agent group. Default value: <strong>false</strong>. Valid values:  </p>
+     * <ul>
+     * <li><strong>true</strong>: Yes.  </li>
+     * <li><strong>false</strong>: No.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -32,23 +48,40 @@ public class GetSkillGroupStatusTotalRequest extends TeaModel {
     public Boolean existAgentGrouping;
 
     /**
+     * <p>Whether to query by department group. Default value: <strong>false</strong>. Valid values:  </p>
+     * <ul>
+     * <li><strong>true</strong>: Yes.  </li>
+     * <li><strong>false</strong>: No.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
-     * <p>fasle</p>
+     * <p>false</p>
      */
     @NameInMap("ExistDepartmentGrouping")
     public Boolean existDepartmentGrouping;
 
     /**
+     * <p>Specifies whether to query by skill group grouping. Default value: <strong>false</strong>. Valid values:</p>
+     * <ul>
+     * <li><strong>true</strong>: Yes.</li>
+     * <li><strong>false</strong>: No.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
-     * <p>fasle</p>
+     * <p>false</p>
      */
     @NameInMap("ExistSkillGroupGrouping")
     public Boolean existSkillGroupGrouping;
 
+    /**
+     * <p>List of skill group IDs.</p>
+     */
     @NameInMap("GroupIds")
     public java.util.List<Long> groupIds;
 
     /**
+     * <p>AICCS instance ID.</p>
+     * <p>You can obtain it from <strong>Instance Management</strong> in the left-side navigation pane of the <a href="https://aiccs.console.aliyun.com/overview">Artificial Intelligence Cloud Call Service console</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -58,6 +91,8 @@ public class GetSkillGroupStatusTotalRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>Page size. The value must be greater than <strong>0</strong>. Default value: <strong>20</strong>.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -65,6 +100,8 @@ public class GetSkillGroupStatusTotalRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>Start Datetime Variable UNIX timestamp. Unit: milliseconds.</p>
+     * 
      * <strong>example:</strong>
      * <p>1615083365000</p>
      */
@@ -72,6 +109,13 @@ public class GetSkillGroupStatusTotalRequest extends TeaModel {
     public Long startDate;
 
     /**
+     * <p>Time latitude type. Valid values:</p>
+     * <ul>
+     * <li><strong>minute</strong>: Minute.</li>
+     * <li><strong>hour</strong>: Hour.</li>
+     * <li><strong>day</strong>: Day.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>minute</p>
      */

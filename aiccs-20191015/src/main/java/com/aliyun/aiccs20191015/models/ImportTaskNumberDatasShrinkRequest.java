@@ -5,6 +5,17 @@ import com.aliyun.tea.*;
 
 public class ImportTaskNumberDatasShrinkRequest extends TeaModel {
     /**
+     * <p>The data type. Valid values:</p>
+     * <ul>
+     * <li><p>EXCEL</p>
+     * </li>
+     * <li><p>JSON</p>
+     * <blockquote>
+     * <p>Notice: </p>
+     * </blockquote>
+     * <p>API calls currently support only the JSON data type.</p>
+     * </li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,6 +32,11 @@ public class ImportTaskNumberDatasShrinkRequest extends TeaModel {
     public Long encryptionType;
 
     /**
+     * <p>The OSS file path. This parameter is optional.</p>
+     * <blockquote>
+     * <p>Importing data by specifying an OSS file path is not available because API calls currently support only the JSON data type.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>123dsdfsdfsdf.xlsx</p>
      */
@@ -30,6 +46,9 @@ public class ImportTaskNumberDatasShrinkRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>If <code>DataType</code> is set to <code>JSON</code>, you must use this parameter to upload the data. You can import up to 1,000 records per request.</p>
+     */
     @NameInMap("PhoneNumberList")
     public String phoneNumberListShrink;
 
@@ -40,10 +59,11 @@ public class ImportTaskNumberDatasShrinkRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
+     * <p>The ID of the call task.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>12131213132123*****</p>
+     * <p>119181071278******</p>
      */
     @NameInMap("TaskId")
     public String taskId;

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class StartMicroOutboundResponseBody extends TeaModel {
     /**
+     * <p>Status code. A return value of 200 indicates that the request succeeded.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -12,6 +14,8 @@ public class StartMicroOutboundResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>Customer information.</p>
+     * 
      * <strong>example:</strong>
      * <p>{\&quot;caseId\&quot;:2323****}</p>
      */
@@ -19,6 +23,8 @@ public class StartMicroOutboundResponseBody extends TeaModel {
     public String customerInfo;
 
     /**
+     * <p>Command ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>8883f165-4a0d-4da2-a2d2</p>
      */
@@ -26,6 +32,8 @@ public class StartMicroOutboundResponseBody extends TeaModel {
     public String invokeCmdId;
 
     /**
+     * <p>Creation Time</p>
+     * 
      * <strong>example:</strong>
      * <p>2019-05-23 17:30:32.525</p>
      */
@@ -33,6 +41,8 @@ public class StartMicroOutboundResponseBody extends TeaModel {
     public String invokeCreateTime;
 
     /**
+     * <p>Description of the status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
@@ -40,6 +50,8 @@ public class StartMicroOutboundResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>EE338D98-9BD3-4413-B165</p>
      */

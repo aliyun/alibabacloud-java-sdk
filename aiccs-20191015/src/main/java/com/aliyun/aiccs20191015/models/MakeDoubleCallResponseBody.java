@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class MakeDoubleCallResponseBody extends TeaModel {
     /**
+     * <p>Status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>Returned data.</p>
+     */
     @NameInMap("Data")
     public MakeDoubleCallResponseBodyData data;
 
     /**
+     * <p>Description of the status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>Successful</p>
      */
@@ -22,6 +29,8 @@ public class MakeDoubleCallResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>EE338D98-9BD3-4413-B165</p>
      */
@@ -29,6 +38,8 @@ public class MakeDoubleCallResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the API call succeeded.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -82,6 +93,8 @@ public class MakeDoubleCallResponseBody extends TeaModel {
 
     public static class MakeDoubleCallResponseBodyData extends TeaModel {
         /**
+         * <p>Session ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>68255155365620598</p>
          */

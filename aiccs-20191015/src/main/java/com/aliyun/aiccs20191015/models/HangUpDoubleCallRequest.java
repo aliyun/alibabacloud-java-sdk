@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class HangUpDoubleCallRequest extends TeaModel {
     /**
+     * <p>Session ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>68255155****</p>
      */
@@ -12,6 +14,8 @@ public class HangUpDoubleCallRequest extends TeaModel {
     public String acid;
 
     /**
+     * <p>Artificial Intelligence Cloud Call Service instance ID. You can obtain it from the Artificial Intelligence Cloud Call Service console.</p>
+     * 
      * <strong>example:</strong>
      * <p>ccc_xp_pre-cn-***</p>
      */

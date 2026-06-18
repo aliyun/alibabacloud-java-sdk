@@ -4,10 +4,15 @@ package com.aliyun.aiccs20191015.models;
 import com.aliyun.tea.*;
 
 public class GetRecordUrlResponseBody extends TeaModel {
+    /**
+     * <p>The data list.</p>
+     */
     @NameInMap("Data")
     public GetRecordUrlResponseBodyData data;
 
     /**
+     * <p>Description of the status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
@@ -15,6 +20,8 @@ public class GetRecordUrlResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>EE338D98-9BD3-4413-B165</p>
      */
@@ -22,6 +29,8 @@ public class GetRecordUrlResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the API call succeeded.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -67,6 +76,8 @@ public class GetRecordUrlResponseBody extends TeaModel {
 
     public static class GetRecordUrlResponseBodyData extends TeaModel {
         /**
+         * <p>The session ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>1001067****</p>
          */
@@ -74,6 +85,8 @@ public class GetRecordUrlResponseBody extends TeaModel {
         public String acid;
 
         /**
+         * <p>The recording link.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="http://aliccrec-shvpc.oss-cn-shanghai.aliyuncs.com/accrec_tmp/10010679716-12-01-56.wav">http://aliccrec-shvpc.oss-cn-shanghai.aliyuncs.com/accrec_tmp/10010679716-12-01-56.wav</a>?***</p>
          */

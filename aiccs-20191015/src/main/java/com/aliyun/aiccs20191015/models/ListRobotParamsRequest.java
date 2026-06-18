@@ -14,10 +14,11 @@ public class ListRobotParamsRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
+     * <p>Robot ID, which is also the script ID. You can view it on the <a href="https://aiccs.console.aliyun.com/patter/list">Script Management</a> interface or obtain it by using the <a href="https://help.aliyun.com/document_detail/2717998.html">ListAiccsRobot</a> API.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>123456</p>
+     * <p>12****</p>
      */
     @NameInMap("RobotId")
     public Long robotId;

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class QueryTicketsRequest extends TeaModel {
     /**
+     * <p>Ticket ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>223468****</p>
      */
@@ -12,6 +14,8 @@ public class QueryTicketsRequest extends TeaModel {
     public Long caseId;
 
     /**
+     * <p>Ticket status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>2</p>
      */
@@ -19,6 +23,8 @@ public class QueryTicketsRequest extends TeaModel {
     public Integer caseStatus;
 
     /**
+     * <p>Ticket type code (assigned by the system).</p>
+     * 
      * <strong>example:</strong>
      * <p>1223</p>
      */
@@ -26,6 +32,8 @@ public class QueryTicketsRequest extends TeaModel {
     public Integer caseType;
 
     /**
+     * <p>Channel ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>02acfefd3fa14049826ac1a89e1xxxxx</p>
      */
@@ -33,6 +41,13 @@ public class QueryTicketsRequest extends TeaModel {
     public String channelId;
 
     /**
+     * <p>Channel Type. Valid values:</p>
+     * <ul>
+     * <li><strong>0</strong>: Not filled in</li>
+     * <li><strong>1</strong>: Hotline</li>
+     * <li><strong>2</strong>: Online</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -40,6 +55,8 @@ public class QueryTicketsRequest extends TeaModel {
     public Integer channelType;
 
     /**
+     * <p>Current page. Default Value: <strong>1</strong>.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -47,16 +64,26 @@ public class QueryTicketsRequest extends TeaModel {
     public Integer currentPage;
 
     /**
+     * <p>Assignee ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>123456</p>
      */
     @NameInMap("DealId")
     public Long dealId;
 
+    /**
+     * <p>Additional information.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>无</p>
+     */
     @NameInMap("Extra")
     public java.util.Map<String, ?> extra;
 
     /**
+     * <p>Instance ID.</p>
+     * <p>Log on to the <a href="https://aiccs.console.aliyun.com/overview">Artificial Intelligence Cloud Call Service console</a> and view the instance ID in <strong>Instance Management</strong>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -66,6 +93,8 @@ public class QueryTicketsRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>Page size. Default Value: <strong>10</strong>.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -73,6 +102,8 @@ public class QueryTicketsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>Template ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>29506</p>
      */
@@ -80,6 +111,8 @@ public class QueryTicketsRequest extends TeaModel {
     public Long srType;
 
     /**
+     * <p>Job status.</p>
+     * 
      * <strong>example:</strong>
      * <p>3</p>
      */
@@ -87,6 +120,8 @@ public class QueryTicketsRequest extends TeaModel {
     public Integer taskStatus;
 
     /**
+     * <p>Touch ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>15030609</p>
      */

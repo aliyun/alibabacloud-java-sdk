@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class RobotCallRequest extends TeaModel {
     /**
+     * <p>Called number.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,15 +15,25 @@ public class RobotCallRequest extends TeaModel {
     public String calledNumber;
 
     /**
+     * <p>Outbound caller number. View it in the Voice Service <a href="https://dyvmsnext.console.aliyun.com/number/list/normal">Real Number Management</a> interface.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>0571****5678</p>
+     * <p>132****0849</p>
      */
     @NameInMap("CalledShowNumber")
     public String calledShowNumber;
 
     /**
+     * <p>Whether to enable the number status detection identity. Valid values:  </p>
+     * <ul>
+     * <li><strong>false</strong> (Default Value): Disable.  </li>
+     * <li><strong>true</strong>: Enable.  <blockquote>
+     * <p>When enabled, the reason for unanswered calls will be recorded.</p>
+     * </blockquote>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -30,8 +41,10 @@ public class RobotCallRequest extends TeaModel {
     public Boolean earlyMediaAsr;
 
     /**
+     * <p>An ID reserved for the caller. This ID will be returned to the caller through the receipt message. It must be 1 to 15 bytes in length.</p>
+     * 
      * <strong>example:</strong>
-     * <p>abcdefgh</p>
+     * <p>222356****</p>
      */
     @NameInMap("OutId")
     public String outId;
@@ -39,10 +52,25 @@ public class RobotCallRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>Parameter list for the robot, in JSON format. The total length must not exceed 512 bytes. You can view the parameters in <a href="https://aiccs.console.aliyun.com/patter/list">Script Management</a> &gt; <strong>Details</strong> &gt; <strong>Input Parameters</strong>, or by using the <a href="https://help.aliyun.com/document_detail/2717999.html">ListRobotParams</a> API.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{
+     *   &quot;name&quot;: &quot;张三&quot;,
+     *   &quot;age&quot;: &quot;25&quot;
+     * }</p>
+     */
     @NameInMap("Params")
     public String params;
 
     /**
+     * <p>Whether to record the call. Valid values:</p>
+     * <ul>
+     * <li><strong>false</strong> (default): Do not record.</li>
+     * <li><strong>true</strong>: Record.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -56,10 +84,11 @@ public class RobotCallRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
+     * <p>Robot ID, which is the script ID. View the reviewed and approved script ID in the <a href="https://aiccs.console.aliyun.com/patter/list">Script Management</a> interface.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>350000****</p>
+     * <p>1000035******</p>
      */
     @NameInMap("RobotId")
     public Long robotId;

@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListHotlineRecordRequest extends TeaModel {
     /**
+     * <p>Session ID. This corresponds to the acid in WebSocket after an inbound call.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,8 @@ public class ListHotlineRecordRequest extends TeaModel {
     public String callId;
 
     /**
+     * <p>Unique customer request ID. Used for idempotency validation. You can generate it using UUID.</p>
+     * 
      * <strong>example:</strong>
      * <p>46c1341e-2648-447a-9b11-70b6a298d94d</p>
      */
@@ -21,6 +24,7 @@ public class ListHotlineRecordRequest extends TeaModel {
     public String clientToken;
 
     /**
+     * <p>AICCS instance ID. You can obtain it from the Artificial Intelligence Cloud Call Service console.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

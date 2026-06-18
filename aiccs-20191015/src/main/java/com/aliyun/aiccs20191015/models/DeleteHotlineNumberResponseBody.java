@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DeleteHotlineNumberResponseBody extends TeaModel {
     /**
+     * <p>The status code. A value of Success indicates that the request succeeded.</p>
+     * 
      * <strong>example:</strong>
      * <p>Success</p>
      */
@@ -12,6 +14,8 @@ public class DeleteHotlineNumberResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -19,6 +23,8 @@ public class DeleteHotlineNumberResponseBody extends TeaModel {
     public Long httpStatusCode;
 
     /**
+     * <p>Description of the status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
@@ -26,6 +32,8 @@ public class DeleteHotlineNumberResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>98B032F5-6473-4EAC-8BA8-C28993513A1F</p>
      */
@@ -33,6 +41,8 @@ public class DeleteHotlineNumberResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the API call succeeded.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

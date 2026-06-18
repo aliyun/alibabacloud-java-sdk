@@ -4,10 +4,15 @@ package com.aliyun.aiccs20191015.models;
 import com.aliyun.tea.*;
 
 public class ListRolesResponseBody extends TeaModel {
+    /**
+     * <p>Role information.</p>
+     */
     @NameInMap("Data")
     public java.util.List<ListRolesResponseBodyData> data;
 
     /**
+     * <p>Status code. A return value of 200 indicates that the request succeeded.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -15,6 +20,8 @@ public class ListRolesResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>Status code description.</p>
+     * 
      * <strong>example:</strong>
      * <p>xxxx</p>
      */
@@ -22,6 +29,8 @@ public class ListRolesResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>EE338D98-9BD3-4413-B165</p>
      */
@@ -29,6 +38,8 @@ public class ListRolesResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the API call succeeded.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -82,6 +93,8 @@ public class ListRolesResponseBody extends TeaModel {
 
     public static class ListRolesResponseBodyData extends TeaModel {
         /**
+         * <p>Tenant ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -89,6 +102,8 @@ public class ListRolesResponseBody extends TeaModel {
         public Long buId;
 
         /**
+         * <p>Role code.</p>
+         * 
          * <strong>example:</strong>
          * <p>admin</p>
          */
@@ -96,6 +111,8 @@ public class ListRolesResponseBody extends TeaModel {
         public String code;
 
         /**
+         * <p>Creation Time. Format: <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z (UTC).</p>
+         * 
          * <strong>example:</strong>
          * <p>2020-01-03T20:25:33Z</p>
          */
@@ -103,6 +120,8 @@ public class ListRolesResponseBody extends TeaModel {
         public String createTime;
 
         /**
+         * <p>Role description.</p>
+         * 
          * <strong>example:</strong>
          * <p>Admin</p>
          */
@@ -110,22 +129,38 @@ public class ListRolesResponseBody extends TeaModel {
         public String description;
 
         /**
+         * <p>ID of the group to which the role belongs.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
         @NameInMap("RoleGroupId")
         public Long roleGroupId;
 
+        /**
+         * <p>Name of the role group to which the role belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>角色组名称</p>
+         */
         @NameInMap("RoleGroupName")
         public String roleGroupName;
 
         /**
+         * <p>Role ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
         @NameInMap("RoleId")
         public Long roleId;
 
+        /**
+         * <p>Role name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>企业管理员</p>
+         */
         @NameInMap("Title")
         public String title;
 

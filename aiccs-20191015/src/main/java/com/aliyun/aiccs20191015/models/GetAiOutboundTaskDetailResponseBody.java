@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class GetAiOutboundTaskDetailResponseBody extends TeaModel {
     /**
+     * <p>Status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>Outbound call job details.</p>
+     */
     @NameInMap("Data")
     public GetAiOutboundTaskDetailResponseBodyData data;
 
     /**
+     * <p>Status code description.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
@@ -22,6 +29,8 @@ public class GetAiOutboundTaskDetailResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>D9CB3933-9FE3-4870-BA8E-2BEE91B69D23</p>
      */
@@ -29,6 +38,12 @@ public class GetAiOutboundTaskDetailResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the API was invoked successfully.  </p>
+     * <ul>
+     * <li><strong>true</strong>: Succeeded.  </li>
+     * <li><strong>false</strong>: Failed.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -82,6 +97,8 @@ public class GetAiOutboundTaskDetailResponseBody extends TeaModel {
 
     public static class GetAiOutboundTaskDetailResponseBodyDataRecallRule extends TeaModel {
         /**
+         * <p>Number of retries.</p>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */
@@ -89,6 +106,8 @@ public class GetAiOutboundTaskDetailResponseBody extends TeaModel {
         public Integer count;
 
         /**
+         * <p>Recall interval. Unit: minutes.</p>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */
@@ -120,16 +139,26 @@ public class GetAiOutboundTaskDetailResponseBody extends TeaModel {
 
     public static class GetAiOutboundTaskDetailResponseBodyData extends TeaModel {
         /**
+         * <p>Concurrency for automated outbound calls.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
         @NameInMap("ConcurrentRate")
         public Integer concurrentRate;
 
+        /**
+         * <p>Job description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>房产销售</p>
+         */
         @NameInMap("Description")
         public String description;
 
         /**
+         * <p>Task execution time.</p>
+         * 
          * <strong>example:</strong>
          * <p>{&quot;TUESDAY&quot;:[{&quot;start&quot;:&quot;06:00&quot;,&quot;end&quot;:&quot;06:05&quot;}],&quot;MONDAY&quot;:[{&quot;start&quot;:&quot;09:00&quot;,&quot;end&quot;:&quot;18:00&quot;},{&quot;start&quot;:&quot;20:30&quot;,&quot;end&quot;:&quot;21:45&quot;},{&quot;start&quot;:&quot;22:30&quot;,&quot;end&quot;:&quot;22:50&quot;}],&quot;WEDNESDAY&quot;:[{&quot;start&quot;:&quot;09:00&quot;,&quot;end&quot;:&quot;18:00&quot;}],&quot;THURSDAY&quot;:[{&quot;start&quot;:&quot;09:00&quot;,&quot;end&quot;:&quot;18:00&quot;}],&quot;FRIDAY&quot;:[{&quot;start&quot;:&quot;09:00&quot;,&quot;end&quot;:&quot;18:00&quot;}],&quot;SATURDAY&quot;:[{&quot;start&quot;:&quot;09:00&quot;,&quot;end&quot;:&quot;18:00&quot;}],&quot;SUNDAY&quot;:[{&quot;start&quot;:&quot;17:00&quot;,&quot;end&quot;:&quot;23:45&quot;}]}</p>
          */
@@ -137,6 +166,8 @@ public class GetAiOutboundTaskDetailResponseBody extends TeaModel {
         public String executionTime;
 
         /**
+         * <p>Fixed outbound call ratio for predictive dialing.</p>
+         * 
          * <strong>example:</strong>
          * <p>1.2</p>
          */
@@ -144,6 +175,8 @@ public class GetAiOutboundTaskDetailResponseBody extends TeaModel {
         public Float forecastCallRate;
 
         /**
+         * <p>Skill group ID (for predictive outbound calls) or IVR ID (for automated outbound calls).</p>
+         * 
          * <strong>example:</strong>
          * <p>123456</p>
          */
@@ -151,6 +184,8 @@ public class GetAiOutboundTaskDetailResponseBody extends TeaModel {
         public Long handlerId;
 
         /**
+         * <p>Skill group name or IVR name.</p>
+         * 
          * <strong>example:</strong>
          * <p>热线技能组</p>
          */
@@ -158,26 +193,50 @@ public class GetAiOutboundTaskDetailResponseBody extends TeaModel {
         public String handlerName;
 
         /**
+         * <p>Job name.</p>
+         * 
          * <strong>example:</strong>
-         * <p>xx外呼任务</p>
+         * <p>xxxxx外呼</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
+         * <p>Called number deduplication policy.</p>
+         * <ul>
+         * <li><strong>0</strong>: Remove duplicates.</li>
+         * <li><strong>1</strong>: Do not remove duplicates.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
         @NameInMap("NumRepeated")
         public Integer numRepeated;
 
+        /**
+         * <p>Outbound caller numbers.</p>
+         */
         @NameInMap("OutboundNums")
         public java.util.List<String> outboundNums;
 
+        /**
+         * <p>Failed-call retry policy.</p>
+         */
         @NameInMap("RecallRule")
         public GetAiOutboundTaskDetailResponseBodyDataRecallRule recallRule;
 
         /**
+         * <p>Job status. Valid values:  </p>
+         * <ul>
+         * <li><strong>0</strong>: Not started.  </li>
+         * <li><strong>1</strong>: In progress.  </li>
+         * <li><strong>2</strong>: System paused.  </li>
+         * <li><strong>3</strong>: Manually paused.  </li>
+         * <li><strong>4</strong>: Completed.  </li>
+         * <li><strong>5</strong>: Stopped.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -185,6 +244,8 @@ public class GetAiOutboundTaskDetailResponseBody extends TeaModel {
         public Integer status;
 
         /**
+         * <p>Task status description.</p>
+         * 
          * <strong>example:</strong>
          * <p>未开始</p>
          */
@@ -192,6 +253,8 @@ public class GetAiOutboundTaskDetailResponseBody extends TeaModel {
         public String statusDesc;
 
         /**
+         * <p>Job ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>123</p>
          */
@@ -199,6 +262,12 @@ public class GetAiOutboundTaskDetailResponseBody extends TeaModel {
         public Long taskId;
 
         /**
+         * <p>Task Type. Valid values:</p>
+         * <ul>
+         * <li><strong>2</strong>: Predictive outbound call.</li>
+         * <li><strong>3</strong>: Automated outbound call.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */

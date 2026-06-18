@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class AddSkillGroupRequest extends TeaModel {
     /**
+     * <p>ID of the external department.</p>
+     * 
      * <strong>example:</strong>
      * <p>123456</p>
      */
@@ -12,6 +14,8 @@ public class AddSkillGroupRequest extends TeaModel {
     public String outerDepartmentId;
 
     /**
+     * <p>Type of the external department.</p>
+     * 
      * <strong>example:</strong>
      * <p>type_invalid</p>
      */
@@ -19,6 +23,7 @@ public class AddSkillGroupRequest extends TeaModel {
     public String outerDepartmentType;
 
     /**
+     * <p>ID of the external skill group.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -28,12 +33,17 @@ public class AddSkillGroupRequest extends TeaModel {
     public String outerGroupId;
 
     /**
+     * <p>Name of the external skill group.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>热线技能组</p>
      */
     @NameInMap("OuterGroupName")
     public String outerGroupName;
 
     /**
+     * <p>Type of the external skill group.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

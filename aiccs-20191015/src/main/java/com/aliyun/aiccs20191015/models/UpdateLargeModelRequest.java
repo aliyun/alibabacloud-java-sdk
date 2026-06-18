@@ -5,22 +5,22 @@ import com.aliyun.tea.*;
 
 public class UpdateLargeModelRequest extends TeaModel {
     /**
-     * <p>授权码</p>
+     * <p>The authorization code.</p>
      * 
      * <strong>example:</strong>
-     * <p>示例值示例值示例值</p>
+     * <p>sk-sxxxxx*********xx</p>
      */
     @NameInMap("AuthCode")
     public String authCode;
 
     /**
-     * <p>基础模型</p>
+     * <p>A list of base models.</p>
      */
     @NameInMap("BaseModel")
     public java.util.List<String> baseModel;
 
     /**
-     * <p>模型编码</p>
+     * <p>The model code.</p>
      * 
      * <strong>example:</strong>
      * <p>Test Model Name</p>
@@ -29,19 +29,19 @@ public class UpdateLargeModelRequest extends TeaModel {
     public String modelCode;
 
     /**
-     * <p>模型名称</p>
+     * <p>The model name.</p>
      * 
      * <strong>example:</strong>
-     * <p>示例值</p>
+     * <p>Test model</p>
      */
     @NameInMap("ModelName")
     public String modelName;
 
     /**
-     * <p>模型地址</p>
+     * <p>The model URL.</p>
      * 
      * <strong>example:</strong>
-     * <p>示例值示例值示例值</p>
+     * <p><a href="https://xxxxxxxxx">https://xxxxxxxxx</a></p>
      */
     @NameInMap("ModelUrl")
     public String modelUrl;
@@ -56,28 +56,28 @@ public class UpdateLargeModelRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>温度</p>
+     * <p>Controls the randomness of the model\&quot;s output. A higher value increases randomness, and a lower value makes the output more deterministic.</p>
      * 
      * <strong>example:</strong>
-     * <p>49.29</p>
+     * <p>0.1</p>
      */
     @NameInMap("Temperature")
     public Double temperature;
 
     /**
-     * <p>topK</p>
+     * <p>Restricts token selection to the top k most probable tokens.</p>
      * 
      * <strong>example:</strong>
-     * <p>20</p>
+     * <p>2</p>
      */
     @NameInMap("TopK")
     public Long topK;
 
     /**
-     * <p>topP</p>
+     * <p>Controls output diversity by using nucleus sampling. It defines a cumulative probability threshold for token selection, considering only the most likely tokens.</p>
      * 
      * <strong>example:</strong>
-     * <p>84.38427</p>
+     * <p>0.1</p>
      */
     @NameInMap("TopP")
     public Double topP;

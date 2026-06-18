@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateSkillGroupResponseBody extends TeaModel {
     /**
+     * <p>Status code. A value of &quot;Success&quot; indicates that the request succeeded.</p>
+     * 
      * <strong>example:</strong>
      * <p>Success</p>
      */
@@ -12,6 +14,8 @@ public class CreateSkillGroupResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>ID of the successfully created skill group.</p>
+     * 
      * <strong>example:</strong>
      * <p>123456</p>
      */
@@ -19,6 +23,8 @@ public class CreateSkillGroupResponseBody extends TeaModel {
     public Long data;
 
     /**
+     * <p>Description of the status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>successful</p>
      */
@@ -26,6 +32,8 @@ public class CreateSkillGroupResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>EE338D98-9BD3-4413-B165</p>
      */
@@ -33,6 +41,12 @@ public class CreateSkillGroupResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the API call succeeded. Valid values:</p>
+     * <ul>
+     * <li><strong>true</strong>: Succeeded.</li>
+     * <li><strong>false</strong>: Failed.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

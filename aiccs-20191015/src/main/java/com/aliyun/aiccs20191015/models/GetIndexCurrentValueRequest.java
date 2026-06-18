@@ -5,6 +5,16 @@ import com.aliyun.tea.*;
 
 public class GetIndexCurrentValueRequest extends TeaModel {
     /**
+     * <p>List of department IDs. Separate multiple IDs with commas (,).</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/2717975.html">GetAllDepartment</a> API and check the <strong>DepartmentId</strong> field in the response to obtain department IDs.</p>
+     * <blockquote>
+     * <p>When this parameter is not empty:  </p>
+     * <ul>
+     * <li>If GroupIds is not empty, the system prioritizes querying data metrics for the skill groups specified by GroupIds.  </li>
+     * <li>If GroupIds is empty, the system prioritizes querying data metrics for the departments specified by this parameter.</li>
+     * </ul>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>2332****,2334****</p>
      */
@@ -12,6 +22,12 @@ public class GetIndexCurrentValueRequest extends TeaModel {
     public String depIds;
 
     /**
+     * <p>List of skill group IDs. Separate multiple IDs with commas (,).</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/2717970.html">QuerySkillGroups</a> API and check the <strong>SkillGroupId</strong> field in the response to obtain skill group IDs.</p>
+     * <blockquote>
+     * <p>When this parameter is not empty, the system prioritizes querying data metrics for the specified skill groups.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>2323****,2324****</p>
      */
@@ -19,6 +35,11 @@ public class GetIndexCurrentValueRequest extends TeaModel {
     public String groupIds;
 
     /**
+     * <p>Artificial Intelligence Cloud Call Service (AICCS) instance ID.<br>You can obtain it from <strong>Instance Management</strong> in the left-side navigation pane of the <a href="https://aiccs.console.aliyun.com/overview">Artificial Intelligence Cloud Call Service console</a>.</p>
+     * <blockquote>
+     * <p>The AICCS instance ID is required.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>ccc_xp_pre-cn-***</p>
      */

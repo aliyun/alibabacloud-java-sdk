@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class GetHotlineCallActionResponseBody extends TeaModel {
     /**
+     * <p>Status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>Success</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>Returned data.</p>
+     */
     @NameInMap("Data")
     public GetHotlineCallActionResponseBodyData data;
 
     /**
+     * <p>Description of the status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
@@ -22,6 +29,8 @@ public class GetHotlineCallActionResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>EE339D98-9BD3-4413-B165</p>
      */
@@ -29,6 +38,12 @@ public class GetHotlineCallActionResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the API call succeeded. Valid values:</p>
+     * <ul>
+     * <li><strong>true</strong>: Succeeded.</li>
+     * <li><strong>false</strong>: Failed.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -82,6 +97,8 @@ public class GetHotlineCallActionResponseBody extends TeaModel {
 
     public static class GetHotlineCallActionResponseBodyData extends TeaModel {
         /**
+         * <p>Customer ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>8999****</p>
          */
@@ -89,6 +106,8 @@ public class GetHotlineCallActionResponseBody extends TeaModel {
         public Long actionId;
 
         /**
+         * <p>Tenant ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>2367****</p>
          */
@@ -96,16 +115,26 @@ public class GetHotlineCallActionResponseBody extends TeaModel {
         public Long buId;
 
         /**
+         * <p>Callout ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>1122****</p>
          */
         @NameInMap("CalloutId")
         public Long calloutId;
 
+        /**
+         * <p>Call name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>王XX</p>
+         */
         @NameInMap("CalloutName")
         public String calloutName;
 
         /**
+         * <p>Ticket ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>1138902****</p>
          */
@@ -113,6 +142,8 @@ public class GetHotlineCallActionResponseBody extends TeaModel {
         public Long caseId;
 
         /**
+         * <p>Channel ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>2377****</p>
          */
@@ -120,6 +151,12 @@ public class GetHotlineCallActionResponseBody extends TeaModel {
         public String channelId;
 
         /**
+         * <p>Channel Type. Valid values:</p>
+         * <ul>
+         * <li><strong>1</strong>: Hotline.</li>
+         * <li><strong>2</strong>: Online.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */
@@ -127,6 +164,8 @@ public class GetHotlineCallActionResponseBody extends TeaModel {
         public Long channelType;
 
         /**
+         * <p>Department ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>1223****</p>
          */
@@ -134,6 +173,8 @@ public class GetHotlineCallActionResponseBody extends TeaModel {
         public Long depId;
 
         /**
+         * <p>Indicates whether the call is transferred.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -141,6 +182,8 @@ public class GetHotlineCallActionResponseBody extends TeaModel {
         public String isTransfer;
 
         /**
+         * <p>Membership ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>7856876****</p>
          */
@@ -148,26 +191,44 @@ public class GetHotlineCallActionResponseBody extends TeaModel {
         public Long memberId;
 
         /**
+         * <p>Membership List.</p>
+         * 
          * <strong>example:</strong>
          * <p>8900****</p>
          */
         @NameInMap("MemberList")
         public String memberList;
 
+        /**
+         * <p>Membership name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>匿名会员</p>
+         */
         @NameInMap("MemberName")
         public String memberName;
 
         /**
+         * <p>Agent ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>1332****</p>
          */
         @NameInMap("ServicerId")
         public Long servicerId;
 
+        /**
+         * <p>Agent name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>XX测试</p>
+         */
         @NameInMap("ServicerName")
         public String servicerName;
 
         /**
+         * <p>Sub-touch ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>3423****</p>
          */
@@ -175,6 +236,8 @@ public class GetHotlineCallActionResponseBody extends TeaModel {
         public Long subTouchId;
 
         /**
+         * <p>Job ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>12345****</p>
          */
@@ -182,6 +245,8 @@ public class GetHotlineCallActionResponseBody extends TeaModel {
         public Long taskId;
 
         /**
+         * <p>Touch ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>2235****</p>
          */

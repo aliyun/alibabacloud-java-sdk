@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class ListHotlineRecordResponseBody extends TeaModel {
     /**
+     * <p>Status code. A return value of Success indicates that the request succeeded.</p>
+     * 
      * <strong>example:</strong>
      * <p>Success</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>Hotline session information.</p>
+     */
     @NameInMap("Data")
     public java.util.List<ListHotlineRecordResponseBodyData> data;
 
     /**
+     * <p>Description of the status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>xxxx</p>
      */
@@ -22,6 +29,8 @@ public class ListHotlineRecordResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>EE338D98-9BD3-4413-B165</p>
      */
@@ -29,6 +38,8 @@ public class ListHotlineRecordResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Whether the API call succeeded.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -82,6 +93,8 @@ public class ListHotlineRecordResponseBody extends TeaModel {
 
     public static class ListHotlineRecordResponseBodyData extends TeaModel {
         /**
+         * <p>Session ID. This corresponds to the acid in WebSocket after an inbound call.</p>
+         * 
          * <strong>example:</strong>
          * <p>100365558</p>
          */
@@ -89,6 +102,8 @@ public class ListHotlineRecordResponseBody extends TeaModel {
         public String callId;
 
         /**
+         * <p>Connection ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>100365548</p>
          */
@@ -96,6 +111,8 @@ public class ListHotlineRecordResponseBody extends TeaModel {
         public String connectionId;
 
         /**
+         * <p>Recording end UNIX timestamp. Unit: milliseconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>16128694810</p>
          */
@@ -103,6 +120,8 @@ public class ListHotlineRecordResponseBody extends TeaModel {
         public Long endTime;
 
         /**
+         * <p>Recording start UNIX timestamp. Unit: milliseconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>16128694110</p>
          */
@@ -110,6 +129,8 @@ public class ListHotlineRecordResponseBody extends TeaModel {
         public Long startTime;
 
         /**
+         * <p>Recording file URL.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="http://aliccrec-shvpc.oss-cn-shanghai.aliyuncs.com">http://aliccrec-shvpc.oss-cn-shanghai.aliyuncs.com</a></p>
          */

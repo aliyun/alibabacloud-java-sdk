@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetMcuLvsIpResponseBody extends TeaModel {
     /**
+     * <p>Status code. A return value of 200 indicates that the request succeeded.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -12,6 +14,8 @@ public class GetMcuLvsIpResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>IP information. The value is a JSON string of the List type.</p>
+     * 
      * <strong>example:</strong>
      * <p>{ &quot;xmculvs&quot;:[ 0:{ &quot;port&quot;:00 &quot;ip&quot;:&quot;0.0.0.0&quot; &quot;name&quot;:&quot;lvs1&quot; } ]}</p>
      */
@@ -19,6 +23,8 @@ public class GetMcuLvsIpResponseBody extends TeaModel {
     public String data;
 
     /**
+     * <p>Description of the status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>xxxx</p>
      */
@@ -26,6 +32,8 @@ public class GetMcuLvsIpResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>EE338D98-9BD3-4413-B165</p>
      */
@@ -33,6 +41,8 @@ public class GetMcuLvsIpResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the API call succeeded.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

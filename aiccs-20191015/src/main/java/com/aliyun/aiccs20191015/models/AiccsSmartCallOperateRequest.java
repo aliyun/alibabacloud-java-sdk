@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class AiccsSmartCallOperateRequest extends TeaModel {
     /**
+     * <p>Unique receipt ID of the call. You can obtain it by invoking <a href="https://help.aliyun.com/document_detail/311247.html">SendCcoSmartCall</a>.</p>
+     * 
      * <strong>example:</strong>
      * <p>116012854210^102814279****</p>
      */
@@ -12,6 +14,11 @@ public class AiccsSmartCallOperateRequest extends TeaModel {
     public String callId;
 
     /**
+     * <p>Specifies the action to be initiated for the called number during an Intelligent outbound call.</p>
+     * <blockquote>
+     * <p>Currently, only the <strong>parallelBridge</strong> parameter is supported, which indicates bridging the called number with a call center agent.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>parallelBridge</p>
      */
@@ -22,6 +29,8 @@ public class AiccsSmartCallOperateRequest extends TeaModel {
     public Long ownerId;
 
     /**
+     * <p>Extension field.</p>
+     * 
      * <strong>example:</strong>
      * <p>Param</p>
      */
@@ -29,6 +38,8 @@ public class AiccsSmartCallOperateRequest extends TeaModel {
     public String param;
 
     /**
+     * <p>Product name. Default value: <strong>aiccs</strong>.</p>
+     * 
      * <strong>example:</strong>
      * <p>aiccs</p>
      */

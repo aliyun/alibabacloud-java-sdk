@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeRecordDataResponseBody extends TeaModel {
     /**
+     * <p>Session ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>1004849****</p>
      */
@@ -12,6 +14,8 @@ public class DescribeRecordDataResponseBody extends TeaModel {
     public String acid;
 
     /**
+     * <p>Agent ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>1212****</p>
      */
@@ -19,6 +23,8 @@ public class DescribeRecordDataResponseBody extends TeaModel {
     public String agentId;
 
     /**
+     * <p>Status code. A return value of 200 indicates that the request succeeded.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -26,6 +32,8 @@ public class DescribeRecordDataResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>Status code description.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
@@ -33,6 +41,8 @@ public class DescribeRecordDataResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>Recording file link.</p>
+     * 
      * <strong>example:</strong>
      * <p>https://****</p>
      */
@@ -40,6 +50,8 @@ public class DescribeRecordDataResponseBody extends TeaModel {
     public String ossLink;
 
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>EE338D98-9BD3-4413-B165</p>
      */

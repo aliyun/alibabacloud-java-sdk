@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class ListRobotCallDialogResponseBody extends TeaModel {
     /**
+     * <p>Request status code. A return value of OK indicates that the request succeeded.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>Conversation records.</p>
+     */
     @NameInMap("Data")
     public java.util.List<ListRobotCallDialogResponseBodyData> data;
 
     /**
+     * <p>Description of the status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
@@ -22,6 +29,8 @@ public class ListRobotCallDialogResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>D9CB3933-9FE3-4870-BA8E-2BEE91B69D23</p>
      */
@@ -29,6 +38,12 @@ public class ListRobotCallDialogResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the API invocation succeeded. Valid values:</p>
+     * <ul>
+     * <li><strong>true</strong>: Succeeded.</li>
+     * <li><strong>false</strong>: Failed.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -81,27 +96,45 @@ public class ListRobotCallDialogResponseBody extends TeaModel {
     }
 
     public static class ListRobotCallDialogResponseBodyData extends TeaModel {
+        /**
+         * <p>Script content.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>我是某某的客服，看您之前在我们家找过工作，做个回访，现在工作怎么样？</p>
+         */
         @NameInMap("Content")
         public String content;
 
         /**
+         * <p>File Type.</p>
+         * 
          * <strong>example:</strong>
-         * <p>normal</p>
+         * <p>开场白</p>
          */
         @NameInMap("NodeType")
         public String nodeType;
 
         /**
+         * <p>Role in the conversation content.</p>
+         * 
          * <strong>example:</strong>
          * <p>robot</p>
          */
         @NameInMap("Role")
         public String role;
 
+        /**
+         * <p>Intent label.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>拒绝</p>
+         */
         @NameInMap("Tag")
         public String tag;
 
         /**
+         * <p>Start Time. UNIX timestamp in milliseconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>1621483557000</p>
          */

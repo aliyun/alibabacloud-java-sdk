@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class GetAllDepartmentResponseBody extends TeaModel {
     /**
+     * <p>Status code. A return value of 200 indicates that the request succeeded.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>Department information.</p>
+     */
     @NameInMap("Data")
     public java.util.List<GetAllDepartmentResponseBodyData> data;
 
     /**
+     * <p>HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -22,6 +29,8 @@ public class GetAllDepartmentResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>Description of the status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>successful</p>
      */
@@ -29,6 +38,8 @@ public class GetAllDepartmentResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>98B032F5-6473-4EAC-8BA8-C28993513A1F</p>
      */
@@ -36,6 +47,12 @@ public class GetAllDepartmentResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the API invocation succeeded. Valid values:  </p>
+     * <ul>
+     * <li><strong>true</strong>: Succeeded.  </li>
+     * <li><strong>false</strong>: Failed.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -97,12 +114,20 @@ public class GetAllDepartmentResponseBody extends TeaModel {
 
     public static class GetAllDepartmentResponseBodyData extends TeaModel {
         /**
+         * <p>Department ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
         @NameInMap("DepartmentId")
         public Long departmentId;
 
+        /**
+         * <p>Department name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>部门A</p>
+         */
         @NameInMap("DepartmentName")
         public String departmentName;
 

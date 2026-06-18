@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class HotlineSessionQueryResponseBody extends TeaModel {
     /**
+     * <p>Status code. A value of &quot;Success&quot; indicates that the request succeeded.</p>
+     * 
      * <strong>example:</strong>
      * <p>Success</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>Call data.</p>
+     */
     @NameInMap("Data")
     public HotlineSessionQueryResponseBodyData data;
 
     /**
+     * <p>Description of the status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>xxxx</p>
      */
@@ -22,6 +29,8 @@ public class HotlineSessionQueryResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>EE339D98-9BD3-4413-B165</p>
      */
@@ -29,6 +38,8 @@ public class HotlineSessionQueryResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the API call succeeded.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -82,6 +93,8 @@ public class HotlineSessionQueryResponseBody extends TeaModel {
 
     public static class HotlineSessionQueryResponseBodyDataCallDetailRecord extends TeaModel {
         /**
+         * <p>Session ID. The acid in WebSocket after an incoming call.</p>
+         * 
          * <strong>example:</strong>
          * <p>7719786</p>
          */
@@ -89,6 +102,11 @@ public class HotlineSessionQueryResponseBody extends TeaModel {
         public String acid;
 
         /**
+         * <p>Agent ID.  </p>
+         * <blockquote>
+         * <p>This field is null in non–change owner scenarios.</p>
+         * </blockquote>
+         * 
          * <strong>example:</strong>
          * <p>12</p>
          */
@@ -96,6 +114,11 @@ public class HotlineSessionQueryResponseBody extends TeaModel {
         public String activeTransferId;
 
         /**
+         * <p>Call duration, in seconds.  </p>
+         * <blockquote>
+         * <p>Unconnected calls do not include call duration.</p>
+         * </blockquote>
+         * 
          * <strong>example:</strong>
          * <p>37</p>
          */
@@ -103,6 +126,19 @@ public class HotlineSessionQueryResponseBody extends TeaModel {
         public Integer callContinueTime;
 
         /**
+         * <p>Call result. Valid values:</p>
+         * <ul>
+         * <li><strong>normal</strong>: Normal hang-up.</li>
+         * <li><strong>touchRouteError</strong>: Queue hang-up.</li>
+         * <li><strong>touchInQueue</strong>: Queue hang-up.</li>
+         * <li><strong>touchInLoss</strong>: Queue hang-up.</li>
+         * <li><strong>userHangup</strong>: User hang-up or IVR hang-up.</li>
+         * <li><strong>sysHangup</strong>: System hang-up or IVR hang-up.</li>
+         * <li><strong>transferAgent</strong>: User hang-up or IVR hang-up.</li>
+         * <li><strong>dailing</strong>: Agent hang-up or ring-off hang-up.</li>
+         * <li><strong>TouchRingCallLoss</strong>: Queue hang-up or ring-off hang-up.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>normal</p>
          */
@@ -110,6 +146,13 @@ public class HotlineSessionQueryResponseBody extends TeaModel {
         public String callResult;
 
         /**
+         * <p>Call type. Valid values:</p>
+         * <ul>
+         * <li><strong>1</strong>: Outbound call</li>
+         * <li><strong>2</strong>: Inbound call</li>
+         * <li><strong>3</strong>: Change owner</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -117,6 +160,8 @@ public class HotlineSessionQueryResponseBody extends TeaModel {
         public Integer callType;
 
         /**
+         * <p>Called number.</p>
+         * 
          * <strong>example:</strong>
          * <p>135615*****</p>
          */
@@ -124,6 +169,8 @@ public class HotlineSessionQueryResponseBody extends TeaModel {
         public String calledNumber;
 
         /**
+         * <p>Calling party number, such as a user\&quot;s phone number, agent number, or machine number.</p>
+         * 
          * <strong>example:</strong>
          * <p>0571773</p>
          */
@@ -131,6 +178,14 @@ public class HotlineSessionQueryResponseBody extends TeaModel {
         public String callingNumber;
 
         /**
+         * <p>Call creation time.</p>
+         * <blockquote>
+         * <ul>
+         * <li>In outbound scenarios, this is the time when the outbound call was initiated.</li>
+         * <li>In inbound scenarios, this is the time when the call entered the ACC system.</li>
+         * </ul>
+         * </blockquote>
+         * 
          * <strong>example:</strong>
          * <p>2020-10-02 22:32:55</p>
          */
@@ -138,6 +193,17 @@ public class HotlineSessionQueryResponseBody extends TeaModel {
         public String createTime;
 
         /**
+         * <p>Satisfaction rating, indicated by star level. Valid values:</p>
+         * <ul>
+         * <li><strong>2</strong>: Two-star satisfaction</li>
+         * <li><strong>3</strong>: Three-star satisfaction</li>
+         * <li><strong>4</strong>: Four-star satisfaction</li>
+         * <li><strong>5</strong>: Five-star satisfaction</li>
+         * </ul>
+         * <blockquote>
+         * <p>This field has no data in outbound scenarios or scenarios where the call was not answered.</p>
+         * </blockquote>
+         * 
          * <strong>example:</strong>
          * <p>4</p>
          */
@@ -145,6 +211,18 @@ public class HotlineSessionQueryResponseBody extends TeaModel {
         public Integer evaluationLevel;
 
         /**
+         * <p>Satisfaction score. Valid values:</p>
+         * <ul>
+         * <li><strong>1</strong>: Very dissatisfied</li>
+         * <li><strong>2</strong>: Dissatisfied</li>
+         * <li><strong>3</strong>: Neutral</li>
+         * <li><strong>4</strong>: Satisfied</li>
+         * <li><strong>5</strong>: Very satisfied</li>
+         * </ul>
+         * <blockquote>
+         * <p>This field has no data in outbound scenarios or scenarios where the call was not answered.</p>
+         * </blockquote>
+         * 
          * <strong>example:</strong>
          * <p>4</p>
          */
@@ -152,16 +230,38 @@ public class HotlineSessionQueryResponseBody extends TeaModel {
         public Integer evaluationScore;
 
         /**
+         * <p>Skill group ID.  </p>
+         * <blockquote>
+         * <p>When CallType is <strong>1</strong>, outbound call scenarios do not include skill group information.</p>
+         * </blockquote>
+         * 
          * <strong>example:</strong>
          * <p>123456</p>
          */
         @NameInMap("GroupId")
         public Long groupId;
 
+        /**
+         * <p>Skill group name.  </p>
+         * <blockquote>
+         * <p>When CallType is <strong>1</strong>, outbound call scenarios do not include skill group information.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>自动化技能组</p>
+         */
         @NameInMap("GroupName")
         public String groupName;
 
         /**
+         * <p>Party that hung up. Valid values:  </p>
+         * <ul>
+         * <li><strong>1</strong>: System hung up  </li>
+         * <li><strong>2</strong>: Customer hung up  </li>
+         * <li><strong>3</strong>: Agent hung up  </li>
+         * <li><strong>null</strong>: Unknown</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */
@@ -169,6 +269,8 @@ public class HotlineSessionQueryResponseBody extends TeaModel {
         public String hangUpRole;
 
         /**
+         * <p>Hang-up time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2020-10-02 22:33:46</p>
          */
@@ -176,6 +278,8 @@ public class HotlineSessionQueryResponseBody extends TeaModel {
         public String hangUpTime;
 
         /**
+         * <p>The GUID of the call detail record.</p>
+         * 
          * <strong>example:</strong>
          * <p>acc1c58dab4a4dd280e3813c66</p>
          */
@@ -183,6 +287,11 @@ public class HotlineSessionQueryResponseBody extends TeaModel {
         public String id;
 
         /**
+         * <p>Time when the call entered the queue for assignment.  </p>
+         * <blockquote>
+         * <p>Outbound call scenarios do not include queue entry time.</p>
+         * </blockquote>
+         * 
          * <strong>example:</strong>
          * <p>2020-10-02 22:32:55</p>
          */
@@ -190,16 +299,29 @@ public class HotlineSessionQueryResponseBody extends TeaModel {
         public String inQueueTime;
 
         /**
+         * <p>Membership ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>7856876</p>
          */
         @NameInMap("MemberId")
         public String memberId;
 
+        /**
+         * <p>Membership name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>匿名会员</p>
+         */
         @NameInMap("MemberName")
         public String memberName;
 
         /**
+         * <p>The time when the hotline call is assigned and dequeued.</p>
+         * <blockquote>
+         * <p>Outbound scenarios do not have a dequeue time.</p>
+         * </blockquote>
+         * 
          * <strong>example:</strong>
          * <p>2020-10-02 22:32:59</p>
          */
@@ -207,6 +329,11 @@ public class HotlineSessionQueryResponseBody extends TeaModel {
         public String outQueueTime;
 
         /**
+         * <p>Agent ID. The phone number to which the call is transferred.</p>
+         * <blockquote>
+         * <p>This field is null in non-transfer scenarios.</p>
+         * </blockquote>
+         * 
          * <strong>example:</strong>
          * <p>12</p>
          */
@@ -214,6 +341,15 @@ public class HotlineSessionQueryResponseBody extends TeaModel {
         public String passiveTransferId;
 
         /**
+         * <p>The recipient of the transferred session. Valid values:</p>
+         * <ul>
+         * <li><strong>1</strong>: Agent ID.</li>
+         * <li><strong>2</strong>: Transferred phone number.</li>
+         * </ul>
+         * <blockquote>
+         * <p>This field is null in non-transfer scenarios.</p>
+         * </blockquote>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -221,6 +357,8 @@ public class HotlineSessionQueryResponseBody extends TeaModel {
         public String passiveTransferIdType;
 
         /**
+         * <p>The time when the call is answered.</p>
+         * 
          * <strong>example:</strong>
          * <p>2020-10-02 22:33:09</p>
          */
@@ -228,6 +366,8 @@ public class HotlineSessionQueryResponseBody extends TeaModel {
         public String pickUpTime;
 
         /**
+         * <p>Queue duration.</p>
+         * 
          * <strong>example:</strong>
          * <p>4</p>
          */
@@ -235,6 +375,11 @@ public class HotlineSessionQueryResponseBody extends TeaModel {
         public Integer queueUpContinueTime;
 
         /**
+         * <p>Ringing duration, in seconds.</p>
+         * <blockquote>
+         * <p>Outbound scenarios do not have ringing duration.</p>
+         * </blockquote>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -242,6 +387,11 @@ public class HotlineSessionQueryResponseBody extends TeaModel {
         public Integer ringContinueTime;
 
         /**
+         * <p>The time when ringing ends.</p>
+         * <blockquote>
+         * <p>Outbound scenarios do not have a ring end time.</p>
+         * </blockquote>
+         * 
          * <strong>example:</strong>
          * <p>2020-10-02 22:33:09</p>
          */
@@ -249,6 +399,11 @@ public class HotlineSessionQueryResponseBody extends TeaModel {
         public String ringEndTime;
 
         /**
+         * <p>Ringing start time.  </p>
+         * <blockquote>
+         * <p>Outbound call scenarios do not include ringing start time.</p>
+         * </blockquote>
+         * 
          * <strong>example:</strong>
          * <p>2020-10-02 22:32:59</p>
          */
@@ -256,16 +411,32 @@ public class HotlineSessionQueryResponseBody extends TeaModel {
         public String ringStartTime;
 
         /**
+         * <p>Agent ID.  </p>
+         * <blockquote>
+         * <p>In inbound scenarios, agent information is unavailable until the call is assigned to an agent.</p>
+         * </blockquote>
+         * 
          * <strong>example:</strong>
          * <p>555555</p>
          */
         @NameInMap("ServicerId")
         public String servicerId;
 
+        /**
+         * <p>Agent name.</p>
+         * <blockquote>
+         * <p>Agent information is unavailable before the call is assigned to an agent in inbound scenarios.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>刘测试</p>
+         */
         @NameInMap("ServicerName")
         public String servicerName;
 
         /**
+         * <p>Long-distance call.</p>
+         * 
          * <strong>example:</strong>
          * <p>1861111****</p>
          */
@@ -512,10 +683,15 @@ public class HotlineSessionQueryResponseBody extends TeaModel {
     }
 
     public static class HotlineSessionQueryResponseBodyData extends TeaModel {
+        /**
+         * <p>Call detail records.</p>
+         */
         @NameInMap("CallDetailRecord")
         public java.util.List<HotlineSessionQueryResponseBodyDataCallDetailRecord> callDetailRecord;
 
         /**
+         * <p>Current page number.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -523,6 +699,8 @@ public class HotlineSessionQueryResponseBody extends TeaModel {
         public Integer pageNumber;
 
         /**
+         * <p>Number of items per page.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -530,6 +708,8 @@ public class HotlineSessionQueryResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
+         * <p>Total number of records.</p>
+         * 
          * <strong>example:</strong>
          * <p>26</p>
          */

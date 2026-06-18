@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class JoinThirdCallRequest extends TeaModel {
     /**
+     * <p>Agent account name (agent logon name)</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,8 @@ public class JoinThirdCallRequest extends TeaModel {
     public String accountName;
 
     /**
+     * <p>acid from WebSocket after an inbound call</p>
+     * 
      * <strong>example:</strong>
      * <p>7719786</p>
      */
@@ -21,6 +24,8 @@ public class JoinThirdCallRequest extends TeaModel {
     public String callId;
 
     /**
+     * <p>Unique customer request ID used for idempotency validation; can be generated using UUID</p>
+     * 
      * <strong>example:</strong>
      * <p>46c1341e-2648-447a-9b11-70b6a298d94d</p>
      */
@@ -28,6 +33,8 @@ public class JoinThirdCallRequest extends TeaModel {
     public String clientToken;
 
     /**
+     * <p>connId from WebSocket after an inbound call</p>
+     * 
      * <strong>example:</strong>
      * <p>7719788</p>
      */
@@ -35,6 +42,8 @@ public class JoinThirdCallRequest extends TeaModel {
     public String connectionId;
 
     /**
+     * <p>holdConnId from WebSocket after an inbound call (only provided during two-step transfer)</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
@@ -42,6 +51,7 @@ public class JoinThirdCallRequest extends TeaModel {
     public String holdConnectionId;
 
     /**
+     * <p>AICCS instance ID, visible in the Artificial Intelligence Cloud Call Service console</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -51,6 +61,8 @@ public class JoinThirdCallRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>jobId from WebSocket after an inbound call</p>
+     * 
      * <strong>example:</strong>
      * <p>7719787</p>
      */

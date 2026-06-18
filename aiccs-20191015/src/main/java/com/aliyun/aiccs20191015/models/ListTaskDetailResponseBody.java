@@ -5,23 +5,32 @@ import com.aliyun.tea.*;
 
 public class ListTaskDetailResponseBody extends TeaModel {
     /**
+     * <p>The request status code. A return value of OK indicates that the request succeeded.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>Detailed job information.</p>
+     */
     @NameInMap("Data")
     public ListTaskDetailResponseBodyData data;
 
     /**
+     * <p>Description of the status code.</p>
+     * 
      * <strong>example:</strong>
-     * <p>Ok</p>
+     * <p>OK</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>D9CB3933-9FE3-4870-BA8E-2BEE91B69D23</p>
      */
@@ -29,6 +38,12 @@ public class ListTaskDetailResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the API invocation succeeded. Valid values:</p>
+     * <ul>
+     * <li><strong>true</strong>: Succeeded.</li>
+     * <li><strong>false</strong>: Failed.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -82,6 +97,8 @@ public class ListTaskDetailResponseBody extends TeaModel {
 
     public static class ListTaskDetailResponseBodyDataRecord extends TeaModel {
         /**
+         * <p>Called number.</p>
+         * 
          * <strong>example:</strong>
          * <p>186****0000</p>
          */
@@ -89,16 +106,30 @@ public class ListTaskDetailResponseBody extends TeaModel {
         public String called;
 
         /**
+         * <p>Calling number.</p>
+         * 
          * <strong>example:</strong>
          * <p>136****0000</p>
          */
         @NameInMap("Caller")
         public String caller;
 
+        /**
+         * <p>Hang-up direction. Valid values:</p>
+         * <ul>
+         * <li><strong>User</strong>.</li>
+         * <li><strong>Machine</strong>.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>用户</p>
+         */
         @NameInMap("Direction")
         public String direction;
 
         /**
+         * <p>Call duration. Unit: seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>30</p>
          */
@@ -106,6 +137,8 @@ public class ListTaskDetailResponseBody extends TeaModel {
         public Integer duration;
 
         /**
+         * <p>End time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2021-05-20 00:03:00</p>
          */
@@ -113,13 +146,17 @@ public class ListTaskDetailResponseBody extends TeaModel {
         public String endTime;
 
         /**
+         * <p>Record ID.</p>
+         * 
          * <strong>example:</strong>
-         * <p>123456</p>
+         * <p>12****</p>
          */
         @NameInMap("Id")
         public Long id;
 
         /**
+         * <p>Current retry count.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -127,6 +164,8 @@ public class ListTaskDetailResponseBody extends TeaModel {
         public Integer retryCurTimes;
 
         /**
+         * <p>Retry Count.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -134,6 +173,8 @@ public class ListTaskDetailResponseBody extends TeaModel {
         public Integer retryTimes;
 
         /**
+         * <p>Start Time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2021-05-20 00:00:00</p>
          */
@@ -141,6 +182,8 @@ public class ListTaskDetailResponseBody extends TeaModel {
         public String startTime;
 
         /**
+         * <p>Detail status.</p>
+         * 
          * <strong>example:</strong>
          * <p>SUCCESS</p>
          */
@@ -148,15 +191,29 @@ public class ListTaskDetailResponseBody extends TeaModel {
         public String status;
 
         /**
+         * <p>Call status code.</p>
+         * 
          * <strong>example:</strong>
-         * <p>00001</p>
+         * <p>200100</p>
          */
         @NameInMap("StatusCode")
         public String statusCode;
 
+        /**
+         * <p>Call status code description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>呼叫成功</p>
+         */
         @NameInMap("StatusCodeDesc")
         public String statusCodeDesc;
 
+        /**
+         * <p>Intent tags.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>肯定</p>
+         */
         @NameInMap("Tags")
         public String tags;
 
@@ -273,6 +330,8 @@ public class ListTaskDetailResponseBody extends TeaModel {
 
     public static class ListTaskDetailResponseBodyData extends TeaModel {
         /**
+         * <p>Number of items per page.</p>
+         * 
          * <strong>example:</strong>
          * <p>20</p>
          */
@@ -280,16 +339,23 @@ public class ListTaskDetailResponseBody extends TeaModel {
         public Long pageNo;
 
         /**
+         * <p>Current page number.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
         @NameInMap("PageSize")
         public Long pageSize;
 
+        /**
+         * <p>List of job information.</p>
+         */
         @NameInMap("Record")
         public java.util.List<ListTaskDetailResponseBodyDataRecord> record;
 
         /**
+         * <p>Total number of jobs.</p>
+         * 
          * <strong>example:</strong>
          * <p>50</p>
          */

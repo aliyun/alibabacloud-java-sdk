@@ -5,22 +5,30 @@ import com.aliyun.tea.*;
 
 public class UpdateAiCallTaskRequest extends TeaModel {
     /**
+     * <p>The days of the week when calls can be made.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("CallDay")
     public java.util.List<String> callDay;
 
     /**
+     * <p>The retry interval in minutes. The maximum value is 120.</p>
+     * 
      * <strong>example:</strong>
      * <p>25</p>
      */
     @NameInMap("CallRetryInterval")
     public Long callRetryInterval;
 
+    /**
+     * <p>The call failure statuses that trigger a retry.</p>
+     */
     @NameInMap("CallRetryReason")
     public java.util.List<String> callRetryReason;
 
     /**
+     * <p>The number of retries. The maximum value is 3.</p>
+     * 
      * <strong>example:</strong>
      * <p>2</p>
      */
@@ -28,6 +36,7 @@ public class UpdateAiCallTaskRequest extends TeaModel {
     public Long callRetryTimes;
 
     /**
+     * <p>The callable time windows.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("CallTime")
@@ -48,6 +57,14 @@ public class UpdateAiCallTaskRequest extends TeaModel {
     public String linePhoneNum;
 
     /**
+     * <p>Specifies whether to enable retry. Valid values:</p>
+     * <ul>
+     * <li><p><code>true</code>: Yes.</p>
+     * </li>
+     * <li><p><code>false</code> (default): No.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -78,6 +95,13 @@ public class UpdateAiCallTaskRequest extends TeaModel {
     public Long source;
 
     /**
+     * <p>The startup method. Valid values:</p>
+     * <ul>
+     * <li><p><code>IMMEDIATE</code>: Start immediately.</p>
+     * </li>
+     * <li><p><code>SCHEDULE</code>: Start at a specified time.</p>
+     * </li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -87,6 +111,7 @@ public class UpdateAiCallTaskRequest extends TeaModel {
     public String startType;
 
     /**
+     * <p>The number of concurrent calls per second (CPS) for the task. The maximum value is 500.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -96,24 +121,28 @@ public class UpdateAiCallTaskRequest extends TeaModel {
     public Long taskCps;
 
     /**
+     * <p>The ID of the task to update.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>1152311212312***</p>
+     * <p>1187**************</p>
      */
     @NameInMap("TaskId")
     public String taskId;
 
     /**
+     * <p>The task name. The name must be unique within an Alibaba Cloud account.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>示例值示例值</p>
+     * <p>测试任务</p>
      */
     @NameInMap("TaskName")
     public String taskName;
 
     /**
+     * <p>The scheduled start time for the task, specified as a Unix timestamp in milliseconds. This parameter is required when <code>StartType</code> is set to <code>SCHEDULE</code>.</p>
+     * 
      * <strong>example:</strong>
      * <p>1748923429000</p>
      */
@@ -121,6 +150,8 @@ public class UpdateAiCallTaskRequest extends TeaModel {
     public Long taskStartTime;
 
     /**
+     * <p>The service instance used for outbound calls.</p>
+     * 
      * <strong>example:</strong>
      * <p>0537022*****</p>
      */

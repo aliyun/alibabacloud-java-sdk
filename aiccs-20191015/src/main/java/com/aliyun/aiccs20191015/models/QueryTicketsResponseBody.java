@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class QueryTicketsResponseBody extends TeaModel {
     /**
+     * <p>Status code. A return value of 200 indicates that the request succeeded.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -12,6 +14,8 @@ public class QueryTicketsResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>Ticket information.</p>
+     * 
      * <strong>example:</strong>
      * <p>{ &quot;totalResults&quot;:1 &quot;previousPage&quot;:1 &quot;data&quot;:[ 0:{ &quot;serviceType&quot;:1 &quot;lastUrgeTime&quot;:0 &quot;queueId&quot;:0 &quot;sopCateId&quot;:252011 &quot;totalUrgeMemo&quot;:&quot;&quot; &quot;taskGmtModified&quot;:0 &quot;departmentId&quot;:10 &quot;groupId&quot;:0 &quot;channelType&quot;:1 &quot;questionInfo&quot;:&quot;&quot; &quot;templateId&quot;:0 &quot;deadLine&quot;:0 &quot;srType&quot;:30701 &quot;caseId&quot;:2000000001165962}</p>
      */
@@ -19,6 +23,8 @@ public class QueryTicketsResponseBody extends TeaModel {
     public String data;
 
     /**
+     * <p>Description of the status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
@@ -26,6 +32,8 @@ public class QueryTicketsResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>EE338D98-9BD3-4413-B165</p>
      */
@@ -33,6 +41,8 @@ public class QueryTicketsResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the API call succeeded.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

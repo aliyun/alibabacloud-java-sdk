@@ -14,10 +14,11 @@ public class StopAiCallTaskRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
+     * <p>The task ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>1212311111****</p>
+     * <p>1187**************</p>
      */
     @NameInMap("TaskId")
     public String taskId;

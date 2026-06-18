@@ -5,76 +5,131 @@ import com.aliyun.tea.*;
 
 public class HotlineSessionQueryRequest extends TeaModel {
     /**
+     * <p>Session ID. The acid received via WebSocket after an inbound call.</p>
+     * 
      * <strong>example:</strong>
      * <p>7719786****</p>
      */
     @NameInMap("Acid")
     public String acid;
 
+    /**
+     * <p>Session ID List.</p>
+     */
     @NameInMap("AcidList")
     public java.util.List<String> acidList;
 
     /**
+     * <p>Call result. Valid values:  </p>
+     * <ul>
+     * <li><strong>normal</strong>: Normal hang-up.  </li>
+     * <li><strong>touchRouteError</strong>: Queue hang-up.  </li>
+     * <li><strong>touchInQueue</strong>: Queue hang-up.  </li>
+     * <li><strong>touchInLoss</strong>: Queue hang-up.  </li>
+     * <li><strong>userHangup</strong>: User hang-up or IVR hang-up.  </li>
+     * <li><strong>sysHangup</strong>: System hang-up or IVR hang-up.  </li>
+     * <li><strong>transferAgent</strong>: User hang-up or IVR hang-up.  </li>
+     * <li><strong>dailing</strong>: Agent hang-up during ringing.  </li>
+     * <li><strong>TouchRingCallLoss</strong>: Queue hang-up during ringing.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>normal</p>
      */
     @NameInMap("CallResult")
     public String callResult;
 
+    /**
+     * <p>List of call results.</p>
+     */
     @NameInMap("CallResultList")
     public java.util.List<String> callResultList;
 
     /**
+     * <p>Call Type. Valid values:</p>
+     * <ul>
+     * <li><strong>1</strong>: Outbound call.</li>
+     * <li><strong>2</strong>: Inbound call.</li>
+     * <li><strong>3</strong>: Change owner.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
     @NameInMap("CallType")
     public Integer callType;
 
+    /**
+     * <p>Call Type List.</p>
+     */
     @NameInMap("CallTypeList")
     public java.util.List<Integer> callTypeList;
 
     /**
+     * <p>Calling party number, such as a user\&quot;s phone number, agent number, or machine number.</p>
+     * 
      * <strong>example:</strong>
      * <p>135615****</p>
      */
     @NameInMap("CalledNumber")
     public String calledNumber;
 
+    /**
+     * <p>List of called numbers.</p>
+     */
     @NameInMap("CalledNumberList")
     public java.util.List<String> calledNumberList;
 
     /**
+     * <p>Calling party number, such as a user\&quot;s phone number, customer service agent number, or machine number.</p>
+     * 
      * <strong>example:</strong>
      * <p>057177****</p>
      */
     @NameInMap("CallingNumber")
     public String callingNumber;
 
+    /**
+     * <p>List of calling numbers.</p>
+     */
     @NameInMap("CallingNumberList")
     public java.util.List<String> callingNumberList;
 
     /**
+     * <p>Skill group ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>123456</p>
      */
     @NameInMap("GroupId")
     public Long groupId;
 
+    /**
+     * <p>List of skill group IDs.</p>
+     */
     @NameInMap("GroupIdList")
     public java.util.List<Long> groupIdList;
 
+    /**
+     * <p>Skill group name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>自动化技能组</p>
+     */
     @NameInMap("GroupName")
     public String groupName;
 
     /**
+     * <p>Global unique ID (GUID) of the call detail.</p>
+     * 
      * <strong>example:</strong>
-     * <p>acc1c58dab4a4dd280e3813c66</p>
+     * <p>acc1c58dab4a4****0e3813c66</p>
      */
     @NameInMap("Id")
     public String id;
 
     /**
+     * <p>AICCS instance ID.<br>You can obtain it in the <strong>Instance Management</strong> section of the left-side navigation pane in the <a href="https://aiccs.console.aliyun.com/overview">Artificial Intelligence Cloud Call Service console</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -84,19 +139,32 @@ public class HotlineSessionQueryRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>Membership ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>7856****</p>
      */
     @NameInMap("MemberId")
     public String memberId;
 
+    /**
+     * <p>Membership List.</p>
+     */
     @NameInMap("MemberIdList")
     public java.util.List<String> memberIdList;
 
+    /**
+     * <p>Membership name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>匿名会员</p>
+     */
     @NameInMap("MemberName")
     public String memberName;
 
     /**
+     * <p>Current page number. The value must be greater than <strong>0</strong>. Default Value: <strong>1</strong>.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -104,6 +172,8 @@ public class HotlineSessionQueryRequest extends TeaModel {
     public Integer pageNo;
 
     /**
+     * <p>Page size. The value must be greater than <strong>0</strong>. Default value: <strong>20</strong>.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -111,6 +181,8 @@ public class HotlineSessionQueryRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>Extension parameters.</p>
+     * 
      * <strong>example:</strong>
      * <p>xxxx</p>
      */
@@ -118,20 +190,26 @@ public class HotlineSessionQueryRequest extends TeaModel {
     public String params;
 
     /**
+     * <p>End UNIX timestamp. Unit: milliseconds.</p>
+     * 
      * <strong>example:</strong>
-     * <p>161482972</p>
+     * <p>1614829721</p>
      */
     @NameInMap("QueryEndTime")
     public Long queryEndTime;
 
     /**
+     * <p>Start UNIX timestamp. Unit: ms.</p>
+     * 
      * <strong>example:</strong>
-     * <p>161482872</p>
+     * <p>1614828721</p>
      */
     @NameInMap("QueryStartTime")
     public Long queryStartTime;
 
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>EE338D98-9BD3-4413-B165</p>
      */
@@ -139,15 +217,26 @@ public class HotlineSessionQueryRequest extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Agent ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>555555</p>
      */
     @NameInMap("ServicerId")
     public String servicerId;
 
+    /**
+     * <p>List of agent IDs.</p>
+     */
     @NameInMap("ServicerIdList")
     public java.util.List<String> servicerIdList;
 
+    /**
+     * <p>Agent Name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>刘测试</p>
+     */
     @NameInMap("ServicerName")
     public String servicerName;
 
