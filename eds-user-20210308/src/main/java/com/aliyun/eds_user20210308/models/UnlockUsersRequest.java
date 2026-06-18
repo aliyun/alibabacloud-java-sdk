@@ -14,6 +14,8 @@ public class UnlockUsersRequest extends TeaModel {
     public String autoLockTime;
 
     /**
+     * <p>Channel</p>
+     * 
      * <strong>example:</strong>
      * <p>ENTERPRISE</p>
      */

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeMfaDevicesRequest extends TeaModel {
     /**
-     * <p>The address of the AD office network.</p>
+     * <p>The AD domain name.</p>
      * 
      * <strong>example:</strong>
      * <p>cn.misumi.pri</p>
@@ -14,6 +14,8 @@ public class DescribeMfaDevicesRequest extends TeaModel {
     public String adDomain;
 
     /**
+     * <p>The business channel.</p>
+     * 
      * <strong>example:</strong>
      * <p>ENTERPRISE</p>
      */
@@ -21,7 +23,7 @@ public class DescribeMfaDevicesRequest extends TeaModel {
     public String businessChannel;
 
     /**
-     * <p>The usernames of the convenience accounts.</p>
+     * <p>An array of end user usernames.</p>
      * 
      * <strong>example:</strong>
      * <p>test</p>
@@ -33,8 +35,7 @@ public class DescribeMfaDevicesRequest extends TeaModel {
     public String filter;
 
     /**
-     * <p>The maximum number of entries to return. Valid values: 1 to 500.\
-     * Default value: 100.</p>
+     * <p>The maximum number of results to return per page. Valid range: 1–500.<br>Default value: 100.<br></p>
      * 
      * <strong>example:</strong>
      * <p>100</p>
@@ -43,7 +44,7 @@ public class DescribeMfaDevicesRequest extends TeaModel {
     public Long maxResults;
 
     /**
-     * <p>The pagination token that is used in the next request to retrieve a new page of results. Set the value to the token that is obtained from the previous query.</p>
+     * <p>The token for the next page of results. This value is the <code>NextToken</code> returned from a previous call.</p>
      * 
      * <strong>example:</strong>
      * <p>caeba0bbb2be03f84eb48b699f0a4883</p>
@@ -52,7 +53,7 @@ public class DescribeMfaDevicesRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The serial numbers of the virtual MFA devices.</p>
+     * <p>An array of serial numbers for virtual MFA devices.</p>
      * 
      * <strong>example:</strong>
      * <p>c2d9ae94-a64b-4a0d-8024-9519ca50****</p>

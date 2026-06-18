@@ -5,12 +5,17 @@ import com.aliyun.tea.*;
 
 public class DescribeUserResponseBody extends TeaModel {
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>User information.</p>
+     */
     @NameInMap("User")
     public DescribeUserResponseBodyUser user;
 
@@ -37,6 +42,8 @@ public class DescribeUserResponseBody extends TeaModel {
 
     public static class DescribeUserResponseBodyUserExternalInfo extends TeaModel {
         /**
+         * <p>External User ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>oijjnabsf****</p>
          */
@@ -44,6 +51,8 @@ public class DescribeUserResponseBody extends TeaModel {
         public String externalId;
 
         /**
+         * <p>External information name.</p>
+         * 
          * <strong>example:</strong>
          * <p>Alex</p>
          */
@@ -51,6 +60,8 @@ public class DescribeUserResponseBody extends TeaModel {
         public String externalName;
 
         /**
+         * <p>Employee ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>15412***</p>
          */
@@ -58,6 +69,8 @@ public class DescribeUserResponseBody extends TeaModel {
         public String jobNumber;
 
         /**
+         * <p>SSO logon type.</p>
+         * 
          * <strong>example:</strong>
          * <p>OIDC</p>
          */
@@ -105,6 +118,8 @@ public class DescribeUserResponseBody extends TeaModel {
 
     public static class DescribeUserResponseBodyUserProperties extends TeaModel {
         /**
+         * <p>Attribute key.</p>
+         * 
          * <strong>example:</strong>
          * <p>role</p>
          */
@@ -112,6 +127,8 @@ public class DescribeUserResponseBody extends TeaModel {
         public String key;
 
         /**
+         * <p>Attribute value.</p>
+         * 
          * <strong>example:</strong>
          * <p>teacher</p>
          */
@@ -143,6 +160,8 @@ public class DescribeUserResponseBody extends TeaModel {
 
     public static class DescribeUserResponseBodyUser extends TeaModel {
         /**
+         * <p>Mailbox.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="mailto:alex@test-email.com">alex@test-email.com</a></p>
          */
@@ -150,19 +169,29 @@ public class DescribeUserResponseBody extends TeaModel {
         public String email;
 
         /**
+         * <p>Username.</p>
+         * 
          * <strong>example:</strong>
          * <p>alex</p>
          */
         @NameInMap("EndUserId")
         public String endUserId;
 
+        /**
+         * <p>Associated external user information.</p>
+         */
         @NameInMap("ExternalInfo")
         public DescribeUserResponseBodyUserExternalInfo externalInfo;
 
+        /**
+         * <p>Extension information.</p>
+         */
         @NameInMap("Extras")
         public java.util.Map<String, String> extras;
 
         /**
+         * <p>Creation Time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2025-01-01 12:00:00</p>
          */
@@ -172,23 +201,36 @@ public class DescribeUserResponseBody extends TeaModel {
         @NameInMap("NickName")
         public String nickName;
 
+        /**
+         * <p>List of organization IDs.</p>
+         */
         @NameInMap("OrgIds")
         public java.util.List<String> orgIds;
 
+        /**
+         * <p>List of organizations.</p>
+         */
         @NameInMap("OrgPaths")
         public java.util.List<String> orgPaths;
 
         /**
+         * <p>Phone number.</p>
+         * 
          * <strong>example:</strong>
          * <p>1888888****</p>
          */
         @NameInMap("Phone")
         public String phone;
 
+        /**
+         * <p>User attributes.</p>
+         */
         @NameInMap("Properties")
         public java.util.List<DescribeUserResponseBodyUserProperties> properties;
 
         /**
+         * <p>Remarks.</p>
+         * 
          * <strong>example:</strong>
          * <p>remark</p>
          */
@@ -196,6 +238,8 @@ public class DescribeUserResponseBody extends TeaModel {
         public String remark;
 
         /**
+         * <p>User status.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -203,6 +247,8 @@ public class DescribeUserResponseBody extends TeaModel {
         public Integer status;
 
         /**
+         * <p>Unique ID of the Wuying user.</p>
+         * 
          * <strong>example:</strong>
          * <p>aisdfumj****</p>
          */

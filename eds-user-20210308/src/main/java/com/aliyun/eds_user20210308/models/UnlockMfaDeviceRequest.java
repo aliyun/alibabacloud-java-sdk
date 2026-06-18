@@ -14,6 +14,8 @@ public class UnlockMfaDeviceRequest extends TeaModel {
     public String adDomain;
 
     /**
+     * <p>Channel</p>
+     * 
      * <strong>example:</strong>
      * <p>ENTERPRISE</p>
      */

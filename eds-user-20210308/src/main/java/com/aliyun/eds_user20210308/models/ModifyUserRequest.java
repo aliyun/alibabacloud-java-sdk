@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ModifyUserRequest extends TeaModel {
     /**
+     * <p>Channel</p>
+     * 
      * <strong>example:</strong>
      * <p>ENTERPRISE</p>
      */
@@ -25,7 +27,7 @@ public class ModifyUserRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>Alice</p>
+     * <p>alice</p>
      */
     @NameInMap("EndUserId")
     public String endUserId;

@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class FilterUsersResponseBody extends TeaModel {
     /**
-     * <p>The pagination token that is used in the next request to retrieve a new page of results. If not all results are returned in a query, a value is returned for the NextToken parameter. In this case, you can use the returned NextToken value to start the next query.</p>
+     * <p>The token for paginated results. If the response is truncated, this parameter is returned. To retrieve the next page of results, include this value in a subsequent request.</p>
      * 
      * <strong>example:</strong>
-     * <p>caeba0bbb2be03f84eb48b699f0a4883</p>
+     * <p>caeba0bbb2be03f84eb48b699f0a****</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
@@ -17,13 +17,13 @@ public class FilterUsersResponseBody extends TeaModel {
      * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>DBD276B5-00FF-5E04-8EF7-5CBA09BF112A</p>
+     * <p>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The information about the convenience accounts.</p>
+     * <p>A list of convenience accounts.</p>
      */
     @NameInMap("Users")
     public java.util.List<FilterUsersResponseBodyUsers> users;
@@ -59,16 +59,16 @@ public class FilterUsersResponseBody extends TeaModel {
 
     public static class FilterUsersResponseBodyUsersExternalInfo extends TeaModel {
         /**
-         * <p>The account that is associated with the convenience user.</p>
+         * <p>The name of the mapped external account.</p>
          * 
          * <strong>example:</strong>
-         * <p>test</p>
+         * <p>account</p>
          */
         @NameInMap("ExternalName")
         public String externalName;
 
         /**
-         * <p>The account, student ID, or employee ID that is associated with the convenience user.</p>
+         * <p>The ID of the external account, such as a student ID or an employee ID.</p>
          * 
          * <strong>example:</strong>
          * <p>030801</p>
@@ -211,13 +211,13 @@ public class FilterUsersResponseBody extends TeaModel {
 
     public static class FilterUsersResponseBodyUsersSupportLoginIdps extends TeaModel {
         /**
-         * <p>The enterprise identity provider ID.</p>
+         * <p>The ID of the identity provider (IdP).</p>
          */
         @NameInMap("IdpId")
         public String idpId;
 
         /**
-         * <p>The enterprise identity provider name.</p>
+         * <p>The name of the identity provider (IdP).</p>
          */
         @NameInMap("IdpName")
         public String idpName;
@@ -250,7 +250,7 @@ public class FilterUsersResponseBody extends TeaModel {
          * <p>The property value.</p>
          * 
          * <strong>example:</strong>
-         * <p>A</p>
+         * <p>dev</p>
          */
         @NameInMap("PropertyValue")
         public String propertyValue;
@@ -289,7 +289,7 @@ public class FilterUsersResponseBody extends TeaModel {
 
     public static class FilterUsersResponseBodyUsersUserSetPropertiesModels extends TeaModel {
         /**
-         * <p>The property ID.</p>
+         * <p>The ID of the user property.</p>
          * 
          * <strong>example:</strong>
          * <p>12</p>
@@ -298,7 +298,7 @@ public class FilterUsersResponseBody extends TeaModel {
         public Long propertyId;
 
         /**
-         * <p>The property name.</p>
+         * <p>The name of the user property.</p>
          * 
          * <strong>example:</strong>
          * <p>department</p>
@@ -307,7 +307,7 @@ public class FilterUsersResponseBody extends TeaModel {
         public String propertyKey;
 
         /**
-         * <p>The property type.</p>
+         * <p>The type of the user property.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -322,19 +322,19 @@ public class FilterUsersResponseBody extends TeaModel {
         public java.util.List<FilterUsersResponseBodyUsersUserSetPropertiesModelsPropertyValues> propertyValues;
 
         /**
-         * <p>The ID of the convenience user that is bound to the property.</p>
+         * <p>The ID of the user associated with the property.</p>
          * 
          * <strong>example:</strong>
-         * <p>12345</p>
+         * <p>4205**</p>
          */
         @NameInMap("UserId")
         public Long userId;
 
         /**
-         * <p>The username of the convenience user that is bound to the property.</p>
+         * <p>The user name associated with the property.</p>
          * 
          * <strong>example:</strong>
-         * <p>testName</p>
+         * <p>alice</p>
          */
         @NameInMap("UserName")
         public String userName;
@@ -396,7 +396,7 @@ public class FilterUsersResponseBody extends TeaModel {
 
     public static class FilterUsersResponseBodyUsers extends TeaModel {
         /**
-         * <p>The date when a convenience account is automatically locked.</p>
+         * <p>The date the account will be automatically locked.</p>
          * 
          * <strong>example:</strong>
          * <p>2023-03-03</p>
@@ -405,7 +405,7 @@ public class FilterUsersResponseBody extends TeaModel {
         public String autoLockTime;
 
         /**
-         * <p>The number of cloud desktops that are assigned to the convenience user.</p>
+         * <p>The number of cloud desktops assigned to the user.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -414,7 +414,7 @@ public class FilterUsersResponseBody extends TeaModel {
         public Long desktopCount;
 
         /**
-         * <p>The number of cloud desktop pools that are assigned to the convenience user. This value is returned if you set <code>IncludeDesktopGroupCount</code> to <code>true</code>.</p>
+         * <p>The number of desktop groups the user can access. This parameter is returned only when <code>IncludeDesktopGroupCount</code> is set to <code>true</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -423,32 +423,16 @@ public class FilterUsersResponseBody extends TeaModel {
         public Long desktopGroupCount;
 
         /**
-         * <p>The email address of the convenience user.</p>
+         * <p>The email address.</p>
          * 
          * <strong>example:</strong>
-         * <p><a href="mailto:testName@example.com">testName@example.com</a></p>
+         * <p><a href="mailto:username@example.com">username@example.com</a></p>
          */
         @NameInMap("Email")
         public String email;
 
         /**
-         * <p>Indicates whether the convenience user is a local administrator.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li><p>true</p>
-         * <!-- -->
-         * 
-         * <!-- -->
-         * 
-         * <!-- -->
-         * </li>
-         * <li><p>false</p>
-         * <!-- -->
-         * 
-         * <!-- -->
-         * 
-         * <!-- --></li>
-         * </ul>
+         * <p>Indicates whether the user has local administrator permissions.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -457,16 +441,16 @@ public class FilterUsersResponseBody extends TeaModel {
         public Boolean enableAdminAccess;
 
         /**
-         * <p>The username of the convenience user.</p>
+         * <p>The user name.</p>
          * 
          * <strong>example:</strong>
-         * <p>testName</p>
+         * <p>alice</p>
          */
         @NameInMap("EndUserId")
         public String endUserId;
 
         /**
-         * <p>The additional information about the convenience user.</p>
+         * <p>External user information.</p>
          */
         @NameInMap("ExternalInfo")
         public FilterUsersResponseBodyUsersExternalInfo externalInfo;
@@ -475,32 +459,16 @@ public class FilterUsersResponseBody extends TeaModel {
         public java.util.List<FilterUsersResponseBodyUsersGroups> groups;
 
         /**
-         * <p>The ID of the convenience user.</p>
+         * <p>The user ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>12345</p>
+         * <p>4205**</p>
          */
         @NameInMap("Id")
         public Long id;
 
         /**
-         * <p>Indicates whether the convenience user is a tenant administrator.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li><p>true</p>
-         * <!-- -->
-         * 
-         * <!-- -->
-         * 
-         * <!-- -->
-         * </li>
-         * <li><p>false</p>
-         * <!-- -->
-         * 
-         * <!-- -->
-         * 
-         * <!-- --></li>
-         * </ul>
+         * <p>Indicates whether the user is a tenant administrator.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -509,18 +477,13 @@ public class FilterUsersResponseBody extends TeaModel {
         public Boolean isTenantManager;
 
         /**
-         * <p>The organizations to which the user belongs.</p>
+         * <p>A list of organizations the user belongs to.</p>
          */
         @NameInMap("OrgList")
         public java.util.List<FilterUsersResponseBodyUsersOrgList> orgList;
 
         /**
-         * <p>The type of the account ownership.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>CreateFromManager: administrator-activated</li>
-         * <li>Normal: user-activated</li>
-         * </ul>
+         * <p>The account ownership type.</p>
          * 
          * <strong>example:</strong>
          * <p>Normal</p>
@@ -529,9 +492,9 @@ public class FilterUsersResponseBody extends TeaModel {
         public String ownerType;
 
         /**
-         * <p>By default, user account passwords do not expire. However, you can set a validity period between 30 and 365 days. Once the period expires, end users must change their password before they can log on to terminals.</p>
+         * <p>The password validity period in days. By default, passwords do not expire. Set this to a value from 30 to 365 to enforce an expiration policy. When a password expires, the user must change it before logging on again.</p>
          * <blockquote>
-         * <p> The feature is in invitational preview. If you want to use this feature, submit a ticket.</p>
+         * <p>This feature is in preview and available by invitation only. To use this feature, submit a ticket.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -541,7 +504,7 @@ public class FilterUsersResponseBody extends TeaModel {
         public Integer passwordExpireDays;
 
         /**
-         * <p>The number of days remaining until the account password expires.</p>
+         * <p>The number of days until the password expires.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -550,7 +513,7 @@ public class FilterUsersResponseBody extends TeaModel {
         public Integer passwordExpireRestDays;
 
         /**
-         * <p>The mobile number of the convenience user.</p>
+         * <p>The phone number.</p>
          * 
          * <strong>example:</strong>
          * <p>1381111****</p>
@@ -559,19 +522,19 @@ public class FilterUsersResponseBody extends TeaModel {
         public String phone;
 
         /**
-         * <p>The nickname of the convenience user.</p>
+         * <p>The user\&quot;s nickname.</p>
          * 
          * <strong>example:</strong>
-         * <p>Oliver</p>
+         * <p>小明</p>
          */
         @NameInMap("RealNickName")
         public String realNickName;
 
         /**
-         * <p>The remarks on the convenience user.</p>
+         * <p>The remark about the user.</p>
          * 
          * <strong>example:</strong>
-         * <p>1</p>
+         * <p>测试专用</p>
          */
         @NameInMap("Remark")
         public String remark;
@@ -580,12 +543,7 @@ public class FilterUsersResponseBody extends TeaModel {
         public java.util.List<FilterUsersResponseBodyUsersResourcePolicyList> resourcePolicyList;
 
         /**
-         * <p>The remarks on the convenience account.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>0: The convenience account is normal.</li>
-         * <li>9: The convenience account is locked.</li>
-         * </ul>
+         * <p>The status of the convenience account.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -594,13 +552,13 @@ public class FilterUsersResponseBody extends TeaModel {
         public Long status;
 
         /**
-         * <p>The supported identity provider logon methods.</p>
+         * <p>A list of identity providers (IdPs) that the user can use to log on.</p>
          */
         @NameInMap("SupportLoginIdps")
         public java.util.List<FilterUsersResponseBodyUsersSupportLoginIdps> supportLoginIdps;
 
         /**
-         * <p>The information about the properties.</p>
+         * <p>A list of user properties.</p>
          */
         @NameInMap("UserSetPropertiesModels")
         public java.util.List<FilterUsersResponseBodyUsersUserSetPropertiesModels> userSetPropertiesModels;

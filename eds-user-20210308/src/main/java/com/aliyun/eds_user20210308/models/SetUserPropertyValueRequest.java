@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class SetUserPropertyValueRequest extends TeaModel {
     /**
+     * <p>Channel</p>
+     * 
      * <strong>example:</strong>
      * <p>ENTERPRISE</p>
      */
@@ -16,7 +18,7 @@ public class SetUserPropertyValueRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>390</p>
+     * <p>240**</p>
      */
     @NameInMap("PropertyId")
     public Long propertyId;
@@ -26,7 +28,7 @@ public class SetUserPropertyValueRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>978</p>
+     * <p>2251**</p>
      */
     @NameInMap("PropertyValueId")
     public Long propertyValueId;
@@ -36,7 +38,7 @@ public class SetUserPropertyValueRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>11</p>
+     * <p>111****</p>
      */
     @NameInMap("UserId")
     public Long userId;
@@ -46,7 +48,7 @@ public class SetUserPropertyValueRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>test</p>
+     * <p>alice</p>
      */
     @NameInMap("UserName")
     public String userName;

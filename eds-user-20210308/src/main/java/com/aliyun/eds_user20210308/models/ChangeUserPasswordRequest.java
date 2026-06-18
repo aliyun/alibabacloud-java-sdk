@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ChangeUserPasswordRequest extends TeaModel {
     /**
+     * <p>Channel</p>
+     * 
      * <strong>example:</strong>
      * <p>ENTERPRISE</p>
      */
@@ -12,6 +14,8 @@ public class ChangeUserPasswordRequest extends TeaModel {
     public String businessChannel;
 
     /**
+     * <p>The username of the convenience account whose password is to be modified.</p>
+     * 
      * <strong>example:</strong>
      * <p>alice***</p>
      */
@@ -19,6 +23,8 @@ public class ChangeUserPasswordRequest extends TeaModel {
     public String endUserId;
 
     /**
+     * <p>The new password for the user.</p>
+     * 
      * <strong>example:</strong>
      * <p>Admin@12***</p>
      */

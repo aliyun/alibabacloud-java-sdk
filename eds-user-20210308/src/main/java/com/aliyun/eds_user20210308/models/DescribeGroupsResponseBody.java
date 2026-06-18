@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeGroupsResponseBody extends TeaModel {
     /**
-     * <p>The number of the entries returned.</p>
+     * <p>The total number of entries returned.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -14,12 +14,14 @@ public class DescribeGroupsResponseBody extends TeaModel {
     public Integer count;
 
     /**
-     * <p>The user groups.</p>
+     * <p>A list of user groups.</p>
      */
     @NameInMap("Groups")
     public java.util.List<DescribeGroupsResponseBodyGroups> groups;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</p>
      */
@@ -56,9 +58,15 @@ public class DescribeGroupsResponseBody extends TeaModel {
     }
 
     public static class DescribeGroupsResponseBodyGroupsAttachedLoginPolicy extends TeaModel {
+        /**
+         * <p>The name of the logon policy.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The ID of the logon policy.</p>
+         */
         @NameInMap("PolicyId")
         public String policyId;
 
@@ -86,17 +94,20 @@ public class DescribeGroupsResponseBody extends TeaModel {
     }
 
     public static class DescribeGroupsResponseBodyGroups extends TeaModel {
+        /**
+         * <p>The logon policy attached to the user group.</p>
+         */
         @NameInMap("AttachedLoginPolicy")
         public DescribeGroupsResponseBodyGroupsAttachedLoginPolicy attachedLoginPolicy;
 
         /**
-         * <p>The type of the resource assigned to the user group.</p>
+         * <p>A list of authorized resources.</p>
          */
         @NameInMap("AuthedResources")
         public java.util.Map<String, String> authedResources;
 
         /**
-         * <p>The time when the user group is created.</p>
+         * <p>The time when the user group was created.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-08-07T13:40:40+08:00</p>
@@ -114,6 +125,8 @@ public class DescribeGroupsResponseBody extends TeaModel {
         public String description;
 
         /**
+         * <p>The ID of the user group.</p>
+         * 
          * <strong>example:</strong>
          * <p>ug-2412ojkwtybd****</p>
          */
@@ -130,7 +143,7 @@ public class DescribeGroupsResponseBody extends TeaModel {
         public String groupName;
 
         /**
-         * <p>Indicates whether the file approval feature is enabled.</p>
+         * <p>Indicates whether file transfer approval is enabled.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -139,7 +152,7 @@ public class DescribeGroupsResponseBody extends TeaModel {
         public Boolean transferFileNeedApproval;
 
         /**
-         * <p>The number of users in the user group.</p>
+         * <p>The number of members in the user group.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>

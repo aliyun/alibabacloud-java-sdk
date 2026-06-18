@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DeleteResourceGroupRequest extends TeaModel {
     /**
+     * <p>Channel</p>
+     * 
      * <strong>example:</strong>
      * <p>ENTERPRISE</p>
      */

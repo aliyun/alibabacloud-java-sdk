@@ -8,13 +8,13 @@ public class CreateUsersResponseBody extends TeaModel {
     public Boolean allSucceed;
 
     /**
-     * <p>The result of user creation.</p>
+     * <p>The result of creating convenience accounts.</p>
      */
     @NameInMap("CreateResult")
     public CreateUsersResponseBodyCreateResult createResult;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</p>
@@ -53,7 +53,7 @@ public class CreateUsersResponseBody extends TeaModel {
 
     public static class CreateUsersResponseBodyCreateResultCreatedUsers extends TeaModel {
         /**
-         * <p>The email address of the end user.</p>
+         * <p>The email address.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="mailto:username@example.com">username@example.com</a></p>
@@ -62,7 +62,7 @@ public class CreateUsersResponseBody extends TeaModel {
         public String email;
 
         /**
-         * <p>The name of the end user.</p>
+         * <p>The user name.</p>
          * 
          * <strong>example:</strong>
          * <p>test1</p>
@@ -71,7 +71,7 @@ public class CreateUsersResponseBody extends TeaModel {
         public String endUserId;
 
         /**
-         * <p>The mobile number of the end user.</p>
+         * <p>The phone number.</p>
          * 
          * <strong>example:</strong>
          * <p>1381111****</p>
@@ -80,7 +80,7 @@ public class CreateUsersResponseBody extends TeaModel {
         public String phone;
 
         /**
-         * <p>The display name of the end user.</p>
+         * <p>The display name.</p>
          * 
          * <strong>example:</strong>
          * <p>Bean</p>
@@ -89,7 +89,7 @@ public class CreateUsersResponseBody extends TeaModel {
         public String realNickName;
 
         /**
-         * <p>The remarks of the end user.</p>
+         * <p>The user\&quot;s remark.</p>
          * 
          * <strong>example:</strong>
          * <p>remark1</p>
@@ -146,7 +146,7 @@ public class CreateUsersResponseBody extends TeaModel {
 
     public static class CreateUsersResponseBodyCreateResultFailedUsers extends TeaModel {
         /**
-         * <p>The email address of the end user.</p>
+         * <p>The email address.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="mailto:username2@example.com">username2@example.com</a></p>
@@ -155,7 +155,7 @@ public class CreateUsersResponseBody extends TeaModel {
         public String email;
 
         /**
-         * <p>The name of the end user.</p>
+         * <p>The user name.</p>
          * 
          * <strong>example:</strong>
          * <p>test2</p>
@@ -164,7 +164,7 @@ public class CreateUsersResponseBody extends TeaModel {
         public String endUserId;
 
         /**
-         * <p>The error code returned if the request failed.</p>
+         * <p>The error code.</p>
          * 
          * <strong>example:</strong>
          * <p>ExistedEndUserId</p>
@@ -173,7 +173,7 @@ public class CreateUsersResponseBody extends TeaModel {
         public String errorCode;
 
         /**
-         * <p>The error message returned.</p>
+         * <p>The error message.</p>
          * 
          * <strong>example:</strong>
          * <p>The username test is used by another user.</p>
@@ -182,7 +182,7 @@ public class CreateUsersResponseBody extends TeaModel {
         public String errorMessage;
 
         /**
-         * <p>The mobile number of the end user.</p>
+         * <p>The phone number.</p>
          * 
          * <strong>example:</strong>
          * <p>1390000****</p>
@@ -239,13 +239,13 @@ public class CreateUsersResponseBody extends TeaModel {
 
     public static class CreateUsersResponseBodyCreateResult extends TeaModel {
         /**
-         * <p>Details of the created convenience users.</p>
+         * <p>The convenience accounts that were successfully created.</p>
          */
         @NameInMap("CreatedUsers")
         public java.util.List<CreateUsersResponseBodyCreateResultCreatedUsers> createdUsers;
 
         /**
-         * <p>Details of the convenience users that failed to be created.</p>
+         * <p>The convenience accounts that failed to be created.</p>
          */
         @NameInMap("FailedUsers")
         public java.util.List<CreateUsersResponseBodyCreateResultFailedUsers> failedUsers;

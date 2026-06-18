@@ -8,12 +8,14 @@ public class CreateGroupResponseBody extends TeaModel {
      * <p>The ID of the user group.</p>
      * 
      * <strong>example:</strong>
-     * <p>ug-12341234****</p>
+     * <p>ug-eld7uv7vtgqsz****</p>
      */
     @NameInMap("GroupId")
     public String groupId;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>AA8D67CB-345D-5CDA-986E-FFAC7D0****</p>
      */

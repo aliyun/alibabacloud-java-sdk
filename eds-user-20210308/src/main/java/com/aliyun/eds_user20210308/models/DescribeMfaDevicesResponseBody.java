@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeMfaDevicesResponseBody extends TeaModel {
     /**
-     * <p>The information about the virtual MFA devices.</p>
+     * <p>A list of virtual MFA devices.</p>
      */
     @NameInMap("MfaDevices")
     public java.util.List<DescribeMfaDevicesResponseBodyMfaDevices> mfaDevices;
 
     /**
-     * <p>The pagination token that is used in the next request to retrieve a new page of results.</p>
+     * <p>The token that is used to retrieve the next page of results.</p>
      * 
      * <strong>example:</strong>
      * <p>AAAAAV3MpHK1AP0pfERHZN5pu6na6YlN9asMM31MsMcdQNpp</p>
@@ -114,7 +114,7 @@ public class DescribeMfaDevicesResponseBody extends TeaModel {
         public DescribeMfaDevicesResponseBodyMfaDevicesAdUser adUser;
 
         /**
-         * <p>The number of consecutive failures to bind the virtual MFA device, or the number of authentication failures based on the virtual MFA device.</p>
+         * <p>The number of consecutive failed attempts to bind or authenticate the virtual MFA device.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -123,7 +123,7 @@ public class DescribeMfaDevicesResponseBody extends TeaModel {
         public Integer consecutiveFails;
 
         /**
-         * <p>The type of the virtual MFA device. The value can only be <code>TOTP_VIRTUAL</code>. This value indicates that the virtual MFA device follows the Time-based One-time Password (TOTP) algorithm.</p>
+         * <p>The type of the virtual MFA device. Set the value to <code>TOTP_VIRTUAL</code>, which indicates a virtual MFA device that complies with the Time-based One-time Password (TOTP) algorithm.</p>
          * 
          * <strong>example:</strong>
          * <p>TOTP_VIRTUAL</p>
@@ -133,7 +133,7 @@ public class DescribeMfaDevicesResponseBody extends TeaModel {
 
         /**
          * <blockquote>
-         * <p> This parameter is not publicly available.</p>
+         * <p>This parameter is not in use.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -143,16 +143,16 @@ public class DescribeMfaDevicesResponseBody extends TeaModel {
         public String email;
 
         /**
-         * <p>The username of the convenience account that uses the virtual MFA device.</p>
+         * <p>The username of the convenience user who uses the virtual MFA device.</p>
          * 
          * <strong>example:</strong>
-         * <p>test</p>
+         * <p>alice</p>
          */
         @NameInMap("EndUserId")
         public String endUserId;
 
         /**
-         * <p>The time when the virtual MFA device was enabled. The time follows the ISO 8601 standard in the <code>yyyy-MM-ddTHH:mm:ssZ</code> format. The time is displayed in UTC.</p>
+         * <p>The time when the virtual MFA device was enabled. The time is displayed in UTC and is formatted as <code>yyyy-MM-ddTHH:mm:ssZ</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>2021-06-22T06:20:49Z</p>
@@ -161,7 +161,7 @@ public class DescribeMfaDevicesResponseBody extends TeaModel {
         public String gmtEnabled;
 
         /**
-         * <p>The time when the locked virtual MFA device was automatically unlocked. The time follows the ISO 8601 standard in the <code>yyyy-MM-ddTHH:mm:ssZ</code> format. The time is displayed in UTC.</p>
+         * <p>The time when the locked virtual MFA device is automatically unlocked. The time is displayed in UTC and is formatted as <code>yyyy-MM-ddTHH:mm:ssZ</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>2021-06-23T06:20:49Z</p>
@@ -189,29 +189,6 @@ public class DescribeMfaDevicesResponseBody extends TeaModel {
 
         /**
          * <p>The status of the virtual MFA device.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li><p>LOCKED</p>
-         * <!-- -->
-         * 
-         * <!-- -->
-         * 
-         * <!-- -->
-         * </li>
-         * <li><p>UNBOUND</p>
-         * <!-- -->
-         * 
-         * <!-- -->
-         * 
-         * <!-- -->
-         * </li>
-         * <li><p>NORMAL</p>
-         * <!-- -->
-         * 
-         * <!-- -->
-         * 
-         * <!-- --></li>
-         * </ul>
          * 
          * <strong>example:</strong>
          * <p>NORMAL</p>

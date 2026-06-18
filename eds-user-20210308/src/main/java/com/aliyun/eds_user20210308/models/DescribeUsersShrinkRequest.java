@@ -4,14 +4,12 @@ package com.aliyun.eds_user20210308.models;
 import com.aliyun.tea.*;
 
 public class DescribeUsersShrinkRequest extends TeaModel {
-    /**
-     * <strong>example:</strong>
-     * <p>null</p>
-     */
     @NameInMap("BizType")
     public String bizType;
 
     /**
+     * <p>Status</p>
+     * 
      * <strong>example:</strong>
      * <p>ENTERPRISE</p>
      */
@@ -19,22 +17,25 @@ public class DescribeUsersShrinkRequest extends TeaModel {
     public String businessChannel;
 
     /**
-     * <p>The usernames that must be exactly matched.</p>
+     * <p>The list of usernames (EndUserId) that you want to exactly match.</p>
      */
     @NameInMap("EndUserIds")
     public java.util.List<String> endUserIds;
 
     /**
-     * <p>The usernames that must be exactly excluded.</p>
+     * <p>The list of usernames (EndUserId) that you want to exactly exclude.</p>
      */
     @NameInMap("ExcludeEndUserIds")
     public java.util.List<String> excludeEndUserIds;
 
+    /**
+     * <p>The ID of the user group to exclude. If specified, the query returns users who are not in this user group.</p>
+     */
     @NameInMap("ExcludeGroupId")
     public String excludeGroupId;
 
     /**
-     * <p>The string that is used for fuzzy search. You perform fuzzy search by username (EndUserId) and email address (Email). Wildcard characters (\*) are supported. For example, if you set this parameter to <code>a*m</code>, usernames or email addresses that start with <code>a</code> and end with <code>m</code> are returned.</p>
+     * <p>The filter for a fuzzy search. The filter matches usernames (EndUserId) and email addresses (Email). This parameter supports the wildcard character (\*). For example, if you set this parameter to <code>a*m</code>, all results whose usernames or email addresses start with <code>a</code> and end with <code>m</code> are returned.</p>
      * 
      * <strong>example:</strong>
      * <p>a*m</p>
@@ -45,14 +46,22 @@ public class DescribeUsersShrinkRequest extends TeaModel {
     @NameInMap("FilterMap")
     public String filterMapShrink;
 
+    /**
+     * <p>Filters users by whether a cloud resource is assigned.</p>
+     */
     @NameInMap("FilterWithAssignedResource")
     public String filterWithAssignedResourceShrink;
 
+    /**
+     * <blockquote>
+     * <p>This parameter is not available to the public.</p>
+     * </blockquote>
+     */
     @NameInMap("FilterWithAssignedResources")
     public String filterWithAssignedResourcesShrink;
 
     /**
-     * <p>The ID of the organization in which you want to query convenience users.</p>
+     * <p>Performs an exact match by user group ID to query the list of accounts that belong to the user group.</p>
      * 
      * <strong>example:</strong>
      * <p>ug-12341234****</p>
@@ -61,6 +70,8 @@ public class DescribeUsersShrinkRequest extends TeaModel {
     public String groupId;
 
     /**
+     * <p>Queries extended information about the user.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -68,10 +79,12 @@ public class DescribeUsersShrinkRequest extends TeaModel {
     public Boolean isQueryAllSubOrgs;
 
     /**
-     * <p>The maximum number of entries per page.</p>
+     * <p>The number of entries to return on each page.</p>
      * <ul>
-     * <li>Valid values: 1 to 500.</li>
-     * <li>Default value: 500.</li>
+     * <li><p>Valid values: 1 to 500.</p>
+     * </li>
+     * <li><p>Default value: 200.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -81,8 +94,7 @@ public class DescribeUsersShrinkRequest extends TeaModel {
     public Long maxResults;
 
     /**
-     * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request.\
-     * If not all results are returned in a query, a value is returned for the NextToken parameter. In this case, you can use the return value of NextToken to perform the next query.</p>
+     * <p>The token that is used to start the next query. If the number of entries returned exceeds the value of MaxResults, a token is returned. You can use this token in the next query to continue the query.</p>
      * 
      * <strong>example:</strong>
      * <p>caeba0bbb2be03f84eb48b699f0a****</p>
@@ -91,7 +103,7 @@ public class DescribeUsersShrinkRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The ID of the organization in which you want to query users.</p>
+     * <p>Performs an exact match by organization ID to query the list of accounts that belong to the organization.</p>
      * 
      * <strong>example:</strong>
      * <p>org-4mdgc1cocc59z****</p>
@@ -99,18 +111,19 @@ public class DescribeUsersShrinkRequest extends TeaModel {
     @NameInMap("OrgId")
     public String orgId;
 
+    /**
+     * <blockquote>
+     * <p>This parameter is not available to the public.</p>
+     * </blockquote>
+     */
     @NameInMap("ShowExtras")
     public String showExtrasShrink;
 
-    /**
-     * <strong>example:</strong>
-     * <p>null</p>
-     */
     @NameInMap("SolutionId")
     public String solutionId;
 
     /**
-     * <p>The status.</p>
+     * <p>Specifies whether to query users in suborganizations.</p>
      */
     @NameInMap("Status")
     public Integer status;

@@ -8,12 +8,14 @@ public class LockMfaDeviceRequest extends TeaModel {
      * <p>The domain of the Active Directory (AD) workspace.</p>
      * 
      * <strong>example:</strong>
-     * <p>pg-jifenn.com</p>
+     * <p>upower.vip</p>
      */
     @NameInMap("AdDomain")
     public String adDomain;
 
     /**
+     * <p>Channel</p>
+     * 
      * <strong>example:</strong>
      * <p>ENTERPRISE</p>
      */

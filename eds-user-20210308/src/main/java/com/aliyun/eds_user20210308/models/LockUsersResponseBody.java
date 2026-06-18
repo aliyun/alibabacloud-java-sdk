@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class LockUsersResponseBody extends TeaModel {
     /**
-     * <p>The result of the locking the convenience user.</p>
+     * <p>The result of the LockUsers operation.</p>
      */
     @NameInMap("LockUsersResult")
     public LockUsersResponseBodyLockUsersResult lockUsersResult;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</p>
@@ -42,10 +42,10 @@ public class LockUsersResponseBody extends TeaModel {
 
     public static class LockUsersResponseBodyLockUsersResultFailedUsers extends TeaModel {
         /**
-         * <p>The ID of the convenience user that failed to be locked.</p>
+         * <p>The username of the convenience account that failed to lock.</p>
          * 
          * <strong>example:</strong>
-         * <p>test123</p>
+         * <p>alice</p>
          */
         @NameInMap("EndUserId")
         public String endUserId;
@@ -101,13 +101,13 @@ public class LockUsersResponseBody extends TeaModel {
 
     public static class LockUsersResponseBodyLockUsersResult extends TeaModel {
         /**
-         * <p>The convenience users that failed to be locked.</p>
+         * <p>A list of convenience accounts that failed to lock.</p>
          */
         @NameInMap("FailedUsers")
         public java.util.List<LockUsersResponseBodyLockUsersResultFailedUsers> failedUsers;
 
         /**
-         * <p>The convenience users that were locked.</p>
+         * <p>A list of successfully locked convenience accounts.</p>
          */
         @NameInMap("LockedUsers")
         public java.util.List<String> lockedUsers;

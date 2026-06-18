@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class QuerySyncStatusByAliUidResponseBody extends TeaModel {
     /**
+     * <p>System status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The returned data.</p>
+     */
     @NameInMap("Data")
     public QuerySyncStatusByAliUidResponseBodyData data;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -22,6 +29,8 @@ public class QuerySyncStatusByAliUidResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The error message returned when the request fails.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -29,6 +38,8 @@ public class QuerySyncStatusByAliUidResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</p>
      */
@@ -36,6 +47,8 @@ public class QuerySyncStatusByAliUidResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request succeeded.</p>
+     * 
      * <strong>example:</strong>
      * <p>True</p>
      */
@@ -97,6 +110,8 @@ public class QuerySyncStatusByAliUidResponseBody extends TeaModel {
 
     public static class QuerySyncStatusByAliUidResponseBodyData extends TeaModel {
         /**
+         * <p>Alibaba Cloud account ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>131239236086****</p>
          */
@@ -104,6 +119,8 @@ public class QuerySyncStatusByAliUidResponseBody extends TeaModel {
         public Long aliUid;
 
         /**
+         * <p>The enterprise ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>cdrs948144195608****</p>
          */
@@ -111,6 +128,8 @@ public class QuerySyncStatusByAliUidResponseBody extends TeaModel {
         public String corpId;
 
         /**
+         * <p>Creation Time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2020-06-30 07:50:42</p>
          */
@@ -118,6 +137,8 @@ public class QuerySyncStatusByAliUidResponseBody extends TeaModel {
         public String gmtCreated;
 
         /**
+         * <p>The updated at time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2022-03-02 14:27:39</p>
          */
@@ -125,6 +146,8 @@ public class QuerySyncStatusByAliUidResponseBody extends TeaModel {
         public String gmtModified;
 
         /**
+         * <p>Auto increment ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>18500</p>
          */
@@ -132,6 +155,8 @@ public class QuerySyncStatusByAliUidResponseBody extends TeaModel {
         public Long id;
 
         /**
+         * <p>The latest start time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2022-03-02 14:31:39</p>
          */
@@ -139,6 +164,8 @@ public class QuerySyncStatusByAliUidResponseBody extends TeaModel {
         public String latestBeginTime;
 
         /**
+         * <p>The latest end time, regardless of whether the operation succeeded or failed.</p>
+         * 
          * <strong>example:</strong>
          * <p>2022-03-02 16:13:12</p>
          */
@@ -146,6 +173,8 @@ public class QuerySyncStatusByAliUidResponseBody extends TeaModel {
         public String latestEndTime;
 
         /**
+         * <p>The latest success time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2022-03-02 18:24:01</p>
          */
@@ -153,6 +182,8 @@ public class QuerySyncStatusByAliUidResponseBody extends TeaModel {
         public String latestSuccessTime;
 
         /**
+         * <p>The user synchronization status.</p>
+         * 
          * <strong>example:</strong>
          * <p>success</p>
          */

@@ -6,7 +6,7 @@ import com.aliyun.tea.*;
 public class DescribeGroupsRequest extends TeaModel {
     /**
      * <blockquote>
-     * <p>This parameter is not publicly available.</p>
+     * <p>This parameter is for internal use only.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -19,7 +19,7 @@ public class DescribeGroupsRequest extends TeaModel {
     public String businessChannel;
 
     /**
-     * <p>是否排除已关联登录策略的用户组。</p>
+     * <p>Specifies whether to exclude user groups that are already associated with a logon policy.</p>
      */
     @NameInMap("ExcludeAttachedLoginPolicyGroups")
     public Boolean excludeAttachedLoginPolicyGroups;
@@ -28,7 +28,7 @@ public class DescribeGroupsRequest extends TeaModel {
      * <p>The ID of the user group.</p>
      * 
      * <strong>example:</strong>
-     * <p>ug-12341234****</p>
+     * <p>ug-16nf7xxh4o9gc****</p>
      */
     @NameInMap("GroupId")
     public String groupId;
@@ -46,13 +46,13 @@ public class DescribeGroupsRequest extends TeaModel {
     public String idpId;
 
     /**
-     * <p>指定关联的登录策略筛选。</p>
+     * <p>The ID of a logon policy. If you specify this parameter, the call returns only user groups associated with the policy.</p>
      */
     @NameInMap("LoginPolicyId")
     public String loginPolicyId;
 
     /**
-     * <p>The number of the page to return.</p>
+     * <p>The page number to return.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -61,7 +61,7 @@ public class DescribeGroupsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return on each page. Valid values: 1 to 100. Default value: 10.</p>
+     * <p>The number of entries per page. Maximum value: 100. Default value: 10.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -71,7 +71,7 @@ public class DescribeGroupsRequest extends TeaModel {
 
     /**
      * <blockquote>
-     * <p>This parameter is not publicly available.</p>
+     * <p>This parameter is for internal use only.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -81,7 +81,7 @@ public class DescribeGroupsRequest extends TeaModel {
     public String solutionId;
 
     /**
-     * <p>Indicates whether the file approval feature is enabled.</p>
+     * <p>Specifies whether file approval is enabled.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>

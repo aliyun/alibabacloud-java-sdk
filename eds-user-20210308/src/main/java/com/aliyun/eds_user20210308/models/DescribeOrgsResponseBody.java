@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeOrgsResponseBody extends TeaModel {
     /**
-     * <p>The token that determines the start point of the query. The return value is the value of the NextToken response parameter that was returned last time the DescribeOrgs operation was called.</p>
+     * <p>The token used to retrieve the next page of results. If this parameter is not empty, more results are available. To retrieve the next page, pass this value in the <code>NextToken</code> parameter of a subsequent request.</p>
      * 
      * <strong>example:</strong>
      * <p>AAAAAV3MpHK****</p>
@@ -14,7 +14,7 @@ public class DescribeOrgsResponseBody extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The organizations.</p>
+     * <p>The organization list.</p>
      */
     @NameInMap("Orgs")
     public java.util.List<DescribeOrgsResponseBodyOrgs> orgs;
@@ -92,16 +92,16 @@ public class DescribeOrgsResponseBody extends TeaModel {
          * <p>The organization ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>org-****</p>
+         * <p>org-1mox****</p>
          */
         @NameInMap("OrgId")
         public String orgId;
 
         /**
-         * <p>The name of the organizational unit.</p>
+         * <p>The organization name.</p>
          * 
          * <strong>example:</strong>
-         * <p>org****</p>
+         * <p>设计部****</p>
          */
         @NameInMap("OrgName")
         public String orgName;
@@ -113,7 +113,7 @@ public class DescribeOrgsResponseBody extends TeaModel {
          * <p>The parent organization ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>org-****</p>
+         * <p>org-ezqr****</p>
          */
         @NameInMap("ParentOrgId")
         public String parentOrgId;

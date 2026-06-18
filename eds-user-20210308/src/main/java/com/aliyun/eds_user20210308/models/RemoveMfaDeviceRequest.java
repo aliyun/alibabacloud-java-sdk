@@ -14,6 +14,8 @@ public class RemoveMfaDeviceRequest extends TeaModel {
     public String adDomain;
 
     /**
+     * <p>Channel</p>
+     * 
      * <strong>example:</strong>
      * <p>ENTERPRISE</p>
      */

@@ -14,7 +14,7 @@ public class CreateResourceGroupResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The resource group ID.</p>
+     * <p>The ID of the newly created resource group.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-ckf3cx7isinhk***</p>

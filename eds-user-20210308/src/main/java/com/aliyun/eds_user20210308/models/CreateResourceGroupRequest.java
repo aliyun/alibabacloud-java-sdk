@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateResourceGroupRequest extends TeaModel {
     /**
+     * <p>The business channel.</p>
+     * 
      * <strong>example:</strong>
      * <p>ENTERPRISE</p>
      */
@@ -16,7 +18,7 @@ public class CreateResourceGroupRequest extends TeaModel {
 
     /**
      * <blockquote>
-     * <p> This parameter is not publicly available.</p>
+     * <p>This parameter is for internal use only.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -26,12 +28,7 @@ public class CreateResourceGroupRequest extends TeaModel {
     public Long isResourceGroupWithOfficeSite;
 
     /**
-     * <blockquote>
-     * <p> Set the value to AliyunConsole.</p>
-     * </blockquote>
-     * <ul>
-     * <li>This parameter is not publicly available in other platforms.</li>
-     * </ul>
+     * <p>Set this parameter to <code>AliyunConsole</code> for Wuying Workspace Enterprise Edition.</p>
      * 
      * <strong>example:</strong>
      * <p>AliyunConsole</p>
@@ -44,6 +41,9 @@ public class CreateResourceGroupRequest extends TeaModel {
 
     /**
      * <p>The name of the resource group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>部门A资源组</p>
      */
     @NameInMap("ResourceGroupName")
     public String resourceGroupName;

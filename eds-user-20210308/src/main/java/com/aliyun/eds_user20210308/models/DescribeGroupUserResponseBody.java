@@ -85,6 +85,9 @@ public class DescribeGroupUserResponseBody extends TeaModel {
 
         /**
          * <p>The name of the user group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>开发组</p>
          */
         @NameInMap("GroupName")
         public String groupName;
@@ -156,7 +159,7 @@ public class DescribeGroupUserResponseBody extends TeaModel {
          * <p>The email address.</p>
          * 
          * <strong>example:</strong>
-         * <p>alex****@aliyun.com</p>
+         * <p>alex****@example.com</p>
          */
         @NameInMap("Email")
         public String email;
@@ -212,7 +215,7 @@ public class DescribeGroupUserResponseBody extends TeaModel {
          * <p>The mobile number.</p>
          * 
          * <strong>example:</strong>
-         * <p>188888****</p>
+         * <p>138****1111</p>
          */
         @NameInMap("Phone")
         public String phone;

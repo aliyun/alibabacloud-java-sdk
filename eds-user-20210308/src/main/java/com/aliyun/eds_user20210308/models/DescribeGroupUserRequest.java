@@ -16,6 +16,8 @@ public class DescribeGroupUserRequest extends TeaModel {
     public String bizType;
 
     /**
+     * <p>Channel</p>
+     * 
      * <strong>example:</strong>
      * <p>ENTERPRISE</p>
      */

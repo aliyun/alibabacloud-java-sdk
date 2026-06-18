@@ -5,6 +5,10 @@ import com.aliyun.tea.*;
 
 public class CreateGroupRequest extends TeaModel {
     /**
+     * <blockquote>
+     * <p>This parameter is not publicly available for use.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>ENTERPRISE</p>
      */
@@ -12,6 +16,8 @@ public class CreateGroupRequest extends TeaModel {
     public String bizType;
 
     /**
+     * <p>Channel</p>
+     * 
      * <strong>example:</strong>
      * <p>ENTERPRISE</p>
      */
@@ -27,6 +33,12 @@ public class CreateGroupRequest extends TeaModel {
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <p>The group name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>开发组</p>
+     */
     @NameInMap("GroupName")
     public String groupName;
 

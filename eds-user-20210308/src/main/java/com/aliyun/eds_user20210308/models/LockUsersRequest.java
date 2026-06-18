@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class LockUsersRequest extends TeaModel {
     /**
+     * <p>The channel.</p>
+     * 
      * <strong>example:</strong>
      * <p>ENTERPRISE</p>
      */
@@ -15,7 +17,7 @@ public class LockUsersRequest extends TeaModel {
     public Boolean logoutSession;
 
     /**
-     * <p>The usernames of the convenience users that you want to lock.</p>
+     * <p>The usernames of the convenience accounts to lock.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

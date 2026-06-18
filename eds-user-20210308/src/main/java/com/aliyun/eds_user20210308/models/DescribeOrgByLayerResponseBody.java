@@ -52,6 +52,9 @@ public class DescribeOrgByLayerResponseBody extends TeaModel {
 
         /**
          * <p>The name of the organization.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>开发部</p>
          */
         @NameInMap("OrgName")
         public String orgName;

@@ -14,7 +14,7 @@ public class DescribeResourceGroupsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The resource groups.</p>
+     * <p>A list of resource groups.</p>
      */
     @NameInMap("ResourceGroup")
     public java.util.List<DescribeResourceGroupsResponseBodyResourceGroup> resourceGroup;
@@ -109,7 +109,7 @@ public class DescribeResourceGroupsResponseBody extends TeaModel {
         public String id;
 
         /**
-         * <p>Specifies whether to use the default policy.</p>
+         * <p>Specifies whether this is the default policy.</p>
          * 
          * <strong>example:</strong>
          * <p>False</p>
@@ -119,6 +119,9 @@ public class DescribeResourceGroupsResponseBody extends TeaModel {
 
         /**
          * <p>The policy name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>测试策略123</p>
          */
         @NameInMap("Name")
         public String name;
@@ -159,7 +162,7 @@ public class DescribeResourceGroupsResponseBody extends TeaModel {
         public String bindStatus;
 
         /**
-         * <p>The ID of the scheduled task.</p>
+         * <p>The scheduled task ID.</p>
          * 
          * <strong>example:</strong>
          * <p>t-asdzx0mbjhg***</p>
@@ -168,7 +171,10 @@ public class DescribeResourceGroupsResponseBody extends TeaModel {
         public String id;
 
         /**
-         * <p>The name of the scheduled task.</p>
+         * <p>The scheduled task name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>测试任务123</p>
          */
         @NameInMap("Name")
         public String name;
@@ -217,6 +223,8 @@ public class DescribeResourceGroupsResponseBody extends TeaModel {
 
     public static class DescribeResourceGroupsResponseBodyResourceGroup extends TeaModel {
         /**
+         * <p>The Alibaba Cloud resource group ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>rg-123456</p>
          */
@@ -227,7 +235,7 @@ public class DescribeResourceGroupsResponseBody extends TeaModel {
         public java.util.List<DescribeResourceGroupsResponseBodyResourceGroupAppRules> appRules;
 
         /**
-         * <p>The number of administrators that are authorized to access the resource group.</p>
+         * <p>The number of administrators authorized for the resource group.</p>
          * 
          * <strong>example:</strong>
          * <p>3</p>
@@ -236,7 +244,7 @@ public class DescribeResourceGroupsResponseBody extends TeaModel {
         public String authCount;
 
         /**
-         * <p>The time when the resource group was created.</p>
+         * <p>The time the resource group was created.</p>
          * 
          * <strong>example:</strong>
          * <p>2022-11-29T17:25:40.000000000Z</p>
@@ -246,14 +254,14 @@ public class DescribeResourceGroupsResponseBody extends TeaModel {
 
         /**
          * <blockquote>
-         * <p> The policy that is associated with the resource group.</p>
-         * </blockquote>
+         * <p>The policies associated with the resource group.</p>
          * <ul>
-         * <li><p>The policy applies to cloud computers in the resource group. If multiple policies exist, they are enforced in order of priority.</p>
+         * <li><p>These policies apply to the cloud computers in the resource group. If multiple policies are associated, they are applied in order of priority.</p>
          * </li>
-         * <li><p>If any of these cloud computers are already associated with other policies, the resource group\&quot;s policy takes precedence.</p>
+         * <li><p>Policies associated with the resource group take precedence over policies assigned to individual cloud computers.</p>
          * </li>
          * </ul>
+         * </blockquote>
          */
         @NameInMap("Policies")
         public java.util.List<DescribeResourceGroupsResponseBodyResourceGroupPolicies> policies;
@@ -268,7 +276,7 @@ public class DescribeResourceGroupsResponseBody extends TeaModel {
         public String resourceCount;
 
         /**
-         * <p>The ID of the resource group.</p>
+         * <p>The resource group ID.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-cyo0il2pzge1***</p>
@@ -278,17 +286,20 @@ public class DescribeResourceGroupsResponseBody extends TeaModel {
 
         /**
          * <p>The name of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>测试资源组</p>
          */
         @NameInMap("ResourceGroupName")
         public String resourceGroupName;
 
         /**
          * <blockquote>
-         * <p> The associated scheduled task.</p>
-         * </blockquote>
+         * <p>The scheduled tasks associated with the resource group.</p>
          * <ul>
-         * <li>The scheduled task applies to all cloud computers in the resource group. If any of these cloud computers are already associated with other scheduled tasks, the resource group\&quot;s scheduled task takes precedence.</li>
+         * <li>These scheduled tasks apply to cloud computers in the resource group and take precedence over any tasks associated with individual cloud computers.</li>
          * </ul>
+         * </blockquote>
          */
         @NameInMap("Timers")
         public java.util.List<DescribeResourceGroupsResponseBodyResourceGroupTimers> timers;

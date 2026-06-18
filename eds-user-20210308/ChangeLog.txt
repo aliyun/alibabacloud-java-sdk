@@ -1,3 +1,8 @@
+2026-06-18 Version: 2.2.0
+- Support API TransferResourcesIntoGroup.
+- Support API TransferResourcesOutofGroup.
+
+
 2026-05-11 Version: 2.1.2
 - Update API CreateResourceGroup: add request parameters ResourceClassification.
 - Update API DescribeResourceGroups: add request parameters ResourceClassification.

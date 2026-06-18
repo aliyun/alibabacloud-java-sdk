@@ -4,10 +4,15 @@ package com.aliyun.eds_user20210308.models;
 import com.aliyun.tea.*;
 
 public class DescribeResourceGroupsRequest extends TeaModel {
+    /**
+     * <p>A list of Aliyun resource group IDs.</p>
+     */
     @NameInMap("AliyunResourceGroupIds")
     public java.util.List<String> aliyunResourceGroupIds;
 
     /**
+     * <p>The business channel.</p>
+     * 
      * <strong>example:</strong>
      * <p>ENTERPRISE</p>
      */
@@ -16,7 +21,7 @@ public class DescribeResourceGroupsRequest extends TeaModel {
 
     /**
      * <blockquote>
-     * <p> This parameter is not publicly available.</p>
+     * <p>This parameter is not publicly available.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -26,7 +31,7 @@ public class DescribeResourceGroupsRequest extends TeaModel {
     public Long needContainResourceGroupWithOfficeSite;
 
     /**
-     * <p>The page number. Pages start from page 1.</p>
+     * <p>The page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -35,7 +40,7 @@ public class DescribeResourceGroupsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page.</p>
+     * <p>The number of entries to return per page.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -45,11 +50,11 @@ public class DescribeResourceGroupsRequest extends TeaModel {
 
     /**
      * <blockquote>
-     * <p> Set the value to AliyunConsole.</p>
-     * </blockquote>
+     * <p>The cloud platform.</p>
      * <ul>
-     * <li>This parameter is not publicly available on other platforms.</li>
+     * <li>For Elastic Desktop Service (EDS) Enterprise Edition, this parameter must be set to AliyunConsole.</li>
      * </ul>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>AliyunConsole</p>
@@ -61,13 +66,16 @@ public class DescribeResourceGroupsRequest extends TeaModel {
     public String resourceClassification;
 
     /**
-     * <p>The IDs of the resource groups that you want to query.</p>
+     * <p>A list of resource group IDs.</p>
      */
     @NameInMap("ResourceGroupIds")
     public java.util.List<String> resourceGroupIds;
 
     /**
      * <p>The name of the resource group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>部门A资源组</p>
      */
     @NameInMap("ResourceGroupName")
     public String resourceGroupName;

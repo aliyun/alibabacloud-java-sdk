@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeOrgsShrinkRequest extends TeaModel {
     /**
+     * <p>The channel.</p>
+     * 
      * <strong>example:</strong>
      * <p>ENTERPRISE</p>
      */
@@ -15,8 +17,8 @@ public class DescribeOrgsShrinkRequest extends TeaModel {
     public java.util.List<String> includeOrgIds;
 
     /**
-     * <p>The maximum number of entries to return. Valid values: 1 to 100.\
-     * Default value: 100.</p>
+     * <p>The maximum number of entries to return. Valid values: 1 to 100.<br>
+     * Default value: 100.<br></p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -25,7 +27,7 @@ public class DescribeOrgsShrinkRequest extends TeaModel {
     public Long maxResults;
 
     /**
-     * <p>The token that determines the start point of the query. The return value is the value of the NextToken response parameter that was returned last time the DescribeOrgs operation was called.</p>
+     * <p>The pagination token. To retrieve the next page of results, set this parameter to the <code>NextToken</code> value that was returned from a previous request.</p>
      * 
      * <strong>example:</strong>
      * <p>AAAAAV3MpHK****</p>
@@ -34,10 +36,10 @@ public class DescribeOrgsShrinkRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The name of the organization.</p>
+     * <p>The organization name.</p>
      * 
      * <strong>example:</strong>
-     * <p>org****</p>
+     * <p>产品部</p>
      */
     @NameInMap("OrgName")
     public String orgName;
@@ -46,7 +48,7 @@ public class DescribeOrgsShrinkRequest extends TeaModel {
      * <p>The parent organization ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>org-****</p>
+     * <p>org-11fs****</p>
      */
     @NameInMap("ParentOrgId")
     public String parentOrgId;

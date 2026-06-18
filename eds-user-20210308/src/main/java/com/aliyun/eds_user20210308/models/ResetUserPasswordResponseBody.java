@@ -45,7 +45,7 @@ public class ResetUserPasswordResponseBody extends TeaModel {
          * <p>The ID of the convenience user whose password failed to be reset.</p>
          * 
          * <strong>example:</strong>
-         * <p>test123</p>
+         * <p>alice</p>
          */
         @NameInMap("EndUserId")
         public String endUserId;
