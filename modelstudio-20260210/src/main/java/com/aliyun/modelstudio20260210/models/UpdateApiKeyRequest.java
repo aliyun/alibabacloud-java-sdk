@@ -4,10 +4,15 @@ package com.aliyun.modelstudio20260210.models;
 import com.aliyun.tea.*;
 
 public class UpdateApiKeyRequest extends TeaModel {
+    /**
+     * <p>The API key permission settings.</p>
+     */
     @NameInMap("auth")
     public UpdateApiKeyRequestAuth auth;
 
     /**
+     * <p>The description.</p>
+     * 
      * <strong>example:</strong>
      * <p>update description.</p>
      */
@@ -36,9 +41,27 @@ public class UpdateApiKeyRequest extends TeaModel {
     }
 
     public static class UpdateApiKeyRequestAuth extends TeaModel {
+        /**
+         * <p>The IP access whitelist.</p>
+         * <blockquote>
+         * <ul>
+         * <li>When you set custom permissions and do not specify the IP access whitelist, the server sets the whitelist to IPv4 (0.0.0.0/0) and IPv6 (::/0) by default, which allows all traffic.</li>
+         * </ul>
+         * </blockquote>
+         */
         @NameInMap("accessIps")
         public java.util.List<String> accessIps;
 
+        /**
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>All: all permissions.</li>
+         * <li>Custom: custom permissions.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Custom</p>
+         */
         @NameInMap("type")
         public String type;
 

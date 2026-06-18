@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListWorkspacesRequest extends TeaModel {
     /**
+     * <p>The number of entries per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -12,6 +14,8 @@ public class ListWorkspacesRequest extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>The pagination token used to retrieve more results. You do not need to specify this parameter for the first request. For subsequent requests, use the token returned in the previous response.</p>
+     * 
      * <strong>example:</strong>
      * <p>uwCwQ5FFCDo=</p>
      */
@@ -26,6 +30,8 @@ public class ListWorkspacesRequest extends TeaModel {
     public String workspaceId;
 
     /**
+     * <p>The keyword for fuzzy match by business workspace name.</p>
+     * 
      * <strong>example:</strong>
      * <p>ws_test</p>
      */

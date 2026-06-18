@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpdateApiKeyResponseBody extends TeaModel {
     /**
+     * <p>The response status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -12,6 +14,8 @@ public class UpdateApiKeyResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -19,6 +23,8 @@ public class UpdateApiKeyResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The response message.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -35,6 +41,12 @@ public class UpdateApiKeyResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the API call is successful. Valid values:</p>
+     * <ul>
+     * <li>true: The call succeeded.</li>
+     * <li>false: The call failed.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

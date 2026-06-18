@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DeleteApiKeyResponseBody extends TeaModel {
     /**
+     * <p>The status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -12,6 +14,8 @@ public class DeleteApiKeyResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -19,6 +23,8 @@ public class DeleteApiKeyResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The response message.</p>
+     * 
      * <strong>example:</strong>
      * <p>ok</p>
      */
@@ -35,6 +41,8 @@ public class DeleteApiKeyResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the API call was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

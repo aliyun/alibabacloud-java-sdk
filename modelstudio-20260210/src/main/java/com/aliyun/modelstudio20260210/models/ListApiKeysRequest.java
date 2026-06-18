@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListApiKeysRequest extends TeaModel {
     /**
+     * <p>Exact search by API Key ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>3076140</p>
      */
@@ -12,6 +14,8 @@ public class ListApiKeysRequest extends TeaModel {
     public Long apiKeyId;
 
     /**
+     * <p>Fuzzy search by description keyword.</p>
+     * 
      * <strong>example:</strong>
      * <p>test</p>
      */
@@ -19,6 +23,8 @@ public class ListApiKeysRequest extends TeaModel {
     public String description;
 
     /**
+     * <p>Page size.</p>
+     * 
      * <strong>example:</strong>
      * <p>30</p>
      */
@@ -26,6 +32,8 @@ public class ListApiKeysRequest extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>Used to return more results. This parameter is not required for the first query. The token required for subsequent queries can be obtained from the returned results.</p>
+     * 
      * <strong>example:</strong>
      * <p>w9Z+S5+TZyw=</p>
      */
@@ -33,6 +41,8 @@ public class ListApiKeysRequest extends TeaModel {
     public String nextToken;
 
     /**
+     * <p>Exact search by workspace ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>ws-ac3ef438bec22dc5</p>
      */

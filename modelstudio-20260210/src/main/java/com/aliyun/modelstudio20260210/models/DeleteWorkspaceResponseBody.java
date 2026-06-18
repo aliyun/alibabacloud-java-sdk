@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class DeleteWorkspaceResponseBody extends TeaModel {
     /**
+     * <p>The response status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("code")
     public String code;
 
+    /**
+     * <p>The list of failure reasons.</p>
+     */
     @NameInMap("failReasons")
     public java.util.List<DeleteWorkspaceResponseBodyFailReasons> failReasons;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -22,6 +29,14 @@ public class DeleteWorkspaceResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>Indicates whether the workspace is successfully deleted. Valid values:</p>
+     * <ul>
+     * <li><p>true: Succeeded.</p>
+     * </li>
+     * <li><p>false: Failed.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -29,6 +44,8 @@ public class DeleteWorkspaceResponseBody extends TeaModel {
     public Boolean isDeleted;
 
     /**
+     * <p>The response message.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -45,6 +62,12 @@ public class DeleteWorkspaceResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the API call is successful. Valid values:</p>
+     * <ul>
+     * <li>true: Succeeded.</li>
+     * <li>false: Failed.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -114,6 +137,8 @@ public class DeleteWorkspaceResponseBody extends TeaModel {
 
     public static class DeleteWorkspaceResponseBodyFailReasons extends TeaModel {
         /**
+         * <p>The specific reason.</p>
+         * 
          * <strong>example:</strong>
          * <p>API Key exists. Please clear them first.</p>
          */
@@ -121,6 +146,8 @@ public class DeleteWorkspaceResponseBody extends TeaModel {
         public String reason;
 
         /**
+         * <p>The resource type.</p>
+         * 
          * <strong>example:</strong>
          * <p>API Key</p>
          */

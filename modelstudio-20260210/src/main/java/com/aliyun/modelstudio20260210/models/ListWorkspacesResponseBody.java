@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListWorkspacesResponseBody extends TeaModel {
     /**
+     * <p>The response status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -12,6 +14,8 @@ public class ListWorkspacesResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -19,6 +23,8 @@ public class ListWorkspacesResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The number of entries per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>100</p>
      */
@@ -26,6 +32,8 @@ public class ListWorkspacesResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>The response message.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -33,6 +41,8 @@ public class ListWorkspacesResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The pagination token used to retrieve more results. You do not need to specify this parameter for the first request. For subsequent requests, use the token returned in the previous response.</p>
+     * 
      * <strong>example:</strong>
      * <p>TbB1IsZUSR4iE</p>
      */
@@ -49,6 +59,12 @@ public class ListWorkspacesResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the API call was successful. Valid values:</p>
+     * <ul>
+     * <li>true: Successful.</li>
+     * <li>false: Failed.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -56,12 +72,17 @@ public class ListWorkspacesResponseBody extends TeaModel {
     public Boolean success;
 
     /**
+     * <p>The total number of records.</p>
+     * 
      * <strong>example:</strong>
      * <p>149</p>
      */
     @NameInMap("totalCount")
     public Integer totalCount;
 
+    /**
+     * <p>The list of business workspaces.</p>
+     */
     @NameInMap("workspaces")
     public java.util.List<ListWorkspacesResponseBodyWorkspaces> workspaces;
 
@@ -153,6 +174,8 @@ public class ListWorkspacesResponseBody extends TeaModel {
         public String apiHost;
 
         /**
+         * <p>The creation time.</p>
+         * 
          * <strong>example:</strong>
          * <p>1742785623772</p>
          */
@@ -160,6 +183,8 @@ public class ListWorkspacesResponseBody extends TeaModel {
         public Long gmtCreate;
 
         /**
+         * <p>The region ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-beijing</p>
          */
@@ -167,6 +192,8 @@ public class ListWorkspacesResponseBody extends TeaModel {
         public String region;
 
         /**
+         * <p>The service deployment scope. For more information, see <a href="https://www.alibabacloud.com/help/zh/model-studio/regions/">documentation</a>.</p>
+         * 
          * <strong>example:</strong>
          * <p>global</p>
          */
@@ -174,6 +201,8 @@ public class ListWorkspacesResponseBody extends TeaModel {
         public String serviceSite;
 
         /**
+         * <p>The business workspace ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>ws-0759e7b7ea7f585b</p>
          */
@@ -181,6 +210,8 @@ public class ListWorkspacesResponseBody extends TeaModel {
         public String workspaceId;
 
         /**
+         * <p>The business workspace name.</p>
+         * 
          * <strong>example:</strong>
          * <p>default</p>
          */

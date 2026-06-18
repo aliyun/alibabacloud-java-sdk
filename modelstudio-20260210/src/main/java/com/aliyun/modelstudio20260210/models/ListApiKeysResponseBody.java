@@ -4,10 +4,15 @@ package com.aliyun.modelstudio20260210.models;
 import com.aliyun.tea.*;
 
 public class ListApiKeysResponseBody extends TeaModel {
+    /**
+     * <p>List of API Keys.</p>
+     */
     @NameInMap("apiKeys")
     public java.util.List<ListApiKeysResponseBodyApiKeys> apiKeys;
 
     /**
+     * <p>Response status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -15,6 +20,8 @@ public class ListApiKeysResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -22,6 +29,8 @@ public class ListApiKeysResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>Page size.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -29,6 +38,8 @@ public class ListApiKeysResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>Response message.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -36,6 +47,8 @@ public class ListApiKeysResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>Used to return more results. This parameter is not required for the first query. The token required for subsequent queries can be obtained from the returned results.</p>
+     * 
      * <strong>example:</strong>
      * <p>lwytFRtLdNk=</p>
      */
@@ -52,6 +65,12 @@ public class ListApiKeysResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Whether the API call is successful:</p>
+     * <ul>
+     * <li>true: Successful.</li>
+     * <li>false: Failed.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -59,6 +78,8 @@ public class ListApiKeysResponseBody extends TeaModel {
     public Boolean success;
 
     /**
+     * <p>Total number of records.</p>
+     * 
      * <strong>example:</strong>
      * <p>4</p>
      */
@@ -143,12 +164,17 @@ public class ListApiKeysResponseBody extends TeaModel {
     }
 
     public static class ListApiKeysResponseBodyApiKeysAuth extends TeaModel {
+        /**
+         * <p>IP access whitelist.</p>
+         */
         @NameInMap("accessIps")
         public java.util.List<String> accessIps;
 
         /**
+         * <p>All: All permissions; Custom: Custom permissions.</p>
+         * 
          * <strong>example:</strong>
-         * <p>All</p>
+         * <p>Custom</p>
          */
         @NameInMap("type")
         public String type;
@@ -178,7 +204,7 @@ public class ListApiKeysResponseBody extends TeaModel {
 
     public static class ListApiKeysResponseBodyApiKeys extends TeaModel {
         /**
-         * <p>API Key ID。</p>
+         * <p>API Key ID.</p>
          * 
          * <strong>example:</strong>
          * <p>2965964</p>
@@ -187,16 +213,23 @@ public class ListApiKeysResponseBody extends TeaModel {
         public Long apiKeyId;
 
         /**
+         * <p>Value of the API Key.</p>
+         * 
          * <strong>example:</strong>
          * <p>sk-ws-djI.8O7d*****2aICctnid4u4</p>
          */
         @NameInMap("apiKeyValue")
         public String apiKeyValue;
 
+        /**
+         * <p>Permission settings.</p>
+         */
         @NameInMap("auth")
         public ListApiKeysResponseBodyApiKeysAuth auth;
 
         /**
+         * <p>Creator.</p>
+         * 
          * <strong>example:</strong>
          * <p>1378030599924858</p>
          */
@@ -204,6 +237,8 @@ public class ListApiKeysResponseBody extends TeaModel {
         public String createdBy;
 
         /**
+         * <p>Description.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -211,6 +246,12 @@ public class ListApiKeysResponseBody extends TeaModel {
         public String description;
 
         /**
+         * <p>Whether the API Key is disabled.</p>
+         * <ul>
+         * <li><strong>0</strong>: Active.</li>
+         * <li><strong>1</strong>: Disabled.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -218,6 +259,8 @@ public class ListApiKeysResponseBody extends TeaModel {
         public Integer disabled;
 
         /**
+         * <p>Creation time.</p>
+         * 
          * <strong>example:</strong>
          * <p>1774338222000</p>
          */
@@ -225,6 +268,8 @@ public class ListApiKeysResponseBody extends TeaModel {
         public Long gmtCreate;
 
         /**
+         * <p>Workspace ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>ws-950f9aca7e76c816</p>
          */

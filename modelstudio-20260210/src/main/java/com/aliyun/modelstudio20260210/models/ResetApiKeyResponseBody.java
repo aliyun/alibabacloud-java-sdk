@@ -4,10 +4,15 @@ package com.aliyun.modelstudio20260210.models;
 import com.aliyun.tea.*;
 
 public class ResetApiKeyResponseBody extends TeaModel {
+    /**
+     * <p>The API key information.</p>
+     */
     @NameInMap("apiKey")
     public ResetApiKeyResponseBodyApiKey apiKey;
 
     /**
+     * <p>The response status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -15,6 +20,8 @@ public class ResetApiKeyResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -22,6 +29,8 @@ public class ResetApiKeyResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The response message.</p>
+     * 
      * <strong>example:</strong>
      * <p>ok</p>
      */
@@ -38,6 +47,12 @@ public class ResetApiKeyResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <ul>
+     * <li>true: The request was successful.</li>
+     * <li>false: The request failed.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -108,6 +123,8 @@ public class ResetApiKeyResponseBody extends TeaModel {
         public Long apiKeyId;
 
         /**
+         * <p>The value of the API key.</p>
+         * 
          * <strong>example:</strong>
          * <p>sk-ws-djI.8O7dkfkW2aICctnid4u4</p>
          */
@@ -115,6 +132,8 @@ public class ResetApiKeyResponseBody extends TeaModel {
         public String apiKeyValue;
 
         /**
+         * <p>The workspace ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>ws-b2d30f148c236908</p>
          */

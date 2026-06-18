@@ -4,10 +4,15 @@ package com.aliyun.modelstudio20260210.models;
 import com.aliyun.tea.*;
 
 public class CreateApiKeyResponseBody extends TeaModel {
+    /**
+     * <p>The API key information.</p>
+     */
     @NameInMap("apiKey")
     public CreateApiKeyResponseBodyApiKey apiKey;
 
     /**
+     * <p>The response code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -15,6 +20,8 @@ public class CreateApiKeyResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -22,6 +29,8 @@ public class CreateApiKeyResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The response message.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -38,6 +47,12 @@ public class CreateApiKeyResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <ul>
+     * <li>true: Successful.</li>
+     * <li>false: Failed.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -108,6 +123,11 @@ public class CreateApiKeyResponseBody extends TeaModel {
         public Long apiKeyId;
 
         /**
+         * <p>The value of the API key.</p>
+         * <blockquote>
+         * <p>Notice: Copy your API key immediately. Keep it secure. Anyone who obtains this key can initiate service requests on your behalf and incur charges. If you lose the key, you can reset it or create a new one..</p>
+         * </blockquote>
+         * 
          * <strong>example:</strong>
          * <p>sk-ws-djI.8O7dkfkW2aICctnid4u4</p>
          */
@@ -115,6 +135,8 @@ public class CreateApiKeyResponseBody extends TeaModel {
         public String apiKeyValue;
 
         /**
+         * <p>The creator.</p>
+         * 
          * <strong>example:</strong>
          * <p>1378030599924858</p>
          */
@@ -122,6 +144,8 @@ public class CreateApiKeyResponseBody extends TeaModel {
         public String createdBy;
 
         /**
+         * <p>The description.</p>
+         * 
          * <strong>example:</strong>
          * <p>desc</p>
          */
@@ -129,6 +153,8 @@ public class CreateApiKeyResponseBody extends TeaModel {
         public String description;
 
         /**
+         * <p>The creation time.</p>
+         * 
          * <strong>example:</strong>
          * <p>1774338222000</p>
          */
@@ -136,6 +162,8 @@ public class CreateApiKeyResponseBody extends TeaModel {
         public Long gmtCreate;
 
         /**
+         * <p>The workspace ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>ws-3fa048e86117d91f</p>
          */

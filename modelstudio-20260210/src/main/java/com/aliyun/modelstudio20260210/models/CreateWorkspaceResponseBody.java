@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateWorkspaceResponseBody extends TeaModel {
     /**
+     * <p>The response status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -12,6 +14,8 @@ public class CreateWorkspaceResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -19,6 +23,8 @@ public class CreateWorkspaceResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The response message.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -35,12 +41,21 @@ public class CreateWorkspaceResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <ul>
+     * <li>true: Successful.</li>
+     * <li>false: Failed.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
     @NameInMap("success")
     public Boolean success;
 
+    /**
+     * <p>The business workspace information.</p>
+     */
     @NameInMap("workspace")
     public CreateWorkspaceResponseBodyWorkspace workspace;
 
@@ -108,6 +123,8 @@ public class CreateWorkspaceResponseBody extends TeaModel {
         public String apiHost;
 
         /**
+         * <p>The creation time.</p>
+         * 
          * <strong>example:</strong>
          * <p>1742785623772</p>
          */
@@ -115,6 +132,8 @@ public class CreateWorkspaceResponseBody extends TeaModel {
         public Long gmtCreate;
 
         /**
+         * <p>The region ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-beijing</p>
          */
@@ -122,6 +141,8 @@ public class CreateWorkspaceResponseBody extends TeaModel {
         public String region;
 
         /**
+         * <p>The service deployment scope. For more information, see <a href="https://www.alibabacloud.com/help/zh/model-studio/regions/">documentation</a>.</p>
+         * 
          * <strong>example:</strong>
          * <p>global</p>
          */
@@ -129,6 +150,8 @@ public class CreateWorkspaceResponseBody extends TeaModel {
         public String serviceSite;
 
         /**
+         * <p>The business workspace ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>ws-ac3ef438bec22dc5</p>
          */
@@ -136,6 +159,8 @@ public class CreateWorkspaceResponseBody extends TeaModel {
         public String workspaceId;
 
         /**
+         * <p>The name of the business workspace.</p>
+         * 
          * <strong>example:</strong>
          * <p>default</p>
          */

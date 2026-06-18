@@ -4,10 +4,15 @@ package com.aliyun.modelstudio20260210.models;
 import com.aliyun.tea.*;
 
 public class CreateApiKeyRequest extends TeaModel {
+    /**
+     * <p>The API key permission settings.</p>
+     */
     @NameInMap("auth")
     public CreateApiKeyRequestAuth auth;
 
     /**
+     * <p>The description.</p>
+     * 
      * <strong>example:</strong>
      * <p>test</p>
      */
@@ -15,6 +20,13 @@ public class CreateApiKeyRequest extends TeaModel {
     public String description;
 
     /**
+     * <p>The workspace ID.</p>
+     * <blockquote>
+     * <ul>
+     * <li>If you leave this parameter empty, the created API key is automatically assigned to the default workspace.</li>
+     * </ul>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>ws-8af73c50f5596193</p>
      */
@@ -51,12 +63,26 @@ public class CreateApiKeyRequest extends TeaModel {
     }
 
     public static class CreateApiKeyRequestAuth extends TeaModel {
+        /**
+         * <p>The IP address whitelist.</p>
+         * <blockquote>
+         * <ul>
+         * <li>When you use custom permissions, if you do not specify the IP address whitelist, the server sets it to IPv4 (0.0.0.0/0) and IPv6 (::/0) by default, which allows all traffic.</li>
+         * </ul>
+         * </blockquote>
+         */
         @NameInMap("accessIps")
         public java.util.List<String> accessIps;
 
         /**
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>All: all permissions.</li>
+         * <li>Custom: custom permissions.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
-         * <p>All</p>
+         * <p>Custom</p>
          */
         @NameInMap("type")
         public String type;

@@ -4,10 +4,15 @@ package com.aliyun.modelstudio20260210.models;
 import com.aliyun.tea.*;
 
 public class GetApiKeyResponseBody extends TeaModel {
+    /**
+     * <p>The API key information.</p>
+     */
     @NameInMap("apiKey")
     public GetApiKeyResponseBodyApiKey apiKey;
 
     /**
+     * <p>The response status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -15,6 +20,8 @@ public class GetApiKeyResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -22,6 +29,8 @@ public class GetApiKeyResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The response message.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -38,6 +47,12 @@ public class GetApiKeyResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <ul>
+     * <li>true: The request was successful.</li>
+     * <li>false: The request failed.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -98,12 +113,17 @@ public class GetApiKeyResponseBody extends TeaModel {
     }
 
     public static class GetApiKeyResponseBodyApiKeyAuth extends TeaModel {
+        /**
+         * <p>The IP address whitelist.</p>
+         */
         @NameInMap("accessIps")
         public java.util.List<String> accessIps;
 
         /**
+         * <p>The permission type. Valid values: All: all permissions. Custom: custom permissions.</p>
+         * 
          * <strong>example:</strong>
-         * <p>All</p>
+         * <p>Custom</p>
          */
         @NameInMap("type")
         public String type;
@@ -142,16 +162,23 @@ public class GetApiKeyResponseBody extends TeaModel {
         public Long apiKeyId;
 
         /**
+         * <p>The value of the API key.</p>
+         * 
          * <strong>example:</strong>
          * <p>sk-ws-djI.mhU0D****testtestest</p>
          */
         @NameInMap("apiKeyValue")
         public String apiKeyValue;
 
+        /**
+         * <p>The permission settings.</p>
+         */
         @NameInMap("auth")
         public GetApiKeyResponseBodyApiKeyAuth auth;
 
         /**
+         * <p>The creator.</p>
+         * 
          * <strong>example:</strong>
          * <p>1378030599924858</p>
          */
@@ -159,6 +186,8 @@ public class GetApiKeyResponseBody extends TeaModel {
         public String createdBy;
 
         /**
+         * <p>The description.</p>
+         * 
          * <strong>example:</strong>
          * <p>v7</p>
          */
@@ -166,6 +195,12 @@ public class GetApiKeyResponseBody extends TeaModel {
         public String description;
 
         /**
+         * <p>Indicates whether the API key is disabled. Valid values:</p>
+         * <ul>
+         * <li><strong>0</strong>: Active.</li>
+         * <li><strong>1</strong>: Disabled.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -173,6 +208,8 @@ public class GetApiKeyResponseBody extends TeaModel {
         public Integer disabled;
 
         /**
+         * <p>The creation time.</p>
+         * 
          * <strong>example:</strong>
          * <p>1774338222000</p>
          */
@@ -180,6 +217,8 @@ public class GetApiKeyResponseBody extends TeaModel {
         public Long gmtCreate;
 
         /**
+         * <p>The workspace ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>ws-b2d30f148c236908</p>
          */

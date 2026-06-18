@@ -12,6 +12,7 @@ public class CreateWorkspaceRequest extends TeaModel {
     public String serviceSite;
 
     /**
+     * <p>The name of the business workspace.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
