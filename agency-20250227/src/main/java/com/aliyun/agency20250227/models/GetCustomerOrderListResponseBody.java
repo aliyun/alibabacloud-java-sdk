@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetCustomerOrderListResponseBody extends TeaModel {
     /**
-     * <p>Access denied details</p>
+     * <p>The details of the access denial.</p>
      * 
      * <strong>example:</strong>
      * <p>None</p>
@@ -14,7 +14,7 @@ public class GetCustomerOrderListResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
-     * <p>Status Code</p>
+     * <p>The status code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -23,13 +23,13 @@ public class GetCustomerOrderListResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>Returned data</p>
+     * <p>The returned data.</p>
      */
     @NameInMap("Data")
     public java.util.List<GetCustomerOrderListResponseBodyData> data;
 
     /**
-     * <p>HTTP status code</p>
+     * <p>The HTTP status code.</p>
      * 
      * <strong>example:</strong>
      * <p>400</p>
@@ -38,7 +38,7 @@ public class GetCustomerOrderListResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>Message</p>
+     * <p>The message.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -47,7 +47,7 @@ public class GetCustomerOrderListResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Page number</p>
+     * <p>The page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -56,7 +56,7 @@ public class GetCustomerOrderListResponseBody extends TeaModel {
     public Integer pageNo;
 
     /**
-     * <p>Page size</p>
+     * <p>The number of entries per page.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -65,7 +65,7 @@ public class GetCustomerOrderListResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>Request ID</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>2103a30617045934095083027d88c5</p>
@@ -74,7 +74,7 @@ public class GetCustomerOrderListResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the operation succeeded</p>
+     * <p>Indicates whether the request was successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -83,7 +83,7 @@ public class GetCustomerOrderListResponseBody extends TeaModel {
     public Boolean success;
 
     /**
-     * <p>Total number of entries</p>
+     * <p>The total number of entries.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>
@@ -178,7 +178,7 @@ public class GetCustomerOrderListResponseBody extends TeaModel {
 
     public static class GetCustomerOrderListResponseBodyData extends TeaModel {
         /**
-         * <p>Order discount</p>
+         * <p>The order discount.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -187,7 +187,7 @@ public class GetCustomerOrderListResponseBody extends TeaModel {
         public Double amountDiscount;
 
         /**
-         * <p>Actual payment amount</p>
+         * <p>The actual payment amount.</p>
          * 
          * <strong>example:</strong>
          * <p>29137</p>
@@ -196,7 +196,7 @@ public class GetCustomerOrderListResponseBody extends TeaModel {
         public Double amountDue;
 
         /**
-         * <p>Creation Time</p>
+         * <p>The creation time.</p>
          * 
          * <strong>example:</strong>
          * <p>2019-01-24 14:20:40</p>
@@ -205,7 +205,7 @@ public class GetCustomerOrderListResponseBody extends TeaModel {
         public String createdAt;
 
         /**
-         * <p>Customer Account</p>
+         * <p>The customer account.</p>
          * 
          * <strong>example:</strong>
          * <p>test_123</p>
@@ -214,7 +214,7 @@ public class GetCustomerOrderListResponseBody extends TeaModel {
         public String customerAccount;
 
         /**
-         * <p>Customer categorization</p>
+         * <p>The customer classification.</p>
          * 
          * <strong>example:</strong>
          * <p>C类</p>
@@ -223,7 +223,7 @@ public class GetCustomerOrderListResponseBody extends TeaModel {
         public String customerClassification;
 
         /**
-         * <p>Customer UID</p>
+         * <p>The customer UID.</p>
          * 
          * <strong>example:</strong>
          * <p>123456</p>
@@ -232,7 +232,7 @@ public class GetCustomerOrderListResponseBody extends TeaModel {
         public Long customerUid;
 
         /**
-         * <p>Coupon amount</p>
+         * <p>The coupon amount.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -241,7 +241,7 @@ public class GetCustomerOrderListResponseBody extends TeaModel {
         public Double deductedAmountByCoupons;
 
         /**
-         * <p>Discounted price</p>
+         * <p>The discounted price.</p>
          * 
          * <strong>example:</strong>
          * <p>29137</p>
@@ -250,7 +250,7 @@ public class GetCustomerOrderListResponseBody extends TeaModel {
         public Double discountedPrice;
 
         /**
-         * <p>Order ID</p>
+         * <p>The order ID.</p>
          * 
          * <strong>example:</strong>
          * <p>236414227150922</p>
@@ -259,7 +259,12 @@ public class GetCustomerOrderListResponseBody extends TeaModel {
         public Long orderId;
 
         /**
-         * <p>Order status. Values include:<br>1: Unpaid<br>2: Paid<br>3: Voided</p>
+         * <p>The order status. Valid values:</p>
+         * <ul>
+         * <li>1: unpaid</li>
+         * <li>2: paid</li>
+         * <li>3: canceled.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>3</p>
@@ -268,7 +273,7 @@ public class GetCustomerOrderListResponseBody extends TeaModel {
         public Integer orderStatus;
 
         /**
-         * <p>Order type. Values include: BUY, UPGRADE, DOWNGRADE, RENEW, REFUND, OTHERS</p>
+         * <p>The order type. Valid values: BUY, UPGRADE, DOWNGRADE, RENEW, REFUND, OTHERS.</p>
          * 
          * <strong>example:</strong>
          * <p>BUY</p>
@@ -277,7 +282,7 @@ public class GetCustomerOrderListResponseBody extends TeaModel {
         public String orderType;
 
         /**
-         * <p>Payment Time</p>
+         * <p>The payment time.</p>
          * 
          * <strong>example:</strong>
          * <p>2019-01-24 14:20:40</p>
@@ -286,7 +291,11 @@ public class GetCustomerOrderListResponseBody extends TeaModel {
         public String paidAt;
 
         /**
-         * <p>Payment type:<br>1: Non-agent payment<br>2: Agent payment</p>
+         * <p>The payment type. Valid values:</p>
+         * <ul>
+         * <li>1: non-delegated payment</li>
+         * <li>2: delegated payment.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -295,7 +304,7 @@ public class GetCustomerOrderListResponseBody extends TeaModel {
         public Integer payType;
 
         /**
-         * <p>Original Price/List Price</p>
+         * <p>The original price or list price.</p>
          * 
          * <strong>example:</strong>
          * <p>29137</p>
@@ -304,7 +313,7 @@ public class GetCustomerOrderListResponseBody extends TeaModel {
         public Double price;
 
         /**
-         * <p>Product code</p>
+         * <p>The product code.</p>
          * 
          * <strong>example:</strong>
          * <p>slb</p>
@@ -313,7 +322,7 @@ public class GetCustomerOrderListResponseBody extends TeaModel {
         public String productCode;
 
         /**
-         * <p>Product name</p>
+         * <p>The product name.</p>
          * 
          * <strong>example:</strong>
          * <p>slb</p>
@@ -322,7 +331,7 @@ public class GetCustomerOrderListResponseBody extends TeaModel {
         public String productName;
 
         /**
-         * <p>Opportunity ID</p>
+         * <p>The opportunity ID.</p>
          * 
          * <strong>example:</strong>
          * <p>202502230421</p>
@@ -331,7 +340,7 @@ public class GetCustomerOrderListResponseBody extends TeaModel {
         public Long projectId;
 
         /**
-         * <p>Customer-facing staff</p>
+         * <p>The employee who follows up with the customer.</p>
          */
         @NameInMap("RamAccountForCustomerManagers")
         public java.util.List<String> ramAccountForCustomerManagers;

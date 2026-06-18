@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetBillDetailFileListResponseBody extends TeaModel {
     /**
-     * <p>Status code</p>
+     * <p>The status code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,13 +14,13 @@ public class GetBillDetailFileListResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>Returned data</p>
+     * <p>The returned data.</p>
      */
     @NameInMap("Data")
     public java.util.List<GetBillDetailFileListResponseBodyData> data;
 
     /**
-     * <p>Prompt message</p>
+     * <p>The message.</p>
      * 
      * <strong>example:</strong>
      * <p>成功</p>
@@ -29,7 +29,7 @@ public class GetBillDetailFileListResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Same as message</p>
+     * <p>Same as Message.</p>
      * 
      * <strong>example:</strong>
      * <p>成功</p>
@@ -47,7 +47,7 @@ public class GetBillDetailFileListResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the operation succeeded.</p>
+     * <p>Indicates whether the request was successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -110,7 +110,7 @@ public class GetBillDetailFileListResponseBody extends TeaModel {
 
     public static class GetBillDetailFileListResponseBodyData extends TeaModel {
         /**
-         * <p>Month</p>
+         * <p>The billing month.</p>
          * 
          * <strong>example:</strong>
          * <p>202502</p>
@@ -119,7 +119,7 @@ public class GetBillDetailFileListResponseBody extends TeaModel {
         public String billMonth;
 
         /**
-         * <p>File Name</p>
+         * <p>The file name.</p>
          * 
          * <strong>example:</strong>
          * <p>账单202502021112</p>
@@ -128,7 +128,7 @@ public class GetBillDetailFileListResponseBody extends TeaModel {
         public String fileName;
 
         /**
-         * <p>File URL</p>
+         * <p>The file URL.</p>
          * 
          * <strong>example:</strong>
          * <p>aps.ailyun.com/file/download?resourceId=1234&amp;type=1</p>
@@ -137,7 +137,12 @@ public class GetBillDetailFileListResponseBody extends TeaModel {
         public String fileUrl;
 
         /**
-         * <p>OSS file push status. 1: Pending, 2: Processing, 3: Succeeded</p>
+         * <p>The OSS file push status. Valid values:</p>
+         * <ul>
+         * <li>1: pending</li>
+         * <li>2: processing</li>
+         * <li>3: completed.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>3</p>
@@ -146,7 +151,7 @@ public class GetBillDetailFileListResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>Type: customer acquisition, channel expansion</p>
+         * <p>The type. Valid values: customer acquisition or channel expansion.</p>
          * 
          * <strong>example:</strong>
          * <p>拓渠</p>

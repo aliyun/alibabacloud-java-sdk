@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetSubPartnerListResponseBody extends TeaModel {
     /**
-     * <p>Message</p>
+     * <p>The message returned.</p>
      * 
      * <strong>example:</strong>
      * <p>成功</p>
@@ -14,7 +14,7 @@ public class GetSubPartnerListResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Current page number</p>
+     * <p>The current page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -23,7 +23,7 @@ public class GetSubPartnerListResponseBody extends TeaModel {
     public String pageNo;
 
     /**
-     * <p>Number of second-tier distributors returned per page, up to 100</p>
+     * <p>The number of secondary distributors returned per page. Maximum value: 100.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -33,7 +33,7 @@ public class GetSubPartnerListResponseBody extends TeaModel {
     public String pageSize;
 
     /**
-     * <p>Request ID</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>9C14ADFE-DF0A-54D4-8BD5-45D0839246B4</p>
@@ -42,13 +42,13 @@ public class GetSubPartnerListResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>List of second-tier distributors</p>
+     * <p>The list of secondary distributors.</p>
      */
     @NameInMap("SubPartnerList")
     public java.util.List<GetSubPartnerListResponseBodySubPartnerList> subPartnerList;
 
     /**
-     * <p>Indicates whether the invocation succeeded.</p>
+     * <p>Indicates whether the call was successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -57,7 +57,7 @@ public class GetSubPartnerListResponseBody extends TeaModel {
     public Boolean success;
 
     /**
-     * <p>Total amount of data under the current request conditions</p>
+     * <p>The total number of entries that match the query conditions.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -128,7 +128,7 @@ public class GetSubPartnerListResponseBody extends TeaModel {
 
     public static class GetSubPartnerListResponseBodySubPartnerList extends TeaModel {
         /**
-         * <p>Detailed address of registration</p>
+         * <p>The detailed registered address.</p>
          * 
          * <strong>example:</strong>
          * <p>xxx街道xxx号</p>
@@ -137,7 +137,7 @@ public class GetSubPartnerListResponseBody extends TeaModel {
         public String address;
 
         /**
-         * <p>Contract status encoding</p>
+         * <p>The agreement status code.</p>
          * 
          * <strong>example:</strong>
          * <p>ACTIVE_PERIOD</p>
@@ -146,7 +146,7 @@ public class GetSubPartnerListResponseBody extends TeaModel {
         public String agreementStatus;
 
         /**
-         * <p>Agreement status description</p>
+         * <p>The description of the agreement status.</p>
          * 
          * <strong>example:</strong>
          * <p>生效期</p>
@@ -155,7 +155,7 @@ public class GetSubPartnerListResponseBody extends TeaModel {
         public String agreementStatusDesc;
 
         /**
-         * <p>City of registration</p>
+         * <p>The city of the registered address.</p>
          * 
          * <strong>example:</strong>
          * <p>杭州市</p>
@@ -164,7 +164,7 @@ public class GetSubPartnerListResponseBody extends TeaModel {
         public String city;
 
         /**
-         * <p>Name of the second-tier distributor</p>
+         * <p>The name of the secondary distributor.</p>
          * 
          * <strong>example:</strong>
          * <p>xxx有限公司</p>
@@ -173,7 +173,7 @@ public class GetSubPartnerListResponseBody extends TeaModel {
         public String companyName;
 
         /**
-         * <p>Contact name</p>
+         * <p>The name of the contact.</p>
          * 
          * <strong>example:</strong>
          * <p>张三</p>
@@ -182,7 +182,7 @@ public class GetSubPartnerListResponseBody extends TeaModel {
         public String contact;
 
         /**
-         * <p>District or county of registration</p>
+         * <p>The district or county of the registered address.</p>
          * 
          * <strong>example:</strong>
          * <p>西湖区</p>
@@ -191,7 +191,7 @@ public class GetSubPartnerListResponseBody extends TeaModel {
         public String district;
 
         /**
-         * <p>Initial onboarding time</p>
+         * <p>The time when the secondary distributor first joined.</p>
          * 
          * <strong>example:</strong>
          * <p>2000-01-01</p>
@@ -200,7 +200,7 @@ public class GetSubPartnerListResponseBody extends TeaModel {
         public String joinTime;
 
         /**
-         * <p>Master account name of the secondary distributor</p>
+         * <p>The name of the primary account of the secondary distributor.</p>
          * 
          * <strong>example:</strong>
          * <p>xxxxxx有限公司主账号</p>
@@ -209,7 +209,7 @@ public class GetSubPartnerListResponseBody extends TeaModel {
         public String masterAccount;
 
         /**
-         * <p>UID of the Master account of the second-tier distributor</p>
+         * <p>The UID of the primary account of the secondary distributor.</p>
          * 
          * <strong>example:</strong>
          * <p>123456</p>
@@ -218,7 +218,7 @@ public class GetSubPartnerListResponseBody extends TeaModel {
         public String masterUid;
 
         /**
-         * <p>PID of the secondary distributor</p>
+         * <p>The PID of the secondary distributor.</p>
          * 
          * <strong>example:</strong>
          * <p>P123456</p>
@@ -227,7 +227,7 @@ public class GetSubPartnerListResponseBody extends TeaModel {
         public String pid;
 
         /**
-         * <p>Province of registration</p>
+         * <p>The province of the registered address.</p>
          * 
          * <strong>example:</strong>
          * <p>浙江省</p>

@@ -65,7 +65,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("me-east-1", "agency.aliyuncs.com"),
             new TeaPair("rus-west-1-pop", "agency.aliyuncs.com"),
             new TeaPair("us-east-1", "agency.aliyuncs.com"),
-            new TeaPair("us-west-1", "agency.aliyuncs.com")
+            new TeaPair("us-west-1", "agency.aliyuncs.com"),
+            new TeaPair("ap-southeast-1", "agency.ap-southeast-1.aliyuncs.com")
         );
         this.checkConfig(config);
         this._endpoint = this.getEndpoint("agency", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
@@ -86,7 +87,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query bill export files.</p>
+     * <p>Queries exported bill files.</p>
      * 
      * @param request GetBillDetailFileListRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -142,7 +143,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query bill export files.</p>
+     * <p>Queries exported bill files.</p>
      * 
      * @param request GetBillDetailFileListRequest
      * @return GetBillDetailFileListResponse
@@ -154,7 +155,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query partner commission details.</p>
+     * <p>Queries the commission details of a partner.</p>
      * 
      * @param request GetCommissionDetailFileListRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -210,7 +211,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query partner commission details.</p>
+     * <p>Queries the commission details of a partner.</p>
      * 
      * @param request GetCommissionDetailFileListRequest
      * @return GetCommissionDetailFileListResponse
@@ -222,7 +223,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query partner customer acquisition orders.</p>
+     * <p>Queries partner customer acquisition orders.</p>
      * 
      * @param tmpReq GetCustomerOrderListRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -328,7 +329,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query partner customer acquisition orders.</p>
+     * <p>Queries partner customer acquisition orders.</p>
      * 
      * @param request GetCustomerOrderListRequest
      * @return GetCustomerOrderListResponse
@@ -339,8 +340,84 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Make sure that the current caller identity is a T1 distribution partner. 
+     * <notice>Available only for international sites.</notice>.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Query partner renewal rate.</p>
+     * <p>Downloads the commission details of an international partner.</p>
+     * 
+     * @param request GetIntlCommissionDetailFileListRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetIntlCommissionDetailFileListResponse
+     */
+    public GetIntlCommissionDetailFileListResponse getIntlCommissionDetailFileListWithOptions(GetIntlCommissionDetailFileListRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.billMonth)) {
+            query.put("BillMonth", request.billMonth);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ossAccessKeyId)) {
+            query.put("OssAccessKeyId", request.ossAccessKeyId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ossAccessKeySecret)) {
+            query.put("OssAccessKeySecret", request.ossAccessKeySecret);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ossBucketName)) {
+            query.put("OssBucketName", request.ossBucketName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ossEndpoint)) {
+            query.put("OssEndpoint", request.ossEndpoint);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ossRegion)) {
+            query.put("OssRegion", request.ossRegion);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ossSecurityToken)) {
+            query.put("OssSecurityToken", request.ossSecurityToken);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetIntlCommissionDetailFileList"),
+            new TeaPair("version", "2025-02-27"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetIntlCommissionDetailFileListResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Make sure that the current caller identity is a T1 distribution partner. 
+     * <notice>Available only for international sites.</notice>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Downloads the commission details of an international partner.</p>
+     * 
+     * @param request GetIntlCommissionDetailFileListRequest
+     * @return GetIntlCommissionDetailFileListResponse
+     */
+    public GetIntlCommissionDetailFileListResponse getIntlCommissionDetailFileList(GetIntlCommissionDetailFileListRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getIntlCommissionDetailFileListWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the partner renewal rate.</p>
      * 
      * @param request GetRenewalRateListRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -372,7 +449,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query partner renewal rate.</p>
+     * <p>Queries the partner renewal rate.</p>
      * 
      * @param request GetRenewalRateListRequest
      * @return GetRenewalRateListResponse
@@ -384,7 +461,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query the list of second-tier distributors.</p>
+     * <p>Queries the list of secondary distributors.</p>
      * 
      * @param request GetSubPartnerListRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -428,7 +505,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query the list of second-tier distributors.</p>
+     * <p>Queries the list of secondary distributors.</p>
      * 
      * @param request GetSubPartnerListRequest
      * @return GetSubPartnerListResponse
@@ -440,7 +517,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query channel expansion orders.</p>
+     * <p>Queries channel expansion orders.</p>
      * 
      * @param tmpReq GetSubPartnerOrderListRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -542,7 +619,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query channel expansion orders.</p>
+     * <p>Queries channel expansion orders.</p>
      * 
      * @param request GetSubPartnerOrderListRequest
      * @return GetSubPartnerOrderListResponse

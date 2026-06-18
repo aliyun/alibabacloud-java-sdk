@@ -14,13 +14,13 @@ public class GetCommissionDetailFileListResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>Returned data</p>
+     * <p>The returned data.</p>
      */
     @NameInMap("Data")
     public GetCommissionDetailFileListResponseBodyData data;
 
     /**
-     * <p>Message</p>
+     * <p>The message returned.</p>
      * 
      * <strong>example:</strong>
      * <p>成功</p>
@@ -38,7 +38,7 @@ public class GetCommissionDetailFileListResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the invocation succeeded.</p>
+     * <p>Indicates whether the call was successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -93,7 +93,7 @@ public class GetCommissionDetailFileListResponseBody extends TeaModel {
 
     public static class GetCommissionDetailFileListResponseBodyDataFileList extends TeaModel {
         /**
-         * <p>OSS file push status: Processing, Succeeded, or failed</p>
+         * <p>The push status of the OSS file. Valid values: Processing, Succeeded, or Failed.</p>
          * 
          * <strong>example:</strong>
          * <p>处理中</p>
@@ -102,7 +102,7 @@ public class GetCommissionDetailFileListResponseBody extends TeaModel {
         public String bucketSyncStatus;
 
         /**
-         * <p>Policy name</p>
+         * <p>The policy name.</p>
          * 
          * <strong>example:</strong>
          * <p>参考【APS佣金查询下载功能】的政策名称</p>
@@ -111,7 +111,7 @@ public class GetCommissionDetailFileListResponseBody extends TeaModel {
         public String commissionPolicyName;
 
         /**
-         * <p>File name</p>
+         * <p>The file name.</p>
          * 
          * <strong>example:</strong>
          * <p>佣金202502021112</p>
@@ -120,7 +120,7 @@ public class GetCommissionDetailFileListResponseBody extends TeaModel {
         public String fileName;
 
         /**
-         * <p>File type</p>
+         * <p>The file type.</p>
          * 
          * <strong>example:</strong>
          * <p>总代政策为拓渠、普通政策为拓客</p>
@@ -129,7 +129,7 @@ public class GetCommissionDetailFileListResponseBody extends TeaModel {
         public String fileType;
 
         /**
-         * <p>File URL</p>
+         * <p>The file URL.</p>
          * 
          * <strong>example:</strong>
          * <p>aps.ailyun.com/file/download?resourceId=1234&amp;type=1</p>
@@ -186,7 +186,7 @@ public class GetCommissionDetailFileListResponseBody extends TeaModel {
 
     public static class GetCommissionDetailFileListResponseBodyData extends TeaModel {
         /**
-         * <p>Bill month</p>
+         * <p>The billing month.</p>
          * 
          * <strong>example:</strong>
          * <p>202502</p>
@@ -195,13 +195,13 @@ public class GetCommissionDetailFileListResponseBody extends TeaModel {
         public String billMonth;
 
         /**
-         * <p>File list</p>
+         * <p>The file list.</p>
          */
         @NameInMap("FileList")
         public java.util.List<GetCommissionDetailFileListResponseBodyDataFileList> fileList;
 
         /**
-         * <p>Partner UID</p>
+         * <p>The UID of the partner.</p>
          * 
          * <strong>example:</strong>
          * <p>1112332432</p>

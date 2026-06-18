@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetCustomerOrderListShrinkRequest extends TeaModel {
     /**
-     * <p>Customer Account</p>
+     * <p>The customer account.</p>
      * 
      * <strong>example:</strong>
      * <p>test_123</p>
@@ -14,7 +14,7 @@ public class GetCustomerOrderListShrinkRequest extends TeaModel {
     public String customerAccount;
 
     /**
-     * <p>Customer UID</p>
+     * <p>The customer UID.</p>
      * 
      * <strong>example:</strong>
      * <p>123456</p>
@@ -23,7 +23,7 @@ public class GetCustomerOrderListShrinkRequest extends TeaModel {
     public Long customerUid;
 
     /**
-     * <p>The UNIX timestamp indicating the start time of order creation. The time range must not exceed six months.<br>The time range for order creation and the time range for order payment cannot both be empty.</p>
+     * <p>The start timestamp for order creation. The time range cannot exceed 6 months. The order creation time range and the order payment time range cannot both be empty.</p>
      * 
      * <strong>example:</strong>
      * <p>1727789348000</p>
@@ -32,7 +32,7 @@ public class GetCustomerOrderListShrinkRequest extends TeaModel {
     public Long orderCreateAfter;
 
     /**
-     * <p>The UNIX timestamp indicating the end time of order creation. The time range must not exceed six months.<br>The time range for order creation and the time range for order payment cannot both be empty.</p>
+     * <p>The end timestamp for order creation. The time range cannot exceed 6 months. The order creation time range and the order payment time range cannot both be empty.</p>
      * 
      * <strong>example:</strong>
      * <p>1741008566000</p>
@@ -41,7 +41,7 @@ public class GetCustomerOrderListShrinkRequest extends TeaModel {
     public Long orderCreateBefore;
 
     /**
-     * <p>Order ID</p>
+     * <p>The order ID.</p>
      * 
      * <strong>example:</strong>
      * <p>13595216</p>
@@ -50,8 +50,7 @@ public class GetCustomerOrderListShrinkRequest extends TeaModel {
     public Long orderId;
 
     /**
-     * <p>Order payment start UNIX timestamp. The time range must not exceed six months.
-     * The order creation time range and the order payment time range cannot both be empty.</p>
+     * <p>The start timestamp for order payment. The time range cannot exceed 6 months. The order creation time range and the order payment time range cannot both be empty.</p>
      * 
      * <strong>example:</strong>
      * <p>1727789348000</p>
@@ -60,8 +59,7 @@ public class GetCustomerOrderListShrinkRequest extends TeaModel {
     public Long orderPayAfter;
 
     /**
-     * <p>Order payment end UNIX timestamp. The time range must not exceed six months.
-     * The order creation time range and the order payment time range cannot both be empty.</p>
+     * <p>The end timestamp for order payment. The time range cannot exceed 6 months. The order creation time range and the order payment time range cannot both be empty.</p>
      * 
      * <strong>example:</strong>
      * <p>1741008566000</p>
@@ -70,11 +68,11 @@ public class GetCustomerOrderListShrinkRequest extends TeaModel {
     public Long orderPayBefore;
 
     /**
-     * <p>Order status:</p>
+     * <p>The order status. Valid values:</p>
      * <ul>
-     * <li>1 Unpaid</li>
-     * <li>2 Discarded</li>
-     * <li>3 Paid</li>
+     * <li>1: unpaid</li>
+     * <li>2: canceled</li>
+     * <li>3: paid.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -84,13 +82,13 @@ public class GetCustomerOrderListShrinkRequest extends TeaModel {
     public Integer orderStatus;
 
     /**
-     * <p>Order type List</p>
+     * <p>The list of order types.</p>
      */
     @NameInMap("OrderTypeList")
     public String orderTypeListShrink;
 
     /**
-     * <p>Page number</p>
+     * <p>The page number.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -100,7 +98,7 @@ public class GetCustomerOrderListShrinkRequest extends TeaModel {
     public Integer pageNo;
 
     /**
-     * <p>Page size</p>
+     * <p>The number of entries per page.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -110,7 +108,7 @@ public class GetCustomerOrderListShrinkRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>Minimum paid amount</p>
+     * <p>The minimum actual payment amount.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -119,7 +117,7 @@ public class GetCustomerOrderListShrinkRequest extends TeaModel {
     public Double payAmountAfter;
 
     /**
-     * <p>Actual payment amount up to this point</p>
+     * <p>The maximum actual payment amount.</p>
      * 
      * <strong>example:</strong>
      * <p>1000</p>
@@ -128,9 +126,11 @@ public class GetCustomerOrderListShrinkRequest extends TeaModel {
     public Double payAmountBefore;
 
     /**
-     * <p>Payment Type:
-     * 1: Non-agent payment;
-     * 2: Agent payment</p>
+     * <p>The payment type. Valid values:</p>
+     * <ul>
+     * <li>1: non-delegated payment</li>
+     * <li>2: delegated payment.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -139,7 +139,7 @@ public class GetCustomerOrderListShrinkRequest extends TeaModel {
     public Integer payType;
 
     /**
-     * <p>Product code</p>
+     * <p>The product code.</p>
      * 
      * <strong>example:</strong>
      * <p>ecs</p>
@@ -148,7 +148,7 @@ public class GetCustomerOrderListShrinkRequest extends TeaModel {
     public String productCode;
 
     /**
-     * <p>Product Name</p>
+     * <p>The product name.</p>
      * 
      * <strong>example:</strong>
      * <p>弹性计算</p>
@@ -157,7 +157,7 @@ public class GetCustomerOrderListShrinkRequest extends TeaModel {
     public String productName;
 
     /**
-     * <p>Opportunity ID</p>
+     * <p>The opportunity ID.</p>
      * 
      * <strong>example:</strong>
      * <p>202502002231</p>
@@ -166,7 +166,7 @@ public class GetCustomerOrderListShrinkRequest extends TeaModel {
     public Long projectId;
 
     /**
-     * <p>Customer follow-up staff</p>
+     * <p>The employee who follows up with the customer.</p>
      * 
      * <strong>example:</strong>
      * <p>1234532</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetBillDetailFileListRequest extends TeaModel {
     /**
-     * <p>Month</p>
+     * <p>The billing month.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class GetBillDetailFileListRequest extends TeaModel {
     public String billMonth;
 
     /**
-     * <p>The AccessKeyID used to upload files to OSS.</p>
+     * <p>The AccessKey ID used to upload files to OSS.</p>
      * 
      * <strong>example:</strong>
      * <p>yourAccessKeyID</p>
@@ -24,7 +24,7 @@ public class GetBillDetailFileListRequest extends TeaModel {
     public String ossAccessKeyId;
 
     /**
-     * <p>The AccessKeySecret used to upload files to OSS.</p>
+     * <p>The AccessKey secret used to upload files to OSS.</p>
      * 
      * <strong>example:</strong>
      * <p>yourAccessKeySecret</p>
@@ -33,7 +33,7 @@ public class GetBillDetailFileListRequest extends TeaModel {
     public String ossAccessKeySecret;
 
     /**
-     * <p>OSS bucket.</p>
+     * <p>The OSS bucket.</p>
      * 
      * <strong>example:</strong>
      * <p>yourBucketName</p>
@@ -42,7 +42,7 @@ public class GetBillDetailFileListRequest extends TeaModel {
     public String ossBucketName;
 
     /**
-     * <p>The Region of the edge zone where the OSS bucket corresponding to the file sharing is located.</p>
+     * <p>The endpoint of the region where the OSS bucket for file sharing is located.</p>
      * 
      * <strong>example:</strong>
      * <p><a href="http://oss-cn-beijing.aliyuncs.com">http://oss-cn-beijing.aliyuncs.com</a></p>
@@ -51,7 +51,7 @@ public class GetBillDetailFileListRequest extends TeaModel {
     public String ossEndpoint;
 
     /**
-     * <p>The Region to which the current OSS bucket belongs.</p>
+     * <p>The region where the OSS bucket is located.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-beijing</p>
@@ -60,7 +60,7 @@ public class GetBillDetailFileListRequest extends TeaModel {
     public String ossRegion;
 
     /**
-     * <p>STS token used to upload files to OSS</p>
+     * <p>The STS token used to upload files to OSS.</p>
      * 
      * <strong>example:</strong>
      * <p>yourSecurityToken</p>

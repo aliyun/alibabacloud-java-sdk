@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetSubPartnerOrderListResponseBody extends TeaModel {
     /**
-     * <p>Status code</p>
+     * <p>The status code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,13 +14,13 @@ public class GetSubPartnerOrderListResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>Returned data</p>
+     * <p>The returned data.</p>
      */
     @NameInMap("Data")
     public java.util.List<GetSubPartnerOrderListResponseBodyData> data;
 
     /**
-     * <p>Message</p>
+     * <p>The message returned.</p>
      * 
      * <strong>example:</strong>
      * <p>成功</p>
@@ -29,7 +29,7 @@ public class GetSubPartnerOrderListResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Page number</p>
+     * <p>The page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -38,7 +38,7 @@ public class GetSubPartnerOrderListResponseBody extends TeaModel {
     public Integer pageNo;
 
     /**
-     * <p>Paging size</p>
+     * <p>The number of entries per page.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -56,7 +56,7 @@ public class GetSubPartnerOrderListResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the operation succeeded</p>
+     * <p>Indicates whether the call was successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -65,7 +65,7 @@ public class GetSubPartnerOrderListResponseBody extends TeaModel {
     public Boolean success;
 
     /**
-     * <p>TotalCount indicates the total amount of data under the current request conditions. This parameter is optional and is not returned by default.</p>
+     * <p>The total number of entries that meet the query conditions. This is an optional parameter and is not returned by default.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -144,7 +144,7 @@ public class GetSubPartnerOrderListResponseBody extends TeaModel {
 
     public static class GetSubPartnerOrderListResponseBodyData extends TeaModel {
         /**
-         * <p>Order discount</p>
+         * <p>The order discount.</p>
          * 
          * <strong>example:</strong>
          * <p>0.9</p>
@@ -153,7 +153,7 @@ public class GetSubPartnerOrderListResponseBody extends TeaModel {
         public Double amountDiscount;
 
         /**
-         * <p>Actual payment amount</p>
+         * <p>The actual payment amount.</p>
          * 
          * <strong>example:</strong>
          * <p>3750</p>
@@ -162,7 +162,7 @@ public class GetSubPartnerOrderListResponseBody extends TeaModel {
         public Double amountDue;
 
         /**
-         * <p>Creation Time</p>
+         * <p>The creation time.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-07-07 07:52:22</p>
@@ -171,7 +171,7 @@ public class GetSubPartnerOrderListResponseBody extends TeaModel {
         public String createdAt;
 
         /**
-         * <p>Customer classification</p>
+         * <p>The customer classification.</p>
          * 
          * <strong>example:</strong>
          * <p>C类</p>
@@ -180,7 +180,7 @@ public class GetSubPartnerOrderListResponseBody extends TeaModel {
         public String customerClassification;
 
         /**
-         * <p>Coupon amount</p>
+         * <p>The coupon amount.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -189,7 +189,7 @@ public class GetSubPartnerOrderListResponseBody extends TeaModel {
         public Double deductedAmountByCoupons;
 
         /**
-         * <p>Discounted price</p>
+         * <p>The discounted price.</p>
          * 
          * <strong>example:</strong>
          * <p>3750</p>
@@ -198,7 +198,7 @@ public class GetSubPartnerOrderListResponseBody extends TeaModel {
         public Double discountedPrice;
 
         /**
-         * <p>Order ID</p>
+         * <p>The order ID.</p>
          * 
          * <strong>example:</strong>
          * <p>236414227150922</p>
@@ -207,11 +207,11 @@ public class GetSubPartnerOrderListResponseBody extends TeaModel {
         public Long orderId;
 
         /**
-         * <p>Order status:  </p>
+         * <p>The order status. Valid values:</p>
          * <ul>
-         * <li>1 Unpaid  </li>
-         * <li>2 Abandoned  </li>
-         * <li>3 Paid</li>
+         * <li>1: unpaid</li>
+         * <li>2: deprecated</li>
+         * <li>3: paid.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -221,14 +221,14 @@ public class GetSubPartnerOrderListResponseBody extends TeaModel {
         public Integer orderStatus;
 
         /**
-         * <p>Order type:  </p>
+         * <p>The order type. Valid values:</p>
          * <ul>
-         * <li>BUY: New purchase  </li>
-         * <li>UPGRADE: Upgrade  </li>
-         * <li>DOWNGRADE: Downgrade  </li>
-         * <li>RENEW: Renewal  </li>
-         * <li>REFUND: Refund  </li>
-         * <li>OTHERS: Others</li>
+         * <li>BUY: new purchase</li>
+         * <li>UPGRADE: upgrade</li>
+         * <li>DOWNGRADE: downgrade</li>
+         * <li>RENEW: renewal</li>
+         * <li>REFUND: refund</li>
+         * <li>OTHERS: other.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -238,7 +238,7 @@ public class GetSubPartnerOrderListResponseBody extends TeaModel {
         public String orderType;
 
         /**
-         * <p>Payment Time</p>
+         * <p>The payment time.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-07-07 07:52:22</p>
@@ -247,7 +247,11 @@ public class GetSubPartnerOrderListResponseBody extends TeaModel {
         public String paidAt;
 
         /**
-         * <p>Payment type:<br>1: Non-agent payment<br>2: Agent payment</p>
+         * <p>The payment type. Valid values:</p>
+         * <ul>
+         * <li>1: non-delegated payment</li>
+         * <li>2: delegated payment.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -256,7 +260,7 @@ public class GetSubPartnerOrderListResponseBody extends TeaModel {
         public Integer payType;
 
         /**
-         * <p>Original price/List price</p>
+         * <p>The original price or list price.</p>
          * 
          * <strong>example:</strong>
          * <p>3750</p>
@@ -265,7 +269,7 @@ public class GetSubPartnerOrderListResponseBody extends TeaModel {
         public Double price;
 
         /**
-         * <p>Product code</p>
+         * <p>The product code.</p>
          * 
          * <strong>example:</strong>
          * <p>ecs</p>
@@ -274,7 +278,7 @@ public class GetSubPartnerOrderListResponseBody extends TeaModel {
         public String productCode;
 
         /**
-         * <p>Product name.</p>
+         * <p>The product name.</p>
          * 
          * <strong>example:</strong>
          * <p>弹性计算</p>
@@ -283,7 +287,7 @@ public class GetSubPartnerOrderListResponseBody extends TeaModel {
         public String productName;
 
         /**
-         * <p>Opportunity ID</p>
+         * <p>The opportunity ID.</p>
          * 
          * <strong>example:</strong>
          * <p>202502233443</p>
@@ -292,7 +296,7 @@ public class GetSubPartnerOrderListResponseBody extends TeaModel {
         public Long projectId;
 
         /**
-         * <p>Sub-partner Name</p>
+         * <p>The name of the secondary partner.</p>
          * 
          * <strong>example:</strong>
          * <p>xxx有限公司</p>
@@ -301,7 +305,7 @@ public class GetSubPartnerOrderListResponseBody extends TeaModel {
         public String subPartnerName;
 
         /**
-         * <p>Secondary partner UID</p>
+         * <p>The UID of the secondary partner.</p>
          * 
          * <strong>example:</strong>
          * <p>1123132</p>

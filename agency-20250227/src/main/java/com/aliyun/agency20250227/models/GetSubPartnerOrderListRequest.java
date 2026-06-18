@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetSubPartnerOrderListRequest extends TeaModel {
     /**
-     * <p>The UNIX timestamp of the start time for order creation. The time range must not exceed six months.<br>The time range for order creation and the time range for order payment cannot both be empty.</p>
+     * <p>The start timestamp of the order creation time range. The time range cannot exceed 6 months. The order creation time range and the order payment time range cannot both be empty.</p>
      * 
      * <strong>example:</strong>
      * <p>1727789348000</p>
@@ -14,7 +14,7 @@ public class GetSubPartnerOrderListRequest extends TeaModel {
     public Long orderCreateAfter;
 
     /**
-     * <p>The UNIX timestamp of the end time for order creation. The time range must not exceed six months.<br>The time range for order creation and the time range for order payment cannot both be empty.</p>
+     * <p>The end timestamp of the order creation time range. The time range cannot exceed 6 months. The order creation time range and the order payment time range cannot both be empty.</p>
      * 
      * <strong>example:</strong>
      * <p>1741008566000</p>
@@ -23,7 +23,7 @@ public class GetSubPartnerOrderListRequest extends TeaModel {
     public Long orderCreateBefore;
 
     /**
-     * <p>Order ID</p>
+     * <p>The order ID.</p>
      * 
      * <strong>example:</strong>
      * <p>209335720330622</p>
@@ -32,7 +32,7 @@ public class GetSubPartnerOrderListRequest extends TeaModel {
     public Long orderId;
 
     /**
-     * <p>The UNIX timestamp of the start time for order payment. The time range must not exceed six months.<br>The time range for order creation and the time range for order payment cannot both be empty.</p>
+     * <p>The start timestamp of the order payment time range. The time range cannot exceed 6 months. The order creation time range and the order payment time range cannot both be empty.</p>
      * 
      * <strong>example:</strong>
      * <p>1727789348000</p>
@@ -41,8 +41,7 @@ public class GetSubPartnerOrderListRequest extends TeaModel {
     public Long orderPayAfter;
 
     /**
-     * <p>UNIX timestamp of the order payment deadline. The time range cannot exceed six months.
-     * The time range for order creation and the time range for order payment cannot both be empty.</p>
+     * <p>The end timestamp of the order payment time range. The time range cannot exceed 6 months. The order creation time range and the order payment time range cannot both be empty.</p>
      * 
      * <strong>example:</strong>
      * <p>1741008566000</p>
@@ -51,10 +50,12 @@ public class GetSubPartnerOrderListRequest extends TeaModel {
     public Long orderPayBefore;
 
     /**
-     * <p>Order status. Valid values:
-     * 1: Unpaid
-     * 2: Paid
-     * 3: Canceled</p>
+     * <p>The order status. Valid values:</p>
+     * <ul>
+     * <li>1: unpaid</li>
+     * <li>2: paid</li>
+     * <li>3: voided.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>3</p>
@@ -63,14 +64,14 @@ public class GetSubPartnerOrderListRequest extends TeaModel {
     public Long orderStatus;
 
     /**
-     * <p>List of order types.
-     * Valid order types include: BUY, UPGRADE, DOWNGRADE, RENEW, REFUND, OTHERS</p>
+     * <p>The list of order types.
+     * Valid values: BUY, UPGRADE, DOWNGRADE, RENEW, REFUND, and OTHERS.</p>
      */
     @NameInMap("OrderTypeList")
     public java.util.List<String> orderTypeList;
 
     /**
-     * <p>Page number</p>
+     * <p>The page number.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -80,7 +81,7 @@ public class GetSubPartnerOrderListRequest extends TeaModel {
     public Integer pageNo;
 
     /**
-     * <p>Page size</p>
+     * <p>The number of entries per page.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -90,7 +91,7 @@ public class GetSubPartnerOrderListRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>Minimum paid amount</p>
+     * <p>The minimum actual payment amount.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -99,7 +100,7 @@ public class GetSubPartnerOrderListRequest extends TeaModel {
     public Long payAmountAfter;
 
     /**
-     * <p>Maximum paid amount</p>
+     * <p>The maximum actual payment amount.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>
@@ -108,7 +109,11 @@ public class GetSubPartnerOrderListRequest extends TeaModel {
     public Long payAmountBefore;
 
     /**
-     * <p>Payment Type:<br>1: Non-agent payment<br>2: Agent payment</p>
+     * <p>The payment type. Valid values:</p>
+     * <ul>
+     * <li>1: non-delegated payment</li>
+     * <li>2: delegated payment.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -117,7 +122,7 @@ public class GetSubPartnerOrderListRequest extends TeaModel {
     public Long payType;
 
     /**
-     * <p>Product code</p>
+     * <p>The product code.</p>
      * 
      * <strong>example:</strong>
      * <p>ecs</p>
@@ -126,7 +131,7 @@ public class GetSubPartnerOrderListRequest extends TeaModel {
     public String productCode;
 
     /**
-     * <p>Product Name</p>
+     * <p>The product name.</p>
      * 
      * <strong>example:</strong>
      * <p>弹性计算</p>
@@ -135,7 +140,7 @@ public class GetSubPartnerOrderListRequest extends TeaModel {
     public String productName;
 
     /**
-     * <p>Opportunity ID</p>
+     * <p>The opportunity ID.</p>
      * 
      * <strong>example:</strong>
      * <p>202501101023</p>
@@ -144,7 +149,7 @@ public class GetSubPartnerOrderListRequest extends TeaModel {
     public Long projectId;
 
     /**
-     * <p>Sub-partner name</p>
+     * <p>The name of the secondary partner.</p>
      * 
      * <strong>example:</strong>
      * <p>XXX有限公司</p>
@@ -153,7 +158,7 @@ public class GetSubPartnerOrderListRequest extends TeaModel {
     public String subPartnerName;
 
     /**
-     * <p>Sub-partner UID</p>
+     * <p>The UID of the secondary partner.</p>
      * 
      * <strong>example:</strong>
      * <p>123432311</p>

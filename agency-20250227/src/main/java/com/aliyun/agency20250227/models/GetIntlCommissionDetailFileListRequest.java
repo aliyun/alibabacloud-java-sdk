@@ -3,18 +3,20 @@ package com.aliyun.agency20250227.models;
 
 import com.aliyun.tea.*;
 
-public class GetCommissionDetailFileListRequest extends TeaModel {
+public class GetIntlCommissionDetailFileListRequest extends TeaModel {
     /**
      * <p>The billing month.</p>
+     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>202501</p>
+     * <p>202502</p>
      */
     @NameInMap("BillMonth")
     public String billMonth;
 
     /**
      * <p>The AccessKey ID used to upload files to OSS.</p>
+     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>yourAccessKeyID</p>
@@ -24,6 +26,7 @@ public class GetCommissionDetailFileListRequest extends TeaModel {
 
     /**
      * <p>The AccessKey secret used to upload files to OSS.</p>
+     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>yourAccessKeySecret</p>
@@ -32,7 +35,8 @@ public class GetCommissionDetailFileListRequest extends TeaModel {
     public String ossAccessKeySecret;
 
     /**
-     * <p>The OSS bucket name.</p>
+     * <p>The name of the OSS bucket.</p>
+     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>yourBucketName</p>
@@ -41,7 +45,8 @@ public class GetCommissionDetailFileListRequest extends TeaModel {
     public String ossBucketName;
 
     /**
-     * <p>The endpoint of the region where the Object Storage Service (OSS) bucket corresponding to the file sharing resides.</p>
+     * <p>The endpoint of the region where the Object Storage Service (OSS) bucket for the file sharing resides.</p>
+     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p><a href="http://oss-cn-beijing.aliyuncs.com">http://oss-cn-beijing.aliyuncs.com</a></p>
@@ -50,7 +55,8 @@ public class GetCommissionDetailFileListRequest extends TeaModel {
     public String ossEndpoint;
 
     /**
-     * <p>The region where the OSS bucket resides.</p>
+     * <p>The region where the current OSS bucket resides.</p>
+     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-beijing</p>
@@ -60,6 +66,7 @@ public class GetCommissionDetailFileListRequest extends TeaModel {
 
     /**
      * <p>The STS token used to upload files to OSS.</p>
+     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>yourSecurityToken</p>
@@ -67,12 +74,12 @@ public class GetCommissionDetailFileListRequest extends TeaModel {
     @NameInMap("OssSecurityToken")
     public String ossSecurityToken;
 
-    public static GetCommissionDetailFileListRequest build(java.util.Map<String, ?> map) throws Exception {
-        GetCommissionDetailFileListRequest self = new GetCommissionDetailFileListRequest();
+    public static GetIntlCommissionDetailFileListRequest build(java.util.Map<String, ?> map) throws Exception {
+        GetIntlCommissionDetailFileListRequest self = new GetIntlCommissionDetailFileListRequest();
         return TeaModel.build(map, self);
     }
 
-    public GetCommissionDetailFileListRequest setBillMonth(String billMonth) {
+    public GetIntlCommissionDetailFileListRequest setBillMonth(String billMonth) {
         this.billMonth = billMonth;
         return this;
     }
@@ -80,7 +87,7 @@ public class GetCommissionDetailFileListRequest extends TeaModel {
         return this.billMonth;
     }
 
-    public GetCommissionDetailFileListRequest setOssAccessKeyId(String ossAccessKeyId) {
+    public GetIntlCommissionDetailFileListRequest setOssAccessKeyId(String ossAccessKeyId) {
         this.ossAccessKeyId = ossAccessKeyId;
         return this;
     }
@@ -88,7 +95,7 @@ public class GetCommissionDetailFileListRequest extends TeaModel {
         return this.ossAccessKeyId;
     }
 
-    public GetCommissionDetailFileListRequest setOssAccessKeySecret(String ossAccessKeySecret) {
+    public GetIntlCommissionDetailFileListRequest setOssAccessKeySecret(String ossAccessKeySecret) {
         this.ossAccessKeySecret = ossAccessKeySecret;
         return this;
     }
@@ -96,7 +103,7 @@ public class GetCommissionDetailFileListRequest extends TeaModel {
         return this.ossAccessKeySecret;
     }
 
-    public GetCommissionDetailFileListRequest setOssBucketName(String ossBucketName) {
+    public GetIntlCommissionDetailFileListRequest setOssBucketName(String ossBucketName) {
         this.ossBucketName = ossBucketName;
         return this;
     }
@@ -104,7 +111,7 @@ public class GetCommissionDetailFileListRequest extends TeaModel {
         return this.ossBucketName;
     }
 
-    public GetCommissionDetailFileListRequest setOssEndpoint(String ossEndpoint) {
+    public GetIntlCommissionDetailFileListRequest setOssEndpoint(String ossEndpoint) {
         this.ossEndpoint = ossEndpoint;
         return this;
     }
@@ -112,7 +119,7 @@ public class GetCommissionDetailFileListRequest extends TeaModel {
         return this.ossEndpoint;
     }
 
-    public GetCommissionDetailFileListRequest setOssRegion(String ossRegion) {
+    public GetIntlCommissionDetailFileListRequest setOssRegion(String ossRegion) {
         this.ossRegion = ossRegion;
         return this;
     }
@@ -120,7 +127,7 @@ public class GetCommissionDetailFileListRequest extends TeaModel {
         return this.ossRegion;
     }
 
-    public GetCommissionDetailFileListRequest setOssSecurityToken(String ossSecurityToken) {
+    public GetIntlCommissionDetailFileListRequest setOssSecurityToken(String ossSecurityToken) {
         this.ossSecurityToken = ossSecurityToken;
         return this;
     }
