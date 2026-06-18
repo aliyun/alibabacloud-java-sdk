@@ -4,10 +4,15 @@ package com.aliyun.eflo_controller20221215.models;
 import com.aliyun.tea.*;
 
 public class ChangeNodeTypesResponseBody extends TeaModel {
+    /**
+     * <p>The responses for the nodes.</p>
+     */
     @NameInMap("NodeResponse")
     public java.util.List<ChangeNodeTypesResponseBodyNodeResponse> nodeResponse;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>887FA855-89F4-5DB3-B305-C5879EC480E6</p>
      */
@@ -15,6 +20,8 @@ public class ChangeNodeTypesResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The task ID. A task ID is returned only if all nodes pass the precheck. If an exception occurs, this parameter is empty.</p>
+     * 
      * <strong>example:</strong>
      * <p>i158475611663639202234</p>
      */
@@ -52,6 +59,8 @@ public class ChangeNodeTypesResponseBody extends TeaModel {
 
     public static class ChangeNodeTypesResponseBodyNodeResponse extends TeaModel {
         /**
+         * <p>The response code for the node.</p>
+         * 
          * <strong>example:</strong>
          * <p>PASSED</p>
          */
@@ -59,6 +68,8 @@ public class ChangeNodeTypesResponseBody extends TeaModel {
         public String code;
 
         /**
+         * <p>The response message for the node.</p>
+         * 
          * <strong>example:</strong>
          * <p>success</p>
          */
@@ -66,6 +77,8 @@ public class ChangeNodeTypesResponseBody extends TeaModel {
         public String message;
 
         /**
+         * <p>The ID of the node included in the response.</p>
+         * 
          * <strong>example:</strong>
          * <p>e01-in-067da4ca9c2</p>
          */

@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListSyslogsRequest extends TeaModel {
     /**
+     * <p>The start time.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,8 @@ public class ListSyslogsRequest extends TeaModel {
     public String fromTime;
 
     /**
+     * <p>The token for the next page. To retrieve the next page of results, include the token in the next request.</p>
+     * 
      * <strong>example:</strong>
      * <p>392e8b4a03ed171433cc39f5b464ec9d</p>
      */
@@ -21,6 +24,7 @@ public class ListSyslogsRequest extends TeaModel {
     public String nextToken;
 
     /**
+     * <p>The node ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -30,6 +34,8 @@ public class ListSyslogsRequest extends TeaModel {
     public String nodeId;
 
     /**
+     * <p>The query condition.</p>
+     * 
      * <strong>example:</strong>
      * <ul>
      * <li></li>
@@ -39,6 +45,8 @@ public class ListSyslogsRequest extends TeaModel {
     public String query;
 
     /**
+     * <p>Specifies whether to sort the results by time in descending order.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -46,6 +54,7 @@ public class ListSyslogsRequest extends TeaModel {
     public Boolean reverse;
 
     /**
+     * <p>The end time.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -96,9 +96,6 @@ public class ListNodeGroupsResponseBody extends TeaModel {
 
         /**
          * <p>Indicates whether file storage mounting is supported.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>False</p>
          */
         @NameInMap("FileSystemMountEnabled")
         public Boolean fileSystemMountEnabled;

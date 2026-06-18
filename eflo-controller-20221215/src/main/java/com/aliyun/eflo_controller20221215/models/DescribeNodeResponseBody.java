@@ -32,7 +32,7 @@ public class DescribeNodeResponseBody extends TeaModel {
     public String createTime;
 
     /**
-     * <p>The disks.</p>
+     * <p>The list of disk information.</p>
      */
     @NameInMap("Disks")
     public java.util.List<DescribeNodeResponseBodyDisks> disks;
@@ -47,10 +47,10 @@ public class DescribeNodeResponseBody extends TeaModel {
     public String expiredTime;
 
     /**
-     * <p>Indicates whether file storage mounting is supported.</p>
+     * <p>Indicates whether file system mounting is supported.</p>
      * 
      * <strong>example:</strong>
-     * <p>False</p>
+     * <p>True</p>
      */
     @NameInMap("FileSystemMountEnabled")
     public Boolean fileSystemMountEnabled;
@@ -74,6 +74,8 @@ public class DescribeNodeResponseBody extends TeaModel {
     public String hpnZone;
 
     /**
+     * <p>The hyper node ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>e01-cn-zvp2tgykr08</p>
      */
@@ -99,7 +101,7 @@ public class DescribeNodeResponseBody extends TeaModel {
     public String imageName;
 
     /**
-     * <p>The instance type.</p>
+     * <p>The machine type.</p>
      * 
      * <strong>example:</strong>
      * <p>efg1.nvga1</p>
@@ -141,6 +143,14 @@ public class DescribeNodeResponseBody extends TeaModel {
     public String nodeId;
 
     /**
+     * <p>The type of the current node. Valid values:
+     * ● cpfs-enhanced
+     * ● ebs-enhanced
+     * ● standard
+     * ● standby
+     * ● standard-v2
+     * ● standby-v2</p>
+     * 
      * <strong>example:</strong>
      * <p>standard</p>
      */
@@ -149,22 +159,6 @@ public class DescribeNodeResponseBody extends TeaModel {
 
     /**
      * <p>The node status.</p>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li>Extending</li>
-     * <li>UnusedNodeStopped</li>
-     * <li>UnusedNodeStopping</li>
-     * <li>Unused</li>
-     * <li>Using</li>
-     * <li>ReleaseLocking</li>
-     * <li>Operating</li>
-     * <li>Cutting</li>
-     * <li>ClusterNodeStopped</li>
-     * <li>UnusedNodeRecovering</li>
-     * <li>ClusterNodeStopping</li>
-     * <li>ClusterNodeRecovering</li>
-     * <li>Replacing</li>
-     * </ul>
      * 
      * <strong>example:</strong>
      * <p>Using</p>
@@ -191,7 +185,16 @@ public class DescribeNodeResponseBody extends TeaModel {
     public String resourceGroupId;
 
     /**
-     * <p>The serial number of the node.</p>
+     * <p>The savings plan ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>spn-25e985acAWbrwEBK</p>
+     */
+    @NameInMap("SavingsPlanId")
+    public String savingsPlanId;
+
+    /**
+     * <p>The unique machine identifier.</p>
      * 
      * <strong>example:</strong>
      * <p>sag42ckf4jx</p>
@@ -200,7 +203,7 @@ public class DescribeNodeResponseBody extends TeaModel {
     public String sn;
 
     /**
-     * <p>The custom script.</p>
+     * <p>The user-defined script.</p>
      * 
      * <strong>example:</strong>
      * <p>#!/bin/bash
@@ -384,6 +387,14 @@ public class DescribeNodeResponseBody extends TeaModel {
         return this.resourceGroupId;
     }
 
+    public DescribeNodeResponseBody setSavingsPlanId(String savingsPlanId) {
+        this.savingsPlanId = savingsPlanId;
+        return this;
+    }
+    public String getSavingsPlanId() {
+        return this.savingsPlanId;
+    }
+
     public DescribeNodeResponseBody setSn(String sn) {
         this.sn = sn;
         return this;
@@ -412,7 +423,7 @@ public class DescribeNodeResponseBody extends TeaModel {
         /**
          * <p>The disk type. Valid values:</p>
          * <ul>
-         * <li>cloud_essd</li>
+         * <li>cloud_essd: ESSD cloud disk.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -425,16 +436,16 @@ public class DescribeNodeResponseBody extends TeaModel {
          * <p>The disk ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>d-bp1fi88ryk4yah8a6yos</p>
+         * <p>d-2zeap7wkns2tdmbr11se</p>
          */
         @NameInMap("DiskId")
         public String diskId;
 
         /**
-         * <p>The performance level of the ESSD that is used as the system disk. Valid values:</p>
+         * <p>The performance level of the cloud disk when an ESSD cloud disk is created as a system disk. Valid values:</p>
          * <ul>
-         * <li>PL0: A single ESSD can deliver up to 10,000 random read/write IOPS.</li>
-         * <li>PL1: A single ESSD can deliver up to 50,000 random read/write IOPS.</li>
+         * <li>PL0: A single disk can deliver up to 10,000 random read/write IOPS.</li>
+         * <li>PL1: A single disk can deliver up to 50,000 random read/write IOPS.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -455,8 +466,8 @@ public class DescribeNodeResponseBody extends TeaModel {
         /**
          * <p>The disk type. Valid values:</p>
          * <ul>
-         * <li>system: system disk</li>
-         * <li>data: data disk</li>
+         * <li>system: system disk.</li>
+         * <li>data: data disk.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -514,7 +525,7 @@ public class DescribeNodeResponseBody extends TeaModel {
 
     public static class DescribeNodeResponseBodyNetworks extends TeaModel {
         /**
-         * <p>The port information of the elastic network interface (ENI).</p>
+         * <p>The NIC port information.</p>
          * 
          * <strong>example:</strong>
          * <p>Bond0</p>
@@ -523,7 +534,7 @@ public class DescribeNodeResponseBody extends TeaModel {
         public String bondName;
 
         /**
-         * <p>The IP address of the node.</p>
+         * <p>The machine IP address.</p>
          * 
          * <strong>example:</strong>
          * <p>47.254.235.44</p>
@@ -531,11 +542,17 @@ public class DescribeNodeResponseBody extends TeaModel {
         @NameInMap("Ip")
         public String ip;
 
+        /**
+         * <p>The security group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sg-bp1d3dvbh9by7j5rujax</p>
+         */
         @NameInMap("SecurityGroupId")
         public String securityGroupId;
 
         /**
-         * <p>The subnet ID.</p>
+         * <p>The cluster subnet ID.</p>
          * 
          * <strong>example:</strong>
          * <p>vsw-uf68v51fldm5egmui5a6k</p>
@@ -543,11 +560,17 @@ public class DescribeNodeResponseBody extends TeaModel {
         @NameInMap("SubnetId")
         public String subnetId;
 
+        /**
+         * <p>The vSwitch ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vsw-asjdfklj</p>
+         */
         @NameInMap("VSwitchId")
         public String vSwitchId;
 
         /**
-         * <p>The ID of the cluster network.</p>
+         * <p>The cluster network ID.</p>
          * 
          * <strong>example:</strong>
          * <p>vpd-xcuhjyrj</p>

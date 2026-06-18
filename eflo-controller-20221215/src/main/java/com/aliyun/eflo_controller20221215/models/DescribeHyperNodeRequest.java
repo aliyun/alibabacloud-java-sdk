@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeHyperNodeRequest extends TeaModel {
     /**
+     * <p>The ID of the hyper node.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

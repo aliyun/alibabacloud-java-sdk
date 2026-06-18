@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class ChangeNodeGroupShrinkRequest extends TeaModel {
     /**
+     * <p>Specifies whether to skip failed nodes. The default value is False.</p>
+     * 
      * <strong>example:</strong>
      * <p>False</p>
      */
     @NameInMap("IgnoreFailedNodeTasks")
     public Boolean ignoreFailedNodeTasks;
 
+    /**
+     * <p>The node information.</p>
+     */
     @NameInMap("Nodes")
     public String nodesShrink;
 
     /**
+     * <p>The ID of the target node group.</p>
+     * 
      * <strong>example:</strong>
      * <p>i234242342342</p>
      */

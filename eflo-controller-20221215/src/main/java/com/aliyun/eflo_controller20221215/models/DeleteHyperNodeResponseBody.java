@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DeleteHyperNodeResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>041724FC-2BD7-58B1-863B-B42022D4B351</p>
      */

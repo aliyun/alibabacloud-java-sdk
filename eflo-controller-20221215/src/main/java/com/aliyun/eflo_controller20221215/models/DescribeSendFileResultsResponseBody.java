@@ -288,7 +288,7 @@ public class DescribeSendFileResultsResponseBody extends TeaModel {
          * <p>The command description.</p>
          * 
          * <strong>example:</strong>
-         * <p>Description</p>
+         * <p>Description.</p>
          */
         @NameInMap("Description")
         public String description;

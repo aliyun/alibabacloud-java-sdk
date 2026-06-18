@@ -8,7 +8,7 @@ public class CreateSessionRequest extends TeaModel {
      * <p>The instance ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>e01-cn-kvw44e6dn04</p>
+     * <p>e01-cn-kvw44e6****</p>
      */
     @NameInMap("NodeId")
     public String nodeId;
@@ -17,7 +17,7 @@ public class CreateSessionRequest extends TeaModel {
      * <p>The type of the session corresponding to the session package.</p>
      * 
      * <strong>example:</strong>
-     * <p>Valid values: Sol (default): based on serial port Assistant: based on cloud assistant</p>
+     * <p>Sol</p>
      */
     @NameInMap("SessionType")
     public String sessionType;

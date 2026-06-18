@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListTagResourcesRequest extends TeaModel {
     /**
-     * <p>The token that determines the start position of the query. Set this parameter to the value of the NextToken parameter that is returned from the last call.</p>
+     * <p>The token used to retrieve the next page of results. Set this parameter to the NextToken value returned in the previous response.</p>
      * 
      * <strong>example:</strong>
      * <p>AAAAAdQ3Z+oPlg49gsr2y8jb6wY=</p>
@@ -24,21 +24,13 @@ public class ListTagResourcesRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The IDs of the resources.</p>
+     * <p>The list of resource IDs.</p>
      */
     @NameInMap("ResourceId")
     public java.util.List<String> resourceId;
 
     /**
      * <p>The resource type.</p>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li>Node</li>
-     * <li>Vcc</li>
-     * <li>Cluster</li>
-     * <li>Subnet</li>
-     * <li>Vpd</li>
-     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -48,7 +40,7 @@ public class ListTagResourcesRequest extends TeaModel {
     public String resourceType;
 
     /**
-     * <p>The tags.</p>
+     * <p>The list of tags.</p>
      */
     @NameInMap("Tag")
     public java.util.List<ListTagResourcesRequestTag> tag;

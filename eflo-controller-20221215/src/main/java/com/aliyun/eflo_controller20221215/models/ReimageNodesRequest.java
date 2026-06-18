@@ -14,7 +14,7 @@ public class ReimageNodesRequest extends TeaModel {
     public String clusterId;
 
     /**
-     * <p>Specifies whether to allow skipping failed nodes. Default value: False.</p>
+     * <p>Specifies whether to skip failed nodes. The default value is False.</p>
      * 
      * <strong>example:</strong>
      * <p>False</p>
@@ -23,13 +23,13 @@ public class ReimageNodesRequest extends TeaModel {
     public Boolean ignoreFailedNodeTasks;
 
     /**
-     * <p>The nodes.</p>
+     * <p>The list of nodes.</p>
      */
     @NameInMap("Nodes")
     public java.util.List<ReimageNodesRequestNodes> nodes;
 
     /**
-     * <p>The user data.</p>
+     * <p>The custom data.</p>
      * 
      * <strong>example:</strong>
      * <p>#!/bin/sh
@@ -86,7 +86,7 @@ public class ReimageNodesRequest extends TeaModel {
         public String hostname;
 
         /**
-         * <p>The system image ID.</p>
+         * <p>The OS image ID.</p>
          * 
          * <strong>example:</strong>
          * <p>m-8vbf8rpv2nn14y7oybjy</p>

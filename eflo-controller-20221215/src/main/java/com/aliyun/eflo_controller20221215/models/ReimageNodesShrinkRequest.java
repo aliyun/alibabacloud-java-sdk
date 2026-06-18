@@ -14,7 +14,7 @@ public class ReimageNodesShrinkRequest extends TeaModel {
     public String clusterId;
 
     /**
-     * <p>Specifies whether to allow skipping failed nodes. Default value: False.</p>
+     * <p>Specifies whether to skip failed nodes. The default value is False.</p>
      * 
      * <strong>example:</strong>
      * <p>False</p>
@@ -23,13 +23,13 @@ public class ReimageNodesShrinkRequest extends TeaModel {
     public Boolean ignoreFailedNodeTasks;
 
     /**
-     * <p>The nodes.</p>
+     * <p>The list of nodes.</p>
      */
     @NameInMap("Nodes")
     public String nodesShrink;
 
     /**
-     * <p>The user data.</p>
+     * <p>The custom data.</p>
      * 
      * <strong>example:</strong>
      * <p>#!/bin/sh

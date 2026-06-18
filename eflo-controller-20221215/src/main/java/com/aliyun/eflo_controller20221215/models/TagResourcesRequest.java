@@ -15,7 +15,7 @@ public class TagResourcesRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The IDs of the resources.</p>
+     * <p>A list of resource IDs.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("ResourceId")
@@ -23,14 +23,6 @@ public class TagResourcesRequest extends TeaModel {
 
     /**
      * <p>The resource type.</p>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li>Node</li>
-     * <li>Vcc</li>
-     * <li>Cluster</li>
-     * <li>Vpd</li>
-     * <li>Subnet</li>
-     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

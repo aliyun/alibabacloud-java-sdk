@@ -14,7 +14,7 @@ public class DeleteVscRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The ID of the VSC that you want to delete.</p>
+     * <p>The ID of the VSC to delete.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

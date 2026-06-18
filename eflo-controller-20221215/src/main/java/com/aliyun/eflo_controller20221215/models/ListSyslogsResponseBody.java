@@ -4,10 +4,15 @@ package com.aliyun.eflo_controller20221215.models;
 import com.aliyun.tea.*;
 
 public class ListSyslogsResponseBody extends TeaModel {
+    /**
+     * <p>The object that contains the paginated list of logs.</p>
+     */
     @NameInMap("Logs")
     public java.util.List<ListSyslogsResponseBodyLogs> logs;
 
     /**
+     * <p>The \<code>NextToken\\</code> for the next page. To retrieve the next page of results, include this return value in the next request.</p>
+     * 
      * <strong>example:</strong>
      * <p>563d42ae0b17572449ec8c97f7f66069</p>
      */
@@ -15,7 +20,7 @@ public class ListSyslogsResponseBody extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>2FE2B22C-CF9D-59DE-BF63-DC9B9B33A9D1</p>
@@ -54,6 +59,8 @@ public class ListSyslogsResponseBody extends TeaModel {
 
     public static class ListSyslogsResponseBodyLogs extends TeaModel {
         /**
+         * <p>The cluster ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>i119583961673208491760</p>
          */
@@ -61,6 +68,8 @@ public class ListSyslogsResponseBody extends TeaModel {
         public String clusterId;
 
         /**
+         * <p>The security domain of the client.</p>
+         * 
          * <strong>example:</strong>
          * <p>ALIYUN_PUBLIC</p>
          */
@@ -68,6 +77,8 @@ public class ListSyslogsResponseBody extends TeaModel {
         public String domain;
 
         /**
+         * <p>A standard field in Linux syslog.</p>
+         * 
          * <strong>example:</strong>
          * <p>kern</p>
          */
@@ -75,6 +86,8 @@ public class ListSyslogsResponseBody extends TeaModel {
         public String facility;
 
         /**
+         * <p>The hostname of the client.</p>
+         * 
          * <strong>example:</strong>
          * <p>damo-m53kr8kd-0008</p>
          */
@@ -82,6 +95,8 @@ public class ListSyslogsResponseBody extends TeaModel {
         public String hostname;
 
         /**
+         * <p>The IP address of the client.</p>
+         * 
          * <strong>example:</strong>
          * <p>114.55.254.44</p>
          */
@@ -89,6 +104,8 @@ public class ListSyslogsResponseBody extends TeaModel {
         public String ip;
 
         /**
+         * <p>The content of the syslog.</p>
+         * 
          * <strong>example:</strong>
          * <p>bond4: failed to get link speed/duplex for eth8</p>
          */
@@ -96,6 +113,8 @@ public class ListSyslogsResponseBody extends TeaModel {
         public String msg;
 
         /**
+         * <p>The node ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>e01-cn-9lb36u4s601</p>
          */
@@ -103,6 +122,8 @@ public class ListSyslogsResponseBody extends TeaModel {
         public String nodeId;
 
         /**
+         * <p>A standard field in Linux syslog.</p>
+         * 
          * <strong>example:</strong>
          * <p>warning</p>
          */
@@ -110,6 +131,8 @@ public class ListSyslogsResponseBody extends TeaModel {
         public String severity;
 
         /**
+         * <p>The unique identifier of the machine.</p>
+         * 
          * <strong>example:</strong>
          * <p>21A401332</p>
          */
@@ -117,6 +140,8 @@ public class ListSyslogsResponseBody extends TeaModel {
         public String sn;
 
         /**
+         * <p>The hostname of the syslog server.</p>
+         * 
          * <strong>example:</strong>
          * <p>damo-m53kr8kd-0008</p>
          */
@@ -124,6 +149,8 @@ public class ListSyslogsResponseBody extends TeaModel {
         public String source;
 
         /**
+         * <p>A standard field in Linux syslog.</p>
+         * 
          * <strong>example:</strong>
          * <p>kernel</p>
          */
@@ -131,6 +158,8 @@ public class ListSyslogsResponseBody extends TeaModel {
         public String syslogtag;
 
         /**
+         * <p>Tag: Hostname.</p>
+         * 
          * <strong>example:</strong>
          * <p>damo-m53kr8kd-0008</p>
          */
@@ -138,6 +167,8 @@ public class ListSyslogsResponseBody extends TeaModel {
         public String tagHostname;
 
         /**
+         * <p>Tag: Package ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>D990314D3C25D7E8-1080</p>
          */
@@ -145,6 +176,8 @@ public class ListSyslogsResponseBody extends TeaModel {
         public String tagPackId;
 
         /**
+         * <p>Tag: Path.</p>
+         * 
          * <strong>example:</strong>
          * <p>/var/log/kern</p>
          */
@@ -152,6 +185,8 @@ public class ListSyslogsResponseBody extends TeaModel {
         public String tagPath;
 
         /**
+         * <p>Tag: Receive time.</p>
+         * 
          * <strong>example:</strong>
          * <p>1687363348</p>
          */
@@ -159,6 +194,8 @@ public class ListSyslogsResponseBody extends TeaModel {
         public String tagReceiveTime;
 
         /**
+         * <p>Tag: User-defined ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>application_b</p>
          */
@@ -166,6 +203,8 @@ public class ListSyslogsResponseBody extends TeaModel {
         public String tagUserDefinedId;
 
         /**
+         * <p>The time in UNIX format.</p>
+         * 
          * <strong>example:</strong>
          * <p>1687363346</p>
          */
@@ -173,6 +212,8 @@ public class ListSyslogsResponseBody extends TeaModel {
         public String time;
 
         /**
+         * <p>The topic. Valid values are \<code>logserver\\</code> and \<code>log2sls\\</code>. Note: Both are syslog servers. \<code>logserver\\</code> collects data over TCP. \<code>log2sls\\</code> collects data over UDP.</p>
+         * 
          * <strong>example:</strong>
          * <p>logserver</p>
          */

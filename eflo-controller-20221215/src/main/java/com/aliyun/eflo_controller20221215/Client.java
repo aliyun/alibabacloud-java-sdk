@@ -9,6 +9,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public Client(com.aliyun.teaopenapi.models.Config config) throws Exception {
         super(config);
         this._endpointRule = "regional";
+        this._endpointMap = TeaConverter.buildMap(
+            new TeaPair("me-east-1", "eflo-controller.me-east-1.aliyuncs.com"),
+            new TeaPair("eu-central-1", "eflo-controller.eu-central-1.aliyuncs.com"),
+            new TeaPair("cn-zhangjiakou", "eflo-controller.cn-zhangjiakou.aliyuncs.com"),
+            new TeaPair("cn-wulanchabu", "eflo-controller.cn-wulanchabu.aliyuncs.com"),
+            new TeaPair("cn-shenzhen", "eflo-controller.cn-shenzhen.aliyuncs.com"),
+            new TeaPair("cn-shanghai-finance-1", "eflo-controller.cn-shanghai-finance-1.aliyuncs.com"),
+            new TeaPair("cn-shanghai", "eflo-controller.cn-shanghai.aliyuncs.com"),
+            new TeaPair("cn-huhehaote", "eflo-controller.cn-huhehaote.aliyuncs.com"),
+            new TeaPair("cn-hongkong", "eflo-controller.cn-hongkong.aliyuncs.com"),
+            new TeaPair("cn-heyuan", "eflo-controller.cn-heyuan.aliyuncs.com"),
+            new TeaPair("cn-hangzhou", "eflo-controller.cn-hangzhou.aliyuncs.com"),
+            new TeaPair("cn-guangzhou", "eflo-controller.cn-guangzhou.aliyuncs.com"),
+            new TeaPair("cn-beijing", "eflo-controller.cn-beijing.aliyuncs.com"),
+            new TeaPair("ap-southeast-8", "eflo-controller.ap-sourtheast-8.aliyuncs.com"),
+            new TeaPair("ap-southeast-7", "eflo-controller.ap-southeast-7.aliyuncs.com"),
+            new TeaPair("ap-southeast-3", "eflo-controller.ap-southeast-3.aliyuncs.com"),
+            new TeaPair("ap-southeast-1", "eflo-controller.ap-southeast-1.aliyuncs.com"),
+            new TeaPair("ap-northeast-1", "eflo-controller.ap-northeast-1.aliyuncs.com")
+        );
         this.checkConfig(config);
         this._endpoint = this.getEndpoint("eflo-controller", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
     }
@@ -75,8 +95,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Creates a session, returns a frontend endpoint, and starts an auto-triggered task to track the session status.</p>
+     * 
      * <b>summary</b> : 
-     * <p>修改节点的节点组</p>
+     * <p>Changes the node group of a node.</p>
      * 
      * @param tmpReq ChangeNodeGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -123,8 +146,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Creates a session, returns a frontend endpoint, and starts an auto-triggered task to track the session status.</p>
+     * 
      * <b>summary</b> : 
-     * <p>修改节点的节点组</p>
+     * <p>Changes the node group of a node.</p>
      * 
      * @param request ChangeNodeGroupRequest
      * @return ChangeNodeGroupResponse
@@ -136,7 +162,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>节点规格变配</p>
+     * <p>Upgrades or downgrades the specifications of one or more nodes. Before you change the specifications, ensure that the node resources meet the requirements of the target specifications. If a node does not meet the new specification requirements, the task reports success, but the specifications are not changed. Therefore, do not rely on the task status. To confirm a successful change, query the node after the task is complete and check the returned specifications.</p>
      * 
      * @param tmpReq ChangeNodeTypesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -178,7 +204,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>节点规格变配</p>
+     * <p>Upgrades or downgrades the specifications of one or more nodes. Before you change the specifications, ensure that the node resources meet the requirements of the target specifications. If a node does not meet the new specification requirements, the task reports success, but the specifications are not changed. Therefore, do not rely on the task status. To confirm a successful change, query the node after the task is complete and check the returned specifications.</p>
      * 
      * @param request ChangeNodeTypesRequest
      * @return ChangeNodeTypesResponse
@@ -190,7 +216,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Moves a resource from one resource group to another.</p>
+     * <p>Changes the resource group of a resource.</p>
      * 
      * @param request ChangeResourceGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -234,7 +260,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Moves a resource from one resource group to another.</p>
+     * <p>Changes the resource group of a resource.</p>
      * 
      * @param request ChangeResourceGroupRequest
      * @return ChangeResourceGroupResponse
@@ -245,6 +271,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>An interface for creating a session, returning the front-end EndPoint, and initiating a periodic task to track the session status</p>
+     * 
      * <b>summary</b> : 
      * <p>Disconnect Connection</p>
      * 
@@ -281,6 +310,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>An interface for creating a session, returning the front-end EndPoint, and initiating a periodic task to track the session status</p>
+     * 
      * <b>summary</b> : 
      * <p>Disconnect Connection</p>
      * 
@@ -293,8 +325,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>关闭远程会话的接口。</p>
+     * 
      * <b>summary</b> : 
-     * <p>Create a large-scale computing cluster</p>
+     * <p>Creates a new LINGJUN Cluster.</p>
      * 
      * @param tmpReq CreateClusterRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -389,8 +424,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>关闭远程会话的接口。</p>
+     * 
      * <b>summary</b> : 
-     * <p>Create a large-scale computing cluster</p>
+     * <p>Creates a new LINGJUN Cluster.</p>
      * 
      * @param request CreateClusterRequest
      * @return CreateClusterResponse
@@ -467,9 +505,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <p>The API creates a session, returns the frontend endpoint, and starts a periodic task to track the session status.</p>
-     * 
      * <b>summary</b> : 
      * <p>Creates a network test task.</p>
      * 
@@ -544,9 +579,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <p>The API creates a session, returns the frontend endpoint, and starts a periodic task to track the session status.</p>
-     * 
      * <b>summary</b> : 
      * <p>Creates a network test task.</p>
      * 
@@ -559,8 +591,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Creates a session, returns a front-end endpoint, and starts a periodic task to track the session status.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Create Node Group under Cluster</p>
+     * <p>Create a node group in a cluster.</p>
      * 
      * @param tmpReq CreateNodeGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -609,8 +644,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Creates a session, returns a front-end endpoint, and starts a periodic task to track the session status.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Create Node Group under Cluster</p>
+     * <p>Create a node group in a cluster.</p>
      * 
      * @param request CreateNodeGroupRequest
      * @return CreateNodeGroupResponse
@@ -680,7 +718,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a virtual storage channel (VSC).</p>
+     * <p>Creates a VSC.</p>
      * 
      * @param request CreateVscRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -734,7 +772,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a virtual storage channel (VSC).</p>
+     * <p>Creates a VSC.</p>
      * 
      * @param request CreateVscRequest
      * @return CreateVscResponse
@@ -790,7 +828,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除一个未使用超节点</p>
+     * <p>Deletes an unused hyper node.</p>
      * 
      * @param request DeleteHyperNodeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -822,7 +860,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除一个未使用超节点</p>
+     * <p>Deletes an unused hyper node.</p>
      * 
      * @param request DeleteHyperNodeRequest
      * @return DeleteHyperNodeResponse
@@ -834,7 +872,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除一个未使用节点</p>
+     * <p>Releases a pay-as-you-go node.</p>
      * 
      * @param request DeleteNodeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -866,7 +904,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除一个未使用节点</p>
+     * <p>Releases a pay-as-you-go node.</p>
      * 
      * @param request DeleteNodeRequest
      * @return DeleteNodeResponse
@@ -926,7 +964,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes a virtual storage channel (VSC).</p>
+     * <p>Deletes a VSC.</p>
      * 
      * @param request DeleteVscRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -964,7 +1002,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes a virtual storage channel (VSC).</p>
+     * <p>Deletes a VSC.</p>
      * 
      * @param request DeleteVscRequest
      * @return DeleteVscResponse
@@ -975,8 +1013,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Queries the details of a specified cluster.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Queries information about a Lingjun cluster.</p>
+     * <p>Queries the details of a cluster.</p>
      * 
      * @param request DescribeClusterRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1007,8 +1048,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Queries the details of a specified cluster.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Queries information about a Lingjun cluster.</p>
+     * <p>Queries the details of a cluster.</p>
      * 
      * @param request DescribeClusterRequest
      * @return DescribeClusterResponse
@@ -1069,8 +1113,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Queries the details of a specified hyper node.</p>
+     * 
      * <b>summary</b> : 
-     * <p>查询节点列表</p>
+     * <p>Queries the details of a hyper node.</p>
      * 
      * @param request DescribeHyperNodeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1101,8 +1148,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Queries the details of a specified hyper node.</p>
+     * 
      * <b>summary</b> : 
-     * <p>查询节点列表</p>
+     * <p>Queries the details of a hyper node.</p>
      * 
      * @param request DescribeHyperNodeRequest
      * @return DescribeHyperNodeResponse
@@ -1114,7 +1164,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the execution list and status of O\\\&amp;M Assistant commands.</p>
+     * <p>Queries the execution history and status of Cloud Assistant commands.</p>
      * 
      * @param request DescribeInvocationsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1158,7 +1208,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the execution list and status of O\\\&amp;M Assistant commands.</p>
+     * <p>Queries the execution history and status of Cloud Assistant commands.</p>
      * 
      * @param request DescribeInvocationsRequest
      * @return DescribeInvocationsResponse
@@ -1170,7 +1220,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query Network Test Result</p>
+     * <p>Queries the results of a network test.</p>
      * 
      * @param request DescribeNetTestResultRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1202,7 +1252,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query Network Test Result</p>
+     * <p>Queries the results of a network test.</p>
      * 
      * @param request DescribeNetTestResultRequest
      * @return DescribeNetTestResultResponse
@@ -1213,8 +1263,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Queries the detailed information of a hyper node.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Queries a list of nodes.</p>
+     * <p>Queries the list of nodes.</p>
      * 
      * @param request DescribeNodeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1245,8 +1298,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Queries the detailed information of a hyper node.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Queries a list of nodes.</p>
+     * <p>Queries the list of nodes.</p>
      * 
      * @param request DescribeNodeRequest
      * @return DescribeNodeResponse
@@ -1257,8 +1313,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This operation queries the details of a node group.</p>
+     * 
      * <b>summary</b> : 
-     * <p>查询节点分组</p>
+     * <p>Queries the details of a node group.</p>
      * 
      * @param request DescribeNodeGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1289,8 +1348,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This operation queries the details of a node group.</p>
+     * 
      * <b>summary</b> : 
-     * <p>查询节点分组</p>
+     * <p>Queries the details of a node group.</p>
      * 
      * @param request DescribeNodeGroupRequest
      * @return DescribeNodeGroupResponse
@@ -1302,7 +1364,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询节点规格详情</p>
+     * <p>Describes the constraints for a node type.</p>
      * 
      * @param request DescribeNodeTypeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1334,7 +1396,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询节点规格详情</p>
+     * <p>Describes the constraints for a node type.</p>
      * 
      * @param request DescribeNodeTypeRequest
      * @return DescribeNodeTypeResponse
@@ -1482,7 +1544,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries information about a virtual storage channel (VSC).</p>
+     * <p>Retrieves the details of a specific virtual switch controller (Vsc).</p>
      * 
      * @param request DescribeVscRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1514,7 +1576,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries information about a virtual storage channel (VSC).</p>
+     * <p>Retrieves the details of a specific virtual switch controller (Vsc).</p>
      * 
      * @param request DescribeVscRequest
      * @return DescribeVscResponse
@@ -1569,8 +1631,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Closes a remote session.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Cluster Scaling</p>
+     * <p>Extends a cluster.</p>
      * 
      * @param tmpReq ExtendClusterRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1635,8 +1700,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Closes a remote session.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Cluster Scaling</p>
+     * <p>Extends a cluster.</p>
      * 
      * @param request ExtendClusterRequest
      * @return ExtendClusterResponse
@@ -1648,7 +1716,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>集群下的主机分组列表，分组下的主机列表</p>
+     * <p>Lists the node groups of a cluster and the nodes in each group.</p>
      * 
      * @param request ListClusterHyperNodesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1702,7 +1770,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>集群下的主机分组列表，分组下的主机列表</p>
+     * <p>Lists the node groups of a cluster and the nodes in each group.</p>
      * 
      * @param request ListClusterHyperNodesRequest
      * @return ListClusterHyperNodesResponse
@@ -1714,7 +1782,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of nodes in a cluster.</p>
+     * <p>Queries the nodes in a cluster.</p>
      * 
      * @param request ListClusterNodesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1772,7 +1840,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of nodes in a cluster.</p>
+     * <p>Queries the nodes in a cluster.</p>
      * 
      * @param request ListClusterNodesRequest
      * @return ListClusterNodesResponse
@@ -1784,7 +1852,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of clusters.</p>
+     * <p>Query cluster instances with optional filtering by resource group and tags.</p>
      * 
      * @param request ListClustersRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1830,7 +1898,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of clusters.</p>
+     * <p>Query cluster instances with optional filtering by resource group and tags.</p>
      * 
      * @param request ListClustersRequest
      * @return ListClustersResponse
@@ -1841,6 +1909,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>An interface for creating a session, which returns the frontend EndPoint and initiates a periodic task to track the session status.</p>
+     * 
      * <b>summary</b> : 
      * <p>List of Diagnostic Tasks</p>
      * 
@@ -1885,6 +1956,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>An interface for creating a session, which returns the frontend EndPoint and initiates a periodic task to track the session status.</p>
+     * 
      * <b>summary</b> : 
      * <p>List of Diagnostic Tasks</p>
      * 
@@ -1898,7 +1972,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>可用rack物理机列表</p>
+     * <p>Lists the active physical servers in the rack.</p>
      * 
      * @param request ListFreeHyperNodesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1954,7 +2028,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>可用rack物理机列表</p>
+     * <p>Lists the active physical servers in the rack.</p>
      * 
      * @param request ListFreeHyperNodesRequest
      * @return ListFreeHyperNodesResponse
@@ -1966,7 +2040,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of nodes that are not used.</p>
+     * <p>Lists all unused nodes.</p>
      * 
      * @param request ListFreeNodesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2024,7 +2098,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of nodes that are not used.</p>
+     * <p>Lists all unused nodes.</p>
      * 
      * @param request ListFreeNodesRequest
      * @return ListFreeNodesResponse
@@ -2035,8 +2109,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Queries the details of hypernodes.</p>
+     * 
      * <b>summary</b> : 
-     * <p>机器列表</p>
+     * <p>Machines</p>
      * 
      * @param tmpReq ListHyperNodesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2127,8 +2204,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Queries the details of hypernodes.</p>
+     * 
      * <b>summary</b> : 
-     * <p>机器列表</p>
+     * <p>Machines</p>
      * 
      * @param request ListHyperNodesRequest
      * @return ListHyperNodesResponse
@@ -2192,7 +2272,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query machine network configuration using HPNZone and machine type</p>
+     * <p>Queries the network configurations for machine types.</p>
      * 
      * @param tmpReq ListMachineNetworkInfoRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2230,7 +2310,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query machine network configuration using HPNZone and machine type</p>
+     * <p>Queries the network configurations for machine types.</p>
      * 
      * @param request ListMachineNetworkInfoRequest
      * @return ListMachineNetworkInfoResponse
@@ -2242,7 +2322,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of instance types that are available to users.</p>
+     * <p>Queries a list of available machine types.</p>
      * 
      * @param request ListMachineTypesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2274,7 +2354,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of instance types that are available to users.</p>
+     * <p>Queries a list of available machine types.</p>
      * 
      * @param request ListMachineTypesRequest
      * @return ListMachineTypesResponse
@@ -2285,11 +2365,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <p>The API creates a session, returns the frontend endpoint, and starts a periodic task to track the session status.</p>
-     * 
      * <b>summary</b> : 
-     * <p>Lists the results of network test results.</p>
+     * <p>Lists network test results.</p>
      * 
      * @param request ListNetTestResultsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2332,11 +2409,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <p>The API creates a session, returns the frontend endpoint, and starts a periodic task to track the session status.</p>
-     * 
      * <b>summary</b> : 
-     * <p>Lists the results of network test results.</p>
+     * <p>Lists network test results.</p>
      * 
      * @param request ListNetTestResultsRequest
      * @return ListNetTestResultsResponse
@@ -2348,7 +2422,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries node groups in a cluster.</p>
+     * <p>Query Node Group Information Under the Cluster</p>
      * 
      * @param request ListNodeGroupsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2392,7 +2466,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries node groups in a cluster.</p>
+     * <p>Query Node Group Information Under the Cluster</p>
      * 
      * @param request ListNodeGroupsRequest
      * @return ListNodeGroupsResponse
@@ -2404,7 +2478,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询系统日志</p>
+     * <p>Queries system logs.</p>
      * 
      * @param request ListSyslogsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2456,7 +2530,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询系统日志</p>
+     * <p>Queries system logs.</p>
      * 
      * @param request ListSyslogsRequest
      * @return ListSyslogsResponse
@@ -2468,7 +2542,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the tags of resources.</p>
+     * <p>Queries the tags that are attached to resources.</p>
      * 
      * @param request ListTagResourcesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2516,7 +2590,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the tags of resources.</p>
+     * <p>Queries the tags that are attached to resources.</p>
      * 
      * @param request ListTagResourcesRequest
      * @return ListTagResourcesResponse
@@ -2527,10 +2601,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>An interface for creating a session, which returns the front-end EndPoint and initiates a periodic task to track the session status</p>
+     * 
      * <b>summary</b> : 
      * <p>Query the cluster types available to the user</p>
      * 
-     * @param request ListUserClusterTypesRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListUserClusterTypesResponse
      */
@@ -2551,6 +2627,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>An interface for creating a session, which returns the front-end EndPoint and initiates a periodic task to track the session status</p>
+     * 
      * <b>summary</b> : 
      * <p>Query the cluster types available to the user</p>
      * @return ListUserClusterTypesResponse
@@ -2562,7 +2641,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of virtual storage channels (VSC).</p>
+     * <p>Queries a list of VSCs.</p>
      * 
      * @param tmpReq ListVscsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2622,7 +2701,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of virtual storage channels (VSC).</p>
+     * <p>Queries a list of VSCs.</p>
      * 
      * @param request ListVscsRequest
      * @return ListVscsResponse
@@ -2692,7 +2771,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Reinstall a node.</p>
+     * <p>Reimages the specified nodes.</p>
      * 
      * @param tmpReq ReimageNodesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2742,7 +2821,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Reinstall a node.</p>
+     * <p>Reimages the specified nodes.</p>
      * 
      * @param request ReimageNodesRequest
      * @return ReimageNodesResponse
@@ -2753,8 +2832,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Creates a session, returns a frontend endpoint, and starts a periodic task to track the session status.</p>
+     * 
      * <b>summary</b> : 
-     * <p>节点异常问题上报</p>
+     * <p>Reports issues with abnormal nodes.</p>
      * 
      * @param tmpReq ReportNodesStatusRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2811,8 +2893,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Creates a session, returns a frontend endpoint, and starts a periodic task to track the session status.</p>
+     * 
      * <b>summary</b> : 
-     * <p>节点异常问题上报</p>
+     * <p>Reports issues with abnormal nodes.</p>
      * 
      * @param request ReportNodesStatusRequest
      * @return ReportNodesStatusResponse
@@ -3028,7 +3113,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Scales in a cluster.</p>
+     * <p>Scales in a CC cluster.</p>
      * 
      * @param tmpReq ShrinkClusterRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3074,7 +3159,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Scales in a cluster.</p>
+     * <p>Scales in a CC cluster.</p>
      * 
      * @param request ShrinkClusterRequest
      * @return ShrinkClusterResponse
@@ -3194,7 +3279,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Tags resources.</p>
+     * <p>Applies tags to resources.</p>
      * 
      * @param request TagResourcesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3238,7 +3323,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Tags resources.</p>
+     * <p>Applies tags to resources.</p>
      * 
      * @param request TagResourcesRequest
      * @return TagResourcesResponse
@@ -3250,7 +3335,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes a custom tag from a resource.</p>
+     * <p>Removes custom tags from resources.</p>
      * 
      * @param request UntagResourcesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3298,7 +3383,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes a custom tag from a resource.</p>
+     * <p>Removes custom tags from resources.</p>
      * 
      * @param request UntagResourcesRequest
      * @return UntagResourcesResponse
@@ -3309,8 +3394,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Updates a node group asynchronously. A task ID is returned to track the progress of the operation.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Update Node Group</p>
+     * <p>Updates a node group.</p>
      * 
      * @param request UpdateNodeGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3369,8 +3457,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Updates a node group asynchronously. A task ID is returned to track the progress of the operation.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Update Node Group</p>
+     * <p>Updates a node group.</p>
      * 
      * @param request UpdateNodeGroupRequest
      * @return UpdateNodeGroupResponse

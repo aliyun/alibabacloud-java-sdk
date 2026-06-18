@@ -4,66 +4,186 @@ package com.aliyun.eflo_controller20221215.models;
 import com.aliyun.tea.*;
 
 public class DescribeNodeGroupResponseBody extends TeaModel {
+    /**
+     * <p>The zone ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-wulanchabu-a</p>
+     */
     @NameInMap("Az")
     public String az;
 
+    /**
+     * <p>The ID of the cluster.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>i111987311754895199538</p>
+     */
     @NameInMap("ClusterId")
     public String clusterId;
 
+    /**
+     * <p>The cluster name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>aliyun-basic-cluster</p>
+     */
     @NameInMap("ClusterName")
     public String clusterName;
 
+    /**
+     * <p>The creation time.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2025-07-07T17:19:42.980000</p>
+     */
     @NameInMap("CreateTime")
     public String createTime;
 
+    /**
+     * <p>Indicates whether file storage can be mounted.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>True</p>
+     */
     @NameInMap("FileSystemMountEnabled")
     public Boolean fileSystemMountEnabled;
 
+    /**
+     * <p>The image ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>i190720111752146430748</p>
+     */
     @NameInMap("ImageId")
     public String imageId;
 
+    /**
+     * <p>The name of the image.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Alinux3_x86_5.10.134-16.3_NV_RunC_D3_E3C7_570.133.20_V1.0_250428</p>
+     */
     @NameInMap("ImageName")
     public String imageName;
 
+    /**
+     * <p>The name of the key pair.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>k8s-key</p>
+     */
     @NameInMap("KeyPairName")
     public String keyPairName;
 
+    /**
+     * <p>Valid values:
+     * • password: The node group supports only password-based logon.
+     * • keypair: The node group supports only key pair-based logon.
+     * • both: The node group supports password-based and key pair-based logon.</p>
+     * <p>If this parameter is not returned, no logon method is configured for the node group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>password</p>
+     */
     @NameInMap("LoginType")
     public String loginType;
 
+    /**
+     * <p>The instance type.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>efg2.NH2cn</p>
+     */
     @NameInMap("MachineType")
     public String machineType;
 
+    /**
+     * <p>The number of nodes.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("NodeCount")
     public String nodeCount;
 
+    /**
+     * <p>The description of the node group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>lingjun alinux node group</p>
+     */
     @NameInMap("NodeGroupDescription")
     public String nodeGroupDescription;
 
+    /**
+     * <p>The ID of the node group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>i120982301752461697971</p>
+     */
     @NameInMap("NodeGroupId")
     public String nodeGroupId;
 
+    /**
+     * <p>The name of the node group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test-ack</p>
+     */
     @NameInMap("NodeGroupName")
     public String nodeGroupName;
 
+    /**
+     * <p>The name of the RAM role. You can call the ListRoles operation of the RAM API to query the RAM roles that you created.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>xianwen-test-ram-role</p>
+     */
     @NameInMap("RamRoleName")
     public String ramRoleName;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>83896080-59E3-5775-BDDC-8084691C3D96</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The system disk information.</p>
+     */
     @NameInMap("SystemDisk")
     public DescribeNodeGroupResponseBodySystemDisk systemDisk;
 
+    /**
+     * <p>The time when the node group was last updated.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2025-08-20T11:18:11.164000</p>
+     */
     @NameInMap("UpdateTime")
     public String updateTime;
 
+    /**
+     * <p>The user data.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>#!/bin/bash
+     * uptime
+     * echo &quot;aaaaaaa&quot; &gt;&gt; /tmp/tttest.sh</p>
+     */
     @NameInMap("UserData")
     public String userData;
 
+    /**
+     * <p>Indicates whether the node group supports GPU virtualization.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>False</p>
+     */
     @NameInMap("VirtualGpuEnabled")
     public Boolean virtualGpuEnabled;
 
@@ -233,12 +353,57 @@ public class DescribeNodeGroupResponseBody extends TeaModel {
     }
 
     public static class DescribeNodeGroupResponseBodySystemDisk extends TeaModel {
+        /**
+         * <p>The category of the disk.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>system</p>
+         */
         @NameInMap("Category")
         public String category;
 
+        /**
+         * <p>The performance level of the ESSD. Valid values:</p>
+         * <ul>
+         * <li><p>PL0: A single ESSD can deliver up to 10,000 random read/write IOPS.</p>
+         * </li>
+         * <li><p>PL1: A single ESSD can deliver up to 50,000 random read/write IOPS.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>PL0</p>
+         */
         @NameInMap("PerformanceLevel")
         public String performanceLevel;
 
+        /**
+         * <p>The size of the system disk. Unit: GiB. Valid values:</p>
+         * <ul>
+         * <li><p>Basic disk: 20–500.</p>
+         * </li>
+         * <li><p>ESSD:</p>
+         * <ul>
+         * <li><p>PL0: 1–2,048.</p>
+         * </li>
+         * <li><p>PL1: 20–2,048.</p>
+         * </li>
+         * <li><p>PL2: 461–2,048.</p>
+         * </li>
+         * <li><p>PL3: 1,261–2,048.</p>
+         * </li>
+         * </ul>
+         * </li>
+         * <li><p>ESSD AutoPL disk: 1–2,048.</p>
+         * </li>
+         * <li><p>Other disk categories: 20–2,048.</p>
+         * </li>
+         * </ul>
+         * <p>Default value: the larger value between 20 and the size of the image that is specified by <code>ImageId</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1024</p>
+         */
         @NameInMap("Size")
         public Integer size;
 

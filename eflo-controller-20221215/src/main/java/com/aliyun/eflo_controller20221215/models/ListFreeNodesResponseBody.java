@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListFreeNodesResponseBody extends TeaModel {
     /**
-     * <p>The returned pagination token which can be used in the next request to retrieve a new page of results.</p>
+     * <p>The token returned for the next query.</p>
      * 
      * <strong>example:</strong>
      * <p>a3f2224a5ec7224116c4f5246120abe4</p>
@@ -14,7 +14,7 @@ public class ListFreeNodesResponseBody extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The nodes.</p>
+     * <p>The list of nodes.</p>
      */
     @NameInMap("Nodes")
     public java.util.List<ListFreeNodesResponseBodyNodes> nodes;
@@ -62,7 +62,7 @@ public class ListFreeNodesResponseBody extends TeaModel {
          * <p>The tag key.</p>
          * 
          * <strong>example:</strong>
-         * <p>aa_key</p>
+         * <p>alarm_xdc</p>
          */
         @NameInMap("Key")
         public String key;
@@ -71,7 +71,7 @@ public class ListFreeNodesResponseBody extends TeaModel {
          * <p>The tag value.</p>
          * 
          * <strong>example:</strong>
-         * <p>aa_vakye</p>
+         * <p>true</p>
          */
         @NameInMap("Value")
         public String value;
@@ -113,22 +113,22 @@ public class ListFreeNodesResponseBody extends TeaModel {
          * <p>The creation time.</p>
          * 
          * <strong>example:</strong>
-         * <p>1652321554</p>
+         * <p>2026-02-02T11:27:07</p>
          */
         @NameInMap("CreateTime")
         public String createTime;
 
         /**
-         * <p>The time when the node expires.</p>
+         * <p>The expiration time of the machine.</p>
          * 
          * <strong>example:</strong>
-         * <p>1673107200</p>
+         * <p>2026-03-03T00:00:00</p>
          */
         @NameInMap("ExpiredTime")
         public String expiredTime;
 
         /**
-         * <p>The cluster number.</p>
+         * <p>The cluster ID.</p>
          * 
          * <strong>example:</strong>
          * <p>A1</p>
@@ -137,6 +137,8 @@ public class ListFreeNodesResponseBody extends TeaModel {
         public String hpnZone;
 
         /**
+         * <p>The hyper node ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>e01-cn-zvp2tgykr08</p>
          */
@@ -144,7 +146,7 @@ public class ListFreeNodesResponseBody extends TeaModel {
         public String hyperNodeId;
 
         /**
-         * <p>The instance type.</p>
+         * <p>The machine type.</p>
          * 
          * <strong>example:</strong>
          * <p>efg1.nvga1</p>
@@ -165,7 +167,7 @@ public class ListFreeNodesResponseBody extends TeaModel {
          * <p>The node status.</p>
          * 
          * <strong>example:</strong>
-         * <p>Unused</p>
+         * <p>Extending</p>
          */
         @NameInMap("OperatingState")
         public String operatingState;
@@ -180,7 +182,7 @@ public class ListFreeNodesResponseBody extends TeaModel {
         public String resourceGroupId;
 
         /**
-         * <p>The serial number of the node.</p>
+         * <p>The serial number (SN) of the machine.</p>
          * 
          * <strong>example:</strong>
          * <p>sn_pozkHBgicd</p>
@@ -189,7 +191,7 @@ public class ListFreeNodesResponseBody extends TeaModel {
         public String sn;
 
         /**
-         * <p>The tags.</p>
+         * <p>The list of tags.</p>
          */
         @NameInMap("Tags")
         public java.util.List<ListFreeNodesResponseBodyNodesTags> tags;

@@ -5,7 +5,11 @@ import com.aliyun.tea.*;
 
 public class DescribeNodeGroupRequest extends TeaModel {
     /**
+     * <p>The ID of the node group.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>i128903591758597631635</p>
      */
     @NameInMap("NodeGroupId")
     public String nodeGroupId;

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ReportNodesStatusResponseBody extends TeaModel {
     /**
-     * <p>Error Message</p>
+     * <p>The error message.</p>
      * 
      * <strong>example:</strong>
      * <p>Resource not found</p>
@@ -14,6 +14,8 @@ public class ReportNodesStatusResponseBody extends TeaModel {
     public String errorMessage;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>B0699629-14FC-51E7-B49E-AAD83F6FEB60</p>
      */

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeHyperNodeResponseBody extends TeaModel {
     /**
+     * <p>The cluster ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>i119982311660892626523</p>
      */
@@ -12,6 +14,8 @@ public class DescribeHyperNodeResponseBody extends TeaModel {
     public String clusterId;
 
     /**
+     * <p>The cluster name.</p>
+     * 
      * <strong>example:</strong>
      * <p>Standard_Cluster</p>
      */
@@ -19,6 +23,8 @@ public class DescribeHyperNodeResponseBody extends TeaModel {
     public String clusterName;
 
     /**
+     * <p>The time when the hyper node was created.</p>
+     * 
      * <strong>example:</strong>
      * <p>2022-11-30T02:00:00.852Z</p>
      */
@@ -26,6 +32,8 @@ public class DescribeHyperNodeResponseBody extends TeaModel {
     public String createTime;
 
     /**
+     * <p>The expiration time.</p>
+     * 
      * <strong>example:</strong>
      * <p>2125-06-24T16:52:44.318000</p>
      */
@@ -33,6 +41,8 @@ public class DescribeHyperNodeResponseBody extends TeaModel {
     public String expireTime;
 
     /**
+     * <p>Indicates whether file storage mounting is supported.</p>
+     * 
      * <strong>example:</strong>
      * <p>True</p>
      */
@@ -40,6 +50,8 @@ public class DescribeHyperNodeResponseBody extends TeaModel {
     public Boolean fileSystemMountEnabled;
 
     /**
+     * <p>The hostname.</p>
+     * 
      * <strong>example:</strong>
      * <p>alywlcb-lingjun-gpu-0025</p>
      */
@@ -47,6 +59,8 @@ public class DescribeHyperNodeResponseBody extends TeaModel {
     public String hostname;
 
     /**
+     * <p>The cluster number.</p>
+     * 
      * <strong>example:</strong>
      * <p>A1</p>
      */
@@ -54,6 +68,8 @@ public class DescribeHyperNodeResponseBody extends TeaModel {
     public String hpnZone;
 
     /**
+     * <p>The ID of the hyper node.</p>
+     * 
      * <strong>example:</strong>
      * <p>e01-cn-zvp2tgykr08</p>
      */
@@ -61,6 +77,8 @@ public class DescribeHyperNodeResponseBody extends TeaModel {
     public String hyperNodeId;
 
     /**
+     * <p>The machine type.</p>
+     * 
      * <strong>example:</strong>
      * <p>efg1.nvga1</p>
      */
@@ -68,6 +86,8 @@ public class DescribeHyperNodeResponseBody extends TeaModel {
     public String machineType;
 
     /**
+     * <p>The node group ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>ng-ec3c96ff0aa4c60d</p>
      */
@@ -75,16 +95,23 @@ public class DescribeHyperNodeResponseBody extends TeaModel {
     public String nodeGroupId;
 
     /**
+     * <p>The name of the node group.</p>
+     * 
      * <strong>example:</strong>
      * <p>lisan-nodegroup</p>
      */
     @NameInMap("NodeGroupName")
     public String nodeGroupName;
 
+    /**
+     * <p>The list of nodes.</p>
+     */
     @NameInMap("Nodes")
     public java.util.List<DescribeHyperNodeResponseBodyNodes> nodes;
 
     /**
+     * <p>The state of the hyper node.</p>
+     * 
      * <strong>example:</strong>
      * <p>Using</p>
      */
@@ -92,6 +119,8 @@ public class DescribeHyperNodeResponseBody extends TeaModel {
     public String operatingState;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>D6058705-1C45-35C9-9461-02504897D4D0</p>
      */
@@ -99,6 +128,8 @@ public class DescribeHyperNodeResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The resource group ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>rg-acfmxno4vh5****</p>
      */
@@ -106,6 +137,8 @@ public class DescribeHyperNodeResponseBody extends TeaModel {
     public String resourceGroupId;
 
     /**
+     * <p>The state of the node.</p>
+     * 
      * <strong>example:</strong>
      * <p>Operating</p>
      */
@@ -114,6 +147,8 @@ public class DescribeHyperNodeResponseBody extends TeaModel {
     public String status;
 
     /**
+     * <p>The zone ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-wulanchabu-c</p>
      */
@@ -264,6 +299,14 @@ public class DescribeHyperNodeResponseBody extends TeaModel {
 
     public static class DescribeHyperNodeResponseBodyNodesDisks extends TeaModel {
         /**
+         * <p>The packet classification. Valid values:</p>
+         * <ul>
+         * <li><p><strong>DOWNLINK_PACKET</strong>: downlink packet</p>
+         * </li>
+         * <li><p><strong>UPLINK_PACKET</strong>: uplink packet</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>DOWNLINK_PACKET</p>
          */
@@ -271,6 +314,8 @@ public class DescribeHyperNodeResponseBody extends TeaModel {
         public String category;
 
         /**
+         * <p>The disk ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>d-bp1564bcc2306uui4zpk</p>
          */
@@ -278,6 +323,14 @@ public class DescribeHyperNodeResponseBody extends TeaModel {
         public String diskId;
 
         /**
+         * <p>When you create an enhanced SSD (ESSD) to use as a system disk, set the performance level of the disk. Valid values:</p>
+         * <ul>
+         * <li><p>PL0: A maximum of 10,000 random read/write input/output operations per second (IOPS) per disk.</p>
+         * </li>
+         * <li><p>PL1: A maximum of 50,000 random read/write IOPS per disk.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>PL0</p>
          */
@@ -285,6 +338,8 @@ public class DescribeHyperNodeResponseBody extends TeaModel {
         public String performanceLevel;
 
         /**
+         * <p>The disk size. Unit: GiB.</p>
+         * 
          * <strong>example:</strong>
          * <p>5</p>
          */
@@ -292,6 +347,14 @@ public class DescribeHyperNodeResponseBody extends TeaModel {
         public Integer size;
 
         /**
+         * <p>The disk type. Valid values:</p>
+         * <ul>
+         * <li><p>system: system disk.</p>
+         * </li>
+         * <li><p>data: data disk.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>system</p>
          */
@@ -347,6 +410,8 @@ public class DescribeHyperNodeResponseBody extends TeaModel {
 
     public static class DescribeHyperNodeResponseBodyNodesNetworks extends TeaModel {
         /**
+         * <p>The name of the network interface on the machine.</p>
+         * 
          * <strong>example:</strong>
          * <p>bond0</p>
          */
@@ -354,6 +419,8 @@ public class DescribeHyperNodeResponseBody extends TeaModel {
         public String bondName;
 
         /**
+         * <p>The IP address of the machine in the virtual private cloud (VPC).</p>
+         * 
          * <strong>example:</strong>
          * <p>192.168.22.2</p>
          */
@@ -384,10 +451,15 @@ public class DescribeHyperNodeResponseBody extends TeaModel {
     }
 
     public static class DescribeHyperNodeResponseBodyNodes extends TeaModel {
+        /**
+         * <p>The disk information.</p>
+         */
         @NameInMap("Disks")
         public java.util.List<DescribeHyperNodeResponseBodyNodesDisks> disks;
 
         /**
+         * <p>The hostname.</p>
+         * 
          * <strong>example:</strong>
          * <p>457db5ca-241d-11ed-9fd7-acde48001122</p>
          */
@@ -395,6 +467,8 @@ public class DescribeHyperNodeResponseBody extends TeaModel {
         public String hostname;
 
         /**
+         * <p>The image ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>i190297201669099844192</p>
          */
@@ -402,16 +476,23 @@ public class DescribeHyperNodeResponseBody extends TeaModel {
         public String imageId;
 
         /**
+         * <p>The image name.</p>
+         * 
          * <strong>example:</strong>
          * <p>Alinux3_x86_gu8xf_P_Host_D3_C7E3_550.127_Legacy_N_241230</p>
          */
         @NameInMap("ImageName")
         public String imageName;
 
+        /**
+         * <p>The network information.</p>
+         */
         @NameInMap("Networks")
         public DescribeHyperNodeResponseBodyNodesNetworks networks;
 
         /**
+         * <p>The node ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>e01-cn-zvp2tgykr0b</p>
          */
@@ -419,6 +500,8 @@ public class DescribeHyperNodeResponseBody extends TeaModel {
         public String nodeId;
 
         /**
+         * <p>The state of the node.</p>
+         * 
          * <strong>example:</strong>
          * <p>Using</p>
          */
@@ -426,6 +509,8 @@ public class DescribeHyperNodeResponseBody extends TeaModel {
         public String operatingState;
 
         /**
+         * <p>The state.</p>
+         * 
          * <strong>example:</strong>
          * <p>InProgress</p>
          */
@@ -434,6 +519,8 @@ public class DescribeHyperNodeResponseBody extends TeaModel {
         public String status;
 
         /**
+         * <p>The user-defined script.</p>
+         * 
          * <strong>example:</strong>
          * <p>#!/bin/bash
          * uptime

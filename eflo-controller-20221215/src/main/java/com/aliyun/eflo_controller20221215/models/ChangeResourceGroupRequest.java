@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ChangeResourceGroupRequest extends TeaModel {
     /**
-     * <p>The ID of the resource group into which you want to change.</p>
+     * <p>The ID of the destination resource group.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class ChangeResourceGroupRequest extends TeaModel {
     public String resourceGroupId;
 
     /**
-     * <p>The resource ID.</p>
+     * <p>The ID of the resource.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,7 +25,7 @@ public class ChangeResourceGroupRequest extends TeaModel {
     public String resourceId;
 
     /**
-     * <p>The region ID.</p>
+     * <p>The ID of the region.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -35,7 +35,7 @@ public class ChangeResourceGroupRequest extends TeaModel {
     public String resourceRegionId;
 
     /**
-     * <p>The resource type.</p>
+     * <p>The type of the resource.</p>
      * 
      * <strong>example:</strong>
      * <p>Node</p>

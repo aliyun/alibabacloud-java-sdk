@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListClusterNodesResponseBody extends TeaModel {
     /**
-     * <p>The returned pagination token which can be used in the next request to retrieve a new page of results.</p>
+     * <p>The token to retrieve the next page of results. If this parameter is empty, no more results are available.</p>
      * 
      * <strong>example:</strong>
      * <p>AAAAAXW/ZB9TBvH+0ZK0phtCibQgQmu1RbqplAI6Velo2OKR</p>
@@ -14,7 +14,7 @@ public class ListClusterNodesResponseBody extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The nodes.</p>
+     * <p>The list of nodes.</p>
      */
     @NameInMap("Nodes")
     public java.util.List<ListClusterNodesResponseBodyNodes> nodes;
@@ -59,7 +59,7 @@ public class ListClusterNodesResponseBody extends TeaModel {
 
     public static class ListClusterNodesResponseBodyNodesNetworks extends TeaModel {
         /**
-         * <p>The name of the network port for the node.</p>
+         * <p>The name of the network interface.</p>
          * 
          * <strong>example:</strong>
          * <p>bond0</p>
@@ -68,7 +68,7 @@ public class ListClusterNodesResponseBody extends TeaModel {
         public String bondName;
 
         /**
-         * <p>The IP address of the node in the virtual private cloud (VPC).</p>
+         * <p>The IP address of the node in the VPC.</p>
          * 
          * <strong>example:</strong>
          * <p>192.168.22.2</p>
@@ -86,7 +86,7 @@ public class ListClusterNodesResponseBody extends TeaModel {
         public String subnetId;
 
         /**
-         * <p>The VPC ID.</p>
+         * <p>The ID of the VPC to which the network interface belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>vpd-eoiy88ju</p>
@@ -138,7 +138,7 @@ public class ListClusterNodesResponseBody extends TeaModel {
          * <p>The tag key.</p>
          * 
          * <strong>example:</strong>
-         * <p>aa_key</p>
+         * <p>alarm_xdc</p>
          */
         @NameInMap("Key")
         public String key;
@@ -147,7 +147,7 @@ public class ListClusterNodesResponseBody extends TeaModel {
          * <p>The tag value.</p>
          * 
          * <strong>example:</strong>
-         * <p>aa_value</p>
+         * <p>true</p>
          */
         @NameInMap("Value")
         public String value;
@@ -177,10 +177,10 @@ public class ListClusterNodesResponseBody extends TeaModel {
 
     public static class ListClusterNodesResponseBodyNodes extends TeaModel {
         /**
-         * <p>The commodity code.</p>
+         * <p>The unique code that identifies the cloud product or service.</p>
          * 
          * <strong>example:</strong>
-         * <p>bcccluster</p>
+         * <p>bccluster_eflocomputing_public_cn（表示灵骏中国站包年包月）、bccluster_eflocomputing_public_intl（表示灵骏国际站包年包月）</p>
          */
         @NameInMap("CommodityCode")
         public String commodityCode;
@@ -189,22 +189,22 @@ public class ListClusterNodesResponseBody extends TeaModel {
          * <p>The creation time.</p>
          * 
          * <strong>example:</strong>
-         * <p>1642472468000</p>
+         * <p>2026-02-02T11:27:07</p>
          */
         @NameInMap("CreateTime")
         public String createTime;
 
         /**
-         * <p>The time when the node expires.</p>
+         * <p>The expiration time of the node.</p>
          * 
          * <strong>example:</strong>
-         * <p>1762185600000</p>
+         * <p>2026-03-03T00:00:00</p>
          */
         @NameInMap("ExpiredTime")
         public String expiredTime;
 
         /**
-         * <p>Indicates whether file storage mounting is supported.</p>
+         * <p>Indicates whether the node supports mounting file storage.</p>
          * 
          * <strong>example:</strong>
          * <p>False</p>
@@ -222,7 +222,7 @@ public class ListClusterNodesResponseBody extends TeaModel {
         public String hostname;
 
         /**
-         * <p>The cluster number.</p>
+         * <p>The ID of the HPN zone.</p>
          * 
          * <strong>example:</strong>
          * <p>A1</p>
@@ -231,6 +231,8 @@ public class ListClusterNodesResponseBody extends TeaModel {
         public String hpnZone;
 
         /**
+         * <p>The hyper node ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>e01-cn-2r42tmj4z02</p>
          */
@@ -238,7 +240,7 @@ public class ListClusterNodesResponseBody extends TeaModel {
         public String hyperNodeId;
 
         /**
-         * <p>The system image ID.</p>
+         * <p>The image ID.</p>
          * 
          * <strong>example:</strong>
          * <p>i190297201669099844192</p>
@@ -250,13 +252,13 @@ public class ListClusterNodesResponseBody extends TeaModel {
          * <p>The image name.</p>
          * 
          * <strong>example:</strong>
-         * <p>Alinux3_x86_AMD_R_Host_D3_E3_24.13.00_UEFI_N_250121</p>
+         * <p>Alinux3_x86_gu8xf_P_Host_D3_C7E3_550.127_Legacy_N_241230</p>
          */
         @NameInMap("ImageName")
         public String imageName;
 
         /**
-         * <p>The node type.</p>
+         * <p>The machine type.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-wulanchabu-b11</p>
@@ -265,7 +267,7 @@ public class ListClusterNodesResponseBody extends TeaModel {
         public String machineType;
 
         /**
-         * <p>The network information.</p>
+         * <p>Network details.</p>
          */
         @NameInMap("Networks")
         public java.util.List<ListClusterNodesResponseBodyNodesNetworks> networks;
@@ -297,27 +299,17 @@ public class ListClusterNodesResponseBody extends TeaModel {
         @NameInMap("NodeId")
         public String nodeId;
 
+        /**
+         * <p>The type of the node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>standard</p>
+         */
         @NameInMap("NodeType")
         public String nodeType;
 
         /**
-         * <p>The node status.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>Extending</li>
-         * <li>UnusedNodeStopped</li>
-         * <li>UnusedNodeStopping</li>
-         * <li>Unused</li>
-         * <li>Using</li>
-         * <li>ReleaseLocking</li>
-         * <li>Operating</li>
-         * <li>Cutting</li>
-         * <li>ClusterNodeStopped</li>
-         * <li>UnusedNodeRecovering</li>
-         * <li>ClusterNodeStopping</li>
-         * <li>ClusterNodeRecovering</li>
-         * <li>Replacing</li>
-         * </ul>
+         * <p>The status of the node.</p>
          * 
          * <strong>example:</strong>
          * <p>Extending</p>
@@ -326,7 +318,7 @@ public class ListClusterNodesResponseBody extends TeaModel {
         public String operatingState;
 
         /**
-         * <p>The serial number of the node.</p>
+         * <p>The serial number (SN) of the node.</p>
          * 
          * <strong>example:</strong>
          * <p>sn_tOuUk</p>
@@ -335,16 +327,16 @@ public class ListClusterNodesResponseBody extends TeaModel {
         public String sn;
 
         /**
-         * <p>The tags.</p>
+         * <p>The list of tags attached to the node.</p>
          */
         @NameInMap("Tags")
         public java.util.List<ListClusterNodesResponseBodyNodesTags> tags;
 
         /**
-         * <p>The job ID.</p>
+         * <p>The task ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>i28ddkdkkdkdd</p>
+         * <p>i-skkdsdl83ksxxs3</p>
          */
         @NameInMap("TaskId")
         public String taskId;
@@ -353,22 +345,22 @@ public class ListClusterNodesResponseBody extends TeaModel {
          * <p>The vSwitch ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>vsw-bp1mxqhw8o20tgv3xk47h</p>
+         * <p>vsw-0jlohur7nhbxd1ttyq8p8</p>
          */
         @NameInMap("VSwitchId")
         public String vSwitchId;
 
         /**
-         * <p>The VPC ID.</p>
+         * <p>The ID of the VPC where the node is located.</p>
          * 
          * <strong>example:</strong>
-         * <p>vpc-0jltf9vinjz3if3lltdy7</p>
+         * <p>vpc-f8zcet5mwerafyqlrhyoi</p>
          */
         @NameInMap("VpcId")
         public String vpcId;
 
         /**
-         * <p>The zone ID.</p>
+         * <p>The availability zone ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou-b</p>

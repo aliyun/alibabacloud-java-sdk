@@ -31,7 +31,7 @@ public class ListDiagnosticResultsRequest extends TeaModel {
      * <p>NextToken for the next page. Include this value when requesting the next page.</p>
      * 
      * <strong>example:</strong>
-     * <p>a3f2224a5ec7224116c4f5246120abe4</p>
+     * <p>a3f2224a5ec7224116c4f5246120****</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
@@ -40,7 +40,7 @@ public class ListDiagnosticResultsRequest extends TeaModel {
      * <p>The resource group ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>rg-acfmywpvugkh7kq</p>
+     * <p>rg-acfmywpvugk****</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;

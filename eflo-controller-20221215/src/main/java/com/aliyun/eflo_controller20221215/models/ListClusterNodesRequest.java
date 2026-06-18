@@ -15,7 +15,7 @@ public class ListClusterNodesRequest extends TeaModel {
     public String clusterId;
 
     /**
-     * <p>The number of entries per page. Default value: 20.</p>
+     * <p>The maximum number of entries to return on each page. The default value is 20.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -24,7 +24,7 @@ public class ListClusterNodesRequest extends TeaModel {
     public Long maxResults;
 
     /**
-     * <p>The token that determines the start position of the query. Set this parameter to the value of the NextToken parameter that is returned from the last call.</p>
+     * <p>The token for pagination. To retrieve the next page of results, set this parameter to the NextToken value returned from the previous call.</p>
      * 
      * <strong>example:</strong>
      * <p>AAAAAdQ3Z+oPlg49gsr2y8jb6wY=</p>
@@ -41,6 +41,9 @@ public class ListClusterNodesRequest extends TeaModel {
     @NameInMap("NodeGroupId")
     public String nodeGroupId;
 
+    /**
+     * <p>The operating states for filtering nodes.</p>
+     */
     @NameInMap("OperatingStates")
     public java.util.List<String> operatingStates;
 
@@ -48,13 +51,13 @@ public class ListClusterNodesRequest extends TeaModel {
      * <p>The resource group ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>rg-xxkxkllss</p>
+     * <p>rg-ksld39333ss</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
     /**
-     * <p>The tags.</p>
+     * <p>The tags for filtering nodes.</p>
      */
     @NameInMap("Tags")
     public java.util.List<ListClusterNodesRequestTags> tags;
@@ -122,19 +125,19 @@ public class ListClusterNodesRequest extends TeaModel {
 
     public static class ListClusterNodesRequestTags extends TeaModel {
         /**
-         * <p>The tag key for the node.</p>
+         * <p>The key of the tag.</p>
          * 
          * <strong>example:</strong>
-         * <p>aa_key</p>
+         * <p>my_key</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
-         * <p>The tag value for the node.</p>
+         * <p>The value of the tag.</p>
          * 
          * <strong>example:</strong>
-         * <p>aa_value</p>
+         * <p>my_value</p>
          */
         @NameInMap("Value")
         public String value;

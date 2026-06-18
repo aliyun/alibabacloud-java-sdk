@@ -45,7 +45,7 @@ public class DescribeZonesResponseBody extends TeaModel {
          * <p>The zone name.</p>
          * 
          * <strong>example:</strong>
-         * <p>Hang Zhou</p>
+         * <p>Hangzhou</p>
          */
         @NameInMap("LocalName")
         public String localName;

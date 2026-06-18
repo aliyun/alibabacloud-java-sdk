@@ -4,10 +4,15 @@ package com.aliyun.eflo_controller20221215.models;
 import com.aliyun.tea.*;
 
 public class ListClusterHyperNodesResponseBody extends TeaModel {
+    /**
+     * <p>The list of nodes.</p>
+     */
     @NameInMap("HyperNodes")
     public java.util.List<ListClusterHyperNodesResponseBodyHyperNodes> hyperNodes;
 
     /**
+     * <p>The query token returned from this call.</p>
+     * 
      * <strong>example:</strong>
      * <p>563d42ae0b17572449ec8c97f7f66069</p>
      */
@@ -15,7 +20,7 @@ public class ListClusterHyperNodesResponseBody extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>4FD06DF0-9167-5C6F-A145-F30CA4A15D54</p>
@@ -54,6 +59,8 @@ public class ListClusterHyperNodesResponseBody extends TeaModel {
 
     public static class ListClusterHyperNodesResponseBodyHyperNodesTags extends TeaModel {
         /**
+         * <p>The tag key.</p>
+         * 
          * <strong>example:</strong>
          * <p>key1</p>
          */
@@ -61,6 +68,8 @@ public class ListClusterHyperNodesResponseBody extends TeaModel {
         public String key;
 
         /**
+         * <p>The tag value.</p>
+         * 
          * <strong>example:</strong>
          * <p>ali-zeekr-ota-doris-prod-hz-selectdb</p>
          */
@@ -92,6 +101,8 @@ public class ListClusterHyperNodesResponseBody extends TeaModel {
 
     public static class ListClusterHyperNodesResponseBodyHyperNodes extends TeaModel {
         /**
+         * <p>The commodity code.</p>
+         * 
          * <strong>example:</strong>
          * <p>bccluster_eflocomputing_public_cn</p>
          */
@@ -99,6 +110,8 @@ public class ListClusterHyperNodesResponseBody extends TeaModel {
         public String commodityCode;
 
         /**
+         * <p>The time when the node was created.</p>
+         * 
          * <strong>example:</strong>
          * <p>2025-07-07T17:38:35.391</p>
          */
@@ -106,6 +119,8 @@ public class ListClusterHyperNodesResponseBody extends TeaModel {
         public String createTime;
 
         /**
+         * <p>The expiration time of the machine.</p>
+         * 
          * <strong>example:</strong>
          * <p>2025-04-19T02:32:48Z</p>
          */
@@ -113,6 +128,8 @@ public class ListClusterHyperNodesResponseBody extends TeaModel {
         public String expireTime;
 
         /**
+         * <p>Indicates whether file storage mounting is supported.</p>
+         * 
          * <strong>example:</strong>
          * <p>False</p>
          */
@@ -120,6 +137,8 @@ public class ListClusterHyperNodesResponseBody extends TeaModel {
         public Boolean fileSystemMountEnabled;
 
         /**
+         * <p>The hostname.</p>
+         * 
          * <strong>example:</strong>
          * <p>alywlcb-lingjun-gpu-0025</p>
          */
@@ -127,6 +146,8 @@ public class ListClusterHyperNodesResponseBody extends TeaModel {
         public String hostname;
 
         /**
+         * <p>The cluster ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>B1</p>
          */
@@ -134,6 +155,8 @@ public class ListClusterHyperNodesResponseBody extends TeaModel {
         public String hpnZone;
 
         /**
+         * <p>The node ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>e01-cn-2r42tmj4z02</p>
          */
@@ -141,6 +164,8 @@ public class ListClusterHyperNodesResponseBody extends TeaModel {
         public String hyperNodeId;
 
         /**
+         * <p>The machine type.</p>
+         * 
          * <strong>example:</strong>
          * <p>efg2.NH2cn</p>
          */
@@ -148,6 +173,8 @@ public class ListClusterHyperNodesResponseBody extends TeaModel {
         public String machineType;
 
         /**
+         * <p>The node group ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>i123229811742436895560</p>
          */
@@ -155,6 +182,8 @@ public class ListClusterHyperNodesResponseBody extends TeaModel {
         public String nodeGroupId;
 
         /**
+         * <p>The name of the node group.</p>
+         * 
          * <strong>example:</strong>
          * <p>g1</p>
          */
@@ -162,6 +191,8 @@ public class ListClusterHyperNodesResponseBody extends TeaModel {
         public String nodeGroupName;
 
         /**
+         * <p>The status of the hyper node.</p>
+         * 
          * <strong>example:</strong>
          * <p>Using</p>
          */
@@ -169,6 +200,8 @@ public class ListClusterHyperNodesResponseBody extends TeaModel {
         public String operatingState;
 
         /**
+         * <p>The status of the node.</p>
+         * 
          * <strong>example:</strong>
          * <p>Extending</p>
          */
@@ -176,10 +209,15 @@ public class ListClusterHyperNodesResponseBody extends TeaModel {
         @Deprecated
         public String status;
 
+        /**
+         * <p>The tag information.</p>
+         */
         @NameInMap("Tags")
         public java.util.List<ListClusterHyperNodesResponseBodyHyperNodesTags> tags;
 
         /**
+         * <p>The task ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>i153907661745288876128</p>
          */
@@ -187,6 +225,8 @@ public class ListClusterHyperNodesResponseBody extends TeaModel {
         public String taskId;
 
         /**
+         * <p>The vSwitch ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>vsw-bp1u4ej4ap8c4yiqfi87c</p>
          */
@@ -194,6 +234,8 @@ public class ListClusterHyperNodesResponseBody extends TeaModel {
         public String vSwitchId;
 
         /**
+         * <p>The virtual private cloud (VPC) ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>vpc-0jl8gs7qmx89739e210dn</p>
          */
@@ -201,6 +243,8 @@ public class ListClusterHyperNodesResponseBody extends TeaModel {
         public String vpcId;
 
         /**
+         * <p>The zone ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-shanghai-b</p>
          */

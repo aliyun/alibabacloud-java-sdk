@@ -4,10 +4,18 @@ package com.aliyun.eflo_controller20221215.models;
 import com.aliyun.tea.*;
 
 public class ListFreeHyperNodesResponseBody extends TeaModel {
+    /**
+     * <p>The list of nodes.</p>
+     */
     @NameInMap("HyperNodes")
     public java.util.List<ListFreeHyperNodesResponseBodyHyperNodes> hyperNodes;
 
     /**
+     * <p>The number of entries returned on each page. The maximum value is 100.</p>
+     * <p>Default value:</p>
+     * <p>• If you do not set this parameter or you set a value less than 20, the default value is 20.</p>
+     * <p>• If you set a value greater than 100, the default value is 100.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -15,6 +23,8 @@ public class ListFreeHyperNodesResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>The token to retrieve the next page of results. If this parameter is empty, no more results are available.</p>
+     * 
      * <strong>example:</strong>
      * <p>563d42ae0b17572449ec8c97f7f66069</p>
      */
@@ -22,6 +32,8 @@ public class ListFreeHyperNodesResponseBody extends TeaModel {
     public String nextToken;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>A511C02A-0127-51AA-A9F9-966382C9A1B5</p>
      */
@@ -67,6 +79,8 @@ public class ListFreeHyperNodesResponseBody extends TeaModel {
 
     public static class ListFreeHyperNodesResponseBodyHyperNodesTags extends TeaModel {
         /**
+         * <p>The tag key.</p>
+         * 
          * <strong>example:</strong>
          * <p>Cpu_Usage</p>
          */
@@ -74,6 +88,8 @@ public class ListFreeHyperNodesResponseBody extends TeaModel {
         public String key;
 
         /**
+         * <p>The tag value.</p>
+         * 
          * <strong>example:</strong>
          * <p>on</p>
          */
@@ -105,6 +121,8 @@ public class ListFreeHyperNodesResponseBody extends TeaModel {
 
     public static class ListFreeHyperNodesResponseBodyHyperNodes extends TeaModel {
         /**
+         * <p>The commodity code.</p>
+         * 
          * <strong>example:</strong>
          * <p>bccluster_eflocomputing_public_cn</p>
          */
@@ -112,6 +130,8 @@ public class ListFreeHyperNodesResponseBody extends TeaModel {
         public String commodityCode;
 
         /**
+         * <p>The time when the node was created.</p>
+         * 
          * <strong>example:</strong>
          * <p>2025-08-06T10:11:41.569</p>
          */
@@ -119,6 +139,8 @@ public class ListFreeHyperNodesResponseBody extends TeaModel {
         public String createTime;
 
         /**
+         * <p>The expiration time of the machine.</p>
+         * 
          * <strong>example:</strong>
          * <p>2025-01-22T23:59:59Z</p>
          */
@@ -126,6 +148,8 @@ public class ListFreeHyperNodesResponseBody extends TeaModel {
         public String expireTime;
 
         /**
+         * <p>The hostname.</p>
+         * 
          * <strong>example:</strong>
          * <p>alywlcb-lingjun-gpu-0025</p>
          */
@@ -133,6 +157,8 @@ public class ListFreeHyperNodesResponseBody extends TeaModel {
         public String hostname;
 
         /**
+         * <p>The cluster ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>A1</p>
          */
@@ -140,6 +166,8 @@ public class ListFreeHyperNodesResponseBody extends TeaModel {
         public String hpnZone;
 
         /**
+         * <p>The node ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>e01-cn-7pp2x193801</p>
          */
@@ -147,6 +175,8 @@ public class ListFreeHyperNodesResponseBody extends TeaModel {
         public String hyperNodeId;
 
         /**
+         * <p>The machine type.</p>
+         * 
          * <strong>example:</strong>
          * <p>efg2.ks01L20Z2</p>
          */
@@ -154,6 +184,8 @@ public class ListFreeHyperNodesResponseBody extends TeaModel {
         public String machineType;
 
         /**
+         * <p>The status of the hypernode.</p>
+         * 
          * <strong>example:</strong>
          * <p>Using</p>
          */
@@ -161,6 +193,8 @@ public class ListFreeHyperNodesResponseBody extends TeaModel {
         public String operatingState;
 
         /**
+         * <p>The resource group ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>rg-acfmwaateahzoii</p>
          */
@@ -168,6 +202,8 @@ public class ListFreeHyperNodesResponseBody extends TeaModel {
         public String resourceGroupId;
 
         /**
+         * <p>The status of the hypernode.</p>
+         * 
          * <strong>example:</strong>
          * <p>Using</p>
          */
@@ -175,10 +211,15 @@ public class ListFreeHyperNodesResponseBody extends TeaModel {
         @Deprecated
         public String status;
 
+        /**
+         * <p>The list of tags.</p>
+         */
         @NameInMap("Tags")
         public java.util.List<ListFreeHyperNodesResponseBodyHyperNodesTags> tags;
 
         /**
+         * <p>The zone ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-wulanchabu-a</p>
          */

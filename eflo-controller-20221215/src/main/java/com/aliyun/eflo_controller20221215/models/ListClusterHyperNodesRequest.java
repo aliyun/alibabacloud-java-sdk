@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListClusterHyperNodesRequest extends TeaModel {
     /**
+     * <p>The cluster ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,11 @@ public class ListClusterHyperNodesRequest extends TeaModel {
     public String clusterId;
 
     /**
+     * <p>The number of entries to return on each page. The maximum value is 100.</p>
+     * <p>Default value:</p>
+     * <p>• If this parameter is not set or is set to a value less than 20, the default value is 20.</p>
+     * <p>• If this parameter is set to a value greater than 100, the default value is 100.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -21,6 +27,8 @@ public class ListClusterHyperNodesRequest extends TeaModel {
     public Long maxResults;
 
     /**
+     * <p>The token used to start the query. Set this parameter to the NextToken value returned from a previous call.</p>
+     * 
      * <strong>example:</strong>
      * <p>563d42ae0b17572449ec8c97f7f66069</p>
      */
@@ -28,6 +36,8 @@ public class ListClusterHyperNodesRequest extends TeaModel {
     public String nextToken;
 
     /**
+     * <p>The node group ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>ng-ec3c96ff0aa4c60d</p>
      */
@@ -35,12 +45,17 @@ public class ListClusterHyperNodesRequest extends TeaModel {
     public String nodeGroupId;
 
     /**
+     * <p>The resource group ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>rg-acfmywpvugkh7kq</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
+    /**
+     * <p>The tag information.</p>
+     */
     @NameInMap("Tags")
     public java.util.List<ListClusterHyperNodesRequestTags> tags;
 
@@ -99,6 +114,8 @@ public class ListClusterHyperNodesRequest extends TeaModel {
 
     public static class ListClusterHyperNodesRequestTags extends TeaModel {
         /**
+         * <p>The tag key.</p>
+         * 
          * <strong>example:</strong>
          * <p>my_key</p>
          */
@@ -106,6 +123,8 @@ public class ListClusterHyperNodesRequest extends TeaModel {
         public String key;
 
         /**
+         * <p>The tag value.</p>
+         * 
          * <strong>example:</strong>
          * <p>my_value</p>
          */

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeClusterResponseBody extends TeaModel {
     /**
-     * <p>The cluster description.</p>
+     * <p>The description of the cluster.</p>
      * 
      * <strong>example:</strong>
      * <p>Test cluster</p>
@@ -23,7 +23,7 @@ public class DescribeClusterResponseBody extends TeaModel {
     public String clusterId;
 
     /**
-     * <p>The cluster name.</p>
+     * <p>The name of the cluster.</p>
      * 
      * <strong>example:</strong>
      * <p>Eflo-YJ-Test-Cluster</p>
@@ -32,7 +32,7 @@ public class DescribeClusterResponseBody extends TeaModel {
     public String clusterName;
 
     /**
-     * <p>The cluster type.</p>
+     * <p>The type of the cluster.</p>
      * 
      * <strong>example:</strong>
      * <p>AckEdgePro</p>
@@ -47,7 +47,7 @@ public class DescribeClusterResponseBody extends TeaModel {
     public java.util.List<DescribeClusterResponseBodyComponents> components;
 
     /**
-     * <p>The IP type of the computing network.</p>
+     * <p>The IP version of the computing network.</p>
      * 
      * <strong>example:</strong>
      * <p>IPv4</p>
@@ -56,7 +56,7 @@ public class DescribeClusterResponseBody extends TeaModel {
     public String computingIpVersion;
 
     /**
-     * <p>The creation time.</p>
+     * <p>The time when the cluster was created.</p>
      * 
      * <strong>example:</strong>
      * <p>2022-06-08T07:05:11Z</p>
@@ -65,7 +65,7 @@ public class DescribeClusterResponseBody extends TeaModel {
     public String createTime;
 
     /**
-     * <p>The cluster number.</p>
+     * <p>The zone of the cluster.</p>
      * 
      * <strong>example:</strong>
      * <p>A2</p>
@@ -98,7 +98,7 @@ public class DescribeClusterResponseBody extends TeaModel {
     public Long nodeGroupCount;
 
     /**
-     * <p>The status of Jumbo Frames for the elastic network interface (ENI).</p>
+     * <p>The jumbo frame setting for the network interface.</p>
      * 
      * <strong>example:</strong>
      * <p>unsupported</p>
@@ -107,7 +107,7 @@ public class DescribeClusterResponseBody extends TeaModel {
     public String openEniJumboFrame;
 
     /**
-     * <p>The cluster status.</p>
+     * <p>The state of the cluster.</p>
      * 
      * <strong>example:</strong>
      * <p>running</p>
@@ -133,11 +133,17 @@ public class DescribeClusterResponseBody extends TeaModel {
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
+    /**
+     * <p>The security group ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>sg-0jlff84q4o3s58i7fkhy</p>
+     */
     @NameInMap("SecurityGroupId")
     public String securityGroupId;
 
     /**
-     * <p>The job ID.</p>
+     * <p>The task ID.</p>
      * 
      * <strong>example:</strong>
      * <p>i152609221670466904596</p>
@@ -146,7 +152,7 @@ public class DescribeClusterResponseBody extends TeaModel {
     public String taskId;
 
     /**
-     * <p>The update time.</p>
+     * <p>The time when the cluster was last updated.</p>
      * 
      * <strong>example:</strong>
      * <p>2022-08-23T06:36:17.000Z</p>
@@ -154,6 +160,12 @@ public class DescribeClusterResponseBody extends TeaModel {
     @NameInMap("UpdateTime")
     public String updateTime;
 
+    /**
+     * <p>The vSwitch ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vsw-0jlwrfecgcbflyosvo242</p>
+     */
     @NameInMap("VSwitchId")
     public String vSwitchId;
 
@@ -342,12 +354,7 @@ public class DescribeClusterResponseBody extends TeaModel {
         public String componentId;
 
         /**
-         * <p>The component type.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>ARMS</li>
-         * <li>ACKEdge</li>
-         * </ul>
+         * <p>The type of the component.</p>
          * 
          * <strong>example:</strong>
          * <p>ACKEdge</p>
@@ -380,7 +387,7 @@ public class DescribeClusterResponseBody extends TeaModel {
 
     public static class DescribeClusterResponseBodyNetworks extends TeaModel {
         /**
-         * <p>The ID of the CIDR block for the cluster.</p>
+         * <p>The ID of the virtual private datacenter (VPD).</p>
          * 
          * <strong>example:</strong>
          * <p>vpd-iqd7xunc</p>

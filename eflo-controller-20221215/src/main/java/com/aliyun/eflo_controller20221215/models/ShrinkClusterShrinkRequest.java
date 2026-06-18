@@ -14,7 +14,7 @@ public class ShrinkClusterShrinkRequest extends TeaModel {
     public String clusterId;
 
     /**
-     * <p>Specifies whether to allow skipping failed nodes. Default value: False.</p>
+     * <p>Specifies whether to skip failed nodes. The default value is False.</p>
      * 
      * <strong>example:</strong>
      * <p>False</p>
@@ -23,7 +23,7 @@ public class ShrinkClusterShrinkRequest extends TeaModel {
     public Boolean ignoreFailedNodeTasks;
 
     /**
-     * <p>The node groups.</p>
+     * <p>The information about the node groups.</p>
      */
     @NameInMap("NodeGroups")
     public String nodeGroupsShrink;

@@ -357,7 +357,7 @@ public class DescribeTaskResponseBody extends TeaModel {
          * </ul>
          * 
          * <strong>example:</strong>
-         * <p>节点缩容</p>
+         * <p>Node scale-down</p>
          */
         @NameInMap("StageTag")
         public String stageTag;

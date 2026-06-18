@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListTagResourcesResponseBody extends TeaModel {
     /**
-     * <p>The token that is used in the next request to retrieve a new page of results.</p>
+     * <p>The token to retrieve the next page of results. If the response is paged, this parameter is returned. To retrieve the next page, include this token in the next request.</p>
      * 
      * <strong>example:</strong>
      * <p>AAAAAdQ3Z+oPlg49gsr2y8jb6wY=</p>

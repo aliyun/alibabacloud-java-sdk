@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListVscsShrinkRequest extends TeaModel {
     /**
-     * <p>The maximum number of data entries to return.</p>
+     * <p>The maximum number of entries to return on each page.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -14,7 +14,7 @@ public class ListVscsShrinkRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The token that is used in the next request to retrieve a new page of results. If you leave this parameter empty, the query starts from the beginning.</p>
+     * <p>The token that marks the position from which to start the query. If you leave this parameter empty, the query starts from the beginning.</p>
      * 
      * <strong>example:</strong>
      * <p>563d42ae0b17572449ec8c97f7f66069</p>
@@ -23,13 +23,13 @@ public class ListVscsShrinkRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The IDs of the nodes.</p>
+     * <p>The list of node IDs.</p>
      */
     @NameInMap("NodeIds")
     public String nodeIdsShrink;
 
     /**
-     * <p>The resource group ID.</p>
+     * <p>The ID of the resource group.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-aek2xdkc6icwfha</p>
@@ -38,13 +38,13 @@ public class ListVscsShrinkRequest extends TeaModel {
     public String resourceGroupId;
 
     /**
-     * <p>The tags.</p>
+     * <p>The list of tags.</p>
      */
     @NameInMap("Tag")
     public java.util.List<ListVscsShrinkRequestTag> tag;
 
     /**
-     * <p>The VSC name.</p>
+     * <p>The name of the VSC.</p>
      * 
      * <strong>example:</strong>
      * <p>test_name</p>

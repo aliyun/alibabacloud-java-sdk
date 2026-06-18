@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListMachineNetworkInfoRequest extends TeaModel {
     /**
-     * <p>hpn information of machine</p>
+     * <p>The information about the machine types.</p>
      */
     @NameInMap("MachineHpnInfo")
     public java.util.List<ListMachineNetworkInfoRequestMachineHpnInfo> machineHpnInfo;
@@ -25,7 +25,7 @@ public class ListMachineNetworkInfoRequest extends TeaModel {
 
     public static class ListMachineNetworkInfoRequestMachineHpnInfo extends TeaModel {
         /**
-         * <p>hpn zone infomation</p>
+         * <p>The cluster ID.</p>
          * 
          * <strong>example:</strong>
          * <p>C1</p>
@@ -34,7 +34,7 @@ public class ListMachineNetworkInfoRequest extends TeaModel {
         public String hpnZone;
 
         /**
-         * <p>The type of machine.</p>
+         * <p>The machine type.</p>
          * 
          * <strong>example:</strong>
          * <p>efg2.C48cNHmcn</p>
@@ -43,7 +43,7 @@ public class ListMachineNetworkInfoRequest extends TeaModel {
         public String machineType;
 
         /**
-         * <p>The ID of the region in which the application is located.</p>
+         * <p>The region ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-heyuan</p>

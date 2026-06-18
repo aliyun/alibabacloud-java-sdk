@@ -23,19 +23,19 @@ public class CreateNetTestTaskShrinkRequest extends TeaModel {
     public String clusterName;
 
     /**
-     * <p>Specify when NetTestType is CommTest.</p>
+     * <p>Specify this parameter if NetTestType is set to CommTest.</p>
      */
     @NameInMap("CommTest")
     public String commTestShrink;
 
     /**
-     * <p>Specify when NetTestType is DelayTest.</p>
+     * <p>Specify this parameter if NetTestType is set to DelayTest.</p>
      */
     @NameInMap("DelayTest")
     public String delayTestShrink;
 
     /**
-     * <p>The type of the network test. Valid values: DelayTest, TrafficTest, and CommTest.</p>
+     * <p>The type of network test. Valid values: DelayTest, TrafficTest, and CommTest.</p>
      * 
      * <strong>example:</strong>
      * <p>DelayTest</p>
@@ -53,7 +53,7 @@ public class CreateNetTestTaskShrinkRequest extends TeaModel {
     public String networkMode;
 
     /**
-     * <p>The port number.</p>
+     * <p>The test port number.</p>
      * 
      * <strong>example:</strong>
      * <p>23604</p>
@@ -62,7 +62,7 @@ public class CreateNetTestTaskShrinkRequest extends TeaModel {
     public String port;
 
     /**
-     * <p>If the TrafficModel is Fullmesh, leave this parameter empty.</p>
+     * <p>This field is empty if TrafficModel is set to Fullmesh.</p>
      */
     @NameInMap("TrafficTest")
     public String trafficTestShrink;

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeNetTestResultRequest extends TeaModel {
     /**
-     * <p>The ID of the test task. The unique identifier of a network test task.</p>
+     * <p>The ID of the test task.</p>
      * 
      * <strong>example:</strong>
      * <p>dr-uf6i0tv2refv8wz*****</p>

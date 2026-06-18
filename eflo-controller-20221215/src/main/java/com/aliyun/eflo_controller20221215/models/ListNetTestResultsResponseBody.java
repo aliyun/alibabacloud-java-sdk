@@ -5,11 +5,11 @@ import com.aliyun.tea.*;
 
 public class ListNetTestResultsResponseBody extends TeaModel {
     /**
-     * <p>The number of entries to return on each page. Maximum value: 100.</p>
+     * <p>The number of entries returned on each page. Maximum value: 100.</p>
      * <p>Default value:</p>
      * <ul>
-     * <li>If you do not configure this parameter or if you set this parameter to a value less than 20, the default value is 20.</li>
-     * <li>If you set this parameter to a value that is greater than 100, the default value is 100.</li>
+     * <li>If you do not set this parameter or you set it to a value less than 20, the default value is 20.</li>
+     * <li>If you set the value to greater than 100, the default value is 100.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -19,16 +19,16 @@ public class ListNetTestResultsResponseBody extends TeaModel {
     public Long maxResults;
 
     /**
-     * <p>The results.</p>
+     * <p>The list of nodes.</p>
      */
     @NameInMap("NetTestResults")
     public java.util.List<ListNetTestResultsResponseBodyNetTestResults> netTestResults;
 
     /**
-     * <p>The token that is used in the next request to retrieve a new page of results.</p>
+     * <p>The token that is used to retrieve the next page of results. If this parameter is not returned, it indicates that all results have been returned.</p>
      * 
      * <strong>example:</strong>
-     * <p>3a6b93229825ac667104463b56790c91</p>
+     * <p>3a6b93229825ac667104463b5679****</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
@@ -93,13 +93,13 @@ public class ListNetTestResultsResponseBody extends TeaModel {
          * <p>The resource ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>e01-cn-wwo3eteze19</p>
+         * <p>e01-cn-wwo3ete****</p>
          */
         @NameInMap("ResourceId")
         public String resourceId;
 
         /**
-         * <p>The name of the service.</p>
+         * <p>The service name.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="http://www.xinjiaoyu.com">www.xinjiaoyu.com</a></p>
@@ -149,7 +149,7 @@ public class ListNetTestResultsResponseBody extends TeaModel {
         public String GPUNum;
 
         /**
-         * <p>The hosts of the test node.</p>
+         * <p>The hosts of the test nodes.</p>
          */
         @NameInMap("Hosts")
         public java.util.List<ListNetTestResultsResponseBodyNetTestResultsCommTestHosts> hosts;
@@ -164,7 +164,7 @@ public class ListNetTestResultsResponseBody extends TeaModel {
         public String model;
 
         /**
-         * <p>The CommTest type, which can be ACCL or NCCL.</p>
+         * <p>The type of the communication library test. Valid values: ACCL or NCCL.</p>
          * 
          * <strong>example:</strong>
          * <p>ACCL</p>
@@ -213,7 +213,7 @@ public class ListNetTestResultsResponseBody extends TeaModel {
 
     public static class ListNetTestResultsResponseBodyNetTestResultsDelayTestHosts extends TeaModel {
         /**
-         * <p>The bonding of network interface card.</p>
+         * <p>The bonded port of the network interface card.</p>
          * 
          * <strong>example:</strong>
          * <p>bond1</p>
@@ -234,13 +234,13 @@ public class ListNetTestResultsResponseBody extends TeaModel {
          * <p>The resource ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>e01-cn-wwo3eteze19</p>
+         * <p>e01-cn-wwo3ete****</p>
          */
         @NameInMap("ResourceId")
         public String resourceId;
 
         /**
-         * <p>The name of the service.</p>
+         * <p>The service name.</p>
          * 
          * <strong>example:</strong>
          * <p>WrF</p>
@@ -289,7 +289,7 @@ public class ListNetTestResultsResponseBody extends TeaModel {
 
     public static class ListNetTestResultsResponseBodyNetTestResultsDelayTest extends TeaModel {
         /**
-         * <p>The hosts.</p>
+         * <p>The list of resources.</p>
          */
         @NameInMap("Hosts")
         public java.util.List<ListNetTestResultsResponseBodyNetTestResultsDelayTestHosts> hosts;
@@ -311,7 +311,7 @@ public class ListNetTestResultsResponseBody extends TeaModel {
 
     public static class ListNetTestResultsResponseBodyNetTestResultsTrafficTestClients extends TeaModel {
         /**
-         * <p>The bonding of network interface card.</p>
+         * <p>The bonded port of the network interface card.</p>
          * 
          * <strong>example:</strong>
          * <p>bond1</p>
@@ -338,7 +338,7 @@ public class ListNetTestResultsResponseBody extends TeaModel {
         public String resourceId;
 
         /**
-         * <p>The name of the service.</p>
+         * <p>The service name.</p>
          * 
          * <strong>example:</strong>
          * <p>prod-gf-cn.juequling.com</p>
@@ -387,7 +387,7 @@ public class ListNetTestResultsResponseBody extends TeaModel {
 
     public static class ListNetTestResultsResponseBodyNetTestResultsTrafficTestServers extends TeaModel {
         /**
-         * <p>The bonding of network interface card.</p>
+         * <p>The bonded port of the network interface card.</p>
          * 
          * <strong>example:</strong>
          * <p>bond1</p>
@@ -408,13 +408,13 @@ public class ListNetTestResultsResponseBody extends TeaModel {
          * <p>The resource ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>e01-cn-wwo3eteze19</p>
+         * <p>e01-cn-wwo3ete****</p>
          */
         @NameInMap("ResourceId")
         public String resourceId;
 
         /**
-         * <p>The name of the service.</p>
+         * <p>The service name.</p>
          * 
          * <strong>example:</strong>
          * <p>prod-gf-cn.juequling.com</p>
@@ -463,13 +463,13 @@ public class ListNetTestResultsResponseBody extends TeaModel {
 
     public static class ListNetTestResultsResponseBodyNetTestResultsTrafficTest extends TeaModel {
         /**
-         * <p>The clients.</p>
+         * <p>The client.</p>
          */
         @NameInMap("Clients")
         public java.util.List<ListNetTestResultsResponseBodyNetTestResultsTrafficTestClients> clients;
 
         /**
-         * <p>The running duration of the pipeline job. Unit: seconds.</p>
+         * <p>The runtime of the flow task, in seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -478,7 +478,7 @@ public class ListNetTestResultsResponseBody extends TeaModel {
         public Long duration;
 
         /**
-         * <p>If the protocol is RDMA, can be True or False. If the protocol is TCP, this field is empty.</p>
+         * <p>If the protocol is RDMA, specify True or False. If the protocol is TCP, this field is empty.</p>
          * 
          * <strong>example:</strong>
          * <p>True</p>
@@ -487,7 +487,7 @@ public class ListNetTestResultsResponseBody extends TeaModel {
         public String GDR;
 
         /**
-         * <p>The network protocol, which can be RDMA or TCP.</p>
+         * <p>The network protocol. Valid values are RDMA and TCP.</p>
          * 
          * <strong>example:</strong>
          * <p>TCP</p>
@@ -496,7 +496,7 @@ public class ListNetTestResultsResponseBody extends TeaModel {
         public String protocol;
 
         /**
-         * <p>If the protocol is TCP, the number of concurrent connections. If the protocol is RDMA, the configured QP value.</p>
+         * <p>If the protocol is TCP, this parameter specifies the number of concurrent connections for the test. If the protocol is RDMA, this parameter specifies the QP value.</p>
          * 
          * <strong>example:</strong>
          * <p>RDMA</p>
@@ -505,13 +505,13 @@ public class ListNetTestResultsResponseBody extends TeaModel {
         public Long QP;
 
         /**
-         * <p>If the TrafficModel is Fullmesh, this parameter is empty.</p>
+         * <p>This field is empty if \<code>TrafficModel\\</code> is set to \<code>Fullmesh\\</code>.</p>
          */
         @NameInMap("Servers")
         public java.util.List<ListNetTestResultsResponseBodyNetTestResultsTrafficTestServers> servers;
 
         /**
-         * <p>The traffic model, which can be MTON or Fullmesh.</p>
+         * <p>The traffic model. Valid values are MTON and Fullmesh.</p>
          * 
          * <strong>example:</strong>
          * <p>Fullmesh</p>
@@ -587,7 +587,7 @@ public class ListNetTestResultsResponseBody extends TeaModel {
          * <p>The cluster ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>i110667211718265012218</p>
+         * <p>i11066721171826501****</p>
          */
         @NameInMap("ClusterId")
         public String clusterId;
@@ -602,13 +602,13 @@ public class ListNetTestResultsResponseBody extends TeaModel {
         public String clusterName;
 
         /**
-         * <p>Returned when NetTestType is CommTest.</p>
+         * <p>The details of the communication library test. This object is returned if the value of \<code>NetTestType\\</code> is \<code>CommTest\\</code>.</p>
          */
         @NameInMap("CommTest")
         public ListNetTestResultsResponseBodyNetTestResultsCommTest commTest;
 
         /**
-         * <p>The creation time.</p>
+         * <p>The time when the task was created.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-01-19T02:18:12Z</p>
@@ -617,13 +617,13 @@ public class ListNetTestResultsResponseBody extends TeaModel {
         public String creationTime;
 
         /**
-         * <p>Returned when NetTestType is DelayTest.</p>
+         * <p>The details of the delay test. This object is returned if the value of \<code>NetTestType\\</code> is \<code>DelayTest\\</code>.</p>
          */
         @NameInMap("DelayTest")
         public ListNetTestResultsResponseBodyNetTestResultsDelayTest delayTest;
 
         /**
-         * <p>The finish time.</p>
+         * <p>The time when the task was completed.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-10-30T02:07Z</p>
@@ -650,7 +650,7 @@ public class ListNetTestResultsResponseBody extends TeaModel {
         public String networkMode;
 
         /**
-         * <p>The port number.</p>
+         * <p>The test port.</p>
          * 
          * <strong>example:</strong>
          * <p>80</p>
@@ -659,10 +659,7 @@ public class ListNetTestResultsResponseBody extends TeaModel {
         public String port;
 
         /**
-         * <p>The status of the network test task. Valid values:\
-         * ● InProgress\
-         * ● Finished\
-         * ● Failed</p>
+         * <p>The status of the network test task. Valid values: ● InProgress: The test is in progress. ● Finished: The test is complete. ● Failed: The test failed.</p>
          * 
          * <strong>example:</strong>
          * <p>InProgress</p>
@@ -671,7 +668,7 @@ public class ListNetTestResultsResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The test ID. The unique identifier of the resource test task.</p>
+         * <p>The test ID. It is the unique identifier of the resource test task.</p>
          * 
          * <strong>example:</strong>
          * <p>String	i-uf6i0tv2refv8wz*****</p>
@@ -680,7 +677,7 @@ public class ListNetTestResultsResponseBody extends TeaModel {
         public String testId;
 
         /**
-         * <p>Returned when NetTestType is TrafficTest.</p>
+         * <p>The details of the traffic test. This object is returned if the value of \<code>NetTestType\\</code> is \<code>TrafficTest\\</code>.</p>
          */
         @NameInMap("TrafficTest")
         public ListNetTestResultsResponseBodyNetTestResultsTrafficTest trafficTest;

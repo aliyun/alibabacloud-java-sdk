@@ -14,7 +14,7 @@ public class ReimageNodesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The job ID.</p>
+     * <p>The task ID.</p>
      * 
      * <strong>example:</strong>
      * <p>i158782151663841517926</p>

@@ -28,7 +28,7 @@ public class ListDiagnosticResultsResponseBody extends TeaModel {
      * <p>NextToken for the next page. Include this value when requesting the next page.</p>
      * 
      * <strong>example:</strong>
-     * <p>a3f2224a5ec7224116c4f5246120abe4</p>
+     * <p>a3f2224a5ec7224116c4f5246120****</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
@@ -84,7 +84,7 @@ public class ListDiagnosticResultsResponseBody extends TeaModel {
          * <p>The cluster ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>i118578141694745246055</p>
+         * <p>i11857814169474524****</p>
          */
         @NameInMap("ClusterId")
         public String clusterId;
@@ -111,7 +111,7 @@ public class ListDiagnosticResultsResponseBody extends TeaModel {
          * <p>Diagnostic content. For example, in network diagnostics, there are static configuration checks, dynamic operation checks, and other diagnostic contents.</p>
          * 
          * <strong>example:</strong>
-         * <p>diagcontent</p>
+         * <p>Test diagnosis information</p>
          */
         @NameInMap("DiagContent")
         public String diagContent;
@@ -147,7 +147,7 @@ public class ListDiagnosticResultsResponseBody extends TeaModel {
          * <p>The resource ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>e01-cn-bl03ofg6206</p>
+         * <p>e01-cn-bl03ofg6****</p>
          */
         @NameInMap("ResourceId")
         public String resourceId;

@@ -14,7 +14,7 @@ public class ShrinkClusterRequest extends TeaModel {
     public String clusterId;
 
     /**
-     * <p>Specifies whether to allow skipping failed nodes. Default value: False.</p>
+     * <p>Specifies whether to skip failed nodes. The default value is False.</p>
      * 
      * <strong>example:</strong>
      * <p>False</p>
@@ -23,7 +23,7 @@ public class ShrinkClusterRequest extends TeaModel {
     public Boolean ignoreFailedNodeTasks;
 
     /**
-     * <p>The node groups.</p>
+     * <p>The information about the node groups.</p>
      */
     @NameInMap("NodeGroups")
     public java.util.List<ShrinkClusterRequestNodeGroups> nodeGroups;
@@ -58,6 +58,12 @@ public class ShrinkClusterRequest extends TeaModel {
     }
 
     public static class ShrinkClusterRequestNodeGroupsHyperNodes extends TeaModel {
+        /**
+         * <p>The hyper node ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>e01-cn-zvp2tgykr08</p>
+         */
         @NameInMap("HyperNodeId")
         public String hyperNodeId;
 
@@ -102,6 +108,9 @@ public class ShrinkClusterRequest extends TeaModel {
     }
 
     public static class ShrinkClusterRequestNodeGroups extends TeaModel {
+        /**
+         * <p>The list of hyper nodes.</p>
+         */
         @NameInMap("HyperNodes")
         public java.util.List<ShrinkClusterRequestNodeGroupsHyperNodes> hyperNodes;
 
@@ -115,7 +124,7 @@ public class ShrinkClusterRequest extends TeaModel {
         public String nodeGroupId;
 
         /**
-         * <p>The nodes.</p>
+         * <p>The list of nodes.</p>
          */
         @NameInMap("Nodes")
         public java.util.List<ShrinkClusterRequestNodeGroupsNodes> nodes;

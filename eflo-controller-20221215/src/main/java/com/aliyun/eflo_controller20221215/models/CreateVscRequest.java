@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateVscRequest extends TeaModel {
     /**
-     * <p>The client token that is used to ensure the idempotence of the request.</p>
+     * <p>A client token to ensure the idempotency of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>123e4567-e89b-12d3-a456-426655440000</p>
@@ -14,7 +14,7 @@ public class CreateVscRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The node ID.</p>
+     * <p>The ID of the node.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -24,7 +24,7 @@ public class CreateVscRequest extends TeaModel {
     public String nodeId;
 
     /**
-     * <p>The resource group ID.</p>
+     * <p>The ID of the resource group.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-aek2xdkc6icwfha</p>
@@ -33,13 +33,13 @@ public class CreateVscRequest extends TeaModel {
     public String resourceGroupId;
 
     /**
-     * <p>The resource tags.</p>
+     * <p>The tags of the resource.</p>
      */
     @NameInMap("Tag")
     public java.util.List<CreateVscRequestTag> tag;
 
     /**
-     * <p>The custom name of the VSC, which is unique on a compute node.</p>
+     * <p>The custom name of the VSC. The name must be unique on a single compute node.</p>
      * 
      * <strong>example:</strong>
      * <p>test_name</p>
@@ -48,7 +48,7 @@ public class CreateVscRequest extends TeaModel {
     public String vscName;
 
     /**
-     * <p>The VSC type. Valid values: primary and standard. Default value: primary.</p>
+     * <p>The type of the VSC. Valid values: primary and standard. The default value is primary.</p>
      * 
      * <strong>example:</strong>
      * <p>primary</p>
@@ -111,7 +111,7 @@ public class CreateVscRequest extends TeaModel {
 
     public static class CreateVscRequestTag extends TeaModel {
         /**
-         * <p>The resource tag key.</p>
+         * <p>The tag key.</p>
          * 
          * <strong>example:</strong>
          * <p>key001</p>
@@ -120,7 +120,7 @@ public class CreateVscRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The resource tag value.</p>
+         * <p>The tag value.</p>
          * 
          * <strong>example:</strong>
          * <p>value001</p>

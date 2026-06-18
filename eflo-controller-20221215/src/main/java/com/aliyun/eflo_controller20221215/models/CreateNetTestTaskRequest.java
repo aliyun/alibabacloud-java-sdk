@@ -23,19 +23,19 @@ public class CreateNetTestTaskRequest extends TeaModel {
     public String clusterName;
 
     /**
-     * <p>Specify when NetTestType is CommTest.</p>
+     * <p>Specify this parameter if NetTestType is set to CommTest.</p>
      */
     @NameInMap("CommTest")
     public CreateNetTestTaskRequestCommTest commTest;
 
     /**
-     * <p>Specify when NetTestType is DelayTest.</p>
+     * <p>Specify this parameter if NetTestType is set to DelayTest.</p>
      */
     @NameInMap("DelayTest")
     public CreateNetTestTaskRequestDelayTest delayTest;
 
     /**
-     * <p>The type of the network test. Valid values: DelayTest, TrafficTest, and CommTest.</p>
+     * <p>The type of network test. Valid values: DelayTest, TrafficTest, and CommTest.</p>
      * 
      * <strong>example:</strong>
      * <p>DelayTest</p>
@@ -53,7 +53,7 @@ public class CreateNetTestTaskRequest extends TeaModel {
     public String networkMode;
 
     /**
-     * <p>The port number.</p>
+     * <p>The test port number.</p>
      * 
      * <strong>example:</strong>
      * <p>23604</p>
@@ -62,7 +62,7 @@ public class CreateNetTestTaskRequest extends TeaModel {
     public String port;
 
     /**
-     * <p>If the TrafficModel is Fullmesh, leave this parameter empty.</p>
+     * <p>This field is empty if TrafficModel is set to Fullmesh.</p>
      */
     @NameInMap("TrafficTest")
     public CreateNetTestTaskRequestTrafficTest trafficTest;
@@ -165,7 +165,7 @@ public class CreateNetTestTaskRequest extends TeaModel {
         public String resourceId;
 
         /**
-         * <p>The name of the service.</p>
+         * <p>The service name.</p>
          * 
          * <strong>example:</strong>
          * <p>VBw</p>
@@ -223,7 +223,7 @@ public class CreateNetTestTaskRequest extends TeaModel {
         public Long GPUNum;
 
         /**
-         * <p>The host IDs.</p>
+         * <p>The hosts.</p>
          */
         @NameInMap("Hosts")
         public java.util.List<CreateNetTestTaskRequestCommTestHosts> hosts;
@@ -238,7 +238,7 @@ public class CreateNetTestTaskRequest extends TeaModel {
         public String model;
 
         /**
-         * <p>The CommTest type, which can be ACCL or NCCL.</p>
+         * <p>The type of communication library test. Valid values: ACCL and NCCL.</p>
          * 
          * <strong>example:</strong>
          * <p>ACCL</p>
@@ -287,7 +287,7 @@ public class CreateNetTestTaskRequest extends TeaModel {
 
     public static class CreateNetTestTaskRequestDelayTestHosts extends TeaModel {
         /**
-         * <p>The bonding of network interface card.</p>
+         * <p>The bonded NIC port.</p>
          * 
          * <strong>example:</strong>
          * <p>bond1</p>
@@ -323,7 +323,7 @@ public class CreateNetTestTaskRequest extends TeaModel {
         public String resourceId;
 
         /**
-         * <p>The name of the service.</p>
+         * <p>The service name.</p>
          * 
          * <strong>example:</strong>
          * <p>NQU</p>
@@ -380,7 +380,7 @@ public class CreateNetTestTaskRequest extends TeaModel {
 
     public static class CreateNetTestTaskRequestDelayTest extends TeaModel {
         /**
-         * <p>The hosts of the test node.</p>
+         * <p>The hosts of the test nodes.</p>
          */
         @NameInMap("Hosts")
         public java.util.List<CreateNetTestTaskRequestDelayTestHosts> hosts;
@@ -402,7 +402,7 @@ public class CreateNetTestTaskRequest extends TeaModel {
 
     public static class CreateNetTestTaskRequestTrafficTestClients extends TeaModel {
         /**
-         * <p>The bonding of network interface card.</p>
+         * <p>The bonded port of the network interface card (NIC).</p>
          * 
          * <strong>example:</strong>
          * <p>bond1</p>
@@ -438,7 +438,7 @@ public class CreateNetTestTaskRequest extends TeaModel {
         public String resourceId;
 
         /**
-         * <p>The name of the service.</p>
+         * <p>The service name.</p>
          * 
          * <strong>example:</strong>
          * <p>xMv</p>
@@ -495,7 +495,7 @@ public class CreateNetTestTaskRequest extends TeaModel {
 
     public static class CreateNetTestTaskRequestTrafficTestServers extends TeaModel {
         /**
-         * <p>The bonding of network interface card.</p>
+         * <p>The bonded NIC port.</p>
          * 
          * <strong>example:</strong>
          * <p>bond1</p>
@@ -531,7 +531,7 @@ public class CreateNetTestTaskRequest extends TeaModel {
         public String resourceId;
 
         /**
-         * <p>The name of the service.</p>
+         * <p>The service name.</p>
          * 
          * <strong>example:</strong>
          * <p>xMv</p>
@@ -588,13 +588,13 @@ public class CreateNetTestTaskRequest extends TeaModel {
 
     public static class CreateNetTestTaskRequestTrafficTest extends TeaModel {
         /**
-         * <p>The client IDs.</p>
+         * <p>The client resources.</p>
          */
         @NameInMap("Clients")
         public java.util.List<CreateNetTestTaskRequestTrafficTestClients> clients;
 
         /**
-         * <p>The running duration of the pipeline job. Unit: seconds.</p>
+         * <p>The runtime duration of the flow task, in seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -603,7 +603,7 @@ public class CreateNetTestTaskRequest extends TeaModel {
         public Long duration;
 
         /**
-         * <p>If the protocol is RDMA, enter True or False. If the protocol is TCP, leave this field empty.</p>
+         * <p>If Protocol is set to RDMA, specify True or False. This field is empty if Protocol is set to TCP.</p>
          * 
          * <strong>example:</strong>
          * <p>False</p>
@@ -612,7 +612,7 @@ public class CreateNetTestTaskRequest extends TeaModel {
         public Boolean GDR;
 
         /**
-         * <p>The network protocol, which can be RDMA or TCP.</p>
+         * <p>The network protocol. Valid values: RDMA and TCP.</p>
          * 
          * <strong>example:</strong>
          * <p>TCP</p>
@@ -621,7 +621,7 @@ public class CreateNetTestTaskRequest extends TeaModel {
         public String protocol;
 
         /**
-         * <p>If the protocol is TCP, enter the number of concurrent connections. If the protocol is RDMA, enter the configured QP value.</p>
+         * <p>If Protocol is set to TCP, specify the number of concurrent connections for the test. If Protocol is set to RDMA, specify the QP value.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -630,13 +630,13 @@ public class CreateNetTestTaskRequest extends TeaModel {
         public Long QP;
 
         /**
-         * <p>The services.</p>
+         * <p>The list of servers.</p>
          */
         @NameInMap("Servers")
         public java.util.List<CreateNetTestTaskRequestTrafficTestServers> servers;
 
         /**
-         * <p>The traffic model, which can be MTON or Fullmesh.</p>
+         * <p>The traffic model. Valid values: MTON and Fullmesh.</p>
          * 
          * <strong>example:</strong>
          * <p>Fullmesh</p>

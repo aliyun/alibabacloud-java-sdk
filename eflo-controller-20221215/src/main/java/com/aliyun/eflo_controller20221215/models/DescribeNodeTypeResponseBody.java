@@ -4,10 +4,18 @@ package com.aliyun.eflo_controller20221215.models;
 import com.aliyun.tea.*;
 
 public class DescribeNodeTypeResponseBody extends TeaModel {
+    /**
+     * <p>The maximum number of disks that can be attached.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>17</p>
+     */
     @NameInMap("DiskQuantity")
     public Integer diskQuantity;
 
     /**
+     * <p>The maximum number of network interfaces for high-density mode.</p>
+     * 
      * <strong>example:</strong>
      * <p>63</p>
      */
@@ -15,6 +23,8 @@ public class DescribeNodeTypeResponseBody extends TeaModel {
     public Integer eniHighDenseQuantity;
 
     /**
+     * <p>The maximum number of IPv6 addresses that an ENI can have.</p>
+     * 
      * <strong>example:</strong>
      * <p>256</p>
      */
@@ -22,6 +32,8 @@ public class DescribeNodeTypeResponseBody extends TeaModel {
     public Integer eniIpv6AddressQuantity;
 
     /**
+     * <p>The maximum number of IPv4 addresses that an ENI can have.</p>
+     * 
      * <strong>example:</strong>
      * <p>256</p>
      */
@@ -29,6 +41,8 @@ public class DescribeNodeTypeResponseBody extends TeaModel {
     public Integer eniPrivateIpAddressQuantity;
 
     /**
+     * <p>The maximum number of supported elastic network interfaces (ENIs), including primary and secondary ENIs.</p>
+     * 
      * <strong>example:</strong>
      * <p>22</p>
      */
@@ -36,6 +50,8 @@ public class DescribeNodeTypeResponseBody extends TeaModel {
     public Integer eniQuantity;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>4FD06DF0-9167-5C6F-A145-F30CA4A15D54</p>
      */

@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteNodeRequest extends TeaModel {
     /**
+     * <p>The ID of the node.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

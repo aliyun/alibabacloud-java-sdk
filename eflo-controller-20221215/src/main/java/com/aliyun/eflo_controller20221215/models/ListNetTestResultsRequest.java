@@ -8,8 +8,8 @@ public class ListNetTestResultsRequest extends TeaModel {
      * <p>The number of entries to return on each page. Maximum value: 100.</p>
      * <p>Default value:</p>
      * <ul>
-     * <li>If you do not configure this parameter or if you set this parameter to a value less than 20, the default value is 20.</li>
-     * <li>If you set this parameter to a value that is greater than 100, the default value is 100.</li>
+     * <li>If you do not set this parameter or you set it to a value less than 20, the default value is 20.</li>
+     * <li>If you set the value to greater than 100, the default value is 100.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -28,19 +28,19 @@ public class ListNetTestResultsRequest extends TeaModel {
     public String netTestType;
 
     /**
-     * <p>The token that determines the start position of the query. Set this parameter to the value of the NextToken parameter that is returned from the last call.</p>
+     * <p>The token that is used to retrieve the next page of results. Set this parameter to the value of \<code>NextToken\\</code> that is returned in the last response.</p>
      * 
      * <strong>example:</strong>
-     * <p>3a6b93229825ac667104463b56790c91</p>
+     * <p>3a6b93229825ac667104463b5679****</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
-     * <p>The resource group ID.</p>
+     * <p>The ID of the resource group.</p>
      * 
      * <strong>example:</strong>
-     * <p>rg-acfmxno4vh5muoq</p>
+     * <p>rg-acfmxno4vh5****</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;

@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteHyperNodeRequest extends TeaModel {
     /**
+     * <p>The hyper node ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

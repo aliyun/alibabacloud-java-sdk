@@ -5,16 +5,26 @@ import com.aliyun.tea.*;
 
 public class ListHyperNodesRequest extends TeaModel {
     /**
+     * <p>The name of the cluster.</p>
+     * 
      * <strong>example:</strong>
      * <p>Standard_Cluster</p>
      */
     @NameInMap("ClusterName")
     public String clusterName;
 
+    /**
+     * <p>The commodity code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rds_machineinstanceba_public_cn</p>
+     */
     @NameInMap("CommodityCode")
     public String commodityCode;
 
     /**
+     * <p>The cluster number.</p>
+     * 
      * <strong>example:</strong>
      * <p>A1</p>
      */
@@ -22,16 +32,23 @@ public class ListHyperNodesRequest extends TeaModel {
     public String hpnZone;
 
     /**
+     * <p>The ID of the node.</p>
+     * 
      * <strong>example:</strong>
      * <p>e01-cn-zvp2tgykr08</p>
      */
     @NameInMap("HyperNodeId")
     public String hyperNodeId;
 
+    /**
+     * <p>The list of node IDs.</p>
+     */
     @NameInMap("HyperNodeIds")
     public java.util.List<String> hyperNodeIds;
 
     /**
+     * <p>The machine type.</p>
+     * 
      * <strong>example:</strong>
      * <p>efg1.nvga1</p>
      */
@@ -39,6 +56,11 @@ public class ListHyperNodesRequest extends TeaModel {
     public String machineType;
 
     /**
+     * <p>The number of entries to return on each page. The maximum value is 100.</p>
+     * <p>Default values:</p>
+     * <p>• If you do not specify this parameter or you specify a value that is less than 20, the default value is 20.</p>
+     * <p>• If you specify a value that is greater than 100, the default value is 100.</p>
+     * 
      * <strong>example:</strong>
      * <p>100</p>
      */
@@ -46,6 +68,8 @@ public class ListHyperNodesRequest extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>The pagination token that is used in the next request to retrieve a new page of results. Set this parameter to the NextToken value that is returned from a previous call.</p>
+     * 
      * <strong>example:</strong>
      * <p>3a6b93229825ac667104463b56790c91</p>
      */
@@ -53,26 +77,38 @@ public class ListHyperNodesRequest extends TeaModel {
     public String nextToken;
 
     /**
+     * <p>The name of the node group.</p>
+     * 
      * <strong>example:</strong>
      * <p>emr-default</p>
      */
     @NameInMap("NodeGroupName")
     public String nodeGroupName;
 
+    /**
+     * <p>The state of the node. If you do not specify this parameter, nodes in all states are returned. Valid values: Extending, UnusedNodeStopped, UnusedNodeStopping, Unused, Using, ReleaseLocking, Operating, Cutting, ClusterNodeStopped, UnusedNodeRecovering, ClusterNodeStopping, ClusterNodeRecovering, and Replacing.</p>
+     */
     @NameInMap("OperatingStates")
     public java.util.List<String> operatingStates;
 
     /**
+     * <p>The ID of the resource group.</p>
+     * 
      * <strong>example:</strong>
      * <p>rg-acfmwfm33rlt6zi</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
+    /**
+     * <p>The tags.</p>
+     */
     @NameInMap("Tags")
     public java.util.List<ListHyperNodesRequestTags> tags;
 
     /**
+     * <p>The ID of the zone.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou-i</p>
      */
@@ -190,6 +226,8 @@ public class ListHyperNodesRequest extends TeaModel {
 
     public static class ListHyperNodesRequestTags extends TeaModel {
         /**
+         * <p>The tag key.</p>
+         * 
          * <strong>example:</strong>
          * <p>alarm_xdc</p>
          */
@@ -197,6 +235,8 @@ public class ListHyperNodesRequest extends TeaModel {
         public String key;
 
         /**
+         * <p>The tag value.</p>
+         * 
          * <strong>example:</strong>
          * <p>129</p>
          */

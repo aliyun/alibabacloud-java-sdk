@@ -4,12 +4,17 @@ package com.aliyun.eflo_controller20221215.models;
 import com.aliyun.tea.*;
 
 public class ChangeNodeTypesRequest extends TeaModel {
+    /**
+     * <p>A list of node IDs. You can specify a maximum of 10 nodes in a single request.</p>
+     */
     @NameInMap("NodeIds")
     public java.util.List<String> nodeIds;
 
     /**
+     * <p>The node specifications.</p>
+     * 
      * <strong>example:</strong>
-     * <p>standard</p>
+     * <p>cpfs-enhanced</p>
      */
     @NameInMap("NodeType")
     public String nodeType;
