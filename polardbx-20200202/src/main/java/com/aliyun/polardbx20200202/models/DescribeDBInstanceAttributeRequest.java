@@ -25,7 +25,7 @@ public class DescribeDBInstanceAttributeRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The resource group ID.</p>
+     * <p>The ID of the resource group.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-aekzaxhezhs5***</p>

@@ -15,7 +15,7 @@ public class CreateMem0Request extends TeaModel {
     public String DBInstanceName;
 
     /**
-     * <p>The region in which the instance resides.</p>
+     * <p>The region where the instance resides.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

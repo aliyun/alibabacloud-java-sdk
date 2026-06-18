@@ -4,14 +4,17 @@ package com.aliyun.polardbx20200202.models;
 import com.aliyun.tea.*;
 
 public class DescribeMem0InfoResponseBody extends TeaModel {
+    @NameInMap("AccessDeniedDetail")
+    public DescribeMem0InfoResponseBodyAccessDeniedDetail accessDeniedDetail;
+
     /**
-     * <p>Returned Data</p>
+     * <p>Response data</p>
      */
     @NameInMap("Data")
     public DescribeMem0InfoResponseBodyData data;
 
     /**
-     * <p>request ID</p>
+     * <p>Request ID</p>
      * 
      * <strong>example:</strong>
      * <p>C457B28E-9CAB-4B77-B5C6-5D71B7870B6E</p>
@@ -22,6 +25,14 @@ public class DescribeMem0InfoResponseBody extends TeaModel {
     public static DescribeMem0InfoResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeMem0InfoResponseBody self = new DescribeMem0InfoResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeMem0InfoResponseBody setAccessDeniedDetail(DescribeMem0InfoResponseBodyAccessDeniedDetail accessDeniedDetail) {
+        this.accessDeniedDetail = accessDeniedDetail;
+        return this;
+    }
+    public DescribeMem0InfoResponseBodyAccessDeniedDetail getAccessDeniedDetail() {
+        return this.accessDeniedDetail;
     }
 
     public DescribeMem0InfoResponseBody setData(DescribeMem0InfoResponseBodyData data) {
@@ -40,9 +51,94 @@ public class DescribeMem0InfoResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    public static class DescribeMem0InfoResponseBodyAccessDeniedDetail extends TeaModel {
+        @NameInMap("AuthAction")
+        public String authAction;
+
+        @NameInMap("AuthPrincipalDisplayName")
+        public String authPrincipalDisplayName;
+
+        @NameInMap("AuthPrincipalOwnerId")
+        public String authPrincipalOwnerId;
+
+        @NameInMap("AuthPrincipalType")
+        public String authPrincipalType;
+
+        @NameInMap("EncodedDiagnosticMessage")
+        public String encodedDiagnosticMessage;
+
+        @NameInMap("NoPermissionType")
+        public String noPermissionType;
+
+        @NameInMap("PolicyType")
+        public String policyType;
+
+        public static DescribeMem0InfoResponseBodyAccessDeniedDetail build(java.util.Map<String, ?> map) throws Exception {
+            DescribeMem0InfoResponseBodyAccessDeniedDetail self = new DescribeMem0InfoResponseBodyAccessDeniedDetail();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeMem0InfoResponseBodyAccessDeniedDetail setAuthAction(String authAction) {
+            this.authAction = authAction;
+            return this;
+        }
+        public String getAuthAction() {
+            return this.authAction;
+        }
+
+        public DescribeMem0InfoResponseBodyAccessDeniedDetail setAuthPrincipalDisplayName(String authPrincipalDisplayName) {
+            this.authPrincipalDisplayName = authPrincipalDisplayName;
+            return this;
+        }
+        public String getAuthPrincipalDisplayName() {
+            return this.authPrincipalDisplayName;
+        }
+
+        public DescribeMem0InfoResponseBodyAccessDeniedDetail setAuthPrincipalOwnerId(String authPrincipalOwnerId) {
+            this.authPrincipalOwnerId = authPrincipalOwnerId;
+            return this;
+        }
+        public String getAuthPrincipalOwnerId() {
+            return this.authPrincipalOwnerId;
+        }
+
+        public DescribeMem0InfoResponseBodyAccessDeniedDetail setAuthPrincipalType(String authPrincipalType) {
+            this.authPrincipalType = authPrincipalType;
+            return this;
+        }
+        public String getAuthPrincipalType() {
+            return this.authPrincipalType;
+        }
+
+        public DescribeMem0InfoResponseBodyAccessDeniedDetail setEncodedDiagnosticMessage(String encodedDiagnosticMessage) {
+            this.encodedDiagnosticMessage = encodedDiagnosticMessage;
+            return this;
+        }
+        public String getEncodedDiagnosticMessage() {
+            return this.encodedDiagnosticMessage;
+        }
+
+        public DescribeMem0InfoResponseBodyAccessDeniedDetail setNoPermissionType(String noPermissionType) {
+            this.noPermissionType = noPermissionType;
+            return this;
+        }
+        public String getNoPermissionType() {
+            return this.noPermissionType;
+        }
+
+        public DescribeMem0InfoResponseBodyAccessDeniedDetail setPolicyType(String policyType) {
+            this.policyType = policyType;
+            return this;
+        }
+        public String getPolicyType() {
+            return this.policyType;
+        }
+
+    }
+
     public static class DescribeMem0InfoResponseBodyDataInstanceConnAddrs extends TeaModel {
         /**
-         * <p>connection address</p>
+         * <p>Connection address</p>
          * 
          * <strong>example:</strong>
          * <p>pxc-spsil01pww4hfz.polarx.singapore.rds.aliyuncs.com</p>
@@ -51,7 +147,7 @@ public class DescribeMem0InfoResponseBody extends TeaModel {
         public String connectionString;
 
         /**
-         * <p>port</p>
+         * <p>Port</p>
          * 
          * <strong>example:</strong>
          * <p>3306</p>
@@ -60,7 +156,7 @@ public class DescribeMem0InfoResponseBody extends TeaModel {
         public Integer port;
 
         /**
-         * <p>Type of connection address</p>
+         * <p>Connection address type</p>
          * 
          * <strong>example:</strong>
          * <p>VPC</p>
@@ -87,7 +183,7 @@ public class DescribeMem0InfoResponseBody extends TeaModel {
         public String vSwitchId;
 
         /**
-         * <p>VPC-connected instance ID</p>
+         * <p>VPC instance ID</p>
          * 
          * <strong>example:</strong>
          * <p>pxc-spsil01pww4hfzjayd-cn-20251013180429</p>
@@ -152,7 +248,7 @@ public class DescribeMem0InfoResponseBody extends TeaModel {
 
     public static class DescribeMem0InfoResponseBodyDataInstance extends TeaModel {
         /**
-         * <p>instance type</p>
+         * <p>Instance specifications</p>
          * 
          * <strong>example:</strong>
          * <p>mysql.x2.large.2c</p>
@@ -161,13 +257,13 @@ public class DescribeMem0InfoResponseBody extends TeaModel {
         public String classCode;
 
         /**
-         * <p>List of connection addresses</p>
+         * <p>Connection address list</p>
          */
         @NameInMap("ConnAddrs")
         public java.util.List<DescribeMem0InfoResponseBodyDataInstanceConnAddrs> connAddrs;
 
         /**
-         * <p>Creation Time.</p>
+         * <p>The creation time.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-02-17T02:00:20Z</p>
@@ -176,7 +272,7 @@ public class DescribeMem0InfoResponseBody extends TeaModel {
         public String createTime;
 
         /**
-         * <p>instance ID</p>
+         * <p>Instance ID</p>
          * 
          * <strong>example:</strong>
          * <p>pxc-spsil01pww4hfz-mem</p>
@@ -185,7 +281,7 @@ public class DescribeMem0InfoResponseBody extends TeaModel {
         public String instanceId;
 
         /**
-         * <p>Number of edge zones</p>
+         * <p>Number of nodes</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -203,7 +299,7 @@ public class DescribeMem0InfoResponseBody extends TeaModel {
         public String regionId;
 
         /**
-         * <p>instance status</p>
+         * <p>Instance status</p>
          * 
          * <strong>example:</strong>
          * <p>Running</p>
@@ -212,7 +308,7 @@ public class DescribeMem0InfoResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>storage class</p>
+         * <p>Storage type</p>
          * 
          * <strong>example:</strong>
          * <p>local_ssd</p>
@@ -239,7 +335,7 @@ public class DescribeMem0InfoResponseBody extends TeaModel {
         public String vSwitchId;
 
         /**
-         * <p>zone ID</p>
+         * <p>Zone ID</p>
          * 
          * <strong>example:</strong>
          * <p>ap-southeast-1a</p>

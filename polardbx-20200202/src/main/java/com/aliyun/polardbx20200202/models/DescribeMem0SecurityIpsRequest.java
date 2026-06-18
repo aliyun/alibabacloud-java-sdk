@@ -3,33 +3,33 @@ package com.aliyun.polardbx20200202.models;
 
 import com.aliyun.tea.*;
 
-public class DescribeMem0InfoRequest extends TeaModel {
+public class DescribeMem0SecurityIpsRequest extends TeaModel {
     /**
-     * <p>Instance Name</p>
+     * <p>The name of the instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>pxc-spsil01pww4hfz</p>
+     * <p>pxc-htri0****r4k9p</p>
      */
     @NameInMap("DBInstanceName")
     public String DBInstanceName;
 
     /**
-     * <p>Region</p>
+     * <p>The ID of the region where the instance resides.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>cn-beijing</p>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
-    public static DescribeMem0InfoRequest build(java.util.Map<String, ?> map) throws Exception {
-        DescribeMem0InfoRequest self = new DescribeMem0InfoRequest();
+    public static DescribeMem0SecurityIpsRequest build(java.util.Map<String, ?> map) throws Exception {
+        DescribeMem0SecurityIpsRequest self = new DescribeMem0SecurityIpsRequest();
         return TeaModel.build(map, self);
     }
 
-    public DescribeMem0InfoRequest setDBInstanceName(String DBInstanceName) {
+    public DescribeMem0SecurityIpsRequest setDBInstanceName(String DBInstanceName) {
         this.DBInstanceName = DBInstanceName;
         return this;
     }
@@ -37,7 +37,7 @@ public class DescribeMem0InfoRequest extends TeaModel {
         return this.DBInstanceName;
     }
 
-    public DescribeMem0InfoRequest setRegionId(String regionId) {
+    public DescribeMem0SecurityIpsRequest setRegionId(String regionId) {
         this.regionId = regionId;
         return this;
     }

@@ -1,3 +1,13 @@
+2026-06-18 Version: 4.6.0
+- Support API DescribeMem0SecurityIps.
+- Support API ModifyMem0SecurityIps.
+- Update API CreateMem0: add response parameters Body.AccessDeniedDetail.
+- Update API DeleteMem0: add response parameters Body.AccessDeniedDetail.
+- Update API DescribeDBInstanceAttribute: add response parameters Body.DBInstance.DnStorageSpace.
+- Update API DescribeMem0Info: add response parameters Body.AccessDeniedDetail.
+- Update API ResetMem0AccountPassword: add response parameters Body.AccessDeniedDetail.
+
+
 2026-06-16 Version: 4.5.0
 - Support API ResetMem0AccountPassword.
 

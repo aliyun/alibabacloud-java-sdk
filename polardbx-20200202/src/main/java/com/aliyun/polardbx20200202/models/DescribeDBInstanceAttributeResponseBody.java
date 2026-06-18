@@ -345,7 +345,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
 
     public static class DescribeDBInstanceAttributeResponseBodyDBInstance extends TeaModel {
         /**
-         * <p>Indicates whether the column store index feature is supported.</p>
+         * <p>Indicates whether the In-Memory Column Index feature is supported.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -427,7 +427,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         public String cpuType;
 
         /**
-         * <p>The creation time.</p>
+         * <p>The time when the instance was created.</p>
          * 
          * <strong>example:</strong>
          * <p>2021-08-31T08:56:25.000+0000</p>
@@ -491,7 +491,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         public String DBVersion;
 
         /**
-         * <p>The instance description.</p>
+         * <p>The description of the instance.</p>
          * 
          * <strong>example:</strong>
          * <p>test instance</p>
@@ -548,6 +548,12 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         public Integer dnNodeCount;
 
         /**
+         * <p>The disk space of the DN data nodes, in GB.</p>
+         */
+        @NameInMap("DnStorageSpace")
+        public String dnStorageSpace;
+
+        /**
          * <p>The database type. The value is fixed as polarx.</p>
          * 
          * <strong>example:</strong>
@@ -571,8 +577,8 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the instance has expired. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: Expired.</li>
-         * <li><strong>false</strong>: Normal.</li>
+         * <li><strong>true</strong>: The instance has expired.</li>
+         * <li><strong>false</strong>: The instance is running normally.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -600,7 +606,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         public String id;
 
         /**
-         * <p>The DPI engine version code of the instance. This is an internal parameter.</p>
+         * <p>The instance DPI engine version code. This is an internal parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>18</p>
@@ -615,7 +621,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         public java.util.List<String> LTSVersions;
 
         /**
-         * <p>The latest minor engine version supported by the instance.</p>
+         * <p>The latest kernel version supported by the instance.</p>
          * 
          * <strong>example:</strong>
          * <p>polarx-kernel_5.4.11-16301083_xcluster-20210805</p>
@@ -626,12 +632,12 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         /**
          * <p>The lock mode of the instance. Valid values:</p>
          * <ul>
-         * <li><strong>Unlock</strong>: Normal.</li>
-         * <li><strong>ManualLock</strong>: Manually locked.</li>
-         * <li><strong>LockByExpiration</strong>: Automatically locked due to instance expiration.</li>
-         * <li><strong>LockByRestoration</strong>: Automatically locked before instance rollback.</li>
-         * <li><strong>LockByDiskQuota</strong>: Automatically locked due to insufficient disk space.</li>
-         * <li><strong>LockReadInstanceByDiskQuota</strong>: Read-only instance automatically locked due to insufficient disk space.</li>
+         * <li><strong>Unlock</strong>: The instance is running normally.</li>
+         * <li><strong>ManualLock</strong>: The instance is manually locked.</li>
+         * <li><strong>LockByExpiration</strong>: The instance is automatically locked due to expiration.</li>
+         * <li><strong>LockByRestoration</strong>: The instance is automatically locked before a rollback.</li>
+         * <li><strong>LockByDiskQuota</strong>: The instance is automatically locked because the storage is full.</li>
+         * <li><strong>LockReadInstanceByDiskQuota</strong>: The read-only instance is automatically locked because the storage is full.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -659,7 +665,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         public String maintainStartTime;
 
         /**
-         * <p>The current minor engine version.</p>
+         * <p>The current kernel version.</p>
          * 
          * <strong>example:</strong>
          * <p>polarx-kernel_5.4.11-16301083_xcluster-20210805</p>
@@ -727,7 +733,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         public String regionId;
 
         /**
-         * <p>The resource group ID.</p>
+         * <p>The ID of the resource group.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-*********</p>
@@ -754,7 +760,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
          * <li><strong>disabled</strong>: Disabled.</li>
          * <li><strong>enabled</strong>: Enabled.</li>
          * <li><strong>processing</strong>: Being processed.</li>
-         * <li><strong>unknown</strong>: Unknown. This may be caused by the instance being unreachable.</li>
+         * <li><strong>unknown</strong>: Unknown. The instance may be disconnected.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -816,7 +822,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         public java.util.List<DescribeDBInstanceAttributeResponseBodyDBInstanceTagSet> tagSet;
 
         /**
-         * <p>The tertiary active zone.</p>
+         * <p>The third zone.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-shenzhen-e</p>
@@ -1041,6 +1047,14 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         }
         public Integer getDnNodeCount() {
             return this.dnNodeCount;
+        }
+
+        public DescribeDBInstanceAttributeResponseBodyDBInstance setDnStorageSpace(String dnStorageSpace) {
+            this.dnStorageSpace = dnStorageSpace;
+            return this;
+        }
+        public String getDnStorageSpace() {
+            return this.dnStorageSpace;
         }
 
         public DescribeDBInstanceAttributeResponseBodyDBInstance setEngine(String engine) {

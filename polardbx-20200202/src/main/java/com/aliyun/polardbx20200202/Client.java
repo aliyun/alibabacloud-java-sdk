@@ -54,7 +54,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("eu-west-1", "polardbx.aliyuncs.com"),
             new TeaPair("eu-west-1-oxs", "polardbx.aliyuncs.com"),
             new TeaPair("me-east-1", "polardbx.aliyuncs.com"),
-            new TeaPair("rus-west-1-pop", "polardbx.aliyuncs.com")
+            new TeaPair("rus-west-1-pop", "polardbx.aliyuncs.com"),
+            new TeaPair("us-west-1", "polardbx.us-west-1.aliyuncs.com"),
+            new TeaPair("us-east-1", "polardbx.us-east-1.aliyuncs.com"),
+            new TeaPair("cn-zhangjiakou", "polardbx.cn-zhangjiakou.aliyuncs.com"),
+            new TeaPair("cn-shenzhen", "polardbx.cn-shenzhen.aliyuncs.com"),
+            new TeaPair("cn-shanghai", "polardbx.cn-shanghai.aliyuncs.com"),
+            new TeaPair("cn-qingdao", "polardbx.cn-qingdao.aliyuncs.com"),
+            new TeaPair("cn-huhehaote", "polardbx.cn-huhehaote.aliyuncs.com"),
+            new TeaPair("cn-hongkong", "polardbx.cn-hongkong.aliyuncs.com"),
+            new TeaPair("cn-hangzhou", "polardbx.cn-hangzhou.aliyuncs.com"),
+            new TeaPair("cn-chengdu", "polardbx.cn-chengdu.aliyuncs.com"),
+            new TeaPair("cn-beijing", "polardbx.cn-beijing.aliyuncs.com"),
+            new TeaPair("ap-southeast-1", "polardbx.ap-southeast-1.aliyuncs.com")
         );
         this.checkConfig(config);
         this._endpoint = this.getEndpoint("polardbx", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
@@ -1399,10 +1411,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>&lt;props=&quot;china&quot;&gt;For more information about instance accounts, see <a href="https://help.aliyun.com/document_detail/172163.html">Account management</a>..</p>
+     * <p>&lt;props=&quot;china&quot;&gt;For more information about instance accounts, see <a href="https://help.aliyun.com/document_detail/172163.html">Account management</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Enables the memory engine.</p>
+     * <p>Enable Memory Engine</p>
      * 
      * @param request CreateMem0Request
      * @param runtime runtime options for this request RuntimeOptions
@@ -1438,10 +1450,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>&lt;props=&quot;china&quot;&gt;For more information about instance accounts, see <a href="https://help.aliyun.com/document_detail/172163.html">Account management</a>..</p>
+     * <p>&lt;props=&quot;china&quot;&gt;For more information about instance accounts, see <a href="https://help.aliyun.com/document_detail/172163.html">Account management</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Enables the memory engine.</p>
+     * <p>Enable Memory Engine</p>
      * 
      * @param request CreateMem0Request
      * @return CreateMem0Response
@@ -4429,12 +4441,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <blockquote>
      * <ul>
-     * <li>The PolarDB-X 2.0 SQL Audit and Analysis feature is free to use. However, Simple Log Service charges for storage space, read traffic, request quantity, data transformation, data shipping, and other resources. For more details about the SQL Audit feature, see <a href="https://help.aliyun.com/document_detail/184619.html">Enable SQL Audit and Analysis</a>.</li>
+     * <li>The SQL audit and analysis feature of PolarDB-X 2.0 is free of charge. However, Log Service charges fees for storage space, read traffic, the number of requests, data transformation, and data shipping. For more information about the SQL audit feature, see <a href="https://help.aliyun.com/document_detail/184619.html">Enable SQL audit and analysis</a>.</li>
      * </ul>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Query mem0 instance information</p>
+     * <p>View Memory Engine Information</p>
      * 
      * @param request DescribeMem0InfoRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4472,12 +4484,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <blockquote>
      * <ul>
-     * <li>The PolarDB-X 2.0 SQL Audit and Analysis feature is free to use. However, Simple Log Service charges for storage space, read traffic, request quantity, data transformation, data shipping, and other resources. For more details about the SQL Audit feature, see <a href="https://help.aliyun.com/document_detail/184619.html">Enable SQL Audit and Analysis</a>.</li>
+     * <li>The SQL audit and analysis feature of PolarDB-X 2.0 is free of charge. However, Log Service charges fees for storage space, read traffic, the number of requests, data transformation, and data shipping. For more information about the SQL audit feature, see <a href="https://help.aliyun.com/document_detail/184619.html">Enable SQL audit and analysis</a>.</li>
      * </ul>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Query mem0 instance information</p>
+     * <p>View Memory Engine Information</p>
      * 
      * @param request DescribeMem0InfoRequest
      * @return DescribeMem0InfoResponse
@@ -4485,6 +4497,68 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DescribeMem0InfoResponse describeMem0Info(DescribeMem0InfoRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeMem0InfoWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <blockquote>
+     * <ul>
+     * <li>The SQL audit and analysis feature of PolarDB-X 2.0 is free of charge. However, Log Service charges fees for storage space, read traffic, number of requests, data processing, and data shipping. For more information about the SQL audit feature, see <a href="https://help.aliyun.com/document_detail/184619.html">Enable SQL Audit and Analysis</a>.</li>
+     * </ul>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the whitelist of a memory engine.</p>
+     * 
+     * @param request DescribeMem0SecurityIpsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeMem0SecurityIpsResponse
+     */
+    public DescribeMem0SecurityIpsResponse describeMem0SecurityIpsWithOptions(DescribeMem0SecurityIpsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.DBInstanceName)) {
+            query.put("DBInstanceName", request.DBInstanceName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeMem0SecurityIps"),
+            new TeaPair("version", "2020-02-02"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeMem0SecurityIpsResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <blockquote>
+     * <ul>
+     * <li>The SQL audit and analysis feature of PolarDB-X 2.0 is free of charge. However, Log Service charges fees for storage space, read traffic, number of requests, data processing, and data shipping. For more information about the SQL audit feature, see <a href="https://help.aliyun.com/document_detail/184619.html">Enable SQL Audit and Analysis</a>.</li>
+     * </ul>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the whitelist of a memory engine.</p>
+     * 
+     * @param request DescribeMem0SecurityIpsRequest
+     * @return DescribeMem0SecurityIpsResponse
+     */
+    public DescribeMem0SecurityIpsResponse describeMem0SecurityIps(DescribeMem0SecurityIpsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeMem0SecurityIpsWithOptions(request, runtime);
     }
 
     /**
@@ -6564,7 +6638,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the specifications of an instance by calling the ModifyDBInstanceClass operation.</p>
+     * <p>Calls the ModifyDBInstanceClass operation to modify the specifications of an instance.</p>
      * 
      * @param request ModifyDBInstanceClassRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6636,7 +6710,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the specifications of an instance by calling the ModifyDBInstanceClass operation.</p>
+     * <p>Calls the ModifyDBInstanceClass operation to modify the specifications of an instance.</p>
      * 
      * @param request ModifyDBInstanceClassRequest
      * @return ModifyDBInstanceClassResponse
@@ -7066,6 +7140,72 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ModifyEngineMigrationResponse modifyEngineMigration(ModifyEngineMigrationRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.modifyEngineMigrationWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>***.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Modifies the whitelist of a memory engine instance.</p>
+     * 
+     * @param request ModifyMem0SecurityIpsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ModifyMem0SecurityIpsResponse
+     */
+    public ModifyMem0SecurityIpsResponse modifyMem0SecurityIpsWithOptions(ModifyMem0SecurityIpsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.DBInstanceName)) {
+            query.put("DBInstanceName", request.DBInstanceName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.groupName)) {
+            query.put("GroupName", request.groupName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.modifyMode)) {
+            query.put("ModifyMode", request.modifyMode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.securityIPList)) {
+            query.put("SecurityIPList", request.securityIPList);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ModifyMem0SecurityIps"),
+            new TeaPair("version", "2020-02-02"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyMem0SecurityIpsResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>***.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Modifies the whitelist of a memory engine instance.</p>
+     * 
+     * @param request ModifyMem0SecurityIpsRequest
+     * @return ModifyMem0SecurityIpsResponse
+     */
+    public ModifyMem0SecurityIpsResponse modifyMem0SecurityIps(ModifyMem0SecurityIpsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.modifyMem0SecurityIpsWithOptions(request, runtime);
     }
 
     /**
