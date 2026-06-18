@@ -6,36 +6,46 @@ import com.aliyun.tea.*;
 public class CreateSupabaseProjectRequest extends TeaModel {
     /**
      * <p>The password of the initial account.</p>
+     * <p>Password rules:</p>
      * <ul>
-     * <li>The password must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters.</li>
-     * <li>The following special characters are supported: <code>!@#$%^&amp;*()_+-=</code></li>
      * <li>The password must be 8 to 32 characters in length.</li>
+     * <li>The password must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters.</li>
+     * <li>Supported special characters include !@#$%^&amp;*()_+-=.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>Pw123456</p>
+     * <p>TestPassword123!</p>
      */
     @NameInMap("AccountPassword")
     public String accountPassword;
 
+    /**
+     * <p>Specifies whether to enable auto start/stop. If this parameter is not specified, the default value is false.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("AutoScale")
     public Boolean autoScale;
 
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. For more information, see <a href="https://help.aliyun.com/document_detail/327176.html">How to ensure idempotence</a>.</p>
+     * <p>The idempotency token. This token ensures that duplicate requests do not trigger the same operation more than once.</p>
      * 
      * <strong>example:</strong>
-     * <p>0c593ea1-3bea-11e9-b96b-88888888****</p>
+     * <p>123e4567-e89b-12d3-a456-426655440000</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
-     * <p>The performance level (PL) of the cloud disk. Default value: PL0. Valid values:</p>
+     * <p>The performance level (PL) of the cloud disk. If this parameter is not specified, the default value PL0 is used.</p>
+     * <p>Valid values:</p>
      * <ul>
      * <li>PL0</li>
      * <li>PL1</li>
+     * <li>PL2</li>
+     * <li>PL3.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -44,37 +54,42 @@ public class CreateSupabaseProjectRequest extends TeaModel {
     @NameInMap("DiskPerformanceLevel")
     public String diskPerformanceLevel;
 
+    /**
+     * <p>The DPI engine version. If this parameter is not specified, the default value PG15 is used.</p>
+     * <p>Valid values:</p>
+     * <ul>
+     * <li>PG15: PostgreSQL 15.</li>
+     * <li>PG17: PostgreSQL 17.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>PG15</p>
+     */
     @NameInMap("EngineVersion")
     public String engineVersion;
 
     /**
-     * <p>The billing method. Valid values:</p>
+     * <p>The billing method. If this parameter is not specified, the default value Free is used.</p>
+     * <p>Valid values:</p>
      * <ul>
-     * <li><strong>Postpaid</strong>: pay-as-you-go.</li>
-     * <li><strong>Prepaid</strong>: subscription.</li>
+     * <li>Free: free tier.</li>
+     * <li>Postpaid: pay-as-you-go.</li>
+     * <li>Prepaid: subscription.</li>
      * </ul>
-     * <blockquote>
-     * <ul>
-     * <li>If you do not specify this parameter, an instance of the Free type is created by default.</li>
-     * <li>If you select the subscription billing method, you can receive discounts when you purchase a one-year or longer subscription. We recommend that you select a billing method based on your business requirements.</li>
-     * </ul>
-     * </blockquote>
      * 
      * <strong>example:</strong>
-     * <p>Postpaid</p>
+     * <p>Free</p>
      */
     @NameInMap("PayType")
     public String payType;
 
     /**
-     * <p>The unit of the subscription duration. Valid values:</p>
+     * <p>The unit of the subscription duration. This parameter takes effect only when PayType is set to PrePay. If this parameter is not specified, the default value Month is used.</p>
+     * <p>Valid values:</p>
      * <ul>
-     * <li><strong>Month</strong>: month.</li>
-     * <li><strong>Year</strong>: year.</li>
+     * <li>Month: month.</li>
+     * <li>Year: year.</li>
      * </ul>
-     * <blockquote>
-     * <p>This parameter is required when you create a subscription instance.</p>
-     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>Month</p>
@@ -83,35 +98,33 @@ public class CreateSupabaseProjectRequest extends TeaModel {
     public String period;
 
     /**
-     * <p>The project name. The naming rules are as follows:</p>
+     * <p>The name of the Supabase project.</p>
+     * <p>Naming rules:</p>
      * <ul>
-     * <li><p>The name must be 1 to 128 characters in length.</p>
-     * </li>
-     * <li><p>The name can contain only letters, digits, hyphens (-), and underscores (_).</p>
-     * </li>
-     * <li><p>The name must start with a letter or an underscore (_).</p>
-     * </li>
+     * <li>The name must be 1 to 128 characters in length.</li>
+     * <li>The name can contain letters, digits, hyphens (-), and underscores (_).</li>
+     * <li>The name must start with a letter or an underscore (_).</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>saas_iot_x86_modbustcp_lqt01</p>
+     * <p>supabase_demo</p>
      */
     @NameInMap("ProjectName")
     public String projectName;
 
     /**
-     * <p>The Supabase instance specification. The default specification for the Free type is 1C1G. The specifications for paid types are consistent with those available on the console.</p>
+     * <p>The specifications of the Supabase project. The Free billing type uses free-tier specifications. For paid billing types, the specifications must match those available on the console.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>1C1G</p>
+     * <p>2C4G</p>
      */
     @NameInMap("ProjectSpec")
     public String projectSpec;
 
     /**
-     * <p>The region ID. You can call <a href="https://help.aliyun.com/document_detail/86912.html">DescribeRegions</a> to view the available region IDs.</p>
+     * <p>The region ID. Specifies the region in which to create the project.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -120,34 +133,26 @@ public class CreateSupabaseProjectRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The IP address whitelist.</p>
-     * <p>The value 127.0.0.1 indicates that no external IP addresses are allowed to access the instance. After the instance is created, you can call <a href="https://help.aliyun.com/document_detail/86928.html">ModifySecurityIps</a> to modify the IP address whitelist.</p>
+     * <p>The IP address whitelist. Separate multiple IP addresses or CIDR blocks with commas (,). If this parameter is not specified, the default value 0.0.0.0/0 is used.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>127.0.0.1</p>
+     * <p>0.0.0.0/0</p>
      */
     @NameInMap("SecurityIPList")
     public String securityIPList;
 
     /**
-     * <p>The storage size. Unit: GB. Default value: 1.</p>
+     * <p>The storage size. Unit: GB. If this parameter is not specified for non-Free billing types, the default value is 1 GB.</p>
      * 
      * <strong>example:</strong>
-     * <p>2</p>
+     * <p>50</p>
      */
     @NameInMap("StorageSize")
     public Long storageSize;
 
     /**
-     * <p>The subscription duration. Valid values:</p>
-     * <ul>
-     * <li>If <strong>Period</strong> is set to <strong>Month</strong>, the valid values are 1 to 11.</li>
-     * <li>If <strong>Period</strong> is set to <strong>Year</strong>, the valid values are 1 to 3.</li>
-     * </ul>
-     * <blockquote>
-     * <p>This parameter is required when you create a subscription instance.</p>
-     * </blockquote>
+     * <p>The subscription duration of the resource. This parameter takes effect only when PayType is set to PrePay. If this parameter is not specified, the default value is 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -156,46 +161,31 @@ public class CreateSupabaseProjectRequest extends TeaModel {
     public String usedTime;
 
     /**
-     * <p>The vSwitch ID.</p>
-     * <blockquote>
-     * <ul>
-     * <li>The <strong>vSwitchId</strong> parameter is required.</li>
-     * <li>The zone of the <strong>vSwitch</strong> must be the same as the value of <strong>ZoneId</strong>.</li>
-     * </ul>
-     * </blockquote>
+     * <p>The vSwitch ID. This parameter is required. The zone of the vSwitch must be the same as the value of ZoneId.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>vsw-bp1cpq8mr64paltkb****</p>
+     * <p>vsw-bp1234567890</p>
      */
     @NameInMap("VSwitchId")
     public String vSwitchId;
 
     /**
-     * <p>The VPC ID.</p>
-     * <blockquote>
-     * <ul>
-     * <li>You can call <a href="https://help.aliyun.com/document_detail/208327.html">DescribeRdsVpcs</a> to view the available VPC IDs.</li>
-     * <li>This parameter is required.</li>
-     * </ul>
-     * </blockquote>
+     * <p>The ID of the virtual private cloud (VPC). This parameter is required.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>vpc-bp*******************</p>
+     * <p>vpc-bp1234567890</p>
      */
     @NameInMap("VpcId")
     public String vpcId;
 
     /**
-     * <p>The zone ID.</p>
-     * <blockquote>
-     * <p>You can call <a href="https://help.aliyun.com/document_detail/86912.html">DescribeRegions</a> to view the available zone IDs.</p>
-     * </blockquote>
+     * <p>The zone ID. The zone of the vSwitch specified by VSwitchId must be the same as the value of this parameter.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>cn-hangzhou-h</p>
+     * <p>cn-hangzhou-i</p>
      */
     @NameInMap("ZoneId")
     public String zoneId;

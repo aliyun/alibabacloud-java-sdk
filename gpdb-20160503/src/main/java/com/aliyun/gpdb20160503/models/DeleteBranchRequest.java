@@ -1,0 +1,47 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.gpdb20160503.models;
+
+import com.aliyun.tea.*;
+
+public class DeleteBranchRequest extends TeaModel {
+    /**
+     * <p>The branch ID that uniquely identifies a Supabase branch.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>br-xxxx</p>
+     */
+    @NameInMap("BranchId")
+    public String branchId;
+
+    /**
+     * <p>The region ID. This parameter is required when you create a primary branch. When you create a child branch, the region is inherited from the primary branch by default.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-beijing</p>
+     */
+    @NameInMap("RegionId")
+    public String regionId;
+
+    public static DeleteBranchRequest build(java.util.Map<String, ?> map) throws Exception {
+        DeleteBranchRequest self = new DeleteBranchRequest();
+        return TeaModel.build(map, self);
+    }
+
+    public DeleteBranchRequest setBranchId(String branchId) {
+        this.branchId = branchId;
+        return this;
+    }
+    public String getBranchId() {
+        return this.branchId;
+    }
+
+    public DeleteBranchRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+}

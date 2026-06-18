@@ -3,18 +3,18 @@ package com.aliyun.gpdb20160503.models;
 
 import com.aliyun.tea.*;
 
-public class CreateSupabaseProjectResponseBody extends TeaModel {
+public class RestoreSnapshotResponseBody extends TeaModel {
     /**
-     * <p>The ID of the associated order.</p>
+     * <p>The ID of the restored branch.</p>
      * 
      * <strong>example:</strong>
-     * <p>278880417310796</p>
+     * <p>br-restore</p>
      */
-    @NameInMap("OrderId")
-    public String orderId;
+    @NameInMap("BranchId")
+    public String branchId;
 
     /**
-     * <p>The instance ID of the Supabase project.</p>
+     * <p>The Supabase project ID.</p>
      * 
      * <strong>example:</strong>
      * <p>spb-xxxx</p>
@@ -31,20 +31,20 @@ public class CreateSupabaseProjectResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    public static CreateSupabaseProjectResponseBody build(java.util.Map<String, ?> map) throws Exception {
-        CreateSupabaseProjectResponseBody self = new CreateSupabaseProjectResponseBody();
+    public static RestoreSnapshotResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        RestoreSnapshotResponseBody self = new RestoreSnapshotResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public CreateSupabaseProjectResponseBody setOrderId(String orderId) {
-        this.orderId = orderId;
+    public RestoreSnapshotResponseBody setBranchId(String branchId) {
+        this.branchId = branchId;
         return this;
     }
-    public String getOrderId() {
-        return this.orderId;
+    public String getBranchId() {
+        return this.branchId;
     }
 
-    public CreateSupabaseProjectResponseBody setProjectId(String projectId) {
+    public RestoreSnapshotResponseBody setProjectId(String projectId) {
         this.projectId = projectId;
         return this;
     }
@@ -52,7 +52,7 @@ public class CreateSupabaseProjectResponseBody extends TeaModel {
         return this.projectId;
     }
 
-    public CreateSupabaseProjectResponseBody setRequestId(String requestId) {
+    public RestoreSnapshotResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
