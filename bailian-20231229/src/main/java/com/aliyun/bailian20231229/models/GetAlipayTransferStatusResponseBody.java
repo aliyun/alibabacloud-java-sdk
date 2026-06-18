@@ -4,10 +4,15 @@ package com.aliyun.bailian20231229.models;
 import com.aliyun.tea.*;
 
 public class GetAlipayTransferStatusResponseBody extends TeaModel {
+    /**
+     * <p>The tipping result data.</p>
+     */
     @NameInMap("data")
     public GetAlipayTransferStatusResponseBodyData data;
 
     /**
+     * <p>The unique ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>6a71f2d9-f1c9-913b-818b-11402910xxxx</p>
      */
@@ -37,57 +42,129 @@ public class GetAlipayTransferStatusResponseBody extends TeaModel {
 
     public static class GetAlipayTransferStatusResponseBodyData extends TeaModel {
         /**
+         * <p>The sub-account ID (ignored by the API).</p>
+         * 
          * <strong>example:</strong>
          * <p>1348393307144609</p>
          */
         @NameInMap("accountId")
         public String accountId;
 
+        /**
+         * <p>The payment details (ignored by the API).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
+         */
         @NameInMap("alipayOrderDetail")
         public String alipayOrderDetail;
 
+        /**
+         * <p>The Alipay order ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234234</p>
+         */
         @NameInMap("alipayOrderId")
         public String alipayOrderId;
 
         /**
+         * <p>The code associated with the tipping.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
         @NameInMap("code")
         public String code;
 
+        /**
+         * <p>The creator (ignored by the API).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>234234</p>
+         */
         @NameInMap("creator")
         public String creator;
 
         /**
+         * <p>The primary account ID (ignored by the API).</p>
+         * 
          * <strong>example:</strong>
          * <p>1007576424487905</p>
          */
         @NameInMap("mainAccountId")
         public String mainAccountId;
 
+        /**
+         * <p>The modifier (ignored by the API).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>234234</p>
+         */
         @NameInMap("modifier")
         public String modifier;
 
+        /**
+         * <p>The tipping link (ignored by the API).</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://xxx.aliyun.com">https://xxx.aliyun.com</a></p>
+         */
         @NameInMap("qrURL")
         public String qrURL;
 
+        /**
+         * <p>The ownership status of the tipping application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>publish</p>
+         */
         @NameInMap("scope")
         public String scope;
 
         /**
+         * <p>The tipping status. Valid values:</p>
+         * <ul>
+         * <li>1: Succeeded.</li>
+         * <li>0: Deleted.</li>
+         * <li>2: Pending tipping.</li>
+         * <li>3: Canceled.</li>
+         * <li>4: Refunded.</li>
+         * <li>5: Closed.</li>
+         * <li>6: Failed.</li>
+         * <li>7: Disputed or abnormal.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
         @NameInMap("status")
         public Long status;
 
+        /**
+         * <p>The transfer title.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
+         */
         @NameInMap("title")
         public String title;
 
+        /**
+         * <p>The total order amount. Unit: CNY.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.22</p>
+         */
         @NameInMap("transAmount")
         public String transAmount;
 
+        /**
+         * <p>The Alipay product wallet code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xsdfsdf</p>
+         */
         @NameInMap("walletItemCode")
         public String walletItemCode;
 

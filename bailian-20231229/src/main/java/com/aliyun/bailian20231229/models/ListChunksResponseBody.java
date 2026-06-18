@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListChunksResponseBody extends TeaModel {
     /**
-     * <p>The error code.</p>
+     * <p>The error status code.</p>
      * 
      * <strong>example:</strong>
      * <p>Index.InvalidParameter</p>
@@ -14,7 +14,7 @@ public class ListChunksResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The data returned.</p>
+     * <p>The business data returned by the operation.</p>
      */
     @NameInMap("Data")
     public ListChunksResponseBodyData data;
@@ -32,13 +32,13 @@ public class ListChunksResponseBody extends TeaModel {
      * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>8F97A63B-55F1-527F-9D6E-467B6A7E8CF1</p>
+     * <p>8F97A63B-xxxx-527F-9D6E-467B6A7E8CF1</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The HTTP status code returned.</p>
+     * <p>The status code returned by the operation.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -47,10 +47,10 @@ public class ListChunksResponseBody extends TeaModel {
     public String status;
 
     /**
-     * <p>Indications whether the API call is successful. Valid values:</p>
+     * <p>Indicates whether the operation was successful. Valid values:</p>
      * <ul>
-     * <li>true</li>
-     * <li>false</li>
+     * <li>true: Successful.</li>
+     * <li>false: Failed.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -114,22 +114,67 @@ public class ListChunksResponseBody extends TeaModel {
 
     public static class ListChunksResponseBodyDataNodes extends TeaModel {
         /**
-         * <p>The metadata map of the chunk.</p>
+         * <p>&lt;props=&quot;china&quot;&gt;</p>
+         * <p>The metadata map of the text chunk.</p>
+         * <blockquote>
+         * <p>The <code>file_path</code> field in the metadata map of document search knowledge bases is meaningless. Do not use it in your business code.</p>
+         * </blockquote>
+         * <blockquote>
+         * <p>When retrieving a document search knowledge base, if a chunk contains an image, the image is returned through the <code>image_url</code> field in the metadata map, along with an expiration time.</p>
+         * </blockquote>
+         * <blockquote>
+         * <p>When retrieving an audio/video search knowledge base, if a chunk contains audio, the audio is returned through the <code>audio_url</code> field in the metadata map, along with an expiration time.</p>
+         * </blockquote>
+         * <blockquote>
+         * <p>When retrieving an audio/video search knowledge base, if a chunk contains video, the video is returned through the <code>video_url</code> field in the metadata map, along with an expiration time.</p>
+         * </blockquote>
+         * <p>&lt;props=&quot;intl&quot;&gt;</p>
+         * <p>The metadata map of the text chunk.</p>
+         * <blockquote>
+         * <p>The <code>file_path</code> field in the metadata map of document search knowledge bases is meaningless. Do not use it in your business code.</p>
+         * </blockquote>
+         * <blockquote>
+         * <p>When retrieving a document search knowledge base, if a chunk contains an image, the image is returned through the <code>image_url</code> field in the metadata map, along with an expiration time.</p>
+         * </blockquote>
+         * <p>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{
+         *   &quot;file_path&quot;: &quot;<a href="https://bailian-">https://bailian-</a><em><strong>&quot;,
+         *   &quot;parent&quot;: &quot;阿里云百炼是一站式的大模型开发及应用构建平台。不论是开发者还是业务人员，都能深入参与大模型应用的设计和构建。您可以通过简单的界面操作，在 5分钟内开发出一款大模型应用，或在几小时内训练出一个专属模型，从而将更多精力专注于应用创新。&quot;,
+         *   &quot;is_displayed_chunk_content&quot;: &quot;true&quot;,
+         *   &quot;image_url&quot;: [],
+         *   &quot;nid&quot;: &quot;83</strong></em>&quot;,
+         *   &quot;source&quot;: &quot;0&quot;,
+         *   &quot;_score&quot;: 0,
+         *   &quot;title&quot;: &quot;&quot;,
+         *   &quot;doc_id&quot;: &quot;file_24e***&quot;,
+         *   &quot;content&quot;: &quot;阿里云百炼是一站式的大模型开发及应用构建平台。不论是开发者还是业务人员，都能深入参与大模型应用的设计和构建。您可以通过简单的界面操作，在 5分钟内开发出一款大模型应用，或在几小时内训练出一个专属模型，从而将更多精力专注于应用创新。&quot;,
+         *   &quot;_rc_score&quot;: 0,
+         *   &quot;workspace_id&quot;: &quot;llm-zna***&quot;,
+         *   &quot;hier_title&quot;: &quot;&quot;,
+         *   &quot;doc_name&quot;: &quot;什么是阿里云百炼&quot;,
+         *   &quot;pipeline_id&quot;: &quot;j6b***&quot;,
+         *   &quot;_id&quot;: &quot;llm-zna5***&quot;
+         * }</p>
          */
         @NameInMap("Metadata")
         public Object metadata;
 
         /**
-         * <p>The similarity score of the chunk.</p>
+         * <p>The similarity score of the text chunk.</p>
          * 
          * <strong>example:</strong>
-         * <p>0.3</p>
+         * <p>0</p>
          */
         @NameInMap("Score")
         public Double score;
 
         /**
-         * <p>The text of the chunk.</p>
+         * <p>The content of the text chunk.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>阿里云百炼是一站式的大模型开发及应用构建平台。不论是开发者还是业务人员，都能深入参与大模型应用的设计和构建。您可以通过简单的界面操作，在 5分钟内开发出一款大模型应用，或在几小时内训练出一个专属模型，从而将更多精力专注于应用创新。</p>
          */
         @NameInMap("Text")
         public String text;
@@ -167,16 +212,16 @@ public class ListChunksResponseBody extends TeaModel {
 
     public static class ListChunksResponseBodyData extends TeaModel {
         /**
-         * <p>The list of chunks.</p>
+         * <p>The list of text chunks.</p>
          */
         @NameInMap("Nodes")
         public java.util.List<ListChunksResponseBodyDataNodes> nodes;
 
         /**
-         * <p>The total number of chunks returned.</p>
+         * <p>The total number of returned results.</p>
          * 
          * <strong>example:</strong>
-         * <p>16</p>
+         * <p>1</p>
          */
         @NameInMap("Total")
         public Long total;

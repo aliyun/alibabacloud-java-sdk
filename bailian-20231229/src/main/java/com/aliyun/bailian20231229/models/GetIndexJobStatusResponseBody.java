@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetIndexJobStatusResponseBody extends TeaModel {
     /**
-     * <p>HTTP status code</p>
+     * <p>The error code.</p>
      * 
      * <strong>example:</strong>
      * <p>Index.Forbidden</p>
@@ -14,7 +14,7 @@ public class GetIndexJobStatusResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The returned data.</p>
+     * <p>The data field returned by the operation.</p>
      */
     @NameInMap("Data")
     public GetIndexJobStatusResponseBodyData data;
@@ -38,7 +38,7 @@ public class GetIndexJobStatusResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The HTTP status code returned.</p>
+     * <p>The HTTP status code returned by the operation.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -47,10 +47,10 @@ public class GetIndexJobStatusResponseBody extends TeaModel {
     public String status;
 
     /**
-     * <p>Indications whether the API call is successful. Valid values:</p>
+     * <p>Indicates whether the operation was successful. Valid values:</p>
      * <ul>
-     * <li>true</li>
-     * <li>false</li>
+     * <li>true: The operation was successful.</li>
+     * <li>false: The operation failed.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -114,7 +114,7 @@ public class GetIndexJobStatusResponseBody extends TeaModel {
 
     public static class GetIndexJobStatusResponseBodyDataDocuments extends TeaModel {
         /**
-         * <p>HTTP status code</p>
+         * <p>The error code.</p>
          * 
          * <strong>example:</strong>
          * <p>Index.Document.ChunkError</p>
@@ -123,16 +123,19 @@ public class GetIndexJobStatusResponseBody extends TeaModel {
         public String code;
 
         /**
-         * <p>The primary key ID of the document.</p>
+         * <p>The file ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>file_9a65732555b54d5ea10796ca5742ba22_XXXXXXXX</p>
+         * <p>file_9a65732555b54d5ea10796ca5742ba22_xxxxxxxx</p>
          */
         @NameInMap("DocId")
         public String docId;
 
         /**
-         * <p>The name of the document.</p>
+         * <p>The file name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>XXX产品介绍</p>
          */
         @NameInMap("DocName")
         public String docName;
@@ -150,12 +153,12 @@ public class GetIndexJobStatusResponseBody extends TeaModel {
         public String message;
 
         /**
-         * <p>The import status of the document. Valid values:</p>
+         * <p>The file import status. Valid values:</p>
          * <ul>
-         * <li>INSERT_ERROR</li>
-         * <li>RUNNING</li>
-         * <li>DELETED</li>
-         * <li>FINISH</li>
+         * <li>INSERT_ERROR: The file import failed.</li>
+         * <li>RUNNING: The file is being imported.</li>
+         * <li>DELETED: The file has been deleted.</li>
+         * <li>FINISH: The file was imported.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -221,27 +224,27 @@ public class GetIndexJobStatusResponseBody extends TeaModel {
 
     public static class GetIndexJobStatusResponseBodyData extends TeaModel {
         /**
-         * <p>The list of imported documents.</p>
+         * <p>The list of files imported in this job.</p>
          */
         @NameInMap("Documents")
         public java.util.List<GetIndexJobStatusResponseBodyDataDocuments> documents;
 
         /**
-         * <p>The ID of the job.</p>
+         * <p>The job ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>66122af12a4e45ddae6bd6c845556647</p>
+         * <p>66122af12a4e45ddae6bd6c84555xxxx</p>
          */
         @NameInMap("JobId")
         public String jobId;
 
         /**
-         * <p>The status of the knowledge base job. Valid values:</p>
+         * <p>The current status of the knowledge base job. Valid values:</p>
          * <ul>
-         * <li>COMPLETED</li>
-         * <li>FAILED</li>
-         * <li>RUNNING</li>
-         * <li>PENDING</li>
+         * <li>COMPLETED: The job succeeded.</li>
+         * <li>FAILED: The job failed.</li>
+         * <li>RUNNING: The job is running.</li>
+         * <li>PENDING: The job is pending execution.</li>
          * </ul>
          * 
          * <strong>example:</strong>

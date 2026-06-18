@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeFileResponseBody extends TeaModel {
     /**
-     * <p>The status code.</p>
+     * <p>The error status code.</p>
      * 
      * <strong>example:</strong>
      * <p>Success</p>
@@ -14,7 +14,7 @@ public class DescribeFileResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The returned data fields.</p>
+     * <p>The data field of the operation.</p>
      */
     @NameInMap("Data")
     public DescribeFileResponseBodyData data;
@@ -38,7 +38,7 @@ public class DescribeFileResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The HTTP status code.</p>
+     * <p>The status code returned by the operation.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -47,10 +47,10 @@ public class DescribeFileResponseBody extends TeaModel {
     public String status;
 
     /**
-     * <p>Indications whether the API call is successful. Valid values:</p>
+     * <p>Indicates whether the call was successful. Valid values:</p>
      * <ul>
-     * <li>true</li>
-     * <li>false</li>
+     * <li>true: Successful.</li>
+     * <li>false: Failed.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -114,43 +114,43 @@ public class DescribeFileResponseBody extends TeaModel {
 
     public static class DescribeFileResponseBodyData extends TeaModel {
         /**
-         * <p>The ID of the category to which the document belongs.</p>
+         * <p>The ID of the category to which the file belongs.</p>
          * 
          * <strong>example:</strong>
-         * <p>cate_cdd11b1b79a74e8bbd675c356a91ee3XXXXXXXX</p>
+         * <p>cate_cdd11b1b79a74e8bbd675c356a91ee3xxxxxxxx</p>
          */
         @NameInMap("CategoryId")
         public String categoryId;
 
         /**
-         * <p>The timestamp when the document was uploaded to Model Studio. Format: yyyy-MM-dd HH:mm:ss. Time zone: UTC + 8.</p>
+         * <p>The timestamp when the file was added to Model Studio. Format: yyyy-MM-dd HH:mm:ss. Time zone: UTC+8.</p>
          * 
          * <strong>example:</strong>
-         * <p>2024-05-26 12:45:43</p>
+         * <p>2024-09-09 12:45:43</p>
          */
         @NameInMap("CreateTime")
         public String createTime;
 
         /**
-         * <p>The primary key ID of the document.</p>
+         * <p>The file ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>file_9a65732555b54d5ea10796ca5742ba22_XXXXXXXX</p>
+         * <p>file_9a65732555b54d5ea10796ca5742ba22_xxxxxxxx</p>
          */
         @NameInMap("FileId")
         public String fileId;
 
         /**
-         * <p>The name of the document.</p>
+         * <p>The file name.</p>
          * 
          * <strong>example:</strong>
-         * <p>test.pdf</p>
+         * <p>XXX产品介绍.pdf</p>
          */
         @NameInMap("FileName")
         public String fileName;
 
         /**
-         * <p>The file type of the document. The value is an extension. Valid values: pdf, docx, doc, txt, md, pptx, and ppt.</p>
+         * <p>The file type (extension). Valid values: pdf, docx, doc, txt, md, pptx, ppt, xlsx, xls, html, png, jpg, jpeg, bmp, and gif.</p>
          * 
          * <strong>example:</strong>
          * <p>pdf</p>
@@ -158,13 +158,16 @@ public class DescribeFileResponseBody extends TeaModel {
         @NameInMap("FileType")
         public String fileType;
 
+        @NameInMap("ParseErrorMessage")
+        public String parseErrorMessage;
+
         @NameInMap("ParseResultDownloadUrl")
         public String parseResultDownloadUrl;
 
         /**
-         * <p>The parser that is used to parse the document. Valid value:</p>
+         * <p>The parser type used to parse the file. Valid values:</p>
          * <ul>
-         * <li>DASHSCOPE_DOCMIND: The default document parser.</li>
+         * <li>DASHSCOPE_DOCMIND: the default document parser.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -174,7 +177,7 @@ public class DescribeFileResponseBody extends TeaModel {
         public String parser;
 
         /**
-         * <p>The size of the document. Unit: bytes.</p>
+         * <p>The file size, in bytes.</p>
          * 
          * <strong>example:</strong>
          * <p>1234</p>
@@ -183,12 +186,37 @@ public class DescribeFileResponseBody extends TeaModel {
         public Long sizeInBytes;
 
         /**
-         * <p>The status of the document. Valid values:</p>
+         * <p>&lt;props=&quot;china&quot;&gt;</p>
+         * <p>For files used in document-based knowledge bases (type: UNSTRUCTURED), valid values:</p>
+         * <p>&lt;props=&quot;intl&quot;&gt;</p>
+         * <p>For files used in unstructured knowledge bases (type: UNSTRUCTURED), valid values:</p>
          * <ul>
          * <li>INIT: pending parsing.</li>
-         * <li>PARSING</li>
-         * <li>PARSE_SUCCESS</li>
-         * <li>PARSE_FAILED</li>
+         * <li>IN_PARSE_QUEUE: queued for parsing.</li>
+         * <li>PARSING: being parsed.</li>
+         * <li>PARSE_SUCCESS: parsing completed.
+         * <note>The document can be imported into a knowledge base only after the status changes to PARSE_SUCCESS.</note></li>
+         * <li>PARSE_FAILED: parsing failed.</li>
+         * </ul>
+         * <p>&lt;props=&quot;china&quot;&gt;
+         * For files used in agent application <a href="https://www.alibabacloud.com/help/en/model-studio/user-guide/file-interaction">session interaction</a> (type: SESSION_FILE), valid values:</p>
+         * <ul>
+         * <li>INIT: pending parsing.</li>
+         * <li>IN_PARSE_QUEUE: queued for parsing.</li>
+         * <li>PARSING: being parsed.</li>
+         * <li>PARSE_SUCCESS: parsing completed.</li>
+         * <li>PARSE_FAILED: parsing failed.</li>
+         * <li>SAFE_CHECKING: security check in progress.</li>
+         * <li>SAFE_CHECK_FAILED: security check failed.</li>
+         * <li>INDEX_BUILDING: index being built.</li>
+         * <li>INDEX_BUILD_SUCCESS: index built.</li>
+         * <li>INDEX_BUILDING_FAILED: index building failed.</li>
+         * <li>INDEX_DELETED: file index deleted.</li>
+         * <li>FILE_IS_READY: file is ready.
+         * <note>Q&amp;A can proceed only after the status changes to FILE_IS_READY.</note></li>
+         * <li>FILE_EXPIRED: file expired.
+         * <note>The file is valid only for the current user session. After the user closes the session, the file expires (maximum validity period: 7 days). Long-term retention is not supported.</note>
+         * .</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -198,7 +226,7 @@ public class DescribeFileResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The tags that are associated with the document. A document can be associated with multiple tags.</p>
+         * <p>The list of tags associated with the file. A file can be associated with multiple tags.</p>
          */
         @NameInMap("Tags")
         public java.util.List<String> tags;
@@ -246,6 +274,14 @@ public class DescribeFileResponseBody extends TeaModel {
         }
         public String getFileType() {
             return this.fileType;
+        }
+
+        public DescribeFileResponseBodyData setParseErrorMessage(String parseErrorMessage) {
+            this.parseErrorMessage = parseErrorMessage;
+            return this;
+        }
+        public String getParseErrorMessage() {
+            return this.parseErrorMessage;
         }
 
         public DescribeFileResponseBodyData setParseResultDownloadUrl(String parseResultDownloadUrl) {

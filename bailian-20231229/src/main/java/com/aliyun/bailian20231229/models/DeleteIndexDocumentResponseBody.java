@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteIndexDocumentResponseBody extends TeaModel {
     /**
-     * <p>HTTP status code</p>
+     * <p>The error code.</p>
      * 
      * <strong>example:</strong>
      * <p>Index.InvalidParameter</p>
@@ -14,7 +14,7 @@ public class DeleteIndexDocumentResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The parameters returned by the operation.</p>
+     * <p>The business data field returned by the operation.</p>
      */
     @NameInMap("Data")
     public DeleteIndexDocumentResponseBodyData data;
@@ -38,7 +38,7 @@ public class DeleteIndexDocumentResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The status code.</p>
+     * <p>The status code returned by the operation.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -47,10 +47,10 @@ public class DeleteIndexDocumentResponseBody extends TeaModel {
     public String status;
 
     /**
-     * <p>Indications whether the API call is successful. Valid values:</p>
+     * <p>Indicates whether the operation was successful. Valid values:</p>
      * <ul>
-     * <li>true</li>
-     * <li>false</li>
+     * <li>true: The operation was successful.</li>
+     * <li>false: The operation failed.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -114,7 +114,7 @@ public class DeleteIndexDocumentResponseBody extends TeaModel {
 
     public static class DeleteIndexDocumentResponseBodyData extends TeaModel {
         /**
-         * <p>The list of primary key IDs of documents that are deleted.</p>
+         * <p>The list of successfully deleted file IDs.</p>
          */
         @NameInMap("DeletedDocument")
         public java.util.List<String> deletedDocument;

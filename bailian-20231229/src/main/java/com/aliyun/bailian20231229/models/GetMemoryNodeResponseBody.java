@@ -4,10 +4,18 @@ package com.aliyun.bailian20231229.models;
 import com.aliyun.tea.*;
 
 public class GetMemoryNodeResponseBody extends TeaModel {
+    /**
+     * <p>The content of the memory fragment.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>用户喜欢吃西红柿炒鸡蛋</p>
+     */
     @NameInMap("content")
     public String content;
 
     /**
+     * <p>The long-term memory ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>6bff4f317a14442fbc9f73d29dbd5fc3</p>
      */
@@ -15,6 +23,8 @@ public class GetMemoryNodeResponseBody extends TeaModel {
     public String memoryId;
 
     /**
+     * <p>The memory fragment ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>68de06c95368463a8be4a84efc872cc5</p>
      */
@@ -22,6 +32,8 @@ public class GetMemoryNodeResponseBody extends TeaModel {
     public String memoryNodeId;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>8C56C7AF-6573-19CE-B018-E05E1EDCF4C5</p>
      */
@@ -29,6 +41,8 @@ public class GetMemoryNodeResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The workspace ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>llm-us9hjmt32nysdm5v</p>
      */

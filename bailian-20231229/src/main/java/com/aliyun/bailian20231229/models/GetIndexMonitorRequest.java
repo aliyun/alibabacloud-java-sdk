@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetIndexMonitorRequest extends TeaModel {
     /**
+     * <p>The end of the time range to query. The end time can be a maximum of 30 days after the start time. This is a UNIX timestamp in seconds.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class GetIndexMonitorRequest extends TeaModel {
     public Long endTimestamp;
 
     /**
+     * <p>The unique ID of the target knowledge base.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,7 @@ public class GetIndexMonitorRequest extends TeaModel {
     public String indexId;
 
     /**
+     * <p>The start of the time range to query. This is a UNIX timestamp in seconds.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

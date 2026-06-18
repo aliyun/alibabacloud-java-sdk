@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateTableFromAuthorizedOssRequest extends TeaModel {
     /**
+     * <p>Name of the OSS bucket. For details, see <a href="https://help.aliyun.com/document_detail/177682.html">bucket</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class UpdateTableFromAuthorizedOssRequest extends TeaModel {
     public String ossBucket;
 
     /**
+     * <p>Object key of the file in the OSS bucket. For details, see <a href="https://help.aliyun.com/document_detail/273129.html">object naming</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,7 @@ public class UpdateTableFromAuthorizedOssRequest extends TeaModel {
     public String ossKey;
 
     /**
+     * <p>Region ID of the OSS bucket. For details, see <a href="https://help.aliyun.com/document_detail/31837.html">OSS regions and endpoints</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -32,6 +35,7 @@ public class UpdateTableFromAuthorizedOssRequest extends TeaModel {
     public String ossRegionId;
 
     /**
+     * <p>Update mode. Valid values: APPEND and OVERWRITE.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

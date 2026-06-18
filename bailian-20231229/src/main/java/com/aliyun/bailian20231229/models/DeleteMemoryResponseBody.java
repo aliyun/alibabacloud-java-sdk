@@ -5,8 +5,10 @@ import com.aliyun.tea.*;
 
 public class DeleteMemoryResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
-     * <p>6a71f2d9-f1c9-913b-818b-114029103cad</p>
+     * <p>6a71f2d9-f1c9-913b-818b-11402910xxxx</p>
      */
     @NameInMap("requestId")
     public String requestId;

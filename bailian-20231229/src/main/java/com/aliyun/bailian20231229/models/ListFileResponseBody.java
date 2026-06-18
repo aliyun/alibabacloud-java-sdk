@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListFileResponseBody extends TeaModel {
     /**
+     * <p>The error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -12,12 +14,14 @@ public class ListFileResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The returned data.</p>
+     * <p>The data field returned by the operation.</p>
      */
     @NameInMap("Data")
     public ListFileResponseBodyData data;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>Requests throttling triggered.</p>
      */
@@ -25,15 +29,17 @@ public class ListFileResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>8F97A63B-55F1-527F-9D6E-467B6A7E8CF1</p>
+     * <p>8F97A63B-xxxx-527F-9D6E-467B6A7E8CF1</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
+     * <p>The status code returned by the operation.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -41,6 +47,12 @@ public class ListFileResponseBody extends TeaModel {
     public String status;
 
     /**
+     * <p>Indicates whether the operation was successful. Valid values:</p>
+     * <ul>
+     * <li>true: Successful. </li>
+     * <li>false: Failed.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -102,43 +114,59 @@ public class ListFileResponseBody extends TeaModel {
 
     public static class ListFileResponseBodyDataFileList extends TeaModel {
         /**
+         * <p>The ID of the category to which the file belongs.</p>
+         * 
          * <strong>example:</strong>
-         * <p>cate_cdd11b1b79a74e8bbd675c356a91ee3510024405</p>
+         * <p>cate_cdd11b1b79a74e8bbd675c356a91ee35xxxxxxxx</p>
          */
         @NameInMap("CategoryId")
         public String categoryId;
 
         /**
+         * <p>The timestamp when the file was added to Alibaba Cloud Model Studio. Format: yyyy-MM-dd HH:mm:ss. Time zone: UTC+8.</p>
+         * 
          * <strong>example:</strong>
-         * <p>2023-08-18 11:03:35</p>
+         * <p>2024-09-09 11:03:35</p>
          */
         @NameInMap("CreateTime")
         public String createTime;
 
         /**
-         * <p>The document ID, which is the <code>FileId</code> parameter returned by the <a href="~~AddFile~~">AddFile</a> operation. To view the ID, click the icon next to the file name on the <a href="https://bailian.console.alibabacloud.com/#/data-center">Data Management</a> page.</p>
+         * <p>The file ID, which is the <code>FileId</code> returned by the <strong>AddFile</strong> operation. You can also obtain it on the &lt;props=&quot;china&quot;&gt;<a href="https://bailian.console.aliyun.com/?tab=app#/data-center">Application Data</a>&lt;props=&quot;intl&quot;&gt;<a href="https://modelstudio.console.alibabacloud.com/?tab=app#/data-center">Application Data</a> page by clicking the icon next to the file name.</p>
          * 
          * <strong>example:</strong>
-         * <p>file_5ff599b3455a45db8c41b0054b361518_10098576</p>
+         * <p>file_5ff599b3455a45db8c41b0054b361518_xxxxxxxx</p>
          */
         @NameInMap("FileId")
         public String fileId;
 
         /**
+         * <p>The file name.</p>
+         * 
          * <strong>example:</strong>
-         * <p>auto-test-1721096109278.pdf</p>
+         * <p>product-overview.pdf</p>
          */
         @NameInMap("FileName")
         public String fileName;
 
         /**
+         * <p>The file format type. Valid values: pdf, docx, doc, txt, md, pptx, ppt, xlsx, xls, html, png, jpg, jpeg, bmp, and gif.</p>
+         * 
          * <strong>example:</strong>
          * <p>docx</p>
          */
         @NameInMap("FileType")
         public String fileType;
 
+        @NameInMap("ParseErrorMessage")
+        public String parseErrorMessage;
+
         /**
+         * <p>The document parser. Valid values:</p>
+         * <ul>
+         * <li>DASHSCOPE_DOCMIND: Alibaba Cloud intelligent document parsing.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>DASHSCOPE_DOCMIND</p>
          */
@@ -146,6 +174,8 @@ public class ListFileResponseBody extends TeaModel {
         public String parser;
 
         /**
+         * <p>The file size in bytes.</p>
+         * 
          * <strong>example:</strong>
          * <p>512</p>
          */
@@ -153,12 +183,23 @@ public class ListFileResponseBody extends TeaModel {
         public Long sizeInBytes;
 
         /**
+         * <p>The file parsing status. Valid values:</p>
+         * <ul>
+         * <li>INIT: Initialization state, waiting to be scheduled.</li>
+         * <li>PARSING: Parsing in progress.</li>
+         * <li>PARSE_SUCCESS: Parsing completed.</li>
+         * <li>PARSE_FAILED: Parsing failed.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
-         * <p>200</p>
+         * <p>PARSE_SUCCESS</p>
          */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The list of tags associated with the file. A document can be associated with multiple tags.</p>
+         */
         @NameInMap("Tags")
         public java.util.List<String> tags;
 
@@ -207,6 +248,14 @@ public class ListFileResponseBody extends TeaModel {
             return this.fileType;
         }
 
+        public ListFileResponseBodyDataFileList setParseErrorMessage(String parseErrorMessage) {
+            this.parseErrorMessage = parseErrorMessage;
+            return this;
+        }
+        public String getParseErrorMessage() {
+            return this.parseErrorMessage;
+        }
+
         public ListFileResponseBodyDataFileList setParser(String parser) {
             this.parser = parser;
             return this;
@@ -243,12 +292,18 @@ public class ListFileResponseBody extends TeaModel {
 
     public static class ListFileResponseBodyData extends TeaModel {
         /**
-         * <p>The list of documents in the category.</p>
+         * <p>The list of files in the category.</p>
          */
         @NameInMap("FileList")
         public java.util.List<ListFileResponseBodyDataFileList> fileList;
 
         /**
+         * <p>Indicates whether there is a next page of category data that matches the query conditions. Valid values:</p>
+         * <ul>
+         * <li>true: Yes.</li>
+         * <li>false: No.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -256,6 +311,8 @@ public class ListFileResponseBody extends TeaModel {
         public Boolean hasNext;
 
         /**
+         * <p>The number of entries per page for paging.</p>
+         * 
          * <strong>example:</strong>
          * <p>20</p>
          */
@@ -263,6 +320,8 @@ public class ListFileResponseBody extends TeaModel {
         public Integer maxResults;
 
         /**
+         * <p>The pagination token returned by this call.</p>
+         * 
          * <strong>example:</strong>
          * <p>4jzbJk9J6lNeuXD9hP0viA==</p>
          */
@@ -270,6 +329,8 @@ public class ListFileResponseBody extends TeaModel {
         public String nextToken;
 
         /**
+         * <p>The total number of entries in the returned results.</p>
+         * 
          * <strong>example:</strong>
          * <p>48</p>
          */

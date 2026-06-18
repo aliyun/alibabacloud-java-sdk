@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class AddTableShrinkRequest extends TeaModel {
     /**
+     * <p>The connector ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,12 +15,17 @@ public class AddTableShrinkRequest extends TeaModel {
     public String connectorId;
 
     /**
+     * <p>The column information of the table.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("TableColumns")
     public String tableColumnsShrink;
 
+    @NameInMap("TableDesc")
+    public String tableDesc;
+
     /**
+     * <p>The table name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -47,6 +53,14 @@ public class AddTableShrinkRequest extends TeaModel {
     }
     public String getTableColumnsShrink() {
         return this.tableColumnsShrink;
+    }
+
+    public AddTableShrinkRequest setTableDesc(String tableDesc) {
+        this.tableDesc = tableDesc;
+        return this;
+    }
+    public String getTableDesc() {
+        return this.tableDesc;
     }
 
     public AddTableShrinkRequest setTableName(String tableName) {

@@ -15,6 +15,9 @@ public class ListPromptTemplatesRequest extends TeaModel {
 
     /**
      * <p>The keyword that is used to search for templates.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>小红书</p>
      */
     @NameInMap("name")
     public String name;

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class AddFileResponseBody extends TeaModel {
     /**
-     * <p>The status code.</p>
+     * <p>The error code.</p>
      * 
      * <strong>example:</strong>
      * <p>DataCenter.FileTooLarge</p>
@@ -14,7 +14,7 @@ public class AddFileResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The returned data fields.</p>
+     * <p>The data returned for the request.</p>
      */
     @NameInMap("Data")
     public AddFileResponseBodyData data;
@@ -38,7 +38,7 @@ public class AddFileResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The HTTP status code.</p>
+     * <p>The status code of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -47,10 +47,12 @@ public class AddFileResponseBody extends TeaModel {
     public String status;
 
     /**
-     * <p>Indications whether the call is successful. Valid values:</p>
+     * <p>Indicates whether the API call was successful. Valid values:</p>
      * <ul>
-     * <li>true</li>
-     * <li>false</li>
+     * <li><p><code>true</code>: The call was successful.</p>
+     * </li>
+     * <li><p><code>false</code>: The call failed.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -114,18 +116,18 @@ public class AddFileResponseBody extends TeaModel {
 
     public static class AddFileResponseBodyData extends TeaModel {
         /**
-         * <p>The primary key ID of the document. We recommend that you store the ID because it is required for all subsequent API operations related to this document.</p>
+         * <p>The ID of the file. Save this ID for use in subsequent API calls involving this file.</p>
          * 
          * <strong>example:</strong>
-         * <p>file_9a65732555b54d5ea10796ca5742ba22_XXXXXXXX</p>
+         * <p>file_9a65732555b54d5ea10796ca5742ba22_xxxxxxxx</p>
          */
         @NameInMap("FileId")
         public String fileId;
 
         /**
-         * <p>The parser that is used to parse the document. Valid value:</p>
+         * <p>The parser that was used for the file. A possible value is:</p>
          * <ul>
-         * <li>DASHSCOPE_DOCMIND: Intelligent document parsing by Alibaba Cloud.</li>
+         * <li><code>DASHSCOPE_DOCMIND</code>: Alibaba Cloud Document Intelligence</li>
          * </ul>
          * 
          * <strong>example:</strong>

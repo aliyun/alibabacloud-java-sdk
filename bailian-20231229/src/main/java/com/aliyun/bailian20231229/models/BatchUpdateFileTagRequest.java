@@ -5,12 +5,15 @@ import com.aliyun.tea.*;
 
 public class BatchUpdateFileTagRequest extends TeaModel {
     /**
+     * <p>A list of files to update.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("FileInfos")
     public java.util.List<BatchUpdateFileTagRequestFileInfos> fileInfos;
 
     /**
+     * <p>The update mode. Valid values are APPEND and OVERWRITE.</p>
+     * 
      * <strong>example:</strong>
      * <p>OVERWRITE</p>
      */
@@ -40,6 +43,7 @@ public class BatchUpdateFileTagRequest extends TeaModel {
 
     public static class BatchUpdateFileTagRequestFileInfos extends TeaModel {
         /**
+         * <p>The file ID. To get this ID, go to the &lt;props=&quot;china&quot;&gt;<a href="https://bailian.console.aliyun.com/?tab=app#/data-center">application data</a>&lt;props=&quot;intl&quot;&gt;<a href="https://modelstudio.console.alibabacloud.com/?tab=app#/data-center">application data</a> page and click the ID icon next to the file name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -49,6 +53,9 @@ public class BatchUpdateFileTagRequest extends TeaModel {
         public String fileId;
 
         /**
+         * <ul>
+         * <li>A list of up to 100 tags to associate with the file. The total length of all tags cannot exceed 700 characters.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          */
         @NameInMap("tags")

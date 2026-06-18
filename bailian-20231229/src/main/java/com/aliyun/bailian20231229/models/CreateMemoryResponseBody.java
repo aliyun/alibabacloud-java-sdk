@@ -5,15 +5,23 @@ import com.aliyun.tea.*;
 
 public class CreateMemoryResponseBody extends TeaModel {
     /**
+     * <p>The long-term memory ID.</p>
+     * <blockquote>
+     * <p>Store this value properly. It is required for all subsequent API operations related to this long-term memory.
+     * .</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
-     * <p>6bff4f317a14442fbc9f73d29dbd5fc3</p>
+     * <p>6bff4f317a14442fbc9f73d29dbxxxx</p>
      */
     @NameInMap("memoryId")
     public String memoryId;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
-     * <p>6a71f2d9-f1c9-913b-818b-114029103cad</p>
+     * <p>17204B98-xxxx-4F9A--2446A84821CA</p>
      */
     @NameInMap("requestId")
     public String requestId;

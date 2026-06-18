@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class RetrieveResponseBody extends TeaModel {
     /**
-     * <p>HTTP status code</p>
+     * <p>The error code.</p>
      * 
      * <strong>example:</strong>
      * <p>Index.InvalidParameter</p>
@@ -14,7 +14,7 @@ public class RetrieveResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The returned data.</p>
+     * <p>The business data returned by the API.</p>
      */
     @NameInMap("Data")
     public RetrieveResponseBodyData data;
@@ -38,7 +38,7 @@ public class RetrieveResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The HTTP status code returned.</p>
+     * <p>The HTTP status code of the response.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -47,10 +47,12 @@ public class RetrieveResponseBody extends TeaModel {
     public String status;
 
     /**
-     * <p>Indications whether the API call is successful. Valid values:</p>
+     * <p>Indicates whether the API call was successful. Valid values:</p>
      * <ul>
-     * <li>true</li>
-     * <li>false</li>
+     * <li><p>true: The call succeeded.</p>
+     * </li>
+     * <li><p>false: The call failed.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -114,13 +116,52 @@ public class RetrieveResponseBody extends TeaModel {
 
     public static class RetrieveResponseBodyDataNodes extends TeaModel {
         /**
-         * <p>The metadata map of the chunk.</p>
+         * <p>&lt;props=&quot;china&quot;&gt;</p>
+         * <p>A map of metadata for the text chunk.</p>
+         * <blockquote>
+         * <p>For document search knowledge bases, the <code>file_path</code> field in the metadata map is not applicable and should not be used in your application code.</p>
+         * </blockquote>
+         * <blockquote>
+         * <p>When you retrieve data from a document search knowledge base, if a text chunk contains an image, its URL is returned in the <code>image_url</code> field of the metadata map. This URL expires.</p>
+         * </blockquote>
+         * <blockquote>
+         * <p>When you retrieve data from an audio/video search knowledge base, if a text chunk contains audio, its URL is returned in the <code>audio_url</code> field of the metadata map. This URL expires.</p>
+         * </blockquote>
+         * <blockquote>
+         * <p>When you retrieve data from an audio/video search knowledge base, if a text chunk contains video, its URL is returned in the <code>video_url</code> field of the metadata map. This URL expires.</p>
+         * </blockquote>
+         * <p>&lt;props=&quot;intl&quot;&gt;</p>
+         * <p>A map of metadata for the text chunk.</p>
+         * <blockquote>
+         * <p>For document search knowledge bases, the <code>file_path</code> field in the metadata map is not applicable and should not be used in your application code.</p>
+         * </blockquote>
+         * <blockquote>
+         * <p>When you retrieve data from a document search knowledge base, if a text chunk contains an image, its URL is returned in the <code>image_url</code> field of the metadata map. This URL expires.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>{
+         *   &quot;parent&quot;: &quot;&quot;,
+         *   &quot;file_path&quot;: &quot;https://<em><strong>&quot;,
+         *   &quot;image_url&quot;: [
+         *     &quot;http://</strong></em>&quot;
+         *   ],
+         *   &quot;nid&quot;: &quot;<em><strong>&quot;,
+         *   &quot;title&quot;: &quot;阿里云百炼文档&quot;,
+         *   &quot;doc_id&quot;: &quot;doc_</strong></em>&quot;,
+         *   &quot;content&quot;: &quot;阿里云百炼是基于通义大模型、行业大模型以及三方大模型的一站式大模型开发平台。面向企业客户和个人开发者，提供完整的模型服务工具和全链路应用开发套件，预置丰富的能力插件，提供API及SDK等便捷的集成方式，高效完成大模型应用构建&quot;,
+         *   &quot;workspace_id&quot;: &quot;ws_***&quot;,
+         *   &quot;hier_title&quot;: &quot;阿里云百炼文档&quot;,
+         *   &quot;doc_name&quot;: &quot;阿里云百炼文档介绍.pdpf&quot;,
+         *   &quot;pipeline_id&quot;: &quot;rhd***&quot;,
+         *   &quot;<em>id&quot;: &quot;ws</em>***&quot;
+         * }</p>
          */
         @NameInMap("Metadata")
         public Object metadata;
 
         /**
-         * <p>The similarity score of the chunk. Valid values:[0-1].</p>
+         * <p>The similarity score of the text chunk, ranging from 0 to 1.</p>
          * 
          * <strong>example:</strong>
          * <p>0.3</p>
@@ -129,7 +170,10 @@ public class RetrieveResponseBody extends TeaModel {
         public Double score;
 
         /**
-         * <p>The text of the chunk.</p>
+         * <p>The content of the text chunk.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>阿里云百炼是基于通义大模型、行业大模型以及三方大模型的一站式大模型开发平台。面向企业客户和个人开发者，提供完整的模型服务工具和全链路应用开发套件，预置丰富的能力插件，提供API及SDK等便捷的集成方式，高效完成大模型应用构建。</p>
          */
         @NameInMap("Text")
         public String text;
@@ -167,7 +211,7 @@ public class RetrieveResponseBody extends TeaModel {
 
     public static class RetrieveResponseBodyData extends TeaModel {
         /**
-         * <p>The list of queried chunks.</p>
+         * <p>An array of retrieved text chunks.</p>
          */
         @NameInMap("Nodes")
         public java.util.List<RetrieveResponseBodyDataNodes> nodes;

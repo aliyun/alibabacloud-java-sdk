@@ -5,15 +5,19 @@ import com.aliyun.tea.*;
 
 public class CreateMemoryNodeResponseBody extends TeaModel {
     /**
+     * <p>The memory node ID.</p>
+     * 
      * <strong>example:</strong>
-     * <p>68de06c95368463a8be4a84efc872cc5</p>
+     * <p>68de06c95368463a8be4a84efcxxxxxx</p>
      */
     @NameInMap("memoryNodeId")
     public String memoryNodeId;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
-     * <p>8C56C7AF-6573-19CE-B018-E05E1EDCF4C5</p>
+     * <p>8C56C7AF-xxxx-19CE-B018-E05E1EDCF4C5</p>
      */
     @NameInMap("requestId")
     public String requestId;

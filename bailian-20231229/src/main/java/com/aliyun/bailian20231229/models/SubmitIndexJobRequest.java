@@ -5,11 +5,11 @@ import com.aliyun.tea.*;
 
 public class SubmitIndexJobRequest extends TeaModel {
     /**
-     * <p>The primary key ID of the knowledge base, which is the <code>Data.Id</code> parameter returned by the <a href="https://www.alibabacloud.com/help/en/model-studio/developer-reference/api-bailian-2023-12-29-createindex">CreateIndex</a> operation.</p>
+     * <p>The knowledge base ID, which is the <code>Data.Id</code> returned by the <strong>CreateIndex</strong> operation.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>79c0aly8zw</p>
+     * <p>79c0alxxxx</p>
      */
     @NameInMap("IndexId")
     public String indexId;

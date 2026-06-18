@@ -5,6 +5,9 @@ import com.aliyun.tea.*;
 
 public class ListMemoriesRequest extends TeaModel {
     /**
+     * <p>The number of entries per page in a paged query. Valid values: 1 to 50.</p>
+     * <p>Default value: 10.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -12,8 +15,10 @@ public class ListMemoriesRequest extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>The pagination token. Set this parameter to the NextToken value returned in the previous API call.</p>
+     * 
      * <strong>example:</strong>
-     * <p>dc270401186b433f975d7e1faaa34e0e</p>
+     * <p>dc270401186b433f975d7e1faaa3xxxx</p>
      */
     @NameInMap("nextToken")
     public String nextToken;

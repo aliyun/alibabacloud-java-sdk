@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetAlipayTransferStatusRequest extends TeaModel {
     /**
+     * <p>The tipping code returned by the Alipay tipping link request.</p>
+     * 
      * <strong>example:</strong>
      * <p>xxx-xxxx</p>
      */
@@ -12,6 +14,8 @@ public class GetAlipayTransferStatusRequest extends TeaModel {
     public String code;
 
     /**
+     * <p>The Bailian workspace ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>llm-cxxxxxxb8d47ks</p>
      */

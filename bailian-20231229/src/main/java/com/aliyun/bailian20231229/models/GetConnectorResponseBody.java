@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class GetConnectorResponseBody extends TeaModel {
     /**
+     * <p>The result code.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The returned data.</p>
+     */
     @NameInMap("Data")
     public GetConnectorResponseBodyData data;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>Requests throttling triggered.</p>
      */
@@ -22,7 +29,7 @@ public class GetConnectorResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>7BA8ADD9-53D6-53F0-918F-A1E776AD230E</p>
@@ -31,6 +38,8 @@ public class GetConnectorResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The status code of the response.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -38,6 +47,14 @@ public class GetConnectorResponseBody extends TeaModel {
     public String status;
 
     /**
+     * <p>Indicates whether the request was successful. The valid values are:</p>
+     * <ul>
+     * <li><p><code>true</code>: The call was successful.</p>
+     * </li>
+     * <li><p><code>false</code>: The call failed.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>True</p>
      */
@@ -99,6 +116,8 @@ public class GetConnectorResponseBody extends TeaModel {
 
     public static class GetConnectorResponseBodyData extends TeaModel {
         /**
+         * <p>The ID of the connector.</p>
+         * 
          * <strong>example:</strong>
          * <p>conn_file_e0c9db4030b2465a9478028f7d76cd92_1234</p>
          */
@@ -106,6 +125,8 @@ public class GetConnectorResponseBody extends TeaModel {
         public String connectorId;
 
         /**
+         * <p>The name of the connector.</p>
+         * 
          * <strong>example:</strong>
          * <p>name</p>
          */
@@ -113,6 +134,8 @@ public class GetConnectorResponseBody extends TeaModel {
         public String connectorName;
 
         /**
+         * <p>The type of the connector.</p>
+         * 
          * <strong>example:</strong>
          * <p>FILE</p>
          */
@@ -120,6 +143,8 @@ public class GetConnectorResponseBody extends TeaModel {
         public String connectorType;
 
         /**
+         * <p>The description of the connector.</p>
+         * 
          * <strong>example:</strong>
          * <p>Description</p>
          */

@@ -4,10 +4,15 @@ package com.aliyun.bailian20231229.models;
 import com.aliyun.tea.*;
 
 public class GetAlipayUrlResponseBody extends TeaModel {
+    /**
+     * <p>The response data.</p>
+     */
     @NameInMap("data")
     public GetAlipayUrlResponseBodyData data;
 
     /**
+     * <p>The unique ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>6a71f2d9-f1c9-913b-818b-11402910xxxx</p>
      */
@@ -37,12 +42,20 @@ public class GetAlipayUrlResponseBody extends TeaModel {
 
     public static class GetAlipayUrlResponseBodyData extends TeaModel {
         /**
+         * <p>The tipping code used to query the tipping status.</p>
+         * 
          * <strong>example:</strong>
          * <p>xxsdfasfw</p>
          */
         @NameInMap("code")
         public String code;
 
+        /**
+         * <p>The generated tipping URL.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://xxxxxx.aliyun-inc.com">https://xxxxxx.aliyun-inc.com</a></p>
+         */
         @NameInMap("qrUrl")
         public String qrUrl;
 

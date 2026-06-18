@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class RetrieveRequest extends TeaModel {
     /**
-     * <p>Vector retrieval top K. After generating vectors based on input text, the top K chunks in the knowledge base that are most similar to the vector representation of the input text are retrieved. Valid values: 0 to 100. The sum of the <code>DenseSimilarityTopK</code> and <code>SparseSimilarityTopK</code> parameters must be less than or equal to 200.</p>
+     * <p>The number of top-K similar text chunks to retrieve using vector retrieval. This is achieved by generating a vector representation of the query and searching the knowledge base for the K text chunks with the most similar vectors. The value must be an integer from 0 to 100. The sum of <code>DenseSimilarityTopK</code> and <code>SparseSimilarityTopK</code> must not exceed 200.</p>
      * <p>Default value: 100.</p>
      * 
      * <strong>example:</strong>
@@ -15,12 +15,14 @@ public class RetrieveRequest extends TeaModel {
     public Integer denseSimilarityTopK;
 
     /**
-     * <p>Specifies whether to enable reranking. For more information, see <a href="https://www.alibabacloud.com/help/en/model-studio/user-guide/rag-knowledge-base">Create a knowledge base</a>. Valid values:</p>
+     * <p>Specifies whether to enable reranking. For more information, see <a href="https://help.aliyun.com/document_detail/2807740.html">Knowledge base</a>. Valid values:</p>
      * <ul>
-     * <li>true</li>
-     * <li>false</li>
+     * <li><p><code>true</code>: Enables reranking.</p>
+     * </li>
+     * <li><p><code>false</code>: Disables reranking.</p>
+     * </li>
      * </ul>
-     * <p>Default value: true.</p>
+     * <p>Default value: <code>true</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -29,12 +31,15 @@ public class RetrieveRequest extends TeaModel {
     public Boolean enableReranking;
 
     /**
-     * <p>Specifies whether to enable multi-round conversation rewriting. For more information, see <a href="https://www.alibabacloud.com/help/en/model-studio/user-guide/rag-knowledge-base">Create a knowledge base</a>. Valid values:</p>
+     * <p>Specifies whether to enable &lt;props=&quot;china&quot;&gt;<a href="https://help.aliyun.com/model-studio/use-cases/rag-optimization#b7031e2ad6cji">conversational query rewriting</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/model-studio/use-cases/rag-optimization#b7031e2ad6cji">conversational query rewriting</a>.
+     * Valid values:</p>
      * <ul>
-     * <li>true</li>
-     * <li>false</li>
+     * <li><p><code>true</code>: Enables conversational query rewriting.</p>
+     * </li>
+     * <li><p><code>false</code>: Disables conversational query rewriting.</p>
+     * </li>
      * </ul>
-     * <p>Default value: false.</p>
+     * <p>Default value: <code>false</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -45,37 +50,51 @@ public class RetrieveRequest extends TeaModel {
     @NameInMap("Extra")
     public RetrieveRequestExtra extra;
 
+    /**
+     * <p>The URLs of images to include in the query.</p>
+     */
     @NameInMap("Images")
     public java.util.List<String> images;
 
     /**
-     * <p>The primary key ID of the knowledge base, which is the <code>Data.Id</code> parameter returned by the <a href="https://www.alibabacloud.com/help/en/model-studio/developer-reference/api-bailian-2023-12-29-createindex">CreateIndex</a> operation.</p>
+     * <p>The ID of the knowledge base. This is the <code>Data.Id</code> value returned by the <code>CreateIndex</code> operation.</p>
+     * <blockquote>
+     * <ul>
+     * <li>Ensure the specified knowledge base exists and has not been deleted.</li>
+     * </ul>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>5pwe0m2g6t</p>
+     * <p>5pwe0mxxxx</p>
      */
     @NameInMap("IndexId")
     public String indexId;
 
     /**
-     * <p>The input query prompt. The length and characters of the query are not limited.</p>
+     * <p>The query, which is the original user prompt. There are no limits on the length of the query.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>阿里云百炼平台介绍</p>
      */
     @NameInMap("Query")
     public String query;
 
+    /**
+     * <p>The conversation history, used for &lt;props=&quot;china&quot;&gt;<a href="https://help.aliyun.com/model-studio/use-cases/rag-optimization#b7031e2ad6cji">conversational query rewriting</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/model-studio/use-cases/rag-optimization#b7031e2ad6cji">conversational query rewriting</a>. This parameter is effective only when <code>EnableRewrite</code> is set to <code>true</code>.</p>
+     */
     @NameInMap("QueryHistory")
     public java.util.List<RetrieveRequestQueryHistory> queryHistory;
 
     /**
-     * <p>Ranking configurations.</p>
+     * <p>The reranking configurations.</p>
      */
     @NameInMap("Rerank")
     public java.util.List<RetrieveRequestRerank> rerank;
 
     /**
-     * <p>Similarity Threshold The lowest similarity score of chunks that can be returned. This parameter is used to filter text chunks returned by the rank model. For more information, see <a href="https://www.alibabacloud.com/help/en/model-studio/user-guide/rag-knowledge-base">Create a knowledge base</a>. Valid values: [0.01-1.00]. The priority of this parameter is greater than the similarity threshold configured for the knowledge base.</p>
-     * <p>By default, this parameter is left empty. In this case, the similarity threshold of the knowledge base is used.</p>
+     * <p>The similarity threshold for reranking. Only text chunks with a similarity score greater than this value are returned. The value must be between 0.01 and 1.00, inclusive. This parameter overrides the similarity threshold setting of the knowledge base.</p>
+     * <p>If not specified, the threshold configured for the knowledge base is used.</p>
      * 
      * <strong>example:</strong>
      * <p>0.20</p>
@@ -84,7 +103,7 @@ public class RetrieveRequest extends TeaModel {
     public Float rerankMinScore;
 
     /**
-     * <p>The top N return data after reranking. Valid values: 1 to 20. Default value: 5.</p>
+     * <p>The number of top-ranked text chunks to return after reranking. The value must be an integer from 1 to 20. Default value: 5.</p>
      * 
      * <strong>example:</strong>
      * <p>5</p>
@@ -93,18 +112,20 @@ public class RetrieveRequest extends TeaModel {
     public Integer rerankTopN;
 
     /**
-     * <p>Conversation rewriting configurations.</p>
+     * <p>Configuration for conversational query rewriting.</p>
      */
     @NameInMap("Rewrite")
     public java.util.List<RetrieveRequestRewrite> rewrite;
 
     /**
-     * <p>Specifies whether to save the retrieve test history. Valid values:</p>
+     * <p>Specifies whether to save the retrieval history for testing purposes. Valid values:</p>
      * <ul>
-     * <li>true</li>
-     * <li>false</li>
+     * <li><p><code>true</code>: Saves the retrieval history.</p>
+     * </li>
+     * <li><p><code>false</code>: Does not save the retrieval history.</p>
+     * </li>
      * </ul>
-     * <p>Default value: false.</p>
+     * <p>Default value: <code>false</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -113,13 +134,16 @@ public class RetrieveRequest extends TeaModel {
     public Boolean saveRetrieverHistory;
 
     /**
-     * <p>Specifies complex filter conditions. For more information about the syntax of SearchFilters, see the SearchFilter syntax section of this topic.</p>
+     * <p>Specifies custom retrieval conditions, such as tags, to filter semantic retrieval results and exclude irrelevant information.
+     * The filtering logic is applied only when the <code>is_displayed_chunk_content</code> parameter is set to <code>true</code>. For more information, see <a href="https://help.aliyun.com/document_detail/2869641.html">SearchFilters for a knowledge base</a>.</p>
      */
     @NameInMap("SearchFilters")
     public java.util.List<java.util.Map<String, String>> searchFilters;
 
     /**
-     * <p>The top K of keyword retrieval. Chunks that exactly match the keywords of the input text are retrieved from the knowledge base. This filters out irrelevant chunks and boosts accuracy. Valid values: 0 to 100. The sum of the <code>DenseSimilarityTopK</code> and <code>SparseSimilarityTopK</code> parameters must be less than or equal to 200.</p>
+     * <p>The number of top-K text chunks to retrieve using keyword retrieval. This feature finds text chunks in the knowledge base that exactly match the keywords in the query. It helps filter out irrelevant text chunks and provide more accurate results.
+     * The value must be an integer from 0 to 100.
+     * The sum of <code>DenseSimilarityTopK</code> and <code>SparseSimilarityTopK</code> must not exceed 200.</p>
      * <p>Default value: 100.</p>
      * 
      * <strong>example:</strong>
@@ -273,9 +297,28 @@ public class RetrieveRequest extends TeaModel {
     }
 
     public static class RetrieveRequestQueryHistory extends TeaModel {
+        /**
+         * <p>The content of the message for the specified <code>role</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>代表一段文本。</p>
+         */
         @NameInMap("content")
         public String content;
 
+        /**
+         * <p>The role of the entity that sent the message.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li><p><code>user</code>: Indicates that the <code>content</code> is from the end user.</p>
+         * </li>
+         * <li><p><code>assistant</code>: Indicates that the <code>content</code> is a response from the Model Studio application.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>user</p>
+         */
         @NameInMap("role")
         public String role;
 
@@ -304,11 +347,38 @@ public class RetrieveRequest extends TeaModel {
 
     public static class RetrieveRequestRerank extends TeaModel {
         /**
-         * <p>The name of the rank model. For more information, see <a href="https://www.alibabacloud.com/help/en/model-studio/user-guide/rag-knowledge-base">Create a knowledge base</a>. Valid values:</p>
+         * <p>The reranking model to use. Specifying a model here overrides the default model selected when the knowledge base was created. Valid values:</p>
+         * <p>&lt;props=&quot;china&quot;&gt;</p>
          * <ul>
-         * <li>gte-rerank-hybrid: Recommended official model.</li>
-         * <li>gte-rerank</li>
+         * <li><p><code>qwen3-rerank-hybrid</code>: Performs reranking by using the qwen3-rerank (hybrid) model.</p>
+         * </li>
+         * <li><p><code>qwen3-rerank</code>: Performs reranking by using the qwen3-rerank model.</p>
+         * </li>
+         * <li><p><code>gte-rerank-hybrid</code>: Performs reranking by using the gte-rerank (hybrid) model.</p>
+         * </li>
+         * <li><p><code>gte-rerank</code>: Performs reranking by using the gte-rerank model.</p>
+         * </li>
          * </ul>
+         * <p>&lt;props=&quot;intl&quot;&gt;</p>
+         * <ul>
+         * <li><p><code>gte-rerank-hybrid</code>: Performs reranking by using the gte-rerank (hybrid) model.</p>
+         * </li>
+         * <li><p><code>gte-rerank</code>: Performs reranking by using the gte-rerank model.</p>
+         * </li>
+         * </ul>
+         * <p>If you do not specify this parameter, the model configured for the knowledge base is used.</p>
+         * <p>&lt;props=&quot;china&quot;&gt;</p>
+         * <blockquote>
+         * <p>Use <code>qwen3-rerank</code> for semantic ranking only. We recommend <code>qwen3-rerank-hybrid</code> if you require both semantic ranking and text matching features for higher relevance.</p>
+         * </blockquote>
+         * <p>&lt;props=&quot;intl&quot;&gt;</p>
+         * <blockquote>
+         * <p>Use <code>gte-rerank</code> for semantic ranking only. We recommend <code>gte-rerank-hybrid</code> if you require both semantic ranking and text matching features for higher relevance.</p>
+         * </blockquote>
+         * <p>&lt;props=&quot;china&quot;&gt;</p>
+         * <blockquote>
+         * <p>The <code>gte-rerank-hybrid</code> and <code>gte-rerank</code> models are no longer updated and are not recommended for use.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>gte-rerank-hybrid</p>
@@ -316,9 +386,37 @@ public class RetrieveRequest extends TeaModel {
         @NameInMap("ModelName")
         public String modelName;
 
+        /**
+         * <p>&lt;props=&quot;intl&quot;&gt;</p>
+         * <p>This parameter is not yet available. Do not specify a value for it.</p>
+         * <p>&lt;props=&quot;china&quot;&gt;</p>
+         * <p>A natural language instruction to fine-tune the behavior of the reranking model.</p>
+         * <blockquote>
+         * <p>Notice: </p>
+         * </blockquote>
+         * <p>This parameter takes effect only when <code>RerankMode</code> is set to <code>custom</code>.</p>
+         */
         @NameInMap("RerankInstruct")
         public String rerankInstruct;
 
+        /**
+         * <p>&lt;props=&quot;china&quot;&gt;</p>
+         * <p>Specifies the instruction intervention mode for the reranking model. This mode determines the model\&quot;s scoring preference.</p>
+         * <p><strong>Valid values:</strong></p>
+         * <ul>
+         * <li><p><code>qa</code>: (Default) Q\&amp;A mode. The model assigns higher scores to candidates that directly answer the query. Recommended for Q\&amp;A scenarios.</p>
+         * </li>
+         * <li><p><code>similar</code>: Similarity mode. The model assigns higher scores to candidates with high content similarity to the query. Recommended for match-based retrieval scenarios.</p>
+         * </li>
+         * <li><p><code>custom</code>: Custom mode. The model\&quot;s ranking behavior is determined by the instructions in the <code>RerankInstruct</code> parameter.</p>
+         * </li>
+         * </ul>
+         * <p>&lt;props=&quot;intl&quot;&gt;</p>
+         * <p>This parameter is not yet available. Do not specify a value for it.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>qa</p>
+         */
         @NameInMap("RerankMode")
         public String rerankMode;
 
@@ -355,11 +453,11 @@ public class RetrieveRequest extends TeaModel {
 
     public static class RetrieveRequestRewrite extends TeaModel {
         /**
-         * <p>Conversation rewriting model name. The query rewriting model automatically adjusts the original prompt based on the context to improve retrieval performance. Valid value:</p>
+         * <p>Specifies the model for conversational query rewriting, which automatically rewrites the original query based on the conversation context to improve retrieval results. Valid value:</p>
          * <ul>
-         * <li>conv-rewrite-qwen-1.8b</li>
+         * <li><code>conv-rewrite-qwen-1.8b</code>: The only model currently supported for this feature.</li>
          * </ul>
-         * <p>By default, this parameter is left empty, which means conv-rewrite-qwen-1.8b is used.</p>
+         * <p>If this parameter is not specified, <code>conv-rewrite-qwen-1.8b</code> is used by default.</p>
          * 
          * <strong>example:</strong>
          * <p>conv-rewrite-qwen-1.8b</p>

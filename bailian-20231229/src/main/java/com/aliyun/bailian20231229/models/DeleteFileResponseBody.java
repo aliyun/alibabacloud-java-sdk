@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class DeleteFileResponseBody extends TeaModel {
     /**
+     * <p>The error status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>InvalidParameter</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The business data field of the API response.</p>
+     */
     @NameInMap("Data")
     public DeleteFileResponseBodyData data;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>Current file status does not support delete.</p>
      */
@@ -31,6 +38,8 @@ public class DeleteFileResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The status code returned by the API.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -38,6 +47,14 @@ public class DeleteFileResponseBody extends TeaModel {
     public String status;
 
     /**
+     * <p>Indicates whether the API call succeeded. Valid values:</p>
+     * <ul>
+     * <li><p>true: Succeeded.</p>
+     * </li>
+     * <li><p>false: Failed.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -99,8 +116,10 @@ public class DeleteFileResponseBody extends TeaModel {
 
     public static class DeleteFileResponseBodyData extends TeaModel {
         /**
+         * <p>The file ID.</p>
+         * 
          * <strong>example:</strong>
-         * <p>file_9a65732555b54d5ea10796ca5742ba22_XXXXXXXX</p>
+         * <p>file_9a65732555b54d5ea10796ca5742ba22_xxxxxxxx</p>
          */
         @NameInMap("FileId")
         public String fileId;

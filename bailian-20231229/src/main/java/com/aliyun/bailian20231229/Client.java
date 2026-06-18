@@ -8,7 +8,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public Client(com.aliyun.teaopenapi.models.Config config) throws Exception {
         super(config);
-        this._endpointRule = "";
+        this._endpointRule = "regional";
+        this._endpointMap = TeaConverter.buildMap(
+            new TeaPair("cn-beijing", "bailian.cn-beijing.aliyuncs.com"),
+            new TeaPair("ap-southeast-1", "bailian.ap-southeast-1.aliyuncs.com")
+        );
         this.checkConfig(config);
         this._endpoint = this.getEndpoint("bailian", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
     }
@@ -28,16 +32,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  You cannot use API to create structured table. To create a table, go to <a href="https://bailian.console.alibabacloud.com/#/data-center">Data Management</a> in the console. You can associate a knowledge base with ApsaraDB for RDS to automatically update structured knowledge base. For more information, see <a href="https://help.aliyun.com/document_detail/2807740.html">Knowledge base</a>.</p>
      * <ul>
-     * <li>If you are using a RAM user, you must first obtain the OpenAPI management permissions (namely sfm:AddCategory) of Model Studio. For more information, see <a href="https://help.aliyun.com/document_detail/2848578.html">Grant OpenAPI permissions to a RAM user</a>. If you are using the Alibaba Cloud account, you do not need permissions. We recommend that you use <a href="https://api.alibabacloud.com/api-tools/sdk/bailian?version=2023-12-29">the latest version of the SDK</a> to call this operation.</li>
-     * <li>You can create up to 1,000 categories in each workspace.</li>
-     * <li>This interface is not idempotent.
-     * <strong>Throttling:</strong> Throttling will be triggered if you call this operation frequently. Do not exceed 5 times per second. If throttling is triggered, try again later.</li>
+     * <li>You cannot use an API to add data tables. To add data tables, go to the <a href="https://modelstudio.console.alibabacloud.com/?tab=app#/data-center">Application Data</a> page in the console.</li>
+     * <li>A RAM user must obtain the required <a href="https://help.aliyun.com/document_detail/2848578.html">API permissions</a> for Alibaba Cloud Model Studio and <a href="https://help.aliyun.com/document_detail/2851098.html">join a workspace</a> before calling this operation. The <code>AliyunBailianDataFullAccess</code> permission, which includes the <code>sfm:AddCategory</code> permission, is required. An Alibaba Cloud account can call this operation directly without requiring authorization. To call this operation, use the latest version of the <a href="https://api.alibabacloud.com/api-tools/sdk/bailian?version=2023-12-29">Alibaba Cloud Model Studio SDK</a>.</li>
+     * <li>This operation is not idempotent.
+     * <strong>Rate limiting:</strong> Frequent calls to this operation are subject to rate limiting. Do not exceed a frequency of 5 calls per second. If rate limiting is triggered, try again later.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Creates a category in the specified workspace to categorize and manage documents. You can create up to 1,000 categories in each workspace.</p>
+     * <p>Creates a category in a specified workspace to classify and manage files. Each workspace supports a maximum of 500 categories.</p>
      * 
      * @param request AddCategoryRequest
      * @param headers map
@@ -83,16 +86,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  You cannot use API to create structured table. To create a table, go to <a href="https://bailian.console.alibabacloud.com/#/data-center">Data Management</a> in the console. You can associate a knowledge base with ApsaraDB for RDS to automatically update structured knowledge base. For more information, see <a href="https://help.aliyun.com/document_detail/2807740.html">Knowledge base</a>.</p>
      * <ul>
-     * <li>If you are using a RAM user, you must first obtain the OpenAPI management permissions (namely sfm:AddCategory) of Model Studio. For more information, see <a href="https://help.aliyun.com/document_detail/2848578.html">Grant OpenAPI permissions to a RAM user</a>. If you are using the Alibaba Cloud account, you do not need permissions. We recommend that you use <a href="https://api.alibabacloud.com/api-tools/sdk/bailian?version=2023-12-29">the latest version of the SDK</a> to call this operation.</li>
-     * <li>You can create up to 1,000 categories in each workspace.</li>
-     * <li>This interface is not idempotent.
-     * <strong>Throttling:</strong> Throttling will be triggered if you call this operation frequently. Do not exceed 5 times per second. If throttling is triggered, try again later.</li>
+     * <li>You cannot use an API to add data tables. To add data tables, go to the <a href="https://modelstudio.console.alibabacloud.com/?tab=app#/data-center">Application Data</a> page in the console.</li>
+     * <li>A RAM user must obtain the required <a href="https://help.aliyun.com/document_detail/2848578.html">API permissions</a> for Alibaba Cloud Model Studio and <a href="https://help.aliyun.com/document_detail/2851098.html">join a workspace</a> before calling this operation. The <code>AliyunBailianDataFullAccess</code> permission, which includes the <code>sfm:AddCategory</code> permission, is required. An Alibaba Cloud account can call this operation directly without requiring authorization. To call this operation, use the latest version of the <a href="https://api.alibabacloud.com/api-tools/sdk/bailian?version=2023-12-29">Alibaba Cloud Model Studio SDK</a>.</li>
+     * <li>This operation is not idempotent.
+     * <strong>Rate limiting:</strong> Frequent calls to this operation are subject to rate limiting. Do not exceed a frequency of 5 calls per second. If rate limiting is triggered, try again later.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Creates a category in the specified workspace to categorize and manage documents. You can create up to 1,000 categories in each workspace.</p>
+     * <p>Creates a category in a specified workspace to classify and manage files. Each workspace supports a maximum of 500 categories.</p>
      * 
      * @param request AddCategoryRequest
      * @return AddCategoryResponse
@@ -104,8 +106,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li>To call this operation, a RAM user (sub-account) must first have the required <a href="https://help.aliyun.com/document_detail/2848578.html">API permissions</a> for Model Studio and be a member of a <a href="https://help.aliyun.com/document_detail/2851098.html">business space</a>. This requires the <code>AliyunBailianDataFullAccess</code> policy, which includes the sfm:AddCategory permission. A primary account can call this operation directly without authorization. We recommend using the latest &lt;props=&quot;china&quot;&gt;<a href="https://api.aliyun.com/api-tools/sdk/bailian?version=2023-12-29">Model Studio SDK</a>&lt;props=&quot;intl&quot;&gt;<a href="https://api.alibabacloud.com/api-tools/sdk/bailian?version=2023-12-29">Model Studio SDK</a> to call this operation.</li>
+     * <li>This operation is not idempotent.
+     * <strong>Throttling:</strong>
+     * Do not call this operation more than 5 times per second. If a request is throttled, try again later.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>创建连接器</p>
+     * <p>Creates a connector. This API currently supports only file connectors.</p>
      * 
      * @param tmpReq AddConnectorRequest
      * @param headers map
@@ -156,8 +166,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li>To call this operation, a RAM user (sub-account) must first have the required <a href="https://help.aliyun.com/document_detail/2848578.html">API permissions</a> for Model Studio and be a member of a <a href="https://help.aliyun.com/document_detail/2851098.html">business space</a>. This requires the <code>AliyunBailianDataFullAccess</code> policy, which includes the sfm:AddCategory permission. A primary account can call this operation directly without authorization. We recommend using the latest &lt;props=&quot;china&quot;&gt;<a href="https://api.aliyun.com/api-tools/sdk/bailian?version=2023-12-29">Model Studio SDK</a>&lt;props=&quot;intl&quot;&gt;<a href="https://api.alibabacloud.com/api-tools/sdk/bailian?version=2023-12-29">Model Studio SDK</a> to call this operation.</li>
+     * <li>This operation is not idempotent.
+     * <strong>Throttling:</strong>
+     * Do not call this operation more than 5 times per second. If a request is throttled, try again later.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>创建连接器</p>
+     * <p>Creates a connector. This API currently supports only file connectors.</p>
      * 
      * @param request AddConnectorRequest
      * @return AddConnectorResponse
@@ -170,18 +188,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  Before you call this operation, make sure that you have obtained the lease and uploaded the document to the temporary storage space by using the <a href="https://www.alibabacloud.com/help/en/model-studio/developer-reference/api-bailian-2023-12-29-applyfileuploadlease">ApplyFileUploadLease</a> operation. For more information, see <a href="https://www.alibabacloud.com/help/en/model-studio/developer-reference/upload-files-by-calling-api">Upload files by calling API</a>.</p>
-     * <blockquote>
-     * <p> After you call this operation, the used lease ID expires immediately. Do not use the same lease ID to submit new requests.</p>
-     * </blockquote>
      * <ul>
-     * <li>You must call this operation within 12 hours after you call the <a href="https://www.alibabacloud.com/help/en/model-studio/developer-reference/api-bailian-2023-12-29-applyfileuploadlease">ApplyFileUploadLease</a> operation. Otherwise, the lease expires and the request fails.</li>
-     * <li>After you call this operation, the system parses and imports your document. The process takes some time.</li>
-     * <li>This interface is not idempotent.</li>
+     * <li>To call this API, a RAM user (sub-account) must have the required <a href="https://help.aliyun.com/document_detail/2848578.html">API permissions</a> for Alibaba Cloud Model Studio and be <a href="https://help.aliyun.com/document_detail/2851098.html">added to a workspace</a>. The required policy is <code>AliyunBailianDataFullAccess</code>, which includes the <code>sfm:AddFile</code> permission. An Alibaba Cloud account (primary account) can call this API directly without authorization. We recommend using the latest &lt;props=&quot;china&quot;&gt;<a href="https://api.aliyun.com/api-tools/sdk/bailian?version=2023-12-29">Alibaba Cloud Model Studio SDK</a>&lt;props=&quot;intl&quot;&gt;<a href="https://api.alibabacloud.com/api-tools/sdk/bailian?version=2023-12-29">Alibaba Cloud Model Studio SDK</a> to call this API.</li>
+     * <li>This API is not idempotent.
+     * <strong>Throttling:</strong> Frequent calls to this API are subject to throttling. Do not exceed a rate of 10 calls per second. If your request is throttled, try again later.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Imports an unstructured document stored in the temporary storage space to Data Management. You cannot use the API to import structured documents. Use the console instead.</p>
+     * <p>Imports a file from the temporary storage space of Alibaba Cloud Model Studio into a data connection (formerly known as application data).</p>
      * 
      * @param tmpReq AddFileRequest
      * @param headers map
@@ -249,18 +263,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  Before you call this operation, make sure that you have obtained the lease and uploaded the document to the temporary storage space by using the <a href="https://www.alibabacloud.com/help/en/model-studio/developer-reference/api-bailian-2023-12-29-applyfileuploadlease">ApplyFileUploadLease</a> operation. For more information, see <a href="https://www.alibabacloud.com/help/en/model-studio/developer-reference/upload-files-by-calling-api">Upload files by calling API</a>.</p>
-     * <blockquote>
-     * <p> After you call this operation, the used lease ID expires immediately. Do not use the same lease ID to submit new requests.</p>
-     * </blockquote>
      * <ul>
-     * <li>You must call this operation within 12 hours after you call the <a href="https://www.alibabacloud.com/help/en/model-studio/developer-reference/api-bailian-2023-12-29-applyfileuploadlease">ApplyFileUploadLease</a> operation. Otherwise, the lease expires and the request fails.</li>
-     * <li>After you call this operation, the system parses and imports your document. The process takes some time.</li>
-     * <li>This interface is not idempotent.</li>
+     * <li>To call this API, a RAM user (sub-account) must have the required <a href="https://help.aliyun.com/document_detail/2848578.html">API permissions</a> for Alibaba Cloud Model Studio and be <a href="https://help.aliyun.com/document_detail/2851098.html">added to a workspace</a>. The required policy is <code>AliyunBailianDataFullAccess</code>, which includes the <code>sfm:AddFile</code> permission. An Alibaba Cloud account (primary account) can call this API directly without authorization. We recommend using the latest &lt;props=&quot;china&quot;&gt;<a href="https://api.aliyun.com/api-tools/sdk/bailian?version=2023-12-29">Alibaba Cloud Model Studio SDK</a>&lt;props=&quot;intl&quot;&gt;<a href="https://api.alibabacloud.com/api-tools/sdk/bailian?version=2023-12-29">Alibaba Cloud Model Studio SDK</a> to call this API.</li>
+     * <li>This API is not idempotent.
+     * <strong>Throttling:</strong> Frequent calls to this API are subject to throttling. Do not exceed a rate of 10 calls per second. If your request is throttled, try again later.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Imports an unstructured document stored in the temporary storage space to Data Management. You cannot use the API to import structured documents. Use the console instead.</p>
+     * <p>Imports a file from the temporary storage space of Alibaba Cloud Model Studio into a data connection (formerly known as application data).</p>
      * 
      * @param request AddFileRequest
      * @return AddFileResponse
@@ -272,8 +282,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li><p>Please ensure that the OSS Bucket and Alibaba Cloud Model Studio belong to the same Alibaba Cloud account (main account) and that authorization has been completed according to the <a href="https://help.aliyun.com/document_detail/2782155.html">Configuration instructions for importing data from OSS</a>.</p>
+     * <ul>
+     * <li>Supported Bucket storage types do not include Archive, Cold Archive, or Deep Cold Archive. Buckets with content encryption are supported. Public read/write, public read, and private Buckets are supported.</li>
+     * <li>If you want to use a Bucket with <a href="https://help.aliyun.com/document_detail/2636937.html">Referer hotlink protection</a> enabled, refer to <a href="https://help.aliyun.com/document_detail/2636937.html">Allow access only from trusted websites</a> to add the domain <code>*.console.aliyun.com</code> to the Referer allowlist.</li>
+     * </ul>
+     * </li>
+     * <li><p>A RAM user (sub-account) must first obtain the <a href="https://help.aliyun.com/document_detail/2848578.html">API permissions</a> for Alibaba Cloud Model Studio (requires <code>AliyunBailianDataFullAccess</code>, which includes the sfm:AddFilesFromAuthorizedOss permission point) and <a href="https://help.aliyun.com/document_detail/2851098.html">join a workspace</a> before calling this operation. The Alibaba Cloud account (main account) can call this directly without authorization. We recommend that you call this operation through the latest version of the &lt;props=&quot;china&quot;&gt;<a href="https://api.aliyun.com/api-tools/sdk/bailian?version=2023-12-29">Alibaba Cloud Model Studio SDK</a>&lt;props=&quot;intl&quot;&gt;<a href="https://api.alibabacloud.com/api-tools/sdk/bailian?version=2023-12-29">Alibaba Cloud Model Studio SDK</a>.</p>
+     * </li>
+     * <li><p>This operation is not idempotent.
+     * <strong>Throttling description:</strong>
+     * Frequent calls to this operation will be throttled. The frequency should not exceed 5 calls per second. If throttled, please try again later.</p>
+     * </li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>将已授权OSS Bucket中的文件添加到百炼应用数据</p>
+     * <p>Imports files from an authorized OSS Bucket into Alibaba Cloud Model Studio (Bailian) application data.</p>
      * 
      * @param tmpReq AddFilesFromAuthorizedOssRequest
      * @param headers map
@@ -340,8 +366,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li><p>Please ensure that the OSS Bucket and Alibaba Cloud Model Studio belong to the same Alibaba Cloud account (main account) and that authorization has been completed according to the <a href="https://help.aliyun.com/document_detail/2782155.html">Configuration instructions for importing data from OSS</a>.</p>
+     * <ul>
+     * <li>Supported Bucket storage types do not include Archive, Cold Archive, or Deep Cold Archive. Buckets with content encryption are supported. Public read/write, public read, and private Buckets are supported.</li>
+     * <li>If you want to use a Bucket with <a href="https://help.aliyun.com/document_detail/2636937.html">Referer hotlink protection</a> enabled, refer to <a href="https://help.aliyun.com/document_detail/2636937.html">Allow access only from trusted websites</a> to add the domain <code>*.console.aliyun.com</code> to the Referer allowlist.</li>
+     * </ul>
+     * </li>
+     * <li><p>A RAM user (sub-account) must first obtain the <a href="https://help.aliyun.com/document_detail/2848578.html">API permissions</a> for Alibaba Cloud Model Studio (requires <code>AliyunBailianDataFullAccess</code>, which includes the sfm:AddFilesFromAuthorizedOss permission point) and <a href="https://help.aliyun.com/document_detail/2851098.html">join a workspace</a> before calling this operation. The Alibaba Cloud account (main account) can call this directly without authorization. We recommend that you call this operation through the latest version of the &lt;props=&quot;china&quot;&gt;<a href="https://api.aliyun.com/api-tools/sdk/bailian?version=2023-12-29">Alibaba Cloud Model Studio SDK</a>&lt;props=&quot;intl&quot;&gt;<a href="https://api.alibabacloud.com/api-tools/sdk/bailian?version=2023-12-29">Alibaba Cloud Model Studio SDK</a>.</p>
+     * </li>
+     * <li><p>This operation is not idempotent.
+     * <strong>Throttling description:</strong>
+     * Frequent calls to this operation will be throttled. The frequency should not exceed 5 calls per second. If throttled, please try again later.</p>
+     * </li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>将已授权OSS Bucket中的文件添加到百炼应用数据</p>
+     * <p>Imports files from an authorized OSS Bucket into Alibaba Cloud Model Studio (Bailian) application data.</p>
      * 
      * @param request AddFilesFromAuthorizedOssRequest
      * @return AddFilesFromAuthorizedOssResponse
@@ -353,8 +395,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li>Resource Access Management (RAM) users must first obtain <a href="https://help.aliyun.com/document_detail/2848578.html">API permissions</a> for Alibaba Cloud Model Studio (requires <code>AliyunBailianDataFullAccess</code>, which includes the sfm:AddTable permission), and <a href="https://help.aliyun.com/document_detail/2851098.html">join a workspace</a> before invoking this operation. Alibaba Cloud accounts can invoke this operation directly without authorization. Use the latest &lt;props=&quot;china&quot;&gt;<a href="https://api.aliyun.com/api-tools/sdk/bailian?version=2023-12-29">Alibaba Cloud Model Studio SDK</a>&lt;props=&quot;intl&quot;&gt;<a href="https://api.alibabacloud.com/api-tools/sdk/bailian?version=2023-12-29">Alibaba Cloud Model Studio SDK</a> to invoke this operation.</li>
+     * <li>This operation is not idempotent.
+     * <strong>Rate limit:</strong>
+     * This operation is throttled if called too frequently. Do not exceed 10 calls per second. If throttled, retry later.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>添加表格</p>
+     * <p>Adds a table to a tabular data connector.</p>
      * 
      * @param tmpReq AddTableRequest
      * @param headers map
@@ -376,6 +426,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.tableColumnsShrink)) {
             body.put("TableColumns", request.tableColumnsShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tableDesc)) {
+            body.put("TableDesc", request.tableDesc);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.tableName)) {
@@ -401,8 +455,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li>Resource Access Management (RAM) users must first obtain <a href="https://help.aliyun.com/document_detail/2848578.html">API permissions</a> for Alibaba Cloud Model Studio (requires <code>AliyunBailianDataFullAccess</code>, which includes the sfm:AddTable permission), and <a href="https://help.aliyun.com/document_detail/2851098.html">join a workspace</a> before invoking this operation. Alibaba Cloud accounts can invoke this operation directly without authorization. Use the latest &lt;props=&quot;china&quot;&gt;<a href="https://api.aliyun.com/api-tools/sdk/bailian?version=2023-12-29">Alibaba Cloud Model Studio SDK</a>&lt;props=&quot;intl&quot;&gt;<a href="https://api.alibabacloud.com/api-tools/sdk/bailian?version=2023-12-29">Alibaba Cloud Model Studio SDK</a> to invoke this operation.</li>
+     * <li>This operation is not idempotent.
+     * <strong>Rate limit:</strong>
+     * This operation is throttled if called too frequently. Do not exceed 10 calls per second. If throttled, retry later.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>添加表格</p>
+     * <p>Adds a table to a tabular data connector.</p>
      * 
      * @param request AddTableRequest
      * @return AddTableResponse
@@ -415,15 +477,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  This operation returns an HTTP URL that can be used to upload an unstructured document (the lease) and parameters required for the upload. Structured documents are not supported.</p>
      * <ul>
-     * <li>The HTTP URL returned by this operation is valid only for minutes. Upload the document before the URL expires.</li>
-     * <li>After you apply for a lease and upload a document, the document is stored in a temporary storage space for 12 hours. </li>
-     * <li>This interface is not idempotent.</li>
+     * <li>RAM users (sub-accounts) must first obtain <a href="https://help.aliyun.com/document_detail/2848578.html">API permissions</a> for Alibaba Cloud Model Studio (requires <code>AliyunBailianDataFullAccess</code>, which includes the sfm:ApplyFileUploadLease permission), and <a href="https://help.aliyun.com/document_detail/2851098.html">join a workspace</a> before calling this API. Alibaba Cloud accounts (primary accounts) can directly call this API without authorization. We recommend that you call this API by using the latest &lt;props=&quot;china&quot;&gt;<a href="https://api.aliyun.com/api-tools/sdk/bailian?version=2023-12-29">Alibaba Cloud Model Studio SDK</a>&lt;props=&quot;intl&quot;&gt;<a href="https://api.alibabacloud.com/api-tools/sdk/bailian?version=2023-12-29">Alibaba Cloud Model Studio SDK</a>.</li>
+     * <li>This API is not idempotent.
+     * <strong>Throttling:</strong>
+     * This API is subject to throttling if called too frequently. The frequency must not exceed 10 calls per second. If throttled, please retry later.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Applies for a document upload lease to upload a document. You cannot use the API to upload structured documents. Use the console instead.</p>
+     * <p>Request an upload lease for uploading knowledge base files or files for agent application conversational interactions.</p>
      * 
      * @param request ApplyFileUploadLeaseRequest
      * @param headers map
@@ -473,15 +535,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  This operation returns an HTTP URL that can be used to upload an unstructured document (the lease) and parameters required for the upload. Structured documents are not supported.</p>
      * <ul>
-     * <li>The HTTP URL returned by this operation is valid only for minutes. Upload the document before the URL expires.</li>
-     * <li>After you apply for a lease and upload a document, the document is stored in a temporary storage space for 12 hours. </li>
-     * <li>This interface is not idempotent.</li>
+     * <li>RAM users (sub-accounts) must first obtain <a href="https://help.aliyun.com/document_detail/2848578.html">API permissions</a> for Alibaba Cloud Model Studio (requires <code>AliyunBailianDataFullAccess</code>, which includes the sfm:ApplyFileUploadLease permission), and <a href="https://help.aliyun.com/document_detail/2851098.html">join a workspace</a> before calling this API. Alibaba Cloud accounts (primary accounts) can directly call this API without authorization. We recommend that you call this API by using the latest &lt;props=&quot;china&quot;&gt;<a href="https://api.aliyun.com/api-tools/sdk/bailian?version=2023-12-29">Alibaba Cloud Model Studio SDK</a>&lt;props=&quot;intl&quot;&gt;<a href="https://api.alibabacloud.com/api-tools/sdk/bailian?version=2023-12-29">Alibaba Cloud Model Studio SDK</a>.</li>
+     * <li>This API is not idempotent.
+     * <strong>Throttling:</strong>
+     * This API is subject to throttling if called too frequently. The frequency must not exceed 10 calls per second. If throttled, please retry later.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Applies for a document upload lease to upload a document. You cannot use the API to upload structured documents. Use the console instead.</p>
+     * <p>Request an upload lease for uploading knowledge base files or files for agent application conversational interactions.</p>
      * 
      * @param request ApplyFileUploadLeaseRequest
      * @return ApplyFileUploadLeaseResponse
@@ -551,7 +613,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>批量更新文档Tag</p>
+     * <p>This operation updates document tags in a data connection in batches.</p>
      * 
      * @param tmpReq BatchUpdateFileTagRequest
      * @param headers map
@@ -595,7 +657,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>批量更新文档Tag</p>
+     * <p>This operation updates document tags in a data connection in batches.</p>
      * 
      * @param request BatchUpdateFileTagRequest
      * @return BatchUpdateFileTagResponse
@@ -607,8 +669,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li>A RAM user (sub-account) must first obtain the required <a href="https://help.aliyun.com/document_detail/2848578.html">API permissions</a> for Alibaba Cloud Model Studio (the <code>AliyunBailianDataFullAccess</code> policy, which includes the <code>sfm:ChangeParseSetting</code> permission) and <a href="https://help.aliyun.com/document_detail/2851098.html">join a workspace</a> before calling this operation. An Alibaba Cloud account (primary account) can call this operation directly without authorization. We recommend using the latest version of the &lt;props=&quot;china&quot;&gt;<a href="https://api.aliyun.com/api-tools/sdk/bailian?version=2023-12-29">Alibaba Cloud Model Studio SDK</a>&lt;props=&quot;intl&quot;&gt;<a href="https://api.alibabacloud.com/api-tools/sdk/bailian?version=2023-12-29">Alibaba Cloud Model Studio SDK</a> to call this operation.</li>
+     * <li>This operation is not idempotent.
+     * <strong>Throttling</strong>
+     * The system throttles frequent calls to this operation. Do not exceed a frequency of 10 requests per second. If your request is throttled, try again later.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>Configure the parsing method for a specific file type. For example, use LLM parsing for .pdf files, or use Qwen VL parsing for .jpg files.</p>
+     * <p>Configures the parsing method for a specific file type. For example, you can specify LLM-based document parsing for .pdf files and the Qwen VL Parser for .jpg files.</p>
      * 
      * @param tmpReq ChangeParseSettingRequest
      * @param headers map
@@ -659,8 +729,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li>A RAM user (sub-account) must first obtain the required <a href="https://help.aliyun.com/document_detail/2848578.html">API permissions</a> for Alibaba Cloud Model Studio (the <code>AliyunBailianDataFullAccess</code> policy, which includes the <code>sfm:ChangeParseSetting</code> permission) and <a href="https://help.aliyun.com/document_detail/2851098.html">join a workspace</a> before calling this operation. An Alibaba Cloud account (primary account) can call this operation directly without authorization. We recommend using the latest version of the &lt;props=&quot;china&quot;&gt;<a href="https://api.aliyun.com/api-tools/sdk/bailian?version=2023-12-29">Alibaba Cloud Model Studio SDK</a>&lt;props=&quot;intl&quot;&gt;<a href="https://api.alibabacloud.com/api-tools/sdk/bailian?version=2023-12-29">Alibaba Cloud Model Studio SDK</a> to call this operation.</li>
+     * <li>This operation is not idempotent.
+     * <strong>Throttling</strong>
+     * The system throttles frequent calls to this operation. Do not exceed a frequency of 10 requests per second. If your request is throttled, try again later.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>Configure the parsing method for a specific file type. For example, use LLM parsing for .pdf files, or use Qwen VL parsing for .jpg files.</p>
+     * <p>Configures the parsing method for a specific file type. For example, you can specify LLM-based document parsing for .pdf files and the Qwen VL Parser for .jpg files.</p>
      * 
      * @param request ChangeParseSettingRequest
      * @return ChangeParseSettingResponse
@@ -746,21 +824,21 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  <strong>Limits</strong>: This operation can create only knowledge base of the document search type. Data query and image Q\&amp;A types are not supported. Use the console instead.</p>
      * <ul>
-     * <li><strong>Required permissions</strong><ul>
-     * <li><strong>RAM users</strong>: Must first obtain the <a href="https://help.aliyun.com/document_detail/2848578.html">API permissions</a> of Model Studio (such as the <code>AliyunBailianDataFullAccess</code> policy, which includes the sfm:CreateIndex permission required), and <a href="https://help.aliyun.com/document_detail/2851098.html">become member of a workspace</a>.</li>
-     * <li><strong>Alibaba Cloud account</strong>: Has the permission by default, and can call the operation directly.</li>
+     * <li><strong>Permissions</strong>:<ul>
+     * <li><strong>RAM user</strong>: A RAM user must obtain the required <a href="https://help.aliyun.com/document_detail/2848578.html">API permissions</a> for Alibaba Cloud Model Studio and <a href="https://help.aliyun.com/document_detail/2851098.html">join a workspace</a> before calling this operation. You can use the <code>AliyunBailianDataFullAccess</code> policy, which includes the \<code>sfm:CreateIndex\\</code> permission required for this operation.</li>
+     * <li><strong>Alibaba Cloud account</strong>: By default, Alibaba Cloud accounts have the required permissions and can call this operation directly.</li>
      * </ul>
      * </li>
-     * <li><strong>Call method</strong>: We recommend using the latest version of the <a href="https://api.alibabacloud.com/api-tools/sdk/bailian?version=2023-12-29">GenAI Service Platform SDK</a>. The SDK encapsulates complex signature computational logic to simplify the call process.</li>
-     * <li><strong>What to do next</strong>: This operation only initializes knowledge base creation job. After that, call <strong>SubmitIndexJob</strong> to complete the creation. Otherwise, you will get an empty knowledge base. For more information about the sample code, see <a href="https://help.aliyun.com/document_detail/2852772.html">Knowledge base API guide</a>.</li>
-     * <li><strong>Idempotence</strong>: This operation is not idempotent. If you call the operation for multiple times, you may create several knowledge bases with the same name. We recommend following a &quot;query first, then create&quot; logic.
-     * <strong>Rate limit:</strong> Rate limiting will be triggered if you call this operation frequently. Do not exceed 10 times per second. If limiting is triggered, try again later.</li>
+     * <li><strong>How to call</strong>: Use the latest version of the &lt;props=&quot;intl&quot;&gt;<a href="https://api.alibabacloud.com/api-tools/sdk/bailian?version=2023-12-29">Alibaba Cloud Model Studio SDK</a> to call this operation. The SDK handles the complex signature calculation logic to simplify the process.</li>
+     * <li><strong>What to do next</strong>: This operation only initializes a knowledge base creation job. After calling this operation, you must call the <strong>SubmitIndexJob</strong> operation to complete the creation. Otherwise, an empty knowledge base is created. For related code examples, see <a href="https://help.aliyun.com/document_detail/2852772.html">Knowledge base API guide</a>.</li>
+     * <li><strong>Idempotence</strong>: This operation is not idempotent. Repeated calls may create multiple knowledge bases with the same name. To ensure idempotence, query for the knowledge base before you create it.
+     * <strong>Rate limiting:</strong>
+     * Frequent calls to this operation are subject to rate limiting. Do not exceed a frequency of 10 calls per second. If you encounter rate limiting, retry the call later.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Create a knowledge base of the document search type.</p>
+     * <p>Use this API to create two types of knowledge bases: unstructured knowledge bases for documents, audio, or video, and structured knowledge bases for data queries or image Q&amp;A.</p>
      * 
      * @param tmpReq CreateIndexRequest
      * @param headers map
@@ -948,21 +1026,21 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  <strong>Limits</strong>: This operation can create only knowledge base of the document search type. Data query and image Q\&amp;A types are not supported. Use the console instead.</p>
      * <ul>
-     * <li><strong>Required permissions</strong><ul>
-     * <li><strong>RAM users</strong>: Must first obtain the <a href="https://help.aliyun.com/document_detail/2848578.html">API permissions</a> of Model Studio (such as the <code>AliyunBailianDataFullAccess</code> policy, which includes the sfm:CreateIndex permission required), and <a href="https://help.aliyun.com/document_detail/2851098.html">become member of a workspace</a>.</li>
-     * <li><strong>Alibaba Cloud account</strong>: Has the permission by default, and can call the operation directly.</li>
+     * <li><strong>Permissions</strong>:<ul>
+     * <li><strong>RAM user</strong>: A RAM user must obtain the required <a href="https://help.aliyun.com/document_detail/2848578.html">API permissions</a> for Alibaba Cloud Model Studio and <a href="https://help.aliyun.com/document_detail/2851098.html">join a workspace</a> before calling this operation. You can use the <code>AliyunBailianDataFullAccess</code> policy, which includes the \<code>sfm:CreateIndex\\</code> permission required for this operation.</li>
+     * <li><strong>Alibaba Cloud account</strong>: By default, Alibaba Cloud accounts have the required permissions and can call this operation directly.</li>
      * </ul>
      * </li>
-     * <li><strong>Call method</strong>: We recommend using the latest version of the <a href="https://api.alibabacloud.com/api-tools/sdk/bailian?version=2023-12-29">GenAI Service Platform SDK</a>. The SDK encapsulates complex signature computational logic to simplify the call process.</li>
-     * <li><strong>What to do next</strong>: This operation only initializes knowledge base creation job. After that, call <strong>SubmitIndexJob</strong> to complete the creation. Otherwise, you will get an empty knowledge base. For more information about the sample code, see <a href="https://help.aliyun.com/document_detail/2852772.html">Knowledge base API guide</a>.</li>
-     * <li><strong>Idempotence</strong>: This operation is not idempotent. If you call the operation for multiple times, you may create several knowledge bases with the same name. We recommend following a &quot;query first, then create&quot; logic.
-     * <strong>Rate limit:</strong> Rate limiting will be triggered if you call this operation frequently. Do not exceed 10 times per second. If limiting is triggered, try again later.</li>
+     * <li><strong>How to call</strong>: Use the latest version of the &lt;props=&quot;intl&quot;&gt;<a href="https://api.alibabacloud.com/api-tools/sdk/bailian?version=2023-12-29">Alibaba Cloud Model Studio SDK</a> to call this operation. The SDK handles the complex signature calculation logic to simplify the process.</li>
+     * <li><strong>What to do next</strong>: This operation only initializes a knowledge base creation job. After calling this operation, you must call the <strong>SubmitIndexJob</strong> operation to complete the creation. Otherwise, an empty knowledge base is created. For related code examples, see <a href="https://help.aliyun.com/document_detail/2852772.html">Knowledge base API guide</a>.</li>
+     * <li><strong>Idempotence</strong>: This operation is not idempotent. Repeated calls may create multiple knowledge bases with the same name. To ensure idempotence, query for the knowledge base before you create it.
+     * <strong>Rate limiting:</strong>
+     * Frequent calls to this operation are subject to rate limiting. Do not exceed a frequency of 10 calls per second. If you encounter rate limiting, retry the call later.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Create a knowledge base of the document search type.</p>
+     * <p>Use this API to create two types of knowledge bases: unstructured knowledge bases for documents, audio, or video, and structured knowledge bases for data queries or image Q&amp;A.</p>
      * 
      * @param request CreateIndexRequest
      * @return CreateIndexResponse
@@ -974,8 +1052,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li>You can store specific information from conversations (memory nodes. For more information, see <a href="https://www.alibabacloud.com/help/en/model-studio/user-guide/long-term-memory">Long-term memory</a>) in a long-term memory. Agent applications can then reference this information in subsequent conversations. This is not an automatic creation procedure. You must first invoke the <a href="https://www.alibabacloud.com/help/en/model-studio/developer-reference/api-bailian-2023-12-29-creatememory">CreateMemory</a> operation to create a long-term memory and obtain the <code>memoryId</code>. Then pass the <code>memoryId</code> when you <a href="https://www.alibabacloud.com/help/en/model-studio/user-guide/application-calling">invoke the agent application through the API</a>.<blockquote>
+     * <p>Long-term memory does not support storing and managing user profiles through the API. Perform related operations in the console. For more information, see <a href="https://www.alibabacloud.com/help/en/model-studio/user-guide/long-term-memory#578ebae524m6l">Long-term memory</a>.</p>
+     * </blockquote>
+     * </li>
+     * <li>If you pass a <code>memoryId</code>, the system uses automatic creation to generate memory nodes (MemoryNode) under the specified long-term memory based on conversation records. You can also invoke the <a href="https://www.alibabacloud.com/help/en/model-studio/developer-reference/api-bailian-2023-12-29-creatememorynode">CreateMemoryNode</a> operation to manually create memory nodes.</li>
+     * <li>This operation does not support idempotence.
+     * <strong>Throttling:</strong> Ensure that the interval between two consecutive requests is at least 1 second. Otherwise, throttling may be triggered. If throttling occurs, retry later.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>创建Memory</p>
+     * <p>Creates a long-term memory.</p>
      * 
      * @param request CreateMemoryRequest
      * @param headers map
@@ -1008,8 +1097,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li>You can store specific information from conversations (memory nodes. For more information, see <a href="https://www.alibabacloud.com/help/en/model-studio/user-guide/long-term-memory">Long-term memory</a>) in a long-term memory. Agent applications can then reference this information in subsequent conversations. This is not an automatic creation procedure. You must first invoke the <a href="https://www.alibabacloud.com/help/en/model-studio/developer-reference/api-bailian-2023-12-29-creatememory">CreateMemory</a> operation to create a long-term memory and obtain the <code>memoryId</code>. Then pass the <code>memoryId</code> when you <a href="https://www.alibabacloud.com/help/en/model-studio/user-guide/application-calling">invoke the agent application through the API</a>.<blockquote>
+     * <p>Long-term memory does not support storing and managing user profiles through the API. Perform related operations in the console. For more information, see <a href="https://www.alibabacloud.com/help/en/model-studio/user-guide/long-term-memory#578ebae524m6l">Long-term memory</a>.</p>
+     * </blockquote>
+     * </li>
+     * <li>If you pass a <code>memoryId</code>, the system uses automatic creation to generate memory nodes (MemoryNode) under the specified long-term memory based on conversation records. You can also invoke the <a href="https://www.alibabacloud.com/help/en/model-studio/developer-reference/api-bailian-2023-12-29-creatememorynode">CreateMemoryNode</a> operation to manually create memory nodes.</li>
+     * <li>This operation does not support idempotence.
+     * <strong>Throttling:</strong> Ensure that the interval between two consecutive requests is at least 1 second. Otherwise, throttling may be triggered. If throttling occurs, retry later.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>创建Memory</p>
+     * <p>Creates a long-term memory.</p>
      * 
      * @param request CreateMemoryRequest
      * @return CreateMemoryResponse
@@ -1022,7 +1122,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建记忆Node</p>
+     * <p>Creates a memory node.</p>
      * 
      * @param request CreateMemoryNodeRequest
      * @param headers map
@@ -1056,7 +1156,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建记忆Node</p>
+     * <p>Creates a memory node.</p>
      * 
      * @param request CreateMemoryNodeRequest
      * @return CreateMemoryNodeResponse
@@ -1068,8 +1168,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This API does not currently support the creation of text-to-image prompt templates.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Creates a prompt template.</p>
+     * <p>Create a prompt template.</p>
      * 
      * @param request CreatePromptTemplateRequest
      * @param headers map
@@ -1106,8 +1209,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This API does not currently support the creation of text-to-image prompt templates.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Creates a prompt template.</p>
+     * <p>Create a prompt template.</p>
      * 
      * @param request CreatePromptTemplateRequest
      * @return CreatePromptTemplateResponse
@@ -1160,8 +1266,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li>Resource Access Management (RAM) users must first obtain <a href="https://help.aliyun.com/document_detail/2848578.html">API permissions</a> for Alibaba Cloud Model Studio (requiring <code>AliyunBailianDataFullAccess</code>, which includes the sfm:DeleteCategory permission), and <a href="https://help.aliyun.com/document_detail/2851098.html">join a workspace</a> before calling this operation. Alibaba Cloud accounts can call this operation directly without authorization. Use the latest &lt;props=&quot;china&quot;&gt;<a href="https://api.aliyun.com/api-tools/sdk/bailian?version=2023-12-29">Alibaba Cloud Model Studio SDK</a>&lt;props=&quot;intl&quot;&gt;<a href="https://api.alibabacloud.com/api-tools/sdk/bailian?version=2023-12-29">Alibaba Cloud Model Studio SDK</a> to call this operation.</li>
+     * <li>This operation is idempotent.
+     * <strong>Rate limiting:</strong>
+     * This operation is subject to rate limiting. Do not exceed 5 calls per second. If you are throttled, retry later.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>Deletes a specified category permanently.</p>
+     * <p>Permanently deletes a specified category.</p>
      * 
      * @param request DeleteCategoryRequest
      * @param headers map
@@ -1188,8 +1302,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li>Resource Access Management (RAM) users must first obtain <a href="https://help.aliyun.com/document_detail/2848578.html">API permissions</a> for Alibaba Cloud Model Studio (requiring <code>AliyunBailianDataFullAccess</code>, which includes the sfm:DeleteCategory permission), and <a href="https://help.aliyun.com/document_detail/2851098.html">join a workspace</a> before calling this operation. Alibaba Cloud accounts can call this operation directly without authorization. Use the latest &lt;props=&quot;china&quot;&gt;<a href="https://api.aliyun.com/api-tools/sdk/bailian?version=2023-12-29">Alibaba Cloud Model Studio SDK</a>&lt;props=&quot;intl&quot;&gt;<a href="https://api.alibabacloud.com/api-tools/sdk/bailian?version=2023-12-29">Alibaba Cloud Model Studio SDK</a> to call this operation.</li>
+     * <li>This operation is idempotent.
+     * <strong>Rate limiting:</strong>
+     * This operation is subject to rate limiting. Do not exceed 5 calls per second. If you are throttled, retry later.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>Deletes a specified category permanently.</p>
+     * <p>Permanently deletes a specified category.</p>
      * 
      * @param request DeleteCategoryRequest
      * @return DeleteCategoryResponse
@@ -1202,21 +1324,22 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
+     * <p><warning>  Deleted text chunks cannot be recovered (hard delete). Proceed with caution.</p>
      * <ul>
-     * <li><strong>Warning</strong> After a text chunk is deleted, it cannot be restored. Proceed with caution.</li>
-     * <li><strong>Required permissions</strong>:<ul>
-     * <li><strong>RAM users</strong>: Must first obtain the <a href="https://help.aliyun.com/document_detail/2848578.html">API permissions</a> of Model Studio (such as the <code>AliyunBailianDataFullAccess</code> policy, which includes the sfm:DeleteChunk permission required), and <a href="https://help.aliyun.com/document_detail/2851098.html">become member of a workspace</a>.</li>
-     * <li><strong>Alibaba Cloud account</strong>: Has the permission by default, and can call the operation directly.</li>
+     * <li><strong>Permission requirements</strong>:<ul>
+     * <li><strong>Resource Access Management (RAM) user</strong>: Obtain <a href="https://help.aliyun.com/document_detail/2848578.html">API permissions</a> for Model Studio first (you can use the <code>AliyunBailianDataFullAccess</code> policy, which includes the sfm:DeleteChunk permission required by this operation), and <a href="https://help.aliyun.com/document_detail/2851098.html">join a workspace</a> before invoking this operation.</li>
+     * <li><strong>Alibaba Cloud account</strong>: Has permissions by default and can invoke this operation directly.</li>
      * </ul>
      * </li>
-     * <li><strong>Call method</strong>: We recommend using the latest version of the <a href="https://api.alibabacloud.com/api-tools/sdk/bailian?version=2023-12-29">GenAI Service Platform SDK</a>. The SDK encapsulates complex signature computational logic to simplify the call process.</li>
-     * <li><strong>Delay</strong>: The update takes effect immediately. During peak hours, the update may take place in seconds.</li>
-     * <li><strong>Idempotence</strong>: This operation is idempotent. If you perform a repeated operation on a chunk that has already been deleted, the interface returns a success.
-     * <strong>Rate limit:</strong> Rate limiting will be triggered if you call this operation frequently. Do not exceed 10 times per second. If limiting is triggered, try again later.</li>
+     * <li><strong>Invocation method</strong>: Use the latest &lt;props=&quot;china&quot;&gt;<a href="https://api.aliyun.com/api-tools/sdk/bailian?version=2023-12-29">Model Studio SDK</a>&lt;props=&quot;intl&quot;&gt;<a href="https://api.alibabacloud.com/api-tools/sdk/bailian?version=2023-12-29">Model Studio SDK</a>. The SDK provides encapsulation of complex signature calculation logic and simplifies the invocation procedure.</li>
+     * <li><strong>Effective latency</strong>: Changes typically take effect immediately. During peak hours, there may be a slight delay (seconds).</li>
+     * <li><strong>Idempotence</strong>: This operation is idempotent. Repeated calls to delete an already deleted text chunk return a success response.
+     * <strong>Rate limit:</strong>
+     * This operation is throttled if called too frequently. Do not exceed 10 calls per second. If throttled, retry later.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Deletes a specified text chunk from a knowledge base. The deleted chunk cannot be retrieved or recalled.</p>
+     * <p>Deletes specified text chunks from a knowledge base. Deleted text chunks cannot be retrieved or recalled.</p>
      * 
      * @param tmpReq DeleteChunkRequest
      * @param headers map
@@ -1260,21 +1383,22 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
+     * <p><warning>  Deleted text chunks cannot be recovered (hard delete). Proceed with caution.</p>
      * <ul>
-     * <li><strong>Warning</strong> After a text chunk is deleted, it cannot be restored. Proceed with caution.</li>
-     * <li><strong>Required permissions</strong>:<ul>
-     * <li><strong>RAM users</strong>: Must first obtain the <a href="https://help.aliyun.com/document_detail/2848578.html">API permissions</a> of Model Studio (such as the <code>AliyunBailianDataFullAccess</code> policy, which includes the sfm:DeleteChunk permission required), and <a href="https://help.aliyun.com/document_detail/2851098.html">become member of a workspace</a>.</li>
-     * <li><strong>Alibaba Cloud account</strong>: Has the permission by default, and can call the operation directly.</li>
+     * <li><strong>Permission requirements</strong>:<ul>
+     * <li><strong>Resource Access Management (RAM) user</strong>: Obtain <a href="https://help.aliyun.com/document_detail/2848578.html">API permissions</a> for Model Studio first (you can use the <code>AliyunBailianDataFullAccess</code> policy, which includes the sfm:DeleteChunk permission required by this operation), and <a href="https://help.aliyun.com/document_detail/2851098.html">join a workspace</a> before invoking this operation.</li>
+     * <li><strong>Alibaba Cloud account</strong>: Has permissions by default and can invoke this operation directly.</li>
      * </ul>
      * </li>
-     * <li><strong>Call method</strong>: We recommend using the latest version of the <a href="https://api.alibabacloud.com/api-tools/sdk/bailian?version=2023-12-29">GenAI Service Platform SDK</a>. The SDK encapsulates complex signature computational logic to simplify the call process.</li>
-     * <li><strong>Delay</strong>: The update takes effect immediately. During peak hours, the update may take place in seconds.</li>
-     * <li><strong>Idempotence</strong>: This operation is idempotent. If you perform a repeated operation on a chunk that has already been deleted, the interface returns a success.
-     * <strong>Rate limit:</strong> Rate limiting will be triggered if you call this operation frequently. Do not exceed 10 times per second. If limiting is triggered, try again later.</li>
+     * <li><strong>Invocation method</strong>: Use the latest &lt;props=&quot;china&quot;&gt;<a href="https://api.aliyun.com/api-tools/sdk/bailian?version=2023-12-29">Model Studio SDK</a>&lt;props=&quot;intl&quot;&gt;<a href="https://api.alibabacloud.com/api-tools/sdk/bailian?version=2023-12-29">Model Studio SDK</a>. The SDK provides encapsulation of complex signature calculation logic and simplifies the invocation procedure.</li>
+     * <li><strong>Effective latency</strong>: Changes typically take effect immediately. During peak hours, there may be a slight delay (seconds).</li>
+     * <li><strong>Idempotence</strong>: This operation is idempotent. Repeated calls to delete an already deleted text chunk return a success response.
+     * <strong>Rate limit:</strong>
+     * This operation is throttled if called too frequently. Do not exceed 10 calls per second. If throttled, retry later.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Deletes a specified text chunk from a knowledge base. The deleted chunk cannot be retrieved or recalled.</p>
+     * <p>Deletes specified text chunks from a knowledge base. Deleted text chunks cannot be retrieved or recalled.</p>
      * 
      * @param request DeleteChunkRequest
      * @return DeleteChunkResponse
@@ -1286,6 +1410,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li>RAM用户（子账号）需要首先获取阿里云百炼的<a href="https://help.aliyun.com/document_detail/2848578.html">API权限</a>（需要<code>AliyunBailianDataFullAccess</code>，已包括sfm:DeleteConnector权限点），并<a href="https://help.aliyun.com/document_detail/2851098.html">加入一个业务空间</a>后，方可调用本接口。阿里云账号（主账号）可直接调用无须授权。建议您通过最新版<a href="https://api.aliyun.com/api-tools/sdk/bailian?version=2023-12-29">阿里云百炼SDK</a><a href="https://api.alibabacloud.com/api-tools/sdk/bailian?version=2023-12-29">阿里云百炼SDK</a>来调用本接口。</li>
+     * <li>本接口不具备幂等性。
+     * <strong>限流说明：</strong>
+     * 本接口频繁调用会被限流，频率请勿超过5次/秒。如遇限流，请稍后重试。</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
      * <p>删除连接器</p>
      * 
@@ -1314,6 +1446,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li>RAM用户（子账号）需要首先获取阿里云百炼的<a href="https://help.aliyun.com/document_detail/2848578.html">API权限</a>（需要<code>AliyunBailianDataFullAccess</code>，已包括sfm:DeleteConnector权限点），并<a href="https://help.aliyun.com/document_detail/2851098.html">加入一个业务空间</a>后，方可调用本接口。阿里云账号（主账号）可直接调用无须授权。建议您通过最新版<a href="https://api.aliyun.com/api-tools/sdk/bailian?version=2023-12-29">阿里云百炼SDK</a><a href="https://api.alibabacloud.com/api-tools/sdk/bailian?version=2023-12-29">阿里云百炼SDK</a>来调用本接口。</li>
+     * <li>本接口不具备幂等性。
+     * <strong>限流说明：</strong>
+     * 本接口频繁调用会被限流，频率请勿超过5次/秒。如遇限流，请稍后重试。</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
      * <p>删除连接器</p>
      * 
@@ -1327,8 +1467,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li>Deleting data tables via API is not supported. To delete a data table or specific data within a table, go to &lt;props=&quot;china&quot;&gt;<a href="https://bailian.console.aliyun.com/?tab=app#/data-center">Application Data</a>&lt;props=&quot;intl&quot;&gt;<a href="https://modelstudio.console.alibabacloud.com/?tab=app#/data-center">Application Data</a> to perform the operation.</li>
+     * <li>This API is used to delete files in &lt;props=&quot;china&quot;&gt;<a href="https://bailian.console.aliyun.com/?tab=app#/data-center">Application Data</a>&lt;props=&quot;intl&quot;&gt;<a href="https://modelstudio.console.alibabacloud.com/?tab=app#/data-center">Application Data</a> and does not affect any knowledge bases that have already been built. To delete a file from a knowledge base, invoke the <strong>DeleteIndexDocument</strong> API.</li>
+     * <li>A RAM user must first obtain the <a href="https://help.aliyun.com/document_detail/2848578.html">API permissions</a> for Alibaba Cloud Model Studio (requiring <code>AliyunBailianDataFullAccess</code>, which includes the <code>sfm:DeleteFile</code> permission point) and <a href="https://help.aliyun.com/document_detail/2851098.html">join a workspace</a> before invoking this API. An Alibaba Cloud account can invoke this API directly without authorization. We recommend that you use the latest version of the &lt;props=&quot;china&quot;&gt;<a href="https://api.aliyun.com/api-tools/sdk/bailian?version=2023-12-29">Alibaba Cloud Model Studio SDK</a>&lt;props=&quot;intl&quot;&gt;<a href="https://api.alibabacloud.com/api-tools/sdk/bailian?version=2023-12-29">Alibaba Cloud Model Studio SDK</a> to invoke this API.</li>
+     * <li>This API can only delete files whose status is either Failed to Parse (<code>PARSE_FAILED</code>) or Parse Succeeded (<code>PARSE_SUCCESS</code>).</li>
+     * <li>This API is idempotent.
+     * <strong>Rate Limiting Notice:</strong>
+     * Frequent invocation of this API will trigger rate limiting. Do not exceed 10 requests per second. If rate limited, retry after a short wait.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>Deletes a specified unstructured document permanently. You cannot use the API to delete structured documents, see the Usage notes section of this topic.</p>
+     * <p>Permanently delete a specified file from application data. Deleting data tables via API is not supported. For details, see the API Guide below.</p>
      * 
      * @param request DeleteFileRequest
      * @param headers map
@@ -1355,8 +1506,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li>Deleting data tables via API is not supported. To delete a data table or specific data within a table, go to &lt;props=&quot;china&quot;&gt;<a href="https://bailian.console.aliyun.com/?tab=app#/data-center">Application Data</a>&lt;props=&quot;intl&quot;&gt;<a href="https://modelstudio.console.alibabacloud.com/?tab=app#/data-center">Application Data</a> to perform the operation.</li>
+     * <li>This API is used to delete files in &lt;props=&quot;china&quot;&gt;<a href="https://bailian.console.aliyun.com/?tab=app#/data-center">Application Data</a>&lt;props=&quot;intl&quot;&gt;<a href="https://modelstudio.console.alibabacloud.com/?tab=app#/data-center">Application Data</a> and does not affect any knowledge bases that have already been built. To delete a file from a knowledge base, invoke the <strong>DeleteIndexDocument</strong> API.</li>
+     * <li>A RAM user must first obtain the <a href="https://help.aliyun.com/document_detail/2848578.html">API permissions</a> for Alibaba Cloud Model Studio (requiring <code>AliyunBailianDataFullAccess</code>, which includes the <code>sfm:DeleteFile</code> permission point) and <a href="https://help.aliyun.com/document_detail/2851098.html">join a workspace</a> before invoking this API. An Alibaba Cloud account can invoke this API directly without authorization. We recommend that you use the latest version of the &lt;props=&quot;china&quot;&gt;<a href="https://api.aliyun.com/api-tools/sdk/bailian?version=2023-12-29">Alibaba Cloud Model Studio SDK</a>&lt;props=&quot;intl&quot;&gt;<a href="https://api.alibabacloud.com/api-tools/sdk/bailian?version=2023-12-29">Alibaba Cloud Model Studio SDK</a> to invoke this API.</li>
+     * <li>This API can only delete files whose status is either Failed to Parse (<code>PARSE_FAILED</code>) or Parse Succeeded (<code>PARSE_SUCCESS</code>).</li>
+     * <li>This API is idempotent.
+     * <strong>Rate Limiting Notice:</strong>
+     * Frequent invocation of this API will trigger rate limiting. Do not exceed 10 requests per second. If rate limited, retry after a short wait.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>Deletes a specified unstructured document permanently. You cannot use the API to delete structured documents, see the Usage notes section of this topic.</p>
+     * <p>Permanently delete a specified file from application data. Deleting data tables via API is not supported. For details, see the API Guide below.</p>
      * 
      * @param request DeleteFileRequest
      * @return DeleteFileResponse
@@ -1368,8 +1530,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li>Deleting data tables through the API is not supported. To delete a data table or specific data in a table, go to &lt;props=&quot;china&quot;&gt;<a href="https://bailian.console.aliyun.com/?tab=app#/data-center">Application Data</a>&lt;props=&quot;intl&quot;&gt;<a href="https://modelstudio.console.alibabacloud.com/?tab=app#/data-center">Application Data</a>.</li>
+     * <li>This API is used to delete files in &lt;props=&quot;china&quot;&gt;<a href="https://bailian.console.aliyun.com/?tab=app#/data-center">Application Data</a>&lt;props=&quot;intl&quot;&gt;<a href="https://modelstudio.console.alibabacloud.com/?tab=app#/data-center">Application Data</a>. It does not affect knowledge bases that have already been built. To delete files in a knowledge base, call the <strong>DeleteIndexDocument</strong> operation.</li>
+     * <li>A RAM user (sub-account) must first obtain the <a href="https://help.aliyun.com/document_detail/2848578.html">API permissions</a> for Alibaba Cloud Model Studio (requires <code>AliyunBailianDataFullAccess</code>, which already includes the sfm:DeleteFiles permission) and <a href="https://help.aliyun.com/document_detail/2851098.html">join a workspace</a> before calling this operation. The Alibaba Cloud account (main account) can call this operation directly without authorization. We recommend that you use the latest version of the &lt;props=&quot;china&quot;&gt;<a href="https://api.aliyun.com/api-tools/sdk/bailian?version=2023-12-29">Alibaba Cloud Model Studio SDK</a>&lt;props=&quot;intl&quot;&gt;<a href="https://api.alibabacloud.com/api-tools/sdk/bailian?version=2023-12-29">Alibaba Cloud Model Studio SDK</a> to call this operation.</li>
+     * <li>This operation can only delete files whose status is parsing failed (PARSE_FAILED) or parsing succeeded (PARSE_SUCCESS).</li>
+     * <li>This operation is idempotent.
+     * <strong>Throttling:</strong>
+     * Frequent calls to this operation are throttled. Do not exceed 10 queries per second (QPS). If you are throttled, try again later.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>批量删除文档</p>
+     * <p>Delete files in batch</p>
      * 
      * @param tmpReq DeleteFilesRequest
      * @param headers map
@@ -1408,8 +1581,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li>Deleting data tables through the API is not supported. To delete a data table or specific data in a table, go to &lt;props=&quot;china&quot;&gt;<a href="https://bailian.console.aliyun.com/?tab=app#/data-center">Application Data</a>&lt;props=&quot;intl&quot;&gt;<a href="https://modelstudio.console.alibabacloud.com/?tab=app#/data-center">Application Data</a>.</li>
+     * <li>This API is used to delete files in &lt;props=&quot;china&quot;&gt;<a href="https://bailian.console.aliyun.com/?tab=app#/data-center">Application Data</a>&lt;props=&quot;intl&quot;&gt;<a href="https://modelstudio.console.alibabacloud.com/?tab=app#/data-center">Application Data</a>. It does not affect knowledge bases that have already been built. To delete files in a knowledge base, call the <strong>DeleteIndexDocument</strong> operation.</li>
+     * <li>A RAM user (sub-account) must first obtain the <a href="https://help.aliyun.com/document_detail/2848578.html">API permissions</a> for Alibaba Cloud Model Studio (requires <code>AliyunBailianDataFullAccess</code>, which already includes the sfm:DeleteFiles permission) and <a href="https://help.aliyun.com/document_detail/2851098.html">join a workspace</a> before calling this operation. The Alibaba Cloud account (main account) can call this operation directly without authorization. We recommend that you use the latest version of the &lt;props=&quot;china&quot;&gt;<a href="https://api.aliyun.com/api-tools/sdk/bailian?version=2023-12-29">Alibaba Cloud Model Studio SDK</a>&lt;props=&quot;intl&quot;&gt;<a href="https://api.alibabacloud.com/api-tools/sdk/bailian?version=2023-12-29">Alibaba Cloud Model Studio SDK</a> to call this operation.</li>
+     * <li>This operation can only delete files whose status is parsing failed (PARSE_FAILED) or parsing succeeded (PARSE_SUCCESS).</li>
+     * <li>This operation is idempotent.
+     * <strong>Throttling:</strong>
+     * Frequent calls to this operation are throttled. Do not exceed 10 queries per second (QPS). If you are throttled, try again later.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>批量删除文档</p>
+     * <p>Delete files in batch</p>
      * 
      * @param request DeleteFilesRequest
      * @return DeleteFilesResponse
@@ -1422,16 +1606,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  Before you call this operation, make sure that your knowledge base is created and is not deleted. That is, the primary key ID of the knowledge base <code>IndexId</code> is valid.</p>
      * <ul>
-     * <li>If a knowledge base is being called by an application, disassociate the knowledge base before you can delete it. To disassociate the knowledge base, you must use the console. For more information, see <a href="https://www.alibabacloud.com/help/en/model-studio/user-guide/rag-knowledge-base">Create a knowledge base</a>.</li>
-     * <li>After you delete a knowledge base, it cannot be recovered. We recommend that you proceed with caution.</li>
-     * <li>Imported documents are not deleted from the <a href="https://bailian.console.aliyun.com/#/data-center">Data Management</a> if you call this operation.</li>
-     * <li>This interface is idempotent.</li>
+     * <li>Resource Access Management (RAM) users must first obtain <a href="https://help.aliyun.com/document_detail/2848578.html">API permissions</a> for Model Studio (requiring <code>AliyunBailianDataFullAccess</code>, which includes the sfm:DeleteIndex permission) and <a href="https://help.aliyun.com/document_detail/2851098.html">join a workspace</a> before invoking this operation. Alibaba Cloud accounts can invoke this operation directly without authorization. Use the latest &lt;props=&quot;china&quot;&gt;<a href="https://api.aliyun.com/api-tools/sdk/bailian?version=2023-12-29">Model Studio SDK</a>&lt;props=&quot;intl&quot;&gt;<a href="https://api.alibabacloud.com/api-tools/sdk/bailian?version=2023-12-29">Model Studio SDK</a> to invoke this operation.</li>
+     * <li>Before invoking this operation, make sure that your knowledge base has been created and has not been deleted (that is, the knowledge base ID <code>IndexId</code> is valid).</li>
+     * <li>If the knowledge base is associated with an application, you must first dissociate it from the application before deleting it. This can currently only be done through the console. For more information, see <a href="https://help.aliyun.com/document_detail/2807740.html">Knowledge base</a>.</li>
+     * <li>Deletion is irreversible. A deleted knowledge base cannot be recovered. Proceed with caution.</li>
+     * <li>Invoking this operation does not delete files that have been imported into &lt;props=&quot;china&quot;&gt;<a href="https://bailian.console.aliyun.com/?tab=app#/data-center">Application Data</a>&lt;props=&quot;intl&quot;&gt;<a href="https://modelstudio.console.alibabacloud.com/?tab=app#/data-center">Application Data</a>.</li>
+     * <li>This operation has idempotence.
+     * <strong>Rate limit:</strong>
+     * This operation is throttled if called too frequently. Do not exceed 10 calls per second. If you are throttled, retry later.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Deletes a specified knowledge base permanently.</p>
+     * <p>Permanently deletes a specified knowledge base.</p>
      * 
      * @param request DeleteIndexRequest
      * @param headers map
@@ -1465,16 +1652,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  Before you call this operation, make sure that your knowledge base is created and is not deleted. That is, the primary key ID of the knowledge base <code>IndexId</code> is valid.</p>
      * <ul>
-     * <li>If a knowledge base is being called by an application, disassociate the knowledge base before you can delete it. To disassociate the knowledge base, you must use the console. For more information, see <a href="https://www.alibabacloud.com/help/en/model-studio/user-guide/rag-knowledge-base">Create a knowledge base</a>.</li>
-     * <li>After you delete a knowledge base, it cannot be recovered. We recommend that you proceed with caution.</li>
-     * <li>Imported documents are not deleted from the <a href="https://bailian.console.aliyun.com/#/data-center">Data Management</a> if you call this operation.</li>
-     * <li>This interface is idempotent.</li>
+     * <li>Resource Access Management (RAM) users must first obtain <a href="https://help.aliyun.com/document_detail/2848578.html">API permissions</a> for Model Studio (requiring <code>AliyunBailianDataFullAccess</code>, which includes the sfm:DeleteIndex permission) and <a href="https://help.aliyun.com/document_detail/2851098.html">join a workspace</a> before invoking this operation. Alibaba Cloud accounts can invoke this operation directly without authorization. Use the latest &lt;props=&quot;china&quot;&gt;<a href="https://api.aliyun.com/api-tools/sdk/bailian?version=2023-12-29">Model Studio SDK</a>&lt;props=&quot;intl&quot;&gt;<a href="https://api.alibabacloud.com/api-tools/sdk/bailian?version=2023-12-29">Model Studio SDK</a> to invoke this operation.</li>
+     * <li>Before invoking this operation, make sure that your knowledge base has been created and has not been deleted (that is, the knowledge base ID <code>IndexId</code> is valid).</li>
+     * <li>If the knowledge base is associated with an application, you must first dissociate it from the application before deleting it. This can currently only be done through the console. For more information, see <a href="https://help.aliyun.com/document_detail/2807740.html">Knowledge base</a>.</li>
+     * <li>Deletion is irreversible. A deleted knowledge base cannot be recovered. Proceed with caution.</li>
+     * <li>Invoking this operation does not delete files that have been imported into &lt;props=&quot;china&quot;&gt;<a href="https://bailian.console.aliyun.com/?tab=app#/data-center">Application Data</a>&lt;props=&quot;intl&quot;&gt;<a href="https://modelstudio.console.alibabacloud.com/?tab=app#/data-center">Application Data</a>.</li>
+     * <li>This operation has idempotence.
+     * <strong>Rate limit:</strong>
+     * This operation is throttled if called too frequently. Do not exceed 10 calls per second. If you are throttled, retry later.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Deletes a specified knowledge base permanently.</p>
+     * <p>Permanently deletes a specified knowledge base.</p>
      * 
      * @param request DeleteIndexRequest
      * @return DeleteIndexResponse
@@ -1487,16 +1677,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  Before you call this operation, make sure that your knowledge base is created and is not deleted. That is, the primary key ID of the knowledge base <code>IndexId</code> is valid.</p>
      * <ul>
-     * <li>Only documents with the INSERT_ERROR and FINISH states can be deleted. To query the status of documents in a specified knowledge base, call the <a href="https://www.alibabacloud.com/help/en/model-studio/developer-reference/api-bailian-2023-12-29-listindexdocuments">ListIndexDocuments</a> operation.</li>
-     * <li>After you delete a document, it cannot be recovered and the <a href="https://www.alibabacloud.com/help/en/model-studio/developer-reference/api-bailian-2023-12-29-retrieve">Retrieve</a> operation cannot query information about the document. We recommend that you proceed with caution.</li>
-     * <li>Imported documents are not deleted from the <a href="https://bailian.console.aliyun.com/#/data-center">Data Management</a> if you call this operation.</li>
-     * <li>This interface is idempotent.</li>
+     * <li>This operation does not support deleting data from data query or image Q&amp;A knowledge bases. Use the Model Studio console instead.</li>
+     * <li>Resource Access Management (RAM) users must first obtain <a href="https://help.aliyun.com/document_detail/2848578.html">API permissions</a> for Model Studio (requiring <code>AliyunBailianDataFullAccess</code>, which includes the sfm:DeleteIndexDocument permission), before calling this operation. Alibaba Cloud accounts can call this operation directly without authorization. Use the latest &lt;props=&quot;china&quot;&gt;<a href="https://api.aliyun.com/api-tools/sdk/bailian?version=2023-12-29">Model Studio SDK</a>&lt;props=&quot;intl&quot;&gt;<a href="https://api.alibabacloud.com/api-tools/sdk/bailian?version=2023-12-29">Model Studio SDK</a> to call this operation.</li>
+     * <li>Before calling this operation, make sure that your knowledge base has been created and has not been deleted (that is, the knowledge base ID <code>IndexId</code> is valid).</li>
+     * <li>You can only delete files whose status is import failed (INSERT_ERROR) or import succeeded (FINISH) in the knowledge base. To query the file status in a specified knowledge base, call the <strong>ListIndexDocuments</strong> operation.</li>
+     * <li>Deletion is irreversible. The content of deleted files cannot be recovered, and the <strong>Retrieve</strong> operation can no longer retrieve related information. Proceed with caution.</li>
+     * <li>Calling this operation does not delete documents that have been imported into &lt;props=&quot;china&quot;&gt;<a href="https://bailian.console.aliyun.com/?tab=app#/data-center">Application Data</a>&lt;props=&quot;intl&quot;&gt;<a href="https://modelstudio.console.alibabacloud.com/?tab=app#/data-center">Application Data</a>.</li>
+     * <li>This operation is idempotent.
+     * <strong>Throttling:</strong>
+     * This operation is throttled if called too frequently. Do not exceed 10 calls per second. If you are throttled, retry later.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Deletes one or more documents from a specified unstructured knowledge base permanently. You cannot use the API to delete structured documents, see the Usage notes section of this topic.</p>
+     * <p>Permanently deletes files from a specified knowledge base.</p>
      * 
      * @param tmpReq DeleteIndexDocumentRequest
      * @param headers map
@@ -1540,16 +1734,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  Before you call this operation, make sure that your knowledge base is created and is not deleted. That is, the primary key ID of the knowledge base <code>IndexId</code> is valid.</p>
      * <ul>
-     * <li>Only documents with the INSERT_ERROR and FINISH states can be deleted. To query the status of documents in a specified knowledge base, call the <a href="https://www.alibabacloud.com/help/en/model-studio/developer-reference/api-bailian-2023-12-29-listindexdocuments">ListIndexDocuments</a> operation.</li>
-     * <li>After you delete a document, it cannot be recovered and the <a href="https://www.alibabacloud.com/help/en/model-studio/developer-reference/api-bailian-2023-12-29-retrieve">Retrieve</a> operation cannot query information about the document. We recommend that you proceed with caution.</li>
-     * <li>Imported documents are not deleted from the <a href="https://bailian.console.aliyun.com/#/data-center">Data Management</a> if you call this operation.</li>
-     * <li>This interface is idempotent.</li>
+     * <li>This operation does not support deleting data from data query or image Q&amp;A knowledge bases. Use the Model Studio console instead.</li>
+     * <li>Resource Access Management (RAM) users must first obtain <a href="https://help.aliyun.com/document_detail/2848578.html">API permissions</a> for Model Studio (requiring <code>AliyunBailianDataFullAccess</code>, which includes the sfm:DeleteIndexDocument permission), before calling this operation. Alibaba Cloud accounts can call this operation directly without authorization. Use the latest &lt;props=&quot;china&quot;&gt;<a href="https://api.aliyun.com/api-tools/sdk/bailian?version=2023-12-29">Model Studio SDK</a>&lt;props=&quot;intl&quot;&gt;<a href="https://api.alibabacloud.com/api-tools/sdk/bailian?version=2023-12-29">Model Studio SDK</a> to call this operation.</li>
+     * <li>Before calling this operation, make sure that your knowledge base has been created and has not been deleted (that is, the knowledge base ID <code>IndexId</code> is valid).</li>
+     * <li>You can only delete files whose status is import failed (INSERT_ERROR) or import succeeded (FINISH) in the knowledge base. To query the file status in a specified knowledge base, call the <strong>ListIndexDocuments</strong> operation.</li>
+     * <li>Deletion is irreversible. The content of deleted files cannot be recovered, and the <strong>Retrieve</strong> operation can no longer retrieve related information. Proceed with caution.</li>
+     * <li>Calling this operation does not delete documents that have been imported into &lt;props=&quot;china&quot;&gt;<a href="https://bailian.console.aliyun.com/?tab=app#/data-center">Application Data</a>&lt;props=&quot;intl&quot;&gt;<a href="https://modelstudio.console.alibabacloud.com/?tab=app#/data-center">Application Data</a>.</li>
+     * <li>This operation is idempotent.
+     * <strong>Throttling:</strong>
+     * This operation is throttled if called too frequently. Do not exceed 10 calls per second. If you are throttled, retry later.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Deletes one or more documents from a specified unstructured knowledge base permanently. You cannot use the API to delete structured documents, see the Usage notes section of this topic.</p>
+     * <p>Permanently deletes files from a specified knowledge base.</p>
      * 
      * @param request DeleteIndexDocumentRequest
      * @return DeleteIndexDocumentResponse
@@ -1561,8 +1759,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li>Before calling this operation, make sure that your long-term memory has been created and has not been deleted (that is, the memoryId is valid).</li>
+     * <li>The delete operation is irreversible. The deleted long-term memory, including all of its long-term memory nodes, cannot be recovered. The <a href="https://www.alibabacloud.com/help/en/model-studio/developer-reference/api-bailian-2023-12-29-getmemory">GetMemory</a> operation will no longer be able to retrieve its information. Proceed with caution.</li>
+     * <li>This operation is idempotent.
+     * <strong>Rate limit:</strong> Make sure that the interval between two requests is at least 1 second. Otherwise, throttling may be triggered. If throttling occurs, retry later.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>删除memory</p>
+     * <p>Permanently deletes a specified long-term memory.</p>
      * 
      * @param request DeleteMemoryRequest
      * @param headers map
@@ -1589,8 +1795,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li>Before calling this operation, make sure that your long-term memory has been created and has not been deleted (that is, the memoryId is valid).</li>
+     * <li>The delete operation is irreversible. The deleted long-term memory, including all of its long-term memory nodes, cannot be recovered. The <a href="https://www.alibabacloud.com/help/en/model-studio/developer-reference/api-bailian-2023-12-29-getmemory">GetMemory</a> operation will no longer be able to retrieve its information. Proceed with caution.</li>
+     * <li>This operation is idempotent.
+     * <strong>Rate limit:</strong> Make sure that the interval between two requests is at least 1 second. Otherwise, throttling may be triggered. If throttling occurs, retry later.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>删除memory</p>
+     * <p>Permanently deletes a specified long-term memory.</p>
      * 
      * @param request DeleteMemoryRequest
      * @return DeleteMemoryResponse
@@ -1603,7 +1817,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除记忆Node</p>
+     * <p>Deletes a memory fragment.</p>
      * 
      * @param request DeleteMemoryNodeRequest
      * @param headers map
@@ -1631,7 +1845,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除记忆Node</p>
+     * <p>Deletes a memory fragment.</p>
      * 
      * @param request DeleteMemoryNodeRequest
      * @return DeleteMemoryNodeResponse
@@ -1685,15 +1899,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Before you call this API, make sure that your document is uploaded to the <a href="https://bailian.console.aliyun.com/knowledge-base#/data-center">Data Management</a> page of Alibaba Cloud Model Studio.</p>
      * <ul>
-     * <li>You can also call this operation to query unstructured documents that you upload on the <a href="https://bailian.console.aliyun.com/knowledge-base#/data-center">Data Management</a> page.</li>
+     * <li>A Resource Access Management (RAM) user must first obtain <a href="https://help.aliyun.com/document_detail/2848578.html">API permissions</a> for Model Studio (<code>AliyunBailianDataFullAccess</code> or <code>AliyunBailianDataReadOnlyAccess</code>, both of which include the sfm:DescribeFile permission) and <a href="https://help.aliyun.com/document_detail/2851098.html">join a workspace</a> before invoking this operation. An Alibaba Cloud account can invoke this operation directly without authorization. Invoke this operation by using the latest &lt;props=&quot;china&quot;&gt;<a href="https://api.aliyun.com/api-tools/sdk/bailian?version=2023-12-29">Model Studio SDK</a>&lt;props=&quot;intl&quot;&gt;<a href="https://api.alibabacloud.com/api-tools/sdk/bailian?version=2023-12-29">Model Studio SDK</a>.</li>
      * <li>This operation is idempotent.
-     * <strong>Throttling:</strong> Make sure that the interval between the two queries is at least 15 seconds. Otherwise, you may trigger system throttling. If throttling is triggered, try again later.</li>
+     * <strong>Rate limit:</strong>
+     * This operation is throttled if called too frequently. Do not exceed 10 calls per second. If you are throttled, retry later.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Obtains the basic information of a document, including the document name, type, and status.</p>
+     * <p>Queries the basic information about a file in application data, including the file name, type, and status.</p>
      * 
      * @param request DescribeFileRequest
      * @param headers map
@@ -1721,15 +1935,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Before you call this API, make sure that your document is uploaded to the <a href="https://bailian.console.aliyun.com/knowledge-base#/data-center">Data Management</a> page of Alibaba Cloud Model Studio.</p>
      * <ul>
-     * <li>You can also call this operation to query unstructured documents that you upload on the <a href="https://bailian.console.aliyun.com/knowledge-base#/data-center">Data Management</a> page.</li>
+     * <li>A Resource Access Management (RAM) user must first obtain <a href="https://help.aliyun.com/document_detail/2848578.html">API permissions</a> for Model Studio (<code>AliyunBailianDataFullAccess</code> or <code>AliyunBailianDataReadOnlyAccess</code>, both of which include the sfm:DescribeFile permission) and <a href="https://help.aliyun.com/document_detail/2851098.html">join a workspace</a> before invoking this operation. An Alibaba Cloud account can invoke this operation directly without authorization. Invoke this operation by using the latest &lt;props=&quot;china&quot;&gt;<a href="https://api.aliyun.com/api-tools/sdk/bailian?version=2023-12-29">Model Studio SDK</a>&lt;props=&quot;intl&quot;&gt;<a href="https://api.alibabacloud.com/api-tools/sdk/bailian?version=2023-12-29">Model Studio SDK</a>.</li>
      * <li>This operation is idempotent.
-     * <strong>Throttling:</strong> Make sure that the interval between the two queries is at least 15 seconds. Otherwise, you may trigger system throttling. If throttling is triggered, try again later.</li>
+     * <strong>Rate limit:</strong>
+     * This operation is throttled if called too frequently. Do not exceed 10 calls per second. If you are throttled, retry later.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Obtains the basic information of a document, including the document name, type, and status.</p>
+     * <p>Queries the basic information about a file in application data, including the file name, type, and status.</p>
      * 
      * @param request DescribeFileRequest
      * @return DescribeFileResponse
@@ -1742,7 +1956,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询支付宝打赏状态</p>
+     * <p>Queries the tipping status of the Alipay wallet bound to an application.</p>
      * 
      * @param request GetAlipayTransferStatusRequest
      * @param headers map
@@ -1780,7 +1994,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询支付宝打赏状态</p>
+     * <p>Queries the tipping status of the Alipay wallet bound to an application.</p>
      * 
      * @param request GetAlipayTransferStatusRequest
      * @return GetAlipayTransferStatusResponse
@@ -1793,7 +2007,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>支付宝打赏链接</p>
+     * <p>Retrieves the Alipay tipping URL for an application.</p>
      * 
      * @param request GetAlipayUrlRequest
      * @param headers map
@@ -1831,7 +2045,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>支付宝打赏链接</p>
+     * <p>Retrieves the Alipay tipping URL for an application.</p>
      * 
      * @param request GetAlipayUrlRequest
      * @return GetAlipayUrlResponse
@@ -1843,6 +2057,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li>RAM用户（子账号）需要首先获取阿里云百炼的<a href="https://help.aliyun.com/document_detail/2848578.html">API权限</a>（<code>AliyunBailianDataFullAccess</code>或<code>AliyunBailianDataReadOnlyAccess</code>均可，已包括sfm:GetAvailableParserTypes权限点），并<a href="https://help.aliyun.com/document_detail/2851098.html">加入一个业务空间</a>后，方可调用本接口。阿里云账号（主账号）可直接调用无须授权。建议您通过最新版&lt;props=&quot;china&quot;&gt;<a href="https://api.aliyun.com/api-tools/sdk/bailian?version=2023-12-29">阿里云百炼SDK</a>&lt;props=&quot;intl&quot;&gt;<a href="https://api.alibabacloud.com/api-tools/sdk/bailian?version=2023-12-29">阿里云百炼SDK</a>来调用本接口。</li>
+     * <li>本接口具有幂等性。
+     * <strong>限流说明：</strong>
+     * 本接口频繁调用会被限流，频率请勿超过10次/秒。如遇限流，请稍后重试。</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
      * <p>Lists all supported parser types based on the input file type (file extension).</p>
      * 
@@ -1877,6 +2099,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li>RAM用户（子账号）需要首先获取阿里云百炼的<a href="https://help.aliyun.com/document_detail/2848578.html">API权限</a>（<code>AliyunBailianDataFullAccess</code>或<code>AliyunBailianDataReadOnlyAccess</code>均可，已包括sfm:GetAvailableParserTypes权限点），并<a href="https://help.aliyun.com/document_detail/2851098.html">加入一个业务空间</a>后，方可调用本接口。阿里云账号（主账号）可直接调用无须授权。建议您通过最新版&lt;props=&quot;china&quot;&gt;<a href="https://api.aliyun.com/api-tools/sdk/bailian?version=2023-12-29">阿里云百炼SDK</a>&lt;props=&quot;intl&quot;&gt;<a href="https://api.alibabacloud.com/api-tools/sdk/bailian?version=2023-12-29">阿里云百炼SDK</a>来调用本接口。</li>
+     * <li>本接口具有幂等性。
+     * <strong>限流说明：</strong>
+     * 本接口频繁调用会被限流，频率请勿超过10次/秒。如遇限流，请稍后重试。</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
      * <p>Lists all supported parser types based on the input file type (file extension).</p>
      * 
@@ -1890,8 +2120,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li>To call this operation, a RAM user (sub-account) must have the required <a href="https://help.aliyun.com/document_detail/2848578.html">API permissions</a> for Alibaba Cloud Model Studio and must <a href="https://help.aliyun.com/document_detail/2851098.html">join a business space</a>. This requires the <code>AliyunBailianDataFullAccess</code> policy, which includes the sfm:GetConnector permission. An Alibaba Cloud account (primary account) can call this operation directly. We recommend using the latest <a href="https://api.aliyun.com/api-tools/sdk/bailian?version=2023-12-29">Alibaba Cloud Model Studio SDK</a><a href="https://api.alibabacloud.com/api-tools/sdk/bailian?version=2023-12-29">Alibaba Cloud Model Studio SDK</a> to call this operation.</li>
+     * <li>This operation is idempotent.
+     * <strong>Throttling:</strong>
+     * This operation is subject to throttling. Do not exceed a frequency of 5 calls per second. If a request is throttled, try again later.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>GetConnector</p>
+     * <p>Retrieves details about a connector. This operation currently supports only file connectors.</p>
      * 
      * @param request GetConnectorRequest
      * @param headers map
@@ -1928,8 +2166,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li>To call this operation, a RAM user (sub-account) must have the required <a href="https://help.aliyun.com/document_detail/2848578.html">API permissions</a> for Alibaba Cloud Model Studio and must <a href="https://help.aliyun.com/document_detail/2851098.html">join a business space</a>. This requires the <code>AliyunBailianDataFullAccess</code> policy, which includes the sfm:GetConnector permission. An Alibaba Cloud account (primary account) can call this operation directly. We recommend using the latest <a href="https://api.aliyun.com/api-tools/sdk/bailian?version=2023-12-29">Alibaba Cloud Model Studio SDK</a><a href="https://api.alibabacloud.com/api-tools/sdk/bailian?version=2023-12-29">Alibaba Cloud Model Studio SDK</a> to call this operation.</li>
+     * <li>This operation is idempotent.
+     * <strong>Throttling:</strong>
+     * This operation is subject to throttling. Do not exceed a frequency of 5 calls per second. If a request is throttled, try again later.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>GetConnector</p>
+     * <p>Retrieves details about a connector. This operation currently supports only file connectors.</p>
      * 
      * @param request GetConnectorRequest
      * @return GetConnectorResponse
@@ -1942,14 +2188,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <ol>
-     * <li>A knowledge base job is running. You can call the <a href="https://www.alibabacloud.com/help/en/model-studio/developer-reference/api-bailian-2023-12-29-submitindexjob">SubmitIndexJob</a> operation to create a creation job or the <a href="https://www.alibabacloud.com/help/en/model-studio/developer-reference/api-bailian-2023-12-29-submitindexadddocumentsjob">SubmitIndexAddDocumentsJob</a> operation to create a add document job. Then, obtain the <code>JobId</code> returned by the operations.</li>
-     * <li>We recommend that you call this operation at intervals of more than 5 seconds.</li>
-     * <li>This interface is idempotent.</li>
-     * </ol>
+     * <ul>
+     * <li>Resource Access Management (RAM) users must first obtain <a href="https://help.aliyun.com/document_detail/2848578.html">API permissions</a> for Alibaba Cloud Model Studio (<code>AliyunBailianDataFullAccess</code> or <code>AliyunBailianDataReadOnlyAccess</code>, both of which include the sfm:GetIndexJobStatus permission), and <a href="https://help.aliyun.com/document_detail/2851098.html">join a workspace</a> before invoking this operation. Alibaba Cloud accounts can invoke this operation directly without authorization. Use the latest &lt;props=&quot;china&quot;&gt;<a href="https://api.aliyun.com/api-tools/sdk/bailian?version=2023-12-29">Alibaba Cloud Model Studio SDK</a>&lt;props=&quot;intl&quot;&gt;<a href="https://api.alibabacloud.com/api-tools/sdk/bailian?version=2023-12-29">Alibaba Cloud Model Studio SDK</a> to invoke this operation.</li>
+     * <li>You must have a knowledge base job task in progress. To create a knowledge base creation task, invoke the <strong>SubmitIndexJob</strong> operation. To create a knowledge base document append task, invoke the <strong>SubmitIndexAddDocumentsJob</strong> operation. Obtain the corresponding <code>JobId</code> from the response.</li>
+     * <li>Invoke this operation at intervals of 5 seconds or more.</li>
+     * <li>This operation is idempotent.</li>
+     * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries the current status of a specified knowledge base creation or add document job.</p>
+     * <p>Queries the current status of a specified knowledge base creation job or knowledge base document append job.</p>
      * 
      * @param request GetIndexJobStatusRequest
      * @param headers map
@@ -1995,14 +2242,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <ol>
-     * <li>A knowledge base job is running. You can call the <a href="https://www.alibabacloud.com/help/en/model-studio/developer-reference/api-bailian-2023-12-29-submitindexjob">SubmitIndexJob</a> operation to create a creation job or the <a href="https://www.alibabacloud.com/help/en/model-studio/developer-reference/api-bailian-2023-12-29-submitindexadddocumentsjob">SubmitIndexAddDocumentsJob</a> operation to create a add document job. Then, obtain the <code>JobId</code> returned by the operations.</li>
-     * <li>We recommend that you call this operation at intervals of more than 5 seconds.</li>
-     * <li>This interface is idempotent.</li>
-     * </ol>
+     * <ul>
+     * <li>Resource Access Management (RAM) users must first obtain <a href="https://help.aliyun.com/document_detail/2848578.html">API permissions</a> for Alibaba Cloud Model Studio (<code>AliyunBailianDataFullAccess</code> or <code>AliyunBailianDataReadOnlyAccess</code>, both of which include the sfm:GetIndexJobStatus permission), and <a href="https://help.aliyun.com/document_detail/2851098.html">join a workspace</a> before invoking this operation. Alibaba Cloud accounts can invoke this operation directly without authorization. Use the latest &lt;props=&quot;china&quot;&gt;<a href="https://api.aliyun.com/api-tools/sdk/bailian?version=2023-12-29">Alibaba Cloud Model Studio SDK</a>&lt;props=&quot;intl&quot;&gt;<a href="https://api.alibabacloud.com/api-tools/sdk/bailian?version=2023-12-29">Alibaba Cloud Model Studio SDK</a> to invoke this operation.</li>
+     * <li>You must have a knowledge base job task in progress. To create a knowledge base creation task, invoke the <strong>SubmitIndexJob</strong> operation. To create a knowledge base document append task, invoke the <strong>SubmitIndexAddDocumentsJob</strong> operation. Obtain the corresponding <code>JobId</code> from the response.</li>
+     * <li>Invoke this operation at intervals of 5 seconds or more.</li>
+     * <li>This operation is idempotent.</li>
+     * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries the current status of a specified knowledge base creation or add document job.</p>
+     * <p>Queries the current status of a specified knowledge base creation job or knowledge base document append job.</p>
      * 
      * @param request GetIndexJobStatusRequest
      * @return GetIndexJobStatusResponse
@@ -2014,8 +2262,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>&lt;props=&quot;intl&quot;&gt;
+     * This operation is not available on the Alibaba Cloud International Website (www\.alibabacloud.com).
+     * &lt;props=&quot;china&quot;&gt;</p>
+     * <ul>
+     * <li>Before you call this operation, a RAM user must obtain the required <a href="https://help.aliyun.com/document_detail/2848578.html">API permissions</a> for Alibaba Cloud Model Studio (which requires the <code>AliyunBailianDataFullAccess</code> permission) and <a href="https://help.aliyun.com/document_detail/2851098.html">join a workspace</a>. Alibaba Cloud accounts can call this operation directly without authorization. You can call this operation using the latest version of the <a href="https://api.aliyun.com/api-tools/sdk/bailian?version=2023-12-29">Alibaba Cloud Model Studio software development kit (SDK)</a>. Before you call this operation, make sure that the specified knowledge base has been created and has not been deleted. This means that the knowledge base ID (<code>IndexId</code>) must be valid. This operation is idempotent. The maximum query time range (EndTimestamp - StartTimestamp) is 30 days. The granularity of the time window in the returned data is dynamically adjusted based on the query time range.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>\&lt;props=&quot;intl&quot;&gt;Currently, this API is not supported.\</p>
+     * <p>You can call the GetIndexMonitor operation to query monitoring data for a specified knowledge base within a specific time range. This data is crucial for App Performance Analytics, capacity planning, and cost management. The monitoring data includes two main dimensions: storage and retrieval. Storage monitoring retrieves the index storage limit and current usage of the knowledge base. Retrieval monitoring retrieves performance metrics for the query period, such as peak queries per second (QPS), total requests, and average QPS. The metrics are provided as totals and are also broken down by time window. The requests are categorized as successful, failed, and rate-limited.</p>
      * 
      * @param request GetIndexMonitorRequest
      * @param headers map
@@ -2056,8 +2312,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>&lt;props=&quot;intl&quot;&gt;
+     * This operation is not available on the Alibaba Cloud International Website (www\.alibabacloud.com).
+     * &lt;props=&quot;china&quot;&gt;</p>
+     * <ul>
+     * <li>Before you call this operation, a RAM user must obtain the required <a href="https://help.aliyun.com/document_detail/2848578.html">API permissions</a> for Alibaba Cloud Model Studio (which requires the <code>AliyunBailianDataFullAccess</code> permission) and <a href="https://help.aliyun.com/document_detail/2851098.html">join a workspace</a>. Alibaba Cloud accounts can call this operation directly without authorization. You can call this operation using the latest version of the <a href="https://api.aliyun.com/api-tools/sdk/bailian?version=2023-12-29">Alibaba Cloud Model Studio software development kit (SDK)</a>. Before you call this operation, make sure that the specified knowledge base has been created and has not been deleted. This means that the knowledge base ID (<code>IndexId</code>) must be valid. This operation is idempotent. The maximum query time range (EndTimestamp - StartTimestamp) is 30 days. The granularity of the time window in the returned data is dynamically adjusted based on the query time range.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>\&lt;props=&quot;intl&quot;&gt;Currently, this API is not supported.\</p>
+     * <p>You can call the GetIndexMonitor operation to query monitoring data for a specified knowledge base within a specific time range. This data is crucial for App Performance Analytics, capacity planning, and cost management. The monitoring data includes two main dimensions: storage and retrieval. Storage monitoring retrieves the index storage limit and current usage of the knowledge base. Retrieval monitoring retrieves performance metrics for the query period, such as peak queries per second (QPS), total requests, and average QPS. The metrics are provided as totals and are also broken down by time window. The requests are categorized as successful, failed, and rate-limited.</p>
      * 
      * @param request GetIndexMonitorRequest
      * @return GetIndexMonitorResponse
@@ -2069,8 +2333,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li>This operation is idempotent.
+     * <strong>Rate limit:</strong> Ensure that the interval between two consecutive requests is at least 1 second. Otherwise, throttling may be triggered. If throttling occurs, retry later.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>获取memory</p>
+     * <p>Retrieves the description of a specified long-term memory.</p>
      * 
      * @param request GetMemoryRequest
      * @param headers map
@@ -2097,8 +2367,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li>This operation is idempotent.
+     * <strong>Rate limit:</strong> Ensure that the interval between two consecutive requests is at least 1 second. Otherwise, throttling may be triggered. If throttling occurs, retry later.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>获取memory</p>
+     * <p>Retrieves the description of a specified long-term memory.</p>
      * 
      * @param request GetMemoryRequest
      * @return GetMemoryResponse
@@ -2111,7 +2387,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取记忆Node</p>
+     * <p>Retrieves a memory fragment.</p>
      * 
      * @param request GetMemoryNodeRequest
      * @param headers map
@@ -2139,7 +2415,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取记忆Node</p>
+     * <p>Retrieves a memory fragment.</p>
      * 
      * @param request GetMemoryNodeRequest
      * @return GetMemoryNodeResponse
@@ -2151,6 +2427,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li>RAM用户（子账号）需要首先获取阿里云百炼的<a href="https://help.aliyun.com/document_detail/2848578.html">API权限</a>（<code>AliyunBailianDataFullAccess</code>或<code>AliyunBailianDataReadOnlyAccess</code>均可，已包括sfm:GetParseSettings权限点），并<a href="https://help.aliyun.com/document_detail/2851098.html">加入一个业务空间</a>后，方可调用本接口。阿里云账号（主账号）可直接调用无须授权。建议您通过最新版&lt;props=&quot;china&quot;&gt;<a href="https://api.aliyun.com/api-tools/sdk/bailian?version=2023-12-29">阿里云百炼SDK</a>&lt;props=&quot;intl&quot;&gt;<a href="https://api.alibabacloud.com/api-tools/sdk/bailian?version=2023-12-29">阿里云百炼SDK</a>来调用本接口。</li>
+     * <li>本接口具有幂等性。
+     * <strong>限流说明：</strong>
+     * 本接口频繁调用会被限流，频率请勿超过10次/秒。如遇限流，请稍后重试。</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
      * <p>Queries the data parsing settings in a specified category.</p>
      * 
@@ -2185,6 +2469,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li>RAM用户（子账号）需要首先获取阿里云百炼的<a href="https://help.aliyun.com/document_detail/2848578.html">API权限</a>（<code>AliyunBailianDataFullAccess</code>或<code>AliyunBailianDataReadOnlyAccess</code>均可，已包括sfm:GetParseSettings权限点），并<a href="https://help.aliyun.com/document_detail/2851098.html">加入一个业务空间</a>后，方可调用本接口。阿里云账号（主账号）可直接调用无须授权。建议您通过最新版&lt;props=&quot;china&quot;&gt;<a href="https://api.aliyun.com/api-tools/sdk/bailian?version=2023-12-29">阿里云百炼SDK</a>&lt;props=&quot;intl&quot;&gt;<a href="https://api.alibabacloud.com/api-tools/sdk/bailian?version=2023-12-29">阿里云百炼SDK</a>来调用本接口。</li>
+     * <li>本接口具有幂等性。
+     * <strong>限流说明：</strong>
+     * 本接口频繁调用会被限流，频率请勿超过10次/秒。如遇限流，请稍后重试。</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
      * <p>Queries the data parsing settings in a specified category.</p>
      * 
@@ -2347,8 +2639,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li>This API does not support querying data tables.</li>
+     * <li>To call this API, a RAM user must first obtain the required <a href="https://help.aliyun.com/document_detail/2848578.html">API permission</a> for Model Studio and <a href="https://help.aliyun.com/document_detail/2851098.html">join a workspace</a>. This requires the <code>AliyunBailianDataFullAccess</code> permission, which includes the <code>sfm:ListCategory</code> permission. Alibaba Cloud accounts can call this API directly. Use the latest version of the &lt;props=&quot;china&quot;&gt;<a href="https://api.aliyun.com/api-tools/sdk/bailian?version=2023-12-29">Model Studio SDK</a>&lt;props=&quot;intl&quot;&gt;<a href="https://api.alibabacloud.com/api-tools/sdk/bailian?version=2023-12-29">Model Studio SDK</a>.</li>
+     * <li>This operation supports pagination. When making your first request, set the <code>MaxResults</code> parameter to specify the maximum number of items to return. If more items are available, the response includes a <code>NextToken</code>. To retrieve the next page of results, set the <code>NextToken</code> parameter to the value from the previous response and specify <code>MaxResults</code> again. An empty <code>NextToken</code> indicates that no more results are available.</li>
+     * <li>This operation is idempotent.
+     * <strong>Rate limiting:</strong> This API is subject to rate limiting. Do not exceed 5 requests per second. If the system throttles a request, retry it after a short interval.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>Lists the details about the next or multiple categories in a specified workspace.</p>
+     * <p>Retrieves the details of one or more categories in a specified workspace.</p>
      * 
      * @param request ListCategoryRequest
      * @param headers map
@@ -2401,8 +2702,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li>This API does not support querying data tables.</li>
+     * <li>To call this API, a RAM user must first obtain the required <a href="https://help.aliyun.com/document_detail/2848578.html">API permission</a> for Model Studio and <a href="https://help.aliyun.com/document_detail/2851098.html">join a workspace</a>. This requires the <code>AliyunBailianDataFullAccess</code> permission, which includes the <code>sfm:ListCategory</code> permission. Alibaba Cloud accounts can call this API directly. Use the latest version of the &lt;props=&quot;china&quot;&gt;<a href="https://api.aliyun.com/api-tools/sdk/bailian?version=2023-12-29">Model Studio SDK</a>&lt;props=&quot;intl&quot;&gt;<a href="https://api.alibabacloud.com/api-tools/sdk/bailian?version=2023-12-29">Model Studio SDK</a>.</li>
+     * <li>This operation supports pagination. When making your first request, set the <code>MaxResults</code> parameter to specify the maximum number of items to return. If more items are available, the response includes a <code>NextToken</code>. To retrieve the next page of results, set the <code>NextToken</code> parameter to the value from the previous response and specify <code>MaxResults</code> again. An empty <code>NextToken</code> indicates that no more results are available.</li>
+     * <li>This operation is idempotent.
+     * <strong>Rate limiting:</strong> This API is subject to rate limiting. Do not exceed 5 requests per second. If the system throttles a request, retry it after a short interval.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>Lists the details about the next or multiple categories in a specified workspace.</p>
+     * <p>Retrieves the details of one or more categories in a specified workspace.</p>
      * 
      * @param request ListCategoryRequest
      * @return ListCategoryResponse
@@ -2415,13 +2725,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  Before you call this operation, make sure that your knowledge base is created and is not deleted. That is, the primary key ID of the knowledge base <code>IndexId</code> is valid.</p>
      * <ul>
-     * <li>This interface is idempotent.</li>
+     * <li>For document search&lt;props=&quot;china&quot;&gt; or audio/video search knowledge bases, this operation queries all chunks of a specified file. For data query or image Q&amp;A knowledge bases, this operation retrieves information about all text chunks.</li>
+     * <li>Resource Access Management (RAM) users must first obtain <a href="https://help.aliyun.com/document_detail/2848578.html">API permissions</a> for Model Studio (requires <code>AliyunBailianDataFullAccess</code>, which includes the sfm:ChunkList permission), and <a href="https://help.aliyun.com/document_detail/2851098.html">join a workspace</a> before invoking this operation. Alibaba Cloud accounts can invoke this operation directly without authorization. Use the latest &lt;props=&quot;china&quot;&gt;<a href="https://api.aliyun.com/api-tools/sdk/bailian?version=2023-12-29">Model Studio SDK</a>&lt;props=&quot;intl&quot;&gt;<a href="https://api.alibabacloud.com/api-tools/sdk/bailian?version=2023-12-29">Model Studio SDK</a> to invoke this operation.</li>
+     * <li>Before invoking this operation, make sure that your knowledge base has been created and has not been deleted (that is, the knowledge base ID <code>IndexId</code> is valid).</li>
+     * <li>This operation has idempotence.
+     * <strong>Rate limit:</strong>
+     * This operation is throttled if called too frequently. Do not exceed 10 calls per second. If you are throttled, retry later.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>For unstructured knowledge base, obtains the details of all chunks of a specified document; for structured knowledge base, obtains the details of all chunks.</p>
+     * <p>Queries the list and information of text chunks.</p>
      * 
      * @param request ListChunksRequest
      * @param headers map
@@ -2475,13 +2789,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  Before you call this operation, make sure that your knowledge base is created and is not deleted. That is, the primary key ID of the knowledge base <code>IndexId</code> is valid.</p>
      * <ul>
-     * <li>This interface is idempotent.</li>
+     * <li>For document search&lt;props=&quot;china&quot;&gt; or audio/video search knowledge bases, this operation queries all chunks of a specified file. For data query or image Q&amp;A knowledge bases, this operation retrieves information about all text chunks.</li>
+     * <li>Resource Access Management (RAM) users must first obtain <a href="https://help.aliyun.com/document_detail/2848578.html">API permissions</a> for Model Studio (requires <code>AliyunBailianDataFullAccess</code>, which includes the sfm:ChunkList permission), and <a href="https://help.aliyun.com/document_detail/2851098.html">join a workspace</a> before invoking this operation. Alibaba Cloud accounts can invoke this operation directly without authorization. Use the latest &lt;props=&quot;china&quot;&gt;<a href="https://api.aliyun.com/api-tools/sdk/bailian?version=2023-12-29">Model Studio SDK</a>&lt;props=&quot;intl&quot;&gt;<a href="https://api.alibabacloud.com/api-tools/sdk/bailian?version=2023-12-29">Model Studio SDK</a> to invoke this operation.</li>
+     * <li>Before invoking this operation, make sure that your knowledge base has been created and has not been deleted (that is, the knowledge base ID <code>IndexId</code> is valid).</li>
+     * <li>This operation has idempotence.
+     * <strong>Rate limit:</strong>
+     * This operation is throttled if called too frequently. Do not exceed 10 calls per second. If you are throttled, retry later.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>For unstructured knowledge base, obtains the details of all chunks of a specified document; for structured knowledge base, obtains the details of all chunks.</p>
+     * <p>Queries the list and information of text chunks.</p>
      * 
      * @param request ListChunksRequest
      * @return ListChunksResponse
@@ -2494,15 +2812,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  If you are using a RAM user, you must first obtain the OpenAPI management permissions (namely sfm:ListFile) of Model Studio. For more information, see <a href="https://help.aliyun.com/document_detail/2848578.html">Grant OpenAPI permissions to a RAM user</a>. If you are using the Alibaba Cloud account, you do not need permissions. We recommend that you use <a href="https://api.alibabacloud.com/api-tools/sdk/bailian?version=2023-12-29">the latest version of the SDK</a> to call this operation.</p>
      * <ul>
-     * <li>During a paged query, set <code>MaxResults</code> to specify the maximum number of entries to return. The return value of <code>NextToken</code> is a pagination token that can be used in the next call to retrieve a new page of results. When you query subsequent pages, set the <code>NextToken</code> parameter to the <code>NextToken</code> obtained in the last returned result. You can also set the <code>MaxResults</code> parameter to limit the number of entries to be returned. If no <code>NextToken</code> is returned, the result is completely returned and no more requests are required.</li>
+     * <li>Resource Access Management (RAM) users must first obtain <a href="https://help.aliyun.com/document_detail/2848578.html">API permissions</a> for Alibaba Cloud Model Studio (requires <code>AliyunBailianDataFullAccess</code>, which includes the sfm:ListFile permission), and <a href="https://help.aliyun.com/document_detail/2851098.html">join a workspace</a> before invoking this operation. Alibaba Cloud accounts can invoke this operation directly without authorization. Invoke this operation by using the latest &lt;props=&quot;china&quot;&gt;<a href="https://api.aliyun.com/api-tools/sdk/bailian?version=2023-12-29">Alibaba Cloud Model Studio SDK</a>&lt;props=&quot;intl&quot;&gt;<a href="https://api.alibabacloud.com/api-tools/sdk/bailian?version=2023-12-29">Alibaba Cloud Model Studio SDK</a>.</li>
+     * <li>When performing paging for the first page, only set <code>MaxResults</code> to limit the number of entries returned. The <code>NextToken</code> in the response serves as the credential for querying subsequent pages. When querying subsequent pages, set the <code>NextToken</code> parameter to the <code>NextToken</code> value obtained from the previous response as the query credential (if <code>NextToken</code> is empty, all results have been returned and no further requests are needed), and set <code>MaxResults</code> to limit the number of entries returned.</li>
      * <li>This operation is idempotent.
-     * <strong>Throttling:</strong> Throttling will be triggered if you call this operation frequently. Do not exceed 5 times per second. If throttling is triggered, try again later.</li>
+     * <strong>Rate limit:</strong>
+     * This operation is throttled if called too frequently. Do not exceed 5 calls per second. If throttled, retry later.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries the details of one or more documents in a specified category.</p>
+     * <p>Retrieves the details of one or more documents in a specified category.</p>
      * 
      * @param tmpReq ListFileRequest
      * @param headers map
@@ -2558,15 +2877,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  If you are using a RAM user, you must first obtain the OpenAPI management permissions (namely sfm:ListFile) of Model Studio. For more information, see <a href="https://help.aliyun.com/document_detail/2848578.html">Grant OpenAPI permissions to a RAM user</a>. If you are using the Alibaba Cloud account, you do not need permissions. We recommend that you use <a href="https://api.alibabacloud.com/api-tools/sdk/bailian?version=2023-12-29">the latest version of the SDK</a> to call this operation.</p>
      * <ul>
-     * <li>During a paged query, set <code>MaxResults</code> to specify the maximum number of entries to return. The return value of <code>NextToken</code> is a pagination token that can be used in the next call to retrieve a new page of results. When you query subsequent pages, set the <code>NextToken</code> parameter to the <code>NextToken</code> obtained in the last returned result. You can also set the <code>MaxResults</code> parameter to limit the number of entries to be returned. If no <code>NextToken</code> is returned, the result is completely returned and no more requests are required.</li>
+     * <li>Resource Access Management (RAM) users must first obtain <a href="https://help.aliyun.com/document_detail/2848578.html">API permissions</a> for Alibaba Cloud Model Studio (requires <code>AliyunBailianDataFullAccess</code>, which includes the sfm:ListFile permission), and <a href="https://help.aliyun.com/document_detail/2851098.html">join a workspace</a> before invoking this operation. Alibaba Cloud accounts can invoke this operation directly without authorization. Invoke this operation by using the latest &lt;props=&quot;china&quot;&gt;<a href="https://api.aliyun.com/api-tools/sdk/bailian?version=2023-12-29">Alibaba Cloud Model Studio SDK</a>&lt;props=&quot;intl&quot;&gt;<a href="https://api.alibabacloud.com/api-tools/sdk/bailian?version=2023-12-29">Alibaba Cloud Model Studio SDK</a>.</li>
+     * <li>When performing paging for the first page, only set <code>MaxResults</code> to limit the number of entries returned. The <code>NextToken</code> in the response serves as the credential for querying subsequent pages. When querying subsequent pages, set the <code>NextToken</code> parameter to the <code>NextToken</code> value obtained from the previous response as the query credential (if <code>NextToken</code> is empty, all results have been returned and no further requests are needed), and set <code>MaxResults</code> to limit the number of entries returned.</li>
      * <li>This operation is idempotent.
-     * <strong>Throttling:</strong> Throttling will be triggered if you call this operation frequently. Do not exceed 5 times per second. If throttling is triggered, try again later.</li>
+     * <strong>Rate limit:</strong>
+     * This operation is throttled if called too frequently. Do not exceed 5 calls per second. If throttled, retry later.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries the details of one or more documents in a specified category.</p>
+     * <p>Retrieves the details of one or more documents in a specified category.</p>
      * 
      * @param request ListFileRequest
      * @return ListFileResponse
@@ -2579,13 +2899,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  Before you call this operation, make sure that your knowledge base is created and is not deleted. That is, the primary key ID of the knowledge base <code>IndexId</code> is valid.</p>
      * <ul>
-     * <li>This interface is idempotent.</li>
+     * <li>Resource Access Management (RAM) users must first obtain <a href="https://help.aliyun.com/document_detail/2848578.html">API permissions</a> for Model Studio (requiring <code>AliyunBailianDataFullAccess</code>, which includes the sfm:ListIndexFiles permission) and <a href="https://help.aliyun.com/document_detail/2851098.html">join a workspace</a> before invoking this operation. Alibaba Cloud accounts can invoke this operation directly without authorization. Use the latest &lt;props=&quot;china&quot;&gt;<a href="https://api.aliyun.com/api-tools/sdk/bailian?version=2023-12-29">Model Studio SDK</a>&lt;props=&quot;intl&quot;&gt;<a href="https://api.alibabacloud.com/api-tools/sdk/bailian?version=2023-12-29">Model Studio SDK</a> to invoke this operation.</li>
+     * <li>Before invoking this operation, make sure that your knowledge base has been created and has not been deleted (that is, the knowledge base ID <code>IndexId</code> is valid).</li>
+     * <li>This operation has idempotence.
+     * <strong>Throttling:</strong>
+     * This operation is throttled if called too frequently. Do not exceed 15 calls per second. If you are throttled, retry later.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries the details of one or more documents in a specified knowledge base.</p>
+     * <p>Retrieves the files in a specified knowledge base along with their summary information.</p>
      * 
      * @param request ListIndexDocumentsRequest
      * @param headers map
@@ -2639,13 +2962,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  Before you call this operation, make sure that your knowledge base is created and is not deleted. That is, the primary key ID of the knowledge base <code>IndexId</code> is valid.</p>
      * <ul>
-     * <li>This interface is idempotent.</li>
+     * <li>Resource Access Management (RAM) users must first obtain <a href="https://help.aliyun.com/document_detail/2848578.html">API permissions</a> for Model Studio (requiring <code>AliyunBailianDataFullAccess</code>, which includes the sfm:ListIndexFiles permission) and <a href="https://help.aliyun.com/document_detail/2851098.html">join a workspace</a> before invoking this operation. Alibaba Cloud accounts can invoke this operation directly without authorization. Use the latest &lt;props=&quot;china&quot;&gt;<a href="https://api.aliyun.com/api-tools/sdk/bailian?version=2023-12-29">Model Studio SDK</a>&lt;props=&quot;intl&quot;&gt;<a href="https://api.alibabacloud.com/api-tools/sdk/bailian?version=2023-12-29">Model Studio SDK</a> to invoke this operation.</li>
+     * <li>Before invoking this operation, make sure that your knowledge base has been created and has not been deleted (that is, the knowledge base ID <code>IndexId</code> is valid).</li>
+     * <li>This operation has idempotence.
+     * <strong>Throttling:</strong>
+     * This operation is throttled if called too frequently. Do not exceed 15 calls per second. If you are throttled, retry later.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries the details of one or more documents in a specified knowledge base.</p>
+     * <p>Retrieves the files in a specified knowledge base along with their summary information.</p>
      * 
      * @param request ListIndexDocumentsRequest
      * @return ListIndexDocumentsResponse
@@ -2657,8 +2983,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li>A RAM user must have the <a href="https://help.aliyun.com/document_detail/2848578.html">API permissions</a> for Alibaba Cloud Model Studio to call this operation. The <code>AliyunBailianDataFullAccess</code> permission, which includes the \<code>sfm:ListIndexFiles\\</code> permission, is required. An Alibaba Cloud account can call this operation without authorization. You can call this operation using the latest version of the &lt;props=&quot;china&quot;&gt;<a href="https://api.aliyun.com/api-tools/sdk/bailian?version=2023-12-29">Alibaba Cloud Model Studio SDK</a>&lt;props=&quot;intl&quot;&gt;<a href="https://api.alibabacloud.com/api-tools/sdk/bailian?version=2023-12-29">Alibaba Cloud Model Studio SDK</a>.</li>
+     * <li>Before you call this operation, ensure that your knowledge base exists and its ID, <code>IndexId</code>, is valid.</li>
+     * <li>This operation is idempotent.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>查询Index文件详情</p>
+     * <p>Retrieves the details of one or more documents in a specified knowledge base.</p>
      * 
      * @param request ListIndexFileDetailsRequest
      * @param headers map
@@ -2711,8 +3044,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li>A RAM user must have the <a href="https://help.aliyun.com/document_detail/2848578.html">API permissions</a> for Alibaba Cloud Model Studio to call this operation. The <code>AliyunBailianDataFullAccess</code> permission, which includes the \<code>sfm:ListIndexFiles\\</code> permission, is required. An Alibaba Cloud account can call this operation without authorization. You can call this operation using the latest version of the &lt;props=&quot;china&quot;&gt;<a href="https://api.aliyun.com/api-tools/sdk/bailian?version=2023-12-29">Alibaba Cloud Model Studio SDK</a>&lt;props=&quot;intl&quot;&gt;<a href="https://api.alibabacloud.com/api-tools/sdk/bailian?version=2023-12-29">Alibaba Cloud Model Studio SDK</a>.</li>
+     * <li>Before you call this operation, ensure that your knowledge base exists and its ID, <code>IndexId</code>, is valid.</li>
+     * <li>This operation is idempotent.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>查询Index文件详情</p>
+     * <p>Retrieves the details of one or more documents in a specified knowledge base.</p>
      * 
      * @param request ListIndexFileDetailsRequest
      * @return ListIndexFileDetailsResponse
@@ -2725,10 +3065,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This interface is idempotent.</p>
+     * <ul>
+     * <li>Resource Access Management (RAM) users must first obtain <a href="https://help.aliyun.com/document_detail/2848578.html">API permissions</a> for Alibaba Cloud Model Studio (requires <code>AliyunBailianDataFullAccess</code>, which includes the sfm:ListIndex permission) before calling this operation. Alibaba Cloud accounts can call this operation directly without authorization. Use the latest &lt;props=&quot;china&quot;&gt;<a href="https://api.aliyun.com/api-tools/sdk/bailian?version=2023-12-29">Alibaba Cloud Model Studio SDK</a>&lt;props=&quot;intl&quot;&gt;<a href="https://api.alibabacloud.com/api-tools/sdk/bailian?version=2023-12-29">Alibaba Cloud Model Studio SDK</a> to call this operation.</li>
+     * <li>This operation is idempotent.
+     * <strong>Rate limit:</strong>
+     * This operation is throttled if called too frequently. Do not exceed 10 calls per second. If throttled, retry later.</li>
+     * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Lists the details about the next or multiple knowledge bases in a specified workspace.</p>
+     * <p>Retrieves the list of knowledge bases in a specified workspace.</p>
      * 
      * @param request ListIndicesRequest
      * @param headers map
@@ -2770,10 +3115,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This interface is idempotent.</p>
+     * <ul>
+     * <li>Resource Access Management (RAM) users must first obtain <a href="https://help.aliyun.com/document_detail/2848578.html">API permissions</a> for Alibaba Cloud Model Studio (requires <code>AliyunBailianDataFullAccess</code>, which includes the sfm:ListIndex permission) before calling this operation. Alibaba Cloud accounts can call this operation directly without authorization. Use the latest &lt;props=&quot;china&quot;&gt;<a href="https://api.aliyun.com/api-tools/sdk/bailian?version=2023-12-29">Alibaba Cloud Model Studio SDK</a>&lt;props=&quot;intl&quot;&gt;<a href="https://api.alibabacloud.com/api-tools/sdk/bailian?version=2023-12-29">Alibaba Cloud Model Studio SDK</a> to call this operation.</li>
+     * <li>This operation is idempotent.
+     * <strong>Rate limit:</strong>
+     * This operation is throttled if called too frequently. Do not exceed 10 calls per second. If throttled, retry later.</li>
+     * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Lists the details about the next or multiple knowledge bases in a specified workspace.</p>
+     * <p>Retrieves the list of knowledge bases in a specified workspace.</p>
      * 
      * @param request ListIndicesRequest
      * @return ListIndicesResponse
@@ -2785,8 +3135,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li>When querying the first page of a paging query, set only <code>MaxResults</code> to limit the number of entries returned. The <code>NextToken</code> value in the response serves as the credential for querying subsequent pages. When querying subsequent pages, set the <code>NextToken</code> parameter to the <code>NextToken</code> value obtained from the previous response as the query credential (if <code>NextToken</code> is empty, all results have been returned and no further requests are needed), and settings <code>MaxResults</code> to limit the number of entries returned.</li>
+     * <li>This operation supports idempotence.
+     * <strong>Rate limit:</strong> Ensure that the interval between two consecutive requests is at least 1 second. Otherwise, throttling may be triggered. If throttling occurs, retry later.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>获取memory</p>
+     * <p>Retrieves the details of one or more long-term memory entities in a specified workspace.</p>
      * 
      * @param request ListMemoriesRequest
      * @param headers map
@@ -2823,8 +3180,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li>When querying the first page of a paging query, set only <code>MaxResults</code> to limit the number of entries returned. The <code>NextToken</code> value in the response serves as the credential for querying subsequent pages. When querying subsequent pages, set the <code>NextToken</code> parameter to the <code>NextToken</code> value obtained from the previous response as the query credential (if <code>NextToken</code> is empty, all results have been returned and no further requests are needed), and settings <code>MaxResults</code> to limit the number of entries returned.</li>
+     * <li>This operation supports idempotence.
+     * <strong>Rate limit:</strong> Ensure that the interval between two consecutive requests is at least 1 second. Otherwise, throttling may be triggered. If throttling occurs, retry later.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>获取memory</p>
+     * <p>Retrieves the details of one or more long-term memory entities in a specified workspace.</p>
      * 
      * @param request ListMemoriesRequest
      * @return ListMemoriesResponse
@@ -2837,7 +3201,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取记忆Node列表</p>
+     * <p>Retrieves a list of memory nodes.</p>
      * 
      * @param request ListMemoryNodesRequest
      * @param headers map
@@ -2875,7 +3239,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取记忆Node列表</p>
+     * <p>Retrieves a list of memory nodes.</p>
      * 
      * @param request ListMemoryNodesRequest
      * @return ListMemoryNodesResponse
@@ -2998,14 +3362,29 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  Before you call this operation, make sure that your knowledge base is created and is not deleted. That is, the primary key ID of the knowledge base <code>IndexId</code> is valid.</p>
+     * <p>&lt;props=&quot;china&quot;&gt;</p>
      * <ul>
-     * <li>The response time may be long because this operation involves complex retrieval and matching. We recommend that you set appropriate timeout and retry policy for requests.</li>
-     * <li>This interface is idempotent.</li>
+     * <li><strong>How to call</strong>: To retrieve information from a knowledge base, use the latest <a href="https://api.aliyun.com/api-tools/sdk/bailian?version=2023-12-29">Alibaba Cloud Model Studio SDK</a> with an <a href="https://help.aliyun.com/document_detail/116401.html">AccessKey</a> or <a href="https://help.aliyun.com/document_detail/2990886.html">Spring AI Alibaba</a> with an Alibaba Cloud Model Studio <a href="https://help.aliyun.com/document_detail/2712195.html">API key</a>. Both tools simplify your API calls by handling the complex signature calculation.</li>
+     * <li><strong>Required permissions</strong>:<ul>
+     * <li><strong>RAM user (sub-account)</strong>: To call this API, a RAM user must be granted <a href="https://help.aliyun.com/document_detail/2848578.html">API permissions</a> for Alibaba Cloud Model Studio and <a href="https://help.aliyun.com/document_detail/2851098.html">join a workspace</a>. You can use the <code>AliyunBailianDataFullAccess</code> policy, which includes the required <code>sfm:Retrieve</code> permission.</li>
+     * <li><strong>Alibaba Cloud account (main account)</strong>: This account has the required permissions by default and can call the API directly.</li>
+     * </ul>
+     * </li>
+     * <li><strong>Response latency</strong>: This API call involves complex retrieval and matching operations, which can cause longer response times. We recommend configuring appropriate request timeouts and retry strategies.</li>
+     * <li><strong>Idempotency</strong>: This API is idempotent.
+     * &lt;props=&quot;intl&quot;&gt;</li>
+     * <li><strong>How to call</strong>: We recommend using the latest <a href="https://api.alibabacloud.com/api-tools/sdk/bailian?version=2023-12-29">Alibaba Cloud Model Studio SDK</a> to call this API. The SDK simplifies API calls by handling the complex signature calculation.</li>
+     * <li><strong>Required permissions</strong>:<ul>
+     * <li><strong>RAM user (sub-account)</strong>: To call this API, a RAM user must be granted <a href="https://help.aliyun.com/document_detail/2848578.html">API permissions</a> for Alibaba Cloud Model Studio and <a href="https://help.aliyun.com/document_detail/2851098.html">join a workspace</a>. You can use the <code>AliyunBailianDataFullAccess</code> policy, which includes the required <code>sfm:Retrieve</code> permission.</li>
+     * <li><strong>Alibaba Cloud account (main account)</strong>: This account has the required permissions by default and can call the API directly.</li>
+     * </ul>
+     * </li>
+     * <li><strong>Response latency</strong>: This API call involves complex retrieval and matching operations, which can cause longer response times. We recommend configuring appropriate request timeouts and retry strategies.</li>
+     * <li><strong>Idempotency</strong>: This API is idempotent.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries information from a specified knowledge base.</p>
+     * <p>Retrieves information from a specified knowledge base.</p>
      * 
      * @param tmpReq RetrieveRequest
      * @param headers map
@@ -3121,14 +3500,29 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  Before you call this operation, make sure that your knowledge base is created and is not deleted. That is, the primary key ID of the knowledge base <code>IndexId</code> is valid.</p>
+     * <p>&lt;props=&quot;china&quot;&gt;</p>
      * <ul>
-     * <li>The response time may be long because this operation involves complex retrieval and matching. We recommend that you set appropriate timeout and retry policy for requests.</li>
-     * <li>This interface is idempotent.</li>
+     * <li><strong>How to call</strong>: To retrieve information from a knowledge base, use the latest <a href="https://api.aliyun.com/api-tools/sdk/bailian?version=2023-12-29">Alibaba Cloud Model Studio SDK</a> with an <a href="https://help.aliyun.com/document_detail/116401.html">AccessKey</a> or <a href="https://help.aliyun.com/document_detail/2990886.html">Spring AI Alibaba</a> with an Alibaba Cloud Model Studio <a href="https://help.aliyun.com/document_detail/2712195.html">API key</a>. Both tools simplify your API calls by handling the complex signature calculation.</li>
+     * <li><strong>Required permissions</strong>:<ul>
+     * <li><strong>RAM user (sub-account)</strong>: To call this API, a RAM user must be granted <a href="https://help.aliyun.com/document_detail/2848578.html">API permissions</a> for Alibaba Cloud Model Studio and <a href="https://help.aliyun.com/document_detail/2851098.html">join a workspace</a>. You can use the <code>AliyunBailianDataFullAccess</code> policy, which includes the required <code>sfm:Retrieve</code> permission.</li>
+     * <li><strong>Alibaba Cloud account (main account)</strong>: This account has the required permissions by default and can call the API directly.</li>
+     * </ul>
+     * </li>
+     * <li><strong>Response latency</strong>: This API call involves complex retrieval and matching operations, which can cause longer response times. We recommend configuring appropriate request timeouts and retry strategies.</li>
+     * <li><strong>Idempotency</strong>: This API is idempotent.
+     * &lt;props=&quot;intl&quot;&gt;</li>
+     * <li><strong>How to call</strong>: We recommend using the latest <a href="https://api.alibabacloud.com/api-tools/sdk/bailian?version=2023-12-29">Alibaba Cloud Model Studio SDK</a> to call this API. The SDK simplifies API calls by handling the complex signature calculation.</li>
+     * <li><strong>Required permissions</strong>:<ul>
+     * <li><strong>RAM user (sub-account)</strong>: To call this API, a RAM user must be granted <a href="https://help.aliyun.com/document_detail/2848578.html">API permissions</a> for Alibaba Cloud Model Studio and <a href="https://help.aliyun.com/document_detail/2851098.html">join a workspace</a>. You can use the <code>AliyunBailianDataFullAccess</code> policy, which includes the required <code>sfm:Retrieve</code> permission.</li>
+     * <li><strong>Alibaba Cloud account (main account)</strong>: This account has the required permissions by default and can call the API directly.</li>
+     * </ul>
+     * </li>
+     * <li><strong>Response latency</strong>: This API call involves complex retrieval and matching operations, which can cause longer response times. We recommend configuring appropriate request timeouts and retry strategies.</li>
+     * <li><strong>Idempotency</strong>: This API is idempotent.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries information from a specified knowledge base.</p>
+     * <p>Retrieves information from a specified knowledge base.</p>
      * 
      * @param request RetrieveRequest
      * @return RetrieveResponse
@@ -3141,15 +3535,21 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  You must first upload documents to <a href="https://bailian.console.aliyun.com/#/data-center">Data Management</a> and obtain the <code>FileId</code>. The documents are the knowledge source of the knowledge base. For more information, see <a href="https://www.alibabacloud.com/help/en/model-studio/user-guide/data-import-instructions">Import Data</a>.</p>
+     * <p>&lt;props=&quot;china&quot;&gt;</p>
      * <ul>
-     * <li>Before you call this operation, make sure that your knowledge base is created and is not deleted. That is, the primary key ID of the knowledge base <code>IndexId</code> is valid.</li>
-     * <li>After you call this operation, you can call the <a href="https://www.alibabacloud.com/help/en/model-studio/developer-reference/api-bailian-2023-12-29-getindexjobstatus">GetIndexJobStatus</a> operation to query the status of the job. More than 20 calls to the GetIndexJobStatus operation per minute may trigger throttling.</li>
-     * <li>Execution takes a period of time after this operation is called. Do not make new request before the request is returned. This interface is not idempotent.</li>
+     * <li>This API does not support knowledge bases for data queries or image Q\&amp;A. To update these knowledge bases, see the <a href="https://help.aliyun.com/document_detail/2807740.html">knowledge base</a> documentation.
+     * &lt;props=&quot;intl&quot;&gt;</li>
+     * <li>This API does not support knowledge bases for data queries or image Q\&amp;A. To update these knowledge bases, see the <a href="https://help.aliyun.com/document_detail/2807740.html">knowledge base</a> documentation.</li>
+     * <li>A RAM user (sub-account) can call this API only after being granted the required <a href="https://help.aliyun.com/document_detail/2848578.html">api permission</a> for Alibaba Cloud Model Studio (specifically, the <code>AliyunBailianDataFullAccess</code> policy, which includes the <code>sfm:SubmitIndexAddDocumentsJob</code> permission) and joining a <a href="https://help.aliyun.com/document_detail/2851098.html">workspace</a>. An Alibaba Cloud account can call this API directly without authorization. We recommend using the latest version of the &lt;props=&quot;china&quot;&gt;<a href="https://api.aliyun.com/api-tools/sdk/bailian?version=2023-12-29">Alibaba Cloud Model Studio SDK</a>&lt;props=&quot;intl&quot;&gt;<a href="https://api.alibabacloud.com/api-tools/sdk/bailian?version=2023-12-29">Alibaba Cloud Model Studio SDK</a> to call this API.</li>
+     * <li>Before calling this API, ensure your knowledge base exists and has a valid knowledge base ID (<code>IndexId</code>).</li>
+     * <li>Before calling this API, you must first upload files to Alibaba Cloud Model Studio using the <strong>AddFile</strong> API.</li>
+     * <li>After calling this API, the job runs in the background and may take several hours to complete, especially during peak times. Do not submit duplicate requests until the job is complete. To check the job status, call the <strong>GetIndexJobStatus</strong> API. The <code>Documents</code> file list returned by the GetIndexJobStatus API contains all files for the job, which is uniquely identified by the <code>job_id</code> you provided. You can check this list to verify whether each file was imported (parsed) successfully. Note that frequent calls to the GetIndexJobStatus API are subject to rate limiting. Do not exceed 20 calls per minute.</li>
+     * <li>A successful API call indicates the job has been submitted for processing, which takes time. This API is not idempotent, so do not send duplicate requests; doing so will create multiple jobs.
+     * <strong>Rate limiting:</strong> This API is limited to 10 calls per second. If you exceed this limit, wait before retrying.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Adds parsed documents to an unstructured knowledge base. You cannot use the API to add knowledge to structured knowledge bases, see the Usage notes section of this topic.</p>
+     * <p>Adds parsed files to the specified knowledge base.</p>
      * 
      * @param tmpReq SubmitIndexAddDocumentsJobRequest
      * @param headers map
@@ -3233,15 +3633,21 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  You must first upload documents to <a href="https://bailian.console.aliyun.com/#/data-center">Data Management</a> and obtain the <code>FileId</code>. The documents are the knowledge source of the knowledge base. For more information, see <a href="https://www.alibabacloud.com/help/en/model-studio/user-guide/data-import-instructions">Import Data</a>.</p>
+     * <p>&lt;props=&quot;china&quot;&gt;</p>
      * <ul>
-     * <li>Before you call this operation, make sure that your knowledge base is created and is not deleted. That is, the primary key ID of the knowledge base <code>IndexId</code> is valid.</li>
-     * <li>After you call this operation, you can call the <a href="https://www.alibabacloud.com/help/en/model-studio/developer-reference/api-bailian-2023-12-29-getindexjobstatus">GetIndexJobStatus</a> operation to query the status of the job. More than 20 calls to the GetIndexJobStatus operation per minute may trigger throttling.</li>
-     * <li>Execution takes a period of time after this operation is called. Do not make new request before the request is returned. This interface is not idempotent.</li>
+     * <li>This API does not support knowledge bases for data queries or image Q\&amp;A. To update these knowledge bases, see the <a href="https://help.aliyun.com/document_detail/2807740.html">knowledge base</a> documentation.
+     * &lt;props=&quot;intl&quot;&gt;</li>
+     * <li>This API does not support knowledge bases for data queries or image Q\&amp;A. To update these knowledge bases, see the <a href="https://help.aliyun.com/document_detail/2807740.html">knowledge base</a> documentation.</li>
+     * <li>A RAM user (sub-account) can call this API only after being granted the required <a href="https://help.aliyun.com/document_detail/2848578.html">api permission</a> for Alibaba Cloud Model Studio (specifically, the <code>AliyunBailianDataFullAccess</code> policy, which includes the <code>sfm:SubmitIndexAddDocumentsJob</code> permission) and joining a <a href="https://help.aliyun.com/document_detail/2851098.html">workspace</a>. An Alibaba Cloud account can call this API directly without authorization. We recommend using the latest version of the &lt;props=&quot;china&quot;&gt;<a href="https://api.aliyun.com/api-tools/sdk/bailian?version=2023-12-29">Alibaba Cloud Model Studio SDK</a>&lt;props=&quot;intl&quot;&gt;<a href="https://api.alibabacloud.com/api-tools/sdk/bailian?version=2023-12-29">Alibaba Cloud Model Studio SDK</a> to call this API.</li>
+     * <li>Before calling this API, ensure your knowledge base exists and has a valid knowledge base ID (<code>IndexId</code>).</li>
+     * <li>Before calling this API, you must first upload files to Alibaba Cloud Model Studio using the <strong>AddFile</strong> API.</li>
+     * <li>After calling this API, the job runs in the background and may take several hours to complete, especially during peak times. Do not submit duplicate requests until the job is complete. To check the job status, call the <strong>GetIndexJobStatus</strong> API. The <code>Documents</code> file list returned by the GetIndexJobStatus API contains all files for the job, which is uniquely identified by the <code>job_id</code> you provided. You can check this list to verify whether each file was imported (parsed) successfully. Note that frequent calls to the GetIndexJobStatus API are subject to rate limiting. Do not exceed 20 calls per minute.</li>
+     * <li>A successful API call indicates the job has been submitted for processing, which takes time. This API is not idempotent, so do not send duplicate requests; doing so will create multiple jobs.
+     * <strong>Rate limiting:</strong> This API is limited to 10 calls per second. If you exceed this limit, wait before retrying.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Adds parsed documents to an unstructured knowledge base. You cannot use the API to add knowledge to structured knowledge bases, see the Usage notes section of this topic.</p>
+     * <p>Adds parsed files to the specified knowledge base.</p>
      * 
      * @param request SubmitIndexAddDocumentsJobRequest
      * @return SubmitIndexAddDocumentsJobResponse
@@ -3254,15 +3660,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <ol>
-     * <li>Before you call this operation, you must call the <a href="https://www.alibabacloud.com/help/en/model-studio/developer-reference/api-bailian-2023-12-29-createindex">CreateIndex</a> operation and obtain the <code>IndexId</code>.</li>
-     * <li>Execution takes a period of time after this operation is called. Do not make new request before the request is returned.</li>
-     * <li>If you want to query the execution status of the job after you call this operation, call the <a href="https://www.alibabacloud.com/help/en/model-studio/developer-reference/api-bailian-2023-12-29-getindexjobstatus">GetIndexJobStatus</a> operation.</li>
-     * <li>This interface is not idempotent.</li>
-     * </ol>
+     * <ul>
+     * <li>Resource Access Management (RAM) users must first obtain <a href="https://help.aliyun.com/document_detail/2848578.html">API permissions</a> for Model Studio (requires <code>AliyunBailianDataFullAccess</code>, which includes the sfm:SubmitIndexJob permission), and <a href="https://help.aliyun.com/document_detail/2851098.html">join a workspace</a> before invoking this operation. Alibaba Cloud accounts can invoke this operation directly without authorization. Use the latest &lt;props=&quot;china&quot;&gt;<a href="https://api.aliyun.com/api-tools/sdk/bailian?version=2023-12-29">Model Studio SDK</a>&lt;props=&quot;intl&quot;&gt;<a href="https://api.alibabacloud.com/api-tools/sdk/bailian?version=2023-12-29">Model Studio SDK</a> to invoke this operation.</li>
+     * <li>Before invoking this operation, you must invoke the <strong>CreateIndex</strong> operation and obtain the corresponding <code>IndexId</code>.</li>
+     * <li>After invoking this operation, the node requires time to execute and may take several hours during peak periods. Do not submit duplicate requests before the node completes. To query the node execution status, invoke the <strong>GetIndexJobStatus</strong> operation.</li>
+     * <li>After the knowledge base is created, you can associate it with an agent application&lt;props=&quot;china&quot;&gt; or workflow application in the same workspace through &lt;props=&quot;china&quot;&gt;<a href="https://bailian.console.aliyun.com/?tab=app#/app-center">Application Management</a>&lt;props=&quot;intl&quot;&gt;<a href="https://modelstudio.console.alibabacloud.com/?tab=app#/app-center">Application Management</a> (or pass the <code>IndexID</code> through <code>rag_options</code> in <a href="https://help.aliyun.com/document_detail/2846132.html">Application Calls</a>) to supplement your Model Studio application with private knowledge and up-to-date information. You can also choose not to use a Model Studio application and directly query the knowledge base by invoking the <strong>Retrieve</strong> operation.</li>
+     * <li>This operation does not support idempotence.
+     * <strong>Rate limit:</strong>
+     * This operation is throttled if called too frequently. Do not exceed 10 calls per second. If throttled, retry later.</li>
+     * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Submits a specified CreateIndex job to complete knowledge base creation.</p>
+     * <p>Submits a specified CreateIndex task to complete knowledge base creation.</p>
      * 
      * @param request SubmitIndexJobRequest
      * @param headers map
@@ -3296,15 +3705,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <ol>
-     * <li>Before you call this operation, you must call the <a href="https://www.alibabacloud.com/help/en/model-studio/developer-reference/api-bailian-2023-12-29-createindex">CreateIndex</a> operation and obtain the <code>IndexId</code>.</li>
-     * <li>Execution takes a period of time after this operation is called. Do not make new request before the request is returned.</li>
-     * <li>If you want to query the execution status of the job after you call this operation, call the <a href="https://www.alibabacloud.com/help/en/model-studio/developer-reference/api-bailian-2023-12-29-getindexjobstatus">GetIndexJobStatus</a> operation.</li>
-     * <li>This interface is not idempotent.</li>
-     * </ol>
+     * <ul>
+     * <li>Resource Access Management (RAM) users must first obtain <a href="https://help.aliyun.com/document_detail/2848578.html">API permissions</a> for Model Studio (requires <code>AliyunBailianDataFullAccess</code>, which includes the sfm:SubmitIndexJob permission), and <a href="https://help.aliyun.com/document_detail/2851098.html">join a workspace</a> before invoking this operation. Alibaba Cloud accounts can invoke this operation directly without authorization. Use the latest &lt;props=&quot;china&quot;&gt;<a href="https://api.aliyun.com/api-tools/sdk/bailian?version=2023-12-29">Model Studio SDK</a>&lt;props=&quot;intl&quot;&gt;<a href="https://api.alibabacloud.com/api-tools/sdk/bailian?version=2023-12-29">Model Studio SDK</a> to invoke this operation.</li>
+     * <li>Before invoking this operation, you must invoke the <strong>CreateIndex</strong> operation and obtain the corresponding <code>IndexId</code>.</li>
+     * <li>After invoking this operation, the node requires time to execute and may take several hours during peak periods. Do not submit duplicate requests before the node completes. To query the node execution status, invoke the <strong>GetIndexJobStatus</strong> operation.</li>
+     * <li>After the knowledge base is created, you can associate it with an agent application&lt;props=&quot;china&quot;&gt; or workflow application in the same workspace through &lt;props=&quot;china&quot;&gt;<a href="https://bailian.console.aliyun.com/?tab=app#/app-center">Application Management</a>&lt;props=&quot;intl&quot;&gt;<a href="https://modelstudio.console.alibabacloud.com/?tab=app#/app-center">Application Management</a> (or pass the <code>IndexID</code> through <code>rag_options</code> in <a href="https://help.aliyun.com/document_detail/2846132.html">Application Calls</a>) to supplement your Model Studio application with private knowledge and up-to-date information. You can also choose not to use a Model Studio application and directly query the knowledge base by invoking the <strong>Retrieve</strong> operation.</li>
+     * <li>This operation does not support idempotence.
+     * <strong>Rate limit:</strong>
+     * This operation is throttled if called too frequently. Do not exceed 10 calls per second. If throttled, retry later.</li>
+     * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Submits a specified CreateIndex job to complete knowledge base creation.</p>
+     * <p>Submits a specified CreateIndex task to complete knowledge base creation.</p>
      * 
      * @param request SubmitIndexJobRequest
      * @return SubmitIndexJobResponse
@@ -3463,21 +3875,22 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  <strong>Limits</strong>: This operation supports only knowledge base of the document search type. Data query and image Q\&amp;A types are not supported.</p>
      * <ul>
-     * <li><strong>Required permissions</strong>:<ul>
-     * <li><strong>RAM users</strong>: Must first obtain the <a href="https://help.aliyun.com/document_detail/2848578.html">API permissions</a> of Model Studio (such as the <code>AliyunBailianDataFullAccess</code> policy, which includes the sfm:UpdateChunk permission required), and <a href="https://help.aliyun.com/document_detail/2851098.html">become member of a workspace</a>.</li>
-     * <li><strong>Alibaba Cloud account</strong>: Has the permission by default, and can call the operation directly.</li>
+     * <li><strong>Key limits</strong>: This operation supports only document search knowledge bases. Data query and image Q&amp;A knowledge bases are not supported.</li>
+     * <li><strong>Permission requirements</strong>:<ul>
+     * <li><strong>Resource Access Management (RAM) user</strong>: Before invoking this operation, obtain <a href="https://help.aliyun.com/document_detail/2848578.html">API permissions</a> for Model Studio (you can use the <code>AliyunBailianDataFullAccess</code> policy, which includes the sfm:UpdateChunk permission required by this operation), and <a href="https://help.aliyun.com/document_detail/2851098.html">join a workspace</a>.</li>
+     * <li><strong>Alibaba Cloud account</strong>: Has permissions by default and can invoke this operation directly.</li>
      * </ul>
      * </li>
-     * <li><strong>Call method</strong>: We recommend using the latest version of the <a href="https://api.alibabacloud.com/api-tools/sdk/bailian?version=2023-12-29">GenAI Service Platform SDK</a>. The SDK encapsulates complex signature computational logic to simplify the call process.</li>
-     * <li><strong>Delay</strong>: The update takes effect immediately. During peak hours, the update may take place in seconds.</li>
-     * <li><strong>Idempotence</strong>: This operation is idempotent. If you perform a repeated operation on a chunk that has already been updated, the interface returns a success.
-     * <strong>Rate limit:</strong> Rate limiting will be triggered if you call this operation frequently. Do not exceed 10 times per second. If limiting is triggered, try again later.</li>
+     * <li><strong>Calling method</strong>: Use the latest &lt;props=&quot;china&quot;&gt;<a href="https://api.aliyun.com/api-tools/sdk/bailian?version=2023-12-29">Model Studio SDK</a>&lt;props=&quot;intl&quot;&gt;<a href="https://api.alibabacloud.com/api-tools/sdk/bailian?version=2023-12-29">Model Studio SDK</a>. The SDK provides encapsulation of complex signature calculation logic and simplifies the invocation procedure.</li>
+     * <li><strong>Effective latency</strong>: Updates typically take effect immediately. During peak hours, a slight delay (seconds) may occur.</li>
+     * <li><strong>Idempotence</strong>: This operation is idempotent. If you repeat the operation on a text chunk that has already been updated, the operation returns a success response.
+     * <strong>Rate limit:</strong>
+     * This operation is throttled if called too frequently. Do not exceed 10 calls per second. If you are throttled, retry later.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Modifies the content and title of a specified text chunk in the knowledge base, and sets whether the chunk participates in knowledge base retrieval.</p>
+     * <p>Modifies the content and title of a specified text chunk in a knowledge base, and specifies whether the chunk participates in knowledge base retrieval.</p>
      * 
      * @param request UpdateChunkRequest
      * @param headers map
@@ -3531,21 +3944,22 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  <strong>Limits</strong>: This operation supports only knowledge base of the document search type. Data query and image Q\&amp;A types are not supported.</p>
      * <ul>
-     * <li><strong>Required permissions</strong>:<ul>
-     * <li><strong>RAM users</strong>: Must first obtain the <a href="https://help.aliyun.com/document_detail/2848578.html">API permissions</a> of Model Studio (such as the <code>AliyunBailianDataFullAccess</code> policy, which includes the sfm:UpdateChunk permission required), and <a href="https://help.aliyun.com/document_detail/2851098.html">become member of a workspace</a>.</li>
-     * <li><strong>Alibaba Cloud account</strong>: Has the permission by default, and can call the operation directly.</li>
+     * <li><strong>Key limits</strong>: This operation supports only document search knowledge bases. Data query and image Q&amp;A knowledge bases are not supported.</li>
+     * <li><strong>Permission requirements</strong>:<ul>
+     * <li><strong>Resource Access Management (RAM) user</strong>: Before invoking this operation, obtain <a href="https://help.aliyun.com/document_detail/2848578.html">API permissions</a> for Model Studio (you can use the <code>AliyunBailianDataFullAccess</code> policy, which includes the sfm:UpdateChunk permission required by this operation), and <a href="https://help.aliyun.com/document_detail/2851098.html">join a workspace</a>.</li>
+     * <li><strong>Alibaba Cloud account</strong>: Has permissions by default and can invoke this operation directly.</li>
      * </ul>
      * </li>
-     * <li><strong>Call method</strong>: We recommend using the latest version of the <a href="https://api.alibabacloud.com/api-tools/sdk/bailian?version=2023-12-29">GenAI Service Platform SDK</a>. The SDK encapsulates complex signature computational logic to simplify the call process.</li>
-     * <li><strong>Delay</strong>: The update takes effect immediately. During peak hours, the update may take place in seconds.</li>
-     * <li><strong>Idempotence</strong>: This operation is idempotent. If you perform a repeated operation on a chunk that has already been updated, the interface returns a success.
-     * <strong>Rate limit:</strong> Rate limiting will be triggered if you call this operation frequently. Do not exceed 10 times per second. If limiting is triggered, try again later.</li>
+     * <li><strong>Calling method</strong>: Use the latest &lt;props=&quot;china&quot;&gt;<a href="https://api.aliyun.com/api-tools/sdk/bailian?version=2023-12-29">Model Studio SDK</a>&lt;props=&quot;intl&quot;&gt;<a href="https://api.alibabacloud.com/api-tools/sdk/bailian?version=2023-12-29">Model Studio SDK</a>. The SDK provides encapsulation of complex signature calculation logic and simplifies the invocation procedure.</li>
+     * <li><strong>Effective latency</strong>: Updates typically take effect immediately. During peak hours, a slight delay (seconds) may occur.</li>
+     * <li><strong>Idempotence</strong>: This operation is idempotent. If you repeat the operation on a text chunk that has already been updated, the operation returns a success response.
+     * <strong>Rate limit:</strong>
+     * This operation is throttled if called too frequently. Do not exceed 10 calls per second. If you are throttled, retry later.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Modifies the content and title of a specified text chunk in the knowledge base, and sets whether the chunk participates in knowledge base retrieval.</p>
+     * <p>Modifies the content and title of a specified text chunk in a knowledge base, and specifies whether the chunk participates in knowledge base retrieval.</p>
      * 
      * @param request UpdateChunkRequest
      * @return UpdateChunkResponse
@@ -3557,8 +3971,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li>A RAM user can call this operation only after they join a workspace and are granted the required <a href="https://help.aliyun.com/document_detail/2848578.html">API permission</a> for Alibaba Cloud Model Studio (Bailian). The <code>AliyunBailianDataFullAccess</code> policy, which includes the <code>sfm:UpdateConnector</code> permission, is required. An Alibaba Cloud account can call this operation directly. Use the latest version of the &lt;props=&quot;china&quot;&gt;<a href="https://api.aliyun.com/api-tools/sdk/bailian?version=2023-12-29">Alibaba Cloud Model Studio (Bailian) SDK</a>&lt;props=&quot;intl&quot;&gt;<a href="https://api.alibabacloud.com/api-tools/sdk/bailian?version=2023-12-29">Alibaba Cloud Model Studio (Bailian) SDK</a> to call this operation.</li>
+     * <li>This operation is not idempotent.
+     * <strong>Throttling:</strong> If you call this operation too frequently, the system may throttle your requests. Do not exceed a frequency of 5 calls per second. If a request is throttled, try again later.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>编辑连接器</p>
+     * <p>Updates a connector.</p>
      * 
      * @param request UpdateConnectorRequest
      * @param headers map
@@ -3595,8 +4016,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li>A RAM user can call this operation only after they join a workspace and are granted the required <a href="https://help.aliyun.com/document_detail/2848578.html">API permission</a> for Alibaba Cloud Model Studio (Bailian). The <code>AliyunBailianDataFullAccess</code> policy, which includes the <code>sfm:UpdateConnector</code> permission, is required. An Alibaba Cloud account can call this operation directly. Use the latest version of the &lt;props=&quot;china&quot;&gt;<a href="https://api.aliyun.com/api-tools/sdk/bailian?version=2023-12-29">Alibaba Cloud Model Studio (Bailian) SDK</a>&lt;props=&quot;intl&quot;&gt;<a href="https://api.alibabacloud.com/api-tools/sdk/bailian?version=2023-12-29">Alibaba Cloud Model Studio (Bailian) SDK</a> to call this operation.</li>
+     * <li>This operation is not idempotent.
+     * <strong>Throttling:</strong> If you call this operation too frequently, the system may throttle your requests. Do not exceed a frequency of 5 calls per second. If a request is throttled, try again later.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>编辑连接器</p>
+     * <p>Updates a connector.</p>
      * 
      * @param request UpdateConnectorRequest
      * @return UpdateConnectorResponse
@@ -3608,8 +4036,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li>A RAM User (sub-account) must be granted the required <a href="https://help.aliyun.com/document_detail/2848578.html">API permissions</a> for Alibaba Cloud Model Studio (the <code>AliyunBailianDataFullAccess</code> policy, which includes the <code>sfm:UpdateFileTag</code> permission) and <a href="https://help.aliyun.com/document_detail/2851098.html">join a workspace</a> before calling this operation. An Alibaba Cloud account (main account) can call this operation directly without authorization. We recommend using the latest version of the &lt;props=&quot;china&quot;&gt;<a href="https://api.aliyun.com/api-tools/sdk/bailian?version=2023-12-29">Alibaba Cloud Model Studio SDK</a>&lt;props=&quot;intl&quot;&gt;<a href="https://api.alibabacloud.com/api-tools/sdk/bailian?version=2023-12-29">Alibaba Cloud Model Studio SDK</a> to call this operation.
+     * <strong>Throttling:</strong> Do not call this operation more than 5 times per second. If a request is throttled, try again later.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>Updates the tags of a specified document.</p>
+     * <p>Updates the tags for a specified file.</p>
      * 
      * @param tmpReq UpdateFileTagRequest
      * @param headers map
@@ -3648,8 +4082,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li>A RAM User (sub-account) must be granted the required <a href="https://help.aliyun.com/document_detail/2848578.html">API permissions</a> for Alibaba Cloud Model Studio (the <code>AliyunBailianDataFullAccess</code> policy, which includes the <code>sfm:UpdateFileTag</code> permission) and <a href="https://help.aliyun.com/document_detail/2851098.html">join a workspace</a> before calling this operation. An Alibaba Cloud account (main account) can call this operation directly without authorization. We recommend using the latest version of the &lt;props=&quot;china&quot;&gt;<a href="https://api.aliyun.com/api-tools/sdk/bailian?version=2023-12-29">Alibaba Cloud Model Studio SDK</a>&lt;props=&quot;intl&quot;&gt;<a href="https://api.alibabacloud.com/api-tools/sdk/bailian?version=2023-12-29">Alibaba Cloud Model Studio SDK</a> to call this operation.
+     * <strong>Throttling:</strong> Do not call this operation more than 5 times per second. If a request is throttled, try again later.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>Updates the tags of a specified document.</p>
+     * <p>Updates the tags for a specified file.</p>
      * 
      * @param request UpdateFileTagRequest
      * @return UpdateFileTagResponse
@@ -3661,8 +4101,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>&lt;props=&quot;intl&quot;&gt;This operation is not available on the Alibaba Cloud International Website (www\.alibabacloud.com).&lt;props=&quot;china&quot;&gt;
+     * Before a RAM user can call this operation, the RAM user must have the <code>AliyunBailianDataFullAccess</code> permission for Alibaba Cloud Model Studio. For more information, see <a href="https://help.aliyun.com/document_detail/2848578.html">Grant permissions</a>. The RAM user must also be added to a workspace. For more information, see <a href="https://help.aliyun.com/document_detail/2851098.html">Add a member to a workspace</a>. An Alibaba Cloud account can call this operation without authorization. Use the latest version of the Alibaba Cloud Model Studio SDK to call this operation. For more information, see <a href="https://api.aliyun.com/api-tools/sdk/bailian?version=2023-12-29">Alibaba Cloud Model Studio SDK</a>.
+     * Before you call this operation, ensure that the knowledge base is created and has not been deleted. The knowledge base ID (<code>Id</code>) must be valid.
+     * This operation is idempotent.</p>
+     * 
      * <b>summary</b> : 
-     * <p>\&lt;props=&quot;intl&quot;&gt;Currently, this API is not supported.\</p>
+     * <p>Updates the configuration of a specified knowledge base.</p>
      * 
      * @param request UpdateIndexRequest
      * @param headers map
@@ -3723,8 +4169,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>&lt;props=&quot;intl&quot;&gt;This operation is not available on the Alibaba Cloud International Website (www\.alibabacloud.com).&lt;props=&quot;china&quot;&gt;
+     * Before a RAM user can call this operation, the RAM user must have the <code>AliyunBailianDataFullAccess</code> permission for Alibaba Cloud Model Studio. For more information, see <a href="https://help.aliyun.com/document_detail/2848578.html">Grant permissions</a>. The RAM user must also be added to a workspace. For more information, see <a href="https://help.aliyun.com/document_detail/2851098.html">Add a member to a workspace</a>. An Alibaba Cloud account can call this operation without authorization. Use the latest version of the Alibaba Cloud Model Studio SDK to call this operation. For more information, see <a href="https://api.aliyun.com/api-tools/sdk/bailian?version=2023-12-29">Alibaba Cloud Model Studio SDK</a>.
+     * Before you call this operation, ensure that the knowledge base is created and has not been deleted. The knowledge base ID (<code>Id</code>) must be valid.
+     * This operation is idempotent.</p>
+     * 
      * <b>summary</b> : 
-     * <p>\&lt;props=&quot;intl&quot;&gt;Currently, this API is not supported.\</p>
+     * <p>Updates the configuration of a specified knowledge base.</p>
      * 
      * @param request UpdateIndexRequest
      * @return UpdateIndexResponse
@@ -3736,8 +4188,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li>This operation is idempotent.
+     * <strong>Rate limit:</strong> Ensure that the interval between two requests is at least 1 second. Otherwise, throttling may be triggered. If throttling occurs, retry later.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>更新memory</p>
+     * <p>Updates the description of a specified long-term memory.</p>
      * 
      * @param request UpdateMemoryRequest
      * @param headers map
@@ -3770,8 +4228,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li>This operation is idempotent.
+     * <strong>Rate limit:</strong> Ensure that the interval between two requests is at least 1 second. Otherwise, throttling may be triggered. If throttling occurs, retry later.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>更新memory</p>
+     * <p>Updates the description of a specified long-term memory.</p>
      * 
      * @param request UpdateMemoryRequest
      * @return UpdateMemoryResponse
@@ -3784,7 +4248,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新记忆Node</p>
+     * <p>Updates a memory fragment.</p>
      * 
      * @param request UpdateMemoryNodeRequest
      * @param headers map
@@ -3818,7 +4282,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新记忆Node</p>
+     * <p>Updates a memory fragment.</p>
      * 
      * @param request UpdateMemoryNodeRequest
      * @return UpdateMemoryNodeResponse
@@ -3881,8 +4345,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li>Ensure that the OSS bucket belongs to the same Alibaba Cloud account as your Alibaba Cloud Model Studio instance. You must also complete the authorization steps described in <a href="https://help.aliyun.com/document_detail/2782155.html">Configure data import from OSS</a>.<ul>
+     * <li>The bucket storage class must not be Archive, Cold Archive, or Deep Cold Archive. Buckets with server-side encryption are supported. public-read-write, public-read, and private buckets are also supported.</li>
+     * <li>If you use a bucket with <a href="https://help.aliyun.com/document_detail/2636937.html">Referer-based hotlink protection</a>, you must add <code>*.console.aliyun.com</code> to the Referer whitelist. For more information, see <a href="https://help.aliyun.com/document_detail/2636937.html">Allow access only from trusted websites</a>.</li>
+     * </ul>
+     * </li>
+     * <li>Before a RAM user (sub-account) can call this operation, they must obtain <a href="https://help.aliyun.com/document_detail/2848578.html">API permissions</a> for Alibaba Cloud Model Studio and <a href="https://help.aliyun.com/document_detail/2851098.html">join a workspace</a>. The AliyunBailianDataFullAccess policy includes the required <code>sfm:UpdateTableFromAuthorizedOss</code> permission. An Alibaba Cloud account (root account) can call this operation directly without additional permissions. We recommend that you use the latest version of the &lt;props=&quot;china&quot;&gt;<a href="https://api.aliyun.com/api-tools/sdk/bailian?version=2023-12-29">Alibaba Cloud Model Studio SDK</a> or &lt;props=&quot;intl&quot;&gt;<a href="https://api.alibabacloud.com/api-tools/sdk/bailian?version=2023-12-29">Alibaba Cloud Model Studio SDK</a>.</li>
+     * <li>This operation is not idempotent.
+     * <strong>Rate limiting:</strong> This operation is subject to rate limiting. Do not call it more than five times per second. If you reach the limit, wait before you try again.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>从oss上传table</p>
+     * <p>Update a table in an Alibaba Cloud Model Studio data connector using a file from an authorized OSS bucket.</p>
      * 
      * @param request UpdateTableFromAuthorizedOssRequest
      * @param headers map
@@ -3927,8 +4403,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li>Ensure that the OSS bucket belongs to the same Alibaba Cloud account as your Alibaba Cloud Model Studio instance. You must also complete the authorization steps described in <a href="https://help.aliyun.com/document_detail/2782155.html">Configure data import from OSS</a>.<ul>
+     * <li>The bucket storage class must not be Archive, Cold Archive, or Deep Cold Archive. Buckets with server-side encryption are supported. public-read-write, public-read, and private buckets are also supported.</li>
+     * <li>If you use a bucket with <a href="https://help.aliyun.com/document_detail/2636937.html">Referer-based hotlink protection</a>, you must add <code>*.console.aliyun.com</code> to the Referer whitelist. For more information, see <a href="https://help.aliyun.com/document_detail/2636937.html">Allow access only from trusted websites</a>.</li>
+     * </ul>
+     * </li>
+     * <li>Before a RAM user (sub-account) can call this operation, they must obtain <a href="https://help.aliyun.com/document_detail/2848578.html">API permissions</a> for Alibaba Cloud Model Studio and <a href="https://help.aliyun.com/document_detail/2851098.html">join a workspace</a>. The AliyunBailianDataFullAccess policy includes the required <code>sfm:UpdateTableFromAuthorizedOss</code> permission. An Alibaba Cloud account (root account) can call this operation directly without additional permissions. We recommend that you use the latest version of the &lt;props=&quot;china&quot;&gt;<a href="https://api.aliyun.com/api-tools/sdk/bailian?version=2023-12-29">Alibaba Cloud Model Studio SDK</a> or &lt;props=&quot;intl&quot;&gt;<a href="https://api.alibabacloud.com/api-tools/sdk/bailian?version=2023-12-29">Alibaba Cloud Model Studio SDK</a>.</li>
+     * <li>This operation is not idempotent.
+     * <strong>Rate limiting:</strong> This operation is subject to rate limiting. Do not call it more than five times per second. If you reach the limit, wait before you try again.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>从oss上传table</p>
+     * <p>Update a table in an Alibaba Cloud Model Studio data connector using a file from an authorized OSS bucket.</p>
      * 
      * @param request UpdateTableFromAuthorizedOssRequest
      * @return UpdateTableFromAuthorizedOssResponse

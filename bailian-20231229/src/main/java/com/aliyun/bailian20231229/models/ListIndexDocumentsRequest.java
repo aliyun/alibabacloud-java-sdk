@@ -5,20 +5,23 @@ import com.aliyun.tea.*;
 
 public class ListIndexDocumentsRequest extends TeaModel {
     /**
-     * <p>The names of the queried documents. The default value is null, which means the names are not used to filter the results.</p>
+     * <p>Filters the returned file list by file name (without the file extension). Default value: empty, which means the results are not filtered by file name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>product-overview</p>
      */
     @NameInMap("DocumentName")
     public String documentName;
 
     /**
-     * <p>The import status of the documents to be queried. Valid values:</p>
+     * <p>Filters the returned file list by file import status. Valid values:</p>
      * <ul>
-     * <li>INSERT_ERROR</li>
-     * <li>RUNNING</li>
-     * <li>DELETED</li>
-     * <li>FINISH</li>
+     * <li>INSERT_ERROR: The file failed to be imported.</li>
+     * <li>RUNNING: The file is being imported.</li>
+     * <li>DELETED: The file has been deleted.</li>
+     * <li>FINISH: The file was imported.</li>
      * </ul>
-     * <p>The default value is null, which means the import status is not used to filter the results.</p>
+     * <p>Default value: empty, which means the results are not filtered by file import status.</p>
      * 
      * <strong>example:</strong>
      * <p>FINISH</p>
@@ -26,21 +29,32 @@ public class ListIndexDocumentsRequest extends TeaModel {
     @NameInMap("DocumentStatus")
     public String documentStatus;
 
+    /**
+     * <p>Specifies whether to enable fuzzy matching for file names. This parameter is used together with the <code>DocumentName</code> parameter. Valid values:</p>
+     * <ul>
+     * <li>true: Fuzzy matching is used to filter the returned file list by file name.</li>
+     * <li>false: Exact matching is used to filter the returned file list by file name.</li>
+     * </ul>
+     * <p>Default value: false.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("EnableNameLike")
     public String enableNameLike;
 
     /**
-     * <p>The primary key ID of the knowledge base, which is the <code>Data.Id</code> parameter returned by the <a href="https://www.alibabacloud.com/help/en/model-studio/developer-reference/api-bailian-2023-12-29-createindex">CreateIndex</a> operation.</p>
+     * <p>The knowledge base ID, which is the <code>Data.Id</code> returned by the <strong>CreateIndex</strong> operation.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>79c0aly8zw</p>
+     * <p>79c0alxxxx</p>
      */
     @NameInMap("IndexId")
     public String indexId;
 
     /**
-     * <p>The page numbers of the pages to return. Pages start from page 1. Default value: 1.</p>
+     * <p>The page number. Minimum value: 1. Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -49,7 +63,8 @@ public class ListIndexDocumentsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of documents displayed on each page. No maximum value. Default value: 10.</p>
+     * <p>The number of files to display per page in a paging query. No maximum limit.
+     * Default value: 10.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>

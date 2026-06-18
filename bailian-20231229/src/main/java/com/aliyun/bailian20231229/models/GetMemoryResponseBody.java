@@ -4,26 +4,38 @@ package com.aliyun.bailian20231229.models;
 import com.aliyun.tea.*;
 
 public class GetMemoryResponseBody extends TeaModel {
+    /**
+     * <p>The description of the long-term memory.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>我的大模型应用$APP_ID关于A用户的长期记忆体</p>
+     */
     @NameInMap("description")
     public String description;
 
     /**
+     * <p>The ID of the long-term memory.</p>
+     * 
      * <strong>example:</strong>
-     * <p>6bff4f317a14442fbc9f73d29dbd5fc3</p>
+     * <p>6bff4f317a14442fbc9f73d29dbdxxxx</p>
      */
     @NameInMap("memoryId")
     public String memoryId;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
-     * <p>6a71f2d9-f1c9-913b-818b-114029103cad</p>
+     * <p>6a71f2d9-f1c9-913b-818b-11402910xxxx</p>
      */
     @NameInMap("requestId")
     public String requestId;
 
     /**
+     * <p>The ID of the workspace to which the long-term memory belongs.</p>
+     * 
      * <strong>example:</strong>
-     * <p>llm-us9hjmt32nysdm5v</p>
+     * <p>llm-3z7uw7fwz0vexxxx</p>
      */
     @NameInMap("workspaceId")
     public String workspaceId;

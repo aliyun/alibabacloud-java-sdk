@@ -5,11 +5,11 @@ import com.aliyun.tea.*;
 
 public class DeleteIndexRequest extends TeaModel {
     /**
-     * <p>The primary key ID of the knowledge base, which is the <code>Data.Id</code> parameter returned by the <a href="https://www.alibabacloud.com/help/en/model-studio/developer-reference/api-bailian-2023-12-29-createindex">CreateIndex</a> operation.</p>
+     * <p>The knowledge base ID, which is the <code>Data.Id</code> returned by the <strong>CreateIndex</strong> operation.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>f89ie0fj5a</p>
+     * <p>f89ie0xxxx</p>
      */
     @NameInMap("IndexId")
     public String indexId;

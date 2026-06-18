@@ -5,30 +5,41 @@ import com.aliyun.tea.*;
 
 public class ListMemoriesResponseBody extends TeaModel {
     /**
+     * <p>The number of long-term memory entities per page in a paged query.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
     @NameInMap("maxResults")
     public Integer maxResults;
 
+    /**
+     * <p>The long-term memory entity list.</p>
+     */
     @NameInMap("memories")
     public java.util.List<ListMemoriesResponseBodyMemories> memories;
 
     /**
+     * <p>The pagination token returned in this call.</p>
+     * 
      * <strong>example:</strong>
-     * <p>dc270401186b433f975d7e1faaa34e0e</p>
+     * <p>dc270401186b433f975d7e1faaa3xxxx</p>
      */
     @NameInMap("nextToken")
     public String nextToken;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
-     * <p>6a71f2d9-f1c9-913b-818b-114029103cad</p>
+     * <p>6a71f2d9-f1c9-913b-818b-11402910xxxx</p>
      */
     @NameInMap("requestId")
     public String requestId;
 
     /**
+     * <p>The total number of entries returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>105</p>
      */
@@ -36,8 +47,10 @@ public class ListMemoriesResponseBody extends TeaModel {
     public Integer totalCount;
 
     /**
+     * <p>The ID of the workspace to which the long-term memory entity list belongs.</p>
+     * 
      * <strong>example:</strong>
-     * <p>llm-us9hjmt32nysdm5v</p>
+     * <p>llm-3z7uw7fwz0vexxxx</p>
      */
     @NameInMap("workspaceId")
     public String workspaceId;
@@ -96,12 +109,20 @@ public class ListMemoriesResponseBody extends TeaModel {
     }
 
     public static class ListMemoriesResponseBodyMemories extends TeaModel {
+        /**
+         * <p>The description of the long-term memory.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>我的大模型应用$APP_ID关于A用户的长期记忆体</p>
+         */
         @NameInMap("description")
         public String description;
 
         /**
+         * <p>The long-term memory ID.</p>
+         * 
          * <strong>example:</strong>
-         * <p>3fc531f4519444beaafffa4538f60667</p>
+         * <p>3fc531f4519444beaafffa4538f6xxxx</p>
          */
         @NameInMap("memoryId")
         public String memoryId;

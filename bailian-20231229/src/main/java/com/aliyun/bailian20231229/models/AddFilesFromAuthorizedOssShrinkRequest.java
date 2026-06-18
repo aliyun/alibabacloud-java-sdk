@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class AddFilesFromAuthorizedOssShrinkRequest extends TeaModel {
     /**
+     * <p>Specifies the target category for file import. This is the <code>CategoryId</code> returned by the AddCategory operation. You can also obtain the category ID from the &lt;props=&quot;china&quot;&gt;<a href="https://bailian.console.aliyun.com/?tab=app#/data-center">Application Data</a> - Files tab&lt;props=&quot;intl&quot;&gt;<a href="https://modelstudio.console.alibabacloud.com/?tab=app#/data-center">Application Data</a> - Files tab by clicking the ID icon next to the category name. You can also pass in default, which uses the system-created &quot;Default Category&quot;.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,14 @@ public class AddFilesFromAuthorizedOssShrinkRequest extends TeaModel {
     public String categoryId;
 
     /**
+     * <p>Category type. Optional. The default value is UNSTRUCTURED. Valid values:</p>
+     * <ul>
+     * <li>UNSTRUCTURED: Category used for building knowledge base scenarios.</li>
+     * </ul>
+     * <p>&lt;props=&quot;china&quot;&gt;</p>
+     * <blockquote>
+     * <p>This operation does not support importing SESSION_FILE used for agent application <a href="https://help.aliyun.com/zh/model-studio/user-guide/file-interaction">session interaction</a>. Please use the <strong>AddFile</strong> operation to upload SESSION_FILE from local.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,12 +32,17 @@ public class AddFilesFromAuthorizedOssShrinkRequest extends TeaModel {
     public String categoryType;
 
     /**
+     * <p>The list of files to import. Up to 10 files can be uploaded at a time.</p>
+     * <blockquote>
+     * <p>Up to 10 files can be uploaded at a time.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      */
     @NameInMap("FileDetails")
     public String fileDetailsShrink;
 
     /**
+     * <p>The OSS Bucket name. For details, see <a href="https://help.aliyun.com/document_detail/177682.html">Buckets</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -38,6 +52,7 @@ public class AddFilesFromAuthorizedOssShrinkRequest extends TeaModel {
     public String ossBucketName;
 
     /**
+     * <p>The region ID of the OSS Bucket. For how to obtain it, see <a href="https://help.aliyun.com/document_detail/31837.html">OSS regions and endpoints</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -46,9 +61,18 @@ public class AddFilesFromAuthorizedOssShrinkRequest extends TeaModel {
     @NameInMap("OssRegionId")
     public String ossRegionId;
 
+    /**
+     * <p>Whether to overwrite the same file in the category by OssKey. The default value is false, meaning no overwrite.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("OverWriteFileByOssKey")
     public Boolean overWriteFileByOssKey;
 
+    /**
+     * <p>The list of tags associated with the file. The default is empty, meaning the file is not associated with any tags. Up to 10 tags can be passed in.</p>
+     */
     @NameInMap("Tags")
     public String tagsShrink;
 

@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class AddTableResponseBody extends TeaModel {
     /**
+     * <p>The error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>Index.Forbidden</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The returned data.</p>
+     */
     @NameInMap("Data")
     public AddTableResponseBodyData data;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>Required parameter(%s) missing or invalid, please check the request parameters.</p>
      */
@@ -31,6 +38,8 @@ public class AddTableResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The status code returned by the operation.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -38,6 +47,12 @@ public class AddTableResponseBody extends TeaModel {
     public String status;
 
     /**
+     * <p>Indicates whether the call was successful. Valid values:</p>
+     * <ul>
+     * <li>true: Succeeded.</li>
+     * <li>false: Failed.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>True</p>
      */
@@ -99,6 +114,8 @@ public class AddTableResponseBody extends TeaModel {
 
     public static class AddTableResponseBodyData extends TeaModel {
         /**
+         * <p>The table ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>table_b6ddc67e7df14db38b74ef5e2e0fe24e_12792097</p>
          */

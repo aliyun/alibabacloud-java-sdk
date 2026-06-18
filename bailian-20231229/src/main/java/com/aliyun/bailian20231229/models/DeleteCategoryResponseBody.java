@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DeleteCategoryResponseBody extends TeaModel {
     /**
+     * <p>The error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -12,12 +14,14 @@ public class DeleteCategoryResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>data</p>
+     * <p>The data field returned by the operation.</p>
      */
     @NameInMap("Data")
     public DeleteCategoryResponseBodyData data;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>workspace id is null or invalid.</p>
      */
@@ -25,7 +29,7 @@ public class DeleteCategoryResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>17204B98-xxxx-4F9A-8464-2446A84821CA</p>
@@ -34,6 +38,8 @@ public class DeleteCategoryResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The status code returned by the operation.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -41,6 +47,12 @@ public class DeleteCategoryResponseBody extends TeaModel {
     public String status;
 
     /**
+     * <p>Indicates whether the call was successful. Valid values:</p>
+     * <ul>
+     * <li>true: The call was successful.</li>
+     * <li>false: The call failed.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -102,8 +114,10 @@ public class DeleteCategoryResponseBody extends TeaModel {
 
     public static class DeleteCategoryResponseBodyData extends TeaModel {
         /**
+         * <p>The ID of the deleted category.</p>
+         * 
          * <strong>example:</strong>
-         * <p>cate_cdd11b1b79a74e8bbd675c356a91ee3XXXXXXXX</p>
+         * <p>cate_cdd11b1b79a74e8bbd675c356a91ee3xxxxxxxx</p>
          */
         @NameInMap("CategoryId")
         public String categoryId;

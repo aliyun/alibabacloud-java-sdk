@@ -5,8 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListIndicesRequest extends TeaModel {
     /**
-     * <p>The name of the knowledge base. You can query knowledge base by name. The name must be 1 to 20 characters in length and can contain characters classified as letter in Unicode, including English letters, Chinese characters, digits, among others. The name can also contain colons (:), underscores (_), periods (.), and hyphens (-).</p>
-     * <p>This parameter is left empty by default, which means that all knowledge bases in the specified workspace are queried.</p>
+     * <p>The name of the knowledge base. You can use this parameter to search for a knowledge base by name. The name must be 1 to 20 characters in length and can contain characters classified as letters in Unicode (including English letters, Chinese characters, and digits). The name can also contain colons (:), underscores (_), periods (.), or hyphens (-).</p>
+     * <p>Default value: empty, which queries all knowledge bases in the specified workspace.</p>
      * 
      * <strong>example:</strong>
      * <p>idx_status_score</p>
@@ -15,7 +15,7 @@ public class ListIndicesRequest extends TeaModel {
     public String indexName;
 
     /**
-     * <p>The number of the pages to return. Pages start from page 1. Default value: 1.</p>
+     * <p>The page number. Minimum value: 1. Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -24,7 +24,8 @@ public class ListIndicesRequest extends TeaModel {
     public String pageNumber;
 
     /**
-     * <p>The number of knowledge bases to display on each page. No maximum value. Default value: 10.</p>
+     * <p>The number of knowledge bases to display per page in a paging query. No maximum limit.
+     * Default value: 10.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>

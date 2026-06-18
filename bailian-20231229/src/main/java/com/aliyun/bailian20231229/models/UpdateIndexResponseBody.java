@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class UpdateIndexResponseBody extends TeaModel {
     /**
+     * <p>The status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>Success</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The data returned.</p>
+     */
     @NameInMap("Data")
     public UpdateIndexResponseBodyData data;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>Required parameter(%s) missing or invalid, please check the request parameters.</p>
      */
@@ -22,6 +29,8 @@ public class UpdateIndexResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>17204B98-7734-4F9A-8464-xxx</p>
      */
@@ -29,6 +38,8 @@ public class UpdateIndexResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The status code returned by the API.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -36,6 +47,10 @@ public class UpdateIndexResponseBody extends TeaModel {
     public String status;
 
     /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <p>true: The request was successful.</p>
+     * <p>false: The request failed.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -97,6 +112,8 @@ public class UpdateIndexResponseBody extends TeaModel {
 
     public static class UpdateIndexResponseBodyData extends TeaModel {
         /**
+         * <p>The knowledge base ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>79c0alxxxx</p>
          */

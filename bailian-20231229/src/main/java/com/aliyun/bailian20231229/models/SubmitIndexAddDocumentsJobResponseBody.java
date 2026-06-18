@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class SubmitIndexAddDocumentsJobResponseBody extends TeaModel {
     /**
-     * <p>HTTP status code</p>
+     * <p>The error code returned on failure.</p>
      * 
      * <strong>example:</strong>
      * <p>Index.InvalidParameter</p>
@@ -14,13 +14,13 @@ public class SubmitIndexAddDocumentsJobResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The data returned.</p>
+     * <p>The business data.</p>
      */
     @NameInMap("Data")
     public SubmitIndexAddDocumentsJobResponseBodyData data;
 
     /**
-     * <p>The error message.</p>
+     * <p>The error message returned on failure.</p>
      * 
      * <strong>example:</strong>
      * <p>Required parameter(%s) missing or invalid, please check the request parameters.</p>
@@ -32,13 +32,13 @@ public class SubmitIndexAddDocumentsJobResponseBody extends TeaModel {
      * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>778C0B3B-03C1-5FC1-A947-36EDD13606AB</p>
+     * <p>778C0B3B-xxxx-5FC1-A947-36EDD13606AB</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The HTTP status code returned.</p>
+     * <p>The response status code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -47,10 +47,12 @@ public class SubmitIndexAddDocumentsJobResponseBody extends TeaModel {
     public String status;
 
     /**
-     * <p>Indications whether the API call is successful. Valid values:</p>
+     * <p>Indicates whether the request was successful. Valid values:</p>
      * <ul>
-     * <li>true</li>
-     * <li>false</li>
+     * <li><p>true: The request was successful.</p>
+     * </li>
+     * <li><p>false: The request failed.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -114,7 +116,7 @@ public class SubmitIndexAddDocumentsJobResponseBody extends TeaModel {
 
     public static class SubmitIndexAddDocumentsJobResponseBodyData extends TeaModel {
         /**
-         * <p>The primary key ID of the task, <code>JobId</code>.</p>
+         * <p>The job ID, also known as <code>JobId</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>42687eb254a34802bed398357f5498ae</p>

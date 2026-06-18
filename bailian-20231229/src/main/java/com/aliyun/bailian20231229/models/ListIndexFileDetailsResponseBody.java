@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class ListIndexFileDetailsResponseBody extends TeaModel {
     /**
+     * <p>The error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>InvalidParameter</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The returned data.</p>
+     */
     @NameInMap("Data")
     public ListIndexFileDetailsResponseBodyData data;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>Required parameter(%s) missing or invalid, please check the request parameters.</p>
      */
@@ -22,7 +29,7 @@ public class ListIndexFileDetailsResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>35A267BF-xxxx-54DB-8394-AA3B0742D833</p>
@@ -31,13 +38,23 @@ public class ListIndexFileDetailsResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
-     * <p>RUNNING</p>
+     * <p>200</p>
      */
     @NameInMap("Status")
     public String status;
 
     /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <ul>
+     * <li><p>true: The request was successful.</p>
+     * </li>
+     * <li><p>false: The request failed.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -99,6 +116,8 @@ public class ListIndexFileDetailsResponseBody extends TeaModel {
 
     public static class ListIndexFileDetailsResponseBodyDataDocuments extends TeaModel {
         /**
+         * <p>The custom chunking method.</p>
+         * 
          * <strong>example:</strong>
          * <p>DashSplitter</p>
          */
@@ -106,6 +125,8 @@ public class ListIndexFileDetailsResponseBody extends TeaModel {
         public String chunkMode;
 
         /**
+         * <p>The length of a chunk, in characters.</p>
+         * 
          * <strong>example:</strong>
          * <p>600</p>
          */
@@ -113,6 +134,8 @@ public class ListIndexFileDetailsResponseBody extends TeaModel {
         public String chunkSize;
 
         /**
+         * <p>The error code that is returned if the document fails to be imported.</p>
+         * 
          * <strong>example:</strong>
          * <p>110002</p>
          */
@@ -120,6 +143,8 @@ public class ListIndexFileDetailsResponseBody extends TeaModel {
         public String code;
 
         /**
+         * <p>The format of the document. Valid values: pdf, docx, doc, txt, md, pptx, ppt, png, jpg, jpeg, bmp, gif, and EXCEL.</p>
+         * 
          * <strong>example:</strong>
          * <p>pdf</p>
          */
@@ -127,6 +152,8 @@ public class ListIndexFileDetailsResponseBody extends TeaModel {
         public String documentType;
 
         /**
+         * <p>Indicates whether the table headers of Excel files in an unstructured knowledge base are concatenated.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -134,6 +161,8 @@ public class ListIndexFileDetailsResponseBody extends TeaModel {
         public String enableHeaders;
 
         /**
+         * <p>The time when the document was imported. This value is a Unix timestamp.</p>
+         * 
          * <strong>example:</strong>
          * <p>1744856423000</p>
          */
@@ -141,6 +170,8 @@ public class ListIndexFileDetailsResponseBody extends TeaModel {
         public Long gmtModified;
 
         /**
+         * <p>The document ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>doc_c134aa2073204a5d936d870bf960f56axxxxxxxx</p>
          */
@@ -148,16 +179,26 @@ public class ListIndexFileDetailsResponseBody extends TeaModel {
         public String id;
 
         /**
+         * <p>The error message that is returned if the document fails to be imported.</p>
+         * 
          * <strong>example:</strong>
          * <p>check fileUrlKey[file_path] / fileNameKey[null] / fileExtensionKey[file_extension] is invalid</p>
          */
         @NameInMap("Message")
         public String message;
 
+        /**
+         * <p>The name of the document.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>翻译平台运维文档</p>
+         */
         @NameInMap("Name")
         public String name;
 
         /**
+         * <p>The overlap length of chunks.</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */
@@ -165,6 +206,8 @@ public class ListIndexFileDetailsResponseBody extends TeaModel {
         public String overlapSize;
 
         /**
+         * <p>The size of the document, in bytes.</p>
+         * 
          * <strong>example:</strong>
          * <p>996764</p>
          */
@@ -172,6 +215,8 @@ public class ListIndexFileDetailsResponseBody extends TeaModel {
         public Integer size;
 
         /**
+         * <p>The category ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>cate_21a407a3372c4ba7aedc649709143f0cxxxxxxxx</p>
          */
@@ -179,6 +224,18 @@ public class ListIndexFileDetailsResponseBody extends TeaModel {
         public String sourceId;
 
         /**
+         * <p>The import status of the document. Valid values:</p>
+         * <ul>
+         * <li><p>INSERT_ERROR: The document failed to be imported.</p>
+         * </li>
+         * <li><p>RUNNING: The document is being imported.</p>
+         * </li>
+         * <li><p>DELETED: The document has been deleted.</p>
+         * </li>
+         * <li><p>FINISH: The document was imported successfully.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>RUNNING</p>
          */
@@ -186,6 +243,8 @@ public class ListIndexFileDetailsResponseBody extends TeaModel {
         public String status;
 
         /**
+         * <p>The sentence separator.</p>
+         * 
          * <strong>example:</strong>
          * <p>&quot; &quot;</p>
          */
@@ -312,10 +371,15 @@ public class ListIndexFileDetailsResponseBody extends TeaModel {
     }
 
     public static class ListIndexFileDetailsResponseBodyData extends TeaModel {
+        /**
+         * <p>A list of documents in the knowledge base. The documents are sorted by import time in descending order. This order is the same as the order in the console.</p>
+         */
         @NameInMap("Documents")
         public java.util.List<ListIndexFileDetailsResponseBodyDataDocuments> documents;
 
         /**
+         * <p>The knowledge base ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>79c0alxxxx</p>
          */
@@ -323,6 +387,8 @@ public class ListIndexFileDetailsResponseBody extends TeaModel {
         public String indexId;
 
         /**
+         * <p>The returned page number.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -330,6 +396,8 @@ public class ListIndexFileDetailsResponseBody extends TeaModel {
         public Integer pageNumber;
 
         /**
+         * <p>The number of entries returned on each page.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -337,8 +405,10 @@ public class ListIndexFileDetailsResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
+         * <p>The total number of entries.</p>
+         * 
          * <strong>example:</strong>
-         * <p>100</p>
+         * <p>2437</p>
          */
         @NameInMap("TotalCount")
         public Long totalCount;

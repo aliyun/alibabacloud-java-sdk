@@ -5,12 +5,20 @@ import com.aliyun.tea.*;
 
 public class GetConnectorRequest extends TeaModel {
     /**
+     * <p>The ID of the connector. You can find this ID in the <a href="https://bailian.console.aliyun.com/cn-beijing/?tab=app#/connector/list">Model Studio console</a>.</p>
+     * 
      * <strong>example:</strong>
-     * <p>file_conn_xxxx</p>
+     * <p>conn_file_xxxx</p>
      */
     @NameInMap("ConnectorId")
     public String connectorId;
 
+    /**
+     * <p>The name of the connector to query. An exact match is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>连接器名称</p>
+     */
     @NameInMap("ConnectorName")
     public String connectorName;
 

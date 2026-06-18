@@ -115,6 +115,9 @@ public class GetAvailableParserTypesResponseBody extends TeaModel {
     public static class GetAvailableParserTypesResponseBodyDataParserList extends TeaModel {
         /**
          * <p>The display name of the parsing method.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>智能文档解析</p>
          */
         @NameInMap("DisplayName")
         public String displayName;

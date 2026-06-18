@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class DeleteFilesResponseBody extends TeaModel {
     /**
+     * <p>The error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>DataCenter.FileTooLarge</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The returned data.</p>
+     */
     @NameInMap("Data")
     public DeleteFilesResponseBodyData data;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>Required parameter(%s) missing or invalid, please check the request parameters.</p>
      */
@@ -31,6 +38,8 @@ public class DeleteFilesResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The status code returned by the API.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -38,6 +47,12 @@ public class DeleteFilesResponseBody extends TeaModel {
     public String status;
 
     /**
+     * <p>Indicates whether the API call is successful. Valid values:</p>
+     * <ul>
+     * <li>true: The call is successful.</li>
+     * <li>false: The call fails.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -99,6 +114,8 @@ public class DeleteFilesResponseBody extends TeaModel {
 
     public static class DeleteFilesResponseBodyDataDeleteFileResultList extends TeaModel {
         /**
+         * <p>The file ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>file_6b193b9b4b1546ef9eaa7340e69adfca_10052857</p>
          */
@@ -106,6 +123,13 @@ public class DeleteFilesResponseBody extends TeaModel {
         public String fileId;
 
         /**
+         * <p>The file deletion status. Valid values:</p>
+         * <ul>
+         * <li>DELETED: The file is deleted.</li>
+         * <li>FAILED: The file fails to be deleted.</li>
+         * <li>NOT_FOUND: The file is not found.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>DELETED</p>
          */
@@ -136,6 +160,9 @@ public class DeleteFilesResponseBody extends TeaModel {
     }
 
     public static class DeleteFilesResponseBodyData extends TeaModel {
+        /**
+         * <p>The deletion results.</p>
+         */
         @NameInMap("DeleteFileResultList")
         public java.util.List<DeleteFilesResponseBodyDataDeleteFileResultList> deleteFileResultList;
 

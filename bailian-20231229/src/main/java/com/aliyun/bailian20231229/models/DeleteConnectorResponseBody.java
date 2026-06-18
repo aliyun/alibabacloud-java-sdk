@@ -22,8 +22,6 @@ public class DeleteConnectorResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Id of the request</p>
-     * 
      * <strong>example:</strong>
      * <p>1C139002-0EC5-584C-A755-4B8B9FA080BE</p>
      */

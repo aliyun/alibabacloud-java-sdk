@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ApplyFileUploadLeaseResponseBody extends TeaModel {
     /**
-     * <p>The status code.</p>
+     * <p>The error code.</p>
      * 
      * <strong>example:</strong>
      * <p>DataCenter.FileTooLarge</p>
@@ -14,7 +14,7 @@ public class ApplyFileUploadLeaseResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The returned data fields.</p>
+     * <p>The data returned.</p>
      */
     @NameInMap("Data")
     public ApplyFileUploadLeaseResponseBodyData data;
@@ -38,7 +38,7 @@ public class ApplyFileUploadLeaseResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The HTTP status code.</p>
+     * <p>The status code returned.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -47,10 +47,10 @@ public class ApplyFileUploadLeaseResponseBody extends TeaModel {
     public String status;
 
     /**
-     * <p>Indications whether the call is successful. Valid values:</p>
+     * <p>Indicates whether the API call is successful. Valid values:</p>
      * <ul>
-     * <li>true</li>
-     * <li>false</li>
+     * <li>true: The call is successful.</li>
+     * <li>false: The call failed.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -114,17 +114,20 @@ public class ApplyFileUploadLeaseResponseBody extends TeaModel {
 
     public static class ApplyFileUploadLeaseResponseBodyDataParam extends TeaModel {
         /**
-         * <p>The key-value pair to be placed in the Header. Both the key and the value are strings.</p>
+         * <p>Key-value pairs that need to be included in the header. Both keys and values are strings.</p>
+         * <blockquote>
+         * <p>The returned Content-Type may be empty. You can upload the file with the empty value.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
-         * <p>&quot;X-bailian-extra&quot;: &quot;MTAwNTQyNjQ5NTE2OTE3OA==&quot;,
-         *         &quot;Content-Type&quot;: &quot;application/pdf&quot;</p>
+         * <p>&quot;X-bailian-extra&quot;:&quot;MTAwNTQyNjQ5NTE2OTE3OA==&quot;,
+         * &quot;Content-Type&quot;:&quot;application/pdf&quot;</p>
          */
         @NameInMap("Headers")
         public Object headers;
 
         /**
-         * <p>The HTTP call method. Valid values:</p>
+         * <p>The HTTP method. Valid values:</p>
          * <ul>
          * <li>PUT</li>
          * <li>POST</li>
@@ -137,7 +140,10 @@ public class ApplyFileUploadLeaseResponseBody extends TeaModel {
         public String method;
 
         /**
-         * <p>The upload URL of the document.</p>
+         * <p>The upload URL of the file.</p>
+         * <blockquote>
+         * <p>This URL is a pre-signed URL. FormData upload is not supported. You must upload the file in binary mode.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p><a href="https://bailian-datahub-data-origin-prod.oss-cn-hangzhou.aliyuncs.com/1005426495169178/10024405/68abd1dea7b6404d8f7d7b9f7fbd332d.1716698936847.pdf?Expires=1716699536&OSSAccessKeyId=TestID&Signature=HfwPUZo4pR6DatSDym0zFKVh9Wg%3D">https://bailian-datahub-data-origin-prod.oss-cn-hangzhou.aliyuncs.com/1005426495169178/10024405/68abd1dea7b6404d8f7d7b9f7fbd332d.1716698936847.pdf?Expires=1716699536&amp;OSSAccessKeyId=TestID&amp;Signature=HfwPUZo4pR6DatSDym0zFKVh9Wg%3D</a></p>
@@ -178,7 +184,7 @@ public class ApplyFileUploadLeaseResponseBody extends TeaModel {
 
     public static class ApplyFileUploadLeaseResponseBodyData extends TeaModel {
         /**
-         * <p>The unique ID of the lease.</p>
+         * <p>The unique ID of the lease. You need to use this parameter when you call the <strong>AddFile</strong> API.</p>
          * 
          * <strong>example:</strong>
          * <p>1e6a159107384782be5e45ac4759b247.1719325231035</p>
@@ -187,13 +193,13 @@ public class ApplyFileUploadLeaseResponseBody extends TeaModel {
         public String fileUploadLeaseId;
 
         /**
-         * <p>The HTTP request parameters used to upload the document.</p>
+         * <p>The HTTP request parameters for uploading the file.</p>
          */
         @NameInMap("Param")
         public ApplyFileUploadLeaseResponseBodyDataParam param;
 
         /**
-         * <p>The upload method of the document. Valid values:</p>
+         * <p>The upload method of the file. Valid values:</p>
          * <ul>
          * <li>OSS.PreSignedURL</li>
          * <li>HTTP</li>

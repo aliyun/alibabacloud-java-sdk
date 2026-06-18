@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class AddConnectorRequest extends TeaModel {
     /**
+     * <p>The name of the connector.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class AddConnectorRequest extends TeaModel {
     public String connectorName;
 
     /**
+     * <p>The type of the connector.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,11 +25,18 @@ public class AddConnectorRequest extends TeaModel {
     public String connectorType;
 
     /**
+     * <p>The description for the connector.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>文件连接器</p>
      */
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <p>The parameters for the file connector.</p>
+     */
     @NameInMap("FileConnectorConfig")
     public AddConnectorRequestFileConnectorConfig fileConnectorConfig;
 
@@ -70,6 +79,8 @@ public class AddConnectorRequest extends TeaModel {
 
     public static class AddConnectorRequestFileConnectorConfig extends TeaModel {
         /**
+         * <p>The name of the bucket.</p>
+         * 
          * <strong>example:</strong>
          * <p>zyb-docker-registry-jn</p>
          */
@@ -77,6 +88,8 @@ public class AddConnectorRequest extends TeaModel {
         public String bucketName;
 
         /**
+         * <p>The region of the bucket.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
          */
@@ -84,6 +97,8 @@ public class AddConnectorRequest extends TeaModel {
         public String regionId;
 
         /**
+         * <p>The file storage location. Valid values:<br><code>OSS_CUSTOM</code>: Use your own Object Storage Service (OSS) bucket.<br><code>OSS_PLATFORM</code>: Use the platform-provided OSS bucket.<br><br></p>
+         * 
          * <strong>example:</strong>
          * <p>OSS_CUSTOM</p>
          */

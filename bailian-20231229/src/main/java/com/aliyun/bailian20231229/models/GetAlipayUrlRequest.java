@@ -4,9 +4,21 @@ package com.aliyun.bailian20231229.models;
 import com.aliyun.tea.*;
 
 public class GetAlipayUrlRequest extends TeaModel {
+    /**
+     * <p>The ID of the Bailian application.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>asfasdfxxasdf</p>
+     */
     @NameInMap("app_id")
     public String appId;
 
+    /**
+     * <p>The ID of the Bailian workspace.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>xxxllm-czb8d47ks</p>
+     */
     @NameInMap("workspace_id")
     public String workspaceId;
 

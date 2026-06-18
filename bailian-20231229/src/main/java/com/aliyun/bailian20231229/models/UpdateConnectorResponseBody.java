@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class UpdateConnectorResponseBody extends TeaModel {
     /**
+     * <p>The error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>Index.Forbidden</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The data returned by the operation.</p>
+     */
     @NameInMap("Data")
     public UpdateConnectorResponseBodyData data;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>Required parameter(%s) missing or invalid, please check the request parameters.</p>
      */
@@ -22,7 +29,7 @@ public class UpdateConnectorResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>778C0B3B-03C1-5FC1-A947-36EDD13606AB</p>
@@ -31,6 +38,8 @@ public class UpdateConnectorResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The status code of the response.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -38,6 +47,8 @@ public class UpdateConnectorResponseBody extends TeaModel {
     public String status;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -99,6 +110,8 @@ public class UpdateConnectorResponseBody extends TeaModel {
 
     public static class UpdateConnectorResponseBodyData extends TeaModel {
         /**
+         * <p>The ID of the connector.</p>
+         * 
          * <strong>example:</strong>
          * <p>conn_file_e0c9db4030b2465a9478028f7d76cd92_1234</p>
          */

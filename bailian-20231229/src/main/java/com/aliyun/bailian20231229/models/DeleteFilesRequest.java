@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteFilesRequest extends TeaModel {
     /**
+     * <p>The list of IDs of the files to be deleted. A maximum of 20 files can be deleted in a single request.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("FileIds")

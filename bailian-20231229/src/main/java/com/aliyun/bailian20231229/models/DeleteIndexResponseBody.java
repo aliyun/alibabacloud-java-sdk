@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteIndexResponseBody extends TeaModel {
     /**
-     * <p>HTTP status code</p>
+     * <p>The error code.</p>
      * 
      * <strong>example:</strong>
      * <p>Index.InvalidParameter</p>
@@ -32,7 +32,7 @@ public class DeleteIndexResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The status code.</p>
+     * <p>The status code returned by the operation.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -41,10 +41,10 @@ public class DeleteIndexResponseBody extends TeaModel {
     public String status;
 
     /**
-     * <p>Indications whether the API call is successful. Valid values:</p>
+     * <p>Indicates whether the operation was successful. Valid values:</p>
      * <ul>
-     * <li>true</li>
-     * <li>false</li>
+     * <li>true: The call was successful.</li>
+     * <li>false: The call failed.</li>
      * </ul>
      * 
      * <strong>example:</strong>

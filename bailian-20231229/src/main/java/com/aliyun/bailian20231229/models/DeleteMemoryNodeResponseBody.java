@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DeleteMemoryNodeResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>8C56C7AF-6573-19CE-B018-E05E1EDCF4C5</p>
      */

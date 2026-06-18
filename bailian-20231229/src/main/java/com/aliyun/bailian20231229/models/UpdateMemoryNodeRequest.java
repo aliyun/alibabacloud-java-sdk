@@ -5,7 +5,11 @@ import com.aliyun.tea.*;
 
 public class UpdateMemoryNodeRequest extends TeaModel {
     /**
+     * <p>The memory fragment content.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>用户喜欢吃西红柿炒鸡蛋</p>
      */
     @NameInMap("content")
     public String content;

@@ -5,22 +5,39 @@ import com.aliyun.tea.*;
 
 public class ListFileRequest extends TeaModel {
     /**
-     * <p>The category ID, which is the <code>CategoryId</code> returned by the <a href="~~AddCategory~~">AddCategory</a> operation. To view the category ID, click the ID icon next to the category name on the Unstructured Data tab of the <a href="https://bailian.console.alibabacloud.com/#/data-center">Data Management</a> page.</p>
+     * <p>&lt;props=&quot;china&quot;&gt;</p>
+     * <p>The category ID, which is the <code>CategoryId</code> returned by the <strong>AddCategory</strong> operation. You can also obtain it on the <a href="https://bailian.console.aliyun.com/?tab=app#/data-center">Application Data</a> - Files tab by clicking the ID icon next to the category name.</p>
+     * <p>&lt;props=&quot;intl&quot;&gt;</p>
+     * <p>The category ID, which is the <code>CategoryId</code> returned by the <strong>AddCategory</strong> operation. You can also obtain it on the <a href="https://modelstudio.console.alibabacloud.com/?tab=app#/data-center">Application Data</a> - Files tab by clicking the ID icon next to the category name.</p>
+     * <p>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>cate_cdd11b1b79a74e8bbd675c356a91ee3510024405</p>
+     * <p>cate_cdd11b1b79a74e8bbd675c356a91ee35xxxxxxxx</p>
      */
     @NameInMap("CategoryId")
     public String categoryId;
 
+    /**
+     * <p>The list of file IDs to query. A maximum of 20 files can be queried per request.</p>
+     */
     @NameInMap("FileIds")
     public java.util.List<String> fileIds;
 
+    /**
+     * <p>The file name (without extension). Only exact match is supported. Fuzzy search is not supported.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>product-overview</p>
+     */
     @NameInMap("FileName")
     public String fileName;
 
     /**
+     * <p>The number of entries per page for paging. Valid values: 1 to 200.</p>
+     * <p>Default value:
+     * If the value is not set or is less than 1, the default value is 20. If the value is greater than 200, the default value is 200.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -28,6 +45,8 @@ public class ListFileRequest extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>The pagination token. Set this to the NextToken value returned by the previous API call.</p>
+     * 
      * <strong>example:</strong>
      * <p>AAAAAdH70eOCSCKtacdomNzak4U=</p>
      */

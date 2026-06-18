@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class AddConnectorShrinkRequest extends TeaModel {
     /**
+     * <p>The name of the connector.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class AddConnectorShrinkRequest extends TeaModel {
     public String connectorName;
 
     /**
+     * <p>The type of the connector.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,11 +25,18 @@ public class AddConnectorShrinkRequest extends TeaModel {
     public String connectorType;
 
     /**
+     * <p>The description for the connector.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>文件连接器</p>
      */
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <p>The parameters for the file connector.</p>
+     */
     @NameInMap("FileConnectorConfig")
     public String fileConnectorConfigShrink;
 

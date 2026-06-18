@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class AddConnectorResponseBody extends TeaModel {
     /**
+     * <p>The error code. A value of <code>Success</code> indicates that the request succeeded.</p>
+     * 
      * <strong>example:</strong>
      * <p>Success</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The data returned by the operation.</p>
+     */
     @NameInMap("Data")
     public AddConnectorResponseBodyData data;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>Current file status does not support delete.</p>
      */
@@ -22,7 +29,7 @@ public class AddConnectorResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>35A267BF-FBFA-54DB-8394-AA3B0742D833</p>
@@ -31,6 +38,8 @@ public class AddConnectorResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -38,6 +47,14 @@ public class AddConnectorResponseBody extends TeaModel {
     public String status;
 
     /**
+     * <p>Indicates whether the request succeeded. Valid values:</p>
+     * <ul>
+     * <li><p>true: The request was successful.</p>
+     * </li>
+     * <li><p>false: The request failed.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -99,6 +116,8 @@ public class AddConnectorResponseBody extends TeaModel {
 
     public static class AddConnectorResponseBodyData extends TeaModel {
         /**
+         * <p>The ID of the connector.</p>
+         * 
          * <strong>example:</strong>
          * <p>conn_file_e0c9db4030b2465a9478028f7d76cd92_1234</p>
          */

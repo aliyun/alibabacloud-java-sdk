@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ChangeParseSettingShrinkRequest extends TeaModel {
     /**
-     * <p>The category ID, which is the <code>CategoryId</code> returned by <strong>AddCategory</strong>. To view the category ID, click the ID icon next to the category name on the Unstructured Data tab of the <a href="https://bailian.console.alibabacloud.com/?tab=app#/data-center">Application Data</a> page.</p>
+     * <p>The category ID. This is the <code>CategoryId</code> returned by the <strong>AddCategory</strong> operation. You can also obtain the ID from the &lt;props=&quot;china&quot;&gt;<a href="https://bailian.console.aliyun.com/?tab=app#/data-center">Application Data</a> - File tab&lt;props=&quot;intl&quot;&gt;<a href="https://bailian.console.alibabacloud.com/?tab=app#/data-center">Application Data</a> - Unstructured Data tab by clicking the ID icon next to the category name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,39 @@ public class ChangeParseSettingShrinkRequest extends TeaModel {
     public String categoryId;
 
     /**
-     * <p>The file type. Valid values: pdf, docx, and doc.</p>
+     * <p>The file type, specified by its extension. Valid values:</p>
+     * <ul>
+     * <li><p>doc</p>
+     * </li>
+     * <li><p>docx</p>
+     * </li>
+     * <li><p>ppt</p>
+     * </li>
+     * <li><p>pptx</p>
+     * </li>
+     * <li><p>xls</p>
+     * </li>
+     * <li><p>xlsx</p>
+     * </li>
+     * <li><p>md</p>
+     * </li>
+     * <li><p>txt</p>
+     * </li>
+     * <li><p>pdf</p>
+     * </li>
+     * <li><p>png</p>
+     * </li>
+     * <li><p>jpg</p>
+     * </li>
+     * <li><p>jpeg</p>
+     * </li>
+     * <li><p>bmp</p>
+     * </li>
+     * <li><p>gif</p>
+     * </li>
+     * <li><p>html</p>
+     * </li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,12 +57,16 @@ public class ChangeParseSettingShrinkRequest extends TeaModel {
     public String fileType;
 
     /**
-     * <p>The parser code. Valid values:</p>
+     * <p>The identifier for the parser. Different parsers are suitable for different scenarios. For more information, refer to the knowledge base. Valid values:</p>
      * <ul>
-     * <li>DOCMIND (Intelligent parsing)</li>
-     * <li>DOCMIND_DIGITAL (Digital parsing)</li>
-     * <li>DOCMIND_LLM_VERSION (LLM parsing)</li>
-     * <li>DASH_QWEN_VL_PARSER (Qwen VL parsing)</li>
+     * <li><p>DOCMIND (intelligent document parsing)</p>
+     * </li>
+     * <li><p>DOCMIND_DIGITAL (digital document parsing)</p>
+     * </li>
+     * <li><p>DOCMIND_LLM_VERSION (LLM-based document parsing)</p>
+     * </li>
+     * <li><p>DASH_QWEN_VL_PARSER (Qwen VL Parser)</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -41,7 +77,7 @@ public class ChangeParseSettingShrinkRequest extends TeaModel {
     public String parser;
 
     /**
-     * <p>The parser configuration. Currently, this is available only for Qwen VL parsing.</p>
+     * <p>The parser configuration. This parameter is required only when the <code>Parser</code> parameter is set to <code>DASH_QWEN_VL_PARSER</code>.</p>
      */
     @NameInMap("ParserConfig")
     public String parserConfigShrink;

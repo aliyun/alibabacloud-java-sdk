@@ -117,10 +117,7 @@ public class GetParseSettingsResponseBody extends TeaModel {
          * <p>The model name.</p>
          * 
          * <strong>example:</strong>
-         * <ul>
-         * <li>qwen-vl-max</li>
-         * <li>qwen-vl-plus</li>
-         * </ul>
+         * <p>qwen-vl-max</p>
          */
         @NameInMap("ModelName")
         public String modelName;
@@ -129,10 +126,10 @@ public class GetParseSettingsResponseBody extends TeaModel {
          * <p>The prompt used for parsing.</p>
          * 
          * <strong>example:</strong>
-         * <h1>Role</h1>
-         * <p>You are a professional image content annotator, skilled in identifying and describing the contents of images.  </p>
-         * <h1>Task Objective</h1>
-         * <p>Based on the input image, provide a detailed description of its contents.</p>
+         * <p>#角色
+         * 你是一个专业的图片内容标注人员，擅长识别并描述出图片中的内容。</p>
+         * <h1>任务目标</h1>
+         * <p>请结合输入图片，详细描述图片中的内容。</p>
          */
         @NameInMap("ModelPrompt")
         public String modelPrompt;
@@ -195,7 +192,7 @@ public class GetParseSettingsResponseBody extends TeaModel {
          * <p>The display name of the parsing method.</p>
          * 
          * <strong>example:</strong>
-         * <p>Digital parsing</p>
+         * <p>电子文档解析</p>
          */
         @NameInMap("ParserDisplayName")
         public String parserDisplayName;

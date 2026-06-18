@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListMemoryNodesRequest extends TeaModel {
     /**
+     * <p>The maximum number of results to return.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -12,6 +14,8 @@ public class ListMemoryNodesRequest extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>The pagination token returned from a previous request. If specified, the query results are paginated based on the previous request.</p>
+     * 
      * <strong>example:</strong>
      * <p>dc270401186b433f975d7e1faaa34e0e</p>
      */

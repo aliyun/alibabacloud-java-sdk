@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class AddCategoryResponseBody extends TeaModel {
     /**
+     * <p>The error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The data returned.</p>
+     */
     @NameInMap("Data")
     public AddCategoryResponseBodyData data;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>Requests throttling triggered.</p>
      */
@@ -22,15 +29,17 @@ public class AddCategoryResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
-     * <p>778C0B3B-03C1-5FC1-A947-36EDD13606AB</p>
+     * <p>778C0B3B-xxxx-5FC1-A947-36EDD13606AB</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
+     * <p>The HTTP status code returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -38,6 +47,14 @@ public class AddCategoryResponseBody extends TeaModel {
     public String status;
 
     /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <ul>
+     * <li><p>true: The request was successful.</p>
+     * </li>
+     * <li><p>false: The request failed.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -99,12 +116,20 @@ public class AddCategoryResponseBody extends TeaModel {
 
     public static class AddCategoryResponseBodyData extends TeaModel {
         /**
+         * <p>The ID of the category. Save this ID for future API calls that use this category.</p>
+         * 
          * <strong>example:</strong>
-         * <p>cate_cdd11b1b79a74e8bbd675c356a91ee3XXXXXXXX</p>
+         * <p>cate_cdd11b1b79a74e8bbd675c356a91ee3xxxxxxxx</p>
          */
         @NameInMap("CategoryId")
         public String categoryId;
 
+        /**
+         * <p>The name of the category.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>类目名称</p>
+         */
         @NameInMap("CategoryName")
         public String categoryName;
 

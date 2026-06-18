@@ -4,10 +4,28 @@ package com.aliyun.bailian20231229.models;
 import com.aliyun.tea.*;
 
 public class ListCategoryRequest extends TeaModel {
+    /**
+     * <p>Filters the results to include only the category with this exact name. If this parameter is omitted, no filtering is applied.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>产品清单</p>
+     */
     @NameInMap("CategoryName")
     public String categoryName;
 
     /**
+     * <p>The type of category to query. Valid value:</p>
+     * <ul>
+     * <li><code>UNSTRUCTURED</code>: A category for unstructured data.</li>
+     * </ul>
+     * <p>&lt;props=&quot;china&quot;&gt;</p>
+     * <blockquote>
+     * <p>This API does not support querying structured data tables.</p>
+     * </blockquote>
+     * <p>&lt;props=&quot;intl&quot;&gt;</p>
+     * <blockquote>
+     * <p>This API does not support querying structured data tables.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -17,6 +35,8 @@ public class ListCategoryRequest extends TeaModel {
     public String categoryType;
 
     /**
+     * <p>The ID of the connector.</p>
+     * 
      * <strong>example:</strong>
      * <p>file_conn_xxxxx</p>
      */
@@ -24,6 +44,9 @@ public class ListCategoryRequest extends TeaModel {
     public String connectorId;
 
     /**
+     * <p>The maximum number of categories to return per page. The valid range is 1 to 200.</p>
+     * <p>Default value: 20. If this parameter is not specified or is set to a value less than 1, the default value is used. If a value greater than 200 is specified, the maximum value of 200 is used.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -31,6 +54,8 @@ public class ListCategoryRequest extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>The pagination token. To retrieve the next page of results, pass the <code>NextToken</code> value from the previous response.</p>
+     * 
      * <strong>example:</strong>
      * <p>AAAAAdH70eOCSCKtacdomNzak4U=</p>
      */
@@ -38,8 +63,10 @@ public class ListCategoryRequest extends TeaModel {
     public String nextToken;
 
     /**
+     * <p>The ID of the parent category.</p>
+     * 
      * <strong>example:</strong>
-     * <p>cate_cdd11b1b79a74e8bbd675c356a91ee3XXXXXXXX</p>
+     * <p>cate_cdd11b1b79a74e8bbd675c356a91ee3xxxxxxxx</p>
      */
     @NameInMap("ParentCategoryId")
     public String parentCategoryId;

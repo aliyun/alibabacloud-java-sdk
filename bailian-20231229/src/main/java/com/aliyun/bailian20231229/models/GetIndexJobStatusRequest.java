@@ -5,17 +5,17 @@ import com.aliyun.tea.*;
 
 public class GetIndexJobStatusRequest extends TeaModel {
     /**
-     * <p>The primary key ID of the knowledge base, which is the <code>Data.Id</code> parameter returned by the <a href="https://www.alibabacloud.com/help/en/model-studio/developer-reference/api-bailian-2023-12-29-createindex">CreateIndex</a> operation.</p>
+     * <p>The knowledge base ID, which is the <code>Data.Id</code> returned by the <strong>CreateIndex</strong> operation.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>79c0aly8zw</p>
+     * <p>79c0alxxxx</p>
      */
     @NameInMap("IndexId")
     public String indexId;
 
     /**
-     * <p>The knowledge base job ID, which is the <code>Data.Id</code> parameter returned by the <a href="https://www.alibabacloud.com/help/en/model-studio/developer-reference/api-bailian-2023-12-29-submitindexjob">SubmitIndexJob</a> or <a href="https://www.alibabacloud.com/help/en/model-studio/developer-reference/api-bailian-2023-12-29-submitindexadddocumentsjob">SubmitIndexAddDocumentsJob</a> operations.</p>
+     * <p>The knowledge base job ID, which is the <code>Data.Id</code> returned by the <strong>SubmitIndexJob</strong> or <strong>SubmitIndexAddDocumentsJob</strong> operation.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,7 +25,7 @@ public class GetIndexJobStatusRequest extends TeaModel {
     public String jobId;
 
     /**
-     * <p>Both the <a href="https://www.alibabacloud.com/help/en/model-studio/developer-reference/api-bailian-2023-12-29-submitindexjob">SubmitIndexJob</a> and <a href="https://www.alibabacloud.com/help/en/model-studio/developer-reference/api-bailian-2023-12-29-submitindexadddocumentsjob">SubmitIndexAddDocumentsJob</a> operations support batch import of documents. This operation returns both the overall <code>Status</code> of the job and the <code>Document.Status</code> of each document. If there are a large number of documents, you can use the <code>PageNumber</code> parameter to perform a paged query. Pages start from page 1. Default value: 1.</p>
+     * <p>The <strong>SubmitIndexJob</strong> and <strong>SubmitIndexAddDocumentsJob</strong> operations support batch file import. This operation returns the overall knowledge base job status <code>Status</code> and the import status of each file <code>Document.Status</code>. If there are many files, use the <code>PageNumber</code> parameter for paging. Minimum value: 1. Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -34,7 +34,7 @@ public class GetIndexJobStatusRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of document import jobs that are displayed on each page. No maximum value. Default value: 10.</p>
+     * <p>The number of file import tasks to display per page in a paged query. No maximum limit. Default value: 10.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>

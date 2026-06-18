@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class AddTableRequest extends TeaModel {
     /**
+     * <p>The connector ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,12 +15,17 @@ public class AddTableRequest extends TeaModel {
     public String connectorId;
 
     /**
+     * <p>The column information of the table.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("TableColumns")
     public java.util.List<AddTableRequestTableColumns> tableColumns;
 
+    @NameInMap("TableDesc")
+    public String tableDesc;
+
     /**
+     * <p>The table name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -49,6 +55,14 @@ public class AddTableRequest extends TeaModel {
         return this.tableColumns;
     }
 
+    public AddTableRequest setTableDesc(String tableDesc) {
+        this.tableDesc = tableDesc;
+        return this;
+    }
+    public String getTableDesc() {
+        return this.tableDesc;
+    }
+
     public AddTableRequest setTableName(String tableName) {
         this.tableName = tableName;
         return this;
@@ -59,6 +73,8 @@ public class AddTableRequest extends TeaModel {
 
     public static class AddTableRequestTableColumns extends TeaModel {
         /**
+         * <p>The column description.</p>
+         * 
          * <strong>example:</strong>
          * <p>desc</p>
          */
@@ -66,6 +82,7 @@ public class AddTableRequest extends TeaModel {
         public String columnDesc;
 
         /**
+         * <p>The column name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -75,6 +92,7 @@ public class AddTableRequest extends TeaModel {
         public String columnName;
 
         /**
+         * <p>The data type.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

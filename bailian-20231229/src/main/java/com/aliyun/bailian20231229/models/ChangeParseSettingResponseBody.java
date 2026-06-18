@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ChangeParseSettingResponseBody extends TeaModel {
     /**
-     * <p>The status code.</p>
+     * <p>The error code.</p>
      * 
      * <strong>example:</strong>
      * <p>InvalidParameter</p>
@@ -14,7 +14,7 @@ public class ChangeParseSettingResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The returned data fields.</p>
+     * <p>The data returned for a successful request.</p>
      */
     @NameInMap("Data")
     public ChangeParseSettingResponseBodyData data;
@@ -38,7 +38,7 @@ public class ChangeParseSettingResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The HTTP status code returned.</p>
+     * <p>The status code returned for the request.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -47,10 +47,12 @@ public class ChangeParseSettingResponseBody extends TeaModel {
     public String status;
 
     /**
-     * <p>Indicates whether the call is successful. Valid values:</p>
+     * <p>Indicates whether the request was successful. Valid values:</p>
      * <ul>
-     * <li>true</li>
-     * <li>false</li>
+     * <li><p>true: The request was successful.</p>
+     * </li>
+     * <li><p>false: The request failed.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -114,7 +116,13 @@ public class ChangeParseSettingResponseBody extends TeaModel {
 
     public static class ChangeParseSettingResponseBodyData extends TeaModel {
         /**
-         * <p>The result of the modification.</p>
+         * <p>Indicates whether the configuration was successfully updated.</p>
+         * <ul>
+         * <li><p>true: The configuration was updated.</p>
+         * </li>
+         * <li><p>false: The configuration failed to be updated.</p>
+         * </li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>true</p>
