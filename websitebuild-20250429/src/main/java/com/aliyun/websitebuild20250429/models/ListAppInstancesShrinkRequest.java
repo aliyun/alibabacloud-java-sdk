@@ -13,6 +13,9 @@ public class ListAppInstancesShrinkRequest extends TeaModel {
     @NameInMap("BizId")
     public String bizId;
 
+    @NameInMap("BizIds")
+    public String bizIdsShrink;
+
     /**
      * <p>The start of the expiration time range.</p>
      * 
@@ -51,7 +54,7 @@ public class ListAppInstancesShrinkRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The token for the next query. This parameter is empty if no more results exist.</p>
+     * <p>The token for the next query. This parameter is empty if no more results are available.</p>
      * 
      * <strong>example:</strong>
      * <p>AAAAARbaCuN6hiD08qrLdwJ9Fh3BFw8paIJ7ylB6A7Qn9JjM</p>
@@ -60,7 +63,7 @@ public class ListAppInstancesShrinkRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The field by which to sort the results.</p>
+     * <p>The field used for sorting.</p>
      * 
      * <strong>example:</strong>
      * <p>gmtCreated</p>
@@ -69,7 +72,7 @@ public class ListAppInstancesShrinkRequest extends TeaModel {
     public String orderColumn;
 
     /**
-     * <p>The sort order. Valid values: ASC and DESC.</p>
+     * <p>The sort type. Valid values: ASC and DESC.</p>
      * 
      * <strong>example:</strong>
      * <p>DOWNGRADE</p>
@@ -121,6 +124,14 @@ public class ListAppInstancesShrinkRequest extends TeaModel {
     }
     public String getBizId() {
         return this.bizId;
+    }
+
+    public ListAppInstancesShrinkRequest setBizIdsShrink(String bizIdsShrink) {
+        this.bizIdsShrink = bizIdsShrink;
+        return this;
+    }
+    public String getBizIdsShrink() {
+        return this.bizIdsShrink;
     }
 
     public ListAppInstancesShrinkRequest setEndTimeBegin(String endTimeBegin) {

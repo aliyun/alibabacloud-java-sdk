@@ -1,3 +1,7 @@
+2026-06-18 Version: 2.27.2
+- Update API ListAppInstances: add request parameters BizIds.
+
+
 2026-06-17 Version: 2.27.1
 - Update API NotifyAppNotificationForAdmin: add request parameters Payload.
 

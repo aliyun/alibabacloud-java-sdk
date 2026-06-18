@@ -14,7 +14,7 @@ public class ListAppInstancesResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
-     * <p>Indicates whether retry is allowed.</p>
+     * <p>Indicates whether a retry is allowed.</p>
      * 
      * <strong>example:</strong>
      * <p>False</p>
@@ -90,7 +90,7 @@ public class ListAppInstancesResponseBody extends TeaModel {
     public Boolean nextPage;
 
     /**
-     * <p>The token for the next query. This parameter is empty if no more results exist.</p>
+     * <p>The token for the next query. This parameter is empty if no more results are available.</p>
      * 
      * <strong>example:</strong>
      * <p>dw+qdTi1EjVSWX/INJdYNw==</p>
@@ -126,7 +126,7 @@ public class ListAppInstancesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the result limit is reached. The server processes up to 1000 recent records excluding pagination limits. If the results exceed 1000 records, <strong>ResultLimit</strong> is <strong>true</strong> and you must narrow the time range and search again. Otherwise, <strong>ResultLimit</strong> is <strong>false</strong>.</p>
+     * <p>In addition to pagination limits, the server processes up to 1,000 recent records per query. If the result exceeds 1,000 records, <strong>ResultLimit</strong> is <strong>true</strong>. Narrow the time range and search again. Otherwise, <strong>ResultLimit</strong> is <strong>false</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>False</p>
